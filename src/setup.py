@@ -1,18 +1,217 @@
-import openai
+from openai import OpenAI
 import logging
 import src.utils as utils
 import pandas as pd
 import tiktoken
 import src.config_loader as config_loader
+import json
+import time
+import os
+# from aiohttp import ClientSession
 
-def initialise(config_file, logging_file, secret_key_file, character_df_file, language_file):
-    def setup_openai_secret_key(file_name, is_local):
-        if is_local:
-            api_key = 'abc123'
-        else:
-            with open(file_name, 'r') as f:
-                api_key = f.readline().strip()
-        openai.api_key = api_key
+
+class CharacterDB():
+    def __init__(self, character_df_path): # character_df_directory is the path to a character directory where each character is a seperate json file
+        self.character_df_path = character_df_path
+        self.characters = []
+        self.named_index = {}
+        self.baseid_int_index = {}
+        self.db_type = None
+
+    def load_characters_json(self):
+        print(f"Loading character database from {self.character_df_path}...")
+        self.characters = []
+        self.named_index = {}
+        self.baseid_int_index = {}
+        for file in os.listdir(self.character_df_path):
+            if file.endswith(".json"):
+                character = json.load(open(os.path.join(self.character_df_path, file)))
+                self.characters.append(character)
+                self.named_index[character['name']] = self.characters[-1]
+                self.baseid_int_index[character['baseid_int']] = self.characters[-1]
+        self.db_type = 'json'
+        print(f"Loaded {len(self.characters)} characters from JSON {self.character_df_path}")
+    
+    def load_characters_csv(self):
+        print(f"Loading character database from JSON files in {self.character_df_path}...")
+        self.characters = []
+        self.named_index = {}
+        self.baseid_int_index = {}
+        encoding = utils.get_file_encoding(self.character_df_path)
+        character_df = pd.read_csv(self.character_df_path, engine='python', encoding=encoding)
+        character_df = character_df.loc[character_df['voice_model'].notna()]
+        for _, row in character_df.iterrows():
+            character = row.to_dict()
+            self.characters.append(character)
+            self.named_index[character['name']] = self.characters[-1]
+            self.baseid_int_index[character['baseid_int']] = self.characters[-1]
+        self.db_type = 'csv'
+        print(f"Loaded {len(self.characters)} characters from csv {self.character_df_path}")
+
+class Tokenizer(): # Tokenizes(only availble for counting the tokens in a string presently for local_models), and parses and formats messages for use with the language model
+    def __init__(self,config, client):
+        self.encoding = None
+        self.config = config
+        self.client = client
+        if not self.config.is_local: # If we're using OpenAI, we can use the tiktoken library to get the number of tokens used by the prompt
+            self.encoding = tiktoken.encoding_for_model(config.llm)
+            
+        self.BOS_token = config.BOS_token
+        self.EOS_token = config.EOS_token
+        self.message_signifier = config.message_signifier
+        self.message_seperator = config.message_seperator
+        self.message_format = config.message_format
+
+    def named_parse(self, msg, name): # Parses a string into a message format with the name of the speaker
+        parsed_msg = self.message_format
+        parsed_msg = parsed_msg.replace("[BOS_token]",self.BOS_token)
+        parsed_msg = parsed_msg.replace("[name]",name)
+        parsed_msg = parsed_msg.replace("[message_signifier]",self.message_signifier)
+        parsed_msg = parsed_msg.replace("[content]",msg)
+        parsed_msg = parsed_msg.replace("[EOS_token]",self.EOS_token)
+        parsed_msg = parsed_msg.replace("[message_seperator]",self.message_seperator)
+        return parsed_msg
+
+    def start_message(self, name): # Returns the start of a message with the name of the speaker
+        parsed_msg = self.message_format
+        parsed_msg = parsed_msg.split("[content]")[0]
+        parsed_msg = parsed_msg.replace("[BOS_token]",self.BOS_token)
+        parsed_msg = parsed_msg.replace("[name]",name)
+        parsed_msg = parsed_msg.replace("[message_signifier]",self.message_signifier)
+        parsed_msg = parsed_msg.replace("[EOS_token]",self.EOS_token)
+        parsed_msg = parsed_msg.replace("[message_seperator]",self.message_seperator)
+        return parsed_msg
+
+    def end_message(self, name=""): # Returns the end of a message with the name of the speaker (Incase the message format chosen requires the name be on the end for some reason, but it's optional to include the name in the end message)
+        parsed_msg = self.message_format
+        parsed_msg = parsed_msg.split("[content]")[1]
+        parsed_msg = parsed_msg.replace("[BOS_token]",self.BOS_token)
+        parsed_msg = parsed_msg.replace("[name]",name)
+        parsed_msg = parsed_msg.replace("[message_signifier]",self.message_signifier)
+        parsed_msg = parsed_msg.replace("[EOS_token]",self.EOS_token)
+        parsed_msg = parsed_msg.replace("[message_seperator]",self.message_seperator)
+        return parsed_msg
+
+    def get_string_from_messages(self, messages): # Returns a formatted string from a list of messages
+        context = ""
+        for message in messages:
+            context += self.named_parse(message["content"],message["role"])
+        return context
+
+    def num_tokens_from_messages(self, messages): # Returns the number of tokens used by a list of messages
+        """Returns the number of tokens used by a list of messages"""
+        context = self.get_string_from_messages(messages)
+        context += self.start_message(self.config.assistant_name) # Simulate the assistant replying to add a little more to the token count to be safe (this is a bit of a hack, but it should work 99% of the time I think) TODO: Determine if needed
+        return self.get_token_count(context)
+        
+    def get_token_count(self, string):
+        if self.config.is_local: # If we're using the api, we can just ask it how many tokens it used by looking at the prompt_tokens usage via an embedding call
+            embedding = self.client.embeddings.create(
+                model=self.config.llm,
+                input=string
+            )
+            num_tokens = int(embedding.usage.prompt_tokens)
+        else: # If we're using OpenAI, we can use the tiktoken library to get the number of tokens used by the prompt
+            tokens = self.encoding.encode(string)
+            num_tokens = len(tokens)
+        return num_tokens
+
+class LLM():
+    def __init__(self, config, client, tokenizer, token_limit, language_info):
+        self.config = config
+        self.client = client
+        self.tokenizer = tokenizer
+        self.token_limit = token_limit
+        self.language_info = language_info
+    
+    @utils.time_it
+    def chatgpt_api(self, input_text, messages):
+        print(f"ChatGPT API: {input_text}")
+        print(f"Messages: {messages}")
+        if input_text:
+            messages.append(
+                {"role": "user", "content": input_text},
+            )
+            logging.info('Getting LLM response...')
+            chat_completion = self.create(messages)
+        
+        reply = chat_completion.choices[0].message.content
+        messages.append(
+            {"role": "assistant", "content": chat_completion.choices[0].message.content},
+        )
+        logging.info(f"LLM Response: {reply}")
+
+        return reply, messages
+    
+    def create(self, messages):
+        print(f"cMessages: {messages}")
+        retries = 5
+        completion = None
+        while retries > 0 and completion is None:
+            try:
+                if self.config.is_local: # If local, don't do the weird header thing. Doesn't break anything, but it's weird.
+                    prompt = self.tokenizer.get_string_from_messages(messages)
+                    completion = self.client.completions.create(
+                        model=self.config.llm, prompt=prompt, max_tokens=self.config.max_tokens
+                    )
+                else:
+                    completion = self.client.chat.completions.create(
+                        model=self.config.llm, messages=messages, headers={"HTTP-Referer": 'https://github.com/art-from-the-machine/Mantella', "X-Title": 'mantella'}, stop=self.config.stop,temperature=self.config.temperature,top_p=self.config.top_p,frequency_penalty=self.config.frequency_penalty, max_tokens=self.config.max_tokens
+                    )
+            except Exception as e:
+                logging.warning('Could not connect to LLM API, retrying in 5 seconds...')
+                logging.warning(e)
+                print(e)
+                if retries == 1:
+                    logging.error('Could not connect to LLM API after 5 retries, exiting...')
+                    input('Press enter to continue...')
+                    exit()
+                time.sleep(5)
+                retries -= 1
+                continue
+            break
+        return completion
+    
+    def acreate(self, messages):
+        # print(f"acMessages: {messages}")
+        # if self.alternative_openai_api_base == 'none': # if using the default API base, use the default aiohttp session - I don't think this is needed anymore, but I'm keeping it here just in case
+        #     openai.aiosession.set(ClientSession()) # https://github.com/openai/openai-python#async-api
+        # if self.config.is_local: # If local, don't do the weird header thing. Doesn't break anything, but it's weird.
+        #     generator = self.client.chat.completions.create(model=self.config.llm, messages=messages,stream=True,stop=self.config.stop,temperature=self.config.temperature,top_p=self.config.top_p,frequency_penalty=self.config.frequency_penalty, max_tokens=self.config.max_tokens)
+        # else: # honestly no idea why the header is needed, but I guess I'll leave it for OpenAI support incase that's something they require?
+        #     generator = self.client.chat.completions.create(model=self.config.llm, messages=messages, headers={"HTTP-Referer": 'https://github.com/art-from-the-machine/Mantella', "X-Title": 'mantella'},stream=True,stop=self.stop,temperature=self.temperature,top_p=self.top_p,frequency_penalty=self.frequency_penalty, max_tokens=self.max_tokens)
+        retries = 5
+        completion = None
+        while retries > 0 and completion is None:
+            try:
+                prompt = self.tokenizer.get_string_from_messages(messages)
+                prompt += self.tokenizer.start_message("") # Start empty message from no one to let the LLM generate the speaker by split \n
+                print(f"avPrompt: {prompt}")
+                return self.client.completions.create(
+                    model=self.config.llm, prompt=prompt, max_tokens=self.config.max_tokens, stream=True # , stop=self.stop, temperature=self.temperature, top_p=self.top_p, frequency_penalty=self.frequency_penalty, stream=True
+                )
+            except Exception as e:
+                logging.warning('Could not connect to LLM API, retrying in 5 seconds...')
+                logging.warning(e)
+                print(e)
+                if retries == 1:
+                    logging.error('Could not connect to LLM API after 5 retries, exiting...')
+                    input('Press enter to continue...')
+                    exit()
+                time.sleep(5)
+                retries -= 1
+                continue
+            break
+        # if self.alternative_openai_api_base == 'none':
+        #     await openai.aiosession.get().close()
+
+
+
+def initialise(config_file, logging_file, secret_key_file, language_file):
+    def setup_openai_secret_key(file_name):
+        with open(file_name, 'r') as f:
+            api_key = f.readline().strip()
+        return api_key
 
     def setup_logging(file_name):
         logging.basicConfig(filename=file_name, format='%(asctime)s %(levelname)s: %(message)s', level=logging.INFO)
@@ -20,13 +219,6 @@ def initialise(config_file, logging_file, secret_key_file, character_df_file, la
         console.setLevel(logging.INFO)
         logging.getLogger('').addHandler(console)
 
-    def get_character_df(file_name):
-        encoding = utils.get_file_encoding(file_name)
-        character_df = pd.read_csv(file_name, engine='python', encoding=encoding)
-        character_df = character_df.loc[character_df['voice_model'].notna()]
-
-        return character_df
-    
     def get_language_info(file_name):
         language_df = pd.read_csv(file_name)
         try:
@@ -35,67 +227,76 @@ def initialise(config_file, logging_file, secret_key_file, character_df_file, la
         except:
             logging.error(f"Could not load language '{config.language}'. Please set a valid language in config.ini\n")
 
-    def get_token_limit(llm, custom_token_count, is_local):
-        if '/' in llm:
-            llm = llm.split('/')[-1]
-
-        if llm == 'gpt-3.5-turbo':
-            token_limit = 4096
-        elif llm == 'gpt-3.5-turbo-16k':
-            token_limit = 16384
-        elif llm == 'gpt-4':
-            token_limit = 8192
-        elif llm == 'gpt-4-32k':
-            token_limit = 32768
-        elif llm == 'claude-2':
-            token_limit = 100_000
-        elif llm == 'claude-instant-v1':
-            token_limit = 100_000
-        elif llm == 'palm-2-chat-bison':
-            token_limit = 8000
-        elif llm == 'palm-2-codechat-bison':
-            token_limit = 8000
-        elif llm == 'llama-2-7b-chat':
-            token_limit = 4096
-        elif llm == 'llama-2-13b-chat':
-            token_limit = 4096
-        elif llm == 'llama-2-70b-chat':
-            token_limit = 4096
-        elif llm == 'codellama-34b-instruct':
-            token_limit = 16000
-        elif llm == 'nous-hermes-llama2-13b':
-            token_limit = 4096
-        elif llm == 'weaver':
-            token_limit = 8000
-        elif llm == 'mythomax-L2-13b':
-            token_limit = 8192
-        elif llm == 'airoboros-l2-70b-2.1':
-            token_limit = 4096
-        elif llm == 'gpt-3.5-turbo-1106':
-            token_limit = 16_385
-        elif llm == 'gpt-4-1106-preview':
-            token_limit = 128_000
-        else:
-            logging.info(f"Could not find number of available tokens for {llm}. Defaulting to token count of {custom_token_count} (this number can be changed via the `custom_token_count` setting in config.ini)")
+    def get_token_limit(config):
+        if config.is_local:
+            logging.info(f"Using local language model. Token limit set to {config.maximum_local_tokens} (this number can be changed via the `maximum_local_tokens` setting in config.ini)")
             try:
-                token_limit = int(custom_token_count)
+                token_limit = int(config.maximum_local_tokens)
             except ValueError:
-                logging.error(f"Invalid custom_token_count value: {custom_token_count}. It should be a valid integer. Please update your configuration.")
+                logging.error(f"Invalid maximum_local_tokens value: {config.maximum_local_tokens}. It should be a valid integer. Please update your configuration.")
                 token_limit = 4096  # Default to 4096 in case of an error.
+        else:
+            llm = config.llm
+            if '/' in llm:
+                llm = llm.split('/')[-1]
+
+            if llm == 'gpt-3.5-turbo':
+                token_limit = 4096
+            elif llm == 'gpt-3.5-turbo-16k':
+                token_limit = 16384
+            elif llm == 'gpt-4':
+                token_limit = 8192
+            elif llm == 'gpt-4-32k':
+                token_limit = 32768
+            elif llm == 'claude-2':
+                token_limit = 100_000
+            elif llm == 'claude-instant-v1':
+                token_limit = 100_000
+            elif llm == 'palm-2-chat-bison':
+                token_limit = 8000
+            elif llm == 'palm-2-codechat-bison':
+                token_limit = 8000
+            elif llm == 'llama-2-7b-chat':
+                token_limit = 4096
+            elif llm == 'llama-2-13b-chat':
+                token_limit = 4096
+            elif llm == 'llama-2-70b-chat':
+                token_limit = 4096
+            elif llm == 'codellama-34b-instruct':
+                token_limit = 16000
+            elif llm == 'nous-hermes-llama2-13b':
+                token_limit = 4096
+            elif llm == 'weaver':
+                token_limit = 8000
+            elif llm == 'mythomax-L2-13b':
+                token_limit = 8192
+            elif llm == 'airoboros-l2-70b-2.1':
+                token_limit = 4096
+            elif llm == 'gpt-3.5-turbo-1106':
+                token_limit = 16_385
+            elif llm == 'gpt-4-1106-preview':
+                token_limit = 128_000
+            else:
+                logging.info(f"Could not find number of available tokens for {llm}. Defaulting to token count of {config.maximum_local_tokens} (this number can be changed via the `maximum_local_tokens` setting in config.ini)")
+
         if token_limit <= 4096:
-            if is_local:
-                llm = 'Local language model'
             logging.info(f"{llm} has a low token count of {token_limit}. For better NPC memories, try changing to a model with a higher token count")
-        
         return token_limit
 
     setup_logging(logging_file)
     config = config_loader.ConfigLoader(config_file)
 
     is_local = True
-    if (config.alternative_openai_api_base == 'none') or (config.alternative_openai_api_base == 'https://openrouter.ai/api/v1'):
+    if (config.alternative_openai_api_base == 'none'): # or (config.alternative_openai_api_base.startswith('https://openrouter.ai/api/v1')) -- this is a temporary fix for the openrouter api, as while it isn't local, it shouldnn't use the local tokenizer, so we're going to lie here TODO: Fix this. Should do more granularity than local or not, should just have a flag for when using openai or other models.
         is_local = False
-    setup_openai_secret_key(secret_key_file, is_local)
+    
+    api_key = setup_openai_secret_key(secret_key_file)
+    client = OpenAI(api_key=api_key)
+
+    if config.alternative_openai_api_base != 'none':
+        client.base_url  = config.alternative_openai_api_base
+        logging.info(f"Using OpenAI API base: {client.base_url}")
+
     if is_local:
         logging.info(f"Running Mantella with local language model")
     else:
@@ -103,24 +304,24 @@ def initialise(config_file, logging_file, secret_key_file, character_df_file, la
 
     # clean up old instances of exe runtime files
     utils.cleanup_mei(config.remove_mei_folders)
-    
-    character_df = get_character_df(character_df_file)
-    language_info = get_language_info(language_file)
-
-    chosenmodel = config.llm
-    # if using an alternative API, use encoding for GPT-3.5 by default
-    # NOTE: this encoding may not be the same for all models, leading to incorrect token counts
-    #       this can lead to the token limit of the given model being overrun
-    if config.alternative_openai_api_base != 'none':
-        chosenmodel = 'gpt-3.5-turbo'
+    character_df = CharacterDB(config.character_df_file)
     try:
-        encoding = tiktoken.encoding_for_model(chosenmodel)
+        if config.character_df_file.endswith('.csv'):
+            character_df.load_characters_csv()
+        else:
+            character_df.load_characters_json()
     except:
-        logging.error('Error loading model. If you are using an alternative to OpenAI, please find the setting `alternative_openai_api_base` in MantellaSoftware/config.ini and follow the instructions to change this setting')
+        logging.error(f"Could not load character database from {config.character_df_file}. Please check the path and try again. Path should be a directory containing json files or a csv file containing character information.")
         raise
-    token_limit = get_token_limit(config.llm, config.custom_token_count, is_local)
+    language_info = get_language_info(language_file)
+    
+    config.is_local = is_local
 
-    if config.alternative_openai_api_base != 'none':
-        openai.api_base = config.alternative_openai_api_base
+    tokenizer = Tokenizer(config,client)
+    token_limit = get_token_limit(config)
+    
+    llm = LLM(config, client, tokenizer, token_limit, language_info)
 
-    return config, character_df, language_info, encoding, token_limit
+
+
+    return config, character_df, language_info, llm, tokenizer, token_limit
