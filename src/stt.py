@@ -53,8 +53,8 @@ class Transcriber:
                     self.transcribe_model = WhisperModel(self.model, device=self.process_device, compute_type="float32")
 
 
-    def get_player_response(self, say_goodbye, radiant_dialogue="false"):
-        if radiant_dialogue == "true":
+    def get_player_response(self, radiant_dialogue=False):
+        if radiant_dialogue:
             if self.call_count < 1:
                 logging.info('Running radiant dialogue')
                 transcribed_text = '*Please begin / continue a conversation topic (greetings are not needed). Ensure to change the topic if the current one is losing steam. The conversation should steer towards topics which reveal information about the characters and who they are, or instead drive forward conversations previously discussed in their memory.*'
@@ -86,13 +86,13 @@ class Transcriber:
                     self.game_state_manager.write_game_info('_mantella_text_input', '')
                     self.game_state_manager.write_game_info('_mantella_text_input_enabled', 'False')
 
-        if (self.debug_mode == '1') & (self.debug_exit_on_first_exchange == '1'):
-            if say_goodbye:
-                transcribed_text = self.end_conversation_keyword
-            else:
-                say_goodbye = True
+        # if (self.debug_mode == '1') & (self.debug_exit_on_first_exchange == '1'):
+        #     if say_goodbye:
+        #         transcribed_text = self.end_conversation_keyword
+        #     else:
+        #         say_goodbye = True
         
-        return transcribed_text, say_goodbye
+        return transcribed_text
 
 
     def recognize_input(self):
