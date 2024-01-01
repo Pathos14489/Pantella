@@ -31,7 +31,7 @@ class GameStateManager:
         return None
     
 
-    def load_data_when_available(self, text_file_name, text):
+    def load_data_when_available(self, text_file_name, text = ''):
         while text == '':
             with open(f'{self.game_path}/{text_file_name}.txt', 'r', encoding='utf-8') as f:
                 text = f.readline().strip()
@@ -83,8 +83,6 @@ class GameStateManager:
         self.write_game_info('_mantella_aggro', '')
 
         self.write_game_info('_mantella_radiant_dialogue', 'False')
-
-        return character_name, character_id, location, in_game_time
     
     
     def write_dummy_game_info(self, character_name):
@@ -114,6 +112,43 @@ class GameStateManager:
         
         return character_id, character_name
     
+    def load_player_name(self):
+        """Wait for player name to populate"""
+
+        player_name = self.load_data_when_available('_mantella_player_name', '')
+        return player_name
+    
+    def load_player_race(self):
+        """Wait for player race to populate"""
+        
+        player_race = self.load_data_when_available('_mantella_player_race', '')
+        player_race = player_race[0].upper() + player_race[1:].lower()
+        return player_race
+    
+    def load_player_gender(self):
+        """Wait for player gender to populate"""
+        
+        player_gender = self.load_data_when_available('_mantella_player_gender', '')
+        return player_gender
+    
+    def load_radiant_dialogue(self):
+        with open(f'{self.game_path}/_mantella_radiant_dialogue.txt', 'r', encoding='utf-8') as f: # check if radiant dialogue is enabled
+            radiant_dialogue = f.readline().strip().lower()
+        return radiant_dialogue == 'true'
+
+    def load_conversation_ended(self):
+        with open(f'{self.game_path}/_mantella_end_conversation.txt', 'r', encoding='utf-8') as f: # check if conversation has ended
+            conversation_ended = f.readline().strip().lower()
+        return conversation_ended == 'true'
+    
+    def load_ingame_actor_count(self):
+        with open(f'{self.game_path}/_mantella_actor_count.txt', 'r', encoding='utf-8') as f: # check how many characters are in the conversation
+            try:
+                num_characters_selected = int(f.readline().strip())
+            except:
+                logging.info('Failed to read _mantella_actor_count.txt')
+                num_characters_selected = 0
+        return num_characters_selected
     
     def debugging_setup(self, debug_character_name):
         """Select character based on debugging parameters"""
@@ -125,9 +160,14 @@ class GameStateManager:
             character_name = debug_character_name
             debug_character_name = ''
 
+        player_name = self.load_player_name()
+        player_race = self.load_player_race()
+        player_gender = self.load_player_gender()
+        radiant_dialogue = self.load_radiant_dialogue() # get the radiant dialogue setting from _mantella_radiant_dialogue.txt
+
         character_name, character_id, location, in_game_time = self.write_dummy_game_info(character_name)
 
-        return character_name, character_id, location, in_game_time
+        return character_name, character_id, location, in_game_time, player_name, player_race, player_gender, radiant_dialogue
     
     
     def load_unnamed_npc(self, character_name, character_df):
@@ -255,33 +295,60 @@ class GameStateManager:
 
         return character_info
     
+    def get_current_location(self, presume = ''):
+        location = self.load_data_when_available('_mantella_current_location', presume)
+        if location.lower() == 'none': # location returns none when out in the wild
+            location = 'Skyrim'
+        return location
     
     @utils.time_it
-    def load_game_state(self, debug_mode, debug_character_name, character_df, character_name, character_id, location, in_game_time):
+    def load_game_state(self, config, character_df):
         """Load game variables from _mantella_ files in Skyrim folder (data passed by the Mantella spell)"""
 
-        if debug_mode == '1':
-            character_name, character_id, location, in_game_time = self.debugging_setup(debug_character_name)
+        if config.debug_mode == '1':
+            character_name, character_id, location, in_game_time, player_name, player_race, player_gender = self.debugging_setup(config.debug_character_name)
+        else:
+            location = self.get_current_location()
+            in_game_time = self.load_data_when_available('_mantella_in_game_time', '')
         
         # tell Skyrim papyrus script to start waiting for voiceline input
         self.write_game_info('_mantella_end_conversation', 'False')
-        character_id, character_name = self.load_character_name_id()
-        try: # load character from skyrim_characters.csv
-            character_info = character_df.loc[character_df['name'].astype(str).str.lower()==character_name.lower()].to_dict('records')[0]
-            is_generic_npc = False
-        except IndexError: # character not found
-            try: # try searching by ID
-                logging.info(f"Could not find {character_name} in skyrim_characters.csv. Searching by ID {character_id}...")
-                character_info = character_df.loc[(character_df['baseid_int'].astype(str)==character_id) | (character_df['baseid_int'].astype(str)==character_id+'.0')].to_dict('records')[0]
-                is_generic_npc = False
-            except IndexError: # load generic NPC
-                logging.info(f"NPC '{character_name}' could not be found in 'skyrim_characters.csv'. If this is not a generic NPC, please ensure '{character_name}' exists in the CSV's 'name' column exactly as written here, and that there is a voice model associated with them.")
-                character_info = self.load_unnamed_npc(character_name, character_df)
-                is_generic_npc = True
 
-        location = self.load_data_when_available('_mantella_current_location', location)
-        if location.lower() == 'none': # location returns none when out in the wild
-            location = 'Skyrim'
+        character_id, character_name = self.load_character_name_id()
+        
+        player_name = self.load_player_name()
+        player_race = self.load_player_race()
+        player_gender = self.load_player_gender()
+        radiant_dialogue = self.load_radiant_dialogue() # get the radiant dialogue setting from _mantella_radiant_dialogue.txt
+
+        if character_df.db_type == "csv": # load character from skyrim_characters.csv
+            try: # load character from skyrim_characters.csv
+                character_info = character_df.loc[character_df['name'].astype(str).str.lower()==character_name.lower()].to_dict('records')[0]
+                is_generic_npc = False
+            except IndexError: # character not found
+                try: # try searching by ID
+                    logging.info(f"Could not find {character_name} in skyrim_characters.csv. Searching by ID {character_id}...")
+                    character_info = character_df.loc[(character_df['baseid_int'].astype(str)==character_id) | (character_df['baseid_int'].astype(str)==character_id+'.0')].to_dict('records')[0]
+                    is_generic_npc = False
+                except IndexError: # load generic NPC
+                    logging.info(f"NPC '{character_name}' could not be found in 'skyrim_characters.csv'. If this is not a generic NPC, please ensure '{character_name}' exists in the CSV's 'name' column exactly as written here, and that there is a voice model associated with them.")
+                    character_info = self.load_unnamed_npc(character_name, character_df)
+                    is_generic_npc = True
+        else: # Load character from skyrim_characters json directory
+            try: # load character from skyrim_characters json directory
+                character_info = character_df.named_index[character_name]
+                is_generic_npc = False
+            except KeyError: # character not found
+                try: # try searching by ID
+                    logging.info(f"Could not find {character_name} in skyrim_characters.csv. Searching by ID {character_id}...")
+                    character_info = character_df.baseid_int_index[character_id]
+                    is_generic_npc = False
+                except KeyError:
+                    logging.info(f"NPC '{character_name}' could not be found in 'skyrim_characters.csv'. If this is not a generic NPC, please ensure '{character_name}' exists in the CSV's 'name' column exactly as written here, and that there is a voice model associated with them.")
+                    character_info = self.load_unnamed_npc(character_name, character_df)
+                    is_generic_npc = True
+
+        location = self.get_current_location(location) # Check if location has changed since last check
 
         in_game_time = self.load_data_when_available('_mantella_in_game_time', in_game_time)
 
@@ -296,8 +363,9 @@ class GameStateManager:
             actor_relationship_rank = 0
         character_info['in_game_relationship_level'] = actor_relationship_rank
 
-        return character_info, location, in_game_time, is_generic_npc
+        return character_info, location, in_game_time, is_generic_npc, player_name, player_race, player_gender, radiant_dialogue
     
+
     
     @utils.time_it
     def update_game_events(self, message):
@@ -338,57 +406,62 @@ class GameStateManager:
     
     
     @utils.time_it
-    def end_conversation(self, conversation_ended, config, encoding, synthesizer, chat_manager, messages, active_characters, tokens_available):
+    def end_conversation(self, conversation_ended, conversation_manager, tokenizer, synthesizer, chat_manager, messages, active_characters, tokens_available, character):
         """Say final goodbye lines and save conversation to memory"""
 
         # say goodbyes
         if conversation_ended.lower() != 'true': # say line if NPC is not already deactivated
             latest_character = list(active_characters.items())[-1][1]
-            audio_file = synthesizer.synthesize(latest_character.info['voice_model'], latest_character.info['skyrim_voice_folder'], config.goodbye_npc_response)
-            chat_manager.save_files_to_voice_folders([audio_file, config.goodbye_npc_response])
+            audio_file = synthesizer.synthesize(latest_character.info['voice_model'], latest_character.info['skyrim_voice_folder'], conversation_manager.config.goodbye_npc_response)
+            chat_manager.save_files_to_voice_folders([audio_file, conversation_manager.config.goodbye_npc_response])
 
-        messages.append({"role": "user", "content": config.end_conversation_keyword+'.'})
-        messages.append({"role": "assistant", "content": config.end_conversation_keyword+'.'})
+        player_name = self.load_player_name()
+
+        if self.config.is_local: # if local, use immersive context
+            messages.append({"role": player_name, "content": conversation_manager.config.end_conversation_keyword+'.'})
+            messages.append({"role": character.name, "content": conversation_manager.config.end_conversation_keyword+'.'})
+        else: # if using oai, use generic context (no names) Warning: This may result in character breaks, such as referring to the player as user/player, acknowledging they're in a game, etc. Not advised.
+            messages.append({"role": self.config.user_name, "content": conversation_manager.config.end_conversation_keyword+'.'})
+            messages.append({"role": self.config.assistant_name, "content": conversation_manager.config.end_conversation_keyword+'.'})
 
         summary = None
-        for character_name, character in active_characters.items():
-            # If summary has already been generated for another character in a multi NPC conversation (multi NPC memory summaries are shared)
-            if summary == None:
-                summary = character.save_conversation(encoding, messages, tokens_available, config.llm)
-            else:
-                _ = character.save_conversation(encoding, messages, tokens_available, config.llm, summary)
+        for character_name, character in active_characters.items(): # Get conversation summary from any character in the conversation or generate a new one
+            if summary == None: # If summary has already been generated for another character in a multi NPC conversation (multi NPC memory summaries are shared)
+                summary = character.save_conversation(tokenizer, messages, tokens_available, conversation_manager)
+            else: # If summary has not been generated yet, generate it
+                _ = character.save_conversation(tokenizer, messages, tokens_available, conversation_manager, summary)
         logging.info('Conversation ended.')
 
-        self.write_game_info('_mantella_in_game_events', '')
-        self.write_game_info('_mantella_end_conversation', 'True')
-        time.sleep(5) # wait a few seconds for everything to register
+        self.write_game_info('_mantella_in_game_events', '') # clear in-game events
+        self.write_game_info('_mantella_end_conversation', 'True') # tell Skyrim papyrus script conversation has ended
+        time.sleep(int(self.config.end_conversation_wait_time)) # wait a few seconds for everything to register
 
         return None
     
     
     @utils.time_it
-    def reload_conversation(self, config, encoding, synthesizer, chat_manager, messages, active_characters, tokens_available, token_limit, location, in_game_time):
+    def reload_conversation(self, conversation_manager, encoding, synthesizer, chat_manager, messages, active_characters, tokens_available, token_limit, location, in_game_time):
         """Restart conversation to save conversation to memory when token count is reaching its limit"""
 
         latest_character = list(active_characters.items())[-1][1]
         # let the player know that the conversation is reloading
-        audio_file = synthesizer.synthesize(latest_character.info['voice_model'], latest_character.info['skyrim_voice_folder'], config.collecting_thoughts_npc_response)
-        chat_manager.save_files_to_voice_folders([audio_file, config.collecting_thoughts_npc_response])
+        audio_file = synthesizer.synthesize(latest_character.info['voice_model'], latest_character.info['skyrim_voice_folder'], conversation_manager.config.collecting_thoughts_npc_response)
+        chat_manager.save_files_to_voice_folders([audio_file, conversation_manager.config.collecting_thoughts_npc_response])
 
-        messages.append({"role": "user", "content": latest_character.info['name']+'?'})
+        messages.append({"role": "user", "content": latest_character.info['name']+'?'}) # TODO: More robust way of returning to conversation, this is too limited
         if len(list(active_characters.items())) > 1:
-            collecting_thoughts_response = latest_character.info['name']+': '+config.collecting_thoughts_npc_response+'.'
+            collecting_thoughts_response = latest_character.info['name']+': '+conversation_manager.config.collecting_thoughts_npc_response+'.'
         else:
-            collecting_thoughts_response = config.collecting_thoughts_npc_response+'.'
+            collecting_thoughts_response = conversation_manager.config.collecting_thoughts_npc_response+'.'
         messages.append({"role": "assistant", "content": collecting_thoughts_response})
 
         # save the conversation so far
         summary = None
         for character_name, character in active_characters.items():
             if summary == None:
-                summary = character.save_conversation(encoding, messages, tokens_available, config.llm)
+                summary = character.save_conversation(encoding, messages, tokens_available, conversation_manager)
             else:
-                _ = character.save_conversation(encoding, messages, tokens_available, config.llm, summary)
+                _ = character.save_conversation(encoding, messages, tokens_available, conversation_manager, summary)
         # let the new file register on the system
         time.sleep(1)
         # if a new conversation summary file was created, load this latest file
@@ -397,10 +470,10 @@ class GameStateManager:
 
         # reload context
         keys = list(active_characters.keys())
-        prompt = config.prompt
+        prompt = conversation_manager.config.prompt
         if len(keys) > 1:
-            prompt = config.multi_npc_prompt
-        context = latest_character.set_context(prompt, location, in_game_time, active_characters, token_limit)
+            prompt = conversation_manager.config.multi_npc_prompt
+        context = latest_character.set_context(prompt, location, in_game_time, active_characters, token_limit,"false")
 
         # add previous few back and forths from last conversation
         messages_wo_system_prompt = messages[1:]
