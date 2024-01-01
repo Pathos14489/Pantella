@@ -3,47 +3,77 @@ import logging
 import json
 import time
 import src.utils as utils
-import src.chat_response as chat_response
 
 class Character:
-    def __init__(self, info, language, is_generic_npc):
+    def __init__(self, info, language, is_generic_npc, player_name, player_race, player_gender):
         self.info = info
-        self.name = info['name']
-        self.bio = info['bio']
-        self.relationship_rank = info['in_game_relationship_level']
+        print(info)
+        for key, value in info.items():
+            setattr(self, key, value) # set all character info as attributes of the character object to support arbitrary character info
         self.language = language
         self.is_generic_npc = is_generic_npc
-        self.in_game_voice_model = info['in_game_voice_model']
-        self.voice_model = info['voice_model']
-        self.conversation_history_file = f"data/conversations/{self.name}/{self.name}.json"
-        self.conversation_summary_file = self.get_latest_conversation_summary_file_path()
         self.conversation_summary = ''
+        self.player_name = player_name # used to replace "the player" with the player's name in conversations. This is not saved to the character info file.
+        self.player_race = player_race
+        self.player_gender = player_gender
+        self.conversation_summary_file = self.get_latest_conversation_summary_file_path()
+        if "age" not in self.info:
+            self.age = "Adult" # default age - This is to help communicate to the AI the age of the actor they're playing to help them stay in character
+            if "Old" in self.voice_model:
+                self.age = "Old"
+            elif "Young" in self.voice_model:
+                self.age = "Young"
+            elif "Child" in self.voice_model:
+                self.age = "Child"
+        self.gendered_age = "" # default gendered age - This is also to help communicate to the AI the age of the actor they're playing to help them stay in character
+        if self.gender == "Male":
+            if self.age == "Child":
+                self.gendered_age = "Boy"
+            elif self.age == "Old":
+                self.gendered_age = "Old Man"
+            else:
+                self.gendered_age = "Man"
+        else:
+            if self.age == "Child":
+                self.gendered_age = "Girl"
+            elif self.age == "Old":
+                self.gendered_age = "Old Lady"
+            else:
+                self.gendered_age = "Woman"
+        self.conversation_history_file = f"data/conversations/{self.player_name}_{self.player_gender}_{self.player_race}/{self.name}/{self.name}.json"
+        self.current_trust = 0
 
 
     def get_latest_conversation_summary_file_path(self):
         """Get latest conversation summary by file name suffix"""
 
-        if os.path.exists(f"data/conversations/{self.name}"):
+        conversation_root_dir = f"data/conversations/{self.player_name}_{self.player_gender}_{self.player_race}/{self.name}"
+        # TODO: Somehow make this work with multiple characters of the same name, gender and race or even ideally with the same exact character
+        # at different points (e.g. different saves = different conversations with the same character and the same player character)
+        # Maybe commmunicate the save index to the user and use that to load the correct save somehow?
+
+        if os.path.exists(conversation_root_dir):
             # get all files from the directory
-            files = os.listdir(f"data/conversations/{self.name}")
+            files = os.listdir(conversation_root_dir)
             # filter only .txt files
             txt_files = [f for f in files if f.endswith('.txt')]
             if len(txt_files) > 0:
                 file_numbers = [int(os.path.splitext(f)[0].split('_')[-1]) for f in txt_files]
                 latest_file_number = max(file_numbers)
-                logging.info(f"Loaded latest summary file: data/conversations/{self.name}_summary_{latest_file_number}.txt")
+                logging.info(f"Loaded latest summary file: {conversation_root_dir}/{self.name}_summary_{latest_file_number}.txt")
             else:
-                logging.info(f"data/conversations/{self.name} does not exist. A new summary file will be created.")
+                logging.info(f"{conversation_root_dir} does not exist. A new summary file will be created.")
                 latest_file_number = 1
         else:
-            logging.info(f"data/conversations/{self.name} does not exist. A new summary file will be created.")
+            logging.info(f"{conversation_root_dir} does not exist. A new summary file will be created.")
             latest_file_number = 1
+
         
-        conversation_summary_file = f"data/conversations/{self.name}/{self.name}_summary_{latest_file_number}.txt"
+        conversation_summary_file = "{self.name}/{self.name}_summary_{latest_file_number}.txt"
         return conversation_summary_file
     
 
-    def set_context(self, prompt, location, in_game_time, active_characters, token_limit, radiant_dialogue):
+    def set_context(self, conversation_manager, location, in_game_time, active_characters, token_limit, radiant_dialogue):
         # if conversation history exists, load it
         if os.path.exists(self.conversation_history_file):
             with open(self.conversation_history_file, 'r', encoding='utf-8') as f:
@@ -58,51 +88,80 @@ class Character:
 
             self.conversation_summary = previous_conversation_summaries
 
-            context = self.create_context(prompt, location, in_game_time, active_characters, token_limit, radiant_dialogue, len(previous_conversations), previous_conversation_summaries)
+            context = self.create_context(conversation_manager, location, in_game_time, active_characters, token_limit, radiant_dialogue, len(previous_conversations), previous_conversation_summaries)
         else:
-            context = self.create_context(prompt, location, in_game_time, active_characters, token_limit, radiant_dialogue)
+            context = self.create_context(conversation_manager, location, in_game_time, active_characters, token_limit, radiant_dialogue)
 
         return context
     
-
-    def create_context(self, prompt, location='Skyrim', time='12', active_characters=None, token_limit=4096, radiant_dialogue='false', trust_level=0, conversation_summary='', prompt_limit_pct=0.75):
-        if self.relationship_rank == 0:
-            if trust_level < 1:
+    def get_perspective_player_identity(self):
+        perspective_name = "a stranger" # Who the character thinks the player is
+        if self.in_game_relationship_level == 0:
+            if self.current_trust < 1:
                 trust = 'a stranger'
-            elif trust_level < 10:
+                perspective_name = "a stranger"
+            elif self.current_trust < 10:
                 trust = 'an acquaintance'
-            elif trust_level < 50:
+                perspective_name = "an acquaintance"
+            elif self.current_trust < 50:
                 trust = 'a friend'
-            elif trust_level >= 50:
+                perspective_name = self.player_name
+            elif self.current_trust >= 50:
                 trust = 'a close friend'
-        elif self.relationship_rank == 4:
+                perspective_name = self.player_name
+        elif self.in_game_relationship_level == 4:
             trust = 'a lover'
-        elif self.relationship_rank > 0:
+            perspective_name = self.player_name
+        elif self.in_game_relationship_level > 0:
             trust = 'a friend'
-        elif self.relationship_rank < 0:
+            perspective_name = self.player_name
+        elif self.in_game_relationship_level < 0:
             trust = 'an enemy'
+            perspective_name = "an enemy"
+        
+        perspective_description = perspective_name + ", " + "a " + self.player_race + " " + self.player_gender + "," # A description of the player from the character's perspective
+        return perspective_name, perspective_description, trust
+    
+    
+    def create_context(self, conversation_manager, location='Skyrim', time='12', active_characters=None, token_limit=4096, radiant_dialogue='false', trust_level=0, conversation_summary='', prompt_limit_pct=0.75):
+        self.current_trust = trust_level
+        perspective_name, perspective_description, trust = self.get_perspective_player_identity()
+
         if len(conversation_summary) > 0:
             conversation_summary = f"Below is a summary for each of your previous conversations:\n\n{conversation_summary}"
 
-        time_group = utils.get_time_group(time)
+        time_group = utils.get_time_group(time) # get time group from in-game time before 12/24 hour conversion
+
+        time = int(time)
+        if time <= 12:
+            time = f"{time}"
+        elif time > 12:
+            time = f"{time-12}" # Convert to 12 hour time because asking the AI to convert to 12 hour time is unreliable. Example: half the time they say 15 in the afternoon instead of 3pm.
 
         keys = list(active_characters.keys())
 
+        replacement_dict = {
+            "time": time,
+            "time_group": time_group,
+            "location": location,
+            "trust": trust,
+            "player": perspective_description,
+            "language": self.language,
+        }   
+        for key, value in self.info.items(): # add all character info to replacement dict
+            replacement_dict[key] = value
+        def rd_format(r_dict,s): # Uses the replacement dict to format the string
+            return s.format(**r_dict)
+
         if len(keys) == 1: # Single NPC prompt
-            character_desc = prompt.format(
-                name=self.name, 
-                bio=self.bio, 
-                trust=trust, 
-                location=location, 
-                time=time, 
-                time_group=time_group, 
-                language=self.language, 
-                conversation_summary=conversation_summary
-            )
+            rd = replacement_dict.copy()
+            rd["conversation_summary"] = conversation_summary
+
+            character_desc = rd_format(rd ,conversation_manager.config.prompt)
         else: # Multi NPC prompt
-            if radiant_dialogue == 'false': # don't mention player if radiant dialogue
-                keys_w_player = ['the player'] + keys
-            else:
+            if radiant_dialogue == 'false': # mention player if multi NPC dialogue and not radiant dialogue
+                keys_w_player = [perspective_name] + keys
+            else: # don't mention player if radiant dialogue
                 keys_w_player = keys
             
             # Join all but the last key with a comma, and add the last key with "and" in front
@@ -121,53 +180,43 @@ class Character:
 
             formatted_histories = "\n".join(conversation_histories)
             
-            character_desc = prompt.format(
-                name=self.name, 
-                names=character_names_list,
-                names_w_player=character_names_list_w_player,
-                language=self.language,
-                location=location,
-                time=time,
-                time_group=time_group,
-                bios=formatted_bios,
-                conversation_summaries=formatted_histories)
+            rd = replacement_dict.copy()
+            rd["bios"] = formatted_bios
+            rd["names"] = character_names_list
+            rd["names_w_player"] = character_names_list_w_player
+            rd["conversation_summaries"] = formatted_histories
+
+            character_desc = rd_format(rd, conversation_manager.config.prompt)
         
-            prompt_num_tokens = chat_response.num_tokens_from_messages([{"role": "system", "content": character_desc}])
+
+            # Check if character prompt is too long
+            prompt_num_tokens = conversation_manager.tokenizer.num_tokens_from_messages([{"role": "system", "content": character_desc}])
             prompt_token_limit = (round(token_limit*prompt_limit_pct,0))
             # If the full prompt is too long, exclude NPC memories from prompt
             if prompt_num_tokens > prompt_token_limit:
-                character_desc = prompt.format(
-                    name=self.name, 
-                    names=character_names_list,
-                    names_w_player=character_names_list_w_player,
-                    language=self.language,
-                    location=location,
-                    time=time,
-                    time_group=time_group,
-                    bios=formatted_bios,
-                    conversation_summaries='NPC memories not available.')
+                rd["conversation_summaries"] = 'NPC memories not available.'
+                # TODO: Fix this to trimming the memory summaries instead of cutting it entirely because I don't want dementia chatbots. Trim the the who spoke longest ago and isn't chatting next.
+
+                character_desc = rd_format(rd, conversation_manager.config.prompt)
                 
-                prompt_num_tokens = chat_response.num_tokens_from_messages([{"role": "system", "content": character_desc}])
+                prompt_num_tokens = conversation_manager.tokenizer.num_tokens_from_messages([{"role": "system", "content": character_desc}])
                 prompt_token_limit = (round(token_limit*prompt_limit_pct,0))
                 # If the prompt with all bios included is too long, exclude NPC bios and just list the names of NPCs in the conversation
                 if prompt_num_tokens > prompt_token_limit:
-                    character_desc = prompt.format(
-                        name=self.name, 
-                        names=character_names_list,
-                        names_w_player=character_names_list_w_player,
-                        language=self.language,
-                        location=location,
-                        time=time,
-                        time_group=time_group,
-                        bios='NPC backgrounds not available.',
-                        conversation_summaries='NPC memories not available.')
+                    rd["bios"] = 'NPC backgrounds not available.'
+                    # TODO: Fix this to trimming the bioses instead of cutting it entirely because I don't want dementia chatbots. Trim the the who spoke longest ago and isn't chatting next.
+                    # Long Term Idea: Each character should have their own personal prompt, not one big multi NPC prompt. Not only will this prevent characters from having unreasonable knowledge about the characters they're chatting to, but it will also allow for more natural conversations.
+                    # Short Term Idea: Add a second description to each character(see: generate it from the character's bio) that is used for multi NPC prompts. This description should be shorter than the bio and should be more focused on the character's appearance and general traits rather than their backstory
+                    character_desc = conversation_manager.config.prompt
+                    for key, value in rd.items():
+                        character_desc = character_desc.replace(f'{{{key}}}', value)
         
         logging.info(character_desc)
         context = [{"role": "system", "content": character_desc}]
         return context
         
 
-    def save_conversation(self, encoding, messages, tokens_available, llm, summary=None, summary_limit_pct=0.45):
+    def save_conversation(self, tokenizer, messages, tokens_available, conversation_manager, summary=None, summary_limit_pct=0.45):
         if self.is_generic_npc:
             logging.info('A summary will not be saved for this generic NPC.')
             return None
@@ -205,7 +254,7 @@ class Character:
         if summary == None:
             while True:
                 try:
-                    new_conversation_summary = self.summarize_conversation(messages, llm)
+                    new_conversation_summary = self.summarize_conversation(messages, conversation_manager)
                     break
                 except:
                     logging.error('Failed to summarize conversation. Retrying...')
@@ -219,13 +268,13 @@ class Character:
             f.write(conversation_summaries)
 
         # if summaries token limit is reached, summarize the summaries
-        if len(encoding.encode(conversation_summaries)) > summary_limit:
-            logging.info(f'Token limit of conversation summaries reached ({len(encoding.encode(conversation_summaries))} / {summary_limit} tokens). Creating new summary file...')
+        if len(tokenizer.encode(conversation_summaries)) > summary_limit:
+            logging.info(f'Token limit of conversation summaries reached ({len(tokenizer.encode(conversation_summaries))} / {summary_limit} tokens). Creating new summary file...')
             while True:
                 try:
-                    prompt = f"You are tasked with summarizing the conversation history between {self.name} (the assistant) and the player (the user) / other characters. These conversations take place in Skyrim. "\
+                    prompt = f"You are tasked with summarizing the conversation history between {self.name} and the player / other characters. These conversations take place in Skyrim. "\
                         f"Each paragraph represents a conversation at a new point in time. Please summarize these conversations into a single paragraph in {self.language}."
-                    long_conversation_summary = self.summarize_conversation(conversation_summaries, llm, prompt)
+                    long_conversation_summary = self.summarize_conversation(conversation_summaries, conversation_manager, prompt)
                     break
                 except:
                     logging.error('Failed to summarize conversation. Retrying...')
@@ -245,21 +294,23 @@ class Character:
         return new_conversation_summary
     
 
-    def summarize_conversation(self, conversation, llm, prompt=None):
+    def summarize_conversation(self, conversation, conversation_manager, prompt=None):
+        perspective_name, _, _ = self.get_perspective_player_identity()
         summary = ''
         if len(conversation) > 5:
             conversation = conversation[3:-2] # drop the context (0) hello (1,2) and "Goodbye." (-2, -1) lines
             if prompt == None:
-                prompt = f"You are tasked with summarizing the conversation between {self.name} (the assistant) and the player (the user) / other characters. These conversations take place in Skyrim. It is not necessary to comment on any mixups in communication such as mishearings. Text contained within asterisks state in-game events. Please summarize the conversation into a single paragraph in {self.language}."
+                prompt = f"You are tasked with summarizing the conversation between {self.name} and {perspective_name} / other characters. These conversations take place in Skyrim. It is not necessary to comment on any mixups in communication such as mishearings. Text contained within asterisks state in-game events. Please summarize the conversation into a single paragraph in {self.language}."
             context = [{"role": "system", "content": prompt}]
-            summary, _ = chat_response.chatgpt_api(f"{conversation}", context, llm)
+            summary, _ = conversation_manager.llm.chatgpt_api(f"{conversation}", context) # TODO: Change to use acreate instead of chatgpt_api, I don't think this works with the use of none "system", "user" and "assistant" roles being in the conversation history
 
             summary = summary.replace('The assistant', self.name)
             summary = summary.replace('the assistant', self.name)
             summary = summary.replace('an assistant', self.name)
             summary = summary.replace('an AI assistant', self.name)
-            summary = summary.replace('The user', 'The player')
-            summary = summary.replace('the user', 'the player')
+            summary = summary.replace('The user', perspective_name)
+            summary = summary.replace('The User', perspective_name)
+            summary = summary.replace('the user', perspective_name)
             summary += '\n\n'
 
             logging.info(f"Conversation summary saved.")
