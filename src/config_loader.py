@@ -42,10 +42,18 @@ https://github.com/art-from-the-machine/Mantella#issues-qa
                 raise e
 
         try:
+            # [Startup]
             # run config editor if config.ini has the parameter
             if int(config['Startup']['open_config_editor']) == 1:
                 run_config_editor()
 
+            # [Paths]
+            self.game_path = config['Paths']['skyrim_folder']
+            self.xvasynth_path = config['Paths']['xvasynth_folder']
+            self.mod_path = config['Paths']['mod_folder']
+            self.character_df_file = config['Paths']['character_df_file']
+
+            # [Language]
             self.language = config['Language']['language']
             self.end_conversation_keyword = config['Language']['end_conversation_keyword']
             self.goodbye_npc_response = config['Language']['goodbye_npc_response']
@@ -54,35 +62,42 @@ https://github.com/art-from-the-machine/Mantella#issues-qa
             self.forgiven_npc_response = config['Language']['forgiven_npc_response']
             self.follow_npc_response = config['Language']['follow_npc_response']
 
-            self.game_path = config['Paths']['skyrim_folder']
-            self.xvasynth_path = config['Paths']['xvasynth_folder']
-            self.mod_path = config['Paths']['mod_folder']
-
+            # [Microphone]
             self.mic_enabled = config['Microphone']['microphone_enabled']
             self.whisper_model = config['Microphone']['model_size']
-            self.whisper_process_device = config['Microphone']['process_device']
             self.stt_language = config['Microphone']['stt_language']
             if (self.stt_language == 'default'):
                 self.stt_language = self.language
             self.stt_translate = int(config['Microphone']['stt_translate'])
+            self.whisper_process_device = config['Microphone']['process_device']
+            self.whisper_type = config['Microphone']['whisper_type']
+            self.whisper_url = config['Microphone']['whisper_url']
             self.audio_threshold = config['Microphone']['audio_threshold']
             self.pause_threshold = float(config['Microphone']['pause_threshold'])
             self.listen_timeout = int(config['Microphone']['listen_timeout'])
-            self.whisper_type = config['Microphone']['whisper_type']
-            self.whisper_url = config['Microphone']['whisper_url']
 
-            #self.hotkey = config['Hotkey']['hotkey']
-            #self.textbox_timer = config['Hotkey']['textbox_timer']
+            # [Hotkey]
+            self.hotkey = config['Hotkey']['hotkey']
+            self.textbox_timer = config['Hotkey']['textbox_timer']
 
-            self.max_response_sentences = int(config['LanguageModel']['max_response_sentences'])
+            # [LanguageModel]
             self.llm = config['LanguageModel']['model']
+            self.max_response_sentences = int(config['LanguageModel']['max_response_sentences'])
             self.wait_time_buffer = float(config['LanguageModel']['wait_time_buffer'])
             self.alternative_openai_api_base = config['LanguageModel']['alternative_openai_api_base']
-            self.custom_token_count = config['LanguageModel']['custom_token_count']
+            self.maximum_local_tokens = config['LanguageModel']['maximum_local_tokens']
             self.temperature = float(config['LanguageModel']['temperature'])
             self.top_p = float(config['LanguageModel']['top_p'])
-            self.experimental_features = True if config['LanguageModel']['experimental_features'] == '1' else False
-
+            self.frequency_penalty = float(config['LanguageModel']['frequency_penalty'])
+            self.max_tokens = int(config['LanguageModel']['max_tokens'])
+            self.BOS_token = config['LanguageModel']['BOS_token']
+            self.EOS_token = config['LanguageModel']['EOS_token']
+            self.message_signifier = config['LanguageModel']['message_signifier']
+            self.message_seperator = config['LanguageModel']['message_seperator']
+            self.message_format = config['LanguageModel']['message_format']
+            self.system_name = config['LanguageModel']['system_name']
+            self.user_name = config['LanguageModel']['user_name']
+            self.assistant_name = config['LanguageModel']['assistant_name']
             stop_value = config['LanguageModel']['stop']
             if ',' in stop_value:
                 # If there are commas in the stop value, split the string by commas and store the values in a list
@@ -90,17 +105,19 @@ https://github.com/art-from-the-machine/Mantella#issues-qa
             else:
                 # If there are no commas, put the single value into a list
                 self.stop = [stop_value]
+            self.conversation_limit_pct = float(config['LanguageModel']['conversation_limit_pct'])
+            self.experimental_features = True if config['LanguageModel']['experimental_features'] == '1' else False
 
-            self.frequency_penalty = float(config['LanguageModel']['frequency_penalty'])
-            self.max_tokens = int(config['LanguageModel']['max_tokens'])
-
+            # [Speech]
             self.xvasynth_process_device = config['Speech']['tts_process_device']
             self.pace = float(config['Speech']['pace'])
             self.use_cleanup = int(config['Speech']['use_cleanup'])
             self.use_sr = int(config['Speech']['use_sr'])
 
+            # [Cleanup]
             self.remove_mei_folders = config['Cleanup']['remove_mei_folders']
 
+            # [Debugging]
             self.debug_mode = config['Debugging']['debugging']
             self.play_audio_from_script = config['Debugging']['play_audio_from_script']
             self.debug_character_name = config['Debugging']['debugging_npc']
@@ -109,8 +126,12 @@ https://github.com/art-from-the-machine/Mantella#issues-qa
             self.debug_exit_on_first_exchange = config['Debugging']['exit_on_first_exchange']
             self.add_voicelines_to_all_voice_folders = config['Debugging']['add_voicelines_to_all_voice_folders']
 
+            # [Prompt]
             self.prompt = config['Prompt']['prompt']
             self.multi_npc_prompt = config['Prompt']['multi_npc_prompt']
+
+            # Other
+            self.is_local = False
             pass
         except Exception as e:
             logging.error('Parameter missing/invalid in config.ini file!')
