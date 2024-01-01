@@ -1,4 +1,3 @@
-import openai
 from aiohttp import ClientSession
 import asyncio
 import os
@@ -7,13 +6,15 @@ import logging
 import time
 import shutil
 import src.utils as utils
+
 import unicodedata
 import re
 import sys
 
 class ChatManager:
-    def __init__(self, game_state_manager, config, encoding):
-        self.game_state_manager = game_state_manager
+    def __init__(self, conversation_manager, config, tokenizer):
+        self.conversation_manager = conversation_manager
+        self.game_state_manager = conversation_manager.game_state_manager
         self.mod_folder = config.mod_path
         self.max_response_sentences = config.max_response_sentences
         self.llm = config.llm
@@ -24,7 +25,7 @@ class ChatManager:
         self.frequency_penalty = config.frequency_penalty
         self.max_tokens = config.max_tokens
         self.language = config.language
-        self.encoding = encoding
+        self.tokenizer = tokenizer
         self.add_voicelines_to_all_voice_folders = config.add_voicelines_to_all_voice_folders
         self.offended_npc_response = config.offended_npc_response
         self.forgiven_npc_response = config.forgiven_npc_response
@@ -190,41 +191,47 @@ class ChatManager:
         return sentence
 
 
-    async def process_response(self, sentence_queue, input_text, messages, synthesizer, characters, radiant_dialogue, event):
+    async def process_response(self, player_name, config, sentence_queue, input_text, messages, synthesizer, characters, radiant_dialogue, event):
         """Stream response from LLM one sentence at a time"""
 
-        messages.append({"role": "user", "content": input_text})
+        if config.is_local: # if local, use the player_name as the role
+            messages.append({"role": player_name, "content": input_text})
+        else: # if remote, use the user role
+            messages.append({"role": config.user_name, "content": input_text})
+            
         sentence = ''
         full_reply = ''
         num_sentences = 0
         action_taken = False
-        if self.alternative_openai_api_base == 'none':
-            openai.aiosession.set(ClientSession()) # https://github.com/openai/openai-python#async-api
         while True:
             try:
                 start_time = time.time()
-                async for chunk in await openai.ChatCompletion.acreate(model=self.llm, messages=messages, headers={"HTTP-Referer": 'https://github.com/art-from-the-machine/Mantella', "X-Title": 'mantella'},stream=True,stop=self.stop,temperature=self.temperature,top_p=self.top_p,frequency_penalty=self.frequency_penalty, max_tokens=self.max_tokens):
-                    content = chunk["choices"][0].get("delta", {}).get("content")
+                # print(f"Next Line: ")
+                for chunk in self.conversation_manager.llm.acreate(messages):
+                    # print(chunk.model_dump_json())
+                    content = chunk.choices[0].text
+                    print(content, end='')
                     if content is not None:
                         sentence += content
 
-                        if ('assist' in content) and (num_sentences>0):
-                            logging.info(f"'assist' keyword found. Ignoring sentence which begins with: {sentence}")
-                            break
+                        if not config.is_local: # if remote, check if the response contains the word assist for some reason. Probably some OpenAI nonsense.
+                            if ('assist' in content) and (num_sentences>0): # Causes problems if asking a follower if you should help someone, if they try to say something along the lines of "Yes, we should assist them." it will cut off the sentence and basically ignore the player. TODO: fix this with a more robust solution
+                                logging.info(f"'assist' keyword found. Ignoring sentence which begins with: {sentence}") 
+                                break
 
-                        content_edit = unicodedata.normalize('NFKC', content)
+                        content_edit = unicodedata.normalize('NFKC', content) # normalize unicode characters
                         # check if content marks the end of a sentence
                         if (any(char in content_edit for char in self.end_of_sentence_chars)):
                             sentence = self.clean_sentence(sentence)
 
-                            if len(sentence.strip()) < 3:
+                            if len(sentence.strip()) < 3: # Is this really necessary? "Hi." is a valid sentence, but is it really worth saying? TODO: check if this is necessary
                                 logging.info(f'Skipping voiceline that is too short: {sentence}')
                                 break
 
                             logging.info(f"LLM returned sentence took {time.time() - start_time} seconds to execute")
 
-                            if content_edit == ':':
-                                keyword_extraction = sentence.strip()[:-1] #.lower()
+                            if "\n" in sentence:
+                                keyword_extraction = sentence.split('\n')[0]
                                 # if LLM is switching character
                                 if (keyword_extraction in characters.active_characters):
                                     #TODO: or (any(key.split(' ')[0] == keyword_extraction for key in characters.active_characters))
@@ -286,18 +293,16 @@ class ChatManager:
                                 # wait for the event to be set before generating the next line
                                 await event.wait()
 
-                                end_conversation = self.game_state_manager.load_data_when_available('_mantella_end_conversation', '')
-                                radiant_dialogue_update = self.game_state_manager.load_data_when_available('_mantella_radiant_dialogue', '')
+                                end_conversation = self.game_state_manager.load_conversation_ended()
+                                radiant_dialogue_update = self.game_state_manager.load_radiant_dialogue()
                                 # stop processing LLM response if:
                                 # max_response_sentences reached (and the conversation isn't radiant)
                                 # conversation has switched from radiant to multi NPC (this allows the player to "interrupt" radiant dialogue and include themselves in the conversation)
                                 # the conversation has ended
-                                if ((num_sentences >= self.max_response_sentences) and (radiant_dialogue == 'false')) or ((radiant_dialogue == 'true') and (radiant_dialogue_update.lower() == 'false')) or (end_conversation.lower() == 'true'):
+                                if ((num_sentences >= self.max_response_sentences) and not radiant_dialogue) or (radiant_dialogue and not radiant_dialogue_update) or end_conversation:
                                     break
                             else:
                                 action_taken = False
-                if self.alternative_openai_api_base == 'none':
-                    await openai.aiosession.get().close()
                 break
             except Exception as e:
                 logging.error(f"LLM API Error: {e}")
@@ -310,7 +315,10 @@ class ChatManager:
         # Mark the end of the response
         await sentence_queue.put(None)
 
-        messages.append({"role": "assistant", "content": full_reply})
-        logging.info(f"Full response saved ({len(self.encoding.encode(full_reply))} tokens): {full_reply}")
-
+        if config.is_local:
+            messages.append({"role": player_name, "content": input_text})
+        else:
+            messages.append({"role": "assistant", "content": full_reply})
+        
+        logging.info(f"Full response saved ({self.tokenizer.get_token_count(full_reply)} tokens): {full_reply}")
         return messages
