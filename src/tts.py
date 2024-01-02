@@ -17,6 +17,7 @@ class VoiceModelNotFound(Exception):
 
 class Synthesizer:
     def __init__(self, config):
+        self.config = config
         self.xvasynth_path = config.xvasynth_path
         self.process_device = config.xvasynth_process_device
         self.times_checked_xvasynth = 0
@@ -24,8 +25,6 @@ class Synthesizer:
         # check if xvasynth is running; otherwise try to run it
         self.check_if_xvasynth_is_running()
 
-        # voice models path
-        self.model_path = f"{self.xvasynth_path}/resources/app/models/skyrim/"
         # output wav / lip files path
         self.output_path = utils.resolve_path('data')+'/data'
 
@@ -44,12 +43,38 @@ class Synthesizer:
 
         self.model_type = ''
         self.base_speaker_emb = ''
+        self.game_id = config.xvasynth_game_id
+        
+        # voice models path
+        self.model_path = f"{self.xvasynth_path}/resources/app/models/{self.game_id}/"
 
-        self.synthesize_url = 'http://127.0.0.1:8008/synthesize'
-        self.synthesize_batch_url = 'http://127.0.0.1:8008/synthesize_batch'
-        self.loadmodel_url = 'http://127.0.0.1:8008/loadModel'
-        self.setvocoder_url = 'http://127.0.0.1:8008/setVocoder'
+        self.synthesize_url = f'{self.config.xvasynth_base_url}/synthesize'
+        self.synthesize_batch_url = f'{self.config.xvasynth_base_url}/synthesize_batch'
+        self.loadmodel_url = f'{self.config.xvasynth_base_url}/loadModel'
+        self.setvocoder_url = f'{self.config.xvasynth_base_url}/setVocoder'
+        self.get_available_voices_url = f'{self.config.xvasynth_base_url}/getAvailableVoices'
+        self.set_available_voices_url = f'{self.config.xvasynth_base_url}/setAvailableVoices'
     
+    def voices(self): # Send API request to xvasynth to get a list of characters
+        print(f"Getting available voices from {self.get_available_voices_url}...")
+        requests.post(self.set_available_voices_url, json={'modelsPaths': json.dumps({self.game_id: self.model_path})}) # Set the available voices to the ones in the models folder
+        r = requests.post(self.get_available_voices_url) # Get the available voices
+        if r.status_code == 200:
+            print(f"Got available voices from {self.get_available_voices_url}...")
+            # print(f"Response code: {r.status_code}")
+            # print(f"Response text: {r.text}")
+            data = r.json()
+        else:
+            print(f"Could not get available voices from {self.get_available_voices_url}...")
+            # print(f"Response code: {r.status_code}")
+            # print(f"Response text: {r.text}")
+            data = None
+        voices = []
+        for character in data[self.game_id]:
+            voices.append(character['voiceName'])
+        print(f"Available voices: {voices}")
+        print(f"Total voices: {len(voices)}")
+        return voices
 
     def synthesize(self, voice, voice_folder, voiceline):
         if voice != self.last_voice:
@@ -245,7 +270,7 @@ class Synthesizer:
 
             # contact local xVASynth server; ~2 second timeout
             logging.info(f'Attempting to connect to xVASynth... ({self.times_checked_xvasynth})')
-            response = requests.get('http://127.0.0.1:8008/')
+            response = requests.get(f'{self.config.xvasynth_base_url}/')
             response.raise_for_status()  # If the response contains an HTTP error status code, raise an exception
         except requests.exceptions.RequestException as err:
             if (self.times_checked_xvasynth == 1):
