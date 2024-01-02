@@ -77,8 +77,8 @@ https://github.com/art-from-the-machine/Mantella#issues-qa
             self.listen_timeout = int(config['Microphone']['listen_timeout'])
 
             # [Hotkey]
-            self.hotkey = config['Hotkey']['hotkey']
-            self.textbox_timer = config['Hotkey']['textbox_timer']
+            # self.hotkey = config['Hotkey']['hotkey']
+            # self.textbox_timer = config['Hotkey']['textbox_timer']
 
             # [LanguageModel]
             self.llm = config['LanguageModel']['model']
@@ -113,6 +113,8 @@ https://github.com/art-from-the-machine/Mantella#issues-qa
             self.pace = float(config['Speech']['pace'])
             self.use_cleanup = int(config['Speech']['use_cleanup'])
             self.use_sr = int(config['Speech']['use_sr'])
+            self.xvasynth_base_url = config['Speech']['xvasynth_base_url']
+            self.xvasynth_game_id = config['Speech']['xvasynth_game_id']
 
             # [Cleanup]
             self.remove_mei_folders = config['Cleanup']['remove_mei_folders']
