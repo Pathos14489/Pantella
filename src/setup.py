@@ -1,22 +1,29 @@
 from openai import OpenAI
 import logging
-import src.utils as utils
 import pandas as pd
 import tiktoken
 import src.config_loader as config_loader
+import src.tts as tts
+import src.utils as utils
 import json
 import time
 import os
+import requests
 # from aiohttp import ClientSession
 
 
 class CharacterDB():
-    def __init__(self, character_df_path): # character_df_directory is the path to a character directory where each character is a seperate json file
-        self.character_df_path = character_df_path
+    def __init__(self, config, xvasynth): # character_df_directory is the path to a character directory where each character is a seperate json file
+        self.config = config
+        self.xvasynth = xvasynth # xvasynth is the xvasynth synthesizer object
+        self.character_df_path = config.character_df_file
         self.characters = []
         self.named_index = {}
         self.baseid_int_index = {}
+        self.valid = []
+        self.invalid = []
         self.db_type = None
+
 
     def load_characters_json(self):
         print(f"Loading character database from {self.character_df_path}...")
@@ -30,7 +37,10 @@ class CharacterDB():
                 self.named_index[character['name']] = self.characters[-1]
                 self.baseid_int_index[character['baseid_int']] = self.characters[-1]
         self.db_type = 'json'
-        print(f"Loaded {len(self.characters)} characters from JSON {self.character_df_path}")
+        print(self.male_voice_models)
+        print(self.female_voice_models)
+        print(self.all_voice_models)
+        # print(f"Loaded {len(self.characters)} characters from JSON {self.character_df_path} - {len(self.male_voice_models)} Male voices - {len(self.female_voice_models)} Female voices - {len(self.all_voice_models)} Total voices")
     
     def load_characters_csv(self):
         print(f"Loading character database from JSON files in {self.character_df_path}...")
@@ -47,6 +57,98 @@ class CharacterDB():
             self.baseid_int_index[character['baseid_int']] = self.characters[-1]
         self.db_type = 'csv'
         print(f"Loaded {len(self.characters)} characters from csv {self.character_df_path}")
+
+    def verify_characters(self):
+        voices = self.xvasynth.voices()
+        self.valid = []
+        self.invalid = []
+        for voice in self.all_voice_models:
+            if voice in voices:
+                self.valid.append(voice)
+            else:
+                self.invalid.append(voice)
+        # if len(self.invalid) > 0:
+        #     logging.warning(f"Invalid voices found in character database: {self.invalid}. Please check that the voices are installed and try again.")
+        #     for character in self.characters:
+        #         if character['voice_model'] in self.invalid:
+        #             if character['voice_model'] != "":
+        #                 logging.warning(f"Character '{character['name']}' uses invalid voice model '{character['voice_model']}'")
+        logging.info(f"Valid voices found in character database: {len(self.valid)}/{len(self.all_voice_models)}")
+                
+
+    @property
+    def male_voice_models(self):
+        valid = {}
+        for character in self.characters:
+            if character["gender"] == "Male" and "Female" not in character["voice_model"]:
+                if character['voice_model'] not in valid and character['voice_model'] != character['name']:
+                    valid[character['voice_model']] = [character['name']]
+                elif character['voice_model'] != character['name']:
+                    valid[character['voice_model']].append(character['name'])
+        filtered = []
+        for model in valid:
+            if len(valid[model]) > 1:
+                filtered.append(model)
+        models = {}
+        for character in self.characters:
+            race_string = character['race']+"Race"
+            if character["voice_model"] in filtered and character["voice_model"] != "":
+                if race_string not in models:
+                    models[race_string] = [character['voice_model']]
+                else:
+                    if character["voice_model"] not in models[race_string]:
+                        models[race_string].append(character['voice_model'])
+        return models
+    
+    @property
+    def female_voice_models(self):
+        valid = {}
+        for character in self.characters:
+            if character["gender"] == "Female" and "Male" not in character["voice_model"]:
+                if character['voice_model'] not in valid and character['voice_model'] != character['name']:
+                    valid[character['voice_model']] = [character['name']]
+                elif character['voice_model'] != character['name']:
+                    valid[character['voice_model']].append(character['name'])
+        filtered = []
+        for model in valid:
+            if len(valid[model]) > 1:
+                filtered.append(model)
+        models = {}
+        for character in self.characters:
+            race_string = character['race']+"Race"
+            if character["voice_model"] in filtered and character["voice_model"] != "":
+                if race_string not in models:
+                    models[race_string] = [character['voice_model']]
+                else:
+                    if character["voice_model"] not in models[race_string]:
+                        models[race_string].append(character['voice_model'])
+        return models
+    
+    @property
+    def generic_voice_models(self):
+        valid = {}
+        for character in self.characters:
+            if character['voice_model'] not in valid and character['voice_model'] != character['name']:
+                valid[character['voice_model']] = [character['name']]
+            elif character['voice_model'] != character['name']:
+                valid[character['voice_model']].append(character['name'])
+        filtered = []
+        for model in valid:
+            if len(valid[model]) > 1:
+                filtered.append(model)
+        return filtered
+    
+    @property
+    def all_voice_models(self):
+        valid = {}
+        for character in self.characters:
+            if character['voice_model'] not in valid and character['voice_model'] != character['name']:
+                valid[character['voice_model']] = [character['name']]
+            elif character['voice_model'] != character['name']:
+                valid[character['voice_model']].append(character['name'])
+        return list(valid.keys())
+            
+        
 
 class Tokenizer(): # Tokenizes(only availble for counting the tokens in a string presently for local_models), and parses and formats messages for use with the language model
     def __init__(self,config, client):
@@ -285,7 +387,8 @@ def initialise(config_file, logging_file, secret_key_file, language_file):
 
     setup_logging(logging_file)
     config = config_loader.ConfigLoader(config_file)
-
+    
+    
     is_local = True
     if (config.alternative_openai_api_base == 'none'): # or (config.alternative_openai_api_base.startswith('https://openrouter.ai/api/v1')) -- this is a temporary fix for the openrouter api, as while it isn't local, it shouldnn't use the local tokenizer, so we're going to lie here TODO: Fix this. Should do more granularity than local or not, should just have a flag for when using openai or other models.
         is_local = False
@@ -302,14 +405,17 @@ def initialise(config_file, logging_file, secret_key_file, language_file):
     else:
        logging.info(f"Running Mantella with '{config.llm}'. The language model chosen can be changed via config.ini")
 
+    xvasynth = tts.Synthesizer(config)
+
     # clean up old instances of exe runtime files
     utils.cleanup_mei(config.remove_mei_folders)
-    character_df = CharacterDB(config.character_df_file)
+    character_df = CharacterDB(config,xvasynth)
     try:
         if config.character_df_file.endswith('.csv'):
             character_df.load_characters_csv()
         else:
             character_df.load_characters_json()
+        character_df.verify_characters()
     except:
         logging.error(f"Could not load character database from {config.character_df_file}. Please check the path and try again. Path should be a directory containing json files or a csv file containing character information.")
         raise
@@ -324,4 +430,4 @@ def initialise(config_file, logging_file, secret_key_file, language_file):
 
 
 
-    return config, character_df, language_info, llm, tokenizer, token_limit
+    return config, character_df, language_info, llm, tokenizer, token_limit, xvasynth

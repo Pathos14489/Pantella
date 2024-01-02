@@ -13,7 +13,7 @@ import logging
 
 class conversation_manager():
     def __init__(self, config_file, logging_file, secret_key_file, language_file):
-        self.config, self.character_df, self.language_info, self.llm, self.tokenizer, self.token_limit = setup.initialise(
+        self.config, self.character_df, self.language_info, self.llm, self.tokenizer, self.token_limit, self.synthesizer = setup.initialise(
             config_file=config_file,
             logging_file=logging_file, 
             secret_key_file=secret_key_file, 
@@ -32,7 +32,6 @@ class conversation_manager():
         self.game_state_manager = game_manager.GameStateManager(self.config.game_path)
         self.chat_manager = output_manager.ChatManager(self, self.config, self.tokenizer)
         self.transcriber = stt.Transcriber(self.game_state_manager, self.config)
-        self.synthesizer = tts.Synthesizer(self.config)
         self.active_characters = None # Initialised at start of every conversation in await_and_setup_conversation()
         self.check_mcm_mic_status()
         self.in_conversation = False # Whether or not the player is in a conversation
