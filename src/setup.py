@@ -27,8 +27,17 @@ class CharacterDB():
         if not os.path.exists(config.voice_model_ref_ids_file):
             logging.error(f"Could not find voice_model_ref_ids_file at {config.voice_model_ref_ids_file}. Please download the correct file for your game, or correct the filepath in your config.ini and try again.")
             raise FileNotFoundError
-        with open(config.voice_model_ref_ids_file, 'r') as f:
-            self.voice_model_ids = json.load(f)
+        if config.voice_model_ref_ids_file != "" and os.path.exists(config.voice_model_ref_ids_file):
+            with open(config.voice_model_ref_ids_file, 'r') as f:
+                self.voice_model_ids = json.load(f)
+        else:
+            self.voice_model_ids = {}
+
+    def loaded(self):
+        print(f"{len(self.male_voice_models)} Male voices - {len(self.female_voice_models)} Female voices")
+        print("All Required Voice Models:",self.all_voice_models)
+        print("Total Required Voice Models:",len(self.all_voice_models))
+        print("voice_model_ids:",self.voice_model_ids)
 
     def load_characters_json(self):
         print(f"Loading character database from {self.character_df_path}...")
@@ -42,13 +51,8 @@ class CharacterDB():
                 self.named_index[character['name']] = self.characters[-1]
                 self.baseid_int_index[character['baseid_int']] = self.characters[-1]
         self.db_type = 'json'
-        print(self.male_voice_models)
-        print(self.female_voice_models)
-        print(self.all_voice_models)
-        print(self.voice_folders)
-        print(self.voice_folders)
-        print(self.voice_model_ids)
-        # print(f"Loaded {len(self.characters)} characters from JSON {self.character_df_path} - {len(self.male_voice_models)} Male voices - {len(self.female_voice_models)} Female voices - {len(self.all_voice_models)} Total voices")
+        print(f"Loaded {len(self.characters)} characters from JSON {self.character_df_path}")
+        self.loaded()
     
     def load_characters_csv(self):
         print(f"Loading character database from JSON files in {self.character_df_path}...")
@@ -65,23 +69,7 @@ class CharacterDB():
             self.baseid_int_index[character['baseid_int']] = self.characters[-1]
         self.db_type = 'csv'
         print(f"Loaded {len(self.characters)} characters from csv {self.character_df_path}")
-
-    def verify_characters(self):
-        voices = self.xvasynth.voices()
-        self.valid = []
-        self.invalid = []
-        for voice in self.all_voice_models:
-            if voice in voices:
-                self.valid.append(voice)
-            else:
-                self.invalid.append(voice)
-        # if len(self.invalid) > 0:
-        #     logging.warning(f"Invalid voices found in character database: {self.invalid}. Please check that the voices are installed and try again.")
-        #     for character in self.characters:
-        #         if character['voice_model'] in self.invalid:
-        #             if character['voice_model'] != "":
-        #                 logging.warning(f"Character '{character['name']}' uses invalid voice model '{character['voice_model']}'")
-        logging.info(f"Valid voices found in character database: {len(self.valid)}/{len(self.all_voice_models)}")
+        self.loaded()
 
     def patch_character_info(self,info): # Patches information about a character into the character database and if db_type is json, saves the changes to the json file
         self.characters.append(info)
@@ -98,12 +86,58 @@ class CharacterDB():
                     return
             json.dump(info, open(json_file_path, 'w'), indent=4)
 
-    def get_skyrim_voice_folder(self, voice_model):
-        if voice_model in self.voice_model_ids:
-            return self.voice_model_ids[voice_model]
+    def get_character_by_name(self, name):
+        if name in self.named_index:
+            return self.named_index[name]
         else:
+            logging.warning(f"Could not find character '{name}' in character database using name lookup.")
             return None
-
+        
+    def get_character_by_voice_folder(self, voice_folder): # Look through non-generic characters for a character with the given voice folder
+        for character in self.characters:
+            if character['voice_model'].lower() == voice_folder.lower(): # If the voice model matches, return the character
+                return character
+        return None # If no character is found, return None
+    
+    def get_voice_folder_by_voice_model(self, voice_model):
+        # print(f"voice_model_ids: {voice_model}/{voice_model.replace(' ', '')}")
+        folder = None
+        for voice_folder in self.voice_folders:
+            if voice_model == voice_folder:
+                folder = self.voice_folders[voice_folder]
+            if voice_model.replace(' ', '') == voice_folder:
+                folder = self.voice_folders[voice_folder]
+        # print(f"folder:",folder)
+        return folder
+    
+    def verify_characters(self):
+        xvasynth_available_voices = self.xvasynth.voices()
+        self.valid = []
+        self.invalid = []
+        for voice in self.all_voice_models:
+            voice_folder = self.get_voice_folder_by_voice_model(voice)
+            if voice_folder in xvasynth_available_voices:
+                self.valid.append(voice_folder)
+            elif voice in self.voice_folders:
+                self.valid.append(voice)
+            else:
+                print(f"invalid voice: {voice} & {voice_folder}")
+                self.invalid.append(voice)
+                self.invalid.append(voice_folder)
+        unused_voices = []
+        for voice in xvasynth_available_voices:
+            if voice not in self.valid:
+                unused_voices.append(voice)
+                print(f"unused voice: {voice}")
+        print(f"Total unused voices: {len(unused_voices)}")
+        if len(self.invalid) > 0:
+            logging.warning(f"Invalid voices found in character database: {self.invalid}. Please check that the voices are installed and try again.")
+            for character in self.characters:
+                if character['voice_model'] in self.invalid:
+                    if character['voice_model'] != "":
+                        logging.warning(f"Character '{character['name']}' uses invalid voice model '{character['voice_model']}'")
+        logging.info(f"Valid voices found in character database: {len(self.valid)}/{len(self.all_voice_models)}")
+        
     @property
     def male_voice_models(self):
         valid = {}
@@ -153,39 +187,41 @@ class CharacterDB():
         return models
     
     @property
-    def generic_voice_models(self):
-        valid = {}
-        for character in self.characters:
-            if character['voice_model'] not in valid and character['voice_model'] != character['name']:
-                valid[character['voice_model']] = [character['name']]
-            elif character['voice_model'] != character['name']:
-                valid[character['voice_model']].append(character['name'])
-        filtered = []
-        for model in valid:
-            if len(valid[model]) > 1:
-                filtered.append(model)
-        return filtered
-    
-    @property
-    def voice_folders(self):
-        valid = {}
-        for character in self.characters:
-            if character['voice_model'] not in valid and character['voice_model'] != character['name']:
-                valid[character['skyrim_voice_folder']] = [character['voice_model']]
-            elif character['voice_model'] != character['name']:
-                valid[character['skyrim_voice_folder']].append(character['voice_model'])
-        return list(valid.keys())
-    
-    
-    @property
     def all_voice_models(self):
-        valid = {}
+        models = []
         for character in self.characters:
-            if character['voice_model'] not in valid and character['voice_model'] != character['name']:
-                valid[character['voice_model']] = [character['name']]
-            elif character['voice_model'] != character['name']:
-                valid[character['voice_model']].append(character['name'])
-        return list(valid.keys())
+            if character["voice_model"] != "":
+                if character["voice_model"] not in models:
+                    models.append(character["voice_model"])
+        return models
+        
+    @property
+    def voice_folders(self): # Returns a dictionary of voice models and their corresponding voice folders
+        folders = {} 
+        for character in self.characters:
+            if character['voice_model'] != "":
+                if character['voice_model'] not in folders:
+                    if character['skyrim_voice_folder'] != "":
+                        folders[character['voice_model']] = [character['skyrim_voice_folder']]
+                    else:
+                        folders[character['voice_model']] = [character['voice_model']]
+                else:
+                    if character["skyrim_voice_folder"] not in folders[character['voice_model']]:
+                        if character['skyrim_voice_folder'] != "":
+                            folders[character['voice_model']].append(character['skyrim_voice_folder'])
+                        else:
+                            folders[character['voice_model']].append(character['voice_model'])
+        new_folders = {}
+        for folder in folders:
+            if len(folders[folder]) > 1:
+                new_folders[folder] = folders[folder]
+            else:
+                new_folders[folder] = folders[folder][0]
+        folders = new_folders
+        return folders
+    
+        
+    
             
         
 
