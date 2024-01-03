@@ -72,8 +72,8 @@ class Synthesizer:
         voices = []
         for character in data[self.game_id]:
             voices.append(character['voiceName'])
-        print(f"Available voices: {voices}")
-        print(f"Total voices: {len(voices)}")
+        print(f"Available xVASynth Voices: {voices}")
+        print(f"Total xVASynth Voices: {len(voices)}")
         return voices
 
     def synthesize(self, voice, voice_folder, voiceline):
