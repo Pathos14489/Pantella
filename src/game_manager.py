@@ -1,9 +1,10 @@
 import logging
 import src.utils as utils
 import time
+import random
 
 class CharacterDoesNotExist(Exception):
-    """Exception raised when NPC name cannot be found in skyrim_characters.csv"""
+    """Exception raised when NPC name cannot be found in characterDB"""
     pass
 
 
@@ -173,88 +174,16 @@ class GameStateManager:
     def load_unnamed_npc(self, character_name, character_df):
         """Load generic NPC if character cannot be found in skyrim_characters.csv"""
 
-        male_voice_models = {
-            'ArgonianRace': 'Male Argonian',
-            'BretonRace': 'Male Even Toned',
-            'DarkElfRace': 'Male Dark Elf Commoner',
-            'HighElfRace': 'Male Elf Haughty',
-            'ImperialRace': 'Male Even Toned',
-            'KhajiitRace': 'Male Khajit',
-            'NordRace': 'Male Nord',
-            'OrcRace': 'Male Orc',
-            'RedguardRace': 'Male Even Toned',
-            'WoodElfRace': 'Male Young Eager',
-        }
-        female_voice_models = {
-            'ArgonianRace': 'Female Argonian',
-            'BretonRace': 'Female Even Toned',
-            'DarkElfRace': 'Female Dark Elf Commoner',
-            'HighElfRace': 'Female Elf Haughty',
-            'ImperialRace': 'Female Even Toned',
-            'KhajiitRace': 'Female Khajit',
-            'NordRace': 'Female Nord',
-            'OrcRace': 'Female Orc',
-            'RedguardRace': 'Female Sultry',
-            'WoodElfRace': 'Female Young Eager',
-        }
-
-        # unknown == I couldn't find the IDs for these voice models
-        voice_model_ids = {
-            '0002992B':	'Dragon',
-            '2470000': 'Male Dark Elf Commoner',
-            '18469': 'Male Dark Elf Cynical',
-            '00013AEF':	'Female Argonian',
-            '00013AE3':	'Female Commander',
-            '00013ADE':	'Female Commoner',
-            '00013AE4':	'Female Condescending',
-            '00013AE5': 'Female Coward',
-            '00013AF3':	'Female Dark Elf',
-            'unknown': 'Female Dark Elf Commoner',
-            '00013AF1':	'Female Elf Haughty',
-            '00013ADD':	'Female Even Toned',
-            '00013AED':	'Female Khajiit',
-            '00013AE7':	'Female Nord',
-            '00013AE2':	'Female Old Grumpy',
-            '00013AE1':	'Female Old Kindly',
-            '00013AEB':	'Female Orc',
-            '00013BC3':	'Female Shrill',
-            '00012AE0':	'Female Sultry',
-            'unknown': 'Female Vampire',
-            '00013ADC':	'Female Young Eager',
-            '00013AEE':	'Male Argonian',
-            'unknown': 'Male Bandit',
-            '00013ADA':	'Male Brute',
-            '00013AD8':	'Male Commander',
-            '00013AD3': 'Male Commoner',
-            '000EA266': 'Male Commoner Accented',
-            '00013AD9':	'Male Condescending',
-            '00013ADB':	'Male Coward',
-            '00013AF2':	'Male Dark Elf Commoner',
-            'unknown': 'Male Dark Elf Cynical',
-            '00013AD4':	'Male Drunk',
-            '00013AF0':	'Male Elf Haughty',
-            '00013AD2':	'Male Even Toned',
-            '000EA267':	'Male Even Toned Accented',
-            '000AA8D3':	'Male Guard', # not in csv
-            '00013AEC':	'Male Khajiit',
-            '00013AE6':	'Male Nord',
-            '000E5003':	'Male Nord Commander',
-            '00013AD7':	'Male Old Grumpy',
-            '00013AD6':	'Male Old Kindly',
-            '00013AEA':	'Male Orc',
-            '00013AD5':	'Male Sly Cynical',
-            '0001B55F':	'Male Soldier',
-            'unknown': 'Male Vampire',
-            'unknown': 'Male Warlock',
-            '00012AD1':	'Male Young Eager',
-        }
+        male_voice_models = character_df.male_voice_models
+        female_voice_models = character_df.female_voice_models
+        voice_model_ids = character_df.voice_model_ids
 
         actor_voice_model = self.load_data_when_available('_mantella_actor_voice', '')
         actor_voice_model_id = actor_voice_model.split('(')[1].split(')')[0]
         actor_voice_model_name = actor_voice_model.split('<')[1].split(' ')[0]
 
         actor_race = self.load_data_when_available('_mantella_actor_race', '')
-        actor_race = actor_race.split('<')[1].split(' ')[0]
+        actor_race = actor_race.split('<')[1].split(' ')[0] + "Race"
 
         actor_sex = self.load_data_when_available('_mantella_actor_sex', '')
 
@@ -267,37 +196,35 @@ class GameStateManager:
         
         # if voice_model not found in the voice model ID list
         if voice_model == '':
-            try: # search for voice model in skyrim_characters.csv
-                voice_model = character_df.loc[character_df['skyrim_voice_folder'].astype(str).str.lower()==actor_voice_model_name.lower(), 'voice_model'].values[0]
-            except: # guess voice model based on sex and race
-                if actor_sex == '1':
-                    try:
-                        voice_model = female_voice_models[actor_race]
-                    except:
-                        voice_model = 'Female Nord'
-                else:
-                    try:
-                        voice_model = male_voice_models[actor_race]
-                    except:
-                        voice_model = 'Male Nord'
+            voice_model = character_df.get_character_by_voice_folder(actor_voice_model_name)["voice_model"] # return voice model from actor_voice_model_name
+        else:    
+            if actor_sex == '1':
+                try: # Get random voice model from list of generic female voice models
+                    voice_model = random.choice(female_voice_models[actor_race])
+                except:
+                    voice_model = 'Female Nord'
+            else:
+                try: # Get random voice model from list of generic male voice models
+                    voice_model = random.choice(male_voice_models[actor_race])
+                except:
+                    voice_model = 'Male Nord'
 
-        try: # search for relavant skyrim_voice_folder for voice_model
-            skyrim_voice_folder = character_df.loc[character_df['voice_model'].astype(str).str.lower()==voice_model.lower(), 'skyrim_voice_folder'].values[0]
-        except: # assume it is simply the voice_model name without spaces
-            skyrim_voice_folder = voice_model.replace(' ','')
+        skyrim_voice_folder = character_df.get_voice_folder_by_voice_model(voice_model)
         
         character_info = {
             'name': character_name,
-            'bio': f'You are a {character_name}',
+            'bio': f'{character_name} is a {actor_race} {"Woman" if actor_sex=="1" else "Man"}.',
             'voice_model': voice_model,
             'skyrim_voice_folder': skyrim_voice_folder,
         }
+
+        character_df.patch_character_info(character_info) # Add character info to skyrim_characters json directory if using json mode
 
         return character_info
     
     def get_current_location(self, presume = ''):
         location = self.load_data_when_available('_mantella_current_location', presume)
-        if location.lower() == 'none': # location returns none when out in the wild
+        if location.lower() == 'none' or location == "": # location returns none when out in the wild
             location = 'Skyrim'
         return location
     
@@ -321,32 +248,18 @@ class GameStateManager:
         player_gender = self.load_player_gender()
         radiant_dialogue = self.load_radiant_dialogue() # get the radiant dialogue setting from _mantella_radiant_dialogue.txt
 
-        if character_df.db_type == "csv": # load character from skyrim_characters.csv
-            try: # load character from skyrim_characters.csv
-                character_info = character_df.loc[character_df['name'].astype(str).str.lower()==character_name.lower()].to_dict('records')[0]
+        try: # load character from skyrim_characters json directory
+            character_info = character_df.named_index[character_name]
+            is_generic_npc = False
+        except KeyError: # character not found
+            try: # try searching by ID
+                logging.info(f"Could not find {character_name} in skyrim_characters.csv. Searching by ID {character_id}...")
+                character_info = character_df.baseid_int_index[character_id]
                 is_generic_npc = False
-            except IndexError: # character not found
-                try: # try searching by ID
-                    logging.info(f"Could not find {character_name} in skyrim_characters.csv. Searching by ID {character_id}...")
-                    character_info = character_df.loc[(character_df['baseid_int'].astype(str)==character_id) | (character_df['baseid_int'].astype(str)==character_id+'.0')].to_dict('records')[0]
-                    is_generic_npc = False
-                except IndexError: # load generic NPC
-                    logging.info(f"NPC '{character_name}' could not be found in 'skyrim_characters.csv'. If this is not a generic NPC, please ensure '{character_name}' exists in the CSV's 'name' column exactly as written here, and that there is a voice model associated with them.")
-                    character_info = self.load_unnamed_npc(character_name, character_df)
-                    is_generic_npc = True
-        else: # Load character from skyrim_characters json directory
-            try: # load character from skyrim_characters json directory
-                character_info = character_df.named_index[character_name]
-                is_generic_npc = False
-            except KeyError: # character not found
-                try: # try searching by ID
-                    logging.info(f"Could not find {character_name} in skyrim_characters.csv. Searching by ID {character_id}...")
-                    character_info = character_df.baseid_int_index[character_id]
-                    is_generic_npc = False
-                except KeyError:
-                    logging.info(f"NPC '{character_name}' could not be found in 'skyrim_characters.csv'. If this is not a generic NPC, please ensure '{character_name}' exists in the CSV's 'name' column exactly as written here, and that there is a voice model associated with them.")
-                    character_info = self.load_unnamed_npc(character_name, character_df)
-                    is_generic_npc = True
+            except KeyError:
+                logging.info(f"NPC '{character_name}' could not be found in 'skyrim_characters.csv'. If this is not a generic NPC, please ensure '{character_name}' exists in the CSV's 'name' column exactly as written here, and that there is a voice model associated with them.")
+                character_info = self.load_unnamed_npc(character_name, character_df)
+                is_generic_npc = True
 
         location = self.get_current_location(location) # Check if location has changed since last check
 
