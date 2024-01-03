@@ -14,10 +14,7 @@ class ConfigLoader:
             sys.exit(0)
 
         def check_missing_mantella_file(set_path):
-            try:
-                with open(set_path+'/_mantella__skyrim_folder.txt') as f:
-                    check = f.readline().strip()
-            except:
+            if not os.path.exists(set_path+'/_mantella__skyrim_folder.txt'):
                 logging.warn(f'''
 Warning: Could not find _mantella__skyrim_folder.txt in {set_path}. 
 If you have not yet casted the Mantella spell in-game you can safely ignore this message. 
@@ -52,6 +49,7 @@ https://github.com/art-from-the-machine/Mantella#issues-qa
             self.xvasynth_path = config['Paths']['xvasynth_folder']
             self.mod_path = config['Paths']['mod_folder']
             self.character_df_file = config['Paths']['character_df_file']
+            self.voice_model_ref_ids_file = config['Paths']['voice_model_ref_ids_file']
 
             # [Language]
             self.language = config['Language']['language']

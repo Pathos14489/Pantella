@@ -23,7 +23,12 @@ class CharacterDB():
         self.valid = []
         self.invalid = []
         self.db_type = None
-
+        # make sure voice_model_ref_ids_file exists
+        if not os.path.exists(config.voice_model_ref_ids_file):
+            logging.error(f"Could not find voice_model_ref_ids_file at {config.voice_model_ref_ids_file}. Please download the correct file for your game, or correct the filepath in your config.ini and try again.")
+            raise FileNotFoundError
+        with open(config.voice_model_ref_ids_file, 'r') as f:
+            self.voice_model_ids = json.load(f)
 
     def load_characters_json(self):
         print(f"Loading character database from {self.character_df_path}...")
@@ -40,6 +45,9 @@ class CharacterDB():
         print(self.male_voice_models)
         print(self.female_voice_models)
         print(self.all_voice_models)
+        print(self.voice_folders)
+        print(self.voice_folders)
+        print(self.voice_model_ids)
         # print(f"Loaded {len(self.characters)} characters from JSON {self.character_df_path} - {len(self.male_voice_models)} Male voices - {len(self.female_voice_models)} Female voices - {len(self.all_voice_models)} Total voices")
     
     def load_characters_csv(self):
@@ -74,7 +82,27 @@ class CharacterDB():
         #             if character['voice_model'] != "":
         #                 logging.warning(f"Character '{character['name']}' uses invalid voice model '{character['voice_model']}'")
         logging.info(f"Valid voices found in character database: {len(self.valid)}/{len(self.all_voice_models)}")
-                
+
+    def patch_character_info(self,info): # Patches information about a character into the character database and if db_type is json, saves the changes to the json file
+        self.characters.append(info)
+        self.named_index[info['name']] = self.characters[-1]
+        self.baseid_int_index[info['baseid_int']] = self.characters[-1] 
+        if self.db_type == 'json':
+            if not os.path.exists(self.character_df_path): # If the directory doesn't exist, create it
+                os.makedirs(self.character_df_path) 
+            json_file_path = os.path.join(self.character_df_path, info['name']+'.json')
+            # If the character already exists, confirm that the user wants to overwrite it
+            if os.path.exists(json_file_path):
+                overwrite = input(f"Character '{info['name']}' already exists in the database. Overwrite? (y/n): ")
+                if overwrite.lower() != 'y':
+                    return
+            json.dump(info, open(json_file_path, 'w'), indent=4)
+
+    def get_skyrim_voice_folder(self, voice_model):
+        if voice_model in self.voice_model_ids:
+            return self.voice_model_ids[voice_model]
+        else:
+            return None
 
     @property
     def male_voice_models(self):
@@ -137,6 +165,17 @@ class CharacterDB():
             if len(valid[model]) > 1:
                 filtered.append(model)
         return filtered
+    
+    @property
+    def voice_folders(self):
+        valid = {}
+        for character in self.characters:
+            if character['voice_model'] not in valid and character['voice_model'] != character['name']:
+                valid[character['skyrim_voice_folder']] = [character['voice_model']]
+            elif character['voice_model'] != character['name']:
+                valid[character['skyrim_voice_folder']].append(character['voice_model'])
+        return list(valid.keys())
+    
     
     @property
     def all_voice_models(self):
