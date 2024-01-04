@@ -183,7 +183,7 @@ class GameStateManager:
         actor_voice_model_name = actor_voice_model.split('<')[1].split(' ')[0]
 
         actor_race = self.load_data_when_available('_mantella_actor_race', '')
-        actor_race = actor_race.split('<')[1].split(' ')[0] + "Race"
+        actor_race = actor_race.split('<')[1].split(' ')[0]
 
         actor_sex = self.load_data_when_available('_mantella_actor_sex', '')
 
@@ -199,26 +199,32 @@ class GameStateManager:
             voice_model = character_df.get_character_by_voice_folder(actor_voice_model_name)["voice_model"] # return voice model from actor_voice_model_name
         else:    
             if actor_sex == '1':
-                try: # Get random voice model from list of generic female voice models
-                    voice_model = random.choice(female_voice_models[actor_race])
+                try:
+                    # voice_model = random.choice(female_voice_models[actor_race]) # Get random voice model from list of generic female voice models
+                    # TODO: Enable this after adding random name generation to generic NPCs, otherwise all generic NPCs will share the same info I think
+                    voice_model = female_voice_models[actor_race+ "Race"][0] # Default to the first for now, change later
                 except:
-                    voice_model = 'Female Nord'
+                    voice_model = 'Female '+actor_race # Default to Same Sex Racial Equivalent
             else:
-                try: # Get random voice model from list of generic male voice models
-                    voice_model = random.choice(male_voice_models[actor_race])
+                try: 
+                    # voice_model = random.choice(male_voice_models[actor_race]) # Get random voice model from list of generic male voice models
+                    # TODO: Enable this after adding random name generation to generic NPCs, otherwise all generic NPCs will share the same info I think
+                    voice_model = male_voice_models[actor_race+ "Race"][0] # Default to the first for now, change later
                 except:
-                    voice_model = 'Male Nord'
+                    voice_model = 'Male '+actor_race # Default to Same Sex Racial Equivalent
 
         skyrim_voice_folder = character_df.get_voice_folder_by_voice_model(voice_model)
         
         character_info = {
-            'name': character_name,
-            'bio': f'{character_name} is a {actor_race} {"Woman" if actor_sex=="1" else "Man"}.',
+            'name': character_name, # TODO: Generate random names for generic NPCs and figure out how to apply them in-game
+            'bio': f'{character_name} is a {actor_race} {"Woman" if actor_sex=="1" else "Man"}.', # TODO: Generate more detailed background for generic NPCs
             'voice_model': voice_model,
-            'skyrim_voice_folder': skyrim_voice_folder,
+            'skyrim_voice_folder': skyrim_voice_folder[0], # Default to the first for now, maybe change later?
         }
 
-        character_df.patch_character_info(character_info) # Add character info to skyrim_characters json directory if using json mode
+        # TODO: Enable this after adding random name generation to generic NPCs, otherwise all generic NPCs will share the same info I think
+        # (Example: All Bandits would see themselves as Male Nord Bandits if the first Bandit you talked to was a Male Nord Bandit)
+        # character_df.patch_character_info(character_info) # Add character info to skyrim_characters json directory if using json mode
 
         return character_info
     
