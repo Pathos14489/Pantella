@@ -5,7 +5,7 @@ import logging
 import src.config_loader as config_loader
 import src.tts as tts
 import src.utils as utils
-import language_model as language_model
+import src.language_model as language_model
 import src.character_db as character_db
 
 def initialise(config_file, logging_file, secret_key_file, language_file):
