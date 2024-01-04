@@ -2,6 +2,7 @@ import src.utils as utils
 import logging
 import json
 import os
+import pandas as pd
 class CharacterDB():
     def __init__(self, config, xvasynth): # character_df_directory is the path to a character directory where each character is a seperate json file
         self.config = config
