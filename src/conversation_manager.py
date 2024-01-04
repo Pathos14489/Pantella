@@ -66,7 +66,7 @@ class conversation_manager():
         self.active_characters = characters_manager.Characters() # Manage active characters in conversation
         self.transcriber.call_count = 0 # reset radiant back and forth count
 
-        logging.info('\nConversations not starting when you select an NPC? Post an issue on the GitHub page:[page]')
+        logging.info('\nConversations not starting when you select an NPC? Post an issue on the GitHub page: https://github.com/art-from-the-machine/Mantella')
         logging.info('\nWaiting for player to select an NPC...')
         try: # load character info, location and other gamestate data when data is available - Starts watching the _mantella_ files in the Skyrim folder and waits for the player to select an NPC
             character_info, location, in_game_time, is_generic_npc, player_name, player_race, player_gender, radiant_dialogue = self.game_state_manager.load_game_state(self.config, self.character_df)
@@ -80,8 +80,10 @@ class conversation_manager():
         
         # setup the character that the player has selected
         character = character_manager.Character(character_info, self.language_info['language'], is_generic_npc, player_name, player_race, player_gender)
-        self.active_characters.active_characters[character.name] = character
+        self.synthesizer.change_voice(character.voice_model)
         self.chat_manager.active_character = character
+        self.chat_manager.character_num = 0
+        self.active_characters.active_characters[character.name] = character
         self.chat_manager.setup_voiceline_save_location(character_info['in_game_voice_model'])# if the NPC is from a mod, create the NPC's voice folder and exit Mantella if there isn't already a folder for the NPC
         
         self.game_state_manager.write_game_info('_mantella_character_selection', 'True') # write to _mantella_character_selection.txt to indicate that the character has been selected to the game
