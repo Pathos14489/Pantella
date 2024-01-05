@@ -139,9 +139,19 @@ class CharacterDB():
                 self.invalid.append(voice_folder)
                 self.invalid.append(voice)
         for voice in xvasynth_available_voices:
-            if voice not in self.valid:
+            # add spaces before each capital letter
+            spaced_voice = ""
+            for letter in voice.replace(' ', ''):
+                if letter.isupper():
+                    spaced_voice += " "
+                spaced_voice += letter
+            if voice not in self.valid and voice.replace(' ', '') not in self.valid and spaced_voice not in self.valid:
                 self.unused_voices.append(voice)
                 print(f"unused voice: {voice}")
+        for voice in self.unused_voices:
+            for character in self.characters:
+                if character['skyrim_voice_folder'] == voice or character['voice_model'] == voice:
+                    print(f"Character '{character['name']}' uses unused voice model '{voice}'")
         print(f"Valid voices found in character database: {len(self.valid)}/{len(self.all_voice_models)}")
 
         print(f"Total unused voices: {len(self.unused_voices)}/{len(xvasynth_available_voices)}")
@@ -150,7 +160,8 @@ class CharacterDB():
             for character in self.characters:
                 if character['voice_model'] in self.invalid:
                     if character['voice_model'] != "":
-                        print(f"Character '{character['name']}' uses invalid voice model '{character['voice_model']}'")
+                        print(f"WARNING: Character '{character['name']}' uses invalid voice model '{character['voice_model']}'! This is an error, please report it!")
+                        print("(The rest of the program will continue to run, but this character might not be able to be used)")
 
     def has_character(self, character, exact=False):
         character_in_db = False
