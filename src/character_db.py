@@ -1,11 +1,15 @@
 import src.utils as utils
+import src.tts as tts
 import logging
 import json
 import os
 import pandas as pd
+import csv
 class CharacterDB():
-    def __init__(self, config, xvasynth): # character_df_directory is the path to a character directory where each character is a seperate json file
+    def __init__(self, config, xvasynth=None): # character_df_directory is the path to a character directory where each character is a seperate json file
         self.config = config
+        if xvasynth == None:
+            xvasynth = tts.Synthesizer(config)
         self.xvasynth = xvasynth # xvasynth is the xvasynth synthesizer object
         self.character_df_path = config.character_df_file
         self.characters = []
@@ -23,6 +27,19 @@ class CharacterDB():
                 self.voice_model_ids = json.load(f)
         else:
             self.voice_model_ids = {}
+            
+        print(f"Loading character database from {self.character_df_path}...")
+        try:
+            if self.character_df_path.endswith('.csv'):
+                print("Loading character database from csv...")
+                self.load_characters_csv()
+            else:
+                print("Loading character database from json...")
+                self.load_characters_json()
+            self.verify_characters()
+        except:
+            logging.error(f"Could not load character database from {self.character_df_path}. Please check the path and try again. Path should be a directory containing json files or a csv file containing character information.")
+            raise
 
     def loaded(self):
         print(f"{len(self.male_voice_models)} Male voices - {len(self.female_voice_models)} Female voices")
@@ -101,36 +118,118 @@ class CharacterDB():
         # print(f"folder:",folder)
         if folder == None:
             folder = voice_model.replace(' ', '')
-            logging.warning(f"Could not find voice folder for voice model '{voice_model}', defaulting to '{folder}'")
+            print(f"Could not find voice folder for voice model '{voice_model}', defaulting to '{folder}'")
+        if type(folder) == list:
+            folder = folder[0]
         return folder
     
     def verify_characters(self):
         xvasynth_available_voices = self.xvasynth.voices()
         self.valid = []
         self.invalid = []
+        self.unused_voices = []
         for voice in self.all_voice_models:
             voice_folder = self.get_voice_folder_by_voice_model(voice)
             if voice_folder in xvasynth_available_voices: # If the voice folder is available, add it to the valid list
-                self.valid.append(voice_folder)
+                self.valid.append(voice_folder.replace(' ', ''))
             elif voice in self.voice_folders: # If the voice model is a valid voice folder, add it to the valid list
-                self.valid.append(voice)
+                self.valid.append(voice.replace(' ', ''))
             else:
-                print(f"invalid voice: {voice} & {voice_folder}")
-                self.invalid.append(voice)
+                print(f"invalid voice: {voice_folder}")
                 self.invalid.append(voice_folder)
-        unused_voices = []
+                self.invalid.append(voice)
         for voice in xvasynth_available_voices:
             if voice not in self.valid:
-                unused_voices.append(voice)
+                self.unused_voices.append(voice)
                 print(f"unused voice: {voice}")
-        print(f"Total unused voices: {len(unused_voices)}")
+        print(f"Valid voices found in character database: {len(self.valid)}/{len(self.all_voice_models)}")
+
+        print(f"Total unused voices: {len(self.unused_voices)}/{len(xvasynth_available_voices)}")
         if len(self.invalid) > 0:
-            logging.warning(f"Invalid voices found in character database: {self.invalid}. Please check that the voices are installed and try again.")
+            print(f"Invalid voices found in character database: {self.invalid}. Please check that the voices are installed and try again.")
             for character in self.characters:
                 if character['voice_model'] in self.invalid:
                     if character['voice_model'] != "":
-                        logging.warning(f"Character '{character['name']}' uses invalid voice model '{character['voice_model']}'")
-        logging.info(f"Valid voices found in character database: {len(self.valid)}/{len(self.all_voice_models)}")
+                        print(f"Character '{character['name']}' uses invalid voice model '{character['voice_model']}'")
+
+    def has_character(self, character, exact=False):
+        character_in_db = False
+        for db_character in self.characters:
+            if exact:
+                for key in character: # Check if the character is already in the database at every key
+                    if key in db_character:
+                        if str(character[key]) == str(db_character[key]):
+                            character_in_db = True
+                            break
+            else:
+                if character['name'] == db_character['name']:
+                    character_in_db = True
+                    break
+        return character_in_db
+    
+    def compare(self,db): # Compare this DB with another DB and return the differences - Useful for comparing a DB with a DB that has been patched
+        differences = []
+        for character in self.characters:
+            if not db.has_character(character):
+                character['difference_reason'] = "Character not found in other DB"
+                differences.append(character)
+            elif not db.has_character(character, True):
+                character['difference_reason'] = "Character found in other DB but with different information"
+                differences.append(character)
+        for character in db.characters:
+            if not self.has_character(character):
+                character['difference_reason'] = "Character not found in this DB"
+                differences.append(character)
+            elif not self.has_character(character, True):
+                character['difference_reason'] = "Character found in this DB but with different information"
+                differences.append(character)
+        for folder in self.voice_folders:
+            if folder not in db.voice_folders:
+                differences.append({"voice_model":folder,"difference_reason":"Voice model not found in other DB"})
+        for folder in db.voice_folders:
+            if folder not in self.voice_folders:
+                differences.append({"voice_model":folder,"difference_reason":"Voice model not found in this DB"})
+        for voice_model in self.all_voice_models:
+            if voice_model not in db.all_voice_models:
+                differences.append({"voice_model":voice_model,"difference_reason":"Voice model not found in other DB"})
+        for voice_model in db.all_voice_models:
+            if voice_model not in self.all_voice_models:
+                differences.append({"voice_model":voice_model,"difference_reason":"Voice model not found in this DB"})
+        for unused_voice in db.unused_voices:
+            if unused_voice not in self.unused_voices:
+                related_characters = []
+                for character in db.characters:
+                    if character['skyrim_voice_folder'] == unused_voice or character['voice_model'] == unused_voice:
+                        related_characters.append(character['name'])
+                differences.append({"voice_model":unused_voice,"difference_reason":"Unused voice found in other DB","related_characters":related_characters})
+        for unused_voice in self.unused_voices:
+            if unused_voice not in db.unused_voices:
+                related_characters = []
+                for character in self.characters:
+                    if character['skyrim_voice_folder'] == unused_voice or character['voice_model'] == unused_voice:
+                        related_characters.append(character['name'])
+                differences.append({"voice_model":unused_voice,"difference_reason":"Unused voice found in this DB","related_characters":related_characters})
+        if len(self.characters) > len(db.characters):
+            differences.append({"difference_reason":"This DB has more characters than the other DB (This is not necessarily an error, if there are not missing characters, this might mean that the original DB had duplicates that were automatically removed!)", "characters":len(self.characters), "db_characters":len(db.characters)})
+        elif len(self.characters) < len(db.characters):
+            differences.append({"difference_reason":"This DB has less characters than the other DB -- Honestly I don't know under what circumestance this could be possible, but if you see this error, please report it!", "characters":len(self.characters), "db_characters":len(db.characters)})
+        return differences
+    
+    def save(self, path, type='json'): # Save the character database to a json directory or csv file
+        self.characters.sort(key=lambda x: x['name'])
+        if type == 'json':
+            if not os.path.exists(path):
+                os.makedirs(path)
+            for character in self.characters:
+                json_file_path = os.path.join(path, str(self.config.xvasynth_game_id) + "_" + str(character['gender']) + "_" + str(character['race']) + "_" + str(character['name']) + "_" + str(character['refid_int']) + "_" + str(character['baseid_int']) + '.json')
+                json.dump(character, open(json_file_path, 'w'), indent=4)
+        elif type == 'csv':
+            df = pd.DataFrame(self.characters)
+            df.to_csv(path, index=False)
+        else:
+            logging.error(f"Could not save character database. Invalid type '{type}'.")
+            raise ValueError
+        
         
     @property
     def male_voice_models(self):
@@ -147,7 +246,7 @@ class CharacterDB():
                 filtered.append(model)
         models = {}
         for character in self.characters:
-            race_string = character['race']+"Race"
+            race_string = str(character['race'])+"Race"
             if character["voice_model"] in filtered and character["voice_model"] != "":
                 if race_string not in models:
                     models[race_string] = [character['voice_model']]
@@ -171,7 +270,7 @@ class CharacterDB():
                 filtered.append(model)
         models = {}
         for character in self.characters:
-            race_string = character['race']+"Race"
+            race_string = str(character['race'])+"Race"
             if character["voice_model"] in filtered and character["voice_model"] != "":
                 if race_string not in models:
                     models[race_string] = [character['voice_model']]

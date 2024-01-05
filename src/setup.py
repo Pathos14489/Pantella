@@ -109,15 +109,7 @@ def initialise(config_file, logging_file, secret_key_file, language_file):
     # clean up old instances of exe runtime files
     utils.cleanup_mei(config.remove_mei_folders)
     character_df = character_db.CharacterDB(config,xvasynth)
-    try:
-        if config.character_df_file.endswith('.csv'):
-            character_df.load_characters_csv()
-        else:
-            character_df.load_characters_json()
-        character_df.verify_characters()
-    except:
-        logging.error(f"Could not load character database from {config.character_df_file}. Please check the path and try again. Path should be a directory containing json files or a csv file containing character information.")
-        raise
+    
     language_info = get_language_info(language_file)
     
     config.is_local = is_local
