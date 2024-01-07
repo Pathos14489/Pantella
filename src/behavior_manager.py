@@ -8,14 +8,19 @@ class BehaviorManager():
         self.conversation_manager = conversation_manager
         self.behaviors = []
         for filename in os.listdir(behaviors_dir):
+            if filename == "base_behavior.py":
+                continue
             if filename.endswith(".py") and not filename.startswith("__"):
+                logging.info("Loading behavior " + filename)
                 behavior_name = filename.split(".py")[0]
                 behavior = __import__("src.behaviors." + behavior_name, fromlist=[behavior_name])
-                behavior = getattr(behavior, behavior_name)
-                if behavior.run() == "BASEBEHAVIOR":
+                behavior = getattr(behavior, behavior_name)(self)
+                print(behavior)
+                if behavior.run(False) == "BASEBEHAVIOR":
                     logging.error("BaseBehavior run() called for " + behavior_name + ", this should be overwritten by the child class!")
                 else:
-                    self.behaviors.append(behavior(self))
+                    logging.info("Loaded behavior " + filename)
+                    self.behaviors.append(behavior)
 
     @property
     def behavior_keywords(self):
