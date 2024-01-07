@@ -8,6 +8,7 @@ import src.output_manager as output_manager
 import src.game_manager as game_manager
 import src.character_manager as character_manager
 import src.characters_manager as characters_manager
+import src.behavior_manager as behavior_manager
 import src.setup as setup
 import logging
 
@@ -32,6 +33,7 @@ class conversation_manager():
         self.game_state_manager = game_manager.GameStateManager(self.config.game_path)
         self.chat_manager = output_manager.ChatManager(self, self.config, self.tokenizer)
         self.transcriber = stt.Transcriber(self.game_state_manager, self.config)
+        self.behavior_manager = behavior_manager.BehaviorManager(self)
         self.active_characters = None # Initialised at start of every conversation in await_and_setup_conversation()
         self.check_mcm_mic_status()
         self.in_conversation = False # Whether or not the player is in a conversation
