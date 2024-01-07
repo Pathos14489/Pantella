@@ -196,13 +196,17 @@ class ChatManager:
 
         if config.is_local: # if local, use the player_name as the role
             messages.append({"role": player_name, "content": input_text})
+            player_identity = player_name
         else: # if remote, use the user role
             messages.append({"role": config.user_name, "content": input_text})
+            player_identity = config.user_name
+
             
         sentence = ''
         full_reply = ''
         num_sentences = 0
         action_taken = False
+        next_author = None # used to determine who is speaking next in a conversation
         while True:
             try:
                 start_time = time.time()
@@ -212,69 +216,56 @@ class ChatManager:
                     content = chunk.choices[0].text
                     print(content, end='')
                     if content is not None:
-                        sentence += content
 
-                        if not config.is_local: # if remote, check if the response contains the word assist for some reason. Probably some OpenAI nonsense.
+                        sentence += content
+                        
+                        if next_author is None and "\n" in content: # if next_author is None, then extract it from the start of the generation
+                            next_author = sentence.split('\n')[0]
+                            sentence = sentence.split('\n')[1]
+                            
+                        if next_author == player_identity: # if the next author is the player, then the player is speaking and generation should stop
+                            break
+                        if (next_author in characters.active_characters):
+                            #TODO: or (any(key.split(' ')[0] == keyword_extraction for key in characters.active_characters))
+                            logging.info(f"Switched to {next_author}")
+                            self.active_character = characters.active_characters[next_author]
+                            # characters are mapped to say_line based on order of selection
+                            # taking the order of the dictionary to find which say_line to use, but it is bad practice to use dictionaries in this way
+                            self.character_num = list(characters.active_characters.keys()).index(next_author) # Assigns a number to the character based on the order they were selected for use in the _mantella_say_line_# filename
+                            full_reply += sentence
+                            sentence = ''
+                            action_taken = True
+
+                        if not config.assist_check: # if remote, check if the response contains the word assist for some reason. Probably some OpenAI nonsense.
                             if ('assist' in content) and (num_sentences>0): # Causes problems if asking a follower if you should help someone, if they try to say something along the lines of "Yes, we should assist them." it will cut off the sentence and basically ignore the player. TODO: fix this with a more robust solution
                                 logging.info(f"'assist' keyword found. Ignoring sentence which begins with: {sentence}") 
-                                break
+                                break # stop generating response
 
                         content_edit = unicodedata.normalize('NFKC', content) # normalize unicode characters
                         # check if content marks the end of a sentence
-                        if (any(char in content_edit for char in self.end_of_sentence_chars)):
-                            sentence = self.clean_sentence(sentence)
+                        if (any(char in content_edit for char in self.end_of_sentence_chars)): # if any of the end of sentence characters are in the content, then the sentence is over
+                            sentence = self.clean_sentence(sentence) # clean the sentence
 
-                            if len(sentence.strip()) < 3: # Is this really necessary? "Hi." is a valid sentence, but is it really worth saying? TODO: check if this is necessary
+                            if config.strip_smalls and len(sentence.strip()) < config.small_size:
                                 logging.info(f'Skipping voiceline that is too short: {sentence}')
                                 break
 
                             logging.info(f"LLM returned sentence took {time.time() - start_time} seconds to execute")
 
-                            if "\n" in sentence:
-                                keyword_extraction = sentence.split('\n')[0]
+                            if ":" in sentence: # if a colon is in the sentence, then the NPC is calling a keyword function in addition to speaking
+                                keyword_extraction = sentence.split(':')[0]
                                 # if LLM is switching character
-                                if (keyword_extraction in characters.active_characters):
-                                    #TODO: or (any(key.split(' ')[0] == keyword_extraction for key in characters.active_characters))
-                                    logging.info(f"Switched to {keyword_extraction}")
-                                    self.active_character = characters.active_characters[keyword_extraction]
-                                    # characters are mapped to say_line based on order of selection
-                                    # taking the order of the dictionary to find which say_line to use, but it is bad practice to use dictionaries in this way
-                                    self.character_num = list(characters.active_characters.keys()).index(keyword_extraction)
-                                    full_reply += sentence
-                                    sentence = ''
-                                    action_taken = True
-                                elif keyword_extraction == 'Player':
-                                    logging.info(f"Stopped LLM from speaking on behalf of the player")
-                                    break
-                                elif keyword_extraction.lower() == self.offended_npc_response.lower():
-                                    if self.experimental_features:
-                                        logging.info(f"The player offended the NPC")
-                                        self.game_state_manager.write_game_info('_mantella_aggro', '1')
-                                    else:
-                                        logging.info(f"Experimental features disabled. Please set experimental_features = 1 in config.ini to enable the Offended feature")
-                                    full_reply += sentence
-                                    sentence = ''
-                                    action_taken = True
-                                elif keyword_extraction.lower() == self.forgiven_npc_response.lower():
-                                    if self.experimental_features:
-                                        logging.info(f"The player made up with the NPC")
-                                        self.game_state_manager.write_game_info('_mantella_aggro', '0')
-                                    else:
-                                        logging.info(f"Experimental features disabled. Please set experimental_features = 1 in config.ini to enable the Forgiven feature")
-                                    full_reply += sentence
-                                    sentence = ''
-                                    action_taken = True
-                                elif keyword_extraction.lower() == self.follow_npc_response.lower():
-                                    if self.experimental_features:
-                                        logging.info(f"The NPC is willing to follow the player")
-                                        self.game_state_manager.write_game_info('_mantella_aggro', '2')
-                                    else:
-                                        logging.info(f"Experimental features disabled. Please set experimental_features = 1 in config.ini to enable the Follow feature")
-                                    full_reply += sentence
-                                    sentence = ''
-                                    action_taken = True
-
-                            if action_taken == False:
+                                if self.experimental_features:
+                                    action_taken = self.conversation_manager.behavior_manager.evaluate(keyword_extraction)
+                                    if not action_taken:
+                                        logging.warn(f"Keyword '{keyword_extraction}' not found in behavior_manager. Checking for NPC response...")
+                                else:
+                                    action_taken = False
+                                    logging.info(f"Experimental features disabled. Please set experimental_features = 1 in config.ini to enable Behaviors.")
+                                full_reply += sentence
+                                sentence = sentence.split(':')[1]
+                            
+                            if not action_taken:
                                 # Generate the audio and return the audio file path
                                 try:
                                     audio_file = synthesizer.synthesize(self.active_character.voice_model, None, ' ' + sentence + ' ')
