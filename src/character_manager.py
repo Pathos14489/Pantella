@@ -224,28 +224,27 @@ class Character:
         summary_limit = round(tokens_available*summary_limit_pct,0)
 
         # save conversation history
-        # if this is not the first conversation
-        if os.path.exists(self.conversation_history_file):
+        
+        if os.path.exists(self.conversation_history_file): # if this is not the first conversation load the previous conversation history from the conversation history file
             with open(self.conversation_history_file, 'r', encoding='utf-8') as f:
                 conversation_history = json.load(f)
 
             # add new conversation to conversation history
             conversation_history.append(messages[1:]) # append everything except the initial system prompt
-        # if this is the first conversation
-        else:
+        
+        else: # if this is the first conversation initialize the conversation history file and set the previous conversation history to an every message except the initial system prompt
             directory = os.path.dirname(self.conversation_history_file)
             os.makedirs(directory, exist_ok=True)
             conversation_history = [messages[1:]]
         
-        with open(self.conversation_history_file, 'w', encoding='utf-8') as f:
-            json.dump(conversation_history, f, indent=4) # save everything except the initial system prompt
+        with open(self.conversation_history_file, 'w', encoding='utf-8') as f: # save everything except the initial system prompt
+            json.dump(conversation_history, f, indent=4)
 
-        # if this is not the first conversation
-        if os.path.exists(self.conversation_summary_file):
+        
+        if os.path.exists(self.conversation_summary_file): # if this is not the first conversation load the previous conversation summaries from the conversation summary file
             with open(self.conversation_summary_file, 'r', encoding='utf-8') as f:
                 previous_conversation_summaries = f.read()
-        # if this is the first conversation
-        else:
+        else: # if this is the first conversation, initialize the conversation summary file and set the previous conversation summaries to an empty string
             directory = os.path.dirname(self.conversation_summary_file)
             os.makedirs(directory, exist_ok=True)
             previous_conversation_summaries = ''
@@ -300,7 +299,7 @@ class Character:
         if len(conversation) > 5:
             conversation = conversation[3:-2] # drop the context (0) hello (1,2) and "Goodbye." (-2, -1) lines
             if prompt == None:
-                prompt = f"You are tasked with summarizing the conversation between {self.name} and {perspective_name} / other characters. These conversations take place in Skyrim. It is not necessary to comment on any mixups in communication such as mishearings. Text contained within asterisks state in-game events. Please summarize the conversation into a single paragraph in {self.language}."
+                prompt = f"{conversation_manager.config.assistant_name} is tasked with summarizing the conversation between {self.name} and {perspective_name} / other characters. These conversations take place in Skyrim. It is not necessary to comment on any mixups in communication such as mishearings. Text contained within asterisks state in-game events. Please summarize the conversation into a single paragraph in {self.language}."
             context = [{"role": "system", "content": prompt}]
             summary, _ = conversation_manager.llm.chatgpt_api(f"{conversation}", context) # TODO: Change to use acreate instead of chatgpt_api, I don't think this works with the use of none "system", "user" and "assistant" roles being in the conversation history
 
