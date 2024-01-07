@@ -41,7 +41,8 @@ https://github.com/art-from-the-machine/Mantella#issues-qa
         try:
             # [Startup]
             # run config editor if config.ini has the parameter
-            if int(config['Startup']['open_config_editor']) == 1:
+            self.open_config_editor = bool(int(config['Startup']['open_config_editor']))
+            if self.open_config_editor:
                 run_config_editor()
 
             # [Paths]
@@ -66,7 +67,7 @@ https://github.com/art-from-the-machine/Mantella#issues-qa
             self.stt_language = config['Microphone']['stt_language']
             if (self.stt_language == 'default'):
                 self.stt_language = self.language
-            self.stt_translate = int(config['Microphone']['stt_translate'])
+            self.stt_translate = bool(int(config['Microphone']['stt_translate']))
             self.whisper_process_device = config['Microphone']['process_device']
             self.whisper_type = config['Microphone']['whisper_type']
             self.whisper_url = config['Microphone']['whisper_url']
@@ -96,6 +97,9 @@ https://github.com/art-from-the-machine/Mantella#issues-qa
             self.system_name = config['LanguageModel']['system_name']
             self.user_name = config['LanguageModel']['user_name']
             self.assistant_name = config['LanguageModel']['assistant_name']
+            self.assist_check = bool(int(config['LanguageModel']['assist_check']))
+            self.strip_smalls = bool(int(config['LanguageModel']['strip_smalls']))
+            self.small_size = int(config['LanguageModel']['small_size'])
             stop_value = config['LanguageModel']['stop']
             if ',' in stop_value:
                 # If there are commas in the stop value, split the string by commas and store the values in a list
@@ -104,13 +108,13 @@ https://github.com/art-from-the-machine/Mantella#issues-qa
                 # If there are no commas, put the single value into a list
                 self.stop = [stop_value]
             self.conversation_limit_pct = float(config['LanguageModel']['conversation_limit_pct'])
-            self.experimental_features = True if config['LanguageModel']['experimental_features'] == '1' else False
+            self.experimental_features = bool(int(config['LanguageModel']['experimental_features']))
 
             # [Speech]
             self.xvasynth_process_device = config['Speech']['tts_process_device']
             self.pace = float(config['Speech']['pace'])
-            self.use_cleanup = int(config['Speech']['use_cleanup'])
-            self.use_sr = int(config['Speech']['use_sr'])
+            self.use_cleanup = bool(int(config['Speech']['use_cleanup']))
+            self.use_sr = bool(int(config['Speech']['use_sr']))
             self.xvasynth_base_url = config['Speech']['xvasynth_base_url']
             self.xvasynth_game_id = config['Speech']['xvasynth_game_id']
 

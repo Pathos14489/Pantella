@@ -31,8 +31,8 @@ class Synthesizer:
         self.language = config.language
 
         self.pace = config.pace
-        self.use_sr = bool(config.use_sr)
-        self.use_cleanup = bool(config.use_cleanup)
+        self.use_sr = config.use_sr
+        self.use_cleanup = config.use_cleanup
 
         # determines whether the voiceline should play internally
         self.debug_mode = config.debug_mode
@@ -236,8 +236,8 @@ class Synthesizer:
             'vocoder': 'n/a',
             'base_lang': self.language,
             'base_emb': self.base_speaker_emb,
-            'useSR': self.use_sr,
-            'useCleanup': self.use_cleanup,
+            'useSR': "1" if self.use_sr else "0",
+            'useCleanup': "1" if self.use_cleanup else "0",
         }
         requests.post(self.synthesize_url, json=data)
 

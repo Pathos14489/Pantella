@@ -12,7 +12,7 @@ class Transcriber:
         self.mic_enabled = config.mic_enabled
         self.language = config.stt_language
         self.task = "transcribe"
-        if config.stt_translate == 1:
+        if config.stt_translate:
             # translate to English
             self.task = "translate"
         self.model = config.whisper_model
