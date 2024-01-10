@@ -63,6 +63,8 @@ class GameStateManager:
 
         self.write_game_info('_mantella_actor_is_enemy', 'False')
 
+        self.write_game_info('_mantella_actor_is_in_combat', 'False')
+
         self.write_game_info('_mantella_actor_relationship', '')
 
         self.write_game_info('_mantella_character_selection', 'True')
@@ -298,6 +300,7 @@ class GameStateManager:
         formatted_in_game_events_lines = ['*{}*'.format(line.strip()) for line in in_game_events_lines]
         in_game_events = '\n'.join(formatted_in_game_events_lines)
 
+        # Is Player in combat with NPC
         is_in_combat = self.load_data_when_available('_mantella_actor_is_enemy', '')
         if is_in_combat.lower() == 'true':
             in_game_events = in_game_events + '\n*You are attacking the player. This is either because you are an enemy or the player has attacked you first.*'
@@ -331,7 +334,7 @@ class GameStateManager:
         # say goodbyes
         if conversation_ended.lower() != 'true': # say line if NPC is not already deactivated
             latest_character = list(active_characters.items())[-1][1]
-            audio_file = synthesizer.synthesize(latest_character.info['voice_model'], latest_character.info['skyrim_voice_folder'], conversation_manager.config.goodbye_npc_response)
+            audio_file = synthesizer.synthesize(latest_character, conversation_manager.config.goodbye_npc_response)
             chat_manager.save_files_to_voice_folders([audio_file, conversation_manager.config.goodbye_npc_response])
 
         player_name = self.load_player_name()
@@ -364,7 +367,7 @@ class GameStateManager:
 
         latest_character = list(active_characters.items())[-1][1]
         # let the player know that the conversation is reloading
-        audio_file = synthesizer.synthesize(latest_character.info['voice_model'], latest_character.info['skyrim_voice_folder'], conversation_manager.config.collecting_thoughts_npc_response)
+        audio_file = synthesizer.synthesize(latest_character, conversation_manager.config.collecting_thoughts_npc_response)
         chat_manager.save_files_to_voice_folders([audio_file, conversation_manager.config.collecting_thoughts_npc_response])
 
         messages.append({"role": "user", "content": latest_character.info['name']+'?'}) # TODO: More robust way of returning to conversation, this is too limited
