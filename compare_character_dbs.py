@@ -12,6 +12,7 @@ if __name__ == '__main__':
     print("Loading config...")
     parser.add_argument('path1', type=str, help='path to first character db')
     parser.add_argument('path2', type=str, help='path to second character db')
+    parser.add_argument('--output', type=str, help='path to output file')
     config1 = config_loader.ConfigLoader("./config.ini")
     config1.character_df_file = parser.parse_args().path1
     config2 = config_loader.ConfigLoader("./config.ini")
@@ -23,3 +24,6 @@ if __name__ == '__main__':
     diff = db1.compare(db2)
     print("Total differences: " + str(len(diff)))
     print("Differences: " + str(diff))
+    if parser.parse_args().output:
+        with open(parser.parse_args().output, 'w') as f:
+            json.dump(diff, f)
