@@ -53,21 +53,22 @@ class Transcriber:
                     self.transcribe_model = WhisperModel(self.model, device=self.process_device, compute_type="float32")
 
 
-    def get_player_response(self, radiant_dialogue=False):
-        if radiant_dialogue:
-            if self.call_count < 1:
-                logging.info('Running radiant dialogue')
-                transcribed_text = '*Please begin / continue a conversation topic (greetings are not needed). Ensure to change the topic if the current one is losing steam. The conversation should steer towards topics which reveal information about the characters and who they are, or instead drive forward conversations previously discussed in their memory.*'
-                self.call_count += 1
-            elif self.call_count <= 1:
-                logging.info('Ending radiant dialogue')
-                transcribed_text = '*Please wrap up the current topic between the NPCs in a natural way. Nobody is leaving, so no formal goodbyes.*'
-                self.call_count += 1
-            else:
-                logging.info('Radiant dialogue ended')
-                transcribed_text = self.end_conversation_keyword
-                self.call_count = 0
-        elif (self.debug_mode == '1') & (self.debug_use_mic == '0'):
+    def get_player_response(self): # , radiant_dialogue=False):
+        # if radiant_dialogue:
+        #     if self.call_count < 1:
+        #         logging.info('Running radiant dialogue')
+        #         transcribed_text = '*Please begin / continue a conversation topic (greetings are not needed). Ensure to change the topic if the current one is losing steam. The conversation should steer towards topics which reveal information about the characters and who they are, or instead drive forward conversations previously discussed in their memory.*'
+        #         self.call_count += 1
+        #     elif self.call_count <= 1:
+        #         logging.info('Ending radiant dialogue')
+        #         transcribed_text = '*Please wrap up the current topic between the NPCs in a natural way. Nobody is leaving, so no formal goodbyes.*'
+        #         self.call_count += 1
+        #     else:
+        #         logging.info('Radiant dialogue ended')
+        #         transcribed_text = self.end_conversation_keyword
+        #         self.call_count = 0
+        # el
+        if (self.debug_mode == '1') & (self.debug_use_mic == '0'):
             transcribed_text = self.default_player_response
         else:
             if self.mic_enabled == '1':
