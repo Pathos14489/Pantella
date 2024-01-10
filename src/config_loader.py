@@ -89,14 +89,20 @@ https://github.com/art-from-the-machine/Mantella#issues-qa
             self.top_p = float(config['LanguageModel']['top_p'])
             self.frequency_penalty = float(config['LanguageModel']['frequency_penalty'])
             self.max_tokens = int(config['LanguageModel']['max_tokens'])
-            self.BOS_token = config['LanguageModel']['BOS_token']
-            self.EOS_token = config['LanguageModel']['EOS_token']
-            self.message_signifier = config['LanguageModel']['message_signifier']
-            self.message_seperator = config['LanguageModel']['message_seperator']
-            self.message_format = config['LanguageModel']['message_format']
-            self.system_name = config['LanguageModel']['system_name']
-            self.user_name = config['LanguageModel']['user_name']
-            self.assistant_name = config['LanguageModel']['assistant_name']
+            self.BOS_token = str(config['LanguageModel']['BOS_token'])
+            self.EOS_token = str(config['LanguageModel']['EOS_token'])
+            self.message_signifier = str(config['LanguageModel']['message_signifier'])
+            if "//" in self.message_signifier or "\\" in self.message_signifier:
+                self.message_signifier = self.message_signifier.replace("//n", "\n")
+                self.message_signifier = self.message_signifier.replace("\\n", "\n")
+            self.message_seperator = str(config['LanguageModel']['message_seperator'])
+            if "//" in self.message_seperator or "\\" in self.message_seperator:
+                self.message_seperator = self.message_seperator.replace("//n", "\n")
+                self.message_seperator = self.message_seperator.replace("\\n", "\n")
+            self.message_format = str(config['LanguageModel']['message_format'])
+            self.system_name = str(config['LanguageModel']['system_name'])
+            self.user_name = str(config['LanguageModel']['user_name'])
+            self.assistant_name = str(config['LanguageModel']['assistant_name'])
             self.assist_check = bool(int(config['LanguageModel']['assist_check']))
             self.strip_smalls = bool(int(config['LanguageModel']['strip_smalls']))
             self.small_size = int(config['LanguageModel']['small_size'])
@@ -113,8 +119,8 @@ https://github.com/art-from-the-machine/Mantella#issues-qa
             # [Speech]
             self.xvasynth_process_device = config['Speech']['tts_process_device']
             self.pace = float(config['Speech']['pace'])
-            self.use_cleanup = bool(int(config['Speech']['use_cleanup']))
-            self.use_sr = bool(int(config['Speech']['use_sr']))
+            self.use_cleanup = int(config['Speech']['use_cleanup']) == 1
+            self.use_sr = int(config['Speech']['use_sr']) == 1
             self.xvasynth_base_url = config['Speech']['xvasynth_base_url']
             self.xvasynth_game_id = config['Speech']['xvasynth_game_id']
 
@@ -131,8 +137,8 @@ https://github.com/art-from-the-machine/Mantella#issues-qa
             self.add_voicelines_to_all_voice_folders = config['Debugging']['add_voicelines_to_all_voice_folders']
 
             # [Prompt]
-            self.prompt = config['Prompt']['prompt']
-            self.multi_npc_prompt = config['Prompt']['multi_npc_prompt']
+            self.prompt = str(config['Prompt']['prompt']).replace("//n", "\n").replace("/r", "")
+            self.multi_npc_prompt = str(config['Prompt']['multi_npc_prompt']).replace("//n", "\n").replace("/r", "")
 
             # Other
             self.is_local = False
