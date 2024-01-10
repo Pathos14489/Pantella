@@ -25,16 +25,18 @@ class Character:
                 self.age = "Young"
             elif "Child" in self.voice_model:
                 self.age = "Child"
+            elif "Teen" in self.voice_model:
+                self.age = "Teen"
         self.gendered_age = "" # default gendered age - This is also to help communicate to the AI the age of the actor they're playing to help them stay in character
         if self.gender == "Male":
-            if self.age == "Child":
+            if self.age == "Child" or self.age == "Teen":
                 self.gendered_age = "Boy"
             elif self.age == "Old":
                 self.gendered_age = "Old Man"
             else:
                 self.gendered_age = "Man"
         else:
-            if self.age == "Child":
+            if self.age == "Child" or self.age == "Teen":
                 self.gendered_age = "Girl"
             elif self.age == "Old":
                 self.gendered_age = "Old Lady"
@@ -99,10 +101,10 @@ class Character:
         if self.in_game_relationship_level == 0:
             if self.current_trust < 1:
                 trust = 'a stranger'
-                perspective_name = "a stranger"
+                perspective_name = "A stranger"
             elif self.current_trust < 10:
                 trust = 'an acquaintance'
-                perspective_name = "an acquaintance"
+                perspective_name = "An acquaintance"
             elif self.current_trust < 50:
                 trust = 'a friend'
                 perspective_name = self.player_name
@@ -117,9 +119,9 @@ class Character:
             perspective_name = self.player_name
         elif self.in_game_relationship_level < 0:
             trust = 'an enemy'
-            perspective_name = "an enemy"
+            perspective_name = "An enemy"
         
-        perspective_description = perspective_name + ", " + "a " + self.player_race + " " + self.player_gender + "," # A description of the player from the character's perspective
+        perspective_description = perspective_name + "(" +  self.player_race + " " + self.player_gender + ") " + trust # A description of the player from the character's perspective TODO: Turn this into a config setting like message_format
         return perspective_name, perspective_description, trust
     
     
@@ -128,7 +130,7 @@ class Character:
         perspective_name, perspective_description, trust = self.get_perspective_player_identity()
 
         if len(conversation_summary) > 0:
-            conversation_summary = f"Below is a summary for each of your previous conversations:\n\n{conversation_summary}"
+            conversation_summary = f"Below is a summary for all of their previous conversations:\n\n{conversation_summary}"
 
         time_group = utils.get_time_group(time) # get time group from in-game time before 12/24 hour conversion
 
@@ -147,10 +149,16 @@ class Character:
             "trust": trust,
             "player": perspective_description,
             "language": self.language,
+            "behavior_summary": conversation_manager.behavior_manager.get_behavior_summary(perspective_name)
         }   
         for key, value in self.info.items(): # add all character info to replacement dict
             replacement_dict[key] = value
         def rd_format(r_dict,s): # Uses the replacement dict to format the string
+            # remove /r from all strings
+            new_r_dict = {}
+            for key, value in r_dict.items():
+                new_r_dict[key] = str(value).replace("/r", "")
+            r_dict = new_r_dict
             return s.format(**r_dict)
 
         if len(keys) == 1: # Single NPC prompt
