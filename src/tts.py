@@ -76,9 +76,14 @@ class Synthesizer:
         print(f"Total xVASynth Voices: {len(voices)}")
         return voices
 
-    def synthesize(self, voice, voice_folder, voiceline):
+    def synthesize(self, character, voiceline):
+        voice = character.voice_model
         if voice != self.last_voice:
             self.change_voice(voice)
+
+        if voiceline.strip() == '': # If the voiceline is empty, don't synthesize anything
+            logging.info('No voiceline to synthesize.')
+            return ''
 
         logging.info(f'Synthesizing voiceline: {voiceline}')
         phrases = self._split_voiceline(voiceline)
@@ -213,6 +218,8 @@ class Synthesizer:
     
 
     def merge_audio_files(self, audio_files, voiceline_file_name):
+        print(f'Merging audio files: {audio_files}')
+        print(f'Output file: {voiceline_file_name}')
         merged_audio = np.array([])
 
         for audio_file in audio_files:
@@ -236,8 +243,8 @@ class Synthesizer:
             'vocoder': 'n/a',
             'base_lang': self.language,
             'base_emb': self.base_speaker_emb,
-            'useSR': "1" if self.use_sr else "0",
-            'useCleanup': "1" if self.use_cleanup else "0",
+            'useSR': self.use_sr,
+            'useCleanup': self.use_cleanup,
         }
         requests.post(self.synthesize_url, json=data)
 
