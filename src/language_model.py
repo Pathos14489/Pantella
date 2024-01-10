@@ -11,8 +11,8 @@ class Tokenizer(): # Tokenizes(only availble for counting the tokens in a string
         if not self.config.is_local: # If we're using OpenAI, we can use the tiktoken library to get the number of tokens used by the prompt
             self.encoding = tiktoken.encoding_for_model(config.llm)
             
-        self.BOS_token = config.BOS_token
-        self.EOS_token = config.EOS_token
+        self.BOS_token = self.config.BOS_token
+        self.EOS_token = self.config.EOS_token
         self.message_signifier = config.message_signifier
         self.message_seperator = config.message_seperator
         self.message_format = config.message_format
@@ -140,7 +140,8 @@ class LLM():
         while retries > 0 and completion is None:
             try:
                 prompt = self.tokenizer.get_string_from_messages(messages)
-                prompt += self.tokenizer.start_message("") # Start empty message from no one to let the LLM generate the speaker by split \n
+                prompt += self.tokenizer.start_message("[name]") # Start empty message from no one to let the LLM generate the speaker by split \n
+                prompt = prompt.split("[name]")[0] # Start message without the name - Generates name for use in output_manager.py  process_response()
                 print(f"avPrompt: {prompt}")
                 return self.client.completions.create(
                     model=self.config.llm, prompt=prompt, max_tokens=self.config.max_tokens, stream=True # , stop=self.stop, temperature=self.temperature, top_p=self.top_p, frequency_penalty=self.frequency_penalty, stream=True
