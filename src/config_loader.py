@@ -123,6 +123,7 @@ https://github.com/art-from-the-machine/Mantella#issues-qa
             self.use_sr = int(config['Speech']['use_sr']) == 1
             self.xvasynth_base_url = config['Speech']['xvasynth_base_url']
             self.xvasynth_game_id = config['Speech']['xvasynth_game_id']
+            self.end_conversation_wait_time = float(config['Speech']['end_conversation_wait_time'])
 
             # [Cleanup]
             self.remove_mei_folders = config['Cleanup']['remove_mei_folders']
