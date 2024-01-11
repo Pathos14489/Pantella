@@ -22,8 +22,11 @@ if __name__ == '__main__':
     db1 = character_db.CharacterDB(config1)
     db2 = character_db.CharacterDB(config2)
     diff = db1.compare(db2)
+    if len(diff) < 100:
+        print("Differences: " + str(diff))
+    else:
+        print("Too many differences to print")
     print("Total differences: " + str(len(diff)))
-    print("Differences: " + str(diff))
     if parser.parse_args().output:
         with open(parser.parse_args().output, 'w') as f:
             json.dump(diff, f)
