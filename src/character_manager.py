@@ -105,28 +105,32 @@ class Character:
         perspective_name = "a stranger" # Who the character thinks the player is
         if self.in_game_relationship_level == 0:
             if self.current_trust < 1:
-                trust = 'a stranger'
+                trust = 'stranger'
                 perspective_name = "A stranger"
             elif self.current_trust < 10:
-                trust = 'an acquaintance'
+                trust = 'acquaintance'
                 perspective_name = "An acquaintance"
             elif self.current_trust < 50:
-                trust = 'a friend'
+                trust = 'friend'
                 perspective_name = self.player_name
             elif self.current_trust >= 50:
-                trust = 'a close friend'
+                trust = 'close friend'
                 perspective_name = self.player_name
         elif self.in_game_relationship_level == 4:
-            trust = 'a lover'
+            trust = 'lover'
             perspective_name = self.player_name
         elif self.in_game_relationship_level > 0:
-            trust = 'a friend'
+            trust = 'friend'
             perspective_name = self.player_name
         elif self.in_game_relationship_level < 0:
-            trust = 'an enemy'
+            trust = 'enemy'
             perspective_name = "An enemy"
         
-        perspective_description = perspective_name + "(" +  self.player_race + " " + self.player_gender + ") " + trust # A description of the player from the character's perspective TODO: Turn this into a config setting like message_format
+        perspective_description = perspective_name + "(" +  self.player_race + " " + self.player_gender + ") " # A description of the player from the character's perspective TODO: Turn this into a config setting like message_format
+        if trust == "stranger":
+            perspective_description += f"({trust})"
+        else:
+            perspective_description += f"({self.name}'s {trust})"
         return perspective_name, perspective_description, trust
     
     
