@@ -71,26 +71,31 @@ class Character:
             latest_file_number = 1
 
         
-        conversation_summary_file = "{self.name}/{self.name}_summary_{latest_file_number}.txt"
+        conversation_summary_file = f"{self.name}/{self.name}_summary_{latest_file_number}.txt"
         return conversation_summary_file
     
 
     def set_context(self, conversation_manager, location, in_game_time, active_characters, token_limit, radiant_dialogue):
         # if conversation history exists, load it
         if os.path.exists(self.conversation_history_file):
-            with open(self.conversation_history_file, 'r', encoding='utf-8') as f:
-                conversation_history = json.load(f)
+            try:
+                with open(self.conversation_history_file, 'r', encoding='utf-8') as f:
+                    conversation_history = json.load(f)
 
-            previous_conversations = []
-            for conversation in conversation_history:
-                previous_conversations.extend(conversation)
+                previous_conversations = []
+                for conversation in conversation_history:
+                    previous_conversations.extend(conversation)
 
-            with open(self.conversation_summary_file, 'r', encoding='utf-8') as f:
-                previous_conversation_summaries = f.read()
+                with open(self.conversation_summary_file, 'r', encoding='utf-8') as f:
+                    previous_conversation_summaries = f.read()
 
-            self.conversation_summary = previous_conversation_summaries
+                self.conversation_summary = previous_conversation_summaries
 
-            context = self.create_context(conversation_manager, location, in_game_time, active_characters, token_limit, radiant_dialogue, len(previous_conversations), previous_conversation_summaries)
+                context = self.create_context(conversation_manager, location, in_game_time, active_characters, token_limit, radiant_dialogue, len(previous_conversations), previous_conversation_summaries)
+            except Exception as e:
+                logging.error(f"Failed to load conversation history for {self.name}.")
+                logging.error(e)
+                context = self.create_context(conversation_manager, location, in_game_time, active_characters, token_limit, radiant_dialogue)
         else:
             context = self.create_context(conversation_manager, location, in_game_time, active_characters, token_limit, radiant_dialogue)
 
@@ -149,6 +154,8 @@ class Character:
             "trust": trust,
             "player": perspective_description,
             "language": self.language,
+            "age": self.age,
+            "gendered_age": self.gendered_age,
             "behavior_summary": conversation_manager.behavior_manager.get_behavior_summary(perspective_name)
         }   
         for key, value in self.info.items(): # add all character info to replacement dict
@@ -157,8 +164,10 @@ class Character:
             # remove /r from all strings
             new_r_dict = {}
             for key, value in r_dict.items():
-                new_r_dict[key] = str(value).replace("/r", "")
+                if value != None:
+                    new_r_dict[key] = str(value).replace("/r", "")
             r_dict = new_r_dict
+            print(r_dict)
             return s.format(**r_dict)
 
         if len(keys) == 1: # Single NPC prompt
@@ -192,7 +201,7 @@ class Character:
             rd["bios"] = formatted_bios
             rd["names"] = character_names_list
             rd["names_w_player"] = character_names_list_w_player
-            rd["conversation_summaries"] = formatted_histories
+            rd["conversation_summary"] = formatted_histories
 
             character_desc = rd_format(rd, conversation_manager.config.prompt)
         
@@ -275,7 +284,7 @@ class Character:
             f.write(conversation_summaries)
 
         # if summaries token limit is reached, summarize the summaries
-        if len(tokenizer.encode(conversation_summaries)) > summary_limit:
+        if tokenizer.get_token_count(conversation_summaries) > summary_limit:
             logging.info(f'Token limit of conversation summaries reached ({len(tokenizer.encode(conversation_summaries))} / {summary_limit} tokens). Creating new summary file...')
             while True:
                 try:
@@ -306,9 +315,10 @@ class Character:
         summary = ''
         if len(conversation) > 5:
             conversation = conversation[3:-2] # drop the context (0) hello (1,2) and "Goodbye." (-2, -1) lines
+            assistant_name = conversation_manager.config.assistant_name[0].upper() + conversation_manager.config.assistant_name[1:].lower()
             if prompt == None:
-                prompt = f"{conversation_manager.config.assistant_name} is tasked with summarizing the conversation between {self.name} and {perspective_name} / other characters. These conversations take place in Skyrim. It is not necessary to comment on any mixups in communication such as mishearings. Text contained within asterisks state in-game events. Please summarize the conversation into a single paragraph in {self.language}."
-            context = [{"role": "system", "content": prompt}]
+                prompt = f"{assistant_name} is tasked with summarizing the conversation between {self.name} and {perspective_name} / other characters. These conversations take place in Skyrim. It is not necessary to comment on any mixups in communication such as mishearings. Text contained within asterisks state in-game events. Please summarize the conversation into a single paragraph in {self.language}."
+            context = [{"role": conversation_manager.config.system_name, "content": prompt}]
             summary, _ = conversation_manager.llm.chatgpt_api(f"{conversation}", context) # TODO: Change to use acreate instead of chatgpt_api, I don't think this works with the use of none "system", "user" and "assistant" roles being in the conversation history
 
             summary = summary.replace('The assistant', self.name)
@@ -318,6 +328,9 @@ class Character:
             summary = summary.replace('The user', perspective_name)
             summary = summary.replace('The User', perspective_name)
             summary = summary.replace('the user', perspective_name)
+            summary = summary.replace('The player', perspective_name)
+            summary = summary.replace('The Player', perspective_name)
+            summary = summary.replace('the player', perspective_name)
             summary += '\n\n'
 
             logging.info(f"Conversation summary saved.")
