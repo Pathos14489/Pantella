@@ -39,10 +39,9 @@ class ChatManager:
         self.wav_file = f'MantellaDi_MantellaDialogu_00001D8B_1.wav'
         self.lip_file = f'MantellaDi_MantellaDialogu_00001D8B_1.lip'
 
-        self.end_of_sentence_chars = ['.', '?', '!', ':', ';']
+        self.end_of_sentence_chars = ['.', '?', '!']
         self.end_of_sentence_chars = [unicodedata.normalize('NFKC', char) for char in self.end_of_sentence_chars]
-
-        self.sentence_queue = asyncio.Queue()
+        self.banned_chars = ['*', '(', ')', '[', ']', '{', '}', "\"" ]
 
 
     async def get_audio_duration(self, audio_file):
@@ -85,6 +84,9 @@ class ChatManager:
         """Save voicelines and subtitles to the correct game folders"""
 
         audio_file, subtitle = queue_output
+        if audio_file is None or subtitle is None or audio_file == '' or subtitle == '':
+            logging.error(f"Error saving voiceline to voice folders. Audio file: {audio_file}, subtitle: {subtitle}")
+            return
         if self.add_voicelines_to_all_voice_folders == '1':
             for sub_folder in os.scandir(self.mod_folder):
                 if sub_folder.is_dir():
@@ -194,122 +196,150 @@ class ChatManager:
     async def process_response(self, player_name, config, sentence_queue, input_text, messages, synthesizer, characters, radiant_dialogue, event):
         """Stream response from LLM one sentence at a time"""
 
-        if config.is_local: # if local, use the player_name as the role
-            messages.append({"role": player_name, "content": input_text})
-            player_identity = player_name
-        else: # if remote, use the user role
-            messages.append({"role": config.user_name, "content": input_text})
-            player_identity = config.user_name
+        messages.append({"role": player_name, "content": input_text})
+        player_identity = player_name
 
-            
-        sentence = ''
-        full_reply = ''
-        num_sentences = 0
-        action_taken = False
+        full_reply = '' # used to store the full reply
         next_author = None # used to determine who is speaking next in a conversation
-        while True:
+        possible_players = [
+            "A stranger",
+            "A traveler",
+            "a stranger",
+            "a traveler",
+            "Stranger",
+            "stranger",
+            "Traveler",
+            "traveler",
+        ]
+        sentence = '' # used to store the current sentence being generated
+        num_sentences = 0 # used to keep track of how many sentences have been generated
+        retries = 5
+        print("Signifier: ", config.message_signifier)
+        print("Format: ", config.message_format)
+        while retries >= 0: # keep trying to connect to the API until it works
             try:
                 start_time = time.time()
-                # print(f"Next Line: ")
                 for chunk in self.conversation_manager.llm.acreate(messages):
-                    # print(chunk.model_dump_json())
                     content = chunk.choices[0].text
-                    print(content, end='')
-                    if content is not None:
-
+                    if content is not None and content != '':
+                        print(chunk.model_dump_json())
                         sentence += content
-                        
-                        if next_author is None and "\n" in content: # if next_author is None, then extract it from the start of the generation
-                            next_author = sentence.split('\n')[0]
-                            sentence = sentence.split('\n')[1]
-                            
-                        if next_author == player_identity: # if the next author is the player, then the player is speaking and generation should stop
-                            break
-                        if (next_author in characters.active_characters):
-                            #TODO: or (any(key.split(' ')[0] == keyword_extraction for key in characters.active_characters))
-                            logging.info(f"Switched to {next_author}")
-                            self.active_character = characters.active_characters[next_author]
-                            # characters are mapped to say_line based on order of selection
-                            # taking the order of the dictionary to find which say_line to use, but it is bad practice to use dictionaries in this way
-                            self.character_num = list(characters.active_characters.keys()).index(next_author) # Assigns a number to the character based on the order they were selected for use in the _mantella_say_line_# filename
-                            full_reply += sentence
-                            sentence = ''
-                            action_taken = True
 
-                        if not config.assist_check: # if remote, check if the response contains the word assist for some reason. Probably some OpenAI nonsense.
-                            if ('assist' in content) and (num_sentences>0): # Causes problems if asking a follower if you should help someone, if they try to say something along the lines of "Yes, we should assist them." it will cut off the sentence and basically ignore the player. TODO: fix this with a more robust solution
-                                logging.info(f"'assist' keyword found. Ignoring sentence which begins with: {sentence}") 
-                                break # stop generating response
+                        if next_author is None: # if next_author is None, then extract it from the start of the generation
+                            if config.message_signifier in sentence:
+                                next_author = sentence.split(config.message_signifier)[0] # extract the next author from the start of the generation
+                                sentence = sentence[len(next_author)+len(config.message_signifier):] # remove the author from the sentence
+                                logging.info(f"Next author is {next_author}")
+                            
+                        if next_author == player_identity or next_author == config.user_name or next_author in possible_players: # if the next author is the player, then the player is speaking and generation should stop
+                            logging.info(f"Player is speaking. Stopping generation.")
+                            break
+
+                        if next_author == config.system_name or next_author == config.assistant_name: # if the next author is the system, then the LLM is generating a response to the player
+                            retries += 1 # Not a real retry, just a way to skip the sentence
+                            raise Exception('Invalid author')
 
                         content_edit = unicodedata.normalize('NFKC', content) # normalize unicode characters
                         # check if content marks the end of a sentence
-                        if (any(char in content_edit for char in self.end_of_sentence_chars)): # if any of the end of sentence characters are in the content, then the sentence is over
-                            sentence = self.clean_sentence(sentence) # clean the sentence
+                        if (any(char in content_edit for char in self.end_of_sentence_chars)) or (any(char in content for char in self.banned_chars)): # if the content contains any of the end of sentence characters, then the sentence is complete
+                            if next_author is None: # if next_author is None after generating a sentence, then there was an error generating the output. The LLM didn't choose a character to speak next.
+                                logging.info(f"Next author is None. Failed to extract author from: {sentence}")
+                                input('Press enter to continue...')
+                                exit()
 
-                            if config.strip_smalls and len(sentence.strip()) < config.small_size:
-                                logging.info(f'Skipping voiceline that is too short: {sentence}')
+                            sentence = self.clean_sentence(sentence) # clean the sentence
+                            if sentence == '': # if the sentence is empty after cleaning, then skip it
+                                logging.info(f"Skipping empty sentence")
                                 break
+                                
+                            if (next_author in characters.active_characters): # if the next author is a real character that's active in this conversation, then switch to that character
+                                #TODO: or (any(key.split(' ')[0] == keyword_extraction for key in characters.active_characters))
+                                logging.info(f"Switched to {next_author}")
+                                self.active_character = characters.active_characters[next_author]
+                                # characters are mapped to say_line based on order of selection
+                                # taking the order of the dictionary to find which say_line to use, but it is bad practice to use dictionaries in this way
+                                self.character_num = list(characters.active_characters.keys()).index(next_author) # Assigns a number to the character based on the order they were selected for use in the _mantella_say_line_# filename
+                            else: # if the next author is not a real character, then assume the player is speaking and generation should stop
+                                for character in characters.active_characters.values(): # check if the next author is a partial match to any of the active characters
+                                    if next_author in character.name.split(" "):
+                                        logging.info(f"Switched to {character.name} (WARNING: Partial match!)")
+                                        self.active_character = character
+                                        self.character_num = list(characters.active_characters.keys()).index(character.name)
+                                        break
+                                else: # if the next author is not a real character, then assume the player is speaking and generation should stop
+                                    logging.info(f"Next author is not a real character: {next_author}")
+                                    logging.info(f"Waiting for player input instead...")
+                                    break
+
+                            if not config.assist_check: # if remote, check if the response contains the word assist for some reason. Probably some OpenAI nonsense.
+                                if ('assist' in sentence) and (num_sentences>0): # Causes problems if asking a follower if you should "assist" someone, if they try to say something along the lines of "Yes, we should assist them." it will cut off the sentence and basically ignore the player. TODO: fix this with a more robust solution
+                                    logging.info(f"'assist' keyword found. Ignoring sentence which begins with: {sentence}") 
+                                    break # stop generating response
+
+                            # if config.strip_smalls and len(sentence.strip()) < config.small_size:
+                            #     logging.info(f'Skipping voiceline that is too short: {sentence}')
+                            #     break
 
                             logging.info(f"LLM returned sentence took {time.time() - start_time} seconds to execute")
 
-                            if ":" in sentence: # if a colon is in the sentence, then the NPC is calling a keyword function in addition to speaking
+                            if ":" in sentence: # if a colon is in the sentence, then the NPC is calling a keyword function in addition to speaking. Pass the keyword to the behavior manager to see if it matches any real keywords
                                 keyword_extraction = sentence.split(':')[0]
                                 # if LLM is switching character
                                 if self.experimental_features:
-                                    action_taken = self.conversation_manager.behavior_manager.evaluate(keyword_extraction)
-                                    if not action_taken:
-                                        logging.warn(f"Keyword '{keyword_extraction}' not found in behavior_manager. Checking for NPC response...")
+                                    behavior = self.conversation_manager.behavior_manager.evaluate(keyword_extraction, self, characters, messages)
+                                    if behavior == None:
+                                        logging.warn(f"Keyword '{keyword_extraction}' not found in behavior_manager. Disgarding from response.")
                                 else:
-                                    action_taken = False
                                     logging.info(f"Experimental features disabled. Please set experimental_features = 1 in config.ini to enable Behaviors.")
-                                full_reply += sentence
                                 sentence = sentence.split(':')[1]
                             
-                            if not action_taken:
-                                # Generate the audio and return the audio file path
-                                try:
-                                    audio_file = synthesizer.synthesize(self.active_character.voice_model, None, ' ' + sentence + ' ')
-                                except Exception as e:
-                                    logging.error(f"xVASynth Error: {e}")
+                            # Generate the audio and return the audio file path
+                            try:
+                                audio_file = synthesizer.synthesize(self.active_character, ' ' + sentence + ' ')
+                            except Exception as e:
+                                logging.error(f"xVASynth Error: {e}")
+                                print(e)
+                                input('Press enter to continue...')
+                                exit()
 
-                                # Put the audio file path in the sentence_queue
-                                await sentence_queue.put([audio_file, sentence])
+                            # Put the audio file path in the sentence_queue
+                            await sentence_queue.put([audio_file, sentence])
 
-                                full_reply += sentence
-                                num_sentences += 1
-                                sentence = ''
+                            full_reply += sentence
+                            num_sentences += 1
+                            sentence = ''
 
-                                # clear the event for the next iteration
-                                event.clear()
-                                # wait for the event to be set before generating the next line
-                                await event.wait()
+                            # clear the event for the next iteration
+                            event.clear()
+                            # wait for the event to be set before generating the next line
+                            await event.wait()
 
-                                end_conversation = self.game_state_manager.load_conversation_ended()
-                                radiant_dialogue_update = self.game_state_manager.load_radiant_dialogue()
-                                # stop processing LLM response if:
-                                # max_response_sentences reached (and the conversation isn't radiant)
-                                # conversation has switched from radiant to multi NPC (this allows the player to "interrupt" radiant dialogue and include themselves in the conversation)
-                                # the conversation has ended
-                                if ((num_sentences >= self.max_response_sentences) and not radiant_dialogue) or (radiant_dialogue and not radiant_dialogue_update) or end_conversation:
-                                    break
-                            else:
-                                action_taken = False
+                            end_conversation = self.game_state_manager.load_conversation_ended()
+                            radiant_dialogue_update = self.game_state_manager.load_radiant_dialogue()
+                            # stop processing LLM response if:
+                            # max_response_sentences reached (and the conversation isn't radiant)
+                            # conversation has switched from radiant to multi NPC (this allows the player to "interrupt" radiant dialogue and include themselves in the conversation)
+                            # the conversation has ended
+                            if ((num_sentences >= self.max_response_sentences) and not radiant_dialogue) or (radiant_dialogue and not radiant_dialogue_update) or end_conversation: # if the conversation has ended, stop generating responses
+                                break
                 break
             except Exception as e:
+                if retries == 0:
+                    logging.error(f"Could not connect to LLM API\nError: {e}")
+                    input('Press enter to continue...')
+                    exit()
                 logging.error(f"LLM API Error: {e}")
                 error_response = "I can't find the right words at the moment."
-                audio_file = synthesizer.synthesize(self.active_character.voice_model, None, error_response)
+                audio_file = synthesizer.synthesize(self.active_character, error_response)
                 self.save_files_to_voice_folders([audio_file, error_response])
                 logging.info('Retrying connection to API...')
+                retries -= 1
                 time.sleep(5)
 
         # Mark the end of the response
         await sentence_queue.put(None)
 
-        if config.is_local:
-            messages.append({"role": player_name, "content": input_text})
-        else:
-            messages.append({"role": "assistant", "content": full_reply})
+        messages.append({"role": next_author, "content": full_reply})
         
         logging.info(f"Full response saved ({self.tokenizer.get_token_count(full_reply)} tokens): {full_reply}")
         return messages
