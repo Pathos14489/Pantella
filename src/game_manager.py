@@ -339,12 +339,8 @@ class GameStateManager:
 
         player_name = self.load_player_name()
 
-        if self.config.is_local: # if local, use immersive context
-            messages.append({"role": player_name, "content": conversation_manager.config.end_conversation_keyword+'.'})
-            messages.append({"role": character.name, "content": conversation_manager.config.end_conversation_keyword+'.'})
-        else: # if using oai, use generic context (no names) Warning: This may result in character breaks, such as referring to the player as user/player, acknowledging they're in a game, etc. Not advised.
-            messages.append({"role": self.config.user_name, "content": conversation_manager.config.end_conversation_keyword+'.'})
-            messages.append({"role": self.config.assistant_name, "content": conversation_manager.config.end_conversation_keyword+'.'})
+        messages.append({"role": player_name, "content": conversation_manager.config.end_conversation_keyword+'.'})
+        messages.append({"role": character.name, "content": conversation_manager.config.end_conversation_keyword+'.'})
 
         summary = None
         for character_name, character in active_characters.items(): # Get conversation summary from any character in the conversation or generate a new one
@@ -356,7 +352,7 @@ class GameStateManager:
 
         self.write_game_info('_mantella_in_game_events', '') # clear in-game events
         self.write_game_info('_mantella_end_conversation', 'True') # tell Skyrim papyrus script conversation has ended
-        time.sleep(int(self.config.end_conversation_wait_time)) # wait a few seconds for everything to register
+        time.sleep(conversation_manager.config.end_conversation_wait_time) # wait a few seconds for everything to register
 
         return None
     
@@ -370,12 +366,12 @@ class GameStateManager:
         audio_file = synthesizer.synthesize(latest_character, conversation_manager.config.collecting_thoughts_npc_response)
         chat_manager.save_files_to_voice_folders([audio_file, conversation_manager.config.collecting_thoughts_npc_response])
 
-        messages.append({"role": "user", "content": latest_character.info['name']+'?'}) # TODO: More robust way of returning to conversation, this is too limited
+        messages.append({"role": conversation_manager.config.user_name, "content": latest_character.info['name']+'?'}) # TODO: More robust way of returning to conversation, this is too limited
         if len(list(active_characters.items())) > 1:
             collecting_thoughts_response = latest_character.info['name']+': '+conversation_manager.config.collecting_thoughts_npc_response+'.'
         else:
             collecting_thoughts_response = conversation_manager.config.collecting_thoughts_npc_response+'.'
-        messages.append({"role": "assistant", "content": collecting_thoughts_response})
+        messages.append({"role": conversation_manager.config.assistant_name, "content": collecting_thoughts_response})
 
         # save the conversation so far
         summary = None
