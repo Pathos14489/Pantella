@@ -83,16 +83,17 @@ class LLM():
     def chatgpt_api(self, input_text, messages):
         print(f"ChatGPT API: {input_text}")
         print(f"Messages: {messages}")
-        if input_text:
-            messages.append(
-                {"role": "user", "content": input_text},
-            )
-            logging.info('Getting LLM response...')
-            chat_completion = self.create(messages)
-        
-        reply = chat_completion.choices[0].message.content
+        if not input_text:
+            logging.warning('Empty input text, skipping...')
+            return "", messages
         messages.append(
-            {"role": "assistant", "content": chat_completion.choices[0].message.content},
+            {"role": self.config.user_name, "content": input_text},
+        )
+        logging.info('Getting LLM response...')
+        reply = self.create(messages)
+        
+        messages.append(
+            {"role": self.config.assistant_name, "content": reply},
         )
         logging.info(f"LLM Response: {reply}")
 
@@ -104,15 +105,14 @@ class LLM():
         completion = None
         while retries > 0 and completion is None:
             try:
-                if self.config.is_local: # If local, don't do the weird header thing. Doesn't break anything, but it's weird.
-                    prompt = self.tokenizer.get_string_from_messages(messages)
-                    completion = self.client.completions.create(
-                        model=self.config.llm, prompt=prompt, max_tokens=self.config.max_tokens
-                    )
-                else:
-                    completion = self.client.chat.completions.create(
-                        model=self.config.llm, messages=messages, headers={"HTTP-Referer": 'https://github.com/art-from-the-machine/Mantella', "X-Title": 'mantella'}, stop=self.config.stop,temperature=self.config.temperature,top_p=self.config.top_p,frequency_penalty=self.config.frequency_penalty, max_tokens=self.config.max_tokens
-                    )
+                prompt = self.tokenizer.get_string_from_messages(messages)
+                prompt += self.tokenizer.start_message(self.config.assistant_name) # Start empty message from no one to let the LLM generate the speaker by split \n
+                completion = self.client.completions.create(
+                    model=self.config.llm, prompt=prompt, max_tokens=self.config.max_tokens
+                )
+                completion = completion.choices[0].text
+                print(f"Prompt: {prompt}")
+                print(f"Completion:",completion)
             except Exception as e:
                 logging.warning('Could not connect to LLM API, retrying in 5 seconds...')
                 logging.warning(e)
@@ -127,14 +127,8 @@ class LLM():
             break
         return completion
     
-    def acreate(self, messages):
-        # print(f"acMessages: {messages}")
-        # if self.alternative_openai_api_base == 'none': # if using the default API base, use the default aiohttp session - I don't think this is needed anymore, but I'm keeping it here just in case
-        #     openai.aiosession.set(ClientSession()) # https://github.com/openai/openai-python#async-api
-        # if self.config.is_local: # If local, don't do the weird header thing. Doesn't break anything, but it's weird.
-        #     generator = self.client.chat.completions.create(model=self.config.llm, messages=messages,stream=True,stop=self.config.stop,temperature=self.config.temperature,top_p=self.config.top_p,frequency_penalty=self.config.frequency_penalty, max_tokens=self.config.max_tokens)
-        # else: # honestly no idea why the header is needed, but I guess I'll leave it for OpenAI support incase that's something they require?
-        #     generator = self.client.chat.completions.create(model=self.config.llm, messages=messages, headers={"HTTP-Referer": 'https://github.com/art-from-the-machine/Mantella', "X-Title": 'mantella'},stream=True,stop=self.stop,temperature=self.temperature,top_p=self.top_p,frequency_penalty=self.frequency_penalty, max_tokens=self.max_tokens)
+    def acreate(self, messages): # Creates a completion stream for the messages provided to generate a speaker and their response
+        # print(f"Messages: {messages}")
         retries = 5
         completion = None
         while retries > 0 and completion is None:
@@ -142,7 +136,7 @@ class LLM():
                 prompt = self.tokenizer.get_string_from_messages(messages)
                 prompt += self.tokenizer.start_message("[name]") # Start empty message from no one to let the LLM generate the speaker by split \n
                 prompt = prompt.split("[name]")[0] # Start message without the name - Generates name for use in output_manager.py  process_response()
-                print(f"avPrompt: {prompt}")
+                print(f"Prompt: {prompt}")
                 return self.client.completions.create(
                     model=self.config.llm, prompt=prompt, max_tokens=self.config.max_tokens, stream=True # , stop=self.stop, temperature=self.temperature, top_p=self.top_p, frequency_penalty=self.frequency_penalty, stream=True
                 )
@@ -157,6 +151,3 @@ class LLM():
                 time.sleep(5)
                 retries -= 1
                 continue
-            break
-        # if self.alternative_openai_api_base == 'none':
-        #     await openai.aiosession.get().close()
