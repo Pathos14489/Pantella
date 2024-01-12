@@ -172,7 +172,11 @@ class ChatManager:
                     sentence = re.sub(r"\(.*?\)", "", sentence)
                 else:
                     logging.info(f"Removed response containing single bracket: {sentence}")
-                    sentence = ''
+                    sentence = sentence.split('(')[0].strip()
+                
+            # if doesn't end with sentence ender, use a period.
+            if not any(char in sentence for char in self.end_of_sentence_chars):
+                sentence += '.'
 
             return sentence
         
@@ -201,6 +205,8 @@ class ChatManager:
 
         full_reply = '' # used to store the full reply
         next_author = None # used to determine who is speaking next in a conversation
+        verified_author = False # used to determine if the next author has been verified
+        verified_author = False # used to determine if the next author has been verified
         possible_players = [
             "A stranger",
             "A traveler",
@@ -228,16 +234,48 @@ class ChatManager:
                         if next_author is None: # if next_author is None, then extract it from the start of the generation
                             if config.message_signifier in sentence:
                                 next_author = sentence.split(config.message_signifier)[0] # extract the next author from the start of the generation
-                                sentence = sentence[len(next_author)+len(config.message_signifier):] # remove the author from the sentence
-                                logging.info(f"Next author is {next_author}")
-                            
-                        if next_author == player_identity or next_author == config.user_name or next_author in possible_players: # if the next author is the player, then the player is speaking and generation should stop
-                            logging.info(f"Player is speaking. Stopping generation.")
-                            break
 
-                        if next_author == config.system_name or next_author == config.assistant_name: # if the next author is the system, then the LLM is generating a response to the player
-                            retries += 1 # Not a real retry, just a way to skip the sentence
-                            raise Exception('Invalid author')
+                                # Fix capitalization - First letter after spaces and dashes should be capitalized
+                                next_author_parts = next_author.split(" ")
+                                next_author_parts = [part.split("-") for part in next_author_parts]
+                                new_next_author = ""
+                                for part_list in next_author_parts:
+                                    new_next_author += "-".join([part.capitalize() for part in part_list]) + " "
+                                next_author = new_next_author.strip()
+
+                                sentence = sentence[len(next_author)+len(config.message_signifier):] # remove the author from the sentence
+                                
+                                logging.info(f"next_author detected as: {next_author}")
+                        if  next_author is not None and verified_author == False: # if next_author is not None, then verify that the next author is correct
+                            if next_author == player_identity or next_author == config.user_name or next_author in possible_players: # if the next author is the player, then the player is speaking and generation should stop
+                                logging.info(f"Player is speaking. Stopping generation.")
+                                break
+                            if (next_author in characters.active_characters): # if the next author is a real character that's active in this conversation, then switch to that character
+                                #TODO: or (any(key.split(' ')[0] == keyword_extraction for key in characters.active_characters))
+                                logging.info(f"Switched to {next_author}")
+                                self.active_character = characters.active_characters[next_author]
+                                # characters are mapped to say_line based on order of selection
+                                # taking the order of the dictionary to find which say_line to use, but it is bad practice to use dictionaries in this way
+                                self.character_num = list(characters.active_characters.keys()).index(next_author) # Assigns a number to the character based on the order they were selected for use in the _mantella_say_line_# filename
+                                verified_author = True
+                            else: # if the next author is not a real character, then assume the player is speaking and generation should stop
+                                partial_match = False
+                                for character in characters.active_characters.values(): # check if the next author is a partial match to any of the active characters
+                                    if next_author in character.name.split(" "):
+                                        partial_match = character
+                                        break
+                                if partial_match != False: # if the next author is a partial match to an active character, then switch to that character
+                                    logging.info(f"Switched to {partial_match.name} (WARNING: Partial match!)")
+                                    self.active_character = partial_match
+                                    self.character_num = list(characters.active_characters.keys()).index(partial_match.name)
+                                    verified_author = True
+                                else: # if the next author is not a real character, then assume the player is speaking and generation should stop
+                                    logging.info(f"Next author is not a real character: {next_author}")
+                                    logging.info(f"Retrying...")
+                                    retries += 1
+                                    raise Exception('Invalid author')
+                            
+
 
                         content_edit = unicodedata.normalize('NFKC', content) # normalize unicode characters
                         # check if content marks the end of a sentence
@@ -252,33 +290,15 @@ class ChatManager:
                                 logging.info(f"Skipping empty sentence")
                                 break
                                 
-                            if (next_author in characters.active_characters): # if the next author is a real character that's active in this conversation, then switch to that character
-                                #TODO: or (any(key.split(' ')[0] == keyword_extraction for key in characters.active_characters))
-                                logging.info(f"Switched to {next_author}")
-                                self.active_character = characters.active_characters[next_author]
-                                # characters are mapped to say_line based on order of selection
-                                # taking the order of the dictionary to find which say_line to use, but it is bad practice to use dictionaries in this way
-                                self.character_num = list(characters.active_characters.keys()).index(next_author) # Assigns a number to the character based on the order they were selected for use in the _mantella_say_line_# filename
-                            else: # if the next author is not a real character, then assume the player is speaking and generation should stop
-                                for character in characters.active_characters.values(): # check if the next author is a partial match to any of the active characters
-                                    if next_author in character.name.split(" "):
-                                        logging.info(f"Switched to {character.name} (WARNING: Partial match!)")
-                                        self.active_character = character
-                                        self.character_num = list(characters.active_characters.keys()).index(character.name)
-                                        break
-                                else: # if the next author is not a real character, then assume the player is speaking and generation should stop
-                                    logging.info(f"Next author is not a real character: {next_author}")
-                                    logging.info(f"Waiting for player input instead...")
-                                    break
 
                             if not config.assist_check: # if remote, check if the response contains the word assist for some reason. Probably some OpenAI nonsense.
                                 if ('assist' in sentence) and (num_sentences>0): # Causes problems if asking a follower if you should "assist" someone, if they try to say something along the lines of "Yes, we should assist them." it will cut off the sentence and basically ignore the player. TODO: fix this with a more robust solution
                                     logging.info(f"'assist' keyword found. Ignoring sentence which begins with: {sentence}") 
                                     break # stop generating response
 
-                            # if config.strip_smalls and len(sentence.strip()) < config.small_size:
-                            #     logging.info(f'Skipping voiceline that is too short: {sentence}')
-                            #     break
+                            if config.strip_smalls and len(sentence.strip()) < config.small_size:
+                                logging.info(f'Skipping voiceline that is too short: {sentence}')
+                                raise Exception('Voiceline too short')
 
                             logging.info(f"LLM returned sentence took {time.time() - start_time} seconds to execute")
 
@@ -324,17 +344,30 @@ class ChatManager:
                                 break
                 break
             except Exception as e:
+                next_author = None
+                verified_author = False
+                sentence = ''
+                full_reply = ''
                 if retries == 0:
                     logging.error(f"Could not connect to LLM API\nError: {e}")
                     input('Press enter to continue...')
                     exit()
                 logging.error(f"LLM API Error: {e}")
-                error_response = "I can't find the right words at the moment."
-                audio_file = synthesizer.synthesize(self.active_character, error_response)
-                self.save_files_to_voice_folders([audio_file, error_response])
-                logging.info('Retrying connection to API...')
-                retries -= 1
-                time.sleep(5)
+                if 'Invalid author' in str(e):
+                    logging.info(f"Retrying without saying error voice line")
+                    retries += 1
+                    continue
+                elif 'Voiceline too short' in str(e):
+                    logging.info(f"Retrying without saying error voice line")
+                    retries += 1
+                    continue
+                else:
+                    error_response = "I can't find the right words at the moment."
+                    audio_file = synthesizer.synthesize(self.active_character, error_response)
+                    self.save_files_to_voice_folders([audio_file, error_response])
+                    logging.info('Retrying connection to API...')
+                    retries -= 1
+                    time.sleep(5)
 
         # Mark the end of the response
         await sentence_queue.put(None)
