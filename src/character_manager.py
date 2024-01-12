@@ -144,16 +144,20 @@ class Character:
         time_group = utils.get_time_group(time) # get time group from in-game time before 12/24 hour conversion
 
         time = int(time)
+        ampm = None
         if time <= 12:
             time = f"{time}"
+            ampm = "AM"
         elif time > 12:
             time = f"{time-12}" # Convert to 12 hour time because asking the AI to convert to 12 hour time is unreliable. Example: half the time they say 15 in the afternoon instead of 3pm.
+            ampm = "PM"
 
         keys = list(active_characters.keys())
 
         replacement_dict = {
             "time": time,
             "time_group": time_group,
+            "ampm": ampm,
             "location": location,
             "trust": trust,
             "player": perspective_description,
