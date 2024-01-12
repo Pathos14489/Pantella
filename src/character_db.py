@@ -177,8 +177,13 @@ class CharacterDB():
             diff = False
             if not db.has_character(character): # If the character is not in the other DB, add it to the differences list
                 character['difference_reason'] = "Character not found in other DB"
-                if character["refid_int"] in db.baseid_int_index or character["baseid_int"] in db.baseid_int_index:
-                    character['difference_reason'] = "Character might have been found in other DB, name has been changed in other DB, but refid_int or baseid_int was found in other DB"
+                character["diff_type"] = "added_character"
+                if character["refid_int"] is not None and character["refid_int"] in db.baseid_int_index:
+                    character['difference_reason'] += " - same refid_int was found in other DB"
+                    character["diff_type"] = "edited_character"
+                if character["baseid_int"] is not None and character["baseid_int"] in db.baseid_int_index:
+                    character['difference_reason'] += " - same baseid_int was found in other DB"
+                    character["diff_type"] = "edited_character"
                 diff = True
             else:
                 character['differences'] = []
@@ -186,48 +191,52 @@ class CharacterDB():
                     if key in db.named_index[character['name']]:
                         if str(character[key]) != str(db.named_index[character['name']][key]):
                             character['differences'].append({"key":key,"other":db.named_index[character['name']][key]})
+                            character["diff_type"] = "edited_character"
                             diff = True
             if diff:
                 differences.append(character)
         for character in db.characters:
             diff = False
             if not self.has_character(character):
-                character['difference_reason'] = "Character not found in this DB"
-                if character["refid_int"] in self.baseid_int_index or character["baseid_int"] in self.baseid_int_index:
-                    character['difference_reason'] = "Character might have been found in this DB, name has been changed in this DB, but refid_int or baseid_int was found in this DB"
+                character['difference_reason'] = "New character found in other DB"
+                if character["refid_int"] is not None and character["refid_int"] in self.baseid_int_index:
+                    character['difference_reason'] += " - same refid_int was found in this DB"
+                    character["diff_type"] = "edited_character"
+                if character["baseid_int"] is not None and character["baseid_int"] in self.baseid_int_index:
+                    character['difference_reason'] += " - same baseid_int was found in this DB"
+                    character["diff_type"] = "edited_character"
                 diff = True
             if diff:
                 differences.append(character)
         for folder in self.voice_folders:
             if folder not in db.voice_folders:
-                differences.append({"voice_model":folder,"difference_reason":"Voice model not found in other DB"})
+                differences.append({"voice_model":folder,"difference_reason":"Voice model not found in other DB","diff_type":"removed_voice_folder"})
         for folder in db.voice_folders:
             if folder not in self.voice_folders:
-                differences.append({"voice_model":folder,"difference_reason":"Voice model not found in this DB"})
+                differences.append({"voice_model":folder,"difference_reason":"Voice model added found in other DB","diff_type":"added_voice_folder"})
         for voice_model in self.all_voice_models:
             if voice_model not in db.all_voice_models:
-                differences.append({"voice_model":voice_model,"difference_reason":"Voice model not found in other DB"})
+                differences.append({"voice_model":voice_model,"difference_reason":"Voice model not found in other DB","diff_type":"removed_voice_model"})
         for voice_model in db.all_voice_models:
             if voice_model not in self.all_voice_models:
-                differences.append({"voice_model":voice_model,"difference_reason":"Voice model not found in this DB"})
+                differences.append({"voice_model":voice_model,"difference_reason":"Voice model not found in this DB","diff_type":"added_voice_model"})
         for unused_voice in db.unused_voices:
             if unused_voice not in self.unused_voices:
                 related_characters = []
                 for character in db.characters:
                     if character['skyrim_voice_folder'] == unused_voice or character['voice_model'] == unused_voice:
                         related_characters.append(character['name'])
-                differences.append({"voice_model":unused_voice,"difference_reason":"Unused voice found in other DB","related_characters":related_characters})
+                differences.append({"voice_model":unused_voice,"difference_reason":"Unused voice model found in other DB","diff_type":"added_unused_voice"})
         for unused_voice in self.unused_voices:
             if unused_voice not in db.unused_voices:
                 related_characters = []
                 for character in self.characters:
                     if character['skyrim_voice_folder'] == unused_voice or character['voice_model'] == unused_voice:
                         related_characters.append(character['name'])
-                differences.append({"voice_model":unused_voice,"difference_reason":"Unused voice found in this DB","related_characters":related_characters})
         if len(self.characters) > len(db.characters):
-            differences.append({"difference_reason":"This DB has more characters than the other DB (This is not necessarily an error, if there are not missing characters, this might mean that the original DB had duplicates that were automatically removed!)", "characters":len(self.characters), "db_characters":len(db.characters)})
+            differences.append({"difference_reason":"This DB has more characters than the other DB (This is not necessarily an error, if there are not missing characters, this might mean that the original DB had duplicates that were automatically removed!)", "characters":len(self.characters), "db_characters":len(db.characters), "diff_type":"edited_character_count"})
         elif len(self.characters) < len(db.characters):
-            differences.append({"difference_reason":"This DB has less characters than the other DB -- The other DB might have added new characters!", "characters":len(self.characters), "db_characters":len(db.characters)})
+            differences.append({"difference_reason":"This DB has less characters than the other DB -- The other DB might have added new characters!", "characters":len(self.characters), "db_characters":len(db.characters), "diff_type":"edited_character_count"})
         return differences
     
     def save(self, path, type='json'): # Save the character database to a json directory or csv file
