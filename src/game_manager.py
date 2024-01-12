@@ -289,7 +289,7 @@ class GameStateManager:
 
     
     @utils.time_it
-    def update_game_events(self, message):
+    def update_game_events(self, conversation_manager):
         """Add in-game events to player's response"""
 
         # append in-game events to player's response
@@ -301,30 +301,50 @@ class GameStateManager:
         in_game_events = '\n'.join(formatted_in_game_events_lines)
 
         # Is Player in combat with NPC
-        is_in_combat = self.load_data_when_available('_mantella_actor_is_enemy', '')
-        if is_in_combat.lower() == 'true':
-            in_game_events = in_game_events + '\n*You are attacking the player. This is either because you are an enemy or the player has attacked you first.*'
+        in_combat = self.load_data_when_available('_mantella_actor_is_enemy', '').lower() == 'true' 
+        character = conversation_manager.chat_manager.active_character
+        perspective_name, perspective_description, trust = character.get_perspective_player_identity()
+        if in_combat:
+            in_game_events = in_game_events + f'\n*{perspective_description} is fighting {character.name}. This is either because they are enemies or because {perspective_name} attacked {character.name} first.*'
 
         if len(in_game_events) > 0:
             logging.info(f'In-game events since previous exchange:\n{in_game_events}')
-        message = in_game_events + '\n' + message
 
         # once the events are shared with the NPC, clear the file
         self.write_game_info('_mantella_in_game_events', '')
 
         # append the time to player's response
         with open(f'{self.game_path}/_mantella_in_game_time.txt', 'r') as f:
-            in_game_time = f.readline().strip()
+            in_game_time = int(f.readline().strip())
         
         # only pass the in-game time if it has changed
         if (in_game_time != self.prev_game_time) and (in_game_time != ''):
-            time_group = utils.get_time_group(in_game_time)
-
-            formatted_in_game_time = f"*The time is {in_game_time} {time_group}.*\n"
-            message = formatted_in_game_time + message
             self.prev_game_time = in_game_time
+            time_group = utils.get_time_group(in_game_time)
+            ampm = 'AM' if in_game_time < 12 else 'PM'
+            twelve_hour_time = in_game_time if in_game_time <= 12 else in_game_time - 12
 
-        return message
+            time_string = f"The time is now {twelve_hour_time}:00 {ampm} {time_group}."
+            logging.info(time_string)
+            
+            formatted_in_game_time = f"*{time_string}*\n"
+            in_game_events = formatted_in_game_time + in_game_events
+        
+        if len(in_game_events.strip()) > 0:
+            logging.info(f'In-game events since previous exchange:\n{in_game_events}')
+            context = conversation_manager.messages.copy()
+            last_message = context[-1]
+            if last_message['role'] == conversation_manager.config.system_name:
+                context[-1]['content'] += "\n" + in_game_events
+            else:
+                context += [{
+                    "role": conversation_manager.config.system_name,
+                    "content": in_game_events,
+                }] # add in-game events to current ongoing conversation
+        else:
+            context = conversation_manager.messages
+
+        return context
     
     
     @utils.time_it
@@ -332,14 +352,14 @@ class GameStateManager:
         """Say final goodbye lines and save conversation to memory"""
 
         # say goodbyes
-        if conversation_ended.lower() != 'true': # say line if NPC is not already deactivated
+        if not conversation_ended: # say line if NPC is not already deactivated
             latest_character = list(active_characters.items())[-1][1]
             audio_file = synthesizer.synthesize(latest_character, conversation_manager.config.goodbye_npc_response)
             chat_manager.save_files_to_voice_folders([audio_file, conversation_manager.config.goodbye_npc_response])
 
-        player_name = self.load_player_name()
+        perspective_name, _, _ = character.get_perspective_player_identity() # get perspective name - How the NPC refers to the player
 
-        messages.append({"role": player_name, "content": conversation_manager.config.end_conversation_keyword+'.'})
+        messages.append({"role": perspective_name, "content": conversation_manager.config.end_conversation_keyword+'.'})
         messages.append({"role": character.name, "content": conversation_manager.config.end_conversation_keyword+'.'})
 
         summary = None
