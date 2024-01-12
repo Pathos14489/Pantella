@@ -62,55 +62,6 @@ class conversation_manager():
                 mcm_mic_enabled = f.readline().strip()
             self.config.mic_enabled = '1' if mcm_mic_enabled == 'TRUE' else '0'
 
-    def await_and_setup_conversation(self): # wait for player to select an NPC and setup the conversation when outside of conversation
-        self.check_mcm_mic_status()
-        self.game_state_manager.reset_game_info() # clear _mantella_ files in Skyrim folder
-
-        self.character_manager = characters_manager.Characters() # Manage active characters in conversation
-        # self.transcriber.call_count = 0 # reset radiant back and forth count
-
-        logging.info('\nConversations not starting when you select an NPC? Post an issue on the GitHub page: https://github.com/art-from-the-machine/Mantella')
-        logging.info('\nWaiting for player to select an NPC...')
-        try: # load character info, location and other gamestate data when data is available - Starts watching the _mantella_ files in the Skyrim folder and waits for the player to select an NPC
-            character_info, location, in_game_time, is_generic_npc, player_name, player_race, player_gender, radiant_dialogue = self.game_state_manager.load_game_state(self.config, self.character_df)
-            self.player_name = player_name
-            self.player_race = player_race
-            self.player_gender = player_gender
-        except game_manager.CharacterDoesNotExist as e:
-            self.game_state_manager.write_game_info('_mantella_end_conversation', 'True') # End the conversation in game
-            logging.info('Restarting...')
-            logging.error(f"Error: {e}")
-        
-        # setup the character that the player has selected
-        character = character_manager.Character(character_info, self.language_info['language'], is_generic_npc, self.player_name, player_race, player_gender)
-        perspective_player_name, perspective_player_desc, trust = character.get_perspective_player_identity()
-        self.synthesizer.change_voice(character.voice_model)
-        self.chat_manager.active_character = character
-        self.chat_manager.character_num = 0
-        self.character_manager.active_characters[character.name] = character
-        self.chat_manager.setup_voiceline_save_location(character_info['in_game_voice_model'])# if the NPC is from a mod, create the NPC's voice folder and exit Mantella if there isn't already a folder for the NPC
-        
-        self.game_state_manager.write_game_info('_mantella_character_selection', 'True') # write to _mantella_character_selection.txt to indicate that the character has been selected to the game
-
-        self.messages = character.set_context(self, location, in_game_time, self.character_manager.active_characters, self.token_limit, radiant_dialogue) # set context for the conversation
-
-        self.tokens_available = self.token_limit - self.tokenizer.num_tokens_from_messages(self.messages) # calculate number of tokens available for the conversation
-
-        if not radiant_dialogue:
-            # initiate conversation with character TODO: Make this more interesting, always having the character say hi like we aren't always with each other is bizzare imo
-            try:
-                self.messages = asyncio.run(self.get_response(perspective_player_name, f"{self.language_info['hello']} {character.name}.", self.messages, self.synthesizer, self.character_manager, radiant_dialogue))
-            except tts.VoiceModelNotFound as e:
-                self.game_state_manager.write_game_info('_mantella_end_conversation', 'True')
-                logging.error(f"Error: {e}")
-                # if debugging and character name not found, exit here to avoid endless loop
-                if (self.config.debug_mode == '1') & (self.config.debug_character_name != 'None'):
-                    sys.exit(0)
-
-        # debugging variable
-        self.say_goodbye = False
-        self.in_conversation = True
-
     def check_new_joiner(self):
         new_character_joined = self.get_if_new_character_joined() # check if new character has been added to conversation and switch to Single Prompt Multi-NPC conversation if so
         if new_character_joined: # check if new character has been added to conversation and switch to Single Prompt Multi-NPC conversation if so
@@ -164,6 +115,57 @@ class conversation_manager():
 
     def update_game_events(self):
         self.messages = self.game_state_manager.update_game_events(self)
+
+    def get_response_from_input(self, author, input_text):
+        self.messages = asyncio.run(self.get_response(author, input_text, self.messages, self.synthesizer, self.character_manager, radiant_dialogue))
+
+    def await_and_setup_conversation(self): # wait for player to select an NPC and setup the conversation when outside of conversation
+        self.check_mcm_mic_status()
+        self.game_state_manager.reset_game_info() # clear _mantella_ files in Skyrim folder
+
+        self.character_manager = characters_manager.Characters() # Manage active characters in conversation
+        # self.transcriber.call_count = 0 # reset radiant back and forth count
+
+        logging.info('\nConversations not starting when you select an NPC? Post an issue on the GitHub page: https://github.com/art-from-the-machine/Mantella')
+        logging.info('\nWaiting for player to select an NPC...')
+        try: # load character info, location and other gamestate data when data is available - Starts watching the _mantella_ files in the Skyrim folder and waits for the player to select an NPC
+            character_info, location, in_game_time, is_generic_npc, player_name, player_race, player_gender, radiant_dialogue = self.game_state_manager.load_game_state(self.config, self.character_df)
+            self.player_name = player_name
+            self.player_race = player_race
+            self.player_gender = player_gender
+        except game_manager.CharacterDoesNotExist as e:
+            self.game_state_manager.write_game_info('_mantella_end_conversation', 'True') # End the conversation in game
+            logging.info('Restarting...')
+            logging.error(f"Error: {e}")
+        
+        # setup the character that the player has selected
+        character = character_manager.Character(character_info, self.language_info['language'], is_generic_npc, self.player_name, player_race, player_gender)
+        perspective_player_name, perspective_player_desc, trust = character.get_perspective_player_identity()
+        self.synthesizer.change_voice(character.voice_model)
+        self.chat_manager.active_character = character
+        self.chat_manager.character_num = 0
+        self.character_manager.active_characters[character.name] = character
+        self.chat_manager.setup_voiceline_save_location(character_info['in_game_voice_model'])# if the NPC is from a mod, create the NPC's voice folder and exit Mantella if there isn't already a folder for the NPC
+        
+        self.game_state_manager.write_game_info('_mantella_character_selection', 'True') # write to _mantella_character_selection.txt to indicate that the character has been selected to the game
+
+        self.messages = character.set_context(self, location, in_game_time, self.character_manager.active_characters, self.token_limit, radiant_dialogue) # set context for the conversation
+
+        self.tokens_available = self.token_limit - self.tokenizer.num_tokens_from_messages(self.messages) # calculate number of tokens available for the conversation
+
+        if not radiant_dialogue: # initiate conversation with character TODO: Make this more interesting, always having the character say hi like we aren't always with each other is bizzare imo
+            try:
+                self.messages = asyncio.run(self.get_response(perspective_player_name, f"{self.language_info['hello']} {character.name}.", self.messages, self.synthesizer, self.character_manager, radiant_dialogue))
+            except tts.VoiceModelNotFound as e:
+                self.game_state_manager.write_game_info('_mantella_end_conversation', 'True')
+                logging.error(f"Error: {e}")
+                # if debugging and character name not found, exit here to avoid endless loop
+                if (self.config.debug_mode == '1') & (self.config.debug_character_name != 'None'):
+                    sys.exit(0)
+
+        # debugging variable
+        self.say_goodbye = False
+        self.in_conversation = True
 
     def step(self): # process player input and NPC response until conversation ends at each step of the conversation
         if self.in_conversation == False:
