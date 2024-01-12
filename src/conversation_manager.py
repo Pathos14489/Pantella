@@ -159,6 +159,9 @@ class conversation_manager():
         else:
             return False
 
+    def update_game_events(self):
+        self.messages = self.game_state_manager.update_game_events(self)
+
     def step(self): # process player input and NPC response until conversation ends at each step of the conversation
         if self.in_conversation == False:
             logging.info('Cannot step through conversation when not in conversation')
@@ -172,6 +175,7 @@ class conversation_manager():
         conversation_started_radiant = radiant_dialogue # to check later on if conversation started as radiant dialogue
         
         self.check_new_joiner() # check if new character has been added to conversation and switch to Single Prompt Multi-NPC conversation if so
+        self.update_game_events() # update game events before player input
         
         
         if (self.character_manager.active_character_count() <= 0) or radiant_dialogue: # if there are no active characters in the conversation and radiant dialogue is not being used, end the conversation
@@ -188,7 +192,8 @@ class conversation_manager():
         transcript_cleaned = ''
         transcribed_text = None
         if not conversation_ended: # check if conversation has ended, if not, get next player input
-            transcribed_text = self.transcriber.get_player_response() # radiant_dialogue and say_goodbye removed
+            logging.info('Getting player response...')
+            transcribed_text = self.transcriber.get_player_response() # radiant_dialogue and say_goodbye removed 
 
             self.game_state_manager.write_game_info('_mantella_player_input', transcribed_text) # write player input to _mantella_player_input.txt
 
@@ -197,18 +202,17 @@ class conversation_manager():
             # if multi NPC conversation, add "Player:" to beginning of output to clarify to the LLM who is speaking
             # if (self.character_manager.active_character_count() > 1) and not radiant_dialogue:
             #     transcribed_text = 'Player: ' + transcribed_text
-            # add in-game events to player's response
-            transcribed_text = self.game_state_manager.update_game_events(transcribed_text) # TODO: Switch to using system messages to update ingame events that are generic, and link all ingame events that relate to a character to the character's messages
-            logging.info(f"Text passed to NPC: {transcribed_text}")
+        
+        self.update_game_events() # update game events after player input
 
         # check if conversation has ended again after player input
         with open(f'{self.config.game_path}/_mantella_end_conversation.txt', 'r', encoding='utf-8') as f:
-            conversation_ended = f.readline().strip()
+            conversation_ended = f.readline().strip().lower() == 'true'
         
         self.check_new_joiner() # check if new character has been added to conversation and switch to Single Prompt Multi-NPC conversation if so after player input
 
         # check if user is ending conversation
-        if (self.transcriber.activation_name_exists(transcript_cleaned, self.config.end_conversation_keyword.lower())) or (self.transcriber.activation_name_exists(transcript_cleaned, 'good bye')) or (self.transcriber.activation_name_exists(transcript_cleaned, 'goodbye')) or (conversation_ended.lower() == 'true'):
+        if (self.transcriber.activation_name_exists(transcript_cleaned, self.config.end_conversation_keyword.lower())) or (self.transcriber.activation_name_exists(transcript_cleaned, 'good bye')) or (self.transcriber.activation_name_exists(transcript_cleaned, 'goodbye')) or conversation_ended:
             # Detect who the player is talking to
             names = []
             for character in self.character_manager.active_characters.values():
