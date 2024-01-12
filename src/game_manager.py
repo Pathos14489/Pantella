@@ -236,6 +236,10 @@ class GameStateManager:
             location = 'Skyrim'
         return location
     
+    def get_current_game_time(self):
+        in_game_time = self.load_data_when_available('_mantella_in_game_time', '')
+        return int(in_game_time)
+    
     @utils.time_it
     def load_game_state(self, config, character_df):
         """Load game variables from _mantella_ files in Skyrim folder (data passed by the Mantella spell)"""
@@ -244,7 +248,7 @@ class GameStateManager:
             character_name, character_id, location, in_game_time, player_name, player_race, player_gender = self.debugging_setup(config.debug_character_name)
         else:
             location = self.get_current_location()
-            in_game_time = self.load_data_when_available('_mantella_in_game_time', '')
+            in_game_time = self.get_current_game_time()
         
         # tell Skyrim papyrus script to start waiting for voiceline input
         self.write_game_info('_mantella_end_conversation', 'False')
@@ -271,7 +275,7 @@ class GameStateManager:
 
         location = self.get_current_location(location) # Check if location has changed since last check
 
-        in_game_time = self.load_data_when_available('_mantella_in_game_time', in_game_time)
+        in_game_time = self.get_current_game_time() # Check if in-game time has changed since last check
 
         actor_voice_model = self.load_data_when_available('_mantella_actor_voice', '')
         actor_voice_model_name = actor_voice_model.split('<')[1].split(' ')[0]
@@ -314,8 +318,7 @@ class GameStateManager:
         self.write_game_info('_mantella_in_game_events', '')
 
         # append the time to player's response
-        with open(f'{self.game_path}/_mantella_in_game_time.txt', 'r') as f:
-            in_game_time = int(f.readline().strip())
+        in_game_time = self.get_current_game_time()
         
         # only pass the in-game time if it has changed
         if (in_game_time != self.prev_game_time) and (in_game_time != ''):

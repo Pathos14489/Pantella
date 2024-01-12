@@ -38,6 +38,7 @@ class conversation_manager():
         self.check_mcm_mic_status()
         self.in_conversation = False # Whether or not the player is in a conversation
         self.tokens_available = 0 # Initialised at start of every conversation in await_and_setup_conversation()
+        self.current_location = None # Initialised at start of every conversation in await_and_setup_conversation()
         
     async def get_response(self, player_name, input_text, messages, synthesizer, characters, radiant_dialogue):
         sentence_queue = asyncio.Queue()
@@ -120,6 +121,8 @@ class conversation_manager():
                 logging.info('Restarting...')
                 logging.error(f"Error: {e}")
 
+            self.current_location = location
+            self.current_in_game_time = in_game_time
             
             messages_wo_system_prompt = self.messages[1:] # remove single character prompt from messages
             # add character name before each response to be consistent with the multi-NPC format
@@ -177,6 +180,8 @@ class conversation_manager():
         self.check_new_joiner() # check if new character has been added to conversation and switch to Single Prompt Multi-NPC conversation if so
         self.update_game_events() # update game events before player input
         
+        self.current_location = self.game_state_manager.get_current_location() # update current location each step of the conversation
+        self.current_in_game_time = self.game_state_manager.get_current_game_time() # update current in game time each step of the conversation
         
         if (self.character_manager.active_character_count() <= 0) or radiant_dialogue: # if there are no active characters in the conversation and radiant dialogue is not being used, end the conversation
             return
@@ -254,6 +259,6 @@ class conversation_manager():
         # if the conversation is becoming too long, save the conversation to memory and reload
         current_conversation_limit_pct = self.config.conversation_limit_pct # TODO: Come up with a smarter way of deciding when to reload a conversation
         if self.tokenizer.num_tokens_from_messages(self.messages[1:]) > (round(self.tokens_available*current_conversation_limit_pct,0)): 
-            _, context, self.messages = self.game_state_manager.reload_conversation(self, self.tokenizer, self.synthesizer, self.chat_manager, self.messages, self.character_manager.active_characters, self.tokens_available, self.token_limit, location, in_game_time)
+            _, context, self.messages = self.game_state_manager.reload_conversation(self, self.tokenizer, self.synthesizer, self.chat_manager, self.messages, self.character_manager.active_characters, self.tokens_available, self.token_limit, self.current_location, self.current_in_game_time)
             # continue conversation
             self.messages = asyncio.run(self.get_response(self.player_name, f"{character.name}?", context, self.synthesizer, self.character_manager, radiant_dialogue))
