@@ -32,11 +32,13 @@ class GameStateManager:
         return None
     
 
-    def load_data_when_available(self, text_file_name, text = ''):
+    def load_data_when_available(self, text_file_name, text = '', callback = None):
         while text == '':
             with open(f'{self.game_path}/{text_file_name}.txt', 'r', encoding='utf-8') as f:
                 text = f.readline().strip()
             # decrease stress on CPU while waiting for file to populate
+            if callback != None:
+                callback()
             time.sleep(0.01)
         return text
     
@@ -255,9 +257,9 @@ class GameStateManager:
 
         character_id, character_name = self.load_character_name_id()
         
-        player_name = self.load_player_name()
-        player_race = self.load_player_race()
-        player_gender = self.load_player_gender()
+        player_name = self.load_player_name() # get the player's name from _mantella_player_name.txt
+        player_race = self.load_player_race() # get the player's race from _mantella_player_race.txt
+        player_gender = self.load_player_gender() # get player's gender from _mantella_player_gender.txt
         radiant_dialogue = self.load_radiant_dialogue() # get the radiant dialogue setting from _mantella_radiant_dialogue.txt
 
         try: # load character from skyrim_characters json directory
