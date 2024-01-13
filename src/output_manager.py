@@ -143,6 +143,7 @@ class ChatManager:
             await asyncio.sleep(audio_duration)
 
     def clean_sentence(self, sentence):
+        logging.info(f"Cleaning sentence: {sentence}")
         def remove_as_a(sentence):
             """Remove 'As an XYZ,' from beginning of sentence"""
             if sentence.startswith('As a'):
@@ -171,8 +172,9 @@ class ChatManager:
                     # Remove text between brackets
                     sentence = re.sub(r"\(.*?\)", "", sentence)
                 else:
-                    logging.info(f"Removed response containing single bracket: {sentence}")
-                    sentence = sentence.split('(')[0].strip()
+                    logging.info(f"Removed response containing single brackets: {sentence}")
+                    sentence = ''
+                    
                 
             # if doesn't end with sentence ender, use a period.
             if not any(char in sentence for char in self.end_of_sentence_chars):
@@ -194,6 +196,7 @@ class ChatManager:
         sentence = sentence.replace('**','*')
         sentence = parse_asterisks_brackets(sentence)
 
+        logging.info(f"Cleaned sentence: {sentence}")
         return sentence
 
 
@@ -223,12 +226,21 @@ class ChatManager:
         print("Signifier: ", config.message_signifier)
         print("Format: ", config.message_format)
         while retries >= 0: # keep trying to connect to the API until it works
+            if full_reply != '': # if the full reply is not empty, then the LLM has generated a response and the next_author should be extracted from the start of the generation
+                messages.append({"role": next_author, "content": full_reply})
+                logging.info(f"LLM returned full reply: {full_reply}")
+                full_reply = ''
+                next_author = None
+                verified_author = False
+                sentence = ''
+                num_sentences = 0
+                retries = 5
             try:
                 start_time = time.time()
                 for chunk in self.conversation_manager.llm.acreate(messages):
                     content = chunk.choices[0].text
                     if content is not None and content != '':
-                        print(chunk.model_dump_json())
+                        logging.info(chunk.model_dump_json())
                         sentence += content
 
                         if next_author is None: # if next_author is None, then extract it from the start of the generation

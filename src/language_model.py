@@ -18,6 +18,10 @@ class Tokenizer(): # Tokenizes(only availble for counting the tokens in a string
         self.message_format = config.message_format
 
     def named_parse(self, msg, name): # Parses a string into a message format with the name of the speaker
+        if not name:
+            name = "[name]"
+        if not msg:
+            return self.start_message(name) + self.end_message(name)
         parsed_msg = self.message_format
         parsed_msg = parsed_msg.replace("[BOS_token]",self.BOS_token)
         parsed_msg = parsed_msg.replace("[name]",name)
@@ -136,7 +140,7 @@ class LLM():
                 prompt = self.tokenizer.get_string_from_messages(messages)
                 prompt += self.tokenizer.start_message("[name]") # Start empty message from no one to let the LLM generate the speaker by split \n
                 prompt = prompt.split("[name]")[0] # Start message without the name - Generates name for use in output_manager.py  process_response()
-                print(f"Prompt: {prompt}")
+                logging.info(f"Raw Prompt: {prompt}")
                 return self.client.completions.create(
                     model=self.config.llm, prompt=prompt, max_tokens=self.config.max_tokens, stream=True # , stop=self.stop, temperature=self.temperature, top_p=self.top_p, frequency_penalty=self.frequency_penalty, stream=True
                 )
