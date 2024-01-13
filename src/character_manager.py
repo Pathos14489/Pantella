@@ -49,7 +49,7 @@ class Character:
     def get_latest_conversation_summary_file_path(self):
         """Get latest conversation summary by file name suffix"""
 
-        conversation_root_dir = f"data/conversations/{self.player_name}_{self.player_gender}_{self.player_race}/{self.name}"
+        conversation_root_dir = f"data/conversations/{self.player_name}_{self.player_gender}_{self.player_race}/{self.name}/"
         # TODO: Somehow make this work with multiple characters of the same name, gender and race or even ideally with the same exact character
         # at different points (e.g. different saves = different conversations with the same character and the same player character)
         # Maybe commmunicate the save index to the user and use that to load the correct save somehow?
@@ -62,7 +62,6 @@ class Character:
             if len(txt_files) > 0:
                 file_numbers = [int(os.path.splitext(f)[0].split('_')[-1]) for f in txt_files]
                 latest_file_number = max(file_numbers)
-                logging.info(f"Loaded latest summary file: {conversation_root_dir}/{self.name}_summary_{latest_file_number}.txt")
             else:
                 logging.info(f"{conversation_root_dir} does not exist. A new summary file will be created.")
                 latest_file_number = 1
@@ -71,7 +70,8 @@ class Character:
             latest_file_number = 1
 
         
-        conversation_summary_file = f"{self.name}/{self.name}_summary_{latest_file_number}.txt"
+        conversation_summary_file = f"{conversation_root_dir}/{self.name}_summary_{latest_file_number}.txt"
+        logging.info(f"Loaded latest summary file: {conversation_summary_file}")
         return conversation_summary_file
     
 
@@ -161,6 +161,9 @@ class Character:
             "location": location,
             "trust": trust,
             "player": perspective_description,
+            "player_name": self.player_name,
+            "player_race": self.player_race,
+            "player_gender": self.player_gender,
             "language": self.language,
             "age": self.age,
             "gendered_age": self.gendered_age,
