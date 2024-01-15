@@ -11,7 +11,15 @@ class LLM(base_LLM.base_LLM):
     def __init__(self, config, token_limit, language_info):
         global llama_model
         super().__init__(config, token_limit, language_info)
-        self.llm = Llama(model_path=config.model_path)
+        self.llm = Llama(
+            model_path=self.config.model_path,
+            n_ctx=self.config.maximum_local_tokens,
+            n_gpu_layers=self.config.n_gpu_layers,
+            n_batch=self.config.n_batch,
+            n_threads=self.config.n_threads,
+            tensor_split=self.config.tensor_split,
+            main_gpu=self.config.main_gpu
+        )
         llama_model = self.llm
         self.inference_engine_name = "llama-cpp-python"
         config.is_local = True

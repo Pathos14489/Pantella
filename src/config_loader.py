@@ -84,6 +84,7 @@ https://github.com/art-from-the-machine/Mantella#issues-qa
             # [LanguageModel]
             self.inference_engine = config['LanguageModel']['inference_engine']
             self.tokenizer_type = config['LanguageModel']['tokenizer_type']
+            self.maximum_local_tokens = int(config['LanguageModel']['maximum_local_tokens'])
             self.max_response_sentences = int(config['LanguageModel']['max_response_sentences'])
             self.wait_time_buffer = float(config['LanguageModel']['wait_time_buffer'])
             stop_value = config['LanguageModel']['stop']
@@ -124,14 +125,13 @@ https://github.com/art-from-the-machine/Mantella#issues-qa
             self.llm = config['openai_api']['model']
             self.alternative_openai_api_base = config['openai_api']['alternative_openai_api_base']
             self.secret_key_file_path = config['openai_api']['secret_key_file_path']
-            self.maximum_local_tokens = int(config['openai_api']['maximum_local_tokens'])
 
             # [llama_cpp_python]
-            self.n_gpu_layers = int(config['llama_cpp_python']['n_gpu_layers'])
             self.model_path = config['llama_cpp_python']['model_path']
+            self.n_gpu_layers = int(config['llama_cpp_python']['n_gpu_layers'])
             self.n_threads = int(config['llama_cpp_python']['n_threads'])
             self.n_batch = int(config['llama_cpp_python']['n_batch'])
-            self.tensor_split = [float(i) for i in config['llama_cpp_python']['tensor_split'].split(',')]
+            self.tensor_split = [float(i.strip()) for i in config['llama_cpp_python']['tensor_split'].split(',')]
             self.main_gpu = int(config['llama_cpp_python']['main_gpu'])
 
             # [Speech]

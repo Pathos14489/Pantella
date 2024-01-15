@@ -72,6 +72,7 @@ def initialise(config_file):
                 token_limit = 128_000
             else:
                 logging.info(f"Could not find number of available tokens for {llm}. Defaulting to token count of {str(config.maximum_local_tokens)} (this number can be changed via the `maximum_local_tokens` setting in config.ini)")
+                token_limit = config.maximum_local_tokens
 
         if token_limit <= 4096:
             logging.info(f"{llm} has a low token count of {token_limit}. For better NPC memories, try changing to a model with a higher token count")

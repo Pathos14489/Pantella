@@ -19,12 +19,9 @@ def create_LLM(config, token_limit, language_info):
     model = LLM_Types[config.inference_engine]
     llm = model.LLM(config, token_limit, language_info)
     if config.tokenizer_type == "default":
-        if "Tokenizer" in llm.__dict__:
+        if "Tokenizer" in model.__dict__:
             logging.info(f"Using {config.inference_engine}'s included tokenizer")
-            if "client" in llm.__dict__:
-                tokenizer = llm.Tokenizer(config, llm.client)
-            else:
-                tokenizer = llm.Tokenizer(config)
+            tokenizer = model.Tokenizer(config)
         elif "tokenizer_slug" in llm.__dict__:
             logging.info(f"Using {config.inference_engine}'s recommended tokenizer")
             if "client" in llm.__dict__:
