@@ -9,6 +9,7 @@ llama_model = None
 
 class LLM(base_LLM.base_LLM):
     def __init__(self, config, token_limit, language_info):
+        global llama_model
         super().__init__(config, token_limit, language_info)
         self.llm = Llama(model_path=config.model_path)
         llama_model = self.llm
