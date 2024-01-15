@@ -1,19 +1,12 @@
-from openai import OpenAI
 import pandas as pd
 import logging
-
 import src.config_loader as config_loader
 import src.tts as tts
 import src.utils as utils
-import src.language_model as language_model
+import src.language_model as language_models
 import src.character_db as character_db
 
-def initialise(config_file, logging_file, secret_key_file, language_file):
-    def setup_openai_secret_key(file_name):
-        with open(file_name, 'r') as f:
-            api_key = f.readline().strip()
-        return api_key
-
+def initialise(config_file):
     def setup_logging(file_name):
         logging.basicConfig(filename=file_name, format='%(asctime)s %(levelname)s: %(message)s', level=logging.INFO)
         console = logging.StreamHandler()
@@ -28,13 +21,13 @@ def initialise(config_file, logging_file, secret_key_file, language_file):
         except:
             logging.error(f"Could not load language '{config.language}'. Please set a valid language in config.ini\n")
 
-    def get_token_limit(config):
+    def get_token_limit(config): # TODO: Move this to the openai_api.py file later or something, this doesn't belong here anymore
         if config.is_local:
-            logging.info(f"Using local language model. Token limit set to {config.maximum_local_tokens} (this number can be changed via the `maximum_local_tokens` setting in config.ini)")
+            logging.info(f"Using local language model. Token limit set to {str(config.maximum_local_tokens)} (this number can be changed via the `maximum_local_tokens` setting in config.ini)")
             try:
-                token_limit = int(config.maximum_local_tokens)
+                token_limit = config.maximum_local_tokens
             except ValueError:
-                logging.error(f"Invalid maximum_local_tokens value: {config.maximum_local_tokens}. It should be a valid integer. Please update your configuration.")
+                logging.error(f"Invalid maximum_local_tokens value: {str(config.maximum_local_tokens)}. It should be a valid integer. Please update your configuration.")
                 token_limit = 4096  # Default to 4096 in case of an error.
         else:
             llm = config.llm
@@ -78,47 +71,31 @@ def initialise(config_file, logging_file, secret_key_file, language_file):
             elif llm == 'gpt-4-1106-preview':
                 token_limit = 128_000
             else:
-                logging.info(f"Could not find number of available tokens for {llm}. Defaulting to token count of {config.maximum_local_tokens} (this number can be changed via the `maximum_local_tokens` setting in config.ini)")
+                logging.info(f"Could not find number of available tokens for {llm}. Defaulting to token count of {str(config.maximum_local_tokens)} (this number can be changed via the `maximum_local_tokens` setting in config.ini)")
 
         if token_limit <= 4096:
             logging.info(f"{llm} has a low token count of {token_limit}. For better NPC memories, try changing to a model with a higher token count")
         return token_limit
 
-    setup_logging(logging_file)
-    config = config_loader.ConfigLoader(config_file)
-    
-    
-    is_local = True
-    if (config.alternative_openai_api_base == 'none'): # or (config.alternative_openai_api_base.startswith('https://openrouter.ai/api/v1')) -- this is a temporary fix for the openrouter api, as while it isn't local, it shouldnn't use the local tokenizer, so we're going to lie here TODO: Fix this. Should do more granularity than local or not, should just have a flag for when using openai or other models.
-        is_local = False
-    
-    api_key = setup_openai_secret_key(secret_key_file)
-    client = OpenAI(api_key=api_key)
-
-    if config.alternative_openai_api_base != 'none':
-        client.base_url  = config.alternative_openai_api_base
-        logging.info(f"Using OpenAI API base: {client.base_url}")
-
-    if is_local:
-        logging.info(f"Running Mantella with local language model")
-    else:
-       logging.info(f"Running Mantella with '{config.llm}'. The language model chosen can be changed via config.ini")
-
-    xvasynth = tts.Synthesizer(config)
-
     # clean up old instances of exe runtime files
+
+    config = config_loader.ConfigLoader(config_file)
     utils.cleanup_mei(config.remove_mei_folders)
-    character_df = character_db.CharacterDB(config,xvasynth)
-    
-    language_info = get_language_info(language_file)
-    
+    logging_file, language_file = config.logging_file_path, config.language_support_file_path
+    setup_logging(logging_file) # Setup logging with the file specified in config.ini
+
+    is_local = True
+    if (config.alternative_openai_api_base == 'none' or config.inference_engine != 'openai' and config.inference_engine != 'default'): # TODO: Improve this. Should do more granularity than local or not.
+        is_local = False
     config.is_local = is_local
-
-    tokenizer = language_model.Tokenizer(config,client)
-    token_limit = get_token_limit(config)
     
-    llm = language_model.LLM(config, client, tokenizer, token_limit, language_info)
+    xvasynth = tts.Synthesizer(config) # Create Synthesizer object using the config provided
+    character_df = character_db.CharacterDB(config, xvasynth) # Create CharacterDB object using the config and client provided
+    
+    language_info = get_language_info(language_file) # Get language info from the language support file specified in config.ini
+    
+    token_limit = get_token_limit(config)
 
-
+    llm, tokenizer = language_models.create_LLM(config, token_limit, language_info) # Create LLM and Tokenizer based on config
 
     return config, character_df, language_info, llm, tokenizer, token_limit, xvasynth

@@ -1,7 +1,7 @@
 import logging
 import src.conversation_manager as cm
 
-conversation_manager = cm.conversation_manager(config_file='config.ini', logging_file='logging.log', secret_key_file='GPT_SECRET_KEY.txt', language_file='data/language_support.csv')
+conversation_manager = cm.conversation_manager(config_file='config.ini')
 # try:
 # except Exception as e:
 #     logging.error(f"Error Creating Conversation Manager:")

@@ -51,6 +51,8 @@ https://github.com/art-from-the-machine/Mantella#issues-qa
             self.mod_path = config['Paths']['mod_folder']
             self.character_df_file = config['Paths']['character_df_file']
             self.voice_model_ref_ids_file = config['Paths']['voice_model_ref_ids_file']
+            self.logging_file_path = config['Paths']['logging_file_path']
+            self.language_support_file_path = config['Paths']['language_support_file_path']
 
             # [Language]
             self.language = config['Language']['language']
@@ -80,15 +82,24 @@ https://github.com/art-from-the-machine/Mantella#issues-qa
             # self.textbox_timer = config['Hotkey']['textbox_timer']
 
             # [LanguageModel]
-            self.llm = config['LanguageModel']['model']
+            self.inference_engine = config['LanguageModel']['inference_engine']
+            self.tokenizer_type = config['LanguageModel']['tokenizer_type']
             self.max_response_sentences = int(config['LanguageModel']['max_response_sentences'])
             self.wait_time_buffer = float(config['LanguageModel']['wait_time_buffer'])
-            self.alternative_openai_api_base = config['LanguageModel']['alternative_openai_api_base']
-            self.maximum_local_tokens = config['LanguageModel']['maximum_local_tokens']
+            stop_value = config['LanguageModel']['stop']
+            if ',' in stop_value:
+                # If there are commas in the stop value, split the string by commas and store the values in a list
+                self.stop = stop_value.split(',')
+            else:
+                # If there are no commas, put the single value into a list
+                self.stop = [stop_value]
+            
             self.temperature = float(config['LanguageModel']['temperature'])
             self.top_p = float(config['LanguageModel']['top_p'])
-            self.frequency_penalty = float(config['LanguageModel']['frequency_penalty'])
+            self.top_k = int(config['LanguageModel']['top_k'])
+            self.repeat_penalty = float(config['LanguageModel']['repeat_penalty'])
             self.max_tokens = int(config['LanguageModel']['max_tokens'])
+
             self.BOS_token = str(config['LanguageModel']['BOS_token'])
             self.EOS_token = str(config['LanguageModel']['EOS_token'])
             self.message_signifier = str(config['LanguageModel']['message_signifier'])
@@ -106,15 +117,22 @@ https://github.com/art-from-the-machine/Mantella#issues-qa
             self.assist_check = bool(int(config['LanguageModel']['assist_check']))
             self.strip_smalls = bool(int(config['LanguageModel']['strip_smalls']))
             self.small_size = int(config['LanguageModel']['small_size'])
-            stop_value = config['LanguageModel']['stop']
-            if ',' in stop_value:
-                # If there are commas in the stop value, split the string by commas and store the values in a list
-                self.stop = stop_value.split(',')
-            else:
-                # If there are no commas, put the single value into a list
-                self.stop = [stop_value]
             self.conversation_limit_pct = float(config['LanguageModel']['conversation_limit_pct'])
             self.experimental_features = bool(int(config['LanguageModel']['experimental_features']))
+
+            # [openai_api]
+            self.llm = config['openai_api']['model']
+            self.alternative_openai_api_base = config['openai_api']['alternative_openai_api_base']
+            self.secret_key_file_path = config['openai_api']['secret_key_file_path']
+            self.maximum_local_tokens = int(config['openai_api']['maximum_local_tokens'])
+
+            # [llama_cpp_python]
+            self.n_gpu_layers = int(config['llama_cpp_python']['n_gpu_layers'])
+            self.model_path = config['llama_cpp_python']['model_path']
+            self.n_threads = int(config['llama_cpp_python']['n_threads'])
+            self.n_batch = int(config['llama_cpp_python']['n_batch'])
+            self.tensor_split = [float(i) for i in config['llama_cpp_python']['tensor_split'].split(',')]
+            self.main_gpu = int(config['llama_cpp_python']['main_gpu'])
 
             # [Speech]
             self.xvasynth_process_device = config['Speech']['tts_process_device']
@@ -138,7 +156,7 @@ https://github.com/art-from-the-machine/Mantella#issues-qa
             self.add_voicelines_to_all_voice_folders = config['Debugging']['add_voicelines_to_all_voice_folders']
 
             # [Prompt]
-            self.prompt = str(config['Prompt']['prompt']).replace("//n", "\n").replace("/r", "")
+            self.single_npc_prompt = str(config['Prompt']['single_npc_prompt']).replace("//n", "\n").replace("/r", "")
             self.multi_npc_prompt = str(config['Prompt']['multi_npc_prompt']).replace("//n", "\n").replace("/r", "")
 
             # Other
