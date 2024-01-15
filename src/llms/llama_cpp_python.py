@@ -71,6 +71,7 @@ class LLM(base_LLM.base_LLM):
 
 class Tokenizer(tokenizer.base_Tokenizer):
     def __init__(self, config):
+        global llama_model
         super().__init__(config)
         if llama_model is None:
             self.llm = Llama(model_path=config.model_path)
