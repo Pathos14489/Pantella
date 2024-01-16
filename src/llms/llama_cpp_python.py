@@ -5,24 +5,29 @@ import time
 from llama_cpp import Llama
 import logging
 
-llama_model = None
+inference_engine_name = "llama-cpp-python"
 
-class LLM(base_LLM.base_LLM):
+llama_model = None # Used to store the llama-cpp-python model so it can be reused for the tokenizer
+
+class LLM(base_LLM.base_LLM): # Uses llama-cpp-python as the LLM inference engine
     def __init__(self, config, token_limit, language_info):
         global llama_model
-        super().__init__(config, token_limit, language_info)
-        self.llm = Llama(
-            model_path=self.config.model_path,
-            n_ctx=self.config.maximum_local_tokens,
-            n_gpu_layers=self.config.n_gpu_layers,
-            n_batch=self.config.n_batch,
-            n_threads=self.config.n_threads,
-            tensor_split=self.config.tensor_split,
-            main_gpu=self.config.main_gpu
-        )
-        llama_model = self.llm
-        self.inference_engine_name = "llama-cpp-python"
+        self.inference_engine_name = inference_engine_name
         config.is_local = True
+        super().__init__(config, token_limit, language_info)
+        if llama_model is None:
+            self.llm = Llama(
+                model_path=self.config.model_path,
+                n_ctx=self.config.maximum_local_tokens,
+                n_gpu_layers=self.config.n_gpu_layers,
+                n_batch=self.config.n_batch,
+                n_threads=self.config.n_threads,
+                tensor_split=self.config.tensor_split,
+                main_gpu=self.config.main_gpu
+            )
+        else:
+            self.llm = llama_model
+        llama_model = self.llm
         logging.info(f"Running Mantella with llama-cpp-python. The language model chosen can be changed via config.ini")
 
     @utils.time_it
@@ -77,7 +82,7 @@ class LLM(base_LLM.base_LLM):
                 retries -= 1
                 continue
 
-class Tokenizer(tokenizer.base_Tokenizer):
+class Tokenizer(tokenizer.base_Tokenizer): # Uses llama-cpp-python's tokenizer
     def __init__(self, config):
         global llama_model
         super().__init__(config)
