@@ -5,7 +5,7 @@ import logging
 import os
 import importlib
 
-defalut = "openai" # The default LLM to use if the one specified in config.ini is not found or if default is specified in config.ini
+default = "openai" # The default LLM to use if the one specified in config.ini is not found or if default is specified in config.ini
 LLM_Types = {}
 # Get all LLMs from src/llms/ and add them to LLM_Types
 for file in os.listdir("src/llms/"):
@@ -14,7 +14,7 @@ for file in os.listdir("src/llms/"):
         if module_name != "base_llm":
             module = importlib.import_module(f"src.llms.{module_name}")
             LLM_Types[module.inference_engine_name] = module    
-LLM_Types["default"] = LLM_Types[defalut]
+LLM_Types["default"] = LLM_Types[default]
 
 # Create LLM object using the config and client provided
     
