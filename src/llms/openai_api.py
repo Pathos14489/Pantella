@@ -14,9 +14,9 @@ def setup_openai_secret_key(file_name):
 
 class LLM(base_LLM.base_LLM):
     def __init__(self, config, token_limit, language_info):
+        super().__init__(config, token_limit, language_info)
         self.inference_engine_name = inference_engine_name
         self.tokenizer_slug = tokenizer_slug # Fastest tokenizer for OpenAI models, change if you want to use a different tokenizer (use 'embedding' for compatibility with any model using the openai API)
-        super().__init__(config, token_limit, language_info)
         api_key = setup_openai_secret_key(self.config.secret_key_file_path)
         self.client = OpenAI(api_key=api_key)
 

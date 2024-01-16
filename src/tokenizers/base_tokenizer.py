@@ -1,8 +1,9 @@
 import logging
+tokenizer_slug = "base_tokenizer"
 class base_Tokenizer(): # Tokenizes(only availble for counting the tokens in a string presently for local_models), and parses and formats messages for use with the language model
     def __init__(self,config):
         self.config = config
-
+        self.tokenizer_slug = tokenizer_slug # Fastest tokenizer for OpenAI models, change if you want to use a different tokenizer (use 'embedding' for compatibility with any model using the openai API)
         # Prommpt Parsing Stuff
         self.BOS_token = self.config.BOS_token # Beginning of string token
         self.EOS_token = self.config.EOS_token # End of string token
@@ -10,7 +11,7 @@ class base_Tokenizer(): # Tokenizes(only availble for counting the tokens in a s
         self.message_seperator = config.message_seperator # Seperates messages
         self.message_format = config.message_format # Format of a message. A string of messages formatted like this is what is sent to the language model, typically following by the start of a message from the assistant to generate a response
 
-    def named_parse(self, msg, name): # Parses a string into a message format with the name of the speaker
+    def new_message(self, msg, name): # Parses a string into a message format with the name of the speaker
         if not name:
             name = "[name]"
         if not msg:
@@ -47,7 +48,7 @@ class base_Tokenizer(): # Tokenizes(only availble for counting the tokens in a s
     def get_string_from_messages(self, messages): # Returns a formatted string from a list of messages
         context = ""
         for message in messages:
-            context += self.named_parse(message["content"],message["role"])
+            context += self.new_message(message["content"],message["role"])
         return context
 
     def num_tokens_from_messages(self, messages): # Returns the number of tokens used by a list of messages

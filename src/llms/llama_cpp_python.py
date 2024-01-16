@@ -12,9 +12,9 @@ llama_model = None # Used to store the llama-cpp-python model so it can be reuse
 class LLM(base_LLM.base_LLM): # Uses llama-cpp-python as the LLM inference engine
     def __init__(self, config, token_limit, language_info):
         global llama_model
+        super().__init__(config, token_limit, language_info)
         self.inference_engine_name = inference_engine_name
         config.is_local = True
-        super().__init__(config, token_limit, language_info)
         if llama_model is None:
             self.llm = Llama(
                 model_path=self.config.model_path,
