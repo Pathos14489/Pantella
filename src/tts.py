@@ -77,9 +77,8 @@ class Synthesizer:
         return voices
 
     def synthesize(self, character, voiceline):
-        voice = character.voice_model
-        if voice != self.last_voice:
-            self.change_voice(voice)
+        if character.voice_model != self.last_voice:
+            self.change_voice(character)
 
         if voiceline.strip() == '': # If the voiceline is empty, don't synthesize anything
             logging.info('No voiceline to synthesize.')
@@ -299,7 +298,8 @@ class Synthesizer:
             sys.exit(0)
     
     @utils.time_it
-    def change_voice(self, voice):
+    def change_voice(self, character):
+        voice = character.voice_model
         logging.info('Loading voice model...')
         voice_path = f"{self.model_path}sk_{voice.lower().replace(' ', '')}"
         if not os.path.exists(voice_path+'.json'):
