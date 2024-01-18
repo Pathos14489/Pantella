@@ -181,6 +181,7 @@ class conversation_manager():
     def step(self): # process player input and NPC response until conversation ends at each step of the conversation
         if self.in_conversation == False:
             logging.info('Cannot step through conversation when not in conversation')
+            self.conversation_ended = True
             return
         logging.info('Stepping through conversation...')
         logging.info(f"Messages: {self.messages}")
@@ -241,11 +242,12 @@ class conversation_manager():
                 self.chat_manager.active_character.is_in_combat = 0
 
         
-        if transcribed_text: # If the player said something, get llm response to it
+        if transcribed_text is not None and not self.conversation_ended and transcribed_text != '' and self.in_conversation:
             self.get_response()
 
         # if the conversation is becoming too long, save the conversation to memory and reload
         current_conversation_limit_pct = self.config.conversation_limit_pct # TODO: Make this a setting in the MCM
-        if self.tokenizer.num_tokens_from_messages(self.messages[1:]) > (round(self.tokens_available*current_conversation_limit_pct,0)): 
+        if self.tokenizer.num_tokens_from_messages(self.messages[1:]) > (round(self.tokens_available*current_conversation_limit_pct,0)): # if the conversation is becoming too long, save the conversation to memory and reload
             self.game_state_manager.reload_conversation() # reload conversation - summarizing the conversation so far and starting a new abbreviated context using the summary to fill in the missing context
-            self.get_response() # get next response(s) from LLM after conversation is reloaded
+            if not self.conversation_ended and self.in_conversation: # if conversation has not ended, get response from NPC
+                self.get_response() # get next response(s) from LLM after conversation is reloaded

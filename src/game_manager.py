@@ -383,6 +383,8 @@ class GameStateManager:
 
         self.summarize_all_summaries() # save conversation to memory
         logging.info('Conversation ended.')
+        self.conversation_manager.conversation_ended = True # set conversation_ended to True to prevent the conversation from continuing
+        self.conversation_manager.in_conversation = False # set in_conversation to False to allow the conversation to be restarted
 
         self.write_game_info('_mantella_in_game_events', '') # clear in-game events
         self.write_game_info('_mantella_end_conversation', 'True') # tell Skyrim papyrus script conversation has ended
