@@ -303,6 +303,5 @@ class base_LLM():
 
         if next_author is not None and full_reply.strip() != '':
             self.conversation_manager.messages.append({"role": next_author, "content": full_reply})
-        # -- for each sentence for each character until the conversation ends or the max_response_sentences is reached or the player is speaking
-        
-        logging.info(f"Full response saved ({self.tokenizer.get_token_count(full_reply)} tokens): {full_reply}")
+            # -- for each sentence for each character until the conversation ends or the max_response_sentences is reached or the player is speaking
+            logging.info(f"Full response saved ({self.tokenizer.get_token_count(full_reply)} tokens): {full_reply}")
