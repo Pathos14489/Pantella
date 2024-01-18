@@ -12,7 +12,7 @@ if __name__ == '__main__':
     args = parser.parse_args()
 
     config = config_loader.ConfigLoader("./config.ini")
-    config.character_df_file = args.path1
+    config.character_database_file = args.path1
     db = character_db.CharacterDB(config)
 
     if args.path2.endswith('.csv'):
@@ -23,7 +23,7 @@ if __name__ == '__main__':
         db.save(args.path2, "json")
         
     new_config = config_loader.ConfigLoader("./config.ini")
-    new_config.character_df_file = args.path2
+    new_config.character_database_file = args.path2
     new_db = character_db.CharacterDB(new_config)
 
     diff = db.compare(new_db)

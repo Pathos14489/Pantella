@@ -6,12 +6,12 @@ import os
 import pandas as pd
 import csv
 class CharacterDB():
-    def __init__(self, config, xvasynth=None): # character_df_directory is the path to a character directory where each character is a seperate json file
+    def __init__(self, config, xvasynth=None): # character_database_directory is the path to a character directory where each character is a seperate json file
         self.config = config
         if xvasynth == None:
             xvasynth = tts.Synthesizer(config)
         self.xvasynth = xvasynth # xvasynth is the xvasynth synthesizer object
-        self.character_df_path = config.character_df_file
+        self.character_database_path = config.character_database_file
         self.characters = []
         self.named_index = {}
         self.baseid_int_index = {}
@@ -28,9 +28,9 @@ class CharacterDB():
         else:
             self.voice_model_ids = {}
             
-        print(f"Loading character database from {self.character_df_path}...")
+        print(f"Loading character database from {self.character_database_path}...")
         try:
-            if self.character_df_path.endswith('.csv'):
+            if self.character_database_path.endswith('.csv'):
                 print("Loading character database from csv...")
                 self.load_characters_csv()
             else:
@@ -38,7 +38,7 @@ class CharacterDB():
                 self.load_characters_json()
             self.verify_characters()
         except:
-            logging.error(f"Could not load character database from {self.character_df_path}. Please check the path and try again. Path should be a directory containing json files or a csv file containing character information.")
+            logging.error(f"Could not load character database from {self.character_database_path}. Please check the path and try again. Path should be a directory containing json files or a csv file containing character information.")
             raise
 
     def loaded(self):
@@ -48,35 +48,35 @@ class CharacterDB():
         print("voice_model_ids:",self.voice_model_ids)
 
     def load_characters_json(self):
-        print(f"Loading character database from {self.character_df_path}...")
+        print(f"Loading character database from {self.character_database_path}...")
         self.characters = []
         self.named_index = {}
         self.baseid_int_index = {}
-        for file in os.listdir(self.character_df_path):
+        for file in os.listdir(self.character_database_path):
             if file.endswith(".json"):
-                character = json.load(open(os.path.join(self.character_df_path, file)))
+                character = json.load(open(os.path.join(self.character_database_path, file)))
                 self.characters.append(character)
                 self.named_index[character['name']] = self.characters[-1]
                 self.baseid_int_index[character['baseid_int']] = self.characters[-1]
         self.db_type = 'json'
-        print(f"Loaded {len(self.characters)} characters from JSON {self.character_df_path}")
+        print(f"Loaded {len(self.characters)} characters from JSON {self.character_database_path}")
         self.loaded()
     
     def load_characters_csv(self):
-        print(f"Loading character database from JSON files in {self.character_df_path}...")
+        print(f"Loading character database from JSON files in {self.character_database_path}...")
         self.characters = []
         self.named_index = {}
         self.baseid_int_index = {}
-        encoding = utils.get_file_encoding(self.character_df_path)
-        character_df = pd.read_csv(self.character_df_path, engine='python', encoding=encoding)
-        character_df = character_df.loc[character_df['voice_model'].notna()]
-        for _, row in character_df.iterrows():
+        encoding = utils.get_file_encoding(self.character_database_path)
+        character_database = pd.read_csv(self.character_database_path, engine='python', encoding=encoding)
+        character_database = character_database.loc[character_database['voice_model'].notna()]
+        for _, row in character_database.iterrows():
             character = row.to_dict()
             self.characters.append(character)
             self.named_index[character['name']] = self.characters[-1]
             self.baseid_int_index[character['baseid_int']] = self.characters[-1]
         self.db_type = 'csv'
-        print(f"Loaded {len(self.characters)} characters from csv {self.character_df_path}")
+        print(f"Loaded {len(self.characters)} characters from csv {self.character_database_path}")
         self.loaded()
 
     def patch_character_info(self,info): # Patches information about a character into the character database and if db_type is json, saves the changes to the json file
@@ -84,9 +84,9 @@ class CharacterDB():
         self.named_index[info['name']] = self.characters[-1]
         self.baseid_int_index[info['baseid_int']] = self.characters[-1] 
         if self.db_type == 'json':
-            if not os.path.exists(self.character_df_path): # If the directory doesn't exist, create it
-                os.makedirs(self.character_df_path) 
-            json_file_path = os.path.join(self.character_df_path, info['name']+'.json')
+            if not os.path.exists(self.character_database_path): # If the directory doesn't exist, create it
+                os.makedirs(self.character_database_path) 
+            json_file_path = os.path.join(self.character_database_path, info['name']+'.json')
             # If the character already exists, confirm that the user wants to overwrite it
             if os.path.exists(json_file_path):
                 overwrite = input(f"Character '{info['name']}' already exists in the database. Overwrite? (y/n): ")

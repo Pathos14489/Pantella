@@ -14,10 +14,10 @@ if __name__ == '__main__':
     parser.add_argument('path2', type=str, help='path to second character db')
     parser.add_argument('--output', type=str, help='path to output file')
     config1 = config_loader.ConfigLoader("./config.ini")
-    config1.character_df_file = parser.parse_args().path1
+    config1.character_database_file = parser.parse_args().path1
     config2 = config_loader.ConfigLoader("./config.ini")
-    config2.character_df_file = parser.parse_args().path2
-    print("Comparing " + config1.character_df_file + " to " + config2.character_df_file)
+    config2.character_database_file = parser.parse_args().path2
+    print("Comparing " + config1.character_database_file + " to " + config2.character_database_file)
     print("Loading character dbs...")
     db1 = character_db.CharacterDB(config1)
     db2 = character_db.CharacterDB(config2)

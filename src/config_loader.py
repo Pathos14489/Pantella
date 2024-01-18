@@ -49,7 +49,7 @@ https://github.com/art-from-the-machine/Mantella#issues-qa
             self.game_path = config['Paths']['skyrim_folder']
             self.xvasynth_path = config['Paths']['xvasynth_folder']
             self.mod_path = config['Paths']['mod_folder']
-            self.character_df_file = config['Paths']['character_df_file']
+            self.character_database_file = config['Paths']['character_database_file']
             self.voice_model_ref_ids_file = config['Paths']['voice_model_ref_ids_file']
             self.logging_file_path = config['Paths']['logging_file_path']
             self.language_support_file_path = config['Paths']['language_support_file_path']
@@ -97,6 +97,7 @@ https://github.com/art-from-the-machine/Mantella#issues-qa
             
             self.temperature = float(config['LanguageModel']['temperature'])
             self.top_p = float(config['LanguageModel']['top_p'])
+            self.min_p = float(config['LanguageModel']['min_p'])
             self.top_k = int(config['LanguageModel']['top_k'])
             self.repeat_penalty = float(config['LanguageModel']['repeat_penalty'])
             self.max_tokens = int(config['LanguageModel']['max_tokens'])
@@ -112,13 +113,19 @@ https://github.com/art-from-the-machine/Mantella#issues-qa
                 self.message_seperator = self.message_seperator.replace("//n", "\n")
                 self.message_seperator = self.message_seperator.replace("\\n", "\n")
             self.message_format = str(config['LanguageModel']['message_format'])
+            
             self.system_name = str(config['LanguageModel']['system_name'])
             self.user_name = str(config['LanguageModel']['user_name'])
             self.assistant_name = str(config['LanguageModel']['assistant_name'])
+
             self.assist_check = bool(int(config['LanguageModel']['assist_check']))
             self.strip_smalls = bool(int(config['LanguageModel']['strip_smalls']))
             self.small_size = int(config['LanguageModel']['small_size'])
+            
             self.conversation_limit_pct = float(config['LanguageModel']['conversation_limit_pct'])
+            self.reload_buffer = int(config['LanguageModel']['reload_buffer'])
+            self.reload_wait_time = float(config['LanguageModel']['reload_wait_time'])
+            
             self.experimental_features = bool(int(config['LanguageModel']['experimental_features']))
 
             # [openai_api]
