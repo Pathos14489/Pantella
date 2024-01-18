@@ -3,7 +3,6 @@ import logging
 import src.config_loader as config_loader
 import src.tts as tts
 import src.utils as utils
-import src.language_model as language_models
 import src.character_db as character_db
 
 def initialise(config_file):
@@ -91,12 +90,11 @@ def initialise(config_file):
     config.is_local = is_local
     
     xvasynth = tts.Synthesizer(config) # Create Synthesizer object using the config provided
-    character_df = character_db.CharacterDB(config, xvasynth) # Create CharacterDB object using the config and client provided
+    character_database = character_db.CharacterDB(config, xvasynth) # Create CharacterDB object using the config and client provided
     
     language_info = get_language_info(language_file) # Get language info from the language support file specified in config.ini
     
     token_limit = get_token_limit(config)
 
-    llm, tokenizer = language_models.create_LLM(config, token_limit, language_info) # Create LLM and Tokenizer based on config
 
-    return config, character_df, language_info, llm, tokenizer, token_limit, xvasynth
+    return config, character_database, language_info, token_limit, xvasynth
