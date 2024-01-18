@@ -13,21 +13,21 @@ def setup_openai_secret_key(file_name):
     return api_key
 
 class LLM(base_LLM.base_LLM):
-    def __init__(self, config, token_limit, language_info):
-        super().__init__(config, token_limit, language_info)
+    def __init__(self, conversation_manager, token_limit, language_info):
+        super().__init__(conversation_manager, token_limit, language_info)
         self.inference_engine_name = inference_engine_name
         self.tokenizer_slug = tokenizer_slug # Fastest tokenizer for OpenAI models, change if you want to use a different tokenizer (use 'embedding' for compatibility with any model using the openai API)
         api_key = setup_openai_secret_key(self.config.secret_key_file_path)
         self.client = OpenAI(api_key=api_key)
 
-        if config.alternative_openai_api_base != 'none':
-            self.client.base_url  = config.alternative_openai_api_base
+        if self.config.alternative_openai_api_base != 'none':
+            self.client.base_url  = self.config.alternative_openai_api_base
             logging.info(f"Using OpenAI API base: {self.client.base_url}")
 
-        if config.is_local:
+        if self.config.is_local:
             logging.info(f"Running Mantella with local language model")
         else:
-            logging.info(f"Running Mantella with '{config.llm}'. The language model chosen can be changed via config.ini")
+            logging.info(f"Running Mantella with '{self.config.llm}'. The language model chosen can be changed via config.ini")
     
     @utils.time_it
     def create(self, messages):

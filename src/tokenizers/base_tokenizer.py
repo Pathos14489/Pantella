@@ -1,15 +1,16 @@
 import logging
 tokenizer_slug = "base_tokenizer"
 class base_Tokenizer(): # Tokenizes(only availble for counting the tokens in a string presently for local_models), and parses and formats messages for use with the language model
-    def __init__(self,config):
-        self.config = config
+    def __init__(self, conversation_manager):
+        self.conversation_manager = conversation_manager
+        self.config = self.conversation_manager.config
         self.tokenizer_slug = tokenizer_slug # Fastest tokenizer for OpenAI models, change if you want to use a different tokenizer (use 'embedding' for compatibility with any model using the openai API)
         # Prommpt Parsing Stuff
         self.BOS_token = self.config.BOS_token # Beginning of string token
         self.EOS_token = self.config.EOS_token # End of string token
-        self.message_signifier = config.message_signifier # Signifies the start of a message
-        self.message_seperator = config.message_seperator # Seperates messages
-        self.message_format = config.message_format # Format of a message. A string of messages formatted like this is what is sent to the language model, typically following by the start of a message from the assistant to generate a response
+        self.message_signifier = self.config.message_signifier # Signifies the start of a message
+        self.message_seperator = self.config.message_seperator # Seperates messages
+        self.message_format = self.config.message_format # Format of a message. A string of messages formatted like this is what is sent to the language model, typically following by the start of a message from the assistant to generate a response
 
     def new_message(self, msg, name): # Parses a string into a message format with the name of the speaker
         if not name:
@@ -58,6 +59,6 @@ class base_Tokenizer(): # Tokenizes(only availble for counting the tokens in a s
         return self.get_token_count(context)
         
     def get_token_count(self, string):
-        logging.info(f"base_Tokenizer.get_token_count() called with string: {string}")
+        # logging.info(f"base_Tokenizer.get_token_count() called with string: {string}")
         logging.info(f"You should override this method in your tokenizer class! Please do so! I'm going to crash until you do actually, just to encourage you to do so! <3")
         exit()
