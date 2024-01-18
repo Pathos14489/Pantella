@@ -8,7 +8,7 @@ class offended(base_behavior.BaseBehavior):
         self.description = "If {player} says something hurtful / offensive, begin your response with 'Offended:'."
         self.example = "'Have you washed lately?' 'Offended: How dare you!'"
     
-    def run(self, run=False, output_manager=None, characters=None, messages=None):
+    def run(self, run=False):
         if run:
             logging.info(f"The player offended the NPC")
             self.manager.conversation_manager.game_state_manager.write_game_info('_mantella_aggro', '1')

@@ -26,20 +26,20 @@ class BehaviorManager():
     def behavior_keywords(self):
         return [behavior.keyword for behavior in self.behaviors]
     
-    def evaluate(self, keyword, output_manager, characters, messages): # Returns True if the keyword was found and the behavior was run, False otherwise
+    def evaluate(self, keyword): # Returns True if the keyword was found and the behavior was run, False otherwise
         keyword = keyword.lower()
         for behavior in self.behaviors:
             if keyword == behavior.keyword.lower():
                 logging.info(f"Behavior triggered: {behavior.keyword}")
                 try:
-                    behavior.run(True, output_manager, characters, messages)
+                    behavior.run(True)
                     return behavior
                 except Exception as e:
                     logging.error(f"Error running behavior {behavior.keyword}: {e}")
         return None
     
-    def get_behavior_summary(self, player_name):
+    def get_behavior_summary(self):
         summary = ""
         for behavior in self.behaviors:
-            summary += f"{behavior.description} E.g. {behavior.example}\n".replace("{player}", player_name)
+            summary += f"{behavior.description} E.g. {behavior.example}\n".replace("{player}", self.conversation_manager.player_name)
         return summary
