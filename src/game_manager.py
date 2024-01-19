@@ -256,7 +256,7 @@ class GameStateManager:
         # tell Skyrim papyrus script to start waiting for voiceline input
         self.write_game_info('_mantella_end_conversation', 'False')
 
-        character_id, character_name = self.load_character_name_id()
+        character_id, character_name = self.load_character_name_id() # get the character's name and id from _mantella_current_actor.txt and _mantella_current_actor_id.txt
         
         player_name = self.load_player_name() # get the player's name from _mantella_player_name.txt
         player_race = self.load_player_race() # get the player's race from _mantella_player_race.txt
