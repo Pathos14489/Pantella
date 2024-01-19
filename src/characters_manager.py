@@ -54,6 +54,22 @@ class Characters:
         return relationship_summary
 
     @property
+    def conversation_summaries(self): # Returns a paragraph comprised of all active characters conversation summaries
+        if len(self.active_characters) == 0:
+            logging.warning("No active characters, returning empty conversation summaries")
+            return ""
+        if len(self.active_characters) == 1:
+            logging.info("Only one active character, returning SingleNPC style conversation summaries")
+            conversation_summaries = self.active_characters_list[0].conversation_summary
+        else:
+            logging.info("Multiple active characters, returning MultiNPC style conversation summaries")
+            conversation_summaries = "The following is a summary of the conversation so far. If there is nothing here, it means these characters do not have a history of conversation:\n"
+            for character in self.active_characters_list:
+                conversation_summaries += character.conversation_summary
+                if character != self.active_characters_list[-1]:
+                    conversation_summaries += "\n\n"
+
+    @property
     def replacement_dict(self): # Returns a dictionary of replacement values for the current context -- Dynamic Variables
         time_group = utils.get_time_group(self.conversation_manager.current_in_game_time) # get time group from in-game time before 12/24 hour conversion
         time = f"{self.conversation_manager.current_in_game_time}"
@@ -67,11 +83,12 @@ class Characters:
             replacement_dict = self.active_characters_list[0].replacement_dict
         else: # MultiNPC style context
             replacement_dict = {
-                "conversation_summaries": self.get_conversation_summaries(),
-                "names": self.names,
+                "conversation_summaries": self.conversation_summaries,
+                "names": ", ".join(self.names),
+                "names_w_player": ", ".join(self.names_w_player),
                 "relationship_summary": self.relationship_summary,
+                "bios": self.bios,
             }
-        replacement_dict["names_w_player"] = self.names_w_player
         replacement_dict["time"] = self.conversation_manager.current_in_game_time
         replacement_dict["ampm"] = ampm
         replacement_dict["time_group"] = time_group
