@@ -186,6 +186,7 @@ class base_LLM():
                                 #TODO: or (any(key.split(' ')[0] == keyword_extraction for key in characters.active_characters))
                                 logging.info(f"Switched to {next_author}")
                                 self.conversation_manager.chat_manager.active_character = self.conversation_manager.character_manager.active_characters[next_author]
+                                self.conversation_manager.chat_manager.active_character.set_voice()
                                 # characters are mapped to say_line based on order of selection
                                 # taking the order of the dictionary to find which say_line to use, but it is bad practice to use dictionaries in this way
                                 self.character_num = list(self.conversation_manager.character_manager.active_characters.keys()).index(next_author) # Assigns a number to the character based on the order they were selected for use in the _mantella_say_line_# filename
@@ -223,7 +224,7 @@ class base_LLM():
                                 break
                                 
 
-                            if not self.config.assist_check: # if remote, check if the response contains the word assist for some reason. Probably some OpenAI nonsense.
+                            if self.config.assist_check: # if remote, check if the response contains the word assist for some reason. Probably some OpenAI nonsense.
                                 if ('assist' in sentence) and (num_sentences>0): # Causes problems if asking a follower if you should "assist" someone, if they try to say something along the lines of "Yes, we should assist them." it will cut off the sentence and basically ignore the player. TODO: fix this with a more robust solution
                                     logging.info(f"'assist' keyword found. Ignoring sentence which begins with: {sentence}") 
                                     break # stop generating response
