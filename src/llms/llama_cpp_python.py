@@ -2,8 +2,13 @@ import src.utils as utils
 import src.llms.base_llm as base_LLM
 import src.tokenizers.base_tokenizer as tokenizer
 import time
-from llama_cpp import Llama
 import logging
+
+try:
+    from llama_cpp import Llama
+    loaded = True
+except Exception as e:
+    loaded = False
 
 inference_engine_name = "llama-cpp-python"
 
@@ -15,19 +20,24 @@ class LLM(base_LLM.base_LLM): # Uses llama-cpp-python as the LLM inference engin
         super().__init__(conversation_manager, token_limit, language_info)
         self.inference_engine_name = inference_engine_name
         self.config.is_local = True
-        if llama_model is None:
-            self.llm = Llama(
-                model_path=self.config.model_path,
-                n_ctx=self.config.maximum_local_tokens,
-                n_gpu_layers=self.config.n_gpu_layers,
-                n_batch=self.config.n_batch,
-                n_threads=self.config.n_threads,
-                offload_kqv=True,
-                tensor_split=self.config.tensor_split,
-                main_gpu=self.config.main_gpu,
-            )
+        if loaded:
+            if llama_model is None:
+                self.llm = Llama(
+                    model_path=self.config.model_path,
+                    n_ctx=self.config.maximum_local_tokens,
+                    n_gpu_layers=self.config.n_gpu_layers,
+                    n_batch=self.config.n_batch,
+                    n_threads=self.config.n_threads,
+                    offload_kqv=True,
+                    tensor_split=self.config.tensor_split,
+                    main_gpu=self.config.main_gpu,
+                )
+            else:
+                self.llm = llama_model
         else:
-            self.llm = llama_model
+            logging.error(f"Error loading llama-cpp-python. Please check that you have installed it correctly.")
+            input("Press Enter to exit.")
+            exit()
         llama_model = self.llm
         logging.info(f"Running Mantella with llama-cpp-python. The language model chosen can be changed via config.ini")
         logging.info(f"Testing llama-cpp-python...")

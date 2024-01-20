@@ -1,8 +1,13 @@
 import src.utils as utils
 import src.llms.base_llm as base_LLM
 import time
-from openai import OpenAI
 import logging
+
+try:
+    from openai import OpenAI
+    loaded = True
+except Exception as e:
+    loaded = False
 
 inference_engine_name = "openai"
 tokenizer_slug = "tiktoken"
@@ -18,7 +23,12 @@ class LLM(base_LLM.base_LLM):
         self.inference_engine_name = inference_engine_name
         self.tokenizer_slug = tokenizer_slug # Fastest tokenizer for OpenAI models, change if you want to use a different tokenizer (use 'embedding' for compatibility with any model using the openai API)
         api_key = setup_openai_secret_key(self.config.secret_key_file_path)
-        self.client = OpenAI(api_key=api_key)
+        if loaded:
+            self.client = OpenAI(api_key=api_key)
+        else:
+            logging.error(f"Error loading openai. Please check that you have installed it correctly.")
+            input("Press Enter to exit.")
+            exit()
 
         if self.config.alternative_openai_api_base != 'none':
             self.client.base_url  = self.config.alternative_openai_api_base
