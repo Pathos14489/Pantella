@@ -137,7 +137,9 @@ class base_LLM():
         possible_players.extend(self.conversation_manager.player_name.lower().split(" "))
         possible_players.extend(self.conversation_manager.player_name.upper().split(" "))
         sentence = '' # used to store the current sentence being generated
+        voice_line = '' # used to store the current voice line being generated
         num_sentences = 0 # used to keep track of how many sentences have been generated
+        voice_line_sentences = 0 # used to keep track of how many sentences have been generated for the current voice line
         retries = 5
         print("Signifier: ", self.config.message_signifier)
         print("Format: ", self.config.message_format)
@@ -246,23 +248,18 @@ class base_LLM():
                                     logging.info(f"Experimental features disabled. Please set experimental_features = 1 in config.ini to enable Behaviors.")
                                 sentence = sentence.split(':')[1]
                             
-                            # Generate the audio and return the audio file path
-                            try:
-                                audio_file = self.conversation_manager.synthesizer.synthesize(self.conversation_manager.chat_manager.active_character, ' ' + sentence + ' ')
-                            except Exception as e:
-                                logging.error(f"xVASynth Error: {e}")
-                                print(e)
-                                input('Press enter to continue...')
-                                exit()
 
-                            await sentence_queue.put([audio_file, sentence]) # Put the audio file path in the sentence_queue
-
+                            voice_line += sentence # add the sentence to the voice line
                             full_reply += sentence # add the sentence to the full reply
                             num_sentences += 1 # increment the number of sentences generated
+                            voice_line_sentences += 1 # increment the number of sentences generated for the current voice line
                             sentence = '' # reset the sentence for the next iteration
-                            
-                            event.clear() # clear the event for the next iteration
-                            await event.wait() # wait for the event to be set before generating the next line
+
+
+                            if voice_line_sentences == self.config.sentences_per_voiceline: # if the voice line is ready, then generate the audio for the voice line
+                                await self.generate_voiceline(voice_line, sentence_queue, event)
+                                voice_line_sentences = 0 # reset the number of sentences generated for the current voice line
+                                voice_line = '' # reset the voice line for the next iteration
 
                             end_conversation = self.conversation_manager.game_state_manager.load_conversation_ended() # check if the conversation has ended
                             radiant_dialogue_update = self.conversation_manager.game_state_manager.load_radiant_dialogue() # check if the conversation has switched from radiant to multi NPC
@@ -300,9 +297,29 @@ class base_LLM():
                     retries -= 1
                     time.sleep(5)
 
+        if voice_line_sentences > 0: # if the voice line is not empty, then generate the audio for the voice line
+            await self.generate_voiceline(voice_line, sentence_queue, event)
+            voice_line_sentences = 0
+            voice_line = ''
+
         await sentence_queue.put(None) # Mark the end of the response for self.conversation_manager.chat_manager.send_response() and self.conversation_manager.chat_manager.send_response()
 
         if next_author is not None and full_reply.strip() != '':
             self.conversation_manager.messages.append({"role": next_author, "content": full_reply})
             # -- for each sentence for each character until the conversation ends or the max_response_sentences is reached or the player is speaking
             logging.info(f"Full response saved ({self.tokenizer.get_token_count(full_reply)} tokens): {full_reply}")
+
+    async def generate_voiceline(self, string, sentence_queue, event):
+        """Generate audio for a voiceline"""
+        # Generate the audio and return the audio file path
+        try:
+            audio_file = self.conversation_manager.synthesizer.synthesize(self.conversation_manager.chat_manager.active_character, ' ' + string + ' ') # TODO: Make a config setting. Spaces help xVASynth apparently, they might not be good for other TTS engines
+        except Exception as e:
+            logging.error(f"xVASynth Error: {e}")
+            print(e)
+            input('Press enter to continue...')
+            exit()
+
+        await sentence_queue.put([audio_file, string]) # Put the audio file path in the sentence_queue
+        event.clear() # clear the event for the next iteration
+        await event.wait() # wait for the event to be set before generating the next line
