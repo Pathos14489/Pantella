@@ -249,9 +249,9 @@ class base_LLM():
                                 sentence = sentence.split(':')[1]
                             
 
-                            voice_line += sentence # add the sentence to the voice line
+                            voice_line += sentence # add the sentence to the voice line in progress
                             full_reply += sentence # add the sentence to the full reply
-                            num_sentences += 1 # increment the number of sentences generated
+                            num_sentences += 1 # increment the total number of sentences generated
                             voice_line_sentences += 1 # increment the number of sentences generated for the current voice line
                             sentence = '' # reset the sentence for the next iteration
 
