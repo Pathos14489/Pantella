@@ -28,6 +28,7 @@ def initialise(config_file):
             except ValueError:
                 logging.error(f"Invalid maximum_local_tokens value: {str(config.maximum_local_tokens)}. It should be a valid integer. Please update your configuration.")
                 token_limit = 4096  # Default to 4096 in case of an error.
+            llm = config.llm
         else:
             llm = config.llm
             if '/' in llm:

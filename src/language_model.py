@@ -32,17 +32,18 @@ def create_LLM(conversation_manager, token_limit, language_info):
         elif "tokenizer_slug" in llm.__dict__: # or if the LLM has a tokenizer slug specified
             logging.info(f"Using {conversation_manager.config.inference_engine}'s recommended tokenizer")
             if "client" in llm.__dict__: # if the LLM has a client specified (only really needed for openai at this point)
-                tokenizer = tokenizers.Tokenizer_Types[llm.tokenizer_slug](conversation_manager, llm.client)
+                print(llm.tokenizer_slug)
+                tokenizer = tokenizers.Tokenizer_Types[llm.tokenizer_slug].Tokenizer(conversation_manager, llm.client)
             else:
-                tokenizer = tokenizers.Tokenizer_Types[llm.tokenizer_slug](conversation_manager)
+                tokenizer = tokenizers.Tokenizer_Types[llm.tokenizer_slug].Tokenizer(conversation_manager)
         else: # or if the LLM has no tokenizer specified
             logging.error(f"Could not find default tokenizer for inference engine: {llm.inference_engine_name}! Please check your config.ini file and try again!")
             input("Press enter to continue...")
             exit()
     elif conversation_manager.config.tokenizer_type in tokenizers.Tokenizer_Types: # if using a custom tokenizer
         if "client" in llm.__dict__: # if the LLM has a client specified (only really needed for openai at this point)
-            tokenizer = tokenizers.Tokenizer_Types[conversation_manager.config.tokenizer_type](conversation_manager, llm.client)
+            tokenizer = tokenizers.Tokenizer_Types[conversation_manager.config.tokenizer_type].Tokenizer(conversation_manager, llm.client)
         else: # if the LLM has no client specified
-            tokenizer = tokenizers.Tokenizer_Types[conversation_manager.config.tokenizer_type](conversation_manager)
+            tokenizer = tokenizers.Tokenizer_Types[conversation_manager.config.tokenizer_type].Tokenizer(conversation_manager)
     llm.tokenizer = tokenizer # Add the tokenizer to the LLM object
     return llm, tokenizer
