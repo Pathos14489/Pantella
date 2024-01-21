@@ -118,6 +118,7 @@ https://github.com/art-from-the-machine/Mantella#issues-qa
             self.assist_check = bool(int(config['LanguageModel']['assist_check']))
             self.strip_smalls = bool(int(config['LanguageModel']['strip_smalls']))
             self.small_size = int(config['LanguageModel']['small_size'])
+            self.same_output_limit = int(config['LanguageModel']['same_output_limit'])
             
             self.conversation_limit_pct = float(config['LanguageModel']['conversation_limit_pct'])
             self.reload_buffer = int(config['LanguageModel']['reload_buffer'])

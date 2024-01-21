@@ -155,6 +155,8 @@ class base_LLM():
             #     retries = 5
             try:
                 start_time = time.time()
+                last_chunk = None
+                same_chunk_count = 0
                 for chunk in self.acreate(self.conversation_manager.get_context()):
                     if type(chunk) == dict:
                         logging.info(chunk)
@@ -162,6 +164,14 @@ class base_LLM():
                     else:
                         logging.info(chunk.model_dump_json())
                         content = chunk.choices[0].text
+                    if content is not last_chunk:
+                        last_chunk = content
+                        same_chunk_count = 0
+                    else:
+                        same_chunk_count += 1
+                        if same_chunk_count > self.config.same_output_limit:
+                            logging.info(f"Same chunk returned {same_chunk_count} times in a row. Stopping generation.")
+                            break
                     if content is not None and content != '':
                         sentence += content
 
@@ -263,7 +273,7 @@ class base_LLM():
                                 voice_line = '' # reset the voice line for the next iteration
                             if self.experimental_features: # TODO: Remove for MCM Supports
                                 behavior = self.conversation_manager.behavior_manager.post_sentence_evaluate(sentence) # check if the sentence contains any behavior keywords for NPCs
-                                
+
                             sentence = '' # reset the sentence for the next iteration
 
                             end_conversation = self.conversation_manager.game_state_manager.load_conversation_ended() # check if the conversation has ended
