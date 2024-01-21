@@ -7,7 +7,6 @@ class follow(base_behavior.BaseBehavior):
         self.keyword = "Follow"
         self.description = "If {player} asks you to follow them, and you are thoroughly convinced to do so, begin your response with 'Follow:'."
         self.example = "'Come with me if you want to live!' 'Follow: Alright, I'll follow you.'"
-        self.npc_keywords = []
     
     def run(self, run=False, sentence=None):
         if run:

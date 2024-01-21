@@ -242,26 +242,29 @@ class base_LLM():
                                 sentence = sentence.split(':')[1]
                                 # if LLM is switching character
                                 if self.experimental_features:
-                                    behavior = self.conversation_manager.behavior_manager.evaluate(keyword_extraction, sentence)
+                                    behavior = self.conversation_manager.behavior_manager.evaluate(keyword_extraction, sentence) # check if the sentence contains any behavior keywords for NPCs
                                     if behavior == None:
                                         logging.warn(f"Keyword '{keyword_extraction}' not found in behavior_manager. Disgarding from response.")
                                 else:
                                     logging.info(f"Experimental features disabled. Please set experimental_features = 1 in config.ini to enable Behaviors.")
-                            
-
-
+                                    
 
                             voice_line += sentence # add the sentence to the voice line in progress
                             full_reply += sentence # add the sentence to the full reply
                             num_sentences += 1 # increment the total number of sentences generated
                             voice_line_sentences += 1 # increment the number of sentences generated for the current voice line
-                            sentence = '' # reset the sentence for the next iteration
 
 
+                            if self.experimental_features: # TODO: Remove for MCM Supports
+                                behavior = self.conversation_manager.behavior_manager.pre_sentence_evaluate(sentence) # check if the sentence contains any behavior keywords for NPCs
                             if voice_line_sentences == self.config.sentences_per_voiceline: # if the voice line is ready, then generate the audio for the voice line
                                 await self.generate_voiceline(voice_line, sentence_queue, event)
                                 voice_line_sentences = 0 # reset the number of sentences generated for the current voice line
                                 voice_line = '' # reset the voice line for the next iteration
+                            if self.experimental_features: # TODO: Remove for MCM Supports
+                                behavior = self.conversation_manager.behavior_manager.post_sentence_evaluate(sentence) # check if the sentence contains any behavior keywords for NPCs
+                                
+                            sentence = '' # reset the sentence for the next iteration
 
                             end_conversation = self.conversation_manager.game_state_manager.load_conversation_ended() # check if the conversation has ended
                             radiant_dialogue_update = self.conversation_manager.game_state_manager.load_radiant_dialogue() # check if the conversation has switched from radiant to multi NPC

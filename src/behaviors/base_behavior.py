@@ -3,10 +3,15 @@ import logging
 class BaseBehavior():
     def __init__(self, manager):
         self.manager = manager
-        self.keyword = "BASEBEHAVIOR"
-        self.description = "BASEBEHAVIOR"
-        self.example = "BASEBEHAVIOR"
-        self.npc_keywords = []
+        self.keyword = None
+        self.description = None
+        self.example = None
+        self.npc_pre_keywords = [] # Keywords that the NPC can say that will trigger this behavior before generating the voiceline
+        self.npc_post_keywords = [] # Keywords that the NPC can say that will trigger this behavior after generating the voiceline
+
+    @property
+    def conversation_manager(self):
+        return self.manager.conversation_manager
     
     def run(self, run=False, sentence=None):
         if run:

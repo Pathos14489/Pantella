@@ -7,7 +7,6 @@ class forgiven(base_behavior.BaseBehavior):
         self.keyword = "Forgiven"
         self.description = "If {player} renounces their words, or to end combat, begin your response with 'Forgiven:'."
         self.example = "'I'm sorry, I didn't mean it!' 'Forgiven: Alright, I'll forgive you.'"
-        self.npc_keywords = []
     
     def run(self, run=False, sentence=None):
         if run:
