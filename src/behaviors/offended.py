@@ -7,7 +7,6 @@ class offended(base_behavior.BaseBehavior):
         self.keyword = "Offended"
         self.description = "If {player} says something hurtful / offensive, begin your response with 'Offended:'."
         self.example = "'Have you washed lately?' 'Offended: How dare you!'"
-        self.npc_keywords = []
     
     def run(self, run=False, sentence=None):
         if run:
