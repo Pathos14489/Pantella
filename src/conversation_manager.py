@@ -137,6 +137,17 @@ class conversation_manager():
         self.current_location = self.game_state_manager.get_current_location() # update current location each step of the conversation
         self.current_in_game_time = self.game_state_manager.get_current_game_time() # update current in game time each step of the conversation
 
+    def end_conversation(self, character=None): # end conversation with character
+        if character is None and self.character_manager.active_character_count() > 0:
+            character = self.chat_manager.active_character
+        if character is not None:
+            logging.info(f"Ending conversation with {character.name}")
+            self.game_state_manager.end_conversation(character)
+        if self.character_manager.active_character_count() <= 0:
+            self.in_conversation = False
+            self.conversation_ended = True
+            logging.info('Conversation ended')
+
     def await_and_setup_conversation(self): # wait for player to select an NPC and setup the conversation when outside of conversation
         self.check_mcm_mic_status()
         self.game_state_manager.reset_game_info() # clear _mantella_ files in Skyrim folder
@@ -210,23 +221,19 @@ class conversation_manager():
         # check if user is ending conversation
         if (self.transcriber.activation_name_exists(transcript_cleaned, self.config.end_conversation_keyword.lower())) or (self.transcriber.activation_name_exists(transcript_cleaned, 'good bye')) or (self.transcriber.activation_name_exists(transcript_cleaned, 'goodbye')) or self.conversation_ended:
             # Detect who the player is talking to
-            names = []
+            name_groups = []
             for character in self.character_manager.active_characters.values():
                 character_names = character.name.split(' ')
-                names.append(character_names)
+                name_groups.append(character_names)
             all_words = transcript_cleaned.split(' ')
             goodbye_target_character = None
-            for word in all_words:
-                for name_group in names:
+            for word in all_words: # check if any of the words in the player input match any of the names of the active characters, even partially. If so, end conversation with that character TODO: Make this a config setting "string" vs "partial" name_matching
+                for name_group in name_groups:
                     if word in name_group:
                         goodbye_target_character = self.character_manager.active_characters[' '.join(name_group)]
                         break
-            if goodbye_target_character == None:
-                goodbye_target_character = self.chat_manager.active_character # If we can't figure out who the player is talking to, just assume it's the active character
-            logging.info(f"Ending conversation with {goodbye_target_character.name}")
-            self.game_state_manager.end_conversation(goodbye_target_character)
-            if self.character_manager.active_character_count() <= 0:
-                self.in_conversation = False
+            self.end_conversation(goodbye_target_character) # end conversation in game with current active character, and if no active characters are left in the conversation, end it entirely
+            if not self.in_conversation: # if conversation has ended, stop stepping through conversation right now
                 return
 
         # Let the player know that they were heard
@@ -235,7 +242,7 @@ class conversation_manager():
 
         if self.character_manager.active_character_count() == 1: # check if NPC is in combat to change their voice tone (if one on one conversation)
             # TODO: Make this work for multi NPC conversations
-            aggro = self.game_state_manager.load_data_when_available('_mantella_actor_is_in_combat', '').lower() == 'true'
+            aggro = self.game_state_manager.load_data_when_available('_mantella_actor_is_in_combat', '').lower() == 'true' # TODO: Make this a game_state_manager method instead of an inline call
             if aggro:
                 self.chat_manager.active_character.is_in_combat = 1
             else:
