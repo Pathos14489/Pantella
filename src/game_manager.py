@@ -267,6 +267,7 @@ class GameStateManager:
         # (example: make a backstory for a Bandit because the NPC was named Bandit, then generate a real name, and background inspired by that vague name for use in-corversation)
         try: # load character from skyrim_characters json directory 
             character_info = self.conversation_manager.character_database.named_index[character_name]
+            logging.info(f"Found {character_name} in skyrim_characters.csv as a named NPC: {character_info['name']}")
             is_generic_npc = False
         except KeyError: # character not found
             try: # try searching by ID
