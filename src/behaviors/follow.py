@@ -11,5 +11,5 @@ class follow(base_behavior.BaseBehavior):
     def run(self, run=False):
         if run:
             logging.info(f"The NPC is willing to follow the player")
-            self.manager.conversation_managergame_state_manager.write_game_info('_mantella_aggro', '2') # TODO: Abstract this to a function
+            self.manager.conversation_manager.game_state_manager.write_game_info('_mantella_aggro', '2') # TODO: Abstract this to a function
         return "follow"
