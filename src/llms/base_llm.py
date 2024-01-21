@@ -239,15 +239,17 @@ class base_LLM():
 
                             if ":" in sentence: # if a colon is in the sentence, then the NPC is calling a keyword function in addition to speaking. Pass the keyword to the behavior manager to see if it matches any real keywords
                                 keyword_extraction = sentence.split(':')[0]
+                                sentence = sentence.split(':')[1]
                                 # if LLM is switching character
                                 if self.experimental_features:
-                                    behavior = self.conversation_manager.behavior_manager.evaluate(keyword_extraction)
+                                    behavior = self.conversation_manager.behavior_manager.evaluate(keyword_extraction, sentence)
                                     if behavior == None:
                                         logging.warn(f"Keyword '{keyword_extraction}' not found in behavior_manager. Disgarding from response.")
                                 else:
                                     logging.info(f"Experimental features disabled. Please set experimental_features = 1 in config.ini to enable Behaviors.")
-                                sentence = sentence.split(':')[1]
                             
+
+
 
                             voice_line += sentence # add the sentence to the voice line in progress
                             full_reply += sentence # add the sentence to the full reply

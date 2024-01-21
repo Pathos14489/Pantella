@@ -26,13 +26,19 @@ class BehaviorManager():
     def behavior_keywords(self):
         return [behavior.keyword for behavior in self.behaviors]
     
-    def evaluate(self, keyword): # Returns True if the keyword was found and the behavior was run, False otherwise
+    def evaluate(self, keyword, sentence): # Returns True if the keyword was found and the behavior was run, False otherwise
         keyword = keyword.lower()
         for behavior in self.behaviors:
-            if keyword == behavior.keyword.lower():
+            npc_keywords = behavior.npc_keywords
+            npc_words = sentence.replace(",", "").replace(".", "").replace("!", "").replace("?", "").lower()
+            npc_contains_keyword = False
+            for npc_keyword in npc_keywords:
+                if npc_keyword.lower() in npc_words:
+                    npc_contains_keyword = True
+            if keyword == behavior.keyword.lower() or npc_contains_keyword:
                 logging.info(f"Behavior triggered: {behavior.keyword}")
                 try:
-                    behavior.run(True)
+                    behavior.run(True, sentence)
                     return behavior
                 except Exception as e:
                     logging.error(f"Error running behavior {behavior.keyword}: {e}")
