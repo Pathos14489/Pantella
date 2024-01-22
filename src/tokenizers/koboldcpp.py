@@ -15,9 +15,9 @@ class Tokenizer(tokenizer.base_Tokenizer): # Gets token count from OpenAI's embe
         
     @utils.time_it
     def get_token_count(self, string):
-        url = self.config.alternative_openai_api_base + "/extra/tokencount"
+        url = self.config.alternative_openai_api_base.replace("/v1","") + "/extra/tokencount"
         data = {"prompt": string}
-        r = requests.post(url, json=data)
-        num_tokens = int(r.text)
+        r = requests.post(url, json=data).json()
+        num_tokens = int(r["value"])
         return num_tokens
     
