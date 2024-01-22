@@ -176,7 +176,7 @@ class base_LLM():
                         sentence += content
 
                         if next_author is None: # if next_author is None, then extract it from the start of the generation
-                            if self.config.message_signifier in sentence:
+                            if self.config.message_signifier in sentence: # if the message signifier is in the sentence, then the next author is the first part of the sentence
                                 next_author = sentence.split(self.config.message_signifier)[0] # extract the next author from the start of the generation
 
                                 # Fix capitalization - First letter after spaces and dashes should be capitalized
@@ -184,7 +184,13 @@ class base_LLM():
                                 next_author_parts = [part.split("-") for part in next_author_parts]
                                 new_next_author = ""
                                 for part_list in next_author_parts:
-                                    new_next_author += "-".join([part.capitalize() for part in part_list]) + " "
+                                    new_part_list = []
+                                    for part in part_list:
+                                        if part.lower() == "the":
+                                            new_part_list.append(part.lower())
+                                        else:
+                                            new_part_list.append(part.capitalize())
+                                    new_next_author += "-".join(new_part_list) + " "
                                 next_author = new_next_author.strip()
 
                                 sentence = sentence[len(next_author)+len(self.config.message_signifier):] # remove the author from the sentence
@@ -201,7 +207,7 @@ class base_LLM():
                                 self.conversation_manager.chat_manager.active_character.set_voice()
                                 # characters are mapped to say_line based on order of selection
                                 # taking the order of the dictionary to find which say_line to use, but it is bad practice to use dictionaries in this way
-                                self.character_num = list(self.conversation_manager.character_manager.active_characters.keys()).index(next_author) # Assigns a number to the character based on the order they were selected for use in the _mantella_say_line_# filename
+                                self.conversation_manager.chat_manager.character_num = list(self.conversation_manager.character_manager.active_characters.keys()).index(next_author) # Assigns a number to the character based on the order they were selected for use in the _mantella_say_line_# filename
                                 verified_author = True
                             else: # if the next author is not a real character, then assume the player is speaking and generation should stop
                                 partial_match = False
@@ -212,7 +218,7 @@ class base_LLM():
                                 if partial_match != False: # if the next author is a partial match to an active character, then switch to that character
                                     logging.info(f"Switched to {partial_match.name} (WARNING: Partial match!)")
                                     self.conversation_manager.chat_manager.active_character = partial_match
-                                    self.character_num = list(self.conversation_manager.character_manager.active_characters.keys()).index(partial_match.name)
+                                    self.conversation_manager.chat_manager.character_num = list(self.conversation_manager.character_manager.active_characters.keys()).index(partial_match.name)
                                     verified_author = True
                                 else: # if the next author is not a real character, then assume the player is speaking and generation should stop
                                     logging.info(f"Next author is not a real character: {next_author}")

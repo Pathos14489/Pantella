@@ -177,7 +177,7 @@ class GameStateManager:
     
     
     def load_unnamed_npc(self, character_name):
-        """Load generic NPC if character cannot be found in skyrim_characters.csv"""
+        """Load generic NPC if character cannot be found in character database"""
 
         male_voice_models = self.conversation_manager.character_database.male_voice_models
         female_voice_models = self.conversation_manager.character_database.female_voice_models
@@ -267,15 +267,15 @@ class GameStateManager:
         # (example: make a backstory for a Bandit because the NPC was named Bandit, then generate a real name, and background inspired by that vague name for use in-corversation)
         try: # load character from skyrim_characters json directory 
             character_info = self.conversation_manager.character_database.named_index[character_name]
-            logging.info(f"Found {character_name} in skyrim_characters.csv as a named NPC: {character_info['name']}")
+            logging.info(f"Found {character_name} in character database as a named NPC: {character_info['name']}")
             is_generic_npc = False
         except KeyError: # character not found
             try: # try searching by ID
-                logging.info(f"Could not find {character_name} in skyrim_characters.csv. Searching by ID {character_id}...")
+                logging.info(f"Could not find {character_name} in character database. Searching by ID {character_id}...")
                 character_info = self.conversation_manager.character_database.baseid_int_index[character_id]
                 is_generic_npc = False
             except KeyError:
-                logging.info(f"NPC '{character_name}' could not be found in 'skyrim_characters.csv'. If this is not a generic NPC, please ensure '{character_name}' exists in the CSV's 'name' column exactly as written here, and that there is a voice model associated with them.")
+                logging.info(f"NPC '{character_name}' could not be found in character database. If this is not a generic NPC, please ensure '{character_name}' exists in the CSV's 'name' column exactly as written here, and that there is a voice model associated with them.")
                 character_info = self.load_unnamed_npc(character_name)
                 is_generic_npc = True
 
