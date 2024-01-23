@@ -86,7 +86,7 @@ def initialise(config_file):
     setup_logging(logging_file) # Setup logging with the file specified in config.ini
 
     is_local = True
-    if (config.alternative_openai_api_base == 'none' or config.inference_engine != 'openai' and config.inference_engine != 'default'): # TODO: Improve this. Should do more granularity than local or not.
+    if (config.inference_engine == 'openai' or config.inference_engine == 'default') and config.alternative_openai_api_base == 'none': # TODO: Improve this. Should do more granularity than local or not.
         is_local = False
     config.is_local = is_local
     
