@@ -1,7 +1,6 @@
 import pandas as pd
 import logging
 import src.config_loader as config_loader
-import src.tts as tts
 import src.utils as utils
 import src.character_db as character_db
 
@@ -32,9 +31,8 @@ def initialise(config_file):
         is_local = False
     config.is_local = is_local
     
-    xvasynth = tts.Synthesizer(config) # Create Synthesizer object using the config provided
     character_database = character_db.CharacterDB(config, xvasynth) # Create CharacterDB object using the config and client provided
     
     language_info = get_language_info(language_file) # Get language info from the language support file specified in config.ini
 
-    return config, character_database, language_info, xvasynth
+    return config, character_database, language_info

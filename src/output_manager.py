@@ -167,32 +167,14 @@ class ChatManager:
                         if i != 1:
                             file_name += f'_{i}'  # Append the file number for files 2 and above
                         file_name += '.txt'
-
                         with open(file_name, 'r', encoding='utf-8') as f:
                             content = f.read().strip()
                             if content.lower() != 'false':
                                 all_false = False  # Set the flag to False if any file is not 'false'
                                 break  # Break the for loop and continue the while loop
-
                     if all_false:
                         break  # Break the outer loop if all files are 'false'
-
-                    # Wait for a short period before checking the files again
                     await asyncio.sleep(0.1)  # Adjust the sleep duration as needed
-
-
-                    #with open(f'{self.root_mod_folter}/_mantella_actor_count.txt', 'r', encoding='utf-8') as f:
-                    #        mantellaactorcount = f.read().strip() 
-                    # Loop to check if _mantella_say_line_ is set to false
-                    #while True:
-                    #    with open(f'{self.root_mod_folter}/_mantella_say_line.txt', 'r', encoding='utf-8') as f:
-                    #        content = f.read().strip()                              
-                    #    with open(f'{self.root_mod_folter}/_mantella_say_line_2.txt', 'r', encoding='utf-8') as f:
-                    #        content2 = f.read().strip()
-                    #        if content.lower() == 'false' and content2.lower() == 'false' :
-                    #            break
-                        # Wait for a short period before checking the file again
-                    #    await asyncio.sleep(0.1)  # adjust the sleep duration as needed
             else: # if Skyrim's running then estimate audio duration to sync lip files
                 audio_duration = await self.get_audio_duration(queue_output[0])
                 # wait for the audio playback to complete before getting the next file

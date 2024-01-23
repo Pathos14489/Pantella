@@ -14,15 +14,14 @@ import logging
 
 class conversation_manager():
     def __init__(self, config_file):
-        self.config, self.character_database, self.language_info, self.synthesizer = setup.initialise(
+        self.config, self.character_database, self.language_info = setup.initialise(
             config_file=config_file,
         )
-        self.token_limit = self.config.maximum_local_tokens # Get token limit from config.ini
         # self.config
         # self.character_database
         # self.language_info
-        # self.token_limit
-        # self.synthesizer
+        self.token_limit = self.config.maximum_local_tokens # Get token limit from config.ini
+        self.synthesizer = tts.create_Synthesizer(self) # Create Synthesizer object using the config provided
         self.llm, self.tokenizer = language_models.create_LLM(self) # Create LLM and Tokenizer based on config
         self.game_state_manager = game_manager.GameStateManager(self)
         self.chat_manager = output_manager.ChatManager(self)

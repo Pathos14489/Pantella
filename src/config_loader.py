@@ -1,5 +1,6 @@
 import configparser
 import logging
+import json
 import os
 import sys
 
@@ -143,13 +144,20 @@ https://github.com/art-from-the-machine/Mantella#issues-qa
             self.main_gpu = int(config['llama_cpp_python']['main_gpu'])
 
             # [Speech]
-            self.xvasynth_process_device = config['Speech']['tts_process_device']
-            self.pace = float(config['Speech']['pace'])
-            self.use_cleanup = int(config['Speech']['use_cleanup']) == 1
-            self.use_sr = int(config['Speech']['use_sr']) == 1
-            self.xvasynth_base_url = config['Speech']['xvasynth_base_url']
+            self.tts_engine = str(config['Speech']['tts_engine'])
             self.end_conversation_wait_time = float(config['Speech']['end_conversation_wait_time'])
             self.sentences_per_voiceline = int(config['Speech']['sentences_per_voiceline']) 
+
+            # [xVASynth]
+            self.xvasynth_process_device = str(config['xVASynth']['tts_process_device']) # cpu, cuda
+            self.pace = float(config['xVASynth']['pace'])
+            self.use_cleanup = int(config['xVASynth']['use_cleanup']) == 1
+            self.use_sr = int(config['xVASynth']['use_sr']) == 1
+            self.xvasynth_base_url = config['xVASynth']['xvasynth_base_url']
+
+            # [xTTS]
+            self.xtts_base_url = config['xTTS']['xtts_base_url']
+            self.xtts_data = json.loads(config['xTTS']['xtts_data'].replace('\n', '')) # We can do JSON in the config.ini?? Dude... this would have save so much time and space. TODO: Hot dog, I like it! :D Do this for all the stuff this would benefit.
 
             # [Cleanup]
             self.remove_mei_folders = config['Cleanup']['remove_mei_folders']
