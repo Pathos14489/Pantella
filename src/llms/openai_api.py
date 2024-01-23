@@ -18,10 +18,58 @@ def setup_openai_secret_key(file_name):
     return api_key
 
 class LLM(base_LLM.base_LLM):
-    def __init__(self, conversation_manager, token_limit, language_info):
-        super().__init__(conversation_manager, token_limit, language_info)
+    def __init__(self, conversation_manager):
+        super().__init__(conversation_manager)
         self.inference_engine_name = inference_engine_name
+
         self.tokenizer_slug = tokenizer_slug # Fastest tokenizer for OpenAI models, change if you want to use a different tokenizer (use 'embedding' for compatibility with any model using the openai API)
+
+        llm = self.config.llm
+        if llm == 'gpt-3.5-turbo':
+            token_limit = 4096
+        elif llm == 'gpt-3.5-turbo-16k':
+            token_limit = 16384
+        elif llm == 'gpt-4':
+            token_limit = 8192
+        elif llm == 'gpt-4-32k':
+            token_limit = 32768
+        elif llm == 'claude-2':
+            token_limit = 100_000
+        elif llm == 'claude-instant-v1':
+            token_limit = 100_000
+        elif llm == 'palm-2-chat-bison':
+            token_limit = 8000
+        elif llm == 'palm-2-codechat-bison':
+            token_limit = 8000
+        elif llm == 'llama-2-7b-chat':
+            token_limit = 4096
+        elif llm == 'llama-2-13b-chat':
+            token_limit = 4096
+        elif llm == 'llama-2-70b-chat':
+            token_limit = 4096
+        elif llm == 'codellama-34b-instruct':
+            token_limit = 16000
+        elif llm == 'nous-hermes-llama2-13b':
+            token_limit = 4096
+        elif llm == 'weaver':
+            token_limit = 8000
+        elif llm == 'mythomax-L2-13b':
+            token_limit = 8192
+        elif llm == 'airoboros-l2-70b-2.1':
+            token_limit = 4096
+        elif llm == 'gpt-3.5-turbo-1106':
+            token_limit = 16_385
+        elif llm == 'gpt-4-1106-preview':
+            token_limit = 128_000
+        else:
+            logging.info(f"Could not find number of available tokens for {llm}. Defaulting to token count of {str(self.config.maximum_local_tokens)} (this number can be changed via the `maximum_local_tokens` setting in config.ini) and falling back to embedding tokenizer.")
+            token_limit = self.config.maximum_local_tokens # Default to 4096 tokens for local models
+            tokenizer_slug = "embedding"
+        self.config.maximum_local_tokens = token_limit # Set the maximum number of tokens for local models to the number of tokens available for the model chosen
+        self.tokenizer_slug = tokenizer_slug # Fastest tokenizer for OpenAI models, change if you want to use a different tokenizer (use 'embedding' for compatibility with any model using the openai API)
+
+            
+
         api_key = setup_openai_secret_key(self.config.secret_key_file_path)
         if loaded:
             self.client = OpenAI(api_key=api_key)

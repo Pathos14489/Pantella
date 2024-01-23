@@ -18,13 +18,13 @@ LLM_Types["default"] = LLM_Types[default]
 
 # Create LLM object using the config and client provided
     
-def create_LLM(conversation_manager, token_limit, language_info):
+def create_LLM(conversation_manager):
     if conversation_manager.config.inference_engine not in LLM_Types:
         logging.error(f"Could not find inference engine: {conversation_manager.config.inference_engine}! Please check your config.ini file and try again!")
         input("Press enter to continue...")
         exit()
     model = LLM_Types[conversation_manager.config.inference_engine]
-    llm = model.LLM(conversation_manager, token_limit, language_info)
+    llm = model.LLM(conversation_manager)
     if conversation_manager.config.tokenizer_type == "default": # if using the default tokenizer for the LLM
         if "Tokenizer" in model.__dict__: # if the LLM has a tokenizer included
             logging.info(f"Using {conversation_manager.config.inference_engine}'s included tokenizer")

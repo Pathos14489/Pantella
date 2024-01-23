@@ -14,15 +14,16 @@ import logging
 
 class conversation_manager():
     def __init__(self, config_file):
-        self.config, self.character_database, self.language_info, self.token_limit, self.synthesizer = setup.initialise(
+        self.config, self.character_database, self.language_info, self.synthesizer = setup.initialise(
             config_file=config_file,
         )
+        self.token_limit = self.config.maximum_local_tokens # Get token limit from config.ini
         # self.config
         # self.character_database
         # self.language_info
         # self.token_limit
         # self.synthesizer
-        self.llm, self.tokenizer = language_models.create_LLM(self, self.token_limit, self.language_info) # Create LLM and Tokenizer based on config
+        self.llm, self.tokenizer = language_models.create_LLM(self) # Create LLM and Tokenizer based on config
         self.game_state_manager = game_manager.GameStateManager(self)
         self.chat_manager = output_manager.ChatManager(self)
         self.transcriber = stt.Transcriber(self.game_state_manager, self.config)
@@ -206,7 +207,7 @@ class conversation_manager():
         
         transcript_cleaned = ''
         transcribed_text = None
-        if not self.conversation_ended: # check if conversation has ended, if not, get next player input
+        if not self.conversation_ended and not self.radiant_dialogue: # check if conversation has ended and isn't radiant, if it's not, get next player input
             logging.info('Getting player response...')
             transcribed_text = self.transcriber.get_player_response()
 
@@ -216,25 +217,25 @@ class conversation_manager():
 
             self.messages.append({'role': "[player]", 'content': transcribed_text}) # add player input to messages
         
-        self.update_game_state()
+            self.update_game_state()
 
-        # check if user is ending conversation
-        if (self.transcriber.activation_name_exists(transcript_cleaned, self.config.end_conversation_keyword.lower())) or (self.transcriber.activation_name_exists(transcript_cleaned, 'good bye')) or (self.transcriber.activation_name_exists(transcript_cleaned, 'goodbye')) or self.conversation_ended:
-            # Detect who the player is talking to
-            name_groups = []
-            for character in self.character_manager.active_characters.values():
-                character_names = character.name.split(' ')
-                name_groups.append(character_names)
-            all_words = transcript_cleaned.split(' ')
-            goodbye_target_character = None
-            for word in all_words: # check if any of the words in the player input match any of the names of the active characters, even partially. If so, end conversation with that character TODO: Make this a config setting "string" vs "partial" name_matching
-                for name_group in name_groups:
-                    if word in name_group:
-                        goodbye_target_character = self.character_manager.active_characters[' '.join(name_group)]
-                        break
-            self.end_conversation(goodbye_target_character) # end conversation in game with current active character, and if no active characters are left in the conversation, end it entirely
-            if not self.in_conversation: # if conversation has ended, stop stepping through conversation right now
-                return
+            # check if user is ending conversation
+            if (self.transcriber.activation_name_exists(transcript_cleaned, self.config.end_conversation_keyword.lower())) or (self.transcriber.activation_name_exists(transcript_cleaned, 'good bye')) or (self.transcriber.activation_name_exists(transcript_cleaned, 'goodbye')) or self.conversation_ended:
+                # Detect who the player is talking to
+                name_groups = []
+                for character in self.character_manager.active_characters.values():
+                    character_names = character.name.split(' ')
+                    name_groups.append(character_names)
+                all_words = transcript_cleaned.split(' ')
+                goodbye_target_character = None
+                for word in all_words: # check if any of the words in the player input match any of the names of the active characters, even partially. If so, end conversation with that character TODO: Make this a config setting "string" vs "partial" name_matching
+                    for name_group in name_groups:
+                        if word in name_group:
+                            goodbye_target_character = self.character_manager.active_characters[' '.join(name_group)]
+                            break
+                self.end_conversation(goodbye_target_character) # end conversation in game with current active character, and if no active characters are left in the conversation, end it entirely
+                if not self.in_conversation: # if conversation has ended, stop stepping through conversation right now
+                    return
 
         # Let the player know that they were heard
         #audio_file = synthesizer.synthesize(character.info['voice_model'], character.info['skyrim_voice_folder'], 'Beep boop. Let me think.')
@@ -249,7 +250,7 @@ class conversation_manager():
                 self.chat_manager.active_character.is_in_combat = 0
 
         
-        if transcribed_text is not None and not self.conversation_ended and transcribed_text != '' and self.in_conversation:
+        if ((transcribed_text is not None and transcribed_text != '') or self.radiant_dialogue) and not self.conversation_ended and self.in_conversation:
             self.get_response()
 
         # if the conversation is becoming too long, save the conversation to memory and reload

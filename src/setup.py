@@ -20,64 +20,6 @@ def initialise(config_file):
         except:
             logging.error(f"Could not load language '{config.language}'. Please set a valid language in config.ini\n")
 
-    def get_token_limit(config): # TODO: Move this to the openai_api.py file later or something, this doesn't belong here anymore
-        if config.is_local:
-            logging.info(f"Using local language model. Token limit set to {str(config.maximum_local_tokens)} (this number can be changed via the `maximum_local_tokens` setting in config.ini)")
-            try:
-                token_limit = config.maximum_local_tokens
-            except ValueError:
-                logging.error(f"Invalid maximum_local_tokens value: {str(config.maximum_local_tokens)}. It should be a valid integer. Please update your configuration.")
-                token_limit = 4096  # Default to 4096 in case of an error.
-            llm = config.llm
-        else:
-            llm = config.llm
-            if '/' in llm:
-                llm = llm.split('/')[-1]
-
-            if llm == 'gpt-3.5-turbo':
-                token_limit = 4096
-            elif llm == 'gpt-3.5-turbo-16k':
-                token_limit = 16384
-            elif llm == 'gpt-4':
-                token_limit = 8192
-            elif llm == 'gpt-4-32k':
-                token_limit = 32768
-            elif llm == 'claude-2':
-                token_limit = 100_000
-            elif llm == 'claude-instant-v1':
-                token_limit = 100_000
-            elif llm == 'palm-2-chat-bison':
-                token_limit = 8000
-            elif llm == 'palm-2-codechat-bison':
-                token_limit = 8000
-            elif llm == 'llama-2-7b-chat':
-                token_limit = 4096
-            elif llm == 'llama-2-13b-chat':
-                token_limit = 4096
-            elif llm == 'llama-2-70b-chat':
-                token_limit = 4096
-            elif llm == 'codellama-34b-instruct':
-                token_limit = 16000
-            elif llm == 'nous-hermes-llama2-13b':
-                token_limit = 4096
-            elif llm == 'weaver':
-                token_limit = 8000
-            elif llm == 'mythomax-L2-13b':
-                token_limit = 8192
-            elif llm == 'airoboros-l2-70b-2.1':
-                token_limit = 4096
-            elif llm == 'gpt-3.5-turbo-1106':
-                token_limit = 16_385
-            elif llm == 'gpt-4-1106-preview':
-                token_limit = 128_000
-            else:
-                logging.info(f"Could not find number of available tokens for {llm}. Defaulting to token count of {str(config.maximum_local_tokens)} (this number can be changed via the `maximum_local_tokens` setting in config.ini)")
-                token_limit = config.maximum_local_tokens
-
-        if token_limit <= 4096:
-            logging.info(f"{llm} has a low token count of {token_limit}. For better NPC memories, try changing to a model with a higher token count")
-        return token_limit
-
     # clean up old instances of exe runtime files
 
     config = config_loader.ConfigLoader(config_file)
@@ -94,8 +36,5 @@ def initialise(config_file):
     character_database = character_db.CharacterDB(config, xvasynth) # Create CharacterDB object using the config and client provided
     
     language_info = get_language_info(language_file) # Get language info from the language support file specified in config.ini
-    
-    token_limit = get_token_limit(config)
 
-
-    return config, character_database, language_info, token_limit, xvasynth
+    return config, character_database, language_info, xvasynth

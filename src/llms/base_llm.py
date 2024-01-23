@@ -7,12 +7,12 @@ import unicodedata
 inference_engine_name = "base_LLM"
 tokenizer_slug = "tiktoken" # default to tiktoken for now (Not always correct, but it's the fastest tokenizer and it works for openai's models, which a lot of users will be relying on probably)
 class base_LLM():
-    def __init__(self, conversation_manager, token_limit, language_info):
+    def __init__(self, conversation_manager):
         self.conversation_manager = conversation_manager
         self.config = self.conversation_manager.config
         self.tokenizer = None
-        self.token_limit = token_limit
-        self.language_info = language_info
+        self.token_limit = self.conversation_manager.token_limit
+        self.language_info = self.conversation_manager.language_info
         
         self.inference_engine_name = inference_engine_name
         self.tokenizer_slug = tokenizer_slug
