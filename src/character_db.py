@@ -245,7 +245,7 @@ class CharacterDB():
             if not os.path.exists(path):
                 os.makedirs(path)
             for character in self.characters:
-                json_file_path = os.path.join(path, str(self.config.xvasynth_game_id) + "_" + str(character['gender']) + "_" + str(character['race']) + "_" + str(character['name']) + "_" + str(character['refid_int']) + "_" + str(character['baseid_int']) + '.json')
+                json_file_path = os.path.join(path, str(self.config.game_id) + "_" + str(character['gender']) + "_" + str(character['race']) + "_" + str(character['name']) + "_" + str(character['refid_int']) + "_" + str(character['baseid_int']) + '.json')
                 json.dump(character, open(json_file_path, 'w'), indent=4)
         elif type == 'csv':
             df = pd.DataFrame(self.characters)

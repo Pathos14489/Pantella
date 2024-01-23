@@ -45,6 +45,9 @@ https://github.com/art-from-the-machine/Mantella#issues-qa
             if self.open_config_editor:
                 run_config_editor()
 
+            # [Game]
+            self.game_id = str(config['Game']['game_id']).lower() # skyrim, fallout4
+
             # [Paths]
             self.game_path = config['Paths']['skyrim_folder']
             self.xvasynth_path = config['Paths']['xvasynth_folder']
@@ -145,7 +148,6 @@ https://github.com/art-from-the-machine/Mantella#issues-qa
             self.use_cleanup = int(config['Speech']['use_cleanup']) == 1
             self.use_sr = int(config['Speech']['use_sr']) == 1
             self.xvasynth_base_url = config['Speech']['xvasynth_base_url']
-            self.xvasynth_game_id = config['Speech']['xvasynth_game_id']
             self.end_conversation_wait_time = float(config['Speech']['end_conversation_wait_time'])
             self.sentences_per_voiceline = int(config['Speech']['sentences_per_voiceline']) 
 

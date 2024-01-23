@@ -24,7 +24,10 @@ class Synthesizer:
 
         # check if xvasynth is running; otherwise try to run it
         self.check_if_xvasynth_is_running()
-
+        
+        # currrent game running
+        self.game = self.config.game_id
+        
         # output wav / lip files path
         self.output_path = utils.resolve_path('data')+'/data'
 
@@ -43,10 +46,9 @@ class Synthesizer:
 
         self.model_type = ''
         self.base_speaker_emb = ''
-        self.game_id = config.xvasynth_game_id
         
         # voice models path
-        self.model_path = f"{self.xvasynth_path}/resources/app/models/{self.game_id}/"
+        self.model_path = f"{self.xvasynth_path}/resources/app/models/{self.game}/"
 
         self.synthesize_url = f'{self.config.xvasynth_base_url}/synthesize'
         self.synthesize_batch_url = f'{self.config.xvasynth_base_url}/synthesize_batch'
@@ -57,7 +59,7 @@ class Synthesizer:
     
     def voices(self): # Send API request to xvasynth to get a list of characters
         print(f"Getting available voices from {self.get_available_voices_url}...")
-        requests.post(self.set_available_voices_url, json={'modelsPaths': json.dumps({self.game_id: self.model_path})}) # Set the available voices to the ones in the models folder
+        requests.post(self.set_available_voices_url, json={'modelsPaths': json.dumps({self.game: self.model_path})}) # Set the available voices to the ones in the models folder
         r = requests.post(self.get_available_voices_url) # Get the available voices
         if r.status_code == 200:
             print(f"Got available voices from {self.get_available_voices_url}...")
@@ -70,7 +72,7 @@ class Synthesizer:
             # print(f"Response text: {r.text}")
             data = None
         voices = []
-        for character in data[self.game_id]:
+        for character in data[self.game]:
             voices.append(character['voiceName'])
         print(f"Available xVASynth Voices: {voices}")
         print(f"Total xVASynth Voices: {len(voices)}")
@@ -133,7 +135,7 @@ class Synthesizer:
         face_wrapper_executable = f'{self.xvasynth_path}/resources/app/plugins/lip_fuz/FaceFXWrapper.exe';
         if os.path.exists(face_wrapper_executable):
             # Run FaceFXWrapper.exe
-            self.run_command(f'{face_wrapper_executable} "Skyrim" "USEnglish" "{self.xvasynth_path}/resources/app/plugins/lip_fuz/FonixData.cdf" "{final_voiceline_file}" "{final_voiceline_file.replace(".wav", "_r.wav")}" "{final_voiceline_file.replace(".wav", ".lip")}" "{voiceline}"')
+            self.run_command(f'{face_wrapper_executable} "{self.game.capitalize()}" "USEnglish" "{self.xvasynth_path}/resources/app/plugins/lip_fuz/FonixData.cdf" "{final_voiceline_file}" "{final_voiceline_file.replace(".wav", "_r.wav")}" "{final_voiceline_file.replace(".wav", ".lip")}" "{voiceline}"')
         else:
             logging.error(f'Could not find FaceFXWrapper.exe in "{Path(face_wrapper_executable).parent}" with which to create a Lip Sync file, download it from: https://github.com/Nukem9/FaceFXWrapper/releases')
             raise FileNotFoundError()
@@ -300,10 +302,19 @@ class Synthesizer:
     @utils.time_it
     def change_voice(self, character):
         voice = character.voice_model
+
         logging.info('Loading voice model...')
-        voice_path = f"{self.model_path}sk_{voice.lower().replace(' ', '')}"
+        
+        if self.game == "Fallout4": # get the correct voice model for Fallout 4
+            XVASynthAcronym="f4_"
+            XVASynthModNexusLink="https://www.nexusmods.com/fallout4/mods/49340?tab=files"
+        else: # get the correct voice model for Skyrim
+            XVASynthAcronym="sk_"
+            XVASynthModNexusLink = "https://www.nexusmods.com/skyrimspecialedition/mods/44184?tab=files"
+        voice_path = f"{self.model_path}{XVASynthAcronym}{voice.lower().replace(' ', '')}"
+        
         if not os.path.exists(voice_path+'.json'):
-            logging.error(f"Voice model does not exist in location '{voice_path}'. Please ensure that the correct path has been set in config.ini (xvasynth_folder) and that the model has been downloaded from https://www.nexusmods.com/skyrimspecialedition/mods/44184?tab=files (Ctrl+F for 'sk_{voice.lower().replace(' ', '')}').")
+            logging.error(f"Voice model does not exist in location '{voice_path}'. Please ensure that the correct path has been set in config.ini (xvasynth_folder) and that the model has been downloaded from {XVASynthModNexusLink} (Ctrl+F for '{XVASynthAcronym}{voice.lower().replace(' ', '')}').")
             raise VoiceModelNotFound()
 
         with open(voice_path+'.json', 'r', encoding='utf-8') as f:
