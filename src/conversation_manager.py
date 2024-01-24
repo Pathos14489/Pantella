@@ -1,27 +1,29 @@
-import src.tts as tts
-import src.stt as stt
-import src.utils as utils
+
 import sys
 import os
 import asyncio
+import logging
 import src.output_manager as output_manager
 import src.game_manager as game_manager
 import src.characters_manager as characters_manager # Character Manager class
 import src.behavior_manager as behavior_manager
 import src.language_model as language_models
+import src.tts as tts
+import src.stt as stt
+import src.utils as utils
+import src.character_db as character_db
 import src.setup as setup
-import logging
 
 class conversation_manager():
     def __init__(self, config_file):
-        self.config, self.character_database, self.language_info = setup.initialise(
+        self.config, self.language_info = setup.initialise(
             config_file=config_file,
         )
         # self.config
-        # self.character_database
         # self.language_info
         self.token_limit = self.config.maximum_local_tokens # Get token limit from config.ini
-        self.synthesizer = tts.create_Synthesizer(self) # Create Synthesizer object using the config provided
+        self.synthesizer = tts.create_Synthesizer(self) # Create Synthesizer object based on config
+        self.character_database = character_db.CharacterDB(self) # Create Character Database Manager based on config
         self.llm, self.tokenizer = language_models.create_LLM(self) # Create LLM and Tokenizer based on config
         self.game_state_manager = game_manager.GameStateManager(self)
         self.chat_manager = output_manager.ChatManager(self)

@@ -6,12 +6,11 @@ import os
 import pandas as pd
 import csv
 class CharacterDB():
-    def __init__(self, config, xvasynth=None): # character_database_directory is the path to a character directory where each character is a seperate json file
-        self.config = config
-        if xvasynth == None:
-            xvasynth = tts.Synthesizer(config)
-        self.xvasynth = xvasynth # xvasynth is the xvasynth synthesizer object
-        self.character_database_path = config.character_database_file
+    def __init__(self, conversation_manager): # character_database_directory is the path to a character directory where each character is a seperate json file
+        self.conversation_manager = conversation_manager
+        self.config = self.conversation_manager.config
+        self.xvasynth = conversation_manager.synthesizer # TODO: Update xvasynth references to be genericized for new tts types
+        self.character_database_path = self.config.character_database_file
         self.characters = []
         self.named_index = {}
         self.baseid_int_index = {}
@@ -19,11 +18,11 @@ class CharacterDB():
         self.invalid = []
         self.db_type = None
         # make sure voice_model_ref_ids_file exists
-        if not os.path.exists(config.voice_model_ref_ids_file):
-            logging.error(f"Could not find voice_model_ref_ids_file at {config.voice_model_ref_ids_file}. Please download the correct file for your game, or correct the filepath in your config.ini and try again.")
+        if not os.path.exists(self.config.voice_model_ref_ids_file):
+            logging.error(f"Could not find voice_model_ref_ids_file at {self.config.voice_model_ref_ids_file}. Please download the correct file for your game, or correct the filepath in your config.ini and try again.")
             raise FileNotFoundError
-        if config.voice_model_ref_ids_file != "" and os.path.exists(config.voice_model_ref_ids_file):
-            with open(config.voice_model_ref_ids_file, 'r') as f:
+        if self.config.voice_model_ref_ids_file != "" and os.path.exists(self.config.voice_model_ref_ids_file):
+            with open(self.config.voice_model_ref_ids_file, 'r') as f:
                 self.voice_model_ids = json.load(f)
         else:
             self.voice_model_ids = {}
