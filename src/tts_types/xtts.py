@@ -73,13 +73,25 @@ class Synthesizer(base_tts.base_Synthesizer): # Gets token count from OpenAI's e
 
         # Request to switch the voice model
         if voice != self.last_voice:
-            requests.post(self.switch_model_url, json={"model_name": model_voice})
+            try:
+                requests.post(self.switch_model_url, json={"model_name": model_voice})
+            except requests.exceptions.RequestException as e:
+                # if 404 error, the model is already loaded
+                if e.response.status_code == 404:
+                    pass
+                else:
+                    # Log the error
+                    logging.error(f'Could not switch model. Error: {e}')
+                    # Wait for user input before exiting
+                    logging.error(f'You should run xTTS api server before running Mantella.')
+                    input('\nPress any key to stop Mantella...')
+                    sys.exit(0)
             self.last_voice = voice
             logging.info(f'Voice model {self.last_voice} loaded')
         elif voice == self.last_voice:
             logging.info(f'Continuing with {self.last_voice}.')
             pass
-        
+
         # Update the last used voice
         self.last_voice = voice
 
