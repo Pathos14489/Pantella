@@ -72,8 +72,14 @@ class Synthesizer(base_tts.base_Synthesizer): # Gets token count from OpenAI's e
             model_voice = f"{model_voice.lower().replace(' ', '')}"
 
         # Request to switch the voice model
-        requests.post(self.switch_model_url, json={"model_name": model_voice})
-
+        if voice != self.last_voice:
+            requests.post(self.switch_model_url, json={"model_name": model_voice})
+            self.last_voice = voice
+            logging.info(f'Voice model {self.last_voice} loaded')
+        elif voice == self.last_voice:
+            logging.info(f'Continuing with {self.last_voice}.')
+            pass
+        
         # Update the last used voice
         self.last_voice = voice
 
