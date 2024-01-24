@@ -76,7 +76,7 @@ class Characters:
         ampm = None
         if self.conversation_manager.current_in_game_time <= 12:
             ampm = "AM"
-        elif time > 12:
+        elif self.conversation_manager.current_in_game_time > 12:
             time = f"{self.conversation_manager.current_in_game_time-12}" # Convert to 12 hour time because asking the AI to convert to 12 hour time is unreliable. Example: half the time they say 15 in the afternoon instead of 3pm.
             ampm = "PM"
         if len(self.active_characters) == 1: # SingleNPC style context
@@ -89,7 +89,7 @@ class Characters:
                 "relationship_summary": self.relationship_summary,
                 "bios": self.bios,
             }
-        replacement_dict["time"] = self.conversation_manager.current_in_game_time
+        replacement_dict["time"] = time
         replacement_dict["ampm"] = ampm
         replacement_dict["time_group"] = time_group
         replacement_dict["location"] = self.conversation_manager.current_location
