@@ -19,6 +19,8 @@ def setup_openai_secret_key(file_name):
 
 class LLM(base_LLM.base_LLM):
     def __init__(self, conversation_manager):
+        global inference_engine_name
+        global tokenizer_slug
         super().__init__(conversation_manager)
         self.inference_engine_name = inference_engine_name
 

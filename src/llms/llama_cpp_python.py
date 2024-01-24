@@ -17,6 +17,7 @@ llama_model = None # Used to store the llama-cpp-python model so it can be reuse
 class LLM(base_LLM.base_LLM): # Uses llama-cpp-python as the LLM inference engine
     def __init__(self, conversation_manager):
         global llama_model
+        global inference_engine_name
         super().__init__(conversation_manager)
         self.inference_engine_name = inference_engine_name
         self.config.is_local = True
