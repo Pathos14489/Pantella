@@ -13,12 +13,12 @@ class Synthesizer(base_tts.base_Synthesizer): # Gets token count from OpenAI's e
     def __init__(self, conversation_manager):
         super().__init__(conversation_manager)
         self.xtts_data = self.config.xtts_data
-        self._set_tts_settings_and_test_if_serv_running()
         self.xtts_base_url = self.config.xtts_base_url
         self.synthesize_url_xtts = self.xtts_base_url + "/tts_to_audio/"
         self.switch_model_url = self.xtts_base_url + "/switch_model"
         self.xtts_set_tts_settings = self.xtts_base_url + "/set_tts_settings/"
         self.xtts_get_models_list = self.xtts_base_url + "/get_models_list/"
+        self._set_tts_settings_and_test_if_serv_running()
         self.available_models = self._get_available_models()
         self.official_model_list = ["main","v2.0.3","v2.0.2","v2.0.1","v2.0.0"]
         logging.info(f'Available models: {self.available_models}')
