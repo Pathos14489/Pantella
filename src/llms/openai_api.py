@@ -10,7 +10,6 @@ except Exception as e:
     loaded = False
 
 inference_engine_name = "openai"
-tokenizer_slug = "tiktoken"
 
 def setup_openai_secret_key(file_name):
     with open(file_name, 'r') as f:
@@ -23,8 +22,7 @@ class LLM(base_LLM.base_LLM):
         global tokenizer_slug
         super().__init__(conversation_manager)
         self.inference_engine_name = inference_engine_name
-
-        self.tokenizer_slug = tokenizer_slug # Fastest tokenizer for OpenAI models, change if you want to use a different tokenizer (use 'embedding' for compatibility with any model using the openai API)
+        self.tokenizer_slug = "tiktoken" # Fastest tokenizer for OpenAI models, change if you want to use a different tokenizer (use 'embedding' for compatibility with any model using the openai API)
 
         llm = self.config.llm
         if llm == 'gpt-3.5-turbo':
