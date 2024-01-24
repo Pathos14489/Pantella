@@ -299,7 +299,6 @@ class base_LLM():
                 if retries == 0:
                     logging.error(f"Could not connect to LLM API\nError:")
                     logging.error(e)
-                    print(e)
                     input('Press enter to continue...')
                     exit()
                 logging.error(f"LLM API Error: {e}")
