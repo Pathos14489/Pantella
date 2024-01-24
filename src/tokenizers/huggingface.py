@@ -6,7 +6,6 @@ try:
     from huggingface import transformers
     loaded = True
 except Exception as e:
-    logging.error(f"Failed to load huggingface transformers! Please check that you have installed it correctly.")
     loaded = False
 tokenizer_slug = "huggingface"
 class Tokenizer(tokenizer.base_Tokenizer): # Tokenizes(only availble for counting the tokens in a string presently for local_models), and parses and formats messages for use with the language model
