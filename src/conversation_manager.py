@@ -46,6 +46,8 @@ class conversation_manager():
         self.conversation_started_radiant = False # Initialised at start of every conversation in await_and_setup_conversation()
         self.radient_dialogue = False # Initialised at start of every conversation in await_and_setup_conversation()
 
+        self.conversation_step = 0 # The current step of the conversation - 0 is before any conversation has started, 1 is the first step of the conversation, etc.
+
     def get_context(self): # Returns the current context(in the form of a list of messages) for the given active characters in the ongoing conversation
         system_prompt = self.character_manager.get_system_prompt()
         msgs = [{'role': self.config.system_name, 'content': system_prompt}]
@@ -148,6 +150,7 @@ class conversation_manager():
         if self.character_manager.active_character_count() <= 0:
             self.in_conversation = False
             self.conversation_ended = True
+            self.conversation_step = 0 # reset conversation step count
             logging.info('Conversation ended')
 
     def await_and_setup_conversation(self): # wait for player to select an NPC and setup the conversation when outside of conversation
@@ -156,6 +159,7 @@ class conversation_manager():
 
         self.character_manager = characters_manager.Characters(self) # Reset character manager
         self.transcriber.call_count = 0 # reset radiant back and forth count
+        self.conversation_step += 1
 
         logging.info('\nConversations not starting when you select an NPC? Post an issue on the GitHub page: https://github.com/art-from-the-machine/Mantella')
         logging.info('\nWaiting for player to select an NPC...')
@@ -192,6 +196,7 @@ class conversation_manager():
         self.conversation_ended = False
 
     def step(self): # process player input and NPC response until conversation ends at each step of the conversation
+        self.conversation_step += 1
         if self.in_conversation == False:
             logging.info('Cannot step through conversation when not in conversation')
             self.conversation_ended = True
