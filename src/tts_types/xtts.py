@@ -41,8 +41,7 @@ class Synthesizer(base_tts.base_Synthesizer): # Gets token count from OpenAI's e
         try:
             # Sending a POST request to the API endpoint
             logging.info(f'Attempting to connect to xTTS...')
-            tts_data_dict = json.loads(self.xtts_data.replace('\n', ''))
-            response = requests.post(self.xtts_set_tts_settings, json=tts_data_dict)
+            response = requests.post(self.xtts_set_tts_settings, json=self.xtts_data)
             response.raise_for_status() 
         except requests.exceptions.RequestException as e:
             # Log the error
