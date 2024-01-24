@@ -31,9 +31,6 @@ class Synthesizer(base_tts.base_Synthesizer): # Gets token count from OpenAI's e
         self.debug_mode = self.config.debug_mode
         self.play_audio_from_script = self.config.play_audio_from_script
 
-        # last active voice model
-        self.last_voice = ''
-
         self.model_type = ''
         self.base_speaker_emb = ''
         
