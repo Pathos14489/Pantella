@@ -15,24 +15,19 @@ import src.character_db as character_db
 import src.setup as setup
 
 class conversation_manager():
-    def __init__(self, config_file):
+    def __init__(self, config_file, initialize=True):
         self.config, self.language_info = setup.initialise(
             config_file=config_file,
         )
         # self.config
         # self.language_info
         self.token_limit = self.config.maximum_local_tokens # Get token limit from config.ini
-        self.synthesizer = tts.create_Synthesizer(self) # Create Synthesizer object based on config
-        self.character_database = character_db.CharacterDB(self) # Create Character Database Manager based on config
-        self.llm, self.tokenizer = language_models.create_LLM(self) # Create LLM and Tokenizer based on config
-        self.game_state_manager = game_manager.GameStateManager(self)
-        self.chat_manager = output_manager.ChatManager(self)
-        self.transcriber = stt.Transcriber(self.game_state_manager, self.config)
-        self.behavior_manager = behavior_manager.BehaviorManager(self)
+        self.synthesizer = tts.create_Synthesizer(self) # Create Synthesizer object based on config - required by scripts for checking voice models, so is left out of self.initialize() intentionally
+        self.character_database = character_db.CharacterDB(self) # Create Character Database Manager based on config - required by scripts for merging, patching and converting character databases, so is left out of self.initialize() intentionally
         self.mantella_version = '0.11-p'
-        
-        logging.info(f'\nMantella v{self.mantella_version}')
-        
+        if initialize:
+            self.initialize()
+            logging.info(f'\nMantella v{self.mantella_version}')
         self.character_manager = None # Initialised at start of every conversation in await_and_setup_conversation()
         self.check_mcm_mic_status()
         self.in_conversation = False # Whether or not the player is in a conversation
@@ -47,6 +42,13 @@ class conversation_manager():
         self.radient_dialogue = False # Initialised at start of every conversation in await_and_setup_conversation()
 
         self.conversation_step = 0 # The current step of the conversation - 0 is before any conversation has started, 1 is the first step of the conversation, etc.
+
+    def initialize(self):
+        self.llm, self.tokenizer = language_models.create_LLM(self) # Create LLM and Tokenizer based on config
+        self.game_state_manager = game_manager.GameStateManager(self)
+        self.chat_manager = output_manager.ChatManager(self)
+        self.transcriber = stt.Transcriber(self.game_state_manager, self.config)
+        self.behavior_manager = behavior_manager.BehaviorManager(self)
 
     def get_context(self): # Returns the current context(in the form of a list of messages) for the given active characters in the ongoing conversation
         system_prompt = self.character_manager.get_system_prompt()
