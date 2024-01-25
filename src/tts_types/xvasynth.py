@@ -149,24 +149,24 @@ class Synthesizer(base_tts.base_Synthesizer): # Gets token count from OpenAI's e
         return final_voiceline_file
     
     def voices(self): # Send API request to xvasynth to get a list of characters
-        print(f"Getting available voices from {self.get_available_voices_url}...")
+        logging.info(f"Getting available voices from {self.get_available_voices_url}...")
         requests.post(self.set_available_voices_url, json={'modelsPaths': json.dumps({self.game: self.model_path})}) # Set the available voices to the ones in the models folder
         r = requests.post(self.get_available_voices_url) # Get the available voices
         if r.status_code == 200:
-            print(f"Got available voices from {self.get_available_voices_url}...")
-            # print(f"Response code: {r.status_code}")
-            # print(f"Response text: {r.text}")
+            logging.info(f"Got available voices from {self.get_available_voices_url}...")
+            # logging.info(f"Response code: {r.status_code}")
+            # logging.info(f"Response text: {r.text}")
             data = r.json()
         else:
-            print(f"Could not get available voices from {self.get_available_voices_url}...")
-            # print(f"Response code: {r.status_code}")
-            # print(f"Response text: {r.text}")
+            logging.info(f"Could not get available voices from {self.get_available_voices_url}...")
+            # logging.info(f"Response code: {r.status_code}")
+            # logging.info(f"Response text: {r.text}")
             data = None
         voices = []
         for character in data[self.game]:
             voices.append(character['voiceName'])
-        print(f"Available xVASynth Voices: {voices}")
-        print(f"Total xVASynth Voices: {len(voices)}")
+        logging.info(f"Available xVASynth Voices: {voices}")
+        logging.info(f"Total xVASynth Voices: {len(voices)}")
         return voices
 
     @utils.time_it
@@ -276,8 +276,8 @@ class Synthesizer(base_tts.base_Synthesizer): # Gets token count from OpenAI's e
     
 
     def merge_audio_files(self, audio_files, voiceline_file_name):
-        print(f'Merging audio files: {audio_files}')
-        print(f'Output file: {voiceline_file_name}')
+        logging.info(f'Merging audio files: {audio_files}')
+        logging.info(f'Output file: {voiceline_file_name}')
         merged_audio = np.array([])
 
         for audio_file in audio_files:

@@ -29,8 +29,8 @@ class base_LLM():
     
     @utils.time_it
     def chatgpt_api(self, input_text, messages): # Creates a synchronouse completion for the messages provided to generate response for the assistant to the user. TODO: remove later
-        print(f"ChatGPT API: {input_text}")
-        print(f"Messages: {messages}")
+        logging.info(f"ChatGPT API: {input_text}")
+        logging.info(f"Messages: {messages}")
         if not input_text:
             logging.warning('Empty input text, skipping...')
             return "", messages
@@ -141,8 +141,8 @@ class base_LLM():
         num_sentences = 0 # used to keep track of how many sentences have been generated
         voice_line_sentences = 0 # used to keep track of how many sentences have been generated for the current voice line
         retries = 5
-        print("Signifier: ", self.config.message_signifier)
-        print("Format: ", self.config.message_format)
+        logging.info("Signifier: ", self.config.message_signifier)
+        logging.info("Format: ", self.config.message_format)
         while retries >= 0: # keep trying to connect to the API until it works
             # if full_reply != '': # if the full reply is not empty, then the LLM has generated a response and the next_author should be extracted from the start of the generation
             #     self.conversation_manager.messages.append({"role": next_author, "content": full_reply})
@@ -336,7 +336,7 @@ class base_LLM():
             audio_file = self.conversation_manager.synthesizer.synthesize(self.conversation_manager.chat_manager.active_character, ' ' + string + ' ') # TODO: Make a config setting. Spaces help xVASynth apparently, they might not be good for other TTS engines
         except Exception as e:
             logging.error(f"xVASynth Error: {e}")
-            print(e)
+            logging.info(e)
             input('Press enter to continue...')
             exit()
 

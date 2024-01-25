@@ -25,7 +25,7 @@ class GameStateManager:
                     f.write(text)
                 break
             except PermissionError:
-                print(f'Permission denied to write to {text_file_name}.txt. Retrying...')
+                logging.info(f'Permission denied to write to {text_file_name}.txt. Retrying...')
                 if attempt + 1 == max_attempts:
                     raise
                 else:
@@ -97,7 +97,8 @@ class GameStateManager:
         self.write_game_info('_mantella_current_actor', character_name)
 
         character_id = '0'
-        self.write_game_info('_mantella_current_actor_id', character_id)
+        self.write_game_info('_mantella_current_actor_ref_id', character_id)
+        self.write_game_info('_mantella_current_actor_base_id', character_id)
 
         location = 'Skyrim'
         self.write_game_info('_mantella_current_location', location)
@@ -108,15 +109,21 @@ class GameStateManager:
         return character_name, character_id, location, in_game_time
     
 
-    def load_character_name_id(self):
+    def load_character(self):
         """Wait for character ID to populate then load character name"""
 
-        character_id = self.load_data_when_available('_mantella_current_actor_id', '')
+        character_base_id = self.load_data_when_available('_mantella_current_actor_base_id', '')
+        character_ref_id = self.load_data_when_available('_mantella_current_actor_ref_id', '')
+        if (character_base_id == '0' and character_ref_id == '0') or (character_base_id == '' and character_ref_id == ''): # if character ID is 0 or empty, check old id file for refid
+            with open(f'{self.game_path}/_mantella_current_actor_id.txt', 'r') as f:
+                character_id = f.readline().strip()
+            character_ref_id = character_id
+            character_base_id = None # No base ID available
         time.sleep(0.5) # wait for file to register
         with open(f'{self.game_path}/_mantella_current_actor.txt', 'r') as f:
             character_name = f.readline().strip()
         
-        return character_id, character_name
+        return character_name, character_ref_id, character_base_id
     
     def load_player_name(self):
         """Wait for player name to populate"""
@@ -161,7 +168,7 @@ class GameStateManager:
 
         # None == in-game character chosen by spell
         if debug_character_name == 'None':
-            character_id, character_name = self.load_character_name_id()
+            character_name, character_ref_id, character_base_id = self.load_character()
         else:
             character_name = debug_character_name
             debug_character_name = ''
@@ -171,9 +178,9 @@ class GameStateManager:
         player_gender = self.load_player_gender()
         radiant_dialogue = self.load_radiant_dialogue() # get the radiant dialogue setting from _mantella_radiant_dialogue.txt
 
-        character_name, character_id, location, in_game_time = self.write_dummy_game_info(character_name)
+        character_name, character_ref_id, character_base_id, location, in_game_time = self.write_dummy_game_info(character_name)
 
-        return character_name, character_id, location, in_game_time, player_name, player_race, player_gender, radiant_dialogue
+        return character_name, character_ref_id, character_base_id, location, in_game_time, player_name, player_race, player_gender, radiant_dialogue
     
     
     def load_unnamed_npc(self, character_name):
@@ -248,7 +255,7 @@ class GameStateManager:
         """Load game variables from _mantella_ files in Skyrim folder (data passed by the Mantella spell)"""
 
         if self.conversation_manager.config.debug_mode == '1':
-            character_name, character_id, location, in_game_time, player_name, player_race, player_gender = self.debugging_setup(self.conversation_manager.config.debug_character_name)
+            character_name, character_ref_id, character_base_id, location, in_game_time, player_name, player_race, player_gender = self.debugging_setup(self.conversation_manager.config.debug_character_name)
         else:
             location = self.get_current_location()
             in_game_time = self.get_current_game_time()
@@ -256,28 +263,30 @@ class GameStateManager:
         # tell Skyrim papyrus script to start waiting for voiceline input
         self.write_game_info('_mantella_end_conversation', 'False')
 
-        character_id, character_name = self.load_character_name_id() # get the character's name and id from _mantella_current_actor.txt and _mantella_current_actor_id.txt
+        character_name, character_ref_id, character_base_id = self.load_character() # get the character's name and id from _mantella_current_actor.txt and _mantella_current_actor_id.txt
         
         player_name = self.load_player_name() # get the player's name from _mantella_player_name.txt
         player_race = self.load_player_race() # get the player's race from _mantella_player_race.txt
         player_gender = self.load_player_gender() # get player's gender from _mantella_player_gender.txt
         radiant_dialogue = self.load_radiant_dialogue() # get the radiant dialogue setting from _mantella_radiant_dialogue.txt
         
+        
+        character_info, is_generic_npc = self.conversation_manager.character_database.get_character(character_name, character_ref_id, character_base_id) # get character info from character database
         # TODO: Improve character lookup to be more accurate and to include generating character stats inspired by their generic name for generic NPCs instead of leaving them generic.
         # (example: make a backstory for a Bandit because the NPC was named Bandit, then generate a real name, and background inspired by that vague name for use in-corversation)
-        try: # load character from skyrim_characters json directory 
-            character_info = self.conversation_manager.character_database.named_index[character_name]
-            logging.info(f"Found {character_name} in character database as a named NPC: {character_info['name']}")
-            is_generic_npc = False
-        except KeyError: # character not found
-            try: # try searching by ID
-                logging.info(f"Could not find {character_name} in character database. Searching by ID {character_id}...")
-                character_info = self.conversation_manager.character_database.baseid_int_index[character_id]
-                is_generic_npc = False
-            except KeyError:
-                logging.info(f"NPC '{character_name}' could not be found in character database. If this is not a generic NPC, please ensure '{character_name}' exists in the CSV's 'name' column exactly as written here, and that there is a voice model associated with them.")
-                character_info = self.load_unnamed_npc(character_name)
-                is_generic_npc = True
+        # try: # load character from skyrim_characters json directory 
+        #     character_info = self.conversation_manager.character_database.named_index[character_name]
+        #     logging.info(f"Found {character_name} in character database as a named NPC: {character_info['name']}")
+        #     is_generic_npc = False
+        # except KeyError: # character not found
+        #     try: # try searching by ID
+        #         logging.info(f"Could not find {character_name} in character database. Searching by ID {character_id}...")
+        #         character_info = self.conversation_manager.character_database.baseid_int_index[character_id]
+        #         is_generic_npc = False
+        #     except KeyError:
+        #         logging.info(f"NPC '{character_name}' could not be found in character database. If this is not a generic NPC, please ensure '{character_name}' exists in the CSV's 'name' column exactly as written here, and that there is a voice model associated with them.")
+        #         character_info = self.load_unnamed_npc(character_name)
+        #         is_generic_npc = True
 
         location = self.get_current_location(location) # Check if location has changed since last check
 
@@ -286,7 +295,8 @@ class GameStateManager:
         actor_voice_model = self.load_data_when_available('_mantella_actor_voice', '')
         actor_voice_model_name = actor_voice_model.split('<')[1].split(' ')[0]
         character_info['in_game_voice_model'] = actor_voice_model_name
-        character_info['character_id'] = character_id
+        character_info['refid_int'] = character_ref_id
+        character_info['baseid_int'] = character_base_id
         character_info['character_name'] = character_name
         character_info['in_game_voice_model_id'] = actor_voice_model.split('(')[1].split(')')[0]
 

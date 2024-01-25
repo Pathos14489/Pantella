@@ -32,7 +32,7 @@ def create_LLM(conversation_manager):
         elif "tokenizer_slug" in llm.__dict__: # or if the LLM has a tokenizer slug specified
             logging.info(f"Using {conversation_manager.config.inference_engine}'s recommended tokenizer")
             if "client" in llm.__dict__: # if the LLM has a client specified (only really needed for openai at this point)
-                print(llm.tokenizer_slug)
+                logging.info(llm.tokenizer_slug)
                 tokenizer = tokenizers.Tokenizer_Types[llm.tokenizer_slug].Tokenizer(conversation_manager, llm.client)
             else:
                 tokenizer = tokenizers.Tokenizer_Types[llm.tokenizer_slug].Tokenizer(conversation_manager)

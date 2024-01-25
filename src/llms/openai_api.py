@@ -86,20 +86,20 @@ class LLM(base_LLM.base_LLM):
     
     @utils.time_it
     def create(self, messages):
-        # print(f"cMessages: {messages}")
+        # logging.info(f"cMessages: {messages}")
         retries = 5
         completion = None
         while retries > 0 and completion is None:
             try:
                 prompt = self.tokenizer.get_string_from_messages(messages)
                 prompt += self.tokenizer.start_message(self.config.assistant_name) # Start empty message from no one to let the LLM generate the speaker by split \n
-                print(f"Raw Prompt: {prompt}")
+                logging.info(f"Raw Prompt: {prompt}")
 
                 completion = self.client.completions.create(
                     model=self.config.llm, prompt=prompt, max_tokens=self.config.max_tokens
                 )
                 completion = completion.choices[0].text
-                print(f"Completion:",completion)
+                logging.info(f"Completion:",completion)
             except Exception as e:
                 logging.warning('Could not connect to LLM API, retrying in 5 seconds...')
                 logging.warning(e)
@@ -116,7 +116,7 @@ class LLM(base_LLM.base_LLM):
     
     @utils.time_it
     def acreate(self, messages): # Creates a completion stream for the messages provided to generate a speaker and their response
-        # print(f"aMessages: {messages}")
+        # logging.info(f"aMessages: {messages}")
         retries = 5
         completion = None
         while retries > 0 and completion is None:
@@ -131,7 +131,7 @@ class LLM(base_LLM.base_LLM):
             except Exception as e:
                 logging.warning('Could not connect to LLM API, retrying in 5 seconds...')
                 logging.warning(e)
-                print(e)
+                logging.info(e)
                 if retries == 1:
                     logging.error('Could not connect to LLM API after 5 retries, exiting...')
                     input('Press enter to continue...')

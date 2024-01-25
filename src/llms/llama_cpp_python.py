@@ -44,22 +44,22 @@ class LLM(base_LLM.base_LLM): # Uses llama-cpp-python as the LLM inference engin
         logging.info(f"Testing llama-cpp-python...")
         test_prompt = "Hello, I am a llama-cpp-python test prompt. I am used to test llama-cpp-python's functi"
         test_completion = self.llm.create_completion(test_prompt, max_tokens=10)
-        print(f"Test Completion: {test_completion}")
+        logging.info(f"Test Completion: {test_completion}")
 
     @utils.time_it
     def create(self, messages):
-        # print(f"cMessages: {messages}")
+        # logging.info(f"cMessages: {messages}")
         retries = 5
         completion = None
         while retries > 0 and completion is None:
             try:
                 prompt = self.tokenizer.get_string_from_messages(messages)
                 prompt += self.tokenizer.start_message(self.config.assistant_name) # Start empty message from no one to let the LLM generate the speaker by split \n
-                print(f"Raw Prompt: {prompt}")
+                logging.info(f"Raw Prompt: {prompt}")
 
                 completion = self.llm.create_completion(prompt, max_tokens=self.config.max_tokens, top_k=self.config.top_k, top_p=self.config.top_p, temperature=self.config.temperature, repeat_penalty=self.config.repeat_penalty)
                 completion = completion["choices"][0]["text"]
-                print(f"Completion:",completion)
+                logging.info(f"Completion:",completion)
             except Exception as e:
                 logging.warning('Error generating completion, retrying in 5 seconds...')
                 logging.warning(e)
@@ -75,10 +75,10 @@ class LLM(base_LLM.base_LLM): # Uses llama-cpp-python as the LLM inference engin
         return completion
     
     def acreate(self, messages): # Creates a completion stream for the messages provided to generate a speaker and their response
-        print(f"aMessages: {messages}")
+        logging.info(f"aMessages: {messages}")
         retries = 5
         while retries > 0:
-            print(f"Retries: {retries}")
+            logging.info(f"Retries: {retries}")
             try:
                 prompt = self.tokenizer.get_string_from_messages(messages)
                 prompt += self.tokenizer.start_message("[name]") # Start empty message from no one to let the LLM generate the speaker by split \n

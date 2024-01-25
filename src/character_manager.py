@@ -11,6 +11,9 @@ class Character:
         logging.info(f"Loading character: {self.info['name']}")
         for key, value in info.items():
             setattr(self, key, value) # set all character info as attributes of the character object to support arbitrary character info
+        # Legend for a few of the more important attributes:
+        # self.refid_int - The refid of the character as an integer - This is the id of the character in the game, so it is unique to each every single character in the game.
+        # self.baseid_int - The baseid of the character as an integer - This is the id of the character in the editor, so it is unique to each character type (e.g. all bandits have the same baseid, but all one of a single unique character has the same baseid as well)
         self.language = self.characters_manager.conversation_manager.language_info['language']
         self.is_generic_npc = is_generic_npc
         self.conversation_summary = ''
@@ -172,7 +175,7 @@ class Character:
     #             if value != None:
     #                 new_r_dict[key] = str(value).replace("/r", "")
     #         r_dict = new_r_dict
-    #         print(r_dict)
+    #         logging.info(r_dict)
     #         return s.format(**r_dict)
 
     #     if len(keys) == 1: # Single NPC prompt
