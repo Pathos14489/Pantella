@@ -9,7 +9,7 @@ class CharacterDB():
     def __init__(self, conversation_manager): # character_database_directory is the path to a character directory where each character is a seperate json file
         self.conversation_manager = conversation_manager
         self.config = self.conversation_manager.config
-        self.xvasynth = conversation_manager.synthesizer # TODO: Update xvasynth references to be genericized for new tts types
+        self.synthesizer = conversation_manager.synthesizer
         self.character_database_path = self.config.character_database_file
         self.characters = []
         self.named_index = {}
@@ -123,37 +123,55 @@ class CharacterDB():
         return folder
     
     def verify_characters(self):
-        xvasynth_available_voices = self.xvasynth.voices()
+        synthesizer_available_voices = self.synthesizer.voices()
         self.valid = []
         self.invalid = []
         self.unused_voices = []
         for voice in self.all_voice_models:
+            spaced_voice = ""
+            for letter in voice.replace(' ', ''):
+                if letter.isupper():
+                    spaced_voice += " "
+                spaced_voice += letter
+            unspaced_voice = voice.replace(' ', '')
             voice_folder = self.get_voice_folder_by_voice_model(voice)
-            if voice_folder in xvasynth_available_voices: # If the voice folder is available, add it to the valid list
-                self.valid.append(voice_folder.replace(' ', ''))
-            elif voice in self.voice_folders: # If the voice model is a valid voice folder, add it to the valid list
-                self.valid.append(voice.replace(' ', ''))
+            if voice_folder in synthesizer_available_voices:
+                self.valid.append(voice_folder)
+            elif voice in synthesizer_available_voices:
+                self.valid.append(voice)
+            elif unspaced_voice in synthesizer_available_voices:
+                self.valid.append(unspaced_voice)
+            elif spaced_voice in synthesizer_available_voices:
+                self.valid.append(spaced_voice)
+            # elif voice in self.voice_folders: # If the voice model is a valid voice folder, add it to the valid list
+            #     self.valid.append(voice.replace(' ', ''))
             else:
                 print(f"invalid voice: {voice_folder}")
                 self.invalid.append(voice_folder)
                 self.invalid.append(voice)
-        for voice in xvasynth_available_voices:
+        for voice in synthesizer_available_voices:
             # add spaces before each capital letter
             spaced_voice = ""
             for letter in voice.replace(' ', ''):
                 if letter.isupper():
                     spaced_voice += " "
                 spaced_voice += letter
-            if voice not in self.valid and voice.replace(' ', '') not in self.valid and spaced_voice not in self.valid:
+            unspaced_voice = voice.replace(' ', '')
+            if voice not in self.valid:
                 self.unused_voices.append(voice)
                 print(f"unused voice: {voice}")
+        new_valid = []
+        for voice in self.valid:
+            if voice not in self.unused_voices:
+                new_valid.append(voice)
+        self.valid = new_valid
         for voice in self.unused_voices:
             for character in self.characters:
                 if character['skyrim_voice_folder'] == voice or character['voice_model'] == voice:
                     print(f"Character '{character['name']}' uses unused voice model '{voice}'")
         print(f"Valid voices found in character database: {len(self.valid)}/{len(self.all_voice_models)}")
 
-        print(f"Total unused voices: {len(self.unused_voices)}/{len(xvasynth_available_voices)}")
+        print(f"Total unused voices: {len(self.unused_voices)}/{len(synthesizer_available_voices)}")
         if len(self.invalid) > 0:
             print(f"Invalid voices found in character database: {self.invalid}. Please check that the voices are installed and try again.")
             for character in self.characters:
@@ -164,10 +182,16 @@ class CharacterDB():
 
     def has_character(self, character):
         character_in_db = False
+        characters_with_same_name = []
         for db_character in self.characters:
             if character['name'] == db_character['name']:
+                characters_with_same_name.append(db_character)
+        if len(characters_with_same_name) > 0:
+            for db_character in characters_with_same_name:
+                if character['refid_int'] is not None and character['refid_int'] == db_character['refid_int']:
                     character_in_db = True
-                    break
+                elif character['baseid_int'] is not None and character['baseid_int'] == db_character['baseid_int']:
+                    character_in_db = True
         return character_in_db
     
     def compare(self,db): # Compare this DB with another DB and return the differences - Useful for comparing a DB with a DB that has been patched, can be used to generate changelogs
@@ -186,11 +210,11 @@ class CharacterDB():
                 diff = True
             else:
                 character['differences'] = []
+                character['diff_type'] = "edited_character"
                 for key in character:
                     if key in db.named_index[character['name']]:
                         if str(character[key]) != str(db.named_index[character['name']][key]):
                             character['differences'].append({"key":key,"other":db.named_index[character['name']][key]})
-                            character["diff_type"] = "edited_character"
                             diff = True
             if diff:
                 differences.append(character)

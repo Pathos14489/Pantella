@@ -17,7 +17,7 @@ class Synthesizer(base_tts.base_Synthesizer): # Gets token count from OpenAI's e
         self.synthesize_url_xtts = self.xtts_base_url + "/tts_to_audio/"
         self.switch_model_url = self.xtts_base_url + "/switch_model"
         self.xtts_set_tts_settings = self.xtts_base_url + "/set_tts_settings/"
-        self.xtts_get_models_list = self.xtts_base_url + "/get_models_list/"
+        self.xtts_get_models_list = self.xtts_base_url + "/speakers_list/"
         self._set_tts_settings_and_test_if_serv_running()
         self.available_models = self._get_available_models()
         self.official_model_list = ["main","v2.0.3","v2.0.2","v2.0.1","v2.0.0"]
@@ -86,7 +86,6 @@ class Synthesizer(base_tts.base_Synthesizer): # Gets token count from OpenAI's e
                     logging.error(f'You should run xTTS api server before running Mantella.')
                     input('\nPress any key to stop Mantella...')
                     sys.exit(0)
-            self.last_voice = voice
             logging.info(f'Voice model {self.last_voice} loaded')
         elif voice == self.last_voice:
             logging.info(f'Continuing with {self.last_voice}.')
