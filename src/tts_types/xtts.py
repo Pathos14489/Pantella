@@ -37,6 +37,7 @@ class Synthesizer(base_tts.base_Synthesizer): # Gets token count from OpenAI's e
             if model in self.available_models:
                 return model
         return None
+    
     def _set_tts_settings_and_test_if_serv_running(self):
         try:
             # Sending a POST request to the API endpoint
