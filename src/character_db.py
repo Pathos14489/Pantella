@@ -27,13 +27,13 @@ class CharacterDB():
         else:
             self.voice_model_ids = {}
             
-        print(f"Loading character database from {self.character_database_path}...")
+        logging.info(f"Loading character database from {self.character_database_path}...")
         try:
             if self.character_database_path.endswith('.csv'):
-                print("Loading character database from csv...")
+                logging.info("Loading character database from csv...")
                 self.load_characters_csv()
             else:
-                print("Loading character database from json...")
+                logging.info("Loading character database from json...")
                 self.load_characters_json()
             self.verify_characters()
         except:
@@ -41,13 +41,13 @@ class CharacterDB():
             raise
 
     def loaded(self):
-        print(f"{len(self.male_voice_models)} Male voices - {len(self.female_voice_models)} Female voices")
-        print("All Required Voice Models:",self.all_voice_models)
-        print("Total Required Voice Models:",len(self.all_voice_models))
-        print("voice_model_ids:",self.voice_model_ids)
+        logging.info(f"{len(self.male_voice_models)} Male voices - {len(self.female_voice_models)} Female voices")
+        logging.info("All Required Voice Models:",self.all_voice_models)
+        logging.info("Total Required Voice Models:",len(self.all_voice_models))
+        logging.info("voice_model_ids:",self.voice_model_ids)
 
     def load_characters_json(self):
-        print(f"Loading character database from {self.character_database_path}...")
+        logging.info(f"Loading character database from {self.character_database_path}...")
         self.characters = []
         self.named_index = {}
         self.baseid_int_index = {}
@@ -58,11 +58,11 @@ class CharacterDB():
                 self.named_index[character['name']] = self.characters[-1]
                 self.baseid_int_index[character['baseid_int']] = self.characters[-1]
         self.db_type = 'json'
-        print(f"Loaded {len(self.characters)} characters from JSON {self.character_database_path}")
+        logging.info(f"Loaded {len(self.characters)} characters from JSON {self.character_database_path}")
         self.loaded()
     
     def load_characters_csv(self):
-        print(f"Loading character database from JSON files in {self.character_database_path}...")
+        logging.info(f"Loading character database from JSON files in {self.character_database_path}...")
         self.characters = []
         self.named_index = {}
         self.baseid_int_index = {}
@@ -75,7 +75,7 @@ class CharacterDB():
             self.named_index[character['name']] = self.characters[-1]
             self.baseid_int_index[character['baseid_int']] = self.characters[-1]
         self.db_type = 'csv'
-        print(f"Loaded {len(self.characters)} characters from csv {self.character_database_path}")
+        logging.info(f"Loaded {len(self.characters)} characters from csv {self.character_database_path}")
         self.loaded()
 
     def patch_character_info(self,info): # Patches information about a character into the character database and if db_type is json, saves the changes to the json file
@@ -107,17 +107,17 @@ class CharacterDB():
         return None # If no character is found, return None
     
     def get_voice_folder_by_voice_model(self, voice_model):
-        # print(f"voice_model_ids: {voice_model}/{voice_model.replace(' ', '')}")
+        # logging.info(f"voice_model_ids: {voice_model}/{voice_model.replace(' ', '')}")
         folder = None
         for voice_folder in self.voice_folders:
             if voice_model == voice_folder:
                 folder = self.voice_folders[voice_folder]
             if voice_model.replace(' ', '') == voice_folder:
                 folder = self.voice_folders[voice_folder]
-        # print(f"folder:",folder)
+        # logging.info(f"folder:",folder)
         if folder == None:
             folder = voice_model.replace(' ', '')
-            print(f"Could not find voice folder for voice model '{voice_model}', defaulting to '{folder}'")
+            logging.info(f"Could not find voice folder for voice model '{voice_model}', defaulting to '{folder}'")
         if type(folder) == list:
             folder = folder[0]
         return folder
@@ -146,7 +146,7 @@ class CharacterDB():
             # elif voice in self.voice_folders: # If the voice model is a valid voice folder, add it to the valid list
             #     self.valid.append(voice.replace(' ', ''))
             else:
-                print(f"invalid voice: {voice_folder}")
+                logging.info(f"invalid voice: {voice_folder}")
                 self.invalid.append(voice_folder)
                 self.invalid.append(voice)
         for voice in synthesizer_available_voices:
@@ -159,7 +159,7 @@ class CharacterDB():
             unspaced_voice = voice.replace(' ', '')
             if voice not in self.valid:
                 self.unused_voices.append(voice)
-                print(f"unused voice: {voice}")
+                logging.info(f"unused voice: {voice}")
         new_valid = []
         for voice in self.valid:
             if voice not in self.unused_voices:
@@ -168,17 +168,17 @@ class CharacterDB():
         for voice in self.unused_voices:
             for character in self.characters:
                 if character['skyrim_voice_folder'] == voice or character['voice_model'] == voice:
-                    print(f"Character '{character['name']}' uses unused voice model '{voice}'")
-        print(f"Valid voices found in character database: {len(self.valid)}/{len(self.all_voice_models)}")
+                    logging.info(f"Character '{character['name']}' uses unused voice model '{voice}'")
+        logging.info(f"Valid voices found in character database: {len(self.valid)}/{len(self.all_voice_models)}")
 
-        print(f"Total unused voices: {len(self.unused_voices)}/{len(synthesizer_available_voices)}")
+        logging.info(f"Total unused voices: {len(self.unused_voices)}/{len(synthesizer_available_voices)}")
         if len(self.invalid) > 0:
-            print(f"Invalid voices found in character database: {self.invalid}. Please check that the voices are installed and try again.")
+            logging.info(f"Invalid voices found in character database: {self.invalid}. Please check that the voices are installed and try again.")
             for character in self.characters:
                 if character['voice_model'] in self.invalid:
                     if character['voice_model'] != "":
-                        print(f"WARNING: Character '{character['name']}' uses invalid voice model '{character['voice_model']}'! This is an error, please report it!")
-                        print("(The rest of the program will continue to run, but this character might not be able to be used)")
+                        logging.info(f"WARNING: Character '{character['name']}' uses invalid voice model '{character['voice_model']}'! This is an error, please report it!")
+                        logging.info("(The rest of the program will continue to run, but this character might not be able to be used)")
 
     def has_character(self, character):
         character_in_db = False
@@ -193,6 +193,44 @@ class CharacterDB():
                 elif character['baseid_int'] is not None and character['baseid_int'] == db_character['baseid_int']:
                     character_in_db = True
         return character_in_db
+
+    def get_character(self, character_name, character_refid_int=None, character_baseid_int=None):
+        if character_refid_int is not None: # If the character has a refid_int, convert it to an int
+            character_refid_int = int(character_refid_int)
+        else: # If the character doesn't have a refid_int, log a warning
+            logging.warning(f"character_refid_int is None, this might cause issues with finding the correct character.")
+        if character_baseid_int is not None: # If the character has a baseid_int, convert it to an int
+            character_baseid_int = int(character_baseid_int)
+        else: # If the character doesn't have a baseid_int, log a warning
+            logging.warning(f"character_baseid_int is None, this might cause issues with finding the correct character.")
+        possibly_same_character = []
+        character = None
+        is_generic_npc = False
+        for db_character in self.characters: # Try to find any character with the same name and refid_int and add it to the possibly_same_character list
+            if character_name == db_character['name'] or character_refid_int == db_character['refid_int']:
+                possibly_same_character.append(db_character)
+        if len(possibly_same_character) > 0:
+            if len(possibly_same_character) == 1: # If there is only one character with the same name, use that character
+                character = possibly_same_character[0]
+            else: # If there are multiple characters with the same name, try to find one with the same refid_int
+                for db_character in possibly_same_character:
+                    if character_refid_int is not None and character_refid_int == db_character['refid_int']:
+                        character = db_character
+                        break
+        if character is None: # If no character was found, try to find one with the same baseid_int - This might be a generic character that doesn't have a dedicated entry in the character database
+            for db_character in self.characters: # Try to find any character with the same baseid_int
+                if character_baseid_int is not None and character_baseid_int == db_character['baseid_int']:
+                    character = db_character
+                    is_generic_npc = True
+                    break
+        if character is None: # No character was found, log an error and return None
+            logging.warning(f"Could not find character '{character_name}' in character database using name lookup.")
+            logging.warning(f"Could not find character '{character_refid_int}' in character database using refid_int lookup.")
+            logging.warning(f"Could not find character '{character_baseid_int}' in character database using baseid_int lookup.")
+            logging.error(f"Could not find character '{character_name}' in character database.")
+            return None
+        return character, is_generic_npc
+
     
     def compare(self,db): # Compare this DB with another DB and return the differences - Useful for comparing a DB with a DB that has been patched, can be used to generate changelogs
         differences = []
