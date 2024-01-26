@@ -55,6 +55,7 @@ https://github.com/art-from-the-machine/Mantella#issues-qa
             self.mod_path = config['Paths']['mod_folder']
             self.character_database_file = config['Paths']['character_database_file']
             self.voice_model_ref_ids_file = config['Paths']['voice_model_ref_ids_file']
+            self.xtts_server_folder = config['Paths']['xtts_server_folder']
             self.logging_file_path = config['Paths']['logging_file_path']
             self.language_support_file_path = config['Paths']['language_support_file_path']
 
