@@ -12,5 +12,5 @@ class goodbye(base_behavior.BaseBehavior):
                 logging.error(f"Goodbye behavior called with no sentence!")
             else:
                 logging.info(f"The NPC is saying goodbye.")
-                self.manager.conversation_manager.end_conversation(self.conversation_manager.chat_manager.active_character) # Have the NPC saying the current voiceline end the conversation for themselves, and the player if no one else is talking to the player.
+                self.manager.conversation_manager.conversation_ended = True
         return "Goodbye"

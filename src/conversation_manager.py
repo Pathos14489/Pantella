@@ -31,6 +31,7 @@ class conversation_manager():
         self.character_manager = None # Initialised at start of every conversation in await_and_setup_conversation()
         self.check_mcm_mic_status()
         self.in_conversation = False # Whether or not the player is in a conversation
+        self.conversation_ended = False # Whether or not the conversation has ended
         self.tokens_available = 0 # Initialised at start of every conversation in await_and_setup_conversation()
         self.current_location = 'Skyrim' # Initialised at start of every conversation in await_and_setup_conversation()
         self.current_in_game_time = 12 # Initialised at start of every conversation in await_and_setup_conversation()
@@ -260,6 +261,11 @@ class conversation_manager():
         
         if ((transcribed_text is not None and transcribed_text != '') or self.radiant_dialogue) and not self.conversation_ended and self.in_conversation:
             self.get_response()
+        
+        # if npc ended conversation
+        if self.conversation_ended and self.in_conversation:
+            self.end_conversation()
+            return
 
         # if the conversation is becoming too long, save the conversation to memory and reload
         current_conversation_limit_pct = self.config.conversation_limit_pct # TODO: Make this a setting in the MCM
