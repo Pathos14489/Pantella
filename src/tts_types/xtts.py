@@ -138,12 +138,14 @@ class Synthesizer(base_tts.base_Synthesizer): # Gets token count from OpenAI's e
 
         # check if FonixData.cdf file is besides FaceFXWrapper.exe
         cdf_path = f'{self.xtts_server_folder}/plugins/lip_fuz/FonixData.cdf'
+        logging.info(f'Checking if FonixData.cdf exists at: {Path(cdf_path)}')
         if not os.path.exists(Path(cdf_path)):
             logging.error(f'Could not find FonixData.cdf in "{Path(cdf_path).parent}" required by FaceFXWrapper. Look for the Lip Fuz plugin of xVASynth.')
             raise FileNotFoundError()
 
         # generate .lip file from the .wav file with FaceFXWrapper
         face_wrapper_executable = f'{self.xtts_server_folder}/plugins/lip_fuz/FaceFXWrapper.exe';
+        logging.info(f'Checking if FaceFXWrapper.exe exists at: {Path(face_wrapper_executable)}')
         if os.path.exists(face_wrapper_executable):
             # Run FaceFXWrapper.exe
             self.run_command(f'{face_wrapper_executable} "Skyrim" "USEnglish" "{self.xtts_server_folder}/plugins/lip_fuz/FonixData.cdf" "{final_voiceline_file}" "{final_voiceline_file.replace(".wav", "_r.wav")}" "{final_voiceline_file.replace(".wav", ".lip")}" "{voiceline}"')
