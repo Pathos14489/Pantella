@@ -16,28 +16,18 @@ class Synthesizer(base_tts.base_Synthesizer): # Gets token count from OpenAI's e
         self.xtts_base_url = self.config.xtts_base_url
         self.xtts_server_folder = self.config.xtts_server_folder
         self.synthesize_url_xtts = self.xtts_base_url + "/tts_to_audio/"
-        self.switch_model_url = self.xtts_base_url + "/switch_model"
+        # self.switch_model_url = self.xtts_base_url + "/switch_model"
         self.xtts_set_tts_settings = self.xtts_base_url + "/set_tts_settings/"
         self.xtts_get_models_list = self.xtts_base_url + "/speakers_list/"
         self._set_tts_settings_and_test_if_serv_running()
-        self.available_models = self._get_available_models()
-        self.official_model_list = ["main","v2.0.3","v2.0.2","v2.0.1","v2.0.0"]
+        self.available_models = self.voices()
+        # self.official_model_list = ["main","v2.0.3","v2.0.2","v2.0.1","v2.0.0"]
         logging.info(f'Available models: {self.available_models}')
-
-    def _get_available_models(self):
+    
+    def voices(self):
         # Code to request and return the list of available models
         response = requests.get(self.xtts_get_models_list)
         return response.json() if response.status_code == 200 else []
-    
-    def voices(self):
-        return self._get_available_models()
-    
-    def get_first_available_official_model(self):
-        # Check in the available models list if there is an official model
-        for model in self.official_model_list:
-            if model in self.available_models:
-                return model
-        return None
     
     def _set_tts_settings_and_test_if_serv_running(self):
         try:
@@ -57,59 +47,22 @@ class Synthesizer(base_tts.base_Synthesizer): # Gets token count from OpenAI's e
     def change_voice(self, character):
         logging.info(f'Changing voice to {character.voice_model}...') 
         logging.info(f'(Redundant Method, xTTS does not support changing voice models as all voices are calculated at runtime)')
-        # voice = character.voice_model
-        
-        # logging.info('Loading voice model...')
-
-        # # Format the voice string to match the model naming convention
-        # voice_path = f"{voice.lower().replace(' ', '')}"
-        # model_voice = voice_path
-        # # Check if the specified voice is available
-        # if voice_path not in self.available_models and voice != self.last_voice:
-        #     logging.info(f'Voice "{voice}" not in available models. Available models: {self.available_models}')
-        #     # Use the first available official model as a fallback
-        #     model_voice = self.get_first_available_official_model()
-        #     if model_voice is None:
-        #         # Handle the case where no official model is available
-        #         raise ValueError("No available voice model found.")
-        #     # Update the voice_path with the fallback model
-        #     model_voice = f"{model_voice.lower().replace(' ', '')}"
-
-        # # Request to switch the voice model
-        # if voice != self.last_voice:
-        #     try:
-        #         requests.post(self.switch_model_url, json={"model_name": model_voice})
-        #     except requests.exceptions.RequestException as e:
-        #         # if 404 error, the model is already loaded
-        #         if e.response.status_code == 404:
-        #             pass
-        #         else:
-        #             # Log the error
-        #             logging.error(f'Could not switch model. Error: {e}')
-        #             # Wait for user input before exiting
-        #             logging.error(f'You should run xTTS api server before running Mantella.')
-        #             input('\nPress any key to stop Mantella...')
-        #             sys.exit(0)
-        #     logging.info(f'Voice model {self.last_voice} loaded')
-        # elif voice == self.last_voice:
-        #     logging.info(f'Continuing with {self.last_voice}.')
-        #     pass
-
-        # # Update the last used voice
-        # self.last_voice = voice
-
-        # logging.info('Voice model loaded.')
           
     @utils.time_it
     def _synthesize_line_xtts(self, line, save_path, voice, aggro=0):
         voice_path = f"{voice.replace(' ', '')}"
         data = {
-        'text': line,
-        'speaker_wav': voice_path,
-        'language': self.language,
-        'save_path': save_path
+            'text': line,
+            'speaker_wav': voice_path,
+            'language': self.language
         }       
-        requests.post(self.synthesize_url_xtts, json=data)
+        response = requests.post(self.synthesize_url_xtts, json=data)
+        if response.status_code == 200: # if the request was successful, write the wav file to disk at the specified path
+            with open(save_path, 'wb') as f:
+                f.write(response.content)
+        else:
+            logging.error(f'xTTS failed to generate voiceline at: {Path(save_path)}')
+            raise FileNotFoundError()
           
     def synthesize(self, character, voiceline, aggro=0):
         logging.info(f'Synthesizing voiceline: {voiceline}')
