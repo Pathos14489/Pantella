@@ -1,6 +1,7 @@
 
 import logging
 import src.utils as utils
+import subprocess
 
 class VoiceModelNotFound(Exception):
     pass
@@ -10,6 +11,9 @@ class base_Synthesizer:
     def __init__(self, conversation_manager):
         self.conversation_manager = conversation_manager
         self.config = self.conversation_manager.config
+        # determines whether the voiceline should play internally
+        self.debug_mode = self.config.debug_mode
+        self.play_audio_from_script = self.config.play_audio_from_script
         # currrent game running
         self.game = self.config.game_id
         # output wav / lip files path
@@ -47,4 +51,12 @@ class base_Synthesizer:
         input("Press enter to continue...")
         exit(0)
         return final_voiceline_file # path to wav file
-        
+         
+    def run_command(self, command):
+        startupinfo = subprocess.STARTUPINFO()
+        startupinfo.dwFlags |= subprocess.STARTF_USESHOWWINDOW
+
+        sp = subprocess.Popen(command, startupinfo=startupinfo, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+
+        stdout, stderr = sp.communicate()
+        stderr = stderr.decode("utf-8")

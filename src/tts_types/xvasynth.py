@@ -27,9 +27,6 @@ class Synthesizer(base_tts.base_Synthesizer): # Gets token count from OpenAI's e
         self.use_sr = self.config.use_sr
         self.use_cleanup = self.config.use_cleanup
 
-        # determines whether the voiceline should play internally
-        self.debug_mode = self.config.debug_mode
-        self.play_audio_from_script = self.config.play_audio_from_script
 
         self.model_type = ''
         self.base_speaker_emb = ''
@@ -331,12 +328,3 @@ class Synthesizer(base_tts.base_Synthesizer): # Gets token count from OpenAI's e
 
         self.last_voice = voice
         logging.info('Voice model loaded.')
-
-    def run_command(self, command):
-        startupinfo = subprocess.STARTUPINFO()
-        startupinfo.dwFlags |= subprocess.STARTF_USESHOWWINDOW
-
-        sp = subprocess.Popen(command, startupinfo=startupinfo, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-
-        stdout, stderr = sp.communicate()
-        stderr = stderr.decode("utf-8")
