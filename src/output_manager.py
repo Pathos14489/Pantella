@@ -147,10 +147,6 @@ class ChatManager:
 
             await self.send_audio_to_external_software(queue_output) # send the audio file to the external software and start playing it.
             event.set() # set the event to let the process_response() function know that it can generate the next sentence while the last sentence's audio is playing
-
-            audio_duration = await self.get_audio_duration(queue_output[0]) # get the duration of the next audio file
-            logging.info(f"Waiting {int(round(audio_duration,4))} seconds...")
-            await asyncio.sleep(audio_duration) # wait for the audio playback to complete before getting the next file
             
             #if Fallout4 is running the audio will be sync by checking if say line is set to false because the game can internally check if an audio file has finished playing
             # wait for the audio playback to complete before getting the next file
@@ -178,5 +174,5 @@ class ChatManager:
             else: # if Skyrim's running then estimate audio duration to sync lip files
                 audio_duration = await self.get_audio_duration(queue_output[0])
                 # wait for the audio playback to complete before getting the next file
-                logging.info(f"Waiting {int(round(audio_duration,4))} seconds...")
+                logging.info(f"Waiting {int(round(audio_duration,4))} seconds for audio to finish playing...")
                 await asyncio.sleep(audio_duration)
