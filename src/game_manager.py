@@ -111,9 +111,9 @@ class GameStateManager:
 
     def load_character(self):
         """Wait for character ID to populate then load character name"""
-
-        character_base_id = self.load_data_when_available('_mantella_current_actor_base_id', '')
-        character_ref_id = self.load_data_when_available('_mantella_current_actor_ref_id', '')
+        
+        character_base_id = self.load_data_when_available('_mantella_current_actor_base_id.txt', '')
+        character_ref_id = self.load_data_when_available('_mantella_current_actor_ref_id.txt', '')
         if (character_base_id == '0' and character_ref_id == '0') or (character_base_id == '' and character_ref_id == ''): # if character ID is 0 or empty, check old id file for refid
             with open(f'{self.game_path}/_mantella_current_actor_id.txt', 'r') as f:
                 character_id = f.readline().strip()
