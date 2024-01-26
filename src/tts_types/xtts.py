@@ -1,12 +1,15 @@
 import src.utils as utils
 import src.tts_types.base_tts as base_tts
 import logging
-import json
 import winsound
 import sys
 import os
 from pathlib import Path
+import torch
+import torchaudio
+import torchaudio.transforms as T
 import requests
+import io
 
 tts_slug = "xtts"
 class Synthesizer(base_tts.base_Synthesizer): # Gets token count from OpenAI's embedding API -- WARNING SLOW AS HELL -- Only use if you don't want to set up the right tokenizer for your local model or if you don't know how to do that
@@ -58,8 +61,14 @@ class Synthesizer(base_tts.base_Synthesizer): # Gets token count from OpenAI's e
         }       
         response = requests.post(self.synthesize_url_xtts, json=data)
         if response.status_code == 200: # if the request was successful, write the wav file to disk at the specified path
-            with open(save_path, 'wb') as f:
-                f.write(response.content)
+            audio_tensor, _ = torchaudio.load(io.BytesIO(response.content)) # load the wav file into a tensor
+            audio_tensor = audio_tensor.to(torch.float32) # convert to float32
+            audio_16bit = T.Resample(orig_freq=24000, new_freq=24000, resampling_method='sinc_interpolation')(audio_tensor) # resample to 24000Hz
+            audio_16bit = torch.clamp(audio_16bit, -1.0, 1.0) # clamp to -1.0 to 1.0
+            audio_16bit = (audio_16bit * 32767).to(torch.int16) # convert back to int16
+            torchaudio.save(save_path, audio_16bit, 24000)
+                
+
         else:
             logging.error(f'xTTS failed to generate voiceline at: {Path(save_path)}')
             raise FileNotFoundError()
@@ -89,30 +98,8 @@ class Synthesizer(base_tts.base_Synthesizer): # Gets token count from OpenAI's e
             logging.error(f'xTTS failed to generate voiceline at: {Path(final_voiceline_file)}')
             raise FileNotFoundError()
 
-        # check if FonixData.cdf file is besides FaceFXWrapper.exe
-        cdf_path = f'{self.xtts_server_folder}/plugins/lip_fuz/FonixData.cdf'
-        logging.info(f'Checking if FonixData.cdf exists at: {Path(cdf_path)}')
-        if not os.path.exists(Path(cdf_path)):
-            logging.error(f'Could not find FonixData.cdf in "{Path(cdf_path).parent}" required by FaceFXWrapper. Look for the Lip Fuz plugin of xVASynth.')
-            raise FileNotFoundError()
-
-        # generate .lip file from the .wav file with FaceFXWrapper
-        face_wrapper_executable = f'{self.xtts_server_folder}/plugins/lip_fuz/FaceFXWrapper.exe';
-        logging.info(f'Checking if FaceFXWrapper.exe exists at: {Path(face_wrapper_executable)}')
-        if os.path.exists(face_wrapper_executable):
-            # Run FaceFXWrapper.exe
-            self.run_command(f'{face_wrapper_executable} "Skyrim" "USEnglish" "{self.xtts_server_folder}/plugins/lip_fuz/FonixData.cdf" "{final_voiceline_file}" "{final_voiceline_file.replace(".wav", "_r.wav")}" "{final_voiceline_file.replace(".wav", ".lip")}" "{voiceline}"')
-        else:
-            logging.error(f'Could not find FaceFXWrapper.exe in "{Path(face_wrapper_executable).parent}" with which to create a Lip Sync file, download it from: https://github.com/Nukem9/FaceFXWrapper/releases')
-            raise FileNotFoundError()
-
-        # remove file created by FaceFXWrapper
-        if os.path.exists(final_voiceline_file.replace(".wav", "_r.wav")):
-            os.remove(final_voiceline_file.replace(".wav", "_r.wav"))
-
-        # if Debug Mode is on, play the audio file
-        if (self.debug_mode == '1') & (self.play_audio_from_script == '1'):
-            winsound.PlaySound(final_voiceline_file, winsound.SND_FILENAME)
+        self.lip_gen(voiceline, final_voiceline_file)
+        self.debug(final_voiceline_file)
 
         return final_voiceline_file
     

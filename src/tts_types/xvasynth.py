@@ -6,7 +6,6 @@ import subprocess
 import sys
 import os
 from pathlib import Path
-import winsound
 import soundfile as sf
 import json
 import re
@@ -27,7 +26,7 @@ class Synthesizer(base_tts.base_Synthesizer): # Gets token count from OpenAI's e
         self.use_sr = self.config.use_sr
         self.use_cleanup = self.config.use_cleanup
 
-
+        self.last_voice = ''
         self.model_type = ''
         self.base_speaker_emb = ''
         
@@ -76,6 +75,7 @@ class Synthesizer(base_tts.base_Synthesizer): # Gets token count from OpenAI's e
     def synthesize(self, character, voiceline, aggro=0):
         if character.voice_model != self.last_voice:
             self.change_voice(character)
+        voiceline = ' ' + voiceline + ' ' # xVASynth apparently performas better having spaces at the start and end of the voiceline for some reason
 
         if voiceline.strip() == '': # If the voiceline is empty, don't synthesize anything
             logging.info('No voiceline to synthesize.')
@@ -119,29 +119,9 @@ class Synthesizer(base_tts.base_Synthesizer): # Gets token count from OpenAI's e
         if not os.path.exists(final_voiceline_file):
             logging.error(f'xVASynth failed to generate voiceline at: {Path(final_voiceline_file)}')
             raise FileNotFoundError()
-
-        # check if FonixData.cdf file is besides FaceFXWrapper.exe
-        cdf_path = f'{self.xvasynth_path}/resources/app/plugins/lip_fuz/FonixData.cdf'
-        if not os.path.exists(Path(cdf_path)):
-            logging.error(f'Could not find FonixData.cdf in "{Path(cdf_path).parent}" required by FaceFXWrapper. Look for the Lip Fuz plugin of xVASynth.')
-            raise FileNotFoundError()
-
-        # generate .lip file from the .wav file with FaceFXWrapper
-        face_wrapper_executable = f'{self.xvasynth_path}/resources/app/plugins/lip_fuz/FaceFXWrapper.exe';
-        if os.path.exists(face_wrapper_executable):
-            # Run FaceFXWrapper.exe
-            self.run_command(f'{face_wrapper_executable} "{self.game.capitalize()}" "USEnglish" "{self.xvasynth_path}/resources/app/plugins/lip_fuz/FonixData.cdf" "{final_voiceline_file}" "{final_voiceline_file.replace(".wav", "_r.wav")}" "{final_voiceline_file.replace(".wav", ".lip")}" "{voiceline}"')
-        else:
-            logging.error(f'Could not find FaceFXWrapper.exe in "{Path(face_wrapper_executable).parent}" with which to create a Lip Sync file, download it from: https://github.com/Nukem9/FaceFXWrapper/releases')
-            raise FileNotFoundError()
-
-        # remove file created by FaceFXWrapper
-        if os.path.exists(final_voiceline_file.replace(".wav", "_r.wav")):
-            os.remove(final_voiceline_file.replace(".wav", "_r.wav"))
-
-        # if Debug Mode is on, play the audio file
-        if (self.debug_mode == '1') & (self.play_audio_from_script == '1'):
-            winsound.PlaySound(final_voiceline_file, winsound.SND_FILENAME)
+        
+        self.lip_gen(voiceline, final_voiceline_file)
+        self.debug(final_voiceline_file)
 
         return final_voiceline_file
     
