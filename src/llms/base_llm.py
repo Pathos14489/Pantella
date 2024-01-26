@@ -333,9 +333,9 @@ class base_LLM():
         """Generate audio for a voiceline"""
         # Generate the audio and return the audio file path
         try:
-            audio_file = self.conversation_manager.synthesizer.synthesize(self.conversation_manager.chat_manager.active_character, ' ' + string + ' ') # TODO: Make a config setting. Spaces help xVASynth apparently, they might not be good for other TTS engines
+            audio_file = self.conversation_manager.synthesizer.synthesize(self.conversation_manager.chat_manager.active_character, string) # TODO: Make a config setting. Spaces help xVASynth apparently, they might not be good for other TTS engines
         except Exception as e:
-            logging.error(f"xVASynth Error: {e}")
+            logging.error(f"TTS Error: {e}")
             logging.info(e)
             input('Press enter to continue...')
             exit()
