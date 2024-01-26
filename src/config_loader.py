@@ -164,8 +164,8 @@ https://github.com/art-from-the-machine/Mantella#issues-qa
             self.remove_mei_folders = config['Cleanup']['remove_mei_folders']
 
             # [Debugging]
-            self.debug_mode = config['Debugging']['debugging']
-            self.play_audio_from_script = config['Debugging']['play_audio_from_script']
+            self.debug_mode = True if int(config['Debugging']['debugging']) == 1 else False
+            self.play_audio_from_script = True if int(config['Debugging']['play_audio_from_script']) == 1 else False
             self.debug_character_name = config['Debugging']['debugging_npc']
             self.debug_use_mic = config['Debugging']['use_mic']
             self.default_player_response = config['Debugging']['default_player_response']
