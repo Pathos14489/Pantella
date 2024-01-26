@@ -124,6 +124,8 @@ class base_LLM():
             "A stranger",
             "A traveler",
             "a stranger",
+            "a Stranger",
+            "A Stranger",
             "a traveler",
             "Stranger",
             "stranger",
@@ -141,8 +143,8 @@ class base_LLM():
         num_sentences = 0 # used to keep track of how many sentences have been generated
         voice_line_sentences = 0 # used to keep track of how many sentences have been generated for the current voice line
         retries = 5
-        logging.info("Signifier: ", self.config.message_signifier)
-        logging.info("Format: ", self.config.message_format)
+        logging.info(f"Signifier: {self.config.message_signifier}")
+        logging.info(f"Format: {self.config.message_format}")
         while retries >= 0: # keep trying to connect to the API until it works
             # if full_reply != '': # if the full reply is not empty, then the LLM has generated a response and the next_author should be extracted from the start of the generation
             #     self.conversation_manager.messages.append({"role": next_author, "content": full_reply})
