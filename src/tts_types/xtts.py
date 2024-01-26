@@ -66,13 +66,13 @@ class Synthesizer(base_tts.base_Synthesizer): # Gets token count from OpenAI's e
           
     def synthesize(self, character, voiceline, aggro=0):
         logging.info(f'Synthesizing voiceline: {voiceline}')
-
+        self.change_voice(character)
         # make voice model folder if it doesn't already exist
-        if not os.path.exists(f"{self.output_path}/voicelines/{self.last_voice}"):
-            os.makedirs(f"{self.output_path}/voicelines/{self.last_voice}")
+        if not os.path.exists(f"{self.output_path}/voicelines/{character.voice_model}"):
+            os.makedirs(f"{self.output_path}/voicelines/{character.voice_model}")
 
         final_voiceline_file_name = 'voiceline'
-        final_voiceline_file =  f"{self.output_path}/voicelines/{self.last_voice}/{final_voiceline_file_name}.wav"
+        final_voiceline_file =  f"{self.output_path}/voicelines/{character.voice_model}/{final_voiceline_file_name}.wav"
 
         try:
             if os.path.exists(final_voiceline_file):
