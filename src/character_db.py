@@ -217,6 +217,12 @@ class CharacterDB():
                     if character_refid_int is not None and character_refid_int == db_character['refid_int']:
                         character = db_character
                         break
+        if character is None: # If no character was found, try to find one with the same refid_int - This might be a generic character that doesn't have a dedicated entry in the character database
+            for db_character in self.characters: # Try to find any character with the same refid_int
+                if character_refid_int is not None and character_refid_int == db_character['refid_int']:
+                    character = db_character
+                    break
+
         if character is None: # If no character was found, try to find one with the same baseid_int - This might be a generic character that doesn't have a dedicated entry in the character database
             for db_character in self.characters: # Try to find any character with the same baseid_int
                 if character_baseid_int is not None and character_baseid_int == db_character['baseid_int']:
@@ -228,7 +234,8 @@ class CharacterDB():
             logging.warning(f"Could not find character '{character_refid_int}' in character database using refid_int lookup.")
             logging.warning(f"Could not find character '{character_baseid_int}' in character database using baseid_int lookup.")
             logging.error(f"Could not find character '{character_name}' in character database.")
-            return None
+            input("Press enter to continue...")
+            exit(0)
         return character, is_generic_npc
 
     
