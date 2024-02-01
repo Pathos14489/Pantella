@@ -7,7 +7,7 @@ class Tokenizer(tokenizer.base_Tokenizer): # Gets token count from OpenAI's embe
     def __init__(self, conversation_manager, client):
         super().__init__(conversation_manager)
         if not (self.config.inference_engine == "openai" or self.config.inference_engine == "default"):
-            logging.error(f"koboldcpp tokenizer only works using OpenAI's API! Please check your config.ini file and try again!")
+            logging.error(f"koboldcpp tokenizer only works using OpenAI's API! Please check your config.json file and try again!")
             input("Press enter to continue...")
             exit()
         self.tokenizer_slug = tokenizer_slug

@@ -5,7 +5,7 @@ import logging
 import os
 import importlib
 
-default = "openai" # The default LLM to use if the one specified in config.ini is not found or if default is specified in config.ini
+default = "openai" # The default LLM to use if the one specified in config.json is not found or if default is specified in config.json
 LLM_Types = {}
 # Get all LLMs from src/llms/ and add them to LLM_Types
 for file in os.listdir("src/llms/"):
@@ -20,7 +20,7 @@ LLM_Types["default"] = LLM_Types[default]
     
 def create_LLM(conversation_manager):
     if conversation_manager.config.inference_engine not in LLM_Types:
-        logging.error(f"Could not find inference engine: {conversation_manager.config.inference_engine}! Please check your config.ini file and try again!")
+        logging.error(f"Could not find inference engine: {conversation_manager.config.inference_engine}! Please check your config.json file and try again!")
         input("Press enter to continue...")
         exit()
     model = LLM_Types[conversation_manager.config.inference_engine]
@@ -37,7 +37,7 @@ def create_LLM(conversation_manager):
             else:
                 tokenizer = tokenizers.Tokenizer_Types[llm.tokenizer_slug].Tokenizer(conversation_manager)
         else: # or if the LLM has no tokenizer specified
-            logging.error(f"Could not find default tokenizer for inference engine: {llm.inference_engine_name}! Please check your config.ini file and try again!")
+            logging.error(f"Could not find default tokenizer for inference engine: {llm.inference_engine_name}! Please check your config.json file and try again!")
             input("Press enter to continue...")
             exit()
     elif conversation_manager.config.tokenizer_type in tokenizers.Tokenizer_Types: # if using a custom tokenizer

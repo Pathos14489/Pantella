@@ -17,7 +17,6 @@ class base_LLM():
         self.inference_engine_name = inference_engine_name
         self.tokenizer_slug = tokenizer_slug
 
-        self.experimental_features = self.config.experimental_features
         self.max_response_sentences = self.config.max_response_sentences
         self.end_of_sentence_chars = ['.', '?', '!']
         self.end_of_sentence_chars = [unicodedata.normalize('NFKC', char) for char in self.end_of_sentence_chars]
@@ -259,12 +258,9 @@ class base_LLM():
                                 keyword_extraction = sentence.split(':')[0]
                                 sentence = sentence.split(':')[1]
                                 # if LLM is switching character
-                                if self.experimental_features:
-                                    behavior = self.conversation_manager.behavior_manager.evaluate(keyword_extraction, sentence) # check if the sentence contains any behavior keywords for NPCs
-                                    if behavior == None:
-                                        logging.warn(f"Keyword '{keyword_extraction}' not found in behavior_manager. Disgarding from response.")
-                                else:
-                                    logging.info(f"Experimental features disabled. Please set experimental_features = 1 in config.ini to enable Behaviors.")
+                                behavior = self.conversation_manager.behavior_manager.evaluate(keyword_extraction, sentence) # check if the sentence contains any behavior keywords for NPCs
+                                if behavior == None:
+                                    logging.warn(f"Keyword '{keyword_extraction}' not found in behavior_manager. Disgarding from response.")
                                     
 
                             voice_line += sentence # add the sentence to the voice line in progress
@@ -273,14 +269,12 @@ class base_LLM():
                             voice_line_sentences += 1 # increment the number of sentences generated for the current voice line
 
 
-                            if self.experimental_features: # TODO: Remove for MCM Supports
-                                behavior = self.conversation_manager.behavior_manager.pre_sentence_evaluate(sentence) # check if the sentence contains any behavior keywords for NPCs
+                            behavior = self.conversation_manager.behavior_manager.pre_sentence_evaluate(sentence) # check if the sentence contains any behavior keywords for NPCs
                             if voice_line_sentences == self.config.sentences_per_voiceline: # if the voice line is ready, then generate the audio for the voice line
                                 await self.generate_voiceline(voice_line, sentence_queue, event)
                                 voice_line_sentences = 0 # reset the number of sentences generated for the current voice line
                                 voice_line = '' # reset the voice line for the next iteration
-                            if self.experimental_features: # TODO: Remove for MCM Supports
-                                behavior = self.conversation_manager.behavior_manager.post_sentence_evaluate(sentence) # check if the sentence contains any behavior keywords for NPCs
+                            behavior = self.conversation_manager.behavior_manager.post_sentence_evaluate(sentence) # check if the sentence contains any behavior keywords for NPCs
 
                             sentence = '' # reset the sentence for the next iteration
 

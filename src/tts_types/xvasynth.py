@@ -281,7 +281,7 @@ class Synthesizer(base_tts.base_Synthesizer): # Gets token count from OpenAI's e
         voice_path = f"{self.model_path}{XVASynthAcronym}{voice.lower().replace(' ', '')}"
         
         if not os.path.exists(voice_path+'.json'):
-            logging.error(f"Voice model does not exist in location '{voice_path}'. Please ensure that the correct path has been set in config.ini (xvasynth_folder) and that the model has been downloaded from {XVASynthModNexusLink} (Ctrl+F for '{XVASynthAcronym}{voice.lower().replace(' ', '')}').")
+            logging.error(f"Voice model does not exist in location '{voice_path}'. Please ensure that the correct path has been set in config.json (xvasynth_folder) and that the model has been downloaded from {XVASynthModNexusLink} (Ctrl+F for '{XVASynthAcronym}{voice.lower().replace(' ', '')}').")
             raise base_tts.VoiceModelNotFound()
 
         with open(voice_path+'.json', 'r', encoding='utf-8') as f:

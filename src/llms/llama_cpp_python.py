@@ -20,7 +20,6 @@ class LLM(base_LLM.base_LLM): # Uses llama-cpp-python as the LLM inference engin
         global inference_engine_name
         super().__init__(conversation_manager)
         self.inference_engine_name = inference_engine_name
-        self.config.is_local = True
         if loaded:
             if llama_model is None:
                 self.llm = Llama(
@@ -40,7 +39,7 @@ class LLM(base_LLM.base_LLM): # Uses llama-cpp-python as the LLM inference engin
             input("Press Enter to exit.")
             exit()
         llama_model = self.llm
-        logging.info(f"Running Mantella with llama-cpp-python. The language model chosen can be changed via config.ini")
+        logging.info(f"Running Mantella with llama-cpp-python. The language model chosen can be changed via config.json")
         logging.info(f"Testing llama-cpp-python...")
         test_prompt = "Hello, I am a llama-cpp-python test prompt. I am used to test llama-cpp-python's functi"
         test_completion = self.llm.create_completion(test_prompt, max_tokens=10)
