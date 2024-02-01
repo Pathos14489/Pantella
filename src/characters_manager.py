@@ -71,14 +71,6 @@ class Characters:
 
     @property
     def replacement_dict(self): # Returns a dictionary of replacement values for the current context -- Dynamic Variables
-        time_group = utils.get_time_group(self.conversation_manager.current_in_game_time) # get time group from in-game time before 12/24 hour conversion
-        time = f"{self.conversation_manager.current_in_game_time}"
-        ampm = None
-        if self.conversation_manager.current_in_game_time <= 12:
-            ampm = "AM"
-        elif self.conversation_manager.current_in_game_time > 12:
-            time = f"{self.conversation_manager.current_in_game_time-12}" # Convert to 12 hour time because asking the AI to convert to 12 hour time is unreliable. Example: half the time they say 15 in the afternoon instead of 3pm.
-            ampm = "PM"
         if len(self.active_characters) == 1: # SingleNPC style context
             replacement_dict = self.active_characters_list[0].replacement_dict
         else: # MultiNPC style context
@@ -89,8 +81,13 @@ class Characters:
                 "relationship_summary": self.relationship_summary,
                 "bios": self.bios,
             }
-        replacement_dict["time"] = time
-        replacement_dict["ampm"] = ampm
+        
+        if self.conversation_manager.current_in_game_time is not None: # If in-game time is available, add in-game time properties to replacement_dict
+            time_group = utils.get_time_group(self.conversation_manager.current_in_game_time["hour24"]) # get time group from in-game time before 12/24 hour conversion
+            for time_property in self.conversation_manager.current_in_game_time: # Add in-game time properties to replacement_dict
+                replacement_dict[time_property] = self.conversation_manager.current_in_game_time[time_property]
+        else:
+            logging.warning("No in-game time available when generating replacement_dict, returning empty time properties")
         replacement_dict["time_group"] = time_group
         replacement_dict["location"] = self.conversation_manager.current_location
         replacement_dict["player_name"] = self.conversation_manager.player_name

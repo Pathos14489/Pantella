@@ -103,7 +103,7 @@ class GameStateManager:
         location = 'Skyrim'
         self.write_game_info('_mantella_current_location', location)
         
-        in_game_time = '12'
+        in_game_time = '07/12/0210 10:31'
         self.write_game_info('_mantella_in_game_time', in_game_time)
 
         return character_name, character_id, location, in_game_time
@@ -241,14 +241,91 @@ class GameStateManager:
         return character_info
     
     def get_current_location(self, presume = ''):
+        """Return the current location"""
         location = self.load_data_when_available('_mantella_current_location', presume)
         if location.lower() == 'none' or location == "": # location returns none when out in the wild
             location = 'Skyrim'
         return location
     
     def get_current_game_time(self):
-        in_game_time = self.load_data_when_available('_mantella_in_game_time', '')
-        return int(in_game_time)
+        """Return the current in-game time"""
+        in_game_time = self.load_data_when_available('_mantella_in_game_time', '') # Example: 07/12/0713 10:31
+        in_game_chunks = in_game_time.split(' ')
+        
+        date = in_game_chunks[0] # Example: 07/12/0713
+        date_chunks = date.split('/')
+        month = int(date_chunks[0])
+        day = int(date_chunks[1])
+        year = int(date_chunks[2])
+
+        time24 = in_game_chunks[1] # Example: 10:31
+        time_chunks = time24.split(':')
+        hour24 = int(time_chunks[0]) # 24 hour time
+        hour12 = hour24 if hour24 <= 12 else hour24 - 12 # 12 hour time
+        ampm = 'AM' if hour24 < 12 else 'PM' # AM or PM
+        minute = int(time_chunks[1])
+        time12 = f'{hour12}:{minute} {ampm}' # Example: 10:31 AM
+
+        
+        return {
+            'year': year, # The current year in-game
+            'month': month, # The current month in-game
+            'day': day, # The current day in-game
+            'hour24': hour24, # The current hour in-game in 24 hour time
+            'hour12': hour12, # The current hour in-game in 12 hour time
+            'minute': minute, # The current minute in-game
+            'time24': time24, # The current time in-game in 24 hour time format (Example: 13:31)
+            'time12': time12, # The current time in-game in 12 hour time format (Example: 1:31 PM)
+            'ampm': ampm, # AM or PM
+        }
+    
+    def get_dummy_game_time(self):
+        """Return a dummy in-game time for debugging"""
+        return {
+            'year': 0,
+            'month': 0,
+            'day': 0,
+            'hour24': 0,
+            'hour12': 0,
+            'minute': 0,
+            'time24': '00:00',
+            'time12': '00:00 AM',
+            'ampm': 'AM',
+        }
+    
+    def convert_to_in_game_timestamp(self, in_game_time): # Takes an in_game_time object(like what get_current_game_time() returns) and converts it to the number of minutes since midnight at 00:00 01/01/0000
+        """Convert an in_game_time object to the number of minutes since midnight at 00:00 01/01/0000"""
+        minutes_since_midnight = in_game_time['hour24'] * 60 + in_game_time['minute']
+        days_since_0000 = (in_game_time['year'] * 365) + (in_game_time['month'] * 30) + in_game_time['day']
+        return days_since_0000 * 1440 + minutes_since_midnight
+    
+    def time_between_string(self, start_time, end_time):
+        """Calculate the time between two in-game timestamps and return a string describing the time between them"""
+        start_time = self.convert_to_in_game_timestamp(start_time)
+        end_time = self.convert_to_in_game_timestamp(end_time)
+        time_between = end_time - start_time
+        time_between_string = "" # Example: 2 years, 3 months, 2 days, 4 hours and 5 minutes
+        if time_between >= 525600:
+            years = int(time_between / 525600)
+            time_between_string += f'{years} year{"s" if years > 1 else ""}, '
+            time_between -= years * 525600
+        if time_between >= 43200:
+            months = int(time_between / 43200)
+            time_between_string += f'{months} month{"s" if months > 1 else ""}, '
+            time_between -= months * 43200
+        if time_between >= 1440:
+            days = int(time_between / 1440)
+            time_between_string += f'{days} day{"s" if days > 1 else ""}, '
+            time_between -= days * 1440
+        if time_between >= 60:
+            hours = int(time_between / 60)
+            time_between_string += f'{hours} hour{"s" if hours > 1 else ""}, '
+            time_between -= hours * 60
+        if time_between > 0:
+            minutes = int(time_between)
+            time_between_string += f'{minutes} minute{"s" if minutes > 1 else ""}'
+        return time_between_string
+        
     
     @utils.time_it
     def load_game_state(self):
@@ -310,6 +387,14 @@ class GameStateManager:
         return character_info, location, in_game_time, is_generic_npc, player_name, player_race, player_gender, radiant_dialogue
     
 
+    def new_time(self, in_game_time=None):
+        """Check if the in-game time has changed since the last check"""
+        if in_game_time == None:
+            in_game_time = self.get_current_game_time()
+        if in_game_time['hour24'] != self.prev_game_time:
+            self.prev_game_time = in_game_time['hour24']
+            return True
+        return False
     
     @utils.time_it
     def update_game_events(self):
@@ -337,16 +422,13 @@ class GameStateManager:
         self.write_game_info('_mantella_in_game_events', '')
 
         # append the time to player's response
-        in_game_time = self.get_current_game_time()
-        
-        # only pass the in-game time if it has changed
-        if (in_game_time != self.prev_game_time) and (in_game_time != ''):
-            self.prev_game_time = in_game_time
-            time_group = utils.get_time_group(in_game_time)
-            ampm = 'AM' if in_game_time < 12 else 'PM'
-            twelve_hour_time = in_game_time if in_game_time <= 12 else in_game_time - 12
+        in_game_time = self.get_current_game_time() # Current in-game time
+        print(in_game_time)
+        # only pass the in-game time if it has changed by at least an hour
+        if self.new_time(in_game_time):
+            time_group = utils.get_time_group(in_game_time['hour24'])
 
-            time_string = f"The time is now {twelve_hour_time}:00 {ampm} {time_group}."
+            time_string = f"The time is now {in_game_time['time12']} {time_group}."
             logging.info(time_string)
             
             formatted_in_game_time = f"*{time_string}*\n"
