@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Mantella Web Configuration GUI - proof of concept very early I'm sorry it's uggo I will do better don't hate me pls <3</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script src="/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <h1>Mantella Web Configuration GUI</h1>
+    <div id="settings"></div>
+    <script>
+        // Get json from server
+        var default_settings = $.ajax({
+            url: "/defaults",
+            type: "GET",
+            async: false
+        }).responseText;
+        var settings = $.ajax({
+            url: "/config",
+            type: "GET",
+            async: false
+        }).responseText;
+        default_settings = JSON.parse(default_settings);
+        settings = JSON.parse(settings);
+        // {
+        //     "defaultConfig": ...,
+        //     "types": ..., // object with properties that represent settings sections, and a list of setting names with their value types as strings
+        //     "descriptions": ... // object with properties that represent settings sections, and a list of setting names with their descriptions as strings
+        // }
+        console.log(default_settings.types);
+        console.log(settings);
+        for (typeCategory in default_settings.types) {
+            var typeCategoryDiv = document.createElement("div");
+            typeCategoryDiv.id = typeCategory;
+            typeCategoryDiv.innerHTML = "<h2>" + typeCategory + "</h2>";
+            document.getElementById("settings").appendChild(typeCategoryDiv);
+            for (setting in default_settings.types[typeCategory]) {
+                var settingDiv = document.createElement("div");
+                settingDiv.id = setting;
+                settingDiv.innerHTML = "<h3>" + setting + "</h3>";
+                document.getElementById(typeCategory).appendChild(settingDiv);
+
+                var settingDescription = document.createElement("p");
+                settingDescription.innerHTML = default_settings.descriptions[typeCategory][setting];
+                document.getElementById(setting).appendChild(settingDescription);
+
+                if (default_settings.types[typeCategory][setting] == "dict"){
+                    var settingInput = document.createElement("textarea");
+                    settingInput.rows = 10;
+                    settingInput.cols = 50;
+                }else{
+                    var settingInput = document.createElement("input");
+                }
+                settingInput.id = setting + "Input";
+                switch (default_settings.types[typeCategory][setting]) {
+                    case "bool":
+                        settingInput.type = "checkbox";
+                        settingInput.checked = settings[typeCategory][setting];
+                        settingInput.title = default_settings.descriptions[typeCategory][setting];
+                        settingInput.alt = default_settings.descriptions[typeCategory][setting];
+                        break;
+                    case "int":
+                        settingInput.type = "number";
+                        settingInput.value = settings[typeCategory][setting];
+                        settingInput.title = default_settings.descriptions[typeCategory][setting];
+                        settingInput.alt = default_settings.descriptions[typeCategory][setting];
+                        break;
+                    case "float":
+                        settingInput.type = "number";
+                        settingInput.step = "0.01";
+                        settingInput.value = settings[typeCategory][setting];
+                        settingInput.title = default_settings.descriptions[typeCategory][setting];
+                        settingInput.alt = default_settings.descriptions[typeCategory][setting];
+                        break;
+                    case "dict":
+                        console.log(settings[typeCategory]);
+                        settingInput.value = JSON.stringify(settings[typeCategory][setting], null, 4);
+                        settingInput.title = default_settings.descriptions[typeCategory][setting];
+                        settingInput.alt = default_settings.descriptions[typeCategory][setting];
+                        break;
+                    default:
+                        settingInput.type = "text";
+                        settingInput.value = String(settings[typeCategory][setting]);
+                        settingInput.title = default_settings.descriptions[typeCategory][setting];
+                        settingInput.alt = default_settings.descriptions[typeCategory][setting];
+                        break;
+                }
+                settingInput.placeholder = default_settings.defaultConfig[setting];
+                settingInput.onchange = function() {
+                    saveSettings();
+                }
+                document.getElementById(setting).appendChild(settingInput);
+            }
+            function saveSettings(){
+                var newSettings = {};
+                var save = true;
+                for (typeCategory in default_settings.types) {
+                    newSettings[typeCategory] = {};
+                    for (setting in default_settings.types[typeCategory]) {
+                        var settingInput = document.getElementById(setting + "Input");
+                        switch (default_settings.types[typeCategory][setting]) {
+                            case "bool":
+                                newSettings[typeCategory][setting] = settingInput.checked;
+                                break;
+                            case "int":
+                                newSettings[typeCategory][setting] = parseInt(settingInput.value);
+                                break;
+                            case "float":
+                                newSettings[typeCategory][setting] = parseFloat(settingInput.value);
+                                break;
+                            case "list":
+                                newSettings[typeCategory][setting] = settingInput.value.split(",");
+                                if (setting == "tensor_split") newSettings[typeCategory][setting] = newSettings[typeCategory][setting].map(parseFloat);
+                                break;
+                            case "dict":
+                                try {
+                                    newSettings[typeCategory][setting] = JSON.parse(settingInput.value);
+                                } catch (e) {
+                                    alert("Invalid JSON in " + setting + " input");
+                                    save = false;
+                                }
+                                break;
+                            default:
+                                newSettings[typeCategory][setting] = String(settingInput.value).replace("\\n","\n");
+                                break;
+                        }
+                    }
+                }
+                console.log(newSettings);
+                if (save) {
+                    $.ajax({
+                        url: "/config",
+                        type: "POST",
+                        data: JSON.stringify(newSettings),
+                        contentType: "application/json; charset=utf-8",
+                        dataType: "json"
+                    });
+                }
+            }
+        }
+    </script>
+</body>
+</html>
