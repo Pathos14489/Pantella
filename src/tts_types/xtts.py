@@ -1,15 +1,13 @@
 import src.utils as utils
 import src.tts_types.base_tts as base_tts
 import logging
-import winsound
 import sys
 import os
 from pathlib import Path
-import torch
-import torchaudio
-import torchaudio.transforms as T
 import requests
 import io
+import soundfile as sf
+import numpy as np
 
 tts_slug = "xtts"
 class Synthesizer(base_tts.base_Synthesizer): # Gets token count from OpenAI's embedding API -- WARNING SLOW AS HELL -- Only use if you don't want to set up the right tokenizer for your local model or if you don't know how to do that
@@ -21,18 +19,49 @@ class Synthesizer(base_tts.base_Synthesizer): # Gets token count from OpenAI's e
         self.synthesize_url_xtts = self.xtts_base_url + "/tts_to_audio/"
         # self.switch_model_url = self.xtts_base_url + "/switch_model"
         self.xtts_set_tts_settings = self.xtts_base_url + "/set_tts_settings/"
-        self.xtts_get_models_list = self.xtts_base_url + "/speakers_list/"
+        self.xtts_get_speakers_list = self.xtts_base_url + "/speakers_list/"
+        self.xtts_get_models_list = self.xtts_base_url + "/get_models_list/"
         self._set_tts_settings_and_test_if_serv_running()
-        self.available_models = self.voices()
         # self.official_model_list = ["main","v2.0.3","v2.0.2","v2.0.1","v2.0.0"]
-        logging.info(f'Available models: {self.available_models}')
+        logging.info(f'Available models: {self.available_models()}')
+        logging.info(f'Available voices: {self.voices()}')
     
+    def convert_to_16bit(self, input_file, output_file=None):
+        if output_file is None:
+            output_file = input_file
+        # Read the audio file
+        data, samplerate = sf.read(input_file)
+
+        # Directly convert to 16-bit if data is in float format and assumed to be in the -1.0 to 1.0 range
+        if np.issubdtype(data.dtype, np.floating):
+            # Ensure no value exceeds the -1.0 to 1.0 range before conversion (optional, based on your data's characteristics)
+            # data = np.clip(data, -1.0, 1.0)  # Uncomment if needed
+            data_16bit = np.int16(data * 32767)
+        elif not np.issubdtype(data.dtype, np.int16):
+            # If data is not floating-point or int16, consider logging or handling this case explicitly
+            # For simplicity, this example just converts to int16 without scaling
+            data_16bit = data.astype(np.int16)
+        else:
+            # If data is already int16, no conversion is necessary
+            data_16bit = data
+
+        # Write the 16-bit audio data back to a file
+        sf.write(output_file, data_16bit, samplerate, subtype='PCM_16')
+
     def voices(self):
+        """Return a list of available voices"""
+        # Code to request and return the list of available models
+        response = requests.get(self.xtts_get_speakers_list)
+        return response.json() if response.status_code == 200 else []
+    
+    def available_models(self):
+        """Return a list of available models"""
         # Code to request and return the list of available models
         response = requests.get(self.xtts_get_models_list)
         return response.json() if response.status_code == 200 else []
     
     def _set_tts_settings_and_test_if_serv_running(self):
+        """Set the TTS settings and test if the server is running"""
         try:
             # Sending a POST request to the API endpoint
             logging.info(f'Attempting to connect to xTTS...')
@@ -61,14 +90,7 @@ class Synthesizer(base_tts.base_Synthesizer): # Gets token count from OpenAI's e
         }       
         response = requests.post(self.synthesize_url_xtts, json=data)
         if response.status_code == 200: # if the request was successful, write the wav file to disk at the specified path
-            audio_tensor, _ = torchaudio.load(io.BytesIO(response.content)) # load the wav file into a tensor
-            audio_tensor = audio_tensor.to(torch.float32) # convert to float32
-            audio_16bit = T.Resample(orig_freq=24000, new_freq=24000, resampling_method='sinc_interpolation')(audio_tensor) # resample to 24000Hz
-            audio_16bit = torch.clamp(audio_16bit, -1.0, 1.0) # clamp to -1.0 to 1.0
-            audio_16bit = (audio_16bit * 32767).to(torch.int16) # convert back to int16
-            torchaudio.save(save_path, audio_16bit, 24000)
-                
-
+            self.convert_to_16bit(io.BytesIO(response.content), save_path)
         else:
             logging.error(f'xTTS failed to generate voiceline at: {Path(save_path)}')
             raise FileNotFoundError()
