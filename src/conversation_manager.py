@@ -1,8 +1,7 @@
-
-import sys
 import os
 import asyncio
 import logging
+import pandas as pd
 import src.output_manager as output_manager
 import src.game_manager as game_manager
 import src.characters_manager as characters_manager # Character Manager class
@@ -12,20 +11,20 @@ import src.tts as tts
 import src.stt as stt
 import src.utils as utils
 import src.character_db as character_db
-import src.setup as setup
 
 class conversation_manager():
-    def __init__(self, config_file, initialize=True):
-        self.config, self.language_info = setup.initialise(
-            config_file=config_file,
-        )
+    def __init__(self, config, initialize=True):
+        self.config = config
+        self.config.conversation_manager = self
+        self.language_info = self.get_language_info()
         # self.config
         # self.language_info
-        self.token_limit = self.config.maximum_local_tokens # Get token limit from config.ini
-        self.synthesizer = tts.create_Synthesizer(self) # Create Synthesizer object based on config - required by scripts for checking voice models, so is left out of self.initialize() intentionally
-        self.character_database = character_db.CharacterDB(self) # Create Character Database Manager based on config - required by scripts for merging, patching and converting character databases, so is left out of self.initialize() intentionally
+        self.token_limit = self.config.maximum_local_tokens # Get token limit from config.json
+        if self.config.ready:
+            self.synthesizer = tts.create_Synthesizer(self) # Create Synthesizer object based on config - required by scripts for checking voice models, so is left out of self.initialize() intentionally
+            self.character_database = character_db.CharacterDB(self) # Create Character Database Manager based on config - required by scripts for merging, patching and converting character databases, so is left out of self.initialize() intentionally
         self.mantella_version = '0.11-p'
-        if initialize:
+        if initialize and self.config.ready:
             self.initialize()
             logging.info(f'\nMantella v{self.mantella_version}')
         self.character_manager = None # Initialised at start of every conversation in await_and_setup_conversation()
@@ -34,21 +33,31 @@ class conversation_manager():
         self.conversation_ended = False # Whether or not the conversation has ended
         self.tokens_available = 0 # Initialised at start of every conversation in await_and_setup_conversation()
         self.current_location = 'Skyrim' # Initialised at start of every conversation in await_and_setup_conversation()
-        self.current_in_game_time = 12 # Initialised at start of every conversation in await_and_setup_conversation()
+        if self.config.ready and self.game_state_manager is not None:
+            self.current_in_game_time = self.game_state_manager.get_dummy_game_time() # Initialised at start of every conversation in await_and_setup_conversation()
         self.player_name = None # Initialised at start of every conversation in await_and_setup_conversation()
         self.player_gender = None # Initialised at start of every conversation in await_and_setup_conversation()
         self.player_race = None # Initialised at start of every conversation in await_and_setup_conversation()
         self.messages = [] # Initialised at start of every conversation in await_and_setup_conversation()
         self.conversation_started_radiant = False # Initialised at start of every conversation in await_and_setup_conversation()
         self.radient_dialogue = False # Initialised at start of every conversation in await_and_setup_conversation()
-
+        self.restart = False # Can be set at any time to force restart of conversation manager - Will ungracefully end any ongoing conversation client side
         self.conversation_step = 0 # The current step of the conversation - 0 is before any conversation has started, 1 is the first step of the conversation, etc.
+
+    def get_language_info(self):
+        language_df = pd.read_csv(self.config.language_support_file_path)
+        try:
+            language_info = language_df.loc[language_df['alpha2']==self.config.language].to_dict('records')[0]
+            return language_info
+        except:
+            logging.error(f"Could not load language '{self.config.language}'. Please set a valid language in config.json\n")
+            logging.error(f"Valid languages are: {', '.join(language_df['alpha2'].tolist())}")
 
     def initialize(self):
         self.llm, self.tokenizer = language_models.create_LLM(self) # Create LLM and Tokenizer based on config
         self.game_state_manager = game_manager.GameStateManager(self)
         self.chat_manager = output_manager.ChatManager(self)
-        self.transcriber = stt.Transcriber(self.game_state_manager, self.config)
+        self.transcriber = stt.Transcriber(self)
         self.behavior_manager = behavior_manager.BehaviorManager(self)
 
     def get_context(self): # Returns the current context(in the form of a list of messages) for the given active characters in the ongoing conversation
@@ -89,7 +98,7 @@ class conversation_manager():
 
     def check_mcm_mic_status(self):
         # Check if the mic setting has been configured in MCM
-        # If it has, use this instead of the config.ini setting, otherwise take the config.ini value
+        # If it has, use this instead of the config.json setting, otherwise take the config.json value
         # TODO: Convert to game_state_manager await and load game data method
         if os.path.exists(f'{self.config.game_path}/_mantella_microphone_enabled.txt'):
             with open(f'{self.config.game_path}/_mantella_microphone_enabled.txt', 'r', encoding='utf-8') as f:

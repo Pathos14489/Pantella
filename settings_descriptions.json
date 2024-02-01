@@ -1,0 +1,110 @@
+{
+    "Game": {
+        "game_id": "The game id of the game you are playing. Currently only 'skyrim' and 'fallout' are supported."
+    },
+    "Paths": {
+        "game_path": "If you are using a Wabbajack modlist, Mod Organizer 2 may be storing your Skyrim folder in MO2\\overwrite\\Root\nIf that is the case, try setting this path as your skyrim_folder if pointing to your actual Skyrim folder doesn't work\nIf this path is incorrect, casting a spell on an NPC will will only end a conversation\ndefault = C:\\Games\\Steam\\steamapps\\common\\Skyrim Special Edition",
+        "mod_path": "The path to the mod's installation folder.",
+        "character_database_file": "The path to the character database file.",
+        "voice_model_ref_ids_file": "The path to the voice model reference ids file.",
+        "xvasynth_path": "The path to the xVASynth installation folder.",
+        "xtts_server_folder": "The path to the xTTS server folder.",
+        "logging_file_path": "The path to the logging file.",
+        "language_support_file_path": "The path to the language support file."
+    },
+    "Language": {
+        "language": "The language of the game.",
+        "end_conversation_keyword": "The keyword that will end the conversation.",
+        "goodbye_npc_response": "The response the NPC will give when the conversation ends.",
+        "collecting_thoughts_npc_response": "The response the NPC will give when they are thinking."
+    },
+    "Microphone": {
+        "mic_enabled": "Whether the microphone is enabled.",
+        "whisper_model": "The whisper model to use.",
+        "stt_language": "The language to use for speech-to-text.",
+        "stt_translate": "Whether to translate the speech-to-text.",
+        "whisper_process_device": "The whisper process device.",
+        "whisper_type": "The whisper type.",
+        "whisper_url": "The whisper url.",
+        "audio_threshold": "The audio threshold.",
+        "pause_threshold": "The pause threshold.",
+        "listen_timeout": "The listen timeout."
+    },
+    "LanguageModel": {
+        "inference_engine": "The inference engine to use.",
+        "tokenizer_type": "The tokenizer type to use.",
+        "maximum_local_tokens": "The maximum local tokens.",
+        "max_response_sentences": "The maximum response sentences.",
+        "wait_time_buffer": "The wait time buffer.",
+        "stop": "The stop tokens.",
+        "temperature": "The temperature.",
+        "top_p": "The top p.",
+        "min_p": "The min p.",
+        "top_k": "The top k.",
+        "repeat_penalty": "The repeat penalty.",
+        "max_tokens": "The max tokens.",
+        "BOS_token": "The BOS token.",
+        "EOS_token": "The EOS token.",
+        "message_signifier": "The message signifier.",
+        "message_seperator": "The message seperator.",
+        "message_format": "The message format.",
+        "system_name": "The system name.",
+        "user_name": "The user name.",
+        "assistant_name": "The assistant name.",
+        "assist_check": "Whether to check for assistance.",
+        "strip_smalls": "Whether to strip smalls.",
+        "small_size": "The small size.",
+        "same_output_limit": "The same output limit.",
+        "conversation_limit_pct": "The conversation limit percent.",
+        "reload_buffer": "The reload buffer.",
+        "reload_wait_time": "The reload wait time."
+    },
+    "openai_api": {
+        "llm": "The language model to use.",
+        "alternative_openai_api_base": "The alternative openai api base.",
+        "secret_key_file_path": "The secret key file path."
+    },
+    "llama_cpp_python": {
+        "model_path": "The model path.",
+        "n_gpu_layers": "The number of gpu layers.",
+        "n_threads": "The number of threads.",
+        "n_batch": "The number of batch.",
+        "tensor_split": "The tensor split.",
+        "main_gpu": "The main gpu."
+    },
+    "Speech": {
+        "tts_engine": "The tts engine.",
+        "end_conversation_wait_time": "The end conversation wait time.",
+        "sentences_per_voiceline": "The sentences per voiceline."
+    },
+    "xVASynth": {
+        "xvasynth_process_device": "The xvasynth process device.",
+        "pace": "The pace.",
+        "use_cleanup": "Whether to use cleanup.",
+        "use_sr": "Whether to use sr.",
+        "xvasynth_base_url": "The xvasynth base url."
+    },
+    "xTTS": {
+        "xtts_base_url": "The xtts base url.",
+        "xtts_data": "The xtts data."
+    },
+    "Cleanup": {
+        "remove_mei_folders": "Whether to remove mei folders."
+    },
+    "Debugging": {
+        "debug_mode": "Whether to enable debug mode.",
+        "play_audio_from_script": "Whether to play audio from script.",
+        "debug_character_name": "The debug character name.",
+        "debug_use_mic": "Whether to use the mic for debugging.",
+        "default_player_response": "The default player response.",
+        "debug_exit_on_first_exchange": "Whether to exit on the first exchange.",
+        "add_voicelines_to_all_voice_folders": "Whether to add voicelines to all voice folders."
+    },
+    "Prompt": {
+        "single_npc_prompt": "The single npc prompt.",
+        "multi_npc_prompt": "The multi npc prompt."
+    },
+    "Config": {
+        "port": "The port."
+    }
+}

@@ -17,7 +17,7 @@ class ChatManager:
         self.game_state_manager = self.conversation_manager.game_state_manager
         self.config = self.conversation_manager.config
         self.game = self.config.game_id
-        self.mod_folder = self.config.mod_path
+        self.mod_voice_dir = self.config.mod_voice_dir
         self.add_voicelines_to_all_voice_folders = self.config.add_voicelines_to_all_voice_folders
         self.wait_time_buffer = self.config.wait_time_buffer
         self.root_mod_folter = self.config.game_path
@@ -49,13 +49,13 @@ class ChatManager:
         """Save voice model folder to Mantella Spell if it does not already exist"""
         self.in_game_voice_model = in_game_voice_folder
 
-        in_game_voice_folder_path = f"{self.mod_folder}/{in_game_voice_folder}/"
+        in_game_voice_folder_path = f"{self.mod_voice_dir}/{in_game_voice_folder}/"
         if not os.path.exists(in_game_voice_folder_path):
             os.mkdir(in_game_voice_folder_path)
 
             # copy voicelines from one voice folder to this new voice folder
             # this step is needed for Skyrim to acknowledge the folder
-            example_folder = f"{self.mod_folder}/MaleNord/"
+            example_folder = f"{self.mod_voice_dir}/MaleNord/"
             for file_name in os.listdir(example_folder):
                 source_file_path = os.path.join(example_folder, file_name)
 
@@ -84,7 +84,7 @@ class ChatManager:
                 wav_file_to_use = self.f4_wav_file2
                 subtitle += " Mantella2"
                 self.f4_use_wav_file1 = True
-            wav_file_path = f"{self.mod_folder}/{wav_file_to_use}"
+            wav_file_path = f"{self.mod_voice_dir}/{wav_file_to_use}"
             if os.path.exists(wav_file_path):
                 os.remove(wav_file_path)
             shutil.copyfile(audio_file, wav_file_path)
@@ -94,7 +94,7 @@ class ChatManager:
             logging.error(f"Error saving voiceline to voice folders. Audio file: {audio_file}, subtitle: {subtitle}")
             return
         if self.add_voicelines_to_all_voice_folders == '1':
-            for sub_folder in os.scandir(self.mod_folder):
+            for sub_folder in os.scandir(self.mod_voice_dir):
                 if sub_folder.is_dir():
                     #copy both the wav file and lip file if the game isn't Fallout4
                     if self.game !="fallout4":
@@ -102,8 +102,8 @@ class ChatManager:
                     shutil.copyfile(audio_file.replace(".wav", ".lip"), f"{sub_folder.path}/{self.f4_lip_file}")
         else:
             if self.game !="fallout4":
-                shutil.copyfile(audio_file, f"{self.mod_folder}/{self.active_character.in_game_voice_model}/{self.wav_file}")
-            shutil.copyfile(audio_file.replace(".wav", ".lip"), f"{self.mod_folder}/{self.active_character.in_game_voice_model}/{self.lip_file}")
+                shutil.copyfile(audio_file, f"{self.mod_voice_dir}/{self.active_character.in_game_voice_model}/{self.wav_file}")
+            shutil.copyfile(audio_file.replace(".wav", ".lip"), f"{self.mod_voice_dir}/{self.active_character.in_game_voice_model}/{self.lip_file}")
 
         logging.info(f"{self.active_character.name} should speak")
         if self.character_num == 0:
@@ -114,13 +114,13 @@ class ChatManager:
 
     @utils.time_it
     def remove_files_from_voice_folders(self):
-        for sub_folder in os.listdir(self.mod_folder):
+        for sub_folder in os.listdir(self.mod_voice_dir):
             try:
                 if self.game != "fallout4": # delete both the wav file and lip file if the game isn't Fallout4
-                    os.remove(f"{self.mod_folder}/{sub_folder}/{self.wav_file}")
-                    os.remove(f"{self.mod_folder}/{sub_folder}/{self.lip_file}")
+                    os.remove(f"{self.mod_voice_dir}/{sub_folder}/{self.wav_file}")
+                    os.remove(f"{self.mod_voice_dir}/{sub_folder}/{self.lip_file}")
                 else: #if the game is Fallout 4 only delete the lip file
-                    os.remove(f"{self.mod_folder}/{sub_folder}/{self.f4_lip_file}")
+                    os.remove(f"{self.mod_voice_dir}/{sub_folder}/{self.f4_lip_file}")
             except:
                 continue
 
