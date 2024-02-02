@@ -215,7 +215,7 @@ class CharacterDB():
                     break
         if character is None: # If no character was found, try to find one with the same base_id - This might be a generic character that doesn't have a dedicated entry in the character database
             for db_character in self.characters: # Try to find any character with the same base_id
-                if character_base_id is not None and )character_base_id == db_character['base_id'] or db_character["base_id"].startswith(character_base_id)):
+                if character_base_id is not None and (character_base_id == db_character['base_id'] or db_character["base_id"].startswith(character_base_id)):
                     character = db_character
                     is_generic_npc = True
                     break
