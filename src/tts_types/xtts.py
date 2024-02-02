@@ -81,12 +81,12 @@ class Synthesizer(base_tts.base_Synthesizer): # Gets token count from OpenAI's e
         logging.info(f'(Redundant Method, xTTS does not support changing voice models as all voices are calculated at runtime)')
           
     @utils.time_it
-    def _synthesize_line_xtts(self, line, save_path, voice, aggro=0):
-        voice_path = f"{voice.replace(' ', '')}"
+    def _synthesize_line_xtts(self, line, save_path, character, aggro=0):
+        voice_path = f"{character.voice_model.replace(' ', '')}"
         data = {
             'text': line,
             'speaker_wav': voice_path,
-            'language': self.language
+            'language': character.language
         }       
         response = requests.post(self.synthesize_url_xtts, json=data)
         if response.status_code == 200: # if the request was successful, write the wav file to disk at the specified path
@@ -114,7 +114,7 @@ class Synthesizer(base_tts.base_Synthesizer): # Gets token count from OpenAI's e
             logging.warning("Failed to remove spoken voicelines")
 
         # Synthesize voicelines
-        self._synthesize_line_xtts(voiceline, final_voiceline_file, character.voice_model, aggro)
+        self._synthesize_line_xtts(voiceline, final_voiceline_file, character, aggro)
 
         if not os.path.exists(final_voiceline_file):
             logging.error(f'xTTS failed to generate voiceline at: {Path(final_voiceline_file)}')

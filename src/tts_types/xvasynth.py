@@ -106,14 +106,14 @@ class Synthesizer(base_tts.base_Synthesizer): # Gets token count from OpenAI's e
 
         # Synthesize voicelines
         if len(phrases) == 1:
-            self._synthesize_line(phrases[0], final_voiceline_file, aggro)
+            self._synthesize_line(phrases[0], final_voiceline_file, character, aggro)
         else:
             # TODO: include batch synthesis for v3 models (batch not needed very often)
             if self.model_type != 'xVAPitch':
                 self._batch_synthesize(phrases, voiceline_files)
             else:
                 for i, voiceline_file in enumerate(voiceline_files):
-                    self._synthesize_line(phrases[i], voiceline_files[i])
+                    self._synthesize_line(phrases[i], voiceline_files[i], character)
             self.merge_audio_files(voiceline_files, final_voiceline_file)
 
         if not os.path.exists(final_voiceline_file):
@@ -147,7 +147,7 @@ class Synthesizer(base_tts.base_Synthesizer): # Gets token count from OpenAI's e
         return voices
 
     @utils.time_it
-    def _synthesize_line(self, line, save_path, aggro=0):
+    def _synthesize_line(self, line, save_path, character, aggro=0):
         pluginsContext = {}
         # in combat
         if (aggro == 1):
@@ -161,7 +161,7 @@ class Synthesizer(base_tts.base_Synthesizer): # Gets token count from OpenAI's e
             'pace': self.pace,
             'outfile': save_path,
             'vocoder': 'n/a',
-            'base_lang': self.language,
+            'base_lang': character.language,
             'base_emb': self.base_speaker_emb,
             'useSR': self.use_sr,
             'useCleanup': self.use_cleanup,
@@ -301,7 +301,7 @@ class Synthesizer(base_tts.base_Synthesizer): # Gets token count from OpenAI's e
             'version': '3.0',
             'model': voice_path, 
             'modelType': self.model_type,
-            'base_lang': self.language, 
+            'base_lang': character.language, 
             'pluginsContext': '{}',
         }
         requests.post(self.loadmodel_url, json=model_change)
