@@ -8,11 +8,11 @@ class follow(base_behavior.BaseBehavior):
         self.description = "If {player} asks you to follow them, and you are thoroughly convinced to do so, begin your response with 'Follow:'."
         self.example = "'Come with me if you want to live!' 'Follow: Alright, I'll follow you.'"
     
-    def run(self, run=False, sentence=None):
+    def run(self, run=False, next_author=None, sentence=None):
         if run:
             if sentence is None:
-                logging.error(f"Goodbye behavior called with no sentence!")
+                logging.error(f"Follow behavior called with no sentence!")
             else:
-                logging.info(f"The NPC is willing to follow the player")
+                logging.info(f"{next_author} is willing to follow someone.")
                 self.manager.conversation_manager.game_state_manager.write_game_info('_mantella_aggro', '2') # TODO: Abstract this to a function
         return "follow"

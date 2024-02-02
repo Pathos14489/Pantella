@@ -13,7 +13,7 @@ class BaseBehavior():
     def conversation_manager(self):
         return self.manager.conversation_manager
     
-    def run(self, run=False, sentence=None):
+    def run(self, run=False, next_author=None, sentence=None):
         if run:
             if sentence is None:
                 logging.error(f"Goodbye behavior called with no sentence!")

@@ -26,19 +26,19 @@ class BehaviorManager():
     def behavior_keywords(self):
         return [behavior.keyword for behavior in self.behaviors]
     
-    def evaluate(self, keyword, sentence): # Returns True if the keyword was found and the behavior was run, False otherwise
+    def evaluate(self, keyword, next_author, sentence): # Returns True if the keyword was found and the behavior was run, False otherwise
         logging.info(f"Evaluating keyword {keyword} in sentence {sentence}")
         for behavior in self.behaviors:
             if behavior.keyword is not None and behavior.keyword.lower() == keyword.lower():
                 logging.info(f"Behavior triggered: {behavior.keyword}")
                 try:
-                    behavior.run(True, sentence)
+                    behavior.run(True, next_author, sentence)
                     return behavior
                 except Exception as e:
                     logging.error(f"Error running behavior {behavior.keyword}: {e}")
         return None
     
-    def pre_sentence_evaluate(self,sentence): # Evaluates just the sentence, returns the behavior that was run
+    def pre_sentence_evaluate(self, next_author, sentence): # Evaluates just the sentence, returns the behavior that was run
         logging.info(f"Evaluating sentence {sentence}")
         for behavior in self.behaviors:
             npc_keywords = behavior.npc_pre_keywords
@@ -50,13 +50,13 @@ class BehaviorManager():
             if npc_contains_keyword:
                 logging.info(f"Behavior triggered: {behavior.keyword}")
                 try:
-                    behavior.run(True, sentence)
+                    behavior.run(True, sentence=sentence)
                     return behavior
                 except Exception as e:
                     logging.error(f"Error running behavior {behavior.keyword}: {e}")
         return None
     
-    def post_sentence_evaluate(self,sentence): # Evaluates just the sentence, returns the behavior that was run
+    def post_sentence_evaluate(self,next_author, sentence): # Evaluates just the sentence, returns the behavior that was run
         logging.info(f"Evaluating sentence {sentence}")
         for behavior in self.behaviors:
             npc_keywords = behavior.npc_post_keywords
