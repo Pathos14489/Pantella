@@ -71,7 +71,14 @@ class Characters:
 
     @property
     def replacement_dict(self): # Returns a dictionary of replacement values for the current context -- Dynamic Variables
-        if len(self.active_characters) == 1: # SingleNPC style context
+        if len(self.active_characters) == 1 and self.conversation_manager.is_radient: # SingleNPC style context
+            replacement_dict = self.active_characters_list[0].replacement_dict
+            replacement_dict2 = self.active_characters_list[1].replacement_dict
+            replacement_dict2 = {}
+            for key in replacement_dict:
+                replacement_dict2[key + "2"] = replacement_dict[key]
+            replacement_dict.update(replacement_dict2)
+        elif len(self.active_characters) == 1 and not self.conversation_manager.is_radient: # SingleNPCw/Player style context
             replacement_dict = self.active_characters_list[0].replacement_dict
         else: # MultiNPC style context
             replacement_dict = {
