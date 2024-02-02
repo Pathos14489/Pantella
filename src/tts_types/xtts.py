@@ -82,10 +82,28 @@ class Synthesizer(base_tts.base_Synthesizer): # Gets token count from OpenAI's e
           
     @utils.time_it
     def _synthesize_line_xtts(self, line, save_path, character, aggro=0):
-        voice_path = f"{character.voice_model.replace(' ', '')}"
+        basic_voice_model = f"{character.voice_model.replace(' ', '')}"
+        racial_voice_model = f"{character.race}{basic_voice_model}"
+        gendered_voice_model = f"{character.gender}{basic_voice_model}"
+        gendered_racial_voice_model = f"{character.race}{character.gender}{basic_voice_model}"
+        voice_model = basic_voice_model
+        if character.ref_id in self.voices():
+            voice_model = character.ref_id
+        elif character.name in self.voices():
+            voice_model = character.name
+        elif gendered_racial_voice_model in self.voices():
+            voice_model = gendered_racial_voice_model
+        elif gendered_voice_model in self.voices():
+            voice_model = gendered_voice_model
+        elif racial_voice_model in self.voices():
+            voice_model = racial_voice_model
+            
+        if voice_model not in self.voices():
+            logging.error(f'Voice model {voice_model} not available')
+            raise FileNotFoundError()
         data = {
             'text': line,
-            'speaker_wav': voice_path,
+            'speaker_wav': voice_model,
             'language': character.language_code
         }
         print(data)
