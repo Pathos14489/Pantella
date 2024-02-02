@@ -182,10 +182,12 @@ class CharacterDB():
                         logging.info("(The rest of the program will continue to run, but this character might not be able to be used)")
 
     def get_character(self, character_name, character_ref_id=None, character_base_id=None): # Get a character from the character database using the character's name, refid_int, or baseid_int
-        character_base_id = int(character_base_id, 16) if character_base_id is not None else 0 # Convert int id to hex if it is not None
-        character_ref_id = int(character_ref_id, 16) if character_ref_id is not None else 0 # Convert int id to hex if it is not None
-        character_base_id = character_base_id % 0x1000000 # Remove the first two characters from the base_id if this is a character from a mod
-        character_ref_id = character_ref_id % 0x1000000 # Remove the first two characters from the ref_id if this is a character from a mod
+        character_ref_id = int(character_ref_id) if character_ref_id is not None else 0 # Convert int id to hex if it is not None
+        character_base_id = int(character_base_id) if character_base_id is not None else 0 # Convert int id to hex if it is not None
+        logging.info(f"Getting character '{character_name}({character_ref_id})['{character_base_id}]<({hex(character_ref_id)})['{hex(character_base_id)}]>'...")
+        character_ref_id = hex(character_ref_id)[3:] if character_ref_id is not None else None # Convert int id to hex if it is not None
+        character_base_id = hex(character_base_id)[3:] if character_base_id is not None else None # Convert int id to hex if it is not None
+        logging.info(f"Fixed IDs: '{character_name}({character_ref_id})['{character_base_id}' - Getting character from character database using name lookup...")
         possibly_same_character = []
         character = None
         is_generic_npc = False
@@ -194,6 +196,10 @@ class CharacterDB():
                 possibly_same_character.append(db_character)
         if len(possibly_same_character) > 0:
             if len(possibly_same_character) == 1: # If there is only one character with the same name, use that character
+                if character_ref_id is not None and character_ref_id == possibly_same_character[0]['ref_id']:
+                    logging.info(f"Found character '{character_name}' in character database using ref_id lookup.")
+                else:
+                    logging.info(f"Found character '{character_name}' in character database using name lookup.")
                 character = possibly_same_character[0]
             else: # If there are multiple characters with the same name, try to find one with the same ref_id
                 for db_character in possibly_same_character:
