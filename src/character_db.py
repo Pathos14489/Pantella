@@ -184,6 +184,8 @@ class CharacterDB():
     def get_character(self, character_name, character_ref_id=None, character_base_id=None): # Get a character from the character database using the character's name, refid_int, or baseid_int
         character_ref_id = int(character_ref_id) if character_ref_id is not None else 0 # Convert int id to hex if it is not None
         character_base_id = int(character_base_id) if character_base_id is not None else 0 # Convert int id to hex if it is not None
+        character_ref_id = abs(character_ref_id)
+        character_base_id = abs(character_base_id)
         logging.info(f"Getting character '{character_name}({character_ref_id})['{character_base_id}]<({hex(character_ref_id)})['{hex(character_base_id)}]>'...")
         character_ref_id = hex(character_ref_id)[3:] if character_ref_id is not None else None # Convert int id to hex if it is not None
         character_base_id = hex(character_base_id)[3:] if character_base_id is not None else None # Convert int id to hex if it is not None
