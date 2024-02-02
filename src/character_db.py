@@ -194,28 +194,28 @@ class CharacterDB():
         character = None
         is_generic_npc = False
         for db_character in self.characters: # Try to find any character with the same name and ref_id and add it to the possibly_same_character list
-            if character_name == db_character['name'] or character_ref_id == db_character['ref_id'] or db_character["ref_id"].startswith(character_ref_id):
+            if character_name == db_character['name'] or character_ref_id == db_character['ref_id'] or character_ref_id.endswith(db_character["ref_id"]):
                 possibly_same_character.append(db_character)
         if len(possibly_same_character) > 0:
             if len(possibly_same_character) == 1: # If there is only one character with the same name, use that character
-                if character_ref_id is not None and (character_ref_id == possibly_same_character[0]['ref_id'] or possibly_same_character[0]["ref_id"].startswith(character_ref_id)):
+                if character_ref_id is not None and (character_ref_id == possibly_same_character[0]['ref_id'] or character_ref_id.endswith(possibly_same_character[0]["ref_id"])):
                     logging.info(f"Found character '{character_name}' in character database using ref_id lookup.")
                 else:
                     logging.info(f"Found character '{character_name}' in character database using name lookup.")
                 character = possibly_same_character[0]
             else: # If there are multiple characters with the same name, try to find one with the same ref_id
                 for db_character in possibly_same_character:
-                    if character_ref_id is not None and (character_ref_id == db_character['ref_id'] or db_character["ref_id"].startswith(character_ref_id)):
+                    if character_ref_id is not None and (character_ref_id == db_character['ref_id'] or character_ref_id.endswith(db_character["ref_id"])):
                         character = db_character
                         break
         if character is None: # If no character was found, try to find one with the same ref_id - This might be a generic character that doesn't have a dedicated entry in the character database
             for db_character in self.characters: # Try to find any character with the same ref_id
-                if character_ref_id is not None and (character_ref_id == db_character['ref_id'] or db_character["ref_id"].startswith(character_ref_id)):
+                if character_ref_id is not None and (character_ref_id == db_character['ref_id'] or character_ref_id.endswith(db_character["ref_id"])):
                     character = db_character
                     break
         if character is None: # If no character was found, try to find one with the same base_id - This might be a generic character that doesn't have a dedicated entry in the character database
             for db_character in self.characters: # Try to find any character with the same base_id
-                if character_base_id is not None and (character_base_id == db_character['base_id'] or db_character["base_id"].startswith(character_base_id)):
+                if character_base_id is not None and (character_base_id == db_character['base_id'] or character_base_id.endswith(db_character["base_id"])):
                     character = db_character
                     is_generic_npc = True
                     break
