@@ -82,7 +82,7 @@
                         break;
                     default:
                         settingInput.type = "text";
-                        settingInput.value = String(settings[typeCategory][setting]);
+                        settingInput.value = String(settings[typeCategory][setting]).replace("\n","\\n");
                         settingInput.title = default_settings.descriptions[typeCategory][setting];
                         settingInput.alt = default_settings.descriptions[typeCategory][setting];
                         break;
