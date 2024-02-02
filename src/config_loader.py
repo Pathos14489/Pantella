@@ -43,8 +43,13 @@ https://github.com/art-from-the-machine/Mantella#issues-qa
 
 
     def save(self):
-        with open(self.config_path, 'w') as f:
-            json.dump(self.export(), f, indent=4)
+        try:
+            exportable = self.export()
+            with open(self.config_path, 'w') as f:
+                json.dump(exportable, f, indent=4)
+            logging.info(f"Config file saved to {self.config_path}")
+        except Exception as e:
+            logging.error(f"Could not save config file to {self.config_path}. Error: {e}")
 
     def load(self):
         save = False
@@ -308,7 +313,8 @@ https://github.com/art-from-the-machine/Mantella#issues-qa
                 "add_voicelines_to_all_voice_folders": self.add_voicelines_to_all_voice_folders
             },
             "Prompt": {
-                "single_npc_prompt": self.single_npc_prompt,
+                "single_player_with_npc_prompt": self.single_player_with_npc_prompt,
+                "single_npc_with_npc_prompt": self.single_npc_with_npc_prompt,
                 "multi_npc_prompt": self.multi_npc_prompt
             },
             "Config": {
@@ -340,6 +346,8 @@ https://github.com/art-from-the-machine/Mantella#issues-qa
                     setattr(self, sub_key, data[key][sub_key])
             self.save()
             self.conversation_manager.restart = True
+            if not self.conversation_manager.in_conversation:
+                logging.info("Config updated and conversation manager not in a conversation. Restart the conversation manager to apply the new settings. - WILL BE FIXED IN FUTURE RELEASE")
             return flask.jsonify(self.export())
         @app.route('/defaults', methods=['GET'])
         def get_default():
