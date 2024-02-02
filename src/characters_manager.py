@@ -102,9 +102,12 @@ class Characters:
         return len(self.active_characters)
     
     def get_raw_prompt(self):
-        if len(self.active_characters) == 1:
-            logging.info("Only one active character, returning SingleNPC style context")
-            prompt = self.conversation_manager.config.single_npc_prompt
+        if len(self.active_characters) == 1 and self.conversation_manager.is_radient: # SingleNPC style context
+            logging.info("Two active characters, but player isn't in conversation, returning SingleNPCw/NPC style context")
+            prompt = self.conversation_manager.config.single_npc_with_npc_prompt
+        elif len(self.active_characters) == 1 and not self.conversation_manager.is_radient:
+            logging.info("Only one active character, returning SingleNPCw/Player style context")
+            prompt = self.conversation_manager.config.single_player_with_npc_prompt
         else:
             logging.info("Multiple active characters, returning MultiNPC style context")
             prompt = self.conversation_manager.config.multi_npc_prompt
