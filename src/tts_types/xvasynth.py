@@ -161,7 +161,7 @@ class Synthesizer(base_tts.base_Synthesizer): # Gets token count from OpenAI's e
             'pace': self.pace,
             'outfile': save_path,
             'vocoder': 'n/a',
-            'base_lang': character.language,
+            'base_lang': character.language_code,
             'base_emb': self.base_speaker_emb,
             'useSR': self.use_sr,
             'useCleanup': self.use_cleanup,
@@ -301,7 +301,7 @@ class Synthesizer(base_tts.base_Synthesizer): # Gets token count from OpenAI's e
             'version': '3.0',
             'model': voice_path, 
             'modelType': self.model_type,
-            'base_lang': character.language, 
+            'base_lang': character.language_code, 
             'pluginsContext': '{}',
         }
         requests.post(self.loadmodel_url, json=model_change)

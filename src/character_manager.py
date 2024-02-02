@@ -2,6 +2,7 @@ import os
 import logging
 import json
 import time
+import math
 import src.utils as utils
 
 class Character:
@@ -9,15 +10,18 @@ class Character:
         self.characters_manager = characters_manager
         self.info = info
         logging.info(f"Loading character: {self.info['name']}")
+        logging.info(json.dumps(info, indent=4))
         for key, value in info.items():
             setattr(self, key, value) # set all character info as attributes of the character object to support arbitrary character info
         # Legend for a few of the more important attributes:
         # self.ref_id - The reference ID of the character as hex with the first two numbers(the load order ID) removed - This is the id of the character in the game, so it is unique to each every single character in the game.
         # self.base_id - The base ID of the character as hex with the first two numbers(the load order ID) removed - This is the id of the character in the editor, so it is unique to each character type (e.g. all bandits have the same baseid, but all one of a single unique character has the same baseid as well)
-        if "lang_override" in self.info: # If the character has a language override, use that language instead of the player's language
-            self.language = self.info["lang_override"]
+        if "lang_override" in self.info and self.info["lang_override"] != None and not math.isnan(self.info["lang_override"]) and self.info["lang_override"].strip() != "": # If the character has a language override, use it
+            logging.info(f"Language override found for {self.name}: {self.info['lang_override']}")
+            self.language_code = self.info["lang_override"]
         else: # If the character does not have a language override, use the player's language
-            self.language = self.characters_manager.conversation_manager.language_info['language']
+            self.language_code = self.characters_manager.conversation_manager.language_info['alpha2']
+        self.language = self.characters_manager.conversation_manager.language_info['language']
         self.is_generic_npc = is_generic_npc
         self.conversation_summary = ''
         self.conversation_summary_file = self.get_latest_conversation_summary_file_path()

@@ -86,8 +86,9 @@ class Synthesizer(base_tts.base_Synthesizer): # Gets token count from OpenAI's e
         data = {
             'text': line,
             'speaker_wav': voice_path,
-            'language': character.language
-        }       
+            'language': character.language_code
+        }
+        print(data)
         response = requests.post(self.synthesize_url_xtts, json=data)
         if response.status_code == 200: # if the request was successful, write the wav file to disk at the specified path
             self.convert_to_16bit(io.BytesIO(response.content), save_path)
