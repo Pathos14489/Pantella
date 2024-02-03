@@ -198,9 +198,14 @@ class base_LLM():
                                 
                                 logging.info(f"next_author detected as: {next_author}")
                         if  next_author is not None and verified_author == False: # if next_author is not None, then verify that the next author is correct
-                            if next_author in possible_players: # if the next author is the player, then the player is speaking and generation should stop
-                                logging.info(f"Player is speaking. Stopping generation.")
-                                break
+                            if next_author in possible_players: # if the next author is the player, then the player is speaking and generation should stop, but only if the conversation is not radiant
+                                if self.conversation_manager.radient_dialogue:
+                                    logging.info(f"Player detected, but not allowed to speak in radiant dialogue. Retrying...")
+                                    retries += 1
+                                    raise Exception('Invalid author')
+                                else:
+                                    logging.info(f"Player is speaking. Stopping generation.")
+                                    break
                             if (next_author in self.conversation_manager.character_manager.active_characters): # if the next author is a real character that's active in this conversation, then switch to that character
                                 #TODO: or (any(key.split(' ')[0] == keyword_extraction for key in characters.active_characters))
                                 logging.info(f"Switched to {next_author}")
