@@ -40,16 +40,16 @@ class conversation_manager():
         self.player_race = None # Initialised at start of every conversation in await_and_setup_conversation()
         self.messages = [] # Initialised at start of every conversation in await_and_setup_conversation()
         self.conversation_started_radiant = False # Initialised at start of every conversation in await_and_setup_conversation()
-        self.radient_dialogue = False # Initialised at start of every conversation in await_and_setup_conversation()
+        self.radiant_dialogue = False # Initialised at start of every conversation in await_and_setup_conversation()
         self.restart = False # Can be set at any time to force restart of conversation manager - Will ungracefully end any ongoing conversation client side
         self.conversation_step = 0 # The current step of the conversation - 0 is before any conversation has started, 1 is the first step of the conversation, etc.
 
     def get_conversation_type(self): # Returns the type of conversation as a string - none, single_npc_with_npc, single_player_with_npc, multi_npc
         if len(self.character_manager.active_characters) == 0:
             return 'none'
-        elif len(self.character_manager.active_characters) == 1 and not self.radient_dialogue:
+        elif len(self.character_manager.active_characters) == 1 and not self.radiant_dialogue:
             return 'single_player_with_npc'
-        elif len(self.character_manager.active_characters) == 1 and self.radient_dialogue:
+        elif len(self.character_manager.active_characters) == 1 and self.radiant_dialogue:
             return 'single_npc_with_npc'
         else:
             return 'multi_npc'
