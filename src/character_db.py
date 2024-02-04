@@ -189,11 +189,21 @@ class CharacterDB():
         logging.info(f"Getting character '{character_name}({character_ref_id})['{character_base_id}]<({hex(character_ref_id)})['{hex(character_base_id)}]>'...")
         character_ref_id = hex(character_ref_id)[3:] if character_ref_id is not None else None # Convert int id to hex if it is not None
         character_base_id = hex(character_base_id)[3:] if character_base_id is not None else None # Convert int id to hex if it is not None
-        logging.info(f"Fixed IDs: '{character_name}({character_ref_id})['{character_base_id}' - Getting character from character database using name lookup...")
+        logging.info(f"Fixed IDs: '{character_name}({character_ref_id})['{character_base_id}]' - Getting character from character database using name lookup...")
         possibly_same_character = []
         character = None
         is_generic_npc = False
         for db_character in self.characters: # Try to find any character with the same name and ref_id and add it to the possibly_same_character list
+            
+            if len(character_name) == len(db_character['name']): # Apply the same capitalization to the character name as the character database name if the lengths are the same
+                new_name = ""
+                for i in range(len(character_name)):
+                    if character_name[i].isupper():
+                        new_name += character_name[i].upper()
+                    else:
+                        new_name += character_name[i].lower()
+                    character_name = new_name # Set the character name to the new fixed name
+
             if character_name == db_character['name'] or character_ref_id == db_character['ref_id'] or str(character_ref_id).endswith(str(db_character["ref_id"])):
                 possibly_same_character.append(db_character)
         if len(possibly_same_character) > 0:
@@ -208,6 +218,12 @@ class CharacterDB():
                     if character_ref_id is not None and (character_ref_id == db_character['ref_id'] or str(character_ref_id).endswith(str(db_character["ref_id"]))):
                         character = db_character
                         break
+                if character is None: # If no character was found, try to find one with the same base_id
+                    for db_character in possibly_same_character:
+                        if character_base_id is not None and (character_base_id == db_character['base_id'] or str(character_base_id).endswith(str(db_character["base_id"]))):
+                            character = db_character
+                            is_generic_npc = True
+                            break
         if character is None: # If no character was found, try to find one with the same ref_id - This might be a generic character that doesn't have a dedicated entry in the character database
             for db_character in self.characters: # Try to find any character with the same ref_id
                 if character_ref_id is not None and (character_ref_id == db_character['ref_id'] or str(character_ref_id).endswith(str(db_character["ref_id"]))):
