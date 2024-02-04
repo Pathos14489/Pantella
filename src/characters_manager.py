@@ -103,6 +103,14 @@ class Characters:
         replacement_dict["behavior_summary"] = self.conversation_manager.behavior_manager.get_behavior_summary()
         replacement_dict["language"] = self.conversation_manager.language_info['language']
 
+        
+        if "bio" in replacement_dict: # If bio is in replacement_dict, add bio2 and bios to replacement_dict
+            replacement_dict["bio"] = replacement_dict["bio"].format(**replacement_dict2)
+        if "bio2" in replacement_dict:
+            replacement_dict["bio2"] = replacement_dict["bio2"].format(**replacement_dict)
+        if "bios" in replacement_dict:
+            replacement_dict["bios"] = replacement_dict["bios"].format(**replacement_dict)
+
         return replacement_dict
 
     def active_character_count(self): # Returns the number of active characters as an int
