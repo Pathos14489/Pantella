@@ -212,6 +212,9 @@ class conversation_manager():
                 logging.error(f"Error: {e}")
                 input("Press Enter to exit.")
                 exit()
+        else: # if radiant dialogue, get response from NPC to other NPCs greeting
+            self.messages.append({'role': self.chat_manager.active_character.name, 'content': f"{self.language_info['hello']}."}) # TODO: Make this more interesting by generating a greeting for each NPC based on the context of the last line or two said(or if possible check if they were nearby when the line was said...?)
+
         self.game_state_manager.update_game_events() # update game events before player input
 
         self.in_conversation = True
