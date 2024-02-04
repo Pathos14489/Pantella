@@ -28,9 +28,9 @@ class BaseBehavior():
         return "BASEBEHAVIOR"
     
     def valid(self):
-        if not self.conversation_manager.radient_dialogue and self.radient_only:
+        if not self.conversation_manager.radiant_dialogue and self.radient_only:
             return False
-        if not self.conversation_manager.radient_dialogue and self.non_radient_only:
+        if not self.conversation_manager.radiant_dialogue and self.non_radient_only:
             return False
         conversation_type = self.conversation_manager.get_conversation_type() # single_npc_with_npc, single_npc_with_player, multi_npc
         if conversation_type == "single_npc_with_npc" and (self.single_npc_with_player_only or self.multi_npc_only): # If the conversation type is single_npc_with_npc, and the behavior is single_npc_with_player_only or multi_npc_only, skip this behavior

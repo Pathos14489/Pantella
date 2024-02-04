@@ -29,13 +29,14 @@ class BehaviorManager():
     def evaluate(self, keyword, next_author, sentence): # Returns True if the keyword was found and the behavior was run, False otherwise
         logging.info(f"Evaluating keyword {keyword} in sentence {sentence}")
         for behavior in self.behaviors:
-            if behavior.keyword is not None and behavior.keyword.lower() == keyword.lower():
-                logging.info(f"Behavior triggered: {behavior.keyword}")
-                try:
-                    behavior.run(True, next_author, sentence)
-                    return behavior
-                except Exception as e:
-                    logging.error(f"Error running behavior {behavior.keyword}: {e}")
+            if behavior.valid():
+                if behavior.keyword is not None and behavior.keyword.lower() == keyword.lower():
+                    logging.info(f"Behavior triggered: {behavior.keyword}")
+                    try:
+                        behavior.run(True, next_author, sentence)
+                        return behavior
+                    except Exception as e:
+                        logging.error(f"Error running behavior {behavior.keyword}: {e}")
         return None
     
     def pre_sentence_evaluate(self, next_author, sentence): # Evaluates just the sentence, returns the behavior that was run
@@ -77,10 +78,11 @@ class BehaviorManager():
     def get_behavior_summary(self):
         summary = ""
         for behavior in self.behaviors:
-            if behavior.description is not None:
-                summary += f"{behavior.description}"
-                if behavior.example is not None:
-                    summary += f"  E.g. {behavior.example}"
-                summary += "\n"
+            if behavior.valid():
+                if behavior.description is not None:
+                    summary += f"{behavior.description}"
+                    if behavior.example is not None:
+                        summary += f"  E.g. {behavior.example}"
+                    summary += "\n"
         summary = summary.replace("{player}", self.conversation_manager.player_name)
         return summary
