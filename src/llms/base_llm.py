@@ -22,6 +22,8 @@ class base_LLM():
         self.end_of_sentence_chars = [unicodedata.normalize('NFKC', char) for char in self.end_of_sentence_chars]
         self.banned_chars = ['*', '(', ')', '[', ']', '{', '}', "\"" ]
 
+        self.type = "normal"
+
     # the string printed when your print() this object
     def __str__(self):
         return f"{self.inference_engine_name} LLM"
@@ -142,6 +144,7 @@ class base_LLM():
         num_sentences = 0 # used to keep track of how many sentences have been generated
         voice_line_sentences = 0 # used to keep track of how many sentences have been generated for the current voice line
         retries = 5
+        system_loop = 3
         logging.info(f"Signifier: {self.config.message_signifier}")
         logging.info(f"Format: {self.config.message_format}")
         while retries >= 0: # keep trying to connect to the API until it works
@@ -206,6 +209,16 @@ class base_LLM():
                                 else:
                                     logging.info(f"Player is speaking. Stopping generation.")
                                     break
+                            if next_author == self.config.system_name and system_loop > 0: # if the next author is the system, then the system is speaking and generation should stop
+                                logging.info(f"System detected. Retrying...")
+                                system_loop -= 1
+                                retries += 1
+                                raise Exception('Invalid author')
+                            elif next_author == self.config.system_name and system_loop == 0: # if the next author is the system, then the system is speaking and generation should stop
+                                logging.info(f"System Loop detected. Please report to #dev channel in the Mantella Discord. Stopping generation.")
+                                if len(self.conversation_manager.messages) == 0:
+                                    logging.info(f"System Loop started at the first message.")
+                                break
                             if (next_author in self.conversation_manager.character_manager.active_characters): # if the next author is a real character that's active in this conversation, then switch to that character
                                 #TODO: or (any(key.split(' ')[0] == keyword_extraction for key in characters.active_characters))
                                 logging.info(f"Switched to {next_author}")
