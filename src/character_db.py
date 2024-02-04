@@ -195,16 +195,7 @@ class CharacterDB():
         is_generic_npc = False
         for db_character in self.characters: # Try to find any character with the same name and ref_id and add it to the possibly_same_character list
             
-            if len(character_name) == len(db_character['name']): # Apply the same capitalization to the character name as the character database name if the lengths are the same
-                new_name = ""
-                for i in range(len(character_name)):
-                    if character_name[i].isupper():
-                        new_name += character_name[i].upper()
-                    else:
-                        new_name += character_name[i].lower()
-                    character_name = new_name # Set the character name to the new fixed name
-
-            if character_name == db_character['name'] or character_ref_id == db_character['ref_id'] or str(character_ref_id).endswith(str(db_character["ref_id"])):
+            if character_name.lower() == str(db_character['name']).lower() or character_ref_id == db_character['ref_id'] or str(character_ref_id).endswith(str(db_character["ref_id"])):
                 possibly_same_character.append(db_character)
         if len(possibly_same_character) > 0:
             if len(possibly_same_character) == 1: # If there is only one character with the same name, use that character
