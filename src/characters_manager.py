@@ -105,11 +105,11 @@ class Characters:
 
         
         if "bio" in replacement_dict: # If bio is in replacement_dict, add bio2 and bios to replacement_dict
-            replacement_dict["bio"] = replacement_dict["bio"].format(**replacement_dict)
+            replacement_dict["bio"] = replacement_dict["bio"].replace("{bio}", "").format(**replacement_dict)
         if "bio2" in replacement_dict:
-            replacement_dict["bio2"] = replacement_dict["bio2"].format(**replacement_dict)
+            replacement_dict["bio2"] = replacement_dict["bio2"].replace("{bio2}", "").format(**replacement_dict)
         if "bios" in replacement_dict:
-            replacement_dict["bios"] = replacement_dict["bios"].format(**replacement_dict)
+            replacement_dict["bios"] = replacement_dict["bios"].replace("{bios}", "").format(**replacement_dict)
 
         return replacement_dict
 
