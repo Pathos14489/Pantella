@@ -24,6 +24,14 @@ class base_LLM():
 
         self.type = "normal"
 
+    @property
+    def EOS_token(self):
+        return self.config.EOS_token
+    
+    @property
+    def BOS_token(self):
+        return self.config.BOS_token
+
     # the string printed when your print() this object
     def __str__(self):
         return f"{self.inference_engine_name} LLM"
@@ -168,17 +176,16 @@ class base_LLM():
                     else:
                         logging.info(chunk.model_dump_json())
                         content = chunk.choices[0].text
-                    if content is not last_chunk:
+                    if content is not last_chunk: # if the content is not the same as the last chunk, then the LLM is not stuck in a loop and the generation should continue
                         last_chunk = content
                         same_chunk_count = 0
-                    else:
+                    else: # if the content is the same as the last chunk, then the LLM is probably stuck in a loop and the generation should stop
                         same_chunk_count += 1
                         if same_chunk_count > self.config.same_output_limit:
                             logging.info(f"Same chunk returned {same_chunk_count} times in a row. Stopping generation.")
                             break
                     if content is not None and content != '':
-                        sentence += content
-
+                        sentence += content # add the content to the sentence in progress
                         if next_author is None: # if next_author is None, then extract it from the start of the generation
                             if self.config.message_signifier in sentence: # if the message signifier is in the sentence, then the next author is the first part of the sentence
                                 next_author = sentence.split(self.config.message_signifier)[0] # extract the next author from the start of the generation
@@ -248,8 +255,8 @@ class base_LLM():
 
 
                         content_edit = unicodedata.normalize('NFKC', content) # normalize unicode characters
-                        # check if content marks the end of a sentence
-                        if (any(char in content_edit for char in self.end_of_sentence_chars)) or (any(char in content for char in self.banned_chars)): # if the content contains any of the end of sentence characters, then the sentence is complete
+                        
+                        if (any(char in content_edit for char in self.end_of_sentence_chars)) or (any(char in content for char in self.banned_chars)) or (self.EOS_token in sentence): # check if content marks the end of a sentence
                             if next_author is None: # if next_author is None after generating a sentence, then there was an error generating the output. The LLM didn't choose a character to speak next.
                                 logging.info(f"Next author is None. Failed to extract author from: {sentence}")
                                 input('Press enter to continue...')
@@ -280,6 +287,12 @@ class base_LLM():
                                 if behavior == None:
                                     logging.warn(f"Keyword '{keyword_extraction}' not found in behavior_manager. Disgarding from response.")
                                     
+                            eos = False
+                            if self.EOS_token in sentence:
+                                sentence = sentence.split(self.EOS_token)[0]
+                                logging.info(f"EOS token found in sentence. Trimming last sentence to: {sentence}")
+                                eos = True
+
 
                             voice_line += sentence # add the sentence to the voice line in progress
                             full_reply += sentence # add the sentence to the full reply
@@ -302,7 +315,7 @@ class base_LLM():
                             # max_response_sentences reached (and the conversation isn't radiant)
                             # conversation has switched from radiant to multi NPC (this allows the player to "interrupt" radiant dialogue and include themselves in the conversation)
                             # the conversation has ended
-                            if ((num_sentences >= self.max_response_sentences) and not self.conversation_manager.radiant_dialogue) or (self.conversation_manager.radiant_dialogue and not radiant_dialogue_update) or end_conversation: # if the conversation has ended, stop generating responses
+                            if ((num_sentences >= self.max_response_sentences) and not self.conversation_manager.radiant_dialogue) or (self.conversation_manager.radiant_dialogue and not radiant_dialogue_update) or end_conversation or eos: # if the conversation has ended, stop generating responses
                                 break
                 break
             except Exception as e:
