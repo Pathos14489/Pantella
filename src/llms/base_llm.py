@@ -32,6 +32,59 @@ class base_LLM():
     def BOS_token(self):
         return self.config.BOS_token
 
+    @property
+    def max_tokens(self):
+        return self.config.max_tokens
+    
+    @property
+    def temperature(self):
+        return self.config.temperature
+    
+    @property
+    def top_k(self):
+        return self.config.top_k
+    
+    @property
+    def top_p(self):
+        return self.config.top_p
+
+    @property
+    def min_p(self):
+        return self.config.min_p
+
+    @property
+    def repeat_penalty(self):
+        return self.config.repeat_penalty
+    
+    @property
+    def frequency_penalty(self):
+        return self.config.frequency_penalty
+    
+    @property
+    def presence_penalty(self):
+        return self.config.presence_penalty
+    
+    @property
+    def typical_p(self):
+        return self.config.typical_p
+    
+    @property
+    def mirostat_mode(self):
+        return self.config.mirostat_mode
+    
+    @property
+    def mirostat_eta(self):
+        return self.config.mirostat_eta
+    
+    @property
+    def mirostat_tau(self):
+        return self.config.mirostat_tau
+    
+    @property
+    def stop(self):
+        return self.config.stop
+    
+
     # the string printed when your print() this object
     def __str__(self):
         return f"{self.inference_engine_name} LLM"

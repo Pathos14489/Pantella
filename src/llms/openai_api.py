@@ -100,11 +100,19 @@ class LLM(base_LLM.base_LLM):
                 prompt += self.tokenizer.start_message(self.config.assistant_name) # Start empty message from no one to let the LLM generate the speaker by split \n
                 logging.info(f"Raw Prompt: {prompt}")
 
-                completion = self.client.completions.create(
-                    model=self.config.llm, prompt=prompt, max_tokens=self.config.max_tokens
+                openai_stop = self.stop[:4] # OpenAI stop is the first 4 options in the stop list
+                completion = self.client.completions.create(prompt=prompt,
+                    model=self.config.llm, 
+                    max_tokens=self.config.max_tokens,
+                    top_p=self.top_p, 
+                    temperature=self.temperature,
+                    frequency_penalty=self.frequency_penalty,
+                    stop=openai_stop,
+                    presence_penalty=self.presence_penalty,
+                    stream=False,
                 )
                 completion = completion.choices[0].text
-                logging.info(f"Completion:",completion)
+                logging.info(f"Completion:"+str(completion))
             except Exception as e:
                 logging.warning('Could not connect to LLM API, retrying in 5 seconds...')
                 logging.warning(e)
@@ -130,8 +138,16 @@ class LLM(base_LLM.base_LLM):
                 prompt += self.tokenizer.start_message("[name]") # Start empty message from no one to let the LLM generate the speaker by split \n
                 prompt = prompt.split("[name]")[0] # Start message without the name - Generates name for use in output_manager.py  process_response()
                 logging.info(f"Raw Prompt: {prompt}")
-                return self.client.completions.create(
-                    model=self.config.llm, prompt=prompt, max_tokens=self.config.max_tokens, stream=True # , stop=self.stop, temperature=self.temperature, top_p=self.top_p, frequency_penalty=self.frequency_penalty, stream=True
+                openai_stop = self.stop[:4] # OpenAI stop is the first 4 options in the stop list
+                return self.client.completions.create(prompt=prompt,
+                    model=self.config.llm, 
+                    max_tokens=self.config.max_tokens,
+                    top_p=self.top_p, 
+                    temperature=self.temperature,
+                    frequency_penalty=self.frequency_penalty,
+                    stop=openai_stop,
+                    presence_penalty=self.presence_penalty,
+                    stream=True,
                 )
             except Exception as e:
                 logging.warning('Could not connect to LLM API, retrying in 5 seconds...')

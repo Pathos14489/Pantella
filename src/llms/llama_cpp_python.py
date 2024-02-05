@@ -56,7 +56,18 @@ class LLM(base_LLM.base_LLM): # Uses llama-cpp-python as the LLM inference engin
                 prompt += self.tokenizer.start_message(self.config.assistant_name) # Start empty message from no one to let the LLM generate the speaker by split \n
                 logging.info(f"Raw Prompt: {prompt}")
 
-                completion = self.llm.create_completion(prompt, max_tokens=self.config.max_tokens, top_k=self.config.top_k, top_p=self.config.top_p, temperature=self.config.temperature, repeat_penalty=self.config.repeat_penalty)
+                completion = self.llm.create_completion(prompt,
+                    max_tokens=self.max_tokens,
+                    top_k=self.top_k,
+                    top_p=self.top_p,
+                    min_p=self.min_p,
+                    temperature=self.temperature,
+                    repeat_penalty=self.repeat_penalty, 
+                    stop=self.stop,
+                    frequency_penalty=self.frequency_penalty,
+                    presence_penalty=self.presence_penalty,
+                    stream=False
+                )
                 completion = completion["choices"][0]["text"]
                 logging.info(f"Completion:",completion)
             except Exception as e:
@@ -84,7 +95,22 @@ class LLM(base_LLM.base_LLM): # Uses llama-cpp-python as the LLM inference engin
                 prompt = prompt.split("[name]")[0] # Start message without the name - Generates name for use in process_response()
                 logging.info(f"Raw Prompt: {prompt}")
                 logging.info(f"Type of prompt: {type(prompt)}")
-                return self.llm.create_completion(prompt=prompt, max_tokens=self.config.max_tokens, top_k=self.config.top_k, top_p=self.config.top_p, min_p=self.config.min_p, temperature=self.config.temperature, repeat_penalty=self.config.repeat_penalty, stream=True, stop=self.config.stop)
+                return self.llm.create_completion(prompt=prompt,
+                    max_tokens=self.max_tokens,
+                    top_k=self.top_k,
+                    top_p=self.top_p,
+                    min_p=self.min_p,
+                    temperature=self.temperature,
+                    repeat_penalty=self.repeat_penalty, 
+                    stop=self.stop,
+                    frequency_penalty=self.frequency_penalty,
+                    presence_penalty=self.presence_penalty,
+                    typical_p=self.typical_p,
+                    mirostat_mode=self.mirostat_mode,
+                    mirostat_eta=self.mirostat_eta,
+                    mirostat_tau=self.mirostat_tau,
+                    stream=True,
+                )
             except Exception as e:
                 logging.warning('Error creating completion stream, retrying in 5 seconds...')
                 logging.warning(e)
