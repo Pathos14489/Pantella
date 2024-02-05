@@ -8,6 +8,8 @@ class BaseBehavior():
         self.example = None
         self.radient_only = False
         self.non_radient_only = False
+        self.player = False # If this behavior can only be triggered when the player is present
+        self.npc = False # If this behavior can only be triggered when only NPCs are present
         self.single_npc_with_npc_only = False
         self.single_npc_with_player_only = False
         self.multi_npc_only = False
@@ -33,10 +35,10 @@ class BaseBehavior():
         if not self.conversation_manager.radiant_dialogue and self.non_radient_only:
             return False
         conversation_type = self.conversation_manager.get_conversation_type() # single_npc_with_npc, single_npc_with_player, multi_npc
-        if conversation_type == "single_npc_with_npc" and (self.single_npc_with_player_only or self.multi_npc_only): # If the conversation type is single_npc_with_npc, and the behavior is single_npc_with_player_only or multi_npc_only, skip this behavior
+        if conversation_type == "single_npc_with_npc" and (self.single_npc_with_player_only or self.multi_npc_only or self.player): # If the conversation type is single_npc_with_npc, and the behavior is single_npc_with_player_only, multi_npc_only, or npc_only, return False
             return False
-        if conversation_type == "single_npc_with_player" and (self.single_npc_with_npc_only or self.multi_npc_only): # If the conversation type is single_npc_with_player, and the behavior is single_npc_with_npc_only or multi_npc_only, skip this behavior
+        if conversation_type == "single_npc_with_player" and (self.single_npc_with_npc_only or self.multi_npc_only or self.npc):
             return False
-        if conversation_type == "multi_npc" and (self.single_npc_with_npc_only or self.single_npc_with_player_only): # If the conversation type is multi_npc, and the behavior is single_npc_with_npc_only or single_npc_with_player_only, skip this behavior
+        if conversation_type == "multi_npc" and (self.single_npc_with_npc_only or self.single_npc_with_player_only or (self.npc and self.conversation_manager.radient_dialogue) or (self.player and not self.conversation_manager.radient_dialogue)):
             return False
         return True
