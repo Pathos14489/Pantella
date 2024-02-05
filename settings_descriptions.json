@@ -37,12 +37,6 @@
         "max_response_sentences": "The maximum response sentences.",
         "wait_time_buffer": "The wait time buffer.",
         "stop": "The stop tokens.",
-        "temperature": "The temperature.",
-        "top_p": "The top p.",
-        "min_p": "The min p.",
-        "top_k": "The top k.",
-        "repeat_penalty": "The repeat penalty.",
-        "max_tokens": "The max tokens.",
         "BOS_token": "The BOS token.",
         "EOS_token": "The EOS token.",
         "message_signifier": "The message signifier.",
@@ -58,6 +52,20 @@
         "conversation_limit_pct": "The conversation limit percent.",
         "reload_buffer": "The reload buffer.",
         "reload_wait_time": "The reload wait time."
+    },
+    "InferenceOptions": {
+        "temperature": "The temperature.",
+        "top_p": "The top p.",
+        "min_p": "The min p.",
+        "top_k": "The top k.",
+        "repeat_penalty": "The repeat penalty.",
+        "max_tokens": "The max tokens.",
+        "typical_p": "The typical p.",
+        "frequency_penalty": "The frequency penalty.",
+        "presence_penalty": "The presence penalty.",
+        "mirostat_mode": "The mirostat mode.",
+        "mirostat_eta": "The mirostat eta.",
+        "mirostat_tau": "The mirostat tau."
     },
     "openai_api": {
         "llm": "The language model to use.",
@@ -101,7 +109,8 @@
         "add_voicelines_to_all_voice_folders": "Whether to add voicelines to all voice folders."
     },
     "Prompt": {
-        "single_npc_prompt": "The single npc prompt.",
+        "single_player_with_npc_prompt": "The single player with npc prompt.",
+        "single_npc_with_npc_prompt": "The single npc with npc prompt.",
         "multi_npc_prompt": "The multi npc prompt."
     },
     "Config": {
