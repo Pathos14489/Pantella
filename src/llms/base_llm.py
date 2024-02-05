@@ -3,6 +3,7 @@ import src.utils as utils
 import re
 import time
 import unicodedata
+import random
 
 inference_engine_name = "base_LLM"
 tokenizer_slug = "tiktoken" # default to tiktoken for now (Not always correct, but it's the fastest tokenizer and it works for openai's models, which a lot of users will be relying on probably)
@@ -56,6 +57,10 @@ class base_LLM():
     def repeat_penalty(self):
         return self.config.repeat_penalty
     
+    @property
+    def tfs_z(self):
+        return self.config.tfs_z
+
     @property
     def frequency_penalty(self):
         return self.config.frequency_penalty
@@ -205,6 +210,7 @@ class base_LLM():
         num_sentences = 0 # used to keep track of how many sentences have been generated
         voice_line_sentences = 0 # used to keep track of how many sentences have been generated for the current voice line
         retries = 5
+        bad_author_retries = 5
         system_loop = 3
         logging.info(f"Signifier: {self.config.message_signifier}")
         logging.info(f"Format: {self.config.message_format}")
@@ -305,15 +311,23 @@ class base_LLM():
                                     retries += 1
                                     raise Exception('Invalid author')
                             
-
+                        if next_author is not None:
+                            bad_author_retries = 5
 
                         content_edit = unicodedata.normalize('NFKC', content) # normalize unicode characters
                         
                         if (any(char in content_edit for char in self.end_of_sentence_chars)) or (any(char in content for char in self.banned_chars)) or (self.EOS_token in sentence): # check if content marks the end of a sentence
                             if next_author is None: # if next_author is None after generating a sentence, then there was an error generating the output. The LLM didn't choose a character to speak next.
                                 logging.info(f"Next author is None. Failed to extract author from: {sentence}")
-                                input('Press enter to continue...')
-                                exit()
+                                logging.info(f"Retrying...")
+                                retries += 1
+                                bad_author_retries -= 1
+                                if bad_author_retries == 0:
+                                    logging.info(f"LLM Could not suggest a valid author, picking one at random from active characters to break the loop...")
+                                    random_authors = list(self.conversation_manager.character_manager.active_characters.keys())
+                                    next_author = random.choice(random_authors)
+                                else:
+                                    raise Exception('Invalid author')
 
                             sentence = self.clean_sentence(sentence) # clean the sentence
                             if sentence == '': # if the sentence is empty after cleaning, then skip it

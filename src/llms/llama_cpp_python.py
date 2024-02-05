@@ -109,6 +109,7 @@ class LLM(base_LLM.base_LLM): # Uses llama-cpp-python as the LLM inference engin
                     mirostat_mode=self.mirostat_mode,
                     mirostat_eta=self.mirostat_eta,
                     mirostat_tau=self.mirostat_tau,
+                    tfs_z=self.tfs_z,
                     stream=True,
                 )
             except Exception as e:
