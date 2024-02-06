@@ -2,8 +2,8 @@ import os
 import asyncio
 import logging
 import pandas as pd
-import game_state_manager as game_state_manager
-import chat_manager as chat_manager
+import src.game_state_manager as game_state_manager
+import src.chat_manager as chat_manager
 import src.characters_manager as characters_manager # Character Manager class
 import src.behavior_manager as behavior_manager
 import src.language_model as language_models
