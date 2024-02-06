@@ -16,7 +16,7 @@ class Character:
         # Legend for a few of the more important attributes:
         # self.ref_id - The reference ID of the character as hex with the first two numbers(the load order ID) removed - This is the id of the character in the game, so it is unique to each every single character in the game.
         # self.base_id - The base ID of the character as hex with the first two numbers(the load order ID) removed - This is the id of the character in the editor, so it is unique to each character type (e.g. all bandits have the same baseid, but all one of a single unique character has the same baseid as well)
-        if "lang_override" in self.info and self.info["lang_override"] != None and not math.isnan(self.info["lang_override"]) and self.info["lang_override"].strip() != "": # If the character has a language override, use it
+        if "lang_override" in self.info and self.info["lang_override"] != None and self.info["lang_override"].strip() != "": # If the character has a language override, use it
             logging.info(f"Language override found for {self.name}: {self.info['lang_override']}")
             self.language_code = self.info["lang_override"]
         else: # If the character does not have a language override, use the player's language
@@ -165,87 +165,8 @@ class Character:
             "conversation_summary": self.conversation_summary,
             "bio": self.bio,
             "trust": trust,
-        }   
-    
-    # def create_context(self, conversation_manager, location='Skyrim', time='12', active_characters=None, token_limit=4096, radiant_dialogue='false', trust_level=0, conversation_summary='', prompt_limit_pct=0.75):
-    #     self.current_trust = trust_level
-    #     perspective_name, perspective_description, trust = self.get_perspective_player_identity()
-
-    #     keys = list(active_characters.keys())
-
-    #     for key, value in self.info.items(): # add all character info to replacement dict
-    #         replacement_dict[key] = value
-    #     def rd_format(r_dict,s): # Uses the replacement dict to format the string
-    #         # remove /r from all strings
-    #         new_r_dict = {}
-    #         for key, value in r_dict.items():
-    #             if value != None:
-    #                 new_r_dict[key] = str(value).replace("/r", "")
-    #         r_dict = new_r_dict
-    #         logging.info(r_dict)
-    #         return s.format(**r_dict)
-
-    #     if len(keys) == 1: # Single NPC prompt
-    #         rd = replacement_dict.copy()
-    #         rd["conversation_summary"] = conversation_summary
-
-    #         character_desc = rd_format(rd ,conversation_manager.config.single_npc_prompt)
-    #     else: # Multi NPC prompt
-    #         if radiant_dialogue == 'false': # mention player if multi NPC dialogue and not radiant dialogue
-    #             keys_w_player = [perspective_name] + keys
-    #         else: # don't mention player if radiant dialogue
-    #             keys_w_player = keys
-            
-    #         # Join all but the last key with a comma, and add the last key with "and" in front
-    #         character_names_list = ', '.join(keys[:-1]) + ' and ' + keys[-1]
-    #         character_names_list_w_player = ', '.join(keys_w_player[:-1]) + ' and ' + keys_w_player[-1]
-
-    #         bio_descriptions = []
-    #         for character_name, character in active_characters.items():
-    #             bio_descriptions.append(f"{character_name}: {character.bio}")
-
-    #         formatted_bios = "\n".join(bio_descriptions)
-
-    #         conversation_histories = []
-    #         for character_name, character in active_characters.items():
-    #             conversation_histories.append(f"{character_name}: {character.conversation_summary}")
-
-    #         formatted_histories = "\n".join(conversation_histories)
-            
-    #         rd = replacement_dict.copy()
-    #         rd["bios"] = formatted_bios
-    #         rd["names"] = character_names_list
-    #         rd["names_w_player"] = character_names_list_w_player
-    #         rd["conversation_summary"] = formatted_histories
-
-    #         character_desc = rd_format(rd, conversation_manager.config.single_npc_prompt)
-        
-
-    #         # Check if character prompt is too long
-    #         prompt_num_tokens = conversation_manager.tokenizer.num_tokens_from_messages([{"role": "system", "content": character_desc}])
-    #         prompt_token_limit = (round(token_limit*prompt_limit_pct,0))
-    #         # If the full prompt is too long, exclude NPC memories from prompt
-    #         if prompt_num_tokens > prompt_token_limit:
-    #             rd["conversation_summaries"] = 'NPC memories not available.'
-    #             # TODO: Fix this to trimming the memory summaries instead of cutting it entirely because I don't want dementia chatbots. Trim the the who spoke longest ago and isn't chatting next.
-
-    #             character_desc = rd_format(rd, conversation_manager.config.single_npc_prompt)
-                
-    #             prompt_num_tokens = conversation_manager.tokenizer.num_tokens_from_messages([{"role": "system", "content": character_desc}])
-    #             prompt_token_limit = (round(token_limit*prompt_limit_pct,0))
-    #             # If the prompt with all bios included is too long, exclude NPC bios and just list the names of NPCs in the conversation
-    #             if prompt_num_tokens > prompt_token_limit:
-    #                 rd["bios"] = 'NPC backgrounds not available.'
-    #                 # TODO: Fix this to trimming the bioses instead of cutting it entirely because I don't want dementia chatbots. Trim the the who spoke longest ago and isn't chatting next.
-    #                 # Long Term Idea: Each character should have their own personal prompt, not one big multi NPC prompt. Not only will this prevent characters from having unreasonable knowledge about the characters they're chatting to, but it will also allow for more natural conversations.
-    #                 # Short Term Idea: Add a second description to each character(see: generate it from the character's bio) that is used for multi NPC prompts. This description should be shorter than the bio and should be more focused on the character's appearance and general traits rather than their backstory
-    #                 character_desc = conversation_manager.config.single_npc_prompt
-    #                 for key, value in rd.items():
-    #                     character_desc = character_desc.replace(f'{{{key}}}', value)
-        
-    #     logging.info(character_desc)
-    #     context = [{"role": "system", "content": character_desc}]
-    #     return context
+            "language": self.language,
+        }
         
     def set_voice(self):
         self.conversation_manager.synthesizer.change_voice(self)
@@ -312,8 +233,7 @@ class Character:
             logging.info(f'Token limit of conversation summaries reached ({len(self.conversation_manager.tokenizer.encode(conversation_summaries))} / {summary_limit} tokens). Creating new summary file...')
             while True:
                 try:
-                    prompt = f"You are tasked with summarizing the conversation history between {self.name} and the player / other characters. These conversations take place in Skyrim. "\
-                        f"Each paragraph represents a conversation at a new point in time. Please summarize these conversations into a single paragraph in {self.characters_manager.conversation_manager.language_info['language']}."
+                    prompt = f"You are tasked with summarizing the conversation history between {self.name} and the player / other characters. These conversations take place in Skyrim.\nEach paragraph represents a conversation at a new point in time. Please summarize these conversations into a single paragraph in {self.characters_manager.conversation_manager.language_info['language']}."
                     long_conversation_summary = self.summarize_conversation(prompt)
                     break
                 except:
