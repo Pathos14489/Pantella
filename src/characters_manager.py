@@ -73,13 +73,15 @@ class Characters:
     def replacement_dict(self): # Returns a dictionary of replacement values for the current context -- Dynamic Variables
         if len(self.active_characters) == 1 and self.conversation_manager.radiant_dialogue: # SingleNPC style context
             replacement_dict = self.active_characters_list[0].replacement_dict
+        elif len(self.active_characters) == 1 and not self.conversation_manager.radiant_dialogue: # SingleNPCw/Player style context
+            replacement_dict = self.active_characters_list[0].replacement_dict
+        elif len(self.active_characters) == 2 and self.conversation_manager.radiant_dialogue: # TwoNPC no player style context
+            replacement_dict = self.active_characters_list[0].replacement_dict
             replacement_dict2 = self.active_characters_list[1].replacement_dict
             replacement_dict2 = {}
             for key in replacement_dict:
                 replacement_dict2[key + "2"] = replacement_dict[key]
             replacement_dict.update(replacement_dict2)
-        elif len(self.active_characters) == 1 and not self.conversation_manager.radiant_dialogue: # SingleNPCw/Player style context
-            replacement_dict = self.active_characters_list[0].replacement_dict
         else: # MultiNPC style context
             replacement_dict = {
                 "conversation_summaries": self.conversation_summaries,
@@ -87,6 +89,7 @@ class Characters:
                 "names_w_player": ", ".join(self.names_w_player),
                 "relationship_summary": self.relationship_summary,
                 "bios": self.bios,
+                "langage": self.conversation_manager.language_info['language']
             }
         
         if self.conversation_manager.current_in_game_time is not None: # If in-game time is available, add in-game time properties to replacement_dict
@@ -101,7 +104,6 @@ class Characters:
         replacement_dict["player_race"] = self.conversation_manager.player_race
         replacement_dict["player_gender"] = self.conversation_manager.player_gender
         replacement_dict["behavior_summary"] = self.conversation_manager.behavior_manager.get_behavior_summary()
-        replacement_dict["language"] = self.conversation_manager.language_info['language']
 
         
         if "bio" in replacement_dict: # If bio is in replacement_dict, add bio2 and bios to replacement_dict
@@ -118,11 +120,14 @@ class Characters:
     
     def get_raw_prompt(self):
         if len(self.active_characters) == 1 and self.conversation_manager.radiant_dialogue: # SingleNPC style context
-            logging.info("Two active characters, but player isn't in conversation, returning SingleNPCw/NPC style context")
-            prompt = self.conversation_manager.config.single_npc_with_npc_prompt
+            logging.info("One active characters, but player isn't in conversation, waiting for another character to join the conversation...")
+            prompt = self.conversation_manager.config.single_player_with_npc_prompt # TODO: Custom prompt for single NPCs by themselves starting a topic?
         elif len(self.active_characters) == 1 and not self.conversation_manager.radiant_dialogue:
             logging.info("Only one active character, returning SingleNPCw/Player style context")
             prompt = self.conversation_manager.config.single_player_with_npc_prompt
+        elif len(self.active_characters) == 2 and self.conversation_manager.radiant_dialogue: # SingleNPC style context
+            logging.info("Two active characters, but player isn't in conversation, returning SingleNPCw/NPC style context")
+            prompt = self.conversation_manager.config.single_npc_with_npc_prompt
         else:
             logging.info("Multiple active characters, returning MultiNPC style context")
             prompt = self.conversation_manager.config.multi_npc_prompt

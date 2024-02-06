@@ -2,8 +2,8 @@ import os
 import asyncio
 import logging
 import pandas as pd
-import src.output_manager as output_manager
-import src.game_manager as game_manager
+import game_state_manager as game_state_manager
+import chat_manager as chat_manager
 import src.characters_manager as characters_manager # Character Manager class
 import src.behavior_manager as behavior_manager
 import src.language_model as language_models
@@ -65,8 +65,8 @@ class conversation_manager():
 
     def initialize(self):
         self.llm, self.tokenizer = language_models.create_LLM(self) # Create LLM and Tokenizer based on config
-        self.game_state_manager = game_manager.GameStateManager(self)
-        self.chat_manager = output_manager.ChatManager(self)
+        self.game_state_manager = game_state_manager.GameStateManager(self)
+        self.chat_manager = chat_manager.ChatManager(self)
         self.transcriber = stt.Transcriber(self)
         self.behavior_manager = behavior_manager.BehaviorManager(self)
 
@@ -134,10 +134,10 @@ class conversation_manager():
 
     def check_new_joiner(self):
         new_character_joined = self.get_if_new_character_joined() # check if new character has been added to conversation and switch to Single Prompt Multi-NPC conversation if so
-        if new_character_joined: # check if new character has been added to conversation and switch to Single Prompt Multi-NPC conversation if so
+        if new_character_joined or (self.radiant_dialogue and self.character_manager.active_character_count() > 1): # if new character has joined the conversation or radiant dialogue is being used and there are more than one active characters, switch to Single Prompt Multi-NPC conversation
             try: # load character info, location and other gamestate data when data is available - Starts watching the _mantella_ files in the Skyrim folder and waits for the player to select an NPC
                 character_info, self.current_location, self.current_in_game_time, is_generic_npc, self.player_name, player_race, player_gender, self.conversation_started_radiant = self.game_state_manager.load_game_state()
-            except game_manager.CharacterDoesNotExist as e:
+            except game_state_manager.CharacterDoesNotExist as e:
                 self.game_state_manager.write_game_info('_mantella_end_conversation', 'True') # End the conversation in game
                 logging.info('Restarting...')
                 logging.error(f"Error: {e}")
@@ -187,7 +187,7 @@ class conversation_manager():
         logging.info('\nWaiting for player to select an NPC...')
         try: # load character info, location and other gamestate data when data is available - Starts watching the _mantella_ files in the Skyrim folder and waits for the player to select an NPC
             character_info, self.current_location, self.current_in_game_time, is_generic_npc, self.player_name, self.player_race, self.player_gender, self.conversation_started_radiant = self.game_state_manager.load_game_state()
-        except game_manager.CharacterDoesNotExist as e:
+        except game_state_manager.CharacterDoesNotExist as e:
             self.game_state_manager.write_game_info('_mantella_end_conversation', 'True') # End the conversation in game
             logging.info('Restarting...')
             logging.error(f"Error: {e}")
@@ -213,7 +213,11 @@ class conversation_manager():
                 input("Press Enter to exit.")
                 exit()
         else: # if radiant dialogue, get response from NPC to other NPCs greeting
-            self.messages.append({'role': self.chat_manager.active_character.name, 'content': f"{self.language_info['hello']}."}) # TODO: Make this more interesting by generating a greeting for each NPC based on the context of the last line or two said(or if possible check if they were nearby when the line was said...?)
+            if len(self.messages) <= 2: # if radiant dialogue and the NPCs haven't greeted each other yet, greet each other
+                if self.character_manager.active_character_count() == 2: # TODO: Radiants can only handle 2 NPCs at a time, is that normal?
+                    self.messages.append({'role': self.chat_manager.active_character.name, 'content': f"{self.language_info['hello']} {self.character_manager.active_characters[0].name}."}) # TODO: Make this more interesting by generating a greeting for each NPC based on the context of the last line or two said(or if possible check if they were nearby when the line was said...?)
+                else:
+                    self.messages.append({'role': self.chat_manager.active_character.name, 'content': f"{self.language_info['hello']}."}) # TODO: Make this more interesting by generating a greeting for each NPC based on the context of the last line or two said(or if possible check if they were nearby when the line was said...?)
 
         self.game_state_manager.update_game_events() # update game events before player input
 
@@ -230,6 +234,10 @@ class conversation_manager():
         logging.info(f"Messages: {self.messages}")
         
         self.update_game_state()
+
+        if self.character_manager.active_character_count() == 1 and self.radiant_dialogue: # if radiant dialogue and only one NPC, skip stepping this conversation
+            # logging.info("Radiant NPC waiting for other people to join the conversation, stepping...")
+            return
         
         if (self.character_manager.active_character_count() <= 0) and not self.radiant_dialogue: # if there are no active characters in the conversation and radiant dialogue is not being used, end the conversation
             self.game_state_manager.end_conversation(self.chat_manager.active_character) # end conversation in game with current active character
@@ -281,7 +289,7 @@ class conversation_manager():
                 self.chat_manager.active_character.is_in_combat = 0
 
         
-        if ((transcribed_text is not None and transcribed_text != '') or self.radiant_dialogue) and not self.conversation_ended and self.in_conversation:
+        if ((transcribed_text is not None and transcribed_text != '') or (self.radiant_dialogue and self.character_manager.active_character_count() > 1)) and not self.conversation_ended and self.in_conversation: # if player input is not empty and conversation has not ended, get response from NPC
             self.get_response()
         
         # if npc ended conversation
