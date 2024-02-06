@@ -9,6 +9,8 @@ class ConfigLoader:
     def __init__(self, config_path='config.json'):
         self.config_path = config_path
         self.load()
+        self.get_prompt_styles()
+        self.prompt_style = None
         self.ready = True
 
         def check_missing_mantella_file(set_path):
@@ -81,10 +83,32 @@ https://github.com/art-from-the-machine/Mantella#issues-qa
         if save:
             self.save()
 
+    def get_prompt_styles(self):
+        prompt_styles_dir = './prompt_styles'
+        self.prompt_styles = {}
+        for file in os.listdir(prompt_styles_dir):
+            if file.endswith('.json'):
+                with open(f'{prompt_styles_dir}/{file}') as f:
+                    slug = file.split('.')[0]
+                    self.prompt_styles[slug] = json.load(f)
+
+    @property
+    def prompts(self):
+        return self.prompt_styles[self.prompt_style]
+    
+    def set_prompt_style(self, llm):
+        """Set the prompt style - if llm has a recommended prompt style and config.prompt_style is not set to a specific style, set it to the recommended style"""
+        if llm.prompt_style in self.prompt_styles and self.prompt_style == "default":
+            self.prompt_style = self.prompt_styles[llm.prompt_style]
+        else:
+            self.prompt_style = self.prompt_styles[self.prompt_style]
+        return self.prompt_style
+
+
     def default(self):
         return {
             "Game": {
-                "game_id": "skyrim"
+                "game_id": "skyrim" # skyrim or fallout4
             },
             "Paths": {
                 "game_path": "C:\\Games\\Steam\\steamapps\\common\\Skyrim Special Edition",
@@ -117,22 +141,11 @@ https://github.com/art-from-the-machine/Mantella#issues-qa
             "LanguageModel": {
                 "inference_engine": "default",
                 "tokenizer_type": "default",
+                "prompt_style": "default",
                 "maximum_local_tokens": 4096,
                 "max_response_sentences": 999,
                 "wait_time_buffer": 0.5,
                 "stop": ["<im_end>","\n<im_end>"],
-                "temperature": 0.7,
-                "top_p": 1,
-                "min_p": 0.05,
-                "typical_p": 1, # "typical_p": "0.5", # "typical_p": 0.5,
-                "top_k": 0,
-                "repeat_penalty": 1.0,
-                "frequency_penalty": 1.0,
-                "presence_penalty": 1.0,
-                "mirostat_mode": 0,
-                "mirostat_eta": 0.1,
-                "mirostat_tau": 0.1,
-                "max_tokens": 512,
                 "BOS_token": "<im_start>",
                 "EOS_token": "<im_end>",
                 "message_signifier": "\n",
@@ -148,6 +161,21 @@ https://github.com/art-from-the-machine/Mantella#issues-qa
                 "conversation_limit_pct": 0.8,
                 "reload_buffer": 8,
                 "reload_wait_time": 1,
+            },
+            "InferenceOptions": {
+                "temperature": 0.7,
+                "top_p": 1,
+                "min_p": 0.05,
+                "typical_p": 1, # "typical_p": "0.5", # "typical_p": 0.5,
+                "top_k": 0,
+                "repeat_penalty": 1.0,
+                "tfs_z": 1.0,
+                "frequency_penalty": 0,
+                "presence_penalty": 0,
+                "mirostat_mode": 0,
+                "mirostat_eta": 5,
+                "mirostat_tau": 0.1,
+                "max_tokens": 512,
             },
             "openai_api": {
                 "llm": "gpt-3.5-turbo-1106",
@@ -198,11 +226,6 @@ https://github.com/art-from-the-machine/Mantella#issues-qa
                 "default_player_response": "Can you tell me something about yourself?",
                 "debug_exit_on_first_exchange": False,
                 "add_voicelines_to_all_voice_folders": False
-            },
-            "Prompt": {
-                "single_player_with_npc_prompt": "{name} is a {race} {gendered_age} that lives in Skyrim. {name} can only speak {language}.\n\n{bio}\n\nSometimes in-game events will be sent as system messages with the text between * symbols. No one else can use these. Only System can use asterixes for providing context. Here is an example:\n\n*{player_name} picked up a pair of gloves*\n\nHere is another:\n\n*{name} dropped a Steel Sword*\n\n{name} is having a conversation with {player_name} in {location}.\n\nIt is {time12} {time_group}.\n\nThe following are Behaviors that {name} can use in addition to responding to {player_name}:\n{behavior_summary}\nThe following is a summary of the conversation that {name} and {perspective_player_description} have had so far:\n{conversation_summary}\nThe following is a conversation that will be spoken aloud between {name} and {perspective_player_description}. {name} will not respond with numbered lists, code, etc. only natural responses to the conversation.",
-                "single_npc_with_npc_prompt": "{name} is a {race} {gendered_age} that lives in Skyrim. {name} can only speak {language}.\n\n{bio}\n\n{name2} is a {race2} {gendered_age2} that lives in Skyrim. {name2} can only speak {language2}.\n\n{bio2}\n\nSometimes in-game events will be sent as system messages with the text between * symbols. No one else can use these. Only System can use asterixes for providing context. Here is an example:\n\n*{name2} picked up a pair of gloves*\n\nHere is another:\n\n*{name} dropped a Steel Sword*\n\n{name} is having a conversation with {name2} in {location}.\n\nIt is {time12} {time_group}.\n\nThe following are Behaviors that {name} and {name2} can use in addition to responding to each other:\n{behavior_summary}\nThe following is a summary of the conversation that {name} and {name2} have had so far:\n{conversation_summary}\nThe following is a conversation that will be spoken aloud between {name} and {name2}. Neither {name} or {name2} will not respond with numbered lists, code, etc. only natural responses to the conversation.",
-                "multi_npc_prompt": "{bios} \n\n{conversation_summaries}\n\nSometimes in-game events will be sent as system messages with the text between * symbols. No one else can use these. Only System can use asterixes for providing context. Here is an example:\n\n*{player_name} picked up a pair of gloves*\n\nHere is another:\n\n*{player_name} dropped a Steel Sword*\n\n{names_w_player} are having a conversation in {location} in {language}.\nIt is {time12} {time_group}."
             },
             "Config": {
                 "port": 8021
@@ -255,18 +278,6 @@ https://github.com/art-from-the-machine/Mantella#issues-qa
                 "max_response_sentences": self.max_response_sentences,
                 "wait_time_buffer": self.wait_time_buffer,
                 "stop": self.stop,
-                "temperature": self.temperature,
-                "top_p": self.top_p,
-                "min_p": self.min_p,
-                "typical_p": self.typical_p,
-                "top_k": self.top_k,
-                "repeat_penalty": self.repeat_penalty,
-                "frequency_penalty": self.frequency_penalty,
-                "presence_penalty": self.presence_penalty,
-                "mirostat_mode": self.mirostat_mode,
-                "mirostat_eta": self.mirostat_eta,
-                "mirostat_tau": self.mirostat_tau,
-                "max_tokens": self.max_tokens,
                 "BOS_token": self.BOS_token,
                 "EOS_token": self.EOS_token,
                 "message_signifier": self.message_signifier,
@@ -282,6 +293,21 @@ https://github.com/art-from-the-machine/Mantella#issues-qa
                 "conversation_limit_pct": self.conversation_limit_pct,
                 "reload_buffer": self.reload_buffer,
                 "reload_wait_time": self.reload_wait_time
+            },
+            "InferenceOptions": {
+                "temperature": self.temperature,
+                "top_p": self.top_p,
+                "min_p": self.min_p,
+                "typical_p": self.typical_p,
+                "top_k": self.top_k,
+                "repeat_penalty": self.repeat_penalty,
+                "tfs_z": self.tfs_z,
+                "frequency_penalty": self.frequency_penalty,
+                "presence_penalty": self.presence_penalty,
+                "mirostat_mode": self.mirostat_mode,
+                "mirostat_eta": self.mirostat_eta,
+                "mirostat_tau": self.mirostat_tau,
+                "max_tokens": self.max_tokens
             },
             "openai_api": {
                 "llm": self.llm,
@@ -323,11 +349,6 @@ https://github.com/art-from-the-machine/Mantella#issues-qa
                 "default_player_response": self.default_player_response,
                 "debug_exit_on_first_exchange": self.debug_exit_on_first_exchange,
                 "add_voicelines_to_all_voice_folders": self.add_voicelines_to_all_voice_folders
-            },
-            "Prompt": {
-                "single_player_with_npc_prompt": self.single_player_with_npc_prompt,
-                "single_npc_with_npc_prompt": self.single_npc_with_npc_prompt,
-                "multi_npc_prompt": self.multi_npc_prompt
             },
             "Config": {
                 "port": self.port

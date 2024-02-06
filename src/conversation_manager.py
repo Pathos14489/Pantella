@@ -65,6 +65,7 @@ class conversation_manager():
 
     def initialize(self):
         self.llm, self.tokenizer = language_models.create_LLM(self) # Create LLM and Tokenizer based on config
+        self.config.set_prompt(self.llm) # Set prompt based on LLM and config settings
         self.game_state_manager = game_state_manager.GameStateManager(self)
         self.chat_manager = chat_manager.ChatManager(self)
         self.transcriber = stt.Transcriber(self)

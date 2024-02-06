@@ -23,7 +23,7 @@ class base_LLM():
         self.end_of_sentence_chars = [unicodedata.normalize('NFKC', char) for char in self.end_of_sentence_chars]
         self.banned_chars = ['*', '(', ')', '[', ']', '{', '}', "\"" ]
 
-        self.type = "normal"
+        self.prompt_style = "normal"
 
     @property
     def EOS_token(self):
@@ -350,7 +350,7 @@ class base_LLM():
                                 keyword_extraction = sentence.split(':')[0]
                                 sentence = sentence.split(':')[1]
                                 # if LLM is switching character
-                                behavior = self.conversation_manager.behavior_manager.evaluate(keyword_extraction, next_author, sentence) # check if the sentence contains any behavior keywords for NPCs
+                                behavior = self.conversation_manager.behavior_manager.evaluate(keyword_extraction, self.conversation_manager.chat_manager.active_character, sentence) # check if the sentence contains any behavior keywords for NPCs
                                 if behavior == None:
                                     logging.warn(f"Keyword '{keyword_extraction}' not found in behavior_manager. Disgarding from response.")
                                     
@@ -367,12 +367,12 @@ class base_LLM():
                             voice_line_sentences += 1 # increment the number of sentences generated for the current voice line
 
 
-                            behavior = self.conversation_manager.behavior_manager.pre_sentence_evaluate(next_author, sentence,) # check if the sentence contains any behavior keywords for NPCs
+                            behavior = self.conversation_manager.behavior_manager.pre_sentence_evaluate(self.conversation_manager.chat_manager.active_character, sentence,) # check if the sentence contains any behavior keywords for NPCs
                             if voice_line_sentences == self.config.sentences_per_voiceline: # if the voice line is ready, then generate the audio for the voice line
                                 await self.generate_voiceline(voice_line, sentence_queue, event)
                                 voice_line_sentences = 0 # reset the number of sentences generated for the current voice line
                                 voice_line = '' # reset the voice line for the next iteration
-                            behavior = self.conversation_manager.behavior_manager.post_sentence_evaluate(next_author, sentence) # check if the sentence contains any behavior keywords for NPCs
+                            behavior = self.conversation_manager.behavior_manager.post_sentence_evaluate(self.conversation_manager.chat_manager.active_character, sentence) # check if the sentence contains any behavior keywords for NPCs
 
                             sentence = '' # reset the sentence for the next iteration
 

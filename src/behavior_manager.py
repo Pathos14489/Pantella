@@ -7,6 +7,7 @@ class BehaviorManager():
     def __init__(self,conversation_manager):
         self.conversation_manager = conversation_manager
         self.behaviors = []
+        self.named_behaviors = {}
         for filename in os.listdir(behaviors_dir):
             if filename == "base_behavior.py":
                 continue
@@ -21,6 +22,7 @@ class BehaviorManager():
                 else:
                     logging.info("Loaded behavior " + filename)
                     self.behaviors.append(behavior)
+                    self.named_behaviors[behavior_name] = behavior
 
     @property
     def behavior_keywords(self):

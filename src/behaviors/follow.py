@@ -9,11 +9,12 @@ class follow(base_behavior.BaseBehavior):
         self.example = "'Come with me if you want to live!' 'Follow: Alright, I'll follow you.'"
         self.player = True # TODO: I don't believe the follow behavior works for non-player characters. I think the ally faction only gets added to the player whoever calls this behavior whether the pleyer asked for it or not. Best to only allow it when the player is present in the conversation for now.
     
-    def run(self, run=False, next_author=None, sentence=None):
+    def run(self, run=False, speaker_character=None, sentence=None):
         if run:
             if sentence is None:
                 logging.error(f"Follow behavior called with no sentence!")
             else:
-                logging.info(f"{next_author} is willing to follow someone.")
-                self.manager.conversation_manager.game_state_manager.write_game_info('_mantella_aggro', '2') # TODO: Abstract this to a function
+                logging.info(f"{speaker_character['name']} is willing to follow someone.")
+                self.manager.conversation_manager.game_state_manager.call_actor_method(speaker_character,"follow_player")
+                # self.manager.conversation_manager.game_state_manager.write_game_info('_mantella_aggro', '2') # TODO: Abstract this to a function
         return "follow"
