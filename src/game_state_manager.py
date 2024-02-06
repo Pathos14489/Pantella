@@ -144,6 +144,31 @@ class GameStateManager:
         player_gender = self.load_data_when_available('_mantella_player_gender', '')
         return player_gender
     
+    def call_actor_method(self, actor_character, method_name, *args):
+        """Call a method on an actor in the game"""
+        actor_name = actor_character.name
+        function_call = f"{actor_name}|{method_name}"
+        if len(args) > 0:
+            function_call += '|'
+            for arg in args:
+                if type(arg) == str:
+                    function_call += f'"{arg}",'
+                else:
+                    function_call += f'{arg},'
+        max_attempts = 2
+        delay_between_attempts = 1
+        for attempt in range(max_attempts):
+            try:
+                with open(f'{self.game_path}/_mantella_actor_methods.txt', 'a', encoding='utf-8') as f:
+                    f.write(f'{function_call}\n')
+                break
+            except PermissionError:
+                logging.info(f'Permission denied to write to _mantella_actor_methods.txt. Retrying...')
+                if attempt + 1 == max_attempts:
+                    raise
+                else:
+                    time.sleep(delay_between_attempts)
+
     def load_radiant_dialogue(self):
         with open(f'{self.game_path}/_mantella_radiant_dialogue.txt', 'r', encoding='utf-8') as f: # check if radiant dialogue is enabled
             radiant_dialogue = f.readline().strip().lower()
