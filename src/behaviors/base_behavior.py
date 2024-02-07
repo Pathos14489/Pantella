@@ -42,3 +42,6 @@ class BaseBehavior():
         if conversation_type == "multi_npc" and (self.single_npc_with_npc_only or self.single_npc_with_player_only or (self.npc and self.conversation_manager.radient_dialogue) or (self.player and not self.conversation_manager.radient_dialogue)):
             return False
         return True
+    
+    def call_actor_method(self, speaker_character, method_name, *args):
+        return self.manager.conversation_manager.game_state_manager.call_actor_method(speaker_character, method_name, *args)

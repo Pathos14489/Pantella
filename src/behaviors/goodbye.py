@@ -13,6 +13,6 @@ class goodbye(base_behavior.BaseBehavior):
             if sentence is None:
                 logging.error(f"Goodbye behavior called with no sentence!")
             else:
-                logging.info(f"{speaker_character['name']} is ending the conversation.")
+                logging.info(f"{speaker_character.name} is ending the conversation.")
                 self.manager.conversation_manager.conversation_ended = True
         return "Goodbye"

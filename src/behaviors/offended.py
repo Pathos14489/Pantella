@@ -13,8 +13,7 @@ class offended(base_behavior.BaseBehavior):
             if sentence is None:
                 logging.error(f"Offended behavior called with no sentence!")
             else:
-                logging.info(f"{speaker_character['name']} got offended.")
-                self.manager.conversation_manager.game_state_manager.call_actor_method(speaker_character,"get_offended")
-                # self.manager.conversation_manager.game_state_manager.write_game_info('_mantella_aggro', '1')
+                logging.info(f"{speaker_character.name} got offended.")
+                self.manager.conversation_manager.game_state_manager.call_actor_method(speaker_character,"StartCombat")
         return "offended"
-        
+    

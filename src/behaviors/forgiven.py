@@ -13,7 +13,7 @@ class forgiven(base_behavior.BaseBehavior):
             if sentence is None:
                 logging.error(f"Forgiven behavior called with no sentence!")
             else:
-                logging.info(f"{speaker_character['name']} forgave someone.")
-                self.manager.conversation_manager.game_state_manager.call_actor_method(speaker_character,"forgive")
+                logging.info(f"{speaker_character.name} forgave someone.")
+                self.manager.conversation_manager.game_state_manager.call_actor_method(speaker_character,"StopCombat")
                 # self.manager.conversation_manager.game_state_manager.write_game_info('_mantella_aggro', '0')
         return "forgiven"

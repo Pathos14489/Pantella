@@ -47,16 +47,14 @@ class GameStateManager:
     @utils.time_it
     def reset_game_info(self):
         self.write_game_info('_mantella_current_actor', '')
-        character_name = ''
+        self.write_game_info('_mantella_actor_methods', '')
 
-        self.write_game_info('_mantella_current_actor_id', '')
-        character_id = ''
+        self.write_game_info('_mantella_current_actor_ref_id', '')
+        self.write_game_info('_mantella_current_actor_base_id', '')
 
         self.write_game_info('_mantella_current_location', '')
-        location = ''
 
         self.write_game_info('_mantella_in_game_time', '')
-        in_game_time = ''
 
         self.write_game_info('_mantella_active_actors', '')
 
@@ -146,15 +144,18 @@ class GameStateManager:
     
     def call_actor_method(self, actor_character, method_name, *args):
         """Call a method on an actor in the game"""
-        actor_name = actor_character.name
-        function_call = f"{actor_name}|{method_name}"
+        logging.info(f'Calling {method_name} on {actor_character.name}...')
+        string_id = actor_character.ref_id
+        if len(string_id) < 8:
+            string_id = '0'*(8-len(string_id)) + string_id # pad string_id with leading zeros if it's less than 8 characters long
+        string_int = int(string_id, 16) # convert string_id from string hex to int hex
+        function_call = f"{str(string_int)}|{method_name}"
         if len(args) > 0:
             function_call += '|'
             for arg in args:
-                if type(arg) == str:
-                    function_call += f'"{arg}",'
-                else:
-                    function_call += f'{arg},'
+                function_call += f'{arg}<>'
+            if function_call.endswith('<>'):
+                function_call = function_call[:-2]
         max_attempts = 2
         delay_between_attempts = 1
         for attempt in range(max_attempts):

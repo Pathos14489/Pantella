@@ -14,7 +14,7 @@ class follow(base_behavior.BaseBehavior):
             if sentence is None:
                 logging.error(f"Follow behavior called with no sentence!")
             else:
-                logging.info(f"{speaker_character['name']} is willing to follow someone.")
-                self.manager.conversation_manager.game_state_manager.call_actor_method(speaker_character,"follow_player")
+                logging.info(f"{speaker_character.name} is willing to follow someone.")
+                self.manager.conversation_manager.game_state_manager.call_actor_method(speaker_character,"FollowPlayer")
                 # self.manager.conversation_manager.game_state_manager.write_game_info('_mantella_aggro', '2') # TODO: Abstract this to a function
         return "follow"

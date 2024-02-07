@@ -39,6 +39,7 @@ class BehaviorManager():
                         return behavior
                     except Exception as e:
                         logging.error(f"Error running behavior {behavior.keyword}: {e}")
+                        raise e
         return None
     
     def pre_sentence_evaluate(self, next_author, sentence): # Evaluates just the sentence, returns the behavior that was run
