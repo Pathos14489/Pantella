@@ -16,7 +16,7 @@ class Character:
         # Legend for a few of the more important attributes:
         # self.ref_id - The reference ID of the character as hex with the first two numbers(the load order ID) removed - This is the id of the character in the game, so it is unique to each every single character in the game.
         # self.base_id - The base ID of the character as hex with the first two numbers(the load order ID) removed - This is the id of the character in the editor, so it is unique to each character type (e.g. all bandits have the same baseid, but all one of a single unique character has the same baseid as well)
-        if "lang_override" in self.info and self.info["lang_override"] != None and self.info["lang_override"].strip() != "": # If the character has a language override, use it
+        if "lang_override" in self.info and self.info["lang_override"] != None and str(self.info["lang_override"]).strip() != "" and str(self.info["lang_override"]).strip() != "nan": # If the character has a language override, use it
             logging.info(f"Language override found for {self.name}: {self.info['lang_override']}")
             self.language_code = self.info["lang_override"]
         else: # If the character does not have a language override, use the player's language

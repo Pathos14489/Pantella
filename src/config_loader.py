@@ -8,9 +8,9 @@ import asyncio
 class ConfigLoader:
     def __init__(self, config_path='config.json'):
         self.config_path = config_path
+        self.prompt_styles = {}
         self.load()
         self.get_prompt_styles()
-        self.prompt_style = None
         self.ready = True
 
         def check_missing_mantella_file(set_path):
@@ -54,6 +54,7 @@ https://github.com/art-from-the-machine/Mantella#issues-qa
             logging.error(f"Could not save config file to {self.config_path}. Error: {e}")
 
     def load(self):
+        print(f"Loading config from {self.config_path}")
         save = False
         default = self.default()
         if os.path.exists(self.config_path):
@@ -79,18 +80,18 @@ https://github.com/art-from-the-machine/Mantella#issues-qa
         for key in default: # Set the config settings to the loader
             for sub_key in default[key]:
                 setattr(self, sub_key, config[key][sub_key])
-        
+        logging.basicConfig(filename=self.logging_file_path, format='%(asctime)s %(levelname)s| %(message)s', level=logging.INFO)
+
         if save:
             self.save()
 
     def get_prompt_styles(self):
         prompt_styles_dir = './prompt_styles'
-        self.prompt_styles = {}
         for file in os.listdir(prompt_styles_dir):
             if file.endswith('.json'):
                 with open(f'{prompt_styles_dir}/{file}') as f:
                     slug = file.split('.')[0]
-                    self.prompt_styles[slug] = json.load(f)
+                    self.prompt_styles[slug] = json.load(f)["style"]
 
     @property
     def prompts(self):
@@ -98,11 +99,18 @@ https://github.com/art-from-the-machine/Mantella#issues-qa
     
     def set_prompt_style(self, llm):
         """Set the prompt style - if llm has a recommended prompt style and config.prompt_style is not set to a specific style, set it to the recommended style"""
-        if llm.prompt_style in self.prompt_styles and self.prompt_style == "default":
-            self.prompt_style = self.prompt_styles[llm.prompt_style]
+        if self.prompt_style is not None:
+            if llm.prompt_style in self.prompt_styles and self.prompt_style == "default":
+                self._prompt_style = self.prompt_styles[llm.prompt_style]
+            elif self.prompt_style in self.prompt_styles:
+                self._prompt_style = self.prompt_styles[self.prompt_style]
+            else:
+                logging.error(f"Prompt style {self.prompt_style} not found in prompt_styles directory. Using default prompt style.")
+                self._prompt_style = self.prompt_styles["normal"]
         else:
-            self.prompt_style = self.prompt_styles[self.prompt_style]
-        return self.prompt_style
+            logging.error(f"Prompt style not set in config file. Using default prompt style.")
+            self._prompt_style = self.prompt_styles["normal"]
+        return self._prompt_style
 
 
     def default(self):

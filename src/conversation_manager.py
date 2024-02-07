@@ -65,7 +65,7 @@ class conversation_manager():
 
     def initialize(self):
         self.llm, self.tokenizer = language_models.create_LLM(self) # Create LLM and Tokenizer based on config
-        self.config.set_prompt(self.llm) # Set prompt based on LLM and config settings
+        self.config.set_prompt_style(self.llm) # Set prompt based on LLM and config settings
         self.game_state_manager = game_state_manager.GameStateManager(self)
         self.chat_manager = chat_manager.ChatManager(self)
         self.transcriber = stt.Transcriber(self)
@@ -191,7 +191,7 @@ class conversation_manager():
         except game_state_manager.CharacterDoesNotExist as e:
             self.game_state_manager.write_game_info('_mantella_end_conversation', 'True') # End the conversation in game
             logging.info('Restarting...')
-            logging.error(f"Error: {e}")
+            logging.error(f"Error Loading Character<await_and_setup_conversation>: {e}")
         self.radiant_dialogue = self.conversation_started_radiant
         
         # setup the character that the player has selected
@@ -210,9 +210,9 @@ class conversation_manager():
                 self.get_response()
             except Exception as e: # if error, close Mantella
                 self.game_state_manager.write_game_info('_mantella_end_conversation', 'True')
-                logging.error(f"Error: {e}")
+                logging.error(f"Error Getting Response in await_and_setup_conversation(): {e}")
                 input("Press Enter to exit.")
-                exit()
+                raise e
         else: # if radiant dialogue, get response from NPC to other NPCs greeting
             if len(self.messages) <= 2: # if radiant dialogue and the NPCs haven't greeted each other yet, greet each other
                 if self.character_manager.active_character_count() == 2: # TODO: Radiants can only handle 2 NPCs at a time, is that normal?

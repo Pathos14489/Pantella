@@ -119,19 +119,20 @@ class Characters:
         return len(self.active_characters)
     
     def get_raw_prompt(self):
-        prompt_style = self.conversation_manager.config.prompt_style
+        prompt_style = self.conversation_manager.config._prompt_style
+        logging.info(prompt_style)
         if len(self.active_characters) == 1 and self.conversation_manager.radiant_dialogue: # SingleNPC style context
             logging.info("One active characters, but player isn't in conversation, waiting for another character to join the conversation...")
-            prompt = prompt_style.single_player_with_npc_prompt # TODO: Custom prompt for single NPCs by themselves starting a topic?
+            prompt = prompt_style["single_player_with_npc_prompt"] # TODO: Custom prompt for single NPCs by themselves starting a topic?
         elif len(self.active_characters) == 1 and not self.conversation_manager.radiant_dialogue:
             logging.info("Only one active character, returning SingleNPCw/Player style context")
-            prompt = prompt_style.single_player_with_npc_prompt
+            prompt = prompt_style["single_player_with_npc_prompt"]
         elif len(self.active_characters) == 2 and self.conversation_manager.radiant_dialogue: # SingleNPC style context
             logging.info("Two active characters, but player isn't in conversation, returning SingleNPCw/NPC style context")
-            prompt = prompt_style.single_npc_with_npc_prompt
+            prompt = prompt_style["single_npc_with_npc_prompt"]
         else:
             logging.info("Multiple active characters, returning MultiNPC style context")
-            prompt = prompt_style.multi_npc_prompt
+            prompt = prompt_style["multi_npc_prompt"]
         return prompt
 
     def get_system_prompt(self): # Returns the current context for the given active characters as a string

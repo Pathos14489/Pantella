@@ -58,7 +58,7 @@ def cleanup_mei(remove_mei_folders):
                 mei_files.append(file)
         
         if (len(mei_files) > 0):
-            if (remove_mei_folders == '1'):
+            if remove_mei_folders:
                 file_removed = 0
                 for file in mei_files:
                     try:
