@@ -83,9 +83,8 @@ class BehaviorManager():
         for behavior in self.behaviors:
             if behavior.valid():
                 if behavior.description is not None:
-                    summary += f"{behavior.description}".replace("{player}", self.conversation_manager.player_name)
+                    summary += f"{behavior.description}"
                     if behavior.example is not None:
-                        summary += f"  E.g. {behavior.example}"
+                        summary += f"Example: {behavior.example}"
                     summary += "\n"
-        summary = summary.replace("{player}", self.conversation_manager.player_name)
         return summary
