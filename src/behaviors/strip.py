@@ -14,7 +14,8 @@ class strip(base_behavior.BaseBehavior):
                 logging.error(f"Strip behavior called with no sentence!")
             else:
                 logging.info(f"{speaker_character.name} is stripping all their clothes off.")
-                self.call_actor_method(speaker_character,"Wait","2")
-                self.manager.conversation_manager.game_state_manager.call_actor_method(speaker_character,"TakeEverythingOff")
+                self.queue_actor_method(speaker_character,"Wait","2")
+                self.new_game_event(f"*{speaker_character.name} stripped all their clothes off and is now completely naked.*\n")
+                self.queue_actor_method(speaker_character,"TakeEverythingOff")
         return "trade"
     

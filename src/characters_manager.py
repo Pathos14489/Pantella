@@ -104,6 +104,7 @@ class Characters:
         replacement_dict["player_race"] = self.conversation_manager.player_race
         replacement_dict["player_gender"] = self.conversation_manager.player_gender
         replacement_dict["behavior_summary"] = self.conversation_manager.behavior_manager.get_behavior_summary()
+        replacement_dict["behavior_keywords"] = ", ".join(self.conversation_manager.behavior_manager.behavior_keywords)
 
         
         if "bio" in replacement_dict: # If bio is in replacement_dict, add bio2 and bios to replacement_dict
@@ -112,6 +113,11 @@ class Characters:
             replacement_dict["bio2"] = replacement_dict["bio2"].replace("{bio2}", "").format(**replacement_dict)
         if "bios" in replacement_dict:
             replacement_dict["bios"] = replacement_dict["bios"].replace("{bios}", "").format(**replacement_dict)
+
+        replacement_dict["context"] = ""
+        context_string = self.conversation_manager.game_state_manager.load_context_string()
+        if context_string is not None and context_string != "":
+            replacement_dict["context"] = context_string
 
         return replacement_dict
 

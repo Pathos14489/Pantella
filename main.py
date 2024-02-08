@@ -4,30 +4,28 @@ import src.config_loader as config_loader
 import src.utils as utils
 import threading
 
-def setup_logging(file_name):
-    logging.basicConfig(filename=file_name, format='%(asctime)s %(levelname)s: %(message)s', level=logging.INFO)
-    console = logging.StreamHandler()
-    console.setLevel(logging.INFO)
-    logging.getLogger('').addHandler(console)
 
-config = config_loader.ConfigLoader() # Load config from config.json
+try:
+    config = config_loader.ConfigLoader() # Load config from config.json
+except Exception as e:
+    logging.error(f"Error loading config:")
+    logging.error(e)
+    input("Press Enter to exit.")
+    raise e
+
 utils.cleanup_mei(config.remove_mei_folders) # clean up old instances of exe runtime files
-setup_logging(config.logging_file_path) # Setup logging with the file specified in config.json
-# try:
-# except Exception as e:
-#     logging.error(f"Error loading config:")
-#     logging.error(e)
-#     input("Press Enter to exit.")
-#     exit()
+console = logging.StreamHandler() # Create console logging handler
+console.setLevel(logging.INFO) # Set console logging level
+logging.getLogger('').addHandler(console) # Add console logging handler
 
-# try:
-# except Exception as e:
-#     logging.error(f"Error Creating Conversation Manager:")
-#     logging.error(e)
-#     input("Press Enter to exit.")
-#     exit()
+try:
+    conversation_manager = cm.conversation_manager(config)
+except Exception as e:
+    logging.error(f"Error Creating Conversation Manager:")
+    logging.error(e)
+    input("Press Enter to exit.")
+    raise e
 
-conversation_manager = cm.conversation_manager(config)
 def conversation_loop():
     def restart_manager():
         global conversation_manager

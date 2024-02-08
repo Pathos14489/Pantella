@@ -1,7 +1,7 @@
 import logging
 import src.utils as utils
 import time
-import random
+import os
 
 class CharacterDoesNotExist(Exception):
     """Exception raised when NPC name cannot be found in characterDB"""
@@ -81,10 +81,12 @@ class GameStateManager:
         self.write_game_info('_mantella_say_line_9', 'False')
         self.write_game_info('_mantella_say_line_10', 'False')
         self.write_game_info('_mantella_actor_count', '0')
+        if not os.path.exists(f'{self.game_path}/_mantella_context_string.txt'):
+            self.write_game_info('_mantella_context_string', '')
 
         self.write_game_info('_mantella_player_input', '')
 
-        self.write_game_info('_mantella_aggro', '')
+        self.write_game_info('_mantella_actor_methods', '')
 
         self.write_game_info('_mantella_radiant_dialogue', 'False')
     
@@ -142,7 +144,14 @@ class GameStateManager:
         player_gender = self.load_data_when_available('_mantella_player_gender', '')
         return player_gender
     
-    def call_actor_method(self, actor_character, method_name, *args):
+    def load_context_string(self):
+        """Wait for context string to populate"""
+        
+        with open(f'{self.game_path}/_mantella_context_string.txt', 'r', encoding='utf-8') as f:
+            context_string = f.readline().strip()
+        return context_string
+    
+    def queue_actor_method(self, actor_character, method_name, *args):
         """Call a method on an actor in the game"""
         logging.info(f'Calling {method_name} on {actor_character.name}...')
         string_id = actor_character.ref_id

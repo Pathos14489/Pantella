@@ -14,6 +14,8 @@ class take(base_behavior.BaseBehavior):
                 logging.error(f"Take behavior called with no sentence!")
             else:
                 logging.info(f"{speaker_character.name} wants to accept an item from the player.")
-                self.manager.conversation_manager.game_state_manager.call_actor_method(speaker_character,"OpenGiftMenu")
+                self.queue_actor_method(speaker_character,"Wait","2")
+                self.new_game_event(f"*{speaker_character.name} offered to take something from {self.manager.conversation_manager.player_name}.*\n")
+                self.queue_actor_method(speaker_character,"OpenGiftMenu")
         return "trade"
     

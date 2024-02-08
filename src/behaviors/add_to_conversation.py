@@ -15,5 +15,6 @@ class add_to_conversation(base_behavior.BaseBehavior):
                 logging.error(f"add_to_conversation behavior called with no sentence!")
             else:
                 logging.info(f"{speaker_character['name']} is adding {self.manager.conversation_manager.player_name} to the conversation.")
-                self.manager.conversation_manager.game_state_manager.call_actor_method(speaker_character,"AddPlayerToConversation") # .write_game_info('_mantella_aggro', '3') # TODO: Abstract this to a function
+                self.new_game_event(f"*{speaker_character['name']} added {self.manager.conversation_manager.player_name} to the conversation.*\n")
+                self.queue_actor_method(speaker_character,"AddPlayerToConversation")
         return "add_to_conversation"

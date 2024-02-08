@@ -14,6 +14,7 @@ class offended(base_behavior.BaseBehavior):
                 logging.error(f"Offended behavior called with no sentence!")
             else:
                 logging.info(f"{speaker_character.name} got offended.")
-                self.manager.conversation_manager.game_state_manager.call_actor_method(speaker_character,"StartCombat")
+                self.new_game_event(f"*{speaker_character.name} got so offended by {self.manager.conversation_manager.player_name}'s comment, they drew their weapon and started combat.*\n")
+                self.queue_actor_method(speaker_character,"StartCombat")
         return "offended"
     

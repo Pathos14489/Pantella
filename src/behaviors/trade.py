@@ -14,6 +14,8 @@ class trade(base_behavior.BaseBehavior):
                 logging.error(f"Trade behavior called with no sentence!")
             else:
                 logging.info(f"{speaker_character.name} wants to trade.")
-                self.manager.conversation_manager.game_state_manager.call_actor_method(speaker_character,"OpenTradeMenu")
+                self.queue_actor_method(speaker_character,"Wait","2")
+                self.new_game_event(f"*{speaker_character.name} let {self.manager.conversation_manager.player_name} have full access to their bags and items.*\n")
+                self.queue_actor_method(speaker_character,"OpenTradeMenu")
         return "trade"
     
