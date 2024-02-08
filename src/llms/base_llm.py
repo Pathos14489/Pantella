@@ -267,7 +267,7 @@ class base_LLM():
                                 
                                 logging.info(f"next_author detected as: {next_author}")
                         if  next_author is not None and verified_author == False: # if next_author is not None, then verify that the next author is correct
-                            if next_author in possible_players: # if the next author is the player, then the player is speaking and generation should stop, but only if the conversation is not radiant
+                            if next_author.strip() in possible_players: # if the next author is the player, then the player is speaking and generation should stop, but only if the conversation is not radiant
                                 if self.conversation_manager.radiant_dialogue:
                                     logging.info(f"Player detected, but not allowed to speak in radiant dialogue. Retrying...")
                                     retries += 1
@@ -330,8 +330,12 @@ class base_LLM():
                                     raise Exception('Invalid author')
 
                             sentence = self.clean_sentence(sentence) # clean the sentence
-                            if sentence == '': # if the sentence is empty after cleaning, then skip it
+                            if sentence.strip() == '': # if the sentence is empty after cleaning, then skip it
                                 logging.info(f"Skipping empty sentence")
+                                if full_reply.strip() == '':
+                                    retries += 1
+                                    logging.info(f"Retrying due to empty response")
+                                    raise Exception('Empty sentence')
                                 break
                                 
 
