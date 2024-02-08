@@ -39,7 +39,7 @@ class BaseBehavior():
             return False
         if conversation_type == "single_npc_with_player" and (self.single_npc_with_npc_only or self.multi_npc_only or self.npc):
             return False
-        if conversation_type == "multi_npc" and (self.single_npc_with_npc_only or self.single_npc_with_player_only or (self.npc and self.conversation_manager.radient_dialogue) or (self.player and not self.conversation_manager.radient_dialogue)):
+        if conversation_type == "multi_npc" and (self.single_npc_with_npc_only or self.single_npc_with_player_only or (self.npc and self.conversation_manager.radiant_dialogue) or (self.player and not self.conversation_manager.radiant_dialogue)):
             return False
         return True
     
