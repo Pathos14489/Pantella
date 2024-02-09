@@ -531,7 +531,7 @@ class GameStateManager:
         time.sleep(self.conversation_manager.config.reload_wait_time) # let the new file register on the system
 
         self.conversation_manager.messages = self.conversation_manager.messages[-self.conversation_manager.config.reload_buffer:] # Set context to just the last few messages
-        if self.conversation_manager.active_character_count() > 1: # If there are multiple characters in the conversation, add a message from the player to the NPC that was talking last to get the conversation going again
+        if self.conversation_manager.character_manager.active_character_count() > 1: # If there are multiple characters in the conversation, add a message from the player to the NPC that was talking last to get the conversation going again
             self.conversation_manager.messages.append({"role": self.conversation_manager.player_name, "content": latest_character.name+'?'})
         else: # If there is only one character in the conversation, add a message from the player to the NPC to get the conversation going again
             perspective_player_name, _, _ = latest_character.get_perspective_player_identity()
