@@ -15,6 +15,7 @@ class BaseBehavior():
         self.multi_npc_only = False
         self.npc_pre_keywords = [] # Keywords that the NPC can say that will trigger this behavior before generating the voiceline
         self.npc_post_keywords = [] # Keywords that the NPC can say that will trigger this behavior after generating the voiceline
+        self.activation_sentences = [] # Sentences that will trigger this behavior
 
     @property
     def conversation_manager(self):

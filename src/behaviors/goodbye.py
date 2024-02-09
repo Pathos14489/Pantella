@@ -5,7 +5,7 @@ class goodbye(base_behavior.BaseBehavior):
     def __init__(self, manager):
         super().__init__(manager)
         self.keyword = "Goodbye"
-        self.description = "If {name} is leaving or ending the conversation, this behavior will be called."
+        self.description = "If {perspective_player_name} is leaving or ending the conversation, this behavior will be called."
         self.npc_post_keywords = ["goodbye", "bye", "farewell", "safe travels", "get away from me", "please leave me alone"]
     
     def run(self, run=False, speaker_character=None, sentence=None):

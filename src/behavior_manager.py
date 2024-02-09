@@ -51,6 +51,9 @@ class BehaviorManager():
             for npc_keyword in npc_keywords:
                 if npc_keyword.lower() in npc_words:
                     npc_contains_keyword = True
+            for activation_sentence in behavior.activation_sentences:
+                if activation_sentence.lower() in sentence.lower() or sentence.lower() in activation_sentence.lower():
+                    npc_contains_keyword = True
             if npc_contains_keyword:
                 logging.info(f"Behavior triggered: {behavior.keyword}")
                 try:
@@ -69,6 +72,9 @@ class BehaviorManager():
             for npc_keyword in npc_keywords:
                 if npc_keyword.lower() in npc_words:
                     npc_contains_keyword = True
+            for activation_sentence in behavior.activation_sentences:
+                if activation_sentence.lower() in sentence.lower() or sentence.lower() in activation_sentence.lower():
+                    npc_contains_keyword = True
             if npc_contains_keyword:
                 logging.info(f"Behavior triggered: {behavior.keyword}")
                 try:
@@ -83,7 +89,7 @@ class BehaviorManager():
         for behavior in self.behaviors:
             if behavior.valid():
                 if behavior.description is not None:
-                    summary += f"{behavior.description}"
+                    summary += f"{behavior.description}\n"
                     if behavior.example is not None:
                         summary += f"Example: {behavior.example}"
                     summary += "\n"

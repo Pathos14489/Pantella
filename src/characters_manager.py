@@ -82,11 +82,13 @@ class Characters:
             for key in replacement_dict:
                 replacement_dict2[key + "2"] = replacement_dict[key]
             replacement_dict.update(replacement_dict2)
+            replacement_dict["perspective_player_name"] = self.conversation_manager.player_name
         else: # MultiNPC style context
             replacement_dict = {
                 "conversation_summaries": self.conversation_summaries,
                 "names": ", ".join(self.names),
                 "names_w_player": ", ".join(self.names_w_player),
+                "perspective_player_name": self.conversation_manager.player_name,
                 "relationship_summary": self.relationship_summary,
                 "bios": self.bios,
                 "langage": self.conversation_manager.language_info['language']
