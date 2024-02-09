@@ -28,9 +28,13 @@ class LLM(base_LLM.base_LLM): # Uses llama-cpp-python as the LLM inference engin
                     n_gpu_layers=self.config.n_gpu_layers,
                     n_batch=self.config.n_batch,
                     n_threads=self.config.n_threads,
-                    offload_kqv=True,
                     tensor_split=self.config.tensor_split,
                     main_gpu=self.config.main_gpu,
+                    split_mode=self.config.split_mode,
+                    use_mmap=self.config.use_mmap,
+                    use_mlock=self.config.use_mlock,
+                    n_threads_batch=self.config.n_threads_batch,
+                    offload_kqv=self.config.offload_kqv,
                 )
             else:
                 self.llm = llama_model

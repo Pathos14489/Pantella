@@ -72,6 +72,9 @@ https://github.com/art-from-the-machine/Mantella#issues-qa
                     save = True
         
         for key in default: # Set the settings in the config file to the default settings if they are missing
+            if key not in config:
+                config[key] = default[key]
+                save = True
             for sub_key in default[key]:
                 if sub_key not in config[key]:
                     config[key][sub_key] = default[key][sub_key]
@@ -79,6 +82,7 @@ https://github.com/art-from-the-machine/Mantella#issues-qa
                     
         for key in default: # Set the config settings to the loader
             for sub_key in default[key]:
+                print(f"Setting {sub_key} to {config[key][sub_key]}")
                 setattr(self, sub_key, config[key][sub_key])
         logging.basicConfig(filename=self.logging_file_path, format='%(asctime)s %(levelname)s| %(message)s', level=logging.INFO)
 
@@ -196,7 +200,12 @@ https://github.com/art-from-the-machine/Mantella#issues-qa
                 "n_threads": 4,
                 "n_batch": 512,
                 "tensor_split": [1.0],
-                "main_gpu": 0
+                "main_gpu": 0,
+                "split_mode": 0, # 0 = single gpu, 1 = split layers and kv across gpus, 2 = split rows across gpus
+                "use_mmap": True,
+                "use_mlock": False,
+                "n_threads_batch": 1,
+                "offload_kqv": True,
             },
             "Speech": {
                 "tts_engine": "xvasynth",
@@ -328,7 +337,12 @@ https://github.com/art-from-the-machine/Mantella#issues-qa
                 "n_threads": self.n_threads,
                 "n_batch": self.n_batch,
                 "tensor_split": self.tensor_split,
-                "main_gpu": self.main_gpu
+                "main_gpu": self.main_gpu,
+                "split_mode": self.split_mode,
+                "use_mmap": self.use_mmap,
+                "use_mlock": self.use_mlock,
+                "n_threads_batch": self.n_threads_batch,
+                "offload_kqv": self.offload_kqv
             },
             "Speech": {
                 "tts_engine": self.tts_engine,

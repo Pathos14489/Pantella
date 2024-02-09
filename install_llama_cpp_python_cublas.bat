@@ -20,7 +20,7 @@ if "%CUDA_VERSION%"=="" (
     call llama_cpp_python_cpu.bat
 ) else (
     echo Installing llama-cpp-python for CUDA
-    python3 -m pip install llama-cpp-python==0.2.28 --no-deps --no-cache-dir --force-reinstall --upgrade 
+    python3 -m pip install llama-cpp-python --no-deps --no-cache-dir --force-reinstall --upgrade 
     :: 0.2.28 because the latest version broke GPU support temporarily
     echo Done
 )
