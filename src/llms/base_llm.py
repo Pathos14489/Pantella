@@ -267,7 +267,12 @@ class base_LLM():
                                 
                                 logging.info(f"next_author detected as: {next_author}")
                         if  next_author is not None and verified_author == False: # if next_author is not None, then verify that the next author is correct
-                            if next_author.strip() in possible_players: # if the next author is the player, then the player is speaking and generation should stop, but only if the conversation is not radiant
+                            player_author = False
+                            for possible_player in possible_players:
+                                if next_author.strip() in possible_player:
+                                    player_author = True
+                                    break
+                            if player_author: # if the next author is the player, then the player is speaking and generation should stop, but only if the conversation is not radiant
                                 if self.conversation_manager.radiant_dialogue:
                                     logging.info(f"Player detected, but not allowed to speak in radiant dialogue. Retrying...")
                                     retries += 1
