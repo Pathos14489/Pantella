@@ -32,7 +32,7 @@ class Transcriber:
 
         self.call_count = 0
 
-        if self.mic_enabled == '1':
+        if self.mic_enabled == 'true':
             self.recognizer = sr.Recognizer()
             self.recognizer.pause_threshold = self.config.pause_threshold
             self.microphone = sr.Microphone()
