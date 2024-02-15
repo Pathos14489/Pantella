@@ -226,11 +226,18 @@ class CharacterDB():
                     character = db_character
                     is_generic_npc = True
                     break
-        if character is None: # No character was found, print an error message and wait for the user to press enter before exiting the program
+        if character is None:
             logging.warning(f"Could not find character '{character_name}' in character database using name lookup.")
             logging.warning(f"Could not find character '{character_ref_id}' in character database using ref_id lookup.")
             logging.warning(f"Could not find character '{character_base_id}' in character database using base_id lookup.")
             logging.error(f"Could not find character '{character_name}' in character database.")
+
+            # Create a CSV file in the data directory named for the character
+            with open(f'data/Add_{character_name}_Bio.csv', 'w', newline='') as file:
+                writer = csv.writer(file)
+                writer.writerow(["bio_url", "bio_name", "voice_model", "skyrim_voice_folder", "race", "gender", "species", "ref_id", "base_id", "author", "lang_override"])
+                writer.writerow(["Not Found", f"{character_name} is a stranger", character_name, "NordRadiant", "NordMale", "Unknown", "Unknown", "unknown", character_ref_id, character_base_id, "unknown", "en"])
+
             input("Press enter to continue...")
             exit(0)
         return character, is_generic_npc
