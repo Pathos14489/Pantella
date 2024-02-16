@@ -7,7 +7,7 @@ class add_to_conversation(base_behavior.BaseBehavior):
         self.keyword = "AddToConversation"
         self.description = "If you want to talk to {perspective_player_name}, you can use this behavior to add them to the conversation."
         self.example = "'Do you want coffee?' 'AddToConversation: I'm not sure, me and {player_name} are in the middle of something. {player_name}, do you want coffee?'"
-        self.radient_only = True
+        self.radiant_only = True
     
     def run(self, run=False, speaker_character=None, sentence=None):
         if run:
