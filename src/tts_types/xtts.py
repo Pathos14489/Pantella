@@ -73,20 +73,26 @@ class Synthesizer(base_tts.base_Synthesizer): # Gets token count from OpenAI's e
         self.current_model = model # else: set the current model to the new model
         requests.post(self.switch_model_url, json={"model_name": model}) # Request to switch the voice model
     
-    def _set_tts_settings_and_test_if_serv_running(self):
-        """Set the TTS settings and test if the server is running"""
+    def check_if_xtts_is_running(self):
+        self.times_checked_xtts += 1
+
         try:
-            # Sending a POST request to the API endpoint
-            logging.info(f'Attempting to connect to xTTS...')
+            if (self.times_checked_xtts > 10):
+                # break loop
+                logging.error('Ensure xtts is running - http://localhost:8020/docs Also, xtts needs to start slightly before Mantella.')
+                input('\nPress any key to stop Mantella and try again...')
+                sys.exit(0)
+
+            # contact local xTTS server; ~2 second timeout
+            logging.info(f'Attempting to connect to xTTS... ({self.times_checked_xtts})')
             response = requests.post(self.xtts_set_tts_settings, json=self.xtts_data)
-            response.raise_for_status() 
-        except requests.exceptions.RequestException as e:
-            # Log the error
-            logging.error(f'Could not reach the API at "{self.xtts_set_tts_settings}". Error: {e}')
-            # Wait for user input before exiting
-            logging.error(f'You should run xTTS api server before running Mantella.')
-            input('\nPress any key to stop Mantella...')
-            sys.exit(0)
+            response.raise_for_status()  # If the response contains an HTTP error status code, raise an exception
+        except requests.exceptions.RequestException as err:
+            if (self.times_checked_xtts == 1):
+                logging.info('xtts is not ready yet. Retrying in 10 seconds...')
+
+            # do the web request again; LOOP!!!
+            return self.check_if_xtts_is_running()
 
     @utils.time_it
     def change_voice(self, character):
