@@ -29,6 +29,19 @@ class base_Synthesizer:
         input("Press enter to continue...")
         exit(0)
         return []
+    
+    def get_valid_voice_model(self, character):
+        """Get the valid voice model for the character from the available voices - Order of preference: voice_model, voice_model without spaces, lowercase voice_model, uppercase voice_model, lowercase voice_model without spaces, uppercase voice_model without spaces"""
+        options = [character.voice_model] # add the voice model from the character object
+        options.append(character.voice_model.replace(' ', '')) # add the voice model without spaces
+        options.append(character.voice_model.lower()) # add the lowercase version of the voice model
+        options.append(character.voice_model.upper()) # add the uppercase version of the voice model
+        options.append(character.voice_model.lower().replace(' ', '')) # add the lowercase version of the voice model without spaces
+        options.append(character.voice_model.upper().replace(' ', '')) # add the uppercase version of the voice model without spaces
+        for option in options:
+            if option in self.voices():
+                return option
+        return character.voice_model
 
     @utils.time_it
     def change_voice(self, character):

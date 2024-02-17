@@ -17,11 +17,13 @@ class Synthesizer(base_tts.base_Synthesizer): # Gets token count from OpenAI's e
         self.xtts_base_url = self.config.xtts_base_url
         self.xtts_server_folder = self.config.xtts_server_folder
         self.synthesize_url_xtts = self.xtts_base_url + "/tts_to_audio/"
-        # self.switch_model_url = self.xtts_base_url + "/switch_model"
+        self.switch_model_url = self.xtts_base_url + "/switch_model"
         self.xtts_set_tts_settings = self.xtts_base_url + "/set_tts_settings/"
         self.xtts_get_speakers_list = self.xtts_base_url + "/speakers_list/"
         self.xtts_get_models_list = self.xtts_base_url + "/get_models_list/"
         self._set_tts_settings_and_test_if_serv_running()
+        self.default_model = "v2.0.2"
+        self.set_model(self.default_model)
         # self.official_model_list = ["main","v2.0.3","v2.0.2","v2.0.1","v2.0.0"]
         logging.info(f'Available models: {self.available_models()}')
         logging.info(f'Available voices: {self.voices()}')
@@ -60,6 +62,17 @@ class Synthesizer(base_tts.base_Synthesizer): # Gets token count from OpenAI's e
         response = requests.get(self.xtts_get_models_list)
         return response.json() if response.status_code == 200 else []
     
+    def set_model(self, model):
+        """Set the voice model"""
+        if model not in self.available_models(): # if the model is not available, log an error and raise an exception
+            logging.error(f"xTTS Model {model} not available but was specifically assigned to this NPC! Please add it to the xTTS models directory for this to work. Normal users shouldn't see this error, if you do, let someone know in the Discord server. <3")
+            input("Press enter to continue...")
+            raise FileNotFoundError()
+        if self.current_model == model: # if the model is already set, do nothing
+            return
+        self.current_model = model # else: set the current model to the new model
+        requests.post(self.switch_model_url, json={"model_name": model}) # Request to switch the voice model
+    
     def _set_tts_settings_and_test_if_serv_running(self):
         """Set the TTS settings and test if the server is running"""
         try:
@@ -77,16 +90,20 @@ class Synthesizer(base_tts.base_Synthesizer): # Gets token count from OpenAI's e
 
     @utils.time_it
     def change_voice(self, character):
-        logging.info(f'Changing voice to {character.voice_model}...') 
-        logging.info(f'(Redundant Method, xTTS does not support changing voice models as all voices are calculated at runtime)')
+        logging.info(f'Checking for Custom xTTS Model for {character.voice_model}...') 
+        if character.voice_model in self.available_models():
+            logging.info(f'Custom xTTS Model found for {character.voice_model}!')
+            self.set_model(character.voice_model)
+        else:
+            logging.info(f'Custom xTTS Model not found for {character.voice_model}! Using default model...')
+            self.set_model(self.default_model)
           
-    @utils.time_it
-    def _synthesize_line_xtts(self, line, save_path, character, aggro=0):
-        basic_voice_model = f"{character.voice_model.replace(' ', '')}"
+    def get_valid_voice_model(self, character):
+        basic_voice_model = f"{super().get_valid_voice_model(character).replace(' ', '')}"
         racial_voice_model = f"{character.race}{basic_voice_model}"
         gendered_voice_model = f"{character.gender}{basic_voice_model}"
         gendered_racial_voice_model = f"{character.race}{character.gender}{basic_voice_model}"
-        voice_model = basic_voice_model
+        voice_model = None
         if character.ref_id in self.voices():
             voice_model = character.ref_id
         elif character.name in self.voices():
@@ -97,10 +114,24 @@ class Synthesizer(base_tts.base_Synthesizer): # Gets token count from OpenAI's e
             voice_model = gendered_voice_model
         elif racial_voice_model in self.voices():
             voice_model = racial_voice_model
+        elif basic_voice_model in self.voices():
+            voice_model = basic_voice_model
+        elif super().get_valid_voice_model(character) in self.voices():
+            voice_model = super().get_valid_voice_model(character)
+        elif character.voice_model in self.voices():
+            voice_model = character.voice_model
             
-        if voice_model not in self.voices():
-            logging.error(f'Voice model {voice_model} not available')
+        if voice_model == None:
+            logging.error(f'Voice model {voice_model} not available! Please add it to the xTTS voices list.')
+            input("Press enter to continue...")
             raise FileNotFoundError()
+        
+        return voice_model
+
+    @utils.time_it
+    def _synthesize_line_xtts(self, line, save_path, character, aggro=0):
+        """Synthesize a line using the xTTS API"""
+        voice_model = self.get_valid_voice_model(character)
         data = {
             'text': line,
             'speaker_wav': voice_model,
