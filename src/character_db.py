@@ -237,6 +237,10 @@ class CharacterDB():
                 writer = csv.writer(file)
                 writer.writerow(["bio_url", "bio_name", "voice_model", "skyrim_voice_folder", "race", "gender", "species", "ref_id", "base_id", "author", "lang_override"])
                 writer.writerow(["Not Found", f"{character_name} is a stranger", character_name, "NordRadiant", "NordMale", "Unknown", "Unknown", "unknown", character_ref_id, character_base_id, "unknown", "en"])
+            # Append to skyrim_characters.csv, instead.
+            # with open('data/skyrim_characters.csv', 'a', newline='') as file:
+            # writer = csv.writer(file)
+            # writer.writerow(["Not Found", f"{character_name} is a stranger", character_name, "NordRadiant", "NordMale", "Unknown", "Unknown", "unknown", character_ref_id, character_base_id, "unknown", "en"])
 
             input("Press enter to continue...")
             exit(0)
