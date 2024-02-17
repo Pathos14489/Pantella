@@ -60,7 +60,7 @@ class Transcriber:
         if (self.debug_mode == '1') & (self.debug_use_mic == '0'): # use default response
             transcribed_text = self.default_player_response
         else: # use mic or text input
-            if self.mic_enabled == '1': # listen for response
+            if self.mic_enabled == 'true': # listen for response
                 logging.info('Listening for player response...')
                 transcribed_text = self.recognize_input()
                 logging.info(f'Player said: {transcribed_text}')
