@@ -268,7 +268,7 @@ class Synthesizer(base_tts.base_Synthesizer): # Gets token count from OpenAI's e
   
     @utils.time_it
     def change_voice(self, character):
-        voice = character.voice_model
+        voice = self.get_valid_voice_model(character) # character.voice_model
 
         logging.info('Loading voice model...')
         

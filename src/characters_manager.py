@@ -109,7 +109,10 @@ class Characters:
         if "name" in replacement_dict: # If name is in replacement_dict, add name2 and names to replacement_dict
             replacement_dict["behavior_summary"] = replacement_dict["behavior_summary"].format(**replacement_dict)
         else:
-            replacement_dict["behavior_summary"] = replacement_dict["behavior_summary"].replace("{name}", self.names[0]).format(**replacement_dict)
+            replacement_dict["behavior_summary"] = replacement_dict["behavior_summary"].replace("{name}", "{name1}")
+            for name in self.names:
+                replacement_dict["name"+str(self.names.index(name)+1)] = name
+            replacement_dict["behavior_summary"] = replacement_dict["behavior_summary"].format(**replacement_dict)
         replacement_dict["behavior_keywords"] = ", ".join(self.conversation_manager.behavior_manager.behavior_keywords)
 
         

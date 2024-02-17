@@ -13,6 +13,9 @@ class Transcriber:
         self.config = self.conversation_manager.config
         self.mic_enabled = self.config.mic_enabled
         self.language = self.config.stt_language
+        self.available_languages = ["af","am","ar","as","az","ba","be","bg","bn","bo","br","bs","ca","cs","cy","da","de","el","en","es","et","eu","fa","fi","fo","fr","gl","gu","ha","haw","he","hi","hr","ht","hu","hy","id","is","it","ja","jw","ka","kk","km","kn","ko","la","lb","ln","lo","lt","lv","mg","mi","mk","ml","mn","mr","ms","mt","my","ne","nl","nn","no","oc","pa","pl","ps","pt","ro","ru","sa","sd","si","sk","sl","sn","so","sq","sr","su","sv","sw","ta","te","tg","th","tk","tl","tr","tt","uk","ur","uz","vi","yi","yo","zh","yue"]
+        if self.language == 'auto' or self.language == 'default' or self.language not in self.available_languages:
+            self.language = "en"
         self.task = "transcribe"
         if self.config.stt_translate:
             # translate to English
@@ -32,7 +35,7 @@ class Transcriber:
 
         self.call_count = 0
 
-        if self.mic_enabled == 'true':
+        if self.mic_enabled:
             self.recognizer = sr.Recognizer()
             self.recognizer.pause_threshold = self.config.pause_threshold
             self.microphone = sr.Microphone()
@@ -57,15 +60,15 @@ class Transcriber:
 
     def get_player_response(self):
         """Get player response from mic or text input depending on config and MCM settings"""
-        if (self.debug_mode == '1') & (self.debug_use_mic == '0'): # use default response
+        if self.debug_mode and not self.debug_use_mic: # use default response
             transcribed_text = self.default_player_response
         else: # use mic or text input
-            if self.mic_enabled == 'true': # listen for response
+            if self.mic_enabled: # listen for response
                 logging.info('Listening for player response...')
                 transcribed_text = self.recognize_input()
                 logging.info(f'Player said: {transcribed_text}')
             else: # use text input
-                if (self.debug_mode == '1') & (self.debug_use_mic == '1'): # text input through console
+                if (self.debug_mode) & (self.debug_use_mic): # text input through console
                     transcribed_text = input('\nWrite player\'s response: ')
                     logging.info(f'Player wrote: {transcribed_text}')
                 else: # await text input from the game

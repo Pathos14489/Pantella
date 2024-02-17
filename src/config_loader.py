@@ -230,7 +230,8 @@ https://github.com/art-from-the-machine/Mantella#issues-qa
                     "speed": 1.2,
                     "enable_text_splitting": True,
                     "stream_chunk_size": 200
-                }
+                },
+                "default_xtts_model": "v2.0.2"
             },
             "Cleanup": {
                 "remove_mei_folders": False
@@ -358,7 +359,8 @@ https://github.com/art-from-the-machine/Mantella#issues-qa
             },
             "xTTS": {
                 "xtts_base_url": self.xtts_base_url,
-                "xtts_data": self.xtts_data
+                "xtts_data": self.xtts_data,
+                "default_xtts_model": self.default_xtts_model
             },
             "Cleanup": {
                 "remove_mei_folders": self.remove_mei_folders
