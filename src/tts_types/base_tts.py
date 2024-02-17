@@ -40,8 +40,10 @@ class base_Synthesizer:
         options.append(character.voice_model.upper().replace(' ', '')) # add the uppercase version of the voice model without spaces
         for option in options:
             if option in self.voices():
-                return option
-        return character.voice_model
+                return option # return the first valid voice model found
+        logging.error(f'Voice model {character.voice_model} not available! Please add it to the voices list.')
+        input("Press enter to continue...")
+        raise VoiceModelNotFound(f'Voice model {character.voice_model} not available! Please add it to the voices list.')
 
     @utils.time_it
     def change_voice(self, character):
