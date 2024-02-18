@@ -23,6 +23,7 @@ class Synthesizer(base_tts.base_Synthesizer): # Gets token count from OpenAI's e
         self.xtts_get_models_list = self.xtts_base_url + "/get_models_list/"
         self._set_tts_settings_and_test_if_serv_running()
         self.default_model = self.conversation_manager.config.default_xtts_model
+        self.current_model = self.default_model
         self.set_model(self.default_model)
         # self.official_model_list = ["main","v2.0.3","v2.0.2","v2.0.1","v2.0.0"]
         logging.info(f'Available models: {self.available_models()}')
