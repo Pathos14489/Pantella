@@ -123,6 +123,9 @@ class Characters:
         if "bios" in replacement_dict:
             replacement_dict["bios"] = replacement_dict["bios"].replace("{bios}", "").format(**replacement_dict)
 
+        if "language" not in replacement_dict:
+            replacement_dict["language"] = self.conversation_manager.language_info['language']
+
         replacement_dict["context"] = ""
         context_string = self.conversation_manager.game_state_manager.load_context_string()
         if context_string is not None and context_string != "":
