@@ -28,7 +28,6 @@ class conversation_manager():
             self.initialize()
             logging.info(f'\nMantella v{self.mantella_version}')
         self.character_manager = None # Initialised at start of every conversation in await_and_setup_conversation()
-        self.check_mcm_mic_status()
         self.in_conversation = False # Whether or not the player is in a conversation
         self.conversation_ended = False # Whether or not the conversation has ended
         self.tokens_available = 0 # Initialised at start of every conversation in await_and_setup_conversation()
@@ -105,19 +104,20 @@ class conversation_manager():
         )
 
     def get_response(self):
+        """Get response from LLM and NPC(s) in the conversation"""
         return asyncio.run(self._get_response())
 
     def check_mcm_mic_status(self):
-        # Check if the mic setting has been configured in MCM
-        # If it has, use this instead of the config.json setting, otherwise take the config.json value
-        # TODO: Convert to game_state_manager await and load game data method
+        """Check if the microphone is enabled in the MCM"""
         if os.path.exists(f'{self.config.game_path}/_mantella_microphone_enabled.txt'):
             with open(f'{self.config.game_path}/_mantella_microphone_enabled.txt', 'r', encoding='utf-8') as f:
                 mcm_mic_enabled = f.readline().strip()
-            self.config.mic_enabled = '1' if mcm_mic_enabled == 'TRUE' else '0'
+            return mcm_mic_enabled == 'TRUE'
+        else:   
+            return False
 
     def get_if_new_character_joined(self):
-        # check if new character has been added to conversation
+        """Check if new character has been added to conversation"""
         num_characters_selected = self.game_state_manager.load_ingame_actor_count()
         if num_characters_selected > self.character_manager.active_character_count():
             return True
@@ -177,7 +177,6 @@ class conversation_manager():
             logging.info('Conversation ended')
 
     def await_and_setup_conversation(self): # wait for player to select an NPC and setup the conversation when outside of conversation
-        self.check_mcm_mic_status()
         self.game_state_manager.reset_game_info() # clear _mantella_ files in Skyrim folder
 
         self.character_manager = characters_manager.Characters(self) # Reset character manager

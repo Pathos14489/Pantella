@@ -11,7 +11,6 @@ class Transcriber:
         self.conversation_manager = conversation_manager
         self.game_state_manager = self.conversation_manager.game_state_manager
         self.config = self.conversation_manager.config
-        self.mic_enabled = self.config.mic_enabled
         self.language = self.config.stt_language
         self.available_languages = ["af","am","ar","as","az","ba","be","bg","bn","bo","br","bs","ca","cs","cy","da","de","el","en","es","et","eu","fa","fi","fo","fr","gl","gu","ha","haw","he","hi","hr","ht","hu","hy","id","is","it","ja","jw","ka","kk","km","kn","ko","la","lb","ln","lo","lt","lv","mg","mi","mk","ml","mn","mr","ms","mt","my","ne","nl","nn","no","oc","pa","pl","ps","pt","ro","ru","sa","sd","si","sk","sl","sn","so","sq","sr","su","sv","sw","ta","te","tg","th","tk","tl","tr","tt","uk","ur","uz","vi","yi","yo","zh","yue"]
         if self.language == 'auto' or self.language == 'default' or self.language not in self.available_languages:
@@ -35,27 +34,39 @@ class Transcriber:
 
         self.call_count = 0
 
-        if self.mic_enabled:
-            self.recognizer = sr.Recognizer()
-            self.recognizer.pause_threshold = self.config.pause_threshold
-            self.microphone = sr.Microphone()
+        self.initialized = False
+        if self.conversation_manager.check_mcm_mic_status(): # if mic is enabled, initialize recognizer and microphone
+            self.initialize()
 
-            if self.audio_threshold == 'auto':
-                logging.info(f"Audio threshold set to 'auto'. Adjusting microphone for ambient noise...")
-                logging.info("If the mic is not picking up your voice, try setting this audio_threshold value manually in MantellaSoftware/config.json.\n")
-                with self.microphone as source:
-                    self.recognizer.adjust_for_ambient_noise(source, duration=5)
+    def initialize(self):
+        self.initialized = True
+        self.recognizer = sr.Recognizer()
+        self.recognizer.pause_threshold = self.config.pause_threshold
+        self.microphone = sr.Microphone()
+
+        if self.audio_threshold == 'auto':
+            logging.info(f"Audio threshold set to 'auto'. Adjusting microphone for ambient noise...")
+            logging.info("If the mic is not picking up your voice, try setting this audio_threshold value manually in MantellaSoftware/config.json.\n")
+            with self.microphone as source:
+                self.recognizer.adjust_for_ambient_noise(source, duration=5)
+        else:
+            self.recognizer.dynamic_energy_threshold = False
+            self.recognizer.energy_threshold = int(self.audio_threshold)
+            logging.info(f"Audio threshold set to {self.audio_threshold}. If the mic is not picking up your voice, try lowering this value in MantellaSoftware/config.json. If the mic is picking up too much background noise, try increasing this value.\n")
+
+        # if using faster_whisper, load model selected by player, otherwise skip this step
+        if self.whisper_type == 'faster_whisper':
+            if self.process_device == 'cuda':
+                self.transcribe_model = WhisperModel(self.model, device=self.process_device)
             else:
-                self.recognizer.dynamic_energy_threshold = False
-                self.recognizer.energy_threshold = int(self.audio_threshold)
-                logging.info(f"Audio threshold set to {self.audio_threshold}. If the mic is not picking up your voice, try lowering this value in MantellaSoftware/config.json. If the mic is picking up too much background noise, try increasing this value.\n")
+                self.transcribe_model = WhisperModel(self.model, device=self.process_device, compute_type="float32")
 
-            # if using faster_whisper, load model selected by player, otherwise skip this step
-            if self.whisper_type == 'faster_whisper':
-                if self.process_device == 'cuda':
-                    self.transcribe_model = WhisperModel(self.model, device=self.process_device)
-                else:
-                    self.transcribe_model = WhisperModel(self.model, device=self.process_device, compute_type="float32")
+    def unload(self):
+        self.initialized = False
+        del self.recognizer
+        del self.microphone
+        if self.whisper_type == 'faster_whisper':
+            del self.transcribe_model
 
 
     def get_player_response(self):
@@ -63,11 +74,17 @@ class Transcriber:
         if self.debug_mode and not self.debug_use_mic: # use default response
             transcribed_text = self.default_player_response
         else: # use mic or text input
-            if self.mic_enabled: # listen for response
+            if self.conversation_manager.check_mcm_mic_status(): # listen for response
+                if not self.initialized:
+                    logging.info('Microphone requested but not initialized. Initializing...')
+                    self.initialize()
                 logging.info('Listening for player response...')
                 transcribed_text = self.recognize_input()
                 logging.info(f'Player said: {transcribed_text}')
             else: # use text input
+                if self.initialized:
+                    logging.info('Microphone not requested but was initialized. Unloading...')
+                    self.unload()
                 if (self.debug_mode) & (self.debug_use_mic): # text input through console
                     transcribed_text = input('\nWrite player\'s response: ')
                     logging.info(f'Player wrote: {transcribed_text}')
