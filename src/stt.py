@@ -19,6 +19,8 @@ class Transcriber:
         if self.config.stt_translate:
             # translate to English
             self.task = "translate"
+
+        # TODO: Whenever a different stt model type is available, need to convert this class to work like the llm and tokenizer classes.
         self.model = self.config.whisper_model
         self.process_device = self.config.whisper_process_device
         self.audio_threshold = self.config.audio_threshold

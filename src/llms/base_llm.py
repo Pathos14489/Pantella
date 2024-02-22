@@ -244,6 +244,8 @@ class base_LLM():
                 last_chunk = None
                 same_chunk_count = 0
                 for chunk in self.acreate(self.conversation_manager.get_context()):
+
+                    # TODO: This is a temporary fix. The LLM class should be returning a string only, but some inference engines don't currently. This will be fixed in the future.
                     if type(chunk) == dict:
                         logging.info(chunk)
                         content = chunk['choices'][0]['text']
@@ -253,6 +255,7 @@ class base_LLM():
                     else:
                         logging.info(chunk.model_dump_json())
                         content = chunk.choices[0].text
+
                     if content is not last_chunk: # if the content is not the same as the last chunk, then the LLM is not stuck in a loop and the generation should continue
                         last_chunk = content
                         same_chunk_count = 0
@@ -423,6 +426,7 @@ class base_LLM():
                     input('Press enter to continue...')
                     exit()
                 logging.error(f"LLM API Error: {e}")
+                raise e
                 if 'Invalid author' in str(e):
                     logging.info(f"Retrying without saying error voice line")
                     retries += 1
