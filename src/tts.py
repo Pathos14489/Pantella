@@ -16,8 +16,11 @@ tts_Types["default"] = tts_Types[default]
 # Create LLM object using the config and client provided
     
 def create_Synthesizer(conversation_manager):
-    if conversation_manager.config.tts_engine not in tts_Types:
+    slug = conversation_manager.config.tts_engine
+    if slug not in tts_Types:
+        slug = slug.lower()
+    if slug not in tts_Types:
         logging.error(f"Could not find inference engine: {conversation_manager.config.tts_engine}! Please check your config.json file and try again!")
         input("Press enter to continue...")
         exit()
-    return tts_Types[conversation_manager.config.tts_engine].Synthesizer(conversation_manager)
+    return tts_Types[slug].Synthesizer(conversation_manager)
