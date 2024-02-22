@@ -129,11 +129,11 @@ class LLM(base_LLM.base_LLM): # Uses llama-cpp-python as the LLM inference engin
                 continue
 
 class Tokenizer(tokenizer.base_Tokenizer): # Uses llama-cpp-python's tokenizer
-    def __init__(self, config):
+    def __init__(self, conversation_manager):
         global llama_model
-        super().__init__(config)
+        super().__init__(conversation_manager)
         if llama_model is None:
-            self.llm = Llama(model_path=config.model_path)
+            self.llm = Llama(model_path=self.conversation_manager.config.model_path)
         else:
             self.llm = llama_model
             
