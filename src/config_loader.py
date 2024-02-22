@@ -208,9 +208,8 @@ https://github.com/art-from-the-machine/Mantella#issues-qa
             },
             "transformers": {
                 "transformers_model_slug": "mistralai/Mistral-7B-Instruct-v0.1",
-                "trust_remote_code": True,
+                "trust_remote_code": False,
                 "device_map": "cuda:0", # "cuda", "cuda:0", "cuda:1", "auto"
-                "load_in_4bit": True,
                 "load_in_8bit": False
             },
             "Speech": {
@@ -354,7 +353,6 @@ https://github.com/art-from-the-machine/Mantella#issues-qa
                 "transformers_model_slug": self.transformers_model_slug,
                 "trust_remote_code": self.trust_remote_code,
                 "device_map": self.device_map,
-                "load_in_4bit": self.load_in_4bit,
                 "load_in_8bit": self.load_in_8bit
             },
             "Speech": {

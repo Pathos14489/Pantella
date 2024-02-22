@@ -104,10 +104,6 @@ class base_LLM():
     @property
     def load_in_8bit(self):
         return self.config.load_in_8bit
-    
-    @property
-    def load_in_4bit(self):
-        return self.config.load_in_4bit
 
     # the string printed when your print() this object
     def __str__(self):

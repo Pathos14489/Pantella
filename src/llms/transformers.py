@@ -28,7 +28,6 @@ class LLM(base_LLM.base_LLM): # Uses llama-cpp-python as the LLM inference engin
                 self.llm = AutoModelForCausalLM.from_pretrained(self.transformers_model_slug,
                     device_map=self.device_map,
                     trust_remote_code=self.trust_remote_code,
-                    load_in_4bit=self.load_in_4bit,
                     load_in_8bit=self.load_in_8bit,
                     torch_dtype="auto",
                 ).eval()
