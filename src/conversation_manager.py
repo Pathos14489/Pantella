@@ -27,13 +27,13 @@ class conversation_manager():
         if initialize and self.config.ready:
             self.initialize()
             logging.info(f'\nMantella v{self.mantella_version}')
+            if self.config.ready and self.game_state_manager is not None:
+                self.current_in_game_time = self.game_state_manager.get_dummy_game_time() # Initialised at start of every conversation in await_and_setup_conversation()
         self.character_manager = None # Initialised at start of every conversation in await_and_setup_conversation()
         self.in_conversation = False # Whether or not the player is in a conversation
         self.conversation_ended = False # Whether or not the conversation has ended
         self.tokens_available = 0 # Initialised at start of every conversation in await_and_setup_conversation()
         self.current_location = 'Skyrim' # Initialised at start of every conversation in await_and_setup_conversation()
-        if self.config.ready and self.game_state_manager is not None:
-            self.current_in_game_time = self.game_state_manager.get_dummy_game_time() # Initialised at start of every conversation in await_and_setup_conversation()
         self.player_name = None # Initialised at start of every conversation in await_and_setup_conversation()
         self.player_gender = None # Initialised at start of every conversation in await_and_setup_conversation()
         self.player_race = None # Initialised at start of every conversation in await_and_setup_conversation()

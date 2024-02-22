@@ -43,8 +43,8 @@ class CharacterDB():
 
     def loaded(self):
         logging.info(f"{len(self.male_voice_models)} Male voices - {len(self.female_voice_models)} Female voices")
-        logging.info("All Required Voice Models:",self.all_voice_models)
-        logging.info("Total Required Voice Models:",len(self.all_voice_models))
+        logging.info("All Required Voice Models: "+str(self.all_voice_models))
+        logging.info("Total Required Voice Models: "+str(len(self.all_voice_models)))
         logging.info("voice_model_ids:",self.voice_model_ids)
 
     def load_characters_json(self):
@@ -318,7 +318,7 @@ class CharacterDB():
         return differences
     
     def save(self, path, type='json'): # Save the character database to a json directory or csv file
-        self.characters.sort(key=lambda x: x['name'])
+        self.characters.sort(key=lambda x: str(x['name']))
         if type == 'json':
             if not os.path.exists(path):
                 os.makedirs(path)
