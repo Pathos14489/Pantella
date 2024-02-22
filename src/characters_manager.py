@@ -76,12 +76,13 @@ class Characters:
         elif len(self.active_characters) == 1 and not self.conversation_manager.radiant_dialogue: # SingleNPCw/Player style context
             replacement_dict = self.active_characters_list[0].replacement_dict
         elif len(self.active_characters) == 2 and self.conversation_manager.radiant_dialogue: # TwoNPC no player style context
-            replacement_dict = self.active_characters_list[0].replacement_dict
-            replacement_dict2 = self.active_characters_list[1].replacement_dict
-            replacement_dict2 = {}
-            for key in replacement_dict:
-                replacement_dict2[key + "2"] = replacement_dict[key]
-            replacement_dict.update(replacement_dict2)
+            replacement_dicts = [c.replacement_dict for c in self.active_characters_list]
+            replacement_dict = {}
+            for replacement_index in range(len(replacement_dicts)):
+                d = replacement_dicts[replacement_index]
+                for key in d:
+                    replacement_dict[key + str(replacement_index+1)] = replacement_dict[key]
+            replacement_dict["language"] = self.conversation_manager.language_info['language']
             replacement_dict["perspective_player_name"] = self.conversation_manager.player_name
         else: # MultiNPC style context
             replacement_dict = {
