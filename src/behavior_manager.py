@@ -16,7 +16,7 @@ class BehaviorManager():
                 behavior_name = filename.split(".py")[0]
                 behavior = __import__("src.behaviors." + behavior_name, fromlist=[behavior_name])
                 behavior = getattr(behavior, behavior_name)(self)
-                logging.info(behavior)
+                # logging.info(behavior)
                 if behavior.run(False) == "BASEBEHAVIOR":
                     logging.error("BaseBehavior run() called for " + behavior_name + ", this should be overwritten by the child class!")
                 else:
