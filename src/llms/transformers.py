@@ -34,13 +34,18 @@ class StoppingTextIteratorStreamer(TextIteratorStreamer):
     def on_finalized_text(self, text: str, stream_end: bool = False):
         """Put the new text in the queue. If the stream is ending, also put a stop signal in the queue."""
         self.full_string += text
-        self.text_queue.put(text, timeout=self.timeout)
+        formatted_text = text
+        for stop in self.stops:
+            formatted_text = formatted_text.split(stop)[0]
+        self.text_queue.put(formatted_text, timeout=self.timeout)
+
         contains_stops = False
         self.stops = self.stops
         for stop in self.stops:
             if stop in self.full_string:
                 contains_stops = True
                 break
+
         if contains_stops and not stream_end:
             stream_end = True
             self.stop_bool = True
@@ -135,14 +140,14 @@ class LLM(base_LLM.base_LLM): # Uses llama-cpp-python as the LLM inference engin
         logging.info(f"Raw Prompt: {prompt}")
         logging.info(f"Type of prompt: {type(prompt)}")
         inputs = self.tokenizer.tokenizer(prompt, return_tensors="pt").to(self.device_map)
+        
         streamer = StoppingTextIteratorStreamer(self.tokenizer.tokenizer, self, stops=self.config.stop, skip_prompt=True)
         criteria = StoppingTextIteratorStoppingCriteria(streamer.stop_bool)
         criteria_list = StoppingCriteriaList()
         criteria_list.append(criteria)
-        # Combine self.generation_kwargs and streamer
+        
         generation_kwargs = dict(inputs, streamer=streamer, stopping_criteria=criteria_list, **self.generation_kwargs)
-        generation_kwargs["streamer"] = streamer
-        self.generation_thread = Thread(target=self.llm.generate, kwargs=generation_kwargs)
+        self.generation_thread = Thread(target=self.llm.generate, kwargs=generation_kwargs) # Run the generation in a separate thread, so that we can fetch the generated text in a non-blocking way.
         self.generation_thread.start()
         return streamer
     
@@ -176,7 +181,22 @@ class LLM(base_LLM.base_LLM): # Uses llama-cpp-python as the LLM inference engin
         while retries > 0:
             logging.info(f"Retries: {retries}")
             try:
-                return self._create_completion_stream(messages)
+                prompt = self.tokenizer.get_string_from_messages(messages)
+                prompt += self.tokenizer.start_message("[name]") # Start empty message from no one to let the LLM generate the speaker by split \n
+                prompt = prompt.split("[name]")[0] # Start message without the name - Generates name for use in process_response()
+                logging.info(f"Raw Prompt: {prompt}")
+                logging.info(f"Type of prompt: {type(prompt)}")
+                inputs = self.tokenizer.tokenizer(prompt, return_tensors="pt").to(self.device_map)
+                
+                streamer = StoppingTextIteratorStreamer(self.tokenizer.tokenizer, self, stops=self.config.stop, skip_prompt=True)
+                criteria = StoppingTextIteratorStoppingCriteria(streamer.stop_bool)
+                criteria_list = StoppingCriteriaList()
+                criteria_list.append(criteria)
+                
+                generation_kwargs = dict(inputs, streamer=streamer, stopping_criteria=criteria_list, **self.generation_kwargs)
+                self.generation_thread = Thread(target=self.llm.generate, kwargs=generation_kwargs) # Run the generation in a separate thread, so that we can fetch the generated text in a non-blocking way.
+                self.generation_thread.start()
+                return streamer
             except Exception as e:
                 logging.warning('Error creating completion stream, retrying in 5 seconds...')
                 logging.warning(e)

@@ -247,6 +247,9 @@ class base_LLM():
                     if type(chunk) == dict:
                         logging.info(chunk)
                         content = chunk['choices'][0]['text']
+                    elif type(chunk) == str:
+                        logging.info(chunk)
+                        content = chunk
                     else:
                         logging.info(chunk.model_dump_json())
                         content = chunk.choices[0].text
