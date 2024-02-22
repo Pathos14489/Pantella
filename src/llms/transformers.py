@@ -6,7 +6,7 @@ import logging
 from threading import Thread
 
 try:
-    from transformers import AutoModelForCausalLM, AutoTokenizer, TextIteratorStreamer
+    from transformers import AutoModelForCausalLM, AutoTokenizer, TextIteratorStreamer, StoppingCriteria, StoppingCriteriaList
     loaded = True
 except Exception as e:
     loaded = False
@@ -15,6 +15,37 @@ inference_engine_name = "transformers"
 
 llm_model = None # Used to store the  transformer model so it can be reused for the tokenizer
 llm_tokenizer = None 
+
+class StoppingTextIteratorStoppingCriteria(StoppingCriteria):
+    def __init__(self, stop_bool):
+        self.stop_bool = stop_bool
+
+    def __call__(self, input_ids, scores, **kwargs):
+        return self.stop_bool
+
+class StoppingTextIteratorStreamer(TextIteratorStreamer):
+    def __init__(self, tokenizer, llm, stops=[], skip_prompt=False, timeout=None, **decode_kwargs):
+        super().__init__(tokenizer, skip_prompt, timeout, **decode_kwargs)
+        self.llm = llm
+        self.stops = stops
+        self.full_string = ""
+        self.stop_bool = False
+
+    def on_finalized_text(self, text: str, stream_end: bool = False):
+        """Put the new text in the queue. If the stream is ending, also put a stop signal in the queue."""
+        self.full_string += text
+        self.text_queue.put(text, timeout=self.timeout)
+        contains_stops = False
+        self.stops = self.stops
+        for stop in self.stops:
+            if stop in self.full_string:
+                contains_stops = True
+                break
+        if contains_stops and not stream_end:
+            stream_end = True
+            self.stop_bool = True
+        if stream_end:
+            self.text_queue.put(self.stop_signal, timeout=self.timeout)
 
 class LLM(base_LLM.base_LLM): # Uses llama-cpp-python as the LLM inference engine
     def __init__(self, conversation_manager):
@@ -42,6 +73,7 @@ class LLM(base_LLM.base_LLM): # Uses llama-cpp-python as the LLM inference engin
             logging.error(f"Error loading transformers. Please check that you have installed it correctly.")
             input("Press Enter to exit.")
             exit()
+        self.generation_thread = None
         logging.info(f"Running Mantella with transformers. The language model chosen can be changed via config.json")
         logging.info(f"Testing transformers...")
         test_prompt = "Hello, I am a transformers test prompt. I am used to test transformers's functi"
@@ -55,9 +87,10 @@ class LLM(base_LLM.base_LLM): # Uses llama-cpp-python as the LLM inference engin
         ])
         logging.info(f"Streaning now...")
         for token in test_stream:
-            print({
-                "token": token,
-            })
+            if token is not None and token != "":
+                print({
+                    "token": token,
+                })
         logging.info(f"Stream complete.")
 
     
@@ -102,12 +135,15 @@ class LLM(base_LLM.base_LLM): # Uses llama-cpp-python as the LLM inference engin
         logging.info(f"Raw Prompt: {prompt}")
         logging.info(f"Type of prompt: {type(prompt)}")
         inputs = self.tokenizer.tokenizer(prompt, return_tensors="pt").to(self.device_map)
-        streamer = TextIteratorStreamer(self.tokenizer.tokenizer)
+        streamer = StoppingTextIteratorStreamer(self.tokenizer.tokenizer, self, stops=self.config.stop, skip_prompt=True)
+        criteria = StoppingTextIteratorStoppingCriteria(streamer.stop_bool)
+        criteria_list = StoppingCriteriaList()
+        criteria_list.append(criteria)
         # Combine self.generation_kwargs and streamer
-        generation_kwargs = dict(inputs, streamer=streamer, **self.generation_kwargs)
+        generation_kwargs = dict(inputs, streamer=streamer, stopping_criteria=criteria_list, **self.generation_kwargs)
         generation_kwargs["streamer"] = streamer
-        thread = Thread(target=self.llm.generate, kwargs=generation_kwargs)
-        thread.start()
+        self.generation_thread = Thread(target=self.llm.generate, kwargs=generation_kwargs)
+        self.generation_thread.start()
         return streamer
     
 
