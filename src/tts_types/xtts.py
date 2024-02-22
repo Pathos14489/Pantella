@@ -86,13 +86,14 @@ class Synthesizer(base_tts.base_Synthesizer): # Gets token count from OpenAI's e
                 sys.exit(0)
 
             # contact local xTTS server; ~2 second timeout
-            logging.info(f'Attempting to connect to xTTS... ({self.times_checked_xtts})')
+            logging.info(f'Attempting to connect to xTTS... ({retry_count})')
             response = requests.post(self.xtts_set_tts_settings, json=self.xtts_data)
             response.raise_for_status()  # If the response contains an HTTP error status code, raise an exception
         except requests.exceptions.RequestException as err:
-            if (self.times_checked_xtts == 1):
+            if (retry_count == 1):
                 logging.info('xtts is not ready yet. Retrying in 10 seconds...')
             time.sleep(10)
+            retry_count -= 1
             return self._set_tts_settings_and_test_if_serv_running() # do the web request again; LOOP!!!
 
     @utils.time_it
