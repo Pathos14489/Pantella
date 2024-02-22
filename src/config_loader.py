@@ -139,7 +139,6 @@ https://github.com/art-from-the-machine/Mantella#issues-qa
                 "collecting_thoughts_npc_response": "I need to think for a moment."
             },
             "Microphone": {
-                "mic_enabled": True,
                 "whisper_model": "base",
                 "stt_language": "default",
                 "stt_translate": False,
@@ -206,6 +205,13 @@ https://github.com/art-from-the-machine/Mantella#issues-qa
                 "use_mlock": False,
                 "n_threads_batch": 1,
                 "offload_kqv": True,
+            },
+            "transformers": {
+                "transformers_model_slug": "mistralai/Mistral-7B-Instruct-v0.1",
+                "trust_remote_code": True,
+                "device_map": "cuda:0", # "cuda", "cuda:0", "cuda:1", "auto"
+                "load_in_4bit": True,
+                "load_in_8bit": False
             },
             "Speech": {
                 "tts_engine": "xvasynth",
@@ -278,7 +284,6 @@ https://github.com/art-from-the-machine/Mantella#issues-qa
                 "collecting_thoughts_npc_response": self.collecting_thoughts_npc_response
             },
             "Microphone": {
-                "mic_enabled": self.mic_enabled,
                 "whisper_model": self.whisper_model,
                 "stt_language": self.stt_language,
                 "stt_translate": self.stt_translate,
@@ -344,6 +349,13 @@ https://github.com/art-from-the-machine/Mantella#issues-qa
                 "use_mlock": self.use_mlock,
                 "n_threads_batch": self.n_threads_batch,
                 "offload_kqv": self.offload_kqv
+            },
+            "transformers": {
+                "transformers_model_slug": self.transformers_model_slug,
+                "trust_remote_code": self.trust_remote_code,
+                "device_map": self.device_map,
+                "load_in_4bit": self.load_in_4bit,
+                "load_in_8bit": self.load_in_8bit
             },
             "Speech": {
                 "tts_engine": self.tts_engine,

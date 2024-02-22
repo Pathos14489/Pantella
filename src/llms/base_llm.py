@@ -89,6 +89,25 @@ class base_LLM():
     def stop(self):
         return self.config.stop
     
+    @property
+    def transformers_model_slug(self):
+        return self.config.transformers_model_slug
+    
+    @property
+    def device_map(self):
+        return self.config.device_map
+    
+    @property
+    def trust_remote_code(self):
+        return self.config.trust_remote_code
+    
+    @property
+    def load_in_8bit(self):
+        return self.config.load_in_8bit
+    
+    @property
+    def load_in_4bit(self):
+        return self.config.load_in_4bit
 
     # the string printed when your print() this object
     def __str__(self):
