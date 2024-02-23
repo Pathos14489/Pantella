@@ -230,7 +230,7 @@ class LLM(llama_cpp_python_LLM.LLM): # Uses llama-cpp-python as the LLM inferenc
         frame = Image.fromarray(frame)
         frame = frame.convert("RGB")
         frame = frame.resize((672, 672))
-        frame.show()
+        # frame.show()
         buffered = io.BytesIO() # Don't ask me why this is needed - it just is for some reason.
         frame.save(buffered, format="PNG")
         return self.get_image_embed_from_bytes(buffered.getvalue())
