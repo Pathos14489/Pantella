@@ -1,7 +1,7 @@
 import src.utils as utils
 import src.tokenizers.base_tokenizer as tokenizer
 import tiktoken
-import logging
+from src.logging import logging
 tokenizer_slug = "tiktoken" # default to tiktoken for now (Not always correct, but it's the fastest tokenizer and it works for openai's models, which a lot of users will be relying on probably)
 class Tokenizer(tokenizer.base_Tokenizer): # Tokenizes(only availble for counting the tokens in a string presently for local_models), and parses and formats messages for use with the language model
     def __init__(self,conversation_manager, client):

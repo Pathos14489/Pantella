@@ -2,7 +2,7 @@ import src.utils as utils
 import src.llms.base_llm as base_LLM
 import src.tokenizers.base_tokenizer as tokenizer
 import time
-import logging
+from src.logging import logging
 
 try:
     from llama_cpp import Llama

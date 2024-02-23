@@ -1,7 +1,7 @@
 import src.utils as utils
 import src.llms.base_llm as base_LLM
 import time
-import logging
+from src.logging import logging
 
 try:
     from openai import OpenAI

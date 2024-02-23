@@ -1,6 +1,6 @@
 from faster_whisper import WhisperModel
 import speech_recognition as sr
-import logging
+from src.logging import logging
 import src.utils as utils
 import requests
 import json
@@ -42,6 +42,7 @@ class Transcriber:
 
     def initialize(self):
         self.initialized = True
+        logging.info('Initializing whisper transcriber...')
         self.recognizer = sr.Recognizer()
         self.recognizer.pause_threshold = self.config.pause_threshold
         self.microphone = sr.Microphone()

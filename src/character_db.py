@@ -1,6 +1,6 @@
 import src.utils as utils
 import src.tts as tts
-import logging
+from src.logging import logging
 import json
 import os
 import pandas as pd

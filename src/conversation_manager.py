@@ -1,6 +1,6 @@
 import os
 import asyncio
-import logging
+from src.logging import logging
 import pandas as pd
 import src.game_state_manager as game_state_manager
 import src.chat_manager as chat_manager
@@ -26,9 +26,10 @@ class conversation_manager():
         self.mantella_version = '0.11-p'
         if initialize and self.config.ready:
             self.initialize()
-            logging.info(f'\nMantella v{self.mantella_version}')
-            if self.config.ready and self.game_state_manager is not None:
-                self.current_in_game_time = self.game_state_manager.get_dummy_game_time() # Initialised at start of every conversation in await_and_setup_conversation()
+            logging.info(f'Mantella v{self.mantella_version}')
+            self.current_in_game_time = self.game_state_manager.get_dummy_game_time() # Initialised at start of every conversation in await_and_setup_conversation()
+        else:
+            self.current_in_game_time = None
         self.character_manager = None # Initialised at start of every conversation in await_and_setup_conversation()
         self.in_conversation = False # Whether or not the player is in a conversation
         self.conversation_ended = False # Whether or not the conversation has ended
@@ -42,6 +43,7 @@ class conversation_manager():
         self.radiant_dialogue = False # Initialised at start of every conversation in await_and_setup_conversation()
         self.restart = False # Can be set at any time to force restart of conversation manager - Will ungracefully end any ongoing conversation client side
         self.conversation_step = 0 # The current step of the conversation - 0 is before any conversation has started, 1 is the first step of the conversation, etc.
+        logging.info('Conversation Manager Initialized')
 
     def get_conversation_type(self): # Returns the type of conversation as a string - none, single_npc_with_npc, single_player_with_npc, multi_npc
         if len(self.character_manager.active_characters) == 0:

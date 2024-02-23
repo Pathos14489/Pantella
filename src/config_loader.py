@@ -1,15 +1,15 @@
-import logging
+from src.logging import logging
 import json
 import os
 import flask
 
 class ConfigLoader:
     def __init__(self, config_path='config.json'):
-        print(f"Loading config from {config_path}")
         self.config_path = config_path
         self.prompt_styles = {}
         self._raw_prompt_styles = {}
         self.load()
+        logging.log_file = self.logging_file_path # Set the logging file path
         self.get_prompt_styles()
         self.ready = True
              
@@ -35,18 +35,15 @@ https://github.com/art-from-the-machine/Mantella#issues-qa
         if not os.path.exists(self.mod_voice_dir):
             self.ready = False
             logging.error(f"Mantella mod path does not exist: {self.mod_path}")
-        print(f"Config loaded from {config_path}")
 
     @property
     def mod_voice_dir(self):
         return self.mod_path + "\\Sound\\Voice\\Mantella.esp"
 
-
     def save(self):
         try:
-            exportable = self.export()
             with open(self.config_path, 'w') as f:
-                json.dump(exportable, f, indent=4)
+                json.dump(self.export(), f, indent=4)
             logging.info(f"Config file saved to {self.config_path}")
         except Exception as e:
             logging.error(f"Could not save config file to {self.config_path}. Error: {e}")
@@ -62,34 +59,30 @@ https://github.com/art-from-the-machine/Mantella#issues-qa
             logging.error(f"\"{self.config_path}\" does not exist! Creating default config file...")
             config = self.default()
             save = True
-
-        if not save: # Check if settings are missing from the config file and add them if they are
-            for key in default:
-                if key not in config:
-                    config[key] = default[key]
-                    save = True
+            print(f"Saving default config file to {self.config_path}")
         
         for key in default: # Set the settings in the config file to the default settings if they are missing
             if key not in config:
                 config[key] = default[key]
                 save = True
+                print(f"Saving new key '{key}' to config file")
             for sub_key in default[key]:
                 if sub_key not in config[key]:
                     config[key][sub_key] = default[key][sub_key]
                     save = True
+                    print(f"Saving new subkey '{key}':'{sub_key}' to config file")
                     
         for key in default: # Set the config settings to the loader
             for sub_key in default[key]:
                 # print(f"Setting {sub_key} to {config[key][sub_key]}")
                 setattr(self, sub_key, config[key][sub_key])
-        logging.basicConfig(filename=self.logging_file_path, format='%(asctime)s %(levelname)s| %(message)s', level=logging.INFO)
 
         if save:
             self.save()
         print(f"Config loaded from {self.config_path}")
 
     def get_prompt_styles(self):
-        print("Getting prompt styles")
+        logging.info("Getting prompt styles")
         prompt_styles_dir = './prompt_styles'
         for file in os.listdir(prompt_styles_dir):
             if file.endswith('.json'):
@@ -98,7 +91,7 @@ https://github.com/art-from-the-machine/Mantella#issues-qa
                     self._raw_prompt_styles[slug] = json.load(f)
                     self.prompt_styles[slug] = self._raw_prompt_styles[slug]["style"]
         style_names = [f"{slug} ({self._raw_prompt_styles[slug]['name']})" for slug in self.prompt_styles]
-        print(f"Prompt styles loaded:",style_names)
+        logging.info(f"Prompt styles loaded: "+str(style_names))
 
     @property
     def prompts(self):
@@ -304,6 +297,7 @@ https://github.com/art-from-the-machine/Mantella#issues-qa
             "LanguageModel": {
                 "inference_engine": self.inference_engine,
                 "tokenizer_type": self.tokenizer_type,
+                "prompt_style": self.prompt_style,
                 "maximum_local_tokens": self.maximum_local_tokens,
                 "max_response_sentences": self.max_response_sentences,
                 "wait_time_buffer": self.wait_time_buffer,

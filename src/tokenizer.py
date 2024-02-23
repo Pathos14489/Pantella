@@ -1,5 +1,5 @@
 import os
-import logging
+from src.logging import logging
 import importlib
 
 # Tokenizer_Types = {

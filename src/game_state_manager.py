@@ -1,4 +1,4 @@
-import logging
+from src.logging import logging
 import src.utils as utils
 import time
 import os
@@ -371,17 +371,13 @@ class GameStateManager:
         else:
             location = self.get_current_location()
             in_game_time = self.get_current_game_time()
-        
-        # tell Skyrim papyrus script to start waiting for voiceline input
-        self.write_game_info('_mantella_end_conversation', 'False')
-
-        character_name, character_ref_id, character_base_id = self.load_character() # get the character's name and id from _mantella_current_actor.txt and _mantella_current_actor_id.txt
-        
-        player_name = self.load_player_name() # get the player's name from _mantella_player_name.txt
-        player_race = self.load_player_race() # get the player's race from _mantella_player_race.txt
-        player_gender = self.load_player_gender() # get player's gender from _mantella_player_gender.txt
-        radiant_dialogue = self.load_radiant_dialogue() # get the radiant dialogue setting from _mantella_radiant_dialogue.txt
-        
+            character_name, character_ref_id, character_base_id = self.load_character() # get the character's name and id from _mantella_current_actor.txt and _mantella_current_actor_id.txt
+            player_name = self.load_player_name() # get the player's name from _mantella_player_name.txt
+            player_race = self.load_player_race() # get the player's race from _mantella_player_race.txt
+            player_gender = self.load_player_gender() # get player's gender from _mantella_player_gender.txt
+            radiant_dialogue = self.load_radiant_dialogue() # get the radiant dialogue setting from _mantella_radiant_dialogue.txt    
+            # tell Skyrim papyrus script to start waiting for voiceline input
+            self.write_game_info('_mantella_end_conversation', 'False')        
         
         character_info, is_generic_npc = self.conversation_manager.character_database.get_character(character_name, character_ref_id, character_base_id) # get character info from character database
         # TODO: Improve character lookup to be more accurate and to include generating character stats inspired by their generic name for generic NPCs instead of leaving them generic.

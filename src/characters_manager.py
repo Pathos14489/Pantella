@@ -1,4 +1,4 @@
-import logging
+from src.logging import logging
 import src.character_manager as character_manager # Character class
 import src.utils as utils
 class Characters:

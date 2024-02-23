@@ -2,7 +2,7 @@ import src.utils as utils
 import src.llms.llama_cpp_python as llama_cpp_python_LLM
 import src.tokenizers.base_tokenizer as tokenizer
 import time
-import logging
+from src.logging import logging
 import ctypes
 import array
 import urllib.request

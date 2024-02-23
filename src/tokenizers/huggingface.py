@@ -1,7 +1,7 @@
 import src.utils as utils
 import src.tokenizers.base_tokenizer as tokenizer
 import tiktoken
-import logging
+from src.logging import logging
 try:
     from transformers import AutoTokenizer
     loaded = True

@@ -1,5 +1,5 @@
 import time
-import logging
+from src.logging import logging
 import re
 import string
 import sys

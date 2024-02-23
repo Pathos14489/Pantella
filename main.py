@@ -1,4 +1,4 @@
-import logging
+from  src.logging import logging
 import src.conversation_manager as cm
 import src.config_loader as config_loader
 import src.utils as utils
@@ -14,9 +14,6 @@ except Exception as e:
     raise e
 
 utils.cleanup_mei(config.remove_mei_folders) # clean up old instances of exe runtime files
-console = logging.StreamHandler() # Create console logging handler
-console.setLevel(logging.INFO) # Set console logging level
-logging.getLogger('').addHandler(console) # Add console logging handler
 
 try:
     conversation_manager = cm.conversation_manager(config)

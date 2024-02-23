@@ -1,6 +1,6 @@
 import src.utils as utils
 import src.tokenizers.base_tokenizer as tokenizer
-import logging
+from src.logging import logging
 import requests
 tokenizer_slug = "koboldcpp"
 class Tokenizer(tokenizer.base_Tokenizer): # Gets token count from OpenAI's embedding API -- WARNING SLOW AS HELL -- Only use if you don't want to set up the right tokenizer for your local model or if you don't know how to do that

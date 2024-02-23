@@ -2,7 +2,7 @@ from aiohttp import ClientSession
 import asyncio
 import os
 import wave
-import logging
+from src.logging import logging
 import time
 import shutil
 import src.utils as utils

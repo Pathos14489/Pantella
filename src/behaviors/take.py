@@ -1,4 +1,4 @@
-import logging
+from src.logging import logging
 import src.behaviors.base_behavior as base_behavior
 
 class take(base_behavior.BaseBehavior):

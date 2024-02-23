@@ -1,6 +1,6 @@
 import src.utils as utils
 import src.tts_types.base_tts as base_tts
-import logging
+from src.logging import logging
 import requests
 import subprocess
 import sys

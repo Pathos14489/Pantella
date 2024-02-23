@@ -1,5 +1,5 @@
 
-import logging
+from src.logging import logging
 import src.utils as utils
 import subprocess
 import winsound

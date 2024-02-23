@@ -1,5 +1,5 @@
 import os
-import logging
+from src.logging import logging
 
 behaviors_dir = os.path.dirname(os.path.abspath(__file__)) + "/behaviors/"
 

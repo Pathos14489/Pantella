@@ -1,4 +1,4 @@
-import logging
+from src.logging import logging
 
 class BaseBehavior():
     def __init__(self, manager):
