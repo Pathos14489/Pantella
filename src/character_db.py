@@ -12,9 +12,10 @@ class CharacterDB():
         self.config = self.conversation_manager.config
         self.synthesizer = conversation_manager.synthesizer
         self.character_database_path = self.config.character_database_file
-        self.characters = []
+        self._characters = []
         self.named_index = {}
         self.base_id_index = {}
+        self.ref_id_index = {}
         self.valid = []
         self.invalid = []
         self.db_type = None
@@ -47,52 +48,83 @@ class CharacterDB():
         logging.info("Total Required Voice Models: "+str(len(self.all_voice_models)))
         logging.info("voice_model_ids:",self.voice_model_ids)
 
-    def load_characters_json(self):
-        logging.info(f"Loading character database from {self.character_database_path}...")
-        self.characters = []
+    def load(self, path):
+        self.character_database_path = path
+        self._characters = []
         self.named_index = {}
         self.base_id_index = {}
+        self.ref_id_index = {}
+        if self.character_database_path.endswith('.csv'):
+            logging.info("Loading character database from csv...")
+            self.load_characters_csv()
+        else:
+            logging.info("Loading character database from json...")
+            self.load_characters_json()
+        self.verify_characters()
+
+    def load_characters_json(self):
+        logging.info(f"Loading character database from {self.character_database_path}...")
+        self._characters = []
+        self.named_index = {}
+        self.base_id_index = {}
+        self.ref_id_index = {}
         for file in os.listdir(self.character_database_path):
             if file.endswith(".json"):
                 character = json.load(open(os.path.join(self.character_database_path, file)))
-                self.characters.append(character)
-                self.named_index[character['name']] = self.characters[-1]
-                self.base_id_index[character['base_id']] = self.characters[-1]
+                if character['name'] != None and character['name'] != "" and character['name'] != "nan":
+                    self._characters.append(character)
+                    self.named_index[character['name']] = self.characters[-1]
+                    self.base_id_index[character['base_id']] = self.characters[-1]
+                    self.ref_id_index[character['ref_id']] = self.characters[-1]
         self.db_type = 'json'
         logging.info(f"Loaded {len(self.characters)} characters from JSON {self.character_database_path}")
         self.loaded()
     
     def load_characters_csv(self):
         logging.info(f"Loading character database from JSON files in {self.character_database_path}...")
-        self.characters = []
+        self._characters = []
         self.named_index = {}
         self.base_id_index = {}
+        self.ref_id_index = {}
         encoding = utils.get_file_encoding(self.character_database_path)
         character_database = pd.read_csv(self.character_database_path, engine='python', encoding=encoding)
         character_database = character_database.loc[character_database['voice_model'].notna()]
         for _, row in character_database.iterrows():
             character = row.to_dict()
-            self.characters.append(character)
-            self.named_index[character['name']] = self.characters[-1]
-            self.base_id_index[character['base_id']] = self.characters[-1]
+            if character['name'] != None and character['name'] != "" and character['name'] != "nan":
+                self._characters.append(character)
+                self.named_index[character['name']] = self.characters[-1]
+                self.base_id_index[character['base_id']] = self.characters[-1]
+                self.ref_id_index[character['ref_id']] = self.characters[-1]
         self.db_type = 'csv'
         logging.info(f"Loaded {len(self.characters)} characters from csv {self.character_database_path}")
         self.loaded()
 
+    @property
+    def characters(self):
+        filtered = []
+        for character in self._characters:
+            if character['name'] != None and character['name'] != "" and character['name'] != "nan":
+                filtered.append(character)
+        sorted_characters = sorted(filtered, key=lambda x: str(x['name']))
+        return sorted_characters
+
     def patch_character_info(self,info): # Patches information about a character into the character database and if db_type is json, saves the changes to the json file
-        self.characters.append(info)
-        self.named_index[info['name']] = self.characters[-1]
-        self.base_id_index[info['base_id']] = self.characters[-1] 
-        if self.db_type == 'json':
-            if not os.path.exists(self.character_database_path): # If the directory doesn't exist, create it
-                os.makedirs(self.character_database_path) 
-            json_file_path = os.path.join(self.character_database_path, info['name']+'.json')
-            # If the character already exists, confirm that the user wants to overwrite it
-            if os.path.exists(json_file_path):
-                overwrite = input(f"Character '{info['name']}' already exists in the database. Overwrite? (y/n): ")
-                if overwrite.lower() != 'y':
-                    return
-            json.dump(info, open(json_file_path, 'w'), indent=4)
+        if info['name'] != None and info['name'] != "" and info['name'] != "nan":
+            self._characters.append(info)
+            self.named_index[info['name']] = self.characters[-1]
+            self.base_id_index[info['base_id']] = self.characters[-1] 
+            self.ref_id_index[info['ref_id']] = self.characters[-1]
+            if self.db_type == 'json':
+                if not os.path.exists(self.character_database_path): # If the directory doesn't exist, create it
+                    os.makedirs(self.character_database_path) 
+                json_file_path = os.path.join(self.character_database_path, info['name']+'.json')
+                # If the character already exists, confirm that the user wants to overwrite it
+                if os.path.exists(json_file_path):
+                    overwrite = input(f"Character '{info['name']}' already exists in the database. Overwrite? (y/n): ")
+                    if overwrite.lower() != 'y':
+                        return
+                json.dump(info, open(json_file_path, 'w'), indent=4)
 
     def get_character_by_name(self, name):
         if name in self.named_index:
@@ -190,11 +222,16 @@ class CharacterDB():
         character_ref_id = hex(character_ref_id)[3:] if character_ref_id is not None else None # Convert int id to hex if it is not None
         character_base_id = hex(character_base_id)[3:] if character_base_id is not None else None # Convert int id to hex if it is not None
         logging.info(f"Fixed IDs: '{character_name}({character_ref_id})['{character_base_id}]' - Getting character from character database using name lookup...")
+        return self._get_character(character_name, character_ref_id, character_base_id)
+
+    def _get_character(self, character_name, character_ref_id=None, character_base_id=None): # Get a character from the character database using the character's name, refid_int, or baseid_int
         possibly_same_character = []
         character = None
         is_generic_npc = False
+        if str(character_name) == "nan":
+            logging.error(f"Could not find character '{character_name}' in character database using name lookup.")
+            return None, False
         for db_character in self.characters: # Try to find any character with the same name and ref_id and add it to the possibly_same_character list
-            
             if character_name.lower() == str(db_character['name']).lower() or character_ref_id == db_character['ref_id'] or str(character_ref_id).endswith(str(db_character["ref_id"])):
                 possibly_same_character.append(db_character)
         if len(possibly_same_character) > 0:
@@ -236,36 +273,56 @@ class CharacterDB():
         return character, is_generic_npc
 
     def has_character(self, character):
-        character_in_db = False
-        characters_with_same_name = []
-        for db_character in self.characters:
-            if character['name'] == db_character['name']:
-                characters_with_same_name.append(db_character)
-        if len(characters_with_same_name) > 0:
-            for db_character in characters_with_same_name:
-                if character['ref_id'] is not None and character['ref_id'] == db_character['ref_id']:
-                    character_in_db = True
-                elif character['base_id'] is not None and character['base_id'] == db_character['base_id']:
-                    character_in_db = True
-        return character_in_db
+        if str(character['name']) == "nan":
+            print("character:",character)
+        return self._get_character(character['name'], character['ref_id'], character['base_id'])
+    
+    # def has_character(self, character):
+    #     """Check if a character is in the database. Returns the character if it is in the database, None otherwise."""
+    #     return self.get_character(character['name'], character['ref_id'], character['base_id'])
+        # character_in_db = None
+        # if character["ref_id"] is not None and character["ref_id"] in self.ref_id_index: # If the character has a ref_id, check if the character is in the database using the ref_id
+        #     character_in_db = self.ref_id_index[character["ref_id"]]
+        #     character_in_db["lookup_type"] = "ref_id"
+        # if character["name"] in self.named_index:
+        #     character_in_db = self.named_index[character["name"]]
+        #     character_in_db["lookup_type"] = "name"
+        # if character["base_id"] is not None and character["base_id"] in self.base_id_index: # If the character has a base_id, check if the character is in the database using the base_id
+        #     character_in_db = self.base_id_index[character["base_id"]]
+        #     character_in_db["lookup_type"] = "base_id"
+        # return character_in_db
+        # characters_with_same_name = []
+        # for db_character in self.characters:
+        #     if character['name'] == db_character['name']:
+        #         characters_with_same_name.append(db_character)
+        # if len(characters_with_same_name) > 0:
+        #     for db_character in characters_with_same_name:
+        #         if character['ref_id'] is not None and character['ref_id'] == db_character['ref_id']:
+        #             character_in_db = True
+        #         elif character['base_id'] is not None and character['base_id'] == db_character['base_id']:
+        #             character_in_db = True
+        # return character_in_db
     
     def compare(self,db): # Compare this DB with another DB and return the differences - Useful for comparing a DB with a DB that has been patched, can be used to generate changelogs
         differences = []
-        for character in self.characters:
+        for character in self.characters: # Compare each character in the DB with the other DB
+            if character['name'] == "nan" or character['name'] == "" or character['name'] == None:
+                continue
             diff = False
-            if not db.has_character(character): # If the character is not in the other DB, add it to the differences list
+            db_character, is_generic_npc = db.has_character(character)
+            if db_character == None: # If the character is not in the other DB, add it to the differences list
                 character['difference_reason'] = "Character not found in other DB"
-                character["diff_type"] = "added_character"
-                if character["ref_id"] is not None and character["ref_id"] in db.base_id_index:
+                character["diff_type"] = "removed_character"
+                if character["ref_id"] is not None and character["ref_id"] != "" and character["ref_id"] in db.ref_id_index:
                     character['difference_reason'] += " - same ref_id was found in other DB"
-                    character["diff_type"] = "edited_character"
-                if character["base_id"] is not None and character["base_id"] in db.base_id_index:
+                    character["diff_type"] = "edited_character(1)"
+                if character["base_id"] is not None and character["base_id"] != "" and character["base_id"] in db.base_id_index:
                     character['difference_reason'] += " - same base_id was found in other DB"
-                    character["diff_type"] = "edited_character"
+                    character["diff_type"] = "edited_character(2)"
                 diff = True
-            else:
+            else: # If the character is in the other DB, compare the character's attributes with the other DB's character's attributes
                 character['differences'] = []
-                character['diff_type'] = "edited_character"
+                character['diff_type'] = "edited_character(3)"
                 for key in character:
                     if key in db.named_index[character['name']]:
                         if str(character[key]) != str(db.named_index[character['name']][key]):
@@ -273,16 +330,19 @@ class CharacterDB():
                             diff = True
             if diff:
                 differences.append(character)
-        for character in db.characters:
+        for character in db.characters: # Compare each character in the other DB with this DB
+            if character['name'] == "nan" or character['name'] == "" or character['name'] == None:
+                continue
             diff = False
-            if not self.has_character(character):
+            self_character, is_generic_npc = self.has_character(character)
+            if self_character == None: # If the character is not in this DB, add it to the differences list
                 character['difference_reason'] = "New character found in other DB"
-                if character["ref_id"] is not None and character["ref_id"] in self.base_id_index:
+                if character["ref_id"] is not None and character["ref_id"] != "" and character["ref_id"] in self.ref_id_index:
                     character['difference_reason'] += " - same ref_id was found in this DB"
-                    character["diff_type"] = "edited_character"
-                if character["base_id"] is not None and character["base_id"] in self.base_id_index:
+                    character["diff_type"] = "edited_character(4)"
+                if character["base_id"] is not None and character["base_id"] != "" and character["base_id"] in self.base_id_index:
                     character['difference_reason'] += " - same base_id was found in this DB"
-                    character["diff_type"] = "edited_character"
+                    character["diff_type"] = "edited_character(5)"
                 diff = True
             if diff:
                 differences.append(character)
@@ -318,7 +378,7 @@ class CharacterDB():
         return differences
     
     def save(self, path, type='json'): # Save the character database to a json directory or csv file
-        self.characters.sort(key=lambda x: str(x['name']))
+        # self.characters.sort(key=lambda x: str(x['name']))
         if type == 'json':
             if not os.path.exists(path):
                 os.makedirs(path)

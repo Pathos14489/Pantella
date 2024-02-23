@@ -1,22 +1,26 @@
 import logging
 import json
 import os
-import sys
 import flask
-import asyncio
 
 class ConfigLoader:
     def __init__(self, config_path='config.json'):
+        print(f"Loading config from {config_path}")
         self.config_path = config_path
         self.prompt_styles = {}
+        self._raw_prompt_styles = {}
         self.load()
         self.get_prompt_styles()
         self.ready = True
-
-        def check_missing_mantella_file(set_path):
-            if not os.path.exists(set_path+'/_mantella__skyrim_folder.txt'):
+             
+        # don't trust; verify; test subfolders
+        if not os.path.exists(f"{self.game_path}"):
+            self.ready = False
+            logging.error(f"Game path does not exist: {self.game_path}")
+        else:
+            if not os.path.exists(self.game_path+'/_mantella__skyrim_folder.txt'):
                 logging.warn(f'''
-Warning: Could not find _mantella__skyrim_folder.txt in {set_path}. 
+Warning: Could not find _mantella__skyrim_folder.txt in {self.game_path}. 
 If you have not yet casted the Mantella spell in-game you can safely ignore this message. 
 If you have casted the Mantella spell please check that your 
 MantellaSoftware/config.json "skyrim_folder" has been set correctly 
@@ -24,13 +28,6 @@ MantellaSoftware/config.json "skyrim_folder" has been set correctly
 If you are still having issues, a list of solutions can be found here: 
 https://github.com/art-from-the-machine/Mantella#issues-qa
 ''')
-             
-        # don't trust; verify; test subfolders
-        if not os.path.exists(f"{self.game_path}"):
-            self.ready = False
-            logging.error(f"Game path does not exist: {self.game_path}")
-        else:
-            check_missing_mantella_file(self.game_path)
 
         if not os.path.exists(f"{self.xvasynth_path}\\resources\\"):
             self.ready = False
@@ -38,6 +35,7 @@ https://github.com/art-from-the-machine/Mantella#issues-qa
         if not os.path.exists(self.mod_voice_dir):
             self.ready = False
             logging.error(f"Mantella mod path does not exist: {self.mod_path}")
+        print(f"Config loaded from {config_path}")
 
     @property
     def mod_voice_dir(self):
@@ -82,20 +80,25 @@ https://github.com/art-from-the-machine/Mantella#issues-qa
                     
         for key in default: # Set the config settings to the loader
             for sub_key in default[key]:
-                print(f"Setting {sub_key} to {config[key][sub_key]}")
+                # print(f"Setting {sub_key} to {config[key][sub_key]}")
                 setattr(self, sub_key, config[key][sub_key])
         logging.basicConfig(filename=self.logging_file_path, format='%(asctime)s %(levelname)s| %(message)s', level=logging.INFO)
 
         if save:
             self.save()
+        print(f"Config loaded from {self.config_path}")
 
     def get_prompt_styles(self):
+        print("Getting prompt styles")
         prompt_styles_dir = './prompt_styles'
         for file in os.listdir(prompt_styles_dir):
             if file.endswith('.json'):
                 with open(f'{prompt_styles_dir}/{file}') as f:
                     slug = file.split('.')[0]
-                    self.prompt_styles[slug] = json.load(f)["style"]
+                    self._raw_prompt_styles[slug] = json.load(f)
+                    self.prompt_styles[slug] = self._raw_prompt_styles[slug]["style"]
+        style_names = [f"{slug} ({self._raw_prompt_styles[slug]['name']})" for slug in self.prompt_styles]
+        print(f"Prompt styles loaded:",style_names)
 
     @property
     def prompts(self):
@@ -205,6 +208,11 @@ https://github.com/art-from-the-machine/Mantella#issues-qa
                 "use_mlock": False,
                 "n_threads_batch": 1,
                 "offload_kqv": True,
+            },
+            "llava_cpp_python": {
+                "llava_clip_model_path": "./clip_model.gguf",
+                "ocr_lang": "en",
+                "ocr_use_angle_cls": True,
             },
             "transformers": {
                 "transformers_model_slug": "mistralai/Mistral-7B-Instruct-v0.1",
@@ -348,6 +356,11 @@ https://github.com/art-from-the-machine/Mantella#issues-qa
                 "use_mlock": self.use_mlock,
                 "n_threads_batch": self.n_threads_batch,
                 "offload_kqv": self.offload_kqv
+            },
+            "llava_cpp_python": {
+                "llava_clip_model_path": self.llava_clip_model_path,
+                "ocr_lang": self.ocr_lang,
+                "ocr_use_angle_cls": self.ocr_use_angle_cls,
             },
             "transformers": {
                 "transformers_model_slug": self.transformers_model_slug,
