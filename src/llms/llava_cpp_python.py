@@ -149,20 +149,18 @@ class LLM(llama_cpp_python_LLM.LLM): # Uses llama-cpp-python as the LLM inferenc
         return self.get_image_embed_from_bytes(image_bytes)
 
     def eval_image_embed(self, embed):
-        global llama
-        # llama.reset() # Reset the model
         try:
-            n_past = ctypes.c_int(llama.n_tokens)
+            n_past = ctypes.c_int(self.llm.n_tokens)
             n_past_p = ctypes.pointer(n_past)
             
             llava_eval_image_embed(
-                ctx_llama=llama.ctx,
+                ctx_llama=self.llm.ctx,
                 embed=embed,
-                n_batch=llama.n_batch,
+                n_batch=self.llm.n_batch,
                 n_past=n_past_p,
             )
-            assert llama.n_ctx() >= n_past.value
-            llama.n_tokens = n_past.value
+            assert self.llm.n_ctx() >= n_past.value
+            self.llm.n_tokens = n_past.value
         except Exception as e:
             print(e)
             print("Failed to eval image")
@@ -198,6 +196,7 @@ class LLM(llama_cpp_python_LLM.LLM): # Uses llama-cpp-python as the LLM inferenc
                 prompt += self.tokenizer.start_message(self.config.assistant_name) # Start empty message from no one to let the LLM generate the speaker by split \n
                 logging.info(f"Raw Prompt: {prompt}")
                 if os.path.exists(self.config.game_path+"/PlayerPerspective.png"):
+                    logging.info(f"PlayerPerspective.png exists - using it for multimodal completion")
                     prompt = self.multimodal_eval(prompt, [self.get_image_embed_from_file(self.config.game_path+"/PlayerPerspective.png")])
                 logging.info(f"Embedded Prompt: {prompt}")
                 completion = self.llm.create_completion(prompt,
@@ -238,6 +237,10 @@ class LLM(llama_cpp_python_LLM.LLM): # Uses llama-cpp-python as the LLM inferenc
                 prompt += self.tokenizer.start_message("[name]") # Start empty message from no one to let the LLM generate the speaker by split \n
                 prompt = prompt.split("[name]")[0] # Start message without the name - Generates name for use in process_response()
                 logging.info(f"Raw Prompt: {prompt}")
+                if os.path.exists(self.config.game_path+"/PlayerPerspective.png"):
+                    logging.info(f"PlayerPerspective.png exists - using it for multimodal completion")
+                    prompt = self.multimodal_eval(prompt, [self.get_image_embed_from_file(self.config.game_path+"/PlayerPerspective.png")])
+                logging.info(f"Embedded Prompt: {prompt}")
                 logging.info(f"Type of prompt: {type(prompt)}")
                 return self.llm.create_completion(prompt=prompt,
                     max_tokens=self.max_tokens,

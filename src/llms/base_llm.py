@@ -301,7 +301,7 @@ class base_LLM():
                                 else:
                                     logging.info(f"Player is speaking. Stopping generation.")
                                     break
-                            if next_author == self.config.system_name and system_loop > 0: # if the next author is the system, then the system is speaking and generation should stop
+                            if next_author.lower() == self.config.system_name.lower() and system_loop > 0: # if the next author is the system, then the system is speaking and generation should stop
                                 logging.info(f"System detected. Retrying...")
                                 system_loop -= 1
                                 retries += 1
@@ -337,7 +337,7 @@ class base_LLM():
                                     retries += 1
                                     raise Exception('Invalid author')
                             
-                        if next_author is not None:
+                        if next_author is not None and verified_author == True: # if next_author is not None and verified_author is True, then the next author is correct and generation should continue
                             bad_author_retries = 5
 
                         content_edit = unicodedata.normalize('NFKC', content) # normalize unicode characters
@@ -426,7 +426,6 @@ class base_LLM():
                     input('Press enter to continue...')
                     exit()
                 logging.error(f"LLM API Error: {e}")
-                raise e
                 if 'Invalid author' in str(e):
                     logging.info(f"Retrying without saying error voice line")
                     retries += 1
