@@ -9,6 +9,10 @@ import urllib.request
 import numpy as np
 import base64
 import os
+import dxcam
+import pygetwindow
+from PIL import Image
+import io
 
 try:
     from llama_cpp import Llama
@@ -119,6 +123,38 @@ class LLM(llama_cpp_python_LLM.LLM): # Uses llama-cpp-python as the LLM inferenc
         else:
             logging.error(f"Error loading paddleocr for 'llava-cpp-python'(not a typo) inference engine. Please check that you have installed paddleocr correctly. OCR will not be used but basic image embedding will still work.")
         self.prompt_style = "vision"
+        self.game_window = None
+        self.game_window_name = None
+        self.camera = dxcam.create()
+        self.get_game_window()
+
+    def get_game_window(self):
+        if self.game_window_name != None:
+            try:
+                self.game_window = pygetwindow.getWindowsWithTitle(self.game_window_name)[0]
+                logging.info(f"Game Window Found: {self.game_window_name}")
+            except:
+                logging.error(f"Error loading game window for 'llava-cpp-python'(not a typo) inference engine. Game window lost - Was the game closed? Please restart the game and try again.")
+                input("Press Enter to exit.")
+                exit()
+        if self.config.game_id == "fallout4":
+            self.game_window = pygetwindow.getWindowsWithTitle("Fallout 4")[0]
+            self.game_window_name = "Fallout 4"
+            logging.info(f"Game Window Found: {self.game_window_name}")
+        elif self.config.game_id == "skyrim":
+            self.game_window = pygetwindow.getWindowsWithTitle("Skyrim Special Edition")[0]
+            self.game_window_name = "Skyrim Special Edition"
+            logging.info(f"Game Window Found: {self.game_window_name}")
+        else:
+            logging.error(f"Error loading game window for 'llava-cpp-python'(not a typo) inference engine. No game window found  - Game might not be supported by llava-cpp-python inference engine by default - Please specify the name of the Game Window EXACTLY as it's shown in the title bar of the game window: ")
+            game_name = input("Game Name: ")
+            try:
+                self.game_window = pygetwindow.getWindowsWithTitle(game_name)[0]
+                self.game_window_name = game_name
+            except Exception as e:
+                logging.error(f"Error loading game window for 'llava-cpp-python'(not a typo) inference engine. No game window found or game not supported by inference engine.")
+                input("Press Enter to exit.")
+                exit()
 
     def get_image_embed_from_bytes(self, image_bytes):
         data_array = array.array("B", image_bytes)
@@ -179,11 +215,27 @@ class LLM(llama_cpp_python_LLM.LLM): # Uses llama-cpp-python as the LLM inferenc
         self.llm.reset() # Reset the model
         # clear the input_ids
         self.llm.input_ids = np.ndarray((self.llm.n_ctx(),), dtype=np.intc)
+        print(text_chunks)
         for i, chunk in enumerate(text_chunks):
             self.llm.eval(self.llm.tokenize(chunk, add_bos=True if i == 0 else False))
             if i < len(embeds):
                 self.eval_image_embed(embeds[i])
         return self.llm.input_ids[: self.llm.n_tokens].tolist()
+
+    def get_player_perspective(self):
+        """Get the player's perspective image embed using dxcam"""
+        left, top, right, bottom = self.game_window.left, self.game_window.top, self.game_window.right, self.game_window.bottom
+        region = (left, top, right, bottom)
+        frame = self.camera.grab(region=region) # Return array of shape (height, width, 3)
+        frame = Image.fromarray(frame)
+        frame = frame.convert("RGB")
+        frame = frame.resize((672, 672))
+        frame.show()
+        buffered = io.BytesIO() # Don't ask me why this is needed - it just is for some reason.
+        frame.save(buffered, format="PNG")
+        return self.get_image_embed_from_bytes(buffered.getvalue())
+    
+        # return self.get_image_embed_from_file(self.config.game_path+"/PlayerPerspective.png")
 
     @utils.time_it
     def create(self, messages):
@@ -197,7 +249,7 @@ class LLM(llama_cpp_python_LLM.LLM): # Uses llama-cpp-python as the LLM inferenc
                 logging.info(f"Raw Prompt: {prompt}")
                 if os.path.exists(self.config.game_path+"/PlayerPerspective.png"):
                     logging.info(f"PlayerPerspective.png exists - using it for multimodal completion")
-                    prompt = self.multimodal_eval(prompt, [self.get_image_embed_from_file(self.config.game_path+"/PlayerPerspective.png")])
+                    prompt = self.multimodal_eval(prompt, [self.get_player_perspective()])
                 logging.info(f"Embedded Prompt: {prompt}")
                 completion = self.llm.create_completion(prompt,
                     max_tokens=self.max_tokens,
@@ -239,7 +291,7 @@ class LLM(llama_cpp_python_LLM.LLM): # Uses llama-cpp-python as the LLM inferenc
                 logging.info(f"Raw Prompt: {prompt}")
                 if os.path.exists(self.config.game_path+"/PlayerPerspective.png"):
                     logging.info(f"PlayerPerspective.png exists - using it for multimodal completion")
-                    prompt = self.multimodal_eval(prompt, [self.get_image_embed_from_file(self.config.game_path+"/PlayerPerspective.png")])
+                    prompt = self.multimodal_eval(prompt, [self.get_player_perspective()])
                 logging.info(f"Embedded Prompt: {prompt}")
                 logging.info(f"Type of prompt: {type(prompt)}")
                 return self.llm.create_completion(prompt=prompt,
