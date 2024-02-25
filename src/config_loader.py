@@ -205,10 +205,12 @@ https://github.com/art-from-the-machine/Mantella#issues-qa
             },
             "llava_cpp_python": {
                 "llava_clip_model_path": "./clip_model.gguf",
+                "paddle_ocr": True,
                 "ocr_lang": "en",
                 "ocr_use_angle_cls": True,
                 "append_system_image_near_end": True,
                 "llava_image_message_depth": -1,
+                "llava_image_message": "The image below is {player_perspective_name}'s perspective:\n<image>\n<ocr>",
             },
             "transformers": {
                 "transformers_model_slug": "mistralai/Mistral-7B-Instruct-v0.1",
