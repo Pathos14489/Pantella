@@ -195,6 +195,10 @@ class base_LLM():
 
     def get_context(self):
         return self.conversation_manager.get_context()
+    
+    def generate_response(self):
+        for chunk in self.acreate(self.get_context()):
+            yield chunk
 
     async def process_response(self, sentence_queue, event):
         """Stream response from LLM one sentence at a time"""
@@ -244,8 +248,7 @@ class base_LLM():
                 start_time = time.time()
                 last_chunk = None
                 same_chunk_count = 0
-                for chunk in self.acreate(self.get_context()):
-
+                for chunk in self.generate_response():
                     # TODO: This is a temporary fix. The LLM class should be returning a string only, but some inference engines don't currently. This will be fixed in the future.
                     if type(chunk) == dict:
                         logging.info(chunk)
@@ -283,10 +286,10 @@ class base_LLM():
                                         else:
                                             new_part_list.append(part.capitalize())
                                     new_next_author += "-".join(new_part_list) + " "
+                                
                                 next_author = new_next_author.strip()
 
                                 sentence = sentence[len(next_author)+len(self.config.message_signifier):] # remove the author from the sentence
-                                
                                 logging.info(f"next_author detected as: {next_author}")
                         if  next_author is not None and verified_author == False: # if next_author is not None, then verify that the next author is correct
                             player_author = False
