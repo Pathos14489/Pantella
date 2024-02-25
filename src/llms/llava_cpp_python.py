@@ -228,7 +228,7 @@ class LLM(llama_cpp_python_LLM.LLM): # Uses llama-cpp-python as the LLM inferenc
         self.llm.reset() # Reset the model
         # clear the input_ids
         self.llm.input_ids = np.ndarray((self.llm.n_ctx(),), dtype=np.intc)
-        print(text_chunks)
+        # print(text_chunks)
         for i, chunk in enumerate(text_chunks):
             self.llm.eval(self.llm.tokenize(chunk, add_bos=True if i == 0 else False))
             if i < len(embeds):
@@ -263,7 +263,8 @@ class LLM(llama_cpp_python_LLM.LLM): # Uses llama-cpp-python as the LLM inferenc
                 if os.path.exists(self.config.game_path+"/PlayerPerspective.png") and "<image>" in prompt:
                     logging.info(f"PlayerPerspective.png exists - using it for multimodal completion")
                     prompt = self.multimodal_eval(prompt, [self.get_player_perspective()])
-                logging.info(f"Embedded Prompt: {prompt}")
+                # logging.info(f"Embedded Prompt: {prompt}")
+                logging.info(f"Type of prompt: {type(prompt)}")
                 completion = self.llm.create_completion(prompt,
                     max_tokens=self.max_tokens,
                     top_k=self.top_k,
@@ -305,7 +306,7 @@ class LLM(llama_cpp_python_LLM.LLM): # Uses llama-cpp-python as the LLM inferenc
                 if os.path.exists(self.config.game_path+"/PlayerPerspective.png") and "<image>" in prompt:
                     logging.info(f"PlayerPerspective.png exists - using it for multimodal completion")
                     prompt = self.multimodal_eval(prompt, [self.get_player_perspective()])
-                logging.info(f"Embedded Prompt: {prompt}")
+                # logging.info(f"Embedded Prompt: {prompt}")
                 logging.info(f"Type of prompt: {type(prompt)}")
                 return self.llm.create_completion(prompt=prompt,
                     max_tokens=self.max_tokens,
