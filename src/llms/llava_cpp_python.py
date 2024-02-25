@@ -121,11 +121,24 @@ class LLM(llama_cpp_python_LLM.LLM): # Uses llama-cpp-python as the LLM inferenc
             self.ocr = PaddleOCR(use_angle_cls=self.config.ocr_use_angle_cls, lang=self.config.ocr_lang)
         else:
             logging.error(f"Error loading paddleocr for 'llava-cpp-python'(not a typo) inference engine. Please check that you have installed paddleocr correctly. OCR will not be used but basic image embedding will still work.")
-        self.prompt_style = "normal"
+        self.append_system_image_near_end = self.config.append_system_image_near_end
+        if not self.append_system_image_near_end:
+            self.prompt_style = "vision"
         self.game_window = None
         self.game_window_name = None
         self.camera = dxcam.create()
         self.get_game_window()
+
+    def get_context(self):
+        context = super().get_context()
+        if self.append_system_image_near_end:
+            image_message = {
+                "role": "system",
+                "content": "The image below is {player_perspective_name}'s perspective:\n<image>",
+            }
+            depth = self.config.llava_image_message_depth
+            context = context[:depth] + [image_message] + context[depth:] # Add the image message to the context
+        return context
 
     def get_game_window(self):
         if self.game_window_name != None:
@@ -203,6 +216,7 @@ class LLM(llama_cpp_python_LLM.LLM): # Uses llama-cpp-python as the LLM inferenc
             llava_image_embed_free(embed)
             
     def multimodal_eval(self, text, embeds): # -> prompt
+        """Evaluates a multimodal prompt with text and image embeds. The text is split by "<image>" and the image embeds are inserted in the order they appear in the text. The text is then tokenized and the image embeds are evaluated in the model. The input_ids are then returned."""
         assert len(embeds) > 0
         assert type(text) == str
         assert type(embeds) == list
@@ -246,7 +260,7 @@ class LLM(llama_cpp_python_LLM.LLM): # Uses llama-cpp-python as the LLM inferenc
                 prompt = self.tokenizer.get_string_from_messages(messages)
                 prompt += self.tokenizer.start_message(self.config.assistant_name) # Start empty message from no one to let the LLM generate the speaker by split \n
                 logging.info(f"Raw Prompt: {prompt}")
-                if os.path.exists(self.config.game_path+"/PlayerPerspective.png"):
+                if os.path.exists(self.config.game_path+"/PlayerPerspective.png") and "<image>" in prompt:
                     logging.info(f"PlayerPerspective.png exists - using it for multimodal completion")
                     prompt = self.multimodal_eval(prompt, [self.get_player_perspective()])
                 logging.info(f"Embedded Prompt: {prompt}")
@@ -288,7 +302,7 @@ class LLM(llama_cpp_python_LLM.LLM): # Uses llama-cpp-python as the LLM inferenc
                 prompt += self.tokenizer.start_message("[name]") # Start empty message from no one to let the LLM generate the speaker by split \n
                 prompt = prompt.split("[name]")[0] # Start message without the name - Generates name for use in process_response()
                 logging.info(f"Raw Prompt: {prompt}")
-                if os.path.exists(self.config.game_path+"/PlayerPerspective.png"):
+                if os.path.exists(self.config.game_path+"/PlayerPerspective.png") and "<image>" in prompt:
                     logging.info(f"PlayerPerspective.png exists - using it for multimodal completion")
                     prompt = self.multimodal_eval(prompt, [self.get_player_perspective()])
                 logging.info(f"Embedded Prompt: {prompt}")

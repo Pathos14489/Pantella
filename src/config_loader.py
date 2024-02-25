@@ -207,6 +207,8 @@ https://github.com/art-from-the-machine/Mantella#issues-qa
                 "llava_clip_model_path": "./clip_model.gguf",
                 "ocr_lang": "en",
                 "ocr_use_angle_cls": True,
+                "append_system_image_near_end": True,
+                "llava_image_message_depth": -1,
             },
             "transformers": {
                 "transformers_model_slug": "mistralai/Mistral-7B-Instruct-v0.1",
@@ -357,6 +359,8 @@ https://github.com/art-from-the-machine/Mantella#issues-qa
                 "llava_clip_model_path": self.llava_clip_model_path,
                 "ocr_lang": self.ocr_lang,
                 "ocr_use_angle_cls": self.ocr_use_angle_cls,
+                "append_system_image_near_end": self.append_system_image_near_end,
+                "llava_image_message_depth": self.llava_image_message_depth,
             },
             "transformers": {
                 "transformers_model_slug": self.transformers_model_slug,
