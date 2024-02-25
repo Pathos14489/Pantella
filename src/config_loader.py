@@ -166,6 +166,7 @@ https://github.com/art-from-the-machine/Mantella#issues-qa
                 "small_size": 3,
                 "same_output_limit": 30,
                 "conversation_limit_pct": 0.8,
+                "min_conversation_length": 5,
                 "reload_buffer": 8,
                 "reload_wait_time": 1,
             },
@@ -315,6 +316,7 @@ https://github.com/art-from-the-machine/Mantella#issues-qa
                 "small_size": self.small_size,
                 "same_output_limit": self.same_output_limit,
                 "conversation_limit_pct": self.conversation_limit_pct,
+                "min_conversation_length": self.min_conversation_length,
                 "reload_buffer": self.reload_buffer,
                 "reload_wait_time": self.reload_wait_time
             },

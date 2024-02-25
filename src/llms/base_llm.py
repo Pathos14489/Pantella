@@ -1,7 +1,6 @@
-from src.logging import logging
+from src.logging import logging, time
 import src.utils as utils
 import re
-import time
 import unicodedata
 import random
 
@@ -194,6 +193,8 @@ class base_LLM():
         logging.info(f"Cleaned sentence: {sentence}")
         return sentence
 
+    def get_context(self):
+        return self.conversation_manager.get_context()
 
     async def process_response(self, sentence_queue, event):
         """Stream response from LLM one sentence at a time"""
@@ -243,7 +244,7 @@ class base_LLM():
                 start_time = time.time()
                 last_chunk = None
                 same_chunk_count = 0
-                for chunk in self.acreate(self.conversation_manager.get_context()):
+                for chunk in self.acreate(self.get_context()):
 
                     # TODO: This is a temporary fix. The LLM class should be returning a string only, but some inference engines don't currently. This will be fixed in the future.
                     if type(chunk) == dict:

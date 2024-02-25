@@ -1,6 +1,5 @@
-from src.logging import logging
+from src.logging import logging, time
 import src.utils as utils
-import time
 import os
 
 class CharacterDoesNotExist(Exception):

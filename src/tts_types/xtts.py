@@ -1,12 +1,11 @@
 import src.utils as utils
 import src.tts_types.base_tts as base_tts
-from src.logging import logging
+from src.logging import logging, time
 import sys
 import os
 from pathlib import Path
 import requests
 import io
-import time
 import soundfile as sf
 import numpy as np
 

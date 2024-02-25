@@ -1,8 +1,7 @@
 import src.utils as utils
 import src.llms.llama_cpp_python as llama_cpp_python_LLM
 import src.tokenizers.base_tokenizer as tokenizer
-import time
-from src.logging import logging
+from src.logging import logging, time
 import ctypes
 import array
 import urllib.request
@@ -122,7 +121,7 @@ class LLM(llama_cpp_python_LLM.LLM): # Uses llama-cpp-python as the LLM inferenc
             self.ocr = PaddleOCR(use_angle_cls=self.config.ocr_use_angle_cls, lang=self.config.ocr_lang)
         else:
             logging.error(f"Error loading paddleocr for 'llava-cpp-python'(not a typo) inference engine. Please check that you have installed paddleocr correctly. OCR will not be used but basic image embedding will still work.")
-        self.prompt_style = "vision"
+        self.prompt_style = "normal"
         self.game_window = None
         self.game_window_name = None
         self.camera = dxcam.create()
