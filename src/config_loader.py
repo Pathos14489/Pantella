@@ -143,7 +143,9 @@ https://github.com/art-from-the-machine/Mantella#issues-qa
                 "whisper_url": "http://127.0.0.1:8080/inference",
                 "audio_threshold": "auto",
                 "pause_threshold": 0.5,
-                "listen_timeout": 30
+                "listen_timeout": 30,
+                "beam_size": 5,
+                "vad_filter": True,
             },
             "LanguageModel": {
                 "inference_engine": "default",
