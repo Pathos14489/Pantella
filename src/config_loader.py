@@ -272,7 +272,7 @@ https://github.com/art-from-the-machine/Mantella#issues-qa
     def export(self):
         return {
             "Game": {
-                "game_id": self.game_id
+                "game_id": self.game_id,
             },
             "Paths": {
                 "game_path": self.game_path,
@@ -282,13 +282,13 @@ https://github.com/art-from-the-machine/Mantella#issues-qa
                 "xvasynth_path": self.xvasynth_path,
                 "xtts_server_folder": self.xtts_server_folder,
                 "logging_file_path": self.logging_file_path,
-                "language_support_file_path": self.language_support_file_path
+                "language_support_file_path": self.language_support_file_path,
             },
             "Language": {
                 "language": self.language,
                 "end_conversation_keyword": self.end_conversation_keyword,
                 "goodbye_npc_response": self.goodbye_npc_response,
-                "collecting_thoughts_npc_response": self.collecting_thoughts_npc_response
+                "collecting_thoughts_npc_response": self.collecting_thoughts_npc_response,
             },
             "Microphone": {
                 "whisper_model": self.whisper_model,
@@ -299,7 +299,9 @@ https://github.com/art-from-the-machine/Mantella#issues-qa
                 "whisper_url": self.whisper_url,
                 "audio_threshold": self.audio_threshold,
                 "pause_threshold": self.pause_threshold,
-                "listen_timeout": self.listen_timeout
+                "listen_timeout": self.listen_timeout,
+                "beam_size": self.beam_size,
+                "vad_filter": self.vad_filter,
             },
             "LanguageModel": {
                 "inference_engine": self.inference_engine,
@@ -324,7 +326,7 @@ https://github.com/art-from-the-machine/Mantella#issues-qa
                 "conversation_limit_pct": self.conversation_limit_pct,
                 "min_conversation_length": self.min_conversation_length,
                 "reload_buffer": self.reload_buffer,
-                "reload_wait_time": self.reload_wait_time
+                "reload_wait_time": self.reload_wait_time,
             },
             "InferenceOptions": {
                 "temperature": self.temperature,
@@ -339,12 +341,12 @@ https://github.com/art-from-the-machine/Mantella#issues-qa
                 "mirostat_mode": self.mirostat_mode,
                 "mirostat_eta": self.mirostat_eta,
                 "mirostat_tau": self.mirostat_tau,
-                "max_tokens": self.max_tokens
+                "max_tokens": self.max_tokens,
             },
             "openai_api": {
                 "llm": self.llm,
                 "alternative_openai_api_base": self.alternative_openai_api_base,
-                "secret_key_file_path": self.secret_key_file_path
+                "secret_key_file_path": self.secret_key_file_path,
             },
             "llama_cpp_python": {
                 "model_path": self.model_path,
@@ -357,7 +359,7 @@ https://github.com/art-from-the-machine/Mantella#issues-qa
                 "use_mmap": self.use_mmap,
                 "use_mlock": self.use_mlock,
                 "n_threads_batch": self.n_threads_batch,
-                "offload_kqv": self.offload_kqv
+                "offload_kqv": self.offload_kqv,
             },
             "llava_cpp_python": {
                 "llava_clip_model_path": self.llava_clip_model_path,
@@ -370,27 +372,27 @@ https://github.com/art-from-the-machine/Mantella#issues-qa
                 "transformers_model_slug": self.transformers_model_slug,
                 "trust_remote_code": self.trust_remote_code,
                 "device_map": self.device_map,
-                "load_in_8bit": self.load_in_8bit
+                "load_in_8bit": self.load_in_8bit,
             },
             "Speech": {
                 "tts_engine": self.tts_engine,
                 "end_conversation_wait_time": self.end_conversation_wait_time,
-                "sentences_per_voiceline": self.sentences_per_voiceline
+                "sentences_per_voiceline": self.sentences_per_voiceline,
             },
             "xVASynth": {
                 "xvasynth_process_device": self.xvasynth_process_device,
                 "pace": self.pace,
                 "use_cleanup":self.use_cleanup,
                 "use_sr": self.use_sr,
-                "xvasynth_base_url": self.xvasynth_base_url
+                "xvasynth_base_url": self.xvasynth_base_url,
             },
             "xTTS": {
                 "xtts_base_url": self.xtts_base_url,
                 "xtts_data": self.xtts_data,
-                "default_xtts_model": self.default_xtts_model
+                "default_xtts_model": self.default_xtts_model,
             },
             "Cleanup": {
-                "remove_mei_folders": self.remove_mei_folders
+                "remove_mei_folders": self.remove_mei_folders,
             },
             "Debugging": {
                 "debug_mode": self.debug_mode,
@@ -399,10 +401,10 @@ https://github.com/art-from-the-machine/Mantella#issues-qa
                 "debug_use_mic": self.debug_use_mic,
                 "default_player_response": self.default_player_response,
                 "debug_exit_on_first_exchange": self.debug_exit_on_first_exchange,
-                "add_voicelines_to_all_voice_folders": self.add_voicelines_to_all_voice_folders
+                "add_voicelines_to_all_voice_folders": self.add_voicelines_to_all_voice_folders,
             },
             "Config": {
-                "port": self.port
+                "port": self.port,
             }
         }
     
