@@ -131,7 +131,7 @@ class conversation_manager():
         self.synthesizer.change_voice(character)
         self.chat_manager.active_character = character
         self.chat_manager.character_num = 0
-        self.character_manager.active_characters[character.name] = character # add new character to active characters
+        self.character_manager.active_characters[character.name] = character # add new character to active characters TODO: Make this a method in the character manager, move away from a named dictionary to using the IDs of the characters instead
         self.chat_manager.setup_voiceline_save_location(character_info['in_game_voice_model']) # if the NPC is from a mod, create the NPC's voice folder and exit Mantella
         return character
 
@@ -250,7 +250,7 @@ class conversation_manager():
         transcribed_text = None
         if not self.conversation_ended and not self.radiant_dialogue: # check if conversation has ended and isn't radiant, if it's not, get next player input
             logging.info('Getting player response...')
-            transcribed_text = self.transcriber.get_player_response()
+            transcribed_text = self.transcriber.get_player_response(", ".join(self.character_manager.active_characters.keys()))
 
             self.game_state_manager.write_game_info('_mantella_player_input', transcribed_text) # write player input to _mantella_player_input.txt
 
