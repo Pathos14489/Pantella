@@ -44,68 +44,6 @@ def load_image( image_url: str) -> bytes:
             image_bytes = f.read()
             return image_bytes
 
-def get_ascii_block(paddle_result, img, ascii_representation_max_size = 128):
-    image_width, image_height = img.size
-    ascii_representation_size = (0,0)
-    if image_width > image_height:
-        ascii_representation_size = (ascii_representation_max_size, int(ascii_representation_max_size * (image_height / image_width)))
-    else:
-        ascii_representation_size = (int(ascii_representation_max_size * (image_width / image_height)), ascii_representation_max_size)
-    # ascii_representation = "#" * (ascii_representation_size[0]+2) + "\n"
-    ascii_representation = ""
-
-    print("ASCII Size:",ascii_representation_size)
-    paddle_result = paddle_result[0]
-    if paddle_result == None or len(paddle_result) == 0:
-        return ""
-    boxes = [line[0] for line in paddle_result]
-    txts = [line[1][0] for line in paddle_result]
-    _scores = [line[1][1] for line in paddle_result]
-    true_area = 0
-    # blank ascii_representation
-    for i in range(ascii_representation_size[1]):
-        blank_line = " " * ascii_representation_size[0] + "\n" # "#" + 
-        true_area += len(blank_line)
-        ascii_representation += blank_line
-    theoretical_ascii_area = ascii_representation_size[0] * ascii_representation_size[1]
-    print("Theoretical ASCII Area:",theoretical_ascii_area)
-    print("True ASCII Area:",true_area)
-    # write to ascii_representation
-    for i in range(len(boxes)):
-        print("Box:",boxes[i])
-        point_1 = boxes[i][0]
-        point_2 = boxes[i][1]
-        point_3 = boxes[i][2]
-        point_4 = boxes[i][3]
-        text = txts[i]
-        centered_x = int((point_1[0] + point_2[0] + point_3[0] + point_4[0]) / 4)
-        centered_y = int((point_1[1] + point_2[1] + point_3[1] + point_4[1]) / 4)
-        centered_point = (centered_x, centered_y)
-        print("Centered Point:",centered_point)
-        centered_x = int((centered_x / image_width) * ascii_representation_size[0])
-        centered_y = int((centered_y / image_height) * ascii_representation_size[1])
-        centered_point = (centered_x, centered_y)
-        print("Centered Point:",centered_point)
-        # overwrite ascii_representation to include text centered at centered_point offset by half the length of text
-        text_length = len(text)
-        text_start = centered_x - int(text_length / 2)
-        text_end = text_start + text_length
-        
-        ascii_lines = ascii_representation.split("\n")
-        ascii_lines[centered_y] = ascii_lines[centered_y][:text_start] + text + ascii_lines[centered_y][text_end:]
-        ascii_representation = "\n".join(ascii_lines)
-        
-
-    new_ascii_representation = ""
-    for line in ascii_representation.split("\n"):
-        if line.strip() != "":
-            new_ascii_representation += line + "\n"
-    ascii_representation = new_ascii_representation
-    # ascii_representation += "#" * (ascii_representation_size[0]+2)
-    print("TOP")
-    print(ascii_representation)
-    print("BOTTOM")
-    return ascii_representation
 
 class LLM(llama_cpp_python_LLM.LLM): # Uses llama-cpp-python as the LLM inference engine
     def __init__(self, conversation_manager):
@@ -225,6 +163,77 @@ class LLM(llama_cpp_python_LLM.LLM): # Uses llama-cpp-python as the LLM inferenc
                 self.eval_image_embed(embeds[i])
         return self.llm.input_ids[: self.llm.n_tokens].tolist()
 
+    def get_ascii_block(self, paddle_result, img, ascii_representation_max_size = 128):
+        image_width, image_height = img.size
+        ascii_representation_size = (0,0)
+        if image_width > image_height:
+            ascii_representation_size = (ascii_representation_max_size, int(ascii_representation_max_size * (image_height / image_width)))
+        else:
+            ascii_representation_size = (int(ascii_representation_max_size * (image_width / image_height)), ascii_representation_max_size)
+        # ascii_representation = "#" * (ascii_representation_size[0]+2) + "\n"
+        ascii_representation = ""
+
+        print("ASCII Size:",ascii_representation_size)
+        paddle_result = paddle_result[0]
+        if paddle_result == None or len(paddle_result) == 0:
+            return ""
+        boxes = [line[0] for line in paddle_result]
+        txts = [line[1][0] for line in paddle_result]
+        _scores = [line[1][1] for line in paddle_result]
+        true_area = 0
+        # blank ascii_representation
+        for i in range(ascii_representation_size[1]):
+            blank_line = " " * ascii_representation_size[0] + "\n" # "#" + 
+            true_area += len(blank_line)
+            ascii_representation += blank_line
+        theoretical_ascii_area = ascii_representation_size[0] * ascii_representation_size[1]
+        logging.info("Theoretical ASCII Area:",theoretical_ascii_area)
+        logging.info("True ASCII Area:",true_area)
+        # write to ascii_representation
+        ocr_filter = self.config.ocr_filter # list of bad strings to filter out
+        for i in range(len(boxes)):
+            logging.info("Box:",boxes[i])
+            point_1 = boxes[i][0]
+            point_2 = boxes[i][1]
+            point_3 = boxes[i][2]
+            point_4 = boxes[i][3]
+            text = txts[i]
+            filtered = False
+            for bad_string in ocr_filter:
+                if bad_string in text or text == "" or text.strip() == "" or bad_string.lower() in text.lower():
+                    filtered = True
+                    break
+            if filtered:
+                continue
+            centered_x = int((point_1[0] + point_2[0] + point_3[0] + point_4[0]) / 4)
+            centered_y = int((point_1[1] + point_2[1] + point_3[1] + point_4[1]) / 4)
+            centered_point = (centered_x, centered_y)
+            logging.info("Centered Point:",centered_point)
+            centered_x = int((centered_x / image_width) * ascii_representation_size[0])
+            centered_y = int((centered_y / image_height) * ascii_representation_size[1])
+            centered_point = (centered_x, centered_y)
+            logging.info("Centered Point:",centered_point)
+            # overwrite ascii_representation to include text centered at centered_point offset by half the length of text
+            text_length = len(text)
+            text_start = centered_x - int(text_length / 2)
+            text_end = text_start + text_length
+            
+            ascii_lines = ascii_representation.split("\n")
+            ascii_lines[centered_y] = ascii_lines[centered_y][:text_start] + text + ascii_lines[centered_y][text_end:]
+            ascii_representation = "\n".join(ascii_lines)
+            
+
+        new_ascii_representation = ""
+        for line in ascii_representation.split("\n"):
+            if line.strip() != "":
+                new_ascii_representation += line + "\n"
+        ascii_representation = new_ascii_representation
+        # ascii_representation += "#" * (ascii_representation_size[0]+2)
+        logging.info("---BLOCK TOP")
+        logging.info(ascii_representation)
+        logging.info("---BLOCK BOTTOM")
+        return ascii_representation
+    
     def get_player_perspective(self):
         """Get the player's perspective image embed using dxcam"""
         left, top, right, bottom = self.game_window.left, self.game_window.top, self.game_window.right, self.game_window.bottom
@@ -234,8 +243,7 @@ class LLM(llama_cpp_python_LLM.LLM): # Uses llama-cpp-python as the LLM inferenc
 
         if self.config.paddle_ocr:
             result = self.ocr.ocr(np.array(frame), cls=self.config.ocr_use_angle_cls)
-            ascii_block = get_ascii_block(result, frame)
-            print(ascii_block)
+            ascii_block = self.get_ascii_block(result, frame)
         else:
             ascii_block = ""
 
