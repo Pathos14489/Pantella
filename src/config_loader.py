@@ -79,11 +79,40 @@ https://github.com/art-from-the-machine/Mantella#issues-qa
 
         if save:
             self.save()
+        
+        self.format_paths()
         print(f"Config loaded from {self.config_path}")
+    
+    def format_paths(self):
+        self.game_path = self.game_path.replace("\\", "/")
+        self.mod_path = self.mod_path.replace("\\", "/")
+        self.character_database_file = self.character_database_file.replace("\\", "/")
+        self.voice_model_ref_ids_file = self.voice_model_ref_ids_file.replace("\\", "/")
+        self.xvasynth_path = self.xvasynth_path.replace("\\", "/")
+        self.xtts_server_folder = self.xtts_server_folder.replace("\\", "/")
+        self.logging_file_path = self.logging_file_path.replace("\\", "/")
+        self.language_support_file_path = self.language_support_file_path.replace("\\", "/")
+        # Make sure the paths are all absolute
+        if not os.path.isabs(self.game_path):
+            self.game_path = os.path.join(os.path.dirname(__file__), "..", self.game_path)
+        if not os.path.isabs(self.mod_path):
+            self.mod_path = os.path.join(os.path.dirname(__file__), "..", self.mod_path)
+        if not os.path.isabs(self.character_database_file):
+            self.character_database_file = os.path.join(os.path.dirname(__file__), "..", self.character_database_file)
+        if not os.path.isabs(self.voice_model_ref_ids_file):
+            self.voice_model_ref_ids_file = os.path.join(os.path.dirname(__file__), "..", self.voice_model_ref_ids_file)
+        if not os.path.isabs(self.xvasynth_path):
+            self.xvasynth_path = os.path.join(os.path.dirname(__file__), "..", self.xvasynth_path)
+        if not os.path.isabs(self.xtts_server_folder):
+            self.xtts_server_folder = os.path.join(os.path.dirname(__file__), "..", self.xtts_server_folder)
+        if not os.path.isabs(self.logging_file_path):
+            self.logging_file_path = os.path.join(os.path.dirname(__file__), "..", self.logging_file_path)
+        if not os.path.isabs(self.language_support_file_path):
+            self.language_support_file_path = os.path.join(os.path.dirname(__file__), "..", self.language_support_file_path)
 
     def get_prompt_styles(self):
         logging.info("Getting prompt styles")
-        prompt_styles_dir = './prompt_styles'
+        prompt_styles_dir = os.path.join(os.path.dirname(__file__), "../prompt_styles/")
         for file in os.listdir(prompt_styles_dir):
             if file.endswith('.json'):
                 with open(f'{prompt_styles_dir}/{file}') as f:

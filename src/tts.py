@@ -5,7 +5,7 @@ import importlib
 default = "xvasynth" # The default LLM to use if the one specified in config.json is not found or if default is specified in config.json
 tts_Types = {}
 # Get all LLMs from src/llms/ and add them to LLM_Types
-for file in os.listdir("src/tts_types/"):
+for file in os.listdir(os.path.join(os.path.dirname(__file__), "tts_types/")):
     if file.endswith(".py") and not file.startswith("__"):
         module_name = file[:-3]
         if module_name != "base_tts":

@@ -1,4 +1,5 @@
 import os
+import sys
 from src.logging import logging
 import importlib
 
@@ -18,7 +19,7 @@ import importlib
 Tokenizer_Types = {}
 default = "tiktoken"
 # Get all Tokenizers from src/tokenizers/ and add them to Tokenizer_Types
-for file in os.listdir("src/tokenizers/"):
+for file in os.listdir(os.path.join(os.path.dirname(__file__), "tokenizers/")):
     if file.endswith(".py") and not file.startswith("__"):
         module_name = file[:-3]
         if module_name != "base_tokenizer":

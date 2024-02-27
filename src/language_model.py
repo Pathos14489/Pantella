@@ -6,7 +6,7 @@ import importlib
 default = "openai" # The default LLM to use if the one specified in config.json is not found or if default is specified in config.json
 LLM_Types = {}
 # Get all LLMs from src/llms/ and add them to LLM_Types
-for file in os.listdir("src/llms/"):
+for file in os.listdir(os.path.join(os.path.dirname(__file__), "llms/")):
     if file.endswith(".py") and not file.startswith("__"):
         module_name = file[:-3]
         if module_name != "base_llm":
