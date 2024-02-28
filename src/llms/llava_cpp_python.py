@@ -50,7 +50,12 @@ class LLM(llama_cpp_python_LLM.LLM): # Uses llama-cpp-python as the LLM inferenc
         global inference_engine_name
         super().__init__(conversation_manager)
         if loaded:
-            self.clip_model = clip_model_load(self.config.llava_clip_model_path.encode(), 1)
+            try:
+                self.clip_model = clip_model_load(self.config.llava_clip_model_path.encode(), 1)
+            except Exception as e:
+                logging.error(f"Error loading clip model for 'llava-cpp-python'(not a typo) inference engine. Please check that the model path is correct in config.json.")
+                input("Press Enter to exit.")
+                exit()
         else:
             logging.error(f"Error loading llama-cpp-python for 'llava-cpp-python'(not a typo) inference engine. Please check that you have installed llama-cpp-python correctly.")
             input("Press Enter to exit.")
