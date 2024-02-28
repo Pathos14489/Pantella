@@ -26,6 +26,8 @@ try:
 except Exception as e:
     ocr_loaded = False
     logging.error(f"Error loading paddleocr for 'llava-cpp-python'(not a typo) inference engine. Please check that you have installed paddleocr correctly. OCR will not be used but basic image embedding will still work.")
+    logging.error(e)
+    
 
 inference_engine_name = "llava-cpp-python"
 
