@@ -87,23 +87,37 @@ class LLM(llama_cpp_python_LLM.LLM): # Uses llama-cpp-python as the LLM inferenc
                 input("Press Enter to exit.")
                 exit()
         if self.config.game_id == "fallout4":
-            self.game_window = pygetwindow.getWindowsWithTitle("Fallout 4")[0]
+            game_windows = pygetwindow.getWindowsWithTitle("Fallout 4")
             self.game_window_name = "Fallout 4"
+            if len(game_windows) == 0:
+                game_windows = pygetwindow.getWindowsWithTitle("Fallout 4 VR")
+                self.game_window_name = "Fallout 4 VR"
+            if len(game_windows) == 0:
+                game_windows = pygetwindow.getWindowsWithTitle("Fallout4VR")
+                self.game_window_name = "Fallout 4 VR"
             logging.info(f"Game Window Found: {self.game_window_name}")
         elif self.config.game_id == "skyrim":
-            self.game_window = pygetwindow.getWindowsWithTitle("Skyrim Special Edition")[0]
+            game_windows = pygetwindow.getWindowsWithTitle("Skyrim Special Edition")
             self.game_window_name = "Skyrim Special Edition"
+            if len(game_windows) == 0:
+                game_windows = pygetwindow.getWindowsWithTitle("Skyrim VR")
+                self.game_window_name = "Skyrim VR"
             logging.info(f"Game Window Found: {self.game_window_name}")
         else:
             logging.error(f"Error loading game window for 'llava-cpp-python'(not a typo) inference engine. No game window found  - Game might not be supported by llava-cpp-python inference engine by default - Please specify the name of the Game Window EXACTLY as it's shown in the title bar of the game window: ")
             game_name = input("Game Name: ")
             try:
-                self.game_window = pygetwindow.getWindowsWithTitle(game_name)[0]
+                game_windows = pygetwindow.getWindowsWithTitle(game_name)
                 self.game_window_name = game_name
             except Exception as e:
                 logging.error(f"Error loading game window for 'llava-cpp-python'(not a typo) inference engine. No game window found or game not supported by inference engine.")
                 input("Press Enter to exit.")
                 exit()
+        if len(game_windows) == 0:
+            logging.error(f"Error loading game window for 'llava-cpp-python'(not a typo) inference engine. No game window found or game not supported by inference engine.")
+            input("Press Enter to exit.")
+            exit()
+        self.game_window = game_windows[0]
 
     def get_image_embed_from_bytes(self, image_bytes):
         data_array = array.array("B", image_bytes)
