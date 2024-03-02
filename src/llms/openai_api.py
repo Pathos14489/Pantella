@@ -69,6 +69,9 @@ class LLM(base_LLM.base_LLM):
             logging.info(f"Could not find number of available tokens for {llm} for tiktoken. Defaulting to token count of {str(self.config.maximum_local_tokens)} (this number can be changed via the `maximum_local_tokens` setting in config.json).")
             logging.info("WARNING: Tiktoken is being run using the default tokenizer, which is not always correct. If you're using a local model, try using the embedding tokenizer instead if it's supported by your API emulation method. It's slower and might be incompatible with some configurations, but more accurate.")
             token_limit = self.config.maximum_local_tokens # Default to 4096 tokens for local models
+        else:
+            logging.warn(f"Could not find number of available tokens for {llm} for tiktoken. Defaulting to token count of 4096.")
+            token_limit = 4096
         self.config.maximum_local_tokens = token_limit # Set the maximum number of tokens for local models to the number of tokens available for the model chosen    
 
         api_key = setup_openai_secret_key(self.config.secret_key_file_path)
