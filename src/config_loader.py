@@ -226,7 +226,7 @@ https://github.com/art-from-the-machine/Mantella#issues-qa
                 "n_gpu_layers": 0,
                 "n_threads": 4,
                 "n_batch": 512,
-                "tensor_split": [1.0],
+                "tensor_split": [], # [0.5,0.5] for 2 gpus split evenly, [0.3,0.7] for 2 gpus split unevenly
                 "main_gpu": 0,
                 "split_mode": 0, # 0 = single gpu, 1 = split layers and kv across gpus, 2 = split rows across gpus
                 "use_mmap": True,

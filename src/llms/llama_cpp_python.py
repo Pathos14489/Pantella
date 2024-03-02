@@ -21,13 +21,16 @@ class LLM(base_LLM.base_LLM): # Uses llama-cpp-python as the LLM inference engin
         self.inference_engine_name = inference_engine_name
         if loaded:
             if llama_model is None:
+                tensor_split = self.config.tensor_split
+                if len(tensor_split) == 0:
+                    tensor_split = None
                 self.llm = Llama(
                     model_path=self.config.model_path,
                     n_ctx=self.config.maximum_local_tokens,
                     n_gpu_layers=self.config.n_gpu_layers,
                     n_batch=self.config.n_batch,
                     n_threads=self.config.n_threads,
-                    tensor_split=self.config.tensor_split,
+                    tensor_split=tensor_split,
                     main_gpu=self.config.main_gpu,
                     split_mode=self.config.split_mode,
                     use_mmap=self.config.use_mmap,
