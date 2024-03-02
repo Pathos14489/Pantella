@@ -30,6 +30,9 @@ class Logger:
         message = self.get_message_object(*args, level='WARNING')
         self.output(self.format.format(**message), 'WARNING')
 
+    def warn(self, *args):
+        self.warning(*args)
+
     def debug(self, *args):
         message = self.get_message_object(*args, level='DEBUG')
         self.output(self.format.format(**message), 'DEBUG')
