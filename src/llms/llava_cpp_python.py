@@ -59,11 +59,11 @@ class LLM(llama_cpp_python_LLM.LLM): # Uses llama-cpp-python as the LLM inferenc
             except Exception as e:
                 logging.error(f"Error loading clip model for 'llava-cpp-python'(not a typo) inference engine. Please check that the model path is correct in config.json.")
                 input("Press Enter to exit.")
-                exit()
+                raise e
         else:
             logging.error(f"Error loading llama-cpp-python for 'llava-cpp-python'(not a typo) inference engine. Please check that you have installed llama-cpp-python correctly.")
             input("Press Enter to exit.")
-            exit()
+            raise Exception("Llama-cpp-python not installed, install llama-cpp-python to use llama-cpp-python.")
         if self.config.paddle_ocr and not ocr_loaded: # Load paddleocr if it's installed
             logging.error(f"Error loading paddleocr for 'llava-cpp-python'(not a typo) inference engine. Please check that you have installed paddleocr correctly. OCR will not be used but basic image embedding will still work.")
             raise Exception("PaddleOCR not installed, disable paddle_ocr in config.json or install PaddleOCR to use paddle_ocr.")
@@ -85,7 +85,7 @@ class LLM(llama_cpp_python_LLM.LLM): # Uses llama-cpp-python as the LLM inferenc
             except:
                 logging.error(f"Error loading game window for 'llava-cpp-python'(not a typo) inference engine. Game window lost - Was the game closed? Please restart the game and try again.")
                 input("Press Enter to exit.")
-                exit()
+                raise Exception("Game window lost - Was the game closed? Please restart the game and Pantella and try again.")
         if self.config.game_id == "fallout4":
             game_windows = pygetwindow.getWindowsWithTitle("Fallout 4")
             self.game_window_name = "Fallout 4"
@@ -112,11 +112,11 @@ class LLM(llama_cpp_python_LLM.LLM): # Uses llama-cpp-python as the LLM inferenc
             except Exception as e:
                 logging.error(f"Error loading game window for 'llava-cpp-python'(not a typo) inference engine. No game window found or game not supported by inference engine.")
                 input("Press Enter to exit.")
-                exit()
+                raise e
         if len(game_windows) == 0:
             logging.error(f"Error loading game window for 'llava-cpp-python'(not a typo) inference engine. No game window found or game not supported by inference engine.")
             input("Press Enter to exit.")
-            exit()
+            raise Exception("No game window found or game not supported by inference engine.")
         self.game_window = game_windows[0]
 
     def get_image_embed_from_bytes(self, image_bytes):
@@ -333,7 +333,7 @@ class LLM(llama_cpp_python_LLM.LLM): # Uses llama-cpp-python as the LLM inferenc
                 if retries == 1:
                     logging.error('Error generating completion after 5 retries, exiting...')
                     input('Press enter to continue...')
-                    exit()
+                    raise e
                 time.sleep(5)
                 retries -= 1
                 continue
@@ -377,7 +377,7 @@ class LLM(llama_cpp_python_LLM.LLM): # Uses llama-cpp-python as the LLM inferenc
                 if retries == 1:
                     logging.error('Error creating completion stream after 5 retries, exiting...')
                     input('Press enter to continue...')
-                    exit()
+                    raise e
                 time.sleep(5)
                 retries -= 1
                 continue

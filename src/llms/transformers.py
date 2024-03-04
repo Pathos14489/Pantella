@@ -76,7 +76,7 @@ class LLM(base_LLM.base_LLM): # Uses llama-cpp-python as the LLM inference engin
         else:
             logging.error(f"Error loading transformers. Please check that you have installed it correctly.")
             input("Press Enter to exit.")
-            exit()
+            raise ValueError(f"Error loading transformers. Please check that you have installed it correctly.")
         self.generation_thread = None
         logging.info(f"Running Mantella with transformers. The language model chosen can be changed via config.json")
         logging.info(f"Testing transformers...")
@@ -167,7 +167,7 @@ class LLM(base_LLM.base_LLM): # Uses llama-cpp-python as the LLM inference engin
                 if retries == 1:
                     logging.error('Error generating completion after 5 retries, exiting...')
                     input('Press enter to continue...')
-                    exit()
+                    raise e
                 time.sleep(5)
                 retries -= 1
                 continue
@@ -203,7 +203,7 @@ class LLM(base_LLM.base_LLM): # Uses llama-cpp-python as the LLM inference engin
                 if retries == 1:
                     logging.error('Error creating completion stream after 5 retries, exiting...')
                     input('Press enter to continue...')
-                    exit()
+                    raise e
                 time.sleep(5)
                 retries -= 1
                 continue

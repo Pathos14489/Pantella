@@ -20,7 +20,7 @@ def create_LLM(conversation_manager):
     if conversation_manager.config.inference_engine not in LLM_Types:
         logging.error(f"Could not find inference engine: {conversation_manager.config.inference_engine}! Please check your config.json file and try again!")
         input("Press enter to continue...")
-        exit()
+        raise ValueError(f"Could not find inference engine: {conversation_manager.config.inference_engine}! Please check your config.json file and try again!")
     model = LLM_Types[conversation_manager.config.inference_engine]
     llm = model.LLM(conversation_manager)
     if conversation_manager.config.tokenizer_type == "default": # if using the default tokenizer for the LLM
@@ -37,7 +37,7 @@ def create_LLM(conversation_manager):
         else: # or if the LLM has no tokenizer specified
             logging.error(f"Could not find default tokenizer for inference engine: {llm.inference_engine_name}! Please check your config.json file and try again!")
             input("Press enter to continue...")
-            exit()
+            raise ValueError(f"Could not find default tokenizer for inference engine: {llm.inference_engine_name}! Please check your config.json file and try again!")
     elif conversation_manager.config.tokenizer_type in tokenizers.Tokenizer_Types: # if using a custom tokenizer
         if "client" in llm.__dict__: # if the LLM has a client specified (only really needed for openai at this point)
             tokenizer = tokenizers.Tokenizer_Types[conversation_manager.config.tokenizer_type].Tokenizer(conversation_manager, llm.client)

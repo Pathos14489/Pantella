@@ -269,7 +269,7 @@ class CharacterDB():
             logging.warning(f"Could not find character '{character_base_id}' in character database using base_id lookup.")
             logging.error(f"Could not find character '{character_name}' in character database.")
             input("Press enter to continue...")
-            exit(0)
+            raise Exception(f"Could not find character '{character_name}' in character database.")
         return character, is_generic_npc
 
     def has_character(self, character):

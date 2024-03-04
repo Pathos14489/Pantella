@@ -27,7 +27,7 @@ class base_Synthesizer:
     def voices(self):
         logging.info("Warning: Using voice() method of base_tts.py, this means you haven't implemented the voices() method in your new tts type. This method should return a list of available voices models for the current game from the tts.")
         input("Press enter to continue...")
-        exit(0)
+        raise NotImplementedError("voices() method not implemented in your tts type.")
         return []
     
     def get_valid_voice_model(self, character):
@@ -51,7 +51,7 @@ class base_Synthesizer:
         logging.info(f'Changing voice to: {character.voice_model}')
         logging.info('Voice model not loaded, please fix your code.')
         input("Press enter to continue...")
-        exit(0)
+        raise NotImplementedError("change_voice() method not implemented in your tts type.")
         return None
 
     @utils.time_it
@@ -64,7 +64,7 @@ class base_Synthesizer:
         logging.info('Lip file not saved, please fix your code.')
         logging.info('Voice model not loaded, please fix your code.')
         input("Press enter to continue...")
-        exit(0)
+        raise NotImplementedError("synthesize() method not implemented in your tts type.")
         return final_voiceline_file # path to wav file
          
     def run_command(self, command):

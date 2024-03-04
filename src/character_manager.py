@@ -219,7 +219,7 @@ class Character:
                     logging.error(e)
                     print(e)
                     input('Press enter to continue...')
-                    exit()
+                    raise e
         else:
             new_conversation_summary = summary
         conversation_summaries = previous_conversation_summaries + new_conversation_summary

@@ -13,7 +13,7 @@ class Tokenizer(tokenizer.base_Tokenizer): # Tokenizes(only availble for countin
         if not loaded:
             logging.error(f"Failed to load transformers, so huggingface tokenizer cannot be used! Please check that you have installed it correctly.")
             input("Press enter to continue...")
-            exit()
+            raise ValueError(f"Failed to load transformers, so huggingface tokenizer cannot be used! Please check that you have installed it correctly.")
         super().__init__(conversation_manager)
         self.tokenizer_slug = tokenizer_slug
         self.tokenizer = AutoTokenizer.from_pretrained(self.config.llm)

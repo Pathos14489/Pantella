@@ -43,7 +43,7 @@ class LLM(base_LLM.base_LLM): # Uses llama-cpp-python as the LLM inference engin
         else:
             logging.error(f"Error loading llama-cpp-python. Please check that you have installed it correctly.")
             input("Press Enter to exit.")
-            exit()
+            raise ValueError(f"Error loading llama-cpp-python. Please check that you have installed it correctly.")
         llama_model = self.llm
         logging.info(f"Running Mantella with llama-cpp-python. The language model chosen can be changed via config.json")
         logging.info(f"Testing llama-cpp-python...")
@@ -80,10 +80,11 @@ class LLM(base_LLM.base_LLM): # Uses llama-cpp-python as the LLM inference engin
                 logging.warning('Error generating completion, retrying in 5 seconds...')
                 logging.warning(e)
                 print(e)
+                # raise e
                 if retries == 1:
                     logging.error('Error generating completion after 5 retries, exiting...')
                     input('Press enter to continue...')
-                    exit()
+                    raise e
                 time.sleep(5)
                 retries -= 1
                 continue
@@ -125,7 +126,7 @@ class LLM(base_LLM.base_LLM): # Uses llama-cpp-python as the LLM inference engin
                 if retries == 1:
                     logging.error('Error creating completion stream after 5 retries, exiting...')
                     input('Press enter to continue...')
-                    exit()
+                    raise e
                 time.sleep(5)
                 retries -= 1
                 continue
