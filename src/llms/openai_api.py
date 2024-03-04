@@ -1,5 +1,5 @@
 import src.utils as utils
-import src.llms.base_llm as base_LLM
+import src.llms.chat_llm as chat_LLM
 from src.logging import logging, time
 
 try:
@@ -15,7 +15,7 @@ def setup_openai_secret_key(file_name):
         api_key = f.readline().strip()
     return api_key
 
-class LLM(base_LLM.base_LLM):
+class LLM(chat_LLM.base_LLM):
     def __init__(self, conversation_manager):
         global inference_engine_name
         global tokenizer_slug
@@ -80,7 +80,7 @@ class LLM(base_LLM.base_LLM):
         else:
             logging.error(f"Error loading openai. Please check that you have installed it correctly.")
             input("Press Enter to exit.")
-            exit()
+            raise ValueError(f"Error loading openai. Please check that you have installed it correctly.")
 
         if self.config.alternative_openai_api_base != 'none':
             self.client.base_url  = self.config.alternative_openai_api_base
@@ -90,6 +90,8 @@ class LLM(base_LLM.base_LLM):
             logging.info(f"Running Mantella with local language model")
         else:
             logging.info(f"Running Mantella with '{self.config.llm}'. The language model chosen can be changed via config.json")
+
+        self.config.message_signifier = ": " # The signifier used to separate the speaker from the message in the input to the language model
     
     @utils.time_it
     def create(self, messages):
@@ -98,12 +100,12 @@ class LLM(base_LLM.base_LLM):
         completion = None
         while retries > 0 and completion is None:
             try:
-                prompt = self.tokenizer.get_string_from_messages(messages)
-                prompt += self.tokenizer.start_message(self.config.assistant_name) # Start empty message from no one to let the LLM generate the speaker by split \n
-                logging.info(f"Raw Prompt: {prompt}")
-
-                openai_stop = self.stop[:4] # OpenAI stop is the first 4 options in the stop list
-                completion = self.client.completions.create(prompt=prompt,
+                print(messages)
+                if self.config.alternative_openai_api_base == 'none': # OpenAI stop is the first 4 options in the stop list because they only support up to 4 for some asinine reason
+                    openai_stop = self.stop[:4]
+                else:
+                    openai_stop = self.stop
+                completion = self.client.chat.completions.create(messages=messages,
                     model=self.config.llm, 
                     max_tokens=self.config.max_tokens,
                     top_p=self.top_p, 
@@ -113,7 +115,11 @@ class LLM(base_LLM.base_LLM):
                     presence_penalty=self.presence_penalty,
                     stream=False,
                 )
-                completion = completion.choices[0].text
+                print(completion)
+                if "text" in completion.choices[0]:
+                    completion = completion.choices[0].text
+                else:
+                    completion = completion.choices[0].delta.content
                 logging.info(f"Completion:"+str(completion))
             except Exception as e:
                 logging.warning('Could not connect to LLM API, retrying in 5 seconds...')
@@ -122,7 +128,7 @@ class LLM(base_LLM.base_LLM):
                 if retries == 1:
                     logging.error('Could not connect to LLM API after 5 retries, exiting...')
                     input('Press enter to continue...')
-                    exit()
+                    raise e
                 time.sleep(5)
                 retries -= 1
                 continue
@@ -133,15 +139,14 @@ class LLM(base_LLM.base_LLM):
     def acreate(self, messages): # Creates a completion stream for the messages provided to generate a speaker and their response
         # logging.info(f"aMessages: {messages}")
         retries = 5
-        completion = None
-        while retries > 0 and completion is None:
+        while retries > 0:
             try:
-                prompt = self.tokenizer.get_string_from_messages(messages)
-                prompt += self.tokenizer.start_message("[name]") # Start empty message from no one to let the LLM generate the speaker by split \n
-                prompt = prompt.split("[name]")[0] # Start message without the name - Generates name for use in output_manager.py  process_response()
-                logging.info(f"Raw Prompt: {prompt}")
-                openai_stop = self.stop[:4] # OpenAI stop is the first 4 options in the stop list
-                return self.client.completions.create(prompt=prompt,
+                print(messages)
+                if self.config.alternative_openai_api_base == 'none': # OpenAI stop is the first 4 options in the stop list because they only support up to 4 for some asinine reason
+                    openai_stop = self.stop[:4]
+                else:
+                    openai_stop = self.stop
+                return self.client.chat.completions.create(messages=messages,
                     model=self.config.llm, 
                     max_tokens=self.config.max_tokens,
                     top_p=self.top_p, 
@@ -158,7 +163,7 @@ class LLM(base_LLM.base_LLM):
                 if retries == 1:
                     logging.error('Could not connect to LLM API after 5 retries, exiting...')
                     input('Press enter to continue...')
-                    exit()
+                    raise e
                 time.sleep(5)
                 retries -= 1
                 continue

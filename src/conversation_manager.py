@@ -72,27 +72,55 @@ class conversation_manager():
         self.transcriber = stt.Transcriber(self)
         self.behavior_manager = behavior_manager.BehaviorManager(self)
 
-    def get_context(self): # Returns the current context(in the form of a list of messages) for the given active characters in the ongoing conversation
+    def get_context(self, chat_completions=False): # Returns the current context(in the form of a list of messages) for the given active characters in the ongoing conversation
         system_prompt = self.character_manager.get_system_prompt()
         msgs = [{'role': self.config.system_name, 'content': system_prompt}]
         msgs.extend(self.messages) # add messages to context
         
         formatted_messages = [] # format messages to be sent to LLM - Replace [player] with player name appropriate for the type of conversation
         for msg in msgs: # Add player name to messages based on the type of conversation
-            if msg['role'] == "[player]":
-                if self.character_manager.active_character_count() > 1: # if multi NPC conversation use the player's actual name
-                    formatted_messages.append({
-                        'role': self.player_name,
-                        'content': msg['content']
-                    })
-                else: # if single NPC conversation use the NPC's perspective player name
-                    perspective_player_name, perspective_player_description, trust = self.chat_manager.active_character.get_perspective_player_identity()
-                    formatted_messages.append({
-                        'role': perspective_player_name,
-                        'content': msg['content']
-                    })
-            else:
-                formatted_messages.append(msg)
+            if chat_completions: # Format for chat completions
+                if msg['role'] == "[player]":
+                    if self.character_manager.active_character_count() > 1: # if multi NPC conversation use the player's actual name
+                        formatted_messages.append({
+                            'role': self.config.user_name,
+                            'name': self.player_name,
+                            'content': msg['content']
+                        })
+                    else: # if single NPC conversation use the NPC's perspective player name
+                        perspective_player_name, perspective_player_description, trust = self.chat_manager.active_character.get_perspective_player_identity()
+                        formatted_messages.append({
+                            'role': self.config.user_name,
+                            'name': perspective_player_name,
+                            'content': msg['content']
+                        })
+                else:
+                    if msg['role'] == self.config.system_name:
+                        formatted_messages.append({
+                            'role': msg['role'],
+                            'content': msg['content']
+                        })
+                    else:
+                        formatted_messages.append({
+                            'role': self.config.assistant_name,
+                            'name': msg['role'],
+                            'content': msg['content']
+                        })
+            else: # Format for Normal LLM Prompting
+                if msg['role'] == "[player]":
+                    if self.character_manager.active_character_count() > 1: # if multi NPC conversation use the player's actual name
+                        formatted_messages.append({
+                            'role': self.player_name,
+                            'content': msg['content']
+                        })
+                    else: # if single NPC conversation use the NPC's perspective player name
+                        perspective_player_name, perspective_player_description, trust = self.chat_manager.active_character.get_perspective_player_identity()
+                        formatted_messages.append({
+                            'role': perspective_player_name,
+                            'content': msg['content']
+                        })
+                else:
+                    formatted_messages.append(msg)
         return formatted_messages
         
     async def _get_response(self):
