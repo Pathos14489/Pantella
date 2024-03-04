@@ -14,9 +14,17 @@ class Logger:
         }
 
     def output(self, message: str, level: str):
-        print(message)
-        with open(self.log_file, 'a') as f:
-            f.write(message + '\n')
+        message = message.encode('utf-8', errors='replace').decode('utf-8')
+        try:
+            print(message)
+        except UnicodeEncodeError:
+            print('Error encoding message')
+        try:
+            with open(self.log_file, 'a') as f:
+                f.write(message + '\n')
+        except Exception as e:
+            print(f'Error writing to log file: {e}')
+            # raise e
 
     def info(self, *args):
         message = self.get_message_object(*args, level='INFO')
