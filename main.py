@@ -28,6 +28,7 @@ def conversation_loop():
         global conversation_manager
         logging.info("Restarting conversation manager")
         conversation_manager = cm.conversation_manager(config)
+        conversation_manager.game_state_manager.write_game_info('_mantella_status', 'Restarted Pantella')
     while True: # Main Conversation Loop - restarts when conversation ends
         conversation_manager.await_and_setup_conversation() # wait for player to select an NPC and setup the conversation when outside of conversation
         while conversation_manager.in_conversation and not conversation_manager.conversation_ended:
