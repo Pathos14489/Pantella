@@ -84,7 +84,7 @@ class LLM(chat_LLM.base_LLM):
 
         if self.config.alternative_openai_api_base != 'none':
             self.client.base_url  = self.config.alternative_openai_api_base
-            logging.info(f"Using OpenAI API base: {self.client.base_url}")
+            logging.info(f"Using OpenAI-style API base: {self.client.base_url}")
 
         if self.is_local:
             logging.info(f"Running Mantella with local language model")
@@ -115,11 +115,26 @@ class LLM(chat_LLM.base_LLM):
                     presence_penalty=self.presence_penalty,
                     stream=False,
                 )
-                print(completion)
-                if "text" in completion.choices[0]:
+                print(completion.choices[0].message)
+                try:
                     completion = completion.choices[0].text
-                else:
-                    completion = completion.choices[0].delta.content
+                except:
+                    pass
+                if completion is None:
+                    try:
+                        completion = completion.choices[0].message.content
+                    except:
+                        pass
+                if completion is None:
+                    try:
+                        completion = completion.choices[0].delta.content
+                    except:
+                        pass
+                if completion is None:
+                    logging.error(f"Could not get completion from OpenAI-style API. Please check your API key and internet connection.")
+                    input("Press Enter to exit.")
+                    raise ValueError(f"Could not get completion from OpenAI-style API. Please check your API key and internet connection.")
+                    
                 logging.info(f"Completion:"+str(completion))
             except Exception as e:
                 logging.warning('Could not connect to LLM API, retrying in 5 seconds...')
@@ -133,6 +148,11 @@ class LLM(chat_LLM.base_LLM):
                 retries -= 1
                 continue
             break
+        print(completion)
+        if type(completion) != str:
+            logging.error(f"Could not get completion from OpenAI-style API. Please check your API key and internet connection.")
+            input("Press Enter to exit.")
+            raise ValueError(f"Could not get completion from OpenAI-style API. Please check your API key and internet connection.")
         return completion
     
     @utils.time_it
