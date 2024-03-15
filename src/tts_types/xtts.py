@@ -105,7 +105,10 @@ class Synthesizer(base_tts.base_Synthesizer):
             self.set_model(self.default_model)
           
     def get_valid_voice_model(self, character):
-        basic_voice_model = f"{super().get_valid_voice_model(character).replace(' ', '')}"
+        default_voice_model = super().get_valid_voice_model(character)
+        if default_voice_model == None:
+            default_voice_model = character.voice_model
+        basic_voice_model = f"{default_voice_model.replace(' ', '')}"
         racial_voice_model = f"{character.race}{basic_voice_model}"
         gendered_voice_model = f"{character.gender}{basic_voice_model}"
         gendered_racial_voice_model = f"{character.race}{character.gender}{basic_voice_model}"
@@ -122,12 +125,12 @@ class Synthesizer(base_tts.base_Synthesizer):
             voice_model = racial_voice_model
         elif basic_voice_model in self.voices():
             voice_model = basic_voice_model
-        elif super().get_valid_voice_model(character) in self.voices():
-            voice_model = super().get_valid_voice_model(character)
+        elif default_voice_model in self.voices():
+            voice_model = default_voice_model
         elif character.voice_model in self.voices():
             voice_model = character.voice_model
             
-        if voice_model == None:
+        if self.crashable and voice_model == None:
             logging.error(f'Voice model {voice_model} not available! Please add it to the xTTS voices list.')
             input("Press enter to continue...")
             raise FileNotFoundError()
@@ -151,7 +154,7 @@ class Synthesizer(base_tts.base_Synthesizer):
             logging.error(f'xTTS failed to generate voiceline at: {Path(save_path)}')
             raise FileNotFoundError()
           
-    def synthesize(self, character, voiceline, aggro=0):
+    def synthesize(self, voiceline, character, aggro=0):
         logging.info(f'Synthesizing voiceline: {voiceline}')
         self.change_voice(character)
         # make voice model folder if it doesn't already exist

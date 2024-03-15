@@ -468,7 +468,7 @@ class base_LLM():
         """Generate audio for a voiceline"""
         # Generate the audio and return the audio file path
         try:
-            audio_file = self.conversation_manager.synthesizer.synthesize(self.conversation_manager.chat_manager.active_character, string)
+            audio_file = self.conversation_manager.synthesizer.synthesize(string, self.conversation_manager.chat_manager.active_character)
         except Exception as e:
             logging.error(f"TTS Error: {e}")
             logging.info(e)

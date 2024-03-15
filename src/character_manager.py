@@ -171,7 +171,7 @@ class Character:
     #     self.conversation_manager.synthesizer.change_voice(self)
 
     def say(self,string):
-        audio_file = self.conversation_manager.synthesizer.synthesize(self, string) # say string
+        audio_file = self.conversation_manager.synthesizer.synthesize(string, self) # say string
         self.conversation_manager.chat_manager.save_files_to_voice_folders([audio_file, string]) # save audio file to voice folder so it can be played in-game
         self.conversation_manager.messages.append({"role": self.name, "content": string}) # add string to ongoing conversation
 

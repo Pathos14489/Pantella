@@ -17,6 +17,8 @@ tts_Types["default"] = tts_Types[default]
     
 def create_Synthesizer(conversation_manager):
     slug = conversation_manager.config.tts_engine
+    if type(slug) == list and len(slug) == 1:
+        slug = slug[0]
     ttses = []
     if type(slug) == list:
         for s in slug:
@@ -26,7 +28,9 @@ def create_Synthesizer(conversation_manager):
                 logging.error(f"Could not find inference engine: {s}! Please check your config.json file and try again!")
                 input("Press enter to continue...")
                 raise ValueError(f"Could not find inference engine: {s}! Please check your config.json file and try again!")
-            ttses.append(tts_Types[s].Synthesizer(conversation_manager))
+            synth = tts_Types[s].Synthesizer(conversation_manager)
+            synth.crashable = False # If we have multiple tts engines, we don't want to crash if one of them doesn't have a voice model
+            ttses.append(synth)
         return tts_Types["multi_tts"].Synthesizer(conversation_manager, ttses)
     elif type(slug) == str:
         if slug not in tts_Types:

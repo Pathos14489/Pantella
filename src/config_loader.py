@@ -273,7 +273,7 @@ https://github.com/art-from-the-machine/Mantella#issues-qa
                 "load_in_8bit": False
             },
             "Speech": {
-                "tts_engine": "xvasynth",
+                "tts_engine": ["xvasynth"],
                 "end_conversation_wait_time": 1,
                 "sentences_per_voiceline": 3
             },
@@ -292,7 +292,7 @@ https://github.com/art-from-the-machine/Mantella#issues-qa
                     "repetition_penalty": 3.0,
                     "top_k": 40,
                     "top_p": 0.80,
-                    "speed": 1.2,
+                    "speed": 1.5,
                     "enable_text_splitting": True,
                     "stream_chunk_size": 200
                 },

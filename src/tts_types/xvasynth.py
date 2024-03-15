@@ -72,7 +72,7 @@ class Synthesizer(base_tts.base_Synthesizer):
             input('\nPress any key to stop Mantella...')
             sys.exit(0)
  
-    def synthesize(self, character, voiceline, aggro=0):
+    def synthesize(self, voiceline, character, aggro=0):
         if character.voice_model != self.last_voice:
             self.change_voice(character)
         voiceline = ' ' + voiceline + ' ' # xVASynth apparently performas better having spaces at the start and end of the voiceline for some reason
@@ -269,6 +269,11 @@ class Synthesizer(base_tts.base_Synthesizer):
     @utils.time_it
     def change_voice(self, character):
         voice = self.get_valid_voice_model(character) # character.voice_model
+
+        if self.crashable and voice is None:
+            logging.error(f'Voice model {character.voice_model} not available! Please add it to the voices list.')
+            input("Press enter to continue...")
+            raise base_tts.VoiceModelNotFound(f'Voice model {character.voice_model} not available! Please add it to the voices list.')
 
         logging.info('Loading voice model...')
         

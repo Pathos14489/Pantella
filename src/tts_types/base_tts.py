@@ -23,6 +23,7 @@ class base_Synthesizer:
         self.output_path = utils.resolve_path('data')+'/data'
         # last active voice model
         self.language = self.config.language
+        self.crashable = True
     
     def voices(self):
         logging.info("Warning: Using voice() method of base_tts.py, this means you haven't implemented the voices() method in your new tts type. This method should return a list of available voices models for the current game from the tts.")
@@ -41,6 +42,7 @@ class base_Synthesizer:
         for option in options:
             if option in self.voices():
                 return option # return the first valid voice model found
+        return None # return None if no valid voice model is found
         logging.error(f'Voice model {character.voice_model} not available! Please add it to the voices list.')
         input("Press enter to continue...")
         raise VoiceModelNotFound(f'Voice model {character.voice_model} not available! Please add it to the voices list.')
