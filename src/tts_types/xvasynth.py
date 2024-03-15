@@ -13,7 +13,7 @@ import numpy as np
 import requests
 
 tts_slug = "xvasynth"
-class Synthesizer(base_tts.base_Synthesizer): # Gets token count from OpenAI's embedding API -- WARNING SLOW AS HELL -- Only use if you don't want to set up the right tokenizer for your local model or if you don't know how to do that
+class Synthesizer(base_tts.base_Synthesizer): 
     def __init__(self, conversation_manager):
         super().__init__(conversation_manager)
         self.xvasynth_path = self.config.xvasynth_path

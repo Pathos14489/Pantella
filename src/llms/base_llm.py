@@ -325,7 +325,7 @@ class base_LLM():
                                 #TODO: or (any(key.split(' ')[0] == keyword_extraction for key in characters.active_characters))
                                 logging.info(f"Switched to {next_author}")
                                 self.conversation_manager.chat_manager.active_character = self.conversation_manager.character_manager.active_characters[next_author]
-                                self.conversation_manager.chat_manager.active_character.set_voice()
+                                # self.conversation_manager.chat_manager.active_character.set_voice()
                                 # characters are mapped to say_line based on order of selection
                                 # taking the order of the dictionary to find which say_line to use, but it is bad practice to use dictionaries in this way
                                 self.conversation_manager.chat_manager.character_num = list(self.conversation_manager.character_manager.active_characters.keys()).index(next_author) # Assigns a number to the character based on the order they were selected for use in the _mantella_say_line_# filename

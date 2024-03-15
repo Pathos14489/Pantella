@@ -17,10 +17,26 @@ tts_Types["default"] = tts_Types[default]
     
 def create_Synthesizer(conversation_manager):
     slug = conversation_manager.config.tts_engine
-    if slug not in tts_Types:
-        slug = slug.lower()
-    if slug not in tts_Types:
-        logging.error(f"Could not find inference engine: {conversation_manager.config.tts_engine}! Please check your config.json file and try again!")
+    ttses = []
+    if type(slug) == list:
+        for s in slug:
+            if s not in tts_Types:
+                s = s.lower()
+            if s not in tts_Types:
+                logging.error(f"Could not find inference engine: {s}! Please check your config.json file and try again!")
+                input("Press enter to continue...")
+                raise ValueError(f"Could not find inference engine: {s}! Please check your config.json file and try again!")
+            ttses.append(tts_Types[s].Synthesizer(conversation_manager))
+        return tts_Types["multi_tts"].Synthesizer(conversation_manager, ttses)
+    elif type(slug) == str:
+        if slug not in tts_Types:
+            slug = slug.lower()
+        if slug not in tts_Types:
+            logging.error(f"Could not find inference engine: {conversation_manager.config.tts_engine}! Please check your config.json file and try again!")
+            input("Press enter to continue...")
+            raise ValueError(f"Could not find inference engine: {conversation_manager.config.tts_engine}! Please check your config.json file and try again!")
+        return tts_Types[slug].Synthesizer(conversation_manager)
+    else:
+        logging.error(f"Wrong type for tts_engine in config.json! Expected string or list of strings, got '{type(slug)}'! Please check your config.json file and try again!")
         input("Press enter to continue...")
-        raise ValueError(f"Could not find inference engine: {conversation_manager.config.tts_engine}! Please check your config.json file and try again!")
-    return tts_Types[slug].Synthesizer(conversation_manager)
+        raise ValueError(f"Wrong type for tts_engine in config.json! Expected string or list of strings, got '{type(slug)}'! Please check your config.json file and try again!")

@@ -154,9 +154,9 @@ class conversation_manager():
         else:
             return False
 
-    def setup_character(self,character_info, is_generic_npc):
+    def setup_character(self, character_info, is_generic_npc):
         character = self.character_manager.get_character(character_info, is_generic_npc) # setup the character that the player has selectedc)
-        self.synthesizer.change_voice(character)
+        # self.synthesizer.change_voice(character)
         self.chat_manager.active_character = character
         self.chat_manager.character_num = 0
         self.character_manager.active_characters[character.name] = character # add new character to active characters TODO: Make this a method in the character manager, move away from a named dictionary to using the IDs of the characters instead

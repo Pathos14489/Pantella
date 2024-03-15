@@ -167,8 +167,8 @@ class Character:
             "language": self.language,
         }
         
-    def set_voice(self):
-        self.conversation_manager.synthesizer.change_voice(self)
+    # def set_voice(self):
+    #     self.conversation_manager.synthesizer.change_voice(self)
 
     def say(self,string):
         audio_file = self.conversation_manager.synthesizer.synthesize(self, string) # say string

@@ -1,0 +1,48 @@
+import src.utils as utils
+import src.tts_types.base_tts as base_tts
+from src.logging import logging, time
+import sys
+import os
+from pathlib import Path
+import requests
+import io
+import soundfile as sf
+import numpy as np
+
+tts_slug = "multi_tts"
+class Synthesizer(base_tts.base_Synthesizer):
+    def __init__(self, conversation_manager, ttses = []):
+        super().__init__(conversation_manager)
+        self.tts_engines = ttses
+
+    def voices(self):
+        """Return a list of available voices"""
+        voices = []
+        for tts in self.tts_engines:
+            voices += tts.voices()
+        return voices
+    
+    def synthesize(self, text, character, **kwargs):
+        """Synthesize the text for the character specified using either the 'tts_override' property of the character or using the first tts engine that supports the voice model of the character"""
+        tts = None
+        if "tts_override" in character.__dict__:
+            for tts_engine in self.tts_engines:
+                if character.tts_override == tts_engine.tts_slug:
+                    tts = tts_engine
+                    break
+                if character.voice_model in tts_engine.voices():
+                    tts = tts_engine
+                    break
+        else:
+            for tts_engine in self.tts_engines:
+                try:
+                    if tts_engine.get_valid_voice_model(character) != None:
+                        tts = tts_engine
+                        break
+                except:
+                    continue
+        if tts is None:
+            logging.error(f"Could not find tts engine for voice model: {character.voice_model}! Please check your config.json file and try again!")
+            input("Press enter to continue...")
+            raise ValueError(f"Could not find tts engine for voice model: {character.voice_model}! Please check your config.json file and try again!")
+        return tts.synthesize(text, character, **kwargs)
