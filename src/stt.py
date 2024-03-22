@@ -9,7 +9,7 @@ import openai
 class Transcriber:
     def __init__(self, conversation_manager):
         self.conversation_manager = conversation_manager
-        self.game_state_manager = self.conversation_manager.game_state_manager
+        self.game_interface = self.conversation_manager.game_interface
         self.config = self.conversation_manager.config
         self.language = self.config.stt_language
         self.available_languages = ["af","am","ar","as","az","ba","be","bg","bn","bo","br","bs","ca","cs","cy","da","de","el","en","es","et","eu","fa","fi","fo","fr","gl","gu","ha","haw","he","hi","hr","ht","hu","hy","id","is","it","ja","jw","ka","kk","km","kn","ko","la","lb","ln","lo","lt","lv","mg","mi","mk","ml","mn","mr","ms","mt","my","ne","nl","nn","no","oc","pa","pl","ps","pt","ro","ru","sa","sd","si","sk","sl","sn","so","sq","sr","su","sv","sw","ta","te","tg","th","tk","tl","tr","tt","uk","ur","uz","vi","yi","yo","zh","yue"]
@@ -93,11 +93,11 @@ class Transcriber:
                     logging.info(f'Player wrote: {transcribed_text}')
                 else: # await text input from the game
                     logging.info('Awaiting text input from the game...')
-                    self.game_state_manager.write_game_info('_mantella_text_input', '') # clear text input before they write
-                    self.game_state_manager.write_game_info('_mantella_text_input_enabled', 'True') # enable text input in the game
-                    transcribed_text = self.game_state_manager.load_data_when_available('_mantella_text_input', '') # wait for player to write and read text input
-                    self.game_state_manager.write_game_info('_mantella_text_input', '') # clear text input after reading
-                    self.game_state_manager.write_game_info('_mantella_text_input_enabled', 'False') # disable text input in the game
+                    self.game_interface.write_game_info('_mantella_text_input', '') # clear text input before they write
+                    self.game_interface.write_game_info('_mantella_text_input_enabled', 'True') # enable text input in the game
+                    transcribed_text = self.game_interface.load_data_when_available('_mantella_text_input', '') # wait for player to write and read text input
+                    self.game_interface.write_game_info('_mantella_text_input', '') # clear text input after reading
+                    self.game_interface.write_game_info('_mantella_text_input_enabled', 'False') # disable text input in the game
                     logging.info(f'Player wrote: {transcribed_text}')
         
         return transcribed_text
@@ -108,12 +108,12 @@ class Transcriber:
         Recognize input from mic and return transcript if activation tag (assistant name) exist
         """
         while True:
-            self.game_state_manager.write_game_info('_mantella_status', 'Listening...')
+            self.game_interface.write_game_info('_mantella_status', 'Listening...')
             logging.info('Listening...')
             transcript = self._recognize_speech_from_mic(prompt)
             transcript_cleaned = utils.clean_text(transcript)
 
-            conversation_ended = self.game_state_manager.load_data_when_available('_mantella_end_conversation', '')
+            conversation_ended = self.game_interface.load_data_when_available('_mantella_end_conversation', '')
             if conversation_ended.lower() == 'true':
                 return 'goodbye'
 
@@ -121,7 +121,7 @@ class Transcriber:
             if transcript_cleaned in ['', 'thank you', 'thank you for watching', 'thanks for watching', 'the transcript is from the', 'the', 'thank you very much']:
                 continue
 
-            self.game_state_manager.write_game_info('_mantella_status', 'Thinking...')
+            self.game_interface.write_game_info('_mantella_status', 'Thinking...')
             return transcript
     
 
