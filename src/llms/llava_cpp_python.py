@@ -77,6 +77,14 @@ class LLM(llama_cpp_python_LLM.LLM): # Uses llama-cpp-python as the LLM inferenc
         self.camera = dxcam.create()
         self.get_game_window()
 
+    @property
+    def ocr_resolution(self):
+        return self.config.ocr_resolution
+    
+    @property
+    def clip_resolution(self):
+        return self.config.clip_resolution
+
     def get_game_window(self):
         if self.game_window_name != None:
             try:
@@ -215,7 +223,7 @@ class LLM(llama_cpp_python_LLM.LLM): # Uses llama-cpp-python as the LLM inferenc
         # write to ascii_representation
         ocr_filter = self.config.ocr_filter # list of bad strings to filter out
         for i in range(len(boxes)):
-            logging.info("Box:",boxes[i])
+            logging.info("Box:",boxes[i],txts[i])
             point_1 = boxes[i][0]
             point_2 = boxes[i][1]
             point_3 = boxes[i][2]
@@ -266,12 +274,12 @@ class LLM(llama_cpp_python_LLM.LLM): # Uses llama-cpp-python as the LLM inferenc
 
         if self.config.paddle_ocr:
             result = self.ocr.ocr(np.array(frame), cls=self.config.ocr_use_angle_cls)
-            ascii_block = self.get_ascii_block(result, frame)
+            ascii_block = self.get_ascii_block(result, frame, self.ocr_resolution)
         else:
             ascii_block = ""
 
         frame = frame.convert("RGB")
-        frame = frame.resize((672, 672))
+        frame = frame.resize((self.clip_resolution, self.clip_resolution))
         # frame.show()
         buffered = io.BytesIO() # Don't ask me why this is needed - it just is for some reason.
         frame.save(buffered, format="PNG")

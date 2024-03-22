@@ -292,6 +292,8 @@ class ConfigLoader:
                 "append_system_image_near_end": True,
                 "llava_image_message_depth": -1,
                 "llava_image_message": "The image below is {player_perspective_name}'s perspective:\n<image>\n<ocr>",
+                "ocr_resolution": 256,
+                "clip_resolution": 672,
             },
             "transformers": {
                 "transformers_model_slug": "mistralai/Mistral-7B-Instruct-v0.1",
@@ -364,7 +366,7 @@ class ConfigLoader:
             },
             "Language": {
                 "language": self.language,
-                "end_conversation_keywords": self.end_conversation_keywordss,
+                "end_conversation_keywords": self.end_conversation_keywords,
                 "goodbye_npc_response": self.goodbye_npc_response,
                 "collecting_thoughts_npc_response": self.collecting_thoughts_npc_response,
             },
@@ -448,6 +450,8 @@ class ConfigLoader:
                 "llava_image_message_depth": self.llava_image_message_depth,
                 "llava_image_message": self.llava_image_message,
                 "paddle_ocr": self.paddle_ocr,
+                "ocr_resolution": self.ocr_resolution,
+                "clip_resolution": self.clip_resolution,
             },
             "transformers": {
                 "transformers_model_slug": self.transformers_model_slug,
