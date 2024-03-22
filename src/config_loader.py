@@ -175,7 +175,7 @@ class ConfigLoader:
             },
             "Language": {
                 "language": "en",
-                "end_conversation_keyword": [
+                "end_conversation_keywords": [
                     "Goodbye",
                     "Farewell",
                     "Bye",
@@ -364,7 +364,7 @@ class ConfigLoader:
             },
             "Language": {
                 "language": self.language,
-                "end_conversation_keyword": self.end_conversation_keyword,
+                "end_conversation_keywords": self.end_conversation_keywordss,
                 "goodbye_npc_response": self.goodbye_npc_response,
                 "collecting_thoughts_npc_response": self.collecting_thoughts_npc_response,
             },

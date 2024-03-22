@@ -32,7 +32,7 @@ class Transcriber:
         self.debug_use_mic = self.config.debug_use_mic
         self.default_player_response = self.config.default_player_response
         self.debug_exit_on_first_exchange = self.config.debug_exit_on_first_exchange
-        self.end_conversation_keyword = self.config.end_conversation_keyword
+        self.end_conversation_keywords = self.config.end_conversation_keywords
 
         self.call_count = 0
 

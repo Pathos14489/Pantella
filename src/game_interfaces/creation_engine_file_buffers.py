@@ -2,6 +2,7 @@ from src.game_interfaces.base_interface import BaseGameInterface
 from src.logging import logging, time
 import src.utils as utils
 import os
+import random
 
 valid_games = ["fallout4","skyrim","fallout4vr","skyrimvr"]
 interface_slug = "creation_engine_file_buffers"
@@ -519,8 +520,14 @@ class GameInterface(BaseGameInterface):
             latest_character.say(self.conversation_manager.config.goodbye_npc_response+'.') # let the player know that the conversation is ending using the latest character in the conversation that isn't the player to say it
 
         perspective_name, _, _ = character.get_perspective_player_identity() # get perspective name - How the NPC refers to the player
-        self.conversation_manager.messages.append({"role": perspective_name, "content": self.conversation_manager.config.end_conversation_keyword+'.'})
-        self.conversation_manager.messages.append({"role": character.name, "content": self.conversation_manager.config.end_conversation_keyword+'.'})
+        random_goodbye_1 = random.choice(self.conversation_manager.config.end_conversation_keywords) # get random goodbye line from player
+        random_goodbye_2 = random.choice(self.conversation_manager.config.end_conversation_keywords) # get random goodbye line from player
+        if random_goodbye_1.endswith('.'):
+            random_goodbye_1 = random_goodbye_1[:-1]
+        if random_goodbye_2.endswith('.'):
+            random_goodbye_2 = random_goodbye_2[:-1]
+        self.conversation_manager.messages.append({"role": perspective_name, "content": random_goodbye_1+'.'})
+        self.conversation_manager.messages.append({"role": character.name, "content": random_goodbye_2+'.'})
 
         self.summarize_all_summaries() # save conversation to memory
         logging.info('Conversation ended.')
