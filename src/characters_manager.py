@@ -1,6 +1,11 @@
 from src.logging import logging
 import src.character_manager as character_manager # Character class
 import src.utils as utils
+
+class CharacterDoesNotExist(Exception):
+    """Exception raised when NPC name cannot be found in characterDB"""
+    pass
+
 class Characters:
     def __init__(self, conversation_manager):
         self.active_characters = {}
@@ -128,7 +133,7 @@ class Characters:
             replacement_dict["language"] = self.conversation_manager.language_info['language']
 
         replacement_dict["context"] = ""
-        context_string = self.conversation_manager.game_state_manager.load_context_string()
+        context_string = self.conversation_manager.game_interface.get_current_context_string()
         if context_string is not None and context_string != "":
             replacement_dict["context"] = context_string
 
