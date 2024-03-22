@@ -1,18 +1,36 @@
+from src.game_interfaces.base_interface import BaseGameInterface
 from src.logging import logging, time
 import src.utils as utils
 import os
 
-class CharacterDoesNotExist(Exception):
-    """Exception raised when NPC name cannot be found in characterDB"""
-    pass
+valid_games = ["fallout4","skyrim","fallout4vr","skyrimvr"]
+interface_slug = "creation_engine_file_buffers"
 
-
-class GameStateManager:
-    def __init__(self, conversation_manager):
-        self.conversation_manager = conversation_manager
-        self.game_path = self.conversation_manager.config.game_path
+class GameInterface(BaseGameInterface):
+    def __init__(self,conversation_manager):
+        super().__init__(conversation_manager, valid_games, interface_slug)
+        if not os.path.exists(f"{self.config.game_path}"):
+            self.ready = False
+            logging.error(f"Game path does not exist: {self.config.game_path}")
+        else:
+            if not os.path.exists(self.config.game_path+'/_mantella_skyrim_folder.txt'):
+                logging.warn(f'''Warning: Could not find _mantella_skyrim_folder.txt in {self.config.game_path}.\nIf you have not yet casted the Mantella spell in-game you can safely ignore this message.\nIf you have casted the Mantella spell please check that your\nMantellaSoftware/config.json "skyrim_folder" has been set correctly\n(instructions on how to set this up are in the config file itself).\nIf you are still having issues, a list of solutions can be found here: \nhttps://github.com/art-from-the-machine/Mantella#issues-qa\n''')
+        if not os.path.exists(self.mod_voice_dir):
+            raise FileNotFoundError(f"Mod voice directory not found at {self.mod_voice_dir}")
         self.prev_game_time = ''
+        logging.info("Loading creation engine file buffers game interface")
 
+    @property
+    def game_path(self):
+        return self.config.game_path
+    
+    @property
+    def mod_path(self):
+        return self.config.mod_path
+    
+    @property
+    def mod_voice_dir(self):
+        return self.mod_path + "\\Sound\\Voice\\Mantella.esp"
 
     def write_game_info(self, text_file_name, text):
         max_attempts = 2
@@ -143,7 +161,7 @@ class GameStateManager:
         player_gender = self.load_data_when_available('_mantella_player_gender', '')
         return player_gender
     
-    def load_context_string(self):
+    def get_current_context_string(self):
         """Wait for context string to populate"""
         
         with open(f'{self.game_path}/_mantella_context_string.txt', 'r', encoding='utf-8') as f:
@@ -151,7 +169,7 @@ class GameStateManager:
         return context_string
     
     def queue_actor_method(self, actor_character, method_name, *args):
-        """Call a method on an actor in the game"""
+        """Queue an arbitrary method to be run on the actor in game via the game interface."""
         logging.info(f'Calling {method_name} on {actor_character.name}...')
         string_id = actor_character.ref_id
         if len(string_id) < 8:
@@ -178,12 +196,12 @@ class GameStateManager:
                 else:
                     time.sleep(delay_between_attempts)
 
-    def load_radiant_dialogue(self):
+    def is_radiant_dialogue(self):
         with open(f'{self.game_path}/_mantella_radiant_dialogue.txt', 'r', encoding='utf-8') as f: # check if radiant dialogue is enabled
             radiant_dialogue = f.readline().strip().lower()
         return radiant_dialogue == 'true'
 
-    def load_conversation_ended(self):
+    def is_conversation_ended(self):
         with open(f'{self.game_path}/_mantella_end_conversation.txt', 'r', encoding='utf-8') as f: # check if conversation has ended
             conversation_ended = f.readline().strip().lower()
         return conversation_ended == 'true'
@@ -210,7 +228,7 @@ class GameStateManager:
         player_name = self.load_player_name()
         player_race = self.load_player_race()
         player_gender = self.load_player_gender()
-        radiant_dialogue = self.load_radiant_dialogue() # get the radiant dialogue setting from _mantella_radiant_dialogue.txt
+        radiant_dialogue = self.is_radiant_dialogue() # get the radiant dialogue setting from _mantella_radiant_dialogue.txt
 
         character_name, character_ref_id, character_base_id, location, in_game_time = self.write_dummy_game_info(character_name)
 
@@ -374,7 +392,7 @@ class GameStateManager:
             player_name = self.load_player_name() # get the player's name from _mantella_player_name.txt
             player_race = self.load_player_race() # get the player's race from _mantella_player_race.txt
             player_gender = self.load_player_gender() # get player's gender from _mantella_player_gender.txt
-            radiant_dialogue = self.load_radiant_dialogue() # get the radiant dialogue setting from _mantella_radiant_dialogue.txt    
+            radiant_dialogue = self.is_radiant_dialogue() # get the radiant dialogue setting from _mantella_radiant_dialogue.txt    
             # tell Skyrim papyrus script to start waiting for voiceline input
             self.write_game_info('_mantella_end_conversation', 'False')        
         
