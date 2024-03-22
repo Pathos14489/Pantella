@@ -11,7 +11,6 @@ class base_LLM():
         self.conversation_manager = conversation_manager
         self.config = self.conversation_manager.config
         self.tokenizer = None
-        self.token_limit = self.conversation_manager.token_limit
         self.language_info = self.conversation_manager.language_info
         
         self.inference_engine_name = inference_engine_name
@@ -23,6 +22,10 @@ class base_LLM():
         self.banned_chars = ['*', '(', ')', '[', ']', '{', '}', "\"" ]
 
         self.prompt_style = "normal"
+
+    @property
+    def maximum_local_tokens(self):
+        return self.config.maximum_local_tokens
 
     @property
     def EOS_token(self):
@@ -416,8 +419,8 @@ class base_LLM():
 
                             sentence = '' # reset the sentence for the next iteration
 
-                            end_conversation = self.conversation_manager.game_state_manager.load_conversation_ended() # check if the conversation has ended
-                            radiant_dialogue_update = self.conversation_manager.game_state_manager.load_radiant_dialogue() # check if the conversation has switched from radiant to multi NPC
+                            end_conversation = self.conversation_manager.game_interface.is_conversation_ended() # check if the conversation has ended
+                            radiant_dialogue_update = self.conversation_manager.game_interface.is_radiant_dialogue() # check if the conversation has switched from radiant to multi NPC
                             # stop processing LLM response if:
                             # max_response_sentences reached (and the conversation isn't radiant)
                             # conversation has switched from radiant to multi NPC (this allows the player to "interrupt" radiant dialogue and include themselves in the conversation)
