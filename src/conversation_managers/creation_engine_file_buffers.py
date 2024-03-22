@@ -59,7 +59,7 @@ class ConversationManager(BaseConversationManager):
 
     def check_new_joiner(self):
         new_character_joined = self.get_if_new_character_joined() # check if new character has been added to conversation and switch to Single Prompt Multi-NPC conversation if so
-        if new_character_joined or (self.radiant_dialogue and self.character_manager.active_character_count() > 1): # if new character has joined the conversation or radiant dialogue is being used and there are more than one active characters, switch to Single Prompt Multi-NPC conversation
+        if new_character_joined: # if new character has joined the conversation or radiant dialogue is being used and there are more than one active characters, switch to Single Prompt Multi-NPC conversation
             try: # load character info, location and other gamestate data when data is available - Starts watching the _mantella_ files in the Skyrim folder and waits for the player to select an NPC
                 character_info, self.current_location, self.current_in_game_time, is_generic_npc, self.player_name, player_race, player_gender, self.conversation_started_radiant = self.game_interface.load_game_state()
             except characters_manager.CharacterDoesNotExist as e:
@@ -180,7 +180,12 @@ class ConversationManager(BaseConversationManager):
             self.update_game_state()
 
             # check if user is ending conversation
-            if (self.transcriber.activation_name_exists(transcript_cleaned, self.config.end_conversation_keyword.lower())) or (self.transcriber.activation_name_exists(transcript_cleaned, 'good bye')) or (self.transcriber.activation_name_exists(transcript_cleaned, 'goodbye')) or self.conversation_ended:
+            end_convo = False
+            for keyword in self.config.end_conversation_keywords:
+                if self.transcriber.activation_name_exists(transcript_cleaned, keyword.lower()):
+                    end_convo = True
+                    break
+            if end_convo or self.conversation_ended:
                 # Detect who the player is talking to
                 name_groups = []
                 for character in self.character_manager.active_characters.values():

@@ -66,15 +66,13 @@ class BaseConversationManager:
                     if self.character_manager.active_character_count() > 1: # if multi NPC conversation use the player's actual name
                         formatted_messages.append({
                             'role': self.config.user_name,
-                            'name': self.player_name,
-                            'content': msg['content']
+                            'content': self.player_name + ": " + msg['content']
                         })
                     else: # if single NPC conversation use the NPC's perspective player name
                         perspective_player_name, perspective_player_description, trust = self.chat_manager.active_character.get_perspective_player_identity()
                         formatted_messages.append({
                             'role': self.config.user_name,
-                            'name': perspective_player_name,
-                            'content': msg['content']
+                            'content': perspective_player_name + ": " + msg['content']
                         })
                 else:
                     if msg['role'] == self.config.system_name:
@@ -85,8 +83,7 @@ class BaseConversationManager:
                     else:
                         formatted_messages.append({
                             'role': self.config.assistant_name,
-                            'name': msg['role'],
-                            'content': msg['content']
+                            'content': msg['role'] + ": " + msg['content']
                         })
             else: # Format for Normal LLM Prompting
                 if msg['role'] == "[player]":

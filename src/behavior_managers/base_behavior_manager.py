@@ -43,7 +43,7 @@ class base_BehaviorManager():
                 if behavior.keyword is not None and behavior.keyword.lower() == keyword.lower():
                     logging.info(f"Behavior triggered: {behavior.keyword}")
                     try:
-                        behavior.run(True, next_author, sentence)
+                        behavior.run(True, next_author, sentence=sentence)
                         return behavior
                     except Exception as e:
                         logging.error(f"Error running behavior {behavior.keyword}: {e}")
@@ -65,7 +65,7 @@ class base_BehaviorManager():
             if npc_contains_keyword:
                 logging.info(f"Behavior triggered: {behavior.keyword}")
                 try:
-                    behavior.run(True, sentence=sentence)
+                    behavior.run(True, next_author, sentence=sentence)
                     return behavior
                 except Exception as e:
                     logging.error(f"Error running behavior {behavior.keyword}: {e}")
@@ -86,7 +86,7 @@ class base_BehaviorManager():
             if npc_contains_keyword:
                 logging.info(f"Behavior triggered: {behavior.keyword}")
                 try:
-                    behavior.run(True, sentence)
+                    behavior.run(True, next_author, sentence=sentence)
                     return behavior
                 except Exception as e:
                     logging.error(f"Error running behavior {behavior.keyword}: {e}")

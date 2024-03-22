@@ -92,6 +92,7 @@ class LLM(chat_LLM.base_LLM):
             logging.info(f"Running Mantella with '{self.config.llm}'. The language model chosen can be changed via config.json")
 
         self.config.message_signifier = ": " # The signifier used to separate the speaker from the message in the input to the language model
+        self.config.stop.append("\n")
     
     @utils.time_it
     def create(self, messages):

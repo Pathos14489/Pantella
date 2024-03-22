@@ -175,7 +175,16 @@ class ConfigLoader:
             },
             "Language": {
                 "language": "en",
-                "end_conversation_keyword": "Goodbye",
+                "end_conversation_keyword": [
+                    "Goodbye",
+                    "Farewell",
+                    "Bye",
+                    "Good bye",
+                    "Have a good day.",
+                    "Have a good night.",
+                    "Goodnight",
+                    "Good night",
+                ],
                 "goodbye_npc_response": "Safe travels",
                 "collecting_thoughts_npc_response": "I need to think for a moment."
             },
@@ -432,6 +441,8 @@ class ConfigLoader:
                 "ocr_filter": self.ocr_filter,
                 "append_system_image_near_end": self.append_system_image_near_end,
                 "llava_image_message_depth": self.llava_image_message_depth,
+                "llava_image_message": self.llava_image_message,
+                "paddle_ocr": self.paddle_ocr,
             },
             "transformers": {
                 "transformers_model_slug": self.transformers_model_slug,
