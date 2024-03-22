@@ -7,6 +7,7 @@ class trade(base_behavior.BaseBehavior):
         self.keyword = "Give"
         self.description = "If {perspective_player_name} wants full access to your inventory, and you want to let them have it, begin your response with 'Trade:'."
         self.example = "'Can we please trade items?' 'Trade: Of course my friend, what do you need?'"
+        self.valid_games = ["skyrim","skyrimvr"]
     
     def run(self, run=False, speaker_character=None, sentence=None):
         if run:

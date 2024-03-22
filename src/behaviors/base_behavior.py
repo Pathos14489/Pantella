@@ -16,6 +16,7 @@ class BaseBehavior():
         self.npc_pre_keywords = [] # Keywords that the NPC can say that will trigger this behavior before generating the voiceline
         self.npc_post_keywords = [] # Keywords that the NPC can say that will trigger this behavior after generating the voiceline
         self.activation_sentences = [] # Sentences that will trigger this behavior
+        self.valid_games = [] # List of game IDs that this behavior is valid for
 
     @property
     def conversation_manager(self):
@@ -45,7 +46,8 @@ class BaseBehavior():
         return True
     
     def queue_actor_method(self, speaker_character, method_name, *args):
-        return self.manager.conversation_manager.game_state_manager.queue_actor_method(speaker_character, method_name, *args)
+        """Queue an arbitrary method to be run on the actor in game via the game interface."""
+        return self.manager.conversation_manager.game_interface.queue_actor_method(speaker_character, method_name, *args)
     
     def new_game_event(self, game_event_string):
         if not game_event_string.startswith("*"):

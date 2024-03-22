@@ -7,6 +7,7 @@ class forgiven(base_behavior.BaseBehavior):
         self.keyword = "Forgiven"
         self.description = "If {perspective_player_name} renounces their words, or to end combat, begin your response with 'Forgiven:'."
         self.example = "'I'm sorry, I didn't mean it!' 'Forgiven: Alright, I'll forgive you.'"
+        self.valid_games = ["skyrim","skyrimvr"]
     
     def run(self, run=False, speaker_character=None, sentence=None):
         if run:

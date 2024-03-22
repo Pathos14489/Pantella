@@ -7,6 +7,7 @@ class offended(base_behavior.BaseBehavior):
         self.keyword = "Offended"
         self.description = "If {perspective_player_name} says something hurtful / offensive, begin your response with 'Offended:'."
         self.example = "'Have you washed lately?' 'Offended: How dare you!'"
+        self.valid_games = ["skyrim","skyrimvr"]
     
     def run(self, run=False, speaker_character=None, sentence=None):
         if run:

@@ -7,6 +7,7 @@ class take(base_behavior.BaseBehavior):
         self.keyword = "Take"
         self.description = "If {perspective_player_name} wants to give you something, and you want to accept it, begin your response with 'Take:'."
         self.example = "'Can I give you this?' 'Take: Thank you, I appreciate it.'"
+        self.valid_games = ["skyrim","skyrimvr"]
     
     def run(self, run=False, speaker_character=None, sentence=None):
         if run:

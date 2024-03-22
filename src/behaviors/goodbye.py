@@ -7,6 +7,7 @@ class goodbye(base_behavior.BaseBehavior):
         self.keyword = "Goodbye"
         self.description = "If {perspective_player_name} is leaving or ending the conversation, this behavior will be called."
         self.npc_post_keywords = ["goodbye", "bye", "farewell", "safe travels", "get away from me", "please leave me alone"]
+        self.valid_games = ["skyrim","skyrimvr"]
     
     def run(self, run=False, speaker_character=None, sentence=None):
         if run:

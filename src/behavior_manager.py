@@ -1,96 +1,36 @@
-import os
 from src.logging import logging
+import os
+import importlib
+import json
 
-behaviors_dir = os.path.dirname(os.path.abspath(__file__)) + "/behaviors/"
+Manager_Types = {}
+# Get all Managers from src/behavior_managers/ and add them to Manager_Types
+for file in os.listdir(os.path.join(os.path.dirname(__file__), "behavior_managers/")):
+    if file.endswith(".py") and not file.startswith("__"):
+        module_name = file[:-3]
+        if module_name != "base_behavior_manager":
+            module = importlib.import_module(f"src.behavior_managers.{module_name}")
+            Manager_Types[module.manager_slug] = module    
 
-class BehaviorManager():
-    def __init__(self,conversation_manager):
-        self.conversation_manager = conversation_manager
-        self.behaviors = []
-        self.named_behaviors = {}
-        for filename in os.listdir(behaviors_dir):
-            if filename == "base_behavior.py":
-                continue
-            if filename.endswith(".py") and not filename.startswith("__"):
-                logging.info("Loading behavior " + filename)
-                behavior_name = filename.split(".py")[0]
-                behavior = __import__("src.behaviors." + behavior_name, fromlist=[behavior_name])
-                behavior = getattr(behavior, behavior_name)(self)
-                # logging.info(behavior)
-                if behavior.run(False) == "BASEBEHAVIOR":
-                    logging.error("BaseBehavior run() called for " + behavior_name + ", this should be overwritten by the child class!")
-                else:
-                    logging.info("Loaded behavior " + filename)
-                    self.behaviors.append(behavior)
-                    self.named_behaviors[behavior_name] = behavior
 
-    @property
-    def behavior_keywords(self):
-        return [behavior.keyword for behavior in self.behaviors]
+# Create Manager object using the config provided
     
-    def evaluate(self, keyword, next_author, sentence): # Returns True if the keyword was found and the behavior was run, False otherwise
-        logging.info(f"Evaluating keyword {keyword} in sentence {sentence}")
-        for behavior in self.behaviors:
-            if behavior.valid():
-                if behavior.keyword is not None and behavior.keyword.lower() == keyword.lower():
-                    logging.info(f"Behavior triggered: {behavior.keyword}")
-                    try:
-                        behavior.run(True, next_author, sentence)
-                        return behavior
-                    except Exception as e:
-                        logging.error(f"Error running behavior {behavior.keyword}: {e}")
-                        raise e
-        return None
-    
-    def pre_sentence_evaluate(self, next_author, sentence): # Evaluates just the sentence, returns the behavior that was run
-        logging.info(f"Evaluating sentence {sentence}")
-        for behavior in self.behaviors:
-            npc_keywords = behavior.npc_pre_keywords
-            npc_words = sentence.replace(",", "").replace(".", "").replace("!", "").replace("?", "").lower()
-            npc_contains_keyword = False
-            for npc_keyword in npc_keywords:
-                if npc_keyword.lower() in npc_words:
-                    npc_contains_keyword = True
-            for activation_sentence in behavior.activation_sentences:
-                if activation_sentence.lower() in sentence.lower() or sentence.lower() in activation_sentence.lower():
-                    npc_contains_keyword = True
-            if npc_contains_keyword:
-                logging.info(f"Behavior triggered: {behavior.keyword}")
-                try:
-                    behavior.run(True, sentence=sentence)
-                    return behavior
-                except Exception as e:
-                    logging.error(f"Error running behavior {behavior.keyword}: {e}")
-        return None
-    
-    def post_sentence_evaluate(self,next_author, sentence): # Evaluates just the sentence, returns the behavior that was run
-        logging.info(f"Evaluating sentence {sentence}")
-        for behavior in self.behaviors:
-            npc_keywords = behavior.npc_post_keywords
-            npc_words = sentence.replace(",", "").replace(".", "").replace("!", "").replace("?", "").lower()
-            npc_contains_keyword = False
-            for npc_keyword in npc_keywords:
-                if npc_keyword.lower() in npc_words:
-                    npc_contains_keyword = True
-            for activation_sentence in behavior.activation_sentences:
-                if activation_sentence.lower() in sentence.lower() or sentence.lower() in activation_sentence.lower():
-                    npc_contains_keyword = True
-            if npc_contains_keyword:
-                logging.info(f"Behavior triggered: {behavior.keyword}")
-                try:
-                    behavior.run(True, sentence)
-                    return behavior
-                except Exception as e:
-                    logging.error(f"Error running behavior {behavior.keyword}: {e}")
-        return None
-    
-    def get_behavior_summary(self):
-        summary = ""
-        for behavior in self.behaviors:
-            if behavior.valid():
-                if behavior.description is not None:
-                    summary += f"{behavior.description}\n"
-                    if behavior.example is not None:
-                        summary += f"Example: {behavior.example}"
-                    summary += "\n"
-        return summary
+def create_manager(conversation_manager):
+    config = conversation_manager.config
+    if config.behavior_manager != "auto": # if a specific behavior manager is specified
+        if config.behavior_manager not in Manager_Types:
+            logging.error(f"Could not find behavior manager: {config.behavior_manager}! Please check your config.json file and try again!")
+            input("Press enter to continue...")
+            raise ValueError(f"Could not find behavior manager: {config.behavior_manager}! Please check your config.json file and try again!")
+        module = Manager_Types[config.behavior_manager]
+        if config.game_id not in module.valid_games:
+            logging.error(f"Game '{config.game_id}' not supported by behavior manager {module.manager_slug}")
+            input("Press enter to continue...")
+            raise ValueError(f"Game '{config.game_id}' not supported by behavior manager {module.manager_slug}")
+        manager = module.BehaviorManager(conversation_manager)
+        return manager
+    else: # if no specific behavior manager is specified
+        game_config = config.game_configs[config.game_id]
+        module = Manager_Types[game_config['behavior_manager']]
+        manager = module.BehaviorManager(conversation_manager)
+        return manager

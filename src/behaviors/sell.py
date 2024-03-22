@@ -14,6 +14,7 @@ class sell(base_behavior.BaseBehavior):
             "I'm interested in selling something to you.",
             "I'm looking to sell something.",
         ]
+        self.valid_games = ["skyrim","skyrimvr"]
     
     def run(self, run=False, speaker_character=None, sentence=None):
         if run:

@@ -13,6 +13,7 @@ class buy(base_behavior.BaseBehavior):
             "I'm looking to buy something.",
             "Sure, I can take a look at what you have to sell.",
         ]
+        self.valid_games = ["skyrim","skyrimvr"]
     
     def run(self, run=False, speaker_character=None, sentence=None):
         if run:

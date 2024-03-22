@@ -7,6 +7,7 @@ class strip(base_behavior.BaseBehavior):
         self.keyword = "Strip"
         self.description = "If {perspective_player_name} wants you to take off all your clothes, and you're comfortable and willing to do so, begin your response with 'Strip:'."
         self.example = "'Take off your clothes.' 'Strip: Okay, here goes.'"
+        self.valid_games = ["skyrim","skyrimvr"]
     
     def run(self, run=False, speaker_character=None, sentence=None):
         if run:
