@@ -120,17 +120,17 @@ class LLM(chat_LLM.base_LLM):
                     completion = completion.choices[0].text
                 except:
                     pass
-                if completion is None:
+                if completion is None or type(completion) != str:
                     try:
                         completion = completion.choices[0].message.content
                     except:
                         pass
-                if completion is None:
+                if completion is None or type(completion) != str:
                     try:
                         completion = completion.choices[0].delta.content
                     except:
                         pass
-                if completion is None:
+                if completion is None or type(completion) != str:
                     logging.error(f"Could not get completion from OpenAI-style API. Please check your API key and internet connection.")
                     input("Press Enter to exit.")
                     raise ValueError(f"Could not get completion from OpenAI-style API. Please check your API key and internet connection.")
