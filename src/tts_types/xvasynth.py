@@ -31,6 +31,11 @@ class Synthesizer(base_tts.base_Synthesizer):
         self.base_speaker_emb = ''
         
         # voice models path
+        if not os.path.exists(f"{self.xvasynth_path}\\resources\\"):
+            logging.error(f"xVASynth path invalid: {self.xvasynth_path}")
+            logging.error(f"Please ensure that the path to xVASynth is correct in config.json (xvasynth_path)")
+            input('\nPress any key to stop Mantella...')
+            raise FileNotFoundError(f"xVASynth path invalid: {self.xvasynth_path}")
         self.model_path = f"{self.xvasynth_path}/resources/app/models/{self.game}/"
 
         self.synthesize_url = f'{self.config.xvasynth_base_url}/synthesize'

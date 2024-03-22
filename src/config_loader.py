@@ -3,58 +3,68 @@ import json
 import os
 import flask
 
+game_configs = {}
+# Get all game configs from src/game_configs/ and add them to game_configs
+for file in os.listdir(os.path.join(os.path.dirname(__file__), "../game_configs/")):
+    if file.endswith(".json") and not file.startswith("__"):
+        game_id = file[:-5]
+        game_configs[game_id] = json.load(open(os.path.join(os.path.dirname(__file__), "../game_configs", file)))
+
 class ConfigLoader:
     def __init__(self, config_path='config.json'):
         self.config_path = config_path
         self.prompt_styles = {}
         self._raw_prompt_styles = {}
         self.load()
+        self.game_configs = game_configs
+        self.current_game_config = game_configs[self.game_id]
         logging.log_file = self.logging_file_path # Set the logging file path
         self.get_prompt_styles()
         self.ready = True
-             
-        # don't trust; verify; test subfolders
-        if not os.path.exists(f"{self.game_path}"):
-            self.ready = False
-            logging.error(f"Game path does not exist: {self.game_path}")
-        else:
-            if not os.path.exists(self.game_path+'/_mantella__skyrim_folder.txt'):
-                logging.warn(f'''
-Warning: Could not find _mantella__skyrim_folder.txt in {self.game_path}. 
-If you have not yet casted the Mantella spell in-game you can safely ignore this message. 
-If you have casted the Mantella spell please check that your 
-MantellaSoftware/config.json "skyrim_folder" has been set correctly 
-(instructions on how to set this up are in the config file itself).
-If you are still having issues, a list of solutions can be found here: 
-https://github.com/art-from-the-machine/Mantella#issues-qa
-''')
-
-        if not os.path.exists(f"{self.xvasynth_path}\\resources\\"):
-            self.ready = False
-            logging.error(f"xVASynth path does not exist: {self.xvasynth_path}")
-        if not os.path.exists(self.mod_voice_dir):
-            self.ready = False
-            logging.error(f"Mantella mod path does not exist: {self.mod_path}")
 
     @property
-    def mod_voice_dir(self):
-        return self.mod_path + "\\Sound\\Voice\\Mantella.esp"
+    def game_path(self):
+        return self.current_game_config["game_path"]
+    
+    @property
+    def mod_path(self):
+        return self.current_game_config["mod_path"]
 
     def save(self):
+        """Save the config to the config file"""
+        try:
+            export_obj = self.export()
+        except Exception as e:
+            logging.error(f"Could not save config file to {self.config_path}. Error: {e}")
+            raise e
         try:
             with open(self.config_path, 'w') as f:
-                json.dump(self.export(), f, indent=4)
+                json.dump(export_obj, f, indent=4)
             logging.info(f"Config file saved to {self.config_path}")
         except Exception as e:
             logging.error(f"Could not save config file to {self.config_path}. Error: {e}")
+            raise e
 
     def load(self):
+        """Load the config from the config file and set the settings to the loader. If the config file does not exist, create it with the default settings. If a setting is missing from the config file, set it to the default setting."""
         print(f"Loading config from {self.config_path}")
         save = False
         default = self.default()
         if os.path.exists(self.config_path):
             # If the config file does not exist, create it
-            config = json.load(open(self.config_path))
+            try:
+                config = json.load(open(self.config_path))
+            except:
+                new_config = input(f"Error: Could not load config file from {self.config_path}. Do you want to create a new config file with default settings? (y/n): ")
+                if new_config.lower() == "y":
+                    config = self.default()
+                    save = True
+                    print(f"Saving default config file to {self.config_path}")
+                else:
+                    logging.error(f"Could not load config file from {self.config_path}.")
+                    input("Press enter to continue...")
+                    raise ValueError(f"Could not load config file from {self.config_path}. Exiting...")
+
         else:
             logging.error(f"\"{self.config_path}\" does not exist! Creating default config file...")
             config = self.default()
@@ -75,45 +85,54 @@ https://github.com/art-from-the-machine/Mantella#issues-qa
         for key in default: # Set the config settings to the loader
             for sub_key in default[key]:
                 # print(f"Setting {sub_key} to {config[key][sub_key]}")
-                setattr(self, sub_key, config[key][sub_key])
+                if "_path" in sub_key:
+                    setattr(self, sub_key, config[key][sub_key].replace("\\", "/").replace("/","\\"))
+                else:
+                    setattr(self, sub_key, config[key][sub_key])
+
+        if self.game_id not in game_configs:
+            logging.error(f"Game id {self.game_id} not found in game_configs directory. Please add a game config file for {self.game_id} or change the game_id in config.json to a valid game id.")
+            input("Press enter to continue...")
+            raise ValueError(f"Game id {self.game_id} not found in game_configs directory. Please add a game config file for {self.game_id} or change the game_id in config.json to a valid game id.")
 
         if save:
             self.save()
         
-        self.format_paths()
+        # self.format_paths()
         print(f"Config loaded from {self.config_path}")
     
-    def format_paths(self):
-        self.game_path = self.game_path.replace("\\", "/").replace("/","\\")
-        self.mod_path = self.mod_path.replace("\\", "/").replace("/","\\")
-        self.character_database_file = self.character_database_file.replace("\\", "/").replace("/","\\")
-        self.voice_model_ref_ids_file = self.voice_model_ref_ids_file.replace("\\", "/").replace("/","\\")
-        self.xvasynth_path = self.xvasynth_path.replace("\\", "/").replace("/","\\")
-        self.xtts_server_folder = self.xtts_server_folder.replace("\\", "/").replace("/","\\")
-        self.logging_file_path = self.logging_file_path.replace("\\", "/").replace("/","\\")
-        self.language_support_file_path = self.language_support_file_path.replace("\\", "/").replace("/","\\")
-        self.secret_key_file_path = self.secret_key_file_path.replace("\\", "/").replace("/","\\")
-        # Make sure the paths are all absolute
-        if not os.path.isabs(self.game_path):
-            self.game_path = os.path.join(os.path.dirname(__file__), "..", self.game_path)
-        if not os.path.isabs(self.mod_path):
-            self.mod_path = os.path.join(os.path.dirname(__file__), "..", self.mod_path)
-        if not os.path.isabs(self.character_database_file):
-            self.character_database_file = os.path.join(os.path.dirname(__file__), "..", self.character_database_file)
-        if not os.path.isabs(self.voice_model_ref_ids_file):
-            self.voice_model_ref_ids_file = os.path.join(os.path.dirname(__file__), "..", self.voice_model_ref_ids_file)
-        if not os.path.isabs(self.xvasynth_path):
-            self.xvasynth_path = os.path.join(os.path.dirname(__file__), "..", self.xvasynth_path)
-        if not os.path.isabs(self.xtts_server_folder):
-            self.xtts_server_folder = os.path.join(os.path.dirname(__file__), "..", self.xtts_server_folder)
-        if not os.path.isabs(self.logging_file_path):
-            self.logging_file_path = os.path.join(os.path.dirname(__file__), "..", self.logging_file_path)
-        if not os.path.isabs(self.language_support_file_path):
-            self.language_support_file_path = os.path.join(os.path.dirname(__file__), "..", self.language_support_file_path)
-        if not os.path.isabs(self.secret_key_file_path):
-            self.secret_key_file_path = os.path.join(os.path.dirname(__file__), "..", self.secret_key_file_path)
+    # def format_paths(self):
+    #     self.game_path = self.game_path.replace("\\", "/").replace("/","\\")
+    #     self.mod_path = self.mod_path.replace("\\", "/").replace("/","\\")
+    #     self.character_database_file = self.character_database_file.replace("\\", "/").replace("/","\\")
+    #     self.voice_model_ref_ids_file = self.voice_model_ref_ids_file.replace("\\", "/").replace("/","\\")
+    #     self.xvasynth_path = self.xvasynth_path.replace("\\", "/").replace("/","\\")
+    #     self.xtts_server_folder = self.xtts_server_folder.replace("\\", "/").replace("/","\\")
+    #     self.logging_file_path = self.logging_file_path.replace("\\", "/").replace("/","\\")
+    #     self.language_support_file_path = self.language_support_file_path.replace("\\", "/").replace("/","\\")
+    #     self.secret_key_file_path = self.secret_key_file_path.replace("\\", "/").replace("/","\\")
+    #     # Make sure the paths are all absolute
+    #     if not os.path.isabs(self.game_path):
+    #         self.game_path = os.path.join(os.path.dirname(__file__), "..", self.game_path)
+    #     if not os.path.isabs(self.mod_path):
+    #         self.mod_path = os.path.join(os.path.dirname(__file__), "..", self.mod_path)
+    #     if not os.path.isabs(self.character_database_file):
+    #         self.character_database_file = os.path.join(os.path.dirname(__file__), "..", self.character_database_file)
+    #     if not os.path.isabs(self.voice_model_ref_ids_file):
+    #         self.voice_model_ref_ids_file = os.path.join(os.path.dirname(__file__), "..", self.voice_model_ref_ids_file)
+    #     if not os.path.isabs(self.xvasynth_path):
+    #         self.xvasynth_path = os.path.join(os.path.dirname(__file__), "..", self.xvasynth_path)
+    #     if not os.path.isabs(self.xtts_server_folder):
+    #         self.xtts_server_folder = os.path.join(os.path.dirname(__file__), "..", self.xtts_server_folder)
+    #     if not os.path.isabs(self.logging_file_path):
+    #         self.logging_file_path = os.path.join(os.path.dirname(__file__), "..", self.logging_file_path)
+    #     if not os.path.isabs(self.language_support_file_path):
+    #         self.language_support_file_path = os.path.join(os.path.dirname(__file__), "..", self.language_support_file_path)
+    #     if not os.path.isabs(self.secret_key_file_path):
+    #         self.secret_key_file_path = os.path.join(os.path.dirname(__file__), "..", self.secret_key_file_path)
 
     def get_prompt_styles(self):
+        """Get the prompt styles from the prompt_styles directory"""
         logging.info("Getting prompt styles")
         prompt_styles_dir = os.path.join(os.path.dirname(__file__), "../prompt_styles/")
         for file in os.listdir(prompt_styles_dir):
@@ -148,18 +167,12 @@ https://github.com/art-from-the-machine/Mantella#issues-qa
     def default(self):
         return {
             "Game": {
-                "game_id": "skyrim" # skyrim or fallout4
+                "game_id": "skyrim", # skyrim, skyrimvr, fallout4 or fallout4vr
+                "conversation_manager": "auto",
+                "interface_type": "auto",
+                "behavior_manager": "auto",
+                "chat_manager": "auto"
             },
-            "Paths": {
-                "game_path": "C:\\Games\\Steam\\steamapps\\common\\Skyrim Special Edition",
-                "mod_path": "C:\\Modding\\MO2\\mods\\Mantella",
-                "character_database_file": "./data/020224_skyrim_characters_hex_ids.csv",
-                "voice_model_ref_ids_file": "./skyrim_voice_model_ids.json",
-                "xvasynth_path": "C:\\Games\\Steam\\steamapps\\common\\xVASynth",
-                "xtts_server_folder": "C:\\Users\\User\\Desktop\\xtts-api-server",
-                "logging_file_path": "./logging.log",
-                "language_support_file_path": "./data/language_support.csv"
-            },   
             "Language": {
                 "language": "en",
                 "end_conversation_keyword": "Goodbye",
@@ -186,7 +199,7 @@ https://github.com/art-from-the-machine/Mantella#issues-qa
                 "maximum_local_tokens": 4096,
                 "max_response_sentences": 999,
                 "wait_time_buffer": 0.5,
-                "stop": ["<im_end>","\n<im_end>"],
+                "stop": ["<im_end>","<im_end>"],
                 "BOS_token": "<im_start>",
                 "EOS_token": "<im_end>",
                 "message_signifier": "\n",
@@ -278,6 +291,7 @@ https://github.com/art-from-the-machine/Mantella#issues-qa
                 "sentences_per_voiceline": 3
             },
             "xVASynth": {
+                "xvasynth_path": "C:\\Games\\Steam\\steamapps\\common\\xVASynth",
                 "xvasynth_process_device": "cpu",
                 "pace": 1.0,
                 "use_cleanup": False,
@@ -285,6 +299,7 @@ https://github.com/art-from-the-machine/Mantella#issues-qa
                 "xvasynth_base_url": "http://127.0.0.1:8008"
             },
             "xTTS": {
+                "xtts_server_folder": "C:\\Users\\User\\Desktop\\xtts-api-server",
                 "xtts_base_url": "http://127.0.0.1:8020",
                 "xtts_data": {
                     "temperature": 0.75,
@@ -311,6 +326,10 @@ https://github.com/art-from-the-machine/Mantella#issues-qa
                 "add_voicelines_to_all_voice_folders": False
             },
             "Config": {
+                "character_database_file": "./data/020224_skyrim_characters_hex_ids.csv",
+                "voice_model_ref_ids_file": "./skyrim_voice_model_ids.json",
+                "logging_file_path": "./logging.log",
+                "language_support_file_path": "./data/language_support.csv",
                 "port": 8021
             }
         }
@@ -320,21 +339,14 @@ https://github.com/art-from-the-machine/Mantella#issues-qa
         with open('./settings_descriptions.json') as f:
             return json.load(f)
 
-
     def export(self):
         return {
             "Game": {
                 "game_id": self.game_id,
-            },
-            "Paths": {
-                "game_path": self.game_path,
-                "mod_path": self.mod_path,
-                "character_database_file": self.character_database_file,
-                "voice_model_ref_ids_file": self.voice_model_ref_ids_file,
-                "xvasynth_path": self.xvasynth_path,
-                "xtts_server_folder": self.xtts_server_folder,
-                "logging_file_path": self.logging_file_path,
-                "language_support_file_path": self.language_support_file_path,
+                "conversation_manager": self.conversation_manager,
+                "interface_type": self.interface_type,
+                "behavior_manager": self.behavior_manager,
+                "chat_manager": self.chat_manager
             },
             "Language": {
                 "language": self.language,
@@ -433,6 +445,7 @@ https://github.com/art-from-the-machine/Mantella#issues-qa
                 "sentences_per_voiceline": self.sentences_per_voiceline,
             },
             "xVASynth": {
+                "xvasynth_path": self.xvasynth_path,
                 "xvasynth_process_device": self.xvasynth_process_device,
                 "pace": self.pace,
                 "use_cleanup":self.use_cleanup,
@@ -440,6 +453,7 @@ https://github.com/art-from-the-machine/Mantella#issues-qa
                 "xvasynth_base_url": self.xvasynth_base_url,
             },
             "xTTS": {
+                "xtts_server_folder": self.xtts_server_folder,
                 "xtts_base_url": self.xtts_base_url,
                 "xtts_data": self.xtts_data,
                 "default_xtts_model": self.default_xtts_model,
@@ -457,6 +471,10 @@ https://github.com/art-from-the-machine/Mantella#issues-qa
                 "add_voicelines_to_all_voice_folders": self.add_voicelines_to_all_voice_folders,
             },
             "Config": {
+                "character_database_file": self.character_database_file,
+                "voice_model_ref_ids_file": self.voice_model_ref_ids_file,
+                "logging_file_path": self.logging_file_path,
+                "language_support_file_path": self.language_support_file_path,
                 "port": self.port,
             }
         }
@@ -473,11 +491,11 @@ https://github.com/art-from-the-machine/Mantella#issues-qa
         return typesobj
     
     def host_config_server(self):
-        app = flask.Flask(__name__)
-        @app.route('/config', methods=['GET'])
+        self.config_server_app = flask.Flask(__name__)
+        @self.config_server_app.route('/config', methods=['GET'])
         def get_config():
             return flask.jsonify(self.export())
-        @app.route('/config', methods=['POST'])
+        @self.config_server_app.route('/config', methods=['POST'])
         def post_config():
             data = flask.request.json
             for key in data:
@@ -488,18 +506,18 @@ https://github.com/art-from-the-machine/Mantella#issues-qa
             if not self.conversation_manager.in_conversation:
                 logging.info("Config updated and conversation manager not in a conversation. Restart the conversation manager to apply the new settings. - WILL BE FIXED IN FUTURE RELEASE")
             return flask.jsonify(self.export())
-        @app.route('/defaults', methods=['GET'])
+        @self.config_server_app.route('/defaults', methods=['GET'])
         def get_default():
             return flask.jsonify({
                 "defaultConfig": self.default(),
                 "types": self.default_types(),
                 "descriptions": self.descriptions()
             })
-        @app.route('/', methods=['GET'])
+        @self.config_server_app.route('/', methods=['GET'])
         def index(): # Return the index.html file
             return flask.send_file('../webconfigurator/index.html')
-        @app.route('/jquery-3.7.1.min.js', methods=['GET'])
+        @self.config_server_app.route('/jquery-3.7.1.min.js', methods=['GET'])
         def jquery():
             return flask.send_file('../webconfigurator/jquery-3.7.1.min.js')
-        app.run(port=self.port, threaded=True)
+        self.config_server_app.run(port=self.port, threaded=True)
         logging.info(f"Config server running on port http://localhost:{self.port}/")
