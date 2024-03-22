@@ -184,6 +184,11 @@ class ConfigLoader:
                     "Have a good night.",
                     "Goodnight",
                     "Good night",
+                    "See you later",
+                    "See you soon",
+                    "Be seeing you.",
+                    "Safe travels.",
+                    "Take care.",
                 ],
                 "goodbye_npc_response": "Safe travels",
                 "collecting_thoughts_npc_response": "I need to think for a moment."
