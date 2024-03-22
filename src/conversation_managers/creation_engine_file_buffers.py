@@ -78,8 +78,8 @@ class ConversationManager(BaseConversationManager):
             self.game_interface.write_game_info('_mantella_character_selection', 'True') # write to _mantella_character_selection.txt to indicate that the character has been successfully selected to the game
 
     def update_game_state(self):
-        self.conversation_ended = self.game_interface.load_conversation_ended() # wait for the game to indicate that the conversation has ended or not
-        self.radiant_dialogue = self.game_interface.load_radiant_dialogue() # check if radiant dialogue is being used
+        self.conversation_ended = self.game_interface.is_conversation_ended() # wait for the game to indicate that the conversation has ended or not
+        self.radiant_dialogue = self.game_interface.is_radiant_dialogue() # check if radiant dialogue is being used
         self.check_new_joiner() # check if new character has been added to conversation and switch to Single Prompt Multi-NPC conversation if so
         self.game_interface.update_game_events() # update game events before player input
         self.current_location = self.game_interface.get_current_location() # update current location each step of the conversation

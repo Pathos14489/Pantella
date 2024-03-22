@@ -1,4 +1,4 @@
-from src.game_interfaces.base_interface import BaseGameInterface
+from src.chat_managers.base_chat_manager import BaseChatManager
 from src.logging import logging
 import os
 import shutil
@@ -9,7 +9,7 @@ import asyncio
 valid_games = ["fallout4","skyrim","fallout4vr","skyrimvr"]
 chat_manager_slug = "creation_engine"
 
-class ChatManager(BaseGameInterface):
+class ChatManager(BaseChatManager):
     def __init__(self,conversation_manager):
         super().__init__(conversation_manager, valid_games, chat_manager_slug)
 
@@ -35,7 +35,7 @@ class ChatManager(BaseGameInterface):
         audio_file, subtitle = queue_output
         # The if block below checks if it's Fallout 4, if that's the case it will add the wav file in the mod_folder\Sound\Voice\Mantella.esp\ 
         # and alternate between two wavs to prevent access denied issues if Mantella.exe is trying to access a wav currently loaded in Fallout4
-        if self.game == "fallout4":
+        if self.game_id == "fallout4":
             if self.f4_use_wav_file1:
                 wav_file_to_use = self.f4_wav_file1
                 subtitle += " Mantella1"
@@ -75,7 +75,7 @@ class ChatManager(BaseGameInterface):
     def remove_files_from_voice_folders(self):
         for sub_folder in os.listdir(self.mod_voice_dir):
             try:
-                if self.game != "fallout4": # delete both the wav file and lip file if the game isn't Fallout4
+                if self.game_id != "fallout4": # delete both the wav file and lip file if the game isn't Fallout4
                     os.remove(f"{self.mod_voice_dir}/{sub_folder}/{self.wav_file}")
                     os.remove(f"{self.mod_voice_dir}/{sub_folder}/{self.lip_file}")
                 else: #if the game is Fallout 4 only delete the lip file
@@ -89,7 +89,7 @@ class ChatManager(BaseGameInterface):
         audio_file, subtitle = queue_output
         # The if block below checks if it's Fallout 4, if that's the case it will add the wav file in the mod_folder\Sound\Voice\Mantella.esp\ 
         # and alternate between two wavs to prevent access denied issues if Mantella.exe is trying to access a wav currently loaded in Fallout4
-        if self.game == "fallout4":
+        if self.game_id == "fallout4":
             if self.f4_use_wav_file1:
                 wav_file_to_use = self.f4_wav_file1
                 subtitle += " Mantella1"
@@ -111,11 +111,11 @@ class ChatManager(BaseGameInterface):
             for sub_folder in os.scandir(self.mod_voice_dir):
                 if sub_folder.is_dir():
                     #copy both the wav file and lip file if the game isn't Fallout4
-                    if self.game !="fallout4":
+                    if self.game_id !="fallout4":
                         shutil.copyfile(audio_file, f"{sub_folder.path}/{self.wav_file}")
                     shutil.copyfile(audio_file.replace(".wav", ".lip"), f"{sub_folder.path}/{self.f4_lip_file}")
         else:
-            if self.game !="fallout4":
+            if self.game_id !="fallout4":
                 shutil.copyfile(audio_file, f"{self.mod_voice_dir}/{self.active_character.in_game_voice_model}/{self.wav_file}")
             shutil.copyfile(audio_file.replace(".wav", ".lip"), f"{self.mod_voice_dir}/{self.active_character.in_game_voice_model}/{self.lip_file}")
 
@@ -144,7 +144,7 @@ class ChatManager(BaseGameInterface):
             
             #if Fallout4 is running the audio will be sync by checking if say line is set to false because the game can internally check if an audio file has finished playing
             # wait for the audio playback to complete before getting the next file
-            if self.game == "fallout4":
+            if self.game_id == "fallout4":
                 with open(f'{self.root_mod_folter}/_mantella_actor_count.txt', 'r', encoding='utf-8') as f:
                     mantellaactorcount = f.read().strip() 
                 # Outer loop to continuously check the files

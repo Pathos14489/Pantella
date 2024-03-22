@@ -10,7 +10,7 @@ class BaseChatManager:
         self.conversation_manager = conversation_manager
         self.game_interface = self.conversation_manager.game_interface
         self.config = self.conversation_manager.config
-        self.game = self.config.game_id
+        self.game_id = self.config.game_id
         if valid_games == None:
             logging.error(f"Valid games not implemented for chat manager {self.__class__.__name__}")
             raise NotImplementedError
