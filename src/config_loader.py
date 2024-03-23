@@ -92,6 +92,7 @@ class ConfigLoader:
 
         if self.game_id not in game_configs:
             logging.error(f"Game id {self.game_id} not found in game_configs directory. Please add a game config file for {self.game_id} or change the game_id in config.json to a valid game id.")
+            logging.info(f"Valid game ids: {list(game_configs.keys())}")
             input("Press enter to continue...")
             raise ValueError(f"Game id {self.game_id} not found in game_configs directory. Please add a game config file for {self.game_id} or change the game_id in config.json to a valid game id.")
 
@@ -190,8 +191,12 @@ class ConfigLoader:
                     "Safe travels.",
                     "Take care.",
                 ],
-                "goodbye_npc_response": "Safe travels",
-                "collecting_thoughts_npc_response": "I need to think for a moment."
+                "goodbye_npc_responses": [
+                    "Safe travels"
+                ],
+                "collecting_thoughts_npc_responses": [
+                    "I need to think for a moment."
+                ]
             },
             "Microphone": {
                 "whisper_model": "base",
@@ -203,6 +208,8 @@ class ConfigLoader:
                 "audio_threshold": "auto",
                 "pause_threshold": 0.5,
                 "listen_timeout": 30,
+                "whisper_cpu_threads": 4,
+                "whisper_compute_type": "auto",
                 "beam_size": 5,
                 "vad_filter": True,
             },
@@ -235,15 +242,15 @@ class ConfigLoader:
                 "temperature": 0.7,
                 "top_p": 1,
                 "min_p": 0.05,
-                "typical_p": 1, # "typical_p": "0.5", # "typical_p": 0.5,
+                "typical_p": 1,
                 "top_k": 0,
                 "repeat_penalty": 1.0,
                 "tfs_z": 1.0,
-                "frequency_penalty": 0,
+                "frequency_penalty": 0.01,
                 "presence_penalty": 0,
                 "mirostat_mode": 0,
-                "mirostat_eta": 5,
-                "mirostat_tau": 0.1,
+                "mirostat_eta": 0.1,
+                "mirostat_tau": 5,
                 "max_tokens": 512,
             },
             "openai_api": {
@@ -304,7 +311,7 @@ class ConfigLoader:
             "Speech": {
                 "tts_engine": ["xvasynth"],
                 "end_conversation_wait_time": 1,
-                "sentences_per_voiceline": 3
+                "sentences_per_voiceline": 2
             },
             "xVASynth": {
                 "xvasynth_path": "C:\\Games\\Steam\\steamapps\\common\\xVASynth",
@@ -367,8 +374,8 @@ class ConfigLoader:
             "Language": {
                 "language": self.language,
                 "end_conversation_keywords": self.end_conversation_keywords,
-                "goodbye_npc_response": self.goodbye_npc_response,
-                "collecting_thoughts_npc_response": self.collecting_thoughts_npc_response,
+                "goodbye_npc_responses": self.goodbye_npc_response,
+                "collecting_thoughts_npc_responses": self.collecting_thoughts_npc_response,
             },
             "Microphone": {
                 "whisper_model": self.whisper_model,

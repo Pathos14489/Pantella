@@ -1,106 +1,125 @@
 {
     "Game": {
-        "game_id": "The game id of the game you are playing. Currently only 'skyrim' and 'fallout' are supported."
-    },
-    "Paths": {
-        "game_path": "If you are using a Wabbajack modlist, Mod Organizer 2 may be storing your Skyrim folder in MO2\\overwrite\\Root\nIf that is the case, try setting this path as your skyrim_folder if pointing to your actual Skyrim folder doesn't work\nIf this path is incorrect, casting a spell on an NPC will will only end a conversation\ndefault = C:\\Games\\Steam\\steamapps\\common\\Skyrim Special Edition",
-        "mod_path": "The path to the mod's installation folder.",
-        "character_database_file": "The path to the character database file.",
-        "voice_model_ref_ids_file": "The path to the voice model reference ids file.",
-        "xvasynth_path": "The path to the xVASynth installation folder.",
-        "xtts_server_folder": "The path to the xTTS server folder.",
-        "logging_file_path": "The path to the logging file.",
-        "language_support_file_path": "The path to the language support file."
+        "game_id": "The game id of the game you are playing. Currently only 'skyrim', 'skyrimvr, 'fallout4' and 'fallout4vr' are supported.",
+        "conversation_manager": "The conversation manager to use for the game. Defaults to 'auto' to let game_config decide.",
+        "interface_type": "The interface type to use for the game. Defaults to 'auto' to let game_config decide.",
+        "behavior_manager": "The behavior manager to use for the game. Defaults to 'auto' to let game_config decide.",
+        "chat_manager": "The chat manager to use for the game. Defaults to 'auto' to let game_config decide."
     },
     "Language": {
-        "language": "The language of the game.",
-        "end_conversation_keyword": "The keyword that will end the conversation.",
-        "goodbye_npc_response": "The response the NPC will give when the conversation ends.",
-        "collecting_thoughts_npc_response": "The response the NPC will give when they are thinking."
+        "language": "The language all NPCs are told to speak in. Doesn't translate prompts or player responses.",
+        "end_conversation_keywords": "List of keywords that will end the conversation when spoken.",
+        "goodbye_npc_responses": "List of responses the NPC will give when the conversation ends.",
+        "collecting_thoughts_npc_responses": "The response the NPC will give when they are thinking."
     },
     "Microphone": {
-        "mic_enabled": "Whether the microphone is enabled.",
-        "whisper_model": "The whisper model to use.",
+        "whisper_model": "The size of whisper model to use. E.g. 'tiny', 'tiny.en', 'base', 'base.en', 'small', 'small.en', 'medium', 'medium.en', 'large-v1', 'large-v2', 'large-v3', or 'large'. Or a path to a converted model directory, or a CTranslate2-converted Whisper model ID from the HF Hub. When a size or a model ID is configured, the converted model is downloaded from the Hugging Face Hub.",
         "stt_language": "The language to use for speech-to-text.",
         "stt_translate": "Whether to translate the speech-to-text.",
-        "whisper_process_device": "The whisper process device.",
-        "whisper_type": "The whisper type.",
+        "whisper_process_device": "The whisper process device to use. Defaults to 'cpu', but can be set to 'cuda' to use the GPU.",
+        "whisper_type": "The whisper type to use. Defaults to 'faster_whisper', 'whisper_server' to use whisper_url's whisper server instead of the local one.",
         "whisper_url": "The whisper url.",
         "audio_threshold": "The audio threshold.",
         "pause_threshold": "The pause threshold.",
-        "listen_timeout": "The listen timeout."
+        "listen_timeout": "The timeout for listening.",
     },
     "LanguageModel": {
-        "inference_engine": "The inference engine to use.",
-        "tokenizer_type": "The tokenizer type to use.",
-        "maximum_local_tokens": "The maximum local tokens.",
-        "max_response_sentences": "The maximum response sentences.",
-        "wait_time_buffer": "The wait time buffer.",
-        "stop": "The stop tokens.",
-        "BOS_token": "The BOS token.",
-        "EOS_token": "The EOS token.",
-        "message_signifier": "The message signifier.",
-        "message_seperator": "The message seperator.",
-        "message_format": "The message format.",
-        "system_name": "The system name.",
-        "user_name": "The user name.",
-        "assistant_name": "The assistant name.",
-        "assist_check": "Whether to check for assistance.",
-        "strip_smalls": "Whether to strip smalls.",
-        "small_size": "The small size.",
-        "same_output_limit": "The same output limit.",
-        "conversation_limit_pct": "The conversation limit percent.",
-        "reload_buffer": "The reload buffer.",
-        "reload_wait_time": "The reload wait time."
+        "inference_engine": "The inference engine to use. Defaults to 'openai' to use OpenAI's API. Available: openai, llama-cpp-python, llava-cpp-python, transformers.",
+        "tokenizer_type": "The tokenizer type to use. Defaults to 'default' to use the default tokenizer for the inference engine. Only change this if you know why you need to change it.",
+        "maximum_local_tokens": "The maximum local tokens. Defaults to 4096.",
+        "max_response_sentences": "The maximum number of sentences in a response. Defaults to 3.",
+        "wait_time_buffer": "The wait time buffer. Defaults to 0.5.",
+        "stop": "A list of stop words to use. Defaults to ['<im_start>', '<im_end>'].",
+        "BOS_token": "The BOS token to use. Defaults to '<im_start>'.",
+        "EOS_token": "The EOS token to use. Defaults to '<im_end>'.",
+        "message_signifier": "The phrase that signifies a message. Defaults to '\\n'.",
+        "message_seperator": "The phrase that seperates messages. Defaults to '\\n'.",
+        "message_format": "The format of the message. Defaults to '[BOS_token][name][message_signifier][content][EOS_token][message_seperator]'",
+        "system_name": "The name of the sender of system messages. System messages are messages that are not from a character and are used to convey information to the LLM. Defaults to 'system'.",
+        "user_name": "The name of the default user. Defaults to 'user'. This is the name of the user that is used when the user is not specified. Chat completions(openai) will have this enabled for all user messages by default.",
+        "assistant_name": "The name of the assistant. Defaults to 'assistant'. This is the name of the assistant that is used when the assistant is not specified. Chat completions(openai) will have this enabled for all LLM messages by default.",
+        "assist_check": "Whether to check if the word 'assist' is in the messag and discard the message if it is. Defaults to False.",
+        "strip_smalls": "Whether to strip small messages. Defaults to False.",
+        "small_size": "The length of a small message. Defaults to 5.",
+        "same_output_limit": "Limits the number of times the same output can be repeated in a row. Defaults to 30.",
+        "conversation_limit_pct": "The percentage of context that can be filled before triggering a summarization. Defaults to 0.8.",
+        "reload_buffer": "The number of messages returned to the context after summarization. Defaults to 8.",
+        "reload_wait_time": "The time to wait for the summary to write to disk before returning the messages to the context after summarization. Defaults to 1."
     },
     "InferenceOptions": {
-        "temperature": "The temperature.",
-        "top_p": "The top p.",
-        "min_p": "The min p.",
-        "top_k": "The top k.",
-        "repeat_penalty": "The repeat penalty.",
-        "max_tokens": "The max tokens.",
-        "typical_p": "The typical p.",
-        "frequency_penalty": "The frequency penalty.",
-        "presence_penalty": "The presence penalty.",
-        "mirostat_mode": "The mirostat mode.",
-        "mirostat_eta": "The mirostat eta.",
-        "mirostat_tau": "The mirostat tau."
+        "temperature": "The temperature for inference. Higher values make the model more creative but less coherent, more spelling mistakes, and more hallucinations. Lower values make the model less creative but more coherent. Defaults to 0.7.",
+        "top_p": "Top p is used as a measure to filter out tokens that are less likely to occur. 0.9 means that the model will only consider tokens that are in the top 90% of likelihood. Defaults to 0.9. If you want to disable it, set it to 1.",
+        "min_p": "New sampling method that only considers tokens that are at least this likely to occur. Defaults to 0.05. Replaces top_p and top_k.",
+        "typical_p": "Typical p measures how similar the conditional probability of predicting a target token next is to the expected conditional probability of predicting a random token next, given the partial text already generated. If set to float < 1, the smallest set of the most locally typical tokens with probabilities that add up to typical_p or higher are kept for generation. Defaults to 1.0.",
+        "top_k": "Top k is used as a measure to filter out tokens that are less likely to occur. 40 means that the model will only consider the top 40 tokens. Very rudimentary, I don't recommend this over other sampling options if they're available. Defaults to 0. If you want to disable it, set it to 0.",
+        "repeat_penalty": "Penalizes tokens that are repeated in the output. Defaults to 1.2.",
+        "tfs_z": "Tail free sampling. https://www.trentonbricken.com/Tail-Free-Sampling/. Defaults to 1.0. If you want to disable it, set it to 1.0.",
+        "frequency_penalty": "Penalizes tokens that are appear frequently in the output. Defaults to 0.01.",
+        "presence_penalty": "Encourages the model to generate tokens that are not already in the output. Defaults to 0.0.",
+        "mirostat_mode": "Mirostat is a type of sampling that overrides everthing else but temperature. It will then change how it samples to force the model to match a certain perplexity target. Defaults to '0' to disable it. If you want to enable it, set it to '1' or '2' for Mode 1 or Mode 2.",
+        "mirostat_eta": "The mirostat eta, the learning rate for the perplexity target. Defaults to 0.1.",
+        "mirostat_tau": "The mirostat tau, the perplexity target. Defaults to 5.",
+        "max_tokens": "The maximum number of tokens to generate. Defaults to 512.",
     },
     "openai_api": {
-        "llm": "The language model to use.",
-        "alternative_openai_api_base": "The alternative openai api base.",
-        "secret_key_file_path": "The secret key file path."
+        "llm": "The language model ID to use.",
+        "alternative_openai_api_base": "If you're not using OpenAI's API, you can set this to the base URL of the API you're using.",
+        "secret_key_file_path": "The path to the secret key file. This is where you store your OpenAI API key."
     },
     "llama_cpp_python": {
-        "model_path": "The model path.",
-        "n_gpu_layers": "The number of gpu layers.",
-        "n_threads": "The number of threads.",
-        "n_batch": "The number of batch.",
-        "tensor_split": "The tensor split.",
-        "main_gpu": "The main gpu."
+        "model_path": "The path to the model file. e.g. 'mistral-7B.Q4_K_M.gguf'.",
+        "n_gpu_layers": "The number of layers to offload to the GPU. Defaults to 0.",
+        "n_threads": "The number of threads to use. Defaults to 4. Only use up to your physical core count. If you're using Intel, only use the number of your performance cores.",
+        "n_batch": "The size of the batch of tokenizes to send to the model at once. Defaults to 1.",
+        "tensor_split": "The ratio of how to split the layers across multiple GPUs. Defaults to 0.5.",
+        "main_gpu": "The ID of the main GPU to use. Defaults to 0 for GPU 1. If you're using multiple GPUs, set this to the ID of the GPU you want to use.",
+        "split_model": "Whether to split the model across multiple GPUs. Defaults to 0. 0 = single gpu, 1 = split layers and kv across gpus, 2 = split rows across gpus.",
+        "use_mmap": "Whether to use mmap. Defaults to True.",
+        "use_mlock": "Whether to use mlock. Defaults to False.",
+        "n_threads_batch": "The number of threads to use for processing batches. Defaults to 1.",
+        "offload_kqv": "Whether to offload kqv. Defaults to True. Warning: Uses more VRAM."
+    },
+    "llava_cpp_python": {
+        "llava_clip_model_path": "The path to the clip model file. e.g. 'mmproj-model-f16.gguf', 'llava-clip.f16.gguf'.",
+        "paddle_ocr": "Whether to use paddle OCR. Defaults to False.",
+        "ocr_lang": "The language to use for OCR. Defaults to 'en'.",
+        "ocr_use_angle_cls": "Whether to use angle classification for OCR. Defaults to False.",
+        "ocr_filter":"A list of strings to filter out from the OCR output.",
+        "append_system_image_near_end": "Whether to append the system image near the end of the message. Defaults to True.",
+        "llava_image_message_depth": "The depth of the image message. Defaults to -1. -1 means right before the next message.",
+        "llava_image_message": "The format of the message with the image.",
+        "ocr_resolution": "The resolution of the OCR ASCII block. Defaults to 256.",
+        "clip_resolution": "The resolution of the clip model. Defaults to 672."
+    },
+    "transformers": {
+        "transformers_model_slug": "The HF indentifier for the model. e.g. 'mistralai/Mistral-7B-Instruct-v0.1'.", 
+        "trust_remote_code": "Whether to trust remote code. Defaults to False.",
+        "device_map": "The device map. Defaults to 'cuda:0'.",
+        "load_in_8bit": "Whether to load in 8bit. Defaults to False."
     },
     "Speech": {
-        "tts_engine": "The tts engine.",
-        "end_conversation_wait_time": "The end conversation wait time.",
-        "sentences_per_voiceline": "The sentences per voiceline."
+        "tts_engine": "Either a string or a list of strings defining the TTS engine to use, or which engines to use in which fallback order. Defaults to 'xvasynth'.",
+        "end_conversation_wait_time": "The wait time after the conversation ends. Defaults to 1.",
+        "sentences_per_voiceline": "The number of sentences per voiceline generated. Defaults to 2."
     },
     "xVASynth": {
-        "xvasynth_process_device": "The xvasynth process device.",
-        "pace": "The pace.",
+        "xvasynth_path": "The path to the xVASynth executable directory.",
+        "xvasynth_process_device": "The device to use for xVASynth. Defaults to 'cpu'.",
+        "pace": "The pace of the voice. Defaults to 1.",
         "use_cleanup": "Whether to use cleanup.",
         "use_sr": "Whether to use sr.",
-        "xvasynth_base_url": "The xvasynth base url."
+        "xvasynth_base_url": "If you're using a remote xVASynth server, set this to the base URL of the server."
     },
     "xTTS": {
-        "xtts_base_url": "The xtts base url.",
-        "xtts_data": "The xtts data."
+        "xtts_base_url": "The base URL of the xTTS server.",
+        "xtts_data": "The sampling options for xTTS.",
+        "default_xtts_model": "The default xtts model. xTTS models can be used for several voices at once, or a single voice per model. If you want to use a single voice per model, add a model to the xtts models directory with the correct voice_model as it's name."
     },
     "Cleanup": {
-        "remove_mei_folders": "Whether to remove mei folders."
+        "remove_mei_folders": "Whether to remove mei folders on startup."
     },
     "Debugging": {
-        "debug_mode": "Whether to enable debug mode.",
+        "debug_mode": "Whether to enable debug mode. - Doesn't currently do anything.",
         "play_audio_from_script": "Whether to play audio from script.",
         "debug_character_name": "The debug character name.",
         "debug_use_mic": "Whether to use the mic for debugging.",
@@ -108,12 +127,11 @@
         "debug_exit_on_first_exchange": "Whether to exit on the first exchange.",
         "add_voicelines_to_all_voice_folders": "Whether to add voicelines to all voice folders."
     },
-    "Prompt": {
-        "single_player_with_npc_prompt": "The single player with npc prompt.",
-        "single_npc_with_npc_prompt": "The single npc with npc prompt.",
-        "multi_npc_prompt": "The multi npc prompt."
-    },
     "Config": {
-        "port": "The port."
+        "character_database_file": "The character database file path.",
+        "voice_model_ref_ids_file": "The voice model ref ids file path.",
+        "logging_file_path": "The logging file path.",
+        "language_support_file_path": "The language support file path.",
+        "port": "The port to use for the web configuration server."
     }
 }

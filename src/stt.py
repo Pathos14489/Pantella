@@ -60,9 +60,19 @@ class Transcriber:
         # if using faster_whisper, load model selected by player, otherwise skip this step
         if self.whisper_type == 'faster_whisper':
             if self.process_device == 'cuda':
-                self.transcribe_model = WhisperModel(self.model, device=self.process_device)
+                self.transcribe_model = WhisperModel(
+                    self.model,
+                    device=self.process_device,
+                    compute_type=self.config.whisper_compute_type,
+                    cpu_threads=self.config.whisper_cpu_threads
+                )
             else:
-                self.transcribe_model = WhisperModel(self.model, device=self.process_device, compute_type="float32")
+                self.transcribe_model = WhisperModel(
+                    self.model,
+                    device=self.process_device,
+                    compute_type=self.config.whisper_compute_type,
+                    cpu_threads=self.config.whisper_cpu_threads
+                )
 
     def unload(self):
         self.initialized = False
