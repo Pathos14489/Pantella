@@ -1,4 +1,6 @@
 from  src.logging import logging
+import os
+print(os.path.dirname(__file__))
 import src.conversation_manager as cm
 import src.config_loader as config_loader
 import src.utils as utils
@@ -16,7 +18,7 @@ except Exception as e:
 utils.cleanup_mei(config.remove_mei_folders) # clean up old instances of exe runtime files
 
 try:
-    conversation_manager = cm.conversation_manager(config)
+    conversation_manager = cm.create_manager(config)
 except Exception as e:
     logging.error(f"Error Creating Conversation Manager:")
     logging.error(e)
@@ -27,7 +29,7 @@ def conversation_loop():
     def restart_manager():
         global conversation_manager
         logging.info("Restarting conversation manager")
-        conversation_manager = cm.conversation_manager(config)
+        conversation_manager = cm.create_manager(config)
         conversation_manager.game_state_manager.write_game_info('_mantella_status', 'Restarted Pantella')
     while True: # Main Conversation Loop - restarts when conversation ends
         conversation_manager.await_and_setup_conversation() # wait for player to select an NPC and setup the conversation when outside of conversation
