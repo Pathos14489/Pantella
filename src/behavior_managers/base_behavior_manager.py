@@ -54,10 +54,9 @@ class base_BehaviorManager():
         logging.info(f"Evaluating sentence {sentence}")
         for behavior in self.behaviors:
             npc_keywords = behavior.npc_pre_keywords
-            npc_words = sentence.replace(",", "").replace(".", "").replace("!", "").replace("?", "").lower()
             npc_contains_keyword = False
             for npc_keyword in npc_keywords:
-                if npc_keyword.lower() in npc_words:
+                if npc_keyword.lower() in sentence.lower():
                     npc_contains_keyword = True
             for activation_sentence in behavior.activation_sentences:
                 if activation_sentence.lower() in sentence.lower() or sentence.lower() in activation_sentence.lower():
@@ -75,10 +74,9 @@ class base_BehaviorManager():
         logging.info(f"Evaluating sentence {sentence}")
         for behavior in self.behaviors:
             npc_keywords = behavior.npc_post_keywords
-            npc_words = sentence.replace(",", "").replace(".", "").replace("!", "").replace("?", "").lower()
             npc_contains_keyword = False
             for npc_keyword in npc_keywords:
-                if npc_keyword.lower() in npc_words:
+                if npc_keyword.lower() in sentence.lower():
                     npc_contains_keyword = True
             for activation_sentence in behavior.activation_sentences:
                 if activation_sentence.lower() in sentence.lower() or sentence.lower() in activation_sentence.lower():
