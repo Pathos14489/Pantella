@@ -398,7 +398,7 @@ class base_LLM():
                                     logging.warn(f"Keyword '{keyword_extraction}' not found in behavior_manager. Disgarding from response.")
                                 else:
                                     if ":" not in full_reply and behavior != None:
-                                        full_reply = behavior.keyword + ": " + full_reply # add the keyword back to the sentence
+                                        full_reply = behavior.keyword + ": " + full_reply.strip() # add the keyword back to the sentence to reinforce to the that the keyword was used to trigger the bahavior
                                     
                             eos = False
                             if self.EOS_token in sentence:
