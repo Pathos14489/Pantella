@@ -465,7 +465,9 @@ class base_LLM():
 
         await sentence_queue.put(None) # Mark the end of the response for self.conversation_manager.chat_manager.send_response() and self.conversation_manager.chat_manager.send_response()
 
-        if next_author is not None and full_reply.strip() != '':
+        full_reply = full_reply.strip()
+
+        if next_author is not None and full_reply != '':
             self.conversation_manager.messages.append({"role": next_author, "content": full_reply})
             # -- for each sentence for each character until the conversation ends or the max_response_sentences is reached or the player is speaking
             logging.info(f"Full response saved ({self.tokenizer.get_token_count(full_reply)} tokens): {full_reply}")
