@@ -5,6 +5,7 @@ data/**/*.lip
 data/**/*.json
 data/**/*.txt
 data/tmp/
+data/conversations/*
 **/*.pyc
 GPT_SECRET_KEY.txt
 logging.log
@@ -15,3 +16,6 @@ dist/
 main.exe
 /.obsidian/
 **/*.gguf
+config.json
+GPT_SECRET_KEY.txt
+game_configs/*.json
