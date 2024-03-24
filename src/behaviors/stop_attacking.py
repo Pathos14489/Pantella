@@ -1,7 +1,7 @@
 from src.logging import logging
 import src.behaviors.base_behavior as base_behavior
 
-class stopattacking(base_behavior.BaseBehavior):
+class stop_attacking(base_behavior.BaseBehavior):
     def __init__(self, manager):
         super().__init__(manager)
         self.keyword = "StopAttacking"
@@ -17,4 +17,4 @@ class stopattacking(base_behavior.BaseBehavior):
                 logging.info(f"{speaker_character.name} stopped attacking.")
                 self.new_game_event(f"{speaker_character.name} stopped attacking {self.manager.conversation_manager.player_name}, sheathed their weapon.")
                 self.queue_actor_method(speaker_character,"StopCombat")
-        return "stopattacking"
+        return "stop_attacking"
