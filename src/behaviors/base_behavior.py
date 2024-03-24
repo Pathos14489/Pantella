@@ -50,9 +50,5 @@ class BaseBehavior():
         return self.manager.conversation_manager.game_interface.queue_actor_method(speaker_character, method_name, *args)
     
     def new_game_event(self, game_event_string):
-        if not game_event_string.startswith("*"):
-            game_event_string = f"*{game_event_string}"
-        if not game_event_string.endswith("*"):
-            game_event_string = f"{game_event_string}*"
         with open(f'{self.manager.conversation_manager.config.game_path}/_mantella_in_game_events.txt', 'a') as f:
             f.write(game_event_string + '\n')

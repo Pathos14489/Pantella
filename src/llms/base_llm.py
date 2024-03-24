@@ -369,28 +369,23 @@ class base_LLM():
                                     raise Exception('Invalid author')
 
                             sentence = self.clean_sentence(sentence) # clean the sentence
-                            if sentence.strip() == '': # if the sentence is empty after cleaning, then skip it
+                            if sentence.replace(".", "").replace("?", "").replace("!", "").replace(",", "").strip() == '': # if the sentence is empty after cleaning, then skip it
                                 logging.info(f"Skipping empty sentence")
                                 if full_reply.strip() == '':
                                     retries += 1
                                     logging.info(f"Retrying due to empty response")
                                     raise Exception('Empty sentence')
                                 break
-                                
 
                             if self.config.assist_check: # if remote, check if the response contains the word assist for some reason. Probably some OpenAI nonsense.
                                 if ('assist' in sentence) and (num_sentences>0): # Causes problems if asking a follower if you should "assist" someone, if they try to say something along the lines of "Yes, we should assist them." it will cut off the sentence and basically ignore the player. TODO: fix this with a more robust solution
                                     logging.info(f"'assist' keyword found. Ignoring sentence which begins with: {sentence}") 
                                     break # stop generating response
 
-                            if self.config.strip_smalls and len(sentence.strip()) < self.config.small_size:
-                                logging.info(f"Skipping small sentence: {sentence}")
-                                break
-
                             logging.info(f"LLM returned sentence took {time.time() - start_time} seconds to execute")
 
                             if ":" in sentence: # if a colon is in the sentence, then the NPC is calling a keyword function in addition to speaking. Pass the keyword to the behavior manager to see if it matches any real keywords
-                                keyword_extraction = sentence.split(':')[0]
+                                keyword_extraction = sentence.split(':')[0].strip()
                                 sentence = sentence.split(':')[1]
                                 # if LLM is switching character
                                 behavior = self.conversation_manager.behavior_manager.evaluate(keyword_extraction, self.conversation_manager.chat_manager.active_character, sentence) # check if the sentence contains any behavior keywords for NPCs
@@ -415,7 +410,11 @@ class base_LLM():
 
                             behavior = self.conversation_manager.behavior_manager.pre_sentence_evaluate(self.conversation_manager.chat_manager.active_character, sentence,) # check if the sentence contains any behavior keywords for NPCs
                             if voice_line_sentences == self.config.sentences_per_voiceline: # if the voice line is ready, then generate the audio for the voice line
-                                await self.generate_voiceline(voice_line, sentence_queue, event)
+                                logging.info(f"Generating voiceline: \"{voice_line.strip()}\" for {self.conversation_manager.chat_manager.active_character.name}.")
+                                if self.config.strip_smalls and len(voice_line.strip()) < self.config.small_size:
+                                    logging.info(f"Skipping small voice line: {voice_line}")
+                                    break
+                                await self.generate_voiceline(voice_line.strip(), sentence_queue, event)
                                 voice_line_sentences = 0 # reset the number of sentences generated for the current voice line
                                 voice_line = '' # reset the voice line for the next iteration
                             behavior = self.conversation_manager.behavior_manager.post_sentence_evaluate(self.conversation_manager.chat_manager.active_character, sentence) # check if the sentence contains any behavior keywords for NPCs
@@ -459,6 +458,7 @@ class base_LLM():
                     time.sleep(5)
 
         if voice_line_sentences > 0: # if the voice line is not empty, then generate the audio for the voice line
+            logging.info(f"Generating voiceline: \"{voice_line.strip()}\" for {self.conversation_manager.chat_manager.active_character.name}.")
             await self.generate_voiceline(voice_line, sentence_queue, event)
             voice_line_sentences = 0
             voice_line = ''

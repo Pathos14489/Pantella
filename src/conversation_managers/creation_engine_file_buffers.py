@@ -104,7 +104,7 @@ class ConversationManager(BaseConversationManager):
         self.transcriber.call_count = 0 # reset radiant back and forth count
         self.conversation_step += 1
 
-        logging.info('\nConversations not starting when you select an NPC? Post an issue on the GitHub page: https://github.com/art-from-the-machine/Mantella')
+        logging.info('\nConversations not starting when you select an NPC? Post an issue on the GitHub page: https://github.com/Pathos14489/Pantella')
         logging.info('\nWaiting for player to select an NPC...')
         try: # load character info, location and other gamestate data when data is available - Starts watching the _mantella_ files in the Skyrim folder and waits for the player to select an NPC
             character_info, self.current_location, self.current_in_game_time, is_generic_npc, self.player_name, self.player_race, self.player_gender, self.conversation_started_radiant = self.game_interface.load_game_state()

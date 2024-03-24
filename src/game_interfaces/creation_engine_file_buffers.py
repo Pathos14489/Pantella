@@ -172,11 +172,11 @@ class GameInterface(BaseGameInterface):
     def queue_actor_method(self, actor_character, method_name, *args):
         """Queue an arbitrary method to be run on the actor in game via the game interface."""
         logging.info(f'Calling {method_name} on {actor_character.name}...')
-        string_id = actor_character.ref_id
-        if len(string_id) < 8:
-            string_id = '0'*(8-len(string_id)) + string_id # pad string_id with leading zeros if it's less than 8 characters long
-        string_int = int(string_id, 16) # convert string_id from string hex to int hex
-        function_call = f"{str(string_int)}|{method_name}"
+        # string_id = actor_character.ref_id
+        # if len(string_id) < 8:
+        #     string_id = '0'*(8-len(string_id)) + string_id # pad string_id with leading zeros if it's less than 8 characters long
+        # string_int = int(string_id, 16) # convert string_id from string hex to int hex
+        function_call = f"{str(actor_character.refid_int)}|{method_name}"
         if len(args) > 0:
             function_call += '|'
             for arg in args:

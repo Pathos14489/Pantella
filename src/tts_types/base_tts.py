@@ -96,7 +96,7 @@ class base_Synthesizer:
             logging.info(f'Found FaceFXWrapper.exe at: {face_wrapper_executable}')
             installed = True
         else:
-            logging.error(f'Could not find FaceFXWrapper.exe in "{Path(face_wrapper_executable).parent}" with which to create a Lip Sync file, download it from: https://github.com/Nukem9/FaceFXWrapper/releases')
+            logging.error(f'Could not find FaceFXWrapper.exe in "{Path(face_wrapper_executable).parent}" with which to create a Lip Sync file, download it from: https://github.com/Haurrus/FaceFXWrapper/releases')
             
         return installed
 
