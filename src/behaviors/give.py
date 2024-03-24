@@ -18,5 +18,5 @@ class give(base_behavior.BaseBehavior):
                 self.queue_actor_method(speaker_character,"Wait","2")
                 self.new_game_event(f"{speaker_character.name} offered {self.manager.conversation_manager.player_name} to take something from them.")
                 self.queue_actor_method(speaker_character,"OpenTakeMenu")
-        return "trade"
+        return "give"
     

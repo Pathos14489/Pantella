@@ -16,4 +16,4 @@ class goodbye(base_behavior.BaseBehavior):
             else:
                 logging.info(f"{speaker_character.name} is ending the conversation.")
                 self.manager.conversation_manager.conversation_ended = True
-        return "Goodbye"
+        return "goodbye"

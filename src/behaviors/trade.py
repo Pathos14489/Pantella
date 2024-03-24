@@ -4,7 +4,7 @@ import src.behaviors.base_behavior as base_behavior
 class trade(base_behavior.BaseBehavior):
     def __init__(self, manager):
         super().__init__(manager)
-        self.keyword = "Give"
+        self.keyword = "Trade"
         self.description = "If {perspective_player_name} wants full access to your inventory, and you want to let them have it, begin your response with 'Trade:'."
         self.example = "'Can we please trade items?' 'Trade: Of course my friend, what do you need?'"
         self.valid_games = ["skyrim","skyrimvr"]
