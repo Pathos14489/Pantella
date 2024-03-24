@@ -10,6 +10,8 @@ class sell(base_behavior.BaseBehavior):
         self.activation_sentences = [
             "Of course, what kind of items are you looking for?",
             "I have a lot of things to sell, what are you interested in?",
+            "I have a lot of items to sell, what are you interested in?",
+            "I have a lot of food to sell, what are you interested in?",
             "I'm always looking to sell something.",
             "I'm interested in selling something to you.",
             "I'm looking to sell something.",

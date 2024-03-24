@@ -396,6 +396,9 @@ class base_LLM():
                                 behavior = self.conversation_manager.behavior_manager.evaluate(keyword_extraction, self.conversation_manager.chat_manager.active_character, sentence) # check if the sentence contains any behavior keywords for NPCs
                                 if behavior == None:
                                     logging.warn(f"Keyword '{keyword_extraction}' not found in behavior_manager. Disgarding from response.")
+                                else:
+                                    if ":" not in full_reply and behavior != None:
+                                        full_reply = behavior.keyword + ": " + full_reply # add the keyword back to the sentence
                                     
                             eos = False
                             if self.EOS_token in sentence:

@@ -374,8 +374,8 @@ class ConfigLoader:
             "Language": {
                 "language": self.language,
                 "end_conversation_keywords": self.end_conversation_keywords,
-                "goodbye_npc_responses": self.goodbye_npc_response,
-                "collecting_thoughts_npc_responses": self.collecting_thoughts_npc_response,
+                "goodbye_npc_responses": self.goodbye_npc_responses,
+                "collecting_thoughts_npc_responses": self.collecting_thoughts_npc_responses,
             },
             "Microphone": {
                 "whisper_model": self.whisper_model,

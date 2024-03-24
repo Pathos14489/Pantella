@@ -517,7 +517,7 @@ class GameInterface(BaseGameInterface):
         # say goodbyes
         if not self.conversation_manager.conversation_ended: # say line if NPC is not already deactivated
             latest_character = list(self.conversation_manager.character_manager.active_characters.items())[-1][1] # get latest character in conversation
-            goodbye_npc_response = random.choice(self.conversation_manager.config.goodbye_npc_response)
+            goodbye_npc_response = random.choice(self.conversation_manager.config.goodbye_npc_responses)
             latest_character.say(goodbye_npc_response+'.') # let the player know that the conversation is ending using the latest character in the conversation that isn't the player to say it
 
         perspective_name, _, _ = character.get_perspective_player_identity() # get perspective name - How the NPC refers to the player
@@ -545,7 +545,7 @@ class GameInterface(BaseGameInterface):
         """Restart conversation to save conversation to memory when token count is reaching its limit"""
         logging.info('Reloading conversation...')
         latest_character = list(self.conversation_manager.character_manager.active_characters.items())[-1][1] # get latest character in conversation
-        collecting_thoughts_npc_response = random.choice((self.conversation_manager.config.collecting_thoughts_npc_responses)
+        collecting_thoughts_npc_response = random.choice(self.conversation_manager.config.collecting_thoughts_npc_responses)
         latest_character.say(collecting_thoughts_npc_response+'.') # let the player know that the conversation is reloading using the latest character in the conversation that isn't the player to say it
 
         self.summarize_all_summaries() # save conversation to memory
