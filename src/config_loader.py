@@ -192,10 +192,26 @@ class ConfigLoader:
                     "Take care.",
                 ],
                 "goodbye_npc_responses": [
-                    "Safe travels"
+                    "Safe travels",
+                    "Be seeing you",
+                    "Take care",
+                    "Goodbye",
+                    "See you later",
+                    "Be careful out there",
+                    "Be safe",
+                    "May your road lead you to warm sands",
+                    "Stay safe"
                 ],
                 "collecting_thoughts_npc_responses": [
-                    "I need to think for a moment."
+                    "I need to think for a moment",
+                    "Give me a moment to think",
+                    "Let me think for a moment",
+                    "I need to consider this",
+                    "I need to ponder this",
+                    "I need to reflect on this",
+                    "I need to mull this over",
+                    "Let me think about that",
+                    "Let me consider that"
                 ]
             },
             "Microphone": {
@@ -239,14 +255,14 @@ class ConfigLoader:
                 "reload_wait_time": 1,
             },
             "InferenceOptions": {
-                "temperature": 0.7,
+                "temperature": 0.8,
                 "top_p": 1,
                 "min_p": 0.05,
-                "typical_p": 1,
+                "typical_p": 0.9,
                 "top_k": 0,
                 "repeat_penalty": 1.0,
                 "tfs_z": 1.0,
-                "frequency_penalty": 0.01,
+                "frequency_penalty": 0,
                 "presence_penalty": 0,
                 "mirostat_mode": 0,
                 "mirostat_eta": 0.1,
