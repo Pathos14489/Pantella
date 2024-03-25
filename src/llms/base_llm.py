@@ -207,7 +207,6 @@ class base_LLM():
     async def process_response(self, sentence_queue, event):
         """Stream response from LLM one sentence at a time"""
 
-        full_reply = '' # used to store the full reply
         next_author = None # used to determine who is speaking next in a conversation
         verified_author = False # used to determine if the next author has been verified
         verified_author = False # used to determine if the next author has been verified
@@ -229,6 +228,7 @@ class base_LLM():
         possible_players.extend(self.conversation_manager.player_name.split(" "))
         possible_players.extend(self.conversation_manager.player_name.lower().split(" "))
         possible_players.extend(self.conversation_manager.player_name.upper().split(" "))
+        full_reply = '' # used to store the full reply
         sentence = '' # used to store the current sentence being generated
         voice_line = '' # used to store the current voice line being generated
         num_sentences = 0 # used to keep track of how many sentences have been generated
@@ -431,6 +431,7 @@ class base_LLM():
                 next_author = None
                 verified_author = False
                 sentence = ''
+                voice_line = ''
                 full_reply = ''
                 if retries == 0:
                     logging.error(f"Could not connect to LLM API\nError:")
@@ -453,6 +454,11 @@ class base_LLM():
                     logging.info('Retrying connection to API...')
                     retries -= 1
                     time.sleep(5)
+
+            if num_sentences == 0: # if no sentences were generated, then the LLM failed to generate a response
+                logging.error(f"LLM failed to generate a response or a valid Author. Retrying...")
+                retries += 1
+                continue
 
         if voice_line_sentences > 0: # if the voice line is not empty, then generate the audio for the voice line
             logging.info(f"Generating voiceline: \"{voice_line.strip()}\" for {self.conversation_manager.chat_manager.active_character.name}.")
