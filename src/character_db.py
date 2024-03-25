@@ -263,6 +263,11 @@ class CharacterDB():
                     character = db_character
                     is_generic_npc = True
                     break
+        if character is None:
+            for db_character in self.characters: # Try to find any character with the same name and ref_id and add it to the possibly_same_character list
+                if character_name.lower() == str(db_character['name']).lower():
+                    character = db_character
+                    logging.warning(f"Found character '{character_name}' in character database using name lookup. (super basic fallback)")
         if character is None: # No character was found, print an error message and wait for the user to press enter before exiting the program
             logging.warning(f"Could not find character '{character_name}' in character database using name lookup.")
             logging.warning(f"Could not find character '{character_ref_id}' in character database using ref_id lookup.")
