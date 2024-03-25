@@ -388,12 +388,9 @@ class base_LLM():
                                 keyword_extraction = sentence.split(':')[0].strip()
                                 sentence = sentence.split(':')[1]
                                 # if LLM is switching character
-                                behavior = self.conversation_manager.behavior_manager.evaluate(keyword_extraction, self.conversation_manager.chat_manager.active_character, sentence) # check if the sentence contains any behavior keywords for NPCs
-                                if behavior == None:
+                                sentence_behavior = self.conversation_manager.behavior_manager.evaluate(keyword_extraction, self.conversation_manager.chat_manager.active_character, sentence) # check if the sentence contains any behavior keywords for NPCs
+                                if sentence_behavior == None:
                                     logging.warn(f"Keyword '{keyword_extraction}' not found in behavior_manager. Disgarding from response.")
-                                else:
-                                    if ":" not in full_reply and behavior != None:
-                                        full_reply = behavior.keyword + ": " + full_reply.strip() # add the keyword back to the sentence to reinforce to the that the keyword was used to trigger the bahavior
                                     
                             eos = False
                             if self.EOS_token in sentence:
@@ -402,13 +399,13 @@ class base_LLM():
                                 eos = True
 
 
-                            voice_line += sentence # add the sentence to the voice line in progress
-                            full_reply += sentence # add the sentence to the full reply
+                            voice_line = voice_line.strip() + " " + sentence.strip() # add the sentence to the voice line in progress
+                            full_reply = full_reply.strip() + " " + sentence.strip() # add the sentence to the full reply
                             num_sentences += 1 # increment the total number of sentences generated
                             voice_line_sentences += 1 # increment the number of sentences generated for the current voice line
 
 
-                            behavior = self.conversation_manager.behavior_manager.pre_sentence_evaluate(self.conversation_manager.chat_manager.active_character, sentence,) # check if the sentence contains any behavior keywords for NPCs
+                            pre_behavior = self.conversation_manager.behavior_manager.pre_sentence_evaluate(self.conversation_manager.chat_manager.active_character, sentence,) # check if the sentence contains any behavior keywords for NPCs
                             if voice_line_sentences == self.config.sentences_per_voiceline: # if the voice line is ready, then generate the audio for the voice line
                                 logging.info(f"Generating voiceline: \"{voice_line.strip()}\" for {self.conversation_manager.chat_manager.active_character.name}.")
                                 if self.config.strip_smalls and len(voice_line.strip()) < self.config.small_size:
@@ -417,7 +414,7 @@ class base_LLM():
                                 await self.generate_voiceline(voice_line.strip(), sentence_queue, event)
                                 voice_line_sentences = 0 # reset the number of sentences generated for the current voice line
                                 voice_line = '' # reset the voice line for the next iteration
-                            behavior = self.conversation_manager.behavior_manager.post_sentence_evaluate(self.conversation_manager.chat_manager.active_character, sentence) # check if the sentence contains any behavior keywords for NPCs
+                            post_behavior = self.conversation_manager.behavior_manager.post_sentence_evaluate(self.conversation_manager.chat_manager.active_character, sentence) # check if the sentence contains any behavior keywords for NPCs
 
                             sentence = '' # reset the sentence for the next iteration
 
@@ -466,6 +463,11 @@ class base_LLM():
         await sentence_queue.put(None) # Mark the end of the response for self.conversation_manager.chat_manager.send_response() and self.conversation_manager.chat_manager.send_response()
 
         full_reply = full_reply.strip()
+        try: 
+            if sentence_behavior != None:
+                full_reply = sentence_behavior.keyword + ": " + full_reply.strip() # add the keyword back to the sentence to reinforce to the that the keyword was used to trigger the bahavior
+        except:
+            pass
 
         if next_author is not None and full_reply != '':
             self.conversation_manager.messages.append({"role": next_author, "content": full_reply})
