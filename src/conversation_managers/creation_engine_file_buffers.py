@@ -170,6 +170,9 @@ class ConversationManager(BaseConversationManager):
         if not self.conversation_ended and not self.radiant_dialogue: # check if conversation has ended and isn't radiant, if it's not, get next player input
             logging.info('Getting player response...')
             transcribed_text = self.transcriber.get_player_response(", ".join(self.character_manager.active_characters.keys()))
+            if transcribed_text == "EndConversationNow":
+                self.end_conversation()
+                return
 
             self.game_interface.write_game_info('_mantella_player_input', transcribed_text) # write player input to _mantella_player_input.txt
 
