@@ -36,7 +36,11 @@ class Synthesizer(base_tts.base_Synthesizer):
             logging.error(f"Please ensure that the path to xVASynth is correct in config.json (xvasynth_path)")
             input('\nPress any key to stop Mantella...')
             raise FileNotFoundError(f"xVASynth path invalid: {self.xvasynth_path}")
-        self.model_path = f"{self.xvasynth_path}/resources/app/models/{self.game}/"
+            
+        if self.game == "fallout4" or self.game == "fallout4vr": # get the correct voice model for Fallout 4
+            self.model_path = f"{self.xvasynth_path}/resources/app/models/fallout4/"
+        else:
+            self.model_path = f"{self.xvasynth_path}/resources/app/models/skyrim/"
 
         self.synthesize_url = f'{self.config.xvasynth_base_url}/synthesize'
         self.synthesize_batch_url = f'{self.config.xvasynth_base_url}/synthesize_batch'
@@ -282,7 +286,7 @@ class Synthesizer(base_tts.base_Synthesizer):
 
         logging.info('Loading voice model...')
         
-        if self.game == "Fallout4": # get the correct voice model for Fallout 4
+        if self.game == "fallout4" or self.game == "fallout4vr": # get the correct voice model for Fallout 4
             XVASynthAcronym="f4_"
             XVASynthModNexusLink="https://www.nexusmods.com/fallout4/mods/49340?tab=files"
         else: # get the correct voice model for Skyrim
