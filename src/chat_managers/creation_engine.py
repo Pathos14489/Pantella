@@ -117,7 +117,7 @@ class ChatManager(BaseChatManager):
         else:
             if self.game_id !="fallout4":
                 shutil.copyfile(audio_file, f"{self.mod_voice_dir}/{self.active_character.in_game_voice_model}/{self.wav_file}")
-            shutil.copyfile(audio_file.replace(".wav", ".lip"), f"{self.mod_voice_dir}/{self.active_character.in_game_voice_model}/{self.lip_file}")
+            shutil.copyfile(audio_file.replace(".wav", ".lip"), str(f"{self.mod_voice_dir}/{self.active_character.in_game_voice_model}/{self.lip_file}").replace("/", "\\"))
 
         logging.info(f"{self.active_character.name} should speak")
         if self.character_num == 0:
