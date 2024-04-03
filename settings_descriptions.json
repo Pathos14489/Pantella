@@ -1,7 +1,7 @@
 {
     "Game": {
         "game_id": "The game id of the game you are playing. Currently only 'skyrim', 'skyrimvr, 'fallout4' and 'fallout4vr' are supported.",
-        "conversation_manager": "The conversation manager to use for the game. Defaults to 'auto' to let game_config decide.",
+        "conversation_manager_type": "The conversation manager to use for the game. Defaults to 'auto' to let game_config decide.",
         "interface_type": "The interface type to use for the game. Defaults to 'auto' to let game_config decide.",
         "behavior_manager": "The behavior manager to use for the game. Defaults to 'auto' to let game_config decide.",
         "chat_manager": "The chat manager to use for the game. Defaults to 'auto' to let game_config decide."
@@ -18,14 +18,19 @@
         "stt_translate": "Whether to translate the speech-to-text.",
         "whisper_process_device": "The whisper process device to use. Defaults to 'cpu', but can be set to 'cuda' to use the GPU.",
         "whisper_type": "The whisper type to use. Defaults to 'faster_whisper', 'whisper_server' to use whisper_url's whisper server instead of the local one.",
-        "whisper_url": "The whisper url.",
-        "audio_threshold": "The audio threshold.",
-        "pause_threshold": "The pause threshold.",
-        "listen_timeout": "The timeout for listening.",
+        "vad_filter": "Whether to use VAD filtering. Defaults to True.",
+        "beam_size": "The beam size for whisper. Defaults to 5.",
+        "whisper_compute_type": "The whisper compute type to use. Defaults to 'auto'.",
+        "whisper_cpu_threads": "The whisper CPU threads to use. Defaults to 4.",
+        "whisper_url": "The whisper URL to use. Defaults to 'http://127.0.0.1:8080/inference'.",
+        "audio_threshold": "The audio threshold. Defaults to 'auto'.",
+        "pause_threshold": "The pause threshold. Defaults to 0.5.",
+        "listen_timeout": "The timeout for listening."
     },
     "LanguageModel": {
         "inference_engine": "The inference engine to use. Defaults to 'openai' to use OpenAI's API. Available: openai, llama-cpp-python, llava-cpp-python, transformers.",
         "tokenizer_type": "The tokenizer type to use. Defaults to 'default' to use the default tokenizer for the inference engine. Only change this if you know why you need to change it.",
+        "prompt_style": "The prompt style to use. Defaults to 'default' to use the default prompt style for the inference engine. Only change this if you know why you need to change it.",
         "maximum_local_tokens": "The maximum local tokens. Defaults to 4096.",
         "max_response_sentences": "The maximum number of sentences in a response. Defaults to 3.",
         "wait_time_buffer": "The wait time buffer. Defaults to 0.5.",
@@ -35,6 +40,7 @@
         "message_signifier": "The phrase that signifies a message. Defaults to '\\n'.",
         "message_seperator": "The phrase that seperates messages. Defaults to '\\n'.",
         "message_format": "The format of the message. Defaults to '[BOS_token][name][message_signifier][content][EOS_token][message_seperator]'",
+        "min_conversation_length": "The minimum conversation length. Defaults to 5.",
         "system_name": "The name of the sender of system messages. System messages are messages that are not from a character and are used to convey information to the LLM. Defaults to 'system'.",
         "user_name": "The name of the default user. Defaults to 'user'. This is the name of the user that is used when the user is not specified. Chat completions(openai) will have this enabled for all user messages by default.",
         "assistant_name": "The name of the assistant. Defaults to 'assistant'. This is the name of the assistant that is used when the assistant is not specified. Chat completions(openai) will have this enabled for all LLM messages by default.",
@@ -59,7 +65,7 @@
         "mirostat_mode": "Mirostat is a type of sampling that overrides everthing else but temperature. It will then change how it samples to force the model to match a certain perplexity target. Defaults to '0' to disable it. If you want to enable it, set it to '1' or '2' for Mode 1 or Mode 2.",
         "mirostat_eta": "The mirostat eta, the learning rate for the perplexity target. Defaults to 0.1.",
         "mirostat_tau": "The mirostat tau, the perplexity target. Defaults to 5.",
-        "max_tokens": "The maximum number of tokens to generate. Defaults to 512.",
+        "max_tokens": "The maximum number of tokens to generate. Defaults to 512."
     },
     "openai_api": {
         "llm": "The language model ID to use.",
@@ -71,9 +77,9 @@
         "n_gpu_layers": "The number of layers to offload to the GPU. Defaults to 0.",
         "n_threads": "The number of threads to use. Defaults to 4. Only use up to your physical core count. If you're using Intel, only use the number of your performance cores.",
         "n_batch": "The size of the batch of tokenizes to send to the model at once. Defaults to 1.",
-        "tensor_split": "The ratio of how to split the layers across multiple GPUs. Defaults to 0.5.",
+        "tensor_split": "The ratio of how to split the layers across multiple GPUs. Defaults to []. [0.5,0.5] for 2 gpus split evenly, [0.3,0.7] for 2 gpus split unevenly.",
         "main_gpu": "The ID of the main GPU to use. Defaults to 0 for GPU 1. If you're using multiple GPUs, set this to the ID of the GPU you want to use.",
-        "split_model": "Whether to split the model across multiple GPUs. Defaults to 0. 0 = single gpu, 1 = split layers and kv across gpus, 2 = split rows across gpus.",
+        "split_mode": "Whether to split the model across multiple GPUs. Defaults to 0. 0 = single gpu, 1 = split layers and kv across gpus, 2 = split rows across gpus.",
         "use_mmap": "Whether to use mmap. Defaults to True.",
         "use_mlock": "Whether to use mlock. Defaults to False.",
         "n_threads_batch": "The number of threads to use for processing batches. Defaults to 1.",
@@ -111,6 +117,7 @@
         "xvasynth_base_url": "If you're using a remote xVASynth server, set this to the base URL of the server."
     },
     "xTTS": {
+        "xtts_server_folder": "The folder where the xTTS server is located.",
         "xtts_base_url": "The base URL of the xTTS server.",
         "xtts_data": "The sampling options for xTTS.",
         "default_xtts_model": "The default xtts model. xTTS models can be used for several voices at once, or a single voice per model. If you want to use a single voice per model, add a model to the xtts models directory with the correct voice_model as it's name."
