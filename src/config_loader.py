@@ -18,6 +18,10 @@ class ConfigLoader:
         self.load()
         self.game_configs = game_configs
         self.current_game_config = game_configs[self.game_id]
+        self.conversation_manager_type = self.current_game_config["conversation_manager_type"]
+        self.interface_type = self.current_game_config["interface_type"]
+        self.behavior_manager = self.current_game_config["behavior_manager"]
+        self.chat_manager = self.current_game_config["chat_manager"]
         logging.log_file = self.logging_file_path # Set the logging file path
         self.get_prompt_styles()
         self.ready = True
@@ -169,7 +173,7 @@ class ConfigLoader:
         return {
             "Game": {
                 "game_id": "skyrim", # skyrim, skyrimvr, fallout4 or fallout4vr
-                "conversation_manager": "auto",
+                "conversation_manager_type": "auto",
                 "interface_type": "auto",
                 "behavior_manager": "auto",
                 "chat_manager": "auto"
@@ -382,7 +386,7 @@ class ConfigLoader:
         return {
             "Game": {
                 "game_id": self.game_id,
-                "conversation_manager": self.conversation_manager,
+                "conversation_manager_type": self.conversation_manager_type,
                 "interface_type": self.interface_type,
                 "behavior_manager": self.behavior_manager,
                 "chat_manager": self.chat_manager
@@ -537,7 +541,9 @@ class ConfigLoader:
         self.config_server_app = flask.Flask(__name__)
         @self.config_server_app.route('/config', methods=['GET'])
         def get_config():
-            return flask.jsonify(self.export())
+            export = self.export()
+            print(export)
+            return flask.jsonify(export)
         @self.config_server_app.route('/config', methods=['POST'])
         def post_config():
             data = flask.request.json
@@ -551,6 +557,9 @@ class ConfigLoader:
             return flask.jsonify(self.export())
         @self.config_server_app.route('/defaults', methods=['GET'])
         def get_default():
+            print(self.default())
+            print(self.default_types())
+            print(self.descriptions())
             return flask.jsonify({
                 "defaultConfig": self.default(),
                 "types": self.default_types(),

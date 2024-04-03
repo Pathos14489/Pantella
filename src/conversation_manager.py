@@ -16,12 +16,12 @@ for file in os.listdir(os.path.join(os.path.dirname(__file__), "conversation_man
 # Create Manager object using the config provided
     
 def create_manager(config):
-    if config.conversation_manager != "auto": # if a specific conversation manager is specified
-        if config.conversation_manager not in Manager_Types:
-            logging.error(f"Could not find conversation manager: {config.conversation_manager}! Please check your config.json file and try again!")
+    if config.conversation_manager_type != "auto": # if a specific conversation manager is specified
+        if config.conversation_manager_type not in Manager_Types:
+            logging.error(f"Could not find conversation manager: {config.conversation_manager_type}! Please check your config.json file and try again!")
             input("Press enter to continue...")
-            raise ValueError(f"Could not find conversation manager: {config.conversation_manager}! Please check your config.json file and try again!")
-        module = Manager_Types[config.conversation_manager]
+            raise ValueError(f"Could not find conversation manager: {config.conversation_manager_type}! Please check your config.json file and try again!")
+        module = Manager_Types[config.conversation_manager_type]
         if config.game_id not in module.valid_games:
             logging.error(f"Game '{config.game_id}' not supported by conversation manager {module.manager_slug}")
             input("Press enter to continue...")
