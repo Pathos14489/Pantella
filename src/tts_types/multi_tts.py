@@ -1,13 +1,5 @@
-import src.utils as utils
 import src.tts_types.base_tts as base_tts
-from src.logging import logging, time
-import sys
-import os
-from pathlib import Path
-import requests
-import io
-import soundfile as sf
-import numpy as np
+from src.logging import logging
 
 tts_slug = "multi_tts"
 class Synthesizer(base_tts.base_Synthesizer):

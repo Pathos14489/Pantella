@@ -1,6 +1,6 @@
 import src.utils as utils
 import src.tts_types.base_tts as base_tts
-from src.logging import logging, time
+from src.logging import logging
 import sys
 import os
 from pathlib import Path

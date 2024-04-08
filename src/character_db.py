@@ -1,11 +1,9 @@
 import src.utils as utils
-import src.tts as tts
 from src.logging import logging
 import json
 import os
 import pandas as pd
-import csv
-import math
+
 class CharacterDB():
     def __init__(self, conversation_manager): # character_database_directory is the path to a character directory where each character is a seperate json file
         self.conversation_manager = conversation_manager
@@ -104,7 +102,7 @@ class CharacterDB():
     def characters(self):
         filtered = []
         for character in self._characters:
-            if character['name'] != None and character['name'] != "" and character['name'] != "nan":
+            if character['name'] != None and character['name'] != "" and str(character['name']).tolower() != "nan":
                 filtered.append(character)
         sorted_characters = sorted(filtered, key=lambda x: str(x['name']))
         return sorted_characters
