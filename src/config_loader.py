@@ -389,7 +389,7 @@ class ConfigLoader:
                     if key not in unique:
                         unique[key] = {}
                     unique[key][sub_key] = getattr(self, sub_key)
-        return unique
+        return json.dumps(unique, indent=4)
 
     def descriptions(self):
         """Return a dictionary of descriptions for each setting"""
