@@ -89,7 +89,7 @@ class ConfigLoader:
         for key in default: # Set the config settings to the loader
             for sub_key in default[key]:
                 # print(f"Setting {sub_key} to {config[key][sub_key]}")
-                if "_path" in sub_key:
+                if "_path" in sub_key or "_file" in sub_key:
                     setattr(self, sub_key, config[key][sub_key].replace("\\", "/").replace("/","\\"))
                 else:
                     setattr(self, sub_key, config[key][sub_key])
@@ -102,6 +102,8 @@ class ConfigLoader:
 
         if save:
             self.save()
+
+        print(f"Unique settings:", self.unique())
         
         # self.format_paths()
         print(f"Config loaded from {self.config_path}")
@@ -276,10 +278,10 @@ class ConfigLoader:
             "openai_api": {
                 "llm": "gpt-3.5-turbo-1106",
                 "alternative_openai_api_base": "none",
-                "secret_key_file_path": "./GPT_SECRET_KEY.txt"
+                "secret_key_file_path": ".\\GPT_SECRET_KEY.txt"
             },
             "llama_cpp_python": {
-                "model_path": "./model.gguf",
+                "model_path": ".\\model.gguf",
                 "n_gpu_layers": 0,
                 "n_threads": 4,
                 "n_batch": 512,
@@ -292,7 +294,7 @@ class ConfigLoader:
                 "offload_kqv": True,
             },
             "llava_cpp_python": {
-                "llava_clip_model_path": "./clip_model.gguf",
+                "llava_clip_model_path": ".\\clip_model.gguf",
                 "paddle_ocr": True,
                 "ocr_lang": "en",
                 "ocr_use_angle_cls": True,
@@ -369,13 +371,25 @@ class ConfigLoader:
                 "add_voicelines_to_all_voice_folders": False
             },
             "Config": {
-                "character_database_file": "./data/020224_skyrim_characters_hex_ids.csv",
-                "voice_model_ref_ids_file": "./skyrim_voice_model_ids.json",
-                "logging_file_path": "./logging.log",
-                "language_support_file_path": "./data/language_support.csv",
+                "character_database_file": ".\\data\\020224_skyrim_characters_hex_ids.csv",
+                "voice_model_ref_ids_file": ".\\skyrim_voice_model_ids.json",
+                "logging_file_path": ".\\logging.log",
+                "language_support_file_path": ".\\data\\language_support.csv",
                 "port": 8021
             }
         }
+    
+    def unique(self):
+        """Return a dictionary of settings that have been changed from the default settings"""
+        default = self.default()
+        unique = {}
+        for key in default:
+            for sub_key in default[key]:
+                if getattr(self, sub_key) != default[key][sub_key]:
+                    if key not in unique:
+                        unique[key] = {}
+                    unique[key][sub_key] = getattr(self, sub_key)
+        return unique
 
     def descriptions(self):
         """Return a dictionary of descriptions for each setting"""
