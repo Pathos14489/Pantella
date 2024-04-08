@@ -103,10 +103,10 @@ class ConfigLoader:
         if save:
             self.save()
 
-        print(f"Unique settings:", self.unique())
+        logging.info(f"Unique settings:", self.unique())
         
         # self.format_paths()
-        print(f"Config loaded from {self.config_path}")
+        logging.info(f"Config loaded from {self.config_path}")
     
     # def format_paths(self):
     #     self.game_path = self.game_path.replace("\\", "/").replace("/","\\")
