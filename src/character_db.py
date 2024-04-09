@@ -102,7 +102,7 @@ class CharacterDB():
     def characters(self):
         filtered = []
         for character in self._characters:
-            if character['name'] != None and character['name'] != "" and str(character['name']).tolower() != "nan":
+            if character['name'] != None and character['name'] != "" and str(character['name']).lower() != "nan":
                 filtered.append(character)
         sorted_characters = sorted(filtered, key=lambda x: str(x['name']))
         return sorted_characters
