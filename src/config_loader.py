@@ -314,9 +314,22 @@ class ConfigLoader:
                 "xvasynth_base_url": "http://127.0.0.1:8008"
             },
             "xTTS": {
-                "xtts_server_folder": "C:\\Users\\User\\Desktop\\xtts-api-server",
-                "xtts_base_url": "http://127.0.0.1:8020",
-                "xtts_data": {
+                "xtts_device": "cuda",
+                "xtts_voice_samples_dir": ".\\data\\voice_samples",
+                "xtts_preload_latents": True,
+                "xtts_use_cached_latents": True,
+                "xtts_temperture": 0.75,
+                "xtts_top_k": 50,
+                "xtts_top_p": 0.85,
+                "xtts_length_penalty": 1.0,
+                "xtts_repetition_penalty": 10.0,
+                "xtts_speed": 1.0,
+                "xtts_num_beams": 1,
+            },
+            "xTTS_api": {
+                "xtts_api_server_folder": "C:\\Users\\User\\Desktop\\xtts-api-server",
+                "xtts_api_base_url": "http://127.0.0.1:8020",
+                "xtts_api_data": {
                     "temperature": 0.75,
                     "length_penalty": 1.0,
                     "repetition_penalty": 3.0,
@@ -326,7 +339,7 @@ class ConfigLoader:
                     "enable_text_splitting": True,
                     "stream_chunk_size": 200
                 },
-                "default_xtts_model": "v2.0.2"
+                "default_xtts_api_model": "v2.0.2"
             },
             "Cleanup": {
                 "remove_mei_folders": False
@@ -484,10 +497,23 @@ class ConfigLoader:
                 "xvasynth_base_url": self.xvasynth_base_url,
             },
             "xTTS": {
-                "xtts_server_folder": self.xtts_server_folder,
-                "xtts_base_url": self.xtts_base_url,
-                "xtts_data": self.xtts_data,
-                "default_xtts_model": self.default_xtts_model,
+                "xtts_device": self.xtts_device,
+                "xtts_voice_samples_dir": self.xtts_voice_samples_dir,
+                "xtts_preload_latents": self.xtts_preload_latents,
+                "xtts_use_cached_latents": self.xtts_use_cached_latents,
+                "xtts_temperture": self.xtts_temperture,
+                "xtts_top_k": self.xtts_top_k,
+                "xtts_top_p": self.xtts_top_p,
+                "xtts_length_penalty": self.xtts_length_penalty,
+                "xtts_repetition_penalty": self.xtts_repetition_penalty,
+                "xtts_speed": self.xtts_speed,
+                "xtts_num_beams": self.xtts_num_beams,
+            },
+            "xTTS_api": {
+                "xtts_api_server_folder": self.xtts_api_server_folder,
+                "xtts_api_base_url": self.xtts_api_base_url,
+                "xtts_api_data": self.xtts_api_data,
+                "default_xtts_api_model": self.default_xtts_api_model,
             },
             "Cleanup": {
                 "remove_mei_folders": self.remove_mei_folders,
