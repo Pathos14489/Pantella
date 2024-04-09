@@ -48,6 +48,7 @@ class Synthesizer(base_tts.base_Synthesizer):
         self.setvocoder_url = f'{self.config.xvasynth_base_url}/setVocoder'
         self.get_available_voices_url = f'{self.config.xvasynth_base_url}/getAvailableVoices'
         self.set_available_voices_url = f'{self.config.xvasynth_base_url}/setAvailableVoices'
+        logging.info(f'xVASynth - Available voices: {self.voices()}')
         
     def check_if_xvasynth_is_running(self):
         self.times_checked_xvasynth += 1
