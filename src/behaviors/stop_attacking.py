@@ -9,12 +9,7 @@ class stop_attacking(base_behavior.BaseBehavior):
         self.example = "'I'm sorry, I didn't mean it!' 'Forgiven: Alright, I'll forgive you.'"
         self.valid_games = ["skyrim","skyrimvr"]
     
-    def run(self, run=False, speaker_character=None, sentence=None):
-        if run:
-            if sentence is None:
-                logging.error(f"StopAttacking behavior called with no sentence!")
-            else:
-                logging.info(f"{speaker_character.name} stopped attacking.")
-                self.new_game_event(f"{speaker_character.name} stopped attacking {self.manager.conversation_manager.player_name}, sheathed their weapon.")
-                self.queue_actor_method(speaker_character,"StopCombat")
-        return "stop_attacking"
+    def run(self, speaker_character=None, sentence=None):
+        logging.info(f"{speaker_character.name} stopped attacking.")
+        self.new_game_event(f"{speaker_character.name} stopped attacking {self.manager.conversation_manager.player_name}, sheathed their weapon.")
+        self.queue_actor_method(speaker_character,"StopCombat")

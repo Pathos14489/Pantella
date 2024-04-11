@@ -10,12 +10,7 @@ class add_to_conversation(base_behavior.BaseBehavior):
         self.radiant_only = True
         self.valid_games = ["skyrim","skyrimvr"]
     
-    def run(self, run=False, speaker_character=None, sentence=None):
-        if run:
-            if sentence is None:
-                logging.error(f"add_to_conversation behavior called with no sentence!")
-            else:
-                logging.info(f"{speaker_character['name']} is adding {self.manager.conversation_manager.player_name} to the conversation.")
-                self.new_game_event(f"{speaker_character['name']} added {self.manager.conversation_manager.player_name} to the conversation.")
-                self.queue_actor_method(speaker_character,"AddPlayerToConversation")
-        return "add_to_conversation"
+    def run(self, speaker_character=None, sentence=None):
+        logging.info(f"{speaker_character['name']} is adding {self.manager.conversation_manager.player_name} to the conversation.")
+        self.new_game_event(f"{speaker_character['name']} added {self.manager.conversation_manager.player_name} to the conversation.")
+        self.queue_actor_method(speaker_character,"AddPlayerToConversation")

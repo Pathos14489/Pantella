@@ -8,7 +8,8 @@ class BaseBehavior():
         self.example = None
         self.radiant_only = False
         self.non_radiant_only = False
-        self.player = False # If this behavior can only be triggered when the player is present
+        self.player = False # If this behavior can be triggered by the player
+        self.player_only = False # If this behavior can only be triggered by the player
         self.npc = False # If this behavior can only be triggered when only NPCs are present
         self.single_npc_with_npc_only = False
         self.single_npc_with_player_only = False
@@ -22,14 +23,21 @@ class BaseBehavior():
     def conversation_manager(self):
         return self.manager.conversation_manager
     
-    def run(self, run=False, speaker_character=None, sentence=None):
+    def _run(self, run=False, speaker_character=None, sentence=None):
         if run:
             if sentence is None:
-                logging.error(f"Goodbye behavior called with no sentence!")
+                logging.error(f"{self.keyword} behavior called with no sentence!")
             else:
-                pass
+                self.run(speaker_character, sentence)
+        return self.keyword
+
+    def run(self, speaker_character=None, sentence=None):
         logging.error("BaseBehavior run() called for " + self.__class__.__name__ + f"({self.keyword}.py), this should be overwritten by the child class!")
-        return "BASEBEHAVIOR"
+        return self
+    
+    def player_run(self, sentence=None):
+        logging.error("BaseBehavior player_run() called for " + self.__class__.__name__ + f"({self.keyword}.py), this should be overwritten by the child class!")
+        return self
     
     def valid(self):
         if not self.conversation_manager.radiant_dialogue and self.radiant_only:
@@ -41,7 +49,9 @@ class BaseBehavior():
             return False
         if conversation_type == "single_npc_with_player" and (self.single_npc_with_npc_only or self.multi_npc_only or self.npc):
             return False
-        if conversation_type == "multi_npc" and (self.single_npc_with_npc_only or self.single_npc_with_player_only or (self.npc and self.conversation_manager.radiant_dialogue) or (self.player and not self.conversation_manager.radiant_dialogue)):
+        if conversation_type == "multi_npc" and (self.single_npc_with_npc_only or self.single_npc_with_player_only or (self.npc and self.conversation_manager.radiant_dialogue)):
+            return False
+        if self.player_only:
             return False
         return True
     

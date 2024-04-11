@@ -25,7 +25,7 @@ class base_BehaviorManager():
                 else:
                     logging.info(f"Behavior {behavior_name} not supported by game '{conversation_manager.config.game_id}'")
                     continue
-                if behavior.run(False) == "BASEBEHAVIOR":
+                if behavior._run(False) == "BASEBEHAVIOR":
                     logging.error("BaseBehavior run() called for " + behavior_name + ", this should be overwritten by the child class!")
                 else:
                     logging.info("Loaded behavior " + filename)
@@ -43,12 +43,16 @@ class base_BehaviorManager():
                 if behavior.keyword is not None and behavior.keyword.lower() == keyword.lower():
                     logging.info(f"Behavior triggered: {behavior.keyword}")
                     try:
-                        behavior.run(True, next_author, sentence=sentence)
+                        if behavior.player_only:
+                            logging.error(f"Behavior {behavior.keyword} is player-only!")
+                            return False
+                        behavior._run(True, next_author, sentence=sentence)
                         return behavior
                     except Exception as e:
                         logging.error(f"Error running behavior {behavior.keyword}: {e}")
                         raise e
         return None
+    
     
     def pre_sentence_evaluate(self, next_author, sentence): # Evaluates just the sentence, returns the behavior that was run
         logging.info(f"Evaluating sentence {sentence}")
@@ -64,7 +68,7 @@ class base_BehaviorManager():
             if npc_contains_keyword:
                 logging.info(f"Behavior triggered: {behavior.keyword}")
                 try:
-                    behavior.run(True, next_author, sentence=sentence)
+                    behavior._run(True, next_author, sentence=sentence)
                     return behavior
                 except Exception as e:
                     logging.error(f"Error running behavior {behavior.keyword}: {e}")
@@ -84,7 +88,7 @@ class base_BehaviorManager():
             if npc_contains_keyword:
                 logging.info(f"Behavior triggered: {behavior.keyword}")
                 try:
-                    behavior.run(True, next_author, sentence=sentence)
+                    behavior._run(True, next_author, sentence=sentence)
                     return behavior
                 except Exception as e:
                     logging.error(f"Error running behavior {behavior.keyword}: {e}")
@@ -100,3 +104,10 @@ class base_BehaviorManager():
                         summary += f"Example: {behavior.example}"
                     summary += "\n"
         return summary
+    
+    def run_player_behaviors(self, sentence):
+        """Run behaviors that are triggered by the player."""
+        logging.info(f"Evaluating sentence {sentence}")
+        for behavior in self.behaviors:
+            if behavior.player or behavior.player_only:
+                behavior.player_run(sentence)

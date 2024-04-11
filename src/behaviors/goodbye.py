@@ -9,11 +9,6 @@ class goodbye(base_behavior.BaseBehavior):
         self.npc_post_keywords = self.conversation_manager.config.end_conversation_keywords
         self.valid_games = ["skyrim","skyrimvr"]
     
-    def run(self, run=False, speaker_character=None, sentence=None):
-        if run:
-            if sentence is None:
-                logging.error(f"Goodbye behavior called with no sentence!")
-            else:
-                logging.info(f"{speaker_character.name} is ending the conversation.")
-                self.manager.conversation_manager.conversation_ended = True
-        return "goodbye"
+    def run(self, speaker_character=None, sentence=None):
+        logging.info(f"{speaker_character.name} is leaving the conversation.")
+        speaker_character.leave_conversation()

@@ -9,14 +9,8 @@ class give(base_behavior.BaseBehavior):
         self.example = "'Can you give me that?' 'Give: Sure, here you go.'"
         self.valid_games = ["skyrim","skyrimvr"]
     
-    def run(self, run=False, speaker_character=None, sentence=None):
-        if run:
-            if sentence is None:
-                logging.error(f"Give behavior called with no sentence!")
-            else:
-                logging.info(f"{speaker_character.name} wants to give an item from the player.")
-                self.queue_actor_method(speaker_character,"Wait","2")
-                self.new_game_event(f"{speaker_character.name} offered {self.manager.conversation_manager.player_name} to take something from them.")
-                self.queue_actor_method(speaker_character,"OpenTakeMenu")
-        return "give"
-    
+    def run(self, speaker_character=None, sentence=None):
+        logging.info(f"{speaker_character.name} wants to give an item from the player.")
+        self.queue_actor_method(speaker_character,"Wait","2")
+        self.new_game_event(f"{speaker_character.name} offered {self.manager.conversation_manager.player_name} to take something from them.")
+        self.queue_actor_method(speaker_character,"OpenTakeMenu")

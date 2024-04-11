@@ -173,6 +173,7 @@ class ConversationManager(BaseConversationManager):
             if transcribed_text == "EndConversationNow":
                 self.end_conversation()
                 return
+            self.behavior_manager.run_player_behaviors(transcribed_text) # run player behaviors
 
             self.game_interface.write_game_info('_mantella_player_input', transcribed_text) # write player input to _mantella_player_input.txt
 

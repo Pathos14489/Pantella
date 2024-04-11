@@ -15,14 +15,8 @@ class buy(base_behavior.BaseBehavior):
         ]
         self.valid_games = ["skyrim","skyrimvr"]
     
-    def run(self, run=False, speaker_character=None, sentence=None):
-        if run:
-            if sentence is None:
-                logging.error(f"Buy behavior called with no sentence!")
-            else:
-                logging.info(f"{speaker_character.name} wants to buy something from the {self.manager.conversation_manager.player_name}.")
-                self.queue_actor_method(speaker_character,"Wait","2")
-                self.new_game_event(f"{speaker_character.name} began buying something from {self.manager.conversation_manager.player_name}.")
-                self.queue_actor_method(speaker_character,"OpenBarterMenu")
-        return "buy"
-    
+    def run(self, speaker_character=None, sentence=None):
+        logging.info(f"{speaker_character.name} wants to buy something from the {self.manager.conversation_manager.player_name}.")
+        self.queue_actor_method(speaker_character,"Wait","2")
+        self.new_game_event(f"{speaker_character.name} began buying something from {self.manager.conversation_manager.player_name}.")
+        self.queue_actor_method(speaker_character,"OpenBarterMenu")
