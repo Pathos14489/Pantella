@@ -170,9 +170,15 @@ class Characters:
         else:
             logging.warning(f"Character {character.name} not in active characters list, cannot remove from conversation.")
     
-    def step(self):
+    def after_step(self):
+        """Perform a step in the memory manager - Some memory managers may need to perform some action every step"""
         for character in self.active_characters_list:
-            character.step()
+            character.after_step()
+
+    def before_step(self):
+        """Perform a step in the memory manager - Some memory managers may need to perform some action every step"""
+        for character in self.active_characters_list:
+            character.after_step()
 
     def reached_conversation_limit(self):
         for character in self.active_characters_list:

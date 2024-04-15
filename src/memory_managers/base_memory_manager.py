@@ -25,7 +25,13 @@ class base_MemoryManager():
     def messages(self):
         return self.conversation_manager.messages
 
-    def step(self):
+    def after_step(self):
+        """Perform a step in the memory manager - Some memory managers may need to perform some action every step"""
+        logging.error("step() method not implemented in your memory manager.")
+        input("Press enter to continue...")
+        raise NotImplementedError("step() method not implemented in your memory manager.")
+    
+    def before_step(self):
         """Perform a step in the memory manager - Some memory managers may need to perform some action every step"""
         logging.error("step() method not implemented in your memory manager.")
         input("Press enter to continue...")

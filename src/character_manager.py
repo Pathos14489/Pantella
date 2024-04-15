@@ -192,9 +192,13 @@ class Character:
         self.say(random_goodbye+'.') # let the player know that the conversation is ending using the latest character in the conversation that isn't the player to say it
         self.reached_conversation_limit()
 
-    def step(self):
+    def after_step(self):
         """Perform a step in the memory manager - Some memory managers may need to perform some action every step"""
-        self.memory_manager.step()
+        self.memory_manager.after_step()
+        
+    def before_step(self):
+        """Perform a step in the memory manager - Some memory managers may need to perform some action every step"""
+        self.memory_manager.before_step()
 
     def reached_conversation_limit(self):
         """Ran when the conversation limit is reached, or the conversation is ended - Some memory managers may need to perform some action when the conversation limit is reached"""

@@ -108,7 +108,13 @@ class MemoryManager(base_MemoryManager):
 
         return return_label
 
-    def step(self):
+    def before_step(self):
+        """Perform a step in the memory manager - Some memory managers may need to perform some action every step"""
+        self.memory_update_interval_counter += 1
+        if self.memory_update_interval_counter >= self.memory_update_interval:
+            self.memory_update_interval_counter = 0
+            self.update_memories()
+    def after_step(self):
         """Perform a step in the memory manager - Some memory managers may need to perform some action every step"""
         self.memory_update_interval_counter += 1
         if self.memory_update_interval_counter >= self.memory_update_interval:
@@ -271,11 +277,18 @@ class MemoryManager(base_MemoryManager):
             return []
         mem_messages = [{
             "role": self.config.system_name,
-            "content": self.name+" is thinking about the following memories:",
+            "content": self.name+" is thinking about the following memory:",
         }]
+        mem_i = 0
         for memory in self.current_memories:
             for msg in memory:
                 mem_messages.append(msg)
+            if mem_i < len(self.current_memories)-1: # if there are more memories
+                mem_messages.append({
+                    "role": self.config.system_name,
+                    "content": self.name+" is also thinking about this memory:"
+                })
+            mem_i += 1
         return mem_messages
 
     @property

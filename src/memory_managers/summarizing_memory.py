@@ -163,8 +163,12 @@ class MemoryManager(base_MemoryManager):
 
         return summary
     
-    def step(self):
-        """Perform a step in the memory manager - Some memory managers may need to perform some action every step - This memory manager does not need to perform any action every step"""
+    def after_step(self):
+        """Perform a step in the memory manager - Some memory managers may need to perform some action every step"""
+        pass
+    
+    def before_step(self):
+        """Perform a step in the memory manager - Some memory managers may need to perform some action every step"""
         pass
     
     def reached_conversation_limit(self):
