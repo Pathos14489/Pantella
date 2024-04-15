@@ -191,12 +191,14 @@ class Transcriber:
         """Identifies keyword in the input transcript"""
 
         keyword_found = False
-        if transcript_cleaned:
-            transcript_words = transcript_cleaned.split()
-            if bool(set(transcript_words).intersection([activation_name])):
-                keyword_found = True
-            elif transcript_cleaned == activation_name:
-                keyword_found = True
+        if activation_name in transcript_cleaned:
+            keyword_found = True
+        if activation_name in transcript_cleaned.lower():
+            keyword_found = True
+        if activation_name.lower() in transcript_cleaned:
+            keyword_found = True
+        if activation_name.lower() in transcript_cleaned.lower():
+            keyword_found = True
         
         return keyword_found
 

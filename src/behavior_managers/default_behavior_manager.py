@@ -65,11 +65,13 @@ class BehaviorManager():
             npc_keywords = behavior.npc_pre_keywords
             npc_contains_keyword = False
             for npc_keyword in npc_keywords:
-                if npc_keyword.lower() in sentence.lower():
+                if self.conversation_manager.transcriber.activation_name_exists(sentence, npc_keyword):
                     npc_contains_keyword = True
+                    break
             for activation_sentence in behavior.activation_sentences:
                 if activation_sentence.lower() in sentence.lower() or sentence.lower() in activation_sentence.lower():
                     npc_contains_keyword = True
+                    break
             if npc_contains_keyword:
                 logging.info(f"Behavior triggered: {behavior.keyword}")
                 try:
@@ -86,11 +88,13 @@ class BehaviorManager():
             npc_keywords = behavior.npc_post_keywords
             npc_contains_keyword = False
             for npc_keyword in npc_keywords:
-                if npc_keyword.lower() in sentence.lower():
+                if self.conversation_manager.transcriber.activation_name_exists(sentence, npc_keyword):
                     npc_contains_keyword = True
+                    break
             for activation_sentence in behavior.activation_sentences:
                 if activation_sentence.lower() in sentence.lower() or sentence.lower() in activation_sentence.lower():
                     npc_contains_keyword = True
+                    break
             if npc_contains_keyword:
                 logging.info(f"Behavior triggered: {behavior.keyword}")
                 try:
