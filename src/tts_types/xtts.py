@@ -1,6 +1,6 @@
 print("Loading xtts.py")
 from src.logging import logging
-# import src.tts_types.base_tts as base_tts
+import src.tts_types.base_tts as base_tts
 # from pathlib import Path
 # import os
 # import torch
