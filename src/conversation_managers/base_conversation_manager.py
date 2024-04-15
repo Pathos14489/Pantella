@@ -46,6 +46,18 @@ class BaseConversationManager:
         self.messages.append(msg)
         self.character_manager.add_message(msg)
 
+    def has_message(self, message):
+        """Check if the conversation has a message"""
+        has_message = False
+        for msg in self.messages:
+            if msg["id"] == message["id"]:
+                has_message = True
+                break
+            if msg["role"] == message["role"] and msg["text"] == message["text"]:
+                has_message = True
+                break
+        return has_message
+
     def create_new_character_manager(self):
         """Create a new Character Manager object based on the current ConversationManager object"""
         return characters_manager.Characters(self) # Create Character Manager object based on ConversationManager
