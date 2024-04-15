@@ -521,7 +521,13 @@ class ConfigLoader:
                 "emotional_memories": self.emotional_memories,
                 "torchmoji_max_length": self.torchmoji_max_length,
                 "empathy": self.empathy,
+                "chromadb_memory_messages_before": self.chromadb_memory_messages_before,
+                "chromadb_memory_messages_after": self.chromadb_memory_messages_after,
+                "emotional_decay_min": self.emotional_decay_min,
+                "emotional_decay_max": self.emotional_decay_max,
                 "emotion_composition": self.emotion_composition,
+                "chromadb_memory_depth": self.chromadb_memory_depth,
+                "chromadb_memory_direction": self.chromadb_memory_direction,
             },
             "Microphone": {
                 "whisper_model": self.whisper_model,
