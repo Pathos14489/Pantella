@@ -109,6 +109,8 @@ class MemoryManager(base_MemoryManager):
 
     def update_memories(self):
         """Update the memories stored in the memory manager - Some memory managers may need to update memories every step"""
+        if len(self.conversation_manager.messages) == 0:
+            return
         self.current_memories = self.get_most_related_memories(self.conversation_manager.messages[-1]["content"],self.config.logical_memories,self.config.chromadb_memory_messages_before,self.config.chromadb_memory_messages_after)
     
     def reached_conversation_limit(self):
@@ -259,6 +261,8 @@ class MemoryManager(base_MemoryManager):
     @property
     def memories(self):
         """Return the current memories of the character"""
+        if len(self.current_memories) == 0:
+            return []
         mem_messages = [{
             "role": self.config.system_name,
             "content": self.name+" is thinking about the following memories:",
