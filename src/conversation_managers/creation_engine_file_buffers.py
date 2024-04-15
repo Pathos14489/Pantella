@@ -1,5 +1,5 @@
 print("Loading conversation_managers/creation_engine_file_buffers.py...")
-from src.logging import logging
+from src.logging import logging, time
 import src.characters_manager as characters_manager # Character Manager class
 from src.conversation_managers.base_conversation_manager import BaseConversationManager
 import src.utils as utils
@@ -135,7 +135,9 @@ class ConversationManager(BaseConversationManager):
         self.game_interface.update_game_events() # update game events before first player input
         if not self.radiant_dialogue: # initiate conversation with character
             try: # get response from NPC to player greeting
-                self.new_message({'role': "[player]", 'content': f"{self.language_info['hello']} {character.name}."}) # TODO: Make this more interesting, always having the character say hi like we aren't always with each other is bizzare imo
+                # self.new_message({'role': "[player]", 'content': f"{self.language_info['hello']} {character.name}."}) # TODO: Make this more interesting, always having the character say hi like we aren't always with each other is bizzare imo
+                pp_name, _, _ = character.get_perspective_player_identity()
+                self.new_message({'role': self.config.system_name, 'content': pp_name+" is starting a conversation with "+character.name+"."})
                 self.get_response()
             except Exception as e: # if error, close Mantella
                 self.game_interface.write_game_info('_mantella_end_conversation', 'True')
@@ -186,6 +188,7 @@ class ConversationManager(BaseConversationManager):
             transcript_cleaned = utils.clean_text(transcribed_text)
 
             self.new_message({'role': "[player]", 'content': transcribed_text}) # add player input to messages
+            self.character_manager.before_step() # Let the characters know that a step has been taken
         
             self.update_game_state()
 
@@ -230,7 +233,7 @@ class ConversationManager(BaseConversationManager):
         if self.conversation_ended and self.in_conversation:
             self.end_conversation()
 
-        self.character_manager.step() # Let the characters know that a step has been taken
+        self.character_manager.after_step() # Let the characters know that a step has been taken
         # if the conversation is becoming too long, save the conversation to memory and reload
         if self.tokenizer.num_tokens_from_messages(self.messages[1:]) > (round(self.tokens_available*self.config.conversation_limit_pct,0)): # if the conversation is becoming too long, save the conversation to memory and reload
             self.reload_conversation()
