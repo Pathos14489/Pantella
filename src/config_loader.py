@@ -200,6 +200,113 @@ class ConfigLoader:
                 "summarizing_memory_direction": "topdown", # topdown or bottomup
                 "summarizing_memory_depth": 1,
             },
+            "chromadb_memory":{
+                "memory_update_interval": 20,
+                "logical_memories": 3,
+                "emotional_memories": 3,
+                "torchmoji_max_length": 30,
+                "empathy": 0.5,
+                "chromadb_memory_messages_before": 3,
+                "chromadb_memory_messages_after": 1,
+                "emotional_decay_min": 0.005,
+                "emotional_decay_max": 0.01,
+                "emotion_composition": {
+                    "amused": [
+                        "joy",
+                        "speak_no_evil",
+                        "wink",
+                    ],
+                    "happy": [
+                        "ok_hand",
+                        "grin",
+                        "v",
+                        "sunglasses",
+                        "yum",
+                        "smile",
+                        "stuck_out_tongue_winking_eye",
+                        "relieved",
+                        "thumbsup",
+                        "sparkles",
+                        "muscle",
+                        "raised_hands",
+                        "cry",
+                        "musical_note",
+                        "notes",
+                        "clap"
+                    ],
+                    "sad": [
+                        "unamused",
+                        "tired_face",
+                        "sob",
+                        "cry",
+                        "persevere",
+                        "broken_heart",
+                        "sleepy",
+                        "pensive"
+                    ],
+                    "trusting": [
+                        "relaxed",
+                        "pray",
+                    ],
+                    "afraid": [
+                        "weary",
+                        "sweat_smile",
+                        "skull",
+                    ],
+                    "angry": [
+                        "rage",
+                        "triumph",
+                        "angry",
+                        "facepunch",
+                        "information_desk_person",
+                        "disappointed",
+                    ],
+                    "regretful": [
+                        "disappointed",
+                        "speak_no_evil",
+                        "pensive",
+                    ],
+                    "infatuated": [
+                        "heart_eyes",
+                        "blush",
+                        "heart",
+                        "flushed",
+                        "two_hearts",
+                        "kissing_heart",
+                        "heartbeat",
+                        "yellow_heart",
+                        "purple_heart",
+                        "sparkling_heart",
+                        "blue_heart"
+                    ],
+                    "flirtaious": [
+                        "wink",
+                        "smirk",
+                        "musical_note",
+                        "notes",
+                    ],
+                    "confused": [
+                        "confused",
+                        "sweat",
+                        "confounded",
+                        "grimacing",
+                    ],
+                    "curious": [
+                        "eyes",
+                        "see_no_evil",
+                    ],
+                    "cheerful": [
+                        "smiling_imp",
+                        "gun",
+                        "see_no_evil",
+                        "musical_note",
+                        "notes",
+                        "wink",
+                    ]
+                },
+                "chromadb_memory_depth": 1,
+                "chromadb_memory_direction": "topdown", # topdown or bottomup
+            },
             "Microphone": {
                 "whisper_model": "base",
                 "stt_language": "default",
@@ -407,6 +514,14 @@ class ConfigLoader:
             },
             "summarizing_memory": {
                 "summary_limit_pct": self.summary_limit_pct,
+            },
+            "chromadb_memory": {
+                "memory_update_interval": self.memory_update_interval,
+                "logical_memories": self.logical_memories,
+                "emotional_memories": self.emotional_memories,
+                "torchmoji_max_length": self.torchmoji_max_length,
+                "empathy": self.empathy,
+                "emotion_composition": self.emotion_composition,
             },
             "Microphone": {
                 "whisper_model": self.whisper_model,
