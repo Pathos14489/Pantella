@@ -50,14 +50,23 @@ class MemoryManager(base_MemoryManager):
         self.emotional_memories = ""
         self.emotional_state = {}
         self.neutral_emotions()
-        self.emotional_decay_min = self.config.emotional_decay_min
-        self.emotional_decay_max = self.config.emotional_decay_max
+        self.load_messages()
         if len(self.get_all_messages()) > 0:
             self.update_memories()
+            
+    def load_messages(self):
+        """Load messages from the memory manager - Some memory managers may need to load messages from a file or database, and can also use this method to load old messages into the conversation_manager's messages"""
+        if len(self.conversation_manager.messages) == 0:
+            self.conversation_manager.messages = self.get_all_messages()[-self.config.reload_buffer:] # Load the last n messages into the conversation manager
+        else:
+            new_messages = self.get_all_messages()[-self.config.reload_buffer:]
+            for message in new_messages:
+                if not self.conversation_manager.has_message(message):
+                    self.conversation_manager.messages.append(message)
 
     def next_emotional_decay(self):
         """Get the next emotional decay value"""
-        return np.random.uniform(self.emotional_decay_min, self.emotional_decay_max)
+        return np.random.uniform(self.config.emotional_decay_min, self.config.emotional_decay_max)
         
     def predict(self, string, emoji_count=10):
         """Predict emojis from a string"""
@@ -81,7 +90,6 @@ class MemoryManager(base_MemoryManager):
             # Find top emojis for each sentence. Emoji ids (0-63)
             # correspond to the mapping in emoji_overview.png
             # at the root of the torchMoji repo.
-            scores = []
             for i, t in enumerate([string]):
                 t_prob = prob[i]
                 # sort top
@@ -115,9 +123,7 @@ class MemoryManager(base_MemoryManager):
     
     def reached_conversation_limit(self):
         """Ran when the conversation limit is reached, or the conversation is ended - Some memory managers may need to perform some action when the conversation limit is reached"""
-        logging.error("reached_conversation_limit() method not implemented in your memory manager.")
-        input("Press enter to continue...")
-        raise NotImplementedError("reached_conversation_limit() method not implemented in your memory manager.")
+        logging.info("Conversation limit reached, nothing to do in ChromaDB Memory Manager.")
     
     def add_message(self, message):
         """Add a message to the memory manager - ChromaDB keeps a log of all messages in a jsonl file"""
