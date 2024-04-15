@@ -4,5 +4,6 @@
     "conversation_manager_type": "creation_engine_file_buffers",
     "interface_type": "creation_engine_file_buffers",
     "behavior_manager": "default_behavior_manager",
-    "chat_manager": "creation_engine"
+    "chat_manager": "creation_engine",
+    "memory_manager": "chromadb_memory"
 }
