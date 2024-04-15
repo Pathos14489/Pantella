@@ -322,7 +322,7 @@ class GameInterface(BaseGameInterface):
         hour12 = hour24 if hour24 <= 12 else hour24 - 12 # 12 hour time
         ampm = 'AM' if hour24 < 12 else 'PM' # AM or PM
         minute = int(time_chunks[1])
-        time12 = f'{hour12}:{minute} {ampm}' # Example: 10:31 AM
+        time12 = f'{hour12}:{minute:02} {ampm}' # Example: 10:31 AM
 
         
         return {
