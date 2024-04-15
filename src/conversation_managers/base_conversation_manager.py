@@ -53,7 +53,7 @@ class BaseConversationManager:
             if msg["id"] == message["id"]:
                 has_message = True
                 break
-            if msg["role"] == message["role"] and msg["text"] == message["text"]:
+            if msg["role"] == message["role"] and msg["content"] == message["content"]:
                 has_message = True
                 break
         return has_message
