@@ -43,6 +43,10 @@ class base_MemoryManager():
         input("Press enter to continue...")
         raise NotImplementedError("add_message() method not implemented in your memory manager.")
     
+    def load_messages(self):
+        """Load messages from the memory manager - Some memory managers may need to load messages from a file or database, and can also use this method to load old messages into the conversation_manager's messages"""
+        logging.error("load_messages() method not implemented in your memory manager.")
+
     @property
     def memories(self):
         """Return a string representation of the memories stored in the memory manager - Some memory managers have updating memories strings"""
