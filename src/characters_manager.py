@@ -12,6 +12,7 @@ class Characters:
     def __init__(self, conversation_manager):
         self.active_characters = {}
         self.conversation_manager = conversation_manager
+        self.config = self.conversation_manager.config
 
     @property
     def active_characters_list(self): # Returns a list of all active characters
@@ -181,6 +182,10 @@ class Characters:
         memories = []
         for character in self.active_characters_list:
             memories.extend(character.memories)
+        memories.append({
+            "role": self.config.system_name,
+            "content": "The rest of the messages below this are from the current conversation, the present. Everything above this is a memory from the past."
+        })
         return memories
     
     @property
