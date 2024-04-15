@@ -1,8 +1,9 @@
-from src.game_interfaces.base_interface import BaseGameInterface
+print("Importing game_interfaces/creation_engine_file_buffers.py")
 from src.logging import logging, time
+from src.game_interfaces.base_interface import BaseGameInterface
 import src.utils as utils
 import os
-import random
+logging.info("Imported required libraries in game_interfaces/creation_engine_file_buffers.py")
 
 valid_games = ["fallout4","skyrim","fallout4vr","skyrimvr"]
 interface_slug = "creation_engine_file_buffers"
@@ -490,76 +491,33 @@ class GameInterface(BaseGameInterface):
         if len(in_game_events.strip()) > 0:
             logging.info(f'In-game events since previous exchange:\n{in_game_events}')
             if len(self.conversation_manager.messages) == 0: # if there are no messages in the conversation yet, add in-game events to the first message from the system
-                self.conversation_manager.messages += [{
+                self.conversation_manager.new_message({
                     "role": self.conversation_manager.config.system_name,
                     "content": in_game_events,
-                }]
+                })
             else: # if there are messages in the conversation, add in-game events to the last message from the system
                 last_message = self.conversation_manager.messages[-1]
                 if last_message['role'] == self.conversation_manager.config.system_name: # if last message was from the system, add in-game events to the system message
                     self.conversation_manager.messages[-1]['content'] += "\n" + in_game_events
                 else: # if last message was from the NPC, add in-game events to the ongoing conversation as a new message from the system
-                    self.conversation_manager.messages += [{
+                    self.conversation_manager.new_message({
                         "role": self.conversation_manager.config.system_name,
                         "content": in_game_events,
-                    }] # add in-game events to current ongoing conversation
-    
-    def summarize_all_summaries(self):
-        """Summarize all summaries in the conversation"""
-        summary = None
-        for _, character in self.conversation_manager.character_manager.active_characters.items(): # Get conversation summary from any character in the conversation or generate a new one
-            if summary == None: # If summary has already been generated for another character in a multi NPC conversation (multi NPC memory summaries are shared)
-                summary = character.save_conversation()
-            else: # If summary has not been generated yet, generate it
-                _ = character.save_conversation(summary)
-        return summary
+                    }) # add in-game events to current ongoing conversation
     
     @utils.time_it
-    def end_conversation(self, character):
-        """Say final goodbye lines and save conversation to memory"""
+    def end_conversation(self):
+        """End the conversation in-game"""
+        if self.conversation_manager.character_manager.active_character_count() <= 0:
+            logging.info('Conversation ended.')
+            self.conversation_manager.conversation_ended = True # set conversation_ended to True to prevent the conversation from continuing
+            self.conversation_manager.in_conversation = False # set in_conversation to False to allow the conversation to be restarted
 
-        # say goodbyes
-        if not self.conversation_manager.conversation_ended: # say line if NPC is not already deactivated
-            latest_character = list(self.conversation_manager.character_manager.active_characters.items())[-1][1] # get latest character in conversation
-            goodbye_npc_response = random.choice(self.conversation_manager.config.goodbye_npc_responses)
-            latest_character.say(goodbye_npc_response+'.') # let the player know that the conversation is ending using the latest character in the conversation that isn't the player to say it
-
-        perspective_name, _, _ = character.get_perspective_player_identity() # get perspective name - How the NPC refers to the player
-        random_goodbye_1 = random.choice(self.conversation_manager.config.end_conversation_keywords) # get random goodbye line from player
-        random_goodbye_2 = random.choice(self.conversation_manager.config.end_conversation_keywords) # get random goodbye line from player
-        if random_goodbye_1.endswith('.'):
-            random_goodbye_1 = random_goodbye_1[:-1]
-        if random_goodbye_2.endswith('.'):
-            random_goodbye_2 = random_goodbye_2[:-1]
-        self.conversation_manager.messages.append({"role": perspective_name, "content": random_goodbye_1+'.'})
-        self.conversation_manager.messages.append({"role": character.name, "content": random_goodbye_2+'.'})
-
-        self.summarize_all_summaries() # save conversation to memory
-        logging.info('Conversation ended.')
-        self.conversation_manager.conversation_ended = True # set conversation_ended to True to prevent the conversation from continuing
-        self.conversation_manager.in_conversation = False # set in_conversation to False to allow the conversation to be restarted
-
-        self.write_game_info('_mantella_in_game_events', '') # clear in-game events
-        self.write_game_info('_mantella_end_conversation', 'True') # tell Skyrim papyrus script conversation has ended
-        time.sleep(self.conversation_manager.config.end_conversation_wait_time) # wait a few seconds for everything to register
+            self.write_game_info('_mantella_in_game_events', '') # clear in-game events
+            self.write_game_info('_mantella_end_conversation', 'True') # tell Skyrim papyrus script conversation has ended
+            time.sleep(self.conversation_manager.config.end_conversation_wait_time) # wait a few seconds for everything to register
         return None
     
-    @utils.time_it
-    def reload_conversation(self): 
-        """Restart conversation to save conversation to memory when token count is reaching its limit"""
-        logging.info('Reloading conversation...')
-        latest_character = list(self.conversation_manager.character_manager.active_characters.items())[-1][1] # get latest character in conversation
-        collecting_thoughts_npc_response = random.choice(self.conversation_manager.config.collecting_thoughts_npc_responses)
-        latest_character.say(collecting_thoughts_npc_response+'.') # let the player know that the conversation is reloading using the latest character in the conversation that isn't the player to say it
-
-        self.summarize_all_summaries() # save conversation to memory
-        
-        time.sleep(self.conversation_manager.config.reload_wait_time) # let the new file register on the system
-
-        self.conversation_manager.messages = self.conversation_manager.messages[-self.conversation_manager.config.reload_buffer:] # Set context to just the last few messages
-        if self.conversation_manager.character_manager.active_character_count() > 1: # If there are multiple characters in the conversation, add a message from the player to the NPC that was talking last to get the conversation going again
-            self.conversation_manager.messages.append({"role": self.conversation_manager.player_name, "content": latest_character.name+'?'})
-        else: # If there is only one character in the conversation, add a message from the player to the NPC to get the conversation going again
-            perspective_player_name, _, _ = latest_character.get_perspective_player_identity()
-            self.conversation_manager.messages.append({"role": perspective_player_name, "content": latest_character.name+'?'})
-        logging.info('Conversation reloaded -- Resuming conversation...')
+    def remove_from_conversation(self, character):
+        """Remove a character from the conversation in-game"""
+        logging.info(f'Implement: Remove {character.name} from conversation in-game without ending the whole conversation')

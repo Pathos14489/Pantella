@@ -6,7 +6,7 @@ import src.config_loader as config_loader
 import src.utils as utils
 import threading
 
-
+print("Starting Pantella")
 try:
     config = config_loader.ConfigLoader() # Load config from config.json
 except Exception as e:
@@ -17,6 +17,7 @@ except Exception as e:
 
 utils.cleanup_mei(config.remove_mei_folders) # clean up old instances of exe runtime files
 
+print("Creating Conversation Manager")
 try:
     conversation_manager = cm.create_manager(config)
 except Exception as e:

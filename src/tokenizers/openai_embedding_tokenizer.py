@@ -1,6 +1,9 @@
+print("Importing openai_embedding_tokenizer.py...")
+from src.logging import logging
 import src.utils as utils
 import src.tokenizers.base_tokenizer as tokenizer
-from src.logging import logging
+logging.info("Imported required libraries in openai_embedding_tokenizer.py")
+
 tokenizer_slug = "embedding"
 class Tokenizer(tokenizer.base_Tokenizer): # Gets token count from OpenAI's embedding API -- WARNING SLOW AS HELL -- Only use if you don't want to set up the right tokenizer for your local model or if you don't know how to do that
     def __init__(self, conversation_manager, client):
@@ -14,6 +17,7 @@ class Tokenizer(tokenizer.base_Tokenizer): # Gets token count from OpenAI's embe
         
     @utils.time_it
     def get_token_count(self, string):
+        """Returns the number of tokens in the string"""
         embedding = self.client.embeddings.create(
             model=self.config.llm,
             input=string

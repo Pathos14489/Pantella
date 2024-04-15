@@ -1,7 +1,8 @@
+print("Importing chat_manager.py")
 from src.logging import logging
 import os
 import importlib
-import json
+logging.info("Imported required libraries in chat_manager.py")
 
 Manager_Types = {}
 
@@ -12,7 +13,7 @@ for file in os.listdir(os.path.join(os.path.dirname(__file__), "chat_managers/")
         if module_name != "base_chat_manager":
             module = importlib.import_module(f"src.chat_managers.{module_name}")
             Manager_Types[module.chat_manager_slug] = module    
-
+logging.info("Imported all chat managers to Manager_Types, ready to create a chat manager object!")
 
 # Create Manager object using the config provided
     

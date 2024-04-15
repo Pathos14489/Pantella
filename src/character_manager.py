@@ -1,8 +1,10 @@
+print("Loading character_manager.py")
+from src.logging import logging
 import os
-from src.logging import logging, time
+import src.memory_manager as mm
 import json
-import math
-import src.utils as utils
+import random
+logging.info("Imported required libraries in character_manager.py")
 
 class Character:
     def __init__(self, characters_manager, info, is_generic_npc):
@@ -12,6 +14,17 @@ class Character:
         logging.info(json.dumps(info, indent=4))
         for key, value in info.items():
             setattr(self, key, value) # set all character info as attributes of the character object to support arbitrary character info
+        if "knows" not in self.info:
+            self.knows = []
+        else:
+            if type(self.info["knows"]) == str:
+                self.knows = self.info["knows"].split(",")
+            elif type(self.info["knows"]) == list:
+                self.knows = self.info["knows"]
+            else:
+                self.knows = []
+        self.memory_manager = mm.create_manager(self) # create memory manager for the character
+        self.load_knows()
         # Legend for a few of the more important attributes:
         # self.ref_id - The reference ID of the character as hex with the first two numbers(the load order ID) removed - This is the id of the character in the game, so it is unique to each every single character in the game.
         # self.base_id - The base ID of the character as hex with the first two numbers(the load order ID) removed - This is the id of the character in the editor, so it is unique to each character type (e.g. all bandits have the same baseid, but all one of a single unique character has the same baseid as well)
@@ -22,14 +35,13 @@ class Character:
             self.language_code = self.characters_manager.conversation_manager.language_info['alpha2']
         self.language = self.characters_manager.conversation_manager.language_info['language']
         self.is_generic_npc = is_generic_npc
-        self.conversation_summary = ''
-        self.conversation_summary_file = self.get_latest_conversation_summary_file_path()
+
         if "age" not in self.info:
             self.age = "Adult" # default age - This is to help communicate to the AI the age of the actor they're playing to help them stay in character
             if "Old" in self.voice_model:
                 self.age = "Old"
             elif "Young" in self.voice_model:
-                self.age = "Young"
+                self.age = "Young Adult"
             elif "Child" in self.voice_model:
                 self.age = "Child"
             elif "Teen" in self.voice_model:
@@ -49,100 +61,98 @@ class Character:
                 self.gendered_age = "Old Lady"
             else:
                 self.gendered_age = "Woman"
-        self.conversation_history_file = f"data/conversations/{self.characters_manager.conversation_manager.player_name}_{self.characters_manager.conversation_manager.player_gender}_{self.characters_manager.conversation_manager.player_race}/{self.name}/{self.name}.json"
-        self.current_trust = 0
+        self.save_knows()
+
+    def save_knows(self):
+        if not os.path.exists(self.memory_manager.conversation_history_directory):
+            os.makedirs(self.memory_manager.conversation_history_directory, exist_ok=True)
+        if not os.path.exists(self.memory_manager.conversation_history_directory+"knows"):
+            with open(self.memory_manager.conversation_history_directory+"knows", 'w', encoding='utf-8') as f:
+                f.write("")
+        current_knows = ""
+        with open(self.memory_manager.conversation_history_directory+"knows", 'r', encoding='utf-8') as f:
+            current_knows = f.read()
+        current_knows = current_knows.split(",")
+        for know in self.knows:
+            if know not in current_knows:
+                with open(self.memory_manager.conversation_history_directory+"knows", 'a', encoding='utf-8') as f:
+                    f.write(know+",")
+
+    def load_knows(self):
+        if not os.path.exists(self.memory_manager.conversation_history_directory):
+            os.makedirs(self.memory_manager.conversation_history_directory, exist_ok=True)
+        if not os.path.exists(self.memory_manager.conversation_history_directory+"knows"):
+            with open(self.memory_manager.conversation_history_directory+"knows", 'w', encoding='utf-8') as f:
+                f.write("")
+        with open(self.memory_manager.conversation_history_directory+"knows", 'r', encoding='utf-8') as f:
+            new_knows = f.read()
+            new_knows = new_knows.split(",")
+            total_unique_knows = set(self.knows + new_knows)
+            self.knows = list(total_unique_knows)
+
+    def meet(self, other_character_name):
+        self.knows.append(other_character_name)
+        self.knows = list(set(self.knows))
+        self.save_knows()
 
     @property
     def conversation_manager(self):
         return self.characters_manager.conversation_manager
-
-    def get_latest_conversation_summary_file_path(self):
-        """Get latest conversation summary by file name suffix"""
-
-        conversation_root_dir = f"data/conversations/{self.characters_manager.conversation_manager.player_name}_{self.characters_manager.conversation_manager.player_gender}_{self.characters_manager.conversation_manager.player_race}/{self.name}/"
-        # TODO: Somehow make this work with multiple characters of the same name, gender and race or even ideally with the same exact character
-        # at different points (e.g. different saves = different conversations with the same character and the same player character)
-        # Maybe commmunicate the save index to the user and use that to load the correct save somehow?
-
-        if os.path.exists(conversation_root_dir):
-            # get all files from the directory
-            files = os.listdir(conversation_root_dir)
-            # filter only .txt files
-            txt_files = [f for f in files if f.endswith('.txt')]
-            if len(txt_files) > 0:
-                file_numbers = [int(os.path.splitext(f)[0].split('_')[-1]) for f in txt_files]
-                latest_file_number = max(file_numbers)
-            else:
-                logging.info(f"{conversation_root_dir} does not exist. A new summary file will be created.")
-                latest_file_number = 1
-        else:
-            logging.info(f"{conversation_root_dir} does not exist. A new summary file will be created.")
-            latest_file_number = 1
-
-        
-        conversation_summary_file = f"{conversation_root_dir}/{self.name}_summary_{latest_file_number}.txt"
-        logging.info(f"Loaded latest summary file: {conversation_summary_file}")
-        return conversation_summary_file
     
+    def get_perspective_identity(self, name, race, gender, relationship_level):
+        # The highest relationship rank this actor has.
 
-    # def set_context(self, location, in_game_time, active_characters, token_limit, radiant_dialogue):
-    #     # if conversation history exists, load it
-    #     if os.path.exists(self.conversation_history_file):
-    #         try:
-    #             with open(self.conversation_history_file, 'r', encoding='utf-8') as f:
-    #                 conversation_history = json.load(f)
+        # The following values are returned and are intended to mean in game as follows:
 
-    #             previous_conversations = []
-    #             for conversation in conversation_history:
-    #                 previous_conversations.extend(conversation)
-
-    #             with open(self.conversation_summary_file, 'r', encoding='utf-8') as f:
-    #                 previous_conversation_summaries = f.read()
-
-    #             self.conversation_summary = previous_conversation_summaries
-
-    #             context = self.create_context(location, in_game_time, active_characters, token_limit, radiant_dialogue, len(previous_conversations), previous_conversation_summaries)
-    #         except Exception as e:
-    #             logging.error(f"Failed to load conversation history for {self.name}.")
-    #             logging.error(e)
-    #             context = self.create_context(location, in_game_time, active_characters, token_limit, radiant_dialogue)
-    #     else:
-    #         context = self.create_context(location, in_game_time, active_characters, token_limit, radiant_dialogue)
-
-    #     return context
-    
-    def get_perspective_player_identity(self):
-        perspective_name = "a stranger" # Who the character thinks the player is
-        if self.in_game_relationship_level == 0:
-            if self.current_trust < 1:
-                trust = 'stranger'
-                perspective_name = "A stranger"
-            elif self.current_trust < 10:
-                trust = 'acquaintance'
-                perspective_name = "An acquaintance"
-            elif self.current_trust < 50:
-                trust = 'friend'
-                perspective_name = self.characters_manager.conversation_manager.player_name
-            elif self.current_trust >= 50:
-                trust = 'close friend'
-                perspective_name = self.characters_manager.conversation_manager.player_name
-        elif self.in_game_relationship_level == 4:
-            trust = 'lover'
-            perspective_name = self.characters_manager.conversation_manager.player_name
-        elif self.in_game_relationship_level > 0:
-            trust = 'friend'
-            perspective_name = self.characters_manager.conversation_manager.player_name
-        elif self.in_game_relationship_level < 0:
-            trust = 'enemy'
-            perspective_name = "An enemy"
-        
-        perspective_description = perspective_name + "(" +  self.characters_manager.conversation_manager.player_race + " " + self.characters_manager.conversation_manager.player_gender + ") " # A description of the player from the character's perspective TODO: Turn this into a config setting like message_format
-        if trust == "stranger":
-            perspective_description += f"({trust})"
+        #     4: Lover
+        #     3: Ally
+        #     2: Confidant
+        #     1: Friend
+        #     0: Acquaintance
+        #     -1: Rival
+        #     -2: Foe
+        #     -3: Enemy
+        #     -4: Archnemesis
+        trust = 'stranger'
+        perspective_name = "A stranger" # Who the character thinks the player is
+        if relationship_level == -4:
+            trust = 'Archnemesis'
+            perspective_name = self.name+"'s archnemesis"
+        elif relationship_level == -3:
+            trust = 'Enemy'
+            perspective_name = self.name+"'s enemy"
+        elif relationship_level == -2:
+            trust = 'Foe'
+            perspective_name = self.name+"'s foe"
+        elif relationship_level == -1:
+            trust = 'Rival'
+            perspective_name = self.name+"'s rival"
+        elif relationship_level == 0:
+            trust = 'Acquaintance'
+            perspective_name = "Acquaintance of "+self.name
+        elif relationship_level == 1:
+            trust = 'Friend'
+            perspective_name = self.name+"'s mysterious friend"
+        elif relationship_level == 2:
+            trust = 'Confidant'
+            perspective_name = self.name+"'s mysterious confidant"
+        elif relationship_level == 3:
+            trust = 'Ally'
+            perspective_name = self.name+"'s mysterious ally"
+        elif relationship_level == 4:
+            trust = 'Lover'
+            perspective_name = self.name+"'s mysterious lover"
+        if name in self.knows: # If the character knows the player's name, use it
+            perspective_name = name+" ["+trust+"]"
         else:
-            perspective_description += f"({self.name}'s {trust})"
+            perspective_name = perspective_name+"("+race+" "+gender+")"
+
+        perspective_description = perspective_name + "(" +  race + " " + gender + ") " # A description of the player from the character's perspective TODO: Turn this into a config setting like message_format
         return perspective_name, perspective_description, trust
     
+    def get_perspective_player_identity(self):
+        return self.get_perspective_identity(self.characters_manager.conversation_manager.player_name, self.characters_manager.conversation_manager.player_race, self.characters_manager.conversation_manager.player_gender, self.in_game_relationship_level)
+
     @property
     def replacement_dict(self):
         perspective_name, perspective_description, trust = self.get_perspective_player_identity()
@@ -161,128 +171,38 @@ class Character:
             "gendered_age": self.gendered_age,
             "perspective_player_name": perspective_name,
             "perspective_player_description": perspective_description,
-            "conversation_summary": self.conversation_summary,
             "bio": self.bio,
             "trust": trust,
             "language": self.language,
         }
-        
-    # def set_voice(self):
-    #     self.conversation_manager.synthesizer.change_voice(self)
+    
+    @property
+    def memories(self):
+        return self.memory_manager.memories
 
     def say(self,string):
         audio_file = self.conversation_manager.synthesizer.synthesize(string, self) # say string
         self.conversation_manager.chat_manager.save_files_to_voice_folders([audio_file, string]) # save audio file to voice folder so it can be played in-game
-        self.conversation_manager.messages.append({"role": self.name, "content": string}) # add string to ongoing conversation
+        self.conversation_manager.new_message({"role": self.name, "content": string}) # add string to ongoing conversation
 
-    def save_conversation(self, summary=None, summary_limit_pct=0.45):
-        if self.is_generic_npc:
-            logging.info('A summary will not be saved for this generic NPC.')
-            return None
-        
-        summary_limit = round(self.conversation_manager.tokens_available*summary_limit_pct,0) # How many tokens the summary can be before it is summarized
+    def leave_conversation(self):
+        random_goodbye = random.choice(self.conversation_manager.config.end_conversation_keywords) # get random goodbye line from player
+        if random_goodbye.endswith('.'):
+            random_goodbye = random_goodbye[:-1]
+        self.say(random_goodbye+'.') # let the player know that the conversation is ending using the latest character in the conversation that isn't the player to say it
+        self.reached_conversation_limit()
 
-        # save conversation history
-        
-        if os.path.exists(self.conversation_history_file): # if this is not the first conversation load the previous conversation history from the conversation history file
-            with open(self.conversation_history_file, 'r', encoding='utf-8') as f:
-                conversation_history = json.load(f)
+    def step(self):
+        """Perform a step in the memory manager - Some memory managers may need to perform some action every step"""
+        self.memory_manager.step()
 
-            # add new conversation to conversation history
-            conversation_history.append(self.conversation_manager.messages) # append everything except the initial system prompt
-        
-        else: # if this is the first conversation initialize the conversation history file and set the previous conversation history to an every message except the initial system prompt
-            directory = os.path.dirname(self.conversation_history_file)
-            os.makedirs(directory, exist_ok=True)
-            conversation_history = [self.conversation_manager.messages]
-        
-        with open(self.conversation_history_file, 'w', encoding='utf-8') as f: # save everything except the initial system prompt
-            json.dump(conversation_history, f, indent=4)
-
-        
-        if os.path.exists(self.conversation_summary_file): # if this is not the first conversation load the previous conversation summaries from the conversation summary file
-            with open(self.conversation_summary_file, 'r', encoding='utf-8') as f:
-                previous_conversation_summaries = f.read()
-        else: # if this is the first conversation, initialize the conversation summary file and set the previous conversation summaries to an empty string
-            directory = os.path.dirname(self.conversation_summary_file)
-            os.makedirs(directory, exist_ok=True)
-            previous_conversation_summaries = ''
-
-        # If summary has not already been generated for another character in a multi NPC conversation (multi NPC memory summaries are shared)
-        if summary == None:
-            while True:
-                try:
-                    new_conversation_summary = self.summarize_conversation()
-                    break
-                except Exception as e:
-                    logging.error('Failed to summarize conversation...')
-                    logging.error(e)
-                    print(e)
-                    input('Press enter to continue...')
-                    raise e
-        else:
-            new_conversation_summary = summary
-        conversation_summaries = previous_conversation_summaries + new_conversation_summary
-
-        with open(self.conversation_summary_file, 'w', encoding='utf-8') as f:
-            f.write(conversation_summaries)
-
-        # if summaries token limit is reached, summarize the summaries
-        if self.conversation_manager.tokenizer.get_token_count(conversation_summaries) > summary_limit:
-            logging.info(f'Token limit of conversation summaries reached ({len(self.conversation_manager.tokenizer.get_token_count(conversation_summaries))} / {summary_limit} tokens). Creating new summary file...')
-            while True:
-                try:
-                    prompt = f"You are tasked with summarizing the conversation history between {self.name} and the player / other characters. These conversations take place in Skyrim.\nEach paragraph represents a conversation at a new point in time. Please summarize these conversations into a single paragraph in {self.characters_manager.conversation_manager.language_info['language']}."
-                    long_conversation_summary = self.summarize_conversation(prompt)
-                    break
-                except:
-                    logging.error('Failed to summarize conversation. Retrying...')
-                    time.sleep(5)
-                    continue
-
-            # Split the file path and increment the number by 1
-            base_directory, filename = os.path.split(self.conversation_summary_file)
-            file_prefix, old_number = filename.rsplit('_', 1)
-            old_number = os.path.splitext(old_number)[0]
-            new_number = int(old_number) + 1
-            new_conversation_summary_file = os.path.join(base_directory, f"{file_prefix}_{new_number}.txt")
-
-            with open(new_conversation_summary_file, 'w', encoding='utf-8') as f:
-                f.write(long_conversation_summary)
-        
-        return new_conversation_summary
+    def reached_conversation_limit(self):
+        """Ran when the conversation limit is reached, or the conversation is ended - Some memory managers may need to perform some action when the conversation limit is reached"""
+        return self.memory_manager.reached_conversation_limit()
     
+    def add_message(self, msg):
+        """Add a new message to the memory manager"""
+        self.memory_manager.add_message(msg)
 
-    def summarize_conversation(self, prompt=None):
-        perspective_name, _, _ = self.get_perspective_player_identity()
-        summary = ''
-        context = self.conversation_manager.llm.get_context()
-        if len(context) > self.conversation_manager.config.min_conversation_length:
-            conversation = context[3:-2] # drop the context (0) hello (1,2) and "Goodbye." (-2, -1) lines
-            assistant_name = self.conversation_manager.config.assistant_name[0].upper() + self.conversation_manager.config.assistant_name[1:].lower()
-            if prompt == None: # If no summarization prompt is provided, use default
-                prompt = f"{assistant_name} is tasked with summarizing the conversation between {self.name} and {perspective_name} / other characters. These conversations take place in Skyrim. It is not necessary to comment on any mixups in communication such as mishearings. Text contained within asterisks state in-game events. Please summarize the conversation into a single paragraph in {self.characters_manager.conversation_manager.language_info['language']}."
-            context = [{"role": self.conversation_manager.config.system_name, "content": prompt}]
-            history = ""
-            for message in conversation:
-                history += message["role"] + ": " + message["content"] + "\n"
-            history = history.strip() # remove trailing newline
-            summary, _ = self.conversation_manager.llm.chatgpt_api(history, context) # TODO: Change to use acreate instead of chatgpt_api, I don't think this works with the use of none "system", "user" and "assistant" roles being in the conversation history
-
-            summary = summary.replace('The assistant', self.name)
-            summary = summary.replace('the assistant', self.name)
-            summary = summary.replace('an assistant', self.name)
-            summary = summary.replace('an AI assistant', self.name)
-            summary = summary.replace('The user', perspective_name)
-            summary = summary.replace('The User', perspective_name)
-            summary = summary.replace('the user', perspective_name)
-            summary = summary.replace('The player', perspective_name)
-            summary = summary.replace('The Player', perspective_name)
-            summary = summary.replace('the player', perspective_name)
-            summary += '\n\n'
-
-            logging.info(f"Conversation summary generated.")
-        else:
-            logging.info(f"Conversation summary not created. Conversation too short.")
-
-        return summary
+    def __str__(self):
+        return self.name + " (" + self.race + " " + self.gender + ")"

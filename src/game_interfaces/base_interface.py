@@ -33,3 +33,11 @@ class BaseGameInterface:
     def queue_actor_method(self, actor_character, method_name, *args):
         """Queue an arbitrary method to be run on the actor in game via the game interface."""
         raise NotImplementedError
+
+    def end_conversation(self):
+        """End the conversation in game."""
+        raise NotImplementedError
+    
+    def remove_from_conversation(self, character):
+        """Remove the character from the conversation in game."""
+        raise NotImplementedError

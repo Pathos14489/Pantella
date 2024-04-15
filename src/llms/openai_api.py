@@ -1,12 +1,16 @@
+print("Importing openai_api.py")
+from src.logging import logging, time
 import src.utils as utils
 import src.llms.chat_llm as chat_LLM
-from src.logging import logging, time
+logging.info("Imported required libraries in openai_api.py")
 
 try:
     from openai import OpenAI
     loaded = True
+    logging.info("Imported openai in openai_api.py")
 except Exception as e:
     loaded = False
+    logging.warn(f"Failed to load openai, so openai_api cannot be used! Please check that you have installed it correctly. Unless you're not using openai, in which case you can ignore this warning.")
 
 inference_engine_name = "openai"
 

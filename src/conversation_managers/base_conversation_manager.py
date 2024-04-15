@@ -1,5 +1,6 @@
+print("base_conversation_manager.py executed")
+from src.logging import logging, time
 import asyncio
-from src.logging import logging
 import pandas as pd
 import src.game_interface as game_interface
 import src.chat_manager as chat_manager
@@ -9,6 +10,8 @@ import src.language_model as language_models
 import src.tts as tts
 import src.stt as stt
 import src.character_db as character_db
+import uuid
+logging.info("Imported required libraries in base_conversation_manager.py")
 
 valid_games = []
 manager_slug = "base_conversation_manager"
@@ -33,8 +36,18 @@ class BaseConversationManager:
         self.messages = [] # Initialised at start of every conversation in await_and_setup_conversation()
         self.conversation_step = 0 # The current step of the conversation - 0 is before any conversation has started, 1 is the first step of the conversation, etc.
         self.restart = False # Can be set at any time to force restart of conversation manager - Will ungracefully end any ongoing conversation client side
+        self.conversation_id = str(uuid.uuid4()) # Generate a unique ID for the conversation
+
+    def new_message(self, msg):
+        """Add a new message to the conversation"""
+        msg["id"] = str(uuid.uuid4()) # Generate a unique ID for the message
+        msg["timestamp"] = time.time() # Add timestamp to message
+        msg["location"] = self.game_interface.get_current_location() # Add location to message
+        self.messages.append(msg)
+        self.character_manager.add_message(msg)
 
     def create_new_character_manager(self):
+        """Create a new Character Manager object based on the current ConversationManager object"""
         return characters_manager.Characters(self) # Create Character Manager object based on ConversationManager
             
     def get_language_info(self):
@@ -54,53 +67,8 @@ class BaseConversationManager:
         self.transcriber = stt.Transcriber(self)
         self.behavior_manager = behavior_manager.create_manager(self) # Create Behavior Manager based on config
         
-    def get_context(self, chat_completions=False): # Returns the current context(in the form of a list of messages) for the given active characters in the ongoing conversation
-        system_prompt = self.character_manager.get_system_prompt()
-        msgs = [{'role': self.config.system_name, 'content': system_prompt}]
-        msgs.extend(self.messages) # add messages to context
-        
-        formatted_messages = [] # format messages to be sent to LLM - Replace [player] with player name appropriate for the type of conversation
-        for msg in msgs: # Add player name to messages based on the type of conversation
-            if chat_completions: # Format for chat completions
-                if msg['role'] == "[player]":
-                    if self.character_manager.active_character_count() > 1: # if multi NPC conversation use the player's actual name
-                        formatted_messages.append({
-                            'role': self.config.user_name,
-                            'content': self.player_name + ": " + msg['content']
-                        })
-                    else: # if single NPC conversation use the NPC's perspective player name
-                        perspective_player_name, perspective_player_description, trust = self.chat_manager.active_character.get_perspective_player_identity()
-                        formatted_messages.append({
-                            'role': self.config.user_name,
-                            'content': perspective_player_name + ": " + msg['content']
-                        })
-                else:
-                    if msg['role'] == self.config.system_name:
-                        formatted_messages.append({
-                            'role': msg['role'],
-                            'content': msg['content']
-                        })
-                    else:
-                        formatted_messages.append({
-                            'role': self.config.assistant_name,
-                            'content': msg['role'] + ": " + msg['content']
-                        })
-            else: # Format for Normal LLM Prompting
-                if msg['role'] == "[player]":
-                    if self.character_manager.active_character_count() > 1: # if multi NPC conversation use the player's actual name
-                        formatted_messages.append({
-                            'role': self.player_name,
-                            'content': msg['content']
-                        })
-                    else: # if single NPC conversation use the NPC's perspective player name
-                        perspective_player_name, perspective_player_description, trust = self.chat_manager.active_character.get_perspective_player_identity()
-                        formatted_messages.append({
-                            'role': perspective_player_name,
-                            'content': msg['content']
-                        })
-                else:
-                    formatted_messages.append(msg)
-        return formatted_messages
+    def get_context(self): # Returns the current context(in the form of a list of messages) for the given active characters in the ongoing conversation
+        return self.llm.get_context()
     
     async def _get_response(self):
         sentence_queue = asyncio.Queue() # Create queue to hold sentences to be processed
@@ -125,3 +93,8 @@ class BaseConversationManager:
         """Step through the conversation"""
         logging.error("step() not implemented in BaseConversationManager")
         raise NotImplementedError
+    
+    def reload_conversation(self):
+        """Reload the conversation - Used when the conversation has ended or the conversation limit has been reached"""
+        self.character_manager.reached_conversation_limit()
+        self.messages = self.messages[-self.config.reload_buffer:] # save the last few messages to reload the conversation

@@ -1,7 +1,9 @@
-import src.tokenizer as tokenizers
+print("Importing language_model.py")
 from src.logging import logging
+import src.tokenizer as tokenizers
 import os
 import importlib
+logging.info("Imported required libraries in language_model.py")
 
 default = "openai" # The default LLM to use if the one specified in config.json is not found or if default is specified in config.json
 LLM_Types = {}
@@ -13,6 +15,7 @@ for file in os.listdir(os.path.join(os.path.dirname(__file__), "llms/")):
             module = importlib.import_module(f"src.llms.{module_name}")
             LLM_Types[module.inference_engine_name] = module    
 LLM_Types["default"] = LLM_Types[default]
+logging.info("Imported all LLMs to LLM_Types, ready to create a LLM object!")
 
 # Create LLM object using the config and client provided
     

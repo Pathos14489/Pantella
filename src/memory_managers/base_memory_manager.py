@@ -1,0 +1,66 @@
+from src.logging import logging
+
+manager_slug = "base_memory_manager"
+
+class base_MemoryManager():
+    def __init__(self,character_manager):
+        self.conversation_manager = character_manager.conversation_manager
+        self.character_manager = character_manager
+        self.config = self.conversation_manager.config
+        self.conversation_history_directory = f"data/conversations/{self.config.game_id}/{self.conversation_manager.player_gender}_{self.conversation_manager.player_race}_{self.conversation_manager.player_name}/{self.gender}_{self.race}_{self.name}/"
+
+    @property
+    def name(self):
+        return self.character_manager.name
+    
+    @property
+    def race(self):
+        return self.character_manager.race
+    
+    @property
+    def gender(self):
+        return self.character_manager.gender
+
+    @property
+    def messages(self):
+        return self.conversation_manager.messages
+
+    def step(self):
+        """Perform a step in the memory manager - Some memory managers may need to perform some action every step"""
+        logging.error("step() method not implemented in your memory manager.")
+        input("Press enter to continue...")
+        raise NotImplementedError("step() method not implemented in your memory manager.")
+    
+    def reached_conversation_limit(self):
+        """Ran when the conversation limit is reached, or the conversation is ended - Some memory managers may need to perform some action when the conversation limit is reached"""
+        logging.error("reached_conversation_limit() method not implemented in your memory manager.")
+        input("Press enter to continue...")
+        raise NotImplementedError("reached_conversation_limit() method not implemented in your memory manager.")
+    
+    def add_message(self, message):
+        """Add a message to the memory manager"""
+        logging.error("add_message() method not implemented in your memory manager.")
+        input("Press enter to continue...")
+        raise NotImplementedError("add_message() method not implemented in your memory manager.")
+    
+    @property
+    def memories(self):
+        """Return a string representation of the memories stored in the memory manager - Some memory managers have updating memories strings"""
+        logging.error("memories() method not implemented in your memory manager.")
+        input("Press enter to continue...")
+        raise NotImplementedError("memories() method not implemented in your memory manager.")
+    
+    @property
+    def memory_offset(self):
+        """Return the memory depth of the character"""
+        logging.error("memory_offset() method not implemented in your memory manager.")
+        input("Press enter to continue...")
+        raise NotImplementedError("memory_offset() method not implemented in your memory manager.")
+    
+    @property
+    def memory_offset_direction(self):
+        """Return the memory offset direction of the character"""
+        logging.error("memory_offset_direction() method not implemented in your memory manager.")
+        input("Press enter to continue...")
+        raise NotImplementedError("memory_offset_direction() method not implemented in your memory manager.")
+        

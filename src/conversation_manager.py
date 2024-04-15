@@ -1,7 +1,8 @@
+print("Importing conversation_manager.py")
 from src.logging import logging
 import os
 import importlib
-import json
+logging.info("Imported required libraries in conversation_manager.py")
 
 Manager_Types = {}
 # Get all Managers from src/conversation_managers/ and add them to Manager_Types
@@ -11,7 +12,7 @@ for file in os.listdir(os.path.join(os.path.dirname(__file__), "conversation_man
         if module_name != "base_conversation_manager":
             module = importlib.import_module(f"src.conversation_managers.{module_name}")
             Manager_Types[module.manager_slug] = module    
-
+logging.info("Imported all conversation managers to Manager_Types, ready to create a conversation manager object!")
 
 # Create Manager object using the config provided
     

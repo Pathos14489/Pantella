@@ -1,7 +1,8 @@
+print("Loading game_interface.py...")
 from src.logging import logging
 import os
 import importlib
-import sys
+logging.info("Imported required libraries in game_interface.py")
 
 Interface_Types = {}
 
@@ -12,6 +13,7 @@ for file in os.listdir(os.path.join(os.path.dirname(__file__), "game_interfaces/
         if module_name != "base_interface" and module_name.strip() != "":
             module = importlib.import_module(f"src.game_interfaces.{module_name}")
             Interface_Types[module.interface_slug] = module    
+logging.info("Imported all game interfaces to Interface_Types, ready to create a game interface object!")
 
 # Create Interface object using the config provided
     

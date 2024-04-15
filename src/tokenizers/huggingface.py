@@ -1,7 +1,8 @@
+print("Importing huggingface.py...")
+from src.logging import logging
 import src.utils as utils
 import src.tokenizers.base_tokenizer as tokenizer
-import tiktoken
-from src.logging import logging
+logging.info("Imported required libraries in huggingface.py")
 try:
     from transformers import AutoTokenizer
     loaded = True
@@ -20,6 +21,7 @@ class Tokenizer(tokenizer.base_Tokenizer): # Tokenizes(only availble for countin
 
     @utils.time_it
     def get_token_count(self, string):
+        """Returns the number of tokens in the string"""
         tokens = self.tokenizer.encode(string)
         num_tokens = len(tokens)
         return num_tokens

@@ -1,55 +1,33 @@
+print("Loading xtts_api.py...")
+from src.logging import logging
 import src.utils as utils
 import src.tts_types.base_tts as base_tts
-from src.logging import logging
 import sys
 import os
 from pathlib import Path
 import requests
 import io
-import soundfile as sf
-import numpy as np
+logging.info("Imported required libraries in xtts_api.py")
 
 tts_slug = "xtts_api"
 class Synthesizer(base_tts.base_Synthesizer): 
     def __init__(self, conversation_manager):
         super().__init__(conversation_manager)
-        self.xtts_data = self.config.xtts_data
-        self.xtts_base_url = self.config.xtts_base_url
-        self.xtts_server_folder = self.config.xtts_server_folder
-        self.synthesize_url_xtts = self.xtts_base_url + "/tts_to_audio/"
-        self.switch_model_url = self.xtts_base_url + "/switch_model"
-        self.xtts_set_tts_settings = self.xtts_base_url + "/set_tts_settings/"
-        self.xtts_get_speakers_list = self.xtts_base_url + "/speakers_list/"
-        self.xtts_get_models_list = self.xtts_base_url + "/get_models_list/"
+        self.xtts_data = self.config.xtts_api_data
+        self.xtts_api_base_url = self.config.xtts_api_base_url
+        self.xtts_server_folder = self.config.xtts_api_server_folder
+        self.synthesize_url_xtts = self.xtts_api_base_url + "/tts_to_audio/"
+        self.switch_model_url = self.xtts_api_base_url + "/switch_model"
+        self.xtts_set_tts_settings = self.xtts_api_base_url + "/set_tts_settings/"
+        self.xtts_get_speakers_list = self.xtts_api_base_url + "/speakers_list/"
+        self.xtts_get_models_list = self.xtts_api_base_url + "/get_models_list/"
         self._set_tts_settings_and_test_if_serv_running()
-        self.default_model = self.conversation_manager.config.default_xtts_model
+        self.default_model = self.conversation_manager.config.default_xtts_api_model
         self.current_model = self.default_model
         self.set_model(self.default_model)
         # self.official_model_list = ["main","v2.0.3","v2.0.2","v2.0.1","v2.0.0"]
         logging.info(f'xTTS_api - Available models: {self.available_models()}')
         logging.info(f'xTTS_api - Available voices: {self.voices()}')
-    
-    def convert_to_16bit(self, input_file, output_file=None):
-        if output_file is None:
-            output_file = input_file
-        # Read the audio file
-        data, samplerate = sf.read(input_file)
-
-        # Directly convert to 16-bit if data is in float format and assumed to be in the -1.0 to 1.0 range
-        if np.issubdtype(data.dtype, np.floating):
-            # Ensure no value exceeds the -1.0 to 1.0 range before conversion (optional, based on your data's characteristics)
-            # data = np.clip(data, -1.0, 1.0)  # Uncomment if needed
-            data_16bit = np.int16(data * 32767)
-        elif not np.issubdtype(data.dtype, np.int16):
-            # If data is not floating-point or int16, consider logging or handling this case explicitly
-            # For simplicity, this example just converts to int16 without scaling
-            data_16bit = data.astype(np.int16)
-        else:
-            # If data is already int16, no conversion is necessary
-            data_16bit = data
-
-        # Write the 16-bit audio data back to a file
-        sf.write(output_file, data_16bit, samplerate, subtype='PCM_16')
 
     def voices(self):
         """Return a list of available voices"""
@@ -96,6 +74,7 @@ class Synthesizer(base_tts.base_Synthesizer):
 
     @utils.time_it
     def change_voice(self, character):
+        """Change the voice model to the character's voice model if it exists, else use the default model"""
         logging.info(f'Checking for Custom xTTS Model for {character.voice_model}...') 
         if character.voice_model in self.available_models():
             logging.info(f'Custom xTTS Model found for {character.voice_model}!')
@@ -105,6 +84,7 @@ class Synthesizer(base_tts.base_Synthesizer):
             self.set_model(self.default_model)
           
     def get_valid_voice_model(self, character):
+        """Get the valid voice model for the character from the available voices - Order of preference: voice_model, voice_model without spaces, lowercase voice_model, uppercase voice_model, lowercase voice_model without spaces, uppercase voice_model without spaces"""
         default_voice_model = super().get_valid_voice_model(character)
         if default_voice_model == None:
             default_voice_model = character.voice_model
@@ -155,6 +135,7 @@ class Synthesizer(base_tts.base_Synthesizer):
             raise FileNotFoundError()
           
     def synthesize(self, voiceline, character, aggro=0):
+        """Synthesize the text for the character specified using the xTTS API"""
         logging.info(f'Synthesizing voiceline: {voiceline}')
         self.change_voice(character)
         # make voice model folder if it doesn't already exist

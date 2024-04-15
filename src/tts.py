@@ -1,6 +1,8 @@
+print("Imported tts.py")
 from src.logging import logging
 import os
 import importlib
+logging.info("Imported required libraries in tts.py")
 
 default = "xvasynth" # The default LLM to use if the one specified in config.json is not found or if default is specified in config.json
 tts_Types = {}
@@ -12,6 +14,7 @@ for file in os.listdir(os.path.join(os.path.dirname(__file__), "tts_types/")):
             module = importlib.import_module(f"src.tts_types.{module_name}")
             tts_Types[module.tts_slug] = module    
 tts_Types["default"] = tts_Types[default]
+logging.info("Imported TTS types in tts.py")
 
 # Create LLM object using the config and client provided
     

@@ -1,7 +1,7 @@
+print("Loading llava_cpp_python.py")
+from src.logging import logging, time
 import src.utils as utils
 import src.llms.llama_cpp_python as llama_cpp_python_LLM
-import src.tokenizers.base_tokenizer as tokenizer
-from src.logging import logging, time
 import ctypes
 import array
 import urllib.request
@@ -12,22 +12,24 @@ import dxcam
 import pygetwindow
 from PIL import Image
 import io
+logging.info("Imported required libraries in llava_cpp_python.py")
 
 try:
-    from llama_cpp import Llama
     from llama_cpp.llava_cpp import llava_eval_image_embed, llava_image_embed_make_with_bytes, clip_model_load, llava_image_embed_free
     loaded = True
+    logging.info("Imported llama-cpp-python in llava_cpp_python.py")
 except Exception as e:
     loaded = False
+    logging.warn(f"Failed to load llama-cpp-python, so llava-cpp-python inference engine cannot be used! Please check that you have installed it correctly if you want to use it, otherwise you can ignore this warning.")
 
 try:
     from paddleocr import PaddleOCR, draw_ocr
     ocr_loaded = True
+    logging.info("Imported paddleocr in llava_cpp_python.py")
 except Exception as e:
     ocr_loaded = False
-    logging.error(f"Error loading paddleocr for 'llava-cpp-python'(not a typo) inference engine. Please check that you have installed paddleocr correctly. OCR will not be used but basic image embedding will still work.")
-    logging.error(e)
-    raise e
+    logging.warn(f"Error loading paddleocr for 'llava-cpp-python'(not a typo) inference engine. Please check that you have installed paddleocr correctly. OCR will not be used but basic image embedding will still work.")
+    logging.warn(e)
 
 
 inference_engine_name = "llava-cpp-python"
@@ -288,7 +290,7 @@ class LLM(llama_cpp_python_LLM.LLM): # Uses llama-cpp-python as the LLM inferenc
         # return self.get_image_embed_from_file(self.config.game_path+"/PlayerPerspective.png")
 
     def get_context(self):
-        context = super().get_context()
+        context = self.get_context()
         if self.append_system_image_near_end:
             image_message = {
                 "role": self.config.system_name,

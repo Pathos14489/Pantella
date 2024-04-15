@@ -1,6 +1,7 @@
+print("Loading xvasynth.py")
+from src.logging import logging
 import src.utils as utils
 import src.tts_types.base_tts as base_tts
-from src.logging import logging
 import requests
 import subprocess
 import sys
@@ -11,6 +12,7 @@ import json
 import re
 import numpy as np
 import requests
+logging.info("Imported required libraries in xVASynth TTS")
 
 tts_slug = "xvasynth"
 class Synthesizer(base_tts.base_Synthesizer): 
@@ -51,6 +53,7 @@ class Synthesizer(base_tts.base_Synthesizer):
         logging.info(f'xVASynth - Available voices: {self.voices()}')
         
     def check_if_xvasynth_is_running(self):
+        """Check if xVASynth is running and start it if it isn't"""
         self.times_checked_xvasynth += 1
 
         try:
@@ -73,6 +76,7 @@ class Synthesizer(base_tts.base_Synthesizer):
             return self.check_if_xvasynth_is_running()
 
     def run_xvasynth_server(self):
+        """Run xVASynth server in headless mode - Required for xVASynth to work with Pantella"""
         try:
             # start the process without waiting for a response
             subprocess.Popen(f'{self.xvasynth_path}/resources/app/cpython_{self.process_device}/server.exe', cwd=self.xvasynth_path)
@@ -83,6 +87,7 @@ class Synthesizer(base_tts.base_Synthesizer):
             sys.exit(0)
  
     def synthesize(self, voiceline, character, aggro=0):
+        """Synthesize the voiceline for the character specified using xVASynth"""
         if character.voice_model != self.last_voice:
             self.change_voice(character)
         voiceline = ' ' + voiceline + ' ' # xVASynth apparently performas better having spaces at the start and end of the voiceline for some reason
@@ -136,6 +141,7 @@ class Synthesizer(base_tts.base_Synthesizer):
         return final_voiceline_file
     
     def voices(self): # Send API request to xvasynth to get a list of characters
+        """Return a list of available voices"""
         logging.info(f"Getting available voices from {self.get_available_voices_url}...")
         requests.post(self.set_available_voices_url, json={'modelsPaths': json.dumps({self.game: self.model_path})}) # Set the available voices to the ones in the models folder
         r = requests.post(self.get_available_voices_url) # Get the available voices
@@ -158,6 +164,7 @@ class Synthesizer(base_tts.base_Synthesizer):
 
     @utils.time_it
     def _synthesize_line(self, line, save_path, character, aggro=0):
+        """Synthesize a line using xVASynth"""
         pluginsContext = {}
         # in combat
         if (aggro == 1):
@@ -180,6 +187,7 @@ class Synthesizer(base_tts.base_Synthesizer):
 
     @utils.time_it
     def _batch_synthesize(self, grouped_sentences, voiceline_files):
+        """Batch synthesize multiple lines using xVASynth"""
         # line = [text, unknown 1, unknown 2, pace, output_path, unknown 5, unknown 6, pitch_amp]
         linesBatch = [[grouped_sentences[i], '', '', self.pace, voiceline_files[i], '', '', 1] for i in range(len(grouped_sentences))]
         
@@ -260,9 +268,9 @@ class Synthesizer(base_tts.base_Synthesizer):
         logging.info(f'Split sentence into : {result}')
 
         return result
-    
 
     def merge_audio_files(self, audio_files, voiceline_file_name):
+        """Merge multiple audio files into one file"""
         logging.info(f'Merging audio files: {audio_files}')
         logging.info(f'Output file: {voiceline_file_name}')
         merged_audio = np.array([])
@@ -278,6 +286,7 @@ class Synthesizer(base_tts.base_Synthesizer):
   
     @utils.time_it
     def change_voice(self, character):
+        """Change the voice model to the specified character's voice model"""
         voice = self.get_valid_voice_model(character) # character.voice_model
 
         if self.crashable and voice is None:

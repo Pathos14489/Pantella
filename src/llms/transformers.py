@@ -1,14 +1,18 @@
+print("Importing transformers.py...")
+from src.logging import logging, time
 import src.utils as utils
 import src.llms.base_llm as base_LLM
 import src.tokenizers.base_tokenizer as tokenizer
-from src.logging import logging, time
 from threading import Thread
+logging.info("Imported required libraries in transformers.py")
 
 try:
     from transformers import AutoModelForCausalLM, AutoTokenizer, TextIteratorStreamer, StoppingCriteria, StoppingCriteriaList
     loaded = True
+    logging.info("Successfully imported transformers")
 except Exception as e:
     loaded = False
+    logging.warn("Failed to import transformers! Please check that you have installed it correctly, or if you don't plan to use it, ignore this warning.")
 
 inference_engine_name = "transformers"
 

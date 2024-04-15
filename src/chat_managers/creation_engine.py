@@ -1,10 +1,12 @@
-from src.chat_managers.base_chat_manager import BaseChatManager
+print("Importing creation_engine.py")
 from src.logging import logging
+from src.chat_managers.base_chat_manager import BaseChatManager
 import os
 import shutil
 import src.utils as utils
 import sys
 import asyncio
+logging.info("Imported required libraries in creation_engine.py")
 
 valid_games = ["fallout4","skyrim","fallout4vr","skyrimvr"]
 chat_manager_slug = "creation_engine"

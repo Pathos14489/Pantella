@@ -13,6 +13,7 @@ class base_Tokenizer(): # Tokenizes(only availble for counting the tokens in a s
         self.message_format = self.config.message_format # Format of a message. A string of messages formatted like this is what is sent to the language model, typically following by the start of a message from the assistant to generate a response
 
     def new_message(self, msg, name): # Parses a string into a message format with the name of the speaker
+        """Parses a string into a message format with the name of the speaker"""
         if not name:
             name = "[name]"
         if not msg:
@@ -27,6 +28,7 @@ class base_Tokenizer(): # Tokenizes(only availble for counting the tokens in a s
         return parsed_msg
 
     def start_message(self, name): # Returns the start of a message with the name of the speaker
+        """Returns the start of a message with the name of the speaker"""
         parsed_msg = self.message_format
         parsed_msg = parsed_msg.split("[content]")[0]
         parsed_msg = parsed_msg.replace("[BOS_token]",self.BOS_token)
@@ -37,6 +39,7 @@ class base_Tokenizer(): # Tokenizes(only availble for counting the tokens in a s
         return parsed_msg
 
     def end_message(self, name=""): # Returns the end of a message with the name of the speaker (Incase the message format chosen requires the name be on the end for some reason, but it's optional to include the name in the end message)
+        """Returns the end of a message with the name of the speaker (Incase the message format chosen requires the name be on the end for some reason, but it's optional to include the name in the end message)"""
         parsed_msg = self.message_format
         parsed_msg = parsed_msg.split("[content]")[1]
         parsed_msg = parsed_msg.replace("[BOS_token]",self.BOS_token)
@@ -47,6 +50,7 @@ class base_Tokenizer(): # Tokenizes(only availble for counting the tokens in a s
         return parsed_msg
 
     def get_string_from_messages(self, messages): # Returns a formatted string from a list of messages
+        """Returns a formatted string from a list of messages"""
         context = ""
         for message in messages:
             context += self.new_message(message["content"],message["role"])
@@ -59,6 +63,8 @@ class base_Tokenizer(): # Tokenizes(only availble for counting the tokens in a s
         return self.get_token_count(context)
         
     def get_token_count(self, string):
+        """Returns the number of tokens in a string"""
         # logging.info(f"base_Tokenizer.get_token_count() called with string: {string}")
         logging.info(f"You should override this method in your tokenizer class! Please do so! I'm going to crash until you do actually, just to encourage you to do so! <3")
-        exit()
+        input("Press enter to continue...")
+        raise NotImplementedError("You should override this method in your tokenizer class! Please do so! I'm going to crash until you do actually, just to encourage you to do so! <3")

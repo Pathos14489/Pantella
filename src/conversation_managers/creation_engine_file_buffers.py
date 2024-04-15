@@ -1,8 +1,12 @@
-import os
+print("Loading conversation_managers/creation_engine_file_buffers.py...")
 from src.logging import logging
 import src.characters_manager as characters_manager # Character Manager class
 from src.conversation_managers.base_conversation_manager import BaseConversationManager
 import src.utils as utils
+import os
+import uuid
+import json
+logging.info("Imported required libraries in conversation_managers/creation_engine_file_buffers.py")
 
 valid_games = ["fallout4","skyrim","fallout4vr","skyrimvr"]
 manager_slug = "creation_engine_file_buffers"
@@ -73,7 +77,8 @@ class ConversationManager(BaseConversationManager):
             # if not self.radiant_dialogue: # if not radiant dialogue format
             #     # add greeting from newly added NPC to help the LLM understand that this NPC has joined the conversation
             #     # messages_wo_system_prompt[self.last_assistant_idx]['content'] += f"\n{character.name}: self.{self.language_info['hello']}."
-            self.messages.append({'role': character.name, 'content': f"{self.language_info['hello']}."}) # TODO: Make this more interesting by generating a greeting for each NPC based on the context of the last line or two said(or if possible check if they were nearby when the line was said...?)?
+            if len(self.messages) == 0: # At least only do this if the conversation hasn't started yet? Maybe? Let me know if this is a problem.
+                self.new_message({'role': character.name, 'content': f"{self.language_info['hello']}."}) # TODO: Make this more interesting by generating a greeting for each NPC based on the context of the last line or two said(or if possible check if they were nearby when the line was said...?)?
                 
             self.game_interface.write_game_info('_mantella_character_selection', 'True') # write to _mantella_character_selection.txt to indicate that the character has been successfully selected to the game
 
@@ -90,14 +95,18 @@ class ConversationManager(BaseConversationManager):
             character = self.chat_manager.active_character
         if character is not None:
             logging.info(f"Ending conversation with {character.name}")
-            self.game_interface.end_conversation(character)
+            character.leave_conversation() # leave conversation in game with current active character
+            self.game_interface.remove_from_conversation(character) # remove character from conversation in game
+            self.character_manager.remove_from_conversation(character) # remove the character from the character manager
         if self.character_manager.active_character_count() <= 0:
             self.in_conversation = False
             self.conversation_ended = True
             self.conversation_step = 0 # reset conversation step count
+            self.game_interface.end_conversation() # end conversation in game with current active character
             logging.info('Conversation ended')
 
     def await_and_setup_conversation(self): # wait for player to select an NPC and setup the conversation when outside of conversation
+        self.conversation_id = str(uuid.uuid4()) # Generate a unique ID for the conversation
         self.game_interface.reset_game_info() # clear _mantella_ files in Skyrim folder
 
         self.character_manager = characters_manager.Characters(self) # Reset character manager
@@ -126,7 +135,7 @@ class ConversationManager(BaseConversationManager):
         self.game_interface.update_game_events() # update game events before first player input
         if not self.radiant_dialogue: # initiate conversation with character
             try: # get response from NPC to player greeting
-                self.messages.append({'role': "[player]", 'content': f"{self.language_info['hello']} {character.name}."}) # TODO: Make this more interesting, always having the character say hi like we aren't always with each other is bizzare imo
+                self.new_message({'role': "[player]", 'content': f"{self.language_info['hello']} {character.name}."}) # TODO: Make this more interesting, always having the character say hi like we aren't always with each other is bizzare imo
                 self.get_response()
             except Exception as e: # if error, close Mantella
                 self.game_interface.write_game_info('_mantella_end_conversation', 'True')
@@ -136,9 +145,9 @@ class ConversationManager(BaseConversationManager):
         else: # if radiant dialogue, get response from NPC to other NPCs greeting
             if len(self.messages) <= 2: # if radiant dialogue and the NPCs haven't greeted each other yet, greet each other
                 if self.character_manager.active_character_count() == 2: # TODO: Radiants can only handle 2 NPCs at a time, is that normal?
-                    self.messages.append({'role': self.chat_manager.active_character.name, 'content': f"{self.language_info['hello']} {self.character_manager.active_characters[0].name}."}) # TODO: Make this more interesting by generating a greeting for each NPC based on the context of the last line or two said(or if possible check if they were nearby when the line was said...?)
+                    self.new_message({'role': self.chat_manager.active_character.name, 'content': f"{self.language_info['hello']} {self.character_manager.active_characters[0].name}."}) # TODO: Make this more interesting by generating a greeting for each NPC based on the context of the last line or two said(or if possible check if they were nearby when the line was said...?)
                 else:
-                    self.messages.append({'role': self.chat_manager.active_character.name, 'content': f"{self.language_info['hello']}."}) # TODO: Make this more interesting by generating a greeting for each NPC based on the context of the last line or two said(or if possible check if they were nearby when the line was said...?)
+                    self.new_message({'role': self.chat_manager.active_character.name, 'content': f"{self.language_info['hello']}."}) # TODO: Make this more interesting by generating a greeting for each NPC based on the context of the last line or two said(or if possible check if they were nearby when the line was said...?)
 
         self.game_interface.update_game_events() # update game events before player input
 
@@ -151,19 +160,17 @@ class ConversationManager(BaseConversationManager):
             logging.info('Cannot step through conversation when not in conversation')
             self.conversation_ended = True
             return
-        logging.info('Stepping through conversation...')
-        logging.info(f"Messages: {self.messages}")
         
         self.update_game_state()
 
         if self.character_manager.active_character_count() == 1 and self.radiant_dialogue: # if radiant dialogue and only one NPC, skip stepping this conversation
             # logging.info("Radiant NPC waiting for other people to join the conversation, stepping...")
             return
+        logging.info('Stepping through conversation...')
+        logging.info(f"Messages: {json.dumps(self.get_context(), indent=2)}")
         
         if (self.character_manager.active_character_count() <= 0) and not self.radiant_dialogue: # if there are no active characters in the conversation and radiant dialogue is not being used, end the conversation
-            self.game_interface.end_conversation(self.chat_manager.active_character) # end conversation in game with current active character
-            self.in_conversation = False
-            return
+            self.end_conversation() # end conversation in game with current active character
         
         transcript_cleaned = ''
         transcribed_text = None
@@ -172,14 +179,13 @@ class ConversationManager(BaseConversationManager):
             transcribed_text = self.transcriber.get_player_response(", ".join(self.character_manager.active_characters.keys()))
             if transcribed_text == "EndConversationNow":
                 self.end_conversation()
-                return
             self.behavior_manager.run_player_behaviors(transcribed_text) # run player behaviors
 
             self.game_interface.write_game_info('_mantella_player_input', transcribed_text) # write player input to _mantella_player_input.txt
 
             transcript_cleaned = utils.clean_text(transcribed_text)
 
-            self.messages.append({'role': "[player]", 'content': transcribed_text}) # add player input to messages
+            self.new_message({'role': "[player]", 'content': transcribed_text}) # add player input to messages
         
             self.update_game_state()
 
@@ -203,8 +209,6 @@ class ConversationManager(BaseConversationManager):
                             goodbye_target_character = self.character_manager.active_characters[' '.join(name_group)]
                             break
                 self.end_conversation(goodbye_target_character) # end conversation in game with current active character, and if no active characters are left in the conversation, end it entirely
-                if not self.in_conversation: # if conversation has ended, stop stepping through conversation right now
-                    return
 
         # Let the player know that they were heard
         #audio_file = synthesizer.synthesize(character.info['voice_model'], character.info['skyrim_voice_folder'], 'Beep boop. Let me think.')
@@ -225,11 +229,8 @@ class ConversationManager(BaseConversationManager):
         # if npc ended conversation
         if self.conversation_ended and self.in_conversation:
             self.end_conversation()
-            return
 
+        self.character_manager.step() # Let the characters know that a step has been taken
         # if the conversation is becoming too long, save the conversation to memory and reload
-        current_conversation_limit_pct = self.config.conversation_limit_pct # TODO: Make this a setting in the MCM
-        if self.tokenizer.num_tokens_from_messages(self.messages[1:]) > (round(self.tokens_available*current_conversation_limit_pct,0)): # if the conversation is becoming too long, save the conversation to memory and reload
-            self.game_interface.reload_conversation() # reload conversation - summarizing the conversation so far and starting a new abbreviated context using the summary to fill in the missing context
-            if not self.conversation_ended and self.in_conversation: # if conversation has not ended, get response from NPC
-                self.get_response() # get next response(s) from LLM after conversation is reloaded
+        if self.tokenizer.num_tokens_from_messages(self.messages[1:]) > (round(self.tokens_available*self.config.conversation_limit_pct,0)): # if the conversation is becoming too long, save the conversation to memory and reload
+            self.reload_conversation()

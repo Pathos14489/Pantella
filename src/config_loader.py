@@ -1,7 +1,9 @@
+print("Importing config_loader.py")
 from src.logging import logging
 import json
 import os
 import flask
+logging.info("Imported required libraries in config_loader.py")
 
 game_configs = {}
 # Get all game configs from src/game_configs/ and add them to game_configs
@@ -9,6 +11,7 @@ for file in os.listdir(os.path.join(os.path.dirname(__file__), "../game_configs/
     if file.endswith(".json") and not file.startswith("__"):
         game_id = file[:-5]
         game_configs[game_id] = json.load(open(os.path.join(os.path.dirname(__file__), "../game_configs", file)))
+logging.info("Imported all game configs, ready to use them!")
 
 class ConfigLoader:
     def __init__(self, config_path='config.json'):
@@ -22,6 +25,7 @@ class ConfigLoader:
         self.interface_type = self.current_game_config["interface_type"]
         self.behavior_manager = self.current_game_config["behavior_manager"]
         self.chat_manager = self.current_game_config["chat_manager"]
+        self.memory_manager = self.current_game_config["memory_manager"]
         logging.log_file = self.logging_file_path # Set the logging file path
         self.get_prompt_styles()
         self.ready = True
@@ -148,7 +152,8 @@ class ConfigLoader:
                 "conversation_manager_type": "auto",
                 "interface_type": "auto",
                 "behavior_manager": "auto",
-                "chat_manager": "auto"
+                "chat_manager": "auto",
+                "memory_manager": "auto"
             },
             "Language": {
                 "language": "en",
@@ -190,6 +195,11 @@ class ConfigLoader:
                     "Let me consider that"
                 ]
             },
+            "summarizing_memory":{
+                "summary_limit_pct": 0.8,
+                "summarizing_memory_direction": "topdown", # topdown or bottomup
+                "summarizing_memory_depth": 1,
+            },
             "Microphone": {
                 "whisper_model": "base",
                 "stt_language": "default",
@@ -227,8 +237,8 @@ class ConfigLoader:
                 "same_output_limit": 30,
                 "conversation_limit_pct": 0.8,
                 "min_conversation_length": 5,
-                "reload_buffer": 8,
-                "reload_wait_time": 1,
+                "reload_buffer": 20,
+                # "reload_wait_time": 1,
             },
             "InferenceOptions": {
                 "temperature": 0.8,
@@ -386,13 +396,17 @@ class ConfigLoader:
                 "conversation_manager_type": self.conversation_manager_type,
                 "interface_type": self.interface_type,
                 "behavior_manager": self.behavior_manager,
-                "chat_manager": self.chat_manager
+                "chat_manager": self.chat_manager,
+                "memory_manager": self.memory_manager
             },
             "Language": {
                 "language": self.language,
                 "end_conversation_keywords": self.end_conversation_keywords,
                 "goodbye_npc_responses": self.goodbye_npc_responses,
                 "collecting_thoughts_npc_responses": self.collecting_thoughts_npc_responses,
+            },
+            "summarizing_memory": {
+                "summary_limit_pct": self.summary_limit_pct,
             },
             "Microphone": {
                 "whisper_model": self.whisper_model,
@@ -430,7 +444,7 @@ class ConfigLoader:
                 "conversation_limit_pct": self.conversation_limit_pct,
                 "min_conversation_length": self.min_conversation_length,
                 "reload_buffer": self.reload_buffer,
-                "reload_wait_time": self.reload_wait_time,
+                # "reload_wait_time": self.reload_wait_time,
             },
             "InferenceOptions": {
                 "temperature": self.temperature,

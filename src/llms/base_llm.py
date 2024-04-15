@@ -1,8 +1,10 @@
+print("Importing base_LLM.py")
 from src.logging import logging, time
 import src.utils as utils
 import re
 import unicodedata
 import random
+logging.info("Imported required libraries in base_LLM.py")
 
 inference_engine_name = "base_LLM"
 tokenizer_slug = "tiktoken" # default to tiktoken for now (Not always correct, but it's the fastest tokenizer and it works for openai's models, which a lot of users will be relying on probably)
@@ -22,6 +24,14 @@ class base_LLM():
         self.banned_chars = ['*', '(', ')', '[', ']', '{', '}', "\"" ]
 
         self.prompt_style = "normal"
+
+    @property
+    def character_manager(self):
+        return self.conversation_manager.character_manager
+
+    @property
+    def chat_manager(self):
+        return self.conversation_manager.chat_manager
 
     @property
     def maximum_local_tokens(self):
@@ -107,12 +117,17 @@ class base_LLM():
     def load_in_8bit(self):
         return self.config.load_in_8bit
 
+    @property
+    def messages(self):
+        return self.conversation_manager.messages
+
     # the string printed when your print() this object
     def __str__(self):
         return f"{self.inference_engine_name} LLM"
     
     @utils.time_it
     def chatgpt_api(self, input_text, messages): # Creates a synchronouse completion for the messages provided to generate response for the assistant to the user. TODO: remove later
+        """Generate a response from the LLM using the messages provided - Deprecated, use create() instead"""
         logging.info(f"ChatGPT API: {input_text}")
         logging.info(f"Messages: {messages}")
         if not input_text:
@@ -132,14 +147,19 @@ class base_LLM():
         return reply, messages
 
     def create(self, messages): # Creates a completion for the messages provided to generate response for the assistant to the user # TODO: Generalize this more
+        """Generate a response from the LLM using the messages provided"""
         logging.info(f"Warning: Using base_LLM.create() instead of a child class, this is probably not what you want to do. Please override this method in your child class!")
-        pass
+        input("Press enter to continue...")
+        raise NotImplementedError("Please override this method in your child class!")
 
     def acreate(self, messages): # Creates a completion stream for the messages provided to generate a speaker and their response
+        """Generate a streameed response from the LLM using the messages provided"""
         logging.info(f"Warning: Using base_LLM.acreate() instead of a child class, this is probably not what you want to do. Please override this method in your child class!")
-        pass
+        input("Press enter to continue...")
+        raise NotImplementedError("Please override this method in your child class!")
     
     def clean_sentence(self, sentence):
+        """Clean the sentence by removing unwanted characters and formatting it properly"""
         logging.info(f"Cleaning sentence: {sentence}")
         def remove_as_a(sentence):
             """Remove 'As an XYZ,' from beginning of sentence"""
@@ -198,9 +218,47 @@ class base_LLM():
         return sentence
 
     def get_context(self):
-        return self.conversation_manager.get_context(False)
+        """Get the correct set of messages to use with the LLM to generate the next response"""
+        system_prompt = self.character_manager.get_system_prompt() # get system prompt
+        msgs = [{'role': self.config.system_name, 'content': system_prompt}] # add system prompt to context
+        msgs.extend(self.messages) # add messages to context
+
+        memory_offset = self.character_manager.memory_offset
+        memory_offset_direction = self.character_manager.memory_offset_direction
+        memories = self.character_manager.get_memories()
+        # insert memories into msgs based on memory_offset_direction "topdown" for from the beginning and "bottomup" for from the end, and insert it at memory_offset from the beginning or end
+        if memory_offset == 0: # if memory offset is 0, then insert memories after the system prompt
+            memory_offset = 1
+        if memory_offset_direction == "topdown":
+            msgs = msgs[:memory_offset] + memories + msgs[memory_offset:]
+        elif memory_offset_direction == "bottomup":
+            msgs = msgs[:-memory_offset] + memories + msgs[-memory_offset:]
+        
+
+        formatted_messages = [] # format messages to be sent to LLM - Replace [player] with player name appropriate for the type of conversation
+        for msg in msgs: # Add player name to messages based on the type of conversation
+            if msg['role'] == "[player]":
+                if self.character_manager.active_character_count() > 1: # if multi NPC conversation use the player's actual name
+                    formatted_messages.append({
+                        'role': self.player_name,
+                        'content': msg['content'],
+                        "timestamp": msg["timestamp"],
+                        "location": msg["location"]
+                    })
+                else: # if single NPC conversation use the NPC's perspective player name
+                    perspective_player_name, perspective_player_description, trust = self.chat_manager.active_character.get_perspective_player_identity()
+                    formatted_messages.append({
+                        'role': perspective_player_name,
+                        'content': msg['content'],
+                        "timestamp": msg["timestamp"],
+                        "location": msg["location"]
+                    })
+            else:
+                formatted_messages.append(msg)
+        return formatted_messages
     
     def generate_response(self):
+        """Generate response from LLM one text chunk at a time"""
         for chunk in self.acreate(self.get_context()):
             yield chunk
 
@@ -240,7 +298,7 @@ class base_LLM():
         logging.info(f"Format: {self.config.message_format}")
         while retries >= 0: # keep trying to connect to the API until it works
             # if full_reply != '': # if the full reply is not empty, then the LLM has generated a response and the next_author should be extracted from the start of the generation
-            #     self.conversation_manager.messages.append({"role": next_author, "content": full_reply})
+            #     self.conversation_manager.new_message({"role": next_author, "content": full_reply})
             #     logging.info(f"LLM returned full reply: {full_reply}")
             #     full_reply = ''
             #     next_author = None
@@ -418,13 +476,12 @@ class base_LLM():
 
                             sentence = '' # reset the sentence for the next iteration
 
-                            end_conversation = self.conversation_manager.game_interface.is_conversation_ended() # check if the conversation has ended
                             radiant_dialogue_update = self.conversation_manager.game_interface.is_radiant_dialogue() # check if the conversation has switched from radiant to multi NPC
                             # stop processing LLM response if:
                             # max_response_sentences reached (and the conversation isn't radiant)
                             # conversation has switched from radiant to multi NPC (this allows the player to "interrupt" radiant dialogue and include themselves in the conversation)
                             # the conversation has ended
-                            if ((num_sentences >= self.max_response_sentences) and not self.conversation_manager.radiant_dialogue) or (self.conversation_manager.radiant_dialogue and not radiant_dialogue_update) or end_conversation or eos: # if the conversation has ended, stop generating responses
+                            if ((num_sentences >= self.max_response_sentences) and not self.conversation_manager.radiant_dialogue) or (self.conversation_manager.radiant_dialogue and not radiant_dialogue_update) or self.conversation_manager.game_interface.is_conversation_ended() or eos: # if the conversation has ended, stop generating responses
                                 break
                 break
             except Exception as e:
@@ -449,8 +506,7 @@ class base_LLM():
                     retries += 1
                     continue
                 else:
-                    error_response = "I can't find the right words at the moment."
-                    self.conversation_manager.chat_manager.active_character.say(error_response)
+                    self.conversation_manager.chat_manager.active_character.say("I can't find the right words at the moment.")
                     logging.info('Retrying connection to API...')
                     retries -= 1
                     time.sleep(5)
@@ -476,7 +532,7 @@ class base_LLM():
             pass
 
         if next_author is not None and full_reply != '':
-            self.conversation_manager.messages.append({"role": next_author, "content": full_reply})
+            self.conversation_manager.new_message({"role": next_author, "content": full_reply})
             # -- for each sentence for each character until the conversation ends or the max_response_sentences is reached or the player is speaking
             logging.info(f"Full response saved ({self.tokenizer.get_token_count(full_reply)} tokens): {full_reply}")
 

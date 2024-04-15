@@ -1,8 +1,10 @@
-import src.utils as utils
+print("Loading character_db.py...")
 from src.logging import logging
+import src.utils as utils
 import json
 import os
 import pandas as pd
+logging.info("Imported required libraries in character_db.py")
 
 class CharacterDB():
     def __init__(self, conversation_manager): # character_database_directory is the path to a character directory where each character is a seperate json file
@@ -279,32 +281,6 @@ class CharacterDB():
         if str(character['name']) == "nan":
             print("character:",character)
         return self._get_character(character['name'], character['ref_id'], character['base_id'])
-    
-    # def has_character(self, character):
-    #     """Check if a character is in the database. Returns the character if it is in the database, None otherwise."""
-    #     return self.get_character(character['name'], character['ref_id'], character['base_id'])
-        # character_in_db = None
-        # if character["ref_id"] is not None and character["ref_id"] in self.ref_id_index: # If the character has a ref_id, check if the character is in the database using the ref_id
-        #     character_in_db = self.ref_id_index[character["ref_id"]]
-        #     character_in_db["lookup_type"] = "ref_id"
-        # if character["name"] in self.named_index:
-        #     character_in_db = self.named_index[character["name"]]
-        #     character_in_db["lookup_type"] = "name"
-        # if character["base_id"] is not None and character["base_id"] in self.base_id_index: # If the character has a base_id, check if the character is in the database using the base_id
-        #     character_in_db = self.base_id_index[character["base_id"]]
-        #     character_in_db["lookup_type"] = "base_id"
-        # return character_in_db
-        # characters_with_same_name = []
-        # for db_character in self.characters:
-        #     if character['name'] == db_character['name']:
-        #         characters_with_same_name.append(db_character)
-        # if len(characters_with_same_name) > 0:
-        #     for db_character in characters_with_same_name:
-        #         if character['ref_id'] is not None and character['ref_id'] == db_character['ref_id']:
-        #             character_in_db = True
-        #         elif character['base_id'] is not None and character['base_id'] == db_character['base_id']:
-        #             character_in_db = True
-        # return character_in_db
     
     def compare(self,db): # Compare this DB with another DB and return the differences - Useful for comparing a DB with a DB that has been patched, can be used to generate changelogs
         differences = []

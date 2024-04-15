@@ -1,5 +1,7 @@
-import src.tts_types.base_tts as base_tts
+print("Loading multi_tts.py...")
 from src.logging import logging
+import src.tts_types.base_tts as base_tts
+logging.info("Imported required libraries in multi_tts.py")
 
 tts_slug = "multi_tts"
 class Synthesizer(base_tts.base_Synthesizer):

@@ -1,13 +1,17 @@
+print("Importing llama_cpp_python.py")
 import src.utils as utils
 import src.llms.base_llm as base_LLM
 import src.tokenizers.base_tokenizer as tokenizer
 from src.logging import logging, time
+logging.info("Imported required libraries in llama_cpp_python.py")
 
 try:
     from llama_cpp import Llama
     loaded = True
+    logging.info("Imported llama-cpp-python")
 except Exception as e:
     loaded = False
+    logging.warning("Failed to load llama-cpp-python. Please check that you have installed it correctly if you intend to use it. If you don't intend to use it, you can ignore this message.")
 
 inference_engine_name = "llama-cpp-python"
 

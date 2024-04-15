@@ -1,6 +1,8 @@
+print("Importing src.characters_manager.py")
 from src.logging import logging
 import src.character_manager as character_manager # Character class
 import src.utils as utils
+logging.info("Imported required libraries in characters_manager.py")
 
 class CharacterDoesNotExist(Exception):
     """Exception raised when NPC name cannot be found in characterDB"""
@@ -59,22 +61,6 @@ class Characters:
         return relationship_summary
 
     @property
-    def conversation_summaries(self): # Returns a paragraph comprised of all active characters conversation summaries
-        if len(self.active_characters) == 0:
-            logging.warning("No active characters, returning empty conversation summaries")
-            return ""
-        if len(self.active_characters) == 1:
-            logging.info("Only one active character, returning SingleNPC style conversation summaries")
-            conversation_summaries = self.active_characters_list[0].conversation_summary
-        else:
-            logging.info("Multiple active characters, returning MultiNPC style conversation summaries")
-            conversation_summaries = "The following is a summary of the conversation so far. If there is nothing here, it means these characters do not have a history of conversation:\n"
-            for character in self.active_characters_list:
-                conversation_summaries += character.conversation_summary
-                if character != self.active_characters_list[-1]:
-                    conversation_summaries += "\n\n"
-
-    @property
     def replacement_dict(self): # Returns a dictionary of replacement values for the current context -- Dynamic Variables
         if len(self.active_characters) == 1 and self.conversation_manager.radiant_dialogue: # SingleNPC style context
             replacement_dict = self.active_characters_list[0].replacement_dict
@@ -91,7 +77,6 @@ class Characters:
             print(replacement_dict)
         else: # MultiNPC style context
             replacement_dict = {
-                "conversation_summaries": self.conversation_summaries,
                 "names": ", ".join(self.names),
                 "names_w_player": ", ".join(self.names_w_player),
                 "perspective_player_name": self.conversation_manager.player_name,
@@ -173,3 +158,37 @@ class Characters:
     def get_character(self, info, is_generic_npc=False):
         character = character_manager.Character(self, info, is_generic_npc)
         return character
+    
+    def add_message(self,msg):
+        for character in self.active_characters_list:
+            character.add_message(msg)
+    
+    def remove_from_conversation(self, character):
+        if character.name in self.active_characters:
+            del self.active_characters[character.name]
+        else:
+            logging.warning(f"Character {character.name} not in active characters list, cannot remove from conversation.")
+    
+    def step(self):
+        for character in self.active_characters_list:
+            character.step()
+
+    def reached_conversation_limit(self):
+        for character in self.active_characters_list:
+            character.reached_conversation_limit()
+
+    def get_memories(self):
+        memories = []
+        for character in self.active_characters_list:
+            memories.extend(character.memories)
+        return memories
+    
+    @property
+    def memory_offset(self):
+        """Return the memory depth of the character"""
+        return self.active_characters_list[0].memory_manager.memory_offset
+
+    @property
+    def memory_offset_direction(self):
+        """Return the memory offset direction of the character"""
+        return self.active_characters_list[0].memory_manager.memory_offset_direction

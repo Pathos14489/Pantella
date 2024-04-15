@@ -1,10 +1,12 @@
+print('Loading stt.py...')
+from src.logging import logging
 from faster_whisper import WhisperModel
 import speech_recognition as sr
-from src.logging import logging
 import src.utils as utils
 import requests
 import json
 import openai
+logging.info('Imported required libraries in stt.py')
 
 class Transcriber:
     def __init__(self, conversation_manager):

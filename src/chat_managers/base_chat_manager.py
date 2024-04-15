@@ -1,6 +1,8 @@
-import asyncio
+print("Importing base_chat_manager.py")
 from src.logging import logging
+import asyncio
 import wave
+logging.info("Imported required libraries in base_chat_manager.py")
 
 chat_manager_slug = "base_chat_manager"
 valid_games = []
@@ -23,9 +25,14 @@ class BaseChatManager:
 
     async def get_audio_duration(self, audio_file):
         """Check if the external software has finished playing the audio file"""
-        with wave.open(audio_file, 'r') as wf:
-            frames = wf.getnframes()
-            rate = wf.getframerate()
+        try:
+            with wave.open(audio_file, 'r') as wf:
+                frames = wf.getnframes()
+                rate = wf.getframerate()
+        except Exception as e:
+            logging.error(f"Error getting audio duration: {e}")
+            frames = 0
+            rate = 0
         # wait `buffer` seconds longer to let processes finish running correctly
         duration = frames / float(rate) + self.wait_time_buffer
         return duration

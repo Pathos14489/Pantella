@@ -1,3 +1,4 @@
+print("Importing utils.py")
 from src.logging import logging, time
 import re
 import string
@@ -5,9 +6,10 @@ import sys
 import os
 from shutil import rmtree
 from charset_normalizer import detect
-
+logging.info("Imported required libraries in utils.py")
 
 def time_it(func):
+    """Decorator to time a function's execution time"""
     def wrapper(*args, **kwargs):
         start = time.time()
         result = func(*args, **kwargs)
@@ -18,6 +20,7 @@ def time_it(func):
 
 
 def clean_text(text):
+    """Clean up text by removing punctuation and extra whitespace"""
     # Remove all punctuation from the sentence
     text_cleaned = text.translate(str.maketrans('', '', string.punctuation))
     # Remove any extra whitespace
@@ -28,6 +31,7 @@ def clean_text(text):
 
 
 def resolve_path(path):
+    """Resolve the path to the executable or the script directory"""
     if getattr(sys, 'frozen', False):
         resolved_path = os.path.dirname(sys.executable)
     else:
@@ -37,6 +41,7 @@ def resolve_path(path):
 
 
 def get_file_encoding(file_path):
+    """Get the encoding of a file using charset_normalizer"""
     with open(file_path,'rb') as f:
         data = f.read()
     encoding = detect(data).get("encoding")
@@ -69,9 +74,8 @@ def cleanup_mei(remove_mei_folders):
             else:
                 logging.warn(f"Warning: {len(mei_files)} previous Mantella.exe runtime folder(s) found in MantellaSoftware/data/tmp. See MantellaSoftware/config.json's remove_mei_folders setting for more information.")
         
-
-
 def get_time_group(in_game_time):
+    """Get the time group based on the in-game time"""
     in_game_time = int(in_game_time)
 
     if in_game_time <= 4:
