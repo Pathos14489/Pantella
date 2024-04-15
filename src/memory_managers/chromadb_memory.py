@@ -192,6 +192,8 @@ class MemoryManager(base_MemoryManager):
             msg_doc = message_query["documents"][0][i]
             metadata = message_query["metadatas"][0][i]
             distance = message_query["distances"][0][i]
+            if distance == 0.0:
+                continue
             id = message_query["ids"][0][i]
             emotions = {}
             for emotion in self.emotion_composition:
