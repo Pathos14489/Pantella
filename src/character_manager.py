@@ -214,8 +214,10 @@ class Character:
             self.meet(msg["role"])
         valid_names = [character.name for character in self.conversation_manager.character_database.characters]
         valid_names.append(self.conversation_manager.player_name)
-        for name in valid_names:
-            if name in msg["content"] and name not in self.knows:
+        lower_case_versions = [name.lower() for name in valid_names]
+        pairs = list(zip(valid_names, lower_case_versions))
+        for name, lower_case_name in pairs:
+            if lower_case_name in msg["content"].lower():
                 self.meet(name)
 
     def __str__(self):
