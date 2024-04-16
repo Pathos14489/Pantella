@@ -205,17 +205,17 @@ class Character:
     
     def add_message(self, msg):
         """Add a new message to the memory manager"""
-        self.check_for_new_knows(msg)
+        self.check_for_new_knows(msg["content"])
         self.memory_manager.add_message(msg)
 
     def check_for_new_knows(self, msg):
         """Check if the message contains a new character that the character has met"""
-        valid_names = [character.name for character in self.conversation_manager.character_database.characters]
+        valid_names = [character["name"] for character in self.conversation_manager.character_database.characters]
         valid_names.append(self.conversation_manager.player_name)
         lower_case_versions = [name.lower() for name in valid_names]
         pairs = list(zip(valid_names, lower_case_versions))
         for name, lower_case_name in pairs:
-            if lower_case_name in msg["content"].lower():
+            if lower_case_name in msg.lower():
                 self.meet(name)
 
     def __str__(self):
