@@ -210,8 +210,6 @@ class Character:
 
     def check_for_new_knows(self, msg):
         """Check if the message contains a new character that the character has met"""
-        if msg["role"] not in self.knows:
-            self.meet(msg["role"])
         valid_names = [character.name for character in self.conversation_manager.character_database.characters]
         valid_names.append(self.conversation_manager.player_name)
         lower_case_versions = [name.lower() for name in valid_names]
