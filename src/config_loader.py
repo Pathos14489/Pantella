@@ -201,7 +201,7 @@ class ConfigLoader:
                 "summarizing_memory_depth": 1,
             },
             "chromadb_memory":{
-                "memory_update_interval": 20,
+                "memory_update_interval": 1,
                 "logical_memories": 3,
                 "emotional_memories": 3,
                 "torchmoji_max_length": 30,
