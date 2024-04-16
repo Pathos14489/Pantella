@@ -35,6 +35,7 @@ class Character:
             self.language_code = self.characters_manager.conversation_manager.language_info['alpha2']
         self.language = self.characters_manager.conversation_manager.language_info['language']
         self.is_generic_npc = is_generic_npc
+        self.check_for_new_knows(self.bio)
 
         if "age" not in self.info:
             self.age = "Adult" # default age - This is to help communicate to the AI the age of the actor they're playing to help them stay in character
@@ -142,14 +143,12 @@ class Character:
         elif relationship_level == 4:
             trust = 'Lover'
             perspective_name = self.name+"'s mysterious lover"
-        perspective_description = perspective_name
         if name in self.knows: # If the character knows the player's name, use it
-            perspective_name = name+" ["+trust+"]" 
-            perspective_description += " (" +  race + " " + gender + ")" # A description of the player from the character's perspective TODO: Turn this into a config setting like message_format
+            perspective_name = name+" ["+trust+"] (" +  race + " " + gender + ")" # A description of the player from the character's perspective TODO: Turn this into a config setting like message_format
         else:
-            perspective_name = perspective_name+"("+race+" "+gender+")"
+            perspective_name += " ("+race+" "+gender+")"
 
-        return perspective_description, trust
+        return perspective_name, trust
     
     def get_perspective_player_identity(self):
         return self.get_perspective_identity(self.characters_manager.conversation_manager.player_name, self.characters_manager.conversation_manager.player_race, self.characters_manager.conversation_manager.player_gender, self.in_game_relationship_level)
@@ -171,7 +170,6 @@ class Character:
             "age": self.age,
             "gendered_age": self.gendered_age,
             "perspective_player_name": perspective_name,
-            "perspective_player_description": perspective_description,
             "bio": self.bio,
             "trust": trust,
             "language": self.language,
@@ -207,7 +205,17 @@ class Character:
     
     def add_message(self, msg):
         """Add a new message to the memory manager"""
+        self.check_for_new_knows(msg)
         self.memory_manager.add_message(msg)
+
+    def check_for_new_knows(self, msg):
+        """Check if the message contains a new character that the character has met"""
+        if msg["role"] not in self.knows:
+            self.meet(msg["role"])
+        valid_names = [character.name for character in self.conversation_manager.character_database.characters]
+        for name in valid_names:
+            if name in msg["content"] and name not in self.knows:
+                self.meet(name)
 
     def __str__(self):
         return self.name + " (" + self.race + " " + self.gender + ")"
