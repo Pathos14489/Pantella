@@ -246,7 +246,7 @@ class base_LLM():
                         "location": msg["location"]
                     })
                 else: # if single NPC conversation use the NPC's perspective player name
-                    perspective_player_name, perspective_player_description, trust = self.chat_manager.active_character.get_perspective_player_identity()
+                    perspective_player_name, trust = self.chat_manager.active_character.get_perspective_player_identity()
                     formatted_messages.append({
                         'role': perspective_player_name,
                         'content': msg['content'],
@@ -269,20 +269,13 @@ class base_LLM():
         verified_author = False # used to determine if the next author has been verified
         verified_author = False # used to determine if the next author has been verified
         possible_players = [
-            "A stranger",
-            "A traveler",
-            "a stranger",
-            "a Stranger",
-            "A Stranger",
-            "a traveler",
-            "Stranger",
-            "stranger",
-            "Traveler",
-            "traveler",
             self.conversation_manager.player_name,
             self.conversation_manager.player_name.lower(),
             self.conversation_manager.player_name.upper(),
         ]
+        for character in self.conversation_manager.character_manager.active_characters.values():
+            perspective_player_name, _ = character.get_perspective_player_identity()
+            possible_players.append(perspective_player_name)
         possible_players.extend(self.conversation_manager.player_name.split(" "))
         possible_players.extend(self.conversation_manager.player_name.lower().split(" "))
         possible_players.extend(self.conversation_manager.player_name.upper().split(" "))
