@@ -22,6 +22,8 @@ class base_LLM():
         self.end_of_sentence_chars = self.config.end_of_sentence_chars
         self.end_of_sentence_chars = [unicodedata.normalize('NFKC', char) for char in self.end_of_sentence_chars]
         self.banned_chars = self.config.banned_chars
+        if not self.config.allow_npc_custom_game_events:
+            self.banned_chars.append("*") # prevent NPCs from using custom game events via asterisk RP actions
 
         self.prompt_style = "normal"
 
