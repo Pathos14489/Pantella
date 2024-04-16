@@ -355,8 +355,9 @@ class base_LLM():
                                 logging.info(f"next_author detected as: {next_author}")
                         if  next_author is not None and verified_author == False: # if next_author is not None, then verify that the next author is correct
                             player_author = False
+                            possible_NPCs = list(self.conversation_manager.character_manager.active_characters.keys())
                             for possible_player in possible_players:
-                                if next_author.strip() in possible_player:
+                                if next_author.strip() in possible_player and next_author.strip() not in possible_NPCs:
                                     player_author = True
                                     break
                             if player_author: # if the next author is the player, then the player is speaking and generation should stop, but only if the conversation is not radiant
