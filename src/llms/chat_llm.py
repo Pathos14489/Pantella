@@ -29,7 +29,7 @@ class base_LLM(base_LLM.base_LLM):
                     if "location" in msg:
                         formatted_messages[-1]["location"] = msg["location"]
                 else: # if single NPC conversation use the NPC's perspective player name
-                    perspective_player_name, perspective_player_description, trust = self.chat_manager.active_character.get_perspective_player_identity()
+                    perspective_player_name, trust = self.chat_manager.active_character.get_perspective_player_identity()
                     formatted_messages.append({
                         'role': self.config.user_name,
                         'content': perspective_player_name + ": " + msg['content'],
