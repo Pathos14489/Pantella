@@ -213,6 +213,7 @@ class Character:
         if msg["role"] not in self.knows:
             self.meet(msg["role"])
         valid_names = [character.name for character in self.conversation_manager.character_database.characters]
+        valid_names.append(self.conversation_manager.player_name)
         for name in valid_names:
             if name in msg["content"] and name not in self.knows:
                 self.meet(name)
