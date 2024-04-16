@@ -6,7 +6,7 @@ class stop_attacking(base_behavior.BaseBehavior):
         super().__init__(manager)
         self.keyword = "StopAttacking"
         self.description = "If {perspective_player_name} renounces their words, or you want to end combat, begin your response with 'StopAttacking:'."
-        self.example = "'I'm sorry, I didn't mean it!' 'Forgiven: Alright, I'll forgive you.'"
+        self.example = "'I'm sorry, I didn't mean it!' 'StopAttacking: Alright, I'll forgive you.'"
         self.valid_games = ["skyrim","skyrimvr"]
     
     def run(self, speaker_character=None, sentence=None):
