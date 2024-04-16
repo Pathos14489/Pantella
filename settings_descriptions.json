@@ -49,8 +49,7 @@
         "small_size": "The length of a small message. Defaults to 5.",
         "same_output_limit": "Limits the number of times the same output can be repeated in a row. Defaults to 30.",
         "conversation_limit_pct": "The percentage of context that can be filled before triggering a summarization. Defaults to 0.8.",
-        "reload_buffer": "The number of messages returned to the context after summarization. Defaults to 8.",
-        "reload_wait_time": "The time to wait for the summary to write to disk before returning the messages to the context after summarization. Defaults to 1."
+        "reload_buffer": "The number of messages returned to the context after summarization. Defaults to 8."
     },
     "InferenceOptions": {
         "temperature": "The temperature for inference. Higher values make the model more creative but less coherent, more spelling mistakes, and more hallucinations. Lower values make the model less creative but more coherent. Defaults to 0.7.",
