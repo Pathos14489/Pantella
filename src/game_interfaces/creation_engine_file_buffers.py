@@ -465,9 +465,9 @@ class GameInterface(BaseGameInterface):
         # Is Player in combat with NPC
         in_combat = self.load_data_when_available('_mantella_actor_is_enemy', '').lower() == 'true' 
         character = self.conversation_manager.chat_manager.active_character
-        perspective_name, perspective_description, trust = character.get_perspective_player_identity()
+        perspective_name, trust = character.get_perspective_player_identity()
         if in_combat:
-            in_game_events = in_game_events + f'\n*{perspective_description} is fighting {character.name}. This is either because they are enemies or because {perspective_name} attacked {character.name} first.*'
+            in_game_events = in_game_events + f'\n*{perspective_name} is fighting {character.name}. This is either because they are enemies or because {perspective_name} attacked {character.name} first.*'
 
         if len(in_game_events) > 0:
             logging.info(f'In-game events since previous exchange:\n{in_game_events}')

@@ -130,7 +130,7 @@ class MemoryManager(base_MemoryManager):
 
     def summarize_conversation(self, prompt=None):
         """Summarize the conversation history"""
-        perspective_name, _, _ = self.character_manager.get_perspective_player_identity()
+        perspective_name, _ = self.character_manager.get_perspective_player_identity()
         summary = ''
         context = self.conversation_manager.get_context()
         if len(context) > self.conversation_manager.config.min_conversation_length:

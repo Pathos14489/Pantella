@@ -136,7 +136,7 @@ class ConversationManager(BaseConversationManager):
         if not self.radiant_dialogue: # initiate conversation with character
             try: # get response from NPC to player greeting
                 # self.new_message({'role': "[player]", 'content': f"{self.language_info['hello']} {character.name}."}) # TODO: Make this more interesting, always having the character say hi like we aren't always with each other is bizzare imo
-                pp_name, _, _ = character.get_perspective_player_identity()
+                pp_name, _ = character.get_perspective_player_identity()
                 self.new_message({'role': self.config.system_name, 'content': pp_name+" is starting a conversation with "+character.name+"."})
                 self.get_response()
             except Exception as e: # if error, close Mantella
@@ -195,7 +195,7 @@ class ConversationManager(BaseConversationManager):
             # check if user is ending conversation
             end_convo = False
             for keyword in self.config.end_conversation_keywords:
-                if self.transcriber.activation_name_exists(transcript_cleaned, keyword.lower()):
+                if self.transcriber.activation_name_exists(transcript_cleaned, keyword):
                     end_convo = True
                     break
             if end_convo or self.conversation_ended:

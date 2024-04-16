@@ -48,14 +48,14 @@ class Characters:
             return ""
         if len(self.active_characters) == 1:
             logging.info("Only one active character, returning SingleNPC style relationship summary")
-            perspective_player_name, perspective_player_description, trust = self.active_characters_list[0].get_perspective_player_identity()
-            relationship_summary = perspective_player_description
+            perspective_player_name, trust = self.active_characters_list[0].get_perspective_player_identity()
+            relationship_summary = perspective_player_name
         else:
             logging.info("Multiple active characters, returning MultiNPC style relationship summary")
             relationship_summary = ""
             for character in self.active_characters_list:
-                perspective_player_name, perspective_player_description, trust = character.get_perspective_player_identity()
-                relationship_summary += perspective_player_description
+                perspective_player_name, trust = character.get_perspective_player_identity()
+                relationship_summary += perspective_player_name
                 if character != self.active_characters_list[-1]:
                     relationship_summary += "\n\n"
         logging.info("Active Relationship Summary: " + relationship_summary)

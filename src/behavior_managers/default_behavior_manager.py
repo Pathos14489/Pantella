@@ -109,7 +109,7 @@ class BehaviorManager():
         summary = ""
         for behavior in self.behaviors:
             if behavior.valid():
-                if behavior.description is not None:
+                if behavior.description is not None and not behavior.player_only:
                     summary += f"{behavior.description}\n"
                     if behavior.example is not None:
                         summary += f"Example: {behavior.example}"

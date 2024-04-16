@@ -142,20 +142,21 @@ class Character:
         elif relationship_level == 4:
             trust = 'Lover'
             perspective_name = self.name+"'s mysterious lover"
+        perspective_description = perspective_name
         if name in self.knows: # If the character knows the player's name, use it
-            perspective_name = name+" ["+trust+"]"
+            perspective_name = name+" ["+trust+"]" 
+            perspective_description += " (" +  race + " " + gender + ")" # A description of the player from the character's perspective TODO: Turn this into a config setting like message_format
         else:
             perspective_name = perspective_name+"("+race+" "+gender+")"
 
-        perspective_description = perspective_name + "(" +  race + " " + gender + ") " # A description of the player from the character's perspective TODO: Turn this into a config setting like message_format
-        return perspective_name, perspective_description, trust
+        return perspective_description, trust
     
     def get_perspective_player_identity(self):
         return self.get_perspective_identity(self.characters_manager.conversation_manager.player_name, self.characters_manager.conversation_manager.player_race, self.characters_manager.conversation_manager.player_gender, self.in_game_relationship_level)
 
     @property
     def replacement_dict(self):
-        perspective_name, perspective_description, trust = self.get_perspective_player_identity()
+        perspective_name, trust = self.get_perspective_player_identity()
         try:
             with open(self.conversation_summary_file, 'r', encoding='utf-8') as f:
                 previous_conversation_summaries = f.read()
