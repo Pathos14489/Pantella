@@ -19,9 +19,9 @@ class base_LLM():
         self.tokenizer_slug = tokenizer_slug
 
         self.max_response_sentences = self.config.max_response_sentences
-        self.end_of_sentence_chars = ['.', '?', '!']
+        self.end_of_sentence_chars = self.config.end_of_sentence_chars
         self.end_of_sentence_chars = [unicodedata.normalize('NFKC', char) for char in self.end_of_sentence_chars]
-        self.banned_chars = ['*', '(', ')', '[', ']', '{', '}', "\"" ]
+        self.banned_chars = self.config.banned_chars
 
         self.prompt_style = "normal"
 
