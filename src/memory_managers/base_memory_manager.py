@@ -26,16 +26,12 @@ class base_MemoryManager():
         return self.conversation_manager.messages
 
     def after_step(self):
-        """Perform a step in the memory manager - Some memory managers may need to perform some action every step"""
-        logging.error("step() method not implemented in your memory manager.")
-        input("Press enter to continue...")
-        raise NotImplementedError("step() method not implemented in your memory manager.")
+        """Perform after dialogue generation in the memory manager - Some memory managers may need to perform some action every step"""
+        logging.error("after_step() method not implemented in your memory manager.")
     
     def before_step(self):
-        """Perform a step in the memory manager - Some memory managers may need to perform some action every step"""
-        logging.error("step() method not implemented in your memory manager.")
-        input("Press enter to continue...")
-        raise NotImplementedError("step() method not implemented in your memory manager.")
+        """Performed before dialogue generation in the memory manager - Some memory managers may need to perform some action every step"""
+        logging.error("before_step() method not implemented in your memory manager.")
     
     def reached_conversation_limit(self):
         """Ran when the conversation limit is reached, or the conversation is ended - Some memory managers may need to perform some action when the conversation limit is reached"""
