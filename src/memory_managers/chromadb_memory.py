@@ -114,12 +114,6 @@ class MemoryManager(base_MemoryManager):
         if self.memory_update_interval_counter >= self.memory_update_interval:
             self.memory_update_interval_counter = 0
             self.update_memories()
-    def after_step(self):
-        """Perform a step in the memory manager - Some memory managers may need to perform some action every step"""
-        self.memory_update_interval_counter += 1
-        if self.memory_update_interval_counter >= self.memory_update_interval:
-            self.memory_update_interval_counter = 0
-            self.update_memories()
 
     def update_memories(self):
         """Update the memories stored in the memory manager - Some memory managers may need to update memories every step"""
