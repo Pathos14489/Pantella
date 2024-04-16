@@ -137,7 +137,7 @@ class ConversationManager(BaseConversationManager):
             try: # get response from NPC to player greeting
                 # self.new_message({'role': "[player]", 'content': f"{self.language_info['hello']} {character.name}."}) # TODO: Make this more interesting, always having the character say hi like we aren't always with each other is bizzare imo
                 pp_name, _ = character.get_perspective_player_identity()
-                self.new_message({'role': self.config.system_name, 'content': pp_name+" is starting a conversation with "+character.name+"."})
+                self.new_message({'role': self.config.system_name, 'content': pp_name+" approaches "+character.name+" with the intent to talk to them."})
                 self.get_response()
             except Exception as e: # if error, close Mantella
                 self.game_interface.write_game_info('_mantella_end_conversation', 'True')
