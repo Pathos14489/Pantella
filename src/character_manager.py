@@ -185,7 +185,7 @@ class Character:
         self.conversation_manager.new_message({"role": self.name, "content": string}) # add string to ongoing conversation
 
     def leave_conversation(self):
-        random_goodbye = random.choice(self.conversation_manager.config.end_conversation_keywords) # get random goodbye line from player
+        random_goodbye = random.choice(self.conversation_manager.config.goodbye_npc_responses) # get random goodbye line from player
         if random_goodbye.endswith('.'):
             random_goodbye = random_goodbye[:-1]
         self.say(random_goodbye+'.') # let the player know that the conversation is ending using the latest character in the conversation that isn't the player to say it
