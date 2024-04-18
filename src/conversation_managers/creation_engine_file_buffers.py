@@ -137,7 +137,7 @@ class ConversationManager(BaseConversationManager):
             try: # get response from NPC to player greeting
                 # self.new_message({'role': "[player]", 'content': f"{self.language_info['hello']} {character.name}."}) # TODO: Make this more interesting, always having the character say hi like we aren't always with each other is bizzare imo
                 pp_name, _ = character.get_perspective_player_identity()
-                self.new_message({'role': self.config.system_name, 'content': pp_name+" approaches "+character.name+" with the intent to talk to them."})
+                self.new_message({'role': self.config.system_name, 'content': pp_name+" approaches "+character.name+" with the intent to start a new conversation with them."})
                 self.get_response()
             except Exception as e: # if error, close Mantella
                 self.game_interface.write_game_info('_mantella_end_conversation', 'True')
@@ -170,6 +170,10 @@ class ConversationManager(BaseConversationManager):
             return
         logging.info('Stepping through conversation...')
         logging.info(f"Messages: {json.dumps(self.get_context(), indent=2)}")
+        # if self.llm.type == "chat":
+        #     logging.info(f"Presumed Raw Prompt: {self.llm.tokenizer.get_string_from_messages(self.get_context())}")
+        # elif self.llm.type == "normal":
+        #     logging.info(f"Actual Raw Prompt: {self.llm.tokenizer.get_string_from_messages(self.get_context())}")
         
         if (self.character_manager.active_character_count() <= 0) and not self.radiant_dialogue: # if there are no active characters in the conversation and radiant dialogue is not being used, end the conversation
             self.end_conversation() # end conversation in game with current active character

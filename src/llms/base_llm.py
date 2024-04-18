@@ -24,8 +24,13 @@ class base_LLM():
         self.banned_chars = self.config.banned_chars
         if not self.config.allow_npc_custom_game_events:
             self.banned_chars.append("*") # prevent NPCs from using custom game events via asterisk RP actions
+            self.banned_chars.append("(") # prevent NPCs from using custom game events via brackets RP actions
+            self.banned_chars.append(")") # prevent NPCs from using custom game events via brackets RP actions
+            # self.banned_chars.append("[") # prevent NPCs from using custom game events via brackets RP actions
+            # self.banned_chars.append("]") # prevent NPCs from using custom game events via brackets RP actions
 
         self.prompt_style = "normal"
+        self.type = "normal"
 
     @property
     def character_manager(self):
@@ -38,6 +43,10 @@ class base_LLM():
     @property
     def maximum_local_tokens(self):
         return self.config.maximum_local_tokens
+
+    @property
+    def player_name(self):
+        return self.conversation_manager.player_name
 
     @property
     def EOS_token(self):
@@ -219,10 +228,11 @@ class base_LLM():
         logging.info(f"Cleaned sentence: {sentence}")
         return sentence
 
-    def get_context(self):
-        """Get the correct set of messages to use with the LLM to generate the next response"""
+    def get_messages(self):
+        """Get the messages from the conversation manager"""
+        logging.info(f"Getting messages from conversation manager")
         system_prompt = self.character_manager.get_system_prompt() # get system prompt
-        msgs = [{'role': self.config.system_name, 'content': system_prompt}] # add system prompt to context
+        msgs = [{'role': self.config.system_name, 'content': system_prompt, "type":"prompt"}] # add system prompt to context
         msgs.extend(self.messages) # add messages to context
 
         memory_offset = self.character_manager.memory_offset
@@ -235,26 +245,35 @@ class base_LLM():
             msgs = msgs[:memory_offset] + memories + msgs[memory_offset:]
         elif memory_offset_direction == "bottomup":
             msgs = msgs[:-memory_offset] + memories + msgs[-memory_offset:]
-        
-
+        logging.info(f"Messages: {len(msgs)}")
+        return msgs
+    
+    def get_context(self):
+        """Get the correct set of messages to use with the LLM to generate the next response"""
+        msgs = self.get_messages()
         formatted_messages = [] # format messages to be sent to LLM - Replace [player] with player name appropriate for the type of conversation
         for msg in msgs: # Add player name to messages based on the type of conversation
             if msg['role'] == "[player]":
                 if self.character_manager.active_character_count() > 1: # if multi NPC conversation use the player's actual name
-                    formatted_messages.append({
+                    formatted_message = {
                         'role': self.player_name,
                         'content': msg['content'],
                         "timestamp": msg["timestamp"],
                         "location": msg["location"]
-                    })
+                    }
+                    if "type" in msg:
+                        formatted_message["type"] = msg["type"]
                 else: # if single NPC conversation use the NPC's perspective player name
-                    perspective_player_name, trust = self.chat_manager.active_character.get_perspective_player_identity()
-                    formatted_messages.append({
+                    perspective_player_name, _ = self.chat_manager.active_character.get_perspective_player_identity()
+                    formatted_message = {
                         'role': perspective_player_name,
                         'content': msg['content'],
                         "timestamp": msg["timestamp"],
                         "location": msg["location"]
-                    })
+                    }
+                    if "type" in msg:
+                        formatted_message["type"] = msg["type"]
+                formatted_messages.append(formatted_message)
             else:
                 formatted_messages.append(msg)
         return formatted_messages
@@ -271,16 +290,17 @@ class base_LLM():
         verified_author = False # used to determine if the next author has been verified
         verified_author = False # used to determine if the next author has been verified
         possible_players = [
-            self.conversation_manager.player_name,
-            self.conversation_manager.player_name.lower(),
-            self.conversation_manager.player_name.upper(),
+            self.player_name,
+            self.player_name.lower(),
+            self.player_name.upper(),
         ]
         for character in self.conversation_manager.character_manager.active_characters.values():
             perspective_player_name, _ = character.get_perspective_player_identity()
             possible_players.append(perspective_player_name)
-        possible_players.extend(self.conversation_manager.player_name.split(" "))
-        possible_players.extend(self.conversation_manager.player_name.lower().split(" "))
-        possible_players.extend(self.conversation_manager.player_name.upper().split(" "))
+            possible_players.append(perspective_player_name.lower())
+        possible_players.extend(self.player_name.split(" "))
+        possible_players.extend(self.player_name.lower().split(" "))
+        possible_players.extend(self.player_name.upper().split(" "))
         full_reply = '' # used to store the full reply
         sentence = '' # used to store the current sentence being generated
         voice_line = '' # used to store the current voice line being generated
@@ -357,7 +377,7 @@ class base_LLM():
                             player_author = False
                             possible_NPCs = list(self.conversation_manager.character_manager.active_characters.keys())
                             for possible_player in possible_players:
-                                if next_author.strip() in possible_player and next_author.strip() not in possible_NPCs:
+                                if (next_author.strip() in possible_player or next_author.lower().strip() in possible_player) and (next_author.strip() not in possible_NPCs and next_author.lower().strip() not in possible_NPCs):
                                     player_author = True
                                     break
                             if player_author: # if the next author is the player, then the player is speaking and generation should stop, but only if the conversation is not radiant
@@ -373,7 +393,7 @@ class base_LLM():
                                 system_loop -= 1
                                 retries += 1
                                 raise Exception('Invalid author')
-                            elif next_author == self.config.system_name and system_loop == 0: # if the next author is the system, then the system is speaking and generation should stop
+                            elif (next_author == self.config.system_name or next_author.lower() == self.config.system_name.lower()) and system_loop == 0: # if the next author is the system, then the system is speaking and generation should stop
                                 logging.info(f"System Loop detected. Please report to #dev channel in the Mantella Discord. Stopping generation.")
                                 if len(self.conversation_manager.messages) == 0:
                                     logging.info(f"System Loop started at the first message.")

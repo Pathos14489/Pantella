@@ -43,6 +43,8 @@ class BaseConversationManager:
         msg["id"] = str(uuid.uuid4()) # Generate a unique ID for the message
         msg["timestamp"] = time.time() # Add timestamp to message
         msg["location"] = self.game_interface.get_current_location() # Add location to message
+        if "type" not in msg:
+            msg["type"] = "message" # Add type to message
         self.messages.append(msg)
         self.character_manager.add_message(msg)
 

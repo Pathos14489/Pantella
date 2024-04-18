@@ -57,7 +57,10 @@ class MemoryManager(base_MemoryManager):
     def load_messages(self):
         """Load messages from the memory manager - Some memory managers may need to load messages from a file or database, and can also use this method to load old messages into the conversation_manager's messages"""
         if len(self.conversation_manager.messages) == 0:
-            self.conversation_manager.messages = self.get_all_messages()[-self.config.reload_buffer:] # Load the last n messages into the conversation manager
+            reload_buffer_messages = self.get_all_messages()[-self.config.reload_buffer:] # Load the last n messages into the conversation manager
+            for message in reload_buffer_messages:
+                message["type"] = "memory"
+                self.conversation_manager.new_message(message)
         else:
             new_messages = self.get_all_messages()[-self.config.reload_buffer:]
             for message in new_messages:
@@ -115,11 +118,22 @@ class MemoryManager(base_MemoryManager):
             self.memory_update_interval_counter = 0
             self.update_memories()
 
+    @property
+    def query(self):
+        """Return the query string for the memory manager using the self.config.query_size"""
+        query_string = ""
+        for i in range(self.config.chromedb_query_size):
+            if i < len(self.conversation_manager.messages):
+                query_string += self.conversation_manager.messages[-1-i]["content"] + "\n"
+            else:
+                break
+        return query_string
+
     def update_memories(self):
         """Update the memories stored in the memory manager - Some memory managers may need to update memories every step"""
         if len(self.conversation_manager.messages) == 0:
             return
-        self.current_memories = self.get_most_related_memories(self.conversation_manager.messages[-1]["content"],self.config.logical_memories,self.config.chromadb_memory_messages_before,self.config.chromadb_memory_messages_after)
+        self.current_memories = self.get_most_related_memories(self.query,self.config.logical_memories,self.config.chromadb_memory_messages_before,self.config.chromadb_memory_messages_after)
     
     def reached_conversation_limit(self):
         """Ran when the conversation limit is reached, or the conversation is ended - Some memory managers may need to perform some action when the conversation limit is reached"""
@@ -134,8 +148,12 @@ class MemoryManager(base_MemoryManager):
             "timestamp": message["timestamp"],
             "location": message["location"],
             "conversation_id": self.conversation_manager.conversation_id,
-            "type": "message"
         }
+        if "type" not in message:
+            message["type"] = "message"
+        if self.last_message is not None and "conversation_id" in self.last_message:
+            if message["conversation_id"] == self.last_message["conversation_id"]:
+                memory_metadata["last_message_id"] = self.last_message["id"]
         for emotion in emotion_data:
             memory_metadata[emotion] = float(emotion_data[emotion])
             if self.config.empathy or message["role"] == self.name: # if empathy is enabled or the message is from the bot
@@ -199,6 +217,7 @@ class MemoryManager(base_MemoryManager):
                 "role": metadata["role"],
                 "timestamp": metadata["timestamp"],
                 "location": metadata["location"],
+                "type": "memory", # "message" or "memory"
                 "distance": distance,
                 "score": score,
                 "content": msg_doc,
@@ -210,12 +229,30 @@ class MemoryManager(base_MemoryManager):
     
     def get_most_related_memories(self, query_string, n_results=1, messages_before=2, messages_after=2):
         """Get the most related memories to a query string from the memory of this character"""
+        logging.info(f"Getting most related memories to query string:", query_string)
         msgs = self.get_related_messages(query_string, n_results)
         memories = []
         for msg in msgs:
             memory = self.get_around_message(msg, messages_before, messages_after)
             memories.append(memory)
-        return memories
+        # Go through each memory, and if there are overlapping memories, combine them in the correct order without duplicate messages
+        combined_memories = []
+        for memory in memories:
+            for message in memory:
+                if message not in combined_memories:
+                    combined_memories.append(message)
+        # Ensure there are no duplicate messages
+        unique_ids = set(list(map(lambda x: x["id"], combined_memories)))
+        unique_memories = []
+        for message in combined_memories:
+            if message["id"] in unique_ids:
+                unique_memories.append(message)
+                unique_ids.remove(message["id"])
+        # ensure there are no messages from system that say the same thing
+        # sort by timestamp
+        unique_memories = sorted(unique_memories, key=lambda x: x["timestamp"])
+        logging.info(f"Unique Memories:", json.dumps(unique_memories, indent=2))
+        return unique_memories
     
     def get_all_messages(self):
         """Get all messages in the memory of this character"""
@@ -234,6 +271,7 @@ class MemoryManager(base_MemoryManager):
                 "role": metadata["role"],
                 "timestamp": metadata["timestamp"],
                 "location": metadata["location"],
+                "type": "memory", # "message" or "memory"
                 "content": msg_doc,
                 "emotions": emotions,
                 "id": id,
@@ -273,18 +311,11 @@ class MemoryManager(base_MemoryManager):
             return []
         mem_messages = [{
             "role": self.config.system_name,
-            "content": self.name+" is thinking about the following memory:",
+            "content": self.name+" is thinking about the following memories:",
+            "type": "prompt"
         }]
-        mem_i = 0
         for memory in self.current_memories:
-            for msg in memory:
-                mem_messages.append(msg)
-            if mem_i < len(self.current_memories)-1: # if there are more memories
-                mem_messages.append({
-                    "role": self.config.system_name,
-                    "content": self.name+" is also thinking about this memory:"
-                })
-            mem_i += 1
+            mem_messages.append(memory)
         return mem_messages
 
     @property
@@ -296,3 +327,8 @@ class MemoryManager(base_MemoryManager):
     def memory_offset_direction(self):
         """Return the memory offset direction of the character"""
         return self.config.chromadb_memory_direction
+    
+    @property
+    def last_message(self):
+        """Return the last message of the character"""
+        return self.conversation_manager.messages[-1]

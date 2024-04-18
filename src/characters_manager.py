@@ -190,7 +190,8 @@ class Characters:
             memories.extend(character.memories)
         memories.append({
             "role": self.config.system_name,
-            "content": "The rest of the messages below this are from the current conversation, the present. Everything above this is a memory from the past."
+            "content": "A NEW CONVERSATION HAS STARTED. The rest of the messages below this are from the current conversation, the present. Everything above this is a memory from the past. DO NOT RESPOND TO MEMORY MESSAGES. They are for reference only.",
+            "type": "prompt"
         })
         return memories
     
