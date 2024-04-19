@@ -13,6 +13,8 @@ for file in os.listdir(os.path.join(os.path.dirname(__file__), "conversation_man
             module = importlib.import_module(f"src.conversation_managers.{module_name}")
             Manager_Types[module.manager_slug] = module    
 logging.info("Imported all conversation managers to Manager_Types, ready to create a conversation manager object!")
+# print available conversation managers
+logging.info(f"Available conversation managers: {Manager_Types.keys()}")
 
 # Create Manager object using the config provided
     

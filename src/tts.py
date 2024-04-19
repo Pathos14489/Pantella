@@ -12,9 +12,11 @@ for file in os.listdir(os.path.join(os.path.dirname(__file__), "tts_types/")):
         module_name = file[:-3]
         if module_name != "base_tts":
             module = importlib.import_module(f"src.tts_types.{module_name}")
-            tts_Types[module.tts_slug] = module    
+            tts_Types[module.tts_slug] = module
 tts_Types["default"] = tts_Types[default]
 logging.info("Imported TTS types in tts.py")
+# print available TTS types
+logging.info(f"Available TTS types: {tts_Types.keys()}")
 
 # Create LLM object using the config and client provided
     

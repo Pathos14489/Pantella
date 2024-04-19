@@ -16,6 +16,8 @@ for file in os.listdir(os.path.join(os.path.dirname(__file__), "llms/")):
             LLM_Types[module.inference_engine_name] = module    
 LLM_Types["default"] = LLM_Types[default]
 logging.info("Imported all LLMs to LLM_Types, ready to create a LLM object!")
+# print available LLMs
+logging.info(f"Available LLMs: {LLM_Types.keys()}")
 
 # Create LLM object using the config and client provided
     
