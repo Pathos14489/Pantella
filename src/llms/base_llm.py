@@ -181,7 +181,7 @@ class base_LLM():
             return sentence
         
         def parse_asterisks_brackets(sentence):
-            if ('*' in sentence):
+            if '*' in sentence:
                 # Check if sentence contains two asterisks
                 asterisk_check = re.search(r"(?<!\*)\*(?!\*)[^*]*\*(?!\*)", sentence)
                 if asterisk_check:
@@ -192,7 +192,7 @@ class base_LLM():
                     logging.info(f"Removed response containing single asterisks: {sentence}")
                     sentence = ''
 
-            if ('(' in sentence) or (')' in sentence):
+            if '(' in sentence or ')' in sentence:
                 # Check if sentence contains two brackets
                 bracket_check = re.search(r"\(.*\)", sentence)
                 if bracket_check:
@@ -210,7 +210,7 @@ class base_LLM():
 
             return sentence
         
-        if ('Well, well, well' in sentence):
+        if 'Well, well, well' in sentence:
             sentence = sentence.replace('Well, well, well', 'Well well well')
 
         sentence = remove_as_a(sentence)
@@ -485,7 +485,7 @@ class base_LLM():
                                     raise Exception('Invalid author')
 
                             sentence = self.clean_sentence(sentence) # clean the sentence
-                            if sentence.replace(".", "").replace("?", "").replace("!", "").replace(",", "").strip() == '': # if the sentence is empty after cleaning, then skip it
+                            if sentence.replace(".", "").replace("?", "").replace("!", "").replace(",", "").strip() == '' and sentence != "...": # if the sentence is empty after cleaning, then skip it - unless it's an ellipsis
                                 logging.info(f"Skipping empty sentence")
                                 if full_reply.strip() == '':
                                     retries += 1
