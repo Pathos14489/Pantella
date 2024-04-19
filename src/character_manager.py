@@ -32,8 +32,8 @@ class Character:
             logging.info(f"Language override found for {self.name}: {self.info['lang_override']}")
             self.language_code = self.info["lang_override"]
         else: # If the character does not have a language override, use the player's language
-            self.language_code = self.characters_manager.conversation_manager.language_info['alpha2']
-        self.language = self.characters_manager.conversation_manager.language_info['language']
+            self.language_code = self.conversation_manager.language_info['alpha2']
+        self.language = self.conversation_manager.language_info['language']
         self.is_generic_npc = is_generic_npc
         self.check_for_new_knows(self.bio)
 
@@ -99,6 +99,10 @@ class Character:
     @property
     def conversation_manager(self):
         return self.characters_manager.conversation_manager
+    
+    @property
+    def config(self):
+        return self.conversation_manager.config
     
     def get_perspective_identity(self, name, race, gender, relationship_level):
         # The highest relationship rank this actor has.
