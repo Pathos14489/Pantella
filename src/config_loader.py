@@ -26,6 +26,18 @@ class ConfigLoader:
         self.behavior_manager = self.current_game_config["behavior_manager"]
         self.chat_manager = self.current_game_config["chat_manager"]
         logging.log_file = self.logging_file_path # Set the logging file path
+        self.stop = ["<im_end>","<im_end>"]
+        self.banned_chars = ["{", "}", "\"" ]
+        self.end_of_sentence_chars = [".", "!", "?"]
+        self.BOS_token = "<im_start>"
+        self.EOS_token = "<im_end>"
+        self.message_signifier = ": "
+        self.role_seperator = "\n"
+        self.message_seperator = "\n"
+        self.message_format = "[BOS_token][role][role_seperator][name][message_signifier][content][EOS_token][message_seperator]"
+        self.system_name = "system"
+        self.user_name = "user"
+        self.assistant_name = "assistant"
         self.get_prompt_styles()
         self.ready = True
 
@@ -124,6 +136,22 @@ class ConfigLoader:
         style_names = [f"{slug} ({self._raw_prompt_styles[slug]['name']})" for slug in self.prompt_styles]
         logging.info(f"Prompt styles loaded: "+str(style_names))
 
+    def get_tokenizer_settings_from_prompt_style(self):
+        """Get the tokenizer settings from the prompt style"""
+        logging.info("Getting tokenizer settings from prompt style")
+        logging.info(self._prompt_style)
+        self.stop = self._prompt_style["stop"]
+        self.BOS_token = self._prompt_style["BOS_token"]
+        self.EOS_token = self._prompt_style["EOS_token"]
+        self.message_signifier = self._prompt_style["message_signifier"]
+        self.role_seperator = self._prompt_style["role_seperator"]
+        self.message_seperator = self._prompt_style["message_seperator"]
+        self.message_format = self._prompt_style["message_format"]
+        self.system_name = self._prompt_style["system_name"]
+        self.user_name = self._prompt_style["user_name"]
+        self.assistant_name = self._prompt_style["assistant_name"]
+        logging.info("Prompt formatting settings loaded")
+
     @property
     def prompts(self):
         return self.prompt_styles[self.prompt_style]
@@ -141,6 +169,7 @@ class ConfigLoader:
         else:
             logging.error(f"Prompt style not set in config file. Using default prompt style.")
             self._prompt_style = self.prompt_styles["normal"]
+        self.get_tokenizer_settings_from_prompt_style()
         return self._prompt_style
 
 
@@ -169,16 +198,15 @@ class ConfigLoader:
                     "See yah later",
                     "See yah",
                     "Seeyah later",
-                    "See you soon",
-                    "Be seeing you",
-                    "Safe travels",
-                    "Take care",
+                    "See you soon.",
+                    "Be seeing you.",
+                    "Safe travels.",
                     "Enjoy the rest of your day",
                     "Be seeing you",
                     "Be careful out there",
                     "May your road lead you to warm sands",
                     "Lets go.",
-                    "We better get a move on.",
+                    "We better get a move on."
                 ],
                 "goodbye_npc_responses": [
                     "Safe travels",
@@ -209,12 +237,12 @@ class ConfigLoader:
             },
             "chromadb_memory":{
                 "memory_update_interval": 1,
-                "logical_memories": 3,
-                "emotional_memories": 3,
+                "logical_memories": 5,
+                "emotional_memories": 5,
                 "torchmoji_max_length": 30,
                 "empathy": 0.5,
-                "chromadb_memory_messages_before": 3,
-                "chromadb_memory_messages_after": 1,
+                "chromadb_memory_messages_before": 4,
+                "chromadb_memory_messages_after": 2,
                 "emotional_decay_min": 0.005,
                 "emotional_decay_max": 0.01,
                 "emotion_composition": {
@@ -334,26 +362,15 @@ class ConfigLoader:
                 "inference_engine": "default",
                 "tokenizer_type": "default",
                 "prompt_style": "default",
-                "allow_npc_custom_game_events": False,
+                "allow_npc_custom_game_events": True,
                 "maximum_local_tokens": 4096,
                 "max_response_sentences": 999,
-                "wait_time_buffer": 0.5,
-                "stop": ["<im_end>","<im_end>"],
-                "banned_chars": ['{', '}', "\"" ],
-                "end_of_sentence_chars": ['.', '?', '!'],
-                "BOS_token": "<im_start>",
-                "EOS_token": "<im_end>",
-                "message_signifier": "\n",
-                "message_seperator": "\n",
-                "message_format": "[BOS_token][name][message_signifier][content][EOS_token][message_seperator]",
-                "system_name": "system",
-                "user_name": "user",
-                "assistant_name": "assistant",
-                "assist_check": True,
+                "wait_time_buffer": 1.0,
+                "assist_check": False,
                 "strip_smalls": True,
                 "small_size": 3,
                 "same_output_limit": 30,
-                "conversation_limit_pct": 0.8,
+                "conversation_limit_pct": 0.9,
                 "min_conversation_length": 5,
                 "reload_buffer": 20,
                 # "reload_wait_time": 1,
@@ -374,8 +391,8 @@ class ConfigLoader:
                 "max_tokens": 512,
             },
             "openai_api": {
-                "llm": "gpt-3.5-turbo-1106",
-                "alternative_openai_api_base": "none",
+                "llm": "undi95/toppy-m-7b:free",
+                "alternative_openai_api_base": "https://openrouter.ai/api/v1/",
                 "secret_key_file_path": ".\\GPT_SECRET_KEY.txt"
             },
             "llama_cpp_python": {
@@ -463,7 +480,7 @@ class ConfigLoader:
                     "repetition_penalty": 3.0,
                     "top_k": 40,
                     "top_p": 0.80,
-                    "speed": 1.5,
+                    "speed": 1.25,
                     "enable_text_splitting": True,
                     "stream_chunk_size": 200
                 },
@@ -566,17 +583,6 @@ class ConfigLoader:
                 "maximum_local_tokens": self.maximum_local_tokens,
                 "max_response_sentences": self.max_response_sentences,
                 "wait_time_buffer": self.wait_time_buffer,
-                "stop": self.stop,
-                "banned_chars": self.banned_chars,
-                "end_of_sentence_chars": self.end_of_sentence_chars,
-                "BOS_token": self.BOS_token,
-                "EOS_token": self.EOS_token,
-                "message_signifier": self.message_signifier,
-                "message_seperator": self.message_seperator,
-                "message_format": self.message_format,
-                "system_name": self.system_name,
-                "user_name": self.user_name,
-                "assistant_name": self.assistant_name,
                 "assist_check": self.assist_check,
                 "strip_smalls": self.strip_smalls,
                 "small_size": self.small_size,
