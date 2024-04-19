@@ -206,7 +206,9 @@ class ConfigLoader:
                     "Be careful out there",
                     "May your road lead you to warm sands",
                     "Lets go.",
-                    "We better get a move on."
+                    "Let's go.",
+                    "We better get a move on.",
+                    "May the road rise up to meet you, and may your journey be safe and prosperous."
                 ],
                 "goodbye_npc_responses": [
                     "Safe travels",
