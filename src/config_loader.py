@@ -25,7 +25,6 @@ class ConfigLoader:
         self.interface_type = self.current_game_config["interface_type"]
         self.behavior_manager = self.current_game_config["behavior_manager"]
         self.chat_manager = self.current_game_config["chat_manager"]
-        self.memory_manager = self.current_game_config["memory_manager"]
         logging.log_file = self.logging_file_path # Set the logging file path
         self.get_prompt_styles()
         self.ready = True
@@ -526,6 +525,8 @@ class ConfigLoader:
             },
             "summarizing_memory": {
                 "summary_limit_pct": self.summary_limit_pct,
+                "summarizing_memory_direction": self.summarizing_memory_direction,
+                "summarizing_memory_depth": self.summarizing_memory_depth,
             },
             "chromadb_memory": {
                 "memory_update_interval": self.memory_update_interval,
@@ -554,6 +555,8 @@ class ConfigLoader:
                 "listen_timeout": self.listen_timeout,
                 "beam_size": self.beam_size,
                 "vad_filter": self.vad_filter,
+                "whisper_cpu_threads": self.whisper_cpu_threads,
+                "whisper_compute_type": self.whisper_compute_type,
             },
             "LanguageModel": {
                 "inference_engine": self.inference_engine,
