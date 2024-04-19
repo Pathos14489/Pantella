@@ -63,7 +63,7 @@ class CharacterDB():
         self.verify_characters()
 
     def load_characters_json(self):
-        logging.info(f"Loading character database from {self.character_database_path}...")
+        logging.info(f"Loading character database from JSON files {self.character_database_path}...")
         self._characters = []
         self.named_index = {}
         self.base_id_index = {}
@@ -81,7 +81,7 @@ class CharacterDB():
         self.loaded()
     
     def load_characters_csv(self):
-        logging.info(f"Loading character database from JSON files in {self.character_database_path}...")
+        logging.info(f"Loading character database from CSV at '{self.character_database_path}'...")
         self._characters = []
         self.named_index = {}
         self.base_id_index = {}
