@@ -1,7 +1,7 @@
 print("Importing openai_api.py")
 from src.logging import logging, time
 import src.utils as utils
-import src.llms.chat_llm as chat_LLM
+import src.llms.base_llm as base_LLM
 logging.info("Imported required libraries in openai_api.py")
 
 try:
@@ -19,7 +19,7 @@ def setup_openai_secret_key(file_name):
         api_key = f.readline().strip()
     return api_key
 
-class LLM(chat_LLM.base_LLM):
+class LLM(base_LLM.base_LLM):
     def __init__(self, conversation_manager):
         global inference_engine_name
         global tokenizer_slug
@@ -94,9 +94,19 @@ class LLM(chat_LLM.base_LLM):
             logging.info(f"Running Mantella with local language model")
         else:
             logging.info(f"Running Mantella with '{self.config.llm}'. The language model chosen can be changed via config.json")
-
-        self.config.message_signifier = ": " # The signifier used to separate the speaker from the message in the input to the language model
-        self.config.stop.append("\n")
+    
+    def get_context(self):
+        context = super().get_context()
+        new_context = []
+        for message in context:
+            new_content = message["content"]
+            if "name" in message:
+                new_content = message["name"] +": "+ new_content
+            new_context.append({
+                "role": message["role"],
+                "content": new_content
+            })
+        return new_context
     
     @utils.time_it
     def create(self, messages):

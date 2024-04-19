@@ -182,7 +182,7 @@ class Character:
     def say(self,string):
         audio_file = self.conversation_manager.synthesizer.synthesize(string, self) # say string
         self.conversation_manager.chat_manager.save_files_to_voice_folders([audio_file, string]) # save audio file to voice folder so it can be played in-game
-        self.conversation_manager.new_message({"role": self.name, "content": string}) # add string to ongoing conversation
+        self.conversation_manager.new_message({"role": self.config.assistant_name, "name":self.name, "content": string}) # add string to ongoing conversation
 
     def leave_conversation(self):
         random_goodbye = random.choice(self.conversation_manager.config.goodbye_npc_responses) # get random goodbye line from player

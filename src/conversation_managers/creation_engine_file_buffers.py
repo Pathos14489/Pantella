@@ -78,7 +78,7 @@ class ConversationManager(BaseConversationManager):
             #     # add greeting from newly added NPC to help the LLM understand that this NPC has joined the conversation
             #     # messages_wo_system_prompt[self.last_assistant_idx]['content'] += f"\n{character.name}: self.{self.language_info['hello']}."
             if len(self.messages) == 0: # At least only do this if the conversation hasn't started yet? Maybe? Let me know if this is a problem.
-                self.new_message({'role': character.name, 'content': f"{self.language_info['hello']}."}) # TODO: Make this more interesting by generating a greeting for each NPC based on the context of the last line or two said(or if possible check if they were nearby when the line was said...?)?
+                self.new_message({"role": self.config.assistant_name, "name":character.name, "content": f"{self.language_info['hello']}."}) # TODO: Make this more interesting by generating a greeting for each NPC based on the context of the last line or two said(or if possible check if they were nearby when the line was said...?)?
                 
             self.game_interface.write_game_info('_mantella_character_selection', 'True') # write to _mantella_character_selection.txt to indicate that the character has been successfully selected to the game
 
@@ -147,9 +147,9 @@ class ConversationManager(BaseConversationManager):
         else: # if radiant dialogue, get response from NPC to other NPCs greeting
             if len(self.messages) <= 2: # if radiant dialogue and the NPCs haven't greeted each other yet, greet each other
                 if self.character_manager.active_character_count() == 2: # TODO: Radiants can only handle 2 NPCs at a time, is that normal?
-                    self.new_message({'role': self.chat_manager.active_character.name, 'content': f"{self.language_info['hello']} {self.character_manager.active_characters[0].name}."}) # TODO: Make this more interesting by generating a greeting for each NPC based on the context of the last line or two said(or if possible check if they were nearby when the line was said...?)
+                    self.new_message({'role': self.config.assistant_name, 'name':self.chat_manager.active_character.name, 'content': f"{self.language_info['hello']} {self.character_manager.active_characters[0].name}."}) # TODO: Make this more interesting by generating a greeting for each NPC based on the context of the last line or two said(or if possible check if they were nearby when the line was said...?)
                 else:
-                    self.new_message({'role': self.chat_manager.active_character.name, 'content': f"{self.language_info['hello']}."}) # TODO: Make this more interesting by generating a greeting for each NPC based on the context of the last line or two said(or if possible check if they were nearby when the line was said...?)
+                    self.new_message({'role': self.config.assistant_name, 'name':self.chat_manager.active_character.name, 'content': f"{self.language_info['hello']}."}) # TODO: Make this more interesting by generating a greeting for each NPC based on the context of the last line or two said(or if possible check if they were nearby when the line was said...?)
 
         self.game_interface.update_game_events() # update game events before player input
 
@@ -191,7 +191,7 @@ class ConversationManager(BaseConversationManager):
 
             transcript_cleaned = utils.clean_text(transcribed_text)
 
-            self.new_message({'role': "[player]", 'content': transcribed_text}) # add player input to messages
+            self.new_message({'role': self.config.user_name, 'name':"[player]", 'content': transcribed_text}) # add player input to messages
             self.character_manager.before_step() # Let the characters know that a step has been taken
         
             self.update_game_state()

@@ -248,34 +248,76 @@ class base_LLM():
         logging.info(f"Messages: {len(msgs)}")
         return msgs
     
+        
     def get_context(self):
         """Get the correct set of messages to use with the LLM to generate the next response"""
         msgs = self.get_messages()
         formatted_messages = [] # format messages to be sent to LLM - Replace [player] with player name appropriate for the type of conversation
         for msg in msgs: # Add player name to messages based on the type of conversation
-            if msg['role'] == "[player]":
+            if msg['role'] == self.config.user_name: # if the message is from the player
                 if self.character_manager.active_character_count() > 1: # if multi NPC conversation use the player's actual name
-                    formatted_message = {
-                        'role': self.player_name,
+                    formatted_msg = {
+                        'role': self.config.user_name,
+                        'name': self.player_name,
                         'content': msg['content'],
-                        "timestamp": msg["timestamp"],
-                        "location": msg["location"]
                     }
+                    if "timestamp" in msg:
+                        formatted_msg["timestamp"] = msg["timestamp"]
+                    if "location" in msg:
+                        formatted_msg["location"] = msg["location"]
                     if "type" in msg:
-                        formatted_message["type"] = msg["type"]
+                        formatted_msg["type"] = msg["type"]
                 else: # if single NPC conversation use the NPC's perspective player name
                     perspective_player_name, _ = self.chat_manager.active_character.get_perspective_player_identity()
-                    formatted_message = {
-                        'role': perspective_player_name,
+                    formatted_msg = {
+                        'role': self.config.user_name,
+                        'name': perspective_player_name,
                         'content': msg['content'],
-                        "timestamp": msg["timestamp"],
-                        "location": msg["location"]
                     }
+                    if "timestamp" in msg:
+                        formatted_msg["timestamp"] = msg["timestamp"]
+                    if "location" in msg:
+                        formatted_msg["location"] = msg["location"]
                     if "type" in msg:
-                        formatted_message["type"] = msg["type"]
-                formatted_messages.append(formatted_message)
-            else:
-                formatted_messages.append(msg)
+                        formatted_msg["type"] = msg["type"]
+            elif msg['role'] == self.config.system_name: # if the message is from the system
+                    formatted_msg = {
+                        'role': msg['role'],
+                        'content': msg['content'],
+                    }
+                    if "timestamp" in msg:
+                        formatted_msg["timestamp"] = msg["timestamp"]
+                    if "location" in msg:
+                        formatted_msg["location"] = msg["location"]
+                    if "type" in msg:
+                        formatted_msg["type"] = msg["type"]
+            elif msg['role'] == self.config.assistant_name: # if the message is from an NPC
+                if "name" not in msg: # support for role, content, and name messages
+                    logging.info(f"Warning: Message from NPC does not contain name:",msg)
+                formatted_msg = {
+                    'role': self.config.assistant_name,
+                    'name': msg['name'],
+                    'content': msg['content'],
+                }
+                if "timestamp" in msg:
+                    formatted_msg["timestamp"] = msg["timestamp"]
+                if "location" in msg:
+                    formatted_msg["location"] = msg["location"]
+                if "type" in msg:
+                    formatted_msg["type"] = msg["type"]
+            else: # support for just role and content messages - depreciated
+                formatted_msg = {
+                    'role': msg['role'],
+                    'content': msg['content'],
+                }
+                if "timestamp" in msg:
+                    formatted_msg["timestamp"] = msg["timestamp"]
+                if "location" in msg:
+                    formatted_msg["location"] = msg["location"]
+                if "type" in msg:
+                    formatted_msg["type"] = msg["type"]
+
+            formatted_messages.append(formatted_msg)
         return formatted_messages
     
     def generate_response(self):
@@ -497,7 +539,7 @@ class base_LLM():
                             # max_response_sentences reached (and the conversation isn't radiant)
                             # conversation has switched from radiant to multi NPC (this allows the player to "interrupt" radiant dialogue and include themselves in the conversation)
                             # the conversation has ended
-                            if ((num_sentences >= self.max_response_sentences) and not self.conversation_manager.radiant_dialogue) or (self.conversation_manager.radiant_dialogue and not radiant_dialogue_update) or self.conversation_manager.game_interface.is_conversation_ended() or eos: # if the conversation has ended, stop generating responses
+                            if ((num_sentences >= self.max_response_sentences) and not self.conversation_manager.radiant_dialogue) or (self.conversation_manager.radiant_dialogue and not radiant_dialogue_update) or self.conversation_manager.game_interface.is_conversation_ended(): # if the conversation has ended, stop generating responses
                                 break
                 break
             except Exception as e:
@@ -548,7 +590,7 @@ class base_LLM():
             pass
 
         if next_author is not None and full_reply != '':
-            self.conversation_manager.new_message({"role": next_author, "content": full_reply})
+            self.conversation_manager.new_message({"role": self.config.assistant_name, 'name':next_author, "content": full_reply})
             # -- for each sentence for each character until the conversation ends or the max_response_sentences is reached or the player is speaking
             logging.info(f"Full response saved ({self.tokenizer.get_token_count(full_reply)} tokens): {full_reply}")
 

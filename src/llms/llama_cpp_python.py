@@ -63,7 +63,7 @@ class LLM(base_LLM.base_LLM): # Uses llama-cpp-python as the LLM inference engin
         while retries > 0 and completion is None:
             try:
                 prompt = self.tokenizer.get_string_from_messages(messages)
-                prompt += self.tokenizer.start_message(self.config.assistant_name) # Start empty message from no one to let the LLM generate the speaker by split \n
+                prompt += self.tokenizer.start_message(self.config.assistant_name)
                 logging.info(f"Raw Prompt: {prompt}")
 
                 completion = self.llm.create_completion(prompt,
@@ -102,10 +102,8 @@ class LLM(base_LLM.base_LLM): # Uses llama-cpp-python as the LLM inference engin
             logging.info(f"Retries: {retries}")
             try:
                 prompt = self.tokenizer.get_string_from_messages(messages)
-                prompt += self.tokenizer.start_message("[name]") # Start empty message from no one to let the LLM generate the speaker by split \n
-                prompt = prompt.split("[name]")[0] # Start message without the name - Generates name for use in process_response()
+                prompt += self.tokenizer.start_message(self.config.assistant_name)
                 logging.info(f"Raw Prompt: {prompt}")
-                logging.info(f"Type of prompt: {type(prompt)}")
                 return self.llm.create_completion(prompt=prompt,
                     max_tokens=self.max_tokens,
                     top_k=self.top_k,

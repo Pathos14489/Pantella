@@ -151,6 +151,8 @@ class MemoryManager(base_MemoryManager):
         }
         if "type" not in message:
             message["type"] = "message"
+        if 'name' in message:
+            memory_metadata['name'] = message['name']
         if self.last_message is not None and "conversation_id" in self.last_message:
             if message["conversation_id"] == self.last_message["conversation_id"]:
                 memory_metadata["last_message_id"] = self.last_message["id"]
@@ -224,6 +226,8 @@ class MemoryManager(base_MemoryManager):
                 "emotions": emotions,
                 "id": id,
             }
+            if "name" in metadata:
+                msg["name"] = metadata["name"]
             msgs.append(msg)
         return msgs
     
