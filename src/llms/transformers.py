@@ -157,7 +157,6 @@ class LLM(base_LLM.base_LLM): # Uses llama-cpp-python as the LLM inference engin
 
     @utils.time_it
     def create(self, messages):
-        # logging.info(f"cMessages: {messages}")
         retries = 5
         completion = None
         while retries > 0 and completion is None:
@@ -179,7 +178,6 @@ class LLM(base_LLM.base_LLM): # Uses llama-cpp-python as the LLM inference engin
         return completion
     
     def acreate(self, messages): # Creates a completion stream for the messages provided to generate a speaker and their response
-        logging.info(f"aMessages: {messages}")
         retries = 5
         while retries > 0:
             logging.info(f"Retries: {retries}")
