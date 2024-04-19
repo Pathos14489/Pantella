@@ -281,6 +281,8 @@ class MemoryManager(base_MemoryManager):
                 "id": id,
                 "conversation_id": metadata["conversation_id"],
             }
+            if "name" in metadata:
+                msg["name"] = metadata["name"]
             msgs.append(msg)
         return msgs
 
