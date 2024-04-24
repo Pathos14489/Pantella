@@ -89,7 +89,7 @@ class BehaviorManager():
             npc_keywords = behavior.npc_post_keywords
             npc_contains_keyword = False
             for npc_keyword in npc_keywords:
-                if self.conversation_manager.transcriber.activation_name_exists(sentence, npc_keyword):
+                if npc_keyword in sentence or npc_keyword.lower() in sentence.lower():
                     npc_contains_keyword = True
                     break
             for activation_sentence in behavior.activation_sentences:
