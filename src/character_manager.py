@@ -10,6 +10,7 @@ class Character:
     def __init__(self, characters_manager, info, is_generic_npc):
         self.characters_manager = characters_manager
         self.info = info
+        logging.info(self.info)
         logging.info(f"Loading character: {self.info['name']}")
         logging.info(json.dumps(info, indent=4))
         for key, value in info.items():
@@ -35,6 +36,8 @@ class Character:
             self.language_code = self.conversation_manager.language_info['alpha2']
         self.language = self.conversation_manager.language_info['language']
         self.is_generic_npc = is_generic_npc
+        if "in_game_relationship_level" not in self.info:
+            self.in_game_relationship_level = 0
         self.check_for_new_knows(self.bio)
 
         if "age" not in self.info:
@@ -185,7 +188,7 @@ class Character:
 
     def say(self,string):
         audio_file = self.conversation_manager.synthesizer.synthesize(string, self) # say string
-        self.conversation_manager.chat_manager.save_files_to_voice_folders([audio_file, string]) # save audio file to voice folder so it can be played in-game
+        self.conversation_manager.game_interface.save_files_to_voice_folders([audio_file, string]) # save audio file to voice folder so it can be played in-game
         self.conversation_manager.new_message({"role": self.config.assistant_name, "name":self.name, "content": string}) # add string to ongoing conversation
 
     def leave_conversation(self):

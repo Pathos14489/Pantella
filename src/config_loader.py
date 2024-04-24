@@ -24,7 +24,6 @@ class ConfigLoader:
         self.conversation_manager_type = self.current_game_config["conversation_manager_type"]
         self.interface_type = self.current_game_config["interface_type"]
         self.behavior_manager = self.current_game_config["behavior_manager"]
-        self.chat_manager = self.current_game_config["chat_manager"]
         logging.log_file = self.logging_file_path # Set the logging file path
         self.stop = ["<im_end>","<im_end>"]
         self.banned_chars = ["{", "}", "\"" ]
@@ -117,10 +116,7 @@ class ConfigLoader:
 
         if save:
             self.save()
-
         logging.info(f"Unique settings:", self.unique())
-        
-        # self.format_paths()
         logging.info(f"Config loaded from {self.config_path}")
 
     def get_prompt_styles(self):
@@ -180,7 +176,6 @@ class ConfigLoader:
                 "conversation_manager_type": "auto",
                 "interface_type": "auto",
                 "behavior_manager": "auto",
-                "chat_manager": "auto",
                 "memory_manager": "auto"
             },
             "Language": {
@@ -519,7 +514,6 @@ class ConfigLoader:
                     if key not in unique:
                         unique[key] = {}
                     unique[key][sub_key] = getattr(self, sub_key)
-        return json.dumps(unique, indent=4)
 
     def descriptions(self):
         """Return a dictionary of descriptions for each setting"""
@@ -533,7 +527,6 @@ class ConfigLoader:
                 "conversation_manager_type": self.conversation_manager_type,
                 "interface_type": self.interface_type,
                 "behavior_manager": self.behavior_manager,
-                "chat_manager": self.chat_manager,
                 "memory_manager": self.memory_manager
             },
             "Language": {

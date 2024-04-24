@@ -3,6 +3,9 @@ from src.logging import logging, time
 from src.game_interfaces.base_interface import BaseGameInterface
 import src.utils as utils
 import os
+import shutil
+import sys
+import asyncio
 logging.info("Imported required libraries in game_interfaces/creation_engine_file_buffers.py")
 
 valid_games = ["fallout4","skyrim","fallout4vr","skyrimvr"]
@@ -19,7 +22,20 @@ class GameInterface(BaseGameInterface):
                 logging.warn(f'''Warning: Could not find _mantella_skyrim_folder.txt in {self.config.game_path}.\nIf you have not yet casted the Mantella spell in-game you can safely ignore this message.\nIf you have casted the Mantella spell please check that your\nMantellaSoftware/config.json "skyrim_folder" has been set correctly\n(instructions on how to set this up are in the config file itself).\nIf you are still having issues, a list of solutions can be found here: \nhttps://github.com/art-from-the-machine/Mantella#issues-qa\n''')
         if not os.path.exists(self.mod_voice_dir):
             raise FileNotFoundError(f"Mod voice directory not found at {self.mod_voice_dir}")
-        self.prev_game_time = ''
+
+        self.mod_voice_dir = self.conversation_manager.game_interface.mod_voice_dir
+        self.add_voicelines_to_all_voice_folders = self.config.add_voicelines_to_all_voice_folders
+        self.root_mod_folter = self.config.game_path
+
+        self.character_num = 0 
+
+        self.wav_file = f'MantellaDi_MantellaDialogu_00001D8B_1.wav'
+        self.lip_file = f'MantellaDi_MantellaDialogu_00001D8B_1.lip'
+        
+        self.f4_use_wav_file1 = True
+        self.f4_wav_file1 = f'MutantellaOutput1.wav'
+        self.f4_wav_file2 = f'MutantellaOutput2.wav'
+        self.f4_lip_file = f'00001ED2_1.lip'
         logging.info("Loading creation engine file buffers game interface")
 
     @property
@@ -33,6 +49,147 @@ class GameInterface(BaseGameInterface):
     @property
     def mod_voice_dir(self):
         return self.mod_path + "\\Sound\\Voice\\Mantella.esp"
+
+    @utils.time_it
+    def save_files_to_voice_folders(self, queue_output):
+        """Save voicelines and subtitles to the correct game folders"""
+        audio_file, subtitle = queue_output
+        # The if block below checks if it's Fallout 4, if that's the case it will add the wav file in the mod_folder\Sound\Voice\Mantella.esp\ 
+        # and alternate between two wavs to prevent access denied issues if Mantella.exe is trying to access a wav currently loaded in Fallout4
+        if self.game_id == "fallout4":
+            if self.f4_use_wav_file1:
+                wav_file_to_use = self.f4_wav_file1
+                subtitle += " Mantella1"
+                self.f4_use_wav_file1 = False
+            else:
+                wav_file_to_use = self.f4_wav_file2
+                subtitle += " Mantella2"
+                self.f4_use_wav_file1 = True
+            wav_file_path = f"{self.mod_voice_dir}/{wav_file_to_use}"
+            if os.path.exists(wav_file_path):
+                os.remove(wav_file_path)
+            shutil.copyfile(audio_file, wav_file_path)
+            
+    def setup_voiceline_save_location(self, in_game_voice_folder):
+        """Save voice model folder to Mantella Spell if it does not already exist"""
+        self.in_game_voice_model = in_game_voice_folder
+
+        in_game_voice_folder_path = f"{self.mod_voice_dir}/{in_game_voice_folder}/"
+        if not os.path.exists(in_game_voice_folder_path):
+            os.mkdir(in_game_voice_folder_path)
+
+            # copy voicelines from one voice folder to this new voice folder
+            # this step is needed for Skyrim to acknowledge the folder
+            example_folder = f"{self.mod_voice_dir}/MaleNord/"
+            for file_name in os.listdir(example_folder):
+                source_file_path = os.path.join(example_folder, file_name)
+
+                if os.path.isfile(source_file_path):
+                    shutil.copy(source_file_path, in_game_voice_folder_path)
+
+            self.game_interface.write_game_info('_mantella_status', 'Error with Mantella.exe. Please check MantellaSoftware/logging.log')
+            logging.warn("Unknown NPC detected. This NPC will be able to speak once you restart Skyrim. To learn how to add memory, a background, and a voice model of your choosing to this NPC, see here: https://github.com/art-from-the-machine/Mantella#adding-modded-npcs")
+            input('\nPress any key to exit...')
+            sys.exit(0)
+
+    @utils.time_it
+    def remove_files_from_voice_folders(self):
+        for sub_folder in os.listdir(self.mod_voice_dir):
+            try:
+                if self.game_id != "fallout4": # delete both the wav file and lip file if the game isn't Fallout4
+                    os.remove(f"{self.mod_voice_dir}/{sub_folder}/{self.wav_file}")
+                    os.remove(f"{self.mod_voice_dir}/{sub_folder}/{self.lip_file}")
+                else: #if the game is Fallout 4 only delete the lip file
+                    os.remove(f"{self.mod_voice_dir}/{sub_folder}/{self.f4_lip_file}")
+            except:
+                continue
+        
+    @utils.time_it
+    def save_files_to_voice_folders(self, queue_output):
+        """Save voicelines and subtitles to the correct game folders"""
+        audio_file, subtitle = queue_output
+        # The if block below checks if it's Fallout 4, if that's the case it will add the wav file in the mod_folder\Sound\Voice\Mantella.esp\ 
+        # and alternate between two wavs to prevent access denied issues if Mantella.exe is trying to access a wav currently loaded in Fallout4
+        if self.game_id == "fallout4":
+            if self.f4_use_wav_file1:
+                wav_file_to_use = self.f4_wav_file1
+                subtitle += " Mantella1"
+                self.f4_use_wav_file1 = False
+            else:
+                wav_file_to_use = self.f4_wav_file2
+                subtitle += " Mantella2"
+                self.f4_use_wav_file1 = True
+            wav_file_path = f"{self.mod_voice_dir}/{wav_file_to_use}"
+            if os.path.exists(wav_file_path):
+                os.remove(wav_file_path)
+            shutil.copyfile(audio_file, wav_file_path)
+
+
+        if audio_file is None or subtitle is None or audio_file == '' or subtitle == '':
+            logging.error(f"Error saving voiceline to voice folders. Audio file: {audio_file}, subtitle: {subtitle}")
+            return
+        if self.add_voicelines_to_all_voice_folders == '1':
+            for sub_folder in os.scandir(self.mod_voice_dir):
+                if sub_folder.is_dir():
+                    #copy both the wav file and lip file if the game isn't Fallout4
+                    if self.game_id !="fallout4":
+                        shutil.copyfile(audio_file, f"{sub_folder.path}/{self.wav_file}")
+                    shutil.copyfile(audio_file.replace(".wav", ".lip"), f"{sub_folder.path}/{self.f4_lip_file}")
+        else:
+            if self.game_id !="fallout4":
+                shutil.copyfile(audio_file, f"{self.mod_voice_dir}/{self.conversation_manager.game_interface.active_character.in_game_voice_model}/{self.wav_file}")
+            shutil.copyfile(audio_file.replace(".wav", ".lip"), str(f"{self.mod_voice_dir}/{self.conversation_manager.game_interface.active_character.in_game_voice_model}/{self.lip_file}").replace("/", "\\"))
+
+        logging.info(f"{self.conversation_manager.game_interface.active_character.name} should speak")
+        if self.character_num == 0:
+            self.game_interface.write_game_info('_mantella_say_line', subtitle.strip())
+        else:
+            say_line_file = '_mantella_say_line_'+str(self.character_num+1)
+            self.game_interface.write_game_info(say_line_file, subtitle.strip())
+
+    async def send_audio_to_external_software(self, queue_output):
+        logging.info(f"Dialogue to play: {queue_output[0]}")
+        self.save_files_to_voice_folders(queue_output)
+
+    async def send_response(self, sentence_queue, event):
+        """Send response from sentence queue generated by `process_response()`"""
+        while True: # keep getting audio files from the queue until the queue is empty
+            queue_output = await sentence_queue.get() # get the next audio file from the queue
+            if queue_output is None:
+                logging.info('End of sentences')
+                break # stop getting audio files from the queue if the queue is empty
+
+            await self.send_audio_to_external_software(queue_output) # send the audio file to the external software and start playing it.
+            event.set() # set the event to let the process_response() function know that it can generate the next sentence while the last sentence's audio is playing
+            
+            #if Fallout4 is running the audio will be sync by checking if say line is set to false because the game can internally check if an audio file has finished playing
+            # wait for the audio playback to complete before getting the next file
+            if self.game_id == "fallout4":
+                with open(f'{self.root_mod_folter}/_mantella_actor_count.txt', 'r', encoding='utf-8') as f:
+                    mantellaactorcount = f.read().strip() 
+                # Outer loop to continuously check the files
+                while True:
+                    all_false = True  # Flag to check if all files have 'false'
+
+                    # Iterate through the number of files indicated by mantellaactorcount
+                    for i in range(1, int(mantellaactorcount) + 1):
+                        file_name = f'{self.root_mod_folter}/_mantella_say_line'
+                        if i != 1:
+                            file_name += f'_{i}'  # Append the file number for files 2 and above
+                        file_name += '.txt'
+                        with open(file_name, 'r', encoding='utf-8') as f:
+                            content = f.read().strip()
+                            if content.lower() != 'false':
+                                all_false = False  # Set the flag to False if any file is not 'false'
+                                break  # Break the for loop and continue the while loop
+                    if all_false:
+                        break  # Break the outer loop if all files are 'false'
+                    await asyncio.sleep(0.1)  # Adjust the sleep duration as needed
+            else: # if Skyrim's running then estimate audio duration to sync lip files
+                audio_duration = await self.get_audio_duration(queue_output[0])
+                # wait for the audio playback to complete before getting the next file
+                logging.info(f"Waiting {int(round(audio_duration,4))} seconds for audio to finish playing...")
+                await asyncio.sleep(audio_duration)
 
     def write_game_info(self, text_file_name, text):
         max_attempts = 2
@@ -337,20 +494,6 @@ class GameInterface(BaseGameInterface):
             'ampm': ampm, # AM or PM
         }
     
-    def get_dummy_game_time(self):
-        """Return a dummy in-game time for debugging"""
-        return {
-            'year': 0,
-            'month': 0,
-            'day': 0,
-            'hour24': 0,
-            'hour12': 0,
-            'minute': 0,
-            'time24': '00:00',
-            'time12': '00:00 AM',
-            'ampm': 'AM',
-        }
-    
     def convert_to_in_game_timestamp(self, in_game_time): # Takes an in_game_time object(like what get_current_game_time() returns) and converts it to the number of minutes since midnight at 00:00 01/01/0000
         """Convert an in_game_time object to the number of minutes since midnight at 00:00 01/01/0000"""
         minutes_since_midnight = in_game_time['hour24'] * 60 + in_game_time['minute']
@@ -440,15 +583,14 @@ class GameInterface(BaseGameInterface):
 
         return character_info, location, in_game_time, is_generic_npc, player_name, player_race, player_gender, radiant_dialogue
     
-
-    def new_time(self, in_game_time=None):
-        """Check if the in-game time has changed since the last check"""
-        if in_game_time == None:
-            in_game_time = self.get_current_game_time()
-        if in_game_time['hour24'] != self.prev_game_time:
-            self.prev_game_time = in_game_time['hour24']
-            return True
-        return False
+    def check_mic_status(self):
+        """Check if the microphone is enabled in the MCM"""
+        if os.path.exists(f'{self.config.game_path}/_mantella_microphone_enabled.txt'):
+            with open(f'{self.config.game_path}/_mantella_microphone_enabled.txt', 'r', encoding='utf-8') as f:
+                mcm_mic_enabled = f.readline().strip()
+            return mcm_mic_enabled == 'TRUE'
+        else:   
+            return False
     
     @utils.time_it
     def update_game_events(self):
@@ -457,55 +599,19 @@ class GameInterface(BaseGameInterface):
         # append in-game events to player's response
         with open(f'{self.game_path}/_mantella_in_game_events.txt', 'r', encoding='utf-8') as f:
             in_game_events_lines = f.readlines()[-5:] # read latest 5 events
-
-        # encapsulate events in {}
-        formatted_in_game_events_lines = ['*{}*'.format(line.strip()) for line in in_game_events_lines]
-        in_game_events = '\n'.join(formatted_in_game_events_lines)
-
+        
         # Is Player in combat with NPC
         in_combat = self.load_data_when_available('_mantella_actor_is_enemy', '').lower() == 'true' 
-        character = self.conversation_manager.chat_manager.active_character
-        perspective_name, trust = character.get_perspective_player_identity()
+        character = self.conversation_manager.game_interface.active_character
+        perspective_name, _ = character.get_perspective_player_identity()
         if in_combat:
-            in_game_events = in_game_events + f'\n*{perspective_name} is fighting {character.name}. This is either because they are enemies or because {perspective_name} attacked {character.name} first.*'
-
-        if len(in_game_events) > 0:
-            logging.info(f'In-game events since previous exchange:\n{in_game_events}')
-
+            in_game_events_lines.append(f'{perspective_name} is fighting {character.name}.')
+        self.new_game_events.extend(in_game_events_lines)
+        
+        super().update_game_events()
+        
         # once the events are shared with the NPC, clear the file
         self.write_game_info('_mantella_in_game_events', '')
-
-        # append the time to player's response
-        in_game_time = self.get_current_game_time() # Current in-game time
-        print(in_game_time)
-        # only pass the in-game time if it has changed by at least an hour
-        if self.new_time(in_game_time):
-            time_group = utils.get_time_group(in_game_time['hour24'])
-
-            time_string = f"The time is now {in_game_time['time12']} {time_group}."
-            logging.info(time_string)
-            
-            formatted_in_game_time = f"*{time_string}*\n"
-            in_game_events = formatted_in_game_time + in_game_events
-        
-        if len(in_game_events.strip()) > 0:
-            logging.info(f'In-game events since previous exchange:\n{in_game_events}')
-            if len(self.conversation_manager.messages) == 0: # if there are no messages in the conversation yet, add in-game events to the first message from the system
-                self.conversation_manager.new_message({
-                    "role": self.conversation_manager.config.system_name,
-                    "content": in_game_events,
-                    "type": "game_event",
-                })
-            else: # if there are messages in the conversation, add in-game events to the last message from the system
-                last_message = self.conversation_manager.messages[-1]
-                if last_message['role'] == self.conversation_manager.config.system_name and last_message['type'] == 'game_event': # if last message was from the system and was an in-game event, append new in-game events to the last message
-                    self.conversation_manager.messages[-1]['content'] += "\n" + in_game_events
-                else: # if last message was from the NPC, add in-game events to the ongoing conversation as a new message from the system
-                    self.conversation_manager.new_message({
-                        "role": self.conversation_manager.config.system_name,
-                        "content": in_game_events,
-                        "type": "game_event",
-                    }) # add in-game events to current ongoing conversation
     
     @utils.time_it
     def end_conversation(self):

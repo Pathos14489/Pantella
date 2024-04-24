@@ -37,8 +37,8 @@ class base_LLM():
         return self.conversation_manager.character_manager
 
     @property
-    def chat_manager(self):
-        return self.conversation_manager.chat_manager
+    def game_interface(self):
+        return self.conversation_manager.game_interface
 
     @property
     def maximum_local_tokens(self):
@@ -268,7 +268,7 @@ class base_LLM():
                     if "type" in msg:
                         formatted_msg["type"] = msg["type"]
                 else: # if single NPC conversation use the NPC's perspective player name
-                    perspective_player_name, _ = self.chat_manager.active_character.get_perspective_player_identity()
+                    perspective_player_name, _ = self.game_interface.active_character.get_perspective_player_identity()
                     formatted_msg = {
                         'role': self.config.user_name,
                         'name': perspective_player_name,
@@ -443,11 +443,11 @@ class base_LLM():
                             if (next_author in self.conversation_manager.character_manager.active_characters): # if the next author is a real character that's active in this conversation, then switch to that character
                                 #TODO: or (any(key.split(' ')[0] == keyword_extraction for key in characters.active_characters))
                                 logging.info(f"Switched to {next_author}")
-                                self.conversation_manager.chat_manager.active_character = self.conversation_manager.character_manager.active_characters[next_author]
-                                # self.conversation_manager.chat_manager.active_character.set_voice()
+                                self.conversation_manager.game_interface.active_character = self.conversation_manager.character_manager.active_characters[next_author]
+                                # self.conversation_manager.game_interface.active_character.set_voice()
                                 # characters are mapped to say_line based on order of selection
                                 # taking the order of the dictionary to find which say_line to use, but it is bad practice to use dictionaries in this way
-                                self.conversation_manager.chat_manager.character_num = list(self.conversation_manager.character_manager.active_characters.keys()).index(next_author) # Assigns a number to the character based on the order they were selected for use in the _mantella_say_line_# filename
+                                self.conversation_manager.game_interface.character_num = list(self.conversation_manager.character_manager.active_characters.keys()).index(next_author) # Assigns a number to the character based on the order they were selected for use in the _mantella_say_line_# filename
                                 verified_author = True
                             else: # if the next author is not a real character, then assume the player is speaking and generation should stop
                                 partial_match = False
@@ -457,8 +457,8 @@ class base_LLM():
                                         break
                                 if partial_match != False: # if the next author is a partial match to an active character, then switch to that character
                                     logging.info(f"Switched to {partial_match.name} (WARNING: Partial match!)")
-                                    self.conversation_manager.chat_manager.active_character = partial_match
-                                    self.conversation_manager.chat_manager.character_num = list(self.conversation_manager.character_manager.active_characters.keys()).index(partial_match.name)
+                                    self.conversation_manager.game_interface.active_character = partial_match
+                                    self.conversation_manager.game_interface.character_num = list(self.conversation_manager.character_manager.active_characters.keys()).index(partial_match.name)
                                     verified_author = True
                                 else: # if the next author is not a real character, then assume the player is speaking and generation should stop
                                     logging.info(f"Next author is not a real character: {next_author}")
@@ -504,7 +504,7 @@ class base_LLM():
                                 keyword_extraction = sentence.split(':')[0].strip()
                                 sentence = sentence.split(':')[1]
                                 # if LLM is switching character
-                                sentence_behavior = self.conversation_manager.behavior_manager.evaluate(keyword_extraction, self.conversation_manager.chat_manager.active_character, sentence) # check if the sentence contains any behavior keywords for NPCs
+                                sentence_behavior = self.conversation_manager.behavior_manager.evaluate(keyword_extraction, self.conversation_manager.game_interface.active_character, sentence) # check if the sentence contains any behavior keywords for NPCs
                                 if sentence_behavior == None:
                                     logging.warn(f"Keyword '{keyword_extraction}' not found in behavior_manager. Disgarding from response.")
                                     
@@ -521,16 +521,16 @@ class base_LLM():
                             voice_line_sentences += 1 # increment the number of sentences generated for the current voice line
 
 
-                            pre_behavior = self.conversation_manager.behavior_manager.pre_sentence_evaluate(self.conversation_manager.chat_manager.active_character, sentence,) # check if the sentence contains any behavior keywords for NPCs
+                            pre_behavior = self.conversation_manager.behavior_manager.pre_sentence_evaluate(self.conversation_manager.game_interface.active_character, sentence,) # check if the sentence contains any behavior keywords for NPCs
                             if voice_line_sentences == self.config.sentences_per_voiceline: # if the voice line is ready, then generate the audio for the voice line
-                                logging.info(f"Generating voiceline: \"{voice_line.strip()}\" for {self.conversation_manager.chat_manager.active_character.name}.")
+                                logging.info(f"Generating voiceline: \"{voice_line.strip()}\" for {self.conversation_manager.game_interface.active_character.name}.")
                                 if self.config.strip_smalls and len(voice_line.strip()) < self.config.small_size:
                                     logging.info(f"Skipping small voice line: {voice_line}")
                                     break
                                 await self.generate_voiceline(voice_line.strip(), sentence_queue, event)
                                 voice_line_sentences = 0 # reset the number of sentences generated for the current voice line
                                 voice_line = '' # reset the voice line for the next iteration
-                            post_behavior = self.conversation_manager.behavior_manager.post_sentence_evaluate(self.conversation_manager.chat_manager.active_character, sentence) # check if the sentence contains any behavior keywords for NPCs
+                            post_behavior = self.conversation_manager.behavior_manager.post_sentence_evaluate(self.conversation_manager.game_interface.active_character, sentence) # check if the sentence contains any behavior keywords for NPCs
 
                             sentence = '' # reset the sentence for the next iteration
 
@@ -554,17 +554,21 @@ class base_LLM():
                     input('Press enter to continue...')
                     raise e
                 logging.error(f"LLM API Error: {e}")
-                # raise e
                 if 'Invalid author' in str(e):
                     logging.info(f"Retrying without saying error voice line")
                     retries += 1
                     continue
-                elif 'Voiceline too short' in str(e):
+                if 'Voiceline too short' in str(e):
+                    logging.info(f"Retrying without saying error voice line")
+                    retries += 1
+                    continue
+                elif 'Empty sentence' in str(e):
                     logging.info(f"Retrying without saying error voice line")
                     retries += 1
                     continue
                 else:
-                    self.conversation_manager.chat_manager.active_character.say("I can't find the right words at the moment.")
+                    # raise e
+                    self.conversation_manager.game_interface.active_character.say("I can't find the right words at the moment.")
                     logging.info('Retrying connection to API...')
                     retries -= 1
                     time.sleep(5)
@@ -575,12 +579,12 @@ class base_LLM():
                 continue
 
         if voice_line_sentences > 0: # if the voice line is not empty, then generate the audio for the voice line
-            logging.info(f"Generating voiceline: \"{voice_line.strip()}\" for {self.conversation_manager.chat_manager.active_character.name}.")
+            logging.info(f"Generating voiceline: \"{voice_line.strip()}\" for {self.conversation_manager.game_interface.active_character.name}.")
             await self.generate_voiceline(voice_line, sentence_queue, event)
             voice_line_sentences = 0
             voice_line = ''
 
-        await sentence_queue.put(None) # Mark the end of the response for self.conversation_manager.chat_manager.send_response() and self.conversation_manager.chat_manager.send_response()
+        await sentence_queue.put(None) # Mark the end of the response for self.conversation_manager.game_interface.send_response() and self.conversation_manager.game_interface.send_response()
 
         full_reply = full_reply.strip()
         try: 
@@ -598,7 +602,7 @@ class base_LLM():
         """Generate audio for a voiceline"""
         # Generate the audio and return the audio file path
         try:
-            audio_file = self.conversation_manager.synthesizer.synthesize(string, self.conversation_manager.chat_manager.active_character)
+            audio_file = self.conversation_manager.synthesizer.synthesize(string, self.conversation_manager.game_interface.active_character)
         except Exception as e:
             logging.error(f"TTS Error: {e}")
             logging.info(e)

@@ -39,7 +39,7 @@ class Transcriber:
         self.call_count = 0
 
         self.initialized = False
-        if self.conversation_manager.check_mcm_mic_status(): # if mic is enabled, initialize recognizer and microphone
+        if self.game_interface.check_mic_status(): # if mic is enabled, initialize recognizer and microphone
             self.initialize()
 
     def initialize(self):

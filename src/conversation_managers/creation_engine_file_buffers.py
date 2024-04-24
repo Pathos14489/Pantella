@@ -34,15 +34,6 @@ class ConversationManager(BaseConversationManager):
             return 'single_npc_with_npc'
         else:
             return 'multi_npc'
-        
-    def check_mcm_mic_status(self): # TODO: Replace with game_interface method
-        """Check if the microphone is enabled in the MCM"""
-        if os.path.exists(f'{self.config.game_path}/_mantella_microphone_enabled.txt'):
-            with open(f'{self.config.game_path}/_mantella_microphone_enabled.txt', 'r', encoding='utf-8') as f:
-                mcm_mic_enabled = f.readline().strip()
-            return mcm_mic_enabled == 'TRUE'
-        else:   
-            return False
 
     def get_if_new_character_joined(self):
         """Check if new character has been added to conversation"""
@@ -53,12 +44,8 @@ class ConversationManager(BaseConversationManager):
             return False
         
     def setup_character(self, character_info, is_generic_npc):
-        character = self.character_manager.get_character(character_info, is_generic_npc) # setup the character that the player has selectedc)
-        # self.synthesizer.change_voice(character)
-        self.chat_manager.active_character = character
-        self.chat_manager.character_num = 0
-        self.character_manager.active_characters[character.name] = character # add new character to active characters TODO: Make this a method in the character manager, move away from a named dictionary to using the IDs of the characters instead
-        self.chat_manager.setup_voiceline_save_location(character_info['in_game_voice_model']) # if the NPC is from a mod, create the NPC's voice folder and exit Mantella
+        character = super().setup_character(character_info, is_generic_npc)
+        self.game_interface.setup_voiceline_save_location(character_info['in_game_voice_model']) # if the NPC is from a mod, create the NPC's voice folder and exit Mantella
         return character
 
     def check_new_joiner(self):
@@ -92,7 +79,7 @@ class ConversationManager(BaseConversationManager):
 
     def end_conversation(self, character=None): # end conversation with character
         if character is None and self.character_manager.active_character_count() > 0:
-            character = self.chat_manager.active_character
+            character = self.game_interface.active_character
         if character is not None:
             logging.info(f"Ending conversation with {character.name}")
             character.leave_conversation() # leave conversation in game with current active character
@@ -147,9 +134,9 @@ class ConversationManager(BaseConversationManager):
         else: # if radiant dialogue, get response from NPC to other NPCs greeting
             if len(self.messages) <= 2: # if radiant dialogue and the NPCs haven't greeted each other yet, greet each other
                 if self.character_manager.active_character_count() == 2: # TODO: Radiants can only handle 2 NPCs at a time, is that normal?
-                    self.new_message({'role': self.config.assistant_name, 'name':self.chat_manager.active_character.name, 'content': f"{self.language_info['hello']} {self.character_manager.active_characters[0].name}."}) # TODO: Make this more interesting by generating a greeting for each NPC based on the context of the last line or two said(or if possible check if they were nearby when the line was said...?)
+                    self.new_message({'role': self.config.assistant_name, 'name':self.game_interface.active_character.name, 'content': f"{self.language_info['hello']} {self.character_manager.active_characters[0].name}."}) # TODO: Make this more interesting by generating a greeting for each NPC based on the context of the last line or two said(or if possible check if they were nearby when the line was said...?)
                 else:
-                    self.new_message({'role': self.config.assistant_name, 'name':self.chat_manager.active_character.name, 'content': f"{self.language_info['hello']}."}) # TODO: Make this more interesting by generating a greeting for each NPC based on the context of the last line or two said(or if possible check if they were nearby when the line was said...?)
+                    self.new_message({'role': self.config.assistant_name, 'name':self.game_interface.active_character.name, 'content': f"{self.language_info['hello']}."}) # TODO: Make this more interesting by generating a greeting for each NPC based on the context of the last line or two said(or if possible check if they were nearby when the line was said...?)
 
         self.game_interface.update_game_events() # update game events before player input
 
@@ -217,17 +204,13 @@ class ConversationManager(BaseConversationManager):
                             break
                 self.end_conversation(goodbye_target_character) # end conversation in game with current active character, and if no active characters are left in the conversation, end it entirely
 
-        # Let the player know that they were heard
-        #audio_file = synthesizer.synthesize(character.info['voice_model'], character.info['skyrim_voice_folder'], 'Beep boop. Let me think.')
-        #chat_manager.save_files_to_voice_folders([audio_file, 'Beep boop. Let me think.'])
-
         if self.character_manager.active_character_count() == 1: # check if NPC is in combat to change their voice tone (if one on one conversation)
             # TODO: Make this work for multi NPC conversations
             aggro = self.game_interface.load_data_when_available('_mantella_actor_is_in_combat', '').lower() == 'true' # TODO: Make this a game_state_manager method instead of an inline call
             if aggro:
-                self.chat_manager.active_character.is_in_combat = 1
+                self.game_interface.active_character.is_in_combat = 1
             else:
-                self.chat_manager.active_character.is_in_combat = 0
+                self.game_interface.active_character.is_in_combat = 0
 
         
         if ((transcribed_text is not None and transcribed_text != '') or (self.radiant_dialogue and self.character_manager.active_character_count() > 1)) and not self.conversation_ended and self.in_conversation: # if player input is not empty and conversation has not ended, get response from NPC

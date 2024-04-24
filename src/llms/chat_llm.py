@@ -29,7 +29,7 @@ class base_LLM(base_LLM.base_LLM):
                     if "type" in msg:
                         formatted_msg["type"] = msg["type"]
                 else: # if single NPC conversation use the NPC's perspective player name
-                    perspective_player_name, trust = self.chat_manager.active_character.get_perspective_player_identity()
+                    perspective_player_name, trust = self.game_interface.active_character.get_perspective_player_identity()
                     formatted_msg = {
                         'role': self.config.user_name,
                         'content': perspective_player_name + ": " + msg['content'],

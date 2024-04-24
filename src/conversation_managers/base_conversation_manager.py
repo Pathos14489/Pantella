@@ -3,7 +3,6 @@ from src.logging import logging, time
 import asyncio
 import pandas as pd
 import src.game_interface as game_interface
-import src.chat_manager as chat_manager
 import src.characters_manager as characters_manager # Character Manager class
 import src.behavior_manager as behavior_manager
 import src.language_model as language_models
@@ -37,7 +36,20 @@ class BaseConversationManager:
         self.conversation_step = 0 # The current step of the conversation - 0 is before any conversation has started, 1 is the first step of the conversation, etc.
         self.restart = False # Can be set at any time to force restart of conversation manager - Will ungracefully end any ongoing conversation client side
         self.conversation_id = str(uuid.uuid4()) # Generate a unique ID for the conversation
+        self.current_in_game_time = self.game_interface.get_dummy_game_time() # Initialised at start of every conversation in await_and_setup_conversation()
 
+    def setup_character(self, character_info, is_generic_npc):
+        character = self.character_manager.add_character(character_info, is_generic_npc) # setup the character that the player has selected
+        # self.synthesizer.change_voice(character)
+        self.game_interface.active_character = character
+        self.game_interface.character_num = 0
+        return character
+    
+    def update_game_state(self):
+        self.conversation_ended = self.game_interface.is_conversation_ended() # wait for the game to indicate that the conversation has ended or not
+        self.game_interface.update_game_events() # update game events before player input
+        self.current_in_game_time = self.game_interface.get_current_game_time() # update current in game time each step of the conversation
+    
     def new_message(self, msg):
         """Add a new message to the conversation"""
         msg["id"] = str(uuid.uuid4()) # Generate a unique ID for the message
@@ -60,6 +72,18 @@ class BaseConversationManager:
                 break
         return has_message
 
+    def get_conversation_type(self): # Returns the type of conversation as a string - none, single_npc_with_npc, single_player_with_npc, multi_npc
+        if self.character_manager is None:
+            return 'none'
+        if len(self.character_manager.active_characters) == 0:
+            return 'none'
+        elif len(self.character_manager.active_characters) == 1 and not self.radiant_dialogue:
+            return 'single_player_with_npc'
+        elif len(self.character_manager.active_characters) == 1 and self.radiant_dialogue:
+            return 'single_npc_with_npc'
+        else:
+            return 'multi_npc'
+        
     def create_new_character_manager(self):
         """Create a new Character Manager object based on the current ConversationManager object"""
         return characters_manager.Characters(self) # Create Character Manager object based on ConversationManager
@@ -77,7 +101,6 @@ class BaseConversationManager:
         self.llm, self.tokenizer = language_models.create_LLM(self) # Create LLM and Tokenizer based on config
         self.config.set_prompt_style(self.llm) # Set prompt based on LLM and config settings
         self.game_interface = game_interface.create_game_interface(self) # Create Game Interface based on config
-        self.chat_manager = chat_manager.create_manager(self) # Create Chat Manager based on config
         self.transcriber = stt.Transcriber(self)
         self.behavior_manager = behavior_manager.create_manager(self) # Create Behavior Manager based on config
         
@@ -91,7 +114,7 @@ class BaseConversationManager:
 
         await asyncio.gather(
             self.llm.process_response(sentence_queue, event),
-            self.chat_manager.send_response(sentence_queue, event)
+            self.game_interface.send_response(sentence_queue, event)
         )
     
     def get_response(self):
