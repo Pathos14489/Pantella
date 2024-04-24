@@ -31,6 +31,7 @@ class base_LLM():
 
         self.prompt_style = "normal"
         self.type = "normal"
+        self.is_local = True
 
     @property
     def character_manager(self):
@@ -521,7 +522,7 @@ class base_LLM():
                             voice_line_sentences += 1 # increment the number of sentences generated for the current voice line
 
 
-                            pre_behavior = self.conversation_manager.behavior_manager.pre_sentence_evaluate(self.conversation_manager.game_interface.active_character, sentence,) # check if the sentence contains any behavior keywords for NPCs
+                            self.conversation_manager.behavior_manager.pre_sentence_evaluate(self.conversation_manager.game_interface.active_character, sentence,) # check if the sentence contains any behavior keywords for NPCs
                             if voice_line_sentences == self.config.sentences_per_voiceline: # if the voice line is ready, then generate the audio for the voice line
                                 logging.info(f"Generating voiceline: \"{voice_line.strip()}\" for {self.conversation_manager.game_interface.active_character.name}.")
                                 if self.config.strip_smalls and len(voice_line.strip()) < self.config.small_size:
@@ -530,7 +531,7 @@ class base_LLM():
                                 await self.generate_voiceline(voice_line.strip(), sentence_queue, event)
                                 voice_line_sentences = 0 # reset the number of sentences generated for the current voice line
                                 voice_line = '' # reset the voice line for the next iteration
-                            post_behavior = self.conversation_manager.behavior_manager.post_sentence_evaluate(self.conversation_manager.game_interface.active_character, sentence) # check if the sentence contains any behavior keywords for NPCs
+                            self.conversation_manager.behavior_manager.post_sentence_evaluate(self.conversation_manager.game_interface.active_character, sentence) # check if the sentence contains any behavior keywords for NPCs
 
                             sentence = '' # reset the sentence for the next iteration
 
@@ -539,7 +540,7 @@ class base_LLM():
                             # max_response_sentences reached (and the conversation isn't radiant)
                             # conversation has switched from radiant to multi NPC (this allows the player to "interrupt" radiant dialogue and include themselves in the conversation)
                             # the conversation has ended
-                            if ((num_sentences >= self.max_response_sentences) and not self.conversation_manager.radiant_dialogue) or (self.conversation_manager.radiant_dialogue and not radiant_dialogue_update) or self.conversation_manager.game_interface.is_conversation_ended(): # if the conversation has ended, stop generating responses
+                            if ((num_sentences >= self.max_response_sentences) and not self.conversation_manager.radiant_dialogue) or (self.conversation_manager.radiant_dialogue and not radiant_dialogue_update) or self.conversation_manager.game_interface.is_conversation_ended() or eos: # if the conversation has ended, stop generating responses
                                 break
                 break
             except Exception as e:
