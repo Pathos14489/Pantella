@@ -195,6 +195,11 @@ class Characters:
         })
         return memories
     
+    def add_character(self, character_info, is_generic_npc):
+        character = self.get_character(character_info, is_generic_npc)
+        self.active_characters[character.name] = character
+        return character
+    
     @property
     def memory_offset(self):
         """Return the memory depth of the character"""

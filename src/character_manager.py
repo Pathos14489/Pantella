@@ -219,6 +219,7 @@ class Character:
         """Check if the message contains a new character that the character has met"""
         valid_names = [character["name"] for character in self.conversation_manager.character_database.characters]
         valid_names.append(self.conversation_manager.player_name)
+        valid_names = [name for name in valid_names if name != None]
         lower_case_versions = [name.lower() for name in valid_names]
         pairs = list(zip(valid_names, lower_case_versions))
         for name, lower_case_name in pairs:
