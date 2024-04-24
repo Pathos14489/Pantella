@@ -113,11 +113,7 @@ class base_Tokenizer(): # Tokenizes(only availble for counting the tokens in a s
                 name = message["name"]
             else:
                 name = None
-            logging.info(f"Content: {content}")
-            logging.info(f"Role: {role}")
-            logging.info(f"Name: {name}")
             msg_string = self.new_message(content, role, name)
-            logging.info(f"Message String: {msg_string}")
             context += msg_string
         return context
 
