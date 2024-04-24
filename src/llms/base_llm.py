@@ -24,8 +24,8 @@ class base_LLM():
         self.banned_chars = self.config.banned_chars
         if not self.config.allow_npc_custom_game_events:
             self.banned_chars.append("*") # prevent NPCs from using custom game events via asterisk RP actions
-            self.banned_chars.append("(") # prevent NPCs from using custom game events via brackets RP actions
-            self.banned_chars.append(")") # prevent NPCs from using custom game events via brackets RP actions
+            # self.banned_chars.append("(") # prevent NPCs from using custom game events via brackets RP actions
+            # self.banned_chars.append(")") # prevent NPCs from using custom game events via brackets RP actions
             # self.banned_chars.append("[") # prevent NPCs from using custom game events via brackets RP actions
             # self.banned_chars.append("]") # prevent NPCs from using custom game events via brackets RP actions
 
