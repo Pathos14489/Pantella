@@ -1,5 +1,5 @@
 print("Loading xvasynth.py")
-from src.logging import logging
+from src.logging import logging, time
 import src.utils as utils
 import src.tts_types.base_tts as base_tts
 import requests
@@ -12,6 +12,7 @@ import json
 import re
 import numpy as np
 import requests
+import threading
 logging.info("Imported required libraries in xVASynth TTS")
 
 tts_slug = "xvasynth"
@@ -33,11 +34,18 @@ class Synthesizer(base_tts.base_Synthesizer):
         self.base_speaker_emb = ''
         
         # voice models path
-        if not os.path.exists(f"{self.xvasynth_path}\\resources\\"):
-            logging.error(f"xVASynth path invalid: {self.xvasynth_path}")
-            logging.error(f"Please ensure that the path to xVASynth is correct in config.json (xvasynth_path)")
-            input('\nPress any key to stop Mantella...')
-            raise FileNotFoundError(f"xVASynth path invalid: {self.xvasynth_path}")
+        if not self.config.linux_mode:
+            if not os.path.exists(f"{self.xvasynth_path}\\resources\\"):
+                logging.error(f"xVASynth path invalid: {self.xvasynth_path}")
+                logging.error(f"Please ensure that the path to xVASynth is correct in config.json (xvasynth_path)")
+                input('\nPress any key to stop Pantella...')
+                raise FileNotFoundError(f"xVASynth path invalid: {self.xvasynth_path}")
+        else:
+            if not os.path.exists(f"{self.xvasynth_path}/resources/"):
+                logging.error(f"xVASynth path invalid: {self.xvasynth_path}")
+                logging.error(f"Please ensure that the path to xVASynth is correct in config.json (xvasynth_path)")
+                input('\nPress any key to stop Pantella...')
+                raise FileNotFoundError(f"xVASynth path invalid: {self.xvasynth_path}")
             
         if self.game == "fallout4" or self.game == "fallout4vr": # get the correct voice model for Fallout 4
             self.model_path = f"{self.xvasynth_path}/resources/app/models/fallout4/"
@@ -71,7 +79,7 @@ class Synthesizer(base_tts.base_Synthesizer):
             if (self.times_checked_xvasynth == 1):
                 logging.info('Could not connect to xVASynth. Attempting to run headless server...')
                 self.run_xvasynth_server()
-
+            time.sleep(1)
             # do the web request again; LOOP!!!
             return self.check_if_xvasynth_is_running()
 
@@ -79,12 +87,22 @@ class Synthesizer(base_tts.base_Synthesizer):
         """Run xVASynth server in headless mode - Required for xVASynth to work with Pantella"""
         try:
             # start the process without waiting for a response
-            subprocess.Popen(f'{self.xvasynth_path}/resources/app/cpython_{self.process_device}/server.exe', cwd=self.xvasynth_path)
+            if not self.config.linux_mode:
+                subprocess.Popen(f'{self.xvasynth_path}/resources/app/cpython_{self.process_device}/server.exe', cwd=self.xvasynth_path)
+            else:
+                command = f'CUDA_VISIBLE_DEVICES= python3 {self.xvasynth_path}resources/app/server.py'
+                logging.info(f'Running xVASynth server with command: {command}')
+                # subprocess.run(command, shell=False, cwd=self.xvasynth_path)
+                if self.process_device == "cpu":
+                    threading.Thread(target=subprocess.run, args=(command,), kwargs={'shell': True, 'cwd': self.xvasynth_path}).start()
+                else:
+                    threading.Thread(target=subprocess.run, args=(command,), kwargs={'shell': True, 'cwd': self.xvasynth_path}).start()
 
-        except:
+        except Exception as e:
             logging.error(f'Could not run xVASynth. Ensure that the path "{self.xvasynth_path}" is correct.')
+            logging.error(e)
             input('\nPress any key to stop Mantella...')
-            sys.exit(0)
+            raise e
  
     def synthesize(self, voiceline, character, aggro=0):
         """Synthesize the voiceline for the character specified using xVASynth"""

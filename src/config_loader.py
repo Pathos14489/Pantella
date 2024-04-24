@@ -116,6 +116,17 @@ class ConfigLoader:
 
         if save:
             self.save()
+
+        
+        if self.linux_mode:
+            logging.info("Linux mode enabled - Fixing paths for linux...")
+            # Fix paths for linux
+            for key in default:
+                for sub_key in default[key]:
+                    if "_path" in sub_key or "_file" in sub_key:
+                        setattr(self, sub_key, config[key][sub_key].replace("\\", "/"))
+            logging.info("Paths fixed for linux")
+        
         logging.info(f"Unique settings:", self.unique())
         logging.info(f"Config loaded from {self.config_path}")
 
@@ -487,6 +498,7 @@ class ConfigLoader:
                 "remove_mei_folders": False
             },
             "Debugging": {
+                "linux_mode": False,
                 "debug_mode": False,
                 "play_audio_from_script": False,
                 "debug_character_name": "Hulda",
@@ -504,7 +516,7 @@ class ConfigLoader:
             }
         }
     
-    def unique(self):
+    def _unique(self):
         """Return a dictionary of settings that have been changed from the default settings"""
         default = self.default()
         unique = {}
@@ -514,6 +526,11 @@ class ConfigLoader:
                     if key not in unique:
                         unique[key] = {}
                     unique[key][sub_key] = getattr(self, sub_key)
+        return unique
+    
+    def unique(self):
+        """Return a dictionary of settings that have been changed from the default settings"""
+        return json.dumps(self._unique(), indent=4)
 
     def descriptions(self):
         """Return a dictionary of descriptions for each setting"""
@@ -674,6 +691,7 @@ class ConfigLoader:
                 "remove_mei_folders": self.remove_mei_folders,
             },
             "Debugging": {
+                "linux_mode": self.linux_mode,
                 "debug_mode": self.debug_mode,
                 "play_audio_from_script": self.play_audio_from_script,
                 "debug_character_name": self.debug_character_name,

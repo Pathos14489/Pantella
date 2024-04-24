@@ -29,9 +29,14 @@ class MemoryManager(base_MemoryManager):
         self.client = chromadb.PersistentClient(self.conversation_history_directory+"chromadb/",Settings(anonymized_telemetry=False))
         
         logging.info("Loading TorchMoji...")
-        torchmoji_model_path = os.path.join(os.getcwd(), "data\\models\\torchmoji\\pytorch_model.bin")
-        torchmoji_vocab_path = os.path.join(os.getcwd(), "data\\models\\torchmoji\\vocabulary.json")
-        emoji_codes_path = os.path.join(os.getcwd(), "data\\models\\torchmoji\\emoji_codes.json")
+        if self.config.linux_mode:
+            torchmoji_model_path = os.path.join(os.getcwd(), "data/models/torchmoji/pytorch_model.bin")
+            torchmoji_vocab_path = os.path.join(os.getcwd(), "data/models/torchmoji/vocabulary.json")
+            emoji_codes_path = os.path.join(os.getcwd(), "data/models/torchmoji/emoji_codes.json")
+        else:
+            torchmoji_model_path = os.path.join(os.getcwd(), "data\\models\\torchmoji\\pytorch_model.bin")
+            torchmoji_vocab_path = os.path.join(os.getcwd(), "data\\models\\torchmoji\\vocabulary.json")
+            emoji_codes_path = os.path.join(os.getcwd(), "data\\models\\torchmoji\\emoji_codes.json")
         with open(torchmoji_vocab_path, 'r') as f:
             vocabulary = json.load(f)
         

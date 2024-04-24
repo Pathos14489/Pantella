@@ -2,11 +2,17 @@ print("Importing base_tts.py")
 from src.logging import logging
 import src.utils as utils
 import subprocess
-import winsound
 import os
 from pathlib import Path
 import soundfile as sf
 import numpy as np
+try:
+    import winsound
+    loaded_winsound = True
+    logging.info("Loaded winsound")
+except:
+    loaded_winsound = False
+    logging.error("Could not load winsound")
 logging.info("Imported required libraries in base_tts.py")
 
 class VoiceModelNotFound(Exception):
@@ -150,5 +156,5 @@ class base_Synthesizer:
 
     def debug(self, final_voiceline_file):
         """Play the voiceline from the script if debug_mode is enabled."""
-        if self.debug_mode and self.play_audio_from_script:
+        if self.debug_mode and self.play_audio_from_script and loaded_winsound:
             winsound.PlaySound(final_voiceline_file, winsound.SND_FILENAME)

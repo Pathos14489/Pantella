@@ -7,12 +7,26 @@ import array
 import urllib.request
 import numpy as np
 import base64
-import os
-import dxcam
-import pygetwindow
+import _osx_support
 from PIL import Image
 import io
 logging.info("Imported required libraries in llava_cpp_python.py")
+
+try:
+    import pygetwindow
+    loaded_pygetwindow = True
+    logging.info("Imported pygetwindow in llava_cpp_python.py")
+except Exception as e:
+    loaded_pygetwindow = False
+    logging.warn(f"Failed to load pygetwindow, so llava-cpp-python inference engine cannot be used! Please check that you have installed it correctly if you want to use it, otherwise you can ignore this warning.")
+
+try:
+    import dxcam
+    loaded_dxcam = True
+    logging.info("Imported dxcam in llava_cpp_python.py")
+except Exception as e:
+    loaded_dxcam = False
+    logging.warn(f"Failed to load dxcam, so llava-cpp-python inference engine cannot be used! Please check that you have installed it correctly if you want to use it, otherwise you can ignore this warning.")
 
 try:
     from llama_cpp.llava_cpp import llava_eval_image_embed, llava_image_embed_make_with_bytes, clip_model_load, llava_image_embed_free
@@ -76,7 +90,16 @@ class LLM(llama_cpp_python_LLM.LLM): # Uses llama-cpp-python as the LLM inferenc
             self.prompt_style = "vision"
         self.game_window = None
         self.game_window_name = None
-        self.camera = dxcam.create()
+        if loaded_dxcam:
+            self.camera = dxcam.create()
+        else:
+            logging.error(f"Error loading dxcam for 'llava-cpp-python'(not a typo) inference engine. Please check that you have installed dxcam correctly.")
+            input("Press Enter to exit.")
+            raise Exception("DXCam not installed, install DXCam to use LLaVA via llama-cpp-python(Windows only).")
+        if not loaded_pygetwindow:
+            logging.error(f"Error loading pygetwindow for 'llava-cpp-python'(not a typo) inference engine. Please check that you have installed pygetwindow correctly.")
+            input("Press Enter to exit.")
+            raise Exception("PyGetWindow not installed, install PyGetWindow to use LLaVA via llama-cpp-python(Windows only).")
         self.get_game_window()
 
     @property
@@ -88,6 +111,8 @@ class LLM(llama_cpp_python_LLM.LLM): # Uses llama-cpp-python as the LLM inferenc
         return self.config.clip_resolution
 
     def get_game_window(self):
+        if not loaded_pygetwindow:
+            raise Exception("PyGetWindow not installed, install PyGetWindow to use LLaVA via llama-cpp-python.")
         if self.game_window_name != None:
             try:
                 self.game_window = pygetwindow.getWindowsWithTitle(self.game_window_name)[0]
