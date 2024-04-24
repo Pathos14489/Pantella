@@ -64,8 +64,6 @@ class GameInterface(BaseGameInterface):
         logging.info(f"Dialogue to play:", queue_output)
         self.bot_response_audio = queue_output[0]
         self.bot_response = queue_output[1]
-        # logging.error(f"send_audio_to_external_software not implemented for game_interface {self.__class__.__name__}")
-        # raise NotImplementedError
     
     @utils.time_it
     def load_game_state(self):
@@ -139,4 +137,6 @@ class GameInterface(BaseGameInterface):
             except Exception as e:
                 logging.error(f"Error getting player input: {e}")
             time.sleep(0.1)
-        return self.player_input
+        player_input = self.player_input
+        self.player_input = None
+        return player_input
