@@ -22,6 +22,7 @@ class ConversationManager(BaseConversationManager):
         self.npc_add_button = None # Initialised at start of the debug_ui.py script
         self.chat_box = None # Initialised at start of the debug_ui.py script
         self.chat_input = None # Initialised at start of the debug_ui.py script
+        self.retry_button = None # Initialised at start of the debug_ui.py script
         self.latest_voice_line = None # Initialised at start of the debug_ui.py script
         self.radiant_dialogue = False
         logging.info(f"Gradio Conversation Manager Initialized")
@@ -38,7 +39,7 @@ class ConversationManager(BaseConversationManager):
     # def player_sex(self):
     #     return self.player_sex_block.value
         
-    def assign_gradio_blocks(self, gr_blocks, title_label, npc_selector, current_location, player_name_block, player_race_block, player_gender_block, npc_add_button, chat_box, chat_input, latest_voice_line):
+    def assign_gradio_blocks(self, gr_blocks, title_label, npc_selector, current_location, player_name_block, player_race_block, player_gender_block, npc_add_button, chat_box, chat_input, retry_button, latest_voice_line):
         self.gr_blocks = gr_blocks
         self.title_label = title_label
         self.npc_selector = npc_selector
@@ -52,9 +53,11 @@ class ConversationManager(BaseConversationManager):
         self.npc_add_button = npc_add_button
         self.chat_box = chat_box
         self.chat_input = chat_input
+        self.retry_button = retry_button
         self.latest_voice_line = latest_voice_line
         self.npc_add_button.click(self.game_interface.set_game_state, inputs=[self.npc_selector, self.current_location, self.player_name_block, self.player_race_block, self.player_gender_block])
         chat_input.submit(self.game_interface.process_player_input, inputs=[chat_input, chat_box], outputs=[chat_input, chat_box, latest_voice_line])
+        retry_button.click(self.game_interface.retry_last_input, inputs=[chat_box], outputs=[chat_input, chat_box, latest_voice_line])
         
     def get_conversation_type(self): # Returns the type of conversation as a string - none, single_npc_with_npc, single_player_with_npc, multi_npc
         return 'single_player_with_npc'
@@ -107,6 +110,7 @@ class ConversationManager(BaseConversationManager):
             self.conversation_ended = True
             return
 
+        self.update_game_state()
         logging.info('Stepping through conversation...')
         logging.info(f"Messages: {json.dumps(self.get_context(), indent=2)}")
         

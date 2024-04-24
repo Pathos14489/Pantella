@@ -24,6 +24,7 @@ class ConversationManager(BaseConversationManager):
         self.player_race = None # Initialised at start of every conversation in await_and_setup_conversation()
         self.current_location = 'Skyrim' # Initialised at start of every conversation in await_and_setup_conversation()
         logging.info(f"Creation Engine (File Buffer) Conversation Manager Initialized")
+        self.game_state_manager.write_game_info('_mantella_status', 'Restarted Pantella')
         
     def get_conversation_type(self): # Returns the type of conversation as a string - none, single_npc_with_npc, single_player_with_npc, multi_npc
         if len(self.character_manager.active_characters) == 0:

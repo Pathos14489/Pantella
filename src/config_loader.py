@@ -500,6 +500,7 @@ class ConfigLoader:
             "Debugging": {
                 "linux_mode": False,
                 "debug_mode": False,
+                "share_debug_ui": False,
                 "play_audio_from_script": False,
                 "debug_character_name": "Hulda",
                 "debug_use_mic": False,
@@ -693,6 +694,7 @@ class ConfigLoader:
             "Debugging": {
                 "linux_mode": self.linux_mode,
                 "debug_mode": self.debug_mode,
+                "share_debug_ui": self.share_debug_ui,
                 "play_audio_from_script": self.play_audio_from_script,
                 "debug_character_name": self.debug_character_name,
                 "debug_use_mic": self.debug_use_mic,

@@ -29,6 +29,28 @@ class GameInterface(BaseGameInterface):
         self.player_race = player_race
         self.player_gender = player_gender
         
+    def retry_last_input(self, history):
+        """Retry the last input from the player"""
+        self.conversation_manager.messages = self.conversation_manager.messages[:-1] # remove the last two messages from the conversation
+        history = history[:-1] # remove the last two messages from the history
+        player_input = history[-1][0] # set the player input to the last input
+        self.player_input = player_input # set the player input
+        self.bot_response = None # clear the bot response
+        self.bot_response_audio = None # clear the bot response audio
+        
+        got_bot_response = False
+        while not got_bot_response:
+            try:
+                if self.bot_response is not None:
+                    got_bot_response = True
+            except Exception as e:
+                logging.error(f"Error getting bot response: {e}")
+            time.sleep(0.1)
+        bot_response = self.bot_response
+        self.bot_response = None
+        history.append((player_input, bot_response))
+        return "", history, self.bot_response_audio
+
     def get_current_location(self, presume = ''):
         """Return the current location"""
         if self.current_location is None:
@@ -124,7 +146,6 @@ class GameInterface(BaseGameInterface):
             time.sleep(0.1)
         bot_response = self.bot_response
         self.bot_response = None
-        self.conversation_manager.new_message({'role': self.config.assistant_name, 'name':self.active_character.name, 'content': bot_response}) # add player input to messages
         history.append((player_input, bot_response))
         return "", history, self.bot_response_audio
         
