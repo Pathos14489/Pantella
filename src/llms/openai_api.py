@@ -115,7 +115,6 @@ class LLM(base_LLM.base_LLM):
         completion = None
         while retries > 0 and completion is None:
             try:
-                print(messages)
                 if self.config.alternative_openai_api_base == 'none': # OpenAI stop is the first 4 options in the stop list because they only support up to 4 for some asinine reason
                     openai_stop = self.stop[:4]
                 else:
@@ -163,7 +162,6 @@ class LLM(base_LLM.base_LLM):
                 retries -= 1
                 continue
             break
-        print(completion)
         if type(completion) != str:
             logging.error(f"Could not get completion from OpenAI-style API. Please check your API key and internet connection.")
             input("Press Enter to exit.")
@@ -176,7 +174,6 @@ class LLM(base_LLM.base_LLM):
         retries = 5
         while retries > 0:
             try:
-                print(messages)
                 if self.config.alternative_openai_api_base == 'none': # OpenAI stop is the first 4 options in the stop list because they only support up to 4 for some asinine reason
                     openai_stop = self.stop[:4]
                 else:
