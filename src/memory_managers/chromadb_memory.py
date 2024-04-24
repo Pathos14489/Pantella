@@ -71,6 +71,12 @@ class MemoryManager(base_MemoryManager):
             for message in new_messages:
                 if not self.conversation_manager.has_message(message):
                     self.conversation_manager.messages.append(message)
+        if len(self.conversation_manager.messages) == 0: # TODO: Find a way to remove this, but this should help models not knowing how to reply as the chaaracter a bit.
+            self.conversation_manager.new_message({
+                "role": self.config.system_name,
+                "content": "Hello! I am "+self.name+".",
+                "type": "starting_message"
+            })
 
     def next_emotional_decay(self):
         """Get the next emotional decay value"""
