@@ -23,7 +23,7 @@ class GameInterface(BaseGameInterface):
         if not os.path.exists(self.mod_voice_dir):
             raise FileNotFoundError(f"Mod voice directory not found at {self.mod_voice_dir}")
 
-        self.mod_voice_dir = self.conversation_manager.game_interface.mod_voice_dir
+        # self.mod_voice_dir = self.conversation_manager.config.mod_voice_dir
         self.add_voicelines_to_all_voice_folders = self.config.add_voicelines_to_all_voice_folders
         self.root_mod_folter = self.config.game_path
 

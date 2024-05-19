@@ -14,6 +14,7 @@ manager_slug = "creation_engine_file_buffers"
 class ConversationManager(BaseConversationManager):
     def __init__(self, config, initialize=True):
         super().__init__(config, initialize)
+        print("Loading Creation Engine File Buffers Conversation Manager")
         self.current_in_game_time = None
         if initialize and self.config.ready:
             self.current_in_game_time = self.game_interface.get_dummy_game_time() # Initialised at start of every conversation in await_and_setup_conversation()
@@ -24,7 +25,7 @@ class ConversationManager(BaseConversationManager):
         self.player_race = None # Initialised at start of every conversation in await_and_setup_conversation()
         self.current_location = 'Skyrim' # Initialised at start of every conversation in await_and_setup_conversation()
         logging.info(f"Creation Engine (File Buffer) Conversation Manager Initialized")
-        self.game_state_manager.write_game_info('_mantella_status', 'Restarted Pantella')
+        self.game_interface.write_game_info('_mantella_status', 'Restarted Pantella')
         
     def get_conversation_type(self): # Returns the type of conversation as a string - none, single_npc_with_npc, single_player_with_npc, multi_npc
         if len(self.character_manager.active_characters) == 0:
