@@ -87,7 +87,7 @@ class GameInterface(BaseGameInterface):
                 if os.path.isfile(source_file_path):
                     shutil.copy(source_file_path, in_game_voice_folder_path)
 
-            self.game_interface.write_game_info('_mantella_status', 'Error with Mantella.exe. Please check MantellaSoftware/logging.log')
+            self.write_game_info('_mantella_status', 'Error with Mantella.exe. Please check MantellaSoftware/logging.log')
             logging.warn("Unknown NPC detected. This NPC will be able to speak once you restart Skyrim. To learn how to add memory, a background, and a voice model of your choosing to this NPC, see here: https://github.com/art-from-the-machine/Mantella#adding-modded-npcs")
             input('\nPress any key to exit...')
             sys.exit(0)
@@ -137,15 +137,15 @@ class GameInterface(BaseGameInterface):
                     shutil.copyfile(audio_file.replace(".wav", ".lip"), f"{sub_folder.path}/{self.f4_lip_file}")
         else:
             if self.game_id !="fallout4":
-                shutil.copyfile(audio_file, f"{self.mod_voice_dir}/{self.conversation_manager.game_interface.active_character.in_game_voice_model}/{self.wav_file}")
-            shutil.copyfile(audio_file.replace(".wav", ".lip"), str(f"{self.mod_voice_dir}/{self.conversation_manager.game_interface.active_character.in_game_voice_model}/{self.lip_file}").replace("/", "\\"))
+                shutil.copyfile(audio_file, f"{self.mod_voice_dir}/{self.active_character.in_game_voice_model}/{self.wav_file}")
+            shutil.copyfile(audio_file.replace(".wav", ".lip"), str(f"{self.mod_voice_dir}/{self.active_character.in_game_voice_model}/{self.lip_file}").replace("/", "\\"))
 
-        logging.info(f"{self.conversation_manager.game_interface.active_character.name} should speak")
+        logging.info(f"{self.active_character.name} should speak")
         if self.character_num == 0:
-            self.game_interface.write_game_info('_mantella_say_line', subtitle.strip())
+            self.write_game_info('_mantella_say_line', subtitle.strip())
         else:
             say_line_file = '_mantella_say_line_'+str(self.character_num+1)
-            self.game_interface.write_game_info(say_line_file, subtitle.strip())
+            self.write_game_info(say_line_file, subtitle.strip())
 
     async def send_audio_to_external_software(self, queue_output):
         logging.info(f"Dialogue to play: {queue_output[0]}")
@@ -602,10 +602,9 @@ class GameInterface(BaseGameInterface):
         
         # Is Player in combat with NPC
         in_combat = self.load_data_when_available('_mantella_actor_is_enemy', '').lower() == 'true' 
-        character = self.conversation_manager.game_interface.active_character
-        perspective_name, _ = character.get_perspective_player_identity()
+        perspective_name, _ = self.active_character.get_perspective_player_identity()
         if in_combat:
-            in_game_events_lines.append(f'{perspective_name} is fighting {character.name}.')
+            in_game_events_lines.append(f'{perspective_name} is fighting {self.active_character.name}.')
         self.new_game_events.extend(in_game_events_lines)
         
         super().update_game_events()
