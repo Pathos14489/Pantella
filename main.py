@@ -5,7 +5,14 @@ import src.conversation_manager as cm
 import src.config_loader as config_loader
 import src.utils as utils
 import threading
-import gradio as gr
+if config.debug_mode:
+    try:
+        import gradio as gr
+        imported_gradio = True
+    except Exception as e:
+        logging.error(f"Error importing gradio:")
+        logging.error(e)
+        imported_gradio = False
 
 print("Starting Pantella")
 try:
@@ -32,29 +39,34 @@ except Exception as e:
     input("Press Enter to exit.")
     raise e
 
-with gr.Blocks() as gr_blocks:
-    title_label = gr.Label("Pantella - Debug UI")
-    with gr.Row():
-        # Selector for the player to choose an NPC to add to the conversation and button to add the NPC to the conversation
-        with gr.Column(scale=0.5):
-            npc_values = []
-            for character in conversation_manager.character_database._characters:
-                npc_values.append((f"{character['name']}",character))
-            logging.info(f"NPCs ready for conversation: {len(npc_values)}")
-            npc_selector = gr.Dropdown(npc_values, multiselect=False, label="NPC in Conversation:")
-            current_location = gr.Textbox("Skyrim", label="Location Description")
-            player_name = gr.Textbox("Adven", label="Player Name")
-            player_race = gr.Textbox("Nord", label="Player Race")
-            player_sex = gr.Dropdown(["Male","Female"], label="Player Sex")
-            npc_add_button = gr.Button(value="Start Conversation")
-        # Chat box for the player to type in their responses
-        with gr.Column():
-            latest_voice_line = gr.Audio(interactive=False, label="Latest Voice Line",autoplay=True)
-            chat_box = gr.Chatbot()
-            chat_input = gr.Textbox("Hello there.", label="Chat Input", placeholder="Type a message...")
-            with gr.Row():
-                retry_button = gr.Button(value="Retry Conversation")
-    conversation_manager.assign_gradio_blocks(gr_blocks, title_label, npc_selector, current_location, player_name, player_race, player_sex, npc_add_button, chat_box, chat_input, retry_button, latest_voice_line)
+if config.debug_mode and imported_gradio:
+    with gr.Blocks() as gr_blocks:
+        title_label = gr.Label("Pantella - Debug UI")
+        with gr.Row():
+            # Selector for the player to choose an NPC to add to the conversation and button to add the NPC to the conversation
+            with gr.Column(scale=0.5):
+                npc_values = []
+                for character in conversation_manager.character_database._characters:
+                    npc_values.append((f"{character['name']}",character))
+                logging.info(f"NPCs ready for conversation: {len(npc_values)}")
+                npc_selector = gr.Dropdown(npc_values, multiselect=False, label="NPC in Conversation:")
+                current_location = gr.Textbox("Skyrim", label="Location Description")
+                player_name = gr.Textbox("Adven", label="Player Name")
+                player_race = gr.Textbox("Nord", label="Player Race")
+                player_sex = gr.Dropdown(["Male","Female"], label="Player Sex")
+                npc_add_button = gr.Button(value="Start Conversation")
+            # Chat box for the player to type in their responses
+            with gr.Column():
+                latest_voice_line = gr.Audio(interactive=False, label="Latest Voice Line",autoplay=True)
+                chat_box = gr.Chatbot()
+                chat_input = gr.Textbox("Hello there.", label="Chat Input", placeholder="Type a message...")
+                with gr.Row():
+                    retry_button = gr.Button(value="Retry Conversation")
+        conversation_manager.assign_gradio_blocks(gr_blocks, title_label, npc_selector, current_location, player_name, player_race, player_sex, npc_add_button, chat_box, chat_input, retry_button, latest_voice_line)
+elif config.debug_mode and not imported_gradio:
+	logging.error("Could not import gradio. Please install gradio to use the debug UI.")
+	input("Press Enter to exit.")
+	raise Exception("Could not import gradio. Please install gradio to use the debug UI.")
 
 def conversation_loop():
     def restart_manager():
