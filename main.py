@@ -5,14 +5,13 @@ import src.conversation_manager as cm
 import src.config_loader as config_loader
 import src.utils as utils
 import threading
-if config.debug_mode:
-    try:
-        import gradio as gr
-        imported_gradio = True
-    except Exception as e:
-        logging.error(f"Error importing gradio:")
-        logging.error(e)
-        imported_gradio = False
+try:
+    import gradio as gr
+    imported_gradio = True
+except Exception as e:
+    logging.error(f"Error importing gradio:")
+    logging.error(e)
+    imported_gradio = False
 
 print("Starting Pantella")
 try:
