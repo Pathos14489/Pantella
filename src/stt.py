@@ -89,7 +89,7 @@ class Transcriber:
         if self.debug_mode and not self.debug_use_mic: # use default response
             transcribed_text = self.default_player_response
         else: # use mic or text input
-            if self.conversation_manager.check_mcm_mic_status(): # listen for response
+            if self.conversation_manager.game_interface.check_mic_status(): # listen for response
                 if not self.initialized:
                     logging.info('Microphone requested but not initialized. Initializing...')
                     self.initialize()
