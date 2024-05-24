@@ -14,6 +14,7 @@ class Synthesizer(base_tts.base_Synthesizer):
         voices = []
         for tts in self.tts_engines:
             voices += tts.voices()
+        voices = list(set(voices))
         return voices
     
     def synthesize(self, voiceline, character, **kwargs):

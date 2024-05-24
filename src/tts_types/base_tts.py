@@ -72,13 +72,15 @@ class base_Synthesizer:
         options.append(character.voice_model.upper()) # add the uppercase version of the voice model
         options.append(character.voice_model.lower().replace(' ', '')) # add the lowercase version of the voice model without spaces
         options.append(character.voice_model.upper().replace(' ', '')) # add the uppercase version of the voice model without spaces
+        print("Trying to detect voice model using the following aliases: ", options)
         for option in options:
             if option in self.voices():
                 return option # return the first valid voice model found
         # return None # if no valid voice model is found
-        logging.error(f'Voice model {character.voice_model} not available! Please add it to the voices list.')
-        input("Press enter to continue...")
-        raise VoiceModelNotFound(f'Voice model {character.voice_model} not available! Please add it to the voices list.')
+        logging.error(f'Voice model "{character.voice_model}" not available! Please add it to the voices list.')
+        if self.crashable and voice_model == None:
+            input("Press enter to continue...")
+            raise VoiceModelNotFound(f'Voice model {character.voice_model} not available! Please add it to the voices list.')
 
     @utils.time_it
     def change_voice(self, character):
