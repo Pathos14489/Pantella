@@ -65,7 +65,7 @@ class Synthesizer(base_tts.base_Synthesizer):
         self.times_checked_xvasynth += 1
 
         try:
-            if (self.times_checked_xvasynth > 10):
+            if (self.times_checked_xvasynth > 20):
                 # break loop
                 logging.error('Could not connect to xVASynth multiple times. Ensure that xVASynth is running and restart Mantella.')
                 input('\nPress any key to stop Mantella...')
@@ -79,7 +79,7 @@ class Synthesizer(base_tts.base_Synthesizer):
             if (self.times_checked_xvasynth == 1):
                 logging.info('Could not connect to xVASynth. Attempting to run headless server...')
                 self.run_xvasynth_server()
-            time.sleep(1)
+            time.sleep(2)
             # do the web request again; LOOP!!!
             return self.check_if_xvasynth_is_running()
 
@@ -118,16 +118,16 @@ class Synthesizer(base_tts.base_Synthesizer):
         phrases = self._split_voiceline(voiceline)
 
         # make voice model folder if it doesn't already exist
-        if not os.path.exists(f"{self.output_path}/voicelines/{self.last_voice}"):
-            os.makedirs(f"{self.output_path}/voicelines/{self.last_voice}")
+        if not os.path.exists(f"{self.output_path}\\voicelines\\{self.last_voice}"):
+            os.makedirs(f"{self.output_path}\\voicelines\\{self.last_voice}")
         
         voiceline_files = []
         for phrase in phrases:
-            voiceline_file = f"{self.output_path}/voicelines/{self.last_voice}/{utils.clean_text(phrase)[:150]}.wav"
+            voiceline_file = f"{self.output_path}\\voicelines\\{self.last_voice}\\{utils.clean_text(phrase)[:150]}.wav"
             voiceline_files.append(voiceline_file)
 
         final_voiceline_file_name = 'voiceline'
-        final_voiceline_file =  f"{self.output_path}/voicelines/{self.last_voice}/{final_voiceline_file_name}.wav"
+        final_voiceline_file =  f"{self.output_path}\\voicelines\\{self.last_voice}\\{final_voiceline_file_name}.wav"
 
         try:
             if os.path.exists(final_voiceline_file): # Remove old voiceline file

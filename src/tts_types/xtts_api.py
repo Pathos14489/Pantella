@@ -28,6 +28,7 @@ class Synthesizer(base_tts.base_Synthesizer):
         # self.official_model_list = ["main","v2.0.3","v2.0.2","v2.0.1","v2.0.0"]
         logging.info(f'xTTS_api - Available models: {self.available_models()}')
         logging.info(f'xTTS_api - Available voices: {self.voices()}')
+        self.retry_count = 10
 
     def voices(self):
         """Return a list of available voices"""
@@ -54,22 +55,21 @@ class Synthesizer(base_tts.base_Synthesizer):
     
     def _set_tts_settings_and_test_if_serv_running(self):
         """Set the TTS settings and test if the server is running"""
-        retry_count = 10
         try:
-            if (retry_count > 10):
+            if (self.retry_count == 1):
                 # break loop
                 logging.error('Ensure xtts is running - http://localhost:8020/docs - xTTS needs to start slightly before Mantella as it takes time to load.')
                 input('\nPress any key to stop Mantella and try again...')
-                sys.exit(0)
-
-            # contact local xTTS server; ~2 second timeout
-            logging.info(f'Attempting to connect to xTTS... ({retry_count})')
-            retry_count -= 1
-            response = requests.post(self.xtts_set_tts_settings, json=self.xtts_data)
-            response.raise_for_status()  # If the response contains an HTTP error status code, raise an exception
+                raise "xTTS is not running!"
+            else:
+                # contact local xTTS server; ~2 second timeout
+                logging.info(f'Attempting to connect to xTTS... ({self.retry_count})')
+                self.retry_count -= 1
+                response = requests.post(self.xtts_set_tts_settings, json=self.xtts_data)
+                response.raise_for_status()  # If the response contains an HTTP error status code, raise an exception
         except requests.exceptions.RequestException as err:
-            if (retry_count == 1):
-                logging.info('xtts is not ready yet. Retrying in 10 seconds...')
+            logging.info('xtts is not ready yet. Retrying in 10 seconds...')
+            utils.sleep(10)
             return self._set_tts_settings_and_test_if_serv_running() # do the web request again; LOOP!!!
 
     @utils.time_it
@@ -83,7 +83,7 @@ class Synthesizer(base_tts.base_Synthesizer):
             logging.info(f'Custom xTTS Model not found for {character.voice_model}! Using default model...')
             self.set_model(self.default_model)
           
-    def get_valid_voice_model(self, character):
+    def get_valid_voice_model(self, character, crash=True):
         """Get the valid voice model for the character from the available voices - Order of preference: voice_model, voice_model without spaces, lowercase voice_model, uppercase voice_model, lowercase voice_model without spaces, uppercase voice_model without spaces"""
         default_voice_model = super().get_valid_voice_model(character)
         if default_voice_model == None:
@@ -139,11 +139,11 @@ class Synthesizer(base_tts.base_Synthesizer):
         logging.info(f'Synthesizing voiceline: {voiceline}')
         self.change_voice(character)
         # make voice model folder if it doesn't already exist
-        if not os.path.exists(f"{self.output_path}/voicelines/{character.voice_model}"):
-            os.makedirs(f"{self.output_path}/voicelines/{character.voice_model}")
+        if not os.path.exists(f"{self.output_path}\\voicelines\\{character.voice_model}"):
+            os.makedirs(f"{self.output_path}\\voicelines\\{character.voice_model}")
 
         final_voiceline_file_name = 'voiceline'
-        final_voiceline_file =  f"{self.output_path}/voicelines/{character.voice_model}/{final_voiceline_file_name}.wav"
+        final_voiceline_file =  f"{self.output_path}\\voicelines\\{character.voice_model}\\{final_voiceline_file_name}.wav"
 
         try:
             if os.path.exists(final_voiceline_file):
