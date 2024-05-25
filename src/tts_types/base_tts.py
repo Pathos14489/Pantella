@@ -144,6 +144,14 @@ class base_Synthesizer:
         current_dir = os.getcwd() # get current directory
         cdf_path = f'{current_dir}\\FaceFXWrapper\\FonixData.cdf'
         face_wrapper_executable = f'{current_dir}\\FaceFXWrapper\\FaceFXWrapper.exe'
+        print(f'Generating lip file for voiceline: {voiceline} to: {final_voiceline_file.replace(".wav", ".lip")}')
+
+        face_wrapper_game = self.game.capitalize()
+        if face_wrapper_game == 'Fallout4vr':
+            face_wrapper_game = 'Fallout4'
+        if face_wrapper_game == 'Skyrimvr':
+            face_wrapper_game = 'Skyrim'
+        print(f'FaceFXWrapper Detected Game: {face_wrapper_game}')
 
         if self.check_face_fx_wrapper():
             try:
@@ -155,6 +163,9 @@ class base_Synthesizer:
                 logging.error(f'FaceFXWrapper failed to generate lip file at: {final_voiceline_file} - Falling back to default/last lip file in Mantella-Spell')
         else:
             logging.error(f'FaceFXWrapper not installed:. Falling back to default lip file in Mantella-Spell')
+
+        if not os.path.exists(final_voiceline_file.replace(".wav", ".lip")):
+            logging.error(f'FaceFXWrapper failed to generate lip file at: {Path(final_voiceline_file).with_suffix(".lip")}')
 
     def debug(self, final_voiceline_file):
         """Play the voiceline from the script if debug_mode is enabled."""
