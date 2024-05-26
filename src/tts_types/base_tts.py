@@ -155,7 +155,7 @@ class base_Synthesizer:
 
         if self.check_face_fx_wrapper():
             try:
-                self.run_command(f'{face_wrapper_executable} "{self.game.capitalize()}" "USEnglish" "{cdf_path}" "{final_voiceline_file}" "{final_voiceline_file.replace(".wav", "_r.wav")}" "{final_voiceline_file.replace(".wav", ".lip")}" "{voiceline}"')
+                self.run_command(f'{face_wrapper_executable} "{face_wrapper_game}" "USEnglish" "{cdf_path}" "{final_voiceline_file}" "{final_voiceline_file.replace(".wav", "_r.wav")}" "{final_voiceline_file.replace(".wav", ".lip")}" "{voiceline}"')
                 # remove file created by FaceFXWrapper
                 if os.path.exists(final_voiceline_file.replace(".wav", "_r.wav")):
                     os.remove(final_voiceline_file.replace(".wav", "_r.wav"))
