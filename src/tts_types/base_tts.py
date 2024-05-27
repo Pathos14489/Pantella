@@ -78,7 +78,7 @@ class base_Synthesizer:
                 return option # return the first valid voice model found
         # return None # if no valid voice model is found
         logging.error(f'Voice model "{character.voice_model}" not available! Please add it to the voices list.')
-        if self.crashable and voice_model == None:
+        if self.crashable and character.voice_model == None:
             input("Press enter to continue...")
             raise VoiceModelNotFound(f'Voice model {character.voice_model} not available! Please add it to the voices list.')
 
