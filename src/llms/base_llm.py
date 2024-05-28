@@ -344,6 +344,7 @@ class base_LLM():
         possible_players.extend(self.player_name.split(" "))
         possible_players.extend(self.player_name.lower().split(" "))
         possible_players.extend(self.player_name.upper().split(" "))
+        logging.debug("Player Aliases:",possible_players)
         full_reply = '' # used to store the full reply
         sentence = '' # used to store the current sentence being generated
         voice_line = '' # used to store the current voice line being generated
@@ -568,7 +569,7 @@ class base_LLM():
                     retries += 1
                     continue
                 else:
-                    # raise e
+                    # raise e # Enable this to stop the conversation if the LLM fails to generate a response so that the user can see the error
                     self.conversation_manager.game_interface.active_character.say("I can't find the right words at the moment.")
                     logging.info('Retrying connection to API...')
                     retries -= 1
