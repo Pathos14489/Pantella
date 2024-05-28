@@ -125,35 +125,33 @@ class Character:
         perspective_name = "A stranger" # Who the character thinks the player is
         if relationship_level == -4:
             trust = 'Archnemesis'
-            perspective_name = self.name+"'s archnemesis"
+            perspective_name = f"{self.name}'s {race} {gender} archnemesis"
         elif relationship_level == -3:
             trust = 'Enemy'
-            perspective_name = self.name+"'s enemy"
+            perspective_name = f"{self.name}'s {race} {gender} enemy"
         elif relationship_level == -2:
             trust = 'Foe'
-            perspective_name = self.name+"'s foe"
+            perspective_name = f"{self.name}'s {race} {gender} foe"
         elif relationship_level == -1:
             trust = 'Rival'
-            perspective_name = self.name+"'s rival"
+            perspective_name = f"{self.name}'s {race} {gender} rival"
         elif relationship_level == 0:
             trust = 'Acquaintance'
-            perspective_name = "Acquaintance of "+self.name
+            perspective_name = f"{race} {gender} Acquaintance of {self.name}"
         elif relationship_level == 1:
             trust = 'Friend'
-            perspective_name = self.name+"'s mysterious friend"
+            perspective_name = f"{self.name}'s mysterious {race} {gender} friend"
         elif relationship_level == 2:
             trust = 'Confidant'
-            perspective_name = self.name+"'s mysterious confidant"
+            perspective_name = f"{self.name}'s mysterious {race} {gender} confidant"
         elif relationship_level == 3:
             trust = 'Ally'
-            perspective_name = self.name+"'s mysterious ally"
+            perspective_name = f"{self.name}'s mysterious {race} {gender} ally"
         elif relationship_level == 4:
             trust = 'Lover'
-            perspective_name = self.name+"'s mysterious lover"
+            perspective_name = f"{self.name}'s mysterious {race} {gender} lover"
         if name in self.knows: # If the character knows the player's name, use it
-            perspective_name = name+" ["+trust+"] (" +  race + " " + gender + ")" # A description of the player from the character's perspective TODO: Turn this into a config setting like message_format
-        else:
-            perspective_name += " ("+race+" "+gender+")"
+            perspective_name = f"{name} {trust} of {self.name}"
 
         return perspective_name, trust
     
