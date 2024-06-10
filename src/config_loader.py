@@ -480,7 +480,6 @@ class ConfigLoader:
                 "xtts_num_beams": 1,
             },
             "xTTS_api": {
-                "xtts_api_server_folder": "C:\\Users\\User\\Desktop\\xtts-api-server",
                 "xtts_api_base_url": "http://127.0.0.1:8020",
                 "xtts_api_data": {
                     "temperature": 0.75,
@@ -683,7 +682,6 @@ class ConfigLoader:
                 "xtts_num_beams": self.xtts_num_beams,
             },
             "xTTS_api": {
-                "xtts_api_server_folder": self.xtts_api_server_folder,
                 "xtts_api_base_url": self.xtts_api_base_url,
                 "xtts_api_data": self.xtts_api_data,
                 "default_xtts_api_model": self.default_xtts_api_model,
