@@ -15,12 +15,12 @@ class Synthesizer(base_tts.base_Synthesizer):
         super().__init__(conversation_manager)
         self.xtts_data = self.config.xtts_api_data
         self.xtts_api_base_url = self.config.xtts_api_base_url
-        self.xtts_server_folder = self.config.xtts_api_server_folder
         self.synthesize_url_xtts = self.xtts_api_base_url + "/tts_to_audio/"
         self.switch_model_url = self.xtts_api_base_url + "/switch_model"
         self.xtts_set_tts_settings = self.xtts_api_base_url + "/set_tts_settings/"
         self.xtts_get_speakers_list = self.xtts_api_base_url + "/speakers_list/"
         self.xtts_get_models_list = self.xtts_api_base_url + "/get_models_list/"
+        self.retry_count = 10
         self._set_tts_settings_and_test_if_serv_running()
         self.default_model = self.conversation_manager.config.default_xtts_api_model
         self.current_model = self.default_model
@@ -28,7 +28,6 @@ class Synthesizer(base_tts.base_Synthesizer):
         # self.official_model_list = ["main","v2.0.3","v2.0.2","v2.0.1","v2.0.0"]
         logging.info(f'xTTS_api - Available models: {self.available_models()}')
         logging.info(f'xTTS_api - Available voices: {self.voices()}')
-        self.retry_count = 10
 
     def voices(self):
         """Return a list of available voices"""
