@@ -249,6 +249,7 @@ class GameInterface(BaseGameInterface):
         self.write_game_info('_mantella_actor_relationship', '')
 
         self.write_game_info('_mantella_character_selection', 'True')
+        self.write_game_info('_mantella_character_selected', 'False')
 
         self.write_game_info('_mantella_say_line', 'False')
         self.write_game_info('_mantella_say_line_2', 'False')
