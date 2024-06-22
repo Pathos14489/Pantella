@@ -80,7 +80,7 @@ class LLM(base_LLM.base_LLM):
 
         api_key = setup_openai_secret_key(self.config.secret_key_file_path)
         if loaded:
-            self.client = OpenAI(api_key=api_key)
+            self.client = OpenAI(api_key=api_key, base_url=self.config.alternative_openai_api_base)
         else:
             logging.error(f"Error loading openai. Please check that you have installed it correctly.")
             input("Press Enter to exit.")
