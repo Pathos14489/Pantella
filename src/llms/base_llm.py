@@ -347,6 +347,7 @@ class base_LLM():
         logging.debug("Player Aliases:",possible_players)
         full_reply = '' # used to store the full reply
         sentence = '' # used to store the current sentence being generated
+        next_sentence = '' # used to store the next sentence being generated
         voice_line = '' # used to store the current voice line being generated
         num_sentences = 0 # used to keep track of how many sentences have been generated
         voice_line_sentences = 0 # used to keep track of how many sentences have been generated for the current voice line
@@ -485,7 +486,13 @@ class base_LLM():
                                     next_author = random.choice(random_authors)
                                 else:
                                     raise Exception('Invalid author')
-
+                            has_grammer_ending = False
+                            for char in self.end_of_sentence_chars:
+                                if char in content_edit:
+                                    has_grammer_ending = char
+                                    break
+                            if has_grammer_ending != False:
+                                sentence, next_sentence = content_edit.split(has_grammer_ending, 1)
                             sentence = self.clean_sentence(sentence) # clean the sentence
                             if sentence.replace(".", "").replace("?", "").replace("!", "").replace(",", "").strip() == '' and sentence != "...": # if the sentence is empty after cleaning, then skip it - unless it's an ellipsis
                                 logging.info(f"Skipping empty sentence")
@@ -510,7 +517,7 @@ class base_LLM():
                                 if sentence_behavior == None:
                                     logging.warn(f"Keyword '{keyword_extraction}' not found in behavior_manager. Disgarding from response.")
                                     
-                            eos = False
+                            eos = False 
                             if self.EOS_token in sentence:
                                 sentence = sentence.split(self.EOS_token)[0]
                                 logging.info(f"EOS token found in sentence. Trimming last sentence to: {sentence}")
@@ -534,7 +541,12 @@ class base_LLM():
                                 voice_line = '' # reset the voice line for the next iteration
                             self.conversation_manager.behavior_manager.post_sentence_evaluate(self.conversation_manager.game_interface.active_character, sentence) # check if the sentence contains any behavior keywords for NPCs
 
-                            sentence = '' # reset the sentence for the next iteration
+                            if next_sentence != '': # if there is a next sentence, then set the current sentence to the next sentence
+                                sentence = next_sentence
+                                next_sentence = ''
+                            else:
+                                sentence = '' # reset the sentence for the next iteration
+                                next_sentence = ''
 
                             radiant_dialogue_update = self.conversation_manager.game_interface.is_radiant_dialogue() # check if the conversation has switched from radiant to multi NPC
                             # stop processing LLM response if:
