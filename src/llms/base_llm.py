@@ -492,7 +492,8 @@ class base_LLM():
                                     has_grammer_ending = char
                                     break
                             if has_grammer_ending != False:
-                                sentence, next_sentence = content_edit.split(has_grammer_ending, 1)
+                                sentence, next_sentence = sentence.split(has_grammer_ending, 1)
+                                sentence = sentence + has_grammer_ending
                             sentence = self.clean_sentence(sentence) # clean the sentence
                             if sentence.replace(".", "").replace("?", "").replace("!", "").replace(",", "").strip() == '' and sentence != "...": # if the sentence is empty after cleaning, then skip it - unless it's an ellipsis
                                 logging.info(f"Skipping empty sentence")
