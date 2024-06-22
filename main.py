@@ -89,6 +89,7 @@ if config.ready:
     if config.debug_mode:
         thread1 = threading.Thread(target=gr_blocks.launch, kwargs={'share':config.share_debug_ui})
         thread1.start()
+        logging.info("Debug UI started -- WARNING: In Game Conversations will not work in Debug Mode, if you're trying to start a conversation and getting a bug in game, this is why. Turn debug mode off to talk to NPCs in game!")
         conversation_loop()
     else:
         thread1 = threading.Thread(target=config.host_config_server, args=(), daemon=True)
