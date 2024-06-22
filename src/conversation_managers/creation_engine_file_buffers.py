@@ -104,6 +104,8 @@ class ConversationManager(BaseConversationManager):
 
         logging.info('\nConversations not starting when you select an NPC? Post an issue on the GitHub page: https://github.com/Pathos14489/Pantella')
         logging.info('\nWaiting for player to select an NPC...')
+        
+        self.game_interface.write_game_info('_mantella_character_selection', 'True') # write to _mantella_character_selection.txt to indicate that the character has been selected to the game
         try: # load character info, location and other gamestate data when data is available - Starts watching the _mantella_ files in the Skyrim folder and waits for the player to select an NPC
             character_info, self.current_location, self.current_in_game_time, is_generic_npc, self.player_name, self.player_race, self.player_gender, self.conversation_started_radiant = self.game_interface.load_game_state()
         except characters_manager.CharacterDoesNotExist as e:
@@ -114,8 +116,8 @@ class ConversationManager(BaseConversationManager):
         
         # setup the character that the player has selected
         character = self.setup_character(character_info, is_generic_npc)
-        
-        self.game_interface.write_game_info('_mantella_character_selection', 'True') # write to _mantella_character_selection.txt to indicate that the character has been selected to the game
+
+        self.game_interface.write_game_info('_mantella_character_selected', 'True') # write to _mantella_character_selection.txt to indicate that the character has been selected to the game
 
         self.messages = [] # clear messages
 
