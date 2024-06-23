@@ -488,10 +488,12 @@ class base_LLM():
                                     raise Exception('Invalid author')
                             has_grammer_ending = False
                             for char in self.end_of_sentence_chars:
-                                if char in content_edit:
+                                if char in sentence:
                                     has_grammer_ending = char
                                     break
                             if has_grammer_ending != False:
+                                if "..." in sentence:
+                                    has_grammer_ending = "..."
                                 sentence, next_sentence = sentence.split(has_grammer_ending, 1)
                                 sentence = sentence + has_grammer_ending
                             sentence = self.clean_sentence(sentence) # clean the sentence
