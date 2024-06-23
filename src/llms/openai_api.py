@@ -127,6 +127,9 @@ class LLM(base_LLM.base_LLM):
                     frequency_penalty=self.frequency_penalty,
                     stop=openai_stop,
                     presence_penalty=self.presence_penalty,
+                    extra_body={
+                        "min_p": self.min_p,
+                    },
                     stream=False,
                 )
                 print(completion.choices[0].message)
@@ -191,6 +194,9 @@ class LLM(base_LLM.base_LLM):
                     frequency_penalty=self.frequency_penalty,
                     stop=openai_stop,
                     presence_penalty=self.presence_penalty,
+                    extra_body={
+                        "min_p": self.min_p,
+                    },
                     stream=True,
                 )
             except Exception as e:
