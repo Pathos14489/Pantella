@@ -7,6 +7,7 @@ import src.config_loader as config_loader
 import src.utils as utils
 import argparse
 import src.character_db as character_db
+import json
 
 print("Starting Pantella Database Conversion Script")
 try:
@@ -22,6 +23,7 @@ utils.cleanup_mei(config.remove_mei_folders) # clean up old instances of exe run
 parser = argparse.ArgumentParser(description='Converts csv db to json db or vice versa')
 if __name__ == '__main__':
     parser.add_argument('path', type=str, help='The output path for the new db')
+    parser.add_argument('--output', type=str, help='path to output patch file')
     args = parser.parse_args()
     
     print("Creating Conversation Manager")
@@ -48,4 +50,7 @@ if __name__ == '__main__':
     else:
         print("Too many differences to print to console, set --output to output to file")
     logging.info("Total differences: " + str(len(diff)))
+    if parser.parse_args().output:
+        with open(parser.parse_args().output, 'w') as f:
+            json.dump(diff, f)
     
