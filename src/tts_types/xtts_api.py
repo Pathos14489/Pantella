@@ -109,8 +109,8 @@ class Synthesizer(base_tts.base_Synthesizer):
         elif character.voice_model in self.voices():
             voice_model = character.voice_model
             
+        logging.error(f'Voice model {voice_model} not available! Please add it to the xTTS voices list.')
         if self.crashable and voice_model == None:
-            logging.error(f'Voice model {voice_model} not available! Please add it to the xTTS voices list.')
             input("Press enter to continue...")
             raise FileNotFoundError()
         

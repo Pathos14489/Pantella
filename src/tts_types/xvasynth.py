@@ -307,10 +307,10 @@ class Synthesizer(base_tts.base_Synthesizer):
         """Change the voice model to the specified character's voice model"""
         voice = self.get_valid_voice_model(character) # character.voice_model
 
+        logging.error(f'Voice model {character.voice_model} not available! Please add it to xVASynth voices list.')
+        input("Press enter to continue...")
         if self.crashable and voice is None:
-            logging.error(f'Voice model {character.voice_model} not available! Please add it to the voices list.')
-            input("Press enter to continue...")
-            raise base_tts.VoiceModelNotFound(f'Voice model {character.voice_model} not available! Please add it to the voices list.')
+            raise base_tts.VoiceModelNotFound(f'Voice model {character.voice_model} not available! Please add it to xVASynth voices list.')
 
         logging.info('Loading voice model...')
         

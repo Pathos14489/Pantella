@@ -32,7 +32,7 @@ class base_Synthesizer:
         self.output_path = utils.resolve_path('data')+'\\data'
         # last active voice model
         self.language = self.config.language
-        self.crashable = True
+        self.crashable = self.config.missing_voice_model_crash
     
     def convert_to_16bit(self, input_file, output_file=None, override_sample_rate=None):
         if output_file is None:

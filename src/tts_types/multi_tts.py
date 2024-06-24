@@ -37,6 +37,8 @@ class Synthesizer(base_tts.base_Synthesizer):
                     break
         if tts is None:
             logging.error(f"Could not find tts engine for voice model: {character.voice_model}! Please check your config.json file and try again!")
-            input("Press enter to continue...")
-            raise ValueError(f"Could not find tts engine for voice model: {character.voice_model}! Please check your config.json file and try again!")
-        return tts.synthesize(voiceline, character, **kwargs)
+            if self.crashable:
+                input("Press enter to continue...")
+                raise ValueError(f"Could not find tts engine for voice model: {character.voice_model}! Please check your config.json file and try again!")
+        else:
+            return tts.synthesize(voiceline, character, **kwargs)

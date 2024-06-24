@@ -36,7 +36,8 @@ class BaseConversationManager:
         self.conversation_step = 0 # The current step of the conversation - 0 is before any conversation has started, 1 is the first step of the conversation, etc.
         self.restart = False # Can be set at any time to force restart of conversation manager - Will ungracefully end any ongoing conversation client side
         self.conversation_id = str(uuid.uuid4()) # Generate a unique ID for the conversation
-        self.current_in_game_time = self.game_interface.get_dummy_game_time() # Initialised at start of every conversation in await_and_setup_conversation()
+        if initialize:
+            self.current_in_game_time = self.game_interface.get_dummy_game_time() # Initialised at start of every conversation in await_and_setup_conversation()
 
     def setup_character(self, character_info, is_generic_npc):
         character = self.character_manager.add_character(character_info, is_generic_npc) # setup the character that the player has selected

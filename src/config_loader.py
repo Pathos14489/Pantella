@@ -456,7 +456,8 @@ class ConfigLoader:
             "Speech": {
                 "tts_engine": ["xvasynth"],
                 "end_conversation_wait_time": 1,
-                "sentences_per_voiceline": 2
+                "sentences_per_voiceline": 2,
+                "missing_voice_model_crash": True,
             },
             "xVASynth": {
                 "xvasynth_path": "C:\\Games\\Steam\\steamapps\\common\\xVASynth",
@@ -509,6 +510,7 @@ class ConfigLoader:
             },
             "Config": {
                 "character_database_file": ".\\data\\020224_skyrim_characters_hex_ids.csv",
+                "conversation_data_directory": ".\\data\\conversations",
                 "voice_model_ref_ids_file": ".\\skyrim_voice_model_ids.json",
                 "logging_file_path": ".\\logging.log",
                 "language_support_file_path": ".\\data\\language_support.csv",
@@ -659,6 +661,10 @@ class ConfigLoader:
                 "tts_engine": self.tts_engine,
                 "end_conversation_wait_time": self.end_conversation_wait_time,
                 "sentences_per_voiceline": self.sentences_per_voiceline,
+                "missing_voice_model_crash": self.missing_voice_model_crash,
+            },
+            "Conversation": {
+                "conversation_start_type": self.conversation_start_type,
             },
             "xVASynth": {
                 "xvasynth_path": self.xvasynth_path,
