@@ -1,11 +1,14 @@
-import logging
-import argparse
-import json
 
+from  src.logging import logging
+import os
+print(os.path.dirname(__file__))
 import src.conversation_manager as cm
 import src.config_loader as config_loader
+import src.utils as utils
+import argparse
 import src.character_db as character_db
 
+print("Starting Pantella Database Conversion Script")
 try:
     config = config_loader.ConfigLoader() # Load config from config.json
 except Exception as e:
@@ -13,13 +16,22 @@ except Exception as e:
     logging.error(e)
     input("Press Enter to exit.")
     raise e
+
+utils.cleanup_mei(config.remove_mei_folders) # clean up old instances of exe runtime files
     
 parser = argparse.ArgumentParser(description='Converts csv db to json db or vice versa')
 if __name__ == '__main__':
     parser.add_argument('path', type=str, help='The output path for the new db')
     args = parser.parse_args()
     
-    conversation_manager = cm.conversation_manager(config, initialize=False) # Partially load conversation manager
+    print("Creating Conversation Manager")
+    try:
+        conversation_manager = cm.create_manager(config, initialize=False) # Partially load conversation manager
+    except Exception as e:
+        logging.error(f"Error Creating Conversation Manager:")
+        logging.error(e)
+        input("Press Enter to exit.")
+        raise e
 
     if args.path.endswith('.csv'):
         logging.info("Saving to csv...")
