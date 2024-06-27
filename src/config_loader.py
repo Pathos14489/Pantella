@@ -459,6 +459,9 @@ class ConfigLoader:
                 "sentences_per_voiceline": 2,
                 "missing_voice_model_crash": True,
             },
+            "Conversation": {
+                "conversation_start_type": "auto" # "llm_choice", "always_player", "always_npc", "auto"
+            },
             "xVASynth": {
                 "xvasynth_path": "C:\\Games\\Steam\\steamapps\\common\\xVASynth",
                 "xvasynth_process_device": "cpu",
