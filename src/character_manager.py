@@ -184,16 +184,17 @@ class Character:
     def memories(self):
         return self.memory_manager.memories
 
-    def say(self,string):
+    def say(self,string, remember=True):
         audio_file = self.conversation_manager.synthesizer.synthesize(string, self) # say string
         self.conversation_manager.game_interface.save_files_to_voice_folders([audio_file, string]) # save audio file to voice folder so it can be played in-game
-        self.conversation_manager.new_message({"role": self.config.assistant_name, "name":self.name, "content": string}) # add string to ongoing conversation
+        if remember:
+            self.conversation_manager.new_message({"role": self.config.assistant_name, "name":self.name, "content": string}) # add string to ongoing conversation
 
     def leave_conversation(self):
         random_goodbye = random.choice(self.conversation_manager.config.goodbye_npc_responses) # get random goodbye line from player
         if random_goodbye.endswith('.'):
             random_goodbye = random_goodbye[:-1]
-        self.say(random_goodbye+'.') # let the player know that the conversation is ending using the latest character in the conversation that isn't the player to say it
+        self.say(random_goodbye+'.',False) # let the player know that the conversation is ending using the latest character in the conversation that isn't the player to say it
         self.reached_conversation_limit()
 
     def after_step(self):
