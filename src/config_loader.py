@@ -512,7 +512,7 @@ class ConfigLoader:
                 "add_voicelines_to_all_voice_folders": False
             },
             "Config": {
-                "character_database_file": ".\\data\\020224_skyrim_characters_hex_ids.csv",
+                "character_database_file": ".\\data\\020224_skyrim_characters_hex_ids.csv", # can be a csv file path, a directory file path, or a list of csv file paths and directory file paths
                 "conversation_data_directory": ".\\data\\conversations",
                 "voice_model_ref_ids_file": ".\\skyrim_voice_model_ids.json",
                 "logging_file_path": ".\\logging.log",
