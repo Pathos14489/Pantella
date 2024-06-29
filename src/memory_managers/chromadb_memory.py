@@ -210,7 +210,15 @@ class MemoryManager(base_MemoryManager):
 
     def get_related_messages(self, query_string, n_results=10):
         """Get the most related messages to a query string from the memory of this character"""
-        message_query = self.messages_memories.query(query_texts=query_string, n_results=n_results)
+        message_query = self.messages_memories.query(
+            query_texts=query_string,
+            n_results=n_results,
+            where={
+                "role": {
+                    "$ne": self.config.system_name
+                }
+            }
+        )
         print(message_query)
         msgs = []
         for i in range(len(message_query["documents"][0])):
@@ -332,7 +340,8 @@ class MemoryManager(base_MemoryManager):
             "type": "prompt"
         }]
         for memory in self.current_memories:
-            mem_messages.append(memory)
+            if memory["role"] != self.config.system_name:
+                mem_messages.append(memory)
         return mem_messages
 
     @property
