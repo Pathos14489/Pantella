@@ -29,18 +29,7 @@ class CharacterDB():
         else:
             self.voice_model_ids = {}
             
-        logging.info(f"Loading character database from {self.character_database_path}...")
-        try:
-            if self.character_database_path.endswith('.csv'):
-                logging.info("Loading character database from csv...")
-                self.load_characters_csv()
-            else:
-                logging.info("Loading character database from json...")
-                self.load_characters_json()
-            self.verify_characters()
-        except:
-            logging.error(f"Could not load character database from {self.character_database_path}. Please check the path and try again. Path should be a directory containing json files or a csv file containing character information.")
-            raise
+        self.load(self.character_database_path)
 
     def loaded(self):
         logging.info(f"{len(self.male_voice_models)} Male voices - {len(self.female_voice_models)} Female voices")
@@ -49,56 +38,98 @@ class CharacterDB():
         logging.info("voice_model_ids:",self.voice_model_ids)
 
     def load(self, path):
-        self.character_database_path = path
         self._characters = []
         self.named_index = {}
         self.base_id_index = {}
         self.ref_id_index = {}
-        if self.character_database_path.endswith('.csv'):
-            logging.info("Loading character database from csv...")
-            self.load_characters_csv()
-        else:
-            logging.info("Loading character database from json...")
-            self.load_characters_json()
-        self.verify_characters()
+        try:
+            paths = []
+            if type(self.character_database_path) == list:
+                logging.info(f"Loading multiple character databases from {self.character_database_path}...")
+                paths = self.character_database_path
+            else:
+                logging.info(f"Loading character database from {self.character_database_path}...")
+                paths = [self.character_database_path]
+            for path in paths:
+                if self.character_database_path.endswith('.csv'):
+                    logging.info("Loading character database from csv...")
+                    self.load_characters_csv(path)
+                else:
+                    logging.info("Loading character database from json...")
+                    self.load_characters_json(path)
+                self.verify_characters()
+                self.loaded()
+        except Exception as e:
+            logging.error(f"Could not load character database from {self.character_database_path}. Please check the path and try again. Path should be a directory containing json files or a csv file containing character information.")
+            logging.error(e)
+            raise
 
-    def load_characters_json(self):
-        logging.info(f"Loading character database from JSON files {self.character_database_path}...")
-        self._characters = []
-        self.named_index = {}
-        self.base_id_index = {}
-        self.ref_id_index = {}
-        for file in os.listdir(self.character_database_path):
+    def load_characters_json(self, path=None):
+        if path is None:
+            path = self.character_database_path
+        if type(path) == list:
+            path = path[0]
+        logging.info(f"Loading character database from JSON files {path}...")
+        for file in os.listdir(path):
             if file.endswith(".json"):
-                character = json.load(open(os.path.join(self.character_database_path, file)))
+                character = json.load(open(os.path.join(path, file)))
+                self.format_json_character(character)
                 if character['name'] != None and character['name'] != "" and character['name'] != "nan":
                     self._characters.append(character)
                     self.named_index[character['name']] = self.characters[-1]
-                    self.base_id_index[character['base_id']] = self.characters[-1]
-                    self.ref_id_index[character['ref_id']] = self.characters[-1]
-        self.db_type = 'json'
-        logging.info(f"Loaded {len(self.characters)} characters from JSON {self.character_database_path}")
-        self.loaded()
+                    if character['base_id'] != None and str(character['base_id']) != "" and str(character['base_id']) != "nan":
+                        self.base_id_index[character['base_id']] = self.characters[-1]
+                    if character['ref_id'] != None and str(character['ref_id']) != "" and str(character['ref_id']) != "nan":
+                        self.ref_id_index[character['ref_id']] = self.characters[-1]
+        if self.db_type != None and self.db_type != 'json':
+            self.db_type = 'mixed'
+        else:
+            self.db_type = 'json'
+        logging.info(f"Loaded {len(self.characters)} characters from JSON {path}")
+
+    def format_json_character(self, character):
+        # Check if character card v2
+        if "data" in character: # Character Card V2 probably
+            pantella_format = {
+                "bio_url": "",
+                "bio": character["data"]["description"]+"\n"+character["data"]["personality"],
+                "name": character["data"]["name"],
+                "voice_model": character["data"]["name"].replace(" ", ""),
+                "skyrim_voice_folder": character["data"]["name"].replace(" ", ""),
+                "race": "Imperial",
+                "gebder":"Very Pleasant",
+                "species":"Human",
+                "ref_id": "",
+                "base_id": "",
+                "lang_override": "",
+            }
+            return pantella_format
+        else: # Add a proper check for Pantella Format
+            return character # Pantella Format Probably
     
-    def load_characters_csv(self):
-        logging.info(f"Loading character database from CSV at '{self.character_database_path}'...")
-        self._characters = []
-        self.named_index = {}
-        self.base_id_index = {}
-        self.ref_id_index = {}
-        encoding = utils.get_file_encoding(self.character_database_path)
-        character_database = pd.read_csv(self.character_database_path, engine='python', encoding=encoding)
+    def load_characters_csv(self, path=None):
+        if path is None:
+            path = self.character_database_path
+        if type(path) == list:
+            path = path[0]
+        logging.info(f"Loading character database from CSV at '{path}'...")
+        encoding = utils.get_file_encoding(path)
+        character_database = pd.read_csv(path, engine='python', encoding=encoding)
         character_database = character_database.loc[character_database['voice_model'].notna()]
         for _, row in character_database.iterrows():
             character = row.to_dict()
             if character['name'] != None and character['name'] != "" and character['name'] != "nan":
                 self._characters.append(character)
                 self.named_index[character['name']] = self.characters[-1]
-                self.base_id_index[character['base_id']] = self.characters[-1]
-                self.ref_id_index[character['ref_id']] = self.characters[-1]
-        self.db_type = 'csv'
-        logging.info(f"Loaded {len(self.characters)} characters from csv {self.character_database_path}")
-        self.loaded()
+                if character['base_id'] != None and str(character['base_id']).strip() != "" and str(character['base_id']).strip().lower() != "nan":
+                    self.base_id_index[character['base_id']] = self.characters[-1]
+                if character['ref_id'] != None and str(character['ref_id']).strip() != "" and str(character['ref_id']).strip().lower() != "nan":
+                    self.ref_id_index[character['ref_id']] = self.characters[-1]
+        if self.db_type != None and self.db_type != 'csv':
+            self.db_type = 'mixed'
+        else:
+            self.db_type = 'csv'
+        logging.info(f"Loaded {len(self.characters)} characters from csv {path}")
 
     @property
     def characters(self):
