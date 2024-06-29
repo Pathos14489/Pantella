@@ -72,9 +72,11 @@ class base_Synthesizer:
         options.append(character.voice_model.upper()) # add the uppercase version of the voice model
         options.append(character.voice_model.lower().replace(' ', '')) # add the lowercase version of the voice model without spaces
         options.append(character.voice_model.upper().replace(' ', '')) # add the uppercase version of the voice model without spaces
-        print("Trying to detect voice model using the following aliases: ", options)
+        logging.info("Trying to detect voice model using the following aliases: ", options)
+        logging.info("Available voices: ", self.voices())
         for option in options:
             if option in self.voices():
+                logging.info(f'Voice model "{option}" found!')
                 return option # return the first valid voice model found
         # return None # if no valid voice model is found
         logging.error(f'Voice model "{character.voice_model}" not available! Please add it to the voices list.')
@@ -144,14 +146,14 @@ class base_Synthesizer:
         current_dir = os.getcwd() # get current directory
         cdf_path = f'{current_dir}\\FaceFXWrapper\\FonixData.cdf'
         face_wrapper_executable = f'{current_dir}\\FaceFXWrapper\\FaceFXWrapper.exe'
-        print(f'Generating lip file for voiceline: {voiceline} to: {final_voiceline_file.replace(".wav", ".lip")}')
+        logging.info(f'Generating lip file for voiceline: {voiceline} to: {final_voiceline_file.replace(".wav", ".lip")}')
 
         face_wrapper_game = self.game.capitalize()
         if face_wrapper_game == 'Fallout4vr':
             face_wrapper_game = 'Fallout4'
         if face_wrapper_game == 'Skyrimvr':
             face_wrapper_game = 'Skyrim'
-        print(f'FaceFXWrapper Detected Game: {face_wrapper_game}')
+        logging.info(f'FaceFXWrapper Detected Game: {face_wrapper_game}')
 
         if self.check_face_fx_wrapper():
             try:
