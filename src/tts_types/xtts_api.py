@@ -57,8 +57,8 @@ class Synthesizer(base_tts.base_Synthesizer):
         try:
             if (self.retry_count == 1):
                 # break loop
-                logging.error('Ensure xtts is running - http://localhost:8020/docs - xTTS needs to start slightly before Mantella as it takes time to load.')
-                input('\nPress any key to stop Mantella and try again...')
+                logging.error('Ensure xtts is running - http://localhost:8020/docs - xTTS needs to start slightly before Pantella as it takes time to load.')
+                input('\nPress any key to stop Pantella and try again...')
                 raise "xTTS is not running!"
             else:
                 # contact local xTTS server; ~2 second timeout

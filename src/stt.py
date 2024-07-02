@@ -51,13 +51,13 @@ class Transcriber:
 
         if self.audio_threshold == 'auto':
             logging.info(f"Audio threshold set to 'auto'. Adjusting microphone for ambient noise...")
-            logging.info("If the mic is not picking up your voice, try setting this audio_threshold value manually in MantellaSoftware/config.json.\n")
+            logging.info("If the mic is not picking up your voice, try setting this audio_threshold value manually in PantellaSoftware/config.json.\n")
             with self.microphone as source:
                 self.recognizer.adjust_for_ambient_noise(source, duration=5)
         else:
             self.recognizer.dynamic_energy_threshold = False
             self.recognizer.energy_threshold = int(self.audio_threshold)
-            logging.info(f"Audio threshold set to {self.audio_threshold}. If the mic is not picking up your voice, try lowering this value in MantellaSoftware/config.json. If the mic is picking up too much background noise, try increasing this value.\n")
+            logging.info(f"Audio threshold set to {self.audio_threshold}. If the mic is not picking up your voice, try lowering this value in PantellaSoftware/config.json. If the mic is picking up too much background noise, try increasing this value.\n")
 
         # if using faster_whisper, load model selected by player, otherwise skip this step
         if self.whisper_type == 'faster_whisper':
@@ -105,11 +105,11 @@ class Transcriber:
                     logging.info(f'Player wrote: {transcribed_text}')
                 else: # await text input from the game
                     logging.info('Awaiting text input from the game...')
-                    self.game_interface.write_game_info('_mantella_text_input', '') # clear text input before they write
-                    self.game_interface.write_game_info('_mantella_text_input_enabled', 'True') # enable text input in the game
-                    transcribed_text = self.game_interface.load_data_when_available('_mantella_text_input', '') # wait for player to write and read text input
-                    self.game_interface.write_game_info('_mantella_text_input', '') # clear text input after reading
-                    self.game_interface.write_game_info('_mantella_text_input_enabled', 'False') # disable text input in the game
+                    self.game_interface.write_game_info('_pantella_text_input', '') # clear text input before they write
+                    self.game_interface.write_game_info('_pantella_text_input_enabled', 'True') # enable text input in the game
+                    transcribed_text = self.game_interface.load_data_when_available('_pantella_text_input', '') # wait for player to write and read text input
+                    self.game_interface.write_game_info('_pantella_text_input', '') # clear text input after reading
+                    self.game_interface.write_game_info('_pantella_text_input_enabled', 'False') # disable text input in the game
                     logging.info(f'Player wrote: {transcribed_text}')
         
         return transcribed_text
@@ -120,12 +120,12 @@ class Transcriber:
         Recognize input from mic and return transcript if activation tag (assistant name) exist
         """
         while True:
-            self.game_interface.write_game_info('_mantella_status', 'Listening...')
+            self.game_interface.write_game_info('_pantella_status', 'Listening...')
             logging.info('Listening...')
             transcript = self._recognize_speech_from_mic(prompt)
             transcript_cleaned = utils.clean_text(transcript)
 
-            conversation_ended = self.game_interface.load_data_when_available('_mantella_end_conversation', '')
+            conversation_ended = self.game_interface.load_data_when_available('_pantella_end_conversation', '')
             if conversation_ended.lower() == 'true':
                 return 'goodbye'
 
@@ -133,7 +133,7 @@ class Transcriber:
             if transcript_cleaned in ['', 'thank you', 'thank you for watching', 'thanks for watching', 'the transcript is from the', 'the', 'thank you very much']:
                 continue
 
-            self.game_interface.write_game_info('_mantella_status', 'Thinking...')
+            self.game_interface.write_game_info('_pantella_status', 'Thinking...')
             return transcript
     
 

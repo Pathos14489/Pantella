@@ -49,7 +49,7 @@ class LLM(base_LLM.base_LLM): # Uses llama-cpp-python as the LLM inference engin
             input("Press Enter to exit.")
             raise ValueError(f"Error loading llama-cpp-python. Please check that you have installed it correctly.")
         llama_model = self.llm
-        logging.info(f"Running Mantella with llama-cpp-python. The language model chosen can be changed via config.json")
+        logging.info(f"Running Pantella with llama-cpp-python. The language model chosen can be changed via config.json")
         logging.info(f"Testing llama-cpp-python...")
         test_prompt = "Hello, I am a llama-cpp-python test prompt. I am used to test llama-cpp-python's functi"
         test_completion = self.llm.create_completion(test_prompt, max_tokens=10)

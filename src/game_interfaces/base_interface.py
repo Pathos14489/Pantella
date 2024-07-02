@@ -190,5 +190,5 @@ class BaseGameInterface:
     
     @utils.time_it
     def load_game_state(self):
-        """Load game variables from _mantella_ files in Skyrim folder (data passed by the Mantella spell)"""
+        """Load game variables from _pantella_ files in Skyrim folder (data passed by the Pantella spell)"""
         raise NotImplementedError

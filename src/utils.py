@@ -70,9 +70,9 @@ def cleanup_mei(remove_mei_folders):
                         file_removed += 1
                     except PermissionError:  # mainly to allow simultaneous pyinstaller instances
                         pass
-                logging.info(f'{file_removed} previous runtime folder(s) cleaned up from MantellaSoftware/data/tmp')
+                logging.info(f'{file_removed} previous runtime folder(s) cleaned up from PantellaSoftware/data/tmp')
             else:
-                logging.warn(f"Warning: {len(mei_files)} previous Mantella.exe runtime folder(s) found in MantellaSoftware/data/tmp. See MantellaSoftware/config.json's remove_mei_folders setting for more information.")
+                logging.warn(f"Warning: {len(mei_files)} previous Pantella.exe runtime folder(s) found in PantellaSoftware/data/tmp. See PantellaSoftware/config.json's remove_mei_folders setting for more information.")
         
 def get_time_group(in_game_time):
     """Get the time group based on the in-game time"""

@@ -82,7 +82,7 @@ class LLM(base_LLM.base_LLM): # Uses llama-cpp-python as the LLM inference engin
             input("Press Enter to exit.")
             raise ValueError(f"Error loading transformers. Please check that you have installed it correctly.")
         self.generation_thread = None
-        logging.info(f"Running Mantella with transformers. The language model chosen can be changed via config.json")
+        logging.info(f"Running Pantella with transformers. The language model chosen can be changed via config.json")
         logging.info(f"Testing transformers...")
         test_prompt = "Hello, I am a transformers test prompt. I am used to test transformers's functi"
         test_completion = self._generate(test_prompt, 10)
@@ -90,7 +90,7 @@ class LLM(base_LLM.base_LLM): # Uses llama-cpp-python as the LLM inference engin
         logging.info(f"Starting transformers test stream...")
         test_stream = self._create_completion_stream([
             {"role": "user", "content": "Hello, what is your name?"},
-            {"role": "assistant", "content": "My name is Mantella, an AI language model assistant designed to run Skyrim NPCs."},
+            {"role": "assistant", "content": "My name is Pantella, an AI language model assistant designed to run Skyrim NPCs."},
             {"role": "user", "content": "Nice to meet you. What can you do?"}
         ])
         logging.info(f"Streaning now...")

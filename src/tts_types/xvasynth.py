@@ -67,8 +67,8 @@ class Synthesizer(base_tts.base_Synthesizer):
         try:
             if (self.times_checked_xvasynth > 20):
                 # break loop
-                logging.error('Could not connect to xVASynth multiple times. Ensure that xVASynth is running and restart Mantella.')
-                input('\nPress any key to stop Mantella...')
+                logging.error('Could not connect to xVASynth multiple times. Ensure that xVASynth is running and restart Pantella.')
+                input('\nPress any key to stop Pantella...')
                 sys.exit(0)
 
             # contact local xVASynth server; ~2 second timeout
@@ -101,7 +101,7 @@ class Synthesizer(base_tts.base_Synthesizer):
         except Exception as e:
             logging.error(f'Could not run xVASynth. Ensure that the path "{self.xvasynth_path}" is correct.')
             logging.error(e)
-            input('\nPress any key to stop Mantella...')
+            input('\nPress any key to stop Pantella...')
             raise e
  
     def synthesize(self, voiceline, character, aggro=0):

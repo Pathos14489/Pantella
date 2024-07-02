@@ -75,7 +75,7 @@ class ConversationManager(BaseConversationManager):
 
         logging.info('\nConversations not starting when you select an NPC? Post an issue on the GitHub page: https://github.com/Pathos14489/Pantella')
         logging.info('\nWaiting for player to select an NPC...')
-        try: # load character info, location and other gamestate data when data is available - Starts watching the _mantella_ files in the Skyrim folder and waits for the player to select an NPC
+        try: # load character info, location and other gamestate data when data is available - Starts watching the _pantella_ files in the Skyrim folder and waits for the player to select an NPC
             character_info, self.current_location, self.player_name, self.player_race, self.player_gender = self.game_interface.load_game_state()
         except characters_manager.CharacterDoesNotExist as e:
             logging.info('Restarting...')
@@ -94,7 +94,7 @@ class ConversationManager(BaseConversationManager):
             # self.new_message({'role': "[player]", 'content': f"{self.language_info['hello']} {character.name}."}) # TODO: Make this more interesting, always having the character say hi like we aren't always with each other is bizzare imo
             pp_name, _ = character.get_perspective_player_identity()
             self.new_message({'role': self.config.system_name, 'content': pp_name+" approaches "+character.name+" with the intent to start a new conversation with them."})
-        except Exception as e: # if error, close Mantella
+        except Exception as e: # if error, close Pantella
             logging.error(f"Error Getting Response in await_and_setup_conversation(): {e}")
             input("Press Enter to exit.")
             raise e

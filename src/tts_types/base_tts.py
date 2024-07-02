@@ -162,9 +162,9 @@ class base_Synthesizer:
                 if os.path.exists(final_voiceline_file.replace(".wav", "_r.wav")):
                     os.remove(final_voiceline_file.replace(".wav", "_r.wav"))
             except:
-                logging.error(f'FaceFXWrapper failed to generate lip file at: {final_voiceline_file} - Falling back to default/last lip file in Mantella-Spell')
+                logging.error(f'FaceFXWrapper failed to generate lip file at: {final_voiceline_file} - Falling back to default/last lip file in Pantella-Spell')
         else:
-            logging.error(f'FaceFXWrapper not installed:. Falling back to default lip file in Mantella-Spell')
+            logging.error(f'FaceFXWrapper not installed:. Falling back to default lip file in Pantella-Spell')
 
         if not os.path.exists(final_voiceline_file.replace(".wav", ".lip")):
             logging.error(f'FaceFXWrapper failed to generate lip file at: {Path(final_voiceline_file).with_suffix(".lip")}')
