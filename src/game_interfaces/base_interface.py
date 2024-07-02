@@ -61,7 +61,7 @@ class BaseGameInterface:
             time_string = f"The time is now {in_game_time['time12']} {time_group}."
             logging.info(time_string)
             
-            formatted_in_game_time = f"*{time_string}*\n"
+            formatted_in_game_time = f"{time_string}\n"
             in_game_events = formatted_in_game_time + in_game_events
         
         if len(in_game_events.strip()) > 0:

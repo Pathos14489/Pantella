@@ -227,16 +227,19 @@ class LLM(base_LLM.base_LLM):
         while retries > 0:
             try:
                 openai_stop = list(self.stop)
-                openai_stop = [self.config.message_seperator] + openai_stop
+                openai_stop = [self.config.message_seperator,self.config.message_signifier,self.config.EOS_token,self.config.BOS_token] + openai_stop
                 if self.config.alternative_openai_api_base == 'none': # OpenAI stop is the first 4 options in the stop list because they only support up to 4 for some asinine reason
                     openai_stop = openai_stop[:4]
                 else:
                     openai_stop = openai_stop
+                logging.info("Stop Strings:",openai_stop)
                 if self.completions_supported:
                     prompt = self.tokenizer.get_string_from_messages(messages)
                     prompt += self.tokenizer.start_message(self.config.assistant_name)
                     if force_speaker is not None:
                         prompt += force_speaker.name + self.config.message_signifier
+                        if self.config.first_message_hidden_quote:
+                            prompt += "\""
                     logging.info(f"Raw Prompt: {prompt}")
                     return self.client.completions.create(prompt=prompt,
                         model=self.config.llm, 

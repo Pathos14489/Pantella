@@ -652,7 +652,8 @@ class ConfigLoader:
                     "Ysgramor",
                     "Headless Horseman",
                     "Dawnstar Guard",
-                ]
+                ],
+                "first_message_hidden_quote": True,
             },
             "xVASynth": {
                 "xvasynth_path": "C:\\Games\\Steam\\steamapps\\common\\xVASynth",
@@ -863,6 +864,7 @@ class ConfigLoader:
             "Conversation": {
                 "conversation_stat_type": self.conversation_start_type,
                 "banned_learnable_names": self.banned_learnable_names,
+                "first_message_hidden_quote": self.first_message_hidden_quote,
             },
             "xVASynth": {
                 "xvasynth_path": self.xvasynth_path,

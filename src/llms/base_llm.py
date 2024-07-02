@@ -385,7 +385,7 @@ class base_LLM():
                         logging.info(chunk.model_dump_json())
                         logging.info(chunk.choices[0].model_dump_json())
                         logging.info(type(chunk.choices[0]))
-                        context = None
+                        content = None
                         try:
                             content = chunk.choices[0].text
                         except:
@@ -394,6 +394,14 @@ class base_LLM():
                             content = chunk.choices[0].delta.content
                         except:
                             pass
+                    if content.strip() == '':
+                        if num_sentences == 0:
+                            logging.info(f"Empty response. Retrying...")
+                            retries += 1
+                            raise Exception('Empty response')
+                        else:
+                            logging.info(f"Empty response. Stopping generation.")
+                            break
 
                     if content is not last_chunk: # if the content is not the same as the last chunk, then the LLM is not stuck in a loop and the generation should continue
                         last_chunk = content
@@ -504,60 +512,65 @@ class base_LLM():
                                     has_grammer_ending = "..."
                                 sentence, next_sentence = sentence.split(has_grammer_ending, 1)
                                 sentence = sentence + has_grammer_ending
-                            sentence = self.clean_sentence(sentence) # clean the sentence
-                            if sentence.replace(".", "").replace("?", "").replace("!", "").replace(",", "").strip() == '' and sentence != "...": # if the sentence is empty after cleaning, then skip it - unless it's an ellipsis
-                                logging.info(f"Skipping empty sentence")
-                                if full_reply.strip() == '':
-                                    retries += 1
-                                    logging.info(f"Retrying due to empty response")
-                                    raise Exception('Empty sentence')
-                                break
-
-                            if self.config.assist_check: # if remote, check if the response contains the word assist for some reason. Probably some OpenAI nonsense.
-                                if ('assist' in sentence) and (num_sentences>0): # Causes problems if asking a follower if you should "assist" someone, if they try to say something along the lines of "Yes, we should assist them." it will cut off the sentence and basically ignore the player. TODO: fix this with a more robust solution
-                                    logging.info(f"'assist' keyword found. Ignoring sentence which begins with: {sentence}") 
-                                    break # stop generating response
-
-                            logging.info(f"LLM returned sentence took {time.time() - start_time} seconds to execute")
-
-                            if ":" in sentence: # if a colon is in the sentence, then the NPC is calling a keyword function in addition to speaking. Pass the keyword to the behavior manager to see if it matches any real keywords
-                                keyword_extraction = sentence.split(':')[0].strip()
-                                sentence = sentence.split(':')[1]
-                                # if LLM is switching character
-                                sentence_behavior = self.conversation_manager.behavior_manager.evaluate(keyword_extraction, self.conversation_manager.game_interface.active_character, sentence) # check if the sentence contains any behavior keywords for NPCs
-                                if sentence_behavior == None:
-                                    logging.warn(f"Keyword '{keyword_extraction}' not found in behavior_manager. Disgarding from response.")
-                                    
                             eos = False 
-                            if self.EOS_token in sentence:
-                                sentence = sentence.split(self.EOS_token)[0]
-                                logging.info(f"EOS token found in sentence. Trimming last sentence to: {sentence}")
+                            if sentence.strip() == self.EOS_token:
+                                logging.info(f"Sentence was EOS token. Stopping generation.")
                                 eos = True
-
-
-                            voice_line = voice_line.strip() + " " + sentence.strip() # add the sentence to the voice line in progress
-                            full_reply = full_reply.strip() + " " + sentence.strip() # add the sentence to the full reply
-                            num_sentences += 1 # increment the total number of sentences generated
-                            voice_line_sentences += 1 # increment the number of sentences generated for the current voice line
-
-
-                            self.conversation_manager.behavior_manager.pre_sentence_evaluate(self.conversation_manager.game_interface.active_character, sentence,) # check if the sentence contains any behavior keywords for NPCs
-                            if voice_line_sentences == self.config.sentences_per_voiceline: # if the voice line is ready, then generate the audio for the voice line
-                                logging.info(f"Generating voiceline: \"{voice_line.strip()}\" for {self.conversation_manager.game_interface.active_character.name}.")
-                                if self.config.strip_smalls and len(voice_line.strip()) < self.config.small_size:
-                                    logging.info(f"Skipping small voice line: {voice_line}")
-                                    break
-                                await self.generate_voiceline(voice_line.strip(), sentence_queue, event)
-                                voice_line_sentences = 0 # reset the number of sentences generated for the current voice line
-                                voice_line = '' # reset the voice line for the next iteration
-                            self.conversation_manager.behavior_manager.post_sentence_evaluate(self.conversation_manager.game_interface.active_character, sentence) # check if the sentence contains any behavior keywords for NPCs
-
-                            if next_sentence != '': # if there is a next sentence, then set the current sentence to the next sentence
-                                sentence = next_sentence
-                                next_sentence = ''
+                                sentence = ""
                             else:
-                                sentence = '' # reset the sentence for the next iteration
-                                next_sentence = ''
+                                sentence = self.clean_sentence(sentence) # clean the sentence
+                                if sentence.replace(".", "").replace("?", "").replace("!", "").replace(",", "").strip() == '' and sentence != "...": # if the sentence is empty after cleaning, then skip it - unless it's an ellipsis
+                                    logging.info(f"Skipping empty sentence")
+                                    if num_sentences<1:
+                                        retries += 1
+                                        logging.info(f"Retrying due to empty response")
+                                        raise Exception('Empty sentence')
+                                    break
+
+                                if self.config.assist_check: # if remote, check if the response contains the word assist for some reason. Probably some OpenAI nonsense.
+                                    if ('assist' in sentence) and (num_sentences>0): # Causes problems if asking a follower if you should "assist" someone, if they try to say something along the lines of "Yes, we should assist them." it will cut off the sentence and basically ignore the player. TODO: fix this with a more robust solution
+                                        logging.info(f"'assist' keyword found. Ignoring sentence which begins with: {sentence}") 
+                                        break # stop generating response
+
+                                logging.info(f"LLM returned sentence took {time.time() - start_time} seconds to execute")
+
+                                if ":" in sentence: # if a colon is in the sentence, then the NPC is calling a keyword function in addition to speaking. Pass the keyword to the behavior manager to see if it matches any real keywords
+                                    keyword_extraction = sentence.split(':')[0].strip()
+                                    sentence = sentence.split(':')[1]
+                                    # if LLM is switching character
+                                    sentence_behavior = self.conversation_manager.behavior_manager.evaluate(keyword_extraction, self.conversation_manager.game_interface.active_character, sentence) # check if the sentence contains any behavior keywords for NPCs
+                                    if sentence_behavior == None:
+                                        logging.warn(f"Keyword '{keyword_extraction}' not found in behavior_manager. Disgarding from response.")
+                                        
+                                if self.EOS_token in sentence:
+                                    sentence = sentence.split(self.EOS_token)[0]
+                                    logging.info(f"EOS token found in sentence. Trimming last sentence to: {sentence}")
+                                    eos = True
+
+
+                                voice_line = voice_line.strip() + " " + sentence.strip() # add the sentence to the voice line in progress
+                                full_reply = full_reply.strip() + " " + sentence.strip() # add the sentence to the full reply
+                                num_sentences += 1 # increment the total number of sentences generated
+                                voice_line_sentences += 1 # increment the number of sentences generated for the current voice line
+
+
+                                self.conversation_manager.behavior_manager.pre_sentence_evaluate(self.conversation_manager.game_interface.active_character, sentence,) # check if the sentence contains any behavior keywords for NPCs
+                                if voice_line_sentences == self.config.sentences_per_voiceline: # if the voice line is ready, then generate the audio for the voice line
+                                    logging.info(f"Generating voiceline: \"{voice_line.strip()}\" for {self.conversation_manager.game_interface.active_character.name}.")
+                                    if self.config.strip_smalls and len(voice_line.strip()) < self.config.small_size:
+                                        logging.info(f"Skipping small voice line: {voice_line}")
+                                        break
+                                    await self.generate_voiceline(voice_line.strip(), sentence_queue, event)
+                                    voice_line_sentences = 0 # reset the number of sentences generated for the current voice line
+                                    voice_line = '' # reset the voice line for the next iteration
+                                self.conversation_manager.behavior_manager.post_sentence_evaluate(self.conversation_manager.game_interface.active_character, sentence) # check if the sentence contains any behavior keywords for NPCs
+
+                                if next_sentence != '': # if there is a next sentence, then set the current sentence to the next sentence
+                                    sentence = next_sentence
+                                    next_sentence = ''
+                                else:
+                                    sentence = '' # reset the sentence for the next iteration
+                                    next_sentence = ''
 
                             radiant_dialogue_update = self.conversation_manager.game_interface.is_radiant_dialogue() # check if the conversation has switched from radiant to multi NPC
                             # stop processing LLM response if:
@@ -565,6 +578,7 @@ class base_LLM():
                             # conversation has switched from radiant to multi NPC (this allows the player to "interrupt" radiant dialogue and include themselves in the conversation)
                             # the conversation has ended
                             if ((num_sentences >= self.max_response_sentences) and not self.conversation_manager.radiant_dialogue) or (self.conversation_manager.radiant_dialogue and not radiant_dialogue_update) or self.conversation_manager.game_interface.is_conversation_ended() or eos: # if the conversation has ended, stop generating responses
+                                logging.info(f"Response generation complete. Stopping generation.")
                                 break
                 break
             except Exception as e:
@@ -579,7 +593,7 @@ class base_LLM():
                     input('Press enter to continue...')
                     raise e
                 logging.error(f"LLM API Error: {e}")
-                raise e
+                # raise e
                 if 'Invalid author' in str(e):
                     logging.info(f"Retrying without saying error voice line")
                     retries += 1
