@@ -73,7 +73,7 @@ def conversation_loop():
         logging.info("Restarting conversation manager")
         conversation_manager = cm.create_manager(config)
         if not config.debug_mode and (config.game_id == "skyrim" or config.game_id == "skyrimvr" or config.game_id == "fallout4" or config.game_id == "fallout4vr"):
-            conversation_manager.game_state_manager.write_game_info('_mantella_status', 'Restarted Pantella')
+            conversation_manager.game_state_manager.write_game_info('_pantella_status', 'Restarted Pantella')
     while True: # Main Conversation Loop - restarts when conversation ends
         conversation_manager.await_and_setup_conversation() # wait for player to select an NPC and setup the conversation when outside of conversation
         while conversation_manager.in_conversation and not conversation_manager.conversation_ended:
