@@ -63,7 +63,16 @@ class ConversationManager(BaseConversationManager):
                 logging.error(f"Error: {e}")
             logging.info(f"New character joined conversation: {character_info['name']}")
 
-            character = self.setup_character(character_info, is_generic_npc)
+            try:
+                character = self.setup_character(character_info, is_generic_npc)
+            except Exception as e:
+                self.game_interface.write_game_info('_pantella_end_conversation', 'True')
+                self.conversation_ended = True
+
+                logging.error(f"Error: {e}")
+                if not self.config.continue_on_error:
+                    input("Press Enter to exit.")
+                    raise e
 
             # if not self.radiant_dialogue: # if not radiant dialogue format
             #     # add greeting from newly added NPC to help the LLM understand that this NPC has joined the conversation
@@ -115,8 +124,17 @@ class ConversationManager(BaseConversationManager):
             logging.error(f"Error Loading Character<await_and_setup_conversation>: {e}")
         self.radiant_dialogue = self.conversation_started_radiant
         
-        # setup the character that the player has selected
-        character = self.setup_character(character_info, is_generic_npc)
+        try:
+            # setup the character that the player has selected
+            character = self.setup_character(character_info, is_generic_npc)
+        except Exception as e:
+            self.game_interface.write_game_info('_pantella_end_conversation', 'True')
+            self.conversation_ended = True
+            logging.error(f"Error Setting Up Character<await_and_setup_conversation>: {e}")
+            if not self.config.continue_on_error:
+                input("Press Enter to exit.")
+                raise e
+            return
 
         self.game_interface.write_game_info('_pantella_character_selection', 'True') # write to _pantella_character_selection.txt to indicate that the character has been selected to the game
 

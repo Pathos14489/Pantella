@@ -478,6 +478,7 @@ class ConfigLoader:
                     "Traveling Pilgrim",
                     "Watchman",
                     "Assassin",
+                    "Love", 
                     "Afflicted",
                     "Anger",
                     "Angered Spirit",
@@ -710,6 +711,7 @@ class ConfigLoader:
                 "voice_model_ref_ids_file": ".\\skyrim_voice_model_ids.json",
                 "logging_file_path": ".\\logging.log",
                 "language_support_file_path": ".\\data\\language_support.csv",
+                "continue_on_error": False, # Warning: This may lead to strange or undiagnosable errors. Use at your own risk.
                 "port": 8021
             }
         }
@@ -911,6 +913,7 @@ class ConfigLoader:
                 "voice_model_ref_ids_file": self.voice_model_ref_ids_file,
                 "logging_file_path": self.logging_file_path,
                 "language_support_file_path": self.language_support_file_path,
+                "continue_on_error": self.continue_on_error,
                 "port": self.port,
             }
         }

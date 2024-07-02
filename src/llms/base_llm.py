@@ -593,7 +593,8 @@ class base_LLM():
                     input('Press enter to continue...')
                     raise e
                 logging.error(f"LLM API Error: {e}")
-                # raise e
+                if not self.config.continue_on_error:
+                    raise e
                 if 'Invalid author' in str(e):
                     logging.info(f"Retrying without saying error voice line")
                     retries += 1
