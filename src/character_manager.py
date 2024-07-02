@@ -38,7 +38,7 @@ class Character:
         self.is_generic_npc = is_generic_npc
         if "in_game_relationship_level" not in self.info:
             self.in_game_relationship_level = 0
-        self.check_for_new_knows(self.bio)
+        self.check_for_new_knows(self.bio, False)
 
         if "age" not in self.info:
             self.age = "Adult" # default age - This is to help communicate to the AI the age of the actor they're playing to help them stay in character
@@ -94,10 +94,16 @@ class Character:
             total_unique_knows = set(self.knows + new_knows)
             self.knows = list(total_unique_knows)
 
-    def meet(self, other_character_name):
-        self.knows.append(other_character_name)
-        self.knows = list(set(self.knows))
-        self.save_knows()
+    def meet(self, other_character_name, add_game_events=True):
+        if other_character_name not in self.knows:
+            meet_string = f"{self.name} just learned {other_character_name}'s name."
+            logging.info(meet_string)
+            if add_game_events:
+                with open(f'{self.conversation_manager.config.game_path}/_mantella_in_game_events.txt', 'a') as f:
+                    f.write(meet_string + '\n')
+            self.knows.append(other_character_name)
+            self.knows = list(set(self.knows))
+            self.save_knows()
 
     @property
     def conversation_manager(self):
@@ -211,10 +217,11 @@ class Character:
     
     def add_message(self, msg):
         """Add a new message to the memory manager"""
-        self.check_for_new_knows(msg["content"])
-        self.memory_manager.add_message(msg)
+        if msg["role"] != self.config.system_name:
+            self.check_for_new_knows(msg["content"])
+            self.memory_manager.add_message(msg)
 
-    def check_for_new_knows(self, msg):
+    def check_for_new_knows(self, msg, add_game_events=True):
         """Check if the message contains a new character that the character has met"""
         valid_names = [character["name"] for character in self.conversation_manager.character_database.characters]
         valid_names.append(self.conversation_manager.player_name)
@@ -223,7 +230,7 @@ class Character:
         pairs = list(zip(valid_names, lower_case_versions))
         for name, lower_case_name in pairs:
             if lower_case_name in msg.lower():
-                self.meet(name)
+                self.meet(name, add_game_events)
 
     def __str__(self):
         return self.name + " (" + self.race + " " + self.gender + ")"
