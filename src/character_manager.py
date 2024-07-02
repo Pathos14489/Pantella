@@ -164,7 +164,7 @@ class Character:
             trust = 'Stranger'
             perspective_name = f"{race} {gender} Stranger"
         if name in self.knows: # If the character knows the player's name, use it
-            perspective_name = f"{name} {trust} of {self.name}"
+            perspective_name = f"{name} {race} {gender} {trust} of {self.name}"
 
         return perspective_name, trust
     
