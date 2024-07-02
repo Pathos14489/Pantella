@@ -25,6 +25,9 @@ class Character:
             else:
                 self.knows = []
         self.memory_manager = mm.create_manager(self) # create memory manager for the character
+        self.stranger = True
+        if len(self.memory_manager.get_all_messages()) > 0:
+            self.stranger = False
         self.load_knows()
         # Legend for a few of the more important attributes:
         # self.ref_id - The reference ID of the character as hex with the first two numbers(the load order ID) removed - This is the id of the character in the game, so it is unique to each every single character in the game.
@@ -99,7 +102,7 @@ class Character:
             meet_string = f"{self.name} just learned {other_character_name}'s name."
             logging.info(meet_string)
             if add_game_events:
-                with open(f'{self.conversation_manager.config.game_path}/_mantella_in_game_events.txt', 'a') as f:
+                with open(f'{self.conversation_manager.config.game_path}/_pantella_in_game_events.txt', 'a') as f:
                     f.write(meet_string + '\n')
             self.knows.append(other_character_name)
             self.knows = list(set(self.knows))
@@ -129,33 +132,37 @@ class Character:
         #     -4: Archnemesis
         trust = 'stranger'
         perspective_name = "A stranger" # Who the character thinks the player is
-        if relationship_level == -4:
-            trust = 'Archnemesis'
-            perspective_name = f"{self.name}'s {race} {gender} archnemesis"
-        elif relationship_level == -3:
-            trust = 'Enemy'
-            perspective_name = f"{self.name}'s {race} {gender} enemy"
-        elif relationship_level == -2:
-            trust = 'Foe'
-            perspective_name = f"{self.name}'s {race} {gender} foe"
-        elif relationship_level == -1:
-            trust = 'Rival'
-            perspective_name = f"{self.name}'s {race} {gender} rival"
-        elif relationship_level == 0:
-            trust = 'Acquaintance'
-            perspective_name = f"{race} {gender} Acquaintance of {self.name}"
-        elif relationship_level == 1:
-            trust = 'Friend'
-            perspective_name = f"{self.name}'s mysterious {race} {gender} friend"
-        elif relationship_level == 2:
-            trust = 'Confidant'
-            perspective_name = f"{self.name}'s mysterious {race} {gender} confidant"
-        elif relationship_level == 3:
-            trust = 'Ally'
-            perspective_name = f"{self.name}'s mysterious {race} {gender} ally"
-        elif relationship_level == 4:
-            trust = 'Lover'
-            perspective_name = f"{self.name}'s mysterious {race} {gender} lover"
+        if not self.stranger:
+            if relationship_level == -4:
+                trust = 'Archnemesis'
+                perspective_name = f"{self.name}'s {race} {gender} archnemesis"
+            elif relationship_level == -3:
+                trust = 'Enemy'
+                perspective_name = f"{self.name}'s {race} {gender} enemy"
+            elif relationship_level == -2:
+                trust = 'Foe'
+                perspective_name = f"{self.name}'s {race} {gender} foe"
+            elif relationship_level == -1:
+                trust = 'Rival'
+                perspective_name = f"{self.name}'s {race} {gender} rival"
+            elif relationship_level == 0:
+                trust = 'Acquaintance'
+                perspective_name = f"{race} {gender} Acquaintance of {self.name}"
+            elif relationship_level == 1:
+                trust = 'Friend'
+                perspective_name = f"{self.name}'s mysterious {race} {gender} friend"
+            elif relationship_level == 2:
+                trust = 'Confidant'
+                perspective_name = f"{self.name}'s mysterious {race} {gender} confidant"
+            elif relationship_level == 3:
+                trust = 'Ally'
+                perspective_name = f"{self.name}'s mysterious {race} {gender} ally"
+            elif relationship_level == 4:
+                trust = 'Lover'
+                perspective_name = f"{self.name}'s mysterious {race} {gender} lover"
+        else:
+            trust = 'Stranger'
+            perspective_name = f"{race} {gender} Stranger"
         if name in self.knows: # If the character knows the player's name, use it
             perspective_name = f"{name} {trust} of {self.name}"
 
