@@ -191,6 +191,16 @@ class ConfigLoader:
             },
             "Language": {
                 "language": "en",
+                "predetermined_npc_greetings": [
+                    "Hey there. How can I help you?",
+                    "Hello.",
+                    "What's up?",
+                ],
+                "predetermined_player_greetings": [
+                    "Hello [character].",
+                    "Greetings.",
+                    "Hey [character].",
+                ],
                 "end_conversation_keywords": [
                     "Goodbye",
                     "Farewell",
@@ -553,6 +563,8 @@ class ConfigLoader:
             },
             "Language": {
                 "language": self.language,
+                "predetermined_npc_greetings": self.predetermined_npc_greetings,
+                "predetermined_player_greetings": self.predetermined_player_greetings,
                 "end_conversation_keywords": self.end_conversation_keywords,
                 "goodbye_npc_responses": self.goodbye_npc_responses,
                 "collecting_thoughts_npc_responses": self.collecting_thoughts_npc_responses,
