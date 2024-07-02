@@ -7,7 +7,7 @@ import array
 import urllib.request
 import numpy as np
 import base64
-import _osx_support
+import os
 from PIL import Image
 import io
 logging.info("Imported required libraries in llava_cpp_python.py")
