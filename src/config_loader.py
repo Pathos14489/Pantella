@@ -862,7 +862,7 @@ class ConfigLoader:
                 "missing_voice_model_crash": self.missing_voice_model_crash,
             },
             "Conversation": {
-                "conversation_stat_type": self.conversation_start_type,
+                "conversation_start_type": self.conversation_start_type,
                 "banned_learnable_names": self.banned_learnable_names,
                 "first_message_hidden_quote": self.first_message_hidden_quote,
             },
