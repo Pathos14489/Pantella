@@ -91,9 +91,17 @@ class LLM(base_LLM.base_LLM):
             logging.info(f"Using OpenAI-style API base: {self.client.base_url}")
 
         if self.is_local:
-            logging.info(f"Running Mantella with local language model")
+            logging.info(f"Running Pantella with local language model via openai python package")
         else:
-            logging.info(f"Running Mantella with '{self.config.llm}'. The language model chosen can be changed via config.json")
+            logging.info(f"Running Pantella with '{self.config.llm}'. The language model chosen can be changed via config.json")
+
+        try:
+            self.client.completions.create(prompt="This is a test of the", model=self.config.llm, max_tokens=10)
+            self.completions_supported = True
+            logging.info(f"OpenAI API at '{self.config.alternative_openai_api_base}' supports completions!")
+        except Exception as e:
+            self.completions_supported = False
+            logging.error(f"Current API does not support raw completions! Are you using OpenAI's API? They will not work with all features of Pantella, please use OpenRouter or another API that supports raw non-chat completions.")
     
     def get_context(self):
         context = super().get_context()
@@ -115,28 +123,64 @@ class LLM(base_LLM.base_LLM):
         completion = None
         while retries > 0 and completion is None:
             try:
+                openai_stop = list(self.stop)
+                openai_stop = [self.config.message_seperator] + openai_stop
                 if self.config.alternative_openai_api_base == 'none': # OpenAI stop is the first 4 options in the stop list because they only support up to 4 for some asinine reason
-                    openai_stop = self.stop[:4]
+                    openai_stop = openai_stop[:4]
                 else:
-                    openai_stop = self.stop
-                completion = self.client.chat.completions.create(messages=messages,
-                    model=self.config.llm, 
-                    max_tokens=self.config.max_tokens,
-                    top_p=self.top_p, 
-                    temperature=self.temperature,
-                    frequency_penalty=self.frequency_penalty,
-                    stop=openai_stop,
-                    presence_penalty=self.presence_penalty,
-                    extra_body={
-                        "min_p": self.min_p,
-                    },
-                    stream=False,
-                )
+                    openai_stop = openai_stop
+                if self.completions_supported:
+                    prompt = self.tokenizer.get_string_from_messages(messages) + self.tokenizer.start_message(self.config.assistant_name)
+                    logging.info(f"Raw Prompt: {prompt}")
+                    completion = self.client.completions.create(prompt=prompt,
+                        model=self.config.llm, 
+                        max_tokens=self.config.max_tokens,
+                        top_p=self.top_p, 
+                        temperature=self.temperature,
+                        frequency_penalty=self.frequency_penalty,
+                        stop=openai_stop,
+                        presence_penalty=self.presence_penalty,
+                        extra_body={ # Extra body is used to pass additional parameters to the API
+                            "min_p": self.min_p,
+                            "top_k":self.top_k,
+                            "typical_p":self.typical_p,
+                            "repeat_penalty":self.repeat_penalty,
+                            "mirostat_mode":self.mirostat_mode,
+                            "mirostat_tau":self.mirostat_tau,
+                            "mirostat_eta":self.mirostat_eta
+                        },
+                        stream=False,
+                    )
+                else:
+                    completion = self.client.chat.completions.create(messages=messages,
+                        model=self.config.llm, 
+                        max_tokens=self.config.max_tokens,
+                        top_p=self.top_p, 
+                        temperature=self.temperature,
+                        frequency_penalty=self.frequency_penalty,
+                        stop=openai_stop,
+                        presence_penalty=self.presence_penalty,
+                        extra_body={
+                            "min_p": self.min_p,
+                            "top_k":self.top_k,
+                            "typical_p":self.typical_p,
+                            "repeat_penalty":self.repeat_penalty,
+                            "mirostat_mode":self.mirostat_mode,
+                            "mirostat_tau":self.mirostat_tau,
+                            "mirostat_eta":self.mirostat_eta
+                        },
+                        stream=False,
+                    )
                 print(completion.choices[0].message)
                 try:
                     completion = completion.choices[0].text
                 except:
                     pass
+                if completion is None or type(completion) != str:
+                    try:
+                        completion = completion.choices[0]["text"]
+                    except:
+                        pass
                 if completion is None or type(completion) != str:
                     try:
                         completion = completion.choices[0].message.content
@@ -177,28 +221,62 @@ class LLM(base_LLM.base_LLM):
         return completion
     
     @utils.time_it
-    def acreate(self, messages): # Creates a completion stream for the messages provided to generate a speaker and their response
+    def acreate(self, messages, force_speaker=None): # Creates a completion stream for the messages provided to generate a speaker and their response
         # logging.info(f"aMessages: {messages}")
         retries = 5
         while retries > 0:
             try:
+                openai_stop = list(self.stop)
+                openai_stop = [self.config.message_seperator] + openai_stop
                 if self.config.alternative_openai_api_base == 'none': # OpenAI stop is the first 4 options in the stop list because they only support up to 4 for some asinine reason
-                    openai_stop = self.stop[:4]
+                    openai_stop = openai_stop[:4]
                 else:
-                    openai_stop = self.stop
-                return self.client.chat.completions.create(messages=messages,
-                    model=self.config.llm, 
-                    max_tokens=self.config.max_tokens,
-                    top_p=self.top_p, 
-                    temperature=self.temperature,
-                    frequency_penalty=self.frequency_penalty,
-                    stop=openai_stop,
-                    presence_penalty=self.presence_penalty,
-                    extra_body={
-                        "min_p": self.min_p,
-                    },
-                    stream=True,
-                )
+                    openai_stop = openai_stop
+                if self.completions_supported:
+                    prompt = self.tokenizer.get_string_from_messages(messages)
+                    prompt += self.tokenizer.start_message(self.config.assistant_name)
+                    if force_speaker is not None:
+                        prompt += force_speaker.name + self.config.message_signifier
+                    logging.info(f"Raw Prompt: {prompt}")
+                    return self.client.completions.create(prompt=prompt,
+                        model=self.config.llm, 
+                        max_tokens=self.config.max_tokens,
+                        top_p=self.top_p, 
+                        temperature=self.temperature,
+                        frequency_penalty=self.frequency_penalty,
+                        stop=openai_stop,
+                        presence_penalty=self.presence_penalty,
+                        extra_body={ # Extra body is used to pass additional parameters to the API
+                            "min_p": self.min_p,
+                            "top_k":self.top_k,
+                            "typical_p":self.typical_p,
+                            "repeat_penalty":self.repeat_penalty,
+                            "mirostat_mode":self.mirostat_mode,
+                            "mirostat_tau":self.mirostat_tau,
+                            "mirostat_eta":self.mirostat_eta
+                        },
+                        stream=True,
+                    )
+                else:
+                    return self.client.chat.completions.create(messages=messages,
+                        model=self.config.llm, 
+                        max_tokens=self.config.max_tokens,
+                        top_p=self.top_p, 
+                        temperature=self.temperature,
+                        frequency_penalty=self.frequency_penalty,
+                        stop=openai_stop,
+                        presence_penalty=self.presence_penalty,
+                        extra_body={
+                            "min_p": self.min_p,
+                            "top_k":self.top_k,
+                            "typical_p":self.typical_p,
+                            "repeat_penalty":self.repeat_penalty,
+                            "mirostat_mode":self.mirostat_mode,
+                            "mirostat_tau":self.mirostat_tau,
+                            "mirostat_eta":self.mirostat_eta
+                        },
+                        stream=True,
+                    )
             except Exception as e:
                 logging.warning('Could not connect to LLM API, retrying in 5 seconds...')
                 logging.warning(e)

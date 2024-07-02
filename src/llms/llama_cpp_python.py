@@ -95,7 +95,7 @@ class LLM(base_LLM.base_LLM): # Uses llama-cpp-python as the LLM inference engin
             break
         return completion
     
-    def acreate(self, messages): # Creates a completion stream for the messages provided to generate a speaker and their response
+    def acreate(self, messages, force_speaker=None): # Creates a completion stream for the messages provided to generate a speaker and their response
         logging.info(f"aMessages: {messages}")
         retries = 5
         while retries > 0:
@@ -103,6 +103,8 @@ class LLM(base_LLM.base_LLM): # Uses llama-cpp-python as the LLM inference engin
             try:
                 prompt = self.tokenizer.get_string_from_messages(messages)
                 prompt += self.tokenizer.start_message(self.config.assistant_name)
+                if force_speaker is not None:
+                    prompt += force_speaker.name + self.config.message_signifier
                 logging.info(f"Raw Prompt: {prompt}")
                 return self.llm.create_completion(prompt=prompt,
                     max_tokens=self.max_tokens,

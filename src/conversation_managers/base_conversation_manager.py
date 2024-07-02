@@ -24,10 +24,10 @@ class BaseConversationManager:
             self.synthesizer = tts.create_Synthesizer(self) # Create Synthesizer object based on config - required by scripts for checking voice models, so is left out of self.initialize() intentionally
             self.character_database = character_db.CharacterDB(self) # Create Character Database Manager based on config - required by scripts for merging, patching and converting character databases, so is left out of self.initialize() intentionally
         with open(".\\version", "r") as f:
-            self.mantella_version = f.read().strip() # Read Pantella version from file
+            self.pantella_version = f.read().strip() # Read Pantella version from file
         if initialize and self.config.ready:
             self.initialize()
-            logging.info(f'Pantella v{self.mantella_version} Initialized')
+            logging.info(f'Pantella v{self.pantella_version} Initialized')
         self.in_conversation = False # Whether or not the player is in a conversation
         self.conversation_ended = False # Whether or not the conversation has ended
         self.player_name = None # Initialised at start of every conversation in await_and_setup_conversation()
@@ -108,19 +108,19 @@ class BaseConversationManager:
     def get_context(self): # Returns the current context(in the form of a list of messages) for the given active characters in the ongoing conversation
         return self.llm.get_context()
     
-    async def _get_response(self):
+    async def _get_response(self, force_speaker=None):
         sentence_queue = asyncio.Queue() # Create queue to hold sentences to be processed
         event = asyncio.Event() # Create event to signal when the response has been received
         event.set() # Set event to true to allow the first sentence to be processed
 
         await asyncio.gather(
-            self.llm.process_response(sentence_queue, event),
+            self.llm.process_response(sentence_queue, event, force_speaker=force_speaker),
             self.game_interface.send_response(sentence_queue, event)
         )
     
-    def get_response(self):
+    def get_response(self, force_speaker=None):
         """Get response from LLM and NPC(s) in the conversation"""
-        return asyncio.run(self._get_response())
+        return asyncio.run(self._get_response(force_speaker))
 
     def await_and_setup_conversation(self):
         """Wait for the conversation to begin and setup the conversation"""

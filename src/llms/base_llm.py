@@ -164,7 +164,7 @@ class base_LLM():
         input("Press enter to continue...")
         raise NotImplementedError("Please override this method in your child class!")
 
-    def acreate(self, messages): # Creates a completion stream for the messages provided to generate a speaker and their response
+    def acreate(self, messages, force_speaker=None): # Creates a completion stream for the messages provided to generate a speaker and their response
         """Generate a streameed response from the LLM using the messages provided"""
         logging.info(f"Warning: Using base_LLM.acreate() instead of a child class, this is probably not what you want to do. Please override this method in your child class!")
         input("Press enter to continue...")
@@ -248,7 +248,6 @@ class base_LLM():
             msgs = msgs[:-memory_offset] + memories + msgs[-memory_offset:]
         logging.info(f"Messages: {len(msgs)}")
         return msgs
-    
         
     def get_context(self):
         """Get the correct set of messages to use with the LLM to generate the next response"""
@@ -321,16 +320,15 @@ class base_LLM():
             formatted_messages.append(formatted_msg)
         return formatted_messages
     
-    def generate_response(self):
+    def generate_response(self, force_speaker=None):
         """Generate response from LLM one text chunk at a time"""
-        for chunk in self.acreate(self.get_context()):
+        for chunk in self.acreate(self.get_context(), force_speaker):
             yield chunk
 
-    async def process_response(self, sentence_queue, event):
+    async def process_response(self, sentence_queue, event, force_speaker=None):
         """Stream response from LLM one sentence at a time"""
-
+        
         next_author = None # used to determine who is speaking next in a conversation
-        verified_author = False # used to determine if the next author has been verified
         verified_author = False # used to determine if the next author has been verified
         possible_players = [
             self.player_name,
@@ -356,6 +354,9 @@ class base_LLM():
         system_loop = 3
         logging.info(f"Signifier: {self.config.message_signifier}")
         logging.info(f"Format: {self.config.message_format}")
+        if force_speaker is not None:
+            next_author = force_speaker.name
+            verified_author = True
         while retries >= 0: # keep trying to connect to the API until it works
             # if full_reply != '': # if the full reply is not empty, then the LLM has generated a response and the next_author should be extracted from the start of the generation
             #     self.conversation_manager.new_message({"role": next_author, "content": full_reply})
@@ -370,7 +371,7 @@ class base_LLM():
                 start_time = time.time()
                 last_chunk = None
                 same_chunk_count = 0
-                for chunk in self.generate_response():
+                for chunk in self.generate_response(force_speaker):
                     # TODO: This is a temporary fix. The LLM class should be returning a string only, but some inference engines don't currently. This will be fixed in the future.
                     print(chunk)
                     print(type(chunk))
@@ -382,10 +383,17 @@ class base_LLM():
                         content = chunk
                     else:
                         logging.info(chunk.model_dump_json())
-                        if "text" in chunk.choices[0]:
+                        logging.info(chunk.choices[0].model_dump_json())
+                        logging.info(type(chunk.choices[0]))
+                        context = None
+                        try:
                             content = chunk.choices[0].text
-                        else:
+                        except:
+                            pass
+                        try:
                             content = chunk.choices[0].delta.content
+                        except:
+                            pass
 
                     if content is not last_chunk: # if the content is not the same as the last chunk, then the LLM is not stuck in a loop and the generation should continue
                         last_chunk = content
@@ -439,7 +447,7 @@ class base_LLM():
                                 retries += 1
                                 raise Exception('Invalid author')
                             elif (next_author == self.config.system_name or next_author.lower() == self.config.system_name.lower()) and system_loop == 0: # if the next author is the system, then the system is speaking and generation should stop
-                                logging.info(f"System Loop detected. Please report to #dev channel in the Mantella Discord. Stopping generation.")
+                                logging.info(f"System Loop detected. Please report to #dev channel in the Pantella Discord. Stopping generation.")
                                 if len(self.conversation_manager.messages) == 0:
                                     logging.info(f"System Loop started at the first message.")
                                 break
@@ -450,7 +458,7 @@ class base_LLM():
                                 # self.conversation_manager.game_interface.active_character.set_voice()
                                 # characters are mapped to say_line based on order of selection
                                 # taking the order of the dictionary to find which say_line to use, but it is bad practice to use dictionaries in this way
-                                self.conversation_manager.game_interface.character_num = list(self.conversation_manager.character_manager.active_characters.keys()).index(next_author) # Assigns a number to the character based on the order they were selected for use in the _mantella_say_line_# filename
+                                self.conversation_manager.game_interface.character_num = list(self.conversation_manager.character_manager.active_characters.keys()).index(next_author) # Assigns a number to the character based on the order they were selected for use in the _Pantella_say_line_# filename
                                 verified_author = True
                             else: # if the next author is not a real character, then assume the player is speaking and generation should stop
                                 partial_match = False
@@ -571,6 +579,7 @@ class base_LLM():
                     input('Press enter to continue...')
                     raise e
                 logging.error(f"LLM API Error: {e}")
+                raise e
                 if 'Invalid author' in str(e):
                     logging.info(f"Retrying without saying error voice line")
                     retries += 1
