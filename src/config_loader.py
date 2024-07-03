@@ -712,7 +712,7 @@ class ConfigLoader:
                 "logging_file_path": ".\\logging.log",
                 "language_support_file_path": ".\\data\\language_support.csv",
                 "continue_on_error": False, # Warning: This may lead to strange or undiagnosable errors. Use at your own risk.
-                "continue_on_llm_api_error": True, # Warning: This may lead to strange or undiagnosable errors. Use at your own risk.
+                "continue_on_llm_api_error": True,
                 "port": 8021
             }
         }
