@@ -394,14 +394,6 @@ class base_LLM():
                             content = chunk.choices[0].delta.content
                         except:
                             pass
-                    if content.strip() == '':
-                        if num_sentences == 0:
-                            logging.info(f"Empty response. Retrying...")
-                            retries += 1
-                            raise Exception('Empty response')
-                        else:
-                            logging.info(f"Empty response. Stopping generation.")
-                            break
 
                     if content is not last_chunk: # if the content is not the same as the last chunk, then the LLM is not stuck in a loop and the generation should continue
                         last_chunk = content
@@ -491,6 +483,14 @@ class base_LLM():
                         content_edit = unicodedata.normalize('NFKC', content) # normalize unicode characters
                         
                         if (any(char in content_edit for char in self.end_of_sentence_chars)) or (any(char in content for char in self.banned_chars)) or (self.EOS_token in sentence): # check if content marks the end of a sentence
+                            if sentence.strip() == '':
+                                if num_sentences == 0:
+                                    logging.info(f"Empty response. Retrying...")
+                                    retries += 1
+                                    raise Exception('Empty response')
+                                else:
+                                    logging.info(f"Empty response. Stopping generation.")
+                                    break
                             if next_author is None: # if next_author is None after generating a sentence, then there was an error generating the output. The LLM didn't choose a character to speak next.
                                 logging.info(f"Next author is None. Failed to extract author from: {sentence}")
                                 logging.info(f"Retrying...")
@@ -593,7 +593,7 @@ class base_LLM():
                     input('Press enter to continue...')
                     raise e
                 logging.error(f"LLM API Error: {e}")
-                if not self.config.continue_on_error:
+                if not self.config.continue_on_llm_api_error:
                     raise e
                 if 'Invalid author' in str(e):
                     logging.info(f"Retrying without saying error voice line")
