@@ -48,7 +48,7 @@ class MemoryEditor():
         chroma_client = chromadb.PersistentClient(chroma_path,Settings(anonymized_telemetry=False))
         messages_memories = chroma_client.get_or_create_collection(name="messages")
         messages = messages_memories.get()
-        logging.info(f"Loaded NPC Memories for Game ID: {game_id_directory}, Player: {player_directory}, NPC: {npc_directory}, Messages: {len(messages)}")
+        logging.info(f"Loaded NPC Memories for Game ID: {game_id_directory}, Player: {player_directory}, NPC: {npc_directory}, Messages: {len(messages["ids"])}")
         msgs = []
         for i in range(len(messages["documents"])):
             msg_doc = messages["documents"][i]
