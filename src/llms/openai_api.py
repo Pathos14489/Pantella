@@ -2,6 +2,7 @@ print("Importing openai_api.py")
 from src.logging import logging, time
 import src.utils as utils
 import src.llms.base_llm as base_LLM
+import random
 logging.info("Imported required libraries in openai_api.py")
 
 try:
@@ -129,6 +130,8 @@ class LLM(base_LLM.base_LLM):
                     openai_stop = openai_stop[:4]
                 else:
                     openai_stop = openai_stop
+                openai_stop = [stop for stop in openai_stop if stop != ""] # Remove empty strings from the stop list
+                logging.info("Stop Strings:",openai_stop)
                 if self.completions_supported:
                     prompt = self.tokenizer.get_string_from_messages(messages) + self.tokenizer.start_message(self.config.assistant_name)
                     logging.info(f"Raw Prompt: {prompt}")
@@ -219,7 +222,6 @@ class LLM(base_LLM.base_LLM):
             input("Press Enter to exit.")
             raise ValueError(f"Could not get completion from OpenAI-style API. Please check your API key and internet connection.")
         return completion
-    
     @utils.time_it
     def acreate(self, messages, force_speaker=None): # Creates a completion stream for the messages provided to generate a speaker and their response
         # logging.info(f"aMessages: {messages}")
@@ -232,6 +234,7 @@ class LLM(base_LLM.base_LLM):
                     openai_stop = openai_stop[:4]
                 else:
                     openai_stop = openai_stop
+                openai_stop = [stop for stop in openai_stop if stop != ""] # Remove empty strings from the stop list
                 logging.info("Stop Strings:",openai_stop)
                 if self.completions_supported:
                     prompt = self.tokenizer.get_string_from_messages(messages)
