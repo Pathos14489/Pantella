@@ -135,43 +135,61 @@ class LLM(base_LLM.base_LLM):
                 if self.completions_supported:
                     prompt = self.tokenizer.get_string_from_messages(messages) + self.tokenizer.start_message(self.config.assistant_name)
                     logging.info(f"Raw Prompt: {prompt}")
+                    sampler_kwargs = {
+                        "top_p": self.top_p,
+                        "temperature": self.temperature,
+                        "frequency_penalty": self.frequency_penalty,
+                        "presence_penalty": self.presence_penalty
+                    }
+                    for kwarg in self.config.banned_samplers:
+                        if kwarg in sampler_kwargs:
+                            del sampler_kwargs[kwarg]
+                    extra_body_kwargs = {
+                        "min_p": self.min_p,
+                        "top_k":self.top_k,
+                        "typical_p":self.typical_p,
+                        "repeat_penalty":self.repeat_penalty,
+                        "mirostat_mode":self.mirostat_mode,
+                        "mirostat_tau":self.mirostat_tau,
+                        "mirostat_eta":self.mirostat_eta
+                    }
+                    for kwarg in self.config.banned_samplers:
+                        if kwarg in extra_body_kwargs:
+                            del extra_body_kwargs[kwarg]
                     completion = self.client.completions.create(prompt=prompt,
                         model=self.config.llm, 
                         max_tokens=self.config.max_tokens,
-                        top_p=self.top_p, 
-                        temperature=self.temperature,
-                        frequency_penalty=self.frequency_penalty,
-                        stop=openai_stop,
-                        presence_penalty=self.presence_penalty,
-                        extra_body={ # Extra body is used to pass additional parameters to the API
-                            "min_p": self.min_p,
-                            "top_k":self.top_k,
-                            "typical_p":self.typical_p,
-                            "repeat_penalty":self.repeat_penalty,
-                            "mirostat_mode":self.mirostat_mode,
-                            "mirostat_tau":self.mirostat_tau,
-                            "mirostat_eta":self.mirostat_eta
-                        },
+                        **sampler_kwargs,
+                        extra_body=extra_body_kwargs,
                         stream=False,
                     )
                 else:
+                    sampler_kwargs = {
+                        "top_p": self.top_p,
+                        "temperature": self.temperature,
+                        "frequency_penalty": self.frequency_penalty,
+                        "presence_penalty": self.presence_penalty
+                    }
+                    for kwarg in self.config.banned_samplers:
+                        if kwarg in sampler_kwargs:
+                            del sampler_kwargs[kwarg]
+                    extra_body_kwargs = {
+                        "min_p": self.min_p,
+                        "top_k":self.top_k,
+                        "typical_p":self.typical_p,
+                        "repeat_penalty":self.repeat_penalty,
+                        "mirostat_mode":self.mirostat_mode,
+                        "mirostat_tau":self.mirostat_tau,
+                        "mirostat_eta":self.mirostat_eta
+                    }
+                    for kwarg in self.config.banned_samplers:
+                        if kwarg in extra_body_kwargs:
+                            del extra_body_kwargs[kwarg]
                     completion = self.client.chat.completions.create(messages=messages,
                         model=self.config.llm, 
                         max_tokens=self.config.max_tokens,
-                        top_p=self.top_p, 
-                        temperature=self.temperature,
-                        frequency_penalty=self.frequency_penalty,
-                        stop=openai_stop,
-                        presence_penalty=self.presence_penalty,
-                        extra_body={
-                            "min_p": self.min_p,
-                            "top_k":self.top_k,
-                            "typical_p":self.typical_p,
-                            "repeat_penalty":self.repeat_penalty,
-                            "mirostat_mode":self.mirostat_mode,
-                            "mirostat_tau":self.mirostat_tau,
-                            "mirostat_eta":self.mirostat_eta
-                        },
+                        **sampler_kwargs,
+                        extra_body=extra_body_kwargs,
                         stream=False,
                     )
                 print(completion.choices[0].message)
