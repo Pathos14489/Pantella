@@ -546,7 +546,7 @@ class GameInterface(BaseGameInterface):
             # tell Skyrim papyrus script to start waiting for voiceline input
             self.write_game_info('_pantella_end_conversation', 'False')        
         
-        character_info, is_generic_npc = self.conversation_manager.character_database.get_character(character_name, character_ref_id, character_base_id) # get character info from character database
+        character_info, is_generic_npc, matching_parts = self.conversation_manager.character_database.get_character(character_name, character_ref_id, character_base_id) # get character info from character database
         # TODO: Improve character lookup to be more accurate and to include generating character stats inspired by their generic name for generic NPCs instead of leaving them generic.
         # (example: make a backstory for a Bandit because the NPC was named Bandit, then generate a real name, and background inspired by that vague name for use in-corversation)
         # try: # load character from skyrim_characters json directory 
@@ -600,6 +600,15 @@ class GameInterface(BaseGameInterface):
         # append in-game events to player's response
         with open(f'{self.game_path}\\_pantella_in_game_events.txt', 'r', encoding='utf-8') as f:
             in_game_events_lines = f.readlines()[-5:] # read latest 5 events
+        
+        in_game_events_lines = [line.strip() for line in in_game_events_lines]
+        new_in_game_events = []
+        for in_game_events_line in in_game_events_lines:
+            new_line = in_game_events_line.replace("*","")
+            while "*" in new_line:
+                new_line = new_line.replace("*","")
+            new_in_game_events.append(new_line)
+        in_game_events_lines = [line for line in new_in_game_events if line.strip() != '']
         
         # Is Player in combat with NPC
         in_combat = self.load_data_when_available('_pantella_actor_is_enemy', '').lower() == 'true' 

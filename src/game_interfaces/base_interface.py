@@ -39,33 +39,30 @@ class BaseGameInterface:
         return False
         
     def update_game_events(self):
+        logging.info(f"Updating game events...")
         new_game_events = []
         for even in self.new_game_events:
             new_game_events.append(even)
         self.new_game_events = []
-
-        # encapsulate events in *asterisks* for emphasis
-        formatted_in_game_events_lines = ['*{}*'.format(line.strip()) for line in new_game_events]
-        in_game_events = '\n'.join(formatted_in_game_events_lines)
-
-        if len(in_game_events) > 0:
-            logging.info(f'In-game events since previous exchange:\n{in_game_events}')
+        logging.info("New Game Events:", new_game_events)
 
         # append the time to player's response
         in_game_time = self.get_current_game_time() # Current in-game time
-        print(in_game_time)
+        logging.info(f"Current in-game time: {in_game_time['time24']}")
         # only pass the in-game time if it has changed by at least an hour
         if self.new_time(in_game_time):
             time_group = utils.get_time_group(in_game_time['hour24'])
 
             time_string = f"The time is now {in_game_time['time12']} {time_group}."
+            new_game_events.append(time_string)
             logging.info(time_string)
             
-            formatted_in_game_time = f"{time_string}\n"
-            in_game_events = formatted_in_game_time + in_game_events
-        
+        in_game_events = ' '.join(new_game_events)
+        in_game_events = in_game_events.strip()
         if len(in_game_events.strip()) > 0:
-            logging.info(f'In-game events since previous exchange:\n{in_game_events}')
+            in_game_events = "*" + in_game_events + "*"
+            if len(in_game_events) > 0:
+                logging.info(f'In-game events since previous exchange:\n{in_game_events}')
             if len(self.conversation_manager.messages) == 0: # if there are no messages in the conversation yet, add in-game events to the first message from the system
                 self.conversation_manager.new_message({
                     "role": self.conversation_manager.config.system_name,
@@ -109,6 +106,9 @@ class BaseGameInterface:
             logging.error(f"Error getting audio duration: {e}")
             frames = 0
             rate = 0
+        if rate == 0:
+            logging.error(f"Error getting audio duration: rate is 0")
+            return 0
         # wait `buffer` seconds longer to let processes finish running correctly
         duration = frames / float(rate) + self.wait_time_buffer
         return duration

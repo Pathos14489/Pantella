@@ -97,14 +97,14 @@ class Characters:
         replacement_dict["player_name"] = self.conversation_manager.player_name
         replacement_dict["player_race"] = self.conversation_manager.player_race
         replacement_dict["player_gender"] = self.conversation_manager.player_gender
-        replacement_dict["behavior_summary"] = self.conversation_manager.behavior_manager.get_behavior_summary() # Add behavior summary to replacement_dict and format it using replacement_dict before doing so
-        if "name" in replacement_dict: # If name is in replacement_dict, add name2 and names to replacement_dict
-            replacement_dict["behavior_summary"] = replacement_dict["behavior_summary"].format(**replacement_dict)
-        else:
-            replacement_dict["behavior_summary"] = replacement_dict["behavior_summary"].replace("{name}", "{name1}")
-            for name in self.names:
-                replacement_dict["name"+str(self.names.index(name)+1)] = name
-            replacement_dict["behavior_summary"] = replacement_dict["behavior_summary"].format(**replacement_dict)
+        # replacement_dict["behavior_summary"] = self.conversation_manager.behavior_manager.get_behavior_summary() # Add behavior summary to replacement_dict and format it using replacement_dict before doing so
+        # if "name" in replacement_dict: # If name is in replacement_dict, add name2 and names to replacement_dict
+        #     replacement_dict["behavior_summary"] = replacement_dict["behavior_summary"].format(**replacement_dict)
+        # else:
+        #     replacement_dict["behavior_summary"] = replacement_dict["behavior_summary"].replace("{name}", "{name1}")
+        #     for name in self.names:
+        #         replacement_dict["name"+str(self.names.index(name)+1)] = name
+        #     replacement_dict["behavior_summary"] = replacement_dict["behavior_summary"].format(**replacement_dict)
         replacement_dict["behavior_keywords"] = ", ".join(self.conversation_manager.behavior_manager.behavior_keywords)
 
         
@@ -190,7 +190,7 @@ class Characters:
             memories.extend(character.memories)
         memories.append({
             "role": self.config.system_name,
-            "content": "A NEW CONVERSATION HAS STARTED. The rest of the messages below this are from the current conversation, the present. Everything above this is a memory from the past. DO NOT RESPOND TO MEMORY MESSAGES. They are for reference only.",
+            "content": "A NEW CONVERSATION HAS STARTED. The rest of the messages below this are from the current conversation, the present. Everything above this is a memory from the past. DO NOT RESPOND TO MEMORY MESSAGES. They are for reference only. If you want to do an action, please use asterisks to indicate the action. For example: *Nazeem scowls bitterly at the filthy adventurer.*",
             "type": "prompt"
         })
         return memories

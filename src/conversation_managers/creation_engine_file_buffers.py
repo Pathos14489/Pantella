@@ -147,7 +147,7 @@ class ConversationManager(BaseConversationManager):
             try: # get response from NPC to player greeting
                 # self.new_message({'role': "[player]", 'content': f"{self.language_info['hello']} {character.name}."}) # TODO: Make this more interesting, always having the character say hi like we aren't always with each other is bizzare imo -- hey I'm doing it now sorry it took so long past me <3
                 pp_name, _ = character.get_perspective_player_identity()
-                self.new_message({'role': self.config.system_name, 'content': pp_name+" approaches "+character.name+" with the intent to start a new conversation with them."}) # TODO: Improve later
+                self.new_message({'role': self.config.system_name, 'content': "*"+pp_name+" approaches "+character.name+" with the intent to start a conversation with them.*"}) # TODO: Improve later
 
                 # Conversation Start Type Handling
                 if self.config.conversation_start_type == "always_llm_choice":
