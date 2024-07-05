@@ -18,6 +18,9 @@ class ConfigLoader:
         self.config_path = config_path
         self.prompt_styles = {}
         self._raw_prompt_styles = {}
+        self.behavior_styles = {}
+        self._raw_behavior_styles = {}
+        self.get_behavior_styles()
         self.load()
         self.game_configs = game_configs
         self.current_game_config = game_configs[self.game_id]
@@ -116,8 +119,7 @@ class ConfigLoader:
 
         if save:
             self.save()
-
-        
+            
         if self.linux_mode:
             logging.info("Linux mode enabled - Fixing paths for linux...")
             # Fix paths for linux
@@ -127,6 +129,8 @@ class ConfigLoader:
                         setattr(self, sub_key, config[key][sub_key].replace("\\", "/"))
             logging.info("Paths fixed for linux")
         
+        self.set_behavior_style(self.behavior_style)
+
         logging.info(f"Unique settings:", self.unique())
         logging.info(f"Config loaded from {self.config_path}")
 
@@ -142,6 +146,19 @@ class ConfigLoader:
                     self.prompt_styles[slug] = self._raw_prompt_styles[slug]["style"]
         style_names = [f"{slug} ({self._raw_prompt_styles[slug]['name']})" for slug in self.prompt_styles]
         logging.info(f"Prompt styles loaded: "+str(style_names))
+
+    def get_behavior_styles(self):
+        """Get the behavior styles from the behavior_styles directory"""
+        logging.info("Getting behavior styles")
+        behavior_styles_dir = os.path.join(os.path.dirname(__file__), "../behavior_styles/")
+        for file in os.listdir(behavior_styles_dir):
+            if file.endswith('.json'):
+                with open(f'{behavior_styles_dir}/{file}') as f:
+                    slug = file.split('.')[0]
+                    self._raw_behavior_styles[slug] = json.load(f)
+                    self.behavior_styles[slug] = self._raw_behavior_styles[slug]["behavior_style"]
+        style_names = [f"{slug} ({self._raw_behavior_styles[slug]['name']})" for slug in self.behavior_styles]
+        logging.info(f"Behavior styles loaded: "+str(style_names))
 
     def get_tokenizer_settings_from_prompt_style(self):
         """Get the tokenizer settings from the prompt style"""
@@ -178,7 +195,19 @@ class ConfigLoader:
             self._prompt_style = self.prompt_styles["normal"]
         self.get_tokenizer_settings_from_prompt_style()
         return self._prompt_style
-
+    
+    def set_behavior_style(self, behavior_style):
+        """Set the behavior style - if behavior_style is not set to a specific style, set it to the default style"""
+        if behavior_style is not None:
+            if behavior_style in self.behavior_styles:
+                self._behavior_style = self.behavior_styles[behavior_style]
+            else:
+                logging.error(f"Behavior style {behavior_style} not found in behavior_styles directory. Using default behavior style.")
+                self._behavior_style = self.behavior_styles["normal"]
+        else:
+            logging.error(f"Behavior style not set in config file. Using default behavior style.")
+            self._behavior_style = self.behavior_styles["normal"]
+        return self._behavior_style
 
     def default(self):
         return {
@@ -380,12 +409,12 @@ class ConfigLoader:
                 "inference_engine": "default",
                 "tokenizer_type": "default",
                 "prompt_style": "default",
-                "allow_npc_custom_game_events": True,
+                "behavior_style": "normal",
                 "maximum_local_tokens": 4096,
                 "max_response_sentences": 999,
                 "wait_time_buffer": 1.0,
-                "assist_check": False,
                 "strip_smalls": True,
+                "assure_grammar": True,
                 "small_size": 3,
                 "same_output_limit": 30,
                 "conversation_limit_pct": 0.9,
@@ -468,6 +497,9 @@ class ConfigLoader:
                 "end_conversation_wait_time": 1,
                 "sentences_per_voiceline": 2,
                 "missing_voice_model_crash": True,
+                "narrator_voice": "FemaleSultry",
+                "narrator_volume": 0.5, # 50% volume
+                "narrator_delay": 0.2, # 200ms delay
             },
             "Conversation": {
                 "conversation_start_type": "force_npc_greeting_for_first_meeting_then_llm_choice",
@@ -655,6 +687,10 @@ class ConfigLoader:
                     "Dawnstar Guard",
                 ],
                 "first_message_hidden_quote": True,
+                "first_message_hidden_asterisk": True,
+                "allow_npc_custom_game_events": True,
+                "assist_check": False,
+                "as_a_check": False,
             },
             "xVASynth": {
                 "xvasynth_path": "C:\\Games\\Steam\\steamapps\\common\\xVASynth",
@@ -706,7 +742,7 @@ class ConfigLoader:
                 "add_voicelines_to_all_voice_folders": False
             },
             "Config": {
-                "character_database_file": ".\\data\\020224_skyrim_characters_hex_ids.csv", # can be a csv file path, a directory file path, or a list of csv file paths and directory file paths
+                "character_database_file": ".\\characters\\", # can be a csv file path, a directory file path, or a list of csv file paths and directory file paths
                 "conversation_data_directory": ".\\data\\conversations",
                 "voice_model_ref_ids_file": ".\\skyrim_voice_model_ids.json",
                 "logging_file_path": ".\\logging.log",
@@ -794,12 +830,12 @@ class ConfigLoader:
                 "inference_engine": self.inference_engine,
                 "tokenizer_type": self.tokenizer_type,
                 "prompt_style": self.prompt_style,
-                "allow_npc_custom_game_events": self.allow_npc_custom_game_events,
+                "behavior_style": self.behavior_style,
                 "maximum_local_tokens": self.maximum_local_tokens,
                 "max_response_sentences": self.max_response_sentences,
                 "wait_time_buffer": self.wait_time_buffer,
-                "assist_check": self.assist_check,
                 "strip_smalls": self.strip_smalls,
+                "assure_grammar": self.assure_grammar,
                 "small_size": self.small_size,
                 "same_output_limit": self.same_output_limit,
                 "conversation_limit_pct": self.conversation_limit_pct,
@@ -863,11 +899,18 @@ class ConfigLoader:
                 "end_conversation_wait_time": self.end_conversation_wait_time,
                 "sentences_per_voiceline": self.sentences_per_voiceline,
                 "missing_voice_model_crash": self.missing_voice_model_crash,
+                "narrator_voice": self.narrator_voice,
+                "narrator_volume": self.narrator_volume,
+                "narrator_delay": self.narrator_delay,
             },
             "Conversation": {
                 "conversation_start_type": self.conversation_start_type,
                 "banned_learnable_names": self.banned_learnable_names,
                 "first_message_hidden_quote": self.first_message_hidden_quote,
+                "first_message_hidden_asterisk": self.first_message_hidden_asterisk,
+                "allow_npc_custom_game_events": self.allow_npc_custom_game_events,
+                "assist_check": self.assist_check,
+                "as_a_check": self.as_a_check,
             },
             "xVASynth": {
                 "xvasynth_path": self.xvasynth_path,
@@ -911,6 +954,7 @@ class ConfigLoader:
             },
             "Config": {
                 "character_database_file": self.character_database_file,
+                "conversation_data_directory": self.conversation_data_directory,
                 "voice_model_ref_ids_file": self.voice_model_ref_ids_file,
                 "logging_file_path": self.logging_file_path,
                 "language_support_file_path": self.language_support_file_path,
