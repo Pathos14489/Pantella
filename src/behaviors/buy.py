@@ -6,13 +6,21 @@ class buy(base_behavior.BaseBehavior):
         super().__init__(manager)
         self.keyword = "Buy"
         self.description = "If {perspective_player_name} wants to sell something to {name}, and {name} wants to buy something, to start the barter interaction, {name} will begin their sentence with 'Buy:'."
-        self.example = "'Hey, can I sell you something?' 'Buy: Sure, what do you have?'"
-        self.activation_sentences = [
-            "I'm always looking for new things to buy.",
-            "I'm interested in buying something from you.",
-            "I'm looking to buy something.",
-            "Sure, I can take a look at what you have to sell.",
+        # self.example = "'Hey, can I sell you something?' 'Buy: Sure, what do you have?'"
+        self.examples = [
+            [
+                {
+                    "role": "user",
+                    "name": "Nazeem",
+                    "content":"Hey, can I sell you something?"
+                },
+                {
+                    "role": "assistant",
+                    "content":"{command} Sure, what do you have?"
+                },
+            ]
         ]
+        self.activation_sentences = []
         self.valid_games = ["skyrim","skyrimvr"]
     
     def run(self, speaker_character=None, sentence=None):

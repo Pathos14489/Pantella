@@ -1,5 +1,6 @@
 print("Importing base_behavior_manager.py...")
 from src.logging import logging
+import random
 import os
 logging.info("Imported required libraries in base_behavior_manager.py")
 
@@ -37,26 +38,33 @@ class BehaviorManager():
         logging.info("Loaded default behavior manager")
 
     @property
+    def behavior_style(self):
+        """Return a list of all behavior styles."""
+        return self.conversation_manager.config._behavior_style
+
+    @property
     def behavior_keywords(self):
         """Return a list of all behavior keywords."""
-        return [behavior.keyword for behavior in self.behaviors]
-    
-    def evaluate(self, keyword, next_author, sentence): # Returns True if the keyword was found and the behavior was run, False otherwise
-        """Evaluate the keyword for behaviors that should run."""
-        logging.info(f"Evaluating keyword {keyword} in sentence {sentence}")
+        keywords = []
         for behavior in self.behaviors:
             if behavior.valid():
-                if behavior.keyword is not None and behavior.keyword.lower() == keyword.lower():
-                    logging.info(f"Behavior triggered: {behavior.keyword}")
-                    try:
-                        if behavior.player_only:
-                            logging.error(f"Behavior {behavior.keyword} is player-only!")
-                            return False
-                        behavior._run(True, next_author, sentence=sentence)
-                        return behavior
-                    except Exception as e:
-                        logging.error(f"Error running behavior {behavior.keyword}: {e}")
-                        raise e
+                if behavior.description is not None and not behavior.player_only:
+                    keywords.append(behavior.keyword)
+        return keywords
+    
+    def evaluate(self,  next_author, sentence): # Returns True if the keyword was found and the behavior was run, False otherwise
+        """Evaluate the keyword for behaviors that should run."""
+        logging.info(f"Evaluating sentence \"{sentence}\" for behaviors, next_author: {next_author}")
+        sentence_words = sentence.split(" ")
+        for behavior in self.behaviors:
+            rendered_behavior = self.render_behavior(behavior)
+            if rendered_behavior in sentence_words:
+                logging.info(f"Behavior triggered: {behavior.keyword}")
+                try:
+                    behavior._run(True, next_author, sentence=sentence)
+                    return True
+                except Exception as e:
+                    logging.error(f"Error running behavior {behavior.keyword}: {e}")
         return None
     
     def pre_sentence_evaluate(self, next_author, sentence): # Evaluates just the sentence, returns the behavior that was run
@@ -105,18 +113,41 @@ class BehaviorManager():
                     logging.error(f"Error running behavior {behavior.keyword}: {e}")
         return None
     
-    def get_behavior_summary(self):
-        """Return a summary of all behaviors, and what they do.""" # TODO: Replace with a user editable template like message_format
-        summary = ""
+    # def get_behavior_summary(self):
+    #     """Return a summary of all behaviors, and what they do.""" # TODO: Replace with a user editable template like message_format
+    #     summary = ""
+    #     for behavior in self.behaviors:
+    #         if behavior.valid():
+    #             if behavior.description is not None and not behavior.player_only:
+    #                 summary += f"{behavior.description}\n"
+    #                 if behavior.example is not None:
+    #                     summary += f"Example: {behavior.example}"
+    #                 summary += "\n"
+    #     return summary
+
+    def get_behavior_memories(self, character):
+        """Return a list of all behavior memories."""
+        memories = []
         for behavior in self.behaviors:
-            if behavior.valid():
-                if behavior.description is not None and not behavior.player_only:
-                    summary += f"{behavior.description}\n"
-                    if behavior.example is not None:
-                        summary += f"Example: {behavior.example}"
-                    summary += "\n"
-        return summary
+            if behavior.valid() and not behavior.player_only:
+                if behavior.description is not None and not behavior.player_only and behavior.examples is not None and len(behavior.examples) > 0:
+                    random_example = random.choice(behavior.examples)
+                    for message in random_example:
+                        if message["role"] == "assistant":
+                            message["name"] = character.name
+                        message["content"] = message["content"].replace("{command}",self.render_behavior(behavior))
+                        memories.append(message)
+        return memories
     
+    def render_behavior(self, behavior):
+        """Render a behavior."""
+        behavior_style = self.conversation_manager.config._behavior_style
+        behavior_string = behavior_style["behavior_format"]
+        behavior_string = behavior_string.replace("[prefix]",behavior_style["prefix"])
+        behavior_string = behavior_string.replace("[behavior_name]",behavior.keyword)
+        behavior_string = behavior_string.replace("[suffix]",behavior_style["suffix"])
+        return behavior_string
+        
     def run_player_behaviors(self, sentence):
         """Run behaviors that are triggered by the player."""
         logging.info(f"Evaluating sentence {sentence}")

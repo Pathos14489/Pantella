@@ -5,7 +5,7 @@ class BaseBehavior():
         self.manager = manager
         self.keyword = None
         self.description = None
-        self.example = None
+        self.examples = None
         self.radiant_only = False
         self.non_radiant_only = False
         self.player = False # If this behavior can be triggered by the player

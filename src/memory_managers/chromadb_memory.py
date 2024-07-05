@@ -332,13 +332,21 @@ class MemoryManager(base_MemoryManager):
     @property
     def memories(self):
         """Return the current memories of the character"""
-        if len(self.current_memories) == 0:
-            return []
         mem_messages = [{
+            "role": self.config.system_name,
+            "content": self.name+" has used the following behaviors before:",
+            "type": "prompt"
+        }]
+        behavior_memories = self.conversation_manager.behavior_manager.get_behavior_memories(self.character_manager)
+        for memory in behavior_memories:
+            mem_messages.append(memory)
+        if len(self.current_memories) == 0:
+            return mem_messages
+        mem_messages.append({
             "role": self.config.system_name,
             "content": self.name+" is thinking about the following memories:",
             "type": "prompt"
-        }]
+        })
         for memory in self.current_memories:
             if memory["role"] != self.config.system_name:
                 mem_messages.append(memory)

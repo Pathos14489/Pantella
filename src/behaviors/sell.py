@@ -6,16 +6,32 @@ class sell(base_behavior.BaseBehavior):
         super().__init__(manager)
         self.keyword = "Sell"
         self.description = "If {perspective_player_name} wants to buy something from {name}, and {name} wants to sell them something, {name} will begin their the sentence starting the barter interaction with 'Sell:'."
-        self.example = "'Hey, can I buy something from you?' 'Sell: Sure, what do you want?', 'I want to buy something.' 'Sell: I have a lot of things to sell, what are you interested in?'"
-        self.activation_sentences = [
-            "Of course, what kind of items are you looking for?",
-            "I have a lot of things to sell, what are you interested in?",
-            "I have a lot of items to sell, what are you interested in?",
-            "I have a lot of food to sell, what are you interested in?",
-            "I'm always looking to sell something.",
-            "I'm interested in selling something to you.",
-            "I'm looking to sell something.",
+        # self.example = "'Hey, can I buy something from you?' 'Sell: Sure, what do you want?', 'I want to buy something.' 'Sell: I have a lot of things to sell, what are you interested in?'"
+        self.examples = [
+            [
+                {
+                    "role": "user",
+                    "name": "Customer 1",
+                    "content":"Hey, can I buy something from you?"
+                },
+                {
+                    "role": "assistant",
+                    "content":"{command} Sure, what do you want?"
+                },
+            ],
+            [
+                {
+                    "role": "user",
+                    "name": "Customer 2",
+                    "content":"I want to buy something."
+                },
+                {
+                    "role": "assistant",
+                    "content":"{command} I have a lot of things to sell, what are you interested in?"
+                },
+            ]
         ]
+        self.activation_sentences = []
         self.valid_games = ["skyrim","skyrimvr"]
     
     def run(self, speaker_character=None, sentence=None):

@@ -7,7 +7,20 @@ class small_crime(base_behavior.BaseBehavior):
         super().__init__(manager)
         self.keyword = "ReportSmallCrime"
         self.description = "If you want to report {perspective_player_name} for committing a minor crime, begin your response with 'ReportSmallCrime:'."
-        self.example = "'Haha! I stole your sweetroll!' 'ReportSmallCrime: I'm reporting you to the guards.'"
+        # self.example = "'Haha! I stole your sweetroll!' 'ReportSmallCrime: I'm reporting you to the guards.'"
+        self.examples = [
+            [
+                {
+                    "role": "user",
+                    "name": "Public Menace",
+                    "content":"Haha! I stole your sweetroll!"
+                },
+                {
+                    "role": "assistant",
+                    "content":"{command} I'm reporting you to the guards!"
+                },
+            ]
+        ]
         self.valid_games = ["skyrim","skyrimvr"]
     
     def run(self, speaker_character=None, sentence=None):

@@ -6,7 +6,20 @@ class trade(base_behavior.BaseBehavior):
         super().__init__(manager)
         self.keyword = "Trade"
         self.description = "If {perspective_player_name} wants full access to your inventory, and you want to let them have it, begin your response with 'Trade:'."
-        self.example = "'Can we please trade items?' 'Trade: Of course my friend, what do you need?'"
+        # self.example = "'Can we please trade items?' 'Trade: Of course my friend, what do you need?'"
+        self.examples = [
+            [
+                {
+                    "role": "user",
+                    "name": "Dragonborn",
+                    "content":"Can we please trade items?"
+                },
+                {
+                    "role": "assistant",
+                    "content":"{command} Of course my friend, what do you need?"
+                },
+            ]
+        ]
         self.valid_games = ["skyrim","skyrimvr"]
     
     def run(self, speaker_character=None, sentence=None):

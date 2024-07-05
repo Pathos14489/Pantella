@@ -6,7 +6,31 @@ class big_crime(base_behavior.BaseBehavior):
         super().__init__(manager)
         self.keyword = "ReportBigCrime"
         self.description = "If you want to report {perspective_player_name} for committing a really bad crime, begin your response with 'ReportBigCrime:'."
-        self.example = "'Haha! I killed your family!' 'ReportBigCrime: Guards! Guards help!' 'I'm going to murder you!' 'ReportBigCrime: Guards, help me! Someone call the guards!'"
+        # self.example = "'Haha! I killed your family!' 'ReportBigCrime: Guards! Guards help!' 'I'm going to murder you!' 'ReportBigCrime: Guards, help me! Someone call the guards!'"
+        self.examples = [
+            [
+                {
+                    "role": "user",
+                    "name": "Bandit",
+                    "content":"Haha! I killed your family!"
+                },
+                {
+                    "role": "assistant",
+                    "content":"{command} Guards! Guards help!"
+                },
+            ],
+            [
+                {
+                    "role": "user",
+                    "name": "Bandit",
+                    "content":"I'm going to murder you!"
+                },
+                {
+                    "role": "assistant",
+                    "content":"{command} Guards, help me! Someone call the guards!"
+                },
+            ]
+        ]
         self.valid_games = ["skyrim","skyrimvr"]
     
     def run(self, speaker_character=None, sentence=None):

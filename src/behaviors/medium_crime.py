@@ -6,7 +6,20 @@ class medium_crime(base_behavior.BaseBehavior):
         super().__init__(manager)
         self.keyword = "ReportCrime"
         self.description = "If you want to report {perspective_player_name} for committing a crime, begin your response with 'ReportCrime:'."
-        self.example = "'Haha! I stole all the Jarl's gold!' 'ReportCrime: That's a crime! I'm reporting you to the guards.'"
+        # self.example = "'Haha! I stole all the Jarl's gold!' 'ReportCrime: That's a crime! I'm reporting you to the guards.'"
+        self.examples = [
+            [
+                {
+                    "role": "user",
+                    "name": "Thief",
+                    "content":"Haha! I stole all the Jarl's gold!"
+                },
+                {
+                    "role": "assistant",
+                    "content":"{command} That's a crime! I'm reporting you to the guards."
+                },
+            ]
+        ]
         self.valid_games = ["skyrim","skyrimvr"]
     
     def run(self, speaker_character=None, sentence=None):

@@ -6,7 +6,31 @@ class strip(base_behavior.BaseBehavior):
         super().__init__(manager)
         self.keyword = "Strip"
         self.description = "If {perspective_player_name} wants you to take off all your clothes, and you're comfortable and willing to do so, begin your response with 'Strip:'."
-        self.example = "'Take off your clothes.' 'Strip: Okay, here goes.'"
+        # self.example = "'Take off your clothes.' 'Strip: Okay, here goes.'"
+        self.examples = [
+            [
+                {
+                    "role": "user",
+                    "name": "Pervert",
+                    "content":"Take off your clothes."
+                },
+                {
+                    "role": "assistant",
+                    "content":"{command} Okay, here goes..."
+                },
+            ],
+            [
+                {
+                    "role": "user",
+                    "name": "John Doe",
+                    "content":"You should take a shower. Strip down and get in the tub."
+                },
+                {
+                    "role": "assistant",
+                    "content":"{command} Well, if you insist."
+                },
+            ]
+        ]
         self.valid_games = ["skyrim","skyrimvr"]
     
     def run(self, speaker_character=None, sentence=None):

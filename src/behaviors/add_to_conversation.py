@@ -6,7 +6,20 @@ class add_to_conversation(base_behavior.BaseBehavior):
         super().__init__(manager)
         self.keyword = "AddToConversation"
         self.description = "If you want to talk to {perspective_player_name}, you can use this behavior to add them to the conversation."
-        self.example = "'Do you want coffee?' 'AddToConversation: I'm not sure, me and {player_name} are in the middle of something. {player_name}, do you want coffee?'"
+        # self.example = "'Do you want coffee?' 'AddToConversation: I'm not sure, me and {player_name} are in the middle of something. {player_name}, do you want coffee?'"
+        self.examples = [
+            [
+                {
+                    "role": "user",
+                    "name": "Alice",
+                    "text": "Do you want coffee?"
+                },
+                {
+                    "role": "assistant",
+                    "text": "I'm not sure, me and {player_name} are in the middle of something. {command} {player_name}, do you want coffee?"
+                }
+            ]
+        ]
         self.radiant_only = True
         self.valid_games = ["skyrim","skyrimvr"]
     

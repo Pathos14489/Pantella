@@ -6,7 +6,20 @@ class give(base_behavior.BaseBehavior):
         super().__init__(manager)
         self.keyword = "Give"
         self.description = "If {perspective_player_name} wants to take something from you, and you want to give it to them, begin your response with 'Give:'."
-        self.example = "'Can you give me that?' 'Give: Sure, here you go.'"
+        # self.example = "'Can you give me that?' 'Give: Sure, here you go.'"
+        self.examples = [
+            [
+                {
+                    "role": "user",
+                    "name": "Bob",
+                    "content":"Can you give me that?"
+                },
+                {
+                    "role": "assistant",
+                    "content":"{command} Sure, here you go."
+                },
+            ]
+        ]
         self.valid_games = ["skyrim","skyrimvr"]
     
     def run(self, speaker_character=None, sentence=None):

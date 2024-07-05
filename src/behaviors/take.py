@@ -6,7 +6,31 @@ class take(base_behavior.BaseBehavior):
         super().__init__(manager)
         self.keyword = "Take"
         self.description = "If {perspective_player_name} wants to give you something, or pay you directly, and you want to accept it, begin your response with 'Take:'."
-        self.example = "'Can I give you this?' 'Take: Thank you, I appreciate it.'" "'Here's a thousand septims.' 'Take: Thank you, I appreciate it.'"
+        # self.example = "'Can I give you this?' 'Take: Thank you, I appreciate it.'" "'Here's a thousand septims.' 'Take: Thank you, I appreciate it.'"
+        self.examples = [
+            [
+                {
+                    "role": "user",
+                    "name": "The Gifter",
+                    "content":"Can I give you this?"
+                },
+                {
+                    "role": "assistant",
+                    "content":"{command} Thank you, I appreciate it."
+                },
+            ],
+            [
+                {
+                    "role": "user",
+                    "name": "John Doe",
+                    "content":"Here's a thousand septims."
+                },
+                {
+                    "role": "assistant",
+                    "content":"{command} Oh wow! Thank you so much!"
+                },
+            ]
+        ]
         self.valid_games = ["skyrim","skyrimvr"]
     
     def run(self, speaker_character=None, sentence=None):
