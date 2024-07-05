@@ -223,7 +223,7 @@ class LLM(base_LLM.base_LLM):
             raise ValueError(f"Could not get completion from OpenAI-style API. Please check your API key and internet connection.")
         return completion
     @utils.time_it
-    def acreate(self, messages, force_speaker=None): # Creates a completion stream for the messages provided to generate a speaker and their response
+    def acreate(self, messages, message_prefix="", force_speaker=None): # Creates a completion stream for the messages provided to generate a speaker and their response
         # logging.info(f"aMessages: {messages}")
         retries = 5
         while retries > 0:
@@ -239,11 +239,13 @@ class LLM(base_LLM.base_LLM):
                 if self.completions_supported:
                     prompt = self.tokenizer.get_string_from_messages(messages)
                     prompt += self.tokenizer.start_message(self.config.assistant_name)
+                    symbol_insert = ""
                     if force_speaker is not None:
                         prompt += force_speaker.name + self.config.message_signifier
-                        if self.config.first_message_hidden_quote:
-                            prompt += "\""
+                        prompt += message_prefix
                     logging.info(f"Raw Prompt: {prompt}")
+                    if symbol_insert != "":
+                        logging.info(f"Symbol Inserted: {symbol_insert}")
                     return self.client.completions.create(prompt=prompt,
                         model=self.config.llm, 
                         max_tokens=self.config.max_tokens,
