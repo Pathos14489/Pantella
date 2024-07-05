@@ -236,8 +236,9 @@ class Character:
         valid_names = [name for name in valid_names if name not in self.config.banned_learnable_names]
         lower_case_versions = [name.lower() for name in valid_names]
         pairs = list(zip(valid_names, lower_case_versions))
+        msg_words = msg.split(" ")
         for name, lower_case_name in pairs:
-            if lower_case_name in msg.lower():
+            if lower_case_name in msg_words:
                 self.meet(name, add_game_events)
 
     def __str__(self):
