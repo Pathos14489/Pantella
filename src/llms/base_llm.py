@@ -649,11 +649,11 @@ class base_LLM():
         await sentence_queue.put(None) # Mark the end of the response for self.conversation_manager.game_interface.send_response() and self.conversation_manager.game_interface.send_response()
 
         full_reply = full_reply.strip()
-        try: 
-            if sentence_behavior != None:
-                full_reply = sentence_behavior.keyword + ": " + full_reply.strip() # add the keyword back to the sentence to reinforce to the that the keyword was used to trigger the bahavior
-        except:
-            pass
+        # try: 
+        #     if sentence_behavior != None:
+        #         full_reply = sentence_behavior.keyword + ": " + full_reply.strip() # add the keyword back to the sentence to reinforce to the that the keyword was used to trigger the bahavior
+        # except:
+        #     pass
 
         if next_author is not None and full_reply != '':
             self.conversation_manager.new_message({"role": self.config.assistant_name, 'name':next_author, "content": full_reply})
