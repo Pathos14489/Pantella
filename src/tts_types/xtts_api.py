@@ -119,7 +119,10 @@ class Synthesizer(base_tts.base_Synthesizer):
     @utils.time_it
     def _synthesize_line_xtts(self, line, save_path, character, aggro=0):
         """Synthesize a line using the xTTS API"""
-        voice_model = self.get_valid_voice_model(character)
+        if type(character) == str:
+            voice_model = character
+        else:
+            voice_model = self.get_valid_voice_model(character)
         data = {
             'text': line,
             'speaker_wav': voice_model,
@@ -164,3 +167,10 @@ class Synthesizer(base_tts.base_Synthesizer):
 
         return final_voiceline_file
     
+    
+    def _say(self, voiceline, voice_model="Female Sultry", volume=0.5):
+        voiceline_location = f"{self.output_path}\\voicelines\\{self.last_voice}\\direct.wav"
+        if not os.path.exists(voiceline_location):
+            os.makedirs(os.path.dirname(voiceline_location), exist_ok=True)
+        self._synthesize_line_xtts(voiceline, voiceline_location)
+        self.play_voiceline(voiceline_location, volume)

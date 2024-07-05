@@ -60,6 +60,14 @@ class Synthesizer(base_tts.base_Synthesizer):
         self.set_available_voices_url = f'{self.config.xvasynth_base_url}/setAvailableVoices'
         logging.info(f'xVASynth - Available voices: {self.voices()}')
         
+    def _say(self, voiceline, voice_model="Female Sultry", volume=0.5):
+        self.change_voice(voice_model)
+        voiceline_location = f"{self.output_path}\\voicelines\\{self.last_voice}\\direct.wav"
+        if not os.path.exists(voiceline_location):
+            os.makedirs(os.path.dirname(voiceline_location), exist_ok=True)
+        self._synthesize_line(voiceline, voiceline_location)
+        self.play_voiceline(voiceline_location, volume)
+        
     def check_if_xvasynth_is_running(self):
         """Check if xVASynth is running and start it if it isn't"""
         self.times_checked_xvasynth += 1
@@ -181,7 +189,7 @@ class Synthesizer(base_tts.base_Synthesizer):
         return voices
 
     @utils.time_it
-    def _synthesize_line(self, line, save_path, character, aggro=0):
+    def _synthesize_line(self, line, save_path, character=None, aggro=0):
         """Synthesize a line using xVASynth"""
         pluginsContext = {}
         # in combat
@@ -189,6 +197,7 @@ class Synthesizer(base_tts.base_Synthesizer):
             pluginsContext["mantella_settings"] = {
                 "emAngry": 0.6
             }
+        base_lang = character.language_code if character else 'en'
         data = {
             'pluginsContext': json.dumps(pluginsContext),
             'modelType': self.model_type,
@@ -196,7 +205,7 @@ class Synthesizer(base_tts.base_Synthesizer):
             'pace': self.pace,
             'outfile': save_path,
             'vocoder': 'n/a',
-            'base_lang': character.language_code,
+            'base_lang': base_lang,
             'base_emb': self.base_speaker_emb,
             'useSR': self.use_sr,
             'useCleanup': self.use_cleanup,
@@ -305,7 +314,10 @@ class Synthesizer(base_tts.base_Synthesizer):
     @utils.time_it
     def change_voice(self, character):
         """Change the voice model to the specified character's voice model"""
-        voice = self.get_valid_voice_model(character) # character.voice_model
+        if type(character) == str:
+            voice = character
+        else:
+            voice = self.get_valid_voice_model(character) # character.voice_model
 
         if voice is None:
             logging.error(f'Voice model {character.voice_model} not available! Please add it to xVASynth voices list.')
@@ -344,7 +356,7 @@ class Synthesizer(base_tts.base_Synthesizer):
             'version': '3.0',
             'model': voice_path, 
             'modelType': self.model_type,
-            'base_lang': character.language_code, 
+            'base_lang': character.language_code if type(character) != str else 'en',
             'pluginsContext': '{}',
         }
         requests.post(self.loadmodel_url, json=model_change)

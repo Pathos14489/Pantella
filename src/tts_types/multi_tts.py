@@ -42,3 +42,17 @@ class Synthesizer(base_tts.base_Synthesizer):
                 raise ValueError(f"Could not find tts engine for voice model: {character.voice_model}! Please check your config.json file and try again!")
         else:
             return tts.synthesize(voiceline, character, **kwargs)
+        
+    def _say(self, voiceline, voice_model="Female Sultry", volume=0.5):
+        tts = None
+        for tts_engine in self.tts_engines:
+            if tts_engine.get_valid_voice_model(voice_model) != None:
+                tts = tts_engine
+                break
+        if tts is None:
+            logging.error(f"Could not find tts engine for voice model: {voice_model}! Please check your config.json file and try again!")
+            if self.crashable:
+                input("Press enter to continue...")
+                raise ValueError(f"Could not find tts engine for voice model: {voice_model}! Please check your config.json file and try again!")
+        else:
+            return tts._say(voiceline, voice_model=voice_model, volume=volume)
