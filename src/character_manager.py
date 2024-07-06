@@ -99,7 +99,7 @@ class Character:
 
     def meet(self, other_character_name, add_game_events=True):
         if other_character_name not in self.knows:
-            meet_string = f"{self.name} remmebered {other_character_name}'s name."
+            meet_string = f"{self.name} remembered {other_character_name}'s name."
             logging.info(meet_string)
             if add_game_events:
                 with open(f'{self.conversation_manager.config.game_path}/_pantella_in_game_events.txt', 'a') as f:

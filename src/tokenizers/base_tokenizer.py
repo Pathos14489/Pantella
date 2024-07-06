@@ -10,7 +10,7 @@ class base_Tokenizer(): # Tokenizes(only availble for counting the tokens in a s
         # self.EOS_token = self.config.EOS_token # End of string token
         # self.role_seperator = self.config.role_seperator # Seperates the role from the name
         # self.message_signifier = self.config.message_signifier # Signifies the start of a message
-        # self.message_seperator = self.config.message_seperator # Seperates messages
+        # self.message_separator = self.config.message_separator # Seperates messages
         # self.message_format = self.config.message_format # Format of a message. A string of messages formatted like this is what is sent to the language model, typically following by the start of a message from the assistant to generate a response
 
     @property
@@ -30,8 +30,8 @@ class base_Tokenizer(): # Tokenizes(only availble for counting the tokens in a s
         return self.config.message_signifier
     
     @property
-    def message_seperator(self):
-        return self.config.message_seperator
+    def message_separator(self):
+        return self.config.message_separator
     
     @property
     def message_format(self):
@@ -67,7 +67,7 @@ class base_Tokenizer(): # Tokenizes(only availble for counting the tokens in a s
         parsed_msg_part = parsed_msg_part.replace("[name]",name)
         parsed_msg_part = parsed_msg_part.replace("[message_signifier]",msg_sig)
         parsed_msg_part = parsed_msg_part.replace("[EOS_token]",self.EOS_token)
-        parsed_msg_part = parsed_msg_part.replace("[message_seperator]",self.message_seperator)
+        parsed_msg_part = parsed_msg_part.replace("[message_separator]",self.message_separator)
         parsed_msg_part = parsed_msg_part.split("[content]")[0]
         return parsed_msg_part
 
@@ -91,7 +91,7 @@ class base_Tokenizer(): # Tokenizes(only availble for counting the tokens in a s
         parsed_msg_part = parsed_msg_part.replace("[name]",name)
         parsed_msg_part = parsed_msg_part.replace("[message_signifier]",msg_sig)
         parsed_msg_part = parsed_msg_part.replace("[EOS_token]",self.EOS_token)
-        parsed_msg_part = parsed_msg_part.replace("[message_seperator]",self.message_seperator)
+        parsed_msg_part = parsed_msg_part.replace("[message_separator]",self.message_separator)
         parsed_msg_part = parsed_msg_part.split("[content]")[1]
         return parsed_msg_part
 

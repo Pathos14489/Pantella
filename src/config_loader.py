@@ -35,8 +35,8 @@ class ConfigLoader:
         self.EOS_token = "<im_end>"
         self.message_signifier = ": "
         self.role_seperator = "\n"
-        self.message_seperator = "\n"
-        self.message_format = "[BOS_token][role][role_seperator][name][message_signifier][content][EOS_token][message_seperator]"
+        self.message_separator = "\n"
+        self.message_format = "[BOS_token][role][role_seperator][name][message_signifier][content][EOS_token][message_separator]"
         self.system_name = "system"
         self.user_name = "user"
         self.assistant_name = "assistant"
@@ -169,7 +169,7 @@ class ConfigLoader:
         self.EOS_token = self._prompt_style["EOS_token"]
         self.message_signifier = self._prompt_style["message_signifier"]
         self.role_seperator = self._prompt_style["role_seperator"]
-        self.message_seperator = self._prompt_style["message_seperator"]
+        self.message_separator = self._prompt_style["message_separator"]
         self.message_format = self._prompt_style["message_format"]
         self.system_name = self._prompt_style["system_name"]
         self.user_name = self._prompt_style["user_name"]

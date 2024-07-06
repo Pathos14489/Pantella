@@ -125,7 +125,7 @@ class LLM(base_LLM.base_LLM):
         while retries > 0 and completion is None:
             try:
                 openai_stop = list(self.stop)
-                openai_stop = [self.config.message_seperator] + openai_stop
+                openai_stop = [self.config.message_separator] + openai_stop
                 if self.config.alternative_openai_api_base == 'none': # OpenAI stop is the first 4 options in the stop list because they only support up to 4 for some asinine reason
                     openai_stop = openai_stop[:4]
                 else:
@@ -226,7 +226,7 @@ class LLM(base_LLM.base_LLM):
         while retries > 0:
             try:
                 openai_stop = list(self.stop)
-                openai_stop = [self.config.message_seperator,self.config.message_signifier,self.config.EOS_token,self.config.BOS_token] + openai_stop
+                openai_stop = [self.config.message_separator,self.config.message_signifier,self.config.EOS_token,self.config.BOS_token] + openai_stop
                 if self.config.alternative_openai_api_base == 'none': # OpenAI stop is the first 4 options in the stop list because they only support up to 4 for some asinine reason
                     openai_stop = openai_stop[:4]
                 else:
