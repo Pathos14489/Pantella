@@ -23,6 +23,7 @@ class base_LLM():
         self.end_of_sentence_chars = self.config.end_of_sentence_chars
         self.end_of_sentence_chars = [unicodedata.normalize('NFKC', char) for char in self.end_of_sentence_chars]
         self.banned_chars = self.config.banned_chars
+        self.banned_chars.append(self.config.message_separator)
         if not self.config.allow_npc_custom_game_events:
             self.banned_chars.append("*") # prevent NPCs from using custom game events via asterisk RP actions
         self.banned_chars = [char for char in self.banned_chars if char != '']
@@ -259,7 +260,7 @@ class base_LLM():
                 if self.character_manager.active_character_count() > 1: # if multi NPC conversation use the player's actual name
                     formatted_msg = {
                         'role': self.config.user_name,
-                        'name': self.player_name,
+                        'name': msg['name'] if "name" in msg else self.player_name,
                         'content': msg['content'],
                     }
                     if "timestamp" in msg:
@@ -272,7 +273,7 @@ class base_LLM():
                     perspective_player_name, _ = self.game_interface.active_character.get_perspective_player_identity()
                     formatted_msg = {
                         'role': self.config.user_name,
-                        'name': perspective_player_name,
+                        'name': msg['name'] if "name" in msg else perspective_player_name,
                         'content': msg['content'],
                     }
                     if "timestamp" in msg:
