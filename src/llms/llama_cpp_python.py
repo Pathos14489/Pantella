@@ -95,7 +95,7 @@ class LLM(base_LLM.base_LLM): # Uses llama-cpp-python as the LLM inference engin
             break
         return completion
     
-    def acreate(self, messages, message_prefix="", force_speaker=None): # Creates a completion stream for the messages provided to generate a speaker and their response
+    def acreate(self, messages, message_prefix="", force_speaker=None, banned_chars=[]): # Creates a completion stream for the messages provided to generate a speaker and their response
         logging.info(f"aMessages: {messages}")
         retries = 5
         while retries > 0:
@@ -114,7 +114,7 @@ class LLM(base_LLM.base_LLM): # Uses llama-cpp-python as the LLM inference engin
                     min_p=self.min_p,
                     temperature=self.temperature,
                     repeat_penalty=self.repeat_penalty, 
-                    stop=self.stop,
+                    stop=self.stop + banned_chars,
                     frequency_penalty=self.frequency_penalty,
                     presence_penalty=self.presence_penalty,
                     typical_p=self.typical_p,

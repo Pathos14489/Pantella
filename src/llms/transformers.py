@@ -177,7 +177,7 @@ class LLM(base_LLM.base_LLM): # Uses llama-cpp-python as the LLM inference engin
             break
         return completion
     
-    def acreate(self, messages, force_speaker=None): # Creates a completion stream for the messages provided to generate a speaker and their response
+    def acreate(self, messages,  message_prefix="", force_speaker=None, banned_chars=[]): # Creates a completion stream for the messages provided to generate a speaker and their response
         retries = 5
         while retries > 0:
             logging.info(f"Retries: {retries}")
@@ -186,11 +186,12 @@ class LLM(base_LLM.base_LLM): # Uses llama-cpp-python as the LLM inference engin
                 prompt += self.tokenizer.start_message(self.config.assistant_name) # Start empty message from no one to let the LLM generate the speaker by split \n
                 if force_speaker is not None:
                     prompt += force_speaker.name + self.config.message_signifier
+                    prompt += message_prefix
                 logging.info(f"Raw Prompt: {prompt}")
                 logging.info(f"Type of prompt: {type(prompt)}")
                 inputs = self.tokenizer.tokenizer(prompt, return_tensors="pt").to(self.device_map)
                 
-                streamer = StoppingTextIteratorStreamer(self.tokenizer.tokenizer, self, stops=self.config.stop, skip_prompt=True)
+                streamer = StoppingTextIteratorStreamer(self.tokenizer.tokenizer, self, stops=self.config.stop+banned_chars, skip_prompt=True)
                 criteria = StoppingTextIteratorStoppingCriteria(streamer.stop_bool)
                 criteria_list = StoppingCriteriaList()
                 criteria_list.append(criteria)
