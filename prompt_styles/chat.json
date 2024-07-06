@@ -11,8 +11,8 @@
         "EOS_token": "<im_end>",
         "message_signifier": ": ",
         "role_seperator": "\n",
-        "message_seperator": "\n",
-        "message_format": "[BOS_token][role][role_seperator][name][message_signifier][content][EOS_token][message_seperator]",
+        "message_separator": "\n",
+        "message_format": "[BOS_token][role][role_seperator][name][message_signifier][content][EOS_token][message_separator]",
         "system_name": "system",
         "user_name": "user",
         "assistant_name": "assistant"
