@@ -332,14 +332,22 @@ class MemoryManager(base_MemoryManager):
     @property
     def memories(self):
         """Return the current memories of the character"""
-        mem_messages = [{
-            "role": self.config.system_name,
-            "content": "The following messages are examples of how behaviors work. Behaviors are how the assistant can do actions in the game world. If an asterisk roleplay coincides with a behavior the assistant should use the behavior to facilitate the asterisk roleplay in the game world. Here are the the examples of how behaviors work:",
-            "type": "prompt"
-        }]
-        behavior_memories = self.conversation_manager.behavior_manager.get_behavior_memories(self.character_manager)
-        for memory in behavior_memories:
-            mem_messages.append(memory)
+        if self.config.behavior_example_insertion:
+            mem_messages = [{
+                "role": self.config.system_name,
+                "content": "The following messages are examples of how behaviors work. Behaviors are how the assistant can do actions in the game world. If an asterisk roleplay coincides with a behavior the assistant should use the behavior to facilitate the asterisk roleplay in the game world. Here are the the examples of how behaviors work:",
+                "type": "prompt"
+            }]
+            behavior_memories = self.conversation_manager.behavior_manager.get_behavior_memories(self.character_manager)
+            for memory in behavior_memories:
+                mem_messages.append(memory)
+            mem_messages.append({
+                "role": self.config.system_name,
+                "content": "Only the behaviors demonstrated above are real and exist. Any other word put inside parenthesis will not work.",
+                "type": "prompt"
+            })
+        else:
+            mem_messages = []
         if len(self.current_memories) == 0:
             return mem_messages
         mem_messages.append({
