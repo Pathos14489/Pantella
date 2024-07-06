@@ -56,16 +56,17 @@ class BehaviorManager():
         """Evaluate the keyword for behaviors that should run."""
         logging.info(f"Evaluating sentence \"{sentence}\" for behaviors, next_author: {next_author}")
         sentence_words = sentence.split(" ")
+        ran_behaviors = []
         for behavior in self.behaviors:
             rendered_behavior = self.render_behavior(behavior)
             if rendered_behavior in sentence_words:
                 logging.info(f"Behavior triggered: {behavior.keyword}")
                 try:
                     behavior._run(True, next_author, sentence=sentence)
-                    return True
+                    ran_behaviors.append(behavior)
                 except Exception as e:
                     logging.error(f"Error running behavior {behavior.keyword}: {e}")
-        return None
+        return ran_behaviors
     
     def pre_sentence_evaluate(self, next_author, sentence): # Evaluates just the sentence, returns the behavior that was run
         """Evaluate the sentence for behaviors that should run before the sentence is spoken."""
