@@ -121,7 +121,7 @@ class Characters:
         replacement_dict["context"] = ""
         context_string = self.conversation_manager.game_interface.get_current_context_string()
         if context_string is not None and context_string != "":
-            replacement_dict["context"] = context_string
+            replacement_dict["context"] = context_string.format(**replacement_dict)
 
         return replacement_dict
 
