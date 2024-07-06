@@ -334,7 +334,7 @@ class MemoryManager(base_MemoryManager):
         """Return the current memories of the character"""
         mem_messages = [{
             "role": self.config.system_name,
-            "content": self.name+" has used the following behaviors before:",
+            "content": "The following messages are examples of how behaviors work. Behaviors are how the assistant can do actions in the game world. If an asterisk roleplay coincides with a behavior the assistant should use the behavior to facilitate the asterisk roleplay in the game world. Here are the the examples of how behaviors work:",
             "type": "prompt"
         }]
         behavior_memories = self.conversation_manager.behavior_manager.get_behavior_memories(self.character_manager)
