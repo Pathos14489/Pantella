@@ -133,7 +133,7 @@ class MemoryManager(base_MemoryManager):
     def query(self):
         """Return the query string for the memory manager using the self.config.query_size"""
         query_string = ""
-        for i in range(self.config.chromedb_query_size):
+        for i in range(self.config.chromadb_query_size):
             if i < len(self.conversation_manager.messages):
                 query_string += self.conversation_manager.messages[-1-i]["content"] + "\n"
             else:

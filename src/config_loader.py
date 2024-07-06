@@ -388,7 +388,7 @@ class ConfigLoader:
                 },
                 "chromadb_memory_depth": 1,
                 "chromadb_memory_direction": "topdown", # topdown or bottomup
-                "chromedb_query_size": 5,
+                "chromadb_query_size": 5,
                 "behavior_example_insertion": True,
             },
             "Microphone": {
@@ -811,7 +811,7 @@ class ConfigLoader:
                 "emotion_composition": self.emotion_composition,
                 "chromadb_memory_depth": self.chromadb_memory_depth,
                 "chromadb_memory_direction": self.chromadb_memory_direction,
-                "chromedb_query_size": self.chromedb_query_size,
+                "chromadb_query_size": self.chromadb_query_size,
                 "behavior_example_insertion": self.behavior_example_insertion,
             },
             "Microphone": {

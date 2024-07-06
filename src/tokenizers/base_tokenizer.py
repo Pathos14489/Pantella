@@ -8,9 +8,9 @@ class base_Tokenizer(): # Tokenizes(only availble for counting the tokens in a s
         # Prommpt Parsing Stuff
         # self.BOS_token = self.config.BOS_token # Beginning of string token
         # self.EOS_token = self.config.EOS_token # End of string token
-        # self.role_seperator = self.config.role_seperator # Seperates the role from the name
+        # self.role_seperator = self.config.role_seperator # separates the role from the name
         # self.message_signifier = self.config.message_signifier # Signifies the start of a message
-        # self.message_separator = self.config.message_separator # Seperates messages
+        # self.message_separator = self.config.message_separator # separates messages
         # self.message_format = self.config.message_format # Format of a message. A string of messages formatted like this is what is sent to the language model, typically following by the start of a message from the assistant to generate a response
 
     @property

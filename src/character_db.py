@@ -7,7 +7,7 @@ import pandas as pd
 logging.info("Imported required libraries in character_db.py")
 
 class CharacterDB():
-    def __init__(self, conversation_manager): # character_database_directory is the path to a character directory where each character is a seperate json file
+    def __init__(self, conversation_manager): # character_database_directory is the path to a character directory where each character is a separate json file
         self.conversation_manager = conversation_manager
         self.config = self.conversation_manager.config
         self.synthesizer = conversation_manager.synthesizer
