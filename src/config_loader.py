@@ -499,7 +499,7 @@ class ConfigLoader:
                 "end_conversation_wait_time": 1,
                 "sentences_per_voiceline": 2,
                 "missing_voice_model_crash": True,
-                "narrator_voice": "FemaleSultry",
+                "narrator_voice": "MaleKhajiit",
                 "narrator_volume": 0.5, # 50% volume
                 "narrator_delay": 0.2, # 200ms delay
             },
