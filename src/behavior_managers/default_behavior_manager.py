@@ -52,14 +52,13 @@ class BehaviorManager():
                     keywords.append(behavior.keyword)
         return keywords
     
-    def evaluate(self,  next_author, sentence): # Returns True if the keyword was found and the behavior was run, False otherwise
+    def evaluate(self, possible_word, next_author, sentence): # Returns True if the keyword was found and the behavior was run, False otherwise
         """Evaluate the keyword for behaviors that should run."""
         logging.info(f"Evaluating sentence \"{sentence}\" for behaviors, next_author: {next_author}")
-        sentence_words = sentence.split(" ")
         ran_behaviors = []
         for behavior in self.behaviors:
             rendered_behavior = self.render_behavior(behavior)
-            if rendered_behavior in sentence_words:
+            if rendered_behavior == possible_word:
                 logging.info(f"Behavior triggered: {behavior.keyword}")
                 try:
                     behavior._run(True, next_author, sentence=sentence)

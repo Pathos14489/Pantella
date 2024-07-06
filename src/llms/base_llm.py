@@ -24,6 +24,8 @@ class base_LLM():
         self.end_of_sentence_chars = [unicodedata.normalize('NFKC', char) for char in self.end_of_sentence_chars]
         self.banned_chars = self.config.banned_chars
         self.banned_chars.append(self.config.message_separator)
+        self.banned_chars.append(self.config.EOS_token)
+        self.banned_chars.append(self.config.BOS_token)
         if not self.config.allow_npc_custom_game_events:
             self.banned_chars.append("*") # prevent NPCs from using custom game events via asterisk RP actions
         self.banned_chars = [char for char in self.banned_chars if char != '']
@@ -168,7 +170,7 @@ class base_LLM():
         input("Press enter to continue...")
         raise NotImplementedError("Please override this method in your child class!")
 
-    def acreate(self, messages, message_prefix="", force_speaker=None): # Creates a completion stream for the messages provided to generate a speaker and their response
+    def acreate(self, messages, message_prefix="", force_speaker=None, banned_chars=[]): # Creates a completion stream for the messages provided to generate a speaker and their response
         """Generate a streameed response from the LLM using the messages provided"""
         logging.info(f"Warning: Using base_LLM.acreate() instead of a child class, this is probably not what you want to do. Please override this method in your child class!")
         input("Press enter to continue...")
@@ -197,16 +199,16 @@ class base_LLM():
                     logging.info(f"Removed response containing single asterisks: {sentence}")
                     sentence = ''
 
-            if '(' in sentence or ')' in sentence:
-                # Check if sentence contains two brackets
-                bracket_check = re.search(r"\(.*\)", sentence)
-                if bracket_check:
-                    logging.info(f"Removed brackets text from response: {sentence}")
-                    # Remove text between brackets
-                    sentence = re.sub(r"\(.*?\)", "", sentence)
-                else:
-                    logging.info(f"Removed response containing single brackets: {sentence}")
-                    sentence = ''
+            # if '(' in sentence or ')' in sentence:
+            #     # Check if sentence contains two brackets
+            #     bracket_check = re.search(r"\(.*\)", sentence)
+            #     if bracket_check:
+            #         logging.info(f"Removed brackets text from response: {sentence}")
+            #         # Remove text between brackets
+            #         sentence = re.sub(r"\(.*?\)", "", sentence)
+            #     else:
+            #         logging.info(f"Removed response containing single brackets: {sentence}")
+            #         sentence = ''
 
             return sentence
         
@@ -216,13 +218,9 @@ class base_LLM():
         if self.config.as_a_check:
             sentence = remove_as_a(sentence)
         sentence = sentence.replace('"','')
-        # sentence = sentence.replace('[', '(')
-        # sentence = sentence.replace(']', ')')
-        # sentence = sentence.replace('{', '(')
-        # sentence = sentence.replace('}', ')')
-        if not eos:
-            sentence = sentence.replace("<", "")
-            sentence = sentence.replace(">", "")
+        # if not eos:
+        #     sentence = sentence.replace("<", "")
+        #     sentence = sentence.replace(">", "")
         # models sometimes get the idea in their head to use double asterisks **like this** in sentences instead of single
         # this converts double asterisks to single so that they can be filtered out or included appropriately
         while "**" in sentence:
@@ -266,6 +264,8 @@ class base_LLM():
                         'name': msg['name'] if "name" in msg else self.player_name,
                         'content': msg['content'],
                     }
+                    if msg["name"] == "[player]":
+                        formatted_msg["name"] = self.player_name
                     if "timestamp" in msg:
                         formatted_msg["timestamp"] = msg["timestamp"]
                     if "location" in msg:
@@ -279,6 +279,8 @@ class base_LLM():
                         'name': msg['name'] if "name" in msg else perspective_player_name,
                         'content': msg['content'],
                     }
+                    if msg["name"] == "[player]":
+                        formatted_msg["name"] = perspective_player_name
                     if "timestamp" in msg:
                         formatted_msg["timestamp"] = msg["timestamp"]
                     if "location" in msg:
@@ -325,9 +327,9 @@ class base_LLM():
             formatted_messages.append(formatted_msg)
         return formatted_messages
     
-    def generate_response(self, message_prefix="", force_speaker=None):
+    def generate_response(self, message_prefix="", force_speaker=None, banned_chars=[]):
         """Generate response from LLM one text chunk at a time"""
-        for chunk in self.acreate(self.get_context(), message_prefix=message_prefix, force_speaker=force_speaker):
+        for chunk in self.acreate(self.get_context(), message_prefix=message_prefix, force_speaker=force_speaker, banned_chars=banned_chars):
             yield chunk
         
     def format_content(self, chunk):
@@ -446,7 +448,7 @@ class base_LLM():
                 last_chunk = None
                 same_chunk_count = 0
                 logging.info(f"Starting response generation...")
-                for chunk in self.generate_response(message_prefix=symbol_insert, force_speaker=force_speaker):
+                for chunk in self.generate_response(message_prefix=symbol_insert, force_speaker=force_speaker, banned_chars=self.banned_chars):
                     eos = False 
                     content = self.format_content(chunk)
                     logging.info(f"Content: {content}")
@@ -475,7 +477,12 @@ class base_LLM():
                     
                     new_speaker = False
                     if "*" in content: # if the content contains an asterisk, then either the narrator has started speaking or the narrator has stopped speaking and the NPC is speaking
-                        sentence, next_speaker_sentence = sentence.split("*", 1)
+                        sentences = sentence.split("*", 1)
+                        if len(sentences) == 2:
+                            sentence, next_speaker_sentence = sentences[0], sentences[1]
+                        else:
+                            sentence = sentences[0]
+                            new_sentence = ""
                         new_speaker = True
 
                     if eos:
@@ -505,17 +512,10 @@ class base_LLM():
                             
                         sentence, next_sentence = self.split_and_preverse_strings_on_end_of_sentence(sentence, next_sentence)
                             
-                        if self.EOS_token in sentence:
+                        if self.EOS_token in sentence or self.EOS_token in sentence.lower():
                             sentence = sentence.split(self.EOS_token)[0]
                             logging.info(f"EOS token found in sentence. Trimming last sentence to: {sentence}")
                             eos = True
-                        
-                        sentence = self.clean_sentence(sentence, eos) # clean the sentence
-                        for char in self.banned_chars:
-                            if char in sentence:
-                                eos = True
-                                sentence = sentence.split(char)[0]
-                                break
                             
                         # grammarless_stripped_sentence = sentence.replace(".", "").replace("?", "").replace("!", "").replace(",", "").strip()
                         # if grammarless_stripped_sentence == '' and sentence != "...": # if the sentence is empty after cleaning, then skip it - unless it's an ellipsis
@@ -533,14 +533,34 @@ class base_LLM():
 
                         logging.info(f"LLM took {time.time() - beginning_of_sentence_time} seconds to generate sentence")
 
-                        # if LLM is switching character
-                        found_behaviors = self.conversation_manager.behavior_manager.evaluate(self.conversation_manager.game_interface.active_character, sentence) # check if the sentence contains any behavior keywords for NPCs
+
+                        logging.info(f"Checking for behaviors using behavior style: {self.behavior_style}")
+                        found_behaviors = []
+                        if self.behavior_style["prefix"] in sentence:
+                            sentence_words = sentence.split(" ")
+                            new_sentence = ""
+                            for word in sentence_words:
+                                if self.behavior_style["prefix"] in word and self.behavior_style["suffix"] in word:
+                                    new_behaviors = self.conversation_manager.behavior_manager.evaluate(word, self.conversation_manager.game_interface.active_character, sentence) # check if the sentence contains any behavior keywords for NPCs
+                                    if len(new_behaviors) > 0:
+                                        found_behaviors.extend(new_behaviors)
+                                        logging.info(f"Behaviors triggered: {new_behaviors}")
+                                elif self.behavior_style["prefix"] in word and not self.behavior_style["suffix"] in word: # if the word contains the prefix but not the suffix, then the suffix is probably in the next word, which is likely a format break.
+                                    break
+                                new_sentence += word + " "
+                            sentence = new_sentence
                         if len(found_behaviors) == 0:
                             logging.warn(f"No behaviors triggered by sentence: {sentence}")
                         else:
                             for behavior in found_behaviors:
                                 logging.info(f"Behavior triggered: {behavior.keyword}")
                                 
+
+                        sentence = self.clean_sentence(sentence, eos) # clean the sentence
+                        for char in self.banned_chars:
+                            if char in sentence:
+                                eos = True
+                                sentence = sentence.split(char)[0]
 
                         voice_line = voice_line.strip() + " " + sentence.strip() # add the sentence to the voice line in progress
                         if len(full_reply) > 0 and full_reply[-1] != "*": # if the full reply is not empty and the last character is not an asterisk, then add a space before the sentence
@@ -569,6 +589,12 @@ class base_LLM():
                             if self.config.strip_smalls and len(voice_line.strip()) < self.config.small_size:
                                 logging.info(f"Skipping small voice line: {voice_line}")
                                 break
+                            voice_line = voice_line.replace('[', '(')
+                            voice_line = voice_line.replace(']', ')')
+                            voice_line = voice_line.replace('{', '(')
+                            voice_line = voice_line.replace('}', ')')
+                            # remove any parentheses groups from the voiceline.
+                            voice_line = re.sub(r'\([^)]*\)', '', voice_line)
                             if asterisk_open: # if the asterisk is open, then the narrator is speaking
                                 time.sleep(self.config.narrator_delay)
                                 self.conversation_manager.synthesizer._say(voice_line.strip(), self.config.narrator_voice, self.config.narrator_volume)
