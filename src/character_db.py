@@ -78,22 +78,49 @@ class CharacterDB():
             if file.endswith(".json"):
                 character = json.load(open(os.path.join(path, file)))
                 character = self.format_character(character)
+                self._characters.append(character)
+                self.unique_ref_index[f"{character['name']}({character['ref_id']})[{character['base_id']}]"] = character
                 if character['name'] != None and character['name'] != "" and character['name'] != "nan":
-                    self._characters.append(character)
-                    self.named_index[character['name']] = self.characters[-1]
-                    if character['base_id'] != None and str(character['base_id']) != "" and str(character['base_id']) != "nan":
-                        self.base_id_index[character['base_id']] = self.characters[-1]
-                    if character['ref_id'] != None and str(character['ref_id']) != "" and str(character['ref_id']) != "nan":
-                        self.ref_id_index[character['ref_id']] = self.characters[-1]
-                    self.unique_ref_index[f"{character['name']}({character['ref_id']})[{character['base_id']}]"] = self.characters[-1]
+                    self.named_index[character['name']] = character
+                if character['base_id'] != None and str(character['base_id']) != "" and str(character['base_id']) != "nan":
+                    self.base_id_index[character['base_id']] = character
+                if character['ref_id'] != None and str(character['ref_id']) != "" and str(character['ref_id']) != "nan":
+                    self.ref_id_index[character['ref_id']] = character
         if self.db_type != None and self.db_type != 'json':
             self.db_type = 'mixed'
         else:
             self.db_type = 'json'
         logging.info(f"Loaded {len(self.characters)} characters from JSON {path}")
+    
+    def load_characters_csv(self, path=None):
+        if path is None:
+            path = self.character_database_path
+        if type(path) == list:
+            path = path[0]
+        logging.info(f"Loading character database from CSV at '{path}'...")
+        encoding = utils.get_file_encoding(path)
+        character_database = pd.read_csv(path, engine='python', encoding=encoding)
+        character_database = character_database.loc[character_database['voice_model'].notna()]
+        for _, row in character_database.iterrows():
+            character = row.to_dict()
+            character = self.format_character(character)
+            self._characters.append(character)
+            self.unique_ref_index[f"{character['name']}({character['ref_id']})[{character['base_id']}]"] = character
+            if character['name'] != None and character['name'] != "" and character['name'] != "nan":
+                self.named_index[character['name']] = character
+            if character['base_id'] != None and str(character['base_id']).strip() != "" and str(character['base_id']).strip().lower() != "nan":
+                self.base_id_index[character['base_id']] = character
+            if character['ref_id'] != None and str(character['ref_id']).strip() != "" and str(character['ref_id']).strip().lower() != "nan":
+                self.ref_id_index[character['ref_id']] = character
+        if self.db_type != None and self.db_type != 'csv':
+            self.db_type = 'mixed'
+        else:
+            self.db_type = 'csv'
+        logging.info(f"Loaded {len(self.characters)} characters from csv {path}")
 
     def format_character(self, character):
         # Check if character card v2
+        formatted_character = {}
         if "data" in character: # Character Card V2 probably
             pantella_format = {
                 "bio_url": "",
@@ -112,55 +139,29 @@ class CharacterDB():
                 "behavior_whitelist": [],
                 "author and notes": "Character Card V2"
             }
-            return pantella_format
+            formatted_character = pantella_format
         else: # Add a proper check for Pantella Format
             formatted_character = {
                 "bio_url": character["bio_url"] if "bio_url" in character else "",
-                "bio": character["bio"] if "bio" in character else "",
-                "name": character["name"] if "name" in character else "",
+                "bio": character["bio"] if "bio" in character and character["bio"] != "" and str(character["bio"]).lower() != "nan" else "",
+                "name": character["name"] if "name" in character and character["name"] != "" and str(character["name"]).lower() != "nan" else "",
                 "voice_model": character["voice_model"] if "voice_model" in character else "",
                 "skyrim_voice_folder": character["skyrim_voice_folder"] if "skyrim_voice_folder" in character else "",
                 "race": character["race"],
                 "gender": character["gender"],
                 "species": character["species"],
-                "ref_id": character["ref_id"],
-                "base_id": character["base_id"],
+                "ref_id": character["ref_id"] if "ref_id" in character and character["ref_id"] != "" and str(character["ref_id"]).lower() != "nan" else "",
+                "base_id": character["base_id"] if "base_id" in character and character["base_id"] != "" and str(character["base_id"]).lower() != "nan" else "",
                 "lang_override": character["lang_override"] if "lang_override" in character else "",
                 "is_generic_npc": character["is_generic_npc"] if "is_generic_npc" in character else False,
                 "behavior_blacklist": character["behavior_blacklist"] if "behavior_blacklist" in character else [],
                 "behavior_whitelist": character["behavior_whitelist"] if "behavior_whitelist" in character else [],
                 "notes": character["author and notes"] if "author and notes" in character else character["notes"] if "notes" in character else ""
             }
-            for key in formatted_character:
-                if str(formatted_character[key]).lower() == "nan":
-                    formatted_character[key] = None
-            return formatted_character
-    
-    def load_characters_csv(self, path=None):
-        if path is None:
-            path = self.character_database_path
-        if type(path) == list:
-            path = path[0]
-        logging.info(f"Loading character database from CSV at '{path}'...")
-        encoding = utils.get_file_encoding(path)
-        character_database = pd.read_csv(path, engine='python', encoding=encoding)
-        character_database = character_database.loc[character_database['voice_model'].notna()]
-        for _, row in character_database.iterrows():
-            character = row.to_dict()
-            character = self.format_character(character)
-            if character['name'] != None and character['name'] != "" and character['name'] != "nan":
-                self._characters.append(character)
-                self.named_index[character['name']] = self.characters[-1]
-                if character['base_id'] != None and str(character['base_id']).strip() != "" and str(character['base_id']).strip().lower() != "nan":
-                    self.base_id_index[character['base_id']] = self.characters[-1]
-                if character['ref_id'] != None and str(character['ref_id']).strip() != "" and str(character['ref_id']).strip().lower() != "nan":
-                    self.ref_id_index[character['ref_id']] = self.characters[-1]
-                self.unique_ref_index[f"{character['name']}({character['ref_id']})[{character['base_id']}]"] = self.characters[-1]
-        if self.db_type != None and self.db_type != 'csv':
-            self.db_type = 'mixed'
-        else:
-            self.db_type = 'csv'
-        logging.info(f"Loaded {len(self.characters)} characters from csv {path}")
+        for key in formatted_character:
+            if str(formatted_character[key]).lower() == "nan":
+                formatted_character[key] = None
+        return formatted_character
 
     def get_unique_ref_index(self,character):
         return self.unique_ref_index[f"{character['name']}({character['ref_id']})[{character['base_id']}]"]
@@ -175,6 +176,7 @@ class CharacterDB():
         return sorted_characters
 
     def patch_character_info(self,info): # Patches information about a character into the character database and if db_type is json, saves the changes to the json file
+        info = self.format_character(info)
         if info['name'] != None and info['name'] != "" and info['name'] != "nan":
             self._characters.append(info)
             self.named_index[info['name']] = self.characters[-1]
@@ -279,53 +281,88 @@ class CharacterDB():
                         logging.info("(The rest of the program will continue to run, but this character might not be able to be used)")
 
     def get_character(self, character_name, character_ref_id=None, character_base_id=None): # Get a character from the character database using the character's name, refid_int, or baseid_int
-        if str(character_ref_id).lower() == "nan":
+        if character_ref_id is not None:
+            if str(character_ref_id).lower() == "nan":
+                character_ref_id = None
+            if type(character_ref_id) == float:
+                character_ref_id = int(character_ref_id)
+        if character_base_id is not None:
+            if str(character_base_id).lower() == "nan":
+                character_base_id = None    
+            if type(character_base_id) == float:
+                character_base_id = int(character_base_id)
+        if character_ref_id.strip() == "":
             character_ref_id = None
-        if str(character_base_id).lower() == "nan":
+        if character_base_id.strip() == "":
             character_base_id = None
-        if type(character_ref_id) == float:
-            character_ref_id = int(character_ref_id)
-        if type(character_base_id) == float:
-            character_base_id = int(character_base_id)
+        logging.info(f"Getting character '{character_name}({character_ref_id})[{character_base_id}]'...")
         try:
             character_ref_id = int(character_ref_id) if character_ref_id is not None else 0 # Convert int id to hex if it is not None
+            logging.info("character_ref_id is int:",character_ref_id)
         except: # Hex
             try:
                 character_ref_id = int(character_ref_id, 16) if character_ref_id is not None else 0
+                logging.info("character_ref_id is hex:",character_ref_id)
             except:
                 logging.error(f"Could not convert ref_id '{character_ref_id}' to int or hex.")
         try:
             character_base_id = int(character_base_id) if character_base_id is not None else 0 # Convert int id to hex if it is not None
+            logging.info("character_base_id is int:",character_base_id)
         except: # Hex
             try:
                 character_base_id = int(character_base_id, 16) if character_base_id is not None else 0
+                logging.info("character_base_id is hex:",character_base_id)
             except:
                 logging.error(f"Could not convert base_id '{character_base_id}' to int or hex.")
+        if type(character_ref_id) == str:
+            try:
+                character_ref_id = int(character_ref_id, 16)
+            except:
+                try:
+                    character_ref_id = int(character_ref_id)
+                except:
+                    logging.error(f"Could not convert ref_id string '{character_ref_id}' to hex or int.")
+        if type(character_base_id) == str:
+            try:
+                character_base_id = int(character_base_id, 16)
+            except:
+                try:
+                    character_base_id = int(character_base_id)
+                except:
+                    logging.error(f"Could not convert base_id string '{character_base_id}' to hex or int.")
         character_ref_id = abs(character_ref_id)
+        logging.info(f"character_ref_id abs: {character_ref_id}")
         character_base_id = abs(character_base_id)
+        logging.info(f"character_base_id abs: {character_base_id}")
         logging.info(f"Getting character '{character_name}({character_ref_id})[{character_base_id}]<({hex(character_ref_id)})[{hex(character_base_id)}]>'...")
+        # TODO: is the 3: correct or should it be 2:?
         character_ref_id = hex(character_ref_id)[3:] if character_ref_id is not None else 0 # Convert int id to hex if it is not None
         character_base_id = hex(character_base_id)[3:] if character_base_id is not None else 0 # Convert int id to hex if it is not None
         logging.info(f"Fixed IDs: '{character_name}({character_ref_id})[{character_base_id}]' - Getting character from character database using name lookup...")
         return self._get_character(character_name, character_ref_id, character_base_id)
 
     def _get_character(self, character_name, character_ref_id=None, character_base_id=None): # Get a character from the character database using the character's name, refid_int, or baseid_int
+        logging.info(f"_getting character '{character_name}({character_ref_id})[{character_base_id}]'...")
         possibly_same_character = []
         character = None
         is_generic_npc = False
         if str(character_name) == "nan":
             character_name = None
+            logging.info(f"character_name is None: {character_name}")
         if character_ref_id is not None and str(character_ref_id).strip() == "" or character_ref_id == 0:
             character_ref_id = None
+            logging.info(f"character_ref_id is None: {character_ref_id}")
         if character_base_id is not None and str(character_base_id).strip() == "" or character_base_id == 0:
             character_base_id = None
+            logging.info(f"character_base_id is None: {character_base_id}")
 
         # if at least something can't be used to find the character with, return None,None
         if character_name is None and character_ref_id is None and character_base_id is None:
-            logging.error(f"Could not find character '{character_name}' in character database using name lookup.")
+            logging.error(f"Could not find character '{character_name}' in character database.")
+            # TODO: Character generation
             return None, None, {"name": False, "ref_id": False, "base_id": False}
         
-        logging.info(f"Getting character '{character_name}({character_ref_id})[{character_base_id}]' associations from character database...")
+        # logging.info(f"Getting character '{character_name}({character_ref_id})[{character_base_id}]' associations from character database...")
         # for db_character in self.characters: # Try to find any character with the same name and ref_id and add it to the possibly_same_character list
         #     if character_name is not None and character_name.lower() == str(db_character['name']).lower():
         #         possibly_same_character.append(db_character)
@@ -336,75 +373,52 @@ class CharacterDB():
         #     elif character_base_id is not None and (character_base_id == db_character['base_id'] or str(character_base_id).endswith(str(db_character["base_id"]))):
         #         possibly_same_character.append(db_character)
         #         logging.info(f"Found possible character '{db_character['name']}' association in character database using base_id lookup.")
-        unique_ref_match = None
-        name_match = None
-        ref_id_match = None
-        base_id_match = None
+        character_match = None
+        is_generic_npc = False
+        matching_parts = {
+            "name": False,
+            "ref_id": False,
+            "base_id": False
+        }
+        # Unique Reference Lookup
         if character_name is not None and character_ref_id is not None and character_base_id is not None:
             if f"{character_name}({character_ref_id})[{character_base_id}]" in self.unique_ref_index:
-                unique_ref_match = self.unique_ref_index[f"{character_name}({character_ref_id})[{character_base_id}]"]
-                logging.info(f"Found possible character '{character_name}' association in character database using unique_ref lookup.")
-                return unique_ref_match, False, {"name": True, "ref_id": True, "base_id": True}
-        if character_name is not None:
+                character_match = self.unique_ref_index[f"{character_name}({character_ref_id})[{character_base_id}]"]
+                matching_parts = {"name": True, "ref_id": True, "base_id": True}
+                logging.info(f"Found possible character '{character_name}' association in character database using unique reference lookup.")
+        # Name Lookup
+        if character_name is not None and character_match is None:
             if character_name in self.named_index:
-                name_match = self.named_index[character_name]
+                character_match = self.named_index[character_name]
+                matching_parts = {
+                    "name": True,
+                    "ref_id": character_match['ref_id'] == character_ref_id,
+                    "base_id": character_match['base_id'] == character_base_id
+                }
                 logging.info(f"Found possible character '{character_name}' association in character database using name lookup.")
-        if character_ref_id is not None:
-            if character_ref_id in self.ref_id_index:
-                ref_id_match = self.ref_id_index[character_ref_id]
-                logging.info(f"Found possible character '{character_name}' association in character database using ref_id lookup.")
-        if character_base_id is not None:
+        # Ref/Base ID Lookup
+        if character_ref_id is not None and character_base_id is not None and character_match is None:
+            for db_character in self._characters:
+                if db_character['ref_id'] == character_ref_id and db_character['base_id'] == character_base_id:
+                    character_match = db_character
+                    matching_parts = {
+                        "name": character_match['name'] == character_name,
+                        "ref_id": True,
+                        "base_id": True
+                    }
+                    logging.info(f"Found possible character '{character_name}' association in character database using ref_id and base_id lookup.")
+        # Base ID Lookup
+        if character_base_id is not None and character_match is None:
             if character_base_id in self.base_id_index:
-                base_id_match = self.base_id_index[character_base_id]
+                character_match = self.base_id_index[character_base_id]
+                matching_parts = {
+                    "name": character_match['name'] == character_name,
+                    "ref_id": character_match['ref_id'] == character_ref_id,
+                    "base_id": True
+                }
+                is_generic_npc = character_match['is_generic_npc'] if "is_generic_npc" in character_match else True
                 logging.info(f"Found possible character '{character_name}' association in character database using base_id lookup.")
-        possibly_same_character = [name_match, ref_id_match, base_id_match]
-        possibly_same_character = [x for x in possibly_same_character if x is not None]
-        # Check for duplicates
-        possibly_same_character_dict = {}
-        for character in possibly_same_character:
-            possibly_same_character_dict[character['name']] = character
-        possibly_same_character = list(possibly_same_character_dict.values())
-        if len(possibly_same_character) < 1: # If there aren't any characters with the same info, fail
-            logging.error(f"Could not find character '{character_name}' in character database.")
-            return None, None, {"name": False, "ref_id": False, "base_id": False}
-        
-        if len(possibly_same_character) == 1: # If there is only one character with the same name, use that character
-            character = possibly_same_character[0]
-            logging.info(f"Returning character '{character['name']}' because it was the only one in the database with an association.")
-        elif len(possibly_same_character) > 1: # If there are multiple characters with the same name, try to find one with the same ref_id
-            best_match = None
-            best_match_score = 0
-            for db_character in possibly_same_character:
-                score = 0
-                if character_name is not None and character_name.lower() == str(db_character['name']).lower():
-                    score += 2
-                if character_ref_id is not None and (character_ref_id == db_character['ref_id'] or str(character_ref_id).endswith(str(db_character["ref_id"]))):
-                    score += 1
-                if character_base_id is not None and (character_base_id == db_character['base_id'] or str(character_base_id).endswith(str(db_character["base_id"]))):
-                    score += 1
-                if score > best_match_score:
-                    best_match = db_character
-                    best_match_score = score
-            if best_match is not None:
-                character = best_match
-                logging.info(f"Returning character '{character['name']}' because it was the best match in the database with an association.")
-        if character is None: # No character was found, print an error message and wait for the user to press enter before exiting the program
-            logging.warning(f"Could not find character '{character_name}' in character database using name lookup.")
-            logging.warning(f"Could not find character '{character_ref_id}' in character database using ref_id lookup.")
-            logging.warning(f"Could not find character '{character_base_id}' in character database using base_id lookup.")
-            logging.error(f"Could not find character '{character_name}' in character database.")
-            input("Press enter to continue...")
-            raise Exception(f"Could not find character '{character_name}' in character database.")
-        matching_parts = {
-            "name": character_name is not None and character_name.lower() == str(character['name']).lower(),
-            "ref_id": character_ref_id is not None and (character_ref_id == character['ref_id'] or str(character_ref_id).endswith(str(character["ref_id"]))),
-            "base_id": character_base_id is not None and (character_base_id == character['base_id'] or str(character_base_id).endswith(str(character["base_id"]))),
-        }
-        logging.info(f"Found character '{character['name']}' in character database. Matching parts: {matching_parts}")
-        if matching_parts["base_id"] and not matching_parts["ref_id"]: # If the base_id matches but the ref_id doesn't, this is probably a generic character
-            is_generic_npc = True
-
-        return character, is_generic_npc, matching_parts
+        return character_match, is_generic_npc, matching_parts
 
     def has_character(self, character):
         if str(character['name']) == "nan":
