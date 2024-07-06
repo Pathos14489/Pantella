@@ -174,7 +174,7 @@ class base_LLM():
         input("Press enter to continue...")
         raise NotImplementedError("Please override this method in your child class!")
     
-    def clean_sentence(self, sentence):
+    def clean_sentence(self, sentence, eos=False):
         """Clean the sentence by removing unwanted characters and formatting it properly"""
         logging.info(f"Cleaning sentence: {sentence}")
         def remove_as_a(sentence):
@@ -220,6 +220,9 @@ class base_LLM():
         # sentence = sentence.replace(']', ')')
         # sentence = sentence.replace('{', '(')
         # sentence = sentence.replace('}', ')')
+        if not eos:
+            sentence = sentence.replace("<", "")
+            sentence = sentence.replace(">", "")
         # models sometimes get the idea in their head to use double asterisks **like this** in sentences instead of single
         # this converts double asterisks to single so that they can be filtered out or included appropriately
         while "**" in sentence:
@@ -227,7 +230,7 @@ class base_LLM():
         if not self.config.allow_npc_custom_game_events:
             sentence = parse_asterisks_brackets(sentence)
         sentence = unicodedata.normalize('NFKC', sentence)
-
+        sentence = sentence.strip()
         logging.info(f"Cleaned sentence: {sentence}")
         return sentence
 
@@ -502,7 +505,18 @@ class base_LLM():
                             
                         sentence, next_sentence = self.split_and_preverse_strings_on_end_of_sentence(sentence, next_sentence)
                             
-                        sentence = self.clean_sentence(sentence) # clean the sentence
+                        if self.EOS_token in sentence:
+                            sentence = sentence.split(self.EOS_token)[0]
+                            logging.info(f"EOS token found in sentence. Trimming last sentence to: {sentence}")
+                            eos = True
+                        
+                        sentence = self.clean_sentence(sentence, eos) # clean the sentence
+                        for char in self.banned_chars:
+                            if char in sentence:
+                                eos = True
+                                sentence = sentence.split(char)[0]
+                                break
+                            
                         # grammarless_stripped_sentence = sentence.replace(".", "").replace("?", "").replace("!", "").replace(",", "").strip()
                         # if grammarless_stripped_sentence == '' and sentence != "...": # if the sentence is empty after cleaning, then skip it - unless it's an ellipsis
                         #     logging.info(f"Skipping empty sentence")
@@ -527,10 +541,6 @@ class base_LLM():
                             for behavior in found_behaviors:
                                 logging.info(f"Behavior triggered: {behavior.keyword}")
                                 
-                        if self.EOS_token in sentence:
-                            sentence = sentence.split(self.EOS_token)[0]
-                            logging.info(f"EOS token found in sentence. Trimming last sentence to: {sentence}")
-                            eos = True
 
                         voice_line = voice_line.strip() + " " + sentence.strip() # add the sentence to the voice line in progress
                         if len(full_reply) > 0 and full_reply[-1] != "*": # if the full reply is not empty and the last character is not an asterisk, then add a space before the sentence
@@ -551,7 +561,7 @@ class base_LLM():
                         self.conversation_manager.behavior_manager.pre_sentence_evaluate(self.conversation_manager.game_interface.active_character, sentence,) # check if the sentence contains any behavior keywords for NPCs
                         if voice_line_sentences == self.config.sentences_per_voiceline: # if the voice line is ready, then generate the audio for the voice line
                             send_voiceline = True
-                        grammarless_stripped_voice_line = voice_line.replace(".", "").replace("?", "").replace("!", "").replace(",", "").strip()
+                        grammarless_stripped_voice_line = voice_line.replace(".", "").replace("?", "").replace("!", "").replace(",", "").replace("-", "").strip()
                         if grammarless_stripped_voice_line == '': # if the voice line is empty, then the narrator is speaking
                             send_voiceline = False
                         if send_voiceline: # if the voice line is ready, then generate the audio for the voice line
