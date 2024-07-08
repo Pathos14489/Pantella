@@ -417,9 +417,9 @@ class base_LLM():
         logging.info(f"Format: {self.config.message_format}")
 
         symbol_insert=""
-        if self.config.first_message_hidden_quote:
+        if self.config.first_message_hidden_quote and not self.config.first_message_hidden_asterisk:
             symbol_insert = "\""
-        elif self.config.first_message_hidden_asterisk:
+        elif self.config.first_message_hidden_asterisk and not self.config.first_message_hidden_quote:
             symbol_insert = "*"
         elif self.config.first_message_hidden_quote and self.config.first_message_hidden_asterisk:
             symbol_insert = random.choice(["\"","*"])
@@ -447,6 +447,7 @@ class base_LLM():
                 beginning_of_sentence_time = time.time()
                 last_chunk = None
                 same_chunk_count = 0
+                new_speaker = False
                 logging.info(f"Starting response generation...")
                 for chunk in self.generate_response(message_prefix=symbol_insert, force_speaker=force_speaker, banned_chars=self.banned_chars):
                     eos = False 
@@ -475,27 +476,28 @@ class base_LLM():
                     else:
                         sentence += content # add the content to the sentence in progress
                     
-                    new_speaker = False
                     if "*" in content: # if the content contains an asterisk, then either the narrator has started speaking or the narrator has stopped speaking and the NPC is speaking
+                        logging.info(f"Roleplay symbol found in content: {content}")
                         sentences = sentence.split("*", 1)
                         if len(sentences) == 2:
                             sentence, next_speaker_sentence = sentences[0], sentences[1]
                         else:
                             sentence = sentences[0]
-                            new_sentence = ""
+                            next_speaker_sentence = ""
                         new_speaker = True
+                    logging.info(f"Roleplay Active: {asterisk_open}")
 
                     if eos:
                         sentence = sentence.split(self.EOS_token)[0]
                         raw_reply = raw_reply.split(self.EOS_token)[0]
 
                     if (any(char in unicodedata.normalize('NFKC', content) for char in self.end_of_sentence_chars)) or (any(char in content for char in self.banned_chars)) or eos or new_speaker: # check if content marks the end of a sentence
-                        if "." in sentence and not first_period: # if the sentence contains a period and the first period has not been added yet, then add a period to the end of the sentence
-                            sentence += "."
-                            first_period = True
-                            continue
-                        elif "." in sentence and first_period: # if the sentence contains a period and the first period has been added, then the sentence is complete
-                            first_period = False
+                        # if "." in sentence and not first_period: # if the sentence contains a period and the first period has not been added yet, then add a period to the end of the sentence
+                        #     sentence += "."
+                        #     first_period = True
+                        #     continue
+                        # elif "." in sentence and first_period: # if the sentence contains a period and the first period has been added, then the sentence is complete
+                        #     first_period = False
                         # if sentence.strip() == '':
                         #     if num_sentences == 0:
                         #         logging.info(f"Empty response. Retrying...")
@@ -532,10 +534,12 @@ class base_LLM():
                         #         raise Exception('Empty sentence')
                         #     break
 
-                        if self.config.assist_check: # if remote, check if the response contains the word assist for some reason. Probably some OpenAI nonsense.
-                            if ('assist' in sentence) and (num_sentences>0): # Causes problems if asking a follower if you should "assist" someone, if they try to say something along the lines of "Yes, we should assist them." it will cut off the sentence and basically ignore the player. TODO: fix this with a more robust solution
-                                logging.info(f"'assist' keyword found. Ignoring sentence which begins with: {sentence}") 
-                                break # stop generating response
+                        if self.config.assist_check and 'assist' in sentence and num_sentences > 0: # if remote, check if the response contains the word assist for some reason. Probably some OpenAI nonsense.# Causes problems if asking a follower if you should "assist" someone, if they try to say something along the lines of "Yes, we should assist them." it will cut off the sentence and basically ignore the player. TODO: fix this with a more robust solution
+                            logging.info(f"'assist' keyword found. Ignoring sentence which begins with: {sentence}") 
+                            break # stop generating response
+                        if self.config.break_on_time_announcements and asterisk_open and "The time is now" in sentence:
+                            logging.info(f"Breaking on time announcement")
+                            break
 
                         logging.info(f"LLM took {time.time() - beginning_of_sentence_time} seconds to generate sentence")
 
@@ -583,19 +587,16 @@ class base_LLM():
                         if new_speaker: # if the content contains an asterisk, then either the narrator has started speaking or the narrator has stopped speaking and the NPC is speaking
                             send_voiceline = True
                         
-                        self.conversation_manager.behavior_manager.pre_sentence_evaluate(self.conversation_manager.game_interface.active_character, sentence,) # check if the sentence contains any behavior keywords for NPCs
                         if voice_line_sentences == self.config.sentences_per_voiceline: # if the voice line is ready, then generate the audio for the voice line
                             send_voiceline = True
-                        if send_voiceline and asterisk_open and self.config.break_on_time_announcements:
-                            if "*The time is now" in voice_line:
-                                voice_line = voice_line.split("*The time is now")[0]
-                                logging.info(f"Breaking on time announcement")
-                                break
                         grammarless_stripped_voice_line = voice_line.replace(".", "").replace("?", "").replace("!", "").replace(",", "").replace("-", "").strip()
                         if grammarless_stripped_voice_line == '': # if the voice line is empty, then the narrator is speaking
+                            logging.info(f"Skipping empty voice line")
                             send_voiceline = False
+                            voice_line = ''
                         if send_voiceline: # if the voice line is ready, then generate the audio for the voice line
                             logging.info(f"Generating voiceline: \"{voice_line.strip()}\" for {self.conversation_manager.game_interface.active_character.name}.")
+                            self.conversation_manager.behavior_manager.pre_sentence_evaluate(self.conversation_manager.game_interface.active_character, sentence,) # check if the sentence contains any behavior keywords for NPCs
                             if self.config.strip_smalls and len(voice_line.strip()) < self.config.small_size:
                                 logging.info(f"Skipping small voice line: {voice_line}")
                                 break
@@ -612,7 +613,7 @@ class base_LLM():
                                 await self.generate_voiceline(voice_line.strip(), sentence_queue, event)
                             voice_line_sentences = 0 # reset the number of sentences generated for the current voice line
                             voice_line = '' # reset the voice line for the next iteration
-                        self.conversation_manager.behavior_manager.post_sentence_evaluate(self.conversation_manager.game_interface.active_character, sentence) # check if the sentence contains any behavior keywords for NPCs
+                            self.conversation_manager.behavior_manager.post_sentence_evaluate(self.conversation_manager.game_interface.active_character, sentence) # check if the sentence contains any behavior keywords for NPCs
 
                         if new_speaker: # if the content contains an asterisk, then either the narrator has started speaking or the narrator has stopped speaking and the NPC is speaking
                             grammarless_stripped_next_speaker_sentence = next_speaker_sentence.replace(".", "").replace("?", "").replace("!", "").replace(",", "").strip()
@@ -705,6 +706,9 @@ class base_LLM():
         await sentence_queue.put(None) # Mark the end of the response for self.conversation_manager.game_interface.send_response() and self.conversation_manager.game_interface.send_response()
 
         full_reply = full_reply.strip()
+        
+        if full_reply.endswith("*") and full_reply.count("*") == 1: # TODO: Figure out the reason I need this bandaid solution... if only one asterisk at the end, remove it.
+            full_reply = full_reply[:-1].strip()
         # try: 
         #     if sentence_behavior != None:
         #         full_reply = sentence_behavior.keyword + ": " + full_reply.strip() # add the keyword back to the sentence to reinforce to the that the keyword was used to trigger the bahavior
