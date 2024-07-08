@@ -91,7 +91,6 @@ class ConversationManager(BaseConversationManager):
 
         self.game_interface.update_game_events() # update game events before first player input
         try: # get response from NPC to player greeting
-            # self.new_message({'role': "[player]", 'content': f"{self.language_info['hello']} {character.name}."}) # TODO: Make this more interesting, always having the character say hi like we aren't always with each other is bizzare imo
             pp_name, _ = character.get_perspective_player_identity()
             self.new_message({'role': self.config.system_name, 'content': "*"+pp_name+" approaches "+character.name+" with the intent to start a conversation with them.*"}) # TODO: Improve later
         except Exception as e: # if error, close Pantella

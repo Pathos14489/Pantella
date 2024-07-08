@@ -42,7 +42,7 @@ class base_Synthesizer:
         self.output_path = utils.resolve_path('data')+'\\data'
         # last active voice model
         self.language = self.config.language
-        self.crashable = self.config.missing_voice_model_crash
+        self.crashable = self.config.continue_on_voice_model_error
     
     def convert_to_16bit(self, input_file, output_file=None, override_sample_rate=None):
         if output_file is None:
@@ -90,7 +90,7 @@ class base_Synthesizer:
                 return option # return the first valid voice model found
         # return None # if no valid voice model is found
         logging.error(f'Voice model "{character.voice_model}" not available! Please add it to the voices list.')
-        if self.crashable and character.voice_model == None:
+        if self.continue_on_voice_model_error and character.voice_model == None:
             input("Press enter to continue...")
             raise VoiceModelNotFound(f'Voice model {character.voice_model} not available! Please add it to the voices list.')
 

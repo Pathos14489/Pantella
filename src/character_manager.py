@@ -32,12 +32,17 @@ class Character:
         # Legend for a few of the more important attributes:
         # self.ref_id - The reference ID of the character as hex with the first two numbers(the load order ID) removed - This is the id of the character in the game, so it is unique to each every single character in the game.
         # self.base_id - The base ID of the character as hex with the first two numbers(the load order ID) removed - This is the id of the character in the editor, so it is unique to each character type (e.g. all bandits have the same baseid, but all one of a single unique character has the same baseid as well)
-        if "lang_override" in self.info and self.info["lang_override"] != None and str(self.info["lang_override"]).strip() != "" and str(self.info["lang_override"]).strip() != "nan": # If the character has a language override, use it
-            logging.info(f"Language override found for {self.name}: {self.info['lang_override']}")
-            self.language_code = self.info["lang_override"]
-        else: # If the character does not have a language override, use the player's language
-            self.language_code = self.conversation_manager.language_info['alpha2']
-        self.language = self.conversation_manager.language_info['language']
+        if "language_override" in self.info and self.info["language_override"] != None and str(self.info["language_override"]).strip() != "" and str(self.info["language_override"]).strip() != "nan": # If the character has a language override, use it
+            logging.info(f"Language override found for {self.name}: {self.info['language_override']}")
+            self.language_code = self.info["language_override"]
+        else: # If the character does not have a language override, use the default language
+            self.language_code = self.config.default_language
+        self.language = self.config.languages[self.language_code]
+        if "tts_language_override" in self.info and self.info["tts_language_override"] != None and str(self.info["tts_language_override"]).strip() != "" and str(self.info["tts_language_override"]).strip() != "nan": # If the character has a language override, use it
+            logging.info(f"Language override found for {self.name}: {self.info['tts_language_override']}")
+            self.tts_language_code = self.info["tts_language_override"]
+        else: # If the character does not have a tts language override, use the default language
+            self.tts_language_code = self.language_code
         self.is_generic_npc = is_generic_npc
         if "in_game_relationship_level" not in self.info:
             self.in_game_relationship_level = 0
@@ -190,7 +195,7 @@ class Character:
             "perspective_player_name": perspective_name,
             "bio": self.bio,
             "trust": trust,
-            "language": self.language,
+            "language": self.language["language"],
         }
     
     @property
@@ -204,7 +209,7 @@ class Character:
             self.conversation_manager.new_message({"role": self.config.assistant_name, "name":self.name, "content": string}) # add string to ongoing conversation
 
     def leave_conversation(self):
-        random_goodbye = random.choice(self.conversation_manager.config.goodbye_npc_responses) # get random goodbye line from player
+        random_goodbye = random.choice(self.language['goodbye_npc_responses']) # get random goodbye line from player
         if random_goodbye.endswith('.'):
             random_goodbye = random_goodbye[:-1]
         self.say(random_goodbye+'.',False) # let the player know that the conversation is ending using the latest character in the conversation that isn't the player to say it
@@ -233,7 +238,7 @@ class Character:
         valid_names = [character["name"] for character in self.conversation_manager.character_database.characters]
         valid_names.append(self.conversation_manager.player_name)
         valid_names = [name for name in valid_names if name != None]
-        valid_names = [name for name in valid_names if name not in self.config.banned_learnable_names]
+        valid_names = [name for name in valid_names if name not in self.language["banned_learnable_names"]]
         lower_case_versions = [name.lower() for name in valid_names]
         pairs = list(zip(valid_names, lower_case_versions))
         msg_words = msg.split(" ")

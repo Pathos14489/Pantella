@@ -14,7 +14,6 @@ class base_LLM():
         self.conversation_manager = conversation_manager
         self.config = self.conversation_manager.config
         self.tokenizer = None
-        self.language_info = self.conversation_manager.language_info
         
         self.inference_engine_name = inference_engine_name
         self.tokenizer_slug = tokenizer_slug
@@ -26,7 +25,7 @@ class base_LLM():
         self.banned_chars.append(self.config.message_separator)
         self.banned_chars.append(self.config.EOS_token)
         self.banned_chars.append(self.config.BOS_token)
-        if not self.config.allow_npc_custom_game_events:
+        if not self.config.allow_npc_roleplay:
             self.banned_chars.append("*") # prevent NPCs from using custom game events via asterisk RP actions
         self.banned_chars = [char for char in self.banned_chars if char != '']
         self.end_of_sentence_chars = [char for char in self.end_of_sentence_chars if char != '']
@@ -225,7 +224,7 @@ class base_LLM():
         # this converts double asterisks to single so that they can be filtered out or included appropriately
         while "**" in sentence:
             sentence = sentence.replace('**','*')
-        if not self.config.allow_npc_custom_game_events:
+        if not self.config.allow_npc_roleplay:
             sentence = parse_asterisks_brackets(sentence)
         sentence = unicodedata.normalize('NFKC', sentence)
         sentence = sentence.strip()
@@ -583,6 +582,11 @@ class base_LLM():
                         grammarless_stripped_voice_line = voice_line.replace(".", "").replace("?", "").replace("!", "").replace(",", "").replace("-", "").strip()
                         if grammarless_stripped_voice_line == '': # if the voice line is empty, then the narrator is speaking
                             send_voiceline = False
+                        if send_voiceline and asterisk_open and self.config.break_on_time_announcements:
+                            if "*The time is now" in voice_line:
+                                voice_line = voice_line.split("*The time is now")[0]
+                                logging.info(f"Breaking on time announcement")
+                                break
                         if send_voiceline: # if the voice line is ready, then generate the audio for the voice line
                             logging.info(f"Generating voiceline: \"{voice_line.strip()}\" for {self.conversation_manager.game_interface.active_character.name}.")
                             if self.config.strip_smalls and len(voice_line.strip()) < self.config.small_size:

@@ -113,17 +113,15 @@ class BehaviorManager():
                     logging.error(f"Error running behavior {behavior.keyword}: {e}")
         return None
     
-    # def get_behavior_summary(self):
-    #     """Return a summary of all behaviors, and what they do.""" # TODO: Replace with a user editable template like message_format
-    #     summary = ""
-    #     for behavior in self.behaviors:
-    #         if behavior.valid():
-    #             if behavior.description is not None and not behavior.player_only:
-    #                 summary += f"{behavior.description}\n"
-    #                 if behavior.example is not None:
-    #                     summary += f"Example: {behavior.example}"
-    #                 summary += "\n"
-    #     return summary
+    def get_behavior_summary(self):
+        """Return a summary of all behaviors, and what they do.""" # TODO: Replace with a user editable template like message_format
+        summary = ""
+        for behavior in self.behaviors:
+            if behavior.valid():
+                if behavior.description is not None and not behavior.player_only:
+                    summary += f"{behavior.description}\n\n".replace("{command}",self.render_behavior(behavior))
+        summary = summary.strip()
+        return summary
 
     def get_behavior_memories(self, character):
         """Return a list of all behavior memories."""

@@ -33,8 +33,6 @@ class Transcriber:
         self.debug_mode = self.config.debug_mode
         self.debug_use_mic = self.config.debug_use_mic
         self.default_player_response = self.config.default_player_response
-        self.debug_exit_on_first_exchange = self.config.debug_exit_on_first_exchange
-        self.end_conversation_keywords = self.config.end_conversation_keywords
 
         self.call_count = 0
 
@@ -162,6 +160,7 @@ class Transcriber:
                 if 'openai' in url:
                     headers = {"Authorization": f"Bearer {openai.api_key}",}
                 else:
+                    logging.warn('Whisper URL not set to OpenAI API. If you are using a custom whisper server, please ensure the server is running and the URL is correct in config.json.')
                     headers = {"Authorization": "Bearer apikey",}
                 data = {'model': self.model}
                 files = {'file': open(audio, 'rb')}

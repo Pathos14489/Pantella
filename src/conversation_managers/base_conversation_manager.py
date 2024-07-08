@@ -19,7 +19,6 @@ class BaseConversationManager:
     def __init__(self, config, initialize=True):
         self.config = config
         self.config.conversation_manager = self
-        self.language_info = self.get_language_info()
         if self.config.ready:
             self.synthesizer = tts.create_Synthesizer(self) # Create Synthesizer object based on config - required by scripts for checking voice models, so is left out of self.initialize() intentionally
             self.character_database = character_db.CharacterDB(self) # Create Character Database Manager based on config - required by scripts for merging, patching and converting character databases, so is left out of self.initialize() intentionally
@@ -88,15 +87,6 @@ class BaseConversationManager:
     def create_new_character_manager(self):
         """Create a new Character Manager object based on the current ConversationManager object"""
         return characters_manager.Characters(self) # Create Character Manager object based on ConversationManager
-            
-    def get_language_info(self):
-        language_df = pd.read_csv(self.config.language_support_file_path)
-        try:
-            language_info = language_df.loc[language_df['alpha2']==self.config.language].to_dict('records')[0]
-            return language_info
-        except:
-            logging.error(f"Could not load language '{self.config.language}'. Please set a valid language in config.json\n")
-            logging.error(f"Valid languages are: {', '.join(language_df['alpha2'].tolist())}")
 
     def initialize(self):
         self.llm, self.tokenizer = language_models.create_LLM(self) # Create LLM and Tokenizer based on config

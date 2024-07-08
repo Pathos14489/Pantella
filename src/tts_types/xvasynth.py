@@ -197,7 +197,7 @@ class Synthesizer(base_tts.base_Synthesizer):
             pluginsContext["mantella_settings"] = {
                 "emAngry": 0.6
             }
-        base_lang = character.language_code if character else 'en'
+        base_lang = character.tts_language_code if character else 'en'
         data = {
             'pluginsContext': json.dumps(pluginsContext),
             'modelType': self.model_type,
@@ -210,6 +210,14 @@ class Synthesizer(base_tts.base_Synthesizer):
             'useSR': self.use_sr,
             'useCleanup': self.use_cleanup,
         }
+        logging.info(f'Synthesizing line: {line}')
+        logging.info(f'Saving to: {save_path}')
+        logging.info(f'Voice model: {self.last_voice}')
+        logging.info(f'Base language: {base_lang}')
+        logging.info(f'Base speaker emb: {self.base_speaker_emb}')
+        logging.info(f'Pace: {self.pace}')
+        logging.info(f'Use SR: {self.use_sr}')
+        logging.info(f'Use Cleanup: {self.use_cleanup}')
         requests.post(self.synthesize_url, json=data)
 
     @utils.time_it
@@ -356,7 +364,7 @@ class Synthesizer(base_tts.base_Synthesizer):
             'version': '3.0',
             'model': voice_path, 
             'modelType': self.model_type,
-            'base_lang': character.language_code if type(character) != str else 'en',
+            'base_lang': character.tts_language_code if type(character) != str else 'en',
             'pluginsContext': '{}',
         }
         requests.post(self.loadmodel_url, json=model_change)

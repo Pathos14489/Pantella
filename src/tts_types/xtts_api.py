@@ -126,7 +126,7 @@ class Synthesizer(base_tts.base_Synthesizer):
         data = {
             'text': line,
             'speaker_wav': voice_model,
-            'language': character.language_code
+            'language': character.tts_language_code
         }
         print(data)
         response = requests.post(self.synthesize_url_xtts, json=data)

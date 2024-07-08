@@ -133,7 +133,8 @@ class CharacterDB():
                 "species":"Human",
                 "ref_id": "",
                 "base_id": "",
-                "lang_override": "",
+                "language_override": "",
+                "tts_language_override": "",
                 "is_generic_npc": False,
                 "behavior_blacklist": [],
                 "behavior_whitelist": [],
@@ -147,12 +148,13 @@ class CharacterDB():
                 "name": character["name"] if "name" in character and character["name"] != "" and str(character["name"]).lower() != "nan" else "",
                 "voice_model": character["voice_model"] if "voice_model" in character else "",
                 "skyrim_voice_folder": character["skyrim_voice_folder"] if "skyrim_voice_folder" in character else "",
-                "race": character["race"],
-                "gender": character["gender"],
-                "species": character["species"],
+                "race": character["race"] if "race" in character else "",
+                "gender": character["gender"] if "gender" in character else "",
+                "species": character["species"] if "species" in character else "",
                 "ref_id": character["ref_id"] if "ref_id" in character and character["ref_id"] != "" and str(character["ref_id"]).lower() != "nan" else "",
                 "base_id": character["base_id"] if "base_id" in character and character["base_id"] != "" and str(character["base_id"]).lower() != "nan" else "",
-                "lang_override": character["lang_override"] if "lang_override" in character else "",
+                "language_override": character["lang_override"] if "lang_override" in character else character["language_override"] if "language_override" in character else "",
+                "tts_language_override": character["tts_language_override"] if "tts_language_override" in character else "",
                 "is_generic_npc": character["is_generic_npc"] if "is_generic_npc" in character else False,
                 "behavior_blacklist": character["behavior_blacklist"] if "behavior_blacklist" in character else [],
                 "behavior_whitelist": character["behavior_whitelist"] if "behavior_whitelist" in character else [],
@@ -380,6 +382,8 @@ class CharacterDB():
             "ref_id": False,
             "base_id": False
         }
+        character_ref_id = str(character_ref_id)
+        character_base_id = str(character_base_id)
         # Unique Reference Lookup
         if character_name is not None and character_ref_id is not None and character_base_id is not None:
             if f"{character_name}({character_ref_id})[{character_base_id}]" in self.unique_ref_index:
@@ -399,7 +403,7 @@ class CharacterDB():
         # Ref/Base ID Lookup
         if character_ref_id is not None and character_base_id is not None and character_match is None:
             for db_character in self._characters:
-                if db_character['ref_id'] == character_ref_id and db_character['base_id'] == character_base_id:
+                if str(db_character['ref_id']).endswith(character_ref_id) and str(db_character['base_id']).endswith(character_base_id):
                     character_match = db_character
                     matching_parts = {
                         "name": character_match['name'] == character_name,
@@ -407,7 +411,8 @@ class CharacterDB():
                         "base_id": True
                     }
                     logging.info(f"Found possible character '{character_name}' association in character database using ref_id and base_id lookup.")
-        # Base ID Lookup
+                    break
+        # Exact Base ID Lookup
         if character_base_id is not None and character_match is None:
             if character_base_id in self.base_id_index:
                 character_match = self.base_id_index[character_base_id]
@@ -418,6 +423,19 @@ class CharacterDB():
                 }
                 is_generic_npc = character_match['is_generic_npc'] if "is_generic_npc" in character_match else True
                 logging.info(f"Found possible character '{character_name}' association in character database using base_id lookup.")
+        # Endswith Base ID Lookup
+        if character_base_id is not None and character_match is None:
+            for db_character in self._characters:
+                if str(db_character['base_id']).endswith(character_base_id):
+                    character_match = db_character
+                    matching_parts = {
+                        "name": character_match['name'] == character_name,
+                        "ref_id": character_match['ref_id'] == character_ref_id,
+                        "base_id": True
+                    }
+                    is_generic_npc = character_match['is_generic_npc'] if "is_generic_npc" in character_match else True
+                    logging.info(f"Found possible character '{character_name}' association in character database using base_id lookup.")
+                    break
         return character_match, is_generic_npc, matching_parts
 
     def has_character(self, character):

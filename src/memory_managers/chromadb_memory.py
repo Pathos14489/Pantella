@@ -341,11 +341,18 @@ class MemoryManager(base_MemoryManager):
             behavior_memories = self.conversation_manager.behavior_manager.get_behavior_memories(self.character_manager)
             for memory in behavior_memories:
                 mem_messages.append(memory)
-            mem_messages.append({
-                "role": self.config.system_name,
-                "content": "Only the behaviors demonstrated above are real and exist. Any other word put inside parenthesis will not work.",
-                "type": "prompt"
-            })
+            if self.config.include_behavior_summary:
+                mem_messages.append({
+                    "role": self.config.system_name,
+                    "content": "Only the behaviors demonstrated above are real and exist. Any other word put inside parenthesis will not work. Here is a summary of the available behaviors:\n\n"+self.conversation_manager.behavior_manager.get_behavior_summary(),
+                    "type": "prompt"
+                })
+            else:
+                mem_messages.append({
+                    "role": self.config.system_name,
+                    "content": "Only the behaviors demonstrated above are real and exist. Any other word put inside parenthesis will not work.",
+                    "type": "prompt"
+                })
         else:
             mem_messages = []
         if len(self.current_memories) == 0:

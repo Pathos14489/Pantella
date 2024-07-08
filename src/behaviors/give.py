@@ -5,7 +5,7 @@ class give(base_behavior.BaseBehavior):
     def __init__(self, manager):
         super().__init__(manager)
         self.keyword = "Give"
-        self.description = "If {perspective_player_name} wants to take something from you, and you want to give it to them, begin your response with 'Give:'."
+        self.description = "If {perspective_player_name} wants to take something from you, and you want to give it to them, say '{command}' in your response."
         # self.example = "'Can you give me that?' 'Give: Sure, here you go.'"
         self.examples = [
             [

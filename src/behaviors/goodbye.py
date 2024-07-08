@@ -6,7 +6,7 @@ class goodbye(base_behavior.BaseBehavior):
         super().__init__(manager)
         self.keyword = "Goodbye"
         self.description = "If {perspective_player_name} is leaving or ending the conversation, this behavior will be called."
-        self.npc_post_keywords = self.conversation_manager.config.end_conversation_keywords
+        self.npc_post_keywords = self.conversation_manager.config.language["end_conversation_keywords"] # TODO: Reimplement this with new per-character language tracking for end_conversation_keywords
         self.valid_games = ["skyrim","skyrimvr"]
     
     def run(self, speaker_character=None, sentence=None):

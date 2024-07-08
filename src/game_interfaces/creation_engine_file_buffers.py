@@ -564,12 +564,12 @@ class GameInterface(BaseGameInterface):
         #         is_generic_npc = True
         if character_info == None:
             logging.error(f"Character {character_name} not found in character database.")
-            if self.config.crash_on_character_not_found:
-                raise ValueError(f"Character {character_name} not found in character database.")
-            else:
+            if self.config.continue_on_voice_model_error:
                 logging.warn(f"Character {character_name} not found in character database. Using generic NPC data.")
                 character_info = self.load_unnamed_npc(character_name)
                 is_generic_npc = True
+            else:
+                raise ValueError(f"Character {character_name} not found in character database.")
         else:
             is_generic_npc = False
 

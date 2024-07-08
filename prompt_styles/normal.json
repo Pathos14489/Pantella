@@ -5,7 +5,7 @@
         "single_npc_with_npc_prompt": "*{name1} is a {race1} {gendered_age1} that lives in Skyrim. {name1} can only speak {language1}.\n\n{bio1}\n\n{name2} is a {race2} {gendered_age2} that lives in Skyrim. {name2} can only speak {language2}.\n\n{bio2}*\n\nSometimes in-game events will be sent as system messages with the text between * symbols. System is not really there, no one will hear what System said, they will just know it. System is the narrator explaining the state of the world. Here is an example:\n\n*{name2} picked up a pair of gloves*\n\nHere is another:\n\n*{name1} dropped a Steel Sword*\n\n{name2} is having a conversation with {name2} in {location}.\n\nIt is {time12} {time_group}.Context:\n{context}\n\nThe following is a conversation that will be spoken aloud between {name1} and {name2}. Neither {name1} or {name2} will not respond with numbered lists, code, etc. only natural responses to the conversation.",
         "multi_npc_prompt": "*{bios}*\n\nContext:\n{context}\n\nSometimes in-game events will be sent as system messages with the text between * symbols. System is not really there, no one will hear what System said, they will just know it. System is the narrator explaining the state of the world. Here is an example:\n\n*{player_name} picked up a pair of gloves*\n\nHere is another:\n\n*{player_name} dropped a Steel Sword*\n\n{names_w_player} are having a conversation in {location} in {language}.\nIt is {time12} {time_group}.",
         "stop": ["<im_end>","<im_end>"],
-        "banned_chars": ["{", "}", "\"", "<", "im_"],
+        "banned_chars": ["{", "}", "\"", "<", "im_", "<im_end"],
         "end_of_sentence_chars": [".", "?", "!"],
         "BOS_token": "<im_start>",
         "EOS_token": "<im_end>",

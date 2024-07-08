@@ -5,7 +5,7 @@ class big_crime(base_behavior.BaseBehavior):
     def __init__(self, manager):
         super().__init__(manager)
         self.keyword = "ReportBigCrime"
-        self.description = "If you want to report {perspective_player_name} for committing a really bad crime, begin your response with 'ReportBigCrime:'."
+        self.description = "If you want to report {perspective_player_name} for committing a really bad crime, say '{command}' in your response."
         # self.example = "'Haha! I killed your family!' 'ReportBigCrime: Guards! Guards help!' 'I'm going to murder you!' 'ReportBigCrime: Guards, help me! Someone call the guards!'"
         self.examples = [
             [

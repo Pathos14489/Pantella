@@ -73,7 +73,7 @@ class Characters:
             replacement_dicts = [{f"{k}{i+1}": v for k, v in replacement_dicts[i].items()} for i in range(len(replacement_dicts))]
             # combine the replacement_dicts
             replacement_dict = {k: v for d in replacement_dicts for k, v in d.items()}
-            replacement_dict["language"] = self.conversation_manager.language_info['language']
+            replacement_dict["language"] = self.config.language["language"]
             replacement_dict["perspective_player_name"] = self.conversation_manager.player_name
             print(replacement_dict)
         else: # MultiNPC style context
@@ -83,7 +83,7 @@ class Characters:
                 "perspective_player_name": self.conversation_manager.player_name,
                 "relationship_summary": self.relationship_summary,
                 "bios": self.bios,
-                "langage": self.conversation_manager.language_info['language']
+                "langage": self.config.language["language"],
             }
         
         if self.conversation_manager.current_in_game_time is not None: # If in-game time is available, add in-game time properties to replacement_dict
@@ -97,14 +97,14 @@ class Characters:
         replacement_dict["player_name"] = self.conversation_manager.player_name
         replacement_dict["player_race"] = self.conversation_manager.player_race
         replacement_dict["player_gender"] = self.conversation_manager.player_gender
-        # replacement_dict["behavior_summary"] = self.conversation_manager.behavior_manager.get_behavior_summary() # Add behavior summary to replacement_dict and format it using replacement_dict before doing so
-        # if "name" in replacement_dict: # If name is in replacement_dict, add name2 and names to replacement_dict
-        #     replacement_dict["behavior_summary"] = replacement_dict["behavior_summary"].format(**replacement_dict)
-        # else:
-        #     replacement_dict["behavior_summary"] = replacement_dict["behavior_summary"].replace("{name}", "{name1}")
-        #     for name in self.names:
-        #         replacement_dict["name"+str(self.names.index(name)+1)] = name
-        #     replacement_dict["behavior_summary"] = replacement_dict["behavior_summary"].format(**replacement_dict)
+        replacement_dict["behavior_summary"] = self.conversation_manager.behavior_manager.get_behavior_summary() # Add behavior summary to replacement_dict and format it using replacement_dict before doing so
+        if "name" in replacement_dict: # If name is in replacement_dict, add name2 and names to replacement_dict
+            replacement_dict["behavior_summary"] = replacement_dict["behavior_summary"].format(**replacement_dict)
+        else:
+            replacement_dict["behavior_summary"] = replacement_dict["behavior_summary"].replace("{name}", "{name1}")
+            for name in self.names:
+                replacement_dict["name"+str(self.names.index(name)+1)] = name
+            replacement_dict["behavior_summary"] = replacement_dict["behavior_summary"].format(**replacement_dict)
         replacement_dict["behavior_keywords"] = ", ".join(self.conversation_manager.behavior_manager.behavior_keywords)
 
         
@@ -116,7 +116,7 @@ class Characters:
             replacement_dict["bios"] = replacement_dict["bios"].replace("{bios}", "").format(**replacement_dict)
 
         if "language" not in replacement_dict:
-            replacement_dict["language"] = self.conversation_manager.language_info['language']
+            replacement_dict["language"] = self.config.language["language"]
 
         replacement_dict["context"] = ""
         context_string = self.conversation_manager.game_interface.get_current_context_string()

@@ -155,7 +155,7 @@ class Synthesizer(base_tts.base_Synthesizer):
 
     #     out = self.model.inference(
     #         voiceline,
-    #         character.language_code,
+    #         character.tts_language_code,
     #         gpt_cond_latent,
     #         speaker_embedding,
     #         temperature=self.config.xtts_temperature,
