@@ -407,6 +407,7 @@ class base_LLM():
         num_sentences = 0 # used to keep track of how many sentences have been generated total
         voice_line_sentences = 0 # used to keep track of how many sentences have been generated for the current voice line
         send_voiceline = False # used to determine if the current sentence should be sent early
+        first_period = False # used to determine if the first period has been added to the sentence
         
         retries = 5
         bad_author_retries = 5
@@ -489,6 +490,12 @@ class base_LLM():
                         raw_reply = raw_reply.split(self.EOS_token)[0]
 
                     if (any(char in unicodedata.normalize('NFKC', content) for char in self.end_of_sentence_chars)) or (any(char in content for char in self.banned_chars)) or eos or new_speaker: # check if content marks the end of a sentence
+                        if "." in sentence and not first_period: # if the sentence contains a period and the first period has not been added yet, then add a period to the end of the sentence
+                            sentence += "."
+                            first_period = True
+                            continue
+                        elif "." in sentence and first_period: # if the sentence contains a period and the first period has been added, then the sentence is complete
+                            first_period = False
                         # if sentence.strip() == '':
                         #     if num_sentences == 0:
                         #         logging.info(f"Empty response. Retrying...")
@@ -579,14 +586,14 @@ class base_LLM():
                         self.conversation_manager.behavior_manager.pre_sentence_evaluate(self.conversation_manager.game_interface.active_character, sentence,) # check if the sentence contains any behavior keywords for NPCs
                         if voice_line_sentences == self.config.sentences_per_voiceline: # if the voice line is ready, then generate the audio for the voice line
                             send_voiceline = True
-                        grammarless_stripped_voice_line = voice_line.replace(".", "").replace("?", "").replace("!", "").replace(",", "").replace("-", "").strip()
-                        if grammarless_stripped_voice_line == '': # if the voice line is empty, then the narrator is speaking
-                            send_voiceline = False
                         if send_voiceline and asterisk_open and self.config.break_on_time_announcements:
                             if "*The time is now" in voice_line:
                                 voice_line = voice_line.split("*The time is now")[0]
                                 logging.info(f"Breaking on time announcement")
                                 break
+                        grammarless_stripped_voice_line = voice_line.replace(".", "").replace("?", "").replace("!", "").replace(",", "").replace("-", "").strip()
+                        if grammarless_stripped_voice_line == '': # if the voice line is empty, then the narrator is speaking
+                            send_voiceline = False
                         if send_voiceline: # if the voice line is ready, then generate the audio for the voice line
                             logging.info(f"Generating voiceline: \"{voice_line.strip()}\" for {self.conversation_manager.game_interface.active_character.name}.")
                             if self.config.strip_smalls and len(voice_line.strip()) < self.config.small_size:
