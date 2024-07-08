@@ -590,7 +590,7 @@ class base_LLM():
                         if voice_line_sentences == self.config.sentences_per_voiceline: # if the voice line is ready, then generate the audio for the voice line
                             send_voiceline = True
                         grammarless_stripped_voice_line = voice_line.replace(".", "").replace("?", "").replace("!", "").replace(",", "").replace("-", "").strip()
-                        if grammarless_stripped_voice_line == '': # if the voice line is empty, then the narrator is speaking
+                        if grammarless_stripped_voice_line == '' or voice_line.strip() == "": # if the voice line is empty, then the narrator is speaking
                             logging.info(f"Skipping empty voice line")
                             send_voiceline = False
                             voice_line = ''
@@ -611,9 +611,9 @@ class base_LLM():
                                 self.conversation_manager.synthesizer._say(voice_line.strip(), self.config.narrator_voice, self.config.narrator_volume)
                             else:
                                 await self.generate_voiceline(voice_line.strip(), sentence_queue, event)
-                            voice_line_sentences = 0 # reset the number of sentences generated for the current voice line
-                            voice_line = '' # reset the voice line for the next iteration
                             self.conversation_manager.behavior_manager.post_sentence_evaluate(self.conversation_manager.game_interface.active_character, sentence) # check if the sentence contains any behavior keywords for NPCs
+                        voice_line_sentences = 0 # reset the number of sentences generated for the current voice line
+                        voice_line = '' # reset the voice line for the next iteration
 
                         if new_speaker: # if the content contains an asterisk, then either the narrator has started speaking or the narrator has stopped speaking and the NPC is speaking
                             grammarless_stripped_next_speaker_sentence = next_speaker_sentence.replace(".", "").replace("?", "").replace("!", "").replace(",", "").strip()
