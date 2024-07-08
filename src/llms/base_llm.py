@@ -555,12 +555,11 @@ class base_LLM():
                             for behavior in found_behaviors:
                                 logging.info(f"Behavior triggered: {behavior.keyword}")
                                 
-
-                        sentence = self.clean_sentence(sentence, eos) # clean the sentence
                         for char in self.banned_chars:
                             if char in sentence:
                                 eos = True
                                 sentence = sentence.split(char)[0]
+                        sentence = self.clean_sentence(sentence, eos) # clean the sentence
 
                         voice_line = voice_line.strip() + " " + sentence.strip() # add the sentence to the voice line in progress
                         if len(full_reply) > 0 and full_reply[-1] != "*": # if the full reply is not empty and the last character is not an asterisk, then add a space before the sentence
@@ -635,11 +634,21 @@ class base_LLM():
                 logging.info(f"LLM response took {time.time() - start_time} seconds to execute")
                 break
             except Exception as e:
-                next_author = None
+                if force_speaker is not None:
+                    next_author = force_speaker.name
+                    proposed_next_author = next_author
+                else:
+                    next_author = None
+                    proposed_next_author = ''
                 verified_author = False
                 sentence = ''
+                next_sentence = ''
+                next_speaker_sentence = ''
                 voice_line = ''
                 full_reply = ''
+                num_sentences = 0
+                voice_line_sentences = 0
+                send_voiceline = False
                 if retries == 0:
                     logging.error(f"Could not connect to LLM API\nError:")
                     logging.error(e)
@@ -679,7 +688,6 @@ class base_LLM():
                 self.conversation_manager.synthesizer._say(voice_line.strip(), self.config.narrator_voice, self.config.narrator_volume)
             else:
                 await self.generate_voiceline(voice_line.strip(), sentence_queue, event)
-            # await self.generate_voiceline(voice_line, sentence_queue, event)
             voice_line_sentences = 0
             voice_line = ''
 

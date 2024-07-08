@@ -237,6 +237,8 @@ class Character:
         lower_case_versions = [name.lower() for name in valid_names]
         pairs = list(zip(valid_names, lower_case_versions))
         msg_words = msg.split(" ")
+        for char in self.config.end_of_sentence_chars + [",", ":", ";"]:
+            msg_words = [word.replace(char, "") for word in msg_words]
         for name, lower_case_name in pairs:
             if lower_case_name in msg_words:
                 self.meet(name, add_game_events)

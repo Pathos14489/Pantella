@@ -562,6 +562,19 @@ class GameInterface(BaseGameInterface):
         #         logging.info(f"NPC '{character_name}' could not be found in character database. If this is not a generic NPC, please ensure '{character_name}' exists in the CSV's 'name' column exactly as written here, and that there is a voice model associated with them.")
         #         character_info = self.load_unnamed_npc(character_name)
         #         is_generic_npc = True
+        if character_info == None:
+            logging.error(f"Character {character_name} not found in character database.")
+            if self.config.crash_on_character_not_found:
+                raise ValueError(f"Character {character_name} not found in character database.")
+            else:
+                logging.warn(f"Character {character_name} not found in character database. Using generic NPC data.")
+                character_info = self.load_unnamed_npc(character_name)
+                is_generic_npc = True
+        else:
+            is_generic_npc = False
+
+        if is_generic_npc:
+            logging.warn(f"Character {character_name} is a generic NPC! Please create a character entry for them in the character database to enable more features and a proper personality.")
 
         location = self.get_current_location(location) # Check if location has changed since last check
 
