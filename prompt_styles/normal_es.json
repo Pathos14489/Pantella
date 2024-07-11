@@ -104,6 +104,7 @@
         "chromadb_memories_explanation":"{self_name} is thinking about the following memories:",
         "summarizing_memory_prompt":"You are tasked with summarizing the conversation history between {self_name} and {other_name} / other characters. These conversations take place in Skyrim.\nEach paragraph represents a conversation at a new point in time. Please summarize these conversations into a single paragraph in {language}.",
         "summarizing_memory_explanation":"The following is a summary of {self_name}'s memories of what they've done/discussed:\n\n{summary}",
+        "intro_message":"*[player] approaches {name} with the intent to start a conversation with them.*",
         "game_events":{
             "time_update":"It is now {time12} {time_group}.",
             "player_started_combat": "[player] is fighting {name}.",

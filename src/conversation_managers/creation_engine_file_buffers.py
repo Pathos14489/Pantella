@@ -136,9 +136,7 @@ class ConversationManager(BaseConversationManager):
         prompt_style = self.character_manager.prompt_style # get prompt style from character manager
         if not self.radiant_dialogue: # initiate conversation with character
             try: # get response from NPC to player greeting
-                pp_name, _ = character.get_perspective_player_identity()
-                self.new_message({'role': self.config.conversation_start_role, 'content': "*"+pp_name+" approaches "+character.name+" with the intent to start a conversation with them.*"}) # TODO: Improve later
-
+                self.new_message({'role': self.config.conversation_start_role, 'content': self.character_manager.language["intro_message"].replace("{name}",character.name)}) # TODO: Improve more later
                 # Conversation Start Type Handling
                 if self.config.conversation_start_type == "always_llm_choice":
                     self.get_response()
