@@ -9,6 +9,7 @@ game_configs = {}
 # Get all game configs from src/game_configs/ and add them to game_configs
 for file in os.listdir(os.path.join(os.path.dirname(__file__), "../game_configs/")):
     if file.endswith(".json") and not file.startswith("__"):
+        logging.info(f"Importing game config {file}")
         game_id = file[:-5]
         game_configs[game_id] = json.load(open(os.path.join(os.path.dirname(__file__), "../game_configs", file)))
 logging.info("Imported all game configs, ready to use them!")
