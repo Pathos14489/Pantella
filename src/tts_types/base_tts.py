@@ -41,8 +41,11 @@ class base_Synthesizer:
         # output wav / lip files path
         self.output_path = utils.resolve_path('data')+'\\data'
         # last active voice model
-        self.language = self.config.language
         self.crashable = self.config.continue_on_voice_model_error
+
+    @property
+    def language(self):
+        return self.config.language # TODO: Make sure this works with prompt_styles
     
     def convert_to_16bit(self, input_file, output_file=None, override_sample_rate=None):
         if output_file is None:
