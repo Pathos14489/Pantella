@@ -5,7 +5,7 @@ class player_ai_wakeup(base_behavior.BaseBehavior):
     def __init__(self, manager):
         super().__init__(manager)
         self.keyword = "Wakeup"
-        self.description = "If {perspective_player_name} wants to wake everyone in the conversation up, they can by speaking the magic words."
+        self.description = "If [player] wants to wake everyone in the conversation up, they can by speaking the magic words."
         self.valid_games = ["skyrim","skyrimvr"]
         self.player_only = True
     

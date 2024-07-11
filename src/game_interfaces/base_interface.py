@@ -41,8 +41,8 @@ class BaseGameInterface:
     def update_game_events(self):
         logging.info(f"Updating game events...")
         new_game_events = []
-        for even in self.new_game_events:
-            new_game_events.append(even)
+        for game_event in self.new_game_events:
+            new_game_events.append(self.conversation_manager.character_manager.render_game_event(game_event))
         self.new_game_events = []
         logging.info("New Game Events:", new_game_events)
 
@@ -53,7 +53,12 @@ class BaseGameInterface:
         if self.new_time(in_game_time):
             time_group = utils.get_time_group(in_game_time['hour24'])
 
-            time_string = f"The time is now {in_game_time['time12']} {time_group}."
+            time_string = self.conversation_manager.character_manager.language["game_events"]["time_update"].format(
+                time_group=time_group,
+                time12=in_game_time['time24'],
+                time24=in_game_time['time24'],
+                ampm=in_game_time['ampm'],
+            )
             new_game_events.append(time_string)
             logging.info(time_string)
             

@@ -5,7 +5,7 @@ class take(base_behavior.BaseBehavior):
     def __init__(self, manager):
         super().__init__(manager)
         self.keyword = "Take"
-        self.description = "If {perspective_player_name} wants to give you something, or pay you directly, and you want to accept it, say '{command}' in your response."
+        self.description = "If [player] wants to give you something, or pay you directly, and you want to accept it, say '{command}' in your response."
         # self.example = "'Can I give you this?' 'Take: Thank you, I appreciate it.'" "'Here's a thousand septims.' 'Take: Thank you, I appreciate it.'"
         self.examples = [
             [

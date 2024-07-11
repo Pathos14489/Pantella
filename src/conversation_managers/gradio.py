@@ -128,7 +128,7 @@ class ConversationManager(BaseConversationManager):
 
             # check if user is ending conversation
             end_convo = False
-            for keyword in self.config.end_conversation_keywords:
+            for keyword in  self.character_manager.prompt_style["language"]["end_conversation_keywords"]:
                 if self.transcriber.activation_name_exists(transcript_cleaned, keyword):
                     end_convo = True
                     break

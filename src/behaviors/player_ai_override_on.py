@@ -5,7 +5,7 @@ class player_ai_override_on(base_behavior.BaseBehavior):
     def __init__(self, manager):
         super().__init__(manager)
         self.keyword = "EnableAI"
-        self.description = "If {perspective_player_name} wants to let everyone in the conversation move again, they can by speaking the magic words."
+        self.description = "If [player] wants to let everyone in the conversation move again, they can by speaking the magic words."
         self.valid_games = ["skyrim","skyrimvr"]
         self.player_only = True
     

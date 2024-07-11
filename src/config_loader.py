@@ -28,23 +28,7 @@ class ConfigLoader:
         self.interface_type = self.current_game_config["interface_type"]
         self.behavior_manager = self.current_game_config["behavior_manager"]
         logging.log_file = self.logging_file_path # Set the logging file path
-        self.stop = ["<im_end>","<im_end>"]
-        self.banned_chars = ["{", "}", "\"" ]
-        self.end_of_sentence_chars = [".", "!", "?"]
-        self.BOS_token = "<im_start>"
-        self.EOS_token = "<im_end>"
-        self.message_signifier = ": "
-        self.role_seperator = "\n"
-        self.message_separator = "\n"
-        self.message_format = "[BOS_token][role][role_seperator][name][message_signifier][content][EOS_token][message_separator]"
-        self.system_name = "system"
-        self.user_name = "user"
-        self.assistant_name = "assistant"
         self.get_prompt_styles()
-        self.language = {}
-        self.get_languages()
-        self.language = self.languages[self.default_language]
-        logging.info("Default Language: "+self.default_language)
         self.ready = True
 
     @property
@@ -129,7 +113,7 @@ class ConfigLoader:
             # Fix paths for linux
             for key in default:
                 for sub_key in default[key]:
-                    if "_path" in sub_key or "_file" in sub_key:
+                    if "_path" in sub_key or "_file" in sub_key or "_dirlol" in sub_key:
                         setattr(self, sub_key, config[key][sub_key].replace("\\", "/"))
             logging.info("Paths fixed for linux")
         
@@ -147,7 +131,7 @@ class ConfigLoader:
                 with open(f'{prompt_styles_dir}/{file}') as f:
                     slug = file.split('.')[0]
                     self._raw_prompt_styles[slug] = json.load(f)
-                    self.prompt_styles[slug] = self._raw_prompt_styles[slug]["style"]
+                    self.prompt_styles[slug] = self._raw_prompt_styles[slug]
         style_names = [f"{slug} ({self._raw_prompt_styles[slug]['name']})" for slug in self.prompt_styles]
         logging.info(f"Prompt styles loaded: "+str(style_names))
 
@@ -164,38 +148,46 @@ class ConfigLoader:
         style_names = [f"{slug} ({self._raw_behavior_styles[slug]['name']})" for slug in self.behavior_styles]
         logging.info(f"Behavior styles loaded: "+str(style_names))
 
-    def get_languages(self):
-        """Get the languages from the languages directory"""
-        logging.info("Getting languages")
-        languages_dir = os.path.join(os.path.dirname(__file__), "../languages/")
-        self.languages = {}
-        for file in os.listdir(languages_dir):
-            if file.endswith('.json'):
-                with open(f'{languages_dir}/{file}') as f:
-                    slug = file.split('.')[0]
-                    self.languages[slug] = json.load(f)
-        language_names = [f"{slug} ({self.languages[slug]['language']})" for slug in self.languages]
-        logging.info(f"Languages loaded: "+str(language_names))
-
-    def get_tokenizer_settings_from_prompt_style(self):
-        """Get the tokenizer settings from the prompt style"""
-        logging.info("Getting tokenizer settings from prompt style")
-        logging.info(self._prompt_style)
-        self.stop = self._prompt_style["stop"]
-        self.BOS_token = self._prompt_style["BOS_token"]
-        self.EOS_token = self._prompt_style["EOS_token"]
-        self.message_signifier = self._prompt_style["message_signifier"]
-        self.role_seperator = self._prompt_style["role_seperator"]
-        self.message_separator = self._prompt_style["message_separator"]
-        self.message_format = self._prompt_style["message_format"]
-        self.system_name = self._prompt_style["system_name"]
-        self.user_name = self._prompt_style["user_name"]
-        self.assistant_name = self._prompt_style["assistant_name"]
-        logging.info("Prompt formatting settings loaded")
-
     @property
     def prompts(self):
-        return self.prompt_styles[self.prompt_style]
+        return self.language["prompts"]
+    
+    @property
+    def stop(self):
+        return self._prompt_style["style"]["stop"]
+    @property
+    def BOS_token(self):
+        return self._prompt_style["style"]["BOS_token"]
+    @property
+    def EOS_token(self):
+        return self._prompt_style["style"]["EOS_token"]
+    @property
+    def message_signifier(self):
+        return self._prompt_style["style"]["message_signifier"]
+    @property
+    def role_seperator(self):
+        return self._prompt_style["style"]["role_seperator"]
+    @property
+    def message_separator(self):
+        return self._prompt_style["style"]["message_separator"]
+    @property
+    def message_format(self):
+        return self._prompt_style["style"]["message_format"]
+    @property
+    def system_name(self):
+        return self._prompt_style["style"]["system_name"]
+    @property
+    def user_name(self):
+        return self._prompt_style["style"]["user_name"]
+    @property
+    def assistant_name(self):
+        return self._prompt_style["style"]["assistant_name"]
+    @property
+    def language(self):
+        return self._prompt_style["language"]
+    @property
+    def racial_language(self):
+        return self._prompt_style["racial_language"]
     
     def set_prompt_style(self, llm):
         """Set the prompt style - if llm has a recommended prompt style and config.prompt_style is not set to a specific style, set it to the recommended style"""
@@ -206,12 +198,14 @@ class ConfigLoader:
                 self._prompt_style = self.prompt_styles[self.prompt_style]
             else:
                 logging.error(f"Prompt style {self.prompt_style} not found in prompt_styles directory. Using default prompt style.")
-                self._prompt_style = self.prompt_styles["normal"]
+                self._prompt_style = self.prompt_styles["normal_en"]
         else:
             logging.error(f"Prompt style not set in config file. Using default prompt style.")
-            self._prompt_style = self.prompt_styles["normal"]
-        self.get_tokenizer_settings_from_prompt_style()
-        return self._prompt_style
+            self._prompt_style = self.prompt_styles["normal_en"]
+        # self.get_tokenizer_settings_from_prompt_style()
+        logging.info("Getting tokenizer settings from prompt style")
+        logging.info(self._prompt_style)
+        logging.info("Prompt formatting settings loaded")
     
     def set_behavior_style(self, behavior_style):
         """Set the behavior style - if behavior_style is not set to a specific style, set it to the default style"""
@@ -379,18 +373,17 @@ class ConfigLoader:
                 "prompt_style": "default",
                 "behavior_style": "normal",
                 "conversation_start_type": "force_npc_greeting_for_first_meeting_then_llm_choice",
-                "default_language": "en",
-                "include_behavior_summary": True,
                 "strip_smalls": True, # Skip small voicelines
                 "small_size": 3, # Character length that defines a small voiceline
                 "assure_grammar": True,
-                "first_message_hidden_quote": True,
-                "first_message_hidden_asterisk": True,
-                "allow_npc_roleplay": True,
                 "assist_check": False,
                 "break_on_time_announcements": True,
                 "as_a_check": False,
-                "behavior_example_insertion": True,
+                "meet_string_game_events": False,
+                "game_update_pruning": True,
+                "game_update_prune_count": 5,
+                "conversation_start_role": "system", # "system" or "user" is recommended, "assistant" is not recommended because it would teach the assstant that it can respond using your identity, which is not recommended as it will waste generations failing to generate messages from you
+                "custom_possible_player_aliases": [], # adds additional names the player goes by to the list of names to check for in the conversation start role
             },
             "InferenceOptions": {
                 "temperature": 0.8,
@@ -520,6 +513,9 @@ class ConfigLoader:
                 "continue_on_voice_model_error": False,
                 "continue_on_missing_character": False,
                 "continue_on_llm_api_error": True,
+                "bad_author_retries": 5,
+                "retries": 3,
+                "system_loop": 3,
             },
             "Config": {
                 "linux_mode": False,
@@ -612,18 +608,15 @@ class ConfigLoader:
                 "prompt_style": self.prompt_style,
                 "behavior_style": self.behavior_style,
                 "conversation_start_type": self.conversation_start_type,
-                "default_language": self.default_language,
-                "include_behavior_summary": self.include_behavior_summary,
                 "strip_smalls": self.strip_smalls,
                 "small_size": self.small_size,
                 "assure_grammar": self.assure_grammar,
-                "first_message_hidden_quote": self.first_message_hidden_quote,
-                "first_message_hidden_asterisk": self.first_message_hidden_asterisk,
-                "allow_npc_roleplay": self.allow_npc_roleplay,
                 "assist_check": self.assist_check,
                 "as_a_check": self.as_a_check,
                 "break_on_time_announcements": self.break_on_time_announcements,
-                "behavior_example_insertion": self.behavior_example_insertion,
+                "meet_string_game_events": self.meet_string_game_events,
+                "conversation_start_role": self.conversation_start_role,
+                "custom_possible_player_aliases": self.custom_possible_player_aliases,
             },
             "InferenceOptions": {
                 "temperature": self.temperature,
@@ -725,6 +718,9 @@ class ConfigLoader:
                 "continue_on_voice_model_error": self.continue_on_voice_model_error,
                 "continue_on_missing_character": self.continue_on_missing_character,
                 "continue_on_llm_api_error": self.continue_on_llm_api_error,
+                "bad_author_retries": self.bad_author_retries,
+                "retries": self.retries,
+                "system_loop": self.system_loop,
             },
             "Config": {
                 "linux_mode": self.linux_mode,

@@ -129,11 +129,12 @@ class CharacterDB():
                 "voice_model": character["data"]["name"].replace(" ", ""),
                 "skyrim_voice_folder": character["data"]["name"].replace(" ", ""),
                 "race": "Imperial",
-                "gender":"Very Pleasant",
+                "gender":"",
                 "species":"Human",
+                "age":"Adult",
                 "ref_id": "",
                 "base_id": "",
-                "language_override": "",
+                "prompt_style_override": "",
                 "tts_language_override": "",
                 "is_generic_npc": False,
                 "behavior_blacklist": [],
@@ -141,7 +142,7 @@ class CharacterDB():
                 "author and notes": "Character Card V2"
             }
             formatted_character = pantella_format
-        else: # Add a proper check for Pantella Format
+        else: # TODO: Add a proper check for Pantella Format, and setup a BaseModel for character objects
             formatted_character = {
                 "bio_url": character["bio_url"] if "bio_url" in character else "",
                 "bio": character["bio"] if "bio" in character and character["bio"] != "" and str(character["bio"]).lower() != "nan" else "",
@@ -151,9 +152,10 @@ class CharacterDB():
                 "race": character["race"] if "race" in character else "",
                 "gender": character["gender"] if "gender" in character else "",
                 "species": character["species"] if "species" in character else "",
+                "age": character["age"] if "age" in character else "",
                 "ref_id": character["ref_id"] if "ref_id" in character and character["ref_id"] != "" and str(character["ref_id"]).lower() != "nan" else "",
                 "base_id": character["base_id"] if "base_id" in character and character["base_id"] != "" and str(character["base_id"]).lower() != "nan" else "",
-                "language_override": character["lang_override"] if "lang_override" in character else character["language_override"] if "language_override" in character else "",
+                "prompt_style_override": character["prompt_style_override"] if "prompt_style_override" in character else "",
                 "tts_language_override": character["tts_language_override"] if "tts_language_override" in character else "",
                 "is_generic_npc": character["is_generic_npc"] if "is_generic_npc" in character else False,
                 "behavior_blacklist": character["behavior_blacklist"] if "behavior_blacklist" in character else [],
@@ -162,7 +164,7 @@ class CharacterDB():
             }
         for key in formatted_character:
             if str(formatted_character[key]).lower() == "nan":
-                formatted_character[key] = None
+                formatted_character[key] = ""
         return formatted_character
 
     def get_unique_ref_index(self,character):

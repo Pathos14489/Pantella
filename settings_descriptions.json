@@ -37,8 +37,8 @@
         "BOS_token": "The BOS token to use. Defaults to '<im_start>'.",
         "EOS_token": "The EOS token to use. Defaults to '<im_end>'.",
         "message_signifier": "The phrase that signifies a message. Defaults to '\\n'.",
-        "message_seperator": "The phrase that seperates messages. Defaults to '\\n'.",
-        "message_format": "The format of the message. Defaults to '[BOS_token][name][message_signifier][content][EOS_token][message_seperator]'",
+        "message_separator": "The phrase that separates messages. Defaults to '\\n'.",
+        "message_format": "The format of the message. Defaults to '[BOS_token][name][message_signifier][content][EOS_token][message_separator]'",
         "min_conversation_length": "The minimum conversation length. Defaults to 5.",
         "system_name": "The name of the sender of system messages. System messages are messages that are not from a character and are used to convey information to the LLM. Defaults to 'system'.",
         "user_name": "The name of the default user. Defaults to 'user'. This is the name of the user that is used when the user is not specified. Chat completions(openai) will have this enabled for all user messages by default.",
@@ -136,7 +136,6 @@
         "character_database_file": "The character database file path.",
         "voice_model_ref_ids_file": "The voice model ref ids file path.",
         "logging_file_path": "The logging file path.",
-        "language_support_file_path": "The language support file path.",
         "port": "The port to use for the web configuration server."
     }
 }

@@ -231,6 +231,8 @@ class GameInterface(BaseGameInterface):
 
         self.write_game_info('_pantella_current_actor_ref_id', '')
         self.write_game_info('_pantella_current_actor_base_id', '')
+        self.write_game_info('_pantella_current_actor_race', '')
+        self.write_game_info('_pantella_current_actor_gender', '')
 
         self.write_game_info('_pantella_current_location', '')
 
@@ -262,6 +264,29 @@ class GameInterface(BaseGameInterface):
         self.write_game_info('_pantella_say_line_9', 'False')
         self.write_game_info('_pantella_say_line_10', 'False')
         self.write_game_info('_pantella_actor_count', '0')
+        
+        self.write_game_info('_pantella_player_is_arrested', 'False')
+        self.write_game_info('_pantella_player_light_level', 'False')
+        self.write_game_info('_pantella_player_is_in_combat', 'False')
+        self.write_game_info('_pantella_player_is_trespassing', 'False')
+        self.write_game_info('_pantella_actor_is_enemy', 'False')
+        self.write_game_info('_pantella_actor_is_ghost', 'False')
+        self.write_game_info('_pantella_actor_is_trespassing', 'False')
+        self.write_game_info('_pantella_actor_is_in_combat', 'False')
+        self.write_game_info('_pantella_actor_is_unconscious', 'False')
+        self.write_game_info('_pantella_actor_is_intimidated', 'False')
+        self.write_game_info('_pantella_actor_has_weapon_drawn', 'False')
+        self.write_game_info('_pantella_actor_is_player_teammate', 'False')
+        self.write_game_info('_pantella_actor_detects_caster', 'False')
+        self.write_game_info('_pantella_caster_detects_actor', 'False')
+        self.write_game_info('_pantella_actor_is_arresting_someone', 'False')
+        self.write_game_info('_pantella_actor_light_level', '')
+        self.write_game_info('_pantella_caster_light_level', '')
+        self.write_game_info('_pantella_actor_equipment', '')
+        self.write_game_info('_pantella_caster_equipment', '')
+        self.write_game_info('_pantella_target_spells', '')
+        self.write_game_info('_pantella_caster_spells', '')
+
         if not os.path.exists(f'{self.game_path}\\_pantella_context_string.txt'):
             self.write_game_info('_pantella_context_string', '')
 
@@ -270,41 +295,33 @@ class GameInterface(BaseGameInterface):
         self.write_game_info('_pantella_actor_methods', '')
 
         self.write_game_info('_pantella_radiant_dialogue', 'False')
-    
-    
-    def write_dummy_game_info(self, character_name):
-        """Write fake data to game files when debugging"""
-
-        self.write_game_info('_pantella_current_actor', character_name)
-
-        character_id = '0'
-        self.write_game_info('_pantella_current_actor_ref_id', character_id)
-        self.write_game_info('_pantella_current_actor_base_id', character_id)
-
-        location = 'Skyrim'
-        self.write_game_info('_pantella_current_location', location)
         
-        in_game_time = '07/12/0210 10:31'
-        self.write_game_info('_pantella_in_game_time', in_game_time)
-
-        return character_name, character_id, location, in_game_time
-    
-
     def load_character(self):
         """Wait for character ID to populate then load character name"""
+        logging.info('Waiting for character base ID to populate...')
+        character_base_id = self.load_data_when_available('_pantella_current_actor_base_id')
+        logging.info('Waiting for character ref ID to populate...')
+        character_ref_id = self.load_data_when_available('_pantella_current_actor_ref_id')
+        logging.info('Waiting for character name to populate...')
+        character_name = self.load_data_when_available('_pantella_current_actor')
+        logging.info('Waiting for character race to populate...')
+        character_race = self.load_data_when_available('_pantella_current_actor_race')
+        logging.info('Waiting for character gender to populate...')
+        character_gender = self.load_data_when_available('_pantella_current_actor_gender')
+        logging.info('Waiting for character is_guard to populate...')
+        is_guard = self.load_data_when_available('_pantella_actor_is_guard', 'False')
+        logging.info('Waiting for character is_ghost to populate...')
+        is_ghost = self.load_data_when_available('_pantella_actor_is_ghost', 'False')
+        # if (character_base_id == '0' and character_ref_id == '0') or (character_base_id == '' and character_ref_id == ''): # if character ID is 0 or empty, check old id file for refid
+        #     with open(f'{self.game_path}\\_pantella_current_actor_id.txt', 'r') as f:
+        #         character_id = f.readline().strip()
+        #     character_ref_id = character_id
+        #     character_base_id = None # No base ID available
+        # time.sleep(0.5) # wait for file to register
+        # with open(f'{self.game_path}\\_pantella_current_actor.txt', 'r') as f:
+        #     character_name = f.readline().strip()
         
-        character_base_id = self.load_data_when_available('_pantella_current_actor_base_id', '')
-        character_ref_id = self.load_data_when_available('_pantella_current_actor_ref_id', '')
-        if (character_base_id == '0' and character_ref_id == '0') or (character_base_id == '' and character_ref_id == ''): # if character ID is 0 or empty, check old id file for refid
-            with open(f'{self.game_path}\\_pantella_current_actor_id.txt', 'r') as f:
-                character_id = f.readline().strip()
-            character_ref_id = character_id
-            character_base_id = None # No base ID available
-        time.sleep(0.5) # wait for file to register
-        with open(f'{self.game_path}\\_pantella_current_actor.txt', 'r') as f:
-            character_name = f.readline().strip()
-        
-        return character_name, character_ref_id, character_base_id
+        return character_name, character_ref_id, character_base_id, character_race, character_gender, is_guard, is_ghost
     
     def load_player_name(self):
         """Wait for player name to populate"""
@@ -379,26 +396,6 @@ class GameInterface(BaseGameInterface):
                 num_characters_selected = 0
         return num_characters_selected
     
-    def debugging_setup(self, debug_character_name):
-        """Select character based on debugging parameters"""
-
-        # None == in-game character chosen by spell
-        if debug_character_name == 'None':
-            character_name, character_ref_id, character_base_id = self.load_character()
-        else:
-            character_name = debug_character_name
-            debug_character_name = ''
-
-        player_name = self.load_player_name()
-        player_race = self.load_player_race()
-        player_gender = self.load_player_gender()
-        radiant_dialogue = self.is_radiant_dialogue() # get the radiant dialogue setting from _pantella_radiant_dialogue.txt
-
-        character_name, character_ref_id, character_base_id, location, in_game_time = self.write_dummy_game_info(character_name)
-
-        return character_name, character_ref_id, character_base_id, location, in_game_time, player_name, player_race, player_gender, radiant_dialogue
-    
-    
     def load_unnamed_npc(self, character_name):
         """Load generic NPC if character cannot be found in character database"""
 
@@ -413,7 +410,7 @@ class GameInterface(BaseGameInterface):
         actor_race = self.load_data_when_available('_pantella_actor_race', '')
         actor_race = actor_race.split('<')[1].split(' ')[0]
 
-        actor_sex = self.load_data_when_available('_pantella_actor_sex', '')
+        actor_sex = self.load_data_when_available('_pantella_actor_gender', '')
 
         voice_model = ''
         for key in voice_model_ids:
@@ -426,7 +423,7 @@ class GameInterface(BaseGameInterface):
         if voice_model == '':
             voice_model = self.conversation_manager.character_database.get_character_by_voice_folder(actor_voice_model_name)["voice_model"] # return voice model from actor_voice_model_name
         else:    
-            if actor_sex == '1':
+            if actor_sex == 'Female':
                 try:
                     # voice_model = random.choice(female_voice_models[actor_race]) # Get random voice model from list of generic female voice models
                     # TODO: Enable this after adding random name generation to generic NPCs, otherwise all generic NPCs will share the same info I think
@@ -533,18 +530,17 @@ class GameInterface(BaseGameInterface):
     def load_game_state(self):
         """Load game variables from _pantella_ files in Skyrim folder (data passed by the Pantella spell)"""
 
-        if self.conversation_manager.config.debug_mode == '1':
-            character_name, character_ref_id, character_base_id, location, in_game_time, player_name, player_race, player_gender = self.debugging_setup(self.conversation_manager.config.debug_character_name)
-        else:
-            location = self.get_current_location()
-            in_game_time = self.get_current_game_time()
-            character_name, character_ref_id, character_base_id = self.load_character() # get the character's name and id from _pantella_current_actor.txt and _pantella_current_actor_id.txt
-            player_name = self.load_player_name() # get the player's name from _pantella_player_name.txt
-            player_race = self.load_player_race() # get the player's race from _pantella_player_race.txt
-            player_gender = self.load_player_gender() # get player's gender from _pantella_player_gender.txt
-            radiant_dialogue = self.is_radiant_dialogue() # get the radiant dialogue setting from _pantella_radiant_dialogue.txt    
-            # tell Skyrim papyrus script to start waiting for voiceline input
-            self.write_game_info('_pantella_end_conversation', 'False')        
+        location = self.get_current_location()
+        in_game_time = self.get_current_game_time()
+        character_name, character_ref_id, character_base_id, character_in_game_race, character_in_game_gender, character_is_guard, character_is_ghost = self.load_character() # get the character's name and id from _pantella_current_actor.txt and _pantella_current_actor_id.txt
+        player_name = self.load_player_name() # get the player's name from _pantella_player_name.txt
+        player_race = self.load_player_race() # get the player's race from _pantella_player_race.txt
+        player_gender = self.load_player_gender() # get player's gender from _pantella_player_gender.txt
+        radiant_dialogue = self.is_radiant_dialogue() # get the radiant dialogue setting from _pantella_radiant_dialogue.txt    
+        # tell Skyrim papyrus script to start waiting for voiceline input
+        self.write_game_info('_pantella_end_conversation', 'False')
+
+        logging.info()
         
         character_info, is_generic_npc, matching_parts = self.conversation_manager.character_database.get_character(character_name, character_ref_id, character_base_id) # get character info from character database
         # TODO: Improve character lookup to be more accurate and to include generating character stats inspired by their generic name for generic NPCs instead of leaving them generic.
@@ -585,6 +581,10 @@ class GameInterface(BaseGameInterface):
         character_info['in_game_voice_model'] = actor_voice_model_name
         character_info['refid_int'] = character_ref_id
         character_info['baseid_int'] = character_base_id
+        character_info["in_game_race"] = character_in_game_race
+        character_info["in_game_gender"] = character_in_game_gender
+        character_info["is_guard"] = character_is_guard
+        character_info["is_ghost"] = character_is_ghost
         character_info['character_name'] = character_name
         character_info['in_game_voice_model_id'] = actor_voice_model.split('(')[1].split(')')[0]
 
@@ -592,7 +592,9 @@ class GameInterface(BaseGameInterface):
         try:
             actor_relationship_rank = int(actor_relationship_rank)
         except:
+            logging.warn(f'Failed to read actor relationship rank from _pantella_actor_relationship.txt')
             actor_relationship_rank = 0
+        logging.info(f'Actor relationship rank set to {actor_relationship_rank}')
         character_info['in_game_relationship_level'] = actor_relationship_rank
 
         return character_info, location, in_game_time, is_generic_npc, player_name, player_race, player_gender, radiant_dialogue
@@ -612,7 +614,10 @@ class GameInterface(BaseGameInterface):
 
         # append in-game events to player's response
         with open(f'{self.game_path}\\_pantella_in_game_events.txt', 'r', encoding='utf-8') as f:
-            in_game_events_lines = f.readlines()[-5:] # read latest 5 events
+            if self.config.game_update_pruning:
+                in_game_events_lines = f.readlines()[-self.config.game_update_prune_count:] # read latest 5 events
+            else:
+                in_game_events_lines = f.readlines()
         
         in_game_events_lines = [line.strip() for line in in_game_events_lines]
         new_in_game_events = []
@@ -625,9 +630,8 @@ class GameInterface(BaseGameInterface):
         
         # Is Player in combat with NPC
         in_combat = self.load_data_when_available('_pantella_actor_is_enemy', '').lower() == 'true' 
-        perspective_name, _ = self.active_character.get_perspective_player_identity()
         if in_combat:
-            in_game_events_lines.append(f'{perspective_name} is fighting {self.active_character.name}.')
+            in_game_events_lines.append(self.conversation_manager.character_manager.language["game_events"]["player_started_combat"].format(name=self.active_character.name))
         self.new_game_events.extend(in_game_events_lines)
         
         super().update_game_events()

@@ -226,12 +226,12 @@ class LLM(base_LLM.base_LLM):
         while retries > 0:
             try:
                 openai_stop = list(self.stop)
-                openai_stop = [self.config.message_separator,self.config.EOS_token,self.config.BOS_token] + openai_stop + banned_chars
+                openai_stop = [self.message_separator,self.EOS_token,self.BOS_token] + openai_stop + banned_chars
+                openai_stop = [stop for stop in openai_stop if stop != ""] # Remove empty strings from the stop list
                 if self.config.alternative_openai_api_base == 'none': # OpenAI stop is the first 4 options in the stop list because they only support up to 4 for some asinine reason
                     openai_stop = openai_stop[:4]
                 else:
                     openai_stop = openai_stop
-                openai_stop = [stop for stop in openai_stop if stop != ""] # Remove empty strings from the stop list
                 logging.info("Stop Strings:",openai_stop)
                 sampler_kwargs = {
                     "top_p": self.top_p,

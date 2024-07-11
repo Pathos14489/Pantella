@@ -5,7 +5,7 @@ class strip(base_behavior.BaseBehavior):
     def __init__(self, manager):
         super().__init__(manager)
         self.keyword = "Strip"
-        self.description = "If {perspective_player_name} wants you to take off all your clothes, and you're comfortable and willing to do so, say '{command}' in your response."
+        self.description = "If [player] wants you to take off all your clothes, and you're comfortable and willing to do so, say '{command}' in your response."
         # self.example = "'Take off your clothes.' 'Strip: Okay, here goes.'"
         self.examples = [
             [

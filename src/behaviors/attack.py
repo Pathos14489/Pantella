@@ -5,7 +5,7 @@ class attack(base_behavior.BaseBehavior):
     def __init__(self, manager):
         super().__init__(manager)
         self.keyword = "Attack"
-        self.description = "If you want to attack {perspective_player_name}, say '{command}' in your response."
+        self.description = "If you want to attack [player], say '{command}' in your response."
         #self.example = "'Give me your money or I'll kill you!' 'Attack: Never, bandit scum!'"
         self.examples = [
             [

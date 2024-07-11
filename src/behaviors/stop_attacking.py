@@ -5,7 +5,7 @@ class stop_attacking(base_behavior.BaseBehavior):
     def __init__(self, manager):
         super().__init__(manager)
         self.keyword = "StopAttacking"
-        self.description = "If {perspective_player_name} renounces their words, or you want to end combat, say '{command}' in your response."
+        self.description = "If [player] renounces their words, or you want to end combat, say '{command}' in your response."
         # self.example = "'I'm sorry, I didn't mean it!' 'StopAttacking: Alright, I'll forgive you.'"
         self.examples = [
             [

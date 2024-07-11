@@ -2,6 +2,7 @@ print("Importing src.characters_manager.py")
 from src.logging import logging
 import src.character_manager as character_manager # Character class
 import src.utils as utils
+import random
 logging.info("Imported required libraries in characters_manager.py")
 
 class CharacterDoesNotExist(Exception):
@@ -62,37 +63,68 @@ class Characters:
         return relationship_summary
 
     @property
+    def prompt_style(self):
+        conversation_type = self.conversation_manager.get_conversation_type()
+        prompt_style = self.config._prompt_style
+        if conversation_type == "single_player_with_npc_prompt": # SingleNPCw/Player style context
+            prompt_style = self.active_characters_list[0].prompt_style
+        else:
+            prompt_style = random.choice([c.prompt_style for c in self.active_characters_list])
+        return prompt_style
+    
+    @property
+    def language(self):
+        conversation_type = self.conversation_manager.get_conversation_type()
+        language = self.config._prompt_style['language']
+        if conversation_type == "single_player_with_npc_prompt": # SingleNPCw/Player style context
+            language = self.active_characters_list[0].language
+        # logging.info("Language:", language["language_name"] + "("+language["language_code"]+")")
+        return language
+        
+    @property
     def replacement_dict(self): # Returns a dictionary of replacement values for the current context -- Dynamic Variables
-        if len(self.active_characters) == 1 and self.conversation_manager.radiant_dialogue: # SingleNPC style context
+        conversation_type = self.conversation_manager.get_conversation_type()
+        if conversation_type == "single_player_with_npc": # TwoNPC no player style context
+            logging.info("SingleNPCw/Player style context, returning replacement_dict from active character")
             replacement_dict = self.active_characters_list[0].replacement_dict
-        elif len(self.active_characters) == 1 and not self.conversation_manager.radiant_dialogue: # SingleNPCw/Player style context
-            replacement_dict = self.active_characters_list[0].replacement_dict
-        elif len(self.active_characters) == 2 and self.conversation_manager.radiant_dialogue: # TwoNPC no player style context
+        elif conversation_type == "single_npc_with_npc": # MultiNPC style context
+            logging.info("SingleNPCw/NPC style context, returning replacement_dict from active characters")
             replacement_dicts = [c.replacement_dict for c in self.active_characters_list]
             # number the variables in the replacement_dicts
             replacement_dicts = [{f"{k}{i+1}": v for k, v in replacement_dicts[i].items()} for i in range(len(replacement_dicts))]
             # combine the replacement_dicts
             replacement_dict = {k: v for d in replacement_dicts for k, v in d.items()}
-            replacement_dict["language"] = self.config.language["language"]
+            replacement_dict["language"] = self.language["in_game_language_name"]
             replacement_dict["perspective_player_name"] = self.conversation_manager.player_name
-            print(replacement_dict)
-        else: # MultiNPC style context
+        elif conversation_type == "multi_npc": # MultiNPC style context
+            logging.info("MultiNPC style context, returning replacement_dict from active characters")
             replacement_dict = {
                 "names": ", ".join(self.names),
                 "names_w_player": ", ".join(self.names_w_player),
                 "perspective_player_name": self.conversation_manager.player_name,
                 "relationship_summary": self.relationship_summary,
                 "bios": self.bios,
-                "langage": self.config.language["language"],
+                "langage": self.language["in_game_language_name"],
             }
+        else:
+            logging.warning("Could not determine conversation type, returning empty replacement_dict")
+            return {}
         
         if self.conversation_manager.current_in_game_time is not None: # If in-game time is available, add in-game time properties to replacement_dict
             time_group = utils.get_time_group(self.conversation_manager.current_in_game_time["hour24"]) # get time group from in-game time before 12/24 hour conversion
             for time_property in self.conversation_manager.current_in_game_time: # Add in-game time properties to replacement_dict
                 replacement_dict[time_property] = self.conversation_manager.current_in_game_time[time_property]
+            replacement_dict["time_group"] = time_group
         else:
             logging.warning("No in-game time available when generating replacement_dict, returning empty time properties")
-        replacement_dict["time_group"] = time_group
+            replacement_dict["time_group"] = "unknown"
+            replacement_dict["hour24"] = "??:??"
+            replacement_dict["hour12"] = "??:?? ??"
+            replacement_dict["minute"] = "??"
+            replacement_dict["second"] = "??"
+            replacement_dict["day"] = "??"
+            replacement_dict["month"] = "??"
+            replacement_dict["year"] = "????"
         replacement_dict["location"] = self.conversation_manager.current_location
         replacement_dict["player_name"] = self.conversation_manager.player_name
         replacement_dict["player_race"] = self.conversation_manager.player_race
@@ -116,34 +148,62 @@ class Characters:
             replacement_dict["bios"] = replacement_dict["bios"].replace("{bios}", "").format(**replacement_dict)
 
         if "language" not in replacement_dict:
-            replacement_dict["language"] = self.config.language["language"]
+            replacement_dict["language"] = self.prompt_style["language"]["in_game_language_name"]
 
         replacement_dict["context"] = ""
         context_string = self.conversation_manager.game_interface.get_current_context_string()
         if context_string is not None and context_string != "":
             replacement_dict["context"] = context_string.format(**replacement_dict)
 
+        logging.info("Replacement Dict: ", replacement_dict)
         return replacement_dict
+
+    def render_game_event(self,line:str):
+        if line.startswith("player<"):
+            line_2 = line.split("<")[1]
+            game_event_title, args_strings  = line_2.split(">",1)
+            args = args_strings.split("|")
+            args_dict = {}
+            for arg in args:
+                key, value = arg.split("=")
+                args_dict[key] = value
+            line = self.language["game_events"]["player"][game_event_title].format(**args_dict)
+        elif line.startswith("npc<"):
+            line_2 = line.split("<")[1]
+            game_event_title, args_strings  = line_2.split(">",1)
+            args = args_strings.split("|")
+            args_dict = {}
+            for arg in args:
+                key, value = arg.split("=")
+                args_dict[key] = value
+            line = self.language["game_events"]["npc"][game_event_title].format(**args_dict)
+        return line
 
     def active_character_count(self): # Returns the number of active characters as an int
         return len(self.active_characters)
     
     def get_raw_prompt(self):
-        prompt_style = self.conversation_manager.config._prompt_style
-        logging.info(prompt_style)
-        if len(self.active_characters) == 1 and self.conversation_manager.radiant_dialogue: # SingleNPC style context
-            logging.info("One active characters, but player isn't in conversation, waiting for another character to join the conversation...")
-            prompt = prompt_style["single_player_with_npc_prompt"] # TODO: Custom prompt for single NPCs by themselves starting a topic?
-        elif len(self.active_characters) == 1 and not self.conversation_manager.radiant_dialogue:
-            logging.info("Only one active character, returning SingleNPCw/Player style context")
-            prompt = prompt_style["single_player_with_npc_prompt"]
-        elif len(self.active_characters) == 2 and self.conversation_manager.radiant_dialogue: # SingleNPC style context
-            logging.info("Two active characters, but player isn't in conversation, returning SingleNPCw/NPC style context")
-            prompt = prompt_style["single_npc_with_npc_prompt"]
+        # prompt_style = self.conversation_manager.config._prompt_style["style"]
+        # logging.info(prompt_style)
+        # if len(self.active_characters) == 1 and self.conversation_manager.radiant_dialogue: # SingleNPC style context
+        #     logging.info("One active characters, but player isn't in conversation, waiting for another character to join the conversation...")
+        #     prompt = prompt_style["single_player_with_npc_prompt"] # TODO: Custom prompt for single NPCs by themselves starting a topic?
+        # elif len(self.active_characters) == 1 and not self.conversation_manager.radiant_dialogue:
+        #     logging.info("Only one active character, returning SingleNPCw/Player style context")
+        #     prompt = prompt_style["single_player_with_npc_prompt"]
+        # elif len(self.active_characters) == 2 and self.conversation_manager.radiant_dialogue: # SingleNPC style context
+        #     logging.info("Two active characters, but player isn't in conversation, returning SingleNPCw/NPC style context")
+        #     prompt = prompt_style["single_npc_with_npc_prompt"]
+        # else:
+        #     logging.info("Multiple active characters, returning MultiNPC style context")
+        #     prompt = prompt_style["multi_npc_prompt"]
+        # return prompt
+        conversation_type = self.conversation_manager.get_conversation_type()
+        if conversation_type != "none":
+            return self.language["prompts"][conversation_type]
         else:
-            logging.info("Multiple active characters, returning MultiNPC style context")
-            prompt = prompt_style["multi_npc_prompt"]
-        return prompt
+            logging.warning("No active characters, returning empty context")
+            return ""
 
     def get_system_prompt(self): # Returns the current context for the given active characters as a string
         if len(self.active_characters) == 0:
@@ -151,7 +211,7 @@ class Characters:
             return ""
 
         prompt = self.get_raw_prompt()
-
+        
         system_prompt = prompt.format(**self.replacement_dict)
         # logging.info("System Prompt: " + system_prompt)
         return system_prompt
@@ -186,11 +246,27 @@ class Characters:
 
     def get_memories(self):
         memories = []
+        if self.language["behavior_example_insertion"]:
+            memories.append({
+                "role": self.config.system_name,
+                "content": self.language["behaviors_explanation_system_message_1"],
+                "type": "prompt"
+            })
+            random_character = random.choice(self.active_characters_list)
+            behavior_memories = self.conversation_manager.behavior_manager.get_behavior_memories(random_character) # TODO: Check if this works fine, and if it's the right way to do it. Might need to redo how this works
+            for fake_memory in behavior_memories:
+                memories.append(fake_memory)
+        if self.language["include_behavior_explanation"]:
+            memories.append({
+                "role": self.config.system_name,
+                "content": self.language["behaviors_explanation_system_message_2"].replace("{summaries}",self.conversation_manager.behavior_manager.get_behavior_summary()),
+                "type": "prompt"
+            })
         for character in self.active_characters_list:
             memories.extend(character.memories)
         memories.append({
             "role": self.config.system_name,
-            "content": "A NEW CONVERSATION HAS STARTED. The rest of the messages below this are from the current conversation, the present. Everything above this is a memory from the past. DO NOT RESPOND TO MEMORY MESSAGES. They are for reference only. If you want to do an action, please use asterisks to indicate the action. For example: *Nazeem scowls bitterly at the filthy adventurer.*",
+            "content": self.language["memory_present_separator"],
             "type": "prompt"
         })
         return memories

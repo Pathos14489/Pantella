@@ -5,7 +5,7 @@ class sell(base_behavior.BaseBehavior):
     def __init__(self, manager):
         super().__init__(manager)
         self.keyword = "Sell"
-        self.description = "If {perspective_player_name} wants to buy something from {name}, and {name} wants to sell them something, {name} will say '{command}' in their response."
+        self.description = "If [player] wants to buy something from {name}, and {name} wants to sell them something, {name} will say '{command}' in their response."
         # self.example = "'Hey, can I buy something from you?' 'Sell: Sure, what do you want?', 'I want to buy something.' 'Sell: I have a lot of things to sell, what are you interested in?'"
         self.examples = [
             [

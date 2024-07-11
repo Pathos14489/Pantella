@@ -23,6 +23,17 @@ class BaseBehavior():
     def conversation_manager(self):
         return self.manager.conversation_manager
     
+    @property
+    def character_manager(self):
+        return self.conversation_manager.character_manager
+    
+    @property
+    def prompt_style(self):
+        return self.character_manager.prompt_style
+    @property
+    def behavior_style(self):
+        return self.conversation_manager.config._behavior_style
+    
     def _run(self, run=False, speaker_character=None, sentence=None):
         if run:
             if sentence is None:

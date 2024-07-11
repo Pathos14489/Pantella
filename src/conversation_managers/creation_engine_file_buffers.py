@@ -27,18 +27,8 @@ class ConversationManager(BaseConversationManager):
         self.current_location = 'Skyrim' # Initialised at start of every conversation in await_and_setup_conversation()
         logging.info(f"Creation Engine (File Buffer) Conversation Manager Initialized")
         if initialize:
-            self.game_interface.write_game_info('_pantella_status', 'Restarted Pantella')
+            self.game_interface.write_game_info('_pantella_status', 'Started Pantella')
         
-    def get_conversation_type(self): # Returns the type of conversation as a string - none, single_npc_with_npc, single_player_with_npc, multi_npc
-        if len(self.character_manager.active_characters) == 0:
-            return 'none'
-        elif len(self.character_manager.active_characters) == 1 and not self.radiant_dialogue:
-            return 'single_player_with_npc'
-        elif len(self.character_manager.active_characters) == 1 and self.radiant_dialogue:
-            return 'single_npc_with_npc'
-        else:
-            return 'multi_npc'
-
     def get_if_new_character_joined(self):
         """Check if new character has been added to conversation"""
         num_characters_selected = self.game_interface.load_ingame_actor_count()
@@ -87,6 +77,8 @@ class ConversationManager(BaseConversationManager):
         self.game_interface.update_game_events() # update game events before player input
         self.current_location = self.game_interface.get_current_location() # update current location each step of the conversation
         self.current_in_game_time = self.game_interface.get_current_game_time() # update current in game time each step of the conversation
+        if self.get_conversation_type() == 'single_player_with_npc': # TODO: Currently only available for single player with NPC conversations, will have to figure out how to make this work for multi NPC conversations later
+            self.game_interface.active_character.update_game_state() # update game state for active character
 
     def end_conversation(self, character=None): # end conversation with character
         if character is None and self.character_manager.active_character_count() > 0:
@@ -111,7 +103,7 @@ class ConversationManager(BaseConversationManager):
         self.transcriber.call_count = 0 # reset radiant back and forth count
         self.conversation_step += 1
 
-        logging.info('\nConversations not starting when you select an NPC? Post an issue on the GitHub page: https://github.com/Pathos14489/Pantella')
+        logging.info('\nConversations not starting when you select an NPC? Post an issue on the GitHub page: https://github.com/Pathos14489/Pantella Or the Discord: https://discord.gg/M7Zw8mBY6r')
         logging.info('\nWaiting for player to select an NPC...')
         
         try: # load character info, location and other gamestate data when data is available - Starts watching the _pantella_ files in the Skyrim folder and waits for the player to select an NPC
@@ -141,10 +133,11 @@ class ConversationManager(BaseConversationManager):
         self.tokens_available = self.config.maximum_local_tokens - self.tokenizer.num_tokens_from_messages(self.get_context()) # calculate number of tokens available for the conversation
 
         self.game_interface.update_game_events() # update game events before first player input
+        prompt_style = self.character_manager.prompt_style # get prompt style from character manager
         if not self.radiant_dialogue: # initiate conversation with character
             try: # get response from NPC to player greeting
                 pp_name, _ = character.get_perspective_player_identity()
-                self.new_message({'role': self.config.system_name, 'content': "*"+pp_name+" approaches "+character.name+" with the intent to start a conversation with them.*"}) # TODO: Improve later
+                self.new_message({'role': self.config.conversation_start_role, 'content': "*"+pp_name+" approaches "+character.name+" with the intent to start a conversation with them.*"}) # TODO: Improve later
 
                 # Conversation Start Type Handling
                 if self.config.conversation_start_type == "always_llm_choice":
@@ -155,7 +148,7 @@ class ConversationManager(BaseConversationManager):
                     self.in_conversation = True
                     self.conversation_ended = False
                 elif self.config.conversation_start_type == "implicit_predetermined_player_greeting":
-                    greeting = random.choice(character.language.predetermined_player_greetings)
+                    greeting = random.choice(prompt_style["language"]["predetermined_player_greetings"])
                     greeting.replace("[character]", character.name)
                     self.new_message({'role': self.config.user_name, 'name':"[player]", 'content': greeting})
                     self.get_response()
@@ -205,6 +198,7 @@ class ConversationManager(BaseConversationManager):
 
         if self.character_manager.active_character_count() == 1 and self.radiant_dialogue: # if radiant dialogue and only one NPC, skip stepping this conversation
             # logging.info("Radiant NPC waiting for other people to join the conversation, stepping...")
+            time.sleep(0.2)
             return
         logging.info('Stepping through conversation...')
         logging.info(f"Messages: {json.dumps(self.get_context(), indent=2)}")
@@ -236,7 +230,7 @@ class ConversationManager(BaseConversationManager):
 
             # check if user is ending conversation
             end_convo = False
-            for keyword in self.config.language["end_conversation_keywords"]:
+            for keyword in  self.character_manager.language["end_conversation_keywords"]:
                 if self.transcriber.activation_name_exists(transcript_cleaned, keyword):
                     end_convo = True
                     break

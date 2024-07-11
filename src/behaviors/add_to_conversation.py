@@ -5,7 +5,7 @@ class add_to_conversation(base_behavior.BaseBehavior):
     def __init__(self, manager):
         super().__init__(manager)
         self.keyword = "AddToConversation"
-        self.description = "If you want to talk to {perspective_player_name}, say '{command}' in your response."
+        self.description = "If you want to talk to [player], say '{command}' in your response."
         # self.example = "'Do you want coffee?' 'AddToConversation: I'm not sure, me and {player_name} are in the middle of something. {player_name}, do you want coffee?'"
         self.examples = [
             [

@@ -5,7 +5,7 @@ class follow(base_behavior.BaseBehavior):
     def __init__(self, manager):
         super().__init__(manager)
         self.keyword = "Follow"
-        self.description = "If {perspective_player_name} asks you to follow them, and you are thoroughly convinced to do so, say '{command}' in your response."
+        self.description = "If [player] asks you to follow them, and you are thoroughly convinced to do so, say '{command}' in your response."
         # self.example = "'Come with me if you want to live!' 'Follow: Alright, I'll follow you.'"
         self.examples = [
             [
