@@ -11,7 +11,9 @@ for file in os.listdir(os.path.join(os.path.dirname(__file__), "../game_configs/
     if file.endswith(".json") and not file.startswith("__"):
         logging.info(f"Importing game config {file}")
         game_id = file[:-5]
+        logging.info(f"Game id: {game_id}")
         game_configs[game_id] = json.load(open(os.path.join(os.path.dirname(__file__), "../game_configs", file)))
+        logging.info(f"Imported game config {game_id}")
 logging.info("Imported all game configs, ready to use them!")
 
 class ConfigLoader:
@@ -25,6 +27,8 @@ class ConfigLoader:
         self.load()
         self.game_configs = game_configs
         self.current_game_config = game_configs[self.game_id]
+        logging.info(f"ConfigLoader initialized with config path {config_path}")
+        logging.info(f"Current game config: '{self.current_game_config}' from game id '{self.game_id}'")
         self.conversation_manager_type = self.current_game_config["conversation_manager_type"]
         self.interface_type = self.current_game_config["interface_type"]
         self.behavior_manager = self.current_game_config["behavior_manager"]
