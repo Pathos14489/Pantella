@@ -7,6 +7,7 @@ import os
 import random
 import uuid
 import json
+import traceback
 logging.info("Imported required libraries in conversation_managers/creation_engine_file_buffers.py")
 
 valid_games = ["fallout4","skyrim","fallout4vr","skyrimvr"]
@@ -60,6 +61,8 @@ class ConversationManager(BaseConversationManager):
                 self.conversation_ended = True
 
                 logging.error(f"Error: {e}")
+                tb = traceback.format_exc()
+                logging.error(tb)
                 if not self.config.continue_on_missing_character:
                     input("Press Enter to exit.")
                     raise e
@@ -103,8 +106,8 @@ class ConversationManager(BaseConversationManager):
         self.transcriber.call_count = 0 # reset radiant back and forth count
         self.conversation_step += 1
 
-        logging.info('\nConversations not starting when you select an NPC? Post an issue on the GitHub page: https://github.com/Pathos14489/Pantella Or the Discord: https://discord.gg/M7Zw8mBY6r')
-        logging.info('\nWaiting for player to select an NPC...')
+        logging.info('Conversations not starting when you select an NPC? Post an issue on the GitHub page: https://github.com/Pathos14489/Pantella Or (if you want quick responses for any issues) the Discord: https://discord.gg/M7Zw8mBY6r')
+        logging.info('Waiting for player to select an NPC...')
         
         try: # load character info, location and other gamestate data when data is available - Starts watching the _pantella_ files in the Skyrim folder and waits for the player to select an NPC
             character_info, self.current_location, self.current_in_game_time, is_generic_npc, self.player_name, self.player_race, self.player_gender, self.conversation_started_radiant = self.game_interface.load_game_state()
@@ -121,6 +124,8 @@ class ConversationManager(BaseConversationManager):
             self.game_interface.write_game_info('_pantella_end_conversation', 'True')
             self.conversation_ended = True
             logging.error(f"Error Setting Up Character<await_and_setup_conversation>: {e}")
+            tb = traceback.format_exc()
+            logging.error(tb)
             if not self.config.continue_on_missing_character:
                 input("Press Enter to exit.")
                 raise e
@@ -138,6 +143,7 @@ class ConversationManager(BaseConversationManager):
             try: # get response from NPC to player greeting
                 self.new_message({'role': self.config.conversation_start_role, 'content': self.character_manager.language["intro_message"].replace("{name}",character.name)}) # TODO: Improve more later
                 # Conversation Start Type Handling
+                logging.config(f"Conversation Start Type: {self.config.conversation_start_type}")
                 if self.config.conversation_start_type == "always_llm_choice":
                     self.get_response()
                 elif self.config.conversation_start_type == "always_force_npc_greeting":
@@ -169,6 +175,8 @@ class ConversationManager(BaseConversationManager):
             except Exception as e: # if error, close Pantella
                 self.game_interface.write_game_info('_pantella_end_conversation', 'True')
                 logging.error(f"Error Getting Response in await_and_setup_conversation(): {e}")
+                tb = traceback.format_exc()
+                logging.error(tb)
                 input("Press Enter to exit.")
                 raise e
         else: # if radiant dialogue, get response from NPC to other NPCs greeting
@@ -191,6 +199,7 @@ class ConversationManager(BaseConversationManager):
             logging.info('Cannot step through conversation when not in conversation')
             self.conversation_ended = True
             return
+        generate_this_step = True
         
         self.update_game_state()
 
@@ -213,50 +222,61 @@ class ConversationManager(BaseConversationManager):
         if not self.conversation_ended and not self.radiant_dialogue: # check if conversation has ended and isn't radiant, if it's not, get next player input
             logging.info('Getting player response...')
             transcribed_text = self.transcriber.get_player_response(", ".join(self.character_manager.active_characters.keys()))
+            player_sent_message = False
+
             if transcribed_text == "EndConversationNow":
                 self.end_conversation()
-            self.behavior_manager.run_player_behaviors(transcribed_text) # run player behaviors
-
-            self.game_interface.write_game_info('_pantella_player_input', transcribed_text) # write player input to _pantella_player_input.txt
-
-            transcript_cleaned = utils.clean_text(transcribed_text)
-
-            self.new_message({'role': self.config.user_name, 'name':"[player]", 'content': transcribed_text}) # add player input to messages
+            elif transcribed_text == "ForgetLastMessage": # Forget the last message
+                self.character_manager.forget_last_message()
+                self.messages.pop() # remove last message from messages
+                generate_this_step = False
+                transcribed_text = ""
+            elif transcribed_text == "RegenLastMessage": # Forget the last message and regenerate it
+                self.character_manager.forget_last_message() 
+                self.messages.pop() # remove last message from messages
+                transcribed_text = ""
+            else: # if player input is not empty, and isn't a special command, run player behaviors
+                self.behavior_manager.run_player_behaviors(transcribed_text) # run player behaviors
+                self.game_interface.write_game_info('_pantella_player_input', transcribed_text) # write player input to _pantella_player_input.txt
+                self.new_message({'role': self.config.user_name, 'name':"[player]", 'content': transcribed_text}) # add player input to messages
+                player_sent_message = True
+                
             self.character_manager.before_step() # Let the characters know that a step has been taken
-        
             self.update_game_state()
+            
+            if player_sent_message:
+                # check if user is ending conversation
+                transcript_cleaned = utils.clean_text(transcribed_text)
+                end_convo = False
+                for keyword in  self.character_manager.language["end_conversation_keywords"]:
+                    if self.transcriber.activation_name_exists(transcript_cleaned, keyword):
+                        end_convo = True
+                        break
+                if end_convo or self.conversation_ended:
+                    # Detect who the player is talking to
+                    name_groups = []
+                    for character in self.character_manager.active_characters.values():
+                        character_names = character.name.split(' ')
+                        name_groups.append(character_names)
+                    all_words = transcript_cleaned.split(' ')
+                    goodbye_target_character = None
+                    for word in all_words: # check if any of the words in the player input match any of the names of the active characters, even partially. If so, end conversation with that character TODO: Make this a config setting "string" vs "partial" name_matching
+                        for name_group in name_groups:
+                            if word in name_group:
+                                goodbye_target_character = self.character_manager.active_characters[' '.join(name_group)]
+                                break
+                    self.end_conversation(goodbye_target_character) # end conversation in game with current active character, and if no active characters are left in the conversation, end it entirely
 
-            # check if user is ending conversation
-            end_convo = False
-            for keyword in  self.character_manager.language["end_conversation_keywords"]:
-                if self.transcriber.activation_name_exists(transcript_cleaned, keyword):
-                    end_convo = True
-                    break
-            if end_convo or self.conversation_ended:
-                # Detect who the player is talking to
-                name_groups = []
-                for character in self.character_manager.active_characters.values():
-                    character_names = character.name.split(' ')
-                    name_groups.append(character_names)
-                all_words = transcript_cleaned.split(' ')
-                goodbye_target_character = None
-                for word in all_words: # check if any of the words in the player input match any of the names of the active characters, even partially. If so, end conversation with that character TODO: Make this a config setting "string" vs "partial" name_matching
-                    for name_group in name_groups:
-                        if word in name_group:
-                            goodbye_target_character = self.character_manager.active_characters[' '.join(name_group)]
-                            break
-                self.end_conversation(goodbye_target_character) # end conversation in game with current active character, and if no active characters are left in the conversation, end it entirely
-
-        if self.character_manager.active_character_count() == 1: # check if NPC is in combat to change their voice tone (if one on one conversation)
-            # TODO: Make this work for multi NPC conversations
-            aggro = self.game_interface.load_data_when_available('_pantella_actor_is_in_combat', '').lower() == 'true' # TODO: Make this a game_state_manager method instead of an inline call
-            if aggro:
-                self.game_interface.active_character.is_in_combat = 1
-            else:
-                self.game_interface.active_character.is_in_combat = 0
+        # if self.character_manager.active_character_count() == 1: # check if NPC is in combat to change their voice tone (if one on one conversation)
+        #     # TODO: Make this work for multi NPC conversations
+        #     aggro = self.game_interface.load_data_when_available('_pantella_actor_is_in_combat', '').lower() == 'true' # TODO: Make this a game_state_manager method instead of an inline call
+        #     if aggro:
+        #         self.game_interface.active_character.is_in_combat = 1
+        #     else:
+        #         self.game_interface.active_character.is_in_combat = 0
 
         
-        if ((transcribed_text is not None and transcribed_text != '') or (self.radiant_dialogue and self.character_manager.active_character_count() > 1)) and not self.conversation_ended and self.in_conversation: # if player input is not empty and conversation has not ended, get response from NPC
+        if generate_this_step and ((transcribed_text is not None and transcribed_text != '') or (self.radiant_dialogue and self.character_manager.active_character_count() > 1)) and not self.conversation_ended and self.in_conversation: # if player input is not empty and conversation has not ended, get response from NPC
             self.get_response()
         
         # if npc ended conversation
