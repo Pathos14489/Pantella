@@ -12,7 +12,7 @@ class Character:
         self.info = info
         logging.info(self.info)
         logging.info(f"Loading character: {self.info['name']}")
-        logging.info(json.dumps(info, indent=4))
+        logging.config(json.dumps(info, indent=4))
         for key, value in info.items():
             if key != "age" and key != "gender" and key != "race":
                 setattr(self, key, value) # set all character info as attributes of the character object to support arbitrary character info
@@ -196,24 +196,25 @@ class Character:
         #     -4: Archnemesis
         trust = 'stranger'
         knows = False
-        if relationship_level == -4:
-            trust = 'archnemesis'
-        elif relationship_level == -3:
-            trust = 'enemy'
-        elif relationship_level == -2:
-            trust = 'foe'
-        elif relationship_level == -1:
-            trust = 'rival'
-        elif relationship_level == 0:
-            trust = 'acquaintance'
-        elif relationship_level == 1:
-            trust = 'friend'
-        elif relationship_level == 2:
-            trust = 'confidant'
-        elif relationship_level == 3:
-            trust = 'ally'
-        elif relationship_level == 4:
-            trust = 'lover'
+        if not self.stranger:
+            if relationship_level == -4:
+                trust = 'archnemesis'
+            elif relationship_level == -3:
+                trust = 'enemy'
+            elif relationship_level == -2:
+                trust = 'foe'
+            elif relationship_level == -1:
+                trust = 'rival'
+            elif relationship_level == 0:
+                trust = 'acquaintance'
+            elif relationship_level == 1:
+                trust = 'friend'
+            elif relationship_level == 2:
+                trust = 'confidant'
+            elif relationship_level == 3:
+                trust = 'ally'
+            elif relationship_level == 4:
+                trust = 'lover'
         if name in self.knows: # If the character knows the player's name, use it
             knows = True
         if knows:
