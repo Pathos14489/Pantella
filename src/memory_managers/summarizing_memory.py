@@ -2,6 +2,7 @@ print("Loading summarizing_memory memory manager...")
 from src.memory_managers.base_memory_manager import base_MemoryManager
 from src.logging import logging, time
 import os
+import traceback
 logging.info("Imported required libraries in summarizing_memory.py")
 
 manager_slug = "summarizing_memory"
@@ -83,6 +84,8 @@ class MemoryManager(base_MemoryManager):
                 except Exception as e:
                     logging.error('Failed to summarize conversation...')
                     logging.error(e)
+                    tb = traceback.format_exc()
+                    logging.error(tb)
                     print(e)
                     input('Press enter to continue...')
                     raise e

@@ -5,12 +5,15 @@ import gradio as gr
 import src.config_loader as config_loader
 import json
 import chromadb
+import traceback
 from chromadb.config import Settings
 try:
     config = config_loader.ConfigLoader() # Load config from config.json
 except Exception as e:
     logging.error(f"Error loading config:")
     logging.error(e)
+    tb = traceback.format_exc()
+    logging.error(tb)
     input("Press Enter to exit.")
     raise e
 

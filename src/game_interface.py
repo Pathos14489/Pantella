@@ -15,7 +15,7 @@ for file in os.listdir(os.path.join(os.path.dirname(__file__), "game_interfaces/
             Interface_Types[module.interface_slug] = module    
 logging.info("Imported all game interfaces to Interface_Types, ready to create a game interface object!")
 # print available game interfaces
-logging.info(f"Available game interfaces: {Interface_Types.keys()}")
+logging.config(f"Available game interfaces: {Interface_Types.keys()}")
 
 # Create Interface object using the config provided
     

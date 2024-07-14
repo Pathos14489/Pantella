@@ -3,6 +3,7 @@ from src.logging import logging
 from src.conversation_managers.base_conversation_manager import BaseConversationManager
 import src.utils as utils
 import json
+import traceback
 import uuid
 import src.characters_manager as characters_manager # Character Manager class
 logging.info("Imported required libraries in conversation_managers/creation_engine_file_buffers.py")
@@ -95,6 +96,8 @@ class ConversationManager(BaseConversationManager):
             self.new_message({'role': self.config.system_name, 'content': "*"+pp_name+" approaches "+character.name+" with the intent to start a conversation with them.*"}) # TODO: Improve later
         except Exception as e: # if error, close Pantella
             logging.error(f"Error Getting Response in await_and_setup_conversation(): {e}")
+            tb = traceback.format_exc()
+            logging.error(tb)
             input("Press Enter to exit.")
             raise e
         self.game_interface.update_game_events() # update game events before player input

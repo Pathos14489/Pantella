@@ -4,6 +4,7 @@ import src.utils as utils
 import src.llms.base_llm as base_LLM
 import src.tokenizers.base_tokenizer as tokenizer
 from threading import Thread
+import traceback
 logging.info("Imported required libraries in transformers.py")
 
 try:
@@ -43,7 +44,7 @@ class StoppingTextIteratorStreamer(TextIteratorStreamer):
         self.text_queue.put(formatted_text, timeout=self.timeout)
 
         contains_stops = False
-        self.stops = self.stops
+        # self.stops = self.stops
         for stop in self.stops:
             if stop in self.full_string:
                 contains_stops = True
@@ -166,6 +167,8 @@ class LLM(base_LLM.base_LLM): # Uses llama-cpp-python as the LLM inference engin
             except Exception as e:
                 logging.warning('Error generating completion, retrying in 5 seconds...')
                 logging.warning(e)
+                tb = traceback.format_exc()
+                logging.error(tb)
                 print(e)
                 if retries == 1:
                     logging.error('Error generating completion after 5 retries, exiting...')
@@ -177,7 +180,7 @@ class LLM(base_LLM.base_LLM): # Uses llama-cpp-python as the LLM inference engin
             break
         return completion
     
-    def acreate(self, messages,  message_prefix="", force_speaker=None, banned_chars=[]): # Creates a completion stream for the messages provided to generate a speaker and their response
+    def acreate(self, messages,  message_prefix="", force_speaker=None): # Creates a completion stream for the messages provided to generate a speaker and their response
         retries = 5
         while retries > 0:
             logging.info(f"Retries: {retries}")
@@ -191,7 +194,7 @@ class LLM(base_LLM.base_LLM): # Uses llama-cpp-python as the LLM inference engin
                 logging.info(f"Type of prompt: {type(prompt)}")
                 inputs = self.tokenizer.tokenizer(prompt, return_tensors="pt").to(self.device_map)
                 
-                streamer = StoppingTextIteratorStreamer(self.tokenizer.tokenizer, self, stops=self.config.stop+banned_chars, skip_prompt=True)
+                streamer = StoppingTextIteratorStreamer(self.tokenizer.tokenizer, self, stops=self.config.stop, skip_prompt=True)
                 criteria = StoppingTextIteratorStoppingCriteria(streamer.stop_bool)
                 criteria_list = StoppingCriteriaList()
                 criteria_list.append(criteria)
@@ -203,6 +206,8 @@ class LLM(base_LLM.base_LLM): # Uses llama-cpp-python as the LLM inference engin
             except Exception as e:
                 logging.warning('Error creating completion stream, retrying in 5 seconds...')
                 logging.warning(e)
+                tb = traceback.format_exc()
+                logging.error(tb)
                 print(e)
                 if retries == 1:
                     logging.error('Error creating completion stream after 5 retries, exiting...')

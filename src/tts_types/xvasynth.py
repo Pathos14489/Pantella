@@ -13,6 +13,7 @@ import re
 import numpy as np
 import requests
 import threading
+import traceback
 logging.info("Imported required libraries in xVASynth TTS")
 
 tts_slug = "xvasynth"
@@ -58,7 +59,7 @@ class Synthesizer(base_tts.base_Synthesizer):
         self.setvocoder_url = f'{self.config.xvasynth_base_url}/setVocoder'
         self.get_available_voices_url = f'{self.config.xvasynth_base_url}/getAvailableVoices'
         self.set_available_voices_url = f'{self.config.xvasynth_base_url}/setAvailableVoices'
-        logging.info(f'xVASynth - Available voices: {self.voices()}')
+        logging.config(f'xVASynth - Available voices: {self.voices()}')
         
     def _say(self, voiceline, voice_model="Female Sultry", volume=0.5):
         self.change_voice(voice_model)
@@ -109,6 +110,8 @@ class Synthesizer(base_tts.base_Synthesizer):
         except Exception as e:
             logging.error(f'Could not run xVASynth. Ensure that the path "{self.xvasynth_path}" is correct.')
             logging.error(e)
+            tb = traceback.format_exc()
+            logging.error(tb)
             input('\nPress any key to stop Pantella...')
             raise e
  
@@ -168,11 +171,11 @@ class Synthesizer(base_tts.base_Synthesizer):
     
     def voices(self): # Send API request to xvasynth to get a list of characters
         """Return a list of available voices"""
-        logging.info(f"Getting available voices from {self.get_available_voices_url}...")
+        logging.config(f"Getting available voices from {self.get_available_voices_url}...")
         requests.post(self.set_available_voices_url, json={'modelsPaths': json.dumps({self.game: self.model_path})}) # Set the available voices to the ones in the models folder
         r = requests.post(self.get_available_voices_url) # Get the available voices
         if r.status_code == 200:
-            logging.info(f"Got available voices from {self.get_available_voices_url}...")
+            logging.config(f"Got available voices from {self.get_available_voices_url}...")
             # logging.info(f"Response code: {r.status_code}")
             # logging.info(f"Response text: {r.text}")
             data = r.json()
@@ -184,8 +187,8 @@ class Synthesizer(base_tts.base_Synthesizer):
         voices = []
         for character in data[self.game]:
             voices.append(character['voiceName'])
-        logging.info(f"Available xVASynth Voices: {voices}")
-        logging.info(f"Total xVASynth Voices: {len(voices)}")
+        logging.config(f"Available xVASynth Voices: {voices}")
+        logging.config(f"Total xVASynth Voices: {len(voices)}")
         return voices
 
     @utils.time_it
@@ -210,14 +213,14 @@ class Synthesizer(base_tts.base_Synthesizer):
             'useSR': self.use_sr,
             'useCleanup': self.use_cleanup,
         }
-        logging.info(f'Synthesizing line: {line}')
-        logging.info(f'Saving to: {save_path}')
+        logging.out(f'Synthesizing voiceline: {line}')
+        logging.config(f'Saving to: {save_path}')
         logging.info(f'Voice model: {self.last_voice}')
-        logging.info(f'Base language: {base_lang}')
-        logging.info(f'Base speaker emb: {self.base_speaker_emb}')
-        logging.info(f'Pace: {self.pace}')
-        logging.info(f'Use SR: {self.use_sr}')
-        logging.info(f'Use Cleanup: {self.use_cleanup}')
+        logging.config(f'Base language: {base_lang}')
+        # logging.info(f'Base speaker emb: {self.base_speaker_emb}') # Too spammy
+        logging.config(f'Pace: {self.pace}')
+        logging.config(f'Use SR: {self.use_sr}')
+        logging.config(f'Use Cleanup: {self.use_cleanup}')
         requests.post(self.synthesize_url, json=data)
 
     @utils.time_it
@@ -300,7 +303,7 @@ class Synthesizer(base_tts.base_Synthesizer):
                 result.append(current_line.strip())
 
         result = self._group_sentences(result, max_length)
-        logging.info(f'Split sentence into : {result}')
+        logging.info(f'Split sentence into:',result)
 
         return result
 
@@ -333,12 +336,15 @@ class Synthesizer(base_tts.base_Synthesizer):
             input("Press enter to continue...")
             raise base_tts.VoiceModelNotFound(f'Voice model {character.voice_model} not available! Please add it to xVASynth voices list.')
 
-        logging.info('Loading voice model...')
+        logging.info(f'Loading voice model {voice}...')
         
+        # TODO: Enhance to check every game for any voice model, just prefer the one for the current game if available
         if self.game == "fallout4" or self.game == "fallout4vr": # get the correct voice model for Fallout 4
+            logging.config("Checking for Fallout 4 voice model...")
             XVASynthAcronym="f4_"
             XVASynthModNexusLink="https://www.nexusmods.com/fallout4/mods/49340?tab=files"
         else: # get the correct voice model for Skyrim
+            logging.config("Checking for Skyrim voice model...")
             XVASynthAcronym="sk_"
             XVASynthModNexusLink = "https://www.nexusmods.com/skyrimspecialedition/mods/44184?tab=files"
         voice_path = f"{self.model_path}{XVASynthAcronym}{voice.lower().replace(' ', '')}"

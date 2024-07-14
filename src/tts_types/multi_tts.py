@@ -8,6 +8,10 @@ class Synthesizer(base_tts.base_Synthesizer):
     def __init__(self, conversation_manager, ttses = []):
         super().__init__(conversation_manager)
         self.tts_engines = ttses
+        fallback_order = ""
+        for tts, tts_index in enumerate(self.tts_engines):
+            fallback_order += f"{tts_index}. {tts.tts_slug}\n"
+        logging.config(f"Loaded multi_tts with tts engines in the following fallback order:\n{fallback_order}")
 
     def voices(self):
         """Return a list of available voices"""

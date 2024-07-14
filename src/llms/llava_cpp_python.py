@@ -10,6 +10,7 @@ import base64
 import os
 from PIL import Image
 import io
+import traceback
 logging.info("Imported required libraries in llava_cpp_python.py")
 
 try:
@@ -74,6 +75,8 @@ class LLM(llama_cpp_python_LLM.LLM): # Uses llama-cpp-python as the LLM inferenc
                 self.clip_model = clip_model_load(self.config.llava_clip_model_path.encode(), 1)
             except Exception as e:
                 logging.error(f"Error loading clip model for 'llava-cpp-python'(not a typo) inference engine. Please check that the model path is correct in config.json.")
+                tb = traceback.format_exc()
+                logging.error(tb)
                 input("Press Enter to exit.")
                 raise e
         else:
@@ -364,6 +367,8 @@ class LLM(llama_cpp_python_LLM.LLM): # Uses llama-cpp-python as the LLM inferenc
             except Exception as e:
                 logging.warning('Error generating completion, retrying in 5 seconds...')
                 logging.warning(e)
+                tb = traceback.format_exc()
+                logging.error(tb)
                 print(e)
                 if retries == 1:
                     logging.error('Error generating completion after 5 retries, exiting...')
@@ -375,7 +380,7 @@ class LLM(llama_cpp_python_LLM.LLM): # Uses llama-cpp-python as the LLM inferenc
             break
         return completion
     
-    def acreate(self, messages, message_prefix="", force_speaker=None, banned_chars=[]): # Creates a completion stream for the messages provided to generate a speaker and their response
+    def acreate(self, messages, message_prefix="", force_speaker=None): # Creates a completion stream for the messages provided to generate a speaker and their response
         logging.info(f"aMessages: {messages}")
         retries = 5
         while retries > 0:
@@ -397,7 +402,7 @@ class LLM(llama_cpp_python_LLM.LLM): # Uses llama-cpp-python as the LLM inferenc
                     min_p=self.min_p,
                     temperature=self.temperature,
                     repeat_penalty=self.repeat_penalty, 
-                    stop=self.stop + banned_chars,
+                    stop=self.stop,
                     frequency_penalty=self.frequency_penalty,
                     presence_penalty=self.presence_penalty,
                     typical_p=self.typical_p,
@@ -410,6 +415,8 @@ class LLM(llama_cpp_python_LLM.LLM): # Uses llama-cpp-python as the LLM inferenc
             except Exception as e:
                 logging.warning('Error creating completion stream, retrying in 5 seconds...')
                 logging.warning(e)
+                tb = traceback.format_exc()
+                logging.error(tb)
                 print(e)
                 if retries == 1:
                     logging.error('Error creating completion stream after 5 retries, exiting...')

@@ -3,6 +3,7 @@ from src.logging import logging, time
 import src.utils as utils
 import src.llms.base_llm as base_LLM
 import random
+import traceback
 logging.info("Imported required libraries in openai_api.py")
 
 try:
@@ -205,6 +206,8 @@ class LLM(base_LLM.base_LLM):
             except Exception as e:
                 logging.warning('Could not connect to LLM API, retrying in 5 seconds...')
                 logging.warning(e)
+                tb = traceback.format_exc()
+                logging.error(tb)
                 print(e)
                 if retries == 1:
                     logging.error('Could not connect to LLM API after 5 retries, exiting...')
@@ -220,13 +223,13 @@ class LLM(base_LLM.base_LLM):
             raise ValueError(f"Could not get completion from OpenAI-style API. Please check your API key and internet connection.")
         return completion
     @utils.time_it
-    def acreate(self, messages, message_prefix="", force_speaker=None, banned_chars=[]): # Creates a completion stream for the messages provided to generate a speaker and their response
+    def acreate(self, messages, message_prefix="", force_speaker=None): # Creates a completion stream for the messages provided to generate a speaker and their response
         # logging.info(f"aMessages: {messages}")
         retries = 5
         while retries > 0:
             try:
                 openai_stop = list(self.stop)
-                openai_stop = [self.message_separator,self.EOS_token,self.BOS_token] + openai_stop + banned_chars
+                openai_stop = [self.message_separator,self.EOS_token,self.BOS_token] + openai_stop
                 openai_stop = [stop for stop in openai_stop if stop != ""] # Remove empty strings from the stop list
                 if self.config.alternative_openai_api_base == 'none': # OpenAI stop is the first 4 options in the stop list because they only support up to 4 for some asinine reason
                     openai_stop = openai_stop[:4]
@@ -282,7 +285,9 @@ class LLM(base_LLM.base_LLM):
             except Exception as e:
                 logging.warning('Could not connect to LLM API, retrying in 5 seconds...')
                 logging.warning(e)
-                logging.info(e)
+                tb = traceback.format_exc()
+                logging.error(tb)
+                print(e)
                 if retries == 1:
                     logging.error('Could not connect to LLM API after 5 retries, exiting...')
                     input('Press enter to continue...')

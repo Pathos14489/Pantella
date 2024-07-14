@@ -25,9 +25,9 @@ class BehaviorManager():
                 behavior = getattr(behavior, behavior_name)(self)
                 # logging.info(behavior)
                 if conversation_manager.config.game_id in behavior.valid_games:
-                    logging.info(f"Behavior {behavior_name} supported by game '{conversation_manager.config.game_id}'")
+                    logging.config(f"Behavior {behavior_name} supported by game '{conversation_manager.config.game_id}'")
                 else:
-                    logging.info(f"Behavior {behavior_name} not supported by game '{conversation_manager.config.game_id}'")
+                    logging.config(f"Behavior {behavior_name} not supported by game '{conversation_manager.config.game_id}'")
                     continue
                 if behavior._run(False) == "BASEBEHAVIOR":
                     logging.error("BaseBehavior run() called for " + behavior_name + ", this should be overwritten by the child class!")

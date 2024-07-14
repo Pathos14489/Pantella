@@ -3,17 +3,17 @@ from src.logging import logging
 import json
 import os
 import flask
+import traceback
 logging.info("Imported required libraries in config_loader.py")
 
 game_configs = {}
 # Get all game configs from src/game_configs/ and add them to game_configs
 for file in os.listdir(os.path.join(os.path.dirname(__file__), "../game_configs/")):
     if file.endswith(".json") and not file.startswith("__"):
-        logging.info(f"Importing game config {file}")
+        logging.config(f"Importing game config {file}")
         game_id = file[:-5]
-        logging.info(f"Game id: {game_id}")
         game_configs[game_id] = json.load(open(os.path.join(os.path.dirname(__file__), "../game_configs", file)))
-        logging.info(f"Imported game config {game_id}")
+        logging.config(f"Imported game config {game_id}")
 logging.info("Imported all game configs, ready to use them!")
 
 class ConfigLoader:
@@ -27,8 +27,8 @@ class ConfigLoader:
         self.load()
         self.game_configs = game_configs
         self.current_game_config = game_configs[self.game_id]
-        logging.info(f"ConfigLoader initialized with config path {config_path}")
-        logging.info(f"Current game config: '{self.current_game_config}' from game id '{self.game_id}'")
+        logging.config(f"ConfigLoader initialized with config path {config_path}")
+        logging.config(f"Current game config: '{self.current_game_config}' from game id '{self.game_id}'")
         self.conversation_manager_type = self.current_game_config["conversation_manager_type"]
         self.interface_type = self.current_game_config["interface_type"]
         self.behavior_manager = self.current_game_config["behavior_manager"]
@@ -50,6 +50,8 @@ class ConfigLoader:
             export_obj = self.export()
         except Exception as e:
             logging.error(f"Could not save config file to {self.config_path}. Error: {e}")
+            tb = traceback.format_exc()
+            logging.error(tb)
             raise e
         try:
             with open(self.config_path, 'w') as f:
@@ -57,11 +59,13 @@ class ConfigLoader:
             logging.info(f"Config file saved to {self.config_path}")
         except Exception as e:
             logging.error(f"Could not save config file to {self.config_path}. Error: {e}")
+            tb = traceback.format_exc()
+            logging.error(tb)
             raise e
 
     def load(self):
         """Load the config from the config file and set the settings to the loader. If the config file does not exist, create it with the default settings. If a setting is missing from the config file, set it to the default setting."""
-        print(f"Loading config from {self.config_path}")
+        logging.info(f"Loading config from {self.config_path}")
         save = False
         default = self.default()
         if os.path.exists(self.config_path):
@@ -73,7 +77,7 @@ class ConfigLoader:
                 if new_config.lower() == "y":
                     config = self.default()
                     save = True
-                    print(f"Saving default config file to {self.config_path}")
+                    logging.info(f"Saving default config file to {self.config_path}")
                 else:
                     logging.error(f"Could not load config file from {self.config_path}.")
                     input("Press enter to continue...")
@@ -83,18 +87,18 @@ class ConfigLoader:
             logging.error(f"\"{self.config_path}\" does not exist! Creating default config file...")
             config = self.default()
             save = True
-            print(f"Saving default config file to {self.config_path}")
+            logging.info(f"Saving default config file to {self.config_path}")
         
         for key in default: # Set the settings in the config file to the default settings if they are missing
             if key not in config:
                 config[key] = default[key]
                 save = True
-                print(f"Saving new key '{key}' to config file")
+                logging.info(f"Saving new key '{key}' to config file")
             for sub_key in default[key]:
                 if sub_key not in config[key]:
                     config[key][sub_key] = default[key][sub_key]
                     save = True
-                    print(f"Saving new subkey '{key}':'{sub_key}' to config file")
+                    logging.info(f"Saving new subkey '{key}':'{sub_key}' to config file")
                     
         for key in default: # Set the config settings to the loader
             for sub_key in default[key]:
@@ -106,7 +110,7 @@ class ConfigLoader:
 
         if self.game_id not in game_configs:
             logging.error(f"Game id {self.game_id} not found in game_configs directory. Please add a game config file for {self.game_id} or change the game_id in config.json to a valid game id.")
-            logging.info(f"Valid game ids: {list(game_configs.keys())}")
+            logging.config(f"Valid game ids: {list(game_configs.keys())}")
             input("Press enter to continue...")
             raise ValueError(f"Game id {self.game_id} not found in game_configs directory. Please add a game config file for {self.game_id} or change the game_id in config.json to a valid game id.")
 
@@ -114,22 +118,22 @@ class ConfigLoader:
             self.save()
             
         if self.linux_mode:
-            logging.info("Linux mode enabled - Fixing paths for linux...")
+            logging.config("Linux mode enabled - Fixing paths for linux...")
             # Fix paths for linux
             for key in default:
                 for sub_key in default[key]:
                     if "_path" in sub_key or "_file" in sub_key or "_dirlol" in sub_key:
                         setattr(self, sub_key, config[key][sub_key].replace("\\", "/"))
-            logging.info("Paths fixed for linux")
+            logging.config("Paths fixed for linux")
         
         self.set_behavior_style(self.behavior_style)
 
-        logging.info(f"Unique settings:", self.unique())
-        logging.info(f"Config loaded from {self.config_path}")
+        logging.config(f"Unique settings:", self.unique())
+        logging.config(f"Config loaded from {self.config_path}")
 
     def get_prompt_styles(self):
         """Get the prompt styles from the prompt_styles directory"""
-        logging.info("Getting prompt styles")
+        logging.config("Getting prompt styles")
         prompt_styles_dir = os.path.join(os.path.dirname(__file__), "../prompt_styles/")
         for file in os.listdir(prompt_styles_dir):
             if file.endswith('.json'):
@@ -138,11 +142,11 @@ class ConfigLoader:
                     self._raw_prompt_styles[slug] = json.load(f)
                     self.prompt_styles[slug] = self._raw_prompt_styles[slug]
         style_names = [f"{slug} ({self._raw_prompt_styles[slug]['name']})" for slug in self.prompt_styles]
-        logging.info(f"Prompt styles loaded: "+str(style_names))
+        logging.config(f"Prompt styles loaded: "+str(style_names))
 
     def get_behavior_styles(self):
         """Get the behavior styles from the behavior_styles directory"""
-        logging.info("Getting behavior styles")
+        logging.config("Getting behavior styles")
         behavior_styles_dir = os.path.join(os.path.dirname(__file__), "../behavior_styles/")
         for file in os.listdir(behavior_styles_dir):
             if file.endswith('.json'):
@@ -151,7 +155,7 @@ class ConfigLoader:
                     self._raw_behavior_styles[slug] = json.load(f)
                     self.behavior_styles[slug] = self._raw_behavior_styles[slug]["behavior_style"]
         style_names = [f"{slug} ({self._raw_behavior_styles[slug]['name']})" for slug in self.behavior_styles]
-        logging.info(f"Behavior styles loaded: "+str(style_names))
+        logging.config(f"Behavior styles loaded: "+str(style_names))
 
     @property
     def prompts(self):
@@ -208,8 +212,8 @@ class ConfigLoader:
             logging.error(f"Prompt style not set in config file. Using default prompt style.")
             self._prompt_style = self.prompt_styles["normal_en"]
         # self.get_tokenizer_settings_from_prompt_style()
-        logging.info("Getting tokenizer settings from prompt style")
-        logging.info(self._prompt_style)
+        logging.info("Getting tokenizer settings from default prompt style")
+        logging.config("Default Prompt Style:",self._prompt_style)
         logging.info("Prompt formatting settings loaded")
     
     def set_behavior_style(self, behavior_style):
@@ -515,6 +519,8 @@ class ConfigLoader:
                 "add_voicelines_to_all_voice_folders": False
             },
             "Errors": {
+                "block_logs_from": [],
+                "block_log_types": [],
                 "continue_on_voice_model_error": False,
                 "continue_on_missing_character": False,
                 "continue_on_llm_api_error": True,
@@ -620,6 +626,8 @@ class ConfigLoader:
                 "as_a_check": self.as_a_check,
                 "break_on_time_announcements": self.break_on_time_announcements,
                 "meet_string_game_events": self.meet_string_game_events,
+                "game_update_pruning": self.game_update_pruning,
+                "game_update_prune_count": self.game_update_prune_count,
                 "conversation_start_role": self.conversation_start_role,
                 "custom_possible_player_aliases": self.custom_possible_player_aliases,
             },
@@ -720,6 +728,8 @@ class ConfigLoader:
                 "add_voicelines_to_all_voice_folders": self.add_voicelines_to_all_voice_folders,
             },
             "Errors": {
+                "block_logs_from": self.block_logs_from,
+                "block_log_types": self.block_log_types,
                 "continue_on_voice_model_error": self.continue_on_voice_model_error,
                 "continue_on_missing_character": self.continue_on_missing_character,
                 "continue_on_llm_api_error": self.continue_on_llm_api_error,

@@ -26,8 +26,8 @@ class Synthesizer(base_tts.base_Synthesizer):
         self.current_model = self.default_model
         self.set_model(self.default_model)
         # self.official_model_list = ["main","v2.0.3","v2.0.2","v2.0.1","v2.0.0"]
-        logging.info(f'xTTS_api - Available models: {self.available_models()}')
-        logging.info(f'xTTS_api - Available voices: {self.voices()}')
+        logging.config(f'xTTS_api - Available models: {self.available_models()}')
+        logging.config(f'xTTS_api - Available voices: {self.voices()}')
 
     def voices(self):
         """Return a list of available voices"""
@@ -128,7 +128,7 @@ class Synthesizer(base_tts.base_Synthesizer):
             'speaker_wav': voice_model,
             'language': character.tts_language_code
         }
-        print(data)
+        # print(data)
         response = requests.post(self.synthesize_url_xtts, json=data)
         if response.status_code == 200: # if the request was successful, write the wav file to disk at the specified path
             self.convert_to_16bit(io.BytesIO(response.content), save_path)
@@ -138,7 +138,7 @@ class Synthesizer(base_tts.base_Synthesizer):
           
     def synthesize(self, voiceline, character, aggro=0):
         """Synthesize the text for the character specified using the xTTS API"""
-        logging.info(f'Synthesizing voiceline: {voiceline}')
+        logging.out(f'Synthesizing voiceline: {voiceline}')
         self.change_voice(character)
         # make voice model folder if it doesn't already exist
         if not os.path.exists(f"{self.output_path}\\voicelines\\{character.voice_model}"):

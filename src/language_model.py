@@ -17,7 +17,7 @@ for file in os.listdir(os.path.join(os.path.dirname(__file__), "llms/")):
 LLM_Types["default"] = LLM_Types[default]
 logging.info("Imported all LLMs to LLM_Types, ready to create a LLM object!")
 # print available LLMs
-logging.info(f"Available LLMs: {LLM_Types.keys()}")
+logging.config(f"Available LLMs: {LLM_Types.keys()}")
 
 # Create LLM object using the config and client provided
     
@@ -30,12 +30,12 @@ def create_LLM(conversation_manager):
     llm = model.LLM(conversation_manager)
     if conversation_manager.config.tokenizer_type == "default": # if using the default tokenizer for the LLM
         if "Tokenizer" in model.__dict__: # if the LLM has a tokenizer included
-            logging.info(f"Using {conversation_manager.config.inference_engine}'s included tokenizer")
+            logging.config(f"Using {conversation_manager.config.inference_engine}'s included tokenizer")
             tokenizer = model.Tokenizer(conversation_manager)
         elif "tokenizer_slug" in llm.__dict__: # or if the LLM has a tokenizer slug specified
-            logging.info(f"Using {conversation_manager.config.inference_engine}'s recommended tokenizer")
+            logging.config(f"Using {conversation_manager.config.inference_engine}'s recommended tokenizer")
             if "client" in llm.__dict__: # if the LLM has a client specified (only really needed for openai at this point)
-                logging.info(llm.tokenizer_slug)
+                logging.config(llm.tokenizer_slug)
                 tokenizer = tokenizers.Tokenizer_Types[llm.tokenizer_slug].Tokenizer(conversation_manager, llm.client)
             else:
                 tokenizer = tokenizers.Tokenizer_Types[llm.tokenizer_slug].Tokenizer(conversation_manager)

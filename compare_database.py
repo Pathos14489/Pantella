@@ -8,6 +8,7 @@ import src.utils as utils
 import argparse
 import src.character_db as character_db
 import json
+import traceback
 
 print("Starting Pantella Database Conversion Script")
 try:
@@ -15,6 +16,8 @@ try:
 except Exception as e:
     logging.error(f"Error loading config:")
     logging.error(e)
+    tb = traceback.format_exc()
+    logging.error(tb)
     input("Press Enter to exit.")
     raise e
 
@@ -32,6 +35,8 @@ if __name__ == '__main__':
     except Exception as e:
         logging.error(f"Error Creating Conversation Manager:")
         logging.error(e)
+        tb = traceback.format_exc()
+        logging.error(tb)
         input("Press Enter to exit.")
         raise e
         

@@ -3,6 +3,7 @@ import src.utils as utils
 import src.llms.base_llm as base_LLM
 import src.tokenizers.base_tokenizer as tokenizer
 from src.logging import logging, time
+import traceback
 logging.info("Imported required libraries in llama_cpp_python.py")
 
 try:
@@ -84,6 +85,8 @@ class LLM(base_LLM.base_LLM): # Uses llama-cpp-python as the LLM inference engin
                 logging.warning('Error generating completion, retrying in 5 seconds...')
                 logging.warning(e)
                 print(e)
+                tb = traceback.format_exc()
+                logging.error(tb)
                 # raise e
                 if retries == 1:
                     logging.error('Error generating completion after 5 retries, exiting...')
@@ -95,7 +98,7 @@ class LLM(base_LLM.base_LLM): # Uses llama-cpp-python as the LLM inference engin
             break
         return completion
     
-    def acreate(self, messages, message_prefix="", force_speaker=None, banned_chars=[]): # Creates a completion stream for the messages provided to generate a speaker and their response
+    def acreate(self, messages, message_prefix="", force_speaker=None): # Creates a completion stream for the messages provided to generate a speaker and their response
         logging.info(f"aMessages: {messages}")
         retries = 5
         while retries > 0:
@@ -114,7 +117,7 @@ class LLM(base_LLM.base_LLM): # Uses llama-cpp-python as the LLM inference engin
                     min_p=self.min_p,
                     temperature=self.temperature,
                     repeat_penalty=self.repeat_penalty, 
-                    stop=self.stop + banned_chars,
+                    stop=self.stop,
                     frequency_penalty=self.frequency_penalty,
                     presence_penalty=self.presence_penalty,
                     typical_p=self.typical_p,

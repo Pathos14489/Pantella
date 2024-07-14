@@ -13,7 +13,7 @@ for file in os.listdir(os.path.join(os.path.dirname(__file__), "behavior_manager
         Manager_Types[module.manager_slug] = module    
 logging.info("Imported all behavior managers to Manager_Types, ready to create a behavior manager object!")
 # print available behavior managers
-logging.info(f"Available behavior managers: {Manager_Types.keys()}")
+logging.config(f"Available behavior managers: {Manager_Types.keys()}")
 
 # Create Manager object using the config provided
     

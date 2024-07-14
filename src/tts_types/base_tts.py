@@ -86,7 +86,7 @@ class base_Synthesizer:
         options.append(character.voice_model.lower().replace(' ', '')) # add the lowercase version of the voice model without spaces
         options.append(character.voice_model.upper().replace(' ', '')) # add the uppercase version of the voice model without spaces
         logging.info("Trying to detect voice model using the following aliases: ", options)
-        logging.info("Available voices: ", self.voices())
+        logging.config("Available voices: ", self.voices())
         for option in options:
             if option in self.voices():
                 logging.info(f'Voice model "{option}" found!')
@@ -111,12 +111,12 @@ class base_Synthesizer:
     def synthesize(self, text, character, **kwargs):
         """Synthesize the text passed as a parameter with the voice model specified in the character object."""
         logging.info(f'Warning: Using synthesizer() method of base_tts.py, this means you haven\'t implemented the synthesizer() method in your new tts type. This method should synthesize the text passed as a parameter with the voice model specified in the character object.')
-        logging.info(f'Synthesizing text: {text}')
-        logging.info(f'Using voice model: {character.voice_model}')
-        logging.info('Using Additional parameters: {}'.format(kwargs))
-        logging.info('Wav file not saved, please fix your code.')
-        logging.info('Lip file not saved, please fix your code.')
-        logging.info('Voice model not loaded, please fix your code.')
+        logging.out(f'Synthesizing text: {text}')
+        logging.config(f'Using voice model: {character.voice_model}')
+        logging.config('Using Additional parameters: {}'.format(kwargs))
+        logging.warn('Wav file not saved, please fix your code.')
+        logging.warn('Lip file not saved, please fix your code.')
+        logging.error('Voice model not loaded, please fix your code.')
         input("Press enter to continue...")
         raise NotImplementedError("synthesize() method not implemented in your tts type.")
         return final_voiceline_file # path to wav file

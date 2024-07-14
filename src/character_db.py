@@ -36,9 +36,9 @@ class CharacterDB():
 
     def loaded(self):
         logging.info(f"{len(self.male_voice_models)} Male voices - {len(self.female_voice_models)} Female voices")
-        logging.info("All Required Voice Models: "+str(self.all_voice_models))
-        logging.info("Total Required Voice Models: "+str(len(self.all_voice_models)))
-        logging.info("voice_model_ids:",self.voice_model_ids)
+        logging.config("All Required Voice Models: "+str(self.all_voice_models))
+        logging.config("Total Required Voice Models: "+str(len(self.all_voice_models)))
+        logging.config("voice_model_ids:",self.voice_model_ids)
 
     def load(self, path):
         self._characters = []
@@ -221,7 +221,7 @@ class CharacterDB():
         # logging.info(f"folder:",folder)
         if folder == None:
             folder = voice_model.replace(' ', '')
-            logging.info(f"Could not find voice folder for voice model '{voice_model}', defaulting to '{folder}'")
+            logging.warning(f"Could not find voice folder for voice model '{voice_model}', defaulting to '{folder}'")
         if type(folder) == list:
             folder = folder[0]
         return folder
@@ -250,7 +250,7 @@ class CharacterDB():
             # elif voice in self.voice_folders: # If the voice model is a valid voice folder, add it to the valid list
             #     self.valid.append(voice.replace(' ', ''))
             else:
-                logging.info(f"invalid voice: {voice_folder}")
+                logging.warning(f"invalid voice: {voice_folder}")
                 self.invalid.append(voice_folder)
                 self.invalid.append(voice)
         for voice in synthesizer_available_voices:
@@ -263,7 +263,7 @@ class CharacterDB():
             unspaced_voice = voice.replace(' ', '')
             if voice not in self.valid:
                 self.unused_voices.append(voice)
-                logging.info(f"unused voice: {voice}")
+                logging.config(f"unused voice: {voice}")
         new_valid = []
         for voice in self.valid:
             if voice not in self.unused_voices:
@@ -273,16 +273,15 @@ class CharacterDB():
             for character in self.characters:
                 if character['skyrim_voice_folder'] == voice or character['voice_model'] == voice:
                     logging.info(f"Character '{character['name']}' uses unused voice model '{voice}'")
-        logging.info(f"Valid voices found in character database: {len(self.valid)}/{len(self.all_voice_models)}")
+        logging.config(f"Valid voices found in character database: {len(self.valid)}/{len(self.all_voice_models)}")
 
-        logging.info(f"Total unused voices: {len(self.unused_voices)}/{len(synthesizer_available_voices)}")
+        logging.config(f"Total unused voices: {len(self.unused_voices)}/{len(synthesizer_available_voices)}")
         if len(self.invalid) > 0:
-            logging.info(f"Invalid voices found in character database: {self.invalid}. Please check that the voices are installed and try again.")
+            logging.warning(f"Invalid voices found in character database: {self.invalid}. Please check that the voices are installed and try again.")
             for character in self.characters:
                 if character['voice_model'] in self.invalid:
                     if character['voice_model'] != "":
-                        logging.info(f"WARNING: Character '{character['name']}' uses invalid voice model '{character['voice_model']}'! This is an error, please report it!")
-                        logging.info("(The rest of the program will continue to run, but this character might not be able to be used)")
+                        logging.warning(f"Character '{character['name']}' uses invalid voice model '{character['voice_model']}'! This is an error, please report it! (The rest of the program will continue to run, but this character might not be able to be used)")
 
     def get_character(self, character_name, character_ref_id=None, character_base_id=None): # Get a character from the character database using the character's name, refid_int, or baseid_int
         if character_ref_id is not None:

@@ -15,4 +15,5 @@ for file in os.listdir(os.path.join(os.path.dirname(__file__), "tokenizers/")):
             module = importlib.import_module(f"src.tokenizers.{module_name}")
             Tokenizer_Types[module.tokenizer_slug] = module
 Tokenizer_Types["default"] = Tokenizer_Types[default] # This is a hack to make the default tokenizer work with any LLM that has a tokenizer_slug specified
+logging.config(f"Available Tokenizers: {Tokenizer_Types.keys()}")
 logging.info("Imported all tokenizers to Tokenizer_Types, ready to create a tokenizer object!")

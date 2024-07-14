@@ -1,10 +1,11 @@
-from  src.logging import logging
+from src.logging import logging
 import os
 print(os.path.dirname(__file__))
 import src.conversation_manager as cm
 import src.config_loader as config_loader
 import src.utils as utils
 import threading
+import traceback
 try:
     import gradio as gr
     imported_gradio = True
@@ -13,14 +14,19 @@ except Exception as e:
     logging.error(e)
     imported_gradio = False
 
-print("Starting Pantella")
+logging.info("Starting Pantella...")
 try:
     config = config_loader.ConfigLoader() # Load config from config.json
 except Exception as e:
     logging.error(f"Error loading config:")
     logging.error(e)
+    tb = traceback.format_exc()
+    logging.error(tb)
     input("Press Enter to exit.")
     raise e
+
+logging.info("Loading blocked logging paths -- No logs will be generated from these files")
+logging.block_logs_from = config.block_logs_from # block logs from certain files
 
 utils.cleanup_mei(config.remove_mei_folders) # clean up old instances of exe runtime files
 
@@ -29,12 +35,14 @@ if config.debug_mode:
     config.interface_type = "gradio" # override game interface type to gradio
     config.sentences_per_voiceline = 99 # override sentences per voiceline to 99 so all outputs generate the whole voice line instead of parts
 
-print("Creating Conversation Manager")
+logging.info("Creating Conversation Manager")
 try:
     conversation_manager = cm.create_manager(config)
 except Exception as e:
     logging.error(f"Error Creating Conversation Manager:")
     logging.error(e)
+    tb = traceback.format_exc()
+    logging.error(tb)
     input("Press Enter to exit.")
     raise e
 
