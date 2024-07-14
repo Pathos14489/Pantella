@@ -254,19 +254,21 @@ class Characters:
             })
             random_character = random.choice(self.active_characters_list)
             behavior_memories = self.conversation_manager.behavior_manager.get_behavior_memories(random_character) # TODO: Check if this works fine, and if it's the right way to do it. Might need to redo how this works
+            name_insert = random_character.name
             for fake_memory in behavior_memories:
+                fake_memory["content"] = fake_memory["content"].replace("{name}",name_insert)
                 memories.append(fake_memory)
         if self.language["include_behavior_explanation"]:
             memories.append({
                 "role": self.config.system_name,
-                "content": self.language["behaviors_explanation_system_message_2"].replace("{summaries}",self.conversation_manager.behavior_manager.get_behavior_summary()),
+                "content": self.language["behaviors_explanation_system_message_2"].replace("{summaries}",self.conversation_manager.behavior_manager.get_behavior_summary()).replace("{name}",name_insert),
                 "type": "prompt"
             })
         for character in self.active_characters_list:
             memories.extend(character.memories)
         memories.append({
             "role": self.config.system_name,
-            "content": self.language["memory_present_separator"],
+            "content": self.language["memory_present_separator"].replace("{name}",name_insert),
             "type": "prompt"
         })
         return memories
