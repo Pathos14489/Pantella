@@ -5,6 +5,7 @@ import re
 import unicodedata
 import time
 import random
+import traceback
 logging.info("Imported required libraries in base_LLM.py")
 
 inference_engine_name = "base_LLM"
@@ -27,18 +28,25 @@ class base_LLM():
         end_of_sentence_chars = self.character_manager.prompt_style["end_of_sentence_chars"]
         end_of_sentence_chars = [unicodedata.normalize('NFKC', char) for char in end_of_sentence_chars]
         end_of_sentence_chars = [char for char in end_of_sentence_chars if char != '']
+        # end_of_sentence_chars.append(self._prompt_style["roleplay_suffix"]) # Too lazy to work, needs real solution
         return end_of_sentence_chars
     
     @property
-    def banned_chars(self):
-        banned_chars = self._prompt_style["banned_chars"]
-        banned_chars.append(self._prompt_style["message_separator"])
-        banned_chars.append(self.EOS_token)
-        banned_chars.append(self.BOS_token)
+    def stop(self): # stop strings for the LLM -- stops generation when they're encountered. Either at the API level if they're supported, inference engine level if your chosen method of inference supprts it, or here after the tokens are generated if they make it through the other two layers.
+        stop = list(self._prompt_style["stop"])
+        stop.append(self._prompt_style["message_separator"])
+        stop.append(self.EOS_token)
+        stop.append(self.BOS_token)
         if not self.character_manager.language["allow_npc_roleplay"]:
-            banned_chars.append("*")
-        banned_chars = [char for char in banned_chars if char != '']
-        return banned_chars
+            stop.append(self._prompt_style["roleplay_prefix"])
+            stop.append(self._prompt_style["roleplay_suffix"])
+        stop = [char for char in stop if char != '' or char != None or char != "'"]
+        return stop
+    
+    @property
+    def undo(self): # strings that will cause the whole sentence to be retried if they're encountered
+        undo_chars = self._prompt_style["undo"]
+        return undo_chars
     
     @property
     def _prompt_style(self):
@@ -145,10 +153,6 @@ class base_LLM():
         return self.config.mirostat_tau
     
     @property
-    def stop(self):
-        return self._prompt_style['stop']
-    
-    @property
     def transformers_model_slug(self):
         return self.config.transformers_model_slug
     
@@ -199,13 +203,13 @@ class base_LLM():
         input("Press enter to continue...")
         raise NotImplementedError("Please override this method in your child class!")
 
-    def acreate(self, messages, message_prefix="", force_speaker=None, banned_chars=[]): # Creates a completion stream for the messages provided to generate a speaker and their response
+    def acreate(self, messages, message_prefix="", force_speaker=None): # Creates a completion stream for the messages provided to generate a speaker and their response
         """Generate a streameed response from the LLM using the messages provided"""
         logging.info(f"Warning: Using base_LLM.acreate() instead of a child class, this is probably not what you want to do. Please override this method in your child class!")
         input("Press enter to continue...")
         raise NotImplementedError("Please override this method in your child class!")
     
-    def clean_sentence(self, sentence, eos=False):
+    def clean_sentence(self, sentence):
         """Clean the sentence by removing unwanted characters and formatting it properly"""
         logging.info(f"Cleaning sentence: {sentence}")
         def remove_as_a(sentence):
@@ -216,17 +220,17 @@ class base_LLM():
                     sentence = sentence.replace(sentence.split(', ')[0]+', ', '')
             return sentence
         
-        def parse_asterisks_brackets(sentence):
-            if '*' in sentence:
-                # Check if sentence contains two asterisks
-                asterisk_check = re.search(r"(?<!\*)\*(?!\*)[^*]*\*(?!\*)", sentence)
-                if asterisk_check:
-                    logging.info(f"Removed asterisks text from response: {sentence}")
-                    # Remove text between two asterisks
-                    sentence = re.sub(r"(?<!\*)\*(?!\*)[^*]*\*(?!\*)", "", sentence)
-                else:
-                    logging.info(f"Removed response containing single asterisks: {sentence}")
-                    sentence = ''
+        # def parse_asterisks_brackets(sentence):
+        #     if '*' in sentence:
+        #         # Check if sentence contains two asterisks
+        #         asterisk_check = re.search(r"(?<!\*)\*(?!\*)[^*]*\*(?!\*)", sentence)
+        #         if asterisk_check:
+        #             logging.info(f"Removed asterisks text from response: {sentence}")
+        #             # Remove text between two asterisks
+        #             sentence = re.sub(r"(?<!\*)\*(?!\*)[^*]*\*(?!\*)", "", sentence)
+        #         else:
+        #             logging.info(f"Removed response containing single asterisks: {sentence}")
+        #             sentence = ''
 
             # if '(' in sentence or ')' in sentence:
             #     # Check if sentence contains two brackets
@@ -254,8 +258,8 @@ class base_LLM():
         # this converts double asterisks to single so that they can be filtered out or included appropriately
         while "**" in sentence:
             sentence = sentence.replace('**','*')
-        if not self.character_manager.language["allow_npc_roleplay"]:
-            sentence = parse_asterisks_brackets(sentence)
+        # if not self.character_manager.language["allow_npc_roleplay"]:
+        #     sentence = parse_asterisks_brackets(sentence)
         sentence = unicodedata.normalize('NFKC', sentence)
         sentence = sentence.strip()
         logging.info(f"Cleaned sentence: {sentence}")
@@ -398,9 +402,9 @@ class base_LLM():
             formatted_messages.append(formatted_msg)
         return formatted_messages
     
-    def generate_response(self, message_prefix="", force_speaker=None, banned_chars=[]):
+    def generate_response(self, message_prefix="", force_speaker=None):
         """Generate response from LLM one text chunk at a time"""
-        for chunk in self.acreate(self.get_context(), message_prefix=message_prefix, force_speaker=force_speaker, banned_chars=banned_chars):
+        for chunk in self.acreate(self.get_context(), message_prefix=message_prefix, force_speaker=force_speaker):
             yield chunk
         
     def format_content(self, chunk):
@@ -455,6 +459,7 @@ class base_LLM():
         logging.info(f"Processing response...")
         logging.info("Prompt Style:", self._prompt_style)
         logging.info("Language:", self.language["language_name"] + "("+self.language["language_code"]+") known in-game as "+self.language["in_game_language_name"])
+        logging.info("Dynamic Stops:", self.stop)
         next_author = None # used to determine who is speaking next in a conversation
         verified_author = False # used to determine if the next author has been verified
 
@@ -473,19 +478,7 @@ class base_LLM():
         possible_players.extend(self.config.custom_possible_player_aliases)
         possible_players = list(set(possible_players)) # remove duplicates
         logging.info("Possible Player Aliases:",possible_players)
-        
-        proposed_next_author = '' # used to store the proposed next author
-        raw_reply = '' # used to store the raw reply
-        full_reply = '' # used to store the full reply
 
-        voice_line = '' # used to store the current voice line being generated
-        sentence = '' # used to store the current sentence being generated
-        next_sentence = '' # used to store the next sentence being generated
-        next_speaker_sentence = '' # used to store the next speaker's sentence
-        
-        num_sentences = 0 # used to keep track of how many sentences have been generated total
-        voice_line_sentences = 0 # used to keep track of how many sentences have been generated for the current voice line
-        send_voiceline = False # used to determine if the current sentence should be sent early
         # first_period = False # used to determine if the first period has been added to the sentence
         
         retries = self.config.retries
@@ -508,16 +501,14 @@ class base_LLM():
                 symbol_insert = random.choice(message_hidden_symbol)
                 logging.info(f"Symbol to Insert: {symbol_insert}")
 
-        roleplaying = self._prompt_style["roleplay_inverted"] # If asterisk is open, then end the voiceline early and start a new one for the narrator. This is used to allow the narrator to speak in the middle of a sentence.
-        if symbol_insert == self._prompt_style["roleplay_prefix"] or symbol_insert == self._prompt_style["roleplay_suffix"]:
-            roleplaying = True
         
-        if force_speaker is not None:
+        
+        if force_speaker is not None: # Force speaker to a specific character
             logging.info(f"Forcing speaker to: {force_speaker.name}")
             next_author = force_speaker.name
             proposed_next_author = next_author
             verified_author = True
-        elif self.conversation_manager.character_manager.active_character_count() == 1:
+        elif self.conversation_manager.character_manager.active_character_count() == 1: # if there is only one active character, then the next author should most likely always be the only active character
             logging.info(f"Only one active character. Attempting to force speaker to: {self.conversation_manager.game_interface.active_character.name}")
             next_author = self.conversation_manager.game_interface.active_character.name
             proposed_next_author = next_author
@@ -535,55 +526,103 @@ class base_LLM():
             #     num_sentences = 0
             #     retries = 5
             try:
+                # Reset variables every retry
                 start_time = time.time()
                 beginning_of_sentence_time = time.time()
                 last_chunk = None
                 same_chunk_count = 0
                 new_speaker = False
                 eos = False 
+                typing_roleplay = self._prompt_style["roleplay_inverted"]
+                if symbol_insert == self._prompt_style["roleplay_prefix"] or symbol_insert == self._prompt_style["roleplay_suffix"]:
+                    typing_roleplay = not typing_roleplay
+                was_typing_roleplay = typing_roleplay
+        
+                proposed_next_author = '' # used to store the proposed next author
+                raw_reply = '' # used to store the raw reply
+                full_reply = '' # used to store the full reply
+
+                voice_line = '' # used to store the current voice line being generated
+                sentence = '' # used to store the current sentence being generated
+                next_sentence = '' # used to store the next sentence being generated # example: "*She walked to the store to pick up juice"
+                next_speaker_sentence = '' # used to store the next speaker's sentence
+                
+                num_sentences = 0 # used to keep track of how many sentences have been generated total
+                voice_line_sentences = 0 # used to keep track of how many sentences have been generated for the current voice line
+                send_voiceline = False # used to determine if the current sentence should be sent early
+
+                voice_lines = [] # used to store the voice lines generated
+                same_roleplay_symbol = self._prompt_style["roleplay_suffix"] == self._prompt_style["roleplay_prefix"] # used to determine if the roleplay symbol is the same for both the prefix and suffix
+
                 logging.info(f"Starting response generation...")
-                for chunk in self.generate_response(message_prefix=symbol_insert, force_speaker=force_speaker, banned_chars=self.banned_chars):
-                    content = self.format_content(chunk)
-                    logging.info(f"Content: {content}")
+                for chunk in self.generate_response(message_prefix=symbol_insert, force_speaker=force_speaker):
+                    content = self.format_content(chunk) # example: ".* Hello"
+                    logging.out(f"Content: {content}")
                     if content is not last_chunk: # if the content is not the same as the last chunk, then the LLM is not stuck in a loop and the generation should continue
-                        last_chunk = content
                         same_chunk_count = 0
                     else: # if the content is the same as the last chunk, then the LLM is probably stuck in a loop and the generation should stop
                         same_chunk_count += 1
                         if same_chunk_count > self.config.same_output_limit:
-                            logging.info(f"Same chunk returned {same_chunk_count} times in a row. Stopping generation.")
-                            break
+                            logging.error(f"Same chunk returned {same_chunk_count} times in a row. Stopping generation.")
+                            raise Exception('Same chunk returned too many times in a row')
+                        else:
+                            logging.debug(f"Same chunk returned {same_chunk_count} times in a row.")
+                    last_chunk = content
                     if content is None:
                         continue
 
                     raw_reply += content
-                    if self.EOS_token.lower() in raw_reply.lower():
+
+                    # EOS token detection
+                    if self.EOS_token in raw_reply:
                         logging.info(f"Sentence contains EOS token. Stopping generation.")
                         eos = True
+                    elif self.EOS_token.lower() in raw_reply.lower():
+                        logging.info(f"Sentence probably contains EOS token(determined by lower() checking.). Stopping generation.")
+                        eos = True
+
+                    # Propose Author or Write their response
                     if next_author is None: # if next_author is None after generating a chunk of content, then the LLM didn't choose a character to speak next yet.
                         proposed_next_author += content
                         if self.message_signifier in proposed_next_author: # if the proposed next author contains the message signifier, then the next author has been chosen
-                            logging.info(f"Proposed next author: {proposed_next_author}")
                             sentence, next_author, verified_author, retries, bad_author_retries, system_loop = self.check_author(proposed_next_author, next_author, verified_author, possible_players, retries, bad_author_retries, system_loop)
-                            logging.info(f"Next author extracted: {next_author}(Verified: {verified_author})")
-                            logging.info(f"Remaining Sentence: {sentence}")
-                    else:
+                    else: # if the next author is already chosen, then the LLM is generating the response for the next author
                         sentence += content # add the content to the sentence in progress
-                        for char in self.banned_chars:
+                        for char in self.stop:
                             if char in sentence:
-                                logging.info(f"Banned character found in sentence: {sentence}")
-                                logging.info(f"Banned character: {char}")
+                                logging.debug(f"Banned character '{char}' found in sentence: {sentence}")
+                                logging.debug("Banned Characters:",self.stop)
                                 eos = True
                                 sentence = sentence.split(char)[0]
                                 logging.info(f"Trimming last sentence to: {sentence}")
                         if self.config.assist_check and 'assist' in sentence and num_sentences > 0: # if remote, check if the response contains the word assist for some reason. Probably some OpenAI nonsense.# Causes problems if asking a follower if you should "assist" someone, if they try to say something along the lines of "Yes, we should assist them." it will cut off the sentence and basically ignore the player. TODO: fix this with a more robust solution
                             logging.info(f"'assist' keyword found. Ignoring sentence which begins with: {sentence}") 
                             break # stop generating response
-                        if self.config.break_on_time_announcements and roleplaying and "The time is now" in sentence:
+                        if self.config.break_on_time_announcements and typing_roleplay and "The time is now" in sentence:
                             logging.info(f"Breaking on time announcement")
                             break
-                    
-                    single_sentence_roleplay = False
+
+                    if eos: # remove the EOS token from the sentence and trim the sentence to the EOS token's position
+                        sentence = sentence.split(self.EOS_token)[0]
+                        raw_reply = raw_reply.split(self.EOS_token)[0]
+
+                    def raise_invalid_author(retries, bad_author_retries):
+                        logging.info(f"Next author is None. Failed to extract author from: {sentence}")
+                        logging.info(f"Retrying...")
+                        retries += 1
+                        bad_author_retries -= 1
+                        if bad_author_retries == 0:
+                            logging.info(f"LLM Could not suggest a valid author, picking one at random from active characters to break the loop...")
+                            random_authors = list(self.conversation_manager.character_manager.active_characters.keys())
+                            next_author = random.choice(random_authors)
+                        else:
+                            raise Exception('Invalid author')
+                        return next_author, retries, bad_author_retries
+
+                    contains_end_of_sentence_character = any(char in unicodedata.normalize('NFKC', content) for char in self.end_of_sentence_chars)
+                        
+                    # contains_banned_character = any(char in content for char in self.stop)
+                    was_typing_roleplay = bool(typing_roleplay)
                     if self._prompt_style["roleplay_suffix"] in content or self._prompt_style["roleplay_prefix"] in content: # if the content contains an asterisk, then either the narrator has started speaking or the narrator has stopped speaking and the NPC is speaking
                         logging.info(f"Roleplay symbol found in content: {content}")
                         if self._prompt_style["roleplay_suffix"] in sentence:
@@ -592,128 +631,135 @@ class base_LLM():
                             sentences = sentence.split(self._prompt_style["roleplay_prefix"], 1)
                         else:
                             logging.warn(f"But roleplay symbol was not found in sentence?!")
-                        if len(sentences) == 2:
+                            sentences = [sentence]
+                        sentences = [sentence for sentence in sentences if sentence.strip() != '']
+                        if len(sentences) == 2: # content IS a roleplay symbol and the sentence is not empty - This is a generated response that is continuing with a roleplay symbol and the next speaker's sentence
+                            logging.info(f"Roleplay symbol found in content: {content}")
+                            logging.info(f"New Speaker, splitting sentence at roleplay symbol")
                             sentence, next_speaker_sentence = sentences[0], sentences[1]
-                        else:
+                        elif len(sentences) == 1: # content IS a roleplay symbol and the sentence is not empty - This is a generated response that is continuing with a roleplay symbol
+                            logging.info(f"Roleplay symbol was latest content: {content}")
                             sentence = sentences[0]
                             next_speaker_sentence = ""
-                        if new_speaker:
-                            single_sentence_roleplay = True
-                        new_speaker = True
-                        logging.info(f"Roleplay will toggle from {roleplaying} to {not roleplaying}")
-                        logging.info(f"Current sentence: {sentence}")
-                        logging.info(f"Next speaker sentence part: {next_speaker_sentence}")
+                        else: # content IS a roleplay symbol and the sentence is empty - This is the first sentence of a generated response and it's starting with a roleplay symbol without any other content
+                            logging.info(f"Roleplay symbol was latest content: {content}")
+                            sentence = ''
+                            next_speaker_sentence = ''
+                        
+                        typing_roleplay = not typing_roleplay
+                        
+                        if typing_roleplay:
+                            full_reply = full_reply.strip() + self._prompt_style["roleplay_prefix"]
+                        
+                        if voice_line_sentences > 0 or len(sentence) > 0: # if the sentence is not empty and the number of sentences is greater than 0, then the narrator is speaking
+                            new_speaker = True
+                        speaker = next_author if typing_roleplay else "Narrator "
+                        logging.debug(f"New speaker - Toggling speaker to: {speaker}")
+                        if len(sentence) == 0: # if the sentence is empty, then the narrator is speaking
+                            new_speaker = False
+                        if next_speaker_sentence != "":
+                            logging.info(f"Next speaker sentence part: {next_speaker_sentence}")
 
-                    if eos: # remove the EOS token from the sentence and trim the sentence to the EOS token's position
-                        sentence = sentence.split(self.EOS_token)[0]
-                        raw_reply = raw_reply.split(self.EOS_token)[0]
-
-                    contains_end_of_sentence_character = any(char in unicodedata.normalize('NFKC', content) for char in self.end_of_sentence_chars)
-                    # contains_banned_character = any(char in content for char in self.banned_chars)
-                    if contains_end_of_sentence_character or eos: # check if content marks the end of a sentence
-                        # if "." in sentence and not first_period: # if the sentence contains a period and the first period has not been added yet, then add a period to the end of the sentence
-                        #     sentence += "."
-                        #     first_period = True
-                        #     continue
-                        # elif "." in sentence and first_period: # if the sentence contains a period and the first period has been added, then the sentence is complete
-                        #     first_period = False
-                        # if sentence.strip() == '':
-                        #     if num_sentences == 0:
-                        #         logging.info(f"Empty response. Retrying...")
-                        #         retries += 1
-                        #         raise Exception('Empty response')
-                        #     else:
-                        #         logging.info(f"Empty response. Stopping generation.")
-                        #         break
+                    parsing_sentence = contains_end_of_sentence_character or eos # check if the sentence is complete and ready to be parsed
+                    if (parsing_sentence or new_speaker) and len(sentence) > 0: # check if content marks the end of a sentence or if the speaker is switching
+                        logging.out(f"Sentence: {sentence}")
+                        logging.debug(f"was_typing_roleplay: {was_typing_roleplay}")
+                        logging.debug(f"currently_typing_roleplay: {typing_roleplay}")
                         if next_author is None: # if next_author is None after generating a sentence, then there was an error generating the output. The LLM didn't choose a character to speak next.
-                            logging.info(f"Next author is None. Failed to extract author from: {sentence}")
-                            logging.info(f"Retrying...")
-                            retries += 1
-                            bad_author_retries -= 1
-                            if bad_author_retries == 0:
-                                logging.info(f"LLM Could not suggest a valid author, picking one at random from active characters to break the loop...")
-                                random_authors = list(self.conversation_manager.character_manager.active_characters.keys())
-                                next_author = random.choice(random_authors)
-                            else:
-                                raise Exception('Invalid author')
-                        sentence, next_sentence = self.split_and_preverse_strings_on_end_of_sentence(sentence, next_sentence)
-                            
-                        # if self.EOS_token in sentence or self.EOS_token in sentence.lower():
-                        #     sentence = sentence.split(self.EOS_token)[0]
-                        #     logging.info(f"EOS token found in sentence. Trimming last sentence to: {sentence}")
-                        #     eos = True
-                            
-                        # grammarless_stripped_sentence = sentence.replace(".", "").replace("?", "").replace("!", "").replace(",", "").strip()
-                        # if grammarless_stripped_sentence == '' and sentence != "...": # if the sentence is empty after cleaning, then skip it - unless it's an ellipsis
-                        #     logging.info(f"Skipping empty sentence")
-                        #     if num_sentences<1:
-                        #         retries += 1
-                        #         logging.info(f"Retrying due to empty response")
-                        #         raise Exception('Empty sentence')
-                        #     break
+                            next_author, retries, bad_author_retries = raise_invalid_author()
+                        if not new_speaker:
+                            sentence, next_sentence = self.split_and_preverse_strings_on_end_of_sentence(sentence, next_sentence)
+                            logging.info(f"Split sentence: {sentence}")
+                            logging.info(f"Next sentence: {next_sentence}")
 
                         logging.info(f"LLM took {time.time() - beginning_of_sentence_time} seconds to generate sentence")
                         logging.info(f"Checking for behaviors using behavior style: {self.behavior_style}")
+
+
                         found_behaviors = []
                         if self.behavior_style["prefix"] in sentence:
                             sentence_words = sentence.split(" ")
                             new_sentence = ""
-                            for word in sentence_words:
+                            for word in sentence_words: # Rebuild the sentence while checking for behavior keywords(or pseudo-keywords and removing them when found)
                                 if self.behavior_style["prefix"] in word and self.behavior_style["suffix"] in word:
                                     new_behaviors = self.conversation_manager.behavior_manager.evaluate(word, self.conversation_manager.game_interface.active_character, sentence) # check if the sentence contains any behavior keywords for NPCs
                                     if len(new_behaviors) > 0:
                                         found_behaviors.extend(new_behaviors)
                                         logging.info(f"Behaviors triggered: {new_behaviors}")
-                                elif self.behavior_style["prefix"] in word and not self.behavior_style["suffix"] in word: # if the word contains the prefix but not the suffix, then the suffix is probably in the next word, which is likely a format break.
-                                    break
-                                new_sentence += word + " "
-                            sentence = new_sentence
+                                        new_sentence += word + " " # Only add the word back if it was a real behavior keyword
+                                # elif self.behavior_style["prefix"] in word and not self.behavior_style["suffix"] in word: # if the word contains the prefix but not the suffix, then the suffix is probably in the next word, which is likely a format break.
+                                #     break
+                                else:
+                                    new_sentence += word + " "
+                            sentence = new_sentence.strip()
                         if len(found_behaviors) == 0:
                             logging.warn(f"No behaviors triggered by sentence: {sentence}")
                         else:
                             for behavior in found_behaviors:
-                                logging.info(f"Behavior triggered: {behavior.keyword}")
-                                
-                        sentence = self.clean_sentence(sentence, eos) # clean the sentence
+                                logging.info(f"Behavior(s) triggered: {behavior.keyword}")
+                        if not new_speaker:
+                            sentence = self.clean_sentence(sentence) # clean the sentence
+                        logging.info(f"Full Reply Before: {full_reply}")
+                        logging.info(f"Sentence: {sentence}")
 
                         voice_line = voice_line.strip() + " " + sentence.strip() # add the sentence to the voice line in progress
-                        if len(full_reply) > 0 and (full_reply[-1] != self._prompt_style["roleplay_suffix"] or full_reply[-1] != self._prompt_style["roleplay_prefix"]): # if the full reply is not empty and the last character is not an asterisk, then add a space before the sentence
-                            full_reply = full_reply.strip() + " " + sentence.strip() # add the sentence to the full reply
-                        else:
-                            full_reply = full_reply.strip() + sentence.strip()
-                        if new_speaker and num_sentences >= 1: # if the content contains an asterisk, then either the narrator has started speaking or the narrator has stopped speaking and the NPC is speaking
-                            if roleplaying:
-                                full_reply = full_reply.strip() + self._prompt_style["roleplay_suffix"] + " "
+                        full_reply = full_reply.strip()
+                        if len(full_reply) > 0 and (not full_reply.endswith(self._prompt_style["roleplay_suffix"]) and not full_reply.endswith(self._prompt_style["roleplay_prefix"])): # if the full reply is not empty and the last character is not a roleplay symbol, then just add the sentence with a space
+                            full_reply = full_reply.strip() + "[s0] " + sentence.strip() # add the sentence to the full reply
+                        else: # if the full reply is empty or ends with a roleplay symbol, then figure out if the sentence should be added with or without a space
+                            if same_roleplay_symbol:
+                                if not was_typing_roleplay and typing_roleplay: # If just started roleplay, add the sentence without a space
+                                    full_reply = full_reply.strip() + "[ns1]" + sentence.strip()
+                                elif was_typing_roleplay and not typing_roleplay: # If just stopped roleplaying, or if you're still actively/not actively roleplaying, add the sentence with a space
+                                    full_reply = full_reply.strip() + sentence.strip()
+                                elif was_typing_roleplay and typing_roleplay:
+                                    full_reply = full_reply.strip() + "[s1] " + sentence.strip()
+                                else:
+                                    full_reply = full_reply.strip() + "[s2] " +  sentence.strip()
                             else:
-                                full_reply = full_reply.strip() + " " + self._prompt_style["roleplay_prefix"]
-                        elif new_speaker and num_sentences == 0:
-                            if roleplaying:
-                                full_reply = full_reply.strip() + self._prompt_style["roleplay_suffix"] + " "
+                                if full_reply.endswith(self._prompt_style["roleplay_suffix"]):
+                                    full_reply = full_reply.strip() + "[s3] " + sentence.strip()
+                                else:
+                                    full_reply = full_reply.strip() + "[ns3]" + sentence.strip()
+                            # if len(full_reply) > 0:
+                            #     if typing_roleplay:
+                            #         full_reply = full_reply.strip() + sentence.strip()
+                            #     else:
+                            #         full_reply = full_reply.strip() + " " + sentence.strip()
+                            # else:
+                            #     full_reply = sentence.strip()
+                        full_reply = full_reply.strip()
+                        if new_speaker:
+                            if not typing_roleplay:
+                                full_reply = full_reply.strip() + self._prompt_style["roleplay_suffix"]
                             else:
-                                full_reply = self._prompt_style["roleplay_prefix"] + full_reply.strip()
-                                if single_sentence_roleplay:
-                                    full_reply = full_reply.strip() + self._prompt_style["roleplay_suffix"] + " "
+                                full_reply = full_reply.strip() + self._prompt_style["roleplay_prefix"]
                         num_sentences += 1 # increment the total number of sentences generated
                         voice_line_sentences += 1 # increment the number of sentences generated for the current voice line
+                        
 
-                        if new_speaker: # if the content contains a roleplay symbol, then either the narrator has started speaking or the narrator has stopped speaking and the NPC is speaking
-                            send_voiceline = True
-                            roleplaying = not roleplaying
+                        logging.debug(f"Parsed sentence: {sentence}")
+                        logging.debug(f"Parsed full reply: {full_reply}")
+                        logging.debug(f"Parsed voice line: {voice_line}")
+                        logging.debug(f"Number of sentences: {num_sentences}")
+                        logging.debug(f"Number of sentences in voice line: {voice_line_sentences}")
                         
                         if voice_line_sentences == self.config.sentences_per_voiceline or new_speaker: # if the voice line is ready, then generate the audio for the voice line
                             send_voiceline = True
-                        grammarless_stripped_voice_line = voice_line.replace(".", "").replace("?", "").replace("!", "").replace(",", "").replace("-", "").replace("8", "").replace("\"", "").strip()
+
+                        grammarless_stripped_voice_line = voice_line.replace(".", "").replace("?", "").replace("!", "").replace(",", "").replace("-", "").replace("*", "").replace("\"", "").strip()
                         if grammarless_stripped_voice_line == '' or voice_line.strip() == "": # if the voice line is empty, then the narrator is speaking
                             logging.info(f"Skipping empty voice line")
                             send_voiceline = False
                             voice_line = ''
+
                         if send_voiceline: # if the voice line is ready, then generate the audio for the voice line
-                            if roleplaying:
+                            if was_typing_roleplay:
                                 logging.info(f"Generating voiceline: \"{voice_line.strip()}\" for narrator.")
                             else:
                                 logging.info(f"Generating voiceline: \"{voice_line.strip()}\" for {self.conversation_manager.game_interface.active_character.name}.")
                             logging.info(f"Voice line contains {voice_line_sentences} sentences.")
-                            logging.info(f"Voice line should be spoken by narrator: {roleplaying}")
+                            logging.info(f"Voice line should be spoken by narrator: {typing_roleplay}")
                             if self.config.strip_smalls and len(voice_line.strip()) < self.config.small_size:
                                 logging.info(f"Skipping small voice line: {voice_line}")
                                 break
@@ -726,34 +772,40 @@ class base_LLM():
                             if not voice_line.strip() == "":
                                 logging.info(f"Voice line: \"{voice_line}\" is definitely not empty.")
                                 self.conversation_manager.behavior_manager.pre_sentence_evaluate(self.conversation_manager.game_interface.active_character, sentence,) # check if the sentence contains any behavior keywords for NPCs
-                                if roleplaying: # if the asterisk is open, then the narrator is speaking
+                                if was_typing_roleplay: # if the asterisk is open, then the narrator is speaking
                                     time.sleep(self.config.narrator_delay)
+                                    voice_lines.append((voice_line.strip(), "narrator"))
                                     self.conversation_manager.synthesizer._say(voice_line.strip(), self.config.narrator_voice, self.config.narrator_volume)
                                 else:
+                                    voice_lines.append((voice_line.strip(), self.conversation_manager.game_interface.active_character.name))
                                     await self.generate_voiceline(voice_line.strip(), sentence_queue, event)
                                 self.conversation_manager.behavior_manager.post_sentence_evaluate(self.conversation_manager.game_interface.active_character, sentence) # check if the sentence contains any behavior keywords for NPCs
                             voice_line_sentences = 0 # reset the number of sentences generated for the current voice line
                             voice_line = '' # reset the voice line for the next iteration
-                            if single_sentence_roleplay:
-                                roleplaying = not roleplaying
-                                single_sentence_roleplay = False
+                            # if single_sentence_roleplay:
+                            #     roleplaying = not roleplaying
+                            #     single_sentence_roleplay = False
 
-                        if new_speaker: # if the content contains an asterisk, then either the narrator has started speaking or the narrator has stopped speaking and the NPC is speaking
+                        logging.debug(f"Next sentence: {next_sentence}")
+                        grammarless_stripped_next_sentence = next_sentence.replace(".", "").replace("?", "").replace("!", "").replace(",", "").strip()
+                        if grammarless_stripped_next_sentence != '': # if there is a next sentence, then set the current sentence to the next sentence
+                            sentence = next_sentence
+                            next_sentence = ''
+                        else:
+                            sentence = '' # reset the sentence for the next iteration
+                            next_sentence = ''
+
+                        logging.debug(f"Current sentence: {sentence}")
+                        logging.debug(f"Next speaker sentence piece: {next_speaker_sentence}")
+                        if new_speaker:
                             grammarless_stripped_next_speaker_sentence = next_speaker_sentence.replace(".", "").replace("?", "").replace("!", "").replace(",", "").strip()
                             if grammarless_stripped_next_speaker_sentence != '': # if there is a next speaker's sentence, then set the current sentence to the next speaker's sentence
-                                sentence = next_speaker_sentence
+                                sentence += next_speaker_sentence
                                 next_speaker_sentence = ''
                             else:
                                 sentence = '' # reset the sentence for the next iteration
                             next_sentence = '' # reset the next sentence for the next iteration
-                        else:
-                            grammarless_stripped_next_sentence = next_sentence.replace(".", "").replace("?", "").replace("!", "").replace(",", "").strip()
-                            if grammarless_stripped_next_sentence != '': # if there is a next sentence, then set the current sentence to the next sentence
-                                sentence = next_sentence
-                                next_sentence = ''
-                            else:
-                                sentence = '' # reset the sentence for the next iteration
-                                next_sentence = ''
+                        logging.debug(f"Final sentence?: {sentence}")
 
                         radiant_dialogue_update = self.conversation_manager.game_interface.is_radiant_dialogue() # check if the conversation has switched from radiant to multi NPC
                         # stop processing LLM response if:
@@ -762,9 +814,12 @@ class base_LLM():
                         # the conversation has ended
                         new_speaker = False
                         send_voiceline = False
+                        if new_speaker:
+                            typing_roleplay = not typing_roleplay
                         if ((num_sentences >= self.max_response_sentences) and not self.conversation_manager.radiant_dialogue) or (self.conversation_manager.radiant_dialogue and not radiant_dialogue_update) or self.conversation_manager.game_interface.is_conversation_ended() or eos: # if the conversation has ended, stop generating responses
                             logging.info(f"Response generation complete. Stopping generation.")
                             break
+
                 logging.info(f"LLM response took {time.time() - start_time} seconds to execute")
                 break
             except Exception as e:
@@ -789,6 +844,8 @@ class base_LLM():
                     input('Press enter to continue...')
                     raise e
                 logging.error(f"LLM API Error: {e}")
+                tb = traceback.format_exc()
+                logging.error(tb)
                 if not self.config.continue_on_llm_api_error:
                     raise e
                 if 'Invalid author' in str(e):
@@ -817,10 +874,12 @@ class base_LLM():
 
         if voice_line_sentences > 0: # if the voice line is not empty, then generate the audio for the voice line
             logging.info(f"Generating voiceline: \"{voice_line.strip()}\" for {self.conversation_manager.game_interface.active_character.name}.")
-            if roleplaying: # if the asterisk is open, then the narrator is speaking
+            if typing_roleplay: # if the asterisk is open, then the narrator is speaking
                 time.sleep(self.config.narrator_delay)
                 self.conversation_manager.synthesizer._say(voice_line.strip(), self.config.narrator_voice, self.config.narrator_volume)
+                voice_lines.append((voice_line.strip(), "narrator"))
             else:
+                voice_lines.append((voice_line.strip(), self.conversation_manager.game_interface.active_character.name))
                 await self.generate_voiceline(voice_line.strip(), sentence_queue, event)
             voice_line_sentences = 0
             voice_line = ''
@@ -829,10 +888,25 @@ class base_LLM():
 
         full_reply = full_reply.strip()
         
-        if full_reply.endswith("*") and full_reply.count("*") == 1: # TODO: Figure out the reason I need this bandaid solution... if only one asterisk at the end, remove it.
-            full_reply = full_reply[:-1].strip()
-        if roleplaying: # if the asterisk is open, then the narrator is speaking
-            full_reply += self._prompt_style["roleplay_suffix"]
+        # if full_reply.endswith("*") and full_reply.count("*") == 1: # TODO: Figure out the reason I need this bandaid solution... if only one asterisk at the end, remove it.
+        #     full_reply = full_reply[:-1].strip()
+        # if typing_roleplay: # if the asterisk is open, then the narrator is speaking
+        #     full_reply += self._prompt_style["roleplay_suffix"]
+        logging.debug(f"Final Full Reply: {full_reply}")
+        logging.debug(f"Voice Lines:", voice_lines)
+        logging.debug(f"Raw Reply:", raw_reply)
+        if self._prompt_style["roleplay_suffix"] in full_reply or self._prompt_style["roleplay_prefix"] in full_reply:
+            # if they're the same symbol, make sure they're balanced
+            if full_reply.count(self._prompt_style["roleplay_suffix"]) != full_reply.count(self._prompt_style["roleplay_prefix"]):
+                logging.warning(f"Unbalanced roleplay symbols in full reply: {full_reply}")
+                if full_reply.count(self._prompt_style["roleplay_suffix"]) > full_reply.count(self._prompt_style["roleplay_prefix"]):
+                    full_reply = full_reply.replace(self._prompt_style["roleplay_suffix"], "")
+                else:
+                    full_reply = full_reply.replace(self._prompt_style["roleplay_prefix"], "")
+                logging.warning(f"Fixed full reply: {full_reply}")
+        if full_reply.strip() == "":
+            logging.warning(f"Skipping empty full reply")
+            return
         # try: 
         #     if sentence_behavior != None:
         #         full_reply = sentence_behavior.keyword + ": " + full_reply.strip() # add the keyword back to the sentence to reinforce to the that the keyword was used to trigger the bahavior
@@ -840,12 +914,14 @@ class base_LLM():
         #     pass
 
         if next_author is not None and full_reply != '':
+            full_reply = full_reply.replace("[s0]", "").replace("[s1]", "").replace("[s2]", "").replace("[ns1]", "").replace("[ns2]", "").replace("[ns3]", "") # remove the sentence spacing tokens
             self.conversation_manager.new_message({"role": self.config.assistant_name, 'name':next_author, "content": full_reply})
             # -- for each sentence for each character until the conversation ends or the max_response_sentences is reached or the player is speaking
             logging.info(f"Full response saved ({self.tokenizer.get_token_count(full_reply)} tokens): {full_reply}")
 
     def check_author(self, proposed_next_author, next_author, verified_author, possible_players, retries, bad_author_retries, system_loop):
         """Check the author of the next sentence"""
+        logging.info(f"Proposed next author: {proposed_next_author}")
         sentence = ''
         if next_author is None:
             if self.message_signifier in proposed_next_author:
@@ -918,6 +994,8 @@ class base_LLM():
                             logging.info(f"Retrying...")
                             retries += 1
                             raise Exception('Invalid author')
+            logging.info(f"Next author extracted: {next_author}(Verified: {verified_author})")
+            logging.info(f"Remaining Sentence: {sentence}")
         return sentence, next_author, verified_author, retries, bad_author_retries, system_loop
 
     async def generate_voiceline(self, string, sentence_queue, event):
@@ -927,7 +1005,9 @@ class base_LLM():
             audio_file = self.conversation_manager.synthesizer.synthesize(string, self.conversation_manager.game_interface.active_character)
         except Exception as e:
             logging.error(f"TTS Error: {e}")
-            logging.info(e)
+            logging.error(e)
+            tb = traceback.format_exc()
+            logging.error(tb)
             input('Press enter to continue...')
             raise e
 

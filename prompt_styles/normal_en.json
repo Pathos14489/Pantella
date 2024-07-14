@@ -1,8 +1,8 @@
 {
     "name": "Normal - English",
     "style": {
-        "stop": ["<im_end>","<im_end>", "\""],
-        "banned_chars": ["{", "}", "\"", "<", "im_", "<im_end"],
+        "stop": ["<im_end>","<im_end>", "\"", "<", "im_", "<im_end"],
+        "undo": ["{", "}"],
         "end_of_sentence_chars": [".", "?", "!"],
         "BOS_token": "<im_start>",
         "EOS_token": "<im_end>",
@@ -15,7 +15,13 @@
         "assistant_name": "assistant",
         "roleplay_inverted": false,
         "roleplay_prefix": "*",
-        "roleplay_suffix": "*"
+        "roleplay_prefix_aliases": [
+            "("
+        ],
+        "roleplay_suffix": "*",
+        "roleplay_suffix_aliases": [
+            ")"
+        ]
     },
     "language":{
         "prompts":{
@@ -75,7 +81,7 @@
             "lover":"lover"
         },
         "unknown_perspective_name":{
-            "stranger":"a stranger",
+            "stranger":"A {other_race} {other_gender} stranger",
             "archnemesis":"{self_name}'s {other_race} {other_gender} archnemesis",
             "enemy":"{self_name}'s {other_race} {other_gender} enemy",
             "foe":"{self_name}'s {other_race} {other_gender} foe",
@@ -87,6 +93,7 @@
             "lover":"{self_name}'s mysterious {other_race} {other_gender} lover"
         },
         "known_perspective_name":{
+            "stranger":"{other_name}, a {other_race} {other_gender} stranger to {self_name}",
             "archnemesis":"{other_name} {other_race} {other_gender} {trust_title} of {self_name}",
             "enemy":"{other_name} {other_race} {other_gender} {trust_title} of {self_name}",
             "foe":"{other_name} {other_race} {other_gender} {trust_title} of {self_name}",

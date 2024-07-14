@@ -15,7 +15,14 @@
         "assistant_name": "assistant",
         "roleplay_inverted": false,
         "roleplay_prefix": "*",
-        "roleplay_suffix": "*"
+        "roleplay_suffix": "*",
+        "roleplay_prefix_aliases": [
+            "("
+        ],
+        "roleplay_suffix": "*",
+        "roleplay_suffix_aliases": [
+            ")"
+        ]
     },
     "language":{
         "prompts":{
@@ -52,14 +59,14 @@
                 "teen":"Adolescente",
                 "young_adult":"Adulto joven",
                 "adult":"Hombre",
-                "old":"Hombre Viejo"
+                "old":"Hombre viejo"
             },
             "Female":{
                 "child":"Chica",
                 "teen":"Adolescente",
                 "young_adult":"Adulta joven",
                 "adult":"Mujer",
-                "old":"Old Woman"
+                "old":"Mujer viaja"
             }
         },
         "trust_titles":{
