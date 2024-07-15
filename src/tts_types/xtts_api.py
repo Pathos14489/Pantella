@@ -82,9 +82,9 @@ class Synthesizer(base_tts.base_Synthesizer):
             logging.info(f'Custom xTTS Model not found for {character.voice_model}! Using default model...')
             self.set_model(self.default_model)
           
-    def get_valid_voice_model(self, character, crash=True):
+    def get_valid_voice_model(self, character, crashable=True):
         """Get the valid voice model for the character from the available voices - Order of preference: voice_model, voice_model without spaces, lowercase voice_model, uppercase voice_model, lowercase voice_model without spaces, uppercase voice_model without spaces"""
-        default_voice_model = super().get_valid_voice_model(character)
+        default_voice_model = super().get_valid_voice_model(character,False)
         if default_voice_model == None:
             default_voice_model = character.voice_model
         basic_voice_model = f"{default_voice_model.replace(' ', '')}"
