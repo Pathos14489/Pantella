@@ -165,7 +165,7 @@ class LLM(base_LLM.base_LLM):
                         **sampler_kwargs,
                         extra_body=extra_body_kwargs,
                         stream=False,
-                        logit_bias=self.config.logit_bias,
+                        logit_bias=self.logit_bias,
                     )
                 else:
                     completion = self.client.chat.completions.create(messages=messages,
@@ -174,7 +174,7 @@ class LLM(base_LLM.base_LLM):
                         **sampler_kwargs,
                         extra_body=extra_body_kwargs,
                         stream=False,
-                        logit_bias=self.config.logit_bias,
+                        logit_bias=self.logit_bias,
                     )
                 print(completion.choices[0].message)
                 try:

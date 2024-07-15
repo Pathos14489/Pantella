@@ -77,7 +77,8 @@ class LLM(base_LLM.base_LLM): # Uses llama-cpp-python as the LLM inference engin
                     stop=self.stop,
                     frequency_penalty=self.frequency_penalty,
                     presence_penalty=self.presence_penalty,
-                    stream=False
+                    logit_bias=self.logit_bias,
+                    stream=False,
                 )
                 completion = completion["choices"][0]["text"]
                 logging.info(f"Completion:",completion)
@@ -124,6 +125,7 @@ class LLM(base_LLM.base_LLM): # Uses llama-cpp-python as the LLM inference engin
                     mirostat_mode=self.mirostat_mode,
                     mirostat_eta=self.mirostat_eta,
                     mirostat_tau=self.mirostat_tau,
+                    logit_bias=self.logit_bias,
                     tfs_z=self.tfs_z,
                     stream=True,
                 )

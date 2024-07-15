@@ -360,6 +360,7 @@ class LLM(llama_cpp_python_LLM.LLM): # Uses llama-cpp-python as the LLM inferenc
                     stop=self.stop,
                     frequency_penalty=self.frequency_penalty,
                     presence_penalty=self.presence_penalty,
+                    logit_bias=self.logit_bias,
                     stream=False
                 )
                 completion = completion["choices"][0]["text"]
@@ -409,6 +410,7 @@ class LLM(llama_cpp_python_LLM.LLM): # Uses llama-cpp-python as the LLM inferenc
                     mirostat_mode=self.mirostat_mode,
                     mirostat_eta=self.mirostat_eta,
                     mirostat_tau=self.mirostat_tau,
+                    logit_bias=self.logit_bias,
                     tfs_z=self.tfs_z,
                     stream=True,
                 )
