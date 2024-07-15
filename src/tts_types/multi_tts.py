@@ -30,15 +30,12 @@ class Synthesizer(base_tts.base_Synthesizer):
             for tts_engine in self.tts_engines:
                 if character.tts_override == tts_engine.tts_slug and tts_engine.get_valid_voice_model(character) != None:
                     tts = tts_engine
-                    break
-                if character.voice_model in tts_engine.voices() and tts_engine.get_valid_voice_model(character) != None:
+                elif tts_engine.get_valid_voice_model(character) != None:
                     tts = tts_engine
-                    break
         else:
             for tts_engine in self.tts_engines:
                 if tts_engine.get_valid_voice_model(character) != None:
                     tts = tts_engine
-                    break
         if tts is None:
             logging.error(f"Could not find tts engine for voice model: {character.voice_model}! Please check your config.json file and try again!")
             if self.crashable:
@@ -57,7 +54,7 @@ class Synthesizer(base_tts.base_Synthesizer):
                 if character.tts_override == tts_engine.tts_slug and tts_engine.get_valid_voice_model(character) != None:
                     tts = tts_engine
                     break
-                if character.voice_model in tts_engine.voices() and tts_engine.get_valid_voice_model(character) != None:
+                if tts_engine.get_valid_voice_model(character) != None:
                     tts = tts_engine
                     break
         else:
