@@ -134,9 +134,10 @@ class ConversationManager(BaseConversationManager):
         self.game_interface.write_game_info('_pantella_character_selection', 'True') # write to _pantella_character_selection.txt to indicate that the character has been selected to the game
 
         self.messages = [] # clear messages
-
-        self.tokens_available = self.config.maximum_local_tokens - self.tokenizer.num_tokens_from_messages(self.get_context()) # calculate number of tokens available for the conversation
-
+        tokens_in_use = self.tokenizer.num_tokens_from_messages(self.get_context())
+        self.tokens_available = self.config.maximum_local_tokens - tokens_in_use # calculate number of tokens available for the conversation
+        logging.info(f"Tokens Available: {self.tokens_available}")
+        logging.info(f"Tokens In Use: {tokens_in_use}")
         self.game_interface.update_game_events() # update game events before first player input
         prompt_style = self.character_manager.prompt_style # get prompt style from character manager
         if not self.radiant_dialogue: # initiate conversation with character

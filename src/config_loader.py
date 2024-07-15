@@ -414,6 +414,8 @@ class ConfigLoader:
                 "alternative_openai_api_base": "https://openrouter.ai/api/v1/",
                 "secret_key_file_path": ".\\GPT_SECRET_KEY.txt",
                 "banned_samplers": [], # Examples: "min_p", "typical_p", "top_p", "top_k", "temperature", "frequency_penalty", "presence_penalty", "repeat_penalty", "tfs_z", "mirostat_mode", "mirostat_eta", "mirostat_tau", "max_tokens"
+                "log_all_api_requests": False,
+                "api_log_dir": ".\\api_logs",
             },
             "llama_cpp_python": {
                 "model_path": ".\\model.gguf",
@@ -651,6 +653,8 @@ class ConfigLoader:
                 "alternative_openai_api_base": self.alternative_openai_api_base,
                 "secret_key_file_path": self.secret_key_file_path,
                 "banned_samplers": self.banned_samplers,
+                "log_all_api_requests": self.log_all_api_requests,
+                "api_log_dir": self.api_log_dir,
             },
             "llama_cpp_python": {
                 "model_path": self.model_path,

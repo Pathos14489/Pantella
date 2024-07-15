@@ -416,7 +416,7 @@ class base_LLM():
             # logging.info(chunk)
             content = chunk
         else:
-            # logging.info(chunk.model_dump_json())
+            # logging.debug(chunk.model_dump_json())
             content = None
             try:
                 content = chunk.choices[0].text
@@ -653,7 +653,7 @@ class base_LLM():
                         
                         if voice_line_sentences > 0 or len(sentence) > 0: # if the sentence is not empty and the number of sentences is greater than 0, then the narrator is speaking
                             new_speaker = True
-                        speaker = next_author if typing_roleplay else "Narrator "
+                        speaker = "Narrator" if typing_roleplay else next_author
                         logging.debug(f"New speaker - Toggling speaker to: {speaker}")
                         if len(sentence) == 0: # if the sentence is empty, then the narrator is speaking
                             new_speaker = False
@@ -731,9 +731,9 @@ class base_LLM():
                         full_reply = full_reply.strip()
                         if new_speaker:
                             if not typing_roleplay:
-                                full_reply = full_reply.strip() + self._prompt_style["roleplay_suffix"]
+                                full_reply = full_reply.strip() + "[s4] " + self._prompt_style["roleplay_suffix"]
                             else:
-                                full_reply = full_reply.strip() + self._prompt_style["roleplay_prefix"]
+                                full_reply = full_reply.strip() + "[ns4]" + self._prompt_style["roleplay_prefix"]
                         num_sentences += 1 # increment the total number of sentences generated
                         voice_line_sentences += 1 # increment the number of sentences generated for the current voice line
                         
@@ -914,7 +914,7 @@ class base_LLM():
         #     pass
 
         if next_author is not None and full_reply != '':
-            full_reply = full_reply.replace("[s0]", "").replace("[s1]", "").replace("[s2]", "").replace("[ns1]", "").replace("[ns2]", "").replace("[ns3]", "") # remove the sentence spacing tokens
+            full_reply = full_reply.replace("[s0]", "").replace("[s1]", "").replace("[s2]", "").replace("[s3]", "").replace("[s4]", "").replace("[ns1]", "").replace("[ns2]", "").replace("[ns3]", "").replace("[ns4]", "") # remove the sentence spacing tokens
             self.conversation_manager.new_message({"role": self.config.assistant_name, 'name':next_author, "content": full_reply})
             # -- for each sentence for each character until the conversation ends or the max_response_sentences is reached or the player is speaking
             logging.info(f"Full response saved ({self.tokenizer.get_token_count(full_reply)} tokens): {full_reply}")

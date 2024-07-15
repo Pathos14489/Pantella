@@ -4,6 +4,8 @@ import src.utils as utils
 import src.llms.base_llm as base_LLM
 import random
 import traceback
+import os
+import json
 logging.info("Imported required libraries in openai_api.py")
 
 try:
@@ -267,6 +269,15 @@ class LLM(base_LLM.base_LLM):
                     logging.info(f"Raw Prompt: {prompt}")
                     if symbol_insert != "":
                         logging.info(f"Symbol Inserted: {symbol_insert}")
+                    if self.config.log_all_api_requests:
+                        log_id = None
+                        while log_id is None or os.path.exists(self.config.api_log_dir+"/"+log_id+".log"):
+                            log_id = str(random.randint(100000,999999))
+                        # make sure the dir exists
+                        os.makedirs(self.config.api_log_dir, exist_ok=True)
+                        with open(self.config.api_log_dir+"/"+log_id+".log", "w") as f:
+                            f.write(prompt)
+                        
                     return self.client.completions.create(prompt=prompt,
                         model=self.config.llm, 
                         max_tokens=self.config.max_tokens,
@@ -275,6 +286,14 @@ class LLM(base_LLM.base_LLM):
                         stream=True,
                     )
                 else:
+                    if self.config.log_all_api_requests:
+                        log_id = None
+                        while log_id is None or os.path.exists(self.config.api_log_dir+"/"+log_id+".log"):
+                            log_id = str(random.randint(100000,999999))
+                        os.makedirs(self.config.api_log_dir, exist_ok=True)
+                        with open(self.config.api_log_dir+"/"+log_id+".json", "w") as f:
+                            json_string = json.dumps(messages)
+                            f.write(json_string)
                     return self.client.chat.completions.create(messages=messages,
                         model=self.config.llm, 
                         max_tokens=self.config.max_tokens,
