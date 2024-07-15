@@ -408,6 +408,7 @@ class ConfigLoader:
                 "mirostat_eta": 0.1,
                 "mirostat_tau": 5,
                 "max_tokens": 512,
+                "logit_bias":{}
             },
             "openai_api": {
                 "llm": "undi95/toppy-m-7b:free",
@@ -647,6 +648,7 @@ class ConfigLoader:
                 "mirostat_eta": self.mirostat_eta,
                 "mirostat_tau": self.mirostat_tau,
                 "max_tokens": self.max_tokens,
+                "logit_bias": self.logit_bias,
             },
             "openai_api": {
                 "llm": self.llm,
