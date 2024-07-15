@@ -98,16 +98,29 @@ class Synthesizer(base_tts.base_Synthesizer):
             voice_model = character.name
         elif gendered_racial_voice_model in self.voices():
             voice_model = gendered_racial_voice_model
+        elif gendered_racial_voice_model.lower() in self.voices():
+            voice_model = gendered_racial_voice_model.lower()
         elif gendered_voice_model in self.voices():
             voice_model = gendered_voice_model
+        elif gendered_voice_model.lower() in self.voices():
+            voice_model = gendered_voice_model.lower()
         elif racial_voice_model in self.voices():
             voice_model = racial_voice_model
+        elif racial_voice_model.lower() in self.voices():
+            voice_model = racial_voice_model.lower()
         elif basic_voice_model in self.voices():
             voice_model = basic_voice_model
+        elif basic_voice_model.lower() in self.voices():
+            voice_model = basic_voice_model.lower()
         elif default_voice_model in self.voices():
             voice_model = default_voice_model
+        elif default_voice_model.lower() in self.voices():
+            voice_model = default_voice_model.lower()
         elif character.voice_model in self.voices():
             voice_model = character.voice_model
+        elif character.voice_model.lower() in self.voices():
+            voice_model = character.voice_model.lower()
+            
             
         logging.error(f'Voice model {voice_model} not available! Please add it to the xTTS voices list.')
         if self.crashable and voice_model == None:
