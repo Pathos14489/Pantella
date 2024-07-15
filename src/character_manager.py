@@ -114,7 +114,7 @@ class Character:
     def language(self):
         if self.race in self._prompt_style["racial_language"]: # If the character has a racial language, use the default as a template and override anything different with the racial language over the default
             language = self._prompt_style["language"]
-            logging.info(f"Racial language found for {self.name}:",language)
+            # logging.info(f"Racial language found for {self.name}:",language)
             for key, value in self._prompt_style["racial_language"][self.race].items():
                 if key in self.info and self.info[key] == value:
                     language = self._prompt_style["racial_language"][self.race][key]
