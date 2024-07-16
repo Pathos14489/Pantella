@@ -13,6 +13,7 @@ tts_slug = "xtts_api"
 class Synthesizer(base_tts.base_Synthesizer): 
     def __init__(self, conversation_manager):
         super().__init__(conversation_manager)
+        self.tts_slug = tts_slug
         self.xtts_data = self.config.xtts_api_data
         self.xtts_api_base_url = self.config.xtts_api_base_url
         self.synthesize_url_xtts = self.xtts_api_base_url + "/tts_to_audio/"
@@ -24,16 +25,24 @@ class Synthesizer(base_tts.base_Synthesizer):
         self._set_tts_settings_and_test_if_serv_running()
         self.default_model = self.conversation_manager.config.default_xtts_api_model
         self.current_model = self.default_model
+        self.mantella_server = False
         self.set_model(self.default_model)
         # self.official_model_list = ["main","v2.0.3","v2.0.2","v2.0.1","v2.0.0"]
-        logging.config(f'xTTS_api - Available models: {self.available_models()}')
-        logging.config(f'xTTS_api - Available voices: {self.voices()}')
+        logging.config(f'xTTS_api - Available xTTS_api models: {self.available_models()}')
+        logging.config(f'xTTS_api - Available xTTS_api voices: {self.voices()}')
 
     def voices(self):
         """Return a list of available voices"""
         # Code to request and return the list of available models
-        response = requests.get(self.xtts_get_speakers_list)
-        return response.json() if response.status_code == 200 else []
+        response = requests.get(self.xtts_get_speakers_list).json()
+        if type(response) == dict:
+            base_lang = self.language["tts_language_code"]
+            self.mantella_server = True
+            if base_lang in response:
+                voice_list = response[base_lang]["speakers"]
+                voice_list.sort()
+                return voice_list
+        return response if response.status_code == 200 else []
     
     def available_models(self):
         """Return a list of available models"""
@@ -82,8 +91,10 @@ class Synthesizer(base_tts.base_Synthesizer):
             logging.info(f'Custom xTTS Model not found for {character.voice_model}! Using default model...')
             self.set_model(self.default_model)
           
-    def get_valid_voice_model(self, character, crashable=True):
+    def get_valid_voice_model(self, character, crashable=None):
         """Get the valid voice model for the character from the available voices - Order of preference: voice_model, voice_model without spaces, lowercase voice_model, uppercase voice_model, lowercase voice_model without spaces, uppercase voice_model without spaces"""
+        if crashable == None:
+            crashable = self.crashable
         default_voice_model = super().get_valid_voice_model(character,False)
         if default_voice_model == None:
             default_voice_model = character.voice_model
@@ -91,39 +102,49 @@ class Synthesizer(base_tts.base_Synthesizer):
         racial_voice_model = f"{character.race}{basic_voice_model}"
         gendered_voice_model = f"{character.gender}{basic_voice_model}"
         gendered_racial_voice_model = f"{character.race}{character.gender}{basic_voice_model}"
+        options = [default_voice_model, basic_voice_model, racial_voice_model, gendered_voice_model, gendered_racial_voice_model]
+        lower_options = [option.lower() for option in options]
+        upper_options = [option.upper() for option in options]
+        lower_options_no_spaces = [option.replace(' ', '') for option in lower_options]
+        options = options + lower_options + upper_options + lower_options_no_spaces
+        options.append(character.skyrim_voice_folder)
         voice_model = None
-        if character.ref_id in self.voices():
-            voice_model = character.ref_id
-        elif character.name in self.voices():
-            voice_model = character.name
-        elif gendered_racial_voice_model in self.voices():
-            voice_model = gendered_racial_voice_model
-        elif gendered_racial_voice_model.lower() in self.voices():
-            voice_model = gendered_racial_voice_model.lower()
-        elif gendered_voice_model in self.voices():
-            voice_model = gendered_voice_model
-        elif gendered_voice_model.lower() in self.voices():
-            voice_model = gendered_voice_model.lower()
-        elif racial_voice_model in self.voices():
-            voice_model = racial_voice_model
-        elif racial_voice_model.lower() in self.voices():
-            voice_model = racial_voice_model.lower()
-        elif basic_voice_model in self.voices():
-            voice_model = basic_voice_model
-        elif basic_voice_model.lower() in self.voices():
-            voice_model = basic_voice_model.lower()
-        elif default_voice_model in self.voices():
-            voice_model = default_voice_model
-        elif default_voice_model.lower() in self.voices():
-            voice_model = default_voice_model.lower()
-        elif character.voice_model in self.voices():
-            voice_model = character.voice_model
-        elif character.voice_model.lower() in self.voices():
-            voice_model = character.voice_model.lower()
+        for option in options:
+            if option in self.voices():
+                voice_model = option
+                break
+        # if character.ref_id in self.voices():
+        #     voice_model = character.ref_id
+        # elif character.name in self.voices():
+        #     voice_model = character.name
+        # elif gendered_racial_voice_model in self.voices():
+        #     voice_model = gendered_racial_voice_model
+        # elif gendered_racial_voice_model.lower() in self.voices():
+        #     voice_model = gendered_racial_voice_model.lower()
+        # elif gendered_voice_model in self.voices():
+        #     voice_model = gendered_voice_model
+        # elif gendered_voice_model.lower() in self.voices():
+        #     voice_model = gendered_voice_model.lower()
+        # elif racial_voice_model in self.voices():
+        #     voice_model = racial_voice_model
+        # elif racial_voice_model.lower() in self.voices():
+        #     voice_model = racial_voice_model.lower()
+        # elif basic_voice_model in self.voices():
+        #     voice_model = basic_voice_model
+        # elif basic_voice_model.lower() in self.voices():
+        #     voice_model = basic_voice_model.lower()
+        # elif default_voice_model in self.voices():
+        #     voice_model = default_voice_model
+        # elif default_voice_model.lower() in self.voices():
+        #     voice_model = default_voice_model.lower()
+        # elif character.voice_model in self.voices():
+        #     voice_model = character.voice_model
+        # elif character.voice_model.lower() in self.voices():
+        #     voice_model = character.voice_model.lower()
             
             
         logging.error(f'Voice model {voice_model} not available! Please add it to the xTTS voices list.')
-        if self.crashable and voice_model == None:
+        if crashable and voice_model == None:
             input("Press enter to continue...")
             raise FileNotFoundError()
         
@@ -136,18 +157,24 @@ class Synthesizer(base_tts.base_Synthesizer):
             voice_model = character
         else:
             voice_model = self.get_valid_voice_model(character)
+        base_lang = character.tts_language_code if character else self.language["tts_language_code"] # TODO: Make sure this works
         data = {
             'text': line,
             'speaker_wav': voice_model,
-            'language': character.tts_language_code
+            'language': base_lang
         }
         # print(data)
-        response = requests.post(self.synthesize_url_xtts, json=data)
-        if response.status_code == 200: # if the request was successful, write the wav file to disk at the specified path
-            self.convert_to_16bit(io.BytesIO(response.content), save_path)
-        else:
+        try:
+            response = requests.post(self.synthesize_url_xtts, json=data)
+            if response.status_code == 200: # if the request was successful, write the wav file to disk at the specified path
+                self.convert_to_16bit(io.BytesIO(response.content), save_path)
+            else:
+                logging.error(f'xTTS failed to generate voiceline at: {Path(save_path)}')
+                raise FileNotFoundError()
+        except Exception as e:
             logging.error(f'xTTS failed to generate voiceline at: {Path(save_path)}')
             raise FileNotFoundError()
+            
           
     def synthesize(self, voiceline, character, aggro=0):
         """Synthesize the text for the character specified using the xTTS API"""

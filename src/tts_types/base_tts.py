@@ -31,6 +31,7 @@ class VoiceModelNotFound(Exception):
 tts_slug = "base_Synthesizer"
 class base_Synthesizer:
     def __init__(self, conversation_manager):
+        self.tts_slug = tts_slug
         self.conversation_manager = conversation_manager
         self.config = self.conversation_manager.config
         # determines whether the voiceline should play internally
@@ -45,7 +46,11 @@ class base_Synthesizer:
 
     @property
     def language(self):
-        return self.config.language # TODO: Make sure this works with prompt_styles
+        if "_prompt_style" in self.config.__dict__:
+            return self.config.language # TODO: Make sure this works with prompt_styles
+        return {
+            "tts_language_code": "en",
+        } # TODO: Fix this to get the language from the config
     
     def convert_to_16bit(self, input_file, output_file=None, override_sample_rate=None):
         if output_file is None:
@@ -77,8 +82,10 @@ class base_Synthesizer:
         raise NotImplementedError("voices() method not implemented in your tts type.")
         return []
     
-    def get_valid_voice_model(self, character, crashable=True):
+    def get_valid_voice_model(self, character, crashable=None):
         """Get the valid voice model for the character from the available voices - Order of preference: voice_model, voice_model without spaces, lowercase voice_model, uppercase voice_model, lowercase voice_model without spaces, uppercase voice_model without spaces"""
+        if crashable is None:
+            crashable = self.crashable
         options = [character.voice_model] # add the voice model from the character object
         options.append(character.voice_model.replace(' ', '')) # add the voice model without spaces
         options.append(character.voice_model.lower()) # add the lowercase version of the voice model

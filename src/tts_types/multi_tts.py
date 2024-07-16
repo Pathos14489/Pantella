@@ -7,10 +7,11 @@ tts_slug = "multi_tts"
 class Synthesizer(base_tts.base_Synthesizer):
     def __init__(self, conversation_manager, ttses = []):
         super().__init__(conversation_manager)
+        self.tts_slug = tts_slug
         self.tts_engines = ttses
         fallback_order = ""
-        for tts, tts_index in enumerate(self.tts_engines):
-            fallback_order += f"{tts_index}. {tts.tts_slug}\n"
+        for tts_index, tts in enumerate(self.tts_engines):
+            fallback_order += f"{str(tts_index)}. {tts.tts_slug}\n"
         logging.config(f"Loaded multi_tts with tts engines in the following fallback order:\n{fallback_order}")
 
     def voices(self):
@@ -45,7 +46,7 @@ class Synthesizer(base_tts.base_Synthesizer):
                 input("Press enter to continue...")
                 raise ValueError(f"Could not find tts engine for voice model: {character.voice_model}! Please check your config.json file and try again!")
         else:
-            return tts.get_valid_voice_model(character, crashable=crashable)
+            return tts.get_valid_voice_model(character, crashable=self.crashable)
     
     def synthesize(self, voiceline, character, **kwargs):
         """Synthesize the text for the character specified using either the 'tts_override' property of the character or using the first tts engine that supports the voice model of the character"""

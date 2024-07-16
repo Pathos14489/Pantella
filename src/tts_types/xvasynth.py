@@ -20,6 +20,7 @@ tts_slug = "xvasynth"
 class Synthesizer(base_tts.base_Synthesizer): 
     def __init__(self, conversation_manager):
         super().__init__(conversation_manager)
+        self.tts_slug = tts_slug
         self.xvasynth_path = self.config.xvasynth_path
         self.process_device = self.config.xvasynth_process_device
         self.times_checked_xvasynth = 0
@@ -200,7 +201,7 @@ class Synthesizer(base_tts.base_Synthesizer):
             pluginsContext["mantella_settings"] = {
                 "emAngry": 0.6
             }
-        base_lang = character.tts_language_code if character else 'en'
+        base_lang = character.tts_language_code if character else self.language["tts_language_code"] # TODO: Make sure this works
         data = {
             'pluginsContext': json.dumps(pluginsContext),
             'modelType': self.model_type,
