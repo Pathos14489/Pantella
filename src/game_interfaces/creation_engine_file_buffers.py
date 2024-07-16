@@ -88,7 +88,7 @@ class GameInterface(BaseGameInterface):
                     shutil.copy(source_file_path, in_game_voice_folder_path)
 
             self.write_game_info('_pantella_status', 'Error with Pantella.exe. Please check PantellaSoftware\\logging.log')
-            logging.warn("Unknown NPC detected. This NPC will be able to speak once you restart Skyrim. To learn how to add memory, a background, and a voice model of your choosing to this NPC, see here: https://github.com/Pathos14489/Pantella")
+            logging.warn("Voice Folder uninitialized! This NPC will be able to speak once you restart Skyrim and Pantella.")
             input('\nPress any key to exit...')
             sys.exit(0)
 
