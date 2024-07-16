@@ -130,8 +130,8 @@ class Synthesizer(base_tts.base_Synthesizer):
                 logging.info(f'Voice model {option} is available for xTTS_api!')
                 voice_model = option
                 break
-            
-        logging.error(f'Voice model {voice_model} not available! Please add it to the xTTS voices list.')
+        if voice_model == None:
+            logging.error(f'Voice model {voice_model} not available! Please add it to the xTTS voices list.')
         if crashable and voice_model == None:
             input("Press enter to continue...")
             raise FileNotFoundError()
