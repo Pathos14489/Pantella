@@ -106,6 +106,8 @@ class LLM(base_LLM.base_LLM):
         except Exception as e:
             self.completions_supported = False
             logging.error(f"Current API does not support raw completions! Are you using OpenAI's API? They will not work with all features of Pantella, please use OpenRouter or another API that supports raw non-chat completions.")
+            logging.error(e)
+            # input("Press Enter to exit.")
     
     def get_context(self):
         context = super().get_context()
@@ -286,8 +288,10 @@ class LLM(base_LLM.base_LLM):
                         **sampler_kwargs,
                         extra_body=extra_body_kwargs,
                         stream=True,
+                        logit_bias=self.logit_bias,
                     )
                 else:
+                    logging.warning("Using chat completions because raw completions are not supported by the current API.")
                     if self.config.log_all_api_requests:
                         log_id = None
                         while log_id is None or os.path.exists(self.config.api_log_dir+"/"+log_id+".log"):
@@ -302,6 +306,7 @@ class LLM(base_LLM.base_LLM):
                         **sampler_kwargs,
                         extra_body=extra_body_kwargs,
                         stream=True,
+                        logit_bias=self.logit_bias,
                     )
             except Exception as e:
                 logging.warning('Could not connect to LLM API, retrying in 5 seconds...')

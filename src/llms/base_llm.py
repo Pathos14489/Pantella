@@ -119,6 +119,14 @@ class base_LLM():
     @property
     def min_p(self):
         return self.config.min_p
+    
+    @property
+    def logit_bias(self):
+        logit_bias = self.config.logit_bias
+        keys = list(logit_bias.keys())
+        if len(keys) == 0:
+            logit_bias = None
+        return logit_bias
 
     @property
     def repeat_penalty(self):
