@@ -99,15 +99,19 @@ class Synthesizer(base_tts.base_Synthesizer):
         if default_voice_model == None:
             default_voice_model = character.voice_model
         basic_voice_model = f"{default_voice_model.replace(' ', '')}"
-        racial_voice_model = f"{character.race}{basic_voice_model}"
-        gendered_voice_model = f"{character.gender}{basic_voice_model}"
-        gendered_racial_voice_model = f"{character.race}{character.gender}{basic_voice_model}"
+        if type(character) == str:
+            voice_model = character
+        else:
+            racial_voice_model = f"{character.race}{basic_voice_model}"
+            gendered_voice_model = f"{character.gender}{basic_voice_model}"
+            gendered_racial_voice_model = f"{character.race}{character.gender}{basic_voice_model}"
         options = [default_voice_model, basic_voice_model, racial_voice_model, gendered_voice_model, gendered_racial_voice_model]
         lower_options = [option.lower() for option in options]
         upper_options = [option.upper() for option in options]
         lower_options_no_spaces = [option.replace(' ', '') for option in lower_options]
         options = options + lower_options + upper_options + lower_options_no_spaces
-        options.append(character.skyrim_voice_folder)
+        if type(character) != str:
+            options.append(character.skyrim_voice_folder)
         voice_model = None
         for option in options:
             if option in self.voices():

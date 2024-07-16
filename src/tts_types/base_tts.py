@@ -86,12 +86,16 @@ class base_Synthesizer:
         """Get the valid voice model for the character from the available voices - Order of preference: voice_model, voice_model without spaces, lowercase voice_model, uppercase voice_model, lowercase voice_model without spaces, uppercase voice_model without spaces"""
         if crashable is None:
             crashable = self.crashable
+        if type(character) == str:
+            voice_model = character
+        else:
+            voice_model = character.voice_model
         options = [character.voice_model] # add the voice model from the character object
-        options.append(character.voice_model.replace(' ', '')) # add the voice model without spaces
-        options.append(character.voice_model.lower()) # add the lowercase version of the voice model
-        options.append(character.voice_model.upper()) # add the uppercase version of the voice model
-        options.append(character.voice_model.lower().replace(' ', '')) # add the lowercase version of the voice model without spaces
-        options.append(character.voice_model.upper().replace(' ', '')) # add the uppercase version of the voice model without spaces
+        options.append(voice_model.replace(' ', '')) # add the voice model without spaces
+        options.append(voice_model.lower()) # add the lowercase version of the voice model
+        options.append(voice_model.upper()) # add the uppercase version of the voice model
+        options.append(voice_model.lower().replace(' ', '')) # add the lowercase version of the voice model without spaces
+        options.append(voice_model.upper().replace(' ', '')) # add the uppercase version of the voice model without spaces
         logging.info("Trying to detect voice model using the following aliases: ", options)
         logging.config("Available voices: ", self.voices())
         for option in options:
@@ -99,11 +103,11 @@ class base_Synthesizer:
                 logging.info(f'Voice model "{option}" found!')
                 return option # return the first valid voice model found
         # return None # if no valid voice model is found
-        logging.error(f'Voice model "{character.voice_model}" not available! Please add it to the voices list.')
+        logging.error(f'Voice model "{voice_model}" not available! Please add it to the voices list.')
         if crashable:
-            if self.continue_on_voice_model_error and character.voice_model == None:
+            if self.continue_on_voice_model_error and voice_model == None:
                 input("Press enter to continue...")
-                raise VoiceModelNotFound(f'Voice model {character.voice_model} not available! Please add it to the voices list.')
+                raise VoiceModelNotFound(f'Voice model {voice_model} not available! Please add it to the voices list.')
 
     @utils.time_it
     def change_voice(self, character):
