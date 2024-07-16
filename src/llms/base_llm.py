@@ -739,9 +739,9 @@ class base_LLM():
                         full_reply = full_reply.strip()
                         if new_speaker:
                             if not typing_roleplay:
-                                full_reply = full_reply.strip() + "[s4] " + self._prompt_style["roleplay_suffix"]
+                                full_reply = full_reply.strip() + "[ns4]" + self._prompt_style["roleplay_suffix"]
                             else:
-                                full_reply = full_reply.strip() + "[ns4]" + self._prompt_style["roleplay_prefix"]
+                                full_reply = full_reply.strip() + "[ns5]" + self._prompt_style["roleplay_prefix"]
                         num_sentences += 1 # increment the total number of sentences generated
                         voice_line_sentences += 1 # increment the number of sentences generated for the current voice line
                         
@@ -922,7 +922,7 @@ class base_LLM():
         #     pass
 
         if next_author is not None and full_reply != '':
-            full_reply = full_reply.replace("[s0]", "").replace("[s1]", "").replace("[s2]", "").replace("[s3]", "").replace("[s4]", "").replace("[ns1]", "").replace("[ns2]", "").replace("[ns3]", "").replace("[ns4]", "") # remove the sentence spacing tokens
+            full_reply = full_reply.replace("[s0]", "").replace("[s1]", "").replace("[s2]", "").replace("[s3]", "").replace("[ns4]", "").replace("[ns1]", "").replace("[ns2]", "").replace("[ns3]", "").replace("[ns4]", "") # remove the sentence spacing tokens
             self.conversation_manager.new_message({"role": self.config.assistant_name, 'name':next_author, "content": full_reply})
             # -- for each sentence for each character until the conversation ends or the max_response_sentences is reached or the player is speaking
             logging.info(f"Full response saved ({self.tokenizer.get_token_count(full_reply)} tokens): {full_reply}")

@@ -82,7 +82,7 @@ class base_Synthesizer:
         raise NotImplementedError("voices() method not implemented in your tts type.")
         return []
     
-    def get_valid_voice_model(self, character, crashable=None):
+    def get_valid_voice_model(self, character, crashable=None, multi_tts=True):
         """Get the valid voice model for the character from the available voices - Order of preference: voice_model, voice_model without spaces, lowercase voice_model, uppercase voice_model, lowercase voice_model without spaces, uppercase voice_model without spaces"""
         if crashable is None:
             crashable = self.crashable
@@ -90,7 +90,7 @@ class base_Synthesizer:
             voice_model = character
         else:
             voice_model = character.voice_model
-        options = [character.voice_model] # add the voice model from the character object
+        options = [voice_model] # add the voice model from the character object
         options.append(voice_model.replace(' ', '')) # add the voice model without spaces
         options.append(voice_model.lower()) # add the lowercase version of the voice model
         options.append(voice_model.upper()) # add the uppercase version of the voice model
@@ -103,7 +103,7 @@ class base_Synthesizer:
                 logging.info(f'Voice model "{option}" found!')
                 return option # return the first valid voice model found
         # return None # if no valid voice model is found
-        logging.error(f'Voice model "{voice_model}" not available! Please add it to the voices list.')
+        logging.error(f'Voice model "{voice_model}" not available in {self.tts_slug}! Please add it to the voices list.')
         if crashable:
             if self.continue_on_voice_model_error and voice_model == None:
                 input("Press enter to continue...")

@@ -91,61 +91,45 @@ class Synthesizer(base_tts.base_Synthesizer):
             logging.info(f'Custom xTTS Model not found for {character.voice_model}! Using default model...')
             self.set_model(self.default_model)
           
-    def get_valid_voice_model(self, character, crashable=None):
+    def get_valid_voice_model(self, character, crashable=None, multi_tts=True):
         """Get the valid voice model for the character from the available voices - Order of preference: voice_model, voice_model without spaces, lowercase voice_model, uppercase voice_model, lowercase voice_model without spaces, uppercase voice_model without spaces"""
         if crashable == None:
             crashable = self.crashable
-        default_voice_model = super().get_valid_voice_model(character,False)
-        if default_voice_model == None:
-            default_voice_model = character.voice_model
-        basic_voice_model = f"{default_voice_model.replace(' ', '')}"
-        if type(character) == str:
-            voice_model = character
+        if not multi_tts:
+            default_voice_model = super().get_valid_voice_model(character,False)
         else:
+            default_voice_model = None
+        if type(character) == str:
+            if default_voice_model == None:
+                default_voice_model = character
+            basic_voice_model = f"{default_voice_model.replace(' ', '')}"
+        else:
+            if default_voice_model == None:
+                default_voice_model = character.voice_model
+            basic_voice_model = f"{default_voice_model.replace(' ', '')}"
             racial_voice_model = f"{character.race}{basic_voice_model}"
             gendered_voice_model = f"{character.gender}{basic_voice_model}"
             gendered_racial_voice_model = f"{character.race}{character.gender}{basic_voice_model}"
-        options = [default_voice_model, basic_voice_model, racial_voice_model, gendered_voice_model, gendered_racial_voice_model]
+        if type(character) == str:
+            options = [default_voice_model, basic_voice_model]
+        else:
+            options = [default_voice_model, basic_voice_model, racial_voice_model, gendered_voice_model, gendered_racial_voice_model]
+        captitalized_options = [option.capitalize() for option in options]
         lower_options = [option.lower() for option in options]
         upper_options = [option.upper() for option in options]
         lower_options_no_spaces = [option.replace(' ', '') for option in lower_options]
-        options = options + lower_options + upper_options + lower_options_no_spaces
+        options = options + captitalized_options + lower_options + upper_options + lower_options_no_spaces
         if type(character) != str:
             options.append(character.skyrim_voice_folder)
+            logging.info(f'Checking for valid voice model for "{character.name}" amongst:', options)
+        else:
+            logging.info(f'Checking for valid voice model for "{character}" amongst:', options)
         voice_model = None
         for option in options:
             if option in self.voices():
+                logging.info(f'Voice model {option} is available for xTTS_api!')
                 voice_model = option
                 break
-        # if character.ref_id in self.voices():
-        #     voice_model = character.ref_id
-        # elif character.name in self.voices():
-        #     voice_model = character.name
-        # elif gendered_racial_voice_model in self.voices():
-        #     voice_model = gendered_racial_voice_model
-        # elif gendered_racial_voice_model.lower() in self.voices():
-        #     voice_model = gendered_racial_voice_model.lower()
-        # elif gendered_voice_model in self.voices():
-        #     voice_model = gendered_voice_model
-        # elif gendered_voice_model.lower() in self.voices():
-        #     voice_model = gendered_voice_model.lower()
-        # elif racial_voice_model in self.voices():
-        #     voice_model = racial_voice_model
-        # elif racial_voice_model.lower() in self.voices():
-        #     voice_model = racial_voice_model.lower()
-        # elif basic_voice_model in self.voices():
-        #     voice_model = basic_voice_model
-        # elif basic_voice_model.lower() in self.voices():
-        #     voice_model = basic_voice_model.lower()
-        # elif default_voice_model in self.voices():
-        #     voice_model = default_voice_model
-        # elif default_voice_model.lower() in self.voices():
-        #     voice_model = default_voice_model.lower()
-        # elif character.voice_model in self.voices():
-        #     voice_model = character.voice_model
-        # elif character.voice_model.lower() in self.voices():
-        #     voice_model = character.voice_model.lower()
-            
             
         logging.error(f'Voice model {voice_model} not available! Please add it to the xTTS voices list.')
         if crashable and voice_model == None:

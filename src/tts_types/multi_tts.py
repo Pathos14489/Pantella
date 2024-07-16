@@ -22,22 +22,25 @@ class Synthesizer(base_tts.base_Synthesizer):
         voices = list(set(voices))
         return voices
     
-    def get_valid_voice_model(self, character, crashable=False):
+    def get_valid_voice_model(self, character, crashable=False, multi_tts=True):
         """Synthesize the text for the character specified using either the 'tts_override' property of the character or using the first tts engine that supports the voice model of the character"""
         tts = None
         # print(voiceline)
         # print(character)
         if "tts_override" in character.__dict__:
-            for tts_engine in self.tts_engines:
-                if character.tts_override == tts_engine.tts_slug and tts_engine.get_valid_voice_model(character) != None:
-                    tts = tts_engine
-                    break
-                elif tts_engine.get_valid_voice_model(character) != None:
-                    tts = tts_engine
-                    break
+            if character.tts_override in self.tts_engines:
+                tts = self.tts_engines[character.tts_override]
+                logging.info(f"Character {character.name} has tts_override set to {character.tts_override}.")
+            else:
+                for tts_engine in self.tts_engines:
+                    if tts_engine.get_valid_voice_model(character, multi_tts=True) != None:
+                        logging.warn(f"Character {character.name} has tts_override set to {character.tts_override}, but that tts engine does not support the voice model of the character. Falling back to the first tts engine that supports the voice model of the character. TTS engine: {tts_engine.tts_slug}")
+                        tts = tts_engine
+                        break
         else:
             for tts_engine in self.tts_engines:
-                if tts_engine.get_valid_voice_model(character) != None:
+                if tts_engine.get_valid_voice_model(character, multi_tts=True) != None:
+                    logging.info(f"Character {character.name} does not have tts_override set. Using the first tts engine that supports the voice model of the character. TTS engine: {tts_engine.tts_slug}")
                     tts = tts_engine
                     break
         if tts is None:
@@ -46,7 +49,7 @@ class Synthesizer(base_tts.base_Synthesizer):
                 input("Press enter to continue...")
                 raise ValueError(f"Could not find tts engine for voice model: {character.voice_model}! Please check your config.json file and try again!")
         else:
-            return tts.get_valid_voice_model(character, crashable=self.crashable)
+            return tts.get_valid_voice_model(character, crashable=self.crashable, multi_tts=True)
     
     def synthesize(self, voiceline, character, **kwargs):
         """Synthesize the text for the character specified using either the 'tts_override' property of the character or using the first tts engine that supports the voice model of the character"""
