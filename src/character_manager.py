@@ -75,7 +75,7 @@ class Character:
     @property
     def gender(self):
         gender = "Imperial"
-        if "gender" in self.info and self.info["gender"] != None and self.info["gender"] != "":
+        if "gender" in self.info and self.info["gender"] != None and self.info["gender"] != "" and self.info["gender"] != "either":
             gender = self.info["gender"]
         elif "in_game_gender" in self.info and self.info["in_game_gender"] != None and self.info["in_game_gender"] != "":
             gender = self.info["in_game_gender"]
