@@ -1,7 +1,7 @@
 {
     "name": "Normal - English",
     "style": {
-        "stop": ["<im_end>","<im_end>", "\"", "<", "im_", "<im_end"],
+        "stop": ["<im_end>","<im_end>", "\"", "<", "<im", "im_", "<im_end"],
         "undo": ["{", "}"],
         "end_of_sentence_chars": [".", "?", "!"],
         "BOS_token": "<im_start>",
@@ -118,6 +118,8 @@
             "player":{
                 "OnItemAdded":"[player] picked up {item_name}.",
                 "OnItemAddedFromDestination":"[player] picked up {item_name} from {source_name}.",
+                "OnItemRemoved":"[player] dropped {item_name}.",
+                "OnItemRemovedToDestination":"[player] put {item_name} in/on {source_name}.",
                 "OnSpellCast":"[player] casted the spell {spell_cast}.",
                 "OnHit":"{aggressor} punched [player].",
                 "OnHitFromSource":"{aggressor} hit [player] with a/an {hit_source}.",
@@ -140,6 +142,8 @@
             "npc":{
                 "OnItemAdded":"{name} picked up {item_name}.",
                 "OnItemAddedFromDestination":"{name} picked up {item_name} from {source_name}.",
+                "OnItemRemoved":"{name} dropped {item_name}.",
+                "OnItemRemovedToDestination":"{name} put {item_name} in/on {source_name}.",
                 "OnSpellCast":"{name} casted the spell {spell_cast}.",
                 "OnHit":"{aggressor} punched {name}.",
                 "OnHitFromSource":"{aggressor} hit {name} with a/an {hit_source}.",
