@@ -22,6 +22,7 @@ logging.config(f"Available LLMs: {LLM_Types.keys()}")
 # Create LLM object using the config and client provided
     
 def create_LLM(conversation_manager):
+    logging.info(f"Creating LLM[{conversation_manager.config.inference_engine}] object")
     if conversation_manager.config.inference_engine not in LLM_Types:
         logging.error(f"Could not find inference engine: {conversation_manager.config.inference_engine}! Please check your config.json file and try again!")
         input("Press enter to continue...")
