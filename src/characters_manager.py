@@ -159,24 +159,33 @@ class Characters:
         return replacement_dict
 
     def render_game_event(self,line:str):
-        if line.startswith("player<"):
-            line_2 = line.split("<")[1]
-            game_event_title, args_strings  = line_2.split(">",1)
-            args = args_strings.split("|")
-            args_dict = {}
-            for arg in args:
-                key, value = arg.split("=")
-                args_dict[key] = value
-            line = self.language["game_events"]["player"][game_event_title].format(**args_dict)
-        elif line.startswith("npc<"):
-            line_2 = line.split("<")[1]
-            game_event_title, args_strings  = line_2.split(">",1)
-            args = args_strings.split("|")
-            args_dict = {}
-            for arg in args:
-                key, value = arg.split("=")
-                args_dict[key] = value
-            line = self.language["game_events"]["npc"][game_event_title].format(**args_dict)
+        try:
+            if line.startswith("player<"):
+                line_2 = line.split("<",1)[1]
+                game_event_title, args_strings  = line_2.split(">",1)
+                args = args_strings.split("|")
+                args_dict = {}
+                for arg in args:
+                    key, value = arg.split("=")
+                    args_dict[key] = value
+                line = self.language["game_events"]["player"][game_event_title].format(**args_dict)
+            elif line.startswith("npc<"):
+                line_2 = line.split("<",1)[1]
+                game_event_title, args_strings  = line_2.split(">",1)
+                args = args_strings.split("|")
+                args_dict = {}
+                for arg in args:
+                    args = arg.split("=")
+                    if len(args) == 1:
+                        key = args[0]
+                        value = ""
+                    else:
+                        key, value = arg.split("=")
+                    args_dict[key] = value
+                line = self.language["game_events"]["npc"][game_event_title].format(**args_dict)
+        except Exception as e:
+            logging.error(f"Error rendering game event: {line} - {e}")
+            raise e
         return line
 
     def active_character_count(self): # Returns the number of active characters as an int
