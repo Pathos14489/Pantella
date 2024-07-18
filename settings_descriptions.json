@@ -65,6 +65,18 @@
         "mirostat_tau": "The mirostat tau, the perplexity target. Defaults to 5.",
         "max_tokens": "The maximum number of tokens to generate. Defaults to 512."
     },
+    "Vision": {
+        "vision_enabled": "Whether vision is enabled. Defaults to True.",
+        "paddle_ocr": "Whether to use paddle OCR. Defaults to False.",
+        "ocr_lang": "The language to use for OCR. Defaults to 'en'.",
+        "ocr_use_angle_cls": "Whether to use angle classification for OCR. Defaults to False.",
+        "ocr_filter":"A list of strings to filter out from the OCR output.",
+        "append_system_image_near_end": "Whether to append the system image near the end of the message. Defaults to True.",
+        "image_message_depth": "The depth of the image message. Defaults to -1. -1 means right before the next message.",
+        "image_message": "The format of the message with the image.",
+        "ocr_resolution": "The resolution of the OCR ASCII block. Defaults to 256.",
+        "image_resolution": "The resolution of the clip model. Defaults to 672."
+    },
     "openai_api": {
         "llm": "The language model ID to use.",
         "alternative_openai_api_base": "If you're not using OpenAI's API, you can set this to the base URL of the API you're using.",
@@ -85,15 +97,6 @@
     },
     "llava_cpp_python": {
         "llava_clip_model_path": "The path to the clip model file. e.g. 'mmproj-model-f16.gguf', 'llava-clip.f16.gguf'.",
-        "paddle_ocr": "Whether to use paddle OCR. Defaults to False.",
-        "ocr_lang": "The language to use for OCR. Defaults to 'en'.",
-        "ocr_use_angle_cls": "Whether to use angle classification for OCR. Defaults to False.",
-        "ocr_filter":"A list of strings to filter out from the OCR output.",
-        "append_system_image_near_end": "Whether to append the system image near the end of the message. Defaults to True.",
-        "llava_image_message_depth": "The depth of the image message. Defaults to -1. -1 means right before the next message.",
-        "llava_image_message": "The format of the message with the image.",
-        "ocr_resolution": "The resolution of the OCR ASCII block. Defaults to 256.",
-        "clip_resolution": "The resolution of the clip model. Defaults to 672."
     },
     "transformers": {
         "transformers_model_slug": "The HF indentifier for the model. e.g. 'mistralai/Mistral-7B-Instruct-v0.1'.", 
