@@ -443,6 +443,8 @@ class GameInterface(BaseGameInterface):
         character_info = {
             'name': character_name, # TODO: Generate random names for generic NPCs and figure out how to apply them in-game
             'bio': f'{character_name} is a {actor_race} {"Woman" if actor_sex=="1" else "Man"}.', # TODO: Generate more detailed background for generic NPCs
+            "gender":{"Female" if actor_sex=="1" else "Male"},
+            "race":actor_race,
             'voice_model': voice_model,
             'skyrim_voice_folder': skyrim_voice_folder[0], # Default to the first for now, maybe change later?
         }
@@ -560,7 +562,7 @@ class GameInterface(BaseGameInterface):
         #         is_generic_npc = True
         if character_info == None:
             logging.error(f"Character {character_name} not found in character database.")
-            if self.config.continue_on_voice_model_error:
+            if self.config.continue_on_missing_character:
                 logging.warn(f"Character {character_name} not found in character database. Using generic NPC data.")
                 character_info = self.load_unnamed_npc(character_name)
                 is_generic_npc = True
