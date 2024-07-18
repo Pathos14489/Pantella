@@ -188,6 +188,7 @@ class Synthesizer(base_tts.base_Synthesizer):
         voices = []
         for character in data[self.game]:
             voices.append(character['voiceName'])
+        voices = [voice for voice in voices if voice not in self.config.xvasynth_banned_voice_models] 
         logging.config(f"Available xVASynth Voices: {voices}")
         logging.config(f"Total xVASynth Voices: {len(voices)}")
         return voices

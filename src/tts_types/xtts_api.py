@@ -34,15 +34,19 @@ class Synthesizer(base_tts.base_Synthesizer):
     def voices(self):
         """Return a list of available voices"""
         # Code to request and return the list of available models
-        response = requests.get(self.xtts_get_speakers_list).json()
+        response = requests.get(self.xtts_get_speakers_list)
+        if response.status_code != 200:
+            logging.error(f'Failed to get xTTS voices list: {response.status_code}')
+            return []
+        response = response.json()
         if type(response) == dict:
             base_lang = self.language["tts_language_code"]
             self.mantella_server = True
             if base_lang in response:
-                voice_list = response[base_lang]["speakers"]
-                voice_list.sort()
-                return voice_list
-        return response if response.status_code == 200 else []
+                response = response[base_lang]["speakers"]
+                response.sort()
+        response = [voice for voice in response if voice not in self.config.xtts_api_banned_voice_models] 
+        return response
     
     def available_models(self):
         """Return a list of available models"""
