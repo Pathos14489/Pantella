@@ -40,9 +40,16 @@ class base_Tokenizer(): # Tokenizes(only availble for counting the tokens in a s
     def new_message(self, content, role, name=None): # Parses a string into a message format with the name of the speaker
         """Parses a string into a message format with the name of the speaker"""
         parsed_msg = self.start_message(role, name)
-        if content.strip() == "":
-            return ""
-        parsed_msg += content
+        if type(content) == list:
+            for item in content:
+                if item["type"] == "text":
+                    parsed_msg += item["text"]
+                elif item["type"] == "image_url":
+                    parsed_msg += "[IMAGE_EMBEDDED_HERE]"
+        elif type(content) == str:
+            if content.strip() == "":
+                return ""
+            parsed_msg += content
         parsed_msg += self.end_message(role, name)
         return parsed_msg
 
@@ -100,7 +107,7 @@ class base_Tokenizer(): # Tokenizes(only availble for counting the tokens in a s
         context = ""
         logging.info(f"Creating string from messages: {len(messages)}")
         for message in messages:
-            logging.info(f"Message:",message)
+            # logging.info(f"Message:",message)
             if "content" in message:
                 content = message["content"]
             else:

@@ -6,12 +6,67 @@ import unicodedata
 import time
 import random
 import traceback
+import base64
+import urllib.request
+import numpy as np
+from PIL import Image
+
+try:
+    from paddleocr import PaddleOCR
+    ocr_loaded = True
+    logging.info("Imported paddleocr in base_llm.py")
+except Exception as e:
+    ocr_loaded = False
+    logging.warn(f"Error loading paddleocr for vision enabled inference engine. Please check that you have installed paddleocr correctly. OCR will not be used but basic image embedding will still work.")
+    logging.warn(e)
+try:
+    import pygetwindow
+    loaded_pygetwindow = True
+    logging.info("Imported pygetwindow in base_llm.py")
+except Exception as e:
+    loaded_pygetwindow = False
+    logging.warn(f"Failed to load pygetwindow, so vision enabled inference engine cannot be used! Please check that you have installed it correctly if you want to use it, otherwise you can ignore this warning.")
+
+try:
+    import dxcam
+    loaded_dxcam = True
+    logging.info("Imported dxcam in base_llm.py")
+except Exception as e:
+    loaded_dxcam = False
+    logging.warn(f"Failed to load dxcam, so vision enabled inference engine cannot be used! Please check that you have installed it correctly if you want to use it, otherwise you can ignore this warning.")
+
 logging.info("Imported required libraries in base_LLM.py")
+
+def get_data_url(url):
+    return "data:image/png;base64," + base64.b64encode(urllib.request.urlopen(url).read()).decode("utf-8")
+
+def load_image( image_url: str) -> bytes:
+    if image_url.startswith("data:"):
+        import base64
+
+        image_bytes = base64.b64decode(image_url.split(",")[1])
+        return image_bytes
+    else:
+        import urllib.request
+
+        with urllib.request.urlopen(image_url) as f:
+            image_bytes = f.read()
+            return image_bytes
+        
+def image_to_base64(image: Image) -> str:
+    import io
+    import base64
+
+    image_bytes = io.BytesIO()
+    image.save(image_bytes, format="PNG")
+    image_bytes = image_bytes.getvalue()
+    image_base64 = base64.b64encode(image_bytes).decode("utf-8")
+    return image_base64
 
 inference_engine_name = "base_LLM"
 tokenizer_slug = "tiktoken" # default to tiktoken for now (Not always correct, but it's the fastest tokenizer and it works for openai's models, which a lot of users will be relying on probably)
 class base_LLM():
-    def __init__(self, conversation_manager):
+    def __init__(self, conversation_manager, vision_enabled=False):
         self.conversation_manager = conversation_manager
         self.config = self.conversation_manager.config
         self.tokenizer = None
@@ -22,6 +77,30 @@ class base_LLM():
         self.prompt_style = "normal"
         self.type = "normal"
         self.is_local = True
+        self.vision_enabled = vision_enabled
+        self.completions_supported = True
+        if self.vision_enabled:
+            if self.config.paddle_ocr and not ocr_loaded: # Load paddleocr if it's installed
+                logging.error(f"Error loading paddleocr for vision enabled inference engine. Please check that you have installed paddleocr correctly. OCR will not be used but basic image embedding will still work.")
+                raise Exception("PaddleOCR not installed, disable paddle_ocr in config.json or install PaddleOCR to use paddle_ocr.")
+            elif self.config.paddle_ocr and ocr_loaded:
+                self.ocr = PaddleOCR(use_angle_cls=self.config.ocr_use_angle_cls, lang=self.config.ocr_lang)
+            self.append_system_image_near_end = self.config.append_system_image_near_end
+            if not self.append_system_image_near_end:
+                self.prompt_style = "vision"
+            self.game_window = None
+            self.game_window_name = None
+            if loaded_dxcam:
+                self.camera = dxcam.create()
+            else:
+                logging.error(f"Error loading dxcam for vision enabled inference engine. Please check that you have installed dxcam correctly.")
+                input("Press Enter to exit.")
+                raise Exception("DXCam not installed, install DXCam to use vision enabled LLM(Windows only).")
+            if not loaded_pygetwindow:
+                logging.error(f"Error loading pygetwindow for vision enabled inference engine. Please check that you have installed pygetwindow correctly.")
+                input("Press Enter to exit.")
+                raise Exception("PyGetWindow not installed, install PyGetWindow to use vision enabled LLM(Windows only).")
+            self.get_game_window()
 
     @property
     def end_of_sentence_chars(self):
@@ -42,6 +121,11 @@ class base_LLM():
             stop.append(self._prompt_style["roleplay_suffix"])
         stop = [char for char in stop if char != '' or char != None or char != "'"]
         return stop
+    
+    @property
+    def replacements(self):
+        replacements = self._prompt_style["replacements"]
+        return replacements
     
     @property
     def undo(self): # strings that will cause the whole sentence to be retried if they're encountered
@@ -180,6 +264,153 @@ class base_LLM():
     def messages(self):
         return self.conversation_manager.messages
 
+    @property
+    def _prompt_style(self):
+        return self.conversation_manager.character_manager.prompt_style
+        
+    @property
+    def ocr_resolution(self):
+        return self.config.ocr_resolution
+    
+    @property
+    def image_resolution(self):
+        return self.config.image_resolution
+    
+    def get_ascii_block(self, paddle_result, img, ascii_representation_max_size = 128):
+        image_width, image_height = img.size
+        ascii_representation_size = (0,0)
+        if image_width > image_height:
+            ascii_representation_size = (ascii_representation_max_size, int(ascii_representation_max_size * (image_height / image_width)))
+        else:
+            ascii_representation_size = (int(ascii_representation_max_size * (image_width / image_height)), ascii_representation_max_size)
+        # ascii_representation = "#" * (ascii_representation_size[0]+2) + "\n"
+        ascii_representation = ""
+
+        print("ASCII Size:",ascii_representation_size)
+        paddle_result = paddle_result[0]
+        if paddle_result == None or len(paddle_result) == 0:
+            return ""
+        boxes = [line[0] for line in paddle_result]
+        txts = [line[1][0] for line in paddle_result]
+        _scores = [line[1][1] for line in paddle_result]
+        true_area = 0
+        # blank ascii_representation
+        for i in range(ascii_representation_size[1]):
+            blank_line = " " * ascii_representation_size[0] + "\n" # "#" + 
+            true_area += len(blank_line)
+            ascii_representation += blank_line
+        theoretical_ascii_area = ascii_representation_size[0] * ascii_representation_size[1]
+        logging.info("Theoretical ASCII Area:",theoretical_ascii_area)
+        logging.info("True ASCII Area:",true_area)
+        # write to ascii_representation
+        ocr_filter = self.config.ocr_filter # list of bad strings to filter out
+        for i in range(len(boxes)):
+            logging.info("Box:",boxes[i],txts[i])
+            point_1 = boxes[i][0]
+            point_2 = boxes[i][1]
+            point_3 = boxes[i][2]
+            point_4 = boxes[i][3]
+            text = txts[i]
+            filtered = False
+            for bad_string in ocr_filter:
+                if bad_string in text or text == "" or text.strip() == "" or bad_string.lower() in text.lower():
+                    filtered = True
+                    break
+            if filtered:
+                continue
+            centered_x = int((point_1[0] + point_2[0] + point_3[0] + point_4[0]) / 4)
+            centered_y = int((point_1[1] + point_2[1] + point_3[1] + point_4[1]) / 4)
+            centered_point = (centered_x, centered_y)
+            logging.info("Centered Point:",centered_point)
+            centered_x = int((centered_x / image_width) * ascii_representation_size[0])
+            centered_y = int((centered_y / image_height) * ascii_representation_size[1])
+            centered_point = (centered_x, centered_y)
+            logging.info("Centered Point:",centered_point)
+            # overwrite ascii_representation to include text centered at centered_point offset by half the length of text
+            text_length = len(text)
+            text_start = centered_x - int(text_length / 2)
+            text_end = text_start + text_length
+            
+            ascii_lines = ascii_representation.split("\n")
+            ascii_lines[centered_y] = ascii_lines[centered_y][:text_start] + text + ascii_lines[centered_y][text_end:]
+            ascii_representation = "\n".join(ascii_lines)
+
+        new_ascii_representation = ""
+        for line in ascii_representation.split("\n"):
+            if line.strip() != "":
+                new_ascii_representation += line + "\n"
+        ascii_representation = new_ascii_representation
+        # ascii_representation += "#" * (ascii_representation_size[0]+2)
+        logging.info("---BLOCK TOP")
+        logging.info(ascii_representation)
+        logging.info("---BLOCK BOTTOM")
+        return ascii_representation
+    
+    def get_player_perspective(self,check_vision=False):
+        """Get the player's perspective image embed using dxcam"""
+        if check_vision:
+            return True
+        left, top, right, bottom = self.game_window.left, self.game_window.top, self.game_window.right, self.game_window.bottom
+        region = (left, top, right, bottom)
+        frame = self.camera.grab(region=region) # Return array of shape (height, width, 3)
+        frame = Image.fromarray(frame)
+
+        if self.config.paddle_ocr:
+            result = self.ocr.ocr(np.array(frame), cls=self.config.ocr_use_angle_cls)
+            ascii_block = self.get_ascii_block(result, frame, self.ocr_resolution)
+        else:
+            ascii_block = ""
+
+        frame = frame.convert("RGB")
+        if self.config.resize_image:
+            frame = frame.resize((self.image_resolution, self.image_resolution))
+        base64_image = image_to_base64(frame)
+        return base64_image, frame, ascii_block
+    
+    def get_game_window(self):
+        if not loaded_pygetwindow:
+            raise Exception("PyGetWindow not installed, install PyGetWindow to allow vision support to function.")
+        if self.game_window_name != None:
+            try:
+                self.game_window = pygetwindow.getWindowsWithTitle(self.game_window_name)[0]
+                logging.info(f"Game Window Found: {self.game_window_name}")
+            except:
+                logging.error(f"Error loading game window for vision-enabled inference engine. Game window lost - Was the game closed? Please restart the game and try again.")
+                input("Press Enter to exit.")
+                raise Exception("Game window lost - Was the game closed? Please restart the game and Pantella and try again.")
+        if self.config.game_id == "fallout4":
+            game_windows = pygetwindow.getWindowsWithTitle("Fallout 4")
+            self.game_window_name = "Fallout 4"
+            if len(game_windows) == 0:
+                game_windows = pygetwindow.getWindowsWithTitle("Fallout 4 VR")
+                self.game_window_name = "Fallout 4 VR"
+            if len(game_windows) == 0:
+                game_windows = pygetwindow.getWindowsWithTitle("Fallout4VR")
+                self.game_window_name = "Fallout 4 VR"
+            logging.info(f"Game Window Found: {self.game_window_name}")
+        elif self.config.game_id == "skyrim":
+            game_windows = pygetwindow.getWindowsWithTitle("Skyrim Special Edition")
+            self.game_window_name = "Skyrim Special Edition"
+            if len(game_windows) == 0:
+                game_windows = pygetwindow.getWindowsWithTitle("Skyrim VR")
+                self.game_window_name = "Skyrim VR"
+            logging.info(f"Game Window Found: {self.game_window_name}")
+        else:
+            logging.error(f"Error loading game window for vision-enabled inference engine. No game window found - Game might not be supported by vision-enabled inference engine by default, or something might be changing the window title - Please specify the name of the Game Window EXACTLY as it's shown in the title bar of the game window: ")
+            game_name = input("Game Name: ")
+            try:
+                game_windows = pygetwindow.getWindowsWithTitle(game_name)
+                self.game_window_name = game_name
+            except Exception as e:
+                logging.error(f"Error loading game window for vision-enabled inference engine. No game window found or game not supported by inference engine.")
+                input("Press Enter to exit.")
+                raise e
+        if len(game_windows) == 0:
+            logging.error(f"Error loading game window for vision-enabled inference engine. No game window found or game not supported by inference engine.")
+            input("Press Enter to exit.")
+            raise Exception("No game window found or game not supported by inference engine.")
+        self.game_window = game_windows[0]
+    
     # the string printed when your print() this object
     def __str__(self):
         return f"{self.inference_engine_name} LLM"
@@ -408,6 +639,73 @@ class base_LLM():
                         formatted_msg["type"] = msg["type"]
 
             formatted_messages.append(formatted_msg)
+        if self.vision_enabled and self.append_system_image_near_end:
+            base64_image, image, ascii_block = self.get_player_perspective()
+            image_message_content = self.config.image_message.replace("{ocr}",ascii_block)
+            if image_message_content.startswith("{image}"):
+                image_message_content = image_message_content[7:]
+                image_message = {
+                    "role": self.config.system_name,
+                    "content": [
+                        {
+                            "type": "image_url",
+                            "image_url": {
+                                "url": "data:image/png;base64,"+base64_image
+                            }
+                        },
+                        {
+                            "type": "text",
+                            "text": image_message_content.replace("[player]", self.player_name)
+                        }
+                    ],
+                    "type": "image"
+                }
+            else:
+                image_message_content = image_message_content.split("{image}")
+                image_message_content = [content for content in image_message_content if content != ""]
+                if len(image_message_content) == 2:
+                    image_message = {
+                        "role": self.config.system_name,
+                        "content": [
+                            {
+                                "type": "text",
+                                "text": image_message_content[0].replace("[player]", self.player_name)
+                            },
+                            {
+                                "type": "image_url",
+                                "image_url": {
+                                    "url": "data:image/png;base64,"+base64_image
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": image_message_content[1].replace("[player]", self.player_name)
+                            }
+                        ],
+                        "type": "image"
+                    }
+                elif len(image_message_content) == 1:
+                    image_message = {
+                        "role": self.config.system_name,
+                        "content": [
+                            {
+                                "type": "text",
+                                "text": image_message_content[0].replace("[player]", self.player_name)
+                            },
+                            {
+                                "type": "image_url",
+                                "image_url": {
+                                    "url": "data:image/png;base64,"+base64_image
+                                }
+                            }
+                        ],
+                        "type": "image"
+                    }
+                else:
+                    logging.error(f"Invalid image message format in config.json. Please check the image_message field and try again. There should be exactly one instance of '{image}' in the image_message field.")
+                    input("Press Enter to exit.")
+                depth = self.config.image_message_depth
+                formatted_messages = formatted_messages[:depth] + [image_message] + formatted_messages[depth:] # Add the image message to the context
         return formatted_messages
     
     def generate_response(self, message_prefix="", force_speaker=None):
@@ -458,10 +756,6 @@ class base_LLM():
                 sentence += "." # add a period to the end of the sentence if it doesn't already have one
         return sentence, next_sentence
     
-    @property
-    def _prompt_style(self):
-        return self.conversation_manager.character_manager.prompt_style
-
     async def process_response(self, sentence_queue, event, force_speaker=None):
         """Stream response from LLM one sentence at a time"""
         logging.info(f"Processing response...")
@@ -511,17 +805,6 @@ class base_LLM():
 
         
         
-        if force_speaker is not None: # Force speaker to a specific character
-            logging.info(f"Forcing speaker to: {force_speaker.name}")
-            next_author = force_speaker.name
-            proposed_next_author = next_author
-            verified_author = True
-        elif self.conversation_manager.character_manager.active_character_count() == 1: # if there is only one active character, then the next author should most likely always be the only active character
-            logging.info(f"Only one active character. Attempting to force speaker to: {self.conversation_manager.game_interface.active_character.name}")
-            next_author = self.conversation_manager.game_interface.active_character.name
-            proposed_next_author = next_author
-            verified_author = True
-            force_speaker = self.conversation_manager.game_interface.active_character
 
         while retries >= 0: # keep trying to connect to the API until it works
             # if full_reply != '': # if the full reply is not empty, then the LLM has generated a response and the next_author should be extracted from the start of the generation
@@ -535,6 +818,24 @@ class base_LLM():
             #     retries = 5
             try:
                 # Reset variables every retry
+                proposed_next_author = '' # used to store the proposed next author
+                if not self.completions_supported:
+                    logging.warning(f"Completions are not supported by the current LLM. There might be more regenerations and errors because of this as we don't have full control over the exact prompt that is sent to the LLM.")
+                    force_speaker = None
+                    next_author = None
+                    verified_author = False
+                else:
+                    if force_speaker is not None: # Force speaker to a specific character
+                        logging.info(f"Forcing speaker to: {force_speaker.name}")
+                        next_author = force_speaker.name
+                        proposed_next_author = next_author
+                        verified_author = True
+                    elif self.conversation_manager.character_manager.active_character_count() == 1: # if there is only one active character, then the next author should most likely always be the only active character
+                        logging.info(f"Only one active character. Attempting to force speaker to: {self.conversation_manager.game_interface.active_character.name}")
+                        next_author = self.conversation_manager.game_interface.active_character.name
+                        proposed_next_author = next_author
+                        verified_author = True
+                        force_speaker = self.conversation_manager.game_interface.active_character
                 start_time = time.time()
                 beginning_of_sentence_time = time.time()
                 last_chunk = None
@@ -546,7 +847,6 @@ class base_LLM():
                     typing_roleplay = not typing_roleplay
                 was_typing_roleplay = typing_roleplay
         
-                proposed_next_author = '' # used to store the proposed next author
                 raw_reply = '' # used to store the raw reply
                 full_reply = '' # used to store the full reply
 
@@ -589,13 +889,41 @@ class base_LLM():
                         logging.info(f"Sentence probably contains EOS token(determined by lower() checking.). Stopping generation.")
                         eos = True
 
+                    def raise_invalid_author(retries, bad_author_retries):
+                        logging.info(f"Next author is None. Failed to extract author from: {sentence}")
+                        logging.info(f"Retrying...")
+                        retries += 1
+                        bad_author_retries -= 1
+                        if bad_author_retries == 0:
+                            logging.info(f"LLM Could not suggest a valid author, picking one at random from active characters to break the loop...")
+                            random_authors = list(self.conversation_manager.character_manager.active_characters.keys())
+                            next_author = random.choice(random_authors)
+                        else:
+                            raise Exception('Invalid author')
+                        return next_author, retries, bad_author_retries
+
+                    contains_end_of_sentence_character = any(char in unicodedata.normalize('NFKC', content) for char in self.end_of_sentence_chars)
+                    for replacement in self.replacements:
+                        char, replacement_char = replacement["char"], replacement["replacement"]
+                        if char in content:
+                            logging.debug(f"Replacement character '{char}' found in sentence: '{content}'")
+                            logging.debug("Replacement Characters:",self.replacements)
+                            content = content.replace(char, replacement_char)
                     # Propose Author or Write their response
                     if next_author is None: # if next_author is None after generating a chunk of content, then the LLM didn't choose a character to speak next yet.
                         proposed_next_author += content
                         if self.message_signifier in proposed_next_author: # if the proposed next author contains the message signifier, then the next author has been chosen
                             sentence, next_author, verified_author, retries, bad_author_retries, system_loop = self.check_author(proposed_next_author, next_author, verified_author, possible_players, retries, bad_author_retries, system_loop)
+                        if contains_end_of_sentence_character and next_author is None:
+                            next_author, retries, bad_author_retries = raise_invalid_author(retries, bad_author_retries)
                     else: # if the next author is already chosen, then the LLM is generating the response for the next author
                         sentence += content # add the content to the sentence in progress
+                        for replacement in self.replacements:
+                            char, replacement_char = replacement["char"], replacement["replacement"]
+                            if char in sentence:
+                                logging.debug(f"Replacement character '{char}' found in sentence: {sentence}")
+                                logging.debug("Replacement Characters:",self.replacements)
+                                sentence = sentence.replace(char, replacement_char)
                         for char in self.stop:
                             if char in sentence:
                                 logging.debug(f"Banned character '{char}' found in sentence: {sentence}")
@@ -614,20 +942,7 @@ class base_LLM():
                         sentence = sentence.split(self.EOS_token)[0]
                         raw_reply = raw_reply.split(self.EOS_token)[0]
 
-                    def raise_invalid_author(retries, bad_author_retries):
-                        logging.info(f"Next author is None. Failed to extract author from: {sentence}")
-                        logging.info(f"Retrying...")
-                        retries += 1
-                        bad_author_retries -= 1
-                        if bad_author_retries == 0:
-                            logging.info(f"LLM Could not suggest a valid author, picking one at random from active characters to break the loop...")
-                            random_authors = list(self.conversation_manager.character_manager.active_characters.keys())
-                            next_author = random.choice(random_authors)
-                        else:
-                            raise Exception('Invalid author')
-                        return next_author, retries, bad_author_retries
 
-                    contains_end_of_sentence_character = any(char in unicodedata.normalize('NFKC', content) for char in self.end_of_sentence_chars)
                         
                     # contains_banned_character = any(char in content for char in self.stop)
                     was_typing_roleplay = bool(typing_roleplay)
@@ -657,7 +972,7 @@ class base_LLM():
                         typing_roleplay = not typing_roleplay
                         
                         if typing_roleplay:
-                            full_reply = full_reply.strip() + self._prompt_style["roleplay_prefix"]
+                            full_reply = full_reply.strip() +"[ns-1]"+ self._prompt_style["roleplay_prefix"]
                         
                         if voice_line_sentences > 0 or len(sentence) > 0: # if the sentence is not empty and the number of sentences is greater than 0, then the narrator is speaking
                             new_speaker = True
@@ -721,14 +1036,17 @@ class base_LLM():
                                 elif was_typing_roleplay and not typing_roleplay: # If just stopped roleplaying, or if you're still actively/not actively roleplaying, add the sentence with a space
                                     full_reply = full_reply.strip() + sentence.strip()
                                 elif was_typing_roleplay and typing_roleplay:
-                                    full_reply = full_reply.strip() + "[s1] " + sentence.strip()
+                                    if num_sentences == 1:
+                                        full_reply = full_reply.strip() + "[ns3] " + sentence.strip()
+                                    else:
+                                        full_reply = full_reply.strip() + "[s1] " + sentence.strip()
                                 else:
                                     full_reply = full_reply.strip() + "[s2] " +  sentence.strip()
                             else:
                                 if full_reply.endswith(self._prompt_style["roleplay_suffix"]):
                                     full_reply = full_reply.strip() + "[s3] " + sentence.strip()
                                 else:
-                                    full_reply = full_reply.strip() + "[ns3]" + sentence.strip()
+                                    full_reply = full_reply.strip() + "[ns4]" + sentence.strip()
                             # if len(full_reply) > 0:
                             #     if typing_roleplay:
                             #         full_reply = full_reply.strip() + sentence.strip()
@@ -739,9 +1057,9 @@ class base_LLM():
                         full_reply = full_reply.strip()
                         if new_speaker:
                             if not typing_roleplay:
-                                full_reply = full_reply.strip() + "[ns4]" + self._prompt_style["roleplay_suffix"]
+                                full_reply = full_reply.strip() + "[ns5]" + self._prompt_style["roleplay_suffix"]
                             else:
-                                full_reply = full_reply.strip() + "[ns5]" + self._prompt_style["roleplay_prefix"]
+                                full_reply = full_reply.strip() + "[ns6]" + self._prompt_style["roleplay_prefix"]
                         num_sentences += 1 # increment the total number of sentences generated
                         voice_line_sentences += 1 # increment the number of sentences generated for the current voice line
                         
@@ -922,7 +1240,7 @@ class base_LLM():
         #     pass
 
         if next_author is not None and full_reply != '':
-            full_reply = full_reply.replace("[s0]", "").replace("[s1]", "").replace("[s2]", "").replace("[s3]", "").replace("[ns4]", "").replace("[ns1]", "").replace("[ns2]", "").replace("[ns3]", "").replace("[ns4]", "") # remove the sentence spacing tokens
+            full_reply = full_reply.replace("[s0]", "").replace("[s1]", "").replace("[s2]", "").replace("[s3]", "").replace("[ns-1]", "").replace("[ns0]", "").replace("[ns1]", "").replace("[ns2]", "").replace("[ns3]", "").replace("[ns4]", "").replace("[ns5]", "").replace("[ns6]", "").strip() # remove the sentence spacing tokens
             self.conversation_manager.new_message({"role": self.config.assistant_name, 'name':next_author, "content": full_reply})
             # -- for each sentence for each character until the conversation ends or the max_response_sentences is reached or the player is speaking
             logging.info(f"Full response saved ({self.tokenizer.get_token_count(full_reply)} tokens): {full_reply}")

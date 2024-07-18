@@ -410,29 +410,8 @@ class ConfigLoader:
                 "max_tokens": 512,
                 "logit_bias":{}
             },
-            "openai_api": {
-                "llm": "undi95/toppy-m-7b:free",
-                "alternative_openai_api_base": "https://openrouter.ai/api/v1/",
-                "secret_key_file_path": ".\\GPT_SECRET_KEY.txt",
-                "banned_samplers": [], # Examples: "min_p", "typical_p", "top_p", "top_k", "temperature", "frequency_penalty", "presence_penalty", "repeat_penalty", "tfs_z", "mirostat_mode", "mirostat_eta", "mirostat_tau", "max_tokens"
-                "log_all_api_requests": False,
-                "api_log_dir": ".\\api_logs",
-            },
-            "llama_cpp_python": {
-                "model_path": ".\\model.gguf",
-                "n_gpu_layers": 0,
-                "n_threads": 4,
-                "n_batch": 512,
-                "tensor_split": [], # [0.5,0.5] for 2 gpus split evenly, [0.3,0.7] for 2 gpus split unevenly
-                "main_gpu": 0,
-                "split_mode": 0, # 0 = single gpu, 1 = split layers and kv across gpus, 2 = split rows across gpus
-                "use_mmap": True,
-                "use_mlock": False,
-                "n_threads_batch": 1,
-                "offload_kqv": True,
-            },
-            "llava_cpp_python": {
-                "llava_clip_model_path": ".\\clip_model.gguf",
+            "Vision": {
+                "vision_enabled": False,
                 "ocr_lang": "en",
                 "ocr_use_angle_cls": True,
                 "ocr_filter":[
@@ -456,11 +435,36 @@ class ConfigLoader:
                     "Sit",
                 ],
                 "append_system_image_near_end": True,
-                "llava_image_message_depth": -1,
-                "llava_image_message": "The image below is {player_perspective_name}'s perspective:\n<image>\n<ocr>",
+                "image_message_depth": -1,
+                "image_message": "The image below is what {player_perspective_name}'s can see from their perspective:\n{image}\n{ocr}",
                 "paddle_ocr": True,
                 "ocr_resolution": 256,
-                "clip_resolution": 672,
+                "resize_image": True,
+                "image_resolution": 672,
+            },
+            "openai_api": {
+                "llm": "undi95/toppy-m-7b:free",
+                "alternative_openai_api_base": "https://openrouter.ai/api/v1/",
+                "secret_key_file_path": ".\\GPT_SECRET_KEY.txt",
+                "banned_samplers": [], # Examples: "min_p", "typical_p", "top_p", "top_k", "temperature", "frequency_penalty", "presence_penalty", "repeat_penalty", "tfs_z", "mirostat_mode", "mirostat_eta", "mirostat_tau", "max_tokens"
+                "log_all_api_requests": False,
+                "api_log_dir": ".\\api_logs",
+            },
+            "llama_cpp_python": {
+                "model_path": ".\\model.gguf",
+                "n_gpu_layers": 0,
+                "n_threads": 4,
+                "n_batch": 512,
+                "tensor_split": [], # [0.5,0.5] for 2 gpus split evenly, [0.3,0.7] for 2 gpus split unevenly
+                "main_gpu": 0,
+                "split_mode": 0, # 0 = single gpu, 1 = split layers and kv across gpus, 2 = split rows across gpus
+                "use_mmap": True,
+                "use_mlock": False,
+                "n_threads_batch": 1,
+                "offload_kqv": True,
+            },
+            "llava_cpp_python": {
+                "llava_clip_model_path": ".\\clip_model.gguf",
             },
             "transformers": {
                 "transformers_model_slug": "mistralai/Mistral-7B-Instruct-v0.1",
@@ -482,6 +486,7 @@ class ConfigLoader:
                 "pace": 1.0,
                 "use_cleanup": False,
                 "use_sr": False,
+                "xvasynth_banned_voice_models": [],
                 "xvasynth_base_url": "http://127.0.0.1:8008"
             },
             "xTTS": {
@@ -509,6 +514,7 @@ class ConfigLoader:
                     "enable_text_splitting": True,
                     "stream_chunk_size": 200
                 },
+                "xtts_api_banned_voice_models": [],
                 "default_xtts_api_model": "v2.0.2"
             },
             "Debugging": {
@@ -650,6 +656,19 @@ class ConfigLoader:
                 "max_tokens": self.max_tokens,
                 "logit_bias": self.logit_bias,
             },
+            "Vision": {
+                "vision_enabled": self.vision_enabled,
+                "ocr_lang": self.ocr_lang,
+                "ocr_use_angle_cls": self.ocr_use_angle_cls,
+                "ocr_filter": self.ocr_filter,
+                "append_system_image_near_end": self.append_system_image_near_end,
+                "image_message_depth": self.image_message_depth,
+                "image_message": self.image_message,
+                "paddle_ocr": self.paddle_ocr,
+                "ocr_resolution": self.ocr_resolution,
+                "image_resolution": self.image_resolution,
+                "resize_image": self.resize_image,
+            },
             "openai_api": {
                 "llm": self.llm,
                 "alternative_openai_api_base": self.alternative_openai_api_base,
@@ -673,15 +692,6 @@ class ConfigLoader:
             },
             "llava_cpp_python": {
                 "llava_clip_model_path": self.llava_clip_model_path,
-                "ocr_lang": self.ocr_lang,
-                "ocr_use_angle_cls": self.ocr_use_angle_cls,
-                "ocr_filter": self.ocr_filter,
-                "append_system_image_near_end": self.append_system_image_near_end,
-                "llava_image_message_depth": self.llava_image_message_depth,
-                "llava_image_message": self.llava_image_message,
-                "paddle_ocr": self.paddle_ocr,
-                "ocr_resolution": self.ocr_resolution,
-                "clip_resolution": self.clip_resolution,
             },
             "transformers": {
                 "transformers_model_slug": self.transformers_model_slug,
@@ -703,6 +713,7 @@ class ConfigLoader:
                 "pace": self.pace,
                 "use_cleanup":self.use_cleanup,
                 "use_sr": self.use_sr,
+                "xvasynth_banned_voice_models": self.xvasynth_banned_voice_models,
                 "xvasynth_base_url": self.xvasynth_base_url,
             },
             "xTTS": {
@@ -721,6 +732,7 @@ class ConfigLoader:
             "xTTS_api": {
                 "xtts_api_base_url": self.xtts_api_base_url,
                 "xtts_api_data": self.xtts_api_data,
+                "xtts_api_banned_voice_models": self.xtts_api_banned_voice_models,
                 "default_xtts_api_model": self.default_xtts_api_model,
             },
             "Debugging": {

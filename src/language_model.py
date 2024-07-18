@@ -28,7 +28,7 @@ def create_LLM(conversation_manager):
         input("Press enter to continue...")
         raise ValueError(f"Could not find inference engine: {conversation_manager.config.inference_engine}! Please check your config.json file and try again!")
     model = LLM_Types[conversation_manager.config.inference_engine]
-    llm = model.LLM(conversation_manager)
+    llm = model.LLM(conversation_manager, vision_enabled=conversation_manager.config.vision_enabled)
     if conversation_manager.config.tokenizer_type == "default": # if using the default tokenizer for the LLM
         if "Tokenizer" in model.__dict__: # if the LLM has a tokenizer included
             logging.config(f"Using {conversation_manager.config.inference_engine}'s included tokenizer")

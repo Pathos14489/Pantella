@@ -24,63 +24,63 @@ def setup_openai_secret_key(file_name):
     return api_key
 
 class LLM(base_LLM.base_LLM):
-    def __init__(self, conversation_manager):
+    def __init__(self, conversation_manager, vision_enabled=False):
         global inference_engine_name
         global tokenizer_slug
-        super().__init__(conversation_manager)
+        super().__init__(conversation_manager, vision_enabled=vision_enabled)
         self.inference_engine_name = inference_engine_name
         self.tokenizer_slug = "tiktoken" # Fastest tokenizer for OpenAI models, change if you want to use a different tokenizer (use 'embedding' for compatibility with any model using the openai API)
         
+        llm = self.config.llm
         # Is LLM Local?
         self.is_local = True
-        if self.config.alternative_openai_api_base == 'none' or self.config.alternative_openai_api_base == "https://openrouter.ai/api/v1" or self.config.alternative_openai_api_base == "http://openrouter.ai/api/v1":
+        if self.config.alternative_openai_api_base == 'none' or self.config.alternative_openai_api_base == "https://openrouter.ai/api/v1" or self.config.alternative_openai_api_base == "http://openrouter.ai/api/v1" or self.config.alternative_openai_api_base == "https://api.openai.com" or self.config.alternative_openai_api_base == "https://api.totalgpt.ai/v1":
             self.is_local = False
-
-        llm = self.config.llm
-        if llm == 'gpt-3.5-turbo':
-            token_limit = 4096
-        elif llm == 'gpt-3.5-turbo-16k':
-            token_limit = 16384
-        elif llm == 'gpt-4':
-            token_limit = 8192
-        elif llm == 'gpt-4-32k':
-            token_limit = 32768
-        elif llm == 'claude-2':
-            token_limit = 100_000
-        elif llm == 'claude-instant-v1':
-            token_limit = 100_000
-        elif llm == 'palm-2-chat-bison':
-            token_limit = 8000
-        elif llm == 'palm-2-codechat-bison':
-            token_limit = 8000
-        elif llm == 'llama-2-7b-chat':
-            token_limit = 4096
-        elif llm == 'llama-2-13b-chat':
-            token_limit = 4096
-        elif llm == 'llama-2-70b-chat':
-            token_limit = 4096
-        elif llm == 'codellama-34b-instruct':
-            token_limit = 16000
-        elif llm == 'nous-hermes-llama2-13b':
-            token_limit = 4096
-        elif llm == 'weaver':
-            token_limit = 8000
-        elif llm == 'mythomax-L2-13b':
-            token_limit = 8192
-        elif llm == 'airoboros-l2-70b-2.1':
-            token_limit = 4096
-        elif llm == 'gpt-3.5-turbo-1106':
-            token_limit = 16_385
-        elif llm == 'gpt-4-1106-preview':
-            token_limit = 128_000
-        elif self.is_local:
+        if self.is_local:
             logging.info(f"Could not find number of available tokens for {llm} for tiktoken. Defaulting to token count of {str(self.config.maximum_local_tokens)} (this number can be changed via the `maximum_local_tokens` setting in config.json).")
             logging.info("WARNING: Tiktoken is being run using the default tokenizer, which is not always correct. If you're using a local model, try using the embedding tokenizer instead if it's supported by your API emulation method. It's slower and might be incompatible with some configurations, but more accurate.")
             token_limit = self.config.maximum_local_tokens # Default to 4096 tokens for local models
         else:
-            logging.warn(f"Could not find number of available tokens for {llm} for tiktoken. Defaulting to token count of 4096.")
-            token_limit = 4096
-        self.config.maximum_local_tokens = token_limit # Set the maximum number of tokens for local models to the number of tokens available for the model chosen    
+            if llm == 'gpt-3.5-turbo':
+                token_limit = 4096
+            elif llm == 'gpt-3.5-turbo-16k':
+                token_limit = 16384
+            elif llm == 'gpt-4':
+                token_limit = 8192
+            elif llm == 'gpt-4-32k':
+                token_limit = 32768
+            elif llm == 'claude-2':
+                token_limit = 100_000
+            elif llm == 'claude-instant-v1':
+                token_limit = 100_000
+            elif llm == 'palm-2-chat-bison':
+                token_limit = 8000
+            elif llm == 'palm-2-codechat-bison':
+                token_limit = 8000
+            elif llm == 'llama-2-7b-chat':
+                token_limit = 4096
+            elif llm == 'llama-2-13b-chat':
+                token_limit = 4096
+            elif llm == 'llama-2-70b-chat':
+                token_limit = 4096
+            elif llm == 'codellama-34b-instruct':
+                token_limit = 16000
+            elif llm == 'nous-hermes-llama2-13b':
+                token_limit = 4096
+            elif llm == 'weaver':
+                token_limit = 8000
+            elif llm == 'mythomax-L2-13b':
+                token_limit = 8192
+            elif llm == 'airoboros-l2-70b-2.1':
+                token_limit = 4096
+            elif llm == 'gpt-3.5-turbo-1106':
+                token_limit = 16_385
+            elif llm == 'gpt-4-1106-preview':
+                token_limit = 128_000
+            else:
+                logging.warn(f"Could not find number of available tokens for {llm} for tiktoken. Defaulting to token count of 4096.")
+                token_limit = 4096
+            self.config.maximum_local_tokens = token_limit # Set the maximum number of tokens for local models to the number of tokens available for the model chosen    
 
         api_key = setup_openai_secret_key(self.config.secret_key_file_path)
         if loaded:
@@ -99,27 +99,35 @@ class LLM(base_LLM.base_LLM):
         else:
             logging.info(f"Running Pantella with '{self.config.llm}'. The language model chosen can be changed via config.json")
 
-        try:
-            self.client.completions.create(prompt="This is a test of the", model=self.config.llm, max_tokens=10)
-            self.completions_supported = True
-            logging.info(f"OpenAI API at '{self.config.alternative_openai_api_base}' supports completions!")
-        except Exception as e:
+        if not self.vision_enabled:
+            try:
+                self.client.completions.create(prompt="This is a test of the", model=self.config.llm, max_tokens=10)
+                self.completions_supported = True
+                logging.info(f"OpenAI API at '{self.config.alternative_openai_api_base}' supports completions!")
+            except Exception as e:
+                self.completions_supported = False
+                logging.error(f"Current API does not support raw completions! Are you using OpenAI's API? They will not work with all features of Pantella, please use OpenRouter or another API that supports raw non-chat completions.")
+                logging.error(e)
+                # input("Press Enter to exit.")
+        else:
+            logging.warning("Vision is enabled -- Make sure the LLM you choose supports vision as well!")
+            logging.warning("NOTICE: Completions API is not currently supported with vision enabled!")
             self.completions_supported = False
-            logging.error(f"Current API does not support raw completions! Are you using OpenAI's API? They will not work with all features of Pantella, please use OpenRouter or another API that supports raw non-chat completions.")
-            logging.error(e)
-            # input("Press Enter to exit.")
     
     def get_context(self):
         context = super().get_context()
         new_context = []
         for message in context:
-            new_content = message["content"]
-            if "name" in message:
-                new_content = message["name"] +": "+ new_content
-            new_context.append({
-                "role": message["role"],
-                "content": new_content
-            })
+            if "content" in message and type(message["content"]) == str:
+                new_content = message["content"]
+                if "name" in message:
+                    new_content = message["name"] +": "+ new_content
+                new_context.append({
+                    "role": message["role"],
+                    "content": new_content
+                })
+            else:
+                new_context.append(message)
         return new_context
     
     @utils.time_it
@@ -228,6 +236,7 @@ class LLM(base_LLM.base_LLM):
             input("Press Enter to exit.")
             raise ValueError(f"Could not get completion from OpenAI-style API. Please check your API key and internet connection.")
         return completion
+    
     @utils.time_it
     def acreate(self, messages, message_prefix="", force_speaker=None): # Creates a completion stream for the messages provided to generate a speaker and their response
         # logging.info(f"aMessages: {messages}")
@@ -291,14 +300,23 @@ class LLM(base_LLM.base_LLM):
                         logit_bias=self.logit_bias,
                     )
                 else:
-                    logging.warning("Using chat completions because raw completions are not supported by the current API.")
+                    logging.warning("Using chat completions because raw completions are not supported by the current API/settings.")
                     if self.config.log_all_api_requests:
                         log_id = None
                         while log_id is None or os.path.exists(self.config.api_log_dir+"/"+log_id+".log"):
                             log_id = str(random.randint(100000,999999))
                         os.makedirs(self.config.api_log_dir, exist_ok=True)
                         with open(self.config.api_log_dir+"/"+log_id+".json", "w") as f:
-                            json_string = json.dumps(messages)
+                            request_json = {
+                                "messages": messages,
+                                "model": self.config.llm,
+                                "max_tokens": self.config.max_tokens,
+                                **sampler_kwargs,
+                                **extra_body_kwargs,
+                                "stream": True,
+                                "logit_bias": self.logit_bias
+                            }
+                            json_string = json.dumps(request_json)
                             f.write(json_string)
                     return self.client.chat.completions.create(messages=messages,
                         model=self.config.llm, 

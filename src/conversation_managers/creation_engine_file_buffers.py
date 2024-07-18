@@ -209,7 +209,7 @@ class ConversationManager(BaseConversationManager):
             time.sleep(0.2)
             return
         logging.info('Stepping through conversation...')
-        logging.info(f"Messages: {json.dumps(self.get_context(), indent=2)}")
+        logging.info(f"Messages: {json.dumps(self.get_loggable_context(), indent=2)}")
         # if self.llm.type == "chat":
         #     logging.info(f"Presumed Raw Prompt: {self.llm.tokenizer.get_string_from_messages(self.get_context())}")
         # elif self.llm.type == "normal":

@@ -57,11 +57,11 @@ class StoppingTextIteratorStreamer(TextIteratorStreamer):
             self.text_queue.put(self.stop_signal, timeout=self.timeout)
 
 class LLM(base_LLM.base_LLM): # Uses llama-cpp-python as the LLM inference engine
-    def __init__(self, conversation_manager):
+    def __init__(self, conversation_manager, vision_enabled=False):
         global llm_model
         global llm_tokenizer
         global inference_engine_name
-        super().__init__(conversation_manager)
+        super().__init__(conversation_manager, vision_enabled=vision_enabled)
         self.inference_engine_name = inference_engine_name
         if loaded:
             if llm_model is None:

@@ -10,6 +10,7 @@ import src.tts as tts
 import src.stt as stt
 import src.character_db as character_db
 import uuid
+import json
 logging.info("Imported required libraries in base_conversation_manager.py")
 
 valid_games = []
@@ -97,6 +98,30 @@ class BaseConversationManager:
         
     def get_context(self): # Returns the current context(in the form of a list of messages) for the given active characters in the ongoing conversation
         return self.llm.get_context()
+    
+    def get_loggable_context(self): # Returns the current context(in the form of a list of messages) for the given active characters in the ongoing conversation
+        messages = self.get_context()
+        loggable_context = []
+        for message in messages:
+            if type(message["content"]) == str:
+                loggable_context.append(message)
+            else:
+                new_content = []
+                for content in message["content"]:
+                    if content["type"] == "image_url":
+                        new_content.append({
+                            "type": "image_url",
+                            "url":"<image_url>"
+                        })
+                    else:
+                        new_content.append(content)
+                loggable_context.append({
+                    "role": message["role"],
+                    "content": new_content
+                })
+                logging.info(f"Loggable context: {json.dumps(loggable_context, indent=4)}")
+                # input("Press enter to continue")
+        return loggable_context
     
     async def _get_response(self, force_speaker=None):
         sentence_queue = asyncio.Queue() # Create queue to hold sentences to be processed
