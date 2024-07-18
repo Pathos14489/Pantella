@@ -103,7 +103,7 @@ class LLM(base_LLM.base_LLM):
             try:
                 self.client.completions.create(prompt="This is a test of the", model=self.config.llm, max_tokens=10)
                 self.completions_supported = True
-                logging.info(f"OpenAI API at '{self.config.alternative_openai_api_base}' supports completions!")
+                logging.success(f"OpenAI API at '{self.config.alternative_openai_api_base}' supports completions!")
             except Exception as e:
                 self.completions_supported = False
                 logging.error(f"Current API does not support raw completions! Are you using OpenAI's API? They will not work with all features of Pantella, please use OpenRouter or another API that supports raw non-chat completions.")
