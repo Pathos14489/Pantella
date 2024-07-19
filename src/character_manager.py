@@ -14,7 +14,7 @@ class Character:
         logging.info(f"Loading character: {self.info['name']}")
         logging.config(json.dumps(info, indent=4))
         for key, value in info.items():
-            if key != "age" and key != "gender" and key != "race":
+            if key != "age" and key != "gender" and key != "race" and key != "in_game_race":
                 setattr(self, key, value) # set all character info as attributes of the character object to support arbitrary character info
         if "knows" not in self.info:
             self.knows = []
