@@ -54,6 +54,8 @@ class Synthesizer(base_tts.base_Synthesizer):
         else:
             self.model_path = f"{self.xvasynth_path}/resources/app/models/skyrim/"
 
+        self._voices = None
+
         self.synthesize_url = f'{self.config.xvasynth_base_url}/synthesize'
         self.synthesize_batch_url = f'{self.config.xvasynth_base_url}/synthesize_batch'
         self.loadmodel_url = f'{self.config.xvasynth_base_url}/loadModel'
@@ -61,6 +63,7 @@ class Synthesizer(base_tts.base_Synthesizer):
         self.get_available_voices_url = f'{self.config.xvasynth_base_url}/getAvailableVoices'
         self.set_available_voices_url = f'{self.config.xvasynth_base_url}/setAvailableVoices'
         logging.config(f'xVASynth - Available voices: {self.voices()}')
+        logging.config(f"Total xVASynth Voices: {len(self.voices())}")
         
     def _say(self, voiceline, voice_model="Female Sultry", volume=0.5):
         self.change_voice(voice_model)
@@ -172,26 +175,25 @@ class Synthesizer(base_tts.base_Synthesizer):
     
     def voices(self): # Send API request to xvasynth to get a list of characters
         """Return a list of available voices"""
-        logging.config(f"Getting available voices from {self.get_available_voices_url}...")
-        requests.post(self.set_available_voices_url, json={'modelsPaths': json.dumps({self.game: self.model_path})}) # Set the available voices to the ones in the models folder
-        r = requests.post(self.get_available_voices_url) # Get the available voices
-        if r.status_code == 200:
-            logging.config(f"Got available voices from {self.get_available_voices_url}...")
-            # logging.info(f"Response code: {r.status_code}")
-            # logging.info(f"Response text: {r.text}")
-            data = r.json()
-        else:
-            logging.info(f"Could not get available voices from {self.get_available_voices_url}...")
-            # logging.info(f"Response code: {r.status_code}")
-            # logging.info(f"Response text: {r.text}")
-            data = None
-        voices = []
-        for character in data[self.game]:
-            voices.append(character['voiceName'])
-        voices = [voice for voice in voices if voice not in self.config.xvasynth_banned_voice_models] 
-        logging.config(f"Available xVASynth Voices: {voices}")
-        logging.config(f"Total xVASynth Voices: {len(voices)}")
-        return voices
+        if self._voices is None:
+            self._voices = []
+            logging.config(f"Getting available voices from {self.get_available_voices_url}...")
+            requests.post(self.set_available_voices_url, json={'modelsPaths': json.dumps({self.game: self.model_path})}) # Set the available voices to the ones in the models folder
+            r = requests.post(self.get_available_voices_url) # Get the available voices
+            if r.status_code == 200:
+                logging.config(f"Got available voices from {self.get_available_voices_url}...")
+                # logging.info(f"Response code: {r.status_code}")
+                # logging.info(f"Response text: {r.text}")
+                data = r.json()
+            else:
+                logging.info(f"Could not get available voices from {self.get_available_voices_url}...")
+                # logging.info(f"Response code: {r.status_code}")
+                # logging.info(f"Response text: {r.text}")
+                data = None
+            for character in data[self.game]:
+                self._voices.append(character['voiceName'])
+            self._voices = [voice for voice in self._voices if voice not in self.config.xvasynth_banned_voice_models] 
+        return self._voices
 
     @utils.time_it
     def _synthesize_line(self, line, save_path, character=None, aggro=0):

@@ -2,10 +2,10 @@ print("Loading xtts_api.py...")
 from src.logging import logging
 import src.utils as utils
 import src.tts_types.base_tts as base_tts
-import sys
 import os
 from pathlib import Path
 import requests
+import time
 import io
 logging.info("Imported required libraries in xtts_api.py")
 
@@ -27,6 +27,7 @@ class Synthesizer(base_tts.base_Synthesizer):
         self.current_model = self.default_model
         self.mantella_server = False
         self.set_model(self.default_model)
+        self._voices = None
         # self.official_model_list = ["main","v2.0.3","v2.0.2","v2.0.1","v2.0.0"]
         logging.config(f'xTTS_api - Available xTTS_api models: {self.available_models()}')
         logging.config(f'xTTS_api - Available xTTS_api voices: {self.voices()}')
@@ -34,19 +35,21 @@ class Synthesizer(base_tts.base_Synthesizer):
     def voices(self):
         """Return a list of available voices"""
         # Code to request and return the list of available models
-        response = requests.get(self.xtts_get_speakers_list)
-        if response.status_code != 200:
-            logging.error(f'Failed to get xTTS voices list: {response.status_code}')
-            return []
-        response = response.json()
-        if type(response) == dict:
-            base_lang = self.language["tts_language_code"]
-            self.mantella_server = True
-            if base_lang in response:
-                response = response[base_lang]["speakers"]
-                response.sort()
-        response = [voice for voice in response if voice not in self.config.xtts_api_banned_voice_models] 
-        return response
+        if self._voices == None:
+            response = requests.get(self.xtts_get_speakers_list)
+            if response.status_code != 200:
+                logging.error(f'Failed to get xTTS voices list: {response.status_code}')
+                return []
+            response = response.json()
+            if type(response) == dict:
+                base_lang = self.language["tts_language_code"]
+                self.mantella_server = True
+                if base_lang in response:
+                    response = response[base_lang]["speakers"]
+                    response.sort()
+            response = [voice for voice in response if voice not in self.config.xtts_api_banned_voice_models] 
+            self._voices = response
+        return self._voices
     
     def available_models(self):
         """Return a list of available models"""
@@ -81,7 +84,7 @@ class Synthesizer(base_tts.base_Synthesizer):
                 response.raise_for_status()  # If the response contains an HTTP error status code, raise an exception
         except requests.exceptions.RequestException as err:
             logging.info('xtts is not ready yet. Retrying in 10 seconds...')
-            utils.sleep(10)
+            time.sleep(10)
             return self._set_tts_settings_and_test_if_serv_running() # do the web request again; LOOP!!!
 
     @utils.time_it
@@ -95,7 +98,7 @@ class Synthesizer(base_tts.base_Synthesizer):
             logging.info(f'Custom xTTS Model not found for {character.voice_model}! Using default model...')
             self.set_model(self.default_model)
           
-    def get_valid_voice_model(self, character, crashable=None, multi_tts=True):
+    def get_valid_voice_model(self, character, crashable=None, multi_tts=True, log=True):
         """Get the valid voice model for the character from the available voices - Order of preference: voice_model, voice_model without spaces, lowercase voice_model, uppercase voice_model, lowercase voice_model without spaces, uppercase voice_model without spaces"""
         if crashable == None:
             crashable = self.crashable
@@ -125,17 +128,21 @@ class Synthesizer(base_tts.base_Synthesizer):
         options = options + captitalized_options + lower_options + upper_options + lower_options_no_spaces
         if type(character) != str:
             options.append(character.skyrim_voice_folder)
-            logging.info(f'Checking for valid voice model for "{character.name}" amongst:', options)
+            if log:
+                logging.info(f'Checking for valid voice model for "{character.name}" amongst:', options)
         else:
-            logging.info(f'Checking for valid voice model for "{character}" amongst:', options)
+            if log:
+                logging.info(f'Checking for valid voice model for "{character}" amongst:', options)
         voice_model = None
         for option in options:
             if option in self.voices():
-                logging.info(f'Voice model {option} is available for xTTS_api!')
+                if log:
+                    logging.info(f'Voice model \'{option}\' is available for xTTS_api!')
                 voice_model = option
                 break
         if voice_model == None:
-            logging.error(f'Voice model {voice_model} not available! Please add it to the xTTS voices list.')
+            if log:
+                logging.error(f'Voice model \'{basic_voice_model}\' not available! Please add it to the xTTS voices list.')
         if crashable and voice_model == None:
             input("Press enter to continue...")
             raise FileNotFoundError()
