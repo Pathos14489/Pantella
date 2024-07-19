@@ -389,6 +389,7 @@ class ConfigLoader:
                 "break_on_time_announcements": True,
                 "as_a_check": False,
                 "meet_string_game_events": False,
+                "message_reformatting": False,
                 "game_update_pruning": True,
                 "game_update_prune_count": 5,
                 "conversation_start_role": "system", # "system" or "user" is recommended, "assistant" is not recommended because it would teach the assstant that it can respond using your identity, which is not recommended as it will waste generations failing to generate messages from you
@@ -473,12 +474,16 @@ class ConfigLoader:
                 "load_in_8bit": False
             },
             "Speech": {
-                "tts_engine": ["xvasynth"],
+                "tts_engine": ["piper_binary"],
                 "end_conversation_wait_time": 1,
                 "sentences_per_voiceline": 2,
                 "narrator_voice": "MaleKhajiit",
                 "narrator_volume": 0.5, # 50% volume
                 "narrator_delay": 0.2, # 200ms delay
+            },
+            "piperTTS": {
+                "piper_binary_dir": ".\\piper\\",
+                "piper_models_dir": ".\\data\\models\\piper\\",
             },
             "xVASynth": {
                 "xvasynth_path": "C:\\Games\\Steam\\steamapps\\common\\xVASynth",
@@ -635,6 +640,7 @@ class ConfigLoader:
                 "as_a_check": self.as_a_check,
                 "break_on_time_announcements": self.break_on_time_announcements,
                 "meet_string_game_events": self.meet_string_game_events,
+                "message_reformatting": self.message_reformatting,
                 "game_update_pruning": self.game_update_pruning,
                 "game_update_prune_count": self.game_update_prune_count,
                 "conversation_start_role": self.conversation_start_role,
@@ -706,6 +712,10 @@ class ConfigLoader:
                 "narrator_voice": self.narrator_voice,
                 "narrator_volume": self.narrator_volume,
                 "narrator_delay": self.narrator_delay,
+            },
+            "piperTTS": {
+                "piper_binary_dir": self.piper_binary_dir,
+                "piper_models_dir": self.piper_models_dir,
             },
             "xVASynth": {
                 "xvasynth_path": self.xvasynth_path,

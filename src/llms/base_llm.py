@@ -586,7 +586,7 @@ class base_LLM():
             elif msg['role'] == self.config.assistant_name: # if the message is from an NPC
                 if self.character_manager.active_character_count() > 1: # if multi NPC conversation use the player's actual name
                     if "name" not in msg: # support for role, content, and name messages
-                        logging.info(f"Warning: Message from NPC does not contain name:",msg)
+                        logging.warning(f"Message from NPC does not contain name(this might be fine, but might not be!):",msg)
                     formatted_msg = {
                         'role': self.config.assistant_name,
                         'name': msg['name'].replace("[player]", self.player_name) if "name" in msg else "",
@@ -601,7 +601,7 @@ class base_LLM():
                 else: # if single NPC conversation use the NPC's perspective player name
                     perspective_player_name, _ = self.game_interface.active_character.get_perspective_player_identity()
                     if "name" not in msg: # support for role, content, and name messages
-                        logging.info(f"Warning: Message from NPC does not contain name:",msg)
+                        logging.warning(f"Message from NPC does not contain name(this might be fine, but might not be!):",msg)
                     formatted_msg = {
                         'role': self.config.assistant_name,
                         'name': msg['name'].replace("[player]", perspective_player_name) if "name" in msg else "",
@@ -903,6 +903,7 @@ class base_LLM():
                         return next_author, retries, bad_author_retries
 
                     contains_end_of_sentence_character = any(char in unicodedata.normalize('NFKC', content) for char in self.end_of_sentence_chars)
+                    contains_roleplay_symbol = any(char in unicodedata.normalize('NFKC', content) for char in [self._prompt_style["roleplay_prefix"],self._prompt_style["roleplay_suffix"]])
                     for replacement in self.replacements:
                         char, replacement_char = replacement["char"], replacement["replacement"]
                         if char in content:
@@ -914,7 +915,7 @@ class base_LLM():
                         proposed_next_author += content
                         if self.message_signifier in proposed_next_author: # if the proposed next author contains the message signifier, then the next author has been chosen
                             sentence, next_author, verified_author, retries, bad_author_retries, system_loop = self.check_author(proposed_next_author, next_author, verified_author, possible_players, retries, bad_author_retries, system_loop)
-                        if contains_end_of_sentence_character and next_author is None:
+                        if (contains_end_of_sentence_character or contains_roleplay_symbol) and next_author is None:
                             next_author, retries, bad_author_retries = raise_invalid_author(retries, bad_author_retries)
                     else: # if the next author is already chosen, then the LLM is generating the response for the next author
                         sentence += content # add the content to the sentence in progress
@@ -946,7 +947,7 @@ class base_LLM():
                         
                     # contains_banned_character = any(char in content for char in self.stop)
                     was_typing_roleplay = bool(typing_roleplay)
-                    if self._prompt_style["roleplay_suffix"] in content or self._prompt_style["roleplay_prefix"] in content: # if the content contains an asterisk, then either the narrator has started speaking or the narrator has stopped speaking and the NPC is speaking
+                    if contains_roleplay_symbol: # if the content contains an asterisk, then either the narrator has started speaking or the narrator has stopped speaking and the NPC is speaking
                         logging.info(f"Roleplay symbol found in content: {content}")
                         if self._prompt_style["roleplay_suffix"] in sentence:
                             sentences = sentence.split(self._prompt_style["roleplay_suffix"], 1)
@@ -1241,7 +1242,12 @@ class base_LLM():
 
         if next_author is not None and full_reply != '':
             full_reply = full_reply.replace("[s0]", "").replace("[s1]", "").replace("[s2]", "").replace("[s3]", "").replace("[ns-1]", "").replace("[ns0]", "").replace("[ns1]", "").replace("[ns2]", "").replace("[ns3]", "").replace("[ns4]", "").replace("[ns5]", "").replace("[ns6]", "").strip() # remove the sentence spacing tokens
-            self.conversation_manager.new_message({"role": self.config.assistant_name, 'name':next_author, "content": full_reply})
+            if self.config.message_reformatting:
+                logging.info(f"Using Full Reply with Reformatting")
+                self.conversation_manager.new_message({"role": self.config.assistant_name, 'name':next_author, "content": full_reply})
+            else:
+                logging.info(f"Using Raw Reply without Reformatting")
+                self.conversation_manager.new_message({"role": self.config.assistant_name, 'name':next_author, "content": raw_reply})
             # -- for each sentence for each character until the conversation ends or the max_response_sentences is reached or the player is speaking
             logging.info(f"Full response saved ({self.tokenizer.get_token_count(full_reply)} tokens): {full_reply}")
 

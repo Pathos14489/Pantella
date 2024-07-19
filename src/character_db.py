@@ -149,8 +149,8 @@ class CharacterDB():
                 "name": character["name"] if "name" in character and character["name"] != "" and str(character["name"]).lower() != "nan" else "",
                 "voice_model": character["voice_model"] if "voice_model" in character else "",
                 "skyrim_voice_folder": character["skyrim_voice_folder"] if "skyrim_voice_folder" in character else "",
-                "race": character["race"] if "race" in character else "",
-                "gender": character["gender"] if "gender" in character else "",
+                "race": character["in_game_race"] if "in_game_race" in character else character["race"] if "race" in character else "",
+                "gender": character["in_game_gender"] if "in_game_gender" in character else character["gender"] if "gender" in character else "",
                 "species": character["species"] if "species" in character else "",
                 "age": character["age"] if "age" in character else "",
                 "ref_id": character["ref_id"] if "ref_id" in character and character["ref_id"] != "" and str(character["ref_id"]).lower() != "nan" else "",
@@ -232,43 +232,64 @@ class CharacterDB():
         self.invalid = []
         self.unused_voices = []
         for voice in self.all_voice_models:
-            spaced_voice = ""
-            for letter in voice.replace(' ', ''):
-                if letter.isupper():
-                    spaced_voice += " "
-                spaced_voice += letter
-            unspaced_voice = voice.replace(' ', '')
-            voice_folder = self.get_voice_folder_by_voice_model(voice)
-            if voice_folder in synthesizer_available_voices:
-                self.valid.append(voice_folder)
-            elif voice in synthesizer_available_voices:
-                self.valid.append(voice)
-            elif unspaced_voice in synthesizer_available_voices:
-                self.valid.append(unspaced_voice)
-            elif spaced_voice in synthesizer_available_voices:
-                self.valid.append(spaced_voice)
-            # elif voice in self.voice_folders: # If the voice model is a valid voice folder, add it to the valid list
-            #     self.valid.append(voice.replace(' ', ''))
+            # spaced_voice = ""
+            # for letter in voice.replace(' ', ''):
+            #     if letter.isupper():
+            #         spaced_voice += " "
+            #     spaced_voice += letter
+            # unspaced_voice = voice.replace(' ', '')
+            # lowercase_voice = voice.lower()
+            # unspaced_lowercase_voice = unspaced_voice.lower()
+            # voice_folder = self.get_voice_folder_by_voice_model(voice)
+            # if voice_folder == None:
+            #     voice_folder = voice
+            # lower_voice_folder = voice_folder.lower()
+            # if voice_folder in synthesizer_available_voices:
+            #     self.valid.append(voice_folder)
+            # elif lower_voice_folder in synthesizer_available_voices:
+            #     self.valid.append(lower_voice_folder)
+            # elif voice in synthesizer_available_voices:
+            #     self.valid.append(voice)
+            # elif unspaced_voice in synthesizer_available_voices:
+            #     self.valid.append(unspaced_voice)
+            # elif spaced_voice in synthesizer_available_voices:
+            #     self.valid.append(spaced_voice)
+            # elif lowercase_voice in synthesizer_available_voices:
+            #     self.valid.append(lowercase_voice)
+            # elif unspaced_lowercase_voice in synthesizer_available_voices:
+            #     self.valid.append(unspaced_lowercase_voice)
+            # # elif voice in self.voice_folders: # If the voice model is a valid voice folder, add it to the valid list
+            # #     self.valid.append(voice.replace(' ', ''))
+            voice_model = self.synthesizer.get_valid_voice_model(voice, crashable=False, log=False)
+            if voice_model != None:
+                self.valid.append((voice, voice_model))
             else:
-                logging.warning(f"invalid voice: {voice_folder}")
-                self.invalid.append(voice_folder)
+                logging.warning(f"invalid voice: {voice}")
                 self.invalid.append(voice)
+        for voice_model_folder in self.all_voice_folders:
+            voice_model = self.synthesizer.get_valid_voice_model(voice_model_folder, crashable=False, log=False)
+            if voice_model not in self.valid:
+                self.valid.append((voice_model_folder, voice_model))
         for voice in synthesizer_available_voices:
             # add spaces before each capital letter
-            spaced_voice = ""
-            for letter in voice.replace(' ', ''):
-                if letter.isupper():
-                    spaced_voice += " "
-                spaced_voice += letter
-            unspaced_voice = voice.replace(' ', '')
-            if voice not in self.valid:
+            voice_used = False
+            # if voice not in self.valid:
+            #     self.unused_voices.append(voice)
+            #     logging.config(f"unused voice: {voice}")
+            for voice_pair in self.valid:
+                voice_model, voice_2 = voice_pair
+                if voice == voice_model or voice == voice_2:
+                    voice_used = True
+                    break
+            if not voice_used:
                 self.unused_voices.append(voice)
                 logging.config(f"unused voice: {voice}")
-        new_valid = []
-        for voice in self.valid:
-            if voice not in self.unused_voices:
-                new_valid.append(voice)
-        self.valid = new_valid
+        # new_valid = []
+        # for voice_pair in self.valid:
+        #     voice, voice_model = voice_pair
+        #     if voice not in self.unused_voices and voice_model not in self.unused_voices:
+        #         new_valid.append(voice)
+        # self.valid = new_valid
         for voice in self.unused_voices:
             for character in self.characters:
                 if character['skyrim_voice_folder'] == voice or character['voice_model'] == voice:
@@ -552,11 +573,11 @@ class CharacterDB():
         if type == 'json':
             if not os.path.exists(path):
                 os.makedirs(path)
-            for character in self.characters:
-                json_file_path = os.path.join(path, str(self.config.game_id) + "_" + str(character['gender']) + "_" + str(character['race']) + "_" + str(character['name']) + "_" + str(character['ref_id']) + "_" + str(character['base_id']) + '.json')
+            for character in self._characters:
+                json_file_path = os.path.join(path, str(self.config.game_id) + "_" + str(character['gender']) + "_" + str( character["in_game_race"] if "in_game_race" in character else character["race"] if "race" in character else "") + "_" + str(character['name']) + "_" + str(character['ref_id']) + "_" + str(character['base_id']) + '.json')
                 json.dump(character, open(json_file_path, 'w'), indent=4)
         elif type == 'csv':
-            df = pd.DataFrame(self.characters)
+            df = pd.DataFrame(self._characters)
             df.to_csv(path, index=False)
         else:
             logging.error(f"Could not save character database. Invalid type '{type}'.")
@@ -566,8 +587,8 @@ class CharacterDB():
     @property
     def male_voice_models(self):
         valid = {}
-        for character in self.characters:
-            if character["gender"] == "Male" and "Female" not in character["voice_model"]:
+        for character in self._characters:
+            if character["gender"].capitalize() == "Male" and "Female" not in character["voice_model"]:
                 if character['voice_model'] not in valid and character['voice_model'] != character['name']:
                     valid[character['voice_model']] = [character['name']]
                 elif character['voice_model'] != character['name']:
@@ -577,7 +598,7 @@ class CharacterDB():
             if len(valid[model]) > 1:
                 filtered.append(model)
         models = {}
-        for character in self.characters:
+        for character in self._characters:
             race_string = str(character['race'])+"Race"
             if character["voice_model"] in filtered and character["voice_model"] != "":
                 if race_string not in models:
@@ -590,8 +611,8 @@ class CharacterDB():
     @property
     def female_voice_models(self):
         valid = {}
-        for character in self.characters:
-            if character["gender"] == "Female" and "Male" not in character["voice_model"]:
+        for character in self._characters:
+            if character["gender"].capitalize() == "Female" and "Male" not in character["voice_model"]:
                 if character['voice_model'] not in valid and character['voice_model'] != character['name']:
                     valid[character['voice_model']] = [character['name']]
                 elif character['voice_model'] != character['name']:
@@ -601,7 +622,7 @@ class CharacterDB():
             if len(valid[model]) > 1:
                 filtered.append(model)
         models = {}
-        for character in self.characters:
+        for character in self._characters:
             race_string = str(character['race'])+"Race"
             if character["voice_model"] in filtered and character["voice_model"] != "":
                 if race_string not in models:
@@ -618,6 +639,9 @@ class CharacterDB():
             if character["voice_model"] != "":
                 if character["voice_model"] not in models:
                     models.append(character["voice_model"])
+        models = [model for model in models if model != "" and model != "nan" and model != None]
+        models = list(set(models))
+        models = sorted(models)
         return models
         
     @property
@@ -636,4 +660,16 @@ class CharacterDB():
                             folders[character['voice_model']].append(character['skyrim_voice_folder'])
                         else:
                             folders[character['voice_model']].append(character['voice_model'])
+        return folders
+    
+    @property
+    def all_voice_folders(self):
+        folders = []
+        for character in self.characters:
+            if character['skyrim_voice_folder'] != "":
+                if character['skyrim_voice_folder'] not in folders:
+                    folders.append(character['skyrim_voice_folder'])
+        folders = [folder for folder in folders if folder != "" and folder != "nan" and folder != None]
+        folders = list(set(folders))
+        folders = sorted(folders)
         return folders

@@ -73,18 +73,27 @@ class Character:
         return race
     
     @property
+    def in_game_race(self):
+        race = "Imperial"
+        if "in_game_race" in self.info and self.info["in_game_race"] != None and self.info["in_game_race"] != "":
+            race = self.info["in_game_race"]
+        return race
+    
+    @property
     def gender(self):
         gender = "Imperial"
-        if "gender" in self.info and self.info["gender"] != None and self.info["gender"] != "" and self.info["gender"] != "either":
+        if "gender" in self.info and self.info["gender"] != None and self.info["gender"] != "" and self.info["gender"] != "either" and self.info["gender"] != "neither":
             gender = self.info["gender"]
         elif "in_game_gender" in self.info and self.info["in_game_gender"] != None and self.info["in_game_gender"] != "":
-            gender = self.info["in_game_gender"]
+            gender = self.info["in_game_gender"].capitalize()
         if gender.lower().capitalize() in self.language["race_titles"]:
             if self.race in self.prompt_style["racial_language"]:
                 logging.info(f"Racial language found for {self.name}: {gender}")
                 gender = self.language["racial_language"][self.race]["gender_title"][gender.lower().capitalize()]
             else:
                 gender = self.language["gender_titles"][gender.lower().capitalize()]
+        if len(gender.strip()) == 0:
+            logging.error("Gender is empty?!")
         return gender
     
     @property

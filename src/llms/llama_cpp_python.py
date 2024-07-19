@@ -3,7 +3,7 @@ import src.utils as utils
 import ctypes
 import array
 import numpy as np
-import os
+import io
 from src.llms.base_llm import base_LLM, load_image
 import src.tokenizers.base_tokenizer as tokenizer
 from src.logging import logging, time
@@ -59,9 +59,9 @@ class LLM(base_LLM): # Uses llama-cpp-python as the LLM inference engine
         logging.info(f"Testing llama-cpp-python...")
         test_prompt = "Hello, I am a llama-cpp-python test prompt. I am used to test llama-cpp-python's functi"
         test_completion = self.llm.create_completion(test_prompt, max_tokens=10)
-        logging.info(f"Test Completion: {test_completion}")
+        logging.output(f"Test Completion: {test_completion}")
         if self.vision_enabled:
-            logging.info("Vision is enabled for llama-cpp-python")
+            logging.success("Vision is enabled for llama-cpp-python")
             if loaded:
                 try:
                     self.clip_model = clip_model_load(self.config.llava_clip_model_path.encode(), 1)
@@ -143,13 +143,17 @@ class LLM(base_LLM): # Uses llama-cpp-python as the LLM inference engine
                 self.eval_image_embed(embeds[i])
         return self.llm.input_ids[: self.llm.n_tokens].tolist()
     
+    def get_player_perspective(self, check_vision=False):
+        _, frame, ascii_block = super().get_player_perspective(check_vision)
+        buffered = io.BytesIO() # Don't ask me why this is needed - it just is for some reason.
+        frame.save(buffered, format="PNG")
+        return self.get_image_embed_from_bytes(buffered.getvalue()), ascii_block
+
     def multimodal_prompt_format(self, prompt):
-        if os.path.exists(self.config.game_path+"/PlayerPerspective.png") and "{image}" in prompt:
-            logging.info(f"PlayerPerspective.png exists - using it for multimodal completion")
-            image_embed, ascii_block = self.get_player_perspective()
-            if "{ocr}" in prompt:
-                prompt = prompt.replace("{ocr}", ascii_block)
-            prompt = self.multimodal_eval(prompt, [image_embed])
+        image_embed, ascii_block = self.get_player_perspective()
+        if "{ocr}" in prompt:
+            prompt = prompt.replace("{ocr}", ascii_block)
+        prompt = self.multimodal_eval(prompt, [image_embed])
         return prompt
 
     @utils.time_it

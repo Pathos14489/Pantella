@@ -110,7 +110,7 @@ class LLM(base_LLM.base_LLM):
                 logging.error(e)
                 # input("Press Enter to exit.")
         else:
-            logging.warning("Vision is enabled -- Make sure the LLM you choose supports vision as well!")
+            logging.success("Vision is enabled -- Make sure the LLM you choose supports vision as well!")
             logging.warning("NOTICE: Completions API is not currently supported with vision enabled!")
             self.completions_supported = False
     
@@ -121,7 +121,7 @@ class LLM(base_LLM.base_LLM):
             if "content" in message and type(message["content"]) == str:
                 new_content = message["content"]
                 if "name" in message:
-                    new_content = message["name"] +": "+ new_content
+                    new_content = message["name"] + self.message_signifier + new_content
                 new_context.append({
                     "role": message["role"],
                     "content": new_content
