@@ -142,7 +142,7 @@ class Synthesizer(base_tts.base_Synthesizer):
                 break
         if voice_model == None:
             if log:
-                logging.error(f'Voice model \'{basic_voice_model}\' not available! Please add it to the xTTS voices list.')
+                logging.error(f'Voice model \'{basic_voice_model}\' not available in xtts_api! Please add it to the xTTS latents directory, or put a sample of the voice in the speakers directory then restart the xTTS server and Pantella.')
         if crashable and voice_model == None:
             input("Press enter to continue...")
             raise FileNotFoundError()
