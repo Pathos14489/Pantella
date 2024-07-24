@@ -30,9 +30,14 @@ class CharacterDB():
         else:
             self.voice_model_ids = {}
             
+        logging.info(f"Loading default character database from {self.character_database_path}...")
         self.load(self.character_database_path)
-        with open("./unique_ref_index.json", "w") as f:
-            json.dump(self.unique_ref_index, f, indent=4)
+        for addon_slug in self.config.addons:
+            addon = self.config.addons[addon_slug]
+            if addon['enabled'] and "characters" in addon['addon_parts']:
+                addon_characters_directory = os.path.abspath(os.path.join(self.config.addons_dir, addon_slug, "characters"))
+                logging.info(f"Loading addon character database from {addon_characters_directory}...")
+                self.load(addon_characters_directory)
 
     def loaded(self):
         logging.info(f"{len(self.male_voice_models)} Male voices - {len(self.female_voice_models)} Female voices")
@@ -40,22 +45,17 @@ class CharacterDB():
         logging.config("Total Required Voice Models: "+str(len(self.all_voice_models)))
         logging.config("voice_model_ids:",self.voice_model_ids)
 
-    def load(self, path):
-        self._characters = []
-        self.named_index = {}
-        self.base_id_index = {}
-        self.ref_id_index = {}
-        self.unique_ref_index = {}
+    def load(self, character_database_path):
         try:
             paths = []
-            if type(self.character_database_path) == list:
-                logging.info(f"Loading multiple character databases from {self.character_database_path}...")
+            if type(character_database_path) == list:
+                logging.info(f"Loading multiple character databases from {character_database_path}...")
                 paths = self.character_database_path
             else:
-                logging.info(f"Loading character database from {self.character_database_path}...")
-                paths = [self.character_database_path]
+                logging.info(f"Loading character database from {character_database_path}...")
+                paths = [character_database_path]
             for path in paths:
-                if self.character_database_path.endswith('.csv'):
+                if character_database_path.endswith('.csv'):
                     logging.info("Loading character database from csv...")
                     self.load_characters_csv(path)
                 else:
@@ -64,11 +64,12 @@ class CharacterDB():
                 self.verify_characters()
                 self.loaded()
         except Exception as e:
-            logging.error(f"Could not load character database from {self.character_database_path}. Please check the path and try again. Path should be a directory containing json files or a csv file containing character information.")
+            logging.error(f"Could not load character database from {character_database_path}. Please check the path and try again. Path should be a directory containing json files or a csv file containing character information.")
             logging.error(e)
             raise
 
     def load_characters_json(self, path=None):
+        count_before = len(self._characters)
         if path is None:
             path = self.character_database_path
         if type(path) == list:
@@ -90,7 +91,7 @@ class CharacterDB():
             self.db_type = 'mixed'
         else:
             self.db_type = 'json'
-        logging.info(f"Loaded {len(self.characters)} characters from JSON {path}")
+        logging.info(f"Loaded {len(self._characters)-count_before} characters from json files {path}")
     
     def load_characters_csv(self, path=None):
         if path is None:
@@ -407,12 +408,14 @@ class CharacterDB():
         character_ref_id = str(character_ref_id)
         character_base_id = str(character_base_id)
         # Unique Reference Lookup
+        logging.info(f"Performing unique reference lookup for character '{str(character_name)}({str(character_ref_id)})[{str(character_base_id)}]'")
         if character_name is not None and character_ref_id is not None and character_base_id is not None:
             if f"{character_name}({character_ref_id})[{character_base_id}]" in self.unique_ref_index:
                 character_match = self.unique_ref_index[f"{character_name}({character_ref_id})[{character_base_id}]"]
                 matching_parts = {"name": True, "ref_id": True, "base_id": True}
                 logging.info(f"Found possible character '{character_name}' association in character database using unique reference lookup.")
         # Name Lookup
+        logging.info(f"Performing name lookup for character '{character_name}'")
         if character_name is not None and character_match is None:
             if character_name in self.named_index:
                 character_match = self.named_index[character_name]
@@ -423,9 +426,10 @@ class CharacterDB():
                 }
                 logging.info(f"Found possible character '{character_name}' association in character database using name lookup.")
         # Ref/Base ID Lookup
+        logging.info(f"Performing ref_id and base_id lookup for character '{character_ref_id}({character_base_id})'")
         if character_ref_id is not None and character_base_id is not None and character_match is None:
             for db_character in self._characters:
-                if str(db_character['ref_id']).endswith(character_ref_id) and str(db_character['base_id']).endswith(character_base_id):
+                if ((str(db_character['ref_id']).endswith(character_ref_id) and str(db_character['base_id']).endswith(character_base_id))) or ((str(db_character['ref_id']).upper().endswith(character_ref_id.upper()) and str(db_character['base_id']).upper().endswith(character_base_id.upper()))):
                     character_match = db_character
                     matching_parts = {
                         "name": character_match['name'] == character_name,
@@ -435,8 +439,9 @@ class CharacterDB():
                     logging.info(f"Found possible character '{character_name}' association in character database using ref_id and base_id lookup.")
                     break
         # Exact Base ID Lookup
+        logging.info(f"Performing exact base_id lookup for character '{character_base_id}'")
         if character_base_id is not None and character_match is None:
-            if character_base_id in self.base_id_index:
+            if character_base_id in self.base_id_index or str(character_base_id).upper() in self.base_id_index:
                 character_match = self.base_id_index[character_base_id]
                 matching_parts = {
                     "name": character_match['name'] == character_name,
@@ -446,9 +451,10 @@ class CharacterDB():
                 is_generic_npc = character_match['is_generic_npc'] if "is_generic_npc" in character_match else True
                 logging.info(f"Found possible character '{character_name}' association in character database using base_id lookup.")
         # Endswith Base ID Lookup
+        logging.info(f"Performing endswith base_id lookup for character '{character_base_id}'")
         if character_base_id is not None and character_match is None:
             for db_character in self._characters:
-                if str(db_character['base_id']).endswith(character_base_id):
+                if str(db_character['base_id']).endswith(character_base_id) or str(db_character['base_id']).upper().endswith(character_base_id.upper()):
                     character_match = db_character
                     matching_parts = {
                         "name": character_match['name'] == character_name,
@@ -458,6 +464,8 @@ class CharacterDB():
                     is_generic_npc = character_match['is_generic_npc'] if "is_generic_npc" in character_match else True
                     logging.info(f"Found possible character '{character_name}' association in character database using base_id lookup.")
                     break
+        logging.info(f"Character Match:",character_match)
+        logging.info(f"Matching Parts:",matching_parts)
         return character_match, is_generic_npc, matching_parts
 
     def has_character(self, character):

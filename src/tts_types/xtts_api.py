@@ -6,6 +6,9 @@ import os
 from pathlib import Path
 import requests
 import time
+import subprocess
+import threading
+import traceback
 import io
 logging.info("Imported required libraries in xtts_api.py")
 
@@ -15,14 +18,50 @@ class Synthesizer(base_tts.base_Synthesizer):
         super().__init__(conversation_manager)
         self.tts_slug = tts_slug
         self.xtts_data = self.config.xtts_api_data
+        self.xtts_api_dir = self.config.xtts_api_dir
+        if not self.xtts_api_dir == "" or not self.xtts_api_dir == None or not self.xtts_api_dir.lower() == "none":
+            if not os.path.exists(self.xtts_api_dir+"\\xtts_api_server\\__init__.py"):
+                logging.error(f'xTTS API server not found at: {self.config.xtts_api_dir}')
+                logging.error(f'Please download the xTTS API server from: https://github.com/Pathos14489/xtts-api-server-mantella and place it in the directory specified in the config file, or update where the config file is looking for the xTTS API directory.')
+                input("Press enter to continue...")
+                raise FileNotFoundError()
+        self.voice_latent_folders = [
+            self.xtts_api_dir + "latent_speaker_folder\\"
+        ]
+        for addon_slug in self.config.addons:
+            addon = self.config.addons[addon_slug]
+            if "xtts_voice_latents" in addon["addon_parts"]:
+                addon_latents_folder = self.config.addons_dir + addon_slug + "\\xtts_voice_latents\\"
+                if os.path.exists(addon_latents_folder):
+                    self.voice_latent_folders.append(addon_latents_folder)
+                else:
+                    logging.error(f'xtts_voice_latents folder not found at: {addon_latents_folder}')
+        # make all the paths absolute
+        self.voice_latent_folders = [os.path.abspath(folder) for folder in self.voice_latent_folders]
+        logging.info(f'xTTS API voice latent folders: {self.voice_latent_folders}')
         self.xtts_api_base_url = self.config.xtts_api_base_url
         self.synthesize_url_xtts = self.xtts_api_base_url + "/tts_to_audio/"
         self.switch_model_url = self.xtts_api_base_url + "/switch_model"
         self.xtts_set_tts_settings = self.xtts_api_base_url + "/set_tts_settings/"
         self.xtts_get_speakers_list = self.xtts_api_base_url + "/speakers_list/"
         self.xtts_get_models_list = self.xtts_api_base_url + "/get_models_list/"
-        self.retry_count = 10
-        self._set_tts_settings_and_test_if_serv_running()
+        if self.is_running():
+            logging.warning(f'xTTS_API is already running. Voice latents added by addons will not be available until the server is closed and restarted by Pantella.')
+        else:
+            logging.info(f'Starting xTTS_API server...')
+            self.run_tts()  # Start xTTS_API server if it isn't already running
+        self.times_checked = 0
+        
+        while not self.is_running() and self.times_checked < 40:  # Check if xTTS_API is running
+            time.sleep(2)  # Wait for xTTS_API server to start
+            if self.times_checked == 20:
+                logging.error(f'xTTS_API server is taking longer than expected to start. Please check the xTTS_API server logs for any errors. Or your computer may be a bit slower than expected.')
+            self.times_checked += 1
+        if self.times_checked >= 20:
+            logging.error(f'xTTS_API server failed to start. Please check the xTTS_API server logs for any errors.')
+            input('\nPress any key to stop Pantella...')
+            raise Exception(f'xTTS_API server failed to start. Please check the xTTS_API server logs for any errors.')
+        
         self.default_model = self.conversation_manager.config.default_xtts_api_model
         self.current_model = self.default_model
         self.mantella_server = False
@@ -68,24 +107,34 @@ class Synthesizer(base_tts.base_Synthesizer):
         self.current_model = model # else: set the current model to the new model
         requests.post(self.switch_model_url, json={"model_name": model}) # Request to switch the voice model
     
-    def _set_tts_settings_and_test_if_serv_running(self):
-        """Set the TTS settings and test if the server is running"""
+    def is_running(self):
+        """Check if the xTTS server is running"""
         try:
-            if (self.retry_count == 1):
-                # break loop
-                logging.error('Ensure xtts is running - http://localhost:8020/docs - xTTS needs to start slightly before Pantella as it takes time to load.')
-                input('\nPress any key to stop Pantella and try again...')
-                raise "xTTS is not running!"
+            response = requests.post(self.xtts_set_tts_settings, json=self.xtts_data)
+            response.raise_for_status()  # If the response contains an HTTP error status code, 
+            return True
+        except:
+            return False
+
+
+    def run_tts(self):
+        """Run the xTTS server -- Required for Pantella to manage addon voice lantents"""
+        try:
+            command = f'{self.config.python_binary} -m xtts_api_server -sf ./speakers -lsf {",".join(self.voice_latent_folders)}'
+            # start the process without waiting for a response
+            if not self.config.linux_mode:
+                logging.info(f'Running xTTS API server for Windows with command: {command}')
+                subprocess.Popen(command, cwd=self.config.xtts_api_dir)
             else:
-                # contact local xTTS server; ~2 second timeout
-                logging.info(f'Attempting to connect to xTTS... ({self.retry_count})')
-                self.retry_count -= 1
-                response = requests.post(self.xtts_set_tts_settings, json=self.xtts_data)
-                response.raise_for_status()  # If the response contains an HTTP error status code, raise an exception
-        except requests.exceptions.RequestException as err:
-            logging.info('xtts is not ready yet. Retrying in 10 seconds...')
-            time.sleep(10)
-            return self._set_tts_settings_and_test_if_serv_running() # do the web request again; LOOP!!!
+                logging.info(f'Running xTTS API server for Linux with command: {command}')
+                threading.Thread(target=subprocess.run, args=(command), kwargs={'shell': True, 'cwd': self.config.xtts_api_dir}).start()
+        except Exception as e:
+            logging.error(f'Could not run xTTS API. Ensure that the paths "{self.config.xtts_api_dir}" and "{self.config.python_binary}" are correct.')
+            logging.error(e)
+            tb = traceback.format_exc()
+            logging.error(tb)
+            input('\nPress any key to stop Pantella...')
+            raise e
 
     @utils.time_it
     def change_voice(self, character):

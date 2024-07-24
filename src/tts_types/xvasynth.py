@@ -25,7 +25,24 @@ class Synthesizer(base_tts.base_Synthesizer):
         self.process_device = self.config.xvasynth_process_device
         self.times_checked_xvasynth = 0
         
-        self.check_if_xvasynth_is_running()
+        if self.is_running():
+            logging.error(f'xVASynth is already running. Please close the xVASynth server before starting Pantella. xVASynth must be run in headless mode to work with Pantella.')
+            input('\nPress any key to stop Pantella...')
+            raise Exception(f'xVASynth is already running. Please close the xVASynth server before starting Pantella. xVASynth must be run in headless mode to work with Pantella.')
+        else:
+            logging.info(f'Starting xVASynth headless server...')
+            self.run_tts()  # Start xVASynth server if it isn't already running
+        time.sleep(2)  # Wait for xVASynth server to start
+        while not self.is_running() and self.times_checked_xvasynth < 20:  # Check if xVASynth is running
+            time.sleep(2)  # Wait for xVASynth server to start
+            if self.times_checked_xvasynth == 5:
+                logging.error(f'xVASynth server is taking longer than expected to start. Please check the xVASynth server logs for any errors. Or your computer may be a bit slower than expected.')
+            self.times_checked_xvasynth += 1
+        if self.times_checked_xvasynth >= 20:
+            logging.error(f'xVASynth server failed to start. Please check the xVASynth server logs for any errors.')
+            input('\nPress any key to stop Pantella...')
+            raise Exception(f'xVASynth server failed to start. Please check the xVASynth server logs for any errors.')
+            
 
         self.pace = self.config.pace
         self.use_sr = self.config.use_sr
@@ -73,44 +90,34 @@ class Synthesizer(base_tts.base_Synthesizer):
         self._synthesize_line(voiceline, voiceline_location)
         self.play_voiceline(voiceline_location, volume)
         
-    def check_if_xvasynth_is_running(self):
+    def is_running(self):
         """Check if xVASynth is running and start it if it isn't"""
-        self.times_checked_xvasynth += 1
-
         try:
-            if (self.times_checked_xvasynth > 20):
-                # break loop
-                logging.error('Could not connect to xVASynth multiple times. Ensure that xVASynth is running and restart Pantella.')
-                input('\nPress any key to stop Pantella...')
-                sys.exit(0)
-
             # contact local xVASynth server; ~2 second timeout
-            logging.info(f'Attempting to connect to xVASynth... ({self.times_checked_xvasynth})')
+            logging.info(f'Checking if xVASynth is already running...')
             response = requests.get(f'{self.config.xvasynth_base_url}/')
             response.raise_for_status()  # If the response contains an HTTP error status code, raise an exception
+            return True
         except requests.exceptions.RequestException as err:
-            if (self.times_checked_xvasynth == 1):
-                logging.info('Could not connect to xVASynth. Attempting to run headless server...')
-                self.run_xvasynth_server()
-            time.sleep(2)
-            # do the web request again; LOOP!!!
-            return self.check_if_xvasynth_is_running()
+            logging.error(f'xVASynth is not running. Starting xVASynth server...')
+            return False
 
-    def run_xvasynth_server(self):
+    def run_tts(self):
         """Run xVASynth server in headless mode - Required for xVASynth to work with Pantella"""
         try:
             # start the process without waiting for a response
             if not self.config.linux_mode:
                 subprocess.Popen(f'{self.xvasynth_path}/resources/app/cpython_{self.process_device}/server.exe', cwd=self.xvasynth_path)
             else:
-                command = f'CUDA_VISIBLE_DEVICES= python3 {self.xvasynth_path}resources/app/server.py'
-                logging.info(f'Running xVASynth server with command: {command}')
                 # subprocess.run(command, shell=False, cwd=self.xvasynth_path)
                 if self.process_device == "cpu":
+                    command = f'CUDA_VISIBLE_DEVICES= python3 {self.xvasynth_path}resources/app/server.py'
+                    logging.info(f'Running xVASynth server with command: {command}')
                     threading.Thread(target=subprocess.run, args=(command,), kwargs={'shell': True, 'cwd': self.xvasynth_path}).start()
                 else:
+                    command = f'python3 {self.xvasynth_path}resources/app/server.py'
+                    logging.info(f'Running xVASynth server with command: {command}')
                     threading.Thread(target=subprocess.run, args=(command,), kwargs={'shell': True, 'cwd': self.xvasynth_path}).start()
-
         except Exception as e:
             logging.error(f'Could not run xVASynth. Ensure that the path "{self.xvasynth_path}" is correct.')
             logging.error(e)

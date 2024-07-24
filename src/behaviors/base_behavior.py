@@ -11,6 +11,7 @@ class BaseBehavior():
         self.player = False # If this behavior can be triggered by the player
         self.player_only = False # If this behavior can only be triggered by the player
         self.npc = False # If this behavior can only be triggered when only NPCs are present
+        self.guard_only = False # If this behavior can only be triggered by guards
         self.single_npc_with_npc_only = False
         self.single_npc_with_player_only = False
         self.multi_npc_only = False

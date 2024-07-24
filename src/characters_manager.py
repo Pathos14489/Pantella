@@ -129,7 +129,7 @@ class Characters:
         replacement_dict["player_name"] = self.conversation_manager.player_name
         replacement_dict["player_race"] = self.conversation_manager.player_race
         replacement_dict["player_gender"] = self.conversation_manager.player_gender
-        replacement_dict["behavior_summary"] = self.conversation_manager.behavior_manager.get_behavior_summary() # Add behavior summary to replacement_dict and format it using replacement_dict before doing so
+        replacement_dict["behavior_summary"] = self.conversation_manager.behavior_manager.get_behavior_summary(self.active_characters_list[0]) # Add behavior summary to replacement_dict and format it using replacement_dict before doing so # TODO: Make this work better for multi character conversations
         if "name" in replacement_dict: # If name is in replacement_dict, add name2 and names to replacement_dict
             replacement_dict["behavior_summary"] = replacement_dict["behavior_summary"].format(**replacement_dict)
         else:

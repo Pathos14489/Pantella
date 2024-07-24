@@ -34,6 +34,8 @@ class ConfigLoader:
         self.behavior_manager = self.current_game_config["behavior_manager"]
         logging.log_file = self.logging_file_path # Set the logging file path
         self.get_prompt_styles()
+        self.addons = {}
+        self.load_addons()
         self.ready = True
 
     @property
@@ -144,6 +146,49 @@ class ConfigLoader:
         style_names = [f"{slug} ({self._raw_prompt_styles[slug]['name']})" for slug in self.prompt_styles]
         logging.config(f"Prompt styles loaded: "+str(style_names))
 
+    def load_addons(self):
+        """Load the addons from the addons directory"""
+        logging.info("Loading addons...")
+        self.addons = {}
+        valid_addon_parts = [
+            "behaviors",
+            "characters",
+            "xtts_voice_latents",
+        ]
+        if os.path.exists(self.addons_dir):
+            for addon_slug in os.listdir(self.addons_dir):
+                addon_path = os.path.join(self.addons_dir, addon_slug)
+                if os.path.isdir(addon_path):
+                    if os.path.exists(os.path.join(addon_path, "metadata.json")):
+                        with open(os.path.join(addon_path, "metadata.json")) as f:
+                            metadata = json.load(f)
+                        if metadata["enabled"] == False:
+                            logging.warn(f"Addon {addon_slug} is disabled by it's own metadata. Skipping addon.")
+                            continue
+                        if addon_slug in self.disabled_addons:
+                            logging.warn(f"Addon {addon_slug} is disabled by your config file. Skipping addon.")
+                            continue
+                        self.addons[addon_slug] = metadata
+                        self.addons[addon_slug]["install_path"] = addon_path
+                        self.addons[addon_slug]["slug"] = addon_slug
+                        self.addons[addon_slug]["addon_parts"] = []
+                        for addon_part in os.listdir(addon_path):
+                            if os.path.isdir(os.path.join(addon_path, addon_part)):
+                                if addon_part not in valid_addon_parts:
+                                    logging.warn(f"Addon {addon_slug} has an invalid addon part: {addon_part}. Skipping addon.")
+                                    continue
+                                self.addons[addon_slug]["addon_parts"].append(addon_part)
+                        logging.config(f"Loaded addon {addon_slug} with metadata:", json.dumps(metadata, indent=4))
+                    else:
+                        logging.error(f"Addon {addon_slug} does not have a metadata.json file. Skipping addon.")
+                else:
+                    logging.warn(f"Addon {addon_slug} is not a directory. Skipping addon.")
+        else:
+            logging.error(f"Addons directory {self.addons_dir} does not exist. Please set a valid addons directory in the config file.")
+            input("Press enter to continue...")
+            raise ValueError(f"Addons directory {self.addons_dir} does not exist. Please set a valid addons directory in the config file.")
+        logging.config("Loaded addons")
+
     def get_behavior_styles(self):
         """Get the behavior styles from the behavior_styles directory"""
         logging.config("Getting behavior styles")
@@ -213,7 +258,7 @@ class ConfigLoader:
             self._prompt_style = self.prompt_styles["normal_en"]
         # self.get_tokenizer_settings_from_prompt_style()
         logging.info("Getting tokenizer settings from default prompt style")
-        logging.config("Default Prompt Style:",self._prompt_style)
+        logging.config("Default Prompt Style:", json.dumps(self._prompt_style, indent=4))
         logging.info("Prompt formatting settings loaded")
     
     def set_behavior_style(self, behavior_style):
@@ -237,6 +282,10 @@ class ConfigLoader:
                 "interface_type": "auto",
                 "behavior_manager": "auto",
                 "memory_manager": "auto"
+            },
+            "Addons": {
+                "addons_dir": ".\\addons\\",
+                "disabled_addons": [],
             },
             "summarizing_memory":{
                 "summary_limit_pct": 0.8,
@@ -508,6 +557,7 @@ class ConfigLoader:
                 "xtts_num_beams": 1,
             },
             "xTTS_api": {
+                "xtts_api_dir": ".\\xtts-api-server-mantella\\",
                 "xtts_api_base_url": "http://127.0.0.1:8020",
                 "xtts_api_data": {
                     "temperature": 0.75,
@@ -544,6 +594,7 @@ class ConfigLoader:
             },
             "Config": {
                 "linux_mode": False,
+                "python_binary": "../python-3.10.11-embed/python.exe", # Default is for use with the launcher. Change to "python" or "python3" for use with a system python installation
                 "character_database_file": ".\\characters\\", # can be a csv file path, a directory file path, or a list of csv file paths and directory file paths
                 "conversation_data_directory": ".\\data\\conversations",
                 "voice_model_ref_ids_file": ".\\skyrim_voice_model_ids.json",
@@ -581,6 +632,10 @@ class ConfigLoader:
                 "interface_type": self.interface_type,
                 "behavior_manager": self.behavior_manager,
                 "memory_manager": self.memory_manager
+            },
+            "Addons":{
+                "addons_dir": self.addons_dir,
+                "disabled_addons": self.disabled_addons,
             },
             "summarizing_memory": {
                 "summary_limit_pct": self.summary_limit_pct,
@@ -740,6 +795,7 @@ class ConfigLoader:
                 "xtts_num_beams": self.xtts_num_beams,
             },
             "xTTS_api": {
+                "xtts_api_dir": self.xtts_api_dir,
                 "xtts_api_base_url": self.xtts_api_base_url,
                 "xtts_api_data": self.xtts_api_data,
                 "xtts_api_banned_voice_models": self.xtts_api_banned_voice_models,
@@ -767,6 +823,7 @@ class ConfigLoader:
             },
             "Config": {
                 "linux_mode": self.linux_mode,
+                "python_binary": self.python_binary,
                 "character_database_file": self.character_database_file,
                 "conversation_data_directory": self.conversation_data_directory,
                 "voice_model_ref_ids_file": self.voice_model_ref_ids_file,

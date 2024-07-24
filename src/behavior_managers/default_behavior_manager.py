@@ -4,7 +4,7 @@ import random
 import os
 logging.info("Imported required libraries in base_behavior_manager.py")
 
-behaviors_dir =  os.path.join(os.path.dirname(os.path.abspath(__file__)),"../behaviors/")
+default_behaviors_dir =  os.path.join(os.path.dirname(os.path.abspath(__file__)),"../behaviors/")
 
 valid_games = ["fallout4","skyrim","fallout4vr","skyrimvr"]
 manager_slug = "default_behavior_manager"
@@ -14,20 +14,34 @@ class BehaviorManager():
         self.conversation_manager = conversation_manager
         self.behaviors = []
         self.named_behaviors = {}
-        logging.info("Loading behaviors...")
+        logging.info("Loading default behaviors...")
+        self.load_behaviors(default_behaviors_dir)
+        logging.info("Loading addon behaviors...")
+        for addon_slug in self.conversation_manager.config.addons:
+            addon = self.conversation_manager.config.addons[addon_slug]
+            if addon["enabled"]:
+                logging.info(f"Loading behaviors from addon '{addon_slug}'...")
+                self.load_behaviors(os.path.abspath(os.path.join(self.conversation_manager.config.addons_dir,addon_slug,"behaviors")),addon_slug)
+
+        logging.info(f"Loaded default behavior manager with {len(self.behaviors)} behaviors")
+
+    def load_behaviors(self,behaviors_dir, addon = None):
         for filename in os.listdir(behaviors_dir):
             if filename == "base_behavior.py":
                 continue
             if filename.endswith(".py") and not filename.startswith("__"):
                 # logging.info("Loading behavior " + filename)
                 behavior_name = filename.split(".py")[0]
-                behavior = __import__("src.behaviors." + behavior_name, fromlist=[behavior_name])
+                if addon is None:
+                    behavior = __import__("src.behaviors." + behavior_name, fromlist=[behavior_name])
+                else:
+                    behavior = __import__("addons." + addon + ".behaviors." + behavior_name, fromlist=[behavior_name])
                 behavior = getattr(behavior, behavior_name)(self)
                 # logging.info(behavior)
-                if conversation_manager.config.game_id in behavior.valid_games:
-                    logging.config(f"Behavior {behavior_name} supported by game '{conversation_manager.config.game_id}'")
+                if self.conversation_manager.config.game_id in behavior.valid_games:
+                    logging.config(f"Behavior {behavior_name} supported by game '{self.conversation_manager.config.game_id}'")
                 else:
-                    logging.config(f"Behavior {behavior_name} not supported by game '{conversation_manager.config.game_id}'")
+                    logging.config(f"Behavior {behavior_name} not supported by game '{self.conversation_manager.config.game_id}'")
                     continue
                 if behavior._run(False) == "BASEBEHAVIOR":
                     logging.error("BaseBehavior run() called for " + behavior_name + ", this should be overwritten by the child class!")
@@ -35,7 +49,6 @@ class BehaviorManager():
                     # logging.info("Loaded behavior " + filename)
                     self.behaviors.append(behavior)
                     self.named_behaviors[behavior_name] = behavior
-        logging.info("Loaded default behavior manager")
 
     @property
     def behavior_style(self):
@@ -113,12 +126,16 @@ class BehaviorManager():
                     logging.error(f"Error running behavior {behavior.keyword}: {e}")
         return None
     
-    def get_behavior_summary(self):
+    def get_behavior_summary(self, character):
         """Return a summary of all behaviors, and what they do.""" # TODO: Replace with a user editable template like message_format
         summary = ""
         for behavior in self.behaviors:
             if behavior.valid():
-                if behavior.description is not None and not behavior.player_only:
+                if behavior.player_only:
+                    continue
+                if character is None or (behavior.guard_only and not character.is_guard):
+                    continue
+                if behavior.description is not None and behavior.description != "":
                     summary += f"{behavior.description}\n\n".replace("{command}",self.render_behavior(behavior))
         summary = summary.strip()
         return summary
@@ -128,7 +145,11 @@ class BehaviorManager():
         memories = []
         for behavior in self.behaviors:
             if behavior.valid() and not behavior.player_only:
-                if behavior.description is not None and not behavior.player_only and behavior.examples is not None and len(behavior.examples) > 0:
+                if behavior.player_only:
+                    continue
+                if character is None or (behavior.guard_only and not character.is_guard):
+                    continue
+                if behavior.description is not None and behavior.examples is not None and len(behavior.examples) > 0:
                     random_example = random.choice(behavior.examples)
                     for message in random_example:
                         if message["role"] == "assistant":

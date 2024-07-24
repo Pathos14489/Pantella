@@ -1,0 +1,25 @@
+{
+    "name": "template_addon_name_1",
+    "version": "1.0.0",
+    "description": "A template addon for creating new addons.",
+    "author": "Your Name",
+    "project_url": "https://link/to/your/project/this/addon/is/for",
+    "enabled": false,
+    "dependencies": [
+        {
+            "type": "llm",
+            "name": "openai_api"
+        },
+        {
+            "type": "character",
+            "name": "Jarl Balgruuf the Greater",
+            "ref_id": "00013BAA",
+            "base_id": "00013BAA"
+        },
+        {
+            "type": "addon",
+            "name": "generic_guard_templates",
+            "min_version": "1.0.0"
+        }
+    ]
+}
