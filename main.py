@@ -34,6 +34,7 @@ if config.debug_mode:
     config.conversation_manager_type = "gradio" # override conversation manager type to gradio
     config.interface_type = "gradio" # override game interface type to gradio
     config.sentences_per_voiceline = 99 # override sentences per voiceline to 99 so all outputs generate the whole voice line instead of parts
+    logging.info("Debug Mode Enabled -- Conversation Manager Type set to Gradio, Interface Type set to Gradio, Sentences Per Voiceline set to 99")
 
 logging.info("Creating Conversation Manager")
 try:
