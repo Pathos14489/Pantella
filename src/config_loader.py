@@ -130,6 +130,11 @@ class ConfigLoader:
         
         self.set_behavior_style(self.behavior_style)
 
+        if "./" in self.python_binary:
+            # Make absolute path because it's a relative path and not a raw command or absolute path
+            self.python_binary = os.path.abspath(self.python_binary)
+        self.xtts_api_dir = os.path.abspath(self.xtts_api_dir) # Make absolute path for xTTS API
+
         logging.config(f"Unique settings:", self.unique())
         logging.config(f"Config loaded from {self.config_path}")
 
@@ -594,7 +599,7 @@ class ConfigLoader:
             },
             "Config": {
                 "linux_mode": False,
-                "python_binary": "../python-3.10.11-embed/python.exe", # Default is for use with the launcher. Change to "python" or "python3" for use with a system python installation
+                "python_binary": "../../python-3.10.11-embed/python.exe", # Default is for use with the launcher. Change to "python" or "python3" for use with a system python installation
                 "character_database_file": ".\\characters\\", # can be a csv file path, a directory file path, or a list of csv file paths and directory file paths
                 "conversation_data_directory": ".\\data\\conversations",
                 "voice_model_ref_ids_file": ".\\skyrim_voice_model_ids.json",

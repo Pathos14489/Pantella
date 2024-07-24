@@ -26,7 +26,7 @@ class Synthesizer(base_tts.base_Synthesizer):
                 input("Press enter to continue...")
                 raise FileNotFoundError()
         self.voice_latent_folders = [
-            self.xtts_api_dir + "latent_speaker_folder\\"
+            self.xtts_api_dir + "latent_speaker_folder\\" if self.xtts_api_dir.endswith("\\") else self.xtts_api_dir + "\\latent_speaker_folder\\",
         ]
         for addon_slug in self.config.addons:
             addon = self.config.addons[addon_slug]
@@ -120,6 +120,7 @@ class Synthesizer(base_tts.base_Synthesizer):
     def run_tts(self):
         """Run the xTTS server -- Required for Pantella to manage addon voice lantents"""
         try:
+            logging.info(f'CWD: {os.getcwd()} - xTTS_API CWD: {self.config.xtts_api_dir}')
             command = f'{self.config.python_binary} -m xtts_api_server -sf ./speakers -lsf {",".join(self.voice_latent_folders)}'
             # start the process without waiting for a response
             if not self.config.linux_mode:
