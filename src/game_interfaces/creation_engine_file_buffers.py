@@ -582,13 +582,24 @@ class GameInterface(BaseGameInterface):
         actor_voice_model_name = actor_voice_model.split('<')[1].split(' ')[0]
         character_info['in_game_voice_model'] = actor_voice_model_name
         character_info['refid_int'] = character_ref_id
+        if (character_ref_id is not None and character_ref_id != "0" and character_ref_id != "") and ("ref_id" not in character_info or character_info["ref_id"].strip() == ""):
+            character_info["ref_id"] = str(hex(int(character_ref_id)))[2:]
         character_info['baseid_int'] = character_base_id
+        if (character_base_id is not None and character_base_id != "0" and character_base_id != "") and ("base_id" not in character_info or character_info["base_id"].strip() == ""):
+            character_info["base_id"] = str(hex(int(character_base_id)))[2:]
         character_info["in_game_race"] = character_in_game_race
         character_info["in_game_gender"] = character_in_game_gender
         character_info["is_guard"] = character_is_guard
         character_info["is_ghost"] = character_is_ghost
         character_info['character_name'] = character_name
         character_info['in_game_voice_model_id'] = actor_voice_model.split('(')[1].split(')')[0]
+        if "name" not in character_info or character_info["name"].strip() == "":
+            character_info["name"] = character_name
+        if "race" not in character_info or character_info["race"].strip() == "":
+            character_info["race"] = character_in_game_race
+        if "gender" not in character_info or character_info["gender"].strip() == "":
+            character_info["gender"] = character_in_game_gender
+
 
         actor_relationship_rank = self.load_data_when_available('_pantella_actor_relationship', '')
         try:
