@@ -447,6 +447,7 @@ class ConfigLoader:
                 "game_update_pruning": True,
                 "game_update_prune_count": 5,
                 "conversation_start_role": "system", # "system" or "user" is recommended, "assistant" is not recommended because it would teach the assstant that it can respond using your identity, which is not recommended as it will waste generations failing to generate messages from you
+                "start_as_stranger": True,
                 "custom_possible_player_aliases": [], # adds additional names the player goes by to the list of names to check for in the conversation start role
             },
             "InferenceOptions": {
@@ -528,7 +529,9 @@ class ConfigLoader:
                 "load_in_8bit": False
             },
             "Speech": {
-                "tts_engine": ["piper_binary"],
+                "tts_engine": [
+                    "piper_binary"
+                ],
                 "end_conversation_wait_time": 1,
                 "sentences_per_voiceline": 2,
                 "narrator_voice": "MaleKhajiit",
@@ -546,7 +549,7 @@ class ConfigLoader:
                 "use_cleanup": False,
                 "use_sr": False,
                 "xvasynth_banned_voice_models": [],
-                "xvasynth_base_url": "http://127.0.0.1:8008"
+                "xvasynth_base_url": "http://127.0.0.1:8008",
             },
             "xTTS": {
                 "xtts_device": "cuda",
@@ -704,6 +707,7 @@ class ConfigLoader:
                 "game_update_pruning": self.game_update_pruning,
                 "game_update_prune_count": self.game_update_prune_count,
                 "conversation_start_role": self.conversation_start_role,
+                "start_as_stranger": self.start_as_stranger,
                 "custom_possible_player_aliases": self.custom_possible_player_aliases,
             },
             "InferenceOptions": {

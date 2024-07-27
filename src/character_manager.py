@@ -26,7 +26,7 @@ class Character:
             else:
                 self.knows = []
         self.memory_manager = mm.create_manager(self) # create memory manager for the character
-        self.stranger = True
+        self.stranger = self.config.start_as_stranger
         if len(self.memory_manager.get_all_messages()) > 0:
             self.stranger = False
         self.load_knows()
