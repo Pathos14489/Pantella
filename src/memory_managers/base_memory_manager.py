@@ -7,7 +7,12 @@ class base_MemoryManager():
         self.conversation_manager = character_manager.conversation_manager
         self.character_manager = character_manager
         self.config = self.conversation_manager.config
-        self.conversation_history_directory = f"{self.conversation_manager.config.conversation_data_directory}/{self.config.game_id}/{self.conversation_manager.player_gender}_{self.conversation_manager.player_race}_{self.conversation_manager.player_name}/{self.gender}_{self.race}_{self.name}/"
+        self.conversation_history_directory = f"{self.conversation_manager.config.conversation_data_directory}/{self.config.game_id}/{self.conversation_manager.player_gender}_{self.conversation_manager.player_race}_{self.conversation_manager.player_name}/{self.gender}_{self.race}_{self.name}"
+        if "base_id" in self.__dict__:
+            self.conversation_history_directory += f"_{self.base_id}"
+        if "ref_id" in self.__dict__:
+            self.conversation_history_directory += f"_{self.ref_id}"
+        self.conversation_history_directory += f"_memory"
 
     @property
     def name(self):
