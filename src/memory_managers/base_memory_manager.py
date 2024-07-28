@@ -12,7 +12,7 @@ class base_MemoryManager():
             self.conversation_history_directory += f"_{self.base_id}"
         if "ref_id" in self.__dict__:
             self.conversation_history_directory += f"_{self.ref_id}"
-        self.conversation_history_directory += f"_memory"
+        self.conversation_history_directory += "/"
 
     @property
     def name(self):
@@ -25,6 +25,14 @@ class base_MemoryManager():
     @property
     def gender(self):
         return self.character_manager.gender
+    
+    @property
+    def base_id(self):
+        return self.character_manager.base_id
+    
+    @property
+    def ref_id(self):
+        return self.character_manager.ref_id
 
     @property
     def messages(self):
