@@ -14,7 +14,7 @@ for file in os.listdir(os.path.join(os.path.dirname(__file__), "tts_types/")):
     if file.endswith(".py") and not file.startswith("__"):
         module_name = file[:-3]
         if module_name in banned_modules:
-            logging.warning(f"Skipping banned memory manager: {module_name}")
+            logging.warning(f"Skipping banned TTS: {module_name}")
             continue
         if module_name != "base_tts":
             module = importlib.import_module(f"src.tts_types.{module_name}")

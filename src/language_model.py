@@ -15,7 +15,7 @@ for file in os.listdir(os.path.join(os.path.dirname(__file__), "llms/")):
     if file.endswith(".py") and not file.startswith("__"):
         module_name = file[:-3]
         if module_name in banned_modules:
-            logging.warning(f"Skipping banned memory manager: {module_name}")
+            logging.warning(f"Skipping banned language model: {module_name}")
             continue
         if module_name != "base_llm":
             module = importlib.import_module(f"src.llms.{module_name}")

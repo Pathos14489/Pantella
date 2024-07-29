@@ -4,6 +4,9 @@ import os
 import importlib
 logging.info("Imported required libraries in tokenizer.py")
 
+with open(os.path.join(os.path.dirname(__file__), "module_banlist"), "r") as f:
+    banned_modules = f.read().split("\n")
+    
 Tokenizer_Types = {}
 default = "tiktoken"
 
@@ -11,6 +14,9 @@ default = "tiktoken"
 for file in os.listdir(os.path.join(os.path.dirname(__file__), "tokenizers/")):
     if file.endswith(".py") and not file.startswith("__"):
         module_name = file[:-3]
+        if module_name in banned_modules:
+            logging.warning(f"Skipping banned tokenizer: {module_name}")
+            continue
         if module_name != "base_tokenizer":
             module = importlib.import_module(f"src.tokenizers.{module_name}")
             Tokenizer_Types[module.tokenizer_slug] = module
