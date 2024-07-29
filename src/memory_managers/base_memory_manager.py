@@ -38,27 +38,23 @@ class base_MemoryManager():
 
     def after_step(self):
         """Perform after dialogue generation in the memory manager - Some memory managers may need to perform some action every step"""
-        logging.error("after_step() method not implemented in your memory manager.")
+        logging.warning("after_step() method not implemented in your memory manager.")
     
     def before_step(self):
         """Performed before dialogue generation in the memory manager - Some memory managers may need to perform some action every step"""
-        logging.error("before_step() method not implemented in your memory manager.")
+        logging.warning("before_step() method not implemented in your memory manager.")
     
     def reached_conversation_limit(self):
         """Ran when the conversation limit is reached, or the conversation is ended - Some memory managers may need to perform some action when the conversation limit is reached"""
-        logging.error("reached_conversation_limit() method not implemented in your memory manager.")
-        input("Press enter to continue...")
-        raise NotImplementedError("reached_conversation_limit() method not implemented in your memory manager.")
+        logging.warning("reached_conversation_limit() method not implemented in your memory manager.")
     
     def add_message(self, message):
         """Add a message to the memory manager"""
-        logging.error("add_message() method not implemented in your memory manager.")
-        input("Press enter to continue...")
-        raise NotImplementedError("add_message() method not implemented in your memory manager.")
+        logging.warning("add_message() method not implemented in your memory manager.")
     
     def load_messages(self):
         """Load messages from the memory manager - Some memory managers may need to load messages from a file or database, and can also use this method to load old messages into the conversation_manager's messages"""
-        logging.error("load_messages() method not implemented in your memory manager.")
+        logging.warning("load_messages() method not implemented in your memory manager.")
 
     @property
     def memories(self):
