@@ -2,8 +2,13 @@ print("Loading chromadb_memory.py...")
 from src.logging import logging
 import os
 import json
-import chromadb
-from chromadb.config import Settings
+try:
+    logging.info("Importing chromadb...")
+    import chromadb
+    from chromadb.config import Settings
+    logging.info("Imported chromadb.")
+except Exception as e:
+    logging.error(f"Error importing chromadb: {e}")
 from src.memory_managers.base_memory_manager import base_MemoryManager
 from src.torchmoji.sentence_tokenizer import SentenceTokenizer
 from src.torchmoji.model_def import torchmoji_emojis, torch
