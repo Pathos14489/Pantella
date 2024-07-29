@@ -12,6 +12,7 @@ Manager_Types = {}
 for file in os.listdir(os.path.join(os.path.dirname(__file__), "conversation_managers/")):
     if file.endswith(".py") and not file.startswith("__"):
         module_name = file[:-3]
+        logging.info(f"Importing {module_name} from src.conversation_managers")
         if module_name in banned_modules:
             logging.warning(f"Skipping banned conversation manager: {module_name}")
             continue

@@ -14,6 +14,7 @@ default = "tiktoken"
 for file in os.listdir(os.path.join(os.path.dirname(__file__), "tokenizers/")):
     if file.endswith(".py") and not file.startswith("__"):
         module_name = file[:-3]
+        logging.info(f"Importing {module_name} from src.tokenizers")
         if module_name in banned_modules:
             logging.warning(f"Skipping banned tokenizer: {module_name}")
             continue
