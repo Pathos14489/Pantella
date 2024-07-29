@@ -4,11 +4,17 @@ import os
 import importlib
 logging.info("Imported required libraries in behavior_manager.py")
 
+with open(os.path.join(os.path.dirname(__file__), "module_banlist"), "r") as f:
+    banned_modules = f.read().split("\n")
+
 Manager_Types = {}
 # Get all Managers from src/behavior_managers/ and add them to Manager_Types
 for file in os.listdir(os.path.join(os.path.dirname(__file__), "behavior_managers/")):
     if file.endswith(".py") and not file.startswith("__"):
         module_name = file[:-3]
+        if module_name in banned_modules:
+            logging.warning(f"Skipping banned behavior manager: {module_name}")
+            continue
         module = importlib.import_module(f"src.behavior_managers.{module_name}")
         Manager_Types[module.manager_slug] = module    
 logging.info("Imported all behavior managers to Manager_Types, ready to create a behavior manager object!")

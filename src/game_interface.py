@@ -4,12 +4,18 @@ import os
 import importlib
 logging.info("Imported required libraries in game_interface.py")
 
+with open(os.path.join(os.path.dirname(__file__), "module_banlist"), "r") as f:
+    banned_modules = f.read().split("\n")
+
 Interface_Types = {}
 
 # Get all Interfaces from src/conversation_managers/ and add them to Interface_Types
 for file in os.listdir(os.path.join(os.path.dirname(__file__), "game_interfaces/")):
     if file.endswith(".py") and not file.startswith("__"):
         module_name = file[:-3]
+        if module_name in banned_modules:
+            logging.warning(f"Skipping banned memory manager: {module_name}")
+            continue
         if module_name != "base_interface" and module_name.strip() != "":
             module = importlib.import_module(f"src.game_interfaces.{module_name}")
             Interface_Types[module.interface_slug] = module    

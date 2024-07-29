@@ -4,12 +4,18 @@ import os
 import importlib
 logging.info("Imported required libraries in tts.py")
 
+with open(os.path.join(os.path.dirname(__file__), "module_banlist"), "r") as f:
+    banned_modules = f.read().split("\n")
+
 default = "xvasynth" # The default LLM to use if the one specified in config.json is not found or if default is specified in config.json
 tts_Types = {}
 # Get all LLMs from src/llms/ and add them to LLM_Types
 for file in os.listdir(os.path.join(os.path.dirname(__file__), "tts_types/")):
     if file.endswith(".py") and not file.startswith("__"):
         module_name = file[:-3]
+        if module_name in banned_modules:
+            logging.warning(f"Skipping banned memory manager: {module_name}")
+            continue
         if module_name != "base_tts":
             module = importlib.import_module(f"src.tts_types.{module_name}")
             tts_Types[module.tts_slug] = module

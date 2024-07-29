@@ -5,12 +5,18 @@ import os
 import importlib
 logging.info("Imported required libraries in language_model.py")
 
+with open(os.path.join(os.path.dirname(__file__), "module_banlist"), "r") as f:
+    banned_modules = f.read().split("\n")
+
 default = "openai" # The default LLM to use if the one specified in config.json is not found or if default is specified in config.json
 LLM_Types = {}
 # Get all LLMs from src/llms/ and add them to LLM_Types
 for file in os.listdir(os.path.join(os.path.dirname(__file__), "llms/")):
     if file.endswith(".py") and not file.startswith("__"):
         module_name = file[:-3]
+        if module_name in banned_modules:
+            logging.warning(f"Skipping banned memory manager: {module_name}")
+            continue
         if module_name != "base_llm":
             module = importlib.import_module(f"src.llms.{module_name}")
             LLM_Types[module.inference_engine_name] = module    

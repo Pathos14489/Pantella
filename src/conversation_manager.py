@@ -4,6 +4,9 @@ import os
 import importlib
 logging.info("Imported required libraries in conversation_manager.py")
 
+with open(os.path.join(os.path.dirname(__file__), "module_banlist"), "r") as f:
+    banned_modules = f.read().split("\n")
+    
 Manager_Types = {}
 # Get all Managers from src/conversation_managers/ and add them to Manager_Types
 for file in os.listdir(os.path.join(os.path.dirname(__file__), "conversation_managers/")):
