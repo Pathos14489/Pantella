@@ -14,10 +14,10 @@ LLM_Types = {}
 for file in os.listdir(os.path.join(os.path.dirname(__file__), "llms/")):
     if file.endswith(".py") and not file.startswith("__"):
         module_name = file[:-3]
-        logging.info(f"Importing {module_name} from src.llms")
         if module_name in banned_modules:
             logging.warning(f"Skipping banned language model: {module_name}")
             continue
+        logging.info(f"Importing {module_name} from src.llms")
         if module_name != "base_llm":
             module = importlib.import_module(f"src.llms.{module_name}")
             LLM_Types[module.inference_engine_name] = module    

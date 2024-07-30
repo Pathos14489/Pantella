@@ -13,10 +13,10 @@ Interface_Types = {}
 for file in os.listdir(os.path.join(os.path.dirname(__file__), "game_interfaces/")):
     if file.endswith(".py") and not file.startswith("__"):
         module_name = file[:-3]
-        logging.info(f"Importing {module_name} from src.game_interfaces")
         if module_name in banned_modules:
             logging.warning(f"Skipping banned memory manager: {module_name}")
             continue
+        logging.info(f"Importing {module_name} from src.game_interfaces")
         if module_name != "base_interface" and module_name.strip() != "":
             module = importlib.import_module(f"src.game_interfaces.{module_name}")
             Interface_Types[module.interface_slug] = module    

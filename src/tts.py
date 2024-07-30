@@ -13,10 +13,10 @@ tts_Types = {}
 for file in os.listdir(os.path.join(os.path.dirname(__file__), "tts_types/")):
     if file.endswith(".py") and not file.startswith("__"):
         module_name = file[:-3]
-        logging.info(f"Importing {module_name} from src.tts_types")
         if module_name in banned_modules:
             logging.warning(f"Skipping banned TTS: {module_name}")
             continue
+        logging.info(f"Importing {module_name} from src.tts_types")
         if module_name != "base_tts":
             module = importlib.import_module(f"src.tts_types.{module_name}")
             tts_Types[module.tts_slug] = module
