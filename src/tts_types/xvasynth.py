@@ -26,9 +26,13 @@ class Synthesizer(base_tts.base_Synthesizer):
         self.times_checked_xvasynth = 0
         
         if self.is_running():
-            logging.error(f'xVASynth is already running. Please close the xVASynth server before starting Pantella. xVASynth must be run in headless mode to work with Pantella.')
-            input('\nPress any key to stop Pantella...')
-            raise Exception(f'xVASynth is already running. Please close the xVASynth server before starting Pantella. xVASynth must be run in headless mode to work with Pantella.')
+            # check if voices are available
+            if len(self.voices()) == 0:
+                logging.error(f'xVASynth is already running not in headless mode! Please close the xVASynth server before starting Pantella. xVASynth must be run in headless mode to work with Pantella.')
+                input('\nPress any key to stop Pantella...')
+                raise Exception(f'xVASynth is already running not in headless mode! Please close the xVASynth server before starting Pantella. xVASynth must be run in headless mode to work with Pantella.')
+            else:
+                logging.info(f'xVASynth server is already running in headless mode. Connecting without starting a new server...')
         else:
             logging.info(f'Starting xVASynth headless server...')
             self.run_tts()  # Start xVASynth server if it isn't already running
@@ -192,13 +196,13 @@ class Synthesizer(base_tts.base_Synthesizer):
                 # logging.info(f"Response code: {r.status_code}")
                 # logging.info(f"Response text: {r.text}")
                 data = r.json()
+                for character in data[self.game]:
+                    self._voices.append(character['voiceName'])
             else:
                 logging.info(f"Could not get available voices from {self.get_available_voices_url}...")
                 # logging.info(f"Response code: {r.status_code}")
                 # logging.info(f"Response text: {r.text}")
                 data = None
-            for character in data[self.game]:
-                self._voices.append(character['voiceName'])
             self._voices = [voice for voice in self._voices if voice not in self.config.xvasynth_banned_voice_models] 
         return self._voices
 
