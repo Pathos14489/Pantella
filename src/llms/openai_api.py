@@ -18,11 +18,6 @@ except Exception as e:
 
 inference_engine_name = "openai"
 
-def setup_openai_secret_key(file_name):
-    with open(file_name, 'r') as f:
-        api_key = f.readline().strip()
-    return api_key
-
 class LLM(base_LLM.base_LLM):
     def __init__(self, conversation_manager, vision_enabled=False):
         global inference_engine_name
@@ -82,7 +77,9 @@ class LLM(base_LLM.base_LLM):
                 token_limit = 4096
             self.config.maximum_local_tokens = token_limit # Set the maximum number of tokens for local models to the number of tokens available for the model chosen    
 
-        api_key = setup_openai_secret_key(self.config.secret_key_file_path)
+        with open(self.config.secret_key_file_path, 'r') as f:
+            api_key = f.readline().strip()
+
         if loaded:
             self.client = OpenAI(api_key=api_key, base_url=self.config.alternative_openai_api_base)
         else:
