@@ -103,7 +103,6 @@ class ConversationManager(BaseConversationManager):
         self.game_interface.reset_game_info() # clear _pantella_ files in Skyrim folder
 
         self.character_manager = characters_manager.Characters(self) # Reset character manager
-        self.transcriber.call_count = 0 # reset radiant back and forth count
         self.conversation_step += 1
 
         logging.info('Conversations not starting when you select an NPC? Post an issue on the GitHub page: https://github.com/Pathos14489/Pantella Or (if you want quick responses for any issues) the Discord: https://discord.gg/M7Zw8mBY6r')
@@ -222,7 +221,8 @@ class ConversationManager(BaseConversationManager):
         transcribed_text = None
         if not self.conversation_ended and not self.radiant_dialogue: # check if conversation has ended and isn't radiant, if it's not, get next player input
             logging.info('Getting player response...')
-            transcribed_text = self.transcriber.get_player_response(", ".join(self.character_manager.active_characters.keys()))
+            # transcribed_text = self.transcriber.get_player_response(", ".join(self.character_manager.active_characters.keys()))
+            transcribed_text = self.game_interface.get_player_response(self.character_manager.active_characters.keys())
             player_sent_message = False
 
             if transcribed_text == "EndConversationNow":
@@ -250,7 +250,7 @@ class ConversationManager(BaseConversationManager):
                 transcript_cleaned = utils.clean_text(transcribed_text)
                 end_convo = False
                 for keyword in  self.character_manager.language["end_conversation_keywords"]:
-                    if self.transcriber.activation_name_exists(transcript_cleaned, keyword):
+                    if utils.activation_name_exists(transcript_cleaned, keyword):
                         end_convo = True
                         break
                 if end_convo or self.conversation_ended:

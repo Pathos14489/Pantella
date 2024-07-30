@@ -1,13 +1,12 @@
 print("base_conversation_manager.py executed")
 from src.logging import logging, time
 import asyncio
-import pandas as pd
 import src.game_interface as game_interface
 import src.characters_manager as characters_manager # Character Manager class
 import src.behavior_manager as behavior_manager
 import src.language_model as language_models
 import src.tts as tts
-import src.stt as stt
+# import src.stt as stt
 import src.character_db as character_db
 import uuid
 import json
@@ -93,7 +92,7 @@ class BaseConversationManager:
         self.llm, self.tokenizer = language_models.create_LLM(self) # Create LLM and Tokenizer based on config
         self.config.set_prompt_style(self.llm) # Set prompt based on LLM and config settings
         self.game_interface = game_interface.create_game_interface(self) # Create Game Interface based on config
-        self.transcriber = stt.Transcriber(self)
+        # self.transcriber = stt.Transcriber(self)
         self.behavior_manager = behavior_manager.create_manager(self) # Create Behavior Manager based on config
         
     def get_context(self): # Returns the current context(in the form of a list of messages) for the given active characters in the ongoing conversation

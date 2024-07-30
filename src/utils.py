@@ -47,6 +47,18 @@ def get_file_encoding(file_path):
     encoding = detect(data).get("encoding")
     return encoding
 
+def activation_name_exists(transcript_cleaned, activation_name):
+    """Identifies keyword in the input transcript"""
+    keyword_found = False
+    if activation_name in transcript_cleaned:
+        keyword_found = True
+    if activation_name in transcript_cleaned.lower():
+        keyword_found = True
+    if activation_name.lower() in transcript_cleaned:
+        keyword_found = True
+    if activation_name.lower() in transcript_cleaned.lower():
+        keyword_found = True
+    return keyword_found
 
 def cleanup_mei(remove_mei_folders):
     """

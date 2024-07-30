@@ -22,6 +22,9 @@ class GameInterface(BaseGameInterface):
                 logging.warn(f'''Warning: Could not find _pantella_skyrim_folder.txt in {self.config.game_path}.\nIf you have not yet casted the Pantella spell in-game you can safely ignore this message.\nIf you have casted the Pantella spell please check that your\nPantellaSoftware\\config.json "skyrim_folder" has been set correctly\n(instructions on how to set this up are in the config file itself).\nIf you are still having issues, a list of solutions can be found here: \nhttps://github.com/Pathos14489/Pantella\n''')
         if not os.path.exists(self.mod_voice_dir):
             raise FileNotFoundError(f"Mod voice directory not found at {self.mod_voice_dir}")
+        
+        self.audio_supported = True
+        self.text_supported = True
 
         # self.mod_voice_dir = self.conversation_manager.config.mod_voice_dir
         self.add_voicelines_to_all_voice_folders = self.config.add_voicelines_to_all_voice_folders
@@ -69,6 +72,18 @@ class GameInterface(BaseGameInterface):
             if os.path.exists(wav_file_path):
                 os.remove(wav_file_path)
             shutil.copyfile(audio_file, wav_file_path)
+
+    def display_status(self, status):
+        logging.info(f"Displaying status in-game: {status}")
+        self.write_game_info('_pantella_status', status)
+
+    def get_text_input(self):
+        self.write_game_info('_pantella_text_input', '') # clear text input before they write
+        self.write_game_info('_pantella_text_input_enabled', 'True') # enable text input in the game
+        transcribed_text = self.load_data_when_available('_pantella_text_input', '') # wait for player to write and read text input
+        self.write_game_info('_pantella_text_input', '') # clear text input after reading
+        self.write_game_info('_pantella_text_input_enabled', 'False') # disable text input in the game
+        return transcribed_text
             
     def setup_voiceline_save_location(self, in_game_voice_folder):
         """Save voice model folder to Pantella Spell if it does not already exist"""
@@ -286,6 +301,9 @@ class GameInterface(BaseGameInterface):
         self.write_game_info('_pantella_caster_equipment', '')
         self.write_game_info('_pantella_target_spells', '')
         self.write_game_info('_pantella_caster_spells', '')
+
+        if not os.path.exists(f'{self.game_path}\\_pantella_microphone_enabled.txt'):
+            self.write_game_info('_pantella_microphone_enabled', 'false')
 
         if not os.path.exists(f'{self.game_path}\\_pantella_context_string.txt'):
             self.write_game_info('_pantella_context_string', '')

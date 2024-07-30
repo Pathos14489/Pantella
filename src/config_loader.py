@@ -405,20 +405,27 @@ class ConfigLoader:
                 "chromadb_memory_direction": "topdown", # topdown or bottomup
                 "chromadb_query_size": 5,
             },
-            "Microphone": {
-                "whisper_model": "base",
+            "SpeechToText": {
+                "stt_enabled": False,
+                "stt_engine": "faster_whisper", # faster_whisper, openai_whisper
                 "stt_language": "default",
-                "stt_translate": False,
-                "whisper_process_device": "cpu",
-                "whisper_type": "faster_whisper",
-                "whisper_url": "http://127.0.0.1:8080/inference",
                 "audio_threshold": "auto",
                 "pause_threshold": 0.5,
                 "listen_timeout": 30,
+            },
+            "whisper": {
+                "whisper_model": "base",
+            },
+            "faster_whisper": {
+                "stt_translate": False,
+                "whisper_process_device": "cpu",
                 "whisper_cpu_threads": 4,
                 "whisper_compute_type": "auto",
                 "beam_size": 5,
                 "vad_filter": True,
+            },
+            "openai_whisper": {
+                "whisper_url": "http://127.0.0.1:8080/inference",
             },
             "LanguageModel": {
                 "inference_engine": "default",
@@ -665,20 +672,27 @@ class ConfigLoader:
                 "chromadb_memory_direction": self.chromadb_memory_direction,
                 "chromadb_query_size": self.chromadb_query_size,
             },
-            "Microphone": {
-                "whisper_model": self.whisper_model,
+            "SpeechToText": {
+                "stt_enabled": self.stt_enabled,
+                "stt_engine": self.stt_engine,
                 "stt_language": self.stt_language,
-                "stt_translate": self.stt_translate,
-                "whisper_process_device": self.whisper_process_device,
-                "whisper_type": self.whisper_type,
-                "whisper_url": self.whisper_url,
                 "audio_threshold": self.audio_threshold,
                 "pause_threshold": self.pause_threshold,
                 "listen_timeout": self.listen_timeout,
+            },
+            "whisper": {
+                "whisper_model": self.whisper_model,
+            },
+            "faster_whisper": {
+                "stt_translate": self.stt_translate,
+                "whisper_process_device": self.whisper_process_device,
                 "whisper_cpu_threads": self.whisper_cpu_threads,
                 "whisper_compute_type": self.whisper_compute_type,
                 "beam_size": self.beam_size,
                 "vad_filter": self.vad_filter,
+            },
+            "openai_whisper": {
+                "whisper_url": self.whisper_url,
             },
             "LanguageModel": {
                 "inference_engine": self.inference_engine,

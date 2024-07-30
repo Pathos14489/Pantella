@@ -71,7 +71,6 @@ class ConversationManager(BaseConversationManager):
     def await_and_setup_conversation(self): # wait for player to select an NPC and setup the conversation when outside of conversation
         self.conversation_id = str(uuid.uuid4()) # Generate a unique ID for the conversation
         self.character_manager = characters_manager.Characters(self) # Reset character manager
-        self.transcriber.call_count = 0 # reset radiant back and forth count
         self.conversation_step += 1
 
         logging.info('\nConversations not starting when you select an NPC? Post an issue on the GitHub page: https://github.com/Pathos14489/Pantella')
@@ -132,7 +131,7 @@ class ConversationManager(BaseConversationManager):
             # check if user is ending conversation
             end_convo = False
             for keyword in  self.character_manager.prompt_style["language"]["end_conversation_keywords"]:
-                if self.transcriber.activation_name_exists(transcript_cleaned, keyword):
+                if utils.activation_name_exists(transcript_cleaned, keyword):
                     end_convo = True
                     break
             if end_convo or self.conversation_ended:
