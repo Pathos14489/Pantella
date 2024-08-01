@@ -20,7 +20,8 @@ for file in os.listdir(os.path.join(os.path.dirname(__file__), "stt_types/")):
         if module_name != "base_stt" and module_name != "base_whisper":
             module = importlib.import_module(f"src.stt_types.{module_name}")
             transcriber_Types[module.stt_slug] = module
-transcriber_Types["default"] = transcriber_Types[default]
+if default in transcriber_Types:
+    transcriber_Types["default"] = transcriber_Types[default]
 logging.info("Imported Transcriber types in stt.py")
 # print available STT types
 logging.config(f"Available Transcriber types: {transcriber_Types.keys()}")
@@ -33,9 +34,9 @@ def create_Transcriber(conversation_manager):
         if slug not in transcriber_Types:
             slug = slug.lower()
         if slug not in transcriber_Types:
-            logging.error(f"Could not find inference engine: {conversation_manager.config.stt_engine}! Please check your config.json file and try again!")
+            logging.error(f"Could not find SpeechToText: {conversation_manager.config.stt_engine}! Please check your config.json file and try again!")
             input("Press enter to continue...")
-            raise ValueError(f"Could not find inference engine: {conversation_manager.config.stt_engine}! Please check your config.json file and try again!")
+            raise ValueError(f"Could not find SpeechToText: {conversation_manager.config.stt_engine}! Please check your config.json file and try again!")
         return transcriber_Types[slug].Transcriber(conversation_manager)
     else:
         if slug in banned_modules:
