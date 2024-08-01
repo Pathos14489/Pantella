@@ -101,11 +101,13 @@ class base_Synthesizer:
         options.append(voice_model.upper().replace(' ', '')) # add the uppercase version of the voice model without spaces
         if voice_model_folder != None:
             options.append(voice_model_folder) # add the voice model folder from the character object
+
+        available_voices = self.voices()
         if log:
             logging.info("Trying to detect voice model using the following aliases: ", options)
-            logging.config("Available voices: ", self.voices())
+            logging.config("Available voices: ", available_voices)
         for option in options:
-            if option in self.voices():
+            if option in available_voices:
                 if log:
                     logging.info(f'Voice model "{option}" found!')
                 return option # return the first valid voice model found
