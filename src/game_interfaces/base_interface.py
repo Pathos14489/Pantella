@@ -3,6 +3,7 @@ import src.utils as utils
 from src.stt import create_Transcriber
 import asyncio
 import wave
+import sys
 
 valid_games = []
 interface_slug = "base_game_interface"
@@ -26,6 +27,7 @@ class BaseGameInterface:
         self.active_character = None
         self.audio_supported = False
         self.text_supported = True
+        self.transcriber = None
         self.prev_game_time = ''
         if self.config.stt_enabled:
             self.transcriber = create_Transcriber(self)
@@ -51,21 +53,26 @@ class BaseGameInterface:
     def get_player_response(self, possible_names_list):
         """Get the player's response from the game"""
         logging.info(f"Getting player response...")
-        if self.audio_supported and self.check_mic_status(): # listen for response
-            logging.info('Listening for player response...')
-            if not self.transcriber.initialized:
-                logging.info('Microphone requested but not initialized. Initializing...')
-                self.transcriber.initialize()
-            transcribed_text = self.transcriber.recognize_input(possible_names_list)
-            logging.info(f'Player said: {transcribed_text}')
-        else: # use text input
-            logging.info('Awaiting text input...')
-            if self.text_supported:
-                if self.transcriber.initialized:
-                    logging.info('Microphone not requested but was already initialized. Unloading transcriber until it\'s needed...')
-                    self.transcriber.unload()
-                transcribed_text = self.get_text_input()
-            logging.info(f'Player wrote: {transcribed_text}')
+        try:
+            if self.audio_supported and self.check_mic_status() and "transcriber" in locals(): # listen for response
+                logging.info('Listening for player response...')
+                if "transcriber" in locals() and not self.transcriber.initialized:
+                    logging.info('Microphone requested but not initialized. Initializing...')
+                    self.transcriber.initialize()
+                transcribed_text = self.transcriber.recognize_input(possible_names_list)
+                logging.info(f'Player said: {transcribed_text}')
+            else: # use text input
+                logging.info('Awaiting text input...')
+                if self.text_supported:
+                    if "transcriber" in locals() and self.transcriber.initialized:
+                        logging.info('Microphone not requested but was already initialized. Unloading transcriber until it\'s needed...')
+                        self.transcriber.unload()
+                    transcribed_text = self.get_text_input()
+                logging.info(f'Player wrote: {transcribed_text}')
+        except Exception as e:
+            logging.error(f"There was a problem getting the player's response: {e}") 
+            input("Press Enter to continue...")
+            raise e
         return transcribed_text
 
     def get_text_input(self):
