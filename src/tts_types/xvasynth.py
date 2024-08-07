@@ -90,7 +90,7 @@ class Synthesizer(base_tts.base_Synthesizer):
     
     @property
     def set_available_voices_url(self):
-        self.set_available_voices_url = f'{self.config.xvasynth_base_url}/setAvailableVoices'
+        return f'{self.config.xvasynth_base_url}/setAvailableVoices'
         
     def _say(self, voiceline, voice_model="Female Sultry", volume=0.5):
         self.change_voice(voice_model)
