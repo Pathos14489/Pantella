@@ -164,6 +164,9 @@ class GameInterface(BaseGameInterface):
 
     async def send_audio_to_external_software(self, queue_output):
         logging.info(f"Dialogue to play: {queue_output[0]}")
+        if not os.path.exists(queue_output[0]):
+            logging.error(f"Audio file not found: {queue_output[0]}")
+            raise FileNotFoundError(f"Audio file not found: {queue_output[0]}")
         self.save_files_to_voice_folders(queue_output)
 
     async def send_response(self, sentence_queue, event):
