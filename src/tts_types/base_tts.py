@@ -43,6 +43,7 @@ class base_Synthesizer:
         self.output_path = utils.resolve_path('data')+'\\data'
         # last active voice model
         self.crashable = self.config.continue_on_voice_model_error
+        self._voices = None
 
     @property
     def language(self):

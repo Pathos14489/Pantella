@@ -81,10 +81,16 @@ class Synthesizer(base_tts.base_Synthesizer):
         self.synthesize_batch_url = f'{self.config.xvasynth_base_url}/synthesize_batch'
         self.loadmodel_url = f'{self.config.xvasynth_base_url}/loadModel'
         self.setvocoder_url = f'{self.config.xvasynth_base_url}/setVocoder'
-        self.get_available_voices_url = f'{self.config.xvasynth_base_url}/getAvailableVoices'
-        self.set_available_voices_url = f'{self.config.xvasynth_base_url}/setAvailableVoices'
         logging.config(f'xVASynth - Available voices: {self.voices()}')
         logging.config(f"Total xVASynth Voices: {len(self.voices())}")
+
+    @property
+    def get_available_voices_url(self):
+        return f'{self.config.xvasynth_base_url}/getAvailableVoices'
+    
+    @property
+    def set_available_voices_url(self):
+        self.set_available_voices_url = f'{self.config.xvasynth_base_url}/setAvailableVoices'
         
     def _say(self, voiceline, voice_model="Female Sultry", volume=0.5):
         self.change_voice(voice_model)
