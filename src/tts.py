@@ -31,15 +31,21 @@ def create_Synthesizer(conversation_manager):
     slugs = conversation_manager.config.tts_engine # Get the TTS slug from config.json
     if type(slugs) == list and len(slugs) == 1:
         slugs = slugs[0]
+        logging.warning(f"Using single TTS engine: {slugs}")
+    else:
+        logging.info(f"Using multi_tts with TTS engines: {slugs}")
     ttses = []
     if type(slugs) == list: # If there are multiple TTS engines specified in config.json
         for slug in slugs:
+            logging.info(f"Creating TTS engine: {slug}")
             if slug not in tts_Types:
                 slug = slug.lower()
+                logging.warning(f"Could not find inference engine: {slug}! Trying lowercase...?")
             if slug not in tts_Types:
                 logging.error(f"Could not find inference engine: {slug}! Please check your config.json file and try again!")
                 input("Press enter to continue...")
                 raise ValueError(f"Could not find inference engine: {slug}! Please check your config.json file and try again!")
+            logging.info(f"Found TTS engine '{slug}', loading...")
             synth = tts_Types[slug].Synthesizer(conversation_manager)
             synth.crashable = False # If we have multiple tts engines, we don't want to crash if one of them doesn't have a voice model
             ttses.append(synth)
