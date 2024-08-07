@@ -878,6 +878,9 @@ class base_LLM():
                     last_chunk = content
                     if content is None:
                         continue
+                    if eos: # if the EOS token has been detected, then the generation should stop
+                        logging.info(f"EOS token detected. Stopping generation.")
+                        break
 
                     raw_reply += content
 
@@ -931,6 +934,7 @@ class base_LLM():
                                 logging.debug("Banned Characters:",self.stop)
                                 eos = True
                                 sentence = sentence.split(char)[0]
+                                raw_reply = raw_reply.split(char)[0]
                                 logging.info(f"Trimming last sentence to: {sentence}")
                         if self.config.assist_check and 'assist' in sentence and num_sentences > 0: # if remote, check if the response contains the word assist for some reason. Probably some OpenAI nonsense.# Causes problems if asking a follower if you should "assist" someone, if they try to say something along the lines of "Yes, we should assist them." it will cut off the sentence and basically ignore the player. TODO: fix this with a more robust solution
                             logging.info(f"'assist' keyword found. Ignoring sentence which begins with: {sentence}") 
@@ -1148,6 +1152,13 @@ class base_LLM():
                             break
 
                 logging.info(f"LLM response took {time.time() - start_time} seconds to execute")
+                if full_reply.strip() == "":
+                    if self.config.error_on_empty_full_reply:
+                        raise Exception('Empty full reply')
+                if num_sentences == 0: # if no sentences were generated, then the LLM failed to generate a response
+                    logging.error(f"LLM failed to generate a response or a valid Author. Retrying...")
+                    retries += 1
+                    continue
                 break
             except Exception as e:
                 if force_speaker is not None:
@@ -1194,11 +1205,6 @@ class base_LLM():
                     retries -= 1
                     time.sleep(5)
 
-            if num_sentences == 0: # if no sentences were generated, then the LLM failed to generate a response
-                logging.error(f"LLM failed to generate a response or a valid Author. Retrying...")
-                retries += 1
-                continue
-
         if voice_line_sentences > 0: # if the voice line is not empty, then generate the audio for the voice line
             logging.info(f"Generating voiceline: \"{voice_line.strip()}\" for {self.conversation_manager.game_interface.active_character.name}.")
             if typing_roleplay: # if the asterisk is open, then the narrator is speaking
@@ -1231,9 +1237,9 @@ class base_LLM():
                 else:
                     full_reply = full_reply.replace(self._prompt_style["roleplay_prefix"], "")
                 logging.warning(f"Fixed full reply: {full_reply}")
-        if full_reply.strip() == "":
-            logging.warning(f"Skipping empty full reply")
-            return
+            if full_reply.strip() == "":
+                logging.warning(f"Skipping empty full reply")
+                return
         # try: 
         #     if sentence_behavior != None:
         #         full_reply = sentence_behavior.keyword + ": " + full_reply.strip() # add the keyword back to the sentence to reinforce to the that the keyword was used to trigger the bahavior
