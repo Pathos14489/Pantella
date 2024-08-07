@@ -1,6 +1,5 @@
 import time
 import inspect
-import traceback
 import os
 
 bcolors = {
