@@ -524,10 +524,10 @@ class TTSWrapper:
         """Gets available speakers, ensuring uniqueness across both folders."""
         speaker_info = {}
         for latent_speaker_folder in self.latent_speaker_folders:
-            for lang_code in os.listdir(self.speaker_folder):
-                full_path = os.path.join(self.speaker_folder, lang_code)
+            for lang_code in os.listdir(latent_speaker_folder):
+                full_path = os.path.join(latent_speaker_folder, lang_code)
                 if os.path.isdir(full_path):
-                    speaker_path = os.path.join(self.speaker_folder, lang_code)
+                    speaker_path = os.path.join(latent_speaker_folder, lang_code)
                     latent_speaker_path = os.path.join(latent_speaker_folder, lang_code)
 
                     latent_speaker_names = [s['speaker_name'] for s in self._get_speakers_from_json(latent_speaker_path)]
