@@ -17,34 +17,27 @@ class Synthesizer(base_tts.base_Synthesizer):
     def __init__(self, conversation_manager):
         super().__init__(conversation_manager)
         self.tts_slug = tts_slug
-        self.xtts_data = self.config.xtts_api_data
-        self.xtts_api_dir = self.config.xtts_api_dir
         if not self.xtts_api_dir == "" or not self.xtts_api_dir == None or not self.xtts_api_dir.lower() == "none":
             if not os.path.exists(self.xtts_api_dir+"\\xtts_api_server\\__init__.py"):
                 logging.error(f'xTTS API server not found at: {self.config.xtts_api_dir}')
-                logging.error(f'Please download the xTTS API server from: https://github.com/Pathos14489/xtts-api-server-mantella and place it in the directory specified in the config file, or update where the config file is looking for the xTTS API directory.')
+                logging.error(f'Please download the xTTS API server from: https://github.com/Pathos14489/xtts-api-server-pantella and place it in the directory specified in the config file, or update where the config file is looking for the xTTS API directory.')
                 input("Press enter to continue...")
                 raise FileNotFoundError()
-        self.voice_latent_folders = [
-            self.xtts_api_dir + "latent_speaker_folder\\" if self.xtts_api_dir.endswith("\\") else self.xtts_api_dir + "\\latent_speaker_folder\\",
+        logging.info(f'xTTS API voice latent folders: {self.voice_latent_folders}')
+        self.speaker_wavs_folders = [
+            self.xtts_api_dir + "speakers\\" if self.xtts_api_dir.endswith("\\") else self.xtts_api_dir + "\\speakers\\",
         ]
         for addon_slug in self.config.addons:
             addon = self.config.addons[addon_slug]
-            if "xtts_voice_latents" in addon["addon_parts"]:
-                addon_latents_folder = self.config.addons_dir + addon_slug + "\\xtts_voice_latents\\"
-                if os.path.exists(addon_latents_folder):
-                    self.voice_latent_folders.append(addon_latents_folder)
+            if "xtts_speaker_wavs" in addon["addon_parts"]:
+                addon_speaker_wavs_folder = self.config.addons_dir + addon_slug + "\\speakers\\"
+                if os.path.exists(addon_speaker_wavs_folder):
+                    self.speaker_wavs_folders.append(addon_speaker_wavs_folder)
                 else:
-                    logging.error(f'xtts_voice_latents folder not found at: {addon_latents_folder}')
+                    logging.error(f'xtts_speaker_wavs folder not found at: {addon_speaker_wavs_folder}')
         # make all the paths absolute
-        self.voice_latent_folders = [os.path.abspath(folder) for folder in self.voice_latent_folders]
-        logging.info(f'xTTS API voice latent folders: {self.voice_latent_folders}')
-        self.xtts_api_base_url = self.config.xtts_api_base_url
-        self.synthesize_url_xtts = self.xtts_api_base_url + "/tts_to_audio/"
-        self.switch_model_url = self.xtts_api_base_url + "/switch_model"
-        self.xtts_set_tts_settings = self.xtts_api_base_url + "/set_tts_settings/"
-        self.xtts_get_speakers_list = self.xtts_api_base_url + "/speakers_list/"
-        self.xtts_get_models_list = self.xtts_api_base_url + "/get_models_list/"
+        self.speaker_wavs_folders = [os.path.abspath(folder) for folder in self.speaker_wavs_folders]
+        logging.info(f'xTTS API speaker wavs folders: {self.speaker_wavs_folders}')
         if self.is_running():
             logging.warning(f'xTTS_API is already running. Voice latents added by addons will not be available until the server is closed and restarted by Pantella.')
         else:
@@ -70,6 +63,46 @@ class Synthesizer(base_tts.base_Synthesizer):
         # self.official_model_list = ["main","v2.0.3","v2.0.2","v2.0.1","v2.0.0"]
         logging.config(f'xTTS_api - Available xTTS_api models: {self.available_models()}')
         logging.config(f'xTTS_api - Available xTTS_api voices: {self.voices()}')
+
+    @property
+    def xtts_api_base_url(self):
+        return self.config.xtts_api_base_url
+    @property
+    def synthesize_url_xtts(self):
+        return self.xtts_api_base_url + "/tts_to_audio/"
+    @property
+    def switch_model_url(self):
+        return self.xtts_api_base_url + "/switch_model"
+    @property
+    def xtts_set_tts_settings(self):
+        return self.xtts_api_base_url + "/set_tts_settings/"
+    @property
+    def xtts_get_speakers_list(self):
+        return self.xtts_api_base_url + "/speakers_list/"
+    @property
+    def xtts_get_models_list(self):
+        return self.xtts_api_base_url + "/get_models_list/"
+    @property
+    def xtts_data(self):
+        return self.config.xtts_api_data
+    @property
+    def xtts_api_dir(self):
+        return self.config.xtts_api_dir
+    @property
+    def voice_latent_folders(self):
+        voice_latent_folders = [
+            self.xtts_api_dir + "latent_speaker_folder\\" if self.xtts_api_dir.endswith("\\") else self.xtts_api_dir + "\\latent_speaker_folder\\",
+        ]
+        for addon_slug in self.config.addons:
+            addon = self.config.addons[addon_slug]
+            if "xtts_voice_latents" in addon["addon_parts"]:
+                addon_latents_folder = self.config.addons_dir + addon_slug + "\\xtts_voice_latents\\"
+                if os.path.exists(addon_latents_folder):
+                    voice_latent_folders.append(addon_latents_folder)
+                else:
+                    logging.error(f'xtts_voice_latents folder not found at: {addon_latents_folder}')
+        # make all the paths absolute
+        return [os.path.abspath(folder) for folder in voice_latent_folders]
 
     def voices(self):
         """Return a list of available voices"""
@@ -121,7 +154,7 @@ class Synthesizer(base_tts.base_Synthesizer):
         """Run the xTTS server -- Required for Pantella to manage addon voice lantents"""
         try:
             logging.info(f'CWD: {os.getcwd()} - xTTS_API CWD: {self.config.xtts_api_dir}')
-            command = f'{self.config.python_binary} -m xtts_api_server -sf ./speakers -lsf {",".join(self.voice_latent_folders)}'
+            command = f'{self.config.python_binary} -m xtts_api_server -sf {",".join(self.speaker_wavs_folders)} -lsf {",".join(self.voice_latent_folders)}'
             # start the process without waiting for a response
             if not self.config.linux_mode:
                 logging.info(f'Running xTTS API server for Windows with command: {command}')

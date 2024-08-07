@@ -70,10 +70,6 @@ class Synthesizer(base_tts.base_Synthesizer):
                 input('\nPress any key to stop Pantella...')
                 raise FileNotFoundError(f"xVASynth path invalid: {self.xvasynth_path}")
             
-        if self.game == "fallout4" or self.game == "fallout4vr": # get the correct voice model for Fallout 4
-            self.model_path = f"{self.xvasynth_path}/resources/app/models/fallout4/"
-        else:
-            self.model_path = f"{self.xvasynth_path}/resources/app/models/skyrim/"
 
         self._voices = None
 
@@ -91,6 +87,14 @@ class Synthesizer(base_tts.base_Synthesizer):
     @property
     def set_available_voices_url(self):
         return f'{self.config.xvasynth_base_url}/setAvailableVoices'
+    
+    @property
+    def model_path(self):
+        if self.game == "fallout4" or self.game == "fallout4vr": # get the correct voice model for Fallout 4
+            model_path = f"{self.xvasynth_path}/resources/app/models/fallout4/"
+        else:
+            model_path = f"{self.xvasynth_path}/resources/app/models/skyrim/"
+        return model_path
         
     def _say(self, voiceline, voice_model="Female Sultry", volume=0.5):
         self.change_voice(voice_model)

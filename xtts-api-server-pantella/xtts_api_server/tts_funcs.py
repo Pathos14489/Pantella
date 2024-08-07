@@ -75,8 +75,12 @@ class TTSWrapper:
         self.stream_chunk_size = 100
 
         self.deepspeed = deepspeed
-
-        self.speaker_folder = speaker_folder
+        
+        speaker_folder = speaker_folder.split(',')
+        if type(speaker_folder) is not list:
+            self.speaker_folder = [speaker_folder]
+        else:
+            self.speaker_folder = speaker_folder
         self.output_folder = output_folder
         self.model_folder = model_folder
         latent_speaker_folders = latent_speaker_folders.split(',')
@@ -283,39 +287,39 @@ class TTSWrapper:
         # Iterate over each language subdirectory in the speaker folder
         total_new_latents = 0
         total_existing_latents = 0
+        for speaker_folder in self.speaker_folder:
+            for language_code in os.listdir(speaker_folder):
+                language_path = os.path.join(speaker_folder, language_code)
+                if os.path.isdir(language_path):
+                    speakers_list = self._get_speakers(language_path)
+                    
+                    new_latents_count = 0
+                    existing_latents_count = 0
 
-        for language_code in os.listdir(self.speaker_folder):
-            language_path = os.path.join(self.speaker_folder, language_code)
-            if os.path.isdir(language_path):
-                speakers_list = self._get_speakers(language_path)
-                
-                new_latents_count = 0
-                existing_latents_count = 0
+                    for speaker in speakers_list:
+                        # Check if the latent JSON already exists
+                        latent_exists = False
+                        for latent_folder in self.latent_speaker_folders:
+                            latent_json_path = os.path.join(latent_folder, language_code, f"{speaker['speaker_name']}.json")
+                            if os.path.exists(latent_json_path):
+                                latent_exists = True
+                                break
+                        if latent_exists:
+                            # Increment existing latents counter if the file exists
+                            existing_latents_count += 1
+                        else:
+                            # Otherwise, create the latent and increment new latents counter
+                            self.get_or_create_latents(speaker['speaker_name'], speaker['speaker_wav'], language_code)
+                            new_latents_count += 1
+                    
+                    total_new_latents += new_latents_count
+                    total_existing_latents += existing_latents_count
 
-                for speaker in speakers_list:
-                    # Check if the latent JSON already exists
-                    latent_exists = False
-                    for latent_folder in self.latent_speaker_folders:
-                        latent_json_path = os.path.join(latent_folder, language_code, f"{speaker['speaker_name']}.json")
-                        if os.path.exists(latent_json_path):
-                            latent_exists = True
-                            break
-                    if latent_exists:
-                        # Increment existing latents counter if the file exists
-                        existing_latents_count += 1
-                    else:
-                        # Otherwise, create the latent and increment new latents counter
-                        self.get_or_create_latents(speaker['speaker_name'], speaker['speaker_wav'], language_code)
-                        new_latents_count += 1
-                
-                total_new_latents += new_latents_count
-                total_existing_latents += existing_latents_count
-
-                # Report based on whether new latent JSON files were created
-                if new_latents_count > 0:
-                    logger.info(f"Latents created for all {new_latents_count} new speakers in {language_code}.")
-                if existing_latents_count > 0:
-                    logger.info(f"Latent JSON already existing for {existing_latents_count} speakers in {language_code}.")
+                    # Report based on whether new latent JSON files were created
+                    if new_latents_count > 0:
+                        logger.info(f"Latents created for all {new_latents_count} new speakers in {language_code}.")
+                    if existing_latents_count > 0:
+                        logger.info(f"Latent JSON already existing for {existing_latents_count} speakers in {language_code}.")
 
         # Optionally, provide a summary of actions taken across all languages
         logger.info(f"Total new latents created across all languages: {total_new_latents}")
@@ -397,7 +401,7 @@ class TTSWrapper:
 
         # Creating language subdirectories within speaker_folder and the first latent_speaker_folder
         for language_code in supported_languages.keys():
-            for folder in [self.speaker_folder, self.latent_speaker_folders[0]]:
+            for folder in self.speaker_folder + self.latent_speaker_folders:
                 language_path = os.path.join(folder, language_code)
                 if not os.path.exists(language_path):
                     os.makedirs(language_path)
@@ -697,19 +701,21 @@ class TTSWrapper:
 
     def get_speaker_wav(self, speaker_name_or_path, language_code):
         """Gets the speaker_wav(s) for a given speaker name considering the language."""
-        base_path = os.path.join(self.speaker_folder, language_code)  # Adjust the path to include the language code
+        for speaker_folder in self.speaker_folder:
+            base_path = os.path.join(speaker_folder, language_code)  # Adjust the path to include the language code
 
-        if speaker_name_or_path.endswith('.wav'):
-            # If it's a file name
-            speaker_wav = os.path.join(base_path, speaker_name_or_path)  # Adjust to look inside the language-specific folder
-        else:
-            # If it's a speaker name
-            full_path = os.path.join(base_path, speaker_name_or_path)
-            wav_files = [os.path.join(full_path, f) for f in os.listdir(full_path) if f.endswith('.wav')]
-            if not wav_files:
-                raise ValueError(f"Speaker {speaker_name_or_path} not found in language folder '{language_code}'.")
-            speaker_wav = wav_files if len(wav_files) > 1 else wav_files[0]
-
+            if speaker_name_or_path.endswith('.wav'):
+                # If it's a file name
+                speaker_wav = os.path.join(base_path, speaker_name_or_path)  # Adjust to look inside the language-specific folder
+            else:
+                # If it's a speaker name
+                full_path = os.path.join(base_path, speaker_name_or_path)
+                wav_files = [os.path.join(full_path, f) for f in os.listdir(full_path) if f.endswith('.wav')]
+                if not wav_files:
+                    raise ValueError(f"Speaker {speaker_name_or_path} not found in language folder '{language_code}'.")
+                speaker_wav = wav_files if len(wav_files) > 1 else wav_files[0]
+            if os.path.exists(speaker_wav):
+                break
         return speaker_wav
 
     # MAIN FUNC
@@ -742,22 +748,24 @@ class TTSWrapper:
                 speaker_wav = "out.wav"
                 logger.info(f"Using latents from JSON for {speaker_name} in {language_code}")
             else:
-                # Check speaker_name_or_path in models_folder and speakers_folder
                 speaker_path_models_folder = Path(self.model_folder) / speaker_name_or_path
-                speaker_path_speakers_folder = Path(self.speaker_folder) / language_code / speaker_name
-                speaker_path_speakers_file = speaker_path_speakers_folder.with_suffix('.wav')
-            
-                # Check if the .wav file exists or if the directory exists for the speaker
-                if speaker_path_speakers_folder.is_dir() or speaker_path_speakers_file.exists():
-                    speaker_wav = self.get_speaker_wav(speaker_name_or_path, language)
-                elif speaker_path_models_folder.is_dir():
-                    reference_wav = speaker_path_models_folder / "reference.wav"
-                    if reference_wav.exists():
-                        speaker_wav = str(reference_wav)
+                for speaker_folder in self.speaker_folder:
+                    # Check speaker_name_or_path in models_folder and speakers_folder
+                    speaker_path_speakers_folder = Path(speaker_folder) / language_code / speaker_name
+                    speaker_path_speakers_file = speaker_path_speakers_folder.with_suffix('.wav')
+                
+                    # Check if the .wav file exists or if the directory exists for the speaker
+                    if speaker_path_speakers_folder.is_dir() or speaker_path_speakers_file.exists():
+                        speaker_wav = self.get_speaker_wav(speaker_name_or_path, language)
+                    elif speaker_path_models_folder.is_dir():
+                        reference_wav = speaker_path_models_folder / "reference.wav"
+                        if reference_wav.exists():
+                            speaker_wav = str(reference_wav)
+                        else:
+                            logger.info(f"No 'reference.wav' found in {speaker_path_models_folder}")
                     else:
-                        logger.info(f"No 'reference.wav' found in {speaker_path_models_folder}")
-                else:
-                    raise ValueError(f"Speaker path '{speaker_name_or_path}' not found in speakers or models folder.")
+                        raise ValueError(f"Speaker path '{speaker_name_or_path}' not found in speakers or models folder.")
+                    break
             # Determine output path based on whether a full path or a file name was provided
             if os.path.isabs(file_name_or_path):
                 # An absolute path was provided by user; use as is.

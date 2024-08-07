@@ -134,6 +134,8 @@ class ConfigLoader:
             # Make absolute path because it's a relative path and not a raw command or absolute path
             self.python_binary = os.path.abspath(self.python_binary)
         self.xtts_api_dir = os.path.abspath(self.xtts_api_dir) # Make absolute path for xTTS API
+        self.addons_dir = os.path.abspath("./addons/")
+        logging.config(f"Addons directory: {self.addons_dir}")
 
         logging.config(f"Unique settings:", self.unique())
         logging.config(f"Config loaded from {self.config_path}")
@@ -289,7 +291,6 @@ class ConfigLoader:
                 "memory_manager": "auto"
             },
             "Addons": {
-                "addons_dir": ".\\addons\\",
                 "disabled_addons": [],
             },
             "summarizing_memory":{
@@ -572,7 +573,7 @@ class ConfigLoader:
                 "xtts_num_beams": 1,
             },
             "xTTS_api": {
-                "xtts_api_dir": ".\\xtts-api-server-mantella\\",
+                "xtts_api_dir": ".\\xtts-api-server-pantella\\",
                 "xtts_api_base_url": "http://127.0.0.1:8020",
                 "xtts_api_data": {
                     "temperature": 0.75,
@@ -650,7 +651,6 @@ class ConfigLoader:
                 "memory_manager": self.memory_manager
             },
             "Addons":{
-                "addons_dir": self.addons_dir,
                 "disabled_addons": self.disabled_addons,
             },
             "summarizing_memory": {

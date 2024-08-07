@@ -321,7 +321,7 @@ class CharacterDB():
         self.valid = list(set(self.valid)) # Bandaid fix for duplicate voice models
         logging.config(f"Valid voices found in character database: {len(self.valid)}/{len(self.all_voice_models)}")
         if len(self.valid) > len(self.all_voice_models):
-            logging.info(self.valid)
+            logging.info("Valid voices pairs:",self.valid)
 
         logging.config(f"Total unused voices: {len(self.unused_voices)}/{len(synthesizer_available_voices)}")
         if len(self.invalid) > 0:
