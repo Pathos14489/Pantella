@@ -82,17 +82,18 @@ class base_Synthesizer:
         raise NotImplementedError("voices() method not implemented in your tts type.")
         return []
     
-    def get_valid_voice_model(self, character, crashable=None, multi_tts=True, log=True):
+    def get_valid_voice_model(self, character_or_voice_model, crashable=None, multi_tts=True, log=True):
         """Get the valid voice model for the character from the available voices - Order of preference: voice_model, voice_model without spaces, lowercase voice_model, uppercase voice_model, lowercase voice_model without spaces, uppercase voice_model without spaces"""
         if crashable is None:
             crashable = self.crashable
+        # log = True
         voice_model_folder = None
-        if type(character) == str:
-            voice_model = character
+        if type(character_or_voice_model) == str:
+            voice_model = character_or_voice_model
         else:
-            voice_model = character.voice_model
-            if "voice_model_folder" in character.__dict__ and character.voice_model_folder != None:
-                voice_model_folder = character.voice_model_folder
+            voice_model = character_or_voice_model.voice_model
+            if "voice_model_folder" in character_or_voice_model.__dict__ and character_or_voice_model.voice_model_folder != None:
+                voice_model_folder = character_or_voice_model.voice_model_folder
         options = [voice_model] # add the voice model from the character object
         options.append(voice_model.replace(' ', '')) # add the voice model without spaces
         options.append(voice_model.lower()) # add the lowercase version of the voice model
@@ -106,11 +107,18 @@ class base_Synthesizer:
         if log:
             logging.info("Trying to detect voice model using the following aliases: ", options)
             logging.config("Available voices: ", available_voices)
+        lower_voices = {}
+        for voice in available_voices:
+            lower_voices[voice.lower()] = voice
         for option in options:
             if option in available_voices:
                 if log:
                     logging.info(f'Voice model "{option}" found!')
                 return option # return the first valid voice model found
+            if option.lower() in lower_voices:
+                if log:
+                    logging.info(f'Voice model "{option}" not found, but "{lower_voices[option.lower()]}" found!')
+                return lower_voices[option.lower()] # return the first valid voice model found
         # return None # if no valid voice model is found
         if log:
             logging.error(f'Voice model "{voice_model}" not available in {self.tts_slug}! Please add it to the voices list.')

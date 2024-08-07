@@ -232,6 +232,9 @@ class CharacterDB():
         self.valid = []
         self.invalid = []
         self.unused_voices = []
+        lower_voices = {}
+        for voice in self.all_voice_models:
+            lower_voices[voice.lower()] = voice
         for voice in self.all_voice_models:
             # spaced_voice = ""
             # for letter in voice.replace(' ', ''):
@@ -263,14 +266,34 @@ class CharacterDB():
             # #     self.valid.append(voice.replace(' ', ''))
             voice_model = self.synthesizer.get_valid_voice_model(voice, crashable=False, log=False)
             if voice_model != None:
+                logging.info(f"valid voice: {voice} -> {voice_model}")
                 self.valid.append((voice, voice_model))
             else:
                 logging.warning(f"invalid voice: {voice}")
                 self.invalid.append(voice)
         for voice_model_folder in self.all_voice_folders:
             voice_model = self.synthesizer.get_valid_voice_model(voice_model_folder, crashable=False, log=False)
-            if voice_model not in self.valid:
-                self.valid.append((voice_model_folder, voice_model))
+            valid_voice = False
+            for voice_pair in self.valid:
+                voice, voice_2 = voice_pair
+                lower_voice = voice.lower()
+                lower_voice_2 = voice_2.lower()
+                if voice == voice_model_folder or voice == voice_model:
+                    valid_voice = True
+                # use lower_voice_2 to lookup the original voice model
+                if lower_voice_2 in lower_voices:
+                    voice = lower_voices[lower_voice_2]
+                    if voice == voice_model_folder or voice == voice_model:
+                        valid_voice = True
+                # use lower_voice to lookup the original voice model
+                if lower_voice in lower_voices:
+                    voice = lower_voices[lower_voice]
+                    if voice == voice_model_folder or voice == voice_model:
+                        valid_voice = True
+            if voice_model is not valid_voice:
+                if voice_model != None:
+                    logging.info(f"valid voice_model_folder: {voice_model_folder} -> {voice_model}")
+                    self.valid.append((voice_model_folder, voice_model))
         for voice in synthesizer_available_voices:
             # add spaces before each capital letter
             voice_used = False
@@ -295,7 +318,10 @@ class CharacterDB():
             for character in self.characters:
                 if character['skyrim_voice_folder'] == voice or character['voice_model'] == voice:
                     logging.info(f"Character '{character['name']}' uses unused voice model '{voice}'")
+        self.valid = list(set(self.valid)) # Bandaid fix for duplicate voice models
         logging.config(f"Valid voices found in character database: {len(self.valid)}/{len(self.all_voice_models)}")
+        if len(self.valid) > len(self.all_voice_models):
+            logging.info(self.valid)
 
         logging.config(f"Total unused voices: {len(self.unused_voices)}/{len(synthesizer_available_voices)}")
         if len(self.invalid) > 0:
@@ -363,6 +389,16 @@ class CharacterDB():
         # TODO: is the 3: correct or should it be 2:?
         character_ref_id = hex(character_ref_id)[3:] if character_ref_id is not None else 0 # Convert int id to hex if it is not None
         character_base_id = hex(character_base_id)[3:] if character_base_id is not None else 0 # Convert int id to hex if it is not None
+        # character_ref_id = hex(character_ref_id) if character_ref_id is not None else 0 # Convert int id to hex if it is not None
+        # character_base_id = hex(character_base_id) if character_base_id is not None else 0 # Convert int id to hex if it is not None
+        # if character_ref_id is not 0:
+        #     character_ref_id = str(character_ref_id).split('x')[-1]
+        # else:
+        #     character_ref_id = "0"
+        # if character_base_id is not 0:
+        #     character_base_id = str(character_base_id).split('x')[-1]
+        # else:
+        #     character_base_id = "0"
         logging.info(f"Fixed IDs: '{character_name}({character_ref_id})[{character_base_id}]' - Getting character from character database using name lookup...")
         return self._get_character(character_name, character_ref_id, character_base_id)
 
