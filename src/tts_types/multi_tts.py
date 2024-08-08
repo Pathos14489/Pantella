@@ -11,7 +11,7 @@ class Synthesizer(base_tts.base_Synthesizer):
         self.tts_engines = ttses
         fallback_order = ""
         for tts_index, tts in enumerate(self.tts_engines):
-            fallback_order += f"{str(tts_index)}. {tts.tts_slug}\n"
+            fallback_order += f"{str(tts_index+1)}. {tts.tts_slug}\n"
         logging.config(f"Loaded multi_tts with tts engines in the following fallback order:\n{fallback_order}")
         logging.config(f'Multi_TTS - Available Multi_TTS voices: {self.voices()}')
 
