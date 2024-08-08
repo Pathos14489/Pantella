@@ -52,7 +52,7 @@ class Synthesizer(base_tts.base_Synthesizer):
     def speaker_wavs_folders(self):
         if "language" in self.config.__dict__:
             speaker_wavs_folders = [
-                os.path.abspath(f".\\data\\voice_samples\\{self.config.language['tts_language_code']}\\")
+                os.path.abspath(f".\\data\\voice_samples\\{self.language['tts_language_code']}\\")
             ]
         else:
             speaker_wavs_folders = []
@@ -158,7 +158,7 @@ class Synthesizer(base_tts.base_Synthesizer):
             voice_model_settings = json.load(f)
         return voice_model_settings
     
-    def _synthesize(self, voiceline, voice_model, voiceline_location):
+    def _synthesize(self, voiceline, voice_model, voiceline_location, aggro=0):
         """Synthesize the audio for the character specified using ChatTTS"""
         logging.output(f'ChatTTS - Loading audio sample and parameters for voiceline synthesis...')
         speaker_wav_path = self.get_speaker_wav_path(voice_model)
@@ -219,46 +219,3 @@ class Synthesizer(base_tts.base_Synthesizer):
             logging.error(f'ChatTTS failed to generate voiceline at: {Path(voiceline_location)}')
             raise FileNotFoundError()
         # os.remove(temp_voiceline_location) # remove temp file
-
-    def synthesize(self, voiceline, character, aggro=0):
-        """Synthesize the audio for the character specified using ChatTTS"""
-        logging.out(f'ChatTTS - Synthesizing voiceline: {voiceline}')
-        if type(character) == str:
-            voice_model = character
-        else:
-            voice_model = character.voice_model
-        # make voice model folder if it doesn't already exist
-        if not os.path.exists(f"{self.output_path}\\voicelines\\{voice_model}"):
-            os.makedirs(f"{self.output_path}\\voicelines\\{voice_model}")
-
-        final_voiceline_file_name = 'voiceline'
-        final_voiceline_file =  f"{self.output_path}\\voicelines\\{voice_model}\\{final_voiceline_file_name}.wav"
-
-        try:
-            if os.path.exists(final_voiceline_file):
-                os.remove(final_voiceline_file)
-            if os.path.exists(final_voiceline_file.replace(".wav", ".lip")):
-                os.remove(final_voiceline_file.replace(".wav", ".lip"))
-        except:
-            logging.warning("Failed to remove spoken voicelines")
-
-
-        if os.path.exists(final_voiceline_file): # If the file already exists, remove it
-            os.remove(final_voiceline_file)
-        # Synthesize voicelines using chat_tts to create the new voiceline
-        self._synthesize(voiceline, voice_model, final_voiceline_file)
-        if not os.path.exists(final_voiceline_file):
-            logging.error(f'ChatTTS failed to generate voiceline at: {Path(final_voiceline_file)}')
-            raise FileNotFoundError()
-
-        self.lip_gen(voiceline, final_voiceline_file)
-        self.debug(final_voiceline_file)
-
-        return final_voiceline_file
-    
-    def _say(self, voiceline, voice_model="Female Sultry", volume=0.5):
-        voiceline_location = f"{self.output_path}\\voicelines\\{self.last_voice}\\direct.wav"
-        if not os.path.exists(voiceline_location):
-            os.makedirs(os.path.dirname(voiceline_location), exist_ok=True)
-        self._synthesize(voiceline, voice_model, voiceline_location)
-        self.play_voiceline(voiceline_location, volume)

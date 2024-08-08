@@ -95,15 +95,7 @@ class Synthesizer(base_tts.base_Synthesizer):
         else:
             model_path = f"{self.xvasynth_path}/resources/app/models/skyrim/"
         return model_path
-        
-    def _say(self, voiceline, voice_model="Female Sultry", volume=0.5):
-        self.change_voice(voice_model)
-        voiceline_location = f"{self.output_path}\\voicelines\\{self.last_voice}\\direct.wav"
-        if not os.path.exists(voiceline_location):
-            os.makedirs(os.path.dirname(voiceline_location), exist_ok=True)
-        self._synthesize_line(voiceline, voiceline_location)
-        self.play_voiceline(voiceline_location, volume)
-        
+                
     def is_running(self):
         """Check if xVASynth is running and start it if it isn't"""
         try:
@@ -139,60 +131,6 @@ class Synthesizer(base_tts.base_Synthesizer):
             logging.error(tb)
             input('\nPress any key to stop Pantella...')
             raise e
- 
-    def synthesize(self, voiceline, character, aggro=0):
-        """Synthesize the voiceline for the character specified using xVASynth"""
-        if character.voice_model != self.last_voice:
-            self.change_voice(character)
-        voiceline = ' ' + voiceline + ' ' # xVASynth apparently performas better having spaces at the start and end of the voiceline for some reason
-
-        if voiceline.strip() == '': # If the voiceline is empty, don't synthesize anything
-            logging.info('No voiceline to synthesize.')
-            return ''
-
-        logging.info(f'Synthesizing voiceline: {voiceline}')
-        phrases = self._split_voiceline(voiceline)
-
-        # make voice model folder if it doesn't already exist
-        if not os.path.exists(f"{self.output_path}\\voicelines\\{self.last_voice}"):
-            os.makedirs(f"{self.output_path}\\voicelines\\{self.last_voice}")
-        
-        voiceline_files = []
-        for phrase in phrases:
-            voiceline_file = f"{self.output_path}\\voicelines\\{self.last_voice}\\{utils.clean_text(phrase)[:150]}.wav"
-            voiceline_files.append(voiceline_file)
-
-        final_voiceline_file_name = 'voiceline'
-        final_voiceline_file =  f"{self.output_path}\\voicelines\\{self.last_voice}\\{final_voiceline_file_name}.wav"
-
-        try:
-            if os.path.exists(final_voiceline_file): # Remove old voiceline file
-                os.remove(final_voiceline_file) 
-            if os.path.exists(final_voiceline_file.replace(".wav", ".lip")): # Remove old lip file
-                os.remove(final_voiceline_file.replace(".wav", ".lip"))
-        except:
-            logging.warning("Failed to remove spoken voicelines") # If it fails, it fails
-
-        # Synthesize voicelines
-        if len(phrases) == 1:
-            self._synthesize_line(phrases[0], final_voiceline_file, character, aggro)
-        else:
-            # TODO: include batch synthesis for v3 models (batch not needed very often)
-            if self.model_type != 'xVAPitch':
-                self._batch_synthesize(phrases, voiceline_files)
-            else:
-                for i, voiceline_file in enumerate(voiceline_files):
-                    self._synthesize_line(phrases[i], voiceline_files[i], character)
-            self.merge_audio_files(voiceline_files, final_voiceline_file)
-
-        if not os.path.exists(final_voiceline_file):
-            logging.error(f'xVASynth failed to generate voiceline at: {Path(final_voiceline_file)}')
-            raise FileNotFoundError()
-        
-        self.lip_gen(voiceline, final_voiceline_file)
-        self.debug(final_voiceline_file)
-
-        return final_voiceline_file
     
     def voices(self): # Send API request to xvasynth to get a list of characters
         """Return a list of available voices"""
@@ -219,12 +157,14 @@ class Synthesizer(base_tts.base_Synthesizer):
     @utils.time_it
     def _synthesize_line(self, line, save_path, character=None, aggro=0):
         """Synthesize a line using xVASynth"""
+        logging.info(f'Synthesizing voiceline: {line}')
         pluginsContext = {}
         # in combat
         if (aggro == 1):
             pluginsContext["mantella_settings"] = {
                 "emAngry": 0.6
             }
+        line = ' ' + line.strip() + ' ' # xVASynth apparently performs better having spaces at the start and end of the voiceline for some reason
         base_lang = character.tts_language_code if character else self.language["tts_language_code"] # TODO: Make sure this works
         data = {
             'pluginsContext': json.dumps(pluginsContext),
@@ -265,6 +205,24 @@ class Synthesizer(base_tts.base_Synthesizer):
             'useCleanup': None,
         }
         requests.post(self.synthesize_batch_url, json=data)
+
+    def _synthesize(self, voiceline, voice_model, voiceline_location, aggro=0):
+        voiceline = ' ' + voiceline.strip() + ' ' # xVASynth apparently performs better having spaces at the start and end of the voiceline for some reason
+        voiceline_files = []
+        phrases = self._split_voiceline(voiceline)
+        for phrase in phrases:
+            voiceline_file = f"{self.output_path}\\voicelines\\{self.last_voice}\\{utils.clean_text(phrase)[:150]}.wav"
+            voiceline_files.append(voiceline_file)
+        if len(phrases) == 1:
+            self._synthesize_line(phrases[0], voiceline_location, voice_model, aggro)
+        else:
+            # TODO: include batch synthesis for v3 models (batch not needed very often)
+            if self.model_type != 'xVAPitch':
+                self._batch_synthesize(phrases, voiceline_files)
+            else:
+                for i, voiceline_file in enumerate(voiceline_files):
+                    self._synthesize_line(phrases[i], voiceline_files[i], voice_model)
+            self.merge_audio_files(voiceline_files, voiceline_location)
 
     @utils.time_it
     def _group_sentences(self, voiceline_sentences, max_length=150):

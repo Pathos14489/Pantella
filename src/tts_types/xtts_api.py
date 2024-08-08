@@ -174,12 +174,13 @@ class Synthesizer(base_tts.base_Synthesizer):
     @utils.time_it
     def change_voice(self, character):
         """Change the voice model to the character's voice model if it exists, else use the default model"""
-        logging.info(f'Checking for Custom xTTS Model for {character.voice_model}...') 
+        voice_model = self.get_valid_voice_model(character)
+        logging.info(f'Checking for Custom xTTS Model for {voice_model}...') 
         if character.voice_model in self.available_models():
-            logging.info(f'Custom xTTS Model found for {character.voice_model}!')
-            self.set_model(character.voice_model)
+            logging.info(f'Custom xTTS Model found for {voice_model}!')
+            self.set_model(voice_model)
         else:
-            logging.info(f'Custom xTTS Model not found for {character.voice_model}! Using default model...')
+            logging.info(f'Custom xTTS Model not found for {voice_model}! Using default model...')
             self.set_model(self.default_model)
           
     def get_valid_voice_model(self, character, crashable=None, multi_tts=True, log=True):
@@ -234,15 +235,16 @@ class Synthesizer(base_tts.base_Synthesizer):
         return voice_model
 
     @utils.time_it
-    def _synthesize_line_xtts(self, line, save_path, character, aggro=0):
+    def _synthesize(self, voiceline, character, voiceline_location, aggro=0):
         """Synthesize a line using the xTTS API"""
         if type(character) == str:
             voice_model = character
+            base_lang = self.language["tts_language_code"]
         else:
             voice_model = self.get_valid_voice_model(character)
-        base_lang = character.tts_language_code if character else self.language["tts_language_code"] # TODO: Make sure this works
+            base_lang = character.tts_language_code
         data = {
-            'text': line,
+            'text': voiceline,
             'speaker_wav': voice_model,
             'language': base_lang
         }
@@ -250,47 +252,14 @@ class Synthesizer(base_tts.base_Synthesizer):
         try:
             response = requests.post(self.synthesize_url_xtts, json=data)
             if response.status_code == 200: # if the request was successful, write the wav file to disk at the specified path
-                self.convert_to_16bit(io.BytesIO(response.content), save_path)
+                self.convert_to_16bit(io.BytesIO(response.content), voiceline_location)
             else:
-                logging.error(f'xTTS failed to generate voiceline at: {Path(save_path)}')
+                logging.error(f'xTTS failed to generate voiceline at: {Path(voiceline_location)}')
                 raise FileNotFoundError()
         except Exception as e:
-            logging.error(f'xTTS failed to generate voiceline at: {Path(save_path)}')
+            logging.error(f'xTTS failed to generate voiceline at: {Path(voiceline_location)}')
             raise FileNotFoundError()
-            
-          
-    def synthesize(self, voiceline, character, aggro=0):
-        """Synthesize the text for the character specified using the xTTS API"""
-        logging.out(f'Synthesizing voiceline: {voiceline}')
-        self.change_voice(character)
-        # make voice model folder if it doesn't already exist
-        if not os.path.exists(f"{self.output_path}\\voicelines\\{character.voice_model}"):
-            os.makedirs(f"{self.output_path}\\voicelines\\{character.voice_model}")
-
-        final_voiceline_file_name = 'voiceline'
-        final_voiceline_file =  f"{self.output_path}\\voicelines\\{character.voice_model}\\{final_voiceline_file_name}.wav"
-
-        try:
-            if os.path.exists(final_voiceline_file):
-                os.remove(final_voiceline_file)
-            if os.path.exists(final_voiceline_file.replace(".wav", ".lip")):
-                os.remove(final_voiceline_file.replace(".wav", ".lip"))
-        except:
-            logging.warning("Failed to remove spoken voicelines")
-
-        # Synthesize voicelines
-        self._synthesize_line_xtts(voiceline, final_voiceline_file, character, aggro)
-
-        if not os.path.exists(final_voiceline_file):
-            logging.error(f'xTTS failed to generate voiceline at: {Path(final_voiceline_file)}')
-            raise FileNotFoundError()
-
-        self.lip_gen(voiceline, final_voiceline_file)
-        self.debug(final_voiceline_file)
-
-        return final_voiceline_file
-    
-    
+                
     def _say(self, voiceline, voice_model="Female Sultry", volume=0.5):
         voiceline_location = f"{self.output_path}\\voicelines\\{self.last_voice}\\direct.wav"
         if not os.path.exists(voiceline_location):

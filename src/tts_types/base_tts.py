@@ -44,6 +44,7 @@ class base_Synthesizer:
         # last active voice model
         self.crashable = self.config.continue_on_voice_model_error
         self._voices = None
+        self.last_voice = ''
 
     @property
     def language(self):
@@ -132,26 +133,63 @@ class base_Synthesizer:
     @utils.time_it
     def change_voice(self, character):
         """Change the voice of the tts to the voice model specified in the character object."""
-        logging.info(f'Warning: Using change_voice() method of base_tts.py, this means you haven\'t implemented the change_voice() method in your new tts type. This method should change the voice of the tts to the voice model specified in the character object.')
-        logging.info(f'Changing voice to: {character.voice_model}')
-        logging.info('Voice model not loaded, please fix your code.')
-        input("Press enter to continue...")
-        raise NotImplementedError("change_voice() method not implemented in your tts type.")
-        return None
+        logging.info(f'Warning: You haven\'t implemented the change_voice() method in your new TTS type. This method should change the voice of the TTS to the voice model specified in the character object if the TTS requires this as a seperate step from just asking for output. This is likely not an issue if your TTS does not require this step, but if it does, you should implement this method.')
+        # logging.info(f'Changing voice to: {character.voice_model}')
+        # logging.info('Voice model not loaded, please fix your code.')
+        # input("Press enter to continue...")
+        # raise NotImplementedError("change_voice() method not implemented in your tts type.")
+        # return None
 
     @utils.time_it
-    def synthesize(self, text, character, **kwargs):
+    def _synthesize(self, voiceline, voice_model, voiceline_location, aggro=0):
         """Synthesize the text passed as a parameter with the voice model specified in the character object."""
         logging.info(f'Warning: Using synthesizer() method of base_tts.py, this means you haven\'t implemented the synthesizer() method in your new tts type. This method should synthesize the text passed as a parameter with the voice model specified in the character object.')
-        logging.out(f'Synthesizing text: {text}')
-        logging.config(f'Using voice model: {character.voice_model}')
-        logging.config('Using Additional parameters: {}'.format(kwargs))
+        logging.out(f'Synthesizing text: {voiceline}')
+        logging.config(f'Using voice model: {voice_model}')
+        logging.config('Voiceline Location:', voiceline_location)
         logging.warn('Wav file not saved, please fix your code.')
         logging.warn('Lip file not saved, please fix your code.')
         logging.error('Voice model not loaded, please fix your code.')
         input("Press enter to continue...")
         raise NotImplementedError("synthesize() method not implemented in your tts type.")
-        return final_voiceline_file # path to wav file
+
+    @utils.time_it
+    def synthesize(self, voiceline, character, aggro=0):
+        """Synthesize the audio for the character specified using TTS"""
+        logging.out(f'{self.tts_slug} - Starting voiceline synthesis: {voiceline}')
+        if type(character) == str:
+            voice_model = character
+        else:
+            voice_model = character.voice_model
+        self.change_voice(character)
+        if voiceline.strip() == '': # If the voiceline is empty, don't synthesize anything
+            logging.info('No voiceline to synthesize.')
+            return ''
+        # make voice model folder if it doesn't already exist
+        if not os.path.exists(f"{self.output_path}\\voicelines\\{voice_model}"):
+            os.makedirs(f"{self.output_path}\\voicelines\\{voice_model}")
+
+        final_voiceline_file_name = 'voiceline'
+        final_voiceline_file =  f"{self.output_path}\\voicelines\\{voice_model}\\{final_voiceline_file_name}.wav"
+
+        try:
+            if os.path.exists(final_voiceline_file):
+                os.remove(final_voiceline_file)
+            if os.path.exists(final_voiceline_file.replace(".wav", ".lip")):
+                os.remove(final_voiceline_file.replace(".wav", ".lip"))
+        except:
+            logging.warning("Failed to remove spoken voicelines")
+
+        # Synthesize voicelines using chat_tts to create the new voiceline
+        self._synthesize(voiceline, voice_model, final_voiceline_file, aggro)
+        if not os.path.exists(final_voiceline_file):
+            logging.error(f'{self.tts_slug} failed to generate voiceline at: {Path(final_voiceline_file)}')
+            raise FileNotFoundError()
+
+        self.lip_gen(voiceline, final_voiceline_file)
+        self.debug(final_voiceline_file)
+
+        return final_voiceline_file
          
     def run_command(self, command):
         """Run a command in the command prompt"""
@@ -244,5 +282,5 @@ class base_Synthesizer:
         voiceline_location = f"{self.output_path}\\voicelines\\{voiceline}\\direct.wav"
         if not os.path.exists(voiceline_location):
             os.makedirs(os.path.dirname(voiceline_location), exist_ok=True)
-        self._synthesize_line(voiceline, voiceline_location)
+        self._synthesize(voiceline, voiceline_location)
         self.play_voiceline(voiceline_location, volume)
