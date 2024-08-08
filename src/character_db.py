@@ -266,10 +266,10 @@ class CharacterDB():
             # #     self.valid.append(voice.replace(' ', ''))
             voice_model = self.synthesizer.get_valid_voice_model(voice, crashable=False, log=False)
             if voice_model != None:
-                logging.info(f"valid voice: {voice} -> {voice_model}")
+                # logging.info(f"valid voice: {voice} -> {voice_model}")
                 self.valid.append((voice, voice_model))
             else:
-                logging.warning(f"invalid voice: {voice}")
+                # logging.warning(f"invalid voice: {voice}")
                 self.invalid.append(voice)
         for voice_model_folder in self.all_voice_folders:
             voice_model = self.synthesizer.get_valid_voice_model(voice_model_folder, crashable=False, log=False)
@@ -292,7 +292,7 @@ class CharacterDB():
                         valid_voice = True
             if voice_model is not valid_voice:
                 if voice_model != None:
-                    logging.info(f"valid voice_model_folder: {voice_model_folder} -> {voice_model}")
+                    # logging.info(f"valid voice_model_folder: {voice_model_folder} -> {voice_model}")
                     self.valid.append((voice_model_folder, voice_model))
         for voice in synthesizer_available_voices:
             # add spaces before each capital letter
