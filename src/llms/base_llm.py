@@ -715,6 +715,7 @@ class base_LLM():
         
     def format_content(self, chunk):
         # TODO: This is a temporary fix. The LLM class should be returning a string only, but some inference engines don't currently. This will be fixed in the future.
+        logging.info(f"Formatting content type: {type(chunk)}")
         if type(chunk) == dict:
             # logging.info(chunk)
             content = chunk['choices'][0]['text']
@@ -722,16 +723,31 @@ class base_LLM():
             # logging.info(chunk)
             content = chunk
         else:
-            # logging.debug(chunk.model_dump_json())
+            logging.debug(chunk.model_dump_json())
             content = None
+            error = "Errors getting text from chunk:\n"
             try:
-                content = chunk.choices[0].text
-            except:
+                if chunk.choices[0].text is str and chunk.choices[0].text.strip() != "":
+                    content = chunk.choices[0].text
+            except Exception as e:
+                # logging.debug("Error getting text from chunk - 1")
+                # logging.debug(e)
+                error += str(e) + "\n"
                 pass
-            try:
-                content = chunk.choices[0].delta.content
-            except:
-                pass
+            if content is None:
+                try:
+                    content = chunk.choices[0].delta.content
+                except Exception as e:
+                    # logging.debug("Error getting text from chunk - 2")
+                    # logging.debug(e)
+                    error += str(e) + "\n"
+                    pass
+            if content is None:
+                try:
+                    content = chunk.choices[0].delta['content']
+                except Exception as e:
+                    logging.debug(error + str(e))
+                    raise e
         return content
     
     def split_and_preverse_strings_on_end_of_sentence(self, sentence, next_sentence=""):
@@ -866,6 +882,10 @@ class base_LLM():
                 for chunk in self.generate_response(message_prefix=symbol_insert, force_speaker=force_speaker):
                     content = self.format_content(chunk) # example: ".* Hello"
                     logging.out(f"Content: {content}")
+                    if content is None:
+                        logging.error(chunk)
+                        logging.error(f"Content is None")
+                        raise Exception('Content is None')
                     if content is not last_chunk: # if the content is not the same as the last chunk, then the LLM is not stuck in a loop and the generation should continue
                         same_chunk_count = 0
                     else: # if the content is the same as the last chunk, then the LLM is probably stuck in a loop and the generation should stop
