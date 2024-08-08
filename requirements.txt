@@ -11,7 +11,7 @@ soundfile==0.12.1
 numpy==1.23.2
 scipy==1.11.2
 charset-normalizer==3.2.0
-transformers==4.36.2
+transformers>=4.43.3
 flask==2.3.3
 bitsandbytes==0.42.0
 dxcam==0.0.5
@@ -25,3 +25,6 @@ pygame==2.6.0
 emoji==2.8.0
 git+https://github.com/Pathos14489/TTS.git
 git+https://github.com/2noise/ChatTTS@6afc7612c422d877e80257184c65b009da4adb73
+git+https://github.com/huggingface/parler-tts.git
+dac==0.4.2
+descript-audio-codec==1.0.0
