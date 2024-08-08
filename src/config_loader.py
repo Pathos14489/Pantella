@@ -151,6 +151,7 @@ class ConfigLoader:
                     self._raw_prompt_styles[slug] = json.load(f)
                     self.prompt_styles[slug] = self._raw_prompt_styles[slug]
         style_names = [f"{slug} ({self._raw_prompt_styles[slug]['name']})" for slug in self.prompt_styles]
+        # self._prompt_style = self.prompt_styles["normal_en"]
         logging.config(f"Prompt styles loaded: "+str(style_names))
 
     def load_addons(self):
