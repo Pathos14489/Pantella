@@ -1,5 +1,5 @@
-print("Importing base_tts.py")
 from src.logging import logging
+logging.info("Importing base_tts.py")
 import src.utils as utils
 import subprocess
 import os
@@ -57,8 +57,9 @@ class base_Synthesizer:
         if output_file is None:
             output_file = input_file
         # Read the audio file
-        if override_sample_rate is None:
-            data, samplerate = sf.read(input_file)
+        data, samplerate = sf.read(input_file)
+        if override_sample_rate is not None:
+            samplerate = override_sample_rate
 
         # Directly convert to 16-bit if data is in float format and assumed to be in the -1.0 to 1.0 range
         if np.issubdtype(data.dtype, np.floating):
@@ -192,16 +193,18 @@ class base_Synthesizer:
         face_wrapper_executable = f'{current_dir}\\FaceFXWrapper\\FaceFXWrapper.exe'
         logging.info(f'Generating lip file for voiceline: {voiceline} to: {final_voiceline_file.replace(".wav", ".lip")}')
 
-        face_wrapper_game = self.game.capitalize()
-        if face_wrapper_game == 'Fallout4vr':
+        face_wrapper_game = self.game.lower()
+        if face_wrapper_game == 'fallout4vr' or face_wrapper_game == 'fallout4':
             face_wrapper_game = 'Fallout4'
-        if face_wrapper_game == 'Skyrimvr':
+        if face_wrapper_game == 'skyrimvr' or face_wrapper_game == 'skyrim':
             face_wrapper_game = 'Skyrim'
         logging.info(f'FaceFXWrapper Detected Game: {face_wrapper_game}')
 
         if self.check_face_fx_wrapper():
             try:
-                self.run_command(f'{face_wrapper_executable} "{face_wrapper_game}" "USEnglish" "{cdf_path}" "{final_voiceline_file}" "{final_voiceline_file.replace(".wav", "_r.wav")}" "{final_voiceline_file.replace(".wav", ".lip")}" "{voiceline}"')
+                command = f'{face_wrapper_executable} "{face_wrapper_game}" "USEnglish" "{cdf_path}" "{final_voiceline_file}" "{final_voiceline_file.replace(".wav", "_r.wav")}" "{final_voiceline_file.replace(".wav", ".lip")}" "{voiceline}"'
+                logging.info(f'Running command: {command}')
+                self.run_command(command)
                 # remove file created by FaceFXWrapper
                 if os.path.exists(final_voiceline_file.replace(".wav", "_r.wav")):
                     os.remove(final_voiceline_file.replace(".wav", "_r.wav"))
