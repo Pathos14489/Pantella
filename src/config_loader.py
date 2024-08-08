@@ -589,6 +589,10 @@ class ConfigLoader:
                 "xtts_api_banned_voice_models": [],
                 "default_xtts_api_model": "v2.0.2"
             },
+            "ParlerTTS": {
+                "parler_tts_model": "parler-tts/parler-tts-mini-v1",
+                "parler_tts_device": "cuda"
+            },
             "Debugging": {
                 "debug_mode": False,
                 "share_debug_ui": False,
@@ -825,6 +829,10 @@ class ConfigLoader:
                 "xtts_api_data": self.xtts_api_data,
                 "xtts_api_banned_voice_models": self.xtts_api_banned_voice_models,
                 "default_xtts_api_model": self.default_xtts_api_model,
+            },
+            "ParlerTTS": {
+                "parler_tts_model": self.parler_tts_model,
+                "parler_tts_device": self.parler_tts_device,
             },
             "Debugging": {
                 "debug_mode": self.debug_mode,
