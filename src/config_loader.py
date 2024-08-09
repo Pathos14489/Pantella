@@ -600,7 +600,7 @@ class ConfigLoader:
             },
             "ParlerTTS": {
                 "parler_tts_model": "parler-tts/parler-tts-mini-v1",
-                "parler_tts_device": "cuda",
+                "parler_tts_device": "cpu",
                 "parler_tts_compile": False,
                 "parler_tts_compile_mode": "reduce-overhead", # reduce-overhead, default
                 "parler_tts_max_length": 50,
