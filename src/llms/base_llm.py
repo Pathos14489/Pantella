@@ -726,14 +726,54 @@ class base_LLM():
             logging.debug(chunk.model_dump_json())
             content = None
             error = "Errors getting text from chunk:\n"
-            try:
-                if chunk.choices[0].text is str and chunk.choices[0].text.strip() != "":
+            if content is None:
+                try:
                     content = chunk.choices[0].text
-            except Exception as e:
-                # logging.debug("Error getting text from chunk - 1")
-                # logging.debug(e)
-                error += str(e) + "\n"
-                pass
+                except Exception as e:
+                    # logging.debug("Error getting text from chunk - 1")
+                    # logging.debug(e)
+                    error += str(e) + "\n"
+                    pass
+            if content is None:
+                try:
+                    content = chunk.choices[0].content
+                except Exception as e:
+                    # logging.debug("Error getting text from chunk - 2")
+                    # logging.debug(e)
+                    error += str(e) + "\n"
+                    pass
+            if content is None:
+                try:
+                    content = chunk.choices[0]["text"]
+                except Exception as e:
+                    # logging.debug("Error getting text from chunk - 2")
+                    # logging.debug(e)
+                    error += str(e) + "\n"
+                    pass
+            if content is None:
+                try:
+                    content = chunk.choices[0]["content"]
+                except Exception as e:
+                    # logging.debug("Error getting text from chunk - 2")
+                    # logging.debug(e)
+                    error += str(e) + "\n"
+                    pass
+            if content is None:
+                try:
+                    content = chunk.choices[0].delta.text
+                except Exception as e:
+                    # logging.debug("Error getting text from chunk - 2")
+                    # logging.debug(e)
+                    error += str(e) + "\n"
+                    pass
+            if content is None:
+                try:
+                    content = chunk.choices[0].delta["text"]
+                except Exception as e:
+                    # logging.debug("Error getting text from chunk - 2")
+                    # logging.debug(e)
+                    error += str(e) + "\n"
+                    pass
             if content is None:
                 try:
                     content = chunk.choices[0].delta.content
