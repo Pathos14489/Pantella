@@ -1,5 +1,5 @@
 from src.logging import logging
-logging.info("Importing chat_tts.py...")
+logging.info("Importing parler_tts.py...")
 import src.tts_types.base_tts as base_tts
 try:
     logging.info("Trying to import torch")
@@ -27,6 +27,7 @@ import numpy as np
 import os
 import json
 import io
+import copy
 import soundfile as sf
 logging.info("Imported required libraries in chat_tts.py")
 
@@ -35,12 +36,32 @@ class Synthesizer(base_tts.base_Synthesizer):
     def __init__(self, conversation_manager, ttses = []):
         super().__init__(conversation_manager)
         self.tts_slug = tts_slug
-        logging.info(f"Initializing ParlerTTS({self.config.parler_tts_model}) to device {self.config.parler_tts_device}")
+        logging.info(f"Initializing {self.tts_slug}({self.config.parler_tts_model}) to device {self.config.parler_tts_device}")
         self.model = ParlerTTSForConditionalGeneration.from_pretrained(self.config.parler_tts_model).to(self.config.parler_tts_device)
         self.tokenizer = AutoTokenizer.from_pretrained(self.config.parler_tts_model)
+        
+        if self.config.parler_tts_compile:
+            logging.info(f'Compiling {self.tts_slug} model...')
+            self.model.generation_config.cache_implementation = "static"
+            self.model.forward = torch.compile(self.model.forward, mode=self.config.parler_tts_compile_mode)
+            logging.info(f'{self.tts_slug} model compiled successfully')
+
+            inputs = self.tokenizer("This is for compilation", return_tensors="pt", padding="max_length", max_length=self.config.parler_tts_max_length).to(self.config.parler_tts_device)
+            model_kwargs = {**inputs, "prompt_input_ids": inputs.input_ids, "prompt_attention_mask": inputs.attention_mask, }
+
+            logging.info(f'Warming up {self.tts_slug} model...')
+            n_steps = 1 if self.config.parler_tts_compile_mode == "script" else 2
+            for _ in range(n_steps):
+                _ = self.model.generate(**model_kwargs)
+            logging.info(f'{self.tts_slug} model warmed up successfully')
+
         self._voices = None
-        logging.info(f'ParlerTTS speaker wavs folders: {self.voice_settings_folders}')
-        logging.config(f'ParlerTTS - Available voices: {self.voices()}')
+        self.speaker_embeddings = {}
+        logging.info(f'{self.tts_slug} speaker wavs folders: {self.voice_settings_folders}')
+        logging.config(f'{self.tts_slug} - Available voices: {self.voices()}')
+        if len(self.voices()) > 0:
+            random_voice = np.random.choice(self.voices())
+            self._say("Parler is ready to go.",random_voice)
 
     @property
     def voice_settings_folders(self):
@@ -79,7 +100,7 @@ class Synthesizer(base_tts.base_Synthesizer):
                             voices.append(json_data)
             self._voices = voices
         return [voice["voice_model"] for voice in self._voices]
-    
+        
     def get_voice_model_data(self, voice_model):
         """Return the voice model data for the specified voice model"""
         if self._voices == None:
@@ -90,12 +111,16 @@ class Synthesizer(base_tts.base_Synthesizer):
         return None
     
     def _synthesize(self, voiceline, voice_model, voiceline_location, aggro=0):
-        """Synthesize the audio for the character specified using ChatTTS"""
-        logging.output(f'ChatTTS - Loading audio sample and parameters for voiceline synthesis...')
+        """Synthesize the audio for the character specified using ParlerTTS"""
+        logging.output(f'{self.tts_slug} - Loading voice model settings for {voice_model}')
         voice_model_settings = self.get_voice_model_data(voice_model)
         input_ids = self.tokenizer(voice_model_settings['description'], return_tensors="pt").input_ids.to(self.config.parler_tts_device)
         voiceline_input_ids = self.tokenizer(voiceline, return_tensors="pt").input_ids.to(self.config.parler_tts_device)
 
-        generation = self.model.generate(input_ids=input_ids, prompt_input_ids=voiceline_input_ids)
+        generation = self.model.generate(
+            input_ids=input_ids,
+            prompt_input_ids=voiceline_input_ids,
+            temperature= voice_model_settings['temperature'] if 'temperature' in voice_model_settings else self.config.parler_temperature,
+        )
         audio_arr = generation.cpu().numpy().squeeze()
         sf.write(voiceline_location, audio_arr, self.model.config.sampling_rate)

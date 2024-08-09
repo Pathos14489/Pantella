@@ -3,7 +3,7 @@ from src.logging import logging
 import src.tts_types.base_tts as base_tts
 import os
 import json
-from pathlib import Path
+import numpy as np
 logging.info("Imported required libraries in piper_binary.py")
 
 tts_slug = "piper_binary"
@@ -21,6 +21,9 @@ class Synthesizer(base_tts.base_Synthesizer):
                     self._voice_model_jsons.append(json_data)
 
         logging.config(f'Available piper voices: {self.voices()}')
+        if len(self.voices()) > 0:
+            random_voice = np.random.choice(self.voices())
+            self._say("Piper T T S is ready to go.",random_voice)
 
     @property
     def piper_binary_dir(self):
@@ -39,6 +42,8 @@ class Synthesizer(base_tts.base_Synthesizer):
     
     def _synthesize(self, voiceline, voice_model, voiceline_location, aggro=0):
         """Synthesize the audio for the character specified using piper"""
+        # make sure directory exists
+        os.makedirs(os.path.dirname(voiceline_location), exist_ok=True)
         command = f"echo \"{voiceline}\" | {self.piper_binary_dir}piper.exe --model {self.piper_models_dir}{self.config.game_id}\\{voice_model.lower()}.onnx --output_file {voiceline_location}"
         logging.output(f"piperTTS - Synthesizing voiceline: {voiceline}")
         logging.config(f"piperTTS - Synthesizing voiceline with command: {command}")

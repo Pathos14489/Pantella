@@ -279,8 +279,8 @@ class base_Synthesizer:
 
     def _say(self, voiceline, voice_model="Female Sultry", volume=0.5):
         self.change_voice(voice_model)
-        voiceline_location = f"{self.output_path}\\voicelines\\{voiceline}\\direct.wav"
+        voiceline_location = f"{self.output_path}\\voicelines\\{voice_model}\\direct.wav"
         if not os.path.exists(voiceline_location):
             os.makedirs(os.path.dirname(voiceline_location), exist_ok=True)
-        self._synthesize(voiceline, voiceline_location)
+        self._synthesize(voiceline, voice_model, voiceline_location)
         self.play_voiceline(voiceline_location, volume)

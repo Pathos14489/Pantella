@@ -246,7 +246,13 @@ class ConfigLoader:
         return self._prompt_style["style"]["assistant_name"]
     @property
     def language(self):
-        return self._prompt_style["language"]
+        if self._prompt_style is not None:
+            return self._prompt_style["language"]
+        else:
+            return {
+                "tts_language_code": "en",
+                "tts_language_name": "English",
+            }
     @property
     def racial_language(self):
         return self._prompt_style["racial_language"]
@@ -589,9 +595,16 @@ class ConfigLoader:
                 "xtts_api_banned_voice_models": [],
                 "default_xtts_api_model": "v2.0.2"
             },
+            "ChatTTS": {
+                "ensure_all_voice_samples_have_inference_settings": True,
+            },
             "ParlerTTS": {
                 "parler_tts_model": "parler-tts/parler-tts-mini-v1",
-                "parler_tts_device": "cuda"
+                "parler_tts_device": "cuda",
+                "parler_tts_compile": False,
+                "parler_tts_compile_mode": "reduce-overhead", # reduce-overhead, default
+                "parler_tts_max_length": 50,
+                "parler_temperature": 1.0
             },
             "Debugging": {
                 "debug_mode": False,
@@ -601,6 +614,7 @@ class ConfigLoader:
                 "debug_character_name": "Hulda",
                 "debug_use_mic": False,
                 "default_player_response": "Can you tell me something about yourself?",
+                "tts_boot_annoncements": True,
                 "add_voicelines_to_all_voice_folders": False
             },
             "Errors": {
@@ -830,9 +844,16 @@ class ConfigLoader:
                 "xtts_api_banned_voice_models": self.xtts_api_banned_voice_models,
                 "default_xtts_api_model": self.default_xtts_api_model,
             },
+            "ChatTTS": {
+                "ensure_all_voice_samples_have_inference_settings": self.ensure_all_voice_samples_have_inference_settings,
+            },
             "ParlerTTS": {
                 "parler_tts_model": self.parler_tts_model,
                 "parler_tts_device": self.parler_tts_device,
+                "parler_tts_compile": self.parler_tts_compile,
+                "parler_tts_compile_mode": self.parler_tts_compile_mode,
+                "parler_tts_max_length": self.parler_tts_max_length,
+                "parler_temperature": self.parler_temperature
             },
             "Debugging": {
                 "debug_mode": self.debug_mode,
@@ -842,6 +863,7 @@ class ConfigLoader:
                 "debug_character_name": self.debug_character_name,
                 "debug_use_mic": self.debug_use_mic,
                 "default_player_response": self.default_player_response,
+                "tts_boot_annoncements": self.tts_boot_annoncements,
                 "add_voicelines_to_all_voice_folders": self.add_voicelines_to_all_voice_folders,
             },
             "Errors": {

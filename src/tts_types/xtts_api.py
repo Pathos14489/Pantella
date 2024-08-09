@@ -10,6 +10,7 @@ import subprocess
 import threading
 import traceback
 import io
+import numpy as np
 logging.info("Imported required libraries in xtts_api.py")
 
 tts_slug = "xtts_api"
@@ -64,6 +65,9 @@ class Synthesizer(base_tts.base_Synthesizer):
         # self.official_model_list = ["main","v2.0.3","v2.0.2","v2.0.1","v2.0.0"]
         logging.config(f'xTTS_api - Available xTTS_api models: {self.available_models()}')
         logging.config(f'xTTS_api - Available xTTS_api voices: {self.voices()}')
+        if len(self.voices()) > 0:
+            random_voice = np.random.choice(self.voices())
+            self._say("X T T S is ready to go.",str(random_voice))
 
     @property
     def xtts_api_base_url(self):
@@ -176,7 +180,7 @@ class Synthesizer(base_tts.base_Synthesizer):
         """Change the voice model to the character's voice model if it exists, else use the default model"""
         voice_model = self.get_valid_voice_model(character)
         logging.info(f'Checking for Custom xTTS Model for {voice_model}...') 
-        if character.voice_model in self.available_models():
+        if voice_model in self.available_models():
             logging.info(f'Custom xTTS Model found for {voice_model}!')
             self.set_model(voice_model)
         else:
@@ -259,10 +263,3 @@ class Synthesizer(base_tts.base_Synthesizer):
         except Exception as e:
             logging.error(f'xTTS failed to generate voiceline at: {Path(voiceline_location)}')
             raise FileNotFoundError()
-                
-    def _say(self, voiceline, voice_model="Female Sultry", volume=0.5):
-        voiceline_location = f"{self.output_path}\\voicelines\\{self.last_voice}\\direct.wav"
-        if not os.path.exists(voiceline_location):
-            os.makedirs(os.path.dirname(voiceline_location), exist_ok=True)
-        self._synthesize_line_xtts(voiceline, voiceline_location)
-        self.play_voiceline(voiceline_location, volume)

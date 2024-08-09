@@ -79,6 +79,9 @@ class Synthesizer(base_tts.base_Synthesizer):
         self.setvocoder_url = f'{self.config.xvasynth_base_url}/setVocoder'
         logging.config(f'xVASynth - Available voices: {self.voices()}')
         logging.config(f"Total xVASynth Voices: {len(self.voices())}")
+        if len(self.voices()) > 0:
+            random_voice = np.random.choice(self.voices())
+            self._say("Ecks Vee Ey Synth is ready to go.",str(random_voice))
 
     @property
     def get_available_voices_url(self):
@@ -165,7 +168,10 @@ class Synthesizer(base_tts.base_Synthesizer):
                 "emAngry": 0.6
             }
         line = ' ' + line.strip() + ' ' # xVASynth apparently performs better having spaces at the start and end of the voiceline for some reason
-        base_lang = character.tts_language_code if character else self.language["tts_language_code"] # TODO: Make sure this works
+        if type(character) is not str:
+            base_lang = character.tts_language_code if character else self.language["tts_language_code"] # TODO: Make sure this works
+        else:
+            base_lang = self.language["tts_language_code"]
         data = {
             'pluginsContext': json.dumps(pluginsContext),
             'modelType': self.model_type,

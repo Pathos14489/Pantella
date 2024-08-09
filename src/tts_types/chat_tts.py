@@ -32,9 +32,12 @@ import io
 logging.info("Imported required libraries in chat_tts.py")
 
 def format_text(text: str) -> str:
-    text.replace("\n", " ").replace("\r", " ").replace(".",".[uv_break]").replace("?","?[uv_break]").replace("!","![uv_break]")
+    text = text.replace("\n", " ").replace("\r", " ").replace(".",".[uv_break]").replace("?","?[uv_break]").replace("!","![uv_break]")
+    text = text.strip()
     if not text.endswith("[uv_break]"):
         text += "[uv_break]"
+    if not text.startswith("[uv_break]"):
+        text = "[uv_break]" + text
     text = text.strip()
     return text
 
@@ -47,6 +50,13 @@ class Synthesizer(base_tts.base_Synthesizer):
         self.chat.load(compile=False) # Set to True for better performance
         logging.info(f'ChatTTS speaker wavs folders: {self.speaker_wavs_folders}')
         logging.config(f'ChatTTS - Available voices: {self.voices()}')
+        if self.config.ensure_all_voice_samples_have_inference_settings:
+            logging.output("Ensuring all voice samples have inference settings...")
+            for voice in self.voices():
+                self.voice_model_settings(voice)
+        if len(self.voices()) > 0:
+            random_voice = np.random.choice(self.voices())
+            self._say("Chat T T S is ready to go.",random_voice)
 
     @property
     def speaker_wavs_folders(self):
@@ -131,7 +141,7 @@ class Synthesizer(base_tts.base_Synthesizer):
     
     def voice_model_settings(self, voice_model):
         # speaker voice model settings are stored in ./data/chat_tts_inference_settings/{tts_language_code}/{voice_model}.json
-        voice_model_settings_path = os.path.abspath(f".\\data\\chat_tts_inference_settings\\{self.config.language['tts_language_code']}\\{voice_model}.json")
+        voice_model_settings_path = os.path.abspath(f".\\data\\chat_tts_inference_settings\\{self.language['tts_language_code']}\\{voice_model}.json")
         if os.path.exists(voice_model_settings_path):
             with open(voice_model_settings_path, "r") as f:
                 voice_model_settings = json.load(f)
