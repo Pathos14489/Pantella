@@ -29,7 +29,7 @@ import json
 import io
 import copy
 import soundfile as sf
-logging.info("Imported required libraries in chat_tts.py")
+logging.info("Imported required libraries in parler_tts.py")
 
 tts_slug = "parler_tts"
 class Synthesizer(base_tts.base_Synthesizer):
@@ -56,8 +56,7 @@ class Synthesizer(base_tts.base_Synthesizer):
             logging.info(f'{self.tts_slug} model warmed up successfully')
 
         self._voices = None
-        self.speaker_embeddings = {}
-        logging.info(f'{self.tts_slug} speaker wavs folders: {self.voice_settings_folders}')
+        logging.info(f'{self.tts_slug} speaker settings folders: {self.voice_settings_folders}')
         logging.config(f'{self.tts_slug} - Available voices: {self.voices()}')
         if len(self.voices()) > 0:
             random_voice = np.random.choice(self.voices())
