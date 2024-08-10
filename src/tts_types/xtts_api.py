@@ -67,7 +67,7 @@ class Synthesizer(base_tts.base_Synthesizer):
         logging.config(f'xTTS_api - Available xTTS_api voices: {self.voices()}')
         if len(self.voices()) > 0:
             random_voice = np.random.choice(self.voices())
-            self._say("X T T S is ready to go.",str(random_voice))
+            self._say("Ecks T T S is ready to go.",str(random_voice))
 
     @property
     def xtts_api_base_url(self):
