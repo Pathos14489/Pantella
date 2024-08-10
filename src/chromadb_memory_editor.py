@@ -80,8 +80,8 @@ class MemoryEditor():
         msgs.sort(key=lambda x: x["timestamp"])
         return chroma_client, messages_memories, msgs
 
-me = MemoryEditor(config)
 
+me = MemoryEditor(config)
 game_ids = []
 for npc in me.NPCs:
     game_ids.append(f"{npc['game_id']}")
@@ -135,27 +135,6 @@ def npc_selected(game_id, player_id, npc_id):
         messages.append(msg_tuple)
     memories = gr.Dataframe(messages,label="Memories", headers=["ID(WARNING, DON'T TOUCH)","Name","Content","Role","Timestamp","Location","Type"]+[f"{emotion} value" for emotion in me.config.emotion_composition]+["Conversation ID"], interactive=True, datatype=["str","str","str","str","str","str"]+["number"]*len([emotion for emotion in me.config.emotion_composition])+["str"], type="array", col_count=(6+2+len([emotion for emotion in me.config.emotion_composition]),"fixed"))
     return npc_id, memories
-
-
-# Could not get to work, will try again later.
-# def select_memory(selected_index):
-#     print(selected_index)
-#     # print(dataframe_origin)
-#     # selected_message = {
-#     #     "content": selected_memory_list[0],
-#     #     "role": selected_memory_list[1],
-#     #     "timestamp": selected_memory_list[2],
-#     #     "location": selected_memory_list[3],
-#     #     "type": selected_memory_list[4],
-#     #     "emotions": {}
-#     # }
-#     # print(len(selected_memory_list),len([emotion for emotion in me.config.emotion_composition]))
-#     # for i in range(5,len(selected_memory_list)-2):
-#     #     selected_message["emotions"][[emotion for emotion in me.config.emotion_composition][i-4]] = selected_memory_list[i]
-#     # selected_message["id"] = selected_memory_list[-2]
-#     # selected_message["conversation_id"] = selected_memory_list[-1]
-#     # print(selected_message)
-#     return selected_index
 
 def delete_memory(game_id, player_id, npc_id, selected_memory_id):
     print(selected_memory_id)
@@ -247,29 +226,3 @@ def save_memories(game_id, player_id, npc_id, memories):
             **msg["emotions"]
         }])
     return "Saved Memories"
-
-with gr.Blocks() as gr_blocks:
-    title_label = gr.Label("Pantella - Memory Editor")
-    with gr.Column():
-        # Selector for the player to choose an NPC to add to the conversation and button to add the NPC to the conversation
-        memories = gr.Dataframe(label="Memories", headers=["ID(WARNING, DON'T TOUCH)","Name","Content","Role","Timestamp","Location","Type"]+[f"{emotion} value" for emotion in me.config.emotion_composition]+["Conversation ID"], interactive=True, datatype=["str","str","str","str","str","str","str"]+["number"]*len([emotion for emotion in me.config.emotion_composition])+["str"], type="array", col_count=(6+2+len([emotion for emotion in me.config.emotion_composition]),"fixed"))
-        with gr.Accordion(label="Controls"):
-            with gr.Row():
-                with gr.Column():
-                    game_id_selector = gr.Dropdown(game_ids, multiselect=False, label="Game ID:")
-                    player_id_selector = gr.Dropdown(get_player_ids(game_id_selector), multiselect=False, label="Player ID:")
-                    npc_id_selector = gr.Dropdown(get_npc_ids(game_id_selector,player_id_selector), multiselect=False, label="NPC ID:")
-                with gr.Column():
-                    with gr.Group():
-                        selected_memory_id = gr.Textbox("", label="Selected Memory ID", placeholder="Enter Memory ID to Delete")
-                        delete_button = gr.Button(value="Delete Memory", variant="stop")
-            save_button = gr.Button(value="Save Memories", variant="primary")
-        
-        game_id_selector.select(game_selected, inputs=[game_id_selector], outputs=[player_id_selector, npc_id_selector])
-        player_id_selector.select(player_selected, inputs=[game_id_selector, player_id_selector], outputs=[npc_id_selector])
-        npc_id_selector.select(npc_selected, inputs=[game_id_selector, player_id_selector, npc_id_selector], outputs=[npc_id_selector, memories])
-        # memories.select(select_memory, inputs=[memories], outputs=[selected_memory_id])
-        delete_button.click(delete_memory, inputs=[game_id_selector, player_id_selector, npc_id_selector, selected_memory_id], outputs=[selected_memory_id, memories])
-        save_button.click(save_memories, inputs=[game_id_selector, player_id_selector, npc_id_selector, memories])
-
-    gr_blocks.launch()

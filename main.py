@@ -25,16 +25,49 @@ except Exception as e:
     input("Press Enter to exit.")
     raise e
 
+from src.chromadb_memory_editor import MemoryEditor, get_player_ids, get_npc_ids, game_ids, game_selected, player_selected, npc_selected, delete_memory, save_memories, me
+
 logging.info("Loading blocked logging paths -- No logs will be generated from these files")
 logging.block_logs_from = config.block_logs_from # block logs from certain files
 
 utils.cleanup_mei(config.remove_mei_folders) # clean up old instances of exe runtime files
 
+if config.chromadb_memory_editor_enabled and imported_gradio:
+    logging.info("Starting Memory Editor...")
+    with gr.Blocks() as mem_gr_blocks:
+        title_label = gr.Label("Pantella - Memory Editor")
+        with gr.Column():
+            # Selector for the player to choose an NPC to add to the conversation and button to add the NPC to the conversation
+            memories = gr.Dataframe(label="Memories", headers=["ID(WARNING, DON'T TOUCH)","Name","Content","Role","Timestamp","Location","Type"]+[f"{emotion} value" for emotion in me.config.emotion_composition]+["Conversation ID"], interactive=True, datatype=["str","str","str","str","str","str","str"]+["number"]*len([emotion for emotion in me.config.emotion_composition])+["str"], type="array", col_count=(6+2+len([emotion for emotion in me.config.emotion_composition]),"fixed"))
+            with gr.Accordion(label="Controls"):
+                with gr.Row():
+                    with gr.Column():
+                        game_id_selector = gr.Dropdown(game_ids, multiselect=False, label="Game ID:")
+                        player_id_selector = gr.Dropdown(get_player_ids(game_id_selector), multiselect=False, label="Player ID:")
+                        npc_id_selector = gr.Dropdown(get_npc_ids(game_id_selector,player_id_selector), multiselect=False, label="NPC ID:")
+                    with gr.Column():
+                        with gr.Group():
+                            selected_memory_id = gr.Textbox("", label="Selected Memory ID", placeholder="Enter Memory ID to Delete")
+                            delete_button = gr.Button(value="Delete Memory", variant="stop")
+                save_button = gr.Button(value="Save Memories", variant="primary")
+            
+            game_id_selector.select(game_selected, inputs=[game_id_selector], outputs=[player_id_selector, npc_id_selector])
+            player_id_selector.select(player_selected, inputs=[game_id_selector, player_id_selector], outputs=[npc_id_selector])
+            npc_id_selector.select(npc_selected, inputs=[game_id_selector, player_id_selector, npc_id_selector], outputs=[npc_id_selector, memories])
+            # memories.select(select_memory, inputs=[memories], outputs=[selected_memory_id])
+            delete_button.click(delete_memory, inputs=[game_id_selector, player_id_selector, npc_id_selector, selected_memory_id], outputs=[selected_memory_id, memories])
+            save_button.click(save_memories, inputs=[game_id_selector, player_id_selector, npc_id_selector, memories])
+
+        # mem_thread = threading.Thread(target=mem_gr_blocks.launch, kwargs={'share':config.share_debug_ui, 'server_port':config.memory_editor_port, "prevent_thread_lock":True})
+        # mem_thread.start()
+        mem_gr_blocks.launch(share=config.share_debug_ui, server_port=config.memory_editor_port, prevent_thread_lock=True)
+        logging.info("Memory Editor started")
+
 if config.debug_mode:
     config.conversation_manager_type = "gradio" # override conversation manager type to gradio
     config.interface_type = "gradio" # override game interface type to gradio
     config.sentences_per_voiceline = 99 # override sentences per voiceline to 99 so all outputs generate the whole voice line instead of parts
-    logging.info("Debug Mode Enabled -- Conversation Manager Type set to Gradio, Interface Type set to Gradio, Sentences Per Voiceline set to 99")
+    logging.info("Debug Mode Enabled -- Conversation Manager Type set to Gradio, Interface Type set to Gradio, Sentences Per Voiceline forced to 99")
 
 logging.info("Creating Conversation Manager")
 try:
@@ -48,7 +81,7 @@ except Exception as e:
     raise e
 
 if config.debug_mode and imported_gradio:
-    with gr.Blocks() as gr_blocks:
+    with gr.Blocks() as mem_gr_blocks:
         title_label = gr.Label("Pantella - Debug UI")
         with gr.Row():
             # Selector for the player to choose an NPC to add to the conversation and button to add the NPC to the conversation
@@ -70,7 +103,7 @@ if config.debug_mode and imported_gradio:
                 chat_input = gr.Textbox("Hello there.", label="Chat Input", placeholder="Type a message...")
                 with gr.Row():
                     retry_button = gr.Button(value="Retry Conversation")
-        conversation_manager.assign_gradio_blocks(gr_blocks, title_label, npc_selector, current_location, player_name, player_race, player_sex, npc_add_button, chat_box, chat_input, retry_button, latest_voice_line)
+        conversation_manager.assign_gradio_blocks(mem_gr_blocks, title_label, npc_selector, current_location, player_name, player_race, player_sex, npc_add_button, chat_box, chat_input, retry_button, latest_voice_line)
 elif config.debug_mode and not imported_gradio:
 	logging.error("Could not import gradio. Please install gradio to use the debug UI.")
 	input("Press Enter to exit.")
@@ -96,7 +129,7 @@ def conversation_loop():
 # Start config flask server and conversation loop in parallel
 if config.ready:
     if config.debug_mode:
-        thread1 = threading.Thread(target=gr_blocks.launch, kwargs={'share':config.share_debug_ui})
+        thread1 = threading.Thread(target=mem_gr_blocks.launch, kwargs={'share':config.share_debug_ui, 'server_port':config.debug_ui_port, "prevent_thread_lock":True})
         thread1.start()
         logging.info("Debug UI started -- WARNING: In Game Conversations will not work in Debug Mode, if you're trying to start a conversation and getting a bug in game, this is why. Turn debug mode off to talk to NPCs in game!")
         conversation_loop()

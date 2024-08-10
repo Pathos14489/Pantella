@@ -412,6 +412,7 @@ class ConfigLoader:
                 "chromadb_memory_depth": 1,
                 "chromadb_memory_direction": "topdown", # topdown or bottomup
                 "chromadb_query_size": 5,
+                "chromadb_memory_editor_enabled": True,
             },
             "SpeechToText": {
                 "stt_enabled": False,
@@ -656,7 +657,9 @@ class ConfigLoader:
                 "conversation_data_directory": ".\\data\\conversations",
                 "voice_model_ref_ids_file": ".\\skyrim_voice_model_ids.json",
                 "logging_file_path": ".\\logging.log",
-                "port": 8021
+                "config_port": 8021,
+                "memory_editor_port": 8022,
+                "debug_port": 8023,
             }
         }
     
@@ -712,6 +715,7 @@ class ConfigLoader:
                 "chromadb_memory_depth": self.chromadb_memory_depth,
                 "chromadb_memory_direction": self.chromadb_memory_direction,
                 "chromadb_query_size": self.chromadb_query_size,
+                "chromadb_memory_editor_enabled": self.chromadb_memory_editor_enabled,
             },
             "SpeechToText": {
                 "stt_enabled": self.stt_enabled,
@@ -920,7 +924,9 @@ class ConfigLoader:
                 "conversation_data_directory": self.conversation_data_directory,
                 "voice_model_ref_ids_file": self.voice_model_ref_ids_file,
                 "logging_file_path": self.logging_file_path,
-                "port": self.port,
+                "config_port": self.config_port,
+                "memory_editor_port": self.memory_editor_port,
+                "debug_port": self.debug_port,
             }
         }
     
@@ -969,5 +975,6 @@ class ConfigLoader:
         @self.config_server_app.route('/jquery-3.7.1.min.js', methods=['GET'])
         def jquery():
             return flask.send_file('../webconfigurator/jquery-3.7.1.min.js')
-        self.config_server_app.run(port=self.port, threaded=True)
-        logging.info(f"Config server running on port http://localhost:{self.port}/")
+        logging.info(f"Running config server on port http://localhost:{self.config_port}/")
+        self.config_server_app.run(port=self.config_port, threaded=True)
+        logging.info(f"Config server running on port http://localhost:{self.config_port}/")
