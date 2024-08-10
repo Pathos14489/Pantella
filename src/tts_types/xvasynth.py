@@ -155,6 +155,9 @@ class Synthesizer(base_tts.base_Synthesizer):
                 # logging.info(f"Response text: {r.text}")
                 data = None
             self._voices = [voice for voice in self._voices if voice not in self.config.xvasynth_banned_voice_models] 
+        for banned_voice in self.config.xvasynth_banned_voice_models:
+            if banned_voice in self._voices:
+                self._voices.remove(banned_voice)
         return self._voices
 
     @utils.time_it

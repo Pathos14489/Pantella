@@ -63,6 +63,9 @@ class Synthesizer(base_tts.base_Synthesizer):
                 speaker = speaker_wav_file.split(".")[0]
                 if speaker_wav_file.endswith(".wav") and speaker not in voices:
                     voices.append(speaker)
+        for banned_voice in self.config.style_tts_2_banned_voice_models:
+            if banned_voice in voices:
+                voices.remove(banned_voice)
         return voices
     
     def voice_model_settings(self, voice_model):
@@ -103,7 +106,7 @@ class Synthesizer(base_tts.base_Synthesizer):
             output_wav_file=voiceline_location,
             alpha=settings["alpha"],
             beta=settings["beta"],
-            t=settings["t"],
+            # t=settings["t"],/\
             diffusion_steps=settings["diffusion_steps"],
             embedding_scale=settings["embedding_scale"]
         )

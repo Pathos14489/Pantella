@@ -98,6 +98,9 @@ class Synthesizer(base_tts.base_Synthesizer):
                             json_data['voice_model'] = file.replace(".json", "")
                             voices.append(json_data)
             self._voices = voices
+        for banned_voice in self.config.parler_banned_voice_models:
+            if banned_voice in self._voices:
+                self._voices.remove(banned_voice)
         return [voice["voice_model"] for voice in self._voices]
         
     def get_voice_model_data(self, voice_model):

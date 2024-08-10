@@ -130,6 +130,9 @@ class Synthesizer(base_tts.base_Synthesizer):
                 speaker = speaker_wav_file.split(".")[0]
                 if speaker_wav_file.endswith(".wav") and speaker not in voices:
                     voices.append(speaker)
+        for banned_voice in self.config.chat_tts_banned_voice_models:
+            if banned_voice in voices:
+                voices.remove(banned_voice)
         return voices
     
     def get_speaker_wav_path(self, voice_model):

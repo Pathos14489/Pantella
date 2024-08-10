@@ -569,6 +569,7 @@ class ConfigLoader:
             "piperTTS": {
                 "piper_binary_dir": ".\\piper\\",
                 "piper_models_dir": ".\\data\\models\\piper\\",
+                "piper_tts_banned_voice_models": [],
             },
             "xVASynth": {
                 "xvasynth_path": "C:\\Games\\Steam\\steamapps\\common\\xVASynth",
@@ -578,6 +579,7 @@ class ConfigLoader:
                 "use_sr": False,
                 "xvasynth_banned_voice_models": [],
                 "xvasynth_base_url": "http://127.0.0.1:8008",
+                "xvasynth_banned_voice_models": [],
             },
             "xTTS_api": {
                 "xtts_api_dir": ".\\xtts-api-server-pantella\\",
@@ -593,7 +595,8 @@ class ConfigLoader:
                     "stream_chunk_size": 200
                 },
                 "xtts_api_banned_voice_models": [],
-                "default_xtts_api_model": "v2.0.2"
+                "default_xtts_api_model": "v2.0.2",
+                "xtts_banned_voice_models": [],
             },
             "ChatTTS": {
                 "ensure_all_voice_samples_have_inference_settings": True,
@@ -604,7 +607,8 @@ class ConfigLoader:
                 "chat_tts_default_refine_text_temperature": 0.7,
                 "chat_tts_default_refine_text_top_p": 0.7,
                 "chat_tts_default_refine_text_top_k": 20,
-                "chat_tts_default_refine_text_repetition_penalty": 1.0
+                "chat_tts_default_refine_text_repetition_penalty": 1.0,
+                "chat_tts_banned_voice_models": [],
             },
             "ParlerTTS": {
                 "parler_tts_model": "parler-tts/parler-tts-mini-v1",
@@ -612,7 +616,8 @@ class ConfigLoader:
                 "parler_tts_compile": False,
                 "parler_tts_compile_mode": "reduce-overhead", # reduce-overhead, default
                 "parler_tts_max_length": 50,
-                "parler_temperature": 1.0
+                "parler_temperature": 1.0,
+                "parler_banned_voice_models": [],
             },
             "StyleTTS2": {
                 "style_tts_2_default_alpha": 0.3,
@@ -620,6 +625,7 @@ class ConfigLoader:
                 "style_tts_2_default_diffusion_steps": 5,
                 "style_tts_2_default_embedding_scale": 1.0,
                 "style_tts_2_default_t": 0.7,
+                "style_tts_2_banned_voice_models": [],
             },
             "Debugging": {
                 "debug_mode": False,

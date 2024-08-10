@@ -126,6 +126,9 @@ class Synthesizer(base_tts.base_Synthesizer):
                     response.sort()
             response = [voice for voice in response if voice not in self.config.xtts_api_banned_voice_models] 
             self._voices = response
+        for banned_voice in self.config.xtts_banned_voice_models:
+            if banned_voice in self._voices:
+                self._voices.remove(banned_voice)
         return self._voices
     
     def available_models(self):

@@ -38,6 +38,9 @@ class Synthesizer(base_tts.base_Synthesizer):
         voices = []
         for voice_model in self._voice_model_jsons:
             voices.append(voice_model['model_name'])
+        for banned_voice in self.config.piper_tts_banned_voices:
+            if banned_voice in voices:
+                voices.remove(banned_voice)
         return voices
     
     def _synthesize(self, voiceline, voice_model, voiceline_location, aggro=0):
