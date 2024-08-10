@@ -170,7 +170,7 @@ class Synthesizer(base_tts.base_Synthesizer):
     
     def _synthesize(self, voiceline, voice_model, voiceline_location, aggro=0):
         """Synthesize the audio for the character specified using ChatTTS"""
-        logging.output(f'ChatTTS - Loading audio sample and parameters for voiceline synthesis...')
+        logging.output(f'ChatTTS - Loading audio sample and parameters for voiceline synthesis for voice model "{voice_model}"...')
         speaker_wav_path = self.get_speaker_wav_path(voice_model)
         
         voice_model_settings = self.voice_model_settings(voice_model)
