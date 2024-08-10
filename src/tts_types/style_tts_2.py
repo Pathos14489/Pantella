@@ -65,6 +65,24 @@ class Synthesizer(base_tts.base_Synthesizer):
                     voices.append(speaker)
         return voices
     
+    def voice_model_settings(self, voice_model):
+        # speaker voice model settings are stored in ./data/chat_tts_inference_settings/{tts_language_code}/{voice_model}.json
+        settings = {
+            "alpha": self.config.style_tts_2_default_alpha,
+            "beta": self.config.style_tts_2_default_beta,
+            "t": self.config.style_tts_2_default_t,
+            "diffusion_steps": self.config.style_tts_2_default_diffusion_steps,
+            "embedding_scale": self.config.style_tts_2_default_embedding_scale,
+        }
+        voice_model_settings_path = os.path.abspath(f".\\data\\style_tts_2_inference_settings\\{self.language['tts_language_code']}\\{voice_model}.json")
+        if os.path.exists(voice_model_settings_path):
+            with open(voice_model_settings_path, "r") as f:
+                voice_model_settings = json.load(f)
+            for setting in settings:
+                if setting in voice_model_settings:
+                    settings[setting] = voice_model_settings[setting]
+        return settings
+    
     def get_speaker_wav_path(self, voice_model):
         for speaker_wavs_folder in self.speaker_wavs_folders:
             speaker_wav_path = os.path.join(speaker_wavs_folder, f"{voice_model}.wav")
@@ -76,5 +94,15 @@ class Synthesizer(base_tts.base_Synthesizer):
         """Synthesize the audio for the character specified using ParlerTTS"""
         logging.output(f'{self.tts_slug} - synthesizing {voiceline} with voice model "{voice_model}"...')
         speaker_wav_path = self.get_speaker_wav_path(voice_model)
-        self.model.inference(voiceline, target_voice_path=speaker_wav_path, output_wav_file=voiceline_location)
+        settings = self.voice_model_settings(voice_model)
+        logging.output(f'{self.tts_slug} - using voice model settings: {settings}')
+        self.model.inference(voiceline,
+            target_voice_path=speaker_wav_path,
+            output_wav_file=voiceline_location,
+            alpha=settings["alpha"],
+            beta=settings["beta"],
+            t=settings["t"],
+            diffusion_steps=settings["diffusion_steps"],
+            embedding_scale=settings["embedding_scale"]
+        )
         logging.output(f'{self.tts_slug} - synthesized {voiceline} with voice model "{voice_model}"')

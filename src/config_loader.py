@@ -553,19 +553,6 @@ class ConfigLoader:
                 "narrator_volume": 0.5, # 50% volume
                 "narrator_delay": 0.2, # 200ms delay
             },
-            "piperTTS": {
-                "piper_binary_dir": ".\\piper\\",
-                "piper_models_dir": ".\\data\\models\\piper\\",
-            },
-            "xVASynth": {
-                "xvasynth_path": "C:\\Games\\Steam\\steamapps\\common\\xVASynth",
-                "xvasynth_process_device": "cpu",
-                "pace": 1.0,
-                "use_cleanup": False,
-                "use_sr": False,
-                "xvasynth_banned_voice_models": [],
-                "xvasynth_base_url": "http://127.0.0.1:8008",
-            },
             "xTTS": {
                 "xtts_device": "cuda",
                 "xtts_voice_samples_dir": ".\\data\\voice_samples",
@@ -578,6 +565,19 @@ class ConfigLoader:
                 "xtts_repetition_penalty": 10.0,
                 "xtts_speed": 1.0,
                 "xtts_num_beams": 1,
+            },
+            "piperTTS": {
+                "piper_binary_dir": ".\\piper\\",
+                "piper_models_dir": ".\\data\\models\\piper\\",
+            },
+            "xVASynth": {
+                "xvasynth_path": "C:\\Games\\Steam\\steamapps\\common\\xVASynth",
+                "xvasynth_process_device": "cpu",
+                "pace": 1.0,
+                "use_cleanup": False,
+                "use_sr": False,
+                "xvasynth_banned_voice_models": [],
+                "xvasynth_base_url": "http://127.0.0.1:8008",
             },
             "xTTS_api": {
                 "xtts_api_dir": ".\\xtts-api-server-pantella\\",
@@ -597,6 +597,14 @@ class ConfigLoader:
             },
             "ChatTTS": {
                 "ensure_all_voice_samples_have_inference_settings": True,
+                "chat_tts_default_infer_code_prompt": "[speed_3]",
+                "chat_tts_default_infer_code_temperature": 0.3,
+                "chat_tts_default_infer_code_repetition_penalty": 1.05,
+                "chat_tts_default_refine_text_prompt": "",
+                "chat_tts_default_refine_text_temperature": 0.7,
+                "chat_tts_default_refine_text_top_p": 0.7,
+                "chat_tts_default_refine_text_top_k": 20,
+                "chat_tts_default_refine_text_repetition_penalty": 1.0
             },
             "ParlerTTS": {
                 "parler_tts_model": "parler-tts/parler-tts-mini-v1",
@@ -605,6 +613,13 @@ class ConfigLoader:
                 "parler_tts_compile_mode": "reduce-overhead", # reduce-overhead, default
                 "parler_tts_max_length": 50,
                 "parler_temperature": 1.0
+            },
+            "StyleTTS2": {
+                "style_tts_2_default_alpha": 0.3,
+                "style_tts_2_default_beta": 0.7,
+                "style_tts_2_default_diffusion_steps": 5,
+                "style_tts_2_default_embedding_scale": 1.0,
+                "style_tts_2_default_t": 0.7,
             },
             "Debugging": {
                 "debug_mode": False,
@@ -811,19 +826,6 @@ class ConfigLoader:
                 "narrator_volume": self.narrator_volume,
                 "narrator_delay": self.narrator_delay,
             },
-            "piperTTS": {
-                "piper_binary_dir": self.piper_binary_dir,
-                "piper_models_dir": self.piper_models_dir,
-            },
-            "xVASynth": {
-                "xvasynth_path": self.xvasynth_path,
-                "xvasynth_process_device": self.xvasynth_process_device,
-                "pace": self.pace,
-                "use_cleanup":self.use_cleanup,
-                "use_sr": self.use_sr,
-                "xvasynth_banned_voice_models": self.xvasynth_banned_voice_models,
-                "xvasynth_base_url": self.xvasynth_base_url,
-            },
             "xTTS": {
                 "xtts_device": self.xtts_device,
                 "xtts_voice_samples_dir": self.xtts_voice_samples_dir,
@@ -837,6 +839,19 @@ class ConfigLoader:
                 "xtts_speed": self.xtts_speed,
                 "xtts_num_beams": self.xtts_num_beams,
             },
+            "piperTTS": {
+                "piper_binary_dir": self.piper_binary_dir,
+                "piper_models_dir": self.piper_models_dir,
+            },
+            "xVASynth": {
+                "xvasynth_path": self.xvasynth_path,
+                "xvasynth_process_device": self.xvasynth_process_device,
+                "pace": self.pace,
+                "use_cleanup":self.use_cleanup,
+                "use_sr": self.use_sr,
+                "xvasynth_banned_voice_models": self.xvasynth_banned_voice_models,
+                "xvasynth_base_url": self.xvasynth_base_url,
+            },
             "xTTS_api": {
                 "xtts_api_dir": self.xtts_api_dir,
                 "xtts_api_base_url": self.xtts_api_base_url,
@@ -846,6 +861,14 @@ class ConfigLoader:
             },
             "ChatTTS": {
                 "ensure_all_voice_samples_have_inference_settings": self.ensure_all_voice_samples_have_inference_settings,
+                "chat_tts_default_infer_code_prompt": self.chat_tts_default_infer_code_prompt,
+                "chat_tts_default_infer_code_temperature": self.chat_tts_default_infer_code_temperature,
+                "chat_tts_default_infer_code_repetition_penalty": self.chat_tts_default_infer_code_repetition_penalty,
+                "chat_tts_default_refine_text_prompt": self.chat_tts_default_refine_text_prompt,
+                "chat_tts_default_refine_text_temperature": self.chat_tts_default_refine_text_temperature,
+                "chat_tts_default_refine_text_top_p": self.chat_tts_default_refine_text_top_p,
+                "chat_tts_default_refine_text_top_k": self.chat_tts_default_refine_text_top_k,
+                "chat_tts_default_refine_text_repetition_penalty": self.chat_tts_default_refine_text_repetition_penalty,
             },
             "ParlerTTS": {
                 "parler_tts_model": self.parler_tts_model,
@@ -854,6 +877,13 @@ class ConfigLoader:
                 "parler_tts_compile_mode": self.parler_tts_compile_mode,
                 "parler_tts_max_length": self.parler_tts_max_length,
                 "parler_temperature": self.parler_temperature
+            },
+            "StyleTTS2": {
+                "style_tts_2_default_alpha": self.style_tts_2_default_alpha,
+                "style_tts_2_default_beta": self.style_tts_2_default_beta,
+                "style_tts_2_default_diffusion_steps": self.style_tts_2_default_diffusion_steps,
+                "style_tts_2_default_embedding_scale": self.style_tts_2_default_embedding_scale,
+                "style_tts_2_default_t": self.style_tts_2_default_t,
             },
             "Debugging": {
                 "debug_mode": self.debug_mode,

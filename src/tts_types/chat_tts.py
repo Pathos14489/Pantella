@@ -141,26 +141,38 @@ class Synthesizer(base_tts.base_Synthesizer):
     
     def voice_model_settings(self, voice_model):
         # speaker voice model settings are stored in ./data/chat_tts_inference_settings/{tts_language_code}/{voice_model}.json
+        settings = {
+            "infer_code_prompt": self.config.chat_tts_default_infer_code_prompt,
+            "infer_code_temperature": self.config.chat_tts_default_infer_code_temperature,
+            "infer_code_repetition_penalty": self.config.chat_tts_default_infer_code_repetition_penalty,
+            "refine_text_prompt": self.config.chat_tts_default_refine_text_prompt,
+            "refine_text_temperature": self.config.chat_tts_default_refine_text_temperature,
+            "refine_text_top_P": self.config.chat_tts_default_refine_text_top_p,
+            "refine_text_top_K": self.config.chat_tts_default_refine_text_top_k,
+            "refine_text_repetition_penalty": self.config.chat_tts_default_refine_text_repetition_penalty
+        }
         voice_model_settings_path = os.path.abspath(f".\\data\\chat_tts_inference_settings\\{self.language['tts_language_code']}\\{voice_model}.json")
         if os.path.exists(voice_model_settings_path):
             with open(voice_model_settings_path, "r") as f:
                 voice_model_settings = json.load(f)
-            return voice_model_settings
+            for setting in voice_model_settings:
+                settings[setting] = voice_model_settings[setting]
         logging.error(f"Voice model settings not found at: {voice_model_settings_path}")
-        logging.error(f"Default Object:", json.dumps({
-            "transcription": "FILL THIS OUT WITH TRANSCRIPT OF THE VOICE SAMPLE. The rest of the settings are defaults, tweak them as needed. DO NOT LEAVE TRANSCRIPT AS THIS, IT WILL NOT WORK.",
-            "infer_code_prompt": "[speed_3]",
-            "infer_code_temperature": 0.3,
-            "infer_code_repetition_penalty": 1.05,
-            "refine_text_prompt": "",
-            "refine_text_temperature": 0.7,
-            "refine_text_top_P": 0.7,
-            "refine_text_top_K": 20,
-            "refine_text_repetition_penalty": 1.0
-        }, indent=4))
-        if not os.path.exists(os.path.dirname(voice_model_settings_path)):
-            os.makedirs(os.path.dirname(voice_model_settings_path))
-        input("Press enter to continue when you have filled out the voice model settings.")
+        if "transcription" not in settings:
+            logging.info(f"Default Object:", json.dumps({
+                "transcription": "FILL THIS OUT WITH TRANSCRIPT OF THE VOICE SAMPLE. The rest of the settings are defaults, tweak them as needed. DO NOT LEAVE TRANSCRIPT AS THIS, IT WILL NOT WORK. The rest is optional.",
+                "infer_code_prompt": self.config.chat_tts_default_infer_code_prompt,
+                "infer_code_temperature": self.config.chat_tts_default_infer_code_temperature,
+                "infer_code_repetition_penalty": self.config.chat_tts_default_infer_code_repetition_penalty,
+                "refine_text_prompt": self.config.chat_tts_default_refine_text_prompt,
+                "refine_text_temperature": self.config.chat_tts_default_refine_text_temperature,
+                "refine_text_top_P": self.config.chat_tts_default_refine_text_top_p,
+                "refine_text_top_K": self.config.chat_tts_default_refine_text_top_k,
+                "refine_text_repetition_penalty": self.config.chat_tts_default_refine_text_repetition_penalty
+            }, indent=4))
+            if not os.path.exists(os.path.dirname(voice_model_settings_path)):
+                os.makedirs(os.path.dirname(voice_model_settings_path))
+            input("Press enter to continue when you have filled out the voice model settings.")
         if not os.path.exists(voice_model_settings_path):
             logging.error(f"Voice model settings was not found at: {voice_model_settings_path}")
             raise FileNotFoundError()
@@ -174,6 +186,7 @@ class Synthesizer(base_tts.base_Synthesizer):
         speaker_wav_path = self.get_speaker_wav_path(voice_model)
         
         voice_model_settings = self.voice_model_settings(voice_model)
+        logging.output(f'{self.tts_slug} - using voice model settings: {voice_model_settings}')
 
         transcription = voice_model_settings["transcription"]
         
@@ -216,9 +229,7 @@ class Synthesizer(base_tts.base_Synthesizer):
             params_infer_code=speaker_params_infer_code,
             params_refine_text=params_refine_text
         )
-        temp_voiceline_location = voiceline_location.replace(".wav", "_temp.wav")
         logging.output("ChatTTS - Voiceline synthesized, saving to disk...")
-        # torchaudio.save(voiceline_location, torch.from_numpy(wavs[0]).unsqueeze(0), 24000)
         file_bytes = io.BytesIO()
         torchaudio.save(file_bytes, torch.from_numpy(wavs[0]).unsqueeze(0), 24000, format="wav")
         file_bytes.seek(0)
@@ -228,4 +239,3 @@ class Synthesizer(base_tts.base_Synthesizer):
         if not os.path.exists(voiceline_location):
             logging.error(f'ChatTTS failed to generate voiceline at: {Path(voiceline_location)}')
             raise FileNotFoundError()
-        # os.remove(temp_voiceline_location) # remove temp file
