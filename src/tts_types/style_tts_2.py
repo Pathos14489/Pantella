@@ -96,6 +96,8 @@ class Synthesizer(base_tts.base_Synthesizer):
         speaker_wav_path = self.get_speaker_wav_path(voice_model)
         settings = self.voice_model_settings(voice_model)
         logging.output(f'{self.tts_slug} - using voice model settings: {settings}')
+        if not voiceline.endswith(".") and not voiceline.endswith("!") and not voiceline.endswith("?"): # Add a period to the end of the voiceline if it doesn't have one. StyleTTS2 will make a strange blip sound if the voiceline doesn't end with a period.
+            voiceline += "."
         self.model.inference(voiceline,
             target_voice_path=speaker_wav_path,
             output_wav_file=voiceline_location,
