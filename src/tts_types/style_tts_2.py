@@ -78,4 +78,3 @@ class Synthesizer(base_tts.base_Synthesizer):
         speaker_wav_path = self.get_speaker_wav_path(voice_model)
         self.model.inference(voiceline, target_voice_path=speaker_wav_path, output_wav_file=voiceline_location)
         logging.output(f'{self.tts_slug} - synthesized {voiceline} with voice model "{voice_model}"')
-        
