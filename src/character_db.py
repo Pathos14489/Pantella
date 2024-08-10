@@ -329,7 +329,7 @@ class CharacterDB():
             for character in self.characters:
                 if character['voice_model'] in self.invalid:
                     if character['voice_model'] != "":
-                        logging.warning(f"Character '{character['name']}' uses invalid voice model '{character['voice_model']}'! This is an error, please report it! (The rest of the program will continue to run, but this character might not be able to be used)")
+                        logging.warning(f"Character '{character['name']}' uses invalid voice model '{character['voice_model']}'!")
 
     def get_character(self, character_name, character_ref_id=None, character_base_id=None): # Get a character from the character database using the character's name, refid_int, or baseid_int
         if character_ref_id is not None:
