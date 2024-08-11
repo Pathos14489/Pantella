@@ -227,7 +227,8 @@ Now navigate from your launcher directory, to `./repositories/Pathos14489_Pantel
 
 First, another look to make sure our Pantella repository folders look the same. If you notice any differences, you might have either a newer version than is depicted here, an older version, or something went horribly wrong. Try updating just incase, and failing that, feel free to reach out for support on the Discord if anything looks too different from here:
 
-<img src="./img/step_2_image_6.png" alt="Pantella logo" style="float: left; margin-left:0%; margin-right:100%;"/>
+<img src="./img/step_2_image_6.png" alt="Pantella logo" align="left" style="float: left; margin-left:0%; margin-right:100%;"/>
+<br clear="both"/>
 
 ## 3 - Configuring Pantella - Games
 
@@ -251,7 +252,8 @@ Make a note of the game IDs you see here, you'll need these in just a moment. My
 ```
 After that, you'll want to open your `config.json` and set the game_id under "Game" to the ID of the game you want to play Pantella with.
 
-<img src="./img/step_3_image_1.png" align="right" alt="Pantella logo" style="float: left; margin-left:00%; margin-right:100%;"/>
+<img src="./img/step_3_image_1.png" align="left" alt="Pantella logo" style="float: left; margin-left:0%; margin-right:100%"/>
+<br clear="both"/>
 
 ## 4 - Run Pantella...? :/
 
