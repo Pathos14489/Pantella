@@ -1,7 +1,6 @@
-<img src="./img/pantella_logo_github.png" align="right" alt="Pantella logo" width="150" height="auto"/>
+<img src="./img/pantella_logo_github.png" align="left" alt="Pantella logo" width="150" height="auto"/>
 <br clear="right"/>
-
-# Pantella
+<br clear="right"/>
 
 Pantella is a fork of the popular Skyrim/Fallout mod Mantella, which allows you to naturally speak to NPCs using Speech-to-Text or Text Input, various LLM inference backends/OpenAI API Compatible (text generation), and half a dozen Text to Speech options.
 
