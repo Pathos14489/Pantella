@@ -79,6 +79,7 @@ class LLM(base_LLM.base_LLM):
 
         with open(self.config.secret_key_file_path, 'r') as f:
             api_key = f.readline().strip()
+        self.api_key = api_key
 
         if loaded:
             self.client = OpenAI(api_key=api_key, base_url=self.config.alternative_openai_api_base)
@@ -98,7 +99,10 @@ class LLM(base_LLM.base_LLM):
 
         if not self.vision_enabled:
             try:
-                self.client.completions.create(prompt="This is a test of the", model=self.config.llm, max_tokens=10)
+                if self.config.reverse_proxy:
+                    self.client.completions.create(prompt="This is a test of the", model=self.config.llm, max_tokens=10,extra_body={"proxy_password":api_key})
+                else:
+                    self.client.completions.create(prompt="This is a test of the", model=self.config.llm, max_tokens=10)
                 self.completions_supported = True
                 logging.success(f"OpenAI API at '{self.config.alternative_openai_api_base}' supports completions!")
             except Exception as e:
@@ -166,23 +170,45 @@ class LLM(base_LLM.base_LLM):
                 if self.completions_supported:
                     prompt = self.tokenizer.get_string_from_messages(messages) + self.tokenizer.start_message(self.config.assistant_name)
                     logging.info(f"Raw Prompt: {prompt}")
-                    completion = self.client.completions.create(prompt=prompt,
-                        model=self.config.llm, 
-                        max_tokens=self.config.max_tokens,
-                        **sampler_kwargs,
-                        extra_body=extra_body_kwargs,
-                        stream=False,
-                        logit_bias=self.logit_bias,
-                    )
+                    if self.config.reverse_proxy:
+                        completion = self.client.completions.create(prompt=prompt,
+                            model=self.config.llm, 
+                            max_tokens=self.config.max_tokens,
+                            **sampler_kwargs,
+                            extra_body=extra_body_kwargs,
+                            stream=False,
+                            logit_bias=self.logit_bias,
+                            proxy_password=self.api_key
+                        )
+                    else:
+                        completion = self.client.completions.create(prompt=prompt,
+                            model=self.config.llm, 
+                            max_tokens=self.config.max_tokens,
+                            **sampler_kwargs,
+                            extra_body=extra_body_kwargs,
+                            stream=False,
+                            logit_bias=self.logit_bias,
+                        )
                 else:
-                    completion = self.client.chat.completions.create(messages=messages,
-                        model=self.config.llm, 
-                        max_tokens=self.config.max_tokens,
-                        **sampler_kwargs,
-                        extra_body=extra_body_kwargs,
-                        stream=False,
-                        logit_bias=self.logit_bias,
-                    )
+                    if self.config.reverse_proxy:
+                        completion = self.client.chat.completions.create(messages=messages,
+                            model=self.config.llm, 
+                            max_tokens=self.config.max_tokens,
+                            **sampler_kwargs,
+                            extra_body=extra_body_kwargs,
+                            stream=False,
+                            logit_bias=self.logit_bias,
+                            proxy_password=self.api_key
+                        )
+                    else:
+                        completion = self.client.chat.completions.create(messages=messages,
+                            model=self.config.llm, 
+                            max_tokens=self.config.max_tokens,
+                            **sampler_kwargs,
+                            extra_body=extra_body_kwargs,
+                            stream=False,
+                            logit_bias=self.logit_bias,
+                        )
                 print(completion.choices[0].message)
                 try:
                     completion = completion.choices[0].text
@@ -287,15 +313,26 @@ class LLM(base_LLM.base_LLM):
                         os.makedirs(self.config.api_log_dir, exist_ok=True)
                         with open(self.config.api_log_dir+"/"+log_id+".log", "w") as f:
                             f.write(prompt)
-                        
-                    return self.client.completions.create(prompt=prompt,
-                        model=self.config.llm, 
-                        max_tokens=self.config.max_tokens,
-                        **sampler_kwargs,
-                        extra_body=extra_body_kwargs,
-                        stream=True,
-                        logit_bias=self.logit_bias,
-                    )
+                    
+                    if self.config.reverse_proxy:
+                        return self.client.completions.create(prompt=prompt,
+                            model=self.config.llm, 
+                            max_tokens=self.config.max_tokens,
+                            **sampler_kwargs,
+                            extra_body=extra_body_kwargs,
+                            stream=True,
+                            logit_bias=self.logit_bias,
+                            proxy_password=self.api_key
+                        )
+                    else:
+                        return self.client.completions.create(prompt=prompt,
+                            model=self.config.llm, 
+                            max_tokens=self.config.max_tokens,
+                            **sampler_kwargs,
+                            extra_body=extra_body_kwargs,
+                            stream=True,
+                            logit_bias=self.logit_bias,
+                        )
                 else:
                     logging.warning("Using chat completions because raw completions are not supported by the current API/settings.")
                     if self.config.log_all_api_requests:
@@ -315,14 +352,25 @@ class LLM(base_LLM.base_LLM):
                             }
                             json_string = json.dumps(request_json)
                             f.write(json_string)
-                    return self.client.chat.completions.create(messages=messages,
-                        model=self.config.llm, 
-                        max_tokens=self.config.max_tokens,
-                        **sampler_kwargs,
-                        extra_body=extra_body_kwargs,
-                        stream=True,
-                        logit_bias=self.logit_bias,
-                    )
+                    if self.config.reverse_proxy:
+                        return self.client.chat.completions.create(messages=messages,
+                            model=self.config.llm, 
+                            max_tokens=self.config.max_tokens,
+                            **sampler_kwargs,
+                            extra_body=extra_body_kwargs,
+                            stream=True,
+                            logit_bias=self.logit_bias,
+                            proxy_password=self.api_key
+                        )
+                    else:
+                        return self.client.chat.completions.create(messages=messages,
+                            model=self.config.llm, 
+                            max_tokens=self.config.max_tokens,
+                            **sampler_kwargs,
+                            extra_body=extra_body_kwargs,
+                            stream=True,
+                            logit_bias=self.logit_bias,
+                        )
             except Exception as e:
                 logging.warning('Could not connect to LLM API, retrying in 5 seconds...')
                 logging.warning(e)

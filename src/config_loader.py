@@ -520,6 +520,7 @@ class ConfigLoader:
                 "secret_key_file_path": ".\\GPT_SECRET_KEY.txt",
                 "banned_samplers": [], # Examples: "min_p", "typical_p", "top_p", "top_k", "temperature", "frequency_penalty", "presence_penalty", "repeat_penalty", "tfs_z", "mirostat_mode", "mirostat_eta", "mirostat_tau", "max_tokens"
                 "log_all_api_requests": False,
+                "reverse_proxy": False,
                 "api_log_dir": ".\\api_logs",
             },
             "llama_cpp_python": {
@@ -804,6 +805,7 @@ class ConfigLoader:
                 "secret_key_file_path": self.secret_key_file_path,
                 "banned_samplers": self.banned_samplers,
                 "log_all_api_requests": self.log_all_api_requests,
+                "reverse_proxy": self.reverse_proxy,
                 "api_log_dir": self.api_log_dir,
             },
             "llama_cpp_python": {
