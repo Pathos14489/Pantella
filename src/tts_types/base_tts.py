@@ -113,6 +113,12 @@ class base_Synthesizer:
         lower_voices = {}
         for voice in available_voices:
             lower_voices[voice.lower()] = voice
+        spaceless_voices = {}
+        for voice in available_voices:
+            spaceless_voices[voice.replace(' ', '').lower()] = voice
+        spaceless_lower_voices = {}
+        for voice in available_voices:
+            spaceless_lower_voices[voice.replace(' ', '').lower()] = voice
         for option in options:
             if option in available_voices:
                 if log:
@@ -122,6 +128,14 @@ class base_Synthesizer:
                 if log:
                     logging.info(f'Voice model "{option}" not found, but "{lower_voices[option.lower()]}" found!')
                 return lower_voices[option.lower()] # return the first valid voice model found
+            if option.replace(' ', '') in spaceless_voices:
+                if log:
+                    logging.info(f'Voice model "{option}" not found, but "{spaceless_voices[option.replace(" ", "").lower()]}" found!')
+                return spaceless_voices[option.replace(' ', '').lower()] # return the first valid voice model found
+            if option.lower().replace(' ', '') in spaceless_lower_voices:
+                if log:
+                    logging.info(f'Voice model "{option}" not found, but "{spaceless_lower_voices[option.lower().replace(" ", "")]}" found!')
+                return spaceless_lower_voices[option.lower().replace(' ', '')]
         # return None # if no valid voice model is found
         if log:
             logging.error(f'Voice model "{voice_model}" not available in {self.tts_slug}! Please add it to the voices list.')
