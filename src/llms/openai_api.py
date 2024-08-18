@@ -155,6 +155,7 @@ class LLM(base_LLM.base_LLM):
                 for kwarg in self.config.banned_samplers:
                     if kwarg in sampler_kwargs:
                         del sampler_kwargs[kwarg]
+                del sampler_kwargs["proxy_password"]
                 extra_body_kwargs = {
                     "min_p": self.min_p,
                     "top_k":self.top_k,
@@ -167,48 +168,28 @@ class LLM(base_LLM.base_LLM):
                 for kwarg in self.config.banned_samplers:
                     if kwarg in extra_body_kwargs:
                         del extra_body_kwargs[kwarg]
+                if self.config.reverse_proxy:
+                    extra_body_kwargs["proxy_password"] = self.api_key
                 if self.completions_supported:
                     prompt = self.tokenizer.get_string_from_messages(messages) + self.tokenizer.start_message(self.config.assistant_name)
                     logging.info(f"Raw Prompt: {prompt}")
-                    if self.config.reverse_proxy:
-                        completion = self.client.completions.create(prompt=prompt,
-                            model=self.config.llm, 
-                            max_tokens=self.config.max_tokens,
-                            **sampler_kwargs,
-                            extra_body=extra_body_kwargs,
-                            stream=False,
-                            logit_bias=self.logit_bias,
-                            proxy_password=self.api_key
-                        )
-                    else:
-                        completion = self.client.completions.create(prompt=prompt,
-                            model=self.config.llm, 
-                            max_tokens=self.config.max_tokens,
-                            **sampler_kwargs,
-                            extra_body=extra_body_kwargs,
-                            stream=False,
-                            logit_bias=self.logit_bias,
-                        )
+                    completion = self.client.completions.create(prompt=prompt,
+                        model=self.config.llm, 
+                        max_tokens=self.config.max_tokens,
+                        **sampler_kwargs,
+                        extra_body=extra_body_kwargs,
+                        stream=False,
+                        logit_bias=self.logit_bias,
+                    )
                 else:
-                    if self.config.reverse_proxy:
-                        completion = self.client.chat.completions.create(messages=messages,
-                            model=self.config.llm, 
-                            max_tokens=self.config.max_tokens,
-                            **sampler_kwargs,
-                            extra_body=extra_body_kwargs,
-                            stream=False,
-                            logit_bias=self.logit_bias,
-                            proxy_password=self.api_key
-                        )
-                    else:
-                        completion = self.client.chat.completions.create(messages=messages,
-                            model=self.config.llm, 
-                            max_tokens=self.config.max_tokens,
-                            **sampler_kwargs,
-                            extra_body=extra_body_kwargs,
-                            stream=False,
-                            logit_bias=self.logit_bias,
-                        )
+                    completion = self.client.chat.completions.create(messages=messages,
+                        model=self.config.llm, 
+                        max_tokens=self.config.max_tokens,
+                        **sampler_kwargs,
+                        extra_body=extra_body_kwargs,
+                        stream=False,
+                        logit_bias=self.logit_bias,
+                    )
                 print(completion.choices[0].message)
                 try:
                     completion = completion.choices[0].text
@@ -283,6 +264,7 @@ class LLM(base_LLM.base_LLM):
                 for kwarg in self.config.banned_samplers:
                     if kwarg in sampler_kwargs:
                         del sampler_kwargs[kwarg]
+                del sampler_kwargs["proxy_password"]
                 extra_body_kwargs = {
                     "min_p": self.min_p,
                     "top_k":self.top_k,
