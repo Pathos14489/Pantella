@@ -660,7 +660,7 @@ class ConfigLoader:
                 "logging_file_path": ".\\logging.log",
                 "config_port": 8021,
                 "memory_editor_port": 8022,
-                "debug_port": 8023,
+                "debug_ui_port": 8023,
             }
         }
     
@@ -928,7 +928,7 @@ class ConfigLoader:
                 "logging_file_path": self.logging_file_path,
                 "config_port": self.config_port,
                 "memory_editor_port": self.memory_editor_port,
-                "debug_port": self.debug_port,
+                "debug_ui_port": self.debug_ui_port,
             }
         }
     
