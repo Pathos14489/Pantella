@@ -36,7 +36,7 @@ class LLM(base_LLM.base_LLM):
         if loaded:
             if self.config.alternative_anthropic_api_base.lower() != 'none' and self.config.alternative_anthropic_api_base != '':
                 self.client = anthropic.Anthropic(
-                    api_key=self.api_key,
+                    auth_token=self.api_key,
                     base_url=self.config.alternative_anthropic_api_base,
                 )
                 logging.info(f"Using Anthropic-style API base: {self.config.alternative_anthropic_api_base}")
