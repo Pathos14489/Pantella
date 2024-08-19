@@ -4,8 +4,8 @@ print(os.path.dirname(__file__))
 import gradio as gr
 import src.config_loader as config_loader
 import json
-import chromadb
 import traceback
+import chromadb
 from chromadb.config import Settings
 try:
     config = config_loader.ConfigLoader() # Load config from config.json
