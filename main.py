@@ -25,7 +25,6 @@ except Exception as e:
     input("Press Enter to exit.")
     raise e
 
-from src.chromadb_memory_editor import MemoryEditor, get_player_ids, get_npc_ids, game_ids, game_selected, player_selected, npc_selected, delete_memory, save_memories, me
 
 logging.info("Loading blocked logging paths -- No logs will be generated from these files")
 logging.block_logs_from = config.block_logs_from # block logs from certain files
@@ -33,6 +32,7 @@ logging.block_logs_from = config.block_logs_from # block logs from certain files
 utils.cleanup_mei(config.remove_mei_folders) # clean up old instances of exe runtime files
 
 if config.chromadb_memory_editor_enabled and imported_gradio:
+    from src.chromadb_memory_editor import MemoryEditor, get_player_ids, get_npc_ids, game_ids, game_selected, player_selected, npc_selected, delete_memory, save_memories, me
     logging.info("Starting Memory Editor...")
     with gr.Blocks() as mem_gr_blocks:
         title_label = gr.Label("Pantella - Memory Editor")
