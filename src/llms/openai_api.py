@@ -76,7 +76,7 @@ class LLM(base_LLM.base_LLM):
                 token_limit = 4096
             self.config.maximum_local_tokens = token_limit # Set the maximum number of tokens for local models to the number of tokens available for the model chosen    
 
-        with open(self.config.secret_key_file_path, 'r') as f:
+        with open(self.config.alternative_openai_api_base, 'r') as f:
             api_key = f.readline().strip()
         self.api_key = api_key
 

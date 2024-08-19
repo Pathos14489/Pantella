@@ -18,7 +18,7 @@ class Transcriber:
     def whisper_transcribe(self, audio, prompt=None):
         logging.info('Transcribing audio using whisper...')
         url = self.whisper_url
-        with open(self.config.secret_key_file_path, 'r') as f:
+        with open(self.config.alternative_openai_api_base, 'r') as f:
             api_key = f.readline().strip()
         if 'openai' in url:
             headers = {"Authorization": f"Bearer {api_key}",}

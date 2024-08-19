@@ -30,7 +30,7 @@ class LLM(base_LLM.base_LLM):
         self.is_local = False
         self.config.maximum_local_tokens = 200000 # Override to the maximum number of tokens that can be processed by anthropic
 
-        with open(self.config.secret_key_file_path, 'r') as f:
+        with open(self.config.anthropic_api_key_path, 'r') as f:
             self.api_key = f.readline().strip()
 
         if loaded:
