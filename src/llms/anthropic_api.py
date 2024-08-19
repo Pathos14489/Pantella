@@ -18,7 +18,7 @@ except Exception as e:
 
 inference_engine_name = "anthropic_api"
 
-class LLM(base_LLM):
+class LLM(base_LLM.base_LLM):
     def __init__(self, conversation_manager, vision_enabled=False):
         global inference_engine_name
         super().__init__(conversation_manager, vision_enabled=vision_enabled)
