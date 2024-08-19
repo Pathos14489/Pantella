@@ -203,22 +203,17 @@ class LLM(base_LLM.base_LLM):
                         }
                         json_string = json.dumps(request_json)
                         f.write(json_string)
-                for part in self.client.messages.create(messages=messages,
+                with self.client.messages.stream(messages=messages,
                     model=self.config.anthropic_model, 
                     max_tokens=self.config.max_tokens,
                     **sampler_kwargs,
                     extra_body=extra_body_kwargs,
-                    stream=True,
-                ):
-                    print(part.content)
-                    try:
-                        part = part.content
-                    except:
-                        pass
-                    if part is None or type(part) != str:
-                        logging.error(f"Failed to parse completion from Anthropic API. Please check your API key and internet connection.")
-                    logging.info(f"Completion:"+str(part))
-                    yield part
+                )  as stream:
+                    for part in stream.text_stream:
+                        if part is None or type(part) != str:
+                            logging.error(f"Failed to parse completion part from Anthropic API. Please check your API key and internet connection.",part)
+                        logging.info(f"Completion:"+str(part))
+                        yield part
             except Exception as e:
                 logging.warning('Could not connect to LLM API, retrying in 5 seconds...')
                 logging.warning(e)
