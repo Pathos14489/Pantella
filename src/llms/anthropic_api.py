@@ -67,7 +67,7 @@ class LLM(base_LLM.base_LLM):
                     "top_p": self.top_p,
                     "top_k":self.top_k,
                     "temperature": self.temperature,
-                    "stop_sequence": anthropic_stop
+                    "stop_sequences": anthropic_stop
                 }
                 for kwarg in self.config.banned_samplers:
                     if kwarg in sampler_kwargs:
@@ -157,7 +157,7 @@ class LLM(base_LLM.base_LLM):
                     "top_p": self.top_p,
                     "top_k":self.top_k,
                     "temperature": self.temperature,
-                    "stop_sequence": anthropic_stop
+                    "stop_sequences": anthropic_stop
                 }
                 for kwarg in self.config.banned_samplers:
                     if kwarg in sampler_kwargs:
