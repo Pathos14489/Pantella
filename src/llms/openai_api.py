@@ -21,12 +21,11 @@ inference_engine_name = "openai"
 class LLM(base_LLM.base_LLM):
     def __init__(self, conversation_manager, vision_enabled=False):
         global inference_engine_name
-        global tokenizer_slug
         super().__init__(conversation_manager, vision_enabled=vision_enabled)
         self.inference_engine_name = inference_engine_name
         self.tokenizer_slug = "tiktoken" # Fastest tokenizer for OpenAI models, change if you want to use a different tokenizer (use 'embedding' for compatibility with any model using the openai API)
         
-        llm = self.config.llm
+        llm = self.config.openai_model
         # Is LLM Local?
         self.is_local = True
         if self.config.alternative_openai_api_base == 'none' or self.config.alternative_openai_api_base == "https://openrouter.ai/api/v1" or self.config.alternative_openai_api_base == "http://openrouter.ai/api/v1" or self.config.alternative_openai_api_base == "https://api.openai.com" or self.config.alternative_openai_api_base == "https://api.totalgpt.ai/v1":
@@ -95,19 +94,19 @@ class LLM(base_LLM.base_LLM):
         if self.is_local:
             logging.info(f"Running Pantella with local language model via openai python package")
         else:
-            logging.info(f"Running Pantella with '{self.config.llm}'. The language model chosen can be changed via config.json")
+            logging.info(f"Running Pantella with '{self.config.openai_model}'. The language model chosen can be changed via config.json")
 
         if not self.vision_enabled:
             try:
                 if self.config.reverse_proxy:
-                    self.client.completions.create(prompt="This is a test of the", model=self.config.llm, max_tokens=10,extra_body={"proxy_password":api_key})
+                    self.client.completions.create(prompt="This is a test of the", model=self.config.openai_model, max_tokens=10,extra_body={"proxy_password":api_key})
                 else:
-                    self.client.completions.create(prompt="This is a test of the", model=self.config.llm, max_tokens=10)
+                    self.client.completions.create(prompt="This is a test of the", model=self.config.openai_model, max_tokens=10)
                 self.completions_supported = True
                 logging.success(f"OpenAI API at '{self.config.alternative_openai_api_base}' supports completions!")
             except Exception as e:
                 self.completions_supported = False
-                logging.error(f"Current API does not support raw completions! Are you using OpenAI's API? They will not work with all features of Pantella, please use OpenRouter or another API that supports raw non-chat completions.")
+                logging.error(f"Current API does not support text completions! Are you using OpenAI's API? They will not work with all features of Pantella, please use OpenRouter or another API that supports raw non-chat completions.")
                 logging.error(e)
                 # input("Press Enter to exit.")
         else:
@@ -119,16 +118,9 @@ class LLM(base_LLM.base_LLM):
         context = super().get_context()
         new_context = []
         for message in context:
-            if "content" in message and type(message["content"]) == str:
-                new_content = message["content"]
-                if "name" in message:
-                    new_content = message["name"] + self.message_signifier + new_content
-                new_context.append({
-                    "role": message["role"],
-                    "content": new_content
-                })
-            else:
-                new_context.append(message)
+            if "content" in message and type(message["content"]) == str and "name" in message:
+                message["content"] = message["name"] + self.message_signifier + message["content"]
+            new_context.append(message)
         return new_context
     
     @utils.time_it
@@ -173,7 +165,7 @@ class LLM(base_LLM.base_LLM):
                     prompt = self.tokenizer.get_string_from_messages(messages) + self.tokenizer.start_message(self.config.assistant_name)
                     logging.info(f"Raw Prompt: {prompt}")
                     completion = self.client.completions.create(prompt=prompt,
-                        model=self.config.llm, 
+                        model=self.config.openai_model, 
                         max_tokens=self.config.max_tokens,
                         **sampler_kwargs,
                         extra_body=extra_body_kwargs,
@@ -182,7 +174,7 @@ class LLM(base_LLM.base_LLM):
                     )
                 else:
                     completion = self.client.chat.completions.create(messages=messages,
-                        model=self.config.llm, 
+                        model=self.config.openai_model, 
                         max_tokens=self.config.max_tokens,
                         **sampler_kwargs,
                         extra_body=extra_body_kwargs,
@@ -297,7 +289,7 @@ class LLM(base_LLM.base_LLM):
                             f.write(prompt)
                     
                     return self.client.completions.create(prompt=prompt,
-                        model=self.config.llm, 
+                        model=self.config.openai_model, 
                         max_tokens=self.config.max_tokens,
                         **sampler_kwargs,
                         extra_body=extra_body_kwargs,
@@ -314,7 +306,7 @@ class LLM(base_LLM.base_LLM):
                         with open(self.config.api_log_dir+"/"+log_id+".json", "w") as f:
                             request_json = {
                                 "messages": messages,
-                                "model": self.config.llm,
+                                "model": self.config.openai_model,
                                 "max_tokens": self.config.max_tokens,
                                 **sampler_kwargs,
                                 **extra_body_kwargs,
@@ -324,7 +316,7 @@ class LLM(base_LLM.base_LLM):
                             json_string = json.dumps(request_json)
                             f.write(json_string)
                     return self.client.chat.completions.create(messages=messages,
-                        model=self.config.llm, 
+                        model=self.config.openai_model, 
                         max_tokens=self.config.max_tokens,
                         **sampler_kwargs,
                         extra_body=extra_body_kwargs,

@@ -514,13 +514,20 @@ class ConfigLoader:
                 "resize_image": True,
                 "image_resolution": 672,
             },
-            "openai_api": {
-                "llm": "undi95/toppy-m-7b:free",
-                "alternative_openai_api_base": "https://openrouter.ai/api/v1/",
-                "secret_key_file_path": ".\\GPT_SECRET_KEY.txt",
-                "banned_samplers": [], # Examples: "min_p", "typical_p", "top_p", "top_k", "temperature", "frequency_penalty", "presence_penalty", "repeat_penalty", "tfs_z", "mirostat_mode", "mirostat_eta", "mirostat_tau", "max_tokens"
+            "LLM_API_Settings":{
                 "log_all_api_requests": False,
                 "reverse_proxy": False,
+            },
+            "anthropic_api": {
+                "anthropic_model": "undi95/toppy-m-7b:free",
+                "alternative_anthropic_api_base": "none",
+                "anthropic_api_key_path": ".\\ANTHROPIC_SECRET_KEY.txt",
+            },
+            "openai_api": {
+                "openai_model": "undi95/toppy-m-7b:free",
+                "alternative_openai_api_base": "https://openrouter.ai/api/v1/",
+                "openai_api_key_path": ".\\GPT_SECRET_KEY.txt",
+                "banned_samplers": [], # Examples: "min_p", "typical_p", "top_p", "top_k", "temperature", "frequency_penalty", "presence_penalty", "repeat_penalty", "tfs_z", "mirostat_mode", "mirostat_eta", "mirostat_tau", "max_tokens"
                 "api_log_dir": ".\\api_logs",
             },
             "llama_cpp_python": {
@@ -799,13 +806,20 @@ class ConfigLoader:
                 "image_resolution": self.image_resolution,
                 "resize_image": self.resize_image,
             },
-            "openai_api": {
-                "llm": self.llm,
-                "alternative_openai_api_base": self.alternative_openai_api_base,
-                "secret_key_file_path": self.secret_key_file_path,
-                "banned_samplers": self.banned_samplers,
+            "LLM_API_Settings": {
                 "log_all_api_requests": self.log_all_api_requests,
                 "reverse_proxy": self.reverse_proxy,
+            },
+            "anthropic_api": {
+                "anthropic_model": self.anthropic_model,
+                "alternative_anthropic_api_base": self.alternative_anthropic_api_base,
+                "anthropic_api_key_path": self.anthropic_api_key_path,
+            },
+            "openai_api": {
+                "openai_model": self.openai_model,
+                "alternative_openai_api_base": self.alternative_openai_api_base,
+                "openai_api_key_path": self.openai_api_key_path,
+                "banned_samplers": self.banned_samplers,
                 "api_log_dir": self.api_log_dir,
             },
             "llama_cpp_python": {

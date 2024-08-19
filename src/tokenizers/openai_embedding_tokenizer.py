@@ -19,7 +19,7 @@ class Tokenizer(tokenizer.base_Tokenizer): # Gets token count from OpenAI's embe
     def get_token_count(self, string):
         """Returns the number of tokens in the string"""
         embedding = self.client.embeddings.create(
-            model=self.config.llm,
+            model=self.config.openai_model,
             input=string
         )
         num_tokens = int(embedding.usage.prompt_tokens)
