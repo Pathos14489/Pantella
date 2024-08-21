@@ -153,12 +153,23 @@ class LLM(base_LLM.base_LLM):
     def get_context(self):
         context = super().get_context()
         new_context = []
+        message_group = None
         for message in context:
             if message["role"] == "system":
                 message["role"] = "user"
             if "content" in message and type(message["content"]) == str and "name" in message:
                 message["content"] = message["name"] + self.message_signifier + message["content"]
-            new_context.append(message)
+            if message_group is None:
+                message_group = message
+            else:
+                if message["role"] == message_group["role"]:
+                    message_group["content"] += "\n" + message["content"]
+                else:
+                    new_context.append(message_group)
+                    message_group = message
+            # new_context.append(message)
+        if message_group is not None:
+            new_context.append(message_group)
         return new_context
     
     @utils.time_it
