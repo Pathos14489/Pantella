@@ -62,7 +62,7 @@ class LLM(base_LLM.base_LLM):
                 "anthropic-version": "2023-06-01",
             }
         )
-        logging.info(f"Anthropic I swTest Response: {test.content}")
+        logging.info(f"Anthropic Test Response: {test.content}")
 
         logging.info(f"Running Pantella with '{self.config.anthropic_model}'. The language model chosen can be changed via config.json")
         logging.error(f"Current API does not support text completions! Anthropic API is not recommended, don't use it, use literally anything else PLEASE!")
