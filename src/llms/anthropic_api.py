@@ -36,7 +36,7 @@ class LLM(base_LLM.base_LLM):
         if loaded:
             if self.config.alternative_anthropic_api_base.lower() != 'none' and self.config.alternative_anthropic_api_base != '':
                 self.client = anthropic.Anthropic(
-                    auth_token=self.api_key,
+                    api_key=self.api_key,
                     base_url=self.config.alternative_anthropic_api_base,
                 )
                 logging.info(f"Using Anthropic-style API base: {self.config.alternative_anthropic_api_base}")
@@ -48,6 +48,21 @@ class LLM(base_LLM.base_LLM):
             logging.error(f"Error loading anthropic. Please check that you have installed it correctly.")
             input("Press Enter to exit.")
             raise ValueError(f"Error loading anthropic. Please check that you have installed it correctly.")
+        
+
+        extra_body_kwargs = {}
+        if self.config.reverse_proxy:
+            extra_body_kwargs["proxy_password"] = self.api_key
+        test = self.client.messages.create(
+            messages=[{"role":"user","content":"Hello, how are you?"}],
+            model=self.config.anthropic_model,
+            max_tokens=10,
+            extra_body=extra_body_kwargs,
+            extra_headers={
+                "anthropic-version": "2023-06-01",
+            }
+        )
+        logging.info(f"Anthropic I swTest Response: {test.content}")
 
         logging.info(f"Running Pantella with '{self.config.anthropic_model}'. The language model chosen can be changed via config.json")
         logging.error(f"Current API does not support text completions! Anthropic API is not recommended, don't use it, use literally anything else PLEASE!")
@@ -100,6 +115,9 @@ class LLM(base_LLM.base_LLM):
                     max_tokens=self.config.max_tokens,
                     **sampler_kwargs,
                     extra_body=extra_body_kwargs,
+                    extra_headers={
+                        "anthropic-version": "2023-06-01",
+                    }
                 )
                 print(completion.content)
                 try:
@@ -208,6 +226,9 @@ class LLM(base_LLM.base_LLM):
                     max_tokens=self.config.max_tokens,
                     **sampler_kwargs,
                     extra_body=extra_body_kwargs,
+                    extra_headers={
+                        "anthropic-version": "2023-06-01",
+                    }
                 )  as stream:
                     for part in stream.text_stream:
                         if part is None or type(part) != str:
