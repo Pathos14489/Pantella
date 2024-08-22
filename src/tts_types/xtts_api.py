@@ -162,7 +162,9 @@ class Synthesizer(base_tts.base_Synthesizer):
         """Run the xTTS server -- Required for Pantella to manage addon voice lantents"""
         try:
             logging.info(f'CWD: {os.getcwd()} - xTTS_API CWD: {self.config.xtts_api_dir}')
-            command = f'{self.config.python_binary} -m xtts_api_server -sf {",".join(self.speaker_wavs_folders)} -lsf {",".join(self.voice_latent_folders)}'
+            speaker_wavs_folders = ["\""+folder+"\"" for folder in self.speaker_wavs_folders]
+            voice_latent_folders = ["\""+folder+"\"" for folder in self.voice_latent_folders]
+            command = f'{self.config.python_binary} -m xtts_api_server -sf {",".join(speaker_wavs_folders)} -lsf {",".join(voice_latent_folders)}'
             # start the process without waiting for a response
             if not self.config.linux_mode:
                 logging.info(f'Running xTTS API server for Windows with command: {command}')
