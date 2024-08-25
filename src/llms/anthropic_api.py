@@ -157,8 +157,6 @@ class LLM(base_LLM.base_LLM):
         for message in context:
             if message["role"] == "system":
                 message["role"] = "user"
-            if "content" in message and type(message["content"]) == str and "name" in message:
-                message["content"] = message["name"] + self.message_signifier + message["content"]
             if message_group is None:
                 message_group = message
             else:

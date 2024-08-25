@@ -114,15 +114,6 @@ class LLM(base_LLM.base_LLM):
             logging.warning("NOTICE: Completions API is not currently supported with vision enabled!")
             self.completions_supported = False
     
-    def get_context(self):
-        context = super().get_context()
-        new_context = []
-        for message in context:
-            if "content" in message and type(message["content"]) == str and "name" in message:
-                message["content"] = message["name"] + self.message_signifier + message["content"]
-            new_context.append(message)
-        return new_context
-    
     @utils.time_it
     def create(self, messages):
         # logging.info(f"cMessages: {messages}")
