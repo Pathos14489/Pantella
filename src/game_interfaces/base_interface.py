@@ -173,7 +173,13 @@ class BaseGameInterface:
                 logging.info('End of sentences')
                 break # stop getting audio files from the queue if the queue is empty
             
-            await self.send_audio_to_external_software(queue_output) # send the audio file to the external software and start playing it.
+            try:
+                await self.send_audio_to_external_software(queue_output) # send the audio file to the external software and start playing it.
+            except Exception as e:
+                logging.error(f"Error sending audio to external software: {e}")
+                if not self.config.continue_on_failure_to_send_audio_to_game_interface:
+                    input("Press Enter to continue...")
+                    raise e
             event.set() # set the event to let the process_response() function know that it can generate the next sentence while the last sentence's audio is playing
             
             # wait for the audio playback to complete before getting the next file
