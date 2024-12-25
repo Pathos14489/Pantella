@@ -19,11 +19,18 @@ class Synthesizer(base_tts.base_Synthesizer):
         super().__init__(conversation_manager)
         self.tts_slug = tts_slug
         if not self.xtts_api_dir == "" or not self.xtts_api_dir == None or not self.xtts_api_dir.lower() == "none":
-            if not os.path.exists(self.xtts_api_dir+"\\xtts_api_server\\__init__.py"):
-                logging.error(f'xTTS API server not found at: {self.config.xtts_api_dir}')
-                logging.error(f'Please download the xTTS API server from: https://github.com/Pathos14489/xtts-api-server-pantella and place it in the directory specified in the config file, or update where the config file is looking for the xTTS API directory.')
-                input("Press enter to continue...")
-                raise FileNotFoundError()
+            if conversation_manager.config.linux_mode:
+                if not os.path.exists(self.xtts_api_dir+"/xtts_api_server/__init__.py"):
+                    logging.error(f'xTTS API server not found at: {self.config.xtts_api_dir}')
+                    logging.error(f'Please download the xTTS API server from: https://github.com/Pathos14489/xtts-api-server-pantella and place it in the directory specified in the config file, or update where the config file is looking for the xTTS API directory.')
+                    input("Press enter to continue...")
+                    raise FileNotFoundError()
+            else:
+                if not os.path.exists(self.xtts_api_dir+"\\xtts_api_server\\__init__.py"):
+                    logging.error(f'xTTS API server not found at: {self.config.xtts_api_dir}')
+                    logging.error(f'Please download the xTTS API server from: https://github.com/Pathos14489/xtts-api-server-pantella and place it in the directory specified in the config file, or update where the config file is looking for the xTTS API directory.')
+                    input("Press enter to continue...")
+                    raise FileNotFoundError()
         logging.info(f'xTTS API voice latent folders: {self.voice_latent_folders}')
         self.speaker_wavs_folders = [
             self.xtts_api_dir + "speakers\\" if self.xtts_api_dir.endswith("\\") else self.xtts_api_dir + "\\speakers\\",
