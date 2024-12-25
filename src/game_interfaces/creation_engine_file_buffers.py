@@ -157,11 +157,20 @@ class GameInterface(BaseGameInterface):
                 if sub_folder.is_dir():
                     #copy both the wav file and lip file if the game isn't Fallout4
                     if self.game_id !="fallout4":
-                        shutil.copyfile(audio_file, f"{sub_folder.path}\\{self.wav_file}")
-                    shutil.copyfile(audio_file.replace(".wav", ".lip"), f"{sub_folder.path}\\{self.f4_lip_file}")
+                        if self.config.linux_mode:
+                            shutil.copyfile(audio_file, f"{sub_folder.path}/{self.wav_file}")
+                        else:
+                            shutil.copyfile(audio_file, f"{sub_folder.path}\\{self.wav_file}")
+                    if self.config.linux_mode:
+                        shutil.copyfile(audio_file.replace(".wav", ".lip"), f"{sub_folder.path}/{self.lip_file}")
+                    else:
+                        shutil.copyfile(audio_file.replace(".wav", ".lip"), f"{sub_folder.path}\\{self.f4_lip_file}")
         else:
             if self.game_id !="fallout4":
-                shutil.copyfile(audio_file, f"{self.mod_voice_dir}\\{self.active_character.in_game_voice_model}\\{self.wav_file}")
+                if self.config.linux_mode:
+                    shutil.copyfile(audio_file, f"{self.mod_voice_dir}/{self.in_game_voice_model}/{self.wav_file}")
+                else:
+                    shutil.copyfile(audio_file, f"{self.mod_voice_dir}\\{self.active_character.in_game_voice_model}\\{self.wav_file}")
             shutil.copyfile(audio_file.replace(".wav", ".lip"), str(f"{self.mod_voice_dir}\\{self.active_character.in_game_voice_model}\\{self.lip_file}").replace("/", "\\"))
 
         logging.info(f"{self.active_character.name} should speak")
