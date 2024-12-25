@@ -51,7 +51,10 @@ class GameInterface(BaseGameInterface):
     
     @property
     def mod_voice_dir(self):
-        return self.mod_path + "\\Sound\\Voice\\Pantella.esp"
+        if self.config.linux_mode:
+            return f"{self.mod_path}/Sound/Voice/Pantella.esp"
+        else:
+            return f"{self.mod_path}\\Sound\\Voice\\Pantella.esp"
 
     @utils.time_it
     def save_files_to_voice_folders(self, queue_output):
