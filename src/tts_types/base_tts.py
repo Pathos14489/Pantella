@@ -252,7 +252,7 @@ class base_Synthesizer:
 
     def lip_gen(self, voiceline, final_voiceline_file):
         """Generate a lip file using FaceFXWrapper and FonixData.cdf"""
-        current_dir = os.getcwd() # get current directory
+        current_dir = utils.resolve_path() # get current directory
         if self.config.linux_mode:
             cdf_path = f'{current_dir}/FaceFXWrapper/FonixData.cdf'
             face_wrapper_executable = f'wine {current_dir}/FaceFXWrapper/FaceFXWrapper.exe'
