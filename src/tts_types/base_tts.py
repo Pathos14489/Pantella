@@ -179,12 +179,17 @@ class base_Synthesizer:
         if voiceline.strip() == '': # If the voiceline is empty, don't synthesize anything
             logging.info('No voiceline to synthesize.')
             return ''
-        # make voice model folder if it doesn't already exist
-        if not os.path.exists(f"{self.output_path}\\voicelines\\{voice_model}"):
-            os.makedirs(f"{self.output_path}\\voicelines\\{voice_model}")
-
         final_voiceline_file_name = 'voiceline'
-        final_voiceline_file =  f"{self.output_path}\\voicelines\\{voice_model}\\{final_voiceline_file_name}.wav"
+        # make voice model folder if it doesn't already exist
+        if self.config.linux_mode:
+            if not os.path.exists(f"{self.output_path}/voicelines/{voice_model}"):
+                os.makedirs(f"{self.output_path}/voicelines/{voice_model}")
+            final_voiceline_file = f"{self.output_path}/voicelines/{voice_model}/{final_voiceline_file_name}.wav"
+        else:
+            if not os.path.exists(f"{self.output_path}\\voicelines\\{voice_model}"):
+                os.makedirs(f"{self.output_path}\\voicelines\\{voice_model}")
+            final_voiceline_file =  f"{self.output_path}\\voicelines\\{voice_model}\\{final_voiceline_file_name}.wav"
+
 
         try:
             if os.path.exists(final_voiceline_file):
