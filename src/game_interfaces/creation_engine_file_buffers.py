@@ -232,12 +232,20 @@ class GameInterface(BaseGameInterface):
 
     def load_data_when_available(self, text_file_name, text = '', callback = None):
         while text == '':
-            try:
-                with open(f'{self.game_path}\\{text_file_name}.txt', 'r', encoding='utf-8') as f:
-                    text = f.readline().strip()
-            except:
-                with open(f'{self.game_path}\\{text_file_name}.txt', 'r', encoding='ansi') as f:
-                    text = f.readline().strip()
+            if self.config.linux_mode:
+                try:
+                    with open(f'{self.game_path}/{text_file_name}.txt', 'r', encoding='utf-8') as f:
+                        text = f.readline().strip()
+                except:
+                    with open(f'{self.game_path}/{text_file_name}.txt', 'r', encoding='ansi') as f:
+                        text = f.readline().strip()
+            else:
+                try:
+                    with open(f'{self.game_path}\\{text_file_name}.txt', 'r', encoding='utf-8') as f:
+                        text = f.readline().strip()
+                except:
+                    with open(f'{self.game_path}\\{text_file_name}.txt', 'r', encoding='ansi') as f:
+                        text = f.readline().strip()
             # decrease stress on CPU while waiting for file to populate
             if callback != None:
                 callback()
