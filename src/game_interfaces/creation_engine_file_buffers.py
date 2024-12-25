@@ -448,8 +448,12 @@ class GameInterface(BaseGameInterface):
         return radiant_dialogue == 'true'
 
     def is_conversation_ended(self):
-        with open(f'{self.game_path}\\_pantella_end_conversation.txt', 'r', encoding='utf-8') as f: # check if conversation has ended
-            conversation_ended = f.readline().strip().lower()
+        if self.config.linux_mode:
+            with open(f'{self.game_path}/_pantella_end_conversation.txt', 'r', encoding='utf-8') as f:
+                conversation_ended = f.readline().strip().lower()
+        else:
+            with open(f'{self.game_path}\\_pantella_end_conversation.txt', 'r', encoding='utf-8') as f: # check if conversation has ended
+                conversation_ended = f.readline().strip().lower()
         return conversation_ended == 'true'
     
     def load_ingame_actor_count(self):
