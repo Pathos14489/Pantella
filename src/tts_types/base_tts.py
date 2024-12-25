@@ -255,7 +255,7 @@ class base_Synthesizer:
         current_dir = utils.resolve_path() # get current directory
         if self.config.linux_mode:
             cdf_path = f'{current_dir}/FaceFXWrapper/FonixData.cdf'
-            face_wrapper_executable = f'wine {current_dir}/FaceFXWrapper/FaceFXWrapper.exe'
+            face_wrapper_executable = f'{current_dir}/FaceFXWrapper/FaceFXWrapper.exe'
         else:
             cdf_path = f'{current_dir}\\FaceFXWrapper\\FonixData.cdf'
             face_wrapper_executable = f'{current_dir}\\FaceFXWrapper\\FaceFXWrapper.exe'
@@ -270,7 +270,11 @@ class base_Synthesizer:
 
         if self.check_face_fx_wrapper():
             try:
-                command = f'{face_wrapper_executable} "{face_wrapper_game}" "USEnglish" "{cdf_path}" "{final_voiceline_file}" "{final_voiceline_file.replace(".wav", "_r.wav")}" "{final_voiceline_file.replace(".wav", ".lip")}" "{voiceline}"'
+                if self.config.linux_mode:
+                    command = f'wine "{face_wrapper_executable}" "{face_wrapper_game}" "USEnglish" "{cdf_path}" "{final_voiceline_file}" "{final_voiceline_file.replace(".wav", "_r.wav")}" "{final_voiceline_file.replace(".wav", ".lip")}" "{voiceline}"'
+                else:
+                    command = f'{face_wrapper_executable} "{face_wrapper_game}" "USEnglish" "{cdf_path}" "{final_voiceline_file}" "{final_voiceline_file.replace(".wav", "_r.wav")}" "{final_voiceline_file.replace(".wav", ".lip")}" "{voiceline}"'
+
                 logging.info(f'Running command: {command}')
                 self.run_command(command)
                 # remove file created by FaceFXWrapper
