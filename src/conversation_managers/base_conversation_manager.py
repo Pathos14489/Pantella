@@ -22,8 +22,12 @@ class BaseConversationManager:
         if self.config.ready:
             self.synthesizer = tts.create_Synthesizer(self) # Create Synthesizer object based on config - required by scripts for checking voice models, so is left out of self.initialize() intentionally
             self.character_database = character_db.CharacterDB(self) # Create Character Database Manager based on config - required by scripts for merging, patching and converting character databases, so is left out of self.initialize() intentionally
-        with open(".\\version", "r") as f:
-            self.pantella_version = f.read().strip() # Read Pantella version from file
+        if self.config.linux_mode:
+            with open("./version", "r") as f:
+                self.pantella_version = f.read().strip() # Read Pantella version from file
+        else:            
+            with open(".\\version", "r") as f:
+                self.pantella_version = f.read().strip() # Read Pantella version from file
         if initialize and self.config.ready:
             self.initialize()
             logging.info(f'Pantella v{self.pantella_version} Initialized')
