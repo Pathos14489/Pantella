@@ -240,18 +240,18 @@ class GameInterface(BaseGameInterface):
                 try:
                     # print(f"Checking for '{text_file_name}.txt' in {self.game_path}/")
                     with open(f'{self.game_path}/{text_file_name}.txt', 'r', encoding='utf-8') as f:
-                        print(f"Found '{text_file_name}.txt' in {self.game_path}/")
+                        # print(f"Found '{text_file_name}.txt' in {self.game_path}/")
                         text = f.readline().strip()
                 except:
                     try:
                         # print(f"Checking for '\\{text_file_name}.txt' in {self.game_path}/")
                         with open(f'{self.game_path}/\\{text_file_name}.txt', 'r', encoding='utf-8') as f:
-                            print(f"Found '\\{text_file_name}.txt' in {self.game_path}/")
+                            # print(f"Found '\\{text_file_name}.txt' in {self.game_path}/")
                             text = f.readline().strip()
                     except:
                         # print(f"Checking for '{text_file_name}.txt' in {self.game_path}/")
                         with open(f'{self.game_path}/{text_file_name}.txt', 'r', encoding='ansi') as f:
-                            print(f"Found '{text_file_name}.txt' in {self.game_path}/")
+                            # print(f"Found '{text_file_name}.txt' in {self.game_path}/")
                             text = f.readline().strip()
             else:
                 try:
