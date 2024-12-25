@@ -172,10 +172,19 @@ class GameInterface(BaseGameInterface):
                 else:
                     shutil.copyfile(audio_file, f"{self.mod_voice_dir}\\{self.active_character.in_game_voice_model}\\{self.wav_file}")
             if self.config.linux_mode:
-                default_lip_file = utils.resolve_path()+'/data/default.lip'
-                shutil.copyfile(default_lip_file, f"{self.mod_voice_dir}/{self.in_game_voice_model}/{self.lip_file}")
+                try:
+                    shutil.copyfile(audio_file.replace(".wav", ".lip"), f"{self.mod_voice_dir}/{self.in_game_voice_model}/{self.lip_file}")
+                except:
+                    print("Error copying lip file -- falling back to default")
+                    default_lip_file = utils.resolve_path()+'/data/default.lip'
+                    shutil.copyfile(default_lip_file, f"{self.mod_voice_dir}/{self.in_game_voice_model}/{self.lip_file}")
             else:
-                shutil.copyfile(audio_file.replace(".wav", ".lip"), str(f"{self.mod_voice_dir}\\{self.active_character.in_game_voice_model}\\{self.lip_file}").replace("/", "\\"))
+                try:
+                    shutil.copyfile(audio_file.replace(".wav", ".lip"), f"{self.mod_voice_dir}\\{self.active_character.in_game_voice_model}\\{self.lip_file}")
+                except:
+                    print("Error copying lip file -- falling back to default")
+                    default_lip_file = utils.resolve_path()+'\\data\\default.lip'
+                    shutil.copyfile(default_lip_file, f"{self.mod_voice_dir}\\{self.active_character.in_game_voice_model}\\{self.lip_file}")
 
         logging.info(f"{self.active_character.name} should speak")
         if self.character_num == 0:
