@@ -231,6 +231,12 @@ class GameInterface(BaseGameInterface):
 
 
     def load_data_when_available(self, text_file_name, text = '', callback = None):
+        if self.config.linux_mode:
+            if not os.path.exists(f'{self.game_path}/{text_file_name}.txt'):
+                self.write_game_info(text_file_name, text)
+        else:
+            if not os.path.exists(f'{self.game_path}\\{text_file_name}.txt'):
+                self.write_game_info(text_file_name, text)
         while text == '':
             if self.config.linux_mode:
                 try:
