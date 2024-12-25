@@ -171,7 +171,10 @@ class GameInterface(BaseGameInterface):
                     shutil.copyfile(audio_file, f"{self.mod_voice_dir}/{self.in_game_voice_model}/{self.wav_file}")
                 else:
                     shutil.copyfile(audio_file, f"{self.mod_voice_dir}\\{self.active_character.in_game_voice_model}\\{self.wav_file}")
-            shutil.copyfile(audio_file.replace(".wav", ".lip"), str(f"{self.mod_voice_dir}\\{self.active_character.in_game_voice_model}\\{self.lip_file}").replace("/", "\\"))
+            if self.config.linux_mode:
+                shutil.copyfile(audio_file.replace(".wav", ".lip"), f"{self.mod_voice_dir}/{self.in_game_voice_model}/{self.lip_file}")
+            else:
+                shutil.copyfile(audio_file.replace(".wav", ".lip"), str(f"{self.mod_voice_dir}\\{self.active_character.in_game_voice_model}\\{self.lip_file}").replace("/", "\\"))
 
         logging.info(f"{self.active_character.name} should speak")
         if self.character_num == 0:
