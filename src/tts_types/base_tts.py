@@ -41,9 +41,9 @@ class base_Synthesizer:
         self.game = self.config.game_id
         # output wav / lip files path
         if self.config.linux_mode:
-            self.output_path = utils.resolve_path('data')+'/data'
+            self.output_path = utils.resolve_path()+'/data'
         else:
-            self.output_path = utils.resolve_path('data')+'\\data'
+            self.output_path = utils.resolve_path()+'\\data'
         # last active voice model
         self.crashable = self.config.continue_on_voice_model_error
         self._voices = None

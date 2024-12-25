@@ -30,7 +30,7 @@ def clean_text(text):
     return text_cleaned
 
 
-def resolve_path(path):
+def resolve_path():
     """Resolve the path to the executable or the script directory"""
     if getattr(sys, 'frozen', False):
         resolved_path = os.path.dirname(sys.executable)
