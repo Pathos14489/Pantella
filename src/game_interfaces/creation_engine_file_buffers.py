@@ -218,8 +218,12 @@ class GameInterface(BaseGameInterface):
 
         for attempt in range(max_attempts):
             try:
-                with open(f'{self.game_path}\\{text_file_name}.txt', 'w', encoding='utf-8') as f:
-                    f.write(text)
+                if self.config.linux_mode:
+                    with open(f'{self.game_path}/{text_file_name}.txt', 'w', encoding='utf-8') as f:
+                        f.write(text)
+                else:
+                    with open(f'{self.game_path}\\{text_file_name}.txt', 'w', encoding='utf-8') as f:
+                        f.write(text)
                 break
             except PermissionError:
                 logging.info(f'Permission denied to write to {text_file_name}.txt. Retrying...')
