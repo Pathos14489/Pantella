@@ -231,20 +231,21 @@ class GameInterface(BaseGameInterface):
 
 
     def load_data_when_available(self, text_file_name, text = '', callback = None):
-        if self.config.linux_mode:
-            if not os.path.exists(f'{self.game_path}/{text_file_name}.txt'):
-                self.write_game_info(text_file_name, text)
-        else:
-            if not os.path.exists(f'{self.game_path}\\{text_file_name}.txt'):
-                self.write_game_info(text_file_name, text)
         while text == '':
             if self.config.linux_mode:
                 try:
                     with open(f'{self.game_path}/{text_file_name}.txt', 'r', encoding='utf-8') as f:
+                        print(f"Found '{text_file_name}.txt' in {self.game_path}/")
                         text = f.readline().strip()
                 except:
-                    with open(f'{self.game_path}/{text_file_name}.txt', 'r', encoding='ansi') as f:
-                        text = f.readline().strip()
+                    try:
+                        with open(f'{self.game_path}/\\{text_file_name}.txt', 'r', encoding='utf-8') as f:
+                            print(f"Found '\\{text_file_name}.txt' in {self.game_path}/")
+                            text = f.readline().strip()
+                    except:
+                        with open(f'{self.game_path}/{text_file_name}.txt', 'r', encoding='ansi') as f:
+                            print(f"Found '{text_file_name}.txt' in {self.game_path}/")
+                            text = f.readline().strip()
             else:
                 try:
                     with open(f'{self.game_path}\\{text_file_name}.txt', 'r', encoding='utf-8') as f:
