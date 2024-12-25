@@ -226,8 +226,12 @@ class base_Synthesizer:
     def check_face_fx_wrapper(self):
         """Check if FaceFXWrapper is installed and FonixData.cdf exists in the same directory as the script."""
         current_dir = os.getcwd() # get current directory
-        cdf_path = f'{current_dir}\\FaceFXWrapper\\FonixData.cdf'
-        face_wrapper_executable = f'{current_dir}\\FaceFXWrapper\\FaceFXWrapper.exe'
+        if self.config.linux_mode:
+            cdf_path = f'{current_dir}/FaceFXWrapper/FonixData.cdf'
+            face_wrapper_executable = f'wine {current_dir}/FaceFXWrapper/FaceFXWrapper.exe'
+        else:
+            cdf_path = f'{current_dir}\\FaceFXWrapper\\FonixData.cdf'
+            face_wrapper_executable = f'{current_dir}\\FaceFXWrapper\\FaceFXWrapper.exe'
         installed = False
 
         logging.info(f'Checking if FonixData.cdf exists at: {cdf_path}')
@@ -249,8 +253,12 @@ class base_Synthesizer:
     def lip_gen(self, voiceline, final_voiceline_file):
         """Generate a lip file using FaceFXWrapper and FonixData.cdf"""
         current_dir = os.getcwd() # get current directory
-        cdf_path = f'{current_dir}\\FaceFXWrapper\\FonixData.cdf'
-        face_wrapper_executable = f'{current_dir}\\FaceFXWrapper\\FaceFXWrapper.exe'
+        if self.config.linux_mode:
+            cdf_path = f'{current_dir}/FaceFXWrapper/FonixData.cdf'
+            face_wrapper_executable = f'wine {current_dir}/FaceFXWrapper/FaceFXWrapper.exe'
+        else:
+            cdf_path = f'{current_dir}\\FaceFXWrapper\\FonixData.cdf'
+            face_wrapper_executable = f'{current_dir}\\FaceFXWrapper\\FaceFXWrapper.exe'
         logging.info(f'Generating lip file for voiceline: {voiceline} to: {final_voiceline_file.replace(".wav", ".lip")}')
 
         face_wrapper_game = self.game.lower()
