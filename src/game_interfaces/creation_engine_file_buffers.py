@@ -92,13 +92,19 @@ class GameInterface(BaseGameInterface):
         """Save voice model folder to Pantella Spell if it does not already exist"""
         self.in_game_voice_model = in_game_voice_folder
 
-        in_game_voice_folder_path = f"{self.mod_voice_dir}\\{in_game_voice_folder}\\"
+        if self.config.linux_mode:
+            in_game_voice_folder_path = f"{self.mod_voice_dir}/{in_game_voice_folder}/"
+        else:
+            in_game_voice_folder_path = f"{self.mod_voice_dir}\\{in_game_voice_folder}\\"
         if not os.path.exists(in_game_voice_folder_path):
             os.mkdir(in_game_voice_folder_path)
 
             # copy voicelines from one voice folder to this new voice folder
             # this step is needed for Skyrim to acknowledge the folder
-            example_folder = f"{self.mod_voice_dir}\\MaleNord\\"
+            if self.config.linux_mode:
+                example_folder = f"{self.mod_voice_dir}/MaleNord/"
+            else:
+                example_folder = f"{self.mod_voice_dir}\\MaleNord\\"
             for file_name in os.listdir(example_folder):
                 source_file_path = os.path.join(example_folder, file_name)
 
