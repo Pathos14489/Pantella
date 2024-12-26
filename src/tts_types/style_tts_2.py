@@ -8,13 +8,9 @@ try:
 except Exception as e:
     logging.error(f"Failed to import torch and torchaudio: {e}")
     raise e
-from pathlib import Path
-import numpy as np
+import random
 import os
 import json
-import io
-import copy
-import soundfile as sf
 logging.info("Imported required libraries in style_tts_2.py")
 
 tts_slug = "style_tts_2"
@@ -28,25 +24,39 @@ class Synthesizer(base_tts.base_Synthesizer):
         logging.info(f'{self.tts_slug} speaker wavs folders: {self.speaker_wavs_folders}')
         logging.config(f'{self.tts_slug} - Available voices: {self.voices()}')
         if len(self.voices()) > 0:
-            random_voice = np.random.choice(self.voices())
+            random_voice = random.choice(self.voices())
             self._say("Style T T S Two is ready to go.",random_voice)
 
     @property
     def speaker_wavs_folders(self):
         if "language" in self.config.__dict__:
-            speaker_wavs_folders = [
-                os.path.abspath(f".\\data\\voice_samples\\{self.language['tts_language_code']}\\")
-            ]
+            if self.config.linux_mode:
+                speaker_wavs_folders = [
+                    os.path.abspath(f"./data/voice_samples/{self.language['tts_language_code']}/")
+                ]
+            else:
+                speaker_wavs_folders = [
+                    os.path.abspath(f".\\data\\voice_samples\\{self.language['tts_language_code']}\\")
+                ]
         else:
             speaker_wavs_folders = []
-            for language_code in os.listdir(".\\data\\voice_samples\\"):
-                if not os.path.isdir(f".\\data\\voice_samples\\{language_code}\\"):
-                    continue
-                speaker_wavs_folders.append(os.path.abspath(f".\\data\\voice_samples\\{language_code}\\"))
+            if self.config.linux_mode:
+                for language_code in os.listdir("./data/voice_samples/"):
+                    if not os.path.isdir(f"./data/voice_samples/{language_code}/"):
+                        continue
+                    speaker_wavs_folders.append(os.path.abspath(f"./data/voice_samples/{language_code}/"))
+            else:
+                for language_code in os.listdir(".\\data\\voice_samples\\"):
+                    if not os.path.isdir(f".\\data\\voice_samples\\{language_code}\\"):
+                        continue
+                    speaker_wavs_folders.append(os.path.abspath(f".\\data\\voice_samples\\{language_code}\\"))
         for addon_slug in self.config.addons:
             addon = self.config.addons[addon_slug]
             if "speakers" in addon["addon_parts"]:
-                addon_speaker_wavs_folder = self.config.addons_dir + addon_slug + "\\speakers\\"
+                if self.config.linux_mode:
+                    addon_speaker_wavs_folder = os.path.abspath(f"./addons/{addon_slug}/speakers/")
+                else:
+                    addon_speaker_wavs_folder = self.config.addons_dir + addon_slug + "\\speakers\\"
                 if os.path.exists(addon_speaker_wavs_folder):
                     speaker_wavs_folders.append(addon_speaker_wavs_folder)
                 else:
@@ -77,7 +87,10 @@ class Synthesizer(base_tts.base_Synthesizer):
             "diffusion_steps": self.config.style_tts_2_default_diffusion_steps,
             "embedding_scale": self.config.style_tts_2_default_embedding_scale,
         }
-        voice_model_settings_path = os.path.abspath(f".\\data\\style_tts_2_inference_settings\\{self.language['tts_language_code']}\\{voice_model}.json")
+        if self.config.linux_mode:
+            voice_model_settings_path = os.path.abspath(f"./data/style_tts_2_inference_settings/{self.language['tts_language_code']}/{voice_model}.json")
+        else:
+            voice_model_settings_path = os.path.abspath(f".\\data\\style_tts_2_inference_settings\\{self.language['tts_language_code']}\\{voice_model}.json")
         if os.path.exists(voice_model_settings_path):
             with open(voice_model_settings_path, "r") as f:
                 voice_model_settings = json.load(f)

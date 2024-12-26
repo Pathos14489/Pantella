@@ -14,6 +14,7 @@ import numpy as np
 import requests
 import threading
 import traceback
+import random
 logging.info("Imported required libraries in xVASynth TTS")
 
 tts_slug = "xvasynth"
@@ -80,7 +81,7 @@ class Synthesizer(base_tts.base_Synthesizer):
         logging.config(f'xVASynth - Available voices: {self.voices()}')
         logging.config(f"Total xVASynth Voices: {len(self.voices())}")
         if len(self.voices()) > 0:
-            random_voice = np.random.choice(self.voices())
+            random_voice = random.choice(self.voices())
             self._say("Ecks Vee Ey Synth is ready to go.",str(random_voice))
 
     @property

@@ -22,12 +22,9 @@ try:
 except Exception as e:
     logging.error(f"Failed to import av and AudioResampler: {e}")
     raise e
-from pathlib import Path
-import numpy as np
 import os
 import json
-import io
-import copy
+import random
 import soundfile as sf
 logging.info("Imported required libraries in parler_tts.py")
 
@@ -59,7 +56,7 @@ class Synthesizer(base_tts.base_Synthesizer):
         logging.info(f'{self.tts_slug} speaker settings folders: {self.voice_settings_folders}')
         logging.config(f'{self.tts_slug} - Available voices: {self.voices()}')
         if len(self.voices()) > 0:
-            random_voice = np.random.choice(self.voices())
+            random_voice = random.choice(self.voices())
             self._say("Parler is ready to go.",random_voice)
 
     @property

@@ -3,7 +3,7 @@ from src.logging import logging
 import src.tts_types.base_tts as base_tts
 import os
 import json
-import numpy as np
+import random
 logging.info("Imported required libraries in piper_binary.py")
 
 tts_slug = "piper_binary"
@@ -22,7 +22,7 @@ class Synthesizer(base_tts.base_Synthesizer):
 
         logging.config(f'Available piper voices: {self.voices()}')
         if len(self.voices()) > 0:
-            random_voice = np.random.choice(self.voices())
+            random_voice = random.choice(self.voices())
             self._say("Piper T T S is ready to go.",random_voice)
 
     @property

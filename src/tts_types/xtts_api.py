@@ -10,7 +10,7 @@ import subprocess
 import threading
 import traceback
 import io
-import numpy as np
+import random
 logging.info("Imported required libraries in xtts_api.py")
 
 tts_slug = "xtts_api"
@@ -73,7 +73,7 @@ class Synthesizer(base_tts.base_Synthesizer):
         logging.config(f'xTTS_api - Available xTTS_api models: {self.available_models()}')
         logging.config(f'xTTS_api - Available xTTS_api voices: {self.voices()}')
         if len(self.voices()) > 0:
-            random_voice = np.random.choice(self.voices())
+            random_voice = random.choice(self.voices())
             self._say("Ecks T T S is ready to go.",str(random_voice))
 
     @property

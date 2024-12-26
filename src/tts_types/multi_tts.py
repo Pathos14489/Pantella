@@ -1,6 +1,6 @@
 print("Loading multi_tts.py...")
 from src.logging import logging
-import numpy as np
+import random
 import src.tts_types.base_tts as base_tts
 logging.info("Imported required libraries in multi_tts.py")
 
@@ -16,7 +16,7 @@ class Synthesizer(base_tts.base_Synthesizer):
         logging.config(f"Loaded multi_tts with tts engines in the following fallback order:\n{fallback_order}")
         logging.config(f'Multi_TTS - Available Multi_TTS voices: {self.voices()}')
         if len(self.voices()) > 0:
-            random_voice = np.random.choice(self.voices())
+            random_voice = random.choice(self.voices())
             self._say("Multi T T S is ready to go.",str(random_voice))
 
     def voices(self):

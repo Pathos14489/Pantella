@@ -26,6 +26,7 @@ except Exception as e:
     raise e
 from pathlib import Path
 import numpy as np
+import random
 import os
 import json
 import io
@@ -55,7 +56,7 @@ class Synthesizer(base_tts.base_Synthesizer):
             for voice in self.voices():
                 self.voice_model_settings(voice)
         if len(self.voices()) > 0:
-            random_voice = np.random.choice(self.voices())
+            random_voice = random.choice(self.voices())
             self._say("Chat T T S is ready to go.",random_voice)
 
     @property
