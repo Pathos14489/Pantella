@@ -636,6 +636,21 @@ class ConfigLoader:
                 "style_tts_2_default_t": 0.7,
                 "style_tts_2_banned_voice_models": [],
             },
+            "F5_TTS": {
+                "f5_tts_banned_voice_models": [],
+                "f5_tts_volume": 1.5,
+            },
+            "E2_TTS": {
+                "e2_tts_banned_voice_models": [],
+                "e2_tts_volume": 1.5,
+            },
+            "Oute_TTS": {
+                "oute_tts_banned_voice_models": [],
+                "oute_tts_temperature": 0.1,
+                "oute_tts_repetition_penalty": 1.1,
+                "oute_tts_max_length": 4096,
+                "oute_tts_volume": 1.5,
+            },
             "Debugging": {
                 "debug_mode": False,
                 "share_debug_ui": False,
@@ -911,6 +926,21 @@ class ConfigLoader:
                 "style_tts_2_default_diffusion_steps": self.style_tts_2_default_diffusion_steps,
                 "style_tts_2_default_embedding_scale": self.style_tts_2_default_embedding_scale,
                 "style_tts_2_default_t": self.style_tts_2_default_t,
+            },
+            "F5_TTS": {
+                "f5_tts_banned_voice_models": self.f5_tts_banned_voice_models,
+                "f5_tts_volume": self.f5_tts_volume
+            },
+            "E2_TTS": {
+                "e2_tts_banned_voice_models": self.e2_tts_banned_voice_models,
+                "e2_tts_volume": self.e2_tts_volume
+            },
+            "Oute_TTS": {
+                "oute_tts_banned_voice_models": self.oute_tts_banned_voice_models,
+                "oute_tts_temperature": self.oute_tts_temperature,
+                "oute_tts_repetition_penalty": self.oute_tts_repetition_penalty,
+                "oute_tts_max_length": self.oute_tts_max_length,
+                "oute_tts_volume": self.oute_tts_volume,
             },
             "Debugging": {
                 "debug_mode": self.debug_mode,
