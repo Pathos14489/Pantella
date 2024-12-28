@@ -5,6 +5,7 @@ import subprocess
 import os
 from pathlib import Path
 import soundfile as sf
+import time
 import numpy as np
 try:
     logging.info("Trying to import winsound")
@@ -303,7 +304,7 @@ class base_Synthesizer:
             pygame.mixer.music.play()
             # release the audio device after the voiceline has finished playing
             while pygame.mixer.music.get_busy():
-                pygame.time.Clock().tick(10) # wait for the voiceline to finish playing
+                time.sleep(0.1)
             pygame.mixer.quit()
         elif loaded_winsound:
             logging.warn(f"Playing voiceline with winsound, no volume control available!")
@@ -318,3 +319,4 @@ class base_Synthesizer:
             os.makedirs(os.path.dirname(voiceline_location), exist_ok=True)
         self._synthesize(voiceline, voice_model, voiceline_location)
         self.play_voiceline(voiceline_location, volume)
+        return voiceline_location
