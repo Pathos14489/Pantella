@@ -259,6 +259,7 @@ class Synthesizer(base_tts.base_Synthesizer):
         else:
             voice_model = self.get_valid_voice_model(character)
             base_lang = character.tts_language_code
+        logging.output(f'{self.tts_slug} - synthesizing {voiceline} with voice model "{voice_model}"...')
         data = {
             'text': voiceline,
             'speaker_wav': voice_model,
@@ -275,3 +276,4 @@ class Synthesizer(base_tts.base_Synthesizer):
         except Exception as e:
             logging.error(f'xTTS failed to generate voiceline at: {Path(voiceline_location)}')
             raise FileNotFoundError()
+        logging.output(f'{self.tts_slug} - synthesized {voiceline} with voice model "{voice_model}"')

@@ -279,13 +279,13 @@ class MemoryManager(base_MemoryManager):
         # ensure there are no messages from system that say the same thing
         # sort by timestamp
         unique_memories = sorted(unique_memories, key=lambda x: x["timestamp"])
-        logging.info(f"Unique Memories:", json.dumps(unique_memories, indent=2))
+        # logging.info(f"Unique Memories:", json.dumps(unique_memories, indent=2)) # Disabled because it's too verbose
         return unique_memories
     
     def get_all_messages(self):
         """Get all messages in the memory of this character"""
         messages = self.messages_memories.get()
-        print("All Messages:",json.dumps(messages, indent=2))
+        # print("All Messages:",json.dumps(messages, indent=2)) # Disabled because it's too verbose
         msgs = []
         for i in range(len(messages["documents"])):
             msg_doc = messages["documents"][i]
