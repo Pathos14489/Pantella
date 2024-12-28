@@ -32,7 +32,10 @@ class GameInterface(BaseGameInterface):
     def retry_last_input(self, history):
         """Retry the last input from the player"""
         self.conversation_manager.messages = self.conversation_manager.messages[:-1] # remove the last two messages from the conversation
-        history = history[:-1] # remove the last two messages from the history
+        if len(history) > 0:
+            history = history[:-1] # remove the last two messages from the history
+        if len(history) == 0:
+            return "", history, None
         player_input = history[-1][0] # set the player input to the last input
         self.player_input = player_input # set the player input
         self.bot_response = None # clear the bot response

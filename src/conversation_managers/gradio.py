@@ -128,9 +128,10 @@ class ConversationManager(BaseConversationManager):
             self.character_manager.before_step() # Let the characters know before a step has been taken
             self.update_game_state()
 
+            active_character = self.character_manager.active_characters_list[0] # get the active character
             # check if user is ending conversation
             end_convo = False
-            for keyword in  self.character_manager.prompt_style["language"]["end_conversation_keywords"]:
+            for keyword in active_character.language["end_conversation_keywords"]:
                 if utils.activation_name_exists(transcript_cleaned, keyword):
                     end_convo = True
                     break
