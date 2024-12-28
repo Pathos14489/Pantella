@@ -144,6 +144,7 @@ class BaseGameInterface:
     
     async def get_audio_duration(self, audio_file):
         """Check if the external software has finished playing the audio file"""
+        logging.info(f"Getting audio duration for {audio_file}...")
         try:
             with wave.open(audio_file, 'r') as wf:
                 frames = wf.getnframes()

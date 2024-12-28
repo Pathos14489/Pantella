@@ -1010,7 +1010,7 @@ class base_LLM():
 
                         
                     # contains_banned_character = any(char in content for char in self.stop)
-                    was_typing_roleplay = bool(typing_roleplay)
+                    effective_voice_line_sentences = int(voice_line_sentences)
                     if contains_roleplay_symbol: # if the content contains an asterisk, then either the narrator has started speaking or the narrator has stopped speaking and the NPC is speaking
                         logging.info(f"Roleplay symbol found in content: {content}")
                         if self._prompt_style["roleplay_suffix"] in sentence:
@@ -1021,35 +1021,53 @@ class base_LLM():
                             logging.warn(f"But roleplay symbol was not found in sentence?!")
                             sentences = [sentence]
                         sentences = [sentence for sentence in sentences if sentence.strip() != '']
-                        if len(sentences) == 2: # content IS a roleplay symbol and the sentence is not empty - This is a generated response that is continuing with a roleplay symbol and the next speaker's sentence
+                        if len(sentences) == 2: # content HAS a roleplay symbol and the sentence is not empty
                             logging.info(f"Roleplay symbol found in content: {content}")
                             logging.info(f"New Speaker, splitting sentence at roleplay symbol")
                             sentence, next_speaker_sentence = sentences[0], sentences[1]
-                        elif len(sentences) == 1: # content IS a roleplay symbol and the sentence is not empty - This is a generated response that is continuing with a roleplay symbol
+                            effective_voice_line_sentences += 1
+                        elif content.strip() == self._prompt_style["roleplay_prefix"] or content.strip() == self._prompt_style["roleplay_suffix"]: # content IS a roleplay symbol and the sentence is empty
                             logging.info(f"Roleplay symbol was latest content: {content}")
+                            if len(sentence.replace(self._prompt_style["roleplay_prefix"], "").replace(self._prompt_style["roleplay_suffix"], "").strip()) > 0:
+                                logging.info(f"Roleplay symbol was latest content: {content} - Sentence is not empty")
+                                effective_voice_line_sentences += 1
+                            else:
+                                logging.info(f"Roleplay symbol was latest content: {content} - Sentence is empty")
+                                sentence = ""
+                            next_speaker_sentence = ''
+                        elif len(sentences) == 1 and content.strip().startswith(self._prompt_style["roleplay_prefix"]): # content HAS a roleplay symbol and the sentence is empty
+                            logging.info(f"Roleplay symbol was latest content: {content} - Starting with roleplay symbol")
+                            sentence = ""
+                            next_speaker_sentence = sentences[0]
+                        elif len(sentences) == 1 and content.strip().endswith(self._prompt_style["roleplay_suffix"]): # content HAS a roleplay symbol and the next_speaker_sentence is empty 
+                            logging.info(f"Roleplay symbol was latest content: {content} - Ending with roleplay symbol")
                             sentence = sentences[0]
                             next_speaker_sentence = ""
-                        else: # content IS a roleplay symbol and the sentence is empty - This is the first sentence of a generated response and it's starting with a roleplay symbol without any other content
-                            logging.info(f"Roleplay symbol was latest content: {content}")
-                            sentence = ''
-                            next_speaker_sentence = ''
+                            effective_voice_line_sentences += 1
                         
+                        was_typing_roleplay = bool(typing_roleplay)
                         typing_roleplay = not typing_roleplay
                         
                         if typing_roleplay:
                             full_reply = full_reply.strip() +"[ns-1]"+ self._prompt_style["roleplay_prefix"]
                         
-                        if voice_line_sentences > 0 or len(sentence) > 0: # if the sentence is not empty and the number of sentences is greater than 0, then the narrator is speaking
+                        
+                        if effective_voice_line_sentences > 0 or len(voice_line) > 0: # if the sentence is not empty and the number of sentences is greater than 0, then the narrator is speaking
+                            logging.info(f"New speaker")
                             new_speaker = True
+                        else: # if the sentence is empty and the number of sentences is 0, then the narrator is not speaking
+                            logging.info(f"Same speaker")
                         speaker = "Narrator" if typing_roleplay else next_author
                         logging.debug(f"New speaker - Toggling speaker to: {speaker}")
-                        if len(sentence) == 0: # if the sentence is empty, then the narrator is speaking
-                            new_speaker = False
+                        # if effective_voice_line_sentences == 0: # if the sentence is empty, then the speaker toggled before any content was added to the voice_line
+                        #     new_speaker = False
                         if next_speaker_sentence != "":
                             logging.info(f"Next speaker sentence part: {next_speaker_sentence}")
+                    logging.info(f"Voice Line Sentences: {voice_line_sentences}")
+                    logging.info(f"Effective Voice Line Sentences: {effective_voice_line_sentences}")
 
-                    parsing_sentence = contains_end_of_sentence_character or eos # check if the sentence is complete and ready to be parsed
-                    if (parsing_sentence or new_speaker) and len(sentence) > 0: # check if content marks the end of a sentence or if the speaker is switching
+                    parsing_sentence = contains_end_of_sentence_character or eos or contains_roleplay_symbol # check if the sentence is complete and ready to be parsed
+                    if (parsing_sentence or new_speaker) and (len(sentence) > 0 or (contains_roleplay_symbol and effective_voice_line_sentences > 0)): # check if content marks the end of a sentence or if the speaker is switching
                         logging.out(f"Sentence: {sentence}")
                         logging.debug(f"was_typing_roleplay: {was_typing_roleplay}")
                         logging.debug(f"currently_typing_roleplay: {typing_roleplay}")
@@ -1123,8 +1141,8 @@ class base_LLM():
                         if new_speaker:
                             if not typing_roleplay:
                                 full_reply = full_reply.strip() + "[ns5]" + self._prompt_style["roleplay_suffix"]
-                            else:
-                                full_reply = full_reply.strip() + "[ns6]" + self._prompt_style["roleplay_prefix"]
+                            # else:
+                            #     full_reply = full_reply.strip() + "[ns6]" + self._prompt_style["roleplay_prefix"]
                         num_sentences += 1 # increment the total number of sentences generated
                         voice_line_sentences += 1 # increment the number of sentences generated for the current voice line
                         
@@ -1135,20 +1153,20 @@ class base_LLM():
                         logging.debug(f"Number of sentences: {num_sentences}")
                         logging.debug(f"Number of sentences in voice line: {voice_line_sentences}")
                         
-                        if voice_line_sentences == self.config.sentences_per_voiceline or new_speaker: # if the voice line is ready, then generate the audio for the voice line
-                            send_voiceline = True
-
                         grammarless_stripped_voice_line = voice_line.replace(".", "").replace("?", "").replace("!", "").replace(",", "").replace("-", "").replace("*", "").replace("\"", "").strip()
                         if grammarless_stripped_voice_line == '' or voice_line.strip() == "": # if the voice line is empty, then the narrator is speaking
                             logging.info(f"Skipping empty voice line")
                             send_voiceline = False
                             voice_line = ''
 
-                        if send_voiceline: # if the voice line is ready, then generate the audio for the voice line
+                        if voice_line_sentences == self.config.sentences_per_voiceline or new_speaker: # if the voice line is ready, then generate the audio for the voice line
                             if was_typing_roleplay:
                                 logging.info(f"Generating voiceline: \"{voice_line.strip()}\" for narrator.")
                             else:
                                 logging.info(f"Generating voiceline: \"{voice_line.strip()}\" for {self.conversation_manager.game_interface.active_character.name}.")
+                            send_voiceline = True
+
+                        if send_voiceline: # if the voice line is ready, then generate the audio for the voice line
                             logging.info(f"Voice line contains {voice_line_sentences} sentences.")
                             logging.info(f"Voice line should be spoken by narrator: {typing_roleplay}")
                             if self.config.strip_smalls and len(voice_line.strip()) < self.config.small_size:
@@ -1166,8 +1184,11 @@ class base_LLM():
                                 if was_typing_roleplay: # if the asterisk is open, then the narrator is speaking
                                     time.sleep(self.config.narrator_delay)
                                     voice_lines.append((voice_line.strip(), "narrator"))
-                                    self.conversation_manager.synthesizer._say(voice_line.strip(), self.config.narrator_voice, self.config.narrator_volume)
-                                else:
+                                    voiceline_path = self.conversation_manager.synthesizer._say(voice_line.strip(), self.config.narrator_voice, self.config.narrator_volume)
+                                    # audio_duration = await self.conversation_manager.game_interface.get_audio_duration(voiceline_path)
+                                    # logging.info(f"Waiting {int(round(audio_duration,4))} seconds for audio to finish playing...")
+                                    # time.sleep(audio_duration)
+                                else: # if the asterisk is closed, then the NPC is speaking
                                     voice_lines.append((voice_line.strip(), self.conversation_manager.game_interface.active_character.name))
                                     await self.generate_voiceline(voice_line.strip(), sentence_queue, event)
                                 self.conversation_manager.behavior_manager.post_sentence_evaluate(self.conversation_manager.game_interface.active_character, sentence) # check if the sentence contains any behavior keywords for NPCs
@@ -1269,8 +1290,11 @@ class base_LLM():
             logging.info(f"Generating voiceline: \"{voice_line.strip()}\" for {self.conversation_manager.game_interface.active_character.name}.")
             if typing_roleplay: # if the asterisk is open, then the narrator is speaking
                 time.sleep(self.config.narrator_delay)
-                self.conversation_manager.synthesizer._say(voice_line.strip(), self.config.narrator_voice, self.config.narrator_volume)
+                voiceline_path = self.conversation_manager.synthesizer._say(voice_line.strip(), self.config.narrator_voice, self.config.narrator_volume)
                 voice_lines.append((voice_line.strip(), "narrator"))
+                # audio_duration = await self.conversation_manager.game_interface.get_audio_duration(voiceline_path)
+                # logging.info(f"Waiting {int(round(audio_duration,4))} seconds for audio to finish playing...")
+                # time.sleep(audio_duration)
             else:
                 voice_lines.append((voice_line.strip(), self.conversation_manager.game_interface.active_character.name))
                 await self.generate_voiceline(voice_line.strip(), sentence_queue, event)
@@ -1308,6 +1332,7 @@ class base_LLM():
 
         if next_author is not None and full_reply != '':
             full_reply = full_reply.replace("[s0]", "").replace("[s1]", "").replace("[s2]", "").replace("[s3]", "").replace("[ns-1]", "").replace("[ns0]", "").replace("[ns1]", "").replace("[ns2]", "").replace("[ns3]", "").replace("[ns4]", "").replace("[ns5]", "").replace("[ns6]", "").strip() # remove the sentence spacing tokens
+            full_reply = full_reply.strip()
             if self.config.message_reformatting:
                 logging.info(f"Using Full Reply with Reformatting")
                 self.conversation_manager.new_message({"role": self.config.assistant_name, 'name':next_author, "content": full_reply})
