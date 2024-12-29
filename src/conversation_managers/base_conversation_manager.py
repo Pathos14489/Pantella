@@ -5,6 +5,7 @@ import src.game_interface as game_interface
 import src.characters_manager as characters_manager # Character Manager class
 import src.behavior_manager as behavior_manager
 import src.language_model as language_models
+import src.thought_process as thought_process
 import src.tts as tts
 # import src.stt as stt
 import src.character_db as character_db
@@ -94,6 +95,7 @@ class BaseConversationManager:
 
     def initialize(self):
         self.llm, self.tokenizer = language_models.create_LLM(self) # Create LLM and Tokenizer based on config
+        self.thought_process = thought_process.create_thought_process(self) # Create Thought Process Manager based on config
         self.config.set_prompt_style(self.llm) # Set prompt based on LLM and config settings
         self.game_interface = game_interface.create_game_interface(self) # Create Game Interface based on config
         # self.transcriber = stt.Transcriber(self)

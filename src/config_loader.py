@@ -530,6 +530,9 @@ class ConfigLoader:
                 "banned_samplers": [], # Examples: "min_p", "typical_p", "top_p", "top_k", "temperature", "frequency_penalty", "presence_penalty", "repeat_penalty", "tfs_z", "mirostat_mode", "mirostat_eta", "mirostat_tau", "max_tokens"
                 "api_log_dir": ".\\api_logs",
             },
+            "openai_cot": {
+                "thought_type": "default",
+            },
             "llama_cpp_python": {
                 "model_path": ".\\model.gguf",
                 "n_gpu_layers": 0,
@@ -837,6 +840,9 @@ class ConfigLoader:
                 "openai_api_key_path": self.openai_api_key_path,
                 "banned_samplers": self.banned_samplers,
                 "api_log_dir": self.api_log_dir,
+            },
+            "openai_cot": {
+                "thought_type": self.thought_type,
             },
             "llama_cpp_python": {
                 "model_path": self.model_path,
