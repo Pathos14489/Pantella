@@ -1,8 +1,8 @@
-print("Importing openai_api_CoT.py")
+print("Importing base_thought_process.py")
 from src.logging import logging
 from pydantic import BaseModel, Field
 from typing import List, Literal, Optional
-logging.info("Imported required libraries in openai_api_CoT.py")
+logging.info("Imported required libraries in base_thought_process.py")
 
 thought_process_name = "base_thought_process"
 
