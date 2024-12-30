@@ -2,17 +2,12 @@ print("Importing simple_thought_process.py")
 from src.logging import logging
 from pydantic import BaseModel, Field
 from typing import List, Literal, Optional
+from src.thought_processes.base_thought_process import Question
 logging.info("Imported required libraries in simple_thought_process.py")
 
 thought_process_name = "simple"
 
 # Thought Process
-class Question(BaseModel):
-    """The questions the bot asks themselves to reach a conclusion or generally ponder something."""
-    question: str = Field(...,description="The question the bot asks themselves. Should be at least a sentence long.",min_length=1)
-    answer: str = Field(...,description="The answer the bot gives themselves. Should be at least a sentence long.",min_length=1)
-    counter_point: str = Field(...,description="A completely opposite point of view to the answer. Should be at least a sentence long.",min_length=1)
-
 class ThoughtProcess(BaseModel):
     """The response format for characters is a schema that requires the AI to respond in a specific way. The AI must respond in a way that is consistent with the schema, and must follow the rules of the schema to solve the user's queries."""
     why_is_the_other_character_saying_this: str = Field(...,description="The question the bot asks themselves to understand why the person they're talking to is saying what they are saying. Should be at least a sentence long.",min_length=1)
