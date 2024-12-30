@@ -94,8 +94,8 @@ class BaseConversationManager:
         return characters_manager.Characters(self) # Create Character Manager object based on ConversationManager
 
     def initialize(self):
-        self.llm, self.tokenizer = language_models.create_LLM(self) # Create LLM and Tokenizer based on config
         self.thought_process = thought_process.create_thought_process(self) # Create Thought Process Manager based on config
+        self.llm, self.tokenizer = language_models.create_LLM(self) # Create LLM and Tokenizer based on config
         self.config.set_prompt_style(self.llm) # Set prompt based on LLM and config settings
         self.game_interface = game_interface.create_game_interface(self) # Create Game Interface based on config
         # self.transcriber = stt.Transcriber(self)

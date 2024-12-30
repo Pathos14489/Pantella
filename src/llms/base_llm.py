@@ -7,9 +7,12 @@ import time
 import random
 import traceback
 import base64
+import json
 import urllib.request
 import numpy as np
 from PIL import Image
+from pydantic import BaseModel, Field
+from typing import List, Literal, Optional
 
 try:
     from paddleocr import PaddleOCR
@@ -63,6 +66,74 @@ def image_to_base64(image: Image) -> str:
     image_base64 = base64.b64encode(image_bytes).decode("utf-8")
     return image_base64
 
+class TestCoT(BaseModel):
+    """A simple test request for CoT support"""
+    test: bool
+
+def get_schema_description(schema):
+    schema_description = ""
+    print("Schema:", schema)
+    if "description" in schema and schema["description"] is not None:
+        schema_description += schema["description"]
+    for key in schema["properties"]:
+        def parse_property(property,schema_description):
+            if type(property) == dict:
+                if "title" in property and property["title"] is not None:
+                    description_part = property["title"] + ": "
+                else:
+                    description_part = ""
+                add_to_description = False
+                if "description" in property and property["description"] is not None and "title" in property and property["title"] is not None:
+                    description_part += property["description"]
+                    add_to_description = True
+                if "examples" in property and property["examples"] is not None:
+                    description_part += "\nExamples: " + ", ".join(property["examples"])
+                    add_to_description = True
+                if "$ref" in property:
+                    reference = schema["$defs"][property["$ref"].split("/")[-1]]
+                    if "title" in reference and reference["title"] is not None:
+                        description_part += reference["title"] + ": "
+                        add_to_description = True   
+                    if "description" in reference and reference["description"] is not None:
+                        description_part += reference["description"]
+                        add_to_description = True
+                    if "examples" in reference and reference["examples"] is not None:
+                        description_part += "\nExamples: " + ", ".join(reference["examples"])
+                        add_to_description = True
+                    if "properties" in reference and reference["properties"] is not None:
+                        for sub_key in reference["properties"]:
+                            print("Sub Key:", sub_key)
+                            description_part = parse_property(reference["properties"][sub_key],description_part)
+                            add_to_description = True
+                if "items" in property and property["items"] is not None:
+                    if "$ref" in property["items"]:
+                        reference = schema["$defs"][property["items"]["$ref"].split("/")[-1]]
+                        # if "title" in reference and reference["title"] is not None:
+                        #     description_part += "\n" + reference["title"] + ": "
+                        if "description" in reference and reference["description"] is not None:
+                            description_part += reference["description"]
+                            add_to_description = True
+                        if "examples" in reference and reference["examples"] is not None:
+                            description_part += "\nExamples: " + ", ".join(reference["examples"])
+                            add_to_description = True
+                        if "properties" in reference and reference["properties"] is not None:
+                            for sub_key in reference["properties"]:
+                                print("Sub Key:", sub_key)
+                                description_part = parse_property(reference["properties"][sub_key],description_part)
+                                add_to_description = True
+                if "properties" in property and property["properties"] is not None:
+                    for sub_key in property["properties"]:
+                        print("Sub Key:", sub_key)
+                        description_part = parse_property(property["properties"][sub_key],description_part)
+                        add_to_description = True
+                if add_to_description:
+                    schema_description += "\n" + description_part
+            return schema_description
+        print("Key:", key)
+        # print("Value:", character_card_schema[key])
+        schema_description = parse_property(schema["properties"][key],schema_description)
+    return schema_description
+
 inference_engine_name = "base_LLM"
 tokenizer_slug = "tiktoken" # default to tiktoken for now (Not always correct, but it's the fastest tokenizer and it works for openai's models, which a lot of users will be relying on probably)
 class base_LLM():
@@ -79,6 +150,7 @@ class base_LLM():
         self.is_local = True
         self.vision_enabled = vision_enabled
         self.completions_supported = True
+        self.cot_supported = False
         if self.vision_enabled:
             if self.config.paddle_ocr and not ocr_loaded: # Load paddleocr if it's installed
                 logging.error(f"Error loading paddleocr for vision enabled inference engine. Please check that you have installed paddleocr correctly. OCR will not be used but basic image embedding will still work.")
@@ -102,6 +174,14 @@ class base_LLM():
                 raise Exception("PyGetWindow not installed, install PyGetWindow to use vision enabled LLM(Windows only).")
             self.get_game_window()
 
+    def get_cot_supported(self):
+        """Check if the LLM supports CoT (Chain of Thought) completions"""
+        return self.cot_supported
+
+    @property
+    def cot_enabled(self):
+        return self.config.cot_enabled
+
     @property
     def end_of_sentence_chars(self):
         end_of_sentence_chars = self.character_manager.prompt_style["end_of_sentence_chars"]
@@ -113,7 +193,8 @@ class base_LLM():
     @property
     def stop(self): # stop strings for the LLM -- stops generation when they're encountered. Either at the API level if they're supported, inference engine level if your chosen method of inference supprts it, or here after the tokens are generated if they make it through the other two layers.
         stop = list(self._prompt_style["stop"])
-        stop.append(self._prompt_style["message_separator"])
+        if "message_separator" in self._prompt_style and self._prompt_style["message_separator"] != None and self._prompt_style["message_separator"] != "":
+            stop.append(self._prompt_style["message_separator"])
         stop.append(self.EOS_token)
         stop.append(self.BOS_token)
         if not self.character_manager.language["allow_npc_roleplay"]:
@@ -521,6 +602,16 @@ class base_LLM():
             msgs = msgs[:memory_offset] + memories + msgs[memory_offset:]
         elif memory_offset_direction == "bottomup":
             msgs = msgs[:-memory_offset] + memories + msgs[-memory_offset:]
+
+        if self.cot_enabled and self.cot_supported and self.conversation_manager.thought_process is not None:
+            schema_description = get_schema_description(self.conversation_manager.thought_process.model_json_schema())
+            schema_message = {
+                "role": self.config.system_name,
+                "content": schema_description,
+                "type": "prompt"
+            }
+            msgs.append(schema_message) # add schema description to context at the end of the messages
+        
         logging.info(f"Messages: {len(msgs)}")
         return msgs
         
@@ -710,20 +801,190 @@ class base_LLM():
     
     def generate_response(self, message_prefix="", force_speaker=None):
         """Generate response from LLM one text chunk at a time"""
-        for chunk in self.acreate(self.get_context(), message_prefix=message_prefix, force_speaker=force_speaker):
-            yield chunk
+        if self.cot_supported and self.cot_enabled and self.conversation_manager.thought_process is not None:
+            print("Generating CoT response...")
+            raw_response = ""
+            response_json = {}
+            last_diff_json = {}
+            for chunk in self.acreate(self.get_context(), message_prefix=message_prefix, force_speaker=force_speaker):
+                # logging.info(f"Raw Chunk: {chunk}")
+                formatted_chunk = self.format_content(chunk)
+                raw_response += formatted_chunk
+
+                special_characters = [
+                    "{",
+                    "}",
+                    "[",
+                    "]",
+                ]
+                raw_special_character_list = ""
+                for character in raw_response:
+                    if character in special_characters:
+                        raw_special_character_list += character
+                
+                reflection_characters = list(raw_special_character_list)
+                reflection_characters.reverse()
+                response_ending = ""
+                left_bracket_ignore = 0 
+                left_square_bracket_ignore = 0
+                for character in reflection_characters:
+                    if character == "{":
+                        if left_bracket_ignore > 0:
+                            left_bracket_ignore -= 1
+                        else:
+                            response_ending = response_ending + "}"
+                    elif character == "}":
+                        left_bracket_ignore += 1
+                    elif character == "[":
+                        if left_square_bracket_ignore > 0:
+                            left_square_bracket_ignore -= 1
+                        else:
+                            response_ending = response_ending + "]"
+                    elif character == "]":
+                        left_square_bracket_ignore += 1
+
+                diff_json = {}
+
+                def parse_list(new_json, orig_json):
+                    res_json = {}
+                    for i in range(len(new_json)):
+                        if type(new_json[i]) == list and len(new_json[i]) > 0:
+                            if i < len(orig_json):
+                                if new_json[i] != orig_json[i]:
+                                    # res_json.append(parse_list(new_json[i], orig_json[i]))
+                                    res_json[i] = parse_list(new_json[i], orig_json[i])
+                            else:
+                                # res_json.append(new_json[i])
+                                res_json[i] = new_json[i]
+                        elif type(new_json[i]) == dict:
+                            if i < len(orig_json):
+                                if new_json[i] != orig_json[i]:
+                                    # res_json.append(parse_dict(new_json[i], orig_json[i]))
+                                    res_json[i] = parse_dict(new_json[i], orig_json[i])
+                            else:
+                                # res_json.append(new_json[i])
+                                # res_json[i] = new_json[i]
+                                res_json[i] = {}
+                                for key in new_json[i]:
+                                    if key not in orig_json[i]:
+                                        res_json[i][key] = new_json[i][key]
+                        else:
+                            if i < len(orig_json):
+                                if type(new_json[i]) == str:
+                                    # res_json.append(new_json[i][len(orig_json[i]):])
+                                    # if res_json[-1] == "":
+                                    #     res_json.pop()
+                                    string_new = str(new_json[i])
+                                    string_orig = str(orig_json[i])
+                                    string_diff = string_new[len(string_orig):]
+                                    if string_diff != "":
+                                        res_json[i] = string_diff
+                                else:
+                                    string_new = str(new_json[i])
+                                    string_orig = str(orig_json[i])
+                                    string_diff = string_new[len(string_orig):]
+                                    # if string_diff != "":
+                                    #     res_json.append(type(orig_json[i])(string_diff))
+                                    # else:
+                                    #     res_json.append(orig_json[i])
+                                    if string_diff != "":
+                                        res_json[i] = type(orig_json[i])(string_diff)
+                            else:
+                                # res_json.append(new_json[i])
+                                res_json[i] = new_json[i]
+                    return res_json
+
+                def parse_dict(new_json, orig_json):
+                    # print("New JSON:",new_json)
+                    # print("Orig JSON:",orig_json)
+                    res_json = {}
+                    for key in new_json:
+                        if type(new_json[key]) == list and len(new_json[key]) > 0:
+                            if key in orig_json: # key in orig_json
+                                if new_json[key] != orig_json[key]:
+                                    res_json[key] = parse_list(new_json[key], orig_json[key])
+                            else: # key not in orig_json
+                                res_json[key] = new_json[key]
+                        elif type(new_json[key]) == dict: # key is a dictionary
+                            if key in orig_json: # key in orig_json
+                                if new_json[key] != orig_json[key]:
+                                    res_json[key] = parse_dict(new_json[key], orig_json[key])
+                            else: # key not in orig_json
+                                res_json[key] = {}
+                                for sub_key in new_json[key]:
+                                    if key not in orig_json:
+                                        res_json[key][sub_key] = new_json[key][sub_key]
+
+                        else:
+                            if key in orig_json: # key in orig_json
+                                if type(new_json[key]) == str: # key is a string 
+                                    res_json[key] = new_json[key][len(orig_json[key]):]
+                                    if res_json[key] == "":
+                                        del res_json[key]
+                                else: # key is a number
+                                    string_new = str(new_json[key])
+                                    string_orig = str(orig_json[key])
+                                    string_diff = string_new[len(string_orig):]
+                                    if string_diff != "":
+                                        res_json[key] = type(orig_json[key])(string_diff)
+                                    else:
+                                        del res_json[key]
+                            else: # key not in orig_json
+                                res_json[key] = new_json[key]
+                    return res_json
+
+                reference_response = str(raw_response).strip()
+
+                if reference_response.endswith(","):
+                    reference_response = reference_response[:-1]
+                try:
+                    new_response_json = json.loads(reference_response)
+                except:
+                    try:
+                        new_response_json = json.loads(reference_response+response_ending)
+                    except:
+                        try:
+                            new_response_json = json.loads(reference_response+"\""+response_ending)
+                        except:
+                            # logging.error(f"Could not parse JSON from response: {reference_response}")
+                            # logging.debug(f"Response Ending: {response_ending}")
+                            new_response_json = {}
+                
+                if new_response_json != response_json:
+                    diff_json = parse_dict(new_response_json, response_json)
+                # else:
+                #     logging.info("No new JSON found.")
+                response_json = new_response_json
+                        
+                if diff_json != {} and diff_json != last_diff_json:
+                    last_diff_json = diff_json
+                    yield {
+                        "chunk": diff_json,
+                        "complete_json": new_response_json,
+                    }
+        else:
+            print("Generating normal response...")
+            for chunk in self.acreate(self.get_context(), message_prefix=message_prefix, force_speaker=force_speaker):
+                yield chunk
         
     def format_content(self, chunk):
         # TODO: This is a temporary fix. The LLM class should be returning a string only, but some inference engines don't currently. This will be fixed in the future.
-        logging.info(f"Formatting content type: {type(chunk)}")
+        # logging.info(f"Formatting content type: {type(chunk)}")
+        # logging.info(chunk)
         if type(chunk) == dict:
             # logging.info(chunk)
-            content = chunk['choices'][0]['text']
+            try:
+                content = chunk['choices'][0]['text']
+            except:
+                try:
+                    content = chunk.choices[0].text
+                except:
+                    logging.error("Could not get text from chunk.")
         elif type(chunk) == str:
             # logging.info(chunk)
             content = chunk
         else:
-            logging.debug(chunk.model_dump_json())
+            # logging.debug(chunk.model_dump_json())
             content = None
             error = "Errors getting text from chunk:\n"
             if content is None:
@@ -918,9 +1179,23 @@ class base_LLM():
                 voice_lines = [] # used to store the voice lines generated
                 same_roleplay_symbol = self._prompt_style["roleplay_suffix"] == self._prompt_style["roleplay_prefix"] # used to determine if the roleplay symbol is the same for both the prefix and suffix
 
+                if self.cot_enabled and self.cot_supported and self.conversation_manager.thought_process is not None:
+                    full_json = {}
+                    
                 logging.info(f"Starting response generation...")
                 for chunk in self.generate_response(message_prefix=symbol_insert, force_speaker=force_speaker):
-                    content = self.format_content(chunk) # example: ".* Hello"
+                    if self.cot_enabled and self.cot_supported and self.conversation_manager.thought_process is not None:
+                        full_json = chunk["complete_json"]
+                        chunk = chunk["chunk"]
+                        if "response_to_user" not in chunk:
+                            logging.info(f"Thought Chunk:",chunk)
+                            continue
+                        else:
+                            logging.info(f"Response Chunk:",chunk)
+                            chunk = chunk["response_to_user"]
+                        content = chunk # example: ".* Hello"
+                    else:
+                        content = self.format_content(chunk) # example: ".* Hello"
                     logging.out(f"Content: {content}")
                     if content is None:
                         logging.error(chunk)
@@ -1232,6 +1507,10 @@ class base_LLM():
                             logging.info(f"Response generation complete. Stopping generation.")
                             break
 
+                if self.cot_enabled and self.cot_supported and self.conversation_manager.thought_process is not None:
+                    print(f"Full Thought Process:",json.dumps(full_json, indent=4))
+
+                # input("Press enter to continue...") # For pausing after attempt at generating a response
                 logging.info(f"LLM response took {time.time() - start_time} seconds to execute")
                 if full_reply.strip() == "":
                     if self.config.error_on_empty_full_reply:

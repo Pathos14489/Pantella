@@ -26,11 +26,12 @@ def create_thought_process(conversation_manager):
     thought_process = "default"
     if conversation_manager.config.thought_type not in Thought_Types and conversation_manager.config.thought_type != "default":
         logging.error(f"Could not find thought process: {conversation_manager.config.thought_type}! Please check your config.json file and try again!")
-        input("Press enter to continue...")
-        raise ValueError(f"Could not find thought process: {conversation_manager.config.thought_type}! Please check your config.json file and try again!")
+        thought_process = "none"
     thought_process = conversation_manager.config.thought_type
     if thought_process == "default":
-        thought_process = "base_thought_process"
+        thought_process = "simple"
+    if thought_process == "none":
+        return None
     model = Thought_Types[thought_process]
     thought_process = model.ThoughtProcess
     return thought_process

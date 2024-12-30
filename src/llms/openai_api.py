@@ -1,7 +1,7 @@
 print("Importing openai_api.py")
 from src.logging import logging, time
 import src.utils as utils
-import src.llms.base_llm as base_LLM
+from src.llms.base_llm import base_LLM, TestCoT
 import random
 import traceback
 import os
@@ -18,7 +18,7 @@ except Exception as e:
 
 inference_engine_name = "openai"
 
-class LLM(base_LLM.base_LLM):
+class LLM(base_LLM):
     def __init__(self, conversation_manager, vision_enabled=False):
         global inference_engine_name
         super().__init__(conversation_manager, vision_enabled=vision_enabled)
@@ -99,7 +99,7 @@ class LLM(base_LLM.base_LLM):
         if not self.vision_enabled:
             try:
                 if self.config.reverse_proxy:
-                    self.client.completions.create(prompt="This is a test of the", model=self.config.openai_model, max_tokens=10,extra_body={"proxy_password":api_key})
+                    self.client.completions.create(prompt="This is a test of the", model=self.config.openai_model, max_tokens=10, extra_body={"proxy_password":api_key})
                 else:
                     self.client.completions.create(prompt="This is a test of the", model=self.config.openai_model, max_tokens=10)
                 self.completions_supported = True
@@ -107,6 +107,52 @@ class LLM(base_LLM.base_LLM):
             except Exception as e:
                 self.completions_supported = False
                 logging.error(f"Current API does not support text completions! Are you using OpenAI's API? They will not work with all features of Pantella, please use OpenRouter or another API that supports raw non-chat completions.")
+                logging.error(e)
+                # input("Press Enter to exit.")
+            try:
+                if self.cot_enabled:
+                    if self.config.reverse_proxy:
+                        response = self.client.completions.create(prompt="", model=self.config.openai_model, max_tokens=10, extra_body={"proxy_password":api_key, "response_format": {"type": "json_schema", "json_schema": TestCoT.model_json_schema()}})
+                    else:
+                        response = self.client.completions.create(prompt="", model=self.config.openai_model, max_tokens=10, extra_body={"response_format": {"type": "json_schema", "json_schema": TestCoT.model_json_schema()}})
+                    try:
+                        try:
+                            completion = completion.choices[0].text
+                        except:
+                            pass
+                        if completion is None or type(completion) != str:
+                            try:
+                                completion = completion.choices[0]["text"]
+                            except:
+                                pass
+                        if completion is None or type(completion) != str:
+                            try:
+                                completion = completion.choices[0].message.content
+                            except:
+                                pass
+                        if completion is None or type(completion) != str:
+                            try:
+                                completion = completion.choices[0].message.content
+                            except:
+                                pass
+                        if completion is None or type(completion) != str:
+                            try:
+                                completion = completion.choices[0].delta.content
+                            except:
+                                pass
+                        response = json.loads(completion)
+                        self.cot_supported = True
+                        logging.success(f"OpenAI API at '{self.config.alternative_openai_api_base}' supports CoT!")
+                    except:
+                        self.cot_supported = False
+                        logging.error(f"Current API does not support CoT! Are you using OpenAI's API? They will not work with all features of Pantella, please use OpenRouter or another API that supports CoT.")
+                        # input("Press Enter to exit.")
+                else:
+                    self.cot_supported = False
+                    logging.info("CoT is not enabled.")
+            except Exception as e:
+                self.cot_supported = False
+                logging.error(f"Current API does not support CoT! Are you using OpenAI's API? They will not work with all features of Pantella, please use OpenRouter or another API that supports CoT.")
                 logging.error(e)
                 # input("Press Enter to exit.")
         else:
@@ -147,10 +193,15 @@ class LLM(base_LLM.base_LLM):
                     "mirostat_tau":self.mirostat_tau,
                     "mirostat_eta":self.mirostat_eta
                 }
+                if self.cot_enabled and self.cot_supported and self.conversation_manager.thought_process is not None: # If COT is enabled, we need to use the JSON schema for the response format
+                    extra_body_kwargs["response_format"] = {
+                        "type": "json_schema",
+                        "json_schema": self.conversation_manager.thought_process.model_json_schema()
+                    }
                 for kwarg in self.config.banned_samplers:
                     if kwarg in extra_body_kwargs:
                         del extra_body_kwargs[kwarg]
-                if self.config.reverse_proxy:
+                if self.config.reverse_proxy: # If using a reverse proxy, we need to include the password in the request
                     extra_body_kwargs["proxy_password"] = self.api_key
                 if self.completions_supported:
                     prompt = self.tokenizer.get_string_from_messages(messages) + self.tokenizer.start_message(self.config.assistant_name)
@@ -255,6 +306,11 @@ class LLM(base_LLM.base_LLM):
                     "mirostat_tau":self.mirostat_tau,
                     "mirostat_eta":self.mirostat_eta
                 }
+                if self.cot_enabled and self.cot_supported and self.conversation_manager.thought_process is not None: # If COT is enabled, we need to use the JSON schema for the response format
+                    extra_body_kwargs["response_format"] = {
+                        "type": "json_schema",
+                        "json_schema": self.conversation_manager.thought_process.model_json_schema()
+                    }
                 for kwarg in self.config.banned_samplers:
                     if kwarg in extra_body_kwargs:
                         del extra_body_kwargs[kwarg]

@@ -4,22 +4,24 @@ import ctypes
 import array
 import numpy as np
 import io
-from src.llms.base_llm import base_LLM, load_image
+from src.llms.base_llm import base_LLM, load_image, TestCoT
 import src.tokenizers.base_tokenizer as tokenizer
 from src.logging import logging, time
 import traceback
+import json
 logging.info("Imported required libraries in llama_cpp_python.py")
 
 try:
     from llama_cpp import Llama
     from llama_cpp.llava_cpp import llava_eval_image_embed, llava_image_embed_make_with_bytes, clip_model_load, llava_image_embed_free
+    import llama_cpp
     loaded = True
     logging.info("Imported llama-cpp-python in llama_cpp_python.py")
 except Exception as e:
     loaded = False
     logging.warning("Failed to load llama-cpp-python. Please check that you have installed it correctly if you intend to use it. If you don't intend to use it, you can ignore this message.")
 
-inference_engine_name = "llama-cpp-python"
+inference_engine_name = "llama_cpp_python"
 
 llama_model = None # Used to store the llama-cpp-python model so it can be reused for the tokenizer
 
@@ -61,10 +63,11 @@ class LLM(base_LLM): # Uses llama-cpp-python as the LLM inference engine
         test_completion = self.llm.create_completion(test_prompt, max_tokens=10)
         logging.output(f"Test Completion: {test_completion}")
         if self.vision_enabled:
-            logging.success("Vision is enabled for llama-cpp-python")
+            logging.info("Vision is enabled for llama-cpp-python")
             if loaded:
                 try:
                     self.clip_model = clip_model_load(self.config.llava_clip_model_path.encode(), 1)
+                    logging.success(f"Loaded vision model for llama-cpp-python")
                 except Exception as e:
                     logging.error(f"Error loading clip model for 'llava-cpp-python'(not a typo) inference engine. Please check that the model path is correct in config.json.")
                     tb = traceback.format_exc()
@@ -75,6 +78,28 @@ class LLM(base_LLM): # Uses llama-cpp-python as the LLM inference engine
                 logging.error(f"Error loading llama-cpp-python for 'llava-cpp-python'(not a typo) inference engine. Please check that you have installed llama-cpp-python correctly.")
                 input("Press Enter to exit.")
                 raise Exception("Llama-cpp-python not installed, install llama-cpp-python to use llama-cpp-python.")
+            
+        if self.cot_enabled:
+            logging.info("COT is enabled for llama-cpp-python")
+            if self.cot_enabled and self.conversation_manager.thought_process is not None: # If COT is enabled, we need to use the JSON schema for the response format
+                grammar = llama_cpp.LlamaGrammar.from_json_schema(json.dumps(TestCoT.model_json_schema()))
+                completion = self.llm.create_completion("",
+                    max_tokens=512,
+                    logit_bias=self.logit_bias,
+                    stream=False,
+                    grammar=grammar,
+                )
+                completion = completion["choices"][0]["text"]
+                try:
+                    response = json.loads(completion)
+                    print(response)
+                    self.cot_supported = True
+                    logging.success(f"llama-cpp-python supports CoT!")
+                except:
+                    self.cot_supported = False
+                    logging.error(f"llama-cpp-python encountered an error while testing CoT. GBNF grammars are not supported by your model or your version of llama-cpp-python.")
+                    # input("Press Enter to exit.")
+            
 
     def get_image_embed_from_bytes(self, image_bytes):
         data_array = array.array("B", image_bytes)
@@ -169,19 +194,36 @@ class LLM(base_LLM): # Uses llama-cpp-python as the LLM inference engine
                 if self.vision_enabled:
                     prompt = self.multimodal_prompt_format(prompt)
 
-                completion = self.llm.create_completion(prompt,
-                    max_tokens=self.max_tokens,
-                    top_k=self.top_k,
-                    top_p=self.top_p,
-                    min_p=self.min_p,
-                    temperature=self.temperature,
-                    repeat_penalty=self.repeat_penalty, 
-                    stop=self.stop,
-                    frequency_penalty=self.frequency_penalty,
-                    presence_penalty=self.presence_penalty,
-                    logit_bias=self.logit_bias,
-                    stream=False,
-                )
+                if self.cot_enabled and self.cot_supported and self.conversation_manager.thought_process is not None: # If COT is enabled, we need to use the JSON schema for the response format
+                    grammar = llama_cpp.LlamaGrammar.from_json_schema(json.dumps(self.conversation_manager.thought_process.model_json_schema()))
+                    completion = self.llm.create_completion(prompt,
+                        max_tokens=self.max_tokens,
+                        top_k=self.top_k,
+                        top_p=self.top_p,
+                        min_p=self.min_p,
+                        temperature=self.temperature,
+                        repeat_penalty=self.repeat_penalty, 
+                        stop=self.stop,
+                        frequency_penalty=self.frequency_penalty,
+                        presence_penalty=self.presence_penalty,
+                        logit_bias=self.logit_bias,
+                        stream=False,
+                        grammar=grammar,
+                    )
+                else:
+                    completion = self.llm.create_completion(prompt,
+                        max_tokens=self.max_tokens,
+                        top_k=self.top_k,
+                        top_p=self.top_p,
+                        min_p=self.min_p,
+                        temperature=self.temperature,
+                        repeat_penalty=self.repeat_penalty, 
+                        stop=self.stop,
+                        frequency_penalty=self.frequency_penalty,
+                        presence_penalty=self.presence_penalty,
+                        logit_bias=self.logit_bias,
+                        stream=False,
+                    )
                 completion = completion["choices"][0]["text"]
                 logging.info(f"Completion:",completion)
             except Exception as e:
@@ -215,24 +257,47 @@ class LLM(base_LLM): # Uses llama-cpp-python as the LLM inference engine
                 logging.info(f"Raw Prompt: {prompt}")
                 if self.vision_enabled:
                     prompt = self.multimodal_prompt_format(prompt)
-                return self.llm.create_completion(prompt=prompt,
-                    max_tokens=self.max_tokens,
-                    top_k=self.top_k,
-                    top_p=self.top_p,
-                    min_p=self.min_p,
-                    temperature=self.temperature,
-                    repeat_penalty=self.repeat_penalty, 
-                    stop=self.stop,
-                    frequency_penalty=self.frequency_penalty,
-                    presence_penalty=self.presence_penalty,
-                    typical_p=self.typical_p,
-                    mirostat_mode=self.mirostat_mode,
-                    mirostat_eta=self.mirostat_eta,
-                    mirostat_tau=self.mirostat_tau,
-                    logit_bias=self.logit_bias,
-                    tfs_z=self.tfs_z,
-                    stream=True,
-                )
+                if self.cot_enabled and self.cot_supported and self.conversation_manager.thought_process is not None: # If COT is enabled, we need to use the JSON schema for the response format
+                    print("Using CoT Grammar")
+                    grammar = llama_cpp.LlamaGrammar.from_json_schema(json.dumps(self.conversation_manager.thought_process.model_json_schema()))
+                    return self.llm.create_completion(prompt=prompt,
+                        max_tokens=self.max_tokens,
+                        top_k=self.top_k,
+                        top_p=self.top_p,
+                        min_p=self.min_p,
+                        temperature=self.temperature,
+                        repeat_penalty=self.repeat_penalty, 
+                        stop=self.stop,
+                        frequency_penalty=self.frequency_penalty,
+                        presence_penalty=self.presence_penalty,
+                        typical_p=self.typical_p,
+                        mirostat_mode=self.mirostat_mode,
+                        mirostat_eta=self.mirostat_eta,
+                        mirostat_tau=self.mirostat_tau,
+                        logit_bias=self.logit_bias,
+                        tfs_z=self.tfs_z,
+                        stream=True,
+                        grammar=grammar,
+                    )
+                else:
+                    return self.llm.create_completion(prompt=prompt,
+                        max_tokens=self.max_tokens,
+                        top_k=self.top_k,
+                        top_p=self.top_p,
+                        min_p=self.min_p,
+                        temperature=self.temperature,
+                        repeat_penalty=self.repeat_penalty, 
+                        stop=self.stop,
+                        frequency_penalty=self.frequency_penalty,
+                        presence_penalty=self.presence_penalty,
+                        typical_p=self.typical_p,
+                        mirostat_mode=self.mirostat_mode,
+                        mirostat_eta=self.mirostat_eta,
+                        mirostat_tau=self.mirostat_tau,
+                        logit_bias=self.logit_bias,
+                        tfs_z=self.tfs_z,
+                        stream=True,
+                    )
             except Exception as e:
                 logging.warning('Error creating completion stream, retrying in 5 seconds...')
                 logging.warning(e)

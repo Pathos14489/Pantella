@@ -467,6 +467,8 @@ class ConfigLoader:
                 "custom_possible_player_aliases": [], # adds additional names the player goes by to the list of names to check for in the conversation start role
             },
             "InferenceOptions": {
+                "thought_type": "simple",
+                "cot_enabled": False,
                 "temperature": 0.8,
                 "top_p": 1,
                 "min_p": 0.05,
@@ -529,9 +531,6 @@ class ConfigLoader:
                 "openai_api_key_path": ".\\GPT_SECRET_KEY.txt",
                 "banned_samplers": [], # Examples: "min_p", "typical_p", "top_p", "top_k", "temperature", "frequency_penalty", "presence_penalty", "repeat_penalty", "tfs_z", "mirostat_mode", "mirostat_eta", "mirostat_tau", "max_tokens"
                 "api_log_dir": ".\\api_logs",
-            },
-            "openai_cot": {
-                "thought_type": "default",
             },
             "llama_cpp_python": {
                 "model_path": ".\\model.gguf",
@@ -797,7 +796,10 @@ class ConfigLoader:
                 "custom_possible_player_aliases": self.custom_possible_player_aliases,
             },
             "InferenceOptions": {
+                "thought_type": self.thought_type,
+                "cot_enabled": self.cot_enabled,
                 "temperature": self.temperature,
+                "thought_type": self.thought_type,
                 "top_p": self.top_p,
                 "min_p": self.min_p,
                 "typical_p": self.typical_p,
@@ -840,9 +842,6 @@ class ConfigLoader:
                 "openai_api_key_path": self.openai_api_key_path,
                 "banned_samplers": self.banned_samplers,
                 "api_log_dir": self.api_log_dir,
-            },
-            "openai_cot": {
-                "thought_type": self.thought_type,
             },
             "llama_cpp_python": {
                 "model_path": self.model_path,
