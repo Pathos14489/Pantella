@@ -2,7 +2,7 @@ print("Importing simple_thought_process.py")
 from src.logging import logging
 from pydantic import BaseModel, Field
 from typing import List, Literal, Optional
-from src.thought_processes.base_thought_process import Question
+from src.thought_processes.branching_thought_process import Question
 logging.info("Imported required libraries in simple_thought_process.py")
 
 thought_process_name = "simple"

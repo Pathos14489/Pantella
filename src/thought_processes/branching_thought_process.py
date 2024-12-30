@@ -4,7 +4,7 @@ from pydantic import BaseModel, Field
 from typing import List, Literal, Optional
 logging.info("Imported required libraries in base_thought_process.py")
 
-thought_process_name = "base_thought_process"
+thought_process_name = "branching"
 
 # Thought Process
 class Question(BaseModel):
