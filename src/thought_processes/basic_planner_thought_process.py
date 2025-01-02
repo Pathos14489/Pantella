@@ -8,7 +8,7 @@ logging.info("Imported required libraries in basic_planner_thought_process.py")
 thought_process_name = "basic_planner"
 
 class ThoughtProcess(BaseModel):
-    """The response format for characters is a schema that requires the AI to respond in a specific way. The AI must respond in a way that is consistent with the schema, and must follow the rules of the schema to solve the user's queries."""
+    """The response format for characters is a schema that requires the assistant to respond in a specific way. The assistant must respond in a way that is consistent with the schema, and must follow the rules of the schema to respond to the user."""
     why_is_the_user_saying_this: Question = Field(...,description="The question the character asks themselves to understand why the user is saying what they are saying. Should be at least a sentence long.",min_length=1)
     thought_branches: list[BranchingThoughts] = Field(...,min_items=1,max_items=5)
     questions: list[Question] = Field(...,min_items=1,max_items=5)

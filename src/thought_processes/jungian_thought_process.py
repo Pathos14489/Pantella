@@ -27,7 +27,7 @@ class JungianThought(BaseModel):
     self_response: str = Field(...,description="The Self response to the user's query. Should be at least a sentence long. The self is the center of the personality and is the part of the personality that is responsible for the integration of the conscious and unconscious aspects of the individual. The self is the part of the personality that is responsible for the development of the individual's personality.",min_length=1)
 
 class ThoughtProcess(BaseModel):
-    """The response format for characters is a schema that requires the AI to respond in a specific way. The AI must respond in a way that is consistent with the schema, and must follow the rules of the schema to solve the user's queries."""
+    """The response format for characters is a schema that requires the assistant to respond in a specific way. The assistant must respond in a way that is consistent with the schema, and must follow the rules of the schema to respond to the user."""
     jungian_thought: JungianThought
     thought_branches: list[BranchingThoughts] = Field(...,min_items=1,max_items=5)
     questions: list[Question] = Field(...,min_items=1,max_items=5)

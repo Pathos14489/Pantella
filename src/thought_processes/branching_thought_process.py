@@ -19,7 +19,7 @@ class BranchingThoughts(BaseModel):
     thought_steps: list[str] = Field(...,description="The steps the character takes to reach a conclusion. Should be less than eleven steps total. Each step should be about a paragraph.",min_items=0,max_items=10)
 
 class ThoughtProcess(BaseModel): # This is a constant schema that is used by all thought processes. Your thought process should share this name and use the same parent class.
-    """The response format for the bot is a complex schema that requires the AI to respond in a specific way. The AI must respond in a way that is consistent with the schema, and must follow the rules of the schema to solve the user's queries.""" # All the descriptions in this schema are recommended to be included in your thought process as they're fed to the LLM to help it understand the schema and how to use it.
+    """The response format for characters is a schema that requires the assistant to respond in a specific way. The assistant must respond in a way that is consistent with the schema, and must follow the rules of the schema to respond to the user.""" # All the descriptions in this schema are recommended to be included in your thought process as they're fed to the LLM to help it understand the schema and how to use it.
     why_is_the_other_character_saying_this: str = Field(...,description="The question the bot asks themselves to understand why the person they're talking to is saying what they are saying. Should be at least a sentence long.",min_length=1)
     thought_branches: list[BranchingThoughts] = Field(...,min_items=1,max_items=5)
     questions: list[Question] = Field(...,min_items=1,max_items=5)

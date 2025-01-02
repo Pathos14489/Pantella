@@ -14,7 +14,7 @@ class FreudianThought(BaseModel):
     super_ego_response: str = Field(...,description="The Super Ego response to the user's query. Should be at least a sentence long. The superego is part of the psyche that is partly conscious. It represents the rules of society, functions to reward and punish through a system of moral attitudes, and has a sense of guilt. The development for the superego happens around ages 3 to 5. Its function is to control the impulses of the id by using the rules of society, what is forbidden and what is allowed.",min_length=1)
 
 class ThoughtProcess(BaseModel):
-    """The response format for characters is a schema that requires the AI to respond in a specific way. The AI must respond in a way that is consistent with the schema, and must follow the rules of the schema to solve the user's queries."""
+    """The response format for characters is a schema that requires the assistant to respond in a specific way. The assistant must respond in a way that is consistent with the schema, and must follow the rules of the schema to respond to the user."""
     freudian_thought: FreudianThought
     thought_branches: list[BranchingThoughts] = Field(...,min_items=1,max_items=5)
     questions: list[Question] = Field(...,min_items=1,max_items=5)
