@@ -112,7 +112,7 @@ Pantella requires around 4-6 GB of storage space and includes the voice models/l
 
 ### Software Requirements
 
-Pantella optionally requires git to be installed to perform all updates correctly. If you don't intend to update your installation, you can skip this step. This is required even if using the launcher.
+Pantella optionally requires git to be installed to perform all updates correctly. If you don't intend to update your installation, you can skip this step. This is required even if using the launcher. If you try to run the `./install_pantella_requirements.bat` script without git installed, it will fail almost immediately.
 
 #### Install Git for Windows
 1. Download the latest version of Git for Windows from [here](https://git-scm.com/download/win).
