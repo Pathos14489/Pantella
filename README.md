@@ -110,6 +110,17 @@ If you're trying to minimize the amount of compute needed to run Pantella, I'd a
 ### Storage Requirements
 Pantella requires around 4-6 GB of storage space and includes the voice models/latents for PiperTTS, and xTTS_api out of the box. xVASynth requires around 4 GB of storage space for the software itself and after downloading all the voice models for Skyrim and Fallout 4 I have used around 38 GB of storage space. If you're using a local language model, you'll have to factor in the size of the model you're using yourself. But suffice to say, you'll need a fair amount of storage space to run Pantella with all the bells and whistles.
 
+### Software Requirements
+
+Pantella optionally requires git to be installed to perform all updates correctly. If you don't intend to update your installation, you can skip this step. This is required even if using the launcher.
+
+#### Install Git for Windows
+1. Download the latest version of Git for Windows from [here](https://git-scm.com/download/win).
+2. Run the installer and follow the instructions. The default settings should be fine.
+
+#### Install Git for Linux
+Hah! You're probably already done with this part! Git is installed by default on most Linux distributions. If you don't have it, you can install it with `sudo apt install git` or `sudo yum install git` or `sudo pacman -S git` depending on your distribution.
+
 ### Compatibility
 - Some users have reported that Skyrim crashes when Mantella is used with Fuz Ro D'oh. A possible fix is to disable and re-enable Fuz Ro D'oh. I do not know if this is the case with Pantella or not, do let me know if you find out.
 - The mod VR Keyboard conflicts with Pantella. It is recommended to use Speech-To-Text instead of Text Input if you are using VR at this time.
