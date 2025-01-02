@@ -129,7 +129,7 @@ def get_schema_description(schema):
                 if add_to_description:
                     schema_description += "\n" + description_part
             return schema_description
-        print("Key:", key)
+        # print("Key:", key)
         # print("Value:", character_card_schema[key])
         schema_description = parse_property(schema["properties"][key],schema_description)
     return schema_description
@@ -151,6 +151,7 @@ class base_LLM():
         self.vision_enabled = vision_enabled
         self.completions_supported = True
         self.cot_supported = False
+        self.character_generation_supported = False
         if self.vision_enabled:
             if self.config.paddle_ocr and not ocr_loaded: # Load paddleocr if it's installed
                 logging.error(f"Error loading paddleocr for vision enabled inference engine. Please check that you have installed paddleocr correctly. OCR will not be used but basic image embedding will still work.")
@@ -174,6 +175,27 @@ class base_LLM():
                 raise Exception("PyGetWindow not installed, install PyGetWindow to use vision enabled LLM(Windows only).")
             self.get_game_window()
 
+    def generate_character(self, character_name, character_ref_id, character_base_id, character_in_game_race, character_in_game_gender, character_is_guard, character_is_ghost, in_game_voice_model, is_generic_npc, location):
+        """Generate a character based on the prompt provided"""
+        raise NotImplementedError("Please override this method in your child class!")
+        # Exmaple output: return {
+        #     "bio_url": "",
+        #     "bio": "",
+        #     "name": "",
+        #     "voice_model": "",
+        #     "skyrim_voice_folder": "",
+        #     "race": "",
+        #     "gender": "",
+        #     "species": "",
+        #     "ref_id": "",
+        #     "base_id": "",
+        #     "lang_override": "",
+        #     "is_generic_npc": False,
+        #     "behavior_blacklist": [],
+        #     "behavior_whitelist": [],
+        #     "notes": "null"
+        # }
+
     def get_cot_supported(self):
         """Check if the LLM supports CoT (Chain of Thought) completions"""
         return self.cot_supported
@@ -192,14 +214,15 @@ class base_LLM():
     
     @property
     def stop(self): # stop strings for the LLM -- stops generation when they're encountered. Either at the API level if they're supported, inference engine level if your chosen method of inference supprts it, or here after the tokens are generated if they make it through the other two layers.
-        stop = list(self._prompt_style["stop"])
-        if "message_separator" in self._prompt_style and self._prompt_style["message_separator"] != None and self._prompt_style["message_separator"] != "":
-            stop.append(self._prompt_style["message_separator"])
+        prompt_style = self._prompt_style
+        stop = list(prompt_style["stop"])
+        if "message_separator" in prompt_style and prompt_style["message_separator"] != None and prompt_style["message_separator"] != "":
+            stop.append(prompt_style["message_separator"])
         stop.append(self.EOS_token)
         stop.append(self.BOS_token)
         if not self.character_manager.language["allow_npc_roleplay"]:
-            stop.append(self._prompt_style["roleplay_prefix"])
-            stop.append(self._prompt_style["roleplay_suffix"])
+            stop.append(prompt_style["roleplay_prefix"])
+            stop.append(prompt_style["roleplay_suffix"])
         stop = [char for char in stop if char != '' or char != None or char != "'"]
         return stop
     
@@ -215,7 +238,13 @@ class base_LLM():
     
     @property
     def _prompt_style(self):
-        return self.character_manager.prompt_style
+        try:
+            print("Prompt Style:",self.character_manager.prompt_style)
+            return self.character_manager.prompt_style
+        except:
+            print("Error getting prompt style from character manager, returning default prompt style.")
+            print("Prompt Style:",self.config._prompt_style)
+            return self.config._prompt_style["style"]
     
     @property
     def language(self):

@@ -111,9 +111,10 @@ class Character:
 
     @property
     def _prompt_style(self):
-        if self.prompt_style_override.strip() != "":
-            # logging.info(f"Prompt style override found for {self.name}: {self.prompt_style_override}")
-            return self.characters_manager.conversation_manager.config.prompt_styles[self.prompt_style_override]
+        if "prompt_style_override" in self.info and self.info["prompt_style_override"] != None and self.info["prompt_style_override"].strip() != "" and self.info["prompt_style_override"].strip() != "nan":
+            if self.prompt_style_override.strip() != "":
+                # logging.info(f"Prompt style override found for {self.name}: {self.prompt_style_override}")
+                return self.characters_manager.conversation_manager.config.prompt_styles[self.prompt_style_override]
         # logging.info(f"No prompt style override found for {self.name}, using default prompt style settings for {self.config.prompt_style}")
         return self.characters_manager.conversation_manager.config._prompt_style
     @property

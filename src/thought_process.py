@@ -32,6 +32,4 @@ def create_thought_process(conversation_manager):
         thought_process = "simple"
     if thought_process == "none":
         return None
-    model = Thought_Types[thought_process]
-    thought_process = model.ThoughtProcess
-    return thought_process
+    return Thought_Types[thought_process].ThoughtProcess

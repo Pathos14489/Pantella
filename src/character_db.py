@@ -190,7 +190,7 @@ class CharacterDB():
             if self.db_type == 'json':
                 if not os.path.exists(self.character_database_path): # If the directory doesn't exist, create it
                     os.makedirs(self.character_database_path) 
-                json_file_path = os.path.join(self.character_database_path, info['name']+'.json')
+                json_file_path = os.path.join(self.character_database_path, f"{self.config.game_id}_{info['gender']}_{info['race']}_{info['name']}_{info['ref_id']}_{info['base_id']}.json")
                 # If the character already exists, confirm that the user wants to overwrite it
                 if os.path.exists(json_file_path):
                     overwrite = input(f"Character '{info['name']}' already exists in the database. Overwrite? (y/n): ")
@@ -331,7 +331,7 @@ class CharacterDB():
                     if character['voice_model'] != "":
                         logging.warning(f"Character '{character['name']}' uses invalid voice model '{character['voice_model']}'!")
 
-    def get_character(self, character_name, character_ref_id=None, character_base_id=None): # Get a character from the character database using the character's name, refid_int, or baseid_int
+    def get_character(self, character_name, character_ref_id=None, character_base_id=None, character_in_game_race=None, character_in_game_gender=None, character_is_guard=None, character_is_ghost=None, in_game_voice_model=None, location=None): # Get a character from the character database using the character's name, refid_int, or baseid_int
         if character_ref_id is not None:
             if str(character_ref_id).lower() == "nan":
                 character_ref_id = None
@@ -400,9 +400,9 @@ class CharacterDB():
         # else:
         #     character_base_id = "0"
         logging.info(f"Fixed IDs: '{character_name}({character_ref_id})[{character_base_id}]' - Getting character from character database using name lookup...")
-        return self._get_character(character_name, character_ref_id, character_base_id)
+        return self._get_character(character_name, character_ref_id, character_base_id, character_in_game_race, character_in_game_gender, character_is_guard, character_is_ghost, in_game_voice_model, location)
 
-    def _get_character(self, character_name, character_ref_id=None, character_base_id=None): # Get a character from the character database using the character's name, refid_int, or baseid_int
+    def _get_character(self, character_name, character_ref_id=None, character_base_id=None, character_in_game_race=None, character_in_game_gender=None, character_is_guard=None, character_is_ghost=None, in_game_voice_model=None, location=None): # Get a character from the character database using the character's name, refid_int, or baseid_int
         logging.info(f"_getting character '{character_name}({character_ref_id})[{character_base_id}]'...")
         possibly_same_character = []
         character = None
@@ -474,24 +474,13 @@ class CharacterDB():
                     }
                     logging.info(f"Found possible character '{character_name}' association in character database using ref_id and base_id lookup.")
                     break
-        # Exact Base ID Lookup
-        logging.info(f"Performing exact base_id lookup for character '{character_base_id}'")
-        if character_base_id is not None and character_match is None:
-            if character_base_id in self.base_id_index or str(character_base_id).upper() in self.base_id_index:
-                character_match = self.base_id_index[character_base_id]
-                matching_parts = {
-                    "name": character_match['name'] == character_name,
-                    "ref_id": character_match['ref_id'] == character_ref_id,
-                    "base_id": True
-                }
-                is_generic_npc = character_match['is_generic_npc'] if "is_generic_npc" in character_match else True
-                logging.info(f"Found possible character '{character_name}' association in character database using base_id lookup.")
-        # Endswith Base ID Lookup
-        logging.info(f"Performing endswith base_id lookup for character '{character_base_id}'")
-        if character_base_id is not None and character_match is None:
-            for db_character in self._characters:
-                if str(db_character['base_id']).endswith(character_base_id) or str(db_character['base_id']).upper().endswith(character_base_id.upper()):
-                    character_match = db_character
+        
+        if self.config.allow_base_id_matching:
+            # Exact Base ID Lookup
+            logging.info(f"Performing exact base_id lookup for character '{character_base_id}'")
+            if character_base_id is not None and character_match is None:
+                if character_base_id in self.base_id_index or str(character_base_id).upper() in self.base_id_index:
+                    character_match = self.base_id_index[character_base_id]
                     matching_parts = {
                         "name": character_match['name'] == character_name,
                         "ref_id": character_match['ref_id'] == character_ref_id,
@@ -499,10 +488,38 @@ class CharacterDB():
                     }
                     is_generic_npc = character_match['is_generic_npc'] if "is_generic_npc" in character_match else True
                     logging.info(f"Found possible character '{character_name}' association in character database using base_id lookup.")
-                    break
+            # Endswith Base ID Lookup
+            logging.info(f"Performing endswith base_id lookup for character '{character_base_id}'")
+            if character_base_id is not None and character_match is None:
+                for db_character in self._characters:
+                    if str(db_character['base_id']).endswith(character_base_id) or str(db_character['base_id']).upper().endswith(character_base_id.upper()):
+                        character_match = db_character
+                        matching_parts = {
+                            "name": character_match['name'] == character_name,
+                            "ref_id": character_match['ref_id'] == character_ref_id,
+                            "base_id": True
+                        }
+                        is_generic_npc = character_match['is_generic_npc'] if "is_generic_npc" in character_match else True
+                        logging.info(f"Found possible character '{character_name}' association in character database using base_id lookup.")
+                        break
+
+        # No Match - Generate Character if LLM supports it
+        if character_match is None:
+            logging.info(f"No character found for '{character_name}({character_ref_id})[{character_base_id}]' in character database.")
+            if self.conversation_manager.llm.character_generation_supported:
+                logging.success(f"LLM supports character generation, generating character '{character_name}({character_ref_id})[{character_base_id}]'...")
+                character_match = self.conversation_manager.llm.generate_character(character_name, character_ref_id, character_base_id, character_in_game_race, character_in_game_gender, character_is_guard, character_is_ghost, in_game_voice_model, is_generic_npc, location)
+                logging.success(f"Generated character '{character_name}({character_ref_id})[{character_base_id}]' successfully.", json.dumps(character_match, indent=4))
+                if self.config.auto_save_generated_characters:
+                    self.patch_character_info(character_match)
+                else:
+                    save = input("Press y to save the generated character to the character database: ")
+                    if save.lower() == "y":
+                        self.patch_character_info(character_match)
+
         logging.info(f"Character Match:",character_match)
         logging.info(f"Matching Parts:",matching_parts)
-        return character_match, is_generic_npc, matching_parts
+        return (character_match), is_generic_npc, matching_parts
 
     def has_character(self, character):
         if str(character['name']) == "nan":

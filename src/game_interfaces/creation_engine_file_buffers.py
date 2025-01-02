@@ -622,7 +622,12 @@ class GameInterface(BaseGameInterface):
 
         logging.info()
         
-        character_info, is_generic_npc, matching_parts = self.conversation_manager.character_database.get_character(character_name, character_ref_id, character_base_id) # get character info from character database
+        actor_voice_model = self.load_data_when_available('_pantella_actor_voice', '')
+        actor_voice_model_name = actor_voice_model.split('<')[1].split(' ')[0]
+
+        location = self.get_current_location(location) # Check if location has changed since last check
+
+        character_info, is_generic_npc, _ = self.conversation_manager.character_database.get_character(character_name, character_ref_id, character_base_id, character_in_game_race, character_in_game_gender, character_is_guard, character_is_ghost, in_game_voice_model=actor_voice_model_name, location=location) # get character info from character database
         # TODO: Improve character lookup to be more accurate and to include generating character stats inspired by their generic name for generic NPCs instead of leaving them generic.
         # (example: make a backstory for a Bandit because the NPC was named Bandit, then generate a real name, and background inspired by that vague name for use in-corversation)
         # try: # load character from skyrim_characters json directory 
@@ -652,12 +657,9 @@ class GameInterface(BaseGameInterface):
         if is_generic_npc:
             logging.warn(f"Character {character_name} is a generic NPC! Please create a character entry for them in the character database to enable more features and a proper personality.")
 
-        location = self.get_current_location(location) # Check if location has changed since last check
 
         in_game_time = self.get_current_game_time() # Check if in-game time has changed since last check
 
-        actor_voice_model = self.load_data_when_available('_pantella_actor_voice', '')
-        actor_voice_model_name = actor_voice_model.split('<')[1].split(' ')[0]
         character_info['in_game_voice_model'] = actor_voice_model_name
         character_info['refid_int'] = character_ref_id
         if (character_ref_id is not None and character_ref_id != "0" and character_ref_id != "") and ("ref_id" not in character_info or character_info["ref_id"].strip() == ""):

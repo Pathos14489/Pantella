@@ -1,7 +1,7 @@
 print("Importing openai_api.py")
 from src.logging import logging, time
 import src.utils as utils
-from src.llms.base_llm import base_LLM, TestCoT
+from src.llms.base_llm import base_LLM, TestCoT, get_schema_description
 import random
 import traceback
 import os
@@ -112,36 +112,38 @@ class LLM(base_LLM):
             try:
                 if self.cot_enabled:
                     if self.config.reverse_proxy:
-                        response = self.client.completions.create(prompt="", model=self.config.openai_model, max_tokens=10, extra_body={"proxy_password":api_key, "response_format": {"type": "json_schema", "json_schema": TestCoT.model_json_schema()}})
+                        response = self.client.completions.create(prompt="", model=self.config.openai_model, max_tokens=50, extra_body={"proxy_password":api_key, "response_format": {"type": "json_schema", "json_schema": TestCoT.model_json_schema()}})
                     else:
-                        response = self.client.completions.create(prompt="", model=self.config.openai_model, max_tokens=10, extra_body={"response_format": {"type": "json_schema", "json_schema": TestCoT.model_json_schema()}})
+                        response = self.client.completions.create(prompt="", model=self.config.openai_model, max_tokens=50, extra_body={"response_format": {"type": "json_schema", "json_schema": TestCoT.model_json_schema()}})
+                    print(response)
                     try:
                         try:
-                            completion = completion.choices[0].text
+                            completion = response.choices[0].text
                         except:
                             pass
                         if completion is None or type(completion) != str:
                             try:
-                                completion = completion.choices[0]["text"]
+                                completion = response.choices[0]["text"]
                             except:
                                 pass
                         if completion is None or type(completion) != str:
                             try:
-                                completion = completion.choices[0].message.content
+                                completion = response.choices[0].message.content
                             except:
                                 pass
                         if completion is None or type(completion) != str:
                             try:
-                                completion = completion.choices[0].message.content
+                                completion = response.choices[0].message.content
                             except:
                                 pass
                         if completion is None or type(completion) != str:
                             try:
-                                completion = completion.choices[0].delta.content
+                                completion = response.choices[0].delta.content
                             except:
                                 pass
-                        response = json.loads(completion)
+                        response = json.loads(completion.strip())
                         self.cot_supported = True
+                        self.character_generation_supported = True
                         logging.success(f"OpenAI API at '{self.config.alternative_openai_api_base}' supports CoT!")
                     except:
                         self.cot_supported = False
@@ -160,6 +162,110 @@ class LLM(base_LLM):
             logging.warning("NOTICE: Completions API is not currently supported with vision enabled!")
             self.completions_supported = False
     
+
+    def generate_character(self, character_name, character_ref_id, character_base_id, character_in_game_race, character_in_game_gender, character_is_guard, character_is_ghost, in_game_voice_model=None, is_generic_npc=False, location=None):
+        """Generate a character based on the prompt provided"""
+        if not self.character_generation_supported:
+            logging.error(f"Character generation is not supported by llama-cpp-python. Please check that your model supports it and that it is enabled in config.json.")
+            return None
+        json_schema = self.conversation_manager.character_generator_schema.model_json_schema()
+        openai_stop = list(self.stop)
+        openai_stop = [self.config.message_separator] + openai_stop
+        if self.config.alternative_openai_api_base == 'none': # OpenAI stop is the first 4 options in the stop list because they only support up to 4 for some asinine reason
+            openai_stop = openai_stop[:4]
+        else:
+            openai_stop = openai_stop
+        openai_stop = [stop for stop in openai_stop if stop != ""] # Remove empty strings from the stop list
+        logging.info("Stop Strings:",openai_stop)
+        sampler_kwargs = {
+            "top_p": self.top_p,
+            "temperature": self.temperature,
+            "frequency_penalty": self.frequency_penalty,
+            "presence_penalty": self.presence_penalty
+        }
+        for kwarg in self.config.banned_samplers:
+            if kwarg in sampler_kwargs:
+                del sampler_kwargs[kwarg]
+        extra_body_kwargs = {
+            "min_p": self.min_p,
+            "top_k":self.top_k,
+            "typical_p":self.typical_p,
+            "repeat_penalty":self.repeat_penalty,
+            "mirostat_mode":self.mirostat_mode,
+            "mirostat_tau":self.mirostat_tau,
+            "mirostat_eta":self.mirostat_eta,
+            "response_format": {
+                "type": "json_schema",
+                "json_schema": json_schema
+            }
+        }
+        if self.config.reverse_proxy: # If using a reverse proxy, we need to include the password in the request
+            extra_body_kwargs["proxy_password"] = self.api_key
+        for kwarg in self.config.banned_samplers:
+            if kwarg in extra_body_kwargs:
+                del extra_body_kwargs[kwarg]
+
+        character_prompt = self.conversation_manager.character_generator_schema.get_prompt(character_name, character_ref_id, character_base_id, character_in_game_race, character_in_game_gender, character_is_guard, character_is_ghost, location)
+
+        messages = [
+            {
+                "role": "system",
+                "content": "You are a character generator. You will be given a description of a character to generate. You will then generate a character that matches the description.\nHere are some related references to use when creating your character:",
+            },
+            {
+                "role": "system",
+                "content": get_schema_description(self.conversation_manager.character_generator_schema.model_json_schema())
+            },
+            {
+                "role": "user",
+                "content": character_prompt
+            }
+        ]
+
+        character = None
+        tries = 5
+        while character is None and tries > 0:
+            try:
+                completion = self.client.chat.completions.create(messages=messages,
+                    model=self.config.openai_model, 
+                    max_tokens=self.config.max_tokens,
+                    **sampler_kwargs,
+                    extra_body=extra_body_kwargs,
+                    stream=False,
+                    logit_bias=self.logit_bias,
+                )
+                completion = completion.choices[0].message.content.strip()
+                print(completion)
+                response = json.loads(completion)
+                character = self.conversation_manager.character_generator_schema(**response)
+                character.voice_model = self.conversation_manager.voice_model
+            except Exception as e:
+                logging.error(f"Error generating character",e)
+                tries -= 1
+
+        voice_model = in_game_voice_model
+        if self.config.override_voice_model_with_simple_predictions and voice_model is None:
+            # Predict the voice model - If these are available for a character, use them because they're probably more accurate. Though, they're not always available, and sometimes you might prefer to use the voice model from the character generator.
+            simple_predictions = [
+                "FemaleArgonian",
+                "FemaleDarkElf",
+                "FemaleKhajiit",
+                "FemaleNord",
+                "FemaleOrc",
+                "MaleArgonian",
+                "MaleDarkElf",
+                "MaleKhajiit",
+                "MaleNord",
+                "MaleOrc",
+            ]
+            if character_in_game_gender+character_in_game_race in simple_predictions:
+                voice_model = character_in_game_gender+character_in_game_race
+
+        if voice_model is not None:
+            character.voice_model = voice_model
+
+        return character.get_chracter_info(character_ref_id, character_base_id, voice_model, is_generic_npc)
+
     @utils.time_it
     def create(self, messages):
         # logging.info(f"cMessages: {messages}")
@@ -198,11 +304,11 @@ class LLM(base_LLM):
                         "type": "json_schema",
                         "json_schema": self.conversation_manager.thought_process.model_json_schema()
                     }
+                if self.config.reverse_proxy: # If using a reverse proxy, we need to include the password in the request
+                    extra_body_kwargs["proxy_password"] = self.api_key
                 for kwarg in self.config.banned_samplers:
                     if kwarg in extra_body_kwargs:
                         del extra_body_kwargs[kwarg]
-                if self.config.reverse_proxy: # If using a reverse proxy, we need to include the password in the request
-                    extra_body_kwargs["proxy_password"] = self.api_key
                 if self.completions_supported:
                     prompt = self.tokenizer.get_string_from_messages(messages) + self.tokenizer.start_message(self.config.assistant_name)
                     logging.info(f"Raw Prompt: {prompt}")
@@ -311,11 +417,11 @@ class LLM(base_LLM):
                         "type": "json_schema",
                         "json_schema": self.conversation_manager.thought_process.model_json_schema()
                     }
+                if self.config.reverse_proxy:
+                    extra_body_kwargs["proxy_password"] = self.api_key
                 for kwarg in self.config.banned_samplers:
                     if kwarg in extra_body_kwargs:
                         del extra_body_kwargs[kwarg]
-                if self.config.reverse_proxy:
-                    extra_body_kwargs["proxy_password"] = self.api_key
                 if self.completions_supported:
                     prompt = self.tokenizer.get_string_from_messages(messages)
                     prompt += self.tokenizer.start_message(self.config.assistant_name)

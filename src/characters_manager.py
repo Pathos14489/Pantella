@@ -69,7 +69,12 @@ class Characters:
         if conversation_type == "single_player_with_npc_prompt": # SingleNPCw/Player style context
             prompt_style = self.active_characters_list[0].prompt_style
         else:
-            prompt_style = random.choice([c.prompt_style for c in self.active_characters_list])
+            try:
+                prompt_style = random.choice([c.prompt_style for c in self.active_characters_list])
+            except Exception as e:
+                # logging.error(f"Error getting prompt style: {e}")
+                prompt_style = self.config._prompt_style["style"]
+        # logging.info("Prompt Style:", prompt_style)
         return prompt_style
     
     @property

@@ -436,6 +436,11 @@ class ConfigLoader:
             "openai_whisper": {
                 "whisper_url": "http://127.0.0.1:8080/inference",
             },
+            "CharacterDB": {
+                "allow_base_id_matching": True,
+                "override_voice_model_with_simple_predictions": True,
+                "auto_save_generated_characters": True,
+            },
             "LanguageModel": {
                 "inference_engine": "default",
                 "tokenizer_type": "default",
@@ -467,7 +472,8 @@ class ConfigLoader:
                 "custom_possible_player_aliases": [], # adds additional names the player goes by to the list of names to check for in the conversation start role
             },
             "InferenceOptions": {
-                "thought_type": "simple",
+                "thought_type": "default",
+                "character_type": "auto",
                 "cot_enabled": False,
                 "temperature": 0.8,
                 "top_p": 1,
@@ -765,6 +771,11 @@ class ConfigLoader:
             "openai_whisper": {
                 "whisper_url": self.whisper_url,
             },
+            "CharacterDB": {
+                "allow_base_id_matching": self.allow_base_id_matching,
+                "override_voice_model_with_simple_predictions": self.override_voice_model_with_simple_predictions,
+                "auto_save_generated_characters": self.auto_save_generated_characters,
+            },
             "LanguageModel": {
                 "inference_engine": self.inference_engine,
                 "tokenizer_type": self.tokenizer_type,
@@ -797,6 +808,7 @@ class ConfigLoader:
             },
             "InferenceOptions": {
                 "thought_type": self.thought_type,
+                "character_type": self.character_type,
                 "cot_enabled": self.cot_enabled,
                 "temperature": self.temperature,
                 "thought_type": self.thought_type,

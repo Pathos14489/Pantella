@@ -4,7 +4,7 @@ import ctypes
 import array
 import numpy as np
 import io
-from src.llms.base_llm import base_LLM, load_image, TestCoT
+from src.llms.base_llm import base_LLM, load_image, TestCoT, get_schema_description
 import src.tokenizers.base_tokenizer as tokenizer
 from src.logging import logging, time
 import traceback
@@ -89,11 +89,12 @@ class LLM(base_LLM): # Uses llama-cpp-python as the LLM inference engine
                     stream=False,
                     grammar=grammar,
                 )
-                completion = completion["choices"][0]["text"]
+                completion = completion["choices"][0]["text"].strip()
                 try:
                     response = json.loads(completion)
                     print(response)
                     self.cot_supported = True
+                    self.character_generation_supported = True
                     logging.success(f"llama-cpp-python supports CoT!")
                 except:
                     self.cot_supported = False
@@ -101,6 +102,80 @@ class LLM(base_LLM): # Uses llama-cpp-python as the LLM inference engine
                     # input("Press Enter to exit.")
             
 
+    def generate_character(self, character_name, character_ref_id, character_base_id, character_in_game_race, character_in_game_gender, character_is_guard=False, character_is_ghost=False, in_game_voice_model=None, is_generic_npc=False, location=None):
+        """Generate a character based on the prompt provided"""
+        if not self.character_generation_supported:
+            logging.error(f"Character generation is not supported by llama-cpp-python. Please check that your model supports it and that it is enabled in config.json.")
+            return None
+        character_prompt = self.conversation_manager.character_generator_schema.get_prompt(character_name, character_ref_id, character_base_id, character_in_game_race, character_in_game_gender, character_is_guard, character_is_ghost, location)
+
+        messages = [
+            {
+                "role": "system",
+                "content": "You are a character generator. You will be given a description of a character to generate. You will then generate a character that matches the description.\nHere are some related references to use when creating your character:",
+            },
+            {
+                "role": "system",
+                "content": get_schema_description(self.conversation_manager.character_generator_schema.model_json_schema())
+            },
+            {
+                "role": "user",
+                "content": character_prompt
+            }
+        ]
+        prompt = self.tokenizer.get_string_from_messages(messages)
+        prompt += self.tokenizer.start_message(self.config.assistant_name)
+        logging.info(f"Raw Prompt: {prompt}")
+        json_schema = self.conversation_manager.character_generator_schema.model_json_schema()
+        grammar = llama_cpp.LlamaGrammar.from_json_schema(json.dumps(json_schema))
+        character = None
+        tries = 5
+        while character is None and tries > 0:
+            try:
+                completion = self.llm.create_completion(prompt,
+                    max_tokens=self.max_tokens,
+                    top_k=self.top_k,
+                    top_p=self.top_p,
+                    min_p=self.min_p,
+                    temperature=self.temperature,
+                    repeat_penalty=self.repeat_penalty, 
+                    stop=self.stop,
+                    frequency_penalty=self.frequency_penalty,
+                    presence_penalty=self.presence_penalty,
+                    logit_bias=self.logit_bias,
+                    stream=False,
+                    grammar=grammar,
+                )
+                completion = completion["choices"][0]["text"]
+                response = json.loads(completion)
+                character = self.conversation_manager.character_generator_schema(**response)
+            except Exception as e:
+                logging.error(f"Error generating character:", e)
+                tries -= 1
+        
+        voice_model = in_game_voice_model
+        if self.config.override_voice_model_with_simple_predictions and voice_model is None:
+            # Predict the voice model - If these are available for a character, use them because they're probably more accurate. Though, they're not always available, and sometimes you might prefer to use the voice model from the character generator.
+            simple_predictions = [
+                "FemaleArgonian",
+                "FemaleDarkElf",
+                "FemaleKhajiit",
+                "FemaleNord",
+                "FemaleOrc",
+                "MaleArgonian",
+                "MaleDarkElf",
+                "MaleKhajiit",
+                "MaleNord",
+                "MaleOrc",
+            ]
+            if character_in_game_gender+character_in_game_race in simple_predictions:
+                voice_model = character_in_game_gender+character_in_game_race
+
+        if voice_model is not None:
+            character.voice_model = voice_model
+
+        return character.get_chracter_info(character_ref_id, character_base_id, voice_model, is_generic_npc)
+    
     def get_image_embed_from_bytes(self, image_bytes):
         data_array = array.array("B", image_bytes)
         c_ubyte_ptr = (
