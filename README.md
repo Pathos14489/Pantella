@@ -22,6 +22,8 @@ Pantella is a fork of the popular Skyrim/Fallout mod Mantella, which allows you 
 	- [Modular Design](#modular-design)
 	- [New LLM Backends](#new-llm-backends)
 	- [New TTSes](#new-ttses)
+	- [Single Prompt Chain-of-Thought Support](#single-prompt-chain-of-thought-support)
+	- [Automatic Character Generation](#automatic-character-generation)
 - [Things to Consider Before Installing...](#things-to-consider-before-installing)
 	- [Hardware Requirements](#hardware-requirements)
 	- [Storage Requirements](#storage-requirements)
