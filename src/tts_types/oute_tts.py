@@ -6,15 +6,10 @@ try:
     import outetts
     logging.info("Imported outetts")
 except Exception as e:
-    logging.error(f"Failed to import torch and torchaudio: {e}")
-    raise e
+    logging.error(f"Failed to import outetts: {e}")
 import random
 import os
 import json
-import tempfile
-
-import soundfile as sf
-import torchaudio
 
 logging.info("Imported required libraries in outetts.py")
 

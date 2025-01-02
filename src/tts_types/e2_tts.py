@@ -13,8 +13,7 @@ try:
     )
     logging.info("Imported e2_tts")
 except Exception as e:
-    logging.error(f"Failed to import torch and torchaudio: {e}")
-    raise e
+    logging.error(f"Failed to import e2_tts: {e}")
 import random
 import os
 import json
