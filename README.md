@@ -93,7 +93,7 @@ In summary <b>xTTS 2</b> and <b>StyleTTS2</b> are the best TTSes for human voice
 
 ### Single Prompt Chain-of-Thought Support
 
-Pantella supports a special type of response output that does Chain-of-Thought(CoT) in a single prompt. Locally using GBNF grammars, and remotely using response formats on OpenRouter. Only some remote model are supported by this feature, and it's recommended to use the local models for this feature. This feature is still in development and may not work as expected. It will also add an inconsistent delay before the character speaks, as it has to go through the thought process before speaking.
+Pantella supports a special type of response output that does Chain-of-Thought(CoT) in a single prompt. Locally using GBNF grammars, and remotely using response formats on OpenRouter. Only some remote model are supported by this feature, and it's recommended to use the local models for this feature. This feature is still in development and may not work as expected. It will also add an inconsistent delay before the character speaks, as it has to go through the thought process before speaking. It's also customizable in the settings, allowing you to architect how NPCs think before they respond to you, and can also be disabled if you don't like it.
 
 ### Automatic Character Generation
 
