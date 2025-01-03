@@ -97,24 +97,33 @@ class LLM(base_LLM):
             logging.info(f"Running Pantella with '{self.config.openai_model}'. The language model chosen can be changed via config.json")
 
         if not self.vision_enabled:
-            try:
-                if self.config.reverse_proxy:
-                    self.client.completions.create(prompt="This is a test of the", model=self.config.openai_model, max_tokens=10, extra_body={"proxy_password":api_key})
-                else:
-                    self.client.completions.create(prompt="This is a test of the", model=self.config.openai_model, max_tokens=10)
-                self.completions_supported = True
-                logging.success(f"OpenAI API at '{self.config.alternative_openai_api_base}' supports completions!")
-            except Exception as e:
+            if self.openai_completions_type == "text":
+                try:
+                    if self.config.reverse_proxy:
+                        self.client.completions.create(prompt="This is a test of the", model=self.config.openai_model, max_tokens=10, extra_body={"proxy_password":api_key})
+                    else:
+                        self.client.completions.create(prompt="This is a test of the", model=self.config.openai_model, max_tokens=10)
+                    self.completions_supported = True
+                    logging.success(f"OpenAI API at '{self.config.alternative_openai_api_base}' supports completions!")
+                except Exception as e:
+                    self.completions_supported = False
+                    logging.error(f"Current API does not support text completions! Are you using OpenAI's API? They will not work with all features of Pantella, please use OpenRouter or another API that supports raw non-chat completions.")
+                    logging.error(e)
+                    # input("Press Enter to exit.")
+            else:
                 self.completions_supported = False
-                logging.error(f"Current API does not support text completions! Are you using OpenAI's API? They will not work with all features of Pantella, please use OpenRouter or another API that supports raw non-chat completions.")
-                logging.error(e)
-                # input("Press Enter to exit.")
             try:
                 if self.cot_enabled:
-                    if self.config.reverse_proxy:
-                        response = self.client.completions.create(prompt="", model=self.config.openai_model, max_tokens=50, extra_body={"proxy_password":api_key, "response_format": {"type": "json_schema", "json_schema": TestCoT.model_json_schema()}})
+                    if self.openai_completions_type == "text" and self.completions_supported:
+                        if self.config.reverse_proxy:
+                            response = self.client.completions.create(prompt="", model=self.config.openai_model, max_tokens=50, extra_body={"proxy_password":api_key, "response_format": {"type": "json_schema", "json_schema": TestCoT.model_json_schema()}})
+                        else:
+                            response = self.client.completions.create(prompt="", model=self.config.openai_model, max_tokens=50, extra_body={"response_format": {"type": "json_schema", "json_schema": TestCoT.model_json_schema()}})
                     else:
-                        response = self.client.completions.create(prompt="", model=self.config.openai_model, max_tokens=50, extra_body={"response_format": {"type": "json_schema", "json_schema": TestCoT.model_json_schema()}})
+                        if self.config.reverse_proxy:
+                            response = self.client.chat.completions.create(messages=[{"role": "system", "content": "This is a test of the CoT system."}], model=self.config.openai_model, max_tokens=50, extra_body={"proxy_password":api_key, "response_format": {"type": "json_schema", "json_schema": TestCoT.model_json_schema()}})
+                        else:
+                            response = self.client.chat.completions.create(messages=[{"role": "system", "content": "This is a test of the CoT system."}], model=self.config.openai_model, max_tokens=50, extra_body={"response_format": {"type": "json_schema", "json_schema": TestCoT.model_json_schema()}})
                     print(response)
                     try:
                         try:
@@ -222,19 +231,35 @@ class LLM(base_LLM):
             }
         ]
 
+        generation_model = self.config.openai_model
+        if self.config.openai_character_generator_model is not None and self.config.openai_character_generator_model.strip() != "":
+            generation_model = self.config.openai_character_generator_model
+
         character = None
         tries = 5
         while character is None and tries > 0:
             try:
-                completion = self.client.chat.completions.create(messages=messages,
-                    model=self.config.openai_model, 
-                    max_tokens=self.config.max_tokens,
-                    **sampler_kwargs,
-                    extra_body=extra_body_kwargs,
-                    stream=False,
-                    logit_bias=self.logit_bias,
-                )
-                completion = completion.choices[0].message.content.strip()
+                if self.openai_completions_type == "text" and self.completions_supported:
+                    prompt = self.tokenizer.get_string_from_messages(messages) + self.tokenizer.start_message(self.config.assistant_name)
+                    completion = self.client.completions.create(prompt,
+                        model=generation_model, 
+                        max_tokens=self.config.max_tokens,
+                        **sampler_kwargs,
+                        extra_body=extra_body_kwargs,
+                        stream=False,
+                        logit_bias=self.logit_bias,
+                    )
+                    completion = completion.choices[0].text
+                else:
+                    completion = self.client.chat.completions.create(messages=messages,
+                        model=generation_model, 
+                        max_tokens=self.config.max_tokens,
+                        **sampler_kwargs,
+                        extra_body=extra_body_kwargs,
+                        stream=False,
+                        logit_bias=self.logit_bias,
+                    )
+                    completion = completion.choices[0].message.content.strip()
                 print(completion)
                 response = json.loads(completion)
                 character = self.conversation_manager.character_generator_schema(**response)
@@ -309,7 +334,7 @@ class LLM(base_LLM):
                 for kwarg in self.config.banned_samplers:
                     if kwarg in extra_body_kwargs:
                         del extra_body_kwargs[kwarg]
-                if self.completions_supported:
+                if self.openai_completions_type == "text" and self.completions_supported:
                     prompt = self.tokenizer.get_string_from_messages(messages) + self.tokenizer.start_message(self.config.assistant_name)
                     logging.info(f"Raw Prompt: {prompt}")
                     completion = self.client.completions.create(prompt=prompt,
@@ -422,7 +447,7 @@ class LLM(base_LLM):
                 for kwarg in self.config.banned_samplers:
                     if kwarg in extra_body_kwargs:
                         del extra_body_kwargs[kwarg]
-                if self.completions_supported:
+                if self.openai_completions_type == "text" and self.completions_supported:
                     prompt = self.tokenizer.get_string_from_messages(messages)
                     prompt += self.tokenizer.start_message(self.config.assistant_name)
                     symbol_insert = ""
@@ -450,7 +475,8 @@ class LLM(base_LLM):
                         logit_bias=self.logit_bias,
                     )
                 else:
-                    logging.warning("Using chat completions because raw completions are not supported by the current API/settings.")
+                    if self.openai_completions_type == "text":
+                        logging.warning("Using chat completions because raw completions are not supported by the current API/settings.")
                     if self.config.log_all_api_requests:
                         log_id = None
                         while log_id is None or os.path.exists(self.config.api_log_dir+"/"+log_id+".log"):

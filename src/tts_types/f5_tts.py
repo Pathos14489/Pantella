@@ -26,9 +26,9 @@ from cached_path import cached_path
 # load models
 vocoder = load_vocoder()
 
-def load_f5tts(ckpt_path=str(cached_path("hf://SWivid/F5-TTS/F5TTS_Base/model_1200000.safetensors"))):
+def load_f5tts(device, ckpt_path=str(cached_path("hf://SWivid/F5-TTS/F5TTS_Base/model_1200000.safetensors"))):
     F5TTS_model_cfg = dict(dim=1024, depth=22, heads=16, ff_mult=2, text_dim=512, conv_layers=4)
-    return load_model(DiT, F5TTS_model_cfg, ckpt_path)
+    return load_model(DiT, F5TTS_model_cfg, ckpt_path, device=device)
 
 # def load_custom(ckpt_path: str, vocab_path="", model_cfg=None):
 #     ckpt_path, vocab_path = ckpt_path.strip(), vocab_path.strip()
@@ -48,7 +48,7 @@ class Synthesizer(base_tts.base_Synthesizer):
         super().__init__(conversation_manager)
         self.tts_slug = tts_slug
         logging.info(f"Initializing {self.tts_slug}...")
-        self.model = load_f5tts()
+        self.model = load_f5tts(self.config.f5_tts_device)
 
         logging.info(f'{self.tts_slug} speaker wavs folders: {self.speaker_wavs_folders}')
         logging.config(f'{self.tts_slug} - Available voices: {self.voices()}')

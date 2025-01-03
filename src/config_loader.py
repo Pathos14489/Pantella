@@ -271,8 +271,8 @@ class ConfigLoader:
             logging.error(f"Prompt style not set in config file. Using default prompt style.")
             self._prompt_style = self.prompt_styles["normal_en"]
         # self.get_tokenizer_settings_from_prompt_style()
-        logging.info("Getting tokenizer settings from default prompt style")
-        logging.config("Default Prompt Style:", json.dumps(self._prompt_style, indent=4))
+        logging.info("Getting tokenizer settings from prompt style")
+        logging.config("Prompt Style:", json.dumps(self._prompt_style, indent=4))
         logging.info("Prompt formatting settings loaded")
     
     def set_behavior_style(self, behavior_style):
@@ -536,6 +536,8 @@ class ConfigLoader:
             },
             "openai_api": {
                 "openai_model": "undi95/toppy-m-7b:free",
+                "openai_character_generator_model": "", # Blank for use the same model as the main model. Otherwise, specify a different model here.
+                "openai_completions_type": "text", # text or chat
                 "alternative_openai_api_base": "https://openrouter.ai/api/v1/",
                 "openai_api_key_path": ".\\GPT_SECRET_KEY.txt",
                 "banned_samplers": [], # Examples: "min_p", "typical_p", "top_p", "top_k", "temperature", "frequency_penalty", "presence_penalty", "repeat_penalty", "tfs_z", "mirostat_mode", "mirostat_eta", "mirostat_tau", "max_tokens"
@@ -650,6 +652,7 @@ class ConfigLoader:
             "F5_TTS": {
                 "f5_tts_banned_voice_models": [],
                 "f5_tts_volume": 1.5,
+                "f5_tts_device": "cuda",
             },
             "E2_TTS": {
                 "e2_tts_banned_voice_models": [],
@@ -856,6 +859,8 @@ class ConfigLoader:
             },
             "openai_api": {
                 "openai_model": self.openai_model,
+                "openai_character_generator_model": self.openai_character_generator_model,
+                "openai_completions_type": self.openai_completions_type,
                 "alternative_openai_api_base": self.alternative_openai_api_base,
                 "openai_api_key_path": self.openai_api_key_path,
                 "banned_samplers": self.banned_samplers,
@@ -952,7 +957,8 @@ class ConfigLoader:
             },
             "F5_TTS": {
                 "f5_tts_banned_voice_models": self.f5_tts_banned_voice_models,
-                "f5_tts_volume": self.f5_tts_volume
+                "f5_tts_volume": self.f5_tts_volume,
+                "f5_tts_device": self.f5_tts_device,
             },
             "E2_TTS": {
                 "e2_tts_banned_voice_models": self.e2_tts_banned_voice_models,
