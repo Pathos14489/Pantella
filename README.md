@@ -27,6 +27,15 @@ Pantella is a fork of the popular Skyrim/Fallout mod Mantella, which allows you 
 - [Things to Consider Before Installing...](#things-to-consider-before-installing)
 	- [Hardware Requirements](#hardware-requirements)
 	- [Storage Requirements](#storage-requirements)
+	- [Software Requirements](#software-requirements)
+		- [Install Git](#install-git)
+			- [Install Git for Windows](#install-git-for-windows)
+			- [Install Git for Linux](#install-git-for-linux)
+		- [Install Microsoft C++ Build Tools](#install-microsoft-c-build-tools)
+			- [Install Microsoft C++ Build Tools for Windows](#install-microsoft-c-build-tools-for-windows)
+			- [Install Microsoft C++ Build Tools for Linux](#install-microsoft-c-build-tools-for-linux)
+		- [CUDA (Optional) - Requires NVIDIA GPU](#cuda-optional---requires-nvidia-gpu)
+			- [Install CUDA](#install-cuda)
 	- [Compatibility](#compatibility)
   	- [Skyrim Install Location](#skyrim-install-location)
 	- [Do you want to use xVASynth? (Optional)](#do-you-want-to-use-xvasynth-optional)
@@ -86,7 +95,7 @@ Pantella comes with added support for three new TTSes compared to Mantella. Addi
 - <b>StyleTTS2</b> is very similar to xTTS 2, but it's a bit more robotic sounding and has pronounciation issues sometimes. But higher pitch voices, like some of the female voices in Skyrim, sound a bit better with StyleTTS2 than xTTS 2. It's also a bit faster than xTTS 2, and doesn't require as much VRAM, hovering closer to 3GB of usage. It can be sampled on a short sample between 15-25 seconds with decent quality.
 - <b>xTTS 2</b> is a really good TTS for human sounding voices, but it struggles for dragons, robots, etc. It also is basically unusable on CPU and requires an additional 4GB of VRAM usage on top of Skyrim to run it. And it's slower than xVASynth and PiperTTS. But for the voices it's better for, it's a <b>lot</b> better than xVASynth or PiperTTS. It can be sampled on a short sample between 5-10 seconds with decent quality. It also has an English accent by default, but you can actually change the accent to any of the other supported languages in the settings and override specific characters/races to use specific accents with the prompt_style/character JSON files.
 - <b>F5-TTS</b>(<b style="color:red">new</b>) is a new diffusion based TTS that was released alongside E2 TTS. It only requires like 1-1.5GB of VRAM, and sounds as good or better than xTTS for a lot of voices. It's about the same speed, maybe a little slower, but I could see a few characters getting this one over xTTS or StyleTTS2. It can be sampled on a short sample between 10-15 seconds with decent quality. F5 sounds less robotic than E2.
-- <b>E2 TTS</b>(<b style="color:red">new</b>) is a new diffusion based TTS that was released alongside F5 TTS. It only requires like 1-1.5GB of VRAM, and sounds as good or better than xTTS for a lot of voices. It's about the same speed, maybe a little slower, but I could see a few characters getting this one over xTTS or StyleTTS2. It can be sampled on a short sample between 10-15 seconds with decent quality. E2 sounds more robotic than F5.
+- <b>E2 TTS</b>(<b style="color:red">new</b>) is a new Unet based TTS that was released alongside F5 TTS. It only requires like 1-1.5GB of VRAM, and sounds as good or better than xTTS for a lot of voices. It's about the same speed, maybe a little slower, but I could see a few characters getting this one over xTTS or StyleTTS2. It can be sampled on a short sample between 10-15 seconds with decent quality. E2 sounds more robotic than F5.
 - <b>OuteTTS</b>(<b style="color:red">new</b>) "is an experimental text-to-speech model that uses a pure language modeling approach to generate speech". It requires around 5-6GB of VRAM, and--providing it actually generates a voiceline--sounds worse than StyleTTS and xTTS overall. Would likely need a finetune to be usable. It's also much little slower. I view this more as a proof of concept than a usable TTS at this time.
 #### <b>TTSes tl;dr</b>
 In summary <b>xTTS 2</b> and <b>StyleTTS2</b> are the best TTSes for human voices with english accents(xTTS can do other accents but requires extra tweaking per character/voice) and trade blows in my opinion, especially if there's very little clean sampling audio for a voice. But <b>xVASynth</b> is the best TTS for non-human voices and the best all rounder. It sounds very much like the correct characters, and the roboticness gets lost a good deal in the background noise of the game when actually playing and talking in game. <b>PiperTTS</b> is the easiest to run, the most compatible and the fastest, but the lowest quality. It sounds pretty similar to the original speaker, but the audio is noisy and more robotic than xVASynth. <b>ParlerTTS</b> can create brand new voices from a prompt, but also is the most limited in terms of what it can do, and when offloaded to GPU it uses a LOT of VRAM, so it's not recommended for most users. And <b>ChatTTS</b> is the most unstable, but has the most potential for unique features at this time. The recent TTSes, <b>F5-TTS</b> and <b>E2 TTS</b> are both very good, and I'd recommend them over xTTS 2 and StyleTTS2 for most users if you don't have an excess of VRAM for local hosting. <b>OuteTTS</b> is a proof of concept and not recommended for use at this time.
@@ -112,14 +121,37 @@ Pantella requires around 4-6 GB of storage space and includes the voice models/l
 
 ### Software Requirements
 
+For the most basic setup, you won't need most of this software. However to get the most out of Pantella, you will need to install the following software:
+
+#### Install Git
 Pantella optionally requires git to be installed to perform all updates correctly. If you don't intend to update your installation, you can skip this step. This is required even if using the launcher. If you try to run the `./install_pantella_requirements.bat` script without git installed, it will fail almost immediately.
 
-#### Install Git for Windows
+##### Install Git for Windows
 1. Download the latest version of Git for Windows from [here](https://git-scm.com/download/win).
 2. Run the installer and follow the instructions. The default settings should be fine.
 
-#### Install Git for Linux
+##### Install Git for Linux
 Hah! You're probably already done with this part! Git is installed by default on most Linux distributions. If you don't have it, you can install it with `sudo apt install git` or `sudo yum install git` or `sudo pacman -S git` depending on your distribution.
+
+#### Install Microsoft C++ Build Tools
+Pantella requires the Microsoft C++ Build Tools to be installed to build some of the required Python packages to install/reinstall them. If you don't have this installed, you can install it by following the instructions below.
+
+##### Install Microsoft C++ Build Tools for Windows
+1. Download the latest version of the Microsoft C++ Build Tools from [here](https://visualstudio.microsoft.com/visual-cpp-build-tools/).
+2. Run the installer and follow the instructions. The default settings should be fine.
+
+##### Install Microsoft C++ Build Tools for Linux
+You're probably already done with this part too. Microsoft C++ Build Tools are not required on Linux.
+
+#### CUDA (Optional) - Requires NVIDIA GPU
+
+If you want to use F5-TTS, E2 TTS, StyleTTS2, OuteTTS, ParlerTTS, ChatTTS, or xTTS 2 with GPU acceleration, you will need to have CUDA installed on your system. If you don't have CUDA installed, you can skip this step and use PiperTTS or xVASynth instead.
+
+##### Install CUDA
+1. Download CUDA 12.4 from [here](https://developer.nvidia.com/cuda-downloads).
+2. Run the installer and follow the instructions. The default settings should be fine.
+
+If you do this step, you should also run the `./windows_torch_cuda_12-4.bat` script to install the correct version of PyTorch for your system to the launcher's embedded Python environment.
 
 ### Compatibility
 - Some users have reported that Skyrim crashes when Mantella is used with Fuz Ro D'oh. A possible fix is to disable and re-enable Fuz Ro D'oh. I do not know if this is the case with Pantella or not, do let me know if you find out.
