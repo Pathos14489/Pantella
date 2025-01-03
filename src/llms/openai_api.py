@@ -96,6 +96,13 @@ class LLM(base_LLM):
         else:
             logging.info(f"Running Pantella with '{self.config.openai_model}'. The language model chosen can be changed via config.json")
 
+
+        generation_model = self.config.openai_model
+        if self.config.openai_character_generator_model is not None and self.config.openai_character_generator_model.strip() != "":
+            generation_model = self.config.openai_character_generator_model
+
+        dedicated_character_generation_model_selected = generation_model != self.config.openai_model # If the character generator model is different from the main model, we need to check if it's supported for completions
+
         if not self.vision_enabled:
             if self.openai_completions_type == "text":
                 try:
@@ -152,7 +159,8 @@ class LLM(base_LLM):
                                 pass
                         response = json.loads(completion.strip())
                         self.cot_supported = True
-                        self.character_generation_supported = True
+                        if not dedicated_character_generation_model_selected:
+                            self.character_generation_supported = True
                         logging.success(f"OpenAI API at '{self.config.alternative_openai_api_base}' supports CoT!")
                     except:
                         self.cot_supported = False
@@ -170,7 +178,81 @@ class LLM(base_LLM):
             logging.success("Vision is enabled -- Make sure the LLM you choose supports vision as well!")
             logging.warning("NOTICE: Completions API is not currently supported with vision enabled!")
             self.completions_supported = False
-    
+        if dedicated_character_generation_model_selected:
+            logging.info(f"Testing if the dedicated character generation model '{generation_model}' supports completions...")
+            try:
+                if self.openai_completions_type == "text" and self.completions_supported:
+                    if self.config.reverse_proxy:
+                        self.client.completions.create(prompt="This is a test of the", model=generation_model, max_tokens=10, extra_body={"proxy_password":api_key})
+                    else:
+                        self.client.completions.create(prompt="This is a test of the", model=generation_model, max_tokens=10)
+                    self.completions_supported = True
+                    logging.success(f"OpenAI API at '{self.config.alternative_openai_api_base}' supports completions for the dedicated character generation model '{generation_model}'!")
+                else:
+                    self.completions_supported = False
+                    logging.error(f"Current API does not support text completions for the dedicated character generation model '{generation_model}'! Are you using OpenAI's API? They will not work with all features of Pantella, please use OpenRouter or another API that supports raw non-chat completions.")
+                    # input("Press Enter to exit.")
+            except Exception as e:
+                self.completions_supported = False
+                logging.error(f"Current API does not support text completions for the dedicated character generation model '{generation_model}'! Are you using OpenAI's API? They will not work with all features of Pantella, please use OpenRouter or another API that supports raw non-chat completions.")
+                logging.error(e)
+                # input("Press Enter to exit.")
+            try:
+                if self.cot_enabled:
+                    if self.openai_completions_type == "text" and self.completions_supported:
+                        if self.config.reverse_proxy:
+                            response = self.client.completions.create(prompt="", model=generation_model, max_tokens=50, extra_body={"proxy_password":api_key, "response_format": {"type": "json_schema", "json_schema": TestCoT.model_json_schema()}})
+                        else:
+                            response = self.client.completions.create(prompt="", model=generation_model, max_tokens=50, extra_body={"response_format": {"type": "json_schema", "json_schema": TestCoT.model_json_schema()}})
+                    else:
+                        if self.config.reverse_proxy:
+                            response = self.client.chat.completions.create(messages=[{"role": "system", "content": "This is a test of the CoT system."}], model=generation_model, max_tokens=50, extra_body={"proxy_password":api_key, "response_format": {"type": "json_schema", "json_schema": TestCoT.model_json_schema()}})
+                        else:
+                            response = self.client.chat.completions.create(messages=[{"role": "system", "content": "This is a test of the CoT system."}], model=generation_model, max_tokens=50, extra_body={"response_format": {"type": "json_schema", "json_schema": TestCoT.model_json_schema()}})
+                    print(response)
+                    try:
+                        try:
+                            completion = response.choices[0].text
+                        except:
+                            pass
+                        if completion is None or type(completion) != str:
+                            try:
+                                completion = response.choices[0]["text"]
+                            except:
+                                pass
+                        if completion is None or type(completion) != str:
+                            try:
+                                completion = response.choices[0].message.content
+                            except:
+                                pass
+                        if completion is None or type(completion) != str:
+                            try:
+                                completion = response.choices[0].message.content
+                            except:
+                                pass
+                        if completion is None or type(completion) != str:
+                            try:
+                                completion = response.choices[0].delta.content
+                            except:
+                                pass
+                        response = json.loads(completion.strip())
+                        self.cot_supported = True
+                        if dedicated_character_generation_model_selected:
+                            self.character_generation_supported = True
+                        logging.success(f"OpenAI API at '{self.config.alternative_openai_api_base}' supports CoT
+                        for the dedicated character generation model '{generation_model}'!")
+                    except:
+                        self.cot_supported = False
+                        logging.error(f"Current API does not support CoT for the dedicated character generation model '{generation_model}'! Are you using OpenAI's API? They will not work with all features of Pantella, please use OpenRouter or another API that supports CoT.")
+                        # input("Press Enter to exit.")
+                else:
+                    self.cot_supported = False
+                    logging.info("CoT is not enabled.")
+            except Exception as e:
+                self.cot_supported = False
+                logging.error(f"Current API does not support CoT for the dedicated character generation model '{generation_model}'! Are you using OpenAI's API? They will not work with all features of Pantella, please use OpenRouter or another API that supports CoT.")
+                logging.error(e)
+                # input("Press Enter to exit.")
 
     def generate_character(self, character_name, character_ref_id, character_base_id, character_in_game_race, character_in_game_gender, character_is_guard, character_is_ghost, in_game_voice_model=None, is_generic_npc=False, location=None):
         """Generate a character based on the prompt provided"""
