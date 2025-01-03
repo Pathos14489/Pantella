@@ -140,7 +140,6 @@ class Synthesizer(base_tts.base_Synthesizer):
         cross_fade_duration=0.15,
         nfe_step=32,
         speed=1,
-        show_info=True,
         cfg_strength=2,
         sway_sampling_coef=-1,
     ):
@@ -150,7 +149,7 @@ class Synthesizer(base_tts.base_Synthesizer):
         if not ref_text.strip():
             raise ValueError("Please enter reference text.")
 
-        ref_audio, ref_text = preprocess_ref_audio_text(ref_audio_orig, ref_text, show_info=show_info)
+        ref_audio, ref_text = preprocess_ref_audio_text(ref_audio_orig, ref_text)
 
         final_wave, final_sample_rate, combined_spectrogram = infer_process(
             ref_audio,
@@ -161,7 +160,6 @@ class Synthesizer(base_tts.base_Synthesizer):
             cross_fade_duration=cross_fade_duration,
             nfe_step=nfe_step,
             speed=speed,
-            show_info=show_info,
             cfg_strength=cfg_strength,
             sway_sampling_coef=sway_sampling_coef
         )
@@ -196,7 +194,6 @@ class Synthesizer(base_tts.base_Synthesizer):
             cross_fade_duration=0.15,
             nfe_step=32,
             speed=1,
-            show_info=True,
             cfg_strength=2,
             sway_sampling_coef=-1,
         )

@@ -463,6 +463,7 @@ class CharacterDB():
                         "base_id": character_match['base_id'] == character_base_id
                     }
                     logging.info(f"Found possible character '{character_name}' association in character database using name lookup.")
+        
         if self.config.allow_id_matching:
             # Ref/Base ID Lookup
             logging.info(f"Performing ref_id and base_id lookup for character '{character_ref_id}({character_base_id})'")
