@@ -450,32 +450,35 @@ class CharacterDB():
                 character_match = self.unique_ref_index[f"{character_name}({character_ref_id})[{character_base_id}]"]
                 matching_parts = {"name": True, "ref_id": True, "base_id": True}
                 logging.info(f"Found possible character '{character_name}' association in character database using unique reference lookup.")
-        # Name Lookup
-        logging.info(f"Performing name lookup for character '{character_name}'")
-        if character_name is not None and character_match is None:
-            if character_name in self.named_index:
-                character_match = self.named_index[character_name]
-                matching_parts = {
-                    "name": True,
-                    "ref_id": character_match['ref_id'] == character_ref_id,
-                    "base_id": character_match['base_id'] == character_base_id
-                }
-                logging.info(f"Found possible character '{character_name}' association in character database using name lookup.")
-        # Ref/Base ID Lookup
-        logging.info(f"Performing ref_id and base_id lookup for character '{character_ref_id}({character_base_id})'")
-        if character_ref_id is not None and character_base_id is not None and character_match is None:
-            for db_character in self._characters:
-                if ((str(db_character['ref_id']).endswith(character_ref_id) and str(db_character['base_id']).endswith(character_base_id))) or ((str(db_character['ref_id']).upper().endswith(character_ref_id.upper()) and str(db_character['base_id']).upper().endswith(character_base_id.upper()))):
-                    character_match = db_character
-                    matching_parts = {
-                        "name": character_match['name'] == character_name,
-                        "ref_id": True,
-                        "base_id": True
-                    }
-                    logging.info(f"Found possible character '{character_name}' association in character database using ref_id and base_id lookup.")
-                    break
         
-        if self.config.allow_base_id_matching:
+        if self.config.allow_name_matching:
+            # Name Lookup
+            logging.info(f"Performing name lookup for character '{character_name}'")
+            if character_name is not None and character_match is None:
+                if character_name in self.named_index:
+                    character_match = self.named_index[character_name]
+                    matching_parts = {
+                        "name": True,
+                        "ref_id": character_match['ref_id'] == character_ref_id,
+                        "base_id": character_match['base_id'] == character_base_id
+                    }
+                    logging.info(f"Found possible character '{character_name}' association in character database using name lookup.")
+        if self.config.allow_id_matching:
+            # Ref/Base ID Lookup
+            logging.info(f"Performing ref_id and base_id lookup for character '{character_ref_id}({character_base_id})'")
+            if character_ref_id is not None and character_base_id is not None and character_match is None:
+                for db_character in self._characters:
+                    if ((str(db_character['ref_id']).endswith(character_ref_id) and str(db_character['base_id']).endswith(character_base_id))) or ((str(db_character['ref_id']).upper().endswith(character_ref_id.upper()) and str(db_character['base_id']).upper().endswith(character_base_id.upper()))):
+                        character_match = db_character
+                        matching_parts = {
+                            "name": character_match['name'] == character_name,
+                            "ref_id": True,
+                            "base_id": True
+                        }
+                        logging.info(f"Found possible character '{character_name}' association in character database using ref_id and base_id lookup.")
+                        break
+        
+        if self.config.allow_exact_base_id_matching:
             # Exact Base ID Lookup
             logging.info(f"Performing exact base_id lookup for character '{character_base_id}'")
             if character_base_id is not None and character_match is None:
@@ -488,6 +491,8 @@ class CharacterDB():
                     }
                     is_generic_npc = character_match['is_generic_npc'] if "is_generic_npc" in character_match else True
                     logging.info(f"Found possible character '{character_name}' association in character database using base_id lookup.")
+        
+        if self.config.allow_greedy_base_id_matching:
             # Endswith Base ID Lookup
             logging.info(f"Performing endswith base_id lookup for character '{character_base_id}'")
             if character_base_id is not None and character_match is None:

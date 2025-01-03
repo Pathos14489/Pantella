@@ -437,7 +437,10 @@ class ConfigLoader:
                 "whisper_url": "http://127.0.0.1:8080/inference",
             },
             "CharacterDB": {
-                "allow_base_id_matching": True,
+                "allow_name_matching": True,
+                "allow_id_matching": True,
+                "allow_exact_base_id_matching": True,
+                "allow_greedy_base_id_matching": True,
                 "override_voice_model_with_simple_predictions": True,
                 "auto_save_generated_characters": True,
             },
@@ -772,7 +775,10 @@ class ConfigLoader:
                 "whisper_url": self.whisper_url,
             },
             "CharacterDB": {
-                "allow_base_id_matching": self.allow_base_id_matching,
+                "allow_name_matching": self.allow_name_matching,
+                "allow_id_matching": self.allow_id_matching,
+                "allow_exact_base_id_matching": self.allow_exact_base_id_matching,
+                "allow_greedy_base_id_matching": self.allow_greedy_base_id_matching,
                 "override_voice_model_with_simple_predictions": self.override_voice_model_with_simple_predictions,
                 "auto_save_generated_characters": self.auto_save_generated_characters,
             },
