@@ -104,7 +104,7 @@ class LLM(base_LLM):
         dedicated_character_generation_model_selected = generation_model != self.config.openai_model # If the character generator model is different from the main model, we need to check if it's supported for completions
 
         if not self.vision_enabled:
-            if self.openai_completions_type == "text":
+            if self.config.openai_completions_type == "text":
                 try:
                     if self.config.reverse_proxy:
                         self.client.completions.create(prompt="This is a test of the", model=self.config.openai_model, max_tokens=10, extra_body={"proxy_password":api_key})
@@ -121,7 +121,7 @@ class LLM(base_LLM):
                 self.completions_supported = False
             try:
                 if self.cot_enabled:
-                    if self.openai_completions_type == "text" and self.completions_supported:
+                    if self.config.openai_completions_type == "text" and self.completions_supported:
                         if self.config.reverse_proxy:
                             response = self.client.completions.create(prompt="", model=self.config.openai_model, max_tokens=50, extra_body={"proxy_password":api_key, "response_format": {"type": "json_schema", "json_schema": TestCoT.model_json_schema()}})
                         else:
@@ -181,7 +181,7 @@ class LLM(base_LLM):
         if dedicated_character_generation_model_selected:
             logging.info(f"Testing if the dedicated character generation model '{generation_model}' supports completions...")
             try:
-                if self.openai_completions_type == "text" and self.completions_supported:
+                if self.config.openai_completions_type == "text" and self.completions_supported:
                     if self.config.reverse_proxy:
                         self.client.completions.create(prompt="This is a test of the", model=generation_model, max_tokens=10, extra_body={"proxy_password":api_key})
                     else:
@@ -199,7 +199,7 @@ class LLM(base_LLM):
                 # input("Press Enter to exit.")
             try:
                 if self.cot_enabled:
-                    if self.openai_completions_type == "text" and self.completions_supported:
+                    if self.config.openai_completions_type == "text" and self.completions_supported:
                         if self.config.reverse_proxy:
                             response = self.client.completions.create(prompt="", model=generation_model, max_tokens=50, extra_body={"proxy_password":api_key, "response_format": {"type": "json_schema", "json_schema": TestCoT.model_json_schema()}})
                         else:
@@ -239,8 +239,7 @@ class LLM(base_LLM):
                         self.cot_supported = True
                         if dedicated_character_generation_model_selected:
                             self.character_generation_supported = True
-                        logging.success(f"OpenAI API at '{self.config.alternative_openai_api_base}' supports CoT
-                        for the dedicated character generation model '{generation_model}'!")
+                        logging.success(f"OpenAI API at '{self.config.alternative_openai_api_base}' supports CoT for the dedicated character generation model '{generation_model}'!")
                     except:
                         self.cot_supported = False
                         logging.error(f"Current API does not support CoT for the dedicated character generation model '{generation_model}'! Are you using OpenAI's API? They will not work with all features of Pantella, please use OpenRouter or another API that supports CoT.")
@@ -321,7 +320,7 @@ class LLM(base_LLM):
         tries = 5
         while character is None and tries > 0:
             try:
-                if self.openai_completions_type == "text" and self.completions_supported:
+                if self.config.openai_completions_type == "text" and self.completions_supported:
                     prompt = self.tokenizer.get_string_from_messages(messages) + self.tokenizer.start_message(self.config.assistant_name)
                     completion = self.client.completions.create(prompt,
                         model=generation_model, 
@@ -416,7 +415,7 @@ class LLM(base_LLM):
                 for kwarg in self.config.banned_samplers:
                     if kwarg in extra_body_kwargs:
                         del extra_body_kwargs[kwarg]
-                if self.openai_completions_type == "text" and self.completions_supported:
+                if self.config.openai_completions_type == "text" and self.completions_supported:
                     prompt = self.tokenizer.get_string_from_messages(messages) + self.tokenizer.start_message(self.config.assistant_name)
                     logging.info(f"Raw Prompt: {prompt}")
                     completion = self.client.completions.create(prompt=prompt,
@@ -529,7 +528,7 @@ class LLM(base_LLM):
                 for kwarg in self.config.banned_samplers:
                     if kwarg in extra_body_kwargs:
                         del extra_body_kwargs[kwarg]
-                if self.openai_completions_type == "text" and self.completions_supported:
+                if self.config.openai_completions_type == "text" and self.completions_supported:
                     prompt = self.tokenizer.get_string_from_messages(messages)
                     prompt += self.tokenizer.start_message(self.config.assistant_name)
                     symbol_insert = ""
@@ -557,7 +556,7 @@ class LLM(base_LLM):
                         logit_bias=self.logit_bias,
                     )
                 else:
-                    if self.openai_completions_type == "text":
+                    if self.config.openai_completions_type == "text":
                         logging.warning("Using chat completions because raw completions are not supported by the current API/settings.")
                     if self.config.log_all_api_requests:
                         log_id = None
