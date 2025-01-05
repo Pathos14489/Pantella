@@ -15,6 +15,7 @@ try:
     )
     import LangSegment
     import librosa
+    from huggingface_hub import hf_hub_download
     from libraries.gpt_sovits.module.models import SynthesizerTrn
     from libraries.gpt_sovits.AR.models.t2s_lightning_module import Text2SemanticLightningModule
     from libraries.gpt_sovits.text import cleaned_text_to_sequence
@@ -249,9 +250,47 @@ class Synthesizer(base_tts.base_Synthesizer):
             self.bert_model = self.bert_model.half()
         self.bert_model = self.bert_model.to(self.config.gpt_sovits_device)
         
-        cnhubert_base_path = ".\\data\\models\\gpt_sovits\\chinese-hubert-base\\"
-        cnhubert_base_path = os.path.abspath(cnhubert_base_path)
-        self.ssl_model = CNHubert(cnhubert_base_path)
+        downloaded = False
+        
+        sovits_base_dir_path = ".\\data\\models\\gpt_sovits\\"
+        sovits_base_dir_path = os.path.abspath(sovits_base_dir_path) + "\\"
+        os.makedirs(sovits_base_dir_path, exist_ok=True)
+        if not os.path.exists(sovits_base_dir_path+"s2G488k.pth"):
+            logging.info("Downloading s2G488k.pth")
+            hf_hub_download("lj1995/GPT-SoVITS", "s2G488k.pth", local_dir=sovits_base_dir_path)
+            downloaded = True
+        if not os.path.exists(sovits_base_dir_path+"s1bert25hz-2kh-longer-epoch=68e-step=50232.ckpt"):
+            logging.info("Downloading s1bert25hz-2kh-longer-epoch=68e-step=50232.ckpt")
+            hf_hub_download("lj1995/GPT-SoVITS", "s1bert25hz-2kh-longer-epoch=68e-step=50232.ckpt", local_dir=sovits_base_dir_path)
+            downloaded = True
+        if not os.path.exists(sovits_base_dir_path+"s2D488k.pth"):
+            logging.info("Downloading s2D488k.pth")
+            hf_hub_download("lj1995/GPT-SoVITS", "s2D488k.pth", local_dir=sovits_base_dir_path)
+            downloaded = True
+
+        cnhubert_base_dir_path = sovits_base_dir_path+"chinese-hubert-base\\"
+        os.makedirs(cnhubert_base_dir_path, exist_ok=True)
+        if not os.path.exists(cnhubert_base_dir_path+"pytorch_model.bin"):
+            logging.info("Downloading chinese-hubert-base/pytorch_model.bin")
+            hf_hub_download("lj1995/GPT-SoVITS", "chinese-hubert-base/pytorch_model.bin", local_dir=sovits_base_dir_path)
+            downloaded = True
+        if not os.path.exists(cnhubert_base_dir_path+"preprocessor_config.json"):
+            logging.info("Downloading chinese-hubert-base/preprocessor_config.json")
+            hf_hub_download("lj1995/GPT-SoVITS", "chinese-hubert-base/preprocessor_config.json", local_dir=sovits_base_dir_path)
+            downloaded = True
+        # if not os.path.exists(cnhubert_base_dir_path+"chinese-hubert-base_preprocessor_config.json"):
+        #     logging.info("Downloading chinese-hubert-base/chinese-hubert-base_preprocessor_config.json")
+        #     hf_hub_download("lj1995/GPT-SoVITS", "chinese-hubert-base/chinese-hubert-base_preprocessor_config.json", local_dir=cnhubert_base_dir_path)
+        #     downloaded = True
+        if not os.path.exists(cnhubert_base_dir_path+"chinese-hubert-base_config.json"):
+            logging.info("Downloading chinese-hubert-base/chinese-hubert-base_config.json")
+            hf_hub_download("lj1995/GPT-SoVITS", "chinese-hubert-base/config.json", local_dir=sovits_base_dir_path)
+            downloaded = True
+
+        if downloaded:
+            logging.info("All models downloaded")
+
+        self.ssl_model = CNHubert(cnhubert_base_dir_path)
         self.ssl_model.eval()
         if self.config.gpt_sovits_is_half == True:
             self.ssl_model = self.ssl_model.half().to(self.config.gpt_sovits_device)
@@ -265,8 +304,8 @@ class Synthesizer(base_tts.base_Synthesizer):
         self.max_sec = 10
         self.cache = {}
 
-        self.gpt_sovits_sovits_path = ".\\data\\models\\gpt_sovits\\s2G488k.pth"
-        self.gpt_sovits_gpt_path = ".\\data\\models\\gpt_sovits\\s1bert25hz-2kh-longer-epoch=68e-step=50232.ckpt"
+        self.gpt_sovits_sovits_path = sovits_base_dir_path+"s2G488k.pth"
+        self.gpt_sovits_gpt_path = sovits_base_dir_path+"s1bert25hz-2kh-longer-epoch=68e-step=50232.ckpt"
 
         self.change_gpt_weights()
         self.change_sovits_weights()
