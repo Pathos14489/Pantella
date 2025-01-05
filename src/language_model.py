@@ -41,7 +41,7 @@ def create_LLM(conversation_manager):
             logging.config(f"Using {conversation_manager.config.inference_engine}'s included tokenizer")
             tokenizer = model.Tokenizer(conversation_manager)
         elif "tokenizer_slug" in llm.__dict__: # or if the LLM has a tokenizer slug specified
-            logging.config(f"Using {conversation_manager.config.inference_engine}'s recommended tokenizer")
+            logging.config(f"Using {conversation_manager.config.inference_engine} inference engine's recommended tokenizer")
             if "client" in llm.__dict__: # if the LLM has a client specified (only really needed for openai at this point)
                 logging.config(llm.tokenizer_slug)
                 tokenizer = tokenizers.Tokenizer_Types[llm.tokenizer_slug].Tokenizer(conversation_manager, llm.client)
