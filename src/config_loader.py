@@ -676,6 +676,7 @@ class ConfigLoader:
                 "gpt_sovits_top_k": 20,
                 "gpt_sovits_top_p": 1.0,
                 "gpt_sovits_banned_voice_models": [],
+                "gpt_sovits_error_on_too_short_or_too_long_audio": True,
             },
             "Debugging": {
                 "debug_mode": False,
@@ -994,6 +995,7 @@ class ConfigLoader:
                 "gpt_sovits_top_k": self.gpt_sovits_top_k,
                 "gpt_sovits_top_p": self.gpt_sovits_top_p,
                 "gpt_sovits_banned_voice_models": self.gpt_sovits_banned_voice_models,
+                "gpt_sovits_error_on_too_short_or_too_long_audio": self.gpt_sovits_error_on_too_short_or_too_long_audio,
             },
             "Debugging": {
                 "debug_mode": self.debug_mode,

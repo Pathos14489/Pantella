@@ -594,8 +594,11 @@ class Synthesizer(base_tts.base_Synthesizer):
             with torch.no_grad():
                 wav16k, sr = librosa.load(ref_wav_path, sr=16000)
                 if (wav16k.shape[0] > 160000 or wav16k.shape[0] < 48000):
-                    # gr.Warning("Reference audio is outside the 3-10 second range, please choose another one!"))
-                    raise OSError("Reference audio is outside the 3-10 second range, please choose another one!")
+                    if self.config.gpt_sovits_error_on_too_short_or_too_long_audio:
+                        # gr.Warning("Reference audio is outside the 3-10 second range, please choose another one!"))
+                        raise OSError("Reference audio is outside the 3-10 second range, please choose another one! - You can disable this error in the settings, but I'm not sure how well it will work? Haven't really tested it besides turning it off on one voice that was causing me issues and it seemed fine?")
+                    else:
+                        logging.warning("Reference audio is outside the 3-10 second range, please choose another one! - You can toggle this to error out in the settings if too long/too short voices are causing any issues for you.")
                 wav16k = torch.from_numpy(wav16k)
                 zero_wav_torch = torch.from_numpy(zero_wav)
                 if self.config.gpt_sovits_is_half == True:
