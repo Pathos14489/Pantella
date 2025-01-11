@@ -1503,7 +1503,7 @@ class base_LLM():
                             #     single_sentence_roleplay = False
 
                         logging.debug(f"Next sentence: {next_sentence}")
-                        grammarless_stripped_next_sentence = next_sentence.replace(".", "").replace("?", "").replace("!", "").replace(",", "").strip()
+                        grammarless_stripped_next_sentence = next_sentence.replace(".", "").replace("?", "").replace("!", "").replace(",", "").replace("-", "").replace("*", "").replace("\"", "").strip()
                         if grammarless_stripped_next_sentence != '': # if there is a next sentence, then set the current sentence to the next sentence
                             sentence = next_sentence
                             next_sentence = ''
