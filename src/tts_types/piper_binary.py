@@ -47,7 +47,7 @@ class Synthesizer(base_tts.base_Synthesizer):
         """Synthesize the audio for the character specified using piper"""
         # make sure directory exists
         os.makedirs(os.path.dirname(voiceline_location), exist_ok=True)
-        command = f"echo \"{voiceline}\" | {self.piper_binary_dir}piper.exe --model {self.piper_models_dir}{self.config.game_id}\\{voice_model.lower()}.onnx --output_file {voiceline_location}"
+        command = f"echo \"{voiceline}\" | {self.piper_binary_dir}piper.exe --model {self.piper_models_dir}{self.config.game_id}\\{voice_model.lower()}.onnx --output_file \"{voiceline_location}\""
         logging.output(f"piperTTS - Synthesizing voiceline: {voiceline}")
         logging.config(f"piperTTS - Synthesizing voiceline with command: {command}")
         os.system(command)
