@@ -56,26 +56,6 @@ class GameInterface(BaseGameInterface):
         else:
             return f"{self.mod_path}\\Sound\\Voice\\Pantella.esp"
 
-    @utils.time_it
-    def save_files_to_voice_folders(self, queue_output):
-        """Save voicelines and subtitles to the correct game folders"""
-        audio_file, subtitle = queue_output
-        # The if block below checks if it's Fallout 4, if that's the case it will add the wav file in the mod_folder\Sound\Voice\Pantella.esp\ 
-        # and alternate between two wavs to prevent access denied issues if Pantella.exe is trying to access a wav currently loaded in Fallout4
-        if self.game_id == "fallout4":
-            if self.f4_use_wav_file1:
-                wav_file_to_use = self.f4_wav_file1
-                subtitle += " Pantella1"
-                self.f4_use_wav_file1 = False
-            else:
-                wav_file_to_use = self.f4_wav_file2
-                subtitle += " Pantella2"
-                self.f4_use_wav_file1 = True
-            wav_file_path = f"{self.mod_voice_dir}\\{wav_file_to_use}"
-            if os.path.exists(wav_file_path):
-                os.remove(wav_file_path)
-            shutil.copyfile(audio_file, wav_file_path)
-
     def display_status(self, status):
         logging.info(f"Displaying status in-game: {status}")
         self.write_game_info('_pantella_status', status)
@@ -90,8 +70,6 @@ class GameInterface(BaseGameInterface):
             
     def setup_voiceline_save_location(self, in_game_voice_folder):
         """Save voice model folder to Pantella Spell if it does not already exist"""
-        self.in_game_voice_model = in_game_voice_folder
-
         if self.config.linux_mode:
             in_game_voice_folder_path = f"{self.mod_voice_dir}/{in_game_voice_folder}/"
         else:
@@ -132,6 +110,9 @@ class GameInterface(BaseGameInterface):
     def save_files_to_voice_folders(self, queue_output):
         """Save voicelines and subtitles to the correct game folders"""
         audio_file, subtitle = queue_output
+        if audio_file is None or subtitle is None or audio_file == '' or subtitle == '':
+            logging.error(f"Error saving voiceline to voice folders. Audio file: {audio_file}, subtitle: {subtitle}")
+            return
         # The if block below checks if it's Fallout 4, if that's the case it will add the wav file in the mod_folder\Sound\Voice\Pantella.esp\ 
         # and alternate between two wavs to prevent access denied issues if Pantella.exe is trying to access a wav currently loaded in Fallout4
         if self.game_id == "fallout4":
@@ -143,48 +124,42 @@ class GameInterface(BaseGameInterface):
                 wav_file_to_use = self.f4_wav_file2
                 subtitle += " Pantella2"
                 self.f4_use_wav_file1 = True
-            wav_file_path = f"{self.mod_voice_dir}\\{wav_file_to_use}"
-            if os.path.exists(wav_file_path):
-                os.remove(wav_file_path)
-            shutil.copyfile(audio_file, wav_file_path)
+        if self.config.linux_mode:
+            wav_file_path = f"{self.mod_voice_dir}/{self.active_character.in_game_voice_model}/{self.wav_file}"
+            lip_file_path = f"{self.mod_voice_dir}/{self.active_character.in_game_voice_model}/{self.lip_file}"
+            if self.game_id == "fallout4":
+                wav_file_path = f"{self.mod_voice_dir}/{wav_file_to_use}" # TODO: Find out why this is a single file??
+        else:
+            wav_file_path = f"{self.mod_voice_dir}\\{self.active_character.in_game_voice_model}\\{self.wav_file}"
+            lip_file_path = f"{self.mod_voice_dir}\\{self.active_character.in_game_voice_model}\\{self.lip_file}"
+            if self.game_id == "fallout4":
+                wav_file_path = f"{self.mod_voice_dir}\\{wav_file_to_use}" # TODO: Find out why this is a single file??
 
-
-        if audio_file is None or subtitle is None or audio_file == '' or subtitle == '':
-            logging.error(f"Error saving voiceline to voice folders. Audio file: {audio_file}, subtitle: {subtitle}")
-            return
-        if self.add_voicelines_to_all_voice_folders == '1':
+        if self.add_voicelines_to_all_voice_folders:
+            logging.info(f"Adding voicelines to all voice folders")
             for sub_folder in os.scandir(self.mod_voice_dir):
                 if sub_folder.is_dir():
                     #copy both the wav file and lip file if the game isn't Fallout4
-                    if self.game_id !="fallout4":
-                        if self.config.linux_mode:
-                            shutil.copyfile(audio_file, f"{sub_folder.path}/{self.wav_file}")
-                        else:
-                            shutil.copyfile(audio_file, f"{sub_folder.path}\\{self.wav_file}")
+                    if self.config.linux_mode:
+                        logging.info(f"Copying voiceline to {sub_folder.path}/{self.wav_file}")
+                        shutil.copyfile(audio_file, f"{sub_folder.path}/{self.wav_file}")
+                    else:
+                        logging.info(f"Copying voiceline to {sub_folder.path}\\{self.wav_file}")
+                        shutil.copyfile(audio_file, f"{sub_folder.path}\\{self.wav_file}")
                     if self.config.linux_mode:
                         shutil.copyfile(audio_file.replace(".wav", ".lip"), f"{sub_folder.path}/{self.lip_file}")
                     else:
                         shutil.copyfile(audio_file.replace(".wav", ".lip"), f"{sub_folder.path}\\{self.f4_lip_file}")
         else:
-            if self.game_id !="fallout4":
-                if self.config.linux_mode:
-                    shutil.copyfile(audio_file, f"{self.mod_voice_dir}/{self.in_game_voice_model}/{self.wav_file}")
-                else:
-                    shutil.copyfile(audio_file, f"{self.mod_voice_dir}\\{self.active_character.in_game_voice_model}\\{self.wav_file}")
-            if self.config.linux_mode:
-                try:
-                    shutil.copyfile(audio_file.replace(".wav", ".lip"), f"{self.mod_voice_dir}/{self.in_game_voice_model}/{self.lip_file}")
-                except:
-                    print("Error copying lip file -- falling back to default")
-                    default_lip_file = utils.resolve_path()+'/data/default.lip'
-                    shutil.copyfile(default_lip_file, f"{self.mod_voice_dir}/{self.in_game_voice_model}/{self.lip_file}")
-            else:
-                try:
-                    shutil.copyfile(audio_file.replace(".wav", ".lip"), f"{self.mod_voice_dir}\\{self.active_character.in_game_voice_model}\\{self.lip_file}")
-                except:
-                    print("Error copying lip file -- falling back to default")
-                    default_lip_file = utils.resolve_path()+'\\data\\default.lip'
-                    shutil.copyfile(default_lip_file, f"{self.mod_voice_dir}\\{self.active_character.in_game_voice_model}\\{self.lip_file}")
+            logging.info(f"Copying voiceline to {wav_file_path}")
+            shutil.copyfile(audio_file, wav_file_path)
+            logging.info(f"Copying lip file to {lip_file_path}")
+            try:
+                shutil.copyfile(audio_file.replace(".wav", ".lip"), f"{lip_file_path}")
+            except:
+                print("Error copying lip file -- falling back to default")
+                default_lip_file = utils.resolve_path()+'/data/default.lip'
+                shutil.copyfile(default_lip_file, f"{lip_file_path}")
 
         logging.info(f"{self.active_character.name} should speak")
         if self.character_num == 0:
