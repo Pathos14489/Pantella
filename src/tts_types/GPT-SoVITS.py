@@ -314,9 +314,7 @@ class Synthesizer(base_tts.base_Synthesizer):
         logging.config(f'{self.tts_slug} - Available voices: {self.voices()}')
         if len(self.voices()) > 0:
             random_voice = random.choice(self.voices())
-            self._say("This is a test of few shot voice cloning with GPT So Vits. Serana... Serana... Sir... Nevermind, I can't pronounce my own name. Anyway. The current voice you're listening to, should sound better than before.", "Serana")
-            # self._say("Gee Pee Tee So Vits is ready to go.", random_voice)
-        input("Press Enter to continue...")
+            self._say("GPT So Vits is ready to go.", random_voice)
 
     def voices(self):
         """Return a list of available voices"""
