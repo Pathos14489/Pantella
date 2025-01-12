@@ -133,11 +133,12 @@ class base_Synthesizer:
     def get_speaker_wav_path(self, voice_model):
         """Get the path to the wav filepath to a voice sample for the specified voice model if it exists"""
         for speaker_wavs_folder in self.speaker_wavs_folders:
-            if os.path.exists(os.path.join(speaker_wavs_folder, f"{voice_model}")) and os.path.isdir(os.path.join(speaker_wavs_folder, f"{voice_model}")): # check if a folder exists at the path for the specified voice model's wavs
-                list_of_files = os.listdir(speaker_wavs_folder)
-                list_of_files = [os.path.join(speaker_wavs_folder, file+ ".wav") for file in list_of_files if os.path.isfile(os.path.join(speaker_wavs_folder, file+ ".wav"))]
-                return random.choice(list_of_files)
-            elif os.path.exists(os.path.join(speaker_wavs_folder, f"{voice_model}.wav")):
+            # if os.path.exists(os.path.join(speaker_wavs_folder, f"{voice_model}")) and os.path.isdir(os.path.join(speaker_wavs_folder, f"{voice_model}")): # check if a folder exists at the path for the specified voice model's wavs
+            #     list_of_files = os.listdir(speaker_wavs_folder)
+            #     list_of_files = [os.path.join(speaker_wavs_folder, file+ ".wav") for file in list_of_files if os.path.isfile(os.path.join(speaker_wavs_folder, file+ ".wav"))]
+            #     return random.choice(list_of_files)
+            # el
+            if os.path.exists(os.path.join(speaker_wavs_folder, f"{voice_model}.wav")):
                 speaker_wav_path = os.path.join(speaker_wavs_folder, f"{voice_model}.wav")
                 return speaker_wav_path
         return None
