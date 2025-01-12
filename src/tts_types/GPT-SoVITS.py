@@ -314,45 +314,9 @@ class Synthesizer(base_tts.base_Synthesizer):
         logging.config(f'{self.tts_slug} - Available voices: {self.voices()}')
         if len(self.voices()) > 0:
             random_voice = random.choice(self.voices())
-            self._say("Gee Pee Tee So Vits is ready to go.", random_voice)
-
-    @property
-    def speaker_wavs_folders(self):
-        if "language" in self.config.__dict__: # If the language is specified in the config, only use the speaker wavs folder for that language
-            if self.config.linux_mode:
-                speaker_wavs_folders = [
-                    os.path.abspath(f"./data/voice_samples/{self.language['tts_language_code']}/")
-                ]
-            else:
-                speaker_wavs_folders = [
-                    os.path.abspath(f".\\data\\voice_samples\\{self.language['tts_language_code']}\\")
-                ]
-        else: # Otherwise, use all the speaker wavs folders
-            speaker_wavs_folders = []
-            if self.config.linux_mode:
-                for language_code in os.listdir("./data/voice_samples/"):
-                    if not os.path.isdir(f"./data/voice_samples/{language_code}/"):
-                        continue
-                    speaker_wavs_folders.append(os.path.abspath(f"./data/voice_samples/{language_code}/"))
-            else:
-                for language_code in os.listdir(".\\data\\voice_samples\\"):
-                    if not os.path.isdir(f".\\data\\voice_samples\\{language_code}\\"):
-                        continue
-                    speaker_wavs_folders.append(os.path.abspath(f".\\data\\voice_samples\\{language_code}\\"))
-        for addon_slug in self.config.addons: # Add the speakers folder from each addon to the list of speaker wavs folders
-            addon = self.config.addons[addon_slug]
-            if "speakers" in addon["addon_parts"]: 
-                if self.config.linux_mode:
-                    addon_speaker_wavs_folder = os.path.abspath(f"./addons/{addon_slug}/speakers/")
-                else:
-                    addon_speaker_wavs_folder = self.config.addons_dir + addon_slug + "\\speakers\\"
-                if os.path.exists(addon_speaker_wavs_folder):
-                    speaker_wavs_folders.append(addon_speaker_wavs_folder)
-                else:
-                    logging.error(f'speakers folder not found at: {addon_speaker_wavs_folder}')
-        # make all the paths absolute
-        speaker_wavs_folders = [os.path.abspath(folder) for folder in speaker_wavs_folders]
-        return speaker_wavs_folders
+            self._say("This is a test of few shot voice cloning with GPT So Vits. Serana... Serana... Sir... Nevermind, I can't pronounce my own name. Anyway. The current voice you're listening to, should sound better than before.", "Serana")
+            # self._say("Gee Pee Tee So Vits is ready to go.", random_voice)
+        input("Press Enter to continue...")
 
     def voices(self):
         """Return a list of available voices"""
@@ -385,10 +349,16 @@ class Synthesizer(base_tts.base_Synthesizer):
         return settings
     
     def get_speaker_wav_path(self, voice_model):
+        """Get the path to the wav filepath to a voice sample for the specified voice model if it exists"""
+        list_of_files = []
         for speaker_wavs_folder in self.speaker_wavs_folders:
-            speaker_wav_path = os.path.join(speaker_wavs_folder, f"{voice_model}.wav")
-            if os.path.exists(speaker_wav_path):
-                return speaker_wav_path
+            if os.path.exists(os.path.join(speaker_wavs_folder, f"{voice_model}")) and os.path.isdir(os.path.join(speaker_wavs_folder, f"{voice_model}")): # check if a folder exists at the path for the specified voice model's wavs
+                list_of_files = os.listdir(os.path.join(speaker_wavs_folder, f"{voice_model}"))
+                list_of_files = [os.path.join(speaker_wavs_folder, f"{voice_model}", file) for file in list_of_files]
+        for speaker_wavs_folder in self.speaker_wavs_folders:
+            if os.path.exists(os.path.join(speaker_wavs_folder, f"{voice_model}.wav")):
+                speaker_wav_path = os.path.join(speaker_wavs_folder, f"{voice_model}.wav")
+                return speaker_wav_path, list_of_files
         return None
     
     def get_spepc(self, filename):
@@ -681,11 +651,12 @@ class Synthesizer(base_tts.base_Synthesizer):
             if(inp_refs):
                 for path in inp_refs:
                     try:
-                        refer = self.get_spepc(path.name).to(self.torch_dtype).to(self.config.gpt_sovits_device)
+                        refer = self.get_spepc(path).to(self.torch_dtype).to(self.config.gpt_sovits_device)
                         refers.append(refer)
                     except:
                         traceback.print_exc()
-            if(len(refers)==0):refers = [self.get_spepc(ref_wav_path).to(self.torch_dtype).to(self.config.gpt_sovits_device)]
+            if(len(refers)==0):
+                refers = [self.get_spepc(ref_wav_path).to(self.torch_dtype).to(self.config.gpt_sovits_device)]
             audio = (self.vq_model.decode(pred_semantic, torch.LongTensor(phones2).to(self.config.gpt_sovits_device).unsqueeze(0), refers,speed=speed).detach().cpu().numpy()[0, 0])
             max_audio=np.abs(audio).max()#简单防止16bit爆音
             if max_audio>1:audio/=max_audio
@@ -694,9 +665,8 @@ class Synthesizer(base_tts.base_Synthesizer):
             t4 = time.time()
             t.extend([t2 - t1,t3 - t2, t4 - t3])
             t1 = time.time()
-        print("%.3f\t%.3f\t%.3f\t%.3f" % 
-            (t[0], sum(t[1::3]), sum(t[2::3]), sum(t[3::3]))
-            )
+        print("%.3f\t%.3f\t%.3f\t%.3f" % (t[0], sum(t[1::3]), sum(t[2::3]), sum(t[3::3]))
+        )
         yield self.hps.data.sampling_rate, (np.concatenate(audio_opt, 0) * 32768).astype(
             np.int16
         )
@@ -704,7 +674,8 @@ class Synthesizer(base_tts.base_Synthesizer):
     def _synthesize(self, voiceline, voice_model, voiceline_location, aggro=0):
         """Synthesize the audio for the character specified using ParlerTTS"""
         logging.output(f'{self.tts_slug} - synthesizing {voiceline} with voice model "{voice_model}"...')
-        speaker_wav_path = self.get_speaker_wav_path(voice_model)
+        speaker_wav_path, inp_refs = self.get_speaker_wav_path(voice_model)
+        logging.output(speaker_wav_path, inp_refs)
         settings = self.voice_model_settings(voice_model)
         logging.output(f'{self.tts_slug} - using voice model settings: {settings}')
         if not voiceline.endswith(".") and not voiceline.endswith("!") and not voiceline.endswith("?"): # Add a period to the end of the voiceline if it doesn't have one.
@@ -713,7 +684,8 @@ class Synthesizer(base_tts.base_Synthesizer):
         # Synthesize audio
         synthesis_result = self.get_tts_wav(prompt_text=settings["transcription"],
             ref_wav_path=speaker_wav_path, 
-            text=voiceline
+            text=voiceline,
+            inp_refs=inp_refs
         )
         
         result_list = list(synthesis_result)
