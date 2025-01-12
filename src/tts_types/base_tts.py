@@ -7,6 +7,7 @@ from pathlib import Path
 import soundfile as sf
 import time
 import numpy as np
+import random
 try:
     logging.info("Trying to import winsound")
     import winsound
@@ -51,6 +52,46 @@ class base_Synthesizer:
         self.last_voice = ''
 
     @property
+    def speaker_wavs_folders(self):
+        if "language" in self.config.__dict__: # If the language is specified in the config, only use the speaker wavs folder for that language
+            if self.config.linux_mode:
+                speaker_wavs_folders = [
+                    os.path.abspath(f"./data/voice_samples/{self.language['tts_language_code']}/"),
+                    os.path.abspath(f"./data/voice_samples/")
+                ]
+            else:
+                speaker_wavs_folders = [
+                    os.path.abspath(f".\\data\\voice_samples\\{self.language['tts_language_code']}\\"),
+                    os.path.abspath(f".\\data\\voice_samples\\"),
+                ]
+        else: # Otherwise, use all the speaker wavs folders
+            speaker_wavs_folders = []
+            if self.config.linux_mode:
+                for language_code in os.listdir("./data/voice_samples/"):
+                    if not os.path.isdir(f"./data/voice_samples/{language_code}/"):
+                        continue
+                    speaker_wavs_folders.append(os.path.abspath(f"./data/voice_samples/{language_code}/"))
+            else:
+                for language_code in os.listdir(".\\data\\voice_samples\\"):
+                    if not os.path.isdir(f".\\data\\voice_samples\\{language_code}\\"):
+                        continue
+                    speaker_wavs_folders.append(os.path.abspath(f".\\data\\voice_samples\\{language_code}\\"))
+        for addon_slug in self.config.addons: # Add the speakers folder from each addon to the list of speaker wavs folders
+            addon = self.config.addons[addon_slug]
+            if "speakers" in addon["addon_parts"]: 
+                if self.config.linux_mode:
+                    addon_speaker_wavs_folder = os.path.abspath(f"./addons/{addon_slug}/speakers/")
+                else:
+                    addon_speaker_wavs_folder = self.config.addons_dir + addon_slug + "\\speakers\\"
+                if os.path.exists(addon_speaker_wavs_folder):
+                    speaker_wavs_folders.append(addon_speaker_wavs_folder)
+                else:
+                    logging.error(f'speakers folder not found at: {addon_speaker_wavs_folder}')
+        # make all the paths absolute
+        speaker_wavs_folders = [os.path.abspath(folder) for folder in speaker_wavs_folders]
+        return speaker_wavs_folders
+    
+    @property
     def language(self):
         if "_prompt_style" in self.config.__dict__:
             return self.config.language # TODO: Make sure this works with prompt_styles
@@ -88,6 +129,18 @@ class base_Synthesizer:
         input("Press enter to continue...")
         raise NotImplementedError("voices() method not implemented in your tts type.")
         return []
+    
+    def get_speaker_wav_path(self, voice_model):
+        """Get the path to the wav filepath to a voice sample for the specified voice model if it exists"""
+        for speaker_wavs_folder in self.speaker_wavs_folders:
+            if os.path.exists(os.path.join(speaker_wavs_folder, f"{voice_model}")) and os.path.isdir(os.path.join(speaker_wavs_folder, f"{voice_model}")): # check if a folder exists at the path for the specified voice model's wavs
+                list_of_files = os.listdir(speaker_wavs_folder)
+                list_of_files = [os.path.join(speaker_wavs_folder, file+ ".wav") for file in list_of_files if os.path.isfile(os.path.join(speaker_wavs_folder, file+ ".wav"))]
+                return random.choice(list_of_files)
+            elif os.path.exists(os.path.join(speaker_wavs_folder, f"{voice_model}.wav")):
+                speaker_wav_path = os.path.join(speaker_wavs_folder, f"{voice_model}.wav")
+                return speaker_wav_path
+        return None
     
     def get_valid_voice_model(self, character_or_voice_model, crashable=None, multi_tts=True, log=True):
         """Get the valid voice model for the character from the available voices - Order of preference: voice_model, voice_model without spaces, lowercase voice_model, uppercase voice_model, lowercase voice_model without spaces, uppercase voice_model without spaces"""

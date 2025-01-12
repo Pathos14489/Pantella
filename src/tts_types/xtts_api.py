@@ -32,20 +32,7 @@ class Synthesizer(base_tts.base_Synthesizer):
                     input("Press enter to continue...")
                     raise FileNotFoundError()
         logging.info(f'xTTS API voice latent folders: {self.voice_latent_folders}')
-        self.speaker_wavs_folders = [
-            self.xtts_api_dir + "speakers\\" if self.xtts_api_dir.endswith("\\") else self.xtts_api_dir + "\\speakers\\",
-            os.path.abspath(".\\data\\voice_samples\\")
-        ]
-        for addon_slug in self.config.addons:
-            addon = self.config.addons[addon_slug]
-            if "speakers" in addon["addon_parts"]:
-                addon_speaker_wavs_folder = self.config.addons_dir + addon_slug + "\\speakers\\"
-                if os.path.exists(addon_speaker_wavs_folder):
-                    self.speaker_wavs_folders.append(addon_speaker_wavs_folder)
-                else:
-                    logging.error(f'speakers folder not found at: {addon_speaker_wavs_folder}')
-        # make all the paths absolute
-        self.speaker_wavs_folders = [os.path.abspath(folder) for folder in self.speaker_wavs_folders]
+        self.speaker_wavs_folders.append(os.path.abspath(self.xtts_api_dir + "speakers\\" if self.xtts_api_dir.endswith("\\") else self.xtts_api_dir + "\\speakers\\"))
         logging.info(f'xTTS API speaker wavs folders: {self.speaker_wavs_folders}')
         if self.is_running():
             logging.warning(f'xTTS_API is already running. Voice latents added by addons will not be available until the server is closed and restarted by Pantella.')
