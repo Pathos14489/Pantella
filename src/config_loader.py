@@ -7,14 +7,20 @@ import traceback
 logging.info("Imported required libraries in config_loader.py")
 
 interface_configs = {}
-# Get all game configs from src/interface_configs/ and add them to interface_configs
+# Get all interface configs from src/interface_configs/ and add them to interface_configs
 for file in os.listdir(os.path.join(os.path.dirname(__file__), "../interface_configs/")):
     if file.endswith(".json") and not file.startswith("__"):
-        logging.config(f"Importing game config {file}")
+        logging.config(f"Importing interface config {file}")
         game_id = file[:-5]
-        interface_configs[game_id] = json.load(open(os.path.join(os.path.dirname(__file__), "../interface_configs", file)))
-        logging.config(f"Imported game config {game_id}")
-logging.info("Imported all game configs, ready to use them!")
+        try:
+            interface_configs[game_id] = json.load(open(os.path.join(os.path.dirname(__file__), "../interface_configs", file)))
+        except Exception as e:
+            logging.error(f"Could not import interface config {game_id}. If you're on Windows, check that any paths you have in the config file are using double backslashes instead of single backslashes.")
+            tb = traceback.format_exc()
+            logging.error(tb)
+            raise e
+        logging.config(f"Imported interface config {game_id}")
+logging.info("Imported all interface configs, ready to use them!")
 
 class ConfigLoader:
     def __init__(self, config_path='config.json'):
@@ -28,7 +34,7 @@ class ConfigLoader:
         self.interface_configs = interface_configs
         self.current_interface_config = interface_configs[self.game_id]
         logging.config(f"ConfigLoader initialized with config path {config_path}")
-        logging.config(f"Current game config: '{self.current_interface_config}' from game id '{self.game_id}'")
+        logging.config(f"Current interface config: '{self.current_interface_config}' from game id '{self.game_id}'")
         self.conversation_manager_type = self.current_interface_config["conversation_manager_type"]
         self.interface_type = self.current_interface_config["interface_type"]
         self.behavior_manager = self.current_interface_config["behavior_manager"]
@@ -111,10 +117,10 @@ class ConfigLoader:
                     setattr(self, sub_key, config[key][sub_key])
 
         if self.game_id not in interface_configs:
-            logging.error(f"Game id {self.game_id} not found in interface_configs directory. Please add a game config file for {self.game_id} or change the game_id in config.json to a valid game id.")
+            logging.error(f"Game id {self.game_id} not found in interface_configs directory. Please add a interface config file for {self.game_id} or change the game_id in config.json to a valid game id.")
             logging.config(f"Valid game ids: {list(interface_configs.keys())}")
             input("Press enter to continue...")
-            raise ValueError(f"Game id {self.game_id} not found in interface_configs directory. Please add a game config file for {self.game_id} or change the game_id in config.json to a valid game id.")
+            raise ValueError(f"Game id {self.game_id} not found in interface_configs directory. Please add a interface config file for {self.game_id} or change the game_id in config.json to a valid game id.")
 
         if save:
             self.save()
