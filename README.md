@@ -288,7 +288,7 @@ First, another look to make sure our Pantella repository folders look the same. 
 
 ## 3 - Configuring Pantella - Games
 
-First thing you need to do is go to `launcher_dir/repositories/Pathos14489_Pantella/game_configs` and set up the game_config json for the game you wish to play.
+First thing you need to do is go to `launcher_dir/repositories/Pathos14489_Pantella/interface_configs` and set up the interface_config json for the game you wish to play.
 
 `skyrim` - Skyrim Special Edition/Enderal
 `skyrimvr` - Skyrim VR
@@ -416,18 +416,18 @@ For further support and examples of how other users have added modded NPCs, ask 
 2. Create a virtual environment via `py -3.11 -m venv PantellaEnv` in your console (Pantella requires Python 3.10.11 or higher)
 3. Start the environment in your console (`.\PantellaEnv\Scripts\Activate`)
 4. Install the required packages via `pip install -r requirements.txt`
-5. Set up your paths / any other required settings in the `config.json` and your chosen `game_configs` file
+5. Set up your paths / any other required settings in the `config.json` and your chosen `interface_configs` file
 6. Run Pantella via `main.py` in the parent directory
 
 ## Running without venv
 1. Clone the repo to your machine
 2. Install the required packages via `pip install -r requirements.txt`
-3. Set up your paths / any other required settings in the `config.json` and your chosen `game_configs` file
+3. Set up your paths / any other required settings in the `config.json` and your chosen `interface_configs` file
 4. Run Pantella via `main.py` in the parent directory
 
 ## Running with the Launcher (For developers)
 1. Clone the repo to your launcher's repositories folder under the name `Pathos14489_Pantella`
-2. Set up your paths / any other required settings in the `config.json` and your chosen `game_configs` file
+2. Set up your paths / any other required settings in the `config.json` and your chosen `interface_configs` file
 3. That should be it! You can now run the source code via the launcher using the same start button as the main Pantella repe. I do not advise using the built in update feature though, use `git pull` instead.
 
 If you have any trouble in getting the repo set up, please reach out on [Discord](https://discord.gg/M7Zw8mBY6r)!

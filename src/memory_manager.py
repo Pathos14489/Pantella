@@ -39,8 +39,8 @@ def create_manager(character_manager):
         manager = module.MemoryManager(character_manager)
         return manager
     else: # if no specific memory manager is specified
-        game_config = config.game_configs[config.game_id]
-        logging.config(f"Using memory manager {game_config['memory_manager']} recommended by game config...")
-        module = Manager_Types[game_config['memory_manager']]
+        interface_config = config.interface_configs[config.game_id]
+        logging.config(f"Using memory manager {interface_config['memory_manager']} recommended by game config...")
+        module = Manager_Types[interface_config['memory_manager']]
         manager = module.MemoryManager(character_manager)
         return manager

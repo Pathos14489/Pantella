@@ -39,7 +39,7 @@ def create_manager(conversation_manager):
         manager = module.BehaviorManager(conversation_manager)
         return manager
     else: # if no specific behavior manager is specified
-        game_config = config.game_configs[config.game_id]
-        module = Manager_Types[game_config['behavior_manager']]
+        interface_config = config.interface_configs[config.game_id]
+        module = Manager_Types[interface_config['behavior_manager']]
         manager = module.BehaviorManager(conversation_manager)
         return manager

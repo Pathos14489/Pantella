@@ -29,7 +29,7 @@ def create_generator_schema(conversation_manager):
         generator = "none"
     generator = conversation_manager.config.character_type
     if generator == "auto":
-        generator = conversation_manager.config.game_configs[conversation_manager.config.game_id]['character_type']
+        generator = conversation_manager.config.interface_configs[conversation_manager.config.game_id]['character_type']
     if generator == "none":
         return None
     return Generator_Types[generator].Character

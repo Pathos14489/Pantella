@@ -18,8 +18,10 @@ main.exe
 **/*.gguf
 config.json
 GPT_SECRET_KEY.txt
-game_configs/*.json
+interface_configs/*.json
 api_logs
+old
+GPT_SECRET_KEY.txt
 asset/Decoder.pt
 asset/DVAE_full.pt
 asset/DVAE.pt

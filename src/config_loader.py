@@ -6,13 +6,13 @@ import flask
 import traceback
 logging.info("Imported required libraries in config_loader.py")
 
-game_configs = {}
-# Get all game configs from src/game_configs/ and add them to game_configs
-for file in os.listdir(os.path.join(os.path.dirname(__file__), "../game_configs/")):
+interface_configs = {}
+# Get all game configs from src/interface_configs/ and add them to interface_configs
+for file in os.listdir(os.path.join(os.path.dirname(__file__), "../interface_configs/")):
     if file.endswith(".json") and not file.startswith("__"):
         logging.config(f"Importing game config {file}")
         game_id = file[:-5]
-        game_configs[game_id] = json.load(open(os.path.join(os.path.dirname(__file__), "../game_configs", file)))
+        interface_configs[game_id] = json.load(open(os.path.join(os.path.dirname(__file__), "../interface_configs", file)))
         logging.config(f"Imported game config {game_id}")
 logging.info("Imported all game configs, ready to use them!")
 
@@ -25,13 +25,13 @@ class ConfigLoader:
         self._raw_behavior_styles = {}
         self.get_behavior_styles()
         self.load()
-        self.game_configs = game_configs
-        self.current_game_config = game_configs[self.game_id]
+        self.interface_configs = interface_configs
+        self.current_interface_config = interface_configs[self.game_id]
         logging.config(f"ConfigLoader initialized with config path {config_path}")
-        logging.config(f"Current game config: '{self.current_game_config}' from game id '{self.game_id}'")
-        self.conversation_manager_type = self.current_game_config["conversation_manager_type"]
-        self.interface_type = self.current_game_config["interface_type"]
-        self.behavior_manager = self.current_game_config["behavior_manager"]
+        logging.config(f"Current game config: '{self.current_interface_config}' from game id '{self.game_id}'")
+        self.conversation_manager_type = self.current_interface_config["conversation_manager_type"]
+        self.interface_type = self.current_interface_config["interface_type"]
+        self.behavior_manager = self.current_interface_config["behavior_manager"]
         logging.log_file = self.logging_file_path # Set the logging file path
         self.get_prompt_styles()
         self.addons = {}
@@ -40,11 +40,11 @@ class ConfigLoader:
 
     @property
     def game_path(self):
-        return self.current_game_config["game_path"]
+        return self.current_interface_config["game_path"]
     
     @property
     def mod_path(self):
-        return self.current_game_config["mod_path"]
+        return self.current_interface_config["mod_path"]
 
     def save(self):
         """Save the config to the config file"""
@@ -110,11 +110,11 @@ class ConfigLoader:
                 else:
                     setattr(self, sub_key, config[key][sub_key])
 
-        if self.game_id not in game_configs:
-            logging.error(f"Game id {self.game_id} not found in game_configs directory. Please add a game config file for {self.game_id} or change the game_id in config.json to a valid game id.")
-            logging.config(f"Valid game ids: {list(game_configs.keys())}")
+        if self.game_id not in interface_configs:
+            logging.error(f"Game id {self.game_id} not found in interface_configs directory. Please add a game config file for {self.game_id} or change the game_id in config.json to a valid game id.")
+            logging.config(f"Valid game ids: {list(interface_configs.keys())}")
             input("Press enter to continue...")
-            raise ValueError(f"Game id {self.game_id} not found in game_configs directory. Please add a game config file for {self.game_id} or change the game_id in config.json to a valid game id.")
+            raise ValueError(f"Game id {self.game_id} not found in interface_configs directory. Please add a game config file for {self.game_id} or change the game_id in config.json to a valid game id.")
 
         if save:
             self.save()

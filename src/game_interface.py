@@ -41,7 +41,7 @@ def create_game_interface(conversation_manager):
         manager = module.GameInterface(conversation_manager)
         return manager
     else: # if no specific game interface is specified
-        game_config = config.game_configs[config.game_id]
-        module = Interface_Types[game_config['conversation_manager']]
+        interface_config = config.interface_configs[config.game_id]
+        module = Interface_Types[interface_config['conversation_manager']]
         manager = module.GameInterface(conversation_manager)
         return manager

@@ -39,7 +39,7 @@ def create_manager(config, initialize=True):
         manager = module.ConversationManager(config, initialize)
         return manager
     else: # if no specific conversation manager is specified
-        game_config = config.game_configs[config.game_id]
-        module = Manager_Types[game_config['conversation_manager']]
+        interface_config = config.interface_configs[config.game_id]
+        module = Manager_Types[interface_config['conversation_manager']]
         manager = module.ConversationManager(config, initialize)
         return manager
