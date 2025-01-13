@@ -693,7 +693,8 @@ class ConfigLoader:
                 "debug_use_mic": False,
                 "default_player_response": "Can you tell me something about yourself?",
                 "tts_boot_annoncements": True,
-                "add_voicelines_to_all_voice_folders": False
+                "add_voicelines_to_all_voice_folders": False,
+                "play_startup_announcement": True
             },
             "Errors": {
                 "block_logs_from": [],
@@ -1013,6 +1014,7 @@ class ConfigLoader:
                 "default_player_response": self.default_player_response,
                 "tts_boot_annoncements": self.tts_boot_annoncements,
                 "add_voicelines_to_all_voice_folders": self.add_voicelines_to_all_voice_folders,
+                "play_startup_announcement": self.play_startup_announcement,
             },
             "Errors": {
                 "block_logs_from": self.block_logs_from,
