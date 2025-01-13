@@ -335,7 +335,7 @@ Normally you won't be using this. Most cloud based models are not very good at v
 
 ## 9 - Run Pantella! :)
 
-Start the launcher, and click start for Pantella. Have fun! If you have any issues, please reach out on the Discord. We're here to help. Note: Vision support has to be started after the game Window is already open, and might depend on windowed/windowed borderless mode to work correctly. If you're having issues with vision, try changing your game to windowed mode.
+Start the launcher, and click start for Pantella. Have fun! If you have any issues, please reach out on the Discord. We're here to help. Note: Vision support has to be started after the game Window is already open, and might depend on windowed/windowed borderless mode to work correctly. If you're having issues with vision, try changing your game to windowed mode. On the first time you load Pantella into your save, even on a new game, load in, save, and reload the save you just made. If you don't for some reason NPCs won't be able to talk to you.
 
 # Troubleshooting
 ## ChromaDB Memory Editor
