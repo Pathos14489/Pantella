@@ -20,7 +20,6 @@ class ConversationManager(BaseConversationManager):
         self.current_in_game_time = None
         if initialize and self.config.ready:
             self.current_in_game_time = self.game_interface.get_dummy_game_time() # Initialised at start of every conversation in await_and_setup_conversation()
-        self.character_manager = None # Initialised at start of every conversation in await_and_setup_conversation()
         self.conversation_started_radiant = False # Initialised at start of every conversation in await_and_setup_conversation()
         self.radiant_dialogue = False # Initialised at start of every conversation in await_and_setup_conversation()
         self.player_gender = None # Initialised at start of every conversation in await_and_setup_conversation()
@@ -38,8 +37,8 @@ class ConversationManager(BaseConversationManager):
         else:
             return False
         
-    def setup_character(self, character_info, is_generic_npc):
-        character = super().setup_character(character_info, is_generic_npc)
+    def setup_character(self, character_info):
+        character = super().setup_character(character_info)
         self.game_interface.setup_voiceline_save_location(character_info['in_game_voice_model']) # if the NPC is from a mod, create the NPC's voice folder and exit Pantella
         return character
 
@@ -47,7 +46,7 @@ class ConversationManager(BaseConversationManager):
         new_character_joined = self.get_if_new_character_joined() # check if new character has been added to conversation and switch to Single Prompt Multi-NPC conversation if so
         if new_character_joined: # if new character has joined the conversation or radiant dialogue is being used and there are more than one active characters, switch to Single Prompt Multi-NPC conversation
             try: # load character info, location and other gamestate data when data is available - Starts watching the _pantella_ files in the Skyrim folder and waits for the player to select an NPC
-                character_info, self.current_location, self.current_in_game_time, is_generic_npc, self.player_name, player_race, player_gender, self.conversation_started_radiant = self.game_interface.load_game_state()
+                character_info, self.current_location, self.current_in_game_time, self.player_name, player_race, player_gender, self.conversation_started_radiant = self.game_interface.load_game_state()
             except characters_manager.CharacterDoesNotExist as e:
                 self.game_interface.write_game_info('_pantella_end_conversation', 'True') # End the conversation in game
                 logging.info('Restarting...')
@@ -55,7 +54,7 @@ class ConversationManager(BaseConversationManager):
             logging.info(f"New character joined conversation: {character_info['name']}")
 
             try:
-                character = self.setup_character(character_info, is_generic_npc)
+                character = self.setup_character(character_info)
             except Exception as e:
                 self.game_interface.write_game_info('_pantella_end_conversation', 'True')
                 self.conversation_ended = True
@@ -98,18 +97,17 @@ class ConversationManager(BaseConversationManager):
             self.game_interface.end_conversation() # end conversation in game with current active character
             logging.info('Conversation ended')
 
-    def await_and_setup_conversation(self): # wait for player to select an NPC and setup the conversation when outside of conversation
+    async def await_and_setup_conversation(self): # wait for player to select an NPC and setup the conversation when outside of conversation
         self.conversation_id = str(uuid.uuid4()) # Generate a unique ID for the conversation
         self.game_interface.reset_game_info() # clear _pantella_ files in Skyrim folder
 
-        self.character_manager = characters_manager.Characters(self) # Reset character manager
         self.conversation_step += 1
 
         logging.info('Conversations not starting when you select an NPC? Post an issue on the GitHub page: https://github.com/Pathos14489/Pantella Or (if you want quick responses for any issues) the Discord: https://discord.gg/M7Zw8mBY6r')
         logging.info('Waiting for player to select an NPC...')
         
         try: # load character info, location and other gamestate data when data is available - Starts watching the _pantella_ files in the Skyrim folder and waits for the player to select an NPC
-            character_info, self.current_location, self.current_in_game_time, is_generic_npc, self.player_name, self.player_race, self.player_gender, self.conversation_started_radiant = self.game_interface.load_game_state()
+            character_info, self.current_location, self.current_in_game_time, self.player_name, self.player_race, self.player_gender, self.conversation_started_radiant = self.game_interface.load_game_state()
         except characters_manager.CharacterDoesNotExist as e:
             self.game_interface.write_game_info('_pantella_end_conversation', 'True') # End the conversation in game
             logging.info('Restarting...')
@@ -118,7 +116,7 @@ class ConversationManager(BaseConversationManager):
         
         try:
             # setup the character that the player has selected
-            character = self.setup_character(character_info, is_generic_npc)
+            character = self.setup_character(character_info)
         except Exception as e:
             self.game_interface.write_game_info('_pantella_end_conversation', 'True')
             self.conversation_ended = True
@@ -145,9 +143,9 @@ class ConversationManager(BaseConversationManager):
                 # Conversation Start Type Handling
                 logging.config(f"Conversation Start Type: {self.config.conversation_start_type}")
                 if self.config.conversation_start_type == "always_llm_choice":
-                    self.get_response()
+                    await self._get_response()
                 elif self.config.conversation_start_type == "always_force_npc_greeting":
-                    self.get_response(character)
+                    await self._get_response(character)
                 elif self.config.conversation_start_type == "always_player_greeting":
                     self.in_conversation = True
                     self.conversation_ended = False
@@ -155,21 +153,21 @@ class ConversationManager(BaseConversationManager):
                     greeting = random.choice(prompt_style["language"]["predetermined_player_greetings"])
                     greeting.replace("[character]", character.name)
                     self.new_message({'role': self.config.user_name, 'name':"[player]", 'content': greeting})
-                    self.get_response()
+                    await self._get_response()
                 elif self.config.conversation_start_type == "predetermined_npc_greeting":
                     greeting = random.choice(character.language['predetermined_npc_greetings'])
-                    character.say(greeting)
-                    self.get_response()
+                    await character.say(greeting)
+                    await self._get_response()
                 elif self.config.conversation_start_type == "predetermined_npc_greeting_for_first_meeting_then_llm_choice":
                     if len(character.memory_manager.get_all_messages()) == 0:
                         greeting = random.choice(character.language['predetermined_npc_greetings'])
-                        character.say(greeting)
-                    self.get_response()
+                        await character.say(greeting)
+                    await self._get_response()
                 elif self.config.conversation_start_type == "force_npc_greeting_for_first_meeting_then_llm_choice":
                     if len(character.memory_manager.get_all_messages()) == 0:
-                        self.get_response(character)
+                        await self._get_response(character)
                     else:
-                        self.get_response()
+                        await self._get_response()
                 else:
                     raise Exception(f"Invalid conversation_start_type: {self.config.conversation_start_type}")
             except Exception as e: # if error, close Pantella

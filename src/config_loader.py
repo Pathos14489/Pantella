@@ -301,7 +301,8 @@ class ConfigLoader:
                 "conversation_manager_type": "auto",
                 "interface_type": "auto",
                 "behavior_manager": "auto",
-                "memory_manager": "auto"
+                "memory_manager": "auto",
+                "character_manager_type": "auto",
             },
             "Addons": {
                 "disabled_addons": [],
@@ -749,7 +750,8 @@ class ConfigLoader:
                 "conversation_manager_type": self.conversation_manager_type,
                 "interface_type": self.interface_type,
                 "behavior_manager": self.behavior_manager,
-                "memory_manager": self.memory_manager
+                "memory_manager": self.memory_manager,
+                "character_manager_type": self.character_manager_type,
             },
             "Addons":{
                 "disabled_addons": self.disabled_addons,

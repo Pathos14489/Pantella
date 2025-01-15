@@ -23,7 +23,7 @@ class GameInterface(BaseGameInterface):
     def set_game_state(self, character_info, current_location, player_name, player_race, player_gender): # set the NPCs for the conversation
         logging.info(f"Setting conversation to be with NPCs: {character_info}")
         self.character_info = character_info
-        self.active_character = self.conversation_manager.character_manager.add_character(character_info, False)
+        self.active_character = self.conversation_manager.character_manager.add_character(character_info)
         self.current_location = current_location
         self.player_name = player_name
         self.player_race = player_race

@@ -25,7 +25,7 @@ class Character(BaseModel):
             location = "Skyrim"
         return f"Create a Skyrim character named {character_name} with the following information: Character is a {character_in_game_gender} {character_in_game_race}.\nThey are currently located at: {location}" # {'The character is a guard. ' if character_is_guard else ''}{'The character is a ghost. ' if character_is_ghost else ''}
 
-    def get_chracter_info(self, ref_id, base_id, voice_model=None, is_generic_npc=False):
+    def get_chracter_info(self, ref_id, base_id, voice_model=None):
         return {
         "bio_url": "(Generated)",
         "bio": self.backstory + "\n\n" + self.current_scenario,
@@ -38,7 +38,6 @@ class Character(BaseModel):
         "ref_id": ref_id,
         "base_id": base_id,
         "lang_override": self.lang_override,
-        "is_generic_npc": is_generic_npc,
         "behavior_blacklist": [],
         "behavior_whitelist": [],
         "notes": "",

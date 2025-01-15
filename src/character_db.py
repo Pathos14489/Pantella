@@ -11,7 +11,7 @@ class CharacterDB():
         self.conversation_manager = conversation_manager
         self.config = self.conversation_manager.config
         self.synthesizer = conversation_manager.synthesizer
-        self.character_database_path = self.config.character_database_file
+        self.character_database_path = os.path.join(self.config.character_database_file, self.config.game_id)
         self._characters = []
         self.named_index = {}
         self.base_id_index = {}
@@ -137,7 +137,6 @@ class CharacterDB():
                 "base_id": "",
                 "prompt_style_override": "",
                 "tts_language_override": "",
-                "is_generic_npc": False,
                 "behavior_blacklist": [],
                 "behavior_whitelist": [],
                 "author and notes": "Character Card V2"
@@ -158,7 +157,6 @@ class CharacterDB():
                 "base_id": character["base_id"] if "base_id" in character and character["base_id"] != "" and str(character["base_id"]).lower() != "nan" else "",
                 "prompt_style_override": character["prompt_style_override"] if "prompt_style_override" in character else "",
                 "tts_language_override": character["tts_language_override"] if "tts_language_override" in character else "",
-                "is_generic_npc": character["is_generic_npc"] if "is_generic_npc" in character else False,
                 "behavior_blacklist": character["behavior_blacklist"] if "behavior_blacklist" in character else [],
                 "behavior_whitelist": character["behavior_whitelist"] if "behavior_whitelist" in character else [],
                 "notes": character["author and notes"] if "author and notes" in character else character["notes"] if "notes" in character else ""
@@ -406,7 +404,6 @@ class CharacterDB():
         logging.info(f"_getting character '{character_name}({character_ref_id})[{character_base_id}]'...")
         possibly_same_character = []
         character = None
-        is_generic_npc = False
         if str(character_name) == "nan":
             character_name = None
             logging.info(f"character_name is None: {character_name}")
@@ -435,7 +432,6 @@ class CharacterDB():
         #         possibly_same_character.append(db_character)
         #         logging.info(f"Found possible character '{db_character['name']}' association in character database using base_id lookup.")
         character_match = None
-        is_generic_npc = False
         matching_parts = {
             "name": False,
             "ref_id": False,
@@ -490,7 +486,6 @@ class CharacterDB():
                         "ref_id": character_match['ref_id'] == character_ref_id,
                         "base_id": True
                     }
-                    is_generic_npc = character_match['is_generic_npc'] if "is_generic_npc" in character_match else True
                     logging.info(f"Found possible character '{character_name}' association in character database using base_id lookup.")
         
         if self.config.allow_greedy_base_id_matching:
@@ -505,7 +500,6 @@ class CharacterDB():
                             "ref_id": character_match['ref_id'] == character_ref_id,
                             "base_id": True
                         }
-                        is_generic_npc = character_match['is_generic_npc'] if "is_generic_npc" in character_match else True
                         logging.info(f"Found possible character '{character_name}' association in character database using base_id lookup.")
                         break
 
@@ -514,7 +508,7 @@ class CharacterDB():
             logging.info(f"No character found for '{character_name}({character_ref_id})[{character_base_id}]' in character database.")
             if self.conversation_manager.llm.character_generation_supported:
                 logging.success(f"LLM supports character generation, generating character '{character_name}({character_ref_id})[{character_base_id}]'...")
-                character_match = self.conversation_manager.llm.generate_character(character_name, character_ref_id, character_base_id, character_in_game_race, character_in_game_gender, character_is_guard, character_is_ghost, in_game_voice_model, is_generic_npc, location)
+                character_match = self.conversation_manager.llm.generate_character(character_name, character_ref_id, character_base_id, character_in_game_race, character_in_game_gender, character_is_guard, character_is_ghost, in_game_voice_model, location)
                 logging.success(f"Generated character '{character_name}({character_ref_id})[{character_base_id}]' successfully.", json.dumps(character_match, indent=4))
                 if self.config.auto_save_generated_characters:
                     self.patch_character_info(character_match)
@@ -525,15 +519,15 @@ class CharacterDB():
 
         logging.info(f"Character Match:",character_match)
         logging.info(f"Matching Parts:",matching_parts)
-        return (character_match), is_generic_npc, matching_parts
+        return (character_match), matching_parts
 
     def has_character(self, character):
         if str(character['name']) == "nan":
             print("character:",character)
-        character, is_generic_npc, matching_parts = self.get_character(character['name'], character['ref_id'], character['base_id'])
+        character, matching_parts = self.get_character(character['name'], character['ref_id'], character['base_id'])
         if character is not None:
-            return character, is_generic_npc, matching_parts
-        return None, False, matching_parts
+            return character, matching_parts
+        return None, matching_parts
     
     def compare(self,db): # Compare this DB with another DB and return the differences - Useful for comparing a DB with a DB that has been patched, can be used to generate changelogs
         differences = []
@@ -542,9 +536,8 @@ class CharacterDB():
                 logging.info(f"Skipping character with no name: {character}")
                 continue
             diff = False
-            db_character, is_generic_npc, matching_parts = db.has_character(character)
+            db_character, matching_parts = db.has_character(character)
             match_type = None
-            character["is_generic_npc"] = is_generic_npc
             character["matching_parts"] = matching_parts
             if matching_parts["name"] and matching_parts["ref_id"] and matching_parts["base_id"]:
                 match_type = "exact_match"
@@ -576,9 +569,8 @@ class CharacterDB():
             if character['name'] == "nan" or character['name'] == "" or character['name'] == None:
                 continue
             diff = False
-            self_character, is_generic_npc, matching_parts = self.has_character(character)
+            self_character, matching_parts = self.has_character(character)
             match_type = None
-            character["is_generic_npc"] = is_generic_npc
             character["matching_parts"] = matching_parts
             if matching_parts["name"] and matching_parts["ref_id"] and matching_parts["base_id"]:
                 match_type = "exact_match"

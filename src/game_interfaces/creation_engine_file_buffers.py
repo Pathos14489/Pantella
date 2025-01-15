@@ -602,35 +602,26 @@ class GameInterface(BaseGameInterface):
 
         location = self.get_current_location(location) # Check if location has changed since last check
 
-        character_info, is_generic_npc, _ = self.conversation_manager.character_database.get_character(character_name, character_ref_id, character_base_id, character_in_game_race, character_in_game_gender, character_is_guard, character_is_ghost, in_game_voice_model=actor_voice_model_name, location=location) # get character info from character database
+        character_info, _ = self.conversation_manager.character_database.get_character(character_name, character_ref_id, character_base_id, character_in_game_race, character_in_game_gender, character_is_guard, character_is_ghost, in_game_voice_model=actor_voice_model_name, location=location) # get character info from character database
         # TODO: Improve character lookup to be more accurate and to include generating character stats inspired by their generic name for generic NPCs instead of leaving them generic.
         # (example: make a backstory for a Bandit because the NPC was named Bandit, then generate a real name, and background inspired by that vague name for use in-corversation)
         # try: # load character from skyrim_characters json directory 
         #     character_info = self.conversation_manager.character_database.named_index[character_name]
         #     logging.info(f"Found {character_name} in character database as a named NPC: {character_info['name']}")
-        #     is_generic_npc = False
         # except KeyError: # character not found
         #     try: # try searching by ID
         #         logging.info(f"Could not find {character_name} in character database. Searching by ID {character_id}...")
         #         character_info = self.conversation_manager.character_database.baseid_int_index[character_id]
-        #         is_generic_npc = False
         #     except KeyError:
         #         logging.info(f"NPC '{character_name}' could not be found in character database. If this is not a generic NPC, please ensure '{character_name}' exists in the CSV's 'name' column exactly as written here, and that there is a voice model associated with them.")
         #         character_info = self.load_unnamed_npc(character_name)
-        #         is_generic_npc = True
         if character_info == None:
             logging.error(f"Character {character_name} not found in character database.")
             if self.config.continue_on_missing_character:
-                logging.warn(f"Character {character_name} not found in character database. Using generic NPC data.")
+                logging.warn(f"Character {character_name} not found in character database. Create a new character for them, use a character generation enabled LLM, or set continue_on_missing_character to False in the config.")
                 character_info = self.load_unnamed_npc(character_name)
-                is_generic_npc = True
             else:
                 raise ValueError(f"Character {character_name} not found in character database.")
-        else:
-            is_generic_npc = False
-
-        if is_generic_npc:
-            logging.warn(f"Character {character_name} is a generic NPC! Please create a character entry for them in the character database to enable more features and a proper personality.")
 
 
         in_game_time = self.get_current_game_time() # Check if in-game time has changed since last check
@@ -665,7 +656,7 @@ class GameInterface(BaseGameInterface):
         logging.info(f'Actor relationship rank set to {actor_relationship_rank}')
         character_info['in_game_relationship_level'] = actor_relationship_rank
 
-        return character_info, location, in_game_time, is_generic_npc, player_name, player_race, player_gender, radiant_dialogue
+        return character_info, location, in_game_time, player_name, player_race, player_gender, radiant_dialogue
     
     def check_mic_status(self):
         """Check if the microphone is enabled in the MCM"""

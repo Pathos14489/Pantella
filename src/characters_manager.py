@@ -10,13 +10,18 @@ class CharacterDoesNotExist(Exception):
     pass
 
 class Characters:
+    """Characters Manager Class - Manages all active characters in the conversation"""
     def __init__(self, conversation_manager):
+        logging.info("Creating Characters Manager")
         self.active_characters = {}
         self.conversation_manager = conversation_manager
         self.config = self.conversation_manager.config
+        self.character_manager_class = character_manager.create_character_manager(self.config)
+        logging.info("Characters Manager created")
 
     @property
     def active_characters_list(self): # Returns a list of all active characters
+        """Return a list of all active characters"""
         characters = []
         for character in self.active_characters:
             characters.append(self.active_characters[character])
@@ -24,6 +29,7 @@ class Characters:
     
     @property
     def bios(self): # Returns a paragraph comprised of all active characters bios
+        """Return a paragraph comprised of all active characters bios"""
         bios = ""
         for character in self.active_characters_list:
             bios += character.bio
@@ -34,16 +40,19 @@ class Characters:
     
     @property
     def names(self): # Returns a list of all active characters names
+        """Return a list of all active characters names"""
         return [character.name for character in self.active_characters_list]
     
     @property
     def names_w_player(self): # Returns a list of all active characters names with the player's name included
+        """Return a list of all active characters names with the player's name included"""
         names = self.names
         names.append(self.conversation_manager.player_name)
         return names
     
     @property
     def relationship_summary(self): # Returns a paragraph comprised of all active characters relationship summaries
+        """Return a paragraph comprised of all active characters relationship summaries"""
         if len(self.active_characters) == 0:
             logging.warning("No active characters, returning empty relationship summary")
             return ""
@@ -64,6 +73,7 @@ class Characters:
 
     @property
     def prompt_style(self):
+        """Return the prompt style for the current conversation"""
         conversation_type = self.conversation_manager.get_conversation_type()
         prompt_style = self.config._prompt_style
         if conversation_type == "single_player_with_npc_prompt": # SingleNPCw/Player style context
@@ -79,6 +89,7 @@ class Characters:
     
     @property
     def language(self):
+        """Return the language for the current conversation"""
         conversation_type = self.conversation_manager.get_conversation_type()
         language = self.config._prompt_style['language']
         if conversation_type == "single_player_with_npc_prompt": # SingleNPCw/Player style context
@@ -88,6 +99,7 @@ class Characters:
         
     @property
     def replacement_dict(self): # Returns a dictionary of replacement values for the current context -- Dynamic Variables
+        """Return a dictionary of replacement values for the current context"""
         conversation_type = self.conversation_manager.get_conversation_type()
         if conversation_type == "single_player_with_npc": # TwoNPC no player style context
             logging.info("SingleNPCw/Player style context, returning replacement_dict from active character")
@@ -164,6 +176,7 @@ class Characters:
         return replacement_dict
 
     def render_game_event(self,line:str):
+        """Render a game event line using the language file"""
         try:
             if line.startswith("player<"):
                 line_2 = line.split("<",1)[1]
@@ -194,9 +207,11 @@ class Characters:
         return line
 
     def active_character_count(self): # Returns the number of active characters as an int
+        """Return the number of active characters as an int"""
         return len(self.active_characters)
     
     def get_raw_prompt(self):
+        """Return the current context for the given active characters as a string"""
         # prompt_style = self.conversation_manager.config._prompt_style["style"]
         # logging.info(prompt_style)
         # if len(self.active_characters) == 1 and self.conversation_manager.radiant_dialogue: # SingleNPC style context
@@ -220,6 +235,7 @@ class Characters:
             return ""
 
     def get_system_prompt(self): # Returns the current context for the given active characters as a string
+        """Return the current context for the given active characters as a string"""
         if len(self.active_characters) == 0:
             logging.warning("No active characters, returning empty context")
             return ""
@@ -230,35 +246,40 @@ class Characters:
         # logging.info("System Prompt: " + system_prompt)
         return system_prompt
 
-    def get_character(self, info, is_generic_npc=False):
-        character = character_manager.Character(self, info, is_generic_npc)
+    def get_character(self, info):
+        """Return a character object from the current character manager"""
+        character = self.character_manager_class(self, info)
         return character
     
     def add_message(self,msg):
+        """Add a message to all active characters"""
         for character in self.active_characters_list:
             character.add_message(msg)
     
     def remove_from_conversation(self, character):
+        """Remove a character from the conversation"""
         if character.name in self.active_characters:
             del self.active_characters[character.name]
         else:
             logging.warning(f"Character {character.name} not in active characters list, cannot remove from conversation.")
     
     def after_step(self):
-        """Perform a step in the memory manager - Some memory managers may need to perform some action every step"""
+        """Perform an after step in the memory manager - Some memory managers may need to perform some action every step"""
         for character in self.active_characters_list:
             character.after_step()
 
     def before_step(self):
-        """Perform a step in the memory manager - Some memory managers may need to perform some action every step"""
+        """Perform a before step in the memory manager - Some memory managers may need to perform some action every step"""
         for character in self.active_characters_list:
             character.after_step()
 
     def reached_conversation_limit(self):
+        """Perform an end of conversation step in the memory manager - Some memory managers may need to perform some action every step"""
         for character in self.active_characters_list:
             character.reached_conversation_limit()
 
     def get_memories(self):
+        """Return the memories for the current conversation"""
         memories = []
         random_character = random.choice(self.active_characters_list)
         name_insert = random_character.name
@@ -287,8 +308,9 @@ class Characters:
         })
         return memories
     
-    def add_character(self, character_info, is_generic_npc):
-        character = self.get_character(character_info, is_generic_npc)
+    def add_character(self, character_info):
+        """Add a character to the active characters list"""
+        character = self.get_character(character_info)
         self.active_characters[character.name] = character
         return character
     

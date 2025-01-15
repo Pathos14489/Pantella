@@ -102,7 +102,7 @@ class LLM(base_LLM): # Uses llama-cpp-python as the LLM inference engine
                     # input("Press Enter to exit.")
             
 
-    def generate_character(self, character_name, character_ref_id, character_base_id, character_in_game_race, character_in_game_gender, character_is_guard=False, character_is_ghost=False, in_game_voice_model=None, is_generic_npc=False, location=None):
+    def generate_character(self, character_name, character_ref_id, character_base_id, character_in_game_race, character_in_game_gender, character_is_guard=False, character_is_ghost=False, in_game_voice_model=None, location=None):
         """Generate a character based on the prompt provided"""
         if not self.character_generation_supported:
             logging.error(f"Character generation is not supported by llama-cpp-python. Please check that your model supports it and that it is enabled in config.json.")
@@ -174,7 +174,7 @@ class LLM(base_LLM): # Uses llama-cpp-python as the LLM inference engine
         if voice_model is not None:
             character.voice_model = voice_model
 
-        return character.get_chracter_info(character_ref_id, character_base_id, voice_model, is_generic_npc)
+        return character.get_chracter_info(character_ref_id, character_base_id, voice_model)
     
     def get_image_embed_from_bytes(self, image_bytes):
         data_array = array.array("B", image_bytes)

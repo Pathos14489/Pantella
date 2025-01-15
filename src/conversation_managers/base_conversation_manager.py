@@ -24,6 +24,7 @@ class BaseConversationManager:
         if self.config.ready:
             self.synthesizer = tts.create_Synthesizer(self) # Create Synthesizer object based on config - required by scripts for checking voice models, so is left out of self.initialize() intentionally
             self.character_database = character_db.CharacterDB(self) # Create Character Database Manager based on config - required by scripts for merging, patching and converting character databases, so is left out of self.initialize() intentionally
+            self.character_manager = characters_manager.Characters(self) # Reset character manager
         if self.config.linux_mode:
             with open("./version", "r") as f:
                 self.pantella_version = f.read().strip() # Read Pantella version from file
@@ -44,8 +45,8 @@ class BaseConversationManager:
         if initialize:
             self.current_in_game_time = self.game_interface.get_dummy_game_time() # Initialised at start of every conversation in await_and_setup_conversation()
 
-    def setup_character(self, character_info, is_generic_npc):
-        character = self.character_manager.add_character(character_info, is_generic_npc) # setup the character that the player has selected
+    def setup_character(self, character_info):
+        character = self.character_manager.add_character(character_info) # setup the character that the player has selected
         # self.synthesizer.change_voice(character)
         self.game_interface.active_character = character
         self.game_interface.character_num = 0
@@ -89,10 +90,6 @@ class BaseConversationManager:
             return 'single_npc_with_npc'
         else:
             return 'multi_npc'
-        
-    def create_new_character_manager(self):
-        """Create a new Character Manager object based on the current ConversationManager object"""
-        return characters_manager.Characters(self) # Create Character Manager object based on ConversationManager
 
     def initialize(self):
         self.thought_process = thought_process.create_thought_process(self) # Create Thought Process Manager based on config
@@ -144,7 +141,7 @@ class BaseConversationManager:
         """Get response from LLM and NPC(s) in the conversation"""
         return asyncio.run(self._get_response(force_speaker))
 
-    def await_and_setup_conversation(self):
+    async def await_and_setup_conversation(self):
         """Wait for the conversation to begin and setup the conversation"""
         logging.error("await_and_setup_conversation() not implemented in BaseConversationManager")
         raise NotImplementedError

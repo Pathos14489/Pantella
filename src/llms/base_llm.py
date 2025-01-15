@@ -175,7 +175,7 @@ class base_LLM():
                 raise Exception("PyGetWindow not installed, install PyGetWindow to use vision enabled LLM(Windows only).")
             self.get_game_window()
 
-    def generate_character(self, character_name, character_ref_id, character_base_id, character_in_game_race, character_in_game_gender, character_is_guard, character_is_ghost, in_game_voice_model, is_generic_npc, location):
+    def generate_character(self, character_name, character_ref_id, character_base_id, character_in_game_race, character_in_game_gender, character_is_guard, character_is_ghost, in_game_voice_model, location):
         """Generate a character based on the prompt provided"""
         raise NotImplementedError("Please override this method in your child class!")
         # Exmaple output: return {
@@ -190,7 +190,6 @@ class base_LLM():
         #     "ref_id": "",
         #     "base_id": "",
         #     "lang_override": "",
-        #     "is_generic_npc": False,
         #     "behavior_blacklist": [],
         #     "behavior_whitelist": [],
         #     "notes": "null"
@@ -1589,7 +1588,7 @@ class base_LLM():
                     continue
                 else:
                     # raise e # Enable this to stop the conversation if the LLM fails to generate a response so that the user can see the error
-                    self.conversation_manager.game_interface.active_character.say("I can't find the right words at the moment.")
+                    await self.conversation_manager.game_interface.active_character.say("I can't find the right words at the moment.")
                     logging.info('Retrying connection to API...')
                     retries -= 1
                     time.sleep(5)

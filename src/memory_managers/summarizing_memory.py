@@ -43,10 +43,6 @@ class MemoryManager(base_MemoryManager):
     
     def save_conversation(self, summary=None):
         """Save the conversation history and generate a summary of the conversation history if the token limit is reached."""
-        if self.character_manager.is_generic_npc:
-            logging.info('A summary will not be saved for this generic NPC.')
-            return None
-        
         summary_limit = round(self.conversation_manager.tokens_available*self.config.summary_limit_pct,0) # How many tokens the summary can be before it is summarized
 
         # save conversation history

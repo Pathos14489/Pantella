@@ -68,9 +68,8 @@ class ConversationManager(BaseConversationManager):
     #     bot_message = random.choice(["How are you?", "I love you", "I'm very hungry"])
     #     return bot_message
         
-    def await_and_setup_conversation(self): # wait for player to select an NPC and setup the conversation when outside of conversation
+    async def await_and_setup_conversation(self): # wait for player to select an NPC and setup the conversation when outside of conversation
         self.conversation_id = str(uuid.uuid4()) # Generate a unique ID for the conversation
-        self.character_manager = characters_manager.Characters(self) # Reset character manager
         self.conversation_step += 1
 
         logging.info('\nConversations not starting when you select an NPC? Post an issue on the GitHub page: https://github.com/Pathos14489/Pantella')
@@ -82,7 +81,7 @@ class ConversationManager(BaseConversationManager):
             logging.error(f"Error Loading Character<await_and_setup_conversation>: {e}")
         
         # setup the character that the player has selected
-        character = self.setup_character(character_info, False)
+        character = self.setup_character(character_info)
         
 
         self.messages = [] # clear messages
