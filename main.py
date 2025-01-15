@@ -6,6 +6,7 @@ import src.config_loader as config_loader
 import src.utils as utils
 import threading
 import traceback
+import asyncio
 try:
     import gradio as gr
     imported_gradio = True
@@ -109,7 +110,7 @@ elif config.debug_mode and not imported_gradio:
 	input("Press Enter to exit.")
 	raise Exception("Could not import gradio. Please install gradio to use the debug UI.")
 
-def conversation_loop():
+async def conversation_loop():
     def restart_manager():
         global conversation_manager
         logging.info("Restarting conversation manager")
@@ -120,7 +121,7 @@ def conversation_loop():
         random_voice = conversation_manager.synthesizer.voices()[0]
         conversation_manager.synthesizer._say("Pantella is ready to go.", random_voice)
     while True: # Main Conversation Loop - restarts when conversation ends
-        conversation_manager.await_and_setup_conversation() # wait for player to select an NPC and setup the conversation when outside of conversation
+        await conversation_manager.await_and_setup_conversation() # wait for player to select an NPC and setup the conversation when outside of conversation
         while conversation_manager.in_conversation and not conversation_manager.conversation_ended:
             conversation_manager.step() # step through conversation until conversation ends
             if conversation_manager.restart:
@@ -135,10 +136,10 @@ if config.ready:
         thread1 = threading.Thread(target=mem_gr_blocks.launch, kwargs={'share':config.share_debug_ui, 'server_port':config.debug_ui_port, "prevent_thread_lock":True})
         thread1.start()
         logging.info("Debug UI started -- WARNING: In Game Conversations will not work in Debug Mode, if you're trying to start a conversation and getting a bug in game, this is why. Turn debug mode off to talk to NPCs in game!")
-        conversation_loop()
+        asyncio.run(conversation_loop())
     else:
         thread1 = threading.Thread(target=config.host_config_server, args=(), daemon=True)
         thread1.start()
-        conversation_loop()
+        asyncio.run(conversation_loop())
 else:
     config.host_config_server()
