@@ -64,6 +64,31 @@ class Synthesizer(base_tts.base_Synthesizer):
             self._say("Ecks T T S is ready to go.",str(random_voice))
 
     @property
+    def speaker_wavs_folders(self):
+        if self.config.linux_mode:
+            speaker_wavs_folders = [
+                os.path.abspath(f"./data/voice_samples/")
+            ]
+        else:
+            speaker_wavs_folders = [
+                os.path.abspath(f".\\data\\voice_samples\\"),
+            ]
+        for addon_slug in self.config.addons: # Add the speakers folder from each addon to the list of speaker wavs folders
+            addon = self.config.addons[addon_slug]
+            if "speakers" in addon["addon_parts"]: 
+                if self.config.linux_mode:
+                    addon_speaker_wavs_folder = os.path.abspath(f"./addons/{addon_slug}/speakers/")
+                else:
+                    addon_speaker_wavs_folder = self.config.addons_dir + addon_slug + "\\speakers\\"
+                if os.path.exists(addon_speaker_wavs_folder):
+                    speaker_wavs_folders.append(addon_speaker_wavs_folder)
+                else:
+                    logging.error(f'speakers folder not found at: {addon_speaker_wavs_folder}')
+        # make all the paths absolute
+        speaker_wavs_folders = [os.path.abspath(folder) for folder in speaker_wavs_folders]
+        return speaker_wavs_folders
+    
+    @property
     def xtts_api_base_url(self):
         return self.config.xtts_api_base_url
     @property
