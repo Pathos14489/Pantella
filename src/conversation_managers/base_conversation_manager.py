@@ -21,9 +21,11 @@ class BaseConversationManager:
     def __init__(self, config, initialize=True):
         self.config = config
         self.config.conversation_manager = self
+        if initialize and self.config.ready:
+            self.pre_initialization()
         if self.config.ready:
-            self.synthesizer = tts.create_Synthesizer(self) # Create Synthesizer object based on config - required by scripts for checking voice models, so is left out of self.initialize() intentionally
-            self.character_database = character_db.CharacterDB(self) # Create Character Database Manager based on config - required by scripts for merging, patching and converting character databases, so is left out of self.initialize() intentionally
+            self.synthesizer = tts.create_Synthesizer(self) # Create Synthesizer object based on config - required by scripts for checking voice models, so is left out of self.pre_initialization() and self.post_initialization() intentionally
+            self.character_database = character_db.CharacterDB(self) # Create Character Database Manager based on config - required by scripts for merging, patching and converting character databases, so is left out of self.pre_initialization() and self.post_initialization() intentionally
             self.character_manager = characters_manager.Characters(self) # Reset character manager
         if self.config.linux_mode:
             with open("./version", "r") as f:
@@ -32,7 +34,7 @@ class BaseConversationManager:
             with open(".\\version", "r") as f:
                 self.pantella_version = f.read().strip() # Read Pantella version from file
         if initialize and self.config.ready:
-            self.initialize()
+            self.post_initialization()
             logging.info(f'Pantella v{self.pantella_version} Initialized')
         self.in_conversation = False # Whether or not the player is in a conversation
         self.conversation_ended = False # Whether or not the conversation has ended
@@ -91,13 +93,14 @@ class BaseConversationManager:
         else:
             return 'multi_npc'
 
-    def initialize(self):
+    def pre_initialization(self):
+        self.llm, self.tokenizer = language_models.create_LLM(self) # Create LLM and Tokenizer based on config
+
+    def post_initialization(self):
         self.thought_process = thought_process.create_thought_process(self) # Create Thought Process Manager based on config
         self.character_generator_schema = character_generator.create_generator_schema(self) # Create Character Manager based on config
-        self.llm, self.tokenizer = language_models.create_LLM(self) # Create LLM and Tokenizer based on config
         self.config.set_prompt_style(self.llm) # Set prompt based on LLM and config settings
         self.game_interface = game_interface.create_game_interface(self) # Create Game Interface based on config
-        # self.transcriber = stt.Transcriber(self)
         self.behavior_manager = behavior_manager.create_manager(self) # Create Behavior Manager based on config
         
     def get_context(self): # Returns the current context(in the form of a list of messages) for the given active characters in the ongoing conversation
@@ -127,7 +130,8 @@ class BaseConversationManager:
                 # input("Press enter to continue")
         return loggable_context
     
-    async def _get_response(self, force_speaker=None):
+    async def get_response(self, force_speaker=None):
+        """Get response from LLM and NPC(s) in the conversation"""
         sentence_queue = asyncio.Queue() # Create queue to hold sentences to be processed
         event = asyncio.Event() # Create event to signal when the response has been received
         event.set() # Set event to true to allow the first sentence to be processed
@@ -136,17 +140,13 @@ class BaseConversationManager:
             self.llm.process_response(sentence_queue, event, force_speaker=force_speaker),
             self.game_interface.send_response(sentence_queue, event)
         )
-    
-    def get_response(self, force_speaker=None):
-        """Get response from LLM and NPC(s) in the conversation"""
-        return asyncio.run(self._get_response(force_speaker))
 
     async def await_and_setup_conversation(self):
         """Wait for the conversation to begin and setup the conversation"""
         logging.error("await_and_setup_conversation() not implemented in BaseConversationManager")
         raise NotImplementedError
     
-    def step(self):
+    async def step(self):
         """Step through the conversation"""
         logging.error("step() not implemented in BaseConversationManager")
         raise NotImplementedError

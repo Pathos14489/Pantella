@@ -103,7 +103,7 @@ class ConversationManager(BaseConversationManager):
         self.in_conversation = True
         self.conversation_ended = False
         
-    def step(self): # process player input and NPC response until conversation ends at each step of the conversation
+    async def step(self): # process player input and NPC response until conversation ends at each step of the conversation
         self.conversation_step += 1
         if self.in_conversation == False:
             logging.info('Cannot step through conversation when not in conversation')
@@ -150,7 +150,7 @@ class ConversationManager(BaseConversationManager):
                 self.end_conversation(goodbye_target_character) # end conversation in game with current active character, and if no active characters are left in the conversation, end it entirely
         
         if (transcribed_text is not None and transcribed_text != '') and not self.conversation_ended and self.in_conversation: # if player input is not empty and conversation has not ended, get response from NPC
-            self.get_response()
+            await self.get_response()
         
         logging.info(f"Response Generated")
         

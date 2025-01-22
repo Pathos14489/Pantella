@@ -143,9 +143,9 @@ class ConversationManager(BaseConversationManager):
                 # Conversation Start Type Handling
                 logging.config(f"Conversation Start Type: {self.config.conversation_start_type}")
                 if self.config.conversation_start_type == "always_llm_choice":
-                    await self._get_response()
+                    await self.get_response()
                 elif self.config.conversation_start_type == "always_force_npc_greeting":
-                    await self._get_response(character)
+                    await self.get_response(character)
                 elif self.config.conversation_start_type == "always_player_greeting":
                     self.in_conversation = True
                     self.conversation_ended = False
@@ -153,21 +153,21 @@ class ConversationManager(BaseConversationManager):
                     greeting = random.choice(prompt_style["language"]["predetermined_player_greetings"])
                     greeting.replace("[character]", character.name)
                     self.new_message({'role': self.config.user_name, 'name':"[player]", 'content': greeting})
-                    await self._get_response()
+                    await self.get_response()
                 elif self.config.conversation_start_type == "predetermined_npc_greeting":
                     greeting = random.choice(character.language['predetermined_npc_greetings'])
                     await character.say(greeting)
-                    await self._get_response()
+                    await self.get_response()
                 elif self.config.conversation_start_type == "predetermined_npc_greeting_for_first_meeting_then_llm_choice":
                     if len(character.memory_manager.get_all_messages()) == 0:
                         greeting = random.choice(character.language['predetermined_npc_greetings'])
                         await character.say(greeting)
-                    await self._get_response()
+                    await self.get_response()
                 elif self.config.conversation_start_type == "force_npc_greeting_for_first_meeting_then_llm_choice":
                     if len(character.memory_manager.get_all_messages()) == 0:
-                        await self._get_response(character)
+                        await self.get_response(character)
                     else:
-                        await self._get_response()
+                        await self.get_response()
                 else:
                     raise Exception(f"Invalid conversation_start_type: {self.config.conversation_start_type}")
             except Exception as e: # if error, close Pantella
@@ -191,7 +191,7 @@ class ConversationManager(BaseConversationManager):
         self.in_conversation = True
         self.conversation_ended = False
 
-    def step(self): # process player input and NPC response until conversation ends at each step of the conversation
+    async def step(self): # process player input and NPC response until conversation ends at each step of the conversation
         self.conversation_step += 1
         if self.in_conversation == False:
             logging.info('Cannot step through conversation when not in conversation')
@@ -276,7 +276,7 @@ class ConversationManager(BaseConversationManager):
 
         
         if generate_this_step and ((transcribed_text is not None and transcribed_text != '') or (self.radiant_dialogue and self.character_manager.active_character_count() > 1)) and not self.conversation_ended and self.in_conversation: # if player input is not empty and conversation has not ended, get response from NPC
-            self.get_response()
+            await self.get_response()
         
         # if npc ended conversation
         if self.conversation_ended and self.in_conversation:
