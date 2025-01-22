@@ -1390,6 +1390,7 @@ class base_LLM():
                             sentence_words = sentence.split(" ")
                             new_sentence = ""
                             for word in sentence_words: # Rebuild the sentence while checking for behavior keywords(or pseudo-keywords and removing them when found)
+                                word.replace("\"", "").replace("'", "").replace("“", "").replace("”", "").replace("‘", "").replace("’", "").strip()
                                 if self.behavior_style["prefix"] in word and self.behavior_style["suffix"] in word:
                                     new_behaviors = self.conversation_manager.behavior_manager.evaluate(word, self.conversation_manager.game_interface.active_character, sentence) # check if the sentence contains any behavior keywords for NPCs
                                     if len(new_behaviors) > 0:
@@ -1483,7 +1484,7 @@ class base_LLM():
                             voice_line = re.sub(r'\([^)]*\)', '', voice_line)
                             if not voice_line.strip() == "":
                                 logging.info(f"Voice line: \"{voice_line}\" is definitely not empty.")
-                                self.conversation_manager.behavior_manager.pre_sentence_evaluate(self.conversation_manager.game_interface.active_character, sentence,) # check if the sentence contains any behavior keywords for NPCs
+                                self.conversation_manager.behavior_manager.pre_sentence_evaluate(self.conversation_manager.game_interface.active_character, sentence) # check if the sentence contains any behavior keywords for NPCs
                                 if was_typing_roleplay: # if the asterisk is open, then the narrator is speaking
                                     time.sleep(self.config.narrator_delay)
                                     voice_lines.append((voice_line.strip(), "narrator"))
@@ -1610,7 +1611,29 @@ class base_LLM():
 
         await sentence_queue.put(None) # Mark the end of the response for self.conversation_manager.game_interface.send_response() and self.conversation_manager.game_interface.send_response()
 
-        full_reply = full_reply.strip()
+        raw_reply = raw_reply.strip()
+        
+        raw_reply_found_behaviors = []
+        if self.behavior_style["prefix"] in raw_reply:
+            raw_reply_words = raw_reply.split(" ")
+            new_raw_reply = ""
+            for word in raw_reply_words: # Rebuild the sentence while checking for behavior keywords(or pseudo-keywords and removing them when found)
+                word.replace("\"", "").replace("'", "").replace("“", "").replace("”", "").replace("‘", "").replace("’", "").strip()
+                if self.behavior_style["prefix"] in word and self.behavior_style["suffix"] in word:
+                    logging.info(f"Possible behavior keyword found in full reply: {word}")
+                    new_behaviors = self.conversation_manager.behavior_manager.evaluate(word, self.conversation_manager.game_interface.active_character, raw_reply) # check if the sentence contains any behavior keywords for NPCs
+                    if len(new_behaviors) > 0:
+                        raw_reply_found_behaviors.extend(new_behaviors)
+                        logging.info(f"Behaviors triggered: {new_behaviors}")
+                        new_raw_reply += word + " " # Only add the word back if it was a real behavior keyword
+                # elif self.behavior_style["prefix"] in word and not self.behavior_style["suffix"] in word: # if the word contains the prefix but not the suffix, then the suffix is probably in the next word, which is likely a format break.
+                #     break
+                else:
+                    new_raw_reply += word + " "
+            raw_reply = new_raw_reply.strip()
+        if len(raw_reply_found_behaviors) != 0:
+            for behavior in raw_reply_found_behaviors:
+                logging.info(f"Behavior(s) triggered: {behavior.keyword}")
         
         # if full_reply.endswith("*") and full_reply.count("*") == 1: # TODO: Figure out the reason I need this bandaid solution... if only one asterisk at the end, remove it.
         #     full_reply = full_reply[:-1].strip()

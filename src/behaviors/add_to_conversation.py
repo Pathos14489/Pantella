@@ -1,7 +1,7 @@
 from src.logging import logging
 import src.behaviors.base_behavior as base_behavior
 
-class add_to_conversation(base_behavior.BaseBehavior):
+class Behavior(base_behavior.BaseBehavior):
     def __init__(self, manager):
         super().__init__(manager)
         self.keyword = "AddToConversation"

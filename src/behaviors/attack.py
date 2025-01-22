@@ -1,7 +1,7 @@
 from src.logging import logging
 import src.behaviors.base_behavior as base_behavior
 
-class attack(base_behavior.BaseBehavior):
+class Behavior(base_behavior.BaseBehavior):
     def __init__(self, manager):
         super().__init__(manager)
         self.keyword = "Attack"

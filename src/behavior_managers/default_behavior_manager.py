@@ -25,23 +25,25 @@ class BehaviorManager():
 
         logging.info(f"Loaded default behavior manager with {len(self.behaviors)} behaviors")
 
-    def load_behaviors(self,behaviors_dir, addon = None):
+    def load_behaviors(self,behaviors_dir, addon_slug = None):
         for filename in os.listdir(behaviors_dir):
             if filename == "base_behavior.py":
                 continue
             if filename.endswith(".py") and not filename.startswith("__"):
                 # logging.info("Loading behavior " + filename)
                 behavior_name = filename.split(".py")[0]
-                if addon is None:
-                    behavior = __import__("src.behaviors." + behavior_name, fromlist=[behavior_name])
+                if addon_slug is None:
+                    behavior = __import__("src.behaviors." + behavior_name, fromlist=["Behavior"])
+                    print(behavior)
                 else:
-                    behavior = __import__("addons." + addon + ".behaviors." + behavior_name, fromlist=[behavior_name])
-                behavior = getattr(behavior, behavior_name)(self)
+                    behavior = __import__("addons." + addon_slug + ".behaviors." + behavior_name, fromlist=["Behavior"])
+                    print(behavior)
+                behavior = getattr(behavior, "Behavior")(self)
                 # logging.info(behavior)
                 if self.conversation_manager.config.game_id in behavior.valid_games:
-                    logging.config(f"Behavior {behavior_name} supported by game '{self.conversation_manager.config.game_id}'")
+                    logging.config(f"Behavior '{behavior_name}' supported by game '{self.conversation_manager.config.game_id}'")
                 else:
-                    logging.config(f"Behavior {behavior_name} not supported by game '{self.conversation_manager.config.game_id}'")
+                    logging.config(f"Behavior '{behavior_name}' not supported by game '{self.conversation_manager.config.game_id}'")
                     continue
                 if behavior._run(False) == "BASEBEHAVIOR":
                     logging.error("BaseBehavior run() called for " + behavior_name + ", this should be overwritten by the child class!")
