@@ -19,7 +19,7 @@ class BehaviorManager():
         logging.info("Loading addon behaviors...")
         for addon_slug in self.conversation_manager.config.addons:
             addon = self.conversation_manager.config.addons[addon_slug]
-            if addon["enabled"]:
+            if addon["enabled"] and "behaviors" in addon["addon_parts"]:
                 logging.info(f"Loading behaviors from addon '{addon_slug}'...")
                 self.load_behaviors(os.path.abspath(os.path.join(self.conversation_manager.config.addons_dir,addon_slug,"behaviors")),addon_slug)
 
