@@ -146,8 +146,31 @@ class Logger:
         self._output(self.format.format(**message), 'SUCCESS')
 
     def warn(self, *args):
-        self.warning(*args)
+        # get the caller's stack frame and extract its file path
+        frame_info = inspect.stack()[1]
+        filepath = frame_info[1]  # in python 3.5+, you can use frame_info.filename
+        del frame_info  # drop the reference to the stack frame to avoid reference cycles
+
+        # make the path absolute (optional)
+        filepath = os.path.relpath(filepath)
+        if filepath in self.block_logs_from:
+            return
+        line = inspect.currentframe().f_back.f_lineno
+        message = self.get_message_object(*args, level='WARNING', filepath=filepath+":"+str(line))
+        self._output(self.format.format(**message), 'WARNING')
+        
     def out(self, *args):
-        self.output(*args)
+        # get the caller's stack frame and extract its file path
+        frame_info = inspect.stack()[1]
+        filepath = frame_info[1]  # in python 3.5+, you can use frame_info.filename
+        del frame_info  # drop the reference to the stack frame to avoid reference cycles
+
+        # make the path absolute (optional)
+        filepath = os.path.relpath(filepath)
+        if filepath in self.block_logs_from:
+            return
+        line = inspect.currentframe().f_back.f_lineno
+        message = self.get_message_object(*args, level='OUTPUT', filepath=filepath+":"+str(line))
+        self._output(self.format.format(**message), 'OUTPUT')
 
 logging = Logger() # Create a logger object to be used throughout the program
