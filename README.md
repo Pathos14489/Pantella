@@ -78,6 +78,8 @@ Pantella additionally has completely reworked generation processing to basically
 ### Add-On System
 And Pantella also just got a new add-on system to let other mod authors create self contained patches for Pantella to add voice models, character entries, support for game events for mods and new behaviors without having to tinker around in the source much.
 
+Example Addon(By popular demand): (PantellaSL)[https://github.com/Pathos14489/PantellaSL] adds SexLab integration and operates as a demonstration of how to add support for another mod as an addon to Pantella.
+
 ### Modular Design
 Almost every part of Pantella, including the inference engines(LLM backends), the TTS backends, the memory system, the behavior system and even the game_interface which is used to interact with the game, is broken out into its own module that can easily be replaced with a new module. This makes it easy to add new features to Pantella without having to redo any of the work for the parts you don't want to replace and is the main reason I'm able to add so many new features so quickly. Want to add support for another game? Replace the game_inferface and get the right characters in your characters directory and there you go. New inference engine just dropped and I haven't had time to add it? Adding it yourself from documentation isn't that hard and I'd love to help walk you through how I'd do it if you get stuck(plus if it works, you should PR it <3).
 
