@@ -3,6 +3,8 @@ from src.logging import logging
 import src.character_manager as character_manager # Character class
 import src.utils as utils
 import random
+import os
+import importlib
 logging.info("Imported required libraries in characters_manager.py")
 
 class CharacterDoesNotExist(Exception):
@@ -178,32 +180,79 @@ class Characters:
     def render_game_event(self,line:str):
         """Render a game event line using the language file"""
         try:
-            if line.startswith("player<"):
-                line_2 = line.split("<",1)[1]
-                game_event_title, args_strings  = line_2.split(">",1)
-                args = args_strings.split("|")
-                args_dict = {}
-                for arg in args:
-                    key, value = arg.split("=")
-                    args_dict[key] = value
-                line = self.language["game_events"]["player"][game_event_title].format(**args_dict)
-            elif line.startswith("npc<"):
-                line_2 = line.split("<",1)[1]
-                game_event_title, args_strings  = line_2.split(">",1)
-                args = args_strings.split("|")
-                args_dict = {}
-                for arg in args:
-                    args = arg.split("=")
-                    if len(args) == 1:
-                        key = args[0]
-                        value = ""
-                    else:
-                        key, value = arg.split("=")
-                    args_dict[key] = value
-                line = self.language["game_events"]["npc"][game_event_title].format(**args_dict)
+            logging.info(f"Rendering game event: {line}")
+            line_type, line_2 = line.split("<",1)
+            game_event_title, args_string  = line_2.split(">",1)
+            args = args_string.split("|")
+            args_dict = {}
+            for arg in args:
+                key, value = arg.split("=")
+                if value.lower() == "true":
+                    value = True
+                elif value.lower() == "false":
+                    value = False
+                elif value.isdigit():
+                    value = int(value)
+                elif "," in value:
+                    value = value.split(",")
+                    new_value = []
+                    for v in value:
+                        if v.lower() == "true":
+                            new_value.append(True)
+                        elif v.lower() == "false":
+                            new_value.append(False)
+                        elif v.isdigit():
+                            new_value.append(int(v))
+                        else:
+                            new_value.append(v)
+                args_dict[key] = value
+            logging.info(f"Lane Type: {line_type} Game Event Title: {game_event_title} - Args: {args_dict}")
+            found_renderer = False
+            if line_type in self.language["game_events"] and game_event_title in self.language["game_events"][line_type]: # Try to use prompt_style.json from default prompt style
+                logging.info(f"Using prompt style from default prompt style for line type: {line_type} - {game_event_title}")
+                line = self.language["game_events"][line_type][game_event_title].format(**args_dict)
+                logging.info(f"Rendered game event: {line}")
+                found_renderer = True
+            if not found_renderer:
+                logging.info(f"Could not find renderer for game event type in default prompt style: {line_type}")
+                for addon_slug in self.conversation_manager.config.addons: # Try to use prompt_style.json from addons
+                    logging.info(f"Checking for prompt style in addon: {addon_slug}")
+                    addon = self.conversation_manager.config.get_addon(addon_slug)
+                    if addon["enabled"] and "prompt_style.json" in addon["addon_parts"]:
+                        if line_type in addon["prompt_style"]["game_events"] and game_event_title in addon["prompt_style"]["game_events"][line_type]:
+                            logging.info(f"Using prompt style from addon '{addon_slug}' for line type: {line_type} - {game_event_title}")
+                            return addon["prompt_style"]["game_events"][line_type][game_event_title].format(**args_dict)
+            logging.info(f"Could not find renderer for game event type in any addon prompt style: {line_type}")
+            for addon_slug in self.conversation_manager.config.addons: # Try to use game_event_renderers from addons
+                import_path = "addons." + addon_slug + ".game_event_renderers."+line_type+"."+game_event_title
+                logging.info(f"Checking for game event renderer in addon '{addon_slug}': {import_path}")
+                addon = self.conversation_manager.config.get_addon(addon_slug)
+                if addon["enabled"] and "game_event_renderers" in addon["addon_parts"]:
+                    logging.info(f"Addon '{addon_slug}' has game_event_renderers")
+                    game_event_renderers_path = addon["install_path"] + "/game_event_renderers/" + line_type
+                    logging.info("Checking for game event renderers in: "+game_event_renderers_path + "/"+game_event_title+".py")
+                    if os.path.exists(game_event_renderers_path + "/"+game_event_title+".py"):
+                        logging.info(f"Using game event renderer from addon '{addon_slug}' for line type: {line_type} - {game_event_title}")
+                        game_event_renderer = importlib.import_module("addons." + addon_slug + ".game_event_renderers." + line_type + "." + game_event_title)
+                        logging.info(game_event_renderer)
+                        return game_event_renderer.render(line_type, game_event_title, args_dict, line)
+            logging.info(f"Could not find renderer for game event type in any addon")
+            for addon_slug in self.conversation_manager.config.addons: # Try to use default game_event_renderers from addons
+                import_path = "addons." + addon_slug + ".game_event_renderers."+line_type+".default"
+                logging.info(f"Checking for default game event renderer: {import_path}")
+                addon = self.conversation_manager.config.get_addon(addon_slug)
+                game_event_renderers_path = addon["install_path"] + f"/game_event_renderers/{line_type}/default.py"
+                logging.info(f"Checking for default game event renderer in: {game_event_renderers_path}")
+                if addon["enabled"] and "game_event_renderers" in addon["addon_parts"] and os.path.exists(game_event_renderers_path):
+                    logging.info(f"Using default game event renderer from addon '{addon_slug}' for line type: {line_type} - {game_event_title} - default.py")
+                    game_event_renderer = importlib.import_module(import_path)
+                    logging.info(game_event_renderer)
+                    return game_event_renderer.render(line_type, game_event_title, args_dict, line)
+            logging.warning(f"Could not find renderer for game event type: {line_type}")
         except Exception as e:
             logging.error(f"Error rendering game event: {line} - {e}")
-            raise e
+            if not self.config.use_game_event_lines_as_is_if_cannot_parse:
+                raise e
         return line
 
     def active_character_count(self): # Returns the number of active characters as an int

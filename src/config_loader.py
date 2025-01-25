@@ -152,7 +152,7 @@ class ConfigLoader:
         prompt_styles_dir = os.path.join(os.path.dirname(__file__), "../prompt_styles/")
         for file in os.listdir(prompt_styles_dir):
             if file.endswith('.json'):
-                with open(f'{prompt_styles_dir}/{file}') as f:
+                with open(f'{prompt_styles_dir}/{file}', encoding='utf-8') as f:
                     slug = file.split('.')[0]
                     self._raw_prompt_styles[slug] = json.load(f)
                     self.prompt_styles[slug] = self._raw_prompt_styles[slug]
@@ -168,6 +168,9 @@ class ConfigLoader:
             "behaviors",
             "characters",
             "xtts_voice_latents",
+            "metadata.json",
+            "prompt_style.json",
+            "game_event_renderers",
         ]
         if os.path.exists(self.addons_dir):
             for addon_slug in os.listdir(self.addons_dir):
@@ -187,11 +190,12 @@ class ConfigLoader:
                         self.addons[addon_slug]["slug"] = addon_slug
                         self.addons[addon_slug]["addon_parts"] = []
                         for addon_part in os.listdir(addon_path):
-                            if os.path.isdir(os.path.join(addon_path, addon_part)):
-                                if addon_part not in valid_addon_parts:
-                                    logging.warn(f"Addon {addon_slug} has an invalid addon part: {addon_part}. Skipping addon.")
-                                    continue
-                                self.addons[addon_slug]["addon_parts"].append(addon_part)
+                            if addon_part not in valid_addon_parts:
+                                logging.warn(f"Addon {addon_slug} has an invalid addon part: {addon_part}. Skipping invalid addon part...")
+                                continue
+                            if addon_part == "prompt_style.json":
+                                self.addons[addon_slug]["prompt_style"] = json.load(open(os.path.join(addon_path, addon_part))) # Load the prompt style for the addon
+                            self.addons[addon_slug]["addon_parts"].append(addon_part)
                         logging.config(f"Loaded addon {addon_slug} with metadata:", json.dumps(metadata, indent=4))
                     else:
                         logging.error(f"Addon {addon_slug} does not have a metadata.json file. Skipping addon.")
@@ -202,6 +206,14 @@ class ConfigLoader:
             input("Press enter to continue...")
             raise ValueError(f"Addons directory {self.addons_dir} does not exist. Please set a valid addons directory in the config file.")
         logging.config("Loaded addons")
+
+    def get_addon(self, addon_slug):
+        """Get the addon by the addon slug"""
+        if addon_slug in self.addons:
+            return self.addons[addon_slug]
+        else:
+            logging.error(f"Addon {addon_slug} not found in addons directory.")
+            return None
 
     def get_behavior_styles(self):
         """Get the behavior styles from the behavior_styles directory"""
@@ -705,6 +717,8 @@ class ConfigLoader:
                 "continue_on_missing_character": False,
                 "continue_on_llm_api_error": True,
                 "continue_on_failure_to_send_audio_to_game_interface": False,
+                "must_generate_a_sentence": False,
+                "use_game_event_lines_as_is_if_cannot_parse": True,
                 "bad_author_retries": 5,
                 "retries": 3,
                 "system_loop": 3,
@@ -1026,6 +1040,8 @@ class ConfigLoader:
                 "continue_on_missing_character": self.continue_on_missing_character,
                 "continue_on_llm_api_error": self.continue_on_llm_api_error,
                 "continue_on_failure_to_send_audio_to_game_interface": self.continue_on_failure_to_send_audio_to_game_interface,
+                "must_generate_a_sentence": self.must_generate_a_sentence,
+                "use_game_event_lines_as_is_if_cannot_parse": self.use_game_event_lines_as_is_if_cannot_parse,
                 "bad_author_retries": self.bad_author_retries,
                 "retries": self.retries,
                 "system_loop": self.system_loop,
