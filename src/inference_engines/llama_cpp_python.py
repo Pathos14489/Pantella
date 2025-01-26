@@ -4,7 +4,7 @@ import ctypes
 import array
 import numpy as np
 import io
-from src.llms.base_llm import base_LLM, load_image, TestCoT, get_schema_description
+from src.inference_engines.base_llm import base_LLM, load_image, TestCoT, get_schema_description
 import src.tokenizers.base_tokenizer as tokenizer
 from src.logging import logging, time
 import traceback

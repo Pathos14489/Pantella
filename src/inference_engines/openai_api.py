@@ -1,7 +1,7 @@
 print("Importing openai_api.py")
 from src.logging import logging, time
 import src.utils as utils
-from src.llms.base_llm import base_LLM, TestCoT, get_schema_description
+from src.inference_engines.base_llm import base_LLM, TestCoT, get_schema_description
 import random
 import traceback
 import os

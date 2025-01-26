@@ -1,7 +1,7 @@
 print("Importing transformers.py...")
 from src.logging import logging, time
 import src.utils as utils
-import src.llms.base_llm as base_LLM
+import src.inference_engines.base_llm as base_LLM
 import src.tokenizers.base_tokenizer as tokenizer
 from threading import Thread
 import traceback

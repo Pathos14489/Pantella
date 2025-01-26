@@ -835,7 +835,7 @@ class base_LLM():
             response_json = {}
             last_diff_json = {}
             for chunk in self.acreate(self.get_context(), message_prefix=message_prefix, force_speaker=force_speaker):
-                # logging.info(f"Raw Chunk: {chunk}")
+                # logging.debug(f"Raw Chunk:",chunk)
                 formatted_chunk = self.format_content(chunk)
                 raw_response += formatted_chunk
 
@@ -993,6 +993,7 @@ class base_LLM():
         else:
             print("Generating normal response...")
             for chunk in self.acreate(self.get_context(), message_prefix=message_prefix, force_speaker=force_speaker):
+                # logging.debug(f"Raw Chunk:",chunk)
                 yield chunk
         
     def format_content(self, chunk):

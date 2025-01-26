@@ -19,7 +19,7 @@ for file in os.listdir(os.path.join(os.path.dirname(__file__), "llms/")):
             continue
         logging.info(f"Importing {module_name} from src.llms")
         if module_name != "base_llm":
-            module = importlib.import_module(f"src.llms.{module_name}")
+            module = importlib.import_module(f"src.inference_engines.{module_name}")
             LLM_Types[module.inference_engine_name] = module    
 LLM_Types["default"] = LLM_Types[default]
 logging.info("Imported all LLMs to LLM_Types, ready to create a LLM object!")
