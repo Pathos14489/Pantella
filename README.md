@@ -13,6 +13,8 @@ Pantella is a fork of the popular Skyrim/Fallout mod Mantella, which allows you 
 - Vision support for vision based LLMs, both local and cloud based
 - Fully playable in Skyrim VR / SE / AE
 
+Documentation here: [Pantella Documentation](https://github.com/Pathos14489/Pantella/wiki)
+
 # Table of Contents
 - [Preface - "What's different from Mantella?"](#preface---whats-different-from-mantella)
 	- [ChromaDB Memory Manager](#chromadb-memory-manager)
