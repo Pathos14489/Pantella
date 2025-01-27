@@ -119,7 +119,7 @@ class ConversationManager(BaseConversationManager):
         if not self.conversation_ended: # check if conversation has ended, if it's not, get next player input
             logging.info('Getting player response...')
             
-            transcribed_text = self.game_interface.get_player_input() # get player input
+            transcribed_text = self.game_interface.get_player_response() # get player input
             self.behavior_manager.run_player_behaviors(transcribed_text) # run player behaviors
             transcript_cleaned = utils.clean_text(transcribed_text)
             self.new_message({'role': self.config.user_name, 'name':"[player]", 'content': transcribed_text}) # add player input to messages

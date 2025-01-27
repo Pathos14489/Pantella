@@ -167,7 +167,7 @@ class ConfigLoader:
         valid_addon_parts = [
             "behaviors",
             "characters",
-            "xtts_voice_latents",
+            "voice_samples",
             "metadata.json",
             "prompt_style.json",
             "game_event_renderers",

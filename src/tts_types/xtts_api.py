@@ -119,12 +119,12 @@ class Synthesizer(base_tts.base_Synthesizer):
         ]
         for addon_slug in self.config.addons:
             addon = self.config.addons[addon_slug]
-            if "xtts_voice_latents" in addon["addon_parts"]:
-                addon_latents_folder = self.config.addons_dir + addon_slug + "\\xtts_voice_latents\\"
+            if "voice_samples" in addon["addon_parts"]:
+                addon_latents_folder = self.config.addons_dir + addon_slug + "\\voice_samples\\"
                 if os.path.exists(addon_latents_folder):
                     voice_latent_folders.append(addon_latents_folder)
                 else:
-                    logging.error(f'xtts_voice_latents folder not found at: {addon_latents_folder}')
+                    logging.error(f'voice_samples folder not found at: {addon_latents_folder}')
         # make all the paths absolute
         return [os.path.abspath(folder) for folder in voice_latent_folders]
 

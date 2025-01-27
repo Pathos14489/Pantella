@@ -52,3 +52,8 @@ class base_Transcriber:
         self.initialized = False
         del self.recognizer
         del self.microphone
+
+    def recognize_input(self, possible_names_list):
+        """Gets input from the microphone and returns the transcript"""
+        logging.warning("Recognize input method not implemented in base_Transcriber. Please use a subclass of base_Transcriber. If you're adding a new STT type, you must implement this method.")
+        raise NotImplementedError

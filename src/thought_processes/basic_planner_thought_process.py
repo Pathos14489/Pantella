@@ -1,7 +1,6 @@
 print("Importing basic_planner_thought_process.py")
 from src.logging import logging
 from pydantic import BaseModel, Field
-from typing import List, Literal, Optional
 from src.thought_processes.branching_thought_process import BranchingThoughts, Question
 logging.info("Imported required libraries in basic_planner_thought_process.py")
 

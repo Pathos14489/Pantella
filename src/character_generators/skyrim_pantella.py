@@ -7,7 +7,6 @@ logging.info("Imported required libraries in simple_generator.py")
 generator_name = "skyrim_pantella"
 valid_games = ["skyrim","skyrimvr"]
 
-# Thought Process
 class Character(BaseModel):
     """Skyrim Character Schema - Uses Skyrim Stats, Stats are all 0-100"""
     name: str = Field(...,min_length=1)

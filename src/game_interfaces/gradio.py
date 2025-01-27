@@ -152,7 +152,7 @@ class GameInterface(BaseGameInterface):
         history.append((player_input, bot_response))
         return "", history, self.bot_response_audio
         
-    def get_player_input(self):
+    def get_player_response(self):
         got_player_input = False
         while not got_player_input:
             try:

@@ -7,7 +7,6 @@ from pathlib import Path
 import soundfile as sf
 import time
 import numpy as np
-import random
 try:
     logging.info("Trying to import winsound")
     import winsound

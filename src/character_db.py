@@ -642,7 +642,6 @@ class CharacterDB():
             logging.error(f"Could not save character database. Invalid type '{type}'.")
             raise ValueError
         
-        
     @property
     def male_voice_models(self):
         valid = {}

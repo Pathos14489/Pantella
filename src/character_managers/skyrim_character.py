@@ -1,11 +1,11 @@
-print("Loading character_manager.py")
+print("Loading skyrim_character.py")
 from src.logging import logging
 import os
 import src.memory_manager as mm
 import json
 import random
 from src.character_managers.base_character import base_Character
-logging.info("Imported required libraries in character_manager.py")
+logging.info("Imported required libraries in skyrim_character.py")
 
 manager_slug = "skyrim"
 valid_games = ["skyrim","skyrimvr"]

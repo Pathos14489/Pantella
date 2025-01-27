@@ -1,10 +1,10 @@
-print("Loading character_manager.py")
+print("Loading base_character.py")
 from src.logging import logging
 import os
 import src.memory_manager as mm
 import json
 import random
-logging.info("Imported required libraries in character_manager.py")
+logging.info("Imported required libraries in base_character.py")
 
 manager_slug = "base"
 valid_games = ["fallout4"]
