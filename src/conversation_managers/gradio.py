@@ -71,7 +71,7 @@ class ConversationManager(BaseConversationManager):
     async def await_and_setup_conversation(self): # wait for player to select an NPC and setup the conversation when outside of conversation
         self.conversation_id = str(uuid.uuid4()) # Generate a unique ID for the conversation
         self.conversation_step += 1
-
+        self.character_manager = characters_manager.Characters(self) # Reset character manager
         logging.info('\nConversations not starting when you select an NPC? Post an issue on the GitHub page: https://github.com/Pathos14489/Pantella')
         logging.info('\nWaiting for player to select an NPC...')
         try: # load character info, location and other gamestate data when data is available - Starts watching the _pantella_ files in the Skyrim folder and waits for the player to select an NPC

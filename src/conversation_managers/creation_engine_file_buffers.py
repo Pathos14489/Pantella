@@ -102,6 +102,7 @@ class ConversationManager(BaseConversationManager):
         self.game_interface.reset_game_info() # clear _pantella_ files in Skyrim folder
 
         self.conversation_step += 1
+        self.character_manager = characters_manager.Characters(self) # Reset character manager
 
         logging.info('Conversations not starting when you select an NPC? Post an issue on the GitHub page: https://github.com/Pathos14489/Pantella Or (if you want quick responses for any issues) the Discord: https://discord.gg/M7Zw8mBY6r')
         logging.info('Waiting for player to select an NPC...')
