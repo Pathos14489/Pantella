@@ -8,7 +8,7 @@ class base_Tokenizer(): # Tokenizes(only availble for counting the tokens in a s
         # Prommpt Parsing Stuff
         # self.BOS_token = self.config.BOS_token # Beginning of string token
         # self.EOS_token = self.config.EOS_token # End of string token
-        # self.role_seperator = self.config.role_seperator # separates the role from the name
+        # self.role_separator = self.config.role_separator # separates the role from the name
         # self.message_signifier = self.config.message_signifier # Signifies the start of a message
         # self.message_separator = self.config.message_separator # separates messages
         # self.message_format = self.config.message_format # Format of a message. A string of messages formatted like this is what is sent to the language model, typically following by the start of a message from the assistant to generate a response
@@ -22,8 +22,8 @@ class base_Tokenizer(): # Tokenizes(only availble for counting the tokens in a s
         return self.config.EOS_token
 
     @property
-    def role_seperator(self):
-        return self.config.role_seperator
+    def role_separator(self):
+        return self.config.role_separator
     
     @property
     def message_signifier(self):
@@ -60,17 +60,17 @@ class base_Tokenizer(): # Tokenizes(only availble for counting the tokens in a s
         if not name:
             name = ""
             msg_sig = ""
-        role_sep = self.role_seperator
+        role_sep = self.role_separator
         if role == "":
             role_sep = ""
             
         if name == "":
             parsed_msg_part = parsed_msg_part.split("[message_signifier]")[0]
         if role == "":
-            parsed_msg_part = parsed_msg_part.split("[role_seperator]")[0]
+            parsed_msg_part = parsed_msg_part.split("[role_separator]")[0]
         parsed_msg_part = parsed_msg_part.replace("[BOS_token]",self.BOS_token)
         parsed_msg_part = parsed_msg_part.replace("[role]",role)
-        parsed_msg_part = parsed_msg_part.replace("[role_seperator]",role_sep)
+        parsed_msg_part = parsed_msg_part.replace("[role_separator]",role_sep)
         parsed_msg_part = parsed_msg_part.replace("[name]",name)
         parsed_msg_part = parsed_msg_part.replace("[message_signifier]",msg_sig)
         parsed_msg_part = parsed_msg_part.replace("[EOS_token]",self.EOS_token)
@@ -85,16 +85,16 @@ class base_Tokenizer(): # Tokenizes(only availble for counting the tokens in a s
         if not name:
             name = ""
             msg_sig = ""
-        role_sep = self.role_seperator
+        role_sep = self.role_separator
         if role == "":
             role_sep = ""
         if name == "":
             parsed_msg_part = parsed_msg_part.split("[message_signifier]")[1]
         if role == "":
-            parsed_msg_part = parsed_msg_part.split("[role_seperator]")[1]
+            parsed_msg_part = parsed_msg_part.split("[role_separator]")[1]
         parsed_msg_part = parsed_msg_part.replace("[BOS_token]",self.BOS_token)
         parsed_msg_part = parsed_msg_part.replace("[role]",role)
-        parsed_msg_part = parsed_msg_part.replace("[role_seperator]",role_sep)
+        parsed_msg_part = parsed_msg_part.replace("[role_separator]",role_sep)
         parsed_msg_part = parsed_msg_part.replace("[name]",name)
         parsed_msg_part = parsed_msg_part.replace("[message_signifier]",msg_sig)
         parsed_msg_part = parsed_msg_part.replace("[EOS_token]",self.EOS_token)
