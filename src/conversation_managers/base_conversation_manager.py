@@ -24,7 +24,7 @@ class BaseConversationManager:
         if initialize and self.config.ready:
             self.pre_initialization()
         if self.config.ready:
-            self.synthesizer = tts.create_Synthesizer(self) # Create Synthesizer object based on config - required by scripts for checking voice models, so is left out of self.pre_initialization() and self.post_initialization() intentionally
+            self.synthesizer = tts.create_Synthesizer(self, self.config.tts_engine) # Create Synthesizer object based on config - required by scripts for checking voice models, so is left out of self.pre_initialization() and self.post_initialization() intentionally
             self.character_database = character_db.CharacterDB(self) # Create Character Database Manager based on config - required by scripts for merging, patching and converting character databases, so is left out of self.pre_initialization() and self.post_initialization() intentionally
             self.character_manager = characters_manager.Characters(self) # Reset character manager
         if self.config.linux_mode:

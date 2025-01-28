@@ -27,8 +27,7 @@ logging.config(f"Available TTS types: {tts_Types.keys()}")
 
 # Create TTS object using the config and client provided
     
-def create_Synthesizer(conversation_manager):
-    slugs = conversation_manager.config.tts_engine # Get the TTS slug from config.json
+def create_Synthesizer(conversation_manager, slugs): # Get the TTS slug from config.json
     if type(slugs) == list and len(slugs) == 1:
         slugs = slugs[0]
         logging.warning(f"Using single TTS engine: {slugs}")
