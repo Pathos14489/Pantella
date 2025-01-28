@@ -85,7 +85,7 @@ class Synthesizer(base_tts.base_Synthesizer):
         cross_fade_duration=0.15,
         nfe_step=32,
         speed=1,
-        show_info=True,
+        show_info=print,
         cfg_strength=2,
         sway_sampling_coef=-1,
     ):
@@ -142,7 +142,6 @@ class Synthesizer(base_tts.base_Synthesizer):
             cross_fade_duration=0.15,
             nfe_step=32,
             speed=1,
-            show_info=True,
             cfg_strength=2,
             sway_sampling_coef=-1,
         )
