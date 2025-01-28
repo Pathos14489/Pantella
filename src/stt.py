@@ -9,7 +9,7 @@ with open(os.path.join(os.path.dirname(__file__), "module_banlist"), "r") as f:
 
 default = "faster_whisper" # The default LLM to use if the one specified in config.json is not found or if default is specified in config.json
 transcriber_Types = {}
-# Get all LLMs from src/llms/ and add them to LLM_Types
+# Get all LLMs from src/stt_types/ and add them to LLM_Types
 for file in os.listdir(os.path.join(os.path.dirname(__file__), "stt_types/")):
     if file.endswith(".py") and not file.startswith("__"):
         module_name = file[:-3]

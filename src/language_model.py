@@ -10,14 +10,14 @@ with open(os.path.join(os.path.dirname(__file__), "module_banlist"), "r") as f:
 
 default = "openai" # The default LLM to use if the one specified in config.json is not found or if default is specified in config.json
 LLM_Types = {}
-# Get all LLMs from src/llms/ and add them to LLM_Types
-for file in os.listdir(os.path.join(os.path.dirname(__file__), "llms/")):
+# Get all LLMs from src/inference_engines/ and add them to LLM_Types
+for file in os.listdir(os.path.join(os.path.dirname(__file__), "inference_engines/")):
     if file.endswith(".py") and not file.startswith("__"):
         module_name = file[:-3]
         if module_name in banned_modules:
             logging.warning(f"Skipping banned language model: {module_name}")
             continue
-        logging.info(f"Importing {module_name} from src.llms")
+        logging.info(f"Importing {module_name} from src.inference_engines")
         if module_name != "base_llm":
             module = importlib.import_module(f"src.inference_engines.{module_name}")
             LLM_Types[module.inference_engine_name] = module    
