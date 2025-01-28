@@ -53,9 +53,9 @@ def create_Synthesizer(conversation_manager, slugs): # Get the TTS slug from con
         if slugs not in tts_Types:
             slugs = slugs.lower()
         if slugs not in tts_Types:
-            logging.error(f"Could not find inference engine: {conversation_manager.config.tts_engine}! Please check your config.json file and try again!")
+            logging.error(f"Could not find inference engine '{slugs}'! Please check your config.json file and try again!")
             input("Press enter to continue...")
-            raise ValueError(f"Could not find inference engine: {conversation_manager.config.tts_engine}! Please check your config.json file and try again!")
+            raise ValueError(f"Could not find inference engine '{slugs}'! Please check your config.json file and try again!")
         return tts_Types[slugs].Synthesizer(conversation_manager)
     else:
         logging.error(f"Wrong type for tts_engine in config.json! Expected string or list of strings, got '{type(slugs)}'! Please check your config.json file and try again!")
