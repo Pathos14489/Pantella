@@ -196,7 +196,7 @@ class LLM(base_LLM.base_LLM):
                 if self.config.reverse_proxy:
                     extra_body_kwargs["proxy_password"] = self.api_key
                 logging.warning("Using chat completions because true text completions are not supported by Anthropic. Expect performance to be degraded compared to using any provider that supports true text completions.")
-                if force_speaker is not None:
+                if force_speaker is not None and self._prompt_style["force_speaker"]:
                     force_speaker_string = force_speaker.name + self.config.message_signifier
                     logging.info("Assistant Prefill(Forced Author)|",force_speaker_string)
                     messages.append({

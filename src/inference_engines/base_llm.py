@@ -222,7 +222,7 @@ class base_LLM():
         if not self.character_manager.language["allow_npc_roleplay"]:
             stop.append(prompt_style["roleplay_prefix"])
             stop.append(prompt_style["roleplay_suffix"])
-        stop = [char for char in stop if char != '' or char != None or char != "'"]
+        stop = [char for char in stop if char != '' and char != None and char != "'"]
         return stop
     
     @property
@@ -238,11 +238,11 @@ class base_LLM():
     @property
     def _prompt_style(self):
         try:
-            print("Prompt Style:",self.character_manager.prompt_style)
+            # print("Prompt Style:",self.character_manager.prompt_style)
             return self.character_manager.prompt_style
         except:
-            print("Error getting prompt style from character manager, returning default prompt style.")
-            print("Prompt Style:",self.config._prompt_style)
+            logging.error("Error getting prompt style from character manager, returning default prompt style.")
+            logging.info("Prompt Style:",self.config._prompt_style)
             return self.config._prompt_style["style"]
     
     @property
@@ -276,6 +276,10 @@ class base_LLM():
     @property
     def EOS_token(self):
         return self._prompt_style['EOS_token']
+    
+    @property
+    def thinking_transitions(self):
+        return self._prompt_style['thinking_transitions']
     
     @property
     def BOS_token(self):
@@ -372,10 +376,6 @@ class base_LLM():
     @property
     def messages(self):
         return self.conversation_manager.messages
-
-    @property
-    def _prompt_style(self):
-        return self.conversation_manager.character_manager.prompt_style
         
     @property
     def ocr_resolution(self):
@@ -1149,8 +1149,6 @@ class base_LLM():
                 symbol_insert = random.choice(message_hidden_symbol)
                 logging.info(f"Symbol to Insert: {symbol_insert}")
 
-        
-        
 
         while retries >= 0: # keep trying to connect to the API until it works
             # if full_reply != '': # if the full reply is not empty, then the LLM has generated a response and the next_author should be extracted from the start of the generation
@@ -1171,17 +1169,18 @@ class base_LLM():
                     next_author = None
                     verified_author = False
                 else:
-                    if force_speaker is not None: # Force speaker to a specific character
-                        logging.info(f"Forcing speaker to: {force_speaker.name}")
-                        next_author = force_speaker.name
-                        proposed_next_author = next_author
-                        verified_author = True
-                    elif self.conversation_manager.character_manager.active_character_count() == 1: # if there is only one active character, then the next author should most likely always be the only active character
-                        logging.info(f"Only one active character. Attempting to force speaker to: {self.conversation_manager.game_interface.active_character.name}")
-                        next_author = self.conversation_manager.game_interface.active_character.name
-                        proposed_next_author = next_author
-                        verified_author = True
-                        force_speaker = self.conversation_manager.game_interface.active_character
+                    if self._prompt_style["force_speaker"]:
+                        if force_speaker is not None: # Force speaker to a specific character
+                            logging.info(f"Forcing speaker to: {force_speaker.name}")
+                            next_author = force_speaker.name
+                            proposed_next_author = next_author
+                            verified_author = True
+                        elif self.conversation_manager.character_manager.active_character_count() == 1: # if there is only one active character, then the next author should most likely always be the only active character
+                            logging.info(f"Only one active character. Attempting to force speaker to: {self.conversation_manager.game_interface.active_character.name}")
+                            next_author = self.conversation_manager.game_interface.active_character.name
+                            proposed_next_author = next_author
+                            verified_author = True
+                            force_speaker = self.conversation_manager.game_interface.active_character
                 start_time = time.time()
                 beginning_of_sentence_time = time.time()
                 last_chunk = None
@@ -1189,7 +1188,7 @@ class base_LLM():
                 new_speaker = False
                 eos = False 
                 typing_roleplay = self._prompt_style["roleplay_inverted"]
-                if symbol_insert == self._prompt_style["roleplay_prefix"] or symbol_insert == self._prompt_style["roleplay_suffix"]:
+                if symbol_insert == self._prompt_style["roleplay_prefix"] or symbol_insert == self._prompt_style["roleplay_suffix"] or symbol_insert in self._prompt_style["roleplay_prefix_aliases"] or symbol_insert in self._prompt_style["roleplay_suffix_aliases"]:
                     typing_roleplay = not typing_roleplay
                 was_typing_roleplay = typing_roleplay
         
@@ -1204,6 +1203,11 @@ class base_LLM():
                 num_sentences = 0 # used to keep track of how many sentences have been generated total
                 voice_line_sentences = 0 # used to keep track of how many sentences have been generated for the current voice line
                 send_voiceline = False # used to determine if the current sentence should be sent early
+                        
+                reason = ""        
+                reasoning = False
+                if len(self.thinking_transitions) > 0:
+                    reasoning = True
 
                 voice_lines = [] # used to store the voice lines generated
                 same_roleplay_symbol = self._prompt_style["roleplay_suffix"] == self._prompt_style["roleplay_prefix"] # used to determine if the roleplay symbol is the same for both the prefix and suffix
@@ -1216,17 +1220,30 @@ class base_LLM():
                 logging.info(f"Starting response generation...")
                 for chunk in self.generate_response(message_prefix=symbol_insert, force_speaker=force_speaker):
                     if self.cot_enabled and self.cot_supported and self.conversation_manager.thought_process is not None:
-                        full_json = chunk["complete_json"]
-                        chunk = chunk["chunk"]
+                        if self.cot_enabled and self.cot_supported and self.conversation_manager.thought_process is not None:
+                            full_json = chunk["complete_json"]
+                            chunk = chunk["chunk"]
                         if "response_to_user" not in chunk:
                             logging.info(f"Thought Chunk:",chunk)
                             continue
                         else:
                             logging.info(f"Response Chunk:",chunk)
-                            chunk = chunk["response_to_user"]
+                            if self.cot_enabled and self.cot_supported and self.conversation_manager.thought_process is not None:
+                                chunk = chunk["response_to_user"]
                         content = chunk # example: ".* Hello"
                     else:
                         content = self.format_content(chunk) # example: ".* Hello"
+                    if reasoning: # if reasoning is enabled, then the LLM will generate a reason for the response before the response, so just funnel the reason into the reason variable until a thinking_transition is detected
+                        logging.info(f"Reasoning: {reasoning}")
+                        reason += content
+                        for thinking_transition in self.thinking_transitions:
+                            if thinking_transition in content:
+                                reasoning = False
+                                reason, content = reason.split(thinking_transition,1)
+                                logging.info(f"Full Reasoning: {reason}")
+                                break
+                        if content == "":
+                            continue
                     logging.out(f"Content: {content}")
                     if content is None:
                         logging.error(chunk)
@@ -1272,7 +1289,7 @@ class base_LLM():
                         return next_author, retries, bad_author_retries
 
                     contains_end_of_sentence_character = any(char in unicodedata.normalize('NFKC', content) for char in self.end_of_sentence_chars)
-                    contains_roleplay_symbol = any(char in unicodedata.normalize('NFKC', content) for char in [self._prompt_style["roleplay_prefix"],self._prompt_style["roleplay_suffix"]])
+                    contains_roleplay_symbol = any(char in unicodedata.normalize('NFKC', content) for char in [self._prompt_style["roleplay_prefix"],self._prompt_style["roleplay_suffix"]]+self._prompt_style["roleplay_prefix_aliases"]+self._prompt_style["roleplay_suffix_aliases"])
                     for replacement in self.replacements:
                         char, replacement_char = replacement["char"], replacement["replacement"]
                         if char in content:
@@ -1318,9 +1335,9 @@ class base_LLM():
                     effective_voice_line_sentences = int(voice_line_sentences)
                     if contains_roleplay_symbol: # if the content contains an asterisk, then either the narrator has started speaking or the narrator has stopped speaking and the NPC is speaking
                         logging.info(f"Roleplay symbol detected in content: {content}")
-                        if self._prompt_style["roleplay_suffix"] in sentence:
+                        if self._prompt_style["roleplay_suffix"] in sentence or any(char in content for char in self._prompt_style["roleplay_prefix_aliases"]):
                             sentences = sentence.split(self._prompt_style["roleplay_suffix"], 1)
-                        elif self._prompt_style["roleplay_prefix"] in sentence:
+                        elif self._prompt_style["roleplay_prefix"] in sentence or any(char in content for char in self._prompt_style["roleplay_suffix_aliases"]):
                             sentences = sentence.split(self._prompt_style["roleplay_prefix"], 1)
                         else:
                             logging.warn(f"But roleplay symbol was not found in sentence?!")
@@ -1331,9 +1348,14 @@ class base_LLM():
                             logging.info(f"New Speaker, splitting sentence at roleplay symbol")
                             sentence, next_speaker_sentence = sentences[0], sentences[1]
                             effective_voice_line_sentences += 1
-                        elif content.strip() == self._prompt_style["roleplay_prefix"] or content.strip() == self._prompt_style["roleplay_suffix"]: # content IS a roleplay symbol and the sentence is empty
+                        elif content.strip() == self._prompt_style["roleplay_prefix"] or content.strip() == self._prompt_style["roleplay_suffix"] or any(char == content for char in self._prompt_style["roleplay_prefix_aliases"]) or any(char == content for char in self._prompt_style["roleplay_suffix_aliases"]): # content HAS a roleplay symbol and the sentence is empty
                             logging.info(f"Roleplay symbol was latest content: {content}")
-                            if len(sentence.replace(self._prompt_style["roleplay_prefix"], "").replace(self._prompt_style["roleplay_suffix"], "").strip()) > 0:
+                            effective_sentence = sentence.replace(self._prompt_style["roleplay_prefix"], "").replace(self._prompt_style["roleplay_suffix"], "")
+                            for alias in self._prompt_style["roleplay_prefix_aliases"]:
+                                effective_sentence = effective_sentence.replace(alias, "")
+                            for alias in self._prompt_style["roleplay_suffix_aliases"]:
+                                effective_sentence = effective_sentence.replace(alias, "")
+                            if len(effective_sentence.strip()) > 0:
                                 logging.info(f"Roleplay symbol was latest content: {content} - Sentence is not empty")
                                 effective_voice_line_sentences += 1
                             else:
@@ -1738,7 +1760,7 @@ class base_LLM():
                             raise Exception('Invalid author')
                         else:
                             logging.info(f"Player is speaking. Stopping generation.")
-                            return next_author, verified_author, retries, bad_author_retries, system_loop
+                            return sentence, next_author, verified_author, retries, bad_author_retries, system_loop
                     if next_author.lower() == self.config.system_name.lower() and system_loop > 0:
                         logging.info(f"System detected. Retrying...")
                         system_loop -= 1
@@ -1746,7 +1768,7 @@ class base_LLM():
                         raise Exception('Invalid author')
                     elif (next_author == self.config.system_name or next_author.lower() == self.config.system_name.lower()) and system_loop == 0:
                         logging.info(f"System Loop detected. Please report to #dev channel in the Pantella Discord. Stopping generation.")
-                        return next_author, verified_author, retries, bad_author_retries, system_loop
+                        return sentence, next_author, verified_author, retries, bad_author_retries, system_loop
 
                     logging.info(f"Candidate next author: {next_author}")
                     if (next_author in self.conversation_manager.character_manager.active_characters):

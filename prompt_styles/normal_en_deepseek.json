@@ -1,8 +1,8 @@
 {
     "name": "Normal - English",
     "style": {
-        "stop": ["<|eot_id|>","<|end_header_id|>", "<", "<im", "im_", "<im_end"],
-        "thinking_transitions": [],
+        "stop": ["</|Assistant|>","\n"],
+        "thinking_transitions": ["</think>"],
         "undo": ["{", "}"],
         "replacements": [
             {
@@ -19,16 +19,16 @@
             }
         ],
         "end_of_sentence_chars": [".", "?", "!"],
-        "BOS_token": "<|start_header_id|>",
-        "EOS_token": "<|eot_id|>",
+        "BOS_token": "",
+        "EOS_token": "<|end_of_sentence|>",
         "message_signifier": ": ",
-        "role_separator": "<|end_header_id|>\n\n",
+        "role_separator": "",
         "message_separator": "",
         "message_format": "[BOS_token][role][role_separator][name][message_signifier][content][EOS_token][message_separator]",
-        "system_name": "system",
-        "user_name": "user",
-        "assistant_name": "assistant",
-        "force_speaker": true,
+        "system_name": "<|User|>",
+        "user_name": "<|User|>",
+        "assistant_name": "<|Assistant|>",
+        "force_speaker": false,
         "roleplay_inverted": false,
         "roleplay_prefix": "*",
         "roleplay_prefix_aliases": [

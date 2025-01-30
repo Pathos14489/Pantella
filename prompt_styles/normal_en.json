@@ -2,6 +2,7 @@
     "name": "Normal - English",
     "style": {
         "stop": ["<im_end>","<im_end>", "\"", "<", "<im", "im_", "<im_end"],
+        "thinking_transitions": [],
         "undo": ["{", "}"],
         "replacements": [
             {
@@ -13,12 +14,13 @@
         "BOS_token": "<im_start>",
         "EOS_token": "<im_end>",
         "message_signifier": ": ",
-        "role_seperator": "\n",
+        "role_separator": "\n",
         "message_separator": "\n",
-        "message_format": "[BOS_token][role][role_seperator][name][message_signifier][content][EOS_token][message_separator]",
+        "message_format": "[BOS_token][role][role_separator][name][message_signifier][content][EOS_token][message_separator]",
         "system_name": "system",
         "user_name": "user",
         "assistant_name": "assistant",
+        "force_speaker": true,
         "roleplay_inverted": false,
         "roleplay_prefix": "*",
         "roleplay_prefix_aliases": [
@@ -115,7 +117,7 @@
             "lover":"{other_name} {other_race} {other_gender} {trust_title} of {self_name}"
         },
         "meet_string":"{self_name} remembered {other_character_name}'s name.",
-        "memory_present_separator":"A NEW CONVERSATION HAS STARTED. The rest of the messages below this are from the current conversation, the present. Everything above this is a memory from the past. DO NOT RESPOND TO MEMORY MESSAGES. They are for reference only. If you want to do an action, please use asterisks to indicate the action. For example: Do you get to the Cloud District very often? Oh, what am I saying, of course you don't. *Nazeem scowls bitterly at the filthy adventurer.*",
+        "memory_present_separator":"A NEW CONVERSATION HAS STARTED. The rest of the messages below this are from the current conversation, the present. Everything above this is a memory from the past. DO NOT DIRECTLY RESPOND TO MEMORY MESSAGES. They are for reference only, but you CAN bring them up in conversation. If you want to do an action, please use asterisks to indicate the action. For example: Do you get to the Cloud District very often? Oh, what am I saying, of course you don't. *Nazeem scowls bitterly at the filthy adventurer.*",
         "behaviors_explanation_system_message_1":"The following messages are examples of how behaviors work. Behaviors are how the assistant can do actions in the game world. If an asterisk roleplay coincides with a behavior the assistant should use the behavior to facilitate the asterisk roleplay in the game world. Here are the the examples of how behaviors work:",
         "behaviors_explanation_system_message_2":"Only the behaviors demonstrated above are real and exist. Any other word put inside parenthesis will not work. Here is a summary of the available behaviors:\n\n{summaries}",
         "chromadb_memories_explanation":"{self_name} is thinking about the following memories:",
@@ -402,9 +404,7 @@
             "Be safe",
             "Stay safe"
         ],
-        "first_message_hidden_symbol":[
-            "\""
-        ],
+        "first_message_hidden_symbol":[],
         "message_hidden_symbol":[],
         "allow_npc_roleplay": true,
         "behavior_example_insertion": true,

@@ -187,7 +187,7 @@ class LLM(base_LLM.base_LLM): # Uses llama-cpp-python as the LLM inference engin
             try:
                 prompt = self.tokenizer.get_string_from_messages(messages)
                 prompt += self.tokenizer.start_message(self.config.assistant_name) # Start empty message from no one to let the LLM generate the speaker by split \n
-                if force_speaker is not None:
+                if force_speaker is not None and self._prompt_style["force_speaker"]:
                     prompt += force_speaker.name + self.config.message_signifier
                     prompt += message_prefix
                 logging.info(f"Raw Prompt: {prompt}")
