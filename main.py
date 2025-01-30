@@ -8,6 +8,7 @@ import threading
 import random
 import traceback
 import asyncio
+import time
 try:
     import gradio as gr
     imported_gradio = True
@@ -27,6 +28,13 @@ except Exception as e:
     input("Press Enter to exit.")
     raise e
 
+
+if config.seed != -1:
+    seed = config.seed # set random seed for reproducibility
+else:
+    seed = time.time() # set random seed to current time
+random.seed(seed)
+logging.info(f"Pantella Seed: {seed}")
 
 logging.info("Loading blocked logging paths -- No logs will be generated from these files")
 logging.block_logs_from = config.block_logs_from # block logs from certain files

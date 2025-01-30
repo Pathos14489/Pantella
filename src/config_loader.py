@@ -725,6 +725,7 @@ class ConfigLoader:
             },
             "Config": {
                 "linux_mode": False,
+                "seed": -1,
                 "python_binary": "../../python-3.10.11-embed/python.exe", # Default is for use with the launcher. Change to "python" or "python3" for use with a system python installation
                 "character_database_file": ".\\characters\\", # can be a csv file path, a directory file path, or a list of csv file paths and directory file paths
                 "conversation_data_directory": ".\\data\\conversations",
@@ -1048,6 +1049,7 @@ class ConfigLoader:
             },
             "Config": {
                 "linux_mode": self.linux_mode,
+                "seed": self.seed,
                 "python_binary": self.python_binary,
                 "character_database_file": self.character_database_file,
                 "conversation_data_directory": self.conversation_data_directory,
