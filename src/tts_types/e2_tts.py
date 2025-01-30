@@ -59,23 +59,6 @@ class Synthesizer(base_tts.base_Synthesizer):
                 voices.remove(banned_voice)
         return voices
     
-    def voice_model_settings(self, voice_model):
-        settings = {
-            "transcription": ""
-        }
-        if self.config.linux_mode:
-            voice_model_settings_path = os.path.abspath(f"./data/e2_tts_inference_settings/{self.language['tts_language_code']}/{voice_model}.json")
-        else:
-            voice_model_settings_path = os.path.abspath(f".\\data\\e2_tts_inference_settings\\{self.language['tts_language_code']}\\{voice_model}.json")
-        if os.path.exists(voice_model_settings_path):
-            with open(voice_model_settings_path, "r") as f:
-                voice_model_settings = json.load(f)
-            for setting in settings:
-                if setting in voice_model_settings:
-                    settings[setting] = voice_model_settings[setting]
-        return settings
-    
-    
     def infer(self,
         ref_audio_orig,
         ref_text,

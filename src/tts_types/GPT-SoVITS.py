@@ -4,12 +4,8 @@ import src.tts_types.base_tts as base_tts
 try:
     logging.info("Trying to import GPT-SoVITS libraries...")
     import torch
-    import torch.nn as nn
-    import torch.nn.functional as F
     import numpy as np
     from transformers import (
-        Wav2Vec2FeatureExtractor,
-        HubertModel,
         AutoModelForMaskedLM,
         AutoTokenizer
     )
@@ -23,22 +19,18 @@ try:
     from libraries.gpt_sovits.module.mel_processing import spectrogram_torch
     from libraries.gpt_sovits.tools.my_utils import load_audio
     from libraries.gpt_sovits.feature_extractor.cnhubert import CNHubert
+    import random
+    import os
+    import json
+    import time
+    import traceback
+    import re
+    import chinese
+    import soundfile as sf
     logging.info("Imported GPT-SoVITS libraries")
 except Exception as e:
     logging.error(f"Failed to import GPT-SoVITS: {e}")
     raise e
-import random
-import os
-import json
-import time
-import tempfile
-import traceback
-import re
-import chinese
-
-import soundfile as sf
-import torchaudio
-from cached_path import cached_path
 
 
 def process_text(texts):
@@ -328,23 +320,6 @@ class Synthesizer(base_tts.base_Synthesizer):
             if banned_voice in voices:
                 voices.remove(banned_voice)
         return voices
-    
-    def voice_model_settings(self, voice_model):
-        # speaker voice model settings are stored in ./data/chat_tts_inference_settings/{tts_language_code}/{voice_model}.json
-        settings = {
-            "transcription": ""
-        }
-        if self.config.linux_mode:
-            voice_model_settings_path = os.path.abspath(f"./data/GPT-SoVITS_inference_settings/{self.language['tts_language_code']}/{voice_model}.json")
-        else:
-            voice_model_settings_path = os.path.abspath(f".\\data\\GPT-SoVITS_inference_settings\\{self.language['tts_language_code']}\\{voice_model}.json")
-        if os.path.exists(voice_model_settings_path):
-            with open(voice_model_settings_path, "r") as f:
-                voice_model_settings = json.load(f)
-            for setting in settings:
-                if setting in voice_model_settings:
-                    settings[setting] = voice_model_settings[setting]
-        return settings
     
     def get_speaker_wav_path(self, voice_model):
         """Get the path to the wav filepath to a voice sample for the specified voice model if it exists"""

@@ -112,9 +112,10 @@ class Synthesizer(base_tts.base_Synthesizer):
                 voices.remove(banned_voice)
         return voices
  
-    def voice_model_settings(self, voice_model):
-        # speaker voice model settings are stored in ./data/chat_tts_inference_settings/{tts_language_code}/{voice_model}.json
-        settings = {
+    @property
+    def default_voice_model_settings(self):
+        return {
+            "transcription": "FILL THIS OUT WITH TRANSCRIPT OF THE VOICE SAMPLE. The rest of the settings are defaults, tweak them as needed. DO NOT LEAVE TRANSCRIPT AS THIS, IT WILL NOT WORK. The rest is optional.",
             "infer_code_prompt": self.config.chat_tts_default_infer_code_prompt,
             "infer_code_temperature": self.config.chat_tts_default_infer_code_temperature,
             "infer_code_repetition_penalty": self.config.chat_tts_default_infer_code_repetition_penalty,
@@ -124,25 +125,19 @@ class Synthesizer(base_tts.base_Synthesizer):
             "refine_text_top_K": self.config.chat_tts_default_refine_text_top_k,
             "refine_text_repetition_penalty": self.config.chat_tts_default_refine_text_repetition_penalty
         }
-        voice_model_settings_path = os.path.abspath(f".\\data\\chat_tts_inference_settings\\{self.language['tts_language_code']}\\{voice_model}.json")
+
+    def voice_model_settings(self, voice_model):
+        """Return the settings for the specified voice model"""
+        settings = self.default_voice_model_settings
+        voice_model_settings_path = self.voice_model_settings_path(voice_model)
         if os.path.exists(voice_model_settings_path):
             with open(voice_model_settings_path, "r") as f:
                 voice_model_settings = json.load(f)
             for setting in voice_model_settings:
                 settings[setting] = voice_model_settings[setting]
         logging.error(f"Voice model settings not found at: {voice_model_settings_path}")
-        if "transcription" not in settings:
-            logging.info(f"Default Object:", json.dumps({
-                "transcription": "FILL THIS OUT WITH TRANSCRIPT OF THE VOICE SAMPLE. The rest of the settings are defaults, tweak them as needed. DO NOT LEAVE TRANSCRIPT AS THIS, IT WILL NOT WORK. The rest is optional.",
-                "infer_code_prompt": self.config.chat_tts_default_infer_code_prompt,
-                "infer_code_temperature": self.config.chat_tts_default_infer_code_temperature,
-                "infer_code_repetition_penalty": self.config.chat_tts_default_infer_code_repetition_penalty,
-                "refine_text_prompt": self.config.chat_tts_default_refine_text_prompt,
-                "refine_text_temperature": self.config.chat_tts_default_refine_text_temperature,
-                "refine_text_top_P": self.config.chat_tts_default_refine_text_top_p,
-                "refine_text_top_K": self.config.chat_tts_default_refine_text_top_k,
-                "refine_text_repetition_penalty": self.config.chat_tts_default_refine_text_repetition_penalty
-            }, indent=4))
+        if settings["transcription"] == self.default_voice_model_settings["transcription"]:
+            logging.info(f"Default Object:", json.dumps(self.default_voice_model_settings, indent=4))
             if not os.path.exists(os.path.dirname(voice_model_settings_path)):
                 os.makedirs(os.path.dirname(voice_model_settings_path))
             input("Press enter to continue when you have filled out the voice model settings.")

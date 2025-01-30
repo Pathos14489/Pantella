@@ -40,26 +40,15 @@ class Synthesizer(base_tts.base_Synthesizer):
                 voices.remove(banned_voice)
         return voices
     
-    def voice_model_settings(self, voice_model):
-        # speaker voice model settings are stored in ./data/chat_tts_inference_settings/{tts_language_code}/{voice_model}.json
-        settings = {
+    @property
+    def default_voice_model_settings(self):
+        return {
             "alpha": self.config.style_tts_2_default_alpha,
             "beta": self.config.style_tts_2_default_beta,
             "t": self.config.style_tts_2_default_t,
             "diffusion_steps": self.config.style_tts_2_default_diffusion_steps,
             "embedding_scale": self.config.style_tts_2_default_embedding_scale,
         }
-        if self.config.linux_mode:
-            voice_model_settings_path = os.path.abspath(f"./data/style_tts_2_inference_settings/{self.language['tts_language_code']}/{voice_model}.json")
-        else:
-            voice_model_settings_path = os.path.abspath(f".\\data\\style_tts_2_inference_settings\\{self.language['tts_language_code']}\\{voice_model}.json")
-        if os.path.exists(voice_model_settings_path):
-            with open(voice_model_settings_path, "r") as f:
-                voice_model_settings = json.load(f)
-            for setting in settings:
-                if setting in voice_model_settings:
-                    settings[setting] = voice_model_settings[setting]
-        return settings
     
     
     def _synthesize(self, voiceline, voice_model, voiceline_location, aggro=0):

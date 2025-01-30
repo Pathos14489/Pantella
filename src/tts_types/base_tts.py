@@ -7,6 +7,7 @@ from pathlib import Path
 import soundfile as sf
 import time
 import numpy as np
+import json
 try:
     logging.info("Trying to import winsound")
     import winsound
@@ -211,6 +212,31 @@ class base_Synthesizer:
         # raise NotImplementedError("change_voice() method not implemented in your tts type.")
         # return None
 
+    @property
+    def default_voice_model_settings(self):
+        return {
+            "transcription": ""
+        }
+    
+    def voice_model_settings_path(self, voice_model):
+        if self.config.linux_mode:
+            voice_model_settings_path = os.path.abspath(f"./data/tts_settings/{self.tts_slug}/{self.language['tts_language_code']}/{voice_model}.json")
+        else:
+            voice_model_settings_path = os.path.abspath(f".\\data\\tts_settings\\{self.tts_slug}\\{self.language['tts_language_code']}\\{voice_model}.json")
+        return voice_model_settings_path
+
+    def voice_model_settings(self, voice_model):
+        """Return the settings for the specified voice model"""
+        settings = self.default_voice_model_settings
+        voice_model_settings_path = self.voice_model_settings_path(voice_model)
+        if os.path.exists(voice_model_settings_path):
+            with open(voice_model_settings_path, "r") as f:
+                voice_model_settings = json.load(f)
+            for setting in settings:
+                if setting in voice_model_settings:
+                    settings[setting] = voice_model_settings[setting]
+        return settings
+    
     @utils.time_it
     def _synthesize(self, voiceline, voice_model, voiceline_location, aggro=0):
         """Synthesize the text passed as a parameter with the voice model specified in the character object."""

@@ -59,30 +59,6 @@ class Synthesizer(base_tts.base_Synthesizer):
             random_voice = random.choice(self.voices())
             self._say("Parler is ready to go.",random_voice)
 
-    @property
-    def voice_settings_folders(self):
-        if "language" in self.config.__dict__:
-            voice_settings_folders = [
-                os.path.abspath(f".\\data\\parler_tts_inference_settings\\{self.language['tts_language_code']}\\")
-            ]
-        else:
-            voice_settings_folders = []
-            for language_code in os.listdir(".\\data\\parler_tts_inference_settings\\"):
-                if not os.path.isdir(f".\\data\\parler_tts_inference_settings\\{language_code}\\"):
-                    continue
-                voice_settings_folders.append(os.path.abspath(f".\\data\\parler_tts_inference_settings\\{language_code}\\"))
-        for addon_slug in self.config.addons:
-            addon = self.config.addons[addon_slug]
-            if "speakers" in addon["addon_parts"]:
-                addon_speaker_wavs_folder = self.config.addons_dir + addon_slug + "\\parler_tts_inference_settings\\"
-                if os.path.exists(addon_speaker_wavs_folder):
-                    voice_settings_folders.append(addon_speaker_wavs_folder)
-                else:
-                    logging.error(f'speakers folder not found at: {addon_speaker_wavs_folder}')
-        # make all the paths absolute
-        voice_settings_folders = [os.path.abspath(folder) for folder in voice_settings_folders]
-        return voice_settings_folders
-
     def voices(self):
         """Return a list of available voices"""
         if self._voices == None:
@@ -99,20 +75,11 @@ class Synthesizer(base_tts.base_Synthesizer):
             if banned_voice in self._voices:
                 self._voices.remove(banned_voice)
         return [voice["voice_model"] for voice in self._voices]
-        
-    def get_voice_model_data(self, voice_model):
-        """Return the voice model data for the specified voice model"""
-        if self._voices == None:
-            self.voices()
-        for voice in self._voices:
-            if voice["voice_model"] == voice_model:
-                return voice
-        return None
     
     def _synthesize(self, voiceline, voice_model, voiceline_location, aggro=0):
         """Synthesize the audio for the character specified using ParlerTTS"""
         logging.output(f'{self.tts_slug} - Loading voice model settings for {voice_model}')
-        voice_model_settings = self.get_voice_model_data(voice_model)
+        voice_model_settings = self.voice_model_settings(voice_model)
         input_ids = self.tokenizer(voice_model_settings['description'], return_tensors="pt").input_ids.to(self.config.parler_tts_device)
         voiceline_input_ids = self.tokenizer(voiceline, return_tensors="pt").input_ids.to(self.config.parler_tts_device)
 
