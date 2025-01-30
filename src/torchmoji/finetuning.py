@@ -632,7 +632,7 @@ class DeepMojiBatchSampler(object):
         self.epoch_size = epoch_size
         self.upsample = upsample
 
-        np.random.seed(seed)
+        # np.random.seed(seed)
 
         if upsample:
             # Should only be used on binary class problems

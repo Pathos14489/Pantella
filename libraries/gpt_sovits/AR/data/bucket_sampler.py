@@ -108,8 +108,8 @@ class DistributedBucketSampler(Sampler[T_co]):
         if self.shuffle:
             # deterministically shuffle based on epoch and seed
             g = torch.Generator()
-            g.manual_seed(self.seed + self.epoch)
-            random.seed(self.epoch + self.seed)
+            # g.manual_seed(self.seed + self.epoch)
+            # random.seed(self.epoch + self.seed)
             shuffled_bucket = []
             for buc in self.id_buckets:
                 buc_copy = buc.copy()

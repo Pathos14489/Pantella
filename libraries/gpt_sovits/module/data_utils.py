@@ -63,7 +63,7 @@ class TextAudioSpeakerLoader(torch.utils.data.Dataset):
         self.sampling_rate = hparams.sampling_rate
         self.val = val
 
-        random.seed(1234)
+        # random.seed(1234)
         random.shuffle(self.audiopaths_sid_text)
 
         print("phoneme_data_len:", len(self.phoneme_data.keys()))
@@ -279,7 +279,7 @@ class DistributedBucketSampler(torch.utils.data.distributed.DistributedSampler):
 
     def __iter__(self):
         g = torch.Generator()
-        g.manual_seed(self.epoch)
+        # g.manual_seed(self.epoch)
 
         indices = []
         if self.shuffle:
