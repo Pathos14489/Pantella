@@ -506,9 +506,9 @@ class CharacterDB():
         # No Match - Generate Character if LLM supports it
         if character_match is None:
             logging.info(f"No character found for '{character_name}({character_ref_id})[{character_base_id}]' in character database.")
-            if self.conversation_manager.llm.character_generation_supported:
+            if self.conversation_manager.inference_engine.character_generation_supported:
                 logging.success(f"LLM supports character generation, generating character '{character_name}({character_ref_id})[{character_base_id}]'...")
-                character_match = self.conversation_manager.llm.generate_character(character_name, character_ref_id, character_base_id, character_in_game_race, character_in_game_gender, character_is_guard, character_is_ghost, in_game_voice_model, location)
+                character_match = self.conversation_manager.inference_engine.generate_character(character_name, character_ref_id, character_base_id, character_in_game_race, character_in_game_gender, character_is_guard, character_is_ghost, in_game_voice_model, location)
                 logging.success(f"Generated character '{character_name}({character_ref_id})[{character_base_id}]' successfully.", json.dumps(character_match, indent=4))
                 if self.config.auto_save_generated_characters:
                     self.patch_character_info(character_match)
