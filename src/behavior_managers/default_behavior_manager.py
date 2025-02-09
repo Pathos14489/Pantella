@@ -146,18 +146,29 @@ class BehaviorManager():
         """Return a list of all behavior memories."""
         memories = []
         for behavior in self.behaviors:
-            if behavior.valid() and not behavior.player_only:
-                if behavior.player_only:
-                    continue
-                if character is None or (behavior.guard_only and not character.is_guard):
-                    continue
-                if behavior.description is not None and behavior.examples is not None and len(behavior.examples) > 0:
-                    random_example = random.choice(behavior.examples)
-                    for message in random_example:
-                        if message["role"] == "assistant":
-                            message["name"] = character.name
-                        message["content"] = message["content"].replace("{command}",self.render_behavior(behavior))
-                        memories.append(message)
+            try:
+                if behavior.valid() and not behavior.player_only:
+                    if behavior.player_only:
+                        continue
+                    if character is None or (behavior.guard_only and not character.is_guard):
+                        continue
+                    if behavior.description is not None and behavior.examples is not None and len(behavior.examples) > 0:
+                        random_example = random.choice(behavior.examples)
+                        for message in random_example:
+                            if message["role"] == "assistant":
+                                message["name"] = character.name
+                            message["content"] = message["content"].replace("{command}",self.render_behavior(behavior))
+                            memories.append(message)
+            except Exception as e:
+                logging.error(f"Behavior: {behavior}")
+                logging.error(f"Character: {character}")
+                logging.error(f"Behavior valid: {behavior.valid()}")
+                logging.error(f"Behavior player only: {behavior.player_only}")
+                logging.error(f"Behavior guard only: {behavior.guard_only}")
+                logging.error(f"Behavior description: {behavior.description}")
+                logging.error(f"Behavior examples: {behavior.examples}")
+                logging.error(f"Error getting behavior memories for {behavior.keyword}: {e}")
+                raise e
         return memories
     
     def render_behavior(self, behavior):
