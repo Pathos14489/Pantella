@@ -598,7 +598,9 @@ class base_LLM():
 
         if self.config.as_a_check:
             sentence = remove_as_a(sentence)
+
         sentence = sentence.replace('"','')
+        
         # if not eos:
         #     sentence = sentence.replace("<", "")
         #     sentence = sentence.replace(">", "")
@@ -617,7 +619,10 @@ class base_LLM():
         """Get the messages from the conversation manager"""
         logging.info(f"Getting messages from conversation manager")
         system_prompt = self.character_manager.get_system_prompt() # get system prompt
-        msgs = [{'role': self.config.system_name, 'content': system_prompt, "type":"prompt"}] # add system prompt to context
+        system_prompt_message = {'role': self.config.system_name, 'content': system_prompt, "type":"prompt"}
+        system_prompt_message_token_count = self.conversation_manager.tokenizer.get_token_count_of_message(system_prompt_message)
+        system_prompt_message["token_count"] = system_prompt_message_token_count
+        msgs = [] # add system prompt to context
         msgs.extend(self.messages) # add messages to context
 
         memory_offset = self.character_manager.memory_offset
@@ -638,8 +643,11 @@ class base_LLM():
                 "content": schema_description,
                 "type": "prompt"
             }
+            schema_message_token_count = self.conversation_manager.tokenizer.get_token_count_of_message(schema_message)
+            schema_message["token_count"] = schema_message_token_count
             msgs.append(schema_message) # add schema description to context at the end of the messages
         
+        logging.debug("Messages List:", json.dumps(msgs, indent=4))
         logging.info(f"Messages: {len(msgs)}")
         return msgs
         
@@ -647,6 +655,19 @@ class base_LLM():
         """Get the correct set of messages to use with the LLM to generate the next response"""
         msgs = self.get_messages()
         formatted_messages = [] # format messages to be sent to LLM - Replace [player] with player name appropriate for the type of conversation
+        
+        if self.game_interface.active_character is not None:
+            perspective_character = self.game_interface.active_character
+        else:
+            if self.character_manager.active_character_count() > 1:
+                perspective_character = self.character_manager.active_characters_list[0]
+            else:
+                perspective_character = None
+        if perspective_character is not None:
+            perspective_player_name, _ = perspective_character.get_perspective_player_identity()
+        else:
+            perspective_player_name = self.player_name
+
         for msg in msgs: # Add player name to messages based on the type of conversation
             if msg['role'] == self.config.user_name: # if the message is from the player
                 if self.character_manager.active_character_count() > 1: # if multi NPC conversation use the player's actual name
@@ -664,7 +685,6 @@ class base_LLM():
                     if "type" in msg:
                         formatted_msg["type"] = msg["type"]
                 else: # if single NPC conversation use the NPC's perspective player name
-                    perspective_player_name, _ = self.game_interface.active_character.get_perspective_player_identity()
                     formatted_msg = {
                         'role': self.config.user_name,
                         'name': msg['name'] if "name" in msg else perspective_player_name,
@@ -691,7 +711,6 @@ class base_LLM():
                         if "type" in msg:
                             formatted_msg["type"] = msg["type"]
                     else:
-                        perspective_player_name, _ = self.game_interface.active_character.get_perspective_player_identity()
                         formatted_msg = {
                             'role': msg['role'],
                             'content': msg['content'].replace("[player]", perspective_player_name),
@@ -718,7 +737,6 @@ class base_LLM():
                     if "type" in msg:
                         formatted_msg["type"] = msg["type"]
                 else: # if single NPC conversation use the NPC's perspective player name
-                    perspective_player_name, _ = self.game_interface.active_character.get_perspective_player_identity()
                     if "name" not in msg: # support for role, content, and name messages
                         logging.warning(f"Message from NPC does not contain name(this might be fine, but might not be!):",msg)
                     formatted_msg = {
@@ -745,7 +763,6 @@ class base_LLM():
                     if "type" in msg:
                         formatted_msg["type"] = msg["type"]
                 else: # if single NPC conversation use the NPC's perspective player name
-                    perspective_player_name, _ = self.game_interface.active_character.get_perspective_player_identity()
                     formatted_msg = {
                         'role': msg['role'],
                         'content': msg['content'].replace("[player]", perspective_player_name),
@@ -1176,11 +1193,14 @@ class base_LLM():
                             proposed_next_author = next_author
                             verified_author = True
                         elif self.conversation_manager.character_manager.active_character_count() == 1: # if there is only one active character, then the next author should most likely always be the only active character
-                            logging.info(f"Only one active character. Attempting to force speaker to: {self.conversation_manager.game_interface.active_character.name}")
-                            next_author = self.conversation_manager.game_interface.active_character.name
+                            default_author = list(self.conversation_manager.character_manager.active_characters.values())[0]
+                            if self.conversation_manager.game_interface.active_character != None:
+                                default_author = self.conversation_manager.game_interface.active_character
+                            logging.info(f"Only one active character. Attempting to force speaker to: {default_author.name}")
+                            next_author = default_author.name
                             proposed_next_author = next_author
                             verified_author = True
-                            force_speaker = self.conversation_manager.game_interface.active_character
+                            force_speaker = default_author
                 start_time = time.time()
                 beginning_of_sentence_time = time.time()
                 last_chunk = None
@@ -1301,6 +1321,8 @@ class base_LLM():
                         proposed_next_author += content
                         if self.message_signifier in proposed_next_author: # if the proposed next author contains the message signifier, then the next author has been chosen
                             sentence, next_author, verified_author, retries, bad_author_retries, system_loop = self.check_author(proposed_next_author, next_author, verified_author, possible_players, retries, bad_author_retries, system_loop)
+                            if next_author is not None:
+                                raw_reply = raw_reply.split(self.message_signifier, 1)[1]
                         if (contains_end_of_sentence_character or contains_roleplay_symbol) and next_author is None:
                             next_author, retries, bad_author_retries = raise_invalid_author(retries, bad_author_retries)
                     else: # if the next author is already chosen, then the LLM is generating the response for the next author
@@ -1661,7 +1683,7 @@ class base_LLM():
         await sentence_queue.put(None) # Mark the end of the response for self.conversation_manager.game_interface.send_response() and self.conversation_manager.game_interface.send_response()
 
         raw_reply = raw_reply.strip()
-        
+
         raw_reply_found_behaviors = []
         if self.behavior_style["prefix"] in raw_reply:
             raw_reply_words = raw_reply.split(" ")
