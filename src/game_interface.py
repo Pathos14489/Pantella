@@ -19,7 +19,7 @@ for file in os.listdir(os.path.join(os.path.dirname(__file__), "game_interfaces/
         logging.info(f"Importing {module_name} from src.game_interfaces")
         if module_name != "base_interface" and module_name.strip() != "":
             module = importlib.import_module(f"src.game_interfaces.{module_name}")
-            Interface_Types[module.interface_slug] = module    
+            Interface_Types[module.interface_slug] = module
 logging.info("Imported all game interfaces to Interface_Types, ready to create a game interface object!")
 # print available game interfaces
 logging.config(f"Available game interfaces: {Interface_Types.keys()}")
