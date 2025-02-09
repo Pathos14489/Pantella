@@ -76,9 +76,8 @@ class Characters:
     @property
     def prompt_style(self):
         """Return the prompt style for the current conversation"""
-        conversation_type = self.conversation_manager.get_conversation_type()
         prompt_style = self.config._prompt_style
-        if conversation_type == "single_player_with_npc_prompt": # SingleNPCw/Player style context
+        if self.conversation_manager.get_conversation_type() == "single_player_with_npc_prompt": # SingleNPCw/Player style context
             prompt_style = self.active_characters_list[0].prompt_style
         else:
             try:
@@ -123,7 +122,7 @@ class Characters:
                 "perspective_player_name": self.conversation_manager.player_name,
                 "relationship_summary": self.relationship_summary,
                 "bios": self.bios,
-                "langage": self.language["in_game_language_name"],
+                "language": self.language["in_game_language_name"],
             }
         else:
             logging.warning("Could not determine conversation type, returning empty replacement_dict")
@@ -349,7 +348,17 @@ class Characters:
                 "type": "prompt"
             })
         for character in self.active_characters_list:
-            memories.extend(character.memories)
+            # memories.extend(character.memories)
+            for memory in character.memories:
+                has_memory = False
+                if "id" in memory:
+                    for m in memories:
+                        if "id" in m:
+                            if memory["id"] == m["id"]:
+                                has_memory = True
+                                break
+                if not has_memory:
+                    memories.append(memory)
         memories.append({
             "role": self.config.system_name,
             "content": self.language["memory_present_separator"].replace("{name}",name_insert),
@@ -363,6 +372,11 @@ class Characters:
         self.active_characters[character.name] = character
         return character
     
+    def forget_last_message(self):
+        """Forget the last message in the conversation"""
+        for character in self.active_characters_list:
+            character.forget_last_message()
+
     @property
     def memory_offset(self):
         """Return the memory depth of the character"""
