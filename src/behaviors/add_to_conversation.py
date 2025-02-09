@@ -12,11 +12,11 @@ class Behavior(base_behavior.BaseBehavior):
                 {
                     "role": "user",
                     "name": "Alice",
-                    "text": "Do you want coffee?"
+                    "content": "Do you want coffee?"
                 },
                 {
                     "role": "assistant",
-                    "text": "I'm not sure, me and {player_name} are in the middle of something. {command} {player_name}, do you want coffee?"
+                    "content": "I'm not sure, me and {player_name} are in the middle of something. {command} {player_name}, do you want coffee?"
                 }
             ]
         ]
