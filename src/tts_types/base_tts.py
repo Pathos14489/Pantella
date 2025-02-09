@@ -214,6 +214,7 @@ class base_Synthesizer:
 
     @property
     def default_voice_model_settings(self):
+        """Return the default settings for the voice model"""
         return {
             "transcription": ""
         }
