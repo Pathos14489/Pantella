@@ -141,7 +141,7 @@ class MemoryManager(base_MemoryManager):
             for message in conversation:
                 history += message["role"] + ": " + message["content"] + "\n"
             history = history.strip() # remove trailing newline
-            summary, _ = self.conversation_manager.llm.chatgpt_api(history, context) # TODO: Change to use acreate instead of chatgpt_api, I don't think this works with the use of none "system", "user" and "assistant" roles being in the conversation history
+            summary, _ = self.conversation_manager.inference_engine.chatgpt_api(history, context) # TODO: Change to use acreate instead of chatgpt_api, I don't think this works with the use of none "system", "user" and "assistant" roles being in the conversation history
 
             summary = summary.replace('The assistant', self.name)
             summary = summary.replace('the assistant', self.name)
@@ -174,7 +174,7 @@ class MemoryManager(base_MemoryManager):
         logging.info("Conversation limit reached. Saving conversation history and generating a summary.")
         self.save_conversation()
 
-    def add_message(self, message):
+    def _add_message(self, message, token_count):
         """Add a message to the memory manager - This memory manager does not need to perform any action when a message is added"""
         pass
 

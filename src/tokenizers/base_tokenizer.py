@@ -129,6 +129,12 @@ class base_Tokenizer(): # Tokenizes(only availble for counting the tokens in a s
         context = self.get_string_from_messages(messages)
         context += self.start_message(self.config.assistant_name) # Simulate the assistant replying to add a little more to the token count to be safe (this is a bit of a hack, but it should work 99% of the time I think) TODO: Determine if needed
         return self.get_token_count(context)
+    
+    def get_token_count_of_message(self, message): # Returns the number of tokens in a message
+        """Returns the number of tokens in a message"""
+        if "name" not in message:
+            message["name"] = None
+        return self.get_token_count(self.new_message(message["content"], message["role"], message["name"]))
         
     def get_token_count(self, string):
         """Returns the number of tokens in a string"""

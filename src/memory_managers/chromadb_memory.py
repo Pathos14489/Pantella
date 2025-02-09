@@ -155,15 +155,16 @@ class MemoryManager(base_MemoryManager):
         """Ran when the conversation limit is reached, or the conversation is ended - Some memory managers may need to perform some action when the conversation limit is reached"""
         logging.info("Conversation limit reached, nothing to do in ChromaDB Memory Manager.")
     
-    def add_message(self, message):
-        """Add a message to the memory manager - ChromaDB keeps a log of all messages in a jsonl file"""
+    def _add_message(self, message, token_count):
+        """Add a message to the memory manager - ChromaDB keeps a log of all messages in a SQLite db"""
         logging.info(f"Adding message to ChromaDB: {message}")
-        emotion_data = self.get_emotions(message["content"])
+        emotion_data = self.get_emotions(message["content"]) # TODO: For later use, not currently used
         memory_metadata = {
             "role": message["role"],
             "timestamp": message["timestamp"],
             "location": message["location"],
             "conversation_id": self.conversation_manager.conversation_id,
+            "token_count": token_count,
         }
         if "type" not in message:
             message["type"] = "message"
@@ -180,6 +181,13 @@ class MemoryManager(base_MemoryManager):
         # test_memory = self.get_most_related_memories(message["content"],self.config.logical_memories,self.config.chromadb_memory_messages_before,self.config.chromadb_memory_messages_after)
         # logging.info(f"Most Related Memories:", json.dumps(test_memory, indent=2))
         logging.info(f"Added message to ChromaDB: {message}")
+
+    def forget_last_message(self):
+        """Forget the last message in the memory manager"""
+        if len(self.conversation_manager.messages) > 0:
+            last_message = self.conversation_manager.messages[-1]
+            self.messages_memories.delete(ids=[last_message["id"]])
+            self.update_memories()
 
     @property
     def emotion_composition(self):
@@ -252,6 +260,9 @@ class MemoryManager(base_MemoryManager):
             }
             if "name" in metadata:
                 msg["name"] = metadata["name"]
+            if "token_count" not in metadata:
+                metadata["token_count"] = self.conversation_manager.tokenizer.get_token_count_of_message(msg)
+            msg["token_count"] = metadata["token_count"]
             msgs.append(msg)
         return msgs
     
@@ -307,6 +318,9 @@ class MemoryManager(base_MemoryManager):
             }
             if "name" in metadata:
                 msg["name"] = metadata["name"]
+            if "token_count" not in metadata:
+                metadata["token_count"] = self.conversation_manager.tokenizer.get_token_count_of_message(msg)
+            msg["token_count"] = metadata["token_count"]
             msgs.append(msg)
         return msgs
 
@@ -340,11 +354,14 @@ class MemoryManager(base_MemoryManager):
         mem_messages = []
         if len(self.current_memories) == 0:
             return mem_messages
-        mem_messages.append({
+        explanation_message = {
             "role": self.config.system_name,
             "content": self.character_manager.language["chromadb_memories_explanation"].replace("{self_name}", self.character_manager.name),
             "type": "prompt"
-        })
+        }
+        explanation_tokens = self.conversation_manager.tokenizer.get_token_count_of_message(explanation_message)
+        explanation_message["token_count"] = explanation_tokens
+        mem_messages.append(explanation_message)
         for memory in self.current_memories:
             if memory["role"] != self.config.system_name:
                 mem_messages.append(memory)

@@ -48,10 +48,19 @@ class base_MemoryManager():
         """Ran when the conversation limit is reached, or the conversation is ended - Some memory managers may need to perform some action when the conversation limit is reached"""
         logging.warning("reached_conversation_limit() method not implemented in your memory manager.")
     
+    def _add_message(self, message, token_count):
+        """Add a message to the memory manager"""
+        logging.warning("_add_message() method not implemented in your memory manager.")
+
     def add_message(self, message):
         """Add a message to the memory manager"""
-        logging.warning("add_message() method not implemented in your memory manager.")
+        token_count = self.conversation_manager.tokenizer.get_token_count_of_message(message)
+        self._add_message(message, token_count)
     
+    def forget_last_message(self):
+        """Forget the last message in the memory manager"""
+        logging.warning("forget_last_message() method not implemented in your memory manager.")
+
     def load_messages(self):
         """Load messages from the memory manager - Some memory managers may need to load messages from a file or database, and can also use this method to load old messages into the conversation_manager's messages"""
         logging.warning("load_messages() method not implemented in your memory manager.")
