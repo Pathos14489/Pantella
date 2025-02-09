@@ -127,6 +127,17 @@ class BaseGameInterface:
                     }) # add in-game events to current ongoing conversation
         return new_game_events
         
+    def setup_character(self, character):
+        """Setup the character in the game"""
+        logging.info(f"Setting up character in the game...")
+        self.active_character = character
+        self.character_num = 0
+
+    def enable_character_selection(self):
+        """Enable character selection in the game"""
+        logging.info(f"Enabling character selection...")
+        raise NotImplementedError
+    
     @property
     def game_path(self):
         return self.config.game_path

@@ -90,7 +90,7 @@ class GameInterface(BaseGameInterface):
                     shutil.copy(source_file_path, in_game_voice_folder_path)
 
             self.write_game_info('_pantella_status', 'Error with Pantella.exe. Please check PantellaSoftware\\logging.log')
-            logging.warn("Voice Folder uninitialized! This NPC will be able to speak once you restart Skyrim and Pantella.")
+            logging.warn(f"Voice Folder '{in_game_voice_folder}' uninitialized! This NPC will be able to speak once you restart Skyrim and Pantella.")
             input('\nPress any key to exit...')
             sys.exit(0)
 
@@ -106,6 +106,13 @@ class GameInterface(BaseGameInterface):
             except:
                 continue
         
+    def setup_character(self, character):
+        super().setup_character(character)
+        self.setup_voiceline_save_location(character.in_game_voice_model) # if the NPC is from a mod, create the NPC's voice folder and exit Pantella
+
+    def enable_character_selection(self):
+        self.write_game_info('_pantella_character_selection', 'True')
+
     @utils.time_it
     def save_files_to_voice_folders(self, queue_output):
         """Save voicelines and subtitles to the correct game folders"""
@@ -162,11 +169,10 @@ class GameInterface(BaseGameInterface):
                 shutil.copyfile(default_lip_file, f"{lip_file_path}")
 
         logging.info(f"{self.active_character.name} should speak")
-        if self.character_num == 0:
-            self.write_game_info('_pantella_say_line', subtitle.strip())
-        else:
-            say_line_file = '_pantella_say_line_'+str(self.character_num+1)
-            self.write_game_info(say_line_file, subtitle.strip())
+        actor_number = self.active_character.info['actor_number']
+        say_line_file = '_pantella_say_line_'+str(actor_number)
+        logging.info(f"Voiceline File Buffer: _pantella_say_line_{actor_number}")
+        self.write_game_info(say_line_file, subtitle.strip())
 
     async def send_audio_to_external_software(self, queue_output):
         logging.info(f"Dialogue to play: {queue_output[0]}")
@@ -197,10 +203,7 @@ class GameInterface(BaseGameInterface):
 
                     # Iterate through the number of files indicated by pantellaactorcount
                     for i in range(1, int(pantellaactorcount) + 1):
-                        file_name = f'{self.root_mod_folter}\\_pantella_say_line'
-                        if i != 1:
-                            file_name += f'_{i}'  # Append the file number for files 2 and above
-                        file_name += '.txt'
+                        file_name = f'{self.root_mod_folter}\\_pantella_say_line_{i}.txt'
                         with open(file_name, 'r', encoding='utf-8') as f:
                             content = f.read().strip()
                             if content.lower() != 'false':
@@ -215,18 +218,22 @@ class GameInterface(BaseGameInterface):
                 logging.info(f"Waiting {int(round(audio_duration,4))} seconds for audio to finish playing...")
                 await asyncio.sleep(audio_duration)
 
-    def write_game_info(self, text_file_name, text):
+    def write_game_info(self, text_file_name, text, append = False):
+        """Write text to a text file in the game directory"""
+        logging.info(f'Writing {text} to {text_file_name}.txt')
         max_attempts = 2
         delay_between_attempts = 5
 
         for attempt in range(max_attempts):
             try:
+                write_type = "w"
+                if append:
+                    write_type = "a"
+                write_path = f'{self.game_path}\\{text_file_name}.txt'
                 if self.config.linux_mode:
-                    with open(f'{self.game_path}/{text_file_name}.txt', 'w', encoding='utf-8') as f:
-                        f.write(text)
-                else:
-                    with open(f'{self.game_path}\\{text_file_name}.txt', 'w', encoding='utf-8') as f:
-                        f.write(text)
+                    write_path = f'{self.game_path}/{text_file_name}.txt'
+                with open(write_path, write_type, encoding='utf-8') as f:
+                    f.write(text)
                 break
             except PermissionError:
                 logging.info(f'Permission denied to write to {text_file_name}.txt. Retrying...')
@@ -297,9 +304,9 @@ class GameInterface(BaseGameInterface):
         self.write_game_info('_pantella_actor_relationship', '')
 
         self.write_game_info('_pantella_character_selection', 'True')
-        self.write_game_info('_pantella_character_selected', 'False')
+        # self.write_game_info('_pantella_character_selected', 'False')
 
-        self.write_game_info('_pantella_say_line', 'False')
+        self.write_game_info('_pantella_say_line_1', 'False')
         self.write_game_info('_pantella_say_line_2', 'False')
         self.write_game_info('_pantella_say_line_3', 'False')
         self.write_game_info('_pantella_say_line_4', 'False')
@@ -332,6 +339,7 @@ class GameInterface(BaseGameInterface):
         self.write_game_info('_pantella_caster_equipment', '')
         self.write_game_info('_pantella_target_spells', '')
         self.write_game_info('_pantella_caster_spells', '')
+        self.write_game_info('_pantella_removed_from_conversation', '')
 
         if not os.path.exists(f'{self.game_path}\\_pantella_microphone_enabled.txt'):
             self.write_game_info('_pantella_microphone_enabled', 'false')
@@ -339,7 +347,7 @@ class GameInterface(BaseGameInterface):
         if not os.path.exists(f'{self.game_path}\\_pantella_context_string.txt'):
             self.write_game_info('_pantella_context_string', '')
 
-        self.write_game_info('_pantella_player_input', '')
+        # self.write_game_info('_pantella_player_input', '')
 
         self.write_game_info('_pantella_actor_methods', '')
 
@@ -349,18 +357,28 @@ class GameInterface(BaseGameInterface):
         """Wait for character ID to populate then load character name"""
         logging.info('Waiting for character base ID to populate...')
         character_base_id = self.load_data_when_available('_pantella_current_actor_base_id')
+        logging.info('Got character base ID: '+character_base_id)
         logging.info('Waiting for character ref ID to populate...')
         character_ref_id = self.load_data_when_available('_pantella_current_actor_ref_id')
+        logging.info('Got character ref ID: '+character_ref_id)
         logging.info('Waiting for character name to populate...')
         character_name = self.load_data_when_available('_pantella_current_actor')
+        logging.info('Got character name: '+character_name)
         logging.info('Waiting for character race to populate...')
         character_race = self.load_data_when_available('_pantella_current_actor_race')
+        logging.info('Got character race: '+character_race)
         logging.info('Waiting for character gender to populate...')
         character_gender = self.load_data_when_available('_pantella_current_actor_gender')
+        logging.info('Got character gender: '+character_gender)
         logging.info('Waiting for character is_guard to populate...')
         is_guard = self.load_data_when_available('_pantella_actor_is_guard', 'False')
+        logging.info('Got character is_guard: '+is_guard)
         logging.info('Waiting for character is_ghost to populate...')
         is_ghost = self.load_data_when_available('_pantella_actor_is_ghost', 'False')
+        logging.info('Got character is_ghost: '+is_ghost)
+        logging.info('Waiting for actor count to populate...')
+        _pantella_actor_count = self.load_data_when_available('_pantella_actor_count')
+        logging.info('Got actor count: '+_pantella_actor_count)
         # if (character_base_id == '0' and character_ref_id == '0') or (character_base_id == '' and character_ref_id == ''): # if character ID is 0 or empty, check old id file for refid
         #     with open(f'{self.game_path}\\_pantella_current_actor_id.txt', 'r') as f:
         #         character_id = f.readline().strip()
@@ -370,7 +388,7 @@ class GameInterface(BaseGameInterface):
         # with open(f'{self.game_path}\\_pantella_current_actor.txt', 'r') as f:
         #     character_name = f.readline().strip()
         
-        return character_name, character_ref_id, character_base_id, character_race, character_gender, is_guard, is_ghost
+        return character_name, character_ref_id, character_base_id, character_race, character_gender, is_guard, is_ghost, _pantella_actor_count
     
     def load_player_name(self):
         """Wait for player name to populate"""
@@ -427,8 +445,15 @@ class GameInterface(BaseGameInterface):
                     time.sleep(delay_between_attempts)
 
     def is_radiant_dialogue(self):
-        with open(f'{self.game_path}\\_pantella_radiant_dialogue.txt', 'r', encoding='utf-8') as f: # check if radiant dialogue is enabled
-            radiant_dialogue = f.readline().strip().lower()
+        """Check if radiant dialogue is enabled"""
+        logging.info(f"Waiting for radiant dialogue to populate...")
+        if self.config.linux_mode:
+            with open(f'{self.game_path}/_pantella_radiant_dialogue.txt', 'r', encoding='utf-8') as f:
+                radiant_dialogue = f.readline().strip().lower()
+        else:
+            with open(f'{self.game_path}\\_pantella_radiant_dialogue.txt', 'r', encoding='utf-8') as f: # check if radiant dialogue is enabled
+                radiant_dialogue = f.readline().strip().lower()
+        logging.info(f"Radiant dialogue: {radiant_dialogue}")
         return radiant_dialogue == 'true'
 
     def is_conversation_ended(self):
@@ -510,6 +535,7 @@ class GameInterface(BaseGameInterface):
     
     def get_current_location(self, presume = ''):
         """Return the current location"""
+        logging.info(f"Waiting for location to populate...")
         location = self.load_data_when_available('_pantella_current_location', presume)
         if location.lower() == 'none' or location == "": # location returns none when out in the wild
             location = 'Skyrim'
@@ -517,6 +543,7 @@ class GameInterface(BaseGameInterface):
     
     def get_current_game_time(self):
         """Return the current in-game time"""
+        logging.info(f"Waiting for in-game time to populate...")
         in_game_time = self.load_data_when_available('_pantella_in_game_time', '') # Example: 07/12/0713 10:31
         in_game_chunks = in_game_time.split(' ')
         
@@ -586,8 +613,10 @@ class GameInterface(BaseGameInterface):
         """Load game variables from _pantella_ files in Skyrim folder (data passed by the Pantella spell)"""
 
         location = self.get_current_location()
+        logging.info(f"Current location: {location}")
         in_game_time = self.get_current_game_time()
-        character_name, character_ref_id, character_base_id, character_in_game_race, character_in_game_gender, character_is_guard, character_is_ghost = self.load_character() # get the character's name and id from _pantella_current_actor.txt and _pantella_current_actor_id.txt
+        logging.info(f"Current in-game time: {in_game_time['time12']}")
+        character_name, character_ref_id, character_base_id, character_in_game_race, character_in_game_gender, character_is_guard, character_is_ghost, _pantella_actor_count = self.load_character() # get the character's name and id from _pantella_current_actor.txt and _pantella_current_actor_id.txt
         player_name = self.load_player_name() # get the player's name from _pantella_player_name.txt
         player_race = self.load_player_race() # get the player's race from _pantella_player_race.txt
         player_gender = self.load_player_gender() # get player's gender from _pantella_player_gender.txt
@@ -637,6 +666,7 @@ class GameInterface(BaseGameInterface):
         character_info["in_game_gender"] = character_in_game_gender
         character_info["is_guard"] = character_is_guard
         character_info["is_ghost"] = character_is_ghost
+        character_info["actor_number"] = _pantella_actor_count
         character_info['character_name'] = character_name
         character_info['in_game_voice_model_id'] = actor_voice_model.split('(')[1].split(')')[0]
         if "name" not in character_info or character_info["name"].strip() == "":
@@ -705,7 +735,7 @@ class GameInterface(BaseGameInterface):
             logging.info('Conversation ended.')
             self.conversation_manager.conversation_ended = True # set conversation_ended to True to prevent the conversation from continuing
             self.conversation_manager.in_conversation = False # set in_conversation to False to allow the conversation to be restarted
-
+            self.active_character = None # set active_character to None to allow the conversation to be restarted
             self.write_game_info('_pantella_in_game_events', '') # clear in-game events
             self.write_game_info('_pantella_end_conversation', 'True') # tell Skyrim papyrus script conversation has ended
             time.sleep(self.conversation_manager.config.end_conversation_wait_time) # wait a few seconds for everything to register
@@ -713,4 +743,7 @@ class GameInterface(BaseGameInterface):
     
     def remove_from_conversation(self, character):
         """Remove a character from the conversation in-game"""
-        logging.info(f'Implement: Remove {character.name} from conversation in-game without ending the whole conversation')
+        logging.info(f'Removing {character.name} from conversation...')
+        if self.active_character == character:
+            self.active_character = None
+        self.write_game_info('_pantella_removed_from_conversation', f"{character.name}") # TODO: specific actor_number - |{character.character_info['actor_number']} - to remove specific character from conversation when names are the same
