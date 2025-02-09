@@ -300,19 +300,27 @@ class Synthesizer(base_tts.base_Synthesizer):
 
         return result
 
-    def merge_audio_files(self, audio_files, voiceline_file_name):
+    def merge_audio_files(self, audio_files, voiceline_file_name, retries=3):
         """Merge multiple audio files into one file"""
         logging.info(f'Merging audio files: {audio_files}')
         logging.info(f'Output file: {voiceline_file_name}')
         merged_audio = np.array([])
-
+        
         for audio_file in audio_files:
-            try:
-                audio, samplerate = sf.read(audio_file)
-                merged_audio = np.concatenate((merged_audio, audio))
-            except:
-                logging.info(f'Could not find voiceline file: {audio_file}')
-
+            tries_left = int(retries)
+            while tries_left > 0:
+                try:
+                    audio, samplerate = sf.read(audio_file)
+                    merged_audio = np.concatenate((merged_audio, audio))
+                    break
+                except:
+                    logging.info(f'Could not find voiceline file: {audio_file}')
+                    tries_left -= 1
+                    if tries_left == 0:
+                        logging.error(f'Could not find voiceline file: {audio_file}')
+                        raise FileNotFoundError(f'Could not find voiceline file: {audio_file}')
+                    else:
+                        time.sleep(0.2)
         sf.write(voiceline_file_name, merged_audio, samplerate)
   
     @utils.time_it
