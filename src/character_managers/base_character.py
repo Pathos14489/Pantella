@@ -62,7 +62,7 @@ class base_Character:
                 age = "teen"
         else:
             age = self.info["age"]
-        return age
+        return str(age)
     
     @property
     def race(self):
@@ -176,7 +176,7 @@ class base_Character:
 
     def meet(self, other_character_name, add_game_events=True):
         if other_character_name not in self.knows:
-            meet_string = self.language["meet_string"].replace("{self_name}", self.name).replace("{other_name}", other_character_name)
+            meet_string = self.language["meet_string"].replace("{self_name}", self.name).replace("{other_name}", other_character_name).replace("{other_character_name}", other_character_name)
             logging.info(meet_string)
             if add_game_events and self.config.meet_string_game_events:
                 with open(f'{self.conversation_manager.config.game_path}/_pantella_in_game_events.txt', 'a') as f:
@@ -247,10 +247,10 @@ class base_Character:
         """Get what the character perceives the player as"""
         return self.get_perspective_identity(self.characters_manager.conversation_manager.player_name, self.characters_manager.conversation_manager.player_race, self.characters_manager.conversation_manager.player_gender, relationship_level=self.in_game_relationship_level)
 
-    def update_game_state(self):
-        """Update the game state for the character - This is ran every step of the conversation"""
-        logging.info("Implement: Character.update_game_state() for single player conversations. (character_manager.py: update_game_state()")
-        pass
+    # def update_game_state(self): # commenting out for now... What was this for?
+    #     """Update the game state for the character - This is ran every step of the conversation"""
+    #     logging.info("Implement: Character.update_game_state() for single player conversations. (character_manager.py: update_game_state()")
+    #     pass
 
     @property
     def replacement_dict(self):
@@ -304,6 +304,10 @@ class base_Character:
         if msg["role"] != self.config.system_name:
             self.check_for_new_knows(msg["content"])
             self.memory_manager.add_message(msg)
+
+    def forget_last_message(self):
+        """Forget the last message in the memory manager"""
+        self.memory_manager.forget_last_message()
 
     def check_for_new_knows(self, msg, add_game_events=True):
         """Check if the message contains a new character that the character has met"""
