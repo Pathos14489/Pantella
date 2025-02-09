@@ -287,5 +287,6 @@ class Synthesizer(base_tts.base_Synthesizer):
                 raise FileNotFoundError()
         except Exception as e:
             logging.error(f'xTTS failed to generate voiceline at: {Path(voiceline_location)}')
+            logging.error(e)
             raise FileNotFoundError()
         logging.output(f'{self.tts_slug} - synthesized {voiceline} with voice model "{voice_model}"')
