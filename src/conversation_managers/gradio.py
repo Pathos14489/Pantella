@@ -110,7 +110,7 @@ class ConversationManager(BaseConversationManager):
             self.conversation_ended = True
             return
 
-        self.update_game_state()
+        await self.update_game_state()
         logging.info('Stepping through conversation...')
         logging.info(f"Messages: {json.dumps(self.get_context(), indent=2)}")
         
@@ -125,7 +125,7 @@ class ConversationManager(BaseConversationManager):
             self.new_message({'role': self.config.user_name, 'name':"[player]", 'content': transcribed_text}) # add player input to messages
             
             self.character_manager.before_step() # Let the characters know before a step has been taken
-            self.update_game_state()
+            await self.update_game_state()
 
             active_character = self.character_manager.active_characters_list[0] # get the active character
             # check if user is ending conversation
@@ -147,7 +147,7 @@ class ConversationManager(BaseConversationManager):
                         if word in name_group:
                             goodbye_target_character = self.character_manager.active_characters[' '.join(name_group)]
                             break
-                self.end_conversation(goodbye_target_character) # end conversation in game with current active character, and if no active characters are left in the conversation, end it entirely
+                await self.end_conversation(goodbye_target_character) # end conversation in game with current active character, and if no active characters are left in the conversation, end it entirely
         
         if (transcribed_text is not None and transcribed_text != '') and not self.conversation_ended and self.in_conversation: # if player input is not empty and conversation has not ended, get response from NPC
             await self.get_response()
@@ -156,7 +156,7 @@ class ConversationManager(BaseConversationManager):
         
         # if npc ended conversation
         if self.conversation_ended and self.in_conversation:
-            self.end_conversation()
+            await self.end_conversation(self.game_interface.active_character)
 
         self.character_manager.after_step() # Let the characters know after a step has been taken
         # if the conversation is becoming too long, save the conversation to memory and reload
