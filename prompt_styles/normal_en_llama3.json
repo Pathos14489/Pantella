@@ -1,7 +1,7 @@
 {
     "name": "Normal - English",
     "style": {
-        "stop": ["<|eot_id|>","<|end_header_id|>", "<", "<im", "im_", "<im_end"],
+        "stop": ["<|eot_id|>","<|end_header_id|>", "<", "<im", "im_", "<im_end", "\n"],
         "thinking_transitions": [],
         "undo": ["{", "}"],
         "replacements": [
