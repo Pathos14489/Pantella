@@ -18,8 +18,12 @@ for file in os.listdir(os.path.join(os.path.dirname(__file__), "tts_types/")):
             continue
         logging.info(f"Importing {module_name} from src.tts_types")
         if module_name != "base_tts":
-            module = importlib.import_module(f"src.tts_types.{module_name}")
-            tts_Types[module.tts_slug] = module
+            try:
+                module = importlib.import_module(f"src.tts_types.{module_name}")
+                logging.info(f"Imported {module_name} from src.tts_types")
+                tts_Types[module.tts_slug] = module
+            except Exception as e:
+                logging.error(f"Failed to import {module_name}: {e}")
 tts_Types["default"] = tts_Types[default]
 logging.info("Imported TTS types in tts.py")
 # print available TTS types

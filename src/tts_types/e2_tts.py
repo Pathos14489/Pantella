@@ -27,6 +27,7 @@ try:
     logging.info("Imported e2_tts")
 except Exception as e:
     logging.error(f"Failed to import e2_tts: {e}")
+    raise e
 
 logging.info("Imported required libraries in e2_tts.py")
 

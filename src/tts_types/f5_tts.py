@@ -25,6 +25,7 @@ try:
     logging.info("Imported f5_tts")
 except Exception as e:
     logging.error(f"Failed to import f5_tts: {e}")
+    raise e
 
 # load models
 

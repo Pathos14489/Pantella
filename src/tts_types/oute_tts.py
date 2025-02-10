@@ -9,6 +9,7 @@ try:
     logging.info("Imported outetts")
 except Exception as e:
     logging.error(f"Failed to import outetts: {e}")
+    raise e
 
 logging.info("Imported required libraries in outetts.py")
 

@@ -30,6 +30,7 @@ try:
     logging.info("Imported GPT-SoVITS libraries")
 except Exception as e:
     logging.error(f"Failed to import GPT-SoVITS: {e}")
+    raise e
 
 
 def process_text(texts):

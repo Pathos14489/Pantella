@@ -24,12 +24,19 @@ try:
 except Exception as e:
     logging.error(f"Failed to import av and AudioResampler: {e}")
     raise e
-from pathlib import Path
-import numpy as np
-import random
-import os
-import json
-import io
+try:
+    logging.info("Trying to import required libraries")
+    from pathlib import Path
+    import numpy as np
+    import random
+    import os
+    import json
+    import io
+    logging.info("Imported required libraries")
+except Exception as e:
+    logging.error(f"Failed to import required libraries: {e}")
+    raise e
+    
 logging.info("Imported required libraries in chat_tts.py")
 
 def format_text(text: str) -> str:
