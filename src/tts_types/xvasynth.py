@@ -4,9 +4,7 @@ import src.utils as utils
 import src.tts_types.base_tts as base_tts
 import requests
 import subprocess
-import sys
 import os
-from pathlib import Path
 import soundfile as sf
 import json
 import re

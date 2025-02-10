@@ -4,13 +4,12 @@ import src.tts_types.base_tts as base_tts
 try:
     logging.info("Trying to import styletts2")
     from styletts2 import tts
+    import random
+    import os
     logging.info("Imported styletts2")
 except Exception as e:
     logging.error(f"Failed to import torch and torchaudio: {e}")
     raise e
-import random
-import os
-import json
 logging.info("Imported required libraries in style_tts_2.py")
 
 tts_slug = "style_tts_2"

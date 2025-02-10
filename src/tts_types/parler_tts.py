@@ -22,10 +22,14 @@ try:
 except Exception as e:
     logging.error(f"Failed to import av and AudioResampler: {e}")
     raise e
-import os
-import json
-import random
-import soundfile as sf
+try:
+    import os
+    import json
+    import random
+    import soundfile as sf
+except Exception as e:
+    logging.error(f"Failed to import os, json, random, and soundfile: {e}")
+    raise e
 logging.info("Imported required libraries in parler_tts.py")
 
 tts_slug = "parler_tts"

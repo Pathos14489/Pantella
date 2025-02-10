@@ -4,12 +4,11 @@ import src.tts_types.base_tts as base_tts
 try:
     logging.info("Trying to import outetts")
     import outetts
+    import random
+    import os
     logging.info("Imported outetts")
 except Exception as e:
     logging.error(f"Failed to import outetts: {e}")
-import random
-import os
-import json
 
 logging.info("Imported required libraries in outetts.py")
 

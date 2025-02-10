@@ -11,20 +11,20 @@ try:
         infer_process,
         remove_silence_for_generated_wav,
     )
+    # load models
+    vocoder = load_vocoder()
     logging.info("Imported e2_tts")
+    import random
+    import os
+    import json
+    import tempfile
+
+    import soundfile as sf
+    import torchaudio
+    from cached_path import cached_path
 except Exception as e:
     logging.error(f"Failed to import e2_tts: {e}")
-import random
-import os
-import json
-import tempfile
 
-import soundfile as sf
-import torchaudio
-from cached_path import cached_path
-
-# load models
-vocoder = load_vocoder()
 
 def load_e2tts(ckpt_path=str(cached_path("hf://SWivid/E2-TTS/E2TTS_Base/model_1200000.safetensors"))):
     E2TTS_model_cfg = dict(dim=1024, depth=24, heads=16, ff_mult=4)
