@@ -14,21 +14,20 @@ try:
     vocoder = load_vocoder()
     import random
     import os
-    import json
     import tempfile
 
     import soundfile as sf
     import torchaudio
     from cached_path import cached_path
+    def load_f5tts(device, ckpt_path=str(cached_path("hf://SWivid/F5-TTS/F5TTS_Base/model_1200000.safetensors"))):
+        F5TTS_model_cfg = dict(dim=1024, depth=22, heads=16, ff_mult=2, text_dim=512, conv_layers=4)
+        return load_model(DiT, F5TTS_model_cfg, ckpt_path, device=device)
     logging.info("Imported f5_tts")
 except Exception as e:
     logging.error(f"Failed to import f5_tts: {e}")
 
 # load models
 
-def load_f5tts(device, ckpt_path=str(cached_path("hf://SWivid/F5-TTS/F5TTS_Base/model_1200000.safetensors"))):
-    F5TTS_model_cfg = dict(dim=1024, depth=22, heads=16, ff_mult=2, text_dim=512, conv_layers=4)
-    return load_model(DiT, F5TTS_model_cfg, ckpt_path, device=device)
 
 # def load_custom(ckpt_path: str, vocab_path="", model_cfg=None):
 #     ckpt_path, vocab_path = ckpt_path.strip(), vocab_path.strip()
