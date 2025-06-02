@@ -725,7 +725,7 @@ class ConfigLoader:
                 "chatterbox_default_temperature": 0.5,
                 "chatterbox_default_exaggeration": 0.5,
                 "chatterbox_default_cfgw": 0.8,
-                "chatterbox_max_tokens": 512,
+                "chatterbox_max_tokens": 1024,
                 "chatterbox_watermark": False,
                 "chatterbox_batch_size": 300,
                 "chatterbox_batch_type": "paragraph", # paragraph, sentence, word
