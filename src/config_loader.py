@@ -306,6 +306,27 @@ class ConfigLoader:
             self._behavior_style = self.behavior_styles["normal"]
         return self._behavior_style
 
+    def _unique(self):
+        """Return a dictionary of settings that have been changed from the default settings"""
+        default = self.default()
+        unique = {}
+        for key in default:
+            for sub_key in default[key]:
+                if getattr(self, sub_key) != default[key][sub_key]:
+                    if key not in unique:
+                        unique[key] = {}
+                    unique[key][sub_key] = getattr(self, sub_key)
+        return unique
+    
+    def unique(self):
+        """Return a dictionary of settings that have been changed from the default settings"""
+        return json.dumps(self._unique(), indent=4)
+
+    def descriptions(self):
+        """Return a dictionary of descriptions for each setting"""
+        with open('./settings_descriptions.json') as f:
+            return json.load(f)
+
     def default(self):
         return {
             "Game": {
@@ -696,6 +717,19 @@ class ConfigLoader:
                 "gpt_sovits_top_p": 1.0,
                 "gpt_sovits_banned_voice_models": [],
                 "gpt_sovits_error_on_too_short_or_too_long_audio": True,
+                "is_bigvgan_half": True,
+            },
+            "chatterbox": {
+                "chatterbox_banned_voice_models": [],
+                "chatterbox_device": "cuda",
+                "chatterbox_default_temperature": 0.5,
+                "chatterbox_default_exaggeration": 0.5,
+                "chatterbox_default_cfgw": 0.8,
+                "chatterbox_max_tokens": 512,
+                "chatterbox_watermark": False,
+                "chatterbox_batch_size": 300,
+                "chatterbox_batch_type": "paragraph", # paragraph, sentence, word
+                "chatterbox_volume": 1.0,
             },
             "Debugging": {
                 "debug_mode": False,
@@ -738,27 +772,6 @@ class ConfigLoader:
             }
         }
     
-    def _unique(self):
-        """Return a dictionary of settings that have been changed from the default settings"""
-        default = self.default()
-        unique = {}
-        for key in default:
-            for sub_key in default[key]:
-                if getattr(self, sub_key) != default[key][sub_key]:
-                    if key not in unique:
-                        unique[key] = {}
-                    unique[key][sub_key] = getattr(self, sub_key)
-        return unique
-    
-    def unique(self):
-        """Return a dictionary of settings that have been changed from the default settings"""
-        return json.dumps(self._unique(), indent=4)
-
-    def descriptions(self):
-        """Return a dictionary of descriptions for each setting"""
-        with open('./settings_descriptions.json') as f:
-            return json.load(f)
-
     def export(self):
         return {
             "Game": {
@@ -1021,6 +1034,19 @@ class ConfigLoader:
                 "gpt_sovits_top_p": self.gpt_sovits_top_p,
                 "gpt_sovits_banned_voice_models": self.gpt_sovits_banned_voice_models,
                 "gpt_sovits_error_on_too_short_or_too_long_audio": self.gpt_sovits_error_on_too_short_or_too_long_audio,
+                "is_bigvgan_half": self.is_bigvgan_half,
+            },
+            "chatterbox": {
+                "chatterbox_banned_voice_models": self.chatterbox_banned_voice_models,
+                "chatterbox_device": self.chatterbox_device,
+                "chatterbox_default_temperature": self.chatterbox_default_temperature,
+                "chatterbox_default_exaggeration": self.chatterbox_default_exaggeration,
+                "chatterbox_default_cfgw": self.chatterbox_default_cfgw,
+                "chatterbox_max_tokens": self.chatterbox_max_tokens,
+                "chatterbox_watermark": self.chatterbox_watermark,
+                "chatterbox_batch_size": self.chatterbox_batch_size,
+                "chatterbox_batch_type": self.chatterbox_batch_type,
+                "chatterbox_volume": self.chatterbox_volume,
             },
             "Debugging": {
                 "debug_mode": self.debug_mode,
