@@ -10,6 +10,7 @@ try:
     import torch
     import torchaudio as ta
     import os
+    import io
     logging.info("Imported chatterbox")
 except Exception as e:
     logging.error(f"Failed to import torch and torchaudio: {e}")
@@ -106,6 +107,10 @@ class Synthesizer(base_tts.base_Synthesizer):
             watermark=self.config.chatterbox_watermark,
         )         
         # Save the wav file
+        bytes_io_file = io.BytesIO()
         wav = wav * self.config.chatterbox_volume
-        ta.save(voiceline_location, wav, self.model.sr)
+        # ta.save(voiceline_location, wav, self.model.sr)
+        ta.save(bytes_io_file, wav, self.model.sr, format='wav')
+        bytes_io_file.seek(0)
+        self.convert_to_16bit(bytes_io_file,voiceline_location, self.model.sr)
         logging.output(f'{self.tts_slug} - synthesized {voiceline} with voice model "{voice_model}"')
