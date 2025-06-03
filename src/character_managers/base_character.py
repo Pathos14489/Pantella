@@ -278,7 +278,7 @@ class base_Character:
         audio_file = self.conversation_manager.synthesizer.synthesize(string, self) # say string
         await self.conversation_manager.game_interface.send_audio_to_external_software([audio_file, string]) # save audio file to voice folder so it can be played in-game
         if remember:
-            self.conversation_manager.new_message({"role": self.config.assistant_name, "name":self.name, "content": string}) # add string to ongoing conversation
+            self.conversation_manager.new_message({"role": "assistant", "name":self.name, "content": string}) # add string to ongoing conversation
 
     async def leave_conversation(self):
         random_goodbye = random.choice(self.language['goodbye_npc_responses']) # get random goodbye line from player
@@ -301,7 +301,7 @@ class base_Character:
     
     def add_message(self, msg):
         """Add a new message to the memory manager"""
-        if msg["role"] != self.config.system_name:
+        if msg["role"] != "system":  # Don't add system messages to the memory manager
             self.check_for_new_knows(msg["content"])
             self.memory_manager.add_message(msg)
 

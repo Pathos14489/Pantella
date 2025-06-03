@@ -321,7 +321,7 @@ class LLM(base_LLM):
         while character is None and tries > 0:
             try:
                 if self.config.openai_completions_type == "text" and self.completions_supported:
-                    prompt = self.tokenizer.get_string_from_messages(messages) + self.tokenizer.start_message(self.config.assistant_name)
+                    prompt, images = self.tokenizer.get_string_from_messages(messages) + self.tokenizer.start_message("assistant")
                     completion = self.client.completions.create(prompt,
                         model=generation_model, 
                         max_tokens=self.config.max_tokens,
@@ -416,7 +416,7 @@ class LLM(base_LLM):
                     if kwarg in extra_body_kwargs:
                         del extra_body_kwargs[kwarg]
                 if self.config.openai_completions_type == "text" and self.completions_supported:
-                    prompt = self.tokenizer.get_string_from_messages(messages) + self.tokenizer.start_message(self.config.assistant_name)
+                    prompt, images = self.tokenizer.get_string_from_messages(messages) + self.tokenizer.start_message("assistant")
                     logging.info(f"Raw Prompt: {prompt}")
                     completion = self.client.completions.create(prompt=prompt,
                         model=self.config.openai_model, 
@@ -529,8 +529,8 @@ class LLM(base_LLM):
                     if kwarg in extra_body_kwargs:
                         del extra_body_kwargs[kwarg]
                 if self.config.openai_completions_type == "text" and self.completions_supported:
-                    prompt = self.tokenizer.get_string_from_messages(messages)
-                    prompt += self.tokenizer.start_message(self.config.assistant_name)
+                    prompt, images = self.tokenizer.get_string_from_messages(messages)
+                    prompt += self.tokenizer.start_message("assistant")
                     symbol_insert = ""
                     if force_speaker is not None and self._prompt_style["force_speaker"]:
                         prompt += force_speaker.name + self.config.message_signifier

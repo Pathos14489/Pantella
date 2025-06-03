@@ -111,17 +111,17 @@ class BaseGameInterface:
                 logging.info(f'In-game events since previous exchange:\n{in_game_events}')
             if len(self.conversation_manager.messages) == 0: # if there are no messages in the conversation yet, add in-game events to the first message from the system
                 self.conversation_manager.new_message({
-                    "role": self.conversation_manager.config.system_name,
+                    "role": "system",
                     "content": in_game_events,
                     "type": "game_event",
                 })
             else: # if there are messages in the conversation, add in-game events to the last message from the system
                 last_message = self.conversation_manager.messages[-1]
-                if last_message['role'] == self.conversation_manager.config.system_name and last_message['type'] == 'game_event': # if last message was from the system and was an in-game event, append new in-game events to the last message
+                if last_message['role'] == "system" and last_message['type'] == 'game_event': # if last message was from the system and was an in-game event, append new in-game events to the last message
                     self.conversation_manager.messages[-1]['content'] += "\n" + in_game_events
                 else: # if last message was from the NPC, add in-game events to the ongoing conversation as a new message from the system
                     self.conversation_manager.new_message({
-                        "role": self.conversation_manager.config.system_name,
+                        "role": "system",
                         "content": in_game_events,
                         "type": "game_event",
                     }) # add in-game events to current ongoing conversation

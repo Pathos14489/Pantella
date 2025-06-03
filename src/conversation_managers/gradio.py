@@ -64,7 +64,7 @@ class ConversationManager(BaseConversationManager):
         return 'single_player_with_npc'
         
     # def message_handler(self, player_message):
-    #     self.new_message({'role': self.config.user_name, 'name':"[player]", 'content': player_message}) # add player input to messages
+    #     self.new_message({'role': "user", 'name':"[player]", 'content': player_message}) # add player input to messages
     #     bot_message = random.choice(["How are you?", "I love you", "I'm very hungry"])
     #     return bot_message
         
@@ -91,7 +91,7 @@ class ConversationManager(BaseConversationManager):
         self.game_interface.update_game_events() # update game events before first player input
         try: # get response from NPC to player greeting
             pp_name, _ = character.get_perspective_player_identity()
-            self.new_message({'role': self.config.system_name, 'content': "*"+pp_name+" approaches "+character.name+" with the intent to start a conversation with them.*"}) # TODO: Improve later
+            self.new_message({'role': "system", 'content': "*"+pp_name+" approaches "+character.name+" with the intent to start a conversation with them.*"}) # TODO: Improve later
         except Exception as e: # if error, close Pantella
             logging.error(f"Error Getting Response in await_and_setup_conversation(): {e}")
             tb = traceback.format_exc()
@@ -122,7 +122,7 @@ class ConversationManager(BaseConversationManager):
             transcribed_text = self.game_interface.get_player_response() # get player input
             self.behavior_manager.run_player_behaviors(transcribed_text) # run player behaviors
             transcript_cleaned = utils.clean_text(transcribed_text)
-            self.new_message({'role': self.config.user_name, 'name':"[player]", 'content': transcribed_text}) # add player input to messages
+            self.new_message({'role': "user", 'name':"[player]", 'content': transcribed_text}) # add player input to messages
             
             self.character_manager.before_step() # Let the characters know before a step has been taken
             await self.update_game_state()

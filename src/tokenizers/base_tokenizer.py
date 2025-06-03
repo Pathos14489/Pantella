@@ -1,17 +1,15 @@
 from src.logging import logging
+from src.message_formatter import MessageFormatter, PromptStyle
 tokenizer_slug = "base_tokenizer"
 class base_Tokenizer(): # Tokenizes(only availble for counting the tokens in a string presently for local_models), and parses and formats messages for use with the language model
     def __init__(self, conversation_manager):
         self.conversation_manager = conversation_manager
         self.config = self.conversation_manager.config
         self.tokenizer_slug = tokenizer_slug # Fastest tokenizer for OpenAI models, change if you want to use a different tokenizer (use 'embedding' for compatibility with any model using the openai API)
-        # Prommpt Parsing Stuff
-        # self.BOS_token = self.config.BOS_token # Beginning of string token
-        # self.EOS_token = self.config.EOS_token # End of string token
-        # self.role_separator = self.config.role_separator # separates the role from the name
-        # self.message_signifier = self.config.message_signifier # Signifies the start of a message
-        # self.message_separator = self.config.message_separator # separates messages
-        # self.message_format = self.config.message_format # Format of a message. A string of messages formatted like this is what is sent to the language model, typically following by the start of a message from the assistant to generate a response
+        
+    def set_prompt_style(self, prompt_style: dict):
+        """Sets the prompt style for the tokenizer"""
+        self.message_formatter = MessageFormatter(PromptStyle(**prompt_style["style"]))
 
     @property
     def BOS_token(self):
@@ -36,98 +34,35 @@ class base_Tokenizer(): # Tokenizes(only availble for counting the tokens in a s
     @property
     def message_format(self):
         return self.config.message_format
+    
+    def get_role_prefix(self, role: str) -> str: # Returns the prefix for a role
+        """Returns the prefix for a role"""
+        return self.message_formatter.get_role_prefix(role)
+    
+    def get_role_suffix(self, role: str) -> str: # Returns the suffix for a role
+        """Returns the suffix for a role"""
+        return self.message_formatter.get_role_suffix(role)
 
     def new_message(self, content, role, name=None): # Parses a string into a message format with the name of the speaker
         """Parses a string into a message format with the name of the speaker"""
-        parsed_msg = self.start_message(role, name)
-        if type(content) == list:
-            for item in content:
-                if item["type"] == "text":
-                    parsed_msg += item["text"]
-                elif item["type"] == "image_url":
-                    parsed_msg += "[IMAGE_EMBEDDED_HERE]"
-        elif type(content) == str:
-            if content.strip() == "":
-                return ""
-            parsed_msg += content
-        parsed_msg += self.end_message(role, name)
-        return parsed_msg
+        return self.message_formatter.new_message(content, role, name)
 
     def start_message(self, role="", name=None): # Returns the start of a message with the name of the speaker
         """Returns the start of a message with the name of the speaker"""
-        parsed_msg_part = self.message_format
-        msg_sig = self.message_signifier
-        if not name:
-            name = ""
-            msg_sig = ""
-        role_sep = self.role_separator
-        if role == "":
-            role_sep = ""
-            
-        if name == "":
-            parsed_msg_part = parsed_msg_part.split("[message_signifier]")[0]
-        if role == "":
-            parsed_msg_part = parsed_msg_part.split("[role_separator]")[0]
-        parsed_msg_part = parsed_msg_part.replace("[BOS_token]",self.BOS_token)
-        parsed_msg_part = parsed_msg_part.replace("[role]",role)
-        parsed_msg_part = parsed_msg_part.replace("[role_separator]",role_sep)
-        parsed_msg_part = parsed_msg_part.replace("[name]",name)
-        parsed_msg_part = parsed_msg_part.replace("[message_signifier]",msg_sig)
-        parsed_msg_part = parsed_msg_part.replace("[EOS_token]",self.EOS_token)
-        parsed_msg_part = parsed_msg_part.replace("[message_separator]",self.message_separator)
-        parsed_msg_part = parsed_msg_part.split("[content]")[0]
-        return parsed_msg_part
+        return self.message_formatter.start_message(role, name)
 
     def end_message(self, role="", name=None): # Returns the end of a message with the name of the speaker (Incase the message format chosen requires the name be on the end for some reason, but it's optional to include the name in the end message)
         """Returns the end of a message with the name of the speaker (Incase the message format chosen requires the name be on the end for some reason, but it's optional to include the name in the end message)"""
-        parsed_msg_part = self.message_format
-        msg_sig = self.message_signifier
-        if not name:
-            name = ""
-            msg_sig = ""
-        role_sep = self.role_separator
-        if role == "":
-            role_sep = ""
-        if name == "":
-            parsed_msg_part = parsed_msg_part.split("[message_signifier]")[1]
-        if role == "":
-            parsed_msg_part = parsed_msg_part.split("[role_separator]")[1]
-        parsed_msg_part = parsed_msg_part.replace("[BOS_token]",self.BOS_token)
-        parsed_msg_part = parsed_msg_part.replace("[role]",role)
-        parsed_msg_part = parsed_msg_part.replace("[role_separator]",role_sep)
-        parsed_msg_part = parsed_msg_part.replace("[name]",name)
-        parsed_msg_part = parsed_msg_part.replace("[message_signifier]",msg_sig)
-        parsed_msg_part = parsed_msg_part.replace("[EOS_token]",self.EOS_token)
-        parsed_msg_part = parsed_msg_part.replace("[message_separator]",self.message_separator)
-        parsed_msg_part = parsed_msg_part.split("[content]")[1]
-        return parsed_msg_part
+        return self.message_formatter.end_message(role, name)
 
     def get_string_from_messages(self, messages): # Returns a formatted string from a list of messages
         """Returns a formatted string from a list of messages"""
-        context = ""
-        logging.info(f"Creating string from messages: {len(messages)}")
-        for message in messages:
-            # logging.info(f"Message:",message)
-            if "content" in message:
-                content = message["content"]
-            else:
-                raise ValueError("Message does not have 'content' key!")
-            if "role" in message:
-                role = message["role"]
-            else:
-                raise ValueError("Message does not have 'role' key!")
-            if "name" in message:
-                name = message["name"]
-            else:
-                name = None
-            msg_string = self.new_message(content, role, name)
-            context += msg_string
-        return context
+        return self.message_formatter.get_string_from_messages(messages)
 
     def num_tokens_from_messages(self, messages): # Returns the number of tokens used by a list of messages
         """Returns the number of tokens used by a list of messages"""
-        context = self.get_string_from_messages(messages)
-        context += self.start_message(self.config.assistant_name) # Simulate the assistant replying to add a little more to the token count to be safe (this is a bit of a hack, but it should work 99% of the time I think) TODO: Determine if needed
+        context, _images = self.get_string_from_messages(messages)
+        context += self.start_message("assistant") # Simulate the assistant replying to add a little more to the token count to be safe (this is a bit of a hack, but it should work 99% of the time I think) TODO: Determine if needed
         return self.get_token_count(context)
     
     def get_token_count_of_message(self, message): # Returns the number of tokens in a message

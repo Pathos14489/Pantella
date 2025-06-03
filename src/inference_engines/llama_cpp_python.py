@@ -123,8 +123,8 @@ class LLM(base_LLM): # Uses llama-cpp-python as the LLM inference engine
                 "content": character_prompt
             }
         ]
-        prompt = self.tokenizer.get_string_from_messages(messages)
-        prompt += self.tokenizer.start_message(self.config.assistant_name)
+        prompt, images = self.tokenizer.get_string_from_messages(messages)
+        prompt += self.tokenizer.start_message("assistant")
         logging.info(f"Raw Prompt: {prompt}")
         json_schema = self.conversation_manager.character_generator_schema.model_json_schema()
         grammar = llama_cpp.LlamaGrammar.from_json_schema(json.dumps(json_schema))
@@ -263,8 +263,8 @@ class LLM(base_LLM): # Uses llama-cpp-python as the LLM inference engine
         completion = None
         while retries > 0 and completion is None:
             try:
-                prompt = self.tokenizer.get_string_from_messages(messages)
-                prompt += self.tokenizer.start_message(self.config.assistant_name)
+                prompt, images = self.tokenizer.get_string_from_messages(messages)
+                prompt += self.tokenizer.start_message("assistant")
                 logging.info(f"Raw Prompt: {prompt}")
                 if self.vision_enabled:
                     prompt = self.multimodal_prompt_format(prompt)
@@ -324,8 +324,8 @@ class LLM(base_LLM): # Uses llama-cpp-python as the LLM inference engine
         while retries > 0:
             logging.info(f"Retries: {retries}")
             try:
-                prompt = self.tokenizer.get_string_from_messages(messages)
-                prompt += self.tokenizer.start_message(self.config.assistant_name)
+                prompt, images = self.tokenizer.get_string_from_messages(messages)
+                prompt += self.tokenizer.start_message("assistant")
                 if force_speaker is not None and self._prompt_style["force_speaker"]:
                     prompt += force_speaker.name + self.config.message_signifier
                     prompt += message_prefix

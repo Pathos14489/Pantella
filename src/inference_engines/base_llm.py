@@ -217,8 +217,8 @@ class base_LLM():
         stop = list(prompt_style["stop"])
         if "message_separator" in prompt_style and prompt_style["message_separator"] != None and prompt_style["message_separator"] != "":
             stop.append(prompt_style["message_separator"])
-        stop.append(self.EOS_token)
-        stop.append(self.BOS_token)
+        stop.append(prompt_style["EOS_token"])
+        stop.append(prompt_style["BOS_token"])
         if not self.character_manager.language["allow_npc_roleplay"]:
             stop.append(prompt_style["roleplay_prefix"])
             stop.append(prompt_style["roleplay_suffix"])
@@ -275,7 +275,14 @@ class base_LLM():
 
     @property
     def EOS_token(self):
-        return self._prompt_style['EOS_token']
+        if len(self._prompt_style['EOS_token']) > 0:
+            return self._prompt_style['EOS_token']
+        elif len(self._prompt_style['BOS_token']) > 0:
+            logging.warning("EOS_token is empty, returning BOS_token instead.")
+            return self._prompt_style['BOS_token']
+        else: # Return the first stop string if EOS_token and BOS_token are both empty
+            return self.stop[0]
+            
     
     @property
     def thinking_transitions(self):
@@ -533,13 +540,13 @@ class base_LLM():
             logging.warning('Empty input text, skipping...')
             return "", messages
         messages.append(
-            {"role": self.config.user_name, "content": input_text},
+            {"role": "user", "content": input_text},
         )
         logging.info('Getting LLM response...')
         reply = self.create(messages)
         
         messages.append(
-            {"role": self.config.assistant_name, "content": reply},
+            {"role": "assistant", "content": reply},
         )
         logging.info(f"LLM Response: {reply}")
 
@@ -619,7 +626,7 @@ class base_LLM():
         """Get the messages from the conversation manager"""
         logging.info(f"Getting messages from conversation manager")
         system_prompt = self.character_manager.get_system_prompt() # get system prompt
-        system_prompt_message = {'role': self.config.system_name, 'content': system_prompt, "type":"prompt"}
+        system_prompt_message = {'role': "system", 'content': system_prompt, "type":"prompt"}
         system_prompt_message_token_count = self.conversation_manager.tokenizer.get_token_count_of_message(system_prompt_message)
         system_prompt_message["token_count"] = system_prompt_message_token_count
         msgs = [] # add system prompt to context
@@ -639,7 +646,7 @@ class base_LLM():
         if self.cot_enabled and self.cot_supported and self.conversation_manager.thought_process is not None:
             schema_description = get_schema_description(self.conversation_manager.thought_process.model_json_schema())
             schema_message = {
-                "role": self.config.system_name,
+                "role": "system",
                 "content": schema_description,
                 "type": "prompt"
             }
@@ -669,10 +676,10 @@ class base_LLM():
             perspective_player_name = self.player_name
 
         for msg in msgs: # Add player name to messages based on the type of conversation
-            if msg['role'] == self.config.user_name: # if the message is from the player
+            if msg['role'] == "user": # if the message is from the player
                 if self.character_manager.active_character_count() > 1: # if multi NPC conversation use the player's actual name
                     formatted_msg = {
-                        'role': self.config.user_name,
+                        'role': "user",
                         'name': msg['name'] if "name" in msg else self.player_name,
                         'content': msg['content'].replace("[player]", self.player_name),
                     }
@@ -686,7 +693,7 @@ class base_LLM():
                         formatted_msg["type"] = msg["type"]
                 else: # if single NPC conversation use the NPC's perspective player name
                     formatted_msg = {
-                        'role': self.config.user_name,
+                        'role': "user",
                         'name': msg['name'] if "name" in msg else perspective_player_name,
                         'content': msg['content'].replace("[player]", perspective_player_name),
                     }
@@ -698,7 +705,7 @@ class base_LLM():
                         formatted_msg["location"] = msg["location"]
                     if "type" in msg:
                         formatted_msg["type"] = msg["type"]
-            elif msg['role'] == self.config.system_name: # if the message is from the system
+            elif msg['role'] == "system": # if the message is from the system
                     if self.character_manager.active_character_count() > 1: # if multi NPC conversation use the player's actual name
                         formatted_msg = {
                             'role': msg['role'],
@@ -721,12 +728,12 @@ class base_LLM():
                             formatted_msg["location"] = msg["location"]
                         if "type" in msg:
                             formatted_msg["type"] = msg["type"]
-            elif msg['role'] == self.config.assistant_name: # if the message is from an NPC
+            elif msg['role'] == "assistant": # if the message is from an NPC
                 if self.character_manager.active_character_count() > 1: # if multi NPC conversation use the player's actual name
                     if "name" not in msg: # support for role, content, and name messages
                         logging.warning(f"Message from NPC does not contain name(this might be fine, but might not be!):",msg)
                     formatted_msg = {
-                        'role': self.config.assistant_name,
+                        'role': "assistant",
                         'name': msg['name'].replace("[player]", self.player_name) if "name" in msg else "",
                         'content': msg['content'].replace("[player]", self.player_name),
                     }
@@ -740,7 +747,7 @@ class base_LLM():
                     if "name" not in msg: # support for role, content, and name messages
                         logging.warning(f"Message from NPC does not contain name(this might be fine, but might not be!):",msg)
                     formatted_msg = {
-                        'role': self.config.assistant_name,
+                        'role': "assistant",
                         'name': msg['name'].replace("[player]", perspective_player_name) if "name" in msg else "",
                         'content': msg['content'].replace("[player]", perspective_player_name),
                     }
@@ -781,7 +788,7 @@ class base_LLM():
             if image_message_content.startswith("{image}"):
                 image_message_content = image_message_content[7:]
                 image_message = {
-                    "role": self.config.system_name,
+                    "role": "system",
                     "content": [
                         {
                             "type": "image_url",
@@ -801,7 +808,7 @@ class base_LLM():
                 image_message_content = [content for content in image_message_content if content != ""]
                 if len(image_message_content) == 2:
                     image_message = {
-                        "role": self.config.system_name,
+                        "role": "system",
                         "content": [
                             {
                                 "type": "text",
@@ -822,7 +829,7 @@ class base_LLM():
                     }
                 elif len(image_message_content) == 1:
                     image_message = {
-                        "role": self.config.system_name,
+                        "role": "system",
                         "content": [
                             {
                                 "type": "text",
@@ -1736,10 +1743,10 @@ class base_LLM():
             full_reply = full_reply.strip()
             if self.config.message_reformatting and full_reply.strip() != '':
                 logging.info(f"Using Full Reply with Reformatting")
-                self.conversation_manager.new_message({"role": self.config.assistant_name, 'name':next_author, "content": full_reply})
+                self.conversation_manager.new_message({"role": "assistant", 'name':next_author, "content": full_reply})
             elif raw_reply.strip() != '':
                 logging.info(f"Using Raw Reply without Reformatting")
-                self.conversation_manager.new_message({"role": self.config.assistant_name, 'name':next_author, "content": raw_reply})
+                self.conversation_manager.new_message({"role": "assistant", 'name':next_author, "content": raw_reply})
             # -- for each sentence for each character until the conversation ends or the max_response_sentences is reached or the player is speaking
             logging.info(f"Full response saved ({self.tokenizer.get_token_count(full_reply)} tokens): {full_reply}")
 
@@ -1783,12 +1790,12 @@ class base_LLM():
                         else:
                             logging.info(f"Player is speaking. Stopping generation.")
                             return sentence, next_author, verified_author, retries, bad_author_retries, system_loop
-                    if next_author.lower() == self.config.system_name.lower() and system_loop > 0:
+                    if next_author.lower() == "system".lower() and system_loop > 0:
                         logging.info(f"System detected. Retrying...")
                         system_loop -= 1
                         retries += 1
                         raise Exception('Invalid author')
-                    elif (next_author == self.config.system_name or next_author.lower() == self.config.system_name.lower()) and system_loop == 0:
+                    elif (next_author == "system" or next_author.lower() == "system".lower()) and system_loop == 0:
                         logging.info(f"System Loop detected. Please report to #dev channel in the Pantella Discord. Stopping generation.")
                         return sentence, next_author, verified_author, retries, bad_author_retries, system_loop
 

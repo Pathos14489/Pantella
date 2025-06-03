@@ -97,7 +97,7 @@ class BaseConversationManager:
 
             if len(self.messages) == 0: # At least only do this if the conversation hasn't started yet? Maybe? Let me know if this is a problem.
                 greeting = random.choice(character.language['predetermined_npc_greetings'])
-                self.new_message({"role": self.config.assistant_name, "name":character.name, "content": f"{greeting}."}) # TODO: Make this more interesting by generating a greeting for each NPC based on the context of the last line or two said(or if possible check if they were nearby when the line was said...?)?
+                self.new_message({"role": "assistant", "name":character.name, "content": f"{greeting}."}) # TODO: Make this more interesting by generating a greeting for each NPC based on the context of the last line or two said(or if possible check if they were nearby when the line was said...?)?
                 
             self.game_interface.enable_character_selection()
             
@@ -152,7 +152,7 @@ class BaseConversationManager:
     def post_initialization(self):
         self.thought_process = thought_process.create_thought_process(self) # Create Thought Process Manager based on config
         self.character_generator_schema = character_generator.create_generator_schema(self) # Create Character Manager based on config
-        self.config.set_prompt_style(self.inference_engine) # Set prompt based on LLM and config settings
+        self.config.set_prompt_style(self.inference_engine, self.tokenizer) # Set prompt based on LLM and config settings
         self.game_interface: GameInterface = game_interface.create_game_interface(self) # Create Game Interface based on config
         self.behavior_manager = behavior_manager.create_manager(self) # Create Behavior Manager based on config
         

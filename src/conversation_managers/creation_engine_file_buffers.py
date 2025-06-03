@@ -111,7 +111,7 @@ class ConversationManager(BaseConversationManager):
                 elif self.config.conversation_start_type == "implicit_predetermined_player_greeting":
                     greeting = random.choice(prompt_style["language"]["predetermined_player_greetings"])
                     greeting.replace("[character]", character.name)
-                    self.new_message({'role': self.config.user_name, 'name':"[player]", 'content': greeting})
+                    self.new_message({'role': "user", 'name':"[player]", 'content': greeting})
                     await self.get_response()
                 elif self.config.conversation_start_type == "predetermined_npc_greeting":
                     greeting = random.choice(character.language['predetermined_npc_greetings'])
@@ -141,10 +141,10 @@ class ConversationManager(BaseConversationManager):
             if len(self.messages) <= 2: # if radiant dialogue and the NPCs haven't greeted each other yet, greet each other
                 if self.character_manager.active_character_count() == 2: # TODO: Radiants can only handle 2 NPCs at a time, is that normal?
                     greeting = random.choice(self.game_interface.active_character.language['predetermined_npc_greetings'])
-                    self.new_message({'role': self.config.assistant_name, 'name':self.game_interface.active_character.name, 'content': greeting}) # TODO: Make this more interesting by generating a greeting for each NPC based on the context of the last line or two said(or if possible check if they were nearby when the line was said...?)
+                    self.new_message({'role': "assistant", 'name':self.game_interface.active_character.name, 'content': greeting}) # TODO: Make this more interesting by generating a greeting for each NPC based on the context of the last line or two said(or if possible check if they were nearby when the line was said...?)
                 else:
                     greeting = random.choice(self.game_interface.active_character.language['predetermined_npc_greetings'])
-                    self.new_message({'role': self.config.assistant_name, 'name':self.game_interface.active_character.name, 'content': greeting}) # TODO: Make this more interesting by generating a greeting for each NPC based on the context of the last line or two said(or if possible check if they were nearby when the line was said...?)
+                    self.new_message({'role': "assistant", 'name':self.game_interface.active_character.name, 'content': greeting}) # TODO: Make this more interesting by generating a greeting for each NPC based on the context of the last line or two said(or if possible check if they were nearby when the line was said...?)
 
         self.game_interface.update_game_events() # update game events before player input
 
@@ -198,7 +198,7 @@ class ConversationManager(BaseConversationManager):
                 transcribed_text = ""
             else: # if player input is not empty, and isn't a special command, run player behaviors
                 self.behavior_manager.run_player_behaviors(transcribed_text) # run player behaviors
-                self.new_message({'role': self.config.user_name, 'name':"[player]", 'content': transcribed_text}) # add player input to messages
+                self.new_message({'role': "user", 'name':"[player]", 'content': transcribed_text}) # add player input to messages
                 player_sent_message = True
                 
             self.character_manager.before_step() # Let the characters know that a step has been taken

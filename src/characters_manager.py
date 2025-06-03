@@ -333,7 +333,7 @@ class Characters:
         name_insert = random_character.name
         if self.language["behavior_example_insertion"]:
             memories.append({
-                "role": self.config.system_name,
+                "role": "system",
                 "content": self.language["behaviors_explanation_system_message_1"],
                 "type": "prompt"
             })
@@ -343,7 +343,7 @@ class Characters:
                 memories.append(fake_memory)
         if self.language["include_behavior_explanation"]:
             memories.append({
-                "role": self.config.system_name,
+                "role": "system",
                 "content": self.language["behaviors_explanation_system_message_2"].replace("{summaries}",self.conversation_manager.behavior_manager.get_behavior_summary(random_character)).replace("{name}",name_insert),
                 "type": "prompt"
             })
@@ -360,7 +360,7 @@ class Characters:
                 if not has_memory:
                     memories.append(memory)
         memories.append({
-            "role": self.config.system_name,
+            "role": "system",
             "content": self.language["memory_present_separator"].replace("{name}",name_insert),
             "type": "prompt"
         })

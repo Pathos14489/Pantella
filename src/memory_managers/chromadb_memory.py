@@ -78,7 +78,7 @@ class MemoryManager(base_MemoryManager):
                     self.conversation_manager.messages.append(message)
         if len(self.conversation_manager.messages) == 0: # TODO: Find a way to remove this, but this should help models not knowing how to reply as the chaaracter a bit.
             self.conversation_manager.new_message({
-                "role": self.config.system_name,
+                "role": "system",
                 "content": "Hello! I am "+self.name+".",
                 "type": "starting_message"
             })
@@ -228,7 +228,7 @@ class MemoryManager(base_MemoryManager):
             n_results=n_results,
             where={
                 "role": {
-                    "$ne": self.config.system_name
+                    "$ne": "system"
                 }
             }
         )
@@ -355,7 +355,7 @@ class MemoryManager(base_MemoryManager):
         if len(self.current_memories) == 0:
             return mem_messages
         explanation_message = {
-            "role": self.config.system_name,
+            "role": "system",
             "content": self.character_manager.language["chromadb_memories_explanation"].replace("{self_name}", self.character_manager.name),
             "type": "prompt"
         }
@@ -363,7 +363,7 @@ class MemoryManager(base_MemoryManager):
         explanation_message["token_count"] = explanation_tokens
         mem_messages.append(explanation_message)
         for memory in self.current_memories:
-            if memory["role"] != self.config.system_name:
+            if memory["role"] != "system":
                 mem_messages.append(memory)
         return mem_messages
 

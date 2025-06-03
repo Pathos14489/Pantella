@@ -254,15 +254,6 @@ class ConfigLoader:
     def message_format(self):
         return self._prompt_style["style"]["message_format"]
     @property
-    def system_name(self):
-        return self._prompt_style["style"]["system_name"]
-    @property
-    def user_name(self):
-        return self._prompt_style["style"]["user_name"]
-    @property
-    def assistant_name(self):
-        return self._prompt_style["style"]["assistant_name"]
-    @property
     def language(self):
         if self._prompt_style is not None:
             return self._prompt_style["language"]
@@ -275,7 +266,7 @@ class ConfigLoader:
     def racial_language(self):
         return self._prompt_style["racial_language"]
     
-    def set_prompt_style(self, llm):
+    def set_prompt_style(self, llm, tokenizer):
         """Set the prompt style - if llm has a recommended prompt style and config.prompt_style is not set to a specific style, set it to the recommended style"""
         if self.prompt_style is not None:
             if llm.prompt_style in self.prompt_styles and self.prompt_style == "default":
@@ -288,6 +279,7 @@ class ConfigLoader:
         else:
             logging.error(f"Prompt style not set in config file. Using default prompt style.")
             self._prompt_style = self.prompt_styles["normal_en"]
+        tokenizer.set_prompt_style(self._prompt_style) # Set the prompt style for the tokenizer
         # self.get_tokenizer_settings_from_prompt_style()
         logging.info("Getting tokenizer settings from prompt style")
         logging.config("Prompt Style:", json.dumps(self._prompt_style, indent=4))

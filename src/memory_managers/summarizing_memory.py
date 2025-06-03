@@ -136,7 +136,7 @@ class MemoryManager(base_MemoryManager):
             conversation = context[3:-2] # drop the context (0) hello (1,2) and "Goodbye." (-2, -1) lines
             if prompt == None: # If no summarization prompt is provided, use default
                 prompt = self.character_manager.prompt_style["langauge"]["summarizing_memory_prompt"].replace("{self_name}",self.name).replace("{other_name}",self.character_manager.get_perspective_player_identity()[0]).replace("{language}",self.config.language['language']["in_game_language_name"])
-            context = [{"role": self.conversation_manager.config.system_name, "content": prompt}]
+            context = [{"role": "system", "content": prompt}]
             history = ""
             for message in conversation:
                 history += message["role"] + ": " + message["content"] + "\n"
@@ -191,11 +191,11 @@ class MemoryManager(base_MemoryManager):
     def memories(self):
         memories = [
             {
-                "role": self.config.system_name,
+                "role": "system",
                 "content": "The following is a summary of "+self.name+"'s memories of what they've done/discussed."
             },
             {
-                "role": self.config.system_name,
+                "role": "system",
                 "content": self.latest_summary
             }
         ]

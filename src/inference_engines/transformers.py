@@ -120,8 +120,8 @@ class LLM(base_LLM.base_LLM): # Uses llama-cpp-python as the LLM inference engin
 
     def _create_completion(self, messages):
         """Return complete completion from the LLM"""
-        prompt = self.tokenizer.get_string_from_messages(messages)
-        prompt += self.tokenizer.start_message(self.config.assistant_name) # Start empty message from no one to let the LLM generate the speaker by split \n
+        prompt, images = self.tokenizer.get_string_from_messages(messages)
+        prompt += self.tokenizer.start_message("assistant") # Start empty message from no one to let the LLM generate the speaker by split \n
         logging.info(f"Raw Prompt: {prompt}")
         inputs = self.tokenizer.tokenizer(prompt, return_tensors="pt").to(self.device_map)
         return self.llm.generate(**inputs, **self.generation_kwargs)
@@ -139,8 +139,8 @@ class LLM(base_LLM.base_LLM): # Uses llama-cpp-python as the LLM inference engin
 
     def _create_completion_stream(self, messages):
         """Return a completion stream from the LLM"""
-        prompt = self.tokenizer.get_string_from_messages(messages)
-        prompt += self.tokenizer.start_message(self.config.assistant_name) # Start empty message from no one to let the LLM generate the speaker by split \n
+        prompt, images = self.tokenizer.get_string_from_messages(messages)
+        prompt += self.tokenizer.start_message("assistant") # Start empty message from no one to let the LLM generate the speaker by split \n
         logging.info(f"Raw Prompt: {prompt}")
         logging.info(f"Type of prompt: {type(prompt)}")
         inputs = self.tokenizer.tokenizer(prompt, return_tensors="pt").to(self.device_map)
@@ -185,8 +185,8 @@ class LLM(base_LLM.base_LLM): # Uses llama-cpp-python as the LLM inference engin
         while retries > 0:
             logging.info(f"Retries: {retries}")
             try:
-                prompt = self.tokenizer.get_string_from_messages(messages)
-                prompt += self.tokenizer.start_message(self.config.assistant_name) # Start empty message from no one to let the LLM generate the speaker by split \n
+                prompt, images = self.tokenizer.get_string_from_messages(messages)
+                prompt += self.tokenizer.start_message("assistant") # Start empty message from no one to let the LLM generate the speaker by split \n
                 if force_speaker is not None and self._prompt_style["force_speaker"]:
                     prompt += force_speaker.name + self.config.message_signifier
                     prompt += message_prefix
