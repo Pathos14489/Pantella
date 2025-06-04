@@ -26,8 +26,10 @@ logging.config(f"Available memory managers: {Manager_Types.keys()}")
 # Create Manager object using the config provided
     
 def create_manager(character_manager):
+    """Creates a memory manager object based on the character manager provided"""
     conversation_manager = character_manager.conversation_manager
     config = conversation_manager.config
+    config.manager_types["memory_manager"] = Manager_Types.keys() # Add conversation manager types to config
     logging.config(f"Creating memory manager for '{config.game_id}' using '{config.memory_manager}'...")
     if config.memory_manager != "auto": # if a specific memory manager is specified
         if config.memory_manager not in Manager_Types:

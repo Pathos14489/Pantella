@@ -26,6 +26,8 @@ logging.info(f"Available conversation managers: {Manager_Types.keys()}")
 # Create Manager object using the config provided
     
 def create_manager(config, initialize=True):
+    """Creates a conversation manager object based on the config provided"""
+    config.manager_types["conversation_manager"] = Manager_Types.keys() # Add conversation manager types to config
     if config.conversation_manager_type != "auto": # if a specific conversation manager is specified
         if config.conversation_manager_type not in Manager_Types:
             logging.error(f"Could not find conversation manager: {config.conversation_manager_type}! Please check your config.json file and try again!")

@@ -27,7 +27,9 @@ logging.config(f"Available game interfaces: {Interface_Types.keys()}")
 # Create Interface object using the config provided
     
 def create_game_interface(conversation_manager):
+    """Creates a game interface object based on the config provided"""
     config = conversation_manager.config
+    config.manager_types["game_interface"] = Interface_Types.keys() # Add conversation manager types to config
     if config.interface_type != "auto": # if a specific interface is specified
         if config.interface_type not in Interface_Types:
             logging.error(f"Could not find interface: {config.interface_type}! Please check your config.json file and try again!")

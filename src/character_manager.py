@@ -26,6 +26,8 @@ logging.config(f"Available character_managers: {Manager_Types.keys()}")
 # Create Manager object using the config provided
     
 def create_character_manager(config):
+    """Creates a character manager object based on the config provided"""
+    config.manager_types["character_manager"] = Manager_Types.keys() # Add conversation manager types to config
     if config.character_manager_type != "auto": # if a specific manager is specified
         logging.info(f"Creating Character Manager[{config.character_manager_type}]")
         logging.config(f"Creating Character Manager[{config.character_manager_type}] object")

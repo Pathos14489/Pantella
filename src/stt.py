@@ -29,6 +29,9 @@ logging.config(f"Available Transcriber types: {transcriber_Types.keys()}")
 # Create LLM object using the config and client provided
     
 def create_Transcriber(conversation_manager):
+    """Creates a transcriber object based on the config provided"""
+    config = conversation_manager.config
+    config.manager_types["stt"] = transcriber_Types.keys() # Add conversation manager types to config
     slug = conversation_manager.config.stt_engine
     if type(slug) == str:
         if slug not in transcriber_Types:

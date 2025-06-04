@@ -32,6 +32,9 @@ logging.config(f"Available TTS types: {tts_Types.keys()}")
 # Create TTS object using the config and client provided
     
 def create_Synthesizer(conversation_manager, slugs): # Get the TTS slug from config.json
+    """Creates a TTS synthesizer object based on the config provided"""
+    config = conversation_manager.config
+    config.manager_types["tts"] = tts_Types.keys() # Add conversation manager types to config
     if type(slugs) == list and len(slugs) == 1:
         slugs = slugs[0]
         logging.warning(f"Using single TTS engine: {slugs}")

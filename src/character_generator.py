@@ -22,6 +22,9 @@ for file in os.listdir(os.path.join(os.path.dirname(__file__), "character_genera
 logging.info("Imported all Generators to Generator_Types!")
 
 def create_generator_schema(conversation_manager):
+    """Creates a character generator object based on the config provided"""
+    config = conversation_manager.config
+    config.manager_types["character_generator"] = Generator_Types.keys() # Add conversation manager types to config
     logging.info(f"Creating Generator[{conversation_manager.config.character_type}] object")
     generator = "auto"
     if conversation_manager.config.character_type not in Generator_Types and conversation_manager.config.character_type != "auto":

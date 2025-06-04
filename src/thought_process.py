@@ -22,6 +22,9 @@ for file in os.listdir(os.path.join(os.path.dirname(__file__), "thought_processe
 logging.info("Imported all Thought models to Thought_Types!")
 
 def create_thought_process(conversation_manager):
+    """Creates a thought process object based on the config provided"""
+    config = conversation_manager.config
+    config.manager_types["thought_process"] = Thought_Types.keys() # Add conversation manager types to config
     logging.info(f"Creating Thought[{conversation_manager.config.thought_type}] object")
     thought_process = "default"
     if conversation_manager.config.thought_type not in Thought_Types and conversation_manager.config.thought_type != "default":

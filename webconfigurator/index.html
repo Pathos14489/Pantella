@@ -8,7 +8,46 @@
     <script src="/jquery-3.7.1.min.js"></script>
 </head>
 <body>
-    <h1>Pantella Web Configuration GUI</h1>
+    <img id="logo" src="/logo.png" alt="Pantella Logo">
+    <hr>
+    <h1 id="header">Web Configuration GUI</h1>
+    <div id="log">
+    </div>
+    <style>
+        #logo {
+            display: block;
+            margin: 0 auto;
+            width: 200px;
+            height: auto;
+        }
+        #header {
+            text-align: center;
+            color: #fff;
+            font-size: 2em;
+            margin-top: 20px;
+        }
+        hr {
+            border: 0;
+            height: 1px;
+            background-color: #ccc;
+            margin: 20px auto;
+            width: 80%;
+        }
+        #log {
+            width: 95%;
+            min-height: 200px;
+            height: 200px;
+            margin-bottom: 20px;
+            resize: vertical;
+            overflow-y: auto;
+            background-color: #000;
+            color: #fff;
+            padding: 10px;
+            font-family: monospace;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
     <div id="settings"></div>
     <script>
         // Get json from server
@@ -22,8 +61,14 @@
             type: "GET",
             async: false
         }).responseText;
+        var multipleChoice = $.ajax({
+            url: "/multiple-choice",
+            type: "GET",
+            async: false
+        }).responseText;
         default_settings = JSON.parse(default_settings);
         settings = JSON.parse(settings);
+        multipleChoice = JSON.parse(multipleChoice);
         // {
         //     "defaultConfig": ...,
         //     "types": ..., // object with properties that represent settings sections, and a list of setting names with their value types as strings
@@ -32,66 +77,107 @@
         console.log(default_settings.types);
         console.log(settings);
         for (typeCategory in default_settings.types) {
-            var typeCategoryDiv = document.createElement("div");
-            typeCategoryDiv.id = typeCategory;
-            typeCategoryDiv.innerHTML = "<h2>" + typeCategory + "</h2>";
-            document.getElementById("settings").appendChild(typeCategoryDiv);
+            // var typeCategoryDiv = document.createElement("div");
+            // typeCategoryDiv.id = typeCategory;
+            // typeCategoryDiv.innerHTML = "<h2>" + typeCategory + "</h2>";
+            let typeCategoryDetails = document.createElement("details");
+            typeCategoryDetails.id = typeCategory;
+            let typeCategorySummary = document.createElement("summary");
+            typeCategorySummary.innerHTML = "<h3>" + typeCategory.split("_").join(" ") + "</h3>";
+            typeCategoryDetails.append(typeCategorySummary)
+
+            document.getElementById("settings").appendChild(typeCategoryDetails);
             for (setting in default_settings.types[typeCategory]) {
-                var settingDiv = document.createElement("div");
+                let settingDiv = document.createElement("div");
                 settingDiv.id = setting;
-                settingDiv.innerHTML = "<h3>" + setting + "</h3>";
-                document.getElementById(typeCategory).appendChild(settingDiv);
+                let settingTitle = setting.split("_").map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(" ");
+                settingDiv.innerHTML = "<h4>" + settingTitle + "</h4>";
+                typeCategoryDetails.appendChild(settingDiv);
 
-                var settingDescription = document.createElement("p");
-                settingDescription.innerHTML = default_settings.descriptions[typeCategory][setting];
-                document.getElementById(setting).appendChild(settingDescription);
-
+                let settingInput = null;
+                let multipleChoiceValue = false
                 if (default_settings.types[typeCategory][setting] == "dict"){
-                    var settingInput = document.createElement("textarea");
+                    settingInput = document.createElement("textarea");
                     settingInput.rows = 10;
                     settingInput.cols = 50;
+                }else if (multipleChoice[typeCategory] && multipleChoice[typeCategory][setting]) {
+                    settingInput = document.createElement("select");
+                    multipleChoiceValue = true;
                 }else{
-                    var settingInput = document.createElement("input");
+                    settingInput = document.createElement("input");
                 }
                 settingInput.id = setting + "Input";
-                switch (default_settings.types[typeCategory][setting]) {
-                    case "bool":
-                        settingInput.type = "checkbox";
-                        settingInput.checked = settings[typeCategory][setting];
-                        settingInput.title = default_settings.descriptions[typeCategory][setting];
-                        settingInput.alt = default_settings.descriptions[typeCategory][setting];
-                        break;
-                    case "int":
-                        settingInput.type = "number";
-                        settingInput.value = settings[typeCategory][setting];
-                        settingInput.title = default_settings.descriptions[typeCategory][setting];
-                        settingInput.alt = default_settings.descriptions[typeCategory][setting];
-                        break;
-                    case "float":
-                        settingInput.type = "number";
-                        settingInput.step = "0.01";
-                        settingInput.value = settings[typeCategory][setting];
-                        settingInput.title = default_settings.descriptions[typeCategory][setting];
-                        settingInput.alt = default_settings.descriptions[typeCategory][setting];
-                        break;
-                    case "dict":
-                        console.log(settings[typeCategory]);
-                        settingInput.value = JSON.stringify(settings[typeCategory][setting], null, 4);
-                        settingInput.title = default_settings.descriptions[typeCategory][setting];
-                        settingInput.alt = default_settings.descriptions[typeCategory][setting];
-                        break;
-                    default:
-                        settingInput.type = "text";
-                        settingInput.value = String(settings[typeCategory][setting]).replace("\n","\\n");
-                        settingInput.title = default_settings.descriptions[typeCategory][setting];
-                        settingInput.alt = default_settings.descriptions[typeCategory][setting];
-                        break;
+                if (multipleChoiceValue) {
+                    // If multiple choice, add options
+                    for (option in multipleChoice[typeCategory][setting]) {
+                        var optionElement = document.createElement("option");
+                        optionElement.value = multipleChoice[typeCategory][setting][option];
+                        optionElement.innerHTML = multipleChoice[typeCategory][setting][option];
+                        settingInput.appendChild(optionElement);
+                    }
+                    settingInput.value = settings[typeCategory][setting];
+                } else {
+                    switch (default_settings.types[typeCategory][setting]) {
+                        case "bool":
+                            console.log("Setting " + setting + " is a boolean");
+                            settingInput.type = "checkbox";
+                            settingInput.checked = settings[typeCategory][setting];
+                            break;
+                        case "int":
+                            console.log("Setting " + setting + " is an integer");
+                            settingInput.type = "number";
+                            settingInput.value = settings[typeCategory][setting];
+                            break;
+                        case "float":
+                            console.log("Setting " + setting + " is a float");
+                            settingInput.type = "number";
+                            settingInput.step = "0.01";
+                            settingInput.value = settings[typeCategory][setting];
+                            break;
+                        case "dict":
+                            console.log("Setting " + setting + " is a dict");
+                            console.log(settings[typeCategory]);
+                            settingInput.value = JSON.stringify(settings[typeCategory][setting], null, 4);
+                            break;
+                        case "list":
+                            settingInput.type = "text";
+                            if (!settings[typeCategory][setting]) settings[typeCategory][setting] = [];
+                            if (settings[typeCategory][setting].length == 0) {
+                                console.log("Setting " + setting + " is an empty list");
+                                settingInput.value = "";
+                            }else{
+                                console.log("Setting " + setting + " is a list");
+                                settingInput.value = settings[typeCategory][setting].join(", ");   
+                            }
+                            break;
+                        default:
+                            console.log("Setting " + setting + " is a string");
+                            settingInput.type = "text";
+                            settingInput.value = String(settings[typeCategory][setting]).replace("\n","\\n");
+                            break;
+                    }
                 }
-                settingInput.placeholder = default_settings.defaultConfig[setting];
+                try{
+                    settingInput.title = default_settings.descriptions[typeCategory][setting];
+                    settingInput.alt = default_settings.descriptions[typeCategory][setting];
+                } catch (e) {
+                    console.warn("No description for " + setting + " in " + typeCategory);
+                }
+                if (default_settings.defaultConfig[setting]){
+                    settingInput.placeholder = default_settings.defaultConfig[setting]
+                }
                 settingInput.onchange = function() {
                     saveSettings();
                 }
-                document.getElementById(setting).appendChild(settingInput);
+                settingDiv.appendChild(settingInput);
+
+                var settingDescription = document.createElement("p");
+                try{
+                    settingDescription.innerHTML = default_settings.descriptions[typeCategory][setting];
+                    settingDiv.appendChild(settingDescription);
+                } catch (e) {
+                    console.warn("No description for " + setting + " in " + typeCategory);
+                }
             }
             function saveSettings(){
                 var newSettings = {};
@@ -112,13 +198,14 @@
                                 break;
                             case "list":
                                 newSettings[typeCategory][setting] = settingInput.value.split(",");
+                                newSettings[typeCategory][setting] = newSettings[typeCategory][setting].map(item => item.trim());
                                 if (setting == "tensor_split") newSettings[typeCategory][setting] = newSettings[typeCategory][setting].map(parseFloat);
                                 break;
                             case "dict":
                                 try {
                                     newSettings[typeCategory][setting] = JSON.parse(settingInput.value);
                                 } catch (e) {
-                                    alert("Invalid JSON in " + setting + " input");
+                                    alert("Invalid JSON in '" + setting + "' input");
                                     save = false;
                                 }
                                 break;
@@ -140,6 +227,119 @@
                 }
             }
         }
+
+        var lastLog = "";
+        // Check log every second and update the log div
+        setInterval(function() {
+            $.ajax({
+                url: "/log",
+                type: "GET",
+                success: function(data) {
+                    if (lastLog == data) return; // No change, skip update
+                    let scrollDown = document.getElementById("log").scrollTop >= document.getElementById("log").scrollHeight-25; // Check if we are scrolled down
+                    document.getElementById("log").innerHTML = data.replace("\n\n","\n").replace(/\n/g, "<br>"); // Replace newlines with <br> for HTML display
+                    if (scrollDown) {
+                        document.getElementById("log").scrollTop = document.getElementById("log").scrollHeight; // Scroll to the bottom
+                    }
+                    lastLog = data;
+                },
+                error: function() {
+                    console.error("Failed to fetch log");
+                }
+            });
+        }, 1000);
+
     </script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            overflow-x: hidden;
+            background-color: #555;
+        }
+        h1 {
+            color: #ddd;
+        }
+        h2 {
+            color: #bbb;
+            display: inline-block;
+        }
+        h3 {
+            color: #aaa;
+            display: inline-block;
+        }
+        h4 {
+            color: #999;
+            margin-top: 0;
+            max-width: fit-content;
+            text-wrap: break-word;
+            display: inline-block;
+        }
+        p {
+            color: #ccc;
+            font-size: 0.9em;
+            max-width: 600px;
+            margin-bottom: 0;
+        }
+        details {
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        input[type="text"],
+        input[type="number"],
+        textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            box-sizing: border-box;
+        }
+        select {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            box-sizing: border-box;
+        }
+        input[type="checkbox"] {
+            margin-right: 10px;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        details div {
+            background-color: #333;
+            border: 1px solid #ddd;
+            margin-bottom: 10px;
+            padding: 10px;
+        }
+        details div:nth-child(odd) {
+            background-color: #444;
+        }
+        #settings {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding: 20px;
+            padding-right: 0;
+            box-sizing: border-box;
+        }
+        #settings > details {
+            background-color: #454545;
+            flex: 1 1 calc(20% - 20px); /* Three columns, with space for margins */
+            box-sizing: border-box;
+            padding: 10px;
+            width: 300px;
+            margin-right: 20px;
+            margin-bottom: 20px;
+            break-inside: avoid;
+            border: 1px solid #ccc;
+        }
+        #settings details summary::marker{ display:none; }
+        #settings details summary {
+            cursor: pointer;
+            list-style: none
+        }
+    </style>
 </body>
 </html>

@@ -25,7 +25,9 @@ logging.config(f"Available behavior managers: {Manager_Types.keys()}")
 # Create Manager object using the config provided
     
 def create_manager(conversation_manager):
+    """Creates a behavior manager object based on the conversation manager provided"""
     config = conversation_manager.config
+    config.manager_types["behavior_manager"] = Manager_Types.keys() # Add conversation manager types to config
     if config.behavior_manager != "auto": # if a specific behavior manager is specified
         if config.behavior_manager not in Manager_Types:
             logging.error(f"Could not find behavior manager: {config.behavior_manager}! Please check your config.json file and try again!")

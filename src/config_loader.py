@@ -39,6 +39,7 @@ class ConfigLoader:
         self.interface_type = self.current_interface_config["interface_type"]
         self.behavior_manager = self.current_interface_config["behavior_manager"]
         logging.log_file = self.logging_file_path # Set the logging file path
+        self.manager_types = {}
         self.get_prompt_styles()
         self.addons = {}
         self.load_addons()
@@ -61,6 +62,26 @@ class ConfigLoader:
             tb = traceback.format_exc()
             logging.error(tb)
             raise e
+        try:
+            with open(self.config_path, 'w') as f:
+                json.dump(export_obj, f, indent=4)
+            logging.info(f"Config file saved to {self.config_path}")
+        except Exception as e:
+            logging.error(f"Could not save config file to {self.config_path}. Error: {e}")
+            tb = traceback.format_exc()
+            logging.error(tb)
+            raise e
+        
+    def save_json(self, json_data):
+        """Save the config to the config file"""
+        export_obj = self.export()
+        for key in json_data:
+            for sub_key in json_data[key]:
+                if sub_key not in export_obj[key]:
+                    logging.warn(f"Key '{key}' with subkey '{sub_key}' not found in config file. Adding it to the config file.")
+                export_obj[key][sub_key] = json_data[key][sub_key]
+                if type(export_obj[key][sub_key]) == list:
+                    export_obj[key][sub_key] = [item for item in export_obj[key][sub_key] if item != "" and item is not None]  # Remove empty strings and None values from lists
         try:
             with open(self.config_path, 'w') as f:
                 json.dump(export_obj, f, indent=4)
@@ -150,6 +171,7 @@ class ConfigLoader:
         """Get the prompt styles from the prompt_styles directory"""
         logging.config("Getting prompt styles")
         prompt_styles_dir = os.path.join(os.path.dirname(__file__), "../prompt_styles/")
+        self.manager_types["prompt_styles"] = [prompt_style_slug.split('.')[0] for prompt_style_slug in os.listdir(prompt_styles_dir) if os.path.isdir(os.path.join(prompt_styles_dir, prompt_style_slug))]
         for file in os.listdir(prompt_styles_dir):
             if file.endswith('.json'):
                 with open(f'{prompt_styles_dir}/{file}', encoding='utf-8') as f:
@@ -338,7 +360,7 @@ class ConfigLoader:
                 "summarizing_memory_depth": 1,
             },
             "chromadb_memory":{
-                "memory_update_interval": 1,
+                "memory_update_interval": 1.0,
                 "logical_memories": 5,
                 "emotional_memories": 5,
                 "torchmoji_max_length": 30,
@@ -452,7 +474,7 @@ class ConfigLoader:
                 "stt_language": "default",
                 "audio_threshold": "auto",
                 "pause_threshold": 0.5,
-                "listen_timeout": 30,
+                "listen_timeout": 30.0,
             },
             "whisper": {
                 "whisper_model": "base",
@@ -511,15 +533,15 @@ class ConfigLoader:
                 "character_type": "auto",
                 "cot_enabled": False,
                 "temperature": 0.8,
-                "top_p": 1,
+                "top_p": 1.0,
                 "min_p": 0.05,
                 "typical_p": 0.9,
                 "top_k": 0,
                 "repeat_penalty": 1.0,
                 "tfs_z": 1.0,
-                "frequency_penalty": 0,
-                "presence_penalty": 0,
-                "mirostat_mode": 0,
+                "frequency_penalty": 0.0,
+                "presence_penalty": 0.0,
+                "mirostat_mode": 0.0,
                 "mirostat_eta": 0.1,
                 "mirostat_tau": 5,
                 "max_tokens": 512,
@@ -755,6 +777,7 @@ class ConfigLoader:
                 "conversation_data_directory": ".\\data\\conversations",
                 "voice_model_ref_ids_file": ".\\skyrim_voice_model_ids.json",
                 "logging_file_path": ".\\logging.log",
+                "open_config_on_startup": True,
                 "config_port": 8021,
                 "memory_editor_port": 8022,
                 "debug_ui_port": 8023,
@@ -1069,6 +1092,7 @@ class ConfigLoader:
                 "conversation_data_directory": self.conversation_data_directory,
                 "voice_model_ref_ids_file": self.voice_model_ref_ids_file,
                 "logging_file_path": self.logging_file_path,
+                "open_config_on_startup": self.open_config_on_startup,
                 "config_port": self.config_port,
                 "memory_editor_port": self.memory_editor_port,
                 "debug_ui_port": self.debug_ui_port,
@@ -1081,29 +1105,120 @@ class ConfigLoader:
         for key in default:
             typesobj[key] = {}
             for sub_key in default[key]:
+                # typesobj[key][sub_key] = str(type(default[key][sub_key]))
                 text = str(type(default[key][sub_key]))
                 text = text.split("'")[1]
                 typesobj[key][sub_key] = text
+        # print("Default types:", typesobj)
         return typesobj
     
+    def mulitple_choice(self):
+        return {
+            "Game": {
+                "game_id": ["skyrim", "skyrimvr", "fallout4", "fallout4vr"],
+                "conversation_manager_type": ["auto"]+[conversation_manager_type for conversation_manager_type in self.manager_types["conversation_manager"]],
+                "interface_type": ["auto"]+[interface_type for interface_type in self.manager_types["game_interface"]],
+                "behavior_manager": ["auto"]+[behavior_manager for behavior_manager in self.manager_types["behavior_manager"]],
+                "memory_manager": ["auto"]+[memory_manager_slug.split(".")[0]  for memory_manager_slug in os.listdir(os.path.join(os.path.dirname(__file__), "memory_managers/")) if memory_manager_slug.endswith(".py") and not memory_manager_slug.startswith("__")],
+                "character_manager_type": ["auto"]+[character_manager_type for character_manager_type in self.manager_types["character_manager"]],
+            },
+            "summarizing_memory": {
+                "summarizing_memory_direction": ["topdown","bottomup"],
+            },
+            "chromadb_memory": {
+                "chromadb_memory_direction": ["topdown","bottomup"],
+            },
+            "SpeechToText": {
+                "stt_engine": [stt_engine.split(".")[0] for stt_engine in os.listdir(os.path.join(os.path.dirname(__file__), "stt_types/")) if stt_engine.endswith(".py") and not stt_engine.startswith("__")],
+                "stt_language": ["default","af","am","ar","as","az","ba","be","bg","bn","bo","br","bs","ca","cs","cy","da","de","el","en","es","et","eu","fa","fi","fo","fr","gl","gu","ha","haw","he","hi","hr","ht","hu","hy","id","is","it","ja","jw","ka","kk","km","kn","ko","la","lb","ln","lo","lt","lv","mg","mi","mk","ml","mn","mr","ms","mt","my","ne","nl","nn","no","oc","pa","pl","ps","pt","ro","ru","sa","sd","si","sk","sl","sn","so","sq","sr","su","sv","sw","ta","te","tg","th","tk","tl","tr","tt","uk","ur","uz","vi","yi","yo","zh","yue"]
+            },
+            "whisper": {
+                "whisper_model": ["tiny", "tiny.en", "base", "base.en", "small", "small.en", "distil-small.en", "medium", "medium.en", "distil-medium.en", "large-v1", "large-v2", "large-v3", "large", "distil-large-v2", "distil-large-v3"],
+            },
+            "faster_whisper": {
+                "whisper_process_device": ["auto","cpu", "cuda"],
+                "whisper_compute_type": ["auto", "int8", "int8_float32", "int8_float16", "int8_bfloat16", "int16", "float16", "bfloat16", "float32"],
+            },
+            "LanguageModel": {
+                "inference_engine": [inference_engine for inference_engine in self.manager_types["language_model"]],
+                "tokenizer_type": [tokenizer_type for tokenizer_type in self.manager_types["tokenizer"]],
+            },
+            "PromptStyle": {
+                "prompt_style": [behavior_style.split(".")[0] for behavior_style in os.listdir(os.path.join(os.path.dirname(__file__), "../prompt_styles"))],
+                "behavior_style": [behavior_style.split(".")[0] for behavior_style in os.listdir(os.path.join(os.path.dirname(__file__), "../behavior_styles"))],
+                "conversation_start_type": [
+                    "always_llm_choice",
+                    "always_force_npc_greeting",
+                    "always_player_greeting",
+                    "implicit_predetermined_player_greeting",
+                    "predetermined_npc_greeting",
+                    "predetermined_npc_greeting_for_first_meeting_then_llm_choice",
+                    "force_npc_greeting_for_first_meeting_then_llm_choice"
+                ],
+                "conversation_start_role": [
+                    "user",
+                    "system",
+                    "assistant",
+                ]
+            },
+            "InferenceOptions": {
+                "thought_type": [thought_type for thought_type in self.manager_types["thought_process"]],
+                "character_type": ["auto"]+[character_type for character_type in self.manager_types["character_manager"]],
+            },
+            "Vision": {
+                "ocr_lang": list(set(['en', 'af', 'az', 'bs', 'cs', 'cy', 'da', 'de', 'es', 'et', 'fr', 'ga', 'hr', 'hu', 'id', 'is', 'it', 'ku', 'la', 'lt', 'lv', 'mi', 'ms', 'mt', 'nl', 'no', 'oc', 'pi', 'pl', 'pt', 'ro', 'rs_latin', 'sk', 'sl', 'sq', 'sv', 'sw', 'tl', 'tr', 'uz', 'vi', 'french', 'german'] + ['ar', 'fa', 'ug', 'ur'] + ['ru', 'rs_cyrillic', 'be', 'bg', 'uk', 'mn', 'abq', 'ady', 'kbd', 'ava', 'dar', 'inh', 'che', 'lbe', 'lez', 'tab'] + ['hi', 'mr', 'ne', 'bh', 'mai', 'ang', 'bho', 'mah', 'sck', 'new', 'gom', 'sa', 'bgc']))
+            },
+            "openai_api":{
+                "openai_completions_type": ["text","chat"]
+            }
+        }
+
     def host_config_server(self):
         self.config_server_app = flask.Flask(__name__)
         @self.config_server_app.route('/config', methods=['GET'])
         def get_config():
-            export = self.export()
-            print(export)
-            return flask.jsonify(export)
+            # export = self.export()
+            # print(export)
+            config = json.load(open(self.config_path))
+            return flask.jsonify(config)
         @self.config_server_app.route('/config', methods=['POST'])
         def post_config():
+            default_types = self.default_types()
             data = flask.request.json
             for key in data:
                 for sub_key in data[key]:
-                    setattr(self, sub_key, data[key][sub_key])
-            self.save()
+                    if type(getattr(self,sub_key)) is not type(data[key][sub_key]):
+                        if type(getattr(self,sub_key)) is list:
+                            setattr(self, sub_key, str(data[key][sub_key]).split(","))
+                        else:
+                            if default_types[key][sub_key] == "bool":
+                                setattr(self, sub_key, bool(data[key][sub_key]))
+                            elif default_types[key][sub_key] == "int":
+                                setattr(self, sub_key, int(data[key][sub_key]))
+                            elif default_types[key][sub_key] == "float":
+                                setattr(self, sub_key, float(data[key][sub_key]))
+                            elif default_types[key][sub_key] == "dict":
+                                setattr(self, sub_key, json.loads(data[key][sub_key]))
+                            elif default_types[key][sub_key] == "list":
+                                new_list = data[key][sub_key]
+                                if type(data[key][sub_key]) is str:
+                                    new_list = str(data[key][sub_key]).split(",")
+                                new_list = [item.strip() for item in new_list if item.strip() != ""]
+                                if len(new_list) == 0:
+                                    new_list = []
+                                elif len(new_list) == 1 and new_list[0] == "":
+                                    new_list = []
+                                setattr(self, sub_key, new_list)
+                            else:
+                                setattr(self, sub_key, str(data[key][sub_key]))
+            # self.save()
+            self.save_json(data)
             self.conversation_manager.restart = True
             if not self.conversation_manager.in_conversation:
                 logging.info("Config updated and conversation manager not in a conversation. Restart the conversation manager to apply the new settings. - WILL BE FIXED IN FUTURE RELEASE")
-            return flask.jsonify(self.export())
+            # return flask.jsonify(self.export())
+            config = json.load(open(self.config_path))
+            return flask.jsonify(config)
         @self.config_server_app.route('/defaults', methods=['GET'])
         def get_default():
             print(self.default())
@@ -1114,12 +1229,28 @@ class ConfigLoader:
                 "types": self.default_types(),
                 "descriptions": self.descriptions()
             })
+        @self.config_server_app.route('/multiple-choice', methods=['GET'])
+        def get_multiple_choice():
+            return flask.jsonify(self.mulitple_choice())
         @self.config_server_app.route('/', methods=['GET'])
         def index(): # Return the index.html file
-            return flask.send_file('../webconfigurator/index.html')
+            return flask.send_file(os.path.join(os.path.dirname(__file__), '../webconfigurator/index.html'))
+        @self.config_server_app.route('/log', methods=['GET'])
+        def log(): # Return the index.html file
+            last_500_lines = []
+            with open(os.path.join(os.path.dirname(__file__), "../logging.log"), 'r') as f:
+                lines = f.readlines()
+                last_500_lines = lines[-500:]
+            last_500_lines = "\n".join(last_500_lines)
+            while "\n\n" in last_500_lines:
+                last_500_lines = last_500_lines.replace("\n\n", "\n")
+            return last_500_lines
         @self.config_server_app.route('/jquery-3.7.1.min.js', methods=['GET'])
         def jquery():
-            return flask.send_file('../webconfigurator/jquery-3.7.1.min.js')
+            return flask.send_file(os.path.join(os.path.dirname(__file__), '../webconfigurator/jquery-3.7.1.min.js'))
+        @self.config_server_app.route('/logo.png', methods=['GET'])
+        def get_logo():
+            return flask.send_file(os.path.join(os.path.dirname(__file__), '../img/pantella_logo_github.png'))
         logging.info(f"Running config server on port http://localhost:{self.config_port}/")
         self.config_server_app.run(port=self.config_port, threaded=True)
         logging.info(f"Config server running on port http://localhost:{self.config_port}/")
