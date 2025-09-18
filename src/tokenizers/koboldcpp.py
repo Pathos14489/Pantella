@@ -19,9 +19,21 @@ class Tokenizer(tokenizer.base_Tokenizer): # Gets token count from OpenAI's embe
     @utils.time_it
     def get_token_count(self, string):
         """Returns the number of tokens in the string"""
-        url = self.config.alternative_openai_api_base.replace("/v1","") + "/extra/tokencount"
         data = {"prompt": string}
-        r = requests.post(url, json=data).json()
+        try:
+            url = self.config.alternative_openai_api_base.replace("/v1/","") + "/api/extra/tokencount"
+            r = requests.post(url, json=data)
+            r.raise_for_status()
+            r = r.json()
+        except:
+            try:
+                url = self.config.openai_api_base.replace("/v1","") + "/extra/tokencount"
+                r = requests.post(url, json=data)
+                r.raise_for_status()
+                r = r.json()
+            except Exception as e:
+                logging.error(f"Error getting token count from koboldcpp API: {e}")
+                raise
         num_tokens = int(r["value"])
         return num_tokens
     
