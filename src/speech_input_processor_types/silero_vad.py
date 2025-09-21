@@ -95,6 +95,7 @@ class Speech_Input_Processor(base_Speech_Input_Processor):
             new_confidence = self.model(torch.from_numpy(audio_float32), 16000).item()
             if new_confidence > self.confidence_threshold:
                 if not started_speaking:
+                    logging.debug(f"Voice detected with confidence {new_confidence}")
                     # add the empty buffer to the data
                     for chunk in empty_buffer:
                         data.extend(chunk)
@@ -102,7 +103,6 @@ class Speech_Input_Processor(base_Speech_Input_Processor):
                 started_speaking = True
                 data.extend(audio_chunk)
                 last_spoke_time = time.time()
-                logging.debug(f"Voice detected with confidence {new_confidence}")
             elif not started_speaking:
                 empty_buffer.append(audio_chunk)
                 if len(empty_buffer) > empty_buffer_count:
