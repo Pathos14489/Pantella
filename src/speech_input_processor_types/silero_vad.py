@@ -84,7 +84,7 @@ class Speech_Input_Processor(base_Speech_Input_Processor):
             try:
                 audio_chunk = stream.read(num_samples)
             except Exception as e:
-                time.sleep(0.1)
+                time.sleep(0.2)
                 audio_chunk = stream.read(num_samples)
 
             audio_int16 = np.frombuffer(audio_chunk, np.int16)
