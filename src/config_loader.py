@@ -472,6 +472,7 @@ class ConfigLoader:
                 "stt_enabled": False,
                 "stt_engine": "faster_whisper", # faster_whisper, openai_whisper
                 "stt_language": "default",
+                "speech_processor": "speech_recognition", # speech_recognition, silero_vad
                 "audio_threshold": "auto",
                 "pause_threshold": 0.5,
                 "listen_timeout": 30.0,
@@ -822,6 +823,7 @@ class ConfigLoader:
                 "stt_enabled": self.stt_enabled,
                 "stt_engine": self.stt_engine,
                 "stt_language": self.stt_language,
+                "speech_processor": self.speech_processor,
                 "audio_threshold": self.audio_threshold,
                 "pause_threshold": self.pause_threshold,
                 "listen_timeout": self.listen_timeout,

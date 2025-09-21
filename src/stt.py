@@ -28,19 +28,19 @@ logging.config(f"Available Transcriber types: {transcriber_Types.keys()}")
 
 # Create LLM object using the config and client provided
     
-def create_Transcriber(conversation_manager):
+def create_Transcriber(game_interface):
     """Creates a transcriber object based on the config provided"""
-    config = conversation_manager.config
+    config = game_interface.config
     config.manager_types["stt"] = transcriber_Types.keys() # Add conversation manager types to config
-    slug = conversation_manager.config.stt_engine
+    slug = game_interface.config.stt_engine
     if type(slug) == str:
         if slug not in transcriber_Types:
             slug = slug.lower()
         if slug not in transcriber_Types:
-            logging.error(f"Could not find SpeechToText: {conversation_manager.config.stt_engine}! Please check your config.json file and try again!")
+            logging.error(f"Could not find SpeechToText: {game_interface.config.stt_engine}! Please check your config.json file and try again!")
             input("Press enter to continue...")
-            raise ValueError(f"Could not find SpeechToText: {conversation_manager.config.stt_engine}! Please check your config.json file and try again!")
-        return transcriber_Types[slug].Transcriber(conversation_manager)
+            raise ValueError(f"Could not find SpeechToText: {game_interface.config.stt_engine}! Please check your config.json file and try again!")
+        return transcriber_Types[slug].Transcriber(game_interface)
     else:
         if slug in banned_modules:
             logging.error(f"Banned type for stt_engine in config.json! Please check your config.json file and try again! Banned type: {slug}")

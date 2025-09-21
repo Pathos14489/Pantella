@@ -6,13 +6,13 @@ try:
 except ImportError:
     logging.error('Could not import speech_recognition in base_whisper.py. Please ensure the speech_recognition package is installed and try again.')
     raise ImportError('Could not import speech_recognition in base_whisper.py. Please ensure the speech_recognition package is installed and try again.')
-from src.stt_types.base_stt import base_Transcriber
+from src.stt_types.base_stt import base_Transcriber as BASE_TRANSCRIBER
 import src.utils as utils
 logging.info('Imported required libraries in stt.py')
 
 stt_slug = "base_whisper_stt"
 
-class base_Transcriber(base_Transcriber):
+class base_Transcriber(BASE_TRANSCRIBER):
     def __init__(self, game_interface):
         global stt_slug
         super().__init__(game_interface)
@@ -81,15 +81,21 @@ class base_Transcriber(base_Transcriber):
             #     if 'text' in response_data:
             #         return response_data['text'].strip()
 
-        with self.microphone as source:
-            try:
-                audio = self.recognizer.listen(source, timeout=self.listen_timeout)
-            except sr.WaitTimeoutError:
-                return ''
+        # with self.microphone as source:
+        #     try:
+        #         audio = self.recognizer.listen(source, timeout=self.listen_timeout)
+        #     except sr.WaitTimeoutError:
+        #         return ''
+        audio = None
+        while audio is None:
+            logging.info('Getting audio from mic...')
+            audio = self.speech_processor.get_audio_from_mic()
+            if audio is None:
+                logging.info('No speech detected within the timeout period. Retrying...')
 
         audio_file = 'player_recording.wav'
         with open(audio_file, 'wb') as file:
-            file.write(audio.get_wav_data(convert_rate=16000))
+            file.write(audio)
         
         transcript = self.whisper_transcribe(audio_file, prompt)
         logging.info(transcript)

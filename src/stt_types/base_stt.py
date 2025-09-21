@@ -1,5 +1,7 @@
 print('Loading base_stt.py...')
 from src.logging import logging
+from src.speech_input_processors import create_Speech_Input_Processor
+from src.speech_input_processor_types.base_Speech_Input_Processor import base_Speech_Input_Processor
 try:
     logging.info('Importing speech_recognition in base_stt.py...')
     import speech_recognition as sr
@@ -25,33 +27,21 @@ class base_Transcriber:
         self.audio_threshold = self.config.audio_threshold
         self.listen_timeout = self.config.listen_timeout
         self.pause_threshold = self.config.pause_threshold
+
+        self.speech_processor: base_Speech_Input_Processor = None
+
         self.initialized = False
         if self.game_interface.check_mic_status(): # if mic is enabled on __init__, pre-initialize recognizer and microphone
             self.initialize()
 
     def initialize(self):
-        logging.info('Initializing speech recognizer...')
-        self.recognizer = sr.Recognizer()
-        self.recognizer.pause_threshold = self.pause_threshold
-        self.microphone = sr.Microphone()
-
-        if self.audio_threshold == 'auto':
-            logging.info(f"Audio threshold set to 'auto'. Adjusting microphone for ambient noise...")
-            logging.info("If the mic is not picking up your voice, try setting this audio_threshold value manually in PantellaSoftware/config.json.\n")
-            with self.microphone as source:
-                self.recognizer.adjust_for_ambient_noise(source, duration=5)
-        else:
-            self.recognizer.dynamic_energy_threshold = False
-            self.recognizer.energy_threshold = int(self.audio_threshold)
-            logging.info(f"Audio threshold set to {self.audio_threshold}. If the mic is not picking up your voice, try lowering this value in PantellaSoftware/config.json. If the mic is picking up too much background noise, try increasing this value.\n")
+        self.speech_processor = create_Speech_Input_Processor(self)
         self.initialized = True
-        logging.info('Speech recognizer initialized')
     
     def unload(self):
-        logging.info('Unloading speech recognizer...')
+        logging.info('Unloading speech processor...')
         self.initialized = False
-        del self.recognizer
-        del self.microphone
+        del self.speech_processor
 
     def recognize_input(self, possible_names_list):
         """Gets input from the microphone and returns the transcript"""
