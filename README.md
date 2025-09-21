@@ -26,6 +26,7 @@ Documentation here: [Pantella Documentation](https://github.com/Pathos14489/Pant
 	- [New TTSes](#new-ttses)
 	- [Grammar Restrained Chain-of-Thought Support](#grammar-restrained-chain-of-thought-support)
 	- [Automatic Character Generation](#automatic-character-generation)
+	- [Supported Games](#supported-games)
 - [Things to Consider Before Installing...](#things-to-consider-before-installing)
 	- [Hardware Requirements](#hardware-requirements)
 	- [Storage Requirements](#storage-requirements)
@@ -113,6 +114,9 @@ Pantella supports a special type of response output that does Chain-of-Thought(C
 ### Automatic Character Generation
 
 When a character is first encountered, if a character entry is not found in the characters directory, Pantella can automatically generate a character entry for the character. This is done by using the character's name, race, sex, location, etc. to generate a character entry. This feature is still in development and may not always work as expected. This feature also requires your model to support CoT as it relies on using response formats/GBNF grammars to generate the character entry.
+
+### Supported Games
+Pantella currently supports Skyrim Special Edition, Skyrim Anniversary Edition, and Skyrim VR. Support for other games can be added by replacing the game_interface module and adding the appropriate character entries to the characters directory. If you want to add support for another game, feel free to reach out to me on Discord or open an issue on GitHub and we can discuss how to do it. Support for more games is planned after Skyrim is fully supported and stable. Enderal is also somewhat supported, but there are no character entries for Enderal included with Pantella at this time.
 
 # Things to Consider Before Installing...
 ### Hardware Requirements
