@@ -1,6 +1,5 @@
 print('Loading speech_recognition.py...')
 from src.logging import logging
-import io
 import numpy as np
 import time
 from src.speech_input_processor_types.base_Speech_Input_Processor import base_Speech_Input_Processor
@@ -9,7 +8,6 @@ try:
     logging.info('Importing required libraries in silero_vad.py...')
     import torch
     torch.set_num_threads(1)
-    import torchaudio
     import pyaudio
     import speech_recognition as sr
 except ImportError:
