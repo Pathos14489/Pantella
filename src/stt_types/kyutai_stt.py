@@ -8,6 +8,8 @@ import time
 try:
     logging.info('Importing requirements for kyutai_stt.py...')
     import torch
+    import torch._dynamo
+    torch._dynamo.config.suppress_errors = True # makes it work even if triton is having issues
     import pyaudio
     import julius
     import moshi.models
@@ -188,7 +190,7 @@ class Transcriber(base_Transcriber):
         data = bytearray()
         def mic_generator():
             audio = pyaudio.PyAudio()
-            num_samples = 1024
+            num_samples = 1280
             stream = audio.open(format=self.FORMAT,
                 channels=self.CHANNELS,
                 rate=self.SAMPLE_RATE,
@@ -206,6 +208,7 @@ class Transcriber(base_Transcriber):
                     audio_chunk = julius.resample_frac(audio_chunk, self.SAMPLE_RATE, self.mimi.sample_rate)
                     if audio_chunk.shape[-1] % self.mimi.frame_size != 0:
                         to_pad = self.mimi.frame_size - audio_chunk.shape[-1] % self.mimi.frame_size
+                        print(f"Padding audio chunk with {to_pad} zeros")
                         audio_chunk = torch.nn.functional.pad(audio_chunk, (0, to_pad))
                     audio_chunk = audio_chunk.view(1, 1, -1)
                     yield audio_chunk
@@ -295,13 +298,13 @@ class Transcriber(base_Transcriber):
             padding_token_id=padding_token_id,
             offset_seconds=int(n_prefix_chunks / self.mimi.frame_rate) + audio_delay_seconds,
         )
-        audio_data = sr.AudioData(bytes(data),
-            16000,
-            2
-        )
-        audio_file = 'player_recording.wav'
-        with open(audio_file, 'wb') as file:
-            file.write(audio_data.get_wav_data(convert_rate=16000))
+        # audio_data = sr.AudioData(bytes(data),
+        #     16000,
+        #     2
+        # )
+        # audio_file = 'player_recording.wav'
+        # with open(audio_file, 'wb') as file:
+        #     file.write(audio_data.get_wav_data(convert_rate=16000))
         
 
         print(timed_text)
