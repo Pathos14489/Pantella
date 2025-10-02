@@ -1,10 +1,5 @@
 print('Loading kyutai_stt.py...')
 from src.logging import logging
-import dataclasses
-import itertools
-import math
-import numpy as np
-import time
 try:
     logging.info('Importing requirements for kyutai_stt.py...')
     import torch
@@ -14,6 +9,11 @@ try:
     import julius
     import moshi.models
     import speech_recognition as sr
+    import numpy as np
+    import dataclasses
+    import itertools
+    import math
+    import time
 except ImportError:
     logging.error('Could not import requirements in kyutai_stt.py. Please ensure the requirements are installed and try again.')
     raise ImportError('Could not import requirements in kyutai_stt.py. Please ensure the requirements are installed and try again.')
@@ -267,6 +267,7 @@ class Transcriber(base_Transcriber):
                         for chunk in empty_buffer:
                             data.extend(chunk)
                         empty_buffer = []
+                        print("User started speaking:")
                     has_spoken = True
                     _text = self.tokenizer.id_to_piece(text_tokens[0, 0, 0].cpu().item())  # type: ignore
                     _text = _text.replace("▁", " ")
@@ -280,7 +281,7 @@ class Transcriber(base_Transcriber):
                 if vad_heads:
                     pr_vad = vad_heads[2][0, 0, 0].cpu().item()
                     if pr_vad > 0.5 and not last_print_was_vad and has_spoken:
-                        print("[end of turn detected]")
+                        print("[end of turn detected:"+f"{pr_vad:.2f}]")
                         done_speaking = True
                         last_print_was_vad = True
                 text_tokens_accum.append(text_tokens)

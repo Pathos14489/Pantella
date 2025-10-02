@@ -18,8 +18,11 @@ for file in os.listdir(os.path.join(os.path.dirname(__file__), "stt_types/")):
             continue
         logging.info(f"Importing {module_name} from src.stt_types")
         if module_name != "base_stt" and module_name != "base_whisper":
-            module = importlib.import_module(f"src.stt_types.{module_name}")
-            transcriber_Types[module.stt_slug] = module
+            try:
+                module = importlib.import_module(f"src.stt_types.{module_name}")
+                transcriber_Types[module.stt_slug] = module
+            except Exception as e:
+                logging.error(f"Failed to import {module_name}: {e}")
 if default in transcriber_Types:
     transcriber_Types["default"] = transcriber_Types[default]
 logging.info("Imported Transcriber types in stt.py")
