@@ -15,6 +15,8 @@ Pantella is a fork of the popular Skyrim/Fallout mod Mantella, which allows you 
 
 Documentation here: [Pantella Documentation](https://github.com/Pathos14489/Pantella/wiki)
 
+Note: Pantella is not yet bug free or ready for all users. Please read the entire README before installing and reach out on Discord or GitHub if you have any questions or issues. It may have some issues that need to be ironed out, but I'm still working on it and will try to help anyone who needs it.
+
 # Table of Contents
 - [Preface - "What's different from Mantella?"](#preface---whats-different-from-mantella)
 	- [ChromaDB Memory Manager](#chromadb-memory-manager)
