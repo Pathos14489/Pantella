@@ -256,7 +256,12 @@ If you have a powerful computer, you can run a local LLM. This is the most power
 
 First things first, you'll need the latest launcher. You can find that here: https://github.com/Pathos14489/Pantella-Launcher/releases
 
-First click on the latest release under Releases. And follow the unpacking instructions if there are any special ones to unpack the release. I recommend somewhere on the same drive as Skyrim, but somewhere like your desktop is also probably fine. Once you've unpackged the replease, go open the launcher.
+First click on the latest release under Releases. And follow the installation instructions for the launcher on the release. The instructions will likely be something like this:
+1. Download `PL-v0.0.6.7z` and extract it where you want Pantella to be installed.
+2. Download the Python environment necessary for your repo of choice. You can download only one or both, but at least one of them is necessary for the launcher to uh, do anything.
+	- **Pantella** requires `python-3.10.11-embed.7z`.
+	- **Mantella** requires `python-3.11.6-embed.7z`. 
+I recommend somewhere on the same drive as Skyrim, but somewhere like your desktop is also probably fine. Once you've unpackged the release, go open the launcher.
 
 ## 2 - Configuring the Launcher
 When you first open the launcher, you'll see a bunch of repositories available to download. Don't touch them yet. First, click up here on the settings button:
