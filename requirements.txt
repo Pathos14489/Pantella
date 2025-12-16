@@ -4,6 +4,9 @@ tiktoken==0.4.0
 openai==1.6.1
 aiohttp==3.8.4
 git+https://github.com/Pathos14489/faster-whisper.git
+fastapi==0.99.1
+torchcodec==0.9.1
+httpx==0.26.0
 speechrecognition==3.10.1
 requests==2.32.0
 pyaudio==0.2.13
@@ -28,7 +31,7 @@ git+https://github.com/2noise/ChatTTS@6afc7612c422d877e80257184c65b009da4adb73
 git+https://github.com/huggingface/parler-tts.git
 descript-audio-codec==1.0.0
 git+https://github.com/Pathos14489/StyleTTS2.git
-git+https://github.com/SWivid/F5-TTS.git
+git+https://github.com/SWivid/F5-TTS.git@dc2d2d3b2fb1d942cc17175879ed300f9197e057
 outetts
 librosa
 chinese
