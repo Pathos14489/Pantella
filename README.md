@@ -429,7 +429,7 @@ For further support and examples of how other users have added modded NPCs, ask 
 
 ## Running with venv
 1. Clone the repo to your machine
-2. Create a virtual environment via `py -3.11 -m venv PantellaEnv` in your console (Pantella requires Python 3.10.11, I've not had a chance to test it with 3.11 yet)
+2. Create a virtual environment via `py -3.10 -m venv PantellaEnv` in your console (Pantella requires Python 3.10.11, I've not had a chance to test it with 3.11 yet)
 3. Start the environment in your console (`.\PantellaEnv\Scripts\Activate`)
 4. Install the required packages via `pip install -r requirements.txt`
 5. Set up your paths / any other required settings in the `config.json` and your chosen `interface_configs` file
