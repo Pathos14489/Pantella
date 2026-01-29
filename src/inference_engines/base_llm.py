@@ -14,6 +14,7 @@ from PIL import Image
 from pydantic import BaseModel, Field
 from typing import List, Literal, Optional
 
+imported = False
 try:
     from paddleocr import PaddleOCR
     ocr_loaded = True
@@ -37,6 +38,11 @@ try:
 except Exception as e:
     loaded_dxcam = False
     logging.warn(f"Failed to load dxcam, so vision enabled inference engine cannot be used! Please check that you have installed it correctly if you want to use it, otherwise you can ignore this warning.")
+
+imported = True
+
+if loaded_pygetwindow and loaded_dxcam and ocr_loaded:
+    logging.info("All required libraries imported successfully in base_LLM.py")
 
 logging.info("Imported required libraries in base_LLM.py")
 
@@ -136,10 +142,18 @@ def get_schema_description(schema):
 
 inference_engine_name = "base_LLM"
 tokenizer_slug = "tiktoken" # default to tiktoken for now (Not always correct, but it's the fastest tokenizer and it works for openai's models, which a lot of users will be relying on probably)
+default_settings = {}
+settings_description = {}
+options = {}
+settings = {}
+loaded = False
+description = "Base class for all LLM inference engines. This class should be inherited by all LLM inference engines and should not be used directly. It provides the basic functionality for generating responses from the LLM, managing conversations, and handling vision support if enabled. It also provides a set of properties that can be used to configure the LLM and its behavior."
 class base_LLM():
     def __init__(self, conversation_manager, vision_enabled=False):
+        global inference_engine_name, tokenizer_slug, default_settings, loaded
         self.conversation_manager = conversation_manager
         self.config = self.conversation_manager.config
+        default_settings = self.default_inference_engine_settings
         self.tokenizer = None
         
         self.inference_engine_name = inference_engine_name
@@ -183,7 +197,7 @@ class base_LLM():
         #     "bio": "",
         #     "name": "",
         #     "voice_model": "",
-        #     "skyrim_voice_folder": "",
+        #     "voice_folder": "",
         #     "race": "",
         #     "gender": "",
         #     "species": "",
@@ -198,6 +212,11 @@ class base_LLM():
     def get_cot_supported(self):
         """Check if the LLM supports CoT (Chain of Thought) completions"""
         return self.cot_supported
+
+    @property
+    def default_inference_engine_settings(self):
+        """Default voice model settings for the LLM"""
+        return {}
 
     @property
     def cot_enabled(self):
@@ -281,8 +300,7 @@ class base_LLM():
             logging.warning("EOS_token is empty, returning BOS_token instead.")
             return self._prompt_style['BOS_token']
         else: # Return the first stop string if EOS_token and BOS_token are both empty
-            return self.stop[0]
-            
+            return self.stop[0]        
     
     @property
     def thinking_transitions(self):
@@ -629,7 +647,7 @@ class base_LLM():
         system_prompt_message = {'role': "system", 'content': system_prompt, "type":"prompt"}
         system_prompt_message_token_count = self.conversation_manager.tokenizer.get_token_count_of_message(system_prompt_message)
         system_prompt_message["token_count"] = system_prompt_message_token_count
-        msgs = [] # add system prompt to context
+        msgs = [system_prompt_message] # add system prompt to context
         msgs.extend(self.messages) # add messages to context
 
         memory_offset = self.character_manager.memory_offset
@@ -1511,11 +1529,6 @@ class base_LLM():
                         logging.debug(f"Number of sentences: {num_sentences}")
                         logging.debug(f"Number of sentences in voice line: {voice_line_sentences}")
                         
-                        grammarless_stripped_voice_line = voice_line.replace(".", "").replace("?", "").replace("!", "").replace(",", "").replace("-", "").replace("*", "").replace("\"", "").strip()
-                        if grammarless_stripped_voice_line == '' or voice_line.strip() == "": # if the voice line is empty, then the narrator is speaking
-                            logging.info(f"Skipping empty voice line")
-                            send_voiceline = False
-                            voice_line = ''
 
                         if voice_line_sentences == self.config.sentences_per_voiceline: # if the voice line is ready, then generate the audio for the voice line
                             if typing_roleplay:
@@ -1530,11 +1543,20 @@ class base_LLM():
                                 logging.info(f"Generating voiceline: \"{voice_line.strip()}\" for {self.conversation_manager.game_interface.active_character.name}.")
                             send_voiceline = True
                         
+
                         use_narrator = None
                         if new_speaker:
                             use_narrator = was_typing_roleplay
                         else:
                             use_narrator = typing_roleplay
+
+                        if send_voiceline:
+                            grammarless_stripped_voice_line = voice_line.replace(".", "").replace("?", "").replace("!", "").replace(",", "").replace("-", "").replace("*", "").replace("\"", "").strip()
+                            if grammarless_stripped_voice_line == '' or voice_line.strip() == "": # if the voice line is empty, then the narrator is speaking
+                                logging.info(f"Skipping empty voice line")
+                                send_voiceline = False
+                                voice_line = ''
+                                voice_line_sentences = 0
 
                         if send_voiceline: # if the voice line is ready, then generate the audio for the voice line
                             logging.info(f"Voice line contains {voice_line_sentences} sentences.")
@@ -1661,7 +1683,7 @@ class base_LLM():
                     retries -= 1
                     time.sleep(5)
 
-        if voice_line_sentences > 0: # if the voice line is not empty, then generate the audio for the voice line
+        if voice_line_sentences > 0 and len(voice_line.strip()) > 0: # if the voice line is not empty, then generate the audio for the voice line
             logging.info(f"Generating voiceline: \"{voice_line.strip()}\" for {self.conversation_manager.game_interface.active_character.name}.")
             if typing_roleplay: # if the asterisk is open, then the narrator is speaking
                 time.sleep(self.config.narrator_delay)
@@ -1844,4 +1866,6 @@ class base_LLM():
 
         await sentence_queue.put([audio_file, string]) # Put the audio file path in the sentence_queue
         event.clear() # clear the event for the next iteration
+        logging.debug("Waiting for event to be set before generating the next line")
         await event.wait() # wait for the event to be set before generating the next line
+        logging.debug("Event Triggered, continuing generation...")
