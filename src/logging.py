@@ -174,3 +174,8 @@ class Logger:
         self._output(self.format.format(**message), 'OUTPUT')
 
 logging = Logger() # Create a logger object to be used throughout the program
+
+def getLogger(app_name):
+    if app_name == 'werkzeug':
+        return None
+    return logging
