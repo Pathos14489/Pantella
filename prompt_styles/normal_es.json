@@ -10,10 +10,25 @@
         "message_signifier": ": ",
         "role_separator": "\n",
         "message_separator": "\n",
-        "message_format": "[BOS_token][role][role_separator][name][message_signifier][content][EOS_token][message_separator]",
-        "system_name": "system",
-        "user_name": "user",
-        "assistant_name": "assistant",
+        "message_format": "[BOS_token][role_prefix_insert][role_seperator][name][message_signifier][content][role_suffix_insert][EOS_token][message_seperator]",
+        "chat_format": "[messages]",
+        "message_roles": [
+            {
+                "role_name": "user",
+                "role_prefix_insert": "user",
+                "role_suffix_insert": ""
+            },
+            {
+                "role_name": "assistant",
+                "role_prefix_insert": "assistant",
+                "role_suffix_insert": ""
+            },
+            {
+                "role_name": "system",
+                "role_prefix_insert": "system",
+                "role_suffix_insert": ""
+            }
+        ],
         "force_speaker": true,
         "roleplay_inverted": false,
         "roleplay_prefix": "*",
@@ -55,8 +70,8 @@
             "child":"Niño",
             "teen":"Adolescente",
             "young_adult":"Adulto joven",
-            "adult":"Adult",
-            "old":"Old"
+            "adult":"Adulto",
+            "old":"Viejo"
         },
         "aged_gendered_titles":{
             "Male":{
