@@ -464,3 +464,8 @@ class GameInterface(CreationEngineFileBuffersInterface):
         character_info['in_game_relationship_level'] = actor_relationship_rank
 
         return character_info, location, in_game_time, player_name, player_race, player_gender, radiant_dialogue
+    
+    
+    def get_current_context_string(self):
+        """Wait for context string to populate"""
+        return ""

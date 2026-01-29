@@ -17,13 +17,9 @@ class ConversationManager(CreationEngineFileBuffersConversationManager):
         self.player_gender = None # Initialised at start of every conversation in await_and_setup_conversation()
         self.player_race = None # Initialised at start of every conversation in await_and_setup_conversation()
         self.current_location = 'Mojave Wasteland' # Initialised at start of every conversation in await_and_setup_conversation()
-        logging.info(f"Creation Engine (File Buffer) Conversation Manager Initialized")
+        logging.info(f"Fallout: New Vegas (File Buffer) Conversation Manager Initialized")
         if initialize:
             self.game_interface.display_status('Started Pantella')
             
     def get_conversation_type(self): # Returns the type of conversation as a string - none, single_npc_with_npc, single_player_with_npc, multi_npc
         return 'single_player_with_npc'
-    
-    def get_current_context_string(self):
-        """Wait for context string to populate"""
-        return ""
