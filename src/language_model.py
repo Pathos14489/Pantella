@@ -28,8 +28,11 @@ logging.config(f"Available LLMs: {LLM_Types.keys()}")
 
 # Create LLM object using the config and client provided
     
+loaded_tokenizer_slug = ""
+
 def create_LLM(conversation_manager):
     """Creates a language model object based on the config provided"""
+    global loaded_tokenizer_slug
     config = conversation_manager.config
     config.manager_types["language_model"] = LLM_Types.keys() # Add conversation manager types to config
     config.manager_types["tokenizer"] = tokenizers.Tokenizer_Types.keys() # Add conversation manager types to config
@@ -44,6 +47,7 @@ def create_LLM(conversation_manager):
         if "Tokenizer" in model.__dict__: # if the LLM has a tokenizer included
             logging.config(f"Using {conversation_manager.config.inference_engine}'s included tokenizer")
             tokenizer = model.Tokenizer(conversation_manager)
+            loaded_tokenizer_slug = model.tokenizer_slug if "tokenizer_slug" in model.__dict__ else "Unknown"
         elif "tokenizer_slug" in llm.__dict__: # or if the LLM has a tokenizer slug specified
             logging.config(f"Using {conversation_manager.config.inference_engine} inference engine's recommended tokenizer")
             if "client" in llm.__dict__: # if the LLM has a client specified (only really needed for openai at this point)
@@ -51,14 +55,17 @@ def create_LLM(conversation_manager):
                 tokenizer = tokenizers.Tokenizer_Types[llm.tokenizer_slug].Tokenizer(conversation_manager, llm.client)
             else:
                 tokenizer = tokenizers.Tokenizer_Types[llm.tokenizer_slug].Tokenizer(conversation_manager)
+            loaded_tokenizer_slug = llm.tokenizer_slug
         else: # or if the LLM has no tokenizer specified
             logging.error(f"Could not find default tokenizer for inference engine: {llm.inference_engine_name}! Please check your config.json file and try again!")
             input("Press enter to continue...")
             raise ValueError(f"Could not find default tokenizer for inference engine: {llm.inference_engine_name}! Please check your config.json file and try again!")
     elif conversation_manager.config.tokenizer_type in tokenizers.Tokenizer_Types: # if using a custom tokenizer
+        logging.config(f"Using custom tokenizer: {conversation_manager.config.tokenizer_type}")
         if "client" in llm.__dict__: # if the LLM has a client specified (only really needed for openai at this point)
             tokenizer = tokenizers.Tokenizer_Types[conversation_manager.config.tokenizer_type].Tokenizer(conversation_manager, llm.client)
         else: # if the LLM has no client specified
             tokenizer = tokenizers.Tokenizer_Types[conversation_manager.config.tokenizer_type].Tokenizer(conversation_manager)
+        loaded_tokenizer_slug = conversation_manager.config.tokenizer_type
     llm.tokenizer = tokenizer # Add the tokenizer to the LLM object
     return llm, tokenizer
