@@ -1,12 +1,15 @@
 from src.logging import logging
 logging.info("Importing chat_tts.py...")
 import src.tts_types.base_tts as base_tts
+imported = False
+importing_errors = False
 try:
     logging.info("Trying to import torch and torchaudio")
     import torch
     import torchaudio
     logging.info("Imported torch and torchaudio")
 except Exception as e:
+    importing_errors = True
     logging.error(f"Failed to import torch and torchaudio: {e}")
     raise e
 try:
@@ -14,6 +17,7 @@ try:
     import ChatTTS
     logging.info("Imported ChatTTS")
 except Exception as e:
+    importing_errors = True
     logging.error(f"Failed to import ChatTTS: {e}")
     raise e
 try:
@@ -22,6 +26,7 @@ try:
     from av.audio.resampler import AudioResampler
     logging.info("Imported av and AudioResampler")
 except Exception as e:
+    importing_errors = True
     logging.error(f"Failed to import av and AudioResampler: {e}")
     raise e
 try:
@@ -34,8 +39,11 @@ try:
     import io
     logging.info("Imported required libraries")
 except Exception as e:
+    importing_errors = False
     logging.error(f"Failed to import required libraries: {e}")
     raise e
+if not importing_errors:
+    imported = True
     
 logging.info("Imported required libraries in chat_tts.py")
 
@@ -50,10 +58,36 @@ def format_text(text: str) -> str:
     return text
 
 tts_slug = "chat_tts"
+default_settings = {
+    "infer_code_prompt": "[speed_3]",
+    "infer_code_temperature": 0.3,
+    "infer_code_repetition_penalty": 1.05,
+    "refine_text_prompt": "",
+    "refine_text_temperature": 0.7,
+    "refine_text_top_P": 0.7,
+    "refine_text_top_K": 20,
+    "refine_text_repetition_penalty": 1.0
+}
+settings_description = {
+    "infer_code_prompt": "The prompt to use for the infer code. Made by combining the following options together: [uv_break],[v_break],[lbreak],[llbreak],[undefine],[laugh],[spk_emb],[empty_spk],[music],[pure],[break_0],[break_1],[break_2],[break_3],[break_4],[break_5],[break_6],[break_7],[laugh_0],[laugh_1],[laugh_2],[oral_0],[oral_1],[oral_2],[oral_3],[oral_4],[oral_5],[oral_6],[oral_7],[oral_8],[oral_9],[speed_0],[speed_1],[speed_2],[speed_3],[speed_4],[speed_5],[speed_6],[speed_7],[speed_8],[speed_9]",
+    "infer_code_temperature": "The temperature to use for the infer code. Lower values make the output more deterministic, higher values make it more random.",
+    "infer_code_repetition_penalty": "The repetition penalty to use for the infer code. Higher values make the output less repetitive.",
+    "refine_text_prompt": "The prompt to use for the refine text. Made by combining the following options together: [uv_break],[v_break],[lbreak],[llbreak],[undefine],[laugh],[spk_emb],[empty_spk],[music],[pure],[break_0],[break_1],[break_2],[break_3],[break_4],[break_5],[break_6],[break_7],[laugh_0],[laugh_1],[laugh_2],[oral_0],[oral_1],[oral_2],[oral_3],[oral_4],[oral_5],[oral_6],[oral_7],[oral_8],[oral_9]",
+    "refine_text_temperature": "The temperature to use for the refine text. Lower values make the output more deterministic, higher values make it more random.",
+    "refine_text_top_P": "The top P to use for the refine text. Lower values make the output more deterministic, higher values make it more random.",
+    "refine_text_top_K": "The top K to use for the refine text. Lower values make the output more deterministic, higher values make it more random.",
+    "refine_text_repetition_penalty": "The repetition penalty to use for the refine text. Higher values make the output less repetitive."
+}
+options = {}
+settings = {}
+loaded = False
+description = "ChatTTS is a relatively new TTS that is fairly unstable in my testing, but sounds really good and has the capability to laugh. I wouldn't really recommend it for casual use, but for playing around it's pretty funny."
 class Synthesizer(base_tts.base_Synthesizer):
     def __init__(self, conversation_manager, ttses = []):
+        global tts_slug, default_settings, loaded
         super().__init__(conversation_manager)
         self.tts_slug = tts_slug
+        self._default_settings = default_settings
         self.chat = ChatTTS.Chat()
         self.chat.load(compile=False) # Set to True for better performance
         logging.info(f'ChatTTS speaker wavs folders: {self.speaker_wavs_folders}')
@@ -65,6 +99,7 @@ class Synthesizer(base_tts.base_Synthesizer):
         if len(self.voices()) > 0:
             random_voice = random.choice(self.voices())
             self._say("Chat T T S is ready to go.",random_voice)
+        loaded = True
     
     @staticmethod
     def load_audio(file: str, sr: int) -> np.ndarray:
@@ -108,12 +143,7 @@ class Synthesizer(base_tts.base_Synthesizer):
 
     def voices(self):
         """Return a list of available voices"""
-        voices = []
-        for speaker_wavs_folder in self.speaker_wavs_folders:
-            for speaker_wav_file in os.listdir(speaker_wavs_folder):
-                speaker = speaker_wav_file.split(".")[0]
-                if speaker_wav_file.endswith(".wav") and speaker not in voices:
-                    voices.append(speaker)
+        voices = super().voices()
         for banned_voice in self.config.chat_tts_banned_voice_models:
             if banned_voice in voices:
                 voices.remove(banned_voice)
@@ -132,48 +162,25 @@ class Synthesizer(base_tts.base_Synthesizer):
             "refine_text_top_K": self.config.chat_tts_default_refine_text_top_k,
             "refine_text_repetition_penalty": self.config.chat_tts_default_refine_text_repetition_penalty
         }
-
-    def voice_model_settings(self, voice_model):
-        """Return the settings for the specified voice model"""
-        settings = self.default_voice_model_settings
-        voice_model_settings_path = self.voice_model_settings_path(voice_model)
-        if os.path.exists(voice_model_settings_path):
-            with open(voice_model_settings_path, "r") as f:
-                voice_model_settings = json.load(f)
-            for setting in voice_model_settings:
-                settings[setting] = voice_model_settings[setting]
-        logging.error(f"Voice model settings not found at: {voice_model_settings_path}")
-        if settings["transcription"] == self.default_voice_model_settings["transcription"]:
-            logging.info(f"Default Object:", json.dumps(self.default_voice_model_settings, indent=4))
-            if not os.path.exists(os.path.dirname(voice_model_settings_path)):
-                os.makedirs(os.path.dirname(voice_model_settings_path))
-            input("Press enter to continue when you have filled out the voice model settings.")
-        if not os.path.exists(voice_model_settings_path):
-            logging.error(f"Voice model settings was not found at: {voice_model_settings_path}")
-            raise FileNotFoundError()
-        with open(voice_model_settings_path, "r") as f:
-            voice_model_settings = json.load(f)
-        return voice_model_settings
     
-    def _synthesize(self, voiceline, voice_model, voiceline_location, aggro=0):
+    def _synthesize(self, voiceline, voice_model, voiceline_location, settings, aggro=0):
         """Synthesize the audio for the character specified using ChatTTS"""
         logging.output(f'ChatTTS - Loading audio sample and parameters for voiceline synthesis for voice model "{voice_model}"...')
         speaker_wav_path = self.get_speaker_wav_path(voice_model)
         
-        voice_model_settings = self.voice_model_settings(voice_model)
-        logging.output(f'{self.tts_slug} - using voice model settings: {voice_model_settings}')
+        logging.output(f'{self.tts_slug} - using voice model settings: {settings}')
 
-        transcription = voice_model_settings["transcription"]
+        transcription = settings.get("transcription", self.default_voice_model_settings["transcription"])
         
-        infer_code_prompt = voice_model_settings["infer_code_prompt"]
-        infer_code_temperature = voice_model_settings["infer_code_temperature"]
-        infer_code_repetition_penalty = voice_model_settings["infer_code_repetition_penalty"]
+        infer_code_prompt = settings.get("infer_code_prompt", self.default_voice_model_settings["infer_code_prompt"])
+        infer_code_temperature = settings.get("infer_code_temperature", self.default_voice_model_settings["infer_code_temperature"])
+        infer_code_repetition_penalty = settings.get("infer_code_repetition_penalty", self.default_voice_model_settings["infer_code_repetition_penalty"])
         
-        refine_text_prompt = voice_model_settings["refine_text_prompt"]
-        refine_text_temperature = voice_model_settings["refine_text_temperature"]
-        refine_text_top_P = voice_model_settings["refine_text_top_P"]
-        refine_text_top_K = voice_model_settings["refine_text_top_K"]
-        refine_text_repetition_penalty = voice_model_settings["refine_text_repetition_penalty"]
+        refine_text_prompt = settings.get("refine_text_prompt", self.default_voice_model_settings["refine_text_prompt"])
+        refine_text_temperature = settings.get("refine_text_temperature", self.default_voice_model_settings["refine_text_temperature"])
+        refine_text_top_P = settings.get("refine_text_top_P", self.default_voice_model_settings["refine_text_top_P"])
+        refine_text_top_K = settings.get("refine_text_top_K", self.default_voice_model_settings["refine_text_top_K"])
+        refine_text_repetition_penalty = settings.get("refine_text_repetition_penalty", self.default_voice_model_settings["refine_text_repetition_penalty"])
         logging.output("Loading audio...")
         # np.ndarray wav
         wav = self.load_audio(speaker_wav_path,24000)

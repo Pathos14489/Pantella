@@ -1,6 +1,7 @@
 from src.logging import logging
 logging.info("Importing GPT-SoVITS.py...")
 import src.tts_types.base_tts as base_tts
+imported = False
 try:
     logging.info("Trying to import GPT-SoVITS libraries...")
     import torch
@@ -9,7 +10,7 @@ try:
         AutoModelForMaskedLM,
         AutoTokenizer
     )
-    import LangSegment
+    import LangSegment.LangSegment
     import librosa
     from huggingface_hub import hf_hub_download
     from libraries.gpt_sovits.module.models import SynthesizerTrn
@@ -27,6 +28,7 @@ try:
     import re
     import chinese
     import soundfile as sf
+    imported = True
     logging.info("Imported GPT-SoVITS libraries")
 except Exception as e:
     logging.error(f"Failed to import GPT-SoVITS: {e}")
@@ -147,7 +149,6 @@ def split(todo_text):
             i_split_head += 1
     return todo_texts
 
-
 def cut1(inp):
     inp = inp.strip("\n")
     inps = split(inp)
@@ -225,10 +226,189 @@ def cut5(inp):
 logging.info("Imported required libraries in GPT-SoVITS.py")
 
 tts_slug = "GPT-SoVITS"
+default_settings = {
+    "prompt_language": "en",
+    "text_language": "en",
+    "temperature": 1.0,
+    "top_k": 20,
+    "top_p": 1.0,
+}
+settings_description = {
+    "prompt_language": "The language code of the prompt. Supported languages: en, zh, ja, ko, yue, all_zh, all_ja, all_ko, all_yue, auto, auto_yue.",
+    "text_language": "The language code of the text. Supported languages: en, zh, ja, ko, yue, all_zh, all_ja, all_ko, all_yue, auto, auto_yue.",
+    "temperature": "The temperature of the model. Higher values will make the model more creative, lower values will make the model more conservative.",
+    "top_k": "The top-k value of the model. Higher values will make the model more creative, lower values will make the model more conservative.",
+    "top_p": "The top-p value of the model. Higher values will make the model more creative, lower values will make the model more conservative.",
+}
+options = {
+    "prompt_language": [
+        {
+            "name": "English",
+            "value": "en",
+            "description": "Use English for the prompt language. This will use the English tokenizer and Bert model.",
+            "default": True,
+            "disabled": False
+        },
+        {
+            "name": "Chinese",
+            "value": "all_zh",
+            "description": "Use Chinese for the prompt language. This will use the Chinese tokenizer and Bert model.",
+            "default": False,
+            "disabled": False
+        },
+        {
+            "name": "Japanese",
+            "value": "all_ja",
+            "description": "Use Japanese for the prompt language. This will use the Japanese tokenizer and Bert model.",
+            "default": False,
+            "disabled": False
+        },
+        {
+            "name": "Korean",
+            "value": "all_ko",
+            "description": "Use Korean for the prompt language. This will use the Korean tokenizer and Bert model.",
+            "default": False,
+            "disabled": False
+        },
+        {
+            "name": "Yue",
+            "value": "all_yue",
+            "description": "Use Yue for the prompt language. This will use the Yue tokenizer and Bert model.",
+            "default": False,
+            "disabled": False
+        },
+        {
+            "name": "Chinese-English Mixed",
+            "value": "zh",
+            "description": "Use Chinese-English Mixed for the prompt language. This will use the Chinese-English Mixed tokenizer and Bert model.",
+            "default": False,
+            "disabled": False
+        },
+        {
+            "name": "Japanese-English Mixed",
+            "value": "ja",
+            "description": "Use Japanese-English Mixed for the prompt language. This will use the Japanese-English Mixed tokenizer and Bert model.",
+            "default": False,
+            "disabled": False
+        },
+        {
+            "name": "Yue-English Mixed",
+            "value": "yue",
+            "description": "Use Yue-English Mixed for the prompt language. This will use the Yue-English Mixed tokenizer and Bert model.",
+            "default": False,
+            "disabled": False
+        },
+        {
+            "name": "Korean-English Mixed",
+            "value": "ko",
+            "description": "Use Korean-English Mixed for the prompt language. This will use the Korean-English Mixed tokenizer and Bert model.",
+            "default": False,
+            "disabled": False
+        },
+        {
+            "name": 'Multilingual Mixed',
+            'value': 'auto',
+            'description': 'Use Multilingual Mixed for the prompt language. This will automatically detect the language of the text.',
+            'default': False,
+            'disabled': False
+        },
+        {
+            'name': 'Multilingual Mixed(Yue)',
+            'value': 'auto_yue',
+            'description': 'Use Multilingual Mixed(Yue) for the prompt language. This will automatically detect the language of the text, but will use the Yue tokenizer and Bert model.',
+            'default': False,
+            'disabled': False
+        }
+    ],
+    "text_language": [
+        {
+            "name": "English",
+            "value": "en",
+            "description": "Use English for the prompt language. This will use the English tokenizer and Bert model.",
+            "default": True,
+            "disabled": False
+        },
+        {
+            "name": "Chinese",
+            "value": "all_zh",
+            "description": "Use Chinese for the prompt language. This will use the Chinese tokenizer and Bert model.",
+            "default": False,
+            "disabled": False
+        },
+        {
+            "name": "Japanese",
+            "value": "all_ja",
+            "description": "Use Japanese for the prompt language. This will use the Japanese tokenizer and Bert model.",
+            "default": False,
+            "disabled": False
+        },
+        {
+            "name": "Korean",
+            "value": "all_ko",
+            "description": "Use Korean for the prompt language. This will use the Korean tokenizer and Bert model.",
+            "default": False,
+            "disabled": False
+        },
+        {
+            "name": "Yue",
+            "value": "all_yue",
+            "description": "Use Yue for the prompt language. This will use the Yue tokenizer and Bert model.",
+            "default": False,
+            "disabled": False
+        },
+        {
+            "name": "Chinese-English Mixed",
+            "value": "zh",
+            "description": "Use Chinese-English Mixed for the prompt language. This will use the Chinese-English Mixed tokenizer and Bert model.",
+            "default": False,
+            "disabled": False
+        },
+        {
+            "name": "Japanese-English Mixed",
+            "value": "ja",
+            "description": "Use Japanese-English Mixed for the prompt language. This will use the Japanese-English Mixed tokenizer and Bert model.",
+            "default": False,
+            "disabled": False
+        },
+        {
+            "name": "Yue-English Mixed",
+            "value": "yue",
+            "description": "Use Yue-English Mixed for the prompt language. This will use the Yue-English Mixed tokenizer and Bert model.",
+            "default": False,
+            "disabled": False
+        },
+        {
+            "name": "Korean-English Mixed",
+            "value": "ko",
+            "description": "Use Korean-English Mixed for the prompt language. This will use the Korean-English Mixed tokenizer and Bert model.",
+            "default": False,
+            "disabled": False
+        },
+        {
+            "name": 'Multilingual Mixed',
+            'value': 'auto',
+            'description': 'Use Multilingual Mixed for the prompt language. This will automatically detect the language of the text.',
+            'default': False,
+            'disabled': False
+        },
+        {
+            'name': 'Multilingual Mixed(Yue)',
+            'value': 'auto_yue',
+            'description': 'Use Multilingual Mixed(Yue) for the prompt language. This will automatically detect the language of the text, but will use the Yue tokenizer and Bert model.',
+            'default': False,
+            'disabled': False
+        }
+    ]
+}
+settings = {}
+loaded = False
+description = "GPT-SoVITS is a Chinese based TTS/voice conversion model that's very good for the compute required for it. It only requires 1GB of VRAM, and sounds fantastic on a lot of voices."
 class Synthesizer(base_tts.base_Synthesizer):
     def __init__(self, conversation_manager, ttses = []):
         super().__init__(conversation_manager)
+        global tts_slug, default_settings, loaded
         self.tts_slug = tts_slug
+        self._default_settings = default_settings
         logging.info(f"Initializing {self.tts_slug}...")
         self.torch_dtype=torch.float16 if self.config.gpt_sovits_is_half == True else torch.float32
         self.np_dtype=np.float16 if self.config.gpt_sovits_is_half == True else np.float32
@@ -307,20 +487,27 @@ class Synthesizer(base_tts.base_Synthesizer):
         if len(self.voices()) > 0:
             random_voice = random.choice(self.voices())
             self._say("GPT So Vits is ready to go.", random_voice)
+        loaded = True
 
     def voices(self):
         """Return a list of available voices"""
-        voices = []
-        for speaker_wavs_folder in self.speaker_wavs_folders:
-            for speaker_wav_file in os.listdir(speaker_wavs_folder):
-                speaker = speaker_wav_file.split(".")[0]
-                if speaker_wav_file.endswith(".wav") and speaker not in voices:
-                    voices.append(speaker)
+        voices = super().voices()
         for banned_voice in self.config.gpt_sovits_banned_voice_models:
             if banned_voice in voices:
                 voices.remove(banned_voice)
         return voices
     
+    @property
+    def default_voice_model_settings(self):
+        return {
+            "transcription": "",
+            "temperature": self.config.gpt_sovits_default_temperature,
+            "top_k": self.config.gpt_sovits_default_top_k,
+            "top_p": self.config.gpt_sovits_default_top_p,
+            "prompt_language": self.config.gpt_sovits_prompt_language,
+            "text_language": self.config.gpt_sovits_text_language,
+        }
+
     def get_speaker_wav_path(self, voice_model):
         """Get the path to the wav filepath to a voice sample for the specified voice model if it exists"""
         list_of_files = []
@@ -507,7 +694,7 @@ class Synthesizer(base_tts.base_Synthesizer):
         # with open("./weight.json","w")as f:
         #     f.write(json.dumps(data))
 
-    def get_tts_wav(self, ref_wav_path, prompt_text, text, ref_free=False, speed=1, if_freeze=False, inp_refs=None):
+    def get_tts_wav(self, ref_wav_path, prompt_text, text, ref_free=False, speed=1, if_freeze=False, inp_refs=None, top_k=None, top_p=None, temperature=None):
         # if ref_wav_path:
         #     pass
         # else:
@@ -612,9 +799,9 @@ class Synthesizer(base_tts.base_Synthesizer):
                         None if ref_free else prompt,
                         bert,
                         # prompt_phone_len=ph_offset,
-                        top_k=self.config.gpt_sovits_top_k,
-                        top_p=self.config.gpt_sovits_top_p,
-                        temperature=self.config.gpt_sovits_temperature,
+                        top_k=top_k if top_k is not None else self.config.gpt_sovits_top_k,
+                        top_p=top_p if top_p is not None else self.config.gpt_sovits_top_p,
+                        temperature=temperature if temperature is not None else self.config.gpt_sovits_temperature,
                         early_stop_num=self.hz * self.max_sec,
                     )
                     pred_semantic = pred_semantic[:, -idx:].unsqueeze(0)
@@ -644,21 +831,25 @@ class Synthesizer(base_tts.base_Synthesizer):
             np.int16
         )
 
-    def _synthesize(self, voiceline, voice_model, voiceline_location, aggro=0):
+    def _synthesize(self, voiceline, voice_model, voiceline_location, settings, aggro=0):
         """Synthesize the audio for the character specified using ParlerTTS"""
         logging.output(f'{self.tts_slug} - synthesizing {voiceline} with voice model "{voice_model}"...')
         speaker_wav_path, inp_refs = self.get_speaker_wav_path(voice_model)
         logging.output(speaker_wav_path, inp_refs)
-        settings = self.voice_model_settings(voice_model)
+        # settings = self.voice_model_settings(voice_model)
         logging.output(f'{self.tts_slug} - using voice model settings: {settings}')
         if not voiceline.endswith(".") and not voiceline.endswith("!") and not voiceline.endswith("?"): # Add a period to the end of the voiceline if it doesn't have one.
             voiceline += "."
 
         # Synthesize audio
-        synthesis_result = self.get_tts_wav(prompt_text=settings["transcription"],
+        synthesis_result = self.get_tts_wav(
+            prompt_text=settings.get("transcription", self.default_voice_model_settings["transcription"]),
             ref_wav_path=speaker_wav_path, 
             text=voiceline,
-            inp_refs=inp_refs
+            inp_refs=inp_refs,
+            top_k=settings.get("top_k", self.default_voice_model_settings["top_k"]),
+            top_p=settings.get("top_p", self.default_voice_model_settings["top_p"]),
+            temperature=settings.get("temperature", self.default_voice_model_settings["temperature"]),
         )
         
         result_list = list(synthesis_result)

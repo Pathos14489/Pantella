@@ -8,6 +8,7 @@ import soundfile as sf
 import time
 import numpy as np
 import json
+from src.config_loader import ConfigLoader
 try:
     logging.info("Trying to import winsound")
     import winsound
@@ -31,11 +32,23 @@ class VoiceModelNotFound(Exception):
     pass
 
 tts_slug = "base_Synthesizer"
+default_settings = {
+    "transcription": "",
+}
+settings_description = {
+    "transcription": "Transcription of the voiceline, used for some TTS types that require transcriptions of the voiceline to be sampled for generation. This is not used by all TTS types, so it may be empty if your preferred TTS doesn't require it.",
+}
+options = {}
+settings = {}
+loaded = False
+description = "Base synthesizer class for all TTS types. This class should not be used directly, but rather as a base class for other TTS types. It provides the basic functionality for TTS types, such as synthesizing text, changing voice, and getting available voices. It also provides methods for handling voice model settings and speaker wavs folders."
 class base_Synthesizer:
     def __init__(self, conversation_manager):
+        global tts_slug, default_settings, loaded
         self.tts_slug = tts_slug
+        self._default_settings = default_settings
         self.conversation_manager = conversation_manager
-        self.config = self.conversation_manager.config
+        self.config: ConfigLoader = self.conversation_manager.config
         # determines whether the voiceline should play internally
         self.debug_mode = self.config.debug_mode
         self.play_audio_from_script = self.config.play_audio_from_script
@@ -50,32 +63,38 @@ class base_Synthesizer:
         self.crashable = self.config.continue_on_voice_model_error
         self._voices = None
         self.last_voice = ''
+        loaded = True
+
+    @property
+    def tts_engines(self):
+        """Return the list of TTS engines available for this TTS type"""
+        return [self.tts_slug]
 
     @property
     def speaker_wavs_folders(self):
         if "language" in self.config.__dict__: # If the language is specified in the config, only use the speaker wavs folder for that language
             if self.config.linux_mode:
                 speaker_wavs_folders = [
-                    os.path.abspath(f"./data/voice_samples/{self.language['tts_language_code']}/"),
+                    os.path.abspath(f"./data/voice_samples/{self.config.game_id}/{self.language['tts_language_code']}/"),
                     os.path.abspath(f"./data/voice_samples/")
                 ]
             else:
                 speaker_wavs_folders = [
-                    os.path.abspath(f".\\data\\voice_samples\\{self.language['tts_language_code']}\\"),
+                    os.path.abspath(f".\\data\\voice_samples\\{self.config.game_id}\\{self.language['tts_language_code']}\\"),
                     os.path.abspath(f".\\data\\voice_samples\\"),
                 ]
         else: # Otherwise, use all the speaker wavs folders
             speaker_wavs_folders = []
             if self.config.linux_mode:
-                for language_code in os.listdir("./data/voice_samples/"):
-                    if not os.path.isdir(f"./data/voice_samples/{language_code}/"):
+                for language_code in os.listdir(f"./data/voice_samples/{self.config.game_id}/"):
+                    if not os.path.isdir(f"./data/voice_samples/{self.config.game_id}/{language_code}/"):
                         continue
-                    speaker_wavs_folders.append(os.path.abspath(f"./data/voice_samples/{language_code}/"))
+                    speaker_wavs_folders.append(os.path.abspath(f"./data/voice_samples/{self.config.game_id}/{language_code}/"))
             else:
-                for language_code in os.listdir(".\\data\\voice_samples\\"):
-                    if not os.path.isdir(f".\\data\\voice_samples\\{language_code}\\"):
+                for language_code in os.listdir(f".\\data\\voice_samples\\{self.config.game_id}\\"):
+                    if not os.path.isdir(f".\\data\\voice_samples\\{self.config.game_id}\\{language_code}\\"):
                         continue
-                    speaker_wavs_folders.append(os.path.abspath(f".\\data\\voice_samples\\{language_code}\\"))
+                    speaker_wavs_folders.append(os.path.abspath(f".\\data\\voice_samples\\{self.config.game_id}\\{language_code}\\"))
         for addon_slug in self.config.addons: # Add the speakers folder from each addon to the list of speaker wavs folders
             addon = self.config.addons[addon_slug]
             if "speakers" in addon["addon_parts"]: 
@@ -125,10 +144,13 @@ class base_Synthesizer:
     
     def voices(self):
         """"Return a list of available voices"""
-        logging.info("Warning: Using voice() method of base_tts.py, this means you haven't implemented the voices() method in your new tts type. This method should return a list of available voices models for the current game from the tts.")
-        input("Press enter to continue...")
-        raise NotImplementedError("voices() method not implemented in your tts type.")
-        return []
+        voices = []
+        for speaker_wavs_folder in self.speaker_wavs_folders:
+            for speaker_wav_file in os.listdir(speaker_wavs_folder):
+                speaker = speaker_wav_file.split(".")[0]
+                if speaker_wav_file.endswith(".wav") and speaker not in voices:
+                    voices.append(speaker)
+        return voices
     
     def get_speaker_wav_path(self, voice_model):
         """Get the path to the wav filepath to a voice sample for the specified voice model if it exists"""
@@ -203,7 +225,7 @@ class base_Synthesizer:
                 raise VoiceModelNotFound(f'Voice model {voice_model} not available! Please add it to the voices list.')
 
     @utils.time_it
-    def change_voice(self, character):
+    def change_voice(self, character, settings=None):
         """Change the voice of the tts to the voice model specified in the character object."""
         logging.info(f'Warning: You haven\'t implemented the change_voice() method in your new TTS type. This method should change the voice of the TTS to the voice model specified in the character object if the TTS requires this as a seperate step from just asking for output. This is likely not an issue if your TTS does not require this step, but if it does, you should implement this method.')
         # logging.info(f'Changing voice to: {character.voice_model}')
@@ -215,15 +237,23 @@ class base_Synthesizer:
     @property
     def default_voice_model_settings(self):
         """Return the default settings for the voice model"""
-        return {
-            "transcription": ""
-        }
+        return self._default_settings
     
     def voice_model_settings_path(self, voice_model):
+        """Change the voice model settings path to the voice model's voice model settings path"""
         if self.config.linux_mode:
             voice_model_settings_path = os.path.abspath(f"./data/tts_settings/{self.tts_slug}/{self.language['tts_language_code']}/{voice_model}.json")
         else:
             voice_model_settings_path = os.path.abspath(f".\\data\\tts_settings\\{self.tts_slug}\\{self.language['tts_language_code']}\\{voice_model}.json")
+        return voice_model_settings_path
+
+    def character_settings_path(self, character):
+        """Change the voice model settings path to the character's voice model settings path"""
+        if self.config.linux_mode:
+            voice_model_settings_path = os.path.abspath(f"./data/tts_settings/voices/{character.name}/{self.language['tts_language_code']}/{self.tts_slug}.json")
+        else:
+            voice_model_settings_path = os.path.abspath(f".\\data\\tts_settings\\voices\\{character.name}\\{self.language['tts_language_code']}\\{self.tts_slug}.json")
+        os.makedirs(os.path.dirname(voice_model_settings_path), exist_ok=True) # make sure the directory exists
         return voice_model_settings_path
 
     def default_settings_path(self, voice_model):
@@ -233,28 +263,54 @@ class base_Synthesizer:
             voice_model_settings_path = os.path.abspath(f".\\data\\tts_settings\\default\\{self.language['tts_language_code']}\\{voice_model}.json")
         return voice_model_settings_path
 
-    def voice_model_settings(self, voice_model):
+    def voice_model_settings(self, character_or_voice_model):
         """Return the settings for the specified voice model"""
-        with open(self.default_settings_path(voice_model), "r") as f:
-            default_Settings = json.load(f)
-        specific_tts_default_settings = self.default_voice_model_settings
-        # settings = {**default_Settings, **specific_tts_default_settings} # merge the default settings with the specific default settings
-        settings = specific_tts_default_settings
-        for setting in default_Settings:
-            if setting in settings:
-                settings[setting] = default_Settings[setting] # overwrite the specific default settings with the default settings if they exist
+        settings = self.default_voice_model_settings.copy()
+        if type(character_or_voice_model) == str:
+            voice_model = character_or_voice_model
+        else:
+            voice_model = self.get_valid_voice_model(character_or_voice_model)
 
-        voice_model_settings_path = self.voice_model_settings_path(voice_model)
+        default_settings_path = self.default_settings_path(voice_model) # Get the default settings path for the voice model (universal for all TTS types)
+        os.makedirs(os.path.dirname(default_settings_path), exist_ok=True) # make sure the directory exists
+        if os.path.exists(default_settings_path):
+            logging.info(f'Loading default settings for voice model: {voice_model} from {default_settings_path}')
+            with open(default_settings_path, "r") as f:
+                default_Settings = json.load(f)
+                settings.update(default_Settings) # update with specific TTS default settings
+        else:
+            with open(default_settings_path, "w") as f:
+                json.dump(settings, f, indent=4)
+
+        voice_model_settings_path = self.voice_model_settings_path(voice_model) # Get the voice model settings path for the specific TTS type
+        os.makedirs(os.path.dirname(voice_model_settings_path), exist_ok=True) # make sure the directory exists
         if os.path.exists(voice_model_settings_path):
+            logging.info(f'Loading settings for voice model: {voice_model} from {voice_model_settings_path}')
             with open(voice_model_settings_path, "r") as f:
-                voice_model_settings = json.load(f)
-            for setting in settings:
-                if setting in voice_model_settings:
-                    settings[setting] = voice_model_settings[setting]
+                tts_default_settings = json.load(f)
+                settings.update(tts_default_settings) # update with specific voice model settings
+        else:
+            with open(voice_model_settings_path, "w") as f:
+                json.dump(settings, f, indent=4)
+            tts_default_settings = self.default_voice_model_settings
+
+        if type(character_or_voice_model) != str: # If a character object is passed, load character specific settings
+            character_settings_path = self.character_settings_path(character_or_voice_model)
+            os.makedirs(os.path.dirname(character_settings_path), exist_ok=True) # make sure the directory exists
+            if os.path.exists(character_settings_path):
+                logging.info(f'Loading settings for character: {character_or_voice_model.name} from {character_settings_path}')
+                with open(character_settings_path, "r") as f:
+                    character_settings = json.load(f)
+                    settings.update(character_settings) # update with specific character settings
+            else:
+                with open(character_settings_path, "w") as f:
+                    json.dump(settings, f, indent=4)
+                    
+        settings['tts_language_code'] = self.get_language_code_from_character(character_or_voice_model)
         return settings
     
     @utils.time_it
-    def _synthesize(self, voiceline, voice_model, voiceline_location, aggro=0):
+    def _synthesize(self, voiceline, voice_model, voiceline_location, settings, aggro=0):
         """Synthesize the text passed as a parameter with the voice model specified in the character object."""
         logging.info(f'Warning: Using synthesizer() method of base_tts.py, this means you haven\'t implemented the synthesizer() method in your new tts type. This method should synthesize the text passed as a parameter with the voice model specified in the character object.')
         logging.out(f'Synthesizing text: {voiceline}')
@@ -265,7 +321,15 @@ class base_Synthesizer:
         logging.error('Voice model not loaded, please fix your code.')
         input("Press enter to continue...")
         raise NotImplementedError("synthesize() method not implemented in your tts type.")
-
+    
+    def get_language_code_from_character(self, character_or_voice_model):
+        """Get the language code from the character object"""
+        if type(character_or_voice_model) == str:
+            language_code = self.language['tts_language_code']
+        else:
+            language_code = character_or_voice_model.tts_language_code
+        return language_code
+    
     @utils.time_it
     def synthesize(self, voiceline, character, aggro=0):
         """Synthesize the audio for the character specified using TTS"""
@@ -274,7 +338,8 @@ class base_Synthesizer:
             voice_model = character
         else:
             voice_model = character.voice_model
-        self.change_voice(character)
+        settings = self.voice_model_settings(character)
+        self.change_voice(character, settings)
         if voiceline.strip() == '': # If the voiceline is empty, don't synthesize anything
             logging.info('No voiceline to synthesize.')
             return ''
@@ -289,7 +354,6 @@ class base_Synthesizer:
                 os.makedirs(f"{self.output_path}\\voicelines\\{voice_model}")
             final_voiceline_file =  f"{self.output_path}\\voicelines\\{voice_model}\\{final_voiceline_file_name}.wav"
 
-
         try:
             if os.path.exists(final_voiceline_file):
                 os.remove(final_voiceline_file)
@@ -299,7 +363,7 @@ class base_Synthesizer:
             logging.warning("Failed to remove spoken voicelines")
 
         # Synthesize voicelines using chat_tts to create the new voiceline
-        self._synthesize(voiceline, voice_model, final_voiceline_file, aggro)
+        self._synthesize(voiceline, voice_model, final_voiceline_file, settings, aggro)
         if not os.path.exists(final_voiceline_file):
             logging.error(f'{self.tts_slug} failed to generate voiceline at: {Path(final_voiceline_file)}')
             raise FileNotFoundError()
@@ -311,20 +375,26 @@ class base_Synthesizer:
          
     def run_command(self, command):
         """Run a command in the command prompt"""
-        startupinfo = subprocess.STARTUPINFO()
-        startupinfo.dwFlags |= subprocess.STARTF_USESHOWWINDOW
+        if self.config.linux_mode:
+            sp = subprocess.Popen(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True)
 
-        sp = subprocess.Popen(command, startupinfo=startupinfo, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+            stdout, stderr = sp.communicate()
+            stderr = stderr.decode("utf-8")
+        else:
+            startupinfo = subprocess.STARTUPINFO()
+            startupinfo.dwFlags |= subprocess.STARTF_USESHOWWINDOW
 
-        stdout, stderr = sp.communicate()
-        stderr = stderr.decode("utf-8")
+            sp = subprocess.Popen(command, startupinfo=startupinfo, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+
+            stdout, stderr = sp.communicate()
+            stderr = stderr.decode("utf-8")
 
     def check_face_fx_wrapper(self):
         """Check if FaceFXWrapper is installed and FonixData.cdf exists in the same directory as the script."""
         current_dir = os.getcwd() # get current directory
         if self.config.linux_mode:
             cdf_path = f'{current_dir}/FaceFXWrapper/FonixData.cdf'
-            face_wrapper_executable = f'wine {current_dir}/FaceFXWrapper/FaceFXWrapper.exe'
+            face_wrapper_executable = f'{current_dir}/FaceFXWrapper/FaceFXWrapper.exe'
         else:
             cdf_path = f'{current_dir}\\FaceFXWrapper\\FonixData.cdf'
             face_wrapper_executable = f'{current_dir}\\FaceFXWrapper\\FaceFXWrapper.exe'
@@ -360,11 +430,11 @@ class base_Synthesizer:
         face_wrapper_game = self.game.lower()
         if face_wrapper_game == 'fallout4vr' or face_wrapper_game == 'fallout4':
             face_wrapper_game = 'Fallout4'
-        if face_wrapper_game == 'skyrimvr' or face_wrapper_game == 'skyrim':
+        if face_wrapper_game == 'skyrimvr' or face_wrapper_game == 'skyrim' or face_wrapper_game == 'falloutnv':
             face_wrapper_game = 'Skyrim'
         logging.info(f'FaceFXWrapper Detected Game: {face_wrapper_game}')
 
-        if self.check_face_fx_wrapper():
+        if self.check_face_fx_wrapper() and not self.config.bypass_facefxwrapper:
             try:
                 if self.config.linux_mode:
                     command = f'wine "{face_wrapper_executable}" "{face_wrapper_game}" "USEnglish" "{cdf_path}" "{final_voiceline_file}" "{final_voiceline_file.replace(".wav", "_r.wav")}" "{final_voiceline_file.replace(".wav", ".lip")}" "{voiceline}"'
@@ -376,10 +446,10 @@ class base_Synthesizer:
                 # remove file created by FaceFXWrapper
                 if os.path.exists(final_voiceline_file.replace(".wav", "_r.wav")):
                     os.remove(final_voiceline_file.replace(".wav", "_r.wav"))
-            except:
-                logging.error(f'FaceFXWrapper failed to generate lip file at: {final_voiceline_file} - Falling back to default/last lip file in Pantella-Spell')
+            except Exception as e:
+                logging.error(f'FaceFXWrapper failed to generate lip file at: {final_voiceline_file} - Falling back to default/last lip file:', e)
         else:
-            logging.error(f'FaceFXWrapper not installed:. Falling back to default lip file in Pantella-Spell')
+            logging.error(f'FaceFXWrapper not installed or bypassed: Falling back to default lip file in the Pantella mod folder')
 
         if not os.path.exists(final_voiceline_file.replace(".wav", ".lip")):
             logging.error(f'FaceFXWrapper failed to generate lip file at: {Path(final_voiceline_file).with_suffix(".lip")}')
@@ -408,10 +478,16 @@ class base_Synthesizer:
             logging.error("Could not play voiceline, no audio library loaded.")
 
     def _say(self, voiceline, voice_model="Female Sultry", volume=0.5):
-        self.change_voice(voice_model)
+        logging.info(f'{self.tts_slug} - _Saying voiceline: {voiceline} with voice model: {voice_model}')
+        settings = self.voice_model_settings(voice_model)
+        logging.config(f'{self.tts_slug} - Using settings: {settings}')
+        self.change_voice(voice_model, settings)
         voiceline_location = f"{self.output_path}\\voicelines\\{voice_model}\\direct.wav"
+        if self.config.linux_mode:
+            voiceline_location = f"{self.output_path}/voicelines/{voice_model}/direct.wav"
+        logging.config(f'{self.tts_slug} - Voiceline location: {voiceline_location}')
         if not os.path.exists(voiceline_location):
             os.makedirs(os.path.dirname(voiceline_location), exist_ok=True)
-        self._synthesize(voiceline, voice_model, voiceline_location)
+        self._synthesize(voiceline, voice_model, voiceline_location, settings)
         self.play_voiceline(voiceline_location, volume)
         return voiceline_location

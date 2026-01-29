@@ -5,11 +5,19 @@ import src.tts_types.base_tts as base_tts
 logging.info("Imported required libraries in multi_tts.py")
 
 tts_slug = "multi_tts"
+default_settings = {}
+settings_description = {}
+options = {}
+settings = {}
+loaded = False
+imported = True
 class Synthesizer(base_tts.base_Synthesizer):
     def __init__(self, conversation_manager, ttses = []):
+        global tts_slug, default_settings, loaded
         super().__init__(conversation_manager)
         self.tts_slug = tts_slug
-        self.tts_engines = ttses
+        self._default_settings = default_settings
+        self.ttses = ttses
         fallback_order = ""
         for tts_index, tts in enumerate(self.tts_engines):
             fallback_order += f"{str(tts_index+1)}. {tts.tts_slug}\n"
@@ -18,6 +26,12 @@ class Synthesizer(base_tts.base_Synthesizer):
         if len(self.voices()) > 0:
             random_voice = random.choice(self.voices())
             self._say("Multi T T S is ready to go.",str(random_voice))
+        loaded = True
+            
+    @property
+    def tts_engines(self):
+        """Return the list of TTS engines available for this TTS type"""
+        return self.ttses
 
     def voices(self):
         """Return a list of available voices"""

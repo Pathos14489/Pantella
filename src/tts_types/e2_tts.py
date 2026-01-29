@@ -1,6 +1,9 @@
 from src.logging import logging
 logging.info("Importing e2_tts.py...")
+import random
+import os
 import src.tts_types.base_tts as base_tts
+imported = False
 try:
     logging.info("Trying to import e2_tts")
     from f5_tts.model import UNetT
@@ -13,17 +16,15 @@ try:
     )
     # load models
     vocoder = load_vocoder()
-    import random
-    import os
     import tempfile
-
     import soundfile as sf
     import torchaudio
     from cached_path import cached_path
 
-    def load_e2tts(ckpt_path=str(cached_path("hf://SWivid/E2-TTS/E2TTS_Base/model_1200000.safetensors"))):
+    def load_e2tts(device):
         E2TTS_model_cfg = dict(dim=1024, depth=24, heads=16, ff_mult=4)
-        return load_model(UNetT, E2TTS_model_cfg, ckpt_path)
+        return load_model(UNetT, E2TTS_model_cfg, (cached_path("hf://SWivid/E2-TTS/E2TTS_Base/model_1200000.safetensors")), device=device)
+    imported = True
     logging.info("Imported e2_tts")
 except Exception as e:
     logging.error(f"Failed to import e2_tts: {e}")
@@ -32,31 +33,49 @@ except Exception as e:
 logging.info("Imported required libraries in e2_tts.py")
 
 tts_slug = "e2_tts"
+default_settings = {
+    "speed": 1.0,
+    "cfg_strength": 2.0,
+}
+settings_description = {
+    "speed": "The speed of the generated audio. 1.0 is normal speed, 0.5 is half speed, 2.0 is double speed.",
+    "cfg_strength": "The CFG strength of the generated audio. 2.0 is normal CFG strength, 1.0 is low CFG strength, 3.0 is high CFG strength.",
+}
+options = {}
+settings = {}
+loaded = False
+description = "E2-TTS is a new Unet based TTS that was released alongside F5 TTS. It only requires like 1-1.5GB of VRAM, and sounds as good or better than xTTS for a lot of voices."
 class Synthesizer(base_tts.base_Synthesizer):
     def __init__(self, conversation_manager, ttses = []):
+        global tts_slug, default_settings, loaded
         super().__init__(conversation_manager)
         self.tts_slug = tts_slug
+        self._default_settings = default_settings
         logging.info(f"Initializing {self.tts_slug}...")
-        self.model = load_e2tts()
+        self.model = load_e2tts(self.config.e2_tts_device)
 
         logging.info(f'{self.tts_slug} speaker wavs folders: {self.speaker_wavs_folders}')
         logging.config(f'{self.tts_slug} - Available voices: {self.voices()}')
         if len(self.voices()) > 0:
             random_voice = random.choice(self.voices())
             self._say("Eee Two Tee Tee Es is ready to go.",random_voice)
+        loaded = True
 
     def voices(self):
         """Return a list of available voices"""
-        voices = []
-        for speaker_wavs_folder in self.speaker_wavs_folders:
-            for speaker_wav_file in os.listdir(speaker_wavs_folder):
-                speaker = speaker_wav_file.split(".")[0]
-                if speaker_wav_file.endswith(".wav") and speaker not in voices:
-                    voices.append(speaker)
+        voices = super().voices()
         for banned_voice in self.config.e2_tts_banned_voice_models:
             if banned_voice in voices:
                 voices.remove(banned_voice)
         return voices
+    
+    @property
+    def default_voice_model_settings(self):
+        return {
+            "transcription": "",
+            "speed": self.config.e2_tts_default_speed,
+            "cfg_strength": self.config.e2_tts_default_cfg_strength,
+        }
     
     def infer(self,
         ref_audio_orig,
@@ -107,24 +126,24 @@ class Synthesizer(base_tts.base_Synthesizer):
 
         return output_path
 
-    def _synthesize(self, voiceline, voice_model, voiceline_location, aggro=0):
+    def _synthesize(self, voiceline, voice_model, voiceline_location, settings, aggro=0):
         """Synthesize the audio for the character specified using ParlerTTS"""
         logging.output(f'{self.tts_slug} - synthesizing {voiceline} with voice model "{voice_model}"...')
         speaker_wav_path = self.get_speaker_wav_path(voice_model)
-        settings = self.voice_model_settings(voice_model)
+        # settings = self.voice_model_settings(voice_model)
         logging.output(f'{self.tts_slug} - using voice model settings: {settings}')
         if not voiceline.endswith(".") and not voiceline.endswith("!") and not voiceline.endswith("?"): # Add a period to the end of the voiceline if it doesn't have one.
             voiceline += "."
         self.infer(
             ref_audio_orig=speaker_wav_path,
-            ref_text=settings["transcription"],
+            ref_text=settings.get("transcription", self.default_voice_model_settings["transcription"]),
             gen_text=voiceline,
             output_path=voiceline_location,
             remove_silence=True,
             cross_fade_duration=0.15,
             nfe_step=32,
-            speed=1,
-            cfg_strength=2,
+            speed=settings.get("speed", self.default_voice_model_settings["speed"]),
+            cfg_strength= settings.get("cfg_strength", self.default_voice_model_settings["cfg_strength"]),
             sway_sampling_coef=-1,
         )
         logging.output(f'{self.tts_slug} - synthesized {voiceline} with voice model "{voice_model}"')

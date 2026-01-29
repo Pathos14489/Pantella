@@ -7,10 +7,19 @@ import random
 logging.info("Imported required libraries in piper_binary.py")
 
 tts_slug = "piper_binary"
+default_settings = {}
+settings_description = {}
+options = {}
+settings = {}
+loaded = False
+imported = True
+description = "PiperTTS is a fast and really easy to run on most computers. It doesn't require special hardware like a CUDA enabled GPU and instead runs on CPU."
 class Synthesizer(base_tts.base_Synthesizer):
     def __init__(self, conversation_manager, ttses = []):
+        global tts_slug, default_settings, loaded
         super().__init__(conversation_manager)
         self.tts_slug = tts_slug
+        self._default_settings = default_settings
         self._voice_model_jsons = []
         logging.config(f"Loading piper_binary voices for game_id '{self.config.game_id}' from {self.piper_models_dir}{self.config.game_id}\\")
         for file in os.listdir(self.piper_models_dir+self.config.game_id+"\\"):
@@ -24,6 +33,7 @@ class Synthesizer(base_tts.base_Synthesizer):
         if len(self.voices()) > 0:
             random_voice = random.choice(self.voices())
             self._say("Piper T T S is ready to go.",random_voice)
+        loaded = True
 
     @property
     def piper_binary_dir(self):
@@ -43,7 +53,11 @@ class Synthesizer(base_tts.base_Synthesizer):
                 voices.remove(banned_voice)
         return voices
     
-    def _synthesize(self, voiceline, voice_model, voiceline_location, aggro=0):
+    @property
+    def default_voice_model_settings(self):
+        return {}
+    
+    def _synthesize(self, voiceline, voice_model, voiceline_location, settings, aggro=0):
         """Synthesize the audio for the character specified using piper"""
         # make sure directory exists
         os.makedirs(os.path.dirname(voiceline_location), exist_ok=True)

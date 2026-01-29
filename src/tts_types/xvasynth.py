@@ -16,10 +16,249 @@ import random
 logging.info("Imported required libraries in xVASynth TTS")
 
 tts_slug = "xvasynth"
+default_settings = {
+    "pace": 1.0,
+    "use_sr": True,
+    "use_cleanup": True,
+    "tts_language_code": "en",
+}
+settings_description = {
+    "pace": "The pace of the generated audio. 1.0 is normal pace, 0.5 is half pace, 2.0 is double pace.",
+    "use_sr": "Whether to use super resolution on the generated audio. This can improve the quality of the audio, but may take longer to generate.",
+    "use_cleanup": "Whether to use cleanup on the generated audio. This can improve the quality of the audio, but may take longer to generate.",
+    "tts_language_code": "The language code of the generated audio. This is used to determine the language of the audio, and can be used to improve the quality of the audio.",
+}
+options = {
+    "tts_language_code": [
+        {
+            "name": "English",
+            "value": "en",
+            "description": "English",
+            "default": True,
+            "disabled": False
+        },
+        {
+            "name": "Spanish",
+            "value": "es",
+            "description": "Spanish",
+            "default": False,
+            "disabled": False
+        },
+        {
+            "name": "French",
+            "value": "fr",
+            "description": "French",
+            "default": False,
+            "disabled": False
+        },
+        {
+            "name": "German",
+            "value": "de",
+            "description": "German",
+            "default": False,
+            "disabled": False
+        },
+        {
+            "name": "Italian",
+            "value": "it",
+            "description": "Italian",
+            "default": False,
+            "disabled": False
+        },
+        {
+            "name": "Portuguese",
+            "value": "pt",
+            "description": "Portuguese",
+            "default": False,
+            "disabled": False
+        },
+        {
+            "name": "Russian",
+            "value": "ru",
+            "description": "Russian",
+            "default": False,
+            "disabled": False
+        },
+        {
+            "name": "Chinese Mandarin",
+            "value": "zh",
+            "description": "Chinese Mandarin",
+            "default": False,
+            "disabled": False
+        },
+        {
+            "name": "Japanese",
+            "value": "jp",
+            "description": "Japanese",
+            "default": False,
+            "disabled": False
+        },
+        {
+            "name": "Korean",
+            "value": "ko",
+            "description": "Korean",
+            "default": False,
+            "disabled": False
+        },
+        {
+            "name": "Hindi",
+            "value": "hi",
+            "description": "Hindi",
+            "default": False,
+            "disabled": False
+        },
+        {
+            "name": "Arabic",
+            "value": "ar",
+            "description": "Arabic",
+            "default": False,
+            "disabled": False
+        },
+        {
+            "name": "Turkish",
+            "value": "tr",
+            "description": "Turkish",
+            "default": False,
+            "disabled": False
+        },
+        {
+            "name": "Swedish",
+            "value": "sv",
+            "description": "Swedish",
+            "default": False,
+            "disabled": False
+        },
+        {
+            "name": "Danish",
+            "value": "da",
+            "description": "Danish",
+            "default": False,
+            "disabled": False
+        },
+        {
+            "name": "Finnish",
+            "value": "fi",
+            "description": "Finnish",
+            "default": False,
+            "disabled": False
+        },
+        {
+            "name": "Polish",
+            "value": "pl",
+            "description": "Polish",
+            "default": False,
+            "disabled": False
+        },
+        {
+            "name": "Ukrainian",
+            "value": "uk",
+            "description": "Ukrainian",
+            "default": False,
+            "disabled": False
+        },
+        {
+            "name": "Vietnamese",
+            "value": "vi",
+            "description": "Vietnamese",
+            "default": False,
+            "disabled": False
+        },
+        {
+            "name": "Wolof",
+            "value": "wo",
+            "description": "Wolof",
+            "default": False,
+            "disabled": False
+        },
+        {
+            "name": "Yoruba",
+            "value": "yo",
+            "description": "Yoruba",
+            "default": False,
+            "disabled": False
+        },
+        {
+            "name": "Amharic",
+            "value": "am",
+            "description": "Amharic",
+            "default": False,
+            "disabled": False
+        },
+        {
+            "name": "Greek",
+            "value": "el",
+            "description": "Greek",
+            "default": False,
+            "disabled": False
+        },
+        {
+            "name": "Hungarian",
+            "value": "hu",
+            "description": "Hungarian",
+            "default": False,
+            "disabled": False
+        },
+        {
+            "name": "Latin",
+            "value": "la",
+            "description": "Latin",
+            "default": False,
+            "disabled": False
+        },
+        {
+            "name": "Mongolian",
+            "value": "mn",
+            "description": "Mongolian",
+            "default": False,
+            "disabled": False
+        },
+        {
+            "name": "Hausa",
+            "value": "ha",
+            "description": "Hausa",
+            "default": False,
+            "disabled": False
+        },
+        {
+            "name": "Thai",
+            "value": "th",
+            "description": "Thai",
+            "default": False,
+            "disabled": False
+        },
+        {
+            "name": "Romanian",
+            "value": "ro",
+            "description": "Romanian",
+            "default": False,
+            "disabled": False
+        },
+        {
+            "name": "Dutch",
+            "value": "nl",
+            "description": "Dutch",
+            "default": False,
+            "disabled": False
+        },
+        {
+            "name": "Kiswahili",
+            "value": "sw",
+            "description": "Kiswahili",
+            "default": False,
+            "disabled": False
+        }
+    ]
+}
+settings = {}
+loaded = False
+imported = True
+description = "xVASynth is a TTS that uses the xVASynth engine to generate voices. It's a bit more complicated to set up than the other TTSes, but it's a very good TTS that can run on CPU. It's better than PiperTTS, but it requires a bit more setup. It can run on CPU, but it's recommended to use a GPU for better performance. It supports multiple games and has a lot of voices available."
 class Synthesizer(base_tts.base_Synthesizer): 
     def __init__(self, conversation_manager):
+        global tts_slug, default_settings, loaded
         super().__init__(conversation_manager)
         self.tts_slug = tts_slug
+        self._default_settings = default_settings
         self.xvasynth_path = self.config.xvasynth_path
         self.process_device = self.config.xvasynth_process_device
         self.times_checked_xvasynth = 0
@@ -47,9 +286,9 @@ class Synthesizer(base_tts.base_Synthesizer):
             raise Exception(f'xVASynth server failed to start. Please check the xVASynth server logs for any errors.')
             
 
-        self.pace = self.config.pace
-        self.use_sr = self.config.use_sr
-        self.use_cleanup = self.config.use_cleanup
+        self.pace = self.config.xvasynth_default_pace
+        self.use_sr = self.config.xvasynth_default_use_sr
+        self.use_cleanup = self.config.xvasynth_default_use_cleanup
 
         self.last_voice = ''
         self.model_type = ''
@@ -81,6 +320,7 @@ class Synthesizer(base_tts.base_Synthesizer):
         if len(self.voices()) > 0:
             random_voice = random.choice(self.voices())
             self._say("Ecks Vee Ey Synth is ready to go.",str(random_voice))
+        loaded = True
 
     @property
     def get_available_voices_url(self):
@@ -159,8 +399,16 @@ class Synthesizer(base_tts.base_Synthesizer):
                 self._voices.remove(banned_voice)
         return self._voices
 
+    @property
+    def default_voice_model_settings(self):
+        return {
+            "pace": self.config.xvasynth_default_pace,
+            "use_cleanup": self.config.xvasynth_default_use_cleanup,
+            "use_sr": self.config.xvasynth_default_use_sr,
+        }
+    
     @utils.time_it
-    def _synthesize_line(self, line, save_path, character=None, aggro=0):
+    def _synthesize_line(self, line, save_path, settings, aggro=0):
         """Synthesize a line using xVASynth"""
         logging.info(f'Synthesizing voiceline: {line}')
         pluginsContext = {}
@@ -169,11 +417,8 @@ class Synthesizer(base_tts.base_Synthesizer):
             pluginsContext["mantella_settings"] = {
                 "emAngry": 0.6
             }
+        # settings = self.voice_model_settings(voice_model)
         line = ' ' + line.strip() + ' ' # xVASynth apparently performs better having spaces at the start and end of the voiceline for some reason
-        if type(character) is not str:
-            base_lang = character.tts_language_code if character else self.language["tts_language_code"] # TODO: Make sure this works
-        else:
-            base_lang = self.language["tts_language_code"]
         data = {
             'pluginsContext': json.dumps(pluginsContext),
             'modelType': self.model_type,
@@ -181,7 +426,7 @@ class Synthesizer(base_tts.base_Synthesizer):
             'pace': self.pace,
             'outfile': save_path,
             'vocoder': 'n/a',
-            'base_lang': base_lang,
+            'base_lang': settings["tts_language_code"],
             'base_emb': self.base_speaker_emb,
             'useSR': self.use_sr,
             'useCleanup': self.use_cleanup,
@@ -189,7 +434,7 @@ class Synthesizer(base_tts.base_Synthesizer):
         logging.out(f'Synthesizing voiceline: {line}')
         logging.config(f'Saving to: {save_path}')
         logging.info(f'Voice model: {self.last_voice}')
-        logging.config(f'Base language: {base_lang}')
+        logging.config(f'Base language: {settings["tts_language_code"]}')
         # logging.info(f'Base speaker emb: {self.base_speaker_emb}') # Too spammy
         logging.config(f'Pace: {self.pace}')
         logging.config(f'Use SR: {self.use_sr}')
@@ -197,39 +442,46 @@ class Synthesizer(base_tts.base_Synthesizer):
         requests.post(self.synthesize_url, json=data)
 
     @utils.time_it
-    def _batch_synthesize(self, grouped_sentences, voiceline_files):
+    def _batch_synthesize(self, grouped_sentences, voiceline_files, settings):
         """Batch synthesize multiple lines using xVASynth"""
         # line = [text, unknown 1, unknown 2, pace, output_path, unknown 5, unknown 6, pitch_amp]
         linesBatch = [[grouped_sentences[i], '', '', self.pace, voiceline_files[i], '', '', 1] for i in range(len(grouped_sentences))]
+
+        # settings = self.voice_model_settings(voice_model)
         
         data = {
             'pluginsContext': '{}',
             'modelType': self.model_type,
             'linesBatch': linesBatch,
+            'pace': settings.get("pace", self.default_voice_model_settings["pace"]),
             'speaker_i': None,
-            'vocoder': [],
+            'vocoder': 'n/a',
             'outputJSON': None,
-            'useSR': None,
-            'useCleanup': None,
+            'base_lang': settings.get("tts_language_code", self.language["tts_language_code"]),
+            'base_emb': self.base_speaker_emb if self.base_speaker_emb else None,
+            'useSR': settings.get('use_sr', self.default_voice_model_settings["use_sr"]),
+            'useCleanup': settings.get('use_cleanup', self.default_voice_model_settings["use_cleanup"]),
         }
         requests.post(self.synthesize_batch_url, json=data)
 
-    def _synthesize(self, voiceline, voice_model, voiceline_location, aggro=0):
+    def _synthesize(self, voiceline, voice_model, voiceline_location, settings, aggro=0):
         voiceline = ' ' + voiceline.strip() + ' ' # xVASynth apparently performs better having spaces at the start and end of the voiceline for some reason
         voiceline_files = []
         phrases = self._split_voiceline(voiceline)
         for phrase in phrases:
             voiceline_file = f"{self.output_path}\\voicelines\\{self.last_voice}\\{utils.clean_text(phrase)[:150]}.wav"
+            if self.config.linux_mode:
+                voiceline_file = f"{self.output_path}/voicelines/{self.last_voice}/{utils.clean_text(phrase)[:150]}.wav"
             voiceline_files.append(voiceline_file)
         if len(phrases) == 1:
-            self._synthesize_line(phrases[0], voiceline_location, voice_model, aggro)
+            self._synthesize_line(phrases[0], voiceline_location, settings, aggro)
         else:
             # TODO: include batch synthesis for v3 models (batch not needed very often)
             if self.model_type != 'xVAPitch':
-                self._batch_synthesize(phrases, voiceline_files)
+                self._batch_synthesize(phrases, voiceline_files, settings)
             else:
                 for i, voiceline_file in enumerate(voiceline_files):
-                    self._synthesize_line(phrases[i], voiceline_files[i], voice_model)
+                    self._synthesize_line(phrases[i], voiceline_files[i], settings)
             self.merge_audio_files(voiceline_files, voiceline_location)
 
     @utils.time_it
@@ -322,18 +574,18 @@ class Synthesizer(base_tts.base_Synthesizer):
         sf.write(voiceline_file_name, merged_audio, samplerate)
   
     @utils.time_it
-    def change_voice(self, character):
+    def change_voice(self, character_or_voice_model, settings=None):
         """Change the voice model to the specified character's voice model"""
-        if type(character) == str:
-            voice = character
+        if type(character_or_voice_model) == str:
+            voice = character_or_voice_model
         else:
-            voice = self.get_valid_voice_model(character) # character.voice_model
+            voice = self.get_valid_voice_model(character_or_voice_model) # character.voice_model
 
         if voice is None:
-            logging.error(f'Voice model {character.voice_model} not available! Please add it to xVASynth voices list.')
+            logging.error(f'Voice model {voice} not available! Please add it to xVASynth voices list.')
         if self.crashable and voice is None:
             input("Press enter to continue...")
-            raise base_tts.VoiceModelNotFound(f'Voice model {character.voice_model} not available! Please add it to xVASynth voices list.')
+            raise base_tts.VoiceModelNotFound(f'Voice model {voice} not available! Please add it to xVASynth voices list.')
 
         logging.info(f'Loading voice model {voice}...')
         
@@ -369,7 +621,7 @@ class Synthesizer(base_tts.base_Synthesizer):
             'version': '3.0',
             'model': voice_path, 
             'modelType': self.model_type,
-            'base_lang': character.tts_language_code if type(character) != str else 'en',
+            'base_lang': character_or_voice_model.tts_language_code if type(character_or_voice_model) != str else 'en',
             'pluginsContext': '{}',
         }
         requests.post(self.loadmodel_url, json=model_change)
