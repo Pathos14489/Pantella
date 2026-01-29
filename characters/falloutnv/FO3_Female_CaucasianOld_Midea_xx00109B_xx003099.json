@@ -1,0 +1,449 @@
+{
+  "name": "Midea",
+  "url": "/wiki/Midea",
+  "dialogue_name": "DLC01Midea.txt",
+  "dialogue_url": "/wiki/DLC01Midea.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "xx00109B",
+  "ref_id": "xx003099",
+  "editor_id": "DLC01Midea",
+  "location": "Midea's quarters",
+  "location_url": "/wiki/Midea%27s_quarters",
+  "descriptions": [
+    "Midea is the de-facto leader of the slaves in the Pitt in 2277.",
+    "Midea was born in the Pitt shortly after the Scourge and has lived her entire life under the rule of Lord Ashur.",
+    "She has cooperated with Wernher since the former Pitt raider was enslaved, with the two of them planning to kidnap Ashur's baby, who is revealed to be the potential cure for the illness. She is also helping to organize the slaves in preparation for the eventual uprising.",
+    "In order to have them secure a meeting with Ashur and steal the cure, Midea nominates the Lone Wanderer to both search the steelyard and fight in the Hole, viewing it as the only way that they will be able to get close to Ashur.",
+    "Midea appears only in the Fallout 3 add-on The Pitt."
+  ],
+  "race": "Human",
+  "gender": "Female",
+  "affiliation": "Pitt slaves",
+  "role": "Leader",
+  "detailed_location": "Midea's quarters,the Pitt Downtown",
+  "special": {
+    "Strength": 4,
+    "Perception": 7,
+    "Endurance": 3,
+    "Charisma": 4,
+    "Intelligence": 4,
+    "Agility": 5,
+    "Luck": 2
+  },
+  "mod_special_values": {
+    "Strength": 4,
+    "Perception": 7,
+    "Endurance": 4,
+    "Charisma": 4,
+    "Intelligence": 4,
+    "Agility": 6,
+    "Luck": 2
+  },
+  "level": "3→10",
+  "tag_skills": [
+    {
+      "Sneak:": "37→70(39→72)"
+    },
+    {
+      "Speech:": "35→68"
+    },
+    {
+      "Unarmed:": "33→66(35→68)"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "30→65(35→70)"
+    },
+    {
+      "Critical Chance:": "2%"
+    },
+    {
+      "Unarmed Dam.:": "2.15→3.8"
+    },
+    {
+      "Poison Resist.:": "10%(15%)"
+    },
+    {
+      "Rad. Resist.:": "4%(6%)"
+    },
+    {
+      "Carry Weight:": "190"
+    },
+    {
+      "Damage Res.:": "0%(3%)"
+    }
+  ],
+  "karma": "Neutral",
+  "voice_type": "DLC01UniqueMidea",
+  "geck_race": "CaucasianOld",
+  "topics": [
+    {
+      "topic": "DLC01AboutMarie1",
+      "topic_text": "If it's any consolation, Ashur says the cure will be shared with everyone.",
+      "emotion": "Anger 25",
+      "response_text": "Oh sure, someday. Meanwhile, they keep bringing in more slaves to die.",
+      "index": "1"
+    },
+    {
+      "topic": "DLC01AboutPitt",
+      "topic_text": "Have things gotten better?",
+      "emotion": "Anger 50",
+      "response_text": "What the hell do you think? We're still brought here against our will, and we still have to work until we fall over.",
+      "index": "5"
+    },
+    {
+      "topic": "DLC01BabyGift1",
+      "topic_text": "Would it help if I brought toys for Marie?",
+      "emotion": "Happy 25",
+      "response_text": "That sure would help me out. Happier Marie is, the more likely I can get a full night's sleep for once in my life.{Desperately happy for some help.}",
+      "index": "12"
+    },
+    {
+      "topic": "DLC01MideaPathA01A",
+      "topic_text": "Sorry, but I just couldn't kidnap an innocent baby, even for your freedom.",
+      "emotion": "Disgust 50",
+      "response_text": "We're just supposed to live and die in slavery, and watch our children turn into monsters, all because you don't have the balls to do your job?{Disgusted at the player's weakness}",
+      "index": "16"
+    },
+    {
+      "topic": "DLC01MideaPathA01B",
+      "topic_text": "I joined with the winning side. Now shut your mouth, slave.",
+      "emotion": "Happy 50",
+      "response_text": "Oh, now I see how it is! Think you're going to become Ashur's new lieutenant, do you? Maybe wait until you can take his throne?{Nastily amused by the player's hubris}",
+      "index": "20"
+    },
+    {
+      "topic": "DLC01MideaPathB01A",
+      "topic_text": "I don't feel right about kidnapping. She's going to be safe, right?",
+      "emotion": "Happy 50",
+      "response_text": "Of course, she'll be safe. We're just going to do our own research for the cure, and then ransom her back for our freedom.{Comforting a skittish collaborator}",
+      "index": "25"
+    },
+    {
+      "topic": "DLC01MideaPathB01B",
+      "topic_text": "Seems like an awful lot of fuss over one little baby.",
+      "emotion": "Anger 50",
+      "response_text": "She's not just any baby. She holds the promise of a cure for our own children, and we can ransom her back for our freedom.",
+      "index": "29"
+    },
+    {
+      "topic": "DLC01MideaPathB02A",
+      "topic_text": "As long as the kid's all right. Take her.",
+      "emotion": "Anger 15",
+      "response_text": "She'll be all right - just not with me. Ashur's guards are always watching me. They'd find her right away.",
+      "index": "33"
+    },
+    {
+      "topic": "DLC01MideaPathB02B",
+      "topic_text": "Whatever. I've done my part, now where's my reward?",
+      "emotion": "Anger 15",
+      "response_text": "Not yet, hotshot. Ashur's got people watching me, and I can't keep a baby hidden in this dump.",
+      "index": "36"
+    },
+    {
+      "topic": "DLC01MideaSt100Greeting1",
+      "topic_text": "Arena? Before I go anywhere, you're going to explain this plan to me.",
+      "emotion": "Neutral 50",
+      "response_text": "It's simple, really. From time to time, Ashur opens up the arena. Any slave who wants to can fight against the gladiators.",
+      "index": "39"
+    },
+    {
+      "topic": "DLC01MideaSt100Greeting1a",
+      "topic_text": "And he'll just give it to me?",
+      "emotion": "Neutral 50",
+      "response_text": "Not exactly, no. Wernher has a... distraction planned. We haven't been making these weapons for nothing, you know.",
+      "index": "42"
+    },
+    {
+      "topic": "DLC01MideaSt100Greeting1b",
+      "topic_text": "Do I have to kill him to get it?",
+      "emotion": "Neutral 50",
+      "response_text": "I wouldn't shed a tear, but no. Wernher has a... distraction planned. We haven't been making these weapons for nothing, you know.",
+      "index": "45"
+    },
+    {
+      "topic": "DLC01MideaSt100Greeting2",
+      "topic_text": "An arena? Interesting. So, that's part of your plan?",
+      "emotion": "Neutral 50",
+      "response_text": "It's simple, really. From time to time, Ashur opens up the arena. We call it the Hole. Any slave who wants to can fight against the gladiators.",
+      "index": "48"
+    },
+    {
+      "topic": "DLC01MideaSt50Greeting1",
+      "topic_text": "Whoa, whoa! Slow down! What's going on here?",
+      "emotion": "Neutral 50",
+      "response_text": "I don't know what you saw on the way in, but the guards don't really take kindly to workers just standing around.",
+      "index": "51"
+    },
+    {
+      "topic": "DLC01MideaSt50Greeting1a",
+      "topic_text": "Sounds dangerous. What will I be doing?",
+      "emotion": "Neutral 50",
+      "response_text": "Outside of the mill, there are a bunch of old steel ingots just lying around. Every so often, the Foreman puts out a work order to collect them.",
+      "index": "53"
+    },
+    {
+      "topic": "DLC01MideaSt50Greeting1a1",
+      "topic_text": "Actually, that doesn't sound very dangerous.",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah? Well the area is full of Trogs.",
+      "index": "55"
+    },
+    {
+      "topic": "DLC01MideaSt50Greeting1a1a",
+      "topic_text": "What the hell is a Trog?",
+      "emotion": "Neutral 50",
+      "response_text": "They're what most of us hope we never become. The contamination gets to everyone to some degree.",
+      "index": "56"
+    },
+    {
+      "topic": "DLC01MideaSt50Greeting1a1a1",
+      "topic_text": "So where can I get some weapons?",
+      "emotion": "Neutral 50",
+      "response_text": "I can't really help you there. Ask around. Maybe check with Marco in the Mill. He's been making some of our tools into weapons.",
+      "index": "59"
+    },
+    {
+      "topic": "DLC01MideaSt50Greeting1a1a2",
+      "topic_text": "So, I'm just supposed to strangle them with my bare hands if I meet one?",
+      "emotion": "Neutral 50",
+      "response_text": "I can't really help you there. Ask around. Maybe check with Marco in the Mill. He's been making some of our tools into weapons.",
+      "index": "61"
+    },
+    {
+      "topic": "DLC01MideaSt50Greeting1a1a3",
+      "topic_text": "I think I can handle it.",
+      "emotion": "Neutral 50",
+      "response_text": "If you need a weapon, check with Marco in the Mill. He's been making some of our tools into weapons.",
+      "index": "63"
+    },
+    {
+      "topic": "DLC01MideaSt50Greeting1a1b",
+      "topic_text": "What is that, some kind of fish?",
+      "emotion": "Neutral 50",
+      "response_text": "You're either an idiot or a smartass, either way I don't think it's funny.",
+      "index": "65"
+    },
+    {
+      "topic": "DLC01MideaSt50Greeting1a2",
+      "topic_text": "And let me guess: the area is full of Super Mutants?",
+      "emotion": "Neutral 50",
+      "response_text": "What in god's name is a Super Mutant? You know what, never mind. Whatever they are, you're wrong.",
+      "index": "69"
+    },
+    {
+      "topic": "DLC01MideaSt50Greeting1a3",
+      "topic_text": "So, what's the catch?",
+      "emotion": "Neutral 50",
+      "response_text": "Well... the area is full of Trogs.",
+      "index": "71"
+    },
+    {
+      "topic": "DLC01MideaSt50Greeting1b",
+      "topic_text": "I didn't come here to work, I came to save you all!",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah, and right now, this is what you need to do to help us.",
+      "index": "72"
+    },
+    {
+      "topic": "DLC01MideaSt50Greeting1b1",
+      "topic_text": "I see your point. What do you need me to do?",
+      "emotion": "Neutral 50",
+      "response_text": "Outside of the mill, there are a bunch of steel ingots just laying around. Every so often, the Foreman puts out a work order to collect them.",
+      "index": "74"
+    },
+    {
+      "topic": "DLC01MideaSt50Greeting1b1a",
+      "topic_text": "That's not so bad.",
+      "emotion": "Neutral 50",
+      "response_text": "By itself, no. It isn't. But the area is full of Trogs.",
+      "index": "76"
+    },
+    {
+      "topic": "DLC01MideaSt50Greeting1b1b",
+      "topic_text": "Let me guess, the area is full of Super Mutants.",
+      "emotion": "Neutral 50",
+      "response_text": "What in god's name is a Super Mutant? You know what, never mind. Whatever they are, you're wrong.",
+      "index": "77"
+    },
+    {
+      "topic": "DLC01MideaSt50Greeting1b2",
+      "topic_text": "I'm not happy about it, but since I'm stuck here: whatever.",
+      "emotion": "Neutral 50",
+      "response_text": "I assure you, no one is more unhappy about being here than us. But right now, we need you to do a job we call \"collecting the trash\".",
+      "index": "79"
+    },
+    {
+      "topic": "DLC01MideaSt50Greeting1b3",
+      "topic_text": "So, what's the catch?",
+      "emotion": "Neutral 50",
+      "response_text": "Well... the area is full of Trogs.",
+      "index": "82"
+    },
+    {
+      "topic": "DLC01MideaSt50Greeting1c",
+      "topic_text": "Whatever it is, I can handle it. So... what is it?",
+      "emotion": "Neutral 50",
+      "response_text": "Outside of the mill, there are a bunch of old steel ingots just lying around. Every so often, the Foreman puts out a work order to collect them.",
+      "index": "83"
+    },
+    {
+      "topic": "DLC01MideaSt50Greeting1d",
+      "topic_text": "The reward better be worth all of this. What do I need to do?",
+      "emotion": "Neutral 50",
+      "response_text": "Well, if you mess it up and get killed, you won't get any reward, now will you?",
+      "index": "85"
+    },
+    {
+      "topic": "DLC01MideaSt50Greeting2",
+      "topic_text": "You're right. What can I do so I don't stand out?",
+      "emotion": "Neutral 50",
+      "response_text": "I don't know what you saw on the way in, but the guards don't really take kindly to workers just standing around.",
+      "index": "88"
+    },
+    {
+      "topic": "DLC01MideaSt50Greeting3",
+      "topic_text": "This place is a nightmare!",
+      "emotion": "Neutral 50",
+      "response_text": "Yes. It is. I don't know what you saw on the way in.",
+      "index": "91"
+    },
+    {
+      "topic": "DLC01MideaSt50Greeting4",
+      "topic_text": "Thanks for helping me out back there.",
+      "emotion": "Neutral 50",
+      "response_text": "Someone needed to. I'm sure you noticed that the guards don't take kindly to newcomers.",
+      "index": "94"
+    },
+    {
+      "topic": "DLC01MideaThreaten1A",
+      "topic_text": "Tell me where Wernher is, or I'll kill each and every slave, right now.",
+      "emotion": "Fear 40",
+      "response_text": "Just to find one man? You... you wouldn't dare!{Trying to be resolute, but uncertain and getting scared}",
+      "index": "97"
+    },
+    {
+      "topic": "DLC01MideaThreaten1B",
+      "topic_text": "I'll find out where he is, and then this is over. Just wait.",
+      "emotion": "Anger 40",
+      "response_text": "Is this like when you said you'd free us slaves? Because I guess I'll be waiting a long time.{Mocking and spiteful.}",
+      "index": "98"
+    },
+    {
+      "topic": "DLC01MideaThreaten2A",
+      "topic_text": "Yeah, because I've never solved my problems with violence. <Intimidate>",
+      "emotion": "Fear 75",
+      "response_text": "Dammit! Dammit, you monster!{Caving into fear and pressure}",
+      "index": "99"
+    },
+    {
+      "topic": "DLC01MideaThreaten2B",
+      "topic_text": "I don't want to do it, but it's the only way. You're forcing my hand, Midea.",
+      "emotion": "Anger 75",
+      "response_text": "Don't you dare try to blame me for your actions, you bastard! I never made you turn your back on us, and I sure as hell never made you a murderer!{Furious, and giving in to rage}",
+      "index": "101"
+    },
+    {
+      "topic": "DLC01MideaTopicCure",
+      "topic_text": "Tell me about this cure.",
+      "emotion": "Neutral 50",
+      "response_text": "The cure is the key to healing the sickness around here. Look at us. We've all got it.",
+      "index": "103"
+    },
+    {
+      "topic": "DLC01MideaTopicMidea",
+      "topic_text": "I want to talk about you.",
+      "emotion": "Neutral 50",
+      "response_text": "What about me? I was born here. I'll probably die here. I've lived my whole life under Ashur's boot heel.",
+      "index": "106"
+    },
+    {
+      "topic": "DLC01MideaTopicPitt",
+      "topic_text": "I want to talk about The Pitt.",
+      "emotion": "Neutral 50",
+      "response_text": "I was born shortly after the Brotherhood Scourge. As bad as it is now, I can't imagine what it was like before Ashur.",
+      "index": "108"
+    },
+    {
+      "topic": "DLC01MideaTopicSlaves",
+      "topic_text": "I want you to tell me about you and your people.",
+      "emotion": "Neutral 50",
+      "response_text": "We come from all over. Most were born here, but lately, the bosses have been bringing us in from all over.",
+      "index": "112"
+    },
+    {
+      "topic": "DLC01StopSlaveRiot",
+      "topic_text": "Your riot isn't going to change anything. Except getting the slaves killed...",
+      "emotion": "Anger 50",
+      "response_text": "They'd rather die for freedom than die working for the raiders.",
+      "index": "113"
+    },
+    {
+      "topic": "DLC01WernherLocation",
+      "topic_text": "I can't believe you were going to steal a baby from her loving parents.",
+      "emotion": "Surprise 50",
+      "response_text": "It's not like we were going to harm her. We just needed to kidnap her for our freedom. Look, sometimes, these things have to happen!{Increasingly defensive, slowly realizing that she was going to kidnap an innocent to get her own freedom, and understanding the horror of what she wa}",
+      "index": "114"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Sad 50",
+      "response_text": "So, I suppose you signed on with Ashur and his kind, did you?{Disappointed in the player}",
+      "index": "119"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "DLC01AshurMarketSpeech02",
+      "topic_text": "DLC01AshurMarketSpeech02",
+      "emotion": "Neutral 50",
+      "response_text": "Right here! We have one! This woman here will fight in the Hole!",
+      "index": "170"
+    },
+    {
+      "topic": "DLC01DowntownAmbushMideaHelpPlayer",
+      "topic_text": "DLC01DowntownAmbushMideaHelpPlayer",
+      "emotion": "Neutral 50",
+      "response_text": "Relax. They messed you up pretty bad.",
+      "index": "173"
+    },
+    {
+      "topic": "DLC01JacksonMidea1",
+      "topic_text": "DLC01JacksonMidea1",
+      "emotion": "Fear 50",
+      "response_text": "Uhm... nothing. Nothing... uh... sir. I was just telling this new worker about the job the Foreman posted.",
+      "index": "176"
+    },
+    {
+      "topic": "DLC01JacksonMidea3",
+      "topic_text": "DLC01JacksonMidea3",
+      "emotion": "Neutral 50",
+      "response_text": "Yes sir. I told him what he needs to do. He knows. 10 ingots. As fast as he can.",
+      "index": "177"
+    },
+    {
+      "topic": "DLC01MideaGuidePLayer",
+      "topic_text": "DLC01MideaGuidePLayer",
+      "emotion": "Neutral 50",
+      "response_text": "You head down to the hole. Talk to Faydra. She sets up the fights.",
+      "index": "179"
+    },
+    {
+      "topic": "DLC01SandraDismissPlayer",
+      "topic_text": "DLC01SandraDismissPlayer",
+      "emotion": "Anger 50",
+      "response_text": "Leave this bastard alone, boys. His fate's in Ashur's hands, now.{Calling out a command to guards threatening the player}",
+      "index": "180"
+    }
+  ],
+  "combat": []
+}

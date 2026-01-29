@@ -1,0 +1,185 @@
+{
+  "name": "Linda Smith",
+  "url": "/wiki/Linda_Smith",
+  "dialogue_name": "LindaSmith.txt",
+  "dialogue_url": "/wiki/LindaSmith.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "00029AA2",
+  "ref_id": "0002DCA4",
+  "editor_id": "LindaSmith",
+  "location": "The Smith's house",
+  "location_url": "/wiki/The_Smith%27s_house",
+  "descriptions": [
+    "Linda Smith is an inhabitant of Andale in 2277.",
+    "House-proud and vehemently opposed to outside influences, the Smiths are a strange but reasonably friendly bunch. Jack seems to be Andale's patriarch and he knows the best little town in America is here, where Linda bakes a delicious meat pie!",
+    "Linda is part of a family of inbred cannibals that lives in Andale. She is married to Jack Smith and together they have a son, Junior Smith. Linda is the child of Old Man Harris.",
+    "She, as a housewife, performs household chores and cooks meals while her husband goes to work with her neighbor and brother Bill in the \"family business,\" capturing and killing wastelanders in order to dine on their flesh. All of this cannibalistic activity is conducted in the Smiths' garden shed and the Wilson family basement.",
+    "Linda Smith is the wife of Jack Smith and the mother of Junior Smith. Her father is Old Man Harris, and her mother was Gladys Smith.",
+    "Rockville, which Linda says was beat out by Andale for town of the year, is the location of Bethesda's main offices."
+  ],
+  "race": "Human",
+  "gender": "Female",
+  "affiliation": "Andale",
+  "role": "WifeCannibal",
+  "detailed_location": "The Smith's house,Andale",
+  "voice_actor": "Shari Elliker",
+  "special": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 5,
+    "Intelligence": 4,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "mod_special_values": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 5,
+    "Intelligence": 4,
+    "Agility": 7,
+    "Luck": 5
+  },
+  "level": "1→10(equal to player character's level)",
+  "tag_skills": [
+    {
+      "Barter:": "30→72"
+    },
+    {
+      "Medicine:": "28→70"
+    },
+    {
+      "Melee Weap.:": "32→74"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "65→110"
+    },
+    {
+      "Critical Chance:": "5%"
+    },
+    {
+      "Unarmed Dam.:": "1.15"
+    },
+    {
+      "Poison Resist.:": "15%"
+    },
+    {
+      "Rad. Resist.:": "6%"
+    },
+    {
+      "Carry Weight:": "210"
+    },
+    {
+      "Damage Res.:": "3%"
+    }
+  ],
+  "karma": "Evil",
+  "voice_type": "FemaleAdult01DefaultDC",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "AndaleLindaSmithGreeting1",
+      "topic_text": "Best town in the USA? How many towns compete in that contest?",
+      "emotion": "Happy 50",
+      "response_text": "Well... I don't right know. But we're the best one, isn't that what matters? I mean, we're the winners. Us. Not Springfield. Not Rockville. Us.",
+      "index": "1"
+    },
+    {
+      "topic": "AndaleLindaSmithGreeting2",
+      "topic_text": "Well, I can certainly see why.",
+      "emotion": "Happy 50",
+      "response_text": "Why thank you! That's so nice of you to say! You're just too sweet.",
+      "index": "3"
+    },
+    {
+      "topic": "AndaleLindaSmithGreeting3",
+      "topic_text": "This dump? Are you serious?",
+      "emotion": "Disgust 50",
+      "response_text": "Well, now. I'm sure that your home town is just so so much better than our little Andale.{Huffy.}",
+      "index": "5"
+    },
+    {
+      "topic": "AndaleLindaSmithGreeting3a",
+      "topic_text": "I'm from an underground Vault, lady. Trust me, this place sucks.",
+      "emotion": "Neutral 50",
+      "response_text": "Well... I never! The nerve of some people! At least some of us know how to take the high road.",
+      "index": "6"
+    },
+    {
+      "topic": "AndaleLindaSmithGreeting3b",
+      "topic_text": "Actually, I guess it isn't so bad.",
+      "emotion": "Neutral 50",
+      "response_text": "Well, I think that it's quite a bit more than that, but thank you anyway. Now, did you need something?",
+      "index": "10"
+    },
+    {
+      "topic": "AndaleLindaSmithGreeting3c",
+      "topic_text": "I was just joking. It's a lovely place.",
+      "emotion": "Neutral 50",
+      "response_text": "Well, I don't think it was a very funny joke. But thank you, we ladies to try to keep it as nice as we can.",
+      "index": "11"
+    },
+    {
+      "topic": "AndaleLindaSmithPie",
+      "topic_text": "Jack says you have some pie for me?",
+      "emotion": "Neutral 50",
+      "response_text": "Oh, of course. Here you are! Enjoy!",
+      "index": "13"
+    },
+    {
+      "topic": "AndaleOldManHarrisTopic",
+      "topic_text": "What's wrong with that Harris guy?",
+      "emotion": "Neutral 50",
+      "response_text": "Has he been spreading his stories again? Poor guy. I'll just have to have Jack give him a talking to.",
+      "index": "15"
+    },
+    {
+      "topic": "AndaleTownTopic",
+      "topic_text": "Tell me about Andale.",
+      "emotion": "Anger 50",
+      "response_text": "Oh, so you can just make fun of us again? No, thank you.",
+      "index": "16"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Happy 50",
+      "response_text": "Well, hello! Welcome to Andale! Winner of the best town in the USA contest!",
+      "index": "18"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "AndaleLindaSmithInterruptedGoodbye1",
+      "topic_text": "What, what?",
+      "emotion": "Neutral 50",
+      "response_text": "Oh! Silly me, I mean \"preparing a meal for you\". Just a crazy twist of the tongue! Haha! Well, gotta go, bye!",
+      "index": "25"
+    },
+    {
+      "topic": "GOODBYE",
+      "topic_text": "I have to go now.",
+      "emotion": "Neutral 50",
+      "response_text": "I really look forward to preparing you for dinner sometime!",
+      "index": "26"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Neutral 50",
+      "response_text": "You're going to love what I'm cooking tonight, dear!",
+      "index": "29"
+    }
+  ],
+  "combat": []
+}

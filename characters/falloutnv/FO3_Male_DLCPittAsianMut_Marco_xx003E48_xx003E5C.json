@@ -1,0 +1,118 @@
+{
+  "name": "Marco",
+  "url": "/wiki/Marco_(The_Pitt)",
+  "dialogue_name": "DLC01Marco.txt",
+  "dialogue_url": "/wiki/DLC01Marco.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "xx003E48",
+  "ref_id": "xx003E5C",
+  "editor_id": "DLC01Marco",
+  "location": "The Mill",
+  "location_url": "/wiki/The_Mill",
+  "descriptions": [
+    "Marco is a Pitt slave who works in the Pitt's Mill, in the year 2277.",
+    "Marco is a mechanically-minded member of the Pitt slaves who is currently operating and maintaining the equipment in the Mill's rotary press control room. Secretly, however, he is also constructing improvised weaponry to assist in the eventual uprising against the Pitt raiders led by his friend Midea and former Pitt raider Wernher.",
+    "If the Lone Wanderer has previously spoken to Midea about acquiring weaponry, Marco will supply them with their own auto axe and warn them to be careful with it around the bosses, as one wrong move would spell their death.",
+    "The Lone Wanderer can also threaten to reveal Marco’s secret, to which he fearlessly challenges them to reveal it to Brand, a Pitt slave who is known for revealing secrets to the Pitt raiders in exchange for better treatment and bonuses. This will ultimately result in Marco being killed by the Pitt raiders as punishment for the conspiracy.",
+    "Marco spends all of his time in a room filled with computers. The computers cannot be used by the player, and activating the safety stop mechanism prompts an \"access denied\" response.",
+    "Marco appears only in the Fallout 3 add-on The Pitt.",
+    "PC Xbox 360 Sometimes when talking to Marco, he will tell the player character to \"talk to Marco about getting a weapon\" as if he himself is not Marco. "
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Pitt slaves",
+  "role": "Slave",
+  "detailed_location": "Rotary press control room, (the Mill)",
+  "voice_actor": "Craig Sechler",
+  "special": {
+    "Strength": 4,
+    "Perception": 7,
+    "Endurance": 3,
+    "Charisma": 4,
+    "Intelligence": 4,
+    "Agility": 5,
+    "Luck": 2
+  },
+  "mod_special_values": {
+    "Strength": 4,
+    "Perception": 7,
+    "Endurance": 4,
+    "Charisma": 4,
+    "Intelligence": 4,
+    "Agility": 6,
+    "Luck": 2
+  },
+  "level": "1",
+  "tag_skills": [
+    {
+      "Sneak:": "28(30)"
+    },
+    {
+      "Speech:": "26"
+    },
+    {
+      "Unarmed:": "24(26)"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "20(25)"
+    }
+  ],
+  "karma": "Neutral",
+  "voice_type": "DLC01SlaveMale01VoiceType",
+  "geck_race": "DLCPittAsianMut",
+  "topics": [
+    {
+      "topic": "DLC01MarcoGreeting01",
+      "topic_text": "Oh yeah? Why shouldn't I just tell them what you're up to?",
+      "emotion": "Neutral 50",
+      "response_text": "Why would you? They'll probably thank you for the information with a bullet to the head. They don't give a rat's ass about you.",
+      "index": "1"
+    },
+    {
+      "topic": "DLC01MarcoGreeting01a",
+      "topic_text": "I guess you're right. What are you working on?",
+      "emotion": "Neutral 50",
+      "response_text": "Weapons. Lot's of 'em. There's something coming... and soon.",
+      "index": "2"
+    },
+    {
+      "topic": "DLC01MarcoGreeting01a1",
+      "topic_text": "I need a weapon. Can you help me out?",
+      "emotion": "Neutral 50",
+      "response_text": "I don't know you, stranger. I need these for the boys I know are dedicated to the cause.",
+      "index": "4"
+    },
+    {
+      "topic": "DLC01MarcoGreeting01a2",
+      "topic_text": "I'll leave you to it, then.",
+      "emotion": "Neutral 50",
+      "response_text": "Right. Back to work.",
+      "index": "9"
+    },
+    {
+      "topic": "DLC01MarcoGreeting01b",
+      "topic_text": "Maybe I'll go tell them anyway.",
+      "emotion": "Neutral 50",
+      "response_text": "Why would you? They'll probably thank you for the information with a bullet to the head. They don't give two shits about you.",
+      "index": "11"
+    },
+    {
+      "topic": "DLC01MarcoGreeting02",
+      "topic_text": "And what are you doing?",
+      "emotion": "Neutral 50",
+      "response_text": "Making weapons. Lot's of 'em. There's something coming... and soon.",
+      "index": "14"
+    }
+  ],
+  "conversation": [],
+  "combat": []
+}

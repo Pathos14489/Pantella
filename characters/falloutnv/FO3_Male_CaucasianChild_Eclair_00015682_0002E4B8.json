@@ -1,0 +1,231 @@
+{
+  "name": "Eclair",
+  "url": "/wiki/Eclair",
+  "dialogue_name": "Eclair.txt",
+  "dialogue_url": "/wiki/Eclair.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": true,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": true,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "00015682",
+  "ref_id": "0002E4B8",
+  "editor_id": "Eclair",
+  "location": "Spelunkers,Little Lamplight",
+  "location_url": "/wiki/Spelunkers",
+  "descriptions": [
+    "Eclair is a boy who runs the Spelunkers restaurant inside Little Lamplight in Fallout 3.",
+    "Previously a casual member of the scavenging team, Eclair is now Little Lamplight's resident chef, cooking and serving cave fungus to the other children.",
+    "Eclair's disdain for the fungus is to a point where he jokes that if they had a brahmin in town, some of the children might now consider eating its turds.",
+    "Eclair has taken it upon himself to experiment with his cookbook scraps new ways to spice up the cave fungus, the results of which were unfortunate enough to earn him his nickname after making a fungus eclair, and now he advises others against trying this.",
+    "Aside from his exasperation with the food shortage, Eclair will express annoyance over jokes about his name, asking that the Lone Wanderer not laugh when he introduces himself, or responding tiredly that he is indeed in charge of the food.",
+    "Apart from the gunshot wound on his foot, Eclair is also missing an eye, which according to Bumble was because a \"monster\" from Vault 87 bit him in the face; he has also told her that monsters are either green or have more than two arms.",
+    "Eclair spends most of his time behind a counter in his restaurant, \"Spelunkers\" in Little Lamplight. He can also sometimes be seen around the restaurant when there are no other non-player characters in the area."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Little Lamplight",
+  "role": "Cook",
+  "detailed_location": "Little Lamplight",
+  "voice_actor": "Sean McCoy",
+  "special": {
+    "Strength": 4,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 7,
+    "Intelligence": 5,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "level": "8",
+  "tag_skills": [
+    {
+      "Barter:": "62"
+    },
+    {
+      "Small Guns:": "60"
+    },
+    {
+      "Speech:": "62"
+    }
+  ],
+  "karma": "Good",
+  "voice_type": "MaleChild01DC",
+  "geck_race": "CaucasianChild",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Happy 50",
+      "response_text": "You're my hero, mister. I want to be just like you when I grow up.",
+      "index": "1"
+    },
+    {
+      "topic": "LLAboutLamplight",
+      "topic_text": "Where do you get food for this place?",
+      "emotion": "Happy 25",
+      "response_text": "Honestly? When we can't scavenge some from outside, we mostly scrape it off the walls and skim it off the water.",
+      "index": "12"
+    },
+    {
+      "topic": "LLAboutLamplight2A",
+      "topic_text": "Where does the fungus come from?",
+      "emotion": "Happy 25",
+      "response_text": "It's pretty hard to find, and I hear it doesn't grow in other caves. I don't know why it's here, but without it, we'd be goners.",
+      "index": "15"
+    },
+    {
+      "topic": "LLAboutLamplight2B",
+      "topic_text": "How does the fungus grow?",
+      "emotion": "Fear 5",
+      "response_text": "They say the fungus grows in the pools where the first Lamplighters dumped the mungos. That's about the most they ever helped us.",
+      "index": "18"
+    },
+    {
+      "topic": "LLAboutLamplight2C",
+      "topic_text": "That's all I need to know for now.",
+      "emotion": "Neutral 50",
+      "response_text": "Sure.",
+      "index": "21"
+    },
+    {
+      "topic": "LLFirstMeetingResponseAFriendly First Response",
+      "topic_text": "That sounds delicious.",
+      "emotion": "Anger 25",
+      "response_text": "Okay, either you're a dirty liar or you're some sort of freak.",
+      "index": "22"
+    },
+    {
+      "topic": "LLFirstMeetingResponseBRude First Response",
+      "topic_text": "I'd rather eat a Brahmin turd sandwich. With no bread.",
+      "emotion": "Happy 75",
+      "response_text": "You got that right! After our regular meals, I bet some of us would give that a shot! If we had a brahmin down here, that is.{Massive laughter at the beginning. This is his style of joke.}",
+      "index": "30"
+    },
+    {
+      "topic": "LLFood",
+      "topic_text": "I'd like some food.",
+      "emotion": "Anger 10",
+      "response_text": "Okay, but only one serving. We've got too many mouths to feed already.",
+      "index": "38"
+    },
+    {
+      "topic": "LLFungusTrade1",
+      "topic_text": "I've got some strange meat to trade for fungus.",
+      "emotion": "Happy 25",
+      "response_text": "Oh great! The fungus pools'll gobble this right up!",
+      "index": "41"
+    },
+    {
+      "topic": "LLNicknames",
+      "topic_text": "Why are you called Eclair?",
+      "emotion": "Neutral 50",
+      "response_text": "Well, I didn't get the nickname for being fat and full of cream, if that's what you're asking.",
+      "index": "44"
+    },
+    {
+      "topic": "LLServices",
+      "topic_text": "I'd like some food.",
+      "emotion": "Anger 75",
+      "response_text": "Yeah, I heard about the sorts of things you'd do for this fungus. Well, you're cut off. Go scrounge your own food.",
+      "index": "47"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "I'll let you get back to the food.",
+      "emotion": "Disgust 25",
+      "response_text": "About time, man. This mold isn't getting any tastier.",
+      "index": "51"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Happy 25",
+      "response_text": "Hey, why don't you stick around and start a ruckus again? I think your corpse would be great fertilizer for the fungus.{Nasty}",
+      "index": "53"
+    },
+    {
+      "topic": "LLEclairZipConv1",
+      "topic_text": "LL",
+      "emotion": "Happy 25",
+      "response_text": "Hey, Zip. I got a question about your last scav trip.",
+      "index": "60"
+    },
+    {
+      "topic": "LLEclairZipConv3",
+      "topic_text": "LLEclairZipConv3",
+      "emotion": "Happy 25",
+      "response_text": "No, calm down, pop-head. Things are just fine. I just couldn't help but notice you didn't bring back any meat, like I asked.",
+      "index": "62"
+    },
+    {
+      "topic": "LLEclairZipConv5",
+      "topic_text": "LLEclairZipConv5",
+      "emotion": "Anger 5",
+      "response_text": "Yeah, fine, just remember next time, okay?{Interrupting the other speaker at the beginning.}",
+      "index": "64"
+    },
+    {
+      "topic": "LLFoodConv2",
+      "topic_text": "LLFoodConv2",
+      "emotion": "Anger 25",
+      "response_text": "Now you're just making up words, aren't you? Here's your standard.",
+      "index": "66"
+    },
+    {
+      "topic": "LLMayorDailyCheck1",
+      "topic_text": "LLMayorDailyCheck1",
+      "emotion": "Anger 25",
+      "response_text": "Yes, sir. Food's running low, but we're scraping by, RJ. We could use more supplies from the outside, especially if you want something with a flavor.",
+      "index": "80"
+    },
+    {
+      "topic": "LLPrincessBullyResponse",
+      "topic_text": "LLPrincessBullyResponse",
+      "emotion": "Anger 10",
+      "response_text": "Because I know if you keep on bullying people, I can always pee on your cave fungus and you'll never know.",
+      "index": "81"
+    },
+    {
+      "topic": "LLRandomConv1",
+      "topic_text": "LLConversation1",
+      "emotion": "Happy 10",
+      "response_text": "Hey. How you doing?",
+      "index": "82"
+    },
+    {
+      "topic": "LLRandomConv2",
+      "topic_text": "LLConversation2",
+      "emotion": "Anger 10",
+      "response_text": "Doing good. I could do with better food, but couldn't we all?",
+      "index": "83"
+    },
+    {
+      "topic": "LLRandomConvEnding",
+      "topic_text": "LLRandomConvEnding",
+      "emotion": "Neutral 10",
+      "response_text": "I hear that. Anyway, gotta be on my way. Later.",
+      "index": "84"
+    },
+    {
+      "topic": "LLWhatsUp1",
+      "topic_text": "LLWhatsUp1",
+      "emotion": "Happy 10",
+      "response_text": "What're you up to, today?",
+      "index": "85"
+    },
+    {
+      "topic": "LLWhatsUp2",
+      "topic_text": "LLWhatsUp2",
+      "emotion": "Anger 10",
+      "response_text": "Not much. Still trying to find a way to turn this fungus into something that doesn't taste like toenails.",
+      "index": "86"
+    }
+  ],
+  "combat": []
+}

@@ -1,0 +1,215 @@
+{
+  "name": "Stella",
+  "url": "/wiki/Stella_(Honest_Hearts)",
+  "dialogue_name": "NVDLC02Stella.txt",
+  "dialogue_url": "/wiki/NVDLC02Stella.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "xx00F19E",
+  "ref_id": "xx00F1A4",
+  "editor_id": "NVDLC02Stella",
+  "location": "Inside thenorthern passage",
+  "location_url": "/wiki/Northern_passage",
+  "descriptions": [
+    "Stella is a caravan guard for the Happy Trails Caravan Company in 2281.",
+    "Stella grew up in New Reno and left at an early age to get away from the debauchery of it, believing that the answer to every problem was rule of law, although looking back, she knows that was naive.",
+    "One such experience Stella had as sheriff was when a band of 80s swept into town and dragged off two working girls. The deputies and Stella gave pursuit, straight into their territory. By the time they caught up with the girls, there was not much left of them. The girls were dead so the posse returned to Caliente but was watched the entire way by some 80s scouts. Eventually she got tired of being a sheriff and took up a job as a caravan guard with Happy Trails Caravan Company. However, this new career would be the death of her as, in 2281, she was killed by a White Legs ambush in Zion Canyon.",
+    "Stella cannot be attacked or receive damage from the Courier in any way while waiting in the northern passage. If shot, struck, or any method of injury is attempted, she will not recoil from it or acknowledge it.",
+    "Stella appears only in the Fallout: New Vegas add-on Honest Hearts.",
+    "Stella was written by lead creative designer John Gonzalez."
+  ],
+  "race": "Human",
+  "gender": "Female",
+  "affiliation": "Happy Trails Caravan Company",
+  "role": "Caravan guardSheriff (formerly)",
+  "detailed_location": "Northern passageSouthern passage",
+  "voice_actor": "Eliza Schneider",
+  "special": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 10,
+    "Intelligence": 5,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "level": "0",
+  "tag_skills": [
+    {
+      "Barter:": "30"
+    },
+    {
+      "Guns:": "30(32)"
+    },
+    {
+      "Speech:": "30"
+    }
+  ],
+  "karma": "Neutral",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "You looking to join this here caravan? Look a little wet behind the ears, you ask me.",
+      "index": "1"
+    },
+    {
+      "topic": "NVDLC02DialogueStellaNVDLC02StellaTopic000",
+      "topic_text": "What are you doing here?",
+      "emotion": "Neutral 50",
+      "response_text": "Earning my keep. Jed hired me on as a caravan guard for this expedition of his.",
+      "index": "5"
+    },
+    {
+      "topic": "NVDLC02DialogueStellaNVDLC02StellaTopic001",
+      "topic_text": "What was that like to grow up in New Reno?",
+      "emotion": "Neutral 50",
+      "response_text": "Imagine New Vegas if there was no Mr. House-type fella keeping the peace, then give everybody a gun and a Jet addiction.",
+      "index": "10"
+    },
+    {
+      "topic": "NVDLC02DialogueStellaNVDLC02StellaTopic002",
+      "topic_text": "Tell me about Caliente.",
+      "emotion": "Neutral 50",
+      "response_text": "Place lived up to its name, that's for sure.",
+      "index": "14"
+    },
+    {
+      "topic": "NVDLC02DialogueStellaNVDLC02StellaTopic003",
+      "topic_text": "Were the 80s a gang, or a tribe?",
+      "emotion": "Neutral 50",
+      "response_text": "What's the difference? Raiders is raiders.",
+      "index": "19"
+    },
+    {
+      "topic": "NVDLC02DialogueStellaNVDLC02StellaTopic004",
+      "topic_text": "What do you know about the White Legs?",
+      "emotion": "Neutral 50",
+      "response_text": "Used to be they raided northeast of Caliente, time to time. But then the Desert Rangers fell apart ten years ago, absorbed into the NCR.",
+      "index": "24"
+    },
+    {
+      "topic": "NVDLC02DialogueStellaNVDLC02StellaTopic005",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Catch you another time, then.",
+      "index": "27"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "NVDLC02AmbushStellaBark01",
+      "topic_text": "NVDLC02AmbushStellaBark01",
+      "emotion": "Neutral 50",
+      "response_text": "{Ticked off by Ricky, and the ambush, she grinds her teeth}Shut the hell up, Ricky! Might as well be waving at them!",
+      "index": "28"
+    },
+    {
+      "topic": "NVDLC02AmbushStellaBark02",
+      "topic_text": "NVDLC02AmbushStellaBark02",
+      "emotion": "Neutral 50",
+      "response_text": "{Blinded by anger, Stella charges forth against the ambushers.}Enough of this! We're sitting ducks here!{pauses to catch her breath}Here I come! I was a sheriff once, goddamn it!",
+      "index": "29"
+    },
+    {
+      "topic": "NVDLC02JedForceGreetTOPIC",
+      "topic_text": "NVDLC02JedForceGreet",
+      "emotion": "Fear 50",
+      "response_text": "{anxious}Ain't the trail ahead worries me, Jed. Those descents we made, through that slot canyon back up there.",
+      "index": "30"
+    },
+    {
+      "topic": "NVDLC02OpeningConversationA03",
+      "topic_text": "NVDLC02OpeningConversationA03",
+      "emotion": "Anger 50",
+      "response_text": "{Ricky is yelling}Shut your mouth, you goddamn junkie! Or I'll plant one between your shoulder blades, I swear!",
+      "index": "32"
+    },
+    {
+      "topic": "NVDLC02OpeningConversationA07",
+      "topic_text": "NVDLC02OpeningConversationA07",
+      "emotion": "Anger 50",
+      "response_text": "{Ricky has Fixer to handle his addiction}Best fix for you'd be a bullet in the brainpan. Now shut it.",
+      "index": "33"
+    },
+    {
+      "topic": "NVDLC02OpeningConversationA08",
+      "topic_text": "NVDLC02OpeningConversationA08",
+      "emotion": "Anger 50",
+      "response_text": "{Ricky just boasted he has plenty of drugs}Sounds like you got enough for a fatal overdose, then. Do us all a favor, will ya?",
+      "index": "34"
+    },
+    {
+      "topic": "NVDLC02OpeningConversationA10",
+      "topic_text": "NVDLC02OpeningConversationA10",
+      "emotion": "Anger 50",
+      "response_text": "{fed up, under your breath}Goddammit, never should joined this assbackwards caravan...",
+      "index": "35"
+    },
+    {
+      "topic": "NVDLC02OpeningConversationB02",
+      "topic_text": "NVDLC02OpeningConversationB02",
+      "emotion": "Anger 50",
+      "response_text": "{Ricky is whining}Enough! Another word of your bitching and I'll put you out of your misery myself!",
+      "index": "36"
+    },
+    {
+      "topic": "NVDLC02OpeningConversationB04",
+      "topic_text": "NVDLC02OpeningConversationB04",
+      "emotion": "Anger 50",
+      "response_text": "{Ricky is whining}You ain't sick! You're a goddamn junkie, that's what you are! So shut it!",
+      "index": "37"
+    },
+    {
+      "topic": "NVDLC02OpeningConversationB10",
+      "topic_text": "NVDLC02OpeningConversationB10",
+      "emotion": "Anger 50",
+      "response_text": "{Ricky is going through withdrawal}Didn't nobody do this to you but yourself, junkie. Now try suffering in silence for once.",
+      "index": "38"
+    },
+    {
+      "topic": "NVDLC02OpeningConversationC01",
+      "topic_text": "NVDLC02OpeningConversationC01",
+      "emotion": "Anger 50",
+      "response_text": "{to yourself, under your breath}{mocking Jed}\"Heard you the fifteenth time, Stella. What's it matter if we're trapped here? Everything will be just fine.\"",
+      "index": "39"
+    },
+    {
+      "topic": "NVDLC02OpeningConversationC02",
+      "topic_text": "NVDLC02OpeningConversationC02",
+      "emotion": "Neutral 50",
+      "response_text": "{to yourself, under your breath}{continuing conversation with imaginary Jed}Oh I'm sure you're right, Jed. What's the worst can happen to us out here? Nothing. Perfectly safe, fucking perfectly...",
+      "index": "40"
+    },
+    {
+      "topic": "NVDLC02OpeningConversationC03",
+      "topic_text": "NVDLC02OpeningConversationC03",
+      "emotion": "Neutral 50",
+      "response_text": "{to yourself, under your breath}{continuing imaginary conversation with Jed, mocking him}\"That's right, little lady. Everything will be just fine with Jed to protect you. Quite the leader is what I am, hell yes.\"",
+      "index": "41"
+    },
+    {
+      "topic": "NVDLC02OpeningConversationStart",
+      "topic_text": "NVDLC02OpeningConversationStart",
+      "emotion": "Neutral 50",
+      "response_text": "{angry that Jed dismissed your concerns}{under your breath}Sorry to bother you with reality, ol' Jed. Who cares if we can't get back out the way we come?  That's not a problem.",
+      "index": "42"
+    },
+    {
+      "topic": "NVDLC02StellaForceGreetTOPIC",
+      "topic_text": "NVDLC02StellaForceGreetTOPIC",
+      "emotion": "Neutral 50",
+      "response_text": "{anxious}Ain't the trail ahead worries me, Jed. Those descents we made, through that slot canyon back up there?",
+      "index": "43"
+    }
+  ],
+  "combat": []
+}

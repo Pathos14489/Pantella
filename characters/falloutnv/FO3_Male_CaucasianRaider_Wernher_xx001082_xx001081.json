@@ -1,0 +1,625 @@
+{
+  "name": "Wernher",
+  "url": "/wiki/Wernher",
+  "dialogue_name": "DLC01Wernher.txt",
+  "dialogue_url": "/wiki/DLC01Wernher.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "xx001082",
+  "ref_id": "xx001081",
+  "editor_id": "DLC01Wernher",
+  "location": "Radio tower",
+  "location_url": "/wiki/Radio_tower",
+  "descriptions": [
+    "Wernher is an escaped slave and former right-hand man of Ishmael Ashur from The Pitt in the Fallout 3 add-on The Pitt.",
+    "Wernher was born around the time of the Scourge, which he approximates as occurring around thirty years prior to 2277, though it really could have only occurred after the Lyons' Brotherhood of Steel departed New California in 2254.",
+    "As Ashur's former second-in-command of the Pitt raiders, Wernher is one of the more intelligent of the city's denizens. He fell from grace after trying to oust Ashur. He was stripped of his rank and enslaved, working alongside the Pitt slaves he once ruled over. Unwilling to accept his fate, Wernher began organizing a slave revolt against Ashur, in collaboration with Midea, the de facto leader of the slaves.",
+    "To execute his plan, he requires the assistance of a healthy, able outsider to infiltrate the Pitt raiders as his Trojan horse. While he lacks combat skills,",
+    "Wernher is a dishonest opportunist, who masquerades as a mistreated slave concerned for the plight for his fellow man, conveniently skipping over the fact that as Ashur's lieutenant, he was responsible for maintaining the slavery in the city.",
+    "While he displays some level of cunning, Wernher's goals are transparent to Ashur. The problem is finding Wernher in the Pitt and dealing with him, as for all his flaws, Wernher is very good at staying hidden and out of reach. While Ashur has a vision for kickstarting a second industrial revolution, and one day abolishing the system of slavery within the Pitt, Wernher is more concerned with placing himself at the top, with none of Ashur's aspirations.",
+    "If the Free Labor quest is completed by siding with the slaves, Wernher generally wanders Downtown and can be seen making conversation with the locals. However, he can also wander outside the city limits and seems to get stuck around the Bridge and train yard.",
+    "Into The Pitt",
+    "Free Labor",
+    "Wernher appears only in the Fallout 3 add-on The Pitt."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Pitt raiders(formerly)Pitt slaves",
+  "role": "Runaway slave",
+  "detailed_location": "Radio tower(Into The Pitt)Wernher's hideout(Free Labor)",
+  "voice_actor": "Mike Rosson",
+  "special": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 4,
+    "Intelligence": 4,
+    "Agility": 6,
+    "Luck": 4
+  },
+  "level": "1→20→30 (Broken Steelonly)",
+  "tag_skills": [
+    {
+      "Melee Weap.:": "31→100"
+    },
+    {
+      "Small Guns:": "31→100"
+    },
+    {
+      "Sneak:": "31→100"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Critical Chance:": "4%"
+    },
+    {
+      "Unarmed Dam.:": "1.1"
+    },
+    {
+      "Poison Resist.:": "15%"
+    },
+    {
+      "Rad. Resist.:": "6%"
+    },
+    {
+      "Carry Weight:": "210"
+    },
+    {
+      "Damage Res.:": "8%(20%)"
+    }
+  ],
+  "karma": "Neutral",
+  "voice_type": "DLC01UniqueWernher",
+  "geck_race": "CaucasianRaider",
+  "topics": [
+    {
+      "topic": "DLC01AboutMarie1",
+      "topic_text": "How's research coming on the cure?",
+      "emotion": "Anger 15",
+      "response_text": "I got folks working on it, 24/7. It'd go faster if they didn't keep fussing about not hurting the little squirt.{Grudging towards the complainers}",
+      "index": "1"
+    },
+    {
+      "topic": "DLC01AboutPitt",
+      "topic_text": "How's everything going in The Pitt?",
+      "emotion": "Happy 50",
+      "response_text": "Oh, things are fine. Don't let any grumblers tell you differently!{Slick and untrustworthy}",
+      "index": "5"
+    },
+    {
+      "topic": "DLC01SpecialOption",
+      "topic_text": "What's going to happen to the baby?",
+      "emotion": "Happy 50",
+      "response_text": "Oh, it'll be fine. I can take care of extracting the full cure from it, and meanwhile the slaves can raise it as one of their own.{Obviously doesn't care about the baby}",
+      "index": "8"
+    },
+    {
+      "topic": "DLC01WernherFight",
+      "topic_text": "I guess there's no other option. Goodbye, Wernher.",
+      "emotion": "Happy 50",
+      "response_text": "You're just going to be their tool right up to the bloody end, aren't you? Bye-bye, tool.{Amused at the player's foolishness, and looking forward to killing him.}",
+      "index": "11"
+    },
+    {
+      "topic": "DLC01WernherGiveUp",
+      "topic_text": "Wernher, how about saving us both a lot of trouble and leaving quietly?",
+      "emotion": "Disgust 50",
+      "response_text": "Oh, I see how it is. You signed on with Ashur, and now you're going to stand by your man. Maybe trying to catch his eye and be his queen?{Disgusted and mocking the player}",
+      "index": "12"
+    },
+    {
+      "topic": "DLC01WernherGreeting1",
+      "topic_text": "I came because of the radio message. What's the problem?",
+      "emotion": "Surprise 50",
+      "response_text": "Well now, a hero! Look at you.",
+      "index": "19"
+    },
+    {
+      "topic": "DLC01WernherGreeting1a",
+      "topic_text": "Did you escape or something?",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah. That's why these guys were after me. As long as I know about the cure, I'm a threat. So I ran.",
+      "index": "23"
+    },
+    {
+      "topic": "DLC01WernherGreeting1a1",
+      "topic_text": "Wait, slow down. Cure for what?",
+      "emotion": "Disgust 50",
+      "response_text": "The Pitt is a mess. Nearly everyone who lives there is either sick, dying, or... worse. It's the water. And the air. You can't escape it.",
+      "index": "25"
+    },
+    {
+      "topic": "DLC01WernherGreeting1a2",
+      "topic_text": "A cure? You're sick? Agh! Get away!",
+      "emotion": "Disgust 50",
+      "response_text": "It's not like that. You can't catch it from me. The Pitt... it gets to you. It's the water, and the air. You can't escape it.",
+      "index": "31"
+    },
+    {
+      "topic": "DLC01WernherGreeting1a3",
+      "topic_text": "Weren't you in a hurry? Storytime is over.",
+      "emotion": "Disgust 50",
+      "response_text": "Fine. Well, everyone is sick. All of us. The bosses too. Everyone who lives in The Pitt is sick. It's the city it... changes you.",
+      "index": "36"
+    },
+    {
+      "topic": "DLC01WernherGreeting1b",
+      "topic_text": "If your people need you, what are you doing here?",
+      "emotion": "Disgust 50",
+      "response_text": "I'm on the run from our dead friends over there. As soon as I found out about the cure, they came after me.",
+      "index": "39"
+    },
+    {
+      "topic": "DLC01WernherGreeting1c",
+      "topic_text": "What's wrong with your people?",
+      "emotion": "Anger 50",
+      "response_text": "To put it simply: we're slaves. We're some of the only healthy survivors, but we're forced to work like animals.",
+      "index": "41"
+    },
+    {
+      "topic": "DLC01WernherGreeting2",
+      "topic_text": "The radio message said something about a reward. Let's skip to that part.",
+      "emotion": "Happy 50",
+      "response_text": "Well, look at you, Moneybags. Right down to business. Gotta respect that.",
+      "index": "42"
+    },
+    {
+      "topic": "DLC01WernherGreeting3",
+      "topic_text": "I'm a better fighter than you, that's who. Can't you handle a couple Raiders?",
+      "emotion": "Anger 50",
+      "response_text": "Yeah, whatever. I didn't come to DC to swap insults with Wasters. You want to flap gums, fine. But don't waste my time.",
+      "index": "45"
+    },
+    {
+      "topic": "DLC01WernherGreeting3a",
+      "topic_text": "Yeah, fine. I was just kidding.",
+      "emotion": "Happy 50",
+      "response_text": "You're a real joker, aren't you? Whatever. Listen, I come from a place called The Pitt.  It's a city far to the northwest.",
+      "index": "47"
+    },
+    {
+      "topic": "DLC01WernherGreeting3b",
+      "topic_text": "What? It's not my fault you can't shoot straight.",
+      "emotion": "Anger 50",
+      "response_text": "You're a real joker, aren't you? Whatever. Shut up and listen. I come from a place called The Pitt. It's a city far to the northwest.",
+      "index": "50"
+    },
+    {
+      "topic": "DLC01WernherGreeting4Kodiak",
+      "topic_text": "I remember hearing about The Pitt from a guy in the Citadel.",
+      "emotion": "Neutral 50",
+      "response_text": "The Citadel, huh? That's the Brotherhood of Steel fortress, right? Yeah, I know about those guys.",
+      "index": "53"
+    },
+    {
+      "topic": "DLC01WernherPathA01A",
+      "topic_text": "Your plans are over, Wernher. Ashur knows everything.",
+      "emotion": "Disgust 25",
+      "response_text": "And you just went along with him, did you? To hell with everyone else but you, huh?",
+      "index": "56"
+    },
+    {
+      "topic": "DLC01WernherPathA01B",
+      "topic_text": "You never told me it meant kidnapping!",
+      "emotion": "Disgust 25",
+      "response_text": "Oh, boo-fucking-hoo. You don't think bringing those bastards down is worth getting your hands dirty?{Mocking the player's squeamishness (\"wah\" at the beginning is a mockery of a baby's cry of \"waaaah!\")}",
+      "index": "59"
+    },
+    {
+      "topic": "DLC01WernherPathB01A",
+      "topic_text": "She's here, but you never told me this meant kidnapping.",
+      "emotion": "Disgust 15",
+      "response_text": "Yeah, because you would have just whined about it. If you aren't getting your hands dirty, you aren't making a difference. Welcome to the world.{Irritated that the player is being a wimp about things}",
+      "index": "61"
+    },
+    {
+      "topic": "DLC01WernherPathB01B",
+      "topic_text": "It's here and safe. How's this going to put me in charge of The Pitt?",
+      "emotion": "Happy 15",
+      "response_text": "Think of it as clearing the stage. The cure in this brat's genes is the only thing worth keeping, and now we can wipe that hellhole clean.",
+      "index": "64"
+    },
+    {
+      "topic": "DLC01WernherPathB02A",
+      "topic_text": "Sounds good. Let's finish this.",
+      "emotion": "Happy 50",
+      "response_text": "That's the spirit. Just stick with the plan, and everything'll work out fine.",
+      "index": "73"
+    },
+    {
+      "topic": "DLC01WernherPathB02B",
+      "topic_text": "That wasn't the deal, Wernher. I'm having second thoughts about all of this.",
+      "emotion": "Anger 50",
+      "response_text": "Oh, sure. You'll just march back to Ashur and his venomous little wifey, and say, \"Sorry I stole your firstborn. My mistake!\"",
+      "index": "75"
+    },
+    {
+      "topic": "DLC01WernherPathB03A",
+      "topic_text": "Sure, fine, whatever. Let's get this over with.",
+      "emotion": "Happy 25",
+      "response_text": "That's the spirit. Nobody likes a quitter.{Talking up the player's nerve}",
+      "index": "77"
+    },
+    {
+      "topic": "DLC01WernherPathB03B",
+      "topic_text": "I guess you're right, since I already killed his wife.",
+      "emotion": "Happy 25",
+      "response_text": "See? You're stuck on this path, pal. Might as well see it through to the end.",
+      "index": "79"
+    },
+    {
+      "topic": "DLC01WernherPathB04A",
+      "topic_text": "How am I supposed to do that?",
+      "emotion": "Happy 50",
+      "response_text": "Simple: get someone else to do it for you. And there's a whole city full of Trogs hungry to do the job.",
+      "index": "84"
+    },
+    {
+      "topic": "DLC01WernherPathB04B",
+      "topic_text": "Sounds like fun. Let me at 'em!",
+      "emotion": "Happy 50",
+      "response_text": "Whoa, there! Sweet as the thought is, you can't just kill 'em all yourself! You're just one man. You might miss a few!{Bloodthirsty, but playing the last line as a joke. }",
+      "index": "87"
+    },
+    {
+      "topic": "DLC01WernherPathB04C",
+      "topic_text": "I wiped out a lot of them, already. Isn't the job already done?",
+      "emotion": "Happy 50",
+      "response_text": "You cocky bastard. Think you killed all of Ashur's little psychos? No way! Not even close!{Amused at the player's arrogance}",
+      "index": "93"
+    },
+    {
+      "topic": "DLC01WernherPathB05A",
+      "topic_text": "Sounds dangerous. How about helping a lady out?",
+      "emotion": "Happy 50",
+      "response_text": "Sorry, doll, but I'll be busy setting everything up with the squirt, here. But for you, I guess I can spare a few supplies.",
+      "index": "96"
+    },
+    {
+      "topic": "DLC01WernherPathB05B",
+      "topic_text": "Sounds like a plan. How do I kill the lights?",
+      "emotion": "Neutral 50",
+      "response_text": "You can get to the power plant from a manhole down in the Steelyard. It's near the train tracks -- you can't miss it.",
+      "index": "104"
+    },
+    {
+      "topic": "DLC01WernherReward01A",
+      "topic_text": "As long as the slaves are free and Marie is safe.",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah, yeah, everybody's happy. Midea says she'll take care of the kid, when she's not too busy with everything else. Don't worry about it.{Uninterested in the kid.}",
+      "index": "107"
+    },
+    {
+      "topic": "DLC01WernherReward01B",
+      "topic_text": "I expect my reward, now.",
+      "emotion": "Happy 50",
+      "response_text": "Keep your shirt on, I'm getting to that! And I promise, you're getting plenty!",
+      "index": "110"
+    },
+    {
+      "topic": "DLC01WernherReward01C",
+      "topic_text": "That leaves me as the new Lord of The Pitt.",
+      "emotion": "Happy 50",
+      "response_text": "Yeah, but it's gonna take work to clean up after the riots. I can take care of the day-to-day stuff - you just reap the benefits, huh?{Wernher just likes being effectively in charge of The Pitt, and is basically buying off the player}",
+      "index": "113"
+    },
+    {
+      "topic": "DLC01WernherReward2A",
+      "topic_text": "So, what do I do, now?",
+      "emotion": "Happy 50",
+      "response_text": "Whatever you want, boss. I'll be whipping folks back into shape, and Midea's keeping an eye on the brat, so you can come and go as you like.",
+      "index": "116"
+    },
+    {
+      "topic": "DLC01WernherReward2B",
+      "topic_text": "So I freed the slaves. Why isn't everyone cheering?",
+      "emotion": "Happy 50",
+      "response_text": "It's not that easy. This is still our home, and there's still lots of work to be done. Killing Ashur is just the first step.",
+      "index": "120"
+    },
+    {
+      "topic": "DLC01WernherSt100GreetingFollower1",
+      "topic_text": "Oh, good. I love surprises. What is it?",
+      "emotion": "Neutral 50",
+      "response_text": "Relax. It's not about you. It's about your... companion.",
+      "index": "124"
+    },
+    {
+      "topic": "DLC01WernherSt100GreetingFollower1a",
+      "topic_text": "If that's how it has to be, I understand.",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah. That's the way it is. You can hook up with her again when you get back.",
+      "index": "148"
+    },
+    {
+      "topic": "DLC01WernherSt100GreetingFollower1b",
+      "topic_text": "You're sure she can't come?",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah. I'm sure. You can hook up with her again when you get back.",
+      "index": "152"
+    },
+    {
+      "topic": "DLC01WernherSt100GreetingFollower2",
+      "topic_text": "This doesn't sound good.",
+      "emotion": "Neutral 50",
+      "response_text": "Relax. It's not about you. It's about your... companion.",
+      "index": "156"
+    },
+    {
+      "topic": "DLC01WernherSt150Greeting1",
+      "topic_text": "You sure I can't sneak a weapon in?",
+      "emotion": "Neutral 50",
+      "response_text": "Well... you might be able to get a small gun or a knife past them if you conceal it just right.",
+      "index": "180"
+    },
+    {
+      "topic": "DLC01WernherSt150Greeting1a",
+      "topic_text": "I'll take the gun.",
+      "emotion": "Neutral 50",
+      "response_text": "Okay. Here you go. Don't take it out until you get past the gate. You clear on what you need to do?",
+      "index": "183"
+    },
+    {
+      "topic": "DLC01WernherSt150Greeting1b",
+      "topic_text": "Gimme the knife.",
+      "emotion": "Neutral 50",
+      "response_text": "Okay. Here you go. Don't take it out until you get past the gate. You clear on what you need to do?",
+      "index": "184"
+    },
+    {
+      "topic": "DLC01WernherSt150Greeting1c",
+      "topic_text": "Nevermind. I'm fine without it.",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah, probably for the best. Are you clear on what you need to do?",
+      "index": "185"
+    },
+    {
+      "topic": "DLC01WernherSt150Greeting2",
+      "topic_text": "Get in. Find Midea. Got it.",
+      "emotion": "Neutral 50",
+      "response_text": "That's it. Good luck. We're counting on you.",
+      "index": "186"
+    },
+    {
+      "topic": "DLC01WernherSt150Greeting3",
+      "topic_text": "Yeah, but I don't think I trust you.",
+      "emotion": "Neutral 50",
+      "response_text": "It's a bit too late for that now, isn't it? Either way, good luck. We're counting on you.",
+      "index": "187"
+    },
+    {
+      "topic": "DLC01WernherSt90Greeting1",
+      "topic_text": "Ah! Where did you come from?",
+      "emotion": "Happy 50",
+      "response_text": "I followed you. I've gotten very good at staying out of sight when I don't want to be seen.",
+      "index": "188"
+    },
+    {
+      "topic": "DLC01WernherSt90Greeting2",
+      "topic_text": "I had a couple of questions first.",
+      "emotion": "Neutral 50",
+      "response_text": "Oh yeah? What is it?",
+      "index": "189"
+    },
+    {
+      "topic": "DLC01WernherSt90Greeting3",
+      "topic_text": "All right, I'll meet you over by the tunnel.",
+      "emotion": "Neutral 50",
+      "response_text": "Whatever you say, hero. Just don't take too long. We need to get started. This ain't a short trip.",
+      "index": "190"
+    },
+    {
+      "topic": "DLC01WernherTaskAcceptYes",
+      "topic_text": "What do we need to do first?",
+      "emotion": "Neutral 50",
+      "response_text": "Well, you might try a disguise. They probably won't let some random armed Waster past the gates.",
+      "index": "194"
+    },
+    {
+      "topic": "DLC01WernherTaskAcceptYes1",
+      "topic_text": "Yeah, a disguise is a good idea. I'll do that.",
+      "emotion": "Neutral 50",
+      "response_text": "Okay. You go get the outfit. I'll stay here and meet up with you when it's done.",
+      "index": "201"
+    },
+    {
+      "topic": "DLC01WernherTaskAcceptYes2",
+      "topic_text": "Disguise or not, I should rescue those slaves.",
+      "emotion": "Neutral 50",
+      "response_text": "Whatever. Just get the outfit off of one of them while you're playing hero. I'll stay here and meet up with you when it's done.",
+      "index": "204"
+    },
+    {
+      "topic": "DLC01WernherTaskAcceptYes3",
+      "topic_text": "I don't need a disguise. I'll find a way in.",
+      "emotion": "Neutral 50",
+      "response_text": "Hrm. Well... that's not the best idea, but at this point, I'm pretty much out of options, so if that's how it has to be...",
+      "index": "206"
+    },
+    {
+      "topic": "DLC01WernherTaskQuestions1",
+      "topic_text": "What's your goal?",
+      "emotion": "Anger 50",
+      "response_text": "The city is controlled by a man named Ashur. He's powerful. No one there dares go against him. No one except me.",
+      "index": "207"
+    },
+    {
+      "topic": "DLC01WernherTaskQuestions2",
+      "topic_text": "Why can't you do it?",
+      "emotion": "Fear 50",
+      "response_text": "They know that I know about the cure. All of them will be looking for me by now. That's why those guys came all the way here.",
+      "index": "209"
+    },
+    {
+      "topic": "DLC01WernherTaskQuestions3",
+      "topic_text": "What am I trying to get?",
+      "emotion": "Neutral 50",
+      "response_text": "It's the key to a cure for the mutations. Everyone in The Pitt is mutated in some way. Some are just sick, some are... worse.",
+      "index": "211"
+    },
+    {
+      "topic": "DLC01WernherTLCurrentTask",
+      "topic_text": "What do you need me to do?",
+      "emotion": "Neutral 50",
+      "response_text": "I need to you find a Slave Outfit so we can sneak you into The Pitt. I had to ditch mine whenever I ran for it.",
+      "index": "213"
+    },
+    {
+      "topic": "DLC01WernherTLGoodbye",
+      "topic_text": "I have to go.",
+      "emotion": "Neutral 50",
+      "response_text": "Good.",
+      "index": "217"
+    },
+    {
+      "topic": "DLC01WernherTLPeople",
+      "topic_text": "Tell me about your people.",
+      "emotion": "Neutral 50",
+      "response_text": "The city is built on the backs of slaves. We're diseased, and suffering. What else do you want to know?",
+      "index": "218"
+    },
+    {
+      "topic": "DLC01WernherTLPeopleAshur",
+      "topic_text": "Who's in charge of The Pitt?",
+      "emotion": "Anger 50",
+      "response_text": "He's a guy named Ashur. I don't know where he came from, but he's strong enough that he keeps all the other bosses in line.",
+      "index": "220"
+    },
+    {
+      "topic": "DLC01WernherTLPeopleEND",
+      "topic_text": "Let's talk about something else.",
+      "emotion": "Neutral 50",
+      "response_text": "You got it, Hero.",
+      "index": "223"
+    },
+    {
+      "topic": "DLC01WernherTLPeopleMidea",
+      "topic_text": "Is there anyone helping you free your people?",
+      "emotion": "Neutral 50",
+      "response_text": "Midea. She's another slave, like me. She's helping to organize them. She'll know when it's time.",
+      "index": "227"
+    },
+    {
+      "topic": "DLC01WernherTLPeopleMoreInfo",
+      "topic_text": "Where do your people come from?",
+      "emotion": "Neutral 50",
+      "response_text": "Some of us are native to The Pitt, most of us are, really. People sometimes have kids before the sickness takes them.",
+      "index": "228"
+    },
+    {
+      "topic": "DLC01WernherTLPitt",
+      "topic_text": "Tell me about The Pitt.",
+      "emotion": "Neutral 50",
+      "response_text": "What do you want to know about it?",
+      "index": "231"
+    },
+    {
+      "topic": "DLC01WernherTLPittCure",
+      "topic_text": "What happens to people who get sick?",
+      "emotion": "Neutral 50",
+      "response_text": "It's hard to describe. It's nasty. And it affects everyone a little differently. But the longer you're there, the more it gets you.",
+      "index": "232"
+    },
+    {
+      "topic": "DLC01WernherTLPittEND",
+      "topic_text": "Let's talk about something else.",
+      "emotion": "Neutral 50",
+      "response_text": "You got it, Hero.",
+      "index": "236"
+    },
+    {
+      "topic": "DLC01WernherTLPittHistory",
+      "topic_text": "How did the city get started?",
+      "emotion": "Neutral 50",
+      "response_text": "After the war, the place just turns into a shithole. The buildings start falling over and the sickness makes people just turn on each other.",
+      "index": "240"
+    },
+    {
+      "topic": "DLC01WernherTLPittHScourge",
+      "topic_text": "Tell me about what the Brotherhood did.",
+      "emotion": "Neutral 50",
+      "response_text": "Well, as bad as The Pitt is, it used to be worse. Much worse. It was complete chaos. Every man for himself.",
+      "index": "244"
+    },
+    {
+      "topic": "DLC01WernherTLPittProblems",
+      "topic_text": "Who lives there?",
+      "emotion": "Anger 50",
+      "response_text": "The city is built on the backs of slaves. My people. We're diseased, and suffering.",
+      "index": "248"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Surprise 50",
+      "response_text": "Thank you for your help with those guys. They finally tracked me down... I thought I'd have more time.",
+      "index": "251"
+    },
+    {
+      "topic": "SpeechChallengeFailure",
+      "topic_text": "SpeechChallengeFailure",
+      "emotion": "Anger 50",
+      "response_text": "No, I don't think so. You may not have the guts to change The Pitt, but I sure do.",
+      "index": "291"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "DLC01WernherAlmostThere",
+      "topic_text": "DLC01WernherAlmostThere",
+      "emotion": "Neutral 50",
+      "response_text": "Come on, we're almost there. It's just past this gate.",
+      "index": "292"
+    },
+    {
+      "topic": "DLC01WernherAmbushSecondWave",
+      "topic_text": "DLC01WernherAmbushSecondWave",
+      "emotion": "Neutral 50",
+      "response_text": "Here come more of them! Watch out!",
+      "index": "293"
+    },
+    {
+      "topic": "DLC01WernherAmbushWarnPlayer",
+      "topic_text": "DLC01WernherAmbushWarnPlayer",
+      "emotion": "Neutral 50",
+      "response_text": "Hang on. Someone's coming. Let me do the talking.",
+      "index": "294"
+    },
+    {
+      "topic": "DLC01WernherRaiderAmbush1",
+      "topic_text": "DLC01WernherRaiderAmbush1",
+      "emotion": "Neutral 50",
+      "response_text": "Hey, hey! What are you guys doing here?",
+      "index": "295"
+    },
+    {
+      "topic": "DLC01WernherRaiderAmbush3",
+      "topic_text": "DLC01WernherRaiderAmbush3",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah? Well, I guess that's the difference between us. I have a lot of guts. You don't.",
+      "index": "296"
+    },
+    {
+      "topic": "GOODBYE",
+      "topic_text": "I have to go now.",
+      "emotion": "Neutral 50",
+      "response_text": "We're counting on you.",
+      "index": "297"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Neutral 50",
+      "response_text": "Jump on the cart. I'm right behind you.",
+      "index": "302"
+    }
+  ],
+  "combat": []
+}

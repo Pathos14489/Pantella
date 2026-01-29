@@ -1,0 +1,249 @@
+{
+  "name": "Paladin Kodiak",
+  "url": "/wiki/Kodiak",
+  "dialogue_name": "PaladinKodiak.txt",
+  "dialogue_url": "/wiki/PaladinKodiak.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000156E6",
+  "ref_id": "000210EA",
+  "editor_id": "PaladinKodiak",
+  "location": "Citadel A ring",
+  "location_url": "/wiki/Citadel_A_ring",
+  "descriptions": [
+    "Paladin Kodiak, born Greg Bear is a member of the elite Lyons' Pride of the Brotherhood of Steel in Fallout 3.",
+    "Among Lyons Pride and the chapter in general, Paladin Kodiak is the single largest and strongest of its fighters. He is the unit's \"jack of all trades\": He does not excel at any single task like a specialist would, but is capable enough to perform any thing the sentinel needs, from recon, through demolition, to tactical assaults.",
+    "However, he is also among the most laid back members of the Pride whenever he's not busy swinging his powered sledgehammer around. Other members of the Pride, like Knight Captain Dusk (affectionately nicknamed Dusky by Kodiak) are somewhat put off by his sociability, especially when he's supposed to be preparing for an assault. Kodiak shrugs off their reservations, joking that he was born ready, for anything, and that he's just that awesome.",
+    "His attitude developed in spite of his traumatic childhood. It was spent in the violent Pitt, surrounded by trogs, rapists, murderers and hellish pollution. Kodiak never knew his parents and remembers his childhood as mostly surviving on the streets and fighting rats for food:",
+    "Although he lost his blood brothers, he gained a new family within the Brotherhood. Together with about twenty other kids",
+    "He can be found around the great hall in the A ring area of the Citadel.",
+    "Kodiak is nicknamed after the Kodiak bear, one of the largest species of bear in the world."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Brotherhood of SteelLyons' Pride",
+  "role": "Generalist",
+  "detailed_location": "The Citadel",
+  "voice_actor": "Pete Papageorge",
+  "special": {
+    "Strength": 7,
+    "Perception": 7,
+    "Endurance": 6,
+    "Charisma": 4,
+    "Intelligence": 3,
+    "Agility": 4,
+    "Luck": 4
+  },
+  "mod_special_values": {
+    "Strength": 9,
+    "Perception": 7,
+    "Endurance": 6,
+    "Charisma": 4,
+    "Intelligence": 3,
+    "Agility": 2,
+    "Luck": 4
+  },
+  "level": "4→7→11",
+  "tag_skills": [
+    {
+      "Big Guns:": "44→57→74"
+    },
+    {
+      "Energy Weap.:": "46→59→76"
+    },
+    {
+      "Small Guns:": "40→53→70"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Good",
+  "voice_type": "MaleAdult02DC",
+  "geck_race": "African American",
+  "topics": [
+    {
+      "topic": "CitKodiakGallows",
+      "topic_text": "What's with that Gallows guy?",
+      "emotion": "Neutral 50",
+      "response_text": "Heard you took the pot. Good work. Of course, I'm not going to ask how you found out what his name was...",
+      "index": "1"
+    },
+    {
+      "topic": "CitKodiakStory",
+      "topic_text": "How did you end up in the Brotherhood?",
+      "emotion": "Neutral 50",
+      "response_text": "Oh, now you want story time? Sorry. I'm not havin' it.",
+      "index": "5"
+    },
+    {
+      "topic": "CitKodiakStory1",
+      "topic_text": "What was the Scourge?",
+      "emotion": "Neutral 50",
+      "response_text": "It was a Brotherhood operation. They marched in and swept the place clean. Most of the people there were half-mutated, cancerous, vile things.",
+      "index": "9"
+    },
+    {
+      "topic": "CitKodiakStory1a",
+      "topic_text": "How did you escape?",
+      "emotion": "Neutral 50",
+      "response_text": "As they swept through, the Brotherhood policed up every non-mutie child they could find. Turns out, there weren't that many.",
+      "index": "14"
+    },
+    {
+      "topic": "CitKodiakStory1a1",
+      "topic_text": "How did you end up back here?",
+      "emotion": "Neutral 50",
+      "response_text": "Elder Lyons brought us all back to the Citadel. He said it was the safest place he knew of. This place was still being converted.",
+      "index": "17"
+    },
+    {
+      "topic": "CitKodiakStory1a1a",
+      "topic_text": "That's pretty amazing, Kodiak.",
+      "emotion": "Neutral 50",
+      "response_text": "Nah. The amazing thing is Elder Lyons. He risked everything  went in outmanned and outgunned. I'll never be able to thank him enough.",
+      "index": "19"
+    },
+    {
+      "topic": "CitKodiakStory1a1b",
+      "topic_text": "Oh, you're done? Sorry, I nodded off there...",
+      "emotion": "Neutral 50",
+      "response_text": "You think that's funny? Elder Lyons is a great man who risked a lot for the Wastes.",
+      "index": "21"
+    },
+    {
+      "topic": "CitKodiakStory1a2",
+      "topic_text": "What happened to your parents?",
+      "emotion": "Neutral 50",
+      "response_text": "Hell if I know. I never knew them. I lived on the street and fought with rats for food.",
+      "index": "23"
+    },
+    {
+      "topic": "CitKodiakStory1a3",
+      "topic_text": "What happened to the other kids from the Pitt?",
+      "emotion": "Neutral 50",
+      "response_text": "All of 'em became Initiates. Most of them went on to become Brothers. A lot fell in action.",
+      "index": "24"
+    },
+    {
+      "topic": "CitKodiakStory1a4",
+      "topic_text": "That's awful! How could the Brotherhood do that?",
+      "emotion": "Neutral 50",
+      "response_text": "Normally, that would get you a crack across the jaw. But since you didn't know what the Pitt was like, I'll let it go.",
+      "index": "26"
+    },
+    {
+      "topic": "CitKodiakStory1b",
+      "topic_text": "What made them so terrible?",
+      "emotion": "Neutral 50",
+      "response_text": "The rivers. Even after the war, they were still flowing, but irradiated, and filled with God knows what else.",
+      "index": "29"
+    },
+    {
+      "topic": "CitKodiakStory1c",
+      "topic_text": "Huh? I'm sorry, are you still talking?",
+      "emotion": "Neutral 50",
+      "response_text": "Hey, you wanted to hear it.",
+      "index": "31"
+    },
+    {
+      "topic": "CitKodiakStory1c1",
+      "topic_text": "Yeah, I did. I'm sorry, go on...",
+      "emotion": "Neutral 50",
+      "response_text": "Right... so where was I? Oh, yeah. Brotherhood swept into the Pitt on the night of the Scourge.",
+      "index": "32"
+    },
+    {
+      "topic": "CitKodiakStory1c2",
+      "topic_text": "That was before I knew how boring it was.",
+      "emotion": "Neutral 50",
+      "response_text": "Then you don't have to hear it. The hell with you.",
+      "index": "33"
+    },
+    {
+      "topic": "CitKodiakStory2",
+      "topic_text": "Sounds like a nice place. You should go back.",
+      "emotion": "Neutral 50",
+      "response_text": "Now see... That was just rude. Fine, no story for you.",
+      "index": "34"
+    },
+    {
+      "topic": "DLC03TLCitadelEnclave",
+      "topic_text": "So... Any thoughts on the Enclave?",
+      "emotion": "Neutral 50",
+      "response_text": "If the playing field is even, the Brotherhood is going to come out on top. That's all there is to it.",
+      "index": "35"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "Hail. Name's Greg  Greg Bear. Most of the guys just call me Kodiak.",
+      "index": "38"
+    },
+    {
+      "topic": "TLCitadelEnclave",
+      "topic_text": "So... Any thoughts on the Enclave?",
+      "emotion": "Neutral 50",
+      "response_text": "There's meat under that armor, and meat can be ground…",
+      "index": "43"
+    },
+    {
+      "topic": "TLCitadelSuperMutant",
+      "topic_text": "Care to share anything about the Super Mutants?",
+      "emotion": "Anger 10",
+      "response_text": "Hell, I've killed more of those yellow Frankensteins than any other member of the Pride. 'Cept maybe Gallows, with those crazy solo night ops of his.",
+      "index": "44"
+    },
+    {
+      "topic": "TLLyonsPride",
+      "topic_text": "What can you tell me about the Lyons' Pride?",
+      "emotion": "Neutral 50",
+      "response_text": "Ah, see, the Brotherhood's one thing, but the Pride... Best of the best. Every damn one of us. Hand picked by Sentinel Lyons herself.",
+      "index": "45"
+    },
+    {
+      "topic": "TLPrideJobWhat do you do here?",
+      "topic_text": "What's your combat specialization in Lyons' Pride?",
+      "emotion": "Happy 50",
+      "response_text": "Hell, I do it all. Recon, demolition, tactical assault. Guess you could say I'm the Pride's jack of all trades.",
+      "index": "46"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "CitTalkDuskKodiak2",
+      "topic_text": "CitTalkDuskKodiak2",
+      "emotion": "Neutral 50",
+      "response_text": "Oh, please. I'm ready for anything, at all times. I'm just that awesome. You know that.",
+      "index": "47"
+    },
+    {
+      "topic": "GOODBYE",
+      "topic_text": "I have to go now.",
+      "emotion": "Neutral 50",
+      "response_text": "Stand strong.",
+      "index": "49"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Neutral 50",
+      "response_text": "Hail.",
+      "index": "52"
+    }
+  ],
+  "combat": [
+    {
+      "topic": "Assault",
+      "topic_text": "Assault",
+      "emotion": "Neutral 50",
+      "response_text": "Boy, are you out of your mind?",
+      "index": "55"
+    }
+  ]
+}

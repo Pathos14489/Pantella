@@ -1,0 +1,149 @@
+{
+  "name": "Daniel Littlehorn",
+  "url": "/wiki/Daniel_Littlehorn",
+  "dialogue_name": "DanielLittlehorn.txt",
+  "dialogue_url": "/wiki/DanielLittlehorn.txt",
+  "spawned_dead": false,
+  "spawned": true,
+  "essential": true,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "0006F1F2",
+  "ref_id": "0006F1F3",
+  "editor_id": "DanielLittlehorn",
+  "location": "Scrapyard office",
+  "location_url": "/wiki/Scrapyard_office",
+  "descriptions": [
+    "Daniel Littlehorn is the head of Littlehorn & Associates in Fallout 3.",
+    "Having run his enigmatic organization for as long as any of his secretaries can remember, Daniel Littlehorn is now in his late seventies. His clandestine organization commits such malevolent acts as murdering innocents, tainting water supplies, and seeing to it that altruistic individuals falter in their objectives, all while maintaining the organization’s secrecy.",
+    "If the Lone Wanderer joins his organization as an operative, he will accept the ears  of good individuals that they gather and pay them for their work.",
+    "If the player character has the Contract Killer perk any good character they kill will have an ear on their corpse. This ear can then be sold to Daniel Littlehorn, located in the scrapyard office, for 15 caps and some XP per ear.",
+    "PC Playstation 3 Xbox 360 It is possible to render him unconscious and pickpocket him to find an ear, which you can sell to him for caps. The process is repeatable for even more caps. "
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Littlehorn & Associates",
+  "role": "Leader",
+  "detailed_location": "Scrapyard office",
+  "voice_actor": "Paul Eiding",
+  "special": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 2,
+    "Intelligence": 5,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "level": "1",
+  "misc_skills": [],
+  "karma": "Good",
+  "voice_type": "MaleOld01DC",
+  "geck_race": "CaucasianOldAged",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "Well, hello there. I assume that you've come about the contract that we're offering.",
+      "index": "1"
+    },
+    {
+      "topic": "PerkCKLittlehornGreeting1",
+      "topic_text": "Remind me what this deal is, again.",
+      "emotion": "Neutral 50",
+      "response_text": "The deal is this: you are now in the employ of Littlehorn and Associates. We deal in all many of affairs, most of which are not your concern.",
+      "index": "7"
+    },
+    {
+      "topic": "PerkCKLittlehornGreeting2",
+      "topic_text": "Yeah, I'm here about the deal.",
+      "emotion": "Neutral 50",
+      "response_text": "Good, good. Direct. To the point. I like that in an employee. Then you understand what your purpose is.",
+      "index": "10"
+    },
+    {
+      "topic": "PerkCKLittlehornGreeting3",
+      "topic_text": "Body parts for money. I like that. Now pay me.",
+      "emotion": "Neutral 50",
+      "response_text": "Oh, how we do love enthusiasm in our employees. The deal is quite simple, as you know.",
+      "index": "13"
+    },
+    {
+      "topic": "PerkCKLittlehornQDoHere",
+      "topic_text": "What do you do here?",
+      "emotion": "Neutral 50",
+      "response_text": "This is the current home office of Littlehorn and Associates. This is where we operate our little business.",
+      "index": "16"
+    },
+    {
+      "topic": "PerkCKLittlehornQEars",
+      "topic_text": "Why do you want ears?",
+      "emotion": "Neutral 50",
+      "response_text": "Now, that's the sort of question which will endanger our relationship.",
+      "index": "19"
+    },
+    {
+      "topic": "PerkCKLittlehornQPeople",
+      "topic_text": "What do these people do?",
+      "emotion": "Neutral 50",
+      "response_text": "They are fellow associates such as yourself. They simply possess a different set of skills than you.",
+      "index": "21"
+    },
+    {
+      "topic": "PerkCKLittlehornQWho",
+      "topic_text": "Who are you anyway.",
+      "emotion": "Happy 50",
+      "response_text": "I am Daniel Littlehorn. I offer you the currency that you crave in exchange for services aligned to your skills.",
+      "index": "22"
+    },
+    {
+      "topic": "PerkCKLittlehornSellEars",
+      "topic_text": "I have ears to sell you.",
+      "emotion": "Neutral 50",
+      "response_text": "Excellent. I had suspected that's why you came to me.",
+      "index": "25"
+    },
+    {
+      "topic": "PerkCKLittlehornSellEarsAll",
+      "topic_text": "Actually, I don't have any right now.",
+      "emotion": "Happy 50",
+      "response_text": "I would scold you for wasting our time, but I enjoy a practical joke.",
+      "index": "27"
+    },
+    {
+      "topic": "PerkCKLittlehornSellEarsEND",
+      "topic_text": "Actually, never mind. I'll hang on to them.",
+      "emotion": "Neutral 50",
+      "response_text": "You'll be back. They always come back.",
+      "index": "40"
+    },
+    {
+      "topic": "",
+      "topic_text": "",
+      "emotion": "Neutral 50",
+      "response_text": "So, the deal is this: there are a lot of evil assholes out there. Take 'em down, bring us their fingers as proof and we'll pay you for each.",
+      "index": "41"
+    }
+  ],
+  "conversation": [],
+  "combat": [
+    {
+      "topic": "PerkLBSonoraGreeting1",
+      "topic_text": "I don't care about your cause. I'm here for the money.",
+      "emotion": "Neutral 50",
+      "response_text": "Fair enough. We'll still take the help where we can get it.",
+      "index": "42"
+    },
+    {
+      "topic": "PerkLBSonoraGreeting2",
+      "topic_text": "What are the Regulators all about?",
+      "emotion": "Neutral 50",
+      "response_text": "We live to cleanse the Wasteland of the scum and evil that pollute it. We're the only thing that represents any sort of law out here.",
+      "index": "44"
+    }
+  ]
+}

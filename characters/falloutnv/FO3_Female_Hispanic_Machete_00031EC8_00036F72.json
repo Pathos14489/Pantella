@@ -1,0 +1,138 @@
+{
+  "name": "Machete",
+  "url": "/wiki/Machete_(character)",
+  "dialogue_name": "Machete.txt",
+  "dialogue_url": "/wiki/Machete.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "00031EC8",
+  "ref_id": "00036F72",
+  "editor_id": "Machete",
+  "location": "Dominic and Machete's house",
+  "location_url": "/wiki/Dominic_and_Machete%27s_house",
+  "descriptions": [
+    "Machete is a junior law enforcer in Canterbury Commons in 2277.",
+    "She used to fiercely defend Little Lamplight. At the age of 7, she slaughtered a mole rat in the caves with a machete, thus earning her nickname. She has been a bona fide celebrity ever since.",
+    "At the age of 16, she was supposed to head to Big Town, but she became lost due to a dust storm and arrived at Canterbury Commons instead. Because of her pride, she refuses to admit she went to the wrong place. Dominic D'Ellsadro felt she had the potential to work as a guard, and after a year of his guidance, she has earned some respect among the residents. She works alongside Dominic as his junior law enforcer. They both keep Canterbury Commons safe from raiders, unwanted creatures, and danger in general.",
+    "Machete patrols Canterbury Commons from 8:00 AM to 12:00 PM, eats until 1:00 PM, patrols until 6:00 PM, eats until 7:00 PM, then patrols again until 2:00 AM, after which she goes to bed and wakes up at 8:00 AM."
+  ],
+  "race": "Human",
+  "gender": "Female",
+  "affiliation": "Canterbury CommonsLittle Lamplight(formerly)",
+  "role": "Law enforcer",
+  "detailed_location": "Dominic and Machete's house",
+  "voice_actor": "Jan Johns",
+  "special": {
+    "Strength": 6,
+    "Perception": 6,
+    "Endurance": 5,
+    "Charisma": 3,
+    "Intelligence": 3,
+    "Agility": 7,
+    "Luck": 4
+  },
+  "level": "4",
+  "tag_skills": [],
+  "misc_skills": [
+    {
+      "Hit Points:": "45"
+    },
+    {
+      "Poison Resist.:": "20%"
+    },
+    {
+      "Rad. Resist.:": "8%"
+    }
+  ],
+  "karma": "Good",
+  "voice_type": "FemaleAdult04DC",
+  "geck_race": "Hispanic",
+  "topics": [
+    {
+      "topic": "CCDirections",
+      "topic_text": "Can I get some directions around town?",
+      "emotion": "Anger 25",
+      "response_text": "Busy. Go ask someone else.",
+      "index": "1"
+    },
+    {
+      "topic": "CCFirstMeeting1A",
+      "topic_text": "I didn't mean to interrupt. I just wanted to say hi.",
+      "emotion": "Anger 50",
+      "response_text": "Fine, hi, whatever. I'm Machete, and I've got better things to do than talk with you. Scram.",
+      "index": "2"
+    },
+    {
+      "topic": "CCFirstMeeting1B",
+      "topic_text": "I'm new in town. What is this place?",
+      "emotion": "Disgust 50",
+      "response_text": "This is Canterbury Commons, where dirty, old lechers get rid of everything they picked up on the road. Unless it's not treatable, that is.",
+      "index": "3"
+    },
+    {
+      "topic": "CCFirstMeeting1C",
+      "topic_text": "Watch your attitude. It'll get you in trouble.",
+      "emotion": "Anger 50",
+      "response_text": "Yeah, maybe. But you need one to keep some of those caravaners in line. And to keep them from getting too friendly, if you catch my drift.",
+      "index": "5"
+    },
+    {
+      "topic": "CCLamplightMachete",
+      "topic_text": "Did you get your nickname in Lamplight?",
+      "emotion": "Anger 30",
+      "response_text": "Good guess! I was the toughest defender they ever saw in Lamplight. I earned my nickname fighting off a Mole Rat with a knife big as my arm.",
+      "index": "7"
+    },
+    {
+      "topic": "CCTownHistory1",
+      "topic_text": "What can you tell me about Canterbury Commons?",
+      "emotion": "Anger 25",
+      "response_text": "This whole place would fall apart if it weren't for Dom and me keeping anyone from causing too much trouble.",
+      "index": "9"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Anger 50",
+      "response_text": "What do you want? Can't you see I'm busy?",
+      "index": "11"
+    },
+    {
+      "topic": "MS02AboutSupers",
+      "topic_text": "Do you know anything about the AntAgonizer or the Mechanist?",
+      "emotion": "Anger 35",
+      "response_text": "I know Dom doesn't want me just killing them. He and the Mechanist used to be friends or something.{Angry and sick of them}",
+      "index": "13"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "CCGuardTalk2",
+      "topic_text": "CCGuardTalk2",
+      "emotion": "Anger 35",
+      "response_text": "Can't let our guard down, sir! That's when people cause trouble.",
+      "index": "15"
+    },
+    {
+      "topic": "GOODBYE",
+      "topic_text": "I guess I'll be going.",
+      "emotion": "Anger 25",
+      "response_text": "<grunts>{tough-sounding grunt}",
+      "index": "17"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Anger 50",
+      "response_text": "When you find those two costumed idiots, put a bullet in their heads for me.",
+      "index": "23"
+    }
+  ],
+  "combat": []
+}

@@ -1,0 +1,156 @@
+{
+  "name": "Violet",
+  "url": "/wiki/Violet",
+  "dialogue_name": "1EFiendViolet.txt",
+  "dialogue_url": "/wiki/1EFiendViolet.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000F56FD",
+  "ref_id": "000F570B",
+  "editor_id": "1EFiendViolet",
+  "location": "Violet and Violetta trailer compound",
+  "location_url": "/wiki/Violet_and_Violetta_trailer_compound",
+  "descriptions": [
+    "Violet is a high-ranking member of the Fiends, second to Motor-Runner, in the Mojave Wasteland in 2281.",
+    "Unlike other Fiend leaders such as Driver Nephi and Cook-Cook, Violet completely forgoes associating with any other members of her gang and is instead only accompanied by a pack of feral hounds, the most ferocious of which is Violetta."
+  ],
+  "race": "Human",
+  "gender": "Female",
+  "affiliation": "Fiends",
+  "role": "Fiend gang leaderSniperDog trainer",
+  "detailed_location": "Violet and Violetta trailer compound",
+  "voice_actor": "Katherine Pawlak",
+  "special": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 3,
+    "Intelligence": 3,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "mod_special_values": {
+    "Strength": 6,
+    "Perception": 6,
+    "Endurance": 4,
+    "Charisma": 3,
+    "Intelligence": 3,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "level": "12",
+  "tag_skills": [
+    {
+      "Guns:": "72"
+    },
+    {
+      "Melee Weap.:": "72"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "170"
+    },
+    {
+      "Dam. Threshold:": "5"
+    }
+  ],
+  "karma": "Evil",
+  "voice_type": "FemaleAdult01Default",
+  "geck_race": "AfricanAmericanRaider",
+  "topics": [],
+  "conversation": [
+    {
+      "topic": "1EExtraFiends1EFiendVioletTopic000",
+      "topic_text": "Yeah, hook me up!",
+      "emotion": "Neutral 50",
+      "response_text": "No! Ha ha! More for me!",
+      "index": "1"
+    },
+    {
+      "topic": "1EExtraFiends1EFiendVioletTopic001",
+      "topic_text": "I'll pass, thanks.",
+      "emotion": "Neutral 50",
+      "response_text": "Heh. Good. More for me.",
+      "index": "2"
+    },
+    {
+      "topic": "1EExtraFiends1EFiendVioletTopic002",
+      "topic_text": "Would you sell me one?",
+      "emotion": "Neutral 50",
+      "response_text": "Sell? Sell?! My dogs! What part don't you get? Mine! Lucky they don't eat you alive for that!",
+      "index": "3"
+    },
+    {
+      "topic": "1EExtraFiends1EFiendVioletTopic003",
+      "topic_text": "I'm sure they would. I'll just stand over here.",
+      "emotion": "Neutral 50",
+      "response_text": "Arf arf! Ha ha!",
+      "index": "4"
+    },
+    {
+      "topic": "1EExtraFiends1EFiendVioletTopic004",
+      "topic_text": "Nice doggies. Want a treat?",
+      "emotion": "Neutral 50",
+      "response_text": "Hey! No feeding my dogs!",
+      "index": "5"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "Whatcha want, freakshow?",
+      "index": "6"
+    },
+    {
+      "topic": "VioletDogs",
+      "topic_text": "What's the deal with all the dogs?",
+      "emotion": "Neutral 50",
+      "response_text": "Dogs? Good dogs! My dogs! Fiend dogs. Tear you up, arf arf arf! Ha ha!",
+      "index": "8"
+    },
+    {
+      "topic": "VioletDrugs",
+      "topic_text": "What exactly are you on?",
+      "emotion": "Neutral 50",
+      "response_text": "Heh. Good shit. Psycho. Top quality. You want? Might know a guy who knows a guy.",
+      "index": "9"
+    },
+    {
+      "topic": "VioletFiends",
+      "topic_text": "What do you know about Driver Nephi and Cook-Cook?",
+      "emotion": "Neutral 50",
+      "response_text": "Don't fuck with Fiends. Driver Nephi'll brain your skull in! Cook-Cook... don't even want to know what he'll do.",
+      "index": "10"
+    },
+    {
+      "topic": "VioletIntro",
+      "topic_text": "Who are you?",
+      "emotion": "Neutral 50",
+      "response_text": "Who wants to know? You here for my dogs? Can't have my dogs. Here for meat? Can't have my meat. Meat's for dogs.",
+      "index": "11"
+    },
+    {
+      "topic": "VioletMeat",
+      "topic_text": "Where do you get all this meat?",
+      "emotion": "Neutral 50",
+      "response_text": "Heh heh. Good meat, huh? Cat meat, rat meat, dog meat - maybe even *you* meat!",
+      "index": "13"
+    }
+  ],
+  "combat": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Piss off.",
+      "index": "14"
+    }
+  ]
+}

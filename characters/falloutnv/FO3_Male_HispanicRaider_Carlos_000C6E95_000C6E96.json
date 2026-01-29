@@ -1,0 +1,167 @@
+{
+  "name": "Carlos",
+  "url": "/wiki/Carlos_(Fallout_3)",
+  "dialogue_name": "WaterBeggar.txt",
+  "dialogue_url": "/wiki/WaterBeggar.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000C6E95",
+  "ref_id": "000C6E96",
+  "editor_id": "WaterBeggar02",
+  "location": "Outside town",
+  "location_url": null,
+  "descriptions": [
+    "Carlos is a homeless water beggar sitting across the bridge from Rivet City in Fallout 3. He is one of three beggars, the others being Micky outside Megaton and Willy outside Tenpenny Tower.",
+    "Carlos is a survivor of a super mutant abduction, who narrowly escaped winding up on a mutant bonfire. He made his way to Rivet City, but has been unable to enter the vessel and resigned himself to begging at the entry station. He was drinking the irradiated water from the Anacostia, but lately his body revolted against the radiation and he just throws dirty water right back up.",
+    "As a result, he is increasingly dehydrated, with all the effects to cognition and thinking that entails. His only hope is that a kindly stranger or water caravan passes by to Rivet City and takes pity on him."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "role": "Water beggar",
+  "detailed_location": "OutsideRivet City",
+  "voice_actor": "Jeff Baker",
+  "special": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 4,
+    "Intelligence": 4,
+    "Agility": 6,
+    "Luck": 4
+  },
+  "mod_special_values": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 4,
+    "Intelligence": 4,
+    "Agility": 7,
+    "Luck": 4
+  },
+  "level": "1",
+  "tag_skills": [
+    {
+      "Barter:": "27"
+    },
+    {
+      "Small Guns:": "31(33)"
+    },
+    {
+      "Unarmed:": "27(29)"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "16(21)"
+    },
+    {
+      "Critical Chance:": "4%"
+    },
+    {
+      "Unarmed Dam.:": "1.85"
+    },
+    {
+      "Poison Resist.:": "15%(20%)"
+    },
+    {
+      "Rad. Resist.:": "6%(8%)"
+    },
+    {
+      "Carry Weight:": "210"
+    },
+    {
+      "Damage Res.:": "1%"
+    }
+  ],
+  "karma": "Neutral",
+  "voice_type": "MaleAdult01DefaultDC",
+  "geck_race": "HispanicRaider",
+  "topics": [
+    {
+      "topic": "DLC03WaterBeggarGreetingGiveWater",
+      "topic_text": "I've got some Aqua Pura, if you want it.",
+      "emotion": "Neutral 50",
+      "response_text": "You mean... you don't want anything for it? I don't have any caps or anything...",
+      "index": "1"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "You've helped me so much, it seems wrong to ask, but can you spare any more water?",
+      "index": "6"
+    },
+    {
+      "topic": "WaterBeggarGreetingGiveWater",
+      "topic_text": "Here. Have this Purified Water.",
+      "emotion": "Neutral 50",
+      "response_text": "You mean... you don't want anything for it? I don't have any caps or anything...",
+      "index": "17"
+    },
+    {
+      "topic": "WaterBeggarGreetingGiveWaterNO",
+      "topic_text": "What, just give it to you? Hell no.",
+      "emotion": "Neutral 50",
+      "response_text": "I knew it was too good to be true... there are no good souls in the Wasteland.",
+      "index": "24"
+    },
+    {
+      "topic": "WaterBeggarGreetingGiveWaterYES",
+      "topic_text": "I insist, my friend. It's the least I can do to help.",
+      "emotion": "Happy 70",
+      "response_text": "Really? Thank you. You're the first person willing to actually give me any of that.",
+      "index": "28"
+    },
+    {
+      "topic": "WaterBeggarGreetingMegaton",
+      "topic_text": "What is this place? Some kind of city?",
+      "emotion": "Neutral 50",
+      "response_text": "It's Megaton. Have you been living in a hole or something? Everyone's heard of Megaton.",
+      "index": "33"
+    },
+    {
+      "topic": "WaterBeggarGreetingRefuse",
+      "topic_text": "No. Find your own water.",
+      "emotion": "Neutral 50",
+      "response_text": "Oh... I guess that's understandable. Got to watch out for numero uno and all.",
+      "index": "35"
+    },
+    {
+      "topic": "WaterBeggarGreetingWhatAreYouDoing",
+      "topic_text": "Will any water do?",
+      "emotion": "Neutral 50",
+      "response_text": "I've been drinking this irradiated shit and... I can't do it. I just throw it up now. I need purified water... please...{Pathetic.}",
+      "index": "39"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "I have to go now.",
+      "emotion": "Neutral 50",
+      "response_text": "Please... help me.",
+      "index": "40"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Neutral 50",
+      "response_text": "Please... I'm dying. I need water...",
+      "index": "42"
+    },
+    {
+      "topic": "IdleChatter",
+      "topic_text": "Idle Chatter",
+      "emotion": "Neutral 50",
+      "response_text": "<hacking cough>{A pathetic dying cough.}",
+      "index": "45"
+    }
+  ],
+  "combat": []
+}

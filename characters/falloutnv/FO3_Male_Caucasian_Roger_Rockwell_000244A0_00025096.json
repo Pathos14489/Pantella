@@ -1,0 +1,215 @@
+{
+  "name": "Roger Rockwell",
+  "url": "/wiki/Roger_Rockwell",
+  "dialogue_name": "RogerRockwell.txt",
+  "dialogue_url": "/wiki/RogerRockwell.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000244A0",
+  "ref_id": "00025096",
+  "editor_id": "RogerRockwell",
+  "location": "Rockwell residence",
+  "location_url": "/wiki/Rockwell_residence",
+  "descriptions": [
+    "Roger Rockwell is one of the inhabitants of Vault 112 trapped within the Tranquility Lane virtual reality simulation in Fallout 3.",
+    "Resident 226 of Vault 112,",
+    "While Roger eventually managed to convince Janet that nothing was going on between them, few aside from Janet believe it.",
+    "He plays it off as just \"women's troubles,\"",
+    "Rockwell's vitals indicate a state of elevated stress: 85 beats per minute, 140/90 mmHg of blood pressure, 98.7°F/37.05°C temperature, and 22 breaths per minute, similar to Timmy Neusbaum and Martha Simpson.",
+    "When looking at resident IDs, Roger Rockwell and Martha Simpson have adjacent IDs (226 and 227 respectively), while Janet Simpson has the ID 115. As such, it's entirely possible that Rockwell and Simpson were originally a couple, rather than Janet."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Vault 112",
+  "role": "Resident",
+  "detailed_location": "Rockwell residence,Tranquility Lane",
+  "voice_actor": "Jeff Baker",
+  "special": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 5,
+    "Intelligence": 5,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "mod_special_values": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 5,
+    "Intelligence": 5,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "misc_skills": [
+    {
+      "Hit Points:": "30"
+    },
+    {
+      "Critical Chance:": "5%"
+    },
+    {
+      "Unarmed Dam.:": "0.75"
+    },
+    {
+      "Poison Resist.:": "20%"
+    },
+    {
+      "Rad. Resist.:": "8%"
+    },
+    {
+      "Carry Weight:": "200"
+    },
+    {
+      "Damage Res.:": "3%"
+    }
+  ],
+  "karma": "Good",
+  "voice_type": "MaleAdult01DefaultDC",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Sad 50",
+      "response_text": "How did it come to this? I just don't understand...",
+      "index": "1"
+    },
+    {
+      "topic": "MQ04ResidentChitChat1",
+      "topic_text": "Nice day, isn't it?",
+      "emotion": "Neutral 50",
+      "response_text": "You won't find a day like this anywhere else!",
+      "index": "4"
+    },
+    {
+      "topic": "MQ04ResidentChitChat2",
+      "topic_text": "What can you tell me about the neighborhood?",
+      "emotion": "Neutral 50",
+      "response_text": "Heck of a place to live. Janet and I... well, we're... quite happy here.",
+      "index": "5"
+    },
+    {
+      "topic": "MQ04ResidentDad",
+      "topic_text": "Have you seen my dad?",
+      "emotion": "Neutral 50",
+      "response_text": "He disappeared on you, huh? Don't worry, I'm sure you'll find him soon.",
+      "index": "6"
+    },
+    {
+      "topic": "MQ04ResidentRockwellsCan you tell me anything about the Rockwells' marriage?",
+      "topic_text": "Anything you want to tell me about your marriage?",
+      "emotion": "Anger 20",
+      "response_text": "Now see here. That's not anything for you to be asking about. Our marriage is our business, and it's private.{annoyed}",
+      "index": "7"
+    },
+    {
+      "topic": "MQ04ResidentSimulationThis is a pretty convincing simulation...",
+      "topic_text": "None of this is real. It's all some crazy experiment.",
+      "emotion": "Happy 20",
+      "response_text": "Sure, sport. Whatever you say! Ha, ha.{amused, dismissive}",
+      "index": "9"
+    },
+    {
+      "topic": "MQ04RockwellsInformation",
+      "topic_text": "Betty wants me to break up your marriage.",
+      "emotion": "Surprise 50",
+      "response_text": "Now that's not funny. Not one bit.",
+      "index": "10"
+    },
+    {
+      "topic": "MQ04RogerBadNewsAboutJanet",
+      "topic_text": "Bad news, Roger. Your wife is a psychopath.",
+      "emotion": "Surprise 20",
+      "response_text": "What? What are you talking about?{shrugging it off as a joke}",
+      "index": "11"
+    },
+    {
+      "topic": "MQ04RogerBloodyRollingPin",
+      "topic_text": "Look at this. It's her rolling pin, covered in blood. Martha's blood.",
+      "emotion": "Surprise 50",
+      "response_text": "That's... that's crazy!{incredulous}",
+      "index": "12"
+    },
+    {
+      "topic": "MQ04RogerJanetSnapped",
+      "topic_text": "Janet snapped. She killed Martha in cold blood. Look at this rolling pin.",
+      "emotion": "Fear 50",
+      "response_text": "Oh my God, what is that? Is that blood? And... brains?{horrified}",
+      "index": "14"
+    },
+    {
+      "topic": "MQ04RogerMarthaDead",
+      "topic_text": "Martha Simpson is dead, and Janet killed her! Look, here's her rolling pin...",
+      "emotion": "Surprise 50",
+      "response_text": "But... Janet would never...",
+      "index": "16"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "I have to go now.",
+      "emotion": "Neutral 50",
+      "response_text": "Right. Sure, thanks for asking. Well, I'll see you later.{embarrassed, trying to be friendly}",
+      "index": "18"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Neutral 50",
+      "response_text": "Janet... You think maybe we should have a talk about children?{hesitant}",
+      "index": "20"
+    },
+    {
+      "topic": "MQ04JanetConfrontRogerKissingConv",
+      "topic_text": "MQ04JanetConfrontRogerKissingConv",
+      "emotion": "Neutral 50",
+      "response_text": "Who told you that? They're lying, I swear it!",
+      "index": "26"
+    },
+    {
+      "topic": "MQ04JanetConfrontRogerUndiesConv",
+      "topic_text": "MQ04JanetConfrontRogerUndies",
+      "emotion": "Anger 50",
+      "response_text": "I have no idea what you're talking about Janet. Just calm down, and let's work this out.",
+      "index": "29"
+    },
+    {
+      "topic": "MQ04JanetConfrontRogerUndiesWearing",
+      "topic_text": "MQ04JanetConfrontRogerUndiesWearing",
+      "emotion": "Anger 50",
+      "response_text": "What's wrong with being in the basement? What the hell is going on?",
+      "index": "32"
+    },
+    {
+      "topic": "MQ04RogerConfrontJanetRPin",
+      "topic_text": "MQ04RogerConfrontJanetRPin",
+      "emotion": "Fear 50",
+      "response_text": "You should be in a sanitarium, or a prison! You're out of your damned mind! You just stay away from me, you hear me?{frightened}",
+      "index": "35"
+    },
+    {
+      "topic": "TranqLaneTalk2",
+      "topic_text": "TranqLaneTalk2",
+      "emotion": "Surprise 10",
+      "response_text": "Yes, of course. I'm fine, Janet's fine. Everything is just fine. And... And you?{defensive, trying to be friendly}",
+      "index": "39"
+    },
+    {
+      "topic": "TranqLaneTalk5",
+      "topic_text": "TranqLaneTalk5",
+      "emotion": "Neutral 50",
+      "response_text": "Okay, sorry for bringing it up.{dejected}",
+      "index": "41"
+    }
+  ],
+  "combat": []
+}

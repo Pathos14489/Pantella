@@ -1,0 +1,174 @@
+{
+  "name": "Keene",
+  "url": "/wiki/Keene",
+  "dialogue_name": "JacobstownKeene.txt",
+  "dialogue_url": "/wiki/JacobstownKeene.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "0013F70D",
+  "ref_id": "0013F70E",
+  "editor_id": "JacobstownKeene",
+  "location": "Jacobstown lodge",
+  "location_url": "/wiki/Jacobstown_lodge",
+  "descriptions": [
+    "Keene is a nightkin inhabitant of Jacobstown in Fallout: New Vegas.",
+    "Keene is an influential nightkin in Jacobstown who has a pull on other nightkin, attracting others to the town and keeping the ones already there from leaving. Marcus claims that Keene is smart, charismatic, and saner than most other nightkin, but also very impatient.\nSpeaking with him will reveal his impatient and highly irritable nature and a dislike for humans in general. Eventually, his impatience towards Doctor Henry's cure for nightkin schizophrenia causes him to attempt to take the Stealth Boy Mk. II by force so that the nightkin can see how it works and upgrade all Stealth Boys they find as they roam the Mojave.",
+    "Keene actively shows displeasure when speaking with the Courier due to the fact that he hates being visible, as most nightkin do."
+  ],
+  "race": "Nightkin",
+  "affiliation": "Unity(formerly)",
+  "role": "Jacobstown's nightkin leader",
+  "detailed_location": "Jacobstown",
+  "voice_actor": "Marc Graue",
+  "special": {
+    "Strength": 9,
+    "Perception": 3,
+    "Endurance": 8,
+    "Charisma": 5,
+    "Intelligence": 3,
+    "Agility": 10,
+    "Luck": 6
+  },
+  "level": "6",
+  "tag_skills": [],
+  "misc_skills": [
+    {
+      "Hit Points:": "175"
+    },
+    {
+      "Critical Chance:": "6%"
+    },
+    {
+      "Unarmed Dam.:": "4.5"
+    },
+    {
+      "Poison Resist.:": "35%"
+    },
+    {
+      "Rad. Resist.:": "14%"
+    },
+    {
+      "Carry Weight:": "240"
+    },
+    {
+      "Damage Res.:": "15%"
+    }
+  ],
+  "karma": "Neutral",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Happy 5",
+      "response_text": "My request is perfectly reasonable. Give us the Stealth Boy specs and there will be no need for us to splatter the room with your insides.",
+      "index": "1"
+    },
+    {
+      "topic": "NightkinToDoctorHenry",
+      "topic_text": "NightkinToDoctorHenry",
+      "emotion": "Anger 5",
+      "response_text": "Well, well. Congratulations on getting the Mark II prototype functional, doctor. Now just hand it over and we'll be on our way.",
+      "index": "6"
+    },
+    {
+      "topic": "VMS41JacobstownKeeneTopic001< Speech 80 >",
+      "topic_text": "What you do in the wasteland affects all the mutants here, but you didn't think about that, did you?",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] No, I didn't, not until now anyway. Very well, human. You've made your point, and I withdraw my... request.",
+      "index": "7"
+    },
+    {
+      "topic": "VMS41JacobstownKeeneTopic002",
+      "topic_text": "What are you planning to do once you have the specs?",
+      "emotion": "Neutral 50",
+      "response_text": "There are caches of Stealth Boys out there. With the Mark II in hand, it shouldn't be difficult to upgrade every one of them.",
+      "index": "9"
+    },
+    {
+      "topic": "VMS41JacobstownKeeneTopic003",
+      "topic_text": "The Mark IIs are even more dangerous than standard Stealth Boys.",
+      "emotion": "Neutral 50",
+      "response_text": "Our lives, our decision to make. We're tired of sitting around in Jacobstown waiting for a cure.",
+      "index": "10"
+    },
+    {
+      "topic": "VMS41JacobstownKeeneTopic004",
+      "topic_text": "Doctor Henry, do as he asks.",
+      "emotion": "Happy 50",
+      "response_text": "Good, good. Smart move, human.",
+      "index": "11"
+    },
+    {
+      "topic": "VMS41JacobstownKeeneTopic005",
+      "topic_text": "You're not getting the Mark II specs.",
+      "emotion": "Anger 100",
+      "response_text": "{snapping into berserk mode}I knew humans could never be reasonable! I knew it! Stupid, stupid humans! I'll kill you!",
+      "index": "12"
+    },
+    {
+      "topic": "vDialogueJacobstownJacobstownKeeneTopic000",
+      "topic_text": "Why are the Nightkin here in Jacobstown?",
+      "emotion": "Neutral 50",
+      "response_text": "{no cure}The Stealth Boys we use have cumulative, adverse effects on our minds. Jacobstown was supposed to be a sanctuary, a place to find a cure.",
+      "index": "13"
+    },
+    {
+      "topic": "vDialogueJacobstownJacobstownKeeneTopic002",
+      "topic_text": "Who's the other human you mentioned?",
+      "emotion": "Neutral 50",
+      "response_text": "Doctor Henry. He's one of you - go speak with him instead of me.",
+      "index": "16"
+    },
+    {
+      "topic": "vDialogueJacobstownJacobstownKeeneTopic003",
+      "topic_text": "What do you do here?",
+      "emotion": "Neutral 50",
+      "response_text": "I represent the Nightkin.{smug}Marcus may lead this town, but the Nightkin listen to what I have to say.",
+      "index": "17"
+    },
+    {
+      "topic": "vDialogueJacobstownJacobstownKeeneTopic004",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Finally.",
+      "index": "19"
+    },
+    {
+      "topic": "vDialogueJacobstownJacobstownNightkinLeaderTopic007",
+      "topic_text": "Do you have a problem with humans?",
+      "emotion": "Neutral 50",
+      "response_text": "Humans are always staring at things. We Nightkin don't like being stared at. Is is... uncomfortable.",
+      "index": "20"
+    },
+    {
+      "topic": "vDialogueJacobstownJacobstownNightkinLeaderTopic008",
+      "topic_text": "How does that make you different from some humans?",
+      "emotion": "Neutral 50",
+      "response_text": "It is different! Right now I'm trying very hard to remain civil, and you're not making it easy with your incessant questions!",
+      "index": "21"
+    },
+    {
+      "topic": "vDialogueJacobstownJacobstownNightkinLeaderTopic009",
+      "topic_text": "[Stare silently at him.]",
+      "emotion": "Neutral 50",
+      "response_text": "Bah! Humans.",
+      "index": "22"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Finally.",
+      "index": "23"
+    }
+  ],
+  "combat": []
+}

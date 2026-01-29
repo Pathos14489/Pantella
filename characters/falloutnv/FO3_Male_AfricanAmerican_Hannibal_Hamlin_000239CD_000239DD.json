@@ -1,0 +1,434 @@
+{
+  "name": "Hannibal Hamlin",
+  "url": "/wiki/Hannibal_Hamlin",
+  "dialogue_name": "HannibalHamlin.txt",
+  "dialogue_url": "/wiki/HannibalHamlin.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000239CD",
+  "ref_id": "000239DD",
+  "editor_id": "HannibalHamlin",
+  "location": "Temple of the Union,Lincoln Memorial",
+  "location_url": "/wiki/Temple_of_the_Union",
+  "descriptions": [
+    "Hannibal Hamlin is the leader of the Temple of the Union in the year 2277. An escaped slave from Paradise Falls, he dreams of creating a safe haven for runaway slaves in the Lincoln Memorial.",
+    "Ever since he was 14 years old, he was a slave. However, six years ago, he managed to escape from his master who has been hunting him since. He now leads runaway slaves, hoping to settle safely at the Lincoln Memorial. At the Temple of the Union, he lives alongside Caleb Smith, Bill Seward, Simone Cameron, Alejandra Torres and a dog named Four Score.",
+    "He attempts to collect as many artifacts relating to Abraham Lincoln as possible, referring to him as the Great Emancipator.",
+    "Now we are engaged in a great civil war, testing whether that nation or any nation so conceived and so dedicated, can long endure. We are met on a great battle-field of that war. We have come to dedicate a portion of that field as a final resting place for those who here gave their lives that that nation might live. It is altogether fitting and proper that we should do this.",
+    "Hannibal Hamlin appears in Fallout 3, Fallout Shelter Online and is mentioned in Fallout Shelter."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Abolitionists[Non-game 2]",
+  "role": "Slave (formerly)Abolitionist leader",
+  "detailed_location": "Temple of the UnionLincoln Memorial(optional)",
+  "voice_actor": "Jeff Baker",
+  "special": {
+    "Strength": 5,
+    "Perception": 6,
+    "Endurance": 6,
+    "Charisma": 5,
+    "Intelligence": 5,
+    "Agility": 7,
+    "Luck": 5
+  },
+  "karma": "Good",
+  "voice_type": "MaleAdult01DefaultDC",
+  "geck_race": "AfricanAmerican",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Fear 50",
+      "response_text": "Those Slavers are all dead. We must stay vigilant. There may be more of them.",
+      "index": "1"
+    },
+    {
+      "topic": "MS06Agree",
+      "topic_text": "I solemnly swear to protect the Temple of the Union.",
+      "emotion": "Happy 50",
+      "response_text": "Welcome, brother, to the Temple of the Union!",
+      "index": "28"
+    },
+    {
+      "topic": "MS06AttackAnyway",
+      "topic_text": "You're going to let a bunch of Slavers scare you? Attack them!",
+      "emotion": "Anger 50",
+      "response_text": "You're right. They are all cowards at heart.",
+      "index": "34"
+    },
+    {
+      "topic": "MS06AttackNow",
+      "topic_text": "I've done what I can. We should attack now.",
+      "emotion": "Happy 50",
+      "response_text": "Thank you, friend. I'll lead the charge.",
+      "index": "35"
+    },
+    {
+      "topic": "MS06BadIdea",
+      "topic_text": "Why don't you just kill them and take all their stuff? Everyone else does.",
+      "emotion": "Disgust 50",
+      "response_text": "They come here with nothing but their dignity. Would you have me take that from them too?",
+      "index": "36"
+    },
+    {
+      "topic": "MS06BetraySlavers",
+      "topic_text": "I found Slavers guarding the Memorial. They're all dead now.",
+      "emotion": "Surprise 50",
+      "response_text": "What!? They must have found out our plans somehow.",
+      "index": "38"
+    },
+    {
+      "topic": "MS06Boring",
+      "topic_text": "Is this going to be a long story? 'Cause I've got things to do...",
+      "emotion": "Disgust 50",
+      "response_text": "I shouldn't have expected anyone that hasn't been a slave to give a damn.",
+      "index": "46"
+    },
+    {
+      "topic": "MS06BuyActionFigure",
+      "topic_text": "What will you give me for this toy of Lincoln?",
+      "emotion": "Sad 50",
+      "response_text": "It's a small thing, but I'll give you 10 caps for it.",
+      "index": "47"
+    },
+    {
+      "topic": "MS06BuyDraftPosterHow much for this war poster?",
+      "topic_text": "I've got this old war poster from Lincoln's Civil War. Want to buy it?",
+      "emotion": "Happy 50",
+      "response_text": "The words of the great Lincoln, calling his people to war! I can spare 75 caps for it.",
+      "index": "48"
+    },
+    {
+      "topic": "MS06BuyEmancipation",
+      "topic_text": "I have a copy of the Emancipation Proclamation to sell.",
+      "emotion": "Surprise 50",
+      "response_text": "Truly? I can't believe it! The document that freed the slaves. I'll pay you 150 caps for it.",
+      "index": "49"
+    },
+    {
+      "topic": "MS06BuyGettysburgAddressAre you interested in buying the Gettysburg Address?",
+      "topic_text": "I found the original Gettysburg Address. Want to buy it?",
+      "emotion": "Happy 50",
+      "response_text": "Lincoln's most inspirational speech! What a marvelous find. I'll pay you 75 caps for it.",
+      "index": "50"
+    },
+    {
+      "topic": "MS06BuyHatAre you interested in Lincoln's hat?",
+      "topic_text": "I found one of Lincoln's old hats. Care to buy it?",
+      "emotion": "Disgust 50",
+      "response_text": "What a ridiculous hat. I'll pay you 25 caps for it.",
+      "index": "51"
+    },
+    {
+      "topic": "MS06BuyLincolnDiaryI found Lincoln's diary.",
+      "topic_text": "I have Lincoln's diary. I might be willing to sell it.",
+      "emotion": "Surprise 50",
+      "response_text": "The words of the great man himself? In his own handwriting? I'll pay 100 caps for it.",
+      "index": "52"
+    },
+    {
+      "topic": "MS06BuyNo",
+      "topic_text": "I'd rather keep it.",
+      "emotion": "Sad 50",
+      "response_text": "If they are lost, it will be a great tragedy.",
+      "index": "53"
+    },
+    {
+      "topic": "MS06BuyPennies",
+      "topic_text": "I have a collection of pennies with Lincoln's face on them.",
+      "emotion": "Neutral 50",
+      "response_text": "I suppose these have some small value to the faithful. I'll give you 15 caps for it.",
+      "index": "55"
+    },
+    {
+      "topic": "MS06BuyRecording",
+      "topic_text": "Are you interested in buying a recording of Lincoln's voice?",
+      "emotion": "Surprise 50",
+      "response_text": "His real voice? How is that possible? I must have it.",
+      "index": "56"
+    },
+    {
+      "topic": "MS06BuyRifle",
+      "topic_text": "Would you like to make an offer on Lincoln's Rifle?",
+      "emotion": "Surprise 50",
+      "response_text": "His actual rifle? Such a priceless artifact!",
+      "index": "58"
+    },
+    {
+      "topic": "MS06BuyWantedPoster",
+      "topic_text": "I've got a wanted poster for Lincoln's assassin.",
+      "emotion": "Sad 50",
+      "response_text": "To think that even the great Lincoln was felled by an assassin. This is a reminder to all that we must remain vigilant.",
+      "index": "60"
+    },
+    {
+      "topic": "MS06BuyYes",
+      "topic_text": "It's a deal.",
+      "emotion": "Happy 50",
+      "response_text": "We will enshrine this right away.",
+      "index": "62"
+    },
+    {
+      "topic": "MS06CalebsNeedsHannibal says you need something?",
+      "topic_text": "What is it that Caleb needs?",
+      "emotion": "Neutral 50",
+      "response_text": "He was a stone mason. It will fall to him to restore the Memorial as best he can.",
+      "index": "63"
+    },
+    {
+      "topic": "MS06Disagree",
+      "topic_text": "Protect escaped slaves? You've got to be kidding. You're worth money to me!",
+      "emotion": "Anger 50",
+      "response_text": "You leave me no choice.",
+      "index": "65"
+    },
+    {
+      "topic": "MS06HeardEnough",
+      "topic_text": "That's a noble cause, but can I ask you about something else?",
+      "emotion": "Surprise 50",
+      "response_text": "What?",
+      "index": "66"
+    },
+    {
+      "topic": "MS06HowToHelp",
+      "topic_text": "Don't worry about the Super Mutants. Slavers are in control of the Memorial.",
+      "emotion": "Fear 50",
+      "response_text": "Slavers? Dear God. They must know about our plans.",
+      "index": "67"
+    },
+    {
+      "topic": "MS06LetMeGoOrElse",
+      "topic_text": "Let me go, or I swear to God, I'll rip your fucking throat out!",
+      "emotion": "Fear 50",
+      "response_text": "I don't want to get in a fight with you.",
+      "index": "75"
+    },
+    {
+      "topic": "MS06LincolnsHead",
+      "topic_text": "What is that stone head?",
+      "emotion": "Disgust 50",
+      "response_text": "Haven't you been listening? That's Abraham Lincoln, the Great Emancipator.",
+      "index": "78"
+    },
+    {
+      "topic": "MS06MoreInfo",
+      "topic_text": "If I had known this before, I wouldn't have come in. Let me go!",
+      "emotion": "Anger 50",
+      "response_text": "We can't risk that. Just as we couldn't risk telling you who we were before letting you in.",
+      "index": "80"
+    },
+    {
+      "topic": "MS06MoreTime",
+      "topic_text": "I'll need to think about that.",
+      "emotion": "Sad 50",
+      "response_text": "When you are ready, let me know.",
+      "index": "82"
+    },
+    {
+      "topic": "MS06Nevermind",
+      "topic_text": "Nevermind.",
+      "emotion": "Neutral 50",
+      "response_text": "Let's go.",
+      "index": "84"
+    },
+    {
+      "topic": "MS06NoChance",
+      "topic_text": "The Slavers are too tough. You haven't got a chance.",
+      "emotion": "Surprise 50",
+      "response_text": "So we should give up?",
+      "index": "85"
+    },
+    {
+      "topic": "MS06NotInterested",
+      "topic_text": "Yeah... that's a problem. Well, I'd better get going.",
+      "emotion": "Disgust 50",
+      "response_text": "So you are a coward. I thought so.",
+      "index": "87"
+    },
+    {
+      "topic": "MS06ShiningBeaconJoke",
+      "topic_text": "Wouldn't a beacon just attract the Slavers?",
+      "emotion": "Disgust 50",
+      "response_text": "You make jokes when the lives and freedom of our fellow men are at stake!",
+      "index": "88"
+    },
+    {
+      "topic": "MS06SlaveStory",
+      "topic_text": "So, you used to be a slave?",
+      "emotion": "Sad 50",
+      "response_text": "For 23 years I was a slave, ever since I was 14.",
+      "index": "90"
+    },
+    {
+      "topic": "MS06StupidIdea",
+      "topic_text": "That's a really stupid idea.",
+      "emotion": "Anger 50",
+      "response_text": "You wouldn't say that if you spent even a single night in shackles.",
+      "index": "94"
+    },
+    {
+      "topic": "MS06SupermutantsDead",
+      "topic_text": "Hey, I've been there! Those Super Mutants are all dead. It's safe now.",
+      "emotion": "Surprise 50",
+      "response_text": "That is great news indeed!",
+      "index": "96"
+    },
+    {
+      "topic": "MS06TempleUnion",
+      "topic_text": "What are a bunch of escaped slaves doing holed up here?",
+      "emotion": "Happy 50",
+      "response_text": "We are trying to make a safe haven for all runaway slaves.",
+      "index": "99"
+    },
+    {
+      "topic": "MS06WaitHere",
+      "topic_text": "You wait here. Let me investigate first.",
+      "emotion": "Fear 50",
+      "response_text": "They look heavily fortified. They knew we were coming. I'm afraid our only choice is to drive them out.",
+      "index": "101"
+    },
+    {
+      "topic": "MS06WhereIsThisPlace",
+      "topic_text": "Sounds dangerous. Where is this place?",
+      "emotion": "Fear 50",
+      "response_text": "I want to move all my people to the Memorial site for the great Abraham Lincoln, but I need to know if it's safe.",
+      "index": "106"
+    },
+    {
+      "topic": "MS06WhyNotKeepThem",
+      "topic_text": "Why don't you let them stay here?",
+      "emotion": "Sad 50",
+      "response_text": "We don't have enough room. There's not enough water or food here.",
+      "index": "108"
+    },
+    {
+      "topic": "MS06YesActionFigure",
+      "topic_text": "Not for that price. I want more.",
+      "emotion": "Happy 50",
+      "response_text": "You take when we have so little. So be it. We will enshrine this right away.",
+      "index": "110"
+    },
+    {
+      "topic": "MS06YesDraftPoster",
+      "topic_text": "This poster is worth more than that.",
+      "emotion": "Happy 50",
+      "response_text": "Deal. We'll find a good place to hang this.",
+      "index": "111"
+    },
+    {
+      "topic": "MS06YesEmancipation",
+      "topic_text": "That price is an insult. You'll have to do better than that.",
+      "emotion": "Disgust 50",
+      "response_text": "Some day your greed will be your downfall. But today I'll pay your price.",
+      "index": "112"
+    },
+    {
+      "topic": "MS06YesGettysburgAddress",
+      "topic_text": "You can do better than that. This is the Gettysburg Address we're talking about.",
+      "emotion": "Happy 50",
+      "response_text": "Deal. We'll find a good place to display this.",
+      "index": "114"
+    },
+    {
+      "topic": "MS06YesHat",
+      "topic_text": "For Lincoln's own hat? Come on. You can do better than that.",
+      "emotion": "Happy 50",
+      "response_text": "You take when we have so little. So be it. We will enshrine this right away.",
+      "index": "115"
+    },
+    {
+      "topic": "MS06YesLincolnDiary",
+      "topic_text": "Not enough. Make me a better offer.",
+      "emotion": "Happy 50",
+      "response_text": "I suppose I can afford that.",
+      "index": "116"
+    },
+    {
+      "topic": "MS06YesPennies",
+      "topic_text": "You'll have to do better than that.",
+      "emotion": "Happy 50",
+      "response_text": "It's not so much more. You have a deal.",
+      "index": "117"
+    },
+    {
+      "topic": "MS06YesRecording",
+      "topic_text": "That price is an insult. You can do better.",
+      "emotion": "Sad 50",
+      "response_text": "You're right. Here, take your pay.",
+      "index": "118"
+    },
+    {
+      "topic": "MS06YesRifle",
+      "topic_text": "You're kidding, right? It's worth twice that.",
+      "emotion": "Sad 50",
+      "response_text": "You're right. I shouldn't quibble over a few extra caps.",
+      "index": "120"
+    },
+    {
+      "topic": "MS06YesWantedPoster",
+      "topic_text": "No way. I need a lot more than that.",
+      "emotion": "Happy 50",
+      "response_text": "It's worth it. We'll hang this where everyone can see it.",
+      "index": "122"
+    },
+    {
+      "topic": "SpeechChallengeFailure",
+      "topic_text": "SpeechChallengeFailure",
+      "emotion": "Sad 50",
+      "response_text": "We're too poor for that.",
+      "index": "123"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "Thank you, Hannibal. I'd better get going.",
+      "emotion": "Happy 50",
+      "response_text": "May the spirit of the great Lincoln protect you.",
+      "index": "124"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Surprise 50",
+      "response_text": "You don't look like a runaway.",
+      "index": "131"
+    },
+    {
+      "topic": "MS06GettysburgAddress",
+      "topic_text": "MS06GettysburgAddress",
+      "emotion": "Happy 50",
+      "response_text": "Fourscore and seven years ago our fathers brought forth on this continent, a new nation,",
+      "index": "139"
+    },
+    {
+      "topic": "MS06HannibalSpeech",
+      "topic_text": "MS06HannibalSpeech",
+      "emotion": "Neutral 50",
+      "response_text": "Let me tell you the story of Abraham Lincoln.",
+      "index": "154"
+    },
+    {
+      "topic": "MS06PackageEnd",
+      "topic_text": "MS06PackageEnd",
+      "emotion": "Fear 50",
+      "response_text": "Looks safe out there.",
+      "index": "166"
+    },
+    {
+      "topic": "MS06PackageStart",
+      "topic_text": "MS06PackageStart",
+      "emotion": "Neutral 50",
+      "response_text": "Time to eat. I have to keep my energy up.",
+      "index": "170"
+    }
+  ],
+  "combat": []
+}

@@ -1,0 +1,217 @@
+{
+  "name": "Old Lady Dithers",
+  "url": "/wiki/Old_Lady_Dithers",
+  "dialogue_name": "OldLadyDithers.txt",
+  "dialogue_url": "/wiki/OldLadyDithers.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000244A2",
+  "ref_id": "0002508F",
+  "editor_id": "OldLadyDithers",
+  "location": "Dithers residence",
+  "location_url": "/wiki/Dithers_residence",
+  "descriptions": [
+    "T. \"Old Lady\" Dithers is one of the inhabitants of Vault 112 and part of the Tranquility Lane virtual reality simulation in 2277.",
+    "Old Lady Dithers is a inhabitant of Vault 112 and, like the other Vault Dwellers, is trapped in the Tranquility Lane simulation and subject to Stanislaus Braun's whims. Unlike the others, she is aware of what Braun is doing and tries to alert the others, who are dismissive of her. The terminal attached to her Tranquility lounger in Vault 112 notes that several readouts show anomalous readings as follows:",
+    "DISPLAY RESIDENT STATUS",
+    "DISPLAY RESIDENT STRESS LEVEL"
+  ],
+  "race": "Human",
+  "gender": "Female",
+  "affiliation": "Vault 112",
+  "role": "Resident of Tranquility Lane",
+  "detailed_location": "Dithers residence,Tranquility Lane",
+  "voice_actor": "Diana Sowle",
+  "special": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 5,
+    "Intelligence": 4,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "mod_special_values": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 5,
+    "Intelligence": 4,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "level": "0",
+  "tag_skills": [
+    {
+      "Barter:": "25"
+    },
+    {
+      "Medicine:": "23"
+    },
+    {
+      "Melee Weap.:": "27"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "25"
+    },
+    {
+      "Damage Res.:": "3%"
+    }
+  ],
+  "karma": "Good",
+  "voice_type": "FemaleOld01DC",
+  "geck_race": "AfricanAmericanOldAged",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "You shouldn't be here, little one.",
+      "index": "1"
+    },
+    {
+      "topic": "MQ04Dithers1Crazy",
+      "topic_text": "Get away from me, you crazy old bat.",
+      "emotion": "Neutral 50",
+      "response_text": "You're the only one who can end it. You must end it, don't you see? You're the only one who can disable the Failsafe!",
+      "index": "6"
+    },
+    {
+      "topic": "MQ04Dithers1OfCourseItsReal",
+      "topic_text": "Finally, someone who knows what's going on! How do I get out of here?",
+      "emotion": "Neutral 50",
+      "response_text": "We're not really here. We're not really talking. It's all made-up, make-believe. We're sleeping, dreaming.",
+      "index": "7"
+    },
+    {
+      "topic": "MQ04Dithers1WhatTalkingAbout",
+      "topic_text": "What are you talking about? You're not making any sense.",
+      "emotion": "Neutral 50",
+      "response_text": "This. All this, it's all fake! Made-up, a dream world. Only the dream never ends. I want it to end, for all our sakes.",
+      "index": "9"
+    },
+    {
+      "topic": "MQ04Dithers2CrazyFollowUp",
+      "topic_text": "I'm serious. Get the hell away from me.",
+      "emotion": "Neutral 50",
+      "response_text": "You need to know the truth, otherwise he'll suck you in just like all the others. Beware!",
+      "index": "11"
+    },
+    {
+      "topic": "MQ04Dithers2CrazyGetAway",
+      "topic_text": "You're crazy. Get away from me.",
+      "emotion": "Neutral 50",
+      "response_text": "You can't fool me. You know I'm right... You know none of this is real.",
+      "index": "12"
+    },
+    {
+      "topic": "MQ04Dithers2WhatFailsafe",
+      "topic_text": "What Failsafe? What the hell are you talking about?",
+      "emotion": "Neutral 50",
+      "response_text": "It's in the abandoned house. He doesn't want us going in there, because he's afraid we might find it.",
+      "index": "13"
+    },
+    {
+      "topic": "MQ04Dithers2WhoTalkingAbout",
+      "topic_text": "Who are you talking about?",
+      "emotion": "Neutral 50",
+      "response_text": "He calls himself Betty now, but he's still the same. He can put on a new face all he likes, but underneath he's still evil.{full of contempt; very intense, slightly crazy}",
+      "index": "15"
+    },
+    {
+      "topic": "MQ04Dithers2WhyNoOneElse",
+      "topic_text": "How come you're the only one who seems to know this?",
+      "emotion": "Fear 50",
+      "response_text": "Don't know. Can't sleep sometimes... Hear voices... My own skin doesn't feel right. None of this is right. You've got to believe me!",
+      "index": "17"
+    },
+    {
+      "topic": "MQ04Dithers3LeaveMeAlone",
+      "topic_text": "Just leave me alone. I'm busy.",
+      "emotion": "Fear 50",
+      "response_text": "I'm telling you, this can all end if you find it...",
+      "index": "19"
+    },
+    {
+      "topic": "MQ04Dithers3WheresFailsafe",
+      "topic_text": "Where did you say the Failsafe was?",
+      "emotion": "Neutral 50",
+      "response_text": "The abandoned house. Keeps that one to himself, he does. That's where it is. That's why he doesn't want us in there.",
+      "index": "20"
+    },
+    {
+      "topic": "MQ04Dithers3WorkingOnIt",
+      "topic_text": "Sure, sure. I'm working on it. Really.",
+      "emotion": "Neutral 50",
+      "response_text": "You have to find it. It's the only way any of us can truly rest...",
+      "index": "21"
+    },
+    {
+      "topic": "MQ04DithersCantFindIt",
+      "topic_text": "Um... I went into the abandoned house, but I didn't see anything.",
+      "emotion": "Neutral 50",
+      "response_text": "Did you look? Did you really look? You can't just look with your eyes, you know.",
+      "index": "22"
+    },
+    {
+      "topic": "MQ04DithersCantFindItLying",
+      "topic_text": "There's nothing in that house. You're lying, or crazy, or both.",
+      "emotion": "Neutral 50",
+      "response_text": "It's there, I tell you! He hides it, like he hides himself. You've got to find a way to draw it out. He knows how to do it, but he'd never tell you.",
+      "index": "24"
+    },
+    {
+      "topic": "MQ04ResidentDad",
+      "topic_text": "Have you seen my dad?",
+      "emotion": "Neutral 50",
+      "response_text": "Oh he's here, you can be sure of that. Just don't expect to see what you're used to seeing.",
+      "index": "25"
+    },
+    {
+      "topic": "MQ04ResidentRockwells",
+      "topic_text": "Can you tell me anything about the Rockwells' marriage?",
+      "emotion": "Anger 50",
+      "response_text": "Another of his games? I won't be a party to it. You leave those poor people be.",
+      "index": "26"
+    },
+    {
+      "topic": "MQ04ResidentTimmy",
+      "topic_text": "What can you tell me about Timmy Neusbaum?",
+      "emotion": "Neutral 50",
+      "response_text": "Not really a boy, is he? Got him all confused, looking like he does.",
+      "index": "27"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "I have to go now.",
+      "emotion": "Neutral 50",
+      "response_text": "Betty... It's him. I know. He knows I know.",
+      "index": "29"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Neutral 50",
+      "response_text": "Not real... Not real...",
+      "index": "33"
+    },
+    {
+      "topic": "TranqLaneTalk1",
+      "topic_text": "TranqLaneTalk1",
+      "emotion": "Neutral 50",
+      "response_text": "Why, hello there.",
+      "index": "36"
+    }
+  ],
+  "combat": []
+}

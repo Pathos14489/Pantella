@@ -1,0 +1,332 @@
+{
+  "name": "Defender Morrill",
+  "url": "/wiki/Morrill",
+  "dialogue_name": "DLC02DefenderMorrill.txt",
+  "dialogue_url": "/wiki/DLC02DefenderMorrill.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "xx000E26",
+  "ref_id": "xx002234",
+  "editor_id": "DLC02DefenderMorrill",
+  "location": "Outcast outpost",
+  "location_url": "/wiki/Outcast_outpost",
+  "descriptions": [
+    "Defender Morrill is a member of the Brotherhood Outcasts located at Bailey's Crossroads in the Fallout 3 add-on Operation: Anchorage. He stays outside the facility with the Outcasts to defend against periodic attacks from the super mutants.",
+    "Morrill is a veteran soldier who has fought in more battles than he would like, operating under the command of Protector McGraw. His latest assignment is at the VSS facility at Bailey's Crossroads, where he coordinates surface defenses against hordes of super mutants determined to wipe the Outcasts out. He also performs special operations for McGraw, such as a daring raid on Vault 108 and the abduction of Gary 23, in an attempt to acquire a Pip-Boy necessary to crack the VSS vault.",
+    "However, the attempt failed: Gary 23 died under interrogation, Specialist Olin is back at square one, and Morrill is stuck trying to keep the super mutants at bay. Due to a recent surge in their activity, Morrill decided to send out an urgent radio broadcast for help, requesting any available Outcasts to come to their aid at sector 7-B - Bailey's Crossroads.",
+    "Defender Morrill appears only in the Fallout 3 add-on Operation: Anchorage.",
+    "Outcast members Sibley, Olin, McGraw and Morrill, all of who appear in the Fallout 3 add-on Operation: Anchorage, appear to be named after buildings on the campus of Cornell University, including Sibley Hall, Olin Hall, Olin Library, McGraw Hall, McGraw Tower and Morrill Hall."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Brotherhood of Steel(formerly)Brotherhood Outcasts",
+  "role": "Exterior guard, soldier",
+  "detailed_location": "Bailey's Crossroads, near elevator toOutcast outpost",
+  "voice_actor": "Christopher Crutchfield Walker",
+  "special": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 4,
+    "Intelligence": 3,
+    "Agility": 6,
+    "Luck": 4
+  },
+  "mod_special_values": {
+    "Strength": 8,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 4,
+    "Intelligence": 3,
+    "Agility": 4,
+    "Luck": 4
+  },
+  "level": "20",
+  "tag_skills": [
+    {
+      "Big Guns:": "100"
+    },
+    {
+      "Melee Weap.:": "100(104)"
+    },
+    {
+      "Small Guns:": "100(96)"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "415"
+    },
+    {
+      "Critical Chance:": "4%"
+    },
+    {
+      "Unarmed Dam.:": "1.2"
+    },
+    {
+      "Poison Resist.:": "20%"
+    },
+    {
+      "Rad. Resist.:": "8%"
+    },
+    {
+      "Carry Weight:": "210(230)"
+    },
+    {
+      "Damage Res.:": "48%"
+    }
+  ],
+  "karma": "Neutral",
+  "voice_type": "DLC02MaleGeneric3",
+  "geck_race": "AfricanAmerican",
+  "topics": [
+    {
+      "topic": "DLC02MorrillForcegreet",
+      "topic_text": "DLC02MorrillForcegreet",
+      "emotion": "Neutral 50",
+      "response_text": "About damn time the reinforcements showed up! Fall in, soldier!",
+      "index": "1"
+    },
+    {
+      "topic": "DLC02MorrillGreetArmor1",
+      "topic_text": "I'm not one of your soldiers. I just like wearing your armor.",
+      "emotion": "Neutral 50",
+      "response_text": "What? Just who the hell are you, some local? You got a death wish, walking around in our...{surprised, annoyed - gets distracted and trails off}",
+      "index": "5"
+    },
+    {
+      "topic": "DLC02MorrillGreetArmor2",
+      "topic_text": "Uhh, the rest of the guys should be here any second now. <Lie>",
+      "emotion": "Neutral 50",
+      "response_text": "All right, we'll probably need their help. Mutants'll be back before long.",
+      "index": "7"
+    },
+    {
+      "topic": "DLC02MorrillGreetArmor3",
+      "topic_text": "Can it, soldier! Who's in charge of this mess? I want his head on a platter!",
+      "emotion": "Neutral 50",
+      "response_text": "Uhh, that'd be Protector McGraw... Sir. He's... he's inside. Go ahead in.",
+      "index": "9"
+    },
+    {
+      "topic": "DLC02MorrillHelpedNoArmor1",
+      "topic_text": "What, this armor? I found it. Honest.",
+      "emotion": "Neutral 50",
+      "response_text": "Uh huh. Well, now that you've been nice enough to return it to us...",
+      "index": "11"
+    },
+    {
+      "topic": "DLC02MorrillHelpedNoArmor2",
+      "topic_text": "Yeah, I had to kill a few of your guys to get a suit that looked good on me.",
+      "emotion": "Anger 100",
+      "response_text": "You filthy fucking wastelander... You're dead, you hear me? Dead!",
+      "index": "15"
+    },
+    {
+      "topic": "DLC02MorrillHelpedNoArmor3",
+      "topic_text": "I'm not looking for trouble. I'm just here because of the radio signal.",
+      "emotion": "Neutral 50",
+      "response_text": "You heard our signal? How'd you manage that? It's not broadcast on a standard frequency...",
+      "index": "20"
+    },
+    {
+      "topic": "DLC02MorrillPipBoy1",
+      "topic_text": "This? It's my Pip-Boy 3000. Want to see?",
+      "emotion": "Neutral 50",
+      "response_text": "Isn't that fancy. Listen kid, maybe you could help us out. We've been looking for someone like you.",
+      "index": "24"
+    },
+    {
+      "topic": "DLC02MorrillPipBoy2",
+      "topic_text": "Yes, it's mine, and before you ask, no you can't have it.",
+      "emotion": "Neutral 50",
+      "response_text": "Slow down there, kid. I'm not asking for it.",
+      "index": "26"
+    },
+    {
+      "topic": "DLC02MorrillPipBoy3",
+      "topic_text": "Who cares about my Pip-Boy? I'm here to find out what's going on.",
+      "emotion": "Neutral 50",
+      "response_text": "Okay, okay. I'm sure Protector McGraw will be happy to tell you.",
+      "index": "28"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "Head inside, soldier. Report to McGraw and then get back out here to help us fortify these defenses.",
+      "index": "30"
+    },
+    {
+      "topic": "PLAYERDESTROYOBJECT",
+      "topic_text": "PLAYER DESTROY OBJECT",
+      "emotion": "Neutral 50",
+      "response_text": "...the hell do you think you're doing?",
+      "index": "51"
+    },
+    {
+      "topic": "PLAYERFIREWEAPON",
+      "topic_text": "PLAYER FIRE WEAPON",
+      "emotion": "Neutral 50",
+      "response_text": "Keep your weapon holstered!",
+      "index": "53"
+    },
+    {
+      "topic": "PLAYERINIRONSITES",
+      "topic_text": "PLAYER IN IRON SITES",
+      "emotion": "Neutral 50",
+      "response_text": "Don't even think about it.{threatening}",
+      "index": "56"
+    },
+    {
+      "topic": "PLAYERKNOCKOVEROBJECTS",
+      "topic_text": "PLAYER KNOCK OVER OBJECTS",
+      "emotion": "Neutral 50",
+      "response_text": "Hey, watch it.",
+      "index": "59"
+    },
+    {
+      "topic": "PLAYERLOCKEDOBJECT",
+      "topic_text": "PLAYER LOCKED OBJECT",
+      "emotion": "Neutral 50",
+      "response_text": "Don't even think about it.{threatening}",
+      "index": "62"
+    },
+    {
+      "topic": "PLAYERPICKPOCKET",
+      "topic_text": "PLAYER PICKPOCKET",
+      "emotion": "Neutral 50",
+      "response_text": "What the hell do you think you're doing?",
+      "index": "65"
+    },
+    {
+      "topic": "PLAYERZKEYOBJECT",
+      "topic_text": "PLAYER Z KEY OBJECT",
+      "emotion": "Neutral 50",
+      "response_text": "Put that down.",
+      "index": "66"
+    },
+    {
+      "topic": "SpeechChallengeFailure",
+      "topic_text": "SpeechChallengeFailure",
+      "emotion": "Neutral 50",
+      "response_text": "Shut it, grunt. I'm not taking orders from anyone but McGraw. Now if you're done yapping, get inside and report for new orders.",
+      "index": "68"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "DLC02MorrillCallInToBase",
+      "topic_text": "DLC02MorrillCallInToBase",
+      "emotion": "Neutral 50",
+      "response_text": "Morrill calling in... Yeah, we took care of 'em. Listen, I'm sending down a local. You'll want to talk to this one. Yeah, exactly. Morrill out.",
+      "index": "69"
+    },
+    {
+      "topic": "DLC02OA1FightIntoRuins",
+      "topic_text": "DLC02OA1FightIntoRuins",
+      "emotion": "Neutral 50",
+      "response_text": "Outcasts, we've got to secure those ruins before we can reach the base!",
+      "index": "70"
+    },
+    {
+      "topic": "DLC02OA1FightToBase",
+      "topic_text": "DLC02OA1FightToBase",
+      "emotion": "Neutral 50",
+      "response_text": "All mutants have been put down. Outcasts, proceed to the base!",
+      "index": "74"
+    },
+    {
+      "topic": "DLC02OA1FightToRuins",
+      "topic_text": "DLC02OA1FightChatter1",
+      "emotion": "Neutral 50",
+      "response_text": "Point secure. That just leaves these mutants in the ruins. Outcasts, move out!",
+      "index": "78"
+    },
+    {
+      "topic": "GOODBYE",
+      "topic_text": "I have to go now.",
+      "emotion": "Neutral 50",
+      "response_text": "Look, I'm sorry if I upset you. Okay? I'll just... get back to my duties now. No problem.",
+      "index": "82"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Neutral 50",
+      "response_text": "Nice work in there, soldier.",
+      "index": "92"
+    },
+    {
+      "topic": "OutcastTalk1",
+      "topic_text": "OutcastTalk1",
+      "emotion": "Neutral 50",
+      "response_text": "What? What is it?",
+      "index": "118"
+    },
+    {
+      "topic": "OutcastTalk2",
+      "topic_text": "OutcastTalk2",
+      "emotion": "Disgust 50",
+      "response_text": "Don't you get the feeling that this is all just a waste of time? I mean, how do we REALLY know that simulation gives access to the tech?",
+      "index": "124"
+    },
+    {
+      "topic": "OutcastTalk3",
+      "topic_text": "OutcastTalk3",
+      "emotion": "Surprise 50",
+      "response_text": "What? You cannot be serious. Just... stop talking. You're going to get us both killed.",
+      "index": "133"
+    },
+    {
+      "topic": "OutcastTalk4",
+      "topic_text": "OutcastTalk4",
+      "emotion": "Neutral 50",
+      "response_text": "I know, I know... It's just...",
+      "index": "140"
+    },
+    {
+      "topic": "OutcastTalk5",
+      "topic_text": "OutcastTalk5",
+      "emotion": "Anger 50",
+      "response_text": "This conversation's over.",
+      "index": "148"
+    }
+  ],
+  "combat": [
+    {
+      "topic": "AcceptYield",
+      "topic_text": "AcceptYield",
+      "emotion": "Neutral 50",
+      "response_text": "That's about the smartest decision you ever made.",
+      "index": "157"
+    },
+    {
+      "topic": "Attack",
+      "topic_text": "Attack",
+      "emotion": "Neutral 50",
+      "response_text": "Light 'em up!",
+      "index": "159"
+    },
+    {
+      "topic": "DeathResponse",
+      "topic_text": "DeathResponse",
+      "emotion": "Neutral 50",
+      "response_text": "Man down, man down!",
+      "index": "167"
+    },
+    {
+      "topic": "Flee",
+      "topic_text": "Flee",
+      "emotion": "Neutral 50",
+      "response_text": "Retreating!",
+      "index": "169"
+    }
+  ]
+}

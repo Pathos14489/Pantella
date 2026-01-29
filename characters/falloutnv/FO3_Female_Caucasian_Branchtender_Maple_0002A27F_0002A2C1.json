@@ -1,0 +1,161 @@
+{
+  "name": "Branchtender Maple",
+  "url": "/wiki/Maple",
+  "dialogue_name": "OasisBranchtenderMaple.txt",
+  "dialogue_url": "/wiki/OasisBranchtenderMaple.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "0002A27F",
+  "ref_id": "0002A2C1",
+  "editor_id": "OasisBranchtenderMaple",
+  "location": "Oasis",
+  "location_url": "/wiki/Oasis",
+  "descriptions": [
+    "Branchtender Maple is a member of the Treeminders and one of Oasis' armed defenders in Fallout 3.",
+    "The newest member of the Treeminders, Maple does not divulge many details about her past, but does note that she was drawn to Oasis by the calls of the Great One, and that in order to become a Treeminder, she had to accept the teachings of Tree Father Birch and cast aside her dependence on technology.",
+    "Maple is fervently loyal to both Birch and Leaf Mother Laurel to the point of being completely willingly subservient to them.",
+    "Upon their arrival in Oasis, Maple is the first Treeminder that the Lone Wanderer meets alongside Birch. Provided that they do not offend Birch or the Treeminders, Maple is open and welcoming towards them.",
+    "If the Lone Wanderer decides to resolve Oasis' dilemma by siding with Birch, Maple will gift them a unique garb, but warns them not to disclose to anyone where it came from, as it could put the Oasis at risk.",
+    "Maple is the common name for genus Acer, a type of tree. All of the human residents in Oasis have horticultural names."
+  ],
+  "race": "Human",
+  "gender": "Female",
+  "affiliation": "Treeminders",
+  "role": "Guard (Branchtender)",
+  "detailed_location": "Oasis",
+  "voice_actor": "Shari Elliker",
+  "special": {
+    "Strength": 6,
+    "Perception": 7,
+    "Endurance": 5,
+    "Charisma": 3,
+    "Intelligence": 3,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "level": "2→10 (player level x1)",
+  "tag_skills": [
+    {
+      "Explosives:": "38→73"
+    },
+    {
+      "Small Guns:": "36→71"
+    },
+    {
+      "Sneak:": "36→71"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Good",
+  "voice_type": "FemaleAdult01DefaultDC",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Disgust 90",
+      "response_text": "I'm afraid you're no longer welcome here. If you come back, we have orders to shoot.",
+      "index": "1"
+    },
+    {
+      "topic": "MS10FinTLReward",
+      "topic_text": "Tree Father Birch said you may have a gift for me?",
+      "emotion": "Happy 50",
+      "response_text": "I helped to create the garb that you see all Treeminders wear. It's said that the cloth has a part of the Great One's spirit woven into the fibers.",
+      "index": "6"
+    },
+    {
+      "topic": "MS10MapleEntry01",
+      "topic_text": "Yes, I'd like to speak to Tree Father Birch.",
+      "emotion": "Happy 90",
+      "response_text": "I was hoping you'd say that. Please, proceed inside.",
+      "index": "8"
+    },
+    {
+      "topic": "MS10MapleEntry02",
+      "topic_text": "No, maybe some other time.",
+      "emotion": "Surprise 80",
+      "response_text": "Oh! Well, let me know if you change your mind.",
+      "index": "9"
+    },
+    {
+      "topic": "MS10MapleEntry03",
+      "topic_text": "I don't suppose there's more you can tell me about Oasis?",
+      "emotion": "Neutral 50",
+      "response_text": "Sorry, I believe that duty lay with Tree Father Birch.",
+      "index": "10"
+    },
+    {
+      "topic": "MS10TLBirchLaurelTopic",
+      "topic_text": "What's your opinion of Tree Father Birch and Leaf Mother Laurel?",
+      "emotion": "Neutral 50",
+      "response_text": "I think this place would be lost if it weren't for them.",
+      "index": "11"
+    },
+    {
+      "topic": "MS10TLDoNow",
+      "topic_text": "What will you do now?",
+      "emotion": "Neutral 50",
+      "response_text": "Whatever the Tree Father or Leaf Mother would have me do, I'm still theirs to obey.",
+      "index": "13"
+    },
+    {
+      "topic": "MS10TLHaroldTopic",
+      "topic_text": "Tell me about your \"god.\"",
+      "emotion": "Neutral 50",
+      "response_text": "He is the Great One. The Tree Father of Tree Fathers. There is no greater being in the world than He.",
+      "index": "14"
+    },
+    {
+      "topic": "MS10TLJoinTopic",
+      "topic_text": "So, how did you end up here?",
+      "emotion": "Happy 90",
+      "response_text": "I was brought here by His will. I heard his calling, and I followed.",
+      "index": "16"
+    },
+    {
+      "topic": "MS10TLMapleJoinTopic01",
+      "topic_text": "Yes, it would be dangerous letting the Wasteland know where Oasis is located.",
+      "emotion": "Surprise 70",
+      "response_text": "Exactly!",
+      "index": "20"
+    },
+    {
+      "topic": "MS10TLMapleJoinTopic02",
+      "topic_text": "I don't see that it matters much. Oasis is off the beaten path as it is.",
+      "emotion": "Fear 60",
+      "response_text": "I suppose so, but you found it. How many others will stumble across Oasis? Will they be friendly?",
+      "index": "22"
+    },
+    {
+      "topic": "MS10TLMapleJoinTopic03",
+      "topic_text": "Stop being so selfish! You people should share this place with everyone!",
+      "emotion": "Surprise 90",
+      "response_text": "And watch as He is prodded and picked apart by those who seek to exploit Him?",
+      "index": "24"
+    },
+    {
+      "topic": "MS10TLTreeminder",
+      "topic_text": "What did you have to do to become a Treeminder?",
+      "emotion": "Happy 90",
+      "response_text": "I had to accept the ideals of Tree Father Birch and cast away my dependence on technology.",
+      "index": "26"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Anger 70",
+      "response_text": "Begone from this place, blasphemer!",
+      "index": "27"
+    }
+  ],
+  "combat": []
+}

@@ -1,0 +1,284 @@
+{
+  "name": "Mags",
+  "url": "/wiki/Mags",
+  "dialogue_name": "2CMags.txt",
+  "dialogue_url": "/wiki/2CMags.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "00104315",
+  "ref_id": "0010431A",
+  "editor_id": "2CMags",
+  "location": "Camp Golf",
+  "location_url": "/wiki/Camp_Golf",
+  "descriptions": [
+    "Corporal Mags is the squad leader of the Misfits, living in Camp Golf in 2281.",
+    "A New Reno native, Mags left the city to make something of herself in the ranks of New California's military. She initially joined the New California Republic Army to become a Ranger and become the best of the best, but she did not make the cut and got thrown in with the others who washed out.",
+    "Mags was written by area designer Travis Stout, who also wrote the rest of the Misfits."
+  ],
+  "race": "Human",
+  "gender": "Female",
+  "affiliation": "NCR ArmyThe Misfits",
+  "role": "Misfit squad leader",
+  "detailed_location": "Camp Golf, near thetents",
+  "voice_actor": "April Stewart",
+  "special": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 5,
+    "Intelligence": 5,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "level": "5",
+  "tag_skills": [
+    {
+      "Explosives:": "46"
+    },
+    {
+      "Guns:": "46"
+    },
+    {
+      "Melee Weap.:": "46"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Neutral",
+  "voice_type": "FemaleAdult03",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Happy 10",
+      "response_text": "Okay, everybody's lined up and ready to go. Any suggestions?",
+      "index": "1"
+    },
+    {
+      "topic": "MagsArmy",
+      "topic_text": "Why'd you join the Army?",
+      "emotion": "Sad 25",
+      "response_text": "I guess I wanted to make something of myself, you know? Be the best of the best. I *wanted* to be a ranger, but... guess this is as close as I get.",
+      "index": "30"
+    },
+    {
+      "topic": "MagsCampGolf",
+      "topic_text": "How'd you end up assigned to Camp Golf?",
+      "emotion": "Disgust 30",
+      "response_text": "Easy - this is where they send all the fuck-ups and people they don't want. But hey, it's not like I'm bitter or anything.",
+      "index": "31"
+    },
+    {
+      "topic": "MagsHistory",
+      "topic_text": "Tell me a little about yourself.",
+      "emotion": "Disgust 20",
+      "response_text": "Not much to tell, really. I grew up in New Reno, joined up, took my shot at being a Ranger. Didn't make it, so I'm stuck with this crew of jokers.",
+      "index": "32"
+    },
+    {
+      "topic": "MagsMisfits",
+      "topic_text": "Sounds like you aren't too fond of your squadmates.",
+      "emotion": "Sad 15",
+      "response_text": "Yeah. I mean, no, they're okay people, but they don't care, y'know? They don't have any ambition. No drive.",
+      "index": "33"
+    },
+    {
+      "topic": "MagsShapeUp1",
+      "topic_text": "How's the squad doing?",
+      "emotion": "Happy 20",
+      "response_text": "Thanks to you, I think we're in good shape. The squad seems to be functioning much better as a unit now.",
+      "index": "35"
+    },
+    {
+      "topic": "VEndingMisfits",
+      "topic_text": "VEndingMisfits",
+      "emotion": "Neutral 50",
+      "response_text": "{Narrating}Slain to the last man by the Courier, the Misfits were at least spared the humiliation of dying during Caesar's attack on Camp Golf.",
+      "index": "41"
+    },
+    {
+      "topic": "VFreeformCampGolf2CMagsTopic000",
+      "topic_text": "How come you didn't make it into the Rangers?",
+      "emotion": "Anger 40",
+      "response_text": "Gee, I dunno, maybe because I'm saddled with the worst damn unit in the NCR Army? Think that might have something to do with it?",
+      "index": "53"
+    },
+    {
+      "topic": "VFreeformCampGolf2CMagsTopic001",
+      "topic_text": "This place doesn't seem so bad.",
+      "emotion": "Anger 25",
+      "response_text": "Please. Camp Golf is where they shuffle off anybody they don't want any more. Assignment here is a career ender.",
+      "index": "54"
+    },
+    {
+      "topic": "VFreeformCampGolf2CMagsTopic002",
+      "topic_text": "Well, maybe if you tried to lead by example instead of tearing them down.",
+      "emotion": "Happy 10",
+      "response_text": "[SUCCEEDED] You really think so? Hell, I guess it's worth a shot.",
+      "index": "55"
+    },
+    {
+      "topic": "VFreeformCampGolf2CMagsTopic017",
+      "topic_text": "Take positions where you can cover each other. Stay focused.",
+      "emotion": "Anger 10",
+      "response_text": "[SUCCEEDED] You heard the man, people, get focused!",
+      "index": "58"
+    },
+    {
+      "topic": "VFreeformCampGolf2CMagsTopic018",
+      "topic_text": "Take your time. Pick your shots and tell your squadmates who you're shooting at.",
+      "emotion": "Anger 15",
+      "response_text": "[SUCCEEDED] I've got the one at 11 o'clock! Razz, O'Hanrahan, take the two on the right! Poindexter, the center!",
+      "index": "61"
+    },
+    {
+      "topic": "VFreeformCampGolf2CMagsTopic019",
+      "topic_text": "Exhale before you fire. Squeeze the trigger, don't jerk it.",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] Right. Exhale... squeeze. Focus on the shot.",
+      "index": "63"
+    },
+    {
+      "topic": "VFreeformCampGolf2CMagsTopic020",
+      "topic_text": "Well, I think that went well, don't you?",
+      "emotion": "Happy 35",
+      "response_text": "Thanks for the help. I think the whole unit's doing a lot better now.",
+      "index": "65"
+    },
+    {
+      "topic": "VFreeformCampGolf2CMagsTopic021",
+      "topic_text": "Get the troops lines up. I'll help you with it.",
+      "emotion": "Happy 25",
+      "response_text": "After the help you gave us with the shooting range, we'll take any advice you've got. I'll line them up.",
+      "index": "67"
+    },
+    {
+      "topic": "VFreeformCampGolf2CMagsTopic025",
+      "topic_text": "Don't worry, I'm not giving up. Let's try it again.",
+      "emotion": "Fear 15",
+      "response_text": "Okay, if you say so. Hell, it's not like we've got a lot to lose here.",
+      "index": "68"
+    },
+    {
+      "topic": "VFreeformCampGolf2CMagsTopic026",
+      "topic_text": "Okay, count to three, throw the grenade, and pull the pin. Wait, no....",
+      "emotion": "Disgust 15",
+      "response_text": "[FAILED] I've got a bad feeling about this....",
+      "index": "69"
+    },
+    {
+      "topic": "VFreeformCampGolf2CMagsTopic027",
+      "topic_text": "Don't pitch it like a baseball, lob it. You want a good, solid arc.",
+      "emotion": "Anger 10",
+      "response_text": "[SUCCEEDED] Solid arc, check. Lob 'em up and over, people!",
+      "index": "71"
+    },
+    {
+      "topic": "VFreeformCampGolf2CMagsTopic028",
+      "topic_text": "Don't worry about accuracy - use the grenades to break up clusters of enemies.",
+      "emotion": "Anger 10",
+      "response_text": "[SUCCEEDED] Hold the grenades for groups, squad! Hit them in clusters and send them running!",
+      "index": "73"
+    },
+    {
+      "topic": "VFreeformCampGolf2CMagsTopic029",
+      "topic_text": "I think that went well, don't you?",
+      "emotion": "Happy 20",
+      "response_text": "Yeah, I do. Thanks. I think we might survive this now.",
+      "index": "75"
+    },
+    {
+      "topic": "VFreeformCampGolf2CMagsTopic030",
+      "topic_text": "Are you sure there's nothing I can do to help?",
+      "emotion": "Sad 25",
+      "response_text": "I doubt it. Poindexter might have an idea for some kind of last-minute scheme. You should talk to him.",
+      "index": "77"
+    },
+    {
+      "topic": "VFreeformCampGolf2CMagsTopic031",
+      "topic_text": "Yeah, you've been a real bundle of laughs.",
+      "emotion": "Anger 25",
+      "response_text": "Yeah, right. Bitch.",
+      "index": "78"
+    },
+    {
+      "topic": "VFreeformCampGolf2CMagsTopic032",
+      "topic_text": "I don't, sorry.",
+      "emotion": "Neutral 50",
+      "response_text": "Oh, okay. Just thought I'd ask.",
+      "index": "80"
+    },
+    {
+      "topic": "VFreeformCampGolf2CMagsTopic033",
+      "topic_text": "I'm afraid it's classified.",
+      "emotion": "Neutral 50",
+      "response_text": "Classified? Shit, it must be really big then.",
+      "index": "81"
+    },
+    {
+      "topic": "VFreeformCampGolf2CMagsTopic034",
+      "topic_text": "He was sabotaging the NCR's war efforts to force a retreat back to California.",
+      "emotion": "Neutral 50",
+      "response_text": "Are you serious? No way! I don't believe it!",
+      "index": "82"
+    },
+    {
+      "topic": "VFreeformCampGolf2CMagsTopic037",
+      "topic_text": "It can't be as hard as all that. What needs to get done?",
+      "emotion": "Surprise 5",
+      "response_text": "Well, if you ask me, what we really need is to get the whole squad out on the practice range - shape up our marksmanship and explosives skill.",
+      "index": "83"
+    },
+    {
+      "topic": "VFreeformCampGolf2CMagsTopic038",
+      "topic_text": "Okay, let's get them out to the range.",
+      "emotion": "Surprise 25",
+      "response_text": "Are you sure? I've got enough clout to get them started, but these guys are pretty lazy. I doubt they'll want to be pulled in different directions.",
+      "index": "85"
+    },
+    {
+      "topic": "VFreeformCampGolf2CMagsTopic039",
+      "topic_text": "Never mind, I'll talk to the others about their ideas first.",
+      "emotion": "Disgust 10",
+      "response_text": "Okay, I'll be here if you come to your senses.",
+      "index": "86"
+    },
+    {
+      "topic": "VFreeformCampGolf2CMagsTopic040",
+      "topic_text": "I'm sure. Let's do it.",
+      "emotion": "Happy 20",
+      "response_text": "You're the boss.",
+      "index": "87"
+    },
+    {
+      "topic": "VFreeformCampGolf2CMagsTopic041",
+      "topic_text": "Give me some time to figure things out and we'll try again.",
+      "emotion": "Fear 15",
+      "response_text": "Okay, if you say so. Hell, it's not like we've got a lot to lose here.",
+      "index": "88"
+    },
+    {
+      "topic": "VFreeformCampGolf2CMagsTopic042",
+      "topic_text": "Don't worry, I'm not giving up. Let's try it again.",
+      "emotion": "Fear 15",
+      "response_text": "Okay, if you say so. Hell, it's not like we've got a lot to lose here.",
+      "index": "89"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Sure, see you around.",
+      "index": "90"
+    }
+  ],
+  "combat": []
+}

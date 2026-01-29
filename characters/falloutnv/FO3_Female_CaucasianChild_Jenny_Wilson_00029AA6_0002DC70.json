@@ -1,0 +1,168 @@
+{
+  "name": "Jenny Wilson",
+  "url": "/wiki/Jenny_Wilson",
+  "dialogue_name": "JennyWilson.txt",
+  "dialogue_url": "/wiki/JennyWilson.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": true,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "00029AA6",
+  "ref_id": "0002DC70",
+  "editor_id": "JennyWilson",
+  "location": "The Wilson's house,Old Man Harris' house",
+  "location_url": "/wiki/The_Wilson%27s_house",
+  "descriptions": [
+    "Jenny Wilson is the daughter of Bill and Martha Wilson in Andale in 2277.",
+    "Jenny is a young girl who has a crush on her cousin Junior Smith, much to her parents' delight and Junior's dismay."
+  ],
+  "race": "Human",
+  "gender": "Female",
+  "affiliation": "Andale",
+  "role": "Daughter",
+  "detailed_location": "Andale",
+  "voice_actor": "Stephanie Joy",
+  "special": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 5,
+    "Intelligence": 5,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "level": "1",
+  "misc_skills": [
+    {
+      "Hit Points:": "30"
+    },
+    {
+      "Critical Chance:": "5%"
+    },
+    {
+      "Unarmed Dam.:": "0.75"
+    },
+    {
+      "Poison Resist.:": "20%"
+    },
+    {
+      "Rad. Resist.:": "20%"
+    },
+    {
+      "Carry Weight:": "200"
+    },
+    {
+      "Damage Res.:": "0%(2%)"
+    }
+  ],
+  "karma": "Evil",
+  "voice_type": "FemaleChild01DC",
+  "geck_race": "CaucasianChild",
+  "topics": [
+    {
+      "topic": "AndaleJennyGreetingEND",
+      "topic_text": "Okay, this is boring.",
+      "emotion": "Neutral 50",
+      "response_text": "Didn't your mother teach you any manners?",
+      "index": "1"
+    },
+    {
+      "topic": "AndaleJennyJunior",
+      "topic_text": "What do you think of the other people in Andale?",
+      "emotion": "Neutral 50",
+      "response_text": "Hey, did you know that I'm going to marry Junior Smith when I'm old enough? I know, he doesn't like girls now, but mommy says that he'll come around.",
+      "index": "4"
+    },
+    {
+      "topic": "AndaleJennyJunior1",
+      "topic_text": "I'm sure you two will be great together.",
+      "emotion": "Neutral 50",
+      "response_text": "I know! His daddy and my daddy used to be brothers, so I think we'll make especially good uhm... uhm... married... people? What's the word?",
+      "index": "6"
+    },
+    {
+      "topic": "AndaleJennyJunior1a",
+      "topic_text": "A couple? Is that what you mean?",
+      "emotion": "Neutral 50",
+      "response_text": "Yes! That's it! We'll be a great couple!",
+      "index": "7"
+    },
+    {
+      "topic": "AndaleJennyJunior1b",
+      "topic_text": "I think \"weird as all hell\" is probably the best way to describe it.",
+      "emotion": "Neutral 50",
+      "response_text": "Oh my gosh! You said a swear! I'm telling! And that's four words, stupid.",
+      "index": "8"
+    },
+    {
+      "topic": "AndaleJennyRain",
+      "topic_text": "What's going on around Andale?",
+      "emotion": "Neutral 50",
+      "response_text": "My dad says that it's going to rain soon, do you think it will?",
+      "index": "9"
+    },
+    {
+      "topic": "AndaleJennyRain1",
+      "topic_text": "I really don't know.",
+      "emotion": "Neutral 50",
+      "response_text": "My daddy is never wrong. Ever. He's the smartest man in the whole world. Smarter than you.",
+      "index": "11"
+    },
+    {
+      "topic": "AndaleJennyRain1a",
+      "topic_text": "I don't know, he doesn't seem very smart to me.",
+      "emotion": "Neutral 50",
+      "response_text": "Wow, what a jerk! You're lucky that I don't tell him what you said!",
+      "index": "12"
+    },
+    {
+      "topic": "AndaleJennyRain1b",
+      "topic_text": "Yeah, he's a pretty smart guy.",
+      "emotion": "Neutral 50",
+      "response_text": "I knew it! Even you think he's smarter than you!",
+      "index": "13"
+    },
+    {
+      "topic": "AndaleJennyRain2",
+      "topic_text": "I really don't care.",
+      "emotion": "Neutral 50",
+      "response_text": "How rude! Some people...",
+      "index": "14"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Happy 50",
+      "response_text": "You're my hero, ma'am. I want to be just like you when I grow up.",
+      "index": "15"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "AndaleHelloResponseShortJenny",
+      "topic_text": "AndaleHelloResponseShortJenny",
+      "emotion": "Neutral 50",
+      "response_text": "Aww, I'm blushing!",
+      "index": "22"
+    },
+    {
+      "topic": "GOODBYE",
+      "topic_text": "I have to go now.",
+      "emotion": "Neutral 50",
+      "response_text": "Bye bye!",
+      "index": "26"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Neutral 50",
+      "response_text": "Hi, Mrs. Smith!",
+      "index": "29"
+    }
+  ],
+  "combat": []
+}

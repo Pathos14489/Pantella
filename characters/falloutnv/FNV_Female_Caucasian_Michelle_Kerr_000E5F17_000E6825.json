@@ -1,0 +1,99 @@
+{
+  "name": "Michelle Kerr",
+  "url": "/wiki/Michelle_Kerr",
+  "dialogue_name": "188Michelle.txt",
+  "dialogue_url": "/wiki/188Michelle.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": true,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000E5F17",
+  "ref_id": "000E6825",
+  "editor_id": "188Michelle",
+  "location": "188 Trading Post",
+  "location_url": "/wiki/188_Trading_Post",
+  "descriptions": [
+    "Michelle Kerr is a merchant operating at the 188 Trading Post with her father Samuel in the Mojave Wasteland in 2281. She appears in Fallout: New Vegas.",
+    "Around a month prior to October 2281,",
+    "With the amount of soldiers passing through the 188, neither Samuel nor Michelle believe the Legion will threaten them anytime soon. Even if they do, they believe they can take care of themselves. In the worst case, they don't mind packing up shop and leaving for a new location again.",
+    "If the escaped convicts around and inside the Bison Steve Hotel in Primm are wiped out during the quest(s) They Went That-a-Way and/or My Kind of Town, Michelle will have a unique dialogue option: the Courier can mention that they helped clear out the convicts, but Michelle will affably respond that she and Samuel will not be likely to return to their former residence as their business at the 188 is better than it ever was in Primm.",
+    "Samuel and Michelle share the same pool of caps and inventory items. However, they will only sell certain item categories from their shared inventory. Samuel only sells food and alcohol, and Michelle only sells ammo; neither sells miscellaneous items. Any caps paid to Samuel for repairs are tabulated separately from Michelle's caps on hand."
+  ],
+  "race": "Human",
+  "gender": "Female",
+  "affiliation": "188 Trading Post",
+  "role": "Merchant",
+  "detailed_location": "188 Trading Post",
+  "voice_actor": "Cindy Robinson",
+  "special": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 10,
+    "Intelligence": 5,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "level": "1",
+  "misc_skills": [],
+  "karma": "Neutral",
+  "voice_type": "FemaleAdult07",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "188MichelleAbout188",
+      "topic_text": "Why'd you settle in this dump?",
+      "emotion": "Anger 50",
+      "response_text": "There's more to the 188 than meets the eye. Troops move back and forth on 93 all the time, and 95 is how NCR folks come and go from Vegas.",
+      "index": "1"
+    },
+    {
+      "topic": "188MichelleAboutLegion",
+      "topic_text": "What do you know about Legion raids?",
+      "emotion": "Surprise 50",
+      "response_text": "Not much. I hear some folks got killed down by Nelson... or was it Novac? I don't know. If they come up this way, me and dad'll go someplace else.",
+      "index": "3"
+    },
+    {
+      "topic": "188MichelleAboutSelf",
+      "topic_text": "Who are you?",
+      "emotion": "Neutral 50",
+      "response_text": "Name's Michelle. My Dad and me run this store. His name's Samuel. I take the day shift and he takes nights.",
+      "index": "4"
+    },
+    {
+      "topic": "188MichelleBoastSavePrimm",
+      "topic_text": "Primm's safe now. I took care of those prisoners.",
+      "emotion": "Happy 50",
+      "response_text": "That's nice. I suspect we'll stick around here, though. Business has been good.",
+      "index": "6"
+    },
+    {
+      "topic": "188MichelleBuySell",
+      "topic_text": "I'd like to see what you have for sale.",
+      "emotion": "Neutral 50",
+      "response_text": "Have a look.",
+      "index": "7"
+    },
+    {
+      "topic": "188MichelleNumbers",
+      "topic_text": "Why's this place called the 188?",
+      "emotion": "Neutral 50",
+      "response_text": "You do know these old roads were numbered, right? We're standing where the 95 and 93 meet. And 95 plus 93 equals... 188.",
+      "index": "8"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Happy 50",
+      "response_text": "Welcome to the 188 Slop & Shop. How can I help you?",
+      "index": "9"
+    }
+  ],
+  "conversation": [],
+  "combat": []
+}

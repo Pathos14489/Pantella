@@ -1,0 +1,127 @@
+{
+  "name": "C.J. Young",
+  "url": "/wiki/C.J._Young",
+  "dialogue_name": "CJYoung.txt",
+  "dialogue_url": "/wiki/CJYoung.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": true,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000156C6",
+  "ref_id": "0001E762",
+  "editor_id": "CJYoung",
+  "location": "Rivet City",
+  "location_url": "/wiki/Rivet_City",
+  "descriptions": [
+    "C.J. Young is a young resident of Rivet City and best friend of troubled James Hargrave in 2277.",
+    "A trusting and honest young girl, C.J. is one of the happiest kids found in the Capital Wasteland. She's been raised by two loving parents and lives a great life in Rivet City. She spends her time hanging out on the flight deck or exploring the aircraft carrier with her best friend, James Hargrave. A year younger than C.J., James picks on her mercilessly. Nevertheless, she continues to forgive him for his teasing and the two remain best friends.",
+    "C.J. is the daughter of Christie and Henry Young. She is the best (and only) friend of James Hargrave."
+  ],
+  "race": "Human",
+  "gender": "Female",
+  "affiliation": "Rivet City",
+  "role": "Resident",
+  "detailed_location": "Rivet City",
+  "voice_actor": "Stephanie Joy",
+  "special": {
+    "Strength": 3,
+    "Perception": 4,
+    "Endurance": 3,
+    "Charisma": 3,
+    "Intelligence": 3,
+    "Agility": 5,
+    "Luck": 4
+  },
+  "level": "1",
+  "tag_skills": [
+    {
+      "Lockpick:": "27"
+    },
+    {
+      "Sneak:": "29"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Good",
+  "voice_type": "FemaleChild01DC",
+  "geck_race": "CaucasianChild",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Happy 50",
+      "response_text": "You're my hero, ma'am. I want to be just like you when I grow up.",
+      "index": "1"
+    },
+    {
+      "topic": "MS03RCHistory1Could I ask you about Rivet City's history?",
+      "topic_text": "Do you know anything about the city's history?",
+      "emotion": "Neutral 50",
+      "response_text": "James says his dad built it, but I don't know. I think he's making stuff up.",
+      "index": "6"
+    },
+    {
+      "topic": "RCJamesHargraveSaveYourself",
+      "topic_text": "This is your mess, kid. Get yourself out of it.",
+      "emotion": "Sad 50",
+      "response_text": "You're just mean! I hope your Mom and Dad die!",
+      "index": "8"
+    },
+    {
+      "topic": "RCJamesHargraveTakeHome",
+      "topic_text": "Sure, kid. Sorry I said those things. Let's get you home.",
+      "emotion": "Sad 50",
+      "response_text": "Thank you, mister. I promise to be good from now on.",
+      "index": "9"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYEI have to go now.",
+      "topic_text": "So long C.J.",
+      "emotion": "Neutral 50",
+      "response_text": "Bye.",
+      "index": "11"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Happy 50",
+      "response_text": "Hey, Dad, can you tell me a story? Tell me one about when people could drink the river.",
+      "index": "12"
+    },
+    {
+      "topic": "RCGoodbye",
+      "topic_text": "RCGoodbye",
+      "emotion": "Fear 50",
+      "response_text": "James isn't so bad, Chief. He's my friend. I'll make sure he's good.",
+      "index": "24"
+    },
+    {
+      "topic": "RCGoodbye02",
+      "topic_text": "RCGoodbye02",
+      "emotion": "Sad 100",
+      "response_text": "Why are you so mean sometimes? I'm always nice to you.",
+      "index": "35"
+    },
+    {
+      "topic": "RCPackageEnd",
+      "topic_text": "RCPackageEnd",
+      "emotion": "Happy 50",
+      "response_text": "Oh, boy! I'm hungry.",
+      "index": "36"
+    },
+    {
+      "topic": "RCResponse02",
+      "topic_text": "RCResponse02",
+      "emotion": "Neutral 50",
+      "response_text": "I don't know, what do you want to do?",
+      "index": "40"
+    }
+  ],
+  "combat": []
+}

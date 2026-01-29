@@ -1,0 +1,177 @@
+{
+  "name": "Lana Danvers",
+  "url": "/wiki/Lana_Danvers",
+  "dialogue_name": "Danvers.txt",
+  "dialogue_url": "/wiki/Danvers.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": true,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000156AD",
+  "ref_id": "0001E748",
+  "editor_id": "Danvers",
+  "location": "Bridge tower",
+  "location_url": "/wiki/Bridge_tower",
+  "descriptions": [
+    "Commander Lana Danvers (circa 2247—) is the second in command of the Rivet City security force in 2277.",
+    "Lana was born around 2247. She was married until 2275 when her husband, also a Rivet City security officer, died from disease.",
+    "Danvers oversees the night shift for the entire city.",
+    "Danvers makes sure to check in with any civilians or other officers she encounters while commanding the night shift.",
+    "In general, Danvers is stated to hold mild disdain for Upper Deck residents and give preferential treatment to Hangar Deck residents.",
+    "In contrast, Danvers has better opinions of some Hangar Deck residents and working types. She considers Seagrave Holmes to be above Vera's level and will be visibly saddened if given evidence that would end Seagrave's council campaign.",
+    "Danvers does not have much knowledge about Doctor Madison Li and knows her only as \"one of those egg head scientist types.\"",
+    "Chief Harkness is Danvers' best friend. Their relationship is strictly platonic. However, their friendship is slightly strained by Danvers' opinion of the Upper Deck.",
+    "Danvers can be found patrolling the Rivet City market every night from 7 p.m. to 3 a.m. During this time, the market is closed, and if the Lone Wanderer is present, she and other characters may tell them to leave. If they continue to stay for too long, they may turn hostile. Otherwise, Danvers spends the rest of her day sleeping in the bridge tower, only waking up at 5 p.m. to eat until starting her night patrol.",
+    "Danvers has several additional AI routines that fail to start because her sleeping package is incorrectly implemented: it is intended to only last for eight hours (DanversSleep9x8, from 9 a.m. to 4 p.m.), but the schedule is not implemented, so she will sleep whenever she can. Her intended routine is to return from patrol and eat in the bridge tower at 7 a.m., then sleep from 9 a.m. to 4 p.m., then patrol the flight deck from 4 to 7 p.m."
+  ],
+  "race": "Human",
+  "gender": "Female",
+  "affiliation": "Rivet City security forceRivet City Council(optional)",
+  "role": "Assistant chief of securityChief of security (optional)Council member (optional)",
+  "detailed_location": "Rivet City",
+  "voice_actor": "Karen Carbone",
+  "special": {
+    "Strength": 6,
+    "Perception": 6,
+    "Endurance": 5,
+    "Charisma": 3,
+    "Intelligence": 3,
+    "Agility": 7,
+    "Luck": 4
+  },
+  "tag_skills": [
+    {
+      "Melee Weap.:": "31"
+    },
+    {
+      "Small Guns:": "33(38)"
+    },
+    {
+      "Unarmed:": "29"
+    }
+  ],
+  "karma": "Good",
+  "voice_type": "FemaleAdult02DC",
+  "geck_race": "Caucasian",
+  "topics": [],
+  "conversation": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Anger 50",
+      "response_text": "Maybe you don't know who you're talking to. I'm Commander Danvers, assistant chief of security.",
+      "index": "1"
+    },
+    {
+      "topic": "MS03RCHistory1Could I ask you about Rivet City's history?",
+      "topic_text": "Can you tell me about Rivet City's history?",
+      "emotion": "Anger 20",
+      "response_text": "Sorry, but I don't really know much about it. More worried about what's going wrong with the here and now, see?",
+      "index": "4"
+    },
+    {
+      "topic": "MS14TedFind",
+      "topic_text": "Where can I find Ted Strayer?",
+      "emotion": "Neutral 50",
+      "response_text": "Have you tried the common room?  That's where he sleeps.",
+      "index": "5"
+    },
+    {
+      "topic": "RCDanversAppologize",
+      "topic_text": "Whoa! I just wanted to ask you something.",
+      "emotion": "Anger 50",
+      "response_text": "Yeah, well I don't have time for newbies like you. You got something on your mind, spill it.",
+      "index": "8"
+    },
+    {
+      "topic": "RCDanversBannonBlackmail",
+      "topic_text": "Bannon is trying to blackmail Seagraves Holmes.",
+      "emotion": "Surprise 50",
+      "response_text": "That's pretty underhanded, even for Bannon.",
+      "index": "9"
+    },
+    {
+      "topic": "RCDanversReportTo",
+      "topic_text": "So, you report to Chief Harkness?",
+      "emotion": "Neutral 50",
+      "response_text": "I'm his second in command. I run the night shift and he runs the day shift.",
+      "index": "12"
+    },
+    {
+      "topic": "RCDanversSeagraveLetter",
+      "topic_text": "I found this letter in Seagrave's room. I thought you should see it.",
+      "emotion": "Surprise 50",
+      "response_text": "This is bad. Seagrave Holmes was angling for a seat on the council.",
+      "index": "16"
+    },
+    {
+      "topic": "RCTopicCJYoungMissing",
+      "topic_text": "Have you seen C.J. Young lately?",
+      "emotion": "Neutral 50",
+      "response_text": "Christie told me they were missing. I'll alert the rest of the security guards.",
+      "index": "18"
+    },
+    {
+      "topic": "RCTopicGetDrinksWhere can I get a stiff drink?",
+      "topic_text": "Can I get a drink around here? Preferably somewhere clean.",
+      "emotion": "Happy 50",
+      "response_text": "The Weatherly Hotel is a good choice. It's on the upper deck.",
+      "index": "20"
+    },
+    {
+      "topic": "RCTopicJameHargraveProblemI've met your mother. No wonder you're such a brat.",
+      "topic_text": "What's up with that James Hargrave kid? He acts like such a brat.",
+      "emotion": "Disgust 50",
+      "response_text": "He's trouble, that's what he is.",
+      "index": "21"
+    },
+    {
+      "topic": "RCTopicPaulieAddictDid you know that Paulie Cantelli is an addict?",
+      "topic_text": "Is Paulie really addicted to chems?",
+      "emotion": "Disgust 50",
+      "response_text": "Oh, yeah. He's a mess. I'm glad I'm not in Cindy's shoes.",
+      "index": "24"
+    }
+  ],
+  "combat": [
+    {
+      "topic": "GOODBYEI have to go now.",
+      "topic_text": "You've been very helpful.",
+      "emotion": "Neutral 50",
+      "response_text": "Duty calls.",
+      "index": "25"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Anger 50",
+      "response_text": "Rivet City doesn't need any more deaths. The Council says I gotta let you be here, but one false move and you're gone.",
+      "index": "26"
+    },
+    {
+      "topic": "RCGoodbye",
+      "topic_text": "RCGoodbye",
+      "emotion": "Disgust 50",
+      "response_text": "Just keeping the deck safe for all you Upper Deck types.",
+      "index": "40"
+    },
+    {
+      "topic": "RCGoodbye02",
+      "topic_text": "RCGoodbye02",
+      "emotion": "Neutral 50",
+      "response_text": "This week doesn't look good either, Father.",
+      "index": "46"
+    },
+    {
+      "topic": "RCPackageEnd",
+      "topic_text": "RCPackageEnd",
+      "emotion": "Neutral 50",
+      "response_text": "<burp> Time to go on patrol.",
+      "index": "47"
+    }
+  ]
+}

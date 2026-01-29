@@ -1,0 +1,142 @@
+{
+  "name": "Smiling Jack",
+  "url": "/wiki/Smiling_Jack",
+  "dialogue_name": "SmilingJack.txt",
+  "dialogue_url": "/wiki/SmilingJack.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": true,
+  "can_repair": true,
+  "can_be_companion": false,
+  "base_id": "000824AB",
+  "ref_id": "000824AD",
+  "editor_id": "SmilingJack",
+  "location": "Evergreen Mills bazaar",
+  "location_url": "/wiki/Evergreen_Mills_bazaar",
+  "descriptions": [
+    "Smiling Jack is a non-hostile raider merchant who runs his general shop in the Evergreen Mills bazaar in the Capital Wasteland in 2277.",
+    "Jack is a master trader and barterer, having set up his business in the bazaar of the raider-controlled Evergreen Mills. He mends the raiders' equipment for them, which keeps him busy and unable to continue modifying and upgrading his pride and joy: The Terrible Shotgun.",
+    "Despite being a raider, Smiling Jack holds no animosity towards the Lone Wanderer and is not aggressive unless he is provoked.",
+    "He stays at Evergreen Mills bazaar running a general shop.",
+    "One can find the Barter Bobblehead in the back room of his shop, on a shelf behind a workbench.",
+    "Playstation 3 Xbox 360 Sometimes, it will be impossible to loot Smiling Jack after killing him. "
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Raiders",
+  "role": "Merchant",
+  "detailed_location": "Evergreen Mills bazaar",
+  "voice_actor": "James Lewis",
+  "special": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 5,
+    "Intelligence": 5,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "level": "1",
+  "tag_skills": [
+    {
+      "Science:": "30"
+    },
+    {
+      "Small Guns:": "30"
+    },
+    {
+      "Unarmed:": "28"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "65"
+    },
+    {
+      "Critical Chance:": "5%"
+    },
+    {
+      "Unarmed Dam.:": "1.90"
+    },
+    {
+      "Poison Resist.:": "15%"
+    },
+    {
+      "Rad. Resist.:": "6%"
+    },
+    {
+      "Carry Weight:": "200"
+    },
+    {
+      "Damage Res.:": "2%"
+    }
+  ],
+  "karma": "Evil",
+  "voice_type": "MaleGroupRaiderDC",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "EvergreenSmilingJackRepair",
+      "topic_text": "I need you to repair my stuff.",
+      "emotion": "Neutral 50",
+      "response_text": "Sure, thing. Just be quick about it before someone sees.",
+      "index": "1"
+    },
+    {
+      "topic": "EvergreenSmilingJackServices",
+      "topic_text": "What do you have for sale?",
+      "emotion": "Neutral 50",
+      "response_text": "Fresh out of the hands of some mark. Take a look!",
+      "index": "2"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "Shh. Not too loud. I don't really want people to know that we're doin' business.",
+      "index": "4"
+    },
+    {
+      "topic": "SuitHolotape1",
+      "topic_text": "SuitHolotape1",
+      "emotion": "Neutral 50",
+      "response_text": "Like I told ya man, I don't fuckin' know where it came from. But it freaks the boys out. Some story from a while back, 'bout a stranger with no name.",
+      "index": "9"
+    },
+    {
+      "topic": "SuperDuperMartTOPIC",
+      "topic_text": "FFsuperDuperMartTOPIC",
+      "emotion": "Neutral 50",
+      "response_text": "We're back.  Somebody open up the... Hang on, something' ain't right here.{Raider captain over intercom, returning from a raid. NOTE: add radio/intercom filter.}",
+      "index": "11"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "FFEU18RaiderTaunt",
+      "topic_text": "FFEU18RaiderTaunt",
+      "emotion": "Happy 50",
+      "response_text": "Just say the word and it's all over. Course then we'd have to skin you alive and eat your liver.",
+      "index": "12"
+    }
+  ],
+  "combat": [
+    {
+      "topic": "Attack",
+      "topic_text": "Attack",
+      "emotion": "Anger 70",
+      "response_text": "I'm gonna mount you on my fucking wall!{angry, screaming}",
+      "index": "19"
+    },
+    {
+      "topic": "Flee",
+      "topic_text": "Flee",
+      "emotion": "Neutral 50",
+      "response_text": "Graaaahhhhh! No!",
+      "index": "26"
+    }
+  ]
+}

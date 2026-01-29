@@ -1,0 +1,84 @@
+{
+  "name": "Masterbrain",
+  "url": "/wiki/Masterbrain",
+  "dialogue_name": "MS17VaultTecMasterbrain.txt",
+  "dialogue_url": "/wiki/MS17VaultTecMasterbrain.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "0001EE61",
+  "ref_id": "0001EE62",
+  "editor_id": "MS17VaultTecMasterbrain",
+  "location": "Vault-Tec headquarters",
+  "location_url": "/wiki/Vault-Tec_headquarters_(Fallout_3)",
+  "descriptions": [
+    "Masterbrain is a unique Robobrain that controls all the other security robots in the Vault-Tec headquarters in the year 2277. It roams the Vault-Tec administration level but is most likely found near a turret control terminal slightly left of the level's center.",
+    "Masterbrain was manufactured for the Vault-Tec Corporation to act as a kill switch for all other robotic security measures within the headquarters and still remains active 200 years after the Great War. Masterbrain is identified by the large Vault-Tec logo on its chassis.",
+    "If it is defeated and the Lone Wanderer interacts with it, it will say, \"You have accessed the Masterbrain's internal mechanism. If you destroy its uplink, it will cause all the automated security units in Vault-Tec to shut down.\" If they choose to do so, this will disable all other robots in the Vault-Tec headquarters building, with the exception of the automated turrets.",
+    "The player character can shut down Masterbrain using three terminals scattered throughout the building. It is also possible to disable it using the Robotics Expert perk."
+  ],
+  "race": "Robobrain",
+  "affiliation": "Vault-Tec",
+  "detailed_location": "Vault-Tec HQ, administration",
+  "voice_actor": "Karen Carbone",
+  "special": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 5,
+    "Intelligence": 5,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "level": "6",
+  "misc_skills": [
+    {
+      "Hit Points:": "200"
+    },
+    {
+      "Poison Resist.:": "100%"
+    },
+    {
+      "Rad. Resist.:": "100%"
+    }
+  ],
+  "karma": "Neutral",
+  "topics": [
+    {
+      "topic": "Attack",
+      "topic_text": "Attack",
+      "emotion": "Neutral 50",
+      "response_text": "Continuing intruder countermeasures!",
+      "index": "1"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "AlertToCombat",
+      "topic_text": "AlertToCombat",
+      "emotion": "Neutral 50",
+      "response_text": "Intruder Alert! Intruder Alert! Contacting Vault-Tec Security!",
+      "index": "8"
+    },
+    {
+      "topic": "LostToCombat",
+      "topic_text": "LostToCombat",
+      "emotion": "Neutral 50",
+      "response_text": "Intruder Located! Contacting Vault-Tec Security!",
+      "index": "9"
+    },
+    {
+      "topic": "NormalToCombat",
+      "topic_text": "StartCombat",
+      "emotion": "Neutral 50",
+      "response_text": "Intruder Alert! Intruder Alert! Contacting Vault-Tec Security!",
+      "index": "10"
+    }
+  ],
+  "combat": []
+}

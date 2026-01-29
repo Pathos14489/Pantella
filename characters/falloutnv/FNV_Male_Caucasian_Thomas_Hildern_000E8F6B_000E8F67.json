@@ -1,0 +1,583 @@
+{
+  "name": "Thomas Hildern",
+  "url": "/wiki/Thomas_Hildern",
+  "dialogue_name": "ThomasHildern.txt",
+  "dialogue_url": "/wiki/ThomasHildern.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000E8F6B",
+  "ref_id": "000E8F67",
+  "editor_id": "ThomasHildern",
+  "location": "Camp McCarran terminal building",
+  "location_url": "/wiki/Camp_McCarran_terminal_building",
+  "descriptions": [
+    "Followers of the Apocalypse",
+    "Thomas Hildern is a scientist who serves as the Director of Operations for the eastern branch of the NCR-aligned Office of Science and Industry (usually known as OSI East) in Fallout: New Vegas. He can be found in his office located inside the terminal building of Camp McCarran, in the southeastern area on the ground floor of the terminal.",
+    "A highly intelligent administrator in charge of OSI East, Hildern was part of the Followers of the Apocalypse. Fixated on personal advancement, he pretended to agree with their ideals in order to gain a proper education.",
+    "Hildern considers this to be a problem, as he believes the \"old ideas\" of free research and equality prevent the OSI from realizing its full potential. What he desires is a hierarchic system where a director sets the goals and junior researchers are kept in line, focusing on their appointed task and keeping any concerns to themselves.",
+    "Over time, his office also picked up additional responsibilities, such as aiding the NCR sharecropper program, by providing computer calculations determining water rationing and crop quotas. Despite persistent complaints from sharecroppers,",
+    "His primary focus in the Mojave is finding a way to ingratiate himself with the President of the NCR, Aaron Kimball. He wants to demonstrate the viability of his management style by achieving breakthroughs, claiming credit for them, and gain a seat on the OSI board of directors with the President's backing.",
+    "However, his single-minded focus on the big picture has led him to forget about the concept of the common good, reducing people and resources to numbers in a ledger.",
+    "However, in the pursuit of unlocking the secret of the Vault, Hildern has sent multiple mercenaries out to their deaths, with the latest being Keely, a genius scientist and an ancient ghoul. This lack of concern for lives has crossed a line with Williams, who resolved to warn future mercenaries about working for Hildern.",
+    "The expeditions to Vault 22 are also done off the books, without any paperwork filed. All are handshake deals done under the table, using OSI funds. As Office accounts are separate from the government's and OSI has little to no oversight, Hildern uses them as his personal budget,",
+    "Highly intelligent, knowledgeable, and with a high self-esteem,",
+    "His preoccupation with the big picture",
+    "At the same time, seeing himself as a savior of the NCR and OSI has resulted in him adopting an \"ends justify the means\" attitude. To achieve his goal, he has mastered the art of persuasion, demonstrating ample showmanship and practicing his speeches extensively,",
+    "At the same time, he is not in perfect control. The underlying contempt for people he sees as beneath him regularly shines through, and he can't help subtly insulting them, even if they are a newly hired contractor.",
+    "Hildern has no meaningful friends or relationships. He is obsessed with his duties and saving the NCR, to the point of barely leaving his office.",
+    "Hildern's nemesis is Keely, an ancient ghoul and a genius scientist. Despite working for Hildern as a contractor for a little over a week, Keely clashed with the director numerous times, making him look like a fool in front of various important NCR figures. Keely's contempt is rooted in her opinion: She considers Hildern a politician, a pompous little pedant,"
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Office of Science and IndustryFormerly:Followers of the Apocalypse",
+  "role": "Director of Operations, OSI East",
+  "detailed_location": "Terminal building,Camp McCarran",
+  "voice_actor": "Jude Ciccolella",
+  "special": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 5,
+    "Intelligence": 4,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "karma": "Good",
+  "voice_type": "MaleOld01",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "A pleasure to meet you! I'm Dr. Thomas Hildern, Director of Operations, OSI East. I presume you're here about Vault 22?{Very professional, smooth}",
+      "index": "1"
+    },
+    {
+      "topic": "VFreeformVault22ThomasHildernTopic003",
+      "topic_text": "What do you think of NCR's chances against the Legion?",
+      "emotion": "Neutral 50",
+      "response_text": "To be frank, I have no idea. I leave the fighting to Colonel Hsu, and I expect him to leave the science to me.{Hsu = \"shoe\"}",
+      "index": "9"
+    },
+    {
+      "topic": "VFreeformVault22ThomasHildernTopic004",
+      "topic_text": "Keely wiped the data. It's gone.",
+      "emotion": "Neutral 50",
+      "response_text": "Keely. Again. Do you... do you understand what that rotting old bitch has done?! Thousands of people, mass starvation. We had a chance to avoid that.{absolutely furious}",
+      "index": "11"
+    },
+    {
+      "topic": "VFreeformVault22ThomasHildernTopic007",
+      "topic_text": "No. \"Civilized\" people stack the deck in their own favor, don't they?",
+      "emotion": "Neutral 50",
+      "response_text": "If you're unhappy with the terms of our agreement, then consider this an object lesson.{fake friendliness}",
+      "index": "15"
+    },
+    {
+      "topic": "VFreeformVault22ThomasHildernTopic008",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Best of luck to you. Not that you'll need it. You seem like a reasonably competent person...{going back to his work, not even looking at the player anymore}",
+      "index": "17"
+    },
+    {
+      "topic": "VFreeformVault22ThomasHildernTopic009",
+      "topic_text": "Why terminate her contract?",
+      "emotion": "Neutral 50",
+      "response_text": "Williams has a tendency to feel before she thinks. Not in the lab. But everywhere else.",
+      "index": "18"
+    },
+    {
+      "topic": "VFreeformVault22ThomasHildernTopic010",
+      "topic_text": "You didn't always work for the OSI?",
+      "emotion": "Neutral 50",
+      "response_text": "No, I... no. The OSI hasn't been around for very long. I received my training elsewhere.{reluctant to discuss his former comrades}",
+      "index": "22"
+    },
+    {
+      "topic": "VFreeformVault22ThomasHildernTopic011",
+      "topic_text": "So who *did* train you?",
+      "emotion": "Neutral 50",
+      "response_text": "Before the bombs, I might have studied at any number of colleges, universities. They gave a man a chance to advance himself... or so I've heard.",
+      "index": "23"
+    },
+    {
+      "topic": "VFreeformVault22ThomasHildernTopic012",
+      "topic_text": "And what do the Followers believe?",
+      "emotion": "Neutral 50",
+      "response_text": "Knowledge for knowledge sake. A society of equals. They purport to be intelligent people, and then they spout this old-world dogma.",
+      "index": "26"
+    },
+    {
+      "topic": "VFreeformVault22ThomasHildernTopic013",
+      "topic_text": "Doesn't sound like a good place for a person of ambition.",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] Exactly right. Imagine what the Followers could have accomplished if they were properly motivated... if they had a unified purpose!{the player has said something he agrees with - now he's confiding in player}",
+      "index": "27"
+    },
+    {
+      "topic": "VFreeformVault22ThomasHildernTopic014",
+      "topic_text": "So... you wanted something more?",
+      "emotion": "Neutral 50",
+      "response_text": "[FAILED] That was years ago. No point in discussing it. We have more practical concerns... and more important things to talk about.{dismissive - player said the wrong thing}",
+      "index": "32"
+    },
+    {
+      "topic": "VFreeformVault22ThomasHildernTopic016",
+      "topic_text": "The Vault 22 data is gone. Destroyed.",
+      "emotion": "Neutral 50",
+      "response_text": "Destroyed. Really. I find that hard to believe. More likely, you failed to locate the proper server.{Keeping his cool, doesn't believe the playerSCRIPTER: Player should lose NCR reputation points here}",
+      "index": "33"
+    },
+    {
+      "topic": "VFreeformVault22ThomasHildernTopic017",
+      "topic_text": "Actually, I have an invoice for you from Alice McLafferty.",
+      "emotion": "Neutral 50",
+      "response_text": "From Alice? I'll see that she's paid right away.",
+      "index": "34"
+    },
+    {
+      "topic": "VFreeformVault22ThomasHildernTopic018",
+      "topic_text": "The plants in that vault were dangerous. We destroyed the data.",
+      "emotion": "Neutral 50",
+      "response_text": "We? We?! You were a part of this? After we made an explicit agreement, you have the fucking gall to destroy priceless scientific data?{absolutely furious}",
+      "index": "38"
+    },
+    {
+      "topic": "VFreeformVault22ThomasHildernTopic019",
+      "topic_text": "Believe whatever you want. It's the truth.",
+      "emotion": "Neutral 50",
+      "response_text": "Keely. It was Keely, wasn't it? Who else would fail to give a fuck that thousands of people are going to starve, without that data?{furious}",
+      "index": "40"
+    },
+    {
+      "topic": "VFreeformVault22ThomasHildernTopic022",
+      "topic_text": "I have an invoice for you from Alice McLafferty.",
+      "emotion": "Neutral 50",
+      "response_text": "From Alice? I'll see that she's paid right away.",
+      "index": "42"
+    },
+    {
+      "topic": "VFreeformVault22ThomasHildernTopic023",
+      "topic_text": "Then you don't want this invoice from Alice McLafferty?",
+      "emotion": "Neutral 50",
+      "response_text": "Fine. I'll see that she's paid. Crimson Caravan always fulfils their contractual obligations to the letter.{cold. This is also a veiled attack on the player, who didn't see through his \"contractual obligations.\"}",
+      "index": "45"
+    },
+    {
+      "topic": "VFreeformVault22ThomasHildernTopic024",
+      "topic_text": "What other responsibilities does this office have?",
+      "emotion": "Neutral 50",
+      "response_text": "We aid some programs the Republic has sponsored involving sharecropper farms in the area, but those haven't panned out too well from what I hear.",
+      "index": "47"
+    },
+    {
+      "topic": "VFreeformVault22ThomasHildernTopic025",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Dammit. Now you've made me forget what I was doing...{irritated with player for interrupting him}",
+      "index": "51"
+    },
+    {
+      "topic": "VMS06ThomasHildernTopic000",
+      "topic_text": "<Lie> Yes, that's right.",
+      "emotion": "Neutral 50",
+      "response_text": "Wonderful! Straight to it, then. Have you signed the release forms? No? Doesn't matter - we'll keep that to ourselves.",
+      "index": "52"
+    },
+    {
+      "topic": "VMS06ThomasHildernTopic001",
+      "topic_text": "No, this is the first I've heard about Vault 22.",
+      "emotion": "Neutral 50",
+      "response_text": "No, they wouldn't have briefed you, would they? Probably better that our junior fellows stay within the bounds of their pay grade, anyway.",
+      "index": "54"
+    },
+    {
+      "topic": "VMS06ThomasHildernTopic002",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Wrong turn? Happens all the time. Do they give me a secretary? Of course not.",
+      "index": "55"
+    },
+    {
+      "topic": "VMS06ThomasHildernTopic003",
+      "topic_text": "I'd be careful with that data. You didn't see those plants in the Vault.",
+      "emotion": "Neutral 50",
+      "response_text": "Your concerns are perfectly understandable, but I assure you, they're entirely misplaced. We would never use a technology that wasn't fully tested.",
+      "index": "56"
+    },
+    {
+      "topic": "VMS06ThomasHildernTopic004",
+      "topic_text": "BUGGED LINE BELOW",
+      "emotion": "Neutral 50",
+      "response_text": "[FAILED] If you are unhappy with the terms of our agreement, then consider this an object lesson.{condescending}",
+      "index": "58"
+    },
+    {
+      "topic": "VMS06ThomasHildernTopic005",
+      "topic_text": "Depends. How much are you paying?",
+      "emotion": "Neutral 50",
+      "response_text": "Ha ha! A mercenary, is that it? You won't be disappointed, I promise you. The Office of Science and Industry provides highly competitive benefits.",
+      "index": "61"
+    },
+    {
+      "topic": "VMS06ThomasHildernTopic006",
+      "topic_text": "This all sounds a little hard to believe.",
+      "emotion": "Neutral 50",
+      "response_text": "Skepticism can be forgiven. But I think you'll come around... if the reports I've heard are true.",
+      "index": "65"
+    },
+    {
+      "topic": "VMS06ThomasHildernTopic007",
+      "topic_text": "This doesn't sound like my kind of job.",
+      "emotion": "Neutral 50",
+      "response_text": "I'm very sorry to hear that. If you should change your mind, the offer will stand. As will the substantial reward...{Emphasis on the reward - he's still trying to entice the player}",
+      "index": "66"
+    },
+    {
+      "topic": "VMS06ThomasHildernTopic008",
+      "topic_text": "I'll think about it, and maybe I'll be back.",
+      "emotion": "Neutral 50",
+      "response_text": "Naturally! Take all the time you need.{very smooth}",
+      "index": "67"
+    },
+    {
+      "topic": "VMS06ThomasHildernTopic009",
+      "topic_text": "Forget it. I don't have time for this.",
+      "emotion": "Neutral 50",
+      "response_text": "Of course not! You're obviously a busy man. But if life should... quiet down a bit... I'm certain we can find a place for you here.{Big fake smile at the end}",
+      "index": "69"
+    },
+    {
+      "topic": "VMS06ThomasHildernTopic010",
+      "topic_text": "I'm listening.",
+      "emotion": "Neutral 50",
+      "response_text": "Imagine, if you will, the wasteland in bloom... vast fields of corn that grow from seeds and produce their bounty in the space of a month...{His elevator pitch}",
+      "index": "71"
+    },
+    {
+      "topic": "VMS06ThomasHildernTopic011",
+      "topic_text": "Save the sales pitch. Just tell me what you want me to do.",
+      "emotion": "Neutral 50",
+      "response_text": "All right. Straight to the point. I believe that the inhabitants of Vault 22 unlocked the secrets of vegetative growth.",
+      "index": "74"
+    },
+    {
+      "topic": "VMS06ThomasHildernTopic012",
+      "topic_text": "Yes, I'd say so.",
+      "emotion": "Neutral 50",
+      "response_text": "A realist. We have that in common. A year ago, I'd have said the same.{playing politics with the player}",
+      "index": "77"
+    },
+    {
+      "topic": "VMS06ThomasHildernTopic013",
+      "topic_text": "Nothing is impossible.",
+      "emotion": "Neutral 50",
+      "response_text": "Precisely. Science has proven that truth a thousand times over, but how many wasteland savages believe it? Present company excepted, of course.",
+      "index": "80"
+    },
+    {
+      "topic": "VMS06ThomasHildernTopic014",
+      "topic_text": "Get to the point.",
+      "emotion": "Neutral 50",
+      "response_text": "Fair enough. My point is this. I believe that the inhabitants of Vault 22 unlocked the secrets of vegetative growth.",
+      "index": "83"
+    },
+    {
+      "topic": "VMS06ThomasHildernTopic015",
+      "topic_text": "All right. I'll do it.",
+      "emotion": "Neutral 50",
+      "response_text": "Good. No need to check in with the NCR authorities, I can authorize your payment from OSI accounts.{abruptly turns off sales pitch (and the smile) - now he's all business, sealing the deal}",
+      "index": "84"
+    },
+    {
+      "topic": "VMS06ThomasHildernTopic016",
+      "topic_text": "I'll think about it.",
+      "emotion": "Neutral 50",
+      "response_text": "Very well. I hope you'll consider this an open offer from the OSI. Now, I'm sure your time is valuable, so unless there was anything else...",
+      "index": "87"
+    },
+    {
+      "topic": "VMS06ThomasHildernTopic017",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Yes... goodbye.{Dismissing the player, turning back to his work}",
+      "index": "88"
+    },
+    {
+      "topic": "VMS06ThomasHildernTopic018",
+      "topic_text": "Tell me more about the OSI.",
+      "emotion": "Neutral 50",
+      "response_text": "The Office of Science and Industry. That's a rather expansive topic. I could talk for hours, but I'm sure I'd bore you.",
+      "index": "89"
+    },
+    {
+      "topic": "VMS06ThomasHildernTopic019",
+      "topic_text": "Anything else I should know?",
+      "emotion": "Neutral 50",
+      "response_text": "I thought it was a fairly straightforward assignment. It's a simple question of retrieving the data, which shouldn't prove overly challenging.{fake smile}",
+      "index": "92"
+    },
+    {
+      "topic": "VMS06ThomasHildernTopic020",
+      "topic_text": "Actually, I had some other questions.",
+      "emotion": "Neutral 50",
+      "response_text": "Oh? What might those be?",
+      "index": "94"
+    },
+    {
+      "topic": "VMS06ThomasHildernTopic024",
+      "topic_text": "Tell me more.",
+      "emotion": "Neutral 50",
+      "response_text": "Good! I thought I sensed a kindred soul in you, beneath the wasteland veneer.{His sales pitch worked, but he can't help subtly insulting the player at the end}",
+      "index": "95"
+    },
+    {
+      "topic": "VMS06ThomasHildernTopic025",
+      "topic_text": "Scientific discovery is never so simple as that.",
+      "emotion": "Neutral 50",
+      "response_text": "Isn't it? One directs one's efforts - or the efforts of others - toward a goal, and progress is made. It's a matter of incentives, nothing more.{He's disagreeing with the player}",
+      "index": "96"
+    },
+    {
+      "topic": "VMS06ThomasHildernTopic027",
+      "topic_text": "What do you need me to do?",
+      "emotion": "Neutral 50",
+      "response_text": "I believe that the inhabitants of Vault 22 unlocked the secrets of vegetative growth.",
+      "index": "97"
+    },
+    {
+      "topic": "VMS06ThomasHildernTopic028",
+      "topic_text": "Well... consider it a down payment on future service.",
+      "emotion": "Neutral 50",
+      "response_text": "[FAILED] No, I'm sure I won't require your services in the future. The OSI does not enter into long-term arrangements with its contractors.",
+      "index": "98"
+    },
+    {
+      "topic": "VMS06ThomasHildernTopic030",
+      "topic_text": "I've brought the data from Vault 22.",
+      "emotion": "Neutral 50",
+      "response_text": "Wonderful! Excellent work! Let me see it... it'll take a moment to decode on my terminal...{Surprised that the player actually succeeded}",
+      "index": "100"
+    },
+    {
+      "topic": "VMS06ThomasHildernTopic031",
+      "topic_text": "Never mind. I'll be back later.",
+      "emotion": "Neutral 50",
+      "response_text": "You won't keep me in suspense for long, I hope? Of course I can't authorize any payments until I have the data in hand...",
+      "index": "101"
+    },
+    {
+      "topic": "VMS06ThomasHildernTopic032",
+      "topic_text": "No problem. I can wait.",
+      "emotion": "Neutral 50",
+      "response_text": "I think...  Williams' decryption algorithms seem to be working...{Williams is a character's last name}",
+      "index": "102"
+    },
+    {
+      "topic": "VMS06ThomasHildernTopic033",
+      "topic_text": "By the way... you never warned me about the dangers in that place.",
+      "emotion": "Neutral 50",
+      "response_text": "Didn't I? Did you encounter undue difficulties? Clearly not, or you wouldn't be standing here, would you?",
+      "index": "105"
+    },
+    {
+      "topic": "VMS06ThomasHildernTopic038",
+      "topic_text": "Fine. Just give me my reward.",
+      "emotion": "Neutral 50",
+      "response_text": "I knew you were a reasonable person. Here you are... our agreed-upon sum.",
+      "index": "107"
+    },
+    {
+      "topic": "VMS06ThomasHildernTopic041",
+      "topic_text": "Glad to be of service.",
+      "emotion": "Neutral 50",
+      "response_text": "A pleasure working with you, really! I'll make certain that you're mentioned in the final report, you have my word on it.{He's totally lying.}",
+      "index": "108"
+    },
+    {
+      "topic": "VMS06ThomasHildernTopic042",
+      "topic_text": "I agree, I've more than done my part. You owe me more caps.",
+      "emotion": "Neutral 50",
+      "response_text": "You want to renegotiate your contract. Mm. This is a very serious matter, you do understand that, don't you?{condescending}",
+      "index": "109"
+    },
+    {
+      "topic": "VMS06ThomasHildernTopic043",
+      "topic_text": "Make it fast. I want my caps.",
+      "emotion": "Neutral 50",
+      "response_text": "If the data's intact, you'll get your reward. I gave my word. I'm not the kind of wasteland savage you're used to dealing with.{slightly contemptuous}",
+      "index": "111"
+    },
+    {
+      "topic": "VMS06ThomasHildernTopic044",
+      "topic_text": "Damn right. No thanks to you.",
+      "emotion": "Neutral 50",
+      "response_text": "I'm sorry you feel that way. But we both came out ahead, so... no harm done, I hope.{fake friendliness}",
+      "index": "112"
+    },
+    {
+      "topic": "VMS06ThomasHildernTopic045",
+      "topic_text": "All right. Then I'll sell this data to some other interested party...",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] Now... wait a minute...{Getting nervous}",
+      "index": "113"
+    },
+    {
+      "topic": "VMS06ThomasHildernTopic046",
+      "topic_text": "What contract? You cut an under-the-table deal with me.",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] You're saying that I didn't file the proper paperwork, is that it? I suppose you're an expert on NCR procedures?",
+      "index": "114"
+    },
+    {
+      "topic": "VMS06ThomasHildernTopic049",
+      "topic_text": "I'm not the first person you've sent to Vault 22... am I?",
+      "emotion": "Neutral 50",
+      "response_text": "I never said you were. You've been speaking to Williams, haven't you?{The player is confronting him on a sensitive issue, and he's keeping a poker face.}",
+      "index": "115"
+    },
+    {
+      "topic": "VMS06ThomasHildernTopic050",
+      "topic_text": "By the way, that Vault was just as dangerous as Williams thought.",
+      "emotion": "Neutral 50",
+      "response_text": "I don't see how that's relevant. The dangers of the Vault were your business, not mine. The only question is whether the data is still intact.{dismissive}",
+      "index": "116"
+    },
+    {
+      "topic": "VMS06ThomasHildernTopic052",
+      "topic_text": "I'm the one asking the questions, Dr. Hildern.",
+      "emotion": "Neutral 50",
+      "response_text": "Fair enough. Begging your pardon, but this is beginning to feel like an interrogation.{overly polite }",
+      "index": "118"
+    },
+    {
+      "topic": "VMS06ThomasHildernTopic053",
+      "topic_text": "<Lie> No, Williams didn't tell me anything.",
+      "emotion": "Neutral 50",
+      "response_text": "All right. I'll take you at your word. Williams didn't say anything at all, you just came to this conclusion on your own.{not obviously sarcastic - should sound like he's trying to be reasonable}",
+      "index": "119"
+    },
+    {
+      "topic": "VMS06ThomasHildernTopic056",
+      "topic_text": "Yes, I have. What difference does it make?",
+      "emotion": "Neutral 50",
+      "response_text": "None at all. Informed speculation on my part. Williams is very good at her job, so it remains secure... despite her best efforts.",
+      "index": "120"
+    },
+    {
+      "topic": "VMS06ThomasHildernTopic058",
+      "topic_text": "What's your opinion of Williams?",
+      "emotion": "Neutral 50",
+      "response_text": "Williams is an admirable researcher. If she wasn't, I'd have terminated her contract, and she'd be begging for work from my former employers.",
+      "index": "122"
+    },
+    {
+      "topic": "VMS06ThomasHildernTopic059",
+      "topic_text": "You're doing all these things yourself?",
+      "emotion": "Neutral 50",
+      "response_text": "Yes. With the assistance of my team, of course.{taking credit for other people's work}",
+      "index": "123"
+    },
+    {
+      "topic": "VMS06ThomasHildernTopic060",
+      "topic_text": "NCR has a food shortage?",
+      "emotion": "Neutral 50",
+      "response_text": "Not yet. But our government understands the value of proactive thought. Our studies project an imbalance between production and consumption.",
+      "index": "124"
+    },
+    {
+      "topic": "VMS06ThomasHildernTopic062",
+      "topic_text": "Do you control the Dam from here?",
+      "emotion": "Neutral 50",
+      "response_text": "Directly? No. But we attempt to maximize its output. You have no idea how difficult it is to provide power to an entire nation.",
+      "index": "126"
+    },
+    {
+      "topic": "VMS06ThomasHildernTopic063",
+      "topic_text": "Fantastic.",
+      "emotion": "Neutral 50",
+      "response_text": "Yes! That was it, exactly.",
+      "index": "142"
+    },
+    {
+      "topic": "VMS06ThomasHildernTopic064",
+      "topic_text": "No, that was me. I fixed HELIOS One.",
+      "emotion": "Neutral 50",
+      "response_text": "I... see. Of course you did.{doesn't believe the player, but humoring him.}",
+      "index": "143"
+    },
+    {
+      "topic": "VMS06ThomasHildernTopic065",
+      "topic_text": "How many others have you sent to the Vault?",
+      "emotion": "Neutral 50",
+      "response_text": "I'd have to consult my records. Eight? Ten? Your point is what?{nonchalant}",
+      "index": "144"
+    },
+    {
+      "topic": "VMS06ThomasHildernTopic066",
+      "topic_text": "I prefer to know what I'm getting myself into.",
+      "emotion": "Neutral 50",
+      "response_text": "You want certainty? You'll never find it... especially not in the pursuit of science.",
+      "index": "145"
+    },
+    {
+      "topic": "VMS06ThomasHildernTopic067",
+      "topic_text": "Maybe I should cancel our deal.",
+      "emotion": "Neutral 50",
+      "response_text": "Do whatever you think is best. You're under no obligations. If you want the caps, you'll complete the job. Simple.{trying to sound very reasonable}",
+      "index": "146"
+    },
+    {
+      "topic": "VMS06ThomasHildernTopic068",
+      "topic_text": "I want double the caps. Or I spread the word that you're full of shit.",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] All right. I'll admit that it's been difficult to find anyone willing to enter the Vault. And I'd rather get the data sooner than later.",
+      "index": "149"
+    },
+    {
+      "topic": "VMS06ThomasHildernTopic071",
+      "topic_text": "It doesn't trouble you that you sent eight or ten people to their deaths?",
+      "emotion": "Neutral 50",
+      "response_text": "I have no evidence that they're dead. A thousand things could have happened between here and the Vault.",
+      "index": "151"
+    },
+    {
+      "topic": "VMS06ThomasHildernTopic072",
+      "topic_text": "Then you broke our agreement. I want double the caps.",
+      "emotion": "Neutral 50",
+      "response_text": "[FAILED] No. Our agreement was very specific. You bring me the data, I give you a reward.",
+      "index": "153"
+    },
+    {
+      "topic": "VMS06Topic000",
+      "topic_text": "...and make sure you have some healthy competition.",
+      "emotion": "Neutral 50",
+      "response_text": "There's... there's no need to do anything rash. Naturally, OSI would be willing to negotiate for exclusive rights to that data.{Recomposing himself}",
+      "index": "155"
+    },
+    {
+      "topic": "VMS06Topic001",
+      "topic_text": "You said you were the Director of OSI?",
+      "emotion": "Neutral 50",
+      "response_text": "Director of the entire OSI? Me? If I didn't know better, I'd say you were trying to plant seditious ideas in my head. Ha ha ha.",
+      "index": "158"
+    },
+    {
+      "topic": "VMS06Topic002",
+      "topic_text": "Then it wouldn't matter if I mentioned our deal to the colonel?",
+      "emotion": "Neutral 50",
+      "response_text": "All right. Fair enough. No need to bring the military into this matter - it's between the two of us, after all.{He's scared, trying to hide it}",
+      "index": "161"
+    }
+  ],
+  "conversation": [],
+  "combat": []
+}

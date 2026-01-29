@@ -1,0 +1,161 @@
+{
+  "name": "Hadrian",
+  "url": "/wiki/Hadrian_(Fallout:_New_Vegas)",
+  "dialogue_name": "VMSTopsHadrian.txt",
+  "dialogue_url": "/wiki/VMSTopsHadrian.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "0011F9B9",
+  "ref_id": "0011F9C1",
+  "editor_id": "VMSTopsHadrian",
+  "location": "Atomic Wrangler Casino",
+  "location_url": "/wiki/Atomic_Wrangler_Casino",
+  "descriptions": [
+    "Hadrian is a ghoul working as a stand-up comedian at the Atomic Wrangler Casino in 2281.",
+    "Hadrian claims that he is \"world famous\"... and that \"fame is fleeting,\"",
+    "* After giving Tommy Torini's business card to Hadrian in Talent Pool.",
+    "^ The lines that have grammatical gender are sometimes merged together with each other."
+  ],
+  "race": "Ghoul",
+  "gender": "Male",
+  "affiliation": "Atomic Wrangler CasinoChairmen(optional)",
+  "role": "Stand-up comedian",
+  "detailed_location": "Atomic Wrangler CasinoThe Aces(optional).",
+  "voice_actor": "Chris Andrew Ciulla",
+  "special": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 3,
+    "Intelligence": 8,
+    "Agility": 5,
+    "Luck": 4
+  },
+  "level": "1",
+  "misc_skills": [],
+  "karma": "Neutral",
+  "voice_type": "MaleGenericGhoul",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Disgust 35",
+      "response_text": "Whoa, baby! Am I looking at a mirror, or are you just that ugly?",
+      "index": "1"
+    },
+    {
+      "topic": "HadrianComedy",
+      "topic_text": "So you perform stand-up comedy, huh?",
+      "emotion": "Disgust 25",
+      "response_text": "Eesh, is my act that bad, or are you just that dumb? Yeah, that's right - got me a nice, juicy contract with the management.",
+      "index": "4"
+    },
+    {
+      "topic": "HadrianIntro",
+      "topic_text": "So who are you, exactly?",
+      "emotion": "Pained 25",
+      "response_text": "Either you need to get your eyes checked or that \"fame is fleeting\" thing is true - and since I happen to be world famous, you must be going blind.",
+      "index": "5"
+    },
+    {
+      "topic": "HadrianWork",
+      "topic_text": "Tommy Torini is hiring new acts at the Tops. I think you could make good money.",
+      "emotion": "Sad 25",
+      "response_text": "Too bad I got this ironclad contract with the Garrets. They'll never let me out of it.",
+      "index": "7"
+    },
+    {
+      "topic": "VMSTopsTalentPoolVMSTopsHadrianTopic000",
+      "topic_text": "Excuse me?",
+      "emotion": "Neutral 50",
+      "response_text": "What, you mean you're not part of the act? Heh. Sorry. Thought you were the heckler Garret hired to spice up the shows.",
+      "index": "11"
+    },
+    {
+      "topic": "VMSTopsTalentPoolVMSTopsHadrianTopic001",
+      "topic_text": "Watch your mouth, ghoul, or I might just rip your jaw off.",
+      "emotion": "Neutral 50",
+      "response_text": "Whoa Nelly! There's insult comedy and then there's psycho comedy! I guess you aren't the heckler Garret hired to spice up my show. What do you want?",
+      "index": "12"
+    },
+    {
+      "topic": "VMSTopsTalentPoolVMSTopsHadrianTopic002",
+      "topic_text": "Whoa, why the hostility?",
+      "emotion": "Neutral 50",
+      "response_text": "Come on, stay in character! You're supposed to be heckling me!",
+      "index": "13"
+    },
+    {
+      "topic": "VMSTopsTalentPoolVMSTopsHadrianTopic004",
+      "topic_text": "Why bother? You're embarassing yourself enough as it is.",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] Hey, not bad! Your timing's terrible and you got no style, but you might make it as a professional heckler.",
+      "index": "14"
+    },
+    {
+      "topic": "VMSTopsTalentPoolVMSTopsHadrianTopic005",
+      "topic_text": "Afraid not.",
+      "emotion": "Neutral 50",
+      "response_text": "So, what do you want, then?",
+      "index": "16"
+    },
+    {
+      "topic": "VMSTopsTalentPoolVMSTopsHadrianTopic006",
+      "topic_text": "No, but if there's money in it, I could be.",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah, no, we were hoping to find someone who was actually... what's the word... funny? What do you want, kid?",
+      "index": "17"
+    },
+    {
+      "topic": "VMSTopsTalentPoolVMSTopsHadrianTopic009",
+      "topic_text": "Not yet. I'm still working on it.",
+      "emotion": "Neutral 50",
+      "response_text": "I'm not suirprised, he's a stubborn, greedy bastard.",
+      "index": "18"
+    },
+    {
+      "topic": "VMSTopsTalentPoolVMSTopsHadrianTopic011",
+      "topic_text": "Judging from the economic state of Freeside, they can't be paying you that much.",
+      "emotion": "Sad 30",
+      "response_text": "Okay, I admit it, I ain't exactly rolling in caps here, but whaddya want? I'm under contract, I can't get out.",
+      "index": "19"
+    },
+    {
+      "topic": "VMSTopsTalentPoolVMSTopsHadrianTopic014",
+      "topic_text": "I could talk to Garret and try to convince him to let you go.",
+      "emotion": "Pained 20",
+      "response_text": "Heh, good luck. Garret's a tough, mean sonofabitch, he's not likely to give up. Let me know if you make any headway.",
+      "index": "21"
+    },
+    {
+      "topic": "VMSTopsTalentPoolVMSTopsHadrianTopic015",
+      "topic_text": "Well, tough luck. Let me know if you change your mind.",
+      "emotion": "Sad 30",
+      "response_text": "Ain't my mind needs changing, kid, it's Garret's.",
+      "index": "22"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYEGoodbye.",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah, go on, scram.",
+      "index": "23"
+    },
+    {
+      "topic": "TopsHadrianPerformanceStrings",
+      "topic_text": "TopsHadrianPerformanceStrings",
+      "emotion": "Neutral 50",
+      "response_text": "It's great to be up here, looking down at all your smiling faces. That won't last long.",
+      "index": "24"
+    }
+  ],
+  "combat": []
+}

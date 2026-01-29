@@ -1,0 +1,235 @@
+{
+  "name": "Daniel Agincourt",
+  "url": "/wiki/Daniel_Agincourt",
+  "dialogue_name": "ProjectPurityDanielAgincourt.txt",
+  "dialogue_url": "/wiki/ProjectPurityDanielAgincourt.txt",
+  "spawned_dead": false,
+  "spawned": true,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "0001CCA1",
+  "ref_id": "0001CCBA",
+  "editor_id": "ProjectPurityDanielAgincourt",
+  "location": "Jefferson Memorial,Citadel",
+  "location_url": "/wiki/Jefferson_Memorial",
+  "descriptions": [
+    "Daniel Agincourt is an engineer working on Project Purity in Fallout 3.",
+    "Daniel is rather rude, prideful and standoffish.",
+    "When the Enclave seizes the project, he and the rest of the team make their escape through the Taft Tunnel. Initially, he will assume that James was somehow responsible for the Enclave seizing their facility and killing his coworkers. Once he learns of James' passing, he will be very remorseful and apologize for his behavior.",
+    "Once they are safe at the opposite side of the Potomac River, they make their way to the Citadel, where they join Lyons' Brotherhood's efforts at restoring the project. After the Brotherhood's successful capture and restarting of the project, Dr. Li will finally have had enough, and leaves to travel to the Commonwealth to start her life anew. Daniel, after having stuck by Dr. Li for two decades, will be hurt that she would just up and leave everything behind.",
+    "Two weeks later, after the Lone Wanderer awakens from their coma, he can be found continuing his work at the project during Broken Steel. However, he now claims that he truly runs the place behind the scenes, and that the Brotherhood scribes are not up to the tasks at hand. Although he claims that his boss, Scribe Bigsley, would disagree,"
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Project Purity",
+  "role": "Engineer",
+  "detailed_location": "Jefferson MemorialCitadel",
+  "voice_actor": "Gregory Gorton",
+  "special": {
+    "Strength": 3,
+    "Perception": 6,
+    "Endurance": 3,
+    "Charisma": 4,
+    "Intelligence": 8,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "level": "1→20→30 (Broken Steelonly)",
+  "tag_skills": [
+    {
+      "Explosives:": "32→100"
+    },
+    {
+      "Medicine:": "36→100"
+    },
+    {
+      "Science:": "36→100"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "20→115→165"
+    }
+  ],
+  "karma": "Good",
+  "voice_type": "MaleAdult01DefaultBDC",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "DLC03TLPPScientistWhatDoingHere",
+      "topic_text": "What are you doing here?",
+      "emotion": "Neutral 50",
+      "response_text": "What's it look like? I'm doing my work, same as I've always done.",
+      "index": "1"
+    },
+    {
+      "topic": "DLC03TLPPScientistsWhereDrLi",
+      "topic_text": "Where's Doctor Li?",
+      "emotion": "Neutral 50",
+      "response_text": "You haven't heard? I guess I shouldn't be surprised.",
+      "index": "4"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "We need to get this resolved, and fast. We're too exposed like this. We need to keep moving.{grave, concerned}",
+      "index": "8"
+    },
+    {
+      "topic": "MQ00InitialGreetingChoice1Choice 1",
+      "topic_text": "Hey, we're cool.",
+      "emotion": "Neutral 50",
+      "response_text": "Great. If there's anything I can do for you, let me know.",
+      "index": "19"
+    },
+    {
+      "topic": "MQ00InitialGreetingChoice2Choice 2",
+      "topic_text": "Take a hike, asshole.",
+      "emotion": "Anger 50",
+      "response_text": "Fine, screw you.",
+      "index": "20"
+    },
+    {
+      "topic": "MQ05DanDadDoingRightThing",
+      "topic_text": "He's just trying to do the right thing.",
+      "emotion": "Disgust 50",
+      "response_text": "Sure, sure. No matter that he disappears for almost twenty years, leaving us all hanging. It's not like we have lives or anything.{sarcastic, annoyed}",
+      "index": "21"
+    },
+    {
+      "topic": "MQ05DanGetAwayFromMe",
+      "topic_text": "You'd better walk away right now.",
+      "emotion": "Fear 30",
+      "response_text": "Yeah? Well... I'm just saying.{Intimidated, but trying to save face and look tough}",
+      "index": "22"
+    },
+    {
+      "topic": "MQ05DanMyDadsDead",
+      "topic_text": "My father is dead.",
+      "emotion": "Sad 50",
+      "response_text": "Oh hell. I'm sorry, I didn't know. I just thought that since this happened after you showed up... Well, you know. Man, I'm sorry.{shocked and apologetic}",
+      "index": "23"
+    },
+    {
+      "topic": "MQ05DanWhyAsshole",
+      "topic_text": "You don't need to be such an asshole...",
+      "emotion": "Anger 50",
+      "response_text": "God forbid I should be upset that twice now my work has been screwed over by your father.{annoyed}",
+      "index": "24"
+    },
+    {
+      "topic": "MQ05Gun10mmSilenced",
+      "topic_text": "I can give you a Silenced 10mm Pistol.",
+      "emotion": "Neutral 50",
+      "response_text": "I'm not sure the silencer will do me much good, but I'll take it. Thanks.{tired but hopeful}",
+      "index": "26"
+    },
+    {
+      "topic": "MQ05Gun32Pistol",
+      "topic_text": "I've got a .32 caliber pistol.",
+      "emotion": "Neutral 50",
+      "response_text": "I guess it's better than nothing. Thanks.{tired but hopeful}",
+      "index": "27"
+    },
+    {
+      "topic": "MQ05GunChinesePistol",
+      "topic_text": "How about a Chinese Pistol?",
+      "emotion": "Neutral 50",
+      "response_text": "Hmm, okay. Never used one of these before, but I can probably figure it out.{tired but hopeful}",
+      "index": "28"
+    },
+    {
+      "topic": "MQ05GunMagnum",
+      "topic_text": "Here, take this Magnum.",
+      "emotion": "Neutral 50",
+      "response_text": "Wow, you sure about that? Okay...{tired but hopeful}",
+      "index": "29"
+    },
+    {
+      "topic": "MQ05GunNoPistol",
+      "topic_text": "Sorry, I don't have a pistol on me.",
+      "emotion": "Neutral 50",
+      "response_text": "Okay. If you find one, let me know.{tired but hopeful}",
+      "index": "30"
+    },
+    {
+      "topic": "MQ05PPScientistGetItWorking",
+      "topic_text": "Do you think Project Purity will ever work again?",
+      "emotion": "Disgust 50",
+      "response_text": "The hell do you care? You showed up here what, five minutes ago, and now you're strutting around like you own the place?{annoyed}",
+      "index": "31"
+    },
+    {
+      "topic": "MQ05ScientistAnythingIShouldKnow",
+      "topic_text": "Anything I should know about this place?",
+      "emotion": "Disgust 50",
+      "response_text": "Besides the fact that you shouldn't be here?{annoyed}",
+      "index": "34"
+    },
+    {
+      "topic": "MQ05ScientistCanYouHelp",
+      "topic_text": "Can you help get us through this?",
+      "emotion": "Neutral 50",
+      "response_text": "I can try. I'm not much good with weapons, but if you've got a pistol I can use, I'll do what I can.{tired but hopeful}",
+      "index": "36"
+    },
+    {
+      "topic": "MQ05ScientistWhatsYourStory",
+      "topic_text": "What's your story?",
+      "emotion": "Neutral 50",
+      "response_text": "Unlike some people around here, I stuck with Doctor Li through it all. I was the last one to leave when we finally gave up.{annoyed}",
+      "index": "37"
+    },
+    {
+      "topic": "MQ05ScientistWhereFuseBox",
+      "topic_text": "Where can I find the fuse box?",
+      "emotion": "Neutral 50",
+      "response_text": "Head back downstairs. The one you're looking for is underneath the mainframe room, I think.",
+      "index": "39"
+    },
+    {
+      "topic": "MQ05ScientistWherePumps",
+      "topic_text": "Where are the flood control pumps?",
+      "emotion": "Neutral 50",
+      "response_text": "Dad's got you doing the dirty work, huh? Well, good for you. Doesn't hurt to get your hands dirty.",
+      "index": "41"
+    },
+    {
+      "topic": "Mq05Gun10mmPistol",
+      "topic_text": "I've got a 10mm Pistol. Want it?",
+      "emotion": "Neutral 50",
+      "response_text": "Sure. Beats having nothing, doesn't it?{tired but hopeful}",
+      "index": "44"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "I have to go now.",
+      "emotion": "Neutral 50",
+      "response_text": "Be careful.",
+      "index": "45"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Neutral 50",
+      "response_text": "What did you do?{angry, accusing}",
+      "index": "49"
+    }
+  ],
+  "combat": [
+    {
+      "topic": "Attack",
+      "topic_text": "Attack",
+      "emotion": "Anger 50",
+      "response_text": "Yaaaaaah!",
+      "index": "53"
+    }
+  ]
+}

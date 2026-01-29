@@ -1,0 +1,71 @@
+{
+  "name": "Mr. Soren",
+  "url": "/wiki/Soren",
+  "dialogue_name": "VFSVanGraffCustomer.txt",
+  "dialogue_url": "/wiki/VFSVanGraffCustomer.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "0012411C",
+  "ref_id": "00124121",
+  "editor_id": "VFSVanGraffCustomer",
+  "location": "Silver Rush",
+  "location_url": "/wiki/Silver_Rush",
+  "descriptions": [
+    "Mr. Soren is a business man found in Freeside in 2281.",
+    "Mr. Soren is a businessman whose associates deal with the Silver Rush. He is having an argument with Gloria Van Graff the only time the player character sees him. During the argument, he protests that he and his associates want to adjust the second payment on an order for weapons due to the quality of the weapons being below expectations.",
+    "In response, Jean-Baptiste Cutting kills one of the Van Graffs' own guards, Jacob, in a show of force. Gloria then says she expects the payment the next morning, and Soren flees the building.",
+    "Mr. Soren appears in Fallout: New Vegas."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Van Graffs(formerly)",
+  "role": "Businessman",
+  "detailed_location": "Silver Rush",
+  "voice_actor": "Liam O'Brien",
+  "special": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 2,
+    "Intelligence": 5,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "level": "1",
+  "misc_skills": [],
+  "karma": "Neutral",
+  "voice_type": "MaleAdult05",
+  "geck_race": "CaucasianOld",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "You people are crazy!",
+      "index": "1"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "VFSVanGraffIntro01",
+      "topic_text": "VFSVanGraffIntro01",
+      "emotion": "Neutral 50",
+      "response_text": "Ms. Van Graff, my associates and I have decided that we wish to renegotiate the terms of our deal.",
+      "index": "2"
+    },
+    {
+      "topic": "VFSVanGraffIntro03",
+      "topic_text": "VFSVanGraffIntro03",
+      "emotion": "Neutral 50",
+      "response_text": "W-What is this, Ms. Van Graff?",
+      "index": "4"
+    }
+  ],
+  "combat": []
+}

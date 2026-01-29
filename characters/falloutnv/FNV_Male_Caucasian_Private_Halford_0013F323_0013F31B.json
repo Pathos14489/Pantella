@@ -1,0 +1,240 @@
+{
+  "name": "Private Halford",
+  "url": "/wiki/Halford",
+  "dialogue_name": "NVCGHalford.txt",
+  "dialogue_url": "/wiki/NVCGHalford.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": true,
+  "base_id": "0013F323",
+  "ref_id": "0013F31B",
+  "editor_id": "NVCGHalford",
+  "location": "Camp Guardian caves",
+  "location_url": "/wiki/Camp_Guardian_caves",
+  "descriptions": [
+    "Private Halford is a New California Republic Army military policeman stationed at Camp Guardian in 2281. The sole survivor of a lakelurk attack, he can be found injured in the Camp Guardian caves.",
+    "Under the command of Sergeant Banner, Private Halford and eleven others were stationed at Camp Guardian. After clearing the long-neglected hiking trails to establish an NCR outpost, the camp began to suffer from supply problems. A week after their official request for a radio from Camp McCarran, they still had received nothing. Seeking to acquire a way to contact their superiors, they sent a runner to Ranger Station Bravo (an hour-long journey at full sprint) to request any kind of radio equipment they could spare, even if it was a handheld.",
+    "The Rangers at Bravo gave the soldiers a handheld radio so they could use their equipment as a relay to Camp McCarran. Private Halford was put in charge of the handheld, as well as making their daily reports to Camp McCarran. The handheld worked well enough, though the camp's problems only got worse.",
+    "Lakelurks attacked Camp Guardian one night, while some were sleeping in their tents. In the ensuing struggle, the camp was torn apart, and its logs scattered.",
+    "He claims that, at the time of the attack, he was cleaning his firearm, and was knocked down and dragged down into the caves. He managed to grab his knife and throw it into the lakelurk's back. Once the mutant was on the ground with him, he beat and choked the creature to death.",
+    "Eventually, he lost hope of ever seeing another human face;",
+    "Help for Halford"
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "NCR military police",
+  "role": "MPCamp survivor",
+  "detailed_location": "Camp Guardian caves",
+  "voice_actor": "Jesse Burch",
+  "special": {
+    "Strength": 6,
+    "Perception": 8,
+    "Endurance": 6,
+    "Charisma": 4,
+    "Intelligence": 5,
+    "Agility": 7,
+    "Luck": 7
+  },
+  "level": "18",
+  "tag_skills": [
+    {
+      "Guns:": "93"
+    },
+    {
+      "Melee Weap.:": "93"
+    },
+    {
+      "Sneak:": "66"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "210"
+    },
+    {
+      "Dam. Threshold:": "10"
+    }
+  ],
+  "karma": "Neutral",
+  "voice_type": "MaleAdult03",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Fear 70",
+      "response_text": "{Desparate, relieved}Oh, thank God! I didn't think I'd ever see another human face down here.",
+      "index": "1"
+    },
+    {
+      "topic": "vFreeformCampGuardianNVCGHalfordTopic000",
+      "topic_text": "What are you talking about?",
+      "emotion": "Surprise 60",
+      "response_text": "{Relieved}You must be the backup I've been calling for. Where are the rest of your men?",
+      "index": "12"
+    },
+    {
+      "topic": "vFreeformCampGuardianNVCGHalfordTopic001",
+      "topic_text": "I heard your radio broadcast. I'm here to help.",
+      "emotion": "Surprise 60",
+      "response_text": "Thank God. I hoped someone would come eventually, but where are the rest of your men?",
+      "index": "13"
+    },
+    {
+      "topic": "vFreeformCampGuardianNVCGHalfordTopic002",
+      "topic_text": "This is it, buddy.",
+      "emotion": "Surprise 50",
+      "response_text": "{Urgent}Shit. Have you any damn idea what lives in these caves!? We need to get out of...{cut short realizing he's yelling}",
+      "index": "14"
+    },
+    {
+      "topic": "vFreeformCampGuardianNVCGHalfordTopic004",
+      "topic_text": "What killed the other troopers?",
+      "emotion": "Neutral 50",
+      "response_text": "{anxious}I don't know. Some kind of man-fish freak like the one I killed over there.",
+      "index": "16"
+    },
+    {
+      "topic": "vFreeformCampGuardianNVCGHalfordTopic005",
+      "topic_text": "Are you okay?",
+      "emotion": "Disgust 50",
+      "response_text": "I managed to kill that thing, but not before it mangled my leg all up. No way I'm walking out of here like this.",
+      "index": "18"
+    },
+    {
+      "topic": "vFreeformCampGuardianNVCGHalfordTopic006",
+      "topic_text": "How did you kill that thing?",
+      "emotion": "Neutral 50",
+      "response_text": "With my bare hands. I would have shot it, but I was cleaning my gun when they swarmed the camp.",
+      "index": "20"
+    },
+    {
+      "topic": "vFreeformCampGuardianNVCGHalfordTopic007{Medicine}",
+      "topic_text": "Looks like some nasty lacerations and a dislocated joint. You're lucky I found you.",
+      "emotion": "Happy 70",
+      "response_text": "[SUCCEEDED] Thanks a lot, doc. I think I should be able to walk out of here, now.",
+      "index": "23"
+    },
+    {
+      "topic": "vFreeformCampGuardianNVCGHalfordTopic008",
+      "topic_text": "<Use Doctor Bag to heal his leg> This should help fix up your leg.",
+      "emotion": "Happy 70",
+      "response_text": "Thanks a lot, doc. Looks like I should be able to at least walk out of here, now.",
+      "index": "28"
+    },
+    {
+      "topic": "vFreeformCampGuardianNVCGHalfordTopic009",
+      "topic_text": "I'll be back.",
+      "emotion": "Neutral 50",
+      "response_text": "Great, just leave me here, then.",
+      "index": "30"
+    },
+    {
+      "topic": "vFreeformCampGuardianNVCGHalfordTopic010",
+      "topic_text": "That's a nice gun you've got there.",
+      "emotion": "Neutral 50",
+      "response_text": "You can have it if you get me out of here alive. I won't have a use for it when I get back to California.",
+      "index": "31"
+    },
+    {
+      "topic": "vFreeformCampGuardianNVCGHalfordTopic011",
+      "topic_text": "You're free to leave. The way up is clear.",
+      "emotion": "Neutral 50",
+      "response_text": "Great, I'll start heading back to California now. I'm not about to let myself get killed by future NCR incompetence.",
+      "index": "32"
+    },
+    {
+      "topic": "vFreeformCampGuardianNVCGHalfordTopic012",
+      "topic_text": "We need to clear the caves first.",
+      "emotion": "Disgust 60",
+      "response_text": "Are you crazy? No way in hell am I going deeper into these caves.",
+      "index": "35"
+    },
+    {
+      "topic": "vFreeformCampGuardianNVCGHalfordTopic014{Speech}",
+      "topic_text": "If we don't clear the caves, your friends' deaths were for nothing. Can you live with that?",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] All right, you have a point. They were good men and deserved better.",
+      "index": "37"
+    },
+    {
+      "topic": "vFreeformCampGuardianNVCGHalfordTopic015",
+      "topic_text": "Let's get moving.",
+      "emotion": "Neutral 50",
+      "response_text": "Lead on.",
+      "index": "41"
+    },
+    {
+      "topic": "vFreeformCampGuardianNVCGHalfordTopic017",
+      "topic_text": "Hey, you said you would help clear the caves.",
+      "emotion": "Neutral 50",
+      "response_text": "I know, but now that I can see the way out, I'm not so sure. I'd rather not join my dead buddies anytime soon.",
+      "index": "42"
+    },
+    {
+      "topic": "vFreeformCampGuardianNVCGHalfordTopic018",
+      "topic_text": "<Raise arms>Boogedy boogedy boo!",
+      "emotion": "Fear 80",
+      "response_text": "{Fearful, surprised}Ahhh!...",
+      "index": "44"
+    },
+    {
+      "topic": "vFreeformCampGuardianNVCGHalfordTopic019",
+      "topic_text": "Well, have a safe trip.",
+      "emotion": "Neutral 50",
+      "response_text": "If you find my friends, please return their dogtags to the NCR. People need to know what happened here.",
+      "index": "47"
+    },
+    {
+      "topic": "vFreeformCampGuardianNVCGHalfordTopic020",
+      "topic_text": "You said I could have your rifle before you go.",
+      "emotion": "Neutral 50",
+      "response_text": "Sure enough, you got me clear of this mess. Here you go.",
+      "index": "49"
+    },
+    {
+      "topic": "vFreeformCampGuardianNVCGHalfordTopic022",
+      "topic_text": "You said I could have your rifle before you go.",
+      "emotion": "Neutral 50",
+      "response_text": "Sure enough, you got me clear of this mess. Here you go.",
+      "index": "50"
+    },
+    {
+      "topic": "vFreeformCampGuardianNVCGHalfordTopic024",
+      "topic_text": "What killed the other troopers?",
+      "emotion": "Neutral 50",
+      "response_text": "{anxious}I don't know. Some kind of man-fish freak like the one I killed over there.",
+      "index": "51"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "HELLO",
+      "topic_text": "Hello",
+      "emotion": "Neutral 50",
+      "response_text": "Hey, over here.",
+      "index": "53"
+    },
+    {
+      "topic": "vFreeformCampGuardianBattleDone",
+      "topic_text": "vFreeformCampGuardianBattleDone",
+      "emotion": "Neutral 50",
+      "response_text": "{Triumphant, taunting the dead}Ha! How do you like that you sons of bitches?!",
+      "index": "55"
+    }
+  ],
+  "combat": [
+    {
+      "topic": "RadioHello(Camp Guardian Radio)",
+      "topic_text": "RadioHello",
+      "emotion": "Neutral 50",
+      "response_text": "{Hushed, urgent, impatient}Bravo, come in, Bravo. Is anyone out there?",
+      "index": "56"
+    }
+  ]
+}

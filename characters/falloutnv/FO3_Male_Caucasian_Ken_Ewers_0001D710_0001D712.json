@@ -1,0 +1,205 @@
+{
+  "name": "Ken Ewers",
+  "url": "/wiki/Ken_Ewers",
+  "dialogue_name": "KenEwers.txt",
+  "dialogue_url": "/wiki/KenEwers.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": true,
+  "can_be_companion": false,
+  "base_id": "0001D710",
+  "ref_id": "0001D712",
+  "editor_id": "KenEwers",
+  "location": "Ewer residence",
+  "location_url": "/wiki/Ewer_residence",
+  "descriptions": [
+    "Ken Ewers is a resident of Arefu in 2277.",
+    "Ken is terrified of the current attacks that have been plaguing Arefu. He masks this by being incredibly short and gruff with strangers and will only impart the smallest tidbits of useless information to them. He is fiercely overprotective of his wife Brailee and will interpose himself if anyone even tries speaking with her. He is paranoid and lacks physical fighting skills.",
+    "His wife's mentality was brought about by the combination of all the trouble around Arefu, living off a poor diet of prepackaged \"food\" and being confined to their home with Ken for long periods of time. In her delusion, she has compensated by creating a utopian world inside her mind.",
+    "After the Family began targeting Arefu for sustenance, and their culmination of the murder of the brahmin, Evan King put the settlement into lockdown, leaving himself as the sole guard. Ken does not believe that this will make them any safer and believes that they need to take action. He, however, follows what King tells him to do as the settlement's leader.",
+    "Ken stays in his home all day. Upon completion of Blood Ties, he will come outside and roam around along with the other residents."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Arefu",
+  "role": "Resident",
+  "detailed_location": "Ewer residence,Arefu",
+  "voice_actor": "Gregory Gorton",
+  "special": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 4,
+    "Intelligence": 4,
+    "Agility": 6,
+    "Luck": 4
+  },
+  "mod_special_values": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 4,
+    "Intelligence": 4,
+    "Agility": 7,
+    "Luck": 4
+  },
+  "level": "5",
+  "tag_skills": [
+    {
+      "Barter:": "45"
+    },
+    {
+      "Small Guns:": "49(51)"
+    },
+    {
+      "Unarmed:": "45(47)"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "45(50)"
+    },
+    {
+      "Critical Chance:": "4%"
+    },
+    {
+      "Unarmed Dam.:": "2.75"
+    },
+    {
+      "Poison Resist.:": "15%(20%)"
+    },
+    {
+      "Rad. Resist.:": "6%(8%)"
+    },
+    {
+      "Carry Weight:": "210"
+    },
+    {
+      "Damage Res.:": "2%"
+    }
+  ],
+  "karma": "Neutral",
+  "voice_type": "MaleAdult01DefaultBDC",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Anger 50",
+      "response_text": "We aren't talking any more. Get out!",
+      "index": "1"
+    },
+    {
+      "topic": "MS09FinTLHelpMe",
+      "topic_text": "Any help you can provide would be appreciated.",
+      "emotion": "Neutral 50",
+      "response_text": "Well, all I can do is offer my repair services to you. I'm pretty good with fixing stuff.",
+      "index": "6"
+    },
+    {
+      "topic": "MS09KEwersCT01",
+      "topic_text": "Calm down, pal, before I put a hole in your chest.",
+      "emotion": "Anger 50",
+      "response_text": "Look, \"pal,\", there is no way you're going to get to me or my wife so just back on out of here!",
+      "index": "8"
+    },
+    {
+      "topic": "MS09KEwersCT02",
+      "topic_text": "Whoa, whoa, whoa.... Take it easy.",
+      "emotion": "Anger 50",
+      "response_text": "Yeah right, and the second I drop my guard you pounce. No thanks.",
+      "index": "9"
+    },
+    {
+      "topic": "MS09KEwersCT02b",
+      "topic_text": "Why are you being so hostile?",
+      "emotion": "Disgust 50",
+      "response_text": "Maybe it's because my wife has gone mental. No wait, I think it's because some lunatics are trying to kill us.",
+      "index": "11"
+    },
+    {
+      "topic": "MS09KEwersCT02c",
+      "topic_text": "Your wife let me in... something about a catalog?",
+      "emotion": "Anger 90",
+      "response_text": "Oh for the love of...",
+      "index": "13"
+    },
+    {
+      "topic": "MS09KEwersCT03",
+      "topic_text": "What the hell is your problem?",
+      "emotion": "Anger 70",
+      "response_text": "Do you understand English? I said get out!",
+      "index": "16"
+    },
+    {
+      "topic": "MS09KEwersCT04",
+      "topic_text": "Look, I'm not here to hurt anyone, I swear.",
+      "emotion": "Disgust 50",
+      "response_text": "All I care about are two things. My life and my wife's life. Beyond that, I don't give two shits.",
+      "index": "17"
+    },
+    {
+      "topic": "MS09TLCheckonYou",
+      "topic_text": "Evan King told me to check on you. Is everything okay?",
+      "emotion": "Disgust 50",
+      "response_text": "We're great. Just peachy. I love sitting in my house with my thumb up my ass.",
+      "index": "19"
+    },
+    {
+      "topic": "MS09TLEvanKingTopic",
+      "topic_text": "So, what's your take on Evan King?",
+      "emotion": "Disgust 50",
+      "response_text": "Well, he's town mayor or sheriff or whatever he calls himself. He calls all the shots.",
+      "index": "21"
+    },
+    {
+      "topic": "MS09TLLookingforIanWest",
+      "topic_text": "I'm looking for Ian West. Have you seen him?",
+      "emotion": "Neutral 50",
+      "response_text": "Nope. Everyone stays inside, except Evan King of course.",
+      "index": "23"
+    },
+    {
+      "topic": "MS09TLWestsDead",
+      "topic_text": "Did you know the Wests are dead?",
+      "emotion": "Anger 50",
+      "response_text": "Son of a bitch! I knew the Family were going to cross the line. It was only a matter of time.",
+      "index": "24"
+    },
+    {
+      "topic": "MS09TLWhereIsEveryone",
+      "topic_text": "Can you tell me more about what's been going on around here?",
+      "emotion": "Neutral 50",
+      "response_text": "Everyone is keeping themselves safe from the Family. If I was you, I'd do the same.",
+      "index": "26"
+    },
+    {
+      "topic": "MS09TLWhoAreFamilyTell me about the Family.",
+      "topic_text": "What do you think about the Family?",
+      "emotion": "Disgust 50",
+      "response_text": "They're lowlife scum who decided to use Arefu as their own personal amusement park. Oh, they're a fun bunch.",
+      "index": "28"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "I have to go now.",
+      "emotion": "Disgust 50",
+      "response_text": "Good, now get out!",
+      "index": "30"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Neutral 50",
+      "response_text": "Huh? Oh, you're back.",
+      "index": "32"
+    }
+  ],
+  "combat": []
+}

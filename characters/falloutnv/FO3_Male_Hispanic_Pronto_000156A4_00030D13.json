@@ -1,0 +1,357 @@
+{
+  "name": "Pronto",
+  "url": "/wiki/Pronto",
+  "dialogue_name": "Pronto.txt",
+  "dialogue_url": "/wiki/Pronto.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": true,
+  "can_repair": true,
+  "can_be_companion": false,
+  "base_id": "000156A4",
+  "ref_id": "00030D13",
+  "editor_id": "Pronto",
+  "location": "Lock and Load",
+  "location_url": "/wiki/Lock_and_Load",
+  "descriptions": [
+    "Pronto is the owner of the Lock and Load weapons store working for the slavers at Paradise Falls in 2277.",
+    "Rumored to be the son of old slaver, Pronto is the sole proprietor of the Lock and Load weapons store at Paradise Falls, taking over after the untimely death of the previous owner due to an apparent weapons mishap, or so claims Forty.",
+    "This \"nice guy\" persona puts him at odds with the rest of the slavers, who supply him with only subpar weapons looted from their raids, while keeping the better loot for themselves.",
+    "A poor selection of weapons to sell, coupled with the danger of being enslaved or hung from the sign at the entrance to Paradise Falls if he tries to protest or take the better loot by force, has driven Pronto to seek outside assistance to improve his store's stock.",
+    "During the unmarked quest Economics of Violence, Pronto will ask the player to obtain twenty chinese assault rifles to improve his weapon stock.",
+    "Pronto sells weapons, armor and clothing, consumables and ammunition, and has the ability to repair items. Upon completion of Economics of Violence, Pronto states that he will provide a 20% discount to the player; however, no such discount exists.",
+    "Economics of Violence: One can expand Pronto's shop by giving him 20 Chinese assault rifles. In addition, he will gain a few more caps (around 400 instead of 150).",
+    "Pronto has unused dialogue related to buying Railway rifle schematics. These topics are related to his used line where the player asks if he makes his own weapons:"
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Slavers",
+  "role": "Owner ofLock and Load",
+  "detailed_location": "Paradise Falls",
+  "voice_actor": "Craig Sechler",
+  "special": {
+    "Strength": 4,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 6,
+    "Intelligence": 7,
+    "Agility": 4,
+    "Luck": 5
+  },
+  "level": "3→10 (PClevel x 0.75)",
+  "tag_skills": [
+    {
+      "Barter:": "43→76"
+    },
+    {
+      "Lockpick:": "41→74"
+    },
+    {
+      "Science:": "45→78"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "75→110"
+    },
+    {
+      "Critical Chance:": "5%"
+    },
+    {
+      "Unarmed Dam.:": "1.15"
+    },
+    {
+      "Poison Resist.:": "15%"
+    },
+    {
+      "Rad. Resist.:": "6%"
+    },
+    {
+      "Carry Weight:": "190"
+    }
+  ],
+  "karma": "Evil",
+  "voice_type": "MaleAdult04DC",
+  "geck_race": "Hispanic",
+  "topics": [
+    {
+      "topic": "FFPFBuySchematics",
+      "topic_text": "Do you make a lot of your own stuff?",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah, pretty much. Take it apart, put it back together. It ain't hard. Sometimes I design my own weapons too.",
+      "index": "1"
+    },
+    {
+      "topic": "FFPFBuySchematics1",
+      "topic_text": "What have you made?",
+      "emotion": "Neutral 50",
+      "response_text": "You know, this and that but... I made this kickass rifle. Fires railroad spikes. It will fuck a dude up, man.",
+      "index": "2"
+    },
+    {
+      "topic": "FFPFBuySchematics2",
+      "topic_text": "Wow... your own stuff. That's... just stupid. Why take apart good guns?",
+      "emotion": "Neutral 50",
+      "response_text": "You ain't got no artistic sense, man. There are a million different ways to kill someone, all it takes is a little imagination.",
+      "index": "3"
+    },
+    {
+      "topic": "FFPFProntoSupplies",
+      "topic_text": "You guys are pretty isolated. Where do you get your supplies?",
+      "emotion": "Neutral 50",
+      "response_text": "Well, the guys usually bring in what they grab on missions. I mean, you always got to kill a few people when you're gathering meat.",
+      "index": "4"
+    },
+    {
+      "topic": "FFPFProntoSupplies1",
+      "topic_text": "So you pretty much get the leftovers?",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah, pretty much. Greedy assholes. I don't know how I'm supposed to pull down a living over here when they don't trade fair.",
+      "index": "7"
+    },
+    {
+      "topic": "FFPFProntoSupplies1a",
+      "topic_text": "So what would it take for you to get some decent supplies?",
+      "emotion": "Neutral 50",
+      "response_text": "I'd have to have some decent supplies to trade for them. If I have more things that these douchebags want, they'll bring me better stuff to trade.",
+      "index": "8"
+    },
+    {
+      "topic": "FFPFProntoSupplies1a1",
+      "topic_text": "What do you need? Maybe I could bring you stuff to trade.",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah... you know, I could really get this little shithole going if I had some better stuff.",
+      "index": "10"
+    },
+    {
+      "topic": "FFPFProntoSupplies1a1a",
+      "topic_text": "Sounds like a good deal to me, man.",
+      "emotion": "Neutral 50",
+      "response_text": "Alright, twenty Chinese Assault Rifles and we're in business. Just bring any you find back to me.",
+      "index": "13"
+    },
+    {
+      "topic": "FFPFProntoSupplies1a1b",
+      "topic_text": "What's in it for me?",
+      "emotion": "Neutral 50",
+      "response_text": "Well, I can't really kick much your way now but once I get running, I'll be able to offer you much better stuff.",
+      "index": "16"
+    },
+    {
+      "topic": "FFPFProntoSupplies1a1c",
+      "topic_text": "Yeah, fuck that. I don't work for you.",
+      "emotion": "Neutral 50",
+      "response_text": "Well, whatever, man. I don't need to like you to do business with you. If you want to get something going, you know where to find me.",
+      "index": "18"
+    },
+    {
+      "topic": "FFPFProntoSupplies1a2",
+      "topic_text": "Sounds pretty rough, but that's business for you.",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah, it is. Is there anything else you need?",
+      "index": "20"
+    },
+    {
+      "topic": "FFPFProntoSupplies1a3",
+      "topic_text": "Tough shit, man. Now shut up and sell me the stuff you already have.",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah, whatever asshole. Shut up and buy something.",
+      "index": "21"
+    },
+    {
+      "topic": "FFPFProntoSupplies1b",
+      "topic_text": "Why not put a boot to their asses and take the good stuff?",
+      "emotion": "Neutral 50",
+      "response_text": "Because there's only one of me, man. I know you're new here, but you piss too many people off around here and you'll have trouble on your hands.",
+      "index": "22"
+    },
+    {
+      "topic": "FFPFProntoSupplies1b1",
+      "topic_text": "What do you need? Maybe I could bring you stuff to trade.",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah... you know, I could really get this little shithole going if I had some better stuff.",
+      "index": "26"
+    },
+    {
+      "topic": "FFPFProntoSupplies1b2",
+      "topic_text": "Sounds pretty rough, but that's business for you.",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah, it is. Is there anything else you need?",
+      "index": "29"
+    },
+    {
+      "topic": "FFPFProntoSupplies1b3",
+      "topic_text": "Tough shit, man. Now shut up and sell me the stuff you already have.",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah, whatever asshole. Shut up and buy something.",
+      "index": "30"
+    },
+    {
+      "topic": "FFPFProntoSupplies2",
+      "topic_text": "They keep the good stuff? No wonder your selection sucks.",
+      "emotion": "Neutral 50",
+      "response_text": "Hey, man. Rude. You don't like it, shop somewhere else.",
+      "index": "31"
+    },
+    {
+      "topic": "FFPFProntoSupplies3",
+      "topic_text": "Tough break, man. But let's talk about something else.",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah, no one wants to hear me bitch about my problems. What else do you need, man?",
+      "index": "33"
+    },
+    {
+      "topic": "FFPFProntoTradeChineseAssaultRifles",
+      "topic_text": "Let's talk about those Chinese Assault Rifles you were looking for.",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah? You got some?",
+      "index": "34"
+    },
+    {
+      "topic": "FFPFProntoTradeChineseAssaultRifles1",
+      "topic_text": "I've got one rifle for you.",
+      "emotion": "Neutral 50",
+      "response_text": "Alright, I'll just take it off your hands then... but I still need more. Come back when you have some to trade.",
+      "index": "35"
+    },
+    {
+      "topic": "FFPFProntoTradeChineseAssaultRifles10",
+      "topic_text": "I've got ten rifles for you.",
+      "emotion": "Neutral 50",
+      "response_text": "All right, I'll just take them off your hands then... but I still need more. Come back when you have some to trade.",
+      "index": "36"
+    },
+    {
+      "topic": "FFPFProntoTradeChineseAssaultRifles2",
+      "topic_text": "I've got two rifles for you.",
+      "emotion": "Neutral 50",
+      "response_text": "Alright, I'll just take those off your hands then... now let me just see how many more I need...",
+      "index": "37"
+    },
+    {
+      "topic": "FFPFProntoTradeChineseAssaultRifles3",
+      "topic_text": "I've got three rifles for you.",
+      "emotion": "Neutral 50",
+      "response_text": "Alright, I'll just take those off your hands then... now let me just see how many more I need...",
+      "index": "38"
+    },
+    {
+      "topic": "FFPFProntoTradeChineseAssaultRifles4",
+      "topic_text": "I've got four rifles for you.",
+      "emotion": "Neutral 50",
+      "response_text": "Alright, I'll just take those off your hands then... now let me just see how many more I need...",
+      "index": "39"
+    },
+    {
+      "topic": "FFPFProntoTradeChineseAssaultRifles5",
+      "topic_text": "I've got five rifles for you.",
+      "emotion": "Neutral 50",
+      "response_text": "Alright, I'll just take those off your hands then... now let me just see how many more I need...",
+      "index": "40"
+    },
+    {
+      "topic": "FFPFProntoTradeChineseAssaultRifles6",
+      "topic_text": "I've got six rifles for you.",
+      "emotion": "Neutral 50",
+      "response_text": "Alright, I'll just take those off your hands then... now let me just see how many more I need...",
+      "index": "41"
+    },
+    {
+      "topic": "FFPFProntoTradeChineseAssaultRifles7",
+      "topic_text": "I've got seven rifles for you.",
+      "emotion": "Neutral 50",
+      "response_text": "Alright, I'll just take those off your hands then... now let me just see how many more I need...",
+      "index": "42"
+    },
+    {
+      "topic": "FFPFProntoTradeChineseAssaultRifles8",
+      "topic_text": "I've got eight rifles for you.",
+      "emotion": "Neutral 50",
+      "response_text": "Alright, I'll just take those off your hands then... now let me just see how many more I need...",
+      "index": "43"
+    },
+    {
+      "topic": "FFPFProntoTradeChineseAssaultRifles9",
+      "topic_text": "I've got nine rifles for you.",
+      "emotion": "Neutral 50",
+      "response_text": "Alright, I'll just take those off your hands then... now let me just see how many more I need...",
+      "index": "44"
+    },
+    {
+      "topic": "FFPFProntoTradeChineseAssaultRiflesEND",
+      "topic_text": "Actually, never mind.",
+      "emotion": "Neutral 50",
+      "response_text": "Your call, man. But if I'm gonna get this place going again, I'm gonna need a lot of something to trade.",
+      "index": "45"
+    },
+    {
+      "topic": "FFPFProntoTradeChineseAssaultRiflesEnough1",
+      "topic_text": "So? What's the count?",
+      "emotion": "Neutral 50",
+      "response_text": "That should be it! Give me a few days to spread the word around. I should be resupplied pretty quick.",
+      "index": "46"
+    },
+    {
+      "topic": "FFPFProntoTradeChineseAssaultRiflesEnough2",
+      "topic_text": "Come on, I haven't got all day.",
+      "emotion": "Neutral 50",
+      "response_text": "That should be it! Give me a few days to spread the word around. I should be resupplied pretty quick.",
+      "index": "49"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "You need guns, I got guns. You need armor? Got that too. So long as you got the caps for 'em.",
+      "index": "52"
+    },
+    {
+      "topic": "PFProntoRepair",
+      "topic_text": "I need to you repair my weapons.",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah, sure, no problem at all.",
+      "index": "54"
+    },
+    {
+      "topic": "PFProntoServices",
+      "topic_text": "Let me see your inventory.",
+      "emotion": "Neutral 50",
+      "response_text": "Sure thing, hoss. If you see anything you want, let me know.",
+      "index": "57"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "I have to go now.",
+      "emotion": "Neutral 50",
+      "response_text": "Hey, man. Come back any time.",
+      "index": "61"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Neutral 50",
+      "response_text": "I'm off right now. Hit me up in the morning.",
+      "index": "62"
+    },
+    {
+      "topic": "PFTalkProntoEulogyJones1",
+      "topic_text": "PFTalkProntoEulogy1",
+      "emotion": "Neutral 50",
+      "response_text": "I'm doin' pretty good, Eulogy. The guys have bought a ton of stock lately  there somethin' big goin' down?",
+      "index": "69"
+    },
+    {
+      "topic": "PFTalkProntoEulogyJones3",
+      "topic_text": "PFTalkProntoEulogy3",
+      "emotion": "Neutral 50",
+      "response_text": "Got it right here, man. Enjoy.",
+      "index": "71"
+    }
+  ],
+  "combat": []
+}

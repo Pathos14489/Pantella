@@ -1,0 +1,107 @@
+{
+  "name": "Sergeant Kilborn",
+  "url": "/wiki/Kilborn",
+  "dialogue_name": "VMOSgtKilborn.txt",
+  "dialogue_url": "/wiki/VMOSgtKilborn.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "00136FD3",
+  "ref_id": "001370C9",
+  "editor_id": "vMOSgtKilborn",
+  "location": "Mojave Outpost",
+  "location_url": "/wiki/Mojave_Outpost",
+  "descriptions": [
+    "Sergeant Kilborn is an Army non-commissioned officer stationed at the New California Republic's border outpost in the Mojave Wasteland. He appears in Fallout: New Vegas.",
+    "Since he joined the NCR Army, Kilborn has seen his fair share of war and politics, enough to give him a rather cynical perspective on life. After being posted to the republic's Mojave Outpost prior to 2281, serving as protectors of the gateway between New California and the Mojave, being left to watch over the endless stretches of desert has done little to improve his spirits."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "NCR Army",
+  "role": "Guard",
+  "detailed_location": "Mojave Outpost",
+  "voice_actor": "Emerson Brooks",
+  "special": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 5,
+    "Intelligence": 5,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "level": "5",
+  "tag_skills": [
+    {
+      "Explosives:": "46"
+    },
+    {
+      "Guns:": "46"
+    },
+    {
+      "Melee Weap.:": "46"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Neutral",
+  "voice_type": "MaleAdult01DefaultB",
+  "geck_race": "AfricanAmericanOld",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "Heard you helped out Jackson, thanks for that. Caravans are still waiting for clearance to move out, but at least there's movement.",
+      "index": "1"
+    },
+    {
+      "topic": "vNiptonVulpesvMOSgtKilbornTopic000",
+      "topic_text": "What is this place?",
+      "emotion": "Neutral 50",
+      "response_text": "Outpost, Mojave Outpost. Watching a lot of nothing, feels like a big Brahmin pen for caravans.",
+      "index": "4"
+    },
+    {
+      "topic": "vNiptonVulpesvMOSgtKilbornTopic001",
+      "topic_text": "What are those statues of?",
+      "emotion": "Neutral 50",
+      "response_text": "Those two? Represents unification.{Beat, a little defeated}Mostly good for shade. Won't do much else when the Legion reaches us.",
+      "index": "7"
+    },
+    {
+      "topic": "vNiptonVulpesvMOSgtKilbornTopic002",
+      "topic_text": "Any work around here?",
+      "emotion": "Neutral 50",
+      "response_text": "Nothing I know of,{studies the player}but if you've come from the North, means you can travel freer than most around here.",
+      "index": "8"
+    },
+    {
+      "topic": "vNiptonVulpesvMOSgtKilbornTopic003",
+      "topic_text": "I'll be going now.",
+      "emotion": "Neutral 50",
+      "response_text": "Watch yourself.",
+      "index": "11"
+    },
+    {
+      "topic": "vNiptonVulpesvMojaveNCRTrooperTopic003",
+      "topic_text": "Legion's attacked Nipton, burned and killed everyone.",
+      "emotion": "Neutral 50",
+      "response_text": "{Slight shock}What?{Beat}There's no way... we're{emph}miles from the Colorado. They...{To himself}they aren't even waiting for the Dam to fall. They're already inside the borders...",
+      "index": "12"
+    },
+    {
+      "topic": "vNiptonVulpesvMojaveNCRTrooperTopic004",
+      "topic_text": "<Attack> Ave Caesar!",
+      "emotion": "Neutral 50",
+      "response_text": "Legion!",
+      "index": "14"
+    }
+  ],
+  "conversation": [],
+  "combat": []
+}

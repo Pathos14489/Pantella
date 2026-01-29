@@ -1,0 +1,121 @@
+{
+  "name": "Barton Thorn",
+  "url": "/wiki/Barton_Thorn",
+  "dialogue_name": "VESGSGeckoman.txt",
+  "dialogue_url": "/wiki/VESGSGeckoman.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "00157C8D",
+  "ref_id": "00157C8F",
+  "editor_id": "VESGSGeckoman",
+  "location": "NearGoodsprings source",
+  "location_url": "/wiki/Goodsprings_source",
+  "descriptions": [
+    "Barton Thorn is a prospector living near Goodsprings in 2281.",
+    "Not much is known about Barton or his motives, but he tries to deceive the Courier by telling them to kill the geckos on the ridge, to save \"his girl.\" Afterward, he tries to kill the Courier in order to retrieve a treasure stashed at the ridge overlook.",
+    "The G.E.C.K. nicknames him \"Geckoman.\" This is also used in the G.E.C.K. ID of the cut \"note to self,\" indicating that he was meant to be its holder."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "role": "Prospector",
+  "detailed_location": "Goodsprings source",
+  "voice_actor": "Ari Rubin",
+  "special": {
+    "Strength": 6,
+    "Perception": 6,
+    "Endurance": 5,
+    "Charisma": 3,
+    "Intelligence": 3,
+    "Agility": 6,
+    "Luck": 4
+  },
+  "level": "3",
+  "tag_skills": [
+    {
+      "Guns:": "39"
+    },
+    {
+      "Melee Weap.:": "39"
+    },
+    {
+      "Sneak:": "39"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Neutral",
+  "voice_type": "MaleAdult04",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "Hello? Can you help me?",
+      "index": "1"
+    },
+    {
+      "topic": "VES02DialogueGeckomanTopic000",
+      "topic_text": "What's wrong?",
+      "emotion": "Neutral 50",
+      "response_text": "My girl is trapped by geckos on the ridge and I can't get to her. Please, she's going to die!",
+      "index": "5"
+    },
+    {
+      "topic": "VES02DialogueGeckomanTopic001",
+      "topic_text": "Sorry, got my own problems.",
+      "emotion": "Neutral 50",
+      "response_text": "I could pay you.",
+      "index": "6"
+    },
+    {
+      "topic": "VES02DialogueGeckomanTopic002",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Fine, just leave me to my misery then.",
+      "index": "7"
+    },
+    {
+      "topic": "VES02DialogueGeckomanTopic003",
+      "topic_text": "50 caps or I walk.",
+      "emotion": "Neutral 50",
+      "response_text": "I'll give you whatever you want, just hurry!",
+      "index": "10"
+    },
+    {
+      "topic": "VES02DialogueGeckomanTopic006",
+      "topic_text": "Where is she?",
+      "emotion": "Neutral 50",
+      "response_text": "Go up the path past the broken radio tower and go to the right... they're at the top of the trail.",
+      "index": "11"
+    },
+    {
+      "topic": "VES02DialogueGeckomanTopic008",
+      "topic_text": "I'll see what I can do.",
+      "emotion": "Neutral 50",
+      "response_text": "You will? Thank you for helping me. Please hurry.",
+      "index": "12"
+    },
+    {
+      "topic": "VES02DialogueGeckomanTopic009",
+      "topic_text": "Sorry, too dangerous.",
+      "emotion": "Neutral 50",
+      "response_text": "But she'll die if you don't help!",
+      "index": "13"
+    },
+    {
+      "topic": "VES02DialogueGeckomanVESGSWastelandWanderer01Topic001",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "You just gotta help her, man.",
+      "index": "14"
+    }
+  ],
+  "conversation": [],
+  "combat": []
+}

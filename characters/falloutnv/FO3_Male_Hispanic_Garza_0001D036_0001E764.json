@@ -1,0 +1,258 @@
+{
+  "name": "Garza",
+  "url": "/wiki/Garza",
+  "dialogue_name": "Garza.txt",
+  "dialogue_url": "/wiki/Garza.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "0001D036",
+  "ref_id": "0001E764",
+  "editor_id": "Garza",
+  "location": "Rivet City science lab",
+  "location_url": "/wiki/Rivet_City_science_lab",
+  "descriptions": [
+    "Garza is a citizen of Rivet City and general laborer for Doctor Madison Li's science team in Fallout 3.",
+    "Born around 2247, Garza is a physically imposing and very reserved man. His past is a mystery to others in Rivet City, and he refuses to talk about it with anyone. In fact, he would prefer not to talk at all, and tends to limit his speech to as few words as necessary.",
+    "Garza claims to have had little purpose in his life before Doctor Madison Li helped him through a difficult time in his life.",
+    "Garza spends his free time working out on the Rivet City flight deck.",
+    "The following is Garza's intended daily schedule in Rivet City. His home room is on the ground floor of the Rivet City science lab, and he will try to stay there at any time that he does not have other activities in his schedule.",
+    "Garza is the Spanish word for heron."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Project Purity",
+  "role": "General laborer",
+  "detailed_location": "Rivet CityJefferson Memorial(The Waters of Life)The Citadel(optional)",
+  "voice_actor": "Pete Papageorge",
+  "special": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 5,
+    "Intelligence": 4,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "mod_special_values": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 6,
+    "Charisma": 5,
+    "Intelligence": 4,
+    "Agility": 7,
+    "Luck": 5
+  },
+  "level": "1→20→30 (Broken Steelonly)",
+  "tag_skills": [
+    {
+      "Barter:": "30→100"
+    },
+    {
+      "Medicine:": "28→100"
+    },
+    {
+      "Melee Weap.:": "32→100"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "25→120→170"
+    }
+  ],
+  "karma": "Good",
+  "voice_type": "MaleAdult02DC",
+  "geck_race": "Hispanic",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "I am sorry. I cannot continue. I need to rest for a while.{firm, defiant}",
+      "index": "1"
+    },
+    {
+      "topic": "MQ00InitialGreetingChoice1Choice 1",
+      "topic_text": "What do you do around here?",
+      "emotion": "Neutral 50",
+      "response_text": "I help Doctor Li when she needs equipment moved. I am no scientist, I just help with the heavy things.",
+      "index": "10"
+    },
+    {
+      "topic": "MQ00InitialGreetingChoice2Choice 2",
+      "topic_text": "Really? You sure don't look like a scientist.",
+      "emotion": "Neutral 50",
+      "response_text": "No, no. I am only here to help with moving things, lifting heavy equipment. I am no scientist.",
+      "index": "11"
+    },
+    {
+      "topic": "MQ00WhoAreYou",
+      "topic_text": "Who are you?",
+      "emotion": "Neutral 50",
+      "response_text": "I am Garza. I help Doctor Li here in the lab.",
+      "index": "13"
+    },
+    {
+      "topic": "MQ05GarzaICanHelpWe need to do something about Garza.",
+      "topic_text": "Hey. Is there anything I can do to help?",
+      "emotion": "Neutral 50",
+      "response_text": "I do not have my usual supplies of medicine. I was too hasty in leaving.",
+      "index": "14"
+    },
+    {
+      "topic": "MQ05GarzaMedsHere, take some Stimpaks. That should get him through.",
+      "topic_text": "I have some Stimpaks here.",
+      "emotion": "Neutral 50",
+      "response_text": "Ah, so you do. Give them to Doctor Li, if you please.",
+      "index": "15"
+    },
+    {
+      "topic": "MQ05GarzaNevermindForget it. I've got nothing.",
+      "topic_text": "Sorry, I guess there isn't anything I can do right now.",
+      "emotion": "Neutral 50",
+      "response_text": "Perhaps if I just rest a while... [gasp] Perhaps not.",
+      "index": "16"
+    },
+    {
+      "topic": "MQ05GarzaStayBehind",
+      "topic_text": "You're only going to slow us down. Maybe you should stay behind.",
+      "emotion": "Neutral 50",
+      "response_text": "Yes, you are right. There is no reason to put everyone at risk on my account. Go on without me.",
+      "index": "17"
+    },
+    {
+      "topic": "MQ05GarzaStopCrazy",
+      "topic_text": "Let's go. This is no time to sit down.",
+      "emotion": "Neutral 50",
+      "response_text": "I'm afraid I can't do that.",
+      "index": "18"
+    },
+    {
+      "topic": "MQ05GarzaWhyStop",
+      "topic_text": "What's the matter? Are you all right?",
+      "emotion": "Neutral 50",
+      "response_text": "I... my heart. It's weak, and I have no medicine with me.",
+      "index": "20"
+    },
+    {
+      "topic": "MQ05PPScientistGetItWorking",
+      "topic_text": "Do you think Project Purity will ever work again?",
+      "emotion": "Neutral 50",
+      "response_text": "If Doctor Li says it will work, then it will be so.",
+      "index": "22"
+    },
+    {
+      "topic": "MQ05ScientistAnythingIShouldKnow",
+      "topic_text": "Anything I should know about this place?",
+      "emotion": "Neutral 50",
+      "response_text": "The Brotherhood of Steel was overwhelmed by mutants here. Be careful they do not overwhelm you; I am sure some still lurk within the tunnels.",
+      "index": "23"
+    },
+    {
+      "topic": "MQ05ScientistCanYouHelp",
+      "topic_text": "Can you help get us through this?",
+      "emotion": "Neutral 50",
+      "response_text": "I am feeling better, but not well enough to be of use to you. I apologize.{pained, winded}",
+      "index": "24"
+    },
+    {
+      "topic": "MQ05ScientistWhatsYourStory",
+      "topic_text": "What's your story?",
+      "emotion": "Neutral 50",
+      "response_text": "I have worked for Doctor Li for many years. She has been good to me, helped me through some difficult times.",
+      "index": "26"
+    },
+    {
+      "topic": "MS03RCHistory1Could I ask you about Rivet City's history?",
+      "topic_text": "Can I ask you about Rivet City's history?",
+      "emotion": "Disgust 25",
+      "response_text": "No. No, you can't.",
+      "index": "28"
+    },
+    {
+      "topic": "SpeechChallengeFailure",
+      "topic_text": "SpeechChallengeFailure",
+      "emotion": "Neutral 50",
+      "response_text": "No, no. Perhaps if I had more time to rest.{winded, in pain}",
+      "index": "29"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "I have to go now.",
+      "emotion": "Neutral 50",
+      "response_text": "I am sorry to be causing problems.",
+      "index": "30"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Surprise 50",
+      "response_text": "Are the Mirelurk Cakes fresh?",
+      "index": "35"
+    },
+    {
+      "topic": "MQ05GarzaSick",
+      "topic_text": "MQ05GarzaSick",
+      "emotion": "Neutral 50",
+      "response_text": "Doctor Li. My heart... I must rest.",
+      "index": "43"
+    },
+    {
+      "topic": "MQ05LiGarzaBuffout",
+      "topic_text": "MQ05LiGarzaBuffout",
+      "emotion": "Neutral 50",
+      "response_text": "Thank you, Doctor Li.",
+      "index": "44"
+    },
+    {
+      "topic": "MQ05LiGarzaLeaveYou",
+      "topic_text": "MQ05LiGarzaLeaveYou",
+      "emotion": "Fear 100",
+      "response_text": "I cannot make it on my own, Doctor Li! I am too weak!{sickly, terrified}",
+      "index": "46"
+    },
+    {
+      "topic": "MQ05LiGarzaMedicine",
+      "topic_text": "MQ05LiGarzaMedicine",
+      "emotion": "Neutral 50",
+      "response_text": "Thank you, Doctor Li. I'm feeling better already. Let us continue, and not waste more time here.",
+      "index": "48"
+    },
+    {
+      "topic": "MQ05LiGarzaStayBehind",
+      "topic_text": "MQ05LiGarzaStayBehind",
+      "emotion": "Neutral 50",
+      "response_text": "I insist. You have greater problems to worry about. I will be all right. Now please, go.",
+      "index": "49"
+    },
+    {
+      "topic": "RCGoodbye",
+      "topic_text": "RCGoodbye",
+      "emotion": "Neutral 50",
+      "response_text": "Yes, Doctor Li.",
+      "index": "51"
+    },
+    {
+      "topic": "RCPackageEnd",
+      "topic_text": "RCPackageEnd",
+      "emotion": "Neutral 50",
+      "response_text": "I'm going top side for a while.",
+      "index": "58"
+    },
+    {
+      "topic": "RCResponse01",
+      "topic_text": "RCResponse01",
+      "emotion": "Happy 50",
+      "response_text": "The doctor is fine. If it weren't for her work, Rivet City would be no better than Megaton, Danvers.",
+      "index": "60"
+    }
+  ],
+  "combat": []
+}

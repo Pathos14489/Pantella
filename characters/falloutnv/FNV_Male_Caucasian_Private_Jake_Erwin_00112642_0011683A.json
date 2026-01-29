@@ -1,0 +1,142 @@
+{
+  "name": "Private Jake Erwin",
+  "url": "/wiki/Jake_Erwin",
+  "dialogue_name": "VStreetJakeErwin.txt",
+  "dialogue_url": "/wiki/VStreetJakeErwin.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": true,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "00112642",
+  "ref_id": "0011683A",
+  "editor_id": "VStreetJakeErwin",
+  "location": "NCR Embassy",
+  "location_url": "/wiki/NCR_Embassy",
+  "descriptions": [
+    "Private Jake Erwin is an NCR soldier found at the NCR Embassy in New Vegas in 2281.",
+    "Jake is a known prankster who is currently very close to being reprimanded. He mentions a prank he is planning to play on Ambassador Crocker if one asks him about it."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "NCR Army",
+  "role": "Guard",
+  "detailed_location": "NCR Embassy",
+  "voice_actor": "Jesse Burch",
+  "special": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 5,
+    "Intelligence": 5,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "level": "10",
+  "tag_skills": [
+    {
+      "Explosives:": "66"
+    },
+    {
+      "Guns:": "66"
+    },
+    {
+      "Melee Weap.:": "66"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Neutral",
+  "voice_type": "MaleAdult03",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "CaravanOffer",
+      "topic_text": "Want to play a hand of Caravan?",
+      "emotion": "Neutral 50",
+      "response_text": "Bring it on, buddy!",
+      "index": "1"
+    },
+    {
+      "topic": "CaravanPlayerLoses",
+      "topic_text": "CaravanPlayerLoses",
+      "emotion": "Neutral 50",
+      "response_text": "{Laughs}Nice try. Care to try your luck again?",
+      "index": "2"
+    },
+    {
+      "topic": "CaravanPlayerWins",
+      "topic_text": "CaravanPlayerWins",
+      "emotion": "Neutral 50",
+      "response_text": "Not too bad. How about we play again?",
+      "index": "3"
+    },
+    {
+      "topic": "CaravanRematchNo",
+      "topic_text": "I'm all done playing for now.",
+      "emotion": "Neutral 50",
+      "response_text": "Okay. If you want to play again sometime, let me know.",
+      "index": "4"
+    },
+    {
+      "topic": "CaravanRematchYes",
+      "topic_text": "Yeah, let's play again.",
+      "emotion": "Neutral 50",
+      "response_text": "Let's get this started!",
+      "index": "5"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Happy 50",
+      "response_text": "Didn't you save President Kimball? You're my new hero!",
+      "index": "6"
+    },
+    {
+      "topic": "vFreeformTheStreet02VStreetJakeErwinTopic000",
+      "topic_text": "What's happening on the Strip?",
+      "emotion": "Happy 10",
+      "response_text": "Us troopers mostly come to the Strip for our R&R. We blow off some steam by gambling, drinking, partying, or fighting.",
+      "index": "32"
+    },
+    {
+      "topic": "vFreeformTheStreet02VStreetJakeErwinTopic001",
+      "topic_text": "Tell me about yourself.",
+      "emotion": "Anger 5",
+      "response_text": "What have you heard? I know people think I'm a little on the wild side, but I'm just trying to have fun, you know?",
+      "index": "34"
+    },
+    {
+      "topic": "vFreeformTheStreet02VStreetJakeErwinTopic002",
+      "topic_text": "What do you know about the Ambassador?",
+      "emotion": "Neutral 50",
+      "response_text": "He's a little stiff and stuffy. Doesn't leave the office that much, always surrounds himself with papers and reports.",
+      "index": "36"
+    },
+    {
+      "topic": "vFreeformTheStreet02VStreetJakeErwinTopic003",
+      "topic_text": "What can you tell me about Captain Pappas?",
+      "emotion": "Neutral 50",
+      "response_text": "She may be a bit of a hardass, but she's the best damn Captain we've had here. I'd be careful around her. You don't want to get on her bad side.",
+      "index": "39"
+    },
+    {
+      "topic": "vFreeformTheStreet02VStreetJakeErwinTopic004",
+      "topic_text": "A prank you say?",
+      "emotion": "Happy 10",
+      "response_text": "Yeah, I've got a few ideas that I'm working on. Maybe I'll let you in on it once I have something.",
+      "index": "41"
+    },
+    {
+      "topic": "vFreeformTheStreet02VStreetJakeErwinTopic005",
+      "topic_text": "That doesn't sound like a good idea.",
+      "emotion": "Sad 10",
+      "response_text": "Yeah, I know. That's why I'm not really going to do it.",
+      "index": "42"
+    }
+  ],
+  "conversation": [],
+  "combat": []
+}

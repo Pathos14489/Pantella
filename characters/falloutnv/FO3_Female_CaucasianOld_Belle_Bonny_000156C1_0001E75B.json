@@ -1,0 +1,229 @@
+{
+  "name": "Belle Bonny",
+  "url": "/wiki/Belle_Bonny",
+  "dialogue_name": "BelleBonny.txt",
+  "dialogue_url": "/wiki/BelleBonny.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": true,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000156C1",
+  "ref_id": "0001E75B",
+  "editor_id": "BelleBonny",
+  "location": "The Muddy Rudder",
+  "location_url": "/wiki/The_Muddy_Rudder",
+  "descriptions": [
+    "Belle Bonny is the owner of the Muddy Rudder in Rivet City in Fallout 3. Bonny rarely leaves her bar and keeps it open longer than most places, including the Weatherly Hotel. Only in the morning does it briefly close to give her a few hours of rest.",
+    "Born around  2222, Belle Bonny is one of the oldest citizens of Rivet City. She arrived around 2247, setting up the Muddy Rudder, a place of no tabs",
+    "While Bonny's bad attitude has earned her few fans, there is more to Bonny than meets the eye. Although she has her ear to the ground as a bar owner and bartender, she is tight-lipped about anything she hears and refuses to gossip and badmouth other people,",
+    "The only thing that really sets her off is people coming into the Muddy Rudder and ordering swill like regular water. Bonny serves beer, whiskey, and even wine (although she thinks it is not a real man's drink),",
+    "Belle Bonny does not admit to liking anyone, and considers Rivet City to be a place forever stuck in a river, full of assholes.",
+    "She does not participate in social events, preferring to focus on running the bar,",
+    "She does have a softer side: she took Trinnie in, providing her with a place to sleep and tolerating her alcoholism to a degree,",
+    "Brock is perhaps the only genuine friend that Belle has, though she keeps him at arm's length and refuses to take business tips, even well-intentioned ones, like suggesting raising prices instead of giving drinks away practically for free."
+  ],
+  "race": "Human",
+  "gender": "Female",
+  "affiliation": "Rivet City",
+  "role": "ProprietorBartender",
+  "detailed_location": "The Muddy Rudder",
+  "voice_actor": "Karen Carbone",
+  "special": {
+    "Strength": 4,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 7,
+    "Intelligence": 5,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "mod_special_values": {
+    "Strength": 4,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 7,
+    "Intelligence": 5,
+    "Agility": 7,
+    "Luck": 5
+  },
+  "level": "4",
+  "tag_skills": [
+    {
+      "Barter:": "49"
+    },
+    {
+      "Small Guns:": "47(49)"
+    },
+    {
+      "Speech:": "49"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "40(45)"
+    },
+    {
+      "Critical Chance:": "5%"
+    },
+    {
+      "Unarmed Dam.:": "1.15"
+    },
+    {
+      "Poison Resist.:": "15%(20%)"
+    },
+    {
+      "Rad. Resist.:": "6%(8%)"
+    },
+    {
+      "Carry Weight:": "190"
+    },
+    {
+      "Damage Res.:": "3%"
+    }
+  ],
+  "karma": "Good",
+  "voice_type": "FemaleAdult02DC",
+  "geck_race": "CaucasianOld",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Disgust 50",
+      "response_text": "I'm Belle Bonny, and this is the Muddy Rudder.",
+      "index": "1"
+    },
+    {
+      "topic": "MS03RCHistory1Could I ask you about Rivet City's history?",
+      "topic_text": "Have any stories about this place's history?",
+      "emotion": "Anger 50",
+      "response_text": "History? What, not enough shit around here already, you need to dig up more?",
+      "index": "7"
+    },
+    {
+      "topic": "MS03RCHistory2AMS03RivetCityHistory2A",
+      "topic_text": "Well, can't you tell me anything about it?",
+      "emotion": "Happy 10",
+      "response_text": "Oh, sure. See, it's tied into the story about how Sister got his name. You ask him about that. He'll clear up all your problems. For good.{playing sweet, sending the player to bug a murderous sociopath}",
+      "index": "9"
+    },
+    {
+      "topic": "MS03RCHistory2BMS03RivetCityHistory2B",
+      "topic_text": "I bet someone like you hears lots of stories. Can't you share one?",
+      "emotion": "Anger 50",
+      "response_text": "No, I can't fucking well share one! What sort of moron are you?",
+      "index": "11"
+    },
+    {
+      "topic": "MS03RCHistory2Special",
+      "topic_text": "Really? Because Bannon said he organized the entire place himself.",
+      "emotion": "Anger 50",
+      "response_text": "Why, that lying son of a bitch! He wasn't even born when I got here!",
+      "index": "18"
+    },
+    {
+      "topic": "MS08TopicPinkertonIs there anyone on this ship named Pinkerton?",
+      "topic_text": "I'm looking for someone named Pinkerton. Ring any bells?",
+      "emotion": "Disgust 50",
+      "response_text": "What a moron. Always going on about how he started Rivet City. Who gives a crap?",
+      "index": "30"
+    },
+    {
+      "topic": "MS14TedFind",
+      "topic_text": "Where can I find Ted Strayer?",
+      "emotion": "Neutral 50",
+      "response_text": "Have you tried the common room?  That's where he sleeps.",
+      "index": "32"
+    },
+    {
+      "topic": "RCBelleFoulMouthed",
+      "topic_text": "This place is real dump.",
+      "emotion": "Anger 50",
+      "response_text": "Yeah? Well it's my dump, not yours. Either order a drink or get out.",
+      "index": "35"
+    },
+    {
+      "topic": "RCBelleGossip",
+      "topic_text": "Heard any good stories lately?",
+      "emotion": "Disgust 50",
+      "response_text": "Go talk to Vera if you want gossip. I don't talk bad about folks.",
+      "index": "36"
+    },
+    {
+      "topic": "RCBelleNicePlace",
+      "topic_text": "Nice place you have here.",
+      "emotion": "Disgust 50",
+      "response_text": "You must be drunk. Are you going to order or what?",
+      "index": "37"
+    },
+    {
+      "topic": "RCBelleSwill",
+      "topic_text": "Is this swill even safe to drink?",
+      "emotion": "Neutral 50",
+      "response_text": "Probably not. What'll you have?",
+      "index": "38"
+    },
+    {
+      "topic": "RCTopicPaulieAddictDid you know that Paulie Cantelli is an addict?",
+      "topic_text": "Is Paulie really addicted to chems?",
+      "emotion": "Disgust 50",
+      "response_text": "Oh, yeah. He's a mess. I'm glad I'm not in Cindy's shoes.",
+      "index": "39"
+    },
+    {
+      "topic": "RCTopicWedding",
+      "topic_text": "When are Angela and Diego getting married?",
+      "emotion": "Disgust 50",
+      "response_text": "Who gives a crap. I've got better things to do a 3 o'clock tomorrow. Are you going to order a drink or not?",
+      "index": "40"
+    },
+    {
+      "topic": "RivetCityBarterI'm here to do business with you.",
+      "topic_text": "I'll have a drink.",
+      "emotion": "Disgust 50",
+      "response_text": "What'll you have?",
+      "index": "41"
+    },
+    {
+      "topic": "SpeechChallengeFailure",
+      "topic_text": "SpeechChallengeFailure",
+      "emotion": "Anger 50",
+      "response_text": "No, but I can damn sure share a bag of \"Get the hell outta my bar.\"",
+      "index": "42"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYEI have to go now.",
+      "topic_text": "Later, Belle.",
+      "emotion": "Neutral 50",
+      "response_text": "I'll be right here when you get thirsty.",
+      "index": "44"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Anger 50",
+      "response_text": "When that little shit gets here, watch him. If he starts anything, kick his ass.",
+      "index": "45"
+    },
+    {
+      "topic": "RCGoodbye",
+      "topic_text": "RCGoodbye",
+      "emotion": "Disgust 50",
+      "response_text": "You're always trying to pull that shit. You know I don't run tabs for nobody, Tammy.",
+      "index": "51"
+    },
+    {
+      "topic": "RCPackageEnd",
+      "topic_text": "RCPackageEnd",
+      "emotion": "Neutral 50",
+      "response_text": "Think I'll get something to nibble on.",
+      "index": "61"
+    }
+  ],
+  "combat": []
+}

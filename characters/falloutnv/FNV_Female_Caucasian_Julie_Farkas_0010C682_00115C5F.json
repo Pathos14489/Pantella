@@ -1,0 +1,859 @@
+{
+  "name": "Julie Farkas",
+  "url": "/wiki/Julie_Farkas",
+  "dialogue_name": "VFSJulieFarkas.txt",
+  "dialogue_url": "/wiki/VFSJulieFarkas.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": true,
+  "is_merchant": true,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "0010C682",
+  "ref_id": "00115C5F",
+  "editor_id": "VFSJulieFarkas",
+  "location": "Old Mormon Fort",
+  "location_url": "/wiki/Old_Mormon_Fort",
+  "descriptions": [
+    "Julie Farkas is the regional administrator of the Followers of the Apocalypse operating out of the Old Mormon Fort in Freeside in 2281.",
+    "Julie Farkas administers the struggling New Vegas branch of the Followers of the Apocalypse.",
+    "As administrator to the New Vegas branch of the Followers, she knows much about the surrounding Freeside neighborhood, including information on the ruling gang known as the Kings, and the unsavory businesses in Freeside.",
+    "Julie Farkas is good friends with the NCR Major Elizabeth Kieran."
+  ],
+  "race": "Human",
+  "gender": "Female",
+  "affiliation": "Followers of the Apocalypse",
+  "role": "Regional administrator[1]Queen of SpadesDoctor",
+  "detailed_location": "Old Mormon Fort",
+  "voice_actor": "Laura Bailey",
+  "special": {
+    "Strength": 4,
+    "Perception": 6,
+    "Endurance": 4,
+    "Charisma": 6,
+    "Intelligence": 7,
+    "Agility": 5,
+    "Luck": 4
+  },
+  "level": "16",
+  "tag_skills": [
+    {
+      "Barter:": "96"
+    },
+    {
+      "Medicine:": "98"
+    },
+    {
+      "Science:": "100(105)"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Very Good",
+  "voice_type": "FemaleAdult11",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "Are you here to drop off medical supplies? Leave them with the rest in the middle of the courtyard.",
+      "index": "1"
+    },
+    {
+      "topic": "JulieFarkasJerry",
+      "topic_text": "I met a kid who's unsatisfied with life in the Great Khans. Will you take him on as a Follower?",
+      "emotion": "Neutral 50",
+      "response_text": "We're always looking for new members. Does he have any particular talent?",
+      "index": "30"
+    },
+    {
+      "topic": "JulieFarkasKhans",
+      "topic_text": "I'm looking for something that could inspire the Great Khans. Know of anything like that?",
+      "emotion": "Surprise 20",
+      "response_text": "The Great Khans? Oh, you mean those raiders that used to clash with the Vegas tribes?",
+      "index": "31"
+    },
+    {
+      "topic": "VEndingFollowers",
+      "topic_text": "VEndingFollowers",
+      "emotion": "Neutral 50",
+      "response_text": "{narrating}With no clear leader to guide efforts in Freeside, the Followers of the Apocalypse lost control of Old Mormon Fort to local thugs and junkies.",
+      "index": "34"
+    },
+    {
+      "topic": "VFSJulieFarkasKingSuiteGreeting",
+      "topic_text": "VFSJulieFarkasKingSuiteGreeting",
+      "emotion": "Neutral 50",
+      "response_text": "We've actually already met. It is good to see you again.",
+      "index": "46"
+    },
+    {
+      "topic": "VFSJulieFarkasVoicesObjection",
+      "topic_text": "VFSJulieFarkasVoicesObjection",
+      "emotion": "Neutral 50",
+      "response_text": "Please bear in mind that there may be more to this situation than there seems. The reasons for these attacks are yet unknown.",
+      "index": "48"
+    },
+    {
+      "topic": "VFreeformFreesideFSJulieFarkasTopic000",
+      "topic_text": "You need medical supplies?",
+      "emotion": "Neutral 50",
+      "response_text": "Rates of injury and illness in Freeside are very high. Supplies don't last long.",
+      "index": "50"
+    },
+    {
+      "topic": "VFreeformFreesideFSJulieFarkasTopic003",
+      "topic_text": "What do you need?",
+      "emotion": "Neutral 50",
+      "response_text": "Med-X, Rad-Away, and Fixer are Freeside essentials. I can't pay you for any supplies you bring in, but I could discount the charge for our services.",
+      "index": "51"
+    },
+    {
+      "topic": "VFreeformFreesideFSJulieFarkasTopic004",
+      "topic_text": "You've got yourself a deal.",
+      "emotion": "Neutral 50",
+      "response_text": "Just come see me when you've got some supplies to turn in.",
+      "index": "52"
+    },
+    {
+      "topic": "VFreeformFreesideFSJulieFarkasTopic007",
+      "topic_text": "Maybe another time.",
+      "emotion": "Sad 20",
+      "response_text": "That's too bad. If you change your mind, let me know.{disappointed, but not surprised.}",
+      "index": "53"
+    },
+    {
+      "topic": "VFreeformFreesideVFSJulieFarkasTopic000",
+      "topic_text": "I think I found someone who will be able to cover your supplies.",
+      "emotion": "Neutral 50",
+      "response_text": "That's phenomenal! Who did you find?",
+      "index": "54"
+    },
+    {
+      "topic": "VFreeformFreesideVFSJulieFarkasTopic001",
+      "topic_text": "The Garret Twins.",
+      "emotion": "Neutral 50",
+      "response_text": "They supply Freeside with drugs and liquor. From my point of view they're just better-organized pushers.",
+      "index": "55"
+    },
+    {
+      "topic": "VFreeformFreesideVFSJulieFarkasTopic002",
+      "topic_text": "You get your chems and can help anyone who gets addicted.",
+      "emotion": "Neutral 50",
+      "response_text": "True, we could help addicts, but the cycle of addiction, recover, and relapse would remain.",
+      "index": "57"
+    },
+    {
+      "topic": "VFreeformFreesideVFSJulieFarkasTopic003",
+      "topic_text": "With a surplus of supplies, you could use your caps and influence to expand.",
+      "emotion": "Neutral 50",
+      "response_text": "Good point. We wouldn't be paying anything for their supplies, just a portion of our food waste to make ethanol.",
+      "index": "58"
+    },
+    {
+      "topic": "VFreeformFreesideVFSJulieFarkasTopic004",
+      "topic_text": "I helped with that addiction problem you mentioned.",
+      "emotion": "Neutral 50",
+      "response_text": "I saw them. Thank you so much for helping them. This means a lot to the Followers of the Apocalypse. You have our thanks.",
+      "index": "61"
+    },
+    {
+      "topic": "VFreeformFreesideVFSJulieFarkasTopic005",
+      "topic_text": "You said something about helping addicts?",
+      "emotion": "Neutral 50",
+      "response_text": "Yes, Old Bill Ronte and Jacob Hoff. They're not going to kick their habits on their own.",
+      "index": "69"
+    },
+    {
+      "topic": "VFreeformFreesideVFSJulieFarkasTopic006",
+      "topic_text": "Tell me about Bill Ronte.",
+      "emotion": "Neutral 50",
+      "response_text": "Old Bill Ronte is an exceptionally skilled machinist. He could fix the problems we've been having with Freeside's water pump, if he sobered up.",
+      "index": "70"
+    },
+    {
+      "topic": "VFreeformFreesideVFSJulieFarkasTopic007",
+      "topic_text": "Tell me about Jacob.",
+      "emotion": "Neutral 50",
+      "response_text": "The Garrets hooked Jacob on chems when he was working for them. Ironic, since he used to homebrew detox chems. He's a natural chemist.",
+      "index": "71"
+    },
+    {
+      "topic": "VFreeformFreesideVFSJulieFarkasTopic008",
+      "topic_text": "If I wanted to calm things down in Freeside, where would I start?",
+      "emotion": "Neutral 50",
+      "response_text": "The big man around here is The King. Not much happens in Freeside that he doesn't know about.",
+      "index": "72"
+    },
+    {
+      "topic": "VFreeformFreesideVFSJulieFarkasTopic009",
+      "topic_text": "Yes! I'll join.",
+      "emotion": "Neutral 50",
+      "response_text": "Excellent! The Followers' mission will be better served with someone like yourself traveling around the Mojave.",
+      "index": "75"
+    },
+    {
+      "topic": "VFreeformFreesideVFSJulieFarkasTopic010",
+      "topic_text": "Where should I start looking?",
+      "emotion": "Neutral 50",
+      "response_text": "In Freeside, the drunks and drug addicts flock in and around the Atomic Wrangler. I'd start there.",
+      "index": "78"
+    },
+    {
+      "topic": "VFreeformFreesideVFSJulieFarkasTopic011",
+      "topic_text": "Things seem pretty rough here in Freeside.",
+      "emotion": "Neutral 50",
+      "response_text": "More than rough, it's a damn mess. Freeside townies are constantly picking fights with NCR civilians.",
+      "index": "79"
+    },
+    {
+      "topic": "VFreeformFreesideVFSJulieFarkasTopic012",
+      "topic_text": "Is there anything I can do to help?",
+      "emotion": "Neutral 50",
+      "response_text": "There is always something needing done. A few souls here in Freeside could be great assets to the community, if they'd kick their addictions.",
+      "index": "82"
+    },
+    {
+      "topic": "VFreeformFreesideVFSJulieFarkasTopic013",
+      "topic_text": "I'll see what I can do to help them.",
+      "emotion": "Neutral 50",
+      "response_text": "Sobering them up and putting them back to work would go a long way toward helping Freeside.",
+      "index": "85"
+    },
+    {
+      "topic": "VFreeformFreesideVFSJulieFarkasTopic014",
+      "topic_text": "You said you could spare some supplies?",
+      "emotion": "Neutral 50",
+      "response_text": "Sure. Would you like a Stimpak, Fixer, or Rad-Away?",
+      "index": "86"
+    },
+    {
+      "topic": "VFreeformFreesideVFSJulieFarkasTopic015",
+      "topic_text": "A stimpak.",
+      "emotion": "Neutral 50",
+      "response_text": "You'll need to wait another 24 hours for us to get more made. We need everything else we currently have.",
+      "index": "88"
+    },
+    {
+      "topic": "VFreeformFreesideVFSJulieFarkasTopic016",
+      "topic_text": "Fixer.",
+      "emotion": "Neutral 50",
+      "response_text": "You'll need to wait another 24 hours for us to get more made. We need everything else we currently have.",
+      "index": "89"
+    },
+    {
+      "topic": "VFreeformFreesideVFSJulieFarkasTopic017",
+      "topic_text": "RadAway.",
+      "emotion": "Neutral 50",
+      "response_text": "You'll need to wait another 24 hours for us to get more made. We need everything else we currently have.",
+      "index": "90"
+    },
+    {
+      "topic": "VFreeformFreesideVFSJulieFarkasTopic018",
+      "topic_text": "I'd like to talk about something else.",
+      "emotion": "Neutral 50",
+      "response_text": "What do you want to talk about?",
+      "index": "91"
+    },
+    {
+      "topic": "VFreeformFreesideVFSJulieFarkasTopic019",
+      "topic_text": "The King said you could tell me more about his robotic dog.",
+      "emotion": "Neutral 50",
+      "response_text": "Rex? It breaks my heart every time I see him. He's such a good dog.",
+      "index": "92"
+    },
+    {
+      "topic": "VFreeformFreesideVFSJulieFarkasTopic020",
+      "topic_text": "So you can't heal him?",
+      "emotion": "Neutral 50",
+      "response_text": "No, Rex's condition is way beyond anything we can handle. He requires brain surgery, and some sophisticated cybernetics work, too.",
+      "index": "93"
+    },
+    {
+      "topic": "VFreeformFreesideVFSJulieFarkasTopic021",
+      "topic_text": "The King brought him here for treatment then?",
+      "emotion": "Neutral 50",
+      "response_text": "Yes, a few months ago. We had to tell him there was nothing we could do.",
+      "index": "94"
+    },
+    {
+      "topic": "VFreeformFreesideVFSJulieFarkasTopic022",
+      "topic_text": "So there's no chance he'll ever get better?",
+      "emotion": "Neutral 50",
+      "response_text": "I didn't say that. While no one here has that kind of expertise, I do know of one man who might fit the bill.",
+      "index": "95"
+    },
+    {
+      "topic": "VFreeformFreesideVFSJulieFarkasTopic023",
+      "topic_text": "Is there anyone who could do all that?",
+      "emotion": "Neutral 50",
+      "response_text": "There's an old scientist named Dr. Henry who reportedly specializes in this sort of procedure. He'd probably be your best bet.",
+      "index": "96"
+    },
+    {
+      "topic": "VFreeformFreesideVFSJulieFarkasTopic024",
+      "topic_text": "Thank you. You've been very helpful.",
+      "emotion": "Neutral 50",
+      "response_text": "No problem.",
+      "index": "98"
+    },
+    {
+      "topic": "VFreeformFreesideVFSJulieFarkasTopic025",
+      "topic_text": "Let's talk about something else.",
+      "emotion": "Neutral 50",
+      "response_text": "What did you want to talk about?",
+      "index": "99"
+    },
+    {
+      "topic": "VFreeformFreesideVFSJulieFarkasTopic026",
+      "topic_text": "Seems like you need a steady supply, not just whatever I can grab for you.",
+      "emotion": "Neutral 50",
+      "response_text": "So far the Crimson Caravan won't cut us a deal. If you can convince them or some other merchant to work with us, I'll discount supplies to you.",
+      "index": "100"
+    },
+    {
+      "topic": "VFreeformFreesideVFSJulieFarkasTopic027",
+      "topic_text": "Which merchants might be willing to make a deal?",
+      "emotion": "Neutral 50",
+      "response_text": "You might ask around at Mick and Ralph's - or go see the Garrets, though I suspect they're too busy poisoning Freeside to help it out.",
+      "index": "101"
+    },
+    {
+      "topic": "VFreeformFreesideVFSJulieFarkasTopic028",
+      "topic_text": "I need medical services.",
+      "emotion": "Neutral 50",
+      "response_text": "All right. You'll get them at a discounted rate, thanks to all the supplies you've donated.",
+      "index": "102"
+    },
+    {
+      "topic": "VFreeformFreesideVFSJulieFarkasTopic029",
+      "topic_text": "A regular shipment of supplies is what you need here.",
+      "emotion": "Neutral 50",
+      "response_text": "That would be a godsend, but so far we've had no luck working out a deal with the Crimson Caravan or any other local merchants.",
+      "index": "105"
+    },
+    {
+      "topic": "VFreeformFreesideVFSJulieFarkasTopic030",
+      "topic_text": "I have some medical supplies to drop off.",
+      "emotion": "Neutral 50",
+      "response_text": "Great! What do you have?",
+      "index": "107"
+    },
+    {
+      "topic": "VFreeformFreesideVFSJulieFarkasTopic031",
+      "topic_text": "Med-X",
+      "emotion": "Neutral 50",
+      "response_text": "It looks like we've got enough Med-X for the moment, but it always helps to be prepared with a backup supply. How much do you have to donate?",
+      "index": "113"
+    },
+    {
+      "topic": "VFreeformFreesideVFSJulieFarkasTopic032",
+      "topic_text": "Rad-Away",
+      "emotion": "Neutral 50",
+      "response_text": "We have a good stock of Rad-Away at this point, but every extra bit helps. How much do you have to donate?",
+      "index": "116"
+    },
+    {
+      "topic": "VFreeformFreesideVFSJulieFarkasTopic033",
+      "topic_text": "Fixer",
+      "emotion": "Neutral 50",
+      "response_text": "With your help, we now have a small overstock of Fixer, however, it never hurts to have extra. How much do you have to donate?",
+      "index": "119"
+    },
+    {
+      "topic": "VFreeformFreesideVFSJulieFarkasTopic034",
+      "topic_text": "I've got a chem problem.",
+      "emotion": "Neutral 50",
+      "response_text": "A common enough problem here in Freeside.{not judging the player}",
+      "index": "122"
+    },
+    {
+      "topic": "VFreeformFreesideVFSJulieFarkasTopic035",
+      "topic_text": "I'm not interested right now.",
+      "emotion": "Neutral 50",
+      "response_text": "That is unfortunate. If you change your mind, please see me right away.",
+      "index": "124"
+    },
+    {
+      "topic": "VFreeformFreesideVFSJulieFarkasTopic036",
+      "topic_text": "I've been exposed to radiation.",
+      "emotion": "Neutral 50",
+      "response_text": "That's easy enough to clear up.",
+      "index": "125"
+    },
+    {
+      "topic": "VFreeformFreesideVFSJulieFarkasTopic038",
+      "topic_text": "<Pay 50 caps>",
+      "emotion": "Neutral 50",
+      "response_text": "This will help you kick the habit.",
+      "index": "127"
+    },
+    {
+      "topic": "VFreeformFreesideVFSJulieFarkasTopic039",
+      "topic_text": "Never mind.",
+      "emotion": "Neutral 50",
+      "response_text": "Anything else?{[DUPLICATE LINE?]}",
+      "index": "128"
+    },
+    {
+      "topic": "VFreeformFreesideVFSJulieFarkasTopic040",
+      "topic_text": "<Pay 100 caps>",
+      "emotion": "Neutral 50",
+      "response_text": "Hold still. The Rad-Away burns a little.",
+      "index": "129"
+    },
+    {
+      "topic": "VFreeformFreesideVFSJulieFarkasTopic042",
+      "topic_text": "One.",
+      "emotion": "Neutral 50",
+      "response_text": "Thanks! Anything else?",
+      "index": "130"
+    },
+    {
+      "topic": "VFreeformFreesideVFSJulieFarkasTopic043",
+      "topic_text": "Two.",
+      "emotion": "Neutral 50",
+      "response_text": "Thanks! Anything else?",
+      "index": "131"
+    },
+    {
+      "topic": "VFreeformFreesideVFSJulieFarkasTopic044",
+      "topic_text": "Three.",
+      "emotion": "Neutral 50",
+      "response_text": "Thanks! Anything else?",
+      "index": "132"
+    },
+    {
+      "topic": "VFreeformFreesideVFSJulieFarkasTopic045",
+      "topic_text": "One.",
+      "emotion": "Neutral 50",
+      "response_text": "Thanks! Anything else?",
+      "index": "133"
+    },
+    {
+      "topic": "VFreeformFreesideVFSJulieFarkasTopic046",
+      "topic_text": "Two.",
+      "emotion": "Neutral 50",
+      "response_text": "Thanks! Anything else?",
+      "index": "134"
+    },
+    {
+      "topic": "VFreeformFreesideVFSJulieFarkasTopic047",
+      "topic_text": "Three.",
+      "emotion": "Neutral 50",
+      "response_text": "Thanks! Anything else?",
+      "index": "135"
+    },
+    {
+      "topic": "VFreeformFreesideVFSJulieFarkasTopic048",
+      "topic_text": "One.",
+      "emotion": "Neutral 50",
+      "response_text": "Thanks! Anything else?",
+      "index": "136"
+    },
+    {
+      "topic": "VFreeformFreesideVFSJulieFarkasTopic049",
+      "topic_text": "Two.",
+      "emotion": "Neutral 50",
+      "response_text": "Thanks! Anything else?",
+      "index": "137"
+    },
+    {
+      "topic": "VFreeformFreesideVFSJulieFarkasTopic050",
+      "topic_text": "Three.",
+      "emotion": "Neutral 50",
+      "response_text": "Thanks! Anything else?",
+      "index": "138"
+    },
+    {
+      "topic": "VFreeformFreesideVFSJulieFarkasTopic051",
+      "topic_text": "That is all for now.",
+      "emotion": "Neutral 50",
+      "response_text": "Thanks for the donation. Every bit goes toward helping Freeside.",
+      "index": "139"
+    },
+    {
+      "topic": "VFreeformFreesideVFSJulieFarkasTopic053",
+      "topic_text": "The Garrets should be sending over supplies shortly.",
+      "emotion": "Neutral 50",
+      "response_text": "I'm honestly pleasantly surprised they would help us out, but I can see Garret isn't doing this out of the goodness of his heart.",
+      "index": "140"
+    },
+    {
+      "topic": "VFreeformFreesideVFSJulieFarkasTopic054",
+      "topic_text": "Do you sell medical supplies?",
+      "emotion": "Neutral 50",
+      "response_text": "We're pretty short-handed as it is, but I suppose I could spare a few items.",
+      "index": "142"
+    },
+    {
+      "topic": "VFreeformFreesideVFSJulieFarkasTopic055",
+      "topic_text": "I'd like to buy medical supplies.",
+      "emotion": "Neutral 50",
+      "response_text": "We don't have a lot right now, but this is what I can offer for sale.",
+      "index": "143"
+    },
+    {
+      "topic": "VFreeformFreesideVFSJulieFarkasTopic056",
+      "topic_text": "What does it mean to join the Followers of the Apocalypse?",
+      "emotion": "Neutral 50",
+      "response_text": "Our aim is to gradually shape a better brighter future for the wasteland.",
+      "index": "145"
+    },
+    {
+      "topic": "VFreeformFreesideVFSJulieFarkasTopic057",
+      "topic_text": "What is this place?",
+      "emotion": "Neutral 50",
+      "response_text": "The Old Mormon Fort serves as the regional hub for the Followers of the Apocalypse. I am the administrator for this region.",
+      "index": "148"
+    },
+    {
+      "topic": "VFreeformFreesideVFSJulieFarkasTopic058",
+      "topic_text": "Sure let me take a look at those magazines.",
+      "emotion": "Neutral 50",
+      "response_text": "Take a look.",
+      "index": "149"
+    },
+    {
+      "topic": "VFreeformFreesideVFSJulieFarkasTopic059",
+      "topic_text": "What do you do here?",
+      "emotion": "Neutral 50",
+      "response_text": "The Followers of the Apocalypse aren't just interested in research. We care for our fellow man and do everything we can to help humanity.",
+      "index": "150"
+    },
+    {
+      "topic": "VFreeformFreesideVFSJulieFarkasTopic060",
+      "topic_text": "Let's talk about Freeside.",
+      "emotion": "Neutral 50",
+      "response_text": "What did you want to know?",
+      "index": "153"
+    },
+    {
+      "topic": "VFreeformFreesideVFSJulieFarkasTopic061",
+      "topic_text": "Who are the Followers of the Apocalypse?",
+      "emotion": "Neutral 50",
+      "response_text": "We arose from the Boneyards of Adytum years ago. Since then, we have made it our mission to rebuild the wasteland and reeducate its inhabitants.",
+      "index": "154"
+    },
+    {
+      "topic": "VFreeformFreesideVFSJulieFarkasTopic062",
+      "topic_text": "I'd like to talk about joining the Followers of the Apocalypse.",
+      "emotion": "Neutral 50",
+      "response_text": "Great, did you change your mind?",
+      "index": "156"
+    },
+    {
+      "topic": "VFreeformFreesideVFSJulieFarkasTopic064",
+      "topic_text": "I think the Followers should support NCR in the coming battle at the dam.",
+      "emotion": "Neutral 50",
+      "response_text": "I'm sure you have your reasons, but we are much too busy to waste our time on those selfish bastards.",
+      "index": "157"
+    },
+    {
+      "topic": "VFreeformFreesideVFSJulieFarkasTopic065",
+      "topic_text": "I think the Followers should support an Independent Vegas through the coming battle at the dam.",
+      "emotion": "Neutral 50",
+      "response_text": "I'm sure you have your reasons, but we are much too busy to waste our time on those selfish bastards.",
+      "index": "161"
+    },
+    {
+      "topic": "VFreeformFreesideVFSJulieFarkasTopic066",
+      "topic_text": "What's all the fuss about the water pump?",
+      "emotion": "Neutral 50",
+      "response_text": "Bill Ronte installed that pump a few years ago, back when he was sober. It was a major improvement for the community.",
+      "index": "165"
+    },
+    {
+      "topic": "VFreeformFreesideVFSJulieFarkasTopic067",
+      "topic_text": "Would you rather see Caesar's Legion win and enslave everyone?",
+      "emotion": "Neutral 50",
+      "response_text": "No, but there is still a good chance the NCR could hold them off and we're not equipped to fight a war, here.",
+      "index": "167"
+    },
+    {
+      "topic": "VFreeformFreesideVFSJulieFarkasTopic068",
+      "topic_text": "Who are The Kings?",
+      "emotion": "Neutral 50",
+      "response_text": "They've been Freeside's gang for the past five years or so, ever since Mr. House and his Three Families pushed everyone else out of Vegas.",
+      "index": "168"
+    },
+    {
+      "topic": "VFreeformFreesideVFSJulieFarkasTopic069",
+      "topic_text": "I'm setting plans in motion which will ensure both the Legion and NCR are pushed out of the Mojave.",
+      "emotion": "Neutral 50",
+      "response_text": "Wow. Whatever you have planned must be pretty big to give them the boot, but this sounds dangerous.",
+      "index": "171"
+    },
+    {
+      "topic": "VFreeformFreesideVFSJulieFarkasTopic070",
+      "topic_text": "They won't have nearly enough doctors without the Followers' support.",
+      "emotion": "Neutral 50",
+      "response_text": "But the Followers aren't fighters. We'd get annihilated as front-line medics.",
+      "index": "173"
+    },
+    {
+      "topic": "VFreeformFreesideVFSJulieFarkasTopic071",
+      "topic_text": "I'm sure I can get help with supply shortages.",
+      "emotion": "Neutral 50",
+      "response_text": "Even if that were the case, we still need more incentive to help Vegas.",
+      "index": "174"
+    },
+    {
+      "topic": "VFreeformFreesideVFSJulieFarkasTopic072",
+      "topic_text": "The Followers would act as support safely away from combat.",
+      "emotion": "Neutral 50",
+      "response_text": "In that case, they'll have our support. We cannot afford to let the Legion win.",
+      "index": "175"
+    },
+    {
+      "topic": "VFreeformFreesideVFSJulieFarkasTopic074",
+      "topic_text": "Part of my plan involves automated security for the region.",
+      "emotion": "Neutral 50",
+      "response_text": "That is somewhat reassuring, but we still don't have the resources to care for the entire Mojave by ourselves.",
+      "index": "176"
+    },
+    {
+      "topic": "VFreeformFreesideVFSJulieFarkasTopic075",
+      "topic_text": "<Pay 25 caps>",
+      "emotion": "Neutral 50",
+      "response_text": "This will help you kick the habit.{[DUPLICATE LINE?]}",
+      "index": "178"
+    },
+    {
+      "topic": "VFreeformFreesideVFSJulieFarkasTopic076",
+      "topic_text": "<Pay 50 caps>",
+      "emotion": "Neutral 50",
+      "response_text": "Hold still. The Rad-Away burns a little.{[DUPLICATE LINE?]}",
+      "index": "179"
+    },
+    {
+      "topic": "VFreeformFreesideVFSJulieFarkasTopic077",
+      "topic_text": "What do you know about Mick and Ralph?",
+      "emotion": "Neutral 50",
+      "response_text": "I know they sell a lot of guns - as if that's what Freeside needs. I hear Mick handles the guns. No idea what Ralph does.",
+      "index": "180"
+    },
+    {
+      "topic": "VFreeformFreesideVFSJulieFarkasTopic078",
+      "topic_text": "Tell me about the Van Graffs.",
+      "emotion": "Neutral 50",
+      "response_text": "Oh, them. They sell energy weapons, which are very popular with better-heeled prospectors looking to explore the wastes.{not happy to hear them mentioned}",
+      "index": "181"
+    },
+    {
+      "topic": "VFreeformFreesideVFSJulieFarkasTopic079",
+      "topic_text": "What's the Atomic Wrangler?",
+      "emotion": "Neutral 50",
+      "response_text": "{shrugging}A den of iniquity. The Garrets do more than their share to keep the locals drunk or high enough to stay lazy.",
+      "index": "183"
+    },
+    {
+      "topic": "VFreeformFreesideVFSJulieFarkasTopic080",
+      "topic_text": "Let's talk about something else.",
+      "emotion": "Neutral 50",
+      "response_text": "All right. What did you want to know?",
+      "index": "185"
+    },
+    {
+      "topic": "VFreeformFreesideVFSJulieFarkasTopic081",
+      "topic_text": "I don't have the caps.",
+      "emotion": "Neutral 50",
+      "response_text": "I'm sorry, but I can't give you meds for nothing. There are too many people who need these supplies.",
+      "index": "186"
+    },
+    {
+      "topic": "VFreeformFreesideVFSJulieFarkasTopic082",
+      "topic_text": "I need some injuries patched up.",
+      "emotion": "Neutral 50",
+      "response_text": "Okay, what level of care do you require?",
+      "index": "187"
+    },
+    {
+      "topic": "VFreeformFreesideVFSJulieFarkasTopic083",
+      "topic_text": "This is a golden opportunity for the Followers to spread knowledge and care throughout the Mojave.",
+      "emotion": "Neutral 50",
+      "response_text": "It is indeed our duty to teach and improve the living conditions of our fellow man, but we're talking an insane amount of logistics to make this work.",
+      "index": "189"
+    },
+    {
+      "topic": "VFreeformFreesideVFSJulieFarkasTopic084",
+      "topic_text": "Do you know anything about NCR soldiers here in Freeside?",
+      "emotion": "Neutral 50",
+      "response_text": "Only a little. A friend of mine, Major Elizabeth Kieran, has been handing out supplies to the poor a little west of here. What about it?",
+      "index": "190"
+    },
+    {
+      "topic": "VFreeformFreesideVFSJulieFarkasTopic085",
+      "topic_text": "Hit me with a stimpak, Doc.",
+      "emotion": "Neutral 50",
+      "response_text": "That should only take a few seconds if you've got the caps.",
+      "index": "191"
+    },
+    {
+      "topic": "VFreeformFreesideVFSJulieFarkasTopic085DUPLICATE000",
+      "topic_text": "The King thinks those troops have been attacking Locals.",
+      "emotion": "Neutral 50",
+      "response_text": "I know something's got them riled up, but I've been too busy with other matters to really look into it.",
+      "index": "192"
+    },
+    {
+      "topic": "VFreeformFreesideVFSJulieFarkasTopic086",
+      "topic_text": "<Pay 10 caps>",
+      "emotion": "Neutral 50",
+      "response_text": "There you go. Anything else?",
+      "index": "196"
+    },
+    {
+      "topic": "VFreeformFreesideVFSJulieFarkasTopic087",
+      "topic_text": "Nothing, let's talk about something else.",
+      "emotion": "Neutral 50",
+      "response_text": "Okay, what did you want to talk about?",
+      "index": "197"
+    },
+    {
+      "topic": "VFreeformFreesideVFSJulieFarkasTopic088",
+      "topic_text": "Heal me up completely.",
+      "emotion": "Neutral 50",
+      "response_text": "Stitching up lacerations and treating wounds will take some time. I'm going to need caps to get started.",
+      "index": "198"
+    },
+    {
+      "topic": "VFreeformFreesideVFSJulieFarkasTopic089",
+      "topic_text": "I've got some wounds I need you to look at.",
+      "emotion": "Neutral 50",
+      "response_text": "You look fine to me. I hope this isn't drug-seeking behavior... though I've never seen anyone get addicted to Stimpaks.",
+      "index": "199"
+    },
+    {
+      "topic": "VFreeformFreesideVFSJulieFarkasTopic091",
+      "topic_text": "<Pay 50 caps>",
+      "emotion": "Neutral 50",
+      "response_text": "You might want to brace yourself. This might get a bit painful.",
+      "index": "205"
+    },
+    {
+      "topic": "VFreeformFreesideVFSJulieFarkasTopic092",
+      "topic_text": "<Pay 25 caps>",
+      "emotion": "Neutral 50",
+      "response_text": "You might want to brace yourself. This might get a bit painful.",
+      "index": "206"
+    },
+    {
+      "topic": "VFreeformFreesideVFSJulieFarkasTopic093",
+      "topic_text": "<Pay 75 caps>",
+      "emotion": "Neutral 50",
+      "response_text": "A shot of Med-X for the pain, and you shouldn't feel... well some of what I need to do.",
+      "index": "207"
+    },
+    {
+      "topic": "VFreeformFreesideVFSJulieFarkasTopic094",
+      "topic_text": "<Pay 40 caps>",
+      "emotion": "Neutral 50",
+      "response_text": "A shot of Med-X for the pain, and you shouldn't feel... well some of what I need to do.",
+      "index": "208"
+    },
+    {
+      "topic": "VFreeformFreesideVFSJulieFarkasTopic096",
+      "topic_text": "Just staple it all together. I'll fix my gimpy bits later.",
+      "emotion": "Neutral 50",
+      "response_text": "This could take a while. Did you bring caps?",
+      "index": "209"
+    },
+    {
+      "topic": "VFreeformFreesideVFSJulieFarkasTopic097",
+      "topic_text": "<Pay 50 caps>",
+      "emotion": "Neutral 50",
+      "response_text": "A shot of Med-X for the pain, and you shouldn't feel... well some of what I need to do.",
+      "index": "210"
+    },
+    {
+      "topic": "VFreeformFreesideVFSJulieFarkasTopic098",
+      "topic_text": "<Pay 25 caps>",
+      "emotion": "Neutral 50",
+      "response_text": "A shot of Med-X for the pain, and you shouldn't feel... well some of what I need to do.",
+      "index": "211"
+    },
+    {
+      "topic": "VFreeformFreesideVFSJulieFarkasTopic099",
+      "topic_text": "You would establish a foothold in the region and be one step closer to rebuilding the Mojave.",
+      "emotion": "Neutral 50",
+      "response_text": "I think I see now what you intend to set in motion.",
+      "index": "212"
+    },
+    {
+      "topic": "VMS45VFSJulieFarkasTopic000",
+      "topic_text": "Who is Ezekiel?",
+      "emotion": "Happy 10",
+      "response_text": "He's a member of the Followers like myself, but his particular field is pre-War history and tribal culture.",
+      "index": "215"
+    },
+    {
+      "topic": "VMS45VFSJulieFarkasTopic001",
+      "topic_text": "Where can I find this Ezekiel?",
+      "emotion": "Happy 20",
+      "response_text": "He rarely stops in here these days - you'd do best to look for him out in the wastes east of New Vegas. He's always looking for new tribes to study.",
+      "index": "217"
+    },
+    {
+      "topic": "VMS45VFSJulieFarkasTopic002",
+      "topic_text": "On second thought, never mind.",
+      "emotion": "Neutral 50",
+      "response_text": "Was there something else you needed?",
+      "index": "218"
+    },
+    {
+      "topic": "VMS47VFSJulieFarkasTopic000",
+      "topic_text": "Well, he's a poet. Kind of.",
+      "emotion": "Neutral 50",
+      "response_text": "Hmm. Well, I suppose we could always use another junior archivist in the library. All right, tell him we'll accept him as a probationary initiate.",
+      "index": "219"
+    },
+    {
+      "topic": "VMS47VFSJulieFarkasTopic001",
+      "topic_text": "He's obviously a bright, sensitive soul, and he loves literature.",
+      "emotion": "Neutral 50",
+      "response_text": "Excellent! Ezekiel's been after me to find him a new assistant for ages. Tell the boy we'll take him.",
+      "index": "220"
+    },
+    {
+      "topic": "VMS47VFSJulieFarkasTopic002",
+      "topic_text": "None whatsoever.",
+      "emotion": "Neutral 50",
+      "response_text": "Ah. Well... I suppose we could always find him a place. Maybe doing inventory on the Pre-War Unexploded Munitions Collection back West.",
+      "index": "221"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "JulieFarkasAddiction",
+      "topic_text": "JulieFarkasAddiction",
+      "emotion": "Neutral 50",
+      "response_text": "This should have you cleaned up in no time.",
+      "index": "223"
+    },
+    {
+      "topic": "JulieFarkasHeal",
+      "topic_text": "JulieFarkasHeal",
+      "emotion": "Neutral 50",
+      "response_text": "This should help with the pain.",
+      "index": "224"
+    },
+    {
+      "topic": "JulieFarkasRads",
+      "topic_text": "JulieFarkasRads",
+      "emotion": "Neutral 50",
+      "response_text": "This should flush those rads out quickly.",
+      "index": "225"
+    },
+    {
+      "topic": "VFSJulieFarkasHealPlayer",
+      "topic_text": "VFSJulieFarkasHealPlayer",
+      "emotion": "Neutral 50",
+      "response_text": "This will help with the pain.",
+      "index": "226"
+    }
+  ],
+  "combat": []
+}

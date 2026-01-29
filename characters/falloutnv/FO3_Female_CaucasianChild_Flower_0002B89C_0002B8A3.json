@@ -1,0 +1,262 @@
+{
+  "name": "Flower",
+  "url": "/wiki/Flower_(character)",
+  "dialogue_name": "Flower.txt",
+  "dialogue_url": "/wiki/Flower.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": true,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "0002B89C",
+  "ref_id": "0002B8A3",
+  "editor_id": "Flower",
+  "location": "Republic of Dave",
+  "location_url": "/wiki/Republic_of_Dave",
+  "descriptions": [
+    "Flower is one of Dave's daughters and a citizen of the Republic of Dave in the year 2277.",
+    "Flower is the youngest child in the Republic. Because of that, the other kids usually stick her with the worst chores, which she cheerfully carries out.",
+    "Flower runs around in the Republic of Dave.",
+    "Flower is the youngest member of Dave's family.",
+    "With the Child at Heart perk, she will allow the Lone Wanderer to enter the Republic of Dave."
+  ],
+  "race": "Human",
+  "gender": "Female",
+  "affiliation": "Republic of Dave",
+  "role": "Daughter of Dave",
+  "detailed_location": "Republic of Dave",
+  "voice_actor": "Stephanie Joy",
+  "special": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 5,
+    "Intelligence": 4,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "tag_skills": [
+    {
+      "Barter:": "30"
+    },
+    {
+      "Medicine:": "28"
+    },
+    {
+      "Melee Weap.:": "32"
+    }
+  ],
+  "karma": "Good",
+  "geck_race": "CaucasianChild",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Happy 50",
+      "response_text": "You're my hero, ma'am. I want to be just like you when I grow up.",
+      "index": "1"
+    },
+    {
+      "topic": "RDBacktoTopics",
+      "topic_text": "I think I get the idea. Let me ask you something else.",
+      "emotion": "Neutral 50",
+      "response_text": "Alright then.",
+      "index": "9"
+    },
+    {
+      "topic": "RDGottaGo",
+      "topic_text": "I've got to go.",
+      "emotion": "Neutral 50",
+      "response_text": "Yes, you do.",
+      "index": "10"
+    },
+    {
+      "topic": "RDGuardChildatHeart",
+      "topic_text": "Don't worry. I'm just here to play Republic with you.",
+      "emotion": "Happy 50",
+      "response_text": "I like playing Republic. Even though stupid Ralphie always gets to play as Dave!",
+      "index": "11"
+    },
+    {
+      "topic": "RDGuardEnter",
+      "topic_text": "I think I'd like to meet Dave.",
+      "emotion": "Fear 50",
+      "response_text": "Okay, I'll take you, but President Daddy doesn't always like new people.",
+      "index": "13"
+    },
+    {
+      "topic": "RDGuardGoAway",
+      "topic_text": "I'm just a wanderer. I'll be going now.",
+      "emotion": "Fear 50",
+      "response_text": "Strangers need to stay outside or get permission from President Daddy! Else the Army of Dave will shoot you!",
+      "index": "15"
+    },
+    {
+      "topic": "RDGuardNice",
+      "topic_text": "I'm not here to hurt anyone. What is this place?",
+      "emotion": "Fear 50",
+      "response_text": "This is the Republic of Dave, duh! It's named for President Daddy! But you have to talk to him if you want to stay here.",
+      "index": "16"
+    },
+    {
+      "topic": "RDGuardNoThanks",
+      "topic_text": "Um... I don't think so. I'll stay out here.",
+      "emotion": "Neutral 50",
+      "response_text": "Okay. Just don't hang around the fence. President Daddy's guards don't like that.",
+      "index": "18"
+    },
+    {
+      "topic": "RDGuardWhoIsDave",
+      "topic_text": "Wait, who's this Dave guy, and why does he have his own Republic?",
+      "emotion": "Neutral 50",
+      "response_text": "He's the president of the Republic of Dave, duh. You can ask over at the Museum of Dave if you don't believe me.",
+      "index": "19"
+    },
+    {
+      "topic": "RDNeverMind",
+      "topic_text": "Actually, I think I have all the info I need.",
+      "emotion": "Neutral 50",
+      "response_text": "Alright then.",
+      "index": "21"
+    },
+    {
+      "topic": "RDSubElectionSuggestion",
+      "topic_text": "Have you considered running for the presidency?",
+      "emotion": "Fear 10",
+      "response_text": "I can't be the president, I'm just a kid!",
+      "index": "22"
+    },
+    {
+      "topic": "RDTopicElectionResultsHave you heard the election results?",
+      "topic_text": "Did you hear that Dave won the election?",
+      "emotion": "Neutral 50",
+      "response_text": "Hurray!",
+      "index": "23"
+    },
+    {
+      "topic": "RDTopicKill",
+      "topic_text": "Your Republic is forfeit. Prepare to be reclaimed by the Wasteland!",
+      "emotion": "Fear 50",
+      "response_text": "Daddy Dave! Help us! Please!",
+      "index": "25"
+    },
+    {
+      "topic": "RDTopicRoD",
+      "topic_text": "I'd like to know more about the Republic.",
+      "emotion": "Neutral 50",
+      "response_text": "Um, okay. As long as President Daddy says it's all right.",
+      "index": "27"
+    },
+    {
+      "topic": "RDTopicRoDEND",
+      "topic_text": "That's all I need to know.",
+      "emotion": "Neutral 50",
+      "response_text": "Okay.",
+      "index": "28"
+    },
+    {
+      "topic": "RDTopicThisPlace",
+      "topic_text": "What's your take on the Republic?",
+      "emotion": "Happy 50",
+      "response_text": "I want to be like Shawna when I grow up. She's smart, just like mommy! Course, daddy is smarter. Like, way smarter.",
+      "index": "29"
+    },
+    {
+      "topic": "RDTopicWhosInCharge",
+      "topic_text": "Tell me more about this Dave guy.",
+      "emotion": "Happy 50",
+      "response_text": "Daddy! President Daddy to you! <giggles>",
+      "index": "30"
+    },
+    {
+      "topic": "RDTopicWivesDave has two wives?",
+      "topic_text": "You have two mommies?",
+      "emotion": "Surprise 25",
+      "response_text": "Uh huh. Doesn't everybody?",
+      "index": "31"
+    },
+    {
+      "topic": "RDTopicYourselfWhat can you tell me about yourself?",
+      "topic_text": "So, what have you been up to, kid?",
+      "emotion": "Sad 50",
+      "response_text": "President Daddy says I sleep too much, but I don't sleep much at all!",
+      "index": "32"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYEI have to go now.",
+      "topic_text": "Talk to you later, kid.",
+      "emotion": "Happy 50",
+      "response_text": "Hurray for the Republic! <giggles>",
+      "index": "33"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Surprise 50",
+      "response_text": "Rachael, come play with me!",
+      "index": "34"
+    },
+    {
+      "topic": "RDElectionTalk",
+      "topic_text": "DaveElectionTalk",
+      "emotion": "Neutral 50",
+      "response_text": "Santa Claus.",
+      "index": "41"
+    },
+    {
+      "topic": "RDGuardEscortDone",
+      "topic_text": "RDGuardEscortDone",
+      "emotion": "Neutral 50",
+      "response_text": "President Daddy, there is a Wastelander who wishes to see you, sir!",
+      "index": "42"
+    },
+    {
+      "topic": "RDStudentTalk",
+      "topic_text": "RDStudentTalk",
+      "emotion": "Sad 50",
+      "response_text": "Awww... I hate class... I want to go play!",
+      "index": "43"
+    },
+    {
+      "topic": "RDStudentTalk1",
+      "topic_text": "RDStudentTalk1",
+      "emotion": "Neutral 50",
+      "response_text": "Uh... he asked Tom really nicely?",
+      "index": "44"
+    },
+    {
+      "topic": "RDStudentTalk2",
+      "topic_text": "RDStudentTalk2",
+      "emotion": "Anger 50",
+      "response_text": "He was ugly, and stupid, and mean!",
+      "index": "45"
+    },
+    {
+      "topic": "RDStudentTalk3",
+      "topic_text": "RDStudentTalk3",
+      "emotion": "Neutral 50",
+      "response_text": "Yesterday!",
+      "index": "46"
+    },
+    {
+      "topic": "RDStudentTalk4",
+      "topic_text": "RDStudentTalk4",
+      "emotion": "Happy 50",
+      "response_text": "Ha! Ha! Rachael's in trouble!",
+      "index": "47"
+    },
+    {
+      "topic": "RDStudentTalk5",
+      "topic_text": "RDStudentTalk5",
+      "emotion": "Neutral 50",
+      "response_text": "Aww... do we have to?",
+      "index": "48"
+    }
+  ],
+  "combat": []
+}

@@ -1,0 +1,196 @@
+{
+  "name": "Jas Wilkins",
+  "url": "/wiki/Jas_Wilkins",
+  "dialogue_name": "QJJasWilkins.txt",
+  "dialogue_url": "/wiki/QJJasWilkins.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": true,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000E595B",
+  "ref_id": "000E5A69",
+  "editor_id": "QJJasWilkins",
+  "location": "Mess hall",
+  "location_url": "/wiki/Mess_hall",
+  "descriptions": [
+    "Jas Wilkins runs the mess hall in Sloan in 2281.",
+    "A native Californian, Jas is one of the many souls attracted to the gilded glory of New Vegas, trying to reach it in order to make it big and without the Republic's laws and regulations getting in the way. Of course, she could have settled back home, working at one of the farms or mills, but she hates boredom and the strict formalism of the Republic.",
+    "However, adventure soon found her, in the form of the Powder Gangers who robbed Sloan of its dynamite stockpile. Ever since, every miner and employee sleeps with a gun nearby.",
+    "Her talent for cooking runs in the family: Jas' great-aunt was Rose, the owner of Rose's Bed and Breakfast and original creator of the deathclaw omelet. Although Jas is eager to try out the recipe for herself, she doesn't have a deathclaw locked up for its eggs - and her aunt can't help, ever since a stranger came into town and shot her deathclaw in the eye.",
+    "You Gotta Break Out a Few Eggs: She asks the Courier to collect a deathclaw egg for her great-aunt's deathclaw omelet recipe. Upon receipt of the egg, she will give them a wasteland omelet and the recipe for crafting one themself.",
+    "The Cannibal and Ghastly Scavenger perks provide bonus dialogue options, telling her humans have a special taste, and that both ghouls and super mutants taste like brahmin steak.",
+    "Four strange meat pies can be found on the counter in the mess hall kitchen.",
+    "Jas has an unused script, QJJasWilkinsScript, that removes her side quest note if she should die and the player character hadn't completed it. She also has a commented out variable for her to leave Sloan that links to the freeform script for Sloan. From a comment, it can be assumed that Jas would have left Sloan for the New Vegas Strip (like she says during dialogue) when she had obtained a deathclaw egg to complete her omelet and the deathclaws were cleared out of Quarry Junction. For one reason or another, the script was not assigned."
+  ],
+  "race": "Human",
+  "gender": "Female",
+  "affiliation": "Sloan",
+  "role": "Merchant",
+  "detailed_location": "Mess hall,Sloan",
+  "voice_actor": "Courtenay Taylor",
+  "special": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 6,
+    "Charisma": 3,
+    "Intelligence": 4,
+    "Agility": 6,
+    "Luck": 4
+  },
+  "mod_special_values": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 7,
+    "Charisma": 3,
+    "Intelligence": 4,
+    "Agility": 7,
+    "Luck": 4
+  },
+  "level": "1",
+  "tag_skills": [
+    {
+      "Guns:": "31(33)"
+    },
+    {
+      "Melee Weap.:": "29"
+    },
+    {
+      "Unarmed:": "31(33)"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "75(80)"
+    }
+  ],
+  "karma": "Neutral",
+  "voice_type": "FemaleAdult04",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "Let me ask you a question - what's the tastiest thing you've ever eaten?",
+      "index": "1"
+    },
+    {
+      "topic": "vFreeformSloanQJJasWilkinsTopic000",
+      "topic_text": "{Cannibal}People have a rather unique taste, I've discovered.",
+      "emotion": "Disgust 20",
+      "response_text": "Uh... hmm... well, no accounting for taste I guess. Anyway...",
+      "index": "4"
+    },
+    {
+      "topic": "vFreeformSloanQJJasWilkinsTopic001",
+      "topic_text": "Why do you ask?",
+      "emotion": "Happy 5",
+      "response_text": "{slightly excited, has a passion for cooking exotic recipes}I've got this recipe for a Deathclaw Omelet that I've been itching to try out. Trouble is - I need a Deathclaw egg. Kinda obvious, I suppose.",
+      "index": "6"
+    },
+    {
+      "topic": "vFreeformSloanQJJasWilkinsTopic002",
+      "topic_text": "{Ghastly Scavenger}Ghouls and Super Mutants sometimes taste like Brahmin steaks.",
+      "emotion": "Disgust 20",
+      "response_text": "You're just pulling my leg, right? Why would anyone... uh... never mind. Anyway...",
+      "index": "7"
+    },
+    {
+      "topic": "vFreeformSloanQJJasWilkinsTopic003",
+      "topic_text": "Anything that wasn't made 200 years ago.",
+      "emotion": "Happy 10",
+      "response_text": "{amused}Ha. Yeah, can you believe some people still eat that stuff? Anyway...",
+      "index": "9"
+    },
+    {
+      "topic": "vFreeformSloanQJJasWilkinsTopic004",
+      "topic_text": "Where did you come up with this recipe?",
+      "emotion": "Neutral 50",
+      "response_text": "My great-aunt Rose ran a bed and breakfast back in California, in a town called Modoc. She's the one who created the recipe in the first place.",
+      "index": "10"
+    },
+    {
+      "topic": "vFreeformSloanQJJasWilkinsTopic005",
+      "topic_text": "Where can I find a Deathclaw egg?",
+      "emotion": "Neutral 50",
+      "response_text": "The quarry just north of here is full of Deathclaws, so there's bound to be an egg or two in there somewhere.",
+      "index": "13"
+    },
+    {
+      "topic": "vFreeformSloanQJJasWilkinsTopic006",
+      "topic_text": "What are you offering in exchange for a Deathclaw egg?",
+      "emotion": "Neutral 50",
+      "response_text": "I don't have much in the way of money, but I'd be willing to share the secret of the recipe.",
+      "index": "15"
+    },
+    {
+      "topic": "vFreeformSloanQJJasWilkinsTopic007",
+      "topic_text": "Let's talk about something else.",
+      "emotion": "Neutral 50",
+      "response_text": "All right. Do you need anything to eat or drink?",
+      "index": "16"
+    },
+    {
+      "topic": "vFreeformSloanQJJasWilkinsTopic008",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "All right, then!",
+      "index": "17"
+    },
+    {
+      "topic": "vFreeformSloanQJJasWilkinsTopic009",
+      "topic_text": "About that Deathclaw Omelet recipe...",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah?",
+      "index": "18"
+    },
+    {
+      "topic": "vFreeformSloanQJJasWilkinsTopic010",
+      "topic_text": "I had some questions about this place.",
+      "emotion": "Neutral 50",
+      "response_text": "Sure. What did you want to know?",
+      "index": "19"
+    },
+    {
+      "topic": "vFreeformSloanQJJasWilkinsTopic011",
+      "topic_text": "Show me what you have for sale.",
+      "emotion": "Neutral 50",
+      "response_text": "Sure thing.",
+      "index": "20"
+    },
+    {
+      "topic": "vFreeformSloanQJJasWilkinsTopic015",
+      "topic_text": "You don't look like a quarry worker.",
+      "emotion": "Neutral 50",
+      "response_text": "Oh, I'm not. I'm making my way to New Vegas. They say anything goes there, and best of all, the NCR can't mess it up for you.",
+      "index": "21"
+    },
+    {
+      "topic": "vFreeformSloanQJJasWilkinsTopic016",
+      "topic_text": "Are you from California?",
+      "emotion": "Neutral 50",
+      "response_text": "Born and raised. Things back in California are better than they've ever been, according to my grandpa.",
+      "index": "23"
+    },
+    {
+      "topic": "vFreeformSloanQJJasWilkinsTopic017",
+      "topic_text": "Any trouble around here?",
+      "emotion": "Neutral 50",
+      "response_text": "Well, there's the Deathclaws, of course, and there was that one group of Powder Gangers who stole all the dynamite.",
+      "index": "26"
+    },
+    {
+      "topic": "vFreeformSloanQJJasWilkinsTopic018",
+      "topic_text": "I just happen to have a Deathclaw egg with me. Here.",
+      "emotion": "Neutral 50",
+      "response_text": "I can't believe you actually got one. Give me a bit to get the recipe set up, then talk to me again.",
+      "index": "28"
+    }
+  ],
+  "conversation": [],
+  "combat": []
+}

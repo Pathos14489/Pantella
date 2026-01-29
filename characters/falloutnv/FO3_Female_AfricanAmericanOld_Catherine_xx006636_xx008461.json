@@ -1,0 +1,102 @@
+{
+  "name": "Catherine",
+  "url": "/wiki/Catherine_(Point_Lookout)",
+  "dialogue_name": "DLC04Catherine.txt",
+  "dialogue_url": "/wiki/DLC04Catherine.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": true,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "xx006636",
+  "ref_id": "xx008461",
+  "editor_id": "DLC04Catherine",
+  "location": "Riverboat landing",
+  "location_url": "/wiki/Riverboat_landing",
+  "descriptions": [
+    "Catherine was a scientist and the wife of James, working together on Project Purity, an attempt to produce purified water in mass quantities, overcoming the critical shortage of this essential good in the Capital Wasteland. Despite intense efforts, the Project was cut short when Catherine died after giving birth to the Lone Wanderer in 2258. Although appearing only briefly, Catherine's memory is the driving force behind James' second attempt to restart Project Purity that sets in motion the storyline in Fallout 3.",
+    "Little is known about Catherine's background or origins. She was a dedicated scientist,",
+    "Their passion and vision inspired others, including Madison Li of the Rivet City science crew, who joined Project Purity to help figure out the issue of water purification. While they were focused on work, James and Catherine left space for flirt and romance for themselves. James seemed fond of interrupting his wife at work, and during one such interruption, the Lone Wanderer was conceived.",
+    "However, when news of her pregnancy broke, it had the opposite effect: It had reinvigorated the team, lifting everyone's spirits and bringing a renewed push towards making the purifier work. While their methods were inefficient, James believed they were on the right track. Catherine agreed and spent her every waking hour in the lab, trying to resolve the power issues.",
+    "The Project's fate was sealed on July 13, 2258, when the child was born. James delivered the baby personally, with Madison Li assisting. While there were no complications during delivery, Catherine went into cardiac arrest moments after giving birth, her heart unable to withstand the strain.",
+    "The project imploded shortly afterwards: Without Catherine, James could not properly care for an infant at the Memorial's facilities,",
+    "Memories of Catherine, especially her good natured ways and scientific acumen persisted despite James' flight. Li especially respected her work as a scientist, despite disagreements.",
+    "Baby Steps",
+    "Catherine appears physically in Fallout 3, and an image of her appears in Fallout: New Vegas."
+  ],
+  "race": "Human",
+  "gender": "Female",
+  "affiliation": "Project Purity",
+  "role": "ScientistPlayer character's mother",
+  "detailed_location": "Jefferson Memorial",
+  "voice_actor": "Karen Carbone",
+  "special": {
+    "Strength": 3,
+    "Perception": 6,
+    "Endurance": 3,
+    "Charisma": 4,
+    "Intelligence": 8,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "level": "1",
+  "tag_skills": [
+    {
+      "Explosives:": "32"
+    },
+    {
+      "Medicine:": "36"
+    },
+    {
+      "Science:": "36"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "20"
+    },
+    {
+      "Critical Chance:": "5%"
+    },
+    {
+      "Unarmed Dam.:": "1.05"
+    },
+    {
+      "Poison Resist.:": "10%"
+    },
+    {
+      "Rad. Resist.:": "4%"
+    },
+    {
+      "Carry Weight:": "180"
+    },
+    {
+      "Damage Res.:": "0%"
+    }
+  ],
+  "karma": "Good",
+  "voice_type": "FemaleAdult02DC",
+  "geck_race": "AfricanAmericanOld",
+  "topics": [
+    {
+      "topic": "MomHolotape",
+      "topic_text": "MomHolotape",
+      "emotion": "Neutral 50",
+      "response_text": "...that batch of tests was inconclusive, but Madison and I are convinced it's a problem with the secondary filtration system.",
+      "index": "1"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "CG00MomSpeech",
+      "topic_text": "CG00MomSpeech",
+      "emotion": "Happy 100",
+      "response_text": "Oh... Oh James... We did it... A son... Our beautiful son...{breathing heavily  she just gave birth}",
+      "index": "5"
+    }
+  ],
+  "combat": []
+}

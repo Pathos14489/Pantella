@@ -1,0 +1,192 @@
+{
+  "name": "Klamath Bob",
+  "url": "/wiki/Klamath_Bob",
+  "dialogue_name": "KlamathBob.txt",
+  "dialogue_url": "/wiki/KlamathBob.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": true,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000F839E",
+  "ref_id": "000F83AA",
+  "editor_id": "KlamathBob",
+  "location": "Klamath Bob's liquor store",
+  "location_url": "/wiki/Klamath_Bob%27s_liquor_store",
+  "descriptions": [
+    "Klamath Bob is a resident of Westside, acting as the owner and shopkeeper of the local liquor store, in the Mojave Wasteland in Fallout: New Vegas.",
+    "Hailing from Klamath hundreds of miles west in New California, sometime before 2281, \"Klamath\" Bob left his hometown and traveled, eventually ending up outside New Vegas where he settled down among the people of Westside, later taking ownership of an old, run-down liquor store and selling booze to people who need something to smooth out the rough edges of everyday existence. Living in Westside, Bob is casual, easygoing, and about as far from formal as can be.",
+    "While generally affable to everyone he meets, Bob's kindness doesn't always succeed. Years prior to coming to the Mojave, while still traveling around New California, Bob came across Mean Sonofabitch, a first-generation super mutant held in captivity and tortured by a group of mutant haters near the Hub. He offered to buy the mutant's freedom, but the xenophobes rejected the offer as they preferred to keep tormenting their captive, forcing Bob to move on. As Bob learned years later, afterward, Mean was freed by Tabitha and her nightkin, and the mutant eventually traveled to the Mojave himself where they reunited. Remembering Bob's kindness in trying to help him convinced Mean to stay in Westside, helping the people survive and Bob is quite happy to speak for him after his torture led to the loss of his tongue.",
+    "Before he left his hometown, wanting to escape the dull living there, Bob learned about the town's history including how, back in 2241, a tribal from Arroyo visited Klamath.",
+    "Bob's telling of his backstory references several locations visited in Fallout 2.",
+    "Klamath Bob's name and relation to alcohol and the town of Klamath are likely a reference to Whiskey Bob, a moonshiner that lives in Klamath during Fallout 2.",
+    "PC Xbox 360 When approached by the Courier, he may sometimes comment in a female voice. "
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Westside Militia",
+  "role": "Liquor store ownerTown guard",
+  "detailed_location": "Westside",
+  "voice_actor": "Chris Andrew Ciulla",
+  "special": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 7,
+    "Charisma": 6,
+    "Intelligence": 6,
+    "Agility": 4,
+    "Luck": 5
+  },
+  "mod_special_values": {
+    "Strength": 6,
+    "Perception": 6,
+    "Endurance": 7,
+    "Charisma": 6,
+    "Intelligence": 6,
+    "Agility": 4,
+    "Luck": 5
+  },
+  "level": "7",
+  "tag_skills": [
+    {
+      "Guns:": "84"
+    },
+    {
+      "Melee Weap.:": "81"
+    },
+    {
+      "Unarmed:": "77"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Good",
+  "voice_type": "MaleAdult12",
+  "geck_race": "AfricanAmericanOld",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "Howdy. Name's Bob, but folks around here call me Klamath Bob. What can I do you for?{Speaks casually and informally.}",
+      "index": "1"
+    },
+    {
+      "topic": "VDialogueVegasWest1EKlamathBobTopic002",
+      "topic_text": "Show me what you have for sale.",
+      "emotion": "Happy 10",
+      "response_text": "All right, then. Hopefully I've got something to wet your whistle.",
+      "index": "3"
+    },
+    {
+      "topic": "VDialogueVegasWest1EKlamathBobTopic012",
+      "topic_text": "I take it you're from Klamath?",
+      "emotion": "Happy 30",
+      "response_text": "Heh, yeah good old Klamath. Not a bad place if you like hunting, eating, and skinning geckos all day! Heh heh.",
+      "index": "5"
+    },
+    {
+      "topic": "VDialogueVegasWestKlamathBobTopic000",
+      "topic_text": "I have some questions about this area.",
+      "emotion": "Neutral 50",
+      "response_text": "I might have some answers for you. What did you want to know?",
+      "index": "7"
+    },
+    {
+      "topic": "VDialogueVegasWestKlamathBobTopic001",
+      "topic_text": "Can you tell me about Westside?",
+      "emotion": "Neutral 50",
+      "response_text": "Well, things aren't great here, but I've seen a lot worse. We've got the Fiends to the south of us, and that ain't good.",
+      "index": "8"
+    },
+    {
+      "topic": "VDialogueVegasWestKlamathBobTopic002",
+      "topic_text": "Do you have a lot of run-ins with the Fiends?",
+      "emotion": "Happy 5",
+      "response_text": "Not so much lately. The NCR is giving them hell any time they poke their damned heads out. Bless those boys and gals for getting rid of that vermin.",
+      "index": "11"
+    },
+    {
+      "topic": "VDialogueVegasWestKlamathBobTopic003",
+      "topic_text": "Tell me about the Scorpions.",
+      "emotion": "Disgust 20",
+      "response_text": "Not much to tell. Typical gang of dumb bullies and angry nobodies. They're holed up a bit south of here, in the Monte Carlo Suites.",
+      "index": "13"
+    },
+    {
+      "topic": "VDialogueVegasWestKlamathBobTopic004",
+      "topic_text": "What's so great about the co-op?",
+      "emotion": "Happy 15",
+      "response_text": "Food from the people and for the people. Anyone can buy, but the profits are shared by the folks who make the produce.",
+      "index": "15"
+    },
+    {
+      "topic": "VDialogueVegasWestKlamathBobTopic005",
+      "topic_text": "Do you know anything about that Super mutant walking around town?",
+      "emotion": "Happy 15",
+      "response_text": "Oh, heh. Yeah, that's Mean Sonofabitch. I know the name sounds bad, but he likes it. He's one nasty old coot.",
+      "index": "18"
+    },
+    {
+      "topic": "VDialogueVegasWestKlamathBobTopic006",
+      "topic_text": "What do you do around here?",
+      "emotion": "Neutral 50",
+      "response_text": "I run the liquor store in Westside. With things this rough, some folks need a lot of booze just to step out the door in the morning.",
+      "index": "22"
+    },
+    {
+      "topic": "VDialogueVegasWestKlamathBobTopic007",
+      "topic_text": "I don't have any more questions. Let's talk about something else.",
+      "emotion": "Neutral 50",
+      "response_text": "Sure.",
+      "index": "24"
+    },
+    {
+      "topic": "VDialogueVegasWestKlamathBobTopic009",
+      "topic_text": "Enough about the Westside.",
+      "emotion": "Neutral 50",
+      "response_text": "What else did you want to chat about?",
+      "index": "25"
+    },
+    {
+      "topic": "VDialogueVegasWestKlamathBobTopic010",
+      "topic_text": "How did he end up here on the Westside?",
+      "emotion": "Happy 10",
+      "response_text": "He just showed up here one day. Couldn't really talk, but he remembered me all right.",
+      "index": "26"
+    },
+    {
+      "topic": "VDialogueVegasWestKlamathBobTopic011",
+      "topic_text": "People around here aren't afraid of him?",
+      "emotion": "Neutral 50",
+      "response_text": "Some folks steer clear of him, for sure, but he don't seem to mind.",
+      "index": "28"
+    },
+    {
+      "topic": "VDialogueVegasWestKlamathBobTopic012",
+      "topic_text": "Do you know how he got away from the NCR?",
+      "emotion": "Neutral 50",
+      "response_text": "Turned out some of them \"Night Kids\"  - whatever you call those sneaky Super Mutant types - got in and busted him out.",
+      "index": "29"
+    },
+    {
+      "topic": "VDialogueVegasWestKlamathBobTopic014",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Okay, then.",
+      "index": "31"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Okay, then.",
+      "index": "32"
+    }
+  ],
+  "combat": []
+}

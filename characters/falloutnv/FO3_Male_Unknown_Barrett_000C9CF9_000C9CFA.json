@@ -1,0 +1,72 @@
+{
+  "name": "Barrett",
+  "url": "/wiki/Barrett",
+  "dialogue_name": "Barrett.txt",
+  "dialogue_url": "/wiki/Barrett.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000C9CF9",
+  "ref_id": "000C9CFA",
+  "editor_id": "Barrett",
+  "location": "Northwest Seneca Station",
+  "location_url": "/wiki/Northwest_Seneca_Station",
+  "descriptions": [
+    "Barrett is the ghoul bodyguard and assistant of Murphy in Northwest Seneca Station in the year 2277.",
+    "Barrett serves as Murphy’s bodyguard and assistant as the ghoul scientist attempts to synthesize and sell Ultrajet, a potent chem."
+  ],
+  "race": "Ghoul",
+  "gender": "Male",
+  "affiliation": "Murphy",
+  "role": "BodyguardScientific assistant",
+  "detailed_location": "Northwest Seneca Station",
+  "voice_actor": "Mike Rosson",
+  "special": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 4,
+    "Intelligence": 4,
+    "Agility": 6,
+    "Luck": 4
+  },
+  "level": "7",
+  "tag_skills": [
+    {
+      "Melee Weap.:": "59"
+    },
+    {
+      "Small Guns:": "59"
+    },
+    {
+      "Sneak:": "59"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Neutral",
+  "voice_type": "MaleGenericGhoulDC",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Disgust 100",
+      "response_text": "Get away from me, smoothskin.",
+      "index": "1"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Disgust 100",
+      "response_text": "Goddamn are you one ugly son-of-a-bitch!",
+      "index": "4"
+    }
+  ],
+  "combat": []
+}

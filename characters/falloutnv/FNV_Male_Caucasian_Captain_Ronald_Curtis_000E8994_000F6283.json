@@ -1,0 +1,380 @@
+{
+  "name": "Captain Ronald Curtis",
+  "url": "/wiki/Ronald_Curtis",
+  "dialogue_name": "CaptainCurtis.txt",
+  "dialogue_url": "/wiki/CaptainCurtis.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000E8994",
+  "ref_id": "000F6283",
+  "editor_id": "CaptainCurtis",
+  "location": "Camp McCarran terminal building",
+  "location_url": "/wiki/Camp_McCarran_terminal_building",
+  "descriptions": [
+    "Picus is a frumentarius of Caesar's Legion using the identity of Captain Ronald Curtis to infiltrate the New California Republic Army in Fallout: New Vegas. As \"Captain Ronald Curtis\", he is an officer of the NCR, leading Bravo Company at Camp McCarran.",
+    "Officially an upstanding officer of the NCR Army, Ronald Curtis has enjoyed a meteoric rise through the ranks, reaching the rank of captain and position of Bravo Company commander in three and a half years (six months faster than usual).",
+    "This was not by accident: \"Curtis\" is actually a frumentarius named Picus sent by Caesar years before the Legion arrived on the banks of the Colorado River to challenge the NCR.",
+    "Normally, Curtis would be commanding Bravo Company in the field. However, General Lee Oliver placed his company at Camp McCarran to shore up its defenses. While Bravo Company mans the walls as forward sentries, Curtis coordinates the management of the NCR's forces with Colonel James Hsu, granting him full access to patrol schedules, supply lines, and reinforcement logistics that he dictates himself.",
+    "The Legion's frumentarii have been planning this operation for years as a part of the greater plan, named Racket, first requiring one of theirs, Picus, to infiltrate the NCR. The NCR bolsters its presence in New Vegas from Camp McCarran; using the connecting monorail lets them occupy two positions for the price of one. In his years at McCarran, Picus has learned all he can about this monorail and its status as a crucial part of the NCR's effectiveness.",
+    "However, by 2281, Picus came to believe that Hsu had begun to suspect him, forcing him to look for a scapegoat on which to pin the monorail's impending sabotage. He'd even planned to completely disappear after the event, in case the NCR did eventually discover his identity. Picus acquired bomb-making supplies with the intent to plant them in Private Davey Crenshaw's personal footlocker, exploiting the soldier's notoriety as a practical joker to ward off Hsu's suspicions, though it additionally would require his death to prevent any potential leak of the truth. When the Courier first arrives at Camp McCarran, the culmination of Picus' years-long efforts to sabotage Caesar's enemies hangs on the edge, waiting for just the right co-conspirator, willing or otherwise to succeed.",
+    "Silus, a centurion captured alive in 2281, recognized Curtis upon being brought into McCarran, having seen him years earlier during the latter's frumentarii training. He did not know his alias, however.",
+    "Frumentarii: Alerio · Cato Hostilius · Gabban · Karl · Picus · Disguised frumentarius · Ulysses (formerly)\nConsul: M. Licinius Crassus · M. Scribonius Libo Drusus (of the consul)"
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "NCR Army(undercover)Bravo CompanyCaesar's Legion",
+  "role": "Bravo Company commanderFrumentarius",
+  "detailed_location": "Terminal building,Camp McCarran",
+  "voice_actor": "Ron Yuan",
+  "special": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 5,
+    "Intelligence": 5,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "level": "12",
+  "tag_skills": [
+    {
+      "Explosives:": "74"
+    },
+    {
+      "Guns:": "74"
+    },
+    {
+      "Melee Weap.:": "74"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Neutral",
+  "voice_type": "MaleAdult08",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "What are you doing here? You don't have clearance.",
+      "index": "1"
+    },
+    {
+      "topic": "VMS08CaptainCurtisCrenshaw",
+      "topic_text": "Where can I find Private Crenshaw again?",
+      "emotion": "Neutral 50",
+      "response_text": "He's stationed just inside the south wall of the base. Should be on patrol, if he isn't screwing around.",
+      "index": "10"
+    },
+    {
+      "topic": "VMS08CaptainCurtisCrenshawLocker",
+      "topic_text": "Where is Private Crenshaw's footlocker?",
+      "emotion": "Neutral 50",
+      "response_text": "It's in the main concourse. That's the building just across the skybridge. There's a barracks area that'll be behind you on the left when you enter.",
+      "index": "11"
+    },
+    {
+      "topic": "VMS08CaptainCurtisHsuSentMe",
+      "topic_text": "Colonel Hsu wanted me to help you look into the recent intelligence leaks.",
+      "emotion": "Neutral 50",
+      "response_text": "Smart man. I could use somebody who can operate under the radar around here.",
+      "index": "13"
+    },
+    {
+      "topic": "VMS08CaptainCurtisLegion",
+      "topic_text": "I know who you are. I'm working for the Legion, too.",
+      "emotion": "Neutral 50",
+      "response_text": "Christ, keep it down! You want to blow the whole thing? We've worked years for this.",
+      "index": "15"
+    },
+    {
+      "topic": "VMS08CaptainCurtisTopic000",
+      "topic_text": "Hsu won't trust me enough to let me investigate.",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah, you haven't exactly kept a low profile. That narrows our options somewhat. They're not gonna believe your accusations.",
+      "index": "20"
+    },
+    {
+      "topic": "VMS08CaptainCurtisTopic001",
+      "topic_text": "I couldn't sleep, so I decided to take a walk.",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] Yeah, I get insomnia pretty bad myself, out here. I think it's the heat. Weird how sometimes it's cooler out here than it is inside.",
+      "index": "23"
+    },
+    {
+      "topic": "VMS08CaptainCurtisTopic002",
+      "topic_text": "Hsu bought it. You should be in the clear.",
+      "emotion": "Neutral 50",
+      "response_text": "Perfect. This has turned out better than I'd ever imagined.",
+      "index": "25"
+    },
+    {
+      "topic": "VMS08CaptainCurtisTopic003",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Bye.",
+      "index": "28"
+    },
+    {
+      "topic": "VMS08CaptainCurtisTopic004",
+      "topic_text": "I have clearance for catching spies.",
+      "emotion": "Neutral 50",
+      "response_text": "I don't know what you mean.",
+      "index": "29"
+    },
+    {
+      "topic": "VMS08CaptainCurtisTopic005",
+      "topic_text": "You don't seem like you're supposed to be here, either.",
+      "emotion": "Neutral 50",
+      "response_text": "Really? And how would you know where I'm supposed to be?",
+      "index": "30"
+    },
+    {
+      "topic": "VMS08CaptainCurtisTopic007",
+      "topic_text": "It's done. The evidence is in Crenshaw's locker and Crenshaw is dead.",
+      "emotion": "Neutral 50",
+      "response_text": "Poor Crenshaw. He's pulled his last prank.{Curtis ordered Crenshaw's death. This is said with a smirk.}",
+      "index": "31"
+    },
+    {
+      "topic": "VMS08CaptainCurtisTopic008",
+      "topic_text": "I have a lead. There's been someone sneaking into the control tower at night.",
+      "emotion": "Neutral 50",
+      "response_text": "Is that right? No one has any business being in there after dusk. I wonder...",
+      "index": "33"
+    },
+    {
+      "topic": "VMS08CaptainCurtisTopic009",
+      "topic_text": "How many years have you been on this assignment?",
+      "emotion": "Neutral 50",
+      "response_text": "Took me three-and-a-half years, just to make Captain. Usually takes four, but I made sure there was an early vacancy.{the second sentence is a euphemism - he murdered a guy.}",
+      "index": "38"
+    },
+    {
+      "topic": "VMS08CaptainCurtisTopic010",
+      "topic_text": "What next part?",
+      "emotion": "Neutral 50",
+      "response_text": "If you haven't noticed, the NCR bolsters its presence on the Strip from here. Sends troopers on the monorail in shifts.",
+      "index": "41"
+    },
+    {
+      "topic": "VMS08CaptainCurtisTopic011",
+      "topic_text": "And you have something in mind for me?",
+      "emotion": "Neutral 50",
+      "response_text": "I told you I think they're starting to suspect me. You're going to help me cast away those suspicions.",
+      "index": "45"
+    },
+    {
+      "topic": "VMS08CaptainCurtisTopic012",
+      "topic_text": "Tell me what I need to do.",
+      "emotion": "Neutral 50",
+      "response_text": "I have the explosives stashed in a trash can next to the ticketing counter along with some incriminating documents.",
+      "index": "50"
+    },
+    {
+      "topic": "VMS08CaptainCurtisTopic013",
+      "topic_text": "The scapegoat isn't me, is it?",
+      "emotion": "Neutral 50",
+      "response_text": "No, no. I wouldn't do that. Not unless I didn't have better options, anyway. And I do.",
+      "index": "53"
+    },
+    {
+      "topic": "VMS08CaptainCurtisTopic014",
+      "topic_text": "Understood. I'll go and pick up the explosives.",
+      "emotion": "Neutral 50",
+      "response_text": "Good. Try to plant the explosives quietly if you can - you'll make both our lives easier.",
+      "index": "54"
+    },
+    {
+      "topic": "VMS08CaptainCurtisTopic015",
+      "topic_text": "Could you go over that again?",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah, let's make sure you have it down pat.",
+      "index": "58"
+    },
+    {
+      "topic": "VMS08CaptainCurtisTopic017",
+      "topic_text": "I'm not interested in helping you. You're on your own.",
+      "emotion": "Neutral 50",
+      "response_text": "Are you sure? Because I think the Legion would frown upon that decision.",
+      "index": "59"
+    },
+    {
+      "topic": "VMS08CaptainCurtisTopic019",
+      "topic_text": "I'm positive.",
+      "emotion": "Neutral 50",
+      "response_text": "Very well. Let me know if you should change your mind.",
+      "index": "60"
+    },
+    {
+      "topic": "VMS08CaptainCurtisTopic021",
+      "topic_text": "I don't. I was just trying to get myself out of trouble.",
+      "emotion": "Neutral 50",
+      "response_text": "I can't let you leave.",
+      "index": "61"
+    },
+    {
+      "topic": "VMS08CaptainCurtisTopic022",
+      "topic_text": "Nothing.",
+      "emotion": "Neutral 50",
+      "response_text": "Be straight with me. If you're onto something, I want to know about it.",
+      "index": "62"
+    },
+    {
+      "topic": "VMS08CaptainCurtisTopic023",
+      "topic_text": "Hsu is dead.",
+      "emotion": "Neutral 50",
+      "response_text": "What? You idiot! I spent years earning his trust. The whole point of your heading up this operation was to preserve that trust!",
+      "index": "64"
+    },
+    {
+      "topic": "VMS08CaptainCurtisTopic024",
+      "topic_text": "I got lost. This place is so big.",
+      "emotion": "Neutral 50",
+      "response_text": "[FAILED] Lost, huh? If you say so. If you head over to the front terminal building you should be able to get in through the garage doors in back.",
+      "index": "67"
+    },
+    {
+      "topic": "VMS08CaptainCurtisTopic025",
+      "topic_text": "I could ask you the same question.",
+      "emotion": "Neutral 50",
+      "response_text": "See those menacing looking troopers with guns standing on the walls up there? That's Bravo Company. My company.",
+      "index": "69"
+    },
+    {
+      "topic": "VMS08CaptainCurtisTopic026",
+      "topic_text": "So what's the plan?",
+      "emotion": "Neutral 50",
+      "response_text": "All right, forget about blaming Crenshaw. Just bomb the monorail.",
+      "index": "72"
+    },
+    {
+      "topic": "VMS08CaptainCurtisTopic027",
+      "topic_text": "Where should I start?",
+      "emotion": "Neutral 50",
+      "response_text": "You want my advice, start by talking to people with a lot of eyes in the field. People like Lieutenant Boyd, or Sergeant Contreras, maybe.",
+      "index": "75"
+    },
+    {
+      "topic": "VMS08CaptainCurtisTopic028",
+      "topic_text": "What do I do when I'm at the train?",
+      "emotion": "Neutral 50",
+      "response_text": "Put the bomb in one of the vents inside the train on the back wall, towards the joint that connects the cars.  Arm it, and get out of there.",
+      "index": "78"
+    },
+    {
+      "topic": "VMS08CaptainCurtisTopic029",
+      "topic_text": "Is that everything?",
+      "emotion": "Neutral 50",
+      "response_text": "Report him to Colonel Hsu. Do all that and we should be free and clear.",
+      "index": "81"
+    },
+    {
+      "topic": "VMS08CaptainCurtisTopic030",
+      "topic_text": "So where do I find his footlocker?",
+      "emotion": "Neutral 50",
+      "response_text": "His footlocker is in the barracks in the main concourse.",
+      "index": "84"
+    },
+    {
+      "topic": "VMS08CaptainCurtisTopic031",
+      "topic_text": "Let's discuss something else.",
+      "emotion": "Neutral 50",
+      "response_text": "Okay.",
+      "index": "85"
+    },
+    {
+      "topic": "VMS08CaptainCurtisWhatDoYouDo",
+      "topic_text": "What do you do here?",
+      "emotion": "Neutral 50",
+      "response_text": "Officially I'm in charge of Bravo Company. But since General Oliver has Bravo and most of our forces here garrisoned, I'm free to do other things.",
+      "index": "86"
+    },
+    {
+      "topic": "VMS08CaptainCurtisWhoToAsk",
+      "topic_text": "Who should I be talking to about the intelligence leaks again?",
+      "emotion": "Neutral 50",
+      "response_text": "Well, I'll leave that to you. But I would recommend Lieutenant Boyd and Sergeant Contreras as two people who usually know what's going on around here.",
+      "index": "91"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Later.",
+      "index": "92"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "Hello",
+      "emotion": "Neutral 50",
+      "response_text": "What is it?",
+      "index": "93"
+    },
+    {
+      "topic": "VMS08CurtisAmbush",
+      "topic_text": "VMS08CurtisAmbush",
+      "emotion": "Neutral 50",
+      "response_text": "You're getting too close, shamus!{said like an old timey gangster running from a detective.}",
+      "index": "94"
+    },
+    {
+      "topic": "VMS08CurtisRadio1",
+      "topic_text": "VMS08CurtisRadio1",
+      "emotion": "Neutral 50",
+      "response_text": "Lupa, this is Frumentarius Picus, over.{loop-uh, froo-men-tar-ee-us pike-us}",
+      "index": "96"
+    },
+    {
+      "topic": "VMS08CurtisRadio11",
+      "topic_text": "VMS08CurtisRadio11",
+      "emotion": "Neutral 50",
+      "response_text": "Ten-four.",
+      "index": "97"
+    },
+    {
+      "topic": "VMS08CurtisRadio3",
+      "topic_text": "VMS08CurtisRadio3",
+      "emotion": "Neutral 50",
+      "response_text": "Afternoon patrol enters Fiend territory at 1300. Have them mine that stretch.",
+      "index": "98"
+    },
+    {
+      "topic": "VMS08CurtisRadio35",
+      "topic_text": "VMS08CurtisRadio3.5",
+      "emotion": "Neutral 50",
+      "response_text": "That would leave them the morning to bury mines along that stretch. Over.",
+      "index": "99"
+    },
+    {
+      "topic": "VMS08CurtisRadio5",
+      "topic_text": "VMS08CurtisRadio5",
+      "emotion": "Neutral 50",
+      "response_text": "Roger Lupa.",
+      "index": "100"
+    },
+    {
+      "topic": "VMS08CurtisRadio7",
+      "topic_text": "VMS08CurtisRadio7",
+      "emotion": "Neutral 50",
+      "response_text": "Charges are set. Detonation will occur as the train leaves the station. Over.",
+      "index": "101"
+    },
+    {
+      "topic": "VMS08CurtisRadio9",
+      "topic_text": "VMS08CurtisRadio9",
+      "emotion": "Neutral 50",
+      "response_text": "Couple of minutes. Over.",
+      "index": "102"
+    }
+  ],
+  "combat": []
+}

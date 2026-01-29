@@ -1,0 +1,446 @@
+{
+  "name": "Doctor Usanagi",
+  "url": "/wiki/Usanagi",
+  "dialogue_name": "DoctorUsanagi.txt",
+  "dialogue_url": "/wiki/DoctorUsanagi.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": true,
+  "is_merchant": true,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000EC7A3",
+  "ref_id": "000ED4DD",
+  "editor_id": "DoctorUsanagi",
+  "location": "New Vegas medical clinic",
+  "location_url": "/wiki/New_Vegas_medical_clinic",
+  "descriptions": [
+    "Doctor Usanagi is a Followers physician in charge of the New Vegas medical clinic in Fallout: New Vegas. She offers a variety of healing services and access to permanent stat-boosting implants.",
+    "Doctor Usanagi is a graduate of the Followers of the Apocalypse run Angel's Boneyard Medical University in the NCR. While joining up is not a requirement, she believed in the Followers' mission.",
+    "Aside from providing healthcare or medical supplies, Dr. Usanagi is also trained to ovesee cybernetic surgery performed by an Auto-Doc. Despite the humble abode her practice is based out of, the clinic offers an unmatched array of implants at steep prices (but offers discounts to those in real need of an implant).",
+    "She also teaches training classes for medical students, having set up a classroom in her clinic where lessons are held regularly."
+  ],
+  "race": "Human",
+  "gender": "Female",
+  "affiliation": "Followers of the Apocalypse",
+  "role": "DoctorTeacher",
+  "detailed_location": "New Vegas medical clinic",
+  "voice_actor": "Laura Bailey",
+  "special": {
+    "Strength": 4,
+    "Perception": 6,
+    "Endurance": 4,
+    "Charisma": 6,
+    "Intelligence": 7,
+    "Agility": 5,
+    "Luck": 4
+  },
+  "level": "10",
+  "tag_skills": [
+    {
+      "Barter:": "70"
+    },
+    {
+      "Medicine:": "72"
+    },
+    {
+      "Science:": "72(77)"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Neutral",
+  "voice_type": "FemaleAdult11",
+  "geck_race": "Asian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "Welcome to the New Vegas Medical Clinic. I'm a fully qualified physician and can fix whatever is wrong with you for a reasonable fee.",
+      "index": "1"
+    },
+    {
+      "topic": "vDialogueMedicalClinicDoctorUsanagiTopic000",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Take care.",
+      "index": "4"
+    },
+    {
+      "topic": "vDialogueMedicalClinicDoctorUsanagiTopic001",
+      "topic_text": "What kind of implants do you have available?",
+      "emotion": "Neutral 50",
+      "response_text": "{Non-Dummy}I have several basic implants available that can enhance your physical abilities - make you faster, smarter, stronger, that sort of thing.",
+      "index": "5"
+    },
+    {
+      "topic": "vDialogueMedicalClinicDoctorUsanagiTopic002",
+      "topic_text": "I'd like to have greater strength.",
+      "emotion": "Neutral 50",
+      "response_text": "{Strength 10}You're already the strongest person I've ever met. The implant won't do anything more for you.",
+      "index": "11"
+    },
+    {
+      "topic": "vDialogueMedicalClinicDoctorUsanagiTopic003",
+      "topic_text": "Make me more perceptive.",
+      "emotion": "Neutral 50",
+      "response_text": "{Perception 10}Your eyesight would make a hawk jealous. The Optic Enhancer implant won't do anything more for you.",
+      "index": "13"
+    },
+    {
+      "topic": "vDialogueMedicalClinicDoctorUsanagiTopic004",
+      "topic_text": "Increase my endurance.",
+      "emotion": "Neutral 50",
+      "response_text": "{Endurance 10}Your cardiovascular system is practically super-human. The Nociception Regulator won't boost it any further.",
+      "index": "15"
+    },
+    {
+      "topic": "vDialogueMedicalClinicDoctorUsanagiTopic005",
+      "topic_text": "I want to be more intelligent.",
+      "emotion": "Surprise 10",
+      "response_text": "{Intelligence 10}{astonished}Your higher brain functions are off the charts.{regret}The implant won't help at all - sorry.",
+      "index": "17"
+    },
+    {
+      "topic": "vDialogueMedicalClinicDoctorUsanagiTopic006",
+      "topic_text": "Enhance my agility.",
+      "emotion": "Neutral 50",
+      "response_text": "{Agility 10}Your reaction times are already so fast it's a wonder you can't catch bullets. The Reflex Booster can't make you any faster.",
+      "index": "20"
+    },
+    {
+      "topic": "vDialogueMedicalClinicDoctorUsanagiTopic007",
+      "topic_text": "Never mind.",
+      "emotion": "Neutral 50",
+      "response_text": "All right. Was there something else you were interested in?",
+      "index": "22"
+    },
+    {
+      "topic": "vDialogueMedicalClinicDoctorUsanagiTopic008",
+      "topic_text": "I'm wounded.",
+      "emotion": "Neutral 50",
+      "response_text": "{Health <100, >= 66}Your injuries aren't too severe. I can patch the scrapes and lacerations pretty easily.",
+      "index": "23"
+    },
+    {
+      "topic": "vDialogueMedicalClinicDoctorUsanagiTopic009",
+      "topic_text": "I'm suffering from radiation poisoning.",
+      "emotion": "Neutral 50",
+      "response_text": "{Rads > 0}It'll be easy enough to purge all rads from your system.",
+      "index": "26"
+    },
+    {
+      "topic": "vDialogueMedicalClinicDoctorUsanagiTopic011",
+      "topic_text": "I want to buy an implant.",
+      "emotion": "Neutral 50",
+      "response_text": "One other thing I forgot to mention - your body may be able to handle only a limited number of implants.",
+      "index": "27"
+    },
+    {
+      "topic": "vDialogueMedicalClinicDoctorUsanagiTopic012",
+      "topic_text": "Boost my charisma.",
+      "emotion": "Neutral 50",
+      "response_text": "{Charisma 10}You're already quite charming. The Empathy Synthesizer would just be a waste of caps, I'm afraid.",
+      "index": "35"
+    },
+    {
+      "topic": "vDialogueMedicalClinicDoctorUsanagiTopic013",
+      "topic_text": "I'm interested in the sub-dermal implant.",
+      "emotion": "Neutral 50",
+      "response_text": "That would be the NEMEAN Sub-Dermal Armor. It's a bit pricey - 8,000 caps - but the implant causes your skin cells to be bolstered with iron.",
+      "index": "37"
+    },
+    {
+      "topic": "vDialogueMedicalClinicDoctorUsanagiTopic014",
+      "topic_text": "I'd like the regenerating ability.",
+      "emotion": "Neutral 50",
+      "response_text": "That's the PHOENIX Monocyte Breeder. The implant speeds up cell regeneration, an effect similar to that of some lizards and sea creatures.",
+      "index": "39"
+    },
+    {
+      "topic": "vDialogueMedicalClinicDoctorUsanagiTopic015",
+      "topic_text": "Here's the caps.",
+      "emotion": "Neutral 50",
+      "response_text": "Have a seat in the Auto-Doc. This will take a few hours.",
+      "index": "41"
+    },
+    {
+      "topic": "vDialogueMedicalClinicDoctorUsanagiTopic016",
+      "topic_text": "Never mind.",
+      "emotion": "Neutral 50",
+      "response_text": "Very well.",
+      "index": "42"
+    },
+    {
+      "topic": "vDialogueMedicalClinicDoctorUsanagiTopic017",
+      "topic_text": "I don't have the caps right now.",
+      "emotion": "Neutral 50",
+      "response_text": "That's all right.",
+      "index": "43"
+    },
+    {
+      "topic": "vDialogueMedicalClinicDoctorUsanagiTopic018",
+      "topic_text": "Here's the caps.",
+      "emotion": "Neutral 50",
+      "response_text": "Have a seat in the Auto-Doc. This will take a few hours.",
+      "index": "44"
+    },
+    {
+      "topic": "vDialogueMedicalClinicDoctorUsanagiTopic019",
+      "topic_text": "Here's the caps.",
+      "emotion": "Neutral 50",
+      "response_text": "Have a seat in the Auto-Doc. This will take a few hours.",
+      "index": "45"
+    },
+    {
+      "topic": "vDialogueMedicalClinicDoctorUsanagiTopic020",
+      "topic_text": "Here's the caps.",
+      "emotion": "Neutral 50",
+      "response_text": "Have a seat in the Auto-Doc. This will take a few hours.",
+      "index": "46"
+    },
+    {
+      "topic": "vDialogueMedicalClinicDoctorUsanagiTopic021",
+      "topic_text": "Can you make me luckier?",
+      "emotion": "Neutral 50",
+      "response_text": "{Luck 10}Huh. I've never seen a coin toss go someone's way that many times. You certainly don't need the help of a Probability Calculator implant.",
+      "index": "47"
+    },
+    {
+      "topic": "vDialogueMedicalClinicDoctorUsanagiTopic022",
+      "topic_text": "Here's the caps.",
+      "emotion": "Neutral 50",
+      "response_text": "Have a seat in the Auto-Doc. This will take a few hours.",
+      "index": "51"
+    },
+    {
+      "topic": "vDialogueMedicalClinicDoctorUsanagiTopic023",
+      "topic_text": "Here's the caps.",
+      "emotion": "Neutral 50",
+      "response_text": "Have a seat in the Auto-Doc. This will take a few hours.",
+      "index": "52"
+    },
+    {
+      "topic": "vDialogueMedicalClinicDoctorUsanagiTopic024",
+      "topic_text": "Here's the caps.",
+      "emotion": "Neutral 50",
+      "response_text": "Have a seat in the Auto-Doc. This will take a few hours.",
+      "index": "53"
+    },
+    {
+      "topic": "vDialogueMedicalClinicDoctorUsanagiTopic025",
+      "topic_text": "Here's the caps.",
+      "emotion": "Neutral 50",
+      "response_text": "Have a seat in the Auto-Doc. This will take a few hours.",
+      "index": "54"
+    },
+    {
+      "topic": "vDialogueMedicalClinicDoctorUsanagiTopic026",
+      "topic_text": "Here's the caps.",
+      "emotion": "Neutral 50",
+      "response_text": "{99YES}All right. Sit still and let me work.",
+      "index": "55"
+    },
+    {
+      "topic": "vDialogueMedicalClinicDoctorUsanagiTopic027",
+      "topic_text": "I don't have the caps.",
+      "emotion": "Neutral 50",
+      "response_text": "I'm afraid I can't do this for free. My supplies are stretched thin enough as it is.",
+      "index": "56"
+    },
+    {
+      "topic": "vDialogueMedicalClinicDoctorUsanagiTopic028",
+      "topic_text": "Can you cure my addiction?",
+      "emotion": "Neutral 50",
+      "response_text": "You really ought to avoid using those kinds of chems, but I'll see what I can do.",
+      "index": "57"
+    },
+    {
+      "topic": "vDialogueMedicalClinicDoctorUsanagiTopic029",
+      "topic_text": "Here's the caps.",
+      "emotion": "Neutral 50",
+      "response_text": "{66YES}All right. Sit still and let me work.",
+      "index": "58"
+    },
+    {
+      "topic": "vDialogueMedicalClinicDoctorUsanagiTopic030",
+      "topic_text": "Here's the caps.",
+      "emotion": "Neutral 50",
+      "response_text": "{33YES}All right. Sit still and let me work.",
+      "index": "59"
+    },
+    {
+      "topic": "vDialogueMedicalClinicDoctorUsanagiTopic031",
+      "topic_text": "I don't have the caps.",
+      "emotion": "Neutral 50",
+      "response_text": "I'm afraid I can't do this for free. My supplies are stretched thin enough as it is.",
+      "index": "60"
+    },
+    {
+      "topic": "vDialogueMedicalClinicDoctorUsanagiTopic032",
+      "topic_text": "I don't have the caps.",
+      "emotion": "Neutral 50",
+      "response_text": "I'm afraid I can't do this for free. My supplies are stretched thin enough as it is.",
+      "index": "61"
+    },
+    {
+      "topic": "vDialogueMedicalClinicDoctorUsanagiTopic033",
+      "topic_text": "Here's the caps.",
+      "emotion": "Neutral 50",
+      "response_text": "All right, this will only take a few minutes.",
+      "index": "62"
+    },
+    {
+      "topic": "vDialogueMedicalClinicDoctorUsanagiTopic034",
+      "topic_text": "Here's the caps.",
+      "emotion": "Neutral 50",
+      "response_text": "All right. Sit still and let me work.",
+      "index": "63"
+    },
+    {
+      "topic": "vDialogueMedicalClinicDoctorUsanagiTopic035",
+      "topic_text": "I don't have the caps.",
+      "emotion": "Neutral 50",
+      "response_text": "I'm afraid I can't do this for free. My supplies are stretched thin enough as it is.",
+      "index": "64"
+    },
+    {
+      "topic": "vDialogueMedicalClinicDoctorUsanagiTopic036",
+      "topic_text": "Do you sell anything here?",
+      "emotion": "Neutral 50",
+      "response_text": "I have reserved a small part of my supplies for sale. The profits go directly to the purchase of additional supplies to help the less fortunate.",
+      "index": "65"
+    },
+    {
+      "topic": "vDialogueMedicalClinicDoctorUsanagiTopic037",
+      "topic_text": "Show me what you have for sale.",
+      "emotion": "Neutral 50",
+      "response_text": "{FoA: Rascal}Because you're a friend of the Followers, I can give you a bit of a discount.",
+      "index": "66"
+    },
+    {
+      "topic": "vDialogueMedicalClinicDoctorUsanagiTopic038",
+      "topic_text": "Tell me about the clinic.",
+      "emotion": "Neutral 50",
+      "response_text": "Everything you see is funded by the Followers of the Apocalypse. We rely a lot on charity to provide low-cost medical services to the less fortunate.",
+      "index": "68"
+    },
+    {
+      "topic": "vDialogueMedicalClinicDoctorUsanagiTopic039",
+      "topic_text": "That's all I wanted to know. Let's talk about something else.",
+      "emotion": "Neutral 50",
+      "response_text": "All right.",
+      "index": "69"
+    },
+    {
+      "topic": "vDialogueMedicalClinicDoctorUsanagiTopic040",
+      "topic_text": "Are you one of the Followers of the Apocalypse?",
+      "emotion": "Neutral 50",
+      "response_text": "Yes, I am. I received my medical training at the Angel's Boneyard Medical University back in the NCR.",
+      "index": "70"
+    },
+    {
+      "topic": "vDialogueMedicalClinicDoctorUsanagiTopic041",
+      "topic_text": "Can I make a donation to the Followers?",
+      "emotion": "Neutral 50",
+      "response_text": "Of course! We prefer bulk donations of 500 caps - it's apparently a lot easier on the accountants, for some reason.",
+      "index": "72"
+    },
+    {
+      "topic": "vDialogueMedicalClinicDoctorUsanagiTopic042",
+      "topic_text": "What do the Followers believe in?",
+      "emotion": "Neutral 50",
+      "response_text": "We believe that technology for basic necessities, like food, water, and medicine, should be shared, not hoarded.",
+      "index": "73"
+    },
+    {
+      "topic": "vDialogueMedicalClinicDoctorUsanagiTopic043",
+      "topic_text": "Are the Followers part of the NCR?",
+      "emotion": "Neutral 50",
+      "response_text": "We've worked with them in the past. The NCR became too focused on things like patents and profitability, so the Followers go their own way now.",
+      "index": "75"
+    },
+    {
+      "topic": "vDialogueMedicalClinicDoctorUsanagiTopic044",
+      "topic_text": "Do the Followers have a headquarters around here?",
+      "emotion": "Neutral 50",
+      "response_text": "Yes, the Mormon Fort in Freeside. It's hard to miss.",
+      "index": "77"
+    },
+    {
+      "topic": "vDialogueMedicalClinicDoctorUsanagiTopic045",
+      "topic_text": "Here's 500 caps.",
+      "emotion": "Neutral 50",
+      "response_text": "Very much appreciated. These caps will go towards funding schools and other services to the poorer part of the community.",
+      "index": "78"
+    },
+    {
+      "topic": "vDialogueMedicalClinicDoctorUsanagiTopic046",
+      "topic_text": "I don't have the caps right now.",
+      "emotion": "Neutral 50",
+      "response_text": "No need to apologize.",
+      "index": "79"
+    },
+    {
+      "topic": "vDialogueMedicalClinicDoctorUsanagiTopic047",
+      "topic_text": "Never mind.",
+      "emotion": "Neutral 50",
+      "response_text": "Of course.",
+      "index": "80"
+    },
+    {
+      "topic": "vDialogueMedicalClinicDoctorUsanagiTopic048",
+      "topic_text": "Here's the caps.",
+      "emotion": "Neutral 50",
+      "response_text": "Have a seat in the Auto-Doc. This will take a few hours.",
+      "index": "81"
+    },
+    {
+      "topic": "vDialogueMedicalClinicDoctorUsanagiTopic049",
+      "topic_text": "I don't have the caps right now.",
+      "emotion": "Neutral 50",
+      "response_text": "That's all right.",
+      "index": "82"
+    },
+    {
+      "topic": "vDialogueMedicalClinicDoctorUsanagiTopic050",
+      "topic_text": "Here's the caps.",
+      "emotion": "Neutral 50",
+      "response_text": "Have a seat in the Auto-Doc. This will take a few hours.",
+      "index": "83"
+    },
+    {
+      "topic": "vDialogueMedicalClinicDoctorUsanagiTopic051",
+      "topic_text": "I don't have the caps right now.",
+      "emotion": "Neutral 50",
+      "response_text": "That's all right.",
+      "index": "84"
+    },
+    {
+      "topic": "vDialogueMedicalClinicDoctorUsanagiTopic052",
+      "topic_text": "I don't have the caps.",
+      "emotion": "Neutral 50",
+      "response_text": "I'm afraid I can't do this for free. My supplies are stretched thin enough as it is.",
+      "index": "85"
+    },
+    {
+      "topic": "vDialogueMedicalClinicDoctorUsanagiTopic053",
+      "topic_text": "Corporal Betsy from First Recon will be coming to you for mental treatment.",
+      "emotion": "Neutral 50",
+      "response_text": "Mental trauma can be just as debilitating as physical injuries. Fortunately, I'm well-qualified in such treatment. I'll make time in my schedule.",
+      "index": "86"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Take care.",
+      "index": "88"
+    }
+  ],
+  "combat": []
+}

@@ -1,0 +1,205 @@
+{
+  "name": "Paladin Gunny",
+  "url": "/wiki/Gunny",
+  "dialogue_name": "PaladinGunny.txt",
+  "dialogue_url": "/wiki/PaladinGunny.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "00026C57",
+  "ref_id": "00026C58",
+  "editor_id": "PaladinGunny",
+  "location": "Citadel bailey",
+  "location_url": "/wiki/Citadel_bailey",
+  "descriptions": [
+    "Paladin Gunny is a Brotherhood of Steel paladin stationed at the Citadel in 2277, and is tasked as the drill instructor for new initiates.",
+    "Paladin Gunny was involved in Elder Lyons' original expedition to the Capital Wasteland.",
+    "He is responsible for training all initiates in the use of power armor.",
+    "He can be found in the A ring just outside the lab in the council room, outside in the courtyard training recruits during the daytime, or inside a dormitory in B ring.",
+    "\"Gunny\" is a play on the common nickname for the United States Marine Corps personnel holding the rank of Gunnery Sergeant."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Brotherhood of Steel",
+  "role": "Drill instructor",
+  "detailed_location": "Citadel baileyCitadel A ring",
+  "voice_actor": "Gus Travers",
+  "special": {
+    "Strength": 7,
+    "Perception": 7,
+    "Endurance": 6,
+    "Charisma": 4,
+    "Intelligence": 3,
+    "Agility": 4,
+    "Luck": 4
+  },
+  "mod_special_values": {
+    "Strength": 9,
+    "Perception": 7,
+    "Endurance": 6,
+    "Charisma": 4,
+    "Intelligence": 3,
+    "Agility": 2,
+    "Luck": 4
+  },
+  "level": "4→7→11",
+  "tag_skills": [
+    {
+      "Big Guns:": "44→57→74"
+    },
+    {
+      "Energy Weap.:": "46→59→76"
+    },
+    {
+      "Small Guns:": "40→53→70"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "70→95→125"
+    },
+    {
+      "Critical Chance:": "4%"
+    },
+    {
+      "Unarmed Dam.:": "1.3"
+    },
+    {
+      "Poison Resist.:": "25%"
+    },
+    {
+      "Rad. Resist.:": "10%"
+    },
+    {
+      "Carry Weight:": "220(240)"
+    },
+    {
+      "Damage Res.:": "40%"
+    }
+  ],
+  "karma": "Good",
+  "voice_type": "MaleAdult05DC",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "CitPaladinGunnyWhatDoYouDo",
+      "topic_text": "What do you do here?",
+      "emotion": "Neutral 50",
+      "response_text": "I am charged with the duty of turning these maggots into Brothers of Steel.",
+      "index": "1"
+    },
+    {
+      "topic": "DLC03TLCitadelEnclave",
+      "topic_text": "So... Any thoughts on the Enclave?",
+      "emotion": "Neutral 50",
+      "response_text": "We're going to kick their asses, plain and simple. And once we do...",
+      "index": "4"
+    },
+    {
+      "topic": "FFPATraining",
+      "topic_text": "Can you train me to use Power Armor?",
+      "emotion": "Neutral 50",
+      "response_text": "Heard you were coming. Yeah, I can train you. But don’t ask me to like it. My Initiates sweat blood, and you just get a free pass?",
+      "index": "9"
+    },
+    {
+      "topic": "FFPAWho",
+      "topic_text": "Can someone in the Citadel train me to wear Power Armor?",
+      "emotion": "Neutral 50",
+      "response_text": "That would be me. But that ain’t gonna happen. Not unless Elder Lyons himself gives you the all clear.",
+      "index": "11"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "...okay. You got all that? I think you know enough now to at least move around in Power Armor without killing yourself. That’s something, right?",
+      "index": "13"
+    },
+    {
+      "topic": "TLCitadelEnclave",
+      "topic_text": "So... Any thoughts on the Enclave?",
+      "emotion": "Anger 70",
+      "response_text": "Killing unarmed civilians... Makes me sick. Come over here, try fighting someone who shoots back. Fucking cowards.",
+      "index": "20"
+    },
+    {
+      "topic": "TLCitadelSuperMutant",
+      "topic_text": "Care to share anything about the Super Mutants?",
+      "emotion": "Neutral 50",
+      "response_text": "Why you think I ride these Initiates so hard? I make training hell so fighting those Uglies won't be.",
+      "index": "21"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "CitGladeTeachExplosives02",
+      "topic_text": "CitGladeTeachExplosives02",
+      "emotion": "Neutral 50",
+      "response_text": "Soldier, don't you dare start running that mouth until you can put one of those grenades through a fourth story window at 200 yards.",
+      "index": "22"
+    },
+    {
+      "topic": "CitGladeTeachExplosives04",
+      "topic_text": "CitGladeTeachExplosives04",
+      "emotion": "Neutral 50",
+      "response_text": "You're damn right you will. And you'll keep at it until you learn to keep that mouth shut. We've got no room for braggarts here.",
+      "index": "24"
+    },
+    {
+      "topic": "CitGladeTeachPistol02",
+      "topic_text": "CitGladeTeachPistol02",
+      "emotion": "Neutral 50",
+      "response_text": "Are you kidding me? It's not the weapon, Initiate! Try holding the gun properly instead of firing from the hip like some goddamned cowboy.",
+      "index": "26"
+    },
+    {
+      "topic": "CitGladeTeachPistol04",
+      "topic_text": "CitGladeTeachPistol04",
+      "emotion": "Neutral 50",
+      "response_text": "Try loosening your grip, maggot. Hold the weapon higher  see nothing but the sight and the target. Try not to screw it up this time.",
+      "index": "28"
+    },
+    {
+      "topic": "CitGladeTeachRifle02",
+      "topic_text": "CitGladeTeachRifle02",
+      "emotion": "Neutral 50",
+      "response_text": "Then you've reached a new level of understanding. Combat does not take place in the brain. It is passion, instinct, and the will to survive.",
+      "index": "30"
+    },
+    {
+      "topic": "CitGladeTeachRifle04",
+      "topic_text": "CitGladeTeachRifle04",
+      "emotion": "Neutral 50",
+      "response_text": "So it was taught to me, so will you teach it some day. Enough jaw, maggot. Back to work.",
+      "index": "32"
+    },
+    {
+      "topic": "FFPAGunnyChatter",
+      "topic_text": "FFPAGunnyChatter",
+      "emotion": "Neutral 50",
+      "response_text": "Now look, to wear Power Armor, first thing you need to do is relax your muscles. Let the suit do the work. Okay? Now, you...",
+      "index": "34"
+    },
+    {
+      "topic": "GOODBYE",
+      "topic_text": "I have to go now.",
+      "emotion": "Neutral 50",
+      "response_text": "If you'll excuse me, I need to go show these fish how to shoot straight.{Grumbling under his breath at the incompetency of his students.}",
+      "index": "35"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Neutral 50",
+      "response_text": "I'll train these marshmallows if it kills me...{Grumbling under his breath at the incompetency of his students.}",
+      "index": "37"
+    }
+  ],
+  "combat": []
+}

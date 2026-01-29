@@ -1,0 +1,123 @@
+{
+  "name": "Rhonda",
+  "url": "/wiki/Rhonda_(Fallout:_New_Vegas)",
+  "dialogue_name": "BMRhonda.txt",
+  "dialogue_url": "/wiki/BMRhonda.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": true,
+  "base_id": "000E84A2",
+  "ref_id": "000E84A4",
+  "editor_id": "BMRhonda",
+  "location": "Storage building",
+  "location_url": "/wiki/Storage_building",
+  "descriptions": [
+    "Rhonda is a robot and companion of the nightkin Tabitha at Black Mountain in the Mojave Wasteland until her deactivation in the past. She appears in Fallout: New Vegas.",
+    "Sometime after the fall of the Master and the destruction of the Unity, a remnant group of super mutants led by the nightkin Tabitha happened upon an abandoned Mister Handy that she took on as a companion, giving it the name \"Rhonda.\" Rhonda's subservient protocols consequently helped to stabilize Tabitha's mental state and help her manage her schizophrenia brought on by Stealth Boy overuse.",
+    "Tabitha's group, including Rhonda, later joined the mutant enclave set up by Marcus at Black Mountain, a pre-War military outpost. Around August 28, 2275,",
+    "The loss of Rhonda caused Tabitha's previously stable mental state to deteriorate, and although she asked the other mutants for help, none knew how to fix Rhonda.",
+    "Tabitha's hopes to fix Rhonda were renewed when the ghoul mechanic Raul Tejada was drawn to Black Mountain, where he was subsequently enslaved as Tabitha's personal repairman to fix Rhonda as well as the radio systems damaged by Marcus before he left. While Raul was able to mend Rhonda's physical damage, his inexperience with the robot's more complex software meant Rhonda remained inactive, and Tabitha's spiral into madness was left unchecked.",
+    "Crazy, Crazy, Crazy: During their exploration of Black Mountain to find a way to stop Tabitha, the Courier can enter the storage building where Rhonda is stored. Passing a Science 60 skill check allows the player character to complete the repairs on Rhonda and restore her to function; upon exiting, Tabitha will appear and peacefully depart with Rhonda, completing the quest."
+  ],
+  "race": "Mister Handy",
+  "gender": "Female programming",
+  "affiliation": "State of Utobitha",
+  "role": "Tabitha's companion",
+  "detailed_location": "Black MountainStorage building",
+  "voice_actor": "Fred Tatasciore(radio)Yuri Lowenthal(Mister Handy)",
+  "special": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 5,
+    "Intelligence": 5,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "level": "3",
+  "misc_skills": [
+    {
+      "Hit Points:": "0"
+    },
+    {
+      "Poison Resist.:": "20%"
+    },
+    {
+      "Rad. Resist.:": "8%"
+    }
+  ],
+  "karma": "Neutral",
+  "topics": [
+    {
+      "topic": "BMRhondaGreeting",
+      "topic_text": "BMRhondaGreeting",
+      "emotion": "Neutral 50",
+      "response_text": "Hello. Could you please direct me to mistress Tabitha?",
+      "index": "1"
+    },
+    {
+      "topic": "BMRhondaGreetsTabitha",
+      "topic_text": "BMRhondaGreetsTabitha",
+      "emotion": "Neutral 50",
+      "response_text": "It is, Mistress Tabitha. How I've missed you so. This stranger here fixed me up right as rain. Is he a friend of yours?",
+      "index": "4"
+    },
+    {
+      "topic": "BMRhondaNo",
+      "topic_text": "Sorry, I don't think I'll be heading her way.",
+      "emotion": "Neutral 50",
+      "response_text": "Nevertheless, I must find her, so I'll just tag along with you for a bit until I pick up her trail.",
+      "index": "6"
+    },
+    {
+      "topic": "BMRhondaYes",
+      "topic_text": "Sure, follow me.",
+      "emotion": "Neutral 50",
+      "response_text": "Thank you very much. My internal clock says it's been 6 years, 52 days, 40 minutes, and 13 seconds since I last spoke to her.",
+      "index": "7"
+    },
+    {
+      "topic": "VFreeformBlackMountainBMRhondaTopic000",
+      "topic_text": "I hate to tell you, but Tabitha's dead.",
+      "emotion": "Neutral 50",
+      "response_text": "And I suppose you're taking credit for the deed, fiend! I will avenge her!",
+      "index": "9"
+    },
+    {
+      "topic": "VFreeformBlackMountainBMRhondaTopic001",
+      "topic_text": "Um, I should probably go.",
+      "emotion": "Neutral 50",
+      "response_text": "I'll just wait here for Mistress Tabitha.",
+      "index": "10"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "BMRhondaBadReunion",
+      "topic_text": "BMRhondaBadReunion",
+      "emotion": "Neutral 50",
+      "response_text": "Oh no! Miss Tabitha is hurt! Someone, get a doctor!",
+      "index": "11"
+    },
+    {
+      "topic": "BMRhondaLetsGoTabitha",
+      "topic_text": "BMRhondaLetsGoTabitha",
+      "emotion": "Neutral 50",
+      "response_text": "Mistress Tabitha, we should be heading off. Our journey has been much delayed, but we can catch up if we hurry.  Come along, now.",
+      "index": "18"
+    },
+    {
+      "topic": "BMRhondaTabithaReunion",
+      "topic_text": "BMRhondaTabithaReunion",
+      "emotion": "Neutral 50",
+      "response_text": "It pleases me to see you, mistress. I owe my functional state to this human here.",
+      "index": "19"
+    }
+  ],
+  "combat": []
+}

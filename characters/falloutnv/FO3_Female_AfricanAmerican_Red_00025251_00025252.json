@@ -1,0 +1,504 @@
+{
+  "name": "Red",
+  "url": "/wiki/Red_(Fallout_3)",
+  "dialogue_name": "Red.txt",
+  "dialogue_url": "/wiki/Red.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": true,
+  "is_doctor": true,
+  "is_merchant": true,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "00025251",
+  "ref_id": "00025252",
+  "editor_id": "Red",
+  "location": "Germantown Police HQ,Red's clinic",
+  "location_url": "/wiki/Germantown_Police_HQ",
+  "descriptions": [
+    "Red is the doctor and de facto mayor of Big Town in 2277.",
+    "Intelligent, slightly sarcastic, and motherly, Red is Big Town's doctor in residence. She previously taught Lucy her medical knowledge so Little Lamplight would be safer, and the two had a sisterly relationship.",
+    "Red is on an enforced leave thanks to the current kidnapping sweeps by super mutants in the local area. Her nickname stems from the blood she is always splattered in and her affinity for the color. She runs the clinic in Big Town, and she is the unofficial mayor and an old girlfriend of an older boy named Sticky Hands, an ex-resident of Little Lamplight."
+  ],
+  "race": "Human",
+  "gender": "Female",
+  "affiliation": "Big TownLittle Lamplight(formerly)",
+  "role": "DoctorTown leaderSlave (optional)",
+  "detailed_location": "Red's clinic(Big Town)Germantown Police HQParadise Falls(optional)",
+  "voice_actor": "Karen Carbone",
+  "special": {
+    "Strength": 4,
+    "Perception": 6,
+    "Endurance": 4,
+    "Charisma": 6,
+    "Intelligence": 7,
+    "Agility": 5,
+    "Luck": 4
+  },
+  "mod_special_values": {
+    "Strength": 4,
+    "Perception": 7,
+    "Endurance": 4,
+    "Charisma": 6,
+    "Intelligence": 7,
+    "Agility": 5,
+    "Luck": 4
+  },
+  "level": "4→8",
+  "tag_skills": [
+    {
+      "Barter:": "48→70"
+    },
+    {
+      "Medicine:": "50→72"
+    },
+    {
+      "Science:": "50→72"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "80→100"
+    },
+    {
+      "Damage Res.:": "5%"
+    }
+  ],
+  "karma": "Good",
+  "voice_type": "FemaleAdult02DC",
+  "geck_race": "AfricanAmerican",
+  "topics": [
+    {
+      "topic": "BigTownRedTimebomb",
+      "topic_text": "Who's that guy in the clinic?",
+      "emotion": "Neutral 50",
+      "response_text": "I told you, that's Timebomb. And if it were up to you, he'd be dead. Just stay away from him.",
+      "index": "1"
+    },
+    {
+      "topic": "BigtownRedTimebomb1",
+      "topic_text": "Maybe I can help him.",
+      "emotion": "Neutral 50",
+      "response_text": "Maybe you can. Feel free to take a look at him. But don't get in over your head. He's got some pretty nasty injuries.",
+      "index": "8"
+    },
+    {
+      "topic": "BigtownRedTimebomb2",
+      "topic_text": "Why keep him alive? Don't you need the supplies you're using on him?",
+      "emotion": "Anger 75",
+      "response_text": "I keep him alive because he's my friend. That's how we work around here  we watch out for each other. I wouldn't expect you to understand.{Incredulous at the suggestion that he would let his friend die.}",
+      "index": "10"
+    },
+    {
+      "topic": "BigtownRedTimebomb2a",
+      "topic_text": "You let a dying man use supplies you need? You're a bunch of morons.",
+      "emotion": "Neutral 50",
+      "response_text": "Maybe. But I'd rather die as a moron who cares for my friends than be a heartless jerk like you.",
+      "index": "12"
+    },
+    {
+      "topic": "BigtownRedTimebomb2b",
+      "topic_text": "I'm just saying, it's an option.",
+      "emotion": "Neutral 50",
+      "response_text": "No. It isn't. Not to me.",
+      "index": "13"
+    },
+    {
+      "topic": "BigtownRedTimebomb2c",
+      "topic_text": "Whoa, take it easy. I was just asking.",
+      "emotion": "Neutral 50",
+      "response_text": "I'm sorry, it's just been hard. When I managed to save him, I though there might be a chance...",
+      "index": "14"
+    },
+    {
+      "topic": "BigtownRedTimebombEND",
+      "topic_text": "Let's talk about something else.",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah. Let's do that.",
+      "index": "16"
+    },
+    {
+      "topic": "BigtownTownBittercupandFlash",
+      "topic_text": "Did you know Flash used to date Bittercup?",
+      "emotion": "Neutral 50",
+      "response_text": "Oh, that. I know all about that nonsense. Flash isn't the smartest cookie in the jar, but he deserved better than Bittercup.",
+      "index": "17"
+    },
+    {
+      "topic": "BigtownTownServicesDo you have any traders in town? Any doctors?",
+      "topic_text": "You're the doctor in town?",
+      "emotion": "Neutral 50",
+      "response_text": "Yep. As long as you've still got the ass to sit down on, I can fix you up. I'm also in the market for medical supplies.{Red is sarcastic, but caring.}",
+      "index": "19"
+    },
+    {
+      "topic": "BigtownTownWhatsWrongThis place looks like a ghost town.",
+      "topic_text": "How are things in Big Town, Red?",
+      "emotion": "Neutral 50",
+      "response_text": "Oh, just grand, can't you tell? People are always dying to visit here and bring back \"souvenirs.\"{Red uses sarcasm to emphasize how terrible things are. She says \"souvenirs\" to refer to the kidnappings.}",
+      "index": "20"
+    },
+    {
+      "topic": "BigtownTownWhereDidYouComeFromWhere did you people come from, anyway?",
+      "topic_text": "Give me the history of this place.",
+      "emotion": "Neutral 50",
+      "response_text": "Bigtown? A fairy-tale really. The Lamplighters who turn sixteen aren't allowed to stay in the caves, but they have to go somewhere.{Red maintains a bitter, sarcastic tone throughout.}",
+      "index": "23"
+    },
+    {
+      "topic": "BigtownTownWhosInChargeWho's in charge here?",
+      "topic_text": "So you're the woman in charge?",
+      "emotion": "Anger 25",
+      "response_text": "I'm about as in charge as a mother leading her kids out of a warzone. This isn't exactly a nice little city with a mayor and town council.{Red cares about the people in the town, but their situations has left her sarcastic and bitter}",
+      "index": "26"
+    },
+    {
+      "topic": "DoctorAddiction",
+      "topic_text": "I think I might be addicted to something.",
+      "emotion": "Neutral 50",
+      "response_text": "I'm just glad you're willing to get help. But the treatment isn't free. I'll need 50 caps for the drugs.",
+      "index": "27"
+    },
+    {
+      "topic": "DoctorAddictionYESYes, cure me.",
+      "topic_text": "I don't have 20 caps.",
+      "emotion": "Sad 75",
+      "response_text": "I'll be glad to help when you can afford the treatment.",
+      "index": "28"
+    },
+    {
+      "topic": "DoctorMedicalI'm hurt. I need help, Doc.",
+      "topic_text": "Heal me up, Red.",
+      "emotion": "Neutral 50",
+      "response_text": "For you? No problem. Now, hold still.",
+      "index": "29"
+    },
+    {
+      "topic": "DoctorMedical33YESAll right, here's your money.",
+      "topic_text": "Actually, I don't have the caps.",
+      "emotion": "Sad 75",
+      "response_text": "I'd like to help, but the supplies aren't free. Sorry.",
+      "index": "30"
+    },
+    {
+      "topic": "DoctorMedical66YESAll right, here's your money.",
+      "topic_text": "Actually, I don't have the caps.",
+      "emotion": "Sad 75",
+      "response_text": "I'd like to help, but the supplies aren't free. Sorry.",
+      "index": "31"
+    },
+    {
+      "topic": "DoctorMedical99YESAll right, here's your money.",
+      "topic_text": "Actually, I don't have the caps.",
+      "emotion": "Sad 75",
+      "response_text": "You should come back and see me when you have enough money for the supplies.",
+      "index": "32"
+    },
+    {
+      "topic": "DoctorSupplies",
+      "topic_text": "I need medical supplies.",
+      "emotion": "Neutral 50",
+      "response_text": "Sure, here's what I can spare.",
+      "index": "33"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Happy 50",
+      "response_text": "Go on. I'm paying attention. Show us what to do.",
+      "index": "34"
+    },
+    {
+      "topic": "MS01GiveCapsBackToRed",
+      "topic_text": "Here. Take back the money. I don't want to take medicine away from the town.",
+      "emotion": "Surprise 50",
+      "response_text": "Oh thank you!{relieved}",
+      "index": "64"
+    },
+    {
+      "topic": "MS01GreetingA1",
+      "topic_text": "I'm glad you're safe and sound. And please, I don't want any kind of reward.",
+      "emotion": "Happy 75",
+      "response_text": "Thank you! You're a real hero, you know that? I was going to offer you a reward, but I can put the caps to use buying medicine and supplies.{thankful (and a little ashamed she doesn't have more to offer)}",
+      "index": "65"
+    },
+    {
+      "topic": "MS01GreetingA2",
+      "topic_text": "You are planning on giving me a reward for rescuing you, right?",
+      "emotion": "Happy 25",
+      "response_text": "Right. Of course. Rescuing me was a job to you, and you're a real professional. Well, here you go. I wish I had more I could give you.{grateful, but taken back by the mercenary greed of the player}",
+      "index": "66"
+    },
+    {
+      "topic": "MS01GreetingB1",
+      "topic_text": "I saved your life. This is all I get? Surely you can spare a little more.",
+      "emotion": "Sad 50",
+      "response_text": "Well, I guess you can have this. It's the money I was saving to buy medicine for the town's people.{being \"extorted\" by her rescuer for a bigger reward}",
+      "index": "67"
+    },
+    {
+      "topic": "MS01GreetingB2",
+      "topic_text": "It was my pleasure!",
+      "emotion": "Happy 100",
+      "response_text": "Thanks!{grateful}",
+      "index": "73"
+    },
+    {
+      "topic": "MS01GreetingB3",
+      "topic_text": "Don't thank me. I got what I wanted out of it.",
+      "emotion": "Surprise 50",
+      "response_text": "Oh I see. Well... thank you anyway!{caught of guard}",
+      "index": "77"
+    },
+    {
+      "topic": "MS01GreetingC1",
+      "topic_text": "You wait right here, I'll go see about Shorty.",
+      "emotion": "Fear 75",
+      "response_text": "I'm not waiting around for some Super Mutant to lock me up again!{scared}",
+      "index": "79"
+    },
+    {
+      "topic": "MS01GreetingC2",
+      "topic_text": "We shouldn't risk our lives for someone who's probably already dead.",
+      "emotion": "Sad 100",
+      "response_text": "Well... you're right. He's probably already dead...{depressed she's leaving her friend behind}",
+      "index": "81"
+    },
+    {
+      "topic": "MS01GreetingC3",
+      "topic_text": "Let's go get Shorty. Come with me.",
+      "emotion": "Neutral 50",
+      "response_text": "I'd just slow you down. I'll wait here. If you're not back soon, I'm sneaking out the back door. There's people in town that need me.",
+      "index": "83"
+    },
+    {
+      "topic": "MS01QuestionRed1",
+      "topic_text": "How did you end up here?",
+      "emotion": "Anger 50",
+      "response_text": "Damn Super Mutants have been coming and carrying off our villagers. Never knew where they took them until now.{upset about her situation}",
+      "index": "84"
+    },
+    {
+      "topic": "MS01QuestionRed2",
+      "topic_text": "So what's with all the Super Mutants?",
+      "emotion": "Anger 50",
+      "response_text": "Not sure what they're doing here. It's not like I can just get up and look around.{upset about her situation}",
+      "index": "86"
+    },
+    {
+      "topic": "MS01RedA1",
+      "topic_text": "You're lucky I happened along.",
+      "emotion": "Happy 50",
+      "response_text": "Don't I know it! Now the trick is getting out of here.",
+      "index": "88"
+    },
+    {
+      "topic": "MS01RedA2",
+      "topic_text": "I'm glad you're safe. There's a guy name Sticky that wants to see you.",
+      "emotion": "Surprise 75",
+      "response_text": "That's right, his birthday was recently. I can't wait to talk with him!{happily surprised}",
+      "index": "90"
+    },
+    {
+      "topic": "MS01RedA3",
+      "topic_text": "\"Thanks\"? That's all I get for risking my life to save you? How about some caps?",
+      "emotion": "Disgust 75",
+      "response_text": "You think I asked those Super Mutants to wait until I got all my caps together before abducting me?{sarcastic}",
+      "index": "92"
+    },
+    {
+      "topic": "MS01RedShortyDead",
+      "topic_text": "Shorty's dead.",
+      "emotion": "Sad 50",
+      "response_text": "Oh no! Are you sure? But why would you lie about that? Okay. Well... let's get out of here. There's nothing we can do now.{very sad that her friend died, but scared and wanting to leave}",
+      "index": "94"
+    },
+    {
+      "topic": "MS01RedShortyFollow",
+      "topic_text": "You and Shorty, follow me.",
+      "emotion": "Fear 50",
+      "response_text": "We'll be right behind you.{happy to be rescued, scared they aren't safe yet}",
+      "index": "95"
+    },
+    {
+      "topic": "MS01RedShortyGiveWeapon",
+      "topic_text": "Looks like you could use a weapon.",
+      "emotion": "Surprise 50",
+      "response_text": "I'll take whatever you've got at this point.{happy to be rescued, scared they aren't safe yet}",
+      "index": "98"
+    },
+    {
+      "topic": "MS01Teach",
+      "topic_text": "I can help you defend yourselves.",
+      "emotion": "Surprise 75",
+      "response_text": "Really? That's great. What do you have in mind?{excited to be getting help}",
+      "index": "99"
+    },
+    {
+      "topic": "MS01TeachGuns",
+      "topic_text": "If you can arm yourselves, I can teach you how to shoot.",
+      "emotion": "Happy 50",
+      "response_text": "Great! I'll round everyone up at the junkyard for shooting practice.{excited}",
+      "index": "100"
+    },
+    {
+      "topic": "MS01TeachHelp",
+      "topic_text": "I'll stick around to kill the Super Mutants. They should leave you alone after that.",
+      "emotion": "Surprise 100",
+      "response_text": "Really? That's great! I'll let everyone know! You're a real hero you know that?{excited and grateful}",
+      "index": "101"
+    },
+    {
+      "topic": "MS01TeachHide",
+      "topic_text": "I'll teach you how to sneak and hide. They'll think you've deserted the town.",
+      "emotion": "Happy 75",
+      "response_text": "Great! I'll round everyone up. You show us how to hide and sneak.{excited}",
+      "index": "102"
+    },
+    {
+      "topic": "MS01TeachMines",
+      "topic_text": "You could set up a minefield to keep Super Mutants from just strolling in.",
+      "emotion": "Happy 75",
+      "response_text": "That's a great idea! I'll get everyone together. You show us how and we'll plant mines at the bridge into town!{excited}",
+      "index": "103"
+    },
+    {
+      "topic": "MS01TeachNo",
+      "topic_text": "Law of the Wasteland: Survival of the fittest. You're on your own. Good luck!",
+      "emotion": "Sad 75",
+      "response_text": "Fine. You've done enough already. I get it. We'll figure something out on our own.{disappointed}",
+      "index": "104"
+    },
+    {
+      "topic": "MS01TeachRobots",
+      "topic_text": "You should have some robot defenders. I can show you what to do with them.",
+      "emotion": "Happy 75",
+      "response_text": "Great! Let's head over to the junkyard. There're some old robots in there. Maybe you can fix them up and we'll watch to see how it's done.{excited}",
+      "index": "105"
+    },
+    {
+      "topic": "MS08MedicalClue1",
+      "topic_text": "Do you know anything about some android who needed a surgeon?",
+      "emotion": "Neutral 50",
+      "response_text": "Sounds like that old story. Let's see... It was an escaped robot looking for someone to perform surgery, and for a computer expert too, or something.",
+      "index": "106"
+    },
+    {
+      "topic": "MS08MedicalClue2",
+      "topic_text": "What do you know about this android from the Commonwealth?",
+      "emotion": "Neutral 50",
+      "response_text": "I had forgotten about that old hoax. Have you heard it? Here's a copy of that old  \"android holotape.\" It's just some practical jokester.",
+      "index": "107"
+    },
+    {
+      "topic": "MS08MedicalClue3",
+      "topic_text": "Ever do any facial surgery? Maybe on someone from the Commonwealth?",
+      "emotion": "Neutral 50",
+      "response_text": "Nah. You need specialized gear that doesn't exist anymore. And why risk infection? That reminds me of this old hoax. Here, listen to this holotape.",
+      "index": "109"
+    },
+    {
+      "topic": "MS08MedicalClue3Bribe",
+      "topic_text": "You ever do a face job on an android from the North? <Jingle purse of 100 caps.>",
+      "emotion": "Neutral 50",
+      "response_text": "Nah. You need specialized gear that doesn't exist anymore. And why risk infection? That reminds me of this old hoax. Here, listen to this holotape.",
+      "index": "112"
+    },
+    {
+      "topic": "MS08MedicalClue3Stat",
+      "topic_text": "A patient of mine needs a facial epidermal augmentation. You ever perform one?",
+      "emotion": "Neutral 50",
+      "response_text": "Nah. You need specialized gear that doesn't exist anymore. And why risk infection? That reminds me of this old hoax. Here, listen to this holotape.",
+      "index": "113"
+    },
+    {
+      "topic": "MS08MedicalClue4",
+      "topic_text": "You know who might have a Lipoplasticator or Micro Dermal Graftilizer?",
+      "emotion": "Neutral 50",
+      "response_text": "Rumor had it Pinkerton at Rivet City found a Lipoplasticator and Graftilizer. Good luck to any fool that let Pinkerton test them on him though.",
+      "index": "114"
+    },
+    {
+      "topic": "MS08MedicalClue4Bribe",
+      "topic_text": "Here's 100 caps for the locale of a Lipoplasticator or Micro Dermal Graftilizer.",
+      "emotion": "Neutral 50",
+      "response_text": "Rumor had it Pinkerton at Rivet City found a Lipoplasticator and Graftilizer. Good luck to any fool that let Pinkerton test them on him though.",
+      "index": "117"
+    },
+    {
+      "topic": "MS08MedicalClue4Stat",
+      "topic_text": "I need to find a Micro Dermal Graftilizer for epidermal augmentation surgery.",
+      "emotion": "Neutral 50",
+      "response_text": "Rumor had it Pinkerton at Rivet City found a Lipoplasticator and Graftilizer. Good luck to any fool that let Pinkerton test them on him though.",
+      "index": "118"
+    },
+    {
+      "topic": "SpeechChallengeFailure",
+      "topic_text": "SpeechChallengeFailure",
+      "emotion": "Neutral 50",
+      "response_text": "That's privileged information.",
+      "index": "119"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "BigTownGoodbye",
+      "topic_text": "BigTownGoodbye",
+      "emotion": "Happy 10",
+      "response_text": "Oh, nothing. Nothing at all.{Red is amused with herself at Shorty's expense. Chuckles while saying this.}",
+      "index": "121"
+    },
+    {
+      "topic": "BigTownResponse",
+      "topic_text": "BigTownResponse",
+      "emotion": "Happy 50",
+      "response_text": "That sounds fine, Timebomb. Just take it easy when I bring out the surgical tools. I've never heard anyone scream that loud before.{Red chides Timebomb because he's squeamish. }",
+      "index": "128"
+    },
+    {
+      "topic": "BigTownResponse02",
+      "topic_text": "BigTownResponse02",
+      "emotion": "Neutral 50",
+      "response_text": "Oh, some other time Sticky. I have plans tonight. How about tomorrow?{Red is a busy woman, but she doesn't want to dismiss Sticky entirely.}",
+      "index": "133"
+    },
+    {
+      "topic": "GOODBYE",
+      "topic_text": "Wait here. I'll be right back.",
+      "emotion": "Fear 75",
+      "response_text": "We're not waiting here for long.{scared}",
+      "index": "134"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Surprise 100",
+      "response_text": "How'd you get in here?!{confused and excited (getting rescued from certain death)}",
+      "index": "140"
+    },
+    {
+      "topic": "MS01CrowdSay",
+      "topic_text": "MS01CrowdSay",
+      "emotion": "Happy 100",
+      "response_text": "We did it!{(cheering) in an excited cheering mob}",
+      "index": "155"
+    },
+    {
+      "topic": "MS01RedShortyReunion",
+      "topic_text": "MS01RedShortyReunion",
+      "emotion": "Happy 100",
+      "response_text": "Glad to see you're alive Shorty!{happy}",
+      "index": "162"
+    }
+  ],
+  "combat": [
+    {
+      "topic": "Attack",
+      "topic_text": "Attack",
+      "emotion": "Fear 50",
+      "response_text": "We've got to stop them!",
+      "index": "164"
+    }
+  ]
+}

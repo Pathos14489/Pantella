@@ -1,0 +1,108 @@
+{
+  "name": "Lacey",
+  "url": "/wiki/Lacey_(Fallout:_New_Vegas)",
+  "dialogue_name": "VMOLacey.txt",
+  "dialogue_url": "/wiki/VMOLacey.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": true,
+  "is_doctor": false,
+  "is_merchant": true,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "0013D6A7",
+  "ref_id": "00140DA9",
+  "editor_id": "vMOLacey",
+  "location": "Mojave Outpost barracks",
+  "location_url": "/wiki/Mojave_Outpost_barracks",
+  "descriptions": [
+    "Lacey is a merchant operating out of the barracks at the NCR Ranger outpost in the Mojave Wasteland in 2281. She appears in Fallout: New Vegas.",
+    "Making her living as a standing trader within the New California Republic's southwestern Ranger outpost,",
+    "PC Playstation 3 Xbox 360 Buying all of the Caravan cards she has to offer may cause the game to freeze. "
+  ],
+  "race": "Human",
+  "gender": "Female",
+  "affiliation": "New California Republic",
+  "role": "Merchant",
+  "detailed_location": "Mojave OutpostBarracks",
+  "voice_actor": "Gwen McGee",
+  "special": {
+    "Strength": 4,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 7,
+    "Intelligence": 5,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "level": "1",
+  "tag_skills": [
+    {
+      "Barter:": "34(39)"
+    },
+    {
+      "Energy Weap.:": "30"
+    },
+    {
+      "Guns:": "32(34)"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Neutral",
+  "voice_type": "FemaleAdult05",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "{Bad person just walked in}Got some nerve, coming to an NCR outpost with that look about you.{Low, warning}Hope you aren't here to trade, not sure you can afford the prices.",
+      "index": "1"
+    },
+    {
+      "topic": "vMojavevMOLaceyTopic003",
+      "topic_text": "What do you have for trade?",
+      "emotion": "Neutral 50",
+      "response_text": "Take a look.",
+      "index": "4"
+    },
+    {
+      "topic": "vMojavevMOLaceyTopic007",
+      "topic_text": "I was hoping to pass the time with a game or two.",
+      "emotion": "Neutral 50",
+      "response_text": "What, Caravan? All right, I'll give it a go.{Shrugs}Haven't exactly got much of a line of folks to serve.",
+      "index": "6"
+    },
+    {
+      "topic": "vMojavevMOLaceyTopic008",
+      "topic_text": "Up for some more Caravan?",
+      "emotion": "Neutral 50",
+      "response_text": "All right, go on - let's put our cards down.",
+      "index": "7"
+    },
+    {
+      "topic": "vMojavevMOLaceyTopic009",
+      "topic_text": "Anything you can tell me about the Outpost?",
+      "emotion": "Neutral 50",
+      "response_text": "{Shrugs}Not too much, lot of caravans going nowhere.{Beat}Lot of troopers going nowhere, too.",
+      "index": "8"
+    },
+    {
+      "topic": "vMojavevMOLaceyTopic010",
+      "topic_text": "Any work around here?",
+      "emotion": "Neutral 50",
+      "response_text": "{Dismissive}Work around here? Might check with Jackson in the main building. Or Ghost up on the roof above, but watch out, she's... well, she's kind of a bitch.",
+      "index": "11"
+    },
+    {
+      "topic": "vMojavevMOLaceyTopic011",
+      "topic_text": "Never mind, I'll be going now.",
+      "emotion": "Neutral 50",
+      "response_text": "{Dismissive goodbye}Fine, then.",
+      "index": "13"
+    }
+  ],
+  "conversation": [],
+  "combat": []
+}

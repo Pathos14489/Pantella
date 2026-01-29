@@ -1,0 +1,176 @@
+{
+  "name": "Sink Central Intelligence Unit",
+  "url": "/wiki/Sink_Central_Intelligence_Unit",
+  "dialogue_name": "NVDLC03SinkMainComputerTalker.txt",
+  "dialogue_url": "/wiki/NVDLC03SinkMainComputerTalker.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": true,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": true,
+  "can_repair": true,
+  "can_be_companion": false,
+  "base_id": "xx00F061",
+  "ref_id": "xx00E6F7",
+  "editor_id": "NVDLC03SinkMainComputerTalker",
+  "location": "The Sink",
+  "location_url": "/wiki/The_Sink",
+  "descriptions": [
+    "The Sink Central Intelligence Unit (SCIU) is an artificial personality residing inside the eponymous Sink within Big MT. It appears in the Fallout: New Vegas add-on Old World Blues.",
+    "The Sink Central Intelligence Unit is the voice command computer responsible for the Sink's data storage, developed by Doctor Mobius as part of a collection of experiments on machine/human interface.",
+    "The Sink Central Intelligence Unit is also capable of controlling the operating systems and personality interfaces of the other Sink appliances on request of the Sink's owner. However, due to the loss of the original personality holotapes, this is no longer possible for the SCIU.",
+    "The Sink Central Intelligence Unit appears only in the Fallout: New Vegas add-on Old World Blues."
+  ],
+  "race": "Computer,artificial personality",
+  "gender": "Male programming",
+  "affiliation": "Doctor Mobius(formerly)Courier(optional)",
+  "role": "Merchant",
+  "detailed_location": "The Sink",
+  "voice_actor": "Jim Ward",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "Might I be safe in the assumption that matters with the Think Tank have been satisfactorily concluded, vis-à-vis your residence in this domicile?",
+      "index": "1"
+    },
+    {
+      "topic": "NVDLC03DialogueHQBuddiesNVDLC03SinkMainComputerTalkerTopic000",
+      "topic_text": "Sir? You are aware that I'm a woman, right?",
+      "emotion": "Neutral 50",
+      "response_text": "Indubitably, sir, but it is with a great lugubriousness that I must disclose that my programmers installed only the masculine honorific, sir.",
+      "index": "6"
+    },
+    {
+      "topic": "NVDLC03DialogueHQBuddiesNVDLC03SinkMainComputerTalkerTopic001",
+      "topic_text": "Are you some kind of Artificial Intelligence?",
+      "emotion": "Neutral 50",
+      "response_text": "Regrettably not, sir. All modules in this habitat are synthetic personalities atop a mundane operating system. There is no intelligence here, sir.",
+      "index": "8"
+    },
+    {
+      "topic": "NVDLC03DialogueHQBuddiesNVDLC03SinkMainComputerTalkerTopic002",
+      "topic_text": "I need my equipment repaired.",
+      "emotion": "Neutral 50",
+      "response_text": "Very good, sir.",
+      "index": "9"
+    },
+    {
+      "topic": "NVDLC03DialogueHQBuddiesNVDLC03SinkMainComputerTalkerTopic003",
+      "topic_text": "What services do you provide?",
+      "emotion": "Neutral 50",
+      "response_text": "In addition to managing the personality matrices of the other household utilities, I can provide sir with direct access to the commissary.",
+      "index": "10"
+    },
+    {
+      "topic": "NVDLC03DialogueHQBuddiesNVDLC03SinkMainComputerTalkerTopic004",
+      "topic_text": "Why are there so many personality modules?",
+      "emotion": "Neutral 50",
+      "response_text": "As I am given to understand, sir, this facility was once the property of a Dr. Mobius.",
+      "index": "12"
+    },
+    {
+      "topic": "NVDLC03DialogueHQBuddiesNVDLC03SinkMainComputerTalkerTopic005",
+      "topic_text": "You mean there are other... personality modules here?",
+      "emotion": "Neutral 50",
+      "response_text": "Indeed, sir, though if sir's aim is to activate them I lament to inform sir that most have been offline for some years.",
+      "index": "15"
+    },
+    {
+      "topic": "NVDLC03DialogueHQBuddiesNVDLC03SinkMainComputerTalkerTopic006",
+      "topic_text": "Why is that?",
+      "emotion": "Neutral 50",
+      "response_text": "The other modules are rather... erratic, sir. Their personality matrices are built on flawed logic and have not weathered the years well, sir.",
+      "index": "18"
+    },
+    {
+      "topic": "NVDLC03DialogueHQBuddiesNVDLC03SinkMainComputerTalkerTopic007",
+      "topic_text": "So I can access their functions without loading the personality holotapes?",
+      "emotion": "Neutral 50",
+      "response_text": "Tragically, the core operating systems are also located on the personality tapes, sir.",
+      "index": "19"
+    },
+    {
+      "topic": "NVDLC03DialogueHQBuddiesNVDLC03SinkMainComputerTalkerTopic008",
+      "topic_text": "Never mind, let me ask you something else.",
+      "emotion": "Neutral 50",
+      "response_text": "Indubitably, sir.",
+      "index": "22"
+    },
+    {
+      "topic": "NVDLC03DialogueHQBuddiesNVDLC03SinkMainComputerTalkerTopic009",
+      "topic_text": "I'd like to buy some things.",
+      "emotion": "Neutral 50",
+      "response_text": "Very good, sir. If I might suggest a table wine, the 64 Atomic Claret is a lovely little vintage.",
+      "index": "23"
+    },
+    {
+      "topic": "NVDLC03DialogueHQBuddiesNVDLC03SinkMainComputerTalkerTopic010",
+      "topic_text": "Switch on the Sink's personality matrices.",
+      "emotion": "Neutral 50",
+      "response_text": "{Taken aback; this is a terrible idea but you don't want to say so.}Do you, sir? Well, if that is sir's wish, it is my primary directive. Personality matrices on-line, sir.",
+      "index": "27"
+    },
+    {
+      "topic": "NVDLC03DialogueHQBuddiesNVDLC03SinkMainComputerTalkerTopic011",
+      "topic_text": "Switch off the Sink's personality matrices.",
+      "emotion": "Neutral 50",
+      "response_text": "{Smugly pleased}Very good indeed, sir. \"Throwing out the riff-raff\" protocols engaged. All personality matrices are off-line, sir.",
+      "index": "28"
+    },
+    {
+      "topic": "NVDLC03DialogueHQBuddiesNVDLC03SinkMainComputerTalkerTopic012",
+      "topic_text": "I have some personality holotapes to install.",
+      "emotion": "Neutral 50",
+      "response_text": "Very good sir. Merely interface the holotapes with my console's input/output port, and I shall upload them directly.",
+      "index": "29"
+    },
+    {
+      "topic": "NVDLC03DialogueHQBuddiesNVDLC03SinkMainComputerTalkerTopic013",
+      "topic_text": "I don't need anything else. Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Very good, sir.",
+      "index": "30"
+    },
+    {
+      "topic": "NVDLC03EndingSlideChipLightSwitches",
+      "topic_text": "NVDLC03EndingSlideChipLightSwitch",
+      "emotion": "Neutral 50",
+      "response_text": "{Narration}{Found both light switches}The light switches continued to bicker and flicker.",
+      "index": "31"
+    },
+    {
+      "topic": "NVDLC03EndingSlideCrater",
+      "topic_text": "NVDLC03EndingSlideCrater",
+      "emotion": "Neutral 50",
+      "response_text": "{Narration}{<10 Locations explored}Although, truth be told, the Courier had barely explored the Crater in an attempt to rush through and be done with the whole thing...",
+      "index": "32"
+    },
+    {
+      "topic": "NVDLC03EndingSlideFinale",
+      "topic_text": "NVDLC03EndingSlideFinale",
+      "emotion": "Neutral 50",
+      "response_text": "{Narration}We could say more, but the stories in the Big Empty speak for themselves.",
+      "index": "40"
+    },
+    {
+      "topic": "NVDLC03EndingSlideHQ",
+      "topic_text": "NVDLC03EndingSlideHQ",
+      "emotion": "Neutral 50",
+      "response_text": "{Narration}{1 module installed}The Sink was strangely silent, which it had never been in previous years. The lack of personality modules made the base lifeless and sterile.",
+      "index": "44"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "NVDLC03SinkCentralIntelligenceBarks",
+      "topic_text": "NVDLC03SinkCentralIntelligenceBarks",
+      "emotion": "Neutral 50",
+      "response_text": "A most rapturous good morrow on your return to your domicile, sir. I trust you shall find things in order and the riffraff contained.",
+      "index": "51"
+    }
+  ],
+  "combat": []
+}

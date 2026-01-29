@@ -1,0 +1,113 @@
+{
+  "name": "Pitt slave lead conspirator",
+  "url": "/wiki/Pitt_slave_lead_conspirator",
+  "dialogue_name": "DLC01FF003ConspiratorLeader.txt",
+  "dialogue_url": "/wiki/DLC01FF003ConspiratorLeader.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "xx00293B",
+  "ref_id": "",
+  "editor_id": "DLC01FF0003ConspiratorLeader",
+  "location": "The Pitt Downtown",
+  "location_url": "/wiki/The_Pitt_Downtown",
+  "descriptions": [
+    "The Pitt slave lead conspirator is the head of a group of slaves working toward a slave uprising in the Pitt in 2277.",
+    "The leader meets with a few other slaves in the Pitt Downtown, near a wrecked bus where Adan works. He and his cohorts will discuss the coming slave uprising; the leader himself will ask if one of the members completed their mission successfully and if others \"got those packages.\" Their meeting will break up should the Lone Wanderer approach the group, as a lookout will whistle to warn the conspirators. After this, the leader will leave the area and wander around the town.",
+    "The Pitt slave lead conspirator appears only in the Fallout 3 add-on The Pitt."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Pitt slaves",
+  "role": "Uprisingconspirator",
+  "detailed_location": "The Pitt Downtown",
+  "voice_actor": "Craig Sechler",
+  "special": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 2,
+    "Intelligence": 5,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "mod_special_values": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 6,
+    "Charisma": 2,
+    "Intelligence": 5,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "misc_skills": [
+    {
+      "Hit Points:": "70(75)"
+    },
+    {
+      "Critical Chance:": "5%"
+    },
+    {
+      "Unarmed Dam.:": "0.75"
+    },
+    {
+      "Poison Resist.:": "20%(25%)"
+    },
+    {
+      "Rad. Resist.:": "8%(10%)"
+    },
+    {
+      "Carry Weight:": "200"
+    },
+    {
+      "Damage Res.:": "1%-2%"
+    }
+  ],
+  "karma": "Good",
+  "voice_type": "DLC01SlaveMale01VoiceType",
+  "geck_race": "DLCPittAfricanAmericanMut",
+  "topics": [
+    {
+      "topic": "DLC01FF003Conspiracy1",
+      "topic_text": "DLC01FF003Conspiracy1",
+      "emotion": "Fear 50",
+      "response_text": "Okay, so what's up?{(hushed) quietly conspiring with cohorts}",
+      "index": "1"
+    },
+    {
+      "topic": "DLC01FF003Conspiracy2",
+      "topic_text": "DLC01FF003Conspiracy2",
+      "emotion": "Happy 50",
+      "response_text": "It's good.{(hushed) quietly conspiring with cohorts}",
+      "index": "11"
+    },
+    {
+      "topic": "DLC01FF003Conspiracy3",
+      "topic_text": "DLC01FF003Conspiracy3",
+      "emotion": "Happy 75",
+      "response_text": "Ashur's got a cure.{gloating he has special info (hushed) quietly conspiring with cohorts}",
+      "index": "21"
+    },
+    {
+      "topic": "DLC01FF003ConspiracyGeneric",
+      "topic_text": "DLC01FF003ConspiracyGeneric",
+      "emotion": "Neutral 50",
+      "response_text": "Everything's under control.{(hushed) quietly conspiring with cohorts}",
+      "index": "31"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Happy 50",
+      "response_text": "I got important news.{(hushed)  quietly conspiring with cohorts}",
+      "index": "39"
+    }
+  ],
+  "conversation": [],
+  "combat": []
+}

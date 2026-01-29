@@ -1,0 +1,64 @@
+{
+  "name": "Ellen DeLoria",
+  "url": "/wiki/Ellen_DeLoria",
+  "dialogue_name": "EllenDeLoria.txt",
+  "dialogue_url": "/wiki/EllenDeLoria.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000273CB",
+  "ref_id": "000282D6",
+  "editor_id": "EllenDeLoria",
+  "location": "",
+  "location_url": null,
+  "descriptions": [
+    "Ellen DeLoria is a resident of Vault 101 in 2277.",
+    "Ellen likes to get drunk often, but this causes her not to pay attention to what her son Butch is up to. Ellen and Butch live together in one of the smallest family apartments. Butch's father is a mystery to the other residents of Vault 101.",
+    "In 2268, Ellen encouraged her son Butch to attend the Lone Wanderer's tenth birthday party in the cafeteria.",
+    "Her family's last name, DeLoria, is a Native American surname associated with the Dakota people, though it is commonly spelled Deloria, with the L decapitalized. The change to a capitalized DeLoria evokes surnames beginning with \"De\" that are common in Romance languages."
+  ],
+  "race": "Human",
+  "gender": "Female",
+  "affiliation": "Vault 101",
+  "role": "Vault alcoholicMother",
+  "detailed_location": "Vault 101",
+  "voice_actor": "Shari Elliker",
+  "special": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 10,
+    "Intelligence": 5,
+    "Agility": 10,
+    "Luck": 10
+  },
+  "level": "1",
+  "misc_skills": [],
+  "karma": "Good",
+  "voice_type": "FemaleAdult01DefaultDC",
+  "geck_race": "CaucasianOld",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Surprise 75",
+      "response_text": "Where did those ... things... come from? Ugh. I need another drink.{very drunk}Play soundFO3 EllenDeLoria NeedAnotherDrin…https://fallout.fandom.com/wiki/File:FO3_EllenDeLoria_NeedAnotherDrink.oggnoicon",
+      "index": "1"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "Hit",
+      "topic_text": "Hit",
+      "emotion": "Pained 100",
+      "response_text": "Oh my God, someone help me!Play soundFO3 EllenDeLoria SomeoneHelpMe.ogghttps://fallout.fandom.com/wiki/File:FO3_EllenDeLoria_SomeoneHelpMe.oggnoicon",
+      "index": "4"
+    }
+  ],
+  "combat": []
+}

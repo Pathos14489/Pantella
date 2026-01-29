@@ -1,0 +1,237 @@
+{
+  "name": "Fantastic",
+  "url": "/wiki/Fantastic",
+  "dialogue_name": "Fantastic.txt",
+  "dialogue_url": "/wiki/Fantastic.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000E07D3",
+  "ref_id": "000E07D7",
+  "editor_id": "Fantastic",
+  "location": "HELIOS One",
+  "location_url": "/wiki/HELIOS_One",
+  "descriptions": [
+    "Fantastic is a conman working at HELIOS One as a technician for the New California Republic in 2281. It is obvious that his technical expertise is severely lacking, and he is merely using the position as a way to fuel his chem addiction.",
+    "An immature and egotistical con artist, Fantastic was recruited by the NCR as an external contractor through the Office of Science and Industry",
+    "Since arriving at Helios One, Fantastic, due to his incompetence and self-centered attitude, has done nothing to repair Helios One. However, he's been instilling the belief among NCR personnel that he's essential to the operations at Helios One, to avoid being fired, so he can gain as much money from the NCR as possible to fuel his drug addiction.",
+    "Even though Fantastic has accomplished very little in his time at Helios, he has properly identified a couple of problems that he has yet to fix, like the outside mirrors being aligned improperly. For months he has been working on a single console, assuming that the biggest console is the most important, which, unbeknownst to him, is the console for the Helios intercom system.",
+    "He works in the control room alongside Ignacio Rivas. Ignacio is shown through dialogue to be far more knowledgeable about HELIOS One, but Fantastic manages the plant and doesn't listen to Ignacio's ideas. He continues to maintain the plant's output at \"one percent efficiency.\" This is advantageous for Rivas as he has been purposely keeping Fantastic - and by extension the NCR - in the dark in order to protect information about Helios One. If the plant is run inefficiently then its true purpose, ARCHIMEDES, can be safely kept secret from the NCR.",
+    "Full of himself,",
+    "This would make him a shrewd character to deal with, but Fantastic is fantastically bereft of intelligence, which exposes him as a fraud to anyone who has to spend even a couple of minutes around him. Other NCR soldiers and Ignacio Rivas have little respect for him. When asked to elaborate on his working environment, his explanation starts promisingly enough, noting \"that console there controls the main power grid,\" but soon devolves, ending with, \"that slot over there makes sparks when you put stuff in it.\" If told that he doesn't know what he's doing, he disagrees and insists that he knows exactly what he is doing, he just doesn't know what effect it will have.",
+    "Fantastic is also a frequent drug user, solely using his position to further fuel his drug addiction. He often uses his drug addiction as a sympathy plea to guilt anyone calling him out.",
+    "Fantastic was written by Eric Fenstermaker."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "New California RepublicCaesar's Legion(optional)",
+  "role": "\"Technician\"OSIexternal contractorChem addict",
+  "detailed_location": "HELIOS OneHoover Dam(after That Lucky Old Sun, optional)",
+  "voice_actor": "Ari Rubin",
+  "special": {
+    "Strength": 3,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 2,
+    "Intelligence": 6,
+    "Agility": 5,
+    "Luck": 7
+  },
+  "level": "5",
+  "misc_skills": [],
+  "karma": "Neutral",
+  "voice_type": "MaleAdult04",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "Hey man, when in Rome.",
+      "index": "1"
+    },
+    {
+      "topic": "VMS03FantasticAttack",
+      "topic_text": "[Attack] You won't need to worry about bills where you're going.",
+      "emotion": "Anger 50",
+      "response_text": "Newsflash. Fantastic is irreplaceable.",
+      "index": "9"
+    },
+    {
+      "topic": "VMS03FantasticDivertedPower",
+      "topic_text": "I sent power to McCarran and the Strip.",
+      "emotion": "Neutral 50",
+      "response_text": "Whoa, really? Ho, shit! I knew I could do it. Those NCR pricks can all get on their knees and worship at the altar of fucking Fantastic!",
+      "index": "10"
+    },
+    {
+      "topic": "VMS03FantasticHereForYourJob",
+      "topic_text": "That's right. I'm here for your job.",
+      "emotion": "Neutral 50",
+      "response_text": "Ah, shit. Shit, man. I need this. Gotta pay the bills. And I'm addicted to a lot of different kinds of chems. I mean a lot.",
+      "index": "13"
+    },
+    {
+      "topic": "VMS03FantasticHowGetJob",
+      "topic_text": "How did you get this job?",
+      "emotion": "Happy 50",
+      "response_text": "It was easy, man. They were going door to door asking if anyone knew any scientists. I said look no further.",
+      "index": "15"
+    },
+    {
+      "topic": "VMS03FantasticIAmNow",
+      "topic_text": "I am now.",
+      "emotion": "Neutral 50",
+      "response_text": "Well hey, if you find yourself up at the mainframe, do yourself a favor and make sure you send the power to the right place.",
+      "index": "18"
+    },
+    {
+      "topic": "VMS03FantasticJob",
+      "topic_text": "What job do you have here?",
+      "emotion": "Happy 50",
+      "response_text": "What else? I'm in charge. This whole operation depends on me. No Fantastic, no power. Got the whole NCR suckling my teats, and it feels so good.",
+      "index": "20"
+    },
+    {
+      "topic": "VMS03FantasticNoIdeaWhatYoureDoing",
+      "topic_text": "So you have no idea what you're doing.",
+      "emotion": "Neutral 50",
+      "response_text": "No, man. I know exactly what I'm doing. I just don't know what effect it's going to have.",
+      "index": "21"
+    },
+    {
+      "topic": "VMS03FantasticNotGoingToRetarget",
+      "topic_text": "No.",
+      "emotion": "Neutral 50",
+      "response_text": "Ah well. Guess I'll have to wait for the next curious sucker.",
+      "index": "24"
+    },
+    {
+      "topic": "VMS03FantasticPayoff",
+      "topic_text": "You pay me a stack of caps right now and I'll forget you have my job.",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] Aw, man. How am I supposed to buy chems now? Fine. Here.",
+      "index": "25"
+    },
+    {
+      "topic": "VMS03FantasticRetarget",
+      "topic_text": "How would someone retarget the mirrors?",
+      "emotion": "Neutral 50",
+      "response_text": "There's these two terminals outside. They control the mirrors. I tried fooling with them but didn't get very far.",
+      "index": "27"
+    },
+    {
+      "topic": "VMS03FantasticSettleDownSettle down. I'm not here to replace anyone.",
+      "topic_text": "Actually I'm not here to replace you.",
+      "emotion": "Neutral 50",
+      "response_text": "Damn right, you're not. Goddamn right. Why would they? You can't top this guy. Just a little more time. You can't keep Fantastic down for long.",
+      "index": "30"
+    },
+    {
+      "topic": "VMS03FantasticStripMcCarran",
+      "topic_text": "Why should the power go to the Strip and McCarran?",
+      "emotion": "Neutral 50",
+      "response_text": "Because I get paid, that's why. Per kilowatt-hour, whatever the hell that is. That's where the NCR wants the power, so that's where I want it.",
+      "index": "32"
+    },
+    {
+      "topic": "VMS03FantasticTopic000",
+      "topic_text": "Fantastic? What are you doing here?",
+      "emotion": "Neutral 50",
+      "response_text": "What's it look like, man? I'm fucking king of the NCR. Caesar's Legion has Caesar, the NCR's got Fantastic. It's Fantastic's NCR now.",
+      "index": "34"
+    },
+    {
+      "topic": "VMS03FantasticTopic001",
+      "topic_text": "Get this straight. You're not my master.",
+      "emotion": "Neutral 50",
+      "response_text": "Whoa, hey. All right, man. It's cool. Who said anything about being your master?",
+      "index": "37"
+    },
+    {
+      "topic": "VMS03FantasticTopic002",
+      "topic_text": "What are your responsibilities now?",
+      "emotion": "Neutral 50",
+      "response_text": "Man, what aren't my responsibilities? Dam overflow, dam underflow. Dam leakage. Sometimes the dam gets too big and I have to shrink it down.{Emph. \"aren't\"}",
+      "index": "39"
+    },
+    {
+      "topic": "VMS03FantasticTopic003",
+      "topic_text": "They put you in charge of Hoover Dam?",
+      "emotion": "Neutral 50",
+      "response_text": "They sure as shit did. I mean there's still formalities, like I have to run everything by Lawson before I do it.",
+      "index": "42"
+    },
+    {
+      "topic": "VMS03FantasticTopic004",
+      "topic_text": "So you have to do whatever Lawson tells you.",
+      "emotion": "Neutral 50",
+      "response_text": "No, man. That's just what I'm supposed to do.",
+      "index": "44"
+    },
+    {
+      "topic": "VMS03FantasticTopic006",
+      "topic_text": "Is Ignacio dead over there? Did you kill him?",
+      "emotion": "Neutral 50",
+      "response_text": "Man, I don't even know. It's crazy.",
+      "index": "47"
+    },
+    {
+      "topic": "VMS03FantasticTopic007",
+      "topic_text": "You're with the Legion?",
+      "emotion": "Neutral 50",
+      "response_text": "Shh. You feel that? That's the winds of change, baby, and Fantastic's riding them with his magic angel wings.",
+      "index": "48"
+    },
+    {
+      "topic": "VMS03FantasticTopic008",
+      "topic_text": "What will you do now?",
+      "emotion": "Neutral 50",
+      "response_text": "I'm working on some top secret shit I can't even tell you about, it's so mind-blowing.",
+      "index": "51"
+    },
+    {
+      "topic": "VMS03FantasticTryingToAccomplish",
+      "topic_text": "What are you trying to accomplish?",
+      "emotion": "Neutral 50",
+      "response_text": "Well, see, we're getting power, because the guy running this place is Fantastic.",
+      "index": "54"
+    },
+    {
+      "topic": "VMS03FantasticWhatExactlyDoYouDo",
+      "topic_text": "What exactly do you do?",
+      "emotion": "Neutral 50",
+      "response_text": "Fuck, man. Everything. I push buttons. I turn dials. I read numbers.  Sometimes I make up little stories in my head about what the numbers mean.",
+      "index": "59"
+    },
+    {
+      "topic": "VMS03FantasticWorried",
+      "topic_text": "Why are you worried about being replaced?",
+      "emotion": "Surprise 30",
+      "response_text": "Worried? Do I look worried to you? I've got this under control, baby. No one else can do what I do here.{In denial.}",
+      "index": "61"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Here, you'll want this. It's the password to one of the terminals outside. Found it written on one of the stalls in the bathroom.",
+      "index": "62"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "Hello",
+      "emotion": "Neutral 50",
+      "response_text": "Hey, man.",
+      "index": "64"
+    }
+  ],
+  "combat": []
+}

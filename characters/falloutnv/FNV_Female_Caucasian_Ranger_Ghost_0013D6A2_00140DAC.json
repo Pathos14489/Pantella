@@ -1,0 +1,188 @@
+{
+  "name": "Ranger Ghost",
+  "url": "/wiki/Ghost_(Fallout:_New_Vegas)",
+  "dialogue_name": "VMORangerGhost.txt",
+  "dialogue_url": "/wiki/VMORangerGhost.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "0013D6A2",
+  "ref_id": "00140DAC",
+  "editor_id": "vMORangerGhost",
+  "location": "On top of theMojave Outpost barracks",
+  "location_url": "/wiki/Mojave_Outpost_barracks",
+  "descriptions": [
+    "Ranger Ghost is a member of the New California Republic's Rangers stationed at their border outpost in the Mojave Wasteland in 2281. She appears in Fallout: New Vegas.",
+    "Known by the nickname \"Ghost,\"",
+    "Although she is an NCR patriot through and through, Ghost does not share in the imperialist zeal of the republic's upper echelons championed by President Aaron Kimball around the turn of the 2280s. In fact, she is world-wise enough to both recognize a load of malarkey and dismiss its validity just as quickly.",
+    "Despite the calm surroundings she finds herself in daily, Ghost admits she is constantly on edge,",
+    "If the player character has a Sneak skill level at or above 60 when speaking to Ranger Ghost for the first time, she will have unique dialogue commenting on their ability to surprise her;",
+    "The Gun Runners' Arsenal challenge Armed For Bear can be advanced/completed by killing Ranger Ghost with the required weapons; see the article for details."
+  ],
+  "race": "Human",
+  "gender": "Female",
+  "affiliation": "New California RepublicNCR Rangers",
+  "role": "RangerSniper",
+  "detailed_location": "Mojave OutpostBarracksexterior",
+  "voice_actor": "April Stewart",
+  "special": {
+    "Strength": 5,
+    "Perception": 6,
+    "Endurance": 6,
+    "Charisma": 4,
+    "Intelligence": 5,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "level": "5→15 (player level x 1.0)",
+  "tag_skills": [
+    {
+      "Guns:": "48→88"
+    },
+    {
+      "Sneak:": "48→88"
+    },
+    {
+      "Unarmed:": "48→88"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Neutral",
+  "voice_type": "FemaleAdult03",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "AskJobAgain",
+      "topic_text": "What was the job you mentioned before?",
+      "emotion": "Neutral 50",
+      "response_text": "Interested now?{Beat, nods}All right.",
+      "index": "1"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Surprise 10",
+      "response_text": "Hnh - didn't even hear you come up the ramp.{Beat}You don't broadcast your movements. I like that.",
+      "index": "2"
+    },
+    {
+      "topic": "GhostDismissiveGoodbye",
+      "topic_text": "Never mind, I'll be going now.",
+      "emotion": "Neutral 50",
+      "response_text": "{Dismissive}Mind yourself on the plank going down.",
+      "index": "9"
+    },
+    {
+      "topic": "MojaveOutpostQuestion",
+      "topic_text": "Anything you can tell me about the Outpost?",
+      "emotion": "Neutral 50",
+      "response_text": "Not much to tell, one of the worst posts in the NCR if you're looking to be anything more than a babysitter.",
+      "index": "10"
+    },
+    {
+      "topic": "vMojaveGhostvMORangerGhostTopic004",
+      "topic_text": "Haven't been to Nipton yet.",
+      "emotion": "Neutral 50",
+      "response_text": "If there were any survivors, they're going to be in the Town Hall. If you can get inside, let me know if you find anyone.",
+      "index": "13"
+    },
+    {
+      "topic": "vMojaveGhostvMORangerGhostTopic005",
+      "topic_text": "Depends on the work.",
+      "emotion": "Neutral 50",
+      "response_text": "I think there's trouble in Nipton - no traffic from there on the roads, and while I can explain that away, the smoke from the town I can't.",
+      "index": "14"
+    },
+    {
+      "topic": "vMojaveGhostvMORangerGhostTopic006",
+      "topic_text": "What's the pay?",
+      "emotion": "Disgust 10",
+      "response_text": "{Mocking, but not to the player}The pay? The pay is a good goddamn thanks from the heart of the Republic!",
+      "index": "17"
+    },
+    {
+      "topic": "vMojaveGhostvMORangerGhostTopic010",
+      "topic_text": "[NCR] If I can help, I'm here to assist.",
+      "emotion": "Happy 10",
+      "response_text": "{Studying player}Hnh. Maybe Jackson got some additional soldiers after all.{Positive eval, player's not jaded}Didn't take you for a trooper at first, you seem a little... livelier than most.",
+      "index": "20"
+    },
+    {
+      "topic": "vMojaveGhostvMORangerGhostTopic011",
+      "topic_text": "I'll do it.",
+      "emotion": "Happy 10",
+      "response_text": "All right.{Beat, smiling}Look at you, all fired up and ready to go. Wish the others around here had that kind of attitude.",
+      "index": "22"
+    },
+    {
+      "topic": "vMojaveGhostvMORangerGhostTopic012",
+      "topic_text": "Already been there, Nipton was attacked by the Legion.",
+      "emotion": "Surprise 20",
+      "response_text": "{Surprised, not good news}Legion this far West? You're fucking kidding me.",
+      "index": "24"
+    },
+    {
+      "topic": "vMojaveGhostvMORangerGhostTopic013",
+      "topic_text": "Why don't you go check it out?",
+      "emotion": "Neutral 50",
+      "response_text": "Got my post. Don't think I wouldn't go, too - if trouble's hit Nipton, town's got enough camping spots to rack up some easy kills.",
+      "index": "27"
+    },
+    {
+      "topic": "vMojaveGhostvMORangerGhostTopic014",
+      "topic_text": "Hear any news from the West?",
+      "emotion": "Disgust 10",
+      "response_text": "{Dismissive}Kimball's Kimball, not sure which end is his ass or his head. Caravan families are causing trouble, Big Circle getting tense - the usual.",
+      "index": "29"
+    },
+    {
+      "topic": "vMojaveGhostvMORangerGhostTopic015",
+      "topic_text": "Not interested.",
+      "emotion": "Neutral 50",
+      "response_text": "Had to try. Smoke trail's getting thicker by the hour -{under her breath}wish Jackson could spare some men.",
+      "index": "31"
+    },
+    {
+      "topic": "vMojaveGhostvMORangerGhostTopic016",
+      "topic_text": "If I pass through there, I'll check it out.",
+      "emotion": "Disgust 10",
+      "response_text": "Better than nothing.{Beat}But close to it.",
+      "index": "32"
+    },
+    {
+      "topic": "vMojaveGhostvMORangerGhostTopic019",
+      "topic_text": "Town's been attacked, not sure by who.",
+      "emotion": "Neutral 50",
+      "response_text": "{Skeptical}Well, if you didn't see anyone, they might be gone - be just like Powder Gangers to hit and run.",
+      "index": "33"
+    },
+    {
+      "topic": "vMojaveGhostvMORangerGhostTopic020",
+      "topic_text": "Did you have friends there?",
+      "emotion": "Anger 10",
+      "response_text": "In Nipton? Hell no. Town was a shithole, asking to be burned. Just not by Legion. Nobody deserves that.",
+      "index": "35"
+    },
+    {
+      "topic": "vMojaveGhostvMORangerGhostTopic021",
+      "topic_text": "Didn't mean to be the bearer of bad news.",
+      "emotion": "Neutral 50",
+      "response_text": "Unless you burned the town, don't take blame that's not due. Things are going to get uglier before the year's out.",
+      "index": "36"
+    },
+    {
+      "topic": "vMojaveGhostvMORangerGhostTopic022",
+      "topic_text": "If that's all you wanted, I'm done.",
+      "emotion": "Sad 10",
+      "response_text": "Well, thanks for hoofing it there and back, even if it was bad news. Wish we could spare the troops to go hunting, but...{irritated}orders are to stay put.",
+      "index": "37"
+    }
+  ],
+  "conversation": [],
+  "combat": []
+}

@@ -1,0 +1,181 @@
+{
+  "name": "Private Christina Morales",
+  "url": "/wiki/Christina_Morales",
+  "dialogue_name": "PrivateMorales.txt",
+  "dialogue_url": "/wiki/PrivateMorales.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000E8F6D",
+  "ref_id": "000E8F64",
+  "editor_id": "PrivateMorales",
+  "location": "Camp McCarran concourse",
+  "location_url": "/wiki/Camp_McCarran_concourse",
+  "descriptions": [
+    "Pvt. Christina Morales is a trooper in the New California Republic Army and the wife of the late NCR Ranger Esteban Morales. She is stationed at Camp McCarran in Fallout: New Vegas.",
+    "Sitting distraught in the Camp McCarran concourse, Private Morales has been crying over the death of her husband, Ranger Esteban Morales, who was recently killed by a group of Fiends near REPCONN headquarters while laying down covering fire for other troops in his group. Wounded by enemy fire, he slowly bled out as the Fiends chased his squad away, halfway to McCarran.",
+    "Christina is left in despair, thinking about her husband's body being left to cook under the sun and desecrated by the Fiends. Though the NCR recruiters promised that no man is ever left behind, this did not happen.",
+    "A Final Plan for Esteban",
+    "A Final Plan for Esteban: She asks the Courier to retrieve her husband's corpse and bring it to a nearby NCR outpost, so it can be shipped back to California for burial."
+  ],
+  "race": "Human",
+  "gender": "Female",
+  "affiliation": "NCR Army",
+  "role": "SoldierWidow",
+  "detailed_location": "Camp McCarran concourse",
+  "voice_actor": "April Stewart",
+  "special": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 5,
+    "Intelligence": 5,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "level": "5",
+  "tag_skills": [
+    {
+      "Explosives:": "46"
+    },
+    {
+      "Guns:": "46"
+    },
+    {
+      "Melee Weap.:": "46"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Neutral",
+  "voice_type": "FemaleAdult03",
+  "geck_race": "HispanicRaider",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "Did the colonel send you? I... I was hoping he might have changed his mind...",
+      "index": "1"
+    },
+    {
+      "topic": "VFreeformMcCarranPrivateMoralesTopic000",
+      "topic_text": "I can bring his body back, but it'll cost you.",
+      "emotion": "Neutral 50",
+      "response_text": "Caps. This whole rotten town wants caps. Nobody does anything just because it's right.{disgusted}",
+      "index": "5"
+    },
+    {
+      "topic": "VFreeformMcCarranPrivateMoralesTopic001",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Then you're not from the colonel's office? Sorry... I shouldn't have bothered you.{dejected}",
+      "index": "7"
+    },
+    {
+      "topic": "VFreeformMcCarranPrivateMoralesTopic002",
+      "topic_text": "You look upset.  What's wrong?",
+      "emotion": "Neutral 50",
+      "response_text": "I know... I've been crying. Stupid. I'm supposed to be a soldier.",
+      "index": "8"
+    },
+    {
+      "topic": "VFreeformMcCarranPrivateMoralesTopic003",
+      "topic_text": "I haven't found him yet.",
+      "emotion": "Neutral 50",
+      "response_text": "No... I didn't expect nothing so soon. You're doing me a favor - I don't mean to be a pest.{a little disappointed, but trying to mask it}",
+      "index": "11"
+    },
+    {
+      "topic": "VFreeformMcCarranPrivateMoralesTopic004",
+      "topic_text": "I brought his body to an NCR position. He's on his way back to McCarran.",
+      "emotion": "Neutral 50",
+      "response_text": "They put him in a box? With a flag and all? I hope so. He'd have been proud.",
+      "index": "13"
+    },
+    {
+      "topic": "VFreeformMcCarranPrivateMoralesTopic005",
+      "topic_text": "If your husband is dead, what does it matter if you get the corpse back?",
+      "emotion": "Neutral 50",
+      "response_text": "You never lost anybody, have you? Not like this. Never had to think about that person you love all alone out there, cooking in the sun like meat...",
+      "index": "18"
+    },
+    {
+      "topic": "VFreeformMcCarranPrivateMoralesTopic006",
+      "topic_text": "It seems strange the NCR wouldn't do their best to retrieve a fallen comrade.",
+      "emotion": "Neutral 50",
+      "response_text": "Colonel says he can't spare the men to bring Esteban back home. And the Fiends, they put all kinds of mines and traps around his body. Snipers, too.",
+      "index": "20"
+    },
+    {
+      "topic": "VFreeformMcCarranPrivateMoralesTopic007",
+      "topic_text": "Sorry for your loss. I hope the Colonel reconsiders.",
+      "emotion": "Neutral 50",
+      "response_text": "So do I. But I know he won't. Ain't important enough in the scheme of things, you know? Still... thanks for listening.{disappointed that the player can't help}",
+      "index": "21"
+    },
+    {
+      "topic": "VFreeformMcCarranPrivateMoralesTopic008",
+      "topic_text": "How did he die?",
+      "emotion": "Neutral 50",
+      "response_text": "He was out on patrol. Bunch of drugged-up Fiends attacked them.",
+      "index": "22"
+    },
+    {
+      "topic": "VFreeformMcCarranPrivateMoralesTopic009",
+      "topic_text": "Not my problem. Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Not your problem. Right. That's the motto in this town. Rotten people, rotten place.{disgusted}",
+      "index": "25"
+    },
+    {
+      "topic": "VFreeformMcCarranPrivateMoralesTopic010ICanDoIt",
+      "topic_text": "I'll recover your husband's body.",
+      "emotion": "Neutral 50",
+      "response_text": "Mister, I'd about given up hope. But you've got to be careful. I don't want anybody else dying on my account.",
+      "index": "26"
+    },
+    {
+      "topic": "VFreeformMcCarranPrivateMoralesTopic011",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Sorry... I'm not fit for proper conversation, not now.",
+      "index": "30"
+    },
+    {
+      "topic": "VFreeformMcCarranPrivateMoralesTopic012",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "If you find him... or if you hear any news... I'll be right here.",
+      "index": "31"
+    },
+    {
+      "topic": "VFreeformMcCarranPrivateMoralesTopic013",
+      "topic_text": "No one else will help you?",
+      "emotion": "Neutral 50",
+      "response_text": "His best friend, Jackson, tried. Didn't even get permission from his CO, so it could have cost him a lot. But he never came back.",
+      "index": "32"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "RNVNewsStory2",
+      "topic_text": "RNVNewsStoryLine2",
+      "emotion": "Neutral 50",
+      "response_text": "{Private Morales:}It was such an incredible thing he did, putting his life on the line like that for my husband. It's not something most people would do.",
+      "index": "33"
+    },
+    {
+      "topic": "RNVNewsStory3",
+      "topic_text": "RNVNewsStoryLine3",
+      "emotion": "Neutral 50",
+      "response_text": "{Private Morales:}Esteban's going home now. I can't tell you what that means to me.",
+      "index": "35"
+    }
+  ],
+  "combat": []
+}

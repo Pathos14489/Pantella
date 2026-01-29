@@ -1,0 +1,159 @@
+{
+  "name": "Muggy",
+  "url": "/wiki/Muggy",
+  "dialogue_name": "NVDLC03Muggy.txt",
+  "dialogue_url": "/wiki/NVDLC03Muggy.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": true,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "xx00E6F9",
+  "ref_id": "xx00E6F8",
+  "editor_id": "NVDLC03Muggy",
+  "location": "The Sink",
+  "location_url": "/wiki/The_Sink",
+  "descriptions": [
+    "Muggy is a robot residing in the Sink in Big MT in the Fallout: New Vegas add-on Old World Blues.",
+    "Muggy was designed to be a neurotic, sentient, highly self-aware, miniature Securitron by Doctor 0 as an expression of 0's own hatred for Robert House and RobCo Industries. Unlike other Securitrons, Muggy's screen does not feature a policeman, soldier or broken face, instead displaying a cartoon version of a smiling coffee cup.",
+    "Muggy is programmed to be obsessed with cleaning coffee mugs, and fully aware of this obsession as well as his inability to stop or do anything about it.",
+    "Muggy harbors a deep-seated resentment of Dr. 0 for creating him which deepened after 0 became a Think Tank.",
+    "Muggy's hatred for Dr. 0 runs so deep that after the Courier confronts the scientists in their dome, he frantically asks if they violently killed him, although the Courier never confirms 0's fate to him.",
+    "At some point before or during the Courier's time in Big MT, Muggy was tricked by the Biological Research Station into looking for a coffee mug inside its chassis, for which the mini Securitron was then \"seeded,\"",
+    "Should the Courier have discovered Higgs Village before the final confrontation, it is shown in an ending that Muggy ended up accidentally locking himself in there trying to clean the dirty dishes. He then comes to enjoy the solitude and being able to clean up the old kitchens of the Think Tank professors, but deliberately leaving 0's house dirty as a form of revenge. If the Courier did not discover Higgs Village before the ending, Muggy gets a flat tire just out of reach of a coffee cup, and the resulting outburst causes his brain to explode.",
+    "Muggy will turn all coffee mugs, coffee pots and various plates into useful miscellaneous items. The items he accepts and their respective yields are as follows:",
+    "After being upgraded, Muggy, through an interactive request, will provide the Courier with all of the following once a day:",
+    "Muggy appears only in the Fallout: New Vegas add-on Old World Blues."
+  ],
+  "race": "Securitron,Artificial personality",
+  "gender": "Male programming",
+  "affiliation": "Doctor 0(formerly)Mobius(formerly)Courier(optional)",
+  "role": "Mug collectorCleanerElectronic components manufacturer",
+  "detailed_location": "The Sink",
+  "voice_actor": "Sunil Malhotra",
+  "special": {
+    "Strength": 8,
+    "Perception": 6,
+    "Endurance": 6,
+    "Charisma": 3,
+    "Intelligence": 8,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "level": "7",
+  "misc_skills": [],
+  "karma": "Neutral",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "Please, please,{emph}please tell me you stomped Dr. O's brain into a fine paste! Did he squeal? Did he beg? God, I hope he begged!",
+      "index": "1"
+    },
+    {
+      "topic": "NVDLC03DialogueHQBuddiesNVDLC03MuggyTopic000",
+      "topic_text": "Mugs? Why do you want mugs?",
+      "emotion": "Neutral 50",
+      "response_text": "Why do{emph}you want mugs? Huh? You some kind of sick mug hoarder? Oh god, give me the coffee cup, please! It's sitting there in your pack,{emph}taunting me!",
+      "index": "6"
+    },
+    {
+      "topic": "NVDLC03DialogueHQBuddiesNVDLC03MuggyTopic001",
+      "topic_text": "Who are you?",
+      "emotion": "Neutral 50",
+      "response_text": "{Almost crying with joy}You... you really want to know about... me? No one ever asks about Muggy! You've made me so happy!",
+      "index": "8"
+    },
+    {
+      "topic": "NVDLC03DialogueHQBuddiesNVDLC03MuggyTopic002",
+      "topic_text": "Here, take whatever you want.",
+      "emotion": "Neutral 50",
+      "response_text": "Oh, sweet, sweet fulfillment! I'll break these down for you just as fast as I can!",
+      "index": "12"
+    },
+    {
+      "topic": "NVDLC03DialogueHQBuddiesNVDLC03MuggyTopic003",
+      "topic_text": "Sorry, I don't have any.",
+      "emotion": "Neutral 50",
+      "response_text": "Of course you don't. Why would you? You're not an insane robot obsessed with coffee cups. To you they're just worthless junk.",
+      "index": "13"
+    },
+    {
+      "topic": "NVDLC03DialogueHQBuddiesNVDLC03MuggyTopic004",
+      "topic_text": "Got to go.",
+      "emotion": "Neutral 50",
+      "response_text": "Sure. Nobody wants to hang out with Muggy. I get it. So long, pal.",
+      "index": "14"
+    },
+    {
+      "topic": "NVDLC03DialogueHQBuddiesNVDLC03MuggyTopic005",
+      "topic_text": "You seem really obsessed with mugs.",
+      "emotion": "Neutral 50",
+      "response_text": "Of course I'm obsessed! They made me this way! You think I don't know how crazy I sound? Of course I do! They programmed me to know that, too!",
+      "index": "15"
+    },
+    {
+      "topic": "NVDLC03DialogueHQBuddiesNVDLC03MuggyTopic006",
+      "topic_text": "What do you do with the mugs?",
+      "emotion": "Neutral 50",
+      "response_text": "I'm supposed to keep them clean - oh, God, the thought of all those dirty dishes out there makes me crazy!",
+      "index": "18"
+    },
+    {
+      "topic": "NVDLC03DialogueHQBuddiesNVDLC03MuggyTopic007",
+      "topic_text": "Let's change the subject.",
+      "emotion": "Neutral 50",
+      "response_text": "Is the new subject mugs?",
+      "index": "20"
+    },
+    {
+      "topic": "NVDLC03DialogueHQBuddiesNVDLC03MuggyTopic009",
+      "topic_text": "Can you do anything else?",
+      "emotion": "Neutral 50",
+      "response_text": "Anything else, he asks. Like I don't long for the chance to be more than a neurotic busboy.",
+      "index": "21"
+    },
+    {
+      "topic": "NVDLC03DialogueHQBuddiesNVDLC03MuggyTopic011",
+      "topic_text": "Have you made any electronic components?",
+      "emotion": "Neutral 50",
+      "response_text": "Yup, here you go.",
+      "index": "25"
+    },
+    {
+      "topic": "NVDLC03DialogueHQBuddiesNVDLC03MuggyTopic012",
+      "topic_text": "I found that upgrade disk you were looking for.",
+      "emotion": "Neutral 50",
+      "response_text": "Ho-ho, thank God! Finally, something resembling a useful purpose!",
+      "index": "27"
+    },
+    {
+      "topic": "NVDLC03EndingSlideChipMuggy",
+      "topic_text": "NVDLC03EndingSlideChipMuggy",
+      "emotion": "Neutral 50",
+      "response_text": "{Narration}{Higgs Village not discovered}Muggy continued to collect coffee cups until his wheel got a flat just out of reach of a dirty coffee cup, and his tiny robotic brain exploded.",
+      "index": "28"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "NVDLC03HQBuddiesCheer",
+      "topic_text": "NVDLC03HQBuddiesCheer",
+      "emotion": "Neutral 50",
+      "response_text": "<Cheering>",
+      "index": "34"
+    },
+    {
+      "topic": "NVDLC03SinkMuggyBarks",
+      "topic_text": "NVDLC03SinkMuggyBarks",
+      "emotion": "Neutral 50",
+      "response_text": "The toaster. Beware the toaster. If it could, it would burn the world.",
+      "index": "35"
+    }
+  ],
+  "combat": []
+}

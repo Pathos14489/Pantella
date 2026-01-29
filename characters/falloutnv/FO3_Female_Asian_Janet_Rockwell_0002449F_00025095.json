@@ -1,0 +1,239 @@
+{
+  "name": "Janet Rockwell",
+  "url": "/wiki/Janet_Rockwell",
+  "dialogue_name": "JanetRockwell.txt",
+  "dialogue_url": "/wiki/JanetRockwell.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "0002449F",
+  "ref_id": "00025095",
+  "editor_id": "JanetRockwell",
+  "location": "Rockwell residence",
+  "location_url": "/wiki/Rockwell_residence",
+  "descriptions": [
+    "Janet Rockwell is the wife of Roger Rockwell, living in Tranquility Lane in Fallout 3.",
+    "Janet is one of Vault 112's inhabitants, trapped in Tranquility Lane alongside her husband, Roger. She has an affinity for baking and gardening, as well as caring for her appearance with occasional trips to the salon.",
+    "She has a dislike for Mabel Henderson, stemming from her being \"a little too nosey\" and questioning if the Lone Wanderer has been asked to pry into her marriage per Mabel's request;",
+    "In reality, she is stuck in the Tranquility Lounger at Vault 112, as resident 115, with elevated stress levels: 87 bpm, 140/85 mmHg of blood pressure, 98.2°F/36.7°C temperature, and 18 breaths per minute, similar to Timmy Neusbaum and Martha Simpson.",
+    "When looking at resident IDs, Roger Rockwell and Martha Simpson have adjacent IDs (226 and 227 respectively), while Janet Simpson has the ID 115. As such, it's entirely possible that Rockwell and Simpson were originally a couple, rather than Janet."
+  ],
+  "race": "Human",
+  "gender": "Female",
+  "affiliation": "Vault 112",
+  "role": "Housewife",
+  "detailed_location": "Rockwell residence,Tranquility Lane",
+  "voice_actor": "Shari Elliker",
+  "special": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 5,
+    "Intelligence": 4,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "mod_special_values": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 5,
+    "Intelligence": 4,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "level": "0",
+  "tag_skills": [
+    {
+      "Barter:": "25"
+    },
+    {
+      "Medicine:": "23"
+    },
+    {
+      "Melee Weap.:": "27"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Good",
+  "voice_type": "FemaleAdult01DefaultDC",
+  "geck_race": "Asian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Sad 50",
+      "response_text": "How could Roger accuse me of something like that? What is wrong with him?",
+      "index": "1"
+    },
+    {
+      "topic": "MQ04JanetItsYourBasementLady",
+      "topic_text": "It's your basement, lady. You tell me.",
+      "emotion": "Neutral 50",
+      "response_text": "This isn't mine. Why would Roger have this down here?",
+      "index": "7"
+    },
+    {
+      "topic": "MQ04JanetSPEECHCHALLENGE",
+      "topic_text": "I hate to break it to you, but I saw your husband kissing some other woman.",
+      "emotion": "Neutral 50",
+      "response_text": "It's that Martha Simpson, isn't it? I knew it! That's it. I've had enough of Roger's lies and bullshit!",
+      "index": "8"
+    },
+    {
+      "topic": "MQ04JanetUndiesCheatingOnYou",
+      "topic_text": "Well, then I guess he's cheating on you.",
+      "emotion": "Anger 50",
+      "response_text": "My God... I knew it. I knew it!{furious}",
+      "index": "9"
+    },
+    {
+      "topic": "MQ04JanetUndiesLooksLikeWomensClothing",
+      "topic_text": "It looks like Roger is a fan of women's clothing.",
+      "emotion": "Fear 50",
+      "response_text": "But... This isn't mine. What is this doing here?",
+      "index": "10"
+    },
+    {
+      "topic": "MQ04JanetUndiesSomeoneElses",
+      "topic_text": "So it's not yours? Oops.",
+      "emotion": "Anger 50",
+      "response_text": "What is this doing here?{angry, horrified}",
+      "index": "11"
+    },
+    {
+      "topic": "MQ04JanetUndiesWearingIt",
+      "topic_text": "Maybe it's his. You know, for him to wear when no one is looking...",
+      "emotion": "Fear 50",
+      "response_text": "Oh my God. Roger... He wouldn't. But...{shocked, horrified}",
+      "index": "12"
+    },
+    {
+      "topic": "MQ04ResidentChitChat2",
+      "topic_text": "What can you tell me about the neighborhood?",
+      "emotion": "Neutral 50",
+      "response_text": "Roger suggested we move here... I don't quite remember when that was...",
+      "index": "13"
+    },
+    {
+      "topic": "MQ04ResidentDad",
+      "topic_text": "Have you seen my dad?",
+      "emotion": "Neutral 50",
+      "response_text": "Your dad? No, I haven't. I'm sure he's around here somewhere.",
+      "index": "15"
+    },
+    {
+      "topic": "MQ04ResidentMabel",
+      "topic_text": "What can you tell me about Mabel Henderson?",
+      "emotion": "Neutral 50",
+      "response_text": "Roger and I don't spend much time with Mabel, frankly. She's a little nosey for my tastes. And I don't like visiting her house, either.",
+      "index": "16"
+    },
+    {
+      "topic": "MQ04ResidentRockwellsCan you tell me anything about the Rockwells' marriage?",
+      "topic_text": "Anything you want to tell me about your marriage?",
+      "emotion": "Surprise 50",
+      "response_text": "Our marriage? Goodness, what kind of a question is that?",
+      "index": "18"
+    },
+    {
+      "topic": "MQ04ResidentSimulationThis is a pretty convincing simulation...",
+      "topic_text": "None of this is real. It's all some crazy experiment.",
+      "emotion": "Happy 20",
+      "response_text": "Oh, you're such a kidder.{amused, dismissive}",
+      "index": "20"
+    },
+    {
+      "topic": "MQ04RockwellBasementComeWithMe",
+      "topic_text": "You'd better come down to the basement. There's something you need to see...",
+      "emotion": "Anger 50",
+      "response_text": "What were you doing in our basement? What's down there?",
+      "index": "21"
+    },
+    {
+      "topic": "MQ04RockwellBasementNevermind",
+      "topic_text": "Nothing. Never mind.",
+      "emotion": "Neutral 50",
+      "response_text": "Okay.",
+      "index": "22"
+    },
+    {
+      "topic": "MQ04RockwellBasementTrustMe",
+      "topic_text": "Just trust me. It's important.",
+      "emotion": "Neutral 50",
+      "response_text": "Okay, if you say so.",
+      "index": "23"
+    },
+    {
+      "topic": "MQ04RockwellsInformation",
+      "topic_text": "Betty wants me to break up your marriage.",
+      "emotion": "Surprise 50",
+      "response_text": "What? Now that's a ridiculous thing to say. You kids need to find some different games to play!",
+      "index": "24"
+    },
+    {
+      "topic": "SpeechChallengeFailure",
+      "topic_text": "SpeechChallengeFailure",
+      "emotion": "Surprise 50",
+      "response_text": "What a horrible thing to say! Is that your idea of a joke?{shocked, horrified}",
+      "index": "25"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "MQ04JanetBasementLine",
+      "topic_text": "",
+      "emotion": "Neutral 50",
+      "response_text": "What's this... Women's clothing? Down here?{confused, apprehensive}",
+      "index": "26"
+    },
+    {
+      "topic": "MQ04JanetConfrontRogerKissingConv",
+      "topic_text": "MQ04JanetConfrontRogerKissingConv",
+      "emotion": "Neutral 50",
+      "response_text": "You fucking coward. I can't stand the sight of you. Get away from me!",
+      "index": "27"
+    },
+    {
+      "topic": "MQ04JanetConfrontRogerUndiesConv",
+      "topic_text": "MQ04JanetConfrontRogerUndies",
+      "emotion": "Disgust 50",
+      "response_text": "The hell with working this out. I'm sick of you. I'm staying at Mabel's tonight. Don't talk to me. Don't even look at me.",
+      "index": "31"
+    },
+    {
+      "topic": "MQ04JanetConfrontRogerUndiesWearing",
+      "topic_text": "MQ04JanetConfrontRogerUndiesWearing",
+      "emotion": "Anger 50",
+      "response_text": "You pervert! You disgust me! Just stay away from me!",
+      "index": "35"
+    },
+    {
+      "topic": "MQ04RogerConfrontJanetRPin",
+      "topic_text": "MQ04RogerConfrontJanetRPin",
+      "emotion": "Fear 50",
+      "response_text": "What are you talking about? I haven't done anything...{frightened}",
+      "index": "39"
+    },
+    {
+      "topic": "TranqLaneTalk1",
+      "topic_text": "TranqLaneTalk1",
+      "emotion": "Neutral 50",
+      "response_text": "Should I invite the Neusbaums over for Bridge, or will you be down in the basement all night again?",
+      "index": "42"
+    },
+    {
+      "topic": "TranqLaneTalk3",
+      "topic_text": "TranqLaneTalk3",
+      "emotion": "Neutral 50",
+      "response_text": "How could you... Roger, no. This is not the time for that discussion. Please.{exasperated}",
+      "index": "44"
+    }
+  ],
+  "combat": []
+}

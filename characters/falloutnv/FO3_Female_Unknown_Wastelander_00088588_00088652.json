@@ -1,0 +1,77 @@
+{
+  "name": "Wastelander",
+  "url": "/wiki/Wastelander_(SatCom_Array_NW-05a)",
+  "dialogue_name": "",
+  "dialogue_url": null,
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "00088588",
+  "ref_id": "00088652",
+  "editor_id": "SatCom01MadScientist",
+  "location": "Inside",
+  "location_url": null,
+  "descriptions": [
+    "The wastelander is a female ghoul scientist who works in the SatCom Array NW-05a in 2277.",
+    "This resident of the Capital Wasteland is an intelligent, ghoulified researcher with the goal of tapping into a pre-War military satellite in orbit with the goal of getting revenge on the human inhabitants of the wasteland for causing the Great War 200 years ago.",
+    "To that end, she set up a base at SatCom Array NW-05a and hired mercenaries from Talon Company to protect the premises. She used a stash of bottle caps she had been collecting since well before most of the mercenaries were born.",
+    "However, the wastelander soon struck gold: she successfully pinged Highwater Trousers, an orbital nuclear weapons platform.",
+    "As soon as the Lone Wanderer enters the building she will begin to flee, meaning that they cannot speak with her.",
+    "She cannot be enslaved via the Mesmetron, and instead will frenzy on the Talon Company mercs and the Lone Wanderer."
+  ],
+  "race": "Ghoul",
+  "gender": "Female",
+  "affiliation": "Talon Company(client)",
+  "role": "Scientist",
+  "detailed_location": "SatCom Array NW-05a",
+  "special": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 4,
+    "Intelligence": 4,
+    "Agility": 6,
+    "Luck": 4
+  },
+  "level": "1",
+  "tag_skills": [
+    {
+      "Melee Weap.:": "31"
+    },
+    {
+      "Small Guns:": "31"
+    },
+    {
+      "Sneak:": "31"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "25"
+    },
+    {
+      "Critical Chance:": "4%"
+    },
+    {
+      "Unarmed Dam.:": "1.1"
+    },
+    {
+      "Poison Resist.:": "15%"
+    },
+    {
+      "Rad. Resist.:": "6%"
+    },
+    {
+      "Damage Res.:": "1%"
+    }
+  ],
+  "karma": "Neutral",
+  "topics": [],
+  "conversation": [],
+  "combat": []
+}

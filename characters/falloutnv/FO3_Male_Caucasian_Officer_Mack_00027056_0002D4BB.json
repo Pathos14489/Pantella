@@ -1,0 +1,125 @@
+{
+  "name": "Officer Mack",
+  "url": "/wiki/Allen_Mack",
+  "dialogue_name": "Vault101Security03.txt",
+  "dialogue_url": "/wiki/Vault101Security03.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "00027056",
+  "ref_id": "0002D4BB",
+  "editor_id": "Vault101Security03",
+  "location": "",
+  "location_url": null,
+  "descriptions": [
+    "Officer Steve \"Stevie\" Mack is a security officer in Vault 101 in 2277.",
+    "He is Susie and Wally Mack's brother, and Allen Mack and Gloria Mack's son. Stevie is 25 years old as of the events of Escape! He is a sadistic and gung-ho member of the Vault's security force, and willing to do anything to gain favor with his boss, including being particularly overzealous during emergencies.",
+    "He is responsible for the killing of Jonas Palmer.",
+    "* He will only drop a finger during Escape!",
+    "* He will only wear the helmet during Trouble on the Homefront.",
+    "A teenaged Stevie was originally slated to appear during the birthday party in Growing Up Fast. An unused model exists in the G.E.C.K., and a single line of dialogue for the quest can be found in the files as well."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Vault 101 security",
+  "role": "Security Officer",
+  "detailed_location": "Vault 101",
+  "voice_actor": "Jeff Baker",
+  "special": {
+    "Strength": 6,
+    "Perception": 3,
+    "Endurance": 6,
+    "Charisma": 5,
+    "Intelligence": 3,
+    "Agility": 7,
+    "Luck": 4
+  },
+  "level": "52 (during Escape! only)",
+  "tag_skills": [
+    {
+      "Small Guns:": "37"
+    },
+    {
+      "Sneak:": "37"
+    },
+    {
+      "Unarmed:": "36"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "55"
+    },
+    {
+      "Critical Chance:": "4%"
+    },
+    {
+      "Unarmed Dam.:": "2.30"
+    },
+    {
+      "Poison Resist.:": "25%"
+    },
+    {
+      "Rad. Resist.:": "10%"
+    },
+    {
+      "Carry Weight:": "210"
+    }
+  ],
+  "karma": "Evil (Escape!)Neutral (Trouble on the Homefront)",
+  "voice_type": "MaleAdult01DefaultDC",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "CG04Interrogation",
+      "topic_text": "CG04InterrogationAmataOverseer",
+      "emotion": "Happy 50",
+      "response_text": "Don't make me take that gun away from you, girlie. Just hand it over nice and easy now.Play soundFo3_OfficerGomez_DontMakeMe.ogghttps://fallout.fandom.com/wiki/File:Fo3_OfficerGomez_DontMakeMe.oggnoicon",
+      "index": "1"
+    },
+    {
+      "topic": "CG04SecurityBarks",
+      "topic_text": "CG04SecurityBarks",
+      "emotion": "Surprise 75",
+      "response_text": "Watch it, sir! She's got a gun!Play soundFO3 StevieMack WatchItSir.ogghttps://fallout.fandom.com/wiki/File:FO3_StevieMack_WatchItSir.oggnoicon",
+      "index": "5"
+    },
+    {
+      "topic": "CG04StevieGloriaConv",
+      "topic_text": "CG04StevieGloriaConv",
+      "emotion": "Disgust 50",
+      "response_text": "Geez, Mom, I don't have time for this! Why didn't you stay with Aunt Beatrice? There's important stuff going on... oh, come on. I'll take you home.{exasperated, not very sympathetic}Play soundFO3 StevieMack DontHaveTime.ogghttps://fallout.fandom.com/wiki/File:FO3_StevieMack_DontHaveTime.oggnoicon",
+      "index": "9"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Surprise 100",
+      "response_text": "Mom, are you crazy? What are you doing? Are you okay?Play soundFO3 StevieMack AreYouCrazy.ogghttps://fallout.fandom.com/wiki/File:FO3_StevieMack_AreYouCrazy.oggnoicon",
+      "index": "10"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "Attack",
+      "topic_text": "Attack",
+      "emotion": "Anger 50",
+      "response_text": "I've been wanting to do this for a long time, you little punk.Play soundFO3 StevieMack IveBeenWanting.ogghttps://fallout.fandom.com/wiki/File:FO3_StevieMack_IveBeenWanting.oggnoicon",
+      "index": "12"
+    }
+  ],
+  "combat": [
+    {
+      "topic": "NormalToCombat",
+      "topic_text": "StartCombat",
+      "emotion": "Surprise 75",
+      "response_text": "Hey! It's the doc's kid!Play soundFO3 StevieMack ItsTheDocsKid.ogghttps://fallout.fandom.com/wiki/File:FO3_StevieMack_ItsTheDocsKid.oggnoicon",
+      "index": "17"
+    }
+  ]
+}

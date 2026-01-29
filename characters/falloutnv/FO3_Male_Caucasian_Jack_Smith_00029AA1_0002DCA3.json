@@ -1,0 +1,387 @@
+{
+  "name": "Jack Smith",
+  "url": "/wiki/Jack_Smith",
+  "dialogue_name": "JackSmith.txt",
+  "dialogue_url": "/wiki/JackSmith.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "00029AA1",
+  "ref_id": "0002DCA3",
+  "editor_id": "JackSmith",
+  "location": "The Smith's house",
+  "location_url": "/wiki/The_Smith%27s_house",
+  "descriptions": [
+    "Jack Smith is part of a family of cannibals living in Andale, along with his wife Linda and their son Junior in 2277.",
+    "Jack Smith appears to be Andale's patriarch, priding himself on the town being the best that Virginia has to offer, with a heavy emphasis on rejecting the outside influence that the Capital Wasteland presents.",
+    "Presenting himself as a loyal U.S. citizen and father, Jack and his wife (and sister) Linda have a son Junior Smith. While his wife cooks and cleans the house, he goes to work with his neighbor (and brother) Bill Wilson in the \"family business.\" In this enterprise, they preserve and maintain a centuries-long local tradition: cannibalism. Wastelanders passing through are allowed by the local families to stay in town and become accustomed to the warm attitude and reception of them. This facade is meant to catch the travelers off-guard when they are killed by the residents.",
+    "Jack reveals that he thinks of himself as a political conservative when chatting to the player character, stating that in elections held in Andale, he never votes for \"those beatnik liberal commies,\"",
+    "Upon passing a Speech check or Cannibal perk option, Jack also mentions how people judge him and his family for being cannibals, and mentions a parent from Rivet City begging to be spared from being another one of their victims. Jack then informs the Lone Wanderer that they are welcome in Andale, and specifically to Linda's meat pies."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "AndaleRepublican Party(self-proclaimed)",
+  "role": "Cannibal",
+  "detailed_location": "The Smith's house, Andale",
+  "voice_actor": "Jeff Baker",
+  "special": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 5,
+    "Intelligence": 4,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "mod_special_values": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 5,
+    "Intelligence": 4,
+    "Agility": 7,
+    "Luck": 5
+  },
+  "level": "1→8(equal to player characters level)",
+  "tag_skills": [
+    {
+      "Barter:": "30→62"
+    },
+    {
+      "Medicine:": "28→60"
+    },
+    {
+      "Melee Weap.:": "32→64"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "65→100"
+    },
+    {
+      "Critical Chance:": "5%"
+    },
+    {
+      "Unarmed Dam.:": "1.15"
+    },
+    {
+      "Poison Resist.:": "15%"
+    },
+    {
+      "Rad. Resist.:": "6%"
+    },
+    {
+      "Carry Weight:": "210"
+    },
+    {
+      "Damage Res.:": "0%(3%)"
+    }
+  ],
+  "karma": "Evil",
+  "voice_type": "MaleAdult01DefaultDC",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "AndaleJackSmithGreeting1",
+      "topic_text": "Virginia? Virginia's been gone for 200 years.",
+      "emotion": "Happy 50",
+      "response_text": "Not here. Not in Andale, no sir. The great Commonwealth of Virginia is alive and well. In fact, we just voted ourselves a new governor!{Far too cheery. Suburban.}",
+      "index": "1"
+    },
+    {
+      "topic": "AndaleJackSmithGreeting2",
+      "topic_text": "Well, it's good to meet you, Jack.",
+      "emotion": "Happy 50",
+      "response_text": "And it's good to meet you too! Feel free to stay in Andale as long as you'd like. Heck, stop by the house for dinner sometime if you'd like.{Way too happy for his own good.}",
+      "index": "6"
+    },
+    {
+      "topic": "AndaleJackSmithGreeting2a",
+      "topic_text": "Thanks, Jack. Maybe I'll do that.",
+      "emotion": "Neutral 50",
+      "response_text": "I hope to see you there! So, did you need anything else?",
+      "index": "8"
+    },
+    {
+      "topic": "AndaleJackSmithGreeting2b",
+      "topic_text": "Yeah... maybe not. I don't want to catch whatever you have.",
+      "emotion": "Neutral 50",
+      "response_text": "Suit yourself, but you don't know what you're missing.",
+      "index": "9"
+    },
+    {
+      "topic": "AndaleJackSmithGreeting3",
+      "topic_text": "Yeah... you're a little too chipper for my tastes. I'm out of here.",
+      "emotion": "Neutral 50",
+      "response_text": "Well, that's a shame. But feel free to stop by and see us anytime!",
+      "index": "12"
+    },
+    {
+      "topic": "AndaleJackSmithGreetingBasement1",
+      "topic_text": "I really don't know what you're talking about, Jack...",
+      "emotion": "Anger 50",
+      "response_text": "Look, stranger, I'm not angry  I just want you to tell me the truth. If you can't do that, then I think you'd best head on out of town.",
+      "index": "13"
+    },
+    {
+      "topic": "AndaleJackSmithGreetingBasement2",
+      "topic_text": "Yes, and I saw what you're hiding in there, you sick bastard!",
+      "emotion": "Anger 50",
+      "response_text": "I'm disappointed in you stranger  so quick to judge us. Did you ever stop to think that I have a family to support here?",
+      "index": "14"
+    },
+    {
+      "topic": "AndaleJackSmithGreetingBasement2a",
+      "topic_text": "Bring home the bacon? Those are people, not bacon! What the fuck?",
+      "emotion": "Disgust 75",
+      "response_text": "Hey! I'll have none of that language in this house!",
+      "index": "20"
+    },
+    {
+      "topic": "AndaleJackSmithGreetingBasement2a1",
+      "topic_text": "I can't believe I'm being called a potty mouth by a cannibal...",
+      "emotion": "Anger 50",
+      "response_text": "Okay, that's it. I warned you. Now I'm going to sock your jaw, mister.",
+      "index": "21"
+    },
+    {
+      "topic": "AndaleJackSmithGreetingBasement2a2",
+      "topic_text": "Seriously, you're talking about eating people, here. What's wrong with you?",
+      "emotion": "Neutral 50",
+      "response_text": "I don't think I like your tone. There's nothing wrong with me, we've lived this way for decades",
+      "index": "23"
+    },
+    {
+      "topic": "AndaleJackSmithGreetingBasement2b",
+      "topic_text": "Wait... are you saying you eat those people?",
+      "emotion": "Neutral 50",
+      "response_text": "I don't think I like your tone. There's nothing wrong with me, we've lived this way for decades",
+      "index": "26"
+    },
+    {
+      "topic": "AndaleJackSmithGreetingBasement2b1",
+      "topic_text": "Sure, Jack. No problem at all. I saw nothing.",
+      "emotion": "Happy 50",
+      "response_text": "Well, that's good to hear, friend! Very good to hear, indeed.",
+      "index": "30"
+    },
+    {
+      "topic": "AndaleJackSmithGreetingBasement2b2",
+      "topic_text": "No, Jack. You have to die. You and your sick little town.",
+      "emotion": "Anger 50",
+      "response_text": "Well, I guess we know where our next meal is coming from then, don't we?",
+      "index": "36"
+    },
+    {
+      "topic": "AndaleJackSmithGreetingBasement2c",
+      "topic_text": "Huh. Well, everyone's got to survive in their own way, I guess.",
+      "emotion": "Happy 50",
+      "response_text": "You see, now that's nice to hear. Every time someone discovers our little secret, it's always \"oh, you're terrible people\", or \"how can you do this?\"",
+      "index": "37"
+    },
+    {
+      "topic": "AndaleJackSmithGreetingBasement2c1",
+      "topic_text": "That's the way to be, together to the end.",
+      "emotion": "Neutral 50",
+      "response_text": "Indeed. To each their own, personal choice, it's the American way!",
+      "index": "40"
+    },
+    {
+      "topic": "AndaleJackSmithGreetingBasement2c2",
+      "topic_text": "Well, whatever works you you.",
+      "emotion": "Neutral 50",
+      "response_text": "Indeed. To each their own, personal choice, it's the American way!",
+      "index": "43"
+    },
+    {
+      "topic": "AndaleJackSmithGreetingBasement3",
+      "topic_text": "I would have grabbed myself a snack while I was in there, but that'd be rude.",
+      "emotion": "Surprise 50",
+      "response_text": "You're right, it sure would have. You know, you're a breath of fresh air. Every time someone discovers our little secret, we have to hear about it.",
+      "index": "46"
+    },
+    {
+      "topic": "AndaleJackSmithGreetingBasement4",
+      "topic_text": "Yes. I was in the shed.",
+      "emotion": "Neutral 50",
+      "response_text": "And did you see anything... unexpected there?",
+      "index": "62"
+    },
+    {
+      "topic": "AndaleJackSmithGreetingBasement4a",
+      "topic_text": "You know, now that you mention it, there were a bunch of bodies in there.",
+      "emotion": "Neutral 50",
+      "response_text": "And do you have any thoughts on that?",
+      "index": "64"
+    },
+    {
+      "topic": "AndaleJackSmithGreetingBasement4a1",
+      "topic_text": "No, not really. Everyone does what they have to.",
+      "emotion": "Surprise 50",
+      "response_text": "Well, that's good to hear, friend! Very good to hear, indeed.",
+      "index": "66"
+    },
+    {
+      "topic": "AndaleJackSmithGreetingBasement4a2",
+      "topic_text": "I think that you're a bunch of sick fucks and I'm getting out of here.",
+      "emotion": "Neutral 50",
+      "response_text": "I'm disappointed, friend. But that's your prerogative.",
+      "index": "72"
+    },
+    {
+      "topic": "AndaleJackSmithGreetingBasement4a3",
+      "topic_text": "Yes. You're going to die for what you've done, Jack.",
+      "emotion": "Neutral 50",
+      "response_text": "Too bad, stranger. I guess you'll just have to be our new meal!",
+      "index": "75"
+    },
+    {
+      "topic": "AndaleJackSmithGreetingBasement4c",
+      "topic_text": "Yes, I did. And you're going to die for it.",
+      "emotion": "Neutral 50",
+      "response_text": "Well that's a bit presumptuous, don't you think? To kill a man just for providing for his family? Everyone has to eat.",
+      "index": "76"
+    },
+    {
+      "topic": "AndaleJackSmithGreetingBasement4c1",
+      "topic_text": "Nah. It's not presumptuous at all. You have to go.",
+      "emotion": "Neutral 50",
+      "response_text": "Well then. I guess we can always stand to have some leftovers, can't we?",
+      "index": "77"
+    },
+    {
+      "topic": "AndaleJackSmithGreetingBasement4c2",
+      "topic_text": "Actually, I'll just leave you alone.",
+      "emotion": "Neutral 50",
+      "response_text": "Unfortunately, that's not an option. You see, you leave here and start warning people about the \"crazies\" in Andale.",
+      "index": "78"
+    },
+    {
+      "topic": "AndaleOldManHarrisTopic",
+      "topic_text": "What's wrong with that Harris guy?",
+      "emotion": "Neutral 50",
+      "response_text": "Oh, Old Man Harris? Don't mind him. He's gone, you know... a little soft in his later years. Ever since Gladys died, he just hasn't been the same.",
+      "index": "81"
+    },
+    {
+      "topic": "AndaleOldManHarrisTopicJack1",
+      "topic_text": "He said you were all crazy killers.",
+      "emotion": "Neutral 50",
+      "response_text": "Did he, now? I've talked to him before about spreading rumors. I guess I'll just have to have another little chat with him.",
+      "index": "82"
+    },
+    {
+      "topic": "AndaleOldManHarrisTopicJack2",
+      "topic_text": "Well, okay then. Nothing to worry about.",
+      "emotion": "Neutral 50",
+      "response_text": "Poor guy, it's so sad when senility sets in.",
+      "index": "84"
+    },
+    {
+      "topic": "AndaleSuspicousRelations",
+      "topic_text": "The families around here seem... umm... closer than most.",
+      "emotion": "Neutral 50",
+      "response_text": "Oh, we are. Absolutely. Family first, here in Andale.",
+      "index": "85"
+    },
+    {
+      "topic": "AndaleSuspicousRelationsJack1",
+      "topic_text": "No, I mean, really close.",
+      "emotion": "Neutral 50",
+      "response_text": "Oh, someone spilled our beans, didn't they? Well, Andale has been four families and only four families for a very long time.",
+      "index": "118"
+    },
+    {
+      "topic": "AndaleSuspicousRelationsJack1a",
+      "topic_text": "Doesn't that make you all cousins?",
+      "emotion": "Neutral 50",
+      "response_text": "I can't say that I know what you're talking about, but I sure as heck don't like your tone. You've got no business coming in here and judging us.",
+      "index": "87"
+    },
+    {
+      "topic": "AndaleSuspicousRelationsJack1b",
+      "topic_text": "Well... okay... whatever works for you.",
+      "emotion": "Anger 50",
+      "response_text": "Now, I know what you're thinking, and don't bother. We're perfectly happy good Christian people here, and we've been that way for 200 years.",
+      "index": "90"
+    },
+    {
+      "topic": "AndaleSuspicousRelationsJack2",
+      "topic_text": "I guess it's none of my business.",
+      "emotion": "Neutral 50",
+      "response_text": "Well, you know what they say about curiosity, cats, and killing. Just be careful where you stick your nose. We're private people.",
+      "index": "93"
+    },
+    {
+      "topic": "AndaleTownTopicTell me about Andale.",
+      "topic_text": "Tell me about this place.",
+      "emotion": "Neutral 50",
+      "response_text": "Andale: greatest place there is. We win town of the year every year, we've got no end of food, and no troubles at all.",
+      "index": "94"
+    },
+    {
+      "topic": "AndaleTownTopicOldManHarris",
+      "topic_text": "Old Man Harris doesn't seen very happy.",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah, well, he's hit it rough. Ever since his wife died, he just hasn't been enthusiastic about the Andale lifestyle anymore.",
+      "index": "96"
+    },
+    {
+      "topic": "AndaleWhatDoYouDo",
+      "topic_text": "What do you do around here?",
+      "emotion": "Happy 50",
+      "response_text": "I work to feed my family, just like every red-blooded American man should.",
+      "index": "98"
+    },
+    {
+      "topic": "AndalejackSmithGreeting1a",
+      "topic_text": "Well, okay then.",
+      "emotion": "Neutral 50",
+      "response_text": "Yessir, democracy is God's best gift, right after family, of course.",
+      "index": "100"
+    },
+    {
+      "topic": "AndalejackSmithGreeting1b",
+      "topic_text": "Ah, I get it! You're crazy.",
+      "emotion": "Happy 50",
+      "response_text": "No, sir. Not crazy, just a loyal American.{Very satisfied with himself.}",
+      "index": "101"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "Hey there, stranger. I've got something that I want to talk to you about.",
+      "index": "103"
+    },
+    {
+      "topic": "SpeechChallengeFailure",
+      "topic_text": "SpeechChallengeFailure",
+      "emotion": "Neutral 50",
+      "response_text": "I'm afraid that it just doesn't work that way.",
+      "index": "116"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "I have to go now.",
+      "emotion": "Neutral 50",
+      "response_text": "You should really stop by for dinner sometime.",
+      "index": "118"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Neutral 50",
+      "response_text": "Mmmm... dinner smells delicious, honey!",
+      "index": "121"
+    }
+  ],
+  "combat": []
+}

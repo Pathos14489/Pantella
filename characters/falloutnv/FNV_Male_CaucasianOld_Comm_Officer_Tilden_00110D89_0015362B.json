@@ -1,0 +1,130 @@
+{
+  "name": "Comm Officer Tilden",
+  "url": "/wiki/Tilden",
+  "dialogue_name": "RSBravoTilden.txt",
+  "dialogue_url": "/wiki/RSBravoTilden.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "00110D89",
+  "ref_id": "0015362B",
+  "editor_id": "RSBravoTilden",
+  "location": "Ranger Station Bravo",
+  "location_url": "/wiki/Ranger_Station_Bravo",
+  "descriptions": [
+    "Comm Officer Tilden is the communications officer of Ranger Station Bravo in 2281.",
+    "Not much is known about Tilden, except for the fact that he is an NCR Ranger and is the communications officer of Ranger Station Bravo. The Courier has no unique interactions with him other than during the quest Return to Sender in which he is the recipient of a radio security upgrade code.",
+    "Return to Sender: Tilden is one of the people the Courier can give the upgrade codes to."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "New California Republic Rangers",
+  "role": "Communications OfficerRanger",
+  "detailed_location": "Ranger Station Bravo",
+  "voice_actor": "Liam O'Brien",
+  "special": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 5,
+    "Intelligence": 5,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "level": "5",
+  "tag_skills": [
+    {
+      "Explosives:": "46"
+    },
+    {
+      "Guns:": "46"
+    },
+    {
+      "Melee Weap.:": "46"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Neutral",
+  "voice_type": "MaleAdult05",
+  "geck_race": "CaucasianOld",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "{Player in NCR gear}I don't know what you did to pull runner duty to a post this far out in the wasteland, but you have my sympathies.",
+      "index": "1"
+    },
+    {
+      "topic": "VMSRSBravoQuestRSBravoTildenTopic000",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Careful out there.",
+      "index": "4"
+    },
+    {
+      "topic": "VMSRSBravoQuestRSBravoTildenTopic001",
+      "topic_text": "Let's talk about something else.",
+      "emotion": "Neutral 50",
+      "response_text": "All right.",
+      "index": "5"
+    },
+    {
+      "topic": "VMSRSBravoQuestRSBravoTildenTopic002",
+      "topic_text": "Why don't you use your radio to fix your supply situation?",
+      "emotion": "Neutral 50",
+      "response_text": "You think I haven't tried? Every time I do, Camp Golf acknowledges the situation. And soon after that, more ammo.",
+      "index": "6"
+    },
+    {
+      "topic": "VMSRSBravoQuestRSBravoTildenTopic003",
+      "topic_text": "How are your water supplies right now?",
+      "emotion": "Neutral 50",
+      "response_text": "We're not going to die of thirst any time soon, but I'd rather have too much than not enough.",
+      "index": "7"
+    },
+    {
+      "topic": "VMSRSBravoQuestRSBravoTildenTopic004",
+      "topic_text": "Since you have extra, could I have some of that ammo?",
+      "emotion": "Neutral 50",
+      "response_text": "Eh, it's not my call to make. You'd have to clear it with Ranger Ericsen.",
+      "index": "8"
+    },
+    {
+      "topic": "VMSRSBravoQuestRSCommRangerBravoTopic000",
+      "topic_text": "Sergeant Reyes sent me here. I've got a security update for your radio.",
+      "emotion": "Neutral 50",
+      "response_text": "No problem. Hey, do me a favor when you get back to Reyes and tell her that we don't need any more damn ammo. Wouldn't mind more water, though.",
+      "index": "9"
+    },
+    {
+      "topic": "VMSRSBravoQuestRSCommRangerBravoTopic001",
+      "topic_text": "What do you do out here?",
+      "emotion": "Neutral 50",
+      "response_text": "This is the frontier of NCR territory, and we're the first line of defense. You won't find much in the way of civilization east of here.",
+      "index": "10"
+    },
+    {
+      "topic": "vDialogueRangerStationBravoRSBravoTildenTopic000",
+      "topic_text": "What was that about the surplus ammo?",
+      "emotion": "Neutral 50",
+      "response_text": "We keep getting deliveries of ammunition for some reason. I don't mind target practice, but there isn't all that much to shoot at out here.",
+      "index": "12"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Careful out there.",
+      "index": "13"
+    }
+  ],
+  "combat": []
+}

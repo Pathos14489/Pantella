@@ -1,0 +1,85 @@
+{
+  "name": "Freddie Gomez",
+  "url": "/wiki/Freddie_Gomez",
+  "dialogue_name": "CG03FreddieGomez.txt",
+  "dialogue_url": "/wiki/CG03FreddieGomez.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "0004E896",
+  "ref_id": "0002907C",
+  "editor_id": "CG03FreddieGomez",
+  "location": "Vault 101",
+  "location_url": null,
+  "descriptions": [
+    "Freddie Gomez is a resident of Vault 101 in 2277.",
+    "Freddie is an aspiring Tunnel Snake, and his associations with Butch and the Tunnel Snakes have caused his grades to drop and sends his parents into fits of worry. In truth, Freddie just enjoys the approval he gets from Butch and the other Tunnel Snakes when he misbehaves.",
+    "In the 2260s, Freddie is ridiculed by some of his peers. He is nicknamed 'Freddie the Freak' and is compared unfavorably to the comic book character Grognak the Barbarian.",
+    "In the early 2270s, Freddie is diagnosed with Vault depressive syndrome, or VDS, by the vault physician James. According to his medical file, Freddie suffers from lethargy, anxiety, and low self-esteem. Freddie copes with his insecurities and low self-esteem by acting out as a bully with his peers. James prescribes chlorpromazine for Freddie; however, James is worried that his patient might be permanently dependent on the medication.",
+    "On August 3, 2274, Mr. Gomez engages in small talk with Susie Mack. They talk about her family's malfunctioning heater and agree to meet at the cafeteria after the G.O.A.T. for lunch. Before the G.O.A.T., Freddie is nervous. After Edwin Brotch orders pencils down and everyone else has left, Freddie is struggling with two questions on the test. Question #5 has him hanging on a moral quandary - should he obey his grandmother and kill the other resident, or should he disobey his grandmother since killing is wrong? The other question, Question #10, baffles him as the answers are all the same and he is not sure if this is a trick question."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Vault 101Tunnel Snakes",
+  "role": "Tunnel Snake",
+  "detailed_location": "Vault 101",
+  "voice_actor": "Craig Sechler",
+  "special": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 5,
+    "Intelligence": 5,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "misc_skills": [],
+  "karma": "Good",
+  "voice_type": "MaleAdult04DC",
+  "geck_race": "Hispanic",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Fear 25",
+      "response_text": "Hey, what did you put for #10?Play soundFO3 FreddieGomez HeyWhatDid.ogghttps://fallout.fandom.com/wiki/File:FO3_FreddieGomez_HeyWhatDid.oggnoicon",
+      "index": "1"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "CG03FreddieBrotchConv",
+      "topic_text": "CG03FreddieBrotchConv",
+      "emotion": "Anger 50",
+      "response_text": "Mr. Brotch, come on! I gotta meet my friends!Play soundFO3 FreddieGomez MeetMyFriends.ogghttps://fallout.fandom.com/wiki/File:FO3_FreddieGomez_MeetMyFriends.oggnoicon",
+      "index": "7"
+    },
+    {
+      "topic": "CG03FreddieSusieConv",
+      "topic_text": "CG03FreddieSusieConv",
+      "emotion": "Happy 50",
+      "response_text": "You too.Play soundFO3 FreddieGomez YouToo.ogghttps://fallout.fandom.com/wiki/File:FO3_FreddieGomez_YouToo.oggnoicon",
+      "index": "8"
+    },
+    {
+      "topic": "CG03TurnInTestTopic",
+      "topic_text": "CG03TurnInTestTopic",
+      "emotion": "Fear 75",
+      "response_text": "Gimme one more second!{panicking ... he can't finish the GOAT}Play soundFo3_FreddieGomez_OneMoreSecond.ogghttps://fallout.fandom.com/wiki/File:Fo3_FreddieGomez_OneMoreSecond.oggnoicon",
+      "index": "13"
+    },
+    {
+      "topic": "GOODBYE",
+      "topic_text": "I have to go now.",
+      "emotion": "Disgust 50",
+      "response_text": "Whatever you say, Mr. Brotch.Play soundFO3 FreddieGomez WhateverYouSay.ogghttps://fallout.fandom.com/wiki/File:FO3_FreddieGomez_WhateverYouSay.oggnoicon",
+      "index": "16"
+    }
+  ],
+  "combat": []
+}

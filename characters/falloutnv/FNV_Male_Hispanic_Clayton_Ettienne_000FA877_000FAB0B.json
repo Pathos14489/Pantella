@@ -1,0 +1,168 @@
+{
+  "name": "Clayton Ettienne",
+  "url": "/wiki/Clayton_Ettienne",
+  "dialogue_name": "WestsideEttienne.txt",
+  "dialogue_url": "/wiki/WestsideEttienne.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": true,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000FA877",
+  "ref_id": "000FAB0B",
+  "editor_id": "WestsideEttienne",
+  "location": "Westside Co-op",
+  "location_url": "/wiki/Westside_Co-op",
+  "descriptions": [
+    "Clayton Ettienne is the co-owner of the Westside Cooperative in 2281.",
+    "Clayton was born in New Reno and witnessed the fall of the Mordinos to the Wrights. The constant bickering and fighting between the families only got worse when the Van Graffs expanded into New Reno, seeking to develop their mercantile empire. Rather than wait to become just another casualty in the struggle for power, he left the town and migrated east, to the Mojave Wasteland.",
+    "He eventually wound up in Westside. Together with Tom Anderson, from the Followers of the Apocalypse, he kickstarted the community's agriculture, aiming for a decentralized, distributed farming model. The efforts were a success, establishing its self-reliance in terms of the food supply. After a few years, the output grew to the point that it created a stable trade surplus. Both helped keep the community independent from the NCR,",
+    "The White Wash: The Courier can keep Westside's secret, and blackmail Ettienne into sharing the co-op's profits. He will then periodically pay 200 bottle caps in exchange for keeping the secret safe."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Westside Cooperative",
+  "role": "Westside Co-opstore manager and co-owner",
+  "detailed_location": "Westside Co-op,Westside",
+  "voice_actor": "Jesse Burch",
+  "special": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 6,
+    "Charisma": 7,
+    "Intelligence": 7,
+    "Agility": 4,
+    "Luck": 5
+  },
+  "mod_special_values": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 7,
+    "Charisma": 7,
+    "Intelligence": 7,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "level": "5",
+  "misc_skills": [
+    {
+      "Hit Points:": "95(100)"
+    }
+  ],
+  "karma": "Good",
+  "voice_type": "MaleAdult03",
+  "geck_race": "Hispanic",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "Hi there. Welcome to the Westside Co-op. I'm Clayton Ettienne. Let me know if you have any questions.",
+      "index": "1"
+    },
+    {
+      "topic": "vDialogueWestside1EEttienneTopic000",
+      "topic_text": "Tell me about the co-op.",
+      "emotion": "Neutral 50",
+      "response_text": "It might not look like much, but it's what keeps us Westside locals independent.",
+      "index": "4"
+    },
+    {
+      "topic": "vDialogueWestside1EEttienneTopic001",
+      "topic_text": "Show me what you have for sale.",
+      "emotion": "Neutral 50",
+      "response_text": "All right.",
+      "index": "7"
+    },
+    {
+      "topic": "vDialogueWestside1EEttienneTopic002",
+      "topic_text": "Goodbye",
+      "emotion": "Neutral 50",
+      "response_text": "See you later.",
+      "index": "8"
+    },
+    {
+      "topic": "vDialogueWestside1EEttienneTopic003",
+      "topic_text": "I'm here to talk to you about our new \"business\" arrangement.",
+      "emotion": "Neutral 50",
+      "response_text": "Oh... that. Yes. Anderson filled me in on the details. Just let me know when you'd like your... order to be filled.",
+      "index": "9"
+    },
+    {
+      "topic": "vDialogueWestside1EEttienneTopic004",
+      "topic_text": "I'm here for my \"special\" order.",
+      "emotion": "Sad 20",
+      "response_text": "{sighing}Yes, it just came in. Here's all of it.",
+      "index": "10"
+    },
+    {
+      "topic": "vDialogueWestside1EEttienneTopic005",
+      "topic_text": "What's your story?",
+      "emotion": "Neutral 50",
+      "response_text": "Well, I've lived in Nevada all my life. Started out in New Reno, but headed down here as soon as I got the chance.",
+      "index": "12"
+    },
+    {
+      "topic": "vDialogueWestside1EEttienneTopic006",
+      "topic_text": "I know how the Westside farmers have been getting their water.",
+      "emotion": "Neutral 50",
+      "response_text": "Uh... okay, look... first, I didn't have anything to do with that trooper. That was all Anderson.",
+      "index": "15"
+    },
+    {
+      "topic": "vDialogueWestside1EEttienneTopic007",
+      "topic_text": "Whose idea was it to use the kid?",
+      "emotion": "Neutral 50",
+      "response_text": "It was Hector's idea, if you can believe it. He overheard me talking to Anderson about his idea to divert the water over here.",
+      "index": "17"
+    },
+    {
+      "topic": "vDialogueWestside1EEttienneTopic008",
+      "topic_text": "What went down with Anderson and Corporal White?",
+      "emotion": "Neutral 50",
+      "response_text": "Pretty much what you'd expect. White talked to Hector and then went to talk to Anderson.",
+      "index": "21"
+    },
+    {
+      "topic": "vDialogueWestside1EEttienneTopic009",
+      "topic_text": "I'm leaving.",
+      "emotion": "Neutral 50",
+      "response_text": "Wait... what are you going to do?",
+      "index": "24"
+    },
+    {
+      "topic": "vDialogueWestside1EEttienneTopic010",
+      "topic_text": "I'm going to have a chat with Anderson. Don't worry.",
+      "emotion": "Neutral 50",
+      "response_text": "You're the one who should be worried. Good luck.",
+      "index": "25"
+    },
+    {
+      "topic": "vDialogueWestside1EEttienneTopic011",
+      "topic_text": "[Say nothing.]",
+      "emotion": "Neutral 50",
+      "response_text": "Please, just... don't let them shut down the co-op.",
+      "index": "26"
+    },
+    {
+      "topic": "vDialogueWestside1EEttienneTopic012",
+      "topic_text": "Hope you're not too attached to this place.",
+      "emotion": "Neutral 50",
+      "response_text": "Fuck!",
+      "index": "27"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "See you later.",
+      "index": "28"
+    }
+  ],
+  "combat": []
+}

@@ -1,0 +1,109 @@
+{
+  "name": "Mister Holdout",
+  "url": "/wiki/Mister_Holdout",
+  "dialogue_name": "VStreetMrHoldout.txt",
+  "dialogue_url": "/wiki/VStreetMrHoldout.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": true,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "0014EFB2",
+  "ref_id": "001522D0",
+  "editor_id": "VStreetMrHoldout",
+  "location": "OutsideGomorrah",
+  "location_url": "/wiki/Gomorrah",
+  "descriptions": [
+    "Mister Holdout is a shady arms dealer living on the New Vegas Strip in Fallout: New Vegas.",
+    "Mister Holdout is willing to sell holdout weapons to people looking to get into casinos on the New Vegas Strip. He bills his wares as \"insurance,\" as the casino securities refuse to allow weapons on their premises.",
+    "Mister Holdout always stands outside the Gomorrah casino and will hail the Courier when they first pass him.",
+    "Holdout is a term for concealing and hiding cards on one's body. Additionally, a holdout gun is another name used to refer to a pocket-pistol or derringer: handguns of very small size and caliber, making them easy to conceal, and meant to be used in emergencies or situations where conventional weapons are inaccessible."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "New Vegas Strip",
+  "role": "Weapons dealer",
+  "detailed_location": "NearGomorrah",
+  "voice_actor": "Gregory Alan Williams",
+  "special": {
+    "Strength": 4,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 7,
+    "Intelligence": 5,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "level": "5",
+  "tag_skills": [
+    {
+      "Barter:": "50"
+    },
+    {
+      "Energy Weap.:": "45"
+    },
+    {
+      "Guns:": "48"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Neutral",
+  "voice_type": "MaleAdult06",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "Hey, there, friend, a bit of advice - you look like you could use some *protection.*{Beat, downnote, conspiratiorial}Lucky for you, I got what you need.{Moseys on up}",
+      "index": "1"
+    },
+    {
+      "topic": "vDialogueTheStripVStreetMrHoldoutTopic000",
+      "topic_text": "Easy to hide weapons?",
+      "emotion": "Neutral 50",
+      "response_text": "Things guards can't spot when they're patting you down or checking for iron at your hip.",
+      "index": "7"
+    },
+    {
+      "topic": "vDialogueTheStripVStreetMrHoldoutTopic001",
+      "topic_text": "Why would I need to hide a weapon on me?",
+      "emotion": "Neutral 50",
+      "response_text": "Simple - you can't bring guns into the casino, that's why. They'll strip you to your fists.",
+      "index": "8"
+    },
+    {
+      "topic": "vDialogueTheStripVStreetMrHoldoutTopic002",
+      "topic_text": "Let's see what you have.",
+      "emotion": "Neutral 50",
+      "response_text": "Take a look at these beauties.",
+      "index": "10"
+    },
+    {
+      "topic": "vDialogueTheStripVStreetMrHoldoutTopic003",
+      "topic_text": "Not interested. Maybe some other time.",
+      "emotion": "Neutral 50",
+      "response_text": "{Once only, good bye, \"fuck off,\" shrugs}Suit yourself, it's not my fault if they find your body dumped in Freeside.",
+      "index": "16"
+    },
+    {
+      "topic": "vDialogueTheStripVStreetMrHoldoutTopic004",
+      "topic_text": "I can get weapons past the guards, no problem.",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED]{Sizing the player up, nods}You might - one fellow I knew was able to slip a pistol past the guards. You?{Sizes up, impressed}I'm guessing you could get a machine gun by them.",
+      "index": "21"
+    },
+    {
+      "topic": "vDialogueTheStripVStreetMrHoldoutTopic005",
+      "topic_text": "Hmmm... think I could I slip bigger weapons past the guards?",
+      "emotion": "Neutral 50",
+      "response_text": "[FAILED]{Dubious}An experienced smuggler could get a machine gun or pistol in - you? You're welcome to try.",
+      "index": "22"
+    }
+  ],
+  "conversation": [],
+  "combat": []
+}

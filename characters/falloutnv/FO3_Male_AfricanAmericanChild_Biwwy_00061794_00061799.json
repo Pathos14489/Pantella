@@ -1,0 +1,198 @@
+{
+  "name": "Biwwy",
+  "url": "/wiki/Biwwy",
+  "dialogue_name": "Biwwy.txt",
+  "dialogue_url": "/wiki/Biwwy.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": true,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "00061794",
+  "ref_id": "00061799",
+  "editor_id": "Biwwy",
+  "location": "Little Lamplight",
+  "location_url": "/wiki/Little_Lamplight",
+  "descriptions": [
+    "Billy \"Biwwy\" is a nine-year-old child in Little Lamplight in Fallout 3.",
+    "Biwwy is a nine-year-old inhabitant of Little Lamplight, recently kicked off the scavenging team due to his speech impediment annoying the other children to a point where they no longer wished to listen to him.",
+    "Biwwy doesn't seem to have any friends, as everyone finds him annoying, possibly because of his speech impediment and apparent hyperactive nature.",
+    "Biwwy (or Billy) wields a unique laser rifle called the \"Wazer Wifle\" which can be bought from him for 500 caps or 250 with sufficient points in the Barter skill. If one has the Child at Heart perk, the Wazer Wifle can be obtained for free."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Little Lamplight",
+  "role": "Scavenger",
+  "detailed_location": "Little Lamplight",
+  "voice_actor": "Sean McCoy",
+  "special": {
+    "Strength": 3,
+    "Perception": 4,
+    "Endurance": 3,
+    "Charisma": 3,
+    "Intelligence": 3,
+    "Agility": 5,
+    "Luck": 4
+  },
+  "level": "1",
+  "tag_skills": [
+    {
+      "Lockpick:": "27"
+    },
+    {
+      "Sneak:": "29"
+    }
+  ],
+  "karma": "Good",
+  "voice_type": "MaleUniqueBiwwy",
+  "geck_race": "AfricanAmericanChild",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Happy 10",
+      "response_text": "Hewwo, I'm Biwwy. Wewcome to Wittwe Wampwight!{Spoken with the annoying little kid lisp (pronouncing \"L\" and \"R\" as \"W\")}",
+      "index": "1"
+    },
+    {
+      "topic": "LLBiwwyScavTeam",
+      "topic_text": "Why aren't you on the scav team anymore?",
+      "emotion": "Sad 10",
+      "response_text": "I dunno. Evewyone just said they didn't want to keep wistening to me.{Spoken with the annoying little kid lisp (pronouncing \"L\" and \"R\" as \"W\")}",
+      "index": "6"
+    },
+    {
+      "topic": "LLNicknames",
+      "topic_text": "Maybe I'll regret this, but how did you get your nickname, Biwwy?",
+      "emotion": "Surprise 10",
+      "response_text": "Nickname? What awe you tawking about?{Spoken with the annoying little kid lisp (pronouncing \"L\" and \"R\" as \"W\")}",
+      "index": "7"
+    },
+    {
+      "topic": "LLWazerWifleOffer1",
+      "topic_text": "You said you were selling your \"Wazer Wifle\"?",
+      "emotion": "Happy 25",
+      "response_text": "I suwe did! Five hundwed caps, and this Wazer Wifle's aww youws!{Spoken with the annoying little kid lisp (pronouncing \"L\" and \"R\" as \"W\")}",
+      "index": "8"
+    },
+    {
+      "topic": "LLWazerWifleOffer2A",
+      "topic_text": "How about giving it to a fewwow kid like me?",
+      "emotion": "Happy 50",
+      "response_text": "That's a gweat idea! You take it, and good wuck out thewe!{Spoken with the annoying little kid lisp (pronouncing \"L\" and \"R\" as \"W\")}",
+      "index": "9"
+    },
+    {
+      "topic": "LLWazerWifleOffer2B",
+      "topic_text": "Five hundred for a kid's toy? No way.",
+      "emotion": "Sad 25",
+      "response_text": "Okay, it's youw woss!{Spoken with the annoying little kid lisp (pronouncing \"L\" and \"R\" as \"W\")}",
+      "index": "13"
+    },
+    {
+      "topic": "LLWazerWifleOffer2C",
+      "topic_text": "Stop talking like that. No one thinks it's cute.",
+      "emotion": "Sad 25",
+      "response_text": "Tawking wike what? You'we weiwd.{Spoken with the annoying little kid lisp (pronouncing \"L\" and \"R\" as \"W\")}",
+      "index": "14"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "I have to go now.",
+      "emotion": "Happy 25",
+      "response_text": "Bye-bye!{Spoken with annoying little kid lisp (\"L\" pronounced as \"W\")}",
+      "index": "15"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Anger 50",
+      "response_text": "Watch out, jewk!",
+      "index": "16"
+    },
+    {
+      "topic": "LLKnockTales1",
+      "topic_text": "LLKnockTales1",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah!{Spoken with annoying little kid lisp (\"L\" pronounced as \"W\")}",
+      "index": "18"
+    },
+    {
+      "topic": "LLKnockTales5",
+      "topic_text": "LLKnockTales5",
+      "emotion": "Surprise 50",
+      "response_text": "Yowza!{Spoken with annoying little kid lisp (\"L\" pronounced as \"W\")}",
+      "index": "19"
+    },
+    {
+      "topic": "LLPrincessBullyResponse",
+      "topic_text": "LLPrincessBullyResponse",
+      "emotion": "Fear 50",
+      "response_text": "Whoops, didn't mean to bug you, Miss Pwincess. Sowwy.{Spoken with annoying little kid lisp (\"L\" pronounced as \"W\")}",
+      "index": "20"
+    },
+    {
+      "topic": "LLRandomConv1",
+      "topic_text": "LLConversation1",
+      "emotion": "Happy 25",
+      "response_text": "Hewwo. How're you?{Spoken with annoying little kid lisp (\"L\" pronounced as \"W\")}",
+      "index": "21"
+    },
+    {
+      "topic": "LLRandomConv2",
+      "topic_text": "LLConversation2",
+      "emotion": "Happy 25",
+      "response_text": "I'm okay!{Spoken with annoying little kid lisp (\"L\" pronounced as \"W\")}",
+      "index": "22"
+    },
+    {
+      "topic": "LLRandomConvEnding",
+      "topic_text": "LLRandomConvEnding",
+      "emotion": "Neutral 50",
+      "response_text": "'Kay, bye.",
+      "index": "23"
+    },
+    {
+      "topic": "LLWhatsUp1",
+      "topic_text": "LLWhatsUp1",
+      "emotion": "Happy 25",
+      "response_text": "Hewwo. What's up?{Spoken with annoying little kid lisp (\"L\" pronounced as \"W\")}",
+      "index": "24"
+    },
+    {
+      "topic": "LLWhatsUp2",
+      "topic_text": "LLWhatsUp2",
+      "emotion": "Happy 25",
+      "response_text": "Evewything's a-okay!{Spoken with annoying little kid lisp (\"L\" pronounced as \"W\")}",
+      "index": "25"
+    }
+  ],
+  "combat": [
+    {
+      "topic": "Flee",
+      "topic_text": "Flee",
+      "emotion": "Neutral 50",
+      "response_text": "Hewp!{yelling in fear as you run for your lifeAnnoying childish lisp: \"L\"s and \"R\"s become \"W\"s.}",
+      "index": "26"
+    },
+    {
+      "topic": "Murder",
+      "topic_text": "Murder",
+      "emotion": "Anger 50",
+      "response_text": "You'we gonna pay for that!{Annoying childish lisp: \"L\"s and \"R\"s become \"W\"s.}",
+      "index": "27"
+    },
+    {
+      "topic": "Steal",
+      "topic_text": "Steal",
+      "emotion": "Neutral 50",
+      "response_text": "That doesn't bewong to you!{Annoying childish lisp: \"L\"s and \"R\"s become \"W\"s.}",
+      "index": "28"
+    }
+  ]
+}

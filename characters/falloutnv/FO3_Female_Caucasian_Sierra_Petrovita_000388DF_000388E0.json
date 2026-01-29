@@ -1,0 +1,675 @@
+{
+  "name": "Sierra Petrovita",
+  "url": "/wiki/Sierra_Petrovita",
+  "dialogue_name": "SierraPetrovita.txt",
+  "dialogue_url": "/wiki/SierraPetrovita.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000388DF",
+  "ref_id": "000388E0",
+  "editor_id": "SierraPetrovita",
+  "location": "Sierra Petrovita's home",
+  "location_url": "/wiki/Sierra_Petrovita%27s_home",
+  "descriptions": [
+    "Sierra Petrovita is a Nuka-Cola obsessive who lives in Girdershade in Fallout 3. Ten years later, she can be found at the Nuka-World amusement park near the Commonwealth, encountered in the Fallout 4 add-on Nuka-World.",
+    "One of only two residents of the overpass-hidden settlement named Girdershade, Sierra Petrovita is known for her hyperfixation on Nuka-Cola Corporation products, which began when her lips first touched a bottle of Nuka-Cola.",
+    "Orphaned at some point in her youth,",
+    "In 2267, Sierra funded the Nuka-Cola fan club,",
+    "Sierra is blissfully unaware of Ronald's true motives behind aiding her collection. The thirty-three year old widower, arriving in Girdershade after wandering the wasteland in wake of his wife's death, desires to have a more intimate relationship with her, though his advances and remarks towards her have been met with stonewall naiveté and obliviousness.",
+    "Ronald's continued interest in pursuing Sierra would prove to work out in her favor, for his presence at Girdershade, coupled with the settlement's relatively hidden location,",
+    "By 2287, Sierra had temporarily ventured out from her home in Girdershade to fulfill a lifelong dream of hers: visiting the Nuka-World amusement park in Bradberton, Massachusetts, west of Boston.",
+    "Though Sierra was specifically instructed by the raiders to stay in the Nuka-Town market,",
+    "Sierra has a habit of cheerfully 'infodumping' large swaths of her knowledge about Nuka-Cola onto other parties,",
+    "Though Sierra understands the dangers of the wasteland, enough to warn the Lone Wanderer about the raiders at Evergreen Mills,",
+    "Sierra also displays difficulties with empathy and understanding the feelings of others. Upon meeting her idol John-Caleb Bradberton, she shows little regard for his current predicament, that being a disembodied head in a glass container kept alive for 210 years. When Bradberton asks the Sole Survivor to shut off his life support, Sierra severely underestimates his suffering, choosing to offer him company rather than respect his dying wishes.",
+    "In the process of collecting Nuka-Cola merchandise and any reading materials related to the drink—a pursuit she has happily spent years on—Sierra has amassed encyclopedic knowledge of the Nuka-Cola corporation and its history.",
+    "This knowledge extends to the specifics of the beverage itself. She is aware of the soda's ingredients, though not its exact formula, as well as the fact that the Great Passion Fruit Famine of 2044 affected its taste in a way that was noticed by the general public.",
+    "In 2287, she showcases deep-rooted knowledge for the various establishments and attractions located in Nuka-Town USA at Nuka-World, fancying herself as \"one of the foremost authorities\" of the amusement park.",
+    "In Fallout 3, Sierra stays in her house, drinking Nuka-Cola. In the Fallout 4 add-on Nuka-World, she can be found near Bradberton's office in Nuka-Town USA.",
+    "Fallout 3",
+    "Nuka-World",
+    "Fallout 3",
+    "Nuka-World",
+    "Sierra Petrovita appears in Fallout 3, the Fallout 4 add-on Nuka-World, Fallout Shelter, and Fallout: Wasteland Warfare."
+  ],
+  "race": "Human",
+  "gender": "Female",
+  "affiliation": "GirdershadeNuka-Cola fan club",
+  "role": "Nuka-Colacollector",
+  "detailed_location": "Sierra Petrovita's home,GirdershadeNuka-Town USA",
+  "voice_actor": "Jan Johns",
+  "special": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 4,
+    "Intelligence": 4,
+    "Agility": 6,
+    "Luck": 4
+  },
+  "mod_special_values": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 4,
+    "Intelligence": 4,
+    "Agility": 7,
+    "Luck": 4
+  },
+  "level": "41",
+  "tag_skills": [
+    {
+      "Barter:": "41"
+    },
+    {
+      "Small Guns:": "45(47)"
+    },
+    {
+      "Unarmed:": "41(43)"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "40(45)"
+    },
+    {
+      "Critical Chance:": "4%"
+    },
+    {
+      "Unarmed Dam.:": "2.55"
+    },
+    {
+      "Poison Resist.:": "15%(20%)"
+    },
+    {
+      "Rad. Resist.:": "6%(8%)"
+    },
+    {
+      "Carry Weight:": "210"
+    },
+    {
+      "Damage Res.:": "2%"
+    }
+  ],
+  "karma": "Good",
+  "voice_type": "FemaleAdult04DLC04NPCFSierraPetrovita",
+  "geck_race": "Caucasian",
+  "topics": [],
+  "conversation": [
+    {
+      "topic": "DialogGirdershadeTLGrady",
+      "topic_text": "Do you know someone named Grady?",
+      "emotion": "Happy 70",
+      "response_text": "Nope! Sorry!",
+      "index": "1"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Sad 80",
+      "response_text": "What do you want now? Come to make fun of me again?",
+      "index": "2"
+    },
+    {
+      "topic": "MS05Bailout",
+      "topic_text": "Let me ask you about something else.",
+      "emotion": "Happy 70",
+      "response_text": "Okay! Shoot!",
+      "index": "23"
+    },
+    {
+      "topic": "MS05FinTLLocalSights",
+      "topic_text": "Is there anything else interesting to see near Girdershade?",
+      "emotion": "Fear 50",
+      "response_text": "Well, to the east there are some nasty Raiders in Evergreen Mills. I'd stay away from there if I were you.",
+      "index": "24"
+    },
+    {
+      "topic": "MS05FinTLNukaCocktailsWhat can you tell me about Nuka-Cola Cocktails?",
+      "topic_text": "Tell me more about the Nuka Grenade.",
+      "emotion": "Neutral 50",
+      "response_text": "I don't know a whole lot about weapons, but I do know that it's more powerful than the Molotov Cocktail.",
+      "index": "26"
+    },
+    {
+      "topic": "MS05FinTLNukaCola",
+      "topic_text": "I have some more Quantum for you.",
+      "emotion": "Happy 50",
+      "response_text": "You do! You darling!",
+      "index": "28"
+    },
+    {
+      "topic": "MS05FinTLNukaColaDeal01",
+      "topic_text": "Can't you see, Sierra? He just wants to sleep with you.",
+      "emotion": "Surprise 50",
+      "response_text": "A sleepover? Awesome! We could tell bedtime stories and do each other's hair and all sorts of fun stuff.",
+      "index": "36"
+    },
+    {
+      "topic": "MS05FinTLNukaColaDeal02",
+      "topic_text": "You bitch! That was supposed to be for me!",
+      "emotion": "Surprise 50",
+      "response_text": "You can't expect me to get married without a gift for my future husband do you? That wouldn't be right.",
+      "index": "38"
+    },
+    {
+      "topic": "MS05FinTLNukaColaDeal03",
+      "topic_text": "Whatever.",
+      "emotion": "Neutral 50",
+      "response_text": "Okay, well don't forget I'll still buy bottles of Quantum from you!",
+      "index": "40"
+    },
+    {
+      "topic": "MS05FinTLNukaColaHappenedDeal",
+      "topic_text": "What happened to our deal, Sierra?",
+      "emotion": "Neutral 50",
+      "response_text": "Ohhhh... Ronald is SUCH a sweetheart! Do you know he went out like you did and found me 30 bottles of Quantum?",
+      "index": "41"
+    },
+    {
+      "topic": "MS05FinTLNukaCook",
+      "topic_text": "What kind of recipes can you make with Nuka-Cola Quantum?",
+      "emotion": "Happy 50",
+      "response_text": "Well, the stuff is so rare, I only know one. It's called Mississippi Quantum Pie. It's delicious!",
+      "index": "44"
+    },
+    {
+      "topic": "MS05FinTLRonaldBother",
+      "topic_text": "Has Ronald been bothering you?",
+      "emotion": "Happy 50",
+      "response_text": "Oh no, not at all. In fact, I've been getting lots of nice attention from him lately!",
+      "index": "55"
+    },
+    {
+      "topic": "MS05SierraAngerFixed01",
+      "topic_text": "Yeah. I'm sorry, Sierra. Here's a Nuka-Cola Quantum for you!",
+      "emotion": "Surprise 100",
+      "response_text": "Oh my gosh! Oh my gosh! A real Quantum! Yummie yum yum!",
+      "index": "61"
+    },
+    {
+      "topic": "MS05SierraAngerFixed02",
+      "topic_text": "Here, maybe this will shut you up. <Give a Nuka-Cola Quantum.>",
+      "emotion": "Surprise 100",
+      "response_text": "Oh my gosh! Oh my gosh! A real Quantum! Yummie yum yum!",
+      "index": "64"
+    },
+    {
+      "topic": "MS05SierraAngerFixed03",
+      "topic_text": "I don't know, maybe.",
+      "emotion": "Sad 70",
+      "response_text": "Well fine! Go away then!",
+      "index": "67"
+    },
+    {
+      "topic": "MS05SierraAngerTrack01",
+      "topic_text": "Okay, I'm sorry. I don't know what came over me.",
+      "emotion": "Happy 50",
+      "response_text": "That's fine. We all get a bit crazy sometimes when we get that taste... the taste of a cold Nuka-Cola!",
+      "index": "68"
+    },
+    {
+      "topic": "MS05SierraAngerTrack02",
+      "topic_text": "You don't like it? Tough!",
+      "emotion": "Anger 50",
+      "response_text": "Humph! Well. I've never been so insulted before!",
+      "index": "71"
+    },
+    {
+      "topic": "MS05SierraCT01",
+      "topic_text": "Nuka-Cola collection? Wow!",
+      "emotion": "Happy 50",
+      "response_text": "I have one of the... no, THE best Nuka-Cola collection in the Capital Wasteland.",
+      "index": "73"
+    },
+    {
+      "topic": "MS05SierraCT02",
+      "topic_text": "Yes, of course!",
+      "emotion": "Happy 50",
+      "response_text": "Well, come on then! Let me show you around! But no free Nuka-Cola until the end of the tour!",
+      "index": "75"
+    },
+    {
+      "topic": "MS05SierraCT03",
+      "topic_text": "Nope. I'm not really interested in seeing your collection.",
+      "emotion": "Surprise 50",
+      "response_text": "Oh! Really? Wow.",
+      "index": "76"
+    },
+    {
+      "topic": "MS05SierraCT03a",
+      "topic_text": "I think I'd rather be smacked in the head with a blunt instrument.",
+      "emotion": "Surprise 80",
+      "response_text": "What an odd way to make music, I'll have to try it sometime!",
+      "index": "78"
+    },
+    {
+      "topic": "MS05SierraCT04",
+      "topic_text": "Ugh! I hate Nuka-Cola. That stuff is disgusting.",
+      "emotion": "Surprise 50",
+      "response_text": "Disgusting?!",
+      "index": "80"
+    },
+    {
+      "topic": "MS05SierraCT05",
+      "topic_text": "There's a Nuka-Cola Fan Club?",
+      "emotion": "Neutral 50",
+      "response_text": "Yep, I'm the President, the Recording Secretary and the Treasurer.",
+      "index": "83"
+    },
+    {
+      "topic": "MS05SierraCT06",
+      "topic_text": "What kind of stuff do you collect, exactly?",
+      "emotion": "Neutral 50",
+      "response_text": "Well, look around you! Toys, banners, stools... anything I can get my hands on really.",
+      "index": "86"
+    },
+    {
+      "topic": "MS05SierraCT07",
+      "topic_text": "Wait a minute. How many members are in your club?",
+      "emotion": "Sad 50",
+      "response_text": "Well... only two right now. Me and Ronald.",
+      "index": "89"
+    },
+    {
+      "topic": "MS05SierraCT07a",
+      "topic_text": "Are you crazy or something?",
+      "emotion": "Sad 50",
+      "response_text": "Hey that isn't nice! You should apologize right now!",
+      "index": "91"
+    },
+    {
+      "topic": "MS05SierraCT08",
+      "topic_text": "Ugh, that sounds really disgusting!",
+      "emotion": "Sad 50",
+      "response_text": "But Ronald said he liked it!",
+      "index": "93"
+    },
+    {
+      "topic": "MS05SierraCT09",
+      "topic_text": "Who's Ronald?",
+      "emotion": "Happy 50",
+      "response_text": "Ronald? Oh! I'm sorry, I figured you met him already. He usually chats with people who enter Girdershade.",
+      "index": "94"
+    },
+    {
+      "topic": "MS05SierraCT10",
+      "topic_text": "Wow, this conversation is getting boring...",
+      "emotion": "Happy 50",
+      "response_text": "No, you're just thirsty! Come on, take a look at my collection and have an Ice Cold Nuka-Cola on me! Sound good?",
+      "index": "97"
+    },
+    {
+      "topic": "MS05SierraCT11",
+      "topic_text": "I think you're crazy.",
+      "emotion": "Happy 50",
+      "response_text": "Sure am! Crazy for the taste of Nuka-Cola! Hahahaha!",
+      "index": "98"
+    },
+    {
+      "topic": "MS05SierraCT12",
+      "topic_text": "Tell me more about this Ronald guy.",
+      "emotion": "Happy 50",
+      "response_text": "He's a darling. Always watching out for me, and more importantly keeping the collection safe!",
+      "index": "100"
+    },
+    {
+      "topic": "MS05SierraCT13",
+      "topic_text": "Yeah, he sounds great. So, you mentioned a tour or something?",
+      "emotion": "Surprise 80",
+      "response_text": "I sure did! Want to take it now?",
+      "index": "102"
+    },
+    {
+      "topic": "MS05SierraCT13a",
+      "topic_text": "I think I've had just about enough of this.",
+      "emotion": "Happy 80",
+      "response_text": "You can never have enough of the refreshing taste of Nuka-Cola! He he he!",
+      "index": "104"
+    },
+    {
+      "topic": "MS05SierraCT14",
+      "topic_text": "Um... Sierra...",
+      "emotion": "Neutral 50",
+      "response_text": "... so they like kicked in Ronald's door and he was like \"BLAM\" with his gun and one of them got all splattered.",
+      "index": "106"
+    },
+    {
+      "topic": "MS05SierraCT14a",
+      "topic_text": "Yoo-hoo! Anyone home?",
+      "emotion": "Neutral 50",
+      "response_text": "... so they like kicked in Ronald's door and he was like \"BLAM\" with his gun and one of them got all splattered.",
+      "index": "109"
+    },
+    {
+      "topic": "MS05SierraCT15",
+      "topic_text": "Sierra! Please. I get it. He's tough.",
+      "emotion": "Happy 50",
+      "response_text": "Oh. Sorry! I get carried away sometimes.",
+      "index": "112"
+    },
+    {
+      "topic": "MS05SierraCT15a",
+      "topic_text": "Shut up already...",
+      "emotion": "Disgust 50",
+      "response_text": "Oh. Sorry! I get carried away sometimes. There's no need to get fresh about it though.",
+      "index": "114"
+    },
+    {
+      "topic": "MS05SierraCT16",
+      "topic_text": "No reason. I was just passing through.",
+      "emotion": "Neutral 50",
+      "response_text": "Oh. Well that's silly.",
+      "index": "116"
+    },
+    {
+      "topic": "MS05SierraCT17",
+      "topic_text": "I'm looking to make some cash. Any opportunities here?",
+      "emotion": "Happy 50",
+      "response_text": "Actually, there may be. Tell you what, you take the tour of my collection and I promise to give you a proposition you won't want to say no to.",
+      "index": "119"
+    },
+    {
+      "topic": "MS05SierraCT17a",
+      "topic_text": "Look, lady. I just want to get out of this nuthouse...",
+      "emotion": "Neutral 50",
+      "response_text": "Oh, I think you came to the wrong place. I think there's someone in California that collects nuts. Or was it Nevada? Hmmm...",
+      "index": "121"
+    },
+    {
+      "topic": "MS05SierraCT18SC",
+      "topic_text": "Tell you what. You tell me first, and I'll consider taking the tour.",
+      "emotion": "Neutral 50",
+      "response_text": "Well, I suppose. I really wanted you to see the tour, but you seem nice enough.",
+      "index": "122"
+    },
+    {
+      "topic": "MS05SierraCT19",
+      "topic_text": "Why a blue bottle if the soda is brown? That's just weird.",
+      "emotion": "Neutral 50",
+      "response_text": "Aha! That's where you're wrong!",
+      "index": "124"
+    },
+    {
+      "topic": "MS05SierraCT19a",
+      "topic_text": "Yeah, I guess you're right. It isn't that bad.",
+      "emotion": "Happy 50",
+      "response_text": "See, I knew you were smart the moment you walked in here!",
+      "index": "127"
+    },
+    {
+      "topic": "MS05SierraCT20",
+      "topic_text": "The taste... I could never get used to it.",
+      "emotion": "Surprise 50",
+      "response_text": "No no no! You're mistaken!",
+      "index": "129"
+    },
+    {
+      "topic": "MS05SierraCT21",
+      "topic_text": "I just don't like it.",
+      "emotion": "Happy 50",
+      "response_text": "Well, I guess everyone has their own opinion. Even if it's silly!",
+      "index": "132"
+    },
+    {
+      "topic": "MS05SierraQuestBail",
+      "topic_text": "Let me think about this, Sierra.",
+      "emotion": "Happy 80",
+      "response_text": "Okay. But I bet you'll be back!",
+      "index": "135"
+    },
+    {
+      "topic": "MS05SierraQuestGive01",
+      "topic_text": "Quantum? Never heard of it before.",
+      "emotion": "Neutral 50",
+      "response_text": "Well, right before the bombs fell, the good folks at Nuka-Cola developed what they hoped was an improvement on the original formula.",
+      "index": "136"
+    },
+    {
+      "topic": "MS05SierraQuestGive02",
+      "topic_text": "Just cut to the chase. What's this proposition?",
+      "emotion": "Surprise 60",
+      "response_text": "So impatient! Wow! You must really want to get out there and start looking!",
+      "index": "140"
+    },
+    {
+      "topic": "MS05SierraQuestGive04",
+      "topic_text": "So, what went wrong?",
+      "emotion": "Neutral 50",
+      "response_text": "Well, the flavor certainly wasn't the issue. The public was just split on the unique feature of the Quantum's appearance.",
+      "index": "143"
+    },
+    {
+      "topic": "MS05SierraQuestGive05",
+      "topic_text": "That stuff sounds absolutely revolting.",
+      "emotion": "Neutral 50",
+      "response_text": "On the contrary! The secret ingredient was an eighteenth fruit flavor which added just a hint of pomegranate.",
+      "index": "146"
+    },
+    {
+      "topic": "MS05SierraQuestGive06",
+      "topic_text": "Wait, did you say it has an isotope in it? As in it's radioactive?",
+      "emotion": "Surprise 50",
+      "response_text": "Oh no, only ever-so-mildly! No ill effects were ever recorded.",
+      "index": "148"
+    },
+    {
+      "topic": "MS05SierraQuestGive07",
+      "topic_text": "What's your interest in all this?",
+      "emotion": "Neutral 50",
+      "response_text": "I love the stuff! I can't get enough of it!",
+      "index": "151"
+    },
+    {
+      "topic": "MS05SierraQuestGive07a",
+      "topic_text": "Glowing pee? That sounds like dangerous stuff!",
+      "emotion": "Surprise 70",
+      "response_text": "Oh no! Not at all!",
+      "index": "154"
+    },
+    {
+      "topic": "MS05SierraQuestGive08",
+      "topic_text": "So, that's where I come in, I guess.",
+      "emotion": "Happy 50",
+      "response_text": "That's right! You bring me Nuka-Cola Quantum and I pay you... handsomely I might add.",
+      "index": "156"
+    },
+    {
+      "topic": "MS05SierraQuestGive08SC",
+      "topic_text": "Come on, Sierra. No secrets between friends!",
+      "emotion": "Happy 50",
+      "response_text": "Oh, okay! I have a schematic for the Nuka Grenade... the only one in the whole Capital Wasteland. Bring me the bottles and it's yours.",
+      "index": "159"
+    },
+    {
+      "topic": "MS05SierraQuestGive08a",
+      "topic_text": "Okay, enough with the addict routine. Tell me what you want already!",
+      "emotion": "Happy 50",
+      "response_text": "\"You can't resist the taste that'll blow up in your face!\" like Ronald always says. He thinks of the best Nuka-Cola jingles!",
+      "index": "163"
+    },
+    {
+      "topic": "MS05SierraQuestNoMean",
+      "topic_text": "No way! I'm not scouring the Wasteland for some stupid soft drink!",
+      "emotion": "Surprise 80",
+      "response_text": "Hey! It isn't just some stupid soft drink!",
+      "index": "166"
+    },
+    {
+      "topic": "MS05SierraQuestTake",
+      "topic_text": "Okay, Sierra. You've got a deal.",
+      "emotion": "Surprise 50",
+      "response_text": "Oh goodie! I can taste the Quantum already!",
+      "index": "169"
+    },
+    {
+      "topic": "MS05SierraQuestWait",
+      "topic_text": "Actually, I don't think I'm ready to do this now.",
+      "emotion": "Sad 50",
+      "response_text": "Awww, come on! I told you everything there is to know about it!",
+      "index": "171"
+    },
+    {
+      "topic": "MS05TLLocalSights",
+      "topic_text": "Is there anything else interesting to see near Girdershade?",
+      "emotion": "Neutral 50",
+      "response_text": "Well, to the east there are some nasty Raiders in Evergreen Mills. I'd stay away from there if I were you.",
+      "index": "174"
+    },
+    {
+      "topic": "MS05TLMoreAboutPlant",
+      "topic_text": "What do you know about the Nuka-Cola Bottling Facility?",
+      "emotion": "Neutral 50",
+      "response_text": "Well, the D.C. Facility was like their main factory just before the bombs fell. All the research they did was performed there.",
+      "index": "176"
+    },
+    {
+      "topic": "MS05TLMoreAboutReward",
+      "topic_text": "Tell me more about the Nuka Grenade.",
+      "emotion": "Neutral 50",
+      "response_text": "I don't know a whole lot about weapons, but I do know that it's more powerful than a regular grenade.",
+      "index": "179"
+    },
+    {
+      "topic": "MS05TLMoreAboutSoda",
+      "topic_text": "What do you know about Nuka-Cola Quantum?",
+      "emotion": "Sad 30",
+      "response_text": "Well, besides what I've already told you, not much.",
+      "index": "183"
+    },
+    {
+      "topic": "MS05TLMoreAboutSoda01",
+      "topic_text": "What exactly does a bottle of Quantum look like?",
+      "emotion": "Happy 50",
+      "response_text": "Well, the bottles are glass just like regular Nuka-Cola, except the glass is clear.",
+      "index": "187"
+    },
+    {
+      "topic": "MS05TLMoreAboutSoda02",
+      "topic_text": "What happens when you drink a Nuka-Cola Quantum?",
+      "emotion": "Happy 50",
+      "response_text": "Oh my! It's like a tidal wave of flavor washing all over your body!",
+      "index": "189"
+    },
+    {
+      "topic": "MS05TLMoreAboutSoda03Medicine",
+      "topic_text": "Drinking that stuff can't be good for you if it contains radiation.",
+      "emotion": "Neutral 50",
+      "response_text": "Well, I guess so. I heard that sometimes the radiation would remain in people's systems, but only in a few test cases.",
+      "index": "191"
+    },
+    {
+      "topic": "MS05TLMoreAboutSoda04",
+      "topic_text": "You seem kind of addicted to the stuff... Is it safe to drink?",
+      "emotion": "Happy 60",
+      "response_text": "Addicted? Why would you say that? I can stop drinking it any time I want.",
+      "index": "193"
+    },
+    {
+      "topic": "MS05TLNukaCola",
+      "topic_text": "Here's all the Nuka-Cola Quantum I'm carrying.",
+      "emotion": "Happy 50",
+      "response_text": "Ohhhh... Ronald is SUCH a sweetheart! Do you know he went out like you did and found me 30 bottles of Quantum?",
+      "index": "195"
+    },
+    {
+      "topic": "MS05TLRonaldsOffer",
+      "topic_text": "Did you know Ronald has offered to buy Quantum from me?",
+      "emotion": "Happy 70",
+      "response_text": "He has? Ohhhh! That sweetheart! I knew he'd help me!",
+      "index": "211"
+    },
+    {
+      "topic": "MS05TLRonaldsOffer01",
+      "topic_text": "No, I think he just wants to get into your pants.",
+      "emotion": "Neutral 50",
+      "response_text": "That's so silly! Why would a man want to wear a pair of these filthy woman's pants? Doesn't make sense.",
+      "index": "213"
+    },
+    {
+      "topic": "MS05TLRonaldsOffer02",
+      "topic_text": "Never mind.",
+      "emotion": "Happy 50",
+      "response_text": "He he! You're so silly!",
+      "index": "215"
+    },
+    {
+      "topic": "MS05TLRonaldsOffer03",
+      "topic_text": "Yep, you're right. He really cares about you!",
+      "emotion": "Sad 60",
+      "response_text": "Awww, both of you are so sweet! How did a gal like me get so lucky in this messed up world to find you two?{Happy sadness}",
+      "index": "216"
+    },
+    {
+      "topic": "MS05TLStartLooking",
+      "topic_text": "Do you even have a clue as to where I can start looking?",
+      "emotion": "Happy 50",
+      "response_text": "In fact, I do! Ha! Surprised you didn't I?",
+      "index": "218"
+    },
+    {
+      "topic": "SpeechChallengeFailure",
+      "topic_text": "SpeechChallengeFailure",
+      "emotion": "Happy 50",
+      "response_text": "Nope! Take the tour first. Then we talk about my proposition!",
+      "index": "222"
+    }
+  ],
+  "combat": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "I have to go now.",
+      "emotion": "Happy 50",
+      "response_text": "Good luck! Watch out for meanies!",
+      "index": "225"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Happy 50",
+      "response_text": "Ice cold Nuka-Cola... there's nothing like it in the world.",
+      "index": "234"
+    },
+    {
+      "topic": "MS05RonaldConv",
+      "topic_text": "MS05RonaldConv",
+      "emotion": "Happy 50",
+      "response_text": "Yep, they sure were hard to get, and you got 'em you big 'ole teddy bear! Anyway, gotta' get these into the machine. Seeya, sweetie!",
+      "index": "246"
+    },
+    {
+      "topic": "MS05SierraTour01",
+      "topic_text": "MS05SierraTour01",
+      "emotion": "Happy 50",
+      "response_text": "When Nuka-Cola was invented by John-Caleb Bradberton in 2044, it quickly became the world's most popular soft drink.",
+      "index": "251"
+    },
+    {
+      "topic": "MS05SierraTour02",
+      "topic_text": "MS05SierraTour02",
+      "emotion": "Happy 50",
+      "response_text": "The wonder drink soon drew a dedicated following which prompted the Nuka-Cola Corporation to release many promotional items like these.",
+      "index": "252"
+    },
+    {
+      "topic": "MS05SierraTour03",
+      "topic_text": "MS05SierraTour03",
+      "emotion": "Neutral 50",
+      "response_text": "By 2067, a Nuka-Cola machine such as this rare pristine model could be found on almost every street in America.",
+      "index": "253"
+    },
+    {
+      "topic": "MS05SierraTour04",
+      "topic_text": "MS05SierraTour04",
+      "emotion": "Happy 50",
+      "response_text": "Even in today's crazy world, Nuka-Cola is still the number one choice of refreshment among Armageddon's survivors.",
+      "index": "254"
+    }
+  ]
+}

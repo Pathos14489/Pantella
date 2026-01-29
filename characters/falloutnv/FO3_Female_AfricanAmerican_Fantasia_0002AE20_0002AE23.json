@@ -1,0 +1,173 @@
+{
+  "name": "Fantasia",
+  "url": "/wiki/Fantasia",
+  "dialogue_name": "Fantasia.txt",
+  "dialogue_url": "/wiki/Fantasia.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": true,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "0002AE20",
+  "ref_id": "0002AE23",
+  "editor_id": "Fantasia",
+  "location": "Dukov's Place",
+  "location_url": "/wiki/Dukov%27s_Place",
+  "descriptions": [
+    "Fantasia is one of Dukov's party girls in 2277.",
+    "Similar to Cherry, Fantasia stays with Dukov for his protection. She says \"Dukey\" is alright, can be a nice guy, is good in bed, and he gives her caps. Fantasia says she would rather be a \"whore\" than dead, and she and Cherry frequently party with him. Fantasia is also into Jet to some degree.",
+    "If Dukov is killed and Cherry goes to Rivet City, Fantasia will remain in Dukov's place, wandering around and drinking. If one speaks to her, she may respond as if one had just told her of Dukov's death (even if the Lone Wanderer killed him in front of her earlier). She will explain briefly what used to go on there and why she is so scantily dressed, and express regret that Dukov is gone and the good times are over."
+  ],
+  "race": "Human",
+  "gender": "Female",
+  "affiliation": "Dukov",
+  "detailed_location": "Dukov's Place",
+  "voice_actor": "Karen Carbone",
+  "special": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 4,
+    "Intelligence": 4,
+    "Agility": 6,
+    "Luck": 4
+  },
+  "mod_special_values": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 5,
+    "Intelligence": 4,
+    "Agility": 6,
+    "Luck": 4
+  },
+  "level": "1",
+  "tag_skills": [
+    {
+      "Barter:": "29(31)"
+    },
+    {
+      "Small Guns:": "31"
+    },
+    {
+      "Unarmed:": "27"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Good",
+  "voice_type": "FemaleAdult02DC",
+  "geck_race": "AfricanAmerican",
+  "topics": [
+    {
+      "topic": "DukovClothesWhy aren't you dressed?",
+      "topic_text": "Who are you? And why are you dressed like that?",
+      "emotion": "Happy 50",
+      "response_text": "Dukey doesn't like me to wear a lot. He says it slows things down.",
+      "index": "1"
+    },
+    {
+      "topic": "DukovDukovSo what's the deal with Dukov?",
+      "topic_text": "What's this Dukov guy like?",
+      "emotion": "Neutral 50",
+      "response_text": "He's all right. He can be a real fun guy, but he sure knows how to wear a girl out.",
+      "index": "3"
+    },
+    {
+      "topic": "DukovLuckyDamn! I wish I had a setup like this.",
+      "topic_text": "Lucky bastard. He's got a sweet setup here.",
+      "emotion": "Disgust 50",
+      "response_text": "Sweet for him maybe.",
+      "index": "6"
+    },
+    {
+      "topic": "DukovPay",
+      "topic_text": "Does he pay you for this?",
+      "emotion": "Neutral 50",
+      "response_text": "He gives me some caps, but it's not what you think. He can be a nice guy.",
+      "index": "8"
+    },
+    {
+      "topic": "DukovThisPlace",
+      "topic_text": "So... What exactly is this place?",
+      "emotion": "Neutral 50",
+      "response_text": "It's...well, it's Dukov's place. He lives here.",
+      "index": "10"
+    },
+    {
+      "topic": "DukovWhoreAdmit it. You're just a whore.",
+      "topic_text": "So basically, you're just a whore?",
+      "emotion": "Anger 50",
+      "response_text": "I'd rather be a whore than dead.",
+      "index": "13"
+    },
+    {
+      "topic": "DukovYourChoiceI guess you'll just have to live with your choice.",
+      "topic_text": "Your life, your choice.",
+      "emotion": "Anger 50",
+      "response_text": "Damn straight.",
+      "index": "14"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Happy 50",
+      "response_text": "Here's the key. He never even noticed.",
+      "index": "15"
+    },
+    {
+      "topic": "MS14DukovStealKey",
+      "topic_text": "Dukov has a key I need. Steal it for me.",
+      "emotion": "Surprise 50",
+      "response_text": "How can I resist those...what color are your eyes anyway?",
+      "index": "21"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "DukovGirlSteal",
+      "topic_text": "DukovGirlSteal",
+      "emotion": "Happy 50",
+      "response_text": "Ooh! Dukey, is that a rocket in your pocket, or are you just glad to feel me?",
+      "index": "22"
+    },
+    {
+      "topic": "DukovResponse1",
+      "topic_text": "DukovResponse",
+      "emotion": "Disgust 50",
+      "response_text": "Sure. It's my turn anyway. Not that he remembers, or cares.",
+      "index": "23"
+    },
+    {
+      "topic": "DukovResponse2",
+      "topic_text": "DukovResponse2",
+      "emotion": "Happy 50",
+      "response_text": "Dukey! You are so naughty. Later tonight I'll do something special for you.",
+      "index": "25"
+    },
+    {
+      "topic": "DukovResponse3",
+      "topic_text": "DukovResponse3",
+      "emotion": "Neutral 50",
+      "response_text": "It's where Dukov wants to live. It's his money. If you don't like it, leave.",
+      "index": "26"
+    },
+    {
+      "topic": "GOODBYEI have to go now.",
+      "topic_text": "See ya later.",
+      "emotion": "Happy 50",
+      "response_text": "Bye, bye, honey.",
+      "index": "28"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Surprise 50",
+      "response_text": "Hi there, big boy.",
+      "index": "29"
+    }
+  ],
+  "combat": []
+}

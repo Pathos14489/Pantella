@@ -1,0 +1,139 @@
+{
+  "name": "Max",
+  "url": "/wiki/Max_(Fallout:_New_Vegas)",
+  "dialogue_name": "VMS49Max.txt",
+  "dialogue_url": "/wiki/VMS49Max.txt",
+  "spawned_dead": false,
+  "spawned": true,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "0014EB35",
+  "ref_id": "0014EB3A",
+  "editor_id": "VMS49Max",
+  "location": "Freeside",
+  "location_url": "/wiki/Freeside",
+  "descriptions": [
+    "Max is an orphan residing in Freeside in 2281.",
+    "Max can be found in Freeside chasing his friend Stacey with Euclid's C-Finder. However, the safety on the C-Finder was left on, preventing him from activating ARCHIMEDES II.",
+    "Freeside is home to many of New Vegas's poorer residents and NCR refugees. Stacey and Max are orphaned street urchins who live in the ruins of the destroyed building immediately inside Freeside's east gate next to Mick & Ralph's. If not found roaming the streets, they may be asleep on two worn mattresses on the second floor of their home.",
+    "Max will sell Euclid's C-Finder upon request for 1,000 caps, but by passing a Barter check of 45, will sell it for only 20 caps, and by passing a Speech check of 60 will give it to the player for free.",
+    "I Could Make You Care: If one chooses to complete the quest by obtaining Euclid's C-Finder, it will need to be acquired from Max.",
+    "An additional dialogue option exists which would allow the player to obtain Euclid's C-Finder for free. However, this dialogue option requires the cut Child at Heart perk, which was removed owing to the small number of children in the Mojave Wasteland."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Stacey",
+  "role": "OrphanPlaying kid",
+  "detailed_location": "Freeside, in front ofMick & Ralph's",
+  "voice_actor": "Anthony Crehan",
+  "special": {
+    "Strength": 3,
+    "Perception": 4,
+    "Endurance": 3,
+    "Charisma": 3,
+    "Intelligence": 3,
+    "Agility": 7,
+    "Luck": 7
+  },
+  "level": "1→8",
+  "tag_skills": [
+    {
+      "Explosives:": "29→54"
+    },
+    {
+      "Guns:": "35→60"
+    },
+    {
+      "Sneak:": "35→60"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Neutral",
+  "voice_type": "MaleChild01",
+  "geck_race": "AfricanAmericanChild",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "Bang bang bang bang bang!",
+      "index": "1"
+    },
+    {
+      "topic": "VFreeformFreesideVMS49MaxTopic000",
+      "topic_text": "Give me that gun.",
+      "emotion": "Neutral 50",
+      "response_text": "Sorry, but I need it to shoot Stacey. We can find you another gun.",
+      "index": "5"
+    },
+    {
+      "topic": "VFreeformFreesideVMS49MaxTopic001",
+      "topic_text": "I'm a space soldier. The general sent me to ask you to borrow your gun to stop an alien invasion.",
+      "emotion": "Neutral 50",
+      "response_text": "Really? Cool! Bring it back to me when you're done, okay? I think Stacey might be turning into an alien.",
+      "index": "6"
+    },
+    {
+      "topic": "VFreeformFreesideVMS49MaxTopic002",
+      "topic_text": "You look tired. Maybe you should take a break.",
+      "emotion": "Neutral 50",
+      "response_text": "I don't really like to go to bed until it gets dark out.",
+      "index": "7"
+    },
+    {
+      "topic": "VFreeformFreesideVMS49MaxTopic003",
+      "topic_text": "Can I buy that gun from you?",
+      "emotion": "Neutral 50",
+      "response_text": "This is the best gun in the whole galaxy. I paid a million caps for it. And it wasn't even brand new.",
+      "index": "10"
+    },
+    {
+      "topic": "VFreeformFreesideVMS49MaxTopic004",
+      "topic_text": "It's worth 1000 caps to me.",
+      "emotion": "Neutral 50",
+      "response_text": "You mean it? Wow, thanks!",
+      "index": "11"
+    },
+    {
+      "topic": "VFreeformFreesideVMS49MaxTopic005",
+      "topic_text": "Yeah, but your heavy use has really depreciated its value. It's only worth twenty caps now.",
+      "emotion": "Neutral 50",
+      "response_text": "Aw, man. It's Stacey's fault. She pretends like she didn't get hit.",
+      "index": "14"
+    },
+    {
+      "topic": "VFreeformFreesideVMS49MaxTopic006",
+      "topic_text": "I don't have it here. I'll have to go get it.",
+      "emotion": "Neutral 50",
+      "response_text": "I'll be shooting Stacey till you get back. Just saying goodbye to it, you know?",
+      "index": "16"
+    },
+    {
+      "topic": "VFreeformFreesideVMS49MaxTopic007",
+      "topic_text": "It's invisible.",
+      "emotion": "Neutral 50",
+      "response_text": "Sorry, I may be little, but I'm not dumb.",
+      "index": "17"
+    },
+    {
+      "topic": "VFreeformFreesideVMS49MaxTopic008",
+      "topic_text": "I don't think I can come up with that kind of cash.",
+      "emotion": "Neutral 50",
+      "response_text": "Well, if you can get me most of it, I could give you a loan for the rest.",
+      "index": "18"
+    },
+    {
+      "topic": "VFreeformFreesideVMS49MaxTopic009",
+      "topic_text": "What if I give you twenty caps? That's... uh... way more than a million!",
+      "emotion": "Neutral 50",
+      "response_text": "Sorry, I may be little, but I'm not dumb.",
+      "index": "19"
+    }
+  ],
+  "conversation": [],
+  "combat": []
+}

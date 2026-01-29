@@ -1,0 +1,363 @@
+{
+  "name": "Protector Casdin",
+  "url": "/wiki/Henry_Casdin",
+  "dialogue_name": "ProtectorCasdin.txt",
+  "dialogue_url": "/wiki/ProtectorCasdin.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "00040C39",
+  "ref_id": "00042196",
+  "editor_id": "ProtectorCasdin",
+  "location": "OutsideFort Independence",
+  "location_url": "/wiki/Fort_Independence",
+  "descriptions": [
+    "Protector Henry Casdin is the leader of the Brotherhood of Steel Outcasts in the Capital Wasteland in Fallout 3. He is also a special dweller in Fallout Shelter Online.",
+    "Level-headed and professional, Protector Casdin was once one of the most accomplished soldiers of Lyons' Brotherhood of Steel and traveled with Owyn Lyons during the expedition. He fought with the Elder side-by-side during the Scourge of the Pitt.",
+    "Under Casdin's command, they seized Fort Independence, where they pushed back the indigenous raider groups and adapted the former military base for use as their headquarters. Termed \"Outcasts\" by their angered former brothers and sisters, the renegade soldiers adopted the name as a badge of honor,",
+    "Since then, Casdin has led them with a steady hand, attempting to reestablish communications with the West. He considers Lyons a traitor who abandoned his mission.",
+    "Protector Casdin can be found standing at the entrance to Fort Independence, the headquarters of the Brotherhood Outcasts. He holds one of several keys to Fort Independence.",
+    "He was one of the best paladins and one of the original members who followed Lyons from the western headquarters of the Brotherhood. He fought alongside the High Elder at the Battle of Pittsburgh and was a staunch believer in the Brotherhood's ideals. After Owyn Lyons changed the Brotherhood's course of action in the wasteland of the capital, Castin showed clear dissatisfaction and incomprehension. After the conflict escalated, he led the members who were willing to follow him into the wasteland, taking most of Lyons' supplies and abandoning the Citadel, establishing the Brotherhood Outcasts.",
+    "Deals 74% of ATK plus 2466 points of damage to all enemies 4 times. Every time the skill passes through a person, the damage increases by 20%, up to 6 times.",
+    "All damage caused by self increases by 1078 points, and a burning effect is added, causing damage equal to 1% of the target's maximum life once. Each time the damage does not exceed 0.6 times Henry Casdin's initial attack power, and when the self's life is greater than 50%, The burn effect applied is not immune and cannot be dispelled. Every time Henry Castine deals damage, the target's Rage will be reduced by 5%.",
+    "The reflection damage received by all of us is reduced by 50% and an additional 2097 points are added.",
+    "The attack power of the party increases by 1254 points.",
+    "The initial rage increases by 200 points, and when the life of our residents is greater than or equal to 80%, the attack power increases by 10%, and the physical resistance and energy resistance increase by 10%.",
+    "When the number of surviving residents of our side is less than the number of surviving residents of the enemy, the damage received by our residents is reduced by 18%.",
+    "When the number of our surviving residents is greater than or equal to the number of surviving enemies, the damage caused by dwellers increases by 10% and the damage Henry Casdin receives is reduced by 80%.",
+    "Henry Casdin appears in Fallout 3 and in Fallout Shelter Online.",
+    "Protector Casdin's field report is recorded by a different voice actor than Casdin's in-game voice. However, the field report mentions requests for reinforcements that are denied. As Casdin is the leader of the Outcasts, it does not make sense that he would have a superior that could deny reinforcements. Considering the voice discrepancy and this otherwise illogical request, it is possible that the field report was recorded by another member of the Outcasts on Casdin's behalf, or another out-of-universe explanation may simply be that the report was made before Casdin's character was fully developed. Defender Rockfowl's field report, similarly, is recorded by a different voice actor.",
+    "PC Playstation 3 Xbox 360 Casdin may enter Fort Independence and never exit."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Brotherhood of Steel(formerly)Brotherhood Outcasts",
+  "role": "Outcast leader",
+  "detailed_location": "Fort Independence",
+  "voice_actor": "Gregory Gorton",
+  "special": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 6,
+    "Charisma": 4,
+    "Intelligence": 3,
+    "Agility": 6,
+    "Luck": 4
+  },
+  "mod_special_values": {
+    "Strength": 8,
+    "Perception": 5,
+    "Endurance": 6,
+    "Charisma": 4,
+    "Intelligence": 3,
+    "Agility": 4,
+    "Luck": 4
+  },
+  "level": "7",
+  "tag_skills": [
+    {
+      "Big Guns:": "57"
+    },
+    {
+      "Melee Weap.:": "57(61)"
+    },
+    {
+      "Small Guns:": "57(53)"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "65"
+    },
+    {
+      "Critical Chance:": "4%"
+    },
+    {
+      "Unarmed Dam.:": "1.3"
+    },
+    {
+      "Poison Resist.:": "25%"
+    },
+    {
+      "Rad. Resist.:": "10%"
+    },
+    {
+      "Carry Weight:": "210(230)"
+    },
+    {
+      "Damage Res.:": "48%"
+    }
+  ],
+  "karma": "Good",
+  "voice_type": "MaleAdult01DefaultBDC",
+  "geck_race": "AsianOld",
+  "topics": [
+    {
+      "topic": "AboutBrotherhood1Do you sell any specialty items?",
+      "topic_text": "How do you feel about the Brotherhood of Steel?",
+      "emotion": "Neutral 50",
+      "response_text": "Which one, the original Brotherhood out West, or the shit that Lyons turned it into out here?",
+      "index": "1"
+    },
+    {
+      "topic": "AboutBrotherhood2AMS07AboutBrotherhood2A",
+      "topic_text": "What do you mean \"the original Brotherhood?\"",
+      "emotion": "Anger 25",
+      "response_text": "I mean the Brotherhood from out West, back around California. We knew what we were doing back there. We didn't waste time with delusions of heroism.",
+      "index": "2"
+    },
+    {
+      "topic": "AboutBrotherhood2BMS07AboutBrotherhood2B",
+      "topic_text": "How did Lyons change the Brotherhood?",
+      "emotion": "Sad 10",
+      "response_text": "Oh, he used to be as tough as the rest of us. Wasn't so long ago, we fought side-by-side to Scourge the Pitt.",
+      "index": "5"
+    },
+    {
+      "topic": "AboutBrotherhood2CMS07AboutBrotherhood2C",
+      "topic_text": "So what's your long-term plan for dealing with the Brotherhood?",
+      "emotion": "Anger 25",
+      "response_text": "The Brotherhood came out here to recover technology from the eastern cities and bases. If Lyons won't do it, then we will.",
+      "index": "8"
+    },
+    {
+      "topic": "AboutBrotherhood2returnMS07AboutBrotherhood2return",
+      "topic_text": "That's enough.",
+      "emotion": "Neutral 50",
+      "response_text": "All right, then.",
+      "index": "11"
+    },
+    {
+      "topic": "AboutOutcasts1MS07AboutOutcasts1",
+      "topic_text": "Tell me more about the Outcasts.",
+      "emotion": "Disgust 10",
+      "response_text": "We were cast out for our dedication to the Brotherhood's true goals. Lyons wanted to play hero to the locals, instead of doing his job.",
+      "index": "12"
+    },
+    {
+      "topic": "FFOutcastWork2A",
+      "topic_text": "I need to know more about the job before deciding.",
+      "emotion": "Happy 15",
+      "response_text": "It's simple enough. Bring in technological devices, and we'll pay you for what you find.",
+      "index": "15"
+    },
+    {
+      "topic": "FFOutcastWork2B",
+      "topic_text": "I'll take the job.",
+      "emotion": "Happy 50",
+      "response_text": "That's what I like to hear! You can start immediately.",
+      "index": "18"
+    },
+    {
+      "topic": "FFOutcastWork2C",
+      "topic_text": "I need time to consider it.",
+      "emotion": "Anger 25",
+      "response_text": "Take all the time you need. But don't waste my time until you're ready to take the job.",
+      "index": "20"
+    },
+    {
+      "topic": "FFOutcastsGreeting1AMS07OutcastGreeting1A",
+      "topic_text": "I don't mean any trouble. I'm just passing through.",
+      "emotion": "Anger 50",
+      "response_text": "Well, pass through some other direction. Or else you'll be \"passing on.\"",
+      "index": "21"
+    },
+    {
+      "topic": "FFOutcastsGreeting1BMS07OutcastGreeting1B",
+      "topic_text": "I'm with the Brotherhood. I didn't expect to see troops so far out here.",
+      "emotion": "Happy 10",
+      "response_text": "You haven't been with the Brotherhood for very long if you think we're your troops.{A little amused by the assumption}",
+      "index": "22"
+    },
+    {
+      "topic": "FFOutcastsGreeting1CMS07OutcastGreeting1C",
+      "topic_text": "You've got a laser. Technically, you'd be asking \"with highly focused light.\"",
+      "emotion": "Anger 50",
+      "response_text": "<grumble>{Long, low grumble, as if considering whether to shoot the player or to be impressed at his chutzpah.}",
+      "index": "26"
+    },
+    {
+      "topic": "FFOutcastsGreeting1DMS07OutcastGreeting1D",
+      "topic_text": "I think I made a wrong turn somewhere. I'll be leaving now, sir.",
+      "emotion": "Anger 50",
+      "response_text": "You're damned right you will. Now, get.",
+      "index": "32"
+    },
+    {
+      "topic": "FFOutcastsRewardAmmo1",
+      "topic_text": "I'll take .556 ammo.",
+      "emotion": "Neutral 50",
+      "response_text": "Here you go. Try not to use it all in one place, unless you have to.",
+      "index": "33"
+    },
+    {
+      "topic": "FFOutcastsRewardGrenadesFFOutcastsRewardAmmo2",
+      "topic_text": "I'll take frag grenades.",
+      "emotion": "Neutral 50",
+      "response_text": "Be careful. These can pack quite a pop.",
+      "index": "35"
+    },
+    {
+      "topic": "FFOutcastsRewardRadAway",
+      "topic_text": "I'll take Rad-Away.",
+      "emotion": "Neutral 50",
+      "response_text": "Useful stuff out there. Hope you don't have to use too much.",
+      "index": "37"
+    },
+    {
+      "topic": "FFOutcastsRewardStimpaks",
+      "topic_text": "I'll take Stimpaks.",
+      "emotion": "Neutral 50",
+      "response_text": "Here. Everyone's favorite. What would we do without them?",
+      "index": "39"
+    },
+    {
+      "topic": "FFOutcastsTech1",
+      "topic_text": "I've got some technology to turn in.",
+      "emotion": "Anger 25",
+      "response_text": "I see you've got some of our Power Armor there. I'll just take that off your hands.{Angry at the player.}",
+      "index": "41"
+    },
+    {
+      "topic": "FFOutcastsTechAlienBlaster",
+      "topic_text": "You'll like this. It's an Alien Blaster. Seriously.",
+      "emotion": "Surprise 65",
+      "response_text": "What in the world?{Trailing off, totally surprised}",
+      "index": "45"
+    },
+    {
+      "topic": "FFOutcastsTechAlienCell",
+      "topic_text": "Here, I found an Alien Power Cell.",
+      "emotion": "Surprise 30",
+      "response_text": "Interesting. Very interesting.{Trailing off, totally surprised}",
+      "index": "48"
+    },
+    {
+      "topic": "FFOutcastsTechEnclavePAFFOutcastsEnclavePA",
+      "topic_text": "Here's some Power Armor from the Enclave.",
+      "emotion": "Surprise 10",
+      "response_text": "Well I'll be damned. The Advanced Power Armor Mark II. This is superb. Absolutely superb.",
+      "index": "50"
+    },
+    {
+      "topic": "FFOutcastsTechEnclavePAHelmetFFOutcastsEnclavePAHelmet",
+      "topic_text": "Here's a Power Armor Helmet from the Enclave.",
+      "emotion": "Surprise 10",
+      "response_text": "This is some pretty heavy-duty stuff. We'll take good care of it.",
+      "index": "52"
+    },
+    {
+      "topic": "FFOutcastsTechInfo",
+      "topic_text": "What are you looking for, again?",
+      "emotion": "Neutral 25",
+      "response_text": "Power armor, energy weapons, and all sorts of advanced technology. Even some junk like sensor units or spare parts can be useful.",
+      "index": "54"
+    },
+    {
+      "topic": "FFOutcastsTechLaserPistol",
+      "topic_text": "How about a Laser Pistol?",
+      "emotion": "Neutral 10",
+      "response_text": "We can always use another one of these.",
+      "index": "56"
+    },
+    {
+      "topic": "FFOutcastsTechLaserRifle",
+      "topic_text": "How about a Laser Rifle?",
+      "emotion": "Neutral 10",
+      "response_text": "We can always use another one of these.",
+      "index": "58"
+    },
+    {
+      "topic": "FFOutcastsTechPlasmaPistol",
+      "topic_text": "I've got a Plasma Pistol for you.",
+      "emotion": "Happy 15",
+      "response_text": "Pretty rare piece of equipment, this. Good find.",
+      "index": "60"
+    },
+    {
+      "topic": "FFOutcastsTechPlasmaRifle",
+      "topic_text": "I've got a Plasma Rifle for you.",
+      "emotion": "Happy 15",
+      "response_text": "Pretty rare piece of equipment, this. Good find.",
+      "index": "62"
+    },
+    {
+      "topic": "FFOutcastsTechPowerArmorFFOutcastsTech",
+      "topic_text": "Take this suit of Power Armor.",
+      "emotion": "Happy 15",
+      "response_text": "Always good to have another of these in the vaults.",
+      "index": "64"
+    },
+    {
+      "topic": "FFOutcastsTechPowerArmorHelmetFFOutcastsPowerArmorHelmet",
+      "topic_text": "Take this Power Armor Helmet.",
+      "emotion": "Happy 15",
+      "response_text": "Not much good on its own, but the optics are useful, at least.",
+      "index": "66"
+    },
+    {
+      "topic": "FFOutcastsTechSensorUnit",
+      "topic_text": "I've got a sensor unit for you.",
+      "emotion": "Happy 15",
+      "response_text": "It's practically junk, but we can get some use out of it.",
+      "index": "68"
+    },
+    {
+      "topic": "FFOutcastsTechSpareParts",
+      "topic_text": "I've got some spare parts for you.",
+      "emotion": "Happy 15",
+      "response_text": "It's practically junk, but we can get some use out of it.",
+      "index": "70"
+    },
+    {
+      "topic": "FFOutcastsTechTeslaArmorFFOutcastsTeslaArmor",
+      "topic_text": "This Tesla Armor might be of interest to you.",
+      "emotion": "Surprise 15",
+      "response_text": "You'd better believe it. I haven't seen a suit like this in a long time.",
+      "index": "72"
+    },
+    {
+      "topic": "FFOutcastsTechXFFOutcastsTechExit",
+      "topic_text": "That's all for now.",
+      "emotion": "Neutral 10",
+      "response_text": "Okay, then.",
+      "index": "74"
+    },
+    {
+      "topic": "FFOutcastsTrust",
+      "topic_text": "So, are we good? You trust me enough now?",
+      "emotion": "Happy 50",
+      "response_text": "You've definitely proven your worth. I'll make sure to tell our people on patrol that you're a friend of the Outcasts.",
+      "index": "75"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Anger 15",
+      "response_text": "I'm Protector Henry Casdin, leader of the Outcasts. This had better be good.",
+      "index": "76"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "I have to go now.",
+      "emotion": "Happy 25",
+      "response_text": "Good hunting out there.",
+      "index": "88"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Neutral 50",
+      "response_text": "Keep that tech coming, and we'll make it worth your while.",
+      "index": "92"
+    }
+  ],
+  "combat": []
+}

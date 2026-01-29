@@ -1,0 +1,183 @@
+{
+  "name": "Private Jones",
+  "url": "/wiki/Jones_(Fallout_3)",
+  "dialogue_name": "RCPrivateJones.txt",
+  "dialogue_url": "/wiki/RCPrivateJones.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "0001E747",
+  "ref_id": "0001E760",
+  "editor_id": "RCPrivateJones",
+  "location": "Bridge tower",
+  "location_url": "/wiki/Bridge_tower",
+  "descriptions": [
+    "Private Jones is a Mister Gutsy robot who can be found in Rivet City's Bridge tower in 2277.",
+    "This particular Mister Gutsy dates back to pre-War times. Having been disabled after the bombs fell, he was eventually salvaged and restored to a working condition by Seagrave Holmes. Jones' original programming is mostly intact - as such, he is sometimes a bit confused about where he is and who all of these other humans are. Harkness assigned him to guard the armory in the security tower, but he is far from being a reliable sentry.",
+    "Private Jones will respawn after 3 in-game days if killed.",
+    "PC Xbox 360 A security guard may run and open the room where the turret is located, then become hostile to the player. This causes Private Jones and everyone in the vicinity to turn hostile as though the Lone Wanderer opened the door. "
+  ],
+  "race": "Mister Gutsy",
+  "gender": "Male programming",
+  "affiliation": "Rivet City security force",
+  "role": "Armory guard",
+  "detailed_location": "Bridge tower,Rivet City",
+  "voice_actor": "Jeff Baker",
+  "special": {
+    "Strength": 5,
+    "Perception": 6,
+    "Endurance": 5,
+    "Charisma": 5,
+    "Intelligence": 5,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "level": "9",
+  "misc_skills": [],
+  "karma": "Neutral",
+  "voice_type": "RobotMisterGutsyDC",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "Sir, yes sir! Private Jones reporting!{Shouted like a marine.}",
+      "index": "1"
+    },
+    {
+      "topic": "RCPrivateJoneEmergency",
+      "topic_text": "Private, there's a security emergency on the flight deck! <Lie>",
+      "emotion": "Neutral 50",
+      "response_text": "Sir! This slag heap appreciates the intel. Moving to secure the flight deck, Sir!{Shouted like a marine.}",
+      "index": "3"
+    },
+    {
+      "topic": "RCPrivateJonesStayOut",
+      "topic_text": "At ease, private. I'm here to inspect the armory.",
+      "emotion": "Neutral 50",
+      "response_text": "Sir, you are not authorized to enter the armory. Sir!{Shouted like a marine.}",
+      "index": "4"
+    },
+    {
+      "topic": "RCPrivateJonesWhoAreYou",
+      "topic_text": "So what's your story, slag heap?",
+      "emotion": "Neutral 50",
+      "response_text": "Sir, this slag heap is guarding the armory. Sir!{Shouted like a marine.}",
+      "index": "6"
+    },
+    {
+      "topic": "SpeechChallengeFailure",
+      "topic_text": "SpeechChallengeFailure",
+      "emotion": "Neutral 50",
+      "response_text": "Sir! That's a really stupid idea, sir!{shouted like a marine.}",
+      "index": "7"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Neutral 100",
+      "response_text": "This area is off limits to civilians.",
+      "index": "8"
+    },
+    {
+      "topic": "MS14Suit",
+      "topic_text": "MS14SuitHead",
+      "emotion": "Anger 50",
+      "response_text": "Pansy! Take a shot of vitamin M and keep fighting!{Spoken like a marine drill sergeant}",
+      "index": "12"
+    },
+    {
+      "topic": "MS14SuitCombat",
+      "topic_text": "MS14SuitCombat",
+      "emotion": "Anger 50",
+      "response_text": "Gear up, soldier!",
+      "index": "15"
+    },
+    {
+      "topic": "MS14SuitEmpty",
+      "topic_text": "MS14SuitEmpty",
+      "emotion": "Anger 50",
+      "response_text": "Head wound! Too bad you're out of morhpine.{Spoken like a marine drill sergeant}",
+      "index": "18"
+    },
+    {
+      "topic": "MS14SuitStart",
+      "topic_text": "MS14SuitStart",
+      "emotion": "Anger 50",
+      "response_text": "Listen up you god-damn puke! You are now wearing prototype medic power armor. You take care of me, and I'll take care of you.{Shouted like a marine drill sergeant.}",
+      "index": "23"
+    },
+    {
+      "topic": "RCGoodbye",
+      "topic_text": "RCGoodbye",
+      "emotion": "Neutral 50",
+      "response_text": "Sir! Yes, Sir!{Shouted like a marine.}",
+      "index": "26"
+    }
+  ],
+  "combat": [
+    {
+      "topic": "AcceptYield",
+      "topic_text": "AcceptYield",
+      "emotion": "Anger 50",
+      "response_text": "Do that again and I'll put my foot so far up your ass you'll cough up boot polish!",
+      "index": "27"
+    },
+    {
+      "topic": "Assault",
+      "topic_text": "Assault",
+      "emotion": "Anger 50",
+      "response_text": "What is your major malfunction, maggot?",
+      "index": "28"
+    },
+    {
+      "topic": "Attack",
+      "topic_text": "Attack",
+      "emotion": "Anger 50",
+      "response_text": "Eat hot lead, you commie bastard!",
+      "index": "30"
+    },
+    {
+      "topic": "Death",
+      "topic_text": "Death",
+      "emotion": "Anger 50",
+      "response_text": "Tell my mama I've done my best.",
+      "index": "48"
+    },
+    {
+      "topic": "GuardTrespass",
+      "topic_text": "GuardTrespass",
+      "emotion": "Neutral 50",
+      "response_text": "You had better remove yourself from this area before I am forced to declare you an enemy of the U.S. of A.",
+      "index": "51"
+    },
+    {
+      "topic": "Murder",
+      "topic_text": "Murder",
+      "emotion": "Anger 50",
+      "response_text": "You are the lowest form of commie scumbag I've ever had the misfortune to lay eyes on!",
+      "index": "57"
+    },
+    {
+      "topic": "Pickpocket",
+      "topic_text": "Pickpocket",
+      "emotion": "Anger 50",
+      "response_text": "Please tell me that you did not just do what I think you did!",
+      "index": "60"
+    },
+    {
+      "topic": "Steal",
+      "topic_text": "Steal",
+      "emotion": "Anger 50",
+      "response_text": "I thought I had seen every species of moronic petty bullshit, but you've just topped the list. Congratulations.",
+      "index": "61"
+    }
+  ]
+}

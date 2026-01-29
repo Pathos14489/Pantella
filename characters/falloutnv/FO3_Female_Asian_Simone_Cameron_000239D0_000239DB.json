@@ -1,0 +1,199 @@
+{
+  "name": "Simone Cameron",
+  "url": "/wiki/Simone_Cameron",
+  "dialogue_name": "SimoneCameron.txt",
+  "dialogue_url": "/wiki/SimoneCameron.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": true,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000239D0",
+  "ref_id": "000239DB",
+  "editor_id": "SimoneCameron",
+  "location": "Temple of the Union,Lincoln Memorial",
+  "location_url": "/wiki/Temple_of_the_Union",
+  "descriptions": [
+    "Simone Cameron is a guard living at the Temple of the Union in 2277.",
+    "Simone was part of a mercenary crew before slavers took her. She was a slave for only seven months, feigning obedience and escaping as soon as the opportunity presented itself.",
+    "Despite the Fallout 3 Official Game Guide labeling Simone as being a raider prior to her enslavement, her in-game dialogue with the Lone Wanderer notes that she was, instead, a mercenary.",
+    "Cameron's name is a reference to Simon Cameron, who served as President Abraham Lincoln's Secretary of War from 1861 to 1862."
+  ],
+  "race": "Human",
+  "gender": "Female",
+  "affiliation": "Abolitionists[Non-game 1]",
+  "role": "Mercenary (formerly)Slave(formerly)Guard",
+  "detailed_location": "Simone's tent,Lincoln MemorialTemple of the Union",
+  "voice_actor": "Shari Elliker",
+  "special": {
+    "Strength": 6,
+    "Perception": 7,
+    "Endurance": 5,
+    "Charisma": 3,
+    "Intelligence": 3,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "level": "8 → 20",
+  "tag_skills": [
+    {
+      "Explosives:": "64→100"
+    },
+    {
+      "Small Guns:": "62→100(64→102)"
+    },
+    {
+      "Sneak:": "62→100"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "80→140"
+    },
+    {
+      "Critical Chance:": "5%"
+    },
+    {
+      "Unarmed Dam.:": "1.25"
+    },
+    {
+      "Poison Resist.:": "20%"
+    },
+    {
+      "Rad. Resist.:": "8%"
+    },
+    {
+      "Carry Weight:": "210"
+    }
+  ],
+  "karma": "Good",
+  "voice_type": "FemaleAdult01DefaultDC",
+  "geck_race": "Asian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Anger 50",
+      "response_text": "Not now. Slavers are out there somewhere, preparing to attack.",
+      "index": "1"
+    },
+    {
+      "topic": "MS06EscapedSlaveLie",
+      "topic_text": "I'm an escaped slave. I was told you help runaways like me. <Lie.>",
+      "emotion": "Surprise 50",
+      "response_text": "You're the best equipped runaway slave I've ever seen.",
+      "index": "14"
+    },
+    {
+      "topic": "MS06HamlinInfoWhat's the story with Hannibal?",
+      "topic_text": "Why should I promise to protect this place?",
+      "emotion": "Disgust 50",
+      "response_text": "Because if you don't, I get to use you for target practice.",
+      "index": "17"
+    },
+    {
+      "topic": "MS06LincolnsHead",
+      "topic_text": "What is that stone head?",
+      "emotion": "Disgust 50",
+      "response_text": "God damn rookie. That's Lincoln. He freed some slaves a long time ago.",
+      "index": "21"
+    },
+    {
+      "topic": "MS06LookingForSlaves",
+      "topic_text": "I'm looking for runaway slaves.",
+      "emotion": "Anger 50",
+      "response_text": "We've got slavers! Grab your guns!",
+      "index": "23"
+    },
+    {
+      "topic": "MS06MyMistake",
+      "topic_text": "My mistake. I'll just be going.",
+      "emotion": "Disgust 50",
+      "response_text": "Good idea.",
+      "index": "24"
+    },
+    {
+      "topic": "MS06OutOfMyWay",
+      "topic_text": "I want to know what you're hiding in there. Now open the damn door.",
+      "emotion": "Anger 50",
+      "response_text": "That's some tough talk stranger. You should clear out of here before I'm forced to make you.",
+      "index": "25"
+    },
+    {
+      "topic": "MS06Peaceful",
+      "topic_text": "I'm just looking for a place to rest, and maybe do some trading.",
+      "emotion": "Disgust 50",
+      "response_text": "Hannibal says I gotta let folks like you in, but that don't mean I have to like it.",
+      "index": "26"
+    },
+    {
+      "topic": "MS06SlaveStory",
+      "topic_text": "So, you used to be a slave?",
+      "emotion": "Anger 50",
+      "response_text": "Not for long. Me and my merc crew were captured by slavers.",
+      "index": "29"
+    },
+    {
+      "topic": "MS06TempleUnionWhat are a bunch of escaped slaves doing holed up here?",
+      "topic_text": "Aren't you afraid the Slavers will find you?",
+      "emotion": "Anger 50",
+      "response_text": "This place is the death of all slavers. Maybe someday the death of slavery.",
+      "index": "32"
+    },
+    {
+      "topic": "MS06WhatDoYouDo",
+      "topic_text": "What do you do here?",
+      "emotion": "Anger 50",
+      "response_text": "I shoot nosy people.",
+      "index": "34"
+    },
+    {
+      "topic": "SpeechChallengeFailure",
+      "topic_text": "SpeechChallengeFailure",
+      "emotion": "Anger 50",
+      "response_text": "There is no way that's happening.",
+      "index": "36"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "I have to go now.",
+      "emotion": "Disgust 50",
+      "response_text": "Don't let me stop you.",
+      "index": "37"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Surprise 50",
+      "response_text": "I suppose you aren't as bad as I thought. Most Wastelanders wouldn't have agreed to help us.",
+      "index": "43"
+    },
+    {
+      "topic": "MS06AnswerDoor",
+      "topic_text": "MS06AnswerDoor",
+      "emotion": "Anger 50",
+      "response_text": "Let yourself in. You have a key.{annoyed}",
+      "index": "51"
+    },
+    {
+      "topic": "MS06GateWarning",
+      "topic_text": "MS06GateWarning",
+      "emotion": "Fear 50",
+      "response_text": "Hannibal is upstairs somewhere. I'm locking the door behind you, so don't try anything. I'm watching you.",
+      "index": "53"
+    },
+    {
+      "topic": "MS06PackageStart",
+      "topic_text": "MS06PackageStart",
+      "emotion": "Surprise 50",
+      "response_text": "Guess I'd better get some chow.",
+      "index": "55"
+    }
+  ],
+  "combat": []
+}

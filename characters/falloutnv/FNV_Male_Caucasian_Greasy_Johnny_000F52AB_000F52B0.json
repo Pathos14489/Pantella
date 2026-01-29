@@ -1,0 +1,128 @@
+{
+  "name": "Greasy Johnny",
+  "url": "/wiki/Greasy_Johnny",
+  "dialogue_name": "1EWatchFiend1.txt",
+  "dialogue_url": "/wiki/1EWatchFiend1.txt",
+  "spawned_dead": false,
+  "spawned": true,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000F52AB",
+  "ref_id": "000F52B0",
+  "editor_id": "1EWatchFiend1",
+  "location": "North sewers",
+  "location_url": "/wiki/North_sewers",
+  "descriptions": [
+    "Greasy Johnny is a leader of a gang called the Greasers living in the north sewers of New Vegas in 2281.",
+    "A rude gang leader, Johnny, and his Greasers have taken up residence in the New Vegas sewers and harass the locals within and the residents of North Vegas Square. Although not a formidable bunch, the Greasers have been making enough noise that Crandon, a local guard, sends the Courier to get rid of them.",
+    "Greasy Johnny was written by area designer Jorge Salgado, who also worked on the quest Someone to Watch Over Me."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Greasers",
+  "role": "Gang leader",
+  "detailed_location": "North Sewers",
+  "voice_actor": "Gregory Alan Williams",
+  "special": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 3,
+    "Intelligence": 3,
+    "Agility": 7,
+    "Luck": 5
+  },
+  "mod_special_values": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 3,
+    "Intelligence": 3,
+    "Agility": 8,
+    "Luck": 5
+  },
+  "level": "3",
+  "tag_skills": [
+    {
+      "Energy Weap.:": "37"
+    },
+    {
+      "Guns:": "41(43)"
+    },
+    {
+      "Melee Weap.:": "39"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "65(70)"
+    }
+  ],
+  "karma": "Evil",
+  "voice_type": "MaleAdult06",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "Don't rush me. We're going, okay?",
+      "index": "1"
+    },
+    {
+      "topic": "VDialogueVegasNorth1EWatchFiend1Topic000",
+      "topic_text": "I hear you've been causing trouble.",
+      "emotion": "Anger 60",
+      "response_text": "Oh yeah? Fuck off, asshole.",
+      "index": "4"
+    },
+    {
+      "topic": "VDialogueVegasNorth1EWatchFiend1Topic003",
+      "topic_text": "No need for violence. What'll it take for you to stop?",
+      "emotion": "Neutral 50",
+      "response_text": "You better make it worthwhile. I ain't going to risk my neck in The Wasteland for shit.",
+      "index": "5"
+    },
+    {
+      "topic": "VDialogueVegasNorth1EWatchFiend1Topic004",
+      "topic_text": "These people won't put up with you forever.",
+      "emotion": "Anger 50",
+      "response_text": "[FAILED] Like I give a shit. Didn't I say get lost, or are you looking for a beating?",
+      "index": "6"
+    },
+    {
+      "topic": "VDialogueVegasNorth1EWatchFiend1Topic005",
+      "topic_text": "[Attack] I was hoping you'd be that stupid.",
+      "emotion": "Surprise 50",
+      "response_text": "What? Hey, guys! Help me here!",
+      "index": "9"
+    },
+    {
+      "topic": "VDialogueVegasNorth1EWatchFiend1Topic007",
+      "topic_text": "[Attack] I'm going to enjoy seeing you bleed.",
+      "emotion": "Neutral 50",
+      "response_text": "Shit, you're crazy!",
+      "index": "10"
+    },
+    {
+      "topic": "VDialogueVegasNorth1EWatchFiend1Topic008",
+      "topic_text": "How about if I pay you 100 caps to get out of here?",
+      "emotion": "Neutral 50",
+      "response_text": "That'll do, yeah.",
+      "index": "11"
+    },
+    {
+      "topic": "VDialogueVegasNorth1EWatchFiend1Topic009",
+      "topic_text": "You can't really enjoy living here. Take 50 caps and get out of here.",
+      "emotion": "Surprise 30",
+      "response_text": "[SUCCEEDED] Heh. More than I could make in a week of shaking down these assholes anyways.",
+      "index": "13"
+    }
+  ],
+  "conversation": [],
+  "combat": []
+}

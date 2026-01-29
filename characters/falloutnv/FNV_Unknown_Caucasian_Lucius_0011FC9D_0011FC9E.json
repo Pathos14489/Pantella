@@ -1,0 +1,414 @@
+{
+  "name": "Lucius",
+  "url": "/wiki/Lucius",
+  "dialogue_name": "FortLucius.txt",
+  "dialogue_url": "/wiki/FortLucius.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "0011FC9D",
+  "ref_id": "0011FC9E",
+  "editor_id": "FortLucius",
+  "location": "Caesar's tent",
+  "location_url": "/wiki/Caesar%27s_tent",
+  "descriptions": [
+    "Lucius is one of Caesar's most trusted men and leader of the Praetorian Guard.",
+    "Lucius is the commander of the Praetorian Guard in Caesar's Legion. If Benny is captured by Caesar's Legion, it's he who tortures Benny to learn the purpose of the platinum chip.",
+    "Despite his age, Lucius has been able to maintain his position in the Praetorian Guard for thirteen years as no one has challenged him in a battle to the death to take his place. Caesar suspects this may be more out of his subordinates' respect for Lucius than a result of his strength.",
+    "Frumentarii: Alerio · Cato Hostilius · Gabban · Karl · Picus · Disguised frumentarius · Ulysses (formerly)\nConsul: M. Licinius Crassus · M. Scribonius Libo Drusus (of the consul)"
+  ],
+  "race": "Human",
+  "affiliation": "Caesar's Legion",
+  "role": "Commander of thePraetorian Guard",
+  "detailed_location": "The Fort",
+  "voice_actor": "Yuri Lowenthal",
+  "special": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 6,
+    "Charisma": 4,
+    "Intelligence": 4,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "level": "15→30",
+  "tag_skills": [
+    {
+      "Guns:": "86"
+    },
+    {
+      "Melee Weap.:": "88"
+    },
+    {
+      "Unarmed:": "88"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "195"
+    }
+  ],
+  "karma": "Neutral",
+  "voice_type": "MaleAdult01Default",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "{KAI-zar}Caesar awaits. You can speak with me later.",
+      "index": "1"
+    },
+    {
+      "topic": "VFreeformTheFortFortLuciusTopic000",
+      "topic_text": "I've noticed that you don't carry a gun.",
+      "emotion": "Neutral 50",
+      "response_text": "It's a tradition in the{pray-TORR-ians}Praetorians to specialize in unarmed combat because weapons can break or jam when needed most.",
+      "index": "15"
+    },
+    {
+      "topic": "VFreeformTheFortFortLuciusTopic001",
+      "topic_text": "I had some general questions for you.",
+      "emotion": "Neutral 50",
+      "response_text": "I'll answer if I can.",
+      "index": "17"
+    },
+    {
+      "topic": "VFreeformTheFortFortLuciusTopic002",
+      "topic_text": "I don't have any more questions. Let's talk about something else.",
+      "emotion": "Neutral 50",
+      "response_text": "Very well.",
+      "index": "18"
+    },
+    {
+      "topic": "VFreeformTheFortFortLuciusTopic003",
+      "topic_text": "How did you end up joining the Legion?",
+      "emotion": "Neutral 50",
+      "response_text": "When I was a boy, the Legion conquered my tribe. I was chosen for training as a Legionary.",
+      "index": "19"
+    },
+    {
+      "topic": "VFreeformTheFortFortLuciusTopic007",
+      "topic_text": "What happened to the rest of your tribe?",
+      "emotion": "Neutral 50",
+      "response_text": "The girls and women were enslaved, and many of the men and boys were also chosen to become Legionaries. The rest were killed.",
+      "index": "21"
+    },
+    {
+      "topic": "VFreeformTheFortFortLuciusTopic008",
+      "topic_text": "You don't hate the Legion for what it did to your tribe?",
+      "emotion": "Disgust 10",
+      "response_text": "We were savages. The Legion raised us up, made us better than what we were.{Slight contempt - he's a little ashamed of how backwards his tribe was.}",
+      "index": "22"
+    },
+    {
+      "topic": "VFreeformTheFortFortLuciusTopic009",
+      "topic_text": "I have questions about something else.",
+      "emotion": "Neutral 50",
+      "response_text": "What did you want to talk about?",
+      "index": "23"
+    },
+    {
+      "topic": "VFreeformTheFortFortLuciusTopic010",
+      "topic_text": "What do you think about the NCR?",
+      "emotion": "Neutral 50",
+      "response_text": "The NCR Rangers are the biggest threat. Without them, the NCR is nothing.",
+      "index": "24"
+    },
+    {
+      "topic": "VFreeformTheFortFortLuciusTopic011",
+      "topic_text": "How did the NCR defeat the Legion at Hoover Dam before?",
+      "emotion": "Neutral 50",
+      "response_text": "We had the numbers, but not the tactics. I know - I was there at Boulder City when we were defeated.",
+      "index": "25"
+    },
+    {
+      "topic": "VFreeformTheFortFortLuciusTopic012",
+      "topic_text": "Is there anything that you need me to do?",
+      "emotion": "Neutral 50",
+      "response_text": "We recently obtained an artillery weapon, but we don't have the part or the skill to fix it.",
+      "index": "27"
+    },
+    {
+      "topic": "VFreeformTheFortFortLuciusTopic013",
+      "topic_text": "Your howitzer is operational.",
+      "emotion": "Neutral 50",
+      "response_text": "Well done. It will be very useful in the coming battle against the snipers the NCR will no doubt have hidden in the hills near the Dam.",
+      "index": "29"
+    },
+    {
+      "topic": "VFreeformTheFortFortLuciusTopic014",
+      "topic_text": "I'll see what I can do.",
+      "emotion": "Neutral 50",
+      "response_text": "The tribe calling themselves the Boomers is obsessed with such weapons, I've been told. You can probably find a spare firing mechanism there.",
+      "index": "30"
+    },
+    {
+      "topic": "VFreeformTheFortFortLuciusTopic015",
+      "topic_text": "Where did you get the gun, anyway?",
+      "emotion": "Neutral 50",
+      "response_text": "The trader, Dale Barton, salvaged it from a military base in Arizona. Yuma, I believe.",
+      "index": "31"
+    },
+    {
+      "topic": "VFreeformTheFortFortLuciusTopic016",
+      "topic_text": "What do you need artillery for?",
+      "emotion": "Neutral 50",
+      "response_text": "The best marksman of the NCR are usually at the rear of any battle. The gun will allow us to strike at them.",
+      "index": "32"
+    },
+    {
+      "topic": "VFreeformTheFortFortLuciusTopic017",
+      "topic_text": "I've noticed Legionaries prefer using machetes as weapons.",
+      "emotion": "Neutral 50",
+      "response_text": "{KAI-zar}Caesar has taught us that over-reliance on firearms can only weaken us in the long run. It's why we train heavily with our blades and our fists.",
+      "index": "33"
+    },
+    {
+      "topic": "VFreeformTheFortFortLuciusTopic018",
+      "topic_text": "There are a lot of tents here.",
+      "emotion": "Neutral 50",
+      "response_text": "And just about every one of them is occupied. Not all at the same time, usually - groups of Legionaries come and go all the time.",
+      "index": "35"
+    },
+    {
+      "topic": "VFreeformTheFortFortLuciusTopic019",
+      "topic_text": "If Caesar dies, who takes over the Legion?",
+      "emotion": "Neutral 50",
+      "response_text": "Legate Lanius will take Caesar's place at the head of the Legion. The Legate is a fine warrior, and the Legion will do well under his command.",
+      "index": "37"
+    },
+    {
+      "topic": "VFreeformTheFortFortLuciusTopic020",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "{WAH-lay}Vale.",
+      "index": "38"
+    },
+    {
+      "topic": "VFreeformTheFortFortLuciusTopic023",
+      "topic_text": "Are you the Legion's second-in-command?",
+      "emotion": "Neutral 50",
+      "response_text": "{Caesar alive}No, Legate Lanius is Caesar's second. The Legate replaced the Burned Man after the Legion's defeat at the Dam several years ago.",
+      "index": "39"
+    },
+    {
+      "topic": "VFreeformTheFortFortLuciusTopic024",
+      "topic_text": "I don't have the time right now.",
+      "emotion": "Neutral 50",
+      "response_text": "I understand.",
+      "index": "41"
+    },
+    {
+      "topic": "VFreeformTheFortFortLuciusTopic025",
+      "topic_text": "Can you teach me the Praetorian unarmed technique?",
+      "emotion": "Neutral 50",
+      "response_text": "{Bad rep with Legion}You have a poor reputation in the Legion. It wouldn't be acceptable for me to teach you anything right now.",
+      "index": "42"
+    },
+    {
+      "topic": "VFreeformTheFortFortLuciusTopic026",
+      "topic_text": "Tell me about the Burned Man.",
+      "emotion": "Neutral 50",
+      "response_text": "The Burned Man was{KAI-zar's}Caesar's advisor and general when the Legion was originally formed. The Burned Man led us to a disastrous defeat at the Dam.",
+      "index": "45"
+    },
+    {
+      "topic": "VFreeformTheFortFortLuciusTopic027",
+      "topic_text": "Is there anything you can tell me about the Legate?",
+      "emotion": "Neutral 50",
+      "response_text": "He's the best warrior in the Legion. A full Legionary by the time he was 12, he's never lost a battle.",
+      "index": "48"
+    },
+    {
+      "topic": "VFreeformTheFortFortLuciusTopic028",
+      "topic_text": "Apology accepted.",
+      "emotion": "Neutral 50",
+      "response_text": "{KAI-zar's}Caesar's death is regrettable, but we can't let it stand in the way of the Legion's goals.",
+      "index": "50"
+    },
+    {
+      "topic": "VFreeformTheFortFortLuciusTopic030",
+      "topic_text": "President Kimball is dead.",
+      "emotion": "Neutral 50",
+      "response_text": "{triumphant}The loss of morale in the NCR must have been staggering when their leader fell. It's proof that no one is out of the Legion's reach.",
+      "index": "53"
+    },
+    {
+      "topic": "VFreeformTheFortFortLuciusTopic031",
+      "topic_text": "President Kimball survived the assassination attempt.",
+      "emotion": "Anger 5",
+      "response_text": "Killing Kimball would've struck fear into the NCR. It's unfortunate that you weren't able to take advantage of this opportunity.",
+      "index": "55"
+    },
+    {
+      "topic": "VFreeformTheFortFortLuciusTopic032< Speech 50 >",
+      "topic_text": "Caesar would be dead if I didn't try to help him. How dare you blame me for trying to save his life!",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] What you say is true. I apologize for my rash action - it was out of grief and loyalty. I hope you understand.",
+      "index": "57"
+    },
+    {
+      "topic": "VFreeformTheFortFortLuciusTopic033< Medicine 50 >",
+      "topic_text": "The cranial bleeding was too much for a man of his age. A younger man would have lived.",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] I apologize for my rash action. I understand fighting and killing, not healing. I acted out of grief and loyalty.",
+      "index": "59"
+    },
+    {
+      "topic": "VFreeformTheFortFortLuciusTopic034",
+      "topic_text": "Let's finish this, then.",
+      "emotion": "Anger 50",
+      "response_text": "Avenge{KAI-zar}Caesar!",
+      "index": "61"
+    },
+    {
+      "topic": "VFreeformTheFortFortLuciusTopic035",
+      "topic_text": "<Lie> I did all I could to save him.",
+      "emotion": "Neutral 50",
+      "response_text": "Yet you failed, and you must pay.",
+      "index": "62"
+    },
+    {
+      "topic": "VFreeformTheFortFortLuciusTopic036",
+      "topic_text": "I did all I could to save him.",
+      "emotion": "Neutral 50",
+      "response_text": "Yet you failed, and you must pay.",
+      "index": "63"
+    },
+    {
+      "topic": "VFreeformTheFortFortLuciusTopic037",
+      "topic_text": "{Liked+}After everything I've done for the Legion, this one failure condemns me?",
+      "emotion": "Neutral 50",
+      "response_text": "{hesitant, knowing player is right}No... I suppose not. You've proved that you're a friend to us many times. I apologize for my temper.",
+      "index": "64"
+    },
+    {
+      "topic": "VFreeformTheFortFortLuciusTopic039",
+      "topic_text": "What? You think this is my fault?",
+      "emotion": "Neutral 50",
+      "response_text": "His head exploded, idiot. Of course it's your fault.{to his men}Avenge{KAI-zar}Caesar!",
+      "index": "65"
+    },
+    {
+      "topic": "VFreeformTheFortFortLuciusTopic040",
+      "topic_text": "Let's move on, then.",
+      "emotion": "Neutral 50",
+      "response_text": "Yes, we can't let{KAI-zar's}Caesar's death get in the way of the Legion's goals.",
+      "index": "66"
+    },
+    {
+      "topic": "VFreeformTheFortFortLuciusTopic041",
+      "topic_text": "You need me more than I need you - don't forget that.",
+      "emotion": "Anger 10",
+      "response_text": "{cooly responding to the player's threat}We'll see about that. In any case, we can't let{KAI-zar's}Caesar's death get in the way of the Legion's goals.",
+      "index": "69"
+    },
+    {
+      "topic": "VFreeformTheFortFortLuciusTopic042",
+      "topic_text": "I've brought a doctor, Arcade Gannon, who can take care of Caesar. He's outside.",
+      "emotion": "Neutral 50",
+      "response_text": "Very well. I'll have him seized and brought to{KAI-zar}Caesar as his personal physician.",
+      "index": "72"
+    },
+    {
+      "topic": "VFreeformTheFortFortLuciusTopic043",
+      "topic_text": "He's all yours.",
+      "emotion": "Neutral 50",
+      "response_text": "It will be done.",
+      "index": "74"
+    },
+    {
+      "topic": "VFreeformTheFortFortLuciusTopic044",
+      "topic_text": "On second thought, hold off.",
+      "emotion": "Anger 10",
+      "response_text": "{annoyed with player}{KAI-zar}Caesar's health worsens, and your indecision is unhelpful.",
+      "index": "75"
+    },
+    {
+      "topic": "VFreeformTheFortFortLuciusTopic045",
+      "topic_text": "I'll keep that in mind.",
+      "emotion": "Neutral 50",
+      "response_text": "See that you do.",
+      "index": "76"
+    },
+    {
+      "topic": "VFreeformTheFortFortLuciusTopic046",
+      "topic_text": "Out of my way, Lucius.",
+      "emotion": "Neutral 50",
+      "response_text": "{dismissing}Go.",
+      "index": "77"
+    },
+    {
+      "topic": "VFreeformTheFortFortLuciusTopic047",
+      "topic_text": "No trick, and I'm only trying to help.",
+      "emotion": "Neutral 50",
+      "response_text": "We'll see.",
+      "index": "78"
+    },
+    {
+      "topic": "VFreeformTheFortFortLuciusTopic048",
+      "topic_text": "President Kimball survived. His visit to the Hoover Dam was cancelled.",
+      "emotion": "Anger 5",
+      "response_text": "Killing Kimball would've struck fear into the NCR. It's unfortunate that you weren't able to take advantage of this opportunity.",
+      "index": "79"
+    },
+    {
+      "topic": "VFreeformTheFortFortLuciusTopic049",
+      "topic_text": "I've brought something to fix the Auto-Doc.",
+      "emotion": "Neutral 50",
+      "response_text": "Fix it, then. You're not leaving until it's done and{KAI-zar}Caesar lives.",
+      "index": "81"
+    },
+    {
+      "topic": "VFreeformTheFortFortLuciusTopic050",
+      "topic_text": "I have what's needed to do the surgery.",
+      "emotion": "Neutral 50",
+      "response_text": "Do it, then. You're not leaving until it's done and{KAI-zar}Caesar lives.",
+      "index": "82"
+    },
+    {
+      "topic": "VFreeformTheFortFortLuciusTopic051",
+      "topic_text": "A man who can cure Caesar, Arcade Gannon, waits outside. He's all yours.",
+      "emotion": "Neutral 50",
+      "response_text": "Good. I'll have my men seize him immediately.",
+      "index": "83"
+    },
+    {
+      "topic": "VFreeformTheFortFortLuciusTopic052",
+      "topic_text": "No, I haven't.",
+      "emotion": "Neutral 50",
+      "response_text": "Then you die.",
+      "index": "84"
+    },
+    {
+      "topic": "VFreeformTheFortFortLuciusTopic053",
+      "topic_text": "I'm still working on that, actually.",
+      "emotion": "Neutral 50",
+      "response_text": "You had your chance. Now you die.",
+      "index": "85"
+    },
+    {
+      "topic": "VFreeformTheFortFortLuciusTopic054",
+      "topic_text": "About Hoover Dam...",
+      "emotion": "Neutral 50",
+      "response_text": "We are preparing to move against the Dam, and Legate Lanius has a part for you to play in the battle. Report to him at his camp.",
+      "index": "86"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "{WAH-lay}Vale.",
+      "index": "87"
+    }
+  ],
+  "combat": []
+}

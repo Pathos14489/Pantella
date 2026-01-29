@@ -1,0 +1,131 @@
+{
+  "name": "Andy",
+  "url": "/wiki/Andy_(Fallout_3)",
+  "dialogue_name": "MS16Andy.txt",
+  "dialogue_url": "/wiki/MS16Andy.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "00074163",
+  "ref_id": "0007546A",
+  "editor_id": "Amata",
+  "location": "",
+  "location_url": null,
+  "descriptions": [
+    "Andy is a Mister Handy inside Vault 101 in Fallout 3.",
+    "An old Mister Handy model with the British butler personality loaded, Andy has been at Vault 101 longer than anyone can remember, and his condition suffered accordingly. While under the close supervision of Stanley Armstrong, it is still a capable assistant,",
+    "The years were not kind to Andy, but some systems fared better than others. The flamethrower was perfectly functional, and Andy developed a liking for burning radroaches with it, which proved important during James' escape from Vault 101. The flames saved Stanley,",
+    "Thankfully, neither of them was a stranger to it. Andy and Stanley developed a rapport over the years, with Andy ribbing Stanley when he undertook repairs. It offset the stress of working on an antique, which was prone to random movements whenever a stabilizer was knocked loose (Andy blamed it on alleged cerebral palsy on Stanley's part),",
+    "Andy's deteriorating state has not stopped Overseer Alphonse Almodovar from appointing Andy as the Vault's new physician after James absconded and Jonas Palmer was murdered on Almodovar's orders. Its bedside manner was a common point of complaint, as were examinations performed with cold, metal pincers.",
+    "As a result of this single casualty, once the situation stabilized, Andy was fired from its position, despite having fun during surgery, and retasked with cleaning the clinic up.",
+    "Mr. Handy Cake Maker",
+    "In the Fallout 76 season Fight for Freedom, a Mr. Handy Cake Maker C.A.M.P. object was released which functions as a cooking stove. While it is not possible to have a conversation with it and it stays in the same spot, it will deliver various voice lines. It also bakes the same cake Andy does in Fallout 3 and has Vault Boy cookies."
+  ],
+  "race": "Mister Handy",
+  "gender": "Male programming",
+  "affiliation": "Vault 101",
+  "role": "Maintenance technicianVaultphysician",
+  "detailed_location": "Vault 101",
+  "voice_actor": "Stephen Russell",
+  "special": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 5,
+    "Intelligence": 5,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "level": "3",
+  "misc_skills": [],
+  "karma": "Neutral",
+  "voice_type": "RobotMisterHandyDC",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "I am mortified about the cake mishap. Simply mortified.Play soundFo3 Andy Mortified.ogghttps://fallout.fandom.com/wiki/File:Fo3_Andy_Mortified.oggnoicon",
+      "index": "1"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "CG02CakeSpeech",
+      "topic_text": "CG02CakeSpeech",
+      "emotion": "Happy 100",
+      "response_text": "Attention everyone! It is time to cut the cake!Play soundFO3 Andy AttentionEveryone.ogghttps://fallout.fandom.com/wiki/File:FO3_Andy_AttentionEveryone.oggnoicon",
+      "index": "6"
+    },
+    {
+      "topic": "GOODBYE",
+      "topic_text": "I have to go now.",
+      "emotion": "Neutral 50",
+      "response_text": "Of course, of course! Don't let me keep you!Play soundFO3 MisterHandy    DontLetMeKeep…https://fallout.fandom.com/wiki/File:FO3_MisterHandy_DontLetMeKeep.oggnoicon",
+      "index": "7"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Neutral 50",
+      "response_text": "How may I serve you, master?{sarcastically obsequious}Play soundFO3 MisterHandy HowMayIServeMast…https://fallout.fandom.com/wiki/File:FO3_MisterHandy_HowMayIServeMaster.oggnoicon",
+      "index": "8"
+    }
+  ],
+  "combat": [
+    {
+      "topic": "AcceptYield",
+      "topic_text": "AcceptYield",
+      "emotion": "Neutral 50",
+      "response_text": "Cheerio. Water under the bridge.Play soundFO3 MisterHandy WaterUnderTheBri…https://fallout.fandom.com/wiki/File:FO3_MisterHandy_WaterUnderTheBridge.oggnoicon",
+      "index": "10"
+    },
+    {
+      "topic": "Assault",
+      "topic_text": "Assault",
+      "emotion": "Neutral 50",
+      "response_text": "Not very sporting of you.Play soundFO3 MisterHandy NotVerySporting.ogghttps://fallout.fandom.com/wiki/File:FO3_MisterHandy_NotVerySporting.oggnoicon",
+      "index": "11"
+    },
+    {
+      "topic": "Attack",
+      "topic_text": "Attack",
+      "emotion": "Neutral 50",
+      "response_text": "*Sigh.* Why must you humans always resort to violence?Play soundFO3 MisterHandy WhyMustHumans.ogghttps://fallout.fandom.com/wiki/File:FO3_MisterHandy_WhyMustHumans.oggnoicon",
+      "index": "14"
+    },
+    {
+      "topic": "Death",
+      "topic_text": "Death",
+      "emotion": "Neutral 50",
+      "response_text": "Oh, I say.Play soundFO3 MisterHandy OhISay.ogghttps://fallout.fandom.com/wiki/File:FO3_MisterHandy_OhISay.oggnoicon",
+      "index": "22"
+    },
+    {
+      "topic": "Murder",
+      "topic_text": "Murder",
+      "emotion": "Neutral 50",
+      "response_text": "Dear me, how unsporting of you.Play soundFO3 MisterHandy HowUnsporting.ogghttps://fallout.fandom.com/wiki/File:FO3_MisterHandy_HowUnsporting.oggnoicon",
+      "index": "25"
+    },
+    {
+      "topic": "Pickpocket",
+      "topic_text": "Pickpocket",
+      "emotion": "Disgust 50",
+      "response_text": "The class of people I'm forced to associate with these days just keeps falling.Play soundFO3 MisterHandy ClassOfPeople.ogghttps://fallout.fandom.com/wiki/File:FO3_MisterHandy_ClassOfPeople.oggnoicon",
+      "index": "28"
+    },
+    {
+      "topic": "Steal",
+      "topic_text": "Steal",
+      "emotion": "Disgust 50",
+      "response_text": "The class of people I'm forced to associate with these days just keeps falling.Play soundFO3 MisterHandy ClassOfPeople.ogghttps://fallout.fandom.com/wiki/File:FO3_MisterHandy_ClassOfPeople.oggnoicon",
+      "index": "29"
+    }
+  ]
+}

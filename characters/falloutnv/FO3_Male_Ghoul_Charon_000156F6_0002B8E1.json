@@ -1,0 +1,422 @@
+{
+  "name": "Charon",
+  "url": "/wiki/Charon_(Fallout_3)",
+  "dialogue_name": "Charon.txt",
+  "dialogue_url": "/wiki/Charon.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": true,
+  "base_id": "000156F6",
+  "ref_id": "0002B8E1",
+  "editor_id": "Charon",
+  "location": "The Ninth Circle",
+  "location_url": "/wiki/The_Ninth_Circle",
+  "descriptions": [
+    "Charon is a ghoul residing in Underworld in the Capital Wasteland in Fallout 3. He is a possible companion of the Lone Wanderer.",
+    "Very little of Charon's past before becoming the bouncer of the Ninth Circle in Underworld is revealed during the game. Ahzrukhal will tell the Lone Wanderer that Charon was raised by an unspecified group who brainwashed him into being completely loyal and obedient to whoever has his contract.",
+    "As the Ninth Circle's bouncer, Charon stands in the corner until needed. If recruited as a companion, then later dismissed by the Lone Wanderer, he will return there and sit in a nearby chair.",
+    "Charon appears in Fallout 3 and Fallout: Wasteland Warfare."
+  ],
+  "race": "Ghoul",
+  "gender": "Male",
+  "affiliation": "AhzrukhalLone Wanderer(Optional)",
+  "role": "BodyguardCompanion",
+  "detailed_location": "The Ninth Circle",
+  "voice_actor": "Mike Rosson",
+  "special": {
+    "Strength": 6,
+    "Perception": 7,
+    "Endurance": 5,
+    "Charisma": 3,
+    "Intelligence": 3,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "level": "5→20→30 (Broken Steelonly)",
+  "tag_skills": [
+    {
+      "Explosives:": "51→100"
+    },
+    {
+      "Small Guns:": "49→100"
+    },
+    {
+      "Sneak:": "49→100"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "240→315→365"
+    }
+  ],
+  "karma": "Neutral",
+  "voice_type": "MaleGenericGhoulDC",
+  "geck_race": "Ghoul",
+  "topics": [
+    {
+      "topic": "DLC03MQ11CharonEmployer",
+      "topic_text": "This contract says you're going. The code is 2-1-6. Now get.",
+      "emotion": "Neutral 50",
+      "response_text": "If you insist...",
+      "index": "1"
+    },
+    {
+      "topic": "DLC03MQ11CharonForgetIt",
+      "topic_text": "Just forget it.",
+      "emotion": "Neutral 50",
+      "response_text": "As you wish.",
+      "index": "2"
+    },
+    {
+      "topic": "DLC03MQ11CharonPlease",
+      "topic_text": "Charon, please do this for me. The code is 2-1-6.",
+      "emotion": "Neutral 50",
+      "response_text": "As my employer, I am obliged to honor your request. Very well.",
+      "index": "3"
+    },
+    {
+      "topic": "DLC03MQ11FollowerNotGoingGoodbye, Fawkes.",
+      "topic_text": "Forget it. Never mind.",
+      "emotion": "Neutral 50",
+      "response_text": "This seems an illogical solution to our dilemma.",
+      "index": "4"
+    },
+    {
+      "topic": "DLC03MQ11SendFollowerInFawkes, I need you to start the purifier. The code is 2-1-6.",
+      "topic_text": "You need to start the purifier, Charon. The code is 2-1-6.",
+      "emotion": "Neutral 50",
+      "response_text": "I don't recall that being part of the plan.",
+      "index": "7"
+    },
+    {
+      "topic": "FollowersCharonInitialHireGreeting1",
+      "topic_text": "Oh no. None of that. You belong to me now.",
+      "emotion": "Neutral 50",
+      "response_text": "I belong to no one. If you are my new employer, then I will serve you. But first, I must take care of something. Wait here.",
+      "index": "10"
+    },
+    {
+      "topic": "FollowersCharonInitialHireGreeting2",
+      "topic_text": "Slow down, there. I have good news. I'm your new employer.",
+      "emotion": "Neutral 50",
+      "response_text": "You purchased my contract from Ahzrukhal? So, I am no longer in his service. That is good to know.",
+      "index": "11"
+    },
+    {
+      "topic": "FollowersCharonKillAhzrukhalGreeting1",
+      "topic_text": "Whoa! What the fuck was that?",
+      "emotion": "Neutral 50",
+      "response_text": "Ahzrukhal was an evil bastard. So long as he held my contract, I was honor bound to do as he commanded.",
+      "index": "13"
+    },
+    {
+      "topic": "FollowersCharonKillAhzrukhalGreeting2",
+      "topic_text": "Sounds good. Let's get out of here.",
+      "emotion": "Neutral 50",
+      "response_text": "Would that I could. Although you are now my employer, traveling in such a large crowd would be foolish.",
+      "index": "19"
+    },
+    {
+      "topic": "FollowersFired",
+      "topic_text": "You're fired, Charon.",
+      "emotion": "Neutral 50",
+      "response_text": "Are you certain that this is what you wish?",
+      "index": "22"
+    },
+    {
+      "topic": "FollowersFiredNo",
+      "topic_text": "Nah. I'm just kidding.",
+      "emotion": "Neutral 50",
+      "response_text": "Very amusing.{Dry and flat.}",
+      "index": "23"
+    },
+    {
+      "topic": "FollowersFiredYes",
+      "topic_text": "Do I look like I'm kidding?",
+      "emotion": "Neutral 50",
+      "response_text": "Very well. Although you remain my employer until my contract changes hands. I will wait for you in Underworld, should you need me again.",
+      "index": "24"
+    },
+    {
+      "topic": "FollowersHired",
+      "topic_text": "I want you to come with me, Charon.",
+      "emotion": "Neutral 50",
+      "response_text": "I regret that I cannot join you at this time. You seem to already have someone in your employ.",
+      "index": "25"
+    },
+    {
+      "topic": "FollowersLetsGo",
+      "topic_text": "Let's get going.",
+      "emotion": "Neutral 50",
+      "response_text": "As you command.",
+      "index": "27"
+    },
+    {
+      "topic": "FollowersLetsGoNotYet1",
+      "topic_text": "Not just yet. I wanted to talk to you about something.",
+      "emotion": "Neutral 50",
+      "response_text": "Certainly. What is it?",
+      "index": "28"
+    },
+    {
+      "topic": "FollowersLetsGoNotYet2",
+      "topic_text": "I just wanted to make sure you were still here. Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Charming.",
+      "index": "29"
+    },
+    {
+      "topic": "FollowersPPurity",
+      "topic_text": "Charon, I need you to go into that chamber and turn on the purifier.",
+      "emotion": "Disgust 50",
+      "response_text": "You and I both know that's not going to happen. I've saved your sorry ass enough. This one's all you.",
+      "index": "30"
+    },
+    {
+      "topic": "FollowersTactics",
+      "topic_text": "Let's talk about your tactics.",
+      "emotion": "Neutral 50",
+      "response_text": "Is there a problem with what I'm doing?",
+      "index": "31"
+    },
+    {
+      "topic": "FollowersTacticsCombat",
+      "topic_text": "I want you to change your combat style.",
+      "emotion": "Neutral 50",
+      "response_text": "What do you think would be best?",
+      "index": "32"
+    },
+    {
+      "topic": "FollowersTacticsCombatEND",
+      "topic_text": "Let's talk about something else.",
+      "emotion": "Neutral 50",
+      "response_text": "If conversation is what you wish, then I shall provide it.",
+      "index": "33"
+    },
+    {
+      "topic": "FollowersTacticsCombatGOODBYE",
+      "topic_text": "That's all. Let's get going.",
+      "emotion": "Neutral 50",
+      "response_text": "I shall follow your lead.",
+      "index": "34"
+    },
+    {
+      "topic": "FollowersTacticsCombatMelee",
+      "topic_text": "I like what you're doing. Stick with the melee.",
+      "emotion": "Neutral 50",
+      "response_text": "It is what you wished of me.",
+      "index": "35"
+    },
+    {
+      "topic": "FollowersTacticsCombatRanged",
+      "topic_text": "You're not bad with a ranged weapon. Keep it up.",
+      "emotion": "Neutral 50",
+      "response_text": "It is what you wish of me.",
+      "index": "37"
+    },
+    {
+      "topic": "FollowersTacticsDistance",
+      "topic_text": "Let's talk about how close you're following me.",
+      "emotion": "Neutral 50",
+      "response_text": "Is there something that you wish me to change?",
+      "index": "39"
+    },
+    {
+      "topic": "FollowersTacticsDistanceDefault",
+      "topic_text": "You're good where you are.",
+      "emotion": "Neutral 50",
+      "response_text": "I am happy if you are happy.",
+      "index": "40"
+    },
+    {
+      "topic": "FollowersTacticsDistanceEND",
+      "topic_text": "Your distance is good. Let's talk about something else.",
+      "emotion": "Neutral 50",
+      "response_text": "If conversation is your order to me, I will converse with you.",
+      "index": "42"
+    },
+    {
+      "topic": "FollowersTacticsDistanceGOODBYE",
+      "topic_text": "All right, you're good. Let's get out of here.",
+      "emotion": "Neutral 50",
+      "response_text": "I will follow your lead.",
+      "index": "43"
+    },
+    {
+      "topic": "FollowersTacticsDistanceLong",
+      "topic_text": "Keep hanging back.",
+      "emotion": "Neutral 50",
+      "response_text": "It was my goal to continue doing so until you told me otherwise.",
+      "index": "44"
+    },
+    {
+      "topic": "FollowersTacticsEnd",
+      "topic_text": "Enough about tactics.",
+      "emotion": "Neutral 50",
+      "response_text": "If you are through giving orders, then let us move on.",
+      "index": "46"
+    },
+    {
+      "topic": "FollowersTrade",
+      "topic_text": "Let's trade equipment.",
+      "emotion": "Neutral 50",
+      "response_text": "Very well.",
+      "index": "47"
+    },
+    {
+      "topic": "FollowersWait",
+      "topic_text": "Wait here.",
+      "emotion": "Neutral 50",
+      "response_text": "I shall wait here until you return for me.",
+      "index": "48"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "If you don't cycle the airlock, I can't start the purifier.",
+      "index": "49"
+    },
+    {
+      "topic": "MQ08CharonTLGECK",
+      "topic_text": "Charon, you think you could retrieve the G.E.C.K. for me?",
+      "emotion": "Happy 70",
+      "response_text": "The contract entitles you to my services in combat. I'm nobody's errand boy. I'm afraid you'll have to get it yourself.",
+      "index": "63"
+    },
+    {
+      "topic": "MS14BackOffSounds like a normal guy.",
+      "topic_text": "Sorry. Just forget it.",
+      "emotion": "Neutral 50",
+      "response_text": "You're too nosy for your own good. It can be a dangerous habit.",
+      "index": "64"
+    },
+    {
+      "topic": "MS14CrowleyWhat can you tell me about Mister Crowley?",
+      "topic_text": "What's the deal with Crowley?",
+      "emotion": "Anger 50",
+      "response_text": "Ahzrukhal doesn't like it when I talk about his customers.",
+      "index": "65"
+    },
+    {
+      "topic": "MS14PersuadeCrowley",
+      "topic_text": "Come on. You can tell me. Ahzrukhal said so. <Lie.>",
+      "emotion": "Surprise 50",
+      "response_text": "Oh, well that's different.",
+      "index": "66"
+    },
+    {
+      "topic": "SpeechChallengeFailure",
+      "topic_text": "SpeechChallengeFailure",
+      "emotion": "Anger 50",
+      "response_text": "Get lost.{Dismissive and angry.}",
+      "index": "69"
+    },
+    {
+      "topic": "UnderworldCharonGreeting1",
+      "topic_text": "I just...",
+      "emotion": "Neutral 50",
+      "response_text": "Talk. To. Ahzrukhal.",
+      "index": "70"
+    },
+    {
+      "topic": "UnderworldCharonGreeting2",
+      "topic_text": "Yeah, but...",
+      "emotion": "Neutral 50",
+      "response_text": "Talk. To. Ahzrukhal.",
+      "index": "74"
+    },
+    {
+      "topic": "UnderworldCharonGreetingDebt",
+      "topic_text": "How did you end up working for...",
+      "emotion": "Neutral 50",
+      "response_text": "Not going to talk about it. Don't ask.",
+      "index": "78"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "FollowersCharonConfrontAhzrukhal1",
+      "topic_text": "FollowersCharonConfrontAhzrukhal1",
+      "emotion": "Neutral 50",
+      "response_text": "Ahzrukhal. I am told that I am no longer in your service.",
+      "index": "80"
+    },
+    {
+      "topic": "FollowersCharonConfrontAhzrukhal3",
+      "topic_text": "FollowersCharonConfrontAhzrukhal3",
+      "emotion": "Neutral 50",
+      "response_text": "Yes.",
+      "index": "81"
+    },
+    {
+      "topic": "GOODBYE",
+      "topic_text": "Let's go.",
+      "emotion": "Neutral 50",
+      "response_text": "And I shall follow.",
+      "index": "82"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Neutral 50",
+      "response_text": "I'm still here. Waiting for you.",
+      "index": "84"
+    },
+    {
+      "topic": "IdleChatter",
+      "topic_text": "Idle Chatter",
+      "emotion": "Neutral 50",
+      "response_text": "Be careful.",
+      "index": "88"
+    },
+    {
+      "topic": "UnderworldTalkCharonAhzurkhalBouncer1",
+      "topic_text": "UnderworldTalkCharonAhzurkhalBouncer1",
+      "emotion": "Neutral 50",
+      "response_text": "What?",
+      "index": "94"
+    },
+    {
+      "topic": "UnderworldTalkCharonAhzurkhalBouncer3",
+      "topic_text": "UnderworldTalkCharonAhzurkhalBouncer3",
+      "emotion": "Neutral 50",
+      "response_text": "<growls> Whatever.",
+      "index": "96"
+    },
+    {
+      "topic": "UnderworldTalkCharonAhzurkhalOrders1",
+      "topic_text": "UnderworldTalkAhzurkhalCharonOrders1",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah?",
+      "index": "101"
+    },
+    {
+      "topic": "UnderworldTalkCharonAhzurkhalOrders3",
+      "topic_text": "UnderworldTalkAhzurkhalCharonOrders3",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah.",
+      "index": "104"
+    },
+    {
+      "topic": "UnderworldTalkCharonCutOff1",
+      "topic_text": "UnderworldTalkCharonCutOff1",
+      "emotion": "Neutral 50",
+      "response_text": "No.",
+      "index": "109"
+    },
+    {
+      "topic": "UnderworldTalkCharonCutOff3",
+      "topic_text": "UnderworldTalkCharonCutOff3",
+      "emotion": "Neutral 50",
+      "response_text": "No.",
+      "index": "113"
+    }
+  ],
+  "combat": []
+}

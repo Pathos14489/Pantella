@@ -1,0 +1,262 @@
+{
+  "name": "Raquel",
+  "url": "/wiki/Raquel",
+  "dialogue_name": "NellisRaquel.txt",
+  "dialogue_url": "/wiki/NellisRaquel.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000FF262",
+  "ref_id": "000FF269",
+  "editor_id": "NellisRaquel",
+  "location": "Nellis Air Force Base, near the entrance",
+  "location_url": "/wiki/Nellis_Air_Force_Base",
+  "descriptions": [
+    "Raquel is a Boomer living at the Nellis Air Force Base in 2281.",
+    "Raquel is the Master-at-Arms of the Boomers at Nellis. She can usually be found sitting on top of some shipping containers directly north of the entrance to the base. She approaches the Courier when they first enter Nellis.",
+    "Raquel is one of the few NPCs in Fallout: New Vegas who wears a Pip-Boy 3000, and the only Boomer who does not wear one of their signature jumpsuits."
+  ],
+  "race": "Human",
+  "gender": "Female",
+  "affiliation": "Boomers",
+  "role": "Master-at-Arms",
+  "detailed_location": "Nellis Air Force Base",
+  "voice_actor": "April Stewart",
+  "special": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 10,
+    "Intelligence": 5,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "level": "1",
+  "misc_skills": [
+    {
+      "Hit Points:": "70"
+    }
+  ],
+  "karma": "Neutral",
+  "voice_type": "FemaleAdult03",
+  "geck_race": "Asian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "{to the sentry}I'll take this from here!",
+      "index": "1"
+    },
+    {
+      "topic": "VFreeformNellisNellisRaquelMissiles",
+      "topic_text": "I have some missiles for you.",
+      "emotion": "Neutral 50",
+      "response_text": "How many?",
+      "index": "10"
+    },
+    {
+      "topic": "VFreeformNellisNellisRaquelTopic000",
+      "topic_text": "All right. Lead the way.",
+      "emotion": "Neutral 50",
+      "response_text": "Follow close - and mind your behavior.{begrudgingly}",
+      "index": "11"
+    },
+    {
+      "topic": "VFreeformNellisNellisRaquelTopic002",
+      "topic_text": "What's a Master-At-Arms?",
+      "emotion": "Neutral 50",
+      "response_text": "I oversee the security of the Nellis homeland, from the coordination of its defenses to the training and fitness of its population.",
+      "index": "12"
+    },
+    {
+      "topic": "VFreeformNellisNellisRaquelTopic003",
+      "topic_text": "Let's talk about something else.",
+      "emotion": "Neutral 50",
+      "response_text": "All right.",
+      "index": "13"
+    },
+    {
+      "topic": "VFreeformNellisNellisRaquelTopic007",
+      "topic_text": "So the fact we're having this conversation means you failed, right?",
+      "emotion": "Neutral 50",
+      "response_text": "I wasn't the one firing the howitzers. If you want to see how good I am at killing savages, I can show you.",
+      "index": "14"
+    },
+    {
+      "topic": "VFreeformNellisNellisRaquelTopic008",
+      "topic_text": "Mother Pearl said you have a \"bug problem?\"",
+      "emotion": "Neutral 50",
+      "response_text": "Long story short, the power failed a few days ago because giant ants have tunneled into the generator room and set up a nest.",
+      "index": "16"
+    },
+    {
+      "topic": "VFreeformNellisNellisRaquelTopic011",
+      "topic_text": "If I do, you'll be the first to know.",
+      "emotion": "Neutral 50",
+      "response_text": "All I need is a pretext.",
+      "index": "19"
+    },
+    {
+      "topic": "VFreeformNellisNellisRaquelTopic012",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "We haven't seen the last of each other, savage.",
+      "index": "20"
+    },
+    {
+      "topic": "VFreeformNellisNellisRaquelTopic013",
+      "topic_text": "I can handle a few ants.",
+      "emotion": "Neutral 50",
+      "response_text": "Sure, anyone can. But there's more than a few down there. See for yourself.",
+      "index": "23"
+    },
+    {
+      "topic": "VFreeformNellisNellisRaquelTopic014",
+      "topic_text": "I'll do it, even though you're just trying to get me killed.",
+      "emotion": "Neutral 50",
+      "response_text": "Don't get my hopes up.",
+      "index": "27"
+    },
+    {
+      "topic": "VFreeformNellisNellisRaquelTopic015",
+      "topic_text": "Thanks, but there are easier ways to commit suicide.",
+      "emotion": "Neutral 50",
+      "response_text": "A savage, scared of bugs? I don't believe it. I'm sure you'll change your mind.",
+      "index": "31"
+    },
+    {
+      "topic": "VFreeformNellisNellisRaquelTopic016",
+      "topic_text": "Still in progress.",
+      "emotion": "Neutral 50",
+      "response_text": "It's not in progress if you're up here talking to me. Get it taken care of.",
+      "index": "35"
+    },
+    {
+      "topic": "VFreeformNellisNellisRaquelTopic017",
+      "topic_text": "All dead.",
+      "emotion": "Neutral 50",
+      "response_text": "If that's so, why isn't the power back on? Remember how I told you to power up the generators when the ants are dead?",
+      "index": "36"
+    },
+    {
+      "topic": "VFreeformNellisNellisRaquelTopic019",
+      "topic_text": "Yes, it's safe to go down there now.",
+      "emotion": "Neutral 50",
+      "response_text": "Maybe Pearl is right about you, because I don't know how you pulled that off.",
+      "index": "38"
+    },
+    {
+      "topic": "VFreeformNellisNellisRaquelTopic020",
+      "topic_text": "Well, most of the ants are dead.",
+      "emotion": "Neutral 50",
+      "response_text": "I didn't tell you to kill most of the ants. It's an either-or proposition. Get down there and finish them off.",
+      "index": "40"
+    },
+    {
+      "topic": "VFreeformNellisNellisRaquelTopic021",
+      "topic_text": "<Lie> Yep, power on, ant's dead, all good.",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] Maybe Pearl is right about you, because I don't know how you pulled that off.",
+      "index": "41"
+    },
+    {
+      "topic": "VFreeformNellisNellisRaquelTopic022",
+      "topic_text": "Just doing my part to help out.",
+      "emotion": "Neutral 50",
+      "response_text": "I already said you did a good job. I don't give out hugs.",
+      "index": "44"
+    },
+    {
+      "topic": "VFreeformNellisNellisRaquelTopic023",
+      "topic_text": "Wait. I may have missed an ant or two.",
+      "emotion": "Neutral 50",
+      "response_text": "You may have missed an ant or two? Get back down there and finish those ants off!",
+      "index": "45"
+    },
+    {
+      "topic": "VFreeformNellisNellisRaquelTopic024",
+      "topic_text": "Anything else I can help out with?",
+      "emotion": "Neutral 50",
+      "response_text": "The next time you leave Nellis, keep an eye out for missiles. We're down to a five-year supply for our launchers.",
+      "index": "46"
+    },
+    {
+      "topic": "VFreeformNellisNellisRaquelTopic025",
+      "topic_text": "Nice talking to you.",
+      "emotion": "Neutral 50",
+      "response_text": "Right.",
+      "index": "47"
+    },
+    {
+      "topic": "VFreeformNellisNellisRaquelTopic026",
+      "topic_text": "Will do.",
+      "emotion": "Neutral 50",
+      "response_text": "Come find me when you've got some to turn in.",
+      "index": "48"
+    },
+    {
+      "topic": "VFreeformNellisNellisRaquelTopic027",
+      "topic_text": "I'm not sure if I'll be able to spare any, but I'll let you know.",
+      "emotion": "Neutral 50",
+      "response_text": "Fine.",
+      "index": "49"
+    },
+    {
+      "topic": "VFreeformNellisNellisRaquelTopic028",
+      "topic_text": "I have 1 spare missile.",
+      "emotion": "Neutral 50",
+      "response_text": "It's better than nothing.",
+      "index": "50"
+    },
+    {
+      "topic": "VFreeformNellisNellisRaquelTopic029",
+      "topic_text": "I have 5 spare missiles.",
+      "emotion": "Neutral 50",
+      "response_text": "Thanks. Those'll last us a day.",
+      "index": "51"
+    },
+    {
+      "topic": "VFreeformNellisNellisRaquelTopic030",
+      "topic_text": "I have 10 spare missiles.",
+      "emotion": "Neutral 50",
+      "response_text": "Good work.",
+      "index": "52"
+    },
+    {
+      "topic": "VFreeformNellisNellisRaquelTopic031",
+      "topic_text": "Sorry, I was mistaken. I don't have any extra missiles.",
+      "emotion": "Neutral 50",
+      "response_text": "What kind of fool doesn't keep track of reserve ammunition? Don't waste my time.",
+      "index": "53"
+    },
+    {
+      "topic": "VFreeformNellisNellisRaquelTopic033",
+      "topic_text": "Who is Mother Pearl?",
+      "emotion": "Neutral 50",
+      "response_text": "As I said, she is our Eldest. Mother Pearl has lived at Nellis from the start, and has the wisdom of her age.",
+      "index": "54"
+    },
+    {
+      "topic": "VFreeformNellisNellisRaquelTopic035",
+      "topic_text": "I think I'll be leaving.",
+      "emotion": "Neutral 50",
+      "response_text": "Unacceptable. You've made it this far, probed our defenses, seen our faces.",
+      "index": "56"
+    },
+    {
+      "topic": "VFreeformNellisNellisRaquelTopic038",
+      "topic_text": "Are you going to confiscate my weapons?",
+      "emotion": "Neutral 50",
+      "response_text": "Confiscate your weapons? Certainly not! Personal armament is the foundation of social trust and responsibility.{shocked}",
+      "index": "59"
+    }
+  ],
+  "conversation": [],
+  "combat": []
+}

@@ -1,0 +1,203 @@
+{
+  "name": "Timebomb",
+  "url": "/wiki/Timebomb",
+  "dialogue_name": "Timebomb.txt",
+  "dialogue_url": "/wiki/Timebomb.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": true,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "0002805A",
+  "ref_id": "0002805B",
+  "editor_id": "Timebomb",
+  "location": "Red's clinic",
+  "location_url": "/wiki/Red%27s_clinic",
+  "descriptions": [
+    "Timebomb is a badly-injured patient at Red's clinic in Big Town in Fallout 3.",
+    "Timebomb, like every other inhabitant of Big Town, came from Little Lamplight.",
+    "Currently laid out in a coma in the operating room of Red's clinic, Timebomb was severely wounded during the last super mutant attack, when Red and Shorty were kidnapped. He has very few memories of his injury,",
+    "If the Lone Wanderer speaks to Bittercup, she will say she had a relationship with Timebomb.",
+    "Playstation 3 Despite being in a coma, he will talk and clap his hands when lying unconscious on the gurney."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Big TownLittle Lamplight(formerly)",
+  "role": "Resident of Big Town",
+  "detailed_location": "Big Town",
+  "voice_actor": "Craig Sechler",
+  "special": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 5,
+    "Intelligence": 4,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "level": "2→6",
+  "tag_skills": [
+    {
+      "Barter:": "34→53"
+    },
+    {
+      "Medicine:": "32→51"
+    },
+    {
+      "Melee Weap.:": "36→55"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "21→41(26→46)"
+    },
+    {
+      "Critical Chance:": "5%"
+    },
+    {
+      "Unarmed Dam.:": "1.15"
+    },
+    {
+      "Poison Resist.:": "15%(20%)"
+    },
+    {
+      "Rad. Resist.:": "6%(8%)"
+    },
+    {
+      "Carry Weight:": "210"
+    },
+    {
+      "Damage Res.:": "2%"
+    }
+  ],
+  "karma": "Good",
+  "voice_type": "MaleAdult04DC",
+  "geck_race": "Hispanic",
+  "topics": [
+    {
+      "topic": "BigtownTimebombHealed1A",
+      "topic_text": "You had seven bullet wounds and broke both clavicles. Should be fine now.",
+      "emotion": "Surprise 50",
+      "response_text": "Wow. That's ... you saved my life! Thanks. You're a good person, you know that?",
+      "index": "1"
+    },
+    {
+      "topic": "BigtownTimebombHealed1B",
+      "topic_text": "It wasn't free. Doctor's fees are expensive. Understand?",
+      "emotion": "Neutral 50",
+      "response_text": "Oh, yeah, sure. I understand. Here. That's all I have.",
+      "index": "2"
+    },
+    {
+      "topic": "BigtownTimebombHealed1C",
+      "topic_text": "You're welcome. Don't do anything strenuous for a few weeks.",
+      "emotion": "Neutral 50",
+      "response_text": "Alright. I'll be careful. I promise.",
+      "index": "3"
+    },
+    {
+      "topic": "BigtownTimebombHealed2A",
+      "topic_text": "I wanted you to be conscious before I killed you.",
+      "emotion": "Sad 50",
+      "response_text": "Ah, shit.{Timebomb is NOT having a good day.}",
+      "index": "4"
+    },
+    {
+      "topic": "BigtownTimebombHealedEND",
+      "topic_text": "Nothing happened. I just need you to answer some questions.",
+      "emotion": "Neutral 50",
+      "response_text": "Oh, uh, okay. Whatever you say.{Timebomb is woozy and lightheaded. He just survived some brutal injuries.}",
+      "index": "5"
+    },
+    {
+      "topic": "BigtownTownBittercupandFlash",
+      "topic_text": "Bittercup tells me the two of you had a thing together.",
+      "emotion": "Surprise 50",
+      "response_text": "We did? Wow, that's news to me. How long was I unconscious, again?",
+      "index": "6"
+    },
+    {
+      "topic": "BigtownTownServices",
+      "topic_text": "Do you have any traders in town? Any doctors?",
+      "emotion": "Neutral 50",
+      "response_text": "Well, you've seen the clinic. Red's the smart one in Bigtown. I'd ask her.{Timebomb is amazingly calm.}",
+      "index": "8"
+    },
+    {
+      "topic": "BigtownTownWhatsWrongThis place looks like a ghost town.",
+      "topic_text": "Do you know anything about the Super Mutant attacks?",
+      "emotion": "Neutral 50",
+      "response_text": "I remember screaming and gunfire. One of those big, hulking things shot at me. That's all I can think of.{Timebomb is eerily calm. He's still half-out of it from his injuries.}",
+      "index": "11"
+    },
+    {
+      "topic": "BigtownTownWhereDidYouComeFromWhere did you people come from, anyway?",
+      "topic_text": "Tell me how Big Town got started.",
+      "emotion": "Neutral 50",
+      "response_text": "Whoa, that was a long time ago. I'm not sure when, but everyone who grows up in Lamplight ends up here. Not too many of us left.{Timebomb is eerily calm. He's still a bit woozy from the injuries.}",
+      "index": "12"
+    },
+    {
+      "topic": "BigtownTownWhosWhoWho lives here?",
+      "topic_text": "You live here, right? What do you know about the people?",
+      "emotion": "Neutral 50",
+      "response_text": "Oh, yeah! I can tell you all about them, if you want. Let's see...{He is still half-awake, due to his injuries.}",
+      "index": "13"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "I'm watching. Go on. Teach us what to do.",
+      "index": "16"
+    },
+    {
+      "topic": "SpeechChallengeFailure",
+      "topic_text": "SpeechChallengeFailure",
+      "emotion": "Anger 50",
+      "response_text": "Uh ... do I look like I have any money on me? I'm sorry, I can't pay you anything.",
+      "index": "22"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "BigTownGoodbye",
+      "topic_text": "BigTownGoodbye",
+      "emotion": "Neutral 50",
+      "response_text": "Um, Yeah. Yeah, they are.{Timebomb can't think of a proper response, so he just agrees.}",
+      "index": "23"
+    },
+    {
+      "topic": "BigTownResponse",
+      "topic_text": "BigTownResponse",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah, yeah. I'm fine, Red. Super fine. Super duper fine. That Wastelander saved me!{Timebomb is grateful but socially awkward.}",
+      "index": "28"
+    },
+    {
+      "topic": "GOODBYE",
+      "topic_text": "I have to go now.",
+      "emotion": "Neutral 50",
+      "response_text": "Watch yourself out there.",
+      "index": "31"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Happy 100",
+      "response_text": "Heya!",
+      "index": "34"
+    },
+    {
+      "topic": "MS01CrowdSay",
+      "topic_text": "MS01CrowdSay",
+      "emotion": "Surprise 50",
+      "response_text": "Hurray!{(cheering) in an excited cheering mob}",
+      "index": "42"
+    }
+  ],
+  "combat": []
+}

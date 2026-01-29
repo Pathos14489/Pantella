@@ -1,0 +1,139 @@
+{
+  "name": "Maude",
+  "url": "/wiki/Maude",
+  "dialogue_name": "WestsideMaude.txt",
+  "dialogue_url": "/wiki/WestsideMaude.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000F6250",
+  "ref_id": "000F6255",
+  "editor_id": "WestsideMaude",
+  "location": "Casa Madrid Apartments",
+  "location_url": "/wiki/Casa_Madrid_Apartments",
+  "descriptions": [
+    "Maude is an elderly female prostitute working for Pretty Sarah at the Casa Madrid in Fallout: New Vegas.",
+    "The oldest prostitute at the Casa, Maude considers herself spry enough to make a living out of sex work (provided her back doesn't give out), compensating for the lack of her looks with experience",
+    "While Maude has plenty of confidence, Pretty Sarah considers her to be the \"discount\" option for customers who can't afford Sweetie (Maude asks for just a quarter of what Sweetie does) or who like older women.",
+    "Maude is homophobic, disapproving of Jimmy and considering Sweetie perverted for having female clients.",
+    "Cost: 75 caps, requires male character"
+  ],
+  "race": "Human",
+  "gender": "Female",
+  "affiliation": "WestsidePretty Sarah",
+  "role": "Prostitute",
+  "detailed_location": "Casa Madrid Apartments, Westside",
+  "voice_actor": "Marianne Muellerleile",
+  "special": {
+    "Strength": 3,
+    "Perception": 3,
+    "Endurance": 4,
+    "Charisma": 10,
+    "Intelligence": 8,
+    "Agility": 3,
+    "Luck": 8
+  },
+  "level": "8",
+  "misc_skills": [
+    {
+      "Hit Points:": "100"
+    }
+  ],
+  "karma": "Neutral",
+  "voice_type": "FemaleOld01",
+  "geck_race": "CaucasianOldAged",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Fear 50",
+      "response_text": "{Player in combat}Oh my! Keep me out of this!",
+      "index": "1"
+    },
+    {
+      "topic": "VFreeformCasaMadridWestsideMaudeTopic000",
+      "topic_text": "Aren't you kind of old to be doing this?",
+      "emotion": "Neutral 50",
+      "response_text": "Old but spry, honey. So long as my back don't give out, I can make a living lying on it.",
+      "index": "6"
+    },
+    {
+      "topic": "VFreeformCasaMadridWestsideMaudeTopic001",
+      "topic_text": "You work for Pretty Sarah?",
+      "emotion": "Neutral 50",
+      "response_text": "That's right. Strange at first, having a woman for a pimp, but she's tough enough to handle any trouble so far.",
+      "index": "8"
+    },
+    {
+      "topic": "VFreeformCasaMadridWestsideMaudeTopic002",
+      "topic_text": "Tell me about Sweetie.",
+      "emotion": "Neutral 50",
+      "response_text": "She's a good earner.{sour grapes}Of course, she don't care who she sleeps with or what they do to her.",
+      "index": "9"
+    },
+    {
+      "topic": "VFreeformCasaMadridWestsideMaudeTopic003",
+      "topic_text": "I'd like your services.",
+      "emotion": "Neutral 50",
+      "response_text": "{Male PC}Best prices around so long as{alluding to anal sex}you don't try putting anything someplace it was never intended. How's that sound?",
+      "index": "10"
+    },
+    {
+      "topic": "VFreeformCasaMadridWestsideMaudeTopic004",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "{Male PC}You know where to find me, honey.",
+      "index": "13"
+    },
+    {
+      "topic": "VFreeformCasaMadridWestsideMaudeTopic005",
+      "topic_text": "<75 caps> What the hell. Let's do it.",
+      "emotion": "Neutral 50",
+      "response_text": "You won't notice anything once the lights are out, hon. The places that count are still firm enough...",
+      "index": "15"
+    },
+    {
+      "topic": "VFreeformCasaMadridWestsideMaudeTopic006",
+      "topic_text": "<75 caps needed> I don't have enough caps on me.",
+      "emotion": "Anger 5",
+      "response_text": "Well, I'm not a goddamn charity, so come back when you do.",
+      "index": "17"
+    },
+    {
+      "topic": "VFreeformCasaMadridWestsideMaudeTopic007",
+      "topic_text": "No thanks.",
+      "emotion": "Neutral 50",
+      "response_text": "I'll be right here if you change your mind, honey. Just let me know.",
+      "index": "18"
+    },
+    {
+      "topic": "VFreeformCasaMadridWestsideMaudeTopic008",
+      "topic_text": "What do you know about Jimmy?",
+      "emotion": "Neutral 50",
+      "response_text": "I suppose he's okay, for one of{disapproving of his homosexuality}those. I suppose Pretty Sarah's got to cover every sort of customer.",
+      "index": "19"
+    },
+    {
+      "topic": "VFreeformCasaMadridWestsideMaudeTopic009",
+      "topic_text": "What do you know about Dermot and Saint James?",
+      "emotion": "Neutral 50",
+      "response_text": "Those boys been living here a while now. They sell salvage and do all right. I never been with either of them.",
+      "index": "20"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "{Male PC}You know where to find me, honey.",
+      "index": "22"
+    }
+  ],
+  "combat": []
+}

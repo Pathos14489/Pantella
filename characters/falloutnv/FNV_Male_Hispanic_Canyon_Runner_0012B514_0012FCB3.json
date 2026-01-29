@@ -1,0 +1,194 @@
+{
+  "name": "Canyon Runner",
+  "url": "/wiki/Canyon_Runner",
+  "dialogue_name": "NVCCCanyonRunner.txt",
+  "dialogue_url": "/wiki/NVCCCanyonRunner.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "0012B514",
+  "ref_id": "0012FCB3",
+  "editor_id": "NVCCCanyonRunner",
+  "location": "Cottonwood Cove",
+  "location_url": "/wiki/Cottonwood_Cove",
+  "descriptions": [
+    "Canyon Runner is a slave-master in Caesar's Legion stationed at Cottonwood Cove in the Mojave Wasteland in 2281.",
+    "Once a member of the Blackfoot tribe, the first to follow Caesar as the foundation of his Legion, Canyon Runner served and climbed the ranks until he became a slavemaster, specializing in breaking those captured by the Legion and turning them into obedient slaves. He is a zealous follower of Caesar and firmly believes that conquering and enslaving people is the only way to save them from themselves by giving them purpose and virtue.",
+    "If asked, he elaborates on the value of Cottonwood Cove as a staging area for Legion raids overseen by the commanding centurion Aurelius, and as such, the breaking of slaves does not occur there, so all he can do is assess the fitness of captures before they are sent over the Colorado",
+    "By 2281, Canyon Runner is disappointed over the latest group of captures, members of the Weathers family (minus the patriarch Frank who escaped), finding them particularly problematic as not only are they poor candidates for slavery, with the exception of the daughter, but the matron also has a tendency to talk back. He would much rather sell them off for caps, but a lack of offers means he has to keep them penned up until they can be shipped out.",
+    "Canyon Runner can be found inside the Cottonwood Cove storage or patrolling the area around the building, close to the cage where the Weathers family members are kept.",
+    "Shane Johnson voices Canyon Runner and Oscar Velasco in a distinct manner. Both frequently do not pause in between sentences occasionally.",
+    "Frumentarii: Alerio · Cato Hostilius · Gabban · Karl · Picus · Disguised frumentarius · Ulysses (formerly)\nConsul: M. Licinius Crassus · M. Scribonius Libo Drusus (of the consul)"
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Caesar's LegionBlackfoot",
+  "role": "LegionarySlave master4 of Clubs",
+  "detailed_location": "Cottonwood Cove",
+  "voice_actor": "Shane Johnson",
+  "special": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 6,
+    "Charisma": 4,
+    "Intelligence": 4,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "level": "13",
+  "tag_skills": [
+    {
+      "Guns:": "78"
+    },
+    {
+      "Melee Weap.:": "80"
+    },
+    {
+      "Unarmed:": "80"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "160"
+    }
+  ],
+  "karma": "Neutral",
+  "voice_type": "MaleAdult09",
+  "geck_race": "Hispanic",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "I see you bear the Mark of{KAI-zar}Caesar! Cursor{Luh-CUL-us}Lucullus awaits you at the docks!",
+      "index": "1"
+    },
+    {
+      "topic": "Topic000",
+      "topic_text": "Could we go lower than 300 caps?",
+      "emotion": "Neutral 50",
+      "response_text": "{scoffing}This isn't the total we agreed upon. Don't waste my time, wastelander.",
+      "index": "6"
+    },
+    {
+      "topic": "Topic002",
+      "topic_text": "By \"captures,\" do you mean \"slaves\"?",
+      "emotion": "Neutral 50",
+      "response_text": "{good-humored}No, no, no - they haven't yet earned the right to be called \"slaves\"! Those three in the pen are captures, nothing more.",
+      "index": "7"
+    },
+    {
+      "topic": "Topic007<SPEECH - player tells CR the daughter has an incurable STD>",
+      "topic_text": "<Lie> Any fool can see that girl has all the symptoms of Pustular Hypomyalgia!",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED]{alarmed, trouble pronouncing it}Pustulah  what? Is that contagious? That doesn't sound good at all!",
+      "index": "10"
+    },
+    {
+      "topic": "Topic008",
+      "topic_text": "I can pay you 300 caps.",
+      "emotion": "Neutral 50",
+      "response_text": "A fair price. Always best to have caps on hand in case traders stop by.",
+      "index": "12"
+    },
+    {
+      "topic": "Topic009",
+      "topic_text": "I'll give you 150 caps for the lot.",
+      "emotion": "Neutral 50",
+      "response_text": "Seems I'm fortunate to get that much for them, given the circumstances!{DUPLICATE?}",
+      "index": "14"
+    },
+    {
+      "topic": "Topic011",
+      "topic_text": "It doesn't bother you, enslaving people?",
+      "emotion": "Neutral 50",
+      "response_text": "{the player's ignorance is almost comical}Why would it bother me to enslave these wretches? They have no purpose, no creed, no honor.",
+      "index": "16"
+    },
+    {
+      "topic": "Topic012",
+      "topic_text": "I'll come back if I want to buy them.",
+      "emotion": "Neutral 50",
+      "response_text": "Please do. An outbreak of{trouble pronouncing it}pustulah-whatever is the last thing we need.",
+      "index": "19"
+    },
+    {
+      "topic": "Topic016",
+      "topic_text": "How much would it cost to buy the three \"captures\"?",
+      "emotion": "Neutral 50",
+      "response_text": "It's a weak bunch, to be honest. I'd rather have extra currency to buy supplies or better captures off traders.",
+      "index": "20"
+    },
+    {
+      "topic": "Topic017",
+      "topic_text": "Let me think about it.",
+      "emotion": "Neutral 50",
+      "response_text": "Let me know if you change your mind.",
+      "index": "24"
+    },
+    {
+      "topic": "Topic018",
+      "topic_text": "I'll give you 150 caps for the lot.",
+      "emotion": "Neutral 50",
+      "response_text": "Seems I'm fortunate to get that much for them, given the circumstances!{DUPLICATE?}",
+      "index": "25"
+    },
+    {
+      "topic": "Topic019",
+      "topic_text": "How did the Legion set up a camp on this side of the river?",
+      "emotion": "Neutral 50",
+      "response_text": "It was easy. The Colorado is narrow here, and when the Profligates abandoned Searchlight, there was no one to guard the crossing.",
+      "index": "28"
+    },
+    {
+      "topic": "Topic020",
+      "topic_text": "How did you join Caesar's Legion?",
+      "emotion": "Neutral 50",
+      "response_text": "{proudly}I have Blackfoot in me, the first tribe that{KAI-zar}Caesar ever led in battle - the tribe that formed the Legion.",
+      "index": "30"
+    },
+    {
+      "topic": "Topic021",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "{\"Wall-ae\"}Vale.",
+      "index": "32"
+    },
+    {
+      "topic": "Topic022",
+      "topic_text": "Who is Cursor Lucullus?",
+      "emotion": "Neutral 50",
+      "response_text": "The best Cursor in the Legion. You'll reach Fortification Hill without incident, that's for sure.",
+      "index": "33"
+    },
+    {
+      "topic": "Topic023",
+      "topic_text": "Do you have any \"captures\" with the last name, \"Weathers?\"",
+      "emotion": "Neutral 50",
+      "response_text": "{patiently explaining}Captures lose any claim to the names they called themselves when they let themselves be taken.",
+      "index": "35"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "{\"Wall-ae\"}Vale.",
+      "index": "37"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "Hello",
+      "emotion": "Neutral 50",
+      "response_text": "{AH-way}Ave.",
+      "index": "38"
+    }
+  ],
+  "combat": []
+}

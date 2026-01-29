@@ -1,0 +1,155 @@
+{
+  "name": "Trinnie",
+  "url": "/wiki/Trinnie",
+  "dialogue_name": "Trinnie.txt",
+  "dialogue_url": "/wiki/Trinnie.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": true,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000156C3",
+  "ref_id": "0001E75D",
+  "editor_id": "Trinnie",
+  "location": "Rivet City",
+  "location_url": "/wiki/Rivet_City",
+  "descriptions": [
+    "Trinnie is a citizen of Rivet City in Fallout 3.",
+    "Trinnie was, until recently, a resident of Little Lamplight. She has since become completely wasted on alcohol and chems 24/7. She spends her days in the Muddy Rudder and then takes a break to go to A Quick Fix and \"borrow\" some chems. She then goes off to hide and enjoy the high for a bit before returning to the Muddy Rudder. Belle and Brock feel bad for Trinnie and let her sleep in their quarters. She has been known to turn tricks to get money, but she is not forced to by Belle or Brock.",
+    "Trinnie's medical information may be accessed from Doctor Preston's terminal in the Rivet City clinic and it reads as follows:",
+    "Surprisingly healthy, apart from the alcoholism and other chronic dangers of her line of work. Guess they grow them strong in Lamplight.",
+    "She spends most of her time at the Muddy Rudder drinking and interacting with other non-player characters."
+  ],
+  "race": "Human",
+  "gender": "Female",
+  "affiliation": "Little Lamplight(formerly)Rivet City",
+  "role": "Chem addictProstitute",
+  "detailed_location": "The Muddy Rudder",
+  "voice_actor": "Jan Johns",
+  "special": {
+    "Strength": 4,
+    "Perception": 2,
+    "Endurance": 3,
+    "Charisma": 5,
+    "Intelligence": 3,
+    "Agility": 3,
+    "Luck": 6
+  },
+  "level": "1",
+  "tag_skills": [],
+  "misc_skills": [
+    {
+      "Hit Points:": "20"
+    },
+    {
+      "Critical Chance:": "6%"
+    },
+    {
+      "Unarmed Dam.:": "1.05"
+    },
+    {
+      "Poison Resist.:": "10%"
+    },
+    {
+      "Rad. Resist.:": "4%"
+    },
+    {
+      "Carry Weight:": "190"
+    }
+  ],
+  "karma": "Good",
+  "voice_type": "FemaleAdult04DC",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Happy 50",
+      "response_text": "Hey, good lookin'. How come you haven't bought me a drink yet?",
+      "index": "1"
+    },
+    {
+      "topic": "MS03RCHistory1",
+      "topic_text": "Could I ask you about Rivet City's history?",
+      "emotion": "Happy 5",
+      "response_text": "Can't help you with the history, honey.",
+      "index": "6"
+    },
+    {
+      "topic": "RCTopicRivetCityWhat kind of place is this Rivet City?",
+      "topic_text": "What's it like living on a giant ship?",
+      "emotion": "Disgust 50",
+      "response_text": "It's noisy, dark, and smelly.",
+      "index": "7"
+    },
+    {
+      "topic": "RCTrinnieBuyDrink",
+      "topic_text": "Sure. Here's 5 caps. Go ahead and pick your poison.",
+      "emotion": "Surprise 50",
+      "response_text": "Whoa! Why is the room spinning?{drunk}",
+      "index": "9"
+    },
+    {
+      "topic": "RCTrinnieNoSecret",
+      "topic_text": "Keep your secret. I wouldn't want to take advantage of you.",
+      "emotion": "Sad 50",
+      "response_text": "You're a real friend. My real friend.{drunk}",
+      "index": "13"
+    },
+    {
+      "topic": "RCTrinnieNotInterested",
+      "topic_text": "Sorry. Not interested. Get your own drinks.",
+      "emotion": "Anger 50",
+      "response_text": "Tightwad!",
+      "index": "14"
+    },
+    {
+      "topic": "RCTrinnieSecret",
+      "topic_text": "So what's this secret?",
+      "emotion": "Surprise 50",
+      "response_text": "I know where Belle keeps her stash. But she doesn't know I know.{drunk}",
+      "index": "18"
+    },
+    {
+      "topic": "SpeechChallengeFailure",
+      "topic_text": "SpeechChallengeFailure",
+      "emotion": "Anger 50",
+      "response_text": "I ought to slap you.",
+      "index": "21"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYEI have to go now.",
+      "topic_text": "I hate to do this, but I have to go.",
+      "emotion": "Happy 50",
+      "response_text": "Your loss, sugar. Come see me again sometime.",
+      "index": "23"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Anger 50",
+      "response_text": "Belle, gimme another drink.",
+      "index": "25"
+    },
+    {
+      "topic": "RCGoodbye",
+      "topic_text": "RCGoodbye",
+      "emotion": "Anger 50",
+      "response_text": "Sure thing, Chief. Next time I'll take him into the back to fuck him instead. Sheesh!",
+      "index": "35"
+    },
+    {
+      "topic": "RCPackageEnd",
+      "topic_text": "RCPackageEnd",
+      "emotion": "Fear 50",
+      "response_text": "Oh, man. I got the itch. I'm heading up to see Cindy.{agitated, she's got the DTs and needs her drugs.}",
+      "index": "43"
+    }
+  ],
+  "combat": []
+}

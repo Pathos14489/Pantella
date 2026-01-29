@@ -1,0 +1,152 @@
+{
+  "name": "Knight Artemis",
+  "url": "/wiki/Artemis_(Fallout_3)",
+  "dialogue_name": "KnightArtemis.txt",
+  "dialogue_url": "/wiki/KnightArtemis.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "0001937D",
+  "ref_id": "000210D1",
+  "editor_id": "KnightArtemis",
+  "location": "Citadel",
+  "location_url": "/wiki/The_Citadel",
+  "descriptions": [
+    "Knight Artemis is a Brotherhood of Steel member who resides in the Citadel in Fallout 3.",
+    "Artemis is a member of the Brotherhood of Steel who has recently returned to the Citadel from a scouting mission that involved clearing the area surrounding Galaxy News Radio. When not involved in scouting missions and area sweeps, he mentors initiates.",
+    "He is cynical about the Brotherhood's presence in the Capital Wasteland and sees it as a drainage of resources, one that has gotten several of his close friends killed or influenced them to join the Brotherhood Outcasts; his cynicism is further exacerbated by the reemergence of the Enclave.",
+    "Artemis claims to have killed more \"uglies\" than every member of the Lyons' Pride combined, and suggests that the Lone Wanderer use Abraxo and some water to remove super mutant blood stains from their armor.",
+    "Knight Artemis patrols the Citadel."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Brotherhood of Steel",
+  "role": "Soldier",
+  "detailed_location": "The Citadel",
+  "voice_actor": "Jeff Baker",
+  "special": {
+    "Strength": 7,
+    "Perception": 7,
+    "Endurance": 6,
+    "Charisma": 4,
+    "Intelligence": 3,
+    "Agility": 4,
+    "Luck": 4
+  },
+  "level": "4→7→11",
+  "tag_skills": [
+    {
+      "Big Guns:": "44→57→74"
+    },
+    {
+      "Energy Weap.:": "46→59→76"
+    },
+    {
+      "Small Guns:": "40→53→70"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "70→95→125"
+    },
+    {
+      "Critical Chance:": "4%"
+    },
+    {
+      "Unarmed Dam.:": "1.3"
+    },
+    {
+      "Poison Resist.:": "25%"
+    },
+    {
+      "Rad. Resist.:": "10%"
+    },
+    {
+      "Carry Weight:": "220(240)"
+    },
+    {
+      "Damage Res.:": "44%"
+    }
+  ],
+  "karma": "Good",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "AboutOutcasts1MS07AboutOutcasts1",
+      "topic_text": "Outcasts? Who are they?",
+      "emotion": "Disgust 10",
+      "response_text": "I'd really don't want to go into it.",
+      "index": "1"
+    },
+    {
+      "topic": "CitKnightDirectionsEND",
+      "topic_text": "That's all I needed.",
+      "emotion": "Neutral 50",
+      "response_text": "Very well.",
+      "index": "3"
+    },
+    {
+      "topic": "CitKnightDirectionsGeneral",
+      "topic_text": "Can you describe the layout of the Citadel?",
+      "emotion": "Neutral 50",
+      "response_text": "You are currently in A Ring. Here, you will find the Great Hall, the Lyons' Den, and the Archives.",
+      "index": "5"
+    },
+    {
+      "topic": "CitKnightDirectionsMedic",
+      "topic_text": "Do you have a medic?",
+      "emotion": "Neutral 50",
+      "response_text": "You could say that. We have an old Robo Doc. He's a bit creepy, but he does the job. You'll find him in B Ring.",
+      "index": "21"
+    },
+    {
+      "topic": "CitKnightDirectionsSupplies",
+      "topic_text": "I need some supplies. Who would I see about that?",
+      "emotion": "Neutral 50",
+      "response_text": "Word came down that you got permission from Elder Lyons to trade, so just head down to the lab and talk to Knight Captain Durga.",
+      "index": "23"
+    },
+    {
+      "topic": "CitKnightRumors",
+      "topic_text": "You must see a lot of things. What's been going on?",
+      "emotion": "Disgust 50",
+      "response_text": "What's been going on? Well, let's see. For years, we've been draining our resources defending the ungrateful residents of this no man's land.",
+      "index": "27"
+    },
+    {
+      "topic": "DLC03TLCitadelEnclave",
+      "topic_text": "So... Any thoughts on the Enclave?",
+      "emotion": "Neutral 50",
+      "response_text": "Well this is it, isn't it? If we can't stop them now, we can't stop them at all.",
+      "index": "31"
+    },
+    {
+      "topic": "TLCitadelDirections",
+      "topic_text": "I have a few questions about the Citadel.",
+      "emotion": "Neutral 50",
+      "response_text": "What do you need to find?",
+      "index": "36"
+    },
+    {
+      "topic": "TLCitadelEnclave",
+      "topic_text": "So... Any thoughts on the Enclave?",
+      "emotion": "Anger 50",
+      "response_text": "As if we didn't have enough to worry about. Their weapons are better; their Power Armor is better. Is their training better? We'll see.",
+      "index": "38"
+    },
+    {
+      "topic": "TLCitadelSuperMutant",
+      "topic_text": "Care to share anything about the Super Mutants?",
+      "emotion": "Anger 20",
+      "response_text": "You know how many Uglies I've killed? More than all of Lyons' Pride combined, that's how many.",
+      "index": "39"
+    }
+  ],
+  "conversation": [],
+  "combat": []
+}

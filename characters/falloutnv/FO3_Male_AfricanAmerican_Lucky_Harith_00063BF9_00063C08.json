@@ -1,0 +1,103 @@
+{
+  "name": "Lucky Harith",
+  "url": "/wiki/Lucky_Harith",
+  "dialogue_name": "LuckyHarith.txt",
+  "dialogue_url": "/wiki/LuckyHarith.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": true,
+  "can_repair": true,
+  "can_be_companion": false,
+  "base_id": "00063BF9",
+  "ref_id": "00063C08",
+  "editor_id": "LuckyHarith",
+  "location": "AlongCaravan trade route",
+  "location_url": "/wiki/Caravan_trade_route",
+  "descriptions": [
+    "Lucky Harith is a caravan merchant and weapon dealer in the Capital Wasteland in Fallout 3.",
+    "Harith is an easily excitable,",
+    "Harith considers himself a \"student on the path of the wasteland,\" providing safety to wanderers through his trading of weaponry.",
+    "Like all caravan merchants in the Capital Wasteland, Lucky Harith's route takes him to Canterbury Commons, the Temple of the Union, Agatha's house, Paradise Falls, Arefu, Evergreen Mills, Megaton and Rivet City."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Ernest Roe",
+  "role": "Travelingcaravan merchant",
+  "detailed_location": "Loops throughCanterbury Commons,Temple of the Union,Agatha's house,Paradise Falls,Arefu,Evergreen Mills,Megaton, andRivet City",
+  "voice_actor": "Pete Papageorge",
+  "special": {
+    "Strength": 4,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 7,
+    "Intelligence": 5,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "level": "5→15 (player level x1.5)",
+  "tag_skills": [
+    {
+      "Barter:": "54→100"
+    },
+    {
+      "Energy Weap.:": "50→100"
+    },
+    {
+      "Small Guns:": "52→100"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Good",
+  "voice_type": "MaleAdult02DC",
+  "geck_race": "AfricanAmerican",
+  "topics": [
+    {
+      "topic": "CCAboutCaravans",
+      "topic_text": "Tell me about your trade caravan.",
+      "emotion": "Happy 25",
+      "response_text": "See, the world's a dangerous and unbalanced place. So I realized, the only way to bring peace was to make sure that everyone could be dangerous!",
+      "index": "1"
+    },
+    {
+      "topic": "CCTrade",
+      "topic_text": "I'm here to buy.",
+      "emotion": "Happy 25",
+      "response_text": "It's my pleasure to offer hot death in a variety of exciting flavors - take your pick!",
+      "index": "3"
+    },
+    {
+      "topic": "CCTradeRepair",
+      "topic_text": "Can you repair something for me?",
+      "emotion": "Happy 50",
+      "response_text": "Easy. I've got a knack for this sort of thing, you know!",
+      "index": "5"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Happy 50",
+      "response_text": "Ah, a fellow student on the path of the Wasteland! Welcome to my humble caravan. Please relax, for we are in a place of safety!",
+      "index": "7"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "I have to go now.",
+      "emotion": "Happy 50",
+      "response_text": "Keep your skills sharp and your eyes peeled, alright?",
+      "index": "13"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Happy 50",
+      "response_text": "Here to pick up a few of my marvelous toys?",
+      "index": "15"
+    }
+  ],
+  "combat": []
+}

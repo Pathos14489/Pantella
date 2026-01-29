@@ -1,0 +1,95 @@
+{
+  "name": "Ben Canning",
+  "url": "/wiki/Ben_Canning",
+  "dialogue_name": "FFEU01NPC1.txt",
+  "dialogue_url": "/wiki/FFEU01NPC1.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": true,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "00031E28",
+  "ref_id": "00031E2F",
+  "editor_id": "FFEU01NPC1",
+  "location": "Random encounter",
+  "location_url": "/wiki/Fallout_3_random_encounters",
+  "descriptions": [
+    "Ben Canning is a water beggar found at random locations in the Capital Wasteland in 2277.",
+    "Unlike other water beggars in the Capital Wasteland, Ben does not sit outside of a settlement. Rather, he is a friendly wasteland traveler who has ventured out sorely unprepared, leaving him dehydrated after running out of water.",
+    "Ben Canning appears in a random encounter. Upon meeting, the Lone Wanderer may choose to give him water or let him die. Unlike the water beggars found outside Megaton, Tenpenny Tower, and Rivet City who will only accept purified water, Ben will also accept dirty water. However, he will not accept Aqua Pura, Aqua Cura, or holy water.",
+    "If one has both purified and dirty water in their inventory, the game will prioritize the latter over the former. If given water, he proceeds to drink it repeatedly; when activated, he apologetically tells the character that he's not up to traveling yet. Standing after a minute or two, he simply says \"Good to see you again, friend!\" If one refuses to give him water, he will ask them to shoot him in the head, because he is out of ammunition, or else he would do it himself. If one grants this request, they will receive negative Karma."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "role": "Water beggar",
+  "detailed_location": "Capital Wasteland",
+  "voice_actor": "Pete Papageorge",
+  "special": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 3,
+    "Intelligence": 3,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "level": "1→10 (player character x2)",
+  "tag_skills": [
+    {
+      "Big Guns:": "36"
+    },
+    {
+      "Melee Weap.:": "36"
+    },
+    {
+      "Small Guns:": "32"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Neutral",
+  "voice_type": "MaleAdult02DC",
+  "geck_race": "AfricanAmerican",
+  "topics": [
+    {
+      "topic": "FFEU01A1",
+      "topic_text": "Sure, I can spare some water. <Give 1 water.>",
+      "emotion": "Happy 75",
+      "response_text": "You just saved my life. I won't forget it.",
+      "index": "1"
+    },
+    {
+      "topic": "FFEU01A2",
+      "topic_text": "Then I guess you're done for, because I'm not giving you any.",
+      "emotion": "Sad 75",
+      "response_text": "Yeah, that's what I figured. Can you at least shoot me in the head before you leave? I'm out of ammo or I'd do it myself.",
+      "index": "2"
+    },
+    {
+      "topic": "FFEU01A3",
+      "topic_text": "I don't have any water to spare, but I'll be back when I find some.",
+      "emotion": "Happy 35",
+      "response_text": "I know you're probably just yanking my chain, but it's not like I'm going anywhere. You know where to find me, ha ha ha.{last laughter trails off into hacking cough  he's dying of thirst}",
+      "index": "3"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Happy 75",
+      "response_text": "Thank God... water... I'm out. You've got to give me some water or I'm done for...",
+      "index": "4"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Fear 50",
+      "response_text": "Water... please, I need water...",
+      "index": "8"
+    }
+  ],
+  "combat": []
+}

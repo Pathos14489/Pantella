@@ -1,0 +1,237 @@
+{
+  "name": "Patchwork",
+  "url": "/wiki/Patchwork",
+  "dialogue_name": "Patchwork.txt",
+  "dialogue_url": "/wiki/Patchwork.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000156EF",
+  "ref_id": "0002B8E9",
+  "editor_id": "Patchwork",
+  "location": "Underworld",
+  "location_url": "/wiki/Underworld",
+  "descriptions": [
+    "Patchwork, or \"Patches,\" is a ghoul who resides in the city of Underworld in Fallout 3.",
+    "Patchwork is the resident drunk of Underworld, drinking to a point where he consistently slurs his words and has a tendency to forget what is being said to him mid-conversation.",
+    "He is in a poor physical state and is prone to losing body parts that Doctor Barrows has to both locate and subsequently sew back on, almost like a \"patchwork.\"",
+    "Patchwork can be heard singing \"Bugger off, ye bastards bugger off... ye'll get nae more this evenin'\" which is the beginning of the Irish drinking song 'Bugger Off,' though he forgets the remaining lyrics.",
+    "Patchwork randomly wanders around the promenade inside the center area of Underworld. He may enter The Ninth Circle to obtain more alcohol. He and Quinn appear to be good friends, as in a non-player character to non-player character conversation Patchwork asks Quinn if he \"brought anything back\" for him.",
+    "Patchwork will tell you to \"talk to Ahzrukhal\" even if Ahzrukhal is already dead."
+  ],
+  "race": "Ghoul",
+  "gender": "Male",
+  "affiliation": "Underworld",
+  "role": "Town Drunk",
+  "detailed_location": "Museum of HistoryUnderworld",
+  "voice_actor": "Mike Rosson",
+  "special": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 4,
+    "Intelligence": 4,
+    "Agility": 6,
+    "Luck": 4
+  },
+  "mod_special_values": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 4,
+    "Intelligence": 4,
+    "Agility": 7,
+    "Luck": 4
+  },
+  "level": "4",
+  "tag_skills": [
+    {
+      "Barter:": "41"
+    },
+    {
+      "Small Guns:": "45(47)"
+    },
+    {
+      "Unarmed:": "41(43)"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "40(45)"
+    }
+  ],
+  "karma": "Neutral",
+  "voice_type": "MaleGenericGhoulDC",
+  "geck_race": "Ghoul",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Fear 50",
+      "response_text": "... ... huh? ... Ah! Jesus Christ! Don't... don't sneak up on me like that, the last fella... the last fella to do that damn near lost my arm.",
+      "index": "1"
+    },
+    {
+      "topic": "MS14BackOffSounds like a normal guy.",
+      "topic_text": "Sorry, pal. I can't spare the caps either.",
+      "emotion": "Anger 50",
+      "response_text": "You're as cheap as the rest of them.",
+      "index": "7"
+    },
+    {
+      "topic": "MS14BribeOh look! I dropped these 50 caps in your pocket...",
+      "topic_text": "How about a whole bottle? Here's 10 caps.",
+      "emotion": "Disgust 50",
+      "response_text": "A whole bottle? You got a deal. All I know is that he keeps trying to hire outsiders to do some killing.",
+      "index": "8"
+    },
+    {
+      "topic": "MS14Crowley",
+      "topic_text": "What can you tell me about Mister Crowley?",
+      "emotion": "Disgust 50",
+      "response_text": "Won't never buy me a drink, that's what.{drunk}",
+      "index": "10"
+    },
+    {
+      "topic": "MS14PersuadeCrowleyCome on. You can tell me. Ahzrukhal said so. <Lie.>",
+      "topic_text": "Here's 3 caps for a drink, but you've got to tell me what you know.",
+      "emotion": "Happy 50",
+      "response_text": "Deal. All I know is that he keeps trying to hire outsiders to do some killing.",
+      "index": "11"
+    },
+    {
+      "topic": "SpeechChallengeFailure",
+      "topic_text": "SpeechChallengeFailure",
+      "emotion": "Fear 50",
+      "response_text": "Oh, no! You're just trying to get me in trouble. And drunk.",
+      "index": "12"
+    },
+    {
+      "topic": "UnderworldPatchworkBoozeTopic",
+      "topic_text": "Where can I get a drink around here? You seem like the right person to ask.",
+      "emotion": "Neutral 50",
+      "response_text": "Why, you'll want to head on over to the Ninth Circle and talk to Mister Ahzrukhal... he... he... uhhh... what was I saying?",
+      "index": "13"
+    },
+    {
+      "topic": "UnderworldPatchworkGreeting1",
+      "topic_text": "So, you're the town drunk, huh?",
+      "emotion": "Neutral 50",
+      "response_text": "Why yes! Yes I am! And... PROUD! Proud of it! I mean, if I weren't, I'd probably just spend a lot more time cry... crying... you know?",
+      "index": "17"
+    },
+    {
+      "topic": "UnderworldPatchworkGreeting1a",
+      "topic_text": "You're losing parts? Like... body parts?",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah... it happens... a lot, actuall.. actually. All the time. But I'm getting' better... I think...",
+      "index": "19"
+    },
+    {
+      "topic": "UnderworldPatchworkGreeting1a1",
+      "topic_text": "I'll do that.",
+      "emotion": "Neutral 50",
+      "response_text": "Really? You... you're alright... you should buy me a drink some time...",
+      "index": "21"
+    },
+    {
+      "topic": "UnderworldPatchworkGreeting1a2",
+      "topic_text": "Watch out for your own body parts, you creepy bastard.",
+      "emotion": "Neutral 50",
+      "response_text": "Now... there's no need for tha... that... wait... what were you saying? You wanted to talk to me... about something? What was it?",
+      "index": "23"
+    },
+    {
+      "topic": "UnderworldPatchworkGreeting1b",
+      "topic_text": "You keep your parts to yourself and let's talk about something else.",
+      "emotion": "Neutral 50",
+      "response_text": "Well... what... what... do you want to talk about?",
+      "index": "24"
+    },
+    {
+      "topic": "UnderworldPatchworkGreeting2",
+      "topic_text": "Are you all right?",
+      "emotion": "Neutral 50",
+      "response_text": "Who, me? Yeah... yeah... I'm fine. I guess. No... Yeah. I'll be okay. I just... I just need to try not to lose any of my parts this time...",
+      "index": "25"
+    },
+    {
+      "topic": "UnderworldPatchworkGreeting2a",
+      "topic_text": "You be careful. I don't want you hurting yourself.",
+      "emotion": "Neutral 50",
+      "response_text": "You sure? Some... some people make me hurt myself... because it makes 'em laugh...",
+      "index": "27"
+    },
+    {
+      "topic": "UnderworldPatchworkGreeting2b",
+      "topic_text": "You're disgusting.",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah... and I ain't had enough liqu- liquor yet to think you.. you're pretty.",
+      "index": "28"
+    },
+    {
+      "topic": "UnderworldTownTopic",
+      "topic_text": "What can you tell me about Underworld?",
+      "emotion": "Neutral 50",
+      "response_text": "What can YOU tell ME about... wait... what?",
+      "index": "29"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "I have to go now.",
+      "emotion": "Neutral 50",
+      "response_text": "... ... bye ...",
+      "index": "30"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Sad 50",
+      "response_text": "Too bad about Crowley. I heard Tenpenny put out a contract on him.",
+      "index": "33"
+    },
+    {
+      "topic": "UnderworldTalkPatchworkWinthropDrunk1",
+      "topic_text": "UnderworldTalk",
+      "emotion": "Neutral 50",
+      "response_text": "Huh? Oh! Hey Winthrop! How're... how're you? I didn't see- see you there! What's up?",
+      "index": "39"
+    },
+    {
+      "topic": "UnderworldTalkPatchworkWinthropDrunk3",
+      "topic_text": "UnderworldTalkPatchworkWinthropDrunk3",
+      "emotion": "Neutral 50",
+      "response_text": "Oh... I get it! Ha! Like my name, right? Good 'ol... good ol' Patchwork, always leaving hit bits around town...",
+      "index": "41"
+    },
+    {
+      "topic": "UnderworldTalkPatchworkWinthropDrunk5",
+      "topic_text": "UnderworldTalkPatchworkWinthropDrunk5",
+      "emotion": "Neutral 50",
+      "response_text": "Oh, okay. Maybe.. maybe we can get a drink after you're done working!",
+      "index": "43"
+    },
+    {
+      "topic": "UnderworldTalkResponseShort1",
+      "topic_text": "UnderworldTalkHelloResponseShort",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah, I'm okay, Winthrop.",
+      "index": "45"
+    },
+    {
+      "topic": "UnderworldTalkResponseShort2",
+      "topic_text": "UnderworldTalkResponseShort2",
+      "emotion": "Neutral 50",
+      "response_text": "That ain't what ... I asked you, stupid... stupid robot.",
+      "index": "52"
+    }
+  ],
+  "combat": []
+}

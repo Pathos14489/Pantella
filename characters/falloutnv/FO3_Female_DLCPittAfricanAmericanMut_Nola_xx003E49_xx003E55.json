@@ -1,0 +1,111 @@
+{
+  "name": "Nola",
+  "url": "/wiki/Nola",
+  "dialogue_name": "DLC01Nola.txt",
+  "dialogue_url": "/wiki/DLC01Nola.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": true,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "xx003E49",
+  "ref_id": "xx003E55",
+  "editor_id": "DLC01Nola",
+  "location": "The Pitt Downtown",
+  "location_url": "/wiki/The_Pitt_Downtown",
+  "descriptions": [
+    "Nola is a Pitt slave in the Pitt Downtown in the year 2277.",
+    "Nola has taken on the role of being an improvised medic for the other Pitt slaves, having some amount of rudimentary medical training. She attempts to tend to the sick, crippled, and wounded of those slaves working in Downtown and The Mill, but she is one of the least skilled practitioners that can be encountered by the Lone Wanderer.",
+    "If the Lone Wanderer is injured upon meeting Nola, she will generously offer to heal them, free of charge.",
+    "Nola spends her time in the grinding hole in the middle of Downtown, slicing at an old car and dodging shots from the slave master.",
+    "When being healed by Nola, there is a risk of one of the Lone Wanderer's limbs being crippled because of the poor work conditions in the Pitt.",
+    "Nola appears only in the Fallout 3 add-on The Pitt."
+  ],
+  "race": "Human",
+  "gender": "Female",
+  "affiliation": "Pitt slaves",
+  "role": "Slave\"Doctor\"",
+  "detailed_location": "The Pitt Downtown",
+  "voice_actor": "Francie Glick",
+  "special": {
+    "Strength": 4,
+    "Perception": 7,
+    "Endurance": 3,
+    "Charisma": 4,
+    "Intelligence": 4,
+    "Agility": 5,
+    "Luck": 2
+  },
+  "mod_special_values": {
+    "Strength": 4,
+    "Perception": 7,
+    "Endurance": 4,
+    "Charisma": 4,
+    "Intelligence": 4,
+    "Agility": 6,
+    "Luck": 2
+  },
+  "level": "1",
+  "tag_skills": [
+    {
+      "Sneak:": "28(30)"
+    },
+    {
+      "Speech:": "26"
+    },
+    {
+      "Unarmed:": "24(26)"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "20(25)"
+    }
+  ],
+  "karma": "Neutral",
+  "voice_type": "DLC01SlaveFemale01VoiceType",
+  "geck_race": "DLCPittAfricanAmericanMut",
+  "topics": [
+    {
+      "topic": "DLC01NolaMedicalNO",
+      "topic_text": "No, I can handle it.",
+      "emotion": "Neutral 50",
+      "response_text": "If you say so. Just be careful out there. We need everyone healthy.",
+      "index": "1"
+    },
+    {
+      "topic": "DLC01NolaMedicalYES",
+      "topic_text": "Yes. Fix me up.",
+      "emotion": "Neutral 50",
+      "response_text": "All right. Let's do this fast before the bosses notice.",
+      "index": "2"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "You can take weapons into the Hole.",
+      "index": "3"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "I have to go now.",
+      "emotion": "Neutral 50",
+      "response_text": "Nola.",
+      "index": "15"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Neutral 25",
+      "response_text": "Guess you earned your ticket out of Downtown.{A little congratulatory, a little resentful}",
+      "index": "16"
+    }
+  ],
+  "combat": []
+}

@@ -1,0 +1,294 @@
+{
+  "name": "Cachino",
+  "url": "/wiki/Cachino",
+  "dialogue_name": "VMS21Cachino.txt",
+  "dialogue_url": "/wiki/VMS21Cachino.txt",
+  "spawned_dead": false,
+  "spawned": true,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "0010C6F5",
+  "ref_id": "0011118D",
+  "editor_id": "VMS21Cachino",
+  "location": "Gomorrah",
+  "location_url": "/wiki/Gomorrah",
+  "descriptions": [
+    "Cachino is a member of the Omertas family living in the Gomorrah casino and hotel in 2281.",
+    "Cachino is a discourteous lieutenant of the Omertas, holding a degree of responsibility in the family's operations. He boasts a checkered past, having conducted some deals on the side behind the backs of the bosses in the Gomorrah casino. Upon closer investigation, these endeavors are actually the lieutenant's own personal finances. He also has many sexual encounters with the prostitutes working at the Gomorrah.",
+    "The Omerta member is in a questionable, sexually abusive relationship with Joana, ignorant of the fact the hooker's love interest is actually a former employee of the Omertas. He tries to keep these facts secret from prying eyes since the punishment for doing anything against the interests of the family is death. Cachino feels some regret for his shady dealings and actions. His journal documents how he constantly vows to himself that each time he does another off-the-books sale or engages in another sexual tryst, this time will be the last time.",
+    "When Nero secretly brought the Omertas into an alliance with Caesar, Big Sal assigned Cachino to supervise the preparations for the Omerta's plan to invade the Strip when Caesar's Legion gave the word, oblivious to his exploits and deals on the side.",
+    "After the deaths of Big Sal and Nero, Cachino will appear on a Radio New Vegas news bulletin and comment that Nero always wanted to \"Sleep with the lakelurks.\" This is a reference to the film The Godfather where, following his murder, Luca Brasi is said to \"sleep with the fishes.\""
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Omertas",
+  "role": "LieutenantCasino owner (Optional)",
+  "detailed_location": "GomorrahPersonal suite",
+  "voice_actor": "Liam O'Brien",
+  "special": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 3,
+    "Intelligence": 3,
+    "Agility": 7,
+    "Luck": 5
+  },
+  "level": "20",
+  "tag_skills": [
+    {
+      "Energy Weap.:": "99"
+    },
+    {
+      "Guns:": "100"
+    },
+    {
+      "Melee Weap.:": "100"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Evil",
+  "voice_type": "MaleAdult05",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "Hey, thanks for all the hard work back there. I'm going to run a tight ship here, don't you worry.",
+      "index": "1"
+    },
+    {
+      "topic": "vDialogueGomorrahVMS21CachinoTopic000",
+      "topic_text": "The Omertas won't take kindly to hearing about your relationship with Joana.",
+      "emotion": "Neutral 50",
+      "response_text": "Joana? That bitch spreading lies about me? I've got a lesson to teach her about loose lips.",
+      "index": "8"
+    },
+    {
+      "topic": "vDialogueGomorrahVMS21CachinoTopic001",
+      "topic_text": "I hear you've been doing some business on the side.",
+      "emotion": "Neutral 50",
+      "response_text": "Business? What the fuck do you mean business? You looking to get yourself burned?",
+      "index": "9"
+    },
+    {
+      "topic": "vDialogueGomorrahVMS21CachinoTopic002",
+      "topic_text": "What can you tell me about Gomorrah?",
+      "emotion": "Neutral 50",
+      "response_text": "I banged Lot's wife and licked her salty ass. The fuck do I look like? I'm the one asking the questions here.",
+      "index": "11"
+    },
+    {
+      "topic": "vDialogueGomorrahVMS21CachinoTopic003",
+      "topic_text": "I hear you've been dealing with some business that is off limits for the family.",
+      "emotion": "Neutral 50",
+      "response_text": "I don't give half a dick what you've heard. Now get the fuck out of my face before I burn your sorry ass.",
+      "index": "13"
+    },
+    {
+      "topic": "vDialogueGomorrahVMS21CachinoTopic004",
+      "topic_text": "Is this journal worth 100 caps to you?",
+      "emotion": "Neutral 50",
+      "response_text": "I can pay you for it, of course. I also have some information about the Family's business that you might find interesting.",
+      "index": "14"
+    },
+    {
+      "topic": "vDialogueGomorrahVMS21CachinoTopic005",
+      "topic_text": "I found this ledger that proves some of your side business.",
+      "emotion": "Neutral 50",
+      "response_text": "Where the fuck did you get that?{Nervous}Okay, listen buddy... That's some dangerous shit you got there.",
+      "index": "19"
+    },
+    {
+      "topic": "vDialogueGomorrahVMS21CachinoTopic006",
+      "topic_text": "Do you think the Family would like to see this?",
+      "emotion": "Neutral 50",
+      "response_text": "I can't stop you, but that's gonna mean my death. I can make it worth your while to give it to me though.",
+      "index": "22"
+    },
+    {
+      "topic": "vDialogueGomorrahVMS21CachinoTopic007",
+      "topic_text": "I think I'm going to keep this for a little while.",
+      "emotion": "Neutral 50",
+      "response_text": "All right, all right.  I can't stop you, but I think we can help each other out.",
+      "index": "24"
+    },
+    {
+      "topic": "vDialogueGomorrahVMS21CachinoTopic008<Barter Option>",
+      "topic_text": "I'll consider giving this to you, for some cash up front.",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] Okay, you got me by the balls. Here's a couple hundred caps, maybe that'll buy your friendship.",
+      "index": "26"
+    },
+    {
+      "topic": "vDialogueGomorrahVMS21CachinoTopic009",
+      "topic_text": "Why don't you try and take it from me?",
+      "emotion": "Neutral 50",
+      "response_text": "You wanna come into a back room and give me a chance? Didn't think so.",
+      "index": "28"
+    },
+    {
+      "topic": "vDialogueGomorrahVMS21CachinoTopic010",
+      "topic_text": "Clanden has been handled already.",
+      "emotion": "Happy 35",
+      "response_text": "Oh? Is that so, well I can't say that I'm sad to see that fucker gone.",
+      "index": "30"
+    },
+    {
+      "topic": "vDialogueGomorrahVMS21CachinoTopic011",
+      "topic_text": "Tell me about this Troike.",
+      "emotion": "Neutral 50",
+      "response_text": "He's a skittish little fucker. Spends half the day pumping his body full of chems and the other half pumping hookers with his willy.",
+      "index": "33"
+    },
+    {
+      "topic": "vDialogueGomorrahVMS21CachinoTopic012",
+      "topic_text": "Do you know anything about what they are planning?",
+      "emotion": "Neutral 50",
+      "response_text": "No, just that it involves guns and muscle. Also that it's big. Very big. Only Nero and Big Sal know everything, and they ain't telling.",
+      "index": "37"
+    },
+    {
+      "topic": "vDialogueGomorrahVMS21CachinoTopic013",
+      "topic_text": "Um, nevermind. Sorry I said something.",
+      "emotion": "Neutral 50",
+      "response_text": "Damn right you're sorry.",
+      "index": "38"
+    },
+    {
+      "topic": "vDialogueGomorrahVMS21CachinoTopic014",
+      "topic_text": "That's all the questions I have for now. I may have more later.",
+      "emotion": "Neutral 50",
+      "response_text": "Okay. You can find me here, or upstairs in my room. I'll let the muscle know you're a friend of mine, that should let you get around a little easier.",
+      "index": "39"
+    },
+    {
+      "topic": "vDialogueGomorrahVMS21CachinoTopic015",
+      "topic_text": "I have a couple more questions.",
+      "emotion": "Neutral 50",
+      "response_text": "Okay toss 'em at me.",
+      "index": "40"
+    },
+    {
+      "topic": "vDialogueGomorrahVMS21CachinoTopic016{Tell Cachino the bosses plans have been disrupted}",
+      "topic_text": "Troike is on his way to destroy the guns for me.",
+      "emotion": "Neutral 50",
+      "response_text": "You better get outside for a little bit. I'm sure they are going to look for the infamous courier when things go to hell.",
+      "index": "41"
+    },
+    {
+      "topic": "vDialogueGomorrahVMS21CachinoTopic017",
+      "topic_text": "I have some questions about the Bosses plans.",
+      "emotion": "Neutral 50",
+      "response_text": "Alright, let's have them.",
+      "index": "49"
+    },
+    {
+      "topic": "vDialogueGomorrahVMS21CachinoTopic018What's the next step in breaking up the bosses plans?",
+      "topic_text": "What's the next step in breaking up the bosses plans?",
+      "emotion": "Neutral 50",
+      "response_text": "Now we cut off the head of the serpent. Big Sal and Nero have to die.",
+      "index": "50"
+    },
+    {
+      "topic": "vDialogueGomorrahVMS21CachinoTopic019",
+      "topic_text": "Why do they need to die?",
+      "emotion": "Neutral 50",
+      "response_text": "As long as they're alive, they can start up their plans again. All you've managed to do is stall them. I guarantee you they have contingencies.",
+      "index": "51"
+    },
+    {
+      "topic": "vDialogueGomorrahVMS21CachinoTopic020",
+      "topic_text": "How do we take care of the bosses?",
+      "emotion": "Neutral 50",
+      "response_text": "They're a little bit upset about what's been done to muck up their plans. They tasked me to find out who's responsible.",
+      "index": "52"
+    },
+    {
+      "topic": "vDialogueGomorrahVMS21CachinoTopic021",
+      "topic_text": "What happens when the bosses are gone?",
+      "emotion": "Neutral 50",
+      "response_text": "When they're gone I'm gonna run this joint. Don't worry, I'll take care of the place.",
+      "index": "54"
+    },
+    {
+      "topic": "vDialogueGomorrahVMS21CachinoTopic022{Speech Check}",
+      "topic_text": "They are going to expect something from me, you can do it and surprise them.",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] Alright, I'll take care of them. Just give me the word when to start shooting.",
+      "index": "55"
+    },
+    {
+      "topic": "vDialogueGomorrahVMS21CachinoTopic023",
+      "topic_text": "Let's go take care of the bosses.",
+      "emotion": "Neutral 50",
+      "response_text": "Hurry and get ready. I'll give you a gun when you get to the room.",
+      "index": "57"
+    },
+    {
+      "topic": "vDialogueGomorrahVMS21CachinoTopic024",
+      "topic_text": "I'm not ready to take out the bosses yet.",
+      "emotion": "Neutral 50",
+      "response_text": "Hurry and get ready. I'll give you a gun when you get to the room.",
+      "index": "59"
+    },
+    {
+      "topic": "vDialogueGomorrahVMS21CachinoTopic025",
+      "topic_text": "I found these tapes in Clanden's room, can you verify this is him?",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah this is Clanden, this guy is one sick motherfucker. The way I see it you have a few options.",
+      "index": "61"
+    },
+    {
+      "topic": "vGomorrahBossChips",
+      "topic_text": "I'm planning on playing some games in the Casino.",
+      "emotion": "Neutral 50",
+      "response_text": "Of course, after all you did for me, here are some chips for you. Play, have some fun.",
+      "index": "65"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "VMS21CachinoExecution1",
+      "topic_text": "VMS21CachinoExecution1",
+      "emotion": "Fear 65",
+      "response_text": "I'm sorry boss... Sometimes I just can't control myself. I dunno what's wrong with me. I swear, I can turn this around. Just gimme another chance.",
+      "index": "66"
+    },
+    {
+      "topic": "VMS21CachinoExecution2",
+      "topic_text": "VMS21CachinoExecution2",
+      "emotion": "Fear 65",
+      "response_text": "I'm sorry boss... Sometimes I just can't control myself. I dunno what's wrong with me. I swear, I can turn this around. Just gimme another chance.",
+      "index": "68"
+    },
+    {
+      "topic": "VMS21CachinoGun",
+      "topic_text": "VMS21CachinoGun",
+      "emotion": "Neutral 50",
+      "response_text": "Hey, here is that gun I promised you. I suggest using it while they are talking, I'm pretty sure they're going to kill you after they've talked.",
+      "index": "70"
+    }
+  ],
+  "combat": [
+    {
+      "topic": "RNVNewsStory2",
+      "topic_text": "RNVNewsStoryLine2",
+      "emotion": "Neutral 50",
+      "response_text": "{Cachino:}Before he left, Nero told me him and Big Sal were real tired, see? Said they were gonna go camping up at Lake Mead.",
+      "index": "72"
+    },
+    {
+      "topic": "RNVNewsStory3",
+      "topic_text": "RNVNewsStoryLine3",
+      "emotion": "Neutral 50",
+      "response_text": "{Cachino:}Said he'd always wanted to sleep with the Lakelurks.",
+      "index": "73"
+    }
+  ]
+}

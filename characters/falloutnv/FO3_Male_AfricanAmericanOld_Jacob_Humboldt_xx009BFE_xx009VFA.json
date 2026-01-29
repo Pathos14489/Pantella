@@ -1,0 +1,85 @@
+{
+  "name": "Jacob Humboldt",
+  "url": "/wiki/Jacob_Humboldt",
+  "dialogue_name": "DLC04FF06Hunter02.txt",
+  "dialogue_url": "/wiki/DLC04FF06Hunter02.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "xx009BFE",
+  "ref_id": "xx009VFA",
+  "editor_id": "DLC04FF06Hunter02",
+  "location": "Coastal grotto",
+  "location_url": "/wiki/Coastal_grotto",
+  "descriptions": [
+    "Jacob Humboldt is one of the inhabitants of Point Lookout in 2277.",
+    "Jacob is intrigued by the history of the United States and is an avid collector of Confederate memorabilia. He is said to be testing out his shotgun before going ghoul hunting in the swamps.",
+    "He is one of the members of Plik's hunting club and accompanies the Lone Wanderer during Plik's Safari.",
+    "Jacob Humboldt appears only in the Fallout 3 add-on Point Lookout.",
+    "PC Playstation 3 Xbox 360 Due to a bug, it is likely that his skin tone will change to become paler on his face but remain dark on the rest of his body."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Plik",
+  "role": "Safari participant",
+  "detailed_location": "Coastal grotto",
+  "voice_actor": "James Lewis",
+  "special": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 3,
+    "Intelligence": 3,
+    "Agility": 7,
+    "Luck": 5
+  },
+  "mod_special_values": {
+    "Strength": 6,
+    "Perception": 6,
+    "Endurance": 4,
+    "Charisma": 3,
+    "Intelligence": 3,
+    "Agility": 7,
+    "Luck": 5
+  },
+  "level": "14",
+  "tag_skills": [
+    {
+      "Melee Weap.:": "88"
+    },
+    {
+      "Small Guns:": "90"
+    },
+    {
+      "Unarmed:": "84"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Evil",
+  "voice_type": "DLC04MaleNormal",
+  "geck_race": "AfricanAmericanOld",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "",
+      "emotion": "Neutral 50",
+      "response_text": "Mr. Plik's really outdone himself this time.",
+      "index": "1"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Neutral 50",
+      "response_text": "Stay close - we'll both be better for it.",
+      "index": "3"
+    }
+  ],
+  "combat": []
+}

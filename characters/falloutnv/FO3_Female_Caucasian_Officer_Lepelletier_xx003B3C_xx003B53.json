@@ -1,0 +1,297 @@
+{
+  "name": "Officer Lepelletier",
+  "url": "/wiki/Lepelletier",
+  "dialogue_name": "DLC03Lepelletier.txt",
+  "dialogue_url": "/wiki/DLC03Lepelletier.txt",
+  "spawned_dead": false,
+  "spawned": true,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "xx003B3C",
+  "ref_id": "xx003B53",
+  "editor_id": "DLC03Lepelletier",
+  "location": "Rivet City",
+  "location_url": "/wiki/Rivet_City",
+  "descriptions": [
+    "Officer Lepelletier is a member of the Rivet City security force in 2277.",
+    "Serving as a member of the Rivet City security force, Lepelletier's dedication to duty earned her the right, or rather the misfortune, to be placed in charge of Rivet City's side of the Water Distribution Network following the Brotherhood's liberation of Project Purity. In exchange for money and technology, Rivet City and Lepelletier are cooperating with the Brotherhood to deliver water to the Capital Wasteland via armed caravans. Working out of a makeshift office just outside of Rivet City, Lepelletier deals with the caravan drivers, guards, and brahmin as they all work to deliver the water to the wasteland. However, almost as soon as the caravans started delivering water, they started getting ambushed. Lepelletier suspects something organized is going on.",
+    "Officer Lepelletier appears only in the Fallout 3 add-on Broken Steel."
+  ],
+  "race": "Human",
+  "gender": "Female",
+  "affiliation": "Rivet City security forceWater Distribution Network",
+  "role": "Water caravan escort coordinator",
+  "detailed_location": "OutsideRivet City",
+  "voice_actor": "Karen Carbone",
+  "special": {
+    "Strength": 6,
+    "Perception": 7,
+    "Endurance": 5,
+    "Charisma": 3,
+    "Intelligence": 3,
+    "Agility": 6,
+    "Luck": 4
+  },
+  "level": "20",
+  "tag_skills": [
+    {
+      "Energy Weap.:": "100"
+    },
+    {
+      "Melee Weap.:": "100"
+    },
+    {
+      "Small Guns:": "100(105)"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "165"
+    },
+    {
+      "Damage Res.:": "24%"
+    }
+  ],
+  "karma": "Good",
+  "voice_type": "FemaleAdult02DC",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "DLC03WQ01AboutSplitJack",
+      "topic_text": "A guy named Split Jack is behind the attacks.",
+      "emotion": "Disgust 50",
+      "response_text": "Well, what are you doing here? You should be out there tracking him down and putting an end to this once and for all!{annoyed}",
+      "index": "1"
+    },
+    {
+      "topic": "DLC03WQ01Briefing1",
+      "topic_text": "You sound pretty certain this particular caravan will be attacked.",
+      "emotion": "Neutral 50",
+      "response_text": "I'm \"pretty certain\" ANY caravan will be attacked. This \"particular\" caravan also happens to have my most junior men escorting it.{explaining why she needs the player's help}",
+      "index": "2"
+    },
+    {
+      "topic": "DLC03WQ01Briefing2",
+      "topic_text": "If we do get attacked, and I do find a ringleader, then what?",
+      "emotion": "Neutral 50",
+      "response_text": "After protecting the caravan, track down the attackers base of operations and put an end to it once and for all.{briefing a recruit}",
+      "index": "4"
+    },
+    {
+      "topic": "DLC03WQ01Briefing3",
+      "topic_text": "I'm getting paid, right?",
+      "emotion": "Neutral 50",
+      "response_text": "Do the job right and report back to me, and I'll make certain you get paid appropriately.",
+      "index": "5"
+    },
+    {
+      "topic": "DLC03WQ01Briefing4",
+      "topic_text": "All right, I'll protect the caravan and track down the attackers.",
+      "emotion": "Happy 50",
+      "response_text": "Great. I had a feeling you would. Officers Davis and Lorin should have just left Project Purity. If you hurry you'll catch them.{glad to have competent recruit}",
+      "index": "6"
+    },
+    {
+      "topic": "DLC03WQ01Briefing5",
+      "topic_text": "I'm going to pass on this one. Find someone else.",
+      "emotion": "Disgust 50",
+      "response_text": "If you aren't man enough for the job, fine. I don't want you. Now, if you'll excuse me, I have operations to conduct.{annoyed}",
+      "index": "9"
+    },
+    {
+      "topic": "DLC03WQ01Briefing6",
+      "topic_text": "Thanks. That's all for now.",
+      "emotion": "Neutral 50",
+      "response_text": "Fine.",
+      "index": "11"
+    },
+    {
+      "topic": "DLC03WQ01BriefingPay1",
+      "topic_text": "Is that a Plasma Rifle you've got there? I could use that on the mission.",
+      "emotion": "Anger 50",
+      "response_text": "I suppose I don't really need it pushing papers around here, do I? Alright. Consider it an advance on your payment. You better not disappoint.{begrudgingly giving up a prized weapon}",
+      "index": "12"
+    },
+    {
+      "topic": "DLC03WQ01BriefingPay2",
+      "topic_text": "I'm afraid I'm going to need to get paid up front.",
+      "emotion": "Disgust 50",
+      "response_text": "What are you talking about? You did already get paid up front. Or have you forgotten that little Plasma Rifle I gave you?{annoyed}",
+      "index": "13"
+    },
+    {
+      "topic": "DLC03WQ01BriefingPay3",
+      "topic_text": "Can you at least tell me what I'll be getting?",
+      "emotion": "Surprise 10",
+      "response_text": "I can pay you in bottlecaps, maybe some weapons and armor if I have any left from requisitions.{negotiating}",
+      "index": "16"
+    },
+    {
+      "topic": "DLC03WQ01BriefingPay4",
+      "topic_text": "Understood.",
+      "emotion": "Neutral 50",
+      "response_text": "Good.",
+      "index": "17"
+    },
+    {
+      "topic": "DLC03WQ01Completed1",
+      "topic_text": "A guy named Split Jack. Not to worry. He's dead now.",
+      "emotion": "Happy 50",
+      "response_text": "Really? That's excellent. Thank you. As soon as I have a moment, I'll make arrangements to see to your reward.{grateful}",
+      "index": "18"
+    },
+    {
+      "topic": "DLC03WQ01Completed2",
+      "topic_text": "I killed the ringleader. You owe me big time, lady.",
+      "emotion": "Disgust 10",
+      "response_text": "Yes, yes. I'm sure it wasn't easy. I'll make the necessary arrangements to have you paid.{grateful, but annoyed}",
+      "index": "20"
+    },
+    {
+      "topic": "DLC03WQ01DeadExtort",
+      "topic_text": "Yeah, I killed him. But I'm here to set up a \"protection\" deal with the gang.",
+      "emotion": "Anger 100",
+      "response_text": "What?!{shocked and angry}",
+      "index": "22"
+    },
+    {
+      "topic": "DLC03WQ01DeadExtort1",
+      "topic_text": "Pay 500 caps now, and I'll call off the attacks.",
+      "emotion": "Anger 50",
+      "response_text": "Damn it. I just don't have that kind of money at my disposal...{frustrated}",
+      "index": "23"
+    },
+    {
+      "topic": "DLC03WQ01DeadExtort2",
+      "topic_text": "The protection contract costs a mere 200 caps per week.",
+      "emotion": "Disgust 50",
+      "response_text": "I can't believe you're trying to extort me! I'm trying to do the right thing here, and you're totally taking advantage. You're a horrible person.{appalled}",
+      "index": "25"
+    },
+    {
+      "topic": "DLC03WQ01DeadExtort3",
+      "topic_text": "Never mind. I was just kidding.",
+      "emotion": "Disgust 100",
+      "response_text": "You're not very funny. Now get out of here until you've made progress with taking care of that gang.{annoyed}",
+      "index": "28"
+    },
+    {
+      "topic": "DLC03WQ01DeadExtortNo",
+      "topic_text": "Not good enough. 500 caps now, and more when I say it's time for more.",
+      "emotion": "Anger 100",
+      "response_text": "I gave you the money. That's it. You've pushed me too far. Walk away. Right now. If you come around here again, I'll kill you.{pissed}",
+      "index": "29"
+    },
+    {
+      "topic": "DLC03WQ01DeadExtortYes",
+      "topic_text": "It's a deal. I'll call off the attacks.",
+      "emotion": "Anger 50",
+      "response_text": "Fine. Here. But really, that's it. There's nothing left. You're squeezing a rock to get water now.{begrudgingly being extorted}",
+      "index": "30"
+    },
+    {
+      "topic": "DLC03WQ01GreetingA1",
+      "topic_text": "That's why I'm here, actually. Bigsley sent me.",
+      "emotion": "Surprise 75",
+      "response_text": "Oh, he did?  I was beginning to think he forgot about us.{genuinely shocked, but pleased}",
+      "index": "32"
+    },
+    {
+      "topic": "DLC03WQ01GreetingA2",
+      "topic_text": "I'm a decent shot. Need another hired gun?",
+      "emotion": "Surprise 25",
+      "response_text": "Hmm... I've heard about you. I suppose you can handle yourself out there, and I AM down to my greenest boys...{sizing up a potential recruit}",
+      "index": "35"
+    },
+    {
+      "topic": "DLC03WQ01GreetingA3",
+      "topic_text": "I thought Rivet City security was a police force, not a military organization.",
+      "emotion": "Happy 50",
+      "response_text": "Heh. Tell me about it. It's enough trouble just keeping the miscreants on that leaky boat under control.{sarcastic}",
+      "index": "38"
+    },
+    {
+      "topic": "DLC03WQ01GreetingA4",
+      "topic_text": "Military operations? You've got be kidding. Rivet City security are chumps.",
+      "emotion": "Anger 75",
+      "response_text": "Say that a little louder. I've got a lot of disgruntled men who'd be happy to prove you wrong.{annoyed and smoldering with deadly anger}",
+      "index": "42"
+    },
+    {
+      "topic": "DLC03WQ01GreetingB1",
+      "topic_text": "Sounds like you could use some help. What do you need?",
+      "emotion": "Happy 50",
+      "response_text": "Great. I can really use a strong arm on this one.{glad to find a capable new recruit}",
+      "index": "44"
+    },
+    {
+      "topic": "DLC03WQ01GreetingB2",
+      "topic_text": "Hire me and your problems are as good as gone.",
+      "emotion": "Happy 50",
+      "response_text": "Good. My veterans are all already out in the field, or worse, never came back. I could use someone who knows what he's doing.{glad to have capable new recruit}",
+      "index": "47"
+    },
+    {
+      "topic": "DLC03WQ01GreetingB3",
+      "topic_text": "Yeah, not interested in dying. Good luck to you and your men.",
+      "emotion": "Anger 50",
+      "response_text": "Yeah, right. Clear out of here before I have you arrested.{yeah right - sarcastic disbelief... annoyed}",
+      "index": "53"
+    },
+    {
+      "topic": "DLC03WQ01MissionQuestions",
+      "topic_text": "I have some questions about my mission.",
+      "emotion": "Neutral 50",
+      "response_text": "What do you need to know?",
+      "index": "54"
+    },
+    {
+      "topic": "DLC03WQ01RewardA1",
+      "topic_text": "What do you mean you'll make \"arrangements\"?",
+      "emotion": "Surprise 100",
+      "response_text": "Yes well, I don't really have anything I can give you at the moment.{embarrassed, slightly annoyed}",
+      "index": "55"
+    },
+    {
+      "topic": "DLC03WQ01RewardA2",
+      "topic_text": "I want my money, and I want it now.",
+      "emotion": "Anger 50",
+      "response_text": "I'm afraid I don't have anything to give you. Now don't you go getting upset!{covering embarrassment by getting resentful}",
+      "index": "59"
+    },
+    {
+      "topic": "DLC03WQ01RewardA3",
+      "topic_text": "You're not trying to stiff me, are you?",
+      "emotion": "Anger 50",
+      "response_text": "Nothing of the sort! How dare you even suggest such a thing. Look around for Godsake. Do you see a mountain of bottle caps? A stash of weapons?{resentful}",
+      "index": "64"
+    },
+    {
+      "topic": "DLC03WQLepelletierTopLevelA",
+      "topic_text": "What's Rivet City getting out of helping the Brotherhood?",
+      "emotion": "Surprise 50",
+      "response_text": "At first it was a win-win. They paid us and shared their technology with us. The spoils of their war with the Enclave were particularly enticing.{annoyed, explaining the good old days}",
+      "index": "68"
+    },
+    {
+      "topic": "DLC03WQLepelletierTopLevelB",
+      "topic_text": "I still don't understand why the Brotherhood isn't just selling the water.",
+      "emotion": "Surprise 50",
+      "response_text": "You'd think that'd be the smart thing, right? Then the caravan drivers could use the markup to simply pay for their own security. Wouldn't need us.{commiserating}",
+      "index": "70"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Anger 50",
+      "response_text": "I warned you not to come around. I will not be extorted.{about to start shooting}",
+      "index": "73"
+    }
+  ],
+  "conversation": [],
+  "combat": []
+}

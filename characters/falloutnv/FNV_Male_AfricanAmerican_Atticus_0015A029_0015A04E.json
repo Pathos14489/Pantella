@@ -1,0 +1,125 @@
+{
+  "name": "Atticus",
+  "url": "/wiki/Atticus",
+  "dialogue_name": "SafehouseLegionVeteran.txt",
+  "dialogue_url": "/wiki/SafehouseLegionVeteran.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "0015A029",
+  "ref_id": "0015A04E",
+  "editor_id": "SafehouseLegionVeteran",
+  "location": "Caesar's Legion safehouse",
+  "location_url": "/wiki/Caesar%27s_Legion_safehouse",
+  "descriptions": [
+    "Veteran Atticus is a veteran legionary within Caesar's Legion, responsible for the maintenance of the Caesar's Legion safehouse in 2281.",
+    "He visits the safehouse to resupply every three days and offers the Courier various items such as two Stealth Boys, two Cateye, or two random skill magazines.",
+    "A Trusted Aide",
+    "Another NPC named Atticus is found in the game's files. He too is a member of Caesar's Legion veteran faction and offers similar dialogue options such as giving the player character various items. This version, however, was set to appear in The Fort.",
+    "Playstation 3 When updating the game into a newer version, and then creating a new game, Atticus or any other safehouse keepers will no longer appear. Removing and re-installing the patches will fix this. ",
+    "Frumentarii: Alerio · Cato Hostilius · Gabban · Karl · Picus · Disguised frumentarius · Ulysses (formerly)\nConsul: M. Licinius Crassus · M. Scribonius Libo Drusus (of the consul)"
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Caesar's Legion",
+  "role": "Keeper of theCaesar's Legion safehouse",
+  "detailed_location": "Caesar's Legion Safehouse",
+  "voice_actor": "Gregory Alan Williams",
+  "special": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 6,
+    "Charisma": 4,
+    "Intelligence": 4,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "level": "10",
+  "tag_skills": [
+    {
+      "Guns:": "66"
+    },
+    {
+      "Melee Weap.:": "68"
+    },
+    {
+      "Unarmed:": "68"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Evil",
+  "voice_type": "MaleAdult06",
+  "geck_race": "AfricanAmerican",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "What do you want?",
+      "index": "1"
+    },
+    {
+      "topic": "vSafehouseSafehouseLegionVeteranTopic000",
+      "topic_text": "Why are you here?",
+      "emotion": "Happy 5",
+      "response_text": "I'm here to keep everything in order. As a friend of the Legion, I can offer you some supplies while you're here.",
+      "index": "2"
+    },
+    {
+      "topic": "vSafehouseSafehouseLegionVeteranTopic001",
+      "topic_text": "Can I get some supplies?",
+      "emotion": "Happy 5",
+      "response_text": "I have some goods collected during my travels. You may take something if you wish.",
+      "index": "3"
+    },
+    {
+      "topic": "vSafehouseSafehouseLegionVeteranTopic002",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "{LATIN}{\"wallae\"}Vale.",
+      "index": "4"
+    },
+    {
+      "topic": "vSafehouseSafehouseLegionVeteranTopic003",
+      "topic_text": "Are you always here?",
+      "emotion": "Neutral 50",
+      "response_text": "No, there are other places that require my attention.",
+      "index": "5"
+    },
+    {
+      "topic": "vSafehouseSafehouseLegionVeteranTopic004",
+      "topic_text": "Stealth Boy.",
+      "emotion": "Neutral 50",
+      "response_text": "Take it.",
+      "index": "6"
+    },
+    {
+      "topic": "vSafehouseSafehouseLegionVeteranTopic005",
+      "topic_text": "Cat Eye.",
+      "emotion": "Neutral 50",
+      "response_text": "Take it.",
+      "index": "7"
+    },
+    {
+      "topic": "vSafehouseSafehouseLegionVeteranTopic007",
+      "topic_text": "Magazines.",
+      "emotion": "Neutral 50",
+      "response_text": "This is what I have right now.",
+      "index": "8"
+    },
+    {
+      "topic": "vSafehouseSafehouseLegionVeteranTopic023",
+      "topic_text": "I've changed my mind.",
+      "emotion": "Neutral 50",
+      "response_text": "Let me know when you've decided.",
+      "index": "9"
+    }
+  ],
+  "conversation": [],
+  "combat": []
+}

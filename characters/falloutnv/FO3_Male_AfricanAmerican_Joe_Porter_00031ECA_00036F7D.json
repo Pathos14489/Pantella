@@ -1,0 +1,181 @@
+{
+  "name": "Joe Porter",
+  "url": "/wiki/Joe_Porter",
+  "dialogue_name": "JoePorter.txt",
+  "dialogue_url": "/wiki/JoePorter.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": true,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "00031ECA",
+  "ref_id": "00036F7D",
+  "editor_id": "JoePorter",
+  "location": "Dot's Diner",
+  "location_url": "/wiki/Dot%27s_Diner",
+  "descriptions": [
+    "Joe Porter is a merchant in Canterbury Commons in 2277.",
+    "Joe Porter, or \"Porter Joe\" as the name he prefers to go by, was once a loader-for-hire at a caravan. However, when he first arrived at Canterbury Commons, the idea of having a permanent base of operations and a steady community was very appealing to him. He settled down there with his dog, Ol' Mule, in about 2271 and has been working as an unloader, a basic cook, and a basic repairman since then. Since the death of his dog, he has been minding the town diner, the center of chatter in this settlement.",
+    "The Superhuman Gambit"
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Canterbury Commons",
+  "role": "Shopkeeper",
+  "detailed_location": "Porter's Café, Canterburry Commons",
+  "voice_actor": "Pete Papageorge",
+  "special": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 5,
+    "Intelligence": 4,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "mod_special_values": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 5,
+    "Intelligence": 4,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "level": "8",
+  "tag_skills": [
+    {
+      "Barter:": "62"
+    },
+    {
+      "Medicine:": "60"
+    },
+    {
+      "Melee Weap.:": "64"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "60(65)"
+    },
+    {
+      "Damage Res.:": "2%"
+    }
+  ],
+  "karma": "Good",
+  "voice_type": "MaleAdult02DC",
+  "geck_race": "AfricanAmerican",
+  "topics": [
+    {
+      "topic": "CCDirCaravan",
+      "topic_text": "Where do the caravans set up?",
+      "emotion": "Happy 25",
+      "response_text": "They usually sell their stuff out front of the town. Never seem to stick around for long, though.",
+      "index": "1"
+    },
+    {
+      "topic": "CCDirExit",
+      "topic_text": "That's all I need to know.",
+      "emotion": "Happy 25",
+      "response_text": "See you 'round.",
+      "index": "3"
+    },
+    {
+      "topic": "CCDirFood",
+      "topic_text": "Where can I get some food?",
+      "emotion": "Happy 25",
+      "response_text": "You certainly came to the right person. What'd you like?",
+      "index": "4"
+    },
+    {
+      "topic": "CCDirections",
+      "topic_text": "Can I get some directions around town?",
+      "emotion": "Happy 25",
+      "response_text": "Sure thing. Where ya headed?",
+      "index": "5"
+    },
+    {
+      "topic": "CCFirstMeeting1A",
+      "topic_text": "Thanks, Joe. Looks like a pretty nice place, here.",
+      "emotion": "Happy 15",
+      "response_text": "We do our best. Well, Dom and Roe do their best. I just make sure they've got enough food so they can keep on doing their best.",
+      "index": "6"
+    },
+    {
+      "topic": "CCFirstMeeting1B",
+      "topic_text": "Pretty trusting of you. How do you know I'm not here to cause trouble?",
+      "emotion": "Happy 15",
+      "response_text": "First clue was that you didn't shoot me. Most troublemakers I meet are just starving folks down on their luck. So, stop the starve, stop the trouble.",
+      "index": "8"
+    },
+    {
+      "topic": "CCFirstMeeting1C",
+      "topic_text": "Unpurified water? I'm insulted.",
+      "emotion": "Happy 50",
+      "response_text": "Sorry, but our water purifier's been on backorder for about two hundred years.{Joking}",
+      "index": "10"
+    },
+    {
+      "topic": "CCTownHistory1",
+      "topic_text": "What can you tell me about Canterbury Commons?",
+      "emotion": "Neutral 50",
+      "response_text": "Best place I ever worked in, and I guess I've worked about everywhere there is.",
+      "index": "12"
+    },
+    {
+      "topic": "CCTrade",
+      "topic_text": "What's on the menu?",
+      "emotion": "Happy 25",
+      "response_text": "Take a look, let me know what you want.",
+      "index": "14"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Happy 10",
+      "response_text": "Just stumbled into town? You sure picked a fine day for it, with the crazies out there. Here, have a drink on the house. Welcome to Canterbury.",
+      "index": "16"
+    },
+    {
+      "topic": "MS02AboutSupers",
+      "topic_text": "Do you know anything about the AntAgonizer or the Mechanist?",
+      "emotion": "Happy 50",
+      "response_text": "You mean, apart from having cheesy names? Actually, I think I might know something useful.",
+      "index": "19"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "CCMentor2",
+      "topic_text": "CCMentor2",
+      "emotion": "Happy 5",
+      "response_text": "You oughta be proud - that's hard work. So why do you look so blue?{Warm and a little concerned}",
+      "index": "22"
+    },
+    {
+      "topic": "CCMentor4",
+      "topic_text": "CCMentor4",
+      "emotion": "Happy 40",
+      "response_text": "I guess that explains all that! I think she might, Derek, somewhere down in there.{Warm and reassuring}",
+      "index": "24"
+    },
+    {
+      "topic": "GOODBYE",
+      "topic_text": "I have to go now.",
+      "emotion": "Happy 50",
+      "response_text": "Careful out there.",
+      "index": "26"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Happy 50",
+      "response_text": "Any luck finding those two troublemakers, yet?",
+      "index": "29"
+    }
+  ],
+  "combat": []
+}

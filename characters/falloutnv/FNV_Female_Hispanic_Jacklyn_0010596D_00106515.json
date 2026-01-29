@@ -1,0 +1,197 @@
+{
+  "name": "Jacklyn",
+  "url": "/wiki/Jacklyn",
+  "dialogue_name": "SSHQJacklyn.txt",
+  "dialogue_url": "/wiki/SSHQJacklyn.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "0010596D",
+  "ref_id": "00106515",
+  "editor_id": "SSHQJacklyn",
+  "location": "On the road betweenNiptonandNipton Road pit stop",
+  "location_url": "/wiki/Nipton",
+  "descriptions": [
+    "Jacklyn is a wastelander residing near Nipton in the Mojave Wasteland in Fallout: New Vegas.",
+    "At some point in her life, Jacklyn heard the story about the secret value of Sunset Sarsaparilla star bottle caps and the \"treasure\" they were tied to, and started collecting them, to the degree that she's willing to lie, steal, and murder anyone she suspects of having even one, much like another infamous star-cap hunter, Allen Marks.",
+    "Sometime around October 2281, Jacklyn met Tomas and offered to travel with him. Unbeknownst to Tomas, who thought she was friendly company, Jacklyn suspected him of carrying some star bottle caps, which was later confirmed when he showed off his \"lucky\" star-cap necklace, resulting in Jacklyn attacking him outside of Nipton shortly before the Courier arrives."
+  ],
+  "race": "Human",
+  "gender": "Female",
+  "affiliation": "Tomas",
+  "role": "Star-cap hunter",
+  "detailed_location": "Near the west entrance to Nipton",
+  "voice_actor": "April Stewart",
+  "special": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 10,
+    "Intelligence": 5,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "level": "1",
+  "misc_skills": [],
+  "karma": "Neutral",
+  "voice_type": "FemaleAdult03",
+  "geck_race": "Hispanic",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "Thank god you came around. That guy was going to kill me!",
+      "index": "1"
+    },
+    {
+      "topic": "VFreeformSSHQJacklynTopic001",
+      "topic_text": "Yes, he was probably trying to steal some Sunset Sarsaparilla Stars from you.",
+      "emotion": "Neutral 50",
+      "response_text": "Some what? Never mind, I'm going to take a few moments to compose myself, then head out. Thank you again.",
+      "index": "6"
+    },
+    {
+      "topic": "VFreeformSSHQJacklynTopic002",
+      "topic_text": "No idea.",
+      "emotion": "Neutral 50",
+      "response_text": "No reason it should, I suppose. I need to be going. Thank you again.",
+      "index": "7"
+    },
+    {
+      "topic": "VFreeformSSHQJacklynTopic003",
+      "topic_text": "Do you have any bottlecaps with stars on them?",
+      "emotion": "Neutral 50",
+      "response_text": "Er, no, I don't think so. Caps are caps, right?",
+      "index": "8"
+    },
+    {
+      "topic": "VFreeformSSHQSSHQJacklynTopic000",
+      "topic_text": "Don't mention it. I'll be on my way.",
+      "emotion": "Neutral 50",
+      "response_text": "Stay safe. The road's dangerous in these parts. Or so I hear.",
+      "index": "10"
+    },
+    {
+      "topic": "VFreeformSSHQSSHQJacklynTopic001",
+      "topic_text": "What was that you took from his corpse?",
+      "emotion": "Neutral 50",
+      "response_text": "What? This? He stole this from me at gunpoint. Lucky for me, he got distracted and I got a chance to draw on him.",
+      "index": "11"
+    },
+    {
+      "topic": "VFreeformSSHQSSHQJacklynTopic002",
+      "topic_text": "Yes, I've got a few myself.",
+      "emotion": "Neutral 50",
+      "response_text": "Ah, then you know how rare they are. I'm just glad they're back where they belong. You can never be too careful these days.",
+      "index": "13"
+    },
+    {
+      "topic": "VFreeformSSHQSSHQJacklynTopic003",
+      "topic_text": "No, can't say that I have.",
+      "emotion": "Neutral 50",
+      "response_text": "That's too bad. They're very rare. Well, I should be going. Nice talking to you.",
+      "index": "15"
+    },
+    {
+      "topic": "VFreeformSSHQSSHQJacklynTopic004",
+      "topic_text": "Sure have. And I'm thinking of adding yours to my collection.",
+      "emotion": "Disgust 50",
+      "response_text": "You know, I was just thinking the same thing about you.",
+      "index": "16"
+    },
+    {
+      "topic": "VFreeformSSHQSSHQJacklynTopic005{ Intelligence >= 7 }",
+      "topic_text": "Nothing like those six you've got there.",
+      "emotion": "Neutral 50",
+      "response_text": "They are nice, aren't they? I'm very proud of them.",
+      "index": "17"
+    },
+    {
+      "topic": "VFreeformSSHQSSHQJacklynTopic006",
+      "topic_text": "Actually, the necklace is made of seven caps. It's not really yours, is it?",
+      "emotion": "Neutral 50",
+      "response_text": "Well, I guess you're just too smart for me. Unfortunately, I can't leave any witnesses behind.",
+      "index": "19"
+    },
+    {
+      "topic": "VFreeformSSHQSSHQJacklynTopic007",
+      "topic_text": "You stole that cap necklace from that poor man.",
+      "emotion": "Neutral 50",
+      "response_text": "So what if I did? What are you going to do about it?",
+      "index": "20"
+    },
+    {
+      "topic": "VFreeformSSHQSSHQJacklynTopic009",
+      "topic_text": "Let's just say I'll leave just enough of you left for the dogs to fight over.",
+      "emotion": "Neutral 50",
+      "response_text": "H-here. You can have the damn necklace. Just leave me alone!",
+      "index": "21"
+    },
+    {
+      "topic": "VFreeformSSHQSSHQJacklynTopic010",
+      "topic_text": "Nothing, I guess.",
+      "emotion": "Neutral 50",
+      "response_text": "You are such a wimp! Die!",
+      "index": "22"
+    },
+    {
+      "topic": "VFreeformSSHQSSHQJacklynTopic011",
+      "topic_text": "I'm going to see that justice is done.",
+      "emotion": "Neutral 50",
+      "response_text": "Not if I kill you first!",
+      "index": "23"
+    },
+    {
+      "topic": "VFreeformSSHQSSHQJacklynTopic013",
+      "topic_text": "Hand over the necklace, thief.",
+      "emotion": "Neutral 50",
+      "response_text": "Fat chance of that. What are you going to do if don't?",
+      "index": "24"
+    },
+    {
+      "topic": "VFreeformSSHQSSHQJacklynTopic014",
+      "topic_text": "No reason. Sorry to bother you.",
+      "emotion": "Neutral 50",
+      "response_text": "Uh, sure. I'll just be going then.",
+      "index": "25"
+    },
+    {
+      "topic": "VFreeformSSHQTopic000",
+      "topic_text": "Are you all right?",
+      "emotion": "Neutral 50",
+      "response_text": "I am now. I was just minding my own business heading west when that psycho came out of nowhere and started shooting!",
+      "index": "26"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "SSHQJacklynHelp",
+      "topic_text": "SSHQJacklynHelp",
+      "emotion": "Neutral 50",
+      "response_text": "Help! You there, please help me!",
+      "index": "28"
+    },
+    {
+      "topic": "SSHQJacklynSucker",
+      "topic_text": "SSHQJacklynSucker",
+      "emotion": "Neutral 50",
+      "response_text": "Sucker.",
+      "index": "30"
+    }
+  ],
+  "combat": [
+    {
+      "topic": "AlertToCombat",
+      "topic_text": "AlertToCombat",
+      "emotion": "Neutral 50",
+      "response_text": "Sucker.",
+      "index": "31"
+    }
+  ]
+}

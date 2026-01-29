@@ -1,0 +1,215 @@
+{
+  "name": "Greta",
+  "url": "/wiki/Greta",
+  "dialogue_name": "Greta.txt",
+  "dialogue_url": "/wiki/Greta.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": true,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000156F3",
+  "ref_id": "0002B8DE",
+  "editor_id": "Greta",
+  "location": "Carol's Place",
+  "location_url": "/wiki/Carol%27s_Place",
+  "descriptions": [
+    "Greta is a ghoul cook, Carol's life partner, and co-host of the Carol's Place in Underworld in Fallout 3. The two are the first same-sex couple to be portrayed in a Fallout game.",
+    "Greta is a ghoul from outside Underworld who immigrated there around 2217. Upon meeting Carol, the two fell in love, and opened a bed and breakfast together, realizing Carol's lifelong dream.",
+    "Greta's key advantage is her deadpan, sarcastic sense of humor, typically leveraging the fact that she's a ghoul cooking for ghouls. She's an expert at turning barely edible scraps into something approximating a dish, and jokingly refers to it as the finest food in DC (just don't ask what it's made of). She makes a point of teasing regular humans like the Lone Wanderer about their weak stomaches, incapable of appreciating ghoul cuisine. They're welcome to try,",
+    "However, she is preoccupied with her love. Carol has been behaving in an increasingly worrying fashion, suffering from insomnia, overwork, and finding no enjoyment in running the Place anymore.",
+    "Naturally, Greta's closest relationship is with Carol, her life partner. The two have been together for over sixty years, longer than many wastelanders have been alive, and are utterly devoted to each other.",
+    "Greta is on friendly terms with most of the ghouls at Underworld, though she apparently waters down her drinks.",
+    "As a result, Greta is very popular in Underworld, to the great annoyance of Ahzrukhal, the local criminal element and competitor to Carol and Greta. He would love to have Greta taken out of the picture",
+    "Greta has one sandbox package that makes her stay at Carol's Place throughout the day, providing services to customers. She will only interrupt it to have a break outside the Underworld concourse at 8 p.m. each day (which only starts to happen after the player enters Underworld for the first time), lasting three hours, and to sleep with Carol for six hours between 3 a.m. and 9 a.m.",
+    "The Fallout 3 Official Game Guide Game of the Year Edition Wasteland Census claims that Greta is Winthrop's girlfriend, who occasionally spends time with him in his concourse workshop. In-game, they never spend time with each other, nor do they have any special interactions."
+  ],
+  "race": "Ghoul",
+  "gender": "Female",
+  "affiliation": "Underworld",
+  "role": "Cook and waitress",
+  "detailed_location": "Underworld,Carol's Place",
+  "voice_actor": "Audrey Wasilewski",
+  "special": {
+    "Strength": 6,
+    "Perception": 1,
+    "Endurance": 4,
+    "Charisma": 4,
+    "Intelligence": 4,
+    "Agility": 6,
+    "Luck": 4
+  },
+  "mod_special_values": {
+    "Strength": 6,
+    "Perception": 1,
+    "Endurance": 4,
+    "Charisma": 4,
+    "Intelligence": 4,
+    "Agility": 7,
+    "Luck": 4
+  },
+  "level": "4",
+  "tag_skills": [
+    {
+      "Barter:": "41"
+    },
+    {
+      "Small Guns:": "45(47)"
+    },
+    {
+      "Unarmed:": "41"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Good",
+  "voice_type": "FemaleGenericGhoulDC",
+  "geck_race": "Ghoul",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Anger 50",
+      "response_text": "Goddammit! Why did you tell Carol that Gob was dead? You couldn't have kept that to yourself?",
+      "index": "1"
+    },
+    {
+      "topic": "MS14Crowley",
+      "topic_text": "What can you tell me about Mister Crowley?",
+      "emotion": "Surprise 50",
+      "response_text": "He's an odd one. Why just a few months ago he decided he didn't like people calling us zombies.",
+      "index": "12"
+    },
+    {
+      "topic": "UnderworldGretaAboutUnderworld",
+      "topic_text": "What do you know about Underworld?",
+      "emotion": "Neutral 50",
+      "response_text": "To tell you the truth, hon, I don't really know much about it. All I know is that it used to be some sort of exhibit.",
+      "index": "14"
+    },
+    {
+      "topic": "UnderworldGretaServices",
+      "topic_text": "What's on the menu?",
+      "emotion": "Neutral 50",
+      "response_text": "You're in for a treat, the finest food in DC. Four stars.",
+      "index": "17"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "I have to go now.",
+      "emotion": "Neutral 50",
+      "response_text": "You'll be back.",
+      "index": "21"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Sad 50",
+      "response_text": "Too bad about Crowley. I heard Tenpenny put out a contract on him.",
+      "index": "25"
+    },
+    {
+      "topic": "UnderworldTalkCarolGretaHealth2",
+      "topic_text": "UnderworldTalkCarolGretaHealth2",
+      "emotion": "Neutral 50",
+      "response_text": "It's more than that, Carol, you've been moping around here for... I don't know how long. The customers have even started to notice.",
+      "index": "35"
+    },
+    {
+      "topic": "UnderworldTalkCarolGretaHealth4",
+      "topic_text": "UnderworldTalkCarolGretaHealth4",
+      "emotion": "Neutral 50",
+      "response_text": "I'm worried about you, that's all. Just think about what I said.",
+      "index": "37"
+    },
+    {
+      "topic": "UnderworldTalkCarolGretaTired2",
+      "topic_text": "UnderworldTalkCarolGretaTired2",
+      "emotion": "Neutral 50",
+      "response_text": "I was saying that you need to get some rest. You're falling asleep up here. You never sleep through a whole night anymore. I hear you getting up.",
+      "index": "39"
+    },
+    {
+      "topic": "UnderworldTalkCarolGretaTired4",
+      "topic_text": "UnderworldTalkCarolGretaTired4",
+      "emotion": "Neutral 50",
+      "response_text": "If you say so, Carol.",
+      "index": "41"
+    },
+    {
+      "topic": "UnderworldTalkGhoulCarolsCarolDeadResponse",
+      "topic_text": "UnderworldTalkGhoulCarolsCarolDeadResponse",
+      "emotion": "Neutral 50",
+      "response_text": "I'm not really ready to talk about it.",
+      "index": "43"
+    },
+    {
+      "topic": "UnderworldTalkGhoulCarolsGretaDeadResponse",
+      "topic_text": "UnderworldTalkGhoulCarolsGretaDeadResponse",
+      "emotion": "Neutral 50",
+      "response_text": "I'm not really ready to talk about it.",
+      "index": "47"
+    },
+    {
+      "topic": "UnderworldTalkGretaDrink1",
+      "topic_text": "UnderworldTalkGretaDrink1",
+      "emotion": "Neutral 50",
+      "response_text": "Sure hon, what do you need?",
+      "index": "51"
+    },
+    {
+      "topic": "UnderworldTalkGretaDrink3",
+      "topic_text": "UnderworldTalkGretaDrink3",
+      "emotion": "Neutral 50",
+      "response_text": "Sure, if you don't mind waiting a few minutes.",
+      "index": "58"
+    },
+    {
+      "topic": "UnderworldTalkGretaFood1",
+      "topic_text": "UnderworldTalkGretaFood1",
+      "emotion": "Neutral 50",
+      "response_text": "Hungry again? What do you need?",
+      "index": "70"
+    },
+    {
+      "topic": "UnderworldTalkGretaFood3",
+      "topic_text": "UnderworldTalkGretaFood3",
+      "emotion": "Neutral 50",
+      "response_text": "I'm not sure, I'll go check.",
+      "index": "80"
+    },
+    {
+      "topic": "UnderworldTalkGretaMisterCrowleyFood1",
+      "topic_text": "UnderworldTalkCrowleyGretaFood1",
+      "emotion": "Neutral 50",
+      "response_text": "Not this again. Look, I've been telling you every day for ten years, if you don't like it, go make your own damn food.",
+      "index": "87"
+    },
+    {
+      "topic": "UnderworldTalkGretaMisterCrowleyFood3",
+      "topic_text": "UnderworldTalkCrowleyGretaFood3",
+      "emotion": "Neutral 50",
+      "response_text": "Well then. What'll it be, Crowley?",
+      "index": "89"
+    },
+    {
+      "topic": "UnderworldTalkGretaMisterCrowleyFood5",
+      "topic_text": "UnderworldTalkGretaMisterCrowleyFood5",
+      "emotion": "Neutral 50",
+      "response_text": "See? I knew you'd come around.",
+      "index": "92"
+    },
+    {
+      "topic": "UnderworldTalkResponseShort1",
+      "topic_text": "UnderworldTalkHelloResponseShort",
+      "emotion": "Neutral 50",
+      "response_text": "Hey, hon. I haven't seen you in here in a while.",
+      "index": "95"
+    }
+  ],
+  "combat": []
+}

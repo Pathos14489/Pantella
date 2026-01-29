@@ -1,0 +1,416 @@
+{
+  "name": "James Garret",
+  "url": "/wiki/James_Garret",
+  "dialogue_name": "VFSJamesGarret.txt",
+  "dialogue_url": "/wiki/VFSJamesGarret.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": true,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "0010C67E",
+  "ref_id": "0010D8E6",
+  "editor_id": "VFSJamesGarret",
+  "location": "Atomic Wrangler Casino",
+  "location_url": "/wiki/Atomic_Wrangler_Casino",
+  "descriptions": [
+    "James Garret is the co-owner of the Atomic Wrangler Casino, along with his twin sister Francine Garret. He lives in Freeside in 2281.",
+    "James is looking for prostitutes for his escort service. Speaking to him can begin the quest Wang Dang Atomic Tango which, despite the dubious connotations, does not give any negative Karma.",
+    "Though he denies it, James is also an alleged closet robot fetishist. With a Speech of 40, talking to James about Fisto after the quest, Wang Dang Atomic Tango will result in some humorous dialogue.",
+    "James is at the counter of the Atomic Wrangler from 1 PM to 8 AM the next morning, heading upstairs for a short nap in the late morning.",
+    "James will refuse to serve the player if they have a negative reputation in Freeside, instead offering to improve their reputation for a price.",
+    "The player can pay James to improve their reputation in Freeside, either adding positive reputation or removing negative reputation. Both options can be used three times, each rewarding a different amount of rep for a varying amount of caps."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Atomic Wrangler Casino",
+  "role": "Casino owner2 of Spades(withFrancine)",
+  "detailed_location": "Freeside",
+  "voice_actor": "Liam O'Brien",
+  "special": {
+    "Strength": 5,
+    "Perception": 6,
+    "Endurance": 6,
+    "Charisma": 5,
+    "Intelligence": 5,
+    "Agility": 7,
+    "Luck": 5
+  },
+  "level": "16",
+  "tag_skills": [
+    {
+      "Guns:": "94"
+    },
+    {
+      "Speech:": "95(100)"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Neutral",
+  "voice_type": "MaleAdult05",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "{Angry}Well, I hate to support the damn NCR, but it looks like they're the only thing between us and mass slavery at the hands of the Legion.",
+      "index": "1"
+    },
+    {
+      "topic": "JamesGarretHadrian",
+      "topic_text": "I'd like to get Hadrian out of his contract.",
+      "emotion": "Surprise 20",
+      "response_text": "Now why would I want to do that? His performances make me quite a lot of money.",
+      "index": "21"
+    },
+    {
+      "topic": "VFreeformFreesideVFSJamesGarretTopic000",
+      "topic_text": "The Followers need to find someone to trade with for supplies.",
+      "emotion": "Neutral 50",
+      "response_text": "Really now? This is news. We could possibly supply what they need, but they would need to supply us in kind.",
+      "index": "23"
+    },
+    {
+      "topic": "VFreeformFreesideVFSJamesGarretTopic001",
+      "topic_text": "I might be able to work something out.",
+      "emotion": "Neutral 50",
+      "response_text": "Good. We can supply them with all the Med-X they need. For the Fixer, we'll only be able to send over some basic drug components.",
+      "index": "27"
+    },
+    {
+      "topic": "VFreeformFreesideVFSJamesGarretTopic002",
+      "topic_text": "Do you have anything for sale?",
+      "emotion": "Neutral 50",
+      "response_text": "Sure. Take a look.",
+      "index": "31"
+    },
+    {
+      "topic": "VFreeformFreesideVFSJamesGarretTopic003",
+      "topic_text": "I spoke with Julie Farkas. She says the Followers will accept your offer.",
+      "emotion": "Neutral 50",
+      "response_text": "Hey, that's great. We'll get some supplies sent over today as a show of good faith.",
+      "index": "34"
+    },
+    {
+      "topic": "VFreeformFreesideVFSJamesGarretTopic004",
+      "topic_text": "How's business?",
+      "emotion": "Neutral 50",
+      "response_text": "House may have boxed us out of the Strip, but we also don't have to deal with their bullshit.",
+      "index": "38"
+    },
+    {
+      "topic": "VFreeformFreesideVFSJamesGarretTopic005",
+      "topic_text": "Do you have any work you need done?",
+      "emotion": "Neutral 50",
+      "response_text": "We've got the basics covered, but now that you mention it, we have had{draw out}unusual requests from some of our wealthier customers.",
+      "index": "46"
+    },
+    {
+      "topic": "VFreeformFreesideVFSJamesGarretTopic006",
+      "topic_text": "What sort of \"proclivities\" are we talking about?",
+      "emotion": "Neutral 50",
+      "response_text": "Our wealthiest client has a thing for ghouls, and a thing for cowboys. He wants an escort who can satisfy both fetishes.",
+      "index": "49"
+    },
+    {
+      "topic": "VFreeformFreesideVFSJamesGarretTopic007",
+      "topic_text": "Maybe later.",
+      "emotion": "Neutral 50",
+      "response_text": "Come on back and see me if you change your mind.",
+      "index": "53"
+    },
+    {
+      "topic": "VFreeformFreesideVFSJamesGarretTopic008",
+      "topic_text": "I'll see if I run across any suitable candidates.",
+      "emotion": "Neutral 50",
+      "response_text": "Just direct them to the Wrangler. I'll pay you when they show up.",
+      "index": "54"
+    },
+    {
+      "topic": "VFreeformFreesideVFSJamesGarretTopic009",
+      "topic_text": "I'm not going to be your pimp.",
+      "emotion": "Neutral 50",
+      "response_text": "Oh, I'd still be the pimp - you'd just be my pissant recruiter is all. Let me know if you change your mind.{dressing down the player for his/her self-righteousness}",
+      "index": "55"
+    },
+    {
+      "topic": "VFreeformFreesideVFSJamesGarretTopic010",
+      "topic_text": "I'll expect 100 caps *minimum* for each candidate I bring in.",
+      "emotion": "Neutral 50",
+      "response_text": "Just don't rough up the merchandise before delivery - you break it, you bought it.",
+      "index": "56"
+    },
+    {
+      "topic": "VFreeformFreesideVFSJamesGarretTopic014<Speech>",
+      "topic_text": "Surely these escorts are critical to your business? How about double?",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] Okay, you've got yourself a deal. Find escorts to fill the positions and I'll pay double.",
+      "index": "57"
+    },
+    {
+      "topic": "VFreeformFreesideVFSJamesGarretTopic015<Barter>",
+      "topic_text": "I will need more than that to recoup travel expenses.",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] Okay, you've got yourself a deal. Find escorts to fill the positions and I'll pay double.",
+      "index": "59"
+    },
+    {
+      "topic": "VFreeformFreesideVFSJamesGarretTopic016",
+      "topic_text": "I found the sexbot you're looking for.",
+      "emotion": "Happy 50",
+      "response_text": "You did? Hot damn! I been looking for one of those for years!",
+      "index": "61"
+    },
+    {
+      "topic": "VFreeformFreesideVFSJamesGarretTopic017",
+      "topic_text": "Fisto is already programmed to respond to your commands.",
+      "emotion": "Neutral 50",
+      "response_text": "{thrilled}It is? It will? My god! Imagine the possibilities!",
+      "index": "63"
+    },
+    {
+      "topic": "VFreeformFreesideVFSJamesGarretTopic018I could use some help with my reputation in Freeside.",
+      "topic_text": "I could use some help with my reputation in Freeside.",
+      "emotion": "Neutral 50",
+      "response_text": "{Curious}For the right caps I might be able to put in a good word or let people know you're not such a bad guy. What do you have in mind?",
+      "index": "73"
+    },
+    {
+      "topic": "VFreeformFreesideVFSJamesGarretTopic019<Speech>",
+      "topic_text": "Thing is, Fisto's a *heavy-duty* piece of equipment, built to last...",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] Hey, I'm amazed you even found the thing in the first place.",
+      "index": "74"
+    },
+    {
+      "topic": "VFreeformFreesideVFSJamesGarretTopic020<Barter>",
+      "topic_text": "Thing is, Fisto's a *heavy-duty* piece of equipment, built to last...",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] You're right, you're right! Something like this, it's worth a little extra because it's going to keep on satisfying you...{thrilled - you ordered the sexbot for yourself}",
+      "index": "79"
+    },
+    {
+      "topic": "VFreeformFreesideVFSJamesGarretTopic021",
+      "topic_text": "I need people to forget about some things I've done.",
+      "emotion": "Neutral 50",
+      "response_text": "All right, you let your caps do the talking. How much exactly are you looking for the locals to forget?",
+      "index": "85"
+    },
+    {
+      "topic": "VFreeformFreesideVFSJamesGarretTopic022",
+      "topic_text": "I want people to like me.",
+      "emotion": "Neutral 50",
+      "response_text": "All right, I can chat you up, but it is going to cost you. I'm not risking my reputation around here for nothing.",
+      "index": "87"
+    },
+    {
+      "topic": "VFreeformFreesideVFSJamesGarretTopic023",
+      "topic_text": "You wanted a smooth-talker for an escort? I found one.",
+      "emotion": "Neutral 50",
+      "response_text": "And who would that be?",
+      "index": "89"
+    },
+    {
+      "topic": "VFreeformFreesideVFSJamesGarretTopic024",
+      "topic_text": "Santiago's your man.",
+      "emotion": "Neutral 50",
+      "response_text": "That honey-mouthed sonofabitch? Fine. At least he'll have to shut up occasionally.",
+      "index": "90"
+    },
+    {
+      "topic": "VFreeformFreesideVFSJamesGarretTopic025",
+      "topic_text": "I actually found you an escort who's a ghoul *and* a cowboy.",
+      "emotion": "Neutral 50",
+      "response_text": "Imagine that! What's his name and when's he start?",
+      "index": "106"
+    },
+    {
+      "topic": "VFreeformFreesideVFSJamesGarretTopic026",
+      "topic_text": "Her name's Beatrix, and she can start immediately.",
+      "emotion": "Neutral 50",
+      "response_text": "A she, huh? Well... I guess the customer who made that request can't get{emph}everything he wants.",
+      "index": "107"
+    },
+    {
+      "topic": "VFreeformFreesideVFSJamesGarretTopic028",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Goodbye.",
+      "index": "117"
+    },
+    {
+      "topic": "VFreeformFreesideVFSJamesGarretTopic029",
+      "topic_text": "Never mind.",
+      "emotion": "Neutral 50",
+      "response_text": "What do you need, then?",
+      "index": "118"
+    },
+    {
+      "topic": "VFreeformFreesideVFSJamesGarretTopic030",
+      "topic_text": "<Pay 250 caps> Just a few things here and there. I'm no monster.",
+      "emotion": "Neutral 50",
+      "response_text": "Very well, I'll let the townsfolk know you had your reasons, and convince them they were of the most benevolent means.",
+      "index": "119"
+    },
+    {
+      "topic": "VFreeformFreesideVFSJamesGarretTopic031",
+      "topic_text": "<Pay 500 caps> I think they may have gotten me mixed up with someone else.",
+      "emotion": "Neutral 50",
+      "response_text": "You've got yourself a deal. I'll let the townsfolk know some ill-tempered goon has been spreading nasty rumors about you.",
+      "index": "121"
+    },
+    {
+      "topic": "VFreeformFreesideVFSJamesGarretTopic032",
+      "topic_text": "<Pay 1000 caps> I must have been possessed by the Devil to have done what I did.",
+      "emotion": "Neutral 50",
+      "response_text": "This'll take some work, but I'm sure I can convince them you were off your rocker in the past and you've changed your ways.",
+      "index": "123"
+    },
+    {
+      "topic": "VFreeformFreesideVFSJamesGarretTopic033",
+      "topic_text": "<Pay 250 caps> Just a few things here and there.",
+      "emotion": "Neutral 50",
+      "response_text": "Great, I'll let the townsfolk know you help old ladies across the street and do your best to keep the town clean if you notice litter.",
+      "index": "126"
+    },
+    {
+      "topic": "VFreeformFreesideVFSJamesGarretTopic034",
+      "topic_text": "<Pay 500 caps> I'm a great guy. I do my best to help those in need.",
+      "emotion": "Neutral 50",
+      "response_text": "That'll do nicely. I'll spin some stories about how you stopped a mugging or two and saved a kid's pet rat from certain doom!",
+      "index": "129"
+    },
+    {
+      "topic": "VFreeformFreesideVFSJamesGarretTopic035",
+      "topic_text": "<Pay 500 caps> I'm a great gal. I do my best to help those in need.",
+      "emotion": "Neutral 50",
+      "response_text": "That'll do nicely. I'll spin some stories about how you stopped a mugging or two and saved a kid's pet rat from certain doom!",
+      "index": "133"
+    },
+    {
+      "topic": "VFreeformFreesideVFSJamesGarretTopic036",
+      "topic_text": "Old Ben has the experience and skill you need.",
+      "emotion": "Neutral 50",
+      "response_text": "I've heard stories of that old guy. I'm amazed he's still alive with how much he's been through.",
+      "index": "137"
+    },
+    {
+      "topic": "VFreeformFreesideVFSJamesGarretTopic037",
+      "topic_text": "<Pay 1000 caps> I'm a damn beacon of morality here! People should be lining up to shake my hand.",
+      "emotion": "Neutral 50",
+      "response_text": "Great, this is going to require an epic tale of heroism...",
+      "index": "147"
+    },
+    {
+      "topic": "VFreeformFreesideVFSJamesGarretTopic038",
+      "topic_text": "I'm not interested.",
+      "emotion": "Neutral 50",
+      "response_text": "Suit yourself.",
+      "index": "150"
+    },
+    {
+      "topic": "VFreeformFreesideVFSJamesGarretTopic040",
+      "topic_text": "Any idea where I should look for the sexbot?",
+      "emotion": "Neutral 50",
+      "response_text": "The best place to start would be with Ralph at Mick & Ralph's over on the east end of Freeside. Other than that, your guess is as good as mine.",
+      "index": "151"
+    },
+    {
+      "topic": "VFreeformFreesideVFSJamesGarretTopic041",
+      "topic_text": "I wasn't able to find all of the escorts you're looking for.",
+      "emotion": "Neutral 50",
+      "response_text": "That's unfortunate, but it's not like we're losing any existing business over it. Thanks for looking.",
+      "index": "152"
+    },
+    {
+      "topic": "VFreeformFreesideVFSJamesGarretTopic042<Speech>",
+      "topic_text": "My time isn't cheap, Mr. Garret.",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] Oh all right. You did the legwork, so I suppose you deserve a tip. Here.",
+      "index": "159"
+    },
+    {
+      "topic": "VFreeformFreesideVFSJamesGarretTopic043",
+      "topic_text": "Pleasure doing business with you.",
+      "emotion": "Neutral 50",
+      "response_text": "Yep, thanks for the help.",
+      "index": "161"
+    },
+    {
+      "topic": "VMSTopsTalentPoolVFSJamesGarretTopic000",
+      "topic_text": "I could pay you.",
+      "emotion": "Happy 10",
+      "response_text": "Now, you see, you should have opened with that. I'll sell you his contract, but it will cost you.",
+      "index": "162"
+    },
+    {
+      "topic": "VMSTopsTalentPoolVFSJamesGarretTopic001",
+      "topic_text": "He's not the right fit for this place. You'll find better performers.",
+      "emotion": "Pained 15",
+      "response_text": "[SUCCEEDED] I suppose you've got a point. Plenty of Brahmin on the prairie, and all that. Fine, I'll cut him loose. He's all yours.",
+      "index": "163"
+    },
+    {
+      "topic": "VMSTopsTalentPoolVFSJamesGarretTopic002",
+      "topic_text": "But how much do you lose on folk not coming into a place with a ghoul performer?",
+      "emotion": "Pained 15",
+      "response_text": "[SUCCEEDED] I admit that thought had crossed my mind. Maybe you're right - maybe I'd do better with a human act. He's all yours.",
+      "index": "165"
+    },
+    {
+      "topic": "VMSTopsTalentPoolVFSJamesGarretTopic003",
+      "topic_text": "If you don't I'll tear out your spleen and then rip this place down.",
+      "emotion": "Anger 40",
+      "response_text": "Ah. I suppose that's a very... compelling negotiating stance. Fine. The contract is yours. I hope you choke on it.",
+      "index": "167"
+    },
+    {
+      "topic": "VMSTopsTalentPoolVFSJamesGarretTopic004",
+      "topic_text": "I'll pay you 100 and not a cap more.",
+      "emotion": "Pained 15",
+      "response_text": "[SUCCEEDED] Well, I see there's no fooling you in a horse trade. Fine - you've got a deal.",
+      "index": "168"
+    },
+    {
+      "topic": "VMSTopsTalentPoolVFSJamesGarretTopic005",
+      "topic_text": "I've been a lot of help to you already. You can do me this one favor.",
+      "emotion": "Pained 15",
+      "response_text": "You have been a useful associate, that I'll grant you. Okay, he's yours for a discount. Just make sure the stage is downwind of the audience.",
+      "index": "170"
+    },
+    {
+      "topic": "VMSTopsTalentPoolVFSJamesGarretTopic006",
+      "topic_text": "Here you go, 150 caps.",
+      "emotion": "Happy 10",
+      "response_text": "Pleasure doing business with you.",
+      "index": "171"
+    },
+    {
+      "topic": "VMSTopsTalentPoolVFSJamesGarretTopic007",
+      "topic_text": "I'll come back when I have enough.",
+      "emotion": "Disgust 10",
+      "response_text": "Take your time - the ghoul's not going anywhere.",
+      "index": "172"
+    },
+    {
+      "topic": "VMSTopsTalentPoolVFSJamesGarretTopic008",
+      "topic_text": "Here you go.",
+      "emotion": "Happy 10",
+      "response_text": "Pleasure doing business with you.",
+      "index": "173"
+    },
+    {
+      "topic": "VMSTopsTalentPoolVFSJamesGarretTopic009",
+      "topic_text": "I'll come back when I have enough.",
+      "emotion": "Disgust 15",
+      "response_text": "Take your time - the ghoul's not going anywhere.",
+      "index": "174"
+    }
+  ],
+  "conversation": [],
+  "combat": []
+}

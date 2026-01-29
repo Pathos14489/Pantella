@@ -1,0 +1,565 @@
+{
+  "name": "Vance",
+  "url": "/wiki/Vance_(Fallout_3)",
+  "dialogue_name": "TheFamilyVance.txt",
+  "dialogue_url": "/wiki/TheFamilyVance.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "0001D5F7",
+  "ref_id": "0001941D",
+  "editor_id": "TheFamilyVance",
+  "location": "Meresti Metro station",
+  "location_url": "/wiki/Meresti_Metro_station",
+  "descriptions": [
+    "Vance is the leader of a group of \"vampires\" called the Family in 2277.",
+    "When Vance was younger, he decided that life in Rivet City was not for him and began to wander the wasteland. Soon, the ability to find others of his \"kind\" manifested itself. Over time, he gathered these outcasts and founded their home in Meresti. Using his traits as a basis and wanting to establish some sort of society, he molded the residents into \"vampires\" and taught them his bloodsucking ways.",
+    "He is a fair leader and has never demanded anyone do anything they did not wish to do, nor does he wish to put anyone in harm's way. He sees himself as a leader, but more in the way of a guide or a priest than a king. He addresses the residents of Meresti often so they will never \"stray from their true nature,\" that of the vampire. Vance is not violent and only attacks or orders attacks when survival demands it.",
+    "Vance has a very high amount of Hit Points, being significantly tougher than a standard human non-player character. His durability is slightly less than that of a joinable non-player character companion and (with his armor), slightly more than that of a super mutant brute. His weapon of choice is the Shishkebab. Combat with him can be difficult if the player character chooses to deal with the Family violently."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "The Family",
+  "role": "Vampire leader",
+  "detailed_location": "Rivet City(formerly)Meresti Metro station",
+  "voice_actor": "Gregory Gorton",
+  "special": {
+    "Strength": 6,
+    "Perception": 7,
+    "Endurance": 6,
+    "Charisma": 3,
+    "Intelligence": 3,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "mod_special_values": {
+    "Strength": 6,
+    "Perception": 8,
+    "Endurance": 6,
+    "Charisma": 4,
+    "Intelligence": 3,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "level": "7→14",
+  "tag_skills": [
+    {
+      "Melee Weap.:": "58→88"
+    },
+    {
+      "Small Guns:": "58→88(68→98)"
+    },
+    {
+      "Sneak:": "58→88"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "205→240"
+    },
+    {
+      "Critical Chance:": "5%"
+    },
+    {
+      "Unarmed Dam.:": "1.35"
+    },
+    {
+      "Poison Resist.:": "25%"
+    },
+    {
+      "Rad. Resist.:": "10%"
+    },
+    {
+      "Carry Weight:": "210"
+    }
+  ],
+  "karma": "Neutral",
+  "voice_type": "MaleAdult01DefaultBDC",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Happy 50",
+      "response_text": "Always a pleasure. What can I do for you?",
+      "index": "1"
+    },
+    {
+      "topic": "MS09Bailout",
+      "topic_text": "Let me ask you something else.",
+      "emotion": "Neutral 50",
+      "response_text": "Certainly.",
+      "index": "11"
+    },
+    {
+      "topic": "MS09FinTLContribute",
+      "topic_text": "I've brought some bloodpacks to contribute.",
+      "emotion": "Neutral 50",
+      "response_text": "I can only offer my thanks. My people are getting accustomed to using these as a substitute for live prey.",
+      "index": "12"
+    },
+    {
+      "topic": "MS09FinTLHowAreThings",
+      "topic_text": "How are things going now?",
+      "emotion": "Neutral 50",
+      "response_text": "Very well, actually. Our truce with Arefu is coming to fruition. I've begun teaching my people to live off of the donated bloodpacks.",
+      "index": "15"
+    },
+    {
+      "topic": "MS09FinTLProposalI have a proposal for you from Vance, the Family's leader.",
+      "topic_text": "Arefu has accepted your proposal, Vance.",
+      "emotion": "Happy 80",
+      "response_text": "Excellent! I knew you would serve as an ambassador for us in good faith.",
+      "index": "20"
+    },
+    {
+      "topic": "MS09FinTLTeachVampire",
+      "topic_text": "Can you teach me the ways of the Vampire?",
+      "emotion": "Neutral 50",
+      "response_text": "To be a vampire is a life commitment. It is not achieved by my words, it is something you earn by your own will and sincere meditation.",
+      "index": "27"
+    },
+    {
+      "topic": "MS09TLLawsPlease, help me understand your Laws.",
+      "topic_text": "I think I finally understand what you people are.",
+      "emotion": "Neutral 50",
+      "response_text": "Indeed? Tell me what you've learned from the Laws. What do you think we are?",
+      "index": "36"
+    },
+    {
+      "topic": "MS09TLLookingforIanWestI'm looking for Ian West. Have you seen him?",
+      "topic_text": "Now that I have a better understanding of the Family, may I speak to Ian?",
+      "emotion": "Disgust 70",
+      "response_text": "I had always assumed if a human happened upon our home, it would be for the purpose of our extermination.",
+      "index": "41"
+    },
+    {
+      "topic": "MS09TLWhatisMeresti",
+      "topic_text": "What is this place?",
+      "emotion": "Neutral 50",
+      "response_text": "You are standing inside Meresti, the home of the Family. This is our sanctuary from the outside world.",
+      "index": "46"
+    },
+    {
+      "topic": "MS09TLWhoAreFamily",
+      "topic_text": "Tell me about the Family.",
+      "emotion": "Neutral 60",
+      "response_text": "The Family has become our moniker because that is exactly what we are... related by blood.",
+      "index": "48"
+    },
+    {
+      "topic": "MS09VanceArefuProposal01",
+      "topic_text": "Arefu donates bloodpacks, and you leave the town alone.",
+      "emotion": "Neutral 50",
+      "response_text": "Agreed. Please, take this proposal to Arefu. Speak with them and then return to me with their decision.",
+      "index": "51"
+    },
+    {
+      "topic": "MS09VanceArefuProposal02",
+      "topic_text": "Arefu donates bloodpacks, and in exchange, you protect them.",
+      "emotion": "Neutral 50",
+      "response_text": "Agreed. Please, take this proposal to Arefu. Speak with them and then return to me with their decision.",
+      "index": "54"
+    },
+    {
+      "topic": "MS09VanceArefuProposal03",
+      "topic_text": "Arefu will sell you bloodpacks, and you'll leave the town alone.",
+      "emotion": "Happy 50",
+      "response_text": "Although I appreciate what you are trying to do, please realize that we have no money or goods to speak of.",
+      "index": "57"
+    },
+    {
+      "topic": "MS09VanceEndgameCT01IanGoes",
+      "topic_text": "Ian's decided to leave the Family.",
+      "emotion": "Sad 50",
+      "response_text": "It saddens me to lose one of my flock, but I believe everyone has to follow their own path.",
+      "index": "60"
+    },
+    {
+      "topic": "MS09VanceEndgameCT01IanStays",
+      "topic_text": "Ian's decided to stay with the Family.",
+      "emotion": "Neutral 50",
+      "response_text": "When you first arrived I was suspicious of your intentions. I can see now it was an error in judgement.",
+      "index": "64"
+    },
+    {
+      "topic": "MS09VanceEndgameCT02",
+      "topic_text": "Before I talk about Ian, there's still the matter of Arefu to discuss...",
+      "emotion": "Happy 50",
+      "response_text": "As long as you maintain this level of civility, please proceed.",
+      "index": "68"
+    },
+    {
+      "topic": "MS09VanceEndgameCT03",
+      "topic_text": "Wait! What about Arefu? You can't just prey on them anytime you're hungry!",
+      "emotion": "Surprise 70",
+      "response_text": "You wish to arrive at some sort of a bargain?",
+      "index": "69"
+    },
+    {
+      "topic": "MS09VanceEndgameCT04",
+      "topic_text": "How did you know Ian was trying to decide to stay or leave?",
+      "emotion": "Happy 50",
+      "response_text": "My fine friend, that poor soul has been wrestling with the same question every new member of the Family asks himself when they arrive.",
+      "index": "70"
+    },
+    {
+      "topic": "MS09VanceEndgameCT05",
+      "topic_text": "How can I convince you to stop preying on Arefu?",
+      "emotion": "Happy 50",
+      "response_text": "No convincing is necessary. I must say your visit is a pleasant change from what I am accustomed to when dealing with humans.",
+      "index": "73"
+    },
+    {
+      "topic": "MS09VanceEndgameCT06Intelligence",
+      "topic_text": "There must be an alternative source of blood you can survive on.",
+      "emotion": "Neutral 50",
+      "response_text": "Many years ago, I survived by drinking from fresh bloodpacks I recovered from hospital ruins.",
+      "index": "76"
+    },
+    {
+      "topic": "MS09VanceEndgameCT07Medicine",
+      "topic_text": "I believe that blood preserved in bloodpacks could provide what you need.",
+      "emotion": "Neutral 50",
+      "response_text": "Many years ago, I survived by drinking from fresh bloodpacks I recovered from hospital ruins.",
+      "index": "79"
+    },
+    {
+      "topic": "MS09VanceEndgameCT08SC",
+      "topic_text": "Give those people a chance! They're defenseless.",
+      "emotion": "Sad 50",
+      "response_text": "I suppose we could stop our raids on Arefu in light of this situation, but that just forces us to prey on others.",
+      "index": "82"
+    },
+    {
+      "topic": "MS09VanceEndgameCT09",
+      "topic_text": "If you keep attacking Arefu, they'll keep fighting back until everyone is dead.",
+      "emotion": "Happy 50",
+      "response_text": "Well put. I must say your visit is a pleasant change from what I am accustomed to when dealing with humans.",
+      "index": "85"
+    },
+    {
+      "topic": "MS09VanceEndgameCT10",
+      "topic_text": "I'm not sure I should be the one telling you this.",
+      "emotion": "Happy 60",
+      "response_text": "If you fear reprisal from the Family regarding his decision, know that I would never hold it against you.",
+      "index": "88"
+    },
+    {
+      "topic": "MS09VanceEndgameCT11Research",
+      "topic_text": "Vampires can drink any kind of human blood... even from bloodpacks.",
+      "emotion": "Neutral 50",
+      "response_text": "Curious. Many years ago, I survived by drinking from fresh bloodpacks I recovered from hospital ruins.",
+      "index": "90"
+    },
+    {
+      "topic": "MS09VanceIntroCT01",
+      "topic_text": "This place is very different from any of the other settlements I've seen.",
+      "emotion": "Disgust 70",
+      "response_text": "What you see before you is the last bastion of hope for the downtrodden and misunderstood.",
+      "index": "93"
+    },
+    {
+      "topic": "MS09VanceIntroCT02",
+      "topic_text": "What is this place?",
+      "emotion": "Disgust 70",
+      "response_text": "What you see before you is the last bastion of hope for the downtrodden and misunderstood.",
+      "index": "95"
+    },
+    {
+      "topic": "MS09VanceIntroCT03",
+      "topic_text": "I think I've stumbled across the world's first underground insane asylum!",
+      "emotion": "Disgust 90",
+      "response_text": "Your words echo the very reason this place was established.",
+      "index": "97"
+    },
+    {
+      "topic": "MS09VanceIntroCT04",
+      "topic_text": "<Allow Vance to continue.>",
+      "emotion": "Disgust 60",
+      "response_text": "We are the remnants of society, cast aside like the clean-picked bones of a hunter's feast.",
+      "index": "100"
+    },
+    {
+      "topic": "MS09VanceIntroCT05",
+      "topic_text": "Excuse me, but what does all that mean?",
+      "emotion": "Disgust 60",
+      "response_text": "What does it mean? Allow me to simplify it for you since you are obviously of limited intellect.",
+      "index": "103"
+    },
+    {
+      "topic": "MS09VanceIntroCT06",
+      "topic_text": "Whoa, whoa... slow down there. I left my thesaurus at home.",
+      "emotion": "Disgust 60",
+      "response_text": "What does it mean? Allow me to simplify it for you since you are obviously of limited intellect.",
+      "index": "106"
+    },
+    {
+      "topic": "MS09VanceIntroCT07",
+      "topic_text": "Your ways? So you're reforming these people?",
+      "emotion": "Neutral 50",
+      "response_text": "Ah! Your words illustrate why the hardships persist for my people. Reforming implies something is wrong with them and needs to be eliminated.",
+      "index": "109"
+    },
+    {
+      "topic": "MS09VanceIntroCT08",
+      "topic_text": "What do you mean?",
+      "emotion": "Neutral 50",
+      "response_text": "Humans call for our extermination or reform. Reforming implies something is wrong with us and needs to be eliminated.",
+      "index": "111"
+    },
+    {
+      "topic": "MS09VanceIntroCT09",
+      "topic_text": "Wow, you're a real humanitarian.",
+      "emotion": "Disgust 80",
+      "response_text": "I find your choice of words quite droll, but that is what I have come to expect from your kind.",
+      "index": "113"
+    },
+    {
+      "topic": "MS09VanceIntroCT10",
+      "topic_text": "If I accept that you're no longer cannibals, what do I call you?",
+      "emotion": "Happy 70",
+      "response_text": "Your open mindedness is very rare for a human. I find that fascinating.",
+      "index": "116"
+    },
+    {
+      "topic": "MS09VanceIntroCT11",
+      "topic_text": "Your people eat human flesh, Vance. That's sick!",
+      "emotion": "Disgust 50",
+      "response_text": "That is correct my arrogant friend, but you are missing the grand picture I'm afraid.",
+      "index": "119"
+    },
+    {
+      "topic": "MS09VanceIntroCT12",
+      "topic_text": "A cannibal by any other name is still a cannibal.",
+      "emotion": "Surprise 50",
+      "response_text": "That is completely untrue. Your difficulty grasping the concept that change is possible in my people perplexes me. Let me try a different approach.",
+      "index": "122"
+    },
+    {
+      "topic": "MS09VanceIntroCT13",
+      "topic_text": "Enough talk! I'm here to wipe your kind out!",
+      "emotion": "Anger 70",
+      "response_text": "I would choose your next words VERY carefully if I were in your place.",
+      "index": "125"
+    },
+    {
+      "topic": "MS09VanceIntroDirectCT01SC",
+      "topic_text": "None of this talk is necessary. I know exactly what you are.",
+      "emotion": "Happy 80",
+      "response_text": "You amaze me. Never have I met a human with the gift of cognition that you possess.",
+      "index": "130"
+    },
+    {
+      "topic": "MS09VanceIntroDirectCT02Intelligence",
+      "topic_text": "This isn't rocket science. I know exactly what you are.",
+      "emotion": "Happy 80",
+      "response_text": "You amaze me. Never have I met a human with the gift of cognition that you possess.",
+      "index": "132"
+    },
+    {
+      "topic": "MS09VanceLookingIanCT00",
+      "topic_text": "I have a letter for him. From his sister...",
+      "emotion": "Surprise 60",
+      "response_text": "Then a part of his human family still remains? Even more of a reason he needs to remain in isolation.",
+      "index": "134"
+    },
+    {
+      "topic": "MS09VanceLookingIanCT02",
+      "topic_text": "Ian shouldn't be here. He has family that misses him.",
+      "emotion": "Neutral 50",
+      "response_text": "WE are his family. If he were to leave, how can you be certain he would not feel the same way about us?",
+      "index": "137"
+    },
+    {
+      "topic": "MS09VanceLookingIanCT03",
+      "topic_text": "You people murdered his parents!",
+      "emotion": "Neutral 50",
+      "response_text": "Murder is a very strong word, my friend. Do you consider it murder when a hunter stalks his prey in order to put food on the table?",
+      "index": "140"
+    },
+    {
+      "topic": "MS09VanceLookingIanCT04",
+      "topic_text": "I don't have time for chit-chat. Tell me where Ian is. Now!",
+      "emotion": "Disgust 50",
+      "response_text": "Sigh. Short temper. So typical of a human.",
+      "index": "143"
+    },
+    {
+      "topic": "MS09VanceLookingIanCT05",
+      "topic_text": "Wait a minute... What happened to him?",
+      "emotion": "Neutral 50",
+      "response_text": "Ian's hunger for flesh overwhelmed him... it drove him to kill his parents.",
+      "index": "147"
+    },
+    {
+      "topic": "MS09VanceLookingIanCT06",
+      "topic_text": "Damn it, Vance! What did you do to him?",
+      "emotion": "Neutral 50",
+      "response_text": "Do to him? Nothing. Ian's hunger for flesh overwhelmed him... it drove him to kill his parents.",
+      "index": "149"
+    },
+    {
+      "topic": "MS09VanceLookingIanCT07",
+      "topic_text": "Are you telling me that Ian is a cannibal?",
+      "emotion": "Anger 50",
+      "response_text": "I am telling you he will no longer be labeled as such. He has become one of us... a member of the Family.",
+      "index": "151"
+    },
+    {
+      "topic": "MS09VanceLookingIanCT08",
+      "topic_text": "I find this all very hard to believe.",
+      "emotion": "Fear 50",
+      "response_text": "The hunger that drives us must be kept in check. It is one of the most difficult things to teach.",
+      "index": "154"
+    },
+    {
+      "topic": "MS09VanceLookingIanCT09SC",
+      "topic_text": "This letter is all Ian has left of his old life. Allow me to give it to him.",
+      "emotion": "Happy 80",
+      "response_text": "Your words impress me, human. Perhaps I misjudged you when we first met.",
+      "index": "157"
+    },
+    {
+      "topic": "MS09VanceLookingIanCT10Perk",
+      "topic_text": "Look, I'm one of you. So I understand your feelings. I just want to talk to Ian.",
+      "emotion": "Sad 50",
+      "response_text": "Indeed. Perhaps my sense of caring for Ian has overwhelmed my sense of duty to the Family and all others like us.",
+      "index": "159"
+    },
+    {
+      "topic": "MS09VanceLookingIanCT11",
+      "topic_text": "Please, you must let me speak to him!",
+      "emotion": "Neutral 50",
+      "response_text": "No, it would not be right to disturb him in this time of meditation. I am sorry but I cannot allow it.",
+      "index": "162"
+    },
+    {
+      "topic": "MS09VanceLookingIanCT12",
+      "topic_text": "Let me see Ian, you filthy liar!",
+      "emotion": "Neutral 50",
+      "response_text": "I can sympathize with your anger, human. Many find cannibalism shocking, especially in the young.",
+      "index": "163"
+    },
+    {
+      "topic": "MS09VanceVampireDoneCT01",
+      "topic_text": "You're vampires. Or at least you follow their fictional traditions.",
+      "emotion": "Neutral 50",
+      "response_text": "Do you think I believe I can turn into a bat and fly away? Of course not. Do I cast my image in a mirror? Absolutely.",
+      "index": "165"
+    },
+    {
+      "topic": "MS09VanceVampireDoneCT02",
+      "topic_text": "If I said vampires, and you said I was right, we'd both be crazy.",
+      "emotion": "Neutral 50",
+      "response_text": "Do you think I believe I can turn into a bat and fly away? Of course not. Do I cast my image in a mirror? Absolutely.",
+      "index": "168"
+    },
+    {
+      "topic": "MS09VanceVampireDoneCT03",
+      "topic_text": "I still say you're cannibals.",
+      "emotion": "Neutral 50",
+      "response_text": "It saddens me to think that your failure to understand us could be my fault. If that is the case, allow me to enlighten you.",
+      "index": "171"
+    },
+    {
+      "topic": "MS09VanceVampireDoneCT04",
+      "topic_text": "I think you're a collective of seriously messed up freaks.",
+      "emotion": "Sad 50",
+      "response_text": "I can see that you have no understanding of what I have accomplished here.",
+      "index": "173"
+    },
+    {
+      "topic": "MS09VanceVampireDoneCT05",
+      "topic_text": "You do this by teaching them that they're mythical beings?",
+      "emotion": "Disgust 50",
+      "response_text": "Now you disappoint me. You need to open your mind and think for a moment before you pass judgment.",
+      "index": "175"
+    },
+    {
+      "topic": "MS09VanceVampireDoneCT06",
+      "topic_text": "What you're doing here is brainwashing them, plain and simple.",
+      "emotion": "Neutral 50",
+      "response_text": "Yes. In a way, I am brainwashing them. I am eliminating their fears, their inhibitions and their shame.",
+      "index": "178"
+    },
+    {
+      "topic": "MS09VanceVampireDoneCT07",
+      "topic_text": "Come on, Vance! You're on a power trip... you mess with their minds!",
+      "emotion": "Anger 50",
+      "response_text": "Yes. In a way, I am brainwashing them. I am eliminating their fears, their inhibitions and their shame.",
+      "index": "181"
+    },
+    {
+      "topic": "MS09VanceVampireTalkCT01",
+      "topic_text": "I have no idea.",
+      "emotion": "Neutral 50",
+      "response_text": "Then that is a mystery you will have to solve on your own.",
+      "index": "184"
+    },
+    {
+      "topic": "MS09VanceVampireTalkCT02",
+      "topic_text": "I don't have time for games, Vance.",
+      "emotion": "Neutral 50",
+      "response_text": "That is where you are mistaken, my friend. Time is a commodity more abundant than any other in this world.",
+      "index": "187"
+    },
+    {
+      "topic": "MS09VanceVampireTalkCT03",
+      "topic_text": "I think you're a bunch of creepy weirdos.",
+      "emotion": "Neutral 50",
+      "response_text": "Names like that have no meaning here... your insults are a wasted effort.",
+      "index": "190"
+    },
+    {
+      "topic": "SpeechChallengeFailure",
+      "topic_text": "SpeechChallengeFailure",
+      "emotion": "Disgust 50",
+      "response_text": "I am afraid that the knowledge required to appreciate our true nature is far above your level of comprehension.",
+      "index": "193"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "I have to go now.",
+      "emotion": "Neutral 50",
+      "response_text": "Come back to us anytime. The Family considers you a friend.",
+      "index": "196"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Neutral 50",
+      "response_text": "Ah, you've returned.",
+      "index": "199"
+    },
+    {
+      "topic": "MS09MerestiVanceChatter",
+      "topic_text": "MS09MerestiVanceChatter",
+      "emotion": "Anger 50",
+      "response_text": "I will make this as clear as possible, Karl. Never again. You disobey my laws once more and you will be out of Meresti for good!",
+      "index": "205"
+    },
+    {
+      "topic": "MS09MerestiVanceChatterReply",
+      "topic_text": "MS09MerestiVanceChatterReply",
+      "emotion": "Anger 50",
+      "response_text": "That is not how the Family operates, and you know it! Now do not test my patience on this subject.",
+      "index": "210"
+    },
+    {
+      "topic": "MS09VanceSpeech",
+      "topic_text": "MS09VanceSpeech",
+      "emotion": "Anger 90",
+      "response_text": "We are the Family and together we will stand united!",
+      "index": "215"
+    }
+  ],
+  "combat": []
+}

@@ -1,0 +1,290 @@
+{
+  "name": "No-bark Noonan",
+  "url": "/wiki/No-bark_Noonan",
+  "dialogue_name": "NobarkNoonan.txt",
+  "dialogue_url": "/wiki/NobarkNoonan.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": true,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "0008CD23",
+  "ref_id": "0008CD24",
+  "editor_id": "NobarkNoonan",
+  "location": "Novac",
+  "location_url": "/wiki/Novac",
+  "descriptions": [
+    "No-bark Noonan is a resident of Novac in the Mojave Wasteland in 2281. Considered the local eccentric, he dwells as a hermit on the town's outskirts, spouting wild, seemingly nonsensical conspiracy theories about local events. He appears in Fallout: New Vegas.",
+    "The archetypical \"crazy conspiracy theorist,\" little to nothing is definitively known about \"No-bark\" Noonan's past, including how he ended up as a hermit living on the outskirts of Novac. When asked about his name, he claims to have suffered multiple radscorpion stings in the past that pierced his skull and affected his brain, surviving at the cost of becoming the eccentric, paranoid conspiracy nut that he is today.",
+    "His eccentric, paranoid view of life has caused No-bark to suspect everyone in Novac of harboring secrets, and he spends his days wandering around town \"gathering\" information to confirm his \"suspicions.\""
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "role": "Crazed hermitConspiracy theoristScientist (self-proclaimed)",
+  "detailed_location": "NovacNo-bark's shack",
+  "voice_actor": "Peter Renaday",
+  "special": {
+    "Strength": 4,
+    "Perception": 2,
+    "Endurance": 3,
+    "Charisma": 5,
+    "Intelligence": 3,
+    "Agility": 3,
+    "Luck": 6
+  },
+  "mod_special_values": {
+    "Strength": 4,
+    "Perception": 2,
+    "Endurance": 4,
+    "Charisma": 5,
+    "Intelligence": 3,
+    "Agility": 4,
+    "Luck": 6
+  },
+  "level": "5",
+  "tag_skills": [
+    {
+      "Barter:": "44"
+    },
+    {
+      "Lockpick:": "38"
+    },
+    {
+      "Medicine:": "40"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "140(145)"
+    }
+  ],
+  "karma": "Neutral",
+  "voice_type": "MaleOld02",
+  "geck_race": "CaucasianOld",
+  "topics": [
+    {
+      "topic": "CaravanOffer",
+      "topic_text": "Want to play a hand of Caravan?",
+      "emotion": "Neutral 50",
+      "response_text": "Sure. Ol No-bark is always looking to play. Not for entertainment, mind you, but because if you look at the cards right you can know the future.",
+      "index": "1"
+    },
+    {
+      "topic": "CaravanPlayerLoses",
+      "topic_text": "CaravanPlayerLoses",
+      "emotion": "Neutral 50",
+      "response_text": "No-bark wins! A few more like that and the curse'll get lifted for sure.",
+      "index": "2"
+    },
+    {
+      "topic": "CaravanPlayerWins",
+      "topic_text": "CaravanPlayerWins",
+      "emotion": "Neutral 50",
+      "response_text": "Dang it! Shoulda known you was getting caravan hints from the bloatfly spirits what live in these parts.",
+      "index": "3"
+    },
+    {
+      "topic": "CaravanRematchNo",
+      "topic_text": "I'm all done playing for now.",
+      "emotion": "Neutral 50",
+      "response_text": "Dang it, No-bark, just when you was making a friend.",
+      "index": "5"
+    },
+    {
+      "topic": "CaravanRematchYes",
+      "topic_text": "Yeah, let's play again.",
+      "emotion": "Neutral 50",
+      "response_text": "No more magic spells this time.",
+      "index": "6"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "Who sent you? I ain't talking. They tried to get me to talk before, but I didn't say nothing. And I don't aim to now, by gum.",
+      "index": "7"
+    },
+    {
+      "topic": "NobarkAbductorID",
+      "topic_text": "Who was it?",
+      "emotion": "Surprise 90",
+      "response_text": "Molerat men, come up from the Underneath to steal young women with promises of riches and fancy mud mansions with all the latest designer appliances.",
+      "index": "9"
+    },
+    {
+      "topic": "NobarkActingStrange",
+      "topic_text": "Has anybody been acting strange lately?",
+      "emotion": "Neutral 50",
+      "response_text": "I don't trust a man that doesn't have something strange going on about him, 'cause it means he's hiding it from you.",
+      "index": "11"
+    },
+    {
+      "topic": "NobarkActuallyAtRepcon",
+      "topic_text": "Who do you think is actually at the factory?",
+      "emotion": "Surprise 90",
+      "response_text": "Ghosts. Commie ghosts what don't know they're dead.",
+      "index": "14"
+    },
+    {
+      "topic": "NobarkBoonesWife",
+      "topic_text": "What do you know about the abduction of Boone's wife?",
+      "emotion": "Neutral 50",
+      "response_text": "Seen it all. Seen shadowy folk come to his room and leave again in the middle of the night. Thought one might've gone in the lobby, too, for a spell.",
+      "index": "18"
+    },
+    {
+      "topic": "NobarkCanTalkFromHere",
+      "topic_text": "We can talk from this distance.",
+      "emotion": "Neutral 50",
+      "response_text": "You sure, now? It's kinda hard to hear you.",
+      "index": "21"
+    },
+    {
+      "topic": "NobarkCorralDeaths",
+      "topic_text": "What else do you know about the deaths at the corral?",
+      "emotion": "Neutral 50",
+      "response_text": "I come face to face with the chupacabra himself one night whilst I was investigating whether this gecko was hiding his treasure from me.",
+      "index": "22"
+    },
+    {
+      "topic": "NobarkGoingOn",
+      "topic_text": "What's been going on in town?",
+      "emotion": "Neutral 50",
+      "response_text": "There's been things of a disturbing nature going on at the McBride Corral.",
+      "index": "28"
+    },
+    {
+      "topic": "NobarkIfYoureGoingToBeWeird",
+      "topic_text": "If you're going to be weird, I'm just going to leave.",
+      "emotion": "Anger 35",
+      "response_text": "Weird's just normal when normal decides to start taking notice of things. You just think about that.",
+      "index": "32"
+    },
+    {
+      "topic": "NobarkInterestingHappenings",
+      "topic_text": "Is anything interesting happening in the area?",
+      "emotion": "Neutral 50",
+      "response_text": "Folks'll tell you that they seen ghouls up near the rocket factory.",
+      "index": "34"
+    },
+    {
+      "topic": "NobarkLeaving",
+      "topic_text": "I have to go now.",
+      "emotion": "Neutral 50",
+      "response_text": "Let me know if you meet anyone suspicious.",
+      "index": "36"
+    },
+    {
+      "topic": "NobarkMeanNoHarm",
+      "topic_text": "I don't mean any harm.",
+      "emotion": "Neutral 50",
+      "response_text": "We'll just see about that. You come any closer and I'm liable to stick you with my stickin' knife. Ol' Sticky's feeling mighty ornery this day.",
+      "index": "37"
+    },
+    {
+      "topic": "NobarkSomethingElse",
+      "topic_text": "Let's talk about something else.",
+      "emotion": "Neutral 50",
+      "response_text": "Good idea. It ain't safe to stay on the same topic for too long.",
+      "index": "38"
+    },
+    {
+      "topic": "NobarkWhoTriedToMakeYouTalk",
+      "topic_text": "Who tried to make you talk?",
+      "emotion": "Neutral 50",
+      "response_text": "Confound it, No-bark, you done it again. You let on that you know things. Now they'll never let you be.",
+      "index": "39"
+    },
+    {
+      "topic": "NobarkYouSaidYoudStabMe",
+      "topic_text": "You said you'd stab me with that dirty knife.",
+      "emotion": "Neutral 50",
+      "response_text": "Okay, okay. Just speak up a little. But not so much that They hear you. They got people everywhere, always listening.",
+      "index": "41"
+    },
+    {
+      "topic": "NobarkYoureGoingToTalk",
+      "topic_text": "You're going to talk whether you like it or not.",
+      "emotion": "Fear 25",
+      "response_text": "I give up! Please don't do no harm to me, mister, leastaways not my face. All I got left is my rugged good looks. What do you want to know?",
+      "index": "42"
+    },
+    {
+      "topic": "NovacGhoulInfo",
+      "topic_text": "What can you tell me about the ghouls spotted to the west?",
+      "emotion": "Neutral 50",
+      "response_text": "From what I've been able to gather, they've been seen messing around with the machinery up there. What could they be up to?",
+      "index": "44"
+    },
+    {
+      "topic": "PLAYERKNOCKOVEROBJECTS",
+      "topic_text": "PLAYER KNOCK OVER OBJECTS",
+      "emotion": "Surprise 50",
+      "response_text": "What? How'd you get past the guards?",
+      "index": "45"
+    },
+    {
+      "topic": "SnipersRevengeComeOutside",
+      "topic_text": "Come with me. There's something you should see, in front of the dinosaur.",
+      "emotion": "Neutral 50",
+      "response_text": "If you're talking about that thing that looks like the entrance to the center of the Earth, I think it might just be a pothole.",
+      "index": "48"
+    },
+    {
+      "topic": "SpeechChallengeFailure",
+      "topic_text": "SpeechChallengeFailure",
+      "emotion": "Neutral 50",
+      "response_text": "That's just the kind of thing I'd be expecting them to say. Which proves you're not with them.",
+      "index": "51"
+    },
+    {
+      "topic": "VDialogueNovacNobarkName",
+      "topic_text": "Why do they call you No-bark?",
+      "emotion": "Neutral 50",
+      "response_text": "Cause they know I ain't just barking here. What I say's got bite, 'cause it's the truth.",
+      "index": "53"
+    },
+    {
+      "topic": "VMQ01LookingForManny",
+      "topic_text": "I'm looking for a man in a checkered coat. Have you seen anyone like that?",
+      "emotion": "Neutral 50",
+      "response_text": "Sure have. Camouflage, that coat was, trying to hide from extra terrestrials what can only see in black and white checkers.",
+      "index": "55"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "If anyone asks, we never spoke.",
+      "index": "58"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "Hello",
+      "emotion": "Neutral 50",
+      "response_text": "Careful. They got spies all over.",
+      "index": "59"
+    }
+  ],
+  "combat": [
+    {
+      "topic": "RNVNewsStory2",
+      "topic_text": "RNVNewsStoryLine2",
+      "emotion": "Neutral 50",
+      "response_text": "{No-Bark Noonan:}It's ghouls, I tell ya. Religious ghouls in rockets looking for a land to call their own.",
+      "index": "60"
+    },
+    {
+      "topic": "RNVNewsStory3",
+      "topic_text": "RNVNewsStoryLine3",
+      "emotion": "Neutral 50",
+      "response_text": "{No-Bark Noonan:}Don't you laugh at me. I know a spell that'll make you show your true form. Cave rat taught it to me.",
+      "index": "61"
+    }
+  ]
+}

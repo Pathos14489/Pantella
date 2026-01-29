@@ -1,0 +1,208 @@
+{
+  "name": "Ymir",
+  "url": "/wiki/Ymir_(Fallout_3)",
+  "dialogue_name": "Ymir.txt",
+  "dialogue_url": "/wiki/Ymir.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000384D6",
+  "ref_id": "000384DA",
+  "editor_id": "Ymir",
+  "location": "Paradise Falls",
+  "location_url": "/wiki/Paradise_Falls",
+  "descriptions": [
+    "Ymir is a slaver at Paradise Falls in 2277.",
+    "Ymir and his son Jotun work as slavers for Eulogy Jones in Paradise Falls. He is described as a jovial madman armed with a super sledge who loves drinking and fighting.",
+    "Ymir does not like the slave bartender Frank and will make this clear by murdering him upon the Lone Wanderer's entry into Paradise Falls, alleging that Frank intentionally watered down his vodka in an attempt to make more money off him.",
+    "In Norse mythology, Ymir was the founder of the race of jötunn and was an important figure in Norse mythology. Ymir's body was used to create Midgard, the earth at the center of Ginnungagap."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Slavers",
+  "role": "Slaver",
+  "detailed_location": "Paradise Falls",
+  "voice_actor": "Jeff Baker",
+  "special": {
+    "Strength": 6,
+    "Perception": 4,
+    "Endurance": 4,
+    "Charisma": 6,
+    "Intelligence": 4,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "mod_special_values": {
+    "Strength": 6,
+    "Perception": 4,
+    "Endurance": 4,
+    "Charisma": 6,
+    "Intelligence": 4,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "level": "3→10",
+  "tag_skills": [
+    {
+      "Barter:": "41→74"
+    },
+    {
+      "Melee Weap.:": "41→74"
+    },
+    {
+      "Small Guns:": "41→74(39→72)"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "75→110"
+    },
+    {
+      "Critical Chance:": "5%"
+    },
+    {
+      "Unarmed Dam.:": "1.15"
+    },
+    {
+      "Poison Resist.:": "15%"
+    },
+    {
+      "Rad. Resist.:": "6%"
+    },
+    {
+      "Carry Weight:": "210"
+    }
+  ],
+  "karma": "Very Evil",
+  "voice_type": "MaleAdult01DefaultDC",
+  "geck_race": "CaucasianOld",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Happy 50",
+      "response_text": "Haha! Hello! I am Ymir!",
+      "index": "1"
+    },
+    {
+      "topic": "PFYmir",
+      "topic_text": "Where do you come from?",
+      "emotion": "Neutral 50",
+      "response_text": "Does it matter? It only matters where I am, and that is here.",
+      "index": "4"
+    },
+    {
+      "topic": "PFYmirBartender",
+      "topic_text": "Why did you kill that bartender?",
+      "emotion": "Anger 50",
+      "response_text": "He put water in my vodka to make more caps from me. Make the drink weak and try to charge me more!",
+      "index": "7"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "I have to go now.",
+      "emotion": "Neutral 50",
+      "response_text": "Come back when you are ready to drink, little man.",
+      "index": "9"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Neutral 50",
+      "response_text": "<growls>",
+      "index": "11"
+    },
+    {
+      "topic": "PFFFBarScene1",
+      "topic_text": "PFFFBarScene1",
+      "emotion": "Neutral 50",
+      "response_text": "This is last time I tell you! No more!",
+      "index": "19"
+    },
+    {
+      "topic": "PFFFBarScene3",
+      "topic_text": "PFFFBarScene3",
+      "emotion": "Neutral 50",
+      "response_text": "This is your last mistake, little bartender!",
+      "index": "20"
+    },
+    {
+      "topic": "PFTalkCarolinaRedYmir2",
+      "topic_text": "PFTalkCarolinaRedYmir2",
+      "emotion": "Neutral 50",
+      "response_text": "I am always friendly and yet, you are always... well... kind of a bitch?",
+      "index": "21"
+    },
+    {
+      "topic": "PFTalkCarolinaRedYmir4",
+      "topic_text": "PFTalkCarolinaRedYmir4",
+      "emotion": "Neutral 50",
+      "response_text": "Ah, Red! this is why I like you! Always making jokes! You want a drink?",
+      "index": "23"
+    },
+    {
+      "topic": "PFTalkHiResponse1",
+      "topic_text": "PFTalkHiResponse1",
+      "emotion": "Neutral 50",
+      "response_text": "I see you later in the barracks.",
+      "index": "25"
+    },
+    {
+      "topic": "PFTalkJotunYmir2",
+      "topic_text": "PFTalkJotunYmir2",
+      "emotion": "Neutral 50",
+      "response_text": "Bah! You are my son! Be proud! You collect more slaves than anyone, brag for once in your life!",
+      "index": "30"
+    },
+    {
+      "topic": "PFTalkJotunYmir4",
+      "topic_text": "PFTalkJotunYmir4",
+      "emotion": "Neutral 50",
+      "response_text": "I swear, boy, you are going to be the greatest Slaver that ever lived!",
+      "index": "32"
+    },
+    {
+      "topic": "PFTalkYmirCarolinaRed1",
+      "topic_text": "PFTalkYmirCarolinaRed1",
+      "emotion": "Neutral 50",
+      "response_text": "That's my boy! Just like his dad! Hearty and full of life! Haha!",
+      "index": "34"
+    },
+    {
+      "topic": "PFTalkYmirCarolinaRed3",
+      "topic_text": "PFTalkYmirCarolinaRed3",
+      "emotion": "Neutral 50",
+      "response_text": "I know! He's the best son a Slaver could ever want!{Missing the joke.}",
+      "index": "36"
+    },
+    {
+      "topic": "PFTalkYmirJotun1",
+      "topic_text": "PFTalkYmirJotun1",
+      "emotion": "Neutral 50",
+      "response_text": "What is it, my boy?",
+      "index": "38"
+    },
+    {
+      "topic": "PFTalkYmirJotun3",
+      "topic_text": "PFTalkYmirJotun3",
+      "emotion": "Neutral 50",
+      "response_text": "Ha! I think I will. And that is why you are the best boy a Slaver could ever ask for.",
+      "index": "39"
+    },
+    {
+      "topic": "PFTalkYmirSlaverDrink1",
+      "topic_text": "PFTalkYmirSlaverDrink1",
+      "emotion": "Neutral 50",
+      "response_text": "I'll get Frank to pour us a few cold ones! HAHAHA! Hey Frank! Two drinks over here! HAHAHAHA!",
+      "index": "40"
+    }
+  ],
+  "combat": []
+}

@@ -1,0 +1,335 @@
+{
+  "name": "Doc Church",
+  "url": "/wiki/Church_(Fallout_3)",
+  "dialogue_name": "DocChurch.txt",
+  "dialogue_url": "/wiki/DocChurch.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": true,
+  "is_merchant": true,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "00000A6E",
+  "ref_id": "00003B56",
+  "editor_id": "DocChurch",
+  "location": "Megaton clinic",
+  "location_url": "/wiki/Megaton_clinic",
+  "descriptions": [
+    "Doc Church is a doctor who works in Megaton in the year 2277.",
+    "Doc Church used to stay alive by trading his services to raiders and slavers before he moved to Megaton. At that point, the town had been without a doctor for years. It may be a \"rat infested hellhole\" as he calls it, but he also says that it is the least hellish place in which he has lived.",
+    "As Megaton's only doctor, he has got a lot on his plate and does not appreciate people bothering him without good cause.",
+    "Doc Church can be found at the Megaton clinic at any given time during the day."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "MegatonSlavers(formerly)",
+  "role": "Doctor",
+  "detailed_location": "Megaton clinic,Megaton",
+  "voice_actor": "Gregory Gorton",
+  "special": {
+    "Strength": 4,
+    "Perception": 6,
+    "Endurance": 4,
+    "Charisma": 6,
+    "Intelligence": 7,
+    "Agility": 5,
+    "Luck": 4
+  },
+  "level": "1",
+  "tag_skills": [
+    {
+      "Barter:": "31"
+    },
+    {
+      "Medicine:": "33(38)"
+    },
+    {
+      "Science:": "58"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Good",
+  "voice_type": "MaleAdult01DefaultBDC",
+  "geck_race": "AfricanAmericanOld",
+  "topics": [
+    {
+      "topic": "DLC03WQSickDoctorTopicFull house today, Doc. What's wrong with everybody?",
+      "topic_text": "Something going around, Doc? The clinic seems pretty full today.",
+      "emotion": "Fear 50",
+      "response_text": "There's something going around, all right, but it isn't anything I've ever seen before. Definitely not contagious.",
+      "index": "1"
+    },
+    {
+      "topic": "DoctorAddiction",
+      "topic_text": "I think I might be addicted to something.",
+      "emotion": "Neutral 50",
+      "response_text": "I can take care of it for you, for a price.",
+      "index": "6"
+    },
+    {
+      "topic": "DoctorAddictionNO",
+      "topic_text": "I think I'll tough it out.",
+      "emotion": "Neutral 50",
+      "response_text": "Your choice, but an addiction ain't an easy thing to kick.",
+      "index": "8"
+    },
+    {
+      "topic": "DoctorAddictionYES",
+      "topic_text": "I don't have 50 caps.",
+      "emotion": "Neutral 50",
+      "response_text": "Well, this might go better for you if you hadn't blown your money on Jet, don't you think?",
+      "index": "9"
+    },
+    {
+      "topic": "DoctorMedical",
+      "topic_text": "I'm hurt. I need help, Doc.",
+      "emotion": "Neutral 50",
+      "response_text": "Well, you're standing fine, but you could use some switching up. That'll be 50 caps.",
+      "index": "11"
+    },
+    {
+      "topic": "DoctorMedical33YES",
+      "topic_text": "All right, here's your money.",
+      "emotion": "Neutral 50",
+      "response_text": "Alright, hold still.",
+      "index": "21"
+    },
+    {
+      "topic": "DoctorMedical66YES",
+      "topic_text": "All right, here's your money.",
+      "emotion": "Neutral 50",
+      "response_text": "Here. Hold this for me while I stitch you up.",
+      "index": "24"
+    },
+    {
+      "topic": "DoctorMedical99YES",
+      "topic_text": "All right, here's your money.",
+      "emotion": "Neutral 50",
+      "response_text": "Alright, now stand still. This'll only take a second.",
+      "index": "27"
+    },
+    {
+      "topic": "DoctorMedicalContNO",
+      "topic_text": "That's all I need.",
+      "emotion": "Neutral 50",
+      "response_text": "Alright then.",
+      "index": "30"
+    },
+    {
+      "topic": "DoctorMedicalContYES",
+      "topic_text": "There was something else I needed...",
+      "emotion": "Neutral 50",
+      "response_text": "Well, speak up then. I don't have all day.",
+      "index": "32"
+    },
+    {
+      "topic": "DoctorMedicalNO",
+      "topic_text": "On second thought, I'll be fine.",
+      "emotion": "Neutral 50",
+      "response_text": "Then stop wasting my time.",
+      "index": "34"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Anger 50",
+      "response_text": "Alright, that should do it. You need anything else?",
+      "index": "35"
+    },
+    {
+      "topic": "MS08MedicalClue1",
+      "topic_text": "Do you know anything about some android who needed a surgeon?",
+      "emotion": "Neutral 50",
+      "response_text": "Some VIP from up north looking for surgery and computer expertise. I don't pay attention to that crap, and neither should you.",
+      "index": "49"
+    },
+    {
+      "topic": "MS08MedicalClue2",
+      "topic_text": "What do you know about this android from the Commonwealth?",
+      "emotion": "Neutral 50",
+      "response_text": "Thought that hoax was long in the grave. Here take this holotape and hear it for yourself. That was just some bored prankster. Forget about it.",
+      "index": "50"
+    },
+    {
+      "topic": "MS08MedicalClue3",
+      "topic_text": "Ever do any facial surgery? Maybe on someone from the Commonwealth?",
+      "emotion": "Neutral 50",
+      "response_text": "Damn stupid idea. That reminds me of this old hoax. Here, take a listen to this crusty holotape and see for yourself.",
+      "index": "52"
+    },
+    {
+      "topic": "MS08MedicalClue3Bribe",
+      "topic_text": "You ever do a face job on an android from the North? <Jingle purse of 100 caps.>",
+      "emotion": "Neutral 50",
+      "response_text": "Damn stupid idea. That reminds me of this old hoax. Here, take a listen to this crusty holotape and see for yourself.",
+      "index": "55"
+    },
+    {
+      "topic": "MS08MedicalClue3Stat",
+      "topic_text": "A patient of mine needs a facial epidermal augmentation. You ever perform one?",
+      "emotion": "Neutral 50",
+      "response_text": "Damn stupid idea. That reminds me of this old hoax. Here, take a listen to this crusty holotape and see for yourself.",
+      "index": "56"
+    },
+    {
+      "topic": "MS08MedicalClue4",
+      "topic_text": "You know who might have a Lipoplasticator or Micro Dermal Graftilizer?",
+      "emotion": "Neutral 50",
+      "response_text": "Probably down at Rivet City. Anything that has any use out here, they snatch up for themselves. That damn Pinkerton don't share nothin'.",
+      "index": "57"
+    },
+    {
+      "topic": "MS08MedicalClue4Bribe",
+      "topic_text": "Here's 100 caps for the locale of a Lipoplasticator or Micro Dermal Graftilizer.",
+      "emotion": "Neutral 50",
+      "response_text": "Probably down at Rivet City. Anything that has any use out here, they snatch up for themselves. That damn Pinkerton don't share nothin'.",
+      "index": "60"
+    },
+    {
+      "topic": "MS08MedicalClue4Stat",
+      "topic_text": "I need to find a Micro Dermal Graftilizer for epidermal augmentation surgery.",
+      "emotion": "Neutral 50",
+      "response_text": "Probably down at Rivet City. Anything that has any use out here, they snatch up for themselves. That damn Pinkerton don't share nothin'.",
+      "index": "61"
+    },
+    {
+      "topic": "MS11Drugs",
+      "topic_text": "I need something to help me concentrate...",
+      "emotion": "Disgust 50",
+      "response_text": "Great. Another junkie... In case you haven't noticed, this is a clinic, not a candy store. And I've got work to do.{annoyed}",
+      "index": "62"
+    },
+    {
+      "topic": "MS11Drugs1a",
+      "topic_text": "So you've got someone in town with a drug habit?",
+      "emotion": "Neutral 50",
+      "response_text": "I'm afraid that goes against patient-doctor confidentiality.{evasive}",
+      "index": "63"
+    },
+    {
+      "topic": "MS11Drugs1b",
+      "topic_text": "A place like this is probably crawling with junkies, huh?",
+      "emotion": "Anger 50",
+      "response_text": "Megaton might not be Tenpenny Tower, but that doesn't make breaking patient-doctor confidentiality any more ethical, now does it?{annoyed}",
+      "index": "64"
+    },
+    {
+      "topic": "MS11Drugs1c",
+      "topic_text": "Ha! Figures a shithole like this would have a local Chem head.",
+      "emotion": "Disgust 50",
+      "response_text": "Okay, so we have a resident with a bit of a problem. What makes you so goddamned superior? Hmph. Wastelanders...{annoyed}",
+      "index": "65"
+    },
+    {
+      "topic": "MegDocChurchPersuade1",
+      "topic_text": "I'm only trying to help, Doc.",
+      "emotion": "Sad 50",
+      "response_text": "All right look, I'm only tellin' you this because you seem like an okay sort and I'm hopin' maybe you can talk some sense into the boy.",
+      "index": "66"
+    },
+    {
+      "topic": "MegDocChurchPersuade3",
+      "topic_text": "You can trust me. I'm a doctor myself.",
+      "emotion": "Neutral 50",
+      "response_text": "All right, I suppose someone with medical training has to have at least a bit of compassion. And maybe you can talk some sense into the boy.",
+      "index": "69"
+    },
+    {
+      "topic": "MegDocChurchPersuadeEnd",
+      "topic_text": "Never mind, then.",
+      "emotion": "Neutral 50",
+      "response_text": "Right.",
+      "index": "73"
+    },
+    {
+      "topic": "MegDocChurchSupplies",
+      "topic_text": "I need to buy medical supplies.",
+      "emotion": "Neutral 50",
+      "response_text": "Plannin' on goin' out and getting' shot up, eh?",
+      "index": "74"
+    },
+    {
+      "topic": "MegTownEnd",
+      "topic_text": "That's all I needed to know.",
+      "emotion": "Neutral 50",
+      "response_text": "You sure?",
+      "index": "77"
+    },
+    {
+      "topic": "MegTownFatherChoiceI'm looking for my father. Middle-aged guy. Maybe you've seen him?",
+      "topic_text": "I'm looking for my father...",
+      "emotion": "Neutral 50",
+      "response_text": "Boy... are you botherin' me? 'Cause I think we talked about what happens when you bother me.{A long pause before speaking the text.}",
+      "index": "78"
+    },
+    {
+      "topic": "MegTownMegaton",
+      "topic_text": "What can you tell me about Megaton?",
+      "emotion": "Neutral 50",
+      "response_text": "I have to say, of all the rat infested hellholes that I've lived in, this one is the least hellish.",
+      "index": "80"
+    },
+    {
+      "topic": "MegTownRumorsWhat's the word around town?",
+      "topic_text": "What do you know about the people here?",
+      "emotion": "Neutral 50",
+      "response_text": "I already told you about the Stahl boy's drug problem. You said you wanted to help.",
+      "index": "81"
+    },
+    {
+      "topic": "MegTownWhatDoYouDo",
+      "topic_text": "What do you do around here?",
+      "emotion": "Neutral 50",
+      "response_text": "I'm the town doc. If it's cut, I sew it up. If it's infected, I cut it off.",
+      "index": "84"
+    },
+    {
+      "topic": "SpeechChallengeFailure",
+      "topic_text": "SpeechChallengeFailure",
+      "emotion": "Neutral 50",
+      "response_text": "I'm not easily manipulated. So don't bother.",
+      "index": "85"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "I have to go now.",
+      "emotion": "Neutral 50",
+      "response_text": "Try to be careful.",
+      "index": "87"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Neutral 50",
+      "response_text": "You don't got nearly enough holes in you to be botherin' me.",
+      "index": "90"
+    },
+    {
+      "topic": "MegDocChurchMedicalChatter",
+      "topic_text": "MegDocChurchMedicalChatter",
+      "emotion": "Neutral 50",
+      "response_text": "Jesus Christ, did you set this yourself? Well, I'm gonna have to rebreak it...",
+      "index": "94"
+    },
+    {
+      "topic": "MegatonHelloResponse",
+      "topic_text": "MegatonHelloResponse",
+      "emotion": "Neutral 50",
+      "response_text": "Mmmmhmmm... that's nice.",
+      "index": "103"
+    }
+  ],
+  "combat": [
+    {
+      "topic": "Attack",
+      "topic_text": "Attack",
+      "emotion": "Neutral 50",
+      "response_text": "Time to put you down.",
+      "index": "105"
+    }
+  ]
+}

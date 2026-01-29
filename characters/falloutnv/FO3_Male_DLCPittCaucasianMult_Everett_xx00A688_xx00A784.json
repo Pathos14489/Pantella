@@ -1,0 +1,201 @@
+{
+  "name": "Everett",
+  "url": "/wiki/Everett",
+  "dialogue_name": "DLC01Everett.txt",
+  "dialogue_url": "/wiki/DLC01Everett.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "xx00A688",
+  "ref_id": "xx00A784",
+  "editor_id": "DLC01Everett",
+  "location": "The Mill",
+  "location_url": "/wiki/The_Mill",
+  "descriptions": [
+    "Everett, also referred to as the foreman is a Pitt raider, usually found in The Mill in the Fallout 3 add-on The Pitt.",
+    "Everett coordinates the effort to recover steel ingots from the Pitt steelyard. He enjoys sending slaves to their likely demise but is not without some sympathy for their struggle.",
+    "He is originally dismissive of the Lone Wanderer and their abilities when they are first sent to him as the newest member of the ingot collection team, believing that they wouldn’t last long against the various dangers of the steelyard.",
+    "As the Lone Wanderer progresses through collecting the ingots in the steelyard, they will acquire a unique item from Everett for every ten ingots they deliver to him, with the majority of these unique items having a story as to how Everett acquired them.",
+    "Everett appears only in The Pitt add-on for Fallout 3.",
+    "Everett's name is a reference to the town of Everett, Pennsylvania, which is visible from the Pennsylvania Turnpike."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Pitt raiders",
+  "role": "Foreman",
+  "detailed_location": "The Mill",
+  "voice_actor": "James Lewis",
+  "special": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 3,
+    "Intelligence": 3,
+    "Agility": 7,
+    "Luck": 5
+  },
+  "level": "1→4→9",
+  "tag_skills": [
+    {
+      "Melee Weap.:": "32→45→66"
+    },
+    {
+      "Small Guns:": "34→47→68"
+    },
+    {
+      "Unarmed:": "28→41→62"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "25→55→85"
+    },
+    {
+      "Critical Chance:": "5%"
+    },
+    {
+      "Unarmed Dam.:": "1.9→2.55→3.6"
+    },
+    {
+      "Poison Resist.:": "15%"
+    },
+    {
+      "Rad. Resist.:": "6%"
+    },
+    {
+      "Carry Weight:": "210"
+    }
+  ],
+  "karma": "Neutral",
+  "voice_type": "DLC01RaiderMaleGruffVoice",
+  "geck_race": "DLCPittCaucasianMult",
+  "topics": [
+    {
+      "topic": "DLC01EverettFeelings1A",
+      "topic_text": "No hard feelings, but I'm not taking any more of your shit.",
+      "emotion": "Happy 50",
+      "response_text": "Understood, champ! But if you want to keep collecting ingots, I still got plenty of gear stashed away.",
+      "index": "1"
+    },
+    {
+      "topic": "DLC01EverettFeelings1B",
+      "topic_text": "How about I put you to the whip, huh?",
+      "emotion": "Fear 35",
+      "response_text": "Guess I couldn't stop you, but then you'd never find all the little bonuses I got stashed over the years.",
+      "index": "3"
+    },
+    {
+      "topic": "DLC01FFCollectionICollect1A",
+      "topic_text": "Yup, that's me!",
+      "emotion": "Surprise 50",
+      "response_text": "Good to see a little enthusiasm, for once! Well, follow me!",
+      "index": "5"
+    },
+    {
+      "topic": "DLC01FFCollectionICollect1B",
+      "topic_text": "Sure, if I have to.",
+      "emotion": "Sad 25",
+      "response_text": "That you do. This ain't no union shop.{Friendly, and a little conciliatory}",
+      "index": "6"
+    },
+    {
+      "topic": "DLC01FFCollectionIHaveIngots",
+      "topic_text": "I can't find any more ingots out there.",
+      "emotion": "Neutral 50",
+      "response_text": "Yup, guess you got every last one out there. You're one hell of a steeler, kid.",
+      "index": "7"
+    },
+    {
+      "topic": "DLC01FFCollectionReward1A",
+      "topic_text": "You got anything for me?",
+      "emotion": "Happy 35",
+      "response_text": "Guess I could spare this.",
+      "index": "14"
+    },
+    {
+      "topic": "DLC01FFCollectionReward1B",
+      "topic_text": "This better be worth it.",
+      "emotion": "Happy 35",
+      "response_text": "Like it or not, this is what you're getting.",
+      "index": "33"
+    },
+    {
+      "topic": "DLC01WhereForIngots",
+      "topic_text": "Anyplace else to find ingots?",
+      "emotion": "Surprise 75",
+      "response_text": "Can't believe I'm saying this, but I think you cleared out the whole place!",
+      "index": "52"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Surprise 50",
+      "response_text": "Well now, look who made it back.",
+      "index": "56"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "DLC01FFCollectionEverettSay01",
+      "topic_text": "DLC01FFCollectionEverettSay01",
+      "emotion": "Neutral 50",
+      "response_text": "So Steelyard duty, eh? Who'd you piss off to get that death sentence?",
+      "index": "66"
+    },
+    {
+      "topic": "DLC01FFCollectionEverettSay02",
+      "topic_text": "DLC01FFCollectionEverettSay02",
+      "emotion": "Neutral 50",
+      "response_text": "See that fella up there? You'll be seeing lots of those.",
+      "index": "68"
+    },
+    {
+      "topic": "DLC01FFCollectionEverettSay03",
+      "topic_text": "DLC01FFCollectionEverettSay03",
+      "emotion": "Neutral 50",
+      "response_text": "Here's the door. Get out there and grab some ingots. Don't come back without at least ten!",
+      "index": "72"
+    },
+    {
+      "topic": "GOODBYE",
+      "topic_text": "I have to go now.",
+      "emotion": "Neutral 50",
+      "response_text": "Enjoy your loot.",
+      "index": "74"
+    },
+    {
+      "topic": "PittRaiderTalk1",
+      "topic_text": "PittRaiderTalk1",
+      "emotion": "Disgust 50",
+      "response_text": "Tell me about it.",
+      "index": "78"
+    },
+    {
+      "topic": "PittRaiderTalk2",
+      "topic_text": "PittRaiderTalk2",
+      "emotion": "Happy 50",
+      "response_text": "Hey, you remember that time you and me made that scab take off his clothes and run into the Steel Yard? Fucking Trogs tore him apart! Ha ha ha ha!",
+      "index": "85"
+    },
+    {
+      "topic": "PittRaiderTalk3",
+      "topic_text": "PittRaiderTalk3",
+      "emotion": "Neutral 50",
+      "response_text": "Know what we should do? Me and you? Get some leave time and get out of The Pitt for a few days. Head south into Paradise Falls. Somethin'...",
+      "index": "90"
+    },
+    {
+      "topic": "PittRaiderTalk4",
+      "topic_text": "PittRaiderTalk4",
+      "emotion": "Neutral 50",
+      "response_text": "Tell you what. You arrange for the two of us to have some fun, and then let me know. Until then... it's back to work.",
+      "index": "96"
+    }
+  ],
+  "combat": []
+}

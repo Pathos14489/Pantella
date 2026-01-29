@@ -1,0 +1,1574 @@
+{
+  "name": "Craig Boone",
+  "url": "/wiki/Craig_Boone",
+  "dialogue_name": "CraigBoone.txt",
+  "dialogue_url": "/wiki/CraigBoone.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": true,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": true,
+  "base_id": "00092BD2",
+  "ref_id": "00096BCE",
+  "editor_id": "CraigBoone",
+  "location": "Boone's room",
+  "location_url": "/wiki/Boone%27s_room",
+  "descriptions": [
+    "Craig Boone is a former member of the New California Republic's First Recon sharpshooter regiment, now retired and residing in Novac, where he serves as the night watchman, in the Mojave Wasteland in Fallout: New Vegas. He is a possible companion of the Courier.",
+    "Born around 2255,",
+    "The NCR's first big skirmish with the Legion affected him little. What marked a turning point in Boone's life and worldly outlook came a year later, in 2278. He was sent with his First Recon squad to join an army expedition to retaliate against the Great Khans, the third incarnation of a longtime enemy of the NCR. Following several attacks on NCR settlements, the army tracked down the Khans to Bitter Springs, a suspected stronghold of theirs. What they did not know until it was too late is that it was also the Khans' main settlement, occupied not only by their warriors but a civilian population including children and the elderly as well. Boone's fireteam was deployed on Coyote Tail Ridge, overlooking a rear exit from Bitter Springs.",
+    "The event, becoming known as the Bitter Springs Massacre, would break Boone. It turned him into a murderer, if not in the eyes of the NCR, then in his own. He left the army when his tour of duty ended, sick of war and suffering, seeking some way to try and start again, though he didn't really believe it. While on leave at the New Vegas Strip, he met a woman named Carla. She was talkative, charming, proud and everything Boone wasn't, but most importantly, she had helped him forget. When Boone was with Carla, everything about Bitter Springs left his mind. For a time, he was happy.",
+    "He and Carla got married sometime in 2280,",
+    "Then, life handed Boone another dose of cruel reality. One night, Legion slavers snuck into Novac while he was on watch, and took Carla, who was already pregnant with their unborn child at the time, but no one else. When he looked into it, Boone realized that they knew exactly when and how to sneak past him undetected and had a specific target in mind, and he knew right then that he was set up and someone who knew him and his habits helped them.",
+    "Left on his own, the distraught marksman took to the road to track Carla down and save her. He eventually found her at a Legion outpost in the southeast Mojave, near the Colorado River. She was being sold off, with many men bidding on her. The entire area was locked down, guarded by legionaries in the hundreds. Bereft of any other options, Boone could only see one solution. He knew he would never find her if she crossed into Legion lands and that he could never abandon the woman he loved to the Legion. In that moment, Boone came to a soul-crushing decision as he took aim with his rifle and killed Carla with a single headshot. Forced to flee immediately, chased by Legion attackers, Boone never knew what they did with Carla's body or the baby she carried; perhaps he never wanted to know.",
+    "He returned to Novac and resumed his duties as the town's watchman, but Boone was yet again a changed man, and not for the better. Apathy consumed every part of him, save for one emotion: hate. Boundless hatred for the Legions of Caesar, combined with a burning desire to exact revenge on the person who helped orchestrate the abduction and ultimately the death of his wife. Despite knowing that he would need the help of someone else to succeed, Boone always believed that he could never let anyone get close to him as Carla was again, lest the suffering owed to him for Bitter Springs comes to them too.",
+    "Boone is overly stoic, serious, and slow to trust. This has been a fundamental part of his personality for a long time, but it severely hardened after the Bitter Springs Massacre, and even more so when he was forced to shoot his wife with his unborn child. As such, he is slow to show any emotion or reveal any sense of levity. Even when acting out of emotion, he keeps a very calm and controlled manner about him, befitting an ace-sniper.",
+    "The Bitter Springs Massacre disillusioned him and caused his belief in his home country of the NCR to falter after distinguished service to First Recon. He has developed a deep skepticism against the NCR and its motives and outcomes, but this is balanced by a lingering deep respect for his fellow servicemen who remain in the line of duty. While he may not actively support the NCR's goals in coming to the Mojave, he will not, under any circumstances, support actively endangering them.",
+    "Parallel to this is an unending and deep-seated hatred for Caesar and everything concerning his Legion. While he has always opposed the army from the east based on national conflict and ideological opposition, having his wife sold into slavery at their hands and being forced to take her life and that of their unborn child as the only way to \"save\" her from this fate cemented his eternal loathing against them. Therefore, he supports any action that will damage and/or cripple the Legion's ambitions and will completely refuse to support any action that would aid them under any circumstances, even if it means abandoning those he considers allies. Fighting the Legion is one of the few goals he continues to hold onto that keeps him going. His hated enemy's fondness for kidnapping and enslaving has also ingrained a general hatred of slavery of all stripes.",
+    "#",
+    "Craig Boone appears in Fallout: New Vegas, Fallout: Wasteland Warfare, and in Fallout: The Roleplaying Game both the Settler's Guide Book supplement book and Royal Flush campaign book."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "NCR Army(formerly)First Recon(formerly)NovacCourier(optional)",
+  "role": "NCR First Recon sniper (formerly)Town guardCompanion",
+  "detailed_location": "Dinky the T-RexBoone's room",
+  "voice_actor": "Jason Marsden",
+  "special": {
+    "Strength": 7,
+    "Perception": 8,
+    "Endurance": 5,
+    "Charisma": 1,
+    "Intelligence": 3,
+    "Agility": 7,
+    "Luck": 6
+  },
+  "mod_special_values": {
+    "Strength": 7,
+    "Perception": 9,
+    "Endurance": 5,
+    "Charisma": 1,
+    "Intelligence": 3,
+    "Agility": 7,
+    "Luck": 6
+  },
+  "level": "5→22→37 (DLCs only)",
+  "tag_skills": [
+    {
+      "Guns:": "50→100"
+    },
+    {
+      "Melee Weap.:": "50→100"
+    },
+    {
+      "Sneak:": "48→100"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "230→315"
+    }
+  ],
+  "karma": "Neutral",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "CraigBooneAreYouGoingToKillMe",
+      "topic_text": "Are you going to try and kill me?",
+      "emotion": "Neutral 50",
+      "response_text": "Not unless you give me a reason.",
+      "index": "1"
+    },
+    {
+      "topic": "CraigBooneClosestToProof",
+      "topic_text": "It was the closest to proof that there was.",
+      "emotion": "Anger 60",
+      "response_text": "Goddamn it. This wasn't supposed to be a guess. He might not have done a goddamn thing.",
+      "index": "2"
+    },
+    {
+      "topic": "CraigBooneComeWithMe",
+      "topic_text": "Come with me. Let's go after the Legion.",
+      "emotion": "Happy 10",
+      "response_text": "You don't want to do that.",
+      "index": "5"
+    },
+    {
+      "topic": "CraigBooneCulpritObviousThe culprit was obvious when all the pieces fell into place.",
+      "topic_text": "I deduced it with a simple process of elimination.",
+      "emotion": "Neutral 50",
+      "response_text": "Well, that's about all the proof I could hope for, I guess. Here. This is all I can give. I think our dealings are done here.",
+      "index": "6"
+    },
+    {
+      "topic": "CraigBooneDoAfterThis",
+      "topic_text": "What will you do after this?",
+      "emotion": "Surprise 20",
+      "response_text": "I don't know. I won't be staying, I know that. Don't see much point in anything right now, except hunting legionaries.",
+      "index": "7"
+    },
+    {
+      "topic": "CraigBooneDoesntAffectMe",
+      "topic_text": "I don't see how that affects me.",
+      "emotion": "Surprise 15",
+      "response_text": "Wait. You just got into town. Maybe you shouldn't go. Not just yet.",
+      "index": "9"
+    },
+    {
+      "topic": "CraigBooneFoundBillOfSale",
+      "topic_text": "I found the bill of sale.",
+      "emotion": "Neutral 50",
+      "response_text": "I guess I shouldn't be surprised. It'd be like them to keep paperwork.",
+      "index": "10"
+    },
+    {
+      "topic": "CraigBooneFriendlyConversation",
+      "topic_text": "Just making friendly conversation.",
+      "emotion": "Anger 20",
+      "response_text": "I don't have friends here.",
+      "index": "12"
+    },
+    {
+      "topic": "CraigBooneHowDoYouKnowShesDead",
+      "topic_text": "How do you know your wife is dead?",
+      "emotion": "Anger 75",
+      "response_text": "I know, all right? And that's all you need to know.",
+      "index": "13"
+    },
+    {
+      "topic": "CraigBooneJustAHunch",
+      "topic_text": "Just a hunch.",
+      "emotion": "Anger 50",
+      "response_text": "You didn't have any proof?",
+      "index": "14"
+    },
+    {
+      "topic": "CraigBooneKillMoreTogether",
+      "topic_text": "We'll kill more with two of us.",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah. That might be true. And that's reason enough for me to take you up on it, I suppose. But this isn't gonna end well.",
+      "index": "15"
+    },
+    {
+      "topic": "CraigBooneLeaving",
+      "topic_text": "I'm leaving.",
+      "emotion": "Anger 50",
+      "response_text": "Don't come here again till it's over.",
+      "index": "17"
+    },
+    {
+      "topic": "CraigBooneLookingAround",
+      "topic_text": "Just looking around.",
+      "emotion": "Anger 20",
+      "response_text": "There's nothing up here.",
+      "index": "18"
+    },
+    {
+      "topic": "CraigBooneMeetingNewPeople",
+      "topic_text": "I'm meeting new people.",
+      "emotion": "Anger 20",
+      "response_text": "I think you'd better leave.",
+      "index": "19"
+    },
+    {
+      "topic": "CraigBooneNo",
+      "topic_text": "No.",
+      "emotion": "Anger 15",
+      "response_text": "I don't know who you think you're kidding. I've lived here for more than a year.",
+      "index": "20"
+    },
+    {
+      "topic": "CraigBooneNotFromHere",
+      "topic_text": "Well, I'm not from here.",
+      "emotion": "Surprise 15",
+      "response_text": "No. No you're not, are you? Maybe you shouldn't go. Not just yet.",
+      "index": "22"
+    },
+    {
+      "topic": "CraigBooneOnlyTrustStrangers",
+      "topic_text": "You only trust strangers?",
+      "emotion": "Anger 15",
+      "response_text": "I said it was a start. This town... nobody looks me straight in the eye anymore.",
+      "index": "23"
+    },
+    {
+      "topic": "CraigBooneOutlaw",
+      "topic_text": "Are you an outlaw now?",
+      "emotion": "Neutral 50",
+      "response_text": "No. People die out there. Often enough that no one worries about blame. They're too anxious to forget it happened in the first place, I guess.",
+      "index": "24"
+    },
+    {
+      "topic": "CraigBooneSeeWhatICanDo",
+      "topic_text": "I'll see what I can do to help you out.",
+      "emotion": "Neutral 50",
+      "response_text": "Good. I'll make it worth your while. And one more thing. We shouldn't speak again. Not until it's over.",
+      "index": "26"
+    },
+    {
+      "topic": "CraigBooneSnipersWorkInTeamsSnipers work better in pairs.",
+      "topic_text": "I thought snipers worked in teams.",
+      "emotion": "Neutral 50",
+      "response_text": "Hnh. Yeah. Working on your own, you're a lot less effective. I've been there and paid for it.",
+      "index": "28"
+    },
+    {
+      "topic": "CraigBooneStoryDidntAddUpHis story didn't add up.",
+      "topic_text": "His story didn't add up.",
+      "emotion": "Anger 50",
+      "response_text": "You didn't have any proof?",
+      "index": "30"
+    },
+    {
+      "topic": "CraigBooneTrackDownWife",
+      "topic_text": "You're trying to track down your wife?",
+      "emotion": "Anger 20",
+      "response_text": "My wife's dead. I want the son of a bitch who sold her.",
+      "index": "32"
+    },
+    {
+      "topic": "CraigBooneVictimSpeechFail",
+      "topic_text": "It was the, uh... the shifty eyes. Yeah. Dead give-away.",
+      "emotion": "Anger 50",
+      "response_text": "No confession? No evidence? What good is that?",
+      "index": "33"
+    },
+    {
+      "topic": "CraigBooneVisitorsExpecting visitors?",
+      "topic_text": "Expecting visitors?",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah. I guess maybe I am. But not like you.",
+      "index": "34"
+    },
+    {
+      "topic": "CraigBooneWantMeToDo",
+      "topic_text": "What do you want me to do?",
+      "emotion": "Neutral 50",
+      "response_text": "I want you to find something out for me. I don't know if there's anything to find, but I need someone to try.",
+      "index": "37"
+    },
+    {
+      "topic": "CraigBooneWantedYouToKillI just wanted you to kill him.",
+      "topic_text": "I just wanted you to kill him.",
+      "emotion": "Anger 75",
+      "response_text": "You sick bastard. You'd better be ready to join him.",
+      "index": "40"
+    },
+    {
+      "topic": "CraigBooneWhatIfIFindThisPerson",
+      "topic_text": "What do I do if I find this person?",
+      "emotion": "Neutral 50",
+      "response_text": "Bring him out in front of the nest here while I'm on duty. I work nights.",
+      "index": "42"
+    },
+    {
+      "topic": "CraigBooneWhatWasISupposedToDo",
+      "topic_text": "What was I supposed to do again?",
+      "emotion": "Anger 40",
+      "response_text": "Find out who had Carla kidnapped. Bring him out in front of the dinosaur while I'm working my shift.",
+      "index": "45"
+    },
+    {
+      "topic": "CraigBooneWhyIsThat",
+      "topic_text": "Why is that?",
+      "emotion": "Neutral 50",
+      "response_text": "I need someone I can trust. You're a stranger. That's a start.",
+      "index": "47"
+    },
+    {
+      "topic": "CraigBooneWrongDinosaur",
+      "topic_text": "I think I'm in the wrong place.",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah, looks that way.",
+      "index": "48"
+    },
+    {
+      "topic": "CraigBooneYoureRight",
+      "topic_text": "You're right. I don't.",
+      "emotion": "Neutral 50",
+      "response_text": "You've done enough for me. What's coming next, that's something for me to deal with on my own.",
+      "index": "49"
+    },
+    {
+      "topic": "FollowersAcknowledgeMyOrder",
+      "topic_text": "FollowersAcknowledgeMyOrder",
+      "emotion": "Neutral 50",
+      "response_text": "All right.",
+      "index": "50"
+    },
+    {
+      "topic": "FollowersFiredIt's time for us to part ways.",
+      "topic_text": "I think we should part ways for now, Boone.",
+      "emotion": "Neutral 50",
+      "response_text": "If that's what you think.",
+      "index": "51"
+    },
+    {
+      "topic": "FollowersFiredNoOn second thought, stick with me for a little longer.",
+      "topic_text": "Actually I changed my mind. Let's stick together.",
+      "emotion": "Neutral 50",
+      "response_text": "Okay.",
+      "index": "52"
+    },
+    {
+      "topic": "FollowersFiredYesYes, I'm sure.",
+      "topic_text": "Yeah, that's what I think. You should head back home.",
+      "emotion": "Neutral 50",
+      "response_text": "All right. Guess I'll be around Novac for a while longer, until I figure out what I want to do with myself. See you around.",
+      "index": "53"
+    },
+    {
+      "topic": "FollowersFiredYesSuiteI'd like you to go back to the Lucky 38 for now.",
+      "topic_text": "I do. We'll meet up at the Lucky 38.",
+      "emotion": "Neutral 50",
+      "response_text": "I'll make my way there.",
+      "index": "54"
+    },
+    {
+      "topic": "FollowersHiredI think we should travel together.",
+      "topic_text": "Let's travel together.",
+      "emotion": "Neutral 50",
+      "response_text": "Huh. Well, let me know when there's room for me.",
+      "index": "55"
+    },
+    {
+      "topic": "FollowersLetsGo",
+      "topic_text": "Let's get going.",
+      "emotion": "Neutral 50",
+      "response_text": "I've got your back.",
+      "index": "57"
+    },
+    {
+      "topic": "FollowersOverburdened",
+      "topic_text": "FollowersOverburdened",
+      "emotion": "Neutral 50",
+      "response_text": "Gonna be hard covering you when I can't move my legs.",
+      "index": "58"
+    },
+    {
+      "topic": "FollowersTactics",
+      "topic_text": "Let's talk about your tactics.",
+      "emotion": "Neutral 50",
+      "response_text": "You wanna do something different?",
+      "index": "59"
+    },
+    {
+      "topic": "FollowersTacticsCombat",
+      "topic_text": "I want you to change your combat style.",
+      "emotion": "Neutral 50",
+      "response_text": "If you think it'll help.",
+      "index": "60"
+    },
+    {
+      "topic": "FollowersTacticsCombatAggressive",
+      "topic_text": "I want you to attack enemies the moment you see them.",
+      "emotion": "Neutral 50",
+      "response_text": "I'm already doing that.",
+      "index": "61"
+    },
+    {
+      "topic": "FollowersTacticsCombatEND",
+      "topic_text": "Let's talk about something else.",
+      "emotion": "Neutral 50",
+      "response_text": "I'm listening.",
+      "index": "63"
+    },
+    {
+      "topic": "FollowersTacticsCombatGOODBYE",
+      "topic_text": "That's all. Let's get going.",
+      "emotion": "Neutral 50",
+      "response_text": "Right behind you.",
+      "index": "64"
+    },
+    {
+      "topic": "FollowersTacticsCombatMelee",
+      "topic_text": "Switch to a melee weapon.",
+      "emotion": "Neutral 50",
+      "response_text": "Not my strong suit, but okay.",
+      "index": "65"
+    },
+    {
+      "topic": "FollowersTacticsCombatPassive",
+      "topic_text": "I want you not to attack enemies unless I've already engaged them.",
+      "emotion": "Neutral 50",
+      "response_text": "I'm already doing that.",
+      "index": "66"
+    },
+    {
+      "topic": "FollowersTacticsCombatRanged",
+      "topic_text": "I want you to use ranged weapons.",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah, you and me both.",
+      "index": "68"
+    },
+    {
+      "topic": "FollowersTacticsDistance",
+      "topic_text": "Let's talk about how close you're following me.",
+      "emotion": "Neutral 50",
+      "response_text": "We can do that.",
+      "index": "69"
+    },
+    {
+      "topic": "FollowersTacticsDistanceDefault",
+      "topic_text": "Stay close to me.",
+      "emotion": "Neutral 50",
+      "response_text": "Okay, I'll keep it tight.",
+      "index": "70"
+    },
+    {
+      "topic": "FollowersTacticsDistanceEND",
+      "topic_text": "Your distance is good. Let's talk about something else.",
+      "emotion": "Neutral 50",
+      "response_text": "I'm listening.",
+      "index": "71"
+    },
+    {
+      "topic": "FollowersTacticsDistanceGOODBYE",
+      "topic_text": "All right, you're good. Let's get out of here.",
+      "emotion": "Neutral 50",
+      "response_text": "Let's go.",
+      "index": "72"
+    },
+    {
+      "topic": "FollowersTacticsDistanceLongKeep your distance. Try to flank them.",
+      "topic_text": "Keep your distance.",
+      "emotion": "Neutral 50",
+      "response_text": "That's what I do best.",
+      "index": "73"
+    },
+    {
+      "topic": "FollowersTacticsEnd",
+      "topic_text": "Enough about tactics.",
+      "emotion": "Neutral 50",
+      "response_text": "All right.",
+      "index": "74"
+    },
+    {
+      "topic": "FollowersTrade",
+      "topic_text": "Let's trade equipment.",
+      "emotion": "Neutral 50",
+      "response_text": "Fine by me.",
+      "index": "75"
+    },
+    {
+      "topic": "FollowersWait",
+      "topic_text": "Wait here.",
+      "emotion": "Neutral 50",
+      "response_text": "I'll sit tight.",
+      "index": "76"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Anger 75",
+      "response_text": "I've lost all respect for you.",
+      "index": "77"
+    },
+    {
+      "topic": "PLAYERFIREWEAPON",
+      "topic_text": "PLAYER FIRE WEAPON",
+      "emotion": "Neutral 50",
+      "response_text": "What's your problem?",
+      "index": "123"
+    },
+    {
+      "topic": "PLAYERINIRONSITES",
+      "topic_text": "PLAYER IN IRON SITES",
+      "emotion": "Neutral 50",
+      "response_text": "How about I aim my gun at you for a while, see how you like it?{Hit the\"my\" and both \"you\"s}",
+      "index": "125"
+    },
+    {
+      "topic": "PLAYERLAYMINE",
+      "topic_text": "PLAYER LAY MINE",
+      "emotion": "Neutral 50",
+      "response_text": "I'll watch my step.",
+      "index": "127"
+    },
+    {
+      "topic": "PLAYERTHROWGRENADE",
+      "topic_text": "PLAYER THROW GRENADE",
+      "emotion": "Neutral 50",
+      "response_text": "Grenade!",
+      "index": "129"
+    },
+    {
+      "topic": "VBooneCLAttack",
+      "topic_text": "What are we waiting for?",
+      "emotion": "Neutral 50",
+      "response_text": "Tell the truth... I think this is exactly what I've been waiting for.",
+      "index": "131"
+    },
+    {
+      "topic": "VDialogueCraigBooneBSArrive",
+      "topic_text": "VDialogueCraigBooneBSArrive",
+      "emotion": "Neutral 50",
+      "response_text": "This is the place. We got sent from Camp Golf, looking for some Khans who'd been making trouble with one of our settlements.",
+      "index": "132"
+    },
+    {
+      "topic": "VDialogueCraigBooneBSCemetery",
+      "topic_text": "VDialogueCraigBooneBSCemetery",
+      "emotion": "Disgust 25",
+      "response_text": "Christ. They put the graveyard here.",
+      "index": "135"
+    },
+    {
+      "topic": "VDialogueCraigBooneBSReadyToStay",
+      "topic_text": "We can stay on Coyote Tail Ridge for the night.",
+      "emotion": "Neutral 50",
+      "response_text": "Let's go{slight emph}up there first, huh?",
+      "index": "136"
+    },
+    {
+      "topic": "VDialogueCraigBooneBSRidgeArrive",
+      "topic_text": "VDialogueCraigBooneBSRidgeArrive",
+      "emotion": "Neutral 50",
+      "response_text": "Canyon 37. That's what the NCR calls the pass down there.",
+      "index": "137"
+    },
+    {
+      "topic": "VDialogueCraigBooneBSWake",
+      "topic_text": "VDialogueCraigBooneBSWake",
+      "emotion": "Neutral 50",
+      "response_text": "Something's wrong. Got a group coming our way. Looks like a Legion raiding party. It's big.{Calm, but with gravity. Beat before \"It's big.\"}",
+      "index": "140"
+    },
+    {
+      "topic": "VDialogueCraigBooneCraigBooneTopic000",
+      "topic_text": "If you're looking for someone in particular, I could tip you off if I see them.",
+      "emotion": "Surprise 15",
+      "response_text": "[SUCCEEDED] Yeah, well, you see anybody wearing Legion crimson or a lot of sports equipment, you just let me know.",
+      "index": "142"
+    },
+    {
+      "topic": "VDialogueCraigBooneCraigBooneTopic001",
+      "topic_text": "Who were you looking for? Come on, you can tell me. Please?",
+      "emotion": "Anger 50",
+      "response_text": "[FAILED] Drop it. Now why the hell are you here?",
+      "index": "144"
+    },
+    {
+      "topic": "VDialogueCraigBooneCraigBooneTopic002",
+      "topic_text": "What is it you aren't telling me about what happened to your wife?",
+      "emotion": "Anger 60",
+      "response_text": "{icy}You got no right asking me that. Drop it.",
+      "index": "145"
+    },
+    {
+      "topic": "VDialogueCraigBooneCraigBooneTopic003",
+      "topic_text": "I don't feel like I can trust you.",
+      "emotion": "Anger 20",
+      "response_text": "That goes both ways. I joined up with you to kill legionaries. Sooner we get back to that, sooner we can have an understanding.",
+      "index": "146"
+    },
+    {
+      "topic": "VDialogueCraigBooneCraigBooneTopic004",
+      "topic_text": "I want to understand you better.",
+      "emotion": "Surprise 15",
+      "response_text": "You don't know what you're asking. Just... let it go for now.",
+      "index": "147"
+    },
+    {
+      "topic": "VDialogueCraigBooneCraigBooneTopic005",
+      "topic_text": "You're right. I was out of line.",
+      "emotion": "Sad 30",
+      "response_text": "{Sighs}It's just something I'm not ready to discuss. With you or anybody.",
+      "index": "149"
+    },
+    {
+      "topic": "VDialogueCraigBooneCraigBooneTopic006",
+      "topic_text": "I think it's time you told me what happened to your wife.",
+      "emotion": "Anger 25",
+      "response_text": "I don't see what this helps. She's dead.",
+      "index": "150"
+    },
+    {
+      "topic": "VDialogueCraigBooneCraigBooneTopic007",
+      "topic_text": "You're hiding something. Spit it out. You owe me.",
+      "emotion": "Anger 40",
+      "response_text": "{Touchy}Fine. How do I know she's dead? Here it is.",
+      "index": "151"
+    },
+    {
+      "topic": "VDialogueCraigBooneCraigBooneTopic008",
+      "topic_text": "The better we understand each other, the more effective we'll be.",
+      "emotion": "Neutral 50",
+      "response_text": "{Sighs}All right.{Solemn, giving in.}",
+      "index": "155"
+    },
+    {
+      "topic": "VDialogueCraigBooneCraigBooneTopic010",
+      "topic_text": "Better for her to die than live a Legion slave.",
+      "emotion": "Anger 15",
+      "response_text": "Yeah. What they do to women... that's worse than death. There was no choice in what I did.",
+      "index": "156"
+    },
+    {
+      "topic": "VDialogueCraigBooneCraigBooneTopic011",
+      "topic_text": "You should've tried to rescue her. Even if it meant your death.",
+      "emotion": "Sad 20",
+      "response_text": "There was never any saving her. They'd have taken her where I couldn't follow. What I did... that was the only rescue.",
+      "index": "159"
+    },
+    {
+      "topic": "VDialogueCraigBooneCraigBooneTopic012",
+      "topic_text": "You had no right to make that decision.",
+      "emotion": "Disgust 20",
+      "response_text": "There was no decision. I was meant to pull that trigger. It was a mistake to think I could escape it.",
+      "index": "160"
+    },
+    {
+      "topic": "VDialogueCraigBooneCraigBooneTopic013",
+      "topic_text": "You make it sound like your wife's death was inevitable.",
+      "emotion": "Sad 15",
+      "response_text": "It was gonna be something. If I'd never met Carla, it would've been something else. I should've never gotten close to her.",
+      "index": "162"
+    },
+    {
+      "topic": "VDialogueCraigBooneCraigBooneTopic014",
+      "topic_text": "Why do you think you've got bad things coming?",
+      "emotion": "Sad 15",
+      "response_text": "{Sighs}Because fair is fair.{Grim}",
+      "index": "164"
+    },
+    {
+      "topic": "VDialogueCraigBooneCraigBooneTopic015",
+      "topic_text": "I don't understand.",
+      "emotion": "Happy 10",
+      "response_text": "Better that you don't.",
+      "index": "165"
+    },
+    {
+      "topic": "VDialogueCraigBooneCraigBooneTopic016",
+      "topic_text": "Let's talk about something else.",
+      "emotion": "Neutral 50",
+      "response_text": "All right.",
+      "index": "166"
+    },
+    {
+      "topic": "VDialogueCraigBooneCraigBooneTopic017",
+      "topic_text": "You're not going to tell me?",
+      "emotion": "Neutral 50",
+      "response_text": "No. Sorry.",
+      "index": "167"
+    },
+    {
+      "topic": "VDialogueCraigBooneCraigBooneTopic018",
+      "topic_text": "Were you at Bitter Springs with First Recon?",
+      "emotion": "Neutral 50",
+      "response_text": "I was in a lot of places with First Recon. I don't really remember.",
+      "index": "168"
+    },
+    {
+      "topic": "VDialogueCraigBooneCraigBooneTopic019",
+      "topic_text": "You must've been at Bitter Springs. What happened there?",
+      "emotion": "Neutral 50",
+      "response_text": "That part of my life is over now. So is this discussion.",
+      "index": "169"
+    },
+    {
+      "topic": "VDialogueCraigBooneCraigBooneTopic020",
+      "topic_text": "That's it? You won?",
+      "emotion": "Neutral 50",
+      "response_text": "Look, we've done some traveling together, but we're not exactly comrades-in-arms. I'm not ready to swap war stories.",
+      "index": "172"
+    },
+    {
+      "topic": "VDialogueCraigBooneCraigBooneTopic021",
+      "topic_text": "I've seen my share of terrible things. You can talk to me about it.",
+      "emotion": "Neutral 50",
+      "response_text": "Maybe some other time.",
+      "index": "173"
+    },
+    {
+      "topic": "VDialogueCraigBooneCraigBooneTopic022",
+      "topic_text": "How can you say that? We've been fighting together.",
+      "emotion": "Neutral 50",
+      "response_text": "{Pointed}Your enemies, or mine?",
+      "index": "174"
+    },
+    {
+      "topic": "VDialogueCraigBooneCraigBooneTopic024",
+      "topic_text": "You want me to make good on my promise to fight the Legion with you, is that it?",
+      "emotion": "Neutral 50",
+      "response_text": "I don't know. Couldn't hurt.",
+      "index": "176"
+    },
+    {
+      "topic": "VDialogueCraigBooneCraigBooneTopic025",
+      "topic_text": "Sounded like more of a massacre.",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah. I guess that'd be the word.",
+      "index": "177"
+    },
+    {
+      "topic": "VDialogueCraigBooneCraigBooneTopic026",
+      "topic_text": "Must've been one hell of a miscommunication.",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah, well. That's how they wrote it up in the report.",
+      "index": "181"
+    },
+    {
+      "topic": "VDialogueCraigBooneCraigBooneTopic027",
+      "topic_text": "There must be more to it than that.",
+      "emotion": "Neutral 50",
+      "response_text": "Not as much as you'd think.",
+      "index": "182"
+    },
+    {
+      "topic": "VDialogueCraigBooneCraigBooneTopic028",
+      "topic_text": "Sounds like you have some regrets.",
+      "emotion": "Neutral 50",
+      "response_text": "You don't come out of a tour of duty without regrets. It's best just not to think about it.",
+      "index": "183"
+    },
+    {
+      "topic": "VDialogueCraigBooneCraigBooneTopic029",
+      "topic_text": "That's true. You can't second guess what you do out there.",
+      "emotion": "Neutral 50",
+      "response_text": "It doesn't lead anywhere that does any good. I know that much.",
+      "index": "184"
+    },
+    {
+      "topic": "VDialogueCraigBooneCraigBooneTopic030",
+      "topic_text": "Being a mindless drone is just as dangerous. You have to think for yourself.",
+      "emotion": "Neutral 50",
+      "response_text": "Not much hope either way, is there?",
+      "index": "185"
+    },
+    {
+      "topic": "VDialogueCraigBooneCraigBooneTopic031",
+      "topic_text": "It is because of Bitter Springs that you think you've got bad things coming?",
+      "emotion": "Neutral 50",
+      "response_text": "Life has a way of punishing you for the mistakes you make.",
+      "index": "186"
+    },
+    {
+      "topic": "VDialogueCraigBooneCraigBooneTopic032",
+      "topic_text": "Maybe you can make up for your mistakes.",
+      "emotion": "Neutral 50",
+      "response_text": "A murderer who does good deeds is still a murderer. And he'll still get his judgment.",
+      "index": "189"
+    },
+    {
+      "topic": "VDialogueCraigBooneCraigBooneTopic033",
+      "topic_text": "Life doesn't work that way. Your misfortunes are just bad luck.",
+      "emotion": "Neutral 50",
+      "response_text": "That's what they tell you in the casinos, too. Because it's the only way to get you to buy back in.",
+      "index": "192"
+    },
+    {
+      "topic": "VDialogueCraigBooneCraigBooneTopic034",
+      "topic_text": "If it's out of your control, why worry about it?",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah, that's what I thought, too.",
+      "index": "195"
+    },
+    {
+      "topic": "VDialogueCraigBooneCraigBooneTopic035",
+      "topic_text": "How do you know your punishment isn't over?",
+      "emotion": "Neutral 50",
+      "response_text": "Because I'm still alive.",
+      "index": "197"
+    },
+    {
+      "topic": "VDialogueCraigBooneCraigBooneTopic036",
+      "topic_text": "Do you think about Bitter Springs a lot?",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah. Always. Even when I sleep.",
+      "index": "198"
+    },
+    {
+      "topic": "VDialogueCraigBooneCraigBooneTopic037",
+      "topic_text": "Maybe it would help to go back there.",
+      "emotion": "Neutral 50",
+      "response_text": "I don't think so. It won't change anything. And that's a memory I don't want refreshed.",
+      "index": "199"
+    },
+    {
+      "topic": "VDialogueCraigBooneCraigBooneTopic038",
+      "topic_text": "What changed your mind?",
+      "emotion": "Neutral 50",
+      "response_text": "Nothing. Dream. Just tired of thinking about it.",
+      "index": "200"
+    },
+    {
+      "topic": "VDialogueCraigBooneCraigBooneTopic039",
+      "topic_text": "Okay. We'll make it a point to stop there.",
+      "emotion": "Neutral 50",
+      "response_text": "I hope this isn't a mistake.",
+      "index": "201"
+    },
+    {
+      "topic": "VDialogueCraigBooneCraigBooneTopic040",
+      "topic_text": "I don't really have time for this now, Boone.",
+      "emotion": "Neutral 50",
+      "response_text": "{Embarrassed}Yeah. Yeah, I guess not. Forget I brought it up.",
+      "index": "202"
+    },
+    {
+      "topic": "VDialogueCraigBooneCraigBooneTopic041",
+      "topic_text": "Not my problem. You want to go? You're on your own.",
+      "emotion": "Anger 50",
+      "response_text": "{Irked}You're the one who suggested it.",
+      "index": "203"
+    },
+    {
+      "topic": "VDialogueCraigBooneCraigBooneTopic042",
+      "topic_text": "I'm ready to go to Bitter Springs.",
+      "emotion": "Neutral 50",
+      "response_text": "All right. Let's head out, then.",
+      "index": "206"
+    },
+    {
+      "topic": "VDialogueCraigBooneCraigBooneTopic043",
+      "topic_text": "What happened?",
+      "emotion": "Neutral 50",
+      "response_text": "Main force got spotted too soon. We heard shooting. Then Khans started coming through Canyon 37 in bunches.",
+      "index": "207"
+    },
+    {
+      "topic": "VDialogueCraigBooneCraigBooneTopic044",
+      "topic_text": "I'm not interested in your stories.",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah, I guess not.",
+      "index": "210"
+    },
+    {
+      "topic": "VDialogueCraigBooneCraigBooneTopic045",
+      "topic_text": "You did what you were supposed to as a soldier.",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah, well. I'm not a soldier anymore. Those rules don't seem like much of an excuse now.",
+      "index": "211"
+    },
+    {
+      "topic": "VDialogueCraigBooneCraigBooneTopic046",
+      "topic_text": "That's not what I would've done at all.",
+      "emotion": "Neutral 50",
+      "response_text": "Maybe not. Maybe I wouldn't have either at one point. But that's why they train you. Break you down till you're automatic.",
+      "index": "214"
+    },
+    {
+      "topic": "VDialogueCraigBooneCraigBooneTopic047",
+      "topic_text": "How could you kill innocent people like that?",
+      "emotion": "Neutral 50",
+      "response_text": "With the Khans, any of them can be dangerous. There's a lot you can't see through a scope.",
+      "index": "215"
+    },
+    {
+      "topic": "VDialogueCraigBooneCraigBooneTopic048",
+      "topic_text": "Let's get out of here. Let them have Bitter Springs.",
+      "emotion": "Neutral 50",
+      "response_text": "You can do what you want, but I'm not going anywhere.",
+      "index": "217"
+    },
+    {
+      "topic": "VDialogueCraigBooneCraigBooneTopic049",
+      "topic_text": "Your only mistake was not bringing enough ammo.",
+      "emotion": "Neutral 50",
+      "response_text": "No. I only would've needed one bullet to do things right that day.",
+      "index": "218"
+    },
+    {
+      "topic": "VDialogueCraigBooneCraigBooneTopic050",
+      "topic_text": "We can do that.",
+      "emotion": "Neutral 50",
+      "response_text": "All right. We won't stay for long.",
+      "index": "219"
+    },
+    {
+      "topic": "VDialogueCraigBooneCraigBooneTopic051",
+      "topic_text": "I'd prefer not to right now.",
+      "emotion": "Neutral 50",
+      "response_text": "Fine, but I'd still like to when we get a chance.",
+      "index": "220"
+    },
+    {
+      "topic": "VDialogueCraigBooneCraigBooneTopic052",
+      "topic_text": "Why would they come to Bitter Springs?",
+      "emotion": "Neutral 50",
+      "response_text": "Easy target for grabbing slaves. Bunch of refugees, just a few soldiers defending it.",
+      "index": "221"
+    },
+    {
+      "topic": "VDialogueCraigBooneCraigBooneTopic053",
+      "topic_text": "Good. Saves us the trouble of finding them.",
+      "emotion": "Neutral 50",
+      "response_text": "Ha! If only it was this easy all the time.",
+      "index": "223"
+    },
+    {
+      "topic": "VDialogueCraigBooneCraigBooneTopic054",
+      "topic_text": "You don't sound surprised.",
+      "emotion": "Neutral 50",
+      "response_text": "I'm not. Always figured this was how it was gonna end for me. Just didn't know when.",
+      "index": "224"
+    },
+    {
+      "topic": "VDialogueCraigBooneCraigBooneTopic055",
+      "topic_text": "Why aren't you sure?",
+      "emotion": "Neutral 50",
+      "response_text": "Thought my time had come. For a minute there everything made sense. I could feel the end coming. I was ready for it.",
+      "index": "227"
+    },
+    {
+      "topic": "VDialogueCraigBooneCraigBooneTopic056",
+      "topic_text": "You underestimated us.",
+      "emotion": "Neutral 50",
+      "response_text": "Guess I did. Guess I figured whatever we could handle, this time the Legion was going to send more.",
+      "index": "229"
+    },
+    {
+      "topic": "VDialogueCraigBooneCraigBooneTopic057",
+      "topic_text": "You can't take back what you've done. But your regrets can set you on a better path.",
+      "emotion": "Neutral 50",
+      "response_text": "I guess they brought us here. One less Legion raiding party running loose now. Never a bad thing, you can take my word for that.{Hit \"here.\"}",
+      "index": "232"
+    },
+    {
+      "topic": "VDialogueCraigBooneCraigBooneTopic058",
+      "topic_text": "I wasn't going to let you die.",
+      "emotion": "Neutral 50",
+      "response_text": "I don't mean disrespect. It's a hell of a thing having someone with your ability looking out for me.",
+      "index": "235"
+    },
+    {
+      "topic": "VDialogueCraigBooneCraigBooneTopic059",
+      "topic_text": "Maybe it's just not your time yet.",
+      "emotion": "Neutral 50",
+      "response_text": "<Sighs> Goddamn it. It's like I'm being toyed with.",
+      "index": "238"
+    },
+    {
+      "topic": "VDialogueCraigBooneCraigBooneTopic060",
+      "topic_text": "No one is judging or punishing you. Things just happen.",
+      "emotion": "Neutral 50",
+      "response_text": "If that's how it is, there's not a lot of comfort in knowing it.",
+      "index": "240"
+    },
+    {
+      "topic": "VDialogueCraigBooneCraigBooneTopic061",
+      "topic_text": "Having to live with what you've done is your punishment.",
+      "emotion": "Neutral 50",
+      "response_text": "I never thought of it that way. Always expected something... more final. But maybe it is.{Not an encouraging thought.}",
+      "index": "241"
+    },
+    {
+      "topic": "VDialogueCraigBooneCraigBooneTopic062",
+      "topic_text": "Get over it. It's war. People die. Why should it matter whether they're soldiers or civilians?",
+      "emotion": "Neutral 50",
+      "response_text": "With the Khans, the only difference between a soldier and a civilian is that the civilian is more likely to miss when he shoots at you.",
+      "index": "242"
+    },
+    {
+      "topic": "VDialogueCraigBooneCraigBooneTopic063",
+      "topic_text": "What outfit did you serve in the military with?",
+      "emotion": "Neutral 50",
+      "response_text": "First NCR Recon. It's a sniper battalion. Sees a lot of action.",
+      "index": "246"
+    },
+    {
+      "topic": "VDialogueCraigBooneCraigBooneTopic064",
+      "topic_text": "How did you happen to join First Recon?",
+      "emotion": "Neutral 50",
+      "response_text": "They pick you out if you do well at the firing range. Pays a little better, so I said okay.",
+      "index": "248"
+    },
+    {
+      "topic": "VDialogueCraigBooneCraigBooneTopic065",
+      "topic_text": "What's the slogan?",
+      "emotion": "Neutral 50",
+      "response_text": "\"The last thing you never see.\"",
+      "index": "249"
+    },
+    {
+      "topic": "VDialogueCraigBooneCraigBooneTopic066",
+      "topic_text": "Is that a First Recon beret?",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah. You can tell by the patch. Bear skull with crossed rifles behind it. Slogan underneath.",
+      "index": "251"
+    },
+    {
+      "topic": "VDialogueCraigBooneCraigBooneTopic067",
+      "topic_text": "Tell me about Camp McCarran.",
+      "emotion": "Neutral 50",
+      "response_text": "Was an airport before the war. Command liked it because it was already fortified and it let them keep an eye on the Strip.",
+      "index": "252"
+    },
+    {
+      "topic": "VDialogueCraigBooneCraigBooneTopic068",
+      "topic_text": "What was Camp Golf like?",
+      "emotion": "Neutral 50",
+      "response_text": "It was on the front line for a while. Only resort in New Vegas no one wanted to get sent to.",
+      "index": "255"
+    },
+    {
+      "topic": "VDialogueCraigBooneCraigBooneTopic069",
+      "topic_text": "What do you think of General Oliver?",
+      "emotion": "Neutral 50",
+      "response_text": "Didn't know him. He's a signature on my discharge papers.",
+      "index": "257"
+    },
+    {
+      "topic": "VDialogueCraigBooneCraigBooneTopic070",
+      "topic_text": "Do you know Colonel Hsu at all?",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah. He introduced himself to me once. I shook his hand. Doubt he'd remember me now, though.",
+      "index": "260"
+    },
+    {
+      "topic": "VDialogueCraigBooneCraigBooneTopic071",
+      "topic_text": "The Dam?",
+      "emotion": "Neutral 50",
+      "response_text": "The big one. The one the NCR is trying to hold onto, that the Legion's pushing for. Whole war depends on holding it.",
+      "index": "263"
+    },
+    {
+      "topic": "VDialogueCraigBooneCraigBooneTopic072",
+      "topic_text": "Don't worry, I'm not going in there right now.",
+      "emotion": "Neutral 50",
+      "response_text": "Okay. But let's make sure and come back here. I'd love to wipe this place off the map.",
+      "index": "264"
+    },
+    {
+      "topic": "VDialogueCraigBooneCraigBooneTopic073",
+      "topic_text": "As long as you don't mind me joining the fun.",
+      "emotion": "Happy 35",
+      "response_text": "I don't think I'd hold it against you.{Wry.}",
+      "index": "265"
+    },
+    {
+      "topic": "VDialogueCraigBooneCraigBooneTopic074",
+      "topic_text": "I don't want any trouble. We should part ways for now.",
+      "emotion": "Neutral 50",
+      "response_text": "Fine. But if you make any new friends in there, all bets are off.",
+      "index": "266"
+    },
+    {
+      "topic": "VDialogueCraigBooneCraigBooneTopic075",
+      "topic_text": "Yes, but you're not coming with me.",
+      "emotion": "Neutral 50",
+      "response_text": "You're making a mistake. I want to be a part of this.",
+      "index": "267"
+    },
+    {
+      "topic": "VDialogueCraigBooneCraigBooneTopic076",
+      "topic_text": "No, I'm not going in right now.",
+      "emotion": "Neutral 50",
+      "response_text": "You ever change your mind, I'll be right there with you.",
+      "index": "268"
+    },
+    {
+      "topic": "VDialogueCraigBooneCraigBooneTopic077",
+      "topic_text": "I'm ready. Caesar won't know what hit him.",
+      "emotion": "Neutral 50",
+      "response_text": "That's what the scope's for.{wry}",
+      "index": "269"
+    },
+    {
+      "topic": "VDialogueCraigBooneCraigBooneTopic078",
+      "topic_text": "No, that's not a problem. That's a solution.",
+      "emotion": "Neutral 50",
+      "response_text": "Damn right. You and I, we're just a couple of problem solvers.",
+      "index": "270"
+    },
+    {
+      "topic": "VDialogueCraigBooneCraigBooneTopic079",
+      "topic_text": "I'm not ready to attack it. We'll keep our distance.",
+      "emotion": "Neutral 50",
+      "response_text": "If you're sure. There's a lot of high ground around the town. We could do a lot of damage.",
+      "index": "271"
+    },
+    {
+      "topic": "VDialogueCraigBooneCraigBooneTopic080",
+      "topic_text": "That's not how I want to approach this. You'd better go your own way for now.",
+      "emotion": "Neutral 50",
+      "response_text": "Better be a good reason. I didn't join up with you to go on nature walks.",
+      "index": "273"
+    },
+    {
+      "topic": "VDialogueCraigBooneCraigBooneTopic081",
+      "topic_text": "I'm going to do this my way. I can't bring you.",
+      "emotion": "Neutral 50",
+      "response_text": "{Bitter}You say so.",
+      "index": "274"
+    },
+    {
+      "topic": "VDialogueCraigBooneCraigBooneTopic082",
+      "topic_text": "All right, come along.",
+      "emotion": "Neutral 50",
+      "response_text": "You'll be glad you did this. I'm gonna put a hole through Caesar's head.",
+      "index": "275"
+    },
+    {
+      "topic": "VDialogueCraigBooneCraigBooneTopic083",
+      "topic_text": "Still feels pretty good, though, doesn't it?",
+      "emotion": "Happy 35",
+      "response_text": "Heh. Yeah. That was some kind of stunt we pulled.",
+      "index": "276"
+    },
+    {
+      "topic": "VDialogueCraigBooneCraigBooneTopic084",
+      "topic_text": "Why wouldn't this stop the Legion?",
+      "emotion": "Neutral 50",
+      "response_text": "Intel we had back in the NCR said they had a whole succession lined up. They'll replace him as soon as word gets out.",
+      "index": "279"
+    },
+    {
+      "topic": "VDialogueCraigBooneCraigBooneTopic085",
+      "topic_text": "That just means we've got more work to do.",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah, it does. But we got these bastards pretty good today.",
+      "index": "281"
+    },
+    {
+      "topic": "VDialogueCraigBooneCraigBooneTopic086",
+      "topic_text": "I'm infiltrating the organization. I have to gain their trust.",
+      "emotion": "Neutral 50",
+      "response_text": "If you want me to stick around, that ends now. I don't care what the reasons are, I will not help the Legion. Ever. Got it?",
+      "index": "282"
+    },
+    {
+      "topic": "VDialogueCraigBooneCraigBooneTopic087",
+      "topic_text": "I'm... uh... helping them so I can spy on them better.",
+      "emotion": "Neutral 50",
+      "response_text": "Bullshit. You're a goddamned coward, trying to pick the winning side.",
+      "index": "283"
+    },
+    {
+      "topic": "VDialogueCraigBooneCraigBooneTopic089",
+      "topic_text": "Things have changed. I'm with Caesar now.",
+      "emotion": "Neutral 50",
+      "response_text": "Then this is over. Next time I see you, it'll be through my scope.",
+      "index": "285"
+    },
+    {
+      "topic": "VDialogueCraigBooneCraigBooneTopic090",
+      "topic_text": "[Attack] I won't be needing your services any longer.",
+      "emotion": "Neutral 50",
+      "response_text": "I should never have trusted you.",
+      "index": "287"
+    },
+    {
+      "topic": "VDialogueCraigBooneCraigBooneTopic091",
+      "topic_text": "Very well. You have my word.",
+      "emotion": "Neutral 50",
+      "response_text": "All right. But we'd better not have to have this talk again.",
+      "index": "288"
+    },
+    {
+      "topic": "VDialogueCraigBooneCraigBooneTopic092",
+      "topic_text": "Sorry. I won't compromise my mission.",
+      "emotion": "Neutral 50",
+      "response_text": "Then we're finished here.",
+      "index": "289"
+    },
+    {
+      "topic": "VDialogueCraigBooneCraigBooneTopic093",
+      "topic_text": "Then we can't work together anymore.",
+      "emotion": "Neutral 50",
+      "response_text": "I should never have worked with you in the first place.",
+      "index": "290"
+    },
+    {
+      "topic": "VDialogueCraigBooneCraigBooneTopic094",
+      "topic_text": "All right. I won't do anything else to hurt the NCR.",
+      "emotion": "Neutral 50",
+      "response_text": "You're right. You won't.{Threatening}",
+      "index": "291"
+    },
+    {
+      "topic": "VDialogueCraigBooneCraigBooneTopic095",
+      "topic_text": "[Attack] You're less trouble to me dead than alive.",
+      "emotion": "Neutral 50",
+      "response_text": "Good thing I'm still alive, then.",
+      "index": "292"
+    },
+    {
+      "topic": "VDialogueCraigBooneCraigBooneTopic096",
+      "topic_text": "Tell me about yourself.",
+      "emotion": "Neutral 50",
+      "response_text": "If you want. It's not really my thing. What do you want to know?",
+      "index": "293"
+    },
+    {
+      "topic": "VDialogueCraigBooneCraigBooneTopic097",
+      "topic_text": "What's the best way for me to use your skills?",
+      "emotion": "Neutral 50",
+      "response_text": "Give me my rifle and a clear line of sight and I'll start picking them off before they've even seen me.",
+      "index": "294"
+    },
+    {
+      "topic": "VDialogueCraigBooneCraigBooneTopic098",
+      "topic_text": "Ever take that beret off?",
+      "emotion": "Neutral 50",
+      "response_text": "No.",
+      "index": "297"
+    },
+    {
+      "topic": "VDialogueCraigBooneCraigBooneTopic099",
+      "topic_text": "How do you feel about Manny Vargas?",
+      "emotion": "Neutral 50",
+      "response_text": "Don't ever say that name again.",
+      "index": "298"
+    },
+    {
+      "topic": "VDialogueCraigBooneCraigBooneTopic100",
+      "topic_text": "Weren't you also friends?",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah. We were.",
+      "index": "300"
+    },
+    {
+      "topic": "VDialogueCraigBooneCraigBooneTopic101",
+      "topic_text": "Not anymore?",
+      "emotion": "Neutral 50",
+      "response_text": "No.",
+      "index": "301"
+    },
+    {
+      "topic": "VDialogueCraigBooneCraigBooneTopic102",
+      "topic_text": "I have another question about you.",
+      "emotion": "Neutral 50",
+      "response_text": "Sure.{Whatever.}",
+      "index": "304"
+    },
+    {
+      "topic": "VDialogueCraigBooneCraigBooneTopic103",
+      "topic_text": "Tell me about your wife.",
+      "emotion": "Neutral 50",
+      "response_text": "Carla's dead. That's all you need to know.",
+      "index": "305"
+    },
+    {
+      "topic": "VDialogueCraigBooneCraigBooneTopic104",
+      "topic_text": "Did you ever tell your wife about what happened at Bitter Springs?",
+      "emotion": "Neutral 50",
+      "response_text": "No. I wanted to. I just couldn't.",
+      "index": "309"
+    },
+    {
+      "topic": "VDialogueCraigBooneCraigBooneTopic105",
+      "topic_text": "Have you heard of Mr. House?",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah. I don't know much. Just rumors.",
+      "index": "310"
+    },
+    {
+      "topic": "VDialogueCraigBooneCraigBooneTopic106",
+      "topic_text": "I had some questions I wanted to ask you.",
+      "emotion": "Neutral 50",
+      "response_text": "Okay.",
+      "index": "313"
+    },
+    {
+      "topic": "VDialogueCraigBooneCraigBooneTopic107",
+      "topic_text": "Does the name Benny mean anything to you?",
+      "emotion": "Neutral 50",
+      "response_text": "No. It doesn't.",
+      "index": "314"
+    },
+    {
+      "topic": "VDialogueCraigBooneCraigBooneTopic108",
+      "topic_text": "What can you tell me about New Vegas?",
+      "emotion": "Neutral 50",
+      "response_text": "It's NCR land, for the most part. We tamed it, now we're settling it.",
+      "index": "315"
+    },
+    {
+      "topic": "VDialogueCraigBooneCraigBooneTopic109",
+      "topic_text": "How do you feel about the NCR?",
+      "emotion": "Neutral 50",
+      "response_text": "Coming east was about securing the land, so people could live without fear.",
+      "index": "318"
+    },
+    {
+      "topic": "VDialogueCraigBooneCraigBooneTopic110",
+      "topic_text": "Any thoughts about Caesar's Legion?",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah. Lots of thoughts. All about the best ways to kill them.",
+      "index": "321"
+    },
+    {
+      "topic": "VDialogueCraigBooneCraigBooneTopic113",
+      "topic_text": "Not yet.",
+      "emotion": "Neutral 50",
+      "response_text": "Well, let me know when it is.",
+      "index": "322"
+    },
+    {
+      "topic": "VDialogueCraigBooneCraigBooneTopic114",
+      "topic_text": "I changed my mind. This is something we should confront together.",
+      "emotion": "Neutral 50",
+      "response_text": "No. This is something for{emph}me to deal with. But I'm glad you're here.",
+      "index": "323"
+    },
+    {
+      "topic": "VEndingBoone",
+      "topic_text": "VEndingBoone",
+      "emotion": "Neutral 50",
+      "response_text": "{Narration}Tired of waiting for the world to be done with him, Boone ventured into the wastes to make his own way out.",
+      "index": "324"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah.",
+      "index": "343"
+    },
+    {
+      "topic": "VDialogueCraigBooneAssassinHint",
+      "topic_text": "VDialogueCraigBooneAssassinHint",
+      "emotion": "Neutral 50",
+      "response_text": "If I was the assassin, I'd be up on that ridge. Or if I didn't care about escaping, maybe that near tower, or the landing pad behind us.",
+      "index": "344"
+    },
+    {
+      "topic": "VDialogueCraigBooneCCComplete",
+      "topic_text": "VDialogueCraigBooneCCComplete",
+      "emotion": "Neutral 50",
+      "response_text": "Wish there was more of them. I wasn't done yet.",
+      "index": "345"
+    },
+    {
+      "topic": "VDialogueCraigBooneCLAttackFinish",
+      "topic_text": "VDialogueCraigBooneCLAttackFinish",
+      "emotion": "Neutral 50",
+      "response_text": "I think we're clear.",
+      "index": "346"
+    },
+    {
+      "topic": "VDialogueCraigBooneCaesarDead",
+      "topic_text": "VDialogueCraigBooneCaesarDead",
+      "emotion": "Neutral 50",
+      "response_text": "Thumbs down, you son of a bitch.{Spiteful, got vengeance}",
+      "index": "347"
+    },
+    {
+      "topic": "VDialogueCraigBooneNelsonReactMercyKill",
+      "topic_text": "VDialogueCraigBooneNelsonReactMercyKill",
+      "emotion": "Neutral 50",
+      "response_text": "Goddamn it. We could've gotten them out.",
+      "index": "348"
+    },
+    {
+      "topic": "VDialogueCraigBooneNelsonReactSave",
+      "topic_text": "VDialogueCraigBooneNelsonReactSave",
+      "emotion": "Neutral 50",
+      "response_text": "Mercy killing is a last resort. Glad you recognized we had options.",
+      "index": "349"
+    },
+    {
+      "topic": "VDialogueCraigBooneNelsonStart",
+      "topic_text": "VDialogueCraigBooneNelsonStart",
+      "emotion": "Neutral 50",
+      "response_text": "To hell with mercy killing. We're getting those guys out of there.",
+      "index": "350"
+    },
+    {
+      "topic": "VDialogueCraigBooneNiptonCrossReact",
+      "topic_text": "VDialogueCraigBooneNiptonCrossReact",
+      "emotion": "Neutral 50",
+      "response_text": "Goddamn Legion.{Looking at an atrocity they performed.}",
+      "index": "351"
+    },
+    {
+      "topic": "VDialogueCraigBooneNiptonReact",
+      "topic_text": "VDialogueCraigBooneNiptonReact",
+      "emotion": "Neutral 50",
+      "response_text": "They got what they had coming. Glad we were the ones to deliver it.",
+      "index": "352"
+    },
+    {
+      "topic": "VDialogueCraigBooneNoBeretReact",
+      "topic_text": "VDialogueCraigBooneNoBeretReact",
+      "emotion": "Neutral 50",
+      "response_text": "I'd really like my beret back, please.{Flatly, unamused.}",
+      "index": "353"
+    },
+    {
+      "topic": "VDialogueCraigBooneOscarVelascoReact",
+      "topic_text": "VDialogueCraigBooneOscarVelascoReact",
+      "emotion": "Neutral 50",
+      "response_text": "Great Khan, looks like. Guess he fought at Bitter Springs. Or saw it happen.",
+      "index": "354"
+    },
+    {
+      "topic": "VDialogueCraigBooneSpotterIntro",
+      "topic_text": "VDialogueCraigBooneSpotterIntro",
+      "emotion": "Neutral 50",
+      "response_text": "Dark in here. If you want to use a scope, I can spot for you. Keep you on target.",
+      "index": "355"
+    },
+    {
+      "topic": "VDialogueCraigBooneWave2",
+      "topic_text": "VDialogueCraigBooneWave2",
+      "emotion": "Neutral 50",
+      "response_text": "We need to get to the camp before they do!",
+      "index": "356"
+    },
+    {
+      "topic": "VDialogueCraigBooneWave3",
+      "topic_text": "VDialogueCraigBooneWave3",
+      "emotion": "Neutral 50",
+      "response_text": "More coming!",
+      "index": "357"
+    }
+  ],
+  "combat": [
+    {
+      "topic": "AcceptYield",
+      "topic_text": "AcceptYield",
+      "emotion": "Neutral 50",
+      "response_text": "Don't try that again.",
+      "index": "358"
+    },
+    {
+      "topic": "ArmorIneffective",
+      "topic_text": "ArmorIneffective",
+      "emotion": "Neutral 50",
+      "response_text": "This armor's gonna get me killed.",
+      "index": "359"
+    },
+    {
+      "topic": "Assault",
+      "topic_text": "Assault",
+      "emotion": "Neutral 50",
+      "response_text": "Enough.",
+      "index": "361"
+    },
+    {
+      "topic": "Attack",
+      "topic_text": "Attack",
+      "emotion": "Neutral 50",
+      "response_text": "Eat this.",
+      "index": "363"
+    },
+    {
+      "topic": "AvoidThreat",
+      "topic_text": "AvoidThreat",
+      "emotion": "Neutral 50",
+      "response_text": "Hey, look out!",
+      "index": "366"
+    },
+    {
+      "topic": "Crippled",
+      "topic_text": "Crippled",
+      "emotion": "Neutral 50",
+      "response_text": "{Critically Injured}Need a medic.",
+      "index": "368"
+    },
+    {
+      "topic": "Death",
+      "topic_text": "Death",
+      "emotion": "Neutral 50",
+      "response_text": "{Death Noise 2}",
+      "index": "370"
+    },
+    {
+      "topic": "DeathResponse",
+      "topic_text": "DeathResponse",
+      "emotion": "Neutral 50",
+      "response_text": "Ah, hell.",
+      "index": "371"
+    },
+    {
+      "topic": "FireExplosive",
+      "topic_text": "FireExplosive",
+      "emotion": "Neutral 50",
+      "response_text": "Get down!",
+      "index": "373"
+    },
+    {
+      "topic": "Flee",
+      "topic_text": "Flee",
+      "emotion": "Neutral 50",
+      "response_text": "Gotta pull back!",
+      "index": "375"
+    },
+    {
+      "topic": "GuardTrespass",
+      "topic_text": "GuardTrespass",
+      "emotion": "Neutral 50",
+      "response_text": "You need to leave.",
+      "index": "378"
+    },
+    {
+      "topic": "HealthQuarter",
+      "topic_text": "HealthQuarter",
+      "emotion": "Neutral 50",
+      "response_text": "{Dying}So this is how it ends.",
+      "index": "381"
+    },
+    {
+      "topic": "Murder",
+      "topic_text": "Murder",
+      "emotion": "Neutral 50",
+      "response_text": "What the hell was that?{Incredulous. As in \"what were you doing just now?\"}",
+      "index": "385"
+    },
+    {
+      "topic": "MurderNoCrime",
+      "topic_text": "MurderNoCrime",
+      "emotion": "Neutral 50",
+      "response_text": "We all gotta go sometime.",
+      "index": "388"
+    },
+    {
+      "topic": "NoAmmo",
+      "topic_text": "NoAmmo",
+      "emotion": "Neutral 50",
+      "response_text": "That's the last of the ammo.",
+      "index": "391"
+    },
+    {
+      "topic": "Poisoned",
+      "topic_text": "Poison",
+      "emotion": "Neutral 50",
+      "response_text": "Argh. Poison.",
+      "index": "393"
+    },
+    {
+      "topic": "Steal",
+      "topic_text": "Steal",
+      "emotion": "Neutral 50",
+      "response_text": "I'll take that back now.",
+      "index": "394"
+    },
+    {
+      "topic": "UsedDoctorBag",
+      "topic_text": "UsedDoctorBag",
+      "emotion": "Neutral 50",
+      "response_text": "I'm fine now.",
+      "index": "397"
+    },
+    {
+      "topic": "Wake",
+      "topic_text": "Wake",
+      "emotion": "Neutral 50",
+      "response_text": "Huh. Alive after all.",
+      "index": "399"
+    },
+    {
+      "topic": "WeaponBroke",
+      "topic_text": "WeaponBroke",
+      "emotion": "Neutral 50",
+      "response_text": "This weapon's done.",
+      "index": "401"
+    },
+    {
+      "topic": "WeaponIneffective",
+      "topic_text": "WeaponIneffective",
+      "emotion": "Neutral 50",
+      "response_text": "Need a bigger caliber.",
+      "index": "404"
+    }
+  ]
+}

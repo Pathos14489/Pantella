@@ -1,0 +1,269 @@
+{
+  "name": "The Lonesome Drifter",
+  "url": "/wiki/The_Lonesome_Drifter",
+  "dialogue_name": "VMSTopsLonesomeDrifter.txt",
+  "dialogue_url": "/wiki/VMSTopsLonesomeDrifter.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "0011F9BE",
+  "ref_id": "0011F9C2",
+  "editor_id": "VMSTopsLonesomeDrifter",
+  "location": "El Dorado Gas & Service",
+  "location_url": "/wiki/El_Dorado_Gas_%26_Service",
+  "descriptions": [
+    "The Lonesome Drifter is a traveling musician skilled with his guitar and temporarily camping on the shores of the El Dorado Dry Lake in the Mojave Wasteland in 2281. He appears in Fallout: New Vegas.",
+    "Born around 2253",
+    "For years after, the Drifter traveled the wasteland, unsure of what he would do if he ever did find his father, whether to ask him questions or outright punch him in the mouth; eventually, even he started to consider it a waste of time and a dumb idea from the start.",
+    "By 2281, the Lonesome Drifter started to tire of the nomadic lifestyle, realizing that his quest will likely end in failure. Camping out on the shores of the El Dorado Dry Lake southeast of New Vegas, he spends his days pondering his options and considering ways to settle down for good.",
+    "The Lonesome Drifter appears in Fallout: New Vegas and is mentioned in its add-on Honest Hearts.",
+    "Joshua Sawyer stated in a forum post that he wishes they had time to hard-code the Mysterious Stranger to turn on the player character if attempting to use V.A.T.S to kill the Lonesome Drifter, further confirming their connection."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Tommy Torini(after completing Talent Pool)",
+  "role": "Musician",
+  "detailed_location": "Slightly east of theEl Dorado Dry LakeComplete Talent Pool:The TopsThe Acestheater",
+  "voice_actor": "Gregory Alan Williams(speaking voice)Joshua Sawyer(singing voice)",
+  "special": {
+    "Strength": 6,
+    "Perception": 7,
+    "Endurance": 5,
+    "Charisma": 3,
+    "Intelligence": 3,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "mod_special_values": {
+    "Strength": 6,
+    "Perception": 8,
+    "Endurance": 5,
+    "Charisma": 4,
+    "Intelligence": 3,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "level": "5",
+  "tag_skills": [
+    {
+      "Explosives:": "48(50)"
+    },
+    {
+      "Guns:": "46(51)"
+    },
+    {
+      "Sneak:": "46"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "50"
+    },
+    {
+      "Damage Res.:": "0%(11%)"
+    }
+  ],
+  "karma": "Neutral",
+  "voice_type": "MaleAdult06",
+  "geck_race": "Asian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Happy 25",
+      "response_text": "Howdy there, partner.",
+      "index": "1"
+    },
+    {
+      "topic": "LonesomeDrifterGuitar",
+      "topic_text": "That's a mighty fine guitar you got there.",
+      "emotion": "Happy 20",
+      "response_text": "Oh, this old thing? Why, thanks, friend. This here{GEE-tar}guitar is just about the only thing my daddy left me.",
+      "index": "3"
+    },
+    {
+      "topic": "LonesomeDrifterJobOffer",
+      "topic_text": "Tommy Torini at the Tops is looking for musical acts, if you're interested.",
+      "emotion": "Surprise 15",
+      "response_text": "Son, where I come from, a man doesn't just walk up to another man and offer him a job without even knowing him. What's your game?",
+      "index": "4"
+    },
+    {
+      "topic": "LonesomeDrifterStory",
+      "topic_text": "What's your story, stranger?",
+      "emotion": "Sad 15",
+      "response_text": "My story's a long one, friend, and I can't say as it's all that interesting.",
+      "index": "8"
+    },
+    {
+      "topic": "VMSTopsTalentPoolVMSTopsLonesomeDrifterTopic000",
+      "topic_text": "No game. I offered to keep an eye out for talented acts, is all.",
+      "emotion": "Fear 15",
+      "response_text": "{Skeptical}Uh-huh. Sorry stranger, just not sure I trust that kind of charity from somebody I don't even know.",
+      "index": "9"
+    },
+    {
+      "topic": "VMSTopsTalentPoolVMSTopsLonesomeDrifterTopic001",
+      "topic_text": "Tommy offered me a recruiting fee.",
+      "emotion": "Disgust 10",
+      "response_text": "Well, at least you're honest, I guess. Sorry, I just don't take charity from strangers.",
+      "index": "10"
+    },
+    {
+      "topic": "VMSTopsTalentPoolVMSTopsLonesomeDrifterTopic002",
+      "topic_text": "Here, take his card. Tell him I sent you.",
+      "emotion": "Happy 10",
+      "response_text": "Much obliged to you, friend.",
+      "index": "11"
+    },
+    {
+      "topic": "VMSTopsTalentPoolVMSTopsLonesomeDrifterTopic003",
+      "topic_text": "I'm giving you a real opportunity here - how about some compensation?",
+      "emotion": "Happy 30",
+      "response_text": "[SUCCEEDED] I suppose it's only right you get a little something for your troubles. Here - my daddy left me this gun. Guess I don't need it no more.",
+      "index": "12"
+    },
+    {
+      "topic": "VMSTopsTalentPoolVMSTopsLonesomeDrifterTopic004",
+      "topic_text": "On second thought, I don't think you're the right fit after all.",
+      "emotion": "Sad 20",
+      "response_text": "No apologies needed, friend - I'm sure there's somebody out there'll appreciate my singing.",
+      "index": "14"
+    },
+    {
+      "topic": "VMSTopsTalentPoolVMSTopsLonesomeDrifterTopic005",
+      "topic_text": "Have you been playing long?",
+      "emotion": "Sad 20",
+      "response_text": "Just about my whole life, ever since my daddy left ma and me and went off to roam the wastes.",
+      "index": "15"
+    },
+    {
+      "topic": "VMSTopsTalentPoolVMSTopsLonesomeDrifterTopic006",
+      "topic_text": "When did your father leave?",
+      "emotion": "Disgust 15",
+      "response_text": "Long time ago, now. I never even knew him. Ma always said he was a mysterious feller, always traveling on in secret.",
+      "index": "16"
+    },
+    {
+      "topic": "VMSTopsTalentPoolVMSTopsLonesomeDrifterTopic007",
+      "topic_text": "Let's talk about something else.",
+      "emotion": "Neutral 50",
+      "response_text": "Looking for a story, huh? All right, what can I tell you?",
+      "index": "17"
+    },
+    {
+      "topic": "VMSTopsTalentPoolVMSTopsLonesomeDrifterTopic008",
+      "topic_text": "Nevertheless, I'm interested.",
+      "emotion": "Sad 30",
+      "response_text": "Well, I was born in a little town out Montana way. Me and Ma didn't have much, ever since my pa up and left.",
+      "index": "18"
+    },
+    {
+      "topic": "VMSTopsTalentPoolVMSTopsLonesomeDrifterTopic009",
+      "topic_text": "Oh, okay then, never mind.",
+      "emotion": "Neutral 50",
+      "response_text": "Anything else you'd like to know?",
+      "index": "19"
+    },
+    {
+      "topic": "VMSTopsTalentPoolVMSTopsLonesomeDrifterTopic010",
+      "topic_text": "Your father abandoned you?",
+      "emotion": "Pained 20",
+      "response_text": "That he did. Never did know why. Ma always said he was a real mysterious feller, even when he was with her. Like he was a stranger sometimes.",
+      "index": "20"
+    },
+    {
+      "topic": "VMSTopsTalentPoolVMSTopsLonesomeDrifterTopic011",
+      "topic_text": "Smart guy. Families just tie you down.",
+      "emotion": "Disgust 30",
+      "response_text": "Maybe that's how you was raised, but where I come from a man does right by his wife and child or he ain't no kinda man at all.",
+      "index": "21"
+    },
+    {
+      "topic": "VMSTopsTalentPoolVMSTopsLonesomeDrifterTopic012",
+      "topic_text": "Wait, Montana? You wouldn't happen to be 17, would you?",
+      "emotion": "Surprise 30",
+      "response_text": "No sir, I'm 28. Why?",
+      "index": "22"
+    },
+    {
+      "topic": "VMSTopsTalentPoolVMSTopsLonesomeDrifterTopic015",
+      "topic_text": "Sounds like you miss him. Is that why you're out here wandering?",
+      "emotion": "Sad 15",
+      "response_text": "Maybe. Maybe I just never felt like I belonged back home.",
+      "index": "23"
+    },
+    {
+      "topic": "VMSTopsTalentPoolVMSTopsLonesomeDrifterTopic016",
+      "topic_text": "I'm sure he had a reason for leaving.",
+      "emotion": "Disgust 15",
+      "response_text": "Maybe he did, maybe he didn't, but that don't change the fact that it wasn't right.",
+      "index": "24"
+    },
+    {
+      "topic": "VMSTopsTalentPoolVMSTopsLonesomeDrifterTopic018",
+      "topic_text": "It must have been hard growing up without a father.",
+      "emotion": "Pained 25",
+      "response_text": "It sure wasn't easy. Ma worked her fingers to the bone to make sure we had enough to survive, and I worked the coal mines from when I was fifteen.",
+      "index": "25"
+    },
+    {
+      "topic": "VMSTopsTalentPoolVMSTopsLonesomeDrifterTopic019",
+      "topic_text": "You were better off without him. You became your own man, outside of his shadow.",
+      "emotion": "Anger 20",
+      "response_text": "I suppose there's that, but a man oughta know his own Pa, and a woman oughtn't have to work herself to an early grave to provide for her family.",
+      "index": "27"
+    },
+    {
+      "topic": "VMSTopsTalentPoolVMSTopsLonesomeDrifterTopic020",
+      "topic_text": "And what will you do when you find him?",
+      "emotion": "Anger 15",
+      "response_text": "Can't say as I really know. Maybe I'll just ask him why. Maybe I'll punch him right in the mouth.",
+      "index": "29"
+    },
+    {
+      "topic": "VMSTopsTalentPoolVMSTopsLonesomeDrifterTopic021",
+      "topic_text": "He sounds like a scumbag. You should make him pay.",
+      "emotion": "Anger 15",
+      "response_text": "Maybe I will. Or maybe I'll just ask him why he left. Hell, the more I talk about it, the more the whole damn thing sounds like a dumb idea.",
+      "index": "31"
+    },
+    {
+      "topic": "VMSTopsTalentPoolVMSTopsLonesomeDrifterTopic022",
+      "topic_text": "Sounds like you should move on. Settle down, maybe.",
+      "emotion": "Sad 15",
+      "response_text": "Maybe I should. Don't suppose you know anyplace a feller with a{GEE-tar}guitar might find a job, huh?",
+      "index": "32"
+    },
+    {
+      "topic": "VMSTopsTalentPoolVMSTopsLonesomeDrifterTopic024",
+      "topic_text": "Can't say that I do, sorry.",
+      "emotion": "Sad 20",
+      "response_text": "Ah well. It was worth a shot.",
+      "index": "33"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYEGoodbye.",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "So long, friend.",
+      "index": "34"
+    }
+  ],
+  "combat": [
+    {
+      "topic": "RadioHello",
+      "topic_text": "RadioHello",
+      "emotion": "Neutral 50",
+      "response_text": "<Singing>",
+      "index": "35"
+    }
+  ]
+}

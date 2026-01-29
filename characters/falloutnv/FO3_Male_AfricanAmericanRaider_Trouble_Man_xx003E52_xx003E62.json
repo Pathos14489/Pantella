@@ -1,0 +1,110 @@
+{
+  "name": "Trouble Man",
+  "url": "/wiki/Trouble_Man",
+  "dialogue_name": "DLC01TroubleMan.txt",
+  "dialogue_url": "/wiki/DLC01TroubleMan.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "xx003E52",
+  "ref_id": "xx003E62",
+  "editor_id": "DLC01TroubleMan",
+  "location": "The Pitt Downtown",
+  "location_url": "/wiki/The_Pitt_Downtown",
+  "descriptions": [
+    "Trouble Man is a member of the Pitt raiders found in the Pitt in 2277.",
+    "Trouble Man is a member of the Pitt raiders who is usually found guarding the catwalks in the Pitt Downtown. Due to the waking nightmares he experiences, he likes to keep to himself, rarely conversing with others.",
+    "Trouble Man tells the Lone Wanderer that they don't want to know how he got his name,",
+    "Trouble Man appears only in the Fallout 3 add-on The Pitt."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Pitt raidersFriday",
+  "role": "Slaver",
+  "detailed_location": "The Pitt Downtown",
+  "voice_actor": "Craig Sechler",
+  "special": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 3,
+    "Intelligence": 3,
+    "Agility": 7,
+    "Luck": 5
+  },
+  "mod_special_values": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 3,
+    "Intelligence": 3,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "level": "1→4→9",
+  "tag_skills": [
+    {
+      "Melee Weap.:": "32→45→66"
+    },
+    {
+      "Small Guns:": "34→47→68"
+    },
+    {
+      "Unarmed:": "28→41→62"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "25→55→85"
+    },
+    {
+      "Critical Chance:": "5%"
+    },
+    {
+      "Unarmed Dam.:": "1.9→2.55→3.6"
+    },
+    {
+      "Poison Resist.:": "15%"
+    },
+    {
+      "Rad. Resist.:": "6%"
+    },
+    {
+      "Carry Weight:": "210"
+    }
+  ],
+  "karma": "Evil",
+  "voice_type": "DLC01RaiderMaleColdVoice",
+  "geck_race": "AfricanAmericanRaider",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "Trouble Man. You don't wanna know how I got the name.",
+      "index": "1"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "I have to go now.",
+      "emotion": "Neutral 50",
+      "response_text": "Trouble Man.",
+      "index": "3"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Neutral 50",
+      "response_text": "{Silence.}",
+      "index": "4"
+    }
+  ],
+  "combat": []
+}

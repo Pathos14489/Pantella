@@ -1,0 +1,117 @@
+{
+  "name": "Knight Captain Colvin",
+  "url": "/wiki/Colvin",
+  "dialogue_name": "MQ01Colvin.txt",
+  "dialogue_url": "/wiki/MQ01Colvin.txt",
+  "spawned_dead": false,
+  "spawned": true,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "0001D432",
+  "ref_id": "0001D431",
+  "editor_id": "MQ01Colvin",
+  "location": "GNR building plaza,Citadel",
+  "location_url": "/wiki/GNR_building_plaza_(Fallout_3)",
+  "descriptions": [
+    "Knight Captain Colvin is a Brotherhood of Steel marksman, serving in Sentinel Sarah Lyons' elite Lyons' Pride in Fallout 3.",
+    "Knight Captain Colvin is a man of deep faith",
+    "As a result of his faith, he remains calm even in the most extreme of circumstances, believing that all is as god ordains it. As one the most experienced members in the unit,",
+    "As one of the Pride's two snipers,",
+    "Friendly rivalry with Dusk aside, Colvin is warm and friendly to everyone,",
+    "Like most of the Lyons' Pride, Colvin is inspired by Saving Private Ryan. His personality is a reference to Private Daniel Jackson, played by Barry Pepper. Jackson is a devout Christian and an extremely talented marksman, believing that God gave him a special gift and turned him into a finely tuned instrument of warfare. He also recites multiple psalms from memory while fighting Nazi jackboots in the movie. Colvin's fellow Lyons' Pride member and rival, Knight Captain Dusk, even directly paraphrases Jackson when saying \"Put any mutie bastard within one mile of me and my rifle and, well... pack it up troops. Fight's over.\"",
+    "Knight Captain Colvin appears in Fallout 3 and in Fallout Shelter Online."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Lyons' Brotherhood of SteelLyons' Pride",
+  "role": "Sniper",
+  "detailed_location": "Chevy ChaseThe Citadel",
+  "voice_actor": "Jeff Baker",
+  "mod_special_values": {
+    "Strength": 8,
+    "Perception": 5,
+    "Endurance": 6,
+    "Charisma": 4,
+    "Intelligence": 3,
+    "Agility": 4,
+    "Luck": 4
+  },
+  "level": "6",
+  "tag_skills": [
+    {
+      "Big Guns:": "52"
+    },
+    {
+      "Melee Weap.:": "52(56)"
+    },
+    {
+      "Small Guns:": "52(48)"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "270"
+    },
+    {
+      "Critical Chance:": "4%"
+    },
+    {
+      "Melee Dam.:": "3(4)"
+    },
+    {
+      "Unarmed Dam.:": "1.3"
+    },
+    {
+      "Fatigue:": "50"
+    },
+    {
+      "Poison Resist.:": "25%"
+    },
+    {
+      "Rad. Resist.:": "10%"
+    },
+    {
+      "Action Points:": "77(71)"
+    },
+    {
+      "Carry Weight:": "210(230)"
+    },
+    {
+      "Damage Res.:": "0%(40%)"
+    }
+  ],
+  "karma": "Good",
+  "voice_type": "MaleAdult01DefaultDC",
+  "geck_race": "CaucasianOld",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Happy 50",
+      "response_text": "Welcome, friend. My brothers may be gruff but they will lay down their lives for you.{welcoming}",
+      "index": "1"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "MQ01LyonsPrideColvin",
+      "topic_text": "MQ01LyonsPrideColvin",
+      "emotion": "Neutral 100",
+      "response_text": "All clear, Sentinel. Five mutants released from their torment. The rest are keeping their heads down.{replying to Sarah Lyons}",
+      "index": "2"
+    }
+  ],
+  "combat": [
+    {
+      "topic": "Attack",
+      "topic_text": "Attack",
+      "emotion": "Neutral 50",
+      "response_text": "That's it...",
+      "index": "9"
+    }
+  ]
+}

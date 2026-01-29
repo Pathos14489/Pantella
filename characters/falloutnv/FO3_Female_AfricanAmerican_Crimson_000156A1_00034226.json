@@ -1,0 +1,202 @@
+{
+  "name": "Crimson",
+  "url": "/wiki/Crimson",
+  "dialogue_name": "Crimson.txt",
+  "dialogue_url": "/wiki/Crimson.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000156A1",
+  "ref_id": "00034226",
+  "editor_id": "Crimson",
+  "location": "Eulogy's pad",
+  "location_url": "/wiki/Eulogy%27s_pad",
+  "descriptions": [
+    "Crimson is one of Eulogy Jones's two slaves in Paradise Falls in the year 2277.",
+    "Crimson is a prostitute, one of two caught and pressed into slavery by Eulogy Jones a few months before meeting the Lone Wanderer. She along with Clover are abused by their master, and attempt to stay out of his way. They will not talk to strangers. When Eulogy is not present, they will speak with one another, usually to bicker. At times, Crimson will speak back to Eulogy when he insults her.",
+    "Crimson can be found following Eulogy Jones around in Paradise Falls. The best chance to meet her is in Eulogy's pad, located near the slave pens."
+  ],
+  "race": "Human",
+  "gender": "Female",
+  "affiliation": "Eulogy JonesSlavers",
+  "role": "Sex slave",
+  "detailed_location": "Eulogy's pad,Paradise Falls",
+  "voice_actor": "Karen Carbone",
+  "special": {
+    "Strength": 4,
+    "Perception": 7,
+    "Endurance": 3,
+    "Charisma": 4,
+    "Intelligence": 4,
+    "Agility": 5,
+    "Luck": 2
+  },
+  "mod_special_values": {
+    "Strength": 4,
+    "Perception": 7,
+    "Endurance": 3,
+    "Charisma": 4,
+    "Intelligence": 4,
+    "Agility": 6,
+    "Luck": 2
+  },
+  "level": "1",
+  "tag_skills": [
+    {
+      "Sneak:": "28(30)"
+    },
+    {
+      "Speech:": "26"
+    },
+    {
+      "Unarmed:": "24"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Evil",
+  "voice_type": "FemaleAdult02DC",
+  "geck_race": "AfricanAmerican",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "You need something, sugar?",
+      "index": "1"
+    },
+    {
+      "topic": "MQ07CrimsonDistractForgetIt",
+      "topic_text": "Forget it.",
+      "emotion": "Neutral 50",
+      "response_text": "Already forgotten. Now take a hike.",
+      "index": "8"
+    },
+    {
+      "topic": "MQ07CrimsonDistractMoney",
+      "topic_text": "There's 100 caps in it for you.",
+      "emotion": "Neutral 50",
+      "response_text": "Oh yeah?",
+      "index": "9"
+    },
+    {
+      "topic": "MQ07CrimsonDistractSPEECH",
+      "topic_text": "You don't think he's a good-looking guy? I bet he could show you a good time.",
+      "emotion": "Neutral 50",
+      "response_text": "Maybe he could. Maybe...",
+      "index": "12"
+    },
+    {
+      "topic": "MQ07CrimsonTLDistractForty",
+      "topic_text": "I think Forty could use some company.",
+      "emotion": "Neutral 50",
+      "response_text": "Uh-huh. And what makes you think I give two shits about what Forty could use?",
+      "index": "15"
+    },
+    {
+      "topic": "SpeechChallengeFailure",
+      "topic_text": "SpeechChallengeFailure",
+      "emotion": "Neutral 50",
+      "response_text": "Don't matter how good a time he could show me. Eulogy'd have my head. I like my head where it is.",
+      "index": "16"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "I have to go now.",
+      "emotion": "Neutral 50",
+      "response_text": "You'd better go before he sees you.",
+      "index": "17"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Neutral 50",
+      "response_text": "Don't mind Eulogy. Daddy don't pay no attention to us.",
+      "index": "18"
+    },
+    {
+      "topic": "MQ07CrimsonFortyConversation",
+      "topic_text": "MQ07CrimsonFortyConversation",
+      "emotion": "Neutral 50",
+      "response_text": "Come on, Forty. Let's go take a break.",
+      "index": "27"
+    },
+    {
+      "topic": "PFTalkCloverCrimson2",
+      "topic_text": "PFTalkCloverCrimson2",
+      "emotion": "Neutral 50",
+      "response_text": "Why do you have to be like that? I'm just trying to talk to you and you have to come at me with that shit?",
+      "index": "31"
+    },
+    {
+      "topic": "PFTalkCloverCrimson4",
+      "topic_text": "PFTalkCloverCrimson4",
+      "emotion": "Neutral 50",
+      "response_text": "Eulogy cares about one thing: Eulogy. That's it. And the sooner your dumb ass realizes that, the better off we'll all be.",
+      "index": "33"
+    },
+    {
+      "topic": "PFTalkCrimsonClover1",
+      "topic_text": "PFTalkCrimsonClover1",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah, he don't look like much, though. Skin's all pasty, like he grew up in a Vault or something.",
+      "index": "37"
+    },
+    {
+      "topic": "PFTalkCrimsonClover3",
+      "topic_text": "PFTalkCrimsonClover3",
+      "emotion": "Neutral 50",
+      "response_text": "Why do you always have to try to prove something to me? Do you think I care who Eulogy likes better? Seriously?",
+      "index": "41"
+    },
+    {
+      "topic": "PFTalkCrimsonEulogyJones1",
+      "topic_text": "PFTalkCrimsonEulogyJones1",
+      "emotion": "Neutral 50",
+      "response_text": "I'm right here, Eulogy. There's no need to yell.",
+      "index": "43"
+    },
+    {
+      "topic": "PFTalkCrimsonEulogyJones3",
+      "topic_text": "PFTalkCrimsonEulogyJones3",
+      "emotion": "Neutral 50",
+      "response_text": "<sigh> I'm sorry.",
+      "index": "45"
+    },
+    {
+      "topic": "PFTalkCrimsonEulogyJones5",
+      "topic_text": "PFTalkCrimsonEulogyJones4",
+      "emotion": "Neutral 50",
+      "response_text": "I'm sorry... Mr. Eulogy.",
+      "index": "47"
+    },
+    {
+      "topic": "PFTalkCutterEulogyJones3",
+      "topic_text": "PFTalkCutterEulogyJones3",
+      "emotion": "Neutral 50",
+      "response_text": "Here's your cut. It's small. Maybe convince your boys to get hurt more and I'll be bringing more in.",
+      "index": "49"
+    },
+    {
+      "topic": "PFTalkEulogyJonesCrimson2",
+      "topic_text": "PFTalkEulogyJonesCrimson2",
+      "emotion": "Neutral 50",
+      "response_text": "It's just that last week-",
+      "index": "50"
+    },
+    {
+      "topic": "PFTalkEulogyJonesCrimson4",
+      "topic_text": "PFTalkEulogyJonesCrimson4",
+      "emotion": "Neutral 50",
+      "response_text": "Yes, sir. Sorry, sir.",
+      "index": "52"
+    }
+  ],
+  "combat": []
+}

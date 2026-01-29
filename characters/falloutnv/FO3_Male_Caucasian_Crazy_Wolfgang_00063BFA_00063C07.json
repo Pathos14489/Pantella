@@ -1,0 +1,103 @@
+{
+  "name": "Crazy Wolfgang",
+  "url": "/wiki/Crazy_Wolfgang",
+  "dialogue_name": "CrazyWolfgang.txt",
+  "dialogue_url": "/wiki/CrazyWolfgang.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": true,
+  "can_repair": true,
+  "can_be_companion": false,
+  "base_id": "00063BFA",
+  "ref_id": "00063C07",
+  "editor_id": "CrazyWolfgang",
+  "location": "AlongCaravan trade route",
+  "location_url": "/wiki/Caravan_trade_route",
+  "descriptions": [
+    "Crazy Wolfgang is an eccentric caravan merchant, specializing in the sale of junk, in the Capital Wasteland in Fallout 3.",
+    "Wolfgang is an eccentric salesman, playing up a \"crazy\" persona",
+    "According to Uncle Roe, Wolfgang is just \"like that,\" referring to how his sales methods and madman persona draw in customers. In particular, Wolfgang considers his use of the words junk, garbage,",
+    "Like all caravan merchants in the Capital Wasteland, Crazy Wolfgang's route takes him to Canterbury Commons, the Temple of the Union, Agatha's house, Paradise Falls, Arefu, Evergreen Mills, Megaton and Rivet City."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Ernest Roe",
+  "role": "Travelingcaravan merchant",
+  "detailed_location": "Loops throughCanterbury Commons,Temple of the Union,Agatha's house,Paradise Falls,Arefu,Evergreen Mills,Megaton, andRivet City",
+  "voice_actor": "Craig Sechler",
+  "special": {
+    "Strength": 4,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 7,
+    "Intelligence": 5,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "level": "5→15 (player level x1.5)",
+  "tag_skills": [
+    {
+      "Barter:": "54(59)"
+    },
+    {
+      "Small Guns:": "52"
+    },
+    {
+      "Speech:": "54"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Good",
+  "voice_type": "MaleAdult04DC",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "CCAboutCaravans",
+      "topic_text": "Tell me about your trade caravan.",
+      "emotion": "Happy 50",
+      "response_text": "I scour the wasteland for the very best pieces of trash, the height of detritus, and the veritable pick of the litter. It's all valuable to someone.{Using flowery words to sell bullshit}",
+      "index": "1"
+    },
+    {
+      "topic": "CCTrade",
+      "topic_text": "I'm here to buy.",
+      "emotion": "Happy 50",
+      "response_text": "Nothing but the highest quality leftovers, junk, and crap!",
+      "index": "3"
+    },
+    {
+      "topic": "CCTradeRepair",
+      "topic_text": "Can you repair something for me?",
+      "emotion": "Happy 50",
+      "response_text": "Let me see if I can't hammer this garbage into shape.",
+      "index": "5"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Happy 50",
+      "response_text": "Welcome, sir or madam, to Crazy Wolfgang's Traveling Junk Store! The Depot of Detritus, the Shop of Slop, and the Caravan of Crap!{Talking it up like a carnival huckster}",
+      "index": "7"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "I have to go now.",
+      "emotion": "Happy 50",
+      "response_text": "Good luck out there. And maybe next time, you'll find something interesting for me, huh?",
+      "index": "13"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Happy 50",
+      "response_text": "Trading caps for crap, step right up!",
+      "index": "15"
+    }
+  ],
+  "combat": []
+}

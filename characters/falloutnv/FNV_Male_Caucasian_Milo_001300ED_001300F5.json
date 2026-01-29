@@ -1,0 +1,302 @@
+{
+  "name": "Milo",
+  "url": "/wiki/Milo_(Fallout:_New_Vegas)",
+  "dialogue_name": "NVNelsonRangerMilo.txt",
+  "dialogue_url": "/wiki/NVNelsonRangerMilo.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "001300ED",
+  "ref_id": "001300F5",
+  "editor_id": "NVNelsonRangerMilo",
+  "location": "Up the road, to the West ofNelson",
+  "location_url": "/wiki/Nelson",
+  "descriptions": [
+    "Ranger Milo is an NCR Ranger living in the Mojave Wasteland in 2281. He is found patrolling at a small NCR checkpoint tasked with locking down the road leading to Nelson and preventing legionaries from leaving or hapless travelers from entering.",
+    "Milo is an experienced Ranger normally assigned to Camp Forlorn Hope.",
+    "Milo says that he has named his cowboy repeater \"Carmine,\" but in his inventory, it is just a standard repeater.",
+    "Milo was written by project director Joshua Sawyer."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "New California Republic Rangers",
+  "role": "NCR Ranger",
+  "detailed_location": "NearCamp Nelson",
+  "voice_actor": "Emerson Brooks",
+  "special": {
+    "Strength": 5,
+    "Perception": 6,
+    "Endurance": 6,
+    "Charisma": 4,
+    "Intelligence": 5,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "level": "10",
+  "tag_skills": [
+    {
+      "Guns:": "68"
+    },
+    {
+      "Sneak:": "68"
+    },
+    {
+      "Unarmed:": "68"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "170"
+    }
+  ],
+  "karma": "Neutral",
+  "voice_type": "MaleAdult01DefaultB",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Happy 30",
+      "response_text": "Well, well. If it isn't the courier who wiped out the Legion over at Nelson. Good to see you around{nickname for camp}the Hope.{welcoming}",
+      "index": "1"
+    },
+    {
+      "topic": "VNelsonNVNelsonRangerMiloTopic000",
+      "topic_text": "The name's &PCName;.",
+      "emotion": "Happy 20",
+      "response_text": "Oh, heck, I've heard of you. Supposed to be a regular hero or something, ain't that right?",
+      "index": "9"
+    },
+    {
+      "topic": "VNelsonNVNelsonRangerMiloTopic001",
+      "topic_text": "Don't you have the authority to command the troopers to go into the camp?",
+      "emotion": "Disgust 5",
+      "response_text": "I'm a ranger. They're troopers. Different branches. I don't have authority over them even though they're as green as a Super Mutant's backside.",
+      "index": "15"
+    },
+    {
+      "topic": "VNelsonNVNelsonRangerMiloTopic003",
+      "topic_text": "Understood.",
+      "emotion": "Neutral 50",
+      "response_text": "Much obliged.",
+      "index": "17"
+    },
+    {
+      "topic": "VNelsonNVNelsonRangerMiloTopic004",
+      "topic_text": "You've got five seconds to get out of my sight before I shove that rifle where the sun don't shine.",
+      "emotion": "Fear 40",
+      "response_text": "{suddenly scared}Son of a bitch!",
+      "index": "18"
+    },
+    {
+      "topic": "VNelsonNVNelsonRangerMiloTopic005",
+      "topic_text": "I think it's time to knock you down a peg or two, ranger.",
+      "emotion": "Neutral 50",
+      "response_text": "We'll see about that.",
+      "index": "19"
+    },
+    {
+      "topic": "VNelsonNVNelsonRangerMiloTopic006",
+      "topic_text": "What needs to be done?",
+      "emotion": "Happy 5",
+      "response_text": "{sarcastic}If you had a few dozen doses of Psycho on you, maybe we could pep these weepy troopers into charging down into Nelson and taking back the camp.",
+      "index": "20"
+    },
+    {
+      "topic": "VNelsonNVNelsonRangerMiloTopic007",
+      "topic_text": "Why take out the hostages?",
+      "emotion": "Disgust 5",
+      "response_text": "The troopers won't go down into the camp with their comrades at risk. Dirty game the Legion likes to roll out whenever they get a chance.",
+      "index": "22"
+    },
+    {
+      "topic": "VNelsonNVNelsonRangerMiloTopic009",
+      "topic_text": "[Psycho] Funny you should mention Psycho. I actually have a few dozen doses on me...",
+      "emotion": "Surprise 15",
+      "response_text": "All right, I have to admit I wasn't expecting you to say that. I was just joking. But if it makes you feel any better, I am impressed.",
+      "index": "24"
+    },
+    {
+      "topic": "VNelsonNVNelsonRangerMiloTopic010",
+      "topic_text": "Sign me up.",
+      "emotion": "Neutral 50",
+      "response_text": "Good. We clear out the hostages and they lose their advantage. They're down in a clearing, crucified on some telephone poles.",
+      "index": "26"
+    },
+    {
+      "topic": "VNelsonNVNelsonRangerMiloTopic013",
+      "topic_text": "Why don't you try to rescue them?",
+      "emotion": "Anger 20",
+      "response_text": "Back at{sarcastic}\"Ranger School\", they taught us not to run headlong into a battle when you're outnumbered ten to one.",
+      "index": "29"
+    },
+    {
+      "topic": "VNelsonNVNelsonRangerMiloTopic014",
+      "topic_text": "I won't do anything dishonorable, if that's what you mean.",
+      "emotion": "Happy 15",
+      "response_text": "{laughing a bit}\"Dishonorable\", that's a good one. Okay then, you can just turn around and head back toward Novac or wherever it is you came from.",
+      "index": "31"
+    },
+    {
+      "topic": "VNelsonNVNelsonRangerMiloTopic015",
+      "topic_text": "Are you interested in cracking jokes or getting something done?",
+      "emotion": "Surprise 10",
+      "response_text": "[SUCCEEDED]{surprised at the player's spunk}Well, I'll be damned. Looks like you've got some dirt in you after all.",
+      "index": "34"
+    },
+    {
+      "topic": "VNelsonNVNelsonRangerMiloTopic016",
+      "topic_text": "I can... do bad things.",
+      "emotion": "Disgust 10",
+      "response_text": "[FAILED] Right. You have trouble even saying the word \"bad\". Go on, get out of here if you know what's good for you.",
+      "index": "35"
+    },
+    {
+      "topic": "VNelsonNVNelsonRangerMiloTopic017",
+      "topic_text": "Like I care what anyone says about me. Do you want help dealing with the Legion or not?",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] Well, I suppose I don't care much, either. At least not enough to turn down an offer for help.",
+      "index": "37"
+    },
+    {
+      "topic": "VNelsonNVNelsonRangerMiloTopic018",
+      "topic_text": "You're an idiot if you believe everything you hear. You want my help or what?",
+      "emotion": "Surprise 5",
+      "response_text": "Well, now that you've sweet-talked me...",
+      "index": "38"
+    },
+    {
+      "topic": "VNelsonNVNelsonRangerMiloTopic020",
+      "topic_text": "You may not know me, but I'm no friend of the Legion, and I'll lend a hand to get rid of them.",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] Fair enough. It's not like any of the troopers around here are jumping up to volunteer.",
+      "index": "40"
+    },
+    {
+      "topic": "VNelsonNVNelsonRangerMiloTopic021",
+      "topic_text": "Come on. Let me help out. Trust me.",
+      "emotion": "Neutral 50",
+      "response_text": "[FAILED] That's one of the least trustworthy lines I've ever heard. Sorry. No can do.",
+      "index": "41"
+    },
+    {
+      "topic": "VNelsonNVNelsonRangerMiloTopic023",
+      "topic_text": "I don't think I can help you. Sorry.",
+      "emotion": "Neutral 50",
+      "response_text": "That's a shame. Well, let me know if you change your mind or those Legion sons of bitches will be holed up in Nelson for weeks.",
+      "index": "43"
+    },
+    {
+      "topic": "VNelsonNVNelsonRangerMiloTopic024",
+      "topic_text": "What happened here?",
+      "emotion": "Neutral 50",
+      "response_text": "Troopers tried moving down from Forlorn Hope because we got this big gap between there and Searchlight. Turns out we were spread too thin.",
+      "index": "44"
+    },
+    {
+      "topic": "VNelsonNVNelsonRangerMiloTopic025",
+      "topic_text": "Are there any towns nearby?",
+      "emotion": "Neutral 50",
+      "response_text": "There's Novac, due west. Just look for the big lizard. They got some decent supplies and a place to stay.",
+      "index": "46"
+    },
+    {
+      "topic": "VNelsonNVNelsonRangerMiloTopic026",
+      "topic_text": "Are you in charge here?",
+      "emotion": "Neutral 50",
+      "response_text": "Nope. I'm just the only ranger around. The rest of the kids here are troopers, inexperienced, out-numbered and under-equipped.",
+      "index": "48"
+    },
+    {
+      "topic": "VNelsonNVNelsonRangerMiloTopic028",
+      "topic_text": "You sure you don't want my help with the Legion?",
+      "emotion": "Neutral 50",
+      "response_text": "I sent you packing last time for a reason. Why should I let you in now?",
+      "index": "49"
+    },
+    {
+      "topic": "VNelsonNVNelsonRangerMiloTopic029",
+      "topic_text": "I changed my mind about helping you with your Legion problem. I'm in.",
+      "emotion": "Neutral 50",
+      "response_text": "Good. We clear out the hostages and they lose their advantage. They're down in a clearing, crucified on some telephone poles.",
+      "index": "50"
+    },
+    {
+      "topic": "VNelsonNVNelsonRangerMiloTopic030",
+      "topic_text": "I'd really like to help. And what's the worst that could happen, Nelson stays captured?",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] Good point. Anyway, it's your hide. Guess I should take all the help I can get.",
+      "index": "53"
+    },
+    {
+      "topic": "VNelsonNVNelsonRangerMiloTopic031",
+      "topic_text": "Because no one else is going to help you.",
+      "emotion": "Neutral 50",
+      "response_text": "[FAILED] Nice speech. Take a hike.",
+      "index": "54"
+    },
+    {
+      "topic": "VNelsonNelsonRangerMiloTopic003",
+      "topic_text": "Anything I can do to help?",
+      "emotion": "Neutral 50",
+      "response_text": "Maybe. I'd like to know who I'm dealing with, first.",
+      "index": "55"
+    },
+    {
+      "topic": "VNelsonNelsonRangerMiloTopic004",
+      "topic_text": "Do you have time for a few questions?",
+      "emotion": "Neutral 50",
+      "response_text": "What's on your mind?",
+      "index": "56"
+    },
+    {
+      "topic": "VNelsonNelsonRangerMiloTopic005",
+      "topic_text": "What's the trouble with the Legion?",
+      "emotion": "Neutral 50",
+      "response_text": "Hell, what ain't the trouble with the Legion? This time, they jumped the camp in Nelson while the troopers were setting up",
+      "index": "57"
+    },
+    {
+      "topic": "VNelsonNelsonRangerMiloTopic024",
+      "topic_text": "I put the captives out of their misery.",
+      "emotion": "Neutral 50",
+      "response_text": "Dirty job, but I'm glad you did it. I'm not authorized to reward contract pay, but here's a little something for you.",
+      "index": "63"
+    },
+    {
+      "topic": "VNelsonNelsonRangerMiloTopic025",
+      "topic_text": "Looks like I was able to get a few of the hostages out alive.",
+      "emotion": "Neutral 50",
+      "response_text": "I have to admit, I didn't think you could do it. Guess that makes me the sap and you the hero.",
+      "index": "65"
+    },
+    {
+      "topic": "VNelsonNelsonRangerMiloTopic026",
+      "topic_text": "Nothing new to report on my end.",
+      "emotion": "Neutral 50",
+      "response_text": "Then head back down into that camp and deal with the hostages.",
+      "index": "67"
+    },
+    {
+      "topic": "VNelsonNelsonRangerMiloTopic030",
+      "topic_text": "Never mind. See you around.",
+      "emotion": "Neutral 50",
+      "response_text": "Bye.",
+      "index": "68"
+    },
+    {
+      "topic": "VNelsonNelsonRangerMiloTopic031",
+      "topic_text": "I'll be going then.",
+      "emotion": "Neutral 50",
+      "response_text": "Hey, hold on. Just so you know, if you go down into that camp, one of two things is gonna happen.",
+      "index": "69"
+    }
+  ],
+  "conversation": [],
+  "combat": []
+}

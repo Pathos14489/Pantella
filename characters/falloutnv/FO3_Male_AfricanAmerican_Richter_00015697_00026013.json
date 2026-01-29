@@ -1,0 +1,133 @@
+{
+  "name": "Richter",
+  "url": "/wiki/Richter",
+  "dialogue_name": "Richter.txt",
+  "dialogue_url": "/wiki/Richter.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "00015697",
+  "ref_id": "00026013",
+  "editor_id": "Richter",
+  "location": "Paradise Fallsentrance",
+  "location_url": "/wiki/Paradise_Falls",
+  "descriptions": [
+    "Richter, named as a slaver in-game, is a slaver at Paradise Falls in 2277.",
+    "Richter guards the entrance to Paradise Falls. He wanders around the general area of the entrance and can occasionally have conversations with Grouse, who is sitting nearby.",
+    "The Replicated Man"
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Slavers",
+  "role": "GuardSlaver",
+  "detailed_location": "Paradise Fallsentrance",
+  "voice_actor": "Jeff Baker",
+  "level": "3→10",
+  "tag_skills": [
+    {
+      "Barter:": "41→74"
+    },
+    {
+      "Melee Weap.:": "41→74"
+    },
+    {
+      "Small Guns:": "41→74"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "75→110"
+    },
+    {
+      "Critical Chance:": "5%"
+    },
+    {
+      "Unarmed Dam.:": "1.15"
+    },
+    {
+      "Poison Resist.:": "15%"
+    },
+    {
+      "Rad. Resist.:": "6%"
+    },
+    {
+      "Carry Weight:": "210 lbs"
+    }
+  ],
+  "karma": "Evil",
+  "geck_race": "AfricanAmerican",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "What? I guard the gate. That's all. What the fuck do you want from me?",
+      "index": "1"
+    },
+    {
+      "topic": "MS08SlaverClue4Stat",
+      "topic_text": "Tell me where this android disappeared to, or I'll make you disappear. Got it?",
+      "emotion": "Neutral 50",
+      "response_text": "Trail led to Rivet City. Sister's our inside man. I think he's long given up looking for that android, and is just living it up on that boat.",
+      "index": "2"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "I have to go now.",
+      "emotion": "Neutral 50",
+      "response_text": "Told you: there's nothing exciting down here.",
+      "index": "3"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Anger 50",
+      "response_text": "Friendly warning... we tend to shoot first and just never ask questions.",
+      "index": "4"
+    },
+    {
+      "topic": "PFTalkGrouseRicher2",
+      "topic_text": "PFTalkGrouseRicher2",
+      "emotion": "Neutral 50",
+      "response_text": "Man, as dull as it is down here, I really wonder if I'm ever going to get to shoot anyone again.",
+      "index": "13"
+    },
+    {
+      "topic": "PFTalkGrouseRicher4",
+      "topic_text": "PFTalkGrouseRicher1",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah, I did. And that's too long to go between shootings for me.",
+      "index": "15"
+    },
+    {
+      "topic": "PFTalkRichterGrouse1",
+      "topic_text": "PFTalkRichterGrouse1",
+      "emotion": "Neutral 50",
+      "response_text": "You always say that. Are you ever not bored?",
+      "index": "18"
+    },
+    {
+      "topic": "PFTalkRichterGrouse3",
+      "topic_text": "PFTalkRichterGrouse3",
+      "emotion": "Neutral 50",
+      "response_text": "I'm just saying, sometimes you've got to appreciate the small things.",
+      "index": "20"
+    }
+  ],
+  "combat": [
+    {
+      "topic": "GuardTrespass",
+      "topic_text": "GuardTrespass",
+      "emotion": "Anger 50",
+      "response_text": "Where do you think you're going, asshole?",
+      "index": "22"
+    }
+  ]
+}

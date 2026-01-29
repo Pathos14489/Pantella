@@ -1,0 +1,146 @@
+{
+  "name": "Quartermaster Bardon",
+  "url": "/wiki/Bardon",
+  "dialogue_name": "VHDQuartermasterBardon.txt",
+  "dialogue_url": "/wiki/VHDQuartermasterBardon.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": true,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "001300A8",
+  "ref_id": "00134D05",
+  "editor_id": "VHDQuartermasterBardon",
+  "location": "Hoover Dam offices",
+  "location_url": "/wiki/Hoover_Dam_offices",
+  "descriptions": [
+    "Quartermaster Bardon is a commissioned officer of the New California Republic's Army, stationed in the office complex at Hoover Dam in the Mojave Wasteland in 2281. He appears in Fallout: New Vegas.",
+    "A dedicated lifelong member of the military, Bardon is a second-generation soldier at the least, as he mentions that his father and brothers all served/are serving in the Army's ranks.",
+    "In his position as quartermaster for the Hoover Dam garrison under Colonel Cassandra Moore's leadership,",
+    "Bardon only becomes available as a merchant if one of the following conditions are met:",
+    "Otherwise he will refuse any attempts to trade with him."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "New California RepublicNCR Army",
+  "role": "QuartermasterMerchant",
+  "detailed_location": "Hoover DamOffice complex- lower level",
+  "voice_actor": "Jesse Burch",
+  "special": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 5,
+    "Intelligence": 5,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "level": "5",
+  "tag_skills": [
+    {
+      "Explosives:": "46"
+    },
+    {
+      "Guns:": "46"
+    },
+    {
+      "Melee Weap.:": "46"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Neutral",
+  "voice_type": "MaleAdult03",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Happy 50",
+      "response_text": "You really saved our asses out there against the Legion. Thanks.",
+      "index": "1"
+    },
+    {
+      "topic": "VHDAssassinationDialogVHDQuartermasterBardonTopic000",
+      "topic_text": "I'd like to purchase some supplies.",
+      "emotion": "Happy 5",
+      "response_text": "Sure thing.",
+      "index": "13"
+    },
+    {
+      "topic": "VHDAssassinationDialogVHDQuartermasterBardonTopic001",
+      "topic_text": "Tell me about yourself.",
+      "emotion": "Neutral 50",
+      "response_text": "I guess I can spare a minute or two for you. Things are a little slow at the moment anyway.",
+      "index": "15"
+    },
+    {
+      "topic": "VHDAssassinationDialogVHDQuartermasterBardonTopic002",
+      "topic_text": "I have some questions about the NCR.",
+      "emotion": "Neutral 50",
+      "response_text": "I guess I can trust you. What would you like to know?",
+      "index": "20"
+    },
+    {
+      "topic": "VHDAssassinationDialogVHDQuartermasterBardonTopic003<Reputation Check>",
+      "topic_text": "Not even to a friend of the NCR?",
+      "emotion": "Sad 5",
+      "response_text": "Well, that is great and all, but it's really against regulations.",
+      "index": "24"
+    },
+    {
+      "topic": "VHDAssassinationDialogVHDQuartermasterBardonTopic004<Speech Check>",
+      "topic_text": "I completely understand, but I am working for the good of the NCR too.",
+      "emotion": "Happy 15",
+      "response_text": "I guess I can make an exception, just for you.",
+      "index": "26"
+    },
+    {
+      "topic": "VHDAssassinationDialogVHDQuartermasterBardonTopic005",
+      "topic_text": "Let's go back to my other questions.",
+      "emotion": "Neutral 50",
+      "response_text": "Make it quick.",
+      "index": "28"
+    },
+    {
+      "topic": "VHDAssassinationDialogVHDQuartermasterBardonTopic006",
+      "topic_text": "How do you feel about the NCR being out here?",
+      "emotion": "Happy 15",
+      "response_text": "The NCR is out here to make the world a better place. For those out here and for all those back home. I'm glad I can be a part of that.",
+      "index": "29"
+    },
+    {
+      "topic": "VHDAssassinationDialogVHDQuartermasterBardonTopic007",
+      "topic_text": "What are your thoughts about the Legion?",
+      "emotion": "Anger 15",
+      "response_text": "They're a bunch of evil savages if you ask me. We're out here trying to save these good people from being enslaved by those bastards.",
+      "index": "30"
+    },
+    {
+      "topic": "VHDAssassinationDialogVHDQuartermasterBardonTopic008",
+      "topic_text": "What do you know about the dam?",
+      "emotion": "Neutral 50",
+      "response_text": "Well, the dam here is the key to helping the NCR make the world a better place.",
+      "index": "32"
+    },
+    {
+      "topic": "VHDAssassinationDialogVHDQuartermasterBardonTopic009",
+      "topic_text": "Nevermind.",
+      "emotion": "Neutral 50",
+      "response_text": "Sorry about that, friend.",
+      "index": "36"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Bye.",
+      "index": "37"
+    }
+  ],
+  "combat": []
+}

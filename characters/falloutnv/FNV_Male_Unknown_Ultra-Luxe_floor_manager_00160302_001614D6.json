@@ -1,0 +1,78 @@
+{
+  "name": "Ultra-Luxe floor manager",
+  "url": "/wiki/Ultra-Luxe_floor_manager",
+  "dialogue_name": "VMS18WhiteGloveFloorManager.txt",
+  "dialogue_url": "/wiki/VMS18WhiteGloveFloorManager.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "00160302",
+  "ref_id": "001614D6",
+  "editor_id": "VMS18WhiteGloveFloorManager",
+  "location": "Ultra-Luxecasino floor",
+  "location_url": "/wiki/Ultra-Luxe",
+  "descriptions": [
+    "The Ultra-Luxe floor manager, simply named White Glove in game, is the floor manager for the Ultra-Luxe casino in 2281.",
+    "The Ultra-Luxe floor manager will give the Courier gifts from the casino as a reward for winning a certain amount of chips. After one wins enough chips, the floor manager will approach them and tell them that they're still welcome in the hotel but won't be allowed to gamble anymore.",
+    "Big Winner, Ultra-Luxe"
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "White Glove Society",
+  "role": "Floor manager",
+  "detailed_location": "Ultra-Luxe",
+  "voice_actor": "Shane Johnson",
+  "special": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 6,
+    "Charisma": 3,
+    "Intelligence": 4,
+    "Agility": 6,
+    "Luck": 4
+  },
+  "level": "4",
+  "tag_skills": [
+    {
+      "Guns:": "43"
+    },
+    {
+      "Melee Weap.:": "41"
+    },
+    {
+      "Unarmed:": "43"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Neutral",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "{Small Fry}I must say, fortune seems to be with you of late. Please, enjoy this, compliments of the White Glove Society.",
+      "index": "1"
+    },
+    {
+      "topic": "VCasinoCompsUltraLuxeVMS18WhiteGloveFloorManagerTopic000",
+      "topic_text": "What? Why?",
+      "emotion": "Neutral 50",
+      "response_text": "For a while, you were the toast of the Ultra-Luxe, but you're simply not en vogue any longer. Your act has gotten stale.",
+      "index": "5"
+    },
+    {
+      "topic": "VCasinoCompsUltraLuxeVMS18WhiteGloveFloorManagerTopic002",
+      "topic_text": "All right, I'm going.",
+      "emotion": "Neutral 50",
+      "response_text": "You're still welcome to dine with us, of course. We've just had quite enough of paying you to play our games.",
+      "index": "6"
+    }
+  ],
+  "conversation": [],
+  "combat": []
+}

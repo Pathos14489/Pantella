@@ -1,0 +1,159 @@
+{
+  "name": "Jane",
+  "url": "/wiki/Jane_(Lucky_38)",
+  "dialogue_name": "Lucky38Jane.txt",
+  "dialogue_url": "/wiki/Lucky38Jane.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "00116A50",
+  "ref_id": "00116A52",
+  "editor_id": "Lucky38Jane",
+  "location": "Lucky 38 penthouse",
+  "location_url": "/wiki/Lucky_38_penthouse",
+  "descriptions": [
+    "Jane is one of Mr. House's Securitron \"girls\" found in the Lucky 38 penthouse in 2281.",
+    "Jane's neuro-computational matrix is a copy of a woman that Mr. House had known as \"one of Mr. House's girls.\" Jane makes sure to keep Mr. House \"entertained,\" even after giving up his physical needs.",
+    "Jane is a reference to the 1950s film star Jane Russell, who began her film career in a movie with Howard Hughes, the man upon who Robert House is based. In real life, Jane Russell was friends with Marilyn Monroe. A Securitron Marilyn was intended to appear in the game, as seen in the concept art and the Collector's Edition playing cards, but was cut from the final release."
+  ],
+  "race": "SecuritronAI",
+  "gender": "Female-patterned AI",
+  "affiliation": "Mr. HouseMarilyn",
+  "role": "Concierge2 of Diamonds(with Marilyn)",
+  "detailed_location": "Lucky 38 penthouse",
+  "voice_actor": "Gwen McGee",
+  "special": {
+    "Strength": 8,
+    "Perception": 6,
+    "Endurance": 6,
+    "Charisma": 3,
+    "Intelligence": 8,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "level": "7",
+  "misc_skills": [],
+  "karma": "Neutral",
+  "voice_type": "FemaleAdult05",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "Ooh, suddenly I feel all tingly. And I find I've got a rocket launcher!",
+      "index": "1"
+    },
+    {
+      "topic": "MarilynJaneAttack",
+      "topic_text": "MarilynJaneAttack",
+      "emotion": "Neutral 50",
+      "response_text": "Aw, sugar, why'd you have to go make Mr. House mad? Now we've got to get all messy shooting you to little bits.",
+      "index": "10"
+    },
+    {
+      "topic": "MarilynJaneHouse",
+      "topic_text": "Can you tell me about Mr. House?",
+      "emotion": "Neutral 50",
+      "response_text": "Why, sugar, he's the maximum utmost! If it weren't for Mr. House, we wouldn't have this fabulous wonderland of New Vegas, would we?",
+      "index": "11"
+    },
+    {
+      "topic": "MarilynJaneLucky38",
+      "topic_text": "What is this place?",
+      "emotion": "Neutral 50",
+      "response_text": "This is the Lucky 38 Resort and Casino - or, it used to be. Mr. House has kept the place locked up tight for ages now, nobody comes in or out.",
+      "index": "12"
+    },
+    {
+      "topic": "MarilynJaneSecuritrons",
+      "topic_text": "What kind of robots are you?",
+      "emotion": "Neutral 50",
+      "response_text": "Why I'm a RobCo PDQ-88b{Mark}Mk I Securitron, you silly goose! We're the finest in personal or civil robotic security on the market!",
+      "index": "13"
+    },
+    {
+      "topic": "MarilynJaneSnowglobes",
+      "topic_text": "What's with the snowglobe collection?",
+      "emotion": "Neutral 50",
+      "response_text": "Not many people know this, but Mr. House is one of the world's biggest collectors of antique snow globes!",
+      "index": "15"
+    },
+    {
+      "topic": "MarilynJaneVegas",
+      "topic_text": "What can you tell me about New Vegas?",
+      "emotion": "Neutral 50",
+      "response_text": "Oh, there's lots of things to tell, I'm sure. There's the Three Families, the casinos, the other attractions - what would you like to know?",
+      "index": "20"
+    },
+    {
+      "topic": "MarilynJaneWhoAreYou",
+      "topic_text": "Who are you?",
+      "emotion": "Neutral 50",
+      "response_text": "I'm Jane, one of Mr. House's girls. We keep him... entertained. We don't get many guests lately; perhaps we can entertain you as well.",
+      "index": "21"
+    },
+    {
+      "topic": "VDialogueLucky38PenthouseLucky38JaneTopic002",
+      "topic_text": "Sounds like you're pretty fond of him.",
+      "emotion": "Neutral 50",
+      "response_text": "Well, of course I am, silly! Mr. House is just the smartest, most wonderful man there ever was!",
+      "index": "22"
+    },
+    {
+      "topic": "VDialogueLucky38PenthouseLucky38JaneTopic003",
+      "topic_text": "I didn't realize robots could have such strong feelings about people.",
+      "emotion": "Neutral 50",
+      "response_text": "Sugar, I may be a robot on the outside, but on the inside, my neuro-computational matrix is an exact copy of Mr. House's favorite girl.",
+      "index": "25"
+    },
+    {
+      "topic": "VDialogueLucky38PenthouseLucky38JaneTopic004",
+      "topic_text": "Let's talk about something else.",
+      "emotion": "Neutral 50",
+      "response_text": "Anything you like, sugar.",
+      "index": "26"
+    },
+    {
+      "topic": "VDialogueLucky38PenthouseLucky38JaneTopic005",
+      "topic_text": "So you're... a copy of a dead woman? What exactly do you do for Mr. House?",
+      "emotion": "Neutral 50",
+      "response_text": "Mr. House has a lot of needs, sugar. I take care of all of them, and a lady doesn't kiss and tell.",
+      "index": "27"
+    },
+    {
+      "topic": "VDialogueLucky38PenthouseLucky38JaneTopic006",
+      "topic_text": "I really don't want to think about that.",
+      "emotion": "Neutral 50",
+      "response_text": "Then maybe you shouldn't pry into a lady's particulars, hmm?",
+      "index": "28"
+    },
+    {
+      "topic": "VDialogueLucky38PenthouseLucky38JaneTopic007",
+      "topic_text": "Tell me about the Three Families.",
+      "emotion": "Neutral 50",
+      "response_text": "They're just new money, sugar. They might pretend they're sophisticated, but between you and me, they're not far off from tribals.",
+      "index": "29"
+    },
+    {
+      "topic": "VDialogueLucky38PenthouseLucky38JaneTopic008",
+      "topic_text": "Tell me about the casinos.",
+      "emotion": "Neutral 50",
+      "response_text": "Well, of course there used to be a lot more of them, but these days there are three open to the public: The Tops, the Ultra-Luxe, and Gomorrah.",
+      "index": "31"
+    },
+    {
+      "topic": "VDialogueLucky38PenthouseLucky38JaneTopic009",
+      "topic_text": "Tell me about the other attractions.",
+      "emotion": "Neutral 50",
+      "response_text": "Well, let's see: the NCR has an embassy here, but why you'd want to go talk to a bunch of boring old politicians I surely don't know.",
+      "index": "33"
+    }
+  ],
+  "conversation": [],
+  "combat": []
+}

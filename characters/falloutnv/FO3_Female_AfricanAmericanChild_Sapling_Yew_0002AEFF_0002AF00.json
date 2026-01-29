@@ -1,0 +1,198 @@
+{
+  "name": "Sapling Yew",
+  "url": "/wiki/Yew",
+  "dialogue_name": "OasisSaplingYew.txt",
+  "dialogue_url": "/wiki/OasisSaplingYew.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": true,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "0002AEFF",
+  "ref_id": "0002AF00",
+  "editor_id": "OasisSaplingYew",
+  "location": "Oasis",
+  "location_url": "/wiki/Oasis",
+  "descriptions": [
+    "Sapling Yew is a bright young girl living in Oasis in the year 2277.",
+    "She is the only child of the Oasis village leaders, Tree Father Birch and Leaf Mother Laurel. She does gardening with her mother and enjoys playing in the grove, climbing on and around the god-spirit, and touching her bear charm. She is the closest thing to a friend Harold has among the Treeminders, by virtue of being the only one who actually listens to him.",
+    "Yew is the common name for genus Taxus, a type of tree and with \"sapling\" meaning a young tree. All of the human residents in Oasis have horticultural names."
+  ],
+  "race": "Human",
+  "gender": "Female",
+  "affiliation": "Treeminders",
+  "role": "Sapling",
+  "detailed_location": "Oasis",
+  "voice_actor": "Stephanie Joy",
+  "special": {
+    "Strength": 3,
+    "Perception": 4,
+    "Endurance": 3,
+    "Charisma": 3,
+    "Intelligence": 3,
+    "Agility": 5,
+    "Luck": 4
+  },
+  "level": "1",
+  "tag_skills": [
+    {
+      "Lockpick:": "27"
+    },
+    {
+      "Sneak:": "29"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "20"
+    },
+    {
+      "Critical Chance:": "4%"
+    },
+    {
+      "Unarmed Dam.:": "1.00"
+    },
+    {
+      "Poison Resist.:": "10%"
+    },
+    {
+      "Rad. Resist.:": "4%"
+    },
+    {
+      "Carry Weight:": "180"
+    },
+    {
+      "Damage Res.:": "2%"
+    }
+  ],
+  "karma": "Good",
+  "voice_type": "FemaleChild01DC",
+  "geck_race": "AfricanAmericanChild",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Disgust 70",
+      "response_text": "You big dummy! Now we gotta wait for another Outsider!",
+      "index": "1"
+    },
+    {
+      "topic": "MS10FinTLRewardTree Father Birch said you may have a gift for me?",
+      "topic_text": "I hear you may have a gift for me?",
+      "emotion": "Happy 60",
+      "response_text": "Yeah, I think you're pretty swell for someone from Out There! And... and you were really nice to me too.",
+      "index": "8"
+    },
+    {
+      "topic": "MS10TLBirchLaurelTopic",
+      "topic_text": "What's your opinion of Tree Father Birch and Leaf Mother Laurel?",
+      "emotion": "Happy 100",
+      "response_text": "They're the best parents ever!",
+      "index": "11"
+    },
+    {
+      "topic": "MS10TLCaves",
+      "topic_text": "Any information you could give me on the caves below Oasis would be helpful.",
+      "emotion": "Fear 80",
+      "response_text": "My parents told me never to go past the old gate... there are monsters in there!",
+      "index": "12"
+    },
+    {
+      "topic": "MS10TLDoNow",
+      "topic_text": "What will you do now?",
+      "emotion": "Sad 80",
+      "response_text": "Now that Harold's gone, I lost my bestest friend! All I want to do is cry!",
+      "index": "13"
+    },
+    {
+      "topic": "MS10TLHaroldTopic",
+      "topic_text": "Tell me about your \"god.\"",
+      "emotion": "Happy 80",
+      "response_text": "Oh, you mean Harold? He's really nice. Sometimes when I get really lonely, I go into the Grove and talk to him.",
+      "index": "15"
+    },
+    {
+      "topic": "MS10TLHaroldWantstoDieTopic",
+      "topic_text": "Did you know your god wants to die?",
+      "emotion": "Sad 100",
+      "response_text": "What?! How can you say something so awful and terrible?! Leave me alone, I never wanna talk to you again!",
+      "index": "21"
+    },
+    {
+      "topic": "MS10TLHaroldYewTopic01",
+      "topic_text": "Hey, maybe if you tell me what Harold is scared of I won't be scared either.",
+      "emotion": "Happy 70",
+      "response_text": "Awww, I never knew an Outsider could be scared of anything!",
+      "index": "22"
+    },
+    {
+      "topic": "MS10TLHaroldYewTopic01SC",
+      "topic_text": "Tell me, too! Then I won't be scared either.",
+      "emotion": "Happy 70",
+      "response_text": "Awww, I never knew an Outsider could be scared of anything!",
+      "index": "25"
+    },
+    {
+      "topic": "MS10TLHaroldYewTopic02",
+      "topic_text": "What's Harold scared of?",
+      "emotion": "Happy 70",
+      "response_text": "Sorry, that's only for secrets between friends!",
+      "index": "28"
+    },
+    {
+      "topic": "MS10TLHaroldYewTopic03",
+      "topic_text": "I can't believe a tree would be scared of anything.",
+      "emotion": "Sad 60",
+      "response_text": "Hey! He's not a tree! He's my friend! Don't be mean.",
+      "index": "29"
+    },
+    {
+      "topic": "MS10TLHaroldYewTopic04",
+      "topic_text": "Yeah, well guess what? He's really a monster!",
+      "emotion": "Anger 70",
+      "response_text": "Hey! He's not a monster! You meanie! I never wanna talk to you again!",
+      "index": "30"
+    },
+    {
+      "topic": "MS10TLJoinTopic",
+      "topic_text": "So, how did you end up here?",
+      "emotion": "Happy 100",
+      "response_text": "I was born here, silly!",
+      "index": "31"
+    },
+    {
+      "topic": "MS10TLTreeminder",
+      "topic_text": "What did you have to do to become a Treeminder?",
+      "emotion": "Happy 90",
+      "response_text": "Just get born I guess. He he! You're funny!",
+      "index": "32"
+    },
+    {
+      "topic": "SpeechChallengeFailure",
+      "topic_text": "SpeechChallengeFailure",
+      "emotion": "Happy 50",
+      "response_text": "Sorry, that's only for secrets between friends!",
+      "index": "33"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Disgust 70",
+      "response_text": "You stupid-head! I can't believe you mouthed off to the Tree Father.",
+      "index": "34"
+    },
+    {
+      "topic": "MS10TreemindersCeremonySay",
+      "topic_text": "MS10TreemindersCeremonySay",
+      "emotion": "Neutral 50",
+      "response_text": "All this may He be so good as to grant us, who is to come to judge the living and the dead, and the world by his verdure.",
+      "index": "38"
+    }
+  ],
+  "combat": []
+}

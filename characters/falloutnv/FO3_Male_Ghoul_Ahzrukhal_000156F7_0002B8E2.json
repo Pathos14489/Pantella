@@ -1,0 +1,468 @@
+{
+  "name": "Ahzrukhal",
+  "url": "/wiki/Ahzrukhal",
+  "dialogue_name": "Ahzrukhal.txt",
+  "dialogue_url": "/wiki/Ahzrukhal.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": true,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000156F7",
+  "ref_id": "0002B8E2",
+  "editor_id": "Ahzrukhal",
+  "location": "The Ninth Circle",
+  "location_url": "/wiki/The_Ninth_Circle",
+  "descriptions": [
+    "Ahzrukhal is the owner and proprietor of the Ninth Circle bar in Underworld in Fallout 3.",
+    "The shrewd and fashionably dressed Ahzrukhal operates the Ninth Circle, Underworld's primary watering hole, where he milks people for all they are worth. He sees life as a simple equation: the more misery his customers suffer, the more money he makes when they come to drown their sorrows.",
+    "While he enables his customers' drinking, he keeps his drugs reserved for a more discerning clientele.",
+    "Ahzrukhal in general keeps his figurative ear to the ground, staying updated on outside developments, especially in the Mall. Local changes in ownership are of special interest, as it opens potential opportunities for trade and income.",
+    "Everything boils down to caps with Ahzrukhal. Competitors like Greta exist to be eliminated and their customers taken over to maximize Ahzrukhal's profits (as a matter of principle).",
+    "Furthermore, he will generally respect his customers' privacy, out of simple concern for profits.",
+    "He does not appreciate history or cultural artifacts. The only reason he might entertain the notion of purchasing a priceless pre-War item would be to boost his profits. For example, becoming the only owner of a Stradivarius violin in the world,",
+    "Ahzrukhal is the owner of Charon. He balks at slavery and calls it an abomination, of course, but their relationship is neither voluntary, nor equitable: Ahzrukhal obtained Charon's contract through unspecified means, becoming his \"employer.\" Due to Charon's conditioning, that means Ahzrukhal has absolute control. His orders range from watching the bar and keeping drunks in line, to hurting anything Ahzrukhal wants to be hurt. Ahzrukhal relishes his control over Charon, and especially the fact that his slave never complains about his lot.",
+    "Ahzrukhal sees his fellow ghouls as a source of income (especially if they consistently come up with money, like Patchwork, or reliably purchase Jet, like Snowflake),",
+    "Beyond Underworld, he knows Dukov well enough to realize that for all his rudeness and bluster, the man is not a ghoul-hater.",
+    "The player can purchase Charon from him for 1,000 caps or by eliminating the competition."
+  ],
+  "race": "Ghoul",
+  "gender": "Male",
+  "affiliation": "Underworld",
+  "role": "Bartender",
+  "detailed_location": "Museum of HistoryUnderworld",
+  "voice_actor": "Mike Rosson",
+  "special": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 3,
+    "Intelligence": 3,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "level": "1",
+  "tag_skills": [
+    {
+      "Big Guns:": "28"
+    },
+    {
+      "Melee Weap.:": "32"
+    },
+    {
+      "Small Guns:": "32"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "-900 (Very Evil)",
+  "voice_type": "MaleUniqueAhzrukhal",
+  "geck_race": "Ghoul",
+  "topics": [
+    {
+      "topic": "FollowersAhzrukhalHireCharon",
+      "topic_text": "About that deal we had: Greta is dead as promised.",
+      "emotion": "Neutral 50",
+      "response_text": "Is she now? Well, it seems that this arrangement worked out well for both of us.",
+      "index": "1"
+    },
+    {
+      "topic": "FollowersAhzrukhalHireCharonCharon",
+      "topic_text": "Who's that guy in the corner?",
+      "emotion": "Neutral 50",
+      "response_text": "That's Charon. Let's just say... well, he's a loyal employee. Don't mess with me, and he won't mess with you.",
+      "index": "9"
+    },
+    {
+      "topic": "FollowersAhzrukhalHireCharonCharon1",
+      "topic_text": "So he's your slave?",
+      "emotion": "Neutral 50",
+      "response_text": "No, he is not. Sir, you insult me. I do not believe in slavery. It is an abomination.",
+      "index": "10"
+    },
+    {
+      "topic": "FollowersAhzrukhalHireCharonCharon2",
+      "topic_text": "He doesn't say much, does he?",
+      "emotion": "Neutral 50",
+      "response_text": "His company is rather refreshing, isn't it? But don't mistake his brevity for stupidity. That would be very unwise.",
+      "index": "16"
+    },
+    {
+      "topic": "FollowersAhzrukhalHireCharonCharon3",
+      "topic_text": "He's a loyal employee? What do you mean?",
+      "emotion": "Neutral 50",
+      "response_text": "I hold his contract, which makes me his employer. He will do what I ask when I ask, without question.",
+      "index": "18"
+    },
+    {
+      "topic": "FollowersAhzrukhalHireCharonCharon4",
+      "topic_text": "What does he do for you?",
+      "emotion": "Neutral 50",
+      "response_text": "Watches over the bar. Keeps the drunks in line. Pretty much, I point at something and Charon hurts it.",
+      "index": "22"
+    },
+    {
+      "topic": "FollowersAhzrukhalHireCharonCharonEND",
+      "topic_text": "Let's talk about something else.",
+      "emotion": "Neutral 50",
+      "response_text": "Very well. You ask too many questions as it is.",
+      "index": "24"
+    },
+    {
+      "topic": "FollowersAhzrukhalHireCharonOffer1000",
+      "topic_text": "I'll give you 1,000 caps for it.",
+      "emotion": "Neutral 50",
+      "response_text": "I suppose that could work... yes. Yes... here's the contract. And I'll take my payment in full.",
+      "index": "25"
+    },
+    {
+      "topic": "FollowersAhzrukhalHireCharonOffer2000",
+      "topic_text": "I'll give you 2,000 caps for it.",
+      "emotion": "Neutral 50",
+      "response_text": "I suppose that could work... yes. Yes... here's the contract. And I'll take my payment in full.",
+      "index": "28"
+    },
+    {
+      "topic": "FollowersAhzrukhalHireCharonOffer3000",
+      "topic_text": "I'll give you 3,000 caps for it.",
+      "emotion": "Neutral 50",
+      "response_text": "I suppose that could work... yes. Yes... here's the contract. And I'll take my payment in full.",
+      "index": "31"
+    },
+    {
+      "topic": "FollowersAhzrukhalHireCharonOffer4000",
+      "topic_text": "I'll give you 4,000 caps for it.",
+      "emotion": "Neutral 50",
+      "response_text": "I suppose that could work... yes. Yes... here's the contract. And I'll take my payment in full.",
+      "index": "34"
+    },
+    {
+      "topic": "FollowersAhzrukhalHireCharonOffer5000",
+      "topic_text": "I'll give you 5,000 caps for it.",
+      "emotion": "Neutral 50",
+      "response_text": "I suppose that could work... yes. Yes... here's the contract. And I'll take my payment in full.",
+      "index": "37"
+    },
+    {
+      "topic": "FollowersAhzrukhalHireCharonOfferEND",
+      "topic_text": "I've changed my mind.",
+      "emotion": "Neutral 50",
+      "response_text": "That's a shame. I guess I'll just have to hold on to this contract a little bit longer.",
+      "index": "40"
+    },
+    {
+      "topic": "FollowersAhzrukhalHireCharonOfferFavor",
+      "topic_text": "About that deal we had: Greta is dead as promised.",
+      "emotion": "Neutral 50",
+      "response_text": "Is she now? Well, it seems that this arrangement worked out well for both of us.",
+      "index": "41"
+    },
+    {
+      "topic": "FollowersAhzrukhalHireCharonOfferFavorInfo",
+      "topic_text": "Why not just have Charon do it?",
+      "emotion": "Neutral 50",
+      "response_text": "Loyal employee that he is, Charon would do it without question if I asked him to. However, the entire town would come down on me for it.",
+      "index": "53"
+    },
+    {
+      "topic": "FollowersAhzrukhalHireCharonOfferFavorNo",
+      "topic_text": "I want nothing to do with this.",
+      "emotion": "Neutral 50",
+      "response_text": "No stomach for hard work, eh? No matter. If you don't want to do the job, then come up with the cash. Otherwise, I'll just hang on to this contract.",
+      "index": "56"
+    },
+    {
+      "topic": "FollowersAhzrukhalHireCharonOfferFavorYes",
+      "topic_text": "Sure. Greta is nothing to me. I'll do it.",
+      "emotion": "Neutral 50",
+      "response_text": "I'm glad to hear it. Come back to me when she's dead and Charon's contract is all yours.",
+      "index": "57"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "We need to have us a little talk. You keep your gun in your holster when you're in my town.",
+      "index": "59"
+    },
+    {
+      "topic": "MS06MemorialSo this is the Lincoln Memorial?",
+      "topic_text": "Is the Lincoln Memorial around here somewhere?",
+      "emotion": "Disgust 50",
+      "response_text": "Yeah. Just east of here. Bunch of guys with guns are holed up there.",
+      "index": "67"
+    },
+    {
+      "topic": "MS14BackOffSounds like a normal guy.",
+      "topic_text": "I see your point.",
+      "emotion": "Disgust 50",
+      "response_text": "Yeah, well don't let it happen again.",
+      "index": "69"
+    },
+    {
+      "topic": "MS14CrowleyWhat can you tell me about Mister Crowley?",
+      "topic_text": "Does Crowley spend a lot of time in here? What's his angle?",
+      "emotion": "Neutral 50",
+      "response_text": "If I start telling tales about my customers, I'll lose all of them.",
+      "index": "70"
+    },
+    {
+      "topic": "MS14PersuadeCrowleyCome on. You can tell me. Ahzrukhal said so. <Lie.>",
+      "topic_text": "No one will ever know. Come on.",
+      "emotion": "Fear 50",
+      "response_text": "Ah, what the hell. Crowley shows up here last year, he's a Ghoul just like the rest of us.{\"Ah, what the hell\" is said like he is reluctantly surrendering.}",
+      "index": "71"
+    },
+    {
+      "topic": "MS17TLBuySoilStrad",
+      "topic_text": "I have a very unique item for sale, a genuine Stradivarius violin.",
+      "emotion": "Disgust 50",
+      "response_text": "Do I look like I play in a fucking orchestra? Why should I care?",
+      "index": "74"
+    },
+    {
+      "topic": "MS17TLBuySoilStradAhz01",
+      "topic_text": "I just thought you might be interested... It's an artifact.",
+      "emotion": "Disgust 80",
+      "response_text": "Yeah? Wonderful. The corns on my feet from standing in this joint all day long are artifacts too.",
+      "index": "75"
+    },
+    {
+      "topic": "MS17TLBuySoilStradAhz02",
+      "topic_text": "You'd be the only one in the entire world to have this...",
+      "emotion": "Neutral 50",
+      "response_text": "One of a kind, huh? I like the sound of that.",
+      "index": "77"
+    },
+    {
+      "topic": "MS17TLBuySoilStradAhz03",
+      "topic_text": "Some culture would be good for you, Ghoul.",
+      "emotion": "Disgust 70",
+      "response_text": "One snap of my finger and I could fill you with enough holes to cut your weight in half.",
+      "index": "79"
+    },
+    {
+      "topic": "MS17TLBuySoilStradAhz04",
+      "topic_text": "Sure, 200 caps sounds good.",
+      "emotion": "Neutral 50",
+      "response_text": "Here you go.",
+      "index": "81"
+    },
+    {
+      "topic": "MS17TLBuySoilStradAhz05",
+      "topic_text": "Actually, let me think about it.",
+      "emotion": "Disgust 70",
+      "response_text": "Fine. You approached me you know. Thanks for the time Waster.",
+      "index": "85"
+    },
+    {
+      "topic": "MS17TLBuySoilStradAhz06",
+      "topic_text": "Let's make it 300 caps and you have a deal.",
+      "emotion": "Neutral 50",
+      "response_text": "Well, it would bring more people in here if I had it on display I suppose.",
+      "index": "86"
+    },
+    {
+      "topic": "SpeechChallengeFailure",
+      "topic_text": "SpeechChallengeFailure",
+      "emotion": "Disgust 80",
+      "response_text": "How about no. 200 caps or no deal.",
+      "index": "90"
+    },
+    {
+      "topic": "UnderworldAhzrukhalServices",
+      "topic_text": "I need a drink.",
+      "emotion": "Neutral 50",
+      "response_text": "I got whatever you need.",
+      "index": "92"
+    },
+    {
+      "topic": "UnderworldAhzrukhalServicesDrugs",
+      "topic_text": "Let me see the real goods.",
+      "emotion": "Surprise 50",
+      "response_text": "Why, whatever do you mean? I am a simple barkeep, nothing more.",
+      "index": "96"
+    },
+    {
+      "topic": "UnderworldAhzrukhalServicesDrugs1",
+      "topic_text": "Look at these people. They're Jetting. Trust me, I know.",
+      "emotion": "Neutral 50",
+      "response_text": "Ah, an educated consumer. My favorite kind. Yes... yes. I think I can help you.",
+      "index": "100"
+    },
+    {
+      "topic": "UnderworldAhzrukhalServicesDrugs1a",
+      "topic_text": "Why do you bother to hide what you sell?",
+      "emotion": "Disgust 50",
+      "response_text": "While there is no law in Underworld, per se, I'd rather not end up at the receiving end of an angry lynch mob.",
+      "index": "102"
+    },
+    {
+      "topic": "UnderworldAhzrukhalServicesDrugs1b",
+      "topic_text": "Just show me the goods.",
+      "emotion": "Neutral 50",
+      "response_text": "As you wish, my friend...",
+      "index": "105"
+    },
+    {
+      "topic": "UnderworldAhzrukhalServicesDrugs2",
+      "topic_text": "Then I guess I'll take my caps someplace else...",
+      "emotion": "Fear 50",
+      "response_text": "Oh, now now now, don't be hasty. I'm sure that we can work out a compromise. Here, step this way and let me show you what I have.",
+      "index": "106"
+    },
+    {
+      "topic": "UnderworldAhzrukhalServicesDrugs2a",
+      "topic_text": "Why do you bother to hide what you sell?",
+      "emotion": "Neutral 50",
+      "response_text": "While there is no law in Underworld, per se, I'd rather not end up at the receiving end of an angry lynch mob.",
+      "index": "107"
+    },
+    {
+      "topic": "UnderworldAhzrukhalServicesDrugs2b",
+      "topic_text": "Just show me the goods.",
+      "emotion": "Neutral 50",
+      "response_text": "As you wish, my friend...",
+      "index": "110"
+    },
+    {
+      "topic": "UnderworldTownTopic",
+      "topic_text": "What can you tell me about Underworld?",
+      "emotion": "Happy 50",
+      "response_text": "It's the only place in the Capital Wasteland where my people can escape the misery of the world above.",
+      "index": "111"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "FollowersCharonConfrontAhzrukhal2",
+      "topic_text": "FollowersCharonConfrontAhzrukhal2",
+      "emotion": "Neutral 50",
+      "response_text": "That's right, Charon. Have you come to say goodbye?",
+      "index": "113"
+    },
+    {
+      "topic": "GOODBYE",
+      "topic_text": "I have to go now.",
+      "emotion": "Neutral 50",
+      "response_text": "Come back anytime.",
+      "index": "114"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Sad 50",
+      "response_text": "Too bad about Crowley. I heard Tenpenny put out a contract on him.",
+      "index": "119"
+    },
+    {
+      "topic": "UnderworldAhzurkhalRadioChatter",
+      "topic_text": "UnderworldAhzurkhalRadioChatter",
+      "emotion": "Neutral 50",
+      "response_text": "Quiet makes people stop drinking. Turn the radio back on.",
+      "index": "128"
+    },
+    {
+      "topic": "UnderworldTalkAhzrukhalWinthropPatchwork1",
+      "topic_text": "UnderworldTalkAhzrukhalWinthropPatchwork1",
+      "emotion": "Neutral 50",
+      "response_text": "I'm not your \"boy\", Winthrop. What do you want?",
+      "index": "136"
+    },
+    {
+      "topic": "UnderworldTalkAhzrukhalWinthropPatchwork3",
+      "topic_text": "UnderworldTalkAhzrukhalWinthropPatchwork3",
+      "emotion": "Neutral 50",
+      "response_text": "He's a big boy, Winthrop. As long as he's got the caps, I'm going to sell him booze. I'm here to make money, not to babysit.",
+      "index": "140"
+    },
+    {
+      "topic": "UnderworldTalkAhzrukhalWinthropPatchwork5",
+      "topic_text": "UnderworldTalkAhzrukhalWinthropPatchwork5",
+      "emotion": "Neutral 50",
+      "response_text": "Save your threats, old man. You don't have the balls.",
+      "index": "142"
+    },
+    {
+      "topic": "UnderworldTalkAhzurkhalCough1",
+      "topic_text": "UnderworldTalkAhzurkhalCough1",
+      "emotion": "Neutral 50",
+      "response_text": "Whoa, whoa there. Take your illness away from me.",
+      "index": "144"
+    },
+    {
+      "topic": "UnderworldTalkAhzurkhalDrugs1",
+      "topic_text": "UnderworldTalk1",
+      "emotion": "Neutral 50",
+      "response_text": "Yes, friend? What brings you to me today? Come on now... spit it out. I haven't got all day.",
+      "index": "151"
+    },
+    {
+      "topic": "UnderworldTalkAhzurkhalDrugs5",
+      "topic_text": "UnderworldTalkAhzurkhalDrugs5",
+      "emotion": "Neutral 50",
+      "response_text": "Don't mention it, my friend. It's what I'm here for.",
+      "index": "154"
+    },
+    {
+      "topic": "UnderworldTalkCharonAhzurkhalBouncer2",
+      "topic_text": "UnderworldTalkCharonAhzurkhalBouncer2",
+      "emotion": "Neutral 50",
+      "response_text": "I want you to keep a closer eye on these bastards. I caught one of them trying to swipe some booze from the shelf when my back was turned.",
+      "index": "157"
+    },
+    {
+      "topic": "UnderworldTalkCharonAhzurkhalBouncer4",
+      "topic_text": "UnderworldTalkCharonAhzurkhalBouncer4",
+      "emotion": "Neutral 50",
+      "response_text": "I don't know how many times I've told you about this. I don't want to have to do it again.",
+      "index": "162"
+    },
+    {
+      "topic": "UnderworldTalkCharonAhzurkhalOrders2",
+      "topic_text": "UnderworldTalkAhzurkhalCharonOrders2",
+      "emotion": "Neutral 50",
+      "response_text": "That little chore, the one we talked about yesterday. I trust that it won't be something I have to hear about again, right?",
+      "index": "167"
+    },
+    {
+      "topic": "UnderworldTalkCharonAhzurkhalOrders4",
+      "topic_text": "UnderworldTalkAhzurkhalCharonOrders4",
+      "emotion": "Neutral 50",
+      "response_text": "Good. You know how I hate to worry.",
+      "index": "171"
+    },
+    {
+      "topic": "UnderworldTalkResponseShort1",
+      "topic_text": "UnderworldTalkHelloResponseShort",
+      "emotion": "Neutral 50",
+      "response_text": "No time to talk now, Winthrop. Too busy.",
+      "index": "177"
+    }
+  ],
+  "combat": [
+    {
+      "topic": "Attack",
+      "topic_text": "Attack",
+      "emotion": "Neutral 50",
+      "response_text": "Do I have to do everything myself?",
+      "index": "187"
+    },
+    {
+      "topic": "Pickpocket",
+      "topic_text": "Pickpocket",
+      "emotion": "Neutral 50",
+      "response_text": "You find anything you like in those pockets? Huh?",
+      "index": "195"
+    },
+    {
+      "topic": "Steal",
+      "topic_text": "Steal",
+      "emotion": "Neutral 50",
+      "response_text": "Now, now.",
+      "index": "197"
+    }
+  ]
+}

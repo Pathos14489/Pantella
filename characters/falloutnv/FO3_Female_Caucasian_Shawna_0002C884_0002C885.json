@@ -1,0 +1,276 @@
+{
+  "name": "Shawna",
+  "url": "/wiki/Shawna",
+  "dialogue_name": "Shawna.txt",
+  "dialogue_url": "/wiki/Shawna.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": true,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "0002C884",
+  "ref_id": "0002C885",
+  "editor_id": "Shawna",
+  "location": "Museum of Dave",
+  "location_url": "/wiki/Museum_of_Dave",
+  "descriptions": [
+    "Shawna is a citizen of the Republic of Dave in 2277. She also runs the Museum of Dave and is in charge of the schooling.",
+    "At the age of 17, she is Dave's eldest daughter. She has been raised to be a fighter and knows how to survive if the need ever arises for her to leave the Republic. She is supportive of her father.",
+    "Shawna, as curator for the Museum of Dave, handles the museum budget. By passing a Speech check, she can be convinced to buy any item for its base value to her. The budget of the museum is 700 caps. Items sold to her will not actually be displayed in the museum.",
+    "Shawna will be very distressed if anyone besides Dave wins the election, but she nonetheless remains in the Republic.",
+    "So, I'll just get started on the tour of the museum then. To my far right is the baby carriage that our great leader slept in as a newborn baby. Unlike most babies, he never cried and his poop didn't stink. Dave had 8 siblings and made his own baseball team. The team was so good, in fact, the Wasteland team was so scared it never showed up to compete. The briefcase is the very one Dave took with him when he became fed up with the poor ways that his father ran the nation. Dave brought back many items from the Wasteland. It was artifacts like these that amassed the Republic's great wealth. Dave collects many war collectibles, including holotapes and war weaponry. This globe represents the whole planet that Dave traversed. Don't let its size fool you, the world is at least fifty times bigger than this. I don't know who put that tire there. These weapons were used against the USA before the bombs fell. Dave probably acquired these when he walked to China. Dave is a world-renowned marksman, known for shooting an apple out of the hand of a Raider from across the Potomac. Mounted to my left is the very head of the slain Deathclaw that Dave encountered during his quest through the Wastes. I know what you're thinking, and no, that's not a Brahmin skull. Brahmin have two heads, so there'd have to be two skulls for it to be Brahmin. Please, no touching. And that's the tour! I hope you enjoyed it!"
+  ],
+  "race": "Human",
+  "gender": "Female",
+  "affiliation": "Republic of Dave",
+  "role": "Daughter of DaveTeacherCurator",
+  "detailed_location": "Republic of Dave",
+  "voice_actor": "Jan Johns",
+  "special": {
+    "Strength": 6,
+    "Perception": 7,
+    "Endurance": 5,
+    "Charisma": 3,
+    "Intelligence": 3,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "mod_special_values": {
+    "Strength": 6,
+    "Perception": 7,
+    "Endurance": 6,
+    "Charisma": 3,
+    "Intelligence": 3,
+    "Agility": 7,
+    "Luck": 5
+  },
+  "level": "3→7",
+  "tag_skills": [
+    {
+      "Explosives:": "42→60"
+    },
+    {
+      "Small Guns:": "40→58(42→60)"
+    },
+    {
+      "Sneak:": "40→58(42→60)"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "40→60(45→65)"
+    },
+    {
+      "Critical Chance:": "5%"
+    },
+    {
+      "Unarmed Dam.:": "1.25"
+    },
+    {
+      "Poison Resist.:": "20%(25%)"
+    },
+    {
+      "Rad. Resist.:": "8%(10%)"
+    },
+    {
+      "Carry Weight:": "210"
+    },
+    {
+      "Damage Res.:": "2%"
+    }
+  ],
+  "karma": "Good",
+  "voice_type": "FemaleAdult04DC",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "So Dave gave you the okay, huh?  Well, welcome then.",
+      "index": "1"
+    },
+    {
+      "topic": "RDGottaGo",
+      "topic_text": "I've got to go.",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah, and I have to get back to work.",
+      "index": "4"
+    },
+    {
+      "topic": "RDMuseumContributeA1",
+      "topic_text": "Does the museum accept donations?",
+      "emotion": "Neutral 50",
+      "response_text": "I'd never really thought about that before. Why do you ask?",
+      "index": "5"
+    },
+    {
+      "topic": "RDMuseumContributeA2",
+      "topic_text": "I happen to have some souvenirs from Dave's past for sale.",
+      "emotion": "Happy 50",
+      "response_text": "Oh, wonderful! I'd be happy to accept your contribution on behalf of the Republic!",
+      "index": "7"
+    },
+    {
+      "topic": "RDMuseumContributeA3",
+      "topic_text": "Well, everything here looks like a piece of junk.",
+      "emotion": "Anger 50",
+      "response_text": "Sir, everything here is authentic! Dave said so himself!",
+      "index": "9"
+    },
+    {
+      "topic": "RDMuseumContributeA4",
+      "topic_text": "Nevermind. Just thought I'd ask.",
+      "emotion": "Happy 50",
+      "response_text": "That's alright. I'm used to the children asking funny questions, anyway.",
+      "index": "11"
+    },
+    {
+      "topic": "RDNeverMind",
+      "topic_text": "Actually, I think I have all the info I need.",
+      "emotion": "Neutral 50",
+      "response_text": "Glad to hear it.",
+      "index": "12"
+    },
+    {
+      "topic": "RDSubElectionOpponentsWho's running in the election?",
+      "topic_text": "You know, Rosie is running for president now.",
+      "emotion": "Neutral 50",
+      "response_text": "Wow, really?  I've always said that she'd make a great leader, and we've never had a woman lead us before...",
+      "index": "13"
+    },
+    {
+      "topic": "RDSubElectionSuggestion",
+      "topic_text": "Have you considered running for the presidency?",
+      "emotion": "Neutral 50",
+      "response_text": "Absolutely not. In fact, I'd vote for Dave twice if I could.",
+      "index": "19"
+    },
+    {
+      "topic": "RDTopicElection",
+      "topic_text": "I'd like to discuss the election with you.",
+      "emotion": "Neutral 50",
+      "response_text": "Me? I'm not sure if I can help you...",
+      "index": "20"
+    },
+    {
+      "topic": "RDTopicGoVote",
+      "topic_text": "You should go vote, if you haven't already.",
+      "emotion": "Fear 20",
+      "response_text": "But I did already!",
+      "index": "21"
+    },
+    {
+      "topic": "RDTopicMuseum",
+      "topic_text": "This guy Dave has his own museum?",
+      "emotion": "Happy 50",
+      "response_text": "Oh, yes. Everything here is from Dave's adventures in the Wasteland, before he founded the Republic.",
+      "index": "24"
+    },
+    {
+      "topic": "RDTopicRoD",
+      "topic_text": "I'd like to know more about the Republic.",
+      "emotion": "Happy 50",
+      "response_text": "Sure! The Museum of Dave is happy to answer any questions on behalf of the Republic of Dave's Office of Tourism!",
+      "index": "26"
+    },
+    {
+      "topic": "RDTopicRoDEND",
+      "topic_text": "That's all I need to know.",
+      "emotion": "Happy 50",
+      "response_text": "How very Dave-like.",
+      "index": "30"
+    },
+    {
+      "topic": "RDTopicThisPlace",
+      "topic_text": "What's your take on the Republic?",
+      "emotion": "Happy 50",
+      "response_text": "The Republic of Dave offers a rich history rivaling that of the great nations before the war.",
+      "index": "31"
+    },
+    {
+      "topic": "RDTopicWhosInCharge",
+      "topic_text": "Tell me more about this Dave guy.",
+      "emotion": "Happy 50",
+      "response_text": "President Dave is the savior of the Wasteland, bringing peace and order to the savages man has brought upon himself.",
+      "index": "32"
+    },
+    {
+      "topic": "RDTopicWives",
+      "topic_text": "Dave has two wives?",
+      "emotion": "Happy 50",
+      "response_text": "Dave revised the restrictive marriage laws of the Kingdom of Tom shortly after the Republic was formed.",
+      "index": "34"
+    },
+    {
+      "topic": "RDTopicYourselfWhat can you tell me about yourself?",
+      "topic_text": "Tell me about yourself.",
+      "emotion": "Neutral 50",
+      "response_text": "Me? I just run the museum and teach classes to the little ones. You know, truth, justice, and the will of Dave...",
+      "index": "36"
+    },
+    {
+      "topic": "SpeechChallengeFailure",
+      "topic_text": "SpeechChallengeFailure",
+      "emotion": "Anger 25",
+      "response_text": "Don't lie to me. Dave would have told me that if it were true.",
+      "index": "37"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYEI have to go now.",
+      "topic_text": "I'll leave you to the kids.",
+      "emotion": "Happy 50",
+      "response_text": "Come back and visit the museum anytime!",
+      "index": "38"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Fear 20",
+      "response_text": "Hi Mary.  I mean Flower.  Rachael!",
+      "index": "39"
+    },
+    {
+      "topic": "RDElectionTalk",
+      "topic_text": "DaveElectionTalk",
+      "emotion": "Neutral 50",
+      "response_text": "Was I supposed to do it?  I didn't hear Dave saying we had to!",
+      "index": "41"
+    },
+    {
+      "topic": "RDPackageDone",
+      "topic_text": "RDPackageDone",
+      "emotion": "Happy 50",
+      "response_text": "Ah, Dave. Lead our Republic to glory!",
+      "index": "42"
+    },
+    {
+      "topic": "RDTeacherTalk",
+      "topic_text": "RDTeacherTalk",
+      "emotion": "Neutral 50",
+      "response_text": "Let's get class started.",
+      "index": "43"
+    },
+    {
+      "topic": "RDTourGuideTalk",
+      "topic_text": "RDTourGuideTalk",
+      "emotion": "Happy 50",
+      "response_text": "So, I'll just get started on the tour of the museum then.",
+      "index": "49"
+    }
+  ],
+  "combat": [
+    {
+      "topic": "BarterExit",
+      "topic_text": "BarterExit",
+      "emotion": "Happy 50",
+      "response_text": "What wonderful items for the Museum of Dave!",
+      "index": "63"
+    }
+  ]
+}

@@ -1,0 +1,179 @@
+{
+  "name": "Marco",
+  "url": "/wiki/Marco_(Fallout:_New_Vegas)",
+  "dialogue_name": "WestsideMarco.txt",
+  "dialogue_url": "/wiki/WestsideMarco.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000F624E",
+  "ref_id": "000F6257",
+  "editor_id": "WestsideMarco",
+  "location": "Outside theCasa Madrid Apartments",
+  "location_url": "/wiki/Casa_Madrid_Apartments",
+  "descriptions": [
+    "Marco is the landlord of Casa Madrid Apartments in New Vegas in 2281.",
+    "Marco is an entrepreneur who cares about little else than the rent of his tenants. He first set up the Casa Madrid Apartments to benefit from the steady influx of travelers too poor to afford entry to the Strip, but rich enough to stay around the greater Vegas area. After some time, he managed to form a lucrative relationship with Pretty Sarah, setting up his place as one of the best hotels outside the Strip, with complete sex services available to the discerning customer.",
+    "Although he is grateful to Tom Anderson for helping the town, giving him a discount on his rent,"
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Pretty SarahWestside",
+  "role": "Landlord",
+  "detailed_location": "Westside",
+  "voice_actor": "Emerson Brooks",
+  "special": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 2,
+    "Intelligence": 4,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "mod_special_values": {
+    "Strength": 6,
+    "Perception": 6,
+    "Endurance": 4,
+    "Charisma": 2,
+    "Intelligence": 4,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "level": "7",
+  "tag_skills": [
+    {
+      "Barter:": "58"
+    },
+    {
+      "Medicine:": "56"
+    },
+    {
+      "Melee Weap.:": "60"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "95"
+    },
+    {
+      "Critical Chance:": "5%"
+    },
+    {
+      "Unarmed Dam.:": "1.15"
+    },
+    {
+      "Poison Resist.:": "15%"
+    },
+    {
+      "Rad. Resist.:": "6%"
+    },
+    {
+      "Carry Weight:": "210"
+    }
+  ],
+  "karma": "Neutral",
+  "voice_type": "MaleAdult01DefaultB",
+  "geck_race": "Hispanic",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "{Player in combat}{deadpan}You look busy. Talk to me later.",
+      "index": "1"
+    },
+    {
+      "topic": "VCasaMarcoAboutMaude",
+      "topic_text": "Tell me about Maude.",
+      "emotion": "Neutral 50",
+      "response_text": "Old Maude... Sometimes you can afford the creamy veal of a Sweetie, and sometimes you got just enough caps to buy a tough piece of jerky.{Ha!}",
+      "index": "5"
+    },
+    {
+      "topic": "VFreeformCasaMadridWestsideMarcoTopic000",
+      "topic_text": "Is this apartment building yours?",
+      "emotion": "Neutral 50",
+      "response_text": "Yep, for a few years now. Guess I should be calling it Casa Marco or something, but I haven't changed the signs.",
+      "index": "6"
+    },
+    {
+      "topic": "VFreeformCasaMadridWestsideMarcoTopic001",
+      "topic_text": "Tell me about Dermot.",
+      "emotion": "Neutral 50",
+      "response_text": "Roughneck prospector is all I hear, good at what he does. Been renting a room here for a year or so - nothing special.",
+      "index": "8"
+    },
+    {
+      "topic": "VFreeformCasaMadridWestsideMarcoTopic002",
+      "topic_text": "What do you know about Jimmy?",
+      "emotion": "Neutral 50",
+      "response_text": "Him?{Ha!}Caesar's Legion taught him everything he knows. I bet there's a pound of sand ground into his palms and knees!{Ha!}",
+      "index": "9"
+    },
+    {
+      "topic": "VFreeformCasaMadridWestsideMarcoTopic003",
+      "topic_text": "Tell me about Sweetie.",
+      "emotion": "Neutral 50",
+      "response_text": "Oh, I know everything - how she smells, how she tastes, how it feels to slip her on and wiggle.{Ha!}",
+      "index": "11"
+    },
+    {
+      "topic": "VFreeformCasaMadridWestsideMarcoTopic004",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Catch you later, then.",
+      "index": "13"
+    },
+    {
+      "topic": "VFreeformCasaMadridWestsideMarcoTopic005",
+      "topic_text": "Tell me about Pretty Sarah.",
+      "emotion": "Neutral 50",
+      "response_text": "Ain't so pretty, is she? Not since she had a run-in with those Fiends over near McCarran.{Ha!}",
+      "index": "14"
+    },
+    {
+      "topic": "VFreeformCasaMadridWestsideMarcoTopic006",
+      "topic_text": "I had questions about your tenants.",
+      "emotion": "Neutral 50",
+      "response_text": "Like who?",
+      "index": "17"
+    },
+    {
+      "topic": "VFreeformCasaMadridWestsideMarcoTopic007",
+      "topic_text": "Never mind.",
+      "emotion": "Neutral 50",
+      "response_text": "All right, then.",
+      "index": "18"
+    },
+    {
+      "topic": "VFreeformCasaMadridWestsideMarcoTopic008",
+      "topic_text": "Know anything about Saint James?",
+      "emotion": "Neutral 50",
+      "response_text": "Guy's unstable, but he pays his rent and Sweetie seems to like him all right.",
+      "index": "19"
+    },
+    {
+      "topic": "VFreeformCasaMadridWestsideMarcoTopic009",
+      "topic_text": "Can you tell me anything about Anderson?",
+      "emotion": "Neutral 50",
+      "response_text": "Good man. He's one of the Followers of the Apocalypse. He's the one who taught people around here how to start growing crops.",
+      "index": "20"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Catch you later, then.",
+      "index": "22"
+    }
+  ],
+  "combat": []
+}

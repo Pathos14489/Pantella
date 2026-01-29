@@ -1,0 +1,101 @@
+{
+  "name": "Bingo",
+  "url": "/wiki/Bingo_(The_Pitt)",
+  "dialogue_name": "DLC01Bingo.txt",
+  "dialogue_url": "/wiki/DLC01Bingo.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "xx003E4B",
+  "ref_id": "xx003E60",
+  "editor_id": "DLC01Bingo",
+  "location": "The Pitt Downtown",
+  "location_url": "/wiki/The_Pitt_Downtown",
+  "descriptions": [
+    "Bingo is a member of the Pitt raiders under the command of Ishmael Ashur in the Fallout 3 add-on The Pitt.",
+    "An older member of the Pitt raiders, Bingo is a patron of Vertigo Bar and Grill who appears to be old and befuddled. The Lone Wanderer cannot engage with any meaningful conversation with Bingo, as he only says his name over and over again.",
+    "Bingo patrols the upper levels of The Pitt Downtown, and rarely does anything else. He lives in a ruined corner apartment to the right of Friday's repair shop. This apartment contains several beer bottles on a table by a chair overlooking the Downtown courtyard.",
+    "Bingo appears only in the Fallout 3 add-on The Pitt."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Pitt raiders",
+  "role": "Slaver",
+  "detailed_location": "The Pitt Downtown",
+  "voice_actor": "James Lewis",
+  "special": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 3,
+    "Intelligence": 3,
+    "Agility": 7,
+    "Luck": 5
+  },
+  "level": "1→4→9",
+  "tag_skills": [
+    {
+      "Melee Weap.:": "32→45→66"
+    },
+    {
+      "Small Guns:": "34→47→68"
+    },
+    {
+      "Unarmed:": "28→41→62"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "25→55→85"
+    },
+    {
+      "Critical Chance:": "5%"
+    },
+    {
+      "Unarmed Dam.:": "1.9→2.55→3.6"
+    },
+    {
+      "Poison Resist.:": "15%"
+    },
+    {
+      "Rad. Resist.:": "6%"
+    },
+    {
+      "Carry Weight:": "210"
+    }
+  ],
+  "karma": "Evil",
+  "voice_type": "DLC01RaiderMaleGruffVoice",
+  "geck_race": "HispanicRaider",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "Bingo.",
+      "index": "1"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "I have to go now.",
+      "emotion": "Neutral 50",
+      "response_text": "Bingo.",
+      "index": "5"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Neutral 50",
+      "response_text": "{Silence.}",
+      "index": "6"
+    }
+  ],
+  "combat": []
+}

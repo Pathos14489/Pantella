@@ -1,0 +1,405 @@
+{
+  "name": "Swank",
+  "url": "/wiki/Swank",
+  "dialogue_name": "VMQTopsSwank.txt",
+  "dialogue_url": "/wiki/VMQTopsSwank.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "00113456",
+  "ref_id": "00115F07",
+  "editor_id": "VMQTopsSwank",
+  "location": "The Topsfront desk",
+  "location_url": "/wiki/The_Tops",
+  "descriptions": [
+    "Swank is the right-hand man of Benny for the Chairmen in 2281.",
+    "Swank has been Benny's right-hand man since Benny took over the Mojave Boot-Riders and were made into the Chairmen.",
+    "In All Roads, Swank carries out Benny's orders to poison the Singer with \"Vegas\" (aka Psycho).",
+    "Swank appears in Fallout: New Vegas and All Roads."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "ChairmenMojave Boot-Riders(formerly)",
+  "role": "Right hand manJack of Diamonds",
+  "detailed_location": "The Tops",
+  "voice_actor": "Jesse Burch",
+  "special": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 3,
+    "Intelligence": 3,
+    "Agility": 7,
+    "Luck": 5
+  },
+  "level": "15",
+  "tag_skills": [
+    {
+      "Energy Weap.:": "81"
+    },
+    {
+      "Guns:": "85"
+    },
+    {
+      "Melee Weap.:": "83"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Neutral",
+  "voice_type": "MaleAdult03",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Fear 20",
+      "response_text": "Is Benny taken care of yet?",
+      "index": "1"
+    },
+    {
+      "topic": "SwankBennyBetrayalEvidence",
+      "topic_text": "I've got evidence that Benny tried to kill me and stole a Platinum Chip from me.",
+      "emotion": "Fear 20",
+      "response_text": "Whoa, hey now, kid, that's some kind of serious charge you're dropping. You want to be real careful what you say next.",
+      "index": "26"
+    },
+    {
+      "topic": "SwankBennyBetrayalSpeech",
+      "topic_text": "I think you should know something about Benny.",
+      "emotion": "Surprise 25",
+      "response_text": "Really? You got something to say about the big boss, huh? Well, why don't you say it to his face instead of yapping at me?",
+      "index": "28"
+    },
+    {
+      "topic": "SwankIntro",
+      "topic_text": "Who are you?",
+      "emotion": "Disgust 10",
+      "response_text": "Ain't been on the strip long, have you, pal? Name's Swank. This is my joint.",
+      "index": "29"
+    },
+    {
+      "topic": "SwankNCR",
+      "topic_text": "What do you know about the NCR?",
+      "emotion": "Surprise 20",
+      "response_text": "I hear they got their act together out west - like a real old-time country, they tell me.",
+      "index": "31"
+    },
+    {
+      "topic": "SwankTops",
+      "topic_text": "Nice place you've got here. Tell me about it.",
+      "emotion": "Happy 20",
+      "response_text": "The Tops? Yeah, sure, you want the nickel tour ol' Swank's happy to oblige.",
+      "index": "33"
+    },
+    {
+      "topic": "SwankVegas",
+      "topic_text": "Can you give me the rundown on New Vegas?",
+      "emotion": "Happy 20",
+      "response_text": "Sure, kid, sure. What can I tell you?",
+      "index": "36"
+    },
+    {
+      "topic": "SwankWork",
+      "topic_text": "I'm looking to make a few extra caps. Got any jobs you need done?",
+      "emotion": "Happy 30",
+      "response_text": "Baby, you stick with me, you won't have to work a day in your life. Don't fret about caps, you just sit there and look pretty for me.",
+      "index": "37"
+    },
+    {
+      "topic": "TopsAllSeenBenny",
+      "topic_text": "Have you seen Benny?",
+      "emotion": "Surprise 20",
+      "response_text": "I saw him heading for his suite just a few minutes ago. Looked like a fox that just got caught in the henhouse. Maybe you'll catch him there.",
+      "index": "38"
+    },
+    {
+      "topic": "VMQTopsVMQTopsSwankTopic000",
+      "topic_text": "I thought Benny ran this place.",
+      "emotion": "Happy 10",
+      "response_text": "Benny oversees the business, sure, but I run the Tops day to day. I'm his right-hand guy, you dig?",
+      "index": "39"
+    },
+    {
+      "topic": "VMQTopsVMQTopsSwankTopic001",
+      "topic_text": "Nice place. Got a minute to talk?",
+      "emotion": "Happy 10",
+      "response_text": "Sure, kid, sure - I can spare a couple. What can I do for you?",
+      "index": "41"
+    },
+    {
+      "topic": "VMQTopsVMQTopsSwankTopic002",
+      "topic_text": "Somehow I find that hard to believe.",
+      "emotion": "Sad 30",
+      "response_text": "Ouch! Come on, baby, don't be that way. You don't know what you're missing.",
+      "index": "42"
+    },
+    {
+      "topic": "VMQTopsVMQTopsSwankTopic003",
+      "topic_text": "I haven't had a chance to look yet.",
+      "emotion": "Anger 10",
+      "response_text": "All right, well, might want to get a move on, is all I'm saying.",
+      "index": "43"
+    },
+    {
+      "topic": "VMQTopsVMQTopsSwankTopic004",
+      "topic_text": "Benny has reprogrammed a Securitron, he's trying to take over the Strip.",
+      "emotion": "Fear 25",
+      "response_text": "He's what? Ah jeez... jeez, this is really bad. What are you going to do?",
+      "index": "44"
+    },
+    {
+      "topic": "VMQTopsVMQTopsSwankTopic005",
+      "topic_text": "I thought maybe I'd talk to the man. See if we can work out a deal.",
+      "emotion": "Surprise 20",
+      "response_text": "Yeah? That's ballsy. Good luck with that.",
+      "index": "45"
+    },
+    {
+      "topic": "VMQTopsVMQTopsSwankTopic006",
+      "topic_text": "Look, I found these cigarette butts by the grave he buried me in.",
+      "emotion": "Surprise 20",
+      "response_text": "Huh. Well, yeah, okay, these are Benny's brand, and they ain't too common. You got anything else?",
+      "index": "46"
+    },
+    {
+      "topic": "VMQTopsVMQTopsSwankTopic007",
+      "topic_text": "I found this lighter in Boulder City. He dropped it when he killed his partners.",
+      "emotion": "Pained 10",
+      "response_text": "Yeah, that looks like Benny's lighter all right. Still, not exactly a ton of proof. Got anything else, kid?",
+      "index": "47"
+    },
+    {
+      "topic": "VMQTopsVMQTopsSwankTopic008",
+      "topic_text": "Here, take a look at this note I found in Novac.",
+      "emotion": "Fear 20",
+      "response_text": "That's... pretty shady, yeah. Could be Benny's up to no good, could be this is somebody else altogether. What else you got?",
+      "index": "48"
+    },
+    {
+      "topic": "VMQTopsVMQTopsSwankTopic009",
+      "topic_text": "What's the story with the White Glove Society?",
+      "emotion": "Disgust 25",
+      "response_text": "Creepy bunch of cats, you ask me. Oh, sure, they act all polite and civilized, but there's something off about them, you dig?",
+      "index": "49"
+    },
+    {
+      "topic": "VMQTopsVMQTopsSwankTopic011",
+      "topic_text": "That's it. What do you think?",
+      "emotion": "Fear 10",
+      "response_text": "I'll tell you what I think, I think I oughta go tell Benny about this right now - but I'll clam up for now.",
+      "index": "51"
+    },
+    {
+      "topic": "VMQTopsVMQTopsSwankTopic012",
+      "topic_text": "Okay, I'll do it.",
+      "emotion": "Happy 10",
+      "response_text": "Groovy. Here's your stuff back - in case you run into company, you dig? I'll tell the boys to give you a pass to pack some heat.",
+      "index": "59"
+    },
+    {
+      "topic": "VMQTopsVMQTopsSwankTopic013",
+      "topic_text": "Actually, never mind. It's nothing.",
+      "emotion": "Anger 10",
+      "response_text": "Yeah, thought so. You're a smart kid, you know that?",
+      "index": "61"
+    },
+    {
+      "topic": "VMQTopsVMQTopsSwankTopic014",
+      "topic_text": "We don't have time for that. We need to take him out right now.",
+      "emotion": "Fear 30",
+      "response_text": "Take him out? Jesus... okay, well, if you think that's the best way to deal with this. I'll send him up to his room, you can ambush him there.",
+      "index": "62"
+    },
+    {
+      "topic": "VMQTopsVMQTopsSwankTopic015",
+      "topic_text": "I don't think you're going to like it. Seems Benny's been making his own play.",
+      "emotion": "Surprise 30",
+      "response_text": "Huh? What are you talking about?",
+      "index": "64"
+    },
+    {
+      "topic": "VMQTopsVMQTopsSwankTopic016",
+      "topic_text": "Ha ha! Take it easy, pal, I'm just pulling your leg. Honest.",
+      "emotion": "Disgust 30",
+      "response_text": "Anybody ever tell you your sense of humor stinks? I'll let it go this time, but you watch your mouth from now on.",
+      "index": "67"
+    },
+    {
+      "topic": "VMQTopsVMQTopsSwankTopic017",
+      "topic_text": "Go ahead, see if I care.",
+      "emotion": "Anger 40",
+      "response_text": "Pal, you're gonna regret that for the rest of your very short life.",
+      "index": "68"
+    },
+    {
+      "topic": "VMQTopsVMQTopsSwankTopic018",
+      "topic_text": "Benny tried to kill me and stole a platinum chip I was hired to deliver.",
+      "emotion": "Disgust 20",
+      "response_text": "That doesn't... why would he pull a stunt like that? Got anything else to offer?",
+      "index": "69"
+    },
+    {
+      "topic": "VMQTopsVMQTopsSwankTopic020",
+      "topic_text": "He tried to make it look like an accident - just a traveler killed and robbed in the Wasteland.",
+      "emotion": "Anger 20",
+      "response_text": "He's trying to pull a fast one on the big man? Crazy bastard. You got any more?",
+      "index": "72"
+    },
+    {
+      "topic": "VMQTopsVMQTopsSwankTopic021",
+      "topic_text": "Benny must think this chip will allow him to seize power on the Strip.",
+      "emotion": "Disgust 35",
+      "response_text": "Jesus, I can't even believe it. After all House did to set us up with this swank joint. I don't suppose there's more?",
+      "index": "75"
+    },
+    {
+      "topic": "VMQTopsVMQTopsSwankTopic022",
+      "topic_text": "Let's talk about the Omertas.",
+      "emotion": "Anger 25",
+      "response_text": "Oh, they're a shifty pack of rats. If I were you, I'd keep one hand on my wallet and the other on my gun whenever they're around.",
+      "index": "78"
+    },
+    {
+      "topic": "VMQTopsVMQTopsSwankTopic023",
+      "topic_text": "What do you know about Mr. House?",
+      "emotion": "Happy 20",
+      "response_text": "House is an all-right kind of guy. Sure, he keeps a pretty tight grip on the reins, but Vegas is a wild horse, and you can't just give her her head.",
+      "index": "79"
+    },
+    {
+      "topic": "VMQTopsVMQTopsSwankTopic024",
+      "topic_text": "Tell me about the Chairmen.",
+      "emotion": "Happy 35",
+      "response_text": "Baby, we're only the coolest cats on the whole Strip. We been here the longest, we got the swankiest digs, and we got caps rolling in like the tide.",
+      "index": "81"
+    },
+    {
+      "topic": "VMQTopsVMQTopsSwankTopic025",
+      "topic_text": "Flattering, but I don't like being tied down. How about some real work?",
+      "emotion": "Surprise 10",
+      "response_text": "You might have a jaw at Tommy Torini up in the Aces. He's always looking for talent scouts.",
+      "index": "85"
+    },
+    {
+      "topic": "VMQTopsVMQTopsSwankTopic026",
+      "topic_text": "Baby, you're too good to me! How about some caps to buy myself something pretty?",
+      "emotion": "Happy 30",
+      "response_text": "Ooh, I dig the way you think, doll. Here, go treat yourself.",
+      "index": "86"
+    },
+    {
+      "topic": "VMQTopsVMQTopsSwankTopic028",
+      "topic_text": "Let's talk about something else.",
+      "emotion": "Surprise 5",
+      "response_text": "Sure, whatever you want.",
+      "index": "87"
+    },
+    {
+      "topic": "VMQTopsVMQTopsSwankTopic029",
+      "topic_text": "Not yet. Soon.",
+      "emotion": "Anger 10",
+      "response_text": "All right, well, might want to get a move on, is all I'm saying.",
+      "index": "88"
+    },
+    {
+      "topic": "VMQTopsVMQTopsSwankTopic030",
+      "topic_text": "Yeah, he's dead.",
+      "emotion": "Fear 25",
+      "response_text": "Huh. Guess that makes me the boss. Ring-a-ding.",
+      "index": "89"
+    },
+    {
+      "topic": "VMQTopsVMQTopsSwankTopic031",
+      "topic_text": "He bolted. But I'll find him.",
+      "emotion": "Disgust 20",
+      "response_text": "I hope so, kid. Last thing we need is that punk running around out there.",
+      "index": "90"
+    },
+    {
+      "topic": "VMQTopsVMQTopsSwankTopic032",
+      "topic_text": "What do you think of Caesar's Legion?",
+      "emotion": "Disgust 30",
+      "response_text": "Oh, boy, those clowns. Listen up, kid, and listen good, I don't care how many fancy Latin names he gives himself, a thug ain't nothin' but a thug.",
+      "index": "91"
+    },
+    {
+      "topic": "VMQTopsVMQTopsSwankTopic033",
+      "topic_text": "On second thought, let's talk about something else.",
+      "emotion": "Neutral 50",
+      "response_text": "Sure, kid, like what?",
+      "index": "93"
+    },
+    {
+      "topic": "VMQTopsVMQTopsSwankTopic034",
+      "topic_text": "They took my guns at the security checkpoint. Can you set me up?",
+      "emotion": "Fear 15",
+      "response_text": "Yeah, sure. Take your stuff back - you'll need it.",
+      "index": "94"
+    },
+    {
+      "topic": "VMQTopsVMQTopsSwankTopic035",
+      "topic_text": "Okay, I'll do it.",
+      "emotion": "Happy 10",
+      "response_text": "Here's your stuff back - in case Benny don't go quiet, you dig? I'll tell the boys to give you a pass to pack some heat.",
+      "index": "96"
+    },
+    {
+      "topic": "VMQTopsVMQTopsSwankTopic036",
+      "topic_text": "Not yet, I want to take care of a few things first.",
+      "emotion": "Sad 15",
+      "response_text": "Okay. Just let me know when you're ready.",
+      "index": "99"
+    },
+    {
+      "topic": "VMQTopsVMQTopsSwankTopic037",
+      "topic_text": "Yeah, send him up to his room. I'll take care of him.",
+      "emotion": "Fear 30",
+      "response_text": "Yeah, sure. I hope you know what you're doing, kid.",
+      "index": "100"
+    },
+    {
+      "topic": "VMQTopsVMQTopsSwankTopic038",
+      "topic_text": "Yeah. Keep him distracted while I search his room.",
+      "emotion": "Happy 10",
+      "response_text": "You got it. Anything else?",
+      "index": "101"
+    },
+    {
+      "topic": "VMQTopsVMQTopsSwankTopic039",
+      "topic_text": "I'm not sure yet, but I had some other questions first.",
+      "emotion": "Happy 10",
+      "response_text": "Sure, whatcha need?",
+      "index": "102"
+    },
+    {
+      "topic": "VMQTopsVMQTopsSwankTopic040",
+      "topic_text": "Goodbye.",
+      "emotion": "Happy 10",
+      "response_text": "Sure, kid, see ya.",
+      "index": "103"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYEGoodbye.",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah, see ya kid.",
+      "index": "104"
+    }
+  ],
+  "combat": [
+    {
+      "topic": "RNVNewsStory2",
+      "topic_text": "RNVNewsStoryLine2",
+      "emotion": "Neutral 50",
+      "response_text": "{Swank:}If I know my pal Benny, he's swinging with the Big Cat Upstairs as we speak. Or he's chasing some angel broad with cans as big as her halo! <Laughs>",
+      "index": "106"
+    }
+  ]
+}

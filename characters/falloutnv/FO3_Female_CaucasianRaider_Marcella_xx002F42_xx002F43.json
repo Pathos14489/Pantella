@@ -1,0 +1,320 @@
+{
+  "name": "Marcella",
+  "url": "/wiki/Marcella",
+  "dialogue_name": "DLC04FF02Marcella.txt",
+  "dialogue_url": "/wiki/DLC04FF02Marcella.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "xx002F42",
+  "ref_id": "xx002F43",
+  "editor_id": "DLC04FF02Marcella",
+  "location": "Disaster relief outpost",
+  "location_url": "/wiki/Disaster_relief_outpost",
+  "descriptions": [
+    "S. Marcella J. who inhabits Point Lookout in 2277.",
+    "She was raised at the Abbey of the Road, where she was educated until she received her Right of Mission.",
+    "She first traveled east from the Abbey to the Commonwealth where she took shelter with a caravan during a windstorm. There, she heard more worrying tales of the Pitt.",
+    "She restored and settled at the nearby disaster relief outpost.",
+    "* 25% chance spawning\n** On death if she is alive; other item if she is found dead",
+    "Marcella appears only in the Fallout 3 add-on Point Lookout."
+  ],
+  "race": "Human",
+  "gender": "Female",
+  "affiliation": "Abbey of the Road",
+  "role": "Missionary",
+  "detailed_location": "Disaster relief outpost",
+  "voice_actor": "Bari Biern",
+  "special": {
+    "Strength": 5,
+    "Perception": 4,
+    "Endurance": 4,
+    "Charisma": 7,
+    "Intelligence": 5,
+    "Agility": 4,
+    "Luck": 4
+  },
+  "level": "12",
+  "tag_skills": [
+    {
+      "Medicine:": "84"
+    },
+    {
+      "Small Guns:": "82(84)"
+    },
+    {
+      "Speech:": "88"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "120"
+    },
+    {
+      "Critical Chance:": "4%"
+    },
+    {
+      "Unarmed Dam.:": "1.1"
+    },
+    {
+      "Poison Resist.:": "15%"
+    },
+    {
+      "Rad. Resist.:": "6%"
+    },
+    {
+      "Carry Weight:": "200"
+    }
+  ],
+  "karma": "Neutral",
+  "voice_type": "DLC04FemaleNormal",
+  "geck_race": "CaucasianRaider",
+  "topics": [
+    {
+      "topic": "DLC04MarAboutFaith00Top",
+      "topic_text": "I want to know about your beliefs.",
+      "emotion": "Neutral 50",
+      "response_text": "Would you like me to recite some scripture, or did you just want to know more about the Faith?",
+      "index": "1"
+    },
+    {
+      "topic": "DLC04MarAboutFaithCult",
+      "topic_text": "Sounds like just another cult to me.",
+      "emotion": "Neutral 50",
+      "response_text": "No, not exactly. People have clung to many beliefs since the Great War, and some have their foundations in the Faith.",
+      "index": "2"
+    },
+    {
+      "topic": "DLC04MarAboutFaithMission",
+      "topic_text": "What exactly is your mission?",
+      "emotion": "Neutral 50",
+      "response_text": "We try to improve the state of the Wasteland by doing good where we can and by spreading the word of the Bible.",
+      "index": "4"
+    },
+    {
+      "topic": "DLC04MarAboutFaithMom",
+      "topic_text": "My mother had a favorite passage from the Bible. Revelation 21:6 - recognize it?",
+      "emotion": "Neutral 50",
+      "response_text": "Of course!  \"I am Alpha and Omega, the beginning and the end. I will give unto him that is athirst of the fountain of the water of life freely.\"",
+      "index": "6"
+    },
+    {
+      "topic": "DLC04MarAboutFaithOrigins",
+      "topic_text": "How did you become a missionary?",
+      "emotion": "Neutral 50",
+      "response_text": "I was raised at the Abbey of the Road where I was educated until I could receive my Rites of Mission. That's when I first left the Abbey.",
+      "index": "8"
+    },
+    {
+      "topic": "DLC04MarAboutFaithPassage",
+      "topic_text": "Scripture?",
+      "emotion": "Neutral 50",
+      "response_text": "Scripture - the world as told in the Bible. Would you like to hear a verse?",
+      "index": "9"
+    },
+    {
+      "topic": "DLC04MarAboutFaithPassNevermind",
+      "topic_text": "Yeah, let's not do that.",
+      "emotion": "Neutral 50",
+      "response_text": "Oh, of course, my child. Something else, then?",
+      "index": "14"
+    },
+    {
+      "topic": "DLC04MarAboutFaithPassRecite",
+      "topic_text": "Sure, let's hear it.",
+      "emotion": "Neutral 50",
+      "response_text": "I'm afraid I don't have a copy of the scripture with me, but I can share a few passages.  Here's one of my favorites.",
+      "index": "15"
+    },
+    {
+      "topic": "DLC04MarcellaBook0TopLvl",
+      "topic_text": "Can we discuss the Blackhall situation?",
+      "emotion": "Neutral 50",
+      "response_text": "I fear Obadiah is in dire straits. What do you want to talk about?",
+      "index": "18"
+    },
+    {
+      "topic": "DLC04MarcellaBookMoreInfo",
+      "topic_text": "Tell me more about this Book that's so important.",
+      "emotion": "Neutral 50",
+      "response_text": "Obadiah's a good man, but his family has an evil past. This book is an unwanted heirloom, and the foundation of the heathen Krvibi ritualists.",
+      "index": "19"
+    },
+    {
+      "topic": "DLC04MarcellaBookWhatNow",
+      "topic_text": "What should I be doing again?",
+      "emotion": "Neutral 50",
+      "response_text": "I told you about their ritual site, remember? See if they're hiding the book there and bring it back to me. From there?  I don't yet know.",
+      "index": "20"
+    },
+    {
+      "topic": "DLC04MarcellaLetterDeliver",
+      "topic_text": "Obadiah Blackhall sent me. I have a letter.",
+      "emotion": "Neutral 50",
+      "response_text": "Obadiah sent you?  Well, then, let's see what he has to say.",
+      "index": "21"
+    },
+    {
+      "topic": "DLC04MarcellaLetterResponse",
+      "topic_text": "What's wrong?  What did the letter say?",
+      "emotion": "Fear 50",
+      "response_text": "Long ago, the Blackhall family possessed a terrible heirloom, a book of evil rituals, best forgotten. The Krvibi have their origins in it.",
+      "index": "24"
+    },
+    {
+      "topic": "DLC04MarcellaLetterWhatToDo",
+      "topic_text": "What do you expect me to do?",
+      "emotion": "Neutral 50",
+      "response_text": "We must get it back before the Krvibi learn anything from it.",
+      "index": "27"
+    },
+    {
+      "topic": "DLC04MarHolotapeMessage",
+      "topic_text": "DLC04MarHolotapeMessage",
+      "emotion": "Pained 50",
+      "response_text": "They attacked while I slept.  I.. I don't expect to survive.  I only pray that you haven't taken that book to Obadiah. You must take up my mission.{Recorded as she lies dying of wounds. Ad-lib coughs, etc, but not overboard.}",
+      "index": "29"
+    },
+    {
+      "topic": "DLC04MarIntro01",
+      "topic_text": "Pleased to meet you, Marcella.",
+      "emotion": "Neutral 50",
+      "response_text": "The feeling is mutual, child. I'd enjoy sharing my belief in the Faith, if you'll listen.",
+      "index": "34"
+    },
+    {
+      "topic": "DLC04MarIntro02",
+      "topic_text": "The Faith? Let me guess - another doomsday cult?",
+      "emotion": "Neutral 50",
+      "response_text": "No, not exactly. I'd be happy to tell you more about my beliefs, if you're interested.",
+      "index": "35"
+    },
+    {
+      "topic": "DLC04MarIntro03",
+      "topic_text": "Shouldn't you be at the Cathedral with the Tribals?",
+      "emotion": "Neutral 50",
+      "response_text": "That's an ironic choice of words, actually.",
+      "index": "36"
+    },
+    {
+      "topic": "DLC04MarKriv0Intro01",
+      "topic_text": "He has, as a matter of fact.",
+      "emotion": "Neutral 50",
+      "response_text": "I thought as much. Listen to me very carefully, child. You mustn't bring it to him.",
+      "index": "39"
+    },
+    {
+      "topic": "DLC04MarKriv0Intro02",
+      "topic_text": "Maybe. So what if he has?",
+      "emotion": "Neutral 50",
+      "response_text": "Please, you don't understand what it is you're sent to fetch. That book, the Krivbeknih, is a thing of evil.",
+      "index": "41"
+    },
+    {
+      "topic": "DLC04MarKrivbeknih01",
+      "topic_text": "Krivbeknih? What are you on about?",
+      "emotion": "Neutral 50",
+      "response_text": "Yes, the Krivbeknih. The Blackhall family has a long, evil history with the book.",
+      "index": "42"
+    },
+    {
+      "topic": "DLC04MarKrivbeknih02",
+      "topic_text": "I don't know what you're talking about, woman. Step aside.",
+      "emotion": "Anger 50",
+      "response_text": "I will not be dismissed by you!",
+      "index": "44"
+    },
+    {
+      "topic": "DLC04MarKrivMotives",
+      "topic_text": "Why do you want it so badly?",
+      "emotion": "Anger 50",
+      "response_text": "Obadiah's no better than the heathens he's asked you to steal it from. He believes he can use it to control them, and God knows what else.",
+      "index": "46"
+    },
+    {
+      "topic": "DLC04MarKrivPayment",
+      "topic_text": "Obadiah's paying. How about you?",
+      "emotion": "Neutral 50",
+      "response_text": "I can't promise you money, but I have some medical supplies I can share. Please; it would be a good thing you do.",
+      "index": "48"
+    },
+    {
+      "topic": "DLC04MarKrivQuestAgree",
+      "topic_text": "If I recover the book, I'll consider bringing it to you.",
+      "emotion": "Neutral 50",
+      "response_text": "I ask no more. You can find me at my tent on the beach, south of Blackhall. God bless your path, child.",
+      "index": "49"
+    },
+    {
+      "topic": "DLC04MarPtLookout00TopLvl",
+      "topic_text": "What do you think of Point Lookout?",
+      "emotion": "Neutral 50",
+      "response_text": "I'm relatively new here myself, but I'll share what I can.",
+      "index": "50"
+    },
+    {
+      "topic": "DLC04MarPtLookoutFetishes",
+      "topic_text": "What do you make of all the bones and dolls on sticks around here?",
+      "emotion": "Neutral 50",
+      "response_text": "Swampfolk fetishes or totems. They probably mark territorial lines, or maybe are involved with rituals of some kind.",
+      "index": "51"
+    },
+    {
+      "topic": "DLC04MarPtLookoutLocals",
+      "topic_text": "What do you think of the locals?",
+      "emotion": "Neutral 50",
+      "response_text": "Hostile, in a word. I try to observe, but the swampfolk are dangerously aggressive to any outsiders. Lucky for us, they tend to keep to the swamp.",
+      "index": "54"
+    },
+    {
+      "topic": "DLC04MarPtLookoutMedicalTents",
+      "topic_text": "Did you set this campsite up?",
+      "emotion": "Neutral 50",
+      "response_text": "Sort of - the tents were collapsed when I found them. I was able to put them back together. This one smells the least like a wet Brahmin.",
+      "index": "55"
+    },
+    {
+      "topic": "DLC04MarPtLookoutWhereYouFrom",
+      "topic_text": "You said you're not from around here?",
+      "emotion": "Neutral 50",
+      "response_text": "I come from the Abbey of the Road. I'm what you might call a missionary. I travel the Wastes, spreading the Faith and doing good where I can.",
+      "index": "57"
+    },
+    {
+      "topic": "DLC04TalkSomethingElse",
+      "topic_text": "Let's talk about something else.",
+      "emotion": "Neutral 50",
+      "response_text": "That book is of the utmost importance, we shouldn't be chatting idly.{polite but hurried.}",
+      "index": "59"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "",
+      "emotion": "Neutral 50",
+      "response_text": "Wait a moment. I need to know; has Obadiah sent you in search of a book?",
+      "index": "61"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "I have to go now.",
+      "emotion": "Neutral 50",
+      "response_text": "Go with great care.",
+      "index": "65"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Neutral 50",
+      "response_text": "Lots of people out there, but too few trustworthy.",
+      "index": "66"
+    }
+  ],
+  "combat": []
+}

@@ -1,0 +1,156 @@
+{
+  "name": "Bill Wilson",
+  "url": "/wiki/Bill_Wilson",
+  "dialogue_name": "BillWilson.txt",
+  "dialogue_url": "/wiki/BillWilson.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "00029AA4",
+  "ref_id": "00093EDC",
+  "editor_id": "BillWilson",
+  "location": "The Wilson's house",
+  "location_url": "/wiki/The_Wilson%27s_house",
+  "descriptions": [
+    "Willy \"Bill\" Wilson is one of seven residents living in Andale, along with his wife Martha and daughter Jenny in the year 2277.",
+    "Bill and his family are the next-door neighbors of the Smiths. Bill, alongside his wife, is pleased that his daughter seems to have feelings for the Smiths' son, Junior. Bill spends most of his time in the shed or Smith house basement working with his brother, Jack, on Andale's \"family business\" - cannibalism.",
+    "Like the other residents of the town, Bill is quite pleased to raise his family there.",
+    "Along with the two Andale children, Bill is the only Andale resident who leaves his house, spending much of his time in front of the shed behind the Wilson house.",
+    "Our Little Secret: Like all residents of Andale, Bill Wilson is a cannibal. Should the Lone Wanderer uncover their secret, they can choose to let them continue their slaughter of wasteland inhabitants or kill them all."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Andale",
+  "role": "Husband, Cannibal",
+  "detailed_location": "The Wilson's house,Andale",
+  "voice_actor": "Jeff Baker",
+  "special": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 5,
+    "Intelligence": 4,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "mod_special_values": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 5,
+    "Intelligence": 4,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "level": "1→10(equal to player characters level)",
+  "tag_skills": [
+    {
+      "Barter:": "30→72"
+    },
+    {
+      "Medicine:": "28→70"
+    },
+    {
+      "Melee Weap.:": "32→74"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "65→110"
+    },
+    {
+      "Critical Chance:": "5%"
+    },
+    {
+      "Unarmed Dam.:": "1.15"
+    },
+    {
+      "Poison Resist.:": "15%"
+    },
+    {
+      "Rad. Resist.:": "6%"
+    },
+    {
+      "Carry Weight:": "210"
+    },
+    {
+      "Damage Res.:": "0%(3%)"
+    }
+  ],
+  "karma": "Evil",
+  "voice_type": "MaleAdult01DefaultDC",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "AndaleOldManHarrisTopic",
+      "topic_text": "What's wrong with that Harris guy?",
+      "emotion": "Neutral 50",
+      "response_text": "Oh, that old kidder? Whatever he's saying, he's just pulling your leg. He's always joking, that one.",
+      "index": "1"
+    },
+    {
+      "topic": "AndaleTownTopic",
+      "topic_text": "Tell me about Andale.",
+      "emotion": "Neutral 50",
+      "response_text": "Why, it's a place to settle down and raise a family. Of course, we don't just let anyone in here. The home owners association is very clear on that.",
+      "index": "2"
+    },
+    {
+      "topic": "AndaleTownTopicOldManHarris",
+      "topic_text": "Old Man Harris doesn't seen very happy.",
+      "emotion": "Neutral 50",
+      "response_text": "Poor guy. His wife died and he went... well... crazy, I guess. He won't talk to any of us anymore.",
+      "index": "4"
+    },
+    {
+      "topic": "AndaleWhatDoYouDo",
+      "topic_text": "What do you do around here?",
+      "emotion": "Happy 50",
+      "response_text": "I feed my family and I love my wife and daughter, what else more is there to life, stranger?",
+      "index": "6"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Happy 50",
+      "response_text": "Well, hi there! Welcome to Andale! I'm Willy Wilson, though folks just call me Bill. Is there anything I can do for you?",
+      "index": "8"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "AndaleTalk1",
+      "topic_text": "AndaleTalk1",
+      "emotion": "Neutral 50",
+      "response_text": "Darling, what's wrong?",
+      "index": "13"
+    },
+    {
+      "topic": "AndaleTalk3",
+      "topic_text": "AndaleTalk3",
+      "emotion": "Neutral 50",
+      "response_text": "Martha, darling. You always say that, you always say, \"I have a bad feeling about this one,\" and every time, things happen like they always do.",
+      "index": "15"
+    },
+    {
+      "topic": "GOODBYE",
+      "topic_text": "I have to go now.",
+      "emotion": "Neutral 50",
+      "response_text": "We'll catch you later!",
+      "index": "17"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Neutral 50",
+      "response_text": "Hey there, Junior!",
+      "index": "20"
+    }
+  ],
+  "combat": []
+}

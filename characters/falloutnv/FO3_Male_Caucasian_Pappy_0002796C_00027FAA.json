@@ -1,0 +1,228 @@
+{
+  "name": "Pappy",
+  "url": "/wiki/Pappy",
+  "dialogue_name": "Pappy.txt",
+  "dialogue_url": "/wiki/Pappy.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": true,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": true,
+  "can_be_companion": false,
+  "base_id": "0002796C",
+  "ref_id": "00027FAA",
+  "editor_id": "Pappy",
+  "location": "Big Town",
+  "location_url": "/wiki/Big_Town",
+  "descriptions": [
+    "Pappy is a pessimistic inhabitant of Big Town in the year 2277.",
+    "Pappy claims to have come from Little Lamplight with his girlfriend Bittercup and the others hoping to find Big Town, a nice town with plenty of food and protection."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Big TownLittle Lamplight(formerly)",
+  "role": "Resident of Big Town",
+  "detailed_location": "Big Town",
+  "voice_actor": "Jeff Baker",
+  "special": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 5,
+    "Intelligence": 4,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "level": "2→6",
+  "tag_skills": [
+    {
+      "Barter:": "34→53"
+    },
+    {
+      "Medicine:": "32→51"
+    },
+    {
+      "Melee Weap.:": "36→55"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Good",
+  "voice_type": "MaleAdult01DefaultDC",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "BigtownPappyRepair",
+      "topic_text": "Is there anyone around here who can repair my stuff?",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah, I can do it.",
+      "index": "1"
+    },
+    {
+      "topic": "BigtownTownBittercupandFlash",
+      "topic_text": "You came here with Bittercup, right?",
+      "emotion": "Anger 50",
+      "response_text": "I told her things would be safe here. How was I supposed to know all those stories were bunk? Then she dumped me, called me a liar.",
+      "index": "4"
+    },
+    {
+      "topic": "BigtownTownServices",
+      "topic_text": "Do you have any traders in town? Any doctors?",
+      "emotion": "Anger 50",
+      "response_text": "We've got two things to do in this town: suck and die. No one ever makes it in this place. You won't find any stores to loot here.{Pappy is angry, frustrated, and sullen. He's suspicious of the player's motives for being here.}",
+      "index": "6"
+    },
+    {
+      "topic": "BigtownTownWhatsWrong",
+      "topic_text": "This place looks like a ghost town.",
+      "emotion": "Anger 50",
+      "response_text": "Yeah, you're telling me. Everything that could go wrong, goes wrong. The Super Mutants and Slavers seem to take turns beating the crap out of us.{(WK) The residents of Big Town are constantly harried.}",
+      "index": "8"
+    },
+    {
+      "topic": "BigtownTownWhereDidYouComeFrom",
+      "topic_text": "Where did you people come from, anyway?",
+      "emotion": "Anger 50",
+      "response_text": "Most of us came from Little Lamplight. We got too old, so they kicked us out. Brats.{(WK) The residents of Big Town are bitter about getting ejected from the relative safety of Lamplight.}",
+      "index": "11"
+    },
+    {
+      "topic": "BigtownTownWhosInCharge",
+      "topic_text": "Who's in charge here?",
+      "emotion": "Anger 50",
+      "response_text": "That big moron, Flash, thinks he's in charge. All he really does is listen to what Red tells him. That's all anyone here really does.",
+      "index": "13"
+    },
+    {
+      "topic": "BigtownTownWhosWho",
+      "topic_text": "Who lives here?",
+      "emotion": "Anger 50",
+      "response_text": "Everyone's dead or dying. Now leave me alone.",
+      "index": "15"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Anger 50",
+      "response_text": "We're all watching you waiting to learn something. Well. Get on with it already!",
+      "index": "18"
+    },
+    {
+      "topic": "MS01AboutRed",
+      "topic_text": "I'm looking for a woman named Red. Sticky promised me some caps...",
+      "emotion": "Anger 50",
+      "response_text": "Red was the only decent person in this hellhole, and the Mutants took her in the raid. That Sticky is a doofus, but I bet Red will cover his debts.{upset}",
+      "index": "28"
+    },
+    {
+      "topic": "MS01QuestHook",
+      "topic_text": "Do you know where the Super Mutants took your friends?",
+      "emotion": "Disgust 100",
+      "response_text": "Well if you feel like dying, go right on ahead. They're up there at some police station near Germantown. Good luck. You're gonna need it.{paranoid, angry, and defeatist}",
+      "index": "30"
+    },
+    {
+      "topic": "MS01QuestHookA1MS01QuestHook1",
+      "topic_text": "Don't lose hope. Do you know where the Super Mutants are located?",
+      "emotion": "Disgust 50",
+      "response_text": "They took 'em north to that old police station... in Germantown... No use in going up there though. They've already been eaten, or worse, by now.{pessimistic}",
+      "index": "34"
+    },
+    {
+      "topic": "MS01QuestHookA2MS01QuestHook2",
+      "topic_text": "If you don't care about your friends, then I guess I won't rescue them.",
+      "emotion": "Surprise 100",
+      "response_text": "Hold on there! I never said I didn't care. I just know there isn't anyone foolish enough to go up to Germantown. Why, you think you can rescue them?{pessimist being called on his bluff}",
+      "index": "36"
+    },
+    {
+      "topic": "MS01QuestHookA3MS01QuestHook3",
+      "topic_text": "No, I'm not going to rescue your friends.",
+      "emotion": "Disgust 100",
+      "response_text": "I knew it. You're just like all the others.{let down and depressed and pessimistic}",
+      "index": "37"
+    },
+    {
+      "topic": "MS01QuestHookA4",
+      "topic_text": "I'll think about it, but I can't rescue your friends now.",
+      "emotion": "Disgust 100",
+      "response_text": "I knew it. You're just like all the others.{let down and depressed and pessimistic}",
+      "index": "38"
+    },
+    {
+      "topic": "MS01QuestHookB1",
+      "topic_text": "I'll rescue your friends just to see the smile on your face when they return!",
+      "emotion": "Disgust 100",
+      "response_text": "Hah! Think you're all that, huh? Well, it's your own funeral. I certainly won't be attending.{pessimistic}",
+      "index": "39"
+    },
+    {
+      "topic": "MS01QuestHookB2",
+      "topic_text": "I got what it takes to rescue your friends, but it's going to cost you.",
+      "emotion": "Disgust 100",
+      "response_text": "Just what I thought. You're a mercenary. We don't need you. Go on up there to die if you like. But don't say you're doing it for us!{pessimistic and bitter}",
+      "index": "40"
+    },
+    {
+      "topic": "SpeechChallengeFailure",
+      "topic_text": "SpeechChallengeFailure",
+      "emotion": "Anger 50",
+      "response_text": "None of your business. Go bother someone else.",
+      "index": "41"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "BigTownGoodbye",
+      "topic_text": "BigTownGoodbye",
+      "emotion": "Neutral 50",
+      "response_text": "I don't know what good it will do, but thanks Timebomb. I'll ask you about it later.{Pappy is cynical about how much trouble the barricades are worth.}",
+      "index": "42"
+    },
+    {
+      "topic": "BigTownResponse",
+      "topic_text": "BigTownResponse",
+      "emotion": "Sad 10",
+      "response_text": "That takes forever, Shorty. Several hours at least.{Pappy is upset at the possibility of more work.}",
+      "index": "50"
+    },
+    {
+      "topic": "BigTownResponse02",
+      "topic_text": "BigTownResponse02",
+      "emotion": "Sad 50",
+      "response_text": "Yeah. We keep moving until there's no space left. Then, it's game over.{Un-assured that there is any hope, Pappy remains melancholy.}",
+      "index": "53"
+    },
+    {
+      "topic": "GOODBYE",
+      "topic_text": "I have to go now.",
+      "emotion": "Disgust 75",
+      "response_text": "We're all going to die!{pessimist saying \"good bye\"}",
+      "index": "58"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Happy 100",
+      "response_text": "What the hell?! Oh it's you.{anger softening when he realizes who it is}",
+      "index": "61"
+    },
+    {
+      "topic": "MS01CrowdSay",
+      "topic_text": "MS01CrowdSay",
+      "emotion": "Surprise 100",
+      "response_text": "I didn't think that'd work!{(cheering) in an excited cheering mob}",
+      "index": "70"
+    }
+  ],
+  "combat": [
+    {
+      "topic": "Attack",
+      "topic_text": "Attack",
+      "emotion": "Anger 100",
+      "response_text": "If I'm going to die, I'm taking one of you with me!",
+      "index": "77"
+    }
+  ]
+}

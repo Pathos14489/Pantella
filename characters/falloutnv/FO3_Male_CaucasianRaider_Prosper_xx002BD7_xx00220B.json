@@ -1,0 +1,136 @@
+{
+  "name": "Prosper",
+  "url": "/wiki/Prosper",
+  "dialogue_name": "DLC01Prosper.txt",
+  "dialogue_url": "/wiki/DLC01Prosper.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "xx002BD7",
+  "ref_id": "xx00220B",
+  "editor_id": "DLC01Prosper",
+  "location": "Train tunnel",
+  "location_url": "/wiki/Train_tunnel_(The_Pitt)",
+  "descriptions": [
+    "Prosper is a slave located in the Capital Wasteland at the train tunnel in 2277.",
+    "Before his capture by slavers, Prosper was a smuggler who transported illicit cargos of steel ingots from The Pitt to outlying areas. Despite his paranoia, nervousness, and carefulness, Prosper’s operation was compromised at some point prior to the Lone Wanderer meeting him. The majority of his crew were killed, while the others, including him, were sold to slavers traveling to Paradise Falls.",
+    "Prosper appears only in the Fallout 3 add-on The Pitt.",
+    "If the Lone Wanderer asks Prosper for the clothes off his own back, the dialogue option reads, \"I need your clothes. Give them to me. Now.\" This is a reference to a recurring line in The Terminator movie series."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Pitt slaves",
+  "role": "Slave",
+  "detailed_location": "Train tunnel",
+  "voice_actor": "Craig Sechler",
+  "special": {
+    "Strength": 4,
+    "Perception": 7,
+    "Endurance": 3,
+    "Charisma": 4,
+    "Intelligence": 4,
+    "Agility": 5,
+    "Luck": 2
+  },
+  "mod_special_values": {
+    "Strength": 4,
+    "Perception": 7,
+    "Endurance": 4,
+    "Charisma": 4,
+    "Intelligence": 4,
+    "Agility": 6,
+    "Luck": 2
+  },
+  "level": "1",
+  "tag_skills": [
+    {
+      "Sneak:": "28(30)"
+    },
+    {
+      "Speech:": "26"
+    },
+    {
+      "Unarmed:": "24(26)"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "20(25)"
+    }
+  ],
+  "karma": "Neutral",
+  "voice_type": "DLC01SlaveMale01VoiceType",
+  "geck_race": "CaucasianRaider",
+  "topics": [
+    {
+      "topic": "DLC01ProsperGreeting1",
+      "topic_text": "I'm not taking you anywhere. You're free to go.",
+      "emotion": "Neutral 50",
+      "response_text": "Thank you! Thank you so much!",
+      "index": "1"
+    },
+    {
+      "topic": "DLC01ProsperGreeting1a",
+      "topic_text": "Good. Now get out of here before I change my mind.",
+      "emotion": "Sad 50",
+      "response_text": "Yes... ma'am. Yes, we will. Thank you, again. You're very kind.",
+      "index": "4"
+    },
+    {
+      "topic": "DLC01ProsperGreeting1b",
+      "topic_text": "Thanks. Now take off. I'm done with you.",
+      "emotion": "Fear 50",
+      "response_text": "Yes... ma'am. Yes, we will. Thank you, again. You're very kind.",
+      "index": "6"
+    },
+    {
+      "topic": "DLC01ProsperGreeting2",
+      "topic_text": "Just get out of my sight. I don't care where you go.",
+      "emotion": "Surprise 50",
+      "response_text": "Wait... we're free? You're serious? You're just going to let us go? Thank you! Thank you so much!",
+      "index": "8"
+    },
+    {
+      "topic": "DLC01ProsperGreeting2a",
+      "topic_text": "I need a set of slave clothes. Where can I get some?",
+      "emotion": "Sad 50",
+      "response_text": "That guy over there on the mattress died last night. I never did get his name.",
+      "index": "15"
+    },
+    {
+      "topic": "DLC01ProsperGreeting2a1",
+      "topic_text": "Great. Thanks. Be careful out there.",
+      "emotion": "Happy 50",
+      "response_text": "We will. Thank you again, stranger. We owe you our lives.",
+      "index": "17"
+    },
+    {
+      "topic": "DLC01ProsperGreeting2a2",
+      "topic_text": "Gross. I'm not wearing a dead guy's clothes. Give me yours. Now.",
+      "emotion": "Surprise 50",
+      "response_text": "My clothes? Off my back? Well... I guess. You did help us. I'm sure... I'm sure I'll make do out there in the wastes.",
+      "index": "18"
+    },
+    {
+      "topic": "DLC01ProsperGreeting2b",
+      "topic_text": "I need your clothes. Give them to me. Now.",
+      "emotion": "Surprise 50",
+      "response_text": "My clothes? Off my back? Well... I guess. You did help us. I'm sure... I'm sure I'll make do out there in the wastes.",
+      "index": "20"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Surprise 50",
+      "response_text": "Oh my god... are? You killed them! Are you real? You're here to save us? Where are we going?",
+      "index": "22"
+    }
+  ],
+  "conversation": [],
+  "combat": []
+}

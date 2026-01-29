@@ -1,0 +1,215 @@
+{
+  "name": "Cannibal Johnson",
+  "url": "/wiki/Cannibal_Johnson",
+  "dialogue_name": "VRemCannibalJohnson.txt",
+  "dialogue_url": "/wiki/VRemCannibalJohnson.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": true,
+  "base_id": "001010B7",
+  "ref_id": "001010CB",
+  "editor_id": "VRemCannibalJohnson",
+  "location": "Cannibal Johnson's cave",
+  "location_url": "/wiki/Cannibal_Johnson%27s_cave",
+  "descriptions": [
+    "DT: 36 (Remnants power armor)",
+    "Cannibal Johnson is a former soldier of the West Coast Enclave's Department of the Army, living as a hermit in a remote cave in the Mojave Wasteland in 2281. He appears in Fallout: New Vegas.",
+    "Back when he was just \"Johnson,\" he served as an Enclave soldier during the height of their power on the West Coast, operating as the marksman",
+    "After the loss of Gannon Senior in an undisclosed incident during a mission, his squad banded together to help his widow and their son. As the junior Gannon grew up, he was told often by Johnson about what a good man his father was, and although an older Arcade still struggles with his ties to the Enclave as a whole, he always kept a close connection with the squad due to this.",
+    "Although Johnson and the others managed to avoid getting caught in the destruction of the oil rig by the Chosen One in 2242, the resulting collapse of the Enclave's West Coast power base eventually culminated in a massive assault on the remaining forces at Navarro by the New California Republic. The squad, Arcade's mother, and a young Arcade were able to escape ahead of the assault but were subsequently targeted for execution by both the NCR Rangers and the Brotherhood of Steel, forcing them to flee south through the Core Region and hope to integrate into NCR civilization and keep their former ties buried.",
+    "After many years of keeping under the NCR's radar, Johnson and the rest of the squad, the Enclave remnants, fled completely from the republic's territory and eventually settled in the frontier of the Mojave Wasteland; after an initial stay in a old vertibird refueling station to stash their equipment,",
+    "In his solitude, Johnson often waxes fondly on some of his positive memories, such as times with an old drill instructor, Arch Dornan, remembering him as \"the meanest bastard ",
+    "A Courier with an Intelligence attribute of 3 or below unlocks a unique dialogue option when first speaking to him and Johnson mentions \"the Reaper.\"",
+    "* Second Battle of Hoover Dam only"
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Enclave Department of the Army(formerly)Enclave remnants",
+  "role": "Retired soldierHermitAllegedcannibal",
+  "detailed_location": "Cannibal Johnson's caveRecruit the remnants:Remnants bunker",
+  "voice_actor": "Peter Renaday",
+  "special": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 4,
+    "Intelligence": 3,
+    "Agility": 6,
+    "Luck": 4
+  },
+  "mod_special_values": {
+    "Strength": 7,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 3,
+    "Intelligence": 3,
+    "Agility": 6,
+    "Luck": 4
+  },
+  "level": "30",
+  "tag_skills": [
+    {
+      "Explosives:": "100"
+    },
+    {
+      "Guns:": "100"
+    },
+    {
+      "Melee Weap.:": "100(102)"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Neutral",
+  "voice_type": "MaleOld02",
+  "geck_race": "CaucasianOldAged",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "You better get moving kid, there's bad guys to kill.{Bark during Hoover dam battle.}",
+      "index": "1"
+    },
+    {
+      "topic": "VDialogueRemnantsVRemCannibalJohnsonTopic000",
+      "topic_text": "Tell me about yourself.",
+      "emotion": "Neutral 50",
+      "response_text": "What do you want to know?",
+      "index": "8"
+    },
+    {
+      "topic": "VDialogueRemnantsVRemCannibalJohnsonTopic001",
+      "topic_text": "So, are you a cannibal?",
+      "emotion": "Happy 25",
+      "response_text": "{grinning and being difficult}Ha. I'm not saying. It's part of my mystique, after all.",
+      "index": "9"
+    },
+    {
+      "topic": "VDialogueRemnantsVRemCannibalJohnsonTopic002",
+      "topic_text": "I don't have any more questions. Let's talk about something else.",
+      "emotion": "Neutral 50",
+      "response_text": "Well, ain't like I've got places to be.",
+      "index": "11"
+    },
+    {
+      "topic": "VDialogueRemnantsVRemCannibalJohnsonTopic003",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Be seeing you.{beat, afterthought - he's very old and could die any time}Maybe.",
+      "index": "12"
+    },
+    {
+      "topic": "VDialogueRemnantsVRemCannibalJohnsonTopic004",
+      "topic_text": "What did you do when you were with the Enclave?",
+      "emotion": "Neutral 50",
+      "response_text": "Squad marksman. I'm pretty proud of the fact that I never killed a single soul who wasn't trying to kill me or one of my team first.",
+      "index": "13"
+    },
+    {
+      "topic": "VDialogueRemnantsVRemCannibalJohnsonTopic005",
+      "topic_text": "You live out here by yourself?",
+      "emotion": "Neutral 50",
+      "response_text": "Sure do. Had a wife for awhile - tribal girl, really pretty eyes - but she's been gone a long time now.",
+      "index": "14"
+    },
+    {
+      "topic": "VDialogueRemnantsVRemCannibalJohnsonTopic006",
+      "topic_text": "Arcade asked me to gather all the remaining members of the Enclave in the Mojave.",
+      "emotion": "Neutral 50",
+      "response_text": "{Arcade hired}Thought I recognized the fellow with you. So, what's this reunion all about, then?",
+      "index": "15"
+    },
+    {
+      "topic": "VDialogueRemnantsVRemCannibalJohnsonTopic007",
+      "topic_text": "He thinks your experience and technology will help resolve the conflict in this region.",
+      "emotion": "Neutral 50",
+      "response_text": "Well, now, there's an interesting idea - do a bit of good before we're all dead and forgotten. You can count me in.",
+      "index": "17"
+    },
+    {
+      "topic": "VDialogueRemnantsVRemCannibalJohnsonTopic008",
+      "topic_text": "I'm gathering allies - just in case.",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah, the NCR and the Legion are about due for another dustup. So, you're going to get yourself involved in that? All right, I'm in. Could be fun.",
+      "index": "19"
+    },
+    {
+      "topic": "VDialogueRemnantsVRemCannibalJohnsonTopic009",
+      "topic_text": "Why, do you have something better to do?",
+      "emotion": "Anger 5",
+      "response_text": "{slightly offended}Hey, I was just asking. No need to get uppity about it. I'll be at the reunion, don't you worry.",
+      "index": "20"
+    },
+    {
+      "topic": "VDialogueRemnantsVRemCannibalJohnsonTopic010",
+      "topic_text": "You make it sound like avoiding innocent deaths was uncommon in the Enclave.",
+      "emotion": "Disgust 10",
+      "response_text": "I'm sorry to say that it was. Civilian casualties was acceptable and sometimes... encouraged. My former squadmate Moreno didn't need encouraging.",
+      "index": "21"
+    },
+    {
+      "topic": "VFreeformDevilsBrigadeCannibalJohnsonTopic001",
+      "topic_text": "Oh?",
+      "emotion": "Neutral 50",
+      "response_text": "I've been in the Reaper's shadow for a long time now, and I thought he'd finally showed up to collect. He's just mocking me now.",
+      "index": "23"
+    },
+    {
+      "topic": "VFreeformDevilsBrigadeCannibalJohnsonTopic003",
+      "topic_text": "How much money do you owe this Reaper guy?",
+      "emotion": "Neutral 50",
+      "response_text": "What? I was talking about Death, kid. Guess that one went right over your head, didn't it? Old Sergeant{DOOR-nan}Dornan would've had a field day with you.",
+      "index": "24"
+    },
+    {
+      "topic": "VFreeformDevilsBrigadeCannibalJohnsonTopic005",
+      "topic_text": "You sound like you're eager to die.",
+      "emotion": "Neutral 50",
+      "response_text": "There's a twitch in my trigger finger, I've lost my eagle eyes, and the other day I could've sworn I heard Sergeant{DOOR-nan}Dornan chewing me out.",
+      "index": "25"
+    },
+    {
+      "topic": "VFreeformDevilsBrigadeCannibalJohnsonTopic008",
+      "topic_text": "Who's Sergeant Dornan?",
+      "emotion": "Neutral 50",
+      "response_text": "He was a drill instructor I knew. He was also the meanest bastard I've ever known.",
+      "index": "28"
+    },
+    {
+      "topic": "VFreeformDevilsBrigadeCannibalJohnsonTopic009",
+      "topic_text": "You served in the military?",
+      "emotion": "Neutral 50",
+      "response_text": "Err... yeah. It was a long time ago. Things were better back then.",
+      "index": "30"
+    },
+    {
+      "topic": "VFreeformDevilsBrigadeCannibalJohnsonTopic011< Speech - 30 >",
+      "topic_text": "It sounds like there's an interesting story behind it.",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] The truth of it is that I did cut out a raider's heart, but only took a bite to mess with his buddies.",
+      "index": "31"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Be seeing you.{beat, afterthought - he's very old and could die any time}Maybe.",
+      "index": "34"
+    },
+    {
+      "topic": "RemnantsCannibalJohnsonUpset",
+      "topic_text": "RemnantsCannibalJohnsonUpset",
+      "emotion": "Anger 50",
+      "response_text": "You guys are actually going to help the Legion? No thanks - count me out of this one.",
+      "index": "35"
+    }
+  ],
+  "combat": []
+}

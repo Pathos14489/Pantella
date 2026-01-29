@@ -1,0 +1,137 @@
+{
+  "name": "Alex Dargon",
+  "url": "/wiki/Alex_Dargon",
+  "dialogue_name": "ProjectPurityAlexDargon.txt",
+  "dialogue_url": "/wiki/ProjectPurityAlexDargon.txt",
+  "spawned_dead": false,
+  "spawned": true,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "0001CCA3",
+  "ref_id": "0001CCAB",
+  "editor_id": "ProjectPurityAlexDargon",
+  "location": "Jefferson Memorial,Citadel",
+  "location_url": "/wiki/Jefferson_Memorial",
+  "descriptions": [
+    "Alex Dargon is a botanist, and member of Doctor Madison Li's science team in Fallout 3. He is found at Project Purity after it's restored, then at The Citadel after The Waters of Life, and back at the purifier in the Fallout 3 add-on Broken Steel.",
+    "Alex grew up in Rivet City and was always interested in what the scientists were doing there. Doctor Madison Li took him under her tutelage, and taught him everything he knows.",
+    "After James returns to his former colleagues, almost twenty years after abandoning it and fleeing to Vault 101, Alex and Daniel Agincourt get the call to return from the field.",
+    "His initial high spirits turn to fear and panic",
+    "Provided that he survives the escape and makes it to the opposite side of the Potomac River, he and the others make their way to The Citadel (he is subsequently impressed by the Brotherhood's set up",
+    "Two weeks after the battle, he can be found continuing his work at the project. Although the Brotherhood scribes are not the friendliest people he's worked with, he's been doing what he can to get along with them."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Project Purity",
+  "role": "Scientist",
+  "detailed_location": "Jefferson MemorialThe Citadel",
+  "voice_actor": "Craig Sechler",
+  "special": {
+    "Strength": 3,
+    "Perception": 6,
+    "Endurance": 3,
+    "Charisma": 4,
+    "Intelligence": 8,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "level": "1→20→30 (Broken Steelonly)",
+  "tag_skills": [
+    {
+      "Explosives:": "32→100"
+    },
+    {
+      "Medicine:": "36→100"
+    },
+    {
+      "Science:": "36→100"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "20→115→165"
+    }
+  ],
+  "karma": "Good",
+  "voice_type": "MaleAdult04DC",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "DLC03TLPPScientistWhatDoingHere",
+      "topic_text": "What are you doing here?",
+      "emotion": "Neutral 50",
+      "response_text": "Me? Well, I figured after all the work we already put into this place, we could help the Brotherhood keep things running smoothly.",
+      "index": "1"
+    },
+    {
+      "topic": "DLC03TLPPScientistsWhereDrLi",
+      "topic_text": "Where's Doctor Li?",
+      "emotion": "Neutral 50",
+      "response_text": "Oh. Well, she... After what happened to you when the purifier started, I think she just kind of had enough.{pleasant, but slightly sad.}",
+      "index": "3"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Fear 50",
+      "response_text": "What the hell are we standing around for? If Garza can't make it, then we need to go without him. This is crazy!{scared, panicky}",
+      "index": "7"
+    },
+    {
+      "topic": "MQ05PPScientistGetItWorking",
+      "topic_text": "Do you think Project Purity will ever work again?",
+      "emotion": "Neutral 50",
+      "response_text": "I don't see why not. Between Doctor Li and your dad, we've got the best minds on the job. They can do just about anything.",
+      "index": "20"
+    },
+    {
+      "topic": "MQ05ScientistAnythingIShouldKnow",
+      "topic_text": "Anything I should know about this place?",
+      "emotion": "Neutral 50",
+      "response_text": "I'd steer clear of the water if I were you. It's seeping in from the Tidal Basin, which means it's radioactive.",
+      "index": "22"
+    },
+    {
+      "topic": "MQ05ScientistCanYouHelp",
+      "topic_text": "Can you help get us through this?",
+      "emotion": "Neutral 50",
+      "response_text": "What? You're supposed to be the tough one, right? Why don't you take care of it?",
+      "index": "24"
+    },
+    {
+      "topic": "MQ05ScientistWhatsYourStory",
+      "topic_text": "What's your story?",
+      "emotion": "Neutral 50",
+      "response_text": "Who, me? Oh, nothing special. I grew up in Rivet City, and was always interested in what the scientists were doing there.",
+      "index": "25"
+    },
+    {
+      "topic": "MQ05ScientistWherePumps",
+      "topic_text": "Where are the flood control pumps?",
+      "emotion": "Neutral 50",
+      "response_text": "You're kidding me, right?",
+      "index": "27"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "I have to go now.",
+      "emotion": "Neutral 50",
+      "response_text": "I really don't want to die down here.",
+      "index": "29"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Neutral 50",
+      "response_text": "What is going on up there?",
+      "index": "33"
+    }
+  ],
+  "combat": []
+}

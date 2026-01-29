@@ -1,0 +1,353 @@
+{
+  "name": "Mister Crowley",
+  "url": "/wiki/Crowley_(Fallout_3)",
+  "dialogue_name": "MisterCrowley.txt",
+  "dialogue_url": "/wiki/MisterCrowley.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000156F5",
+  "ref_id": "0002B8E0",
+  "editor_id": "MisterCrowley",
+  "location": "The Ninth Circle,Carol's Place",
+  "location_url": "/wiki/The_Ninth_Circle",
+  "descriptions": [
+    "Mister Crowley is a ghoul resident of Underworld in the Capital Wasteland around 2277.",
+    "Mister Crowley is a ghoul, who transformed over 20 years ago",
+    "Crowley and four other mercenaries - Dave, Jeff Strayer, Dukov, and Tara - were sent to Fort Constantine by Allistair Tenpenny to retrieve a rare weapon. During the mission, Crowley was locked in a room full of feral ghouls by Dukov, who wanted to increase his own share of the payout. Crowley survived the imprisonment and harbors a passionate resentment toward those who left him behind.",
+    "Mister Crowley can usually be found in either the Ninth Circle or his bed at Carol's Place in Underworld. He usually sleeps until 12 PM.",
+    "The Fallout 3 Official Game Guide uses the lyrics to Ozzy Osbourne's song Mr. Crowley in its walkthrough of You Gotta Shoot 'Em in the Head."
+  ],
+  "race": "Ghoul",
+  "gender": "Male",
+  "affiliation": "Rivet City(formerly)UnderworldAllistair Tenpenny(formerly)",
+  "role": "Mercenary (formerly)",
+  "detailed_location": "Carol's Place(Underworld)Ninth Circle(Underworld)",
+  "voice_actor": "Mike Rosson",
+  "special": {
+    "Strength": 6,
+    "Perception": 2,
+    "Endurance": 4,
+    "Charisma": 3,
+    "Intelligence": 3,
+    "Agility": 7,
+    "Luck": 5
+  },
+  "level": "1→20→30 (Broken Steelonly)",
+  "tag_skills": [
+    {
+      "Melee Weap.:": "71"
+    },
+    {
+      "Small Guns:": "73"
+    },
+    {
+      "Unarmed:": "67"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "135→185→235 (Broken Steelonly)"
+    }
+  ],
+  "karma": "Evil",
+  "voice_type": "MaleGenericGhoulDC",
+  "geck_race": "Ghoul",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Disgust 50",
+      "response_text": "What are you looking at? You'd think you'd never seen a Ghoul up close before.",
+      "index": "1"
+    },
+    {
+      "topic": "MS14AlreadyDead",
+      "topic_text": "Allistair Tenpenny is already dead.",
+      "emotion": "Anger 50",
+      "response_text": "Damn! He's the one I most wanted to die by my hand.",
+      "index": "15"
+    },
+    {
+      "topic": "MS14BackAtYou",
+      "topic_text": "No, I haven't. Say, does that hurt?",
+      "emotion": "Disgust 50",
+      "response_text": "No, it tickles. Everyone's got to be a comedian.{sarcasm}",
+      "index": "29"
+    },
+    {
+      "topic": "MS14BuildUnderworld",
+      "topic_text": "Zombies couldn't make a place like Underworld.",
+      "emotion": "Surprise 50",
+      "response_text": "See? I knew you understood Ghouls.",
+      "index": "32"
+    },
+    {
+      "topic": "MS14CanKill",
+      "topic_text": "Not for the right cause.",
+      "emotion": "Happy 50",
+      "response_text": "Or the right money, heh?",
+      "index": "33"
+    },
+    {
+      "topic": "MS14Defuse",
+      "topic_text": "Easy now. I've got nothing against Ghouls.",
+      "emotion": "Neutral 50",
+      "response_text": "Is that so?  Even if I call you a milk-sucking, mutant-loving, water-stealing whore?",
+      "index": "38"
+    },
+    {
+      "topic": "MS14ExitDialogue",
+      "topic_text": "This has been fun, but I've got things to do.",
+      "emotion": "Happy 50",
+      "response_text": "Don't let me keep you.",
+      "index": "40"
+    },
+    {
+      "topic": "MS14FortConstantine",
+      "topic_text": "Tell me where Fort Constantine is.",
+      "emotion": "Fear 50",
+      "response_text": "It's pretty far away, northwest of here. Getting there won't do you any good though, not without those keys.",
+      "index": "41"
+    },
+    {
+      "topic": "MS14GoAway",
+      "topic_text": "I don't need to stay here and listen to your lame insults.",
+      "emotion": "Anger 50",
+      "response_text": "That's it. Run away like a smoothskin coward.",
+      "index": "43"
+    },
+    {
+      "topic": "MS14GotKeysHave you got what I want?",
+      "topic_text": "Here's Strayer's key. Shot in the head, just like you asked.",
+      "emotion": "Happy 50",
+      "response_text": "Marvelous! My list is growing shorter.",
+      "index": "44"
+    },
+    {
+      "topic": "MS14GotLie",
+      "topic_text": "I put a bullet right between Ted Strayer's eyes. <Lie.>",
+      "emotion": "Happy 50",
+      "response_text": "So, the Ghoul hater got what was coming to him. Good riddance.",
+      "index": "63"
+    },
+    {
+      "topic": "MS14GotTenpennyDead",
+      "topic_text": "I've decided not to kill Tenpenny. He made me a better offer.",
+      "emotion": "Anger 50",
+      "response_text": "What! I hired you to kill him! I want him dead! You double crossed me.",
+      "index": "69"
+    },
+    {
+      "topic": "MS14GotTenpennyLie",
+      "topic_text": "Tenpenny is dead. I watched his brains splatter. <Lie.>",
+      "emotion": "Anger 50",
+      "response_text": "Don't lie to me. The whole wasteland would be talking about it if Tenpenny died.",
+      "index": "74"
+    },
+    {
+      "topic": "MS14HaveKey",
+      "topic_text": "Sure. Take it. I don't have any use for it.",
+      "emotion": "Happy 50",
+      "response_text": "Ah! My trophy. You've earned your reward.",
+      "index": "76"
+    },
+    {
+      "topic": "MS14Insult",
+      "topic_text": "Fucking brain eater!",
+      "emotion": "Surprise 50",
+      "response_text": "Are you comparing me to a...a...zombie!",
+      "index": "79"
+    },
+    {
+      "topic": "MS14Insulted",
+      "topic_text": "Milk sucking? You shuffle stepping, brain eating, grave loving zombie!",
+      "emotion": "Anger 50",
+      "response_text": "Another human bigot. It figures. Go mate with a Super Mutant.",
+      "index": "81"
+    },
+    {
+      "topic": "MS14JustGossip",
+      "topic_text": "Hey! I'm just looking to trade a drink for some gossip.",
+      "emotion": "Surprise 50",
+      "response_text": "Humph. Not sure I know anything of use, but I'll take that drink.",
+      "index": "82"
+    },
+    {
+      "topic": "MS14KillHumans",
+      "topic_text": "You want to kill humans? I thought it would just be Ghouls. No way.",
+      "emotion": "Anger 50",
+      "response_text": "Watch the attitude, human. Right here, right now, there are more of us than there are of you.",
+      "index": "85"
+    },
+    {
+      "topic": "MS14KillLots",
+      "topic_text": "The day isn't complete until I've killed something.",
+      "emotion": "Surprise 50",
+      "response_text": "Well aren't you the bloodthirsty type?",
+      "index": "86"
+    },
+    {
+      "topic": "MS14NewDealNo",
+      "topic_text": "No way. I'm going to keep those keys for myself.",
+      "emotion": "Anger 50",
+      "response_text": "What! You bastard, I'll kill you!",
+      "index": "91"
+    },
+    {
+      "topic": "MS14NewDealYes",
+      "topic_text": "More caps? You've got a deal.",
+      "emotion": "Anger 50",
+      "response_text": "Good. Oh, and I still want Tenpenny dead. That bastard really does hate Ghouls.",
+      "index": "92"
+    },
+    {
+      "topic": "MS14NoKey",
+      "topic_text": "Um... I don't have it.",
+      "emotion": "Anger 50",
+      "response_text": "Well, go get it!",
+      "index": "94"
+    },
+    {
+      "topic": "MS14NoOffense",
+      "topic_text": "All true, except for the part about the mutants, the water and the whore.",
+      "emotion": "Happy 50",
+      "response_text": "Ha, ha! I like a human that knows his place. Too many of you think we're all just zombies.",
+      "index": "98"
+    },
+    {
+      "topic": "MS14NoQuestions",
+      "topic_text": "Sounds simple enough.",
+      "emotion": "Neutral 50",
+      "response_text": "Then get going.",
+      "index": "103"
+    },
+    {
+      "topic": "MS14NotBigot",
+      "topic_text": "Those people you sent me to kill aren't Ghoul haters...",
+      "emotion": "Anger 50",
+      "response_text": "You weren't supposed to talk to them! You were just supposed to kill them!",
+      "index": "104"
+    },
+    {
+      "topic": "MS14NotInterested",
+      "topic_text": "I don't think so.",
+      "emotion": "Neutral 50",
+      "response_text": "Hey, that's your loss, smoothkin.",
+      "index": "113"
+    },
+    {
+      "topic": "MS14NotYet",
+      "topic_text": "Not yet, but I'm working on it.",
+      "emotion": "Disgust 50",
+      "response_text": "Well? what are you waiting for?",
+      "index": "116"
+    },
+    {
+      "topic": "MS14Reconsidered",
+      "topic_text": "I've reconsidered your offer. I'll kill those Ghoul-hating bigots for you.",
+      "emotion": "Neutral 50",
+      "response_text": "Excellent! Okay, here's a list of the guys and their last known locations.",
+      "index": "117"
+    },
+    {
+      "topic": "MS14ReluctantOffer",
+      "topic_text": "Maybe. I don't know if I trust you.",
+      "emotion": "Disgust 50",
+      "response_text": "The feeling's mutual, smoothskin. But that never stopped a business deal.",
+      "index": "121"
+    },
+    {
+      "topic": "MS14TakeQuest",
+      "topic_text": "Sure. People like that don't deserve to live.",
+      "emotion": "Happy 50",
+      "response_text": "Excellent! Take this sniper rifle. You'll need it.",
+      "index": "124"
+    },
+    {
+      "topic": "MS14TakeQuestMoney",
+      "topic_text": "Hey, anything for some extra caps.",
+      "emotion": "Happy 50",
+      "response_text": "Excellent! Take this sniper rifle. You'll need it.",
+      "index": "127"
+    },
+    {
+      "topic": "MS14TooGood",
+      "topic_text": "I don't like where this is headed.",
+      "emotion": "Fear 50",
+      "response_text": "Forget it. I guess you aren't the right type.",
+      "index": "130"
+    },
+    {
+      "topic": "MS14WhatOffer",
+      "topic_text": "Okay. What's the plan?",
+      "emotion": "Disgust 50",
+      "response_text": "Not everyone is as sympathetic to Ghouls as you are. In fact some humans are downright bigots.",
+      "index": "131"
+    },
+    {
+      "topic": "MS14WhyTheseGuys",
+      "topic_text": "What do you have against these guys?",
+      "emotion": "Anger 50",
+      "response_text": "They're Ghoul haters. I want them all dead. Don't you think that's enough?",
+      "index": "134"
+    },
+    {
+      "topic": "SpeechChallengeFailure",
+      "topic_text": "SpeechChallengeFailure",
+      "emotion": "Anger 50",
+      "response_text": "You're lying. I bet you didn't have the guts to kill him.",
+      "index": "135"
+    },
+    {
+      "topic": "UnderworldTownTopic",
+      "topic_text": "What can you tell me about Underworld?",
+      "emotion": "Sad 50",
+      "response_text": "It's a place for Ghouls. Here we're just people, not monsters.",
+      "index": "137"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "I have to go now.",
+      "emotion": "Happy 50",
+      "response_text": "Yes! They're all dead! And I have the keys. The keys to the...are you still here? Get lost. I have a trip to plan.",
+      "index": "141"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Anger 50",
+      "response_text": "Hey you. Ya, you. I want to talk to you.",
+      "index": "145"
+    },
+    {
+      "topic": "UnderworldTalkGretaMisterCrowleyFood2",
+      "topic_text": "UnderworldTalkCrowleyGretaFood2",
+      "emotion": "Neutral 50",
+      "response_text": "If I thought there was a chance that it would be better than this slop, I'd do that. But as it stands, this is my only option.",
+      "index": "154"
+    },
+    {
+      "topic": "UnderworldTalkGretaMisterCrowleyFood4",
+      "topic_text": "UnderworldTalkCrowleyGretaFood4",
+      "emotion": "Neutral 50",
+      "response_text": "Fine. I suppose I can choke down some of the squirrel stew.",
+      "index": "156"
+    },
+    {
+      "topic": "UnderworldTalkResponseShort1",
+      "topic_text": "UnderworldTalkHelloResponseShort",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah, hello. Whatever.",
+      "index": "159"
+    }
+  ],
+  "combat": []
+}

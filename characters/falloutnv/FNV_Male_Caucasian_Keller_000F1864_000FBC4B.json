@@ -1,0 +1,328 @@
+{
+  "name": "Keller",
+  "url": "/wiki/Keller_(Fallout:_New_Vegas)",
+  "dialogue_name": "NVNCRAgentKeller.txt",
+  "dialogue_url": "/wiki/NVNCRAgentKeller.txt",
+  "spawned_dead": false,
+  "spawned": true,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000F1864",
+  "ref_id": "000FBC4B",
+  "editor_id": "NVNCRAgentKeller",
+  "location": "Miguel's Pawn Shop",
+  "location_url": "/wiki/Miguel%27s_Pawn_Shop",
+  "descriptions": [
+    "Keller is an NCR Ranger working as an undercover agent investigating a chem ring in Westside in 2281.",
+    "This undercover agent of the NCR police spearheads an investigation with Lt. Boyd",
+    "With the dealer behind bars and awaiting questioning, Keller meanwhile poses as an associate of Price, handling his deliveries while he is away, covering up his absence as a recent business opportunity that Price went to check out.",
+    "Contreras soon sends one of his associates, the Courier, to deliver a package of medical supplies to Price, unaware that his contact has already been apprehended and locked up.",
+    "Dealing with Contreras: The Courier is sent to Miguel's Pawn Shop to find Price, Contreras' contact, but instead Keller is there. Talk to him and report back to Contreras. He'll ask the Courier to kill Keller, but they can convince Contreras to work with him, Barter check of 70 or Speech check of 80. Whichever option is chosen, return to Keller and either kill him or convince him to work with Contreras.",
+    "If convinced to allow Contreras to continue his dealings and if left alive, interacting with Keller will only yield him to ask \"What did Contreras say?\" and then leave the conversation."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "New California Republic Rangers",
+  "role": "Investigator",
+  "detailed_location": "Miguel's Pawn Shop,Westside",
+  "voice_actor": "Yuri Lowenthal",
+  "special": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 5,
+    "Intelligence": 5,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "level": "12",
+  "tag_skills": [
+    {
+      "Guns:": "74"
+    },
+    {
+      "Science:": "74"
+    },
+    {
+      "Unarmed:": "72"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Neutral",
+  "voice_type": "MaleAdult01Default",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "What do you want?",
+      "index": "1"
+    },
+    {
+      "topic": "VFreeformMcCarranNVNCRAgentKellerTopic000",
+      "topic_text": "Have you seen a guy named Price around?",
+      "emotion": "Neutral 50",
+      "response_text": "We work together. I'm handling his deliveries for the moment while he handles a business opportunity that came up.",
+      "index": "3"
+    },
+    {
+      "topic": "VFreeformMcCarranNVNCRAgentKellerTopic001",
+      "topic_text": "Brahmin tipping is a cherished pastime.",
+      "emotion": "Neutral 50",
+      "response_text": "What? Look, do you have something to drop off or not?",
+      "index": "4"
+    },
+    {
+      "topic": "VFreeformMcCarranNVNCRAgentKellerTopic003",
+      "topic_text": "<Draw weapon> You're a dead man.",
+      "emotion": "Neutral 50",
+      "response_text": "Whoa!  Hold on a minute, buddy...",
+      "index": "5"
+    },
+    {
+      "topic": "VFreeformMcCarranNVNCRAgentKellerTopic005",
+      "topic_text": "Um, well...  Nevermind.",
+      "emotion": "Neutral 50",
+      "response_text": "Crazy wastelander.",
+      "index": "7"
+    },
+    {
+      "topic": "VFreeformMcCarranNVNCRAgentKellerTopic006",
+      "topic_text": "Close enough.  Yeah, Contreras told me to give Price this package.",
+      "emotion": "Neutral 50",
+      "response_text": "Lets see here...",
+      "index": "8"
+    },
+    {
+      "topic": "VFreeformMcCarranNVNCRAgentKellerTopic007",
+      "topic_text": "<Draw Weapon> We agreed you should die.",
+      "emotion": "Neutral 50",
+      "response_text": "Contreras will still get his. Killing you will just save me some paperwork.",
+      "index": "10"
+    },
+    {
+      "topic": "VFreeformMcCarranNVNCRAgentKellerTopic008",
+      "topic_text": "He said he would help you.",
+      "emotion": "Neutral 50",
+      "response_text": "Great. Let him know we'll be keeping an eye on him. He is free to do business...",
+      "index": "11"
+    },
+    {
+      "topic": "VFreeformMcCarranNVNCRAgentKellerTopic009",
+      "topic_text": "I had no idea that package had chems! Contreras gave it to me!",
+      "emotion": "Neutral 50",
+      "response_text": "Contreras, eh? We suspected he was involved somehow.",
+      "index": "13"
+    },
+    {
+      "topic": "VFreeformMcCarranNVNCRAgentKellerTopic010",
+      "topic_text": "<Draw Weapon> You'll never take me alive, pig!",
+      "emotion": "Neutral 50",
+      "response_text": "Good. Saves me paperwork.",
+      "index": "15"
+    },
+    {
+      "topic": "VFreeformMcCarranNVNCRAgentKellerTopic011",
+      "topic_text": "Who the hell are you?",
+      "emotion": "Neutral 50",
+      "response_text": "Ranger Keller. I've been undercover for months tracking chems in this area.",
+      "index": "16"
+    },
+    {
+      "topic": "VFreeformMcCarranNVNCRAgentKellerTopic012",
+      "topic_text": "<Draw Weapon> You won't be telling anyone about this.",
+      "emotion": "Neutral 50",
+      "response_text": "Heh, an accomplice afterall. Well, it'll save me some paperwork just killing you.",
+      "index": "18"
+    },
+    {
+      "topic": "VFreeformMcCarranNVNCRAgentKellerTopic013",
+      "topic_text": "Hey, I'm just the messenger. I didn't know anything about this.",
+      "emotion": "Neutral 50",
+      "response_text": "You know what? I believe you.",
+      "index": "19"
+    },
+    {
+      "topic": "VFreeformMcCarranNVNCRAgentKellerTopic014",
+      "topic_text": "C'mon guy.  You're no merchant.  You've got Ranger all over you.",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] What?! How the hell did you figure that out?",
+      "index": "21"
+    },
+    {
+      "topic": "VFreeformMcCarranNVNCRAgentKellerTopic015",
+      "topic_text": "The way you stand, your weapon, even your armor is fitted in a military fashion.",
+      "emotion": "Neutral 50",
+      "response_text": "Hell. Thought I'd done a better job than that. Well, if that's how it is, you can call me Ranger Keller.",
+      "index": "25"
+    },
+    {
+      "topic": "VFreeformMcCarranNVNCRAgentKellerTopic016{Speech}",
+      "topic_text": "I'm sure Contreras could work with you.",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] It might work since he's acting as a major hub for this activity. It's not like he has much choice now that we have evidence.",
+      "index": "28"
+    },
+    {
+      "topic": "VFreeformMcCarranNVNCRAgentKellerTopic018",
+      "topic_text": "<Give 250 caps> I'm sure Contreras would be willing to work with you...",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] I wouldn't normally do this, but seeing so much money change hands between scumbags on a daily basis has me thinking.",
+      "index": "31"
+    },
+    {
+      "topic": "VFreeformMcCarranNVNCRAgentKellerTopic019",
+      "topic_text": "Just some supplies for McCarran from the Crimson Caravan.",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] All right, if you hear anything, report it to myself or Lt. Boyd immediately. We need to track down his source.",
+      "index": "35"
+    },
+    {
+      "topic": "VFreeformMcCarranNVNCRAgentKellerTopic021",
+      "topic_text": "You might want to ask Contreras at Camp McCarran that question.",
+      "emotion": "Neutral 50",
+      "response_text": "Contreras?! What's his involvement? Was he selling drugs to Price?",
+      "index": "38"
+    },
+    {
+      "topic": "VFreeformMcCarranNVNCRAgentKellerTopic022",
+      "topic_text": "What's going to happen to him?",
+      "emotion": "Neutral 50",
+      "response_text": "He'll be shot. We have no tolerance for chem dealers in the military.",
+      "index": "39"
+    },
+    {
+      "topic": "VFreeformMcCarranNVNCRAgentKellerTopic023",
+      "topic_text": "Ok. I'll just be on my way then.",
+      "emotion": "Neutral 50",
+      "response_text": "Stay out of trouble.",
+      "index": "40"
+    },
+    {
+      "topic": "VFreeformMcCarranNVNCRAgentKellerTopic024",
+      "topic_text": "<Draw Weapon> Well, I can't just let him be killed. Word of this stops here.",
+      "emotion": "Neutral 50",
+      "response_text": "I have Contreras. No one is going to miss you.",
+      "index": "41"
+    },
+    {
+      "topic": "VFreeformMcCarranNVNCRAgentKellerTopic025",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Goodbye.",
+      "index": "42"
+    },
+    {
+      "topic": "VFreeformMcCarranNVNCRAgentKellerTopic027",
+      "topic_text": "<Give 250 caps> Okay, make that 500 caps. I'm sure Contreras can skim for you.",
+      "emotion": "Neutral 50",
+      "response_text": "I wouldn't normally do this, but seeing so much money change hands between scumbags on a daily basis has me thinking.",
+      "index": "43"
+    },
+    {
+      "topic": "VFreeformMcCarranNVNCRAgentKellerTopic028",
+      "topic_text": "<Draw Weapon> I think I'll just take my caps back from your corpse.",
+      "emotion": "Neutral 50",
+      "response_text": "You really don't know what you just got yourself into, girlie.",
+      "index": "47"
+    },
+    {
+      "topic": "VFreeformMcCarranNVNCRAgentKellerTopic030",
+      "topic_text": "Well, I was given this package to deliver to him.",
+      "emotion": "Neutral 50",
+      "response_text": "Let's see... Well, it looks like you've got the materials here to make full-blown chems.",
+      "index": "49"
+    },
+    {
+      "topic": "VFreeformMcCarranNVNCRAgentKellerTopic031",
+      "topic_text": "Son of a...  Sir, I didn't know anything about this.",
+      "emotion": "Neutral 50",
+      "response_text": "You know what? I believe you.",
+      "index": "50"
+    },
+    {
+      "topic": "VFreeformMcCarranNVNCRAgentKellerTopic032",
+      "topic_text": "Nothing. I was just told he was a local merchant I should check out.",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] All right, if you hear anything, report it to myself or Lt. Boyd immediately. We need to track down his source.",
+      "index": "52"
+    },
+    {
+      "topic": "VFreeformMcCarranNVNCRAgentKellerTopic033",
+      "topic_text": "<Draw Weapon> And now I'm going to kill you, you lying son of a bitch.",
+      "emotion": "Neutral 50",
+      "response_text": "Whoa!  Hold on a minute, buddy...",
+      "index": "54"
+    },
+    {
+      "topic": "VFreeformMcCarranNVNCRAgentKellerTopic035",
+      "topic_text": "<Draw Weapon> Special delivery!",
+      "emotion": "Neutral 50",
+      "response_text": "Ah, hell!{About to have a surprise gunfight.}",
+      "index": "56"
+    },
+    {
+      "topic": "VFreeformMcCarranNVNCRAgentKellerTopic036",
+      "topic_text": "Oh... Well, I'll come back when he's around.",
+      "emotion": "Neutral 50",
+      "response_text": "Whatever you say, buddy.",
+      "index": "57"
+    },
+    {
+      "topic": "VFreeformMcCarranNVNCRAgentKellerTopic037",
+      "topic_text": "No one works for Price, so who the hell are you?",
+      "emotion": "Neutral 50",
+      "response_text": "Ah, shit. Well since you seem to have things figured out, the name's Keller. I'm an NCR Ranger investigating chem runners.",
+      "index": "59"
+    },
+    {
+      "topic": "VFreeformMcCarranNVNCRAgentKellerTopic038",
+      "topic_text": "You said you were handling Price's goods while he's away?",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah. You need something?",
+      "index": "62"
+    },
+    {
+      "topic": "VFreeformMcCarranNVNCRAgentKellerTopic041",
+      "topic_text": "Contreras would like to work with you.",
+      "emotion": "Neutral 50",
+      "response_text": "Really now? We had our suspicions about that man, but he's got so many shipments going so many different directions it's been hard to track",
+      "index": "63"
+    },
+    {
+      "topic": "VFreeformMcCarranNVNCRAgentKellerTopic042",
+      "topic_text": "Leave him alone and he'll share contact information.",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] He has himself a deal. However, If he tries to run or he continues to deal strategic assets with enemies, he's a dead man.",
+      "index": "65"
+    },
+    {
+      "topic": "VFreeformMcCarranNVNCRAgentKellerTopic043",
+      "topic_text": "Don't charge him and he'll help you take down the local dealers.",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] He has himself a deal. However, If he tries to run or he continues to deal strategic assets with enemies, he's a dead man.",
+      "index": "67"
+    },
+    {
+      "topic": "VFreeformMcCarranNVNCRAgentKellerTopic045",
+      "topic_text": "He gave me a package to deliver and now he asked me to kill you.",
+      "emotion": "Neutral 50",
+      "response_text": "Sounds like the evidence we need to bring him in for questioning and search his shack, but why are you telling me all of this?",
+      "index": "69"
+    },
+    {
+      "topic": "VFreeformMcCarranNVNCRAgentKellerTopic046",
+      "topic_text": "If Contreras is a scumbag, I want him caught.",
+      "emotion": "Neutral 50",
+      "response_text": "Well, thanks for the tip, but we'll need more evidence. Talk to Boyd at McCarran.",
+      "index": "70"
+    }
+  ],
+  "conversation": [],
+  "combat": []
+}

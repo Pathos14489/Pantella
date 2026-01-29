@@ -1,0 +1,282 @@
+{
+  "name": "Zip",
+  "url": "/wiki/Zip_(Little_Lamplight)",
+  "dialogue_name": "Zip.txt",
+  "dialogue_url": "/wiki/Zip.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": true,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000179D6",
+  "ref_id": "00036FE6",
+  "editor_id": "Zip",
+  "location": "Little Lamplight",
+  "location_url": "/wiki/Little_Lamplight",
+  "descriptions": [
+    "Ricky \"Zip\" is a nine-year-old boy in Little Lamplight in Fallout 3.",
+    "Hyperactive and quickly-spoken, Zip's energy is put to use as one of Little Lamplight's scouts and scavengers, a role he utilizes to further fuel his Nuka-Cola addiction by claiming any Nuka-Cola he finds for himself.",
+    "He asserts his offer is always available unless, according to him, he dies from drinking too much Nuka-Cola, but he brushes this concern off almost immediately as he reassures that everybody knows this outcome is impossible.",
+    "As his addiction makes him jumpy, Mayor Maccready has prohibited Zip from carrying a gun around town, stemming from a past incident that now means he must forfeit his gun into lockdown each time he returns from scavenging.",
+    "Zip's propensity for getting distracted during scavenging missions has led to Eclair mildly reprimanding him, as he has forgotten to bring him items like meat or kindling needed for cooking.",
+    "Zip has theories over where his nickname originated from, including that it may be tied to zippers because he wears pants (though dismisses this as others wear pants), or that it stems from how fast he is due to what the other children have told him (which he also dismisses on the basis everyone else is just too slow).",
+    "His theories extend to the \"big, scary monsters\" inhabiting Vault 87, which he can bet the Lone Wanderer is going to kill, but not before interjecting that they might eat the Lone Wanderer's face off first."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Little Lamplight",
+  "role": "Little Lamplight scavenger and scoutNuka-Cola addict",
+  "detailed_location": "Little Lamplight",
+  "voice_actor": "Sean McCoy",
+  "special": {
+    "Strength": 6,
+    "Perception": 7,
+    "Endurance": 5,
+    "Charisma": 3,
+    "Intelligence": 3,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "level": "1",
+  "tag_skills": [
+    {
+      "Explosives:": "34"
+    },
+    {
+      "Small Guns:": "32"
+    },
+    {
+      "Sneak:": "32"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "30"
+    },
+    {
+      "Critical Chance:": "5%"
+    },
+    {
+      "Unarmed Dam.:": "1.25"
+    },
+    {
+      "Poison Resist.:": "20%"
+    },
+    {
+      "Rad. Resist.:": "8%"
+    },
+    {
+      "Carry Weight:": "210"
+    },
+    {
+      "Damage Res.:": "4%"
+    }
+  ],
+  "karma": "Good",
+  "voice_type": "MaleChild01DC",
+  "geck_race": "AsianChild",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Disgust 50",
+      "response_text": "Hey mungo. This is an A B conversation so C your way out.{\"mungo\" said with derision}",
+      "index": "1"
+    },
+    {
+      "topic": "LLDirections",
+      "topic_text": "Can you give me directions?",
+      "emotion": "Happy 25",
+      "response_text": "Where? I've been just about everywhere down here, so I can get you to anywhere down here.{hyperactive}",
+      "index": "11"
+    },
+    {
+      "topic": "LLFirstMeetingResponseAFriendly First Response",
+      "topic_text": "No, you don't need to shoot me. Just think of me as a big kid.",
+      "emotion": "Neutral 50",
+      "response_text": "That's good, they don't like me having my gun in town, so I gotta turn it in first, so if I had to shoot you you'd have to wait a bit.{hyperactive}",
+      "index": "12"
+    },
+    {
+      "topic": "LLFirstMeetingResponseBRude First Response",
+      "topic_text": "Beat it, kid. You bother me.",
+      "emotion": "Neutral 50",
+      "response_text": "But wait, you don't even know who I am yet!{hyperactive}",
+      "index": "18"
+    },
+    {
+      "topic": "LLLMQ06TellMeAboutVault87",
+      "topic_text": "What do you know about Vault 87?",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah, I know that place. Yep, sure do. Monsters back there. Big, scary monsters. Lots of them. Tons, even.{hyperactive, spoken as quickly as possible}",
+      "index": "19"
+    },
+    {
+      "topic": "LLNicknames",
+      "topic_text": "Why are you called Zip?",
+      "emotion": "Neutral 50",
+      "response_text": "Why Zip? Or why do I have a nickname at all? I mean, why don't people just call me Ricky? Or Yancy? Or Eustace P. Vanderbanger the Third?{Hyperactive, just about as fast as you can say. Maybe even a little too fast to understand.}",
+      "index": "21"
+    },
+    {
+      "topic": "LLZipCola1",
+      "topic_text": "You said you were looking for Nuka-Cola?",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah, and I got lots to trade. But if you got no Nuka, you're not getting nothing, no way!{hyperactive}",
+      "index": "24"
+    },
+    {
+      "topic": "LLZipCola2A",
+      "topic_text": "What have you got to trade for an ice cold bottle of Nuka-Cola?",
+      "emotion": "Happy 50",
+      "response_text": "Oh, I found a lucky bullet this morning!{hyperactive}",
+      "index": "29"
+    },
+    {
+      "topic": "LLZipCola2C",
+      "topic_text": "Never mind. I think you've had enough sugar for one day.",
+      "emotion": "Sad 50",
+      "response_text": "But Nuka-Cola's fortified with vitaminerals and health tonics! It even says so on the label! That means it's healthy for me!{hyperactive and whining}",
+      "index": "36"
+    },
+    {
+      "topic": "LLZipCola3A",
+      "topic_text": "Sounds like a good trade to me. Here.",
+      "emotion": "Happy 50",
+      "response_text": "Thanks! Nuka for me!",
+      "index": "37"
+    },
+    {
+      "topic": "LLZipCola3B",
+      "topic_text": "No deal, Zip.",
+      "emotion": "Fear 50",
+      "response_text": "Maybe I'll have something better tomorrow, so don't drink that Nuka. Save it for me, save it for me!{hyperactive}",
+      "index": "40"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYEI have to go now.",
+      "topic_text": "I'm going away. You stay here. Away from me.",
+      "emotion": "Neutral 50",
+      "response_text": "Okay, see you next time, mister!",
+      "index": "41"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Happy 50",
+      "response_text": "Hey, you hurt any of my friends today? Because it's like this bad habit you've got. I figure I can cure it if I shoot you some, okay?",
+      "index": "44"
+    },
+    {
+      "topic": "LLEclairZipConv2",
+      "topic_text": "LLEclairZipConv2",
+      "emotion": "Surprise 25",
+      "response_text": "What's the matter, Eclair? Something wrong? Something taste funny? I was pretty sure everything was clean, I really was!",
+      "index": "50"
+    },
+    {
+      "topic": "LLEclairZipConv4",
+      "topic_text": "LLEclairZipConv4",
+      "emotion": "Surprise 50",
+      "response_text": "Oh, damn! I knew I was forgetting something! Okay, it won't happen next time, I promise! I double promise! I super duper-{hyperactive.Gets interrupted at the end of the line.}",
+      "index": "52"
+    },
+    {
+      "topic": "LLFoodConv1",
+      "topic_text": "LLFoodConv1",
+      "emotion": "Happy 50",
+      "response_text": "Got any food for me today? Because I'm really in a hurry and I really don't have time to come back later so how about some food right now?{hyper energetic}",
+      "index": "54"
+    },
+    {
+      "topic": "LLKnockTales1",
+      "topic_text": "LLKnockTales1",
+      "emotion": "Surprise 50",
+      "response_text": "Oh boy, tell me, tell me!{hyperactive, spoken quickly}",
+      "index": "55"
+    },
+    {
+      "topic": "LLKnockTales5",
+      "topic_text": "LLKnockTales5",
+      "emotion": "Happy 50",
+      "response_text": "Wow! That's an awesome story!{hyperactive, spoken quickly}",
+      "index": "56"
+    },
+    {
+      "topic": "LLPrincessBullyResponse",
+      "topic_text": "LLPrincessBullyResponse",
+      "emotion": "Surprise 50",
+      "response_text": "I guess I got lots of reasons. I mean, I'm alive, and we've got food and shelter, and I found this awesome rock yesterday!{hyperactive, spoken quickly}",
+      "index": "57"
+    },
+    {
+      "topic": "LLRandomConv1",
+      "topic_text": "LLConversation1",
+      "emotion": "Surprise 50",
+      "response_text": "Oh hey! How're you doing? Doing okay?{hyperactive, spoken quickly}",
+      "index": "58"
+    },
+    {
+      "topic": "LLRandomConv2",
+      "topic_text": "LLConversation2",
+      "emotion": "Surprise 50",
+      "response_text": "Just fine! Been all over today, and you wouldn't believe the cool stuff I did!{hyperactive, spoken quickly}",
+      "index": "59"
+    },
+    {
+      "topic": "LLRandomConvEnding",
+      "topic_text": "LLRandomConvEnding",
+      "emotion": "Happy 50",
+      "response_text": "Umm... Okay, yeah, bye bye now!{hyperactive, spoken quickly}",
+      "index": "60"
+    },
+    {
+      "topic": "LLRandomExclamation",
+      "topic_text": "LLRandomExclamation",
+      "emotion": "Happy 20",
+      "response_text": "Yeah!",
+      "index": "61"
+    },
+    {
+      "topic": "LLWhatsUp1",
+      "topic_text": "LLWhatsUp1",
+      "emotion": "Surprise 50",
+      "response_text": "Oh hey! What's happening? Something fun?{hyperactive, spoken quickly}",
+      "index": "65"
+    },
+    {
+      "topic": "LLWhatsUp2",
+      "topic_text": "LLWhatsUp2",
+      "emotion": "Surprise 50",
+      "response_text": "I was running so fast, I thought my legs were gonna fly off, but then they didn't, which makes sense, 'cause legs don't have wings. You know?{hyperactive, spoken quickly}",
+      "index": "66"
+    },
+    {
+      "topic": "LLZipFollowsPlayer1",
+      "topic_text": "LLZipFollowsPlayer1",
+      "emotion": "Neutral 50",
+      "response_text": "Everyone calls me Zip, and I think that's because I'm always wearing pants, and those have zippers, but it's not like I'm the only one with pants.{Spoken very quickly.}",
+      "index": "67"
+    },
+    {
+      "topic": "LLZipFollowsPlayer3",
+      "topic_text": "LLZipFollowsPlayer2",
+      "emotion": "Surprise 75",
+      "response_text": "Oh, I don't know if I told you yet, but I just remembered something really cool!{Spoken very quickly.}",
+      "index": "75"
+    },
+    {
+      "topic": "MS01StickyGoodbyeConv",
+      "topic_text": "MS01StickyGoodbyeConv",
+      "emotion": "Neutral 50",
+      "response_text": "You know the rules.{sympathetic but firm}",
+      "index": "77"
+    }
+  ],
+  "combat": []
+}

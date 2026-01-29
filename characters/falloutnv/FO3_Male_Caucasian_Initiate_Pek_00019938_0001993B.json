@@ -1,0 +1,136 @@
+{
+  "name": "Initiate Pek",
+  "url": "/wiki/Pek",
+  "dialogue_name": "FFDCFallsChurchBoSLostInititate.txt",
+  "dialogue_url": "/wiki/FFDCFallsChurchBoSLostInititate.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": true,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "00019938",
+  "ref_id": "0001993B",
+  "editor_id": "FFDCFallsChurchBoSLostInititate",
+  "location": "Office building (Falls Church south)",
+  "location_url": "/wiki/Office_building_(Falls_Church_south)",
+  "descriptions": [
+    "Initiate Pek is an initiate in the Brotherhood of Steel in Fallout 3.",
+    "Initiate Pek is young, inexperienced, and very headstrong.",
+    "By the time the Lone Wanderer arrives in Falls Church, Hoss and the other paladin are continuing to fight the super mutants outside, while Pek is still trapped in the office building. The Lone Wanderer can offer to help Hoss rescue the young initiate, whereupon they are sent alone into the building to retrieve him while the others guard the outside. Upon meeting them, Pek is glad that someone has been sent to rescue him, as he was confident that Hoss would not leave him behind.",
+    "Pek has a strong relationship with Paladin Hoss, as he was confident that Hoss would not leave him behind after they were separated."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Brotherhood of Steel",
+  "detailed_location": "Office building",
+  "voice_actor": "Gregory Gorton",
+  "special": {
+    "Strength": 7,
+    "Perception": 7,
+    "Endurance": 6,
+    "Charisma": 4,
+    "Intelligence": 3,
+    "Agility": 4,
+    "Luck": 4
+  },
+  "level": "4→7→11",
+  "tag_skills": [
+    {
+      "Big Guns:": "44→57→74"
+    },
+    {
+      "Energy Weap.:": "46→59→76"
+    },
+    {
+      "Small Guns:": "40→53→70"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Good",
+  "voice_type": "MaleAdult01DefaultBDC",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "FF02FallsChurchInitiateGreeting1",
+      "topic_text": "Calm down. I'm here to help.",
+      "emotion": "Neutral 50",
+      "response_text": "Oh, thank God. Paladin Hoss sent you, didn't he? I knew he wouldn't leave me behind.",
+      "index": "1"
+    },
+    {
+      "topic": "FF02FallsChurchInitiateGreeting1a",
+      "topic_text": "Your gun is jammed? Can I take a look at it?",
+      "emotion": "Neutral 50",
+      "response_text": "Sure, I guess. Can you fix it?",
+      "index": "3"
+    },
+    {
+      "topic": "FF02FallsChurchInitiateGreeting1a1",
+      "topic_text": "Sure can. Here, just pull this back to clear the chamber.",
+      "emotion": "Neutral 50",
+      "response_text": "Wow... that's... that's easy. Now at least I can shoot back at those mutant bastards. Are you ready?",
+      "index": "4"
+    },
+    {
+      "topic": "FF02FallsChurchInitiateGreeting1a2",
+      "topic_text": "No, I just wanted to look at it.",
+      "emotion": "Neutral 50",
+      "response_text": "This is no time for games! This is my life we're talking about here! Look, are you ready to go? Let's just get out of here.",
+      "index": "7"
+    },
+    {
+      "topic": "FF02FallsChurchInitiateGreeting1a3",
+      "topic_text": "Don't worry about that gun. Take one of mine.",
+      "emotion": "Neutral 50",
+      "response_text": "Okay... if you say so. Let's just hurry.",
+      "index": "8"
+    },
+    {
+      "topic": "FF02FallsChurchInitiateGreeting1b",
+      "topic_text": "Don't worry about it. Just keep your head down and let's get out of here.",
+      "emotion": "Neutral 50",
+      "response_text": "Okay, just be sure to cover me. With my gun jammed, I'm pretty useless in a fight.",
+      "index": "9"
+    },
+    {
+      "topic": "FF02FallsChurchInitiateGreeting2",
+      "topic_text": "So, you're a representative of the mighty Brotherhood? Please.",
+      "emotion": "Neutral 50",
+      "response_text": "You can mock me all you want, I don't care. Just get me out of here.",
+      "index": "10"
+    },
+    {
+      "topic": "FF02FallsChurchInitiateGreeting2a",
+      "topic_text": "Mock you? I'd rather kill you.",
+      "emotion": "Neutral 50",
+      "response_text": "But... but... why?",
+      "index": "11"
+    },
+    {
+      "topic": "FF02FallsChurchInitiateGreetingLetsGo1",
+      "topic_text": "All right then, let's go.",
+      "emotion": "Neutral 50",
+      "response_text": "Right behind you.",
+      "index": "12"
+    },
+    {
+      "topic": "FF02FallsChurchInitiateGreetingLetsGo2",
+      "topic_text": "Let's get out of here, I don't have all day.",
+      "emotion": "Neutral 50",
+      "response_text": "You'll get no argument from me.",
+      "index": "13"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "You've saved my life. I am in your debt.",
+      "index": "14"
+    }
+  ],
+  "conversation": [],
+  "combat": []
+}

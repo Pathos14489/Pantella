@@ -1,0 +1,96 @@
+{
+  "name": "Brotherhood of Steel GNR commander",
+  "url": "/wiki/Brotherhood_of_Steel_GNR_commander",
+  "dialogue_name": "MQ01BoSGNNBattleCommander.txt",
+  "dialogue_url": "/wiki/MQ01BoSGNNBattleCommander.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": true,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "0002029B",
+  "ref_id": "0002029C",
+  "editor_id": "MQ01BoSGNNBattleCommander",
+  "location": "GNR building plaza",
+  "location_url": "/wiki/GNR_building_plaza_(Fallout_3)",
+  "descriptions": [
+    "The Brotherhood of Steel GNR commander is the head of the Brotherhood forces protecting the GNR building in 2277.",
+    "The commander and his team defend the Galaxy News Radio building plaza from intruders, namely super mutants. The mutants' presence in the area has become increasingly larger, making the commander and his team's job more difficult to handle."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Brotherhood of Steel",
+  "role": "Commander",
+  "detailed_location": "GNR building plaza",
+  "voice_actor": "Johnny Contino",
+  "special": {
+    "Strength": 5,
+    "Perception": 7,
+    "Endurance": 6,
+    "Charisma": 4,
+    "Intelligence": 3,
+    "Agility": 6,
+    "Luck": 4
+  },
+  "mod_special_values": {
+    "Strength": 7,
+    "Perception": 7,
+    "Endurance": 6,
+    "Charisma": 4,
+    "Intelligence": 3,
+    "Agility": 4,
+    "Luck": 4
+  },
+  "level": "4→7→11",
+  "tag_skills": [
+    {
+      "Big Guns:": "44→57→74"
+    },
+    {
+      "Energy Weap.:": "46→59→76"
+    },
+    {
+      "Small Guns:": "44→57→74"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "70→95→125"
+    },
+    {
+      "Critical Chance:": "4%"
+    },
+    {
+      "Unarmed Dam.:": "1.3"
+    },
+    {
+      "Poison Resist.:": "25%"
+    },
+    {
+      "Rad. Resist.:": "10%"
+    },
+    {
+      "Carry Weight:": "200(220)"
+    },
+    {
+      "Damage Res.:": "12%→13%"
+    }
+  ],
+  "karma": "Good",
+  "voice_type": "MaleAdult06DC",
+  "geck_race": "Hispanic",
+  "topics": [
+    {
+      "topic": "MQ01LyonsPrideC1",
+      "topic_text": "Scene C - GNR conversation between Sarah and Commander",
+      "emotion": "Neutral 100",
+      "response_text": "Brotherhood mobile unit, report your status.{over the radio to Sarah}",
+      "index": "1"
+    }
+  ],
+  "conversation": [],
+  "combat": []
+}

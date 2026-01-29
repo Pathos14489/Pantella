@@ -1,0 +1,112 @@
+{
+  "name": "Knight Torres",
+  "url": "/wiki/Torres",
+  "dialogue_name": "HVTorres.txt",
+  "dialogue_url": "/wiki/HVTorres.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": true,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000E27E5",
+  "ref_id": "000E280F",
+  "editor_id": "HVTorres",
+  "location": "Hidden Valley bunker",
+  "location_url": "/wiki/Hidden_Valley_bunker",
+  "descriptions": [
+    "Knight  Torres is the quartermaster of the Mojave Brotherhood of Steel in the Hidden Valley bunker in 2281.",
+    "Knight Torres is in charge of the armory found in the bunker. She will sell items to the Courier once Elder McNamara gives the go-ahead.",
+    "Pistol Packing",
+    "Brotherhood Bond",
+    "Weapons are only shown if they are new additions according to level. In the case of level 4, weapons listed are all the beginning weapons available in her inventory.",
+    "Armor in the inventory includes:"
+  ],
+  "race": "Human",
+  "gender": "Female",
+  "affiliation": "Mojave Brotherhood of Steel",
+  "role": "Merchant",
+  "detailed_location": "Hidden Valley bunker",
+  "voice_actor": "Katherine Pawlak",
+  "special": {
+    "Strength": 5,
+    "Perception": 6,
+    "Endurance": 5,
+    "Charisma": 4,
+    "Intelligence": 4,
+    "Agility": 7,
+    "Luck": 4
+  },
+  "level": "11",
+  "tag_skills": [
+    {
+      "Guns:": "73"
+    },
+    {
+      "Melee Weap.:": "69"
+    },
+    {
+      "Unarmed:": "69"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Good",
+  "voice_type": "FemaleAdult01Default",
+  "geck_race": "Hispanic",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "You must be the stranger I've been hearing about. Sorry, but I'm strictly forbidden from offering our tech to outsiders like yourself.",
+      "index": "1"
+    },
+    {
+      "topic": "HVTorresFoundGun",
+      "topic_text": "I've got it right here.",
+      "emotion": "Neutral 50",
+      "response_text": "Oh thank god. Hardin was about to start an inquiry into the whole affair, and more than a few heads would have rolled as a result.",
+      "index": "12"
+    },
+    {
+      "topic": "HVTorresHaventFoundGun",
+      "topic_text": "Sorry, I haven't found it yet.",
+      "emotion": "Neutral 50",
+      "response_text": "Then we have nothing further to talk about.",
+      "index": "15"
+    },
+    {
+      "topic": "VDialogueHiddenValleyHVTorresTopic000",
+      "topic_text": "Show me what you have for sale.",
+      "emotion": "Neutral 50",
+      "response_text": "Our patrols are always bringing more stuff in. Take a look.",
+      "index": "16"
+    },
+    {
+      "topic": "VDialogueHiddenValleyHVTorresTopic001",
+      "topic_text": "I could look around for the pistol.",
+      "emotion": "Neutral 50",
+      "response_text": "If you happen to find it, bring it here right away. I might be able to throw a few supplies your way if you do.",
+      "index": "17"
+    },
+    {
+      "topic": "VDialogueHiddenValleyHVTorresTopic003",
+      "topic_text": "Anything I can help you with?",
+      "emotion": "Neutral 50",
+      "response_text": "If you must know, my inventory check this week shows that our weapon count is one short. Somehow we're missing a laser pistol.",
+      "index": "18"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "HVTorresVeronica",
+      "topic_text": "HVTorresVeronica",
+      "emotion": "Neutral 50",
+      "response_text": "Can't complain. Not like there's anywhere else to go, right?",
+      "index": "20"
+    }
+  ],
+  "combat": []
+}

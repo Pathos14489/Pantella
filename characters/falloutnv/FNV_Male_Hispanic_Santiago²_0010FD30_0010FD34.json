@@ -1,0 +1,279 @@
+{
+  "name": "Santiago²",
+  "url": "/wiki/Santiago_(Fallout:_New_Vegas)",
+  "dialogue_name": "VFSDebtSantiago.txt",
+  "dialogue_url": "/wiki/VFSDebtSantiago.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "0010FD30",
+  "ref_id": "0010FD34",
+  "editor_id": "VFSDebtSantiago",
+  "location": "Freeside",
+  "location_url": "/wiki/Freeside",
+  "descriptions": [
+    "Santiago is a man living in Freeside in 2281.",
+    "Santiago is a smooth-talking con artist living in Freeside. He has a Spanish accent and uses it to get out of paying for drinks. Thanks to his dishonest ways, he owes Francine Garret 212 caps and has no intention of paying them back before being confronted by the Courier in the side quest Debt Collector.",
+    "Cost: 25 caps",
+    "Santiago was written by Robert Lee, who was also the designer on Wang Dang Atomic Tango. Lee took inspiration from the character Sancho in the 1997 sex comedy film Orgazmo for Santiago's third-person speech. Recognizing that some players would be turned off by Santiago, Lee also added Old Ben as another option for the suave talker.",
+    "PC Playstation 3 Xbox 360 Recruiting Old Ben to satisfy the \"Suave Talker\" requirement of the quest Wang Dang Atomic Tango will make it impossible to collect the debt from Santiago through dialogue. Attempting to collect the debt will simply result in a selection of dialogue options where the Courier has no choice but to pay Santiago for his bogus discount password to Mick & Ralph's."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Freeside",
+  "role": "Smooth talkerDebtorProstitute(optional)",
+  "detailed_location": "Freeside",
+  "voice_actor": "Liam O'Brien",
+  "special": {
+    "Strength": 4,
+    "Perception": 6,
+    "Endurance": 4,
+    "Charisma": 2,
+    "Intelligence": 7,
+    "Agility": 5,
+    "Luck": 4
+  },
+  "level": "16",
+  "tag_skills": [
+    {
+      "Barter:": "96"
+    },
+    {
+      "Medicine:": "98"
+    },
+    {
+      "Science:": "98"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Neutral",
+  "voice_type": "MaleAdult05",
+  "geck_race": "Hispanic",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "How are you today? Santiago is fabulous!",
+      "index": "1"
+    },
+    {
+      "topic": "VFreeformFreesideVFSDebtAngeloTopic001",
+      "topic_text": "Francine warned me that you're a smooth-talker.",
+      "emotion": "Neutral 50",
+      "response_text": "Indeed, Santiago is a poet among pretenders. If you are here to collect for the Garrets, Santiago is debt free.",
+      "index": "6"
+    },
+    {
+      "topic": "VFreeformFreesideVFSDebtAngeloTopic002",
+      "topic_text": "VIP? The Garrets said nothing about VIP status.",
+      "emotion": "Neutral 50",
+      "response_text": "Yes indeed, Santiago is very important. I even have a discount at Mick & Ralph's.",
+      "index": "7"
+    },
+    {
+      "topic": "VFreeformFreesideVFSDebtAngeloTopic003",
+      "topic_text": "50 Caps is a bit steep, but okay. Here, now what is it?",
+      "emotion": "Neutral 50",
+      "response_text": "Santiago thanks you. Tell Mick Santiago sent you and the code word is 'extravaganza'.",
+      "index": "9"
+    },
+    {
+      "topic": "VFreeformFreesideVFSDebtAngeloTopic004<Barter down 25 caps>",
+      "topic_text": "I don't even know this discount is worth 50.  How about 25 caps?",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] 25 caps will do. Tell Mick Santiago sent you and the code word is 'extravaganza'. He will set you up.",
+      "index": "10"
+    },
+    {
+      "topic": "VFreeformFreesideVFSDebtAngeloTopic005",
+      "topic_text": "Santiago is dead if he doesn’t cough up what he owes the Garrets.",
+      "emotion": "Neutral 50",
+      "response_text": "Sir, Santiago does not know what he has done to offend, but he can explain everything.",
+      "index": "12"
+    },
+    {
+      "topic": "VFreeformFreesideVFSDebtAngeloTopic008",
+      "topic_text": "Liar. Pay up.",
+      "emotion": "Neutral 50",
+      "response_text": "Santiago is offended that you would opine such slander.",
+      "index": "13"
+    },
+    {
+      "topic": "VFreeformFreesideVFSDebtAngeloTopic009",
+      "topic_text": "<Punch Santiago in the face> I won't ask again, Santiago.",
+      "emotion": "Neutral 50",
+      "response_text": "Ow! Okay. Here! Take the caps, just don't hurt Santiago again!",
+      "index": "14"
+    },
+    {
+      "topic": "VFreeformFreesideVFSDebtAngeloTopic010<Speech>",
+      "topic_text": "I'd rather not kill you, but Francine put a bounty on your head.",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] I didn't think she was upset enough to have me killed... Here are the caps I owe.",
+      "index": "15"
+    },
+    {
+      "topic": "VFreeformFreesideVFSDebtAngeloTopic011<Barter>",
+      "topic_text": "With a price on your head, you should be paying me to say you're dead.",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] When did this happen?! Hey, look. I only do the Santiago bit as a way of getting free stuff. I didn't think it would get me in trouble.{Spoken plainly without the rico-suave tone.}",
+      "index": "18"
+    },
+    {
+      "topic": "VFreeformFreesideVFSDebtAngeloTopic012",
+      "topic_text": "I can collect from your corpse, if you prefer.",
+      "emotion": "Neutral 50",
+      "response_text": "Here are the caps I owe! No need for violence!",
+      "index": "22"
+    },
+    {
+      "topic": "VFreeformFreesideVFSDebtSanchoTopic000",
+      "topic_text": "You owe the Garrets a bunch of caps.",
+      "emotion": "Neutral 50",
+      "response_text": "Santiago does not owe anyone. Santiago is a Freeside VIP.",
+      "index": "23"
+    },
+    {
+      "topic": "VFreeformFreesideVFSDebtSantiagoTopic000",
+      "topic_text": "Your discount was a lie.",
+      "emotion": "Neutral 50",
+      "response_text": "Santiago knows not of what you speak.",
+      "index": "24"
+    },
+    {
+      "topic": "VFreeformFreesideVFSDebtSantiagoTopic001",
+      "topic_text": "I'm going to kill you now.",
+      "emotion": "Neutral 50",
+      "response_text": "Wait! Here is a full refund! Don't kill me!",
+      "index": "25"
+    },
+    {
+      "topic": "VFreeformFreesideVFSDebtSantiagoTopic002<Speech>",
+      "topic_text": "<Glare> You should give me this code for free while you can still walk straight.",
+      "emotion": "Neutral 50",
+      "response_text": "I'm kidding, ha ha! There is no discount. Sorry!... Please don't kill me.",
+      "index": "27"
+    },
+    {
+      "topic": "VFreeformFreesideVFSDebtSantiagoTopic003<Speech>",
+      "topic_text": "50 caps without even knowing the details of this code? How about 25?",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] 25 caps will do. Tell Mick Santiago sent you and the code word is 'extravaganza'. He will set you up.",
+      "index": "31"
+    },
+    {
+      "topic": "VFreeformFreesideVFSDebtSantiagoTopic004",
+      "topic_text": "Now you need to settle that debt with the Garrets.",
+      "emotion": "Neutral 50",
+      "response_text": "Sir, Santiago told you. Santiago has no debts.",
+      "index": "33"
+    },
+    {
+      "topic": "VFreeformFreesideVFSDebtSantiagoTopic005",
+      "topic_text": "Thanks, but I'm still going to kill you.",
+      "emotion": "Neutral 50",
+      "response_text": "No! Don't!",
+      "index": "34"
+    },
+    {
+      "topic": "VFreeformFreesideVFSDebtSantiagoTopic006",
+      "topic_text": "Goodbye, and I better not hear about you trying this crap again.",
+      "emotion": "Neutral 50",
+      "response_text": "You won't! I'll be clean as a whistle!",
+      "index": "35"
+    },
+    {
+      "topic": "VFreeformFreesideVFSDebtSantiagoTopic007<Speech>",
+      "topic_text": "Santiago, dealing with you is getting to be more annoying than it is worth.",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] Here, I'll pay you back extra! I'm sorry!",
+      "index": "36"
+    },
+    {
+      "topic": "VFreeformFreesideVFSDebtSantiagoTopic010",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Goodbye.",
+      "index": "39"
+    },
+    {
+      "topic": "VFreeformFreesideVFSDebtSantiagoTopic011",
+      "topic_text": "James Garret is looking for a suave escort. Interested in some work?",
+      "emotion": "Neutral 50",
+      "response_text": "I'm honored they would consider me. I'll start immediately.",
+      "index": "40"
+    },
+    {
+      "topic": "VFreeformFreesideVFSDebtSantiagoTopic012",
+      "topic_text": "I'd like to hire you for a bit.",
+      "emotion": "Neutral 50",
+      "response_text": "Santiago is here to please, my prarie flower. Just a few caps and I'm yours.",
+      "index": "41"
+    },
+    {
+      "topic": "VFreeformFreesideVFSDebtSantiagoTopic013",
+      "topic_text": "Here you go. <Pay 25 caps>",
+      "emotion": "Neutral 50",
+      "response_text": "I'll meet you upstairs in a moment, darling.",
+      "index": "43"
+    },
+    {
+      "topic": "VFreeformFreesideVFSDebtSantiagoTopic014",
+      "topic_text": "Never mind.",
+      "emotion": "Neutral 50",
+      "response_text": "Your loss, my friend.",
+      "index": "44"
+    },
+    {
+      "topic": "VFreeformFreesideVFSDebtSantiagoTopic015",
+      "topic_text": "You could work off your debt.",
+      "emotion": "Neutral 50",
+      "response_text": "How do you suggest Santiago does this?",
+      "index": "45"
+    },
+    {
+      "topic": "VFreeformFreesideVFSDebtSantiagoTopic017",
+      "topic_text": "How do you like the new job?",
+      "emotion": "Neutral 50",
+      "response_text": "It is a dream come true. Santiago never thought he could work in such a wonderous den of vice and iniquity.",
+      "index": "46"
+    },
+    {
+      "topic": "VFreeformFreesideVFSDebtSantiagoTopic018",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Goodbye.",
+      "index": "47"
+    },
+    {
+      "topic": "VFreeformFreesideVFSDebtSantiagoTopic019",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Goodbye.",
+      "index": "48"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "VFSSantiagoHello",
+      "topic_text": "VFSSantiagoHello",
+      "emotion": "Neutral 50",
+      "response_text": "Hello, my friend.",
+      "index": "49"
+    },
+    {
+      "topic": "VFSSantiagoHello2",
+      "topic_text": "VFSSantiagoHello2",
+      "emotion": "Neutral 50",
+      "response_text": "Please leave me alone. I have nothing more to give.",
+      "index": "50"
+    }
+  ],
+  "combat": []
+}

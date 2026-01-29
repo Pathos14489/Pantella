@@ -1,0 +1,152 @@
+{
+  "name": "Alan",
+  "url": "/wiki/Alan_(Fallout_3)",
+  "dialogue_name": "TheFamilyAlan.txt",
+  "dialogue_url": "/wiki/TheFamilyAlan.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000200BE",
+  "ref_id": "000200BF",
+  "editor_id": "TheFamilyAlan",
+  "location": "Meresti Metro station,Abandoned residence",
+  "location_url": "/wiki/Meresti_Metro_station",
+  "descriptions": [
+    "Alan is a member of the Family, living in Meresti Metro station in 2277.",
+    "A newer member of the Family, Alan was rescued by Vance after the former escaped from Paradise Falls and was wounded in the process.",
+    "If the Lone Wanderer kills Alan after Vance tells him to go to Arefu, it will result in bad Karma. Afterward, he may appear dead in his new house. If he was looted, he will appear exactly as he was left in the tunnels."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "The Family",
+  "role": "New initiateArefu guard (optional)",
+  "detailed_location": "Meresti Metro stationArefu",
+  "voice_actor": "Jeff Baker",
+  "special": {
+    "Strength": 6,
+    "Perception": 7,
+    "Endurance": 5,
+    "Charisma": 3,
+    "Intelligence": 3,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "level": "6→14",
+  "tag_skills": [
+    {
+      "Explosives:": "55→90"
+    },
+    {
+      "Small Guns:": "53→88(55→90)"
+    },
+    {
+      "Sneak:": "53→88"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "95→135"
+    },
+    {
+      "Critical Chance:": "5%"
+    },
+    {
+      "Unarmed Dam.:": "1.25"
+    },
+    {
+      "Poison Resist.:": "20%"
+    },
+    {
+      "Rad. Resist.:": "8%"
+    },
+    {
+      "Carry Weight:": "210"
+    },
+    {
+      "Damage Res.:": "5%"
+    }
+  ],
+  "karma": "Neutral",
+  "voice_type": "MaleAdult01DefaultDC",
+  "geck_race": "Asian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Happy 70",
+      "response_text": "I don't think I've met you yet. The name's Alan. What did you want?",
+      "index": "1"
+    },
+    {
+      "topic": "MS09TLLaws",
+      "topic_text": "Please, help me understand your Laws.",
+      "emotion": "Surprise 50",
+      "response_text": "Oh wait... Vance told me I was supposed to say something special when asked that... from his teachings.",
+      "index": "4"
+    },
+    {
+      "topic": "MS09TLLookingforIanWest",
+      "topic_text": "I'm looking for Ian West. Have you seen him?",
+      "emotion": "Neutral 50",
+      "response_text": "I don't have any authority here. I'm pretty new myself.",
+      "index": "6"
+    },
+    {
+      "topic": "MS09TLWhatisMeresti",
+      "topic_text": "What is this place?",
+      "emotion": "Sad 70",
+      "response_text": "Right now I call this place home. The only home that's ever let me stay with my... problems.",
+      "index": "8"
+    },
+    {
+      "topic": "MS09TLWhoAreFamily",
+      "topic_text": "Tell me about the Family.",
+      "emotion": "Neutral 50",
+      "response_text": "Well, anyone that Vance takes in because of their special problems can be part of the Family.",
+      "index": "9"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "I have to go now.",
+      "emotion": "Happy 50",
+      "response_text": "Guess I'll see you around.",
+      "index": "10"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Neutral 50",
+      "response_text": "You new here too?",
+      "index": "15"
+    },
+    {
+      "topic": "MS09MerestiRandom01",
+      "topic_text": "MS09MerestiRandom01",
+      "emotion": "Fear 80",
+      "response_text": "Talk to me? W-what did I do?",
+      "index": "19"
+    },
+    {
+      "topic": "MS09MerestiResponsestoFamily",
+      "topic_text": "MS09MerestiResponsestoFamily",
+      "emotion": "Happy 50",
+      "response_text": "Hey, with Vance teaching him personally he's bound to figure it all out soon enough. I wouldn't worry about it really.",
+      "index": "21"
+    },
+    {
+      "topic": "MS09MerestiResponsestoVance",
+      "topic_text": "MS09MerestiRandom02",
+      "emotion": "Happy 90",
+      "response_text": "Oh! Thank you, Vance. I mean... it's me that should be thanking you. I dunno what I would have done without the Family.",
+      "index": "25"
+    }
+  ],
+  "combat": []
+}

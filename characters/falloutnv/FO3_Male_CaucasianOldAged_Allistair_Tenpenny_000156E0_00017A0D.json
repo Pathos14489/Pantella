@@ -1,0 +1,425 @@
+{
+  "name": "Allistair Tenpenny",
+  "url": "/wiki/Allistair_Tenpenny",
+  "dialogue_name": "AllistairTenpenny.txt",
+  "dialogue_url": "/wiki/AllistairTenpenny.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000156E0",
+  "ref_id": "00017A0D",
+  "editor_id": "AllistairTenpenny",
+  "location": "Tenpenny Tower",
+  "location_url": "/wiki/Tenpenny_Tower",
+  "descriptions": [
+    "Allistair Tenpenny is the founder and owner of Tenpenny Tower, appearing in Fallout 3. He is one of only nine named characters in the base game to have \"Very Evil\" Karma. He is also a Legendary dweller in Fallout Shelter, coming with a unique rifle and suit.",
+    "Originally born around 2197",
+    "As such, little is known about him before the founding of Tenpenny Tower. What is known is that with his fake aristocratic accent,",
+    "Shortly after this botched job, Tenpenny met a man who changed his life: Mister Burke.",
+    "The result is one of the only places in the Capital Wasteland where residents can enjoy a quality of life approximating pre-War conditions, thanks to Tenpenny's wealth and Burke's skills.",
+    "While Tenpenny believes the tower to be the beginning of something great, rather than his crowning achievement,",
+    "Beyond sex and wanton violence, the octogenarian also carefully nurtures his alcoholism, boasting that he \"",
+    "In fact, by 2277, it is Mister Burke who is in real control at Tenpenny Tower, with the eccentric Allistair a shut-in figurehead attracting attention with his antics, suffering from madness reserved for the obscenely rich.",
+    "Burke is agreeable and proactive, and has taken over so many aspects of the tower's functioning that Tenpenny barely needs to think about things anymore, as Burke is always there to take care of everything, anticipating his needs. Tenpenny does not know how he got along without him. One such instance of Burke's proactiveness is him seizing the chance to wipe Megaton out and pin the blame on Tenpenny, by reacting to Allistair's comment about it being a \"bit of an eyesore.\"",
+    "Burke spent weeks putting the plan in motion,",
+    "While Burke passes this off as Tenpenny's sole vision, portraying the aged and demented Allistair as a pam of passion, ideals, and an antithesis of the apathetic, blighted men inhabiting the Capital Wasteland, it is not clear how much of that plan is actually Tenpenny's own invention.",
+    "Tenpenny rarely leaves his penthouse suite, but for the rare occasion he does, he has a seat reserved in Margaret Primrose's cafe.",
+    "Allistair Tenpenny appears in Fallout 3 and Fallout Shelter.",
+    "Original concept art from The Art of Fallout 3"
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Tenpenny Tower",
+  "role": "Owner of Tenpenny Tower",
+  "detailed_location": "Tenpenny Tower",
+  "voice_actor": "Charlie Warren",
+  "special": {
+    "Strength": 4,
+    "Perception": 4,
+    "Endurance": 4,
+    "Charisma": 7,
+    "Intelligence": 6,
+    "Agility": 4,
+    "Luck": 6
+  },
+  "mod_special_values": {
+    "Strength": 4,
+    "Perception": 4,
+    "Endurance": 4,
+    "Charisma": 8,
+    "Intelligence": 6,
+    "Agility": 4,
+    "Luck": 6
+  },
+  "level": "5",
+  "tag_skills": [
+    {
+      "Barter:": "55(57)"
+    },
+    {
+      "Lockpick:": "49"
+    },
+    {
+      "Speech:": "55(57)"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "45"
+    },
+    {
+      "Critical Chance:": "6%"
+    },
+    {
+      "Unarmed Dam.:": "1.15"
+    },
+    {
+      "Poison Resist.:": "15%"
+    },
+    {
+      "Rad. Resist.:": "6%"
+    },
+    {
+      "Carry Weight:": "190"
+    },
+    {
+      "Damage Res.:": "2%"
+    }
+  ],
+  "karma": "Very Evil",
+  "voice_type": "MaleUniqueTenpenny",
+  "geck_race": "CaucasianOldAged",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Surprise 50",
+      "response_text": "Help!{in the middle of an attack against his town}",
+      "index": "1"
+    },
+    {
+      "topic": "MS11FinTenpennyExplain",
+      "topic_text": "I've been wondering... why blow up Megaton?",
+      "emotion": "Neutral 50",
+      "response_text": "I complained off hand one day about how I thought that heap of metal on the horizon was a bit of an eyesore. Mister Burke offered to take care of it.{nonchalant}",
+      "index": "18"
+    },
+    {
+      "topic": "MS11FinTenpennyExplain1",
+      "topic_text": "You've got to clear away the past to make room for the future.",
+      "emotion": "Happy 50",
+      "response_text": "Well said! Indeed! You've got the entrepreneurial spirit! It gives me hope to see young people, such as yourself, with real heads on their shoulders.{genuinely agreeable}",
+      "index": "21"
+    },
+    {
+      "topic": "MS11FinTenpennyExplain2",
+      "topic_text": "You don't have a problem with killing all those people?",
+      "emotion": "Sad 50",
+      "response_text": "Oh no. I'm certainly rather sore about all that. But certain sacrifices must be made.{not overly concerned about killing lots of people}",
+      "index": "22"
+    },
+    {
+      "topic": "MS11FinTenpennyExplain3",
+      "topic_text": "<Say nothing.>",
+      "emotion": "Disgust 10",
+      "response_text": "You're an odd one, aren't you?{not sure what to make of the player}",
+      "index": "25"
+    },
+    {
+      "topic": "MS12Basement",
+      "topic_text": "What can you tell me about the basement?",
+      "emotion": "Surprise 100",
+      "response_text": "What?!{taken completely by surprise by the question}",
+      "index": "26"
+    },
+    {
+      "topic": "MS12Nevermind",
+      "topic_text": "Let's talk about something else.",
+      "emotion": "Sad 50",
+      "response_text": "You've become a bit of a bore, haven't you? Go away!{flamboyantly arrogant}",
+      "index": "28"
+    },
+    {
+      "topic": "MS12OkayForGhouls",
+      "topic_text": "Your other residents are gone. Might as well let the Ghouls live here.",
+      "emotion": "Surprise 100",
+      "response_text": "What? Where did they go? Strike that. I don't really care. If they don't want to live here, that's their own business.{flamboyantly eccentric}",
+      "index": "29"
+    },
+    {
+      "topic": "MS12ResidentsNeighborsBad",
+      "topic_text": "I was just kidding! Those zombies need to be killed!",
+      "emotion": "Surprise 25",
+      "response_text": "Well, that's how most people feel, certainly. Talk to Security Chief Gustavo. He's managing the \"Ghoul situation.\"",
+      "index": "35"
+    },
+    {
+      "topic": "MS12ResidentsNeighborsGood",
+      "topic_text": "What if the residents are okay with Ghoul neighbors?",
+      "emotion": "Surprise 50",
+      "response_text": "Ha! I don't suppose I'd mind terribly if Ghouls were to live here. And it'd be a good bit of sport hunting them down if they misbehaved.{flamboyantly eccentric}",
+      "index": "36"
+    },
+    {
+      "topic": "MS12ResidentsNeighborsNeutral",
+      "topic_text": "Whatever.",
+      "emotion": "Disgust 50",
+      "response_text": "I must say, you can be quite the bore. Run along and pester someone else.{excessively disappointed}",
+      "index": "40"
+    },
+    {
+      "topic": "MS12ResidentsNeighborsTenpenny",
+      "topic_text": "There are some Ghouls who want to live here. What do you think about that?",
+      "emotion": "Surprise 100",
+      "response_text": "Why - I do believe you've lost your mind! Ghouls, living here? You're serious?{excessively shocked}",
+      "index": "41"
+    },
+    {
+      "topic": "MS14CrowleyWhat can you tell me about Mister Crowley?",
+      "topic_text": "Do you remember a Mister Crowley?",
+      "emotion": "Surprise 50",
+      "response_text": "The Ghoul? He's dead. Died twenty years ago.",
+      "index": "42"
+    },
+    {
+      "topic": "MS14HereToKillYouI'm here to kill you, and there's nothing you can do about it.",
+      "topic_text": "I'm going to put a bullet in your brain, you Ghoul hating piece of shit!",
+      "emotion": "Fear 50",
+      "response_text": "Guards! Security!",
+      "index": "44"
+    },
+    {
+      "topic": "MS14TenpennyBigot",
+      "topic_text": "Mister Crowley is alive. I'm here to kill you because you hate Ghouls.",
+      "emotion": "Disgust 50",
+      "response_text": "He's alive? I should have known. It's hard to kill those zombies. You gotta shoot 'em in the head.",
+      "index": "45"
+    },
+    {
+      "topic": "MS14TenpennyEndNoThreat",
+      "topic_text": "You've satisfied my curiosity.",
+      "emotion": "Surprise 50",
+      "response_text": "So easily? Somehow I'm not surprised.",
+      "index": "47"
+    },
+    {
+      "topic": "MS14TenpennyHigherBribe",
+      "topic_text": "I want more than that to spare your miserable life. 300 caps.",
+      "emotion": "Disgust 50",
+      "response_text": "You mercenaries are so reliably predictable.",
+      "index": "48"
+    },
+    {
+      "topic": "MS14TenpennyHowDie",
+      "topic_text": "How did he die?",
+      "emotion": "Neutral 50",
+      "response_text": "Who cares? I hired some mercenaries to get me some equipment from Fort Constantine. He was one of them.",
+      "index": "50"
+    },
+    {
+      "topic": "MS14TenpennyMustDie",
+      "topic_text": "I think it would be better for everyone if I just killed you.",
+      "emotion": "Disgust 50",
+      "response_text": "An honest mercenary? Who would have thought. Guards!{Shout the last word}",
+      "index": "52"
+    },
+    {
+      "topic": "MS14TenpennyTakeBribe",
+      "topic_text": "200 caps to spare your life? Okay.",
+      "emotion": "Disgust 50",
+      "response_text": "I love mercenaries. They're so easy to buy.",
+      "index": "53"
+    },
+    {
+      "topic": "MS14TenpennyWantsKey",
+      "topic_text": "Mister Crowley wants that key. Now.",
+      "emotion": "Surprise 50",
+      "response_text": "What key? Oh, that key.",
+      "index": "55"
+    },
+    {
+      "topic": "SpeechChallengeFailure",
+      "topic_text": "SpeechChallengeFailure",
+      "emotion": "Disgust 50",
+      "response_text": "A murderer and a thief. I'd sooner die.",
+      "index": "57"
+    },
+    {
+      "topic": "TenpennyAllistairTenpennyTell me about Allistair Tenpenny.",
+      "topic_text": "Tell me about yourself, Mr. Tenpenny.",
+      "emotion": "Surprise 50",
+      "response_text": "It's impolite for a gentleman to talk about himself. But I'd hope this magnificent tower would speak volumes.{a bit of a snobby air}",
+      "index": "58"
+    },
+    {
+      "topic": "TenpennyGREETINGChoice1",
+      "topic_text": "Indeed! I'm extremely impressed!",
+      "emotion": "Happy 50",
+      "response_text": "Righto! When I saw this place jutting up out of the horizon, I knew what I had to do! I hired some muscle and we got this place fixed up right quick.{flamboyantly bragging}",
+      "index": "59"
+    },
+    {
+      "topic": "TenpennyGREETINGChoice2",
+      "topic_text": "You didn't build this tower, you just found it and moved in. Big fucking deal.",
+      "emotion": "Surprise 50",
+      "response_text": "I say! Must you be so caustic? Come now, a lot of work went into turning this husk of a tower into a place people can call home.{defensive but flaboyant}",
+      "index": "62"
+    },
+    {
+      "topic": "TenpennyGREETINGChoice3",
+      "topic_text": "Eh. It's okay here.",
+      "emotion": "Surprise 100",
+      "response_text": "Rubbish! You must be daft. Look around! Where else in the Wasteland have you seen such magnificence, I ask you?{flamboyantly defending his creation and bragging}",
+      "index": "65"
+    },
+    {
+      "topic": "TenpennyShootBalcony",
+      "topic_text": "What are you shooting at out there?",
+      "emotion": "Happy 100",
+      "response_text": "Why, anything I want, dear boy. Anything I want... Wasteland safari. Very relaxing.{jovial}",
+      "index": "68"
+    },
+    {
+      "topic": "TenpennyTowerWhat can you tell me about Tenpenny Tower?",
+      "topic_text": "Quite a tower you have here, Mr. Tenpenny.",
+      "emotion": "Surprise 100",
+      "response_text": "Some might say Tenpenny Tower is my crowning achievement. But no! No no! My dear boy, it is just the beginning!",
+      "index": "70"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "DialogueTenpennyConv01",
+      "topic_text": "DialogueTenpennyConv01",
+      "emotion": "Happy 20",
+      "response_text": "The usual, dear. And please, be sure to remember to measure the salt precisely. We don't a repeat of last weeks debacle.{politely but passively aggressively scolding}",
+      "index": "72"
+    },
+    {
+      "topic": "DialogueTenpennyConv02",
+      "topic_text": "DialogueTenpennyConv02",
+      "emotion": "Disgust 25",
+      "response_text": "Yes well. I'm a visionary, that's true. But I'm also a creature of habit. I like my Iguana Bits sandwich just the way I always get it. Thank you.{bragging, and a little annoyed he's being questioned about his meal}",
+      "index": "74"
+    },
+    {
+      "topic": "DialogueTenpennyConvShortGoodbye",
+      "topic_text": "DialogueTenpennyConvShortGoodbye",
+      "emotion": "Disgust 50",
+      "response_text": "Sorry. Can't talk now.{ducking out of an unwanted conversation}",
+      "index": "76"
+    },
+    {
+      "topic": "DialogueTenpennyEatStartTopic",
+      "topic_text": "DialogueTenpennyEatStartTopic",
+      "emotion": "Surprise 50",
+      "response_text": "I'm positively famished. I must get something to eat before I pass out!{hungry and on his way to get food}",
+      "index": "77"
+    },
+    {
+      "topic": "DialogueTenpennySleepStartTopic",
+      "topic_text": "DialogueTenpennySleepStartTopic",
+      "emotion": "Neutral 50",
+      "response_text": "I'm plum puckered out.{yawning and getting ready to go to bed}",
+      "index": "78"
+    },
+    {
+      "topic": "DialogueTenpennySusanSleepWithStartTopic",
+      "topic_text": "DialogueTenpennySusanSleepWithStartTopic",
+      "emotion": "Happy 50",
+      "response_text": "I do hope she gets here soon. I'm particularly randy this evening.{to himself under his breath, thinking about his mistress}",
+      "index": "79"
+    },
+    {
+      "topic": "GOODBYE",
+      "topic_text": "I have to go now.",
+      "emotion": "Happy 75",
+      "response_text": "Right-o. Run along now.",
+      "index": "80"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Fear 50",
+      "response_text": "Careful where you point that thing. Can't we talk about this?",
+      "index": "83"
+    },
+    {
+      "topic": "MS11NukeView",
+      "topic_text": "MS11NukeView",
+      "emotion": "Happy 100",
+      "response_text": "Well done, Mister Burke! What a grand display of fireworks! I almost wish there was another nuke we could detonate. You don't see that very often.{sincere gratitude, truly tickled with amusement}",
+      "index": "91"
+    }
+  ],
+  "combat": [
+    {
+      "topic": "AcceptYield",
+      "topic_text": "AcceptYield",
+      "emotion": "Happy 50",
+      "response_text": "Righto. We were only sparring then.{cheerfully accepting an enemies surrender}",
+      "index": "95"
+    },
+    {
+      "topic": "Assault",
+      "topic_text": "Assault",
+      "emotion": "Disgust 50",
+      "response_text": "What brutality!{shocked and appalled at someone being assaulted}",
+      "index": "96"
+    },
+    {
+      "topic": "Attack",
+      "topic_text": "Attack",
+      "emotion": "Happy 50",
+      "response_text": "I do enjoy a good row!{gleefully engaging in combat (\"row\" meaning a loud quarrel}",
+      "index": "97"
+    },
+    {
+      "topic": "DeathResponse",
+      "topic_text": "DeathResponse",
+      "emotion": "Disgust 50",
+      "response_text": "Death is such nasty business.{appalled that someone has died violently}",
+      "index": "100"
+    },
+    {
+      "topic": "Flee",
+      "topic_text": "Flee",
+      "emotion": "Fear 100",
+      "response_text": "Guards!{running for his life, calling for his security force}",
+      "index": "101"
+    },
+    {
+      "topic": "GuardTrespass",
+      "topic_text": "GuardTrespass",
+      "emotion": "Anger 50",
+      "response_text": "Leave before I call security.{warning a trespasser}",
+      "index": "102"
+    },
+    {
+      "topic": "Murder",
+      "topic_text": "Murder",
+      "emotion": "Disgust 50",
+      "response_text": "My word. Was that truly necessary?{shocked someone was murdered}",
+      "index": "103"
+    },
+    {
+      "topic": "Pickpocket",
+      "topic_text": "Pickpocket",
+      "emotion": "Anger 50",
+      "response_text": "Hey now! Cut that out!{caught a pickpocket}",
+      "index": "105"
+    },
+    {
+      "topic": "Steal",
+      "topic_text": "Steal",
+      "emotion": "Anger 50",
+      "response_text": "Are you daft? That doesn't belong to you.{caught a thief}",
+      "index": "108"
+    }
+  ]
+}

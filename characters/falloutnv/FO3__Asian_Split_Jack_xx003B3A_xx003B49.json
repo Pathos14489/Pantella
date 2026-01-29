@@ -1,0 +1,272 @@
+{
+  "name": "Split Jack",
+  "url": "/wiki/Split_Jack",
+  "dialogue_name": "DLC03SplitJack.txt",
+  "dialogue_url": "/wiki/DLC03SplitJack.txt",
+  "spawned_dead": false,
+  "spawned": true,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "xx003B3A",
+  "ref_id": "xx003B49",
+  "editor_id": "DLC03SplitJack",
+  "location": "Wilhelm's Wharf",
+  "location_url": "/wiki/Wilhelm%27s_Wharf",
+  "descriptions": [
+    "Split Jack is the leader of a mercenary gang in the Capital Wasteland, roughly two weeks after the activation of Project Purity in 2277/2278.",
+    "Once an average wasteland raider, Split Jack cleaned up his act and began to combine his ruthless tendencies with a head for business. Now in charge of a group of bandits, he has come up with a plan for theft and extortion of the Water Distribution Network. His plan is to attack the water caravans en route to gather Aqua Pura and harass the network, then go to the network and get themselves hired as security for the increased attacks on the caravans.",
+    "Split Jack is recruiting bandits to this end,",
+    "He has established a simple power hierarchy among his crew, and the rules for his bandits are simple. The toughest, those with the mettle, lead. In practice, his underlings do what he says when he says to.",
+    "Split Jack is always at Wilhelm's Wharf, leading his crew.",
+    "Split Jack appears only in the Fallout 3 add-on Broken Steel."
+  ],
+  "race": "Human",
+  "affiliation": "Raiders(formerly)Split Jack'sbandits",
+  "role": "Leader",
+  "detailed_location": "Wilhelm's Wharf",
+  "voice_actor": "Pete Papageorge",
+  "special": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 5,
+    "Intelligence": 5,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "mod_special_values": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 5,
+    "Intelligence": 5,
+    "Agility": 4,
+    "Luck": 5
+  },
+  "level": "8→11→14→17",
+  "tag_skills": [
+    {
+      "Science:": "65→80→95→100"
+    },
+    {
+      "Small Guns:": "63→78→93→100"
+    },
+    {
+      "Unarmed:": "63→78→93→100"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "70→100→130→185"
+    },
+    {
+      "Critical Chance:": "5%"
+    },
+    {
+      "Melee Dam.:": "2"
+    },
+    {
+      "Unarmed Dam.:": "5.5"
+    },
+    {
+      "Fatigue:": "50"
+    },
+    {
+      "Poison Resist.:": "15%"
+    },
+    {
+      "Rad. Resist.:": "6%"
+    },
+    {
+      "Carry Weight:": "200 lbs"
+    },
+    {
+      "Damage Res.:": "12%→15%→18%→21%"
+    }
+  ],
+  "karma": "Evil",
+  "geck_race": "Asian",
+  "topics": [
+    {
+      "topic": "DLC03AudioHolotapesWQ01Recording",
+      "topic_text": "DLC03AudioHolotapesWQ01Recording",
+      "emotion": "Anger 10",
+      "response_text": "Hi, I'm Split Jack. I'm recording this 'cause I figure half you idiots can't read for shit. But you best don't lay this tape around just anywhere!{Split Jack is his name, deadly serious - leaving a message for new recruits}",
+      "index": "1"
+    },
+    {
+      "topic": "DLC03WQ01FinExtortGoodbye",
+      "topic_text": "So long. I'll see you in a week.",
+      "emotion": "Happy 50",
+      "response_text": "Right boss. G'luck out there. The Wastes are dangerous! Ahaha.{joking}",
+      "index": "9"
+    },
+    {
+      "topic": "DLC03WQ01FinExtortKarma",
+      "topic_text": "Not good enough. Give me your caps, or I'll take them from your corpse.",
+      "emotion": "Fear 50",
+      "response_text": "Just don't hurt me, alright? Here's all my caps.{scared}",
+      "index": "10"
+    },
+    {
+      "topic": "DLC03WQ01FinExtortLuck",
+      "topic_text": "Come on, I know you've got something more. Quit holding out on me.",
+      "emotion": "Surprise 50",
+      "response_text": "Fine. Here's an extra 50 caps. Now get out of here until next week.",
+      "index": "13"
+    },
+    {
+      "topic": "DLC03WQ01FinExtortSpeech",
+      "topic_text": "Ahem. If it wasn't for me, there'd be no protection racket.",
+      "emotion": "Disgust 10",
+      "response_text": "Yeah. I guess you're right. Here's a bigger share of the take. We'll see you next week.{begrudgingly}",
+      "index": "14"
+    },
+    {
+      "topic": "DLC03WQ01FinExtortStrength",
+      "topic_text": "Give me more. Or I'll bust you upside the head.",
+      "emotion": "Fear 50",
+      "response_text": "Damnit man, why you got to be like that? Here. Take half my caps. Then get the hell out of here until next week.{partly scared partly annoyed}",
+      "index": "15"
+    },
+    {
+      "topic": "DLC03WQ01Passphrase1",
+      "topic_text": "Mirelurk stew.",
+      "emotion": "Neutral 50",
+      "response_text": "Okay. You're lucky you knew that. Don't know who let you in, don't really care.{tough guy}",
+      "index": "16"
+    },
+    {
+      "topic": "DLC03WQ01Passphrase2",
+      "topic_text": "Pass phrase? I don't know anything about a pass phrase.",
+      "emotion": "Surprise 50",
+      "response_text": "Sad for you. 'Cause only people that know the pass phrase get away with snooping around our business.{sarcastic anger, about to kill someone}",
+      "index": "22"
+    },
+    {
+      "topic": "DLC03WQ01Passphrase3",
+      "topic_text": "Ummm... oh yeah, the pass phrase. It's \"Eye patch\"!",
+      "emotion": "Anger 100",
+      "response_text": "Very funny, asshole. You won't be laughing when I'm done with you.{deadly anger (he has an eye patch, thinks the player is mocking him)}",
+      "index": "26"
+    },
+    {
+      "topic": "DLC03WQ01Passphrase4",
+      "topic_text": "Open sesame?",
+      "emotion": "Anger 100",
+      "response_text": "The hell's that supposed to mean? No matter. That ain't the pass phrase, so you're dead, asshole.{deadly serious and about to murder}",
+      "index": "27"
+    },
+    {
+      "topic": "DLC03WQ01SplitJackAbout",
+      "topic_text": "So what's the score?",
+      "emotion": "Surprise 50",
+      "response_text": "No one told you? It's simple. We hit water caravans and stash the Aqua Pura...{explaining the plan as if to a moron}",
+      "index": "28"
+    },
+    {
+      "topic": "DLC03WQ01SplitJackChallenge",
+      "topic_text": "It's time for someone else to take charge. You and me. Right now. Time to die.",
+      "emotion": "Surprise 100",
+      "response_text": "You got a deathwish? Fine by me. Knives, pipes, or boards?{accepting a duel}",
+      "index": "32"
+    },
+    {
+      "topic": "DLC03WQ01SplitJackChallenge1",
+      "topic_text": "Knives.",
+      "emotion": "Happy 50",
+      "response_text": "Great. Here's a Combat Knife. Use that and only that. I get hit with something other than that, or by anyone else, and my boys join in.{explaining rules of the duel}",
+      "index": "33"
+    },
+    {
+      "topic": "DLC03WQ01SplitJackChallenge2",
+      "topic_text": "Pipes.",
+      "emotion": "Happy 50",
+      "response_text": "Great. Here's a Lead Pipe. Use that and only that. I get hit with something other than that, or by anyone else, and my boys join in.{explaining rules of the duel}",
+      "index": "35"
+    },
+    {
+      "topic": "DLC03WQ01SplitJackChallenge3",
+      "topic_text": "Boards.",
+      "emotion": "Happy 50",
+      "response_text": "Great. Here's a Nail Board. Use that and only that. I get hit with something other than that, or by anyone else, and my boys join in.{explaining rules of the duel}",
+      "index": "37"
+    },
+    {
+      "topic": "DLC03WQ01SplitJackChallenge4",
+      "topic_text": "Guns.",
+      "emotion": "Anger 100",
+      "response_text": "Did I say guns? No I didn't. I said, Knives, Pipes, or Boards. I'm still the boss of this gang, so I still set the rules. So what will it be asshole?{annoyed, setting rules to a duel}",
+      "index": "39"
+    },
+    {
+      "topic": "DLC03WQ01SplitJackChallenge5",
+      "topic_text": "Uh, never mind.",
+      "emotion": "Happy 100",
+      "response_text": "Didn't think so. Now, sit down and shut up.{cocky}",
+      "index": "40"
+    },
+    {
+      "topic": "DLC03WQ01SplitJackGreetingA0",
+      "topic_text": "I came for the job. You still hiring guns?",
+      "emotion": "Happy 100",
+      "response_text": "Huhnn. You're one of the newbies then. Fine. So long as you know the pass phrase, you're in. If not -- you're dead.{smiling while offering a serious threat}",
+      "index": "41"
+    },
+    {
+      "topic": "DLC03WQ01SplitJackGreetingA00",
+      "topic_text": "I'm here to send you and your gang into retirement. Got any last words?",
+      "emotion": "Anger 100",
+      "response_text": "Damnit. And I was just gonna have some stew that Grandma whipped up. Fine. Have it your way asshole.{about to murder someone}",
+      "index": "42"
+    },
+    {
+      "topic": "DLC03WQ01SplitJackGreetingA1",
+      "topic_text": "I'm nobody you need to worry about.",
+      "emotion": "Sad 100",
+      "response_text": "Brother, I worry 'bout everybody. Can't trust no one. You know the pass phrase?",
+      "index": "44"
+    },
+    {
+      "topic": "DLC03WQ01SplitJackGreetingA2",
+      "topic_text": "I'm your worst nightmare!",
+      "emotion": "Anger 100",
+      "response_text": "That so? You're one of the newbies?  You best know the pass phrase asshole. Or you're dead.{a serious threat}",
+      "index": "46"
+    },
+    {
+      "topic": "DLC03WQ01SplitJackGreetingA3",
+      "topic_text": "<Say nothing.>",
+      "emotion": "Disgust 100",
+      "response_text": "You an idiot or something? I don't got much like for idiots. You better know the pass phrase, asshole.{annoyed}",
+      "index": "47"
+    },
+    {
+      "topic": "DLC03WQ01SplitJackLeave",
+      "topic_text": "They're not going to pay you to protect something they're giving away for free.",
+      "emotion": "Surprise 50",
+      "response_text": "What? Well...{confused}",
+      "index": "48"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Anger 100",
+      "response_text": "Backstabbed us and sold us out, did ya?{angry}",
+      "index": "52"
+    },
+    {
+      "topic": "SpeechChallengeFailure",
+      "topic_text": "SpeechChallengeFailure",
+      "emotion": "Anger 50",
+      "response_text": "Nice try asshole. Come back in a week, you'll get your next cut of the take then.{mildly annoyed}",
+      "index": "71"
+    }
+  ],
+  "conversation": [],
+  "combat": []
+}

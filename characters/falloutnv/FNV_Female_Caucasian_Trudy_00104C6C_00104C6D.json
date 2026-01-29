@@ -1,0 +1,431 @@
+{
+  "name": "Trudy",
+  "url": "/wiki/Trudy_(Fallout:_New_Vegas)",
+  "dialogue_name": "GSTrudy.txt",
+  "dialogue_url": "/wiki/GSTrudy.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": true,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "00104C6C",
+  "ref_id": "00104C6D",
+  "editor_id": "GSTrudy",
+  "location": "Prospector Saloon",
+  "location_url": "/wiki/Prospector_Saloon",
+  "descriptions": [
+    "Trudy is a resident of Goodsprings in the Mojave Wasteland in 2281, where she is both the owner and bartender of the Prospector Saloon and the town's unofficial mayor due to her tough, wizened demeanor. She appears in Fallout: New Vegas.",
+    "Around 2274, Trudy took over the ownership of the Prospector Saloon in Goodsprings and has been running it ever since.",
+    "The day after the Courier was ambushed by them near the town cemetery, on October 12, 2281, However, Ringo was indeed pursued, and a group of Gangers led by Joe Cobb soon came to town demanding they hand over Ringo and threatening to destroy everything if they refused.",
+    "So far, Trudy has stood her ground against Cobb's demands,",
+    "Trudy can be asked questions about Goodsprings and the Powder Gangers, as well as the New California Republic, Caesar's Legion, and their upcoming second battle over Hoover Dam. She comments that the NCR is helping keep the region safe but is \"trying to do too much\" and \"spread too thin,\" while she disgustedly and fearfully describes the Legion as \"slavers, killers, and all other kinds of trouble\" who are rumored to be just barely away from overrunning the Mojave."
+  ],
+  "race": "Human",
+  "gender": "Female",
+  "affiliation": "Goodsprings",
+  "role": "Saloon owner and bartenderInformal town mayor\"Town mom\"",
+  "detailed_location": "GoodspringsProspector Saloon",
+  "voice_actor": "Lora Cain",
+  "special": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 6,
+    "Charisma": 3,
+    "Intelligence": 4,
+    "Agility": 6,
+    "Luck": 4
+  },
+  "level": "5",
+  "tag_skills": [
+    {
+      "Guns:": "49"
+    },
+    {
+      "Melee Weap.:": "47"
+    },
+    {
+      "Unarmed:": "49"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "95"
+    }
+  ],
+  "karma": "Good",
+  "voice_type": "FemaleAdult02",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Anger 50",
+      "response_text": "{Gunfight started, no Trudy help}Are you trying to get my saloon shot up? Finish what you started!",
+      "index": "1"
+    },
+    {
+      "topic": "PLAYERFIREWEAPON",
+      "topic_text": "PLAYER FIRE WEAPON",
+      "emotion": "Neutral 50",
+      "response_text": "Quit it!",
+      "index": "10"
+    },
+    {
+      "topic": "PLAYERINIRONSITES",
+      "topic_text": "PLAYER IN IRON SITES",
+      "emotion": "Neutral 50",
+      "response_text": "Don't even joke like that.",
+      "index": "12"
+    },
+    {
+      "topic": "PLAYERLAYMINE",
+      "topic_text": "PLAYER LAY MINE",
+      "emotion": "Neutral 50",
+      "response_text": "You sure that's necessary?",
+      "index": "14"
+    },
+    {
+      "topic": "PLAYERTHROWGRENADE",
+      "topic_text": "PLAYER THROW GRENADE",
+      "emotion": "Neutral 50",
+      "response_text": "Watch out!",
+      "index": "16"
+    },
+    {
+      "topic": "VFreeformGoodspringsGSTrudyTopic000",
+      "topic_text": "Does Goodsprings get many visitors?",
+      "emotion": "Neutral 50",
+      "response_text": "Mostly traders looking to buy Bighorner meat and hides. The traders are the main reason the general store manages to stay in business.",
+      "index": "18"
+    },
+    {
+      "topic": "VFreeformGoodspringsGSTrudyTopic001< Speech 25 >",
+      "topic_text": "You should help me take down the powder gang. Bullets, explosions, lots of fun.",
+      "emotion": "Happy 10",
+      "response_text": "[SUCCEEDED] I was planning on sitting this one out, but for some reason I can't help but like you. I'm with you.",
+      "index": "20"
+    },
+    {
+      "topic": "VFreeformGoodspringsGSTrudyTopic002",
+      "topic_text": "Who was that man you were arguing with?",
+      "emotion": "Anger 5",
+      "response_text": "He's a convict. Just without the chains. Said his name was Cobb. \"Powder Gangers\" is what they call themselves. Plenty more like him out there.",
+      "index": "24"
+    },
+    {
+      "topic": "VFreeformGoodspringsGSTrudyTopic003",
+      "topic_text": "Anything interesting going on in the rest of the wasteland?",
+      "emotion": "Neutral 50",
+      "response_text": "There's always something interesting going on, but the biggest news has to be the coming dustup between the NCR and the Legion over the Dam.",
+      "index": "25"
+    },
+    {
+      "topic": "VFreeformGoodspringsGSTrudyTopic004",
+      "topic_text": "Did my attackers say where they were going?",
+      "emotion": "Neutral 50",
+      "response_text": "They were having some kind of argument about it, but the guy in the checkered coat kept shushing them.",
+      "index": "26"
+    },
+    {
+      "topic": "VFreeformGoodspringsGSTrudyTopic005",
+      "topic_text": "Tell me about the NCR.",
+      "emotion": "Neutral 50",
+      "response_text": "The New California Republic's got the most power in Nevada. Money, troops, you name it.",
+      "index": "28"
+    },
+    {
+      "topic": "VFreeformGoodspringsGSTrudyTopic006",
+      "topic_text": "What can you tell me about the Legion?",
+      "emotion": "Neutral 50",
+      "response_text": "{disgust mixed with fear}Slavers, killers, and all other kinds of trouble. They dress up like Roman soldiers, so there's no mistaking it when you see them.",
+      "index": "30"
+    },
+    {
+      "topic": "VFreeformGoodspringsGSTrudyTopic007",
+      "topic_text": "Why do you think the NCR and the Legion both want the Dam?",
+      "emotion": "Neutral 50",
+      "response_text": "I'm pretty sure the NCR wants to hold onto the Dam because it's one of the few places around that can make electricity.",
+      "index": "32"
+    },
+    {
+      "topic": "VFreeformGoodspringsGSTrudyTopic012",
+      "topic_text": "I'm trying to track down the people who attacked me. Know anything about them?",
+      "emotion": "Neutral 50",
+      "response_text": "Not much, other than they're a bunch of freeloaders who expected a few rounds on the house. I was able to get them to pay up, though.",
+      "index": "34"
+    },
+    {
+      "topic": "VFreeformGoodspringsGSTrudyTopic013",
+      "topic_text": "Do you know the robot that rescued me?",
+      "emotion": "Neutral 50",
+      "response_text": "I know that... thing... as much as anyone else around here. It mostly keeps to itself, which is just fine by me.{thing said with a measure of disgust.}",
+      "index": "36"
+    },
+    {
+      "topic": "VFreeformGoodspringsGSTrudyTopic014",
+      "topic_text": "Why is that?",
+      "emotion": "Neutral 50",
+      "response_text": "That whole area's overrun with the kind of critters that just get mad if you shoot 'em.",
+      "index": "38"
+    },
+    {
+      "topic": "VFreeformGoodspringsGSTrudyTopic015",
+      "topic_text": "So where were they headed?",
+      "emotion": "Neutral 50",
+      "response_text": "I didn't hear exactly, but the leader was talking about the Strip.",
+      "index": "40"
+    },
+    {
+      "topic": "VFreeformGoodspringsGSTrudyTopic016",
+      "topic_text": "Powder gangers?",
+      "emotion": "Neutral 50",
+      "response_text": "Chain gangs, really. The NCR brought them in from California to work on the rail lines.",
+      "index": "42"
+    },
+    {
+      "topic": "VFreeformGoodspringsGSTrudyTopic017",
+      "topic_text": "Want me to take a look at your broken radio?",
+      "emotion": "Neutral 50",
+      "response_text": "Sure. The outside looks okay, but I think something broke on the inside.",
+      "index": "45"
+    },
+    {
+      "topic": "VFreeformGoodspringsGSTrudyTopic018",
+      "topic_text": "I fixed your radio.",
+      "emotion": "Neutral 50",
+      "response_text": "Yep, I heard it turn right back on after you got done tinkering with it. Here's some caps for the work.",
+      "index": "47"
+    },
+    {
+      "topic": "VFreeformGoodspringsGSTrudyTopic020",
+      "topic_text": "Thanks for the caps.",
+      "emotion": "Neutral 50",
+      "response_text": "You're welcome. So, can I get you anything?",
+      "index": "48"
+    },
+    {
+      "topic": "VFreeformGoodspringsGSTrudyTopic022",
+      "topic_text": "What does he actually do around here?",
+      "emotion": "Neutral 50",
+      "response_text": "Other than rolling around once in awhile, it doesn't do anything useful as far as I can tell.",
+      "index": "49"
+    },
+    {
+      "topic": "VFreeformGoodspringsGSTrudyTopic023",
+      "topic_text": "You don't like him?",
+      "emotion": "Neutral 50",
+      "response_text": "It acts friendly enough, but I don't trust that whole \"cheerful cowboy\" act. I find it all very creepy.",
+      "index": "51"
+    },
+    {
+      "topic": "VFreeformGoodspringsGSTrudyTopic024",
+      "topic_text": "Never mind. Let's talk about something else.",
+      "emotion": "Neutral 50",
+      "response_text": "Fine by me.",
+      "index": "52"
+    },
+    {
+      "topic": "VFreeformGoodspringsGSTrudyTopic025",
+      "topic_text": "Never mind. I want to talk about something else.",
+      "emotion": "Neutral 50",
+      "response_text": "All right.",
+      "index": "53"
+    },
+    {
+      "topic": "VFreeformGoodspringsGSTrudyTopic026",
+      "topic_text": "How long has he been in Goodsprings?",
+      "emotion": "Neutral 50",
+      "response_text": "It was here when I took over the saloon seven years ago. Some people have said its owner lived here, but no one knows who it was.",
+      "index": "54"
+    },
+    {
+      "topic": "VFreeformGoodspringsGSTrudyTopic027",
+      "topic_text": "What happens if I help Ringo?",
+      "emotion": "Neutral 50",
+      "response_text": "If you were able to get Ringo out of this mess, you'd have a decent reputation around Goodsprings. I'd even set you up with a discount.",
+      "index": "55"
+    },
+    {
+      "topic": "VFreeformGoodspringsGSTrudyTopic028",
+      "topic_text": "So I help Ringo, and Goodsprings will like me more. What if I help the Powder Gangers?",
+      "emotion": "Anger 5",
+      "response_text": "{slight anger - player just asked about helping criminals}Don't know why you'd want to go do a thing like that. Yeah, you'd get on their good side, but people around here wouldn't appreciate it one bit.",
+      "index": "57"
+    },
+    {
+      "topic": "VFreeformGoodspringsGSTrudyTopic029< Barter 20 >",
+      "topic_text": "That's it? Are you implying that I've done shoddy work?",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] Not at all! I'm never sure how much is normally charged for this sort of thing. Here's some additional caps - that should be enough.",
+      "index": "58"
+    },
+    {
+      "topic": "VFreeformGoodspringsGSTrudyTopic030< Sneak 25 >",
+      "topic_text": "Near the saloon and store are good spots to stage an ambush - if I had the help.",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] That does sound like a good plan. All right, you seem to know what you're doing, so you can count me in.",
+      "index": "61"
+    },
+    {
+      "topic": "VFreeformGoodspringsGoodspringsRubyTopic000",
+      "topic_text": "I overheard your argument. What was that all about?",
+      "emotion": "Disgust 50",
+      "response_text": "It looks like our little town got itself dragged into the middle of something we don't want anything to do with.",
+      "index": "65"
+    },
+    {
+      "topic": "VFreeformGoodspringsGoodspringsRubyTopic001",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Be careful out there.",
+      "index": "68"
+    },
+    {
+      "topic": "VFreeformGoodspringsGoodspringsRubyTopic002",
+      "topic_text": "Where is Ringo now?",
+      "emotion": "Neutral 50",
+      "response_text": "He's holed up at the abandoned gas station up the hill.",
+      "index": "69"
+    },
+    {
+      "topic": "VFreeformGoodspringsGoodspringsRubyTopic005",
+      "topic_text": "Why not just kill Cobb and be done with it?",
+      "emotion": "Neutral 50",
+      "response_text": "You mean murder him? That's not our way, even if Cobb is scum. He can bluster and threaten all he wants.",
+      "index": "70"
+    },
+    {
+      "topic": "VFreeformGoodspringsGoodspringsRubyTopic006",
+      "topic_text": "What are you going to do?",
+      "emotion": "Neutral 50",
+      "response_text": "Some of the others, like Sunny, will probably stand up for Ringo if he asks for help, which he hasn't.",
+      "index": "71"
+    },
+    {
+      "topic": "VFreeformGoodspringsGoodspringsRubyTopic007",
+      "topic_text": "Show me what you have for sale.",
+      "emotion": "Neutral 50",
+      "response_text": "{Positive Rep Bonus}Got a special discount for you, after what you done for us.",
+      "index": "73"
+    },
+    {
+      "topic": "VFreeformGoodspringsGoodspringsTrudyTopic003",
+      "topic_text": "It's odd that Cobb wasn't able to find Ringo. The town's not that big.",
+      "emotion": "Neutral 50",
+      "response_text": "Cobb hasn't exactly been looking for Ringo too hard - I think he's afraid that Ringo will ambush him, which is probably true.",
+      "index": "75"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Be careful out there.",
+      "index": "76"
+    },
+    {
+      "topic": "GSTrudyToJoe",
+      "topic_text": "GSTrudyToJoe",
+      "emotion": "Anger 50",
+      "response_text": "We'll keep that in mind. Now, if you're not going to buy something, get out.",
+      "index": "77"
+    }
+  ],
+  "combat": [
+    {
+      "topic": "AcceptYield",
+      "topic_text": "AcceptYield",
+      "emotion": "Neutral 50",
+      "response_text": "You're not worth it anyway.",
+      "index": "78"
+    },
+    {
+      "topic": "Assault",
+      "topic_text": "Assault",
+      "emotion": "Neutral 50",
+      "response_text": "Quit that!",
+      "index": "79"
+    },
+    {
+      "topic": "Attack",
+      "topic_text": "Attack",
+      "emotion": "Neutral 50",
+      "response_text": "How you like that?",
+      "index": "82"
+    },
+    {
+      "topic": "AvoidThreat",
+      "topic_text": "AvoidThreat",
+      "emotion": "Neutral 50",
+      "response_text": "Clear out!",
+      "index": "85"
+    },
+    {
+      "topic": "Death",
+      "topic_text": "Death",
+      "emotion": "Neutral 50",
+      "response_text": "Ahhh...",
+      "index": "87"
+    },
+    {
+      "topic": "DeathResponse",
+      "topic_text": "DeathResponse",
+      "emotion": "Neutral 50",
+      "response_text": "Damn it to hell!",
+      "index": "90"
+    },
+    {
+      "topic": "Flee",
+      "topic_text": "Flee",
+      "emotion": "Neutral 50",
+      "response_text": "Ahhhhh!",
+      "index": "92"
+    },
+    {
+      "topic": "GuardTrespass",
+      "topic_text": "GuardTrespass",
+      "emotion": "Neutral 50",
+      "response_text": "Shoo!",
+      "index": "95"
+    },
+    {
+      "topic": "Hit",
+      "topic_text": "Hit",
+      "emotion": "Neutral 50",
+      "response_text": "Ahh...",
+      "index": "98"
+    },
+    {
+      "topic": "Murder",
+      "topic_text": "Murder",
+      "emotion": "Neutral 50",
+      "response_text": "Ahhhhhh...",
+      "index": "104"
+    },
+    {
+      "topic": "MurderNoCrime",
+      "topic_text": "MurderNoCrime",
+      "emotion": "Neutral 50",
+      "response_text": "Probably deserved it.",
+      "index": "107"
+    },
+    {
+      "topic": "PowerAttack",
+      "topic_text": "PowerAttack",
+      "emotion": "Neutral 50",
+      "response_text": "Ahh!",
+      "index": "110"
+    },
+    {
+      "topic": "Steal",
+      "topic_text": "Steal",
+      "emotion": "Neutral 50",
+      "response_text": "Don't think I didn't see that!",
+      "index": "113"
+    }
+  ]
+}

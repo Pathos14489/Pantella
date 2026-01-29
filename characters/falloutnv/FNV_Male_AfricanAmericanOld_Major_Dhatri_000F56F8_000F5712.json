@@ -1,0 +1,267 @@
+{
+  "name": "Major Dhatri",
+  "url": "/wiki/Dhatri",
+  "dialogue_name": "1EMajorDhatri.txt",
+  "dialogue_url": "/wiki/1EMajorDhatri.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000F56F8",
+  "ref_id": "000F5712",
+  "editor_id": "1EMajorDhatry",
+  "location": "Camp McCarran",
+  "location_url": "/wiki/Camp_McCarran",
+  "descriptions": [
+    "Major Dhatri is a New California Republic officer stationed at Camp McCarran in 2281, who wants someone to take care of some Fiends for him. He is typically found outside the terminal right by the tents.",
+    "A veteran high-ranking officer of the New California Republic Army, Dhatri holds the rank of major. He currently has one thing on his mind: the bounty hunt for leaders of the Fiends, Violet, Cook Cook and Driver Nephi. Due to the considerable difficulty the NCR has experienced in the recent months at finishing off the Fiends, Dhatri decided to place bounties on the heads of these Fiend leaders. He shares a particular kind of hate for the three, as they are responsible for the deaths of over twenty NCR troopers serving under his command.",
+    "Horrors of war are not new to the major; he was a captain during the Bitter Springs Massacre in 2278 and helped salvage the operation when it turned out that First Recon opened fire on unarmed civilians. By the time Dhatri or anyone else realized the people trying to escape were overwhelmingly Khan non-combatants - women, children, elderly, wounded and the sick - the situation was already spiraling out of control. He was forced to act, as the major in charge suffered a nervous breakdown and was unable to command. while the major in charge was busted back down to captain. Dhatri was then redeployed to Camp McCarran, where he continues to reside in 2281.",
+    "After the Bitter Springs Massacre, he adopted and raised Sgt. Bitter-Root, a Great Khan orphan. As a father, he is particularly proud of his son's membership in the Alpha Team of First Recon, under Lt. Gorobets. He has accepted the fact that he might, one day, send his child to death. His only consolation is that he will at least have the chance to see him one last time as his CO.",
+    "Though Dhatri despises both the Fiends and holds no love for the Great Khans, he has considerably better feelings for the latter, due to his remorse for the NCR Army's actions at Bitter Springs. The Fiends, on the other hand, Dhatri views as nothing more than animals to be hunted down and destroyed.",
+    "Three-Card Bounty: Dhatri wants bounty hunters to kill three Fiend leaders and take their heads to him, for which he will pay a handsome reward, but he is very particular about the means of their deaths - no headshots or decapitations which might disfigure the gruesome trophies.",
+    "There is a PFC Robert Dhatri on the Boulder City Memorial."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "NCR armyFirst Recon",
+  "role": "NCR Army Officer",
+  "detailed_location": "Camp McCarran",
+  "voice_actor": "Liam O'Brien",
+  "special": {
+    "Strength": 7,
+    "Perception": 6,
+    "Endurance": 6,
+    "Charisma": 6,
+    "Intelligence": 8,
+    "Agility": 4,
+    "Luck": 5
+  },
+  "level": "12",
+  "tag_skills": [
+    {
+      "Explosives:": "74"
+    },
+    {
+      "Guns:": "74"
+    },
+    {
+      "Melee Weap.:": "74"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "160"
+    },
+    {
+      "Dam. Threshold:": "10"
+    }
+  ],
+  "karma": "Neutral",
+  "voice_type": "MaleAdult05",
+  "geck_race": "AfricanAmericanOld",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "If it's bad news, you can take it up with the Colonel. If it's good news, it better involve some dead Fiends.",
+      "index": "1"
+    },
+    {
+      "topic": "VFreeformMcCarran31EMajorDhatriTopic000",
+      "topic_text": "What do you know about the Fiends?",
+      "emotion": "Neutral 50",
+      "response_text": "Pack of drugged-out killers. They're addicted to every stim, every pill, every psychoactive enema on this fucked-up earth.",
+      "index": "9"
+    },
+    {
+      "topic": "VFreeformMcCarran31EMajorDhatriTopic001",
+      "topic_text": "You're having trouble with the Fiends?",
+      "emotion": "Neutral 50",
+      "response_text": "Damn right I am. And I'm paying bounties.",
+      "index": "11"
+    },
+    {
+      "topic": "VFreeformMcCarran31EMajorDhatriTopic002",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Right.",
+      "index": "12"
+    },
+    {
+      "topic": "VFreeformMcCarran31EMajorDhatriTopic003",
+      "topic_text": "Yes, it does.",
+      "emotion": "Neutral 50",
+      "response_text": "Good. That's damn good. I figure it's about time we got lucky out here, so maybe you can snuff one of these maniacs.",
+      "index": "13"
+    },
+    {
+      "topic": "VFreeformMcCarran31EMajorDhatriTopic004",
+      "topic_text": "Might be. Give me their names.",
+      "emotion": "Neutral 50",
+      "response_text": "First one calls herself Violet. God knows why - the name is the prettiest thing about her. Spends most of her time with a pack of vicious dogs.",
+      "index": "14"
+    },
+    {
+      "topic": "VFreeformMcCarran31EMajorDhatriTopic005",
+      "topic_text": "No. I don't think so.",
+      "emotion": "Neutral 50",
+      "response_text": "Well, I'm sorry to hear that. Only one thing concerns me right now, and that's killing the bastards that are murdering my men.",
+      "index": "19"
+    },
+    {
+      "topic": "VFreeformMcCarran31EMajorDhatriTopic006",
+      "topic_text": "Violet.",
+      "emotion": "Neutral 50",
+      "response_text": "Violet it is. Wish I could give you more advice on how to bring her down, but we know less about her than the other two.",
+      "index": "22"
+    },
+    {
+      "topic": "VFreeformMcCarran31EMajorDhatriTopic007",
+      "topic_text": "Driver Nephi.",
+      "emotion": "Neutral 50",
+      "response_text": "You've got some guts, I'll give you that. Nephi is one tough son of a bitch. You let him get close, and he'll take your head off.",
+      "index": "24"
+    },
+    {
+      "topic": "VFreeformMcCarran31EMajorDhatriTopic008",
+      "topic_text": "Cook-Cook.",
+      "emotion": "Neutral 50",
+      "response_text": "One thing I should tell you about Cook-Cook. The piece of shit is pure animal. He raped one of my snipers, and that makes this personal.",
+      "index": "28"
+    },
+    {
+      "topic": "VFreeformMcCarran31EMajorDhatriTopic009",
+      "topic_text": "None of them.",
+      "emotion": "Neutral 50",
+      "response_text": "Can't say I blame you. If I wasn't in this fight for my country, you couldn't pay me enough to screw with those maniacs.",
+      "index": "31"
+    },
+    {
+      "topic": "VFreeformMcCarran31EMajorDhatriTopic010",
+      "topic_text": "Where can I find her?",
+      "emotion": "Neutral 50",
+      "response_text": "Good question. Fiend territory is southeast of here, but they range all over the area. None of them stays in any one place for long.",
+      "index": "33"
+    },
+    {
+      "topic": "VFreeformMcCarran31EMajorDhatriTopic011",
+      "topic_text": "I've changed my mind. I want to choose a different bounty.",
+      "emotion": "Neutral 50",
+      "response_text": "Makes no difference to me. I'd be happy to see any one of them dead. Who will it be?",
+      "index": "34"
+    },
+    {
+      "topic": "VFreeformMcCarran31EMajorDhatriTopic012",
+      "topic_text": "Anything else I need to know?",
+      "emotion": "Neutral 50",
+      "response_text": "One more thing. If you want the full reward, you need to bring me a recognizable head. My superiors need proof they're gone.",
+      "index": "35"
+    },
+    {
+      "topic": "VFreeformMcCarran31EMajorDhatriTopic013",
+      "topic_text": "I'd like to hear about your open bounties.",
+      "emotion": "Neutral 50",
+      "response_text": "Good. That's damn good. I figure it's about time we got lucky out here, so maybe you can snuff one of these maniacs.",
+      "index": "41"
+    },
+    {
+      "topic": "VFreeformMcCarran31EMajorDhatriTopic014",
+      "topic_text": "Where is Lt. Gorobets?",
+      "emotion": "Neutral 50",
+      "response_text": "Out in the yard. Gorobets coordinates our sniper teams. He's been gunning for Nephi for weeks now.",
+      "index": "42"
+    },
+    {
+      "topic": "VFreeformMcCarran31EMajorDhatriTopic015",
+      "topic_text": "Who is Little Buster?",
+      "emotion": "Neutral 50",
+      "response_text": "Bounty hunter. Talks big. But he's still alive, so he can't be completely full of shit.",
+      "index": "44"
+    },
+    {
+      "topic": "VFreeformMcCarran31EMajorDhatriTopic016",
+      "topic_text": "I want to claim a bounty.",
+      "emotion": "Neutral 50",
+      "response_text": "That right? You killed one of the psychopaths on my shitlist? Let me see the scumbag's head...",
+      "index": "46"
+    },
+    {
+      "topic": "VFreeformMcCarran31EMajorDhatriTopic020",
+      "topic_text": "No, I've had enough for now.",
+      "emotion": "Neutral 50",
+      "response_text": "Fair enough. You've done your part. If you change your mind, you know where to find me.",
+      "index": "70"
+    },
+    {
+      "topic": "VFreeformMcCarran31EMajorDhatriTopic021",
+      "topic_text": "All right. I'll do it.",
+      "emotion": "Neutral 50",
+      "response_text": "That's the best damn thing I've heard all day. Finally somebody around here with some goddamn ambition.{praising the player}",
+      "index": "71"
+    },
+    {
+      "topic": "VFreeformMcCarran31EMajorDhatriTopic022",
+      "topic_text": "Never mind. No more bounties, for now.",
+      "emotion": "Neutral 50",
+      "response_text": "Sorry to hear that. You had my hopes up. If you change your mind, the bounties still stand... unless somebody else claims them.{disappointed}",
+      "index": "73"
+    },
+    {
+      "topic": "VFreeformMcCarran31EMajorDhatriTopic023",
+      "topic_text": "No. I've had enough.",
+      "emotion": "Neutral 50",
+      "response_text": "Well... we're still better off than we were. Maybe one of my snipers will get lucky. If not, and you change your mind... you know where I'll be.",
+      "index": "74"
+    },
+    {
+      "topic": "VFreeformMcCarran31EMajorDhatriTopic026",
+      "topic_text": "Got any more open bounties?",
+      "emotion": "Neutral 50",
+      "response_text": "Damn right I do. Who do you think you can take down?",
+      "index": "75"
+    },
+    {
+      "topic": "VFreeformMcCarran31EMajorDhatriTopic027",
+      "topic_text": "Tell me again what you know about the target.",
+      "emotion": "Neutral 50",
+      "response_text": "Violet's got dogs. Lots of dogs. While they're ripping you to shreds up close, she'll be putting rounds through you with her rifle.",
+      "index": "76"
+    },
+    {
+      "topic": "VFreeformMcCarran31EMajorDhatriTopic028",
+      "topic_text": "You were at Bitter Springs, I'm told.",
+      "emotion": "Pained 5",
+      "response_text": "{painful memory - it was a massacre of innocents}Yeah, I was there. I was Captain Dhatri, then. That whole situation was a mess and could easily have been avoided with good intel.",
+      "index": "80"
+    },
+    {
+      "topic": "VFreeformMcCarran31EMajorDhatriTopic029",
+      "topic_text": "I heard you're Bitter-Root's father.",
+      "emotion": "Neutral 50",
+      "response_text": "{Bitter-Root alive}Adoptive father, yes. I was very proud when he made First Recon. I know that every time I send them out, I could be sending him to his death.",
+      "index": "85"
+    },
+    {
+      "topic": "VFreeformMcCarran31EMajorDhatriTopic031",
+      "topic_text": "What can you tell me about the Great Khans?",
+      "emotion": "Neutral 50",
+      "response_text": "We know they supply the Fiends with illegal chems, but they never stick around in NCR territory for long. They know the land, and move quick.",
+      "index": "89"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Right.",
+      "index": "92"
+    }
+  ],
+  "combat": []
+}

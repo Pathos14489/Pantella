@@ -1,0 +1,201 @@
+{
+  "name": "Billy Creel",
+  "url": "/wiki/Billy_Creel",
+  "dialogue_name": "BillyCreel.txt",
+  "dialogue_url": "/wiki/BillyCreel.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "00000A65",
+  "ref_id": "00003B5A",
+  "editor_id": "BillyCreel",
+  "location": "Billy Creel's house",
+  "location_url": "/wiki/Billy_Creel%27s_house",
+  "descriptions": [
+    "Billy Creel is a former scavenger, adoptive father of Maggie and resident of Megaton in Fallout 3. He peppers his sentences with slang terms from the 1950s/60s, such as \"daddy-o\" or referring to people as \"cats.\"",
+    "Growing up as a forager, Billy Creel eventually became a gun for hire, protecting wasteland caravans for money, then a scavenger. He was completely focused on survival, until a chance encounter in 2275 awoke his paternal instinct; Creel stopped at a small settlement up north to trade salvage in, only to realize that it was wiped out by a raider attack. He found Maggie there, hiding under a bed in the same room that her parents were killed in, and promptly took her in.",
+    "As a newly minted father, Creel journeyed south and settled in Megaton, becoming a permanent resident after he helped repulse a raider attack. One of the residents was killed in the attack, and he was promptly rewarded with their house for his contribution to the defense. However, this has also led to persistent rumors that it was his bullet, not a raider's, that claimed the original owner's life and bought him a place among the citizenry.",
+    "In general, Billy is reluctant to speak about his life before Megaton, believing he spent too much time in the wastes.",
+    "He compensates for this by spoiling her when he can. Maggie loves spending time with Billy, and the prospect of a trip to Rivet City or scavenging for a bicycle to restore to working condition never fail to make her happy.",
+    "Billy is a popular man at Megaton overall. He and Jenny Stahl have feelings for each other, making him a permanent fixture at The Brass Lantern.",
+    "There's one exception; Colin Moriarty hates Creel and considers his fatherly facade to be nothing more than a fraud. Although he has no concrete evidence, Moriarty believes that Creel actually killed Maggie's parents and took her as a sort of trophy. He also despises Creel's love of Nuka-Cola, at the expense of hard liquor. There is a large number of Nuka-Cola bottles inside Creel's home, as well.",
+    "Billy Creel's safe combination is 15 16 23 42, a reference to the TV show, Lost, where they regularly reoccur as candidate numbers.",
+    "PC Playstation 3 Xbox 360 Like all Megaton characters, Billy might go missing or turn up dead. See recovering missing NPC in Fallout 3 on how to resolve this issue. "
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Megaton",
+  "role": "Caravan guard(formerly)Megaton settler",
+  "detailed_location": "Billy Creel's house",
+  "voice_actor": "Craig Sechler",
+  "special": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 4,
+    "Intelligence": 4,
+    "Agility": 6,
+    "Luck": 4
+  },
+  "level": "6→10 (player level x2)",
+  "tag_skills": [
+    {
+      "Melee Weap.:": "54→73(56→75)"
+    },
+    {
+      "Small Guns:": "54→73(56→75)"
+    },
+    {
+      "Sneak:": "54→73"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "90→110"
+    },
+    {
+      "Critical Chance:": "4%"
+    },
+    {
+      "Unarmed Dam.:": "1.1"
+    },
+    {
+      "Poison Resist.:": "15%"
+    },
+    {
+      "Rad. Resist.:": "6%"
+    },
+    {
+      "Carry Weight:": "210"
+    },
+    {
+      "Damage Res.:": "10%"
+    }
+  ],
+  "karma": "Good",
+  "voice_type": "MaleAdult04DC",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Happy 50",
+      "response_text": "Hooo weee! Look at you! Now I haven't seen one of those Vault jumpsuits in, wow, a LONG time.  Pretty damn good condition, too!",
+      "index": "1"
+    },
+    {
+      "topic": "MegBillyMaggieChoice",
+      "topic_text": "I'm sorry... Who's Maggie?",
+      "emotion": "Neutral 50",
+      "response_text": "Oh! Sorry, I guess I got ahead of myself, huh? Maggie's nine, sweetest little girl you'd ever care to meet. We take care of each other.",
+      "index": "9"
+    },
+    {
+      "topic": "MegTownEnd",
+      "topic_text": "That's all I needed to know.",
+      "emotion": "Neutral 50",
+      "response_text": "Sure thing, man.",
+      "index": "13"
+    },
+    {
+      "topic": "MegTownFatherChoice",
+      "topic_text": "I'm looking for my father. Middle-aged guy. Maybe you've seen him?",
+      "emotion": "Neutral 50",
+      "response_text": "Sorry, man. I haven't seen any cats like that roll through here.{ }",
+      "index": "14"
+    },
+    {
+      "topic": "MegTownMegaton",
+      "topic_text": "What can you tell me about Megaton?",
+      "emotion": "Neutral 50",
+      "response_text": "Megaton is the best little town you'll find in the Capital Wasteland. Don't let anyone tell you different.{ }",
+      "index": "15"
+    },
+    {
+      "topic": "MegTownRumors",
+      "topic_text": "What's the word around town?",
+      "emotion": "Neutral 50",
+      "response_text": "People've been sayin' that there's somethin' wrong with the water purifier. But Ol' Walter's been keepin' that thing runnin' for decades.",
+      "index": "18"
+    },
+    {
+      "topic": "MegTownWasteland",
+      "topic_text": "Know anything about the area outside Megaton?",
+      "emotion": "Neutral 50",
+      "response_text": "All I know is that I spent too much time out there and beyond that, I ain't gonna talk about it.",
+      "index": "20"
+    },
+    {
+      "topic": "MegTownWhatDoYouDo",
+      "topic_text": "What do you do around here?",
+      "emotion": "Neutral 50",
+      "response_text": "Me?  I deal with the caravan suppliers. I used to ride with those guys, so they cut me some good deals. Helps keep the town supplied.",
+      "index": "21"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "I have to go now.",
+      "emotion": "Neutral 50",
+      "response_text": "Later, gator.",
+      "index": "23"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Neutral 50",
+      "response_text": "'can I do for you, Sheriff?",
+      "index": "28"
+    },
+    {
+      "topic": "MegatonTalk1",
+      "topic_text": "MegatonTalk",
+      "emotion": "Neutral 50",
+      "response_text": "For you, sweetheart, anything. What do you need?",
+      "index": "35"
+    },
+    {
+      "topic": "MegatonTalk2",
+      "topic_text": "MegatonTalk2",
+      "emotion": "Neutral 50",
+      "response_text": "Well, I was thinkin', Sweetie Pie... Sometime soon, we should take a trip. Just you and me. Maybe visit Rivet City or somethin'. Would you like that?",
+      "index": "37"
+    },
+    {
+      "topic": "MegatonTalk3",
+      "topic_text": "MegatonTalk3",
+      "emotion": "Neutral 50",
+      "response_text": "Whoa! Whoa now, honeybun! Let's ah... Let's slow down a little, okay? You got a lot of time left before that stuff is important. All right?",
+      "index": "39"
+    },
+    {
+      "topic": "MegatonTalk4",
+      "topic_text": "MegatonTalk4",
+      "emotion": "Neutral 50",
+      "response_text": "Ha ha! I just love seeing you happy, sweetheart.",
+      "index": "41"
+    }
+  ],
+  "combat": [
+    {
+      "topic": "Attack",
+      "topic_text": "Attack",
+      "emotion": "Neutral 50",
+      "response_text": "You're going down, boy!",
+      "index": "43"
+    },
+    {
+      "topic": "Death",
+      "topic_text": "Death",
+      "emotion": "Pained 100",
+      "response_text": "Maggie...{His last though it of his daughter.}",
+      "index": "48"
+    }
+  ]
+}

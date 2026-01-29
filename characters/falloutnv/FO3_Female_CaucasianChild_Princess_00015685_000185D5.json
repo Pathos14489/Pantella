@@ -1,0 +1,287 @@
+{
+  "name": "Princess",
+  "url": "/wiki/Princess",
+  "dialogue_name": "Princess.txt",
+  "dialogue_url": "/wiki/Princess.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": true,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "00015685",
+  "ref_id": "000185D5",
+  "editor_id": "Princess",
+  "location": "Little Lamplight",
+  "location_url": "/wiki/Little_Lamplight",
+  "descriptions": [
+    "Princess (real name Angela) is a girl in Little Lamplight in 2277. She guards the back gate.",
+    "She gained her nickname when she appointed herself mayor of Lamplight and insisted that everyone call her \"Princess.” However, after only five minutes, MacCready punched her in the nose and took over as the new mayor. Ever since then, she has had a crush on him."
+  ],
+  "race": "Human",
+  "gender": "Female",
+  "affiliation": "Little Lamplight",
+  "role": "Gate guard",
+  "detailed_location": "Little Lamplight",
+  "voice_actor": "Stephanie Joy",
+  "special": {
+    "Strength": 5,
+    "Perception": 6,
+    "Endurance": 6,
+    "Charisma": 5,
+    "Intelligence": 5,
+    "Agility": 7,
+    "Luck": 5
+  },
+  "level": "1",
+  "tag_skills": [
+    {
+      "Small Guns:": "34"
+    },
+    {
+      "Speech:": "30"
+    }
+  ],
+  "karma": "Good",
+  "voice_type": "FemaleChild01DC",
+  "geck_race": "CaucasianChild",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Disgust 50",
+      "response_text": "Hey mungo. This is an A B conversation so C your way out.{\"mungo\" said with derision}",
+      "index": "1"
+    },
+    {
+      "topic": "LLDirections",
+      "topic_text": "Can you give me directions?",
+      "emotion": "Anger 50",
+      "response_text": "No. Scram.",
+      "index": "14"
+    },
+    {
+      "topic": "LLFirstMeetingResponseAFriendly First Response",
+      "topic_text": "Whatever you say.",
+      "emotion": "Happy 25",
+      "response_text": "Good! Glad we've got that settled. Stay out of my way, and there won't be any problems.",
+      "index": "15"
+    },
+    {
+      "topic": "LLFirstMeetingResponseBRude First Response",
+      "topic_text": "Did you just try to give me orders? That's cute, little Princess.",
+      "emotion": "Anger 75",
+      "response_text": "Oh, you'll listen to me. Otherwise, I'll have my good pal RJ kick you out of the town. Or better yet, lock you in the vault.",
+      "index": "21"
+    },
+    {
+      "topic": "LLGuarding",
+      "topic_text": "What's it like, guarding the back gate?",
+      "emotion": "Anger 50",
+      "response_text": "It's so dull! Practically nothing ever tries to come through the back gate anymore, so I never get to shoot anyone.",
+      "index": "25"
+    },
+    {
+      "topic": "LLLMQ06TellMeAboutVault87",
+      "topic_text": "What do you know about Vault 87?",
+      "emotion": "Neutral 50",
+      "response_text": "That's behind the Back Door! The Back Door is my job, and I do it really well!{beaming}",
+      "index": "28"
+    },
+    {
+      "topic": "LLLMQ06UseMurderPass",
+      "topic_text": "I want to use Murder Pass to reach Vault 87.",
+      "emotion": "Neutral 50",
+      "response_text": "Not unless Mayor says it's okay. You'd better ask him.",
+      "index": "31"
+    },
+    {
+      "topic": "LLMungo",
+      "topic_text": "Stop calling me mungo, kid.",
+      "emotion": "Anger 50",
+      "response_text": "Stop calling me kid, mungo.",
+      "index": "32"
+    },
+    {
+      "topic": "LLNicknames",
+      "topic_text": "How did someone like you get a nickname like Princess?",
+      "emotion": "Anger 60",
+      "response_text": "I don't need to explain myself to you, mungo. Shut up and get lost.{Unexpectedly angry at the mention of her nickname}",
+      "index": "33"
+    },
+    {
+      "topic": "LLPrincessNickname",
+      "topic_text": "I know why you're really called Princess, Princess.",
+      "emotion": "Surprise 50",
+      "response_text": "Why? Because I'm the Princess of Little Lamplight?{Bluffing, but a little too flustered to pull it off believably.}",
+      "index": "35"
+    },
+    {
+      "topic": "LLPrincessNickname2A",
+      "topic_text": "You don't have to be embarrassed by it. Not everyone can be a good mayor.",
+      "emotion": "Anger 50",
+      "response_text": "Shut up! Soon as I figure out who told you, someone's getting pounded into the ground.",
+      "index": "36"
+    },
+    {
+      "topic": "LLPrincessNickname2B",
+      "topic_text": "I hear MacCready really walloped you when you tried to play princess.",
+      "emotion": "Surprise 50",
+      "response_text": "Oh yeah? Well that was a long time ago! Now RJ's my best friend!{Surprisingly defensive and angry about the idea that RJ (MacCready) walloped her.}",
+      "index": "38"
+    },
+    {
+      "topic": "LLPrincessNickname3A",
+      "topic_text": "You know what? Never mind. It's not worth making you cry.",
+      "emotion": "Anger 75",
+      "response_text": "That's right! Run away, coward!",
+      "index": "40"
+    },
+    {
+      "topic": "LLPrincessNickname3B",
+      "topic_text": "Yeah, well... You're a jerk and MacCready doesn't like you.",
+      "emotion": "Anger 50",
+      "response_text": "Oh, sure, like I should believe you. Why are you even wasting your time over here?{Angry and hurt}",
+      "index": "41"
+    },
+    {
+      "topic": "LLPrincessNickname3C",
+      "topic_text": "I hear MacCready really put you where you belong  at his feet.",
+      "emotion": "Sad 25",
+      "response_text": "That isn't so! I just... didn't want to do it anymore, and...{Breaking into tears}",
+      "index": "49"
+    },
+    {
+      "topic": "LLPrincessShootingA",
+      "topic_text": "Why would you have shot at me?",
+      "emotion": "Anger 25",
+      "response_text": "Could've been a lot of reasons. Maybe you sounded like a monster in all that darkness.",
+      "index": "54"
+    },
+    {
+      "topic": "LLPrincessShootingB",
+      "topic_text": "Shooting at me would have been a big mistake, kid.",
+      "emotion": "Surprise 25",
+      "response_text": "Oh, really? That's a cute little imagination you've got.",
+      "index": "57"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "I'm leaving. Get back to guarding.",
+      "emotion": "Anger 50",
+      "response_text": "Oh, thank goodness you gave me permission. Jerk.{Dripping with sarcasm.}",
+      "index": "59"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Anger 75",
+      "response_text": "Come on, start something again. I dare you. I double dog dare you.",
+      "index": "61"
+    },
+    {
+      "topic": "LLBackGateConv1",
+      "topic_text": "LLBackGateConv1",
+      "emotion": "Anger 25",
+      "response_text": "Hey, squirt! Hey, look at me when I talk to you.",
+      "index": "67"
+    },
+    {
+      "topic": "LLBackGateConv3",
+      "topic_text": "LLBackGateConv3",
+      "emotion": "Anger 25",
+      "response_text": "If you don't get me a new gun next time you're topside, I'm gonna pound you so hard you'll get another inch shorter.",
+      "index": "69"
+    },
+    {
+      "topic": "LLKnockTales1",
+      "topic_text": "LLKnockTales1",
+      "emotion": "Anger 50",
+      "response_text": "Sure, get it over with.",
+      "index": "71"
+    },
+    {
+      "topic": "LLKnockTales5",
+      "topic_text": "LLKnockTales5",
+      "emotion": "Anger 50",
+      "response_text": "Is that it? Thanks for wasting my time, Knock Knock.",
+      "index": "72"
+    },
+    {
+      "topic": "LLMayorDailyCheck1",
+      "topic_text": "LLMayorDailyCheck1",
+      "emotion": "Anger 50",
+      "response_text": "All's clear on the back gate, RJ. No trouble, no action, no nothing. Most incredibly fucking boring job ever.",
+      "index": "73"
+    },
+    {
+      "topic": "LLPrincessAngry",
+      "topic_text": "LLPrincessAngry",
+      "emotion": "Anger 50",
+      "response_text": "Get out of here, dummy!{Angry and frustrated}",
+      "index": "74"
+    },
+    {
+      "topic": "LLPrincessVictorious",
+      "topic_text": "LLPrincessVictorious",
+      "emotion": "Happy 50",
+      "response_text": "Ha ha! Now, scram!{Mocking laughter}",
+      "index": "78"
+    },
+    {
+      "topic": "LLRandomConv1",
+      "topic_text": "LLConversation1",
+      "emotion": "Anger 50",
+      "response_text": "Hrmf. What're you so happy about?{dismissive}",
+      "index": "80"
+    },
+    {
+      "topic": "LLRandomConv2",
+      "topic_text": "LLConversation2",
+      "emotion": "Anger 50",
+      "response_text": "What do you think? Get out of my face!{Sarcastic: \"What do YOU think?\"}",
+      "index": "82"
+    },
+    {
+      "topic": "LLRandomConvEnding",
+      "topic_text": "LLRandomConvEnding",
+      "emotion": "Anger 50",
+      "response_text": "Okay, whatever you say. Bye.",
+      "index": "83"
+    },
+    {
+      "topic": "LLWhatsUp1",
+      "topic_text": "LLWhatsUp1",
+      "emotion": "Anger 50",
+      "response_text": "Hrmf. What have you got to be happy about?{dismissive}",
+      "index": "84"
+    },
+    {
+      "topic": "LLWhatsUp2",
+      "topic_text": "LLWhatsUp2",
+      "emotion": "Anger 50",
+      "response_text": "Just talking to morons who keep bugging me. Scram!",
+      "index": "85"
+    },
+    {
+      "topic": "MS01StickyGoodbyeConv",
+      "topic_text": "MS01StickyGoodbyeConv",
+      "emotion": "Anger 50",
+      "response_text": "It's time to go!{bullying}",
+      "index": "86"
+    }
+  ],
+  "combat": [
+    {
+      "topic": "NormalToCombat",
+      "topic_text": "StartCombat",
+      "emotion": "Happy 50",
+      "response_text": "Alright, some action!",
+      "index": "89"
+    }
+  ]
+}

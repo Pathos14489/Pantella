@@ -1,0 +1,312 @@
+{
+  "name": "Seagrave Holmes",
+  "url": "/wiki/Seagrave_Holmes",
+  "dialogue_name": "SeagraveHolmes.txt",
+  "dialogue_url": "/wiki/SeagraveHolmes.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": true,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000156BB",
+  "ref_id": "0001E750",
+  "editor_id": "SeagraveHolmes",
+  "location": "Rivet City Supply,Rivet City market",
+  "location_url": "/wiki/Rivet_City_Supply",
+  "descriptions": [
+    "Seagrave Holmes (b. circa 2247) is the proprietor of Rivet City Supply in Rivet City in 2277.",
+    "A genius tinkerer, Seagrave fixes anything he can get his hands on, but doesn't lord his abilities over others. He gets along well with common folk, fitting into their social world without even thinking about it.",
+    "Despite his work for the city, Seagrave professes not to know much about its history or politics (due to his focus on keeping it afloat).",
+    "Seagrave spends his daily life managing Rivet City Supply, the general store in the Rivet City market. He claims that his store stocks \"a little bit of everything.\"",
+    "Because of his expertise, Seagrave was one of those in the Capital Wasteland who received a holotape with information about an escaped android seeking help. If asked about the rumors, he claims to believe it is merely a hoax.",
+    "As of 2277, Seagrave has decided that he wants to step up and take more responsibility in the settlement,",
+    "Bannon will waste no time to enlist anyone who is sympathetic to find a way to end Seagrave's campaign, claiming Seagrave is a shady character and that the city is better off without him in the seat; unbeknownst to him, Seagrave does have a shady past. Earlier in his life, Seagrave was a business partner of the slavers at Paradise Falls, and Eulogy Jones has made multiple attempts to have Seagrave open up Rivet City to the slave trade, all of which Seagrave has turned down. on the other hand, Bannon's underhanded practices wouldn't endear him to the merchants either.",
+    "Being the tinkerer he is, Seagrave fixes anything he can get his hands on, routinely helping his fellow merchants. This includes creating (and changing the locks on) a secure storage unit for Cindy Cantelli (to keep her addict husband out.)",
+    "Seagrave is also generally friendly to everyone on the ship. He is friends with Harkness,",
+    "Seagrave's infatuation with Vera is well-known. Seagrave accompanies Vera when she walks the flight deck every night between 9 p.m. and 12 a.m. He clearly wants to take their relationship into marriage despite her repeated rebuffs of his advances."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Eulogy Jones(formerly)Rivet City SupplyRivet City Council(optional)",
+  "role": "Owner of Rivet City SupplySlaver (formerly)Council member (optional)",
+  "detailed_location": "Rivet City",
+  "voice_actor": "Gregory Gorton",
+  "special": {
+    "Strength": 4,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 7,
+    "Intelligence": 5,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "mod_special_values": {
+    "Strength": 4,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 7,
+    "Intelligence": 5,
+    "Agility": 7,
+    "Luck": 5
+  },
+  "level": "4",
+  "tag_skills": [
+    {
+      "Barter:": "49"
+    },
+    {
+      "Small Guns:": "47(49)"
+    },
+    {
+      "Speech:": "49"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "40(45)"
+    },
+    {
+      "Critical Chance:": "5%"
+    },
+    {
+      "Unarmed Dam.:": "1.15"
+    },
+    {
+      "Poison Resist.:": "15%(20%)"
+    },
+    {
+      "Rad. Resist.:": "6%(8%)"
+    },
+    {
+      "Carry Weight:": "190"
+    }
+  ],
+  "karma": "Good",
+  "voice_type": "MaleAdult01DefaultBDC",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "You'd better get out of here. The guards are going to close up soon.",
+      "index": "1"
+    },
+    {
+      "topic": "MS03RCHistory1Could I ask you about Rivet City's history?",
+      "topic_text": "What do you know about Rivet City's history?",
+      "emotion": "Happy 25",
+      "response_text": "Oh, I really wouldn't know. I mean, long as I can remember, she's just been here, soaking up all the repairs and attention we can give her.",
+      "index": "10"
+    },
+    {
+      "topic": "MS03RCHistory2AMS03RivetCityHistory2A",
+      "topic_text": "Well, what can you tell me about the reconstruction?",
+      "emotion": "Neutral 50",
+      "response_text": "Oh, well, the old girl had seen a lot of damage, especially where the Mirelurks used to nest, and where the Super Mutants kept trying to get in.",
+      "index": "12"
+    },
+    {
+      "topic": "MS03RCHistory2BMS03RivetCityHistory2B",
+      "topic_text": "Can you think of anyone from back then that might know more?",
+      "emotion": "Surprise 10",
+      "response_text": "Last feller I remember from back then was Mr. Pinkerton, and he must've left about a decade ago, after that spat with the science team.",
+      "index": "15"
+    },
+    {
+      "topic": "MS03RCHistory2Special",
+      "topic_text": "Vera spoke very highly of you. She says you know all about this place.",
+      "emotion": "Happy 50",
+      "response_text": "She did? Well, I suppose I have picked up a lot over the years. I mean, no one's spent more time tinkering on this old girl than I have!",
+      "index": "18"
+    },
+    {
+      "topic": "MS03RCHistory3ASetting the record straight is exactly my goal.",
+      "topic_text": "Enough about Rivet City.",
+      "emotion": "Happy 10",
+      "response_text": "Oh, right. I sort of lose track of time talking about the old girl.",
+      "index": "21"
+    },
+    {
+      "topic": "MS08TechnicalClue1",
+      "topic_text": "Do you know anything about an android from the Commonwealth?",
+      "emotion": "Neutral 50",
+      "response_text": "I reckon you're talking facial surgery and memory reprogramming.",
+      "index": "22"
+    },
+    {
+      "topic": "MS08TechnicalClue2",
+      "topic_text": "What do you know about the android from the Commonwealth?",
+      "emotion": "Disgust 50",
+      "response_text": "Some dang fool was selling android recordings. I was just as big a fool for buying one.{doubting the rumors}",
+      "index": "24"
+    },
+    {
+      "topic": "MS08TechnicalClue3",
+      "topic_text": "You know anything about the mind wipe on that escaped android?",
+      "emotion": "Fear 50",
+      "response_text": "Shhh! They might be listening.",
+      "index": "27"
+    },
+    {
+      "topic": "MS08TechnicalClue3Bribe",
+      "topic_text": "Got any info on an android mind wipe? Here's a 100 cap \"research fee.\"",
+      "emotion": "Fear 50",
+      "response_text": "Shhh! They might be listening.",
+      "index": "32"
+    },
+    {
+      "topic": "MS08TechnicalClue3Stat",
+      "topic_text": "You know how they rewrote engrams in a cluster of Android memory subroutines?",
+      "emotion": "Fear 50",
+      "response_text": "Shhh! They might be listening.",
+      "index": "35"
+    },
+    {
+      "topic": "MS08TechnicalClue4",
+      "topic_text": "Do you know who did the memory transfer on the escaped android?",
+      "emotion": "Neutral 50",
+      "response_text": "Yep. Old Pinkerton. They say he helped found Rivet City. Must be some sort of crazy genius.{bragging that he is in the know}",
+      "index": "38"
+    },
+    {
+      "topic": "MS08TechnicalClue4Bribe",
+      "topic_text": "I'll give you 100 caps if you know who did the mind wipe on that android.",
+      "emotion": "Neutral 50",
+      "response_text": "Yep. Old Pinkerton. They say he helped found Rivet City. Must be some sort of crazy genius.{bragging that he is in the know}",
+      "index": "44"
+    },
+    {
+      "topic": "MS08TechnicalClue4Stat",
+      "topic_text": "Do you know anything about the AI swap on that Commonwealth android?",
+      "emotion": "Neutral 50",
+      "response_text": "Yep. Old Pinkerton. They say he helped found Rivet City. Must be some sort of crazy genius.{bragging that he is in the know}",
+      "index": "46"
+    },
+    {
+      "topic": "MS14TedFind",
+      "topic_text": "Where can I find Ted Strayer?",
+      "emotion": "Neutral 50",
+      "response_text": "Have you tried the common room?  That's where he sleeps.",
+      "index": "48"
+    },
+    {
+      "topic": "RCSeagraveAnything",
+      "topic_text": "Anything? Chems? Guns? How about parts and junk?",
+      "emotion": "Happy 50",
+      "response_text": "Yep. I'll take it all. One man's junk is another man's treasure.",
+      "index": "51"
+    },
+    {
+      "topic": "RCSeagraveBannonSteal",
+      "topic_text": "Bannon tells me you're trying to steal his Council seat.",
+      "emotion": "Surprise 50",
+      "response_text": "Steal it? Hardly. He runs the council like it's his own personal bank account.",
+      "index": "52"
+    },
+    {
+      "topic": "RCSeagraveJunk",
+      "topic_text": "Just what the Wasteland needs, another junk vendor...",
+      "emotion": "Neutral 50",
+      "response_text": "Suit yourself. Sooner or later everyone has stuff to unload that only I will take.",
+      "index": "57"
+    },
+    {
+      "topic": "RCSeagraveRipoff",
+      "topic_text": "How do I know you won't rip me off?",
+      "emotion": "Surprise 50",
+      "response_text": "You don't. No guarantees in the Wasteland. No rebates or exchanges either.",
+      "index": "58"
+    },
+    {
+      "topic": "RCSeagraveT51b",
+      "topic_text": "You got a T-51b? No? Then you don't have everything.",
+      "emotion": "Surprise 50",
+      "response_text": "A what?",
+      "index": "60"
+    },
+    {
+      "topic": "RCSeagraveTooMuch",
+      "topic_text": "Thank God! I can barely carry all this stuff.",
+      "emotion": "Surprise 50",
+      "response_text": "Well, I'm not open just now, but I will be by daybreak. Stop by.",
+      "index": "62"
+    },
+    {
+      "topic": "RCTopicGetDrinksWhere can I get a stiff drink?",
+      "topic_text": "Do you know where I can get something to drink?",
+      "emotion": "Happy 50",
+      "response_text": "The Weatherly Hotel is a good choice. It's on the upper deck.",
+      "index": "63"
+    },
+    {
+      "topic": "RCTopicPaulieAddict",
+      "topic_text": "Did you know that Paulie Cantelli is an addict?",
+      "emotion": "Sad 50",
+      "response_text": "He's totally strung out. It's going to kill him one of these days.",
+      "index": "64"
+    },
+    {
+      "topic": "RCTopicWedding",
+      "topic_text": "When are Angela and Diego getting married?",
+      "emotion": "Happy 50",
+      "response_text": "Angela and Diego. It's about time, don't you think?{First sentence is wistful}",
+      "index": "65"
+    },
+    {
+      "topic": "RivetCityBarterI'm here to do business with you.",
+      "topic_text": "What have you got to sell?",
+      "emotion": "Anger 50",
+      "response_text": "After what you did? Only because I have to.",
+      "index": "67"
+    },
+    {
+      "topic": "SpeechChallengeFailure",
+      "topic_text": "SpeechChallengeFailure",
+      "emotion": "Sad 30",
+      "response_text": "I think most of the people from back then have either moved on or passed away, sorry to say.",
+      "index": "70"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYEI have to go now.",
+      "topic_text": "I should leave.",
+      "emotion": "Neutral 50",
+      "response_text": "See you later.",
+      "index": "72"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Surprise 50",
+      "response_text": "Hello, Vera. I just got in a new hot plate. I can sell it to you at a discount.",
+      "index": "73"
+    },
+    {
+      "topic": "RCGoodbye",
+      "topic_text": "RCGoodbye",
+      "emotion": "Happy 50",
+      "response_text": "Ha, ha! Nothing you'd be interested in. Only good stuff.{Comeback response to a joke.}",
+      "index": "89"
+    },
+    {
+      "topic": "RCPackageEnd",
+      "topic_text": "RCPackageEnd",
+      "emotion": "Happy 50",
+      "response_text": "Closing time. I hope Vera waits for me.",
+      "index": "94"
+    },
+    {
+      "topic": "RCResponse01",
+      "topic_text": "RCResponse01",
+      "emotion": "Happy 50",
+      "response_text": "Vera! Wonderful to see you. You look lovely today.",
+      "index": "96"
+    }
+  ],
+  "combat": []
+}

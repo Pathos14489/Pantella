@@ -1,0 +1,147 @@
+{
+  "name": "Rick Lancer",
+  "url": "/wiki/Rick_Lancer",
+  "dialogue_name": "Vault3Prisoner01.txt",
+  "dialogue_url": "/wiki/Vault3Prisoner01.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000F47AB",
+  "ref_id": "000F47B0",
+  "editor_id": "Vault3Prisoner01",
+  "location": "Vault 3 living quarters",
+  "location_url": "/wiki/Vault_3#Living_quarters",
+  "descriptions": [
+    "Rick Lancer is a prisoner of the Fiends in Vault 3 in 2281.",
+    "Part of a caravan heading into New Vegas, he along with the rest of the survivors (Carter, Dennis, and Rachael) were taken prisoner by the Fiends. They were taken to Vault 3 to be held for ransom, however, unbeknownst to the Fiends, anyone who would be willing to pay such a ransom died in the attack. Thankfully the Fiends' have not found this out, otherwise they would have just killed the rest of the prisoners. During their imprisonment, one of their own, Carter, managed to escape and explore the Vault before being captured and brought back to the holding cell. Although Carter would die in that pen, the password he hacked and the weapons he found were relayed to Rick."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "role": "CaravaneerPrisoner",
+  "detailed_location": "Vault 3",
+  "voice_actor": "Yuri Lowenthal",
+  "special": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 5,
+    "Intelligence": 4,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "mod_special_values": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 5,
+    "Intelligence": 4,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "level": "13",
+  "tag_skills": [
+    {
+      "Barter:": "85"
+    },
+    {
+      "Medicine:": "84"
+    },
+    {
+      "Melee Weap.:": "88"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "125(130)"
+    }
+  ],
+  "karma": "Good",
+  "voice_type": "MaleAdult01Default",
+  "geck_race": "Hispanic",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "Hey! Yeah you! Come give us a hand!",
+      "index": "1"
+    },
+    {
+      "topic": "VMS07Greeting",
+      "topic_text": "VMS07Greeting",
+      "emotion": "Neutral 50",
+      "response_text": "Take down this password, it'll get you into the Overseer's area upstairs I think.",
+      "index": "3"
+    },
+    {
+      "topic": "VMS07Vault3Prisoner01Topic000",
+      "topic_text": "What are you doing here?",
+      "emotion": "Neutral 50",
+      "response_text": "We were part of a caravan heading into New Vegas from down south. They are holding us hostage, trying to get some ransom.",
+      "index": "6"
+    },
+    {
+      "topic": "VMS07Vault3Prisoner01Topic001",
+      "topic_text": "Yeah, I'll see what I can do.",
+      "emotion": "Neutral 50",
+      "response_text": "Thanks partner. I think the Fiend with the key is back in one of the bedrooms somewhere, someone called him Daniel. If that helps.",
+      "index": "9"
+    },
+    {
+      "topic": "VMS07Vault3Prisoner01Topic002",
+      "topic_text": "I need to know a little more about Vault 3.",
+      "emotion": "Neutral 50",
+      "response_text": "I don't know much, only that the people who lived in here originally were killed by the Fiends. Carter there escaped and managed to explore for a bit.",
+      "index": "10"
+    },
+    {
+      "topic": "VMS07Vault3Prisoner01Topic003",
+      "topic_text": "Can you tell me about the Fiends?",
+      "emotion": "Neutral 50",
+      "response_text": "They are a bunch of junkies that do whatever they can to get money for chems.",
+      "index": "12"
+    },
+    {
+      "topic": "VMS07Vault3Prisoner01Topic004",
+      "topic_text": "If I help you escape, will you give me the password he found?",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah, it is yours if you help us out of here.",
+      "index": "14"
+    },
+    {
+      "topic": "VMS07Vault3Prisoner01Topic005",
+      "topic_text": "Sorry, I don't have time to help you out.",
+      "emotion": "Neutral 50",
+      "response_text": "We are going to die in here. Please, if you find the key let us out. We'll find our own way to safety.",
+      "index": "15"
+    },
+    {
+      "topic": "VMS07Vault3Prisoner01Topic006",
+      "topic_text": "Give me the password he found, and I'll help you escape.",
+      "emotion": "Neutral 50",
+      "response_text": "[FAILED] Help us first, then we'll give you the password, and don't think about killing me. Its all in my head.",
+      "index": "16"
+    },
+    {
+      "topic": "VMS07Vault3Prisoner01Topic007",
+      "topic_text": "I have a couple more questions.",
+      "emotion": "Neutral 50",
+      "response_text": "Okay, but be quiet. I don't want the Fiends to hear us.",
+      "index": "18"
+    },
+    {
+      "topic": "VMS07Vault3Prisoner01Topic008",
+      "topic_text": "Can you make it worth my while?",
+      "emotion": "Neutral 50",
+      "response_text": "I don't know. Carter told me about some password he hacked out of a computer. I could give it to you, if you help us out.",
+      "index": "19"
+    }
+  ],
+  "conversation": [],
+  "combat": []
+}

@@ -1,0 +1,358 @@
+{
+  "name": "Knick Knack",
+  "url": "/wiki/Knick_Knack",
+  "dialogue_name": "KnickKnack.txt",
+  "dialogue_url": "/wiki/KnickKnack.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": true,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": true,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "00015692",
+  "ref_id": "00025FFF",
+  "editor_id": "KnickKnack",
+  "location": "Souvenir shop",
+  "location_url": "/wiki/Souvenir_shop",
+  "descriptions": [
+    "Nicholas \"Knick Knack\" runs the general store in Little Lamplight in 2277.",
+    "Knick Knack and his twin sister, Knock Knock, are 14 years old and the two are dedicated to the town. While Knock Knock collects awful jokes, Knick Knack collects valuable things. Because of his fondness for collecting things and being organized, he organizes the settlement's store of goods.",
+    "His name was originally Nick (or Nicholas) and he eventually changed his name to Knick Knack to reflect his habit of collecting odds and ends (knick-knacks).",
+    "He is in his store behind the counter until night when he is in his bed.",
+    "Knick Knack will give Lone Wanderer a discount if they have the Child at Heart perk."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Little Lamplight",
+  "role": "Merchant",
+  "detailed_location": "Souvenir shop, Little Lamplight",
+  "voice_actor": "Sean McCoy",
+  "special": {
+    "Strength": 4,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 7,
+    "Intelligence": 5,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "mod_special_values": {
+    "Strength": 4,
+    "Perception": 6,
+    "Endurance": 4,
+    "Charisma": 7,
+    "Intelligence": 5,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "level": "1",
+  "tag_skills": [
+    {
+      "Barter:": "34"
+    },
+    {
+      "Small Guns:": "32"
+    },
+    {
+      "Speech:": "34"
+    }
+  ],
+  "karma": "Good",
+  "voice_type": "MaleChild01DC",
+  "geck_race": "CaucasianChild",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Disgust 50",
+      "response_text": "Hey mungo. This is an A B conversation so C your way out.{\"mungo\" said with derision}",
+      "index": "1"
+    },
+    {
+      "topic": "LLDirShop",
+      "topic_text": "Do you have a trader in town?",
+      "emotion": "Happy 10",
+      "response_text": "Whenever I'm at my treasure trove in the souvenir shop, I'll sell whatever you're looking for!",
+      "index": "10"
+    },
+    {
+      "topic": "LLDirections",
+      "topic_text": "Can you give me directions?",
+      "emotion": "Neutral 50",
+      "response_text": "Where to, man?",
+      "index": "11"
+    },
+    {
+      "topic": "LLFirstMeetingResponseAFriendly First Response",
+      "topic_text": "I'm from Vault 101, and I rescued some of your friends from the Slavers.",
+      "emotion": "Surprise 25",
+      "response_text": "Oh, that was you? Nice work! I hope one of you grabbed some of their gear before you left - gotta make them pay for something like that.",
+      "index": "12"
+    },
+    {
+      "topic": "LLFirstMeetingResponseBRude First Response",
+      "topic_text": "I'm the big hero who rescued your friends from the Slavers. How's that for cool?",
+      "emotion": "Happy 25",
+      "response_text": "It sure isn't bad! Nice work bringing them back.",
+      "index": "17"
+    },
+    {
+      "topic": "LLKnickJunk",
+      "topic_text": "Where did you get most of this junk?",
+      "emotion": "Happy 25",
+      "response_text": "Well, some of it's been around for a long time, back when we used to raid the old Vault.",
+      "index": "22"
+    },
+    {
+      "topic": "LLKnickJunk2A",
+      "topic_text": "What sort of stuff does the scavenging team bring back?",
+      "emotion": "Happy 25",
+      "response_text": "Well, they mostly focus on the essentials: food, medicine, ammo, and all that. And they travel light, fast, and stealthy, so they don't carry much.",
+      "index": "24"
+    },
+    {
+      "topic": "LLKnickJunk2B",
+      "topic_text": "You used to go into Vault 87?",
+      "emotion": "Neutral 50",
+      "response_text": "Well, it was long before my time, and nowadays the really useful stuff from it is all used by people in town.",
+      "index": "27"
+    },
+    {
+      "topic": "LLKnickJunk2C",
+      "topic_text": "That makes sense, I guess. Not a bad collection.",
+      "emotion": "Happy 25",
+      "response_text": "Thanks! Interested in making a trade?",
+      "index": "29"
+    },
+    {
+      "topic": "LLKnickJunk3A",
+      "topic_text": "What sort of technology?",
+      "emotion": "Anger 10",
+      "response_text": "How would I know? The stories just talk about crazy things like supercomputers and magic boxes or whatever.",
+      "index": "30"
+    },
+    {
+      "topic": "LLKnickJunk3B",
+      "topic_text": "Monsters? What do you mean?",
+      "emotion": "Surprise 25",
+      "response_text": "The big green mutants, of course. Don't you know? They breed down there! That's why we don't go in anymore!",
+      "index": "33"
+    },
+    {
+      "topic": "LLKnickJunk3C",
+      "topic_text": "I guess I'll have to go to the Vault itself to find out more.",
+      "emotion": "Neutral 10",
+      "response_text": "Probably. I don't think any of us have been in it for generations. Nowadays, we just keep it locked up tight.",
+      "index": "36"
+    },
+    {
+      "topic": "LLNicknames",
+      "topic_text": "Why are you called Knick Knack?",
+      "emotion": "Neutral 50",
+      "response_text": "Well, my name was Nick. And I collect knick knacks.",
+      "index": "37"
+    },
+    {
+      "topic": "LLRepair",
+      "topic_text": "Can you repair something for me?",
+      "emotion": "Happy 50",
+      "response_text": "Oh boy! New junk to tinker with!{Eager}",
+      "index": "39"
+    },
+    {
+      "topic": "LLServices",
+      "topic_text": "Let's trade.",
+      "emotion": "Anger 50",
+      "response_text": "Really? Because I heard from the mayor about the sorts of deals you make when you trade. None for you.",
+      "index": "41"
+    },
+    {
+      "topic": "LLTwinConfusion",
+      "topic_text": "Didn't I just meet you?",
+      "emotion": "Disgust 25",
+      "response_text": "Did I make a bunch of really lame jokes?",
+      "index": "44"
+    },
+    {
+      "topic": "MS08TechnicalClue1",
+      "topic_text": "Do you know anything about an android from the Commonwealth?",
+      "emotion": "Happy 50",
+      "response_text": "They were talking about that a while ago. He needed some special surgery and brain hack or something. Was really cool.{excited}",
+      "index": "47"
+    },
+    {
+      "topic": "MS08TechnicalClue2",
+      "topic_text": "What do you know about the android from the Commonwealth?",
+      "emotion": "Neutral 50",
+      "response_text": "Ah maaaan. I wish it wasn't just a giant practical joke. Here's a spare copy of that old holotape. Think how cool it would be if it were true!{doubting the rumors}",
+      "index": "49"
+    },
+    {
+      "topic": "MS08TechnicalClue3",
+      "topic_text": "You know anything about the mind wipe on that escaped android?",
+      "emotion": "Happy 50",
+      "response_text": "That Commonwealth robot was real! I have proof. Listen to this!{bragging that he's in the know}",
+      "index": "51"
+    },
+    {
+      "topic": "MS08TechnicalClue3Bribe",
+      "topic_text": "Got any info on an android mind wipe? Here's a 100 cap \"research fee.\"",
+      "emotion": "Happy 50",
+      "response_text": "That Commonwealth robot was real! I have proof. Listen to this!{bragging that he's in the know}",
+      "index": "54"
+    },
+    {
+      "topic": "MS08TechnicalClue3Child",
+      "topic_text": "I'll bet you know something about the mind wipe on that escaped android...",
+      "emotion": "Happy 50",
+      "response_text": "That Commonwealth robot was real! I have proof. Listen to this!{bragging that he's in the know}",
+      "index": "55"
+    },
+    {
+      "topic": "MS08TechnicalClue3Stat",
+      "topic_text": "You know how they rewrote engrams in a cluster of Android memory subroutines?",
+      "emotion": "Happy 50",
+      "response_text": "That Commonwealth robot was real! I have proof. Listen to this!{bragging that he's in the know}",
+      "index": "56"
+    },
+    {
+      "topic": "MS08TechnicalClue4",
+      "topic_text": "Do you know who did the memory transfer on the escaped android?",
+      "emotion": "Surprise 50",
+      "response_text": "I sure do! No one believes me though. It was old Pinkerton. You know, the \"ghost\" of Rivet City. He's a genius!{bragging that he is in the know}",
+      "index": "57"
+    },
+    {
+      "topic": "MS08TechnicalClue4Bribe",
+      "topic_text": "I'll give you 100 caps if you know who did the mind wipe on that android.",
+      "emotion": "Surprise 50",
+      "response_text": "I sure do! No one believes me though. It was old Pinkerton. You know, the \"ghost\" of Rivet City. He's a genius!{bragging that he is in the know}",
+      "index": "60"
+    },
+    {
+      "topic": "MS08TechnicalClue4Child",
+      "topic_text": "Do you know who did the memory swap on the Commonwealth android?",
+      "emotion": "Surprise 50",
+      "response_text": "I sure do! No one believes me though. It was old Pinkerton. You know, the \"ghost\" of Rivet City. He's a genius!{bragging that he is in the know}",
+      "index": "61"
+    },
+    {
+      "topic": "MS08TechnicalClue4Stat",
+      "topic_text": "Do you know anything about the AI swap on that Commonwealth android?",
+      "emotion": "Surprise 50",
+      "response_text": "I sure do! No one believes me though. It was old Pinkerton. You know, the \"ghost\" of Rivet City. He's a genius!{bragging that he is in the know}",
+      "index": "62"
+    },
+    {
+      "topic": "SpeechChallengeFailure",
+      "topic_text": "SpeechChallengeFailure",
+      "emotion": "Disgust 10",
+      "response_text": "Grownups just can't be trusted with certain types of information. Sorry.{doesn't think the player is worthy of the information, or can be trusted with it}",
+      "index": "63"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "That's all for me.",
+      "emotion": "Happy 50",
+      "response_text": "Come on back when you've got more stuff to trade!",
+      "index": "64"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Neutral 50",
+      "response_text": "I put up with Zip's shenanigans, but I'm not having it from an outsider. Keep your hands to yourself, this time.",
+      "index": "66"
+    },
+    {
+      "topic": "LLFoodConv1",
+      "topic_text": "LLFoodConv1",
+      "emotion": "Neutral 50",
+      "response_text": "You know, Eclair, if I ever get a microwave oven, it's going right to you.",
+      "index": "73"
+    },
+    {
+      "topic": "LLMayorDailyCheck1",
+      "topic_text": "LLMayorDailyCheck1",
+      "emotion": "Anger 25",
+      "response_text": "Nothing much you'd be interested in. Still doing a brisk trade in some of the toys, though!",
+      "index": "74"
+    },
+    {
+      "topic": "LLRandomConv1",
+      "topic_text": "LLConversation1",
+      "emotion": "Happy 50",
+      "response_text": "How do ya do, pal?",
+      "index": "75"
+    },
+    {
+      "topic": "LLRandomConv2",
+      "topic_text": "LLConversation2",
+      "emotion": "Happy 50",
+      "response_text": "Happier than a Ghoul wallowing in sludge!",
+      "index": "76"
+    },
+    {
+      "topic": "LLRandomConvEnding",
+      "topic_text": "LLRandomConvEnding",
+      "emotion": "Happy 50",
+      "response_text": "Okay, then! See ya!",
+      "index": "77"
+    },
+    {
+      "topic": "LLTwinsConv1",
+      "topic_text": "LLTwinsConv1",
+      "emotion": "Neutral 50",
+      "response_text": "So, sis, make any good jokes today?",
+      "index": "78"
+    },
+    {
+      "topic": "LLTwinsConv2b",
+      "topic_text": "LLTwinsConv2b",
+      "emotion": "Happy 50",
+      "response_text": "Nothing much. One of the littler kids had a rock Zip said looked dirty, but he barely even knows what is and isn't dirty in the first place, see?",
+      "index": "79"
+    },
+    {
+      "topic": "LLTwinsConv4",
+      "topic_text": "LLTwinsConv4",
+      "emotion": "Happy 50",
+      "response_text": "You better believe it, sis! Later!",
+      "index": "81"
+    },
+    {
+      "topic": "LLWhatsUp1",
+      "topic_text": "LLWhatsUp1",
+      "emotion": "Happy 50",
+      "response_text": "What's happening, pal?",
+      "index": "83"
+    },
+    {
+      "topic": "LLWhatsUp2",
+      "topic_text": "LLWhatsUp2",
+      "emotion": "Happy 50",
+      "response_text": "Cool junk and collecting, as always!",
+      "index": "84"
+    },
+    {
+      "topic": "MS01StickyGoodbyeConv",
+      "topic_text": "MS01StickyGoodbyeConv",
+      "emotion": "Sad 50",
+      "response_text": "Happy birthday Sticky, sorry I missed your party.{sincere}",
+      "index": "85"
+    }
+  ],
+  "combat": [
+    {
+      "topic": "BarterExit",
+      "topic_text": "BarterExit",
+      "emotion": "Happy 50",
+      "response_text": "Come again! I should have more stuff in soon.",
+      "index": "87"
+    }
+  ]
+}

@@ -1,0 +1,266 @@
+{
+  "name": "Walter",
+  "url": "/wiki/Walter_(Fallout_3)",
+  "dialogue_name": "Walter.txt",
+  "dialogue_url": "/wiki/Walter.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "00000A64",
+  "ref_id": "00003B59",
+  "editor_id": "Walter",
+  "location": "Water processing plant",
+  "location_url": "/wiki/Water_processing_plant",
+  "descriptions": [
+    "Walter is a resident of Megaton, helping operate and maintain the town's water purifier in the Capital Wasteland in Fallout 3.",
+    "An elderly handyman at 61 years of age, making him one of Megaton's oldest residents,",
+    "In the few hours that he is away from maintaining the purifier, he likes to hang around Moriarty's Saloon to drink. He openly has a preference for listening to Enclave Radio, citing it as being \"downright patriotic” when the subject is discussed by the saloon's staff and patrons, though unlike Nathaniel Vargas, his opinion of the organization itself is unknown.",
+    "During the daytime, Walter can be found in the water processing plant for most of the day, though sometimes he will step outside for some air. During the night hours, he can be seen drinking in Moriarty's Saloon."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Megaton",
+  "role": "Water PlantOperator",
+  "detailed_location": "Water processing plant, Megaton",
+  "voice_actor": "Paul Eiding",
+  "special": {
+    "Strength": 4,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 6,
+    "Intelligence": 7,
+    "Agility": 4,
+    "Luck": 5
+  },
+  "level": "4",
+  "tag_skills": [
+    {
+      "Barter:": "49"
+    },
+    {
+      "Lockpick:": "47"
+    },
+    {
+      "Science:": "51"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "40"
+    },
+    {
+      "Critical Chance:": "5%"
+    },
+    {
+      "Unarmed Dam.:": "1.15"
+    },
+    {
+      "Poison Resist.:": "15%"
+    },
+    {
+      "Rad. Resist.:": "6%"
+    },
+    {
+      "Carry Weight:": "190"
+    },
+    {
+      "Damage Res.:": "2%"
+    }
+  ],
+  "karma": "Good",
+  "voice_type": "MaleOld01DC",
+  "geck_race": "AfricanAmericanOldAged",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "<grumbles> ... huh? Yeah? What is it?",
+      "index": "1"
+    },
+    {
+      "topic": "MegFFWalterBuyParts",
+      "topic_text": "Interested in buying some scrap metal?",
+      "emotion": "Neutral 50",
+      "response_text": "I sure am, sonny. What've you got for me?",
+      "index": "4"
+    },
+    {
+      "topic": "MegFFWalterBuyParts10",
+      "topic_text": "I have 10 to sell.",
+      "emotion": "Neutral 50",
+      "response_text": "Just in time... just in time...",
+      "index": "6"
+    },
+    {
+      "topic": "MegFFWalterBuyParts15",
+      "topic_text": "I have 15 to sell.",
+      "emotion": "Neutral 50",
+      "response_text": "Just in time... just in time...",
+      "index": "11"
+    },
+    {
+      "topic": "MegFFWalterBuyParts20",
+      "topic_text": "I have 20 to sell.",
+      "emotion": "Neutral 50",
+      "response_text": "Just in time... just in time...",
+      "index": "16"
+    },
+    {
+      "topic": "MegFFWalterBuyParts25",
+      "topic_text": "I have 25 to sell.",
+      "emotion": "Neutral 50",
+      "response_text": "Just in time... just in time...",
+      "index": "21"
+    },
+    {
+      "topic": "MegFFWalterBuyParts5",
+      "topic_text": "I have 5 to sell.",
+      "emotion": "Neutral 50",
+      "response_text": "Just in time... just in time...",
+      "index": "26"
+    },
+    {
+      "topic": "MegFFWalterBuyPartsALL",
+      "topic_text": "Just take all the scrap metal I have.",
+      "emotion": "Neutral 50",
+      "response_text": "Well, alright... let me just count out your caps...",
+      "index": "31"
+    },
+    {
+      "topic": "MegFFWalterBuyPartsALLKarma",
+      "topic_text": "Just take all the scrap metal I have. No charge. I just want to help",
+      "emotion": "Neutral 50",
+      "response_text": "Are you serious? Why... I'll be. Thank you, stranger. I can't tell you what this means to Megaton.",
+      "index": "32"
+    },
+    {
+      "topic": "MegFFWalterBuyPartsEND",
+      "topic_text": "Actually, I don't have any parts to sell.",
+      "emotion": "Neutral 50",
+      "response_text": "Okay... well, come back when you do.",
+      "index": "33"
+    },
+    {
+      "topic": "MegFFWalterHelpPipes1",
+      "topic_text": "What can I do to help around here?",
+      "emotion": "Neutral 50",
+      "response_text": "Well, it's no secret that the ol' water treatment plant is on its last legs. And I'm the only one in town that can keep the damn thing running.",
+      "index": "35"
+    },
+    {
+      "topic": "MegFFWalterHelpPipes1a",
+      "topic_text": "How many leaks are there?",
+      "emotion": "Neutral 50",
+      "response_text": "From the pressure in the plant, my guess is that there are three of 'em scattered around town.",
+      "index": "45"
+    },
+    {
+      "topic": "MegFFWalterHelpPipes1b",
+      "topic_text": "Can't you fix the pipes?",
+      "emotion": "Neutral 50",
+      "response_text": "I could, but I can't hunt for leaks all damn day. That rust bucket purifier would fall apart without me up around to plug it up.",
+      "index": "47"
+    },
+    {
+      "topic": "MegFFWalterHelpPipes1c",
+      "topic_text": "I'll keep it in mind.",
+      "emotion": "Neutral 50",
+      "response_text": "I hope you can help. If folks knew how bad it was getting up here... well... I don't know what would happen.",
+      "index": "49"
+    },
+    {
+      "topic": "MegFFWalterRewardChoiceCaps",
+      "topic_text": "I'm not your errand boy. Just pay me for the repairs.",
+      "emotion": "Neutral 50",
+      "response_text": "Alright... alright... relax. But all you've done is delay the inevitable. Without those parts, the plants gonna croak sooner or later.",
+      "index": "50"
+    },
+    {
+      "topic": "MegFFWalterRewardChoiceDeal",
+      "topic_text": "Sounds good to me. I'll bring you the parts I find.",
+      "emotion": "Neutral 50",
+      "response_text": "Good! This just keeps looking better! Those parts will keep this place running and the town in fresh water! Hurry back as soon as you find some!",
+      "index": "52"
+    },
+    {
+      "topic": "MegTownEnd",
+      "topic_text": "That's all I needed to know.",
+      "emotion": "Neutral 50",
+      "response_text": "Right.",
+      "index": "53"
+    },
+    {
+      "topic": "MegTownMegaton",
+      "topic_text": "What can you tell me about Megaton?",
+      "emotion": "Neutral 50",
+      "response_text": "What can I tell you about Megaton? Well, that fucking bomb is killing us all slowly. How's that for a piece of information?",
+      "index": "54"
+    },
+    {
+      "topic": "MegTownRumors",
+      "topic_text": "What's the word around town?",
+      "emotion": "Neutral 50",
+      "response_text": "Sure, you got the purifier working right again, but if it runs out of water to pump then we're still screwed.",
+      "index": "55"
+    },
+    {
+      "topic": "MegTownWhatDoYouDo",
+      "topic_text": "What do you do around here?",
+      "emotion": "Neutral 50",
+      "response_text": "I take care of the water purification plant. This old rusted hunk keeps us in clean water... for now.",
+      "index": "58"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "I have to go now.",
+      "emotion": "Neutral 50",
+      "response_text": "Well, back to work.",
+      "index": "60"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Neutral 50",
+      "response_text": "Do you have any scrap metal for me?",
+      "index": "61"
+    },
+    {
+      "topic": "MegBarRadioChatter",
+      "topic_text": "MegBarRadioChatter",
+      "emotion": "Neutral 50",
+      "response_text": "Boy, just leave it be. I like the Enclave station. It's downright patriotic!",
+      "index": "69"
+    },
+    {
+      "topic": "MegatonHelloResponse",
+      "topic_text": "MegatonHelloResponse",
+      "emotion": "Fear 50",
+      "response_text": "Look, I told you people: I'm busy. Leave me alone.",
+      "index": "70"
+    }
+  ],
+  "combat": [
+    {
+      "topic": "Attack",
+      "topic_text": "Attack",
+      "emotion": "Neutral 50",
+      "response_text": "Goddamn kids!",
+      "index": "72"
+    },
+    {
+      "topic": "Hit",
+      "topic_text": "Hit",
+      "emotion": "Pained 100",
+      "response_text": "No!",
+      "index": "74"
+    }
+  ]
+}

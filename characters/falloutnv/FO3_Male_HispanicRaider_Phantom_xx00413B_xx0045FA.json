@@ -1,0 +1,114 @@
+{
+  "name": "Phantom",
+  "url": "/wiki/Phantom",
+  "dialogue_name": "DLC01Phantom.txt",
+  "dialogue_url": "/wiki/DLC01Phantom.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "xx00413B",
+  "ref_id": "xx0045FA",
+  "editor_id": "DLC01Phantom",
+  "location": "The Pitt Uptown",
+  "location_url": "/wiki/The_Pitt_Uptown",
+  "descriptions": [
+    "Phantom is a Pitt raider in the Pitt Uptown in the year 2277.",
+    "Phantom is considerably more amicable towards the Lone Wanderer than most of the other Pitt raiders and will enthusiastically welcome them to the group.",
+    "He has strong opinions about the amount of work that both the raiders and the slaves do, believing that the slaves have it easy compared to the raiders, who risk their lives while raiding caravans to acquire food for the city’s residents.",
+    "Phantom appears only in the Fallout 3 add-on The Pitt."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Pitt raiders",
+  "role": "Rudimentary medic",
+  "detailed_location": "The Pitt Uptown",
+  "voice_actor": "James Lewis",
+  "special": {
+    "Strength": 4,
+    "Perception": 6,
+    "Endurance": 4,
+    "Charisma": 6,
+    "Intelligence": 7,
+    "Agility": 5,
+    "Luck": 4
+  },
+  "level": "1→20→30 (Broken Steelonly)",
+  "tag_skills": [
+    {
+      "Barter:": "31→100"
+    },
+    {
+      "Medicine:": "33→100"
+    },
+    {
+      "Science:": "33→100"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "65→160→210"
+    },
+    {
+      "Critical Chance:": "4%"
+    },
+    {
+      "Unarmed Dam.:": "1.1"
+    },
+    {
+      "Poison Resist.:": "15%"
+    },
+    {
+      "Rad. Resist.:": "6%"
+    },
+    {
+      "Carry Weight:": "190"
+    }
+  ],
+  "karma": "Evil",
+  "voice_type": "DLC01RaiderMaleGruffVoice",
+  "geck_race": "HispanicRaider",
+  "topics": [
+    {
+      "topic": "DLC01HavenResponse1A",
+      "topic_text": "Trust me, I know how to work hard.",
+      "emotion": "Happy 10",
+      "response_text": "I hope so, for your sake. You screw up down in the Mill, you just get a beating. It's harsh, but it heals.",
+      "index": "1"
+    },
+    {
+      "topic": "DLC01HavenResponse1B",
+      "topic_text": "You really think you work harder than the slaves Downtown?",
+      "emotion": "Anger 25",
+      "response_text": "Fuck yes, we do. Those lazy workers get food and board, and all they have to do is work the Mill and complain.",
+      "index": "4"
+    },
+    {
+      "topic": "DLC01SpecialOption2A",
+      "topic_text": "I'm a little irradiated. I could use some help.",
+      "emotion": "Happy 50",
+      "response_text": "Then say no more, friend. Can't share much, but this should do the trick. Use it in good health!",
+      "index": "8"
+    },
+    {
+      "topic": "DLC01SpecialOption2B",
+      "topic_text": "I'm fine, Phantom.",
+      "emotion": "Neutral 50",
+      "response_text": "Okay. Watch yourself out there!",
+      "index": "10"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Happy 50",
+      "response_text": "Hey, if it isn't the newest addition to our little family!",
+      "index": "11"
+    }
+  ],
+  "conversation": [],
+  "combat": []
+}

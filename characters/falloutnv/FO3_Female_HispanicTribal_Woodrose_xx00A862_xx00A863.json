@@ -1,0 +1,138 @@
+{
+  "name": "Woodrose",
+  "url": "/wiki/Woodrose",
+  "dialogue_name": "DLC04Woodrose.txt",
+  "dialogue_url": "/wiki/DLC04Woodrose.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "xx00A862",
+  "ref_id": "xx00A863",
+  "editor_id": "DLC04Woodrose",
+  "location": "Ark & Dove Cathedral",
+  "location_url": "/wiki/Ark_%26_Dove_Cathedral",
+  "descriptions": [
+    "Woodrose is one of the inhabitants of Point Lookout and the tribe mother of the local tribals in 2277.",
+    "A timid and thoughtful girl, Woodrose recently blossomed when she joined the local tribals. Tending to a variety of hydroponic punga plants, she cultivates new and more delicious strains, in accordance with Jackson's wishes.",
+    "She takes care of the tribals who cannot care for themselves after having part of their brain removed, helping them eat, sleep and with other essential tasks for living.",
+    "When spoken to, Woodrose's dialogue comes off with a hostile tone toward the Lone Wanderer. This may be because they are not one of the tribals or she is simply stressed because of her tribal duties.",
+    "Like the rest of the tribe, she will become hostile if Professor Calvert is killed during A Meeting of the Minds.",
+    "Woodrose appears only in the Fallout 3 add-on Point Lookout.",
+    "The name \"Woodrose\" is a reference to \"Hawaiian Woodrose Seeds,\" a powerful natural hallucinogen. Similarly, Jimson, another tribe member, is a reference to \"Jimson Weed,\" another natural hallucinogen."
+  ],
+  "race": "Human",
+  "gender": "Female",
+  "affiliation": "Tribals",
+  "role": "Tribe matriarch",
+  "detailed_location": "Ark & Dove Cathedral",
+  "voice_actor": "Bari Biern",
+  "special": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 10,
+    "Intelligence": 5,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "level": "1",
+  "misc_skills": [],
+  "karma": "Neutral",
+  "voice_type": "DLC04FemaleTribal",
+  "geck_race": "HispanicTribal",
+  "topics": [
+    {
+      "topic": "DLC04AboutLeader",
+      "topic_text": "Who leads this tribe?",
+      "emotion": "Anger 50",
+      "response_text": "Damn, you are wet behind the ears. Jackson leads us, and don't you forget. When he talks, you listen up and catch every word!",
+      "index": "1"
+    },
+    {
+      "topic": "DLC04AboutMansion",
+      "topic_text": "Why did you attack the mansion?",
+      "emotion": "Neutral 50",
+      "response_text": "Jackson said he saw its destruction in a vision. There were some concerns, but when the leader says it's a mandate from beyond, you don't ask why.",
+      "index": "3"
+    },
+    {
+      "topic": "DLC04AboutPunga",
+      "topic_text": "Why do you grow so much Punga here?",
+      "emotion": "Surprise 50",
+      "response_text": "Are you kidding? Why wouldn't we? As much as we want to reject earthly desires, we still need to eat, right?",
+      "index": "4"
+    },
+    {
+      "topic": "DLC04AboutTribals",
+      "topic_text": "What do you do in this tribe?",
+      "emotion": "Neutral 50",
+      "response_text": "I'm denmother. I keep us safe and make sure everyone remembers to eat and sleep. It's more work than you might think.",
+      "index": "7"
+    },
+    {
+      "topic": "DLC04JacksonLocation",
+      "topic_text": "Where can I find Jackson?",
+      "emotion": "Anger 50",
+      "response_text": "Not so fast, grub. You haven't earned the right to go to the transcendent master's retreat.",
+      "index": "9"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "",
+      "emotion": "Neutral 50",
+      "response_text": "Please wait until my meditations are complete.",
+      "index": "10"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "DLC04TribalResponse",
+      "topic_text": "DLC04TribalResponse",
+      "emotion": "Neutral 50",
+      "response_text": "And you as well.",
+      "index": "21"
+    },
+    {
+      "topic": "GOODBYE",
+      "topic_text": "I have to go now.",
+      "emotion": "Neutral 50",
+      "response_text": "Blessings to you on your journey.",
+      "index": "23"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Neutral 50",
+      "response_text": "Clear your mind, child.",
+      "index": "26"
+    }
+  ],
+  "combat": [
+    {
+      "topic": "AcceptYield",
+      "topic_text": "AcceptYield",
+      "emotion": "Neutral 50",
+      "response_text": "Be at peace.",
+      "index": "35"
+    },
+    {
+      "topic": "Attack",
+      "topic_text": "Attack",
+      "emotion": "Anger 50",
+      "response_text": "Sleep forever!",
+      "index": "36"
+    },
+    {
+      "topic": "Death",
+      "topic_text": "Death",
+      "emotion": "Neutral 50",
+      "response_text": "At last...",
+      "index": "41"
+    }
+  ]
+}

@@ -1,0 +1,574 @@
+{
+  "name": "Eulogy Jones",
+  "url": "/wiki/Eulogy_Jones",
+  "dialogue_name": "EulogyJones.txt",
+  "dialogue_url": "/wiki/EulogyJones.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "0001569F",
+  "ref_id": "00026010",
+  "editor_id": "EulogyJones",
+  "location": "Eulogy's pad",
+  "location_url": "/wiki/Eulogy%27s_pad",
+  "descriptions": [
+    "Eulogy Jones is the head slaver of Paradise Falls in 2277.",
+    "Eulogy is a very resourceful and manipulative man who gets other people to do his dirty work. He does not wish for anyone to interfere with his slaving operation and will not hesitate to get rid of anyone who tries. Although he may say he reached his position through hard work, he did it through careful tactics and from the efforts of other people such as his slaves, and he also murdered the former leader Harmon Jurley and took over the role. He rules through intimidation and fear so no one messes with him. He has two personal slaves, Crimson and Clover.",
+    "Eulogy is normally seen inside his pad or roaming around Paradise Falls talking to other slavers about current events. Occasionally he can be found in Cutter's Clinic talking to Cutter. He also makes a daily trip to the slave pens, to 'check the livestock' (Eulogy will always react the same way when he inspects the pens, even if the slaves are not present).",
+    "With enough negative Karma and 1000 caps (500 with 50 in Barter), Eulogy can sell the Lone Wanderer his bodyguard Clover, as a companion.",
+    "Eulogy Jones appears in Fallout 3, appears as a dweller in Fallout Shelter, and is mentioned only in Fallout: New Vegas."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Slavers",
+  "role": "Slaver leader",
+  "detailed_location": "Eulogy's padParadise Falls",
+  "voice_actor": "James Lewis",
+  "special": {
+    "Strength": 6,
+    "Perception": 7,
+    "Endurance": 5,
+    "Charisma": 3,
+    "Intelligence": 3,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "mod_special_values": {
+    "Strength": 6,
+    "Perception": 7,
+    "Endurance": 5,
+    "Charisma": 4,
+    "Intelligence": 3,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "level": "10→20→30",
+  "tag_skills": [
+    {
+      "Explosives:": "73→100"
+    },
+    {
+      "Small Guns:": "71→100"
+    },
+    {
+      "Sneak:": "71→100"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Critical Chance:": "5%"
+    },
+    {
+      "Unarmed Dam.:": "1.25"
+    },
+    {
+      "Poison Resist.:": "20%"
+    },
+    {
+      "Rad. Resist.:": "8%"
+    },
+    {
+      "Carry Weight:": "210"
+    },
+    {
+      "Damage Res.:": "2%"
+    }
+  ],
+  "karma": "Very Evil",
+  "voice_type": "MaleUniqueEulogy",
+  "geck_race": "AfricanAmericanOld",
+  "topics": [
+    {
+      "topic": "BuyClover1",
+      "topic_text": "I'm in the market for a bodyguard like yours. You selling?",
+      "emotion": "Happy 25",
+      "response_text": "Gotta be careful, using a slave as a bodyguard. Most aren't exactly motivated to keep you alive, you know what I mean?",
+      "index": "1"
+    },
+    {
+      "topic": "BuyClover2A",
+      "topic_text": "Isn't she your bodyguard? Why sell her?",
+      "emotion": "Happy 50",
+      "response_text": "Have you seen this place? I've got all the guards a body would ever need. Even a body as fabulous as mine.",
+      "index": "3"
+    },
+    {
+      "topic": "BuyClover2B",
+      "topic_text": "What makes her so special?",
+      "emotion": "Happy 25",
+      "response_text": "I'll tell you why: because Clover is the craziest girl I've ever seen. And I'm an expert on crazy girls.",
+      "index": "4"
+    },
+    {
+      "topic": "BuyClover2C",
+      "topic_text": "Why would I want your used up hand-me-down?",
+      "emotion": "Happy 25",
+      "response_text": "I don't think Clover's going to be used-up any time soon. That girl's got the devil in her. And she's crazy, to boot.",
+      "index": "7"
+    },
+    {
+      "topic": "BuyClover3A",
+      "topic_text": "I wish I could take her now. Maybe later.",
+      "emotion": "Anger 25",
+      "response_text": "Any time you need some company, she'll be here.",
+      "index": "10"
+    },
+    {
+      "topic": "BuyClover3B",
+      "topic_text": "No deal. I like my bodyguards sane.",
+      "emotion": "Happy 25",
+      "response_text": "Then good luck finding someone who'd risk their life for yours. Not something a sane person would do these days, is it?",
+      "index": "17"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "Hello there, my dear. What can Eulogy do for you today?",
+      "index": "18"
+    },
+    {
+      "topic": "MQ07EulogyBuyKids",
+      "topic_text": "The kids, I think. There are three of them, right?",
+      "emotion": "Neutral 50",
+      "response_text": "A very good eye, my friend. Those little ones are good as a long-term investment. They have their other uses as well, I'm sure.",
+      "index": "29"
+    },
+    {
+      "topic": "MQ07EulogyBuySlavesNotSeen",
+      "topic_text": "I haven't gone and looked them over, no.",
+      "emotion": "Neutral 50",
+      "response_text": "Well you should! Go on out, take a gander, and see if there's anything that might meet your needs.",
+      "index": "32"
+    },
+    {
+      "topic": "MQ07EulogyChangedMind",
+      "topic_text": "I've... changed my mind.",
+      "emotion": "Neutral 50",
+      "response_text": "Are you sure? That's a shame. I thought we had a good thing going here. Well, you know where to find us.",
+      "index": "35"
+    },
+    {
+      "topic": "MQ07EulogyKidInfoDone",
+      "topic_text": "That's all.",
+      "emotion": "Neutral 50",
+      "response_text": "Okay, then let's talk business.",
+      "index": "36"
+    },
+    {
+      "topic": "MQ07EulogyKidInfoNames",
+      "topic_text": "What are their names?",
+      "emotion": "Surprise 50",
+      "response_text": "Names?",
+      "index": "37"
+    },
+    {
+      "topic": "MQ07EulogyKidInfoWhereComeFrom",
+      "topic_text": "Where did they come from?",
+      "emotion": "Neutral 50",
+      "response_text": "Does it really matter? They're here now, and they're available for purchase.",
+      "index": "39"
+    },
+    {
+      "topic": "MQ07EulogyKidsTellMore",
+      "topic_text": "Can you tell me a bit more about them?",
+      "emotion": "Neutral 50",
+      "response_text": "They're all in excellent physical condition, if that's what you're wondering.",
+      "index": "40"
+    },
+    {
+      "topic": "MQ07EulogyNeverSaidBuy",
+      "topic_text": "I never said I was buying. I just said I want them.",
+      "emotion": "Surprise 50",
+      "response_text": "I'm sorry, what?{surprised, annoyed}",
+      "index": "43"
+    },
+    {
+      "topic": "MQ07EulogyPriceCantAfford",
+      "topic_text": "I still can't afford that.",
+      "emotion": "Neutral 50",
+      "response_text": "The price isn't going to change, if that's what you're hoping. They'll be here when you can cover the cost.",
+      "index": "45"
+    },
+    {
+      "topic": "MQ07EulogyPriceNoWay",
+      "topic_text": "No way am I paying that. Forget it.",
+      "emotion": "Neutral 50",
+      "response_text": "That's your choice. They're your caps, after all. I'm not going to try a hard sell here; someone else will buy them eventually.",
+      "index": "47"
+    },
+    {
+      "topic": "MQ07EulogyPriceSoundsGood",
+      "topic_text": "That sounds like a good deal. I'll take it.",
+      "emotion": "Neutral 50",
+      "response_text": "Fair enough. It's a pleasure to do business with you again.",
+      "index": "48"
+    },
+    {
+      "topic": "MQ07EulogyPriceSPEECH",
+      "topic_text": "2000 is a bit steep. 1200 for all three is a more reasonable offer.",
+      "emotion": "Neutral 50",
+      "response_text": "I suppose I can accept that. It's a deal; the kids are yours. I'll have them delivered to the front gate for you.",
+      "index": "52"
+    },
+    {
+      "topic": "MQ07EulogyTalkPrice",
+      "topic_text": "Great, let's talk price.",
+      "emotion": "Neutral 50",
+      "response_text": "For starters, I'm thinking 500 caps each for the little ones... Sammy and Penny, I think their names are.",
+      "index": "54"
+    },
+    {
+      "topic": "MQ07EulogyTLBuySlaves",
+      "topic_text": "We'd talked about the kids.",
+      "emotion": "Neutral 50",
+      "response_text": "Right, right. 2000 caps was the figure I quoted. The price still stands if you're still interested.",
+      "index": "56"
+    },
+    {
+      "topic": "MQ07EulogyTLWantKids",
+      "topic_text": "You've got some kids out there. I want them.",
+      "emotion": "Neutral 50",
+      "response_text": "You do? Hell, that's great news. They'll work out well for you, I think. Full of energy. Great for small jobs now, and bigger loads down the road.",
+      "index": "63"
+    },
+    {
+      "topic": "MS04AdoptionSlaver01",
+      "topic_text": "100 caps? This kid will make you ten times that. 300, and you've got a deal.",
+      "emotion": "Happy 50",
+      "response_text": "All right, all right. He'll fetch a good price in the long run. Here you go.",
+      "index": "65"
+    },
+    {
+      "topic": "MS04AdoptionSlaver02",
+      "topic_text": "Make that 200 caps and you have yourself a deal.",
+      "emotion": "Neutral 50",
+      "response_text": "You drive a hard bargain, but it's still well worth it. Here you go.",
+      "index": "67"
+    },
+    {
+      "topic": "MS04AdoptionSlaver03",
+      "topic_text": "Fine. You've got a deal.",
+      "emotion": "Neutral 50",
+      "response_text": "Good. Here's your caps. Pleasure doing business with you.",
+      "index": "69"
+    },
+    {
+      "topic": "MS04AdoptionSlaver04",
+      "topic_text": "Nah. Screw it. I'll go elsewhere.",
+      "emotion": "Disgust 50",
+      "response_text": "Whatever.",
+      "index": "71"
+    },
+    {
+      "topic": "MS04AdoptionTL",
+      "topic_text": "I got a young boy for sale. Interested?",
+      "emotion": "Neutral 50",
+      "response_text": "Kids are a bit tough in the resell, but they make good future breeders.",
+      "index": "72"
+    },
+    {
+      "topic": "MS08SlaverClue1",
+      "topic_text": "I found this info about an android from the Commonwealth. Care to elaborate?",
+      "emotion": "Surprise 50",
+      "response_text": "What can I tell you about it, beyond it not being any of your business, you mean?{arrogant}",
+      "index": "74"
+    },
+    {
+      "topic": "MS08SlaverClue2",
+      "topic_text": "What do you know about an android from the Commonwealth?",
+      "emotion": "Neutral 50",
+      "response_text": "Here's a copy of the so-called \"android recording.\" We're done wasting resources on that job.",
+      "index": "77"
+    },
+    {
+      "topic": "MS08SlaverClue3",
+      "topic_text": "You know anything about an android who needed some surgery?",
+      "emotion": "Neutral 50",
+      "response_text": "All I know is Zimmer, the guy contracting to find this slave, is hot to retrieve him. He's starting to get other people looking. So it's a race now.",
+      "index": "79"
+    },
+    {
+      "topic": "MS08SlaverClue3Bribe",
+      "topic_text": "I'll give you 100 caps for what you've got on this android.",
+      "emotion": "Neutral 50",
+      "response_text": "All I know is Zimmer, the guy contracting to find this slave, is hot to retrieve him. He's starting to get other people looking. So it's a race now.",
+      "index": "85"
+    },
+    {
+      "topic": "MS08SlaverClue3Stat",
+      "topic_text": "I'm losing my patience! Tell me about the android with the face job!",
+      "emotion": "Neutral 50",
+      "response_text": "All I know is Zimmer, the guy contracting to find this slave, is hot to retrieve him. He's starting to get other people looking. So it's a race now.",
+      "index": "87"
+    },
+    {
+      "topic": "MS08SlaverClue4",
+      "topic_text": "You have any info on where this Commonwealth android is hiding?",
+      "emotion": "Neutral 50",
+      "response_text": "We got a man at Rivet City. Been looking for a long time. I doubt he's even still there. Either way, don't go sticking your nose in our business!",
+      "index": "89"
+    },
+    {
+      "topic": "MS08SlaverClue4Bribe",
+      "topic_text": "Here's a 100 cap \"donation.\" Now, where's that escaped android?",
+      "emotion": "Neutral 50",
+      "response_text": "We got a man at Rivet City. Been looking for a long time. I doubt he's even still there. Either way, don't go sticking your nose in our business!",
+      "index": "92"
+    },
+    {
+      "topic": "MS08SlaverClue4Stat",
+      "topic_text": "Tell me where this android disappeared to, or I'll make you disappear. Got it?",
+      "emotion": "Neutral 50",
+      "response_text": "We got a man at Rivet City. Been looking for a long time. I doubt he's even still there. Either way, don't go sticking your nose in our business!",
+      "index": "93"
+    },
+    {
+      "topic": "PFCutterChems",
+      "topic_text": "You know where I can buy some chems around here?",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah, I got some stuff around here. But it'll cost you.",
+      "index": "94"
+    },
+    {
+      "topic": "PFLamplightCapture1",
+      "topic_text": "You get the package I sent you? The one named Bumble?",
+      "emotion": "Happy 50",
+      "response_text": "I did, indeed, and she was well worth the effort! I found her a nice, loving home right away.",
+      "index": "95"
+    },
+    {
+      "topic": "PFLamplightCapture2A",
+      "topic_text": "If I could get in, maybe I could lead one of the young ones out for you.",
+      "emotion": "Happy 50",
+      "response_text": "Sure, if you think you can pull it off. I think I might know a buyer who'd be interested.",
+      "index": "101"
+    },
+    {
+      "topic": "PFLamplightCapture2B",
+      "topic_text": "Never mind. Sounds like too much work for such a small package.",
+      "emotion": "Happy 25",
+      "response_text": "You're right on that one. There's plenty of other merchandise out there, and it's a seller's market.",
+      "index": "104"
+    },
+    {
+      "topic": "SpeechChallengeFailure",
+      "topic_text": "SpeechChallengeFailure",
+      "emotion": "Neutral 50",
+      "response_text": "[sighs] You know what I don't appreciate? I don't appreciate when people try to take advantage of me.",
+      "index": "105"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "I have to go now.",
+      "emotion": "Neutral 50",
+      "response_text": "Paradise Falls is here if you need it.",
+      "index": "108"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Neutral 50",
+      "response_text": "It's a pleasure to see a fresh face around here.",
+      "index": "109"
+    },
+    {
+      "topic": "PFEulogyObservationDeckEnd",
+      "topic_text": "PFEulogyObservationDeckEnd",
+      "emotion": "Neutral 50",
+      "response_text": "Alright, I've had enough. Let's do something else.",
+      "index": "114"
+    },
+    {
+      "topic": "PFEulogyObservationDeckStart",
+      "topic_text": "PFEulogyObserve",
+      "emotion": "Neutral 50",
+      "response_text": "I'm heading to the deck. I need some air. Ladies, follow me.",
+      "index": "115"
+    },
+    {
+      "topic": "PFEulogyObserveCafeEnd",
+      "topic_text": "PFEulogyObserveCafeEnd",
+      "emotion": "Neutral 50",
+      "response_text": "We need to keep an eye on this. Too much drinking, and the merchandise is gonna walk itself out the front door.",
+      "index": "117"
+    },
+    {
+      "topic": "PFEulogyObserveCafeStart",
+      "topic_text": "PFEulogyObserveCafeStart",
+      "emotion": "Neutral 50",
+      "response_text": "Ladies, to the bar.",
+      "index": "119"
+    },
+    {
+      "topic": "PFEulogyObservePenEnd",
+      "topic_text": "PFEulogyObservePenEnd",
+      "emotion": "Neutral 50",
+      "response_text": "This is a sad crop. Our boys need to stop drinking and start bringing me some better stock.",
+      "index": "121"
+    },
+    {
+      "topic": "PFEulogyObservePenStart",
+      "topic_text": "PFEulogyObservePenStart",
+      "emotion": "Neutral 50",
+      "response_text": "Time to check on the merchandise.",
+      "index": "124"
+    },
+    {
+      "topic": "PFEulogyObserveStageEnd",
+      "topic_text": "PFEulogyObserveStageEnd",
+      "emotion": "Neutral 50",
+      "response_text": "This place needs to be tidied up. Creates a bad impression for the customers.",
+      "index": "127"
+    },
+    {
+      "topic": "PFEulogyObserveStageStart",
+      "topic_text": "PFEulogyObserveStageStart",
+      "emotion": "Neutral 50",
+      "response_text": "Let's go, ladies. Keep up.",
+      "index": "129"
+    },
+    {
+      "topic": "PFEulogyTalkCutterStart",
+      "topic_text": "PFEulogyTalkCutterStart",
+      "emotion": "Neutral 50",
+      "response_text": "Where's Cutter at? I need to talk to her.",
+      "index": "131"
+    },
+    {
+      "topic": "PFEulogyTalkFortyStart",
+      "topic_text": "PFEulogyTalkFortyStart",
+      "emotion": "Neutral 50",
+      "response_text": "Now, I gotta go see Forty.",
+      "index": "133"
+    },
+    {
+      "topic": "PFEulogyTalkProntoStart",
+      "topic_text": "PFEulogyTalkProntoStart",
+      "emotion": "Neutral 50",
+      "response_text": "Time to check in with Pronto.",
+      "index": "135"
+    },
+    {
+      "topic": "PFTalkCloverEulogyJones2",
+      "topic_text": "PFTalkCloverEulogyJones2",
+      "emotion": "Neutral 50",
+      "response_text": "Haven't I always said that I hate to wait? Why you always have to make me wait? What's wrong with you?",
+      "index": "137"
+    },
+    {
+      "topic": "PFTalkCloverEulogyJones4",
+      "topic_text": "PFTalkCloverEulogyJones4",
+      "emotion": "Neutral 50",
+      "response_text": "Well now I forgot what I wanted because I was too busy yelling at you. See what you've done?",
+      "index": "139"
+    },
+    {
+      "topic": "PFTalkCrimsonEulogyJones2",
+      "topic_text": "PFTalkCrimsonEulogyJones2",
+      "emotion": "Anger 20",
+      "response_text": "What have I said about backtalk, Crimson? Hmm? What have I said?{slightly angry, provoking}",
+      "index": "141"
+    },
+    {
+      "topic": "PFTalkCrimsonEulogyJones4",
+      "topic_text": "PFTalkCrimsonEulogyJones4",
+      "emotion": "Neutral 50",
+      "response_text": "What? Sorry? Try that again.",
+      "index": "143"
+    },
+    {
+      "topic": "PFTalkCrimsonEulogyJones6",
+      "topic_text": "PFTalkCrimsonEulogyJones6",
+      "emotion": "Neutral 50",
+      "response_text": "There's a good girl.",
+      "index": "145"
+    },
+    {
+      "topic": "PFTalkCutterEulogyJones2",
+      "topic_text": "PFTalkCutterEulogyJones2",
+      "emotion": "Neutral 50",
+      "response_text": "Awww, there's no need to be like that, Cutter. You know I'm only joking. But speaking of business... You have my money?",
+      "index": "147"
+    },
+    {
+      "topic": "PFTalkCutterEulogyJones4",
+      "topic_text": "PFTalkCutterEulogyJones4",
+      "emotion": "Neutral 50",
+      "response_text": "Nah. I know you run your shit straight. Keep up the good work.",
+      "index": "149"
+    },
+    {
+      "topic": "PFTalkEulogyJonesClover1",
+      "topic_text": "PFTalkEulogyJonesClover1",
+      "emotion": "Neutral 50",
+      "response_text": "Why are you bothering me, Clover? Hmm? What do you want?{annoyed}",
+      "index": "151"
+    },
+    {
+      "topic": "PFTalkEulogyJonesClover3",
+      "topic_text": "PFTalkEulogyJonesClover3",
+      "emotion": "Neutral 50",
+      "response_text": "We've talked about this before, haven't we? So why would you think that nagging me would actually help?",
+      "index": "153"
+    },
+    {
+      "topic": "PFTalkEulogyJonesCrimson1",
+      "topic_text": "PFTalkEulogyJonesCrimson1",
+      "emotion": "Neutral 50",
+      "response_text": "Whatever you have to say, it can wait. You're not here to talk.",
+      "index": "155"
+    },
+    {
+      "topic": "PFTalkEulogyJonesCrimson3",
+      "topic_text": "PFTalkEulogyJonesCrimson3",
+      "emotion": "Neutral 50",
+      "response_text": "Did I speak Communese to you? I said that I don't want to talk about it. You will be quiet, or you will regret it.",
+      "index": "157"
+    },
+    {
+      "topic": "PFTalkFortyEulogyJones2",
+      "topic_text": "PFTalkFortyEulogyJones2",
+      "emotion": "Neutral 50",
+      "response_text": "Have you suddenly gone blind, Forty? Do I need to replace my blind second-in-command? Look around! You see what I'm talking about now?",
+      "index": "159"
+    },
+    {
+      "topic": "PFTalkFortyEulogyJones4",
+      "topic_text": "PFTalkFortyEulogyJones4",
+      "emotion": "Neutral 50",
+      "response_text": "That's more like it! Show some initiative, dammit, before I sell you off and give one of those fools in the cage your job!",
+      "index": "161"
+    },
+    {
+      "topic": "PFTalkProntoEulogyJones2",
+      "topic_text": "PFTalkProntoEulogy2",
+      "emotion": "Neutral 50",
+      "response_text": "Haha! Could be, but I wouldn't tell you even if I knew. You got my money?",
+      "index": "163"
+    },
+    {
+      "topic": "PFTalkProntoEulogyJones4",
+      "topic_text": "PFTalkProntoEulogy4",
+      "emotion": "Neutral 50",
+      "response_text": "You're good people, Pronto. Later.",
+      "index": "165"
+    }
+  ],
+  "combat": [
+    {
+      "topic": "Attack",
+      "topic_text": "Attack",
+      "emotion": "Neutral 50",
+      "response_text": "Slavers! Kill this asshole!",
+      "index": "167"
+    }
+  ]
+}

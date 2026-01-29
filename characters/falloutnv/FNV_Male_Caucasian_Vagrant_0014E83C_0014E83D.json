@@ -1,0 +1,103 @@
+{
+  "name": "Vagrant",
+  "url": "/wiki/Vagrant",
+  "dialogue_name": "VMS49Vagrant.txt",
+  "dialogue_url": "/wiki/VMS49Vagrant.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "0014E83C",
+  "ref_id": "0014E83D",
+  "editor_id": "VMS49Vagrant",
+  "location": "Freeside",
+  "location_url": "/wiki/Freeside",
+  "descriptions": [
+    "The vagrant is an old man living in Freeside in 2281.",
+    "Like the destitute traveler, he's pretty much a non-entity hanging around in the streets scraping by, occasionally seeing Max run around chasing Stacey with what seems like a toy ray gun in hand.",
+    "PC Sometimes, if the player kills the vagrant, you will hear quotes like \"Are you crazy man, I've got two kids to feed!\" or, \"Help!\", similar to when your reputation in Freeside is lower than neutral, and Freeside thugs try to mug you but flee. "
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "role": "Vagrant",
+  "detailed_location": "Freeside, near East Gate",
+  "voice_actor": "Yuri Lowenthal",
+  "special": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 5,
+    "Intelligence": 5,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "mod_special_values": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 6,
+    "Charisma": 5,
+    "Intelligence": 5,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "level": "1",
+  "misc_skills": [
+    {
+      "Hit Points:": "120(125)"
+    }
+  ],
+  "karma": "Neutral",
+  "voice_type": "MaleAdult01Default",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "{creepy vagrant laugh}Heh heh heh heh heh. <Coughs>",
+      "index": "1"
+    },
+    {
+      "topic": "VFreeformFreesideVMS49VagrantTopic000",
+      "topic_text": "I'm looking for someone carrying an antique gun.",
+      "emotion": "Neutral 50",
+      "response_text": "Heh heh heh heh{\"ooo, fancy\"}ooo, heh heh heh.",
+      "index": "3"
+    },
+    {
+      "topic": "VFreeformFreesideVMS49VagrantTopic001",
+      "topic_text": "These ten caps are yours if you point me to anyone you've seen with a weird old gun.",
+      "emotion": "Neutral 50",
+      "response_text": "Kids. Run by{slurring}sh- shumtimes.",
+      "index": "7"
+    },
+    {
+      "topic": "VFreeformFreesideVMS49VagrantTopic002",
+      "topic_text": "Two choices. You point me to any odd guns you've seen lately, or I paint the curb with your brains.",
+      "emotion": "Neutral 50",
+      "response_text": "Kids. Run by{slurring}sh- shumtimes.",
+      "index": "9"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Herrgghh.",
+      "index": "10"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "Hello",
+      "emotion": "Neutral 50",
+      "response_text": "<Unintelligible Grunt/Burp>",
+      "index": "12"
+    }
+  ],
+  "combat": []
+}

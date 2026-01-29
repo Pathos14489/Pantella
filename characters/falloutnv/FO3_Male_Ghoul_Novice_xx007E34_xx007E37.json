@@ -1,0 +1,89 @@
+{
+  "name": "Novice",
+  "url": "/wiki/Novice",
+  "dialogue_name": "",
+  "dialogue_url": null,
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "xx007E34",
+  "ref_id": "xx007E37",
+  "editor_id": "DLC03WQ03Apostle01",
+  "location": "Holy Light Monastery",
+  "location_url": "/wiki/Holy_Light_Monastery",
+  "descriptions": [
+    "Novice is a ghoul found listening to the Mother Curie III's sermon in the basement of the Holy Light Monastery in 2277.",
+    "Commended by Mother Curie III for his devotion to the cause, Novice is wowing the other visitors to the Holy Light Monastery with his \"hint of brain\" poking through a section of exposed skull. His path to the light is almost a certainty.",
+    "The Novice appears only in the Fallout 3 add-on Broken Steel."
+  ],
+  "race": "Ghoul",
+  "gender": "Male",
+  "affiliation": "Apostles of the Eternal Light",
+  "role": "Cult member",
+  "detailed_location": "Holy Light Monastery",
+  "voice_actor": "Mike Rosson",
+  "special": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 4,
+    "Intelligence": 4,
+    "Agility": 6,
+    "Luck": 4
+  },
+  "mod_special_values": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 4,
+    "Intelligence": 4,
+    "Agility": 7,
+    "Luck": 4
+  },
+  "level": "5→9",
+  "tag_skills": [
+    {
+      "Melee Weap.:": "49→68"
+    },
+    {
+      "Small Guns:": "49→68(51→70)"
+    },
+    {
+      "Sneak:": "49→68(51→70)"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "45→65(50→70)"
+    },
+    {
+      "Critical Chance:": "4%"
+    },
+    {
+      "Unarmed Dam.:": "1.1"
+    },
+    {
+      "Poison Resist.:": "15%(20%)"
+    },
+    {
+      "Rad. Resist.:": "6%(8%)"
+    },
+    {
+      "Carry Weight:": "210"
+    },
+    {
+      "Damage Res.:": "2%"
+    }
+  ],
+  "karma": "Neutral",
+  "voice_type": "MaleGenericGhoulDC",
+  "geck_race": "Ghoul",
+  "topics": [],
+  "conversation": [],
+  "combat": []
+}

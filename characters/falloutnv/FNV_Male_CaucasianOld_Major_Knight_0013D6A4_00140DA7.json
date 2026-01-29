@@ -1,0 +1,236 @@
+{
+  "name": "Major Knight",
+  "url": "/wiki/Knight_(Mojave_Outpost)",
+  "dialogue_name": "VMOMajorKnight.txt",
+  "dialogue_url": "/wiki/VMOMajorKnight.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": true,
+  "can_be_companion": false,
+  "base_id": "0013D6A4",
+  "ref_id": "00140DA7",
+  "editor_id": "vMOMajorKnight",
+  "location": "Mojave Outpostheadquarters",
+  "location_url": "/wiki/Mojave_Outpost",
+  "descriptions": [
+    "Major Knight is the New California Republic Army officer in charge of the Mojave Outpost administration, working at the headquarters building in Fallout: New Vegas.",
+    "As the main administrator of the outpost, Knight is in charge of processing travelers passing through the Mojave Outpost, marking the border between the Mojave and the NCR. In practice, this means logging the traffic,",
+    "He does not consider border guard duty an excellent posting, but is well aware that the alternative is being sent further east or patrolling the Colorado, both dangerous jobs putting soldiers in contact with the Legion.",
+    "Knight is also frustrated by the fact that he feels forced to conceal his homosexuality while stationed at the Mojave Outpost. He feels that being open about his sexuality and forming relationships would complicate his position and make work difficult for him, due to the frontier seeming less forgiving of LGBT people. He wishes it was different, but accepts it, as the alternatives are worse (though he seems to think the Legion is more accepting of same-sex relationships, unaware they are punished by death). However, it does not mean he will not help fellow LGBT people: If they reveal themselves to him, he is perfectly willing to bend the rules and sign work orders to have their gear repaired at a fraction of the cost.",
+    "Area designer J.R. Vosovic wrote for Major Knight, in addition to working on the rest of the Mojave Outpost. He cited Major Knight and Ranger Ghost as two of his favorite characters in the game."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "NCR Army",
+  "role": "Officer",
+  "detailed_location": "Mojave Outpost headquarters",
+  "voice_actor": "Liam O'Brien",
+  "special": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 5,
+    "Intelligence": 5,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "level": "5",
+  "tag_skills": [
+    {
+      "Guns:": "46"
+    },
+    {
+      "Melee Weap.:": "46"
+    },
+    {
+      "Repair:": "100"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Neutral",
+  "voice_type": "MaleAdult05",
+  "geck_race": "CaucasianOld",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "{Slightly bored}Caravan, citizen, pilgrim, or...?",
+      "index": "1"
+    },
+    {
+      "topic": "vMojavevMOMajorKnightTopic000",
+      "topic_text": "Anything I can do to help around here?",
+      "emotion": "Neutral 50",
+      "response_text": "More than you already have? Might want to ask around, but truth is, you've already helped out a lot in the short time you've been here.",
+      "index": "4"
+    },
+    {
+      "topic": "vMojavevMOMajorKnightTopic001",
+      "topic_text": "I need repairs.",
+      "emotion": "Neutral 50",
+      "response_text": "All right then... just sign here, here, and... here.",
+      "index": "8"
+    },
+    {
+      "topic": "vMojavevMOMajorKnightTopic002",
+      "topic_text": "What kind of trouble?",
+      "emotion": "Neutral 50",
+      "response_text": "Not exactly sure... radio's been on the fritz, and since I haven't heard any shooting, I don't think it's urgent. Can't hurt to go ask her.",
+      "index": "9"
+    },
+    {
+      "topic": "vMojavevMOMajorKnightTopic003",
+      "topic_text": "Can you tell me about the Outpost?",
+      "emotion": "Neutral 50",
+      "response_text": "NCR border guard duty mostly. It's our job to make sure the caravans can move safely along I-15 and Highway 95.",
+      "index": "10"
+    },
+    {
+      "topic": "vMojavevMOMajorKnightTopic004",
+      "topic_text": "Who are you?",
+      "emotion": "Neutral 50",
+      "response_text": "{Surprised a bit that someone would care to ask}Me, I'm Knight - Major Knight. I've been stuck here dealing with these caravans for ages now, but somebody's gotta do it.",
+      "index": "12"
+    },
+    {
+      "topic": "vMojavevMOMajorKnightTopic005",
+      "topic_text": "Not exciting enough for you?",
+      "emotion": "Neutral 50",
+      "response_text": "It ain't so bad. If Caesar's Legion decides to push West through Nipton ol' Mojave Outpost here will be the front line.",
+      "index": "13"
+    },
+    {
+      "topic": "vMojavevMOMajorKnightTopic006",
+      "topic_text": "I've helped out around here, sending troops to Primm will fortify the NCR in the region.",
+      "emotion": "Neutral 50",
+      "response_text": "I see the wisdom in that. I'll radio for a unit to head up to Primm and offer some additional support.",
+      "index": "14"
+    },
+    {
+      "topic": "vMojavevMOMajorKnightTopic007",
+      "topic_text": "I'd like to talk to you about Primm.",
+      "emotion": "Neutral 50",
+      "response_text": "{Slight surprise}Primm?{Recalling to himself}Hayes' unit is stationed up there, were having problems with some of the NCRCF convicts. What can I help you with?",
+      "index": "15"
+    },
+    {
+      "topic": "vMojavevMOMajorKnightTopic008",
+      "topic_text": "Hayes is undermanned and is requesting some additional support.",
+      "emotion": "Neutral 50",
+      "response_text": "{Frowns}I'd like to help -{beat, hates this}but we can't spare any more units.{Reciting the official line, even though he hates it}We have to maintain a minimum headcount at the Outpost, orders from the West.",
+      "index": "16"
+    },
+    {
+      "topic": "vMojavevMOMajorKnightTopic009",
+      "topic_text": "One of the convicts from NCRCF is looking for a pardon so he can protect Primm.",
+      "emotion": "Anger 5",
+      "response_text": "{Disbelief}One of the Powder Gangers?{Slight anger, they're like terrorists}They've been nothing but trouble for us - why would we want one of them anywhere in an official capacity?",
+      "index": "17"
+    },
+    {
+      "topic": "vMojavevMOMajorKnightTopic010<Barter Options>",
+      "topic_text": "Having Primm - and the trade route - under NCR control would help the West.",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] I see the wisdom in that. I'll radio for a unit to head up to Primm and offer some additional support.",
+      "index": "18"
+    },
+    {
+      "topic": "vMojavevMOMajorKnightTopic011<Speech Options>",
+      "topic_text": "His sentence was almost up, and he isn't tied to the Powder Gangers.",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] Hmm.{Pensive pause}All right. If his sentence was closing up I can see about getting him pardoned.",
+      "index": "20"
+    },
+    {
+      "topic": "vMojavevMOMajorKnightTopic012<Bribe>",
+      "topic_text": "Do you think I could \"buy\" a pardon for 200 caps?",
+      "emotion": "Neutral 50",
+      "response_text": "{Slightly uncomfortable, voice down}Well, having a sheriff who was a convict is better than no sheriff at all... and if he has the qualifications... all right, hand it over.",
+      "index": "23"
+    },
+    {
+      "topic": "vMojavevMOMajorKnightTopic013",
+      "topic_text": "Never mind, I'll be leaving now.",
+      "emotion": "Neutral 50",
+      "response_text": "Goodbye.",
+      "index": "25"
+    },
+    {
+      "topic": "vMojavevMOMajorKnightTopic014",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Goodbye.",
+      "index": "26"
+    },
+    {
+      "topic": "vMojavevMOMajorKnightTopic015",
+      "topic_text": "Primm has seen better days.",
+      "emotion": "Sad 10",
+      "response_text": "{Sad}It has. It was a promising trade town - before the escape at the correctional facility.{Shakes head, recalling a bad memory}Lost a good bit of money at the Vikki and Vance.",
+      "index": "27"
+    },
+    {
+      "topic": "vMojavevMOMajorKnightTopic016",
+      "topic_text": "What?",
+      "emotion": "Neutral 50",
+      "response_text": "Just need something for the log book, keeping tabs on traffic through the Outpost...{to himself}although mostly just in, not out these days.",
+      "index": "28"
+    },
+    {
+      "topic": "vMojavevMOMajorKnightTopic018",
+      "topic_text": "[NCR] NCR Soldier.",
+      "emotion": "Neutral 50",
+      "response_text": "{Curious}Reinforcements?{Beat, to himself}About time we got some more hands around here.",
+      "index": "31"
+    },
+    {
+      "topic": "vMojavevMOMajorKnightTopic020",
+      "topic_text": "[Confirmed Bachelor] You didn't tell me your name.",
+      "emotion": "Neutral 50",
+      "response_text": "Oh - Knight.{Frowns, a little uncomfortable}You must not be from around here. If so... it doesn't do to get too friendly.{Knight's homosexual, but he doesn't want anyone in the Outpost to know for reasons he'll explain soon.}",
+      "index": "32"
+    },
+    {
+      "topic": "vMojavevMOMajorKnightTopic021",
+      "topic_text": "What do you mean?",
+      "emotion": "Neutral 50",
+      "response_text": "{Quieter, doesn't want to be overheard}This isn't the Republic. Oddly enough, Legion's a little more forgiving about... friendships. Out here, it's not as accepted.",
+      "index": "33"
+    },
+    {
+      "topic": "vMojavevMOMajorKnightTopic023",
+      "topic_text": "Didn't realize NCR was so spineless.",
+      "emotion": "Neutral 50",
+      "response_text": "Now wait a minute - Republic's a sight better than... other alternatives. Women are serving here, after all. The rest... well, might take some time.",
+      "index": "35"
+    },
+    {
+      "topic": "vMojavevMOMajorKnightTopic024",
+      "topic_text": "Forget it, then, you're a waste of time.",
+      "emotion": "Neutral 50",
+      "response_text": "Wait... wait a minute. Look. Some things in the NCR are... aren't ideal. But I want to help.",
+      "index": "37"
+    },
+    {
+      "topic": "vMojavevMOMajorKnightTopic025",
+      "topic_text": "So is that a \"no,\" you don't want to be friends, or...",
+      "emotion": "Neutral 50",
+      "response_text": "I... would, perhaps some other time. When my orders take me to Vegas, perhaps. Wish things were different, but might take some time.",
+      "index": "39"
+    },
+    {
+      "topic": "vMojavevMOMajorKnightTopic027",
+      "topic_text": "I could use some help with my gear.",
+      "emotion": "Neutral 50",
+      "response_text": "{Slight conspiratorial smile}Let me sign off on the work order for you, then.",
+      "index": "40"
+    }
+  ],
+  "conversation": [],
+  "combat": []
+}

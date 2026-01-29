@@ -1,0 +1,466 @@
+{
+  "name": "Private Kyle Edwards¹",
+  "url": "/wiki/Kyle_Edwards",
+  "dialogue_name": "CampSearchlightPvtEdwards.txt",
+  "dialogue_url": "/wiki/CampSearchlightPvtEdwards.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "0013FE79",
+  "ref_id": "0013FE89",
+  "editor_id": "CampSearchlightPvtEdwards",
+  "location": "Ranger Station Echo",
+  "location_url": "/wiki/Ranger_Station_Echo",
+  "descriptions": [
+    "Private Kyle Edwards is an NCR soldier turned ghoul found at Camp Searchlight in 2281. He is holed up in a Searchlight home northwest of the elementary school.",
+    "Private Edwards has been affected by the radiation caused during the Searchlight Sabotage when Legion infiltrators opened containers of radioactive waste stored in the Searchlight fire station.",
+    "He is currently trying to figure out how to move forward with his life, but he has no idea where to go, how to live as a ghoul,"
+  ],
+  "race": "Ghoul",
+  "gender": "Male",
+  "affiliation": "NCR Army(formerly, optional)",
+  "role": "Soldier (formerly, optional)",
+  "detailed_location": "Searchlight home,Camp SearchlightRanger Station Echo(optional)",
+  "voice_actor": "Chris Andrew Ciulla",
+  "special": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 5,
+    "Intelligence": 5,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "level": "8",
+  "tag_skills": [
+    {
+      "Explosives:": "58"
+    },
+    {
+      "Guns:": "58"
+    },
+    {
+      "Melee Weap.:": "58"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Neutral",
+  "voice_type": "MaleGenericGhoul",
+  "geck_race": "Ghoul",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Anger 50",
+      "response_text": "Go away.",
+      "index": "1"
+    },
+    {
+      "topic": "VMS43CampSearchlightPvtEdwardsTopic000",
+      "topic_text": "You aren't feral are you?",
+      "emotion": "Sad 5",
+      "response_text": "No, I'm not. Not yet anyway. I'm Private Kyle Edwards, former NCR trooper.",
+      "index": "5"
+    },
+    {
+      "topic": "VMS43CampSearchlightPvtEdwardsTopic001",
+      "topic_text": "<Questions>",
+      "emotion": "Sad 25",
+      "response_text": "I'm here because I have nowhere else to go.",
+      "index": "6"
+    },
+    {
+      "topic": "VMS43CampSearchlightPvtEdwardsTopic002",
+      "topic_text": "<Questions>",
+      "emotion": "Fear 10",
+      "response_text": "Are you sure about that?",
+      "index": "7"
+    },
+    {
+      "topic": "VMS43CampSearchlightPvtEdwardsTopic003",
+      "topic_text": "<Questions>",
+      "emotion": "Anger 25",
+      "response_text": "Yeah, I am. What of it?",
+      "index": "8"
+    },
+    {
+      "topic": "VMS43CampSearchlightPvtEdwardsTopic004",
+      "topic_text": "<Placeholder>",
+      "emotion": "Neutral 50",
+      "response_text": "Not much, I'm afraid. What do you want to know?",
+      "index": "9"
+    },
+    {
+      "topic": "VMS43CampSearchlightPvtEdwardsTopic005",
+      "topic_text": "You should just go kill him.",
+      "emotion": "Anger 25",
+      "response_text": "[FAILED] I may be angry, but I'm not stupid.",
+      "index": "10"
+    },
+    {
+      "topic": "VMS43CampSearchlightPvtEdwardsTopic007",
+      "topic_text": "Astor has agreed to let you join him.",
+      "emotion": "Happy 25",
+      "response_text": "Maybe now I can get my old life back, or at least most of it.",
+      "index": "12"
+    },
+    {
+      "topic": "VMS43CampSearchlightPvtEdwardsTopic009",
+      "topic_text": "Former? What happened?",
+      "emotion": "Disgust 25",
+      "response_text": "Couldn't you tell? That damn radiation bomb got me. I can't serve the NCR like this...",
+      "index": "14"
+    },
+    {
+      "topic": "VMS43CampSearchlightPvtEdwardsTopic010",
+      "topic_text": "<Lie> Oh yeah, I'm sure he'd love to see you.",
+      "emotion": "Fear 15",
+      "response_text": "[FAILED] I'm still not so sure about that.",
+      "index": "15"
+    },
+    {
+      "topic": "VMS43CampSearchlightPvtEdwardsTopic013",
+      "topic_text": "Can I ask you something else?",
+      "emotion": "Neutral 50",
+      "response_text": "I suppose.",
+      "index": "17"
+    },
+    {
+      "topic": "VMS43CampSearchlightPvtEdwardsTopic014",
+      "topic_text": "Can I ask you something else?",
+      "emotion": "Neutral 50",
+      "response_text": "I suppose.",
+      "index": "18"
+    },
+    {
+      "topic": "VMS43CampSearchlightPvtEdwardsTopic015",
+      "topic_text": "What's the history of the camp?",
+      "emotion": "Sad 5",
+      "response_text": "I know that this place was originally a mining town before the NCR took it over.  I think they mined gold before the war.",
+      "index": "19"
+    },
+    {
+      "topic": "VMS43CampSearchlightPvtEdwardsTopic016",
+      "topic_text": "Maybe they'll let you back in?",
+      "emotion": "Fear 10",
+      "response_text": "I'm not so sure about that. I don't know how the NCR feels about ghouls.",
+      "index": "21"
+    },
+    {
+      "topic": "VMS43CampSearchlightPvtEdwardsTopic017",
+      "topic_text": "You're right, ghouls aren't fit to be in the army.",
+      "emotion": "Sad 50",
+      "response_text": "Yeah, I know.",
+      "index": "22"
+    },
+    {
+      "topic": "VMS43CampSearchlightPvtEdwardsTopic018",
+      "topic_text": "[Attack] Don't worry, I'll put you out of your misery.",
+      "emotion": "Surprise 50",
+      "response_text": "What?",
+      "index": "23"
+    },
+    {
+      "topic": "VMS43CampSearchlightPvtEdwardsTopic019",
+      "topic_text": "On second thought, let me ask you something else.",
+      "emotion": "Neutral 50",
+      "response_text": "Alright.",
+      "index": "24"
+    },
+    {
+      "topic": "VMS43CampSearchlightPvtEdwardsTopic023",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Later.",
+      "index": "25"
+    },
+    {
+      "topic": "VMS43CampSearchlightPvtEdwardsTopic029",
+      "topic_text": "Can I have your dog tag?",
+      "emotion": "Pained 15",
+      "response_text": "Sorry, I'm not about to give it up. It's the only thing I have left that reminds me of who I was.",
+      "index": "26"
+    },
+    {
+      "topic": "VMS43CampSearchlightPvtEdwardsTopic032",
+      "topic_text": "You know, there's an NCR soldier outside who wants me to kill you for it.",
+      "emotion": "Surprise 25",
+      "response_text": "He wants to kill me? What did I ever do to him?",
+      "index": "27"
+    },
+    {
+      "topic": "VMS43CampSearchlightPvtEdwardsTopic033",
+      "topic_text": "Can I ask you something else?",
+      "emotion": "Neutral 50",
+      "response_text": "Sure.",
+      "index": "28"
+    },
+    {
+      "topic": "VMS43CampSearchlightPvtEdwardsTopic043",
+      "topic_text": "There must be someplace you can go.",
+      "emotion": "Fear 15",
+      "response_text": "Believe me, I'd love to leave, but I can't because I don't know what effect the radiation will have on me.",
+      "index": "29"
+    },
+    {
+      "topic": "VMS43CampSearchlightPvtEdwardsTopic044",
+      "topic_text": "Why haven't you gone feral yet?",
+      "emotion": "Fear 5",
+      "response_text": "I'm guessing it's because I'm outside of the heavy radiation areas. I'm not going outside to find out, though.",
+      "index": "30"
+    },
+    {
+      "topic": "VMS43CampSearchlightPvtEdwardsTopic047",
+      "topic_text": "Actually I have another question.",
+      "emotion": "Neutral 50",
+      "response_text": "Alright.",
+      "index": "31"
+    },
+    {
+      "topic": "VMS43CampSearchlightPvtEdwardsTopic048",
+      "topic_text": "Now that you're free to leave you don't need your dog tag anymore do you?",
+      "emotion": "Neutral 50",
+      "response_text": "You're probably right. Here, take it.",
+      "index": "32"
+    },
+    {
+      "topic": "VMS43CampSearchlightPvtEdwardsTopic056",
+      "topic_text": "Can you tell me what happened here?",
+      "emotion": "Sad 5",
+      "response_text": "I don't really know the details of it, it all happened too quickly. I remember being hit by a blast of energy.",
+      "index": "33"
+    },
+    {
+      "topic": "VMS43CampSearchlightPvtEdwardsTopic062",
+      "topic_text": "But ghouls are immune to radiation.",
+      "emotion": "Fear 10",
+      "response_text": "Yeah, but I don't want to go feral, and that's probably what more radiation would do to me.",
+      "index": "36"
+    },
+    {
+      "topic": "VMS43CampSearchlightPvtEdwardsTopic063",
+      "topic_text": "Is that the only thing you're afraid of?",
+      "emotion": "Fear 25",
+      "response_text": "Radscorpions. Fuckers creep the hell out of me. I'm not going outside while they're still crawling around.",
+      "index": "37"
+    },
+    {
+      "topic": "VMS43CampSearchlightPvtEdwardsTopic064",
+      "topic_text": "There's still radiation in your house.",
+      "emotion": "Fear 10",
+      "response_text": "Look, just leave me alone. I'm not going outside.",
+      "index": "38"
+    },
+    {
+      "topic": "VMS43CampSearchlightPvtEdwardsTopic065",
+      "topic_text": "Can I ask you about something else then?",
+      "emotion": "Neutral 50",
+      "response_text": "Fine.",
+      "index": "39"
+    },
+    {
+      "topic": "VMS43CampSearchlightPvtEdwardsTopic073",
+      "topic_text": "Can I ask  you something else?",
+      "emotion": "Neutral 50",
+      "response_text": "I suppose.",
+      "index": "40"
+    },
+    {
+      "topic": "VMS43CampSearchlightPvtEdwardsTopic076",
+      "topic_text": "I'm positive, they're all gone.",
+      "emotion": "Sad 5",
+      "response_text": "Maybe it's time for me to leave this place, then. Any ideas where I can go?",
+      "index": "41"
+    },
+    {
+      "topic": "VMS43CampSearchlightPvtEdwardsTopic077",
+      "topic_text": "Well, there may still be a few out there.",
+      "emotion": "Fear 25",
+      "response_text": "Nope, no way. I'm not going anywhere until I know they're gone.",
+      "index": "42"
+    },
+    {
+      "topic": "VMS43CampSearchlightPvtEdwardsTopic078",
+      "topic_text": "<Lie> They are definitely all gone.",
+      "emotion": "Anger 10",
+      "response_text": "[FAILED] Sorry, I don't believe you.",
+      "index": "43"
+    },
+    {
+      "topic": "VMS43CampSearchlightPvtEdwardsTopic079",
+      "topic_text": "You define who you are, not some dog tag.",
+      "emotion": "Anger 10",
+      "response_text": "[FAILED] Sorry, I'm not giving it to you.",
+      "index": "45"
+    },
+    {
+      "topic": "VMS43CampSearchlightPvtEdwardsTopic080",
+      "topic_text": "Actually lets talk about something else.",
+      "emotion": "Neutral 50",
+      "response_text": "Ok.",
+      "index": "47"
+    },
+    {
+      "topic": "VMS43CampSearchlightPvtEdwardsTopic085",
+      "topic_text": "I'll take care of them. Be right back.",
+      "emotion": "Neutral 50",
+      "response_text": "Thanks.",
+      "index": "48"
+    },
+    {
+      "topic": "VMS43CampSearchlightPvtEdwardsTopic086",
+      "topic_text": "I want to talk about something else.",
+      "emotion": "Neutral 50",
+      "response_text": "Alright.",
+      "index": "49"
+    },
+    {
+      "topic": "VMS43CampSearchlightPvtEdwardsTopic088",
+      "topic_text": "There are plenty of places out in the wasteland.",
+      "emotion": "Happy 5",
+      "response_text": "You know what? Why the hell not. There are plenty of places out there to explore, and I'm kinda tired of being stuck in this house.",
+      "index": "50"
+    },
+    {
+      "topic": "VMS43CampSearchlightPvtEdwardsTopic089",
+      "topic_text": "Maybe First Sergeant Astor will let you join him?",
+      "emotion": "Fear 5",
+      "response_text": "Are you sure he'll be okay with it? Not everyone is crazy about ghouls.",
+      "index": "51"
+    },
+    {
+      "topic": "VMS43CampSearchlightPvtEdwardsTopic090",
+      "topic_text": "You should work things out with First Sergeant Astor.",
+      "emotion": "Anger 10",
+      "response_text": "I don't know if that's such a great idea.",
+      "index": "52"
+    },
+    {
+      "topic": "VMS43CampSearchlightPvtEdwardsTopic091",
+      "topic_text": "I heard Ranger Station Echo up north is manned by other ghouls.",
+      "emotion": "Happy 25",
+      "response_text": "There's a Ranger Station run by ghouls? Finally, I feel like I have a place to go. Thanks for your help.",
+      "index": "53"
+    },
+    {
+      "topic": "VMS43CampSearchlightPvtEdwardsTopic092",
+      "topic_text": "Let's talk about something else first.",
+      "emotion": "Neutral 50",
+      "response_text": "Alright.",
+      "index": "54"
+    },
+    {
+      "topic": "VMS43CampSearchlightPvtEdwardsTopic093",
+      "topic_text": "I'll go talk to him first.",
+      "emotion": "Happy 25",
+      "response_text": "Really? Thanks, I owe you one.",
+      "index": "55"
+    },
+    {
+      "topic": "VMS43CampSearchlightPvtEdwardsTopic094",
+      "topic_text": "On second thought maybe somewhere else would work better.",
+      "emotion": "Sad 5",
+      "response_text": "Any ideas where I can go?",
+      "index": "56"
+    },
+    {
+      "topic": "VMS43CampSearchlightPvtEdwardsTopic097",
+      "topic_text": "Lets talk about something else first.",
+      "emotion": "Neutral 50",
+      "response_text": "Sure.",
+      "index": "57"
+    },
+    {
+      "topic": "VMS43CampSearchlightPvtEdwardsTopic100",
+      "topic_text": "It's either him or the wasteland.",
+      "emotion": "Disgust 5",
+      "response_text": "I think I'll take my chances with the wasteland.",
+      "index": "58"
+    },
+    {
+      "topic": "VMS43CampSearchlightPvtEdwardsTopic102",
+      "topic_text": "Give me your dog tag, now!",
+      "emotion": "Anger 25",
+      "response_text": "[FAILED] Bullying me won't make me give it to you.",
+      "index": "59"
+    },
+    {
+      "topic": "VMS43CampSearchlightPvtEdwardsTopic110",
+      "topic_text": "He thinks you're suffering.",
+      "emotion": "Anger 35",
+      "response_text": "Suffering? I may be suffering but I still want to live. You tell that bastard that I have every intention of doing so.",
+      "index": "61"
+    },
+    {
+      "topic": "VMS43CampSearchlightPvtEdwardsTopic111",
+      "topic_text": "[Attack] You're a rabid dog that needs to be put down.",
+      "emotion": "Anger 50",
+      "response_text": "I'll kill you for that!",
+      "index": "62"
+    },
+    {
+      "topic": "VMS43CampSearchlightPvtEdwardsTopic112",
+      "topic_text": "Actually, I want to talk about something else.",
+      "emotion": "Neutral 50",
+      "response_text": "Sure.",
+      "index": "63"
+    },
+    {
+      "topic": "VMS43CampSearchlightPvtEdwardsTopic113",
+      "topic_text": "Before I take care of them, can I ask you about your dog tag?",
+      "emotion": "Neutral 50",
+      "response_text": "What do you want to know?",
+      "index": "64"
+    },
+    {
+      "topic": "VMS43CampSearchlightPvtEdwardsTopic116",
+      "topic_text": "Can I ask you something else?",
+      "emotion": "Neutral 50",
+      "response_text": "Sure.",
+      "index": "65"
+    },
+    {
+      "topic": "VMS43CampSearchlightPvtEdwardsTopic121",
+      "topic_text": "Can I ask you something else?",
+      "emotion": "Neutral 50",
+      "response_text": "Sure.",
+      "index": "66"
+    },
+    {
+      "topic": "VMS43CampSearchlightPvtEdwardsTopic122",
+      "topic_text": "Can I ask you something else?",
+      "emotion": "Neutral 50",
+      "response_text": "Sure.",
+      "index": "67"
+    },
+    {
+      "topic": "VMS43CampSearchlightPvtEdwardsTopic123",
+      "topic_text": "Can I ask you something else?",
+      "emotion": "Neutral 50",
+      "response_text": "Sure.",
+      "index": "68"
+    },
+    {
+      "topic": "VMS43CampSearchlightPvtEdwardsTopic124",
+      "topic_text": "Actually, let me ask you something else first.",
+      "emotion": "Neutral 50",
+      "response_text": "Alright.",
+      "index": "69"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "RaulPvtEdwardsDUPLICATE000",
+      "topic_text": "RaulPvtEdwards",
+      "emotion": "Fear 50",
+      "response_text": "What? How is that not bad? In fact, how could it get worse?",
+      "index": "70"
+    }
+  ],
+  "combat": []
+}

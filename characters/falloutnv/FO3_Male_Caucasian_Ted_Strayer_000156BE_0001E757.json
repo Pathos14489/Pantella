@@ -1,0 +1,247 @@
+{
+  "name": "Ted Strayer",
+  "url": "/wiki/Ted_Strayer",
+  "dialogue_name": "TedStrayer.txt",
+  "dialogue_url": "/wiki/TedStrayer.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000156BE",
+  "ref_id": "0001E757",
+  "editor_id": "TedStrayer",
+  "location": "Rivet City",
+  "location_url": "/wiki/Rivet_City",
+  "descriptions": [
+    "Ted Strayer is a wasteland vagabond who decided to become a Rivet City resident in 2277.",
+    "Ted has spend most of his life wandering the wasteland.",
+    "A recent arrival to Rivet City, he spends his time in the common room, just hanging around, until he decides where to go next.",
+    "His father Jeff Strayer was a mercenary, who before passing was a part of a five person expedition to Fort Constantine. The expedition was successful and it allowed him to accumulate a small fortune. However events of this expedition led him to become a target by another former member, Mister Crowley.",
+    "He can be found in the Capitol Preservation Society in the afternoon. Furthermore, he frequents The Muddy Rudder bar and the common room between 4 and 6 a.m., along with wandering around the flight deck from noon to 2 p.m."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Mister Crowley",
+  "role": "WandererChemaddict",
+  "detailed_location": "Common room,Rivet City",
+  "voice_actor": "Craig Sechler",
+  "special": {
+    "Strength": 4,
+    "Perception": 4,
+    "Endurance": 3,
+    "Charisma": 4,
+    "Intelligence": 4,
+    "Agility": 4,
+    "Luck": 4
+  },
+  "mod_special_values": {
+    "Strength": 4,
+    "Perception": 4,
+    "Endurance": 4,
+    "Charisma": 4,
+    "Intelligence": 4,
+    "Agility": 5,
+    "Luck": 4
+  },
+  "level": "1",
+  "tag_skills": [
+    {
+      "Barter:": "27"
+    },
+    {
+      "Medicine:": "27"
+    },
+    {
+      "Sneak:": "27(29)"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "60(65)"
+    },
+    {
+      "Critical Chance:": "4%"
+    },
+    {
+      "Unarmed Dam.:": "1.00"
+    },
+    {
+      "Poison Resist.:": "10%(15%)"
+    },
+    {
+      "Rad. Resist.:": "4%(6%)"
+    },
+    {
+      "Carry Weight:": "190"
+    },
+    {
+      "Damage Res.:": "2%"
+    }
+  ],
+  "karma": "Good",
+  "voice_type": "MaleAdult04DC",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Disgust 50",
+      "response_text": "Dude, you got your key. What do you want now?",
+      "index": "1"
+    },
+    {
+      "topic": "MS03RCHistory1Could I ask you about Rivet City's history?",
+      "topic_text": "Can I ask you about Rivet City's history?",
+      "emotion": "Neutral 50",
+      "response_text": "Dude, I only just got here, myself. Ain't nothing I could tell you.",
+      "index": "5"
+    },
+    {
+      "topic": "MS14Crowley",
+      "topic_text": "Do you know a Mister Crowley?",
+      "emotion": "Surprise 50",
+      "response_text": "Whoa! That's a blast from the past.",
+      "index": "7"
+    },
+    {
+      "topic": "MS14HereToKillYou",
+      "topic_text": "I'm here to kill you, and there's nothing you can do about it.",
+      "emotion": "Fear 50",
+      "response_text": "What! No, please! I'm begging you.",
+      "index": "16"
+    },
+    {
+      "topic": "MS14TedBuyKey",
+      "topic_text": "I'll give you 25 caps for that key.",
+      "emotion": "Happy 50",
+      "response_text": "Oh, yeah! I'm gonna be flying high tonight.",
+      "index": "17"
+    },
+    {
+      "topic": "MS14TedEndNoThreat",
+      "topic_text": "I've learned what I came for. Thank you.",
+      "emotion": "Happy 50",
+      "response_text": "No sweat, man. I'm just chilling out here for a while.",
+      "index": "19"
+    },
+    {
+      "topic": "MS14TedEndThreat",
+      "topic_text": "Thanks for the info. I'm just trying to sort all of this out.",
+      "emotion": "Fear 50",
+      "response_text": "No problem dude. Thanks for not offing me.",
+      "index": "20"
+    },
+    {
+      "topic": "MS14TedGiveKey",
+      "topic_text": "Give me that key. I'd hate to see you bleed to death.",
+      "emotion": "Fear 50",
+      "response_text": "Uh...sure, dude. I don't know what it's for anyway. Don't need to get all thug like.",
+      "index": "22"
+    },
+    {
+      "topic": "MS14TedIntimidate",
+      "topic_text": "Just give me the key. Don't ask why.",
+      "emotion": "Fear 50",
+      "response_text": "Okay, dude, Don't have a cow. Here, take it.",
+      "index": "23"
+    },
+    {
+      "topic": "MS14TedTenpenny",
+      "topic_text": "What do you know about Tenpenny?",
+      "emotion": "Surprise 50",
+      "response_text": "Everybody knows he runs Tenpenny Tower, but I never met the dude. I swear!",
+      "index": "25"
+    },
+    {
+      "topic": "MS14TedWantsKey",
+      "topic_text": "Mister Crowley wants your father's security key.",
+      "emotion": "Surprise 50",
+      "response_text": "Whoa! Is it, like, worth caps? Cause I got needs, man.",
+      "index": "26"
+    },
+    {
+      "topic": "MS14TedWhyFort",
+      "topic_text": "Do you know what they were doing at the fort?",
+      "emotion": "Neutral 50",
+      "response_text": "Nah. He said that old man Tenpenny hired him and some other guys to go in there, but he never said why.",
+      "index": "29"
+    },
+    {
+      "topic": "MS14TedWhyWantDead",
+      "topic_text": "Are you sure you can't think of any reason he might want you dead?",
+      "emotion": "Fear 50",
+      "response_text": "Like I told you, man. I never met the dude. Why would he want me dead?",
+      "index": "31"
+    },
+    {
+      "topic": "RCTedStrayerAgree",
+      "topic_text": "Sounds like a plan, man.",
+      "emotion": "Happy 50",
+      "response_text": "All right! You and me, just hangin'.",
+      "index": "33"
+    },
+    {
+      "topic": "RCTedStrayerDoAnything",
+      "topic_text": "Do you actually do anything here in Rivet City?",
+      "emotion": "Surprise 50",
+      "response_text": "You mean, like fix stuff? Nah.",
+      "index": "34"
+    },
+    {
+      "topic": "RCTedStrayerLoser",
+      "topic_text": "I know your type. You're a freeloader and a waste of breath.",
+      "emotion": "Surprise 50",
+      "response_text": "Whoa! Dude! You don't have to get all in my face.",
+      "index": "36"
+    },
+    {
+      "topic": "RCTedStrayerRelaxed",
+      "topic_text": "You seem pretty relaxed.",
+      "emotion": "Happy 50",
+      "response_text": "No point in getting all worked up. I get three squares, I got a place to crash, and nothings trying to eat me.",
+      "index": "38"
+    },
+    {
+      "topic": "SpeechChallengeFailure",
+      "topic_text": "SpeechChallengeFailure",
+      "emotion": "Fear 50",
+      "response_text": "No way, dude. Like I said. I need the caps.",
+      "index": "39"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYEI have to go now.",
+      "topic_text": "See you later, Ted.",
+      "emotion": "Neutral 50",
+      "response_text": "Later, dude.",
+      "index": "40"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Surprise 50",
+      "response_text": "So dude, did that key ever get you anything?",
+      "index": "41"
+    },
+    {
+      "topic": "RCGoodbye",
+      "topic_text": "RCGoodbye",
+      "emotion": "Disgust 50",
+      "response_text": "Dude, that would be such a drag. Last resort, man. Last resort.",
+      "index": "51"
+    },
+    {
+      "topic": "RCPackageEnd",
+      "topic_text": "RCPackageEnd",
+      "emotion": "Neutral 50",
+      "response_text": "I'm getting kind of hungry.",
+      "index": "58"
+    }
+  ],
+  "combat": []
+}

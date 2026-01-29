@@ -1,0 +1,190 @@
+{
+  "name": "Brailee Ewers",
+  "url": "/wiki/Brailee_Ewers",
+  "dialogue_name": "BraileeEwers.txt",
+  "dialogue_url": "/wiki/BraileeEwers.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "0001D711",
+  "ref_id": "0001D713",
+  "editor_id": "BraileeEwers",
+  "location": "Ewer residence",
+  "location_url": "/wiki/Ewer_residence",
+  "descriptions": [
+    "Brailee Ewers is a resident of Arefu suffering from a severe case of delusional disorder, appearing in Fallout 3.",
+    "The 36-year-old",
+    "Brailee now lives inside a utopia of her own making,",
+    "She is married to Ken Ewers, who is keenly aware of her mental state and considers her to be \"dumber than a bag of hammers.\""
+  ],
+  "race": "Human",
+  "gender": "Female",
+  "affiliation": "Arefu",
+  "role": "Housewife",
+  "detailed_location": "Ewer residence",
+  "voice_actor": "Shari Elliker",
+  "special": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 5,
+    "Intelligence": 4,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "mod_special_values": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 5,
+    "Intelligence": 4,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "level": "2",
+  "tag_skills": [
+    {
+      "Barter:": "34"
+    },
+    {
+      "Medicine:": "32"
+    },
+    {
+      "Melee Weap.:": "36"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "30(35)"
+    },
+    {
+      "Critical Chance:": "5%"
+    },
+    {
+      "Unarmed Dam.:": "1.15"
+    },
+    {
+      "Poison Resist.:": "15%(20%)"
+    },
+    {
+      "Rad. Resist.:": "6%(8%)"
+    },
+    {
+      "Carry Weight:": "210"
+    },
+    {
+      "Damage Res.:": "2%"
+    }
+  ],
+  "karma": "Good",
+  "voice_type": "FemaleAdult01DefaultDC",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Happy 50",
+      "response_text": "Hey there, sweetie!",
+      "index": "1"
+    },
+    {
+      "topic": "MS09BEwersCT01",
+      "topic_text": "Wow, are you batshit insane or what?",
+      "emotion": "Anger 50",
+      "response_text": "Well now, there's no cause for name calling! How rude!",
+      "index": "9"
+    },
+    {
+      "topic": "MS09BEwersCT02",
+      "topic_text": "Um... okay... You do know there was a war 200 years ago, right?",
+      "emotion": "Neutral 50",
+      "response_text": "Well, I must speak to my husband about that. We could bring it up at the next homeowner's association meeting.",
+      "index": "11"
+    },
+    {
+      "topic": "MS09BEwersCT03",
+      "topic_text": "Yes, quite lovely. Um... I've got to go.",
+      "emotion": "Happy 80",
+      "response_text": "Oh, certainly! Close the front gate when you leave and mind my begonia garden... I just planted them.",
+      "index": "13"
+    },
+    {
+      "topic": "MS09BraileeEwersDoor01",
+      "topic_text": "Huh? What are you talking about? Evan King sent me.",
+      "emotion": "Happy 50",
+      "response_text": "Oh! Evan! He's such a gentleman.",
+      "index": "14"
+    },
+    {
+      "topic": "MS09BraileeEwersDoor02",
+      "topic_text": "Sure, yeah. I have your fall catalog.",
+      "emotion": "Happy 50",
+      "response_text": "Oh, goodie! I can hardly wait to browse the latest fashions.",
+      "index": "16"
+    },
+    {
+      "topic": "MS09BraileeEwersDoor03",
+      "topic_text": "Never mind.",
+      "emotion": "Happy 50",
+      "response_text": "Oh, alright. Do come back later, though. I'm making cookies!",
+      "index": "18"
+    },
+    {
+      "topic": "MS09FinTLHelpMe",
+      "topic_text": "Any help you can provide would be appreciated.",
+      "emotion": "Sad 50",
+      "response_text": "Ohhhh! I'm sorry, I'll have to bake another batch. Maybe some other time.",
+      "index": "19"
+    },
+    {
+      "topic": "MS09TLCheckonYou",
+      "topic_text": "Evan King told me to check on you. Is everything okay?",
+      "emotion": "Happy 50",
+      "response_text": "Oh! He's such a dear! I must remember to make more of those preserves he loves so much.",
+      "index": "21"
+    },
+    {
+      "topic": "MS09TLLookingforIanWest",
+      "topic_text": "I'm looking for Ian West. Have you seen him?",
+      "emotion": "Neutral 50",
+      "response_text": "If I recall he and the boys are probably at the lake fishing. Those rapscallions! There's no telling what monkeyshines they'll get into next!",
+      "index": "22"
+    },
+    {
+      "topic": "MS09TLWestsDead",
+      "topic_text": "Did you know the Wests are dead?",
+      "emotion": "Happy 50",
+      "response_text": "Dead tired I bet from the square dance in the barn last night! What a time we had!",
+      "index": "23"
+    },
+    {
+      "topic": "MS09TLWhereIsEveryone",
+      "topic_text": "Can you tell me more about what's been going on around here?",
+      "emotion": "Happy 50",
+      "response_text": "Oh my, I don't know. Mrs. West is probably whipping up a batch of her famous cookies and all the kids are playing in the yards.",
+      "index": "24"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "I have to go now.",
+      "emotion": "Happy 50",
+      "response_text": "Bye bye! Come back soon!",
+      "index": "26"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Happy 50",
+      "response_text": "Hey ho! Welcome back to our cozy village!",
+      "index": "28"
+    }
+  ],
+  "combat": []
+}

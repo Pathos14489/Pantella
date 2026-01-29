@@ -1,0 +1,158 @@
+{
+  "name": "Apprentice Melissa Watkins",
+  "url": "/wiki/Melissa_Watkins",
+  "dialogue_name": "MelissaWatkins.txt",
+  "dialogue_url": "/wiki/MelissaWatkins.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000E2F82",
+  "ref_id": "000E2F86",
+  "editor_id": "MelissaWatkins",
+  "location": "Hidden Valley bunker",
+  "location_url": "/wiki/Hidden_Valley_bunker",
+  "descriptions": [
+    "Apprentice Melissa Watkins is a member of the Mojave chapter of the Brotherhood of Steel, residing within the Hidden Valley bunker in the Mojave Wasteland. She appears in Fallout: New Vegas.",
+    "A legacy member of the Brotherhood, Melissa was born to veteran members of the Mojave chapter, with her father being a scribe and her mother a paladin. After their deaths at HELIOS One during the attack by the New California Republic during Operation: Sunburst, the young Melissa was raised by the surviving chapter members.",
+    "Sometime prior to 2281, Watkins convinced one of the chapter initiates, Stanton to sneak out of the bunker during the lockdown, lying about it being a \"training exercise\" and getting him to requisition a laser pistol from Knight Torres' armory stock to go hunting for bark scorpions at the nearby scorpion gulch. Initial success quickly gave way to danger once the larger, stronger radscorpions began swarming, forcing the two to retreat and causing Stanton to lose his pistol in the process; while the initiate regrets ever following Watkins' lead, the apprentice herself is completely remorseless and considered it one of the few times she has had fun in the Brotherhood."
+  ],
+  "race": "Human",
+  "gender": "Female",
+  "affiliation": "Brotherhood of Steel(Mojave chapter)",
+  "role": "Apprentice",
+  "detailed_location": "Hidden Valley bunker",
+  "voice_actor": "Cindy Robinson",
+  "special": {
+    "Strength": 8,
+    "Perception": 7,
+    "Endurance": 8,
+    "Charisma": 4,
+    "Intelligence": 3,
+    "Agility": 6,
+    "Luck": 4
+  },
+  "level": "1→10 (player level x0.5)",
+  "tag_skills": [
+    {
+      "Energy Weap.:": "33→66"
+    },
+    {
+      "Explosives:": "33→66"
+    },
+    {
+      "Guns:": "31→64"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Neutral",
+  "voice_type": "FemaleAdult07",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "The lockdown is lifted! The patrols are going to start up again! Do you know what this means? I'll actually be able to get into a real fight!",
+      "index": "1"
+    },
+    {
+      "topic": "VDialogueHiddenValleyMelissaWatkinsTopic000",
+      "topic_text": "What's with all the computers?",
+      "emotion": "Neutral 50",
+      "response_text": "It's our virtual reality training hall. We don't really go out all that often anymore, so this is how we stay sharp.",
+      "index": "8"
+    },
+    {
+      "topic": "VDialogueHiddenValleyMelissaWatkinsTopic001",
+      "topic_text": "Shouldn't you be in school or something?",
+      "emotion": "Neutral 50",
+      "response_text": "Head Scribe Taggart quickly realized my extraordinary talent when I took the mandatory VR combat testing.",
+      "index": "9"
+    },
+    {
+      "topic": "VDialogueHiddenValleyMelissaWatkinsTopic002",
+      "topic_text": "You said \"anymore\" before. Did the Brotherhood used to go out more?",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah, a lot more. Back when we were at the HELIOS station. Er, crap.",
+      "index": "12"
+    },
+    {
+      "topic": "VDialogueHiddenValleyMelissaWatkinsTopic003",
+      "topic_text": "Tell me about yourself.",
+      "emotion": "Neutral 50",
+      "response_text": "Well, like just about everyone else here, I grew up in the Brotherhood. My father was a Scribe and my mother a Paladin.",
+      "index": "14"
+    },
+    {
+      "topic": "VDialogueHiddenValleyMelissaWatkinsTopic004",
+      "topic_text": "Are you parents here somewhere?",
+      "emotion": "Neutral 50",
+      "response_text": "They both died at HELIOS One. The others were always like a family to me before that, but afterward they became my family in truth.",
+      "index": "15"
+    },
+    {
+      "topic": "VDialogueHiddenValleyMelissaWatkinsTopic005",
+      "topic_text": "So who do you take after more? Your mother or your father?",
+      "emotion": "Neutral 50",
+      "response_text": "I don't know, I'm a little like both of them I guess. If I had to choose, I really don't know which I'd pick.",
+      "index": "16"
+    },
+    {
+      "topic": "VDialogueHiddenValleyMelissaWatkinsTopic006",
+      "topic_text": "Initiate Stanton told me about your little adventure the other day.",
+      "emotion": "Neutral 50",
+      "response_text": "That was so much fun! The wind whipping through our hair, not knowing what was going to jump out at us at any moment.",
+      "index": "18"
+    },
+    {
+      "topic": "VDialogueHiddenValleyMelissaWatkinsTopic012",
+      "topic_text": "What do you mean decide for yourself?",
+      "emotion": "Neutral 50",
+      "response_text": "I'm currently an Apprentice in the Brotherhood, and recently became eligible for Journeyman status.",
+      "index": "22"
+    },
+    {
+      "topic": "VDialogueHiddenValleyMelissaWatkinsTopic013",
+      "topic_text": "Let's talk about something else.",
+      "emotion": "Neutral 50",
+      "response_text": "Okay.",
+      "index": "24"
+    },
+    {
+      "topic": "VDialogueHiddenValleyMelissaWatkinsTopic014",
+      "topic_text": "Tell me about the Knights.",
+      "emotion": "Neutral 50",
+      "response_text": "Knights are in charge of all of our equipment. Power armor, gatling lasers, you name it. All of it built and maintained by Knights.",
+      "index": "25"
+    },
+    {
+      "topic": "VDialogueHiddenValleyMelissaWatkinsTopic015",
+      "topic_text": "Tell me about the Scribes.",
+      "emotion": "Neutral 50",
+      "response_text": "The Scribes are responsible for discovering how all the old tech we recover actually works and sometimes even work on inventing new things.",
+      "index": "28"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "HVWatkinsVeronica01",
+      "topic_text": "HVWatkinsVeronica01",
+      "emotion": "Neutral 50",
+      "response_text": "Still hiding that hair of yours, Veronica?",
+      "index": "30"
+    },
+    {
+      "topic": "HVWatkinsVeronica02",
+      "topic_text": "HVWatkinsVeronica02",
+      "emotion": "Neutral 50",
+      "response_text": "{Dislikes her intensely}Veronica.",
+      "index": "32"
+    }
+  ],
+  "combat": []
+}

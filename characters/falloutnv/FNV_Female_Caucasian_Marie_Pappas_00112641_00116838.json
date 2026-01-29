@@ -1,0 +1,152 @@
+{
+  "name": "Marie Pappas",
+  "url": "/wiki/Marie_Pappas",
+  "dialogue_name": "VStreetMariePappas.txt",
+  "dialogue_url": "/wiki/VStreetMariePappas.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "00112641",
+  "ref_id": "00116838",
+  "editor_id": "VStreetMariePappas",
+  "location": "NCR Embassy",
+  "location_url": "/wiki/NCR_Embassy",
+  "descriptions": [
+    "Captain Marie Pappas is the head officer of the NCR military police serving at the NCR Embassy in 2281.",
+    "The head of the NCR MPs patrolling the strip, Pappas is the only soldier of the NCR army permitted to carry a firearm in the streets of New Vegas.",
+    "How Little We Know: The player character can report a murder at the Gomorrah casino, and show her Clanden's snuff tapes as evidence of the crime. However, there's no way to pursue this line of investigation any further, as the player character is unable to identify Clanden as the man on the tapes.",
+    "Marie Pappas is the Four of Hearts in the deck of Vault playing cards included with the Collector's Edition of Fallout: New Vegas."
+  ],
+  "race": "Human",
+  "gender": "Female",
+  "affiliation": "NCR military police",
+  "role": "Head of the NCR military police",
+  "detailed_location": "NCR Embassy",
+  "voice_actor": "April Stewart",
+  "special": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 5,
+    "Intelligence": 5,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "level": "10→15 (equal to player character level)",
+  "tag_skills": [
+    {
+      "Explosives:": "66"
+    },
+    {
+      "Guns:": "66"
+    },
+    {
+      "Melee Weap.:": "66"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Neutral",
+  "voice_type": "FemaleAdult03",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Happy 50",
+      "response_text": "So you're the one that saved President Kimball. Damn glad to have you on our side.",
+      "index": "1"
+    },
+    {
+      "topic": "vFreeformTheStreet02VStreetMariePappasTopic000",
+      "topic_text": "What is happening on the Strip?",
+      "emotion": "Neutral 50",
+      "response_text": "More of the usual. We're keeping an eye on the troopers to make sure they don't do anything stupid.",
+      "index": "27"
+    },
+    {
+      "topic": "vFreeformTheStreet02VStreetMariePappasTopic001",
+      "topic_text": "I'd like to know more about you.",
+      "emotion": "Neutral 50",
+      "response_text": "Not much to tell. Keeping the troopers in line and monitoring the Strip keeps me busy. It's my job and I'm going to do it well.",
+      "index": "36"
+    },
+    {
+      "topic": "vFreeformTheStreet02VStreetMariePappasTopic002",
+      "topic_text": "What can you tell me about the Ambassador?",
+      "emotion": "Neutral 50",
+      "response_text": "Crocker isn't too bad. He mostly stays in his office now. If you have any questions about the Embassy you should ask him. He'll talk your ear off.",
+      "index": "39"
+    },
+    {
+      "topic": "vFreeformTheStreet02VStreetMariePappasTopic003",
+      "topic_text": "Tell me about Private Erwin.",
+      "emotion": "Anger 5",
+      "response_text": "Private Erwin... he's starting to get a thick file here with all his troublemaking.",
+      "index": "41"
+    },
+    {
+      "topic": "vFreeformTheStreet02VStreetMariePappasTopic004",
+      "topic_text": "I'd like to report a murder at Gomorrah.",
+      "emotion": "Neutral 50",
+      "response_text": "Murder? What kind of Murder? Do you have any proof?",
+      "index": "43"
+    },
+    {
+      "topic": "vFreeformTheStreet02VStreetMariePappasTopic005",
+      "topic_text": "Sorry, I'll find some proof.",
+      "emotion": "Neutral 50",
+      "response_text": "Okay, this is a very serious accusation. Please be sure to bring me something concrete.",
+      "index": "44"
+    },
+    {
+      "topic": "vFreeformTheStreet02VStreetMariePappasTopic006",
+      "topic_text": "I found a dead girl in Gomorrah.",
+      "emotion": "Neutral 50",
+      "response_text": "Well that's something, but I can't go in there without proof of foul play.",
+      "index": "45"
+    },
+    {
+      "topic": "vFreeformTheStreet02VStreetMariePappasTopic008",
+      "topic_text": "I found these tapes.",
+      "emotion": "Neutral 50",
+      "response_text": "These are terrifying. Do you have any idea who the man is speaking on this tape?",
+      "index": "46"
+    },
+    {
+      "topic": "vFreeformTheStreet02VStreetMariePappasTopic009",
+      "topic_text": "I can't say for sure.",
+      "emotion": "Neutral 50",
+      "response_text": "Well come back here when you can. I'd like to take care of this as soon as possible.",
+      "index": "47"
+    },
+    {
+      "topic": "vFreeformTheStreet02VStreetMariePappasTopic010",
+      "topic_text": "No, but I'll find out for you.",
+      "emotion": "Neutral 50",
+      "response_text": "Come back here as soon as you do, I'd like to see this asshole behind bars.",
+      "index": "48"
+    },
+    {
+      "topic": "vFreeformTheStreet02VStreetMariePappasTopic011",
+      "topic_text": "It is a guy named Clanden.",
+      "emotion": "Neutral 50",
+      "response_text": "Clanden? Okay, I'll send some troops over there to bring him in.",
+      "index": "49"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Bye.",
+      "index": "50"
+    }
+  ],
+  "combat": []
+}

@@ -1,0 +1,333 @@
+{
+  "name": "Ralph",
+  "url": "/wiki/Ralph_(Fallout:_New_Vegas)",
+  "dialogue_name": "VFSRalph.txt",
+  "dialogue_url": "/wiki/VFSRalph.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": true,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "0010C760",
+  "ref_id": "0010D8E2",
+  "editor_id": "VFSRalph",
+  "location": "Mick & Ralph's",
+  "location_url": "/wiki/Mick_%26_Ralph%27s",
+  "descriptions": [
+    "Ralph is a trader living in Freeside in 2281.",
+    "He, together with Mick, is the co-owner of Mick & Ralph's. Apparently, he is good with computers and has reprogrammed several securitrons.  He sells consumables while his partner sells weapons.",
+    "Both Mick and Ralph were written by Robert Lee, who was one of three area designers working on Freeside. Lee cited Mick and Ralph, as well as Fisto, as some of his favorite design work on the game."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Mick",
+  "role": "Trader",
+  "detailed_location": "Freeside,Mick & Ralph's",
+  "voice_actor": "Liam O'Brien",
+  "special": {
+    "Strength": 4,
+    "Perception": 4,
+    "Endurance": 4,
+    "Charisma": 7,
+    "Intelligence": 6,
+    "Agility": 4,
+    "Luck": 6
+  },
+  "level": "12",
+  "tag_skills": [
+    {
+      "Barter:": "81"
+    },
+    {
+      "Lockpick:": "75"
+    },
+    {
+      "Speech:": "81"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Neutral",
+  "voice_type": "MaleAdult05",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "I don't deal with dirtbags. Take a walk.",
+      "index": "1"
+    },
+    {
+      "topic": "VFreeformFreesideVFSRalphTopic000",
+      "topic_text": "What do you have in stock?",
+      "emotion": "Neutral 50",
+      "response_text": "Take a gander.",
+      "index": "20"
+    },
+    {
+      "topic": "VFreeformFreesideVFSRalphTopic001",
+      "topic_text": "Do you offer any other services?",
+      "emotion": "Neutral 50",
+      "response_text": "I only offer services if The King gives the okay. Impress him and we can talk.",
+      "index": "21"
+    },
+    {
+      "topic": "VFreeformFreesideVFSRalphTopic002",
+      "topic_text": "The King said you could set me up with a pass to the Strip.",
+      "emotion": "Neutral 50",
+      "response_text": "One of his boys stopped in and said you had won the King's favor. You've done right by this town and deserve a pass. Here you go.",
+      "index": "22"
+    },
+    {
+      "topic": "VFreeformFreesideVFSRalphTopic003",
+      "topic_text": "Who is The King?",
+      "emotion": "Neutral 50",
+      "response_text": "If you haven't heard of The King, you must have been living under a rock or something.",
+      "index": "23"
+    },
+    {
+      "topic": "VFreeformFreesideVFSRalphTopic004",
+      "topic_text": "The Followers are looking to set up a supply deal.",
+      "emotion": "Neutral 50",
+      "response_text": "We don't have the stills and equipment to supply the amount of meds they're looking to purchase.",
+      "index": "25"
+    },
+    {
+      "topic": "VFreeformFreesideVFSRalphTopic006",
+      "topic_text": "See you later, Ralph.",
+      "emotion": "Neutral 50",
+      "response_text": "See ya.",
+      "index": "28"
+    },
+    {
+      "topic": "VFreeformFreesideVFSRalphTopic007",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Stop back in if you need anything.",
+      "index": "29"
+    },
+    {
+      "topic": "VFreeformFreesideVFSRalphTopic008<Speech>",
+      "topic_text": "A resourceful fellow such as yourself must have something on the side.",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] All right. Yeah, I've got a little side business going, but what I'm about to share with you does not leave this room, eh?",
+      "index": "30"
+    },
+    {
+      "topic": "VFreeformFreesideVFSRalphTopic009",
+      "topic_text": "Ah, now I see why you want to keep this low key.",
+      "emotion": "Neutral 50",
+      "response_text": "Hey, if you're interested and have the caps, they go for 500. Any less and it ain't worth the risk{\"of\" omitted intentionally}of getting caught.",
+      "index": "34"
+    },
+    {
+      "topic": "VFreeformFreesideVFSRalphTopic010",
+      "topic_text": "Too steep for my blood. Maybe later.",
+      "emotion": "Neutral 50",
+      "response_text": "No problem. If you need one later, just stop in.",
+      "index": "36"
+    },
+    {
+      "topic": "VFreeformFreesideVFSRalphTopic011Okay, I'll take one.",
+      "topic_text": "<Pay 500 caps> Okay, I'll take one.",
+      "emotion": "Neutral 50",
+      "response_text": "Here you go.",
+      "index": "37"
+    },
+    {
+      "topic": "VFreeformFreesideVFSRalphTopic013",
+      "topic_text": "No way your materials and expenses require that. How about half?",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED]Hah! I like your style, kid, but the best I can do is meet you halfway. 375 caps, and we can call it a deal.",
+      "index": "39"
+    },
+    {
+      "topic": "VFreeformFreesideVFSRalphTopic014",
+      "topic_text": "I'd like to buy a passport.",
+      "emotion": "Neutral 50",
+      "response_text": "500 caps and it's yours.",
+      "index": "42"
+    },
+    {
+      "topic": "VFreeformFreesideVFSRalphTopic015{Science options}",
+      "topic_text": "I'm looking to make some carbon tetrachloride for fire suppression.",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] Um... I think that sounds reasonable... As long as you aren't going to do anything dangerous with it, I guess I can spare some.",
+      "index": "44"
+    },
+    {
+      "topic": "VFreeformFreesideVFSRalphTopic016",
+      "topic_text": "Actually, I was curious if you sell chlorine to The Ultra-Luxe.",
+      "emotion": "Neutral 50",
+      "response_text": "Funny you should mention that, I do have a bit of chlorine here.",
+      "index": "46"
+    },
+    {
+      "topic": "VFreeformFreesideVFSRalphTopic017",
+      "topic_text": "Here are the caps. <pay 150 caps>",
+      "emotion": "Neutral 50",
+      "response_text": "All right. Come back in a couple days and I should have it ready for you.",
+      "index": "49"
+    },
+    {
+      "topic": "VFreeformFreesideVFSRalphTopic017DUPLICATE000",
+      "topic_text": "Never mind, I have some other questions though.",
+      "emotion": "Neutral 50",
+      "response_text": "Ok, ask away.",
+      "index": "50"
+    },
+    {
+      "topic": "VFreeformFreesideVFSRalphTopic018",
+      "topic_text": "Would you happen to know where I could find a sexbot?",
+      "emotion": "Neutral 50",
+      "response_text": "Ha! Are you some kind of machine fetishist or something?",
+      "index": "51"
+    },
+    {
+      "topic": "VFreeformFreesideVFSRalphTopic019",
+      "topic_text": "The Garrets are looking to satisfy certain customers.",
+      "emotion": "Neutral 50",
+      "response_text": "Heh. Well, the only place I know of locally would be Cerulean Robotics, but that place has been overrun by vermin for years.",
+      "index": "52"
+    },
+    {
+      "topic": "VFreeformFreesideVFSRalphTopic020",
+      "topic_text": "Thanks, I'll check it out.",
+      "emotion": "Neutral 50",
+      "response_text": "Anything else I can help you with?",
+      "index": "55"
+    },
+    {
+      "topic": "VFreeformFreesideVFSRalphTopic021",
+      "topic_text": "Is there a holotape or anything I'll need for the sexbot?",
+      "emotion": "Neutral 50",
+      "response_text": "I don't know of any, but if you give me a few days and some caps, I think I could probably make one on my terminal.",
+      "index": "56"
+    },
+    {
+      "topic": "VFreeformFreesideVFSRalphTopic022",
+      "topic_text": "Good to know. I might have you make one later if I can't get it myself.",
+      "emotion": "Neutral 50",
+      "response_text": "Just stop back and see me if you need one made. Anything else I can help you with?",
+      "index": "57"
+    },
+    {
+      "topic": "VFreeformFreesideVFSRalphTopic023<Speech>",
+      "topic_text": "Ralph, I've been a loyal customer to you and Mick. How about 100 caps?",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] All right. Come back in a couple days and I should have it ready for you.",
+      "index": "58"
+    },
+    {
+      "topic": "VFreeformFreesideVFSRalphTopic024<Barter>",
+      "topic_text": "Data modules are rare but generally useless. How about 100 caps for your work?",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] All right. Come back in a couple days and I should have it ready for you.",
+      "index": "60"
+    },
+    {
+      "topic": "VFreeformFreesideVFSRalphTopic025<Speech High>",
+      "topic_text": "Ralph, I've been directing a lot of business your direction. Call it a favor?",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] All right. Come back in a couple days and I should have it ready for you.",
+      "index": "62"
+    },
+    {
+      "topic": "VFreeformFreesideVFSRalphTopic026",
+      "topic_text": "Is the holotape ready yet?",
+      "emotion": "Neutral 50",
+      "response_text": "Not yet. Come back later and it should be ready to go.",
+      "index": "63"
+    },
+    {
+      "topic": "VFreeformFreesideVFSRalphTopic027",
+      "topic_text": "I'm short on caps right now. Maybe later.",
+      "emotion": "Neutral 50",
+      "response_text": "Just stop back and see me if you need one made. Anything else I can help you with?",
+      "index": "65"
+    },
+    {
+      "topic": "VFreeformFreesideVFSRalphTopic028",
+      "topic_text": "Is there a holotape or anything I'll need for the sexbot?",
+      "emotion": "Neutral 50",
+      "response_text": "I don't know of any, but if you give me a few days and some caps, I think I could probably make one on my terminal.",
+      "index": "66"
+    },
+    {
+      "topic": "VFreeformFreesideVFSRalphTopic029",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Goodbye.",
+      "index": "67"
+    },
+    {
+      "topic": "VFreeformFreesideVFSRalphTopic030",
+      "topic_text": "Can you forge a handwritten note for me?",
+      "emotion": "Neutral 50",
+      "response_text": "Sure. Just tell me the author and what you want it to say.",
+      "index": "68"
+    },
+    {
+      "topic": "VFreeformFreesideVFSRalphTopic032",
+      "topic_text": "I'd like to know more about Freeside.",
+      "emotion": "Neutral 50",
+      "response_text": "What do you want to know?",
+      "index": "69"
+    },
+    {
+      "topic": "VFreeformFreesideVFSRalphTopic034",
+      "topic_text": "Who is The King?",
+      "emotion": "Neutral 50",
+      "response_text": "If you haven't heard of The King, you must have been living under a rock or something.",
+      "index": "70"
+    },
+    {
+      "topic": "VFreeformFreesideVFSRalphTopic035",
+      "topic_text": "Who are the Van Graffs?",
+      "emotion": "Neutral 50",
+      "response_text": "They are the local energy weapon dealers in Freeside. When it comes to lasers and plasma, they're the only game in town and they keep it that way.",
+      "index": "72"
+    },
+    {
+      "topic": "VFreeformFreesideVFSRalphTopic036",
+      "topic_text": "What's up with the Atomic Wrangler?",
+      "emotion": "Neutral 50",
+      "response_text": "Their joint is the only place in Freeside to get it all under one roof. They've got gambling, booze, chems, and whores.",
+      "index": "74"
+    },
+    {
+      "topic": "VFreeformFreesideVFSRalphTopic037",
+      "topic_text": "I need a note written to Pacer from Jean-Baptiste Cutting.",
+      "emotion": "Neutral 50",
+      "response_text": "Not a problem. I occasionally do business with the Van Graffs, so I have a sample of Mr. Cutting's handwriting around here somewhere.",
+      "index": "76"
+    },
+    {
+      "topic": "VFreeformFreesideVFSRalphTopic038",
+      "topic_text": "Just that Jean-Baptiste has Pacer's jet.",
+      "emotion": "Neutral 50",
+      "response_text": "Like to live dangerously, do we? No problem. And... here you go.",
+      "index": "78"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Come back any time.",
+      "index": "79"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "Hello",
+      "emotion": "Neutral 50",
+      "response_text": "Lovely weather, eh?",
+      "index": "81"
+    }
+  ],
+  "combat": []
+}

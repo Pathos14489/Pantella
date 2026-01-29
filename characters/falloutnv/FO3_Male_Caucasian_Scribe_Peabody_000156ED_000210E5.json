@@ -1,0 +1,196 @@
+{
+  "name": "Scribe Peabody",
+  "url": "/wiki/Peabody",
+  "dialogue_name": "ScribePeabody.txt",
+  "dialogue_url": "/wiki/ScribePeabody.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": true,
+  "can_be_companion": false,
+  "base_id": "000156ED",
+  "ref_id": "000210E5",
+  "editor_id": "ScribePeabody",
+  "location": "Citadel laboratory",
+  "location_url": "/wiki/Citadel_laboratory",
+  "descriptions": [
+    "Scribe Peabody is the proctor of the Order of the Sword, in charge of the armory for the chapter of the Brotherhood of Steel in the Citadel in 2277.",
+    "As proctor of the Order of the Sword, Peabody is head of the armory, in charge of maintaining, researching and developing all of the chapter's various weapons and their systems.",
+    "Although he has little respect for the knights,",
+    "He is in the armory in the Citadel laboratory most of the day.",
+    "Xbox 360 With Broken Steel installed, Peabody will still call the Lone Wanderer an outsider, even though they are now a knight of the Brotherhood. "
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Brotherhood of Steel",
+  "role": "Proctorof the Order of the Sword",
+  "detailed_location": "Laboratory,Citadel",
+  "voice_actor": "Gregory Gorton",
+  "special": {
+    "Strength": 3,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 6,
+    "Intelligence": 7,
+    "Agility": 4,
+    "Luck": 6
+  },
+  "level": "7",
+  "tag_skills": [
+    {
+      "Medicine:": "68"
+    },
+    {
+      "Science:": "68"
+    },
+    {
+      "Speech:": "66"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "55"
+    },
+    {
+      "Critical Chance:": "6%"
+    },
+    {
+      "Unarmed Dam.:": "1.15"
+    },
+    {
+      "Poison Resist.:": "15%"
+    },
+    {
+      "Rad. Resist.:": "6%"
+    },
+    {
+      "Carry Weight:": "180"
+    },
+    {
+      "Damage Res.:": "0%(2%)"
+    }
+  ],
+  "karma": "Good",
+  "voice_type": "MaleAdult01DefaultBDC",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "CitScribeAboutWhat do you Scribes do?",
+      "topic_text": "Can you tell me something about the Scribes?",
+      "emotion": "Happy 50",
+      "response_text": "Indeed I can!",
+      "index": "1"
+    },
+    {
+      "topic": "CitScribeAboutEND",
+      "topic_text": "That's all I needed.",
+      "emotion": "Neutral 50",
+      "response_text": "Very well.",
+      "index": "5"
+    },
+    {
+      "topic": "CitScribeAboutOrdersWhat are the Orders?",
+      "topic_text": "And the Orders are...",
+      "emotion": "Neutral 50",
+      "response_text": "Order of the Sword, Order of the Shield, Order of the Quill. Weapons, defenses, and research. Respectively.",
+      "index": "8"
+    },
+    {
+      "topic": "CitScribeAboutWhatOrderWhat Order are you a part of?",
+      "topic_text": "Let me guess. You belong the Order of the...",
+      "emotion": "Happy 50",
+      "response_text": "Sword! Of course! Weapons, my boy! You name it, I've helped someone kill it.",
+      "index": "9"
+    },
+    {
+      "topic": "DLC03TLCitadelEnclave",
+      "topic_text": "So... Any thoughts on the Enclave?",
+      "emotion": "Neutral 50",
+      "response_text": "If we can disable this orbital platform of theirs, we can still come out on top.",
+      "index": "13"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "Things are as busy as ever. What do you need?",
+      "index": "19"
+    },
+    {
+      "topic": "TLCitadelEnclave",
+      "topic_text": "So... Any thoughts on the Enclave?",
+      "emotion": "Anger 50",
+      "response_text": "So they have Plasma weapons! Bah! It's strong technology, I'll give you that, but limited in modability.",
+      "index": "24"
+    },
+    {
+      "topic": "TLCitadelSuperMutant",
+      "topic_text": "Care to share anything about the Super Mutants?",
+      "emotion": "Disgust 50",
+      "response_text": "Foul, detestable beasts. They're like an infestation. We cut them down, and they return, again and again.",
+      "index": "27"
+    },
+    {
+      "topic": "TLScribeBrotherhood",
+      "topic_text": "I have some questions about the Brotherhood.",
+      "emotion": "Neutral 50",
+      "response_text": "You want to talk to Scribe Jameson. She's the archivist, not me.",
+      "index": "29"
+    },
+    {
+      "topic": "TLScribeRepairCould you repair my equipment?",
+      "topic_text": "Do you think you could repair my equipment?",
+      "emotion": "Anger 50",
+      "response_text": "Ha! With my eyes closed! And I will, too. But it will cost you... outsider.",
+      "index": "30"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "CitTalkHail",
+      "topic_text": "CitTalkHail.",
+      "emotion": "Neutral 50",
+      "response_text": "Indeed it does, Scribe Bowditch.",
+      "index": "32"
+    },
+    {
+      "topic": "CitTalkPeabodyElderLyons1",
+      "topic_text": "CitTalkPeabodyElderLyons1",
+      "emotion": "Neutral 50",
+      "response_text": "Good morning, Elder. I'm sorry to report that things are not as they should be. Ever since Casdin was outcast...",
+      "index": "33"
+    },
+    {
+      "topic": "CitTalkPeabodyElderLyons3",
+      "topic_text": "CitTalkPeabodyElderLyons3",
+      "emotion": "Neutral 50",
+      "response_text": "I know the protocols, sir. But the equipment that they stole was very valuable. Our weapons are beginning to deteriorate without the spare parts.",
+      "index": "35"
+    },
+    {
+      "topic": "CitTalkPeabodyElderLyons5",
+      "topic_text": "CitTalkPeabodyElderLyons5",
+      "emotion": "Neutral 50",
+      "response_text": "Yes, Elder. I understand. I'm sure... we've got the parts around here somewhere...",
+      "index": "37"
+    },
+    {
+      "topic": "GOODBYE",
+      "topic_text": "I have to go now.",
+      "emotion": "Neutral 50",
+      "response_text": "Until next time.",
+      "index": "39"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Neutral 50",
+      "response_text": "Hail.",
+      "index": "41"
+    }
+  ],
+  "combat": []
+}

@@ -1,0 +1,220 @@
+{
+  "name": "Donovan",
+  "url": "/wiki/Donovan",
+  "dialogue_name": "RRDonovan.txt",
+  "dialogue_url": "/wiki/RRDonovan.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": true,
+  "can_be_companion": false,
+  "base_id": "00029577",
+  "ref_id": "0002B833",
+  "editor_id": "RRDonovan",
+  "location": "Statesman Hotelroof,Ranger Compound",
+  "location_url": "/wiki/Statesman_Hotel",
+  "descriptions": [
+    "Donovan is the Reilly's Rangers engineer first seen on the rooftop of the Statesman Hotel in Fallout 3.",
+    "Donovan is the technical expert of the Rangers, with a proficiency in hacking, repairing weapons and armor, and working on electronics.",
+    "Although Donovan joined the team following high praise from Reilly's contact in the Brotherhood of Steel, and she thinks his loyalty is genuine, she still possesses some doubts; regardless, she is of the impression that he is a \"good man,\" and instead believes that both his broader engineering knowledge and his trust will merely take more time to work on and fully gauge.",
+    "Despite having a smaller build, he can hold his own in fights as well as any of the other Rangers, and can graciously state he has the Lone Wanderer's back if they end up in a firefight together again.",
+    "When not on a mission, he is frequently getting into verbal and physical fights with Brick, which Reilly constantly has to break up.",
+    "Donovan appears in Fallout 3 and Fallout: Wasteland Warfare.",
+    "PC Playstation 3 Xbox 360 If Donovan dies in the random encounter, the rest of the Rangers may turn hostile."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Reilly's Rangers",
+  "role": "Technical specialist",
+  "detailed_location": "Statesman HotelRanger compound",
+  "voice_actor": "Pete Papageorge",
+  "special": {
+    "Strength": 6,
+    "Perception": 7,
+    "Endurance": 5,
+    "Charisma": 3,
+    "Intelligence": 3,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "mod_special_values": {
+    "Strength": 6,
+    "Perception": 7,
+    "Endurance": 5,
+    "Charisma": 3,
+    "Intelligence": 3,
+    "Agility": 6,
+    "Luck": 6
+  },
+  "level": "10",
+  "tag_skills": [
+    {
+      "Explosives:": "73(74)"
+    },
+    {
+      "Small Guns:": "71(82)"
+    },
+    {
+      "Sneak:": "71(72)"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Good",
+  "voice_type": "MaleAdult02DC",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "FFEU56A1",
+      "topic_text": "Donovan! What are you doing in these parts?",
+      "emotion": "Neutral 50",
+      "response_text": "Tracked you using the Geomapper. Reilly sent me to find you so I could bring you this.",
+      "index": "1"
+    },
+    {
+      "topic": "FFEU56A2",
+      "topic_text": "No problem. What are you doing out here?",
+      "emotion": "Neutral 50",
+      "response_text": "Looking for you. I tracked you using your Geomapper. Reilly sent me to find you so I could bring you this.",
+      "index": "2"
+    },
+    {
+      "topic": "FFEU56A3",
+      "topic_text": "What are you doing, following me?",
+      "emotion": "Disgust 20",
+      "response_text": "In a way. I tracked you using your Geomapper. Reilly sent me to find you so I could bring you this.",
+      "index": "4"
+    },
+    {
+      "topic": "FFEU56B1",
+      "topic_text": "I don't know what to say. What do I owe ya?",
+      "emotion": "Happy 75",
+      "response_text": "Not a thing. Rangers take care of their own. You watch your ass out here and come back alive!",
+      "index": "5"
+    },
+    {
+      "topic": "FFEU56B2",
+      "topic_text": "Wow, thanks!",
+      "emotion": "Happy 50",
+      "response_text": "No problem. Once a Ranger, always a Ranger. Take care of yourself!",
+      "index": "7"
+    },
+    {
+      "topic": "FFEU56B3",
+      "topic_text": "Now that's what I call payment.",
+      "emotion": "Happy 50",
+      "response_text": "You earned it. Rangers take care of their own. You watch your ass out here and come back alive!",
+      "index": "8"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Happy 50",
+      "response_text": "You sure know your shit. Ever consider joining the Rangers? I bet Reilly would love to have you on our team.",
+      "index": "10"
+    },
+    {
+      "topic": "MS18DonovanEndgameCT01",
+      "topic_text": "Nah. I've got things to do. But thanks for the compliment.",
+      "emotion": "Neutral 50",
+      "response_text": "Okay, just wanted you to know that I got your back if we ever end up in a firefight again. Anyway, we gotta' split.",
+      "index": "20"
+    },
+    {
+      "topic": "MS18DonovanEndgameCT02",
+      "topic_text": "That would be great. Maybe I'll speak to Reilly about it.",
+      "emotion": "Happy 50",
+      "response_text": "You should. Now that our group is smaller, I'm sure she'll be into adding another Ranger to our ranks.",
+      "index": "22"
+    },
+    {
+      "topic": "MS18DonovanEndgameCT03",
+      "topic_text": "Well, since I saved your ass, shouldn't you be joining me?",
+      "emotion": "Disgust 70",
+      "response_text": "That's a nice attitude, man. No need to be a dick.",
+      "index": "24"
+    },
+    {
+      "topic": "MS18FinBailout",
+      "topic_text": "Let's discuss something else.",
+      "emotion": "Neutral 50",
+      "response_text": "Sounds good.",
+      "index": "26"
+    },
+    {
+      "topic": "MS18FinTLHowAreThings",
+      "topic_text": "What's been happening since you've been back?",
+      "emotion": "Neutral 50",
+      "response_text": "Oh wow, Reilly snapped out of her slump now that you're mapping for the Rangers.",
+      "index": "27"
+    },
+    {
+      "topic": "MS18FinTLRepairGateway",
+      "topic_text": "Yeah, my equipment has seen better days.",
+      "emotion": "Neutral 50",
+      "response_text": "Well, let me see what I can do about that.",
+      "index": "31"
+    },
+    {
+      "topic": "MS18TLAmmoLocation",
+      "topic_text": "Where can I get some more ammo around here?",
+      "emotion": "Sad 60",
+      "response_text": "On our way to the roof, one of our guys got scragged. Poor son-of-a-bitch get blown apart by a frag.",
+      "index": "34"
+    },
+    {
+      "topic": "MS18TLColumbiaHeights",
+      "topic_text": "What can you tell me about Vernon Square?",
+      "emotion": "Disgust 80",
+      "response_text": "All I can tell you is this place sucks. I hope we never have to map another inch of it.",
+      "index": "40"
+    },
+    {
+      "topic": "MS18TLGotBattery",
+      "topic_text": "I have a Fission Battery that will fix that express elevator.",
+      "emotion": "Neutral 50",
+      "response_text": "Let me have that thing. Give me a few minutes, and I'll have the elevator up and running.",
+      "index": "41"
+    },
+    {
+      "topic": "MS18TLHeresSomeAmmo",
+      "topic_text": "Here, I brought you some ammo.",
+      "emotion": "Neutral 50",
+      "response_text": "Thanks. I was starting to feel a little naked without it.",
+      "index": "43"
+    },
+    {
+      "topic": "MS18TLHowDidYouSurvive",
+      "topic_text": "How have you guys survived up here?",
+      "emotion": "Neutral 50",
+      "response_text": "By the seat of our pants. We are out of everything. Ammo, food and time.",
+      "index": "45"
+    },
+    {
+      "topic": "MS18TLWhereIsCell",
+      "topic_text": "Any clue where I can find a Fission Battery?",
+      "emotion": "Neutral 50",
+      "response_text": "Hmmmm. Not really. All I remember is passing that maintenance office on the third floor.",
+      "index": "47"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "I have to go now.",
+      "emotion": "Neutral 50",
+      "response_text": "Sure enough.",
+      "index": "49"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Neutral 50",
+      "response_text": "Not bad kid, not bad.",
+      "index": "54"
+    }
+  ],
+  "combat": []
+}

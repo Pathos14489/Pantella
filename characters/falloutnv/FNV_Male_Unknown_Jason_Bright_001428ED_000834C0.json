@@ -1,0 +1,310 @@
+{
+  "name": "Jason Bright",
+  "url": "/wiki/Jason_Bright",
+  "dialogue_name": "GhoulJasonBright.txt",
+  "dialogue_url": "/wiki/GhoulJasonBright.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "001428ED",
+  "ref_id": "000834C0",
+  "editor_id": "GhoulJasonBright",
+  "location": "REPCONN Test Site",
+  "location_url": "/wiki/REPCONN_Test_Site",
+  "descriptions": [
+    "Jason Bright is the non-feral glowing one leader of the Bright Brotherhood at the REPCONN test site in 2281.",
+    "A ghoulified survivor of the Great War, Jason claims that his name was \"Jason Bright\" even before the nuclear devastation struck, which he takes as a proof of his destiny.",
+    "Jason states his belief in an entity he calls the creator, from which he declares himself to be the prophet of the \"Great Journey.\" He says the creator has shown him numerous visions of a \"sacred place\" called the \"Far Beyond,\" where ghouls like himself can find peace and healing, away from the cruel wasteland and the bigotry of its human inhabitants.",
+    "The so-called Great Journey is the way for Jason and his followers to reach the Far Beyond, through a means Jason reveals only to devout followers of his faith.",
+    "To these ends, Jason and his flock have made much progress towards their Great Journey by working on the rockets. The arrival of Chris Haversam, a human engineer who believes he is a ghoul, has been especially invaluable. Jason initially tried to show him that he was human, but stopped when this agitated Chris. He believes Chris to be a redeemer of the human race, sent by the creator to make up for their acts against ghouls. However, Jason knows that Chris cannot go along on the Great Journey, as the radiation would kill him. He has not told Chris so, saying that the creator has willed for him to keep it — and Chris' status as a human — hidden from him for the time being. He has no malice in this, however, and he would even declare Chris as \"Saint of the Great Journey\" to ease his pain.",
+    "The greatest disaster to befall the flock since then was an attack by \"demons,\" who struck without warning and killed many of the ghouls. Since then, Jason and his surviving followers have been forced to stay in the upper levels of the REPCONN test site, keeping them from their work. Jason knows that the Great Journey cannot be completed if the \"demons\" remain in control of the facility, and he hopes for some sign from the creator that their troubles will soon be over.",
+    "Jason Bright is rather amenable and rational for a cult leader. Having lived before the Great War, he was not always a believer in the \"Great Journey\" and the \"Creator,\" but claims that sometime after having become a ghoul he was subject to \"vision upon vision\" that kept confirming those beliefs to him. He therefore understands full well how to the uninitiated that his religious beliefs are outlandish, and so doesn't judge those outside of his faith, and he even sees the irony of becoming a Glowing One with a name like Bright, but attributes this to divine favor.",
+    "Having faced discrimination, he is quite guarded and protective of his flock, whom he believes he is bringing to a land free from bigoted humans. However, the aid granted by the humans Chris Haversam and the Courier have caused him to reconsider his judgement of humans, being very grateful for their help. He even believes that their intervention is intended by the Creator to serve as mankind's redemption for their sins, helping to redeem their reputation to his entire religion. Still, he cannot help but feel guilt at misleading Chris, who cannot come to the Far Beyond, even though he has repeatedly tried to prove the man is not a ghoul. He ultimately decides that it is a part of the Creator's will, and so only reveals that Chris will be abandoned at the last moment.",
+    "Jason Bright will first be interacted with when reaching the top of the REPCONN test site, asking to meet with the Courier when they arrive. There, he explains his group's predicament and background. He requests that the Courier help free any remaining Brotherhood members trapped in the basement and deal with any remaining \"demons.\" Once they have been dealt with, he and his followers will try to resume their efforts on the Great \"Journey\" and will task the Courier to help Chris Haversam with the final preparations."
+  ],
+  "race": "Glowing one",
+  "gender": "Male",
+  "affiliation": "Bright Brotherhood",
+  "role": "LeaderProphet",
+  "detailed_location": "REPCONN test site",
+  "voice_actor": "Graham Cuthbertson",
+  "special": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 7,
+    "Charisma": 2,
+    "Intelligence": 6,
+    "Agility": 6,
+    "Luck": 3
+  },
+  "level": "6",
+  "tag_skills": [
+    {
+      "Barter:": "47"
+    },
+    {
+      "Guns:": "51"
+    },
+    {
+      "Unarmed:": "47"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Neutral",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "Hello, wanderer. Please forgive us of our humble surroundings. Our true home awaits us in the Far Beyond.{ghoul voice; welcoming}",
+      "index": "1"
+    },
+    {
+      "topic": "JasonBrightAboutJasonBrightWhoAreYou",
+      "topic_text": "Who are you?",
+      "emotion": "Neutral 50",
+      "response_text": "I am Jason Bright, the prophet of the Great Journey. All the ghouls you see here are members of my flock.",
+      "index": "12"
+    },
+    {
+      "topic": "JasonBrightAlreadyHelpingChris",
+      "topic_text": "I'm already helping Chris with the rockets.",
+      "emotion": "Neutral 50",
+      "response_text": "It pleases me to hear this. Truly, the creator sent you to help us in our time of need.",
+      "index": "15"
+    },
+    {
+      "topic": "JasonBrightChrisAboutPC asks about Chris H",
+      "topic_text": "What's the deal with the human who let me in?",
+      "emotion": "Neutral 50",
+      "response_text": "You're referring to Chris. I doubt you had much luck if you tried telling him that he's human.",
+      "index": "16"
+    },
+    {
+      "topic": "JasonBrightChrisAllowPC will not alert Chris H",
+      "topic_text": "Well, it's none of my business.",
+      "emotion": "Neutral 50",
+      "response_text": "Chris shall be declared the Saint of the Great Journey before we depart. I hope this will ease his sadness...",
+      "index": "28"
+    },
+    {
+      "topic": "JasonBrightChrisApprovePC says he understands role of Chris H",
+      "topic_text": "Wow! You really pulled the wool over his eyes!",
+      "emotion": "Neutral 50",
+      "response_text": "I take no pleasure in hiding the truth from Chris. But it is the creator's will, to which I must submit.",
+      "index": "29"
+    },
+    {
+      "topic": "JasonBrightChrisDisapprove",
+      "topic_text": "You've been using Chris. It's despicable.",
+      "emotion": "Neutral 50",
+      "response_text": "It is the creator's will, and I must submit. There is no malice in it. We would take him with us if we could.",
+      "index": "30"
+    },
+    {
+      "topic": "JasonBrightFarBeyond",
+      "topic_text": "What is this Far Beyond?",
+      "emotion": "Neutral 50",
+      "response_text": "I have glimpsed it only in visions, wanderer, but what I have seen is truly miraculous.",
+      "index": "31"
+    },
+    {
+      "topic": "JasonBrightGreatJourneyPC asks about the Great Journey",
+      "topic_text": "What's the \"Great Journey\"?",
+      "emotion": "Neutral 50",
+      "response_text": "We wish to escape the barbarity of the wasteland, especially the violence and bigotry of its human inhabitants.",
+      "index": "33"
+    },
+    {
+      "topic": "JasonBrightKeepTalking",
+      "topic_text": "I'll think about it.",
+      "emotion": "Neutral 50",
+      "response_text": "Please do.",
+      "index": "40"
+    },
+    {
+      "topic": "JasonBrightNightkinAboutPC asks about the Nightkin",
+      "topic_text": "Tell me more about these \"demons.\"",
+      "emotion": "Neutral 50",
+      "response_text": "The demons appeared from nowhere... except it might be more accurate to say they never actually \"appeared\" at all.",
+      "index": "41"
+    },
+    {
+      "topic": "JasonBrightNightkinGonePC reports that Nightkin are gone",
+      "topic_text": "The \"demons\" are gone.",
+      "emotion": "Neutral 50",
+      "response_text": "Praise the creator! And bless you, wanderer! The way is clear. I will lead my flock through the basement to the sacred site!",
+      "index": "52"
+    },
+    {
+      "topic": "JasonBrightNightkinNoPC declines to help",
+      "topic_text": "Sorry. Not interested.",
+      "emotion": "Neutral 50",
+      "response_text": "But we have no hope of completing the Great Journey without your help!",
+      "index": "55"
+    },
+    {
+      "topic": "JasonBrightNightkinYesPC agrees to help",
+      "topic_text": "I've already killed your \"demons.\"",
+      "emotion": "Neutral 50",
+      "response_text": "Praise the creator. Bless you, wanderer! Bless us all!",
+      "index": "57"
+    },
+    {
+      "topic": "JasonBrightNovacFeralGhoulsPC says Novac is worried about REPCONN ghouls[1]",
+      "topic_text": "I'm here because feral ghouls have been wandering into Novac.",
+      "emotion": "Neutral 50",
+      "response_text": "And they've been shooting them down like animals, haven't they?",
+      "index": "61"
+    },
+    {
+      "topic": "JasonBrightNovacGhoulicide[1]",
+      "topic_text": "Some folks in Novac want you dead, and will pay to have it done.",
+      "emotion": "Neutral 50",
+      "response_text": "I wish I could say I was surprised. But that is what we've come to expect from your kind.",
+      "index": "67"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYEGoodbye.",
+      "topic_text": "Understood.",
+      "emotion": "Neutral 50",
+      "response_text": "Do come find us!",
+      "index": "69"
+    },
+    {
+      "topic": "JasonBrightSpeech1",
+      "topic_text": "JasonBrightSpeech1",
+      "emotion": "Neutral 50",
+      "response_text": "Gather, all. May the creator guide my words and help me speak true...",
+      "index": "74"
+    },
+    {
+      "topic": "JasonBrightSpeech2",
+      "topic_text": "JasonBrightSpeech2",
+      "emotion": "Neutral 50",
+      "response_text": "The almighty creator has seen fit to answer our prayers. The time has come for us to board the rockets and begin the Great Journey.",
+      "index": "75"
+    },
+    {
+      "topic": "JasonBrightSpeech3",
+      "topic_text": "JasonBrightSpeech3",
+      "emotion": "Neutral 50",
+      "response_text": "Though it may seem that all humans despise us, the creator has seen fit to instruct us differently.",
+      "index": "76"
+    },
+    {
+      "topic": "JasonBrightSpeech4",
+      "topic_text": "JasonBrightSpeech4",
+      "emotion": "Neutral 50",
+      "response_text": "The Journey ahead would have been impossible if not for the intercession of two human friends, one new, the other a long-abiding companion.",
+      "index": "77"
+    },
+    {
+      "topic": "JasonBrightSpeech5",
+      "topic_text": "JasonBrightSpeech5",
+      "emotion": "Neutral 50",
+      "response_text": "To our new friend, we say thanks, and promise never to forget how he cleared from our path the demons who sought to stay our Journey.",
+      "index": "78"
+    },
+    {
+      "topic": "JasonBrightSpeech6",
+      "topic_text": "JasonBrightSpeech6",
+      "emotion": "Neutral 50",
+      "response_text": "But to Chris, we owe more than thanks. Chris, you have made this Great Journey a reality.",
+      "index": "79"
+    },
+    {
+      "topic": "JasonBrightSpeech7",
+      "topic_text": "JasonBrightSpeech7",
+      "emotion": "Neutral 50",
+      "response_text": "From this moment forward, you will be remembered as the Saint of the Great Journey. We shall never forget you.",
+      "index": "80"
+    },
+    {
+      "topic": "JasonBrightSpeech8",
+      "topic_text": "JasonBrightSpeech8",
+      "emotion": "Neutral 50",
+      "response_text": "I ask that you forgive us, Chris, and give us your blessing, and we bestow ours upon you.",
+      "index": "81"
+    },
+    {
+      "topic": "JasonBrightSpeech9",
+      "topic_text": "JasonBrightSpeech9",
+      "emotion": "Neutral 50",
+      "response_text": "Seekers, board the rockets, take your seats. The Great Journey awaits! To the promised land we go! To the Far Beyond!",
+      "index": "82"
+    }
+  ],
+  "combat": [
+    {
+      "topic": "AcceptYield",
+      "topic_text": "AcceptYield",
+      "emotion": "Neutral 50",
+      "response_text": "Better not try that again.",
+      "index": "83"
+    },
+    {
+      "topic": "Assault",
+      "topic_text": "Assault",
+      "emotion": "Neutral 50",
+      "response_text": "What was that for?",
+      "index": "84"
+    },
+    {
+      "topic": "Attack",
+      "topic_text": "Attack",
+      "emotion": "Neutral 50",
+      "response_text": "You like that?",
+      "index": "87"
+    },
+    {
+      "topic": "AvoidThreat",
+      "topic_text": "AvoidThreat",
+      "emotion": "Neutral 50",
+      "response_text": "Look out!",
+      "index": "90"
+    },
+    {
+      "topic": "FireExplosive",
+      "topic_text": "FireExplosive",
+      "emotion": "Neutral 50",
+      "response_text": "Incoming!",
+      "index": "91"
+    },
+    {
+      "topic": "Flee",
+      "topic_text": "Flee",
+      "emotion": "Neutral 50",
+      "response_text": "Help!",
+      "index": "93"
+    },
+    {
+      "topic": "Hit",
+      "topic_text": "Hit",
+      "emotion": "Neutral 50",
+      "response_text": "I'm hit!",
+      "index": "96"
+    },
+    {
+      "topic": "Murder",
+      "topic_text": "Murder",
+      "emotion": "Neutral 50",
+      "response_text": "What have you done?",
+      "index": "98"
+    },
+    {
+      "topic": "Steal",
+      "topic_text": "Steal",
+      "emotion": "Neutral 50",
+      "response_text": "Thief!",
+      "index": "101"
+    }
+  ]
+}

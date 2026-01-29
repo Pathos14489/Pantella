@@ -1,0 +1,76 @@
+{
+  "name": "Rocksalt",
+  "url": "/wiki/Rocksalt",
+  "dialogue_name": "",
+  "dialogue_url": null,
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000B54C2",
+  "ref_id": "000A3BBA",
+  "editor_id": "TepidRaiderMissle",
+  "location": "Tepid Sewers",
+  "location_url": "/wiki/Tepid_Sewers",
+  "descriptions": [
+    "Rocksalt is a raider inhabiting the tepid sewers in 2277.",
+    "Rocksalt is the leader of a small band of raiders on the hunt for mole rat meat in the tepid sewers. They live off the meat and take what they can carry back to the Jury Street Metro station, where Ryan Brigg buys it from them for the manufacturing of mole rat wonder meat.",
+    "Rocksalt is immediately and always hostile towards intruders. As they are on the list of enslavable characters, they can be enslaved and/or turned friendly through the use of the Mesmetron.",
+    "* 20% chance of spawning.\n** 15% chance of spawning.",
+    "Rocksalt's gender and appearance are random."
+  ],
+  "race": "Human",
+  "gender": "Male or female",
+  "affiliation": "Raiders",
+  "role": "Raider leader",
+  "detailed_location": "Tepid sewers",
+  "special": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 3,
+    "Intelligence": 3,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "level": "4→9",
+  "tag_skills": [
+    {
+      "Big Guns:": "41→62"
+    },
+    {
+      "Melee Weap.:": "45→66"
+    },
+    {
+      "Small Guns:": "45→66"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "55→85"
+    },
+    {
+      "Critical Chance:": "5%"
+    },
+    {
+      "Unarmed Dam.:": "1.15"
+    },
+    {
+      "Poison Resist.:": "15%"
+    },
+    {
+      "Rad. Resist.:": "6%"
+    },
+    {
+      "Carry Weight:": "210"
+    }
+  ],
+  "karma": "Evil",
+  "topics": [],
+  "conversation": [],
+  "combat": []
+}

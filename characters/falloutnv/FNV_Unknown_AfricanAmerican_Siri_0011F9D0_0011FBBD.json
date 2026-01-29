@@ -1,0 +1,173 @@
+{
+  "name": "Siri",
+  "url": "/wiki/Siri",
+  "dialogue_name": "FortSiri.txt",
+  "dialogue_url": "/wiki/FortSiri.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": true,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "0011F9D0",
+  "ref_id": "0011FBBD",
+  "editor_id": "FortSiri",
+  "location": "The Fort",
+  "location_url": "/wiki/The_Fort",
+  "descriptions": [
+    "Siri is a Legion slave living at the Fort in 2281.",
+    "From a small settlement in New Mexico, Siri was enslaved in a Legion raid. As a slave, she has seen first hand what the Legion does to those who try to run away. This fear has kept her from trying.",
+    "Powder to the People: When talking to her, the player character can gain some XP and Legion fame by passing a Survival check of 20 in which they help her improve upon her recipe for creating healing powder.",
+    "PC Siri may disappear from the game for no apparent reason. A possible fix for this bug may be to use the console commands prid 11fbbd, disable, enable, resurrect and moveto player, in that order. This will revive Siri and place her where you are, allowing you to talk to her.",
+    "Frumentarii: Alerio · Cato Hostilius · Gabban · Karl · Picus · Disguised frumentarius · Ulysses (formerly)\nConsul: M. Licinius Crassus · M. Scribonius Libo Drusus (of the consul)"
+  ],
+  "race": "Human",
+  "affiliation": "Caesar's Legion",
+  "role": "Slave6 of Clubs",
+  "detailed_location": "The Fort",
+  "voice_actor": "Lora Cain",
+  "special": {
+    "Strength": 4,
+    "Perception": 7,
+    "Endurance": 3,
+    "Charisma": 4,
+    "Intelligence": 4,
+    "Agility": 5,
+    "Luck": 2
+  },
+  "level": "2",
+  "tag_skills": [
+    {
+      "Guns:": "30"
+    },
+    {
+      "Sneak:": "32"
+    },
+    {
+      "Unarmed:": "28"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Neutral",
+  "voice_type": "FemaleAdult02",
+  "geck_race": "AfricanAmerican",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 0",
+      "response_text": "{Male PC}If you're injured, I might have healing powder to spare.",
+      "index": "1"
+    },
+    {
+      "topic": "VFreeformTheFortFortSiriTopic000",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Okay.",
+      "index": "7"
+    },
+    {
+      "topic": "VFreeformTheFortFortSiriTopic001",
+      "topic_text": "I have some questions about you.",
+      "emotion": "Neutral 50",
+      "response_text": "What do you want to know?",
+      "index": "8"
+    },
+    {
+      "topic": "VFreeformTheFortFortSiriTopic002",
+      "topic_text": "How long have you been a slave?",
+      "emotion": "Disgust 50",
+      "response_text": "Three years and counting. If I could just get across the river, I'd be free. Not that I'd try it - I've seen what happens when you get caught.",
+      "index": "9"
+    },
+    {
+      "topic": "VFreeformTheFortFortSiriTopic003",
+      "topic_text": "Let's talk about something else.",
+      "emotion": "Neutral 50",
+      "response_text": "All right.",
+      "index": "10"
+    },
+    {
+      "topic": "VFreeformTheFortFortSiriTopic004",
+      "topic_text": "Where are you from?",
+      "emotion": "Neutral 50",
+      "response_text": "A small town in New Mexico. The Legion burned it a few years back - that's how I ended up here.",
+      "index": "11"
+    },
+    {
+      "topic": "VFreeformTheFortFortSiriTopic005",
+      "topic_text": "Tell me about the Burned Man.",
+      "emotion": "Neutral 50",
+      "response_text": "A vengeful spirit, some of the more superstitious women claim. He was a great leader of the Legion before he failed{KAI-zar}Caesar.",
+      "index": "12"
+    },
+    {
+      "topic": "VFreeformTheFortFortSiriTopic006",
+      "topic_text": "How are women treated around here?",
+      "emotion": "Neutral 50",
+      "response_text": "We're property. If you're too young or too old, the men usually leave you alone. Usually.",
+      "index": "15"
+    },
+    {
+      "topic": "VFreeformTheFortFortSiriTopic010",
+      "topic_text": "What do you know about Legate Lanius?",
+      "emotion": "Fear 20",
+      "response_text": "The Legate is not a man to be crossed, especially if you're a woman. That's all I will say about it.",
+      "index": "18"
+    },
+    {
+      "topic": "VFreeformTheFortFortSiriTopic017",
+      "topic_text": "You're a doctor?",
+      "emotion": "Neutral 50",
+      "response_text": "I never finished my training - the Legion saw to that when they overran my town.",
+      "index": "19"
+    },
+    {
+      "topic": "VFreeformTheFortFortSiriTopic018",
+      "topic_text": "Do you have anything for sale?",
+      "emotion": "Neutral 50",
+      "response_text": "For sale? I'm a slave, not a merchant. I could give you some healing powder every day, but you'd have to be a friend of the Legion.",
+      "index": "22"
+    },
+    {
+      "topic": "VFreeformTheFortFortSiriTopic019",
+      "topic_text": "I'd like some healing powder.",
+      "emotion": "Neutral 50",
+      "response_text": "I can only do that if you're a friend of the Legion. I don't want to get crucified.",
+      "index": "24"
+    },
+    {
+      "topic": "VFreeformTheFortFortSiriTopic020< Survival 20 >",
+      "topic_text": "You are using one broc flower per xander root, right?",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] Oh - I've been using two roots per flower. Thanks to you, I'll be able to create twice as much healing powder per day.",
+      "index": "27"
+    },
+    {
+      "topic": "VFreeformTheFortFortSiriTopic022",
+      "topic_text": "About the effectiveness of your healing powders...",
+      "emotion": "Neutral 50",
+      "response_text": "What about it? Do you have some advice?",
+      "index": "29"
+    },
+    {
+      "topic": "VFreeformTheFortFortSiriTopic023",
+      "topic_text": "Never mind.",
+      "emotion": "Neutral 50",
+      "response_text": "Was there something else?",
+      "index": "30"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Okay.",
+      "index": "31"
+    }
+  ],
+  "combat": []
+}

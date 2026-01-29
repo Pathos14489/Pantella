@@ -1,0 +1,146 @@
+{
+  "name": "Norton",
+  "url": "/wiki/Norton",
+  "dialogue_name": "JacobstownNorton.txt",
+  "dialogue_url": "/wiki/JacobstownNorton.txt",
+  "spawned_dead": false,
+  "spawned": true,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "00148A32",
+  "ref_id": "00148A33",
+  "editor_id": "JacobstownNorton",
+  "location": "Outside theJacobstownentrance",
+  "location_url": "/wiki/Jacobstown",
+  "descriptions": [
+    "Norton is a mercenary found outside Jacobstown in 2281. He appears once Guess Who I Saw Today is started and the Courier speaks with Marcus.",
+    "Hailing from NCR territory, Norton has built up a repeat customer base and has been hired several times by political elements in the NCR as part of an effort to protect important assets in NCR territory, typically those that are appealing to special interest groups.",
+    "Norton, like most mercenaries, isn't very loyal to those that hire him, only their caps. While he won't give up the names of employers,",
+    "While an experienced and cautious merc, He also frequently uses \"Mutie\" as an insult, showing how much respect, that is lack thereof, he gives to any number of super mutants.",
+    "Unfriendly Persuasion: Norton and his gang of mercenaries are harassing Jacobstown and Marcus asks the Courier to deal with it, non-violently if possible."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "NCR",
+  "role": "Mercenary",
+  "detailed_location": "Jacobstownentrance, after acquiringGuess Who I Saw Today",
+  "voice_actor": "Chris Andrew Ciulla",
+  "special": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 4,
+    "Intelligence": 3,
+    "Agility": 6,
+    "Luck": 4
+  },
+  "level": "15",
+  "tag_skills": [
+    {
+      "Explosives:": "80"
+    },
+    {
+      "Guns:": "82"
+    },
+    {
+      "Melee Weap.:": "82"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "190"
+    },
+    {
+      "Dam. Threshold:": "15"
+    }
+  ],
+  "karma": "Neutral",
+  "voice_type": "MaleAdult12",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "{Marcus dead}Huh. With the big guy dead, I guess we're done here. You've made my employers very happy.",
+      "index": "1"
+    },
+    {
+      "topic": "vDialogueJacobstownJacobstownNortonTopic000",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Yep, get a move on.",
+      "index": "6"
+    },
+    {
+      "topic": "vDialogueJacobstownJacobstownNortonTopic001",
+      "topic_text": "What do you want with Jacobstown?",
+      "emotion": "Neutral 50",
+      "response_text": "Just doing what I'm paid to do - harass the muties until they leave or attack us. If they leave, we let 'em go. If they attack, we wipe them out.",
+      "index": "7"
+    },
+    {
+      "topic": "vDialogueJacobstownJacobstownNortonTopic002",
+      "topic_text": "Who are you doing this for?",
+      "emotion": "Neutral 50",
+      "response_text": "Won't name names, but some important folks in the NCR are sick of muties attacking their Brahmin herds. They want them gone from NCR territory.",
+      "index": "9"
+    },
+    {
+      "topic": "vDialogueJacobstownJacobstownNortonTopic003< Speech - 65 >",
+      "topic_text": "Go away or you'll have to deal with me, and you'll wish you were fighting Super Mutants instead.",
+      "emotion": "Fear 5",
+      "response_text": "[SUCCEEDED] I've always known when to fight and when to back down, and it seems to me I ought to back down this time.",
+      "index": "11"
+    },
+    {
+      "topic": "vDialogueJacobstownJacobstownNortonTopic004< Barter - 55 >",
+      "topic_text": "2500 caps? I'm doing you a favor by paying you now. I doubt you were expected to survive this.",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] That thought had crossed my mind as well, actually. Fine, make it 2000 caps and we'll call it square.",
+      "index": "14"
+    },
+    {
+      "topic": "vDialogueJacobstownJacobstownNortonTopic005",
+      "topic_text": "Here's your money - 2500 caps.",
+      "emotion": "Neutral 50",
+      "response_text": "A deal's a deal. We'll be on our way.",
+      "index": "16"
+    },
+    {
+      "topic": "vDialogueJacobstownJacobstownNortonTopic006",
+      "topic_text": "I hear you're mercenaries. Will caps make you go away?",
+      "emotion": "Neutral 50",
+      "response_text": "We're still owed half - 2500 caps. Pay up and we'll be on our way. If you're short, maybe you can get the money from the muties.",
+      "index": "17"
+    },
+    {
+      "topic": "vDialogueJacobstownJacobstownNortonTopic007",
+      "topic_text": "Here's your money - 2000 caps, as we agreed.",
+      "emotion": "Neutral 50",
+      "response_text": "All right, then. We'll be on our way.",
+      "index": "18"
+    },
+    {
+      "topic": "vDialogueJacobstownJacobstownNortonTopic008",
+      "topic_text": "I'm a hero in the NCR, and I think you need to leave. Now.",
+      "emotion": "Neutral 50",
+      "response_text": "Whoa, whoa. Thought you looked familiar. I'm just doing a job, nothing more. Politics aren't my thing, so if you say go, we'll go. No hard feelings.",
+      "index": "19"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Yep, get a move on.",
+      "index": "20"
+    }
+  ],
+  "combat": []
+}

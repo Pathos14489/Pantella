@@ -1,0 +1,182 @@
+{
+  "name": "Old Man Harris",
+  "url": "/wiki/Old_Man_Harris",
+  "dialogue_name": "OldManHarris.txt",
+  "dialogue_url": "/wiki/OldManHarris.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "00029AA9",
+  "ref_id": "0002DC3A",
+  "editor_id": "OldManHarris",
+  "location": "Old Man Harris' house",
+  "location_url": "/wiki/Old_Man_Harris%27_house",
+  "descriptions": [
+    "Old Man Harris is a resident of Andale in 2277.",
+    "Old Man Harris lives alone in a small shack on the perimeter of the town.",
+    "The conversation turns into a warning to the Lone Wanderer to leave the town as soon as they can, due to the danger the individuals living here pose to visitors.",
+    "If the residents of Andale are killed, he expresses sorrow but understanding, and thanks the Lone Wanderer for their role in what transpired."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Andale",
+  "role": "Guardian (optional)",
+  "detailed_location": "Old Man Harris' house, Andale",
+  "voice_actor": "Paul Eiding",
+  "special": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 5,
+    "Intelligence": 4,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "mod_special_values": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 5,
+    "Intelligence": 4,
+    "Agility": 7,
+    "Luck": 5
+  },
+  "level": "4",
+  "tag_skills": [
+    {
+      "Barter:": "44"
+    },
+    {
+      "Medicine:": "42"
+    },
+    {
+      "Melee Weap.:": "46"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "80"
+    },
+    {
+      "Critical Chance:": "5%"
+    },
+    {
+      "Unarmed Dam.:": "1.15"
+    },
+    {
+      "Poison Resist.:": "15%"
+    },
+    {
+      "Rad. Resist.:": "6%"
+    },
+    {
+      "Carry Weight:": "210"
+    },
+    {
+      "Damage Res.:": "4%"
+    }
+  ],
+  "karma": "Neutral",
+  "geck_race": "CaucasianOldAged",
+  "topics": [
+    {
+      "topic": "AndaleOldManHArrisGreeting1",
+      "topic_text": "Whoa, slow down, grandpa. What's wrong?",
+      "emotion": "Fear 50",
+      "response_text": "What's wrong? You don't see anything wrong with a quiet little town full of friendly people in the middle of a blasted wasteland?",
+      "index": "1"
+    },
+    {
+      "topic": "AndaleOldManHArrisGreeting3",
+      "topic_text": "Yeah... you go get some sleep, crazy old man. I'll be going now...",
+      "emotion": "Neutral 50",
+      "response_text": "If you know what's good for you, you'll get out as soon as you can. They're crazy! Crazy, I tell you!",
+      "index": "2"
+    },
+    {
+      "topic": "AndaleOldManHarrisGreeting1a",
+      "topic_text": "Well, I haven't talked to anyone here but you. Are they friendly?",
+      "emotion": "Fear 50",
+      "response_text": "No! Well... yes. But it's all a trick. Don't you know anything? Does that number on your back mean that you just crawled out of a vault or something?{Afraid, Warning the player.}",
+      "index": "3"
+    },
+    {
+      "topic": "AndaleOldManHarrisGreeting1a1",
+      "topic_text": "Well, I'll be careful, I guess.",
+      "emotion": "Neutral 50",
+      "response_text": "You should! Otherwise, you'll end up just like the rest!",
+      "index": "9"
+    },
+    {
+      "topic": "AndaleOldManHarrisGreeting1a2",
+      "topic_text": "Shhh.... time for a nap, gramps.",
+      "emotion": "Neutral 50",
+      "response_text": "What? You don't believe me? Just look in the basements! Or out in that shed! You'll see what I mean!",
+      "index": "11"
+    },
+    {
+      "topic": "AndaleOldManHarrisGreeting1b",
+      "topic_text": "What's wrong with being friendly?",
+      "emotion": "Neutral 50",
+      "response_text": "Nothin' wrong with being friendly, but these folks aren't just friendly  they're killers!",
+      "index": "12"
+    },
+    {
+      "topic": "AndaleOldManHarrisGreeting1c",
+      "topic_text": "You're right. I hate friendly people.",
+      "emotion": "Neutral 50",
+      "response_text": "And you're right sensible to. Especially around here. The friendly neighbor bit is just an act, these people are stone cold killers!",
+      "index": "14"
+    },
+    {
+      "topic": "AndaleOldManHarrisKids",
+      "topic_text": "What's going to happen to the kids?",
+      "emotion": "Neutral 50",
+      "response_text": "They'll stay here with me and I'll raise them myself. It's a shame that they have to grow up without their parents.",
+      "index": "16"
+    },
+    {
+      "topic": "AndaleOldManHarrisNowWhat",
+      "topic_text": "Now what will you do?",
+      "emotion": "Sad 50",
+      "response_text": "We'll do our best, is what we'll do. Me an the kids here in Andale... what's left of it, anyway.",
+      "index": "19"
+    },
+    {
+      "topic": "AndaleOldManHarrisPast",
+      "topic_text": "So, you grew up here too?",
+      "emotion": "Sad 50",
+      "response_text": "Sure did. Can't say that I'm proud of it, though. It was all just normal. It's what we all did. I didn't ever think much about it.",
+      "index": "22"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "I saw what happened out there, stranger. Those people may have been my family but... it had to be done.",
+      "index": "26"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "I have to go now.",
+      "emotion": "Neutral 50",
+      "response_text": "Get out! Get out while you can!",
+      "index": "36"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Neutral 50",
+      "response_text": "What... who are you?",
+      "index": "39"
+    }
+  ],
+  "combat": []
+}

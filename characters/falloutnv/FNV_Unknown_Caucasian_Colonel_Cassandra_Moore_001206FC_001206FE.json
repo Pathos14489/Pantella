@@ -1,0 +1,603 @@
+{
+  "name": "Colonel Cassandra Moore",
+  "url": "/wiki/Cassandra_Moore",
+  "dialogue_name": "VHDColonelMoore.txt",
+  "dialogue_url": "/wiki/VHDColonelMoore.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "001206FC",
+  "ref_id": "001206FE",
+  "editor_id": "VHDColonelMoore",
+  "location": "Hoover Dam offices",
+  "location_url": "/wiki/Hoover_Dam_offices",
+  "descriptions": [
+    "Colonel Cassandra Moore is the commanding officer of the NCR Army garrison at Hoover Dam in the Mojave Wasteland as of 2281 in Fallout: New Vegas.",
+    "Volunteering for recruitment into the NCR military at the age of 16, despite some odd looks at first, the young Cassandra Moore nevertheless got top marks during her training and received an officer's commission at the age of 17. During this period, she took part in operations against various gangs plaguing the NCR territory, sharpening her skills on the likes of Jackals and Vipers, as well as surviving four tours of duty against the Brotherhood of Steel in New California during the NCR-Brotherhood War,",
+    "Her illustrious career culminated in Moore being invited to join the New California Republic Rangers. She considers the years spent in their ranks as the best of her life, feeling like she was doing something important and with the freedom to do it as she saw fit. However, that ended when she was forced to step down from the Rangers after a major injury.",
+    "That said, Moore has not completely given over to her bitterness over the path of her career, however; she recognizes that holding high rank means getting the chance to have a bigger influence over the course of the NCR's military affairs than she would have had as a junior officer. She considers having the power to have things done her way, without having to tolerate disagreements, as a perk.",
+    "A staunch war hawk, Moore displays unfailing support for General Lee Oliver and President Aaron Kimball's push to seize the Mojave - support which has seen her gain great influence - and considers strong and decisive action to be the best means of ensuring NCR dominance in the region. She goes out of her way to neutralize or destroy groups and people that oppose the NCR in any way, such as the Great Khans, the Brotherhood of Steel, the Omertas and the Kings, regardless of whether it's in the NCR's interests, or because of her own personal grudges.",
+    "As such, suggesting any solutions that do not involve extermination of the parties involved will earn her ire, particularly if they involve forging an alliance and/or peace with a given group. She also speaks critically of Ambassador Crocker and his more diplomatic approach to NCR's expansion into Vegas and will vow to push back against him if the Courier chooses to support his approach to the Kings and Freeside above hers. Ultimately, Moore is well aware of her own greatest virtue as a soldier: she gets results, and her superiors could not care less about how she achieves them.",
+    "In Joshua Sawyer's personal Fallout: New Vegas mod JSawyer, Colonel Moore was changed to have Evil Karma: in Sawyer's view, Moore's actions in the main questline of New Vegas show her to be \"petty and vindictive\" and \"wrapping vendetta in the NCR flag,\" using excessive military force against groups and people solely based on her own grudges even when violence is easily avoidable, and retaliating against NCR figures who work around her (Ambassador Crocker if the Kings are spared; and the Courier if the Brotherhood makes peace). He further commented that Moore's dialogue around her past as a Ranger reveals that she thinks of authority as a way to get what she wants, rather than to serve a higher cause. The relevant quotes from Sawyer are below."
+  ],
+  "race": "Human",
+  "affiliation": "NCR ArmyNew California Republic Rangers(formerly)",
+  "role": "Hoover Damgarrison commanderRanger (formerly)Queen of Hearts",
+  "detailed_location": "Hoover Dam offices",
+  "voice_actor": "Kirsten Potter",
+  "special": {
+    "Strength": 5,
+    "Perception": 6,
+    "Endurance": 6,
+    "Charisma": 5,
+    "Intelligence": 5,
+    "Agility": 7,
+    "Luck": 5
+  },
+  "level": "16→20",
+  "tag_skills": [
+    {
+      "Guns:": "94→100"
+    },
+    {
+      "Speech:": "90→100"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "150→170"
+    }
+  ],
+  "karma": "Neutral",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "Damn Brotherhood, bunch of elitist jerks. What were we to do, leave good armor out in the wastes to rust?",
+      "index": "1"
+    },
+    {
+      "topic": "VFreeformHooverDamHDColonelMooreTopic000",
+      "topic_text": "I was, uh, just sightseeing. Sorry to bother you.",
+      "emotion": "Neutral 50",
+      "response_text": "Then I suggest you make your way back outside. My men have orders to shoot anyone caught sneaking around in sensitive areas.",
+      "index": "31"
+    },
+    {
+      "topic": "VFreeformHooverDamHDColonelMooreTopic001",
+      "topic_text": "Ambassador Crocker said to come see you about Freeside.",
+      "emotion": "Neutral 50",
+      "response_text": "You say Crocker sent you? Let me see... I just received a memo regarding him recently and haven't had a chance to read it in detail.",
+      "index": "32"
+    },
+    {
+      "topic": "VFreeformHooverDamHDColonelMooreTopic002",
+      "topic_text": "No ma'am.",
+      "emotion": "Neutral 50",
+      "response_text": "Good. When the task is done, report back to Crocker. My men have other orders and will return here on their own to make their report.",
+      "index": "39"
+    },
+    {
+      "topic": "VFreeformHooverDamHDColonelMooreTopic003",
+      "topic_text": "This plan seems awfully confrontational.",
+      "emotion": "Neutral 50",
+      "response_text": "Do you have any idea what our current situation is? As we speak there is a huge army of madmen not ten miles from here waiting to kill us all.",
+      "index": "41"
+    },
+    {
+      "topic": "VFreeformHooverDamHDColonelMooreTopic004",
+      "topic_text": "Nope. I'm to go to Freeside and shoot up some Kings.",
+      "emotion": "Neutral 50",
+      "response_text": "Not exactly. Give them the chance to do the right thing at least. Personally, I doubt they'll do it.",
+      "index": "45"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDColonelMooreTopic000",
+      "topic_text": "I've spoken to the Great Khans. Their new leader has agreed to fight for the NCR.",
+      "emotion": "Neutral 50",
+      "response_text": "Excellent. You've done very well indeed. These tribals will make useful machete fodder.",
+      "index": "48"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDColonelMooreTopic001",
+      "topic_text": "Not yet. I'm still working on it.",
+      "emotion": "Anger 50",
+      "response_text": "Then stop wasting my time and get on it!",
+      "index": "55"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDColonelMooreTopic002",
+      "topic_text": "Yes, ma'am.",
+      "emotion": "Neutral 50",
+      "response_text": "Since the majority of my men are on assignment dealing with the Legion, I need someone to handle other matters that have arisen.",
+      "index": "56"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDColonelMooreTopic003",
+      "topic_text": "I'm a little busy at the moment.",
+      "emotion": "Neutral 50",
+      "response_text": "But not too busy to come all the way out here? I don't think so. Stay a while, and listen to my offer.",
+      "index": "59"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDColonelMooreTopic004",
+      "topic_text": "You could say we've had dealings.",
+      "emotion": "Neutral 50",
+      "response_text": "Then I don't need to tell you that they can be a pain in the ass.",
+      "index": "60"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDColonelMooreTopic005",
+      "topic_text": "I have a score to settle with them.",
+      "emotion": "Neutral 50",
+      "response_text": "Good, that anger is something I can use, and I think you may get a chance to settle your score sooner than you might have planned.",
+      "index": "64"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDColonelMooreTopic006",
+      "topic_text": "I might have heard of them. Remind me.",
+      "emotion": "Neutral 50",
+      "response_text": "They're a rowdy bunch, and pride themselves as warriors. The dark leather and horned helmets they wear are pretty distinctive.",
+      "index": "65"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDColonelMooreTopic007",
+      "topic_text": "What if I find they're committed to joining Caesar?",
+      "emotion": "Neutral 50",
+      "response_text": "Then you'll need to make sure none of them are left to do so. Any other questions?",
+      "index": "66"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDColonelMooreTopic008",
+      "topic_text": "Will I have any NCR support in this?",
+      "emotion": "Neutral 50",
+      "response_text": "I can't lend you any troops, but I've already sent word to quartermaster Bardon that you're to be given full access to our hardware.",
+      "index": "67"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDColonelMooreTopic009",
+      "topic_text": "No questions, ma'am.",
+      "emotion": "Neutral 50",
+      "response_text": "Good. I look forward to hearing of your progress.",
+      "index": "69"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDColonelMooreTopic011",
+      "topic_text": "No ma'am.",
+      "emotion": "Neutral 50",
+      "response_text": "Liza O'Malley at the Embassy may have some information for you as well.",
+      "index": "71"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDColonelMooreTopic012",
+      "topic_text": "The Khans won't be a problem to anyone ever again.",
+      "emotion": "Neutral 50",
+      "response_text": "Good riddance. We've had reports for years that they're the ones who supply the Fiends with chems, but no one's done anything about it.",
+      "index": "73"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDColonelMooreTopic013",
+      "topic_text": "Where should I start?",
+      "emotion": "Neutral 50",
+      "response_text": "Head to their casino, Gomorrah, and ask around. If you discover that what they're up to threatens the NCR, stop it.",
+      "index": "75"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDColonelMooreTopic014",
+      "topic_text": "Can you give me any leads?",
+      "emotion": "Neutral 50",
+      "response_text": "Our preliminary research shows that the Omertas used to do some business in Freeside, mostly buying weapons. Any other questions?",
+      "index": "77"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDColonelMooreTopic015{Speech >= 60}",
+      "topic_text": "They have a point, it is their armor. You should give it back.",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] Fine, this isn't worth the trouble to fight over.",
+      "index": "78"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDColonelMooreTopic016",
+      "topic_text": "The Omertas were up to something big, but I stopped them.",
+      "emotion": "Happy 30",
+      "response_text": "Excellent. You'd think living in the lap of luxury and power would be enough for some people, but no.",
+      "index": "80"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDColonelMooreTopic017",
+      "topic_text": "I'm still working on it.",
+      "emotion": "Neutral 50",
+      "response_text": "The next time we speak, I expect you to have something for me.",
+      "index": "86"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDColonelMooreTopic018{ Speech > 70 }",
+      "topic_text": "<Lie> The Omertas are planning to attack New Reno. It's none of NCR's concern.",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] I wouldn't dismiss it that lightly, but it's nothing we need get involved with for now. Good work, I suppose.",
+      "index": "87"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDColonelMooreTopic019",
+      "topic_text": "I was hoping to ask you some questions.",
+      "emotion": "Neutral 50",
+      "response_text": "If you must, but please keep it brief.",
+      "index": "90"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDColonelMooreTopic020",
+      "topic_text": "Mr. House won't be a problem. He's been disconnected from his system.",
+      "emotion": "Neutral 50",
+      "response_text": "But he's still alive? I'll have to remember to send someone to follow up on that later. Anyway, at least he's out of the picture for the time being.",
+      "index": "91"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDColonelMooreTopic021",
+      "topic_text": "I killed Mr. House.",
+      "emotion": "Neutral 50",
+      "response_text": "Then that's one more nuisance we won't have to worry about. Good work. Our efforts haven't gone unnoticed, either.",
+      "index": "99"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDColonelMooreTopic022",
+      "topic_text": "I'm still working on it.",
+      "emotion": "Neutral 50",
+      "response_text": "I shouldn't have to say this, but please don't bother me until the mission is completed.",
+      "index": "100"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDColonelMooreTopic024",
+      "topic_text": "Is there no peaceful way to resolve this?",
+      "emotion": "Neutral 50",
+      "response_text": "{Player talked Khans into helping}No, just because you secured the aid of the Khans,{said under her breath}assuming they don't try to kill us, don't think the Brotherhood will be so easily swayed.",
+      "index": "101"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDColonelMooreTopic025",
+      "topic_text": "How do you expect me to destroy an entire Brotherhood chapter?",
+      "emotion": "Neutral 50",
+      "response_text": "A fair question, and one I've had our strategists think about for some time. Their consensus is that we must focus on the one thing we can count on.",
+      "index": "105"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDColonelMooreTopic026",
+      "topic_text": "I thought the Brotherhood were all wiped out at HELIOS One. How could they have survived?",
+      "emotion": "Neutral 50",
+      "response_text": "After the battle, we consolidated our hold on the plant before pursuing our enemies.",
+      "index": "109"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDColonelMooreTopic027",
+      "topic_text": "No ma'am.",
+      "emotion": "Neutral 50",
+      "response_text": "Dismissed.",
+      "index": "113"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDColonelMooreTopic028",
+      "topic_text": "The Brotherhood has been eliminated.",
+      "emotion": "Neutral 50",
+      "response_text": "{Triumph, relief}Ah, that's a relief. A Brotherhood attack while we're busy with the Legion would be catastrophic.",
+      "index": "114"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDColonelMooreTopic029",
+      "topic_text": "Not yet.",
+      "emotion": "Neutral 50",
+      "response_text": "Don't give up. They're out there, somewhere, and we're not safe until they've been destroyed.",
+      "index": "116"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDColonelMooreTopic031",
+      "topic_text": "I talked the Brotherhood into supporting the NCR.",
+      "emotion": "Neutral 50",
+      "response_text": "{She is not pleased}And you believed them? Do you have any idea how long we've been fighting those bastards?",
+      "index": "117"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDColonelMooreTopic032",
+      "topic_text": "The president has departed safely.",
+      "emotion": "Neutral 50",
+      "response_text": "Good, his death could have had a major impact on morale. This whole affair was ill-advised from the start, and I for one am glad it's over.",
+      "index": "122"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDColonelMooreTopic033",
+      "topic_text": "The president was killed by assassins.",
+      "emotion": "Anger 50",
+      "response_text": "Damn it! The timing couldn't be any worse. I tried to warn those buffoons, but they insisted on this little show.",
+      "index": "127"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDColonelMooreTopic034",
+      "topic_text": "I don't know. The visit is still going on up there.",
+      "emotion": "Anger 50",
+      "response_text": "Then what the hell are you doing down here? Get back topside and protect the president!",
+      "index": "129"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDColonelMooreTopic035",
+      "topic_text": "I was hoping to ask you some questions.",
+      "emotion": "Anger 50",
+      "response_text": "This is no time for questions! Get back topside and protect the president!",
+      "index": "130"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDColonelMooreTopic036",
+      "topic_text": "Tell me about the NCR.",
+      "emotion": "Neutral 50",
+      "response_text": "I don't have time to discuss all the different aspects of the NCR with you, but if you want it all in a nutshell - the NCR is progress.",
+      "index": "131"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDColonelMooreTopic037",
+      "topic_text": "I'll find you when you're done here.",
+      "emotion": "Neutral 50",
+      "response_text": "Wait for me downstairs, this won't take long.",
+      "index": "135"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDColonelMooreTopic038",
+      "topic_text": "How did you get to be a colonel in the NCR?",
+      "emotion": "Neutral 50",
+      "response_text": "I joined up at a young age. Was barely sixteen when I left home and volunteered to be in the military.",
+      "index": "136"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDColonelMooreTopic039",
+      "topic_text": "What can you tell me about Hoover Dam?",
+      "emotion": "Neutral 50",
+      "response_text": "It's of immense strategic value to the NCR. Hoover Dam sends enough electricity west to light every city and major settlement.",
+      "index": "141"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDColonelMooreTopic040",
+      "topic_text": "What do you know about Caesar's Legion?",
+      "emotion": "Neutral 50",
+      "response_text": "They're organized, I'll give them that. The few times I've encountered them firsthand, I've been impressed with their discipline.",
+      "index": "144"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDColonelMooreTopic041",
+      "topic_text": "Are you in charge of the NCR around here?",
+      "emotion": "Neutral 50",
+      "response_text": "I command the garrison here at the dam, yes, but Colonel{shoo}Hsu over at McCarran is technically in charge of the area's forces.",
+      "index": "148"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDColonelMooreTopic042",
+      "topic_text": "Sounds like you miss it.",
+      "emotion": "Neutral 50",
+      "response_text": "I do, sometimes. There are days I'd give anything to out in the open air, planting explosives and laying down covering fire.",
+      "index": "149"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDColonelMooreTopic043",
+      "topic_text": "It's better to be in charge.",
+      "emotion": "Happy 20",
+      "response_text": "Oh, it has its perks, to be sure. I'm free to see that things on a large scale are done my way, and don't have to tolerate any disagreement.",
+      "index": "152"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDColonelMooreTopic044",
+      "topic_text": "Let's talk about something else.",
+      "emotion": "Neutral 50",
+      "response_text": "I can only spare a few more moments. What did you wish to speak about?",
+      "index": "154"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDColonelMooreTopic045",
+      "topic_text": "What impressed you about their discipline?",
+      "emotion": "Neutral 50",
+      "response_text": "I've never once seen a single one of them back down, or disobey an order.",
+      "index": "155"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDColonelMooreTopic046",
+      "topic_text": "You mentioned that they were in good shape?",
+      "emotion": "Neutral 50",
+      "response_text": "Yes, extremely so. They must use conditioning routines on par with the rangers, or better.",
+      "index": "157"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDColonelMooreTopic047",
+      "topic_text": "What kind of weapons do they use?",
+      "emotion": "Neutral 50",
+      "response_text": "Their standard kit seems to be a blade of some sort and light armor. Guns are not uncommon, but are of questionable condition.",
+      "index": "161"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDColonelMooreTopic049",
+      "topic_text": "Where should I start looking for them?",
+      "emotion": "Neutral 50",
+      "response_text": "As I said, our scouts were some ways west of HELIOS when they disappeared.",
+      "index": "164"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDColonelMooreTopic050",
+      "topic_text": "What if I can convince them not to join the Legion?",
+      "emotion": "Neutral 50",
+      "response_text": "Don't fool yourself. I've dealt with enough of these gangs to know that they can't be trusted. Was there anything else?",
+      "index": "165"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDColonelMooreTopic051",
+      "topic_text": "I thought Mr. House already agreed to hand over New Vegas to the NCR.",
+      "emotion": "Neutral 50",
+      "response_text": "Yes, that's what he wants us to believe. And when we turn our attention to other threats, he'll begin moving against us.",
+      "index": "166"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDColonelMooreTopic054",
+      "topic_text": "I wanted to ask you some questions.",
+      "emotion": "Neutral 50",
+      "response_text": "Very well, but be brief.",
+      "index": "169"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDColonelMooreTopic055",
+      "topic_text": "What could Mr. House possibly be up to?",
+      "emotion": "Anger 20",
+      "response_text": "To name a few things off the top of my head - expand his borders, get the NCR and Legion to wipe each other out, and seize Hoover Dam.",
+      "index": "170"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDColonelMooreTopic056",
+      "topic_text": "What evidence do you have that Mr. House will make a move?",
+      "emotion": "Neutral 50",
+      "response_text": "We've had reported sightings of Mr. House's Securitrons spying on both NCR and Legion forces.",
+      "index": "172"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDColonelMooreTopic057",
+      "topic_text": "Won't getting rid of Mr. House have huge repercussions for New Vegas?",
+      "emotion": "Anger 10",
+      "response_text": "Perhaps, but that's not my problem. Vegas is a nice place for the men to go on vacation, but it'd be an acceptable loss next to the Dam.",
+      "index": "176"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDColonelMooreTopic058",
+      "topic_text": "No, ma'am.",
+      "emotion": "Neutral 50",
+      "response_text": "Good, then you have your orders. See that Mr. House does not present a problem.",
+      "index": "177"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDColonelMooreTopic059",
+      "topic_text": "How have things been since the battle?",
+      "emotion": "Neutral 50",
+      "response_text": "Surprisingly good. Our forces have managed to secure the region with little resistance, and trade should soon reach an all-time high.",
+      "index": "179"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDColonelMooreTopic060",
+      "topic_text": "Do you have any work for me?",
+      "emotion": "Neutral 50",
+      "response_text": "I'm afraid I'm going to have to disappoint you. There's much to be done, but nothing for someone with your skills.",
+      "index": "184"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDColonelMooreTopic061",
+      "topic_text": "What happened to the Legion?",
+      "emotion": "Neutral 50",
+      "response_text": "With their leader dead, the rest of their army retreated to the east. We've sent scouts to track them, but that's it.",
+      "index": "186"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDColonelMooreTopic062",
+      "topic_text": "Let's go back to speaking of the Khans.",
+      "emotion": "Neutral 50",
+      "response_text": "Of course, have they been dealt with?",
+      "index": "189"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDColonelMooreTopic063",
+      "topic_text": "Let's go back to talking about the Omertas.",
+      "emotion": "Neutral 50",
+      "response_text": "Very well. Do you know what they're up to?",
+      "index": "190"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDColonelMooreTopic064",
+      "topic_text": "Let's go back to discussing Mr. House.",
+      "emotion": "Neutral 50",
+      "response_text": "Okay. Is he still a threat?",
+      "index": "191"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDColonelMooreTopic065",
+      "topic_text": "Let's go back to talking about the Brotherhood.",
+      "emotion": "Neutral 50",
+      "response_text": "Fine by me. Have you found them yet?",
+      "index": "192"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDColonelMooreTopic066",
+      "topic_text": "I should be going.",
+      "emotion": "Neutral 50",
+      "response_text": "Good, I've got more work than time to do it.",
+      "index": "193"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDColonelMooreTopic067",
+      "topic_text": "The Great Khans' second-in-command seems amenable to allying with the NCR.",
+      "emotion": "Neutral 50",
+      "response_text": "An alliance? That's an interesting proposition - any plan where I can throw packs of raiders at the enemy instead of my own soldiers is a good one.",
+      "index": "194"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDColonelMooreTopic069Papa Khan has named me his successor. We might be able to arrange an alliance with NCR.",
+      "topic_text": "Papa Khan has named me his successor. We might be able to arrange an alliance with NCR.",
+      "emotion": "Neutral 50",
+      "response_text": "An alliance? That's an interesting proposition - any plan where I can throw packs of raiders at the enemy instead of my own soldiers is a good one.",
+      "index": "195"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDColonelMooreTopic070",
+      "topic_text": "I wanted to speak to you about the Great Khans.",
+      "emotion": "Neutral 50",
+      "response_text": "What precisely about them did you wish to discuss?",
+      "index": "196"
+    },
+    {
+      "topic": "VMS45VHDColonelMooreTopic003",
+      "topic_text": "The current leader of the tribe is dead-set against it. Maybe a diplomatic solution would work.",
+      "emotion": "Neutral 50",
+      "response_text": "We don't have time for diplomacy. This battle is coming any time now; if the leader won't be budged, he'll have to be replaced.",
+      "index": "197"
+    },
+    {
+      "topic": "VMS45VHDColonelMooreTopic004",
+      "topic_text": "Okay, I'll do it. What's the plan?",
+      "emotion": "Neutral 50",
+      "response_text": "Here, take this lockpicking gear. Your best bet is to wait until late at night find a back door, or catch him by surprise when he's alone.",
+      "index": "199"
+    },
+    {
+      "topic": "VMS45VHDColonelMooreTopic005",
+      "topic_text": "I'm not interested in a career in political killings.",
+      "emotion": "Neutral 50",
+      "response_text": "Then why are you wasting my time?",
+      "index": "202"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "VHDKimballSpeech02",
+      "topic_text": "VHDKimballSpeech02",
+      "emotion": "Neutral 50",
+      "response_text": "Ladies and gentlemen, I'd like to thank you for coming out here today for this very special occasion.",
+      "index": "204"
+    },
+    {
+      "topic": "vHDPowerArmor",
+      "topic_text": "vHDPowerArmor",
+      "emotion": "Anger 50",
+      "response_text": "A battle is about to be fought out there, to come here requesting our men to give up their armor is insane.",
+      "index": "206"
+    },
+    {
+      "topic": "vHDPowerArmor2",
+      "topic_text": "vHDPowerArmor2",
+      "emotion": "Neutral 50",
+      "response_text": "You know what? I don't need this bullshit right now. We'll take off that goddamn power armor, if it'll just shut you up.",
+      "index": "207"
+    }
+  ],
+  "combat": [
+    {
+      "topic": "Death",
+      "topic_text": "Death",
+      "emotion": "Neutral 50",
+      "response_text": "{Death sound}",
+      "index": "208"
+    }
+  ]
+}

@@ -1,0 +1,113 @@
+{
+  "name": "Comm Officer Green",
+  "url": "/wiki/Green_(Fallout:_New_Vegas)",
+  "dialogue_name": "RSEchoGreen.txt",
+  "dialogue_url": "/wiki/RSEchoGreen.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "0011324D",
+  "ref_id": "001132CA",
+  "editor_id": "RSEchoGreen",
+  "location": "Ranger Station Echo",
+  "location_url": "/wiki/Ranger_Station_Echo",
+  "descriptions": [
+    "Comm Officer Green is the radio operator of Ranger Station Echo in 2281.",
+    "Green is the disgruntled communications officer at Ranger Station Echo, whose job is to \"spy\" on the Legion base, Cottonwood Cove.  His frustration stems mostly from the fact that the higher ups in the NCR military do not want to attack it, considering it a waste of resources, and he finds it maddening to not attack an enemy that is right in front of them.",
+    "Return to Sender: Green is one of the officers the Courier can give the upgrade codes to."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "New California Republic Rangers",
+  "role": "Comm OfficerRanger",
+  "detailed_location": "Ranger Station Echo",
+  "voice_actor": "Liam O'Brien",
+  "special": {
+    "Strength": 5,
+    "Perception": 6,
+    "Endurance": 6,
+    "Charisma": 4,
+    "Intelligence": 5,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "level": "5",
+  "tag_skills": [
+    {
+      "Guns:": "48"
+    },
+    {
+      "Sneak:": "48"
+    },
+    {
+      "Unarmed:": "48"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "145"
+    }
+  ],
+  "karma": "Neutral",
+  "voice_type": "MaleAdult05",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "{Player not in NCR gear}Gotta wonder what the hell a civilian is doing here.",
+      "index": "1"
+    },
+    {
+      "topic": "VMSRSEchoQuestRSCommRangerEchoTopic001",
+      "topic_text": "What is this place?",
+      "emotion": "Neutral 50",
+      "response_text": "Ranger military outpost. We're keeping an eye on the Legion activities south of here at Cottonwood Cove.",
+      "index": "4"
+    },
+    {
+      "topic": "vDialogueRangerStationEchoRSEchoGreenTopic000",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah.",
+      "index": "6"
+    },
+    {
+      "topic": "vDialogueRangerStationEchoRSEchoGreenTopic001",
+      "topic_text": "I have updated radio security codes from Sergeant Reyes here.",
+      "emotion": "Anger 20",
+      "response_text": "What, again? Didn't I just change those damn things? All right, fine - show me the new codes.",
+      "index": "7"
+    },
+    {
+      "topic": "vDialogueRangerStationEchoRSEchoGreenTopic002",
+      "topic_text": "The NCR is letting the Legion get away with slavery?",
+      "emotion": "Neutral 50",
+      "response_text": "Believe me, I would love orders to take Cottonwood Cove apart and kick the Legion back across the river.",
+      "index": "8"
+    },
+    {
+      "topic": "vDialogueRangerStationEchoRSEchoGreenTopic003",
+      "topic_text": "Does the Legion know you're watching them from here?",
+      "emotion": "Neutral 50",
+      "response_text": "Undoubtedly. Rangers are tough nuts to crack, though, and any force small enough to launch a surprise attack isn't going back in one piece.",
+      "index": "10"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah.",
+      "index": "13"
+    }
+  ],
+  "combat": []
+}

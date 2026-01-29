@@ -1,0 +1,121 @@
+{
+  "name": "Wayne",
+  "url": "/wiki/Wayne",
+  "dialogue_name": "VFSLocalVictim02.txt",
+  "dialogue_url": "/wiki/VFSLocalVictim02.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "00113648",
+  "ref_id": "0011365E",
+  "editor_id": "VFSLocalVictim02",
+  "location": "Freeside",
+  "location_url": "/wiki/Freeside",
+  "descriptions": [
+    "Wayne is one of the three Freesiders that were attacked by NCR soldiers in 2281 preceding the quest G.I. Blues, along with his friends Roy and Farris.",
+    "Wayne is a scavenger in Freeside. He, Roy and Farris just cashed in some scrap metal and decided to go to the Atomic Wrangler to try their luck at gambling when an attack occurred between two parties and they were caught in the crossfire. Wayne is a proud local, and isn't afraid to stand up to \"big guys\" to prove it.",
+    "Asking him if he is holding anything from the Courier will result in losing Freeside fame, one of the very few times in the game where fame/infamy is lost. Alternatively, thanking him will result in gaining Freeside fame. In either case, Wayne will give you information and the quest progresses the same."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Freeside",
+  "role": "NCR attack victim",
+  "detailed_location": "Old Mormon Fort",
+  "voice_actor": "Alex Mendoza",
+  "special": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 2,
+    "Intelligence": 5,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "mod_special_values": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 6,
+    "Charisma": 2,
+    "Intelligence": 5,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "level": "1",
+  "tag_skills": [
+    {
+      "Guns:": "5"
+    },
+    {
+      "Science:": "5"
+    },
+    {
+      "Unarmed:": "5"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "70(75)"
+    }
+  ],
+  "karma": "Neutral",
+  "voice_type": "MaleAdult07",
+  "geck_race": "AfricanAmerican",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "I ain't got any reason to talk to you. Scram.",
+      "index": "1"
+    },
+    {
+      "topic": "VFreeformFreesideVFSLocalVictim02Topic000",
+      "topic_text": "He did. And anything you could tell me about what happened might help.",
+      "emotion": "Neutral 50",
+      "response_text": "I don't really know what else I can add. They were a bunch of guys. Better dressed than most Freesiders, I guess. That help?",
+      "index": "4"
+    },
+    {
+      "topic": "VFreeformFreesideVFSLocalVictim02Topic001",
+      "topic_text": "Why else would I be here asking questions?",
+      "emotion": "Fear 50",
+      "response_text": "I don't know, man! Maybe you're with the guys who attacked us and want to know if we can ID them.",
+      "index": "5"
+    },
+    {
+      "topic": "VFreeformFreesideVFSLocalVictim02Topic002",
+      "topic_text": "Not really.",
+      "emotion": "Sad 50",
+      "response_text": "Well, I don't know anything else. Sorry.",
+      "index": "7"
+    },
+    {
+      "topic": "VFreeformFreesideVFSLocalVictim02Topic003",
+      "topic_text": "Every bit helps. Thanks.",
+      "emotion": "Happy 50",
+      "response_text": "Sorry I couldn't help more, especially since you're being so nice.",
+      "index": "8"
+    },
+    {
+      "topic": "VFreeformFreesideVFSLocalVictim02Topic006",
+      "topic_text": "You're not hiding something from me, are you?",
+      "emotion": "Anger 50",
+      "response_text": "What? No! I thought you were supposed to be here to help, and here you are making accusations.",
+      "index": "12"
+    },
+    {
+      "topic": "VFreeformFreesideVFSLocalVictim02Topic007",
+      "topic_text": "Didn't your friend just say so?",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah, if he vouches for you, I guess I can trust you.",
+      "index": "13"
+    }
+  ],
+  "conversation": [],
+  "combat": []
+}

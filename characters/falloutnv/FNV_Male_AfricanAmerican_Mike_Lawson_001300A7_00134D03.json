@@ -1,0 +1,196 @@
+{
+  "name": "Mike Lawson",
+  "url": "/wiki/Mike_Lawson",
+  "dialogue_name": "VHDMikeLawson.txt",
+  "dialogue_url": "/wiki/VHDMikeLawson.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "001300A7",
+  "ref_id": "00134D03",
+  "editor_id": "VHDMikeLawson",
+  "location": "Hoover Dam power plant 01",
+  "location_url": "/wiki/Hoover_Dam_power_plant_01",
+  "descriptions": [
+    "Mike Lawson is the head engineer at Hoover Dam in 2281.",
+    "Mike Lawson has been at Hoover Dam well before the first battle. When he first came to the dam, it only had one turbine spinning, but after the First Battle of Hoover Dam, he managed to get six of the eight turbines running, though two of them have ceased working.",
+    "Mike can be found on the bottom floor of Hoover Dam power plant 01."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "New California Republic",
+  "role": "Head Engineer[1]",
+  "detailed_location": "Hoover Dam power plant 01",
+  "voice_actor": "Ron Yuan",
+  "special": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 6,
+    "Charisma": 3,
+    "Intelligence": 4,
+    "Agility": 6,
+    "Luck": 4
+  },
+  "level": "2",
+  "tag_skills": [
+    {
+      "Guns:": "35"
+    },
+    {
+      "Melee Weap.:": "33"
+    },
+    {
+      "Unarmed:": "35"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "80"
+    }
+  ],
+  "karma": "Good",
+  "voice_type": "MaleAdult08",
+  "geck_race": "AfricanAmerican",
+  "topics": [
+    {
+      "topic": "EDEContinueLog1",
+      "topic_text": "<Log Playback::Continue>",
+      "emotion": "Neutral 50",
+      "response_text": "Eyebot Duraframe Subject E is both the prototype, and the last functional model in this test group.",
+      "index": "1"
+    },
+    {
+      "topic": "EDELog1EDEChatter",
+      "topic_text": "<Log 1 Playback::Begin>",
+      "emotion": "Neutral 50",
+      "response_text": "Subject E: Diagnosis complete. Begin Recording.",
+      "index": "4"
+    },
+    {
+      "topic": "EDELog2EDEChatter2",
+      "topic_text": "<Log 2 Playback::Begin>",
+      "emotion": "Neutral 50",
+      "response_text": "Download Complete. Begin Recording.",
+      "index": "6"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Fear 25",
+      "response_text": "Don't you see everything is going to hell? I'm gonna go find someplace safe to hide out at.",
+      "index": "8"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDMikeLawsonTopic000",
+      "topic_text": "What can I do to help?",
+      "emotion": "Pained 15",
+      "response_text": "Hmm{Pause}.",
+      "index": "15"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDMikeLawsonTopic001",
+      "topic_text": "I can handle them, no problem.",
+      "emotion": "Neutral 50",
+      "response_text": "Ok, be careful out there.",
+      "index": "18"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDMikeLawsonTopic002",
+      "topic_text": "Why do you call this place your baby?",
+      "emotion": "Happy 50",
+      "response_text": "The power station, the dam, they're my babies. Well... don't tell my grandchildren I said that. Anything in here that I haven't rebuilt I've fixed.",
+      "index": "19"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDMikeLawsonTopic003",
+      "topic_text": "I'll take care of it.",
+      "emotion": "Neutral 50",
+      "response_text": "Good luck. I'm going to find a place to not get shot.",
+      "index": "21"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDMikeLawsonTopic004",
+      "topic_text": "What do you do here?",
+      "emotion": "Happy 50",
+      "response_text": "I'm the head engineer. I make sure the turbines keep spinning and the water keeps pumping.",
+      "index": "22"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDMikeLawsonTopic005",
+      "topic_text": "What do you think of Fantastic?",
+      "emotion": "Neutral 50",
+      "response_text": "Well{pause}he mostly stays out of the way, which is a good thing. He'd probably end up doing some real damage if he tried to make himself useful.",
+      "index": "23"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDMikeLawsonTopic006",
+      "topic_text": "Tell me about the last battle.",
+      "emotion": "Neutral 50",
+      "response_text": "I was down here for most of it, so I can't tell you much of what the boys with the guns were doing up top.",
+      "index": "26"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDMikeLawsonTopic007",
+      "topic_text": "Let's talk about something else.",
+      "emotion": "Neutral 50",
+      "response_text": "Alright, what's on your mind?",
+      "index": "28"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDMikeLawsonTopic010",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Good day to you, and stay out of trouble.",
+      "index": "29"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDMikeLawsonTopic011",
+      "topic_text": "How is the dam running these days?",
+      "emotion": "Sad 20",
+      "response_text": "Been better, been worse. When I first came here there was but one turbine spinning.",
+      "index": "30"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDMikeLawsonTopic012",
+      "topic_text": "What is wrong with the other turbines?",
+      "emotion": "Neutral 50",
+      "response_text": "A little bit ago one of the intake towers got clogged. No water running through it anymore to spin the generators.",
+      "index": "32"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDMikeLawsonTopic014",
+      "topic_text": "Let's talk about something else.",
+      "emotion": "Neutral 50",
+      "response_text": "You've got my ear.",
+      "index": "34"
+    },
+    {
+      "topic": "VHDMikeLawsonWarningTopic",
+      "topic_text": "<Mike Lawson Warning Greeting>",
+      "emotion": "Fear 50",
+      "response_text": "Good gracious! The Legion is using the intake tunnels to storm their way into the dam, someone has to stop them.",
+      "index": "36"
+    },
+    {
+      "topic": "vDialogueEDENVCompanionEdETopic000",
+      "topic_text": "<Log Playback::Continue>",
+      "emotion": "Neutral 50",
+      "response_text": "Please handle this information with the utmost care as it represents the sum total of the results of my research on the Duraframe Eyebots.",
+      "index": "37"
+    },
+    {
+      "topic": "vDialogueEDETopic000",
+      "topic_text": "<Log Playback::Continue>",
+      "emotion": "Neutral 50",
+      "response_text": "If you are listening to this log from one of our Enclave Outposts in Chicago, give this unit whatever repairs it needs so it can continue to Navarro.",
+      "index": "39"
+    }
+  ],
+  "conversation": [],
+  "combat": []
+}

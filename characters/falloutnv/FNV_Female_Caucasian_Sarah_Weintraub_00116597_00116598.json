@@ -1,0 +1,583 @@
+{
+  "name": "Sarah Weintraub",
+  "url": "/wiki/Sarah_Weintraub",
+  "dialogue_name": "SarahWeintraub.txt",
+  "dialogue_url": "/wiki/SarahWeintraub.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": true,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "00116597",
+  "ref_id": "00116598",
+  "editor_id": "SarahWeintraub",
+  "location": "Vault 21",
+  "location_url": "/wiki/Vault_21",
+  "descriptions": [
+    "Sarah Weintraub is the manager of the Vault 21 Hotel and Shop in 2281.",
+    "Sarah grew up in Vault 21 when it was still an occupied Vault.",
+    "With the Vault now in the possession of Mr. House,",
+    "Sarah gained managerial custody over the remaining layer of Vault 21, which she soon developed into a hotel and gift shop. Business is usually good, with most of her clientele being well-to-do NCR tourists, honeymooners, and the occasional brahmin baron.",
+    "One particular transaction by Sarah was the purchase of a unique rangefinder from a scavenger prior to the Brotherhood's occupation of HELIOS One.",
+    "Both Sarah and her brother Sheldon suffer from agoraphobia, which makes it almost impossible for them to leave the Strip, let alone their homes (Vault 21 and Michael Angelo's workshop, respectively).",
+    "Both Weintraub siblings were in the isolationist camp before Vault 21 opened. They both miss the old days",
+    "Sarah tends to speak informally, using colloquialisms and slang from 1950s hot rod culture,",
+    "Sarah Weintraub was written by Jorge Salgado, who was also the area designer on Vault 21."
+  ],
+  "race": "Human",
+  "gender": "Female",
+  "affiliation": "Vault 21",
+  "role": "Hotel managerShopkeeper4 of Diamonds",
+  "detailed_location": "Vault 21",
+  "voice_actor": "Lora Cain",
+  "special": {
+    "Strength": 4,
+    "Perception": 6,
+    "Endurance": 4,
+    "Charisma": 6,
+    "Intelligence": 6,
+    "Agility": 6,
+    "Luck": 4
+  },
+  "level": "3",
+  "tag_skills": [
+    {
+      "Guns:": "38"
+    },
+    {
+      "Science:": "38"
+    },
+    {
+      "Unarmed:": "36"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Very Good",
+  "voice_type": "FemaleAdult02",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Happy 50",
+      "response_text": "Hi! I'm Sarah, Sarah Weintraub. Welcome to the finest Vault hotel in the whole world!",
+      "index": "1"
+    },
+    {
+      "topic": "VFreeformTheStreet01SarahWeintraubTopic000",
+      "topic_text": "I would like a room, please.",
+      "emotion": "Neutral 50",
+      "response_text": "All right! We have an available room for you. That will be just 20 caps.",
+      "index": "12"
+    },
+    {
+      "topic": "VFreeformTheStreet01SarahWeintraubTopic001",
+      "topic_text": "A vault hotel? Was it like this before the war?",
+      "emotion": "Happy 50",
+      "response_text": "No, silly! Of course it wasn't always a hotel.",
+      "index": "17"
+    },
+    {
+      "topic": "VFreeformTheStreet01SarahWeintraubTopic002",
+      "topic_text": "What kinds of things do you sell in this gift shop?",
+      "emotion": "Neutral 50",
+      "response_text": "I have all sorts of things. Vault souvenirs, vault wares, vault machines, vault mementos and vault suits! And, well, lots of other vault things, too.",
+      "index": "20"
+    },
+    {
+      "topic": "VFreeformTheStreet01SarahWeintraubTopic003",
+      "topic_text": "Are you the owner of this hotel and shop?",
+      "emotion": "Neutral 50",
+      "response_text": "Well... it is my vault, all right. I mean, yeah. That is, no.",
+      "index": "21"
+    },
+    {
+      "topic": "VFreeformTheStreet01SarahWeintraubTopic004",
+      "topic_text": "Let's see what you have for sale.",
+      "emotion": "Neutral 50",
+      "response_text": "Take a look at this.",
+      "index": "23"
+    },
+    {
+      "topic": "VFreeformTheStreet01SarahWeintraubTopic005",
+      "topic_text": "I would like to ask you some questions about Vault 21.",
+      "emotion": "Neutral 50",
+      "response_text": "All right! What would you like to know?",
+      "index": "24"
+    },
+    {
+      "topic": "VFreeformTheStreet01SarahWeintraubTopic006",
+      "topic_text": "There are some things I wanted to know about you.",
+      "emotion": "Neutral 50",
+      "response_text": "I see. Okay, your move.",
+      "index": "25"
+    },
+    {
+      "topic": "VFreeformTheStreet01SarahWeintraubTopic007",
+      "topic_text": "I have Vault gear for you.",
+      "emotion": "Neutral 50",
+      "response_text": "You do? That's wonderful! Let's see what you brought.",
+      "index": "26"
+    },
+    {
+      "topic": "VFreeformTheStreet01SarahWeintraubTopic008",
+      "topic_text": "Mr. House won't give you any more trouble. I took care of that.",
+      "emotion": "Neutral 50",
+      "response_text": "{Incredulous}Do you mean that he's a goner? I can have my Vault back?",
+      "index": "28"
+    },
+    {
+      "topic": "VFreeformTheStreet01SarahWeintraubTopic009",
+      "topic_text": "Okay. 20 caps sounds good.",
+      "emotion": "Happy 50",
+      "response_text": "Go all the way down to the Vault's main hub. Your room's in the hallway to the left. Enjoy your stay!",
+      "index": "30"
+    },
+    {
+      "topic": "VFreeformTheStreet01SarahWeintraubTopic010",
+      "topic_text": "On second thought, I don't need a room right now.",
+      "emotion": "Happy 60",
+      "response_text": "Okay! How can I help you?",
+      "index": "32"
+    },
+    {
+      "topic": "VFreeformTheStreet01SarahWeintraubTopic011",
+      "topic_text": "Sarah, I plan on staying here often - got a special price for a special client?",
+      "emotion": "Happy 70",
+      "response_text": "[SUCCEEDED] Well. Sure! You seem pretty special. But that will be our secret, okay?",
+      "index": "33"
+    },
+    {
+      "topic": "VFreeformTheStreet01SarahWeintraubTopic012",
+      "topic_text": "20 caps for a crappy rat-hole? C'mon, you can do better than that.",
+      "emotion": "Anger 50",
+      "response_text": "[FAILED] What? A crappy... rat-hole!? My vault!? You are cruisin' for a bruisin', shuckster! The price stays.",
+      "index": "34"
+    },
+    {
+      "topic": "VFreeformTheStreet01SarahWeintraubTopic013",
+      "topic_text": "Goodbye.",
+      "emotion": "Happy 60",
+      "response_text": "Okay. See you soon!",
+      "index": "35"
+    },
+    {
+      "topic": "VFreeformTheStreet01SarahWeintraubTopic014",
+      "topic_text": "Here you go, 10 caps.",
+      "emotion": "Happy 50",
+      "response_text": "Okay! You know where to go. See you soon!",
+      "index": "36"
+    },
+    {
+      "topic": "VFreeformTheStreet01SarahWeintraubTopic015",
+      "topic_text": "Actually, I don't have enough caps right now.",
+      "emotion": "Neutral 50",
+      "response_text": "Okay. Anything else I can do for you?",
+      "index": "38"
+    },
+    {
+      "topic": "VFreeformTheStreet01SarahWeintraubTopic016",
+      "topic_text": "Actually, I don't have enough for that right now.",
+      "emotion": "Neutral 50",
+      "response_text": "Okay. Anything else I can do for you?",
+      "index": "39"
+    },
+    {
+      "topic": "VFreeformTheStreet01SarahWeintraubTopic017",
+      "topic_text": "Vault gear - swell. Can you show me what you got?",
+      "emotion": "Happy 50",
+      "response_text": "Oh, yeah, sure!",
+      "index": "40"
+    },
+    {
+      "topic": "VFreeformTheStreet01SarahWeintraubTopic018",
+      "topic_text": "You said that Vault 21 wasn't always a hotel?",
+      "emotion": "Happy 50",
+      "response_text": "No, silly! Of course it wasn't always a hotel.",
+      "index": "43"
+    },
+    {
+      "topic": "VFreeformTheStreet01SarahWeintraubTopic019",
+      "topic_text": "I would like to hear again about the items you sell here.",
+      "emotion": "Neutral 50",
+      "response_text": "I have all sorts of things. Vault souvenirs, vault wares, vault machines, vault mementos and vault suits! And, well, lots of other vault things, too.",
+      "index": "44"
+    },
+    {
+      "topic": "VFreeformTheStreet01SarahWeintraubTopic020",
+      "topic_text": "Sarah, stop right there. Do you actually have any vault gear?",
+      "emotion": "Pained 30",
+      "response_text": "Okay, I do, but who wants a lame sensor module, or a nitrogen canister, anyway?",
+      "index": "45"
+    },
+    {
+      "topic": "VFreeformTheStreet01SarahWeintraubTopic021",
+      "topic_text": "I'll help you out.",
+      "emotion": "Surprise 70",
+      "response_text": "You would? You really would?",
+      "index": "48"
+    },
+    {
+      "topic": "VFreeformTheStreet01SarahWeintraubTopic022",
+      "topic_text": "I might be persuaded to lend a hand.",
+      "emotion": "Surprise 10",
+      "response_text": "You would? You really would?",
+      "index": "50"
+    },
+    {
+      "topic": "VFreeformTheStreet01SarahWeintraubTopic024",
+      "topic_text": "You know, leather is my specialty. Unzip it, heat it and rub a shine onto it.",
+      "emotion": "Surprise 50",
+      "response_text": "[SUCCEEDED] Really? Well... Ha! I don't even know what to say to that!",
+      "index": "53"
+    },
+    {
+      "topic": "VFreeformTheStreet01SarahWeintraubTopic026",
+      "topic_text": "Quit yapping. I am starting to think of very unpleasant uses for those toasters.",
+      "emotion": "Anger 50",
+      "response_text": "Cool it, smarty-pants! I don't have to take that shit from anybody, you know? Get out! Don't come back until you learn how to get along.",
+      "index": "54"
+    },
+    {
+      "topic": "VFreeformTheStreet01SarahWeintraubTopic027",
+      "topic_text": "Actually, let me ask you about something else.",
+      "emotion": "Neutral 50",
+      "response_text": "Okay. Anything else I can do for you?",
+      "index": "55"
+    },
+    {
+      "topic": "VFreeformTheStreet01SarahWeintraubTopic028",
+      "topic_text": "Thinking about you in tight leather makes me want to uh... blow my top?",
+      "emotion": "Surprise 50",
+      "response_text": "[FAILED] Oh yeah? I bet you spend most of the time thinking lines rather than putting them to use. That vault merchandise is not on your menu! Next!",
+      "index": "56"
+    },
+    {
+      "topic": "VFreeformTheStreet01SarahWeintraubTopic029",
+      "topic_text": "All right. Consider it done.",
+      "emotion": "Neutral 50",
+      "response_text": "Thank you so much!",
+      "index": "57"
+    },
+    {
+      "topic": "VFreeformTheStreet01SarahWeintraubTopic031",
+      "topic_text": "All right. Consider it done.",
+      "emotion": "Neutral 50",
+      "response_text": "Thank you so much!",
+      "index": "59"
+    },
+    {
+      "topic": "VFreeformTheStreet01SarahWeintraubTopic033",
+      "topic_text": "Don't say anything then - you look good enough just nodding your head.",
+      "emotion": "Neutral 50",
+      "response_text": "[FAILED] Oh, don't floor it... There's a lot more to this than a classy chassis, you know?",
+      "index": "60"
+    },
+    {
+      "topic": "VFreeformTheStreet01SarahWeintraubTopic035",
+      "topic_text": "Do you still need more vault stuff?",
+      "emotion": "Neutral 50",
+      "response_text": "If you could bring me vault suits, I would so make it worth your while... I mean, really! But it has to be good leather, okay!?",
+      "index": "62"
+    },
+    {
+      "topic": "VFreeformTheStreet01SarahWeintraubTopic036",
+      "topic_text": "Yeah, I heard that before. What about actual vault gear?",
+      "emotion": "Pained 30",
+      "response_text": "Okay, I do, but who wants a lame sensor module, or a nitrogen canister, anyway?",
+      "index": "63"
+    },
+    {
+      "topic": "VFreeformTheStreet01SarahWeintraubTopic037",
+      "topic_text": "What is so special about this vault?",
+      "emotion": "Happy 80",
+      "response_text": "My vault is pure New Vegas. Everyone has a chance and lady luck smiles if you play your odds right!... Okay, it was like that before we had to leave.",
+      "index": "66"
+    },
+    {
+      "topic": "VFreeformTheStreet01SarahWeintraubTopic038",
+      "topic_text": "You have never actually left this place?",
+      "emotion": "Neutral 50",
+      "response_text": "Sure I have! I made the scene in The Strip. It is just that I really like it here - Vault 21 is a kick!",
+      "index": "72"
+    },
+    {
+      "topic": "VFreeformTheStreet01SarahWeintraubTopic039",
+      "topic_text": "Sarah - there is something else behind all this, right?",
+      "emotion": "Sad 20",
+      "response_text": "[SUCCEEDED] Okay - you're right. I hate going outside. It's almost impossible for me to step out of here. Still, I love my vault. It's my pad!",
+      "index": "73"
+    },
+    {
+      "topic": "VFreeformTheStreet01SarahWeintraubTopic040",
+      "topic_text": "Sheldon also likes the indoors... a lot. Are you agoraphobic too?",
+      "emotion": "Sad 20",
+      "response_text": "Okay - you're right. I hate going outside. It's almost impossible for me to step out of here. Still, I love my vault. It's my pad!",
+      "index": "74"
+    },
+    {
+      "topic": "VFreeformTheStreet01SarahWeintraubTopic041",
+      "topic_text": "Something doesn't add up, Sarah. This can't be all that.",
+      "emotion": "Neutral 50",
+      "response_text": "[FAILED] I grew up in it. I love it - my favorite place in the world!",
+      "index": "75"
+    },
+    {
+      "topic": "VFreeformTheStreet01SarahWeintraubTopic042",
+      "topic_text": "Why did he fill the vault with concrete?",
+      "emotion": "Neutral 50",
+      "response_text": "I don't know! Maybe he didn't want anybody sneaking around down there.",
+      "index": "76"
+    },
+    {
+      "topic": "VFreeformTheStreet01SarahWeintraubTopic043",
+      "topic_text": "What does Mr. House have to do with Vault 21?",
+      "emotion": "Sad 50",
+      "response_text": "Mr. House has everything to do with Vault 21. He tried to get us out before he filled it with concrete.",
+      "index": "79"
+    },
+    {
+      "topic": "VFreeformTheStreet01SarahWeintraubTopic044",
+      "topic_text": "You run the place, then?",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah - and you got to dig what I did with it! Looking as good as it should... almost.",
+      "index": "82"
+    },
+    {
+      "topic": "VFreeformTheStreet01SarahWeintraubTopic045",
+      "topic_text": "Sure. I would like that.",
+      "emotion": "Happy 80",
+      "response_text": "Righty-o, daddy-o. Let's do it!",
+      "index": "83"
+    },
+    {
+      "topic": "VFreeformTheStreet01SarahWeintraubTopic046",
+      "topic_text": "Do you get a lot of business here?",
+      "emotion": "Happy 60",
+      "response_text": "Sure! The place's packed... usually.",
+      "index": "84"
+    },
+    {
+      "topic": "VFreeformTheStreet01SarahWeintraubTopic047",
+      "topic_text": "Do you miss the old days in the vault?",
+      "emotion": "Neutral 50",
+      "response_text": "It was bustling with activity! We all knew each other so well - you see, the vault kept us all even. It's all symmetry and windows down there.",
+      "index": "86"
+    },
+    {
+      "topic": "VFreeformTheStreet01SarahWeintraubTopic049",
+      "topic_text": "Just don't say \"Here, now!\" Don't want to get the patrons all riled up, do we?",
+      "emotion": "Happy 90",
+      "response_text": "[SUCCEEDED] Ha ha ha! Okay - why don't you help me out and in the meantime I will think about where to... take advantage of your skills.",
+      "index": "90"
+    },
+    {
+      "topic": "VFreeformTheStreet01SarahWeintraubTopic050",
+      "topic_text": "Count on it.",
+      "emotion": "Happy 90",
+      "response_text": "Oh, that makes me so happy! You are too much!",
+      "index": "91"
+    },
+    {
+      "topic": "VFreeformTheStreet01SarahWeintraubTopic051",
+      "topic_text": "I still have some questions about Vault 21.",
+      "emotion": "Neutral 50",
+      "response_text": "All right! What would you like to know?",
+      "index": "92"
+    },
+    {
+      "topic": "VFreeformTheStreet01SarahWeintraubTopic053",
+      "topic_text": "I would like to know other things about you and this hotel.",
+      "emotion": "Neutral 50",
+      "response_text": "I see. Okay, your move.",
+      "index": "93"
+    },
+    {
+      "topic": "VFreeformTheStreet01SarahWeintraubTopic054",
+      "topic_text": "What did you say about not being the owner of the hotel and shop?",
+      "emotion": "Neutral 50",
+      "response_text": "I take care of it but I suppose you could say that it belongs to Mr. House.",
+      "index": "94"
+    },
+    {
+      "topic": "VFreeformTheStreet01SarahWeintraubTopic055",
+      "topic_text": "Shame that you can't fix Boomer suits. They're very similar to vault suits.",
+      "emotion": "Surprise 50",
+      "response_text": "[SUCCEEDED] Hey, who says I can't fix that? You bring me those boom-suits too, okay?",
+      "index": "95"
+    },
+    {
+      "topic": "VFreeformTheStreet01SarahWeintraubTopic056",
+      "topic_text": "I'll also bring you Boomer suits. You can fix them and sell them.",
+      "emotion": "Surprise 50",
+      "response_text": "[FAILED] Do I look like a seamstress to you? Those boomsters can stay in their nowhereville until the sun runs out of gas, for all I care. No deal.",
+      "index": "96"
+    },
+    {
+      "topic": "VFreeformTheStreet01SarahWeintraubTopic057",
+      "topic_text": "Shame that you can't fix Boomer suits. They're very similar to vault suits.",
+      "emotion": "Surprise 50",
+      "response_text": "[SUCCEEDED] Hey, who says I can't fix that? You bring me those boom-suits too, okay?",
+      "index": "97"
+    },
+    {
+      "topic": "VFreeformTheStreet01SarahWeintraubTopic058",
+      "topic_text": "I'll also bring you Boomer suits. You can fix them and sell them.",
+      "emotion": "Surprise 50",
+      "response_text": "[FAILED] Do I look like a seamstress to you? Those boomsters can stay in their nowhereville until the sun runs out of gas, for all I care. No deal.",
+      "index": "98"
+    },
+    {
+      "topic": "VFreeformTheStreet01SarahWeintraubTopic059",
+      "topic_text": "Shame that you can't fix Boomer suits. They're very similar to vault suits.",
+      "emotion": "Surprise 50",
+      "response_text": "[SUCCEEDED] Hey, who says I can't fix that? You bring me those boom-suits too, okay?",
+      "index": "99"
+    },
+    {
+      "topic": "VFreeformTheStreet01SarahWeintraubTopic060",
+      "topic_text": "I'll also bring you Boomer suits. You can fix them and sell them.",
+      "emotion": "Surprise 50",
+      "response_text": "[FAILED] Do I look like a seamstress to you? Those boomsters can stay in their nowhereville until the sun runs out of gas, for all I care. No deal.",
+      "index": "100"
+    },
+    {
+      "topic": "VFreeformTheStreet01SarahWeintraubTopic062",
+      "topic_text": "Yeah, I would like that.",
+      "emotion": "Happy 80",
+      "response_text": "Oh, that makes me so happy! You are too much!",
+      "index": "101"
+    },
+    {
+      "topic": "VFreeformTheStreet01SarahWeintraubTopic064",
+      "topic_text": "I'm looking for an antique rangefinder somebody might've sold you.",
+      "emotion": "Neutral 50",
+      "response_text": "Wow, I wish I had more of them. All this interest. It'd be my biggest seller.",
+      "index": "102"
+    },
+    {
+      "topic": "VFreeformTheStreet01SarahWeintraubTopic065",
+      "topic_text": "What kind of collar?",
+      "emotion": "Neutral 50",
+      "response_text": "Well it was metal, and kind of thick. At first I thought he'd come from Gomorrah, but they're more into leather there.",
+      "index": "105"
+    },
+    {
+      "topic": "VFreeformTheStreet01SarahWeintraubTopic066",
+      "topic_text": "Did you happen to find out where he was from?",
+      "emotion": "Neutral 50",
+      "response_text": "No, but I know where he was going. He asked me if I knew of any place where he could hide out for a while.",
+      "index": "107"
+    },
+    {
+      "topic": "VFreeformTheStreet01SarahWeintraubTopic067",
+      "topic_text": "What'd you tell him?",
+      "emotion": "Neutral 50",
+      "response_text": "I said I didn't know about anything like that around here. But if he wanted to live for free, a lot of people do that in Freeside.",
+      "index": "110"
+    },
+    {
+      "topic": "VFreeformTheStreet01SarahWeintraubTopic068",
+      "topic_text": "What did he look like?",
+      "emotion": "Neutral 50",
+      "response_text": "Oh he was pretty average, I'd say. Average height, average age. Dark hair. Beard of some kind.",
+      "index": "113"
+    },
+    {
+      "topic": "VFreeformTheStreet01SarahWeintraubTopic069",
+      "topic_text": "I'll let you in, later, when you're ready for a night to remember.",
+      "emotion": "Happy 70",
+      "response_text": "{Playful Seduction}You're kicking me into gear, huh? I think I'll drive my chassis over to your pad. Wait for me down there, and don't forget the oil.",
+      "index": "114"
+    },
+    {
+      "topic": "VFreeformTheStreet01SarahWeintraubTopic071",
+      "topic_text": "I'm looking for Carlitos. Do you know him?",
+      "emotion": "Neutral 50",
+      "response_text": "{Almost Suspicious}Carlitos, huh? Yeah, I do. Try the diner, but don't start any trouble, you hear?",
+      "index": "115"
+    },
+    {
+      "topic": "VFreeformTheStreet01SarahWeintraubTopic075",
+      "topic_text": "You know Doc Mitchell?",
+      "emotion": "Surprise 70",
+      "response_text": "{Surprised, Excitedly}Mitch!? You know \"mole-butt?\"",
+      "index": "116"
+    },
+    {
+      "topic": "VFreeformTheStreet01SarahWeintraubTopic086",
+      "topic_text": "Thank you, I'm ready for it too.",
+      "emotion": "Neutral 50",
+      "response_text": "Okay! You know where to go. See you soon!",
+      "index": "119"
+    },
+    {
+      "topic": "VVault21TourTopic000",
+      "topic_text": "VVault21TourTopic000",
+      "emotion": "Happy 50",
+      "response_text": "All right! Please, follow me. We'll head into the vault right away.",
+      "index": "121"
+    },
+    {
+      "topic": "VVault21TourTopic001",
+      "topic_text": "VVault21TourTopic001",
+      "emotion": "Happy 50",
+      "response_text": "This bunker protects the entrance to the vault - solid stone outside and thick steel on the inside!",
+      "index": "122"
+    },
+    {
+      "topic": "VVault21TourTopic002",
+      "topic_text": "VVault21TourTopic002",
+      "emotion": "Neutral 50",
+      "response_text": "Above us there's the control center for this level of the vault's life-support systems, electric grid, radioactive shields and all that jazz.",
+      "index": "123"
+    },
+    {
+      "topic": "VVault21TourTopic003",
+      "topic_text": "VVault21TourTopic003",
+      "emotion": "Sad 50",
+      "response_text": "Don't get lost! My vault has many corridors and rooms - although it is no longer symmetrical, after Mr. House threw us out.",
+      "index": "124"
+    },
+    {
+      "topic": "VVault21TourTopic004",
+      "topic_text": "VVault21TourTopic004",
+      "emotion": "Happy 50",
+      "response_text": "This is the main game-hall. Here we settled the big disputes among the vault's levels.",
+      "index": "125"
+    },
+    {
+      "topic": "VVault21TourTopic005",
+      "topic_text": "VVault21TourTopic005",
+      "emotion": "Neutral 50",
+      "response_text": "Chosen representatives gambled against each other here. The winner earned the right to settle the dispute as wished by the collective.",
+      "index": "126"
+    },
+    {
+      "topic": "VVault21TourTopic006",
+      "topic_text": "VVault21TourTopic006",
+      "emotion": "Happy 70",
+      "response_text": "We used to have such parties in this diner! A bitch to clean later... but well worth it!",
+      "index": "127"
+    },
+    {
+      "topic": "VVault21TourTopic007",
+      "topic_text": "VVault21TourTopic007",
+      "emotion": "Happy 80",
+      "response_text": "This hall leads to our guest rooms. You can use the first room on our left. But no snooping next door! That's my room, always was.",
+      "index": "128"
+    },
+    {
+      "topic": "VVault21TourTopic008",
+      "topic_text": "VVault21TourTopic008",
+      "emotion": "Neutral 50",
+      "response_text": "Down there is the game room! Each side of the vault had one... but the other is filled with concrete now. Okay, that wraps it up. I'll see you soon!",
+      "index": "129"
+    }
+  ],
+  "conversation": [],
+  "combat": []
+}

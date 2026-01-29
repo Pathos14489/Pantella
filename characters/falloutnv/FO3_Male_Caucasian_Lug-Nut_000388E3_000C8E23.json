@@ -1,0 +1,108 @@
+{
+  "name": "Lug-Nut",
+  "url": "/wiki/Lug-Nut",
+  "dialogue_name": "LugNut.txt",
+  "dialogue_url": "/wiki/LugNut.txt",
+  "spawned_dead": false,
+  "spawned": true,
+  "essential": false,
+  "can_be_enslaved": true,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000388E3",
+  "ref_id": "000C8E23",
+  "editor_id": "LugNut",
+  "location": "Marigold station",
+  "location_url": "/wiki/Marigold_station",
+  "descriptions": [
+    "Lug-Nut is a raider in the Capital Wasteland in 2277.",
+    "An adversary of Ronald Laren, Lug-Nut is a raider who suffers from episodes of depression and mania due to his chem addiction. He recently had two pairs of nightwear made by a man known as The Tailor, a post-War master of apparel. Lug-Nut sent one set of the nightwear to his brother Lag-Bolt.",
+    "Lug-Nut is mentioned by Sierra Petrovita when asked more about Ronald Laren. She will start talking about how tough Ronald is and will mention Lug-Nut and two other raiders. The two unknown raiders were killed by Ronald, who then punched Lug-Nut in the face."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Raiders",
+  "role": "Raider",
+  "detailed_location": "Marigold station",
+  "voice_actor": "Gregory Gorton",
+  "special": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 3,
+    "Intelligence": 3,
+    "Agility": 7,
+    "Luck": 5
+  },
+  "level": "4",
+  "tag_skills": [
+    {
+      "Melee Weap.:": "45"
+    },
+    {
+      "Small Guns:": "47"
+    },
+    {
+      "Unarmed:": "41"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Evil",
+  "voice_type": "MaleAdult01DefaultBDC",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "DialogLugNut01",
+      "topic_text": "Okay... okay. Here. No need for violence.",
+      "emotion": "Disgust 100",
+      "response_text": "Yeah. That's what I thought. Now scram!",
+      "index": "1"
+    },
+    {
+      "topic": "DialogLugNut02",
+      "topic_text": "How about you pay me for it?",
+      "emotion": "Disgust 100",
+      "response_text": "I warned you, I was only going to ask once. Now I'm gonna take it from you!",
+      "index": "2"
+    },
+    {
+      "topic": "DialogLugNut03",
+      "topic_text": "No way, it's mine!",
+      "emotion": "Disgust 100",
+      "response_text": "I warned you, I was only going to ask once. Now I'm gonna take it from you!",
+      "index": "3"
+    },
+    {
+      "topic": "DialogLugNut04",
+      "topic_text": "Come and get it from me, if you think you can.",
+      "emotion": "Disgust 100",
+      "response_text": "That was probably the dumbest thing you could have said. Fine, have it your way.",
+      "index": "4"
+    },
+    {
+      "topic": "DialogLugNut04SC",
+      "topic_text": "I'm keeping it, and I'd advise you to back off before I get angry!",
+      "emotion": "Disgust 70",
+      "response_text": "All right, all right. My mistake. It obviously belongs to you.",
+      "index": "5"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Anger 100",
+      "response_text": "I'm only gonna ask you this one time. Give me the Naughty Nightwear!",
+      "index": "7"
+    },
+    {
+      "topic": "SpeechChallengeFailure",
+      "topic_text": "SpeechChallengeFailure",
+      "emotion": "Anger 70",
+      "response_text": "Wrong answer, dead meat!",
+      "index": "9"
+    }
+  ],
+  "conversation": [],
+  "combat": []
+}

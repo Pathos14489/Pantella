@@ -1,0 +1,98 @@
+{
+  "name": "Preacher's hostage",
+  "url": "/wiki/Preacher%27s_hostage",
+  "dialogue_name": "FFDCAdamsMorganCrazedWastelander.txt",
+  "dialogue_url": "/wiki/FFDCAdamsMorganCrazedWastelander.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "0005213B",
+  "ref_id": "0005213C",
+  "editor_id": "FFDCAdamsMorganCrazedWastelander",
+  "location": "Seward Square",
+  "location_url": "/wiki/Seward_Square",
+  "descriptions": [
+    "The Preacher's hostage (wastelander in-game) is the Preacher's hostage in 2277.",
+    "Captured by the Preacher in an alley, he has been there for more than a day, and he must get out to survive, however, he will be blown up if he tries to leave or enter."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "The Preacher",
+  "role": "Hostage",
+  "detailed_location": "Seward Square",
+  "voice_actor": "Gregory Gorton",
+  "special": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 4,
+    "Intelligence": 4,
+    "Agility": 6,
+    "Luck": 4
+  },
+  "mod_special_values": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 4,
+    "Intelligence": 4,
+    "Agility": 7,
+    "Luck": 4
+  },
+  "level": "1",
+  "tag_skills": [
+    {
+      "Melee Weap.:": "31"
+    },
+    {
+      "Small Guns:": "31(33)"
+    },
+    {
+      "Sneak:": "31(33)"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "25(30)"
+    }
+  ],
+  "karma": "Neutral",
+  "geck_race": "CaucasianRaider",
+  "topics": [
+    {
+      "topic": "FFDCAdamsMorganWastelanderTrick",
+      "topic_text": "Why don't you just go over and see what he's yelling about?",
+      "emotion": "Neutral 50",
+      "response_text": "No! No way! He'll set the bombs off if I go anywhere near him!",
+      "index": "1"
+    },
+    {
+      "topic": "FFDCAdamsMorganWastelanderTrick1",
+      "topic_text": "Oh, come on. He'll listen to reason. Go talk to him.",
+      "emotion": "Neutral 50",
+      "response_text": "Oh... uhm... well... you look like someone who's pretty smart... so if you say so. I'll give it a try.",
+      "index": "2"
+    },
+    {
+      "topic": "FFDCAdamsMorganWastelanderTrick2",
+      "topic_text": "Hmm. Good point. Best to leave him alone.",
+      "emotion": "Neutral 50",
+      "response_text": "I'd give anything if he'd just stop yelling...",
+      "index": "4"
+    },
+    {
+      "topic": "FFDCAdamsMorganWastelanderWho",
+      "topic_text": "What's that guy's problem?",
+      "emotion": "Neutral 50",
+      "response_text": "He's... he's been up there for days! He's got all of those mines wired to a trigger. He won't let anyone in or out of the alley.",
+      "index": "5"
+    }
+  ],
+  "conversation": [],
+  "combat": []
+}

@@ -1,0 +1,131 @@
+{
+  "name": "Tinker Joe",
+  "url": "/wiki/Tinker_Joe",
+  "dialogue_name": "FFER54NPC1.txt",
+  "dialogue_url": "/wiki/FFER54NPC1.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": true,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "00036F86",
+  "ref_id": "00036F8D",
+  "editor_id": "FFER54NPC1",
+  "location": "Outside",
+  "location_url": null,
+  "descriptions": [
+    "Tinker Joe is a merchant patrolling near the RobCo facility in Fallout 3.",
+    "Tinker Joe is a traveling merchant who wanders the wastes with robotic companions, including an old Mister Gutsy army unit named Sergeant RL-3. He sells miscellaneous items, ranging from junk to equipment and weaponry.",
+    "He is keen to sell Sergeant RL-3, to a point where he may sell him at a discount of 500 caps to the Lone Wanderer as he is tired of waking up to the Mister Gutsy playing \"revelry\" at him.",
+    "Tinker Joe moves between the following locations:",
+    "Joe sells Sergeant RL-3, a robot companion, for the price of 1,000 bottle caps (500 with a Barter skill of 70) if the player character has neutral Karma. If he is dead, Sergeant RL-3 will no longer be available for recruitment as a companion."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Traders",
+  "role": "Merchant",
+  "detailed_location": "RobCo facilityTenpenny Toweroutskirts",
+  "voice_actor": "Paul Eiding",
+  "special": {
+    "Strength": 4,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 6,
+    "Intelligence": 7,
+    "Agility": 4,
+    "Luck": 5
+  },
+  "level": "4",
+  "tag_skills": [
+    {
+      "Barter:": "49(54)"
+    },
+    {
+      "Lockpick:": "47"
+    },
+    {
+      "Science:": "51"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "80"
+    },
+    {
+      "Critical Chance:": "5%"
+    },
+    {
+      "Unarmed Dam.:": "1.15"
+    },
+    {
+      "Poison Resist.:": "15%"
+    },
+    {
+      "Rad. Resist.:": "6%"
+    },
+    {
+      "Carry Weight:": "190"
+    },
+    {
+      "Damage Res.:": "2%"
+    }
+  ],
+  "karma": "Neutral",
+  "geck_race": "AsianOldAged",
+  "topics": [
+    {
+      "topic": "FFEScavengerBarterTopicYou have anything for sale?",
+      "topic_text": "What are you selling?",
+      "emotion": "Happy 50",
+      "response_text": "Various things. You never know what might come in handy.",
+      "index": "1"
+    },
+    {
+      "topic": "FollowerRK5Purchase1",
+      "topic_text": "I'd like to buy a robot.",
+      "emotion": "Happy 50",
+      "response_text": "Of course you would, of course! Well, it just happens that I've got a beaut of a deal on this customized Gutsy.",
+      "index": "7"
+    },
+    {
+      "topic": "FollowerRK5Purchase2B",
+      "topic_text": "You just don't want to sell to me, is that it?",
+      "emotion": "Happy 25",
+      "response_text": "Trust me, friend, Tinker Joe does not turn down the opportunity to make a sale. If that Gutsy would go with you, I'd sell him in a heartbeat.",
+      "index": "12"
+    },
+    {
+      "topic": "FollowerRK5Purchase2a",
+      "topic_text": "That's a lot of caps, but I guess it's a pretty rare find.",
+      "emotion": "Happy 50",
+      "response_text": "Hey, I said it was a beaut of a deal, didn't I?",
+      "index": "24"
+    },
+    {
+      "topic": "FollowerRK5Purchase3A",
+      "topic_text": "How about this: I'll take him off your hands for 500 caps.",
+      "emotion": "Surprise 25",
+      "response_text": "That's a hard bargain. But if I wake up with that thing playing revelry at me one more time, I'll go insane.",
+      "index": "30"
+    },
+    {
+      "topic": "FollowerRK5Purchase3B",
+      "topic_text": "I'll pass. I don't need a crazy, robotic soldier following me around.",
+      "emotion": "Sad 10",
+      "response_text": "You say that now, but you might end up reconsidering that when you're surrounded by radscorpions.{Mildly chiding}",
+      "index": "34"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Happy 50",
+      "response_text": "Hello, stranger. I'm Tinker Joe, premier supplier of robotic parts and service throughout the DC Wasteland.",
+      "index": "36"
+    }
+  ],
+  "conversation": [],
+  "combat": []
+}

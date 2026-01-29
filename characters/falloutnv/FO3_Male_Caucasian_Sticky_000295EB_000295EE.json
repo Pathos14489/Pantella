@@ -1,0 +1,340 @@
+{
+  "name": "Sticky",
+  "url": "/wiki/Sticky",
+  "dialogue_name": "Sticky.txt",
+  "dialogue_url": "/wiki/Sticky.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000295EB",
+  "ref_id": "000295EE",
+  "editor_id": "Sticky",
+  "location": "Little Lamplight,Big Town",
+  "location_url": "/wiki/Little_Lamplight",
+  "descriptions": [
+    "Sticky, Sticky Hands, or Jack is a resident of Little Lamplight in 2277.",
+    "He was known to his Lamplighter friends as \"Sticky Hands,\" though he calls himself Jack now that he is older. If questioned what his nickname meant, he only replies, \"use your imagination.\" He is a chatterbox who can be annoying and self-centered. Despite being 16, he acts younger than that, although this is due to having a lack of adult role models.",
+    "Sticky states that his age is 18, while everybody else says he is 16. In 2277, he is forced to leave Little Lamplight as all children must eventually do once they reach the age of 16.",
+    "He is first encountered after gaining entry into Little Lamplight, where the other Lamplighters will be telling him he needs to leave, while Sticky displays his unhappiness at leaving.",
+    "Sticky is friends with Red in Big Town. He refers to her as his \"girlfriend.\"",
+    "Before the unmarked quest Happy Birthday to You, he can be found in Little Lamplight. Upon successful completion of the quest, he will reside in Big Town spending his days in the town hall, and nights sleeping in the common house."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Big Town(optional)Little Lamplight",
+  "role": "Temporarycompanion",
+  "detailed_location": "Big Town (optional)Little Lamplight",
+  "voice_actor": "Craig Sechler",
+  "special": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 4,
+    "Intelligence": 4,
+    "Agility": 6,
+    "Luck": 4
+  },
+  "mod_special_values": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 4,
+    "Intelligence": 4,
+    "Agility": 7,
+    "Luck": 4
+  },
+  "level": "4→8",
+  "tag_skills": [
+    {
+      "Barter:": "41→59"
+    },
+    {
+      "Small Guns:": "47→65(49→67)"
+    },
+    {
+      "Unarmed:": "43→61(45→63)"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "45→65(50→70)"
+    },
+    {
+      "Critical Chance:": "4%"
+    },
+    {
+      "Unarmed Dam.:": "2.55→3.45"
+    },
+    {
+      "Poison Resist.:": "15%(20%)"
+    },
+    {
+      "Rad. Resist.:": "6%(8%)"
+    },
+    {
+      "Carry Weight:": "210"
+    },
+    {
+      "Damage Res.:": "3%"
+    }
+  ],
+  "karma": "Good",
+  "voice_type": "MaleAdult04DC",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "BigtownTownServicesDo you have any traders in town? Any doctors?",
+      "topic_text": "This is a town, right? Where are the stores?",
+      "emotion": "Neutral 50",
+      "response_text": "I guess adults don't go to stores that much. That must be why there isn't anything here. Yeah. Yeah, that's it.{Sticky is unsure of his explanation. He doesn't know adult behavior or the Wasteland very well.}",
+      "index": "1"
+    },
+    {
+      "topic": "BigtownTownWhatsWrong",
+      "topic_text": "This place looks like a ghost town.",
+      "emotion": "Happy 50",
+      "response_text": "Nah, no way. Bigtown is a great place to be! I bet I could live over there, in that building with all the bullet holes and burn marks. Cool!{Sticky is completely oblivious to the signs of death and desperation.}",
+      "index": "2"
+    },
+    {
+      "topic": "BigtownTownWhereDidYouComeFromWhere did you people come from, anyway?",
+      "topic_text": "Any idea why there are barricades surrounding the town?",
+      "emotion": "Happy 50",
+      "response_text": "Well, I don't know. I guess the grownups built it when they got sick of little brats always hanging around them. I bet that's it!{Sticky is utterly clueless and easily excitable.}",
+      "index": "4"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "Oooh. I can't wait. Show us what to do!",
+      "index": "5"
+    },
+    {
+      "topic": "MS01BigTownLocation",
+      "topic_text": "Big Town? I've been there before.",
+      "emotion": "Surprise 50",
+      "response_text": "You have?{surprised and excited}",
+      "index": "17"
+    },
+    {
+      "topic": "MS01GoToBigTown",
+      "topic_text": "All right, let's go to Big Town.",
+      "emotion": "Happy 100",
+      "response_text": "Alright! Yeah! Big Town, here we come!",
+      "index": "20"
+    },
+    {
+      "topic": "MS01GreetingA1",
+      "topic_text": "Where the grownups live?",
+      "emotion": "Surprise 75",
+      "response_text": "Big Town. You've never heard of it? It's where all the grownups go.{shocked the player hasn't heard of Big Town}",
+      "index": "21"
+    },
+    {
+      "topic": "MS01GreetingA2",
+      "topic_text": "Looks to me like you want someone to escort you to Big Town.",
+      "emotion": "Surprise 100",
+      "response_text": "Nah, I'm a grownup now. I can handle myself.{caught off guard and covering up his motive}",
+      "index": "24"
+    },
+    {
+      "topic": "MS01GreetingA3",
+      "topic_text": "I want to visit Little Lamplight first. Maybe later.",
+      "emotion": "Disgust 25",
+      "response_text": "Why would you want to visit a bunch of snot-nosed children?{dismissive}",
+      "index": "27"
+    },
+    {
+      "topic": "MS01GreetingB1",
+      "topic_text": "Fine. I'll take you to Big Town. But first I need to visit Little Lamplight.",
+      "emotion": "Sad 20",
+      "response_text": "I'm not allowed in Little Lamplight anymore.{bitter (but trying to hide it)}",
+      "index": "30"
+    },
+    {
+      "topic": "MS01GreetingB2",
+      "topic_text": "You got any caps? I'll escort you Big Town, but it'll cost you.",
+      "emotion": "Surprise 100",
+      "response_text": "Um... yeah... I got lots of caps! But they, um, they're at Big Town, so I can give them to you when we get there. Yeah!{(not exactly lying, but not exactly sure it's true) \"yeah, that's the ticket!\"}",
+      "index": "33"
+    },
+    {
+      "topic": "MS01GreetingB3",
+      "topic_text": "You're on your own. I'm not interested in babysitting duty.",
+      "emotion": "Anger 25",
+      "response_text": "I'm not a baby! I'm a grownup!{(pouting) extremely defensive (still childlike, but he's getting kicked out of his home because he's an adult)}",
+      "index": "36"
+    },
+    {
+      "topic": "MS01NoEscortToBigTown",
+      "topic_text": "I can't take your babbling. You're on your own. Good luck getting to Big Town.",
+      "emotion": "Anger 100",
+      "response_text": "What? But you said you'd take me. This bites. You really suck, you know that?! I hope a mutant bites your face off and you die! I hate you!{angry pouting}",
+      "index": "39"
+    },
+    {
+      "topic": "MS01RedShortyGiveWeaponLooks like you could use a weapon.",
+      "topic_text": "You're going to need a weapon if you want to live to see Big Town.",
+      "emotion": "Happy 100",
+      "response_text": "Oh wow, cool. What've you got for me? Minigun? Flamer? Maybe a missile launcher?{giddy at the prospect of getting his hands on a weapon}",
+      "index": "40"
+    },
+    {
+      "topic": "MS01ShutUp",
+      "topic_text": "For the love of God... Shut the hell up!",
+      "emotion": "Anger 25",
+      "response_text": "You shut up!{(childish \"You shut up\", \"No YOU shut up\" back  and forth)}",
+      "index": "41"
+    },
+    {
+      "topic": "MS01ShutUp1",
+      "topic_text": "Shut up, you!",
+      "emotion": "Happy 50",
+      "response_text": "No, YOU shut up!{(childish \"You shut up\", \"No YOU shut up\" back  and forth)}",
+      "index": "42"
+    },
+    {
+      "topic": "MS01ShutUp2",
+      "topic_text": "I'm not playing this game.",
+      "emotion": "Disgust 50",
+      "response_text": "Whatever.{dismissive}",
+      "index": "47"
+    },
+    {
+      "topic": "MS01ShutupCaps",
+      "topic_text": "Wow, you're annoying. You'd better make this worth my time.",
+      "emotion": "Surprise 50",
+      "response_text": "Um... yeah... I got tons of caps at Big Town. Well, they're not mine really. My girl friend's got them. Her name's Red.{not lying but sounding like he's making it up as he goes along}",
+      "index": "48"
+    },
+    {
+      "topic": "MS01ShutupSpeech",
+      "topic_text": "You're starting to get on my nerves, Sticky...",
+      "emotion": "Sad 100",
+      "response_text": "Oh... I'm sorry. I was just really excited. I'll, ah... I'll shut up now.{(sad and embarrassed) that he was told he was acting childish}",
+      "index": "50"
+    },
+    {
+      "topic": "MS01StickyPartyHat",
+      "topic_text": "What's with the party hat?",
+      "emotion": "Sad 50",
+      "response_text": "Oh. I forgot I had that on. It was for my birthday. Here, you take it. I don't want it anymore.{wants to get rid of a memento of sad memories}",
+      "index": "51"
+    },
+    {
+      "topic": "MS01StickyWait",
+      "topic_text": "Wait here.",
+      "emotion": "Fear 100",
+      "response_text": "Oh... okay... but PLEASE don't leave me here by myself... come back for me soon, okay?{imploring the player not to leave him alone}",
+      "index": "52"
+    },
+    {
+      "topic": "SpeechChallengeFailure",
+      "topic_text": "SpeechChallengeFailure",
+      "emotion": "Disgust 75",
+      "response_text": "I don't have to take that crap from you! Shut up!{like a naughty adolescent talking back to a parent}",
+      "index": "54"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "BigTownGoodbye",
+      "topic_text": "BigTownGoodbye",
+      "emotion": "Disgust 50",
+      "response_text": "Ah, but that sounds boring! I know   think of something cooler, and I'll come back later.{ }",
+      "index": "55"
+    },
+    {
+      "topic": "BigTownResponse",
+      "topic_text": "BigTownResponse",
+      "emotion": "Neutral 50",
+      "response_text": "I'm having a great time, here, Timebomb. But is everyone always this glum?{Sticky doesn't understand why everyone is so unhappy.}",
+      "index": "61"
+    },
+    {
+      "topic": "GOODBYE",
+      "topic_text": "I have to go now.",
+      "emotion": "Fear 100",
+      "response_text": "I'm worried about Red!{worried about his girlfriend who's in trouble}",
+      "index": "65"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Happy 100",
+      "response_text": "Alright! Hi there!{excited he might have found the person to help him}",
+      "index": "71"
+    },
+    {
+      "topic": "MS01CrowdSay",
+      "topic_text": "MS01CrowdSay",
+      "emotion": "Surprise 75",
+      "response_text": "Yeah baby!{(cheering) in an excited cheering mob}",
+      "index": "80"
+    },
+    {
+      "topic": "MS01StickyGoodbyeConv",
+      "topic_text": "MS01StickyGoodbyeConv",
+      "emotion": "Fear 80",
+      "response_text": "There's nothing happy about it. This is the worst day of my life.{depressed and scared}",
+      "index": "86"
+    },
+    {
+      "topic": "MS01StickyHandsCantGoIn",
+      "topic_text": "MS01StickyHandsCantGoIn",
+      "emotion": "Sad 25",
+      "response_text": "I'll wait over here for you. When you're done playing with the children we'll go to Big Town.{(accidentally sarcastic) trying to hide his disappointment}",
+      "index": "89"
+    },
+    {
+      "topic": "MS01StickyHandsEscortSayTo",
+      "topic_text": "MS01StickyHandsEscort",
+      "emotion": "Neutral 50",
+      "response_text": "I know, let's make up a story to pass the time.{making up a story (like a little kid) because he's bored}",
+      "index": "90"
+    },
+    {
+      "topic": "MS01StickyHandsEscortStory",
+      "topic_text": "MS01StickHandsEscortStory",
+      "emotion": "Neutral 50",
+      "response_text": "Once upon a time, there was this man...{making up a story (like a little kid) because he's bored}",
+      "index": "95"
+    },
+    {
+      "topic": "MS01StickyHandsGetPlayersAttention",
+      "topic_text": "MS01StickyHandsGetPlayersAttention",
+      "emotion": "Surprise 100",
+      "response_text": "Hey you. Yeah you! Don't bother with the children at Little Lamplight. Let's go to Big Town instead!{calling out (wants some one to escort him to Big Town)}",
+      "index": "110"
+    },
+    {
+      "topic": "MS01StickyHandsHurrayBigTown",
+      "topic_text": "MS01StickyHandsHurrayBigTown",
+      "emotion": "Happy 100",
+      "response_text": "There it is! We're almost there! Come on! Yiiipppiiieee!{extremely excited}",
+      "index": "111"
+    },
+    {
+      "topic": "MS01StickyHandsSneak",
+      "topic_text": "MS01StickyHandsSneak",
+      "emotion": "Happy 50",
+      "response_text": "Right. Be sneaky. I can do that!{(like a kid playing a game) going into \"stealth mode\"}",
+      "index": "112"
+    }
+  ],
+  "combat": [
+    {
+      "topic": "Attack",
+      "topic_text": "Attack",
+      "emotion": "Happy 50",
+      "response_text": "Come on, guys! We can do this!",
+      "index": "115"
+    }
+  ]
+}

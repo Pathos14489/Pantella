@@ -1,0 +1,444 @@
+{
+  "name": "Ringo¹",
+  "url": "/wiki/Ringo",
+  "dialogue_name": "GSRingo.txt",
+  "dialogue_url": "/wiki/GSRingo.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": true,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "00104C7C",
+  "ref_id": "00104C7D",
+  "editor_id": "GSRingo",
+  "location": "Crimson Caravan Company",
+  "location_url": "/wiki/Crimson_Caravan_Company",
+  "descriptions": [
+    "Ringo is a trader for the Crimson Caravan in the Mojave Wasteland, forced into hiding in Goodsprings after a run-in with the Powder Gangers.",
+    "Around a week before the Courier awoke from their coma following the ambush by Benny, According to Ringo, his group put up a token resistance, with himself taking out some of the convicts before being forced to flee into the mining town, alone.",
+    "With the permission of Trudy, the local bartender and de facto mayor, the caravaneer was allowed to shelter and lay low at an abandoned gas station. Knowing the Powder Gangers' savage reputation, however, Ringo expects the worst, for the convicts thirsting for blood and for Goodsprings to hand him over to save themselves, leaving him tense and on edge since.",
+    "A short while after the Courier awakens, Ringo is proven right, as the leader of the group he escaped from, Joe Cobb,"
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Crimson CaravanGoodsprings",
+  "role": "Trader",
+  "detailed_location": "Goodsprings gas stationCrimson Caravan Company(optional)",
+  "voice_actor": "Yuri LowenthalSteve Blum(beta)",
+  "special": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 6,
+    "Charisma": 3,
+    "Intelligence": 4,
+    "Agility": 6,
+    "Luck": 4
+  },
+  "level": "5",
+  "tag_skills": [
+    {
+      "Guns:": "47"
+    },
+    {
+      "Melee Weap.:": "45"
+    },
+    {
+      "Unarmed:": "47"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "120"
+    }
+  ],
+  "karma": "Good",
+  "voice_type": "MaleAdult01Default",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Happy 50",
+      "response_text": "Hey there! Here's the rest of the payment I promised you back in Goodsprings.",
+      "index": "1"
+    },
+    {
+      "topic": "PLAYERFIREWEAPON",
+      "topic_text": "PLAYER FIRE WEAPON",
+      "emotion": "Neutral 50",
+      "response_text": "Ammo costs money, you know!",
+      "index": "11"
+    },
+    {
+      "topic": "PLAYERINIRONSITES",
+      "topic_text": "PLAYER IN IRON SITES",
+      "emotion": "Neutral 50",
+      "response_text": "Stop that. I mean it!",
+      "index": "13"
+    },
+    {
+      "topic": "PLAYERLAYMINE",
+      "topic_text": "PLAYER LAY MINE",
+      "emotion": "Neutral 50",
+      "response_text": "Hey, you dropped something.",
+      "index": "15"
+    },
+    {
+      "topic": "PLAYERTHROWGRENADE",
+      "topic_text": "PLAYER THROW GRENADE",
+      "emotion": "Neutral 50",
+      "response_text": "Run!",
+      "index": "17"
+    },
+    {
+      "topic": "VDialogueCrimsonCaravanGSRingoTopic001",
+      "topic_text": "Who's in charge here?",
+      "emotion": "Neutral 50",
+      "response_text": "Alice McLafferty runs the Crimson Caravan. You can find her over in the main office.",
+      "index": "19"
+    },
+    {
+      "topic": "VDialogueCrimsonCaravanGSRingoTopic002",
+      "topic_text": "So what's next for you?",
+      "emotion": "Neutral 50",
+      "response_text": "I'm getting ready to run a caravan up towards Utah. There's a town called New Canaan which is supposed to be pretty prosperous.",
+      "index": "20"
+    },
+    {
+      "topic": "VDialogueCrimsonCaravanGSRingoTopic003",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "I'll see you around.",
+      "index": "22"
+    },
+    {
+      "topic": "VFreeformGoodspringsGSRingoTopic000",
+      "topic_text": "Let's do this.",
+      "emotion": "Neutral 50",
+      "response_text": "All right, I'm ready. I hope.",
+      "index": "23"
+    },
+    {
+      "topic": "VFreeformGoodspringsGSRingoTopic001",
+      "topic_text": "Stay here for now. I'll see if there's anything else I can do first.",
+      "emotion": "Neutral 50",
+      "response_text": "All right. I'll just wait here until you come get me.",
+      "index": "24"
+    },
+    {
+      "topic": "VFreeformGoodspringsGSRingoTopic002",
+      "topic_text": "I've decided to kill you for Joe Cobb.",
+      "emotion": "Neutral 50",
+      "response_text": "What? No!",
+      "index": "25"
+    },
+    {
+      "topic": "VFreeformGoodspringsGSRingoTopic003",
+      "topic_text": "Where can I find more cards?",
+      "emotion": "Neutral 50",
+      "response_text": "Just keep an eye out for them while you travel. I've found cards in old boxes or forgotten on shelves. Can find some for sale, too.",
+      "index": "26"
+    },
+    {
+      "topic": "VFreeformGoodspringsGSRingoTopic004",
+      "topic_text": "Seems a little light for the work I did.",
+      "emotion": "Neutral 50",
+      "response_text": "It's all I've got with me, but if you look me up at the Crimson Caravan's main camp in New Vegas, I'll pay you in full.",
+      "index": "27"
+    },
+    {
+      "topic": "VFreeformGoodspringsGSRingoTopic006",
+      "topic_text": "You need a hired gun. I'm available.",
+      "emotion": "Neutral 50",
+      "response_text": "All I've got left on me are a handful of caps, but you get me out of this, and I'll make sure the Crimson Caravan pays you back. You've got my word.",
+      "index": "28"
+    },
+    {
+      "topic": "VFreeformGoodspringsGSRingoTopic008",
+      "topic_text": "I don't need payment.",
+      "emotion": "Neutral 50",
+      "response_text": "I won't let you stick your neck out for free. I can't pay you back now, but I'll make sure the Crimson Caravan pays up. You've got my word.",
+      "index": "29"
+    },
+    {
+      "topic": "VFreeformGoodspringsGSRingoTopic009",
+      "topic_text": "I'll consider it.",
+      "emotion": "Neutral 50",
+      "response_text": "All right. Was there anything else you wanted to talk to me about?",
+      "index": "30"
+    },
+    {
+      "topic": "VFreeformGoodspringsGSRingoTopic010",
+      "topic_text": "You're welcome.",
+      "emotion": "Neutral 50",
+      "response_text": "I'll stick around for a bit longer, but I'll be gone in a few days. If you ever visit New Vegas, look me up at the Crimson Caravan camp.",
+      "index": "31"
+    },
+    {
+      "topic": "VFreeformGoodspringsGSRingoTopic011",
+      "topic_text": "Can you tell me anything about Goodsprings?",
+      "emotion": "Neutral 50",
+      "response_text": "I've never stopped here until recently. You're better off asking one of the locals.",
+      "index": "32"
+    },
+    {
+      "topic": "VFreeformGoodspringsGSRingoTopic012",
+      "topic_text": "Tell me more about the Crimson Caravan Company.",
+      "emotion": "Neutral 50",
+      "response_text": "It's been in business for a very long time, and is probably the biggest trading outfit in California.",
+      "index": "33"
+    },
+    {
+      "topic": "VFreeformGoodspringsGSRingoTopic013",
+      "topic_text": "A man named Joe Cobb was looking for you, but I killed him.",
+      "emotion": "Neutral 50",
+      "response_text": "Err, thanks, I guess. Cobb wasn't the problem, though - I could've handled him if he ever found me.",
+      "index": "35"
+    },
+    {
+      "topic": "VFreeformGoodspringsGSRingoTopic014",
+      "topic_text": "Didn't I hear you say something earlier about not being able to pay me now?",
+      "emotion": "Neutral 50",
+      "response_text": "I did have what was left of the Crimson Caravan money, but I wasn't sure if it was my right to just give it away.",
+      "index": "37"
+    },
+    {
+      "topic": "VFreeformGoodspringsGSRingoTopic015",
+      "topic_text": "Is that the story you're going to stick with?",
+      "emotion": "Neutral 50",
+      "response_text": "[FAILED] Look, I don't know you, so what I'm doing here isn't any of your business.",
+      "index": "39"
+    },
+    {
+      "topic": "VFreeformGoodspringsGSRingoTopic016",
+      "topic_text": "Staying because you want to or because you have to? This is a good hiding spot.",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] That is a pretty flimsy story, I guess. The real reason that I'm staying is because there's a group of men out to kill me.",
+      "index": "40"
+    },
+    {
+      "topic": "VFreeformGoodspringsGSRingoTopic019",
+      "topic_text": "What are the rules of Caravan?",
+      "emotion": "Neutral 50",
+      "response_text": "It's a two-player game, and the winner takes the whole pot. You build a \"caravan\" using the cards in your deck.",
+      "index": "41"
+    },
+    {
+      "topic": "VFreeformGoodspringsGSRingoTopic020",
+      "topic_text": "Let's play.",
+      "emotion": "Neutral 50",
+      "response_text": "Don't worry - I'm not that good of a player.",
+      "index": "46"
+    },
+    {
+      "topic": "VFreeformGoodspringsGSRingoTopic021",
+      "topic_text": "I don't have time for a game right now.",
+      "emotion": "Neutral 50",
+      "response_text": "All right.",
+      "index": "47"
+    },
+    {
+      "topic": "VFreeformGoodspringsGSRingoTopic022",
+      "topic_text": "I see.",
+      "emotion": "Neutral 50",
+      "response_text": "Did you want something else?",
+      "index": "48"
+    },
+    {
+      "topic": "VFreeformGoodspringsGSRingoTopic024",
+      "topic_text": "I'm not an enemy, if that's what you're asking.",
+      "emotion": "Neutral 50",
+      "response_text": "Sorry about the gun. You just caught me off guard, that's all.",
+      "index": "49"
+    },
+    {
+      "topic": "VFreeformGoodspringsGSRingoTopic026",
+      "topic_text": "Good luck with that.",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah.",
+      "index": "51"
+    },
+    {
+      "topic": "VFreeformGoodspringsGSRingoTopic027",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah.",
+      "index": "52"
+    },
+    {
+      "topic": "VFreeformGoodspringsGSRingoTopic028",
+      "topic_text": "Let's play a hand of Caravan.",
+      "emotion": "Neutral 50",
+      "response_text": "Sure.",
+      "index": "53"
+    },
+    {
+      "topic": "VFreeformGoodspringsGoodspringsRingoTopic001",
+      "topic_text": "What do you do around here?",
+      "emotion": "Neutral 50",
+      "response_text": "Oh, sorry. I thought everybody knew already. I'm a trader with the Crimson Caravan Company.",
+      "index": "54"
+    },
+    {
+      "topic": "VFreeformGoodspringsGoodspringsRingoTopic002",
+      "topic_text": "Did you know there's a man named Joe Cobb looking for you?",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah. He doesn't look very tough, though. I hear he's afraid I'll shoot him down from one of the windows when I see him, and he's right.",
+      "index": "57"
+    },
+    {
+      "topic": "VFreeformGoodspringsGoodspringsRingoTopic003",
+      "topic_text": "Why are the Powder Gangers out to get you?",
+      "emotion": "Neutral 50",
+      "response_text": "My caravan was on the return trip from California and heading back up to the company branch in New Vegas when we got jumped.",
+      "index": "59"
+    },
+    {
+      "topic": "VFreeformGoodspringsGoodspringsRingoTopic004",
+      "topic_text": "How many powder gangers are out there?",
+      "emotion": "Neutral 50",
+      "response_text": "At least a dozen, I'd say. And that was just the group that attacked us. For all I know, they've got a lot more friends lurking around.",
+      "index": "62"
+    },
+    {
+      "topic": "VFreeformGoodspringsGoodspringsRingoTopic005",
+      "topic_text": "What are you going to do about the Powder Gangers?",
+      "emotion": "Neutral 50",
+      "response_text": "I'm going to lay low for as long as I can, assuming the town doesn't throw me to the wolves. I've got no chance against the gang on my own.",
+      "index": "63"
+    },
+    {
+      "topic": "VFreeformGoodspringsGoodspringsRingoTopic006",
+      "topic_text": "Maybe I can help.",
+      "emotion": "Fear 20",
+      "response_text": "I saw you being awfully friendly with Joe Cobb, so no thanks.",
+      "index": "65"
+    },
+    {
+      "topic": "VFreeformGoodspringsGoodspringsRingoTopic007",
+      "topic_text": "I'll ask around and see who I can round up.",
+      "emotion": "Neutral 50",
+      "response_text": "Start with Sunny Smiles. She's been friendlier than most around here.",
+      "index": "68"
+    },
+    {
+      "topic": "VFreeformGoodspringsGoodspringsRingoTopic008",
+      "topic_text": "You don't think I can handle myself in a fight?",
+      "emotion": "Neutral 50",
+      "response_text": "I was thinking of myself, actually. Who's going to watch my back while I'm watching yours?",
+      "index": "69"
+    },
+    {
+      "topic": "VFreeformGoodspringsGoodspringsRingoTopic009",
+      "topic_text": "Sunny's with us.",
+      "emotion": "Neutral 50",
+      "response_text": "Well, I guess that means we're ready to go. Unless you think there's something else you can do?",
+      "index": "70"
+    },
+    {
+      "topic": "VFreeformGoodspringsGoodspringsRingoTopic010",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Try to hurry.",
+      "index": "71"
+    },
+    {
+      "topic": "VFreeformGoodspringsGoodspringsRingoTopic011",
+      "topic_text": "I haven't talked to her yet.",
+      "emotion": "Neutral 50",
+      "response_text": "Oh. Well, I don't want to make a move until she's with us.",
+      "index": "72"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "Goodbye.",
+      "emotion": "Happy 5",
+      "response_text": "I'll see you around.",
+      "index": "73"
+    }
+  ],
+  "combat": [
+    {
+      "topic": "AcceptYield",
+      "topic_text": "AcceptYield",
+      "emotion": "Neutral 50",
+      "response_text": "Showed you.",
+      "index": "75"
+    },
+    {
+      "topic": "Assault",
+      "topic_text": "Assault",
+      "emotion": "Neutral 50",
+      "response_text": "Shit!",
+      "index": "76"
+    },
+    {
+      "topic": "Attack",
+      "topic_text": "Attack",
+      "emotion": "Neutral 50",
+      "response_text": "Let's take these guys!",
+      "index": "79"
+    },
+    {
+      "topic": "AvoidThreat",
+      "topic_text": "AvoidThreat",
+      "emotion": "Neutral 50",
+      "response_text": "Clear the way!",
+      "index": "82"
+    },
+    {
+      "topic": "DeathResponse",
+      "topic_text": "DeathResponse",
+      "emotion": "Neutral 50",
+      "response_text": "Goddamn it!",
+      "index": "84"
+    },
+    {
+      "topic": "FireExplosive",
+      "topic_text": "FireExplosive",
+      "emotion": "Neutral 50",
+      "response_text": "Hit the dirt!",
+      "index": "86"
+    },
+    {
+      "topic": "Flee",
+      "topic_text": "Flee",
+      "emotion": "Neutral 50",
+      "response_text": "I'm outta here!",
+      "index": "88"
+    },
+    {
+      "topic": "GuardTrespass",
+      "topic_text": "GuardTrespass",
+      "emotion": "Neutral 50",
+      "response_text": "Stay back.",
+      "index": "91"
+    },
+    {
+      "topic": "Murder",
+      "topic_text": "Murder",
+      "emotion": "Neutral 50",
+      "response_text": "What in the hell are you doing?",
+      "index": "94"
+    },
+    {
+      "topic": "MurderNoCrime",
+      "topic_text": "MurderNoCrime",
+      "emotion": "Neutral 50",
+      "response_text": "No one'll miss that one.",
+      "index": "97"
+    },
+    {
+      "topic": "Steal",
+      "topic_text": "Steal",
+      "emotion": "Neutral 50",
+      "response_text": "That's mine!",
+      "index": "100"
+    }
+  ]
+}

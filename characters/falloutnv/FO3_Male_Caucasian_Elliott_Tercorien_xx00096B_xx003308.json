@@ -1,0 +1,657 @@
+{
+  "name": "Elliott Tercorien",
+  "url": "/wiki/Elliott_Tercorien",
+  "dialogue_name": "DLC05Tercorien.txt",
+  "dialogue_url": "/wiki/DLC05Tercorien.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "xx00096B",
+  "ref_id": "xx003308",
+  "editor_id": "DLC05Tercorien",
+  "location": "Engineering core",
+  "location_url": "/wiki/Engineering_core",
+  "descriptions": [
+    "Private Elliott Tercorien, serial number 3477809, is a pre-War U.S. Army soldier found abducted and held in a stasis chamber in Mothership Zeta's engineering core. He is a major character in the Fallout 3 add-on Mothership Zeta.",
+    "Tercorien was a fully educated medical doctor before the Great War, who chose this career path as he believed he was better with blood and guts, rather than wires an gizmos.",
+    "He joined around 2076 and sent to Anchorage, Alaska. Granted the rank of a buck private and serial number 3477809,",
+    "Elliot was abducted by the aliens together with the rest of his medical team before the Battle of Anchorage led to the liberation of Alaska. It happened in the night, after a day spent in the trenches saving wounded American soldiers and avoiding shrapnel from constant shelling by Chinese artillery from the Chugach Mountains. The last thing Elliot remembers was stepping outside the bunker housing their aid station, after stowing the gear for the night,",
+    "Tercorien was kept in stasis for two centuries. As a result, he is a rare combination of incredible competence on account of a formal and practical medical education, and incredible naivete due to never experiencing the wasteland.",
+    "One of his primary reasons is finding out what happened to his squad. It is a huge factor in his drive to uncover the mysteries of the mothership an assist the Wanderer.",
+    "His loyalty to his men is one of his defining characteristics, and seeing them come to harm (such as alien experiments or vivisections) is one of the only things to make him abandon his usual distaste for violence,",
+    "His strong esprit de corps causes Elliott to blame himself, despite his powerlessness,",
+    "Elliott is highly skilled with technology and medicine, but not so much with people or martial skill. Though his military training allows him to defend himself if need be, he dislikes violence. He'll do all he can to avoid being put in such a situation,",
+    "He will assist and fight alongside the Wanderer if he believes his skills might be used to do some good, such as revive people from stasis.",
+    "His ability to manipulate alien technologies is due to a keen analytical mind, accurately breaking down alien tech using logic and deductive reasoning.",
+    "* These weapons are given to Private Beckett and Sergeant Daniels.",
+    "Private Elliott Tercorien appears only in the Fallout 3 add-on Mothership Zeta."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "108th Infantry Battalion(formerly)Lone Wanderer",
+  "role": "Medic",
+  "detailed_location": "Engineering core,MothershipZeta",
+  "special": {
+    "Strength": 4,
+    "Perception": 6,
+    "Endurance": 4,
+    "Charisma": 6,
+    "Intelligence": 7,
+    "Agility": 5,
+    "Luck": 4
+  },
+  "level": "5→30",
+  "tag_skills": [
+    {
+      "Barter:": "53→100"
+    },
+    {
+      "Medicine:": "65→100"
+    },
+    {
+      "Science:": "55→100"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "535→660"
+    },
+    {
+      "Damage Res.:": "32%"
+    }
+  ],
+  "karma": "Neutral",
+  "voice_type": "DLC05NPCUniqueTercorien",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "Dlc05BridgeInterDoNothing",
+      "topic_text": "Get a move on it!",
+      "emotion": "Neutral 50",
+      "response_text": "Yes sir.Play soundDlc05bridg_dlc05bridgeinte_00005…https://fallout.fandom.com/wiki/File:Dlc05bridg_dlc05bridgeinte_000058c8_1.oggnoicon",
+      "index": "1"
+    },
+    {
+      "topic": "Dlc05BridgeTopicElliotInitial",
+      "topic_text": "What have you got there?",
+      "emotion": "Neutral 50",
+      "response_text": "Oh man, I don't know... a teleport jammer, maybe? Right, space ships have those, don't they?Play soundDlc05bridg_dlc05bridgetopi_00005…https://fallout.fandom.com/wiki/File:Dlc05bridg_dlc05bridgetopi_000058c5_1.oggnoicon",
+      "index": "2"
+    },
+    {
+      "topic": "Dlc05BridgeTopicElliotShields",
+      "topic_text": "How's the jammer holding?",
+      "emotion": "Neutral 50",
+      "response_text": "It's holding fine for now, I guess.  It should help with the bastards teleporting onto the ship.Play soundDlc05bridg_dlc05bridgetopi_00005…https://fallout.fandom.com/wiki/File:Dlc05bridg_dlc05bridgetopi_000058c6_1.oggnoicon",
+      "index": "4"
+    },
+    {
+      "topic": "Dlc05ConvTLTercorienCryoWeapons",
+      "topic_text": "Do you think you can make use of that stuff you picked up in the Cryo Labs?",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah, I think so. Before I was shipped out to Anchorage, I was trained in cryoscience. We were hoping to apply that to medicine.Play soundDlc05conve_dlc05convtlterc_00007…https://fallout.fandom.com/wiki/File:Dlc05conve_dlc05convtlterc_00007566_1.oggnoicon",
+      "index": "5"
+    },
+    {
+      "topic": "Dlc05ConvTLTercorienMed",
+      "topic_text": "Do you think you'll be able to assist us medically if we need it?",
+      "emotion": "Neutral 50",
+      "response_text": "I'd really like to, but when I woke up on this ship for the first time all of my medical gear was gone.Play soundDlc05conve_dlc05convtlterc_00005…https://fallout.fandom.com/wiki/File:Dlc05conve_dlc05convtlterc_000055f5_1.oggnoicon",
+      "index": "13"
+    },
+    {
+      "topic": "Dlc05CryoElliotChoice01",
+      "topic_text": "How long can they last if you revive them?",
+      "emotion": "Neutral 50",
+      "response_text": "I don't know for certain. I can get them on their feet and moving for maybe a few minutes at best.Play soundDlc05cryoq_dlc05cryoelliot_00006…https://fallout.fandom.com/wiki/File:Dlc05cryoq_dlc05cryoelliot_00006c0f_2.oggnoicon",
+      "index": "18"
+    },
+    {
+      "topic": "Dlc05CryoElliotChoice02",
+      "topic_text": "We should just put them out of their misery.",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah, I was considering that too. We can't let the aliens experiment on them any more. It just isn't right.Play soundDlc05cryoq_dlc05cryoelliot_00006…https://fallout.fandom.com/wiki/File:Dlc05cryoq_dlc05cryoelliot_00006c09_1.oggnoicon",
+      "index": "21"
+    },
+    {
+      "topic": "Dlc05CryoElliotChoice03",
+      "topic_text": "We should just leave them here. It's too late for them.",
+      "emotion": "Anger 100",
+      "response_text": "Well, we have to do something! We can't just leave them in there like some sort of a lab rat to get poked and prodded and cut open!Play soundDlc05cryoq_dlc05cryoelliot_00006…https://fallout.fandom.com/wiki/File:Dlc05cryoq_dlc05cryoelliot_00006e57_1.oggnoicon",
+      "index": "23"
+    },
+    {
+      "topic": "Dlc05CryoElliotChoice04",
+      "topic_text": "I think I've decided what we should do.",
+      "emotion": "Neutral 50",
+      "response_text": "Thanks. I'm really not sure what's best for them. What did you decide?Play soundDlc05cryoq_dlc05cryoelliot_00006…https://fallout.fandom.com/wiki/File:Dlc05cryoq_dlc05cryoelliot_00006e58_1.oggnoicon",
+      "index": "25"
+    },
+    {
+      "topic": "Dlc05CryoElliotChoiceLeave",
+      "topic_text": "We have an objective, soldier! We leave immediately.",
+      "emotion": "Disgust 100",
+      "response_text": "I... I guess you're right. Let's get the fuck out of here.{choking back anger}Play soundDlc05cryoq_dlc05cryoelliot_00006…https://fallout.fandom.com/wiki/File:Dlc05cryoq_dlc05cryoelliot_00006c03_1.oggnoicon",
+      "index": "26"
+    },
+    {
+      "topic": "Dlc05CryoElliotChoiceMisery",
+      "topic_text": "End it... put them out of their misery.",
+      "emotion": "Neutral 50",
+      "response_text": "I suppose you're right. Don't worry, they won't feel a thing.Play soundDlc05cryoq_dlc05cryoelliot_00006…https://fallout.fandom.com/wiki/File:Dlc05cryoq_dlc05cryoelliot_00006c06_1.oggnoicon",
+      "index": "27"
+    },
+    {
+      "topic": "Dlc05CryoElliotChoiceRevive",
+      "topic_text": "Revive them and let them fight with us.",
+      "emotion": "Neutral 50",
+      "response_text": "Just remember they won't be alive long so we need to keep moving as fast as we can.Play soundDlc05cryoq_dlc05cryoelliot_00006…https://fallout.fandom.com/wiki/File:Dlc05cryoq_dlc05cryoelliot_00006c01_1.oggnoicon",
+      "index": "28"
+    },
+    {
+      "topic": "Dlc05CryoElliotChoiceThink",
+      "topic_text": "Let me ask you something before I decide.",
+      "emotion": "Neutral 50",
+      "response_text": "All right. What is it?Play soundDlc05cryoq_dlc05cryoelliot_00006…https://fallout.fandom.com/wiki/File:Dlc05cryoq_dlc05cryoelliot_00006c05_1.oggnoicon",
+      "index": "31"
+    },
+    {
+      "topic": "Dlc05CryoElliotGreet01",
+      "topic_text": "Dlc05CryoElliotGreet01",
+      "emotion": "Sad 100",
+      "response_text": "I don't know what to do. These guys are the last of my squad... they're my friends.Play soundDlc05cryoq_dlc05cryoelliot_00006…https://fallout.fandom.com/wiki/File:Dlc05cryoq_dlc05cryoelliot_00006c04_1.oggnoicon",
+      "index": "32"
+    },
+    {
+      "topic": "Dlc05CryoElliotMadAtPlayer",
+      "topic_text": "Dlc05CryoElliotMadAtPlayer",
+      "emotion": "Anger 100",
+      "response_text": "I had no choice... I.. I had to do it. You saw. They would have killed us. Damn it!Play soundDlc05cryoq_dlc05cryoelliot_00006…https://fallout.fandom.com/wiki/File:Dlc05cryoq_dlc05cryoelliot_00006dad_1.oggnoicon",
+      "index": "34"
+    },
+    {
+      "topic": "Dlc05CryoElliotTLLabSealed",
+      "topic_text": "Why are we stuck inside the laboratory?",
+      "emotion": "Neutral 50",
+      "response_text": "I think when we opened the door to the operating room we set off some kind of containment alarm.Play soundDlc05cryoq_dlc05cryoelliot_00006…https://fallout.fandom.com/wiki/File:Dlc05cryoq_dlc05cryoelliot_00006e54_1.oggnoicon",
+      "index": "43"
+    },
+    {
+      "topic": "Dlc05MZ2TercorienGreet01",
+      "topic_text": "It's okay, we're not going to hurt you... We're friends.",
+      "emotion": "Surprise 50",
+      "response_text": "What? I've never seen any of you before in my life. Last people I saw were... oh my god!{sudden realization at the end (long pause before it).}Play soundDlc05mz2_dlc05mz2tercorien_00003…https://fallout.fandom.com/wiki/File:Dlc05mz2_dlc05mz2tercorien_00003982_1.oggnoicon",
+      "index": "47"
+    },
+    {
+      "topic": "Dlc05MZ2TercorienGreet02",
+      "topic_text": "Your uniform... it looks familiar, but I can't place it.",
+      "emotion": "Surprise 100",
+      "response_text": "My what? Who the hell are you... oh my god.... wait a minute!{sudden realization at the end}Play soundDlc05mz2_dlc05mz2tercorien_00003…https://fallout.fandom.com/wiki/File:Dlc05mz2_dlc05mz2tercorien_00003997_1.oggnoicon",
+      "index": "50"
+    },
+    {
+      "topic": "Dlc05MZ2TercorienGreet03",
+      "topic_text": "You're a prisoner like the rest of us.",
+      "emotion": "Neutral 50",
+      "response_text": "Prisoner? Last thing I remember I was being outside our bunker and then... oh my god!{sudden realization at the end (long pause before it).}Play soundDlc05mz2_dlc05mz2tercorien_00003…https://fallout.fandom.com/wiki/File:Dlc05mz2_dlc05mz2tercorien_00003967_1.oggnoicon",
+      "index": "53"
+    },
+    {
+      "topic": "Dlc05MZ2TercorienGreet04",
+      "topic_text": "I can promise you I am not an alien. In fact, I was abducted like you.",
+      "emotion": "Fear 70",
+      "response_text": "I dunno, I dunno... maybe you assumed human form. I heard they could do that... or you are human but they took over your mind!Play soundDlc05mz2_dlc05mz2tercorien_00003…https://fallout.fandom.com/wiki/File:Dlc05mz2_dlc05mz2tercorien_0000396f_1.oggnoicon",
+      "index": "56"
+    },
+    {
+      "topic": "Dlc05MZ2TercorienGreet05",
+      "topic_text": "You're a doctor and you can't tell from looking at me that I'm no alien?",
+      "emotion": "Fear 50",
+      "response_text": "Hey, you could be one of those little green guys in human form... or maybe you ARE human and they just took over your mind.Play soundDlc05mz2_dlc05mz2tercorien_00003…https://fallout.fandom.com/wiki/File:Dlc05mz2_dlc05mz2tercorien_0000398d_1.oggnoicon",
+      "index": "58"
+    },
+    {
+      "topic": "Dlc05MZ2TercorienGreet06",
+      "topic_text": "Do I look like an alien?",
+      "emotion": "Neutral 50",
+      "response_text": "Ha! That doesn't mean anything!Play soundDlc05mz2_dlc05mz2tercorien_00003…https://fallout.fandom.com/wiki/File:Dlc05mz2_dlc05mz2tercorien_0000396e_2.oggnoicon",
+      "index": "60"
+    },
+    {
+      "topic": "Dlc05MZ2TercorienGreet07",
+      "topic_text": "If I were with the aliens, the last thing I would have done is release you.",
+      "emotion": "Fear 50",
+      "response_text": "I... I suppose so.Play soundDlc05mz2_dlc05mz2tercorien_00003…https://fallout.fandom.com/wiki/File:Dlc05mz2_dlc05mz2tercorien_00003983_1.oggnoicon",
+      "index": "63"
+    },
+    {
+      "topic": "Dlc05MZ2TercorienGreet08",
+      "topic_text": "I promise you, all I want to do is get off this ship and get back home.",
+      "emotion": "Neutral 50",
+      "response_text": "You do? Then you're telling me the truth. Those... aliens took you too.Play soundDlc05mz2_dlc05mz2tercorien_00003…https://fallout.fandom.com/wiki/File:Dlc05mz2_dlc05mz2tercorien_00003966_1.oggnoicon",
+      "index": "66"
+    },
+    {
+      "topic": "Dlc05MZ2TercorienGreet09",
+      "topic_text": "Fine... I'll just put you back in stasis!",
+      "emotion": "Fear 100",
+      "response_text": "No! Please don't. It's horrible in there! To think I was just sitting there, frozen like that... I thought I was dead!Play soundDlc05mz2_dlc05mz2tercorien_00003…https://fallout.fandom.com/wiki/File:Dlc05mz2_dlc05mz2tercorien_00003975_1.oggnoicon",
+      "index": "69"
+    },
+    {
+      "topic": "Dlc05MZ2TercorienGreet10",
+      "topic_text": "I'm afraid not. All I've found are these people.",
+      "emotion": "Fear 50",
+      "response_text": "Oh my god, I'm responsible for them and now they're lost... or dead.Play soundDlc05mz2_dlc05mz2tercorien_00003…https://fallout.fandom.com/wiki/File:Dlc05mz2_dlc05mz2tercorien_00003961_1.oggnoicon",
+      "index": "72"
+    },
+    {
+      "topic": "Dlc05MZ2TercorienGreet11",
+      "topic_text": "Nope.",
+      "emotion": "Fear 50",
+      "response_text": "What if they're lost... or frozen like I was... or even dead? I'm responsible for them!Play soundDlc05mz2_dlc05mz2tercorien_00003…https://fallout.fandom.com/wiki/File:Dlc05mz2_dlc05mz2tercorien_00003972_1.oggnoicon",
+      "index": "74"
+    },
+    {
+      "topic": "Dlc05MZ2TercorienGreet12",
+      "topic_text": "My guess is the aliens had them for a snack... or worse.",
+      "emotion": "Fear 50",
+      "response_text": "No... no. I'm responsible for those men. They were my team.Play soundDlc05mz2_dlc05mz2tercorien_00003…https://fallout.fandom.com/wiki/File:Dlc05mz2_dlc05mz2tercorien_0000398f_1.oggnoicon",
+      "index": "76"
+    },
+    {
+      "topic": "Dlc05MZ2TercorienGreet13",
+      "topic_text": "Don't worry, we ARE in this together, and I will help you.",
+      "emotion": "Neutral 50",
+      "response_text": "Thank you. Thanks so much. Sorry about all this... I just can't believe this is happening.Play soundDlc05mz2_dlc05mz2tercorien_00003…https://fallout.fandom.com/wiki/File:Dlc05mz2_dlc05mz2tercorien_0000396c_1.oggnoicon",
+      "index": "78"
+    },
+    {
+      "topic": "Dlc05MZ2TercorienGreet14",
+      "topic_text": "Just relax. Let me see what I can do.",
+      "emotion": "Neutral 50",
+      "response_text": "Okay... okay. Whew.Play soundDlc05mz2_dlc05mz2tercorien_00003…https://fallout.fandom.com/wiki/File:Dlc05mz2_dlc05mz2tercorien_00003962_1.oggnoicon",
+      "index": "79"
+    },
+    {
+      "topic": "Dlc05MZ2TercorienGreet15",
+      "topic_text": "I swear, if you don't calm down, I'll stuff you back in the freezer!",
+      "emotion": "Neutral 50",
+      "response_text": "No, no! Don't do it... don't do it.Play soundDlc05mz2_dlc05mz2tercorien_00003…https://fallout.fandom.com/wiki/File:Dlc05mz2_dlc05mz2tercorien_00003979_1.oggnoicon",
+      "index": "81"
+    },
+    {
+      "topic": "Dlc05MZ2TLAbducted",
+      "topic_text": "Tell me how you were captured by these aliens.",
+      "emotion": "Neutral 50",
+      "response_text": "Well, it was getting dark... we had spent the day out in the trenches keeping as many of the guys alive as we could.Play soundDlc05mz2_dlc05mz2tlabducte_00003…https://fallout.fandom.com/wiki/File:Dlc05mz2_dlc05mz2tlabducte_00003977_1.oggnoicon",
+      "index": "84"
+    },
+    {
+      "topic": "Dlc05MZ2TLAlienIntentions",
+      "topic_text": "What do you think the aliens want with us?",
+      "emotion": "Neutral 50",
+      "response_text": "Isn't it obvious? They're probably using us as guinea pigs, examining our anatomy.Play soundDlc05mz2_dlc05mz2tlalienin_0000a…https://fallout.fandom.com/wiki/File:Dlc05mz2_dlc05mz2tlalienin_0000ab99_1.oggnoicon",
+      "index": "90"
+    },
+    {
+      "topic": "Dlc05MZ2TLBackground",
+      "topic_text": "Can you tell me more about where you're from?",
+      "emotion": "Neutral 50",
+      "response_text": "Me? Well, I was a medic with the 108th Infantry Battalion stationed at Anchorage, Alaska.Play soundDlc05mz2_dlc05mz2tlbackgro_00003…https://fallout.fandom.com/wiki/File:Dlc05mz2_dlc05mz2tlbackgro_00003971_1.oggnoicon",
+      "index": "102"
+    },
+    {
+      "topic": "Dlc05MZ2TLHelpAssembly",
+      "topic_text": "I need some help in the Robot Assembly area. You in?",
+      "emotion": "Neutral 50",
+      "response_text": "Never was really good with those tin cans. I deal with blood and guts better than wires and gizmos. That's why I became a doctor.Play soundDlc05mz2_dlc05mz2tlhelpass_00003…https://fallout.fandom.com/wiki/File:Dlc05mz2_dlc05mz2tlhelpass_00003998_1.oggnoicon",
+      "index": "105"
+    },
+    {
+      "topic": "Dlc05MZ2TLHelpCryo",
+      "topic_text": "I need to get through the Cryo Labs. Think you can help me?",
+      "emotion": "Neutral 50",
+      "response_text": "What's the point? You already did a good bit of the place. Nah... I'll just stay here and guard the Engine Core.Play soundDlc05mz2_dlc05mz2tlhelpcry_00003…https://fallout.fandom.com/wiki/File:Dlc05mz2_dlc05mz2tlhelpcry_00003994_1.oggnoicon",
+      "index": "106"
+    },
+    {
+      "topic": "Dlc05MZ2TLHelpHangar",
+      "topic_text": "I may need an extra gun in the Hangar Bay. Can you lend a hand?",
+      "emotion": "Neutral 50",
+      "response_text": "Gun? No thanks. I've spent enough time patching up the mess that guns make. I'm no killer.Play soundDlc05mz2_dlc05mz2tlhelphan_00003…https://fallout.fandom.com/wiki/File:Dlc05mz2_dlc05mz2tlhelphan_00003990_1.oggnoicon",
+      "index": "108"
+    },
+    {
+      "topic": "Dlc05MZ2TLLevelHelp",
+      "topic_text": "You think anything in here can prove useful?",
+      "emotion": "Neutral 50",
+      "response_text": "Well, the cryogenics compound I found will help already, but keep your eyes open for anything else.Play soundDlc05mz2_dlc05mz2tllevelhe_00008…https://fallout.fandom.com/wiki/File:Dlc05mz2_dlc05mz2tllevelhe_00008ab8_1.oggnoicon",
+      "index": "109"
+    },
+    {
+      "topic": "Dlc05MZ2TLNeverMind",
+      "topic_text": "I think you should remain in the Engineering Core for now.",
+      "emotion": "Neutral 50",
+      "response_text": "Okay. Whatever you think is best.Play soundDlc05mz2_dlc05mz2tlnevermi_00003…https://fallout.fandom.com/wiki/File:Dlc05mz2_dlc05mz2tlnevermi_0000398a_1.oggnoicon",
+      "index": "112"
+    },
+    {
+      "topic": "Dlc05MZ2TLSamurai",
+      "topic_text": "Where's that Kago guy?",
+      "emotion": "Neutral 50",
+      "response_text": "Uhh... it wasn't my turn to watch him?Play soundDlc05mz2_dlc05mz2tlsamurai_00007…https://fallout.fandom.com/wiki/File:Dlc05mz2_dlc05mz2tlsamurai_00007a66_1.oggnoicon",
+      "index": "113"
+    },
+    {
+      "topic": "Dlc05MZ3GreetDeathRay1",
+      "topic_text": "You think it was some sort of weapon?",
+      "emotion": "Neutral 50",
+      "response_text": "How the hell do I know? It sure looked like it!Play soundDlc05mz3_dlc05mz3greetdeat_00007…https://fallout.fandom.com/wiki/File:Dlc05mz3_dlc05mz3greetdeat_000076b3_1.oggnoicon",
+      "index": "116"
+    },
+    {
+      "topic": "Dlc05MZ3GreetDeathRay2",
+      "topic_text": "I have no idea what he said, but he sounded pretty angry.",
+      "emotion": "Neutral 50",
+      "response_text": "You think? What clued you in?Play soundDlc05mz3_dlc05mz3greetdeat_0000a…https://fallout.fandom.com/wiki/File:Dlc05mz3_dlc05mz3greetdeat_0000a717_1.oggnoicon",
+      "index": "119"
+    },
+    {
+      "topic": "Dlc05MZ3GreetDeathRay3",
+      "topic_text": "We need to find out what that was, and put a stop to it.",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah, no kidding. Wow, they've gotta be really pissed at us.Play soundDlc05mz3_dlc05mz3greetdeat_00007…https://fallout.fandom.com/wiki/File:Dlc05mz3_dlc05mz3greetdeat_000076bb_1.oggnoicon",
+      "index": "122"
+    },
+    {
+      "topic": "Dlc05PostGreet1",
+      "topic_text": "Thanks for your help. Couldn't have done it without you.",
+      "emotion": "Neutral 50",
+      "response_text": "Aw, come on. We both know you could have.Play soundDlc05post_dlc05postgreet1_0000a9…https://fallout.fandom.com/wiki/File:Dlc05post_dlc05postgreet1_0000a98a_1.oggnoicon",
+      "index": "124"
+    },
+    {
+      "topic": "Dlc05PostGreet2",
+      "topic_text": "What will you do now?",
+      "emotion": "Neutral 50",
+      "response_text": "I don't know... I don't really have a place down there anymore, do I? Doesn't sound like it'd suit me very well.Play soundDlc05post_dlc05postgreet2_0000a9…https://fallout.fandom.com/wiki/File:Dlc05post_dlc05postgreet2_0000a985_1.oggnoicon",
+      "index": "125"
+    },
+    {
+      "topic": "Dlc05PostGreet3",
+      "topic_text": "You think they'll ever come back?",
+      "emotion": "Neutral 50",
+      "response_text": "Boy, I sure hope not. But at least we know what to do with them, right?Play soundDlc05post_dlc05postgreet3_0000a9…https://fallout.fandom.com/wiki/File:Dlc05post_dlc05postgreet3_0000a984_1.oggnoicon",
+      "index": "127"
+    },
+    {
+      "topic": "Dlc05PQTLWeapon",
+      "topic_text": "I could use some more of these alien weapons. Got any?",
+      "emotion": "Neutral 50",
+      "response_text": "Yep, sure thing!Play soundDlc05post_dlc05pqtlweapon_0000ab…https://fallout.fandom.com/wiki/File:Dlc05post_dlc05pqtlweapon_0000ab58_1.oggnoicon",
+      "index": "128"
+    },
+    {
+      "topic": "Dlc05PQTLWherePaulson",
+      "topic_text": "Where's Paulson?",
+      "emotion": "Neutral 50",
+      "response_text": "He took off just after you did. Said there was no reason for him to hang around here, that he might as well go see what it was like down there.Play soundDlc05post_dlc05pqtlwherepa_0000a…https://fallout.fandom.com/wiki/File:Dlc05post_dlc05pqtlwherepa_0000abf6_1.oggnoicon",
+      "index": "134"
+    },
+    {
+      "topic": "Dlc05TercorienHolo1",
+      "topic_text": "Dlc05TercorienHolo1",
+      "emotion": "Neutral 50",
+      "response_text": "Oh shit, oh shit, oh shit, oh shit...Play soundDlc05gener_dlc05tercorienh_0000a…https://fallout.fandom.com/wiki/File:Dlc05gener_dlc05tercorienh_0000a883_1.oggnoicon",
+      "index": "136"
+    },
+    {
+      "topic": "Dlc05TLBridgeDoor",
+      "topic_text": "Why can't I use the door to get off the bridge?",
+      "emotion": "Neutral 50",
+      "response_text": "I bet it's a safety mechanism, designed to seal off damaged areas of the ship. At least, that's what I'd do if I were designing a spaceship.Play soundDlc05post_dlc05tlbridgedoo_0000a…https://fallout.fandom.com/wiki/File:Dlc05post_dlc05tlbridgedoo_0000abf3_1.oggnoicon",
+      "index": "143"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "Sir?Play soundDlc05bridgeld_greeting_000058c4_…https://fallout.fandom.com/wiki/File:Dlc05bridgeld_greeting_000058c4_1.oggnoicon",
+      "index": "144"
+    },
+    {
+      "topic": "SpeechChallengeFailure",
+      "topic_text": "SpeechChallengeFailure",
+      "emotion": "Neutral 50",
+      "response_text": "No. No, it's not right. I am NOT just leaving them here to their fate. I couldn't do that back in Anchorage, and I am not doing it now.Play soundDlc05cryoq_speechchallenge_00006…https://fallout.fandom.com/wiki/File:Dlc05cryoq_speechchallenge_00006e53_1.oggnoicon",
+      "index": "173"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "Dlc05BridgeTopicElliotRandom",
+      "topic_text": "Dlc05BridgeTopicElliotRandom",
+      "emotion": "Neutral 50",
+      "response_text": "This is just like the last time.Play soundDlc05bridg_dlc05bridgetopi_0000a…https://fallout.fandom.com/wiki/File:Dlc05bridg_dlc05bridgetopi_0000a99a_1.oggnoicon",
+      "index": "174"
+    },
+    {
+      "topic": "Dlc05ConvCargo01",
+      "topic_text": "Dlc05ConvCargo01",
+      "emotion": "Neutral 50",
+      "response_text": "Hey look, Giddyup Buttercups! All the rich kids had them.  Waste of money if you ask me.Play soundDlc05conve_dlc05convcargo0_00009…https://fallout.fandom.com/wiki/File:Dlc05conve_dlc05convcargo0_000099e0_1.oggnoicon",
+      "index": "177"
+    },
+    {
+      "topic": "Dlc05ConvCargo02",
+      "topic_text": "Dlc05ConvCargo02",
+      "emotion": "Neutral 50",
+      "response_text": "Look, even more of them.  Buttercups that is.Play soundDlc05conve_dlc05convcargo0_00009…https://fallout.fandom.com/wiki/File:Dlc05conve_dlc05convcargo0_000099e2_1.oggnoicon",
+      "index": "178"
+    },
+    {
+      "topic": "Dlc05ConvCargo03",
+      "topic_text": "Dlc05ConvCargo03",
+      "emotion": "Neutral 50",
+      "response_text": "OK, this is getting a little ridiculous now.Play soundDlc05conve_dlc05convcargo0_00009…https://fallout.fandom.com/wiki/File:Dlc05conve_dlc05convcargo0_000099d9_1.oggnoicon",
+      "index": "179"
+    },
+    {
+      "topic": "Dlc05ConvCargo04",
+      "topic_text": "Dlc05ConvCargo04",
+      "emotion": "Neutral 50",
+      "response_text": "Oh wow. I remember these posters plastered all over the place back home.Play soundDlc05conve_dlc05convcargo0_00009…https://fallout.fandom.com/wiki/File:Dlc05conve_dlc05convcargo0_000099de_1.oggnoicon",
+      "index": "180"
+    },
+    {
+      "topic": "Dlc05ConvCargo05",
+      "topic_text": "Dlc05ConvCargo05",
+      "emotion": "Neutral 50",
+      "response_text": "What are they doing to the Buttercups?Play soundDlc05conve_dlc05convcargo0_00009…https://fallout.fandom.com/wiki/File:Dlc05conve_dlc05convcargo0_000099db_1.oggnoicon",
+      "index": "181"
+    },
+    {
+      "topic": "Dlc05ConvCargo06",
+      "topic_text": "Dlc05ConvCargo06",
+      "emotion": "Neutral 50",
+      "response_text": "Our situation didn't get any better by the looks of what happened here. I say we get the hell out of here.Play soundDlc05conve_dlc05convcargo0_00009…https://fallout.fandom.com/wiki/File:Dlc05conve_dlc05convcargo0_000099d5_1.oggnoicon",
+      "index": "182"
+    },
+    {
+      "topic": "Dlc05ConvCargo07",
+      "topic_text": "Dlc05ConvCargo07",
+      "emotion": "Neutral 50",
+      "response_text": "Well, that's one way to take out the garbage.{Commenting on an extremely large trash chute found in the cargo hold.}Play soundDlc05conve_dlc05convcargo0_00009…https://fallout.fandom.com/wiki/File:Dlc05conve_dlc05convcargo0_00009c78_1.oggnoicon",
+      "index": "183"
+    },
+    {
+      "topic": "Dlc05ConvCargo08",
+      "topic_text": "Dlc05ConvCargo08",
+      "emotion": "Neutral 50",
+      "response_text": "Nuka-Cola! You know, they came out with this stuff called Nuka-Cola Quantum way back. Now that was some powerful stuff. I can still taste it now.{Tercorien commenting on Nuka bottles, nuka cola machine.}Play soundDlc05conve_dlc05convcargo0_00009…https://fallout.fandom.com/wiki/File:Dlc05conve_dlc05convcargo0_00009c75_1.oggnoicon",
+      "index": "184"
+    },
+    {
+      "topic": "Dlc05ConvERoomEngine",
+      "topic_text": "Dlc05ConvERoomEngine",
+      "emotion": "Neutral 50",
+      "response_text": "What is that thing?Play soundDlc05conve_dlc05converoome_00009…https://fallout.fandom.com/wiki/File:Dlc05conve_dlc05converoome_000098fc_1.oggnoicon",
+      "index": "185"
+    },
+    {
+      "topic": "Dlc05ConvERoomEngineGasTrap",
+      "topic_text": "Dlc05ConvERoomEngineGasTrap",
+      "emotion": "Neutral 50",
+      "response_text": "They're trying to gas us again.Play soundDlc05conve_dlc05converoome_00009…https://fallout.fandom.com/wiki/File:Dlc05conve_dlc05converoome_000098ff_1.oggnoicon",
+      "index": "186"
+    },
+    {
+      "topic": "Dlc05ConvERoomEpoxy",
+      "topic_text": "Dlc05ConvERoomEpoxy",
+      "emotion": "Neutral 50",
+      "response_text": "Grab some of that epoxy, our weapons could use the field repair.Play soundDlc05conve_dlc05converoome_00009…https://fallout.fandom.com/wiki/File:Dlc05conve_dlc05converoome_00009905_1.oggnoicon",
+      "index": "187"
+    },
+    {
+      "topic": "Dlc05ConvERoomFilthyStructures",
+      "topic_text": "Dlc05ConvERoomFilthyStructures",
+      "emotion": "Neutral 50",
+      "response_text": "This place is filthy.Play soundDlc05conve_dlc05converoomf_00009…https://fallout.fandom.com/wiki/File:Dlc05conve_dlc05converoomf_00009908_1.oggnoicon",
+      "index": "188"
+    },
+    {
+      "topic": "Dlc05ConvERoomFirstRoom",
+      "topic_text": "Dlc05ConvERoomFirstRoom",
+      "emotion": "Neutral 50",
+      "response_text": "Those guys in there look busy.Play soundDlc05conve_dlc05converoomf_00009…https://fallout.fandom.com/wiki/File:Dlc05conve_dlc05converoomf_00009902_1.oggnoicon",
+      "index": "189"
+    },
+    {
+      "topic": "Dlc05ConvERoomGasTrap",
+      "topic_text": "Dlc05ConvERoomGasTrap",
+      "emotion": "Neutral 50",
+      "response_text": "They're flooding the room with gas.Play soundDlc05conve_dlc05converoomg_00009…https://fallout.fandom.com/wiki/File:Dlc05conve_dlc05converoomg_0000990b_1.oggnoicon",
+      "index": "190"
+    },
+    {
+      "topic": "Dlc05ConvTercorienAltResponsesLevel01",
+      "topic_text": "Dlc05ConvTercorienAltResponsesLevel01",
+      "emotion": "Neutral 50",
+      "response_text": "So they don't know who started it or who won?Play soundDlc05conve_dlc05convtercor_00005…https://fallout.fandom.com/wiki/File:Dlc05conve_dlc05convtercor_000053ee_1.oggnoicon",
+      "index": "191"
+    },
+    {
+      "topic": "Dlc05ConvTercorienAltResponsesLevel02",
+      "topic_text": "Dlc05ConvTercorienAltResponsesLevel02",
+      "emotion": "Neutral 50",
+      "response_text": "Then I don't really have anything to go back to, do I? I mean, my family's gone, my friends are gone... everything I knew is gone.Play soundDlc05conve_dlc05convtercor_00005…https://fallout.fandom.com/wiki/File:Dlc05conve_dlc05convtercor_00005401_1.oggnoicon",
+      "index": "193"
+    },
+    {
+      "topic": "Dlc05ConvTercorienResponsesLevel01",
+      "topic_text": "Dlc05ConvTercorienResponsesLevel01",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah... all the time. I was a doctor, so it was my job to try and make everyone feel better.Play soundDlc05conve_dlc05convtercor_00005…https://fallout.fandom.com/wiki/File:Dlc05conve_dlc05convtercor_0000542c_1.oggnoicon",
+      "index": "195"
+    },
+    {
+      "topic": "Dlc05ConvTercorienResponsesLevel02",
+      "topic_text": "Dlc05ConvTercorienResponsesLevel02",
+      "emotion": "Neutral 50",
+      "response_text": "Well... I mean... sometimes they're hurt so bad, there's nothing I can do. The human body is very hard to, um, hard to \"fix.\"{trying to reason with a child}Play soundDlc05conve_dlc05convtercor_00005…https://fallout.fandom.com/wiki/File:Dlc05conve_dlc05convtercor_000053f0_1.oggnoicon",
+      "index": "198"
+    },
+    {
+      "topic": "Dlc05ConvTercorienResponsesLevel03",
+      "topic_text": "Dlc05ConvTercorienResponsesLevel03",
+      "emotion": "Neutral 50",
+      "response_text": "No, no, no. Don't worry. Nothing's going to happen to you. Everything's going to be just fine.{Trying to divert subject}Play soundDlc05conve_dlc05convtercor_00005…https://fallout.fandom.com/wiki/File:Dlc05conve_dlc05convtercor_00005410_1.oggnoicon",
+      "index": "201"
+    },
+    {
+      "topic": "Dlc05CoreScene01",
+      "topic_text": "Dlc05CoreScene01",
+      "emotion": "Surprise 50",
+      "response_text": "Heâ€™s not going anywhere. Why donâ€™t we just hold on to him, and try to negotiate? Yâ€™know, like a hostage?{about a near dying alien captive}Play soundDlc05cores_dlc05corescene0_00006…https://fallout.fandom.com/wiki/File:Dlc05cores_dlc05corescene0_00006e1a_1.oggnoicon",
+      "index": "203"
+    },
+    {
+      "topic": "Dlc05CoreScene03",
+      "topic_text": "Dlc05CoreScene03",
+      "emotion": "Neutral 50",
+      "response_text": "I donâ€™t know, but maybe we should... there must be something...{coming up short for a good argument in his favor}Play soundDlc05cores_dlc05corescene0_00006…https://fallout.fandom.com/wiki/File:Dlc05cores_dlc05corescene0_00006e1b_1.oggnoicon",
+      "index": "204"
+    },
+    {
+      "topic": "Dlc05CryoElliotDontPress",
+      "topic_text": "Dlc05CryoElliotDontPress",
+      "emotion": "Neutral 50",
+      "response_text": "What the hell are you doing?! Don't press that!Play soundDlc05cryoq_dlc05cryoelliot_00006…https://fallout.fandom.com/wiki/File:Dlc05cryoq_dlc05cryoelliot_00006c0b_1.oggnoicon",
+      "index": "205"
+    },
+    {
+      "topic": "Dlc05CryoElliotFoundSquadSpeak",
+      "topic_text": "Dlc05CryoElliotFoundSquadSpeak",
+      "emotion": "Neutral 50",
+      "response_text": "Wait!  I think that's some more of my squad!{Notices that the actors in the pods are his squad mates.}Play soundDlc05cryoq_dlc05cryoelliot_00005…https://fallout.fandom.com/wiki/File:Dlc05cryoq_dlc05cryoelliot_0000561c_1.oggnoicon",
+      "index": "206"
+    },
+    {
+      "topic": "Dlc05CryoElliotSpeak",
+      "topic_text": "Dlc05Cryo",
+      "emotion": "Neutral 50",
+      "response_text": "What the hell are those aliens doing in there?{Responding to seeing Aliens, through a window, patrolling a room and monitoring something.}Play soundDlc05cryoq_dlc05cryoelliot_00005…https://fallout.fandom.com/wiki/File:Dlc05cryoq_dlc05cryoelliot_00005612_1.oggnoicon",
+      "index": "221"
+    },
+    {
+      "topic": "Dlc05CryoWeaponsFound",
+      "topic_text": "Dlc05CryoWeaponsFound",
+      "emotion": "Neutral 50",
+      "response_text": "Hmmm. Let me take some of this cryogenic compound back to the engine core. I might be able to make some use of it.Play soundDlc05cryoq_dlc05cryoweapon_00006…https://fallout.fandom.com/wiki/File:Dlc05cryoq_dlc05cryoweapon_00006e56_1.oggnoicon",
+      "index": "234"
+    },
+    {
+      "topic": "Dlc05MZ3ExLabDeathRayLines",
+      "topic_text": "Dlc05MZ3ExLabDeathRayLines",
+      "emotion": "Neutral 50",
+      "response_text": "Pretty effective threat, if you ask me.Play soundDlc05mz3_dlc05mz3exlabdeat_00005…https://fallout.fandom.com/wiki/File:Dlc05mz3_dlc05mz3exlabdeat_00005d39_1.oggnoicon",
+      "index": "236"
+    },
+    {
+      "topic": "Dlc05MZ3ExLabSceneLines",
+      "topic_text": "Dlc05MZ3ExLabSceneLines",
+      "emotion": "Neutral 50",
+      "response_text": "That's really something. Almost enough to make you forget we're running for our lives up here...{awed}Play soundDlc05mz3_dlc05mz3exlabscen_00005…https://fallout.fandom.com/wiki/File:Dlc05mz3_dlc05mz3exlabscen_000058a8_1.oggnoicon",
+      "index": "238"
+    },
+    {
+      "topic": "Dlc05MZ3ExLabSceneOpeningLine",
+      "topic_text": "Dlc05MZ3ExLabSceneOpeningLine",
+      "emotion": "Neutral 50",
+      "response_text": "Get a load of this!{amazed}Play soundDlc05mz3_dlc05mz3exlabscen_00005…https://fallout.fandom.com/wiki/File:Dlc05mz3_dlc05mz3exlabscen_00005741_1.oggnoicon",
+      "index": "239"
+    },
+    {
+      "topic": "GOODBYE",
+      "topic_text": "I have to go now.",
+      "emotion": "Neutral 50",
+      "response_text": "Yep, not like I'm going anywhere.Play soundDlc05post_goodbye_0000ab68_1.ogghttps://fallout.fandom.com/wiki/File:Dlc05post_goodbye_0000ab68_1.oggnoicon",
+      "index": "240"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Neutral 50",
+      "response_text": "Hey, good to see you again.Play soundDlc05post_hello_0000ab54_1.ogghttps://fallout.fandom.com/wiki/File:Dlc05post_hello_0000ab54_1.oggnoicon",
+      "index": "253"
+    }
+  ],
+  "combat": []
+}

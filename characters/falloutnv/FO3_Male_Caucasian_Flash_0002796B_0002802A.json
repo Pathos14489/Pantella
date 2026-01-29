@@ -1,0 +1,273 @@
+{
+  "name": "Flash",
+  "url": "/wiki/Flash_(Fallout_3)",
+  "dialogue_name": "Flash.txt",
+  "dialogue_url": "/wiki/Flash.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": true,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "0002796B",
+  "ref_id": "0002802A",
+  "editor_id": "Flash",
+  "location": "Big Town",
+  "location_url": "/wiki/Big_Town",
+  "descriptions": [
+    "Flash is a resident of Big Town in Fallout 3.",
+    "Growing up together in Little Lamplight, Flash, Pappy, Bittercup, Red and Kimba were close, and often played together. They also traveled as a group to Big Town.",
+    "On the surface, Flash exudes bravado and overconfidence, and has a penchant for making big, childish claims that he cannot really back up. For example, he is exceptionally proud of his \"kick-ass\" gun (in reality, a simple, weak .32 pistol) and boasts his desire to defend the town and kill super mutants with it.",
+    "Flash previously dated Bittercup, but their relationship did not last long.",
+    "Flash handles the patrolling of the town during daylight hours. At nighttime, he switches out with Bittercup and rests.",
+    "PC Occurrences of Flash being met just outside of Meresti trainyard have happened when the player fast travels there prior to going to Big Town (obviously before Big Trouble in Big Town). If spoken to, his dialogue consists of his usual complaints about Big Town and super mutants. Flash will proceed to walk back to Big Town via the road just outside the trainyard. If not escorted by the player, there is a high chance of him being killed by super mutants or raiders during his journey."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Big TownLittle Lamplight(formerly)",
+  "role": "Big Town guard",
+  "detailed_location": "Big Town",
+  "voice_actor": "Craig Sechler",
+  "level": "2→5",
+  "tag_skills": [
+    {
+      "Barter:": "34→48"
+    },
+    {
+      "Medicine:": "32→46"
+    },
+    {
+      "Melee Weap.:": "36→50"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "30→45(35→50)"
+    },
+    {
+      "Critical Chance:": "5%"
+    },
+    {
+      "Unarmed Dam.:": "1.15"
+    },
+    {
+      "Poison Resist.:": "15%(20%)"
+    },
+    {
+      "Rad. Resist.:": "6%(8%)"
+    },
+    {
+      "Carry Weight:": "220"
+    },
+    {
+      "Damage Res.:": "2%"
+    }
+  ],
+  "karma": "Neutral",
+  "voice_type": "MaleAdult04DC",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "BigtownFlashGreeting1",
+      "topic_text": "Trouble? What kind of trouble?",
+      "emotion": "Neutral 50",
+      "response_text": "Well, we've got Super Mutants out that way and Slavers up that way. Take your pick.",
+      "index": "1"
+    },
+    {
+      "topic": "BigtownFlashGreeting2",
+      "topic_text": "Why don't you leave?",
+      "emotion": "Neutral 50",
+      "response_text": "And where are we going to go? Megaton won't have us, Lamplight won't take us back, and Rivet City is too far.",
+      "index": "4"
+    },
+    {
+      "topic": "BigtownFlashGreeting3",
+      "topic_text": "Who lives here?",
+      "emotion": "Neutral 50",
+      "response_text": "There aren't many of us left. There's me and Pappy. Red runs the clinic, but she's been taken by the mutant. Kimba does what she can.",
+      "index": "6"
+    },
+    {
+      "topic": "BigtownFlashGreetingEND",
+      "topic_text": "I'm sure you'll manage.",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah, we'll see.",
+      "index": "12"
+    },
+    {
+      "topic": "BigtownFlashGreetingThreat",
+      "topic_text": "So, it's pretty much a free-for-all here? Where do you keep your good stuff?",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah, yeah, you're a scary wastelander. Look, you'll either kill us, or you won't.",
+      "index": "13"
+    },
+    {
+      "topic": "BigtownFlashGreetingThreat1",
+      "topic_text": "Kill you? Sounds like fun. Let's do that.",
+      "emotion": "Neutral 50",
+      "response_text": "Then I'm going down fighting!",
+      "index": "15"
+    },
+    {
+      "topic": "BigtownFlashGreetingThreat2",
+      "topic_text": "Not bad, kid. I'll let you live... for now.",
+      "emotion": "Neutral 50",
+      "response_text": "Aren't you swell. Did you need something else or can I go back to my patrol?",
+      "index": "16"
+    },
+    {
+      "topic": "BigtownTownBittercupandFlash",
+      "topic_text": "I hear you and Bittercup were an item.",
+      "emotion": "Disgust 25",
+      "response_text": "Oh, man, don't even go there. You'd think a girl like that would be more, you know, \"adventurous.\" But that's a dry well, my friend.",
+      "index": "18"
+    },
+    {
+      "topic": "BigtownTownServices",
+      "topic_text": "Do you have any traders in town? Any doctors?",
+      "emotion": "Neutral 50",
+      "response_text": "Look, the only place to go is the town hall, and that's just a meeting spot for us. There aren't any traders or anything around here.",
+      "index": "21"
+    },
+    {
+      "topic": "BigtownTownWhereDidYouComeFrom",
+      "topic_text": "Where did you people come from, anyway?",
+      "emotion": "Neutral 50",
+      "response_text": "We all used to live in a place called Little Lamplight, but they have a rule about age. You reach sixteen, and you're out.",
+      "index": "23"
+    },
+    {
+      "topic": "BigtownTownWhosInCharge",
+      "topic_text": "Who's in charge here?",
+      "emotion": "Neutral 50",
+      "response_text": "I guess I am. I've got the guns and the guts. At least, I'm pretty sure I do...",
+      "index": "26"
+    },
+    {
+      "topic": "BigtownTownWhosWhoWho lives here?",
+      "topic_text": "Who's that guy guarding the gate?",
+      "emotion": "Neutral 50",
+      "response_text": "You mean Dusty? Never talks about himself much. Never talks about anything much.",
+      "index": "28"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Happy 50",
+      "response_text": "Go on, I'm watching. Show us what to do.",
+      "index": "30"
+    },
+    {
+      "topic": "MS01AboutRed",
+      "topic_text": "I'm looking for a woman named Red. Sticky promised me some caps...",
+      "emotion": "Anger 50",
+      "response_text": "Those damn Muties took her with the others when they raided the town last. If you rescue her, I'm sure she'll pay you whatever Sticky owes.{frustrated}",
+      "index": "41"
+    },
+    {
+      "topic": "MS01QuestHook",
+      "topic_text": "Do you know where the Super Mutants took your friends?",
+      "emotion": "Happy 100",
+      "response_text": "Try Germantown. They always come from up that way. Bring lots of guns and shoot the hell out of those Muties! I'll hold down the fort here.{overly excited}",
+      "index": "43"
+    },
+    {
+      "topic": "MS01QuestHookA1MS01QuestHook1",
+      "topic_text": "Do you know where these Super Mutants took their victims?",
+      "emotion": "Surprise 75",
+      "response_text": "Yeah... Yeah! They went northeast... probably to the Germantown Police Headquarters. They have guns. And they're mean. So you be careful.{excited}",
+      "index": "49"
+    },
+    {
+      "topic": "MS01QuestHookA2MS01QuestHook2",
+      "topic_text": "Yeah, I get it. You're a real soldier. So you got any intel on the enemy?",
+      "emotion": "Surprise 100",
+      "response_text": "Intel? What's intel? I can tell you they went north towards the Germantown police station, if that's what you mean. You going to rescue them?{confused but hopeful}",
+      "index": "51"
+    },
+    {
+      "topic": "MS01QuestHookA3MS01QuestHook3",
+      "topic_text": "Your friends are as good as dead. Forget about them.",
+      "emotion": "Sad 100",
+      "response_text": "They aren't dead yet. I can feel it! I thought you might help. You seem pretty tough. Well... if you decide to help, let us know. We'd be grateful.{let down and depressed and imploring}",
+      "index": "52"
+    },
+    {
+      "topic": "MS01QuestHookA4",
+      "topic_text": "I'll think about it, but I can't rescue your friends now.",
+      "emotion": "Sad 100",
+      "response_text": "I thought you might help. You seem pretty tough. Well... if you decide to help, let us know. We'd be grateful.{let down and depressed and imploring}",
+      "index": "53"
+    },
+    {
+      "topic": "MS01QuestHookB1",
+      "topic_text": "You stay here and hold off any more Mutants. I'll go rescue your friends.",
+      "emotion": "Happy 100",
+      "response_text": "That's totally awesome! Yeah! Okay. While you're out on your mission, I'll stay here and hold down the fort. Cool!{totally happy and stuff}",
+      "index": "54"
+    },
+    {
+      "topic": "MS01QuestHookB2",
+      "topic_text": "I don't make promises. And I don't risk my life for free.",
+      "emotion": "Sad 50",
+      "response_text": "Oh... okay, well... if you do find them, if it's not too much to ask, I'd hope you might be able to rescue them. We'd give you a reward, too.{a little disappointed but still hopeful}",
+      "index": "56"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "BigTownGoodbye",
+      "topic_text": "BigTownGoodbye",
+      "emotion": "Neutral 50",
+      "response_text": "Ease into it, Timebomb. I can handle the town myself while you're recovering.{Flash pretends to be the big man.}",
+      "index": "57"
+    },
+    {
+      "topic": "BigTownResponse",
+      "topic_text": "BigTownResponse",
+      "emotion": "Anger 50",
+      "response_text": "A one-half mile radius? What does that even mean?{Flash is angry because Shorty's suggestion is pushy and unhelpful.}",
+      "index": "65"
+    },
+    {
+      "topic": "BigTownResponse02",
+      "topic_text": "BigTownResponse02",
+      "emotion": "Happy 50",
+      "response_text": "You don't seem to understand. This gun is bad-ass. Yeah!{Flash is a little overly excited.Extend the syllable for \"bad\" and \"ass.\" Should sound like \"baaaad-aaas.\" }",
+      "index": "68"
+    },
+    {
+      "topic": "GOODBYE",
+      "topic_text": "I have to go now.",
+      "emotion": "Fear 50",
+      "response_text": "Keep an eye out for Muties!{cautioning bravado covering anxiety}",
+      "index": "69"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Happy 100",
+      "response_text": "It's the hero of Big Town!",
+      "index": "72"
+    },
+    {
+      "topic": "MS01CrowdSay",
+      "topic_text": "MS01CrowdSay",
+      "emotion": "Happy 100",
+      "response_text": "Take that, Muties!{(cheering) in an excited cheering mob}",
+      "index": "81"
+    }
+  ],
+  "combat": [
+    {
+      "topic": "Attack",
+      "topic_text": "Attack",
+      "emotion": "Fear 100",
+      "response_text": "Oh shit, oh shit, oh shit.",
+      "index": "88"
+    }
+  ]
+}

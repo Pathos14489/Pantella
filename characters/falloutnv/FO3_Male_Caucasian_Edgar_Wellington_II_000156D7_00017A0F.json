@@ -1,0 +1,309 @@
+{
+  "name": "Edgar Wellington II",
+  "url": "/wiki/Edgar_Wellington_II",
+  "dialogue_name": "EdgarWellingtonII.txt",
+  "dialogue_url": "/wiki/EdgarWellingtonII.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000156D7",
+  "ref_id": "00017A0F",
+  "editor_id": "EdgarWellingtonII",
+  "location": "Tenpenny Tower",
+  "location_url": "/wiki/Tenpenny_Tower",
+  "descriptions": [
+    "Edgar Wellington II is a resident of Tenpenny Tower in 2277.",
+    "Edgar Wellington spends most of his time in his suite with his wife, Millicent, who he despises; but like her, he only leaves to eat a couple of times a day. He sleeps with her in their bed a few hours every night (and sneaks out to sleep with Susan Lancaster on Mondays).",
+    "He is very proud of his luxurious lifestyle at Tenpenny Tower and believes himself to be above the common wastelander. Like most of the residents of Tenpenny Tower, he is a ghoul-hater due to Roy Phillips' persistent efforts to get inside.",
+    "Wellington is married to Millicent Wellington, but also has an affair with Susan Lancaster, an ex-slaver and the resident prostitute.",
+    "Wellington spends the day walking around Tenpenny Tower together with Millicent Wellington. She attempts to talk to him, but he shows little interest and doesn't listen to her, which in turn makes her angry. On Monday nights Edgar sneaks out of his room and spends the night with his mistress, Susan Lancaster.",
+    "Tenpenny Tower: He is one of several bigoted residents the player character can try to convince to change his mind if the player is attempting to help move Roy Phillips and the ghouls into Tenpenny Tower peacefully. Edgar is a rude individual due to his upper-class status, looking down on the player and talking negatively if the player speaks positively about the ghouls.",
+    "A love letter found in Susan Lancaster's room reveals that he is having an affair with her. If this letter is shown to his wife Millicent Wellington, she will proceed to track him down and murder him, and then Susan. The newly widowed Wellington will leave Tenpenny Tower."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Tenpenny Tower",
+  "role": "Resident",
+  "detailed_location": "Tenpenny Tower",
+  "voice_actor": "Jeff Baker",
+  "special": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 4,
+    "Intelligence": 4,
+    "Agility": 6,
+    "Luck": 4
+  },
+  "level": "4",
+  "tag_skills": [
+    {
+      "Barter:": "41"
+    },
+    {
+      "Small Guns:": "45"
+    },
+    {
+      "Unarmed:": "41"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Good",
+  "voice_type": "MaleAdult01DefaultDC",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Fear 50",
+      "response_text": "Help! Don't kill me!{in the middle of an attack against his town}",
+      "index": "1"
+    },
+    {
+      "topic": "MS12Basement",
+      "topic_text": "You ever been to the basement?",
+      "emotion": "Disgust 75",
+      "response_text": "Why would I ever go to the basement? Talk to Gustavo about such nonsense.{dismissive}",
+      "index": "15"
+    },
+    {
+      "topic": "MS12BigotNeighbors",
+      "topic_text": "What if all your other neighbors agree?",
+      "emotion": "Disgust 100",
+      "response_text": "Don't care. The only way those Ghoul's are getting in is over my dead body.{self important snob}",
+      "index": "16"
+    },
+    {
+      "topic": "MS12BigotNevermind",
+      "topic_text": "Whatever.",
+      "emotion": "Anger 50",
+      "response_text": "Quit bothering me with all this nonsense.{self important snob losing patience}",
+      "index": "17"
+    },
+    {
+      "topic": "MS12BigotSpeech",
+      "topic_text": "This is happening. You're going to have to deal with it, or get forced out.",
+      "emotion": "Anger 100",
+      "response_text": "This is outrageous! Preposterous! Forced out by a bunch of dirty Ghouls, and some bleeding heart activist? Where will I live? How will I get there?{bigot facing retribution}",
+      "index": "18"
+    },
+    {
+      "topic": "MS12BigotSpeechBad",
+      "topic_text": "I don't care. Get your stuff together and get out of here.",
+      "emotion": "Anger 50",
+      "response_text": "I never forget a slight. Watch your back. I'll be sending someone to pay you a little visit in the future.{bigot promising revenge}",
+      "index": "19"
+    },
+    {
+      "topic": "MS12BigotSpeechGood",
+      "topic_text": "I'm sure you'll find something suitable, don't worry.",
+      "emotion": "Anger 50",
+      "response_text": "I found a comfortable place, but now I must leave. When I die, it will be on your head.{defeated bigot promising revenge}",
+      "index": "20"
+    },
+    {
+      "topic": "MS12BigotSpeechNeutral",
+      "topic_text": "Good luck.",
+      "emotion": "Anger 50",
+      "response_text": "You'll get yours.{defeated bigot promising revenge}",
+      "index": "21"
+    },
+    {
+      "topic": "MS12Greeting1",
+      "topic_text": "Don't worry. I was let in at the front gate.",
+      "emotion": "Surprise 50",
+      "response_text": "Hmm... very well. As long as security is aware of your presence. Can't be too careful these days. What with these Ghouls and all.{pompous and suspicious.}",
+      "index": "22"
+    },
+    {
+      "topic": "MS12Greeting2",
+      "topic_text": "I jumped over the walls when no one was looking. How do you think I got in here?",
+      "emotion": "Neutral 50",
+      "response_text": "There's no need to get snippy with me, boy!{pompous indignation}",
+      "index": "24"
+    },
+    {
+      "topic": "MS12Greeting3",
+      "topic_text": "<Say nothing.>",
+      "emotion": "Neutral 50",
+      "response_text": "Someone needs to talk to Tenpenny. I don't think security should let people like you just wander in like that.{pompous snob}",
+      "index": "28"
+    },
+    {
+      "topic": "MS12IntroToGhoul1",
+      "topic_text": "I eat Ghouls for breakfast.",
+      "emotion": "Surprise 100",
+      "response_text": "Oh my. It sounds like you might be just the person we need to take care of the situation. Talk to Gustavo.{shocked but happy to have a hero}",
+      "index": "30"
+    },
+    {
+      "topic": "MS12IntroToGhoul2",
+      "topic_text": "I've seen lots of Ghouls. Hated every last one of them.",
+      "emotion": "Disgust 100",
+      "response_text": "Indeed. Loathsome creatures aren't they? Someone really ought to put them out of their misery. You should talk to Gustavo about exterminating them.{self important snob}",
+      "index": "31"
+    },
+    {
+      "topic": "MS12IntroToGhoul3",
+      "topic_text": "I don't consider Ghouls to be a problem. If that's what you're asking.",
+      "emotion": "Disgust 100",
+      "response_text": "Then you obviously don't know anything about Ghouls.{haughtily}",
+      "index": "32"
+    },
+    {
+      "topic": "MS12ResidentsBranch",
+      "topic_text": "What's it like living at Tenpenny Tower?",
+      "emotion": "Happy 50",
+      "response_text": "It's THE place to live. The only place one finds any modicum of civilization and breeding.{self important snob}",
+      "index": "33"
+    },
+    {
+      "topic": "MS12ResidentsGhoulsAbout these Ghouls...",
+      "topic_text": "Do you know anything useful about those Ghouls?",
+      "emotion": "Disgust 70",
+      "response_text": "There's a pack of zombies living nearby in some old tunnel. They asked to move in. Naturally, they were told to go to hell.{self important snob}",
+      "index": "35"
+    },
+    {
+      "topic": "MS12ResidentsGhoulsChoice1MS12ResidentsGhoulsChoiceGood",
+      "topic_text": "I might be able to take care of your unwanted neighbors.",
+      "emotion": "Happy 100",
+      "response_text": "Really? It's your funeral I suppose. You'll want to discuss it with Chief Gustavo first.{surprised but happy someone is taking charge}",
+      "index": "38"
+    },
+    {
+      "topic": "MS12ResidentsGhoulsChoice2MS12ResidentsGhoulsChoiceBad",
+      "topic_text": "You ever wonder what those Ghouls think of you, and your snobby friends?",
+      "emotion": "Disgust 100",
+      "response_text": "Hmph. Well I... I just remembered I have something important to do. Goodbye.{self important indignation}",
+      "index": "39"
+    },
+    {
+      "topic": "MS12ResidentsGhoulsChoice3MS12ResidentsGhoulsChoiceNeutral",
+      "topic_text": "Yeah, good luck with that.",
+      "emotion": "Disgust 50",
+      "response_text": "Thanks.{self important sarcasm}",
+      "index": "40"
+    },
+    {
+      "topic": "MS12ResidentsNeighbors",
+      "topic_text": "How would you feel about having a few Ghoul neighbors?",
+      "emotion": "Anger 100",
+      "response_text": "I know you've been pressuring people into allowing Ghouls to live here.{angry}",
+      "index": "41"
+    },
+    {
+      "topic": "MS12ResidentsNeighborsBad",
+      "topic_text": "Yeah. Ghouls are disgusting creatures.",
+      "emotion": "Disgust 50",
+      "response_text": "Indeed they are. Someone really should put them all out of there misery, don't you think?{self important snob}",
+      "index": "45"
+    },
+    {
+      "topic": "MS12ResidentsNeighborsGood",
+      "topic_text": "I've met these Ghouls. They're civilized and pose no threat.",
+      "emotion": "Anger 100",
+      "response_text": "I'm afraid that I can't abide by that. I can't imagine Tenpenny would allow it. But I certainly won't.{self important snob}",
+      "index": "46"
+    },
+    {
+      "topic": "MS12ResidentsNeighborsNeutral",
+      "topic_text": "Whatever.",
+      "emotion": "Disgust 50",
+      "response_text": "Don't you have somewhere else you can go? Must you bother me?{self important snob}",
+      "index": "47"
+    },
+    {
+      "topic": "SpeechChallengeFailure",
+      "topic_text": "SpeechChallengeFailure",
+      "emotion": "Anger 100",
+      "response_text": "Who do you think you are? Tenpenny won't allow it. I'm a paying member of the tower. He'll listen to reason. Get out of here!{self important snob}",
+      "index": "48"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "DialogueTenpennyConv00",
+      "topic_text": "DialogueTenpennyConv00",
+      "emotion": "Happy 50",
+      "response_text": "Fine, thank you. You and your men patrolling makes everyone feel safe here. Thanks again.{sincere}",
+      "index": "49"
+    },
+    {
+      "topic": "DialogueTenpennyConv01",
+      "topic_text": "DialogueTenpennyConv01",
+      "emotion": "Neutral 50",
+      "response_text": "Oh... well... umm... Thank you Susan... er, I mean, Ms. Lancaster. A pleasant day to you.{caught off guard by his mistress flirting with him in public}",
+      "index": "51"
+    },
+    {
+      "topic": "DialogueTenpennyConv02",
+      "topic_text": "DialogueTenpennyConv02",
+      "emotion": "Neutral 50",
+      "response_text": "Yes, well. You'll think of something I'm sure. Good luck.{comforting a friend who is having a bad day}",
+      "index": "52"
+    },
+    {
+      "topic": "DialogueTenpennyConv04",
+      "topic_text": "DialogueTenpennyConv04",
+      "emotion": "Disgust 25",
+      "response_text": "Very well. If you insist on remaining a social hermit, by all means continue to follow me around all day.{trying not to be sarcastic but failing}",
+      "index": "55"
+    },
+    {
+      "topic": "DialogueTenpennyEatStartTopic",
+      "topic_text": "DialogueTenpennyEatStartTopic",
+      "emotion": "Neutral 50",
+      "response_text": "Dinner time.{hungry and on his way to get food}",
+      "index": "56"
+    },
+    {
+      "topic": "DialogueTenpennySleepStartTopic",
+      "topic_text": "DialogueTenpennySleepStartTopic",
+      "emotion": "Neutral 50",
+      "response_text": "I'm exhausted. It's time for some shut-eye.{tired and heading off to bed}",
+      "index": "57"
+    },
+    {
+      "topic": "DialogueTenpennyWellingtonConv02",
+      "topic_text": "DialogueTenpennyWellingtonConv02",
+      "emotion": "Neutral 50",
+      "response_text": "Yes, dear.{(not really paying attention) humoring his chatty wife}",
+      "index": "58"
+    },
+    {
+      "topic": "DialogueTenpennyWellingtonConv04",
+      "topic_text": "DialogueTenpennyWellingtonConv04",
+      "emotion": "Surprise 50",
+      "response_text": "What?{not paying attention to his wife who is chatting his ear off}",
+      "index": "64"
+    },
+    {
+      "topic": "GOODBYE",
+      "topic_text": "I have to go now.",
+      "emotion": "Surprise 10",
+      "response_text": "Nice chit-chatting with you.{(sarcastic) self important snob}",
+      "index": "68"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Surprise 50",
+      "response_text": "You're behaving rather oddly, Mister Dashwood. Perhaps you should go lie down for awhile.{confused and slightly suspicious}",
+      "index": "71"
+    },
+    {
+      "topic": "MS12TillDeath",
+      "topic_text": "MS12TillDeath",
+      "emotion": "Surprise 50",
+      "response_text": "What are you talking about dear? Is everything alright?{husband who is confused by his wife's actions}",
+      "index": "81"
+    }
+  ],
+  "combat": []
+}

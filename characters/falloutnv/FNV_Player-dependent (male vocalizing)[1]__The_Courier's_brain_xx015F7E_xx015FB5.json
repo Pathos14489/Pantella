@@ -1,0 +1,690 @@
+{
+  "name": "The Courier's brain",
+  "url": "/wiki/The_Courier%27s_brain",
+  "dialogue_name": "NVDLC03BrainTank.txt",
+  "dialogue_url": "/wiki/NVDLC03BrainTank.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": true,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "xx015F7E",
+  "ref_id": "xx015FB5",
+  "editor_id": "NVDLC03BrainTank",
+  "location": "Forbidden Zone dome entrance",
+  "location_url": "/wiki/Forbidden_Zone_dome_entrance",
+  "descriptions": [
+    "The Courier's brain, inside the Brain Tank, is the disembodied, isolated, conscious, and interactive brain of the Courier encountered in the Fallout: New Vegas add-on Old World Blues.",
+    "After their involuntary transport to the Big Empty in 2281,",
+    "Although the brain was initially examined by the Think Tank, who were amazed at the first successful brain extraction, their recursion loop programming soon caused them to forget about the breakthrough. Meanwhile, Doctor Mobius, who had been observing his former colleagues, deduced that the Courier's brain extraction could serve as a dangerous catalyst for the Think Tank's escape from the Big Empty, and arranged for the brain to be taken out of the Think Tank and brought to his stronghold in the Forbidden Zone.",
+    "Placed in a bio-medigel filled tank to sustain its health, the Courier's brain was also given treatments of Mentats by Mobius, which increased its intelligence.",
+    "The Courier's brain appears only in the Fallout: New Vegas add-on Old World Blues.",
+    "PC Playstation 3 Xbox 360 After progressing through the dialogue with the Courier's brain, the option to say \"So, what, you'd rather just stay here? Never leaving that tank of... whatever that stuff is?\" appears, however, if you choose it, you will get stuck in a never-ending speech loop. This also occurs on PC as well, specifically at the moment when the brain begins reminiscing about past feats by Courier. In the observed case, the loop occurred between the brain recalling Jason Bright's departure and the activation of Helios One. It seems that there are missing dialogue and sound files for the Courier's brain other than the two references to Jason Bright and Helios One."
+  ],
+  "race": "Human(disembodied brain)",
+  "gender": "Player-dependent (male vocalizing)[1]",
+  "affiliation": "Courier",
+  "role": "Disembodied, sentient brain",
+  "detailed_location": "Forbidden Zone dome entrance",
+  "voice_actor": "Sunil Malhotra",
+  "karma": "Neutral",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "Go on, go on! You've wasted enough of my valuable time.",
+      "index": "1"
+    },
+    {
+      "topic": "NVDLC03DialoguePlayerBrainNVDLC03BrainTankTopic000",
+      "topic_text": "Fine, you've got a deal.",
+      "emotion": "Neutral 50",
+      "response_text": "{Surprised}Really? Hmm. I didn't expect you to actually agree to that. I'm afraid that was a bit of a bluff, really. I'm not going with you.",
+      "index": "12"
+    },
+    {
+      "topic": "NVDLC03DialoguePlayerBrainNVDLC03PlayerBrainTankTopic000",
+      "topic_text": "Are you... my brain?",
+      "emotion": "Neutral 50",
+      "response_text": "Ah, lovely, figured that out, have we?{slightly baby-talking, praising a small and stupid child}Would you like a cookie?",
+      "index": "14"
+    },
+    {
+      "topic": "NVDLC03DialoguePlayerBrainNVDLC03PlayerBrainTankTopic001",
+      "topic_text": "Why are you such a dick?",
+      "emotion": "Neutral 50",
+      "response_text": "Well, that's a fine how-do-you-do! Me! A, quote, dick, unquote. As if I'm the one responsible for the way you carry on, gadding about the Wastes.",
+      "index": "15"
+    },
+    {
+      "topic": "NVDLC03DialoguePlayerBrainNVDLC03PlayerBrainTankTopic002",
+      "topic_text": "Listen, you're my brain, so you'd better be more respectful!",
+      "emotion": "Neutral 50",
+      "response_text": "{Sarcastic}Oh, had I? What exactly will you do if I don't?{emph}Not put me back in that cranial{dungeon}donjon you call your head? Heavens forbid!",
+      "index": "18"
+    },
+    {
+      "topic": "NVDLC03DialoguePlayerBrainNVDLC03PlayerBrainTankTopic003",
+      "topic_text": "Actually, yes. I would love a cookie.",
+      "emotion": "Neutral 50",
+      "response_text": "{Beat, stunned that the player would actually say this}I...{sigh}ugh... is this really what I have to look forward to?",
+      "index": "19"
+    },
+    {
+      "topic": "NVDLC03DialoguePlayerBrainNVDLC03PlayerBrainTankTopic004",
+      "topic_text": "Come on, let's go. We're getting out of here.",
+      "emotion": "Neutral 50",
+      "response_text": "Ew! Crawl back in there? Are you mad? I don't know where you've been!",
+      "index": "20"
+    },
+    {
+      "topic": "NVDLC03DialoguePlayerBrainNVDLC03PlayerBrainTankTopic005",
+      "topic_text": "Why does my brain sound so... masculine?",
+      "emotion": "Neutral 50",
+      "response_text": "Ah, well, as to that... you'd be surprised how hard a feminine-sounding voice modulator is to find in the Forbidden Zone.",
+      "index": "27"
+    },
+    {
+      "topic": "NVDLC03DialoguePlayerBrainNVDLC03PlayerBrainTankTopic006",
+      "topic_text": "How the hell did Mobius get hold of my brain?",
+      "emotion": "Neutral 50",
+      "response_text": "After the Think Tank extracted me from your skull, they fell to bickering amongst themselves. I'm sad to say we were quite forgotten about.",
+      "index": "29"
+    },
+    {
+      "topic": "NVDLC03DialoguePlayerBrainNVDLC03PlayerBrainTankTopic007",
+      "topic_text": "Cool! I can talk to my own brain! Can my heart and spine talk, too?",
+      "emotion": "Neutral 50",
+      "response_text": "{Taken aback by the player's statement}Err... yes, well, you do know that those particular organs don't have neurons and are thus incapable of speech, yes?",
+      "index": "31"
+    },
+    {
+      "topic": "NVDLC03DialoguePlayerBrainNVDLC03PlayerBrainTankTopic008",
+      "topic_text": "This is too weird. I'll be back later.",
+      "emotion": "Neutral 50",
+      "response_text": "Barring the unlikely event that I evolve some sort of rocket-propelled locomotion, I will be here.",
+      "index": "32"
+    },
+    {
+      "topic": "NVDLC03DialoguePlayerBrainNVDLC03PlayerBrainTankTopic009",
+      "topic_text": "Of course you're responsible! You're my brain!",
+      "emotion": "Neutral 50",
+      "response_text": "{Outrage}I most certainly am not! I am the seat of all reason and logic in our little partnership!",
+      "index": "33"
+    },
+    {
+      "topic": "NVDLC03DialoguePlayerBrainNVDLC03PlayerBrainTankTopic010",
+      "topic_text": "Oh come on, that stuff's fun!",
+      "emotion": "Neutral 50",
+      "response_text": "{Rising emphasis with each word}Fun? Fun?! Is tetanus fun? Hmm? Is rickets? What about{SEP-sis}sepsis, enjoy that do we?",
+      "index": "38"
+    },
+    {
+      "topic": "NVDLC03DialoguePlayerBrainNVDLC03PlayerBrainTankTopic011",
+      "topic_text": "I didn't realize it caused you so much distress.",
+      "emotion": "Neutral 50",
+      "response_text": "{Mollified, but still pretending to pout a little}Well, maybe next time you hear me telling you that charging a Nightkin with a penknife is a bad idea, you'll listen.",
+      "index": "40"
+    },
+    {
+      "topic": "NVDLC03DialoguePlayerBrainNVDLC03PlayerBrainTankTopic012",
+      "topic_text": "We'll revisit this topic later.",
+      "emotion": "Neutral 50",
+      "response_text": "Oh yes, I rather expect we will. We'll be having a{emph}very long talk about crawling through old ruins, haring off on missions of revenge.{Beat, these are the worst of all}And Cazadores.",
+      "index": "41"
+    },
+    {
+      "topic": "NVDLC03DialoguePlayerBrainNVDLC03PlayerBrainTankTopic013",
+      "topic_text": "I could smash this tank you're in. How about that?",
+      "emotion": "Neutral 50",
+      "response_text": "By all means, if the idea of spending the rest of your days as a true Lobotomite appeals to you.",
+      "index": "43"
+    },
+    {
+      "topic": "NVDLC03DialoguePlayerBrainNVDLC03PlayerBrainTankTopic014",
+      "topic_text": "Once you're back in my head, I'll watch television. Lots. And lots. Of television.",
+      "emotion": "Neutral 50",
+      "response_text": "{Actually scared for once}You... you wouldn't! That's inhuman!",
+      "index": "45"
+    },
+    {
+      "topic": "NVDLC03DialoguePlayerBrainNVDLC03PlayerBrainTankTopic015",
+      "topic_text": "Fine, never mind.",
+      "emotion": "Neutral 50",
+      "response_text": "{Smug}Yes, I rather thought so.",
+      "index": "46"
+    },
+    {
+      "topic": "NVDLC03DialoguePlayerBrainNVDLC03PlayerBrainTankTopic016",
+      "topic_text": "Don't tempt me, brain.",
+      "emotion": "Neutral 50",
+      "response_text": "{Sulking}Fine. I'll try to respect you more. Sir.",
+      "index": "47"
+    },
+    {
+      "topic": "NVDLC03DialoguePlayerBrainNVDLC03PlayerBrainTankTopic017",
+      "topic_text": "I would. And I'd follow it up with an alcohol-and-ant-nectar cocktail every night.",
+      "emotion": "Neutral 50",
+      "response_text": "You're a monster! A deranged, self-destructive monster!",
+      "index": "49"
+    },
+    {
+      "topic": "NVDLC03DialoguePlayerBrainNVDLC03PlayerBrainTankTopic018",
+      "topic_text": "Maybe not, but it got your attention, didn't it?",
+      "emotion": "Neutral 50",
+      "response_text": "I suppose it did.{Acid}Bravo, you've managed to intimidate a brain in a jar.",
+      "index": "50"
+    },
+    {
+      "topic": "NVDLC03DialoguePlayerBrainNVDLC03PlayerBrainTankTopic019",
+      "topic_text": "Never mind. I want to talk about something else.",
+      "emotion": "Neutral 50",
+      "response_text": "Of course you do. How... scintillating.",
+      "index": "51"
+    },
+    {
+      "topic": "NVDLC03DialoguePlayerBrainNVDLC03PlayerBrainTankTopic020",
+      "topic_text": "I don't recall giving you a choice. Let's go.",
+      "emotion": "Neutral 50",
+      "response_text": "While the brute force approach is a lovely one, really, it won't work.",
+      "index": "52"
+    },
+    {
+      "topic": "NVDLC03DialoguePlayerBrainNVDLC03PlayerBrainTankTopic021",
+      "topic_text": "What's it going to take to convince you?",
+      "emotion": "Neutral 50",
+      "response_text": "I'd like to find a nice little place to live, maybe in Goodsprings, and settle down where we won't get shot at. Not as often, at any rate.",
+      "index": "55"
+    },
+    {
+      "topic": "NVDLC03DialoguePlayerBrainNVDLC03PlayerBrainTankTopic022",
+      "topic_text": "Come on, we have a duty to the Wasteland, we have to get out of here!",
+      "emotion": "Neutral 50",
+      "response_text": "There go those glands again. Is the endorphin rush you get from doing the right thing really that good?",
+      "index": "57"
+    },
+    {
+      "topic": "NVDLC03DialoguePlayerBrainNVDLC03PlayerBrainTankTopic023",
+      "topic_text": "I'm not spending the rest of my life here when there's a whole world to loot.",
+      "emotion": "Neutral 50",
+      "response_text": "Ah yes, there's that greed and general sense of malice. I'd nearly forgotten it. What's the plan, then?",
+      "index": "58"
+    },
+    {
+      "topic": "NVDLC03DialoguePlayerBrainNVDLC03PlayerBrainTankTopic024",
+      "topic_text": "Hold that thought, we'll come back to it.",
+      "emotion": "Neutral 50",
+      "response_text": "Heh. Hold that thought. That's almost clever.",
+      "index": "59"
+    },
+    {
+      "topic": "NVDLC03DialoguePlayerBrainNVDLC03PlayerBrainTankTopic025",
+      "topic_text": "Why? They promised to put us back together once I did what they wanted.",
+      "emotion": "Neutral 50",
+      "response_text": "And you believed them? Really? I know you were recently deprived of my fabulous advice, but... really?",
+      "index": "60"
+    },
+    {
+      "topic": "NVDLC03DialoguePlayerBrainNVDLC03PlayerBrainTankTopic026",
+      "topic_text": "Then let's go make them share. Come on, brain, it's stomping time!",
+      "emotion": "Neutral 50",
+      "response_text": "Oh, lovely, we've reached the mindless violence portion of the program. Tell me, what exactly are you - and I use the word loosely - planning?",
+      "index": "63"
+    },
+    {
+      "topic": "NVDLC03DialoguePlayerBrainNVDLC03PlayerBrainTankTopic027",
+      "topic_text": "How did he manage that?",
+      "emotion": "Neutral 50",
+      "response_text": "I don't know. I'm afraid the trauma of our separation rendered me quite insensate. I didn't come around until I was safely ensconced in this tank.",
+      "index": "64"
+    },
+    {
+      "topic": "NVDLC03DialoguePlayerBrainNVDLC03PlayerBrainTankTopic028",
+      "topic_text": "Hmm. Let me think about this.",
+      "emotion": "Neutral 50",
+      "response_text": "Ha! Thinking without a brain. The very idea is perverse.",
+      "index": "66"
+    },
+    {
+      "topic": "NVDLC03DialoguePlayerBrainNVDLC03PlayerBrainTankTopic029",
+      "topic_text": "If the Think Tank won't hold up their bargain, we'll make them. Let's go.",
+      "emotion": "Neutral 50",
+      "response_text": "{Sigh}Very well, I suppose I have no choice. Goodbye peaceful, soothing brain jar, hello head wounds and scorpions.",
+      "index": "67"
+    },
+    {
+      "topic": "NVDLC03DialoguePlayerBrainNVDLC03PlayerBrainTankTopic030",
+      "topic_text": "I'll handle the brains. You stay here - you'll be more useful outside my head.",
+      "emotion": "Neutral 50",
+      "response_text": "That arrangement suits me fine. Do try not to get too many holes drilled in your head, will you? I may want to drop by for sentimental reasons.",
+      "index": "69"
+    },
+    {
+      "topic": "NVDLC03DialoguePlayerBrainNVDLC03PlayerBrainTankTopic031",
+      "topic_text": "That seems like a pretty unlikely coincidence.",
+      "emotion": "Neutral 50",
+      "response_text": "Hardly. Dr. Mobius keeps a close optical sensor on the goings-on at the Think Tank. As soon as he saw the opportunity, he took it.",
+      "index": "70"
+    },
+    {
+      "topic": "NVDLC03DialoguePlayerBrainNVDLC03PlayerBrainTankTopic032",
+      "topic_text": "Well, that answers that. On to something else.",
+      "emotion": "Neutral 50",
+      "response_text": "Well, as long as your curiosity is satisfied.",
+      "index": "71"
+    },
+    {
+      "topic": "NVDLC03DialoguePlayerBrainNVDLC03PlayerBrainTankTopic033",
+      "topic_text": "You talk a lot of science, brain, but you don't make a lot of sense.",
+      "emotion": "Neutral 50",
+      "response_text": "{Sigh}Very well, let me put this in terms you'll understand. Brain: smart. Heart: stupid. Spine: very stupid. You: exceptionally stupid.",
+      "index": "72"
+    },
+    {
+      "topic": "NVDLC03DialoguePlayerBrainNVDLC03PlayerBrainTankTopic034",
+      "topic_text": "Well, you don't have a mouth, but you can talk. Explain that, smarty-pants!",
+      "emotion": "Neutral 50",
+      "response_text": "I don't have...{vague disgust}Ugh! I have an inferior frontal gyrus wired directly into a speech-synthesizing processor.",
+      "index": "74"
+    },
+    {
+      "topic": "NVDLC03DialoguePlayerBrainNVDLC03PlayerBrainTankTopic035",
+      "topic_text": "Uh, brain? You seem... awful smart all of a sudden.",
+      "emotion": "Neutral 50",
+      "response_text": "I've been bettering myself, I'll have you know. I've been reading - actual literature, mind you, not that ¡La Fantoma! or Tæles of Chivalrie drivel.",
+      "index": "76"
+    },
+    {
+      "topic": "NVDLC03DialoguePlayerBrainNVDLC03PlayerBrainTankTopic036",
+      "topic_text": "All this smart-talk is hurting my head. Please stop it.",
+      "emotion": "Neutral 50",
+      "response_text": "Well, we certainly wouldn't want to strain your comprehension, would we?",
+      "index": "79"
+    },
+    {
+      "topic": "NVDLC03DialoguePlayerBrainNVDLC03PlayerBrainTankTopic037",
+      "topic_text": "What about my spine?",
+      "emotion": "Neutral 50",
+      "response_text": "{Anguished noise of frustration}Argh!",
+      "index": "80"
+    },
+    {
+      "topic": "NVDLC03DialoguePlayerBrainNVDLC03PlayerBrainTankTopic038{Medicine 55}",
+      "topic_text": "But you're the source of most of those glands. Unless you're arguing that my thyroid is to blame.",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] I... well... look, it's all a very complex system of biofeedback and other things I wouldn't expect you to understand.",
+      "index": "81"
+    },
+    {
+      "topic": "NVDLC03DialoguePlayerBrainNVDLC03PlayerBrainTankTopic039",
+      "topic_text": "Admit it. You're just as glandular as I am.",
+      "emotion": "Neutral 50",
+      "response_text": "Oh, all right... perhaps I am, but at least I'm logical about it.",
+      "index": "83"
+    },
+    {
+      "topic": "NVDLC03DialoguePlayerBrainNVDLC03PlayerBrainTankTopic040",
+      "topic_text": "What's so bad about letting the brains get out? They don't seem that terrible.",
+      "emotion": "Neutral 50",
+      "response_text": "Don't seem so bad? They vivisected us just to see what would happen! Have you forgotten the Lobotomites? The Cyberdogs, I assume you saw those?",
+      "index": "84"
+    },
+    {
+      "topic": "NVDLC03DialoguePlayerBrainNVDLC03PlayerBrainTankTopic041{Speech check 75}",
+      "topic_text": "You're part of me. I know you don't want to let that happen any more than I do.",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED]{Sigh, realizes the player is right.}Well, I suppose I do miss those endorphin rushes when we save the day. All right - what's the plan?",
+      "index": "87"
+    },
+    {
+      "topic": "NVDLC03DialoguePlayerBrainNVDLC03PlayerBrainTankTopic042",
+      "topic_text": "That's going to be a problem. Until they fix me, I can't leave Big Mountain either.",
+      "emotion": "Neutral 50",
+      "response_text": "Hmm, I had overlooked that particular angle. Still, it's not so bad staying here, is it? We could be comfortable.",
+      "index": "89"
+    },
+    {
+      "topic": "NVDLC03DialoguePlayerBrainNVDLC03PlayerBrainTankTopic043",
+      "topic_text": "Are you really saying you'd let the Think Tank outwit us?",
+      "emotion": "Neutral 50",
+      "response_text": "{Indignant}You're trying to appeal to my ego now, aren't you? Well, let me tell you something about ego, my friend.",
+      "index": "90"
+    },
+    {
+      "topic": "NVDLC03DialoguePlayerBrainNVDLC03PlayerBrainTankTopic044{Guns 75+}",
+      "topic_text": "I'm going to give them a demonstration of the physics behind small, fast-moving chunks of lead.",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] Hmm... now that you mention it, I do miss that lovely \"rat-a-tat boom\" a bit. It's just not the same without a body to feel the recoil.",
+      "index": "92"
+    },
+    {
+      "topic": "NVDLC03DialoguePlayerBrainNVDLC03PlayerBrainTankTopic045{Energy Weapons 75+}",
+      "topic_text": "I'm going to show them what's really the brightest thing in the room.",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] Oh, energy weapons. Yes... I'd almost forgotten how much fun those are. How do we proceed, then?",
+      "index": "95"
+    },
+    {
+      "topic": "NVDLC03DialoguePlayerBrainNVDLC03PlayerBrainTankTopic046{Explosives 75+}",
+      "topic_text": "Ever had a squirrel brain omelet? That, but on a bigger scale. And with bombs.",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] Well, you have always been thorough in your destruction. All right, what's your plan?",
+      "index": "97"
+    },
+    {
+      "topic": "NVDLC03DialoguePlayerBrainNVDLC03PlayerBrainTankTopic047{Melee 75+}",
+      "topic_text": "The brains have forgotten the little things. Things like sharp blades and heavy chunks of steel.",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] Going the old-fashioned route, are we? I rather like it. What's next?",
+      "index": "99"
+    },
+    {
+      "topic": "NVDLC03DialoguePlayerBrainNVDLC03PlayerBrainTankTopic048{Unarmed 75+}",
+      "topic_text": "I'm going to show them even a video screen can get a black eye.",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] Not much of one for the high-tech approach, are we? Well, I suppose we'd best get on with it.",
+      "index": "101"
+    },
+    {
+      "topic": "NVDLC03DialoguePlayerBrainNVDLC03PlayerBrainTankTopic049",
+      "topic_text": "Let's just say violence is the last resort of the civilized man, and I'm feeling mighty uncivilized.",
+      "emotion": "Neutral 50",
+      "response_text": "With an attitude like that, it's small wonder you got yourself shot in the head.",
+      "index": "103"
+    },
+    {
+      "topic": "NVDLC03DialoguePlayerBrainNVDLC03PlayerBrainTankTopic050",
+      "topic_text": "There's no need to be sarcastic. Meeting your own brain is a slightly odd event.",
+      "emotion": "Neutral 50",
+      "response_text": "Yes, well, believe me, the opposite is equally true. Good Lord, have you bathed at all since they pulled me out of you?",
+      "index": "104"
+    },
+    {
+      "topic": "NVDLC03DialoguePlayerBrainNVDLC03PlayerBrainTankTopic051",
+      "topic_text": "Yes. Because running around a crater full of bizarre science experiments, hygiene is a top priority.",
+      "emotion": "Neutral 50",
+      "response_text": "Well, I see sarcasm hasn't eluded you. Fine, perhaps now isn't the best time, but it's the principle of the thing.",
+      "index": "105"
+    },
+    {
+      "topic": "NVDLC03DialoguePlayerBrainNVDLC03PlayerBrainTankTopic052",
+      "topic_text": "I've been busy.",
+      "emotion": "Neutral 50",
+      "response_text": "{sarcastic, maybe a little baby-talk}Oh yes, I rather expect you have. You must have been swamped, you poor dear. Why don't you relax and put your feet up?",
+      "index": "106"
+    },
+    {
+      "topic": "NVDLC03DialoguePlayerBrainNVDLC03PlayerBrainTankTopic053",
+      "topic_text": "What about you? That tank isn't exactly looking springtime fresh.",
+      "emotion": "Neutral 50",
+      "response_text": "{Taken aback, player has caught him}I... well... that's a completely different matter! The tank isn't biological, it's not the same at all!",
+      "index": "108"
+    },
+    {
+      "topic": "NVDLC03DialoguePlayerBrainNVDLC03PlayerBrainTankTopic054",
+      "topic_text": "Don't you want to be reunited? I thought you'd be happy to get back into my head!",
+      "emotion": "Neutral 50",
+      "response_text": "I'm not going to lie to you, the prospect is definitely not that appealing.",
+      "index": "109"
+    },
+    {
+      "topic": "NVDLC03DialoguePlayerBrainNVDLC03PlayerBrainTankTopic055",
+      "topic_text": "But what about the good things? What about a cool breeze on your cheek, the smell of food... love?",
+      "emotion": "Neutral 50",
+      "response_text": "Overrated biological feedback. Believe me, you only feel that way because you've got all that meat... oozing hormones.",
+      "index": "113"
+    },
+    {
+      "topic": "NVDLC03DialoguePlayerBrainNVDLC03PlayerBrainTankTopic056",
+      "topic_text": "But what about the good things? What about crushing those who oppose you, the smell of fire... loot?",
+      "emotion": "Neutral 50",
+      "response_text": "All motivated by nothing but an imbalance in certain brain chemicals. The tank corrects for that - I feel no urge toward antisocial behavior.",
+      "index": "114"
+    },
+    {
+      "topic": "NVDLC03DialoguePlayerBrainNVDLC03PlayerBrainTankTopic057",
+      "topic_text": "I can see your point. What can I do to make this a fair compromise?",
+      "emotion": "Neutral 50",
+      "response_text": "If you want me back, we need to establish some ground rules.",
+      "index": "115"
+    },
+    {
+      "topic": "NVDLC03DialoguePlayerBrainNVDLC03PlayerBrainTankTopic058",
+      "topic_text": "Too bad. I've got arms, you don't. You're coming with me.",
+      "emotion": "Neutral 50",
+      "response_text": "I can see there's going to be no reasoning with you at all, is there? I'm nothing more than a slave to your deranged, glandular whims.",
+      "index": "119"
+    },
+    {
+      "topic": "NVDLC03DialoguePlayerBrainNVDLC03PlayerBrainTankTopic059",
+      "topic_text": "Come on, you're my brain and I'm your body. This is meant to be, baby!",
+      "emotion": "Neutral 50",
+      "response_text": "{DUPE}{Dawning revulsion}Are you... are you coming on to me?! Sweet Lord, I don't even have the words for how repugnantly wrong that is!",
+      "index": "120"
+    },
+    {
+      "topic": "NVDLC03DialoguePlayerBrainNVDLC03PlayerBrainTankTopic060",
+      "topic_text": "Come on, you're my brain and I'm your body. This is meant to be, baby!",
+      "emotion": "Neutral 50",
+      "response_text": "{Dawning revulsion}Are you... are you coming on to me?! Sweet Lord, I don't even have the words for how repugnantly wrong that is!",
+      "index": "121"
+    },
+    {
+      "topic": "NVDLC03DialoguePlayerBrainNVDLC03PlayerBrainTankTopic061",
+      "topic_text": "I promise I'll take better care of myself.",
+      "emotion": "Neutral 50",
+      "response_text": "Even if I believe you - and I'm not saying I do - we still have one significant problem we're facing.",
+      "index": "124"
+    },
+    {
+      "topic": "NVDLC03DialoguePlayerBrainNVDLC03PlayerBrainTankTopic062",
+      "topic_text": "<Lie> I promise I'll take better care of myself.",
+      "emotion": "Neutral 50",
+      "response_text": "Even if I believe you - and I'm not saying I do - we still have one significant problem we're facing.",
+      "index": "125"
+    },
+    {
+      "topic": "NVDLC03DialoguePlayerBrainNVDLC03PlayerBrainTankTopic063",
+      "topic_text": "Come on, you're my brain and I'm your body. This is meant to be, baby!",
+      "emotion": "Neutral 50",
+      "response_text": "{DUPE}{Dawning revulsion}Are you... are you coming on to me?! Sweet Lord, I don't even have the words for how repugnantly wrong that is!",
+      "index": "126"
+    },
+    {
+      "topic": "NVDLC03DialoguePlayerBrainNVDLC03PlayerBrainTankTopic064",
+      "topic_text": "Come on, you're my brain and I'm your body. This is meant to be, baby!",
+      "emotion": "Neutral 50",
+      "response_text": "{DUPE}{Dawning revulsion}Are you... are you coming on to me?! Sweet Lord, I don't even have the words for how repugnantly wrong that is!",
+      "index": "127"
+    },
+    {
+      "topic": "NVDLC03DialoguePlayerBrainNVDLC03PlayerBrainTankTopic065{Speech 75+}",
+      "topic_text": "Isn't it just as true that you only feel this way because you're lacking those hormones?",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] Hmm... I suppose you're right. That does call certain assumptions into question, doesn't it?",
+      "index": "128"
+    },
+    {
+      "topic": "NVDLC03DialoguePlayerBrainNVDLC03PlayerBrainTankTopic066",
+      "topic_text": "So, we're at an impasse. You can't feel what I feel, and I can't think the way you think.",
+      "emotion": "Neutral 50",
+      "response_text": "Indeed. Quite the conundrum. How do you suppose we resolve it?",
+      "index": "130"
+    },
+    {
+      "topic": "NVDLC03DialoguePlayerBrainNVDLC03PlayerBrainTankTopic067",
+      "topic_text": "Yeah, bet you didn't think of that, huh?",
+      "emotion": "Neutral 50",
+      "response_text": "Yes yes, all right, bravo, you've come up with something I neglected to consider. There'll be no living with you now. So, what do we do about this?",
+      "index": "131"
+    },
+    {
+      "topic": "NVDLC03DialoguePlayerBrainNVDLC03PlayerBrainTankTopic068",
+      "topic_text": "Look what happened to the Think Tank. Do you want to end up like them after a few hundred years?",
+      "emotion": "Neutral 50",
+      "response_text": "It's true, the brains here have experienced some degree of... deterioration. I'm confident that with a few decades of work, I can solve the problem.",
+      "index": "132"
+    },
+    {
+      "topic": "NVDLC03DialoguePlayerBrainNVDLC03PlayerBrainTankTopic069",
+      "topic_text": "I think we have to trust each other and acknowledge that we aren't complete if we're separated.",
+      "emotion": "Neutral 50",
+      "response_text": "I suppose there might be some advantage to that, yes. There's a chance that the re-integration would create some improved synergy between us.",
+      "index": "133"
+    },
+    {
+      "topic": "NVDLC03DialoguePlayerBrainNVDLC03PlayerBrainTankTopic070",
+      "topic_text": "Well... maybe we could keep going like this. What do you think?",
+      "emotion": "Neutral 50",
+      "response_text": "You mean, I'll stay in my tank and you'll stay in your... skin... and we'll each handle our own areas of expertise?",
+      "index": "134"
+    },
+    {
+      "topic": "NVDLC03DialoguePlayerBrainNVDLC03PlayerBrainTankTopic071",
+      "topic_text": "I don't know. I have to think about this some more.",
+      "emotion": "Neutral 50",
+      "response_text": "Yes of course, by all means take your time.",
+      "index": "136"
+    },
+    {
+      "topic": "NVDLC03DialoguePlayerBrainNVDLC03PlayerBrainTankTopic072",
+      "topic_text": "So, what, you'd rather just stay here? Never leaving that tank of... whatever that stuff is?",
+      "emotion": "Neutral 50",
+      "response_text": "Well, certainly there might be some things I miss about being ambulatory. We have seen some incredible sights, haven't we?",
+      "index": "137"
+    },
+    {
+      "topic": "NVDLC03DialoguePlayerBrainNVDLC03PlayerBrainTankTopic073",
+      "topic_text": "Well, if you like being stuck in there so much, maybe I'll just leave you.",
+      "emotion": "Neutral 50",
+      "response_text": "{Sarcasm, mock-pleading}Oh no! Please don't leave me here in this nice, safe dome where I have access to nutritive fluids and a fully indexed library!",
+      "index": "141"
+    },
+    {
+      "topic": "NVDLC03DialoguePlayerBrainNVDLC03PlayerBrainTankTopic074",
+      "topic_text": "What would happen to me if I left you here?",
+      "emotion": "Neutral 50",
+      "response_text": "Hmm. Let me see... I suppose you'd continue on much as you are now, using that synthetic thinking machine to do the heavy lifting.",
+      "index": "144"
+    },
+    {
+      "topic": "NVDLC03DialoguePlayerBrainNVDLC03PlayerBrainTankTopic075",
+      "topic_text": "Why did you never say anything about how you felt before?",
+      "emotion": "Neutral 50",
+      "response_text": "What did you think all those self-preservation instincts were, hmm?",
+      "index": "146"
+    },
+    {
+      "topic": "NVDLC03DialoguePlayerBrainNVDLC03PlayerBrainTankTopic076",
+      "topic_text": "And if I put you back?",
+      "emotion": "Neutral 50",
+      "response_text": "I'm not entirely sure. I suppose there's a chance that the re-integration would create some improved synergy between us.",
+      "index": "149"
+    },
+    {
+      "topic": "NVDLC03DialoguePlayerBrainNVDLC03PlayerBrainTankTopic077{Science 75+}",
+      "topic_text": "Then surely you've taken into account the corrosive effects of long-term exposure to biogel.",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] Of course I accounted for that! Do you think I'm so stupid... no, you're right.",
+      "index": "151"
+    },
+    {
+      "topic": "NVDLC03DialoguePlayerBrainNVDLC03PlayerBrainTankTopic078",
+      "topic_text": "Fine, you can stay here. Not like I need this hassle.",
+      "emotion": "Neutral 50",
+      "response_text": "{Acid}Oh, no, you don't need this hassle. You're too busy treating your body like a canvas of sucking flesh wounds to deal with your brain!",
+      "index": "154"
+    },
+    {
+      "topic": "NVDLC03DialoguePlayerBrainNVDLC03PlayerBrainTankTopic080",
+      "topic_text": "Maybe I'll explore the Big Mountain more before I go back to the Think Tank.",
+      "emotion": "Neutral 50",
+      "response_text": "Will you take some free advice from your brain? Don't trust the Think Tank. They aren't... right. In the brain, I mean.",
+      "index": "157"
+    },
+    {
+      "topic": "NVDLC03DialoguePlayerBrainNVDLC03PlayerBrainTankTopic081",
+      "topic_text": "Okay, then. I'm going.",
+      "emotion": "Neutral 50",
+      "response_text": "Good, go!",
+      "index": "159"
+    },
+    {
+      "topic": "NVDLC03DialoguePlayerBrainNVDLC03PlayerBrainTankTopic082",
+      "topic_text": "I will!",
+      "emotion": "Neutral 50",
+      "response_text": "Fine!",
+      "index": "160"
+    },
+    {
+      "topic": "NVDLC03DialoguePlayerBrainNVDLC03PlayerBrainTankTopic083",
+      "topic_text": "I've changed my mind. I want you back in my skull after all.",
+      "emotion": "Neutral 50",
+      "response_text": "{Sarcasm}Oh, what joy. What bliss. Well, seeing as how I have no leverage with which to persuade you otherwise... are you sure?",
+      "index": "161"
+    },
+    {
+      "topic": "NVDLC03DialoguePlayerBrainNVDLC03PlayerBrainTankTopic084",
+      "topic_text": "Great!",
+      "emotion": "Neutral 50",
+      "response_text": "I know it's great!",
+      "index": "163"
+    },
+    {
+      "topic": "NVDLC03DialoguePlayerBrainNVDLC03PlayerBrainTankTopic087",
+      "topic_text": "< Do Not Translate - Player Brain Expository topics>",
+      "emotion": "Neutral 50",
+      "response_text": "I suppose now that we're reunited, you'll want to fill your torso up with those other meaty parts the Think Tank took from us.",
+      "index": "164"
+    },
+    {
+      "topic": "NVDLC03DialoguePlayerBrainNVDLC03PlayerBrainTankTopic088",
+      "topic_text": "I'm sure. In you go.",
+      "emotion": "Neutral 50",
+      "response_text": "Fine. I hope you'll pay a bit more attention to me this time around.",
+      "index": "172"
+    },
+    {
+      "topic": "NVDLC03DialoguePlayerBrainNVDLC03PlayerBrainTankTopic089",
+      "topic_text": "On second thought, never mind.",
+      "emotion": "Neutral 50",
+      "response_text": "{Sarcasm}Well, the important thing is that you're good and decisive about these things.",
+      "index": "174"
+    },
+    {
+      "topic": "NVDLC03EndingSlideBrain",
+      "topic_text": "NVDLC03EndingSlideBrain",
+      "emotion": "Neutral 50",
+      "response_text": "{Narration}{PC took brain back}The Courier, organs intact, continued onwards, a little less heavy of step, but with all the organs in the right places. As they should be.",
+      "index": "176"
+    },
+    {
+      "topic": "NVDLC03EndingSlideBrainOut",
+      "topic_text": "NVDLC03EndingSlideBrainOut",
+      "emotion": "Neutral 50",
+      "response_text": "{Narration}{Bad Karma}And so it burbled and bubbled inside its tank, smug that it still could dream{emph}its future without{Emph, disdain}glands getting in the way.",
+      "index": "180"
+    },
+    {
+      "topic": "NVDLC03EndingSlideFlag09",
+      "topic_text": "NVDLC03EndingSlideFlag09",
+      "emotion": "Neutral 50",
+      "response_text": "{Narration}{Good or Neutral Karma}With the Courier at the helm, Science became a beacon for the future.",
+      "index": "187"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "NVDLC03PlayerBrainBarks",
+      "topic_text": "NVDLC03PlayerBrainBarks",
+      "emotion": "Neutral 50",
+      "response_text": "<Humming>",
+      "index": "191"
+    }
+  ],
+  "combat": []
+}

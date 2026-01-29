@@ -1,0 +1,153 @@
+{
+  "name": "Adan",
+  "url": "/wiki/Adan",
+  "dialogue_name": "DLC01Adan.txt",
+  "dialogue_url": "/wiki/DLC01Adan.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "xx003E2D",
+  "ref_id": "xx003E54",
+  "editor_id": "DLC01Adan",
+  "location": "The Pitt Downtown",
+  "location_url": "/wiki/The_Pitt_Downtown",
+  "descriptions": [
+    "Adan is a philosophical slave worker in the Pitt in the year 2277.",
+    "Unlike most of the other workers in downtown, Adan is content with the life he has been forced to live by Ashur's army. Although he would much rather be free, he has decided that attaining freedom is currently an impossibility and thinking about it would only make him more miserable.",
+    "Adan spends his days in front of the entrance to the Mill, sawing away at a destroyed bus with his steel saw. This is all he does until the quest Free Labor, in which his body can be found at the same location, being killed during the chaos caused by the uprising.",
+    "Adan will speak with the player character about philosophy and how it relates to his life as a slave.",
+    "Adan's name is pronounced \"A-din.\"",
+    "Adan appears only in the Fallout 3 add-on The Pitt."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Pitt slaves",
+  "role": "Slave",
+  "detailed_location": "The Pitt Downtown",
+  "voice_actor": "Craig Sechler",
+  "special": {
+    "Strength": 4,
+    "Perception": 7,
+    "Endurance": 3,
+    "Charisma": 4,
+    "Intelligence": 4,
+    "Agility": 5,
+    "Luck": 2
+  },
+  "mod_special_values": {
+    "Strength": 4,
+    "Perception": 7,
+    "Endurance": 4,
+    "Charisma": 4,
+    "Intelligence": 4,
+    "Agility": 6,
+    "Luck": 2
+  },
+  "level": "1",
+  "tag_skills": [
+    {
+      "Sneak:": "28(30)"
+    },
+    {
+      "Speech:": "26"
+    },
+    {
+      "Unarmed:": "24(26)"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "20(25)"
+    }
+  ],
+  "karma": "Neutral",
+  "voice_type": "DLC01SlaveMale01VoiceType",
+  "geck_race": "DLCPittAfricanAmericanMut",
+  "topics": [
+    {
+      "topic": "DLC01AdanGreeting01",
+      "topic_text": "Family? You're all slaves. You're not family.",
+      "emotion": "Neutral 50",
+      "response_text": "We are what we wish to be. I found this book once, over by the library. Midea read part of it to me.",
+      "index": "1"
+    },
+    {
+      "topic": "DLC01AdanGreeting01a",
+      "topic_text": "What does that even mean?",
+      "emotion": "Neutral 50",
+      "response_text": "It means that I'd like to be free, but I'm not. And the harder I cling to that desire, the more miserable I'll be that I'm stuck here.",
+      "index": "3"
+    },
+    {
+      "topic": "DLC01AdanGreeting01b",
+      "topic_text": "So you're just happy to be where you are?",
+      "emotion": "Neutral 50",
+      "response_text": "I'd like to be free, but I'm not. And the harder I cling to that idea, the more miserable I'll be that I'm stuck here.",
+      "index": "5"
+    },
+    {
+      "topic": "DLC01AdanGreeting02",
+      "topic_text": "Why are you so cheery?",
+      "emotion": "Neutral 50",
+      "response_text": "I'm not cheery, really. I've just accepted my role here. I found a book once. Midea read part of it to me.",
+      "index": "7"
+    },
+    {
+      "topic": "DLC01AdanGreeting02a",
+      "topic_text": "What does that even mean?",
+      "emotion": "Neutral 50",
+      "response_text": "It means that I'd like to be free, but I'm not. And the harder I cling to that desire, the more miserable I'll be that I'm stuck here.",
+      "index": "9"
+    },
+    {
+      "topic": "DLC01AdanGreeting02b",
+      "topic_text": "So you're just happy to be where you are?",
+      "emotion": "Neutral 50",
+      "response_text": "I'd like to be free, but I'm not. And the harder I cling to that idea, the more miserable I'll be that I'm stuck here.",
+      "index": "11"
+    },
+    {
+      "topic": "DLC01Marco1a",
+      "topic_text": "Yeah. Where is he?",
+      "emotion": "Neutral 50",
+      "response_text": "He's in the Mill. He tried to keep out of sight of the bosses, so look around where they can't see.",
+      "index": "13"
+    },
+    {
+      "topic": "DLC01Marco1b",
+      "topic_text": "I've already found him. No worries.",
+      "emotion": "Neutral 50",
+      "response_text": "Very well, then. Good luck on your path.",
+      "index": "14"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "Hey there! Welcome to the family!",
+      "index": "15"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "DLC01SpeechAnnouncement",
+      "topic_text": "DLC01SpeechAnnouncement",
+      "emotion": "Neutral 50",
+      "response_text": "All workers report to the Square. All workers report to the Square.",
+      "index": "24"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Neutral 50",
+      "response_text": "{Silence.}",
+      "index": "25"
+    }
+  ],
+  "combat": []
+}

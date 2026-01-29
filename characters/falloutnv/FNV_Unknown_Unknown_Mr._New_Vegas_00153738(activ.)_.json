@@ -1,0 +1,118 @@
+{
+  "name": "Mr. New Vegas",
+  "url": "/wiki/Mr._New_Vegas",
+  "dialogue_name": "MrNewVegas.txt",
+  "dialogue_url": "/wiki/MrNewVegas.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "00153738(activ.)",
+  "ref_id": "",
+  "editor_id": "",
+  "location": "New Vegas Strip",
+  "location_url": "/wiki/New_Vegas_Strip",
+  "descriptions": [
+    "Mr. New Vegas is an artificial intelligence created by Mr. House before the Great War, serving as a radio host and DJ that was put in charge of Radio New Vegas for House's Free Economic Zone of New Vegas following the nuclear apocalypse, a role he continues to occupy by 2281. While having no physical in-game appearance, his voice is heard when listening to the radio station in Fallout: New Vegas and Fallout: The Ghoul Log.",
+    "From the unspecified transmitting location of Radio New Vegas, Mr. New Vegas plays music tracks and delivers reports on newsworthy events around the Mojave Wasteland, at times detailing the deeds of the Courier during the events of Fallout: New Vegas. He makes comments and gives advice on the Courier's active quests, such as revealing what they must do or is going to do.",
+    "Much like Three Dog with Galaxy News Radio in Fallout 3, Mr. New Vegas also reveals some future details of the ending of Fallout: New Vegas, including the possible takeover of the Mojave by the NCR, Caesar's Legion, Mr. House, or the Courier themselves by creating an independent New Vegas.",
+    "Mr. New Vegas is only heard in Fallout: New Vegas and Fallout: The Ghoul Log.",
+    "Mr. New Vegas' voice actor, Wayne Newton, in the voiceover booth"
+  ],
+  "race": "Artificial personality",
+  "affiliation": "Free Economic Zone of New VegasMr. House",
+  "role": "Host and DJ ofRadio New Vegas7 of Diamonds",
+  "voice_actor": "Wayne Newton",
+  "topics": [
+    {
+      "topic": "RadioHello",
+      "topic_text": "RadioHello",
+      "emotion": "Neutral 50",
+      "response_text": "Ladies and gentlemen, welcome to our program. This is Mr. New Vegas, and each and every one of you is wonderful in your own special way.",
+      "index": "1"
+    },
+    {
+      "topic": "RNVDamOutro",
+      "topic_text": "RNVDamOuttro",
+      "emotion": "Neutral 50",
+      "response_text": "Sources at the Dam are telling us that the involvement of one key person appears to have heavily influenced the outcome.",
+      "index": "16"
+    },
+    {
+      "topic": "RNVDamStory",
+      "topic_text": "RNVDamStory",
+      "emotion": "Neutral 50",
+      "response_text": "Reports indicate that NCR forces emerged victorious, and the Legion scattered amidst the defeat of its most feared military leader.",
+      "index": "17"
+    },
+    {
+      "topic": "RNVMusic",
+      "topic_text": "RNVMusic",
+      "emotion": "Neutral 50",
+      "response_text": "{Ain't That a Kick in the Head?}",
+      "index": "22"
+    },
+    {
+      "topic": "RNVMusicIntroGeneric",
+      "topic_text": "MusicIntroGeneric",
+      "emotion": "Neutral 50",
+      "response_text": "And now, I'd like to play one of my very favorite songs for you.",
+      "index": "42"
+    },
+    {
+      "topic": "RNVMusicIntroSpecific",
+      "topic_text": "RNVMusicIntroSpecific",
+      "emotion": "Neutral 50",
+      "response_text": "Gonna play a song for you right now. It's about that special someone you only find once... in a Blue Moon.",
+      "index": "54"
+    },
+    {
+      "topic": "RNVNewsIntro",
+      "topic_text": "NewsIntro",
+      "emotion": "Neutral 50",
+      "response_text": "We've got some news for you, coming right up.",
+      "index": "63"
+    },
+    {
+      "topic": "RNVNewsPost",
+      "topic_text": "NewsPost",
+      "emotion": "Neutral 50",
+      "response_text": "That's all for now. This is Mr. New Vegas saying, I'm just no good without you.",
+      "index": "74"
+    },
+    {
+      "topic": "RNVNewsStory",
+      "topic_text": "NewsStory",
+      "emotion": "Neutral 50",
+      "response_text": "Sources report the NCR's top Ranger, Chief Hanlon, has died in a tragic revolver-cleaning accident inside his locked office at Camp Golf.",
+      "index": "93"
+    },
+    {
+      "topic": "RNVNewsStory2",
+      "topic_text": "RNVNewsStoryLine2",
+      "emotion": "Neutral 50",
+      "response_text": "Now that's a delivery service you can count on.",
+      "index": "163"
+    },
+    {
+      "topic": "RNVNewsStory3",
+      "topic_text": "RNVNewsStoryLine3",
+      "emotion": "Neutral 50",
+      "response_text": "He added he didn't want to see the NCR in the ghetto, and called for a mass, quote, return to sender.",
+      "index": "192"
+    },
+    {
+      "topic": "RNVNewsTransition",
+      "topic_text": "RNVNewsTransition",
+      "emotion": "Neutral 50",
+      "response_text": "In other news...",
+      "index": "196"
+    }
+  ],
+  "conversation": [],
+  "combat": []
+}

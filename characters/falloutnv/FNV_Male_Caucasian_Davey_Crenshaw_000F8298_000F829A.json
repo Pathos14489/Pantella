@@ -1,0 +1,149 @@
+{
+  "name": "Davey Crenshaw",
+  "url": "/wiki/Davey_Crenshaw",
+  "dialogue_name": "PrivateCrenshaw.txt",
+  "dialogue_url": "/wiki/PrivateCrenshaw.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000F8298",
+  "ref_id": "000F829A",
+  "editor_id": "PrivateCrenshaw",
+  "location": "Camp McCarran",
+  "location_url": "/wiki/Camp_McCarran",
+  "descriptions": [
+    "Pvt. Davey Crenshaw is an NCR soldier living at Camp McCarran in 2281.",
+    "Davey Crenshaw is an undisciplined and self-centered trooper This has earned him the ire of all those who serve with him.",
+    "Two of Crenshaw's shenanigans are of particular note; the first is the time he led a brahmin into the upstairs section of the terminal building. Not only because brahmin cannot go downstairs, but also because it visited him in the cell multiple times. Another time was the time he dropped firecrackers into the toilets, completely destroying them. The inability to repair and/or replace them led his fellow servicemen to want to shoot him. Crenshaw himself believing the only reason that they didn't was due to how shorthanded they were.",
+    "His conduct has earned him a reputation as a \"problem child\" and has had multiple disciplinary hearings,",
+    "This situation was manipulated by frumentarius Picus. Using Crenshaw's reputation against the NCR he came up with the plan to use Crenshaw as a fall guy for his ongoing sabotage and infiltration. Convincing the entire base wouldn't be a hard sell,",
+    "I Put a Spell on You: If the Courier chooses the Legion's side, Crenshaw is to be killed in order to frame him for destroying the NCR monorail. Because he is well known as a prankster, when the player character talks to Colonel Hsu, he will believe that Crenshaw planted the bomb on the monorail.",
+    "If the Courier decides to talk to him before killing him, the option comes up for them to pull the pin off his grenade by passing a 40 Sneak check.",
+    "Despite being able to pull the pin off Crenshaw's grenade, he has no grenade in his inventory."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "NCR Army",
+  "role": "Prankster",
+  "detailed_location": "Camp McCarran",
+  "voice_actor": "Liam O'Brien",
+  "special": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 5,
+    "Intelligence": 5,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "level": "1",
+  "tag_skills": [
+    {
+      "Explosives:": "30"
+    },
+    {
+      "Guns:": "30"
+    },
+    {
+      "Melee Weap.:": "30"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Neutral",
+  "voice_type": "MaleAdult05",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "Hey! Can't you see I'm busy here?",
+      "index": "1"
+    },
+    {
+      "topic": "VMS08PrivateCrenshawTopic000",
+      "topic_text": "I've heard you're kind of a prankster.",
+      "emotion": "Neutral 50",
+      "response_text": "Heh. My reputation precedes me, I see. Yeah I pulled a few pranks in my time.",
+      "index": "5"
+    },
+    {
+      "topic": "VMS08PrivateCrenshawTopic001",
+      "topic_text": "What kinds of pranks have you pulled?",
+      "emotion": "Neutral 50",
+      "response_text": "Aw, usual stuff. Brought a brahmin upstairs in the terminal once. They can go upstairs but not down. Two heads and both of 'em dumb as stumps.",
+      "index": "6"
+    },
+    {
+      "topic": "VMS08PrivateCrenshawTopic002",
+      "topic_text": "That's great because I'm in the middle of pulling a prank right now.",
+      "emotion": "Neutral 50",
+      "response_text": "No kidding! What'd you cook up?",
+      "index": "10"
+    },
+    {
+      "topic": "VMS08PrivateCrenshawTopic003",
+      "topic_text": "<Pull Pin>I just pulled the pin out of somebody's grenade.",
+      "emotion": "Neutral 50",
+      "response_text": "Man, I can't wait to see the look on his face!",
+      "index": "11"
+    },
+    {
+      "topic": "VMS08PrivateCrenshawTopic004",
+      "topic_text": "[Attack] I'm going to get you in trouble for blowing up the monorail.",
+      "emotion": "Neutral 50",
+      "response_text": "What? Like hell you are.",
+      "index": "12"
+    },
+    {
+      "topic": "VMS08PrivateCrenshawTopic005",
+      "topic_text": "Good news, private. I'm here to relieve you.",
+      "emotion": "Neutral 50",
+      "response_text": "Really? That's great. I was getting so sick of this.",
+      "index": "13"
+    },
+    {
+      "topic": "VMS08PrivateCrenshawTopic006",
+      "topic_text": "...but relief must follow unbearable suffering.",
+      "emotion": "Neutral 50",
+      "response_text": "{Terrified}Holy Christ. Get- get away from me!",
+      "index": "14"
+    },
+    {
+      "topic": "VMS08PrivateCrenshawTopic007",
+      "topic_text": "[Attack] The bad news is I'm here to relieve you of your life.",
+      "emotion": "Neutral 50",
+      "response_text": "What- What are you doing?",
+      "index": "15"
+    },
+    {
+      "topic": "VMS08PrivateCrenshawTopic008",
+      "topic_text": "Never mind, I was mistaken.",
+      "emotion": "Neutral 50",
+      "response_text": "Aww.{\"Nuts.\"}",
+      "index": "16"
+    },
+    {
+      "topic": "VMS08PrivateCrenshawTopic009",
+      "topic_text": "Fascinating. Let's talk about something else.",
+      "emotion": "Neutral 50",
+      "response_text": "Sure thing. Careful, though. I'll talk your ear off.",
+      "index": "17"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Catch you later.",
+      "index": "18"
+    }
+  ],
+  "combat": []
+}

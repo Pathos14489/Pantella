@@ -1,0 +1,77 @@
+{
+  "name": "Casino guard",
+  "url": "/wiki/Casino_guard",
+  "dialogue_name": "",
+  "dialogue_url": null,
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "0014EFEF",
+  "ref_id": "",
+  "editor_id": "",
+  "location": "",
+  "location_url": null,
+  "descriptions": [
+    "The casino guard is a character cut from Fallout: New Vegas.",
+    "This guard would have served as a general security officer for the Strip, ensuring that patrons do not bring their weapons into any casinos. His functionality was eventually replaced by each casino's greeters who confiscate the Courier's weapons as they enter the building.",
+    "Based on dialogue options, the guard is designed to confiscate weapons from the Courier before they enter any of the Strip's casinos and return them once they exit.",
+    "His facial model was recycled for Mister Holdout.",
+    "The casino guard appears in the Fallout: New Vegas game files but was cut from the final release."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "The Strip",
+  "role": "Guard",
+  "voice_actor": "Gregory Alan Williams",
+  "special": {
+    "Strength": 5,
+    "Perception": 6,
+    "Endurance": 4,
+    "Charisma": 6,
+    "Intelligence": 6,
+    "Agility": 3,
+    "Luck": 5
+  },
+  "level": "5",
+  "tag_skills": [
+    {
+      "Barter:": "49"
+    },
+    {
+      "Speech:": "49"
+    },
+    {
+      "Unarmed:": "45"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "45"
+    },
+    {
+      "Critical Chance:": "5%"
+    },
+    {
+      "Unarmed Dam.:": "2.75"
+    },
+    {
+      "Poison Resist.:": "15%"
+    },
+    {
+      "Rad. Resist.:": "6%"
+    },
+    {
+      "Carry Weight:": "200 lbs"
+    }
+  ],
+  "karma": "Neutral",
+  "geck_race": "Caucasian",
+  "topics": [],
+  "conversation": [],
+  "combat": []
+}

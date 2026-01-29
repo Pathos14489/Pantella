@@ -1,0 +1,257 @@
+{
+  "name": "Leo Stahl",
+  "url": "/wiki/Leo_Stahl",
+  "dialogue_name": "LeoStahl.txt",
+  "dialogue_url": "/wiki/LeoStahl.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "00000A6B",
+  "ref_id": "0003BB54",
+  "editor_id": "LeoStahl",
+  "location": "Water processing plant,The Brass Lantern",
+  "location_url": "/wiki/Water_processing_plant",
+  "descriptions": [
+    "Leo Stahl is a citizen of Megaton in 2277.",
+    "He has two siblings, a brother Andy and a sister Jenny. He is more extroverted and outspoken compared to his brother, and he enjoys talking to the customers of their restaurant. Together with his siblings, they run the local diner, the Brass Lantern.",
+    "When he was a teenager, he spent time with caravaners and traveled to a few places around the wasteland. In his travels, he picked up a jet addiction, although he has been able to hide it from his siblings and the town, with the exception of Mister Burke, Colin Moriarty, and Doc Church. Colin wrote in his personal computer about Leo: \"Never trust a junkie. That's what I've learned trying to deal with this piece of work. He wanders in here higher than a bird in flight and tried to make it with Nova. She slapped him silly after he didn't want to pay, the good girl. I almost kicked him out myself, but he staggered out of here. That guy may just be the straw I need to break Andy's back.\"",
+    "During the day he sells drinks in the Brass Lantern and wanders the town, while at night he satisfies his chem addiction at the water processing plant.",
+    "Leo and his unmarked quest were written by quest designer Erik J. Caponi.",
+    "PC Playstation 3 Xbox 360 Leo is one of the NPCs who are known to go missing. See Recovering missing NPC in Fallout 3 to learn how to resolve the issue. "
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Megaton",
+  "role": "BartenderChem addict",
+  "detailed_location": "Brass Lantern",
+  "voice_actor": "Gregory Gorton",
+  "special": {
+    "Strength": 4,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 7,
+    "Intelligence": 5,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "level": "4",
+  "tag_skills": [],
+  "misc_skills": [],
+  "karma": "Good",
+  "voice_type": "MaleAdult01DefaultBDC",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Happy 50",
+      "response_text": "Well goddamn. You're new, right? I've got to admit, the outfit's a little weird, but that's okay, that's okay. Name's Leo Stahl. It's a pleasure!",
+      "index": "1"
+    },
+    {
+      "topic": "MegLeoBuyDrugs",
+      "topic_text": "Hey Leo, can you hook me up?",
+      "emotion": "Neutral 50",
+      "response_text": "What did I tell you? Not here. Hit me up when I'm away from the restaurant.",
+      "index": "10"
+    },
+    {
+      "topic": "MegLeoDrinks",
+      "topic_text": "Can I see what's on the menu?",
+      "emotion": "Neutral 50",
+      "response_text": "Sure thing, my man.",
+      "index": "15"
+    },
+    {
+      "topic": "MegLeoDrugProblem",
+      "topic_text": "How's that chem problem treating you?",
+      "emotion": "Anger 50",
+      "response_text": "Look. Keep your bullshit judgments to yourself, man. Just don't tell Jenny or Andy and we'll be fine.{[EJC] Expand this into more branches.}",
+      "index": "17"
+    },
+    {
+      "topic": "MegLeoDrugProblem1",
+      "topic_text": "It's okay, Leo. I want to help.",
+      "emotion": "Neutral 50",
+      "response_text": "Help? What's to help? So I'm a junkie, big fucking deal. It's not like I'm hurting anyone.",
+      "index": "22"
+    },
+    {
+      "topic": "MegLeoDrugProblem1a",
+      "topic_text": "You're hurting your family, Leo. Jenny and Andy care about you.",
+      "emotion": "Neutral 50",
+      "response_text": "I... I guess you're right. I have to tell them about my problem, don't I?",
+      "index": "23"
+    },
+    {
+      "topic": "MegLeoDrugProblem1a1",
+      "topic_text": "That would be a good idea.",
+      "emotion": "Sad 50",
+      "response_text": "I just don't know what to say. I've been stealing from both of them for years to get my fix. Where do I even start?",
+      "index": "24"
+    },
+    {
+      "topic": "MegLeoDrugProblem1a1a",
+      "topic_text": "You've made the right choice, Leo.",
+      "emotion": "Neutral 50",
+      "response_text": "Thanks. It'll be hard, but I'll do my best.",
+      "index": "27"
+    },
+    {
+      "topic": "MegLeoDrugProblem1a2",
+      "topic_text": "I could tell them for you.",
+      "emotion": "Sad 50",
+      "response_text": "No. Thanks, but no. I got myself into this problem, I need to get myself out.",
+      "index": "28"
+    },
+    {
+      "topic": "MegLeoDrugProblem1b",
+      "topic_text": "I never thought about it that way. Can you hook me up?",
+      "emotion": "Fear 50",
+      "response_text": "Yeah, I can. Just please... Don't tell Andy or Jenny. And don't ask me about it when I'm at the Brass Lantern.",
+      "index": "31"
+    },
+    {
+      "topic": "MegLeoDrugProblem2",
+      "topic_text": "What's it worth to you to keep it out of the public eye?",
+      "emotion": "Neutral 50",
+      "response_text": "I can hook you up. A solid chem dealer is hard to find out here in the Wastes, trust me. I know.",
+      "index": "33"
+    },
+    {
+      "topic": "MegLeoDrugProblemEND",
+      "topic_text": "Never mind, Leo. It's not my business, anyway.",
+      "emotion": "Neutral 50",
+      "response_text": "You're damn right it's not your business.",
+      "index": "35"
+    },
+    {
+      "topic": "MegTownEnd",
+      "topic_text": "That's all I needed to know.",
+      "emotion": "Neutral 50",
+      "response_text": "No problem, buddy.",
+      "index": "36"
+    },
+    {
+      "topic": "MegTownFatherChoice",
+      "topic_text": "I'm looking for my father. Middle-aged guy. Maybe you've seen him?",
+      "emotion": "Neutral 50",
+      "response_text": "Your father? I don't know, I don't know. Doesn't ring a bell, sorry.",
+      "index": "37"
+    },
+    {
+      "topic": "MegTownLeoStahlBar",
+      "topic_text": "What do you do for fun around here?",
+      "emotion": "Neutral 50",
+      "response_text": "Heh... well... there's this and that. I keep myself busy. But, really, that's none of your business is it?",
+      "index": "38"
+    },
+    {
+      "topic": "MegTownMegaton",
+      "topic_text": "What can you tell me about Megaton?",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah... I'm not really interested in chitchatting with you. Buy something or leave me alone.",
+      "index": "39"
+    },
+    {
+      "topic": "MegTownRumors",
+      "topic_text": "What's the word around town?",
+      "emotion": "Neutral 50",
+      "response_text": "Hey, I'm not much of a mudslinger. I don't like to spread stuff around, you know what I mean? Everybody has their secrets. Let's keep them that way.",
+      "index": "41"
+    },
+    {
+      "topic": "MegTownWhosInCharge",
+      "topic_text": "Who's in charge around here?",
+      "emotion": "Neutral 50",
+      "response_text": "With both Lucas and Colin dead, it's pretty much a free for all until someone steps up.",
+      "index": "42"
+    },
+    {
+      "topic": "SpeechChallengeFailure",
+      "topic_text": "SpeechChallengeFailure",
+      "emotion": "Neutral 50",
+      "response_text": "Nice try.",
+      "index": "46"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "I have to go now.",
+      "emotion": "Neutral 50",
+      "response_text": "Talk to you later, buddy.",
+      "index": "47"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Neutral 50",
+      "response_text": "Now, you're a man who looks hungry. What do you need?",
+      "index": "50"
+    },
+    {
+      "topic": "MegLeoStahlDesk",
+      "topic_text": "MegLeoStahlDesk",
+      "emotion": "Neutral 50",
+      "response_text": "Hey! Get the hell away from there!",
+      "index": "56"
+    },
+    {
+      "topic": "MegLeoStahlFridge",
+      "topic_text": "MegLeoStahlFridge",
+      "emotion": "Neutral 50",
+      "response_text": "Hey now, get outta there. Just let me know if you need a drink.",
+      "index": "59"
+    },
+    {
+      "topic": "MegatonTalk1",
+      "topic_text": "MegatonTalk",
+      "emotion": "Neutral 50",
+      "response_text": "Sure thing, Andy. What do you need?",
+      "index": "62"
+    },
+    {
+      "topic": "MegatonTalk2",
+      "topic_text": "MegatonTalk2",
+      "emotion": "Neutral 50",
+      "response_text": "I was thinkin' Andy  you know what would be great? If we went lookin' for a new refrigerator for the bar.",
+      "index": "64"
+    },
+    {
+      "topic": "MegatonTalk3",
+      "topic_text": "MegatonTalk3",
+      "emotion": "Neutral 50",
+      "response_text": "Is it really that big of a deal if your little papers don't add up? Why are you always hassling me about this?",
+      "index": "66"
+    },
+    {
+      "topic": "MegatonTalk4",
+      "topic_text": "MegatonTalk4",
+      "emotion": "Neutral 50",
+      "response_text": "Aw... you're no fun anymore, Andy.",
+      "index": "68"
+    },
+    {
+      "topic": "MegatonTalk5",
+      "topic_text": "MegatonTalk5",
+      "emotion": "Neutral 50",
+      "response_text": "Okay, Andy. I'll try.",
+      "index": "70"
+    }
+  ],
+  "combat": [
+    {
+      "topic": "Attack",
+      "topic_text": "Attack",
+      "emotion": "Neutral 50",
+      "response_text": "Goddammit! Not again!",
+      "index": "72"
+    }
+  ]
+}

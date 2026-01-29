@@ -1,0 +1,187 @@
+{
+  "name": "Ranger Jackson",
+  "url": "/wiki/Jackson_(Mojave_Outpost)",
+  "dialogue_name": "VMORangerJackson.txt",
+  "dialogue_url": "/wiki/VMORangerJackson.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "0013D6A1",
+  "ref_id": "00140DAD",
+  "editor_id": "vMORangerJackson",
+  "location": "Mojave Outpostheadquarters",
+  "location_url": "/wiki/Mojave_Outpost",
+  "descriptions": [
+    "Ranger Jackson is a member of the New California Republic's Rangers and serves as the commanding officer of the Mojave Outpost in the Mojave Wasteland in Fallout: New Vegas.",
+    "A principled patriot with an excellent grasp of strategy, Jackson was posted to the Mojave Outpost sometime prior to 2281 to ensure that caravans could safely arrive in the Mojave from New California and continue safely along Interstate 15 to New Vegas. However, by October 2281, recent complications on the I-15 including the breakout at the NCR Correctional Facility and the subsequent opposition by the Powder Gangers have frustrated him, as he cannot take any action without breaking his standing orders, but at the same time, those very standing orders prevent him from carrying out his standing orders. Left between a rock and a hard place, Jackson has taken to venting his frustrations to travelers in order to make the situation bearable in any way.",
+    "The orders in question demand that he keep a standing force at the NCR perimeter at all times, with a force of fresh recruits for a garrison. To make things worse, in order to deal with the situation up north, he'd have to send soldiers out and that would reduce his standing force below acceptable levels.",
+    "Although he cannot disobey his orders, Jackson is more than willing to work around them to fulfill his duties. He will admit that though he cannot outright contract mercenaries, he can turn the cheek to \"accidental\" misplacements of supplies while dealing with people willing to take on dangerous assignments to help fix his problems.",
+    "This single-minded belief in justice and patriotism helps keep Jackson on the straight and narrow, especially when greed and corruption lead to unnecessary loss of life among honest caravaneers"
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "New California Republic Rangers",
+  "role": "RangerCommanding officer",
+  "detailed_location": "Mojave Outpost headquarters",
+  "voice_actor": "Liam O'Brien",
+  "special": {
+    "Strength": 5,
+    "Perception": 6,
+    "Endurance": 6,
+    "Charisma": 4,
+    "Intelligence": 5,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "level": "5→15 (equal to player's level)",
+  "tag_skills": [
+    {
+      "Guns:": "88"
+    },
+    {
+      "Melee Weap.:": "88"
+    },
+    {
+      "Sneak:": "88"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Neutral",
+  "voice_type": "MaleAdult05",
+  "geck_race": "CaucasianOld",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "{Studying player}Looks like we got a new visitor in the ol' Brahmin pen.{Beat}Not many people coming here in a hurry, only passing through.",
+      "index": "1"
+    },
+    {
+      "topic": "vMojavevMORangerJacksonTopic000",
+      "topic_text": "Any way I can help?",
+      "emotion": "Neutral 50",
+      "response_text": "{Appraising player}Help? No, look, I apprec...{Beat}You know, what, yes, I could use the help. And you look like you can handle yourself.",
+      "index": "6"
+    },
+    {
+      "topic": "vMojavevMORangerJacksonTopic001",
+      "topic_text": "Never mind. I'll be going now.",
+      "emotion": "Neutral 50",
+      "response_text": "Take care - cool your heels over in the barracks, if you want.",
+      "index": "9"
+    },
+    {
+      "topic": "vMojavevMORangerJacksonTopic002",
+      "topic_text": "Sounds like a deal.",
+      "emotion": "Neutral 50",
+      "response_text": "Thanks, I appreciate it. Come back here when you're done, I might accidentally \"lose\" some supplies to pay you with.",
+      "index": "10"
+    },
+    {
+      "topic": "vMojavevMORangerJacksonTopic003",
+      "topic_text": "No thanks.",
+      "emotion": "Neutral 50",
+      "response_text": "{Smiles}At least you asked. More than some that pass through here.",
+      "index": "11"
+    },
+    {
+      "topic": "vMojavevMORangerJacksonTopic005",
+      "topic_text": "Not yet.",
+      "emotion": "Neutral 50",
+      "response_text": "Well, if you can help, I'd appreciate it. Need to get these caravans moving.",
+      "index": "12"
+    },
+    {
+      "topic": "vMojavevMORangerJacksonTopic007",
+      "topic_text": "You sure seem like you have enough soldiers.",
+      "emotion": "Neutral 50",
+      "response_text": "Soldiers, no, recruits, yes. And the Mojave Outpost has been ordered to have a standing force at the NCR perimeter at all times.",
+      "index": "13"
+    },
+    {
+      "topic": "vMojavevMORangerJacksonTopic008",
+      "topic_text": "Is NCR sending more troops?",
+      "emotion": "Neutral 50",
+      "response_text": "Sending more troops, yes, to reinforce the Outpost, no. Troops head through here on their way to McCarran or to the frontlines at Forlorn Hope.",
+      "index": "15"
+    },
+    {
+      "topic": "vMojavevMORangerJacksonTopic009",
+      "topic_text": "You sound frustrated.",
+      "emotion": "Neutral 50",
+      "response_text": "Frustrated? No. I have my orders - signed, and approved all the way up the chain from Kimball. And I understand the reasons.",
+      "index": "17"
+    },
+    {
+      "topic": "vMojavevMORangerJacksonTopic012",
+      "topic_text": "I have evidence of a caravan conspiracy.",
+      "emotion": "Neutral 50",
+      "response_text": "What is it? Let me see.",
+      "index": "20"
+    },
+    {
+      "topic": "vMojavevMORangerJacksonTopic014",
+      "topic_text": "Can you get it to the right people?",
+      "emotion": "Neutral 50",
+      "response_text": "No. No, I can't. Because this evidence might be true... but it doesn't just implicate them.",
+      "index": "22"
+    },
+    {
+      "topic": "vMojavevMORangerJacksonTopic015",
+      "topic_text": "You have our word.",
+      "emotion": "Neutral 50",
+      "response_text": "That'll have to do.{Beat}God, what a mess. People turning against each other when the Mojave's at risk of falling?",
+      "index": "28"
+    },
+    {
+      "topic": "vMojavevMORangerJacksonTopic016",
+      "topic_text": "Sure... no problem.",
+      "emotion": "Neutral 50",
+      "response_text": "Hmmm. All right - you change your mind and start shooting, then I can't help you. Show up here after, I'll put you in chains.",
+      "index": "34"
+    },
+    {
+      "topic": "vMojavevMORangerJacksonTopic017",
+      "topic_text": "If you can promise it gets where it needs to go.",
+      "emotion": "Neutral 50",
+      "response_text": "I can promise that, what happens after...{sighs}not even God himself could move the Congress in or out of session. And this... this is a tricky matter.",
+      "index": "36"
+    },
+    {
+      "topic": "vMojavevMORangerJacksonTopic018",
+      "topic_text": "You're welcome.",
+      "emotion": "Neutral 50",
+      "response_text": "I'll do what I can - and those folks that got killed need to be answered for.",
+      "index": "37"
+    },
+    {
+      "topic": "vMojavevMORangerJacksonTopic021",
+      "topic_text": "You mentioned a reward before?",
+      "emotion": "Neutral 50",
+      "response_text": "No, I mentioned you might accidentally get supplied, and I meant it. Not allowed to contract mercenaries at the Outpost.",
+      "index": "38"
+    },
+    {
+      "topic": "vMojavevMORangerJacksonTopic023",
+      "topic_text": "[NCR] I'm here to assist.",
+      "emotion": "Neutral 50",
+      "response_text": "Well, about time we got a soldier... and not a recruit, you look like you've seen some action.",
+      "index": "40"
+    },
+    {
+      "topic": "vMojavevMORangerJacksonTopic025",
+      "topic_text": "I'll be going now.",
+      "emotion": "Neutral 50",
+      "response_text": "Come back when you've made some progress.",
+      "index": "41"
+    }
+  ],
+  "conversation": [],
+  "combat": []
+}

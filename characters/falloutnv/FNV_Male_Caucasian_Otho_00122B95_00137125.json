@@ -1,0 +1,195 @@
+{
+  "name": "Otho",
+  "url": "/wiki/Otho",
+  "dialogue_name": "FortOtho.txt",
+  "dialogue_url": "/wiki/FortOtho.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "00122B95",
+  "ref_id": "00137125",
+  "editor_id": "FortOtho",
+  "location": "Legion arena",
+  "location_url": "/wiki/Legion_arena",
+  "descriptions": [
+    "Otho is the keeper of the Legion arena at The Fort in 2281.",
+    "Not much is known about Otho, other than his ardent sexism, which stems from Caesar's teachings that \"women are beneath notice.\"",
+    "He has likely been in charge of the arena for some time, as he saw the Legate fight as a recruit.",
+    "PC Xbox 360 If you speak to him after completing Et Tumor, Brute? he may say \"A woman actually proved useful for once. Caesar was bold to put his life in your hands\" even if you are playing as a male character.",
+    "Frumentarii: Alerio · Cato Hostilius · Gabban · Karl · Picus · Disguised frumentarius · Ulysses (formerly)\nConsul: M. Licinius Crassus · M. Scribonius Libo Drusus (of the consul)"
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Caesar's Legion",
+  "role": "Arena Leader",
+  "detailed_location": "The Fort",
+  "voice_actor": "Yuri Lowenthal",
+  "special": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 5,
+    "Intelligence": 5,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "level": "10",
+  "tag_skills": [
+    {
+      "Guns:": "64"
+    },
+    {
+      "Science:": "66"
+    },
+    {
+      "Unarmed:": "64"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Neutral",
+  "voice_type": "MaleAdult01Default",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "{Male PC}You here to fight in the arena? Then you're talking to the right man.",
+      "index": "1"
+    },
+    {
+      "topic": "VFreeformTheFortFortOthoTopic000",
+      "topic_text": "What can you tell me about the Legate?",
+      "emotion": "Neutral 50",
+      "response_text": "A great warrior. When he was but a recruit, I watched him kill ten men in the arena with his bare hands.",
+      "index": "10"
+    },
+    {
+      "topic": "VFreeformTheFortFortOthoTopic001",
+      "topic_text": "What do you know about the Burned Man?",
+      "emotion": "Neutral 50",
+      "response_text": "{Male PC}It's not something we like to speak of. The Burned Man was our greatest warrior, even greater than Legate Lanius, but he failed{KAI-zar}Caesar at the Dam.",
+      "index": "12"
+    },
+    {
+      "topic": "VFreeformTheFortFortOthoTopic009",
+      "topic_text": "Okay. Let's fight.",
+      "emotion": "Neutral 50",
+      "response_text": "{player said something dumb}No, imbecile, that's not how it works. I set up the fights, then you go in the arena and fight.",
+      "index": "15"
+    },
+    {
+      "topic": "VFreeformTheFortFortOthoTopic010",
+      "topic_text": "Tell me more about the arena.",
+      "emotion": "Neutral 50",
+      "response_text": "Such as?",
+      "index": "16"
+    },
+    {
+      "topic": "VFreeformTheFortFortOthoTopic012",
+      "topic_text": "Do you have a problem with women?",
+      "emotion": "Neutral 50",
+      "response_text": "{Female PC}Women are beneath notice, as{KAI-zar}Caesar has taught us. I'm only allowing you to speak to me because you are{KAI-zar's}Caesar's guest.",
+      "index": "17"
+    },
+    {
+      "topic": "VFreeformTheFortFortOthoTopic015",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Go.",
+      "index": "19"
+    },
+    {
+      "topic": "VFreeformTheFortFortOthoTopic016",
+      "topic_text": "That's enough about the arena. Let's talk about something else.",
+      "emotion": "Neutral 50",
+      "response_text": "Like what?",
+      "index": "20"
+    },
+    {
+      "topic": "VFreeformTheFortFortOthoTopic017",
+      "topic_text": "What are the rules?",
+      "emotion": "Neutral 50",
+      "response_text": "Light armor and machetes only. The challenger - the one who asks to enter the arena - may be pitted against one or more opponents.",
+      "index": "21"
+    },
+    {
+      "topic": "VFreeformTheFortFortOthoTopic018",
+      "topic_text": "Who does the fighting?",
+      "emotion": "Neutral 50",
+      "response_text": "Most of the time it's some young Legionary trying to make a name for himself, hoping to get noticed by Caesar or the Praetorians.",
+      "index": "23"
+    },
+    {
+      "topic": "VFreeformTheFortFortOthoTopic020",
+      "topic_text": "What do you do?",
+      "emotion": "Neutral 50",
+      "response_text": "I set up the fights, keep track of prisoners available, and make sure the arena's cleaned up.",
+      "index": "25"
+    },
+    {
+      "topic": "VFreeformTheFortFortOthoTopic021",
+      "topic_text": "I'd like to fight in the arena.",
+      "emotion": "Anger 10",
+      "response_text": "{Player is a woman}Know your place, woman. Unlike the Profligates of the NCR, only{emphasis \"men\"}men fight in the Legion.",
+      "index": "26"
+    },
+    {
+      "topic": "VFreeformTheFortFortOthoTopic022",
+      "topic_text": "I'm ready.",
+      "emotion": "Neutral 50",
+      "response_text": "Remember the rules: light armor and machetes only. And, of course, to the death.",
+      "index": "33"
+    },
+    {
+      "topic": "VFreeformTheFortFortOthoTopic023",
+      "topic_text": "Got it. I'm ready.",
+      "emotion": "Neutral 50",
+      "response_text": "Good luck.",
+      "index": "34"
+    },
+    {
+      "topic": "VFreeformTheFortFortOthoTopic024",
+      "topic_text": "I need some time to prepare.",
+      "emotion": "Neutral 50",
+      "response_text": "Very well.",
+      "index": "35"
+    },
+    {
+      "topic": "VFreeformTheFortFortOthoTopic025",
+      "topic_text": "Never mind.",
+      "emotion": "Neutral 50",
+      "response_text": "All right. Did you want something else?",
+      "index": "36"
+    },
+    {
+      "topic": "VFreeformTheFortFortOthoTopic026",
+      "topic_text": "I'm ready.",
+      "emotion": "Neutral 50",
+      "response_text": "Careful in there - he's tougher than he looks.",
+      "index": "37"
+    },
+    {
+      "topic": "VFreeformTheFortFortOthoTopic028",
+      "topic_text": "I'm ready.",
+      "emotion": "Neutral 50",
+      "response_text": "Watch out for her - she's one of the deadliest fighters I've ever seen.",
+      "index": "38"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Go.",
+      "index": "39"
+    }
+  ],
+  "combat": []
+}

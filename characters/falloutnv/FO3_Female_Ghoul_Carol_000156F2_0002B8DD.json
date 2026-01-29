@@ -1,0 +1,276 @@
+{
+  "name": "Carol",
+  "url": "/wiki/Carol_(Fallout_3)",
+  "dialogue_name": "Carol.txt",
+  "dialogue_url": "/wiki/Carol.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000156F2",
+  "ref_id": "0002B8DD",
+  "editor_id": "Carol",
+  "location": "Carol's Place",
+  "location_url": "/wiki/Carol%27s_Place",
+  "descriptions": [
+    "Carol is a female ghoul denizen of Underworld in Fallout 3. She is the owner and proprietor of Carol's Place, keeping it running together with her partner Greta.",
+    "The two are the first same-sex couple to be portrayed in a Fallout game.",
+    "Born in 2051,",
+    "The city burned for weeks, if not months afterward, and Carol left the shelter, hiding in the Museum of History. She was safe inside, but could hear the chaos unfold outside its walls, with the once affluent city turning into a hellish warzone. Looting and murder were the order of the day, and the nightmarish memories still give Carol pause, even two hundred years after the fact.",
+    "Everything improved further after she met Greta around 2217, with the two sharing a life together ever since. Carol decided to fulfill her lifelong dream of being the owner of a bed and breakfast at Greta's insistence,",
+    "Though she is a ghoul with all the drawbacks that entails, she proudly wears a sundress and maintains a pleasant disposition in spite of everything she suffered.",
+    "Part of the reason is likely the fact that she has lived in Underworld for 200 years, give or take, and after telling the same stories for centuries, she started to feel uninteresting, losing her luster.",
+    "Carol is in a committed relationship with Greta,",
+    "Her other significant relationship is with Gob, a younger ghoul she \"adopted\" with Greta. He is not her biological child and it is not clear if there is even an age disparity between them, but nevertheless Carol treats him as if he was her flesh and bone.",
+    "She is well liked and respected among the Underworld ghouls, along with her establishment, as it is one of the only places for ghouls to spend their money at in Underworld (the others being the Ninth Circle or Tulip's shop).",
+    "However, there are exceptions: Carol's competitor Ahzrukhal would like nothing more than to shut Carol's Place down as a watering hole (e.g. by killing Greta),",
+    "Carol immediately takes a shine to the Lone Wanderer, who is the first regular human to visit Underworld in a while, and just meeting them is enough to make her snap into her old self. That includes cracking deadpan jokes about smoothskins and their ugliness.",
+    "Carol has two packages assigned which govern her schedule:",
+    "Notes"
+  ],
+  "race": "Ghoul",
+  "gender": "Female",
+  "affiliation": "Underworld",
+  "role": "Proprietor",
+  "detailed_location": "Carol's Place, Underworld",
+  "voice_actor": "Audrey Wasilewski",
+  "special": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 7,
+    "Intelligence": 5,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "mod_special_values": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 7,
+    "Intelligence": 5,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "level": "1→20→30 (Broken Steel only)",
+  "tag_skills": [
+    {
+      "Barter:": "34→100"
+    },
+    {
+      "Melee Weap.:": "30→100"
+    },
+    {
+      "Speech:": "34→100"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Good",
+  "voice_type": "FemaleGenericGhoulDC",
+  "geck_race": "Ghoul",
+  "topics": [
+    {
+      "topic": "Bed",
+      "topic_text": "How much for a room?",
+      "emotion": "Neutral 50",
+      "response_text": "Huh? Oh... 120 caps... I guess.",
+      "index": "1"
+    },
+    {
+      "topic": "BedNO",
+      "topic_text": "No, thanks.",
+      "emotion": "Neutral 50",
+      "response_text": "Okay, then.",
+      "index": "2"
+    },
+    {
+      "topic": "BedYES",
+      "topic_text": "Actually, I don't have 120 caps.",
+      "emotion": "Neutral 50",
+      "response_text": "Oh. Sorry... there's not really anything I can do. I have to make money, you know.",
+      "index": "3"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Sad 50",
+      "response_text": "What? Oh... I'm sorry... I was just thinking about my poor Gob. Did you need something?",
+      "index": "5"
+    },
+    {
+      "topic": "MS14BackOff",
+      "topic_text": "Sounds like a normal guy.",
+      "emotion": "Neutral 50",
+      "response_text": "Yes. He's much nicer than some of my guests.",
+      "index": "20"
+    },
+    {
+      "topic": "MS14CrowleyWhat can you tell me about Mister Crowley?",
+      "topic_text": "Do you know Mister Crowley?",
+      "emotion": "Happy 50",
+      "response_text": "The back room renter? Oh, he's a swell guest. So polite too. Never gets mad at anyone.",
+      "index": "21"
+    },
+    {
+      "topic": "MS14PersuadeCrowleyCome on. You can tell me. Ahzrukhal said so. <Lie.>",
+      "topic_text": "So he doesn't do anything strange?",
+      "emotion": "Surprise 50",
+      "response_text": "Well, he does keep talking about how he's going to make his fortune soon.",
+      "index": "23"
+    },
+    {
+      "topic": "SpeechChallengeFailure",
+      "topic_text": "SpeechChallengeFailure",
+      "emotion": "Anger 50",
+      "response_text": "Well, I never! You, sir, are no gentleman.",
+      "index": "26"
+    },
+    {
+      "topic": "UnderworldCarolGobTopic",
+      "topic_text": "Have you ever heard of a guy named Gob?",
+      "emotion": "Happy 50",
+      "response_text": "Gob? Yes, of course!{Her mood brightens a little.}",
+      "index": "28"
+    },
+    {
+      "topic": "UnderworldCarolGobTopic1",
+      "topic_text": "He was up in Megaton. I'm afraid that he's dead.",
+      "emotion": "Sad 100",
+      "response_text": "No! Not Gob... I'm... I'm sorry... I need some time alone...",
+      "index": "31"
+    },
+    {
+      "topic": "UnderworldCarolGobTopic2",
+      "topic_text": "He was up in Megaton. At least he was until I killed him.",
+      "emotion": "Anger 50",
+      "response_text": "You... you what?",
+      "index": "34"
+    },
+    {
+      "topic": "UnderworldCarolGreta",
+      "topic_text": "You're taking Greta's death really hard, aren't you?",
+      "emotion": "Sad 50",
+      "response_text": "We've been together longer than you've been alive.",
+      "index": "39"
+    },
+    {
+      "topic": "UnderworldCarolHistory",
+      "topic_text": "How did you end up here?",
+      "emotion": "Neutral 50",
+      "response_text": "Oh, that's such a long story. You couldn't possibly want to hear about that.",
+      "index": "44"
+    },
+    {
+      "topic": "UnderworldCarolHistory1",
+      "topic_text": "No, Carol. I'd love to hear your story.",
+      "emotion": "Neutral 50",
+      "response_text": "Well, okay... but it's nothing special.",
+      "index": "45"
+    },
+    {
+      "topic": "UnderworldCarolHistory1END",
+      "topic_text": "See, and you said you weren't interesting.",
+      "emotion": "Neutral 50",
+      "response_text": "You tell the same stories for 200 years, you'll feel pretty uninteresting too.",
+      "index": "47"
+    },
+    {
+      "topic": "UnderworldCarolHistory1a",
+      "topic_text": "Do you remember the day the war started?",
+      "emotion": "Neutral 50",
+      "response_text": "I do... I was in a shelter with my father when the bombs hit. In DC, we had the luxury of getting a warning after the west coast was... gone...",
+      "index": "48"
+    },
+    {
+      "topic": "UnderworldCarolHistory1b",
+      "topic_text": "What was the Wasteland like after the war?",
+      "emotion": "Neutral 50",
+      "response_text": "The city was on fire for weeks... maybe months, I don't know. I hid down here in the museum... it was the closest building to the shelter I was in.",
+      "index": "53"
+    },
+    {
+      "topic": "UnderworldCarolHistory1c",
+      "topic_text": "So, how did you end up as a Ghoul?",
+      "emotion": "Neutral 50",
+      "response_text": "I don't know how it happens. Doctor Barrows says it was radiation. All I know is that people kept showing up here in the museum.",
+      "index": "56"
+    },
+    {
+      "topic": "UnderworldCarolHistory2",
+      "topic_text": "You know, you're right. I don't.",
+      "emotion": "Neutral 50",
+      "response_text": "See, I knew it. I'm really just a boring old Ghoul, I promise.",
+      "index": "61"
+    },
+    {
+      "topic": "UnderworldTownTopic",
+      "topic_text": "What can you tell me about Underworld?",
+      "emotion": "Sad 50",
+      "response_text": "I've been here since we founded the town. Before that, well, life out in the Wastes wasn't very pleasant for us.",
+      "index": "62"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "I have to go now.",
+      "emotion": "Neutral 50",
+      "response_text": "You come back real soon now!",
+      "index": "64"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Sad 50",
+      "response_text": "Too bad about Crowley. I heard Tenpenny put out a contract on him.",
+      "index": "67"
+    },
+    {
+      "topic": "UnderworldTalkCarolGhoulResponse",
+      "topic_text": "UnderworldTalkCarolGhoulResponse",
+      "emotion": "Neutral 50",
+      "response_text": "Oh, don't worry about me. You just go enjoy your drink.",
+      "index": "71"
+    },
+    {
+      "topic": "UnderworldTalkCarolGretaHealth1",
+      "topic_text": "UnderworldTalkCarolGretaHealth1",
+      "emotion": "Neutral 50",
+      "response_text": "What? Oh, I'm fine, Greta. I'm just fine, miles away, you know?",
+      "index": "77"
+    },
+    {
+      "topic": "UnderworldTalkCarolGretaHealth3",
+      "topic_text": "UnderworldTalkCarolGretaHealth3",
+      "emotion": "Neutral 50",
+      "response_text": "Oh, the customers are fine. So long as they've got you to being them food and drinks, they couldn't care less.",
+      "index": "79"
+    },
+    {
+      "topic": "UnderworldTalkCarolGretaTired1",
+      "topic_text": "UnderworldTalkCarolGretaTired1",
+      "emotion": "Neutral 50",
+      "response_text": "What now? Oh, I'm sorry Greta, I didn't see you there... did you need something?",
+      "index": "81"
+    },
+    {
+      "topic": "UnderworldTalkCarolGretaTired3",
+      "topic_text": "UnderworldTalkCarolGretaTired3",
+      "emotion": "Neutral 50",
+      "response_text": "Oh, Greta, you worry too much. I'm fine, I'm fine. Just have a lot on my mind. It'll pass. Nothing to worry about.",
+      "index": "83"
+    },
+    {
+      "topic": "UnderworldTalkResponseShort1",
+      "topic_text": "UnderworldTalkHelloResponseShort",
+      "emotion": "Neutral 50",
+      "response_text": "Hey, Greta. How's my girl?",
+      "index": "85"
+    }
+  ],
+  "combat": []
+}

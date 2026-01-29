@@ -1,0 +1,313 @@
+{
+  "name": "Gob",
+  "url": "/wiki/Gob",
+  "dialogue_name": "Gob.txt",
+  "dialogue_url": "/wiki/Gob.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": true,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "00000A62",
+  "ref_id": "00003B3D",
+  "editor_id": "Gob",
+  "location": "Moriarty's Saloon",
+  "location_url": "/wiki/Moriarty%27s_Saloon",
+  "descriptions": [
+    "Gob, full name Gobtholemew, is an abused ghoul bartender who works at Moriarty's Saloon in Megaton in the year 2277.",
+    "Treated as a freakish, second-class citizen by many people in Megaton (particularly Colin Moriarty), Gob is skittish and nervous, always looking over his shoulder. He does his best to maintain a sense of humor and to be friendly with customers, but this is mostly out of his desire not to be beaten. Confessor Cromwell and Mother Maya treat Gob with respect and an air of reverence because of their spiritual beliefs.",
+    "Gob used to live in Underworld with his adoptive mother, Carol, in Carol's Place. He set out into the wasteland to find fortune and was caught by a group of slavers. Colin Moriarty then purchased him as his slave. He works for Colin Moriarty to repay the debt presumably incurred when Moriarty purchased Gob from the slavers. Gob has been working to repay his debt for 15 years, since Moriarty also charges Gob for rent and food.",
+    "Gob spends most of his time serving drinks and talking with the patrons in Moriarty's saloon. At night, he'll eventually go to sleep in the rentable room, sometimes resting for a few hours and then starting up the saloon in the early morning hours. During his working hours, he'll be cleaning glasses, communicating with people (\"What, you never seen a ghoul before?\"), tidying up the place with a dirty broom and checking the shelves behind the counter to see what's currently in stock. The first time the Lone Wanderer enters the saloon, Gob will be hitting the radio, trying to fix it. Nova tries to explain to him it doesn't work, and Jericho (if he is present) will curse at him to stop banging on it. Also, if Walter is present he will remark to Gob to stop hitting the radio as he finds the Enclave radio \"downright patriotic,\" even though Enclave radio is not playing. After the player completes the Galaxy News Radio quest, the radio will function properly, though Gob will never comment on its improvement."
+  ],
+  "race": "Ghoul",
+  "gender": "Male",
+  "affiliation": "Colin Moriarty",
+  "role": "BartenderBar owner (optional)",
+  "detailed_location": "Moriarty's Saloon,Megaton",
+  "voice_actor": "Mike Rosson",
+  "special": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 7,
+    "Intelligence": 5,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "level": "3",
+  "tag_skills": [
+    {
+      "Barter:": "40"
+    },
+    {
+      "Melee Weap.:": "44(46)"
+    },
+    {
+      "Speech:": "40"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Good",
+  "voice_type": "MaleGenericGhoulDC",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Happy 50",
+      "response_text": "Don't shoot! Please! Just tell me what you want!{Nervous. Very nervous. Used to be treated like crap.}",
+      "index": "1"
+    },
+    {
+      "topic": "MQ01GNRTopic",
+      "topic_text": "What's all this about Galaxy News Radio?",
+      "emotion": "Neutral 50",
+      "response_text": "Mister Moriarty says we can keep it on. It's a good radio station.",
+      "index": "9"
+    },
+    {
+      "topic": "MQ01GobHelps01",
+      "topic_text": "I talked to Moriarty already and he's trying to charge me for the info.",
+      "emotion": "Sad 50",
+      "response_text": "Sigh. That's his way. Always putting caps before people's lives.",
+      "index": "12"
+    },
+    {
+      "topic": "MQ01GobHelps01a",
+      "topic_text": "Gob, please. If you know anything about my father, you need to tell me.",
+      "emotion": "Sad 50",
+      "response_text": "I was like you once. I wandered into town looking for an escape from this stupid joke of a body I'm trapped in. Now look at me.",
+      "index": "15"
+    },
+    {
+      "topic": "MQ01GobHelps01b",
+      "topic_text": "Look, you rotting piece of shit! Tell me what you know or it's splatter time!",
+      "emotion": "Fear 50",
+      "response_text": "All right! I'll tell you! Please, just don't hurt me!",
+      "index": "19"
+    },
+    {
+      "topic": "MQ01GobHelps02",
+      "topic_text": "Look, if you know something, you'd better tell me!",
+      "emotion": "Neutral 50",
+      "response_text": "Look, smoothskin. I've told you all I dare. Moriarty doesn't like me chatting with the customers like this.",
+      "index": "23"
+    },
+    {
+      "topic": "MQ01GobHelps03",
+      "topic_text": "If you know anyone else that can help, I'd appreciate it.",
+      "emotion": "Disgust 50",
+      "response_text": "Moriarty is your best bet. I wish you luck. Now, I have to get back to work, or I'll be answering to him too.",
+      "index": "26"
+    },
+    {
+      "topic": "MQ01TerminalTopic",
+      "topic_text": "What can you tell me about Moriarty's terminal?",
+      "emotion": "Anger 70",
+      "response_text": "I hate that fucking thing. It's all he cares about.",
+      "index": "27"
+    },
+    {
+      "topic": "MQ01TerminalTopic01",
+      "topic_text": "I really need to get into that terminal.",
+      "emotion": "Surprise 90",
+      "response_text": "Oh, Mister Moriarty never lets me back there.",
+      "index": "30"
+    },
+    {
+      "topic": "MQ01TerminalTopic02",
+      "topic_text": "I'm sick of this shit. Help me get into the terminal so I can find what I need!",
+      "emotion": "Fear 70",
+      "response_text": "No! Please! Don't hit me!",
+      "index": "32"
+    },
+    {
+      "topic": "MQ01TerminalTopic03",
+      "topic_text": "All right, thanks.",
+      "emotion": "Neutral 50",
+      "response_text": "Sure thing.",
+      "index": "34"
+    },
+    {
+      "topic": "MegGobDrinks",
+      "topic_text": "I need a drink.",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah. Enjoy. Dick ...",
+      "index": "35"
+    },
+    {
+      "topic": "MegGobGreeting1",
+      "topic_text": "Gah! Fuck! What are you?",
+      "emotion": "Sad 50",
+      "response_text": "I guess they don't have a lot of Ghouls in the Vault.",
+      "index": "38"
+    },
+    {
+      "topic": "MegGobGreeting1a",
+      "topic_text": "No. What's a ghoul?",
+      "emotion": "Neutral 50",
+      "response_text": "Well, not all of us got the chance to hole up in a nice cushy Vault when the bombs fell.",
+      "index": "40"
+    },
+    {
+      "topic": "MegGobGreeting1a1",
+      "topic_text": "You know, it's not so bad.",
+      "emotion": "Happy 50",
+      "response_text": "Nice of you to say so. If you can't be nice, at least pretend, right? Fake it 'till you make it, and all that.",
+      "index": "44"
+    },
+    {
+      "topic": "MegGobGreeting1a2",
+      "topic_text": "That's disgusting.",
+      "emotion": "Anger 50",
+      "response_text": "Yeah, fuck you too. Whatever, man. I'm used to being treated like shit around here.",
+      "index": "46"
+    },
+    {
+      "topic": "MegGobGreeting1b",
+      "topic_text": "I know what a Ghoul is. Now get away from me, zombie.",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah... great. What do you need? ... asshole ...{Disappointed and returning to being nervous. \"asshole\" is said under his breath}",
+      "index": "47"
+    },
+    {
+      "topic": "MegGobGreeting1c",
+      "topic_text": "I've got nothing against you people.",
+      "emotion": "Happy 50",
+      "response_text": "Well now. That's a surprise! I'm used to every asshole smoothskin in this town giving me shit just because I look like a corpse.",
+      "index": "48"
+    },
+    {
+      "topic": "MegGobGreeting2",
+      "topic_text": "Stuff it, Ghoul. And stop looking at me.",
+      "emotion": "Neutral 50",
+      "response_text": "I see how it is... <sigh> What do you need?",
+      "index": "51"
+    },
+    {
+      "topic": "MegGobGreeting3",
+      "topic_text": "Let me think about it for a moment, my good man.",
+      "emotion": "Neutral 50",
+      "response_text": "Wait... you're not going to hit me? Yell at me? Not even berate me a little bit?",
+      "index": "52"
+    },
+    {
+      "topic": "MegGobGreeting3a",
+      "topic_text": "Are you kidding? Me? Shut the hell up, Ghoul. I'll beat you if I feel like it.",
+      "emotion": "Sad 50",
+      "response_text": "<sighs> I suppose I was wrong... should have known better.",
+      "index": "53"
+    },
+    {
+      "topic": "MegGobGreeting3b",
+      "topic_text": "I hadn't planned on it.",
+      "emotion": "Surprise 50",
+      "response_text": "Well now. That's a surprise! I'm used to every asshole smoothskin in this town giving me shit just because I look like a corpse.",
+      "index": "54"
+    },
+    {
+      "topic": "MegGobUnderworld",
+      "topic_text": "Where did you come from?",
+      "emotion": "Neutral 50",
+      "response_text": "A place called Underworld. It's a Ghoul city down in D.C. I set off up here to find adventure and fortune. And... well... I found this place.",
+      "index": "57"
+    },
+    {
+      "topic": "MegTownEnd",
+      "topic_text": "That's all I needed to know.",
+      "emotion": "Neutral 50",
+      "response_text": "Okay!",
+      "index": "60"
+    },
+    {
+      "topic": "MegTownFatherChoice",
+      "topic_text": "I'm looking for my father. Middle-aged guy. Maybe you've seen him?",
+      "emotion": "Anger 75",
+      "response_text": "Even if I knew, I wouldn't tell you.",
+      "index": "61"
+    },
+    {
+      "topic": "SpeechChallengeFailure",
+      "topic_text": "SpeechChallengeFailure",
+      "emotion": "Fear 50",
+      "response_text": "Sorry, smoothskin. I can't take the risk. Moriarty will beat the shit out of me for even talking to you!",
+      "index": "65"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "Goodbye, Gob.",
+      "emotion": "Neutral 50",
+      "response_text": "See you soon!",
+      "index": "66"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Neutral 50",
+      "response_text": "Welcome to Moriarty's Saloon.",
+      "index": "70"
+    },
+    {
+      "topic": "MS11SimmsMurderedSay",
+      "topic_text": "MS11SimmsMurderedSay",
+      "emotion": "Fear 50",
+      "response_text": "I know, I know. I'll get a mop. It's just... blood is so hard to get out of the floor.{cringing and afraid he's going to get in trouble}",
+      "index": "80"
+    },
+    {
+      "topic": "MegGobRadioTalk",
+      "topic_text": "MegGobRadioTalk",
+      "emotion": "Neutral 50",
+      "response_text": "Aw, forget it. I guess we're stuck with this Enclave crap.",
+      "index": "81"
+    },
+    {
+      "topic": "MegatonHelloResponse",
+      "topic_text": "MegatonHelloResponse",
+      "emotion": "Neutral 50",
+      "response_text": "Uhm... hi?",
+      "index": "90"
+    },
+    {
+      "topic": "MegatonTalk1",
+      "topic_text": "MegatonTalk",
+      "emotion": "Fear 50",
+      "response_text": "Mister Moriarty, sir! What can I do for you?",
+      "index": "91"
+    },
+    {
+      "topic": "MegatonTalk2",
+      "topic_text": "MegatonTalk2",
+      "emotion": "Neutral 50",
+      "response_text": "I... I think we're running low on Nuka-Cola, sir. I... I just thought you'd want to know...",
+      "index": "97"
+    },
+    {
+      "topic": "MegatonTalk3",
+      "topic_text": "MegatonTalk3",
+      "emotion": "Neutral 50",
+      "response_text": "Please, sir! I'm sorry! I... I'm just stupid, you know that! A stupid, rotting corpse, right? I'll take care of it, I swear!",
+      "index": "101"
+    },
+    {
+      "topic": "MegatonTalk4",
+      "topic_text": "MegatonTalk4",
+      "emotion": "Neutral 50",
+      "response_text": "Yes sir, Mister Moriarty!{ }",
+      "index": "107"
+    }
+  ],
+  "combat": [
+    {
+      "topic": "Attack",
+      "topic_text": "Attack",
+      "emotion": "Neutral 50",
+      "response_text": "Colin! Colin, help!",
+      "index": "111"
+    }
+  ]
+}

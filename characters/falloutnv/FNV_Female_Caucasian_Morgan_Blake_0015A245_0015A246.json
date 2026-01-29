@@ -1,0 +1,96 @@
+{
+  "name": "Morgan Blake",
+  "url": "/wiki/Morgan_Blake",
+  "dialogue_name": "1ESharecropperMorganBlake.txt",
+  "dialogue_url": "/wiki/1ESharecropperMorganBlake.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "0015A245",
+  "ref_id": "0015A246",
+  "editor_id": "1ESharecropperMorganBlake",
+  "location": "NCR sharecropper farms",
+  "location_url": "/wiki/NCR_sharecropper_farms",
+  "descriptions": [
+    "Morgan Blake is a farmer residing and working at the New California Republic's sharecropper farms in the Mojave Wasteland in 2281. She appears in Fallout: New Vegas.",
+    "Like with many of her fellow farmers, Morgan came to the Mojave Wasteland under the auspices of the Thaler Act, earning a living performing work to harvest crops and supply food to NCR interests in the region. By October 2281, Morgan suspects the cause of their lessening crop yield has something to do with the soil's worsening quality being affected by contaminants seeping into the groundwater from somewhere else.",
+    "Hard Luck Blues: The Courier can speak to Morgan to learn about the worsening crop situation at the farms, for which she points them to the east pump station to find out the cause."
+  ],
+  "race": "Human",
+  "gender": "Female",
+  "affiliation": "New California Republic",
+  "role": "Farmer",
+  "detailed_location": "NCR sharecropper farms",
+  "voice_actor": "Courtenay Taylor",
+  "special": {
+    "Strength": 7,
+    "Perception": 6,
+    "Endurance": 7,
+    "Charisma": 3,
+    "Intelligence": 4,
+    "Agility": 5,
+    "Luck": 4
+  },
+  "mod_special_values": {
+    "Strength": 7,
+    "Perception": 7,
+    "Endurance": 7,
+    "Charisma": 3,
+    "Intelligence": 4,
+    "Agility": 5,
+    "Luck": 4
+  },
+  "level": "1",
+  "tag_skills": [
+    {
+      "Melee Weap.:": "33"
+    },
+    {
+      "Repair:": "27"
+    },
+    {
+      "Survival:": "33"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Neutral",
+  "voice_type": "FemaleAdult04",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Happy 50",
+      "response_text": "Oh, you here to work? I think I have an extra shovel around here somewhere.",
+      "index": "1"
+    },
+    {
+      "topic": "VES34Vault1ESharecropperMorganBlakeTopic000",
+      "topic_text": "What's going on around here?",
+      "emotion": "Neutral 50",
+      "response_text": "Well, crops aren't doing so well. I'm thinking it might be something in the water.",
+      "index": "3"
+    },
+    {
+      "topic": "VES34Vault1ESharecropperMorganBlakeTopic001",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "See you around.",
+      "index": "5"
+    },
+    {
+      "topic": "VES34Vault1ESharecropperMorganBlakeTopic002",
+      "topic_text": "I'll go check it out.",
+      "emotion": "Happy 60",
+      "response_text": "Thanks, that's great!",
+      "index": "6"
+    }
+  ],
+  "conversation": [],
+  "combat": []
+}

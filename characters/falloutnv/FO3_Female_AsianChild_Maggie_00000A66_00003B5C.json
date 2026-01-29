@@ -1,0 +1,148 @@
+{
+  "name": "Maggie",
+  "url": "/wiki/Maggie_(Fallout_3)",
+  "dialogue_name": "Maggie.txt",
+  "dialogue_url": "/wiki/Maggie.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": true,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "00000A66",
+  "ref_id": "00003B5C",
+  "editor_id": "Maggie",
+  "location": "Megaton,Billy Creel's house",
+  "location_url": "/wiki/Megaton",
+  "descriptions": [
+    "Maggie is a Megaton resident in 2277.",
+    "When Maggie was three years old, Billy Creel adopted her and brought her to Megaton. She has no memories of her life before Megaton. Billy was given a man's house ever since the man was shot in a raider attack; a few townspeople claim that Billy was the one behind that bullet that bought him his place in the town. Billy told Maggie the combination to his lost safe.",
+    "Her real parents died during a raider attack in 2275. Maggie is a friendly girl running around the town. She appears to be interested in Harden Simms and discusses with Billy the prospect of her kissing the boy, to which Billy tells her to slow down, as she has plenty of time to do that later. She also asks Billy about \"the talk,\" stating that Harden has already had the talk.",
+    "With the Child at Heart perk, one can convince Maggie to tell them the combination to Billy Creel's safe.",
+    "The combination to the safe that Maggie gives to the Lone Wanderer is \"15, 16, 23, 42\" which is a reference to the numbers, a recurring sequence on the TV series Lost."
+  ],
+  "race": "Human",
+  "gender": "Female",
+  "affiliation": "Megaton",
+  "role": "Orphaned child",
+  "detailed_location": "Billy Creel's house, Megaton",
+  "voice_actor": "Stephanie Joy",
+  "special": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 4,
+    "Intelligence": 4,
+    "Agility": 6,
+    "Luck": 4
+  },
+  "karma": "Good",
+  "voice_type": "FemaleChild01DC",
+  "geck_race": "AsianChild",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Happy 50",
+      "response_text": "You're my hero, ma'am. I want to be just like you when I grow up.",
+      "index": "1"
+    },
+    {
+      "topic": "MegKidsAboutCaretaker",
+      "topic_text": "Who takes care of you?",
+      "emotion": "Neutral 50",
+      "response_text": "Well, Billy used to. Before he... before he died. I don't know now. Maybe I'll see if Manya will help me...",
+      "index": "7"
+    },
+    {
+      "topic": "MegKidsAboutMegaton",
+      "topic_text": "What do you think of Megaton?",
+      "emotion": "Neutral 50",
+      "response_text": "It's okay, I guess. I used to live way far away when I was little... before Billy found me.",
+      "index": "10"
+    },
+    {
+      "topic": "MegKidsAboutPeople",
+      "topic_text": "Who else is around town?",
+      "emotion": "Neutral 50",
+      "response_text": "I don't talk to most of them. Billy says that I have to be careful, even when people seem nice. And I'm especially not allowed to talk to Mr. Jericho.",
+      "index": "11"
+    },
+    {
+      "topic": "MegMaggieConbination",
+      "topic_text": "Do you know any good secrets?",
+      "emotion": "Happy 50",
+      "response_text": "Well... Billy built a safe into the floor of our house. He keeps all sorts of cool stuff in there.",
+      "index": "14"
+    },
+    {
+      "topic": "MegTownEnd",
+      "topic_text": "That's all I needed to know.",
+      "emotion": "Neutral 50",
+      "response_text": "Right.",
+      "index": "17"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "I have to go now.",
+      "emotion": "Neutral 50",
+      "response_text": "Bye, mister!",
+      "index": "18"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Neutral 50",
+      "response_text": "Billy says not to talk to you.",
+      "index": "22"
+    },
+    {
+      "topic": "MegatonHelloResponse",
+      "topic_text": "MegatonHelloResponse",
+      "emotion": "Neutral 50",
+      "response_text": "Billy says I shouldn't be talking to you.",
+      "index": "30"
+    },
+    {
+      "topic": "MegatonTalk1",
+      "topic_text": "MegatonTalk",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah, Billy?",
+      "index": "31"
+    },
+    {
+      "topic": "MegatonTalk2",
+      "topic_text": "MegatonTalk2",
+      "emotion": "Neutral 50",
+      "response_text": "You said we could have that talk sometime. You know. About boys. I'm ready! I'm ready now! There's some stuff I need to know. Like, really bad.",
+      "index": "33"
+    },
+    {
+      "topic": "MegatonTalk3",
+      "topic_text": "MegatonTalk3",
+      "emotion": "Neutral 50",
+      "response_text": "Oh, yes! Please, please, please! Can we Billy? We could have so much fun. More fun than we could in Megaton, that's for sure!",
+      "index": "35"
+    },
+    {
+      "topic": "MegatonTalk4",
+      "topic_text": "MegatonTalk4",
+      "emotion": "Neutral 50",
+      "response_text": "*Sigh* All right, Billy. But you can't avoid the subject forever, you know...",
+      "index": "37"
+    }
+  ],
+  "combat": [
+    {
+      "topic": "Attack",
+      "topic_text": "Attack",
+      "emotion": "Neutral 50",
+      "response_text": "Billy!{Crying for help.}",
+      "index": "39"
+    }
+  ]
+}

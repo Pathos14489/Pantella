@@ -1,0 +1,222 @@
+{
+  "name": "Sweetie",
+  "url": "/wiki/Sweetie",
+  "dialogue_name": "WestsideSweetie.txt",
+  "dialogue_url": "/wiki/WestsideSweetie.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000F6251",
+  "ref_id": "000F6256",
+  "editor_id": "WestsideSweetie",
+  "location": "Casa Madrid Apartments",
+  "location_url": "/wiki/Casa_Madrid_Apartments",
+  "descriptions": [
+    "Sweetie is a bisexual female prostitute working for Pretty Sarah at the Casa Madrid Apartments in Fallout: New Vegas.",
+    "The most attractive woman in Westside and a house favorite at the Casa,",
+    "She is a smart woman perfectly aware of who she is, and approaches her work like any other job. Her clients can count on discretion, though privacy a good like any other. With the right amount of caps, she'll share secrets,",
+    "Beyond a business mindset, she can also show biting wit.",
+    "As Sweetie takes both male and female clients, her homophobic co-worker, Maude, considers her a pervert",
+    "Cost: 300 caps"
+  ],
+  "race": "Human",
+  "gender": "Female",
+  "affiliation": "Omertas(formerly)WestsidePretty Sarah",
+  "role": "Prostitute",
+  "detailed_location": "Casa Madrid Apartments,Westside",
+  "voice_actor": "Debra Wilson",
+  "special": {
+    "Strength": 4,
+    "Perception": 6,
+    "Endurance": 6,
+    "Charisma": 9,
+    "Intelligence": 3,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "level": "5",
+  "tag_skills": [
+    {
+      "Barter:": "58"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "90"
+    }
+  ],
+  "karma": "Neutral",
+  "voice_type": "FemaleAdult10",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "{Player in combat}Look out!",
+      "index": "1"
+    },
+    {
+      "topic": "VFreeformCasaMadridWestsideSweetieTopic000",
+      "topic_text": "You work for Pretty Sarah?",
+      "emotion": "Neutral 50",
+      "response_text": "I bring in the customers, and she makes sure no one gets rough. Sarah's good people. Good enough, anyway.",
+      "index": "6"
+    },
+    {
+      "topic": "VFreeformCasaMadridWestsideSweetieTopic001",
+      "topic_text": "Tell me about yourself.",
+      "emotion": "Neutral 50",
+      "response_text": "I'm called Sweetie because I'm the sweetest piece you'll find anywhere outside of the Strip. I could work in those casinos if I wanted.",
+      "index": "7"
+    },
+    {
+      "topic": "VFreeformCasaMadridWestsideSweetieTopic002",
+      "topic_text": "Wouldn't you make more money working on the Strip?",
+      "emotion": "Neutral 50",
+      "response_text": "I got my start at the Gomorrah, good money, but I saw how those Omertas hook girls on free Jet or Med-X - then start charging.",
+      "index": "8"
+    },
+    {
+      "topic": "VFreeformCasaMadridWestsideSweetieTopic003",
+      "topic_text": "How much does it cost to hire you?",
+      "emotion": "Neutral 50",
+      "response_text": "It's worth every cap, baby. I'll do things to you you didn't think was possible, and leave you feeling like everything's right in the world.",
+      "index": "10"
+    },
+    {
+      "topic": "VFreeformCasaMadridWestsideSweetieTopic004",
+      "topic_text": "<300 caps> Here's your money.",
+      "emotion": "Neutral 50",
+      "response_text": "Get ready, honey. I'm going to make it good for you.",
+      "index": "13"
+    },
+    {
+      "topic": "VFreeformCasaMadridWestsideSweetieTopic005",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "You know you'll be back.",
+      "index": "17"
+    },
+    {
+      "topic": "VFreeformCasaMadridWestsideSweetieTopic006",
+      "topic_text": "<300 caps needed> I don't have enough on me right now...",
+      "emotion": "Neutral 50",
+      "response_text": "Then I guess you won't be getting on me, either. Improve your prospects and come back, sugar. I'll be waiting.",
+      "index": "18"
+    },
+    {
+      "topic": "VFreeformCasaMadridWestsideSweetieTopic007",
+      "topic_text": "Never mind.",
+      "emotion": "Neutral 50",
+      "response_text": "Keep telling yourself that, sugar. You'll be back.",
+      "index": "19"
+    },
+    {
+      "topic": "VFreeformCasaMadridWestsideSweetieTopic008",
+      "topic_text": "Does Saint James pay you for anything \"unusual\"?",
+      "emotion": "Neutral 50",
+      "response_text": "A client's got a right to privacy. So it'll cost 200 caps for me to tell you all about it.",
+      "index": "20"
+    },
+    {
+      "topic": "VFreeformCasaMadridWestsideSweetieTopic009< Barter 30 >",
+      "topic_text": "Let's say 100 caps. Or you could earn zero keeping your mouth shut.",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED]{mischievous}Funny how I make caps every time I open my mouth.",
+      "index": "22"
+    },
+    {
+      "topic": "VFreeformCasaMadridWestsideSweetieTopic010All right. 200 caps it is.",
+      "topic_text": "All right. 200 caps it is.",
+      "emotion": "Neutral 50",
+      "response_text": "Saint James has problems, that's for sure. Never wants me to say a thing, or for me to move around, either.",
+      "index": "27"
+    },
+    {
+      "topic": "VFreeformCasaMadridWestsideSweetieTopic011",
+      "topic_text": "I don't have 200 caps.",
+      "emotion": "Neutral 50",
+      "response_text": "Then I guess there's no need for us to keep talking, honey. Sorry.{pitying}",
+      "index": "30"
+    },
+    {
+      "topic": "VFreeformCasaMadridWestsideSweetieTopic012",
+      "topic_text": "No thanks.",
+      "emotion": "Neutral 50",
+      "response_text": "Fine by me. You the one missing out on exciting details.",
+      "index": "31"
+    },
+    {
+      "topic": "VFreeformCasaMadridWestsideSweetieTopic015",
+      "topic_text": "Do you know Saint James?",
+      "emotion": "Neutral 50",
+      "response_text": "Sure do. Saint James is my number one customer. He's a prospector who pays Marco to stay here at the Casa week to week.",
+      "index": "32"
+    },
+    {
+      "topic": "VFreeformCasaMadridWestsideSweetieTopic016",
+      "topic_text": "Any chance you could help me get into Saint James' room?",
+      "emotion": "Neutral 50",
+      "response_text": "{Saint James dead}Since he's dead, I don't think he'll mind. Here.",
+      "index": "34"
+    },
+    {
+      "topic": "VFreeformCasaMadridWestsideSweetieTopic017",
+      "topic_text": "I'll pay you for the key.",
+      "emotion": "Neutral 50",
+      "response_text": "We can come to a deal. My price is firm, though - Saint James is a good customer and it better be worth it if I'm going to lose him.",
+      "index": "37"
+    },
+    {
+      "topic": "VFreeformCasaMadridWestsideSweetieTopic018",
+      "topic_text": "{Cherchez La Femme}We girls need to stick together, and this'll be our secret.",
+      "emotion": "Neutral 50",
+      "response_text": "I could never resist a woman like you. Here, take the key, but don't tell anyone where you go it.",
+      "index": "38"
+    },
+    {
+      "topic": "VFreeformCasaMadridWestsideSweetieTopic019",
+      "topic_text": "{Lady Killer}You'd say no to a guy like me? And here I thought you were special...",
+      "emotion": "Happy 25",
+      "response_text": "{playful}Oh, don't you dare play that game with me. Fine, here's the key since it's so important to you. Just don't say where you got it.",
+      "index": "39"
+    },
+    {
+      "topic": "VFreeformCasaMadridWestsideSweetieTopic020",
+      "topic_text": "Forget I said anything.",
+      "emotion": "Happy 50",
+      "response_text": "{cheerful, forgiving}Already forgotten!",
+      "index": "40"
+    },
+    {
+      "topic": "VFreeformCasaMadridWestsideSweetieTopic021",
+      "topic_text": "<250 caps> This should be enough.",
+      "emotion": "Neutral 50",
+      "response_text": "And here's your key.",
+      "index": "41"
+    },
+    {
+      "topic": "VFreeformCasaMadridWestsideSweetieTopic022",
+      "topic_text": "<250 caps needed>I can't meet your price right now.",
+      "emotion": "Neutral 50",
+      "response_text": "Too bad. No caps, no key.",
+      "index": "42"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "You know you'll be back.",
+      "index": "43"
+    }
+  ],
+  "combat": []
+}

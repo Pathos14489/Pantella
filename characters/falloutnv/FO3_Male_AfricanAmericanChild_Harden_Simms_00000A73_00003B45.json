@@ -1,0 +1,147 @@
+{
+  "name": "Harden Simms",
+  "url": "/wiki/Harden_Simms",
+  "dialogue_name": "HardenSimms.txt",
+  "dialogue_url": "/wiki/HardenSimms.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": true,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "00000A73",
+  "ref_id": "00003B45",
+  "editor_id": "HardenSimms",
+  "location": "Megaton,Lucas Simms' house",
+  "location_url": "/wiki/Megaton",
+  "descriptions": [
+    "Harden Simms is an inhabitant of Megaton in 2277.",
+    "Harden was born in 2267. He is Lucas Simms' 10-year-old son. His father has instructed him not to talk to strangers in Megaton, and he reluctantly obeys. He goes to sleep early and rises early, which gives him enough time to meet up with Maggie and play.",
+    "By 2297, Harden is the sheriff of Megaton. When drunk, he often speaks about his father's death, and blames it on the Lone Wanderer.",
+    "He is a good friend of Maggie and is usually seen near her in the mid-morning to late afternoon. It is implied by his father, Lucas Simms, that Harden also polishes Deputy Steel on a regular basis, but this is idle chatter as the child is not scripted to enter the Megaton armory.",
+    "According to the Fallout 3 Official Game Guide, Harden's father named him after the real-life Old West outlaw John Wesley Hardin."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Megaton",
+  "role": "Megaton resident",
+  "detailed_location": "Lucas Simms' house(Megaton)",
+  "voice_actor": "Sean McCoy",
+  "special": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 4,
+    "Intelligence": 4,
+    "Agility": 6,
+    "Luck": 4
+  },
+  "level": "1",
+  "tag_skills": [
+    {
+      "Barter:": "27"
+    },
+    {
+      "Small Guns:": "31"
+    },
+    {
+      "Unarmed:": "27"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Good",
+  "voice_type": "MaleChild01DC",
+  "geck_race": "AfricanAmericanChild",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Surprise 100",
+      "response_text": "You did it! You disarmed that thing!{excited}",
+      "index": "1"
+    },
+    {
+      "topic": "MegKidsAboutCaretaker",
+      "topic_text": "Who takes care of you?",
+      "emotion": "Neutral 50",
+      "response_text": "My dad, of course. He teaches me to shoot, and about the law, and keeping people safe. When he's not busy protecting the town, that is.",
+      "index": "11"
+    },
+    {
+      "topic": "MegKidsAboutMegaton",
+      "topic_text": "What do you think of Megaton?",
+      "emotion": "Sad 50",
+      "response_text": "I dunno... I used to like it, but ever since dad... I dunno...{He misses his dead father.}",
+      "index": "13"
+    },
+    {
+      "topic": "MegKidsAboutPeople",
+      "topic_text": "Who else is around town?",
+      "emotion": "Neutral 50",
+      "response_text": "There's the Stahls. They run the Brass Lantern. I go there to eat with my dad sometimes. Doc Church runs the clinic.",
+      "index": "15"
+    },
+    {
+      "topic": "MegTownEnd",
+      "topic_text": "That's all I needed to know.",
+      "emotion": "Neutral 50",
+      "response_text": "Right.",
+      "index": "18"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "I have to go now.",
+      "emotion": "Neutral 50",
+      "response_text": "Sorry!",
+      "index": "19"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Neutral 50",
+      "response_text": "You might wear his badge, but you're not my dad.",
+      "index": "22"
+    },
+    {
+      "topic": "MegatonTalk1",
+      "topic_text": "MegatonTalk",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah, dad?",
+      "index": "31"
+    },
+    {
+      "topic": "MegatonTalk2",
+      "topic_text": "MegatonTalk2",
+      "emotion": "Neutral 50",
+      "response_text": "You said we could take that trip. Up north, you know? To see one of the old towns? Come on, dad, you promised....",
+      "index": "33"
+    },
+    {
+      "topic": "MegatonTalk3",
+      "topic_text": "MegatonTalk3",
+      "emotion": "Neutral 50",
+      "response_text": "I just... You know. Wanted to help out.",
+      "index": "35"
+    },
+    {
+      "topic": "MegatonTalk4",
+      "topic_text": "MegatonTalk4",
+      "emotion": "Neutral 50",
+      "response_text": "Okay, dad. But I'm going to hold you to it, this time.",
+      "index": "37"
+    }
+  ],
+  "combat": [
+    {
+      "topic": "Hit",
+      "topic_text": "Hit",
+      "emotion": "Neutral 50",
+      "response_text": "Dad!",
+      "index": "39"
+    }
+  ]
+}

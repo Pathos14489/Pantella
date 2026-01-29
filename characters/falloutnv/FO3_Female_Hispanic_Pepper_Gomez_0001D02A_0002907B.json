@@ -1,0 +1,115 @@
+{
+  "name": "Pepper Gomez",
+  "url": "/wiki/Pepper_Gomez",
+  "dialogue_name": "PepperGomez.txt",
+  "dialogue_url": "/wiki/PepperGomez.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "0001D02A",
+  "ref_id": "0002907B",
+  "editor_id": "PepperGomez",
+  "location": "",
+  "location_url": null,
+  "descriptions": [
+    "Pepper Gomez is a Vault 101 resident in the year 2277.",
+    "She is the wife of Officer Herman Gomez and the mother of Freddie Gomez.",
+    "Pepper has raised Freddie in the vault by herself nearly his entire life. She is a good mother and cares for Freddie, but feels helpless when confronted with his behavior. It's obvious to everyone that Butch and the Tunnel Snakes have far more influence over Freddie, and Pepper is at the end of her rope.",
+    "Trouble on the Homefront: She is encountered in the living quarters during the Lone Wanderer's visit.",
+    "Should the Lone Wanderer choose to destroy the vault in Trouble on the Homefront, she may be discovered dead outside.",
+    "Unlike her husband, she has a hostile attitude towards the Lone Wanderer."
+  ],
+  "race": "Human",
+  "gender": "Female",
+  "affiliation": "Vault 101",
+  "role": "WifeMother",
+  "detailed_location": "Vault 101",
+  "voice_actor": "Jan Johns",
+  "special": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 5,
+    "Intelligence": 5,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "level": "1",
+  "misc_skills": [],
+  "karma": "Good",
+  "voice_type": "FemaleAdult04DC",
+  "geck_race": "Hispanic",
+  "topics": [
+    {
+      "topic": "CGTransitionTopic",
+      "topic_text": "CGTransitionTopic",
+      "emotion": "Neutral 50",
+      "response_text": "Oh my God. Please, doctor. Please! I know you have stuff here. Drugs! You have to fix this! My God, I can't be pregnant…Play soundFo3 PepperGomez OhMyGod.ogghttps://fallout.fandom.com/wiki/File:Fo3_PepperGomez_OhMyGod.oggnoicon",
+      "index": "1"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Fear 50",
+      "response_text": "Can't you just leave us alone?Play soundFO3 PepperGomez LeaveUsAlone.ogghttps://fallout.fandom.com/wiki/File:FO3_PepperGomez_LeaveUsAlone.oggnoicon",
+      "index": "2"
+    },
+    {
+      "topic": "MS16GeneralAboutRebels",
+      "topic_text": "Tell me about the rebels.",
+      "emotion": "Disgust 50",
+      "response_text": "Those kids are risking our entire Vault, just because they're bored. It's horrible!Play soundFO3 PepperGomez RiskingOurVault.ogghttps://fallout.fandom.com/wiki/File:FO3_PepperGomez_RiskingOurVault.oggnoicon",
+      "index": "3"
+    },
+    {
+      "topic": "MS16GeneralNightQuestion",
+      "topic_text": "What happened down here?",
+      "emotion": "Anger 50",
+      "response_text": "The bugs were horrible, but my family was pretty lucky. But then my Freddie went and got caught up with those idiot rebels!Play soundFo3 PepperGomez BugsWereHorrible…https://fallout.fandom.com/wiki/File:Fo3_PepperGomez_BugsWereHorrible.oggnoicon",
+      "index": "4"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "I have to go now.",
+      "emotion": "Fear 25",
+      "response_text": "Well, just be careful, okay?Play soundFO3 PepperGomez JustBeCareful.ogghttps://fallout.fandom.com/wiki/File:FO3_PepperGomez_JustBeCareful.oggnoicon",
+      "index": "5"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Happy 10",
+      "response_text": "Stanley, how's everything going downstairs?Play soundFO3 PepperGomez HowsEverythingGo…https://fallout.fandom.com/wiki/File:FO3_PepperGomez_HowsEverythingGoing.oggnoicon",
+      "index": "7"
+    },
+    {
+      "topic": "MS16NorthEast1",
+      "topic_text": "MS16NorthEast1",
+      "emotion": "Fear 50",
+      "response_text": "I hope so, dear. I really do.Play soundFO3 PepperGomez IHopeSo.ogghttps://fallout.fandom.com/wiki/File:FO3_PepperGomez_IHopeSo.oggnoicon",
+      "index": "9"
+    },
+    {
+      "topic": "MS16NorthEast2",
+      "topic_text": "MS16NorthEast2",
+      "emotion": "Happy 25",
+      "response_text": "All right, then.Play soundFO3 PepperGomez AllRightThen.ogghttps://fallout.fandom.com/wiki/File:FO3_PepperGomez_AllRightThen.oggnoicon",
+      "index": "11"
+    },
+    {
+      "topic": "MS16SecurityCheck",
+      "topic_text": "MS16SecurityCheck",
+      "emotion": "Sad 25",
+      "response_text": "Yes, of course.{Dispirited}Play soundFO3 PepperGomez YesOfCourse.ogghttps://fallout.fandom.com/wiki/File:FO3_PepperGomez_YesOfCourse.oggnoicon",
+      "index": "13"
+    }
+  ],
+  "combat": []
+}

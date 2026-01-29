@@ -1,0 +1,107 @@
+{
+  "name": "Ethel Phebus",
+  "url": "/wiki/Ethel_Phebus",
+  "dialogue_name": "EthelPhebus.txt",
+  "dialogue_url": "/wiki/EthelPhebus.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "0011EB5B",
+  "ref_id": "0011EB8E",
+  "editor_id": "EthelPhebus",
+  "location": "Outside theUltra-Luxe",
+  "location_url": "/wiki/Ultra-Luxe",
+  "descriptions": [
+    "Ethel Phebus is the wife of Walter Phebus visiting New Vegas in 2281. She can be found on the Strip in front of the Las Vegas Boulevard Station.",
+    "Ethel lives back west on a small ranch with her husband Walter. Despite her husband's belief of what Heck Gunderson has been doing to all brahmin ranchers, Ethel comments on how she thinks her husband should just let it be and go back home."
+  ],
+  "race": "Human",
+  "gender": "Female",
+  "affiliation": "Walter Phebus",
+  "role": "Wife",
+  "detailed_location": "New Vegas Stripoutside the LVB station",
+  "voice_actor": "Marianne Muellerleile",
+  "special": {
+    "Strength": 4,
+    "Perception": 7,
+    "Endurance": 4,
+    "Charisma": 7,
+    "Intelligence": 5,
+    "Agility": 4,
+    "Luck": 5
+  },
+  "level": "2",
+  "tag_skills": [
+    {
+      "Barter:": "34"
+    },
+    {
+      "Melee Weap.:": "36"
+    },
+    {
+      "Speech:": "35"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Good",
+  "voice_type": "FemaleOld01",
+  "geck_race": "CaucasianOld",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "If you don't mind, I have to look after my husband...",
+      "index": "1"
+    },
+    {
+      "topic": "VMS25EthelPhebusTopic001",
+      "topic_text": "{Placeholder for player topics}",
+      "emotion": "Neutral 50",
+      "response_text": "He's got his reasons. And when that man gets a notion stuck in his head, he's like a Bighorner bull that's seen red.",
+      "index": "6"
+    },
+    {
+      "topic": "VMS25EthelPhebusTopic002",
+      "topic_text": "{Placeholder for player topics}",
+      "emotion": "Neutral 50",
+      "response_text": "Oh, a good ways west of here, in a place you've never been. Far as we concerned, only name it ever had was \"Phebus Ranch.\"",
+      "index": "9"
+    },
+    {
+      "topic": "VMS25EthelPhebusTopic003",
+      "topic_text": "{Placeholder for player topics}",
+      "emotion": "Neutral 50",
+      "response_text": "If that's what you want to talk about, go see Walter. He'll talk your ear off.",
+      "index": "11"
+    },
+    {
+      "topic": "VMS25EthelPhebusTopic004",
+      "topic_text": "{Placeholder for player topics}",
+      "emotion": "Neutral 50",
+      "response_text": "A good life if you don't mind hard work. The only real fuss is the constant bother with varmints.",
+      "index": "14"
+    },
+    {
+      "topic": "VMS25EthelPhebusTopic005",
+      "topic_text": "{Placeholder for player topics}",
+      "emotion": "Neutral 50",
+      "response_text": "All right, goodbye.",
+      "index": "18"
+    },
+    {
+      "topic": "VMS25EthelPhebusTopic031",
+      "topic_text": "{Placeholder for player topics}",
+      "emotion": "Neutral 50",
+      "response_text": "I don't suppose you have the magic powers necessary to bring my husband to his senses, do you?",
+      "index": "21"
+    }
+  ],
+  "conversation": [],
+  "combat": []
+}

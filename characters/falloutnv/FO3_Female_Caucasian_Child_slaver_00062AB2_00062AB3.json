@@ -1,0 +1,108 @@
+{
+  "name": "Child slaver",
+  "url": "/wiki/Child_slaver",
+  "dialogue_name": "LLSlaver.txt",
+  "dialogue_url": "/wiki/LLSlaver.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "00062AB2",
+  "ref_id": "00062AB3",
+  "editor_id": "LLSlaver",
+  "location": "OutsideLittle Lamplight",
+  "location_url": "/wiki/Little_Lamplight",
+  "descriptions": [
+    "Child slaver is a slaver appearing during the unmarked quest The Kid-Kidnapper outside Little Lamplight, to kidnap Bumble in Fallout 3.",
+    "One of the most capable slavers in Eulogy Jones' employ, she specializes in manipulating and abducting children - a particularly horrific character, even among the slavers of Paradise Falls. Evidently, she specializes in the enslavement of children and is shown to be adept at exploiting their naivety. When attempting to secure victims, she uses a facade consisting of a soft tone of voice and friendly behavior. For example, when talking to Bumble, she tells her that she is going on the \"adventure express.\"",
+    "Where other slavers rule and dominate through violence and fear, she feigns friendship and interest to gain the child's trust, and manipulates them accordingly. In six-year-old Bumble's case, it means complimenting and convincing her that she is going on an adventure with her, rather than to a life of slavery. Even the explosive slave collar is passed off as a \"friendship necklace\" that will ensure she never gets lost.",
+    "The child slaver is waiting outside the Lamplight caverns only during the unmarked quest The Kid-Kidnapper.",
+    "Xbox 360 During the quest Those!, you have an option to enslave Bryan Wilks. After getting the okay from Eulogy Jones, the child slaver will reappear at Little Lamplight if you have already completed The Kid-Kidnapper quest."
+  ],
+  "race": "Human",
+  "gender": "Female",
+  "affiliation": "Slavers",
+  "role": "Slaver",
+  "detailed_location": "Little Lamplight",
+  "voice_actor": "Shari Elliker",
+  "special": {
+    "Strength": 6,
+    "Perception": 4,
+    "Endurance": 4,
+    "Charisma": 6,
+    "Intelligence": 4,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "level": "1",
+  "tag_skills": [
+    {
+      "Barter:": "32"
+    },
+    {
+      "Melee Weap.:": "32"
+    },
+    {
+      "Small Guns:": "32"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "25"
+    }
+  ],
+  "karma": "Evil",
+  "voice_type": "FemaleAdult01DefaultDC",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Happy 50",
+      "response_text": "Nice as the weather is out here, how about you bring me a kid, so I can get back to Paradise Falls?",
+      "index": "1"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Happy 50",
+      "response_text": "Why, hello little girl. What a lovely dress you have!{Creepy and sleazy}",
+      "index": "3"
+    },
+    {
+      "topic": "LLSlaverBumble1B",
+      "topic_text": "LLSlaverBumble1B",
+      "emotion": "Happy 50",
+      "response_text": "You bet we are! Are you ready to go on the adventure express?{Friendly, in a creepy way}",
+      "index": "5"
+    },
+    {
+      "topic": "LLSlaverBumble2",
+      "topic_text": "LLSlaverBumble2",
+      "emotion": "Happy 50",
+      "response_text": "Absolutely! In fact, I want you to have this friendship necklace. It's good luck - wear it and you'll never get lost!{Friendly, in a creepy way}",
+      "index": "6"
+    },
+    {
+      "topic": "LLSlaverBumble4",
+      "topic_text": "LLSlaverBumble",
+      "emotion": "Happy 50",
+      "response_text": "Don't fuss, my little girl. You'll get used to it.{Friendly, in a creepy way}",
+      "index": "7"
+    },
+    {
+      "topic": "LLSlaverBumble6",
+      "topic_text": "LLSlaverBumble6",
+      "emotion": "Happy 50",
+      "response_text": "I'm sure she'll be so proud of you! Now, we've got a big day ahead of us, so let's get going!{Friendly, in a creepy way}",
+      "index": "8"
+    }
+  ],
+  "combat": []
+}

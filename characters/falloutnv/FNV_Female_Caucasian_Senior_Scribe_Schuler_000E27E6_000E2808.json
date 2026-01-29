@@ -1,0 +1,206 @@
+{
+  "name": "Senior Scribe Schuler",
+  "url": "/wiki/Linda_Schuler",
+  "dialogue_name": "LindaSchuler.txt",
+  "dialogue_url": "/wiki/LindaSchuler.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": true,
+  "is_merchant": true,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000E27E6",
+  "ref_id": "000E2808",
+  "editor_id": "LindaSchuler",
+  "location": "Hidden Valley bunker",
+  "location_url": "/wiki/Hidden_Valley_bunker",
+  "descriptions": [
+    "Senior Scribe Linda Schuler is a member of the Mojave Brotherhood of Steel living in the Hidden Valley bunker in 2281.",
+    "Linda Schuler is the medical officer at the Hidden Valley bunker."
+  ],
+  "race": "Human",
+  "gender": "Female",
+  "affiliation": "Mojave Brotherhood of Steel",
+  "role": "Doctor",
+  "detailed_location": "Hidden Valley bunkerHELIOS One(formerly)",
+  "voice_actor": "Zoë Bell",
+  "special": {
+    "Strength": 8,
+    "Perception": 7,
+    "Endurance": 8,
+    "Charisma": 4,
+    "Intelligence": 3,
+    "Agility": 6,
+    "Luck": 4
+  },
+  "level": "11",
+  "tag_skills": [
+    {
+      "Energy Weap.:": "69"
+    },
+    {
+      "Explosives:": "69"
+    },
+    {
+      "Guns:": "67"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Good",
+  "voice_type": "FemaleAdult06",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "DoctorAddiction",
+      "topic_text": "I think I might be addicted to something.",
+      "emotion": "Neutral 50",
+      "response_text": "I can't say that's something I treat all the time, but I should have something to help you through it.",
+      "index": "1"
+    },
+    {
+      "topic": "DoctorAddictionNO",
+      "topic_text": "I think I'll tough it out.",
+      "emotion": "Neutral 50",
+      "response_text": "You're making a mistake, but that's just my opinion. What do I know, after all? I've only studied medicine my entire life.",
+      "index": "2"
+    },
+    {
+      "topic": "DoctorAddictionYESYes, cure me.",
+      "topic_text": "Yes, cure me. Here's 50 caps.",
+      "emotion": "Neutral 50",
+      "response_text": "There, that's got it. Do be so eager to sample dangerous substances in the future, okay?",
+      "index": "3"
+    },
+    {
+      "topic": "DoctorMedical",
+      "topic_text": "I'm hurt. I need help, Doc.",
+      "emotion": "Surprise 50",
+      "response_text": "This? This is nothing. You should see some of the wounds I've seen paladins come back with.",
+      "index": "5"
+    },
+    {
+      "topic": "DoctorMedical33YESAll right, here's your money.",
+      "topic_text": "Okay, fix me. Here's 100 caps.",
+      "emotion": "Neutral 50",
+      "response_text": "This might take a while. Close your eyes and try to relax, and we'll begin.",
+      "index": "9"
+    },
+    {
+      "topic": "DoctorMedical66YESHere's your money.",
+      "topic_text": "Okay, fix me. Here's 75 caps.",
+      "emotion": "Neutral 50",
+      "response_text": "This shouldn't take too long. Just close your eyes and relax.",
+      "index": "11"
+    },
+    {
+      "topic": "DoctorMedical99YESAll right, fix me.",
+      "topic_text": "Okay, fix me. Here's 50 caps.",
+      "emotion": "Neutral 50",
+      "response_text": "This shouldn't take too long. Just close your eyes and try to relax.",
+      "index": "13"
+    },
+    {
+      "topic": "DoctorMedicalNO",
+      "topic_text": "On second thought, I'll be fine.",
+      "emotion": "Neutral 50",
+      "response_text": "Not my clinical opinion, but so be it.",
+      "index": "15"
+    },
+    {
+      "topic": "DoctorRadiation",
+      "topic_text": "Can you heal my radiation?",
+      "emotion": "Neutral 50",
+      "response_text": "We always make sure to keep an ample supply of Rad-Away. Most of us haven't had the exposure outsiders like you take for granted.",
+      "index": "16"
+    },
+    {
+      "topic": "DoctorRadiationNO",
+      "topic_text": "No, thanks.",
+      "emotion": "Neutral 50",
+      "response_text": "Suit yourself. I'm sure there are ghouls and other mutants who once said the same thing.",
+      "index": "17"
+    },
+    {
+      "topic": "DoctorRadiationYESDo it.",
+      "topic_text": "Here's your 100 caps. Do it.",
+      "emotion": "Neutral 50",
+      "response_text": "Here we go. You'll be rad-free in no time.",
+      "index": "18"
+    },
+    {
+      "topic": "DoctorSupplies",
+      "topic_text": "I need medical supplies.",
+      "emotion": "Neutral 50",
+      "response_text": "I suppose I have a few things around that I can spare.",
+      "index": "20"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "I heard we have you to thank for McNamara having a change of heart. Thank you. So what can I do for you?",
+      "index": "21"
+    },
+    {
+      "topic": "VDialogueHiddenValleyLindaSchulerTopic000",
+      "topic_text": "So you're a doctor?",
+      "emotion": "Neutral 50",
+      "response_text": "Yes, I handle all medical needs in the bunker. If you're ever wounded, I can treat you, for a fee.",
+      "index": "26"
+    },
+    {
+      "topic": "VDialogueHiddenValleyLindaSchulerTopic008",
+      "topic_text": "What services can you perform?",
+      "emotion": "Neutral 50",
+      "response_text": "We have equipment here to treat most physical injuries - lacerations, broken bones, that sort of thing. We also carry a full supply of antitoxins.",
+      "index": "28"
+    },
+    {
+      "topic": "VDialogueHiddenValleyLindaSchulerTopic009",
+      "topic_text": "You mentioned other duties you had?",
+      "emotion": "Neutral 50",
+      "response_text": "I'm this bunker's Head Scribe in everything but name. I supervise the research teams. I collate the reports. I attend the meetings.",
+      "index": "31"
+    },
+    {
+      "topic": "VDialogueHiddenValleyLindaSchulerTopic010",
+      "topic_text": "Let's talk about something else.",
+      "emotion": "Neutral 50",
+      "response_text": "If you wish.",
+      "index": "34"
+    },
+    {
+      "topic": "VDialogueHiddenValleyLindaSchulerTopic011",
+      "topic_text": "Why not tell on him?",
+      "emotion": "Neutral 50",
+      "response_text": "Oh, I tried. The elder listened patiently to my carefully constructed argument regarding why that buffoon should lose his position.",
+      "index": "35"
+    },
+    {
+      "topic": "VDialogueHiddenValleyLindaSchulerTopic012",
+      "topic_text": "Was Initiate Watkins the \"pet\" you were referring to earlier?",
+      "emotion": "Neutral 50",
+      "response_text": "She's cute, isn't she? Like a puppy, almost. Unfortunately, our Head Scribe's intentions toward her aren't quite so innocent.",
+      "index": "38"
+    },
+    {
+      "topic": "VDialogueHiddenValleyLindaSchulerTopic013",
+      "topic_text": "You really don't like Taggart, do you?",
+      "emotion": "Neutral 50",
+      "response_text": "I don't appreciate how much harder I have to work to cover for his tendency to focus on his personal projects.",
+      "index": "39"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "HVSchulerVeronica",
+      "topic_text": "HVSchulerVeronica",
+      "emotion": "Neutral 50",
+      "response_text": "Quite well. Thank you for asking, Veronica.",
+      "index": "41"
+    }
+  ],
+  "combat": []
+}

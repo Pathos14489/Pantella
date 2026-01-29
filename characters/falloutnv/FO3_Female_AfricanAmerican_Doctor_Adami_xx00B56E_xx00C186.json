@@ -1,0 +1,72 @@
+{
+  "name": "Doctor Adami",
+  "url": "/wiki/Adrienn_Adami",
+  "dialogue_name": "DLC02FF007Doctor.txt",
+  "dialogue_url": "/wiki/DLC02FF007Doctor.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": true,
+  "can_be_enslaved": false,
+  "is_doctor": true,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "xx00B56E",
+  "ref_id": "xx00C186",
+  "editor_id": "DLC02FF007Doctor",
+  "location": "U.S. Army field headquarters",
+  "location_url": "/wiki/U.S._Army_field_headquarters",
+  "descriptions": [
+    "Doctor Adrienn Adami is an United States Army physician found at Gen. Chase's field headquarters in the Anchorage Reclamation simulation in the Fallout 3 add-on Operation: Anchorage.",
+    "The simulated head of General Chase's medical staff posted to the Anchorage forward bay, Doctor Adami is an experienced physician dealing with an overwhelming amount of work. She's glad to see soldiers return for treatment, as long as they do it on their own power, rather than in a body bag.",
+    "The violent final stage of the Battle of Anchorage and its casualties aren't the principal source of her worries. It's the deployment of Psycho, an experimental combat drug developed by Chase's R&D company. While she believes that the infantrymen should have all possible advantages in the fight, agreeing with Chase, she is aware that the drug has only completed early clinical trials and the side effects, while limited, include addiction, early onset dementia, and psychosis. She violates her Hippocratic Oath by issuing chem rations, as per Chase's orders, but doesn't like it.",
+    "It's unknown whether the real Adrienn Adami was as compliant as her simulated persona: The simulation has discrepancies, and her records implicated Chase in the Psycho drugging scandal.",
+    "When first approached by the player, she provides 5 Psycho.",
+    "Doctor Adrienn Adami appears only in a simulation in the Fallout 3 add-on Operation: Anchorage."
+  ],
+  "race": "Human",
+  "gender": "Female",
+  "affiliation": "U.S. Army",
+  "role": "Doctor",
+  "detailed_location": "Anchorage Reclamation simulationU.S. Army field headquarters",
+  "special": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 10,
+    "Intelligence": 5,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "level": "10",
+  "misc_skills": [],
+  "karma": "Neutral",
+  "voice_type": "DLC02FemaleGeneric1",
+  "geck_race": "AfricanAmerican",
+  "topics": [
+    {
+      "topic": "DLC02FF007DoctorDone",
+      "topic_text": "DLC02FF007DoctorDone",
+      "emotion": "Neutral 50",
+      "response_text": "There we go. Stay safe out there, okay?{doctor encourage a healed patient to get back into the fight}",
+      "index": "1"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "Congratulations on making it to the HQ. It's pretty fierce out there. Here's your chem ration. I'm doctor Adami. Come see me if you need patching up.{treating a patient in a hospital ward}",
+      "index": "4"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Neutral 50",
+      "response_text": "You hurt?{doctor to patient who wandered in}",
+      "index": "8"
+    }
+  ],
+  "combat": []
+}

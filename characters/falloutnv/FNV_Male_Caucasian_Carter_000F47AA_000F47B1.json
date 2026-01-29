@@ -1,0 +1,116 @@
+{
+  "name": "Carter",
+  "url": "/wiki/Carter_(corpse)",
+  "dialogue_name": "",
+  "dialogue_url": null,
+  "spawned_dead": true,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000F47AA",
+  "ref_id": "000F47B1",
+  "editor_id": "Vault3Prisoner04",
+  "location": "Vault 3 living quarters",
+  "location_url": "/wiki/Vault_3#Living_quarters",
+  "descriptions": [
+    "Carter is a Powder Ganger in the Mojave Wasteland in 2281.",
+    "Carter was locked away at the NCR Correctional Facility after being framed over an undisclosed amount of caps by a pit boss while working in a casino in New Reno. During his time imprisoned, he was always known as the guy who could get things. This led to his career as a trader after the Powder Gangers took over the facility.",
+    "I Fought the Law"
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Powder Gangers",
+  "role": "Casino employee (formerly)Merchant",
+  "detailed_location": "NCR Correctional Facility",
+  "voice_actor": "Ari Rubin",
+  "special": {
+    "Strength": 5,
+    "Perception": 6,
+    "Endurance": 5,
+    "Charisma": 3,
+    "Intelligence": 3,
+    "Agility": 5,
+    "Luck": 4
+  },
+  "level": "3",
+  "tag_skills": [
+    {
+      "Explosives:": "38"
+    },
+    {
+      "Guns:": "36"
+    },
+    {
+      "Melee Weap.:": "36"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Evil",
+  "voice_type": "MaleAdult04",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Fear 50",
+      "response_text": "{Prison under attack}I don't want to get shot!",
+      "index": "1"
+    },
+    {
+      "topic": "VFreeformNCRCFNCRCFCarterTopic000",
+      "topic_text": "Show me what you have for sale.",
+      "emotion": "Neutral 50",
+      "response_text": "If I don't have anything you like, well... tough. I don't do special orders.",
+      "index": "5"
+    },
+    {
+      "topic": "VFreeformNCRCFNCRCFCarterTopic001",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "See you.",
+      "index": "7"
+    },
+    {
+      "topic": "VFreeformNCRCFNCRCFCarterTopic002",
+      "topic_text": "You're a trader?",
+      "emotion": "Neutral 50",
+      "response_text": "I was always the guy who could get things, if you know what I mean. Figured I might as well keep on doing it.",
+      "index": "8"
+    },
+    {
+      "topic": "VFreeformNCRCFNCRCFCarterTopic003",
+      "topic_text": "What did you do to end up here in the first place?",
+      "emotion": "Neutral 50",
+      "response_text": "I worked in a casino in New Reno, and one of the pit bosses decided he didn't like me. Framed me over some caps, and I ended up in here.",
+      "index": "9"
+    },
+    {
+      "topic": "VFreeformNCRCFNCRCFCarterTopic004",
+      "topic_text": "What can you tell me about this place?",
+      "emotion": "Neutral 50",
+      "response_text": "This is where the NCR sent prisoners to \"reform\" through hard labor. I never saw much reforming around here, myself.",
+      "index": "10"
+    },
+    {
+      "topic": "VFreeformNCRCFNCRCFCarterTopic005",
+      "topic_text": "Why do you stay here?",
+      "emotion": "Neutral 50",
+      "response_text": "Don't have any other place to go. I'd just end up back in another prison, or dead out in the wasteland.",
+      "index": "11"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "See you.",
+      "index": "12"
+    }
+  ],
+  "combat": []
+}

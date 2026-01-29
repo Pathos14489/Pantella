@@ -1,0 +1,772 @@
+{
+  "name": "Reilly",
+  "url": "/wiki/Reilly",
+  "dialogue_name": "RRReilly.txt",
+  "dialogue_url": "/wiki/RRReilly.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000156F1",
+  "ref_id": "0002A9FC",
+  "editor_id": "RRReily",
+  "location": "The Chop Shop,Ranger compound",
+  "location_url": "/wiki/The_Chop_Shop_(Fallout_3)",
+  "descriptions": [
+    "Reilly is a member as well as the leader and founder of the mercenary band known as Reilly's Rangers encountered in the Capital Wasteland in Fallout 3.",
+    "The young Reilly grew up without her parents in the ruins of the former American capital Washington, D.C., instead being raised by an unnamed man with a military background who brought her up to be self-sufficient. Her adoptive parent died around 12 years later, with Reilly carrying his body to Arlington Cemetery for a proper military burial. Four years prior to 2277, at the age of 26, she founded a group dedicated to eradicating the threat of super mutants and geomapping the Capital Wasteland, naming them Reilly's Rangers.",
+    "Sometime shortly before the Lone Wanderer left Vault 101 in 2277, Reilly and the Rangers traveled to Vernon Square to map out the ruins, where they were ambushed by the infesting super mutants and eventually overpowered, forced to take shelter in the Statesman Hotel. Reilly herself attempted to escape solo to find help getting her group out of danger but ended up seriously wounded. She managed to evade the mutants' attacks, making it as far as the Museum of History where she was found by passing scavengers and brought to Doctor Barrows at the Chop Shop within Underworld, drifting in and out of consciousness.",
+    "Reilly appears in Fallout 3 and Fallout: Wasteland Warfare."
+  ],
+  "race": "Human",
+  "gender": "Female",
+  "affiliation": "Reilly's Rangers",
+  "role": "Mercenary leader",
+  "detailed_location": "Underworld(The Chop Shop)Ranger compound",
+  "voice_actor": "Shari Elliker",
+  "special": {
+    "Strength": 5,
+    "Perception": 7,
+    "Endurance": 6,
+    "Charisma": 4,
+    "Intelligence": 3,
+    "Agility": 6,
+    "Luck": 4
+  },
+  "mod_special_values": {
+    "Strength": 5,
+    "Perception": 7,
+    "Endurance": 7,
+    "Charisma": 4,
+    "Intelligence": 3,
+    "Agility": 7,
+    "Luck": 4
+  },
+  "level": "10→35→53 (Broken Steelonly) (1.75 times current player level)",
+  "tag_skills": [
+    {
+      "Big Guns:": "70→100"
+    },
+    {
+      "Energy Weap.:": "72→100"
+    },
+    {
+      "Small Guns:": "70→100"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Critical Chance:": "4%"
+    },
+    {
+      "Unarmed Dam.:": "+1.3"
+    },
+    {
+      "Poison Resist.:": "25%"
+    },
+    {
+      "Rad. Resist.:": "10%"
+    },
+    {
+      "Carry Weight:": "200 lbs"
+    }
+  ],
+  "karma": "Good",
+  "voice_type": "FemaleAdult01DefaultDC",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "Well, I guess you weren't such a jerk after all.",
+      "index": "1"
+    },
+    {
+      "topic": "MS18Bailout",
+      "topic_text": "Let me ask you about something else.",
+      "emotion": "Neutral 50",
+      "response_text": "Okay, go ahead.",
+      "index": "22"
+    },
+    {
+      "topic": "MS18ColumbiaHeightsReillyCT01",
+      "topic_text": "How can I get there from Underworld?",
+      "emotion": "Neutral 50",
+      "response_text": "Your best bet is to stay with the Metro tunnels. Head north from here to Metro Central. Then look for the tunnels to the Dupont Circle Station.",
+      "index": "23"
+    },
+    {
+      "topic": "MS18ColumbiaHeightsReillyCT02",
+      "topic_text": "Any good news about the area?",
+      "emotion": "Neutral 50",
+      "response_text": "Not much I'm afraid. Oh wait, the hospital may have some supplies that will help you.",
+      "index": "25"
+    },
+    {
+      "topic": "MS18DeadRangersAll",
+      "topic_text": "I'm sorry Reilly... None of them made it. I did the best I could.",
+      "emotion": "Surprise 80",
+      "response_text": "I... I don't know what to say. I should never have left them up there. Maybe with one more gun, they could have made it.",
+      "index": "27"
+    },
+    {
+      "topic": "MS18DeadRangersBrick",
+      "topic_text": "I'm sorry we lost Brick.",
+      "emotion": "Sad 70",
+      "response_text": "Yeah, that stupid gearhead. Sigh. Ah well, at least the others made it.",
+      "index": "29"
+    },
+    {
+      "topic": "MS18DeadRangersBrickButcher",
+      "topic_text": "I'm sorry we lost Brick and Butcher.",
+      "emotion": "Sad 70",
+      "response_text": "I was afraid that might happen. I should never have left them up there alone. Now their deaths rest on my shoulders.",
+      "index": "31"
+    },
+    {
+      "topic": "MS18DeadRangersBrickDon",
+      "topic_text": "I'm sorry we lost Brick and Donavan.",
+      "emotion": "Sad 100",
+      "response_text": "I was afraid that might happen. I should never have left them up there alone. Now their deaths rest on my shoulders.",
+      "index": "33"
+    },
+    {
+      "topic": "MS18DeadRangersButcher",
+      "topic_text": "I'm sorry we lost Butcher.",
+      "emotion": "Sad 90",
+      "response_text": "Yeah, Butcher was a good man. Ah well, at least the others made it.",
+      "index": "35"
+    },
+    {
+      "topic": "MS18DeadRangersButcherDon",
+      "topic_text": "I'm sorry we lost Butcher and Donavan.",
+      "emotion": "Sad 100",
+      "response_text": "I was afraid that might happen. I should never have left them up there alone. Now their deaths rest on my shoulders.",
+      "index": "37"
+    },
+    {
+      "topic": "MS18DeadRangersDon",
+      "topic_text": "I'm sorry we lost Donovan.",
+      "emotion": "Sad 70",
+      "response_text": "Yeah, Donovan was a good man. Ah well, at least the others made it.",
+      "index": "39"
+    },
+    {
+      "topic": "MS18DeadRangersNone",
+      "topic_text": "It went extremely well, as you can see. We didn't lose anyone.",
+      "emotion": "Surprise 80",
+      "response_text": "I'm very impressed at your skill. I don't think I've come across someone quite like you in the ruins.",
+      "index": "41"
+    },
+    {
+      "topic": "MS18FinBailout",
+      "topic_text": "Let's discuss something else.",
+      "emotion": "Neutral 50",
+      "response_text": "Sure thing.",
+      "index": "44"
+    },
+    {
+      "topic": "MS18FinLostGeomapper",
+      "topic_text": "I'm afraid I've lost my Geomapper...",
+      "emotion": "Disgust 50",
+      "response_text": "Like I told you last time, the last one I gave you was it. I am fresh out of them. Sorry.",
+      "index": "45"
+    },
+    {
+      "topic": "MS18FinReillyCT01",
+      "topic_text": "We all make mistakes, Reilly. You're not a fortune teller.",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah, but I led the guys right into a corner. Theo died because I decided to take shelter in the hospital.",
+      "index": "50"
+    },
+    {
+      "topic": "MS18FinReillyCT01a",
+      "topic_text": "It is what it is.",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah, but I led the guys right into a corner. Theo died because I decided to take shelter in the hospital.",
+      "index": "52"
+    },
+    {
+      "topic": "MS18FinReillyCT02",
+      "topic_text": "Shit happens, Reilly. Get used to it.",
+      "emotion": "Neutral 50",
+      "response_text": "Well a lot of shit happened all because of me.",
+      "index": "54"
+    },
+    {
+      "topic": "MS18FinReillyCT03",
+      "topic_text": "No, Theo died because of bad luck. That's all.",
+      "emotion": "Neutral 50",
+      "response_text": "Thanks. You're sweet to try and make me feel better about everything.",
+      "index": "56"
+    },
+    {
+      "topic": "MS18FinReillyCT04",
+      "topic_text": "Theo died because he was careless.",
+      "emotion": "Neutral 50",
+      "response_text": "He wasn't careless. I was the one who was careless. Bah, it doesn't matter why... either way, he's gone.",
+      "index": "60"
+    },
+    {
+      "topic": "MS18FinReillyCT04a",
+      "topic_text": "There's tremendous risk in what you do and I bet Theo knew that.",
+      "emotion": "Neutral 50",
+      "response_text": "Thanks. It's nice of you to try and make me feel better about everything.",
+      "index": "62"
+    },
+    {
+      "topic": "MS18FinReillyCT05",
+      "topic_text": "Let me help. You stay here and I'll do some mapping for you.",
+      "emotion": "Neutral 50",
+      "response_text": "You'd risk your neck for me like that?",
+      "index": "64"
+    },
+    {
+      "topic": "MS18FinReillyCT05a",
+      "topic_text": "Well, I hope it all works out.",
+      "emotion": "Sad 50",
+      "response_text": "Yeah. On my own as usual. Sigh.",
+      "index": "65"
+    },
+    {
+      "topic": "MS18FinReillyCT06",
+      "topic_text": "Well, looks like you're on your own then.",
+      "emotion": "Sad 50",
+      "response_text": "Yeah. On my own as usual. Sigh.",
+      "index": "67"
+    },
+    {
+      "topic": "MS18FinReillyCT07",
+      "topic_text": "Sure. Why not. You look like you need the help.",
+      "emotion": "Happy 50",
+      "response_text": "Well... okay. I hadn't expected this, but I'll certainly take you up on it. Oh, and I insist on paying you. I won't take no for an answer.",
+      "index": "69"
+    },
+    {
+      "topic": "MS18FinReillyCT08",
+      "topic_text": "Well, yeah. I expect to be paid a merc's wage, though.",
+      "emotion": "Disgust 50",
+      "response_text": "Don't worry, I'll compensate you for your time.",
+      "index": "72"
+    },
+    {
+      "topic": "MS18FinReillyCT08a",
+      "topic_text": "Nah. I was just messing with ya.",
+      "emotion": "Disgust 100",
+      "response_text": "You are such an asshole.",
+      "index": "75"
+    },
+    {
+      "topic": "MS18FinReillyCT09",
+      "topic_text": "Done deal. I'll locate as many as I can for you.",
+      "emotion": "Neutral 50",
+      "response_text": "Here, take this geomapper. Please don't lose it. Donovan spent a year developing it and I only have a few.",
+      "index": "76"
+    },
+    {
+      "topic": "MS18FinReillyCT10",
+      "topic_text": "As long as the caps flow, you'll get your maps.",
+      "emotion": "Neutral 50",
+      "response_text": "Here, take this geomapper. Please don't lose it. Donovan spent a year developing it and I only have a few.",
+      "index": "78"
+    },
+    {
+      "topic": "MS18FinReillyCT10a",
+      "topic_text": "On second thought, I think I'll pass.",
+      "emotion": "Surprise 100",
+      "response_text": "Oh! Okay.",
+      "index": "80"
+    },
+    {
+      "topic": "MS18FinReillyTalon01",
+      "topic_text": "Have you had run-ins with them?",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah, we've crossed paths. Fortunately, we just stepped out of each others way.",
+      "index": "82"
+    },
+    {
+      "topic": "MS18FinReillyTalon02",
+      "topic_text": "Well, wouldn't you kill if that was part of your contract?",
+      "emotion": "Anger 50",
+      "response_text": "Look, those fucks went into a settlement a year or two ago and killed everyone. Women, children... everyone.",
+      "index": "84"
+    },
+    {
+      "topic": "MS18FinReillyTalon03",
+      "topic_text": "Sounds like my kind of people.",
+      "emotion": "Disgust 50",
+      "response_text": "If that's your kind of people, then you really need to take a long look at yourself and decide just what the hell is wrong with you.",
+      "index": "87"
+    },
+    {
+      "topic": "MS18FinTLHowAreThings",
+      "topic_text": "What's been happening since you've been back?",
+      "emotion": "Neutral 50",
+      "response_text": "Well, I've been feeling a little more confident now that I have you mapping for us.",
+      "index": "88"
+    },
+    {
+      "topic": "MS18FinTLMapping",
+      "topic_text": "I have some mapping data for you.",
+      "emotion": "Neutral 50",
+      "response_text": "Excellent! Let me offload the data and I'll be glad to pay you.",
+      "index": "94"
+    },
+    {
+      "topic": "MS18FinTLTalonCompany",
+      "topic_text": "What's the deal with Talon Company?",
+      "emotion": "Disgust 50",
+      "response_text": "Let me give you a word of advice. Stay away from them, they give mercs a bad name.",
+      "index": "98"
+    },
+    {
+      "topic": "MS18Goodbyes",
+      "topic_text": "I have to be on my way.",
+      "emotion": "Fear 50",
+      "response_text": "Good luck. You're going to need it.",
+      "index": "101"
+    },
+    {
+      "topic": "MS18MoreRangersReillyCT01",
+      "topic_text": "How do I know they're still alive?",
+      "emotion": "Neutral 50",
+      "response_text": "Before I left I gave them an order to keep broadcasting for help over their radio.",
+      "index": "103"
+    },
+    {
+      "topic": "MS18MoreRangersReillyCT02",
+      "topic_text": "Where is Theo's body?",
+      "emotion": "Sad 60",
+      "response_text": "We lost him on one of the stairwells on the second floor of the Statesman Hotel.",
+      "index": "105"
+    },
+    {
+      "topic": "MS18ReillyAngerTrack01",
+      "topic_text": "I don't think you're in any condition to make threats.",
+      "emotion": "Disgust 100",
+      "response_text": "Look, I just woke up expecting to see the pearly gates. Can you cut me some slack, or what?",
+      "index": "108"
+    },
+    {
+      "topic": "MS18ReillyAngerTrack02",
+      "topic_text": "Okay, okay. Sorry.",
+      "emotion": "Fear 70",
+      "response_text": "If time wasn't so precious right now, I wouldn't be so on edge either. I need to get help for the rest of the Rangers, and fast.",
+      "index": "109"
+    },
+    {
+      "topic": "MS18ReillyAngerTrack03",
+      "topic_text": "I don't cut anyone slack. Deal with it.",
+      "emotion": "Disgust 100",
+      "response_text": "Nice that you pick on bed-ridden people. That how you get your jollies? Does it make you feel tough?",
+      "index": "110"
+    },
+    {
+      "topic": "MS18ReillyCT01",
+      "topic_text": "Whoa, whoa. Calm down! Who are you?",
+      "emotion": "Happy 70",
+      "response_text": "I'm sorry. The name's Reilly. Yeah, THE Reilly as in Reilly's Rangers.{accentuate THE}",
+      "index": "112"
+    },
+    {
+      "topic": "MS18ReillyCT01a",
+      "topic_text": "Hey, relax, you were badly wounded. Now... who are you?",
+      "emotion": "Happy 70",
+      "response_text": "I'm sorry. The name's Reilly. Yeah, THE Reilly as in Reilly's Rangers.{accentuate THE}",
+      "index": "113"
+    },
+    {
+      "topic": "MS18ReillyCT02",
+      "topic_text": "Get a grip, lady.",
+      "emotion": "Disgust 100",
+      "response_text": "Look, asshole. I don't know who you are, but no one talks to Reilly that way. Yeah, you heard me, THE Reilly of Reilly's Rangers.",
+      "index": "114"
+    },
+    {
+      "topic": "MS18ReillyCT02aMedicine",
+      "topic_text": "I don't think you're in any condition to be up and about.",
+      "emotion": "Disgust 50",
+      "response_text": "That's not the way I do things.",
+      "index": "115"
+    },
+    {
+      "topic": "MS18ReillyCT03",
+      "topic_text": "My apologies. I didn't know who you were.",
+      "emotion": "Happy 70",
+      "response_text": "That's okay, kid. Don't sweat it. The Wasteland's a big place.",
+      "index": "117"
+    },
+    {
+      "topic": "MS18ReillyCT04",
+      "topic_text": "Reilly's Rangers, huh? Never heard of you.",
+      "emotion": "Disgust 80",
+      "response_text": "You been stuck living in a vault the last decade or something?",
+      "index": "119"
+    },
+    {
+      "topic": "MS18ReillyCT04aGunNut",
+      "topic_text": "I've heard of you guys. You pack some serious firepower.",
+      "emotion": "Neutral 50",
+      "response_text": "You're pretty sharp, kid.",
+      "index": "121"
+    },
+    {
+      "topic": "MS18ReillyCT04b",
+      "topic_text": "Oh, not the mighty Reilly's Rangers! Oooh, scary...",
+      "emotion": "Disgust 50",
+      "response_text": "Laugh it up, kid. It's easy for you to make fun of me now when I'm in this condition.",
+      "index": "124"
+    },
+    {
+      "topic": "MS18ReillyCT05",
+      "topic_text": "So, what's this about needing help? Tell me the whole story.",
+      "emotion": "Neutral 50",
+      "response_text": "We were mapping the Vernon Square part of the downtown ruins and got jumped by a Super Mutant ambush party.",
+      "index": "126"
+    },
+    {
+      "topic": "MS18ReillyCT06",
+      "topic_text": "You look terrible. Maybe I shouldn't have woken you up so quickly.",
+      "emotion": "Fear 50",
+      "response_text": "Heh, I feel worse than I look, but that doesn't even matter to me. I'm just worried about the rest of the Rangers.",
+      "index": "128"
+    },
+    {
+      "topic": "MS18ReillyCT06a",
+      "topic_text": "Wow, Reilly. You look like shit.",
+      "emotion": "Disgust 70",
+      "response_text": "You got a lot of class, kid.{Sarcasm}",
+      "index": "130"
+    },
+    {
+      "topic": "MS18ReillyCT07",
+      "topic_text": "You've been in a coma... chances are the Rangers are already dead.",
+      "emotion": "Anger 50",
+      "response_text": "No! There is no way my guys are dead!",
+      "index": "133"
+    },
+    {
+      "topic": "MS18ReillyCT07a",
+      "topic_text": "Why don't you attempt a rescue? Your legs broken or something?",
+      "emotion": "Anger 50",
+      "response_text": "Are you completely stupid?",
+      "index": "136"
+    },
+    {
+      "topic": "MS18ReillyCT11",
+      "topic_text": "Let me guess, more Super Mutants inside?",
+      "emotion": "Disgust 50",
+      "response_text": "You got it. More of the ugly bastards just kept coming. We fought our way to the roof and found a way across to the Statesman Hotel next door.",
+      "index": "139"
+    },
+    {
+      "topic": "MS18ReillyCT12",
+      "topic_text": "Not a very smart move, if you ask me.",
+      "emotion": "Disgust 80",
+      "response_text": "I didn't ask you. Those bastards were everywhere. I don't know what was driving them.",
+      "index": "142"
+    },
+    {
+      "topic": "MS18ReillyCT13",
+      "topic_text": "Bad move, I'm guessing.",
+      "emotion": "Sad 70",
+      "response_text": "Very bad move, but we had no choice.",
+      "index": "145"
+    },
+    {
+      "topic": "MS18ReillyCT14",
+      "topic_text": "Trapped yourself at the top of a tall building. Brilliant.",
+      "emotion": "Anger 90",
+      "response_text": "Look, I don't know what your problem is, but I got three guys alone out there with an army of Super Mutants around them.",
+      "index": "148"
+    },
+    {
+      "topic": "MS18ReillyCT15",
+      "topic_text": "Last stand?",
+      "emotion": "Neutral 50",
+      "response_text": "Last stand? Well, we hoped not. We figured we'd get up there and get a better signal to radio the Brotherhood of Steel for help.",
+      "index": "151"
+    },
+    {
+      "topic": "MS18ReillyCT16",
+      "topic_text": "Look, I could care less about your stories.",
+      "emotion": "Disgust 50",
+      "response_text": "Fine. Since you're all business and obviously don't give a damn about human life, I got a proposal for you.",
+      "index": "153"
+    },
+    {
+      "topic": "MS18ReillyCT17",
+      "topic_text": "So that leaves them up there. How come you're here?",
+      "emotion": "Sad 70",
+      "response_text": "My bad idea I'm afraid. I had a Stealth Boy which allowed me to slip off the roof unnoticed. The plan was to get back to get some help.",
+      "index": "155"
+    },
+    {
+      "topic": "MS18ReillyCT17Explosives",
+      "topic_text": "Did you set any kinds of traps or mines?",
+      "emotion": "Surprise 70",
+      "response_text": "Actually, we did lay down a bunch of countermeasures. I don't know how many of them have already gone off though.",
+      "index": "158"
+    },
+    {
+      "topic": "MS18ReillyCT18",
+      "topic_text": "I don't know, Reilly. This sounds like suicide.",
+      "emotion": "Fear 70",
+      "response_text": "Look, I don't know where else to go. In the shape I'm in, I'll be lucky to get ten feet.",
+      "index": "161"
+    },
+    {
+      "topic": "MS18ReillyCT19",
+      "topic_text": "What's in it for me if I risk my neck for you?",
+      "emotion": "Happy 70",
+      "response_text": "Spoken like a merc. You sound like me when I was just a kid starting out in the business.",
+      "index": "164"
+    },
+    {
+      "topic": "MS18ReillyCT19a",
+      "topic_text": "Forget it. I may as well shoot myself in the head and save the trouble.",
+      "emotion": "Anger 100",
+      "response_text": "Wow. You really are an asshole. Fine. I hope their deaths sit well on your conscience.",
+      "index": "167"
+    },
+    {
+      "topic": "MS18ReillyCTRadio",
+      "topic_text": "Your team's still alive... I heard their distress signal!",
+      "emotion": "Surprise 100",
+      "response_text": "They are?! Holy shit!",
+      "index": "168"
+    },
+    {
+      "topic": "MS18ReillyCTRadio01",
+      "topic_text": "Tell me what's going on and I'll see if I can help.",
+      "emotion": "Neutral 50",
+      "response_text": "We were mapping the Vernon Square part of the downtown ruins and got jumped by a Super Mutant ambush party.",
+      "index": "170"
+    },
+    {
+      "topic": "MS18ReillyCTRadio02",
+      "topic_text": "Start from the beginning.",
+      "emotion": "Neutral 50",
+      "response_text": "We were mapping the Vernon Square part of the downtown ruins and got jumped by a Super Mutant ambush party.",
+      "index": "172"
+    },
+    {
+      "topic": "MS18ReillyCTRadio03",
+      "topic_text": "Sorry, sounds like suicide. Be my guest.",
+      "emotion": "Disgust 70",
+      "response_text": "I dunno why you bothered to come here and wake me then. I would have been better off sleeping through it.",
+      "index": "174"
+    },
+    {
+      "topic": "MS18ReillyEndgameCT01",
+      "topic_text": "Nah. It was all in a day's work.",
+      "emotion": "Happy 50",
+      "response_text": "You're a cocky little thing, aren't you? I like that.",
+      "index": "175"
+    },
+    {
+      "topic": "MS18ReillyEndgameCT02",
+      "topic_text": "Yeah. That was a tough run.",
+      "emotion": "Neutral 50",
+      "response_text": "I bet it was. Frankly, I'm amazed you made it.",
+      "index": "177"
+    },
+    {
+      "topic": "MS18ReillyEndgameCT02a",
+      "topic_text": "Are you kidding me? Hell would have been a damn picnic!",
+      "emotion": "Disgust 70",
+      "response_text": "All right, all right. No need to get your underpants in a knot.",
+      "index": "179"
+    },
+    {
+      "topic": "MS18ReillyEndgameCT03",
+      "topic_text": "No, please continue... Your men are more important than my reward.",
+      "emotion": "Happy 50",
+      "response_text": "Losing a bit of the merc edge, eh? Don't get soft on me now!",
+      "index": "181"
+    },
+    {
+      "topic": "MS18ReillyEndgameCT04",
+      "topic_text": "Yeah, please. I have much to do.",
+      "emotion": "Neutral 50",
+      "response_text": "Okay, but at least let me thank you for all you've done. You could have been killed trying to save my men.",
+      "index": "184"
+    },
+    {
+      "topic": "MS18ReillyEndgameCT04a",
+      "topic_text": "You're damn right I do!",
+      "emotion": "Happy 80",
+      "response_text": "Now you sound like a merc! Well, let's cut the bullshit and get right to it then.",
+      "index": "186"
+    },
+    {
+      "topic": "MS18ReillyEndgameCT05",
+      "topic_text": "What about my reward?",
+      "emotion": "Disgust 50",
+      "response_text": "Reward? If you had some sort of a deal going with Butcher, then that was between you and him.",
+      "index": "188"
+    },
+    {
+      "topic": "MS18ReillyEndgameCT06",
+      "topic_text": "Hey, what about my damn reward?",
+      "emotion": "Anger 50",
+      "response_text": "Are you out of your fucking mind? Reward? If you had some sort of a deal going with Butcher, then that was between you and him.",
+      "index": "194"
+    },
+    {
+      "topic": "MS18ReillyEndgameOtherStuff01",
+      "topic_text": "Before we talk about that, do you have my reward?",
+      "emotion": "Disgust 50",
+      "response_text": "Wow. You sound like one of the guys from Talon Company. Ruthless bastard, aren't you?",
+      "index": "200"
+    },
+    {
+      "topic": "MS18ReillyFastMission",
+      "topic_text": "Let's skip all the story and get to the point. What do you need?",
+      "emotion": "Happy 80",
+      "response_text": "So you're that eager to jump in headfirst, eh? You remind me a lot of some crazy mercs I knew back in the day.",
+      "index": "205"
+    },
+    {
+      "topic": "MS18ReillyNegTrack01",
+      "topic_text": "Sorry about being such a jerk, Reilly.",
+      "emotion": "Happy 70",
+      "response_text": "It takes a big man to apologize... I respect that.",
+      "index": "210"
+    },
+    {
+      "topic": "MS18ReillyNegTrack02",
+      "topic_text": "I'm not going to bug you anymore.",
+      "emotion": "Neutral 50",
+      "response_text": "If time wasn't so precious right now, I wouldn't be so on edge either. I need to get help for the rest of the Rangers, and fast.",
+      "index": "212"
+    },
+    {
+      "topic": "MS18ReillyNegTrack03",
+      "topic_text": "You don't scare me.",
+      "emotion": "Disgust 90",
+      "response_text": "Wow, you're really an asshole... you know that?",
+      "index": "213"
+    },
+    {
+      "topic": "MS18ReillyProposal",
+      "topic_text": "What did you need from me?",
+      "emotion": "Fear 50",
+      "response_text": "Get the Rangers home. Please. That's all I want. I don't care how you do it.",
+      "index": "214"
+    },
+    {
+      "topic": "MS18ReillyQuestThink",
+      "topic_text": "I need some time to think about it.",
+      "emotion": "Disgust 50",
+      "response_text": "What's to think about? Sigh.",
+      "index": "215"
+    },
+    {
+      "topic": "MS18ReillyQuestYes",
+      "topic_text": "All right. I'll do it.",
+      "emotion": "Surprise 50",
+      "response_text": "Whew, I was holding my breath on that one I think. I wasn't sure what you were going to say.",
+      "index": "217"
+    },
+    {
+      "topic": "MS18ReillyRewardArmor",
+      "topic_text": "I'll go for the armor.",
+      "emotion": "Happy 70",
+      "response_text": "The armor it is. Wear it with pride, kid. We do.",
+      "index": "221"
+    },
+    {
+      "topic": "MS18ReillyRewardGun",
+      "topic_text": "The Minigun is more my speed.",
+      "emotion": "Happy 70",
+      "response_text": "You got it. Use it well, and take down some more Muties with it for us.",
+      "index": "224"
+    },
+    {
+      "topic": "MS18ReillyRewardOther",
+      "topic_text": "Got anything else?",
+      "emotion": "Sad 50",
+      "response_text": "Sorry, we need every piece of equipment we've got. I can spare the gun and the armor, but that's about it.",
+      "index": "227"
+    },
+    {
+      "topic": "MS18ReillyStart01",
+      "topic_text": "Not long, fortunately.",
+      "emotion": "Neutral 50",
+      "response_text": "Right... can't remember what I was doing.",
+      "index": "228"
+    },
+    {
+      "topic": "MS18ReillyStart02",
+      "topic_text": "What difference does it make?",
+      "emotion": "Neutral 50",
+      "response_text": "Well, I don't know actually. Kind of confused.",
+      "index": "231"
+    },
+    {
+      "topic": "MS18ReillyStart03",
+      "topic_text": "Oh, it's been centuries. The planet is a lush, green paradise once again.",
+      "emotion": "Disgust 90",
+      "response_text": "Huh? What the hell are you talking about? That isn't very funny.",
+      "index": "234"
+    },
+    {
+      "topic": "MS18TLAnythingThatWillHelp",
+      "topic_text": "Can you think of anything that will help me get there?",
+      "emotion": "Neutral 50",
+      "response_text": "We have a headquarters not far from here.",
+      "index": "237"
+    },
+    {
+      "topic": "MS18TLColumbiaHeights",
+      "topic_text": "What can you tell me about Vernon Square?",
+      "emotion": "Neutral 50",
+      "response_text": "If I wasn't asking for your help, I'd tell you to stay away. It's thick with Super Mutants. I don't know why.",
+      "index": "240"
+    },
+    {
+      "topic": "MS18TLHowDidHappen",
+      "topic_text": "How did this all happen, Reilly?",
+      "emotion": "Neutral 50",
+      "response_text": "We were mapping the Vernon Square part of the downtown ruins and got jumped by a Super Mutant ambush party.",
+      "index": "243"
+    },
+    {
+      "topic": "MS18TLMoreRangers",
+      "topic_text": "Tell me more about Reilly's Rangers.",
+      "emotion": "Sad 50",
+      "response_text": "There's five of us... oh wait, four now. I almost forgot about Theo. Poor bastard.",
+      "index": "247"
+    },
+    {
+      "topic": "SpeechChallengeFailure",
+      "topic_text": "SpeechChallengeFailure",
+      "emotion": "Neutral 50",
+      "response_text": "I've told you everything I can think of.",
+      "index": "250"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "I have to go now.",
+      "emotion": "Fear 50",
+      "response_text": "Watch yourself, those ruins are bad ass.",
+      "index": "251"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Neutral 50",
+      "response_text": "Please give me a status report.",
+      "index": "256"
+    }
+  ],
+  "combat": []
+}

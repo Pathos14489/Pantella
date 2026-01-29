@@ -1,0 +1,121 @@
+{
+  "name": "Winger Gervais",
+  "url": "/wiki/Gervais",
+  "dialogue_name": "SDOGervais.txt",
+  "dialogue_url": "/wiki/SDOGervais.txt",
+  "spawned_dead": false,
+  "spawned": true,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000CADC5",
+  "ref_id": "000CADDD",
+  "editor_id": "SDOGervais",
+  "location": "OutsideRed Racer factory",
+  "location_url": "/wiki/Red_Racer_factory",
+  "descriptions": [
+    "Winger Gervais is a member of the icegang Sudden-Death Overtime in 2277.",
+    "Gervais, together with Centre Dubois and Winger Mercier, is part of the icegang led by Goalie Ledoux. They are obsessed with a sport played by Ledoux's ancestors."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Sudden-Death Overtime",
+  "role": "Gang member",
+  "detailed_location": "Red Racer factory",
+  "voice_actor": "James Lewis",
+  "special": {
+    "Strength": 7,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 3,
+    "Intelligence": 3,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "level": "4",
+  "tag_skills": [
+    {
+      "Melee Weap.:": "47(49)"
+    },
+    {
+      "Small Guns:": "45(47)"
+    },
+    {
+      "Unarmed:": "43(48)"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "60"
+    },
+    {
+      "Critical Chance:": "5%"
+    },
+    {
+      "Unarmed Dam.:": "2.65"
+    },
+    {
+      "Poison Resist.:": "20%"
+    },
+    {
+      "Rad. Resist.:": "8%"
+    },
+    {
+      "Carry Weight:": "220"
+    }
+  ],
+  "karma": "Evil",
+  "voice_type": "MaleGroupRaiderDC",
+  "geck_race": "HispanicRaider",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "Hey, I may be just a Winger now, but I'll make Centre soon.",
+      "index": "1"
+    },
+    {
+      "topic": "SuperDuperMartTOPIC",
+      "topic_text": "FFsuperDuperMartTOPIC",
+      "emotion": "Neutral 50",
+      "response_text": "We're back.  Somebody open up the... Hang on, something' ain't right here.{Raider captain over intercom, returning from a raid. NOTE: add radio/intercom filter.}",
+      "index": "2"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "FFEU18RaiderTaunt",
+      "topic_text": "FFEU18RaiderTaunt",
+      "emotion": "Happy 50",
+      "response_text": "Just say the word and it's all over. Course then we'd have to skin you alive and eat your liver.",
+      "index": "3"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Sad 70",
+      "response_text": "Damn, poor Mercier. He was a good Winger.",
+      "index": "10"
+    }
+  ],
+  "combat": [
+    {
+      "topic": "Attack",
+      "topic_text": "Attack",
+      "emotion": "Anger 70",
+      "response_text": "I'm gonna mount you on my fucking wall!{angry, screaming}",
+      "index": "11"
+    },
+    {
+      "topic": "Flee",
+      "topic_text": "Flee",
+      "emotion": "Neutral 50",
+      "response_text": "Graaaahhhhh! No!",
+      "index": "18"
+    }
+  ]
+}

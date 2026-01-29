@@ -1,0 +1,136 @@
+{
+  "name": "Bill Foster",
+  "url": "/wiki/Bill_Foster",
+  "dialogue_name": "BillFoster.txt",
+  "dialogue_url": "/wiki/BillFoster.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "00095B48",
+  "ref_id": "00095B4A",
+  "editor_id": "BillFoster",
+  "location": "Tranquility Lane simulation",
+  "location_url": "/wiki/Tranquility_Lane_simulation",
+  "descriptions": [
+    "William \"Bill\" Foster is one of the inhabitants of Vault 112 trapped within the Tranquility Lane virtual reality simulation in Fallout 3. He does not have a home at the Lane, apparently the only adult without one.",
+    "Resident 906 of Vault 112, William Foster has been given the role of the local kindly elder engineer,",
+    "Foster is on good terms with everyone at the Lane, keeping his nose out of other people's business and giving a helpful hand to everyone in need. Mabel Henderson, the local gossip, tops this list, as she's very fond of her gadgets and her Mister Handy robot is very maintenance intensive. Foster blames it on her reluctance to order replacement parts.",
+    "By 2277, Foster's vitals indicate a state of  contentment: 72 beats per minute, 115/80 mmHg of blood pressure, 98.4°F/36.85°C temperature, 19 breaths per minute, and nominal stress levels."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "RobCo Industries(pre-War)Vault 112",
+  "role": "Technician",
+  "detailed_location": "Tranquility Lane",
+  "voice_actor": "Pete Papageorge",
+  "special": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 2,
+    "Intelligence": 5,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "mod_special_values": {
+    "Strength": 5,
+    "Perception": 6,
+    "Endurance": 5,
+    "Charisma": 2,
+    "Intelligence": 5,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "level": "0",
+  "misc_skills": [
+    {
+      "Hit Points:": "70"
+    },
+    {
+      "Critical Chance:": "5%"
+    },
+    {
+      "Unarmed Dam.:": "0.75"
+    },
+    {
+      "Poison Resist.:": "20%"
+    },
+    {
+      "Rad. Resist.:": "8%"
+    },
+    {
+      "Carry Weight:": "200"
+    },
+    {
+      "Damage Res.:": "3%"
+    }
+  ],
+  "karma": "Neutral",
+  "voice_type": "MaleAdult02DC",
+  "geck_race": "CaucasianOld",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "You probably oughta go talk to Betty, kiddo. Don't want to keep her waiting!",
+      "index": "1"
+    },
+    {
+      "topic": "MQ04ResidentChitChat1",
+      "topic_text": "Nice day, isn't it?",
+      "emotion": "Neutral 50",
+      "response_text": "Yep, you've got that right. Heck of a day to get some work done outdoors.",
+      "index": "4"
+    },
+    {
+      "topic": "MQ04ResidentChitChat2",
+      "topic_text": "What can you tell me about the neighborhood?",
+      "emotion": "Neutral 50",
+      "response_text": "Nice place. Real nice. Everyone's friendly, and always happy to lend a hand.",
+      "index": "5"
+    },
+    {
+      "topic": "MQ04ResidentDad",
+      "topic_text": "Have you seen my dad?",
+      "emotion": "Neutral 50",
+      "response_text": "Can't say that I have, kiddo. Don't worry, I'm sure he'll turn up.",
+      "index": "6"
+    },
+    {
+      "topic": "MQ04ResidentMabel",
+      "topic_text": "What can you tell me about Mabel Henderson?",
+      "emotion": "Neutral 50",
+      "response_text": "Fond of her gadgets, she is. Heck, I can't count the number of times I've had to fix that new-fangled robot of hers.",
+      "index": "7"
+    },
+    {
+      "topic": "MQ04ResidentRockwells",
+      "topic_text": "Can you tell me anything about the Rockwells' marriage?",
+      "emotion": "Neutral 50",
+      "response_text": "Now what's a kid like you want to know about that? Kind of grown-up stuff to be worried about, don't you think?",
+      "index": "9"
+    },
+    {
+      "topic": "MQ04ResidentSimulation",
+      "topic_text": "This is a pretty convincing simulation...",
+      "emotion": "Surprise 50",
+      "response_text": "Is that so?",
+      "index": "11"
+    },
+    {
+      "topic": "MQ04ResidentTimmy",
+      "topic_text": "What can you tell me about Timmy Neusbaum?",
+      "emotion": "Neutral 50",
+      "response_text": "The Neusbaum boy, eh? Quiet kid. Seems like his parents don't give him much wiggle room.",
+      "index": "13"
+    }
+  ],
+  "conversation": [],
+  "combat": []
+}

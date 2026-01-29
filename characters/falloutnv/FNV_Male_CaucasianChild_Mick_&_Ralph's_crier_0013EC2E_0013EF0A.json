@@ -1,0 +1,75 @@
+{
+  "name": "Mick & Ralph's crier",
+  "url": "/wiki/Mick_%26_Ralph%27s_crier",
+  "dialogue_name": "VFSMickAndRalphsCrier.txt",
+  "dialogue_url": "/wiki/VFSMickAndRalphsCrier.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "0013EC2E",
+  "ref_id": "0013EF0A",
+  "editor_id": "VFSMickAndRalphsCrier",
+  "location": "Freeside",
+  "location_url": "/wiki/Freeside",
+  "descriptions": [
+    "The Mick & Ralph's crier is a crier who shouts advertisements for Mick & Ralph's at the inner gate to Freeside in Fallout: New Vegas.",
+    "This young boy is employed by Mick and Ralph, who pay him to boost public awareness of their business and help bring in customers. He can be seen at the gate connecting Freeside's west and east sections together.",
+    "Playstation 3 The Mick & Ralph's crier may not appear at all in the game."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Mick & Ralph's",
+  "role": "Crier",
+  "detailed_location": "Entrance gateFreeside",
+  "voice_actor": "Anthony Crehan",
+  "special": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 2,
+    "Intelligence": 5,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "mod_special_values": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 6,
+    "Charisma": 2,
+    "Intelligence": 5,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "level": "1",
+  "misc_skills": [
+    {
+      "Hit Points:": "70(75)"
+    }
+  ],
+  "karma": "Neutral",
+  "geck_race": "CaucasianChild",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "Stop by Mick & Ralph's for all your shopping needs, sir.",
+      "index": "1"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "VFSMickAndRalphsCrierShout",
+      "topic_text": "VFSMickAndRalphsCrierShout",
+      "emotion": "Neutral 50",
+      "response_text": "Come to Mick and Ralph's for all your shopping needs!",
+      "index": "4"
+    }
+  ],
+  "combat": []
+}

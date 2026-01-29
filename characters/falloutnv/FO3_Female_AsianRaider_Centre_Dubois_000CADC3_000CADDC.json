@@ -1,0 +1,102 @@
+{
+  "name": "Centre Dubois",
+  "url": "/wiki/Dubois_(Fallout_3)",
+  "dialogue_name": "SDODubois.txt",
+  "dialogue_url": "/wiki/SDODubois.txt",
+  "spawned_dead": false,
+  "spawned": true,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000CADC3",
+  "ref_id": "000CADDC",
+  "editor_id": "SDODubois",
+  "location": "OutsideRed Racer factory",
+  "location_url": "/wiki/Red_Racer_factory",
+  "descriptions": [
+    "Centre Dubois is a Sudden-Death Overtime gang member in Fallout 3.",
+    "Part of the ice hockey themed gang formed by Goalie Ledoux (an icegang, as they call it), Dubois is the group's centre, a forward player who would normally be found in the middle of the ice, with wingers to the side (Gervais and Mercier), and the goalkeeper, or goalie, in the back."
+  ],
+  "race": "Human",
+  "gender": "Female",
+  "affiliation": "Sudden-Death Overtime",
+  "role": "Gang member",
+  "detailed_location": "Red Racer factory",
+  "voice_actor": "Shari Elliker",
+  "special": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 3,
+    "Intelligence": 3,
+    "Agility": 7,
+    "Luck": 5
+  },
+  "level": "4",
+  "tag_skills": [
+    {
+      "Melee Weap.:": "45(47)"
+    },
+    {
+      "Small Guns:": "47(49)"
+    },
+    {
+      "Unarmed:": "41(46)"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "55"
+    },
+    {
+      "Critical Chance:": "5%"
+    },
+    {
+      "Unarmed Dam.:": "2.55"
+    },
+    {
+      "Poison Resist.:": "15%"
+    },
+    {
+      "Rad. Resist.:": "6%"
+    },
+    {
+      "Carry Weight:": "210"
+    },
+    {
+      "Damage Res.:": "11%"
+    }
+  ],
+  "karma": "Evil",
+  "geck_race": "AsianRaider",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Happy 70",
+      "response_text": "I like these guys, they let me play with their pucks.",
+      "index": "1"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Disgust 50",
+      "response_text": "Whew... it's hot in this mask.",
+      "index": "2"
+    }
+  ],
+  "combat": [
+    {
+      "topic": "Attack",
+      "topic_text": "Attack",
+      "emotion": "Neutral 50",
+      "response_text": "You wanna be my new boyfriend? Ha ha ha ha ha ha!",
+      "index": "3"
+    }
+  ]
+}

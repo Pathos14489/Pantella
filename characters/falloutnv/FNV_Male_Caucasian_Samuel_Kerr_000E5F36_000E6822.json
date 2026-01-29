@@ -1,0 +1,105 @@
+{
+  "name": "Samuel Kerr",
+  "url": "/wiki/Samuel_Kerr",
+  "dialogue_name": "188Samuel.txt",
+  "dialogue_url": "/wiki/188Samuel.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": true,
+  "can_repair": true,
+  "can_be_companion": false,
+  "base_id": "000E5F36",
+  "ref_id": "000E6822",
+  "editor_id": "188Samuel",
+  "location": "188 Trading Post",
+  "location_url": "/wiki/188_Trading_Post",
+  "descriptions": [
+    "Samuel Kerr is a merchant operating at the 188 Trading Post with his daughter Michelle in the Mojave Wasteland in 2281. He appears in Fallout: New Vegas.",
+    "Around a month prior to October 2281,",
+    "With the amount of soldiers passing through the 188, neither Samuel nor Michelle believe the Legion will threaten them anytime soon. Even if they do, they believe they can take care of themselves. In the worst case, they don't mind packing up shop and leaving for a new location again.",
+    "If the escaped convicts around and inside the Bison Steve Hotel in Primm are wiped out during the quest(s) They Went That-a-Way and/or My Kind of Town, Samuel will have a unique dialogue option: the Courier can mention that they helped clear out the convicts, but Samuel will whimsically respond that he and Michelle have moved on and do not care about Primm's situation anymore."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "188 Trading Post",
+  "role": "Merchant",
+  "detailed_location": "188 Trading Post",
+  "voice_actor": "Gregory Alan Williams",
+  "special": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 5,
+    "Intelligence": 5,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "level": "1",
+  "misc_skills": [],
+  "karma": "Neutral",
+  "voice_type": "MaleAdult06",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "188SamuelAbout188Safety",
+      "topic_text": "Is it safe here?",
+      "emotion": "Fear 50",
+      "response_text": "Well... There's been reports of trouble south, but me and Michelle can handle ourselves. And there's plenty of soldiers about, so that helps.",
+      "index": "1"
+    },
+    {
+      "topic": "188SamuelAboutBusiness",
+      "topic_text": "Why's business so good here?",
+      "emotion": "Neutral 50",
+      "response_text": "When 15 shut down, 95 became the route NCR citizens use to get to the Strip - or limp back home, after the Strip's drained 'em of caps.",
+      "index": "2"
+    },
+    {
+      "topic": "188SamuelAboutPrimm",
+      "topic_text": "Why'd you leave Primm?",
+      "emotion": "Neutral 50",
+      "response_text": "Michelle and I ran a little shop in Primm 'till a prison break north of town spoiled it for everyone. Goddamned convicts just about shut down I-15.",
+      "index": "6"
+    },
+    {
+      "topic": "188SamuelAboutSelf188SamAboutSam",
+      "topic_text": "Who are you?",
+      "emotion": "Happy 50",
+      "response_text": "Samuel Kerr at your service. Me and my daughter Michelle run this fine establishment.",
+      "index": "8"
+    },
+    {
+      "topic": "188SamuelBoastSavePrimm",
+      "topic_text": "I took care of those prisoners myself. Primm is clear now.",
+      "emotion": "Neutral 50",
+      "response_text": "Guess that makes you a big hero - in Primm. Like I said, me and Michelle didn't sit around waiting to be saved. Business is better here, anyway.{whimsical, not scolding}",
+      "index": "10"
+    },
+    {
+      "topic": "188SamuelBuySell",
+      "topic_text": "I'd like to see what you have for sale.",
+      "emotion": "Neutral 50",
+      "response_text": "You bet.",
+      "index": "11"
+    },
+    {
+      "topic": "188SamuelRepair",
+      "topic_text": "I need something repaired.",
+      "emotion": "Neutral 50",
+      "response_text": "Let me see what I can do.",
+      "index": "12"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Happy 50",
+      "response_text": "Welcome to the 188 Slop & Shop. Like our slogan says, \"It's better than nothing.\"",
+      "index": "13"
+    }
+  ],
+  "conversation": [],
+  "combat": []
+}

@@ -1,0 +1,66 @@
+{
+  "name": "Little Beard",
+  "url": "/wiki/Little_Beard",
+  "dialogue_name": "VMS21aHiredGun02.txt",
+  "dialogue_url": "/wiki/VMS21aHiredGun02.txt",
+  "spawned_dead": false,
+  "spawned": true,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "001258B3",
+  "ref_id": "001258D2",
+  "editor_id": "VMS21aHiredGun02",
+  "location": "Atomic Wrangler Casino",
+  "location_url": "/wiki/Atomic_Wrangler_Casino",
+  "descriptions": [
+    "Little Beard is a gun-for-hire residing in the Atomic Wrangler Casino in Freeside in Fallout: New Vegas.",
+    "At some point prior to 2281, Big Beard and Little Beard came into owing a debt to Carlitos Wayne, though it's only known that it involved their beards.",
+    "As partnered guns-for-hire, Little Beard typically defers the talking to Big Beard, based on who has the bigger whiskers."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "FreesideBig Beard",
+  "role": "Gun for hire",
+  "detailed_location": "Atomic Wrangler Casino,Freeside",
+  "voice_actor": "Liam O'Brien",
+  "special": {
+    "Strength": 7,
+    "Perception": 4,
+    "Endurance": 6,
+    "Charisma": 3,
+    "Intelligence": 4,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "level": "7",
+  "tag_skills": [
+    {
+      "Melee Weap.:": "58(60)"
+    },
+    {
+      "Repair:": "52"
+    },
+    {
+      "Unarmed:": "56"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Neutral",
+  "voice_type": "MaleAdult05",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "Just talk to Big Beard next to me, pal. Whoever's got the biggest whiskers, does the talking...",
+      "index": "1"
+    }
+  ],
+  "conversation": [],
+  "combat": []
+}

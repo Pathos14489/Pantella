@@ -1,0 +1,206 @@
+{
+  "name": "Mister Lopez",
+  "url": "/wiki/Lopez",
+  "dialogue_name": "MisterLopez.txt",
+  "dialogue_url": "/wiki/MisterLopez.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": true,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "0001E759",
+  "ref_id": "0001E75A",
+  "editor_id": "MisterLopez",
+  "location": "Rivet City",
+  "location_url": "/wiki/Rivet_City",
+  "descriptions": [
+    "Mister Lopez is a suicidal resident of Rivet City in the year 2277.",
+    "Mister Lopez is a quiet, lonely and severely depressed 65-year-old man. Raiders took the lives of his wife and child, and he came to Rivet City alone and lost. For the past decade, he has been living in the common room of Rivet City. He consumes his meals in the common room and often sleeps for long periods out of sheer depression. He has a daily habit of climbing to the top of the bridge tower and contemplating whether to end his life by jumping.",
+    "He regularly visits Saint Monica's Church and spends much of his time reading or praying there. Lopez also attends the weekly church service and receives frequent counseling from Father Clifford, the church priest."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Rivet City",
+  "role": "Suicidal resident",
+  "detailed_location": "Rivet City",
+  "voice_actor": "Paul Eiding",
+  "special": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 4,
+    "Intelligence": 4,
+    "Agility": 6,
+    "Luck": 4
+  },
+  "mod_special_values": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 4,
+    "Intelligence": 4,
+    "Agility": 7,
+    "Luck": 4
+  },
+  "level": "4",
+  "tag_skills": [
+    {
+      "Barter:": "41"
+    },
+    {
+      "Small Guns:": "45(47)"
+    },
+    {
+      "Unarmed:": "41(43)"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "40(45)"
+    }
+  ],
+  "karma": "Good",
+  "voice_type": "MaleOld01DC",
+  "geck_race": "HispanicOldAged",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Sad 50",
+      "response_text": "Haven't run into you before. You probably wouldn't remember me anyway. I'm Mister Lopez.",
+      "index": "1"
+    },
+    {
+      "topic": "MS03RCHistory1",
+      "topic_text": "Could I ask you about Rivet City's history?",
+      "emotion": "Sad 50",
+      "response_text": "Why bother? There's never anything good in the past.",
+      "index": "5"
+    },
+    {
+      "topic": "MS14TedFind",
+      "topic_text": "Where can I find Ted Strayer?",
+      "emotion": "Neutral 50",
+      "response_text": "Have you tried the common room?  That's where he sleeps.",
+      "index": "8"
+    },
+    {
+      "topic": "RCMisterLopezChurch",
+      "topic_text": "Suicide is a sin. Kill yourself, and your soul won't go to Heaven.",
+      "emotion": "Sad 50",
+      "response_text": "That's what Father Clifford says. I'm not sure I believe that. I'll think about it.",
+      "index": "11"
+    },
+    {
+      "topic": "RCMisterLopezCoward",
+      "topic_text": "Couldn't save your family, can't kill yourself... You're fucking pathetic.",
+      "emotion": "Sad 50",
+      "response_text": "You're right. I've failed everyone. Even my family.",
+      "index": "12"
+    },
+    {
+      "topic": "RCMisterLopezNotInvolved",
+      "topic_text": "Um... yeah. Well, look at the time. I have to go now...",
+      "emotion": "Sad 50",
+      "response_text": "Whatever.",
+      "index": "13"
+    },
+    {
+      "topic": "RCMisterLopezSad",
+      "topic_text": "You seem depressed.",
+      "emotion": "Surprise 50",
+      "response_text": "Is it that obvious? I suppose so.",
+      "index": "14"
+    },
+    {
+      "topic": "RCMisterLopezSuicide",
+      "topic_text": "If that's what you really want, I'll help you.",
+      "emotion": "Happy 50",
+      "response_text": "Thank you. A quick shove should do it.",
+      "index": "16"
+    },
+    {
+      "topic": "RCMisterLopezTedStrayer",
+      "topic_text": "What about Ted? He needs guidance. A father figure.",
+      "emotion": "Surprise 50",
+      "response_text": "Ted Strayer? I suppose I could talk to him. He is kind of a lost boy.",
+      "index": "17"
+    },
+    {
+      "topic": "RCMisterLopezWhyNot",
+      "topic_text": "Why wouldn't I remember you?",
+      "emotion": "Sad 50",
+      "response_text": "Nobody does. I'm not very memorable.",
+      "index": "19"
+    },
+    {
+      "topic": "RCMisterLopezWrong",
+      "topic_text": "Real courage is living. Only cowards commit suicide.",
+      "emotion": "Sad 50",
+      "response_text": "You may be right, but I have nothing to live for.",
+      "index": "21"
+    },
+    {
+      "topic": "RCTopicCJYoungMissing",
+      "topic_text": "Have you seen C.J. Young lately?",
+      "emotion": "Surprise 50",
+      "response_text": "I thought I saw them running over the bridge.",
+      "index": "22"
+    },
+    {
+      "topic": "SpeechChallengeFailure",
+      "topic_text": "SpeechChallengeFailure",
+      "emotion": "Sad 50",
+      "response_text": "No, no. It's hopeless.",
+      "index": "24"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYEI have to go now.",
+      "topic_text": "I have to leave now.",
+      "emotion": "Sad 50",
+      "response_text": "I'll just stay here. Alone.",
+      "index": "25"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Sad 50",
+      "response_text": "Mei, you've been kind to me. I'll miss you when I'm gone.",
+      "index": "26"
+    },
+    {
+      "topic": "RCGoodbye",
+      "topic_text": "RCGoodbye",
+      "emotion": "Sad 50",
+      "response_text": "I'd like two carrots and some water.",
+      "index": "35"
+    },
+    {
+      "topic": "RCGoodbye02",
+      "topic_text": "RCGoodbye02",
+      "emotion": "Neutral 50",
+      "response_text": "Thank you, Diego. You'll make a fine priest some day.",
+      "index": "40"
+    },
+    {
+      "topic": "RCPackageEnd",
+      "topic_text": "RCPackageEnd",
+      "emotion": "Sad 50",
+      "response_text": "Think about what I've said Ted.",
+      "index": "41"
+    },
+    {
+      "topic": "RCResponse01",
+      "topic_text": "RCResponse01",
+      "emotion": "Sad 50",
+      "response_text": "My family is dead and the world is a nuclear Wasteland. What exactly is it that I have to live for, Father Clifford?",
+      "index": "44"
+    }
+  ],
+  "combat": []
+}

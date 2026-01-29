@@ -1,0 +1,231 @@
+{
+  "name": "Tech Sergeant Reyes",
+  "url": "/wiki/Reyes",
+  "dialogue_name": "CHFSergeantReyes.txt",
+  "dialogue_url": "/wiki/CHFSergeantReyes.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "0010D23D",
+  "ref_id": "00120DDA",
+  "editor_id": "CHFSergeantReyes",
+  "location": "Camp Forlorn Hope command center",
+  "location_url": "/wiki/Camp_Forlorn_Hope_command_center",
+  "descriptions": [
+    "Technical Sergeant Reyes is an officer of the New California Republic Army stationed at Camp Forlorn Hope in the Mojave Wasteland where she oversees radio transmissions for the various military bases around the region as well as the Ranger field stations in 2281. She appears in Fallout: New Vegas.",
+    "A sergeant in the NCR Army, Reyes' main job in 2281 is being the nexus of communications in and out of Camp Forlorn Hope via radio transponders. Officially, her duties entail compiling the reports received from the Rangers at Camp Golf as well as from the top brass residing at Camp McCarran. In practice, however, this comes out to tabulating stockpiles, kill ratios, mission success rates, and deaths by radiation poisoning. At some point, Reyes entered into an off-the-books collaboration with Colonel James Hsu at McCarran and took the reins of managing radio security, a responsibility she assigned to herself initially after realizing no one else seemed to care.",
+    "Recently, in the course of this unofficial duty, Reyes has uncovered serious issues with the reports: large discrepancies cropping about things like friendly casualties and unusually increased enemy units' strength, along with implausible reports of things like super mutant legionaries and Great Khans with trained deathclaws.",
+    "Knowing that less than a third of their reported enemy sightings led to actual combat interceptions, Reyes has come to the conclusion that either their intelligence network is faulty, or the NCR's enemies have gotten one step ahead of them while leaving the military vulnerable to future risk.",
+    "Reyes will have unique dialogue depending on whether the Courier first speaks to her while wearing NCR armor: if so, she will mistake them for a trooper that wandered in;",
+    "Reyes has several recorded lines from when Fallout: New Vegas was intended to include post-ending gameplay, before Obsidian had to cut it from the final release, including some discussing the results of the Second Battle for Hoover Dam and which faction was the victor."
+  ],
+  "race": "Human",
+  "gender": "Female",
+  "affiliation": "New California Republic Army",
+  "role": "Communications officer",
+  "detailed_location": "Camp Forlorn HopeCommand center",
+  "voice_actor": "April Stewart",
+  "special": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 5,
+    "Intelligence": 5,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "level": "5",
+  "tag_skills": [
+    {
+      "Explosives:": "46"
+    },
+    {
+      "Guns:": "46"
+    },
+    {
+      "Melee Weap.:": "46"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Neutral",
+  "voice_type": "FemaleAdult03",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "{Player in NCR gear}Got a second, trooper? I've got something important that needs to get done, but nobody's stepping up to help me out. I'm hoping you're different.",
+      "index": "1"
+    },
+    {
+      "topic": "RSGlobalCommBreakdownSergeantReyesTopic001",
+      "topic_text": "You'd think the NCR would be very concerned about this sort of thing.",
+      "emotion": "Anger 20",
+      "response_text": "I've been trying to get someone to authorize this update - or at the least get field clearance to leave the camp and do this myself.",
+      "index": "8"
+    },
+    {
+      "topic": "RSGlobalCommBreakdownSergeantReyesTopic002",
+      "topic_text": "You think someone is listening in on your broadcasts?",
+      "emotion": "Neutral 50",
+      "response_text": "Less than a third of reported enemy sightings are getting intercepted. Either our intel is faulty, or our enemies are one step ahead of us.",
+      "index": "10"
+    },
+    {
+      "topic": "RSGlobalCommBreakdownTopic002",
+      "topic_text": "What do you need help with?",
+      "emotion": "Neutral 50",
+      "response_text": "I have the delightful task of tabulating stockpiles, kill ratios, mission success rates, radiation deaths, and other truly fascinating numbers.",
+      "index": "11"
+    },
+    {
+      "topic": "RSGlobalCommBreakdownTopic003",
+      "topic_text": "I can't do this right now.",
+      "emotion": "Neutral 50",
+      "response_text": "I see... well, if you change your mind and want to earn some caps, let me know.",
+      "index": "14"
+    },
+    {
+      "topic": "VMSRSGlobalCommBreakdownCHFSergeantReyesTopic000",
+      "topic_text": "Have you heard anything unusual about any of the other Ranger stations?",
+      "emotion": "Neutral 50",
+      "response_text": "Nothing as severe. Charlie seems to be getting a lot of extra medical supplies for some reason, while Bravo hasn't requested a resupply in awhile.",
+      "index": "15"
+    },
+    {
+      "topic": "VMSRSGlobalCommBreakdownCHFSergeantReyesTopic001",
+      "topic_text": "What do you do here?",
+      "emotion": "Neutral 50",
+      "response_text": "I handle communications for Camp Forlorn Hope, compiling reports I've received from the Rangers at Camp Golf as well as the brass at McCarran.",
+      "index": "17"
+    },
+    {
+      "topic": "VMSRSGlobalCommBreakdownCHFSergeantReyesTopic002",
+      "topic_text": "Forget about it. It's over.",
+      "emotion": "Sad 10",
+      "response_text": "{disappointed}Oh. Well, thanks for helping get to the bottom of this, I guess.",
+      "index": "19"
+    },
+    {
+      "topic": "VMSRSGlobalCommBreakdownRSSergeantReyesTopic000",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Bye.",
+      "index": "20"
+    },
+    {
+      "topic": "VMSRSGlobalCommBreakdownRSSergeantReyesTopic009",
+      "topic_text": "What makes you think you can trust me with security codes?",
+      "emotion": "Neutral 50",
+      "response_text": "The security codes are unique to the radios at each Ranger station. They're useless anywhere else.",
+      "index": "21"
+    },
+    {
+      "topic": "VMSRSGlobalCommBreakdownRSSergeantReyesTopic013",
+      "topic_text": "Keep it to yourself, but Hanlon is the one behind the misinformation. He's got a plan.",
+      "emotion": "Surprise 50",
+      "response_text": "The Chief? But, he's a legend! I guess if he's got a plan behind it all, who am I to question it? I won't say a word about it to anyone else.",
+      "index": "22"
+    },
+    {
+      "topic": "VMSRSGlobalCommBreakdownRSSergeantReyesTopic015",
+      "topic_text": "I'll help. Tell me what I need to do.",
+      "emotion": "Neutral 50",
+      "response_text": "This holotape contains the updated security codes for the Ranger Stations. Show it to the comm officers there.",
+      "index": "23"
+    },
+    {
+      "topic": "VMSRSGlobalCommBreakdownRSSergeantReyesTopic063",
+      "topic_text": "All of the Ranger stations have been given the new security codes.",
+      "emotion": "Neutral 50",
+      "response_text": "Glad to hear it! I'll switch over all radio broadcasts to the new encrypted channels - this ought to help us stay a step ahead of any spies.",
+      "index": "25"
+    },
+    {
+      "topic": "VMSRSGlobalCommBreakdownRSSergeantReyesTopic064",
+      "topic_text": "Every station except Charlie has been given the new security codes. Charlie was wiped out.",
+      "emotion": "Neutral 50",
+      "response_text": "The station's been silent for quite some time now... I guess this confirms what we've all feared. Thanks for letting me know.",
+      "index": "27"
+    },
+    {
+      "topic": "VMSRSGlobalCommBreakdownRSSergeantReyesTopic065",
+      "topic_text": "What else did you need me to do?",
+      "emotion": "Neutral 50",
+      "response_text": "We've received some disturbing reports from some of the Ranger stations - heavy casualties at Alpha,{disbelief}Super Mutant Legionaries at Delta.",
+      "index": "30"
+    },
+    {
+      "topic": "VMSRSGlobalCommBreakdownRSSergeantReyesTopic066",
+      "topic_text": "Hanlon was the one sending out the false reports. He killed himself rather than turning himself in.",
+      "emotion": "Sad 50",
+      "response_text": "What? Chief Hanlon. The man's a war hero? Why would he...? That just doesn't make sense. This is awful...",
+      "index": "33"
+    },
+    {
+      "topic": "VMSRSGlobalCommBreakdownRSSergeantReyesTopic067",
+      "topic_text": "<Lie> Yes, everything's resolved - Hanlon and I found a Legion spy at Camp Golf.",
+      "emotion": "Neutral 50",
+      "response_text": "I knew it. I'm glad you and the Chief were able to put a stop to this.",
+      "index": "34"
+    },
+    {
+      "topic": "VMSRSGlobalCommBreakdownRSSergeantReyesTopic071",
+      "topic_text": "I'll investigate and let you know what I find out about those odd reports.",
+      "emotion": "Neutral 50",
+      "response_text": "Thank you, and good luck.",
+      "index": "35"
+    },
+    {
+      "topic": "VMSRSGlobalCommBreakdownRSSergeantReyesTopic101",
+      "topic_text": "It's complicated. Hanlon caused the misinformation, but I convinced him to stop.",
+      "emotion": "Surprise 50",
+      "response_text": "Wait... what? Why would he do that?",
+      "index": "36"
+    },
+    {
+      "topic": "VMSRSGlobalCommBreakdownRSSergeantReyesTopic102",
+      "topic_text": "That's not important. It's over.",
+      "emotion": "Disgust 20",
+      "response_text": "Whatever the Chief had in mind, I'm sure it was the right thing to do - even if it did end up scaring a lot of people in the process.",
+      "index": "37"
+    },
+    {
+      "topic": "VMSRSGlobalCommBreakdownRSSergeantReyesTopic103",
+      "topic_text": "He wanted to scare the NCR into retreating from this region - all to save lives.",
+      "emotion": "Neutral 50",
+      "response_text": "The Chief should've known that the NCR is too stubborn to back down from anything, even when it's for the best.",
+      "index": "38"
+    },
+    {
+      "topic": "VMSRSGlobalCommBreakdownRSSergeantReyesTopic106",
+      "topic_text": "I don't have time to do this right now.",
+      "emotion": "Neutral 50",
+      "response_text": "All right, then. Come and talk to me when you do.",
+      "index": "40"
+    },
+    {
+      "topic": "VMSRSGlobalCommBreakdownRSSergeantReyesTopic107",
+      "topic_text": "The Rangers' versions of the reports they sent to Camp Golf don't match what you received.",
+      "emotion": "Anger 10",
+      "response_text": "{Hanlon alive}I knew it. Every one of the false reports was signed off by Chief Hanlon at Camp Golf, but why would the Chief manipulate the reports?",
+      "index": "41"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Bye.",
+      "index": "45"
+    }
+  ],
+  "combat": []
+}

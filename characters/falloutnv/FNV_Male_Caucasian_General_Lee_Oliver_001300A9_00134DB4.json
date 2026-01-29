@@ -1,0 +1,642 @@
+{
+  "name": "General Lee Oliver",
+  "url": "/wiki/Lee_Oliver",
+  "dialogue_name": "VHDGeneralOliver.txt",
+  "dialogue_url": "/wiki/VHDGeneralOliver.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "001300A9",
+  "ref_id": "00134DB4",
+  "editor_id": "VHDGeneralOliver",
+  "location": "Hoover Dam",
+  "location_url": "/wiki/Hoover_Dam",
+  "descriptions": [
+    "General Lee Oliver is the commanding officer of the New California Republic Army in the Mojave Wasteland in 2281. He appears during the endgame of Fallout: New Vegas.",
+    "A career New California Republic Army soldier, General Lee Oliver is an outspoken supporter of President Aaron Kimball's campaign of eastward expansion into the Mojave.",
+    "This is perhaps best exemplified by his preparations for the Second Battle of Hoover Dam, which Robert House derisively refers to as \"tunnel vision.\"",
+    "The situation is complicated by Oliver's personal grudge against the Rangers and Chief Hanlon, due to the role they played during the First Battle of Hoover Dam in 2277. The strategic ingenuity of Hanlon's plan earned him widespread praise and popularity, obscuring Oliver and the regular NCRA's contributions. As a result, Oliver is determined to win the second battle entirely with his own methods, to the point of obstinately refusing to listen to Hanlon's input and jeopardizing Rangers in the field.",
+    "Despite this, Oliver is not without redeeming qualities. He is a patriot, dedicated to the NCR and what it stands for. At the same time, he is also a rational man, unwilling to throw his men away at a lost cause or to just protect the NCR's honor if he is convinced he would lose. He has the republic's interests at heart and is willing to commit drastic changes to the campaign if he is convinced they would benefit the Republic in the long term.",
+    "Eureka!",
+    "General Lee Oliver appears in Fallout: New Vegas and Fallout: Wasteland Warfare. General Lee Oliver is also mentioned in the Fallout: The Roleplaying Game campaign book Royal Flush.",
+    "PC Xbox 360 Killing him might cause him to become \"unconscious,\" but never getting back up, making it impossible for the player to loot his body."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "NCR Army",
+  "role": "Commander, Mojave forces",
+  "detailed_location": "Hoover Dam",
+  "voice_actor": "Emerson Brooks",
+  "special": {
+    "Strength": 5,
+    "Perception": 6,
+    "Endurance": 5,
+    "Charisma": 6,
+    "Intelligence": 5,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "mod_special_values": {
+    "Strength": 5,
+    "Perception": 7,
+    "Endurance": 5,
+    "Charisma": 8,
+    "Intelligence": 5,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "level": "15→30→50 (DLCs only)",
+  "tag_skills": [
+    {
+      "Explosives:": "88→100"
+    },
+    {
+      "Guns:": "86→100"
+    },
+    {
+      "Melee Weap.:": "86→100"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "190→265→365 (DLCs only)"
+    },
+    {
+      "Dam. Threshold:": "0"
+    }
+  ],
+  "karma": "Neutral",
+  "voice_type": "MaleAdult01DefaultB",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Happy 40",
+      "response_text": "{Player just won the battle}Caesar on the cross, been a long time since I've seen the kind of work you've laid down today... a{emph}damn long time.",
+      "index": "1"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDGeneralOliverTopic000",
+      "topic_text": "I have the terms of your surrender here for you.",
+      "emotion": "Neutral 50",
+      "response_text": "What the hell are you talking about?{Accepts paper}What is this?",
+      "index": "18"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDGeneralOliverTopic010",
+      "topic_text": "Surrender, general. The dam is almost taken.",
+      "emotion": "Anger 50",
+      "response_text": "This battle is far from over. Once the reinforcements from McCarran arrive, the counteroffensive will begin.",
+      "index": "22"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDGeneralOliverTopic011",
+      "topic_text": "What is this all about?",
+      "emotion": "Neutral 50",
+      "response_text": "You've done some great work for us up to this point, and we are hoping to use your{pause, emph}unique abilities to aid us once again.",
+      "index": "23"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDGeneralOliverTopic012",
+      "topic_text": "I don't have time to talk right now.",
+      "emotion": "Neutral 50",
+      "response_text": "{Brisk, dismissive}Good, you just stand there and listen, then, that'll make this go faster.",
+      "index": "25"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDGeneralOliverTopic013",
+      "topic_text": "That's exactly why I'm here, General Oliver.",
+      "emotion": "Neutral 50",
+      "response_text": "Fool! We've fortified this place to hold out indefinitely against an army. What chance do you think you have?",
+      "index": "26"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDGeneralOliverTopic014",
+      "topic_text": "What opportunity is that?",
+      "emotion": "Anger 10",
+      "response_text": "We now have a chance to take the fight to those bastards on their home turf.",
+      "index": "27"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDGeneralOliverTopic015",
+      "topic_text": "This doesn't have to end in bloodshed, general.",
+      "emotion": "Neutral 50",
+      "response_text": "The army of bloodthirsty maniacs with you would disagree. No, I think I'll hold the fort here until our reinforcements arrive.",
+      "index": "30"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDGeneralOliverTopic017",
+      "topic_text": "Ok, I'll take care of him.",
+      "emotion": "Neutral 50",
+      "response_text": "Thanks for your support. I'll make sure that the NCR Emergency radio is up and running. Go kill those bastards.",
+      "index": "31"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDGeneralOliverTopic018",
+      "topic_text": "Can you offer any additional support?",
+      "emotion": "Neutral 50",
+      "response_text": "Like I said earlier, we have some supplemental forces on the way, but this wasn't the situation I was expecting, so I can only offer what is on hand.",
+      "index": "32"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDGeneralOliverTopic019",
+      "topic_text": "There won't be any reinforcements. The Legion has blocked the road west.",
+      "emotion": "Neutral 50",
+      "response_text": "{Sighs}If that's true, then there's nothing else for it. My men and I will hold out as long as we can.",
+      "index": "33"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDGeneralOliverTopic020",
+      "topic_text": "The Legion has more men on their way as well.",
+      "emotion": "Neutral 50",
+      "response_text": "Do you really think your ragtag band of slavers has more manpower than the armed forces of the NCR?",
+      "index": "34"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDGeneralOliverTopic021",
+      "topic_text": "There's still time. You could escape. I won't stop you.",
+      "emotion": "Neutral 50",
+      "response_text": "And go where? According to you, the road west is blocked. And while you might let us by, I highly doubt your allies will do the same.",
+      "index": "36"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDGeneralOliverTopic022",
+      "topic_text": "Then let's stop wasting time, shall we?",
+      "emotion": "Neutral 50",
+      "response_text": "My thoughts exactly.",
+      "index": "37"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDGeneralOliverTopic023",
+      "topic_text": "To what end? You delay the inevitable.",
+      "emotion": "Neutral 50",
+      "response_text": "Better that than simply give up. What other option is available? Retreat?",
+      "index": "38"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDGeneralOliverTopic024",
+      "topic_text": "You're right. I guess you're screwed.",
+      "emotion": "Neutral 50",
+      "response_text": "Then let's get this over with.",
+      "index": "39"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDGeneralOliverTopic025{ Speech 50 }",
+      "topic_text": "I'm betting a man as smart as you wouldn't leave himself without at least one contingency.",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] Perhaps I do have a secret tunnel out of here. But that doesn't change anything. My duty is to stay and fight.",
+      "index": "40"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDGeneralOliverTopic028",
+      "topic_text": "And what about your duty to your men?",
+      "emotion": "Neutral 50",
+      "response_text": "My men and I are soldiers. We share an obligation to follow orders. And our orders are to hold this dam.",
+      "index": "43"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDGeneralOliverTopic030",
+      "topic_text": "Dying won't accomplish anything.",
+      "emotion": "Neutral 50",
+      "response_text": "It will see that our orders are carried through to the end. That's what good soldiers do.",
+      "index": "44"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDGeneralOliverTopic032{Speech 100}",
+      "topic_text": "The dam is already lost, general. Your responsibility now is to get your men out of here alive.",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] Y-You're right. These men have placed their lives in my hands, and I won't throw them away for a lost cause.",
+      "index": "45"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDGeneralOliverTopic033",
+      "topic_text": "Then choose, general. Leave now and your men will live. Stay, and you all die.",
+      "emotion": "Neutral 50",
+      "response_text": "We choose to stay, though I think we'll all debate you on the dying part.",
+      "index": "49"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDGeneralOliverTopic035",
+      "topic_text": "Hold that thought, General. I wanted to introduce you to some friends.",
+      "emotion": "Fear 10",
+      "response_text": "{Uneasy, army of robots suddenly appear}And... uh... well. These uh... these boys with you? Hello, there, smiley.",
+      "index": "52"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDGeneralOliverTopic039",
+      "topic_text": "General Oliver, Hoover Dam is ours. Leave at once.",
+      "emotion": "Anger 10",
+      "response_text": "{Cold}I would sooner spit on the grave of my dead mother than let some courier-walk-the-wasteland-fuck talk to me like that.",
+      "index": "53"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDGeneralOliverTopic042",
+      "topic_text": "Are you sure that's wise?",
+      "emotion": "Anger 20",
+      "response_text": "{Cold}Look, I know you're riding high right now, but let me tell you - you ain't pissing on me right now, you're pissing on the Bear.",
+      "index": "55"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDGeneralOliverTopic046",
+      "topic_text": "How about I ask these robots to fuck you and your entire battalion with a rocket barrage?",
+      "emotion": "Anger 20",
+      "response_text": "You want me to make tracks out of here, head back West, tail between our legs?",
+      "index": "57"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDGeneralOliverTopic050",
+      "topic_text": "Can't do a worse job than the Republic, that's for sure.",
+      "emotion": "Disgust 10",
+      "response_text": "{Sighs}Hell. Can't believe we got suckered by a slip of a woman. Should've watched the flank while Caesar's best were making all that noise.",
+      "index": "61"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDGeneralOliverTopic053",
+      "topic_text": "No, General, you keep it in mind - and our conversation is over.",
+      "emotion": "Neutral 50",
+      "response_text": "Well, at least I can talk to you unlike that bastard Caesar and that plate-faced general. It'll do.",
+      "index": "66"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDGeneralOliverTopic057",
+      "topic_text": "Is that all? Because I've got work to do, and NCR words don't mean much around here.",
+      "emotion": "Disgust 10",
+      "response_text": "Fine. Come on, men, we're moving out.",
+      "index": "68"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDGeneralOliverTopic059",
+      "topic_text": "I didn't take the Dam for you, General - I took it for Vegas.",
+      "emotion": "Surprise 20",
+      "response_text": "{Confused}Vegas? What, the families?{Beat, sudden surprise/sinking feeling}Or... House. You're talking about House.",
+      "index": "69"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDGeneralOliverTopic060",
+      "topic_text": "Mr. House sends his regards, Oliver. He's... expanding.",
+      "emotion": "Anger 10",
+      "response_text": "What the hell are you on about? House? He's just a rumor on the Strip, never leaves his...",
+      "index": "70"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDGeneralOliverTopic061",
+      "topic_text": "I can't take all the credit, but it wasn't really a gamble, either.",
+      "emotion": "Surprise 10",
+      "response_text": "Gambling? What, you looking to start a game now that the smoke's died down-",
+      "index": "71"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDGeneralOliverTopic062",
+      "topic_text": "If that's what makes you feel comfortable, I'm not judging you.",
+      "emotion": "Anger 20",
+      "response_text": "You know I won't surrender the Dam, and{contempt}certainly not to the ghost man of Vegas and his new right-hand-of-the-week.",
+      "index": "72"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDGeneralOliverTopic065",
+      "topic_text": "You will because the alternative is worse - and useless. Much like NCR.",
+      "emotion": "Neutral 50",
+      "response_text": "We held this place for years, kicked one Legate out of here so hard Caesar burned him to a crisp. It's our post, we've fought for it.",
+      "index": "73"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDGeneralOliverTopic069",
+      "topic_text": "NCR can't hold the Mojave already, and now you're threatening me?",
+      "emotion": "Anger 10",
+      "response_text": "I'm not going to throw away the lives of my men just to make a point. And there'll be other days.",
+      "index": "77"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDGeneralOliverTopic074",
+      "topic_text": "Because the Generator's destroyed, the Dam is useless to you.",
+      "emotion": "Anger 10",
+      "response_text": "Lot of PreWar factories and tech lying around the Mojave, our engineers'll get it running again, no matter how much damage you've done down there.",
+      "index": "78"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDGeneralOliverTopic075",
+      "topic_text": "You think these robots are all the forces I have?",
+      "emotion": "Anger 10",
+      "response_text": "Right now, they're all that's standing here - well, except for the corpses. So that's your plan, hold the Dam here all by your lonesome?",
+      "index": "79"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDGeneralOliverTopic076",
+      "topic_text": "<Bluff> Because you're talking and not attacking?",
+      "emotion": "Sad 10",
+      "response_text": "[SUCCEEDED] Yeah... but I wasn't expecting a fight when I came up here.{Beat}And now that we're talking, I don't like the sound of things.",
+      "index": "80"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDGeneralOliverTopic078",
+      "topic_text": "Oh, with a crack squad like at HELIOS One? Try it.",
+      "emotion": "Anger 10",
+      "response_text": "Even if we're running at one percent for a year, it's still worth holding this place.",
+      "index": "82"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDGeneralOliverTopic079",
+      "topic_text": "<Bluff> The generator is beyond repair, trust me.",
+      "emotion": "Anger 10",
+      "response_text": "[SUCCEEDED]{He's beaten}Of all the goddamn luck...",
+      "index": "83"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDGeneralOliverTopic080",
+      "topic_text": "Even if you fix it, you couldn't re-program the power grid, the systems are fried.",
+      "emotion": "Disgust 10",
+      "response_text": "[SUCCEEDED] Fucking PreWar RobCo pieces of shit...",
+      "index": "85"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDGeneralOliverTopic081",
+      "topic_text": "Send an engineer down to inspect the turbine and the housing - let them tell you.",
+      "emotion": "Sad 10",
+      "response_text": "[SUCCEEDED]{Beaten}No... I can tell it'd just be a wasted trip.",
+      "index": "87"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDGeneralOliverTopic082",
+      "topic_text": "While the Boomers fly West? Works for me.",
+      "emotion": "Fear 10",
+      "response_text": "They wouldn't.",
+      "index": "89"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDGeneralOliverTopic083",
+      "topic_text": "I just stood down Caesar's toughest General... you think I won't?",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED]{Defeated, downcast}No... no, you're here in the Legate's camp first, I think that says enough.",
+      "index": "90"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDGeneralOliverTopic084",
+      "topic_text": "Once I radio the Brotherhood, they can handle the fighting elsewhere.",
+      "emotion": "Fear 10",
+      "response_text": "The Brotherhood? On the attack? I think we would have heard something from them by now.",
+      "index": "92"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDGeneralOliverTopic085",
+      "topic_text": "Who's to say? I just suggested coming to Hoover Dam to them, and BOOM.",
+      "emotion": "Disgust 10",
+      "response_text": "[SUCCEEDED]{Defeated, pissed}This has been a fuck of a day.",
+      "index": "93"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDGeneralOliverTopic086",
+      "topic_text": "Look, either you're going to leave, or you're going to fight. So decide.",
+      "emotion": "Anger 10",
+      "response_text": "I think you're cashed out enough that my chances are pretty good. And like I said, I'm not leaving the Dam now the Legion's been broken.",
+      "index": "95"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDGeneralOliverTopic087",
+      "topic_text": "Really? We should play cards some time, you're bluffing.",
+      "emotion": "Anger 10",
+      "response_text": "[SUCCEEDED]{Gives up, he's been beaten}Godammit.",
+      "index": "96"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDGeneralOliverTopic088",
+      "topic_text": "It was my duty, General - I was glad to help out.",
+      "emotion": "Happy 10",
+      "response_text": "And we're glad to have you - and whether you're a soldier of the Republic or not, you're it in my eyes.",
+      "index": "98"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDGeneralOliverTopic091",
+      "topic_text": "Then maybe the Brotherhood would have more incentive.",
+      "emotion": "Anger 10",
+      "response_text": "[SUCCEEDED] The Brotherhood?{Beat}Last thing we fucking need now.",
+      "index": "101"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDGeneralOliverTopic092",
+      "topic_text": "I couldn't have done it alone, and I appreciate the assist along the way.",
+      "emotion": "Happy 10",
+      "response_text": "Least we could do. And seeing those shits of Caesar kicking dirt as they ran - did my heart good, let me tell you.",
+      "index": "103"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDGeneralOliverTopic093",
+      "topic_text": "Exactly - and while you've been occupied here, they're ready.",
+      "emotion": "Anger 10",
+      "response_text": "[SUCCEEDED]{Defeated}First the Legion, then the Brotherhood hitting us is about the last thing the Republic needs right now.",
+      "index": "106"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDGeneralOliverTopic094",
+      "topic_text": "And once the Boomers join them?",
+      "emotion": "Disgust 10",
+      "response_text": "[SUCCEEDED]{Defeated}This has been a fuck of a day.",
+      "index": "108"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDGeneralOliverTopic095",
+      "topic_text": "Sometimes I wonder if NCR wouldn't lose the whole West if they weren't sitting on it.",
+      "emotion": "Neutral 50",
+      "response_text": "{Sigh, confiding}Look. The NCR isn't everyone here, and it definitely ain't you.",
+      "index": "110"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDGeneralOliverTopic096",
+      "topic_text": "<Attack> Actually, nothing of the sort. We've come to exterminate you.",
+      "emotion": "Anger 10",
+      "response_text": "Figured as much. Come on, you sons of bitches, we're ready.",
+      "index": "113"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDGeneralOliverTopic098",
+      "topic_text": "Look, you've got two choices - leave, or fight.",
+      "emotion": "Anger 10",
+      "response_text": "I think you're cashed out enough that my chances are pretty good. And like I said, I'm not leaving the Dam now the Legion's been broken.",
+      "index": "114"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDGeneralOliverTopic099",
+      "topic_text": "<Bluff> The fact you're talking me with me says a lot about your willingness to fight.",
+      "emotion": "Disgust 10",
+      "response_text": "[SUCCEEDED] True, guess I'm a little too used to seeing Securitrons in Vegas to think they'd turn and be bad news - and I know how bad they can get.",
+      "index": "115"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDGeneralOliverTopic100",
+      "topic_text": "I have no intention of leaving you empty-handed.",
+      "emotion": "Anger 10",
+      "response_text": "{Frowns}Looking to make a deal, then? All right... let's hear it.",
+      "index": "117"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDGeneralOliverTopic101",
+      "topic_text": "We want the Dam, but the power it generates can be shared.",
+      "emotion": "Neutral 50",
+      "response_text": "You sure got its heart beating in new ways... but that just makes me want all of it, not handouts.",
+      "index": "118"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDGeneralOliverTopic102",
+      "topic_text": "What if we give NCR some concessions in trade with Vegas - and the East?",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] If you're buying our ear for the moment, Hoover Dam's more than a fistful of caps to my superiors. Vegas is interesting... the East...",
+      "index": "119"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDGeneralOliverTopic103",
+      "topic_text": "We'd also guarantee protection to the caravans - and enforcement of fair trade practices.",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] Hnh. Willing to tackle the caravan families? Keeping that bunch in line... well, that's no easy job.",
+      "index": "122"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDGeneralOliverTopic104",
+      "topic_text": "The reason we need to hold on to it is because it's very technical. Very.",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] So you're saying without you, Hoover Dam just beats slower and dies. I believe it, I saw it myself this day, you woke it up, true enough.",
+      "index": "126"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDGeneralOliverTopic105",
+      "topic_text": "There are... technologies in Vegas we may be able to provide to NCR. Not all, but some.",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] Hmmm. Well... Vegas burns brighter than most cities West of the Divide, and that glitter has its appeal.",
+      "index": "129"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDGeneralOliverTopic106",
+      "topic_text": "As long as that's not a \"no,\" then I'd take that doubt to your superiors.",
+      "emotion": "Neutral 50",
+      "response_text": "No, no, no... you've given me enough ammo for the Republic... but what one head may like, the other bear head may not.",
+      "index": "132"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDGeneralOliverTopic109",
+      "topic_text": "What happens now?",
+      "emotion": "Neutral 50",
+      "response_text": "We clean up, take prisoners, watch the East for any more trouble from the Legion... though I think they're still running, according to our scouts.",
+      "index": "134"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDGeneralOliverTopic110",
+      "topic_text": "I'm going to rest for a bit, if you don't mind.",
+      "emotion": "Happy 10",
+      "response_text": "Course not. You earned it - rest up, let us carry things for a while.",
+      "index": "137"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDGeneralOliverTopic111",
+      "topic_text": "If there's nothing else, General, I'll head out.",
+      "emotion": "Happy 30",
+      "response_text": "{Chuckles}Can't keep the courier spirit down, eh? Fair enough. We'll clean up here.",
+      "index": "139"
+    },
+    {
+      "topic": "VHDOliverLegionFightStarter",
+      "topic_text": "VHDOliverLegionFightStarter",
+      "emotion": "Neutral 50",
+      "response_text": "So, you must be the Courier the reports mentioned. Pass this message on to your commander - Hoover Dam will not fall while I still draw breath.",
+      "index": "140"
+    },
+    {
+      "topic": "vHDOliverConversationContinue",
+      "topic_text": "<Debug: Don't Delete>Oliver Forced Dialogue in Dam.",
+      "emotion": "Neutral 50",
+      "response_text": "Okay, listen here. Unless we can get some additional support, I'm going to need you to help me resolve this situation.",
+      "index": "141"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "vHDOliverEmergency2",
+      "topic_text": "vHDOliverEmergency2",
+      "emotion": "Neutral 50",
+      "response_text": "Into the power station?{Dumbfounded}How is that possible?",
+      "index": "143"
+    }
+  ],
+  "combat": [
+    {
+      "topic": "AcceptYield",
+      "topic_text": "AcceptYield",
+      "emotion": "Neutral 50",
+      "response_text": "Better not try that again.",
+      "index": "144"
+    },
+    {
+      "topic": "Assault",
+      "topic_text": "Assault",
+      "emotion": "Neutral 50",
+      "response_text": "Assassin!",
+      "index": "145"
+    },
+    {
+      "topic": "Attack",
+      "topic_text": "Attack",
+      "emotion": "Neutral 50",
+      "response_text": "Take this!",
+      "index": "146"
+    },
+    {
+      "topic": "AvoidThreat",
+      "topic_text": "AvoidThreat",
+      "emotion": "Neutral 50",
+      "response_text": "Look out!",
+      "index": "149"
+    },
+    {
+      "topic": "Death",
+      "topic_text": "Death",
+      "emotion": "Neutral 50",
+      "response_text": "{Death sound}",
+      "index": "150"
+    },
+    {
+      "topic": "DeathResponse",
+      "topic_text": "DeathResponse",
+      "emotion": "Neutral 50",
+      "response_text": "Man down!",
+      "index": "151"
+    },
+    {
+      "topic": "FireExplosive",
+      "topic_text": "FireExplosive",
+      "emotion": "Neutral 50",
+      "response_text": "Incoming!",
+      "index": "153"
+    },
+    {
+      "topic": "Flee",
+      "topic_text": "Flee",
+      "emotion": "Neutral 50",
+      "response_text": "Fall back!",
+      "index": "154"
+    },
+    {
+      "topic": "Hit",
+      "topic_text": "Hit",
+      "emotion": "Neutral 50",
+      "response_text": "I'm hit!",
+      "index": "155"
+    },
+    {
+      "topic": "Murder",
+      "topic_text": "Murder",
+      "emotion": "Neutral 50",
+      "response_text": "You killed him!",
+      "index": "156"
+    },
+    {
+      "topic": "Steal",
+      "topic_text": "Steal",
+      "emotion": "Neutral 50",
+      "response_text": "Thief!",
+      "index": "158"
+    }
+  ]
+}

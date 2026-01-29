@@ -1,0 +1,360 @@
+{
+  "name": "Jean-Baptiste Cutting",
+  "url": "/wiki/Jean-Baptiste_Cutting",
+  "dialogue_name": "VFSJeanBaptisteCutting.txt",
+  "dialogue_url": "/wiki/VFSJeanBaptisteCutting.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "0010C681",
+  "ref_id": "0010D8E5",
+  "editor_id": "VFSJeanBaptisteCutting",
+  "location": "Silver Rush",
+  "location_url": "/wiki/Silver_Rush",
+  "descriptions": [
+    "Jean-Baptiste Cutting is the head of security for the Mojave Wasteland branch of the Van Graffs weapons empire. He is Gloria Van Graff's half-brother and her right-hand man, living at the Silver Rush weapon shop in Freeside in 2281.",
+    "Around 2281, Cutting has taken on the role of an enforcer, becoming the backbone of the Van Graff family security forces. He works in the Silver Rush alongside his half-sister, Gloria, who he refers to as \"Glory\" and does his part in the politics of their operations in the only way he knows how; with the barrel of his laser rifle. He has Cutting as a surname, as opposed to Van Graff because his mother liked his father so much that she wanted Jean-Baptiste to have his father's last name."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Van Graffs",
+  "role": "Right hand manGuardJack of Spades",
+  "detailed_location": "Silver Rush",
+  "voice_actor": "Emerson Brooks",
+  "special": {
+    "Strength": 8,
+    "Perception": 6,
+    "Endurance": 8,
+    "Charisma": 5,
+    "Intelligence": 5,
+    "Agility": 7,
+    "Luck": 5
+  },
+  "level": "1",
+  "tag_skills": [
+    {
+      "Energy Weap.:": "117"
+    },
+    {
+      "Guns:": "34"
+    },
+    {
+      "Speech:": "30"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "435"
+    },
+    {
+      "Dam. Threshold:": "15"
+    }
+  ],
+  "karma": "Neutral",
+  "voice_type": "MaleAdult01DefaultB",
+  "geck_race": "AfricanAmerican",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "Well, looks like you came through after all. She's not half bad looking, is she? It's almost a shame...",
+      "index": "1"
+    },
+    {
+      "topic": "VMS29aVFSJeanBaptisteCuttingTopic000",
+      "topic_text": "Absolutely.",
+      "emotion": "Neutral 50",
+      "response_text": "All right then. If we're going to work together, there's only one thing you need to know about me. I like things simple.",
+      "index": "14"
+    },
+    {
+      "topic": "VMS29aVFSJeanBaptisteCuttingTopic001",
+      "topic_text": "What would I have to do?",
+      "emotion": "Neutral 50",
+      "response_text": "No, no, no. That's not how it works. You don't get to weigh the options. You're either in or you're out.",
+      "index": "17"
+    },
+    {
+      "topic": "VMS29aVFSJeanBaptisteCuttingTopic002",
+      "topic_text": "I'm busy now.",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah, sure fucking thing. I'll be waiting with baited breath for your schedule to clear up, ha ha.",
+      "index": "18"
+    },
+    {
+      "topic": "VMS29aVFSJeanBaptisteCuttingTopic004",
+      "topic_text": "In that case, I'm out.",
+      "emotion": "Neutral 50",
+      "response_text": "I thought so. Come back when you've got a backbone.",
+      "index": "19"
+    },
+    {
+      "topic": "VMS29aVFSJeanBaptisteCuttingTopic005",
+      "topic_text": "Who is this girl?",
+      "emotion": "Neutral 50",
+      "response_text": "Her name's Rose of Sharon Cassidy. That's some fancy shit, right?{Beat, to himself}Don't know what her mother was thinking with a name like that.",
+      "index": "20"
+    },
+    {
+      "topic": "VMS29aVFSJeanBaptisteCuttingTopic006",
+      "topic_text": "Do you know where she is?",
+      "emotion": "Neutral 50",
+      "response_text": "Fuck, no. If I knew where this bitch was, do you think I'd be asking you?",
+      "index": "22"
+    },
+    {
+      "topic": "VMS29aVFSJeanBaptisteCuttingTopic009",
+      "topic_text": "I'll do it.",
+      "emotion": "Neutral 50",
+      "response_text": "Find her, bring her back here so we can talk. Needless to say, there's some good money in it for you.",
+      "index": "25"
+    },
+    {
+      "topic": "VMS29aVFSJeanBaptisteCuttingTopic010",
+      "topic_text": "I better go.",
+      "emotion": "Neutral 50",
+      "response_text": "Then go bother someone else. I got shit to do.",
+      "index": "26"
+    },
+    {
+      "topic": "VMS29aVFSJeanBaptisteCuttingTopic012",
+      "topic_text": "Count me out.",
+      "emotion": "Neutral 50",
+      "response_text": "You already agreed to take the job, asshole. There's no backing out now.",
+      "index": "27"
+    },
+    {
+      "topic": "VMS29aVFSJeanBaptisteCuttingTopic013",
+      "topic_text": "Just thought I'd say hi.",
+      "emotion": "Anger 50",
+      "response_text": "<Jean-Baptiste just stares at you.>",
+      "index": "28"
+    },
+    {
+      "topic": "VMS29aVFSJeanBaptisteCuttingTopic014",
+      "topic_text": "She's dead.",
+      "emotion": "Neutral 50",
+      "response_text": "Guess I don't have to worry about talking with her, then. About fucking time. Any longer and I was gonna track you both down.",
+      "index": "29"
+    },
+    {
+      "topic": "VMS29aVFSJeanBaptisteCuttingTopic015",
+      "topic_text": "I'm working on it.",
+      "emotion": "Neutral 50",
+      "response_text": "Well work fucking faster. I don't like thinking there's someone out there that hates me more than I hate them.",
+      "index": "33"
+    },
+    {
+      "topic": "VMS29aVFSJeanBaptisteCuttingTopic016{ Ask about Pacer }",
+      "topic_text": "I heard your family has a grudge against a King named Pacer.",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah, you can blame Glory for that mess. She had some fun with the little prick and it ended badly.",
+      "index": "34"
+    },
+    {
+      "topic": "VMS29aVFSJeanBaptisteCuttingTopic017",
+      "topic_text": "I was thinking of raiding his jet stash.",
+      "emotion": "Neutral 50",
+      "response_text": "Ha, he's a jet junkie? He'll go crazy when he finds it gone. I like it.",
+      "index": "36"
+    },
+    {
+      "topic": "VMS29aVFSJeanBaptisteCuttingTopic018",
+      "topic_text": "Why don't you just kill him?",
+      "emotion": "Neutral 50",
+      "response_text": "We could do that, but then we'd have to kill his four hundred friends too, and that'd just get tiring.",
+      "index": "39"
+    },
+    {
+      "topic": "VMS29aVFSJeanBaptisteCuttingTopic019",
+      "topic_text": "What about you?",
+      "emotion": "Neutral 50",
+      "response_text": "I'm not one for running a business. Never really had a head for numbers or smooth-talk. My talents are a little more... direct.",
+      "index": "41"
+    },
+    {
+      "topic": "VMS29aVFSJeanBaptisteCuttingTopic020",
+      "topic_text": "Tell me about the Van Graffs.",
+      "emotion": "Neutral 50",
+      "response_text": "Our family comes from Redding, to the west. We deal weapons mostly, but trade other commodities, like gold, if there's cash in it.",
+      "index": "45"
+    },
+    {
+      "topic": "VMS29aVFSJeanBaptisteCuttingTopic021",
+      "topic_text": "Tell me about your siblings.",
+      "emotion": "Neutral 50",
+      "response_text": "We're a wild bunch. There's my sister Frieda, who used to run this branch but took off to pursue \"the opportunity of a lifetime\", as she put it.",
+      "index": "49"
+    },
+    {
+      "topic": "VMS29aVFSJeanBaptisteCuttingTopic022",
+      "topic_text": "I had other questions.",
+      "emotion": "Neutral 50",
+      "response_text": "Make it quick. I got shit to do.",
+      "index": "51"
+    },
+    {
+      "topic": "VMS29aVFSJeanBaptisteCuttingTopic023",
+      "topic_text": "What about Gloria?",
+      "emotion": "Neutral 50",
+      "response_text": "Glory? Glory's fucking{heavyily stressed}crazy.",
+      "index": "52"
+    },
+    {
+      "topic": "VMS29aVFSJeanBaptisteCuttingTopic025",
+      "topic_text": "How come your last name isn't Van Graff?",
+      "emotion": "Neutral 50",
+      "response_text": "Unlike most of my brothers and sisters, Mama didn't get sick of my father and get rid of him. He died right before I was born.",
+      "index": "55"
+    },
+    {
+      "topic": "VMS29aVFSJeanBaptisteCuttingTopic026",
+      "topic_text": "I've changed my mind. I'm not going to do it.",
+      "emotion": "Neutral 50",
+      "response_text": "That's just fucking great. I knew you didn't have what it takes from the start, but would Glory listen to me? No.",
+      "index": "57"
+    },
+    {
+      "topic": "VMS29aVFSJeanBaptisteCuttingTopic027",
+      "topic_text": "I thought you said I didn't have to kill her.",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah, if you brought her back here. Is she behind you or something? 'Cause I don't see her.",
+      "index": "59"
+    },
+    {
+      "topic": "VMS29aVFSJeanBaptisteCuttingTopic028",
+      "topic_text": "Sounds good, kill her.",
+      "emotion": "Neutral 50",
+      "response_text": "{Eager}Waited too long to finish this, last loose end, all wrapped up.",
+      "index": "61"
+    },
+    {
+      "topic": "VMS29aVFSJeanBaptisteCuttingTopic030",
+      "topic_text": "You shoot, you'll regret it.",
+      "emotion": "Neutral 50",
+      "response_text": "{Scoffs}Really. We'll see about that.",
+      "index": "62"
+    },
+    {
+      "topic": "VMS29aVFSJeanBaptisteCuttingTopic031",
+      "topic_text": "[Terrifying Presence] Raise that gun, and I'll kill everyone in here.",
+      "emotion": "Neutral 50",
+      "response_text": "{Pauses, a little uneasy}You know what, I think you mean that. All right... maybe...",
+      "index": "63"
+    },
+    {
+      "topic": "VMS29aVFSJeanBaptisteCuttingTopic032",
+      "topic_text": "Cass is dead.",
+      "emotion": "Surprise 50",
+      "response_text": "Dead?{Beat}What... by you?{Beat, admiring}Yeah, I can tell, you had something to do with it.",
+      "index": "64"
+    },
+    {
+      "topic": "VMS29aVFSJeanBaptisteCuttingTopic033",
+      "topic_text": "Cass? She's in the Mojave Outpost.",
+      "emotion": "Neutral 50",
+      "response_text": "{Chews it over}Really. NCR all around her.",
+      "index": "66"
+    },
+    {
+      "topic": "VMS29aVFSJeanBaptisteCuttingTopic034",
+      "topic_text": "I doubt Cass will listen to anything I have to say.",
+      "emotion": "Neutral 50",
+      "response_text": "{Slight mockery}What? You two on the outs? Ain't that a shame.",
+      "index": "68"
+    },
+    {
+      "topic": "VMS29aVFSJeanBaptisteCuttingTopic035",
+      "topic_text": "Do you know where she is?",
+      "emotion": "Neutral 50",
+      "response_text": "Fuck, no. If I knew where this bitch was, do you think I'd be asking you?",
+      "index": "71"
+    },
+    {
+      "topic": "VMS29aVFSJeanBaptisteCuttingTopic036",
+      "topic_text": "Is it because the Van Graffs attacked her caravan?",
+      "emotion": "Neutral 50",
+      "response_text": "{Frowns}I had nothing to do with that, and neither did anyone here. Now where would you have gotten an idea like that?",
+      "index": "74"
+    },
+    {
+      "topic": "VMS29aVFSJeanBaptisteCuttingTopic037",
+      "topic_text": "Why don't you do it?",
+      "emotion": "Neutral 50",
+      "response_text": "I got business here, need to watch the shop, make sure things are running - smoothly.",
+      "index": "75"
+    },
+    {
+      "topic": "VMS29aVFSJeanBaptisteCuttingTopic038",
+      "topic_text": "Anything you can say to her, you can say to me.",
+      "emotion": "Neutral 50",
+      "response_text": "{Cold, angry that player is challenging him}You don't want{emph}us chatting, trust me.{Smooths out}As for the girl - I just want to talk to her.",
+      "index": "77"
+    },
+    {
+      "topic": "VMS29aVFSJeanBaptisteCuttingTopic039",
+      "topic_text": "What did you want to talk to her about?",
+      "emotion": "Neutral 50",
+      "response_text": "{Irritated}If your answer isn't \"yes, I'll bring her here\" or \"no, I won't, cause Gloria had me pegged wrong,\" then we're done here.",
+      "index": "79"
+    },
+    {
+      "topic": "VMS29aVFSJeanBaptisteCuttingTopic042",
+      "topic_text": "These contract papers, for one.",
+      "emotion": "Neutral 50",
+      "response_text": "So, looks like we have us a thief. All right, guess I'm talking to you instead of the girl.",
+      "index": "80"
+    },
+    {
+      "topic": "VMS29aVFSJeanBaptisteCuttingTopic043",
+      "topic_text": "Found out from investigating the wreckage.",
+      "emotion": "Neutral 50",
+      "response_text": "And after all the trouble I went through to kill all those witnesses. Guess now I have one more than I thought.",
+      "index": "81"
+    },
+    {
+      "topic": "VMS29aVFSJeanBaptisteCuttingTopic044",
+      "topic_text": "Nowhere.",
+      "emotion": "Neutral 50",
+      "response_text": "Nowhere's a strange place to get an idea like that.",
+      "index": "82"
+    },
+    {
+      "topic": "VMS29aVFSJeanBaptisteCuttingTopic045",
+      "topic_text": "I'm not doing this for you.",
+      "emotion": "Neutral 50",
+      "response_text": "{Frowns}Guess Gloria was wrong about you, then. Get out of here, you're no use to me.",
+      "index": "84"
+    },
+    {
+      "topic": "VMS29aVFSJeanBaptisteCuttingTopic046",
+      "topic_text": "Forget it, I'll bring her here.",
+      "emotion": "Neutral 50",
+      "response_text": "Good, getting tired of questions from you when I should be getting answers. Bring her here.",
+      "index": "85"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "VFSJeanBaptisteGreetsCass",
+      "topic_text": "VFSJeanBaptisteGreetsCass",
+      "emotion": "Neutral 50",
+      "response_text": "Hi, I'm Jean-Baptiste, and you're about to stop being a pain in my ass.",
+      "index": "86"
+    },
+    {
+      "topic": "VFSVanGraffLaughter",
+      "topic_text": "VFSVanGraffLaughter",
+      "emotion": "Neutral 50",
+      "response_text": "Ha ha, I think he wet himself before he left. That was pretty good making up that part about sleeping with Jacob.",
+      "index": "87"
+    }
+  ],
+  "combat": []
+}

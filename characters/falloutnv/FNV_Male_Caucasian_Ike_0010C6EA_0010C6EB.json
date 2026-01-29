@@ -1,0 +1,122 @@
+{
+  "name": "Ike",
+  "url": "/wiki/Ike",
+  "dialogue_name": "BCIke.txt",
+  "dialogue_url": "/wiki/BCIke.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": true,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "0010C6EA",
+  "ref_id": "0010C6EB",
+  "editor_id": "BCIke",
+  "location": "Big Horn Saloon",
+  "location_url": "/wiki/Big_Horn_Saloon",
+  "descriptions": [
+    "Ike is the bartender of the Big Horn Saloon and the sole resident of Boulder City in the Mojave Wasteland in 2281. He appears in Fallout: New Vegas.",
+    "The archetypal bartender of a lonely town, Ike is the only remaining resident of Boulder City after much of it was destroyed during the First Battle of Hoover Dam in 2277.",
+    "Around October 2281, Ike's business took another hit after the operations at Quarry Junction were interrupted by an infestation of deathclaws, halting production and consequently the workers' wage prospects. Despite the slim pickings, Ike has thus far remained beholden to his establishment, refusing to close his doors and move on."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "role": "Bartender",
+  "detailed_location": "Boulder CityBig Horn Saloon",
+  "voice_actor": "Yuri Lowenthal",
+  "special": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 7,
+    "Intelligence": 5,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "level": "4",
+  "tag_skills": [
+    {
+      "Barter:": "46"
+    },
+    {
+      "Melee Weap.:": "42"
+    },
+    {
+      "Speech:": "46"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Neutral",
+  "voice_type": "MaleAdult01Default",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "{Player not in NCR gear}{pleased}A customer! Not many people come into Boulder City these days.",
+      "index": "1"
+    },
+    {
+      "topic": "VFreeformBoulderCityBCIkeTopic002",
+      "topic_text": "Where does the concrete come from?",
+      "emotion": "Neutral 50",
+      "response_text": "{Quarry Junction Deathclaws dead}Most of the limestone comes from Quarry Junction out west. The supply had stopped for awhile because of a Deathclaw problem.",
+      "index": "7"
+    },
+    {
+      "topic": "VFreeformBoulderCityBCIkeTopic007",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Come back real soon!",
+      "index": "12"
+    },
+    {
+      "topic": "VFreeformBoulderCityBCIkeTopic009",
+      "topic_text": "I'm not a trooper. I just happen to be wearing the armor.",
+      "emotion": "Neutral 50",
+      "response_text": "Oh. Well, you'd better not let any of the real troopers hear that - and, of course, they won't be hearing it from me, neither.",
+      "index": "13"
+    },
+    {
+      "topic": "VFreeformBoulderCityBCIkeTopic010",
+      "topic_text": "Show me what you have for sale.",
+      "emotion": "Neutral 50",
+      "response_text": "What can I get you?",
+      "index": "15"
+    },
+    {
+      "topic": "VFreeformBoulderCityBCIkeTopic011",
+      "topic_text": "Why is the Big Horn off limits to troopers?",
+      "emotion": "Neutral 50",
+      "response_text": "The workers here don't much like the military. After too many fights and broken noses, the NCR doesn't allow troops to spend time here.",
+      "index": "16"
+    },
+    {
+      "topic": "VFreeformBoulderCityBCIkeTopic015",
+      "topic_text": "Tell me about Boulder City.",
+      "emotion": "Neutral 50",
+      "response_text": "Most of the town is rubble - destroyed during the Battle of Hoover Dam - and the only other thing around here is the concrete mixing yard.",
+      "index": "18"
+    },
+    {
+      "topic": "VFreeformBoulderCityBCIkeTopic017",
+      "topic_text": "What's the concrete used for?",
+      "emotion": "Neutral 50",
+      "response_text": "The NCR has been constructing bunkers up and down the river. From what I've heard, it's a little late for that.",
+      "index": "19"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "Goodbye.",
+      "emotion": "Happy 5",
+      "response_text": "Come back real soon!",
+      "index": "21"
+    }
+  ],
+  "combat": []
+}

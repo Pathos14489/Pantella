@@ -1,0 +1,279 @@
+{
+  "name": "Bumble",
+  "url": "/wiki/Bumble",
+  "dialogue_name": "Bumble.txt",
+  "dialogue_url": "/wiki/Bumble.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": true,
+  "can_be_enslaved": true,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "00015699",
+  "ref_id": "00036FEE",
+  "editor_id": "Bumble",
+  "location": "Little Lamplightschoolhouse",
+  "location_url": "/wiki/Little_Lamplight",
+  "descriptions": [
+    "Betty \"Bumble\" is six years old and the youngest citizen of Little Lamplight in Fallout 3.",
+    "Bumble is the youngest and most naive inhabitant of Little Lamplight, eager to prove herself as a \"big girl\" and go on adventures.",
+    "She enjoys attending Joseph's classes and has learned how to tie her shoe laces, put out a fire, and load bullets into a gun.",
+    "On occasion, she carries a teddy bear that has been passed down through the generations, down to her mother and subsequently to Bumble.",
+    "Bumble spends most of her time in the office building either with Joseph, or with Lucy in the clinic. She calls Joseph \"Uncle Joseph,\" which annoys Penny into telling Bumble he's not her uncle.",
+    "Bumble is likely to be found at the office building. If she is not there, she sometimes is in the main cave or the Great Chamber."
+  ],
+  "race": "Human",
+  "gender": "Female",
+  "affiliation": "Little Lamplight",
+  "role": "Little Lamplight citizenSlave(optional)",
+  "detailed_location": "Little Lamplight",
+  "voice_actor": "Stephanie Joy",
+  "special": {
+    "Strength": 3,
+    "Perception": 4,
+    "Endurance": 3,
+    "Charisma": 3,
+    "Intelligence": 3,
+    "Agility": 7,
+    "Luck": 7
+  },
+  "level": "1",
+  "tag_skills": [
+    {
+      "Explosives:": "29"
+    },
+    {
+      "Small Guns:": "35"
+    },
+    {
+      "Sneak:": "35"
+    }
+  ],
+  "karma": "Good",
+  "voice_type": "FemaleChild01DC",
+  "geck_race": "HispanicChild",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Happy 50",
+      "response_text": "You're my hero, ma'am. I want to be just like you when I grow up.",
+      "index": "1"
+    },
+    {
+      "topic": "LLBumbleSlaver1ALLBumbleSlaver1",
+      "topic_text": "I'm a Slaver. And I think you're just the kid I'm looking for!",
+      "emotion": "Happy 50",
+      "response_text": "<giggles> You're silly!{begin with innocent giggle at what is obviously a joke}",
+      "index": "11"
+    },
+    {
+      "topic": "LLBumbleSlaver1B",
+      "topic_text": "Bumble, do you want to go outside?",
+      "emotion": "Fear 25",
+      "response_text": "No, I don't like the outside!",
+      "index": "14"
+    },
+    {
+      "topic": "LLBumbleSlaver1C",
+      "topic_text": "Maybe you should wait before going on any adventures.",
+      "emotion": "Sad 5",
+      "response_text": "Well, okay. But only 'cause Lucy says I shouldn't go outside alone yet.{A little petulant}",
+      "index": "16"
+    },
+    {
+      "topic": "LLBumbleSlaver2A",
+      "topic_text": "Come on, it'll be an adventure!",
+      "emotion": "Happy 75",
+      "response_text": "Oh boy, an adventure! Let's go, let's go, oh pleeease, let's go now!",
+      "index": "17"
+    },
+    {
+      "topic": "LLBumbleSlaver2B",
+      "topic_text": "On second thought, maybe not. You could get into trouble.",
+      "emotion": "Sad 5",
+      "response_text": "Awww. Well, maybe next time?",
+      "index": "19"
+    },
+    {
+      "topic": "LLClasses",
+      "topic_text": "What do you think of Joseph's classes?",
+      "emotion": "Happy 50",
+      "response_text": "I learned how to tie my shoes, and how to put out a fire, and how to put bullets into a gun!{In the purest, sweetest, most innocent tones possible.}",
+      "index": "20"
+    },
+    {
+      "topic": "LLDirections",
+      "topic_text": "Can you give me directions?",
+      "emotion": "Fear 10",
+      "response_text": "I dunno. I still get lost sometimes. Things are really big.",
+      "index": "23"
+    },
+    {
+      "topic": "LLFirstMeetingResponseAFriendly First Response",
+      "topic_text": "Sometimes, people call me the Vault Dweller. It's nice to meet you.",
+      "emotion": "Happy 50",
+      "response_text": "It's nice to meet you, too. Did you come from the vault? I heard there's monsters down there.",
+      "index": "24"
+    },
+    {
+      "topic": "LLFirstMeetingResponseBRude First Response",
+      "topic_text": "None of your business, squirt.",
+      "emotion": "Sad 50",
+      "response_text": "Oh, okay. Bye.{A little dejected.}",
+      "index": "30"
+    },
+    {
+      "topic": "LLLMQ06TellMeAboutVault87",
+      "topic_text": "What do you know about Vault 87?",
+      "emotion": "Neutral 50",
+      "response_text": "I don't know what that is, mister.{quiet, confused}",
+      "index": "33"
+    },
+    {
+      "topic": "LLNicknames",
+      "topic_text": "Why do they call you Bumble?",
+      "emotion": "Anger 15",
+      "response_text": "It's just a name, okay?",
+      "index": "34"
+    },
+    {
+      "topic": "SpeechChallengeFailure",
+      "topic_text": "SpeechChallengeFailure",
+      "emotion": "Anger 50",
+      "response_text": "No! I'm not supposed to go outside with strangers! Help!",
+      "index": "37"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYEI have to go now.",
+      "topic_text": "Bye-bye, Bumble.",
+      "emotion": "Neutral 50",
+      "response_text": "Bye-bye, Vault Dweller!",
+      "index": "38"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Disgust 50",
+      "response_text": "I'm not supposed to talk to bad people.",
+      "index": "41"
+    },
+    {
+      "topic": "LLBumbleByeBye",
+      "topic_text": "LLBumbleByeBye",
+      "emotion": "Happy 50",
+      "response_text": "Bye-bye, mister! I'm off on an adventure!{Totally naive. This is the last thing the player ever hears from her.}",
+      "index": "47"
+    },
+    {
+      "topic": "LLBumbleJokeLaugh",
+      "topic_text": "LLBumbleJokeLaugh",
+      "emotion": "Happy 50",
+      "response_text": "Ha ha ha!{Innocent little laughter at a joke she finds funny, even if she doesn't really get it.}",
+      "index": "49"
+    },
+    {
+      "topic": "LLBumbleStopFollowing",
+      "topic_text": "LLBumbleStopFollowing",
+      "emotion": "Happy 50",
+      "response_text": "I don't like the outside! I'm going home!{A little scared, a little defiant.}",
+      "index": "52"
+    },
+    {
+      "topic": "LLClassConv1",
+      "topic_text": "LLClassConv1",
+      "emotion": "Happy 25",
+      "response_text": "Uncle Joseph, could you explain more about the outside?",
+      "index": "53"
+    },
+    {
+      "topic": "LLClassConv5",
+      "topic_text": "LLClassConv5",
+      "emotion": "Happy 50",
+      "response_text": "Yes, sir!",
+      "index": "55"
+    },
+    {
+      "topic": "LLFoodConv1",
+      "topic_text": "LLFoodConv1",
+      "emotion": "Happy 50",
+      "response_text": "Food, please!",
+      "index": "57"
+    },
+    {
+      "topic": "LLPrincessBullyResponse",
+      "topic_text": "LLPrincessBullyResponse",
+      "emotion": "Fear 15",
+      "response_text": "Sorry, Miss Princess. Please don't get angry at me, okay?{scared and on the verge of crying}",
+      "index": "58"
+    },
+    {
+      "topic": "LLRandomConv1",
+      "topic_text": "LLConversation1",
+      "emotion": "Fear 15",
+      "response_text": "Hello. How are you?",
+      "index": "59"
+    },
+    {
+      "topic": "LLRandomConv2",
+      "topic_text": "LLConversation2",
+      "emotion": "Fear 15",
+      "response_text": "I'm fine, thanks!",
+      "index": "60"
+    },
+    {
+      "topic": "LLRandomConvEnding",
+      "topic_text": "LLRandomConvEnding",
+      "emotion": "Neutral 15",
+      "response_text": "Oh, okay. Umm, bye!",
+      "index": "61"
+    },
+    {
+      "topic": "LLSlaverBumble1",
+      "topic_text": "LLSlaverBumble1",
+      "emotion": "Happy 50",
+      "response_text": "Thank you, miss! We're going on an adventure!{Naive and unaware}",
+      "index": "62"
+    },
+    {
+      "topic": "LLSlaverBumble1C",
+      "topic_text": "LLSlaverBumble1C",
+      "emotion": "Happy 50",
+      "response_text": "Oh boy! Let's go now! Can we please?{Naive and unaware}",
+      "index": "63"
+    },
+    {
+      "topic": "LLSlaverBumble3",
+      "topic_text": "LLSlaverBumble3",
+      "emotion": "Surprise 10",
+      "response_text": "Ow, it's all scratchy!",
+      "index": "64"
+    },
+    {
+      "topic": "LLSlaverBumble5",
+      "topic_text": "LLSlaverBumble5",
+      "emotion": "Happy 50",
+      "response_text": "Well... Okay. I can't wait to tell Lucy about this adventure!",
+      "index": "65"
+    },
+    {
+      "topic": "LLWhatsUp1",
+      "topic_text": "LLWhatsUp1",
+      "emotion": "Fear 15",
+      "response_text": "Hello. What's happening?",
+      "index": "66"
+    },
+    {
+      "topic": "LLWhatsUp2",
+      "topic_text": "LLWhatsUp2",
+      "emotion": "Fear 15",
+      "response_text": "I got a new tooth today! It was just lying there and now it's mine!{Excited and innocent}",
+      "index": "67"
+    }
+  ],
+  "combat": []
+}

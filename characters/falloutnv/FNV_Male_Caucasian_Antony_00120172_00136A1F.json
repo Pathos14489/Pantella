@@ -1,0 +1,267 @@
+{
+  "name": "Antony",
+  "url": "/wiki/Antony",
+  "dialogue_name": "FortAntony.txt",
+  "dialogue_url": "/wiki/FortAntony.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "00120172",
+  "ref_id": "00136A1F",
+  "editor_id": "FortAntony",
+  "location": "The Fort",
+  "location_url": "/wiki/The_Fort",
+  "descriptions": [
+    "Antony is a former member of the Hangdogs tribe from Colorado, by 2281 serving as a houndmaster for Caesar's Legion at the Fort in the Mojave Wasteland. He appears in Fallout: New Vegas.",
+    "Antony was born into the Hangdogs, a tribe residing in and around the pre-War city of Denver, Colorado that became known for their symbiotic relationships and spiritual worship of the packs of wild dogs that inhabited the ruins. Antony himself was an ardent worshiper of the tribe's beliefs and their hounds.",
+    "Sometime during the Legion's movement to regain their strength after the First Battle of Hoover Dam and their loss to the New California Republic in 2277, Legate Lanius led a campaign to conquer Denver which the Hangdogs resisted, and did so for the longest time compared to other tribes near there.",
+    "While the Hangdogs have been wiped from history, in his new position Antony's mongrels are his life; he thinks very highly of their ability and considers them worthy of the utmost respect.",
+    "In contrast to his hounds, Antony shares other Legion members' callous and contemptuous attitude towards their slaves, even including the child Melody; in her case, he considers it a privilege that she is even allowed to wear clothes. When he discovered she was keeping a teddy bear, he confiscated and gave it to his dogs as a chew toy purely out of cruelty.",
+    "If the Courier orders Rex to stay outside the Fort's interior before approaching Antony inside, he will still give the unique dialogue as if Rex was present.",
+    "Frumentarii: Alerio · Cato Hostilius · Gabban · Karl · Picus · Disguised frumentarius · Ulysses (formerly)\nConsul: M. Licinius Crassus · M. Scribonius Libo Drusus (of the consul)"
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Hangdogs(formerly)Caesar's Legion",
+  "role": "Houndmaster",
+  "detailed_location": "The Fort",
+  "voice_actor": "Yuri Lowenthal",
+  "special": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 5,
+    "Intelligence": 5,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "level": "10",
+  "tag_skills": [
+    {
+      "Guns:": "66"
+    },
+    {
+      "Science:": "66"
+    },
+    {
+      "Unarmed:": "64"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Neutral",
+  "voice_type": "MaleAdult01Default",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "Outsiders are a rare sight at the Fort. Step carefully around here and you might just leave alive. I'm Antony, master of the hounds.",
+      "index": "1"
+    },
+    {
+      "topic": "VFreeformTheFortFortAntonyTopic000",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Later.",
+      "index": "7"
+    },
+    {
+      "topic": "VFreeformTheFortFortAntonyTopic001",
+      "topic_text": "I had some questions.",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah?",
+      "index": "8"
+    },
+    {
+      "topic": "VFreeformTheFortFortAntonyTopic002",
+      "topic_text": "Where does the Legion get its dogs?",
+      "emotion": "Neutral 50",
+      "response_text": "We breed them, mostly, but sometimes we get some good ones from Denver. That whole city is overrun with them.",
+      "index": "9"
+    },
+    {
+      "topic": "VFreeformTheFortFortAntonyTopic003",
+      "topic_text": "Let's talk about something else.",
+      "emotion": "Neutral 50",
+      "response_text": "Okay.",
+      "index": "10"
+    },
+    {
+      "topic": "VFreeformTheFortFortAntonyTopic004",
+      "topic_text": "You train these dogs?",
+      "emotion": "Neutral 50",
+      "response_text": "Been doing it since I was a boy. The mongrels know to listen up when I start talking to them.",
+      "index": "11"
+    },
+    {
+      "topic": "VFreeformTheFortFortAntonyTopic005",
+      "topic_text": "I'm here for Melody's bear.",
+      "emotion": "Neutral 50",
+      "response_text": "The stupid girl should know by now that even the rags on her back are a privilege. Anyway, my mongrels like their new toy.",
+      "index": "12"
+    },
+    {
+      "topic": "VFreeformTheFortFortAntonyTopic006",
+      "topic_text": "Rex? I picked him up in New Vegas.",
+      "emotion": "Neutral 50",
+      "response_text": "Oh? Such things are common in Denver, but I didn't know that other cities had them as well.",
+      "index": "15"
+    },
+    {
+      "topic": "VFreeformTheFortFortAntonyTopic007",
+      "topic_text": "<Lie> He just started following me one day. I have no idea where he came from.",
+      "emotion": "Neutral 50",
+      "response_text": "I see. That's very strange.",
+      "index": "16"
+    },
+    {
+      "topic": "VFreeformTheFortFortAntonyTopic008",
+      "topic_text": "Why do you want to know?",
+      "emotion": "Neutral 50",
+      "response_text": "I ask because Caesar once had a similar pet, but it was lost during a battle.",
+      "index": "17"
+    },
+    {
+      "topic": "VFreeformTheFortFortAntonyTopic009< Barter 50 >",
+      "topic_text": "Potentially losing four dogs is a very high price to pay for a toy. What about two?",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] All right, two it is. They'll still be more than enough to take you down, I think.",
+      "index": "18"
+    },
+    {
+      "topic": "VFreeformTheFortFortAntonyTopic011",
+      "topic_text": "What can you tell me about Legate Lanius?",
+      "emotion": "Neutral 50",
+      "response_text": "It took years for{KAI-zar}Caesar to conquer Lanius' tribe, and{KAI-zar}Caesar showed mercy to the survivors, allowing them to join the Legion.",
+      "index": "20"
+    },
+    {
+      "topic": "VFreeformTheFortFortAntonyTopic012",
+      "topic_text": "You won't mind if I kill them?",
+      "emotion": "Neutral 50",
+      "response_text": "I think they'll probably end up killing you. I trained them myself. But, if you do win somehow, the mongrels will at least get honorable deaths.",
+      "index": "22"
+    },
+    {
+      "topic": "VFreeformTheFortFortAntonyTopic013",
+      "topic_text": "The mongrels won't touch me. Animals like me.",
+      "emotion": "Neutral 50",
+      "response_text": "I thought something was wrong. We usually have to pull them off any visitors to the Fort.",
+      "index": "23"
+    },
+    {
+      "topic": "VFreeformTheFortFortAntonyTopic014",
+      "topic_text": "You thought wrong.",
+      "emotion": "Disgust 50",
+      "response_text": "Take the bear. I can't believe I let some of my best dogs get killed over this stupid thing.",
+      "index": "25"
+    },
+    {
+      "topic": "VFreeformTheFortFortAntonyTopic015",
+      "topic_text": "I need to think about this.",
+      "emotion": "Neutral 50",
+      "response_text": "You do that.",
+      "index": "28"
+    },
+    {
+      "topic": "VFreeformTheFortFortAntonyTopic016",
+      "topic_text": "Let's do this.",
+      "emotion": "Neutral 50",
+      "response_text": "Good luck - you'll need it.",
+      "index": "29"
+    },
+    {
+      "topic": "VFreeformTheFortFortAntonyTopic018",
+      "topic_text": "Nice dog.",
+      "emotion": "Neutral 50",
+      "response_text": "Lupa? Yes, she's the mother of a lot of our best dogs. She's getting old, but she's still a tough old bitch.{to Lupa}Aren't you, girl?",
+      "index": "30"
+    },
+    {
+      "topic": "VFreeformTheFortFortAntonyTopic019",
+      "topic_text": "[Reputation] I've done a lot for the Legion. Just hand over the bear already.",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah, I guess you're right. Here.",
+      "index": "31"
+    },
+    {
+      "topic": "VFreeformTheFortFortAntonyTopic020",
+      "topic_text": "I could use Lupa's brain to fix my cyber-dog.",
+      "emotion": "Surprise 50",
+      "response_text": "Cyber-dog? Like the ones I've seen up in Denver? I know what you're talking about, and it would make Lupa immortal in a way.",
+      "index": "32"
+    },
+    {
+      "topic": "VFreeformTheFortFortAntonyTopic021",
+      "topic_text": "Is that a yes?",
+      "emotion": "Neutral 50",
+      "response_text": "You give Lupa a worthy death in the arena, and her brain is yours. Don't let your guard down just because she's old, though.",
+      "index": "33"
+    },
+    {
+      "topic": "VFreeformTheFortFortAntonyTopic022",
+      "topic_text": "They have cyber-dogs in Denver?",
+      "emotion": "Neutral 50",
+      "response_text": "Not too common but you still see 'em around.",
+      "index": "35"
+    },
+    {
+      "topic": "VFreeformTheFortFortAntonyTopic023",
+      "topic_text": "I'm ready to fight Lupa now.",
+      "emotion": "Neutral 50",
+      "response_text": "All right.{to Lupa}You've been a good dog, Lupa. Die well, girl.",
+      "index": "36"
+    },
+    {
+      "topic": "VFreeformTheFortFortAntonyTopic024",
+      "topic_text": "I'll be back when I'm ready.",
+      "emotion": "Neutral 50",
+      "response_text": "Take all the time you need, otherwise Lupa will tear your throat out.",
+      "index": "37"
+    },
+    {
+      "topic": "VFreeformTheFortFortAntonyTopic025",
+      "topic_text": "I'm ready to fight Lupa.",
+      "emotion": "Neutral 50",
+      "response_text": "You sure? Last chance to back out.",
+      "index": "38"
+    },
+    {
+      "topic": "VFreeformTheFortFortAntonyTopic028",
+      "topic_text": "Tell me about yourself.",
+      "emotion": "Neutral 50",
+      "response_text": "I've been around dogs all my life. They're my life, always were -{pauses, thinking back, as if he's forgotten}all the way back when I was a tribal, one of the Hangdogs, outside Denver.",
+      "index": "39"
+    },
+    {
+      "topic": "VFreeformTheFortFortAntonyTopic029",
+      "topic_text": "How did you end up joining the Legion?",
+      "emotion": "Neutral 50",
+      "response_text": "When the Legion showed up, we fought, most tribes did. Hangdogs hung out longer than most...{beat}broke us by throwing our dogs on the fire.",
+      "index": "42"
+    },
+    {
+      "topic": "VFreeformTheFortFortAntonyTopic030",
+      "topic_text": "What do you know about the Burned Man?",
+      "emotion": "Anger 20",
+      "response_text": "{hiding his fear behind angry denial}He's a story to frighten the younger Legionaries. He's dead - no man, no matter how tough, could survive a fall into the Grand Canyon.",
+      "index": "45"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Later.",
+      "index": "46"
+    }
+  ],
+  "combat": []
+}

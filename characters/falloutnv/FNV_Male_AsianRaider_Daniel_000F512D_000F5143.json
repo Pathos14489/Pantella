@@ -1,0 +1,78 @@
+{
+  "name": "Daniel",
+  "url": "/wiki/Daniel_(Fallout:_New_Vegas)",
+  "dialogue_name": "V03FiendJailer.txt",
+  "dialogue_url": "/wiki/V03FiendJailer.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000F512D",
+  "ref_id": "000F5143",
+  "editor_id": "V03FiendJailer",
+  "location": "Vault 3 living quarters",
+  "location_url": "/wiki/Vault_3#Living_quarters",
+  "descriptions": [
+    "Daniel is a high-ranking member of the Fiends, serving as Motor-Runner's right-hand man inside Vault 3 in the Mojave Wasteland.",
+    "A leading member of the gang, he is usually found patrolling the back end of Vault 3's living quarters. He is accompanied by another high-ranking  Fiend, who acts as a bodyguard. Recently, the gang had captured four traders who are being detained by Daniel. He possesses the key to their cell."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Fiends",
+  "role": "Right hand manJailer",
+  "detailed_location": "Vault 3living quarters",
+  "voice_actor": "Yuri Lowenthal",
+  "special": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 3,
+    "Intelligence": 3,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "mod_special_values": {
+    "Strength": 6,
+    "Perception": 6,
+    "Endurance": 4,
+    "Charisma": 3,
+    "Intelligence": 3,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "level": "14→33→55(DLCs only) (Player level x1.10)",
+  "tag_skills": [
+    {
+      "Guns:": "79→100"
+    },
+    {
+      "Melee Weap.:": "79→100"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Neutral",
+  "voice_type": "MaleAdult01Default",
+  "geck_race": "AsianRaider",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "What the fuck are you doing here?",
+      "index": "1"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "Man, are you turned around. Motor-Runner is one the other side of the complex.",
+      "index": "2"
+    }
+  ],
+  "conversation": [],
+  "combat": []
+}

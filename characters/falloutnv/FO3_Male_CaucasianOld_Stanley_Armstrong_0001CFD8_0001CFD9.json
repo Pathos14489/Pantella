@@ -1,0 +1,153 @@
+{
+  "name": "Stanley Armstrong",
+  "url": "/wiki/Stanley_Armstrong",
+  "dialogue_name": "Stanley.txt",
+  "dialogue_url": "/wiki/Stanley.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "0001CFD8",
+  "ref_id": "0001CFD9",
+  "editor_id": "Stanley",
+  "location": "",
+  "location_url": null,
+  "descriptions": [
+    "Stanley Armstrong is a technician in the maintenance department of Vault 101 in Fallout 3.",
+    "Sweet, always worried and not very bright, Stanley is the father of Beatrice, Mary and Gloria. Stanley and Andy are responsible for keeping the vault running, tending to all the machinery and acting as its janitors.",
+    "On July 12, 2268, Stanley repairs the water purifier. This repair is a point of discussion between himself and Amata Almodovar when they engage in small talk the next day.",
+    "On that same day, Stanley performs routine maintenance on the pipes in the corridor outside the cafeteria. Midway through his work, he attends the birthday party of the Lone Wanderer. Though the Overseer presents the Pip-Boy 3000A to the Lone Wanderer, it is Stanley who selects the model. Though he admits that some might find the 3000A basic, Stanley believes the series is very reliable. Before the conversation ends, he gifts the Lone Wanderer with a kid's baseball cap.",
+    "In the 2270s, Stanley is diagnosed by James as suffering from stress. The stress is caused by overworking and exhaustion. The symptoms listed in a medical file include severe and chronic headaches and eyestrain caused by the lamps in his apartment. For treatment, James prescribes aspirin. By mid-2274, James expresses reticence in doing more for Stanley. As James types in his medical file, he acknowledges that Stanley may refuse rest and that the overseer will refuse any changes in the work schedule, and concludes that aspirin is the only option for the immediate future.",
+    "In late July 2274, James' assistant Jonas Palmer refills Stanley's prescription for aspirin.",
+    "On August 3, 2274, Stanley visits the clinic complaining of severe headaches and insomnia. Jonas confers with his patient and decides that further testing may be required. Jonas asks Stanley to wait as the clinic is prepared for the tests.",
+    "Stanley is the father of Beatrice Armstrong, Gloria, and Mary. Stanley's constant companion is Andy, a Mister Handy robot, that aids his human friend in cleaning and maintaining the vault. Stanley is friendly with the vault physician James and his child. In fact, during Escape!, he allows the Lone Wanderer to get past him without denouncing them to the vault's security, out of appreciation. However, he still says \"Good riddance, get out\" when the Lone Wanderer is exiled out of the vault after Trouble on the Homefront."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Vault 101",
+  "role": "Maintenance technician",
+  "detailed_location": "Vault 101",
+  "voice_actor": "Jeff Baker",
+  "special": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 5,
+    "Intelligence": 5,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "level": "1",
+  "misc_skills": [
+    {
+      "Hit Points:": "30"
+    },
+    {
+      "Critical Chance:": "5%"
+    },
+    {
+      "Unarmed Dam.:": "0.75"
+    },
+    {
+      "Poison Resist.:": "20%"
+    },
+    {
+      "Rad. Resist.:": "8%"
+    },
+    {
+      "Carry Weight:": "200"
+    },
+    {
+      "Damage Res.:": "1%"
+    }
+  ],
+  "karma": "Good",
+  "voice_type": "MaleAdult01DefaultDC",
+  "geck_race": "CaucasianOld",
+  "topics": [
+    {
+      "topic": "CG02StanleyA1",
+      "topic_text": "It's really cool. Did you fix it up for me?",
+      "emotion": "Happy 50",
+      "response_text": "As a matter of fact I did. I'm glad you like it. Some may think the A series a bit basic, but I've always preferred them for their reliability.{modestly}Play soundFO3 StanleyArmstrong MatterOfFac…https://fallout.fandom.com/wiki/File:FO3_StanleyArmstrong_MatterOfFact.oggnoicon",
+      "index": "1"
+    },
+    {
+      "topic": "CG02StanleyA2",
+      "topic_text": "It's all right. Seems kind of old, though.",
+      "emotion": "Happy 50",
+      "response_text": "Of course it is. Just like everybody else's. They don't make 'em any more now, do they?{with a laugh at your naivete}Play soundFO3 StanleyArmstrong OfCourseItI…https://fallout.fandom.com/wiki/File:FO3_StanleyArmstrong_OfCourseItIs.oggnoicon",
+      "index": "2"
+    },
+    {
+      "topic": "CG02StanleyA3",
+      "topic_text": "I hate it. How do I get it off?",
+      "emotion": "Surprise 100",
+      "response_text": "Get it off? Why in the world would you want to do that? Your Pip-Boy's the best friend you'll ever have!{he's shocked that you would even think of such a thing}Play soundFo3 StanleyArmstrong GetItOff.ogghttps://fallout.fandom.com/wiki/File:Fo3_StanleyArmstrong_GetItOff.oggnoicon",
+      "index": "5"
+    },
+    {
+      "topic": "CG02StanleyA4",
+      "topic_text": "Wally said my Pip-Boy was a piece of junk!",
+      "emotion": "Happy 50",
+      "response_text": "Don't you listen to him. The A series may be a bit heavier than the luxury models, but they were built to last.{reassuringly}Play soundFO3 StanleyArmstrong DontYouList…https://fallout.fandom.com/wiki/File:FO3_StanleyArmstrong_DontYouListen.oggnoicon",
+      "index": "9"
+    },
+    {
+      "topic": "CG02StanleyB1",
+      "topic_text": "Thanks, Stanley.",
+      "emotion": "Happy 50",
+      "response_text": "Don't mention it.{modestly}Play soundFO3 StanleyArmstrong DontMention…https://fallout.fandom.com/wiki/File:FO3_StanleyArmstrong_DontMentionIt.oggnoicon",
+      "index": "11"
+    },
+    {
+      "topic": "CG02StanleyB2",
+      "topic_text": "Sure, whatever. Did you bring me anything for my birthday?",
+      "emotion": "Happy 50",
+      "response_text": "Here am I going on about your Pip-Boy and I clean forgot about your present!{palm slap to face kind of delivery}Play soundFO3 StanleyArmstrong HereAmI.ogghttps://fallout.fandom.com/wiki/File:FO3_StanleyArmstrong_HereAmI.oggnoicon",
+      "index": "13"
+    },
+    {
+      "topic": "CG02StanleyB3",
+      "topic_text": "<Yawn> That's really really interesting.",
+      "emotion": "Disgust 10",
+      "response_text": "Sure, most people don't give a thought to their Pip-Boy as long as it keeps working.{resuming his normal diffident manner  he thought he was talking to a fellow Pip-Boy enthusiast but now he realizes he was wrong}Play soundFO3 StanleyArmstrong MostPeopleD…https://fallout.fandom.com/wiki/File:FO3_StanleyArmstrong_MostPeopleDont.oggnoicon",
+      "index": "15"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Happy 50",
+      "response_text": "How do you like that Pip-Boy, son? Fit all right and everything?Play soundFO3 StanleyArmstrong LikePipboyS…https://fallout.fandom.com/wiki/File:FO3_StanleyArmstrong_LikePipboySon.oggnoicon",
+      "index": "17"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "CG02IntroSurprise",
+      "topic_text": "CG02IntroSurprise",
+      "emotion": "Neutral 50",
+      "response_text": "Surprise!Play soundFO3 OfficerGomez Surprise.ogghttps://fallout.fandom.com/wiki/File:FO3_OfficerGomez_Surprise.oggnoicon",
+      "index": "20"
+    },
+    {
+      "topic": "CG02IntroYell",
+      "topic_text": "CG02IntroYell",
+      "emotion": "Neutral 50",
+      "response_text": "Happy birthday!Play soundFO3 StanleyArmstrong HappyBirthd…https://fallout.fandom.com/wiki/File:FO3_StanleyArmstrong_HappyBirthday.oggnoicon",
+      "index": "21"
+    },
+    {
+      "topic": "CG02PartyTalkAmataGreeting",
+      "topic_text": "CG02PartyTalkAmataGreeting",
+      "emotion": "Happy 50",
+      "response_text": "Oh, sure, nothing to worry about. Me and Andy got her all fixed up again last night, good as new.Play soundFO3 StanleyArmstrong NothingToWo…https://fallout.fandom.com/wiki/File:FO3_StanleyArmstrong_NothingToWorry.oggnoicon",
+      "index": "22"
+    }
+  ],
+  "combat": []
+}

@@ -1,0 +1,479 @@
+{
+  "name": "Uncle Roe",
+  "url": "/wiki/Ernest_Roe",
+  "dialogue_name": "UncleRoe.txt",
+  "dialogue_url": "/wiki/UncleRoe.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": true,
+  "can_be_companion": false,
+  "base_id": "00031EC9",
+  "ref_id": "00036F73",
+  "editor_id": "UncleRoe",
+  "location": "Uncle Roe's house",
+  "location_url": "/wiki/Uncle_Roe%27s_house",
+  "descriptions": [
+    "Ernest \"Uncle\" Roe is the mayor of Canterbury Commons in 2277.",
+    "Raised as part of trade caravan, by the time Ernest was twelve he possessed the ability to turn five caps into fifty with a series of trades. At the age of twenty he set out with his sister Daisy Roe and used the money acquired through his mercantile skills to finance the creation of the trading post of Canterbury Commons which caravans of the Capital Wasteland are known to stop at regularly.",
+    "Now known as \"Uncle Roe,\" Ernest lives as the mayor of the town he help found, ensuring that the townsfolk he leads are able to eat with the food brought in by the caravans which frequent the town, hoping that his leadership will turn Canterbury Commons into a settlement on par with the likes of Rivet City.",
+    "Along with being the mayor of the town, Ernest also cares for his nephew Derek Pacion, the son of his now deceased sister Daisy.",
+    "Ernest Roe appears in ending slides.",
+    "Playstation 3 Sometimes, Ernest's marker might lead you out of the map (e.g., north past Republic of Dave), thus making it impossible to finish the quest. "
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Canterbury Commons",
+  "role": "Mayor ofCanterbury CommonsCaravan manager",
+  "detailed_location": "Uncle Roe's house",
+  "voice_actor": "Jeff Baker",
+  "special": {
+    "Strength": 4,
+    "Perception": 4,
+    "Endurance": 4,
+    "Charisma": 7,
+    "Intelligence": 6,
+    "Agility": 4,
+    "Luck": 6
+  },
+  "mod_special_values": {
+    "Strength": 4,
+    "Perception": 4,
+    "Endurance": 4,
+    "Charisma": 7,
+    "Intelligence": 6,
+    "Agility": 5,
+    "Luck": 6
+  },
+  "level": "6",
+  "tag_skills": [
+    {
+      "Barter:": "60"
+    },
+    {
+      "Lockpick:": "54"
+    },
+    {
+      "Speech:": "60"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "80"
+    },
+    {
+      "Critical Chance:": "6%"
+    },
+    {
+      "Unarmed Dam.:": "1.15"
+    },
+    {
+      "Poison Resist.:": "15%"
+    },
+    {
+      "Rad. Resist.:": "6%"
+    },
+    {
+      "Carry Weight:": "190"
+    },
+    {
+      "Damage Res.:": "3%"
+    }
+  ],
+  "karma": "Good",
+  "voice_type": "MaleAdult01DefaultDC",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "CCDirCaravan",
+      "topic_text": "Where do the caravans set up?",
+      "emotion": "Happy 10",
+      "response_text": "When they're in town, you can find the caravan trader out front of the town.",
+      "index": "1"
+    },
+    {
+      "topic": "CCDirExit",
+      "topic_text": "That's all I need to know.",
+      "emotion": "Happy 50",
+      "response_text": "Enjoy!",
+      "index": "3"
+    },
+    {
+      "topic": "CCDirFood",
+      "topic_text": "Where can I get some food?",
+      "emotion": "Happy 25",
+      "response_text": "You'll want to talk with Joe Porter, over in Dot's Diner.",
+      "index": "4"
+    },
+    {
+      "topic": "CCDirections",
+      "topic_text": "Can I get some directions around town?",
+      "emotion": "Happy 50",
+      "response_text": "Glad to help, glad to help!",
+      "index": "6"
+    },
+    {
+      "topic": "CCFirstMeeting1A",
+      "topic_text": "Business. My business. So mind your own.",
+      "emotion": "Surprise 50",
+      "response_text": "Understood, understood. A man doesn't get to be my age without learning when not to pry.",
+      "index": "7"
+    },
+    {
+      "topic": "CCFirstMeeting1B",
+      "topic_text": "Pleasure's hard to come by out here. What's on tap?",
+      "emotion": "Happy 50",
+      "response_text": "Most of the caravans that come through, their fondest desire is to spend a few days off the road and to get a full stomach.",
+      "index": "11"
+    },
+    {
+      "topic": "CCFirstMeeting1C",
+      "topic_text": "My business and pleasure are the same. And you're not going to like either.",
+      "emotion": "Anger 35",
+      "response_text": "In that case, perhaps you ought to leave town, stranger.",
+      "index": "13"
+    },
+    {
+      "topic": "CCTownHistory1",
+      "topic_text": "What can you tell me about Canterbury Commons?",
+      "emotion": "Happy 50",
+      "response_text": "Hah! Damn near everything, I suspect! I founded the place myself, and I'm the reason this place stays fat and happy.{Bursting with pride}",
+      "index": "17"
+    },
+    {
+      "topic": "CCTownHistory2A",
+      "topic_text": "Why do the traders come here?",
+      "emotion": "Happy 50",
+      "response_text": "Because I asked them to, I suspect. I grew up in these trade caravans; known most of them my whole life.",
+      "index": "18"
+    },
+    {
+      "topic": "CCTownHistory2C",
+      "topic_text": "How organized are the traders?",
+      "emotion": "Happy 25",
+      "response_text": "They're just small caravans that make rounds through the Wastes, hawking their wares from Paradise Falls to Rivet City.",
+      "index": "20"
+    },
+    {
+      "topic": "CCTownHistory2D",
+      "topic_text": "I think I get the picture.",
+      "emotion": "Happy 25",
+      "response_text": "Anytime, my friend. I could talk about my little Canterbury 'till doomsday.",
+      "index": "24"
+    },
+    {
+      "topic": "CCTrade",
+      "topic_text": "Anything to trade around here?",
+      "emotion": "Happy 50",
+      "response_text": "You can usually find one of the trade caravans at the entrance to town. They come through every day or two.",
+      "index": "26"
+    },
+    {
+      "topic": "CCTradeArmor1",
+      "topic_text": "Let's talk about armor.",
+      "emotion": "Fear 15",
+      "response_text": "I'm afraid I haven't heard from Crow for a while, now. I'm afraid he may have fallen victim to foul play.",
+      "index": "28"
+    },
+    {
+      "topic": "CCTradeArmorInvest1CCTradeInvest1",
+      "topic_text": "He should expand his inventory.",
+      "emotion": "Neutral 50",
+      "response_text": "It takes a fair amount of capital to expand into higher quality material, you know.",
+      "index": "32"
+    },
+    {
+      "topic": "CCTradeArmorInvest2A",
+      "topic_text": "Take my advice  it can be done with only 100 caps.",
+      "emotion": "Happy 25",
+      "response_text": "Well, your financial advice has never steered us wrong before. Done!",
+      "index": "36"
+    },
+    {
+      "topic": "CCTradeArmorInvest2B",
+      "topic_text": "Not worth it. I'll pass.",
+      "emotion": "Sad 5",
+      "response_text": "If you insist.",
+      "index": "42"
+    },
+    {
+      "topic": "CCTradeChems1CCTradeSpec2C",
+      "topic_text": "Let's talk about food and chems.",
+      "emotion": "Fear 15",
+      "response_text": "I'm afraid the good doctor hasn't reported in for quite a while. Quite unfortunate, really.",
+      "index": "43"
+    },
+    {
+      "topic": "CCTradeChemsInvest1CCTradeSpec1",
+      "topic_text": "He should expand his inventory.",
+      "emotion": "Neutral 50",
+      "response_text": "The good doctor's lab equipment isn't cheap. It'll cost about 200 caps for him to offer higher quality material.",
+      "index": "47"
+    },
+    {
+      "topic": "CCTradeChemsInvest2A",
+      "topic_text": "Take my advice, it can be done with only 100 caps.",
+      "emotion": "Happy 25",
+      "response_text": "Well, your financial advice has never steered us wrong before. Done!",
+      "index": "51"
+    },
+    {
+      "topic": "CCTradeChemsInvest2B",
+      "topic_text": "Not worth it. I'll pass.",
+      "emotion": "Sad 5",
+      "response_text": "If you insist.",
+      "index": "57"
+    },
+    {
+      "topic": "CCTradeExitCCArmorExit",
+      "topic_text": "That's enough about the traders.",
+      "emotion": "Happy 50",
+      "response_text": "All right, you're the boss!",
+      "index": "58"
+    },
+    {
+      "topic": "CCTradeJunk1CCTradeSpec2D",
+      "topic_text": "Let's talk about odds and ends.",
+      "emotion": "Fear 15",
+      "response_text": "No word from Crazy Wolfgang for some time now. With him, it could mean anything, but I don't have a good feeling about it.",
+      "index": "59"
+    },
+    {
+      "topic": "CCTradeJunkInvest1CCTradeSpec3A",
+      "topic_text": "Can he offer a wider variety of junk?",
+      "emotion": "Happy 50",
+      "response_text": "With an investment of about 200 caps, I'm sure he could improve the quality of his materials. Or at least, offer more of them.",
+      "index": "63"
+    },
+    {
+      "topic": "CCTradeJunkInvest2A",
+      "topic_text": "Take my advice  it can be done with only 100 caps.",
+      "emotion": "Happy 25",
+      "response_text": "Well, your financial advice has never steered us wrong before. Done!",
+      "index": "67"
+    },
+    {
+      "topic": "CCTradeJunkInvest2B",
+      "topic_text": "Not worth it. I'll pass.",
+      "emotion": "Sad 5",
+      "response_text": "If you insist.",
+      "index": "73"
+    },
+    {
+      "topic": "CCTradeRepair",
+      "topic_text": "Can you repair something for me?",
+      "emotion": "Neutral 50",
+      "response_text": "We used to have a better mechanic, but that didn't work out so well. I'll see what I can do.",
+      "index": "74"
+    },
+    {
+      "topic": "CCTradeSpecExitCCTradeSpec2E",
+      "topic_text": "Enough about that.",
+      "emotion": "Happy 50",
+      "response_text": "Sure thing. Interested in any of the other traders?",
+      "index": "77"
+    },
+    {
+      "topic": "CCTradeWeapons1CCBreakDeal3B",
+      "topic_text": "Let's talk about weapons.",
+      "emotion": "Fear 15",
+      "response_text": "Lucky Harith kind of dropped off the map. Or, knowing his wares, he may have burnt a whole straight through it.",
+      "index": "78"
+    },
+    {
+      "topic": "CCTradeWeaponsInvest1CCTradeSpec3B",
+      "topic_text": "He should expand his inventory.",
+      "emotion": "Neutral 50",
+      "response_text": "Harith's got quite a lot of weapons, but I'm sure he could improve his stock. An investment of 200 caps should see to that nicely.",
+      "index": "82"
+    },
+    {
+      "topic": "CCTradeWeaponsInvest2A",
+      "topic_text": "Take my advice  it can be done with only 100 caps.",
+      "emotion": "Happy 25",
+      "response_text": "Well, your financial advice has never steered us wrong before. Done!",
+      "index": "86"
+    },
+    {
+      "topic": "CCTradeWeaponsInvest2B",
+      "topic_text": "Not worth it. I'll pass.",
+      "emotion": "Sad 5",
+      "response_text": "If you insist.",
+      "index": "92"
+    },
+    {
+      "topic": "CCTraderBoss1CCTraders1",
+      "topic_text": "Have you thought about organizing the traders into a unified group?",
+      "emotion": "Surprise 10",
+      "response_text": "I had thought about it, but some of these Wasteland traders... well, they aren't exactly the organizational type.{Trying to be nice in his criticism, as a euphemism for \"they're nuts\"}",
+      "index": "93"
+    },
+    {
+      "topic": "CCTraderBoss2ACCShopDeal2A",
+      "topic_text": "Under my organization, they'd see better profits and more bargaining power.",
+      "emotion": "Surprise 50",
+      "response_text": "My, my! When it comes to sales, I can see even I've got a few things I could learn from you!",
+      "index": "96"
+    },
+    {
+      "topic": "CCTraderBoss2CCCBreakDeal2C",
+      "topic_text": "I suppose you're right. Best to let them stay independent.",
+      "emotion": "Happy 25",
+      "response_text": "I agree wholeheartedly. I'd hate to unduly burden a dedicated entrepreneur.",
+      "index": "110"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Happy 50",
+      "response_text": "Are you all right? You aren't hurt, are you? I'd like to apologize for the rude welcome. Those two have been a bit of a, um, problem lately.",
+      "index": "111"
+    },
+    {
+      "topic": "MS02AboutAntAgonizer",
+      "topic_text": "What can you tell me about the AntAgonizer?",
+      "emotion": "Neutral 50",
+      "response_text": "One day there was a crazy woman leading a bunch of ants into town. She said humanity was dead and the ants would inherit the Earth. Stuff like that.",
+      "index": "125"
+    },
+    {
+      "topic": "MS02AboutMechanist",
+      "topic_text": "What can you tell me about the Mechanist?",
+      "emotion": "Neutral 50",
+      "response_text": "The Mechanist used to be our town mechanic. Scott Wollinksi, quiet guy, but plenty fierce with a wrench and some solder.",
+      "index": "129"
+    },
+    {
+      "topic": "MS02AboutOther",
+      "topic_text": "Know anything else that could help me stop them?",
+      "emotion": "Sad 10",
+      "response_text": "My nephew Derek might know more about them. I swear, it's all I can do to keep him from running into the fight whenever they come out.{trying to be polite but is done talking about it}",
+      "index": "133"
+    },
+    {
+      "topic": "MS02AboutSupersDo you know anything about the AntAgonizer or the Mechanist?",
+      "topic_text": "Can I ask you more about the AntAgonizer and the Mechanist?",
+      "emotion": "Happy 10",
+      "response_text": "If it'll help, I'm glad to.",
+      "index": "135"
+    },
+    {
+      "topic": "MS02AboutSupersExit",
+      "topic_text": "That's enough about them.",
+      "emotion": "Happy 50",
+      "response_text": "I most heartily agree!",
+      "index": "136"
+    },
+    {
+      "topic": "MS02Greeting0a",
+      "topic_text": "What was all that about? Who were those people?",
+      "emotion": "Happy 50",
+      "response_text": "The, um... Mechanist and the AntAgonizer. That's just what they call themselves. Ridiculous, I know...{A little embarrassed to say the names \"Mechanist\" and \"AntAgonizer\".}",
+      "index": "137"
+    },
+    {
+      "topic": "MS02Greeting0b",
+      "topic_text": "You seem to be pretty calm, considering there was just war in your streets.",
+      "emotion": "Anger 25",
+      "response_text": "That must be the twentieth time I've seen those two go at it. They're our problem citizens: the Mechanist and the AntAgonizer.{like a slick car salesman. A little embarrassed to say the names \"Mechanist\" and \"AntAgonizer\".}",
+      "index": "140"
+    },
+    {
+      "topic": "MS02Greeting0c",
+      "topic_text": "I'm just passing through. Don't bug me with your problems.",
+      "emotion": "Fear 50",
+      "response_text": "Please, we really do need someone to stop the Mechanist and the AntAgonizer. We can pay!{A little desperate}",
+      "index": "143"
+    },
+    {
+      "topic": "MS02Greeting1a",
+      "topic_text": "I might be able to help.",
+      "emotion": "Happy 50",
+      "response_text": "Oh that's terrific! I knew you'd help out. Knew it in my gut, and it's never steered me wrong on a deal, yet!{like a slick car salesman}",
+      "index": "145"
+    },
+    {
+      "topic": "MS02Greeting1b",
+      "topic_text": "How much would a solution be worth to you?",
+      "emotion": "Happy 50",
+      "response_text": "200 caps, if you can find where the AntAgonizer and the Mechanist hide, and convince them to stop their rivalry or otherwise stop fighting.{like a slick car salesman \"otherwise\" is suggesting to kill them}",
+      "index": "148"
+    },
+    {
+      "topic": "MS02Greeting1c",
+      "topic_text": "I don't give a damn. I'm interested in finding supplies.",
+      "emotion": "Happy 10",
+      "response_text": "Well, I suppose that's something. Canterbury Commons is known for its trading supplies. For now, at least.{covering up for his disappointment that the player won't help them}",
+      "index": "150"
+    },
+    {
+      "topic": "MS02Greeting2a",
+      "topic_text": "Double that, and you've got yourself a deal.",
+      "emotion": "Surprise 50",
+      "response_text": "Hmm. You drive a hard bargain friend. But seeing how we haven't been able to solve the problem ourselves, fine. You got a deal. But I expect results!",
+      "index": "152"
+    },
+    {
+      "topic": "MS02Greeting2b",
+      "topic_text": "I'll do it.",
+      "emotion": "Happy 50",
+      "response_text": "Great! I'm relieved to know the situation will be quickly resolved. Let me know if I can be of assistance to you.{like a slick car sales man}",
+      "index": "154"
+    },
+    {
+      "topic": "MS02Greeting2c",
+      "topic_text": "Maybe later. I've got things to attend to.",
+      "emotion": "Sad 10",
+      "response_text": "Fine. You're a man who puts his own business before that of others. I can understand that. But, if you change your mind. You let me know.{like a slick car salesman}",
+      "index": "156"
+    },
+    {
+      "topic": "MS02Job",
+      "topic_text": "You still offering that job?",
+      "emotion": "Happy 50",
+      "response_text": "I sure am. Two hundred caps, if you can find where the AntAgonizer and the Mechanist hide, and get them to end their pointless fighting in town.{like a slick car salesman}",
+      "index": "157"
+    },
+    {
+      "topic": "SpeechChallengeFailure",
+      "topic_text": "SpeechChallengeFailure",
+      "emotion": "Surprise 50",
+      "response_text": "I'm afraid that won't do, friend. Are you sure you won't take the generous offer I've already made?{like a slick car salesman}",
+      "index": "165"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "CCGuardTalk1",
+      "topic_text": "CCGuardTalk1",
+      "emotion": "Happy 50",
+      "response_text": "Good to hear it. I'm not giving up this whole \"living\" habit, not at my age. Keep it up.",
+      "index": "166"
+    },
+    {
+      "topic": "CCMentor2",
+      "topic_text": "CCMentor2",
+      "emotion": "Happy 50",
+      "response_text": "Well, have any big plans for the day?{A little desperate to get a response}",
+      "index": "168"
+    },
+    {
+      "topic": "GOODBYE",
+      "topic_text": "I have to go now.",
+      "emotion": "Neutral 50",
+      "response_text": "Good luck with those two troublemakers.",
+      "index": "172"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Happy 50",
+      "response_text": "Whatever you can do to help our town, we'd appreciate it.",
+      "index": "177"
+    }
+  ],
+  "combat": []
+}

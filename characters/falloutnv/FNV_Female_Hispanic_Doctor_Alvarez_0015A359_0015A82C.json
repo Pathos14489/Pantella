@@ -1,0 +1,108 @@
+{
+  "name": "Doctor Alvarez",
+  "url": "/wiki/Alvarez",
+  "dialogue_name": "VMS49DoctorAlvarez.txt",
+  "dialogue_url": "/wiki/VMS49DoctorAlvarez.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "0015A359",
+  "ref_id": "0015A82C",
+  "editor_id": "VMS49DoctorAlvarez",
+  "location": "Follower's outpost",
+  "location_url": "/wiki/Follower%27s_outpost",
+  "descriptions": [
+    "Doctor Alvarez is a research scientist for the Followers of the Apocalypse and assigned to the Follower's outpost in 2281.",
+    "Doctor Alvarez is a research scientist",
+    "I Could Make You Care: If the player suggests that Veronica Santangelo abandon the Brotherhood of Steel, she will ask the player character to take her to the Follower's outpost. There, one will find Alvarez, who will ask the Courier and Veronica to leave for a day until their main recruiter comes back."
+  ],
+  "race": "Human",
+  "gender": "Female",
+  "affiliation": "Followers of the Apocalypse",
+  "role": "Researcher",
+  "detailed_location": "Follower's outpost",
+  "voice_actor": "April Stewart",
+  "special": {
+    "Strength": 4,
+    "Perception": 6,
+    "Endurance": 4,
+    "Charisma": 6,
+    "Intelligence": 7,
+    "Agility": 5,
+    "Luck": 4
+  },
+  "level": "12",
+  "tag_skills": [
+    {
+      "Barter:": "78"
+    },
+    {
+      "Medicine:": "80"
+    },
+    {
+      "Science:": "80(85)"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Neutral",
+  "voice_type": "FemaleAdult03",
+  "geck_race": "Hispanic",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "This had better be good. You have a lot to answer for.",
+      "index": "1"
+    },
+    {
+      "topic": "VMS49VMS49DoctorAlvarezTopic000",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Please... leave us alone.",
+      "index": "3"
+    },
+    {
+      "topic": "VMS49VMS49DoctorAlvarezTopic001",
+      "topic_text": "This is Veronica, formerly of the Brotherhood of Steel. She's interested in joining your cause.",
+      "emotion": "Neutral 50",
+      "response_text": "The Brotherhood? Well, this is unusual, I must say. But very welcome.",
+      "index": "5"
+    },
+    {
+      "topic": "VMS49VMS49DoctorAlvarezTopic002",
+      "topic_text": "I need healing.",
+      "emotion": "Neutral 50",
+      "response_text": "I'm afraid I'm not that kind of doctor. I'm a research scientist.",
+      "index": "8"
+    },
+    {
+      "topic": "VMS49VMS49DoctorAlvarezTopic003",
+      "topic_text": "Can I join the Followers?",
+      "emotion": "Neutral 50",
+      "response_text": "Possibly, but I'd be the wrong person to ask. You'll need to speak to Dr. Schiller, who's on an errand at one of our other stations.",
+      "index": "10"
+    },
+    {
+      "topic": "VMS49VMS49DoctorAlvarezTopic004",
+      "topic_text": "What do you do here?",
+      "emotion": "Neutral 50",
+      "response_text": "This is just a site for local Followers to pick up assignments and check in.",
+      "index": "13"
+    },
+    {
+      "topic": "VMS49VMS49DoctorAlvarezTopic005",
+      "topic_text": "Is Dr. Schiller here yet?",
+      "emotion": "Neutral 50",
+      "response_text": "No. We don't expect him back until tomorrow.",
+      "index": "15"
+    }
+  ],
+  "conversation": [],
+  "combat": []
+}

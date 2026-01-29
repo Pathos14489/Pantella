@@ -1,0 +1,196 @@
+{
+  "name": "Corporal William Farber",
+  "url": "/wiki/William_Farber",
+  "dialogue_name": "CorporalFarber.txt",
+  "dialogue_url": "/wiki/CorporalFarber.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": true,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000E8F69",
+  "ref_id": "000E8F68",
+  "editor_id": "CorporalFarber",
+  "location": "Camp McCarran concourse",
+  "location_url": "/wiki/Camp_McCarran_concourse",
+  "descriptions": [
+    "Corporal William Farber is a mess officer for the NCR Army stationed at Camp McCarran in 2281.",
+    "The corporal is the Camp McCarran mess officer, responsible for cooking, preparing and serving meals to the NCR troopers stationed at the base. Recently, Farber has been struggling to maintain an acceptable quality for his dishes, as it is hard for him to secure a reliable supplier of fresh meat, although he has an abundance of vegetables.",
+    "Farber's merchant inventory contains an exact, non-randomized amount of the following items. His vendor container, Farber's Mess Store (VendorContainerFarber), is located under the floor of the mess hall and can be found if the console command tcl is used.",
+    "William Farber appears in Fallout: New Vegas."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "NCR Army",
+  "role": "Mess officer",
+  "detailed_location": "Concourse,Camp McCarran",
+  "voice_actor": "Gregory Alan Williams",
+  "special": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 5,
+    "Intelligence": 5,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "mod_special_values": {
+    "Strength": 5,
+    "Perception": 6,
+    "Endurance": 5,
+    "Charisma": 5,
+    "Intelligence": 5,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "level": "1",
+  "tag_skills": [
+    {
+      "Explosives:": "30(32)"
+    },
+    {
+      "Guns:": "30(32)"
+    },
+    {
+      "Melee Weap.:": "30(32)"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Neutral",
+  "voice_type": "MaleAdult06",
+  "geck_race": "AfricanAmericanOld",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "Listen, asshole. I know you're not really an NCR health inspector, so you can cut the restaurant critic routine.",
+      "index": "1"
+    },
+    {
+      "topic": "VFreeformMcCarranCorporalFarberTopic000",
+      "topic_text": "Got anything to eat?",
+      "emotion": "Neutral 50",
+      "response_text": "{Sarcastic}Oh yeah. You can order up anything you want... as long as it's corn or beans!<Laughs>",
+      "index": "8"
+    },
+    {
+      "topic": "VFreeformMcCarranCorporalFarberTopic001",
+      "topic_text": "I'd like to buy some food.",
+      "emotion": "Neutral 50",
+      "response_text": "Chow down.",
+      "index": "11"
+    },
+    {
+      "topic": "VFreeformMcCarranCorporalFarberTopic002",
+      "topic_text": "Can anything be done to improve your supplies?",
+      "emotion": "Neutral 50",
+      "response_text": "{Tired sigh, lamenting lack of supplies}Well, we haven't had any quality meat in months. Everyone in the camp just eating beans for protein... It isn't pretty.",
+      "index": "14"
+    },
+    {
+      "topic": "VFreeformMcCarranCorporalFarberTopic003",
+      "topic_text": "Could you remind me where I should look for supplies?",
+      "emotion": "Neutral 50",
+      "response_text": "What do you need to know?",
+      "index": "17"
+    },
+    {
+      "topic": "VFreeformMcCarranCorporalFarberTopic004",
+      "topic_text": "Is there a health inspector bothering you?",
+      "emotion": "Neutral 50",
+      "response_text": "Ah, it's nothing. You just looked like the health inspector who stopped through for the yearly inspection a couple weeks back.",
+      "index": "18"
+    },
+    {
+      "topic": "VFreeformMcCarranCorporalFarberTopic005",
+      "topic_text": "Where would you suggest I find meat in the amount you'd need here?",
+      "emotion": "Neutral 50",
+      "response_text": "{Reassuring}It doesn't need to all come from the same source. There are a bunch of different vendors around who sell meat. Fitz, the Nash's, Crimson Caravan...",
+      "index": "20"
+    },
+    {
+      "topic": "VFreeformMcCarranCorporalFarberTopic006",
+      "topic_text": "What parts are needed to fix the food processor?",
+      "emotion": "Neutral 50",
+      "response_text": "{To the point}Here is the list. We've been scrapping together quick-fixes to keep it running for months. I think it finally crapped out and needs a full overhaul.",
+      "index": "23"
+    },
+    {
+      "topic": "VFreeformMcCarranCorporalFarberTopic007",
+      "topic_text": "Where might I find these parts?",
+      "emotion": "Neutral 50",
+      "response_text": "{At a loss}I don't know. Try the various traders around the wastes, or the pawn shop in Westside might have some parts.",
+      "index": "25"
+    },
+    {
+      "topic": "VFreeformMcCarranCorporalFarberTopic009",
+      "topic_text": "Where should I look for spices?",
+      "emotion": "Neutral 50",
+      "response_text": "The Crimson Caravan would probably be able to arrange a regular shipment, but I don't know of any spices known to improve mood.",
+      "index": "28"
+    },
+    {
+      "topic": "VFreeformMcCarranCorporalFarberTopic010",
+      "topic_text": "I'd like to talk about something else.",
+      "emotion": "Neutral 50",
+      "response_text": "What can I do for you?",
+      "index": "30"
+    },
+    {
+      "topic": "VFreeformMcCarranCorporalFarberTopic011",
+      "topic_text": "Mrs. Nash agreed to trade with McCarran.",
+      "emotion": "Neutral 50",
+      "response_text": "{Pleased}Great! Small price to pay in caps for a little variety in our weekly menu.",
+      "index": "31"
+    },
+    {
+      "topic": "VFreeformMcCarranCorporalFarberTopic012",
+      "topic_text": "Blake at the Crimson Caravan agreed to sell meat and spices.",
+      "emotion": "Neutral 50",
+      "response_text": "{Pleased}Good to hear. That should cover the majority of the supply.",
+      "index": "33"
+    },
+    {
+      "topic": "VFreeformMcCarranCorporalFarberTopic013",
+      "topic_text": "I found a merchant named Fitz who agreed to sell meat to McCarran.",
+      "emotion": "Neutral 50",
+      "response_text": "{Pleased}Good, that should help diversify things. It may be a bit gamey, but I can use it for stews and kabobs.",
+      "index": "36"
+    },
+    {
+      "topic": "VFreeformMcCarranCorporalFarberTopic014",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Have a good one.",
+      "index": "38"
+    },
+    {
+      "topic": "VFreeformMcCarranCorporalFarberTopic015",
+      "topic_text": "I fixed the food processor.",
+      "emotion": "Neutral 50",
+      "response_text": "Amazing. I thought that thing was done for. That'll help me transform what I can offer the troops.",
+      "index": "39"
+    },
+    {
+      "topic": "VFreeformMcCarranCorporalFarberTopic016",
+      "topic_text": "This spore pod extract from Keely should help with morale.",
+      "emotion": "Neutral 50",
+      "response_text": "{Pleasantly surprised}No shit? The stuff actually does all that, huh?",
+      "index": "41"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "HELLO",
+      "topic_text": "Hello",
+      "emotion": "Neutral 50",
+      "response_text": "{annoyed at seeing the player}Aw crap.",
+      "index": "43"
+    }
+  ],
+  "combat": []
+}

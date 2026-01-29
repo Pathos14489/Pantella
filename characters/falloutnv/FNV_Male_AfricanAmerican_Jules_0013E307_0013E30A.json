@@ -1,0 +1,200 @@
+{
+  "name": "Jules",
+  "url": "/wiki/Jules_(Fallout:_New_Vegas)",
+  "dialogue_name": "VOVNVJules.txt",
+  "dialogue_url": "/wiki/VOVNVJules.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": true,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "0013E307",
+  "ref_id": "0013E30A",
+  "editor_id": "VOVNVJules",
+  "location": "North Vegas Square",
+  "location_url": "/wiki/North_Vegas_Square",
+  "descriptions": [
+    "Jules is a wastelander and town guard for the people of North Vegas Square in the Mojave Wasteland in 2281. He appears in Fallout: New Vegas.",
+    "Little is known of Jules' past. By 2281, Jules is a seasoned survivalist and trained gunslinger, carrying a respect for others whom he considers fellow \"wasteland warriors;\"",
+    "After eventually coming to the Mojave and settling down in North Vegas Square, Jules elected to stay and protect both the locals and traders passing through town from regular threats like hostile creatures and even worse groups like the Fiends.",
+    "Jules views his fellow North Vegas residents as \"independent folk\" that have managed to carve a home out of the wasteland through hard work and grit, and he takes pride in his role of safeguarding their efforts through his work defending the Square against outside threats.",
+    "Jules will have unique dialogue when asked about trouble with the Fiends if the player character previously entered Vault 3 and killed Motor-Runner, either independently or as part of Bounty Killer."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "North Vegas residents",
+  "role": "SurvivalistMercenary (formerly)[1]Town guard3  of Spades",
+  "detailed_location": "North Vegas Square",
+  "voice_actor": "Emerson Brooks",
+  "special": {
+    "Strength": 7,
+    "Perception": 8,
+    "Endurance": 7,
+    "Charisma": 10,
+    "Intelligence": 5,
+    "Agility": 6,
+    "Luck": 6
+  },
+  "mod_special_values": {
+    "Strength": 7,
+    "Perception": 9,
+    "Endurance": 7,
+    "Charisma": 10,
+    "Intelligence": 5,
+    "Agility": 6,
+    "Luck": 6
+  },
+  "level": "13",
+  "tag_skills": [
+    {
+      "Guns:": "79(81)"
+    },
+    {
+      "Melee Weap.:": "79(81)"
+    },
+    {
+      "Sneak:": "79"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "240"
+    }
+  ],
+  "karma": "Neutral",
+  "voice_type": "MaleAdult01DefaultB",
+  "geck_race": "AfricanAmerican",
+  "topics": [
+    {
+      "topic": "CaravanOffer",
+      "topic_text": "Want to play a hand of Caravan?",
+      "emotion": "Neutral 50",
+      "response_text": "You betcha! Caravan's got me through many a long night before. I hope you're ready.",
+      "index": "1"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "{Overtly Suspicious, Confident in Himself}Humph... I see lots of folks come and go, but none fit your type. Where you come from, stranger?",
+      "index": "2"
+    },
+    {
+      "topic": "VDialogueVegasNorthNorthVegasJulesTopic000",
+      "topic_text": "I'm just another Wasteland wanderer. Why the suspicion?",
+      "emotion": "Neutral 50",
+      "response_text": "'Cause that's the law of the land. You never know when someone's going to stab you in the back... and I like mine{slight emphasis in \"upright.\" The punch-line}upright.",
+      "index": "5"
+    },
+    {
+      "topic": "VDialogueVegasNorthNorthVegasJulesTopic001",
+      "topic_text": "Relax, I only want to ask you some questions.",
+      "emotion": "Anger 30",
+      "response_text": "{Feeling Entitled, and ready to teach a lesson}And I only asked first... I'll try one last time before I find out the hard way. Where you come from, and where you going?",
+      "index": "7"
+    },
+    {
+      "topic": "VDialogueVegasNorthNorthVegasJulesTopic002",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "{Dismissive, yet with cautionary tone}All right... keep walking.",
+      "index": "8"
+    },
+    {
+      "topic": "VDialogueVegasNorthNorthVegasJulesTopic004",
+      "topic_text": "<Attack> I guess you'll have to find out the hard way.",
+      "emotion": "Neutral 50",
+      "response_text": "You ain't too smart, are you? Okay, let's dance.",
+      "index": "11"
+    },
+    {
+      "topic": "VDialogueVegasNorthNorthVegasJulesTopic006",
+      "topic_text": "You look capable of defending yourself.",
+      "emotion": "Neutral 50",
+      "response_text": "[FAILED] I sure am, stranger. But there ain't anything about you that makes me want to go into details.",
+      "index": "12"
+    },
+    {
+      "topic": "VDialogueVegasNorthNorthVegasJulesTopic009",
+      "topic_text": "<Questions General>",
+      "emotion": "Neutral 50",
+      "response_text": "Sure thing. What's on your noggin?",
+      "index": "14"
+    },
+    {
+      "topic": "VDialogueVegasNorthNorthVegasJulesTopic014",
+      "topic_text": "Tell me about North Vegas.",
+      "emotion": "Neutral 50",
+      "response_text": "We're independent folks here. Merchants, gamblers, NCR whores, all of them trade with us and we offer protection against critters and the Fiends.",
+      "index": "16"
+    },
+    {
+      "topic": "VDialogueVegasNorthNorthVegasJulesTopic015",
+      "topic_text": "What's your story?",
+      "emotion": "Happy 30",
+      "response_text": "That's a long one, stranger. Let's just say I got tired of killing in The Wasteland and now I've found a better home for my old butt.",
+      "index": "17"
+    },
+    {
+      "topic": "VDialogueVegasNorthNorthVegasJulesTopic016",
+      "topic_text": "I'm looking for Alice Hostetler.",
+      "emotion": "Neutral 50",
+      "response_text": "Alice{Searches in his mind}... Oh yeah. I've seen her 'round here much too often as of late. I reckon she's been hanging out with Andy and his crew.",
+      "index": "18"
+    },
+    {
+      "topic": "VDialogueVegasNorthNorthVegasJulesTopic018",
+      "topic_text": "NCR whores?",
+      "emotion": "Neutral 50",
+      "response_text": "You heard me. We don't like those stiff-back, clean-hand, little pussies. New Vegas belongs to the people.",
+      "index": "19"
+    },
+    {
+      "topic": "VDialogueVegasNorthNorthVegasJulesTopic019",
+      "topic_text": "What's the deal with the Fiends?",
+      "emotion": "Anger 30",
+      "response_text": "They're a bunch of lunatics, so pumped full of chems that they don't give a damn about life anymore. Fiends rape, kill and maim for the hell of it.",
+      "index": "22"
+    },
+    {
+      "topic": "VDialogueVegasNorthNorthVegasJulesTopic020",
+      "topic_text": "Do you know where might I find them?",
+      "emotion": "Neutral 50",
+      "response_text": "Try \"The Gray.\" Beats me why people go into that forsaken thing. At least with huts and sewers you know they ain't crumbling on top of your head.",
+      "index": "26"
+    },
+    {
+      "topic": "VDialogueVegasNorthNorthVegasJulesTopic071",
+      "topic_text": "What do you do here?",
+      "emotion": "Anger 30",
+      "response_text": "Outer Vegas ain't exactly a safe place. Despite our numbers, The Wasteland creeps through every nook and cranny.",
+      "index": "27"
+    },
+    {
+      "topic": "VDialogueVegasNorthVOVNVJulesTopic000",
+      "topic_text": "What's that about knowing how to handle more than just a weapon?",
+      "emotion": "Neutral 50",
+      "response_text": "I mean you've first got to know yourself before you can truly know the gun.",
+      "index": "30"
+    },
+    {
+      "topic": "VDialogueVegasNorthVOVNVJulesTopic002",
+      "topic_text": "I'm one with the land.",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] We see eye to eye, we speak warrior to warrior{Pauses to digest his next words}... And I thought myself too old to find an equal, Ha!",
+      "index": "33"
+    },
+    {
+      "topic": "VDialogueVegasNorthVOVNVJulesTopic020",
+      "topic_text": "I took care of them.",
+      "emotion": "Neutral 50",
+      "response_text": "{Slightly Surprised}You've cleaned that vermin's nest? Gotta say, we don't see that kind of attitude around here. Good work!",
+      "index": "38"
+    }
+  ],
+  "conversation": [],
+  "combat": []
+}

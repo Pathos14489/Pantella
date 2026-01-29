@@ -1,0 +1,180 @@
+{
+  "name": "Lady Jane",
+  "url": "/wiki/Lady_Jane",
+  "dialogue_name": "VFSDebtLadyJane.txt",
+  "dialogue_url": "/wiki/VFSDebtLadyJane.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "0010FD2F",
+  "ref_id": "0010FD33",
+  "editor_id": "VFSDebtLadyJane",
+  "location": "Freeside",
+  "location_url": "/wiki/Freeside",
+  "descriptions": [
+    "Lady Jane is a trader living in Freeside in 2281. She can be found to the right of the gate to the New Vegas Strip.",
+    "Lady Jane is a caravan trader who had her caravan raided in the broc flower cave. She has fallen on hard times ever since and has been trying to scrape enough money to return to California.",
+    "As one of the characters in the quest Debt Collector, Lady Jane was written by area designer Robert Lee. Although some other characters around Freeside's exterior were cut for performance reasons, those with quest importance, such as Lady Jane, were kept."
+  ],
+  "race": "Human",
+  "gender": "Female",
+  "affiliation": "New California Republic",
+  "role": "TraderDebtor",
+  "detailed_location": "Freeside",
+  "voice_actor": "Andrea Thompson",
+  "special": {
+    "Strength": 4,
+    "Perception": 6,
+    "Endurance": 4,
+    "Charisma": 6,
+    "Intelligence": 7,
+    "Agility": 5,
+    "Luck": 4
+  },
+  "mod_special_values": {
+    "Strength": 4,
+    "Perception": 6,
+    "Endurance": 4,
+    "Charisma": 6,
+    "Intelligence": 7,
+    "Agility": 6,
+    "Luck": 4
+  },
+  "level": "16",
+  "tag_skills": [
+    {
+      "Barter:": "96"
+    },
+    {
+      "Medicine:": "98"
+    },
+    {
+      "Science:": "98"
+    }
+  ],
+  "karma": "Neutral",
+  "voice_type": "FemaleAdult08",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "Hello. Lovely to meet you.",
+      "index": "1"
+    },
+    {
+      "topic": "VFreeformFreesideVFSDebtLadyJaneTopic001",
+      "topic_text": "I could retrieve the caps from your caravan.",
+      "emotion": "Neutral 50",
+      "response_text": "But what about those nasty critters?",
+      "index": "3"
+    },
+    {
+      "topic": "VFreeformFreesideVFSDebtLadyJaneTopic005",
+      "topic_text": "I was hired by the Garrets to track you down.",
+      "emotion": "Neutral 50",
+      "response_text": "In that case, I suppose you're here to collect. I apologize, but I simply do not have enough caps on me to cover the debt.",
+      "index": "5"
+    },
+    {
+      "topic": "VFreeformFreesideVFSDebtLadyJaneTopic007<Speech>",
+      "topic_text": "Perhaps there is something else of value you could put toward the debt?",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] I'm short 90 caps or so, but I have a few cartons of cigarettes and some sensor modules I could put toward my debt.",
+      "index": "7"
+    },
+    {
+      "topic": "VFreeformFreesideVFSDebtLadyJaneTopic008",
+      "topic_text": "I've dealt with such things in the past.",
+      "emotion": "Neutral 50",
+      "response_text": "Very well, but please do be careful.",
+      "index": "10"
+    },
+    {
+      "topic": "VFreeformFreesideVFSDebtLadyJaneTopic010",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Goodbye.",
+      "index": "13"
+    },
+    {
+      "topic": "VFreeformFreesideVFSDebtLadyJaneTopic011",
+      "topic_text": "Who are you?",
+      "emotion": "Neutral 50",
+      "response_text": "I haven't the time to speak to commoners such as yourself.",
+      "index": "14"
+    },
+    {
+      "topic": "VFreeformFreesideVFSDebtLadyJaneTopic012",
+      "topic_text": "I'll be back later. Don't go running off anywhere.",
+      "emotion": "Neutral 50",
+      "response_text": "Where would I go? My caravan is lost and I haven't the caps to do much else.",
+      "index": "15"
+    },
+    {
+      "topic": "VFreeformFreesideVFSDebtLadyJaneTopic015",
+      "topic_text": "Rodents of unusual size? I don't believe they exist.",
+      "emotion": "Neutral 50",
+      "response_text": "Oh I assure you, sir, they are very real and very large. Please do be careful.",
+      "index": "16"
+    },
+    {
+      "topic": "VFreeformFreesideVFSDebtLadyJaneTopic016<Barter>",
+      "topic_text": "I find it hard to believe you ran from the caravan without taking something.",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] I'm short 90 caps or so, but I have a few cartons of cigarettes and some sensor modules I could put toward my debt.",
+      "index": "19"
+    },
+    {
+      "topic": "VFreeformFreesideVFSDebtLadyJaneTopic017",
+      "topic_text": "Just give me what you have on you and they might accept it knowing you're dead.",
+      "emotion": "Neutral 50",
+      "response_text": "Hey, you don't need to kill me. I'm going back to California to start over.",
+      "index": "22"
+    },
+    {
+      "topic": "VFreeformFreesideVFSDebtLadyJaneTopic018",
+      "topic_text": "But then, I'd be a liar, and I hate liars. <Attack>",
+      "emotion": "Neutral 50",
+      "response_text": "Oh God, no!",
+      "index": "24"
+    },
+    {
+      "topic": "VFreeformFreesideVFSDebtLadyJaneTopic019",
+      "topic_text": "I suppose that might work. It'll take some convincing though.",
+      "emotion": "Neutral 50",
+      "response_text": "I swear they'll never see me again. After this experience, I want nothing to do with this hell hole.",
+      "index": "25"
+    },
+    {
+      "topic": "VFreeformFreesideVFSDebtLadyJaneTopic021<Perception>",
+      "topic_text": "Jane, I can tell you're lying through your teeth.",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] Damn. I didn't want to hand over all of my caps because I won't have enough to get home to California.",
+      "index": "27"
+    },
+    {
+      "topic": "VFreeformFreesideVFSDebtLadyJaneTopic023<Lady Killer>",
+      "topic_text": "Jane, surely a lady of your stature has honor sufficient to pay her debts.",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] Oh you charming wonderful hunk of man. I agree, I cannot risk my reputation on such a paltry sum.",
+      "index": "29"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "VFSLadyJaneHello",
+      "topic_text": "VFSLadyJaneHello",
+      "emotion": "Neutral 50",
+      "response_text": "Excuse me, but a lady of my stature does not converse with those of low stock.",
+      "index": "32"
+    }
+  ],
+  "combat": []
+}

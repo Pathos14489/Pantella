@@ -1,0 +1,327 @@
+{
+  "name": "Colonel James Hsu",
+  "url": "/wiki/James_Hsu",
+  "dialogue_name": "ColonelHsu.txt",
+  "dialogue_url": "/wiki/ColonelHsu.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000E8992",
+  "ref_id": "000EEA78",
+  "editor_id": "ColonelHsu",
+  "location": "Camp McCarran terminal building",
+  "location_url": "/wiki/Camp_McCarran_terminal_building",
+  "descriptions": [
+    "Colonel James Hsu is the commanding officer of the New California Republic Army's Camp McCarran HQ and New Vegas garrison in 2281, where he serves as the central nexus of NCR military operations throughout New Vegas and the Mojave Wasteland. He appears in Fallout: New Vegas.",
+    "Sometime prior to 2281, Hsu served alongside Nathan, the future warden of the NCR Correctional Facility for a period of seven years. During this time, Nathan helped Hsu in an unspecified way during an incident in the town of Modoc, for which Hsu allegedly still owed him a favor. Nathan eventually decided to use this favor during his stint as warden to get Hsu to assign more guards to his facility as well as put a stop to the army's siphoning of his current staff to reinforce their defensive positions along the Colorado River against Caesar's Legion. However, Nathan never saw the favor fulfilled as he would lose his life during a mass breakout of convicts orchestrated by Samuel Cooke in late 2281.",
+    "One of two ranking colonels deployed during the New California Republic's Mojave Campaign by 2281 (along with Cassandra Moore), James Hsu is considered a competent and level-headed, moderate voice in the NCR Army's upper echelons,",
+    "As it stands in 2281, Hsu's rank brings with it the responsibility of being the nexus of the NCR's military efforts within the Mojave region from his position as commander of their headquarters at Camp McCarran that neighbors the New Vegas Strip.",
+    "In dialogue originally intended to be heard after the ending quest of Fallout: New Vegas and the conclusion of the Second Battle of Hoover Dam (post-ending gameplay is unimplemented normally but the dialogue is still available in-game while the battle is going on), speaking with Colonel Moore has her state that, upon learning of the NCR's success in the Mojave, her superiors first turned to Hsu since he was in command of operations in the area, but he denied having anything to do with the victory. As a result of his modesty, Hsu was passed over with Moore taking the credit and a promotion to brigadier general instead."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "New California Republic Army",
+  "role": "Camp McCarran base commanderMilitary operational nexus7 of Hearts",
+  "detailed_location": "Camp McCarranTerminal building",
+  "voice_actor": "William Mapother",
+  "special": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 5,
+    "Intelligence": 5,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "level": "12",
+  "tag_skills": [
+    {
+      "Explosives:": "74"
+    },
+    {
+      "Guns:": "74"
+    },
+    {
+      "Melee Weap.:": "74"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Neutral",
+  "geck_race": "Asian",
+  "topics": [
+    {
+      "topic": "BitterSpringsTroopers",
+      "topic_text": "Captain Gilles at Bitter Springs needs reinforcements. Can you spare any?",
+      "emotion": "Disgust 30",
+      "response_text": "{Baffled, this is a bizarre request}What? Why on earth would you think you can walk in here and make troop deployment recommendations to me?",
+      "index": "1"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "Anders showed up here not too long ago. I'm told you're the one who got him out of the vault.",
+      "index": "4"
+    },
+    {
+      "topic": "VMS08ColonelHsuTopic000",
+      "topic_text": "I'm here to provide support. Is there anything I might be able to help with?",
+      "emotion": "Neutral 50",
+      "response_text": "Hmm... you don't cook by any chance, do you? Farber's doing his best, but it's hard to manage an army with half my staff in line for the latrine.{Wryly.}",
+      "index": "14"
+    },
+    {
+      "topic": "VMS08ColonelHsuTopic001",
+      "topic_text": "I'm up for hire if you need some extra manpower around the base.",
+      "emotion": "Neutral 50",
+      "response_text": "There are a lot of things I can't spare troops for right now.  If you can help us, we can definitely pay you for your work.",
+      "index": "17"
+    },
+    {
+      "topic": "VMS08ColonelHsuTopic002",
+      "topic_text": "How are things going for the NCR around here?",
+      "emotion": "Neutral 50",
+      "response_text": "Could be better, I'll say that much.",
+      "index": "18"
+    },
+    {
+      "topic": "VMS08ColonelHsuTopic004",
+      "topic_text": "The Fiends?",
+      "emotion": "Neutral 50",
+      "response_text": "As in chem fiends. Biggest gang of raiders I've ever seen. Nothing like addiction to swell your numbers. Psychotic, and completely unpredictable.{Emphasize \"chem.\"}",
+      "index": "21"
+    },
+    {
+      "topic": "VMS08ColonelHsuTopic005",
+      "topic_text": "I bet I could make the Legion prisoner talk.",
+      "emotion": "Neutral 50",
+      "response_text": "I have Lieutenant Boyd on that already, and she's excellent. But I think she's hit a wall.",
+      "index": "25"
+    },
+    {
+      "topic": "VMS08ColonelHsuTopic006",
+      "topic_text": "I could look into who's leaking NCR intelligence.",
+      "emotion": "Neutral 50",
+      "response_text": "You? I think you've done enough.",
+      "index": "28"
+    },
+    {
+      "topic": "VMS08ColonelHsuTopic007",
+      "topic_text": "Let's talk about something else.",
+      "emotion": "Neutral 50",
+      "response_text": "Sure. I'm all ears.",
+      "index": "31"
+    },
+    {
+      "topic": "VMS08ColonelHsuTopic008",
+      "topic_text": "I know who bombed the monorail.",
+      "emotion": "Neutral 50",
+      "response_text": "What? Who?",
+      "index": "32"
+    },
+    {
+      "topic": "VMS08ColonelHsuTopic009",
+      "topic_text": "You won't be having problems with intelligence leaks anymore.",
+      "emotion": "Neutral 50",
+      "response_text": "No? What happened?",
+      "index": "33"
+    },
+    {
+      "topic": "VMS08ColonelHsuTopic011",
+      "topic_text": "You seem calm given that things are as bad as they are.",
+      "emotion": "Neutral 50",
+      "response_text": "Calm is what you have to be when people look to you. And it's all you can be when things are out of your hands.",
+      "index": "34"
+    },
+    {
+      "topic": "VMS08ColonelHsuTopic012",
+      "topic_text": "[Speech] I've been fighting for the wrong side. Let me prove myself to you.",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] I'll believe it when I see it. You've got one shot, and you're on a tight leash. I'll be watching.",
+      "index": "35"
+    },
+    {
+      "topic": "VMS08ColonelHsuTopic013",
+      "topic_text": "Private Crenshaw. He's dead now.",
+      "emotion": "Neutral 50",
+      "response_text": "Crenshaw... I've met Crenshaw. At his disciplinary hearing. Still, this is hard to imagine - he was just a prankster.{Thinking. \"At his disciplinary hearing\" is damning evidence.}",
+      "index": "40"
+    },
+    {
+      "topic": "VMS08ColonelHsuTopic014",
+      "topic_text": "He had explosives and plans for the operation bearing Caesar's emblem.",
+      "emotion": "Neutral 50",
+      "response_text": "I was afraid of this. Caesar's reach is longer than anybody guessed.",
+      "index": "41"
+    },
+    {
+      "topic": "VMS08ColonelHsuTopic016",
+      "topic_text": "[Speech] He confessed it to me before he died. He used the word \"frumentarius.\"",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] That's what the Legion calls their spies. I was afraid of this. Caesar's reach is longer than anybody guessed.",
+      "index": "42"
+    },
+    {
+      "topic": "VMS08ColonelHsuTopic017",
+      "topic_text": "[Speech] He confessed it to me. Right before he died.",
+      "emotion": "Neutral 50",
+      "response_text": "[FAILED] That's not exactly airtight.{disbelieving, angry}",
+      "index": "46"
+    },
+    {
+      "topic": "VMS08ColonelHsuTopic018",
+      "topic_text": "You'd be surprised what some people are capable of.",
+      "emotion": "Neutral 50",
+      "response_text": "That doesn't implicate Crenshaw any more than it does anyone else.",
+      "index": "47"
+    },
+    {
+      "topic": "VMS08ColonelHsuTopic019",
+      "topic_text": "I'll be right back - there's something I need to double-check.",
+      "emotion": "Neutral 50",
+      "response_text": "I'll be waiting.",
+      "index": "52"
+    },
+    {
+      "topic": "VMS08ColonelHsuTopic020",
+      "topic_text": "Motor-runner is dead. I brought his helmet as proof.",
+      "emotion": "Neutral 50",
+      "response_text": "Unbelievable. That man has given us so much grief since we set up here. This may be a major turning point for us.{awestruck}",
+      "index": "53"
+    },
+    {
+      "topic": "VMS08ColonelHsuTopic021",
+      "topic_text": "[Attack] I did. Right before I assassinated the colonel.",
+      "emotion": "Neutral 50",
+      "response_text": "You're getting ahead of yourself.{defiant, about to pull his gun and start shooting at a guy}",
+      "index": "56"
+    },
+    {
+      "topic": "VMS08ColonelHsuTopic022",
+      "topic_text": "It was Curtis. He's in the Legion. I can prove he tried to blow up the monorail.",
+      "emotion": "Neutral 50",
+      "response_text": "Curtis? He's been in the NCR long before our conflict with the Legion. There's just no way...{incredulous}",
+      "index": "57"
+    },
+    {
+      "topic": "VMS08ColonelHsuTopic023",
+      "topic_text": "I caught Curtis radioing intel to Caesar's Legion. I had to take him down.",
+      "emotion": "Neutral 50",
+      "response_text": "Curtis? Something's not right. He came to me today saying he was worried about the monorail. Had me put him in charge of the inspection crew.{stunned by the name}",
+      "index": "61"
+    },
+    {
+      "topic": "VMS08ColonelHsuTopic024",
+      "topic_text": "The monorail is destroyed.",
+      "emotion": "Neutral 50",
+      "response_text": "Goddamn it! How could I have let this happen?",
+      "index": "63"
+    },
+    {
+      "topic": "VMS08ColonelHsuTopic025",
+      "topic_text": "I don't understand how you could be so careless with the life of a ranger.",
+      "emotion": "Neutral 50",
+      "response_text": "I'd hoped he'd be able to slip past their security and be out before anyone knew he was there.",
+      "index": "64"
+    },
+    {
+      "topic": "VMS08ColonelHsuTopic026",
+      "topic_text": "You did the right thing. If you'd sent more, they'd have been killed.",
+      "emotion": "Neutral 50",
+      "response_text": "That's probably true, but I wonder if I should've taken a different strategy entirely.",
+      "index": "67"
+    },
+    {
+      "topic": "VMS08ColonelHsuTopic028",
+      "topic_text": "Ambassador Crocker said to come see you about the situation with the Kings in Freeside.",
+      "emotion": "Neutral 50",
+      "response_text": "Ah, that. I'm surprised he didn't send you to Colonel Moore. That'd be her jurisdiction.",
+      "index": "69"
+    },
+    {
+      "topic": "VMS08ColonelHsuTopic029",
+      "topic_text": "He said those were his official orders, but suggested seeing you anyway.",
+      "emotion": "Neutral 50",
+      "response_text": "Because he's looking to avoid a bloodbath. I get it. He knows me.",
+      "index": "72"
+    },
+    {
+      "topic": "VMS08ColonelHsuTopic030",
+      "topic_text": "He said you might have a better way of dealing with the issue.",
+      "emotion": "Neutral 50",
+      "response_text": "Well, I do get to make the calls on the distribution of supplies there.",
+      "index": "75"
+    },
+    {
+      "topic": "VMS08ColonelHsuTopic031",
+      "topic_text": "The ambassador didn't think Colonel Moore would handle the situation correctly.",
+      "emotion": "Neutral 50",
+      "response_text": "Moore's got her hands full right now, and she's not a subtle person in the best of times. Her solution would be quick and dirty.",
+      "index": "77"
+    },
+    {
+      "topic": "VMS08ColonelHsuTopic032",
+      "topic_text": "Any other problems?",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah. On top of everything else, I can't send a patrol on a bathroom break without it being ambushed by someone who heard they were coming.",
+      "index": "79"
+    },
+    {
+      "topic": "VMS08ColonelHsuTopic033",
+      "topic_text": "Where does that leave you?",
+      "emotion": "Neutral 50",
+      "response_text": "Now we're trying to secure the Strip and the Dam at the same time, and it's costing us.",
+      "index": "81"
+    },
+    {
+      "topic": "VMS08ColonelHsuTopic034",
+      "topic_text": "What's Camp McCarran's role in NCR operations?",
+      "emotion": "Neutral 50",
+      "response_text": "It's our main base. We took it because it lets us keep an eye on the Strip. And it had already been fortified before the Great War.",
+      "index": "84"
+    },
+    {
+      "topic": "VMS08ColonelHsuTopic035",
+      "topic_text": "Are things mostly quiet between here and the Dam?",
+      "emotion": "Neutral 50",
+      "response_text": "Unfortunately, no. In fact, the word from the Ranger stations has been especially concerning lately.",
+      "index": "87"
+    },
+    {
+      "topic": "VMS08ColonelHsuTopic036",
+      "topic_text": "What challenges does the NCR face here?",
+      "emotion": "Neutral 50",
+      "response_text": "Everything was going according to President Kimball's plan at first. We met minor resistance from local troublemakers.",
+      "index": "90"
+    },
+    {
+      "topic": "VMS08ColonelHsuVault3Accept",
+      "topic_text": "I'll go to Vault 3 and see if I can find your ranger.",
+      "emotion": "Neutral 50",
+      "response_text": "That Vault is a hornet's nest. If you have second thoughts, no one would think less of you for it. But if you can get him home, it'd mean a lot.",
+      "index": "93"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Bye.",
+      "index": "97"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "Hello",
+      "emotion": "Neutral 50",
+      "response_text": "Something I can do for you?",
+      "index": "98"
+    }
+  ],
+  "combat": []
+}

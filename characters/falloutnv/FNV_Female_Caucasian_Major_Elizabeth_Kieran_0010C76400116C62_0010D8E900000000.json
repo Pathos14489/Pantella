@@ -1,0 +1,188 @@
+{
+  "name": "Major Elizabeth Kieran",
+  "url": "/wiki/Elizabeth_Kieran",
+  "dialogue_name": "VFSElizabethKieran.txt",
+  "dialogue_url": "/wiki/VFSElizabethKieran.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "0010C76400116C62",
+  "ref_id": "0010D8E900000000",
+  "editor_id": "VFSElizabethKieran",
+  "location": "Ruined Store",
+  "location_url": "/wiki/Ruined_store_(Fallout:_New_Vegas)",
+  "descriptions": [
+    "Major Elizabeth Kieran is a member of the New California Republic Army's supply corps. She is providing aid to NCR squatters living in Freeside in Fallout: New Vegas.",
+    "Major Kieran is leading a mission to provide food to citizens of the New California Republic who live in Freeside. As a member of the NCR Army's supply corps, Kieran has been giving handouts to proven NCR citizens, but has been running into trouble with local Freesiders.",
+    "She would like to have friendly relations with the Kings, as shown by her willingness to send an emissary, but men like Pacer have prevented this from happening.",
+    "Major Kieran is a friend of Julie Farkas, and she is the reason why Kieran likes the Followers of the Apocalypse, unlike many others in the NCR who do not see eye-to-eye with the group.",
+    "G.I. Blues: She will tell the Courier about her current mission. If the Courier speaks to Julie Farkas at the Old Mormon Fort beforehand, Major Kieran is willing to provide more information about her mission, including details about the failed envoy which can be used to peacefully resolve matters between the Kings and the NCR. Otherwise, when the situation escalates, Kieran and her troopers must be killed."
+  ],
+  "race": "Human",
+  "gender": "Female",
+  "affiliation": "NCR Army supply corpsJulie Farkas",
+  "role": "Officer",
+  "detailed_location": "Ruined store,Freeside",
+  "voice_actor": "Katherine Pawlak",
+  "special": {
+    "Strength": 4,
+    "Perception": 6,
+    "Endurance": 4,
+    "Charisma": 6,
+    "Intelligence": 7,
+    "Agility": 5,
+    "Luck": 4
+  },
+  "level": "16",
+  "tag_skills": [
+    {
+      "Barter:": "98"
+    },
+    {
+      "Medicine:": "98"
+    },
+    {
+      "Science:": "98"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "140"
+    },
+    {
+      "Dam. Threshold:": "0(1)"
+    }
+  ],
+  "karma": "Neutral",
+  "voice_type": "FemaleAdult01Default",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "I've held up my end. You tell the King that I'm willing to listen to him.",
+      "index": "1"
+    },
+    {
+      "topic": "VFreeformFreesideTopic002",
+      "topic_text": "The King wants to help with the relief effort.",
+      "emotion": "Sad 50",
+      "response_text": "Like he helped the envoy we sent? No thanks.",
+      "index": "5"
+    },
+    {
+      "topic": "VFreeformFreesideVFSElizabethKieranTopic007",
+      "topic_text": "Which are?",
+      "emotion": "Disgust 50",
+      "response_text": "It's not something I'm willing to discuss. Now if you'll excuse me, there are other people waiting.",
+      "index": "6"
+    },
+    {
+      "topic": "VMS19VFSElizabethKieranTopic000",
+      "topic_text": "I'm sorry, I didn't mean to pry.",
+      "emotion": "Sad 50",
+      "response_text": "It's no problem, just something I'd rather not think about. Now, I should get to the other customers.",
+      "index": "7"
+    },
+    {
+      "topic": "VMS19VFSElizabethKieranTopic001",
+      "topic_text": "Do you serve food to Locals as well?",
+      "emotion": "Sad 50",
+      "response_text": "No, I'm afraid we don't. Do you have a friend you wanted to bring in?",
+      "index": "8"
+    },
+    {
+      "topic": "VMS19VFSElizabethKieranTopic003",
+      "topic_text": "Yes, but I was afraid he wouldn't get served.",
+      "emotion": "Happy 50",
+      "response_text": "You were right, but here, take another helping for your friend. It'll be our secret.",
+      "index": "10"
+    },
+    {
+      "topic": "VMS19VFSElizabethKieranTopic004",
+      "topic_text": "No, I was just curious.",
+      "emotion": "Neutral 50",
+      "response_text": "Well, now you know. Enjoy the food.",
+      "index": "11"
+    },
+    {
+      "topic": "VMS19VFSElizabethKieranTopic005",
+      "topic_text": "Why don't you serve Locals?",
+      "emotion": "Anger 50",
+      "response_text": "That's not really a pleasant topic of conversation. Let's just say we have our reasons.",
+      "index": "12"
+    },
+    {
+      "topic": "VMS19VFSElizabethKieranTopic008",
+      "topic_text": "Julie Farkas told me to ask. She said it was important.",
+      "emotion": "Surprise 50",
+      "response_text": "You know Julie? Not everyone in the NCR sees eye-to-eye with the Followers, but they're okay in my book, mostly because of her.",
+      "index": "13"
+    },
+    {
+      "topic": "VMS19VFSElizabethKieranTopic009",
+      "topic_text": "And the King refused?",
+      "emotion": "Disgust 50",
+      "response_text": "In a manner of speaking. Our envoy was brutally beaten, and only barely survived. My superiors ordered the relief mission scrapped.",
+      "index": "15"
+    },
+    {
+      "topic": "VMS19VFSElizabethKieranTopic010",
+      "topic_text": "What happened?",
+      "emotion": "Anger 50",
+      "response_text": "Our envoy was brutally beaten, and only barely survived. My superiors ordered the relief mission scrapped.",
+      "index": "19"
+    },
+    {
+      "topic": "VMS19VFSElizabethKieranTopic011",
+      "topic_text": "Let me guess, something bad happened to the envoy.",
+      "emotion": "Anger 50",
+      "response_text": "The man was brutally beaten, and only barely survived. My superiors ordered the relief mission scrapped.",
+      "index": "20"
+    },
+    {
+      "topic": "VMS19VFSElizabethKieranTopic013",
+      "topic_text": "I thought I'd save everyone some time and just kill you.",
+      "emotion": "Surprise 60",
+      "response_text": "Wh-? Guards!",
+      "index": "21"
+    },
+    {
+      "topic": "VMS19VFSElizabethKieranTopic014",
+      "topic_text": "That wasn't him. He didn't even know an envoy was sent.",
+      "emotion": "Neutral 50",
+      "response_text": "Then he should watch his back. We know for a fact that the envoy made it to their headquarters.",
+      "index": "22"
+    },
+    {
+      "topic": "VMS19VFSElizabethKiernanTopic000",
+      "topic_text": "Thanks for the food.",
+      "emotion": "Happy 50",
+      "response_text": "You're quite welcome. If you meet anyone who needs food or water in the area, please tell them about this place.",
+      "index": "24"
+    },
+    {
+      "topic": "VMS19VFSElizabethKiernanTopic020",
+      "topic_text": "Are you with the NCR military?",
+      "emotion": "Neutral 50",
+      "response_text": "Yes, I'm a major in the supply corps, which is where this food and water comes from.",
+      "index": "25"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "VFSElizabethKieranHandsOutSupplies",
+      "topic_text": "VFSElizabethKieranHandsOutSupplies",
+      "emotion": "Neutral 50",
+      "response_text": "Here you go. I hope this helps.",
+      "index": "26"
+    }
+  ],
+  "combat": []
+}

@@ -1,0 +1,600 @@
+{
+  "name": "Chief Hanlon",
+  "url": "/wiki/Hanlon",
+  "dialogue_name": "2CHanlon.txt",
+  "dialogue_url": "/wiki/2CHanlon.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "00104310",
+  "ref_id": "00106D79",
+  "editor_id": "2CHanlon",
+  "location": "House Resort",
+  "location_url": "/wiki/House_Resort",
+  "descriptions": [
+    "Chief Hanlon is the commanding officer of the New California Republic Rangers, responsible for coordinating Ranger operations throughout the Mojave Wasteland from their headquarters at Camp Golf in Fallout: New Vegas. He is a grizzled veteran of the republic's war against Caesar's Legion, having commanded the Rangers during the First Battle of Hoover Dam.",
+    "Hailing from the heartlands of New California, Hanlon is one of the Rangers' longest-serving members,",
+    "Hanlon admits to feeling that many of the things he saw as a Ranger changed him and his relationship with the republic itself. One of these pivotal moments occurred sometime between 2256 and 2261, when he led a six-man team of Rangers to investigate reports of raider attacks on a small settlement called Rattletail in the Baja region. It took the Rangers a week to get to Rattletail, during which the group suffered complications, losing one to night stalkers and another nearly dying of dehydration. What they found upon reaching Rattletail was a slaughter, including 24 bodies shot dead among the dunes by the NCR settlers armed with .308 rifles who had claimed the only well within fifty miles and opened fire on anyone who tried to reach it. Contrary to the reports of vicious raiders, the dead were not heavily armed or raiders, simply desperate wastelanders looking for a drink. To prevent further loss of life, Hanlon sold them a story about an incoming raider army, one hundred strong, and his group losing ten Rangers already on the way in, and offered to escort the settlers back to the NCR, which they accepted and eventually resettled in Anza-Borrego as bighorner ranchers. Since then, Hanlon considers it his one good deed in over 40 years of service.",
+    "Despite his doubts about their policies, Hanlon served the Rangers and the republic to the best of his ability. Once in the position of chief himself, Hanlon has developed a legendary reputation for his use of misdirection, traps, and ambushes, frequently executed with the use of explosives, especially mines. He solidified his skill as a strategist in the minds of Caesar's Legion in the wake of the First Battle of Hoover Dam,",
+    "Highly influential among the Rangers due to his success and experience, Chief Hanlon has been honored many times for his contributions to the NCR. Although he no longer engages in combat operations, he nevertheless continues to coordinate Ranger operations. As a recognized war hero and a veteran of countless campaigns, he is a powerful influence in military circles and even has the ear of NCR President Aaron Kimball, though the republic's leader tends to favor the advice of his own coterie of war hawks. Hanlon learned this the hard way when his request to reassign the Rangers' veteran members to the Mojave was ignored in favor of deploying them to Baja, on a mission that the chief blithely regards as \"chasing ghosts.\"",
+    "Fed up with the bickering and internal politics that have plagued him, Chief Hanlon eventually took a hard look at the Mojave Campaign and came to the conclusion that attempting to hold on to the dam and annex New Vegas would eventually kill the republic. The war with the Legion has left its toll on the Army's men and women, and along with his frustrations at Mr. House's casinos bleeding the NCR's soldiers dry while relying on their protection, Hanlon has been left fearing for the future of the NCR even in the case of victory against the Legion a second time. Hanlon believes the task of trying to hold both sides of the Colorado River is too much for the Army or even the Rangers to maintain long term. His fears have culminated in him undertaking a secret campaign to deliberately sabotage the war effort through manipulating intelligence reports sent in from Ranger stations across the Mojave, trying to convince the top brass that the situation was more hopeless than it was in reality. In the end, he wishes that the NCR would decide to cut its losses and abandon the frontier, putting a stop to the constant shedding of its own blood for territory.",
+    "#",
+    "Chief Hanlon appears in Fallout: New Vegas and is mentioned in its add-ons Honest Hearts and Lonesome Road. He also appears in Fallout: Wasteland Warfare.",
+    "Hanlon's voice actor, Kris Kristofferson, in the voiceover booth"
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "New California Republic Rangers",
+  "role": "Chief of the NCR RangersJack of HeartsSenator ofRedding[1](potentially)",
+  "detailed_location": "Camp GolfHouse Resort",
+  "voice_actor": "Kris Kristofferson",
+  "special": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 5,
+    "Intelligence": 5,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "level": "5",
+  "tag_skills": [
+    {
+      "Explosives:": "46"
+    },
+    {
+      "Guns:": "46"
+    },
+    {
+      "Melee Weap.:": "46"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "50"
+    }
+  ],
+  "karma": "Neutral",
+  "geck_race": "CaucasianOld",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Anger 35",
+      "response_text": "{serious}I don't believe there's anything left for us to talk about.Play soundvcampgolfhanlon_greeting_0015c12…https://fallout.fandom.com/wiki/File:Vcampgolfhanlon_greeting_0015c121_1.oggnoicon",
+      "index": "1"
+    },
+    {
+      "topic": "HanlonConfession",
+      "topic_text": "HanlonConfession",
+      "emotion": "Neutral 50",
+      "response_text": "Rangers, this is the chief. I know I can ramble on sometimes, but I need you to listen close for the next minute or so. I've got some bad news.Play soundvcampgolfh_hanlonconfessio_00108…https://fallout.fandom.com/wiki/File:Vcampgolfh_hanlonconfessio_001084a4_1.oggnoicon",
+      "index": "13"
+    },
+    {
+      "topic": "VCampGolfHanlon2CHanlonTopic012",
+      "topic_text": "Tell me about yourself.",
+      "emotion": "Happy 35",
+      "response_text": "Folks around here call me the chief{han-luhn}, but Hanlon's just fine. The rangers run themselves pretty well, but I try to lend a hand.Play soundvcampgolfh_vcampgolfhanlon_00156…https://fallout.fandom.com/wiki/File:Vcampgolfh_vcampgolfhanlon_00156f2b_1.oggnoicon",
+      "index": "20"
+    },
+    {
+      "topic": "VCampGolfHanlon2CHanlonTopic015",
+      "topic_text": "Let's talk about something else.",
+      "emotion": "Neutral 50",
+      "response_text": "Shoot.Play soundvcampgolfh_vcampgolfhanlon_00157…https://fallout.fandom.com/wiki/File:Vcampgolfh_vcampgolfhanlon_00157b51_1.oggnoicon",
+      "index": "22"
+    },
+    {
+      "topic": "VCampGolfHanlon2CHanlonTopic016",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Adios.Play soundvcampgolfh_vcampgolfhanlon_00157…https://fallout.fandom.com/wiki/File:Vcampgolfh_vcampgolfhanlon_00157b53_1.oggnoicon",
+      "index": "23"
+    },
+    {
+      "topic": "VCampGolfHanlon2CHanlonTopic025",
+      "topic_text": "What do you know about Caesar?",
+      "emotion": "Neutral 50",
+      "response_text": "The best of the best, worst of the worst. He came out of NCR, one of the Followers of the Apocalypse.Play soundvcampgolfh_vcampgolfhanlon_00156…https://fallout.fandom.com/wiki/File:Vcampgolfh_vcampgolfhanlon_00156f36_1.oggnoicon",
+      "index": "24"
+    },
+    {
+      "topic": "VCampGolfHanlon2CHanlonTopic029",
+      "topic_text": "How is NCR doing?",
+      "emotion": "Sad 25",
+      "response_text": "It's no secret that we've had better campaigns. Holding this whole length of river isn't easy.Play soundvcampgolfh_vcampgolfhanlon_00156…https://fallout.fandom.com/wiki/File:Vcampgolfh_vcampgolfhanlon_00156f63_1.oggnoicon",
+      "index": "27"
+    },
+    {
+      "topic": "VCampGolfHanlon2CHanlonTopic030",
+      "topic_text": "What's the Legion been up to?",
+      "emotion": "Neutral 50",
+      "response_text": "Not too long ago, they took Nelson and Searchlight.Play soundvcampgolfh_vcampgolfhanlon_00156…https://fallout.fandom.com/wiki/File:Vcampgolfh_vcampgolfhanlon_00156f5d_1.oggnoicon",
+      "index": "36"
+    },
+    {
+      "topic": "VCampGolfHanlon2CHanlonTopic031",
+      "topic_text": "Tell me about the rangers.",
+      "emotion": "Happy 5",
+      "response_text": "I could tell you a lot if you had the time, but at my age I'm not sure which of us would get tired first. What do you want to know?Play soundvcampgolfh_vcampgolfhanlon_00156…https://fallout.fandom.com/wiki/File:Vcampgolfh_vcampgolfhanlon_00156f3e_1.oggnoicon",
+      "index": "45"
+    },
+    {
+      "topic": "VCampGolfHanlon2CHanlonTopic032",
+      "topic_text": "Do you ever stop talking?",
+      "emotion": "Surprise 35",
+      "response_text": "I didn't realize you were in such a hurry.Play soundvcampgolfh_vcampgolfhanlon_00156…https://fallout.fandom.com/wiki/File:Vcampgolfh_vcampgolfhanlon_00156f56_1.oggnoicon",
+      "index": "46"
+    },
+    {
+      "topic": "VCampGolfHanlon2CHanlonTopic033",
+      "topic_text": "I'm investigating some intel problems for Technical Sergeant Reyes.",
+      "emotion": "Anger 25",
+      "response_text": "Interesting that she would wrangle someone else into sorting out the problem.Play soundvcampgolfh_vcampgolfhanlon_00156…https://fallout.fandom.com/wiki/File:Vcampgolfh_vcampgolfhanlon_00156f35_1.oggnoicon",
+      "index": "48"
+    },
+    {
+      "topic": "VCampGolfHanlon2CHanlonTopic034",
+      "topic_text": "I know you're the one who's been manipulating intelligence data.",
+      "emotion": "Sad 35",
+      "response_text": "Hold on. If we're going to have this conversation, let's go somewhere more private.Play soundvcampgolfh_vcampgolfhanlon_00156…https://fallout.fandom.com/wiki/File:Vcampgolfh_vcampgolfhanlon_00156f69_1.oggnoicon",
+      "index": "51"
+    },
+    {
+      "topic": "VCampGolfHanlon2CHanlonTopic035",
+      "topic_text": "Do you know anything about the problems?",
+      "emotion": "Surprise 35",
+      "response_text": "I don't know Technical Sergeant{ray-ess}Reyes, but coordinating intel can be messy sometimes. Things get mixed up, people get confused.Play soundvcampgolfh_vcampgolfhanlon_00157…https://fallout.fandom.com/wiki/File:Vcampgolfh_vcampgolfhanlon_001572c4_1.oggnoicon",
+      "index": "53"
+    },
+    {
+      "topic": "VCampGolfHanlon2CHanlonTopic036",
+      "topic_text": "Can you give me any advice?",
+      "emotion": "Neutral 50",
+      "response_text": "Well...{thinking}the logical thing to do is to check with the patrol rangers and comm officers. Don't be too discouraged if some things don't match up.Play soundvcampgolfh_vcampgolfhanlon_00156…https://fallout.fandom.com/wiki/File:Vcampgolfh_vcampgolfhanlon_00156f75_1.oggnoicon",
+      "index": "56"
+    },
+    {
+      "topic": "VCampGolfHanlon2CHanlonTopic037",
+      "topic_text": "How do you coordinate the intel?",
+      "emotion": "Neutral 50",
+      "response_text": "It's a simple system, when it works. Patrol rangers radio intel to ranger stations.Play soundvcampgolfh_vcampgolfhanlon_00156…https://fallout.fandom.com/wiki/File:Vcampgolfh_vcampgolfhanlon_00156f38_1.oggnoicon",
+      "index": "58"
+    },
+    {
+      "topic": "VCampGolfHanlon2CHanlonTopic038",
+      "topic_text": "Why don't the ranger stations send the intel directly to the troopers?",
+      "emotion": "Neutral 50",
+      "response_text": "Comm rangers might have an incomplete picture of the situation. There's a lot going on out there.Play soundvcampgolfh_vcampgolfhanlon_00156…https://fallout.fandom.com/wiki/File:Vcampgolfh_vcampgolfhanlon_00156f40_1.oggnoicon",
+      "index": "61"
+    },
+    {
+      "topic": "VCampGolfHanlon2CHanlonTopic039",
+      "topic_text": "But you're inventing your own intelligence reports. I've seen the logs and talked to the rangers.",
+      "emotion": "Happy 35",
+      "response_text": "{smiling a bit}You have, have you?{Beat, more somber}Misdirection. When you're pinned down, outnumbered, and two days from any help, it's just about the best friend you can have.Play soundvcampgolfh_vcampgolfhanlon_00156…https://fallout.fandom.com/wiki/File:Vcampgolfh_vcampgolfhanlon_00156f30_1.oggnoicon",
+      "index": "64"
+    },
+    {
+      "topic": "VCampGolfHanlon2CHanlonTopic040",
+      "topic_text": "Why did you do it?",
+      "emotion": "Sad 50",
+      "response_text": "It's never going to end. This fight with Caesar. People back home don't know what these young men and women are in for.Play soundvcampgolfh_vcampgolfhanlon_00156…https://fallout.fandom.com/wiki/File:Vcampgolfh_vcampgolfhanlon_00156f61_1.oggnoicon",
+      "index": "67"
+    },
+    {
+      "topic": "VCampGolfHanlon2CHanlonTopic041",
+      "topic_text": "Aren't you fighting for the people of New Vegas?",
+      "emotion": "Anger 35",
+      "response_text": "We're fighting on their behalf, but Mr. House and the families are stringing us up, inch by inch.Play soundvcampgolfh_vcampgolfhanlon_00156…https://fallout.fandom.com/wiki/File:Vcampgolfh_vcampgolfhanlon_00156f34_1.oggnoicon",
+      "index": "70"
+    },
+    {
+      "topic": "VCampGolfHanlon2CHanlonTopic042",
+      "topic_text": "How does spreading false intel help anything?",
+      "emotion": "Anger 45",
+      "response_text": "{exasperated}People back home don't listen. They don't care. Senators, Brahmin barons, folks who are just trying to make it from day to day.Play soundvcampgolfh_vcampgolfhanlon_00156…https://fallout.fandom.com/wiki/File:Vcampgolfh_vcampgolfhanlon_00156f3d_1.oggnoicon",
+      "index": "73"
+    },
+    {
+      "topic": "VCampGolfHanlon2CHanlonTopic043",
+      "topic_text": "What do you think I should do about this?",
+      "emotion": "Sad 25",
+      "response_text": "First thing that comes to mind is to turn me in. But that might not be the best play, all things considered.Play soundvcampgolfh_vcampgolfhanlon_00156…https://fallout.fandom.com/wiki/File:Vcampgolfh_vcampgolfhanlon_00156f2c_1.oggnoicon",
+      "index": "77"
+    },
+    {
+      "topic": "VCampGolfHanlon2CHanlonTopic044",
+      "topic_text": "You're dead.",
+      "emotion": "Surprise 50",
+      "response_text": "Hold on. This is ranger headquarters. There might be a dozen rangers within earshot.Play soundvcampgolfh_vcampgolfhanlon_00156…https://fallout.fandom.com/wiki/File:Vcampgolfh_vcampgolfhanlon_00156f54_1.oggnoicon",
+      "index": "79"
+    },
+    {
+      "topic": "VCampGolfHanlon2CHanlonTopic046",
+      "topic_text": "But what does that accomplish?",
+      "emotion": "Sad 35",
+      "response_text": "{pause, quieter}Creating fear and instability among the troopers without causing harm, it's the only thing I could think of to shake things up.Play soundvcampgolfh_vcampgolfhanlon_00156…https://fallout.fandom.com/wiki/File:Vcampgolfh_vcampgolfhanlon_00156f47_1.oggnoicon",
+      "index": "81"
+    },
+    {
+      "topic": "VCampGolfHanlon2CHanlonTopic047",
+      "topic_text": "Too bad. I'm turning you in.",
+      "emotion": "Anger 15",
+      "response_text": "Fair enough. You want to do this the right way, go get one of the rangers. Don't worry. I'm not gonna run out on you.Play soundvcampgolfh_vcampgolfhanlon_00156…https://fallout.fandom.com/wiki/File:Vcampgolfh_vcampgolfhanlon_00156f67_1.oggnoicon",
+      "index": "83"
+    },
+    {
+      "topic": "VCampGolfHanlon2CHanlonTopic048",
+      "topic_text": "What will you do if I don't turn you in?",
+      "emotion": "Neutral 50",
+      "response_text": "Oliver can't stand that rangers got credit for victory at Hoover. Whatever I recommend, he does the opposite. I said I wanted them on the ridge.Play soundvcampgolfh_vcampgolfhanlon_00156…https://fallout.fandom.com/wiki/File:Vcampgolfh_vcampgolfhanlon_00156f2d_1.oggnoicon",
+      "index": "84"
+    },
+    {
+      "topic": "VCampGolfHanlon2CHanlonTopic049",
+      "topic_text": "What about you and the rangers?",
+      "emotion": "Anger 25",
+      "response_text": "Rangers are volunteers. Every man and woman who signs up is willing to die for the NCR, myself included.Play soundvcampgolfh_vcampgolfhanlon_00156…https://fallout.fandom.com/wiki/File:Vcampgolfh_vcampgolfhanlon_00156f6a_1.oggnoicon",
+      "index": "87"
+    },
+    {
+      "topic": "VCampGolfHanlon2CHanlonTopic050",
+      "topic_text": "That's crazy.",
+      "emotion": "Anger 35",
+      "response_text": "Maybe fifty rangers will die on that dam. We lose over a thousand troopers every year. Being here is crazy. Getting out's the only sane thing to do.Play soundvcampgolfh_vcampgolfhanlon_00156…https://fallout.fandom.com/wiki/File:Vcampgolfh_vcampgolfhanlon_00156f66_1.oggnoicon",
+      "index": "89"
+    },
+    {
+      "topic": "VCampGolfHanlon2CHanlonTopic051",
+      "topic_text": "Caesar's dead. The Legion can't hold itself together for five years, much less ten.",
+      "emotion": "Fear 35",
+      "response_text": "It's a gamble either way. Even with Caesar gone, we still might not outlast the Legion. I suppose that's a risk I'll have to take.Play soundvcampgolfh_vcampgolfhanlon_00156…https://fallout.fandom.com/wiki/File:Vcampgolfh_vcampgolfhanlon_00156f4a_1.oggnoicon",
+      "index": "90"
+    },
+    {
+      "topic": "VCampGolfHanlon2CHanlonTopic052",
+      "topic_text": "Caesar's sick. He won't live long. The Legion will fall apart a few years after he's gone.",
+      "emotion": "Fear 35",
+      "response_text": "It's a gamble either way. Even with Caesar gone, we still might not outlast the Legion. I suppose that's a risk I'll have to take.Play soundvcampgolfh_vcampgolfhanlon_00156…https://fallout.fandom.com/wiki/File:Vcampgolfh_vcampgolfhanlon_00156f4a_1.oggnoicon",
+      "index": "90"
+    },
+    {
+      "topic": "VCampGolfHanlon2CHanlonTopic053",
+      "topic_text": "Caesar's dead. What more do you need?",
+      "emotion": "Anger 25",
+      "response_text": "{a little angry}The Legion is more than just Caesar! It's got the momentum of thousands of men behind it.Play soundvcampgolfh_vcampgolfhanlon_00156…https://fallout.fandom.com/wiki/File:Vcampgolfh_vcampgolfhanlon_00156f33_1.oggnoicon",
+      "index": "93"
+    },
+    {
+      "topic": "VCampGolfHanlon2CHanlonTopic054",
+      "topic_text": "Caesar is sick. Like... really sick. He could drop any day.",
+      "emotion": "Anger 25",
+      "response_text": "{a little angry}The Legion is more than just Caesar! It's got the momentum of thousands of men behind it.Play soundvcampgolfh_vcampgolfhanlon_00156…https://fallout.fandom.com/wiki/File:Vcampgolfh_vcampgolfhanlon_00156f33_1.oggnoicon",
+      "index": "93"
+    },
+    {
+      "topic": "VCampGolfHanlon2CHanlonTopic055",
+      "topic_text": "You've convinced me. Your secret is safe.",
+      "emotion": "Fear 5",
+      "response_text": "I don't know if you're working for Caesar or if desperation's made me a heck of a lot more persuasive. Either way, this is the right thing to do.Play soundvcampgolfh_vcampgolfhanlon_00156…https://fallout.fandom.com/wiki/File:Vcampgolfh_vcampgolfhanlon_00156f55_1.oggnoicon",
+      "index": "95"
+    },
+    {
+      "topic": "VCampGolfHanlon2CHanlonTopic058",
+      "topic_text": "Doesn't matter. Your time's up, Hanlon.",
+      "emotion": "Sad 25",
+      "response_text": "Well, you got that right.Play soundvcampgolfh_vcampgolfhanlon_00158…https://fallout.fandom.com/wiki/File:Vcampgolfh_vcampgolfhanlon_0015888a_1.oggnoicon",
+      "index": "97"
+    },
+    {
+      "topic": "VCampGolfHanlon2CHanlonTopic059",
+      "topic_text": "Fires?",
+      "emotion": "Sad 25",
+      "response_text": "Legion fires. They burn high wherever the Legion goes.Play soundvcampgolfh_vcampgolfhanlon_00156…https://fallout.fandom.com/wiki/File:Vcampgolfh_vcampgolfhanlon_00156f6d_1.oggnoicon",
+      "index": "98"
+    },
+    {
+      "topic": "VCampGolfHanlon2CHanlonTopic060",
+      "topic_text": "Where did he go?",
+      "emotion": "Neutral 50",
+      "response_text": "Out to the Grand Canyon. He met a missionary from Utah, a man by the name of Joshua Graham. Graham helped translate for the Followers and the tribes.Play soundvcampgolfh_vcampgolfhanlon_00156…https://fallout.fandom.com/wiki/File:Vcampgolfh_vcampgolfhanlon_00156f29_1.oggnoicon",
+      "index": "100"
+    },
+    {
+      "topic": "VCampGolfHanlon2CHanlonTopic061",
+      "topic_text": "How did a Follower wind up becoming Caesar?",
+      "emotion": "Neutral 50",
+      "response_text": "Somewhere along the way, he realized he needed to educate the Blackfoots or they were going to get wiped out with the rest of the tribe.Play soundvcampgolfh_vcampgolfhanlon_00156…https://fallout.fandom.com/wiki/File:Vcampgolfh_vcampgolfhanlon_00156f41_1.oggnoicon",
+      "index": "102"
+    },
+    {
+      "topic": "VCampGolfHanlon2CHanlonTopic062",
+      "topic_text": "What happened to Graham after Hoover Dam?",
+      "emotion": "Neutral 50",
+      "response_text": "Losing the dam was the worst defeat the Legion ever suffered. Graham had been with Caesar since the beginning, but he had to set an example.Play soundvcampgolfh_vcampgolfhanlon_00156…https://fallout.fandom.com/wiki/File:Vcampgolfh_vcampgolfhanlon_00156f60_1.oggnoicon",
+      "index": "106"
+    },
+    {
+      "topic": "VCampGolfHanlon2CHanlonTopic063",
+      "topic_text": "Are the Blackfoots part of the Legion?",
+      "emotion": "Neutral 50",
+      "response_text": "Yes and no. The Blackfoots don't exist anymore, just like any other tribe that gets swallowed by the Legion.Play soundvcampgolfh_vcampgolfhanlon_00156…https://fallout.fandom.com/wiki/File:Vcampgolfh_vcampgolfhanlon_00156f3f_1.oggnoicon",
+      "index": "108"
+    },
+    {
+      "topic": "VCampGolfHanlon2CHanlonTopic064",
+      "topic_text": "So that was the end of Graham?",
+      "emotion": "Neutral 50",
+      "response_text": "It's not that clear cut. You have to understand, Graham was the toughest son of a gun anyone around these parts had ever seen.Play soundvcampgolfh_vcampgolfhanlon_00156…https://fallout.fandom.com/wiki/File:Vcampgolfh_vcampgolfhanlon_00156f74_1.oggnoicon",
+      "index": "111"
+    },
+    {
+      "topic": "VCampGolfHanlon2CHanlonTopic065",
+      "topic_text": "Why are funds tied up at the Boneyard?",
+      "emotion": "Disgust 25",
+      "response_text": "Senate elections are coming up. Local representatives don't want to push any more funding to the Mojave campaign because it's unpopular.Play soundvcampgolfh_vcampgolfhanlon_00156…https://fallout.fandom.com/wiki/File:Vcampgolfh_vcampgolfhanlon_00156f62_1.oggnoicon",
+      "index": "114"
+    },
+    {
+      "topic": "VCampGolfHanlon2CHanlonTopic066",
+      "topic_text": "What's going on in Baja?",
+      "emotion": "Neutral 50",
+      "response_text": "It's complicated. Goes way back. I told President Kimball that we need more rangers here.Play soundvcampgolfh_vcampgolfhanlon_00156…https://fallout.fandom.com/wiki/File:Vcampgolfh_vcampgolfhanlon_00156f42_1.oggnoicon",
+      "index": "117"
+    },
+    {
+      "topic": "VCampGolfHanlon2CHanlonTopic067",
+      "topic_text": "What about the troopers?",
+      "emotion": "Anger 25",
+      "response_text": "You've seen it yourself. Some of them don't even have proper service rifles or armor.Play soundvcampgolfh_vcampgolfhanlon_00156…https://fallout.fandom.com/wiki/File:Vcampgolfh_vcampgolfhanlon_00156f6c_1.oggnoicon",
+      "index": "119"
+    },
+    {
+      "topic": "VCampGolfHanlon2CHanlonTopic068",
+      "topic_text": "Tell me about General Oliver.",
+      "emotion": "Surprise 30",
+      "response_text": "Oh, well... now, you'll have to excuse me. The general and I don't always see eye to eye on things.Play soundvcampgolfh_vcampgolfhanlon_00156…https://fallout.fandom.com/wiki/File:Vcampgolfh_vcampgolfhanlon_00156f39_1.oggnoicon",
+      "index": "122"
+    },
+    {
+      "topic": "VCampGolfHanlon2CHanlonTopic069",
+      "topic_text": "Colonel Moore's \"way\"?",
+      "emotion": "Neutral 50",
+      "response_text": "The colonel is an effective commander - one of the best - but she sharpened her claws on the Vipers and the old Jackals.Play soundvcampgolfh_vcampgolfhanlon_00156…https://fallout.fandom.com/wiki/File:Vcampgolfh_vcampgolfhanlon_00156f31_1.oggnoicon",
+      "index": "124"
+    },
+    {
+      "topic": "VCampGolfHanlon2CHanlonTopic070",
+      "topic_text": "Is Moore in charge of all the NCR troopers out here?",
+      "emotion": "Happy 5",
+      "response_text": "No, and thanks to General Oliver for that. Colonel{shoo}Hsu is at McCarran. Most of the New Vegas troopers are under his command.Play soundvcampgolfh_vcampgolfhanlon_00156…https://fallout.fandom.com/wiki/File:Vcampgolfh_vcampgolfhanlon_00156f58_1.oggnoicon",
+      "index": "127"
+    },
+    {
+      "topic": "VCampGolfHanlon2CHanlonTopic071",
+      "topic_text": "What do the new rangers mean for NCR?",
+      "emotion": "Neutral 50",
+      "response_text": "The Baja rangers can do more advance night scouting and sharpshooting to assist the troopers.Play soundvcampgolfh_vcampgolfhanlon_00156…https://fallout.fandom.com/wiki/File:Vcampgolfh_vcampgolfhanlon_00156f49_1.oggnoicon",
+      "index": "132"
+    },
+    {
+      "topic": "VCampGolfHanlon2CHanlonTopic072",
+      "topic_text": "Tell me about the heavy troopers.",
+      "emotion": "Neutral 50",
+      "response_text": "They have the best equipment the NCR can get its hands on, power armor salvaged from our war with the Brotherhood.Play soundvcampgolfh_vcampgolfhanlon_00156…https://fallout.fandom.com/wiki/File:Vcampgolfh_vcampgolfhanlon_00156f4b_1.oggnoicon",
+      "index": "134"
+    },
+    {
+      "topic": "VCampGolfHanlon2CHanlonTopic073",
+      "topic_text": "Tell me about Nelson.",
+      "emotion": "Neutral 50",
+      "response_text": "Nelson was barely set up. We had a big stretch of unprotected land between Forlorn Hope and Searchlight, and Nelson was the solution.Play soundvcampgolfh_vcampgolfhanlon_00156…https://fallout.fandom.com/wiki/File:Vcampgolfh_vcampgolfhanlon_00156f6f_1.oggnoicon",
+      "index": "137"
+    },
+    {
+      "topic": "VCampGolfHanlon2CHanlonTopic074",
+      "topic_text": "What happened at Searchlight?",
+      "emotion": "Sad 15",
+      "response_text": "Searchlight was worse. One of Caesar's{froo-men-tar-ee}frumentarii must have found something in there, flooded the whole camp with radiation.Play soundvcampgolfh_vcampgolfhanlon_00156…https://fallout.fandom.com/wiki/File:Vcampgolfh_vcampgolfhanlon_00156f4e_1.oggnoicon",
+      "index": "139"
+    },
+    {
+      "topic": "VCampGolfHanlon2CHanlonTopic075",
+      "topic_text": "[Continue]",
+      "emotion": "Happy 5",
+      "response_text": "By the way, I appreciate what you did for the troopers down there.Play soundvcampgolfh_vcampgolfhanlon_00156…https://fallout.fandom.com/wiki/File:Vcampgolfh_vcampgolfhanlon_00156f3a_1.oggnoicon",
+      "index": "140"
+    },
+    {
+      "topic": "VCampGolfHanlon2CHanlonTopic076",
+      "topic_text": "[Continue]",
+      "emotion": "Sad 5",
+      "response_text": "I can't say I think the legionaries at Cottonwood deserved the same fate, but what's done is done.Play soundvcampgolfh_vcampgolfhanlon_00156…https://fallout.fandom.com/wiki/File:Vcampgolfh_vcampgolfhanlon_00156f68_1.oggnoicon",
+      "index": "142"
+    },
+    {
+      "topic": "VCampGolfHanlon2CHanlonTopic077",
+      "topic_text": "Why do they call Lanius the Monster of the East?",
+      "emotion": "Neutral 50",
+      "response_text": "Oh, the usual reasons. People say he's enormous, carries a big sword, chops peoples' heads off. That's not what makes him a good commander, though.Play soundvcampgolfh_vcampgolfhanlon_00156…https://fallout.fandom.com/wiki/File:Vcampgolfh_vcampgolfhanlon_00156f2f_1.oggnoicon",
+      "index": "144"
+    },
+    {
+      "topic": "VCampGolfHanlon2CHanlonTopic078",
+      "topic_text": "How bad was Graham?",
+      "emotion": "Neutral 50",
+      "response_text": "He was a missionary from Utah who hooked up with Caesar at the Grand Canyon, became his translator.Play soundvcampgolfh_vcampgolfhanlon_00156…https://fallout.fandom.com/wiki/File:Vcampgolfh_vcampgolfhanlon_00156f44_1.oggnoicon",
+      "index": "148"
+    },
+    {
+      "topic": "VCampGolfHanlon2CHanlonTopic079",
+      "topic_text": "Was Graham a good commander?",
+      "emotion": "Neutral 50",
+      "response_text": "He wasn't a brilliant strategist. Wasn't tactically flexible, either. There was something about him, though. Menace, indestructibility.Play soundvcampgolfh_vcampgolfhanlon_00156…https://fallout.fandom.com/wiki/File:Vcampgolfh_vcampgolfhanlon_00156f6e_1.oggnoicon",
+      "index": "151"
+    },
+    {
+      "topic": "VCampGolfHanlon2CHanlonTopic080",
+      "topic_text": "What makes the veterans so tough?",
+      "emotion": "Neutral 50",
+      "response_text": "Take a regular legionary and age him ten years. Whatever they lose to age they make up for with experience. Life expectancy isn't long in the Legion.Play soundvcampgolfh_vcampgolfhanlon_00156…https://fallout.fandom.com/wiki/File:Vcampgolfh_vcampgolfhanlon_00156f57_1.oggnoicon",
+      "index": "154"
+    },
+    {
+      "topic": "VCampGolfHanlon2CHanlonTopic081",
+      "topic_text": "Tell me about centurions.",
+      "emotion": "Neutral 50",
+      "response_text": "There's no real equivalent to them in the NCR. Centurions are battle-born, elite officers who earned their rank with blood and sweat.Play soundvcampgolfh_vcampgolfhanlon_00156…https://fallout.fandom.com/wiki/File:Vcampgolfh_vcampgolfhanlon_00156f2e_1.oggnoicon",
+      "index": "156"
+    },
+    {
+      "topic": "VCampGolfHanlon2CHanlonTopic082",
+      "topic_text": "Who are the praetorians?",
+      "emotion": "Neutral 50",
+      "response_text": "Caesar's elite guard. They travel with him wherever he goes. A bit of insurance in case any of his guests get funny ideas.Play soundvcampgolfh_vcampgolfhanlon_00156…https://fallout.fandom.com/wiki/File:Vcampgolfh_vcampgolfhanlon_00156f43_1.oggnoicon",
+      "index": "158"
+    },
+    {
+      "topic": "VCampGolfHanlon2CHanlonTopic083",
+      "topic_text": "Have any good stories to tell?",
+      "emotion": "Neutral 50",
+      "response_text": "Suppose it depends on what you think is \"good.\" Most folks want to hear about Hoover Dam and Boulder City, but it's a long story.Play soundvcampgolfh_vcampgolfhanlon_00156…https://fallout.fandom.com/wiki/File:Vcampgolfh_vcampgolfhanlon_00156f5a_1.oggnoicon",
+      "index": "160"
+    },
+    {
+      "topic": "VCampGolfHanlon2CHanlonTopic084",
+      "topic_text": "How long have you been in the rangers?",
+      "emotion": "Neutral 50",
+      "response_text": "Oh, well. I guess it must be coming up on... forty years or so. Back before{eh-leez}Elise was chief, anyway. It was a heck of a lot harder then.Play soundvcampgolfh_vcampgolfhanlon_00156…https://fallout.fandom.com/wiki/File:Vcampgolfh_vcampgolfhanlon_00156f70_1.oggnoicon",
+      "index": "162"
+    },
+    {
+      "topic": "VCampGolfHanlon2CHanlonTopic085",
+      "topic_text": "What do the rangers do?",
+      "emotion": "Anger 5",
+      "response_text": "Well, there's what we're supposed to be doing and what we're actually doing.Play soundvcampgolfh_vcampgolfhanlon_00156…https://fallout.fandom.com/wiki/File:Vcampgolfh_vcampgolfhanlon_00156f4d_1.oggnoicon",
+      "index": "164"
+    },
+    {
+      "topic": "VCampGolfHanlon2CHanlonTopic086",
+      "topic_text": "Why are the rangers here?",
+      "emotion": "Neutral 50",
+      "response_text": "There's a lot of answers to that question, but it started with the Ranger Unification Treaty. We weren't always the only show in town.Play soundvcampgolfh_vcampgolfhanlon_00156…https://fallout.fandom.com/wiki/File:Vcampgolfh_vcampgolfhanlon_00156f3c_1.oggnoicon",
+      "index": "166"
+    },
+    {
+      "topic": "VCampGolfHanlon2CHanlonTopic087",
+      "topic_text": "Okay, what are you supposed to be doing?",
+      "emotion": "Sad 5",
+      "response_text": "To protect against all forms of tyranny. As simple as that. Thirty, forty years ago, the wasteland was full of despots.Play soundvcampgolfh_vcampgolfhanlon_00156…https://fallout.fandom.com/wiki/File:Vcampgolfh_vcampgolfhanlon_00156f53_1.oggnoicon",
+      "index": "169"
+    },
+    {
+      "topic": "VCampGolfHanlon2CHanlonTopic088",
+      "topic_text": "What are you actually doing?",
+      "emotion": "Sad 5",
+      "response_text": "Sitting on the shore of Lake Mead, looking east. Listening to a radio. Trying to not get too many people killed.Play soundvcampgolfh_vcampgolfhanlon_00156…https://fallout.fandom.com/wiki/File:Vcampgolfh_vcampgolfhanlon_00156f3b_1.oggnoicon",
+      "index": "172"
+    },
+    {
+      "topic": "VCampGolfHanlon2CHanlonTopic089",
+      "topic_text": "There must be something good the rangers have done that you're proud of.",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] It's kind of a long one, but all right. About twenty, twenty-five years ago, a group of NCR settlers pushed way south into Baja.Play soundvcampgolfh_vcampgolfhanlon_00156…https://fallout.fandom.com/wiki/File:Vcampgolfh_vcampgolfhanlon_00156f71_1.oggnoicon",
+      "index": "174"
+    },
+    {
+      "topic": "VCampGolfHanlon2CHanlonTopic090",
+      "topic_text": "Come on. You must have lots of stories.",
+      "emotion": "Sad 10",
+      "response_text": "[FAILED] I do, but I'm tired of telling them. Time changes how you look at things.Play soundvcampgolfh_vcampgolfhanlon_00156…https://fallout.fandom.com/wiki/File:Vcampgolfh_vcampgolfhanlon_00156f2a_1.oggnoicon",
+      "index": "177"
+    },
+    {
+      "topic": "VCampGolfHanlon2CHanlonTopic091",
+      "topic_text": "So what happened at Hoover Dam and Boulder City?",
+      "emotion": "Neutral 50",
+      "response_text": "In big battles, Caesar deploys his legionaries in waves. Recruits up front, prime soldiers behind the recruits, old guard bringing up the rear.Play soundvcampgolfh_vcampgolfhanlon_00156…https://fallout.fandom.com/wiki/File:Vcampgolfh_vcampgolfhanlon_00156f37_1.oggnoicon",
+      "index": "178"
+    },
+    {
+      "topic": "VCampGolfHanlon2CHanlonTopic092",
+      "topic_text": "[Continue]",
+      "emotion": "Neutral 50",
+      "response_text": "Word got back to one of our stations that raiders had been attacking the place. I went out with six rangers.Play soundvcampgolfh_vcampgolfhanlon_00156…https://fallout.fandom.com/wiki/File:Vcampgolfh_vcampgolfhanlon_00156f6b_1.oggnoicon",
+      "index": "181"
+    },
+    {
+      "topic": "VCampGolfHanlon2CHanlonTopic093",
+      "topic_text": "[Continue]",
+      "emotion": "Neutral 50",
+      "response_text": "There's over two dozen bodies lying in the dunes way outside of town and five men with{three-oh-eight}.308 rifles crouched behind sand bags.Play soundvcampgolfh_vcampgolfhanlon_00156…https://fallout.fandom.com/wiki/File:Vcampgolfh_vcampgolfhanlon_00156f5b_1.oggnoicon",
+      "index": "184"
+    },
+    {
+      "topic": "VCampGolfHanlon2CHanlonTopic094",
+      "topic_text": "[Continue]",
+      "emotion": "Neutral 50",
+      "response_text": "They had planted an NCR flag over the well and they would not budge until every last one of them was laid out, dead and cold.Play soundvcampgolfh_vcampgolfhanlon_00156…https://fallout.fandom.com/wiki/File:Vcampgolfh_vcampgolfhanlon_00156f46_1.oggnoicon",
+      "index": "187"
+    },
+    {
+      "topic": "VCampGolfHanlon2CHanlonTopic095",
+      "topic_text": "[Continue]",
+      "emotion": "Neutral 50",
+      "response_text": "I told him we would take them back into NCR territory because we had already lost ten rangers on the way out. Ten rangers, five men with .308 rifles.Play soundvcampgolfh_vcampgolfhanlon_00156…https://fallout.fandom.com/wiki/File:Vcampgolfh_vcampgolfhanlon_00156f48_1.oggnoicon",
+      "index": "190"
+    },
+    {
+      "topic": "VCampGolfHanlon2CHanlonTopic096",
+      "topic_text": "[Continue]",
+      "emotion": "Neutral 50",
+      "response_text": "Joshua Graham, Caesar's old legate, he's wasn't so flexible.Play soundvcampgolfh_vcampgolfhanlon_00156…https://fallout.fandom.com/wiki/File:Vcampgolfh_vcampgolfhanlon_00156f32_1.oggnoicon",
+      "index": "193"
+    },
+    {
+      "topic": "VCampGolfHanlon2CHanlonTopic097",
+      "topic_text": "[Continue]",
+      "emotion": "Happy 5",
+      "response_text": "But once they were in, they were stuck there. Oliver's troopers were entrenched and wouldn't give a foot.Play soundvcampgolfh_vcampgolfhanlon_00156…https://fallout.fandom.com/wiki/File:Vcampgolfh_vcampgolfhanlon_00156f4c_1.oggnoicon",
+      "index": "196"
+    },
+    {
+      "topic": "VCampGolfHanlon2CHanlonTopic098",
+      "topic_text": "[Continue]",
+      "emotion": "Neutral 50",
+      "response_text": "Caused total chaos among the younger legionaries, and Oliver's troopers fell back to the side walkways and stayed out of the veterans' way.Play soundvcampgolfh_vcampgolfhanlon_00156…https://fallout.fandom.com/wiki/File:Vcampgolfh_vcampgolfhanlon_00156f5c_1.oggnoicon",
+      "index": "199"
+    },
+    {
+      "topic": "VCampGolfHanlon2CHanlonTopic099",
+      "topic_text": "[Continue]",
+      "emotion": "Neutral 50",
+      "response_text": "We had packed the old city with C4 and dynamite. Crude, but it did the job. Those who didn't die in the blast were in no position to mount a defense.Play soundvcampgolfh_vcampgolfhanlon_00156…https://fallout.fandom.com/wiki/File:Vcampgolfh_vcampgolfhanlon_00156f45_1.oggnoicon",
+      "index": "202"
+    },
+    {
+      "topic": "VCampGolfHanlonRepBranch",
+      "topic_text": "VCampGolfHanlonRepBranch",
+      "emotion": "Neutral 50",
+      "response_text": "You must be the courier folks have been talking about. Word on the radio is that someone wronged you back in Goodsprings.Play soundvcampgolfh_vcampgolfhanlon_00156…https://fallout.fandom.com/wiki/File:Vcampgolfh_vcampgolfhanlon_00156f50_1.oggnoicon",
+      "index": "205"
+    },
+    {
+      "topic": "VEndingRangers",
+      "topic_text": "VEndingRangers",
+      "emotion": "Neutral 50",
+      "response_text": "{narrating}After the death of Chief Hanlon, the power of NCR's Rangers was broken for years.Play soundvending_vendingrangers_0015c1c4_…https://fallout.fandom.com/wiki/File:Vending_vendingrangers_0015c1c4_1.oggnoicon",
+      "index": "212"
+    }
+  ],
+  "conversation": [],
+  "combat": []
+}

@@ -1,0 +1,222 @@
+{
+  "name": "Sergeant Bitter-Root¹",
+  "url": "/wiki/Bitter-Root",
+  "dialogue_name": "1ESergeantBitterRoot.txt",
+  "dialogue_url": "/wiki/1ESergeantBitterRoot.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000F56FA",
+  "ref_id": "000F570D",
+  "editor_id": "1ESergeantBitterRoot",
+  "location": "Camp McCarran",
+  "location_url": "/wiki/Camp_McCarran",
+  "descriptions": [
+    "Sergeant Bitter-Root is a First Recon sniper in the New California Republic Army in Fallout: New Vegas. He is currently stationed with the rest of his team at Camp McCarran in the Mojave Wasteland in 2281.",
+    "Born to Great Khan parents, he experienced a traumatic childhood marked by neglect and abuse. His father, an alcoholic, engaged in sadistic acts, teaching Bitter-Root to shoot at age three by targeting New California Republic military personnel and civilians. His mother, a chem addict, attempted multiple times to sell him into slavery to fund her Jet addiction, contributing to his deep resentment toward his parents and the Khans.",
+    "In 2278, the New California Republic Army, supported by First Recon sharpshooters, assaulted the Great Khans' encampment at Bitter Springs in retaliation for raids on NCR settlements. The attack resulted in heavy civilian casualties and became known as the Bitter Springs Massacre. Bitter-Root publicly claims to have no memory of the massacre or the deaths of his fellow Khans.",
+    "However, he privately told Captain Dhatri (who later adopted him",
+    "Despite the deaths of friends and family, Bitter-Root harbors no resentment toward the NCR. He views the massacre as the inevitable result of the Khans' decline into \"lazy, trumped-up raiders\" reliant on drug trafficking, which they also consumed.\nBitter-Root retains the Great Khans' rite of passage: a prospective adult is beaten in a ring for one minute; survivors choose their own name.",
+    "Bitter-Root sought therapy from Doctor Usanagi at the New Vegas medical clinic during his time at Camp McCarran, which helped him process his trauma.",
+    "As a First Recon sniper, Bitter-Root enjoys \"shooting folks who deserve it.\"",
+    "Upon turning in Driver Nephi's head to Dhatri during Three-Card Bounty, he will send Alpha Team to Camp Forlorn Hope to assist in the ground war against Caesar's Legion in Nelson; Bitter-Root can then be found in the Camp Forlorn Hope barracks.",
+    "While residing at Camp McCarran, Sergeant Bitter-Root is the only member of First Recon that actually lays down on a bed and sleeps at night; the others simply stand or sit around.",
+    "Bitter-Root was designed by additional writer George Ziets, who also wrote for the other members of First Recon."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Great Khans(formerly)[1]New California Republic Army(First ReconAlpha Team)[2]",
+  "role": "Sniper",
+  "detailed_location": "Camp McCarran(northern courtyard)KilledDriver Nephifor Dhatri:Camp Forlorn Hope(Barracks)",
+  "voice_actor": "Jesse Burch",
+  "special": {
+    "Strength": 7,
+    "Perception": 7,
+    "Endurance": 7,
+    "Charisma": 2,
+    "Intelligence": 6,
+    "Agility": 7,
+    "Luck": 4
+  },
+  "mod_special_values": {
+    "Strength": 7,
+    "Perception": 8,
+    "Endurance": 7,
+    "Charisma": 2,
+    "Intelligence": 6,
+    "Agility": 7,
+    "Luck": 4
+  },
+  "level": "9",
+  "tag_skills": [
+    {
+      "Guns:": "79"
+    },
+    {
+      "Melee Weap.:": "81"
+    },
+    {
+      "Unarmed:": "77"
+    }
+  ],
+  "karma": "Neutral",
+  "voice_type": "MaleAdult03",
+  "geck_race": "Hispanic",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "I'm Bitter-Root. First Recon. You got a reason to talk to me?{quietly suspicious, not confrontational}",
+      "index": "1"
+    },
+    {
+      "topic": "VFreeformMcCarran31ESergeantBitterRootTopic000",
+      "topic_text": "Not too friendly, are you?",
+      "emotion": "Neutral 50",
+      "response_text": "Guess not. I don't mean nothing by it.",
+      "index": "8"
+    },
+    {
+      "topic": "VFreeformMcCarran31ESergeantBitterRootTopic001",
+      "topic_text": "Where can I find some work around here?",
+      "emotion": "Neutral 50",
+      "response_text": "You a merc? Then I guess you'd want to talk to my, uh... father. Major Dhatri. He's our CO.{Dhatri isn't his real father}",
+      "index": "12"
+    },
+    {
+      "topic": "VFreeformMcCarran31ESergeantBitterRootTopic002",
+      "topic_text": "Your father is your commanding officer? Is that allowed?",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah, look... he's not my real father. He just looked after me, for a while.",
+      "index": "13"
+    },
+    {
+      "topic": "VFreeformMcCarran31ESergeantBitterRootTopic003",
+      "topic_text": "How long have you been with the First Recon?",
+      "emotion": "Neutral 50",
+      "response_text": "A while, I guess. I don't keep too careful track of time.",
+      "index": "16"
+    },
+    {
+      "topic": "VFreeformMcCarran31ESergeantBitterRootTopic004",
+      "topic_text": "Bitter-Root. You have an unusual name.",
+      "emotion": "Neutral 50",
+      "response_text": "You trying to start trouble? Or do you really not know where I got that name?{thinks the player is trying to find an excuse to harass him}",
+      "index": "19"
+    },
+    {
+      "topic": "VFreeformMcCarran31ESergeantBitterRootTopic005",
+      "topic_text": "I didn't mean to offend. You don't have to tell me, if you'd rather not.",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] It's a Khan name. You know... the \"Great Khans.\" That's what my parents were.{A little reluctant to reveal this. Hates the Great Khans.}",
+      "index": "20"
+    },
+    {
+      "topic": "VFreeformMcCarran31ESergeantBitterRootTopic006",
+      "topic_text": "What happened to your parents?",
+      "emotion": "Neutral 50",
+      "response_text": "They're dead. Got themselves killed at Bitter Springs. Served them right, if you ask me.{quietly bitter}",
+      "index": "22"
+    },
+    {
+      "topic": "VFreeformMcCarran31ESergeantBitterRootTopic007",
+      "topic_text": "What do you know about the Great Khans?",
+      "emotion": "Neutral 50",
+      "response_text": "They're scum. Lazy, trumped-up Raiders. Most of the time, they're drunk or high, and when they're not shooting chems, they're selling them.{bitter - thinks he means it}",
+      "index": "23"
+    },
+    {
+      "topic": "VFreeformMcCarran31ESergeantBitterRootTopic008",
+      "topic_text": "Tell me about happened to them at Bitter Springs.",
+      "emotion": "Neutral 50",
+      "response_text": "It was massacre. That's what a lot of NCR folk will tell you. Most of them feel plenty bad about what happened.",
+      "index": "26"
+    },
+    {
+      "topic": "VFreeformMcCarran31ESergeantBitterRootTopic009",
+      "topic_text": "I've heard enough. Let's talk about something else.",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah. That's probably best.",
+      "index": "29"
+    },
+    {
+      "topic": "VFreeformMcCarran31ESergeantBitterRootTopic010",
+      "topic_text": "Losing your parents must have been hard for you. I'm sorry.",
+      "emotion": "Neutral 50",
+      "response_text": "You're sorry? Well, that makes one of us. Bitter Springs was the best thing that ever happened to me.{thinks he means it}",
+      "index": "30"
+    },
+    {
+      "topic": "VFreeformMcCarran31ESergeantBitterRootTopic011",
+      "topic_text": "You don't really mean that, do you?",
+      "emotion": "Neutral 50",
+      "response_text": "Don't I? Mister, you never met my parents.",
+      "index": "32"
+    },
+    {
+      "topic": "VFreeformMcCarran31ESergeantBitterRootTopic012",
+      "topic_text": "So your name... it comes from Bitter Springs.",
+      "emotion": "Neutral 50",
+      "response_text": "In the Khans, you're not fully grown 'til you've taken a beat-down. Everybody gathers round and hits you until you're damn near dead.",
+      "index": "39"
+    },
+    {
+      "topic": "VFreeformMcCarran31ESergeantBitterRootTopic013",
+      "topic_text": "How did you survive the massacre?",
+      "emotion": "Neutral 50",
+      "response_text": "Guess I could tell a pretty good story, if I had a mind. But the truth is, I don't know. Just got lucky.",
+      "index": "43"
+    },
+    {
+      "topic": "VFreeformMcCarran31ESergeantBitterRootTopic014",
+      "topic_text": "You're not telling me something. You couldn't have forgotten the whole massacre.",
+      "emotion": "Neutral 50",
+      "response_text": "It's like I tell Major Dhatri. Best not look under a rock, if you don't really want to know what's there.{player is getting into dangerous - and deeply hidden - territory}",
+      "index": "47"
+    },
+    {
+      "topic": "VFreeformMcCarran31ESergeantBitterRootTopic015",
+      "topic_text": "I really don't know. Come on, Sergeant, you can tell me.",
+      "emotion": "Neutral 50",
+      "response_text": "[FAILED] No. What's it matter to you? Why's everybody care so much about other people's business?",
+      "index": "50"
+    },
+    {
+      "topic": "VFreeformMcCarran31ESergeantBitterRootTopic016",
+      "topic_text": "Never mind. Forget I mentioned it.",
+      "emotion": "Neutral 50",
+      "response_text": "Okay. I will. Guess that's something I'd rather not talk about, that's all.",
+      "index": "52"
+    },
+    {
+      "topic": "VFreeformMcCarran31ESergeantBitterRootTopic017",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "All right. Goodbye.{quiet, disinterested}",
+      "index": "53"
+    },
+    {
+      "topic": "VFreeformMcCarran31ESergeantBitterRootTopic020",
+      "topic_text": "I'm trying to get Corporal Betsy to go see a doctor. I heard you saw Usanagi yourself.",
+      "emotion": "Neutral 50",
+      "response_text": "10 of Spades really ought to keep his mouth shut, but he's right. There were a lot of things in my past I just couldn't leave behind.",
+      "index": "54"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "All right. Goodbye.",
+      "index": "56"
+    }
+  ],
+  "combat": []
+}

@@ -1,0 +1,68 @@
+{
+  "name": "Arms merchant",
+  "url": "/wiki/Arms_merchant",
+  "dialogue_name": "188Merc.txt",
+  "dialogue_url": "/wiki/188Merc.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": true,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000E6675",
+  "ref_id": "000E689A",
+  "editor_id": "188NCRMerchant",
+  "location": "188 Trading Post",
+  "location_url": "/wiki/188_Trading_Post",
+  "descriptions": [
+    "The arms merchant is a former NCR soldier running a weapons stall at the 188 Trading Post in 2281.",
+    "Operating her business out of the back of a pre-War military truck at the 188 Trading Post. At night, she can be found asleep in the trailer on the opposite side of the underpass.",
+    "She used to serve with the Republic's Army. More specifically, she was a staff sergeant, third platoon of Bravo Company. She fought in the First Battle of Hoover Dam, witnessing first hand the brutal struggle with the Legion.",
+    "Now without a job, the arms merchant stayed in the area as she did not feel it was right to leave with the Legion preparing for an attack on the other side of the river. After connecting with other NCR veterans, she began selling weapons from the 188 Trading Post. For her, the 188 post, apart from being the local hub of commerce and trade, has the added benefit of being able to see her old platoon from time to time, giving them some surplus ammunition and making sure the new commanding officer is treating them properly.",
+    "She sells Gun Runners' Arsenal items only when she is standing next to the truck during the day."
+  ],
+  "race": "Human",
+  "gender": "Female",
+  "affiliation": "NCR Army,Bravo Company(formerly)",
+  "role": "Merchant",
+  "detailed_location": "188 Trading Post",
+  "voice_actor": "Cindy Robinson",
+  "special": {
+    "Strength": 4,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 7,
+    "Intelligence": 5,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "level": "1",
+  "tag_skills": [
+    {
+      "Barter:": "34(39)"
+    },
+    {
+      "Energy Weap.:": "30"
+    },
+    {
+      "Guns:": "32"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Neutral",
+  "voice_type": "FemaleAdult07",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Anger 50",
+      "response_text": "I only work for caravans, all right? Try someone else.",
+      "index": "1"
+    }
+  ],
+  "conversation": [],
+  "combat": []
+}

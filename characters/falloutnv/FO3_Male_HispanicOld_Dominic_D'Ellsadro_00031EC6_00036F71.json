@@ -1,0 +1,220 @@
+{
+  "name": "Dominic D'Ellsadro",
+  "url": "/wiki/Dominic_D%27Ellsadro",
+  "dialogue_name": "DominicDEllsadro.txt",
+  "dialogue_url": "/wiki/DominicDEllsadro.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "00031EC6",
+  "ref_id": "00036F71",
+  "editor_id": "DominicDEllsadro",
+  "location": "Dominic and Machete's house",
+  "location_url": "/wiki/Dominic_and_Machete%27s_house",
+  "descriptions": [
+    "Dominic \"Dom\" D'Ellsadro is the town guard of Canterbury Commons in the year 2277.",
+    "He used to lead a small group of mercenaries, although he would encounter a lot of near-death experiences. He retired from it with some scavenged supplies to give him a little wealth. He has been in the town for about a decade, and his leadership qualities has earned him respect. Dominic treats the teenage young woman Machete like both a daughter and soldier, and he is teaching her how to be efficient security.",
+    "During the day, he can be found patrolling the streets of Canterbury Commons or eating at the town diner. At night, he sleeps at Dominic and Machete's house which is at the end of the main street."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Canterbury Commons",
+  "role": "Security",
+  "detailed_location": "Dominic and Machete's house",
+  "voice_actor": "Gregory Gorton",
+  "special": {
+    "Strength": 5,
+    "Perception": 6,
+    "Endurance": 6,
+    "Charisma": 5,
+    "Intelligence": 5,
+    "Agility": 7,
+    "Luck": 5
+  },
+  "level": "7",
+  "tag_skills": [
+    {
+      "Big Guns:": "62"
+    },
+    {
+      "Small Guns:": "64"
+    },
+    {
+      "Speech:": "60"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "65"
+    },
+    {
+      "Poison Resist.:": "25%"
+    },
+    {
+      "Rad. Resist.:": "10%"
+    },
+    {
+      "Damage Res.:": "24%"
+    }
+  ],
+  "karma": "Good",
+  "voice_type": "MaleAdult01DefaultBDC",
+  "geck_race": "HispanicOld",
+  "topics": [
+    {
+      "topic": "CCDirCaravan",
+      "topic_text": "Where do the caravans set up?",
+      "emotion": "Neutral 50",
+      "response_text": "You can find them out front. If you didn't see them coming in, that probably means they're all out on trips.",
+      "index": "1"
+    },
+    {
+      "topic": "CCDirExit",
+      "topic_text": "That's all I need to know.",
+      "emotion": "Neutral 50",
+      "response_text": "Stay out of trouble.",
+      "index": "3"
+    },
+    {
+      "topic": "CCDirFood",
+      "topic_text": "Where can I get some food?",
+      "emotion": "Neutral 50",
+      "response_text": "Go talk with Porter, over in the Diner. He'll set you right for food.",
+      "index": "4"
+    },
+    {
+      "topic": "CCDirections",
+      "topic_text": "Can I get some directions around town?",
+      "emotion": "Neutral 50",
+      "response_text": "No problem. What're you looking for?",
+      "index": "5"
+    },
+    {
+      "topic": "CCFirstMeeting1A",
+      "topic_text": "No worries. I wasn't planning on stealing anything.",
+      "emotion": "Happy 25",
+      "response_text": "Sounds like a good plan. Keeps the traders happy, that way. And it means Machete and I get to save on ammo.",
+      "index": "6"
+    },
+    {
+      "topic": "CCFirstMeeting1B",
+      "topic_text": "Do you personally threaten every visitor to your town?",
+      "emotion": "Happy 40",
+      "response_text": "When I can find time for it, sure. In the guarding business, it's the personal touches that make all the difference.",
+      "index": "7"
+    },
+    {
+      "topic": "CCFirstMeeting1C",
+      "topic_text": "Maybe I can introduce a new pastime: shooting nosy guards in the face.",
+      "emotion": "Anger 10",
+      "response_text": "Sure, you do that. We can take turns shooting each other, teams are \"the whole damned town\" versus \"your face.\" Our team's got a winning record.",
+      "index": "9"
+    },
+    {
+      "topic": "CCTownHistory1",
+      "topic_text": "What can you tell me about Canterbury Commons?",
+      "emotion": "Happy 25",
+      "response_text": "Canterbury's a good town. Roe's done a damned good job setting up the place, and no one can handle the day-to-day details like him.",
+      "index": "11"
+    },
+    {
+      "topic": "CCTownHistory2A",
+      "topic_text": "What do you mean, \"the big stuff\"?",
+      "emotion": "Anger 10",
+      "response_text": "Life and death matters, putting down thieves, protecting people from raiders who are shortsighted or stupid enough to attack, that sort of thing.",
+      "index": "13"
+    },
+    {
+      "topic": "CCTownHistory2B",
+      "topic_text": "How did you get this position?",
+      "emotion": "Happy 50",
+      "response_text": "I'm about the rarest thing out here in the Wastes: a mercenary who lived long enough to retire.",
+      "index": "15"
+    },
+    {
+      "topic": "CCTownHistory2C",
+      "topic_text": "Okay, that's enough.",
+      "emotion": "Happy 10",
+      "response_text": "If you're done asking questions, I'm sure there's something I should be keeping an eye on.",
+      "index": "17"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Happy 25",
+      "response_text": "Newcomer to town, huh? Well, I'm Dominic D'Ellsadro, and welcome to Canterbury Commons. Try to ignore the idiots in the costumes.",
+      "index": "18"
+    },
+    {
+      "topic": "MS02AboutAntAgonizer",
+      "topic_text": "What can you tell me about the AntAgonizer?",
+      "emotion": "Anger 50",
+      "response_text": "I don't know who she is, other than a crazy with an ant suit and a chip on her shoulder for humanity.{annoyed}",
+      "index": "22"
+    },
+    {
+      "topic": "MS02AboutMechanist",
+      "topic_text": "What can you tell me about the Mechanist?",
+      "emotion": "Disgust 25",
+      "response_text": "You mean Scott Wollinksi. I refuse to call him by that ridiculous name just because his head got a screw loose.{feels sorry the guy, but annoyed he's causing problems}",
+      "index": "25"
+    },
+    {
+      "topic": "MS02AboutOther",
+      "topic_text": "Know anything else that could help me stop them?",
+      "emotion": "Neutral 50",
+      "response_text": "If you could just get make either one of them stop fighting, it'd do the trick. You probably wouldn't have to worry about the other one.{amused}",
+      "index": "28"
+    },
+    {
+      "topic": "MS02AboutSupersDo you know anything about the AntAgonizer or the Mechanist?",
+      "topic_text": "What do you know about the AntAgonizer and the Mechanist?",
+      "emotion": "Anger 25",
+      "response_text": "Roe hired you put a stop to their shit, did he? Guess he finally listened when I told him I haven't got the time to do it myself.{annoyed}",
+      "index": "31"
+    },
+    {
+      "topic": "MS02AboutSupersExit",
+      "topic_text": "That's enough about them.",
+      "emotion": "Neutral 25",
+      "response_text": "Fine by me.",
+      "index": "34"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "CCGuardTalk1",
+      "topic_text": "CCGuardTalk1",
+      "emotion": "Happy 15",
+      "response_text": "Whoa, calm down there. Attitude like that'll just get someone hurt... plus, it puts the locals on edge.",
+      "index": "35"
+    },
+    {
+      "topic": "CCGuardTalk3",
+      "topic_text": "CCGuardTalk3",
+      "emotion": "Happy 25",
+      "response_text": "Girl, if you don't relax a little, you're going to snap in half. Now, get going, before you take someone's head off.{Amused by her attitude}",
+      "index": "37"
+    },
+    {
+      "topic": "GOODBYE",
+      "topic_text": "I'm leaving.",
+      "emotion": "Happy 25",
+      "response_text": "I'll be watching you.{Friendly, very slightly threatening}",
+      "index": "39"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Neutral 50",
+      "response_text": "We appreciate you taking care of our town's little problem.",
+      "index": "42"
+    }
+  ],
+  "combat": []
+}

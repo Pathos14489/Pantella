@@ -1,0 +1,86 @@
+{
+  "name": "Engineer Allison Valentine",
+  "url": "/wiki/Allison_Valentine",
+  "dialogue_name": "VHDEngineerValentine.txt",
+  "dialogue_url": "/wiki/VHDEngineerValentine.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "0014F279",
+  "ref_id": "0014F27A",
+  "editor_id": "VHDEngineerValentine",
+  "location": "Hoover Dam",
+  "location_url": "/wiki/Hoover_Dam",
+  "descriptions": [
+    "Allison Valentine is an engineer stationed at the Hoover Dam in 2281.",
+    "Valentine was going to watch President Aaron Kimball's speech with her friend, a fellow engineer named Ben, but has not been able to find him. She asks the Courier if they have seen him, saying he was supposed to have met up with her on the second floor of the Hoover Dam visitor center an hour ago."
+  ],
+  "race": "Human",
+  "gender": "Female",
+  "affiliation": "New California Republic",
+  "role": "Engineer",
+  "detailed_location": "Hoover Dam visitor center",
+  "voice_actor": "Katherine Pawlak",
+  "special": {
+    "Strength": 5,
+    "Perception": 6,
+    "Endurance": 4,
+    "Charisma": 4,
+    "Intelligence": 7,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "level": "2",
+  "tag_skills": [
+    {
+      "Lockpick:": "36"
+    },
+    {
+      "Melee Weap.:": "34"
+    },
+    {
+      "Repair:": "38(43)"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Good",
+  "voice_type": "FemaleAdult01Default",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "Hey, you haven't seen my friend around here, have you? His name is Ben and he's an engineer.",
+      "index": "1"
+    },
+    {
+      "topic": "VHDAssassinationDialogVHDEngineerValentineTopic000",
+      "topic_text": "I haven't seen him.",
+      "emotion": "Neutral 50",
+      "response_text": "Okay, well... I guess I'll just keep waiting. Sorry to bother you.",
+      "index": "5"
+    },
+    {
+      "topic": "VHDAssassinationDialogVHDEngineerValentineTopic001",
+      "topic_text": "Maybe he's down in the barracks.",
+      "emotion": "Neutral 50",
+      "response_text": "He isn't. I already checked there this morning. We were supposed to meet up here about an hour ago.",
+      "index": "6"
+    },
+    {
+      "topic": "VHDAssassinationDialogVHDEngineerValentineTopic002",
+      "topic_text": "He probably ditched you for someone cuter.",
+      "emotion": "Neutral 50",
+      "response_text": "Why would you say something like that? That's just mean.",
+      "index": "8"
+    }
+  ],
+  "conversation": [],
+  "combat": []
+}

@@ -1,0 +1,193 @@
+{
+  "name": "Brick",
+  "url": "/wiki/Brick_(Fallout_3)",
+  "dialogue_name": "RRBrick.txt",
+  "dialogue_url": "/wiki/RRBrick.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "00029576",
+  "ref_id": "0002B831",
+  "editor_id": "RRBrick",
+  "location": "Statesman Hotelroof,Ranger Compound",
+  "location_url": "/wiki/Statesman_Hotel",
+  "descriptions": [
+    "Brick is the heavy weapons specialist in the Reilly's Rangers mercenary group in Fallout 3.",
+    "Born around 2253, the 24 year old Brick was hired by Reilly as a heavy weapons specialist. Together with her minigun, Eugene, the muscle-bound gunner",
+    "Brick gets along fine with most of the Rangers. She sees them as eggheads, with more skill in sciences and such, than combat, which is fine by her. She just points, shoots, and makes anything that gets in the Rangers' way die.",
+    "Brick has a peculiar relationship with Eugene, or rather, Euegenes, as she has multiple miniguns sharing the same name.",
+    "While Brick might be suffering from some form of personality disorder, it is equally possible that she simply enjoys the gore and destruction, and plays it up. If asked about whether she is \"certifiably insane,\" she is quick to joke that she killed the last person who said that, and asks Eugene for an opinion.",
+    "Brick appears in Fallout 3 and Fallout: Wasteland Warfare.",
+    "The game guide gives Brick's age as 32,"
+  ],
+  "race": "Human",
+  "gender": "Female",
+  "affiliation": "Reilly's Rangers",
+  "role": "Heavy weaponsspecialist",
+  "detailed_location": "Statesman HotelRanger compound",
+  "voice_actor": "Shari Elliker",
+  "special": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 4,
+    "Intelligence": 3,
+    "Agility": 6,
+    "Luck": 4
+  },
+  "mod_special_values": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 4,
+    "Intelligence": 3,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "level": "10",
+  "tag_skills": [
+    {
+      "Big Guns:": "68(69)"
+    },
+    {
+      "Melee Weap.:": "70(71)"
+    },
+    {
+      "Small Guns:": "70(81)"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "105"
+    },
+    {
+      "Critical Chance:": "4%(5%)"
+    },
+    {
+      "Unarmed Dam.:": "1.2"
+    },
+    {
+      "Poison Resist.:": "20%"
+    },
+    {
+      "Rad. Resist.:": "8%"
+    },
+    {
+      "Carry Weight:": "210"
+    },
+    {
+      "Damage Res.:": "21%"
+    }
+  ],
+  "karma": "Good",
+  "voice_type": "FemaleAdult01DefaultDC",
+  "geck_race": "Hispanic",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Happy 80",
+      "response_text": "Did ya see me? Nothing good ole' Eugene and a few hundred rounds of ammo couldn't handle.",
+      "index": "1"
+    },
+    {
+      "topic": "MS18BrickEndgameCT01",
+      "topic_text": "Yeah, Brick... You really, um, ventilated them...",
+      "emotion": "Happy 100",
+      "response_text": "You bet your ass I did! Did you see that Super Mutant's head burst? Beautiful!",
+      "index": "9"
+    },
+    {
+      "topic": "MS18BrickEndgameCT02",
+      "topic_text": "Has anyone ever spoken to you about anger management?",
+      "emotion": "Neutral 50",
+      "response_text": "Well, someone did once, and I swear I let them leave only with a slight limp.",
+      "index": "12"
+    },
+    {
+      "topic": "MS18BrickEndgameCT03",
+      "topic_text": "Wow, you're certifiably insane, huh?",
+      "emotion": "Anger 100",
+      "response_text": "Last guy who said something like that to me took a long dirt nap. Catch my drift?",
+      "index": "15"
+    },
+    {
+      "topic": "MS18FinBailout",
+      "topic_text": "Let's discuss something else.",
+      "emotion": "Neutral 50",
+      "response_text": "Whatever floats your boat.",
+      "index": "18"
+    },
+    {
+      "topic": "MS18FinTLHowAreThings",
+      "topic_text": "What's been happening since you've been back?",
+      "emotion": "Neutral 50",
+      "response_text": "Now that you're part of the team, Reilly is her old self again.",
+      "index": "19"
+    },
+    {
+      "topic": "MS18TLAmmoLocation",
+      "topic_text": "Where can I get some more ammo around here?",
+      "emotion": "Neutral 50",
+      "response_text": "Well, if you've picked the Mutie corpses clean, there isn't much else to scrounge.",
+      "index": "23"
+    },
+    {
+      "topic": "MS18TLColumbiaHeights",
+      "topic_text": "What can you tell me about Vernon Square?",
+      "emotion": "Happy 50",
+      "response_text": "The other guys hate mappin' this zone, but hey, I love it. I love turning the 'muties into a fine, red mist with my gun.",
+      "index": "26"
+    },
+    {
+      "topic": "MS18TLGotBattery",
+      "topic_text": "I have a Fission Battery that will fix that express elevator.",
+      "emotion": "Neutral 50",
+      "response_text": "Well, what the fuck you bringin' it to me for? Get it plugged into the elevator!",
+      "index": "27"
+    },
+    {
+      "topic": "MS18TLHeresSomeAmmo",
+      "topic_text": "Here, I brought you some ammo.",
+      "emotion": "Happy 50",
+      "response_text": "Oh, HELL yeah!",
+      "index": "29"
+    },
+    {
+      "topic": "MS18TLHowDidYouSurvive",
+      "topic_text": "How have you guys survived up here?",
+      "emotion": "Happy 50",
+      "response_text": "Skill baby, pure skill. And my big-ass gun!",
+      "index": "31"
+    },
+    {
+      "topic": "MS18TLWhereIsCell",
+      "topic_text": "Any clue where I can find a Fission Battery?",
+      "emotion": "Happy 50",
+      "response_text": "All I remember is mowing down Super Mutants with Eugene here.",
+      "index": "32"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "I have to go now.",
+      "emotion": "Happy 70",
+      "response_text": "No sweat.",
+      "index": "34"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Happy 50",
+      "response_text": "Hey, all right! Me 'n Eugene are glad to see ya!",
+      "index": "39"
+    }
+  ],
+  "combat": []
+}

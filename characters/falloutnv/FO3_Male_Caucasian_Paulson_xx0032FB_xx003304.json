@@ -1,0 +1,585 @@
+{
+  "name": "Paulson",
+  "url": "/wiki/Paulson_(Mothership_Zeta)",
+  "dialogue_name": "DLC05Paulson.txt",
+  "dialogue_url": "/wiki/DLC05Paulson.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "xx0032FB",
+  "ref_id": "xx003304",
+  "editor_id": "DLC05Paulson",
+  "location": "Engineering core",
+  "location_url": "/wiki/Engineering_core",
+  "descriptions": [
+    "Paulson is an abducted rancher found frozen aboard Mothership Zeta, who becomes a part of the Lone Wanderer's ragtag crew fighting the aliens in the Fallout 3 add-on Mothership Zeta.",
+    "A rancher from the American frontier, from the period known as the \"Wild West,\"",
+    "While the concept of a spaceship is unfamiliar to him,",
+    "His single-minded focus on killing every alien he comes across is due to the trauma of seeing and hearing his wife and son taken up by the mothership, crying and begging to save them, but being powerless to stop it. The memory is still fresh and haunts him, leaving him with nothing besides revenge.",
+    "It is the only thing driving him forward,",
+    "Paulson is a solitary gunslinger who prefers to ride solo whenever he can. In his own words, teams are cattle led to slaughter and he is better off on his own.",
+    "While he is aware that he is in over his head,",
+    "This also means Paulson tries to pick his battles carefully. He is willing to lend a hand wherever an extra gun is needed,",
+    "However, he learns quickly and picks up modern words to communicate effectively with the rest of the crew, such as aliens, stimpaks,",
+    "Despite his intelligence, Paulson is a man of his time; he has a racist attitude towards people of Asian descent, common in the United States of the 19th century, and refers to Toshiro Kago as a \"Chinaman,\" before being corrected by Sally and switching to \"Oriental gentleman.\" Both fell out of use as racial slurs by the middle of the 20th century.",
+    "The only parts of Paulson that have not been consumed by his thirst for revenge are his memories of his family and the life he once had, making his relationship with his wife and son the driving force behind his one-man war against the aliens. He is willing to open up about his pain and show a sliver of vulnerability to a woman.",
+    "Although he is willing to work with the rest of the team liberated by the Lone Wanderer, he keeps them at arms' length, apart from Toshiro Kago: Since nobody can understand him, Paulson just ignores him completely.",
+    "In the end, he develops respect with one other person: The Lone Wanderer. Paulson realizes he owes them a debt, but rather than mince words, he offers the closest thing he knows to thanks, then disappears into the mothership to find a way to return to the surface.",
+    "Paulson appears only in the Fallout 3 add-on Mothership Zeta."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Lone Wanderer",
+  "role": "Rancher (pre-War)Abductee",
+  "detailed_location": "Engineering core,MothershipZeta",
+  "voice_actor": "Jerry Whiddon",
+  "special": {
+    "Strength": 6,
+    "Perception": 8,
+    "Endurance": 5,
+    "Charisma": 4,
+    "Intelligence": 3,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "mod_special_values": {
+    "Strength": 6,
+    "Perception": 9,
+    "Endurance": 5,
+    "Charisma": 5,
+    "Intelligence": 3,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "level": "15→30",
+  "tag_skills": [
+    {
+      "Explosives:": "96→100"
+    },
+    {
+      "Small Guns:": "92→100"
+    },
+    {
+      "Sneak:": "92→100"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "590→665"
+    },
+    {
+      "Critical Chance:": "5%"
+    },
+    {
+      "Unarmed Dam.:": "1.25"
+    },
+    {
+      "Poison Resist.:": "20%"
+    },
+    {
+      "Rad. Resist.:": "8%"
+    },
+    {
+      "Carry Weight:": "210"
+    },
+    {
+      "Damage Res.:": "6%"
+    }
+  ],
+  "karma": "Neutral",
+  "voice_type": "DLC05NPCUniquePaulson",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "DLC05BridgeInterDoNothing",
+      "topic_text": "Get a move on it!",
+      "emotion": "Neutral 50",
+      "response_text": "Eh.Play soundDlc05bridg_dlc05bridgeinte_00005…https://fallout.fandom.com/wiki/File:Dlc05bridg_dlc05bridgeinte_000058c7_1.oggnoicon",
+      "index": "1"
+    },
+    {
+      "topic": "DLC05BridgeTopicPaulsonHeal",
+      "topic_text": "How are you holding up?",
+      "emotion": "Neutral 50",
+      "response_text": "I could use one of those stimpaks if you don't mind.Play soundDlc05bridg_dlc05bridgetopi_00005…https://fallout.fandom.com/wiki/File:Dlc05bridg_dlc05bridgetopi_000055d1_1.oggnoicon",
+      "index": "2"
+    },
+    {
+      "topic": "DLC05BridgeTopicPaulsonInitial",
+      "topic_text": "Would you mind watching our backs?",
+      "emotion": "Neutral 50",
+      "response_text": "If it means we all live through this, then yeah. Be happy to.Play soundDlc05bridg_dlc05bridgetopi_00005…https://fallout.fandom.com/wiki/File:Dlc05bridg_dlc05bridgetopi_000055d0_1.oggnoicon",
+      "index": "3"
+    },
+    {
+      "topic": "DLC05MZ2PaulsonBackgroundBW",
+      "topic_text": "Oh, come on. You can tell me just about anything. I'll understand.",
+      "emotion": "Neutral 50",
+      "response_text": "Well, I appreciate that, miss. It's just that it's not easy to talk about.Play soundDlc05mz2_dlc05mz2paulsonba_0000a…https://fallout.fandom.com/wiki/File:Dlc05mz2_dlc05mz2paulsonba_0000abc2_1.oggnoicon",
+      "index": "4"
+    },
+    {
+      "topic": "DLC05MZ2PaulsonBackgroundNM",
+      "topic_text": "Sorry, forget I said anything.",
+      "emotion": "Neutral 50",
+      "response_text": "Fine.Play soundDlc05mz2_dlc05mz2paulsonba_0000a…https://fallout.fandom.com/wiki/File:Dlc05mz2_dlc05mz2paulsonba_0000abbb_1.oggnoicon",
+      "index": "9"
+    },
+    {
+      "topic": "DLC05MZ2PaulsonBackgroundSpeech1",
+      "topic_text": "You can talk about what happened to you. It's okay.",
+      "emotion": "Neutral 50",
+      "response_text": "Okay? Lemme ask you something -- you ever listened to the two people you care most about in this world screaming in pain?Play soundDlc05mz2_dlc05mz2paulsonba_0000a…https://fallout.fandom.com/wiki/File:Dlc05mz2_dlc05mz2paulsonba_0000abbd_1.oggnoicon",
+      "index": "10"
+    },
+    {
+      "topic": "DLC05MZ2PaulsonBackgroundSpeech2",
+      "topic_text": "I found this recording of you. Do you want to talk about your family?",
+      "emotion": "Neutral 50",
+      "response_text": "So you... you know?Play soundDlc05mz2_dlc05mz2paulsonba_0000a…https://fallout.fandom.com/wiki/File:Dlc05mz2_dlc05mz2paulsonba_0000abc1_1.oggnoicon",
+      "index": "14"
+    },
+    {
+      "topic": "DLC05MZ2PaulsonGreet01",
+      "topic_text": "The aliens? They're all over the place. That's why I woke you.",
+      "emotion": "Neutral 50",
+      "response_text": "Aliens? That what you call 'em?Play soundDlc05mz2_dlc05mz2paulsongr_00003…https://fallout.fandom.com/wiki/File:Dlc05mz2_dlc05mz2paulsongr_00003964_1.oggnoicon",
+      "index": "18"
+    },
+    {
+      "topic": "DLC05MZ2PaulsonGreet02",
+      "topic_text": "If you're talking about the aliens, you'll see them soon enough.",
+      "emotion": "Neutral 50",
+      "response_text": "You call those little weird men aliens?Play soundDlc05mz2_dlc05mz2paulsongr_00003…https://fallout.fandom.com/wiki/File:Dlc05mz2_dlc05mz2paulsongr_0000396a_1.oggnoicon",
+      "index": "20"
+    },
+    {
+      "topic": "DLC05MZ2PaulsonGreet03",
+      "topic_text": "They're called aliens, hayseed.",
+      "emotion": "Neutral 50",
+      "response_text": "Aliens... Green Men... hell, you can call 'em piles of horse shit for all I care.Play soundDlc05mz2_dlc05mz2paulsongr_00003…https://fallout.fandom.com/wiki/File:Dlc05mz2_dlc05mz2paulsongr_00003974_1.oggnoicon",
+      "index": "22"
+    },
+    {
+      "topic": "DLC05MZ2PaulsonGreet04",
+      "topic_text": "I'm trapped on this ship, just like you.",
+      "emotion": "Neutral 50",
+      "response_text": "Do I really look that stupid, kid? This ain't a ship. I don't hear water and I sure as hell don't feel us rocking. So tell me another one.Play soundDlc05mz2_dlc05mz2paulsongr_00003…https://fallout.fandom.com/wiki/File:Dlc05mz2_dlc05mz2paulsongr_00003963_2.oggnoicon",
+      "index": "24"
+    },
+    {
+      "topic": "DLC05MZ2PaulsonGreet05",
+      "topic_text": "I'm a human, like you.",
+      "emotion": "Anger 100",
+      "response_text": "Human like me, huh? And just how do I know you aren't workin' with the little green bastards that stuck me in that thing?Play soundDlc05mz2_dlc05mz2paulsongr_00003…https://fallout.fandom.com/wiki/File:Dlc05mz2_dlc05mz2paulsongr_00003978_1.oggnoicon",
+      "index": "26"
+    },
+    {
+      "topic": "DLC05MZ2PaulsonGreet06",
+      "topic_text": "I'm not a shit-kicking cowboy, that's for sure.",
+      "emotion": "Neutral 50",
+      "response_text": "You got a smart mouth kid. I like that.Play soundDlc05mz2_dlc05mz2paulsongr_00003…https://fallout.fandom.com/wiki/File:Dlc05mz2_dlc05mz2paulsongr_00003965_1.oggnoicon",
+      "index": "27"
+    },
+    {
+      "topic": "DLC05MZ2PaulsonGreet07",
+      "topic_text": "Look, all I want to do is work together as a team so we can get home.",
+      "emotion": "Neutral 50",
+      "response_text": "The only teams I know are cattle and they get led to the slaughter. That's why I work alone, kid.Play soundDlc05mz2_dlc05mz2paulsongr_00003…https://fallout.fandom.com/wiki/File:Dlc05mz2_dlc05mz2paulsongr_00003969_1.oggnoicon",
+      "index": "29"
+    },
+    {
+      "topic": "DLC05MZ2PaulsonGreet08",
+      "topic_text": "If I were working with the aliens, why would I set you free?",
+      "emotion": "Neutral 50",
+      "response_text": "You got a point there, kid. Lettin' me out of that... thing does count for something.Play soundDlc05mz2_dlc05mz2paulsongr_00003…https://fallout.fandom.com/wiki/File:Dlc05mz2_dlc05mz2paulsongr_0000396d_1.oggnoicon",
+      "index": "32"
+    },
+    {
+      "topic": "DLC05MZ2PaulsonGreet09",
+      "topic_text": "I don't give guarantees. You want out of here, you stick with me. Period.",
+      "emotion": "Disgust 100",
+      "response_text": "You got a funny way of talkin', kid. But you know what, I think you're my best bet to get the hell back home.Play soundDlc05mz2_dlc05mz2paulsongr_00003…https://fallout.fandom.com/wiki/File:Dlc05mz2_dlc05mz2paulsongr_0000398e_1.oggnoicon",
+      "index": "34"
+    },
+    {
+      "topic": "DLC05MZ2TLAbducted",
+      "topic_text": "Tell me how you were captured by these aliens.",
+      "emotion": "Disgust 90",
+      "response_text": "Doesn't matter now. Only important thing is... Well, I guess it's revenge.Play soundDlc05mz2_dlc05mz2tlabducte_00003…https://fallout.fandom.com/wiki/File:Dlc05mz2_dlc05mz2tlabducte_00003976_1.oggnoicon",
+      "index": "36"
+    },
+    {
+      "topic": "DLC05MZ2TLAlienIntentions",
+      "topic_text": "What do you think the aliens want with us?",
+      "emotion": "Neutral 50",
+      "response_text": "Doesn't matter. They're not getting it, whatever it is.Play soundDlc05mz2_dlc05mz2tlalienin_0000a…https://fallout.fandom.com/wiki/File:Dlc05mz2_dlc05mz2tlalienin_0000ab97_1.oggnoicon",
+      "index": "37"
+    },
+    {
+      "topic": "DLC05MZ2TLBackground",
+      "topic_text": "Thank you for telling me about what happened to you.",
+      "emotion": "Neutral 50",
+      "response_text": "No sense in dwelling on it now. Let's just get out of here.Play soundDlc05mz2_dlc05mz2tlbackgro_00003…https://fallout.fandom.com/wiki/File:Dlc05mz2_dlc05mz2tlbackgro_00003970_1.oggnoicon",
+      "index": "38"
+    },
+    {
+      "topic": "DLC05MZ2TLHelpAssembly",
+      "topic_text": "I need some help in the Robot Assembly area. You in?",
+      "emotion": "Neutral 50",
+      "response_text": "Whatever they're assembling in there, I ain't gonna be much good to you. I never was much of a builder.Play soundDlc05mz2_dlc05mz2tlhelpass_00003…https://fallout.fandom.com/wiki/File:Dlc05mz2_dlc05mz2tlhelpass_0000399a_1.oggnoicon",
+      "index": "40"
+    },
+    {
+      "topic": "DLC05MZ2TLHelpCryo",
+      "topic_text": "I need to get through the Cryo Labs. Think you can help me?",
+      "emotion": "Neutral 50",
+      "response_text": "Well seein' as I don't even know what a Cryo or a Lab is, I'm guessin' no.Play soundDlc05mz2_dlc05mz2tlhelpcry_00003…https://fallout.fandom.com/wiki/File:Dlc05mz2_dlc05mz2tlhelpcry_00003996_1.oggnoicon",
+      "index": "41"
+    },
+    {
+      "topic": "DLC05MZ2TLHelpHangar",
+      "topic_text": "I may need an extra gun in the Hangar Bay. Can you lend a hand?",
+      "emotion": "Neutral 50",
+      "response_text": "Now you're speakin' my language. Hell yeah, I'll come with you.Play soundDlc05mz2_dlc05mz2tlhelphan_00003…https://fallout.fandom.com/wiki/File:Dlc05mz2_dlc05mz2tlhelphan_00003992_1.oggnoicon",
+      "index": "42"
+    },
+    {
+      "topic": "DLC05MZ2TLLevelHelp",
+      "topic_text": "You think anything in here can prove useful?",
+      "emotion": "Neutral 50",
+      "response_text": "The only thing useful in here is me and my gun. Now let's keep moving.Play soundDlc05mz2_dlc05mz2tllevelhe_00008…https://fallout.fandom.com/wiki/File:Dlc05mz2_dlc05mz2tllevelhe_00008abb_1.oggnoicon",
+      "index": "43"
+    },
+    {
+      "topic": "DLC05MZ2TLNeverMind",
+      "topic_text": "I think you should remain in the Engineering Core for now.",
+      "emotion": "Neutral 50",
+      "response_text": "Fine. If I see any aliens, I'll say hello for you.Play soundDlc05mz2_dlc05mz2tlnevermi_00003…https://fallout.fandom.com/wiki/File:Dlc05mz2_dlc05mz2tlnevermi_0000398c_1.oggnoicon",
+      "index": "44"
+    },
+    {
+      "topic": "DLC05MZ2TLSamurai",
+      "topic_text": "Where's that Kago guy?",
+      "emotion": "Neutral 50",
+      "response_text": "Took off. Don't know where to. Don't much care.Play soundDlc05mz2_dlc05mz2tlsamurai_0000a…https://fallout.fandom.com/wiki/File:Dlc05mz2_dlc05mz2tlsamurai_0000abaf_1.oggnoicon",
+      "index": "45"
+    },
+    {
+      "topic": "DLC05MZ3GreetDeathRay1",
+      "topic_text": "What the hell was that?",
+      "emotion": "Neutral 50",
+      "response_text": "No idea. Been in over my head for a while now. Still, I'm thinking whatever that was, it wasn't a good thing.Play soundDlc05mz3_dlc05mz3greetdeat_00007…https://fallout.fandom.com/wiki/File:Dlc05mz3_dlc05mz3greetdeat_000076b2_1.oggnoicon",
+      "index": "47"
+    },
+    {
+      "topic": "DLC05MZ3GreetDeathRay2",
+      "topic_text": "I have no idea what he said, but he sounded pretty angry.",
+      "emotion": "Neutral 50",
+      "response_text": "Yep, it seemed all riled up.Play soundDlc05mz3_dlc05mz3greetdeat_00007…https://fallout.fandom.com/wiki/File:Dlc05mz3_dlc05mz3greetdeat_000076b5_1.oggnoicon",
+      "index": "49"
+    },
+    {
+      "topic": "DLC05MZ3GreetDeathRay3",
+      "topic_text": "We need to find out what that was, and put a stop to it.",
+      "emotion": "Neutral 50",
+      "response_text": "I suppose. Lead the way.Play soundDlc05mz3_dlc05mz3greetdeat_00007…https://fallout.fandom.com/wiki/File:Dlc05mz3_dlc05mz3greetdeat_000076ba_1.oggnoicon",
+      "index": "52"
+    },
+    {
+      "topic": "DLC05PaulsonHolo1",
+      "topic_text": "DLC05NPCHolo1",
+      "emotion": "Neutral 50",
+      "response_text": "{ALIEN}Play soundDlc05gener_dlc05paulsonhol_0000a…https://fallout.fandom.com/wiki/File:Dlc05gener_dlc05paulsonhol_0000a87f_1.oggnoicon",
+      "index": "53"
+    },
+    {
+      "topic": "DLC05PostGreet3",
+      "topic_text": "This has been a hell of a ride, hasn't it?",
+      "emotion": "Neutral 50",
+      "response_text": "No offense, but this ain't some sort of game.Play soundDlc05post_dlc05postgreet3_0000a9…https://fallout.fandom.com/wiki/File:Dlc05post_dlc05postgreet3_0000a983_1.oggnoicon",
+      "index": "58"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "Eh?Play soundDlc05bridgeld_greeting_000055ce_…https://fallout.fandom.com/wiki/File:Dlc05bridgeld_greeting_000055ce_1.oggnoicon",
+      "index": "61"
+    },
+    {
+      "topic": "SpeechChallengeFailure",
+      "topic_text": "SpeechChallengeFailure",
+      "emotion": "Neutral 50",
+      "response_text": "Hey, here's an idea. Why don't you stop worrying about shit that doesn't matter.Play soundDlc05mz2_speechchallengefa_0000a…https://fallout.fandom.com/wiki/File:Dlc05mz2_speechchallengefa_0000abc3_1.oggnoicon",
+      "index": "81"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "DLC05BridgeTopicPaulsonRandom",
+      "topic_text": "DLC05BridgeTopicPaulsonRandom",
+      "emotion": "Neutral 50",
+      "response_text": "I ain't no goddamn space monkey.Play soundDlc05bridg_dlc05bridgetopi_0000a…https://fallout.fandom.com/wiki/File:Dlc05bridg_dlc05bridgetopi_0000a939_1.oggnoicon",
+      "index": "83"
+    },
+    {
+      "topic": "DLC05ConvCargo01",
+      "topic_text": "DLC05ConvCargo01",
+      "emotion": "Neutral 50",
+      "response_text": "Now that looks like some tough ridin'. Those things real?Play soundDlc05conve_dlc05convcargo0_00009…https://fallout.fandom.com/wiki/File:Dlc05conve_dlc05convcargo0_000099e2_1.oggnoicon",
+      "index": "87"
+    },
+    {
+      "topic": "DLC05ConvCargo02",
+      "topic_text": "DLC05ConvCargo02",
+      "emotion": "Neutral 50",
+      "response_text": "Well I'll be damned...look at all 'em!Play soundDlc05conve_dlc05convcargo0_00009…https://fallout.fandom.com/wiki/File:Dlc05conve_dlc05convcargo0_000099d1_1.oggnoicon",
+      "index": "88"
+    },
+    {
+      "topic": "DLC05ConvCargo03",
+      "topic_text": "DLC05ConvCargo03",
+      "emotion": "Neutral 50",
+      "response_text": "Giddyup.Play soundDlc05conve_dlc05convcargo0_00009…https://fallout.fandom.com/wiki/File:Dlc05conve_dlc05convcargo0_000099d7_1.oggnoicon",
+      "index": "89"
+    },
+    {
+      "topic": "DLC05ConvCargo04",
+      "topic_text": "DLC05ConvCargo04",
+      "emotion": "Neutral 50",
+      "response_text": "Why look at what we got here.  Little girl here ridin' one of those horses.  Giddyup Buttercup...kind of catchy ain't it?Play soundDlc05conve_dlc05convcargo0_00009…https://fallout.fandom.com/wiki/File:Dlc05conve_dlc05convcargo0_000099dd_1.oggnoicon",
+      "index": "90"
+    },
+    {
+      "topic": "DLC05ConvCargo05",
+      "topic_text": "DLC05ConvCargo05",
+      "emotion": "Neutral 50",
+      "response_text": "What kind of horses are these anyway? I can't see anyone havin' any respect ridin' into town on one of those things.Play soundDlc05conve_dlc05convcargo0_00009…https://fallout.fandom.com/wiki/File:Dlc05conve_dlc05convcargo0_000099da_1.oggnoicon",
+      "index": "91"
+    },
+    {
+      "topic": "DLC05ConvCargo06",
+      "topic_text": "DLC05ConvCargo06",
+      "emotion": "Neutral 50",
+      "response_text": "Hell, my horse never did that...Play soundDlc05conve_dlc05convcargo0_00009…https://fallout.fandom.com/wiki/File:Dlc05conve_dlc05convcargo0_000099d4_1.oggnoicon",
+      "index": "92"
+    },
+    {
+      "topic": "DLC05ConvCargo07",
+      "topic_text": "DLC05ConvCargo07",
+      "emotion": "Neutral 50",
+      "response_text": "I wouldn't go jumpin' down there if I were you.{Commenting on an extremely large trash chute found in the cargo hold.}Play soundDlc05conve_dlc05convcargo0_00009…https://fallout.fandom.com/wiki/File:Dlc05conve_dlc05convcargo0_00009c76_1.oggnoicon",
+      "index": "93"
+    },
+    {
+      "topic": "DLC05ConvCargo08",
+      "topic_text": "DLC05ConvCargo08",
+      "emotion": "Neutral 50",
+      "response_text": "Nuka what?{Paulson commenting on Nuka bottles, nuka cola machine.}Play soundDlc05conve_dlc05convcargo0_00009…https://fallout.fandom.com/wiki/File:Dlc05conve_dlc05convcargo0_00009c73_1.oggnoicon",
+      "index": "94"
+    },
+    {
+      "topic": "DLC05ConvERoomEngine",
+      "topic_text": "DLC05ConvERoomEngine",
+      "emotion": "Neutral 50",
+      "response_text": "Holy hell.Play soundDlc05conve_dlc05converoome_00009…https://fallout.fandom.com/wiki/File:Dlc05conve_dlc05converoome_000098fa_1.oggnoicon",
+      "index": "95"
+    },
+    {
+      "topic": "DLC05ConvERoomEngineGasTrap",
+      "topic_text": "DLC05ConvERoomEngineGasTrap",
+      "emotion": "Neutral 50",
+      "response_text": "More gas.Play soundDlc05conve_dlc05converoome_00009…https://fallout.fandom.com/wiki/File:Dlc05conve_dlc05converoome_000098fd_1.oggnoicon",
+      "index": "96"
+    },
+    {
+      "topic": "DLC05ConvERoomEpoxy",
+      "topic_text": "DLC05ConvERoomEpoxy",
+      "emotion": "Neutral 50",
+      "response_text": "Epoxy over here.Play soundDlc05conve_dlc05converoome_00009…https://fallout.fandom.com/wiki/File:Dlc05conve_dlc05converoome_00009903_1.oggnoicon",
+      "index": "97"
+    },
+    {
+      "topic": "DLC05ConvERoomFilthyStructures",
+      "topic_text": "DLC05ConvERoomFilthyStructures",
+      "emotion": "Neutral 50",
+      "response_text": "What a mess.Play soundDlc05conve_dlc05converoomf_00009…https://fallout.fandom.com/wiki/File:Dlc05conve_dlc05converoomf_00009906_1.oggnoicon",
+      "index": "98"
+    },
+    {
+      "topic": "DLC05ConvERoomFirstRoom",
+      "topic_text": "DLC05ConvERoomFirstRoom",
+      "emotion": "Neutral 50",
+      "response_text": "What's going on in there?Play soundDlc05conve_dlc05converoomf_00009…https://fallout.fandom.com/wiki/File:Dlc05conve_dlc05converoomf_00009900_1.oggnoicon",
+      "index": "99"
+    },
+    {
+      "topic": "DLC05ConvERoomGasTrap",
+      "topic_text": "DLC05ConvERoomGasTrap",
+      "emotion": "Neutral 50",
+      "response_text": "Gas.  Flammable gas.Play soundDlc05conve_dlc05converoomg_00009…https://fallout.fandom.com/wiki/File:Dlc05conve_dlc05converoomg_00009909_1.oggnoicon",
+      "index": "100"
+    },
+    {
+      "topic": "DLC05ConvPaulsonResponsesLevel01",
+      "topic_text": "DLC05ConvPaulsonResponsesLevel01",
+      "emotion": "Neutral 50",
+      "response_text": "Well, yeah. I suppose you could say that.Play soundDlc05conve_dlc05convpaulso_00005…https://fallout.fandom.com/wiki/File:Dlc05conve_dlc05convpaulso_000053fe_1.oggnoicon",
+      "index": "101"
+    },
+    {
+      "topic": "DLC05ConvPaulsonResponsesLevel02",
+      "topic_text": "DLC05ConvPaulsonResponsesLevel02",
+      "emotion": "Neutral 50",
+      "response_text": "Well, I guess if you find the right one, it'll be your friend for life. Find the wrong one, and it'd rather throw you than carry you.Play soundDlc05conve_dlc05convpaulso_00005…https://fallout.fandom.com/wiki/File:Dlc05conve_dlc05convpaulso_00005409_1.oggnoicon",
+      "index": "104"
+    },
+    {
+      "topic": "DLC05ConvPaulsonResponsesLevel03",
+      "topic_text": "DLC05ConvPaulsonResponsesLevel03",
+      "emotion": "Neutral 50",
+      "response_text": "You know, for a little lady, you're pretty smart. I just hope you were smart enough to pick the right horse when you broke this stranger out.Play soundDlc05conve_dlc05convpaulso_00005…https://fallout.fandom.com/wiki/File:Dlc05conve_dlc05convpaulso_00005403_1.oggnoicon",
+      "index": "107"
+    },
+    {
+      "topic": "DLC05CoreScene04",
+      "topic_text": "DLC05CoreScene04",
+      "emotion": "Neutral 50",
+      "response_text": "No sense discussin’ it now.{matter of fact, after killing a potential alien hostage}Play soundDlc05cores_dlc05corescene0_00006…https://fallout.fandom.com/wiki/File:Dlc05cores_dlc05corescene0_00006e19_1.oggnoicon",
+      "index": "110"
+    },
+    {
+      "topic": "DLC05HangarPaulsonEnemyBehind",
+      "topic_text": "DLC05HangarPaulsonEnemyBehind",
+      "emotion": "Neutral 50",
+      "response_text": "Watch out! The damn things are comin' from the generator room!Play soundDlc05hq_dlc05hangarpaulson_00007…https://fallout.fandom.com/wiki/File:Dlc05hq_dlc05hangarpaulson_00007077_1.oggnoicon",
+      "index": "111"
+    },
+    {
+      "topic": "DLC05HangarPaulsonSeesShip",
+      "topic_text": "DLC05HangarPaulsonSeesShip",
+      "emotion": "Neutral 50",
+      "response_text": "Well, I thought I've seen it all... what the hell is that thing?{Paulson observes recon craft theta rising into the hangar bay.}Play soundDlc05hq_dlc05hangarpaulson_00007…https://fallout.fandom.com/wiki/File:Dlc05hq_dlc05hangarpaulson_00007078_1.oggnoicon",
+      "index": "112"
+    },
+    {
+      "topic": "DLC05HQPaulsonBumper01",
+      "topic_text": "DLC05HQPaulsonBumper01",
+      "emotion": "Neutral 50",
+      "response_text": "Woah. I dunno what those tall shiny things are, but I'd stay away from them if I was you.Play soundDlc05hq_dlc05hqpaulsonbump_00004…https://fallout.fandom.com/wiki/File:Dlc05hq_dlc05hqpaulsonbump_00004273_1.oggnoicon",
+      "index": "113"
+    },
+    {
+      "topic": "DLC05HQPaulsonButtons01",
+      "topic_text": "DLC05HQPaulsonButtons01",
+      "emotion": "Surprise 90",
+      "response_text": "Holy hell... those towers made outta lightnin' or somethin'?{Paulson sees the player activate a bumper for the first time. Giant explosion occurs.}Play soundDlc05hq_dlc05hqpaulsonbutt_00004…https://fallout.fandom.com/wiki/File:Dlc05hq_dlc05hqpaulsonbutt_00004274_1.oggnoicon",
+      "index": "114"
+    },
+    {
+      "topic": "DLC05HQPaulsonComment01",
+      "topic_text": "DLC05HQPaulsonComment01",
+      "emotion": "Neutral 50",
+      "response_text": "All righty. Here's how it's gonna go down. You point, I shoot, aliens die. All of the crazy gizmo stuff is up to you.Play soundDlc05hq_dlc05hqpaulsoncomm_00009…https://fallout.fandom.com/wiki/File:Dlc05hq_dlc05hqpaulsoncomm_00009c69_1.oggnoicon",
+      "index": "116"
+    },
+    {
+      "topic": "DLC05HQPaulsonEnemyUpstairs",
+      "topic_text": "DLC05HQPaulsonEnemyUpstairs",
+      "emotion": "Neutral 50",
+      "response_text": "The hell if we're dyin' up here... take 'em out!Play soundDlc05hq_dlc05hqpaulsonenem_00004…https://fallout.fandom.com/wiki/File:Dlc05hq_dlc05hqpaulsonenem_00004784_1.oggnoicon",
+      "index": "117"
+    },
+    {
+      "topic": "DLC05HQPaulsonExplodeGenerator",
+      "topic_text": "DLC05HQPaulsonExplodeGenerator",
+      "emotion": "Neutral 50",
+      "response_text": "Scratch one generator machine. That oughta piss those aliens off! If we're done here, we should get back to the others.Play soundDlc05hq_dlc05hqpaulsonexpl_00007…https://fallout.fandom.com/wiki/File:Dlc05hq_dlc05hqpaulsonexpl_0000710e_1.oggnoicon",
+      "index": "127"
+    },
+    {
+      "topic": "DLC05HQPaulsonGenerator",
+      "topic_text": "DLC05HQPaulsonGenerator",
+      "emotion": "Neutral 50",
+      "response_text": "Finally. Let's get rid of that machine and then get the hell outta here.{Paulson walks into the generator room.}Play soundDlc05hq_dlc05hqpaulsongene_00007…https://fallout.fandom.com/wiki/File:Dlc05hq_dlc05hqpaulsongene_00007074_1.oggnoicon",
+      "index": "128"
+    },
+    {
+      "topic": "DLC05HQPaulsonGeneratorUpComment",
+      "topic_text": "DLC05HQPaulsonGeneratorUpComment",
+      "emotion": "Neutral 50",
+      "response_text": "Woah... I've never seen anything like that in my life.Play soundDlc05hq_dlc05hqpaulsongene_00009…https://fallout.fandom.com/wiki/File:Dlc05hq_dlc05hqpaulsongene_00009c65_1.oggnoicon",
+      "index": "129"
+    },
+    {
+      "topic": "DLC05HQPaulsonGotYourBack",
+      "topic_text": "DLC05HQPaulsonGotYourBack",
+      "emotion": "Neutral 50",
+      "response_text": "I'll stay up here to draw a bead on the aliens as they rush us. If they get near those towers... hit the buttons and fry 'em!Play soundDlc05hq_dlc05hqpaulsongoty_00007…https://fallout.fandom.com/wiki/File:Dlc05hq_dlc05hqpaulsongoty_00007075_1.oggnoicon",
+      "index": "130"
+    },
+    {
+      "topic": "DLC05HQPaulsonHole",
+      "topic_text": "DLC05HQPaulsonHole",
+      "emotion": "Neutral 50",
+      "response_text": "Hold on there... don't take another step. No telling how far down that goes.{player gets too close to the hole where the hangar door is.}Play soundDlc05hq_dlc05hqpaulsonhole_00007…https://fallout.fandom.com/wiki/File:Dlc05hq_dlc05hqpaulsonhole_00007076_1.oggnoicon",
+      "index": "131"
+    },
+    {
+      "topic": "DLC05HQPaulsonIncoming",
+      "topic_text": "DLC05HQPaulsonIncoming",
+      "emotion": "Neutral 50",
+      "response_text": "I dunno what that sound is, but it can't be good. Watch yourself, I think we're about to have company.{Player just set off an alarm, siege fight about to start.}Play soundDlc05hq_dlc05hqpaulsoninco_00007…https://fallout.fandom.com/wiki/File:Dlc05hq_dlc05hqpaulsoninco_00007079_1.oggnoicon",
+      "index": "132"
+    },
+    {
+      "topic": "DLC05HQPaulsonTele01",
+      "topic_text": "DLC05HQPaulsonTele01",
+      "emotion": "Neutral 50",
+      "response_text": "Damn, looks like that thing isn't working. We'll have to find another way to get up to the top.{The player approaches a teleporter that's off. Paulson states the obvious.}Play soundDlc05hq_dlc05hqpaulsontele_00004…https://fallout.fandom.com/wiki/File:Dlc05hq_dlc05hqpaulsontele_00004270_1.oggnoicon",
+      "index": "133"
+    },
+    {
+      "topic": "DLC05HQPaulsonTeleSwitch",
+      "topic_text": "DLC05HQPaulsonTeleSwitch",
+      "emotion": "Neutral 50",
+      "response_text": "Now, let's see. One of these buttons has to turn those shiny discs back on... then we can zap ourselves around.{If it's already known that the teleporters are off, Paulson gives a more detailed suggestion.}Play soundDlc05hq_dlc05hqpaulsontele_00004…https://fallout.fandom.com/wiki/File:Dlc05hq_dlc05hqpaulsontele_00004271_1.oggnoicon",
+      "index": "134"
+    },
+    {
+      "topic": "DLC05MZ3ExLabSceneLines",
+      "topic_text": "DLC05MZ3ExLabSceneLines",
+      "emotion": "Neutral 50",
+      "response_text": "Not really the time for gawking...Play soundDlc05mz3_dlc05mz3exlabscen_00007…https://fallout.fandom.com/wiki/File:Dlc05mz3_dlc05mz3exlabscen_00007b88_1.oggnoicon",
+      "index": "136"
+    },
+    {
+      "topic": "DLC05SamuraiScenesBridgeTopic",
+      "topic_text": "DLC05SamuraiScenesBridgeTopic",
+      "emotion": "Neutral 50",
+      "response_text": "Little busy here, darling.{sarcastic}Play soundDlc05samur_dlc05samuraisce_00008…https://fallout.fandom.com/wiki/File:Dlc05samur_dlc05samuraisce_00008293_1.oggnoicon",
+      "index": "137"
+    },
+    {
+      "topic": "GOODBYE",
+      "topic_text": "I have to go now.",
+      "emotion": "Neutral 50",
+      "response_text": "All right.Play soundDlc05post_goodbye_0000ab94_1.ogghttps://fallout.fandom.com/wiki/File:Dlc05post_goodbye_0000ab94_1.oggnoicon",
+      "index": "140"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Neutral 50",
+      "response_text": "Where are they? I'll kill those little bastards!Play soundDlc05mz2_hello_00005600_1.ogghttps://fallout.fandom.com/wiki/File:Dlc05mz2_hello_00005600_1.oggnoicon",
+      "index": "148"
+    }
+  ],
+  "combat": []
+}

@@ -1,0 +1,129 @@
+{
+  "name": "Beatrice Armstrong",
+  "url": "/wiki/Beatrice_Armstrong",
+  "dialogue_name": "CG02Beatrice.txt",
+  "dialogue_url": "/wiki/CG02Beatrice.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": true,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000309AD",
+  "ref_id": "000309AC",
+  "editor_id": "CG02Beatrice",
+  "location": "Vault 101",
+  "location_url": null,
+  "descriptions": [
+    "Beatrice Armstrong (simply Beatrice in the game) is a resident of Vault 101 and a minor character in Fallout 3. She is encountered during Growing Up Fast and later found dead during Trouble on the Homefront, in James' former office in the clinic.",
+    "An eccentric, airheaded dweller of Vault 101, Beatrice is one of the daughters of Stanley Armstrong, and the only one among them not to have a husband (although she is interested in Edwin Brotch, the Vault's resident teacher). Unlike her sisters, Mary Kendall and Gloria Mack, she has ample free time away from her family, which she spends snooping into the lives of other residents and gossiping to her sisters and her best friend, Pepper Gomez.",
+    "During his tenure as overseer, Alphonse Almodovar took an interest in Beatrice, valuing her loyal service to the Vault.",
+    "By 2277, Beatrice's mental faculties had begun to deteriorate to a significant degree, raising the concerns of Overseer Almodovar. Despite her continued support, he had come to resent her as an \"absent-minded, sexually repressed sycophant,\" and planned to speak to James about coming up with a \"long-term pharmaceutical solution\" to keep her comfortable (and quiet) until her death. However, before he could act on this, James and his child fled the Vault amid a sudden radroach infestation, which caused widespread damage to the Vault and numerous injuries and fatalities.",
+    "In the aftermath, Almodovar's critics, joined by much of the Vault's youth, staged a civil uprising against his leadership, during which Beatrice sprained her left toe. With James missing and his apprentice Jonas Palmer dead, she was forced to seek medical assistance from the Vault's maintenance robot Andy, which had been installed as a temporary medic. Instead of administering proper care, Andy elected to amputate her entire leg, killing Beatrice through shock and blood loss, an outcome the robot attributed to surgical complications.",
+    "Beatrice is the only known fatality resulting from Andy's malpractice, with other patients merely noting his less than ideal capacity as a medical provider."
+  ],
+  "race": "Human",
+  "gender": "Female",
+  "affiliation": "Vault 101",
+  "role": "Vault resident",
+  "detailed_location": "Vault 101",
+  "voice_actor": "Shari Elliker",
+  "special": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 10,
+    "Intelligence": 5,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "level": "1",
+  "misc_skills": [],
+  "karma": "Good",
+  "voice_type": "FemaleAdult01DefaultDC",
+  "geck_race": "AsianOld",
+  "topics": [
+    {
+      "topic": "CG02BeatriceA1",
+      "topic_text": "Yeah, my Dad and Amata threw me a great party, didn't they?",
+      "emotion": "Happy 50",
+      "response_text": "They sure did. My, my. Ten years old already. Why, I can remember helping your dad change your diapers...{just what a 10-year-old wants to reminisce about...}Play soundFO3 BeatriceArmstrong TheySureDi…https://fallout.fandom.com/wiki/File:FO3_BeatriceArmstrong_TheySureDid.oggnoicon",
+      "index": "1"
+    },
+    {
+      "topic": "CG02BeatriceA2",
+      "topic_text": "Why are you talking to me like I'm five?",
+      "emotion": "Happy 50",
+      "response_text": "Oh, you are so funny! Ten years old, of course you are  why, you have your Pip-Boy and everything!{airhead}Play soundFO3 BeatriceArmstrong YouAreSoFu…https://fallout.fandom.com/wiki/File:FO3_BeatriceArmstrong_YouAreSoFunny.oggnoicon",
+      "index": "4"
+    },
+    {
+      "topic": "CG02BeatriceA3",
+      "topic_text": "Yes. Can I have my present now?",
+      "emotion": "Happy 75",
+      "response_text": "Oh! Boys will be boys, won't they? Just can't wait to see your present, is that it?{there's nothing you can say that will faze her...}Play soundFO3_BeatriceArmstrong_BoysWillBe…https://fallout.fandom.com/wiki/File:FO3_BeatriceArmstrong_BoysWillBeBoys.oggnoicon",
+      "index": "8"
+    },
+    {
+      "topic": "CG02BeatriceB1",
+      "topic_text": "Thank you. I will treasure it always. Is that all?",
+      "emotion": "Happy 50",
+      "response_text": "Of course! Run along now, dearie, and have yourself a wonderful birthday!Play soundFO3 BeatriceArmstrong RunAlongNo…https://fallout.fandom.com/wiki/File:FO3_BeatriceArmstrong_RunAlongNow.oggnoicon",
+      "index": "12"
+    },
+    {
+      "topic": "CG02BeatriceB2",
+      "topic_text": "Um... thanks. I guess. Did you get me anything else?",
+      "emotion": "Happy 50",
+      "response_text": "Don't be silly! One poem per birthday, that's my rule! Ha ha. If I gave you two, think how jealous Butch would be, ha ha.{airhead. nothing you say can dent her chipperness.}Play soundFo3 BeatriceArmstrong OnePoemPer…https://fallout.fandom.com/wiki/File:Fo3_BeatriceArmstrong_OnePoemPerBirthday.oggnoicon",
+      "index": "13"
+    },
+    {
+      "topic": "CG02BeatriceB3",
+      "topic_text": "A poem? You've got to be kidding me.",
+      "emotion": "Happy 50",
+      "response_text": "No, really, I wrote it just for you!{airhead. nothing you say can dent her chipperness.}Play soundFO3 BeatriceArmstrong JustForYou…https://fallout.fandom.com/wiki/File:FO3_BeatriceArmstrong_JustForYou.oggnoicon",
+      "index": "14"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Happy 100",
+      "response_text": "Happy birthday, dearie! My goodness, I hope I didn't miss the party!{she's excessively chipper, and talking down to you  more like to a 5 year old than a 10 year old}Play soundFO3 BeatriceArmstrong HopeIDidnt…https://fallout.fandom.com/wiki/File:FO3_BeatriceArmstrong_HopeIDidntMiss.oggnoicon",
+      "index": "17"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "CG02IntroSurprise",
+      "topic_text": "CG02IntroSurprise",
+      "emotion": "Neutral 50",
+      "response_text": "Surprise!Play soundFO3 BeatriceArmstrong Surprise.ogghttps://fallout.fandom.com/wiki/File:FO3_BeatriceArmstrong_Surprise.oggnoicon",
+      "index": "19"
+    },
+    {
+      "topic": "CG02IntroYell",
+      "topic_text": "CG02IntroYell",
+      "emotion": "Neutral 50",
+      "response_text": "Happy birthday!Play soundFO3 BeatriceArmstrong HappyBirth…https://fallout.fandom.com/wiki/File:FO3_BeatriceArmstrong_HappyBirthday.oggnoicon",
+      "index": "20"
+    },
+    {
+      "topic": "CG02PartyTalkAmataGreeting",
+      "topic_text": "CG02PartyTalkAmataGreeting",
+      "emotion": "Happy 50",
+      "response_text": "Oh my goodness, I wouldn't have missed it for the world. That dear boy is like a son to me.Play soundFO3 BeatriceArmstrong ThatDearBo…https://fallout.fandom.com/wiki/File:FO3_BeatriceArmstrong_ThatDearBoy.oggnoicon",
+      "index": "21"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Happy 100",
+      "response_text": "Happy birthday, dearie!{she's excessively chipper}Play soundFO3 BeatriceArmstrong HappyBirth…https://fallout.fandom.com/wiki/File:FO3_BeatriceArmstrong_HappyBirthdayDearie.oggnoicon",
+      "index": "23"
+    }
+  ],
+  "combat": []
+}

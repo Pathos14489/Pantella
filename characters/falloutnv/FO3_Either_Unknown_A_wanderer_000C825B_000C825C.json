@@ -1,0 +1,78 @@
+{
+  "name": "A wanderer",
+  "url": "/wiki/A_wanderer",
+  "dialogue_name": "",
+  "dialogue_url": null,
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000C825B",
+  "ref_id": "000C825C",
+  "editor_id": "wastelandWanderer",
+  "location": "East ofRoosevelt Academy",
+  "location_url": "/wiki/Roosevelt_Academy",
+  "descriptions": [
+    "The wanderer (called a wanderer in-game) is a lone raider living in the Capital Wasteland in 2277.",
+    "The wanderer is accompanied by three guard dogs. They are found at their makeshift camp on top of an elevated platform made of floorboards, located east of Roosevelt Academy.",
+    "South of Roosevelt Academy is an elevated railway track. Follow alongside it heading east until one sees an explosive chain of cars ending in a bus. Hop down into the valley where the highway breaks off and a red train car has collapsed. Go down the valley a short distance northwest, and one will see a raised wooden platform on the left, which is their camp. The wanderer will be patrolling around this area, accompanied by three raider guard dogs.",
+    "* 15% chance of spawning."
+  ],
+  "race": "Human",
+  "gender": "Male/Female",
+  "affiliation": "Raiders",
+  "role": "Hostile wanderer",
+  "detailed_location": "NearRoosevelt Academy",
+  "special": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 3,
+    "Intelligence": 3,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "level": "4 → 9",
+  "tag_skills": [
+    {
+      "Big Guns:": "41→62"
+    },
+    {
+      "Melee Weap.:": "45→66"
+    },
+    {
+      "Small Guns:": "45→66(55→76)"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "55→85"
+    },
+    {
+      "Critical Chance:": "5%"
+    },
+    {
+      "Unarmed Dam.:": "+1.15"
+    },
+    {
+      "Poison Resist.:": "15%"
+    },
+    {
+      "Rad. Resist.:": "6%"
+    },
+    {
+      "Carry Weight:": "210 lbs"
+    },
+    {
+      "Damage Res.:": "13%"
+    }
+  ],
+  "karma": "Evil",
+  "topics": [],
+  "conversation": [],
+  "combat": []
+}

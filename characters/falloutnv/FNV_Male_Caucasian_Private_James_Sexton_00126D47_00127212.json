@@ -1,0 +1,258 @@
+{
+  "name": "Private James Sexton",
+  "url": "/wiki/James_Sexton",
+  "dialogue_name": "VCFHJamesSexton.txt",
+  "dialogue_url": "/wiki/VCFHJamesSexton.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "00126D47",
+  "ref_id": "00127212",
+  "editor_id": "VCFHPJamesSexton",
+  "location": "Camp Forlorn Hope barracks",
+  "location_url": "/wiki/Camp_Forlorn_Hope_barracks",
+  "descriptions": [
+    "Private James Sexton is one of the NCR's frontline troopers stationed at Camp Forlorn Hope living in the Mojave Wasteland in 2281.",
+    "Morale around Camp Forlorn Hope is drawing thin, so he is in charge of keeping the morale up. He has created a contest of sorts which entails taking ears off of legionaries and keeping tally of how many legionaries have been killed by the soldiers at Camp Forlorn Hope.",
+    "An Ear to the Ground",
+    "Medical Mystery",
+    "An Ear to the Ground: If the player character tells him his morale boosting is a good idea then he will inform them of his game involving cutting ears off of Legion soldiers. The player character can bring Private Sexton Legion ears after this, however, they can obtain these ears prior to receiving the offer."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "NCR Army",
+  "role": "Morale officer",
+  "detailed_location": "Mess hall,Barracks,Camp Forlorn Hope",
+  "voice_actor": "Liam O'Brien",
+  "special": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 5,
+    "Intelligence": 5,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "level": "12",
+  "tag_skills": [
+    {
+      "Explosives:": "74"
+    },
+    {
+      "Guns:": "74"
+    },
+    {
+      "Melee Weap.:": "74"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Neutral",
+  "voice_type": "MaleAdult05",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Happy 50",
+      "response_text": "If it isn't the guy that defeated the Legion at Nelson. I can't thank you enough, morale around here has never been higher.",
+      "index": "1"
+    },
+    {
+      "topic": "vFreeformCampForlornHope03VCFHJamesSextonTopic000",
+      "topic_text": "What is your assignment?",
+      "emotion": "Happy 25",
+      "response_text": "I've been placed in charge of morale. It's difficult trying to keep spirits up with the Legion nearby.",
+      "index": "18"
+    },
+    {
+      "topic": "vFreeformForlornHope03VCFHJamesSextonTopic000",
+      "topic_text": "So there's no hope in Hope.",
+      "emotion": "Happy 50",
+      "response_text": "Ironic isn't it?",
+      "index": "20"
+    },
+    {
+      "topic": "vFreeformForlornHope03VCFHJamesSextonTopic001",
+      "topic_text": "Wow. Bringing up morale must be a difficult.",
+      "emotion": "Happy 10",
+      "response_text": "I'd call that an understatement.",
+      "index": "22"
+    },
+    {
+      "topic": "vFreeformForlornHope03VCFHJamesSextonTopic002",
+      "topic_text": "Hell yeah. Tell me about it.",
+      "emotion": "Happy 30",
+      "response_text": "Great. Since the camp is threatened by Legion, I propose a hunt. Kill any you encounter and bring me the Legion's ear as proof.",
+      "index": "25"
+    },
+    {
+      "topic": "vFreeformForlornHope03VCFHJamesSextonTopic003",
+      "topic_text": "I don't know. It doesn't sound very good.",
+      "emotion": "Happy 40",
+      "response_text": "Come on. Lend me your ear. I bet you'll be good at it.",
+      "index": "27"
+    },
+    {
+      "topic": "vFreeformForlornHope03VCFHJamesSextonTopic004",
+      "topic_text": "Here are some ears.",
+      "emotion": "Surprise 50",
+      "response_text": "Woah boy! This puts you far ahead of everyone else. I think I'll have to declare you the winner of the competition.",
+      "index": "28"
+    },
+    {
+      "topic": "vFreeformForlornHope03VCFHJamesSextonTopic005",
+      "topic_text": "Let's talk about something else.",
+      "emotion": "Happy 10",
+      "response_text": "What's on your mind?",
+      "index": "31"
+    },
+    {
+      "topic": "vFreeformForlornHope03VCFHJamesSextonTopic007",
+      "topic_text": "Are you complaining?",
+      "emotion": "Happy 25",
+      "response_text": "No complaints. My assignment isn't easy but it's vital in keeping the troopers going.",
+      "index": "32"
+    },
+    {
+      "topic": "vFreeformForlornHope03VCFHJamesSextonTopic008",
+      "topic_text": "About that competition.",
+      "emotion": "Happy 25",
+      "response_text": "Haven't started it yet. Are you interested to hear about it now?",
+      "index": "35"
+    },
+    {
+      "topic": "vFreeformForlornHope03VCFHJamesSextonTopic009",
+      "topic_text": "Have you heard anything about Dr. Richards' missing medical supplies?",
+      "emotion": "Happy 10",
+      "response_text": "About the shortage of Hydra right? We all have our own ways to deal with this place. Me, I sometimes walk at night. Calms the nerves.",
+      "index": "37"
+    },
+    {
+      "topic": "vFreeformForlornHope03VCFHJamesSextonTopic010",
+      "topic_text": "Have you actually tried that?",
+      "emotion": "Sad 25",
+      "response_text": "It's a long story. Let's just say whiskey makes you do strange things to impress a girl.",
+      "index": "39"
+    },
+    {
+      "topic": "vFreeformForlornHope03VCFHJamesSextonTopic011",
+      "topic_text": "Sign me up.",
+      "emotion": "Happy 50",
+      "response_text": "Great! Don't be surprised if you're already last when you return. If I'm right, the troopers will use any excuse to slaughter Legion scum.",
+      "index": "41"
+    },
+    {
+      "topic": "vFreeformForlornHope03VCFHJamesSextonTopic012",
+      "topic_text": "Maybe another time.",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah it was a crazy idea. Did you need anything else?",
+      "index": "43"
+    },
+    {
+      "topic": "vFreeformForlornHope03VCFHJamesSextonTopic013",
+      "topic_text": "How's the morale doing?",
+      "emotion": "Happy 50",
+      "response_text": "The best it's been since the camp started. All because of you. So thanks, buddy!",
+      "index": "44"
+    },
+    {
+      "topic": "vFreeformForlornHope03VCFHJamesSextonTopic014",
+      "topic_text": "What makes you think that?",
+      "emotion": "Happy 5",
+      "response_text": "I sometimes see him wandering around the camp. Though he seems to need more time to himself. His cot's still empty when I return after midnight.",
+      "index": "47"
+    },
+    {
+      "topic": "vFreeformForlornHope03VCFHJamesSextonTopic015",
+      "topic_text": "That's all I need.",
+      "emotion": "Happy 15",
+      "response_text": "Glad to help.",
+      "index": "49"
+    },
+    {
+      "topic": "vFreeformForlornHope03VCFHJamesSextonTopic016",
+      "topic_text": "I can't believe you just said that.",
+      "emotion": "Happy 10",
+      "response_text": "That bad huh? Well at least I tried. The actual idea is better. It's a Legion hunt. Whoever kills the most wins. How about it?",
+      "index": "50"
+    },
+    {
+      "topic": "vFreeformForlornHope03VCFHJamesSextonTopic017",
+      "topic_text": "Skip the puns. What is this idea you have?",
+      "emotion": "Happy 15",
+      "response_text": "Straight to the point. I like that. What I propose is a Legion hunt. Troopers kill them anyway so why not make it a game. What do you say?",
+      "index": "51"
+    },
+    {
+      "topic": "vFreeformForlornHope03VCFHJamesSextonTopic020",
+      "topic_text": "I couldn't care less.",
+      "emotion": "Sad 10",
+      "response_text": "Alright fine. Is there anything you do care about?",
+      "index": "52"
+    },
+    {
+      "topic": "vFreeformForlornHope03VCFHJamesSextonTopic021",
+      "topic_text": "I'll kill you for asking.",
+      "emotion": "Fear 10",
+      "response_text": "Alright calm down buddy. I don't wanna provoke you. I'll let you ask the questions.",
+      "index": "53"
+    },
+    {
+      "topic": "vFreeformForlornHope03VCFHJamesSextonTopic022",
+      "topic_text": "That is the stupidest joke I've heard.",
+      "emotion": "Happy 10",
+      "response_text": "Yeah it was bad. I'll leave the comedy alone. So how about it?",
+      "index": "54"
+    },
+    {
+      "topic": "vFreeformForlornHope03VCFHJamesSextonTopic023",
+      "topic_text": "That's hilarious. You think of it on your own?",
+      "emotion": "Happy 50",
+      "response_text": "Yep. Been waiting for a chance to use it. So can I count you in?",
+      "index": "55"
+    },
+    {
+      "topic": "vFreeformForlornHope03VCFHJamesSextonTopic024",
+      "topic_text": "Sign me up.",
+      "emotion": "Happy 50",
+      "response_text": "Great! Don't be surprised if you're already last when you return. If I'm right, the troopers will use any excuse to slaughter Legion scum.",
+      "index": "56"
+    },
+    {
+      "topic": "vFreeformForlornHope03VCFHJamesSextonTopic025",
+      "topic_text": "Count me out.",
+      "emotion": "Sad 10",
+      "response_text": "That's a shame. Well if you change your mind, let me know. Need anything else?",
+      "index": "58"
+    },
+    {
+      "topic": "vFreeformForlornHope03VCFHJamesSextonTopic028",
+      "topic_text": "I love fighting. I'm going back out there now.",
+      "emotion": "Happy 10",
+      "response_text": "Well don't let me stop you then.",
+      "index": "59"
+    },
+    {
+      "topic": "vFreeformForlornHope03VCFHJamesSextonTopic029",
+      "topic_text": "I still don't know.",
+      "emotion": "Happy 50",
+      "response_text": "Know what? I'm going to sign you up anyway. If you don't mind being last then there's not much else I can say. Any questions?",
+      "index": "60"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "See you later.",
+      "index": "61"
+    }
+  ],
+  "combat": []
+}

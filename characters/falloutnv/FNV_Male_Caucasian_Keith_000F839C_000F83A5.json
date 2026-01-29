@@ -1,0 +1,128 @@
+{
+  "name": "Keith",
+  "url": "/wiki/Keith_(Fallout:_New_Vegas)",
+  "dialogue_name": "1EKeith.txt",
+  "dialogue_url": "/wiki/1EKeith.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": true,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000F839C",
+  "ref_id": "000F83A5",
+  "editor_id": "1EKeith",
+  "location": "Aerotech suite 200",
+  "location_url": "/wiki/Aerotech_suite_200",
+  "descriptions": [
+    "Keith is a chem dealer and caravan hustler living in suite 200 of Aerotech Office Park in 2281.",
+    "Keith has made his home in the Aerotech Office Park, where he has developed a dubious reputation. For one, he \"makes his own luck\" with some marked cards and hustles peoples at caravan, especially when a \"fat score rolls into town.\"",
+    "Captain Captain Parker suspects that Keith is selling unlicensed chems and conning people,",
+    "Keith's Caravan Charade",
+    "Keith's Caravan Charade: The player character has to find evidence of Keith cheating at Caravan. A Barter check of 45 is needed to trick him into telling about his drug dealing and a Speech check of 60 is needed when talking to him to find out how he cheats. Alternatively, the Courier can also steal the cards out of the desk in the back right corner of the 200 suite and bring them to Captain Parker as evidence."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "role": "ChemdealerCaravancheater",
+  "detailed_location": "Aerotech suite 200Aerotech Office Park",
+  "voice_actor": "Gregory Alan Williams",
+  "special": {
+    "Strength": 6,
+    "Perception": 6,
+    "Endurance": 2,
+    "Charisma": 10,
+    "Intelligence": 6,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "level": "4",
+  "tag_skills": [],
+  "misc_skills": [],
+  "karma": "Evil",
+  "voice_type": "MaleAdult06",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "Hey there - fancy a game of Caravan?",
+      "index": "1"
+    },
+    {
+      "topic": "KeithCaravan",
+      "topic_text": "Sure, let's play Caravan.",
+      "emotion": "Neutral 50",
+      "response_text": "You got it.",
+      "index": "2"
+    },
+    {
+      "topic": "KeithDice",
+      "topic_text": "From what I hear, your players are pretty unlucky. What's your secret?",
+      "emotion": "Neutral 50",
+      "response_text": "[FAILED] I guess Lady Luck just smiles on me, that's all. Nothing special about it.",
+      "index": "3"
+    },
+    {
+      "topic": "KeithDrugs",
+      "topic_text": "Boy... I sure could use some drugs. You know anybody that sells drugs?",
+      "emotion": "Neutral 50",
+      "response_text": "[FAILED] What? Are you some kind of idiot? Why, uh... why would I know that?",
+      "index": "5"
+    },
+    {
+      "topic": "KeithIntro",
+      "topic_text": "Who are you?",
+      "emotion": "Neutral 50",
+      "response_text": "Name's Keith. You feeling lucky? I got games of chance, games of skill, games of you-name-it. Want to win a little cash?",
+      "index": "8"
+    },
+    {
+      "topic": "vDialogueVegasEast21EKeithTopic000",
+      "topic_text": "I think I'll pass for now.",
+      "emotion": "Neutral 50",
+      "response_text": "Your loss.",
+      "index": "9"
+    },
+    {
+      "topic": "vDialogueVegasEast21EKeithTopic001",
+      "topic_text": "Marked cards, huh? A little bit obvious, but not bad.",
+      "emotion": "Neutral 50",
+      "response_text": "Hey, it's not like I use them{emphasis}all the time. Mostly I keep them in my shack until I see a really fat score roll into town.",
+      "index": "10"
+    },
+    {
+      "topic": "vDialogueVegasEast21EKeithTopic002",
+      "topic_text": "I'll take it.",
+      "emotion": "Neutral 50",
+      "response_text": "And here you go. Enjoy, my friend.",
+      "index": "11"
+    },
+    {
+      "topic": "vDialogueVegasEast21EKeithTopic003",
+      "topic_text": "Jet's not my drug of choice. I'll keep looking.",
+      "emotion": "Neutral 50",
+      "response_text": "Well, then, why are you wasting my time?",
+      "index": "13"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Come on back if you want a game.",
+      "index": "14"
+    },
+    {
+      "topic": "KeithResponse",
+      "topic_text": "KeithResponse",
+      "emotion": "Neutral 50",
+      "response_text": "Fuck you man, I ain't going nowhere with you.",
+      "index": "15"
+    }
+  ],
+  "combat": []
+}

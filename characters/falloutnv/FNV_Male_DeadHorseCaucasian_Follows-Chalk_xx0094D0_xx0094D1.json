@@ -1,0 +1,1160 @@
+{
+  "name": "Follows-Chalk",
+  "url": "/wiki/Follows-Chalk",
+  "dialogue_name": "NVDLC02FollowsChalk.txt",
+  "dialogue_url": "/wiki/NVDLC02FollowsChalk.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": true,
+  "base_id": "xx0094D0",
+  "ref_id": "xx0094D1",
+  "editor_id": "NVDLC02FollowsChalk",
+  "location": "Across the bridge North of theSouthern passage",
+  "location_url": "/wiki/Southern_passage",
+  "descriptions": [
+    "Follows-Chalk is a tribal living in Zion Canyon in 2281.",
+    "When Follows-Chalk was a young boy, a man came through the valley with one of the caravans: a \"tall man, big mustache, carried a guitar.\" Follows-Chalk asked him what he did for a living, and the interpreter told him that he was a singer. \"What is that?\" he asked. The man explained that he went from place to place and sang for people, who gave him food, shelter, and care in return. Follows-Chalk could not believe that there was a place in this world where a man could do that. He promised himself then that one day he'd explore that world himself.",
+    "Follows Chalk's name is derived from the fact that the more experienced Dead Horse scouts leave chalk marks to indicate areas where the game is plentiful. As he is not a full scout yet, he simply \"follows the chalk\" of the veterans.",
+    "While nervous, he is willing to violate the taboo and enter pre-War buildings, unlike most members of his tribe.",
+    "Follows-Chalk appears only in the Fallout: New Vegas add-on Honest Hearts.",
+    "Follows-Chalk was written by Travis Stout."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Dead HorsesCourier(optional)",
+  "role": "Scout",
+  "detailed_location": "Angel Cave",
+  "voice_actor": "Christian Lanz",
+  "special": {
+    "Strength": 5,
+    "Perception": 6,
+    "Endurance": 6,
+    "Charisma": 4,
+    "Intelligence": 6,
+    "Agility": 6,
+    "Luck": 4
+  },
+  "level": "1→50",
+  "tag_skills": [
+    {
+      "Melee Weap.:": "34→100"
+    },
+    {
+      "Sneak:": "36→100"
+    },
+    {
+      "Survival:": "31→100"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "275→520"
+    },
+    {
+      "Critical Chance:": "4%"
+    },
+    {
+      "Poison Resist.:": "25%"
+    },
+    {
+      "Rad. Resist.:": "10%"
+    },
+    {
+      "Carry Weight:": "200 lbs"
+    },
+    {
+      "Dam. Threshold:": "6"
+    }
+  ],
+  "karma": "Neutral",
+  "geck_race": "DeadHorseCaucasian",
+  "topics": [
+    {
+      "topic": "FollowersAcknowledgeMyOrder",
+      "topic_text": "FollowersAcknowledgeMyOrder",
+      "emotion": "Neutral 50",
+      "response_text": "Got it.",
+      "index": "1"
+    },
+    {
+      "topic": "FollowersFiredIt's time for us to part ways.",
+      "topic_text": "Go back to your people's camp.",
+      "emotion": "Neutral 50",
+      "response_text": "You sure? It's easy to get lost out here without a guide.",
+      "index": "2"
+    },
+    {
+      "topic": "FollowersFiredNo",
+      "topic_text": "On second thought, stick with me for a little longer.",
+      "emotion": "Neutral 50",
+      "response_text": "Glad to hear it. I wouldn't want to go back to Joshua alone.",
+      "index": "3"
+    },
+    {
+      "topic": "FollowersFiredYes",
+      "topic_text": "Yes, I'm sure.",
+      "emotion": "Neutral 50",
+      "response_text": "All right. Joshua won't be too happy, but all right.",
+      "index": "4"
+    },
+    {
+      "topic": "FollowersHiredI think we should travel together.",
+      "topic_text": "I want you to travel with me.",
+      "emotion": "Neutral 50",
+      "response_text": "Joshua said I might be going with you. Let's go then!",
+      "index": "5"
+    },
+    {
+      "topic": "FollowersLetsGo",
+      "topic_text": "Let's get going.",
+      "emotion": "Neutral 50",
+      "response_text": "Right behind you.",
+      "index": "6"
+    },
+    {
+      "topic": "FollowersOverburdened",
+      "topic_text": "FollowersOverburdened",
+      "emotion": "Neutral 50",
+      "response_text": "I look like a pack Brahmin to you? Come on, we travel light!",
+      "index": "7"
+    },
+    {
+      "topic": "FollowersStealthing",
+      "topic_text": "FollowersStealthing",
+      "emotion": "Neutral 50",
+      "response_text": "Like the shadow of a ghost.",
+      "index": "8"
+    },
+    {
+      "topic": "FollowersTactics",
+      "topic_text": "Let's talk about your tactics.",
+      "emotion": "Neutral 50",
+      "response_text": "Tactics? You know I'm not much of a fighter, right?",
+      "index": "9"
+    },
+    {
+      "topic": "FollowersTacticsCombat",
+      "topic_text": "I want you to change your combat style.",
+      "emotion": "Neutral 50",
+      "response_text": "Change it to...?",
+      "index": "10"
+    },
+    {
+      "topic": "FollowersTacticsCombatAggressive",
+      "topic_text": "I want you to attack enemies the moment you see them.",
+      "emotion": "Neutral 50",
+      "response_text": "You're starting to sound like the old Joshua. Okay, got it.",
+      "index": "11"
+    },
+    {
+      "topic": "FollowersTacticsCombatENDLet's talk about something else.",
+      "topic_text": "That's it for your tactics. Let's talk about something else.",
+      "emotion": "Neutral 50",
+      "response_text": "What can I do?",
+      "index": "12"
+    },
+    {
+      "topic": "FollowersTacticsCombatGOODBYE",
+      "topic_text": "That's all. Let's get going.",
+      "emotion": "Neutral 50",
+      "response_text": "Lead on, I'll follow.",
+      "index": "13"
+    },
+    {
+      "topic": "FollowersTacticsCombatMelee",
+      "topic_text": "Switch to a melee weapon.",
+      "emotion": "Neutral 50",
+      "response_text": "Up close and personal? Well, as long as they don't have guns.",
+      "index": "14"
+    },
+    {
+      "topic": "FollowersTacticsCombatPassive",
+      "topic_text": "I want you not to attack enemies unless I've already engaged them.",
+      "emotion": "Neutral 50",
+      "response_text": "Now you're thinking like a hunter! I like this plan.",
+      "index": "15"
+    },
+    {
+      "topic": "FollowersTacticsCombatRanged",
+      "topic_text": "I want you to use ranged weapons.",
+      "emotion": "Neutral 50",
+      "response_text": "Keeping my distance sounds more my speed anyways.",
+      "index": "16"
+    },
+    {
+      "topic": "FollowersTacticsDistance",
+      "topic_text": "Let's talk about how close you're following me.",
+      "emotion": "Neutral 50",
+      "response_text": "Just tell me where to be, and I'll be there.",
+      "index": "17"
+    },
+    {
+      "topic": "FollowersTacticsDistanceDefault",
+      "topic_text": "Stay close to me.",
+      "emotion": "Neutral 50",
+      "response_text": "Fine by me - get too far back and it's easy to lose your partner in this maze.",
+      "index": "18"
+    },
+    {
+      "topic": "FollowersTacticsDistanceEND",
+      "topic_text": "Your distance is good. Let's talk about something else.",
+      "emotion": "Neutral 50",
+      "response_text": "What can I do?",
+      "index": "19"
+    },
+    {
+      "topic": "FollowersTacticsDistanceGOODBYE",
+      "topic_text": "All right, you're good. Let's get out of here.",
+      "emotion": "Neutral 50",
+      "response_text": "Lead on, I'll follow.",
+      "index": "20"
+    },
+    {
+      "topic": "FollowersTacticsDistanceLong",
+      "topic_text": "Keep your distance. Try to flank them.",
+      "emotion": "Neutral 50",
+      "response_text": "Sure... you are going to leave me some chalk marks to follow though, right?",
+      "index": "21"
+    },
+    {
+      "topic": "FollowersTacticsEnd",
+      "topic_text": "Enough about tactics.",
+      "emotion": "Neutral 50",
+      "response_text": "What can I do?",
+      "index": "22"
+    },
+    {
+      "topic": "FollowersTrade",
+      "topic_text": "Let's trade equipment.",
+      "emotion": "Neutral 50",
+      "response_text": "Well then, let's get to trading.",
+      "index": "23"
+    },
+    {
+      "topic": "FollowersWait",
+      "topic_text": "Wait here.",
+      "emotion": "Neutral 50",
+      "response_text": "Sure, okay. I'll wait behind. Not like I'm not used to that.",
+      "index": "24"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Surprise 100",
+      "response_text": "Hoi! White Legs don't leave survivors often. You're some kind of lucky, let me tell you.",
+      "index": "25"
+    },
+    {
+      "topic": "NVDLC02DialogueFollowsChalkNVDLC02FollowsChalkTopic000",
+      "topic_text": "Nothing else. Talk to you later.",
+      "emotion": "Happy 50",
+      "response_text": "Go with fortune, friend.",
+      "index": "37"
+    },
+    {
+      "topic": "NVDLC02DialogueFollowsChalkNVDLC02FollowsChalkTopic001",
+      "topic_text": "I want to know more about you.",
+      "emotion": "Neutral 50",
+      "response_text": "What can I tell you?",
+      "index": "38"
+    },
+    {
+      "topic": "NVDLC02DialogueFollowsChalkNVDLC02FollowsChalkTopic002",
+      "topic_text": "I don't have any more questions. Let's talk about something else.",
+      "emotion": "Neutral 50",
+      "response_text": "Ask away.",
+      "index": "39"
+    },
+    {
+      "topic": "NVDLC02DialogueFollowsChalkNVDLC02FollowsChalkTopic003",
+      "topic_text": "Why are you called Follows-Chalk?",
+      "emotion": "Pained 20",
+      "response_text": "Our advance scouts leave chalk signs to mark places rich with game. I'm not a full scout yet, so I follow the marks and guide the hunters.",
+      "index": "40"
+    },
+    {
+      "topic": "NVDLC02DialogueFollowsChalkNVDLC02FollowsChalkTopic004",
+      "topic_text": "Tell me more about Joshua Graham.",
+      "emotion": "Happy 50",
+      "response_text": "He's been the chief of our tribe since he came back to the Valley. He went off to the civilized world years ago, to fight a war. That didn't go well.",
+      "index": "41"
+    },
+    {
+      "topic": "NVDLC02DialogueFollowsChalkNVDLC02FollowsChalkTopic005",
+      "topic_text": "Who were those tribals who attacked me?",
+      "emotion": "Anger 50",
+      "response_text": "White Legs - nasty bunch. They been raiding deeper into Zion ever since New Canaan was wiped out.",
+      "index": "42"
+    },
+    {
+      "topic": "NVDLC02DialogueFollowsChalkNVDLC02FollowsChalkTopic006",
+      "topic_text": "I'll do what I can, but I need to defend myself if I'm attacked.",
+      "emotion": "Sad 50",
+      "response_text": "Of course you do - I understand. You know, I heard stories about rangers from Back When - they carried lightning sticks that stunned the animals.",
+      "index": "43"
+    },
+    {
+      "topic": "NVDLC02DialogueFollowsChalkNVDLC02FollowsChalkTopic007",
+      "topic_text": "Who is this Joshua?",
+      "emotion": "Happy 20",
+      "response_text": "Joshua Graham - he leads our tribe. Thanks to him, the Dead Horses are strong, and safe from our enemies.",
+      "index": "46"
+    },
+    {
+      "topic": "NVDLC02DialogueFollowsChalkNVDLC02FollowsChalkTopic008",
+      "topic_text": "Civilized lands? What do you mean?",
+      "emotion": "Surprise 100",
+      "response_text": "I mean the Lands Beyond the Valley - the place where the cities never fell. Where people don't live in tribes and forage just to survive.",
+      "index": "48"
+    },
+    {
+      "topic": "NVDLC02DialogueFollowsChalkNVDLC02FollowsChalkTopic009",
+      "topic_text": "I don't have time for this. Go away.",
+      "emotion": "Sad 100",
+      "response_text": "{Fine}Lah, I meant no offense - if you won't talk to me, talk to Joshua Graham - he's at our camp on the Eastern Virgin.",
+      "index": "51"
+    },
+    {
+      "topic": "NVDLC02DialogueFollowsChalkNVDLC02FollowsChalkTopic010",
+      "topic_text": "What are all those tattoos?",
+      "emotion": "Happy 50",
+      "response_text": "Dead Horses mark ourselves to commemorate our hunts. When a hunter takes a great beast, or when a youth goes on his first hunt, he gets a tattoo.",
+      "index": "52"
+    },
+    {
+      "topic": "NVDLC02DialogueFollowsChalkNVDLC02FollowsChalkTopic011",
+      "topic_text": "Tell me about your tribe.",
+      "emotion": "Surprise 50",
+      "response_text": "We came up in the Land of the Dead Horse, though why the Back When folks called it that I got no hint.",
+      "index": "53"
+    },
+    {
+      "topic": "NVDLC02DialogueFollowsChalkNVDLC02FollowsChalkTopic012",
+      "topic_text": "What did Joshua do for you?",
+      "emotion": "Pained 50",
+      "response_text": "If it wasn't for Joshua, the Dead Horses would still be the whipping boys of the Zion Valley.",
+      "index": "55"
+    },
+    {
+      "topic": "NVDLC02DialogueFollowsChalkNVDLC02FollowsChalkTopic013",
+      "topic_text": "Do you remember anything about Joshua from before he became your leader?",
+      "emotion": "Fear 50",
+      "response_text": "Only a little - I was very young. He was... different. Prouder, yes, but harder, crueler, more driven. Really, I was terrified of him. We all were.",
+      "index": "57"
+    },
+    {
+      "topic": "NVDLC02DialogueFollowsChalkNVDLC02FollowsChalkTopic014",
+      "topic_text": "Tell me a little about this area - any interesting wildlife?",
+      "emotion": "Surprise 50",
+      "response_text": "Mostly it's the mountain Bighorners - whole herd of them up on the cliffs there. Usually they're not too aggressive, but lately... hoo!",
+      "index": "59"
+    },
+    {
+      "topic": "NVDLC02DialogueFollowsChalkNVDLC02FollowsChalkTopic015",
+      "topic_text": "What do you know about the New Canaanites?",
+      "emotion": "Neutral 50",
+      "response_text": "Little bit. I met some of their missionaries a few times, but I've never been to their city. Joshua could tell you more - or Daniel, I imagine.",
+      "index": "67"
+    },
+    {
+      "topic": "NVDLC02DialogueFollowsChalkNVDLC02FollowsChalkTopic016",
+      "topic_text": "What's with the shell casings in your club?",
+      "emotion": "Happy 50",
+      "response_text": "We decorate our clubs with them to honor Joshua Graham. They were the weapons of his old tribe, so now they are ours.",
+      "index": "68"
+    },
+    {
+      "topic": "NVDLC02DialogueFollowsChalkNVDLC02FollowsChalkTopic017",
+      "topic_text": "Maybe I can help with that.",
+      "emotion": "Surprise 50",
+      "response_text": "Yeah? Hey, thanks - most of the hunters don't listen when I tell them the problem.",
+      "index": "70"
+    },
+    {
+      "topic": "NVDLC02DialogueFollowsChalkNVDLC02FollowsChalkTopic018",
+      "topic_text": "All right, I'll look into it.",
+      "emotion": "Neutral 50",
+      "response_text": "That's great! I'll help any way I can.",
+      "index": "72"
+    },
+    {
+      "topic": "NVDLC02DialogueFollowsChalkNVDLC02FollowsChalkTopic019",
+      "topic_text": "That sounds like way too much work. Maybe later.",
+      "emotion": "Neutral 50",
+      "response_text": "Oh sure, that's just what the hunters said. Well... I guess let me know if you change your mind.",
+      "index": "73"
+    },
+    {
+      "topic": "NVDLC02DialogueFollowsChalkNVDLC02FollowsChalkTopic020",
+      "topic_text": "Well, I returned the calf to its mother, and didn't even kill any of the Bighorners.",
+      "emotion": "Happy 100",
+      "response_text": "Hoo! Glad to hear it! That'll be some happy mama, huh? Thank you - really. It means a lot to me.",
+      "index": "74"
+    },
+    {
+      "topic": "NVDLC02DialogueFollowsChalkNVDLC02FollowsChalkTopic021",
+      "topic_text": "Well, I returned the calf to its herd. Had to kill a few Bighorners to do it, though.",
+      "emotion": "Happy 50",
+      "response_text": "Sure, hey, I understand. I wish it could have been done different, but at least the calf is back with its herd.",
+      "index": "75"
+    },
+    {
+      "topic": "NVDLC02DialogueFollowsChalkNVDLC02FollowsChalkTopic022",
+      "topic_text": "Well, all of the Bighorners are dead. Problem solved!",
+      "emotion": "Sad 100",
+      "response_text": "That's... not really what I was hoping for. I guess... I guess at least we don't have to worry about the Bighorners attacking the camp now. Hoy....",
+      "index": "76"
+    },
+    {
+      "topic": "NVDLC02DialogueFollowsChalkNVDLC02FollowsChalkTopic023",
+      "topic_text": "Why is it so important that we fight the White Legs?",
+      "emotion": "Surprise 50",
+      "response_text": "{Bewildered - doesn't really understand how this is a question, like \"Why is it important to breathe?\"}Well... because they're our enemies. What else would we do? They take our land, they kill our scouts, they poach our hunting grounds.",
+      "index": "77"
+    },
+    {
+      "topic": "NVDLC02DialogueFollowsChalkNVDLC02FollowsChalkTopic024",
+      "topic_text": "Wait, what about Caesar?",
+      "emotion": "Surprise 50",
+      "response_text": "When Joshua first came to us, he was servant to a man he called Caesar. He led his master's armies, and we were ready to follow him into war.",
+      "index": "78"
+    },
+    {
+      "topic": "NVDLC02DialogueFollowsChalkNVDLC02FollowsChalkTopic025",
+      "topic_text": "All right, let's go.",
+      "emotion": "Happy 100",
+      "response_text": "{Glad to hear it}Goot sists. We head east, then. Joshua is at our tribe's camp in the Eastern Virgin.",
+      "index": "81"
+    },
+    {
+      "topic": "NVDLC02DialogueFollowsChalkNVDLC02FollowsChalkTopic026",
+      "topic_text": "What happened to him?",
+      "emotion": "Pained 50",
+      "response_text": "Well, before he left, he didn't have those bandages all over his face. That tell you something?",
+      "index": "82"
+    },
+    {
+      "topic": "NVDLC02DialogueFollowsChalkNVDLC02FollowsChalkTopic027",
+      "topic_text": "The only recent war I know of is when Caesar's Legion attacked Hoover Dam. Is that where he fought?",
+      "emotion": "Surprise 50",
+      "response_text": "I don't know, he doesn't talk about it much. Maybe - but how can two civilized tribes fight over something as small as a dam?",
+      "index": "84"
+    },
+    {
+      "topic": "NVDLC02DialogueFollowsChalkNVDLC02FollowsChalkTopic028",
+      "topic_text": "Small? Have you ever seen Hoover Dam? It's bigger than some of these mountains.",
+      "emotion": "Surprise 100",
+      "response_text": "Hah!{Suddenly realizing the player isn't lying}...Really? That's... my gods. Must be some mighty civilized folks who built that.",
+      "index": "85"
+    },
+    {
+      "topic": "NVDLC02DialogueFollowsChalkNVDLC02FollowsChalkTopic029",
+      "topic_text": "You'd be surprised what \"civilized\" tribes will fight over.",
+      "emotion": "Disgust 50",
+      "response_text": "Now you sound like Joshua. He always tells me the tribal life is better, that I should stay here and forget the outside world.",
+      "index": "86"
+    },
+    {
+      "topic": "NVDLC02DialogueFollowsChalkNVDLC02FollowsChalkTopic030",
+      "topic_text": "Are you sure? You've been a useful companion so far.",
+      "emotion": "Pained 21",
+      "response_text": "Sorry - Joshua was pretty clear. Get you to Daniel, then come on home. You can take it up with him if you'd like.",
+      "index": "87"
+    },
+    {
+      "topic": "NVDLC02DialogueFollowsChalkNVDLC02FollowsChalkTopic031",
+      "topic_text": "Give my regards to Joshua, then.",
+      "emotion": "Happy 50",
+      "response_text": "I will.{Goodbye my friend}Goot gonen, ahk iss.",
+      "index": "88"
+    },
+    {
+      "topic": "NVDLC02DialogueFollowsChalkNVDLC02FollowsChalkTopic032",
+      "topic_text": "Typical. Just when I get a useful minion....",
+      "emotion": "Disgust 50",
+      "response_text": "Hey, it's not my fault! And what's this \"minion\" stuff?{That's it}Dahs eet - see you around, \"civilized\" man.",
+      "index": "89"
+    },
+    {
+      "topic": "NVDLC02DialogueFollowsChalkNVDLC02FollowsChalkTopic033",
+      "topic_text": "What is this place?",
+      "emotion": "Happy 50",
+      "response_text": "This is the eastern fork of the Virgin River, and it's the place we Dead Horses call home. Joshua says it is a temple to God's glory on earth.",
+      "index": "91"
+    },
+    {
+      "topic": "NVDLC02DialogueFollowsChalkNVDLC02FollowsChalkTopic034",
+      "topic_text": "Who are you?",
+      "emotion": "Happy 50",
+      "response_text": "I'm called Follows-Chalk. Joshua sent me to scout for any outsiders coming up from the Southern Passage.",
+      "index": "93"
+    },
+    {
+      "topic": "NVDLC02DialogueFollowsChalkNVDLC02FollowsChalkTopic035",
+      "topic_text": "Hang on, I want to know more about what's going on.",
+      "emotion": "Fear 50",
+      "response_text": "Joshua will answer all your questions. He doesn't like being kept waiting, though - go talk to him as soon as you can.",
+      "index": "95"
+    },
+    {
+      "topic": "NVDLC02DialogueFollowsChalkNVDLC02FollowsChalkTopic036",
+      "topic_text": "Okay, I'll go talk to him.",
+      "emotion": "Happy 50",
+      "response_text": "I won't keep you. Maybe we talk again after.",
+      "index": "96"
+    },
+    {
+      "topic": "NVDLC02DialogueFollowsChalkNVDLC02FollowsChalkTopic037",
+      "topic_text": "I had no reason to stay for that fight.",
+      "emotion": "Neutral 50",
+      "response_text": "But...{confused, stating something that seems blindingly obvious}they were White Legs! The enemy! You are a very strange outsider, but I think Joshua will want to speak to you anyways.",
+      "index": "97"
+    },
+    {
+      "topic": "NVDLC02DialogueFollowsChalkNVDLC02FollowsChalkTopic038",
+      "topic_text": "White Legs? Who are they?",
+      "emotion": "Neutral 50",
+      "response_text": "Nasty bunch of raiders from up by Great Salt Lake. White Legs killed your friends at the Southern Passage.",
+      "index": "98"
+    },
+    {
+      "topic": "NVDLC02DialogueFollowsChalkNVDLC02FollowsChalkTopic039",
+      "topic_text": "Huh, I think I know that guy. Small world.",
+      "emotion": "Surprise 50",
+      "response_text": "Is it? I always heard it was rather large outside the valley. Well, wherever he is, I hope he's well.",
+      "index": "100"
+    },
+    {
+      "topic": "NVDLC02DialogueFollowsChalkNVDLC02FollowsChalkTopic040",
+      "topic_text": "Who is this Joshua?",
+      "emotion": "Neutral 50",
+      "response_text": "Joshua Graham - he leads our tribe. Thanks to him, the Dead Horses are strong, and safe from our enemies.",
+      "index": "101"
+    },
+    {
+      "topic": "NVDLC02DialogueFollowsChalkNVDLC02FollowsChalkTopic041",
+      "topic_text": "I could use a guide. Let's go.",
+      "emotion": "Neutral 50",
+      "response_text": "{Good}Goot! I really wasn't looking forward to talking to Joshua if you turned me down.",
+      "index": "103"
+    },
+    {
+      "topic": "NVDLC02DialogueFollowsChalkNVDLC02FollowsChalkTopic042",
+      "topic_text": "No way, pal. I'm not traipsing around the desert with a barbarian who doesn't wear pants.",
+      "emotion": "Pained 50",
+      "response_text": "I don't think he'll like that answer much. You change your mind, I'll be around the Dead Horses camp.{Goodbye}Goot gonen.",
+      "index": "106"
+    },
+    {
+      "topic": "NVDLC02DialogueFollowsChalkNVDLC02FollowsChalkTopic043",
+      "topic_text": "What would you suggest I do instead?",
+      "emotion": "Pained 10",
+      "response_text": "Hmm... you might try luring the baby out with some banana yucca. These Bighorners go crazy for the stuff.",
+      "index": "107"
+    },
+    {
+      "topic": "NVDLC02DialogueFollowsChalkNVDLC02FollowsChalkTopic044",
+      "topic_text": "You've got a funny idea about what the Mojave's like, but I'll go with you and see your boss.",
+      "emotion": "Happy 100",
+      "response_text": "{Glad to hear it}Goot sists. Maybe while you're there you can tell me about where you came from, yeah?",
+      "index": "108"
+    },
+    {
+      "topic": "NVDLC02DialogueFollowsChalkNVDLC02FollowsChalkTopic045",
+      "topic_text": "Wait, what? New Canaan was wiped out? How?",
+      "emotion": "Sad 50",
+      "response_text": "That's what Joshua said. White Legs came down from Great Salt Lake in force - fell on New Canaan before they could mount a defense.",
+      "index": "109"
+    },
+    {
+      "topic": "NVDLC02DialogueFollowsChalkNVDLC02FollowsChalkTopic046",
+      "topic_text": "Where do they come from?",
+      "emotion": "Fear 50",
+      "response_text": "That's the weird part - normally the White Legs keep to the Great Salt Lake. I don't know what brought them down this far south.",
+      "index": "112"
+    },
+    {
+      "topic": "NVDLC02DialogueFollowsChalkNVDLC02FollowsChalkTopic048",
+      "topic_text": "What does Joshua think of this?",
+      "emotion": "Pained 25",
+      "response_text": "I, umm, I haven't told him yet. Never had the{guts}growans.",
+      "index": "113"
+    },
+    {
+      "topic": "NVDLC02DialogueFollowsChalkNVDLC02FollowsChalkTopic049",
+      "topic_text": "Really? Maybe I could talk to him about it for you. Be a neutral party.",
+      "emotion": "Neutral 50",
+      "response_text": "You'd do that? Sure, sounds smart to me. He might not get so mad at you.",
+      "index": "114"
+    },
+    {
+      "topic": "NVDLC02DialogueFollowsChalkNVDLC02FollowsChalkTopic050",
+      "topic_text": "What's with this obsession you seem to have with \"civilization?\"",
+      "emotion": "Happy 50",
+      "response_text": "Let me tell you a story. When I was a boy, a man came through the valley with one of the caravans. Tall man, big mustache, carried a guitar.",
+      "index": "115"
+    },
+    {
+      "topic": "NVDLC02DialogueFollowsChalkNVDLC02FollowsChalkTopic051",
+      "topic_text": "I had to kill the Bighorners, but I saved the little one.",
+      "emotion": "Sad 50",
+      "response_text": "That's... not really what I was hoping for, but... I guess I can give the little guy a home. What the hell.",
+      "index": "120"
+    },
+    {
+      "topic": "NVDLC02DialogueFollowsChalkNVDLC02FollowsChalkTopic052",
+      "topic_text": "He said he has a hard time being objective about the whole idea, and that I should give you advice.",
+      "emotion": "Surprise 50",
+      "response_text": "He said that? Well, I guess you have been out there more recently than he has. So... what's your advice?",
+      "index": "121"
+    },
+    {
+      "topic": "NVDLC02DialogueFollowsChalkNVDLC02FollowsChalkTopic053",
+      "topic_text": "<Lie> That it's a den of corruption and vice, and the Dead Horses' way of living is better.",
+      "emotion": "Sad 50",
+      "response_text": "Oh. Well, I guess that's about what I could expect from him. I'd like a minute alone to think about this.{Thanks}Dank ni.",
+      "index": "122"
+    },
+    {
+      "topic": "NVDLC02DialogueFollowsChalkNVDLC02FollowsChalkTopic054",
+      "topic_text": "<Lie> That a man must follow his heart no matter where it leads him.",
+      "emotion": "Happy 100",
+      "response_text": "Really? He said that? Hoo! I'm going to do it. After all this is over, I'm going to go explore civilization!",
+      "index": "123"
+    },
+    {
+      "topic": "NVDLC02DialogueFollowsChalkNVDLC02FollowsChalkTopic055",
+      "topic_text": "I know that guy! I got him a job!",
+      "emotion": "Happy 100",
+      "response_text": "A job as a singer?{Full of wonder; just got told Santa Claus is real}Then it really is true....",
+      "index": "125"
+    },
+    {
+      "topic": "NVDLC02DialogueFollowsChalkNVDLC02FollowsChalkTopic056",
+      "topic_text": "Any idea where to start looking for these pre-War supplies Daniel needs?",
+      "emotion": "Neutral 50",
+      "response_text": "Best place to look for Back When stuff is the taboo places. Sorrows and Dead Horses don't go in there, and even White Legs don't like them much.",
+      "index": "126"
+    },
+    {
+      "topic": "NVDLC02DialogueFollowsChalkNVDLC02FollowsChalkTopic057",
+      "topic_text": "What taboo places?",
+      "emotion": "Surprise 25",
+      "response_text": "Lots of them around the valley - places built by the folk from Back When. You'll know them when you see them - scouts mark them with hand prints.",
+      "index": "127"
+    },
+    {
+      "topic": "NVDLC02DialogueFollowsChalkNVDLC02FollowsChalkTopic058",
+      "topic_text": "Where should we start looking?",
+      "emotion": "Neutral 50",
+      "response_text": "Lots of Back When places to choose from, but for the things we need, best to start with the really closed up places.",
+      "index": "129"
+    },
+    {
+      "topic": "NVDLC02DialogueFollowsChalkNVDLC02FollowsChalkTopic059",
+      "topic_text": "You should stay here with your people. You have a duty to them.",
+      "emotion": "Sad 50",
+      "response_text": "I see. Well, thanks for your telling. I'd like a minute alone to think about this.{Thanks}Dank ni.",
+      "index": "132"
+    },
+    {
+      "topic": "NVDLC02DialogueFollowsChalkNVDLC02FollowsChalkTopic061",
+      "topic_text": "Civilization isn't perfect, but neither is tribal life. You should go see it for yourself.",
+      "emotion": "Happy 100",
+      "response_text": "Really? You think so? Hoo! I'm going to do it. After all this is over, I'm going to go explore civilization!",
+      "index": "133"
+    },
+    {
+      "topic": "NVDLC02DialogueFollowsChalkNVDLC02FollowsChalkTopic062",
+      "topic_text": "What's this \"place where the little ones fell?\"",
+      "emotion": "Sad 75",
+      "response_text": "In the river, there's a twisted pile of metal and glass, all full of bones. Joshua says they were scouts, but they looked awful small to me.",
+      "index": "135"
+    },
+    {
+      "topic": "NVDLC02DialogueFollowsChalkNVDLC02FollowsChalkTopic063",
+      "topic_text": "White Legs? Those are the people who attacked us?",
+      "emotion": "Anger 100",
+      "response_text": "Yah, and they're still back there! Let's go get them!",
+      "index": "137"
+    },
+    {
+      "topic": "NVDLC02DialogueFollowsChalkNVDLC02FollowsChalkTopic064",
+      "topic_text": "If you're willing, I'll take the help.",
+      "emotion": "Happy 100",
+      "response_text": "{Glad to hear it}Goot sists. Let's show them what we're made of!",
+      "index": "138"
+    },
+    {
+      "topic": "NVDLC02DialogueFollowsChalkNVDLC02FollowsChalkTopic065",
+      "topic_text": "Forget it, I'm out of here.",
+      "emotion": "Surprise 100",
+      "response_text": "You're not going to fight? But... okay. You better come with me, then. Joshua will want to see you.",
+      "index": "139"
+    },
+    {
+      "topic": "NVDLC02EndingDeadHorses",
+      "topic_text": "NVDLC02EndingDeadHorses",
+      "emotion": "Neutral 50",
+      "response_text": "{Narration - Joshua Dead}Having revered Joshua Graham as a living legend for so many years, the Dead Horses found it difficult to accept his death.",
+      "index": "140"
+    },
+    {
+      "topic": "NVDLC02EndingFollowsChalk",
+      "topic_text": "NVDLC02EndingFollowsChalk",
+      "emotion": "Neutral 50",
+      "response_text": "{Narration - Civilization's bad}Follows-Chalk took the Courier's words to heart and decided that the big cities of the Mojave Wasteland and NCR were best left unexplored.",
+      "index": "150"
+    },
+    {
+      "topic": "NVDLC02FollowersTacticsGOODBYE",
+      "topic_text": "That's all. Let's get going.",
+      "emotion": "Neutral 50",
+      "response_text": "Lead on, I'll follow.",
+      "index": "156"
+    },
+    {
+      "topic": "NVDLC02FollowsChalkAerieBark",
+      "topic_text": "< Follows-Chalk Aerie Bark >",
+      "emotion": "Neutral 50",
+      "response_text": "See that tower? Back When, folks used them to talk to each other on the air. Not like with signal drums, they could actually talk! Amazing, huh?",
+      "index": "157"
+    },
+    {
+      "topic": "NVDLC02FollowsChalkAntBurrowBark",
+      "topic_text": "< Follows-Chalk Ant Burrow Bark >",
+      "emotion": "Neutral 50",
+      "response_text": "Look sharp, lots of giant ants around here. We call 'em picnic-killers. Don't really know what that means. Something from Back When, I guess.",
+      "index": "158"
+    },
+    {
+      "topic": "NVDLC02FollowsChalkBusBark",
+      "topic_text": "< Follows-Chalk Bus Bark >",
+      "emotion": "Neutral 50",
+      "response_text": "See this? This is why your own two feet are better than any cart, whether it's pulled by critters or goes on its own.",
+      "index": "159"
+    },
+    {
+      "topic": "NVDLC02FollowsChalkCampgroundBark",
+      "topic_text": "< Follows-Chalk Campground Bark >",
+      "emotion": "Neutral 50",
+      "response_text": "Must have been nice, when Zion was friendly enough folks could make camp wherever they pleased and not worry about White Legs and deadly critters.",
+      "index": "160"
+    },
+    {
+      "topic": "NVDLC02FollowsChalkGenericBarks",
+      "topic_text": "< Follows-Chalk Generic Barks >",
+      "emotion": "Neutral 50",
+      "response_text": "Feels good to be doing some actual scouting, not just following.",
+      "index": "161"
+    },
+    {
+      "topic": "NVDLC02FollowsChalkGuideBark1",
+      "topic_text": "<Follows-Chalk Guide Bark 1 >",
+      "emotion": "Neutral 50",
+      "response_text": "We follow this path for a while. Nice view of the river, neh?",
+      "index": "172"
+    },
+    {
+      "topic": "NVDLC02FollowsChalkGuideBark2",
+      "topic_text": "<Follows-Chalk Guide Bark 2 >",
+      "emotion": "Neutral 50",
+      "response_text": "You can take the path north here if you want, or head east over the ridge. There's a nice view from the top of that cliff, if you want a look.",
+      "index": "173"
+    },
+    {
+      "topic": "NVDLC02FollowsChalkGuideBark3",
+      "topic_text": "<Follows-Chalk Guide Bark 3 >",
+      "emotion": "Neutral 50",
+      "response_text": "Keep headed north, around this rock pile.",
+      "index": "174"
+    },
+    {
+      "topic": "NVDLC02FollowsChalkGuideBark4",
+      "topic_text": "<Follows-Chalk Guide Bark 4 >",
+      "emotion": "Neutral 50",
+      "response_text": "Follow the old road south, nearly there.",
+      "index": "175"
+    },
+    {
+      "topic": "NVDLC02FollowsChalkGuideBark5",
+      "topic_text": "<Follows-Chalk Guide Bark 5 >",
+      "emotion": "Neutral 50",
+      "response_text": "You see the dead sentries? Shamans say our enemies' souls are trapped in them, but Joshua says it shows we're serious about fighting White Legs.",
+      "index": "176"
+    },
+    {
+      "topic": "NVDLC02FollowsChalkGuideBark6",
+      "topic_text": "<Follows-Chalk Guide Bark 6 >",
+      "emotion": "Neutral 50",
+      "response_text": "Down this path to the north. Hope you don't mind getting wet.",
+      "index": "177"
+    },
+    {
+      "topic": "NVDLC02FollowsChalkGuideBark7",
+      "topic_text": "< Follows-Chalk Guide Bark 7 >",
+      "emotion": "Neutral 50",
+      "response_text": "Nearly there now. Watch out for traps in the water. Got to keep the White Legs out somehow, neh?",
+      "index": "178"
+    },
+    {
+      "topic": "NVDLC02FollowsChalkGuideBark8",
+      "topic_text": "< Follows-Chalk Guide Bark 8 >",
+      "emotion": "Neutral 50",
+      "response_text": "Here we are. Joshua's just ahead there, in the Angel Cave.",
+      "index": "179"
+    },
+    {
+      "topic": "NVDLC02FollowsChalkGuideBarkWrongWay",
+      "topic_text": "<Follows-Chalk Guide Wrong Way Barks >",
+      "emotion": "Neutral 50",
+      "response_text": "Hang on, you're going the wrong way!",
+      "index": "180"
+    },
+    {
+      "topic": "NVDLC02FollowsChalkMarysBark",
+      "topic_text": "< Follows-Chalk Three Marys Bark >",
+      "emotion": "Neutral 50",
+      "response_text": "Heads up, this is the Three Marys. White Legs territory. You sure you want to head in there?",
+      "index": "185"
+    },
+    {
+      "topic": "NVDLC02FollowsChalkMuralBark",
+      "topic_text": "< Follows-Chalk Mural Bark >",
+      "emotion": "Neutral 50",
+      "response_text": "These paintings show the Dead Horses' victories against other tribes. Lots more of them since Joshua came to us.",
+      "index": "186"
+    },
+    {
+      "topic": "NVDLC02FollowsChalkNarrowsBark",
+      "topic_text": "< Follows Chalk Narrows Bark >",
+      "emotion": "Neutral 50",
+      "response_text": "The Narrows up ahead, that's the Sorrows' territory. They're peaceful enough, but you don't want to make them mad.",
+      "index": "187"
+    },
+    {
+      "topic": "NVDLC02FollowsChalkOverlookBark",
+      "topic_text": "< Follows-Chalk Overlook Bark >",
+      "emotion": "Neutral 50",
+      "response_text": "Scenic Overlook. What do you suppose that means?",
+      "index": "188"
+    },
+    {
+      "topic": "NVDLC02FollowsChalkPerkBark",
+      "topic_text": "< Follows-Chalk Perk Bark >",
+      "emotion": "Neutral 50",
+      "response_text": "Some kind of view up here, neh? If you know how to look, you can spot all kinds of landmarks from up here. Look, I'll show you.",
+      "index": "189"
+    },
+    {
+      "topic": "NVDLC02FollowsChalkPineCreekBark",
+      "topic_text": "< Follows-Chalk Pine Creek Bark >",
+      "emotion": "Neutral 50",
+      "response_text": "That's Pine Creek up there. Supposedly it's one of only two ways out of Zion Valley. Of course, without a map, good luck surviving.",
+      "index": "190"
+    },
+    {
+      "topic": "NVDLC02FollowsChalkPlaneBark",
+      "topic_text": "< Follows-Chalk Plane Bark >",
+      "emotion": "Neutral 50",
+      "response_text": "That thing actually flew once, like a big metal bird?{Wistful}Bet you don't have to follow chalk marks up there....",
+      "index": "191"
+    },
+    {
+      "topic": "NVDLC02FollowsChalkPostAmbushForceGreet",
+      "topic_text": "< Follows-Chalk post-ambush greeting >",
+      "emotion": "Neutral 50",
+      "response_text": "Hoo! That's for the White Legs! Sorry we weren't fast enough to save your friends, though. The Dead Horses will remember them in our prayers.",
+      "index": "192"
+    },
+    {
+      "topic": "NVDLC02FollowsChalkTabooBark",
+      "topic_text": "< Follows-Chalk Taboo Area Bark >",
+      "emotion": "Neutral 50",
+      "response_text": "For as long as I remember, the Dead Horses have thought that places of the old world were taboo. Doesn't look so spooky to me.",
+      "index": "194"
+    },
+    {
+      "topic": "NVDLC02FollowsChalkTabooMarksBark",
+      "topic_text": "< Follows-Chalk Taboo Marks Bark >",
+      "emotion": "Neutral 50",
+      "response_text": "See those handprints? Dead Horses and Sorrows mark them on taboo places, places from Back When. Good thing for you I don't buy into that stuff.",
+      "index": "195"
+    },
+    {
+      "topic": "NVDLC02FollowsChalkTreeTrunk",
+      "topic_text": "< Follows-Chalk bark about tree trunk containers >",
+      "emotion": "Neutral 50",
+      "response_text": "Hold up, see that log over there? Take a closer look. There might be some good stuff tucked in there.",
+      "index": "196"
+    },
+    {
+      "topic": "NVDLC02FollowsChalkVault22Bark",
+      "topic_text": "< Follows-Chalk Vault 22 Bark >",
+      "emotion": "Neutral 50",
+      "response_text": "You ever seen anything like these green men? Sure as anything they aren't from around here.",
+      "index": "197"
+    },
+    {
+      "topic": "NVDLC02FollowsChalkVirginBark",
+      "topic_text": "< Follows Chalk Eastern Virgin Bark >",
+      "emotion": "Neutral 50",
+      "response_text": "Ah, the Eastern Virgin. What's the phrase? \"House sweet house?\"",
+      "index": "198"
+    },
+    {
+      "topic": "NVDLC02FollowsChalkVirginGreeting",
+      "topic_text": "< Follows Chalk greets the player at the Eastern Virgin. >",
+      "emotion": "Happy 50",
+      "response_text": "Glad you made it. Joshua's just to the south, inside the Angel Cave. You'll want to talk to him straight away.",
+      "index": "199"
+    },
+    {
+      "topic": "NVDLC02FollowsChalkYaoGuaiBark",
+      "topic_text": "< Follows-Chalk Yao Guai Bark >",
+      "emotion": "Neutral 50",
+      "response_text": "{Hushed, tense, big scary monster ahead!}Freeze! Don't move a muscle. Yao Guai.",
+      "index": "200"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "ArmorIneffective",
+      "topic_text": "ArmorIneffective",
+      "emotion": "Neutral 50",
+      "response_text": "They're cutting through me like paper!",
+      "index": "202"
+    },
+    {
+      "topic": "Attack",
+      "topic_text": "Attack",
+      "emotion": "Neutral 50",
+      "response_text": "Gotcha!",
+      "index": "204"
+    },
+    {
+      "topic": "AvoidThreat",
+      "topic_text": "AvoidThreat",
+      "emotion": "Neutral 50",
+      "response_text": "Eyes!",
+      "index": "206"
+    },
+    {
+      "topic": "Crippled",
+      "topic_text": "Crippled",
+      "emotion": "Neutral 50",
+      "response_text": "{Limb crippled, in pain}Ahh! I'm going to need a healer!",
+      "index": "208"
+    },
+    {
+      "topic": "Death",
+      "topic_text": "Death",
+      "emotion": "Neutral 50",
+      "response_text": "{Death sound 1}",
+      "index": "210"
+    },
+    {
+      "topic": "DeathResponse",
+      "topic_text": "DeathResponse",
+      "emotion": "Neutral 50",
+      "response_text": "Joshua isn't going to like this....",
+      "index": "213"
+    },
+    {
+      "topic": "FireExplosive",
+      "topic_text": "FireExplosive",
+      "emotion": "Neutral 50",
+      "response_text": "Bombs away!",
+      "index": "215"
+    },
+    {
+      "topic": "Flee",
+      "topic_text": "Flee",
+      "emotion": "Neutral 50",
+      "response_text": "Time to get lost!",
+      "index": "217"
+    },
+    {
+      "topic": "HealthHalf",
+      "topic_text": "HealthHalf",
+      "emotion": "Neutral 50",
+      "response_text": "{Half health, in pain}I could use some help here!",
+      "index": "219"
+    },
+    {
+      "topic": "HealthQuarter",
+      "topic_text": "HealthQuarter",
+      "emotion": "Neutral 50",
+      "response_text": "{Quarter health, near death}If I don't make it... tell Joshua... I tried.",
+      "index": "222"
+    },
+    {
+      "topic": "Hit",
+      "topic_text": "Hit",
+      "emotion": "Neutral 50",
+      "response_text": "{Got hit sound 1}",
+      "index": "225"
+    },
+    {
+      "topic": "Murder",
+      "topic_text": "Murder",
+      "emotion": "Neutral 50",
+      "response_text": "Whoa! Was that necessary?",
+      "index": "228"
+    },
+    {
+      "topic": "MurderNoCrime",
+      "topic_text": "MurderNoCrime",
+      "emotion": "Neutral 50",
+      "response_text": "Remind me not to get you mad at me.",
+      "index": "230"
+    },
+    {
+      "topic": "NoAmmo",
+      "topic_text": "NoAmmo",
+      "emotion": "Neutral 50",
+      "response_text": "No more bullets!",
+      "index": "232"
+    },
+    {
+      "topic": "OnFire",
+      "topic_text": "OnFire",
+      "emotion": "Neutral 50",
+      "response_text": "{On fire}",
+      "index": "234"
+    },
+    {
+      "topic": "Poisoned",
+      "topic_text": "Poison",
+      "emotion": "Neutral 50",
+      "response_text": "{Poisoned, woozy}Feeling the poison here!",
+      "index": "236"
+    },
+    {
+      "topic": "PowerAttack",
+      "topic_text": "PowerAttack",
+      "emotion": "Neutral 50",
+      "response_text": "{Power attack sound 1}",
+      "index": "238"
+    },
+    {
+      "topic": "Regenerating",
+      "topic_text": "Regenerating",
+      "emotion": "Neutral 50",
+      "response_text": "{Rush of health}Good as new!",
+      "index": "241"
+    },
+    {
+      "topic": "Steal",
+      "topic_text": "Steal",
+      "emotion": "Neutral 50",
+      "response_text": "{Awkward, the player just stole from him}Um... you know I'll share if you ask, right?",
+      "index": "243"
+    },
+    {
+      "topic": "UsedDoctorBag",
+      "topic_text": "UsedDoctorBag",
+      "emotion": "Neutral 50",
+      "response_text": "{Healing a crippled limb}There... hopefully it won't fall off now.",
+      "index": "245"
+    },
+    {
+      "topic": "Wake",
+      "topic_text": "Wake",
+      "emotion": "Neutral 50",
+      "response_text": "{Waking up from being knocked out}Oh, look, I'm not dead.",
+      "index": "247"
+    },
+    {
+      "topic": "WeaponIneffective",
+      "topic_text": "WeaponIneffective",
+      "emotion": "Neutral 50",
+      "response_text": "Might as well tickle them with a feather!",
+      "index": "249"
+    }
+  ],
+  "combat": [
+    {
+      "topic": "AlertIdle",
+      "topic_text": "AlertIdle",
+      "emotion": "Neutral 50",
+      "response_text": "{Looking for someone}Hmm....",
+      "index": "251"
+    },
+    {
+      "topic": "AlertToCombat",
+      "topic_text": "AlertToCombat",
+      "emotion": "Neutral 50",
+      "response_text": "Got 'em!",
+      "index": "253"
+    },
+    {
+      "topic": "AlertToNormal",
+      "topic_text": "AlertToNormal",
+      "emotion": "Neutral 50",
+      "response_text": "Guess I'm just jumpy.",
+      "index": "255"
+    },
+    {
+      "topic": "CombatToLost",
+      "topic_text": "CombatToLost",
+      "emotion": "Neutral 50",
+      "response_text": "Hey! Where'd they go?",
+      "index": "257"
+    },
+    {
+      "topic": "CombatToNormal",
+      "topic_text": "CombatToNormal",
+      "emotion": "Neutral 50",
+      "response_text": "Well, that's that then.",
+      "index": "259"
+    },
+    {
+      "topic": "LostIdle",
+      "topic_text": "LostIdle",
+      "emotion": "Neutral 50",
+      "response_text": "Still looking, but I got nothing.",
+      "index": "261"
+    },
+    {
+      "topic": "LostToCombat",
+      "topic_text": "LostToCombat",
+      "emotion": "Neutral 50",
+      "response_text": "Gotcha!",
+      "index": "263"
+    },
+    {
+      "topic": "LostToNormal",
+      "topic_text": "LostToNormal",
+      "emotion": "Neutral 50",
+      "response_text": "They must've run off. Scared of us, huh?",
+      "index": "265"
+    },
+    {
+      "topic": "NormalToAlert",
+      "topic_text": "NormalToAlert",
+      "emotion": "Neutral 50",
+      "response_text": "Eyes wide.",
+      "index": "267"
+    },
+    {
+      "topic": "NormalToCombat",
+      "topic_text": "StartCombat",
+      "emotion": "Neutral 50",
+      "response_text": "Whoa! Here we go!",
+      "index": "269"
+    },
+    {
+      "topic": "StartCombatResponse",
+      "topic_text": "StartCombatResponse",
+      "emotion": "Neutral 50",
+      "response_text": "Let's take them!",
+      "index": "271"
+    }
+  ]
+}

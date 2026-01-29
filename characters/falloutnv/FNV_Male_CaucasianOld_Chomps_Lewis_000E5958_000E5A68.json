@@ -1,0 +1,229 @@
+{
+  "name": "Chomps Lewis",
+  "url": "/wiki/Chomps_Lewis",
+  "dialogue_name": "QJChompsLewis.txt",
+  "dialogue_url": "/wiki/QJChompsLewis.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000E5958",
+  "ref_id": "000E5A68",
+  "editor_id": "QJChompsLewis",
+  "location": "Sloan",
+  "location_url": "/wiki/Sloan",
+  "descriptions": [
+    "Chomps Lewis is the foreman of the Quarry Junction mining operation for the New California Republic in the Mojave Wasteland, recently forced out by an infestation of deathclaws and sheltering in the nearby worker town of Sloan in 2281. He appears in Fallout: New Vegas.",
+    "Around the turn of the 2280s, Chomps was employed by the New California Republic as the head foreman of the limestone quarry at Quarry Junction; the material mined there was subsequently sent to a concrete mixing yard near Boulder City with the finished product ultimately going to constructing fortifications for NCR Army positions in their war against Caesar's Legion.",
+    "However, around late October 2281, the quarry workers found themselves in a difficult situation when members of the Powder Gangers, formed in the wake of the mass breakout at the NCR Correctional Facility to the south, attacked and in the process stole their entire supply of dynamite.",
+    "Due to the losses in manpower and work justifying pay due to the quarry's shutdown, Chomps has only been able to keep his men around by operating on the side as a middleman distributing drug shipments for the Great Khans;",
+    "Outside of his private affairs, Chomps also has a low opinion of the republic's current state in the 23rd century, particularly his employer's insistence on paying its workers in dollars instead of caps which he sees as unfair due to NCR currency's unpopularity out on the frontier but knows that it is a necessary evil to make a living."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "New California Republic(employer)Great Khans",
+  "role": "Quarry foremanDrug runner",
+  "detailed_location": "Sloan",
+  "voice_actor": "Jude Ciccolella",
+  "special": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 4,
+    "Intelligence": 3,
+    "Agility": 6,
+    "Luck": 4
+  },
+  "level": "5",
+  "tag_skills": [
+    {
+      "Explosives:": "43"
+    },
+    {
+      "Guns:": "45"
+    },
+    {
+      "Melee Weap.:": "45"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Neutral",
+  "voice_type": "MaleOld01",
+  "geck_race": "CaucasianOld",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "Hold up! There are Deathclaws all over the damn place north of here. I'd turn back if I were you.",
+      "index": "1"
+    },
+    {
+      "topic": "vFreeformSloanQJChompsLewisTopic000",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "If you insist on going north, don't be expecting a rescue when you get into trouble.",
+      "index": "5"
+    },
+    {
+      "topic": "vFreeformSloanQJChompsLewisTopic001",
+      "topic_text": "What can you tell me about New Vegas?",
+      "emotion": "Neutral 50",
+      "response_text": "I've been there once, and I don't recommend it. It's just a way to burn through a month's pay in five minutes.",
+      "index": "7"
+    },
+    {
+      "topic": "vFreeformSloanQJChompsLewisTopic002",
+      "topic_text": "Where'd the Deathclaws come from?",
+      "emotion": "Neutral 50",
+      "response_text": "They moved into the quarry after the Powder Gangers came through and made off with most of our dynamite.",
+      "index": "9"
+    },
+    {
+      "topic": "vFreeformSloanQJChompsLewisTopic003",
+      "topic_text": "Tell me about the Powder Gangers.",
+      "emotion": "Neutral 50",
+      "response_text": "They're a bunch of escaped cons from down south. The NCR was using them to maintain the railways as part of their sentence.",
+      "index": "12"
+    },
+    {
+      "topic": "vFreeformSloanQJChompsLewisTopic004",
+      "topic_text": "Have you had problems with Deathclaws before?",
+      "emotion": "Neutral 50",
+      "response_text": "We'd see them occasionally, but they didn't seem too keen on getting too close to the quarry. Not sure if it was the noise or all the workers.",
+      "index": "14"
+    },
+    {
+      "topic": "vFreeformSloanQJChompsLewisTopic005",
+      "topic_text": "I could take care of your Deathclaw problem.",
+      "emotion": "Neutral 50",
+      "response_text": "Have you even seen a Deathclaw? They're taller than a man and far, far stronger and faster. And, there's a whole pack of them out there.",
+      "index": "16"
+    },
+    {
+      "topic": "vFreeformSloanQJChompsLewisTopic006",
+      "topic_text": "Let's talk about something else.",
+      "emotion": "Neutral 50",
+      "response_text": "Okay.",
+      "index": "22"
+    },
+    {
+      "topic": "vFreeformSloanQJChompsLewisTopic007",
+      "topic_text": "What is this place?",
+      "emotion": "Neutral 50",
+      "response_text": "This is Sloan, a camp for us quarry workers. The actual quarry, Quarry Junction, is up the road north of here. The whole thing is an NCR operation.",
+      "index": "23"
+    },
+    {
+      "topic": "vFreeformSloanQJChompsLewisTopic008",
+      "topic_text": "What does the NCR need with the cement?",
+      "emotion": "Neutral 50",
+      "response_text": "It all gets shipped by rail over towards Boulder City and Hoover Dam. The NCR's probably building fortifications with it all.",
+      "index": "26"
+    },
+    {
+      "topic": "vFreeformSloanQJChompsLewisTopic009",
+      "topic_text": "What's a dragline?",
+      "emotion": "Neutral 50",
+      "response_text": "It's a big machine which moves rocks around, piles at a time. It's Pre-War tech, so you need to thump it once in awhile to keep it running.",
+      "index": "27"
+    },
+    {
+      "topic": "vFreeformSloanQJChompsLewisTopic010",
+      "topic_text": "You don't get paid in caps?",
+      "emotion": "Disgust 25",
+      "response_text": "Nope. The NCR's been trying to switch over to using paper money, like in the Pre-War days. Trouble is that the exchange rates ain't exactly fair.",
+      "index": "28"
+    },
+    {
+      "topic": "vFreeformSloanQJChompsLewisTopic011",
+      "topic_text": "I'm looking for a suitcase filled with chemical supplies for a... friend. Know anything?",
+      "emotion": "Neutral 50",
+      "response_text": "Ah, yes. I think I know which friend you mean. Even if there weren't Deathclaws in the quarry, there'd still be no delivery.",
+      "index": "30"
+    },
+    {
+      "topic": "vFreeformSloanQJChompsLewisTopic012",
+      "topic_text": "Let's talk about something else.",
+      "emotion": "Neutral 50",
+      "response_text": "Sure.",
+      "index": "32"
+    },
+    {
+      "topic": "vFreeformSloanQJChompsLewisTopic013",
+      "topic_text": "I noticed you have a tame molerat.",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah, he - or she, I guess - wandered into camp a couple of months back. Seemed friendly enough.",
+      "index": "33"
+    },
+    {
+      "topic": "vFreeformSloanQJChompsLewisTopic014",
+      "topic_text": "I repaired your generator.",
+      "emotion": "Neutral 50",
+      "response_text": "It's nice to see things going the way they're supposed to, for a change. I'm going to pay you out of my own pocket for this one.",
+      "index": "35"
+    },
+    {
+      "topic": "vFreeformSloanQJChompsLewisTopic015",
+      "topic_text": "I fixed Snuffles' leg.",
+      "emotion": "Neutral 50",
+      "response_text": "I'd noticed Snuffles limping, but I didn't realize the problem was that serious. Thanks - that beast helps keep spirits up around here.",
+      "index": "36"
+    },
+    {
+      "topic": "vFreeformSloanQJChompsLewisTopic016",
+      "topic_text": "I killed the Mother Deathclaw.",
+      "emotion": "Neutral 50",
+      "response_text": "You... you did? That's pretty amazing - I figured you'd need artillery to take her out.",
+      "index": "37"
+    },
+    {
+      "topic": "vFreeformSloanQJChompsLewisTopic017",
+      "topic_text": "I killed the Deathclaw Alpha Male.",
+      "emotion": "Neutral 50",
+      "response_text": "You... you did? That's pretty amazing - I figured you'd need artillery to take him out.",
+      "index": "39"
+    },
+    {
+      "topic": "vFreeformSloanQJChompsLewisTopic018",
+      "topic_text": "I killed the Deathclaw Mother and the Deathclaw Alpha Male.",
+      "emotion": "Neutral 50",
+      "response_text": "Coming from anyone else, I'd say they were drunk or crazy, but that look in your eyes - I believe you.",
+      "index": "41"
+    },
+    {
+      "topic": "vFreeformSloanQJChompsLewisTopic019",
+      "topic_text": "You don't care that you're helping the Great Khans?",
+      "emotion": "Neutral 50",
+      "response_text": "I'm just the middle man. The Great Khans are a hard group, and some of them are no good, but they're not all the same.",
+      "index": "43"
+    },
+    {
+      "topic": "vFreeformSloanQJChompsLewisTopic020",
+      "topic_text": "Has Tyrone cheated you before?",
+      "emotion": "Neutral 50",
+      "response_text": "He's always been shady, but this is the first time he's outright screwed me.",
+      "index": "45"
+    },
+    {
+      "topic": "vFreeformSloanQJChompsLewisTopic021",
+      "topic_text": "All right. I'll go pay a visit to Tyrone.",
+      "emotion": "Neutral 50",
+      "response_text": "Good luck.",
+      "index": "46"
+    },
+    {
+      "topic": "vFreeformSloanQJChompsLewisTopic022",
+      "topic_text": "How do you know Melissa?",
+      "emotion": "Neutral 50",
+      "response_text": "She's my daughter. Takes a little too much after her mother, rest her soul, but she's happy with the Great Khans, and that's enough for me.",
+      "index": "47"
+    }
+  ],
+  "conversation": [],
+  "combat": []
+}

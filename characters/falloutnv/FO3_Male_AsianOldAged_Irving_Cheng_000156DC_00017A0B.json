@@ -1,0 +1,265 @@
+{
+  "name": "Irving Cheng",
+  "url": "/wiki/Irving_Cheng",
+  "dialogue_name": "IrvingCheng.txt",
+  "dialogue_url": "/wiki/IrvingCheng.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000156DC",
+  "ref_id": "00017A0B",
+  "editor_id": "IrvingCheng",
+  "location": "Tenpenny Tower",
+  "location_url": "/wiki/Tenpenny_Tower",
+  "descriptions": [
+    "Irving Cheng is an inhabitant of Tenpenny Tower in 2277, who is married to Tiffany Cheng.",
+    "Irving, a wealthy elderly man with a secret identity, believes himself to be the direct descendant of Chairman Cheng, the leader of the People's Republic of China before the War. Prideful of his assumed lineage, he insists on addressing himself and all others as \"comrade,\" and is embarrassed by his own given name, as it fails to reflect his imagined heritage.",
+    "In his computer terminal, he writes that his father was one of the leading officers in the Chinese Army. He also writes about his \"plans\" for creating a communist society in Tenpenny Tower, which he terms the \"Tenpenny Commune.\" Cheng heavily implies he is prejudiced against ghouls, as with many of the other Tenpenny residents.",
+    "Comrade Cheng can be overheard speaking with Susan Lancaster, revealing why his wife despises him so much. Comrade Cheng is also having an affair with Susan Lancaster."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Tenpenny Tower",
+  "role": "ResidentCommunist",
+  "detailed_location": "Tenpenny Tower",
+  "voice_actor": "Paul Eiding",
+  "special": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 4,
+    "Intelligence": 4,
+    "Agility": 6,
+    "Luck": 4
+  },
+  "mod_special_values": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 4,
+    "Intelligence": 4,
+    "Agility": 7,
+    "Luck": 4
+  },
+  "level": "4",
+  "tag_skills": [
+    {
+      "Barter:": "41"
+    },
+    {
+      "Small Guns:": "45(47)"
+    },
+    {
+      "Unarmed:": "41"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Neutral",
+  "geck_race": "AsianOldAged",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Fear 100",
+      "response_text": "Aiiiyeeeeah! Get away from me!{in the middle of an attack against his town}",
+      "index": "1"
+    },
+    {
+      "topic": "MS12Basement",
+      "topic_text": "Do you know anything about the basement level, comrade?",
+      "emotion": "Happy 50",
+      "response_text": "Only that they keep generators down there... and some kind of emergency escape tunnels.{trying to be helpful}",
+      "index": "8"
+    },
+    {
+      "topic": "MS12FinResidents",
+      "topic_text": "What's it like living at Tenpenny Tower?",
+      "emotion": "Happy 100",
+      "response_text": "It's great. Now that we have a real comrade around here to handle things. I'm appointing a special Security Subcommittee and I want you to chair it!{(naively) self important but showing appreciation}",
+      "index": "10"
+    },
+    {
+      "topic": "MS12Greeting1",
+      "topic_text": "It's nice to meet someone with a sense of civic duty.",
+      "emotion": "Neutral 50",
+      "response_text": "Thanks, comrade. I'm sure you'll agree the people are only as strong as their leader. That's why I do my best to serve the community to the fullest.{naively self-important}",
+      "index": "12"
+    },
+    {
+      "topic": "MS12Greeting2",
+      "topic_text": "People don't need leaders, just good common sense.",
+      "emotion": "Sad 50",
+      "response_text": "Ah, but not everyone has common sense. Do they?{naively self-important}",
+      "index": "15"
+    },
+    {
+      "topic": "MS12Greeting3",
+      "topic_text": "What?",
+      "emotion": "Surprise 50",
+      "response_text": "Not very bright, are you? Don't worry, comrade. Even the least of us have some small though important role to play in the community.{naively self-important}",
+      "index": "18"
+    },
+    {
+      "topic": "MS12IntroToGhoul1",
+      "topic_text": "It will take more than a committee to deal with the problem. I think I can help.",
+      "emotion": "Happy 100",
+      "response_text": "That's wonderful, comrade! Truly wonderful! Before you go Ghoul hunting, talk to Gustavo. He might be able to help you.{happy to finally have a hero}",
+      "index": "20"
+    },
+    {
+      "topic": "MS12IntroToGhoul2",
+      "topic_text": "Committees won't help. You need to simply ignore them, or exterminate them.",
+      "emotion": "Sad 50",
+      "response_text": "Well, I'll try to not be bothered then... and perhaps you should speak to comrade Gustavo about getting rid of them altogether.{mildly dejected}",
+      "index": "21"
+    },
+    {
+      "topic": "MS12IntroToGhoul3",
+      "topic_text": "Don't worry about those Ghouls, comrade. You need to relax.",
+      "emotion": "Sad 50",
+      "response_text": "Perhaps you're right. My wife is always going on about how crazy I make her.{a little depressed and ashamed}",
+      "index": "22"
+    },
+    {
+      "topic": "MS12ResidentsBranch",
+      "topic_text": "What's it like living at Tenpenny Tower?",
+      "emotion": "Happy 50",
+      "response_text": "Well comrade, things are great. The best of the best have made a community here.{naively self important}",
+      "index": "23"
+    },
+    {
+      "topic": "MS12ResidentsGhoulsAbout these Ghouls...",
+      "topic_text": "What do you think of the whole situation with the Ghouls?",
+      "emotion": "Fear 100",
+      "response_text": "I'm sure it will end in bloodshed. It's serious business, comrade.{nervous}",
+      "index": "25"
+    },
+    {
+      "topic": "MS12ResidentsGhoulsChoice1MS12ResidentsGhoulsChoiceGood",
+      "topic_text": "I think I can help with your Ghoul problem...",
+      "emotion": "Happy 100",
+      "response_text": "Excellent. Speak with comrade Gustavo. He'll know what to do.{glad someone is taking charge}",
+      "index": "26"
+    },
+    {
+      "topic": "MS12ResidentsGhoulsChoice2MS12ResidentsGhoulsChoiceBad",
+      "topic_text": "Perhaps, comrade, the Ghouls will join your committee, comrade.",
+      "emotion": "Disgust 100",
+      "response_text": "Are you mocking me, comrade?{self important indignation}",
+      "index": "27"
+    },
+    {
+      "topic": "MS12ResidentsGhoulsChoice3MS12ResidentsGhoulsChoiceNeutral",
+      "topic_text": "Interesting.",
+      "emotion": "Disgust 5",
+      "response_text": "That's not the word I'd use for it, comrade.{bored by the conversation}",
+      "index": "28"
+    },
+    {
+      "topic": "MS12ResidentsNeighbors",
+      "topic_text": "How would you feel about having a few Ghoul neighbors?",
+      "emotion": "Surprise 75",
+      "response_text": "You've finally got around to asking me, comrade.{hesitant but sincere}",
+      "index": "29"
+    },
+    {
+      "topic": "MS12ResidentsNeighborsBad",
+      "topic_text": "It's wise to be afraid of Ghouls.",
+      "emotion": "Neutral 50",
+      "response_text": "Indeed, comrade. Indeed. I wonder though, if they might also need their own community?{snob losing prejudice}",
+      "index": "34"
+    },
+    {
+      "topic": "MS12ResidentsNeighborsGood",
+      "topic_text": "Comrade, I've met these ghouls. They seem friendly enough. More than this lot.",
+      "emotion": "Surprise 50",
+      "response_text": "Well, perhaps you're right, comrade. Some of these folk have a few things to learn about camaraderie, that's for sure.{letting go of prejudice}",
+      "index": "35"
+    },
+    {
+      "topic": "MS12ResidentsNeighborsGoodPetition",
+      "topic_text": "Would you tell Mister Tenpenny that you wouldn't mind Ghoul neighbors?",
+      "emotion": "Surprise 50",
+      "response_text": "Alright, comrade. We'll welcome them into the community.",
+      "index": "37"
+    },
+    {
+      "topic": "MS12ResidentsNeighborsNeutral",
+      "topic_text": "Whatever.",
+      "emotion": "Disgust 50",
+      "response_text": "I have something to do, comrade. If you'll excuse me...{trying to get out of the conversation}",
+      "index": "38"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "DialogueTenpennyConv00",
+      "topic_text": "DialogueTenpennyConv00",
+      "emotion": "Sad 50",
+      "response_text": "I wouldn't know. She's avoiding me lately.{sad}",
+      "index": "39"
+    },
+    {
+      "topic": "DialogueTenpennyConv01",
+      "topic_text": "DialogueTenpennyConv01",
+      "emotion": "Sad 50",
+      "response_text": "Oh, I don't know. Not so good I guess... Women. Can't live with them. Can't live without them. Know what I mean, Comrade?{dejected}",
+      "index": "45"
+    },
+    {
+      "topic": "DialogueTenpennyConv02",
+      "topic_text": "DialogueTenpennyConv02",
+      "emotion": "Happy 50",
+      "response_text": "Right, comrade! I see. The fabulous comes from the inside out. I will have to remember that. Thank you!{grateful}",
+      "index": "49"
+    },
+    {
+      "topic": "DialogueTenpennyConv03",
+      "topic_text": "DialogueTenpennyConv03",
+      "emotion": "Sad 75",
+      "response_text": "Ohhh. Well, comrade. I don't think I'll ever be able to do that.{despondent he can't make his wife happy.}",
+      "index": "57"
+    },
+    {
+      "topic": "DialogueTenpennyEatStartTopic",
+      "topic_text": "DialogueTenpennyEatStartTopic",
+      "emotion": "Neutral 50",
+      "response_text": "I'm hungry.{hungry and on his way to get food}",
+      "index": "58"
+    },
+    {
+      "topic": "DialogueTenpennySleepStartTopic",
+      "topic_text": "DialogueTenpennySleepStartTopic",
+      "emotion": "Neutral 50",
+      "response_text": "I'm tired. I'm going to bed.{tired and heading off to bed}",
+      "index": "59"
+    },
+    {
+      "topic": "DialogueTenpennySusanSleepWithStartTopic",
+      "topic_text": "DialogueTenpennySusanSleepWithStartTopic",
+      "emotion": "Happy 50",
+      "response_text": "SHE never yells at me. SHE appreciates me. Unlike some people.{to himself under his breath, thinking about his mistress}",
+      "index": "60"
+    },
+    {
+      "topic": "GOODBYE",
+      "topic_text": "I have to go now.",
+      "emotion": "Happy 50",
+      "response_text": "Later comrade.{naively self important}",
+      "index": "61"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Surprise 50",
+      "response_text": "Are you alright, Comrade?{confused and slightly suspicious}",
+      "index": "64"
+    }
+  ],
+  "combat": []
+}

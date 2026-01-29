@@ -1,0 +1,469 @@
+{
+  "name": "Doctor Alex Richards",
+  "url": "/wiki/Alex_Richards",
+  "dialogue_name": "VCFHAlexRichards.txt",
+  "dialogue_url": "/wiki/VCFHAlexRichards.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": true,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "00120DCD",
+  "ref_id": "00120DD9",
+  "editor_id": "VCFHAlexRichards",
+  "location": "Camp Forlorn Hope medical center",
+  "location_url": "/wiki/Camp_Forlorn_Hope_medical_center",
+  "descriptions": [
+    "Doctor Alex Richards is the primary medical care provider for the New California Republic Army troops stationed at Camp Forlorn Hope in Fallout: New Vegas.",
+    "A once-idealistic citizen of the New California Republic, Richards had a good life as a doctor in the core lands of the republic. His idealism drove him to join the NCR Army out of a sense of patriotic duty, to try and make the wasteland a better place.",
+    "Richards considers himself and anyone else who was in that battle lucky to be alive, but nonetheless stayed on and continued to serve in the Mojave. As events began shaping up for a Second Battle of Hoover Dam, Richards was stationed at Camp Forlorn Hope, the sole surgeon, doctor and medical expert of any kind at the camp's medical center. As the Legion captured the town of Nelson, immediately to the south, and put Camp Forlorn Hope under a grim state of siege, Richards quickly found himself overworked and his talents needed more and more often.",
+    "He has difficulties dealing with the steady stream of casualties, many of who are beyond help. In his own words, if he was a mortician, business would be booming. As a doctor, he struggles to keep up with the demand for his expertise,",
+    "All in all, he is a weary, exhausted and cynical, far cry from the idealistic doctor he once was. Now he just considers himself a bonesaw who patches soldiers up, so that they can continue the centuries-old tradition of fighting and dying for what they believe in, sarcastically referring to his Hippocratic Oath.",
+    "Lead area designer Charles Staples, who worked on Camp Forlorn Hope as a whole, wrote for Dr. Richards. One of Staples' quotes in the game's \"wacky\" credits, displayed with Wild Wasteland, references Dr. Richards, saying, \"Dr. Richards is a dude and likes other dudes. This perk brings out the tiger in him.\""
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "NCR Army",
+  "role": "Doctor",
+  "detailed_location": "Medical center,Camp Forlorn Hope",
+  "voice_actor": "Emerson Brooks",
+  "special": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 5,
+    "Intelligence": 5,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "level": "12",
+  "tag_skills": [
+    {
+      "Explosives:": "74"
+    },
+    {
+      "Guns:": "74"
+    },
+    {
+      "Melee Weap.:": "74"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Neutral",
+  "voice_type": "MaleAdult01DefaultB",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Happy 50",
+      "response_text": "I hear you defeated the Legion forces at Nelson. I'm impressed, and thankful. It'll make my job around here much easier.",
+      "index": "1"
+    },
+    {
+      "topic": "VMS30RichardsPatientHarmedTopic",
+      "topic_text": "CFHRichardsPatientHarmed",
+      "emotion": "Anger 50",
+      "response_text": "Hey! Be careful, I don't like people hurting my patients.",
+      "index": "20"
+    },
+    {
+      "topic": "VMS30RichardsPatientKilledTopic",
+      "topic_text": "CFHRichardsPatientKilled",
+      "emotion": "Anger 50",
+      "response_text": "You killed him! What kind of Doctor are you? Get out of here now!",
+      "index": "22"
+    },
+    {
+      "topic": "VMS30VCFHAlexRichardsTopic000",
+      "topic_text": "Major Polatli said you might need some help.",
+      "emotion": "Disgust 5",
+      "response_text": "With business booming like it is and considering I'm the only person with medical experience in the camp, I could perhaps use a hand.",
+      "index": "23"
+    },
+    {
+      "topic": "VMS30VCFHAlexRichardsTopic001",
+      "topic_text": "I wanted to talk to you about your missing medical supplies.",
+      "emotion": "Happy 25",
+      "response_text": "I heard Private Stone turned himself in for stealing my medical supplies. You have my thanks.",
+      "index": "25"
+    },
+    {
+      "topic": "VMS30VCFHAlexRichardsTopic002",
+      "topic_text": "I need medical treatment.",
+      "emotion": "Sad 5",
+      "response_text": "I don't have that many supplies left, so I can't offer my services freely, but I can help you.",
+      "index": "29"
+    },
+    {
+      "topic": "VMS30VCFHAlexRichardsTopic003",
+      "topic_text": "I finished looking over your patients.",
+      "emotion": "Surprise 50",
+      "response_text": "Excellent job. Where did you learn how to do all that? I don't think that I could have done much better myself. Very impressive.",
+      "index": "31"
+    },
+    {
+      "topic": "VMS30VCFHAlexRichardsTopic004",
+      "topic_text": "Yes. I have some medical experience.",
+      "emotion": "Happy 25",
+      "response_text": "[SUCCEEDED] Excellent. As you can see, we have a lot of injured troopers here and I haven't had time to look at all of them yet.",
+      "index": "37"
+    },
+    {
+      "topic": "VMS30VCFHAlexRichardsTopic005",
+      "topic_text": "<Lie> You betcha!",
+      "emotion": "Happy 25",
+      "response_text": "Excellent. As you can see, we have a lot of injured troopers here and I haven't had time to look at all of them yet.",
+      "index": "39"
+    },
+    {
+      "topic": "VMS30VCFHAlexRichardsTopic006",
+      "topic_text": "No, not really.",
+      "emotion": "Sad 50",
+      "response_text": "Without any medical experience, you're not going to be much use to me in here.",
+      "index": "41"
+    },
+    {
+      "topic": "VMS30VCFHAlexRichardsTopic007",
+      "topic_text": "I have wounds that need mending.",
+      "emotion": "Neutral 50",
+      "response_text": "You look fine to me. Well, as fine as anyone else around here.",
+      "index": "43"
+    },
+    {
+      "topic": "VMS30VCFHAlexRichardsTopic008",
+      "topic_text": "Yes. Private Stone was stealing them.",
+      "emotion": "Surprise 50",
+      "response_text": "Is that so! I'll have to talk to Major Polatli about this right away.",
+      "index": "47"
+    },
+    {
+      "topic": "VMS30VCFHAlexRichardsTopic009",
+      "topic_text": "No, not yet.",
+      "emotion": "Sad 5",
+      "response_text": "Let me know when you do find something out.",
+      "index": "49"
+    },
+    {
+      "topic": "VMS30VCFHAlexRichardsTopic010",
+      "topic_text": "<Lie> I wasn't able to find out anything.",
+      "emotion": "Sad 50",
+      "response_text": "That's too bad. These men really needed those supplies.",
+      "index": "50"
+    },
+    {
+      "topic": "VMS30VCFHAlexRichardsTopic011",
+      "topic_text": "I'm not qualified to examine your patients.",
+      "emotion": "Sad 50",
+      "response_text": "That's too bad, but at least you didn't start hacking and slashing with a knife. I don't think Major Polatli could handle two doctors like that.",
+      "index": "52"
+    },
+    {
+      "topic": "VMS30VCFHAlexRichardsTopic015",
+      "topic_text": "I did what I could for your patients.",
+      "emotion": "Neutral 50",
+      "response_text": "Thanks for your help. I'll take it from here.",
+      "index": "54"
+    },
+    {
+      "topic": "VMS30VCFHAlexRichardsTopic016",
+      "topic_text": "I've studied lots of medicology.",
+      "emotion": "Disgust 25",
+      "response_text": "[FAILED] Ahh... I see. Unfortunately you're experience with \"medicology\" isn't going to be any use to me here.",
+      "index": "58"
+    },
+    {
+      "topic": "VMS30VCFHAlexRichardsTopic017",
+      "topic_text": "How're things around camp?",
+      "emotion": "Neutral 50",
+      "response_text": "With the Legion defeated, things are great now.",
+      "index": "60"
+    },
+    {
+      "topic": "VMS30VCFHAlexRichardsTopic018",
+      "topic_text": "I have some questions for you.",
+      "emotion": "Neutral 50",
+      "response_text": "What would you like to know?",
+      "index": "65"
+    },
+    {
+      "topic": "VMS30VCFHAlexRichardsTopic019",
+      "topic_text": "Things look pretty rough in here.",
+      "emotion": "Anger 5",
+      "response_text": "Men have waged war on each other for countless centuries. Now is no different.",
+      "index": "66"
+    },
+    {
+      "topic": "VMS30VCFHAlexRichardsTopic020",
+      "topic_text": "It looks like you have a decent facility here.",
+      "emotion": "Surprise 25",
+      "response_text": "Someone with medical experience, I take it? It's not the best, but it does the job.",
+      "index": "68"
+    },
+    {
+      "topic": "VMS30VCFHAlexRichardsTopic021",
+      "topic_text": "You seem to be handling it well.",
+      "emotion": "Happy 10",
+      "response_text": "I'm doing the best I can considering the poor situation I find myself in.",
+      "index": "71"
+    },
+    {
+      "topic": "VMS30VCFHAlexRichardsTopic022",
+      "topic_text": "This place looks more like a chop shop.",
+      "emotion": "Surprise 20",
+      "response_text": "Sometimes it does feel that way. I feel more like a mortician than a doctor.",
+      "index": "74"
+    },
+    {
+      "topic": "VMS30VCFHAlexRichardsTopic023",
+      "topic_text": "What makes you think someone is stealing your supplies?",
+      "emotion": "Disgust 15",
+      "response_text": "The simple fact that I no longer have as many supplies as I should. I've been careful with them and I should have more than what remains.",
+      "index": "77"
+    },
+    {
+      "topic": "VMS30VCFHAlexRichardsTopic024",
+      "topic_text": "Perhaps you've misplaced them?",
+      "emotion": "Surprise 10",
+      "response_text": "Anything is possible, but that's unlikely.",
+      "index": "79"
+    },
+    {
+      "topic": "VMS30VCFHAlexRichardsTopic025",
+      "topic_text": "Maybe you're just careless.",
+      "emotion": "Anger 20",
+      "response_text": "I may have my hands full here, but I'm anything but careless.",
+      "index": "81"
+    },
+    {
+      "topic": "VMS30VCFHAlexRichardsTopic026",
+      "topic_text": "It wasn't me.",
+      "emotion": "Pained 25",
+      "response_text": "That's an odd response if I've ever heard one.",
+      "index": "83"
+    },
+    {
+      "topic": "VMS30VCFHAlexRichardsTopic027",
+      "topic_text": "I can look into this for you.",
+      "emotion": "Happy 15",
+      "response_text": "That would definitely be appreciated. You might want to ask around and keep an eye out for anything suspicious.",
+      "index": "85"
+    },
+    {
+      "topic": "VMS30VCFHAlexRichardsTopic028",
+      "topic_text": "What exactly is missing?",
+      "emotion": "Neutral 50",
+      "response_text": "I store a variety of drugs here, but it looks like my supply of Hydra is diminishing rather quickly.",
+      "index": "86"
+    },
+    {
+      "topic": "VMS30VCFHAlexRichardsTopic029",
+      "topic_text": "Where do you keep your supplies?",
+      "emotion": "Neutral 50",
+      "response_text": "Locked in a cabinet, here in the medical tent. I'm around most of the time, but I can't keep a constant watch on them.",
+      "index": "87"
+    },
+    {
+      "topic": "VMS30VCFHAlexRichardsTopic030",
+      "topic_text": "When did you notice them missing?",
+      "emotion": "Neutral 50",
+      "response_text": "I remember coming in one morning and noticing that my supplies were lower than they should have been.",
+      "index": "88"
+    },
+    {
+      "topic": "VMS30VCFHAlexRichardsTopic031",
+      "topic_text": "I can't help you right now.",
+      "emotion": "Disgust 15",
+      "response_text": "Perhaps you can come back and help me when you have more time.",
+      "index": "91"
+    },
+    {
+      "topic": "VMS30VCFHAlexRichardsTopic032",
+      "topic_text": "I want to talk about something else.",
+      "emotion": "Neutral 50",
+      "response_text": "Okay then, what would you like to talk about?",
+      "index": "92"
+    },
+    {
+      "topic": "VMS30VCFHAlexRichardsTopic033",
+      "topic_text": "I need help with an addiction.",
+      "emotion": "Neutral 50",
+      "response_text": "You and me both, but let's worry about you first. I can fix you up, if you know what I mean.",
+      "index": "93"
+    },
+    {
+      "topic": "VMS30VCFHAlexRichardsTopic034",
+      "topic_text": "Can you heal my radiation?",
+      "emotion": "Neutral 50",
+      "response_text": "Sure can. The sooner the better if you ask me, unless you want a third arm.",
+      "index": "94"
+    },
+    {
+      "topic": "VMS30VCFHAlexRichardsTopic035",
+      "topic_text": "I need medical supplies.",
+      "emotion": "Neutral 50",
+      "response_text": "Sorry. I'm low on supplies as it is and I don't have any to spare.",
+      "index": "95"
+    },
+    {
+      "topic": "VMS30VCFHAlexRichardsTopic036Do it.",
+      "topic_text": "Here's your 100 caps. Do it.",
+      "emotion": "Neutral 50",
+      "response_text": "Okay, now this might hurt a bit...",
+      "index": "96"
+    },
+    {
+      "topic": "VMS30VCFHAlexRichardsTopic037",
+      "topic_text": "No, thanks.",
+      "emotion": "Neutral 50",
+      "response_text": "Your loss, not mine. Let me know if your hair starts falling out.",
+      "index": "98"
+    },
+    {
+      "topic": "VMS30VCFHAlexRichardsTopic038Yes, cure me.",
+      "topic_text": "Yes, cure me. Here's 50 caps.",
+      "emotion": "Neutral 50",
+      "response_text": "Thanks, I'll fix you up right away.",
+      "index": "99"
+    },
+    {
+      "topic": "VMS30VCFHAlexRichardsTopic039",
+      "topic_text": "No, thanks.",
+      "emotion": "Neutral 50",
+      "response_text": "Good luck to you then, junkie.",
+      "index": "101"
+    },
+    {
+      "topic": "VMS30VCFHAlexRichardsTopic040Fix me.",
+      "topic_text": "Okay, fix me. Here's 50 caps.",
+      "emotion": "Happy 50",
+      "response_text": "Excellent, just let me grab my scalpel and a body bag, and we'll get started.",
+      "index": "102"
+    },
+    {
+      "topic": "VMS30VCFHAlexRichardsTopic041",
+      "topic_text": "No, thanks.",
+      "emotion": "Neutral 50",
+      "response_text": "Okay then. Just try not to bleed all over the place, okay?",
+      "index": "104"
+    },
+    {
+      "topic": "VMS30VCFHAlexRichardsTopic042",
+      "topic_text": "Actually, I changed my mind.",
+      "emotion": "Neutral 50",
+      "response_text": "Okay then.",
+      "index": "105"
+    },
+    {
+      "topic": "VMS30VCFHAlexRichardsTopic043",
+      "topic_text": "Tell me about yourself.",
+      "emotion": "Pained 10",
+      "response_text": "I used to be a doctor back in California, but a few years back I got suckered into doing military work because it was my \"patriotic duty.\"",
+      "index": "106"
+    },
+    {
+      "topic": "VMS30VCFHAlexRichardsTopic044",
+      "topic_text": "What are the symptoms of Hydra use?",
+      "emotion": "Happy 10",
+      "response_text": "[SUCCEEDED] Excessive use causes dilated eyes, an increased heart rate and blood pressure, massive sweating, you know... the usual.",
+      "index": "109"
+    },
+    {
+      "topic": "VMS30VCFHAlexRichardsTopic045",
+      "topic_text": "People using Hydra have their skin turn purple, right?",
+      "emotion": "Disgust 50",
+      "response_text": "[FAILED] Good god, no. Look, don't worry about symptoms, just ask around and see if anyone has noticed anything suspicious.",
+      "index": "110"
+    },
+    {
+      "topic": "VMS30VCFHAlexRichardsTopic046",
+      "topic_text": "What do you know about Hoover Dam?",
+      "emotion": "Surprise 10",
+      "response_text": "Quite a bit actually. I was stationed nearby during the first battle of Hoover Dam four years ago. I saw a lot of what happened firsthand.",
+      "index": "111"
+    },
+    {
+      "topic": "VMS30VCFHAlexRichardsTopic047",
+      "topic_text": "What's your take on the NCR?",
+      "emotion": "Anger 5",
+      "response_text": "My take? I try not to think about it, I got enough on my hands here.",
+      "index": "112"
+    },
+    {
+      "topic": "VMS30VCFHAlexRichardsTopic048",
+      "topic_text": "Tell me about the first battle.",
+      "emotion": "Pained 15",
+      "response_text": "The Legion attacked in full force. Chief Hanlon had the troopers fall back pulling the enemy in, before entrenching into secure positions.",
+      "index": "113"
+    },
+    {
+      "topic": "VMS30VCFHAlexRichardsTopic049",
+      "topic_text": "Must have been rough.",
+      "emotion": "Pained 25",
+      "response_text": "You have no idea. It was a fierce battle. Lots of people died.",
+      "index": "117"
+    },
+    {
+      "topic": "VMS30VCFHAlexRichardsTopic050",
+      "topic_text": "Let's go back to my previous questions.",
+      "emotion": "Neutral 50",
+      "response_text": "Okay, what's on your mind?",
+      "index": "120"
+    },
+    {
+      "topic": "VMS30VCFHAlexRichardsTopic051",
+      "topic_text": "Let's talk about something else.",
+      "emotion": "Neutral 50",
+      "response_text": "Alright. What do you want to know?",
+      "index": "121"
+    },
+    {
+      "topic": "VMS30VCFHAlexRichardsTopic052",
+      "topic_text": "I found this syringe on Private Stone.",
+      "emotion": "Surprise 25",
+      "response_text": "This is definitely part of my missing supplies. I'll talk to Major Polatli about this right away.",
+      "index": "122"
+    },
+    {
+      "topic": "VMS30VCFHAlexRichardsTopic053All right, here's your money.",
+      "topic_text": "Okay, fix me. Here's 100 caps.",
+      "emotion": "Happy 50",
+      "response_text": "Excellent, just let me grab my scalpel, and a body bag and we'll get started.",
+      "index": "123"
+    },
+    {
+      "topic": "VMS30VCFHAlexRichardsTopic054",
+      "topic_text": "Thanks.",
+      "emotion": "Neutral 50",
+      "response_text": "My pleasure. Thanks again.",
+      "index": "125"
+    },
+    {
+      "topic": "VMS30VCFHAlexRichardsTopic055Here's your money.",
+      "topic_text": "Okay, fix me. Here's 75 caps.",
+      "emotion": "Happy 50",
+      "response_text": "Excellent, just let me grab my scalpel, and a body bag and we'll get started.",
+      "index": "126"
+    },
+    {
+      "topic": "VMS30VCFHAlexRichardsTopic056",
+      "topic_text": "I don't need any compensation.",
+      "emotion": "Neutral 50",
+      "response_text": "Ahh, doing this out of the goodness of your heart. You don't see that very often around here. Thank you.",
+      "index": "128"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Until we meet again.",
+      "index": "129"
+    }
+  ],
+  "combat": []
+}

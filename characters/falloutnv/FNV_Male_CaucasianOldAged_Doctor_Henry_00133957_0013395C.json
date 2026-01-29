@@ -1,0 +1,423 @@
+{
+  "name": "Doctor Henry",
+  "url": "/wiki/Henry",
+  "dialogue_name": "VRemDoctorHenry.txt",
+  "dialogue_url": "/wiki/VRemDoctorHenry.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": true,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "00133957",
+  "ref_id": "0013395C",
+  "editor_id": "VRemDoctorHenry",
+  "location": "Jacobstown lodge",
+  "location_url": "/wiki/Jacobstown_lodge",
+  "descriptions": [
+    "Doctor Henry is a physician and former Enclave scientist living in the NCR in 2241, then in Jacobstown in 2281.",
+    "Described as difficult to figure out but passionate about his research, Doctor Henry previously worked with the Enclave on canine cyber-genetics.",
+    "Because of his more ethical leanings, Henry and the Enclave leadership clashed over the direction of his research frequently, ultimately enough that Henry made the decision to leave the organization.",
+    "After leaving the Enclave, Doctor Henry integrated into the New California Republic, setting up a clinic in the heart of the budding nation. Although some remnants of the Enclave refuse to speak about their past involvement with the group, not the least reason of which is avoiding outing themselves to NCR reprisal, one of the citizens that Henry treated in his time there reveals that they have heard about the Enclave from Henry, who spoke about it at length while drunk.",
+    "When he eventually moved on from the NCR, Doctor Henry spent time traveling with caravans, where he met Old Lady Gibson (back when she was only Gibson). They got along well together, very well after a drink or two in fact.",
+    "After learning about the super mutant enclave at Jacobstown, Henry saw an opportunity to resume doing what he loved, and with Marcus' blessing, established his lab in the lodge where he researches the mental effects of prolonged Stealth Boy usage by the nightkin, though he himself admits that the lab there is not as impressive as the facilities he had access to while in the Enclave.",
+    "Interactions overview",
+    "Quests",
+    "Interactions overview",
+    "Quests",
+    "Dr. Henry appears in Fallout 2 and Fallout: New Vegas."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Enclave Research and Development DivisionJacobstownEnclave remnants",
+  "role": "Scientist",
+  "detailed_location": "NCR DowntownJacobstown",
+  "voice_actor": "Peter Renaday",
+  "special": {
+    "Strength": 4,
+    "Perception": 8,
+    "Endurance": 4,
+    "Charisma": 4,
+    "Intelligence": 9,
+    "Agility": 6,
+    "Luck": 7
+  },
+  "level": "30",
+  "tag_skills": [
+    {
+      "Doctor:": "95%"
+    },
+    {
+      "First Aid:": "95%"
+    },
+    {
+      "Science:": "85%"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "45"
+    },
+    {
+      "Critical Chance:": "7%"
+    },
+    {
+      "Melee Dam.:": "1"
+    },
+    {
+      "Poison Res.:": "20%"
+    },
+    {
+      "Radiation Res.:": "8%"
+    },
+    {
+      "Armor Class:": "6"
+    },
+    {
+      "Action Points:": "8"
+    },
+    {
+      "Carry Weight:": "125 lbs"
+    },
+    {
+      "Sequence:": "16"
+    },
+    {
+      "Healing Rate:": "1"
+    },
+    {
+      "Perk Rate:": "3"
+    },
+    {
+      "Skill Rate:": "23"
+    },
+    {
+      "Experience Points:": "125"
+    }
+  ],
+  "karma": "Neutral",
+  "voice_type": "MaleOld02",
+  "geck_race": "CaucasianOldAged",
+  "topics": [
+    {
+      "topic": "DoctorHenryToCalamity01",
+      "topic_text": "DoctorHenryToCalamity01",
+      "emotion": "Neutral 50",
+      "response_text": "How are those readings looking, Calamity?",
+      "index": "1"
+    },
+    {
+      "topic": "DoctorHenryToLily01",
+      "topic_text": "DoctorHenryToLily01",
+      "emotion": "Neutral 50",
+      "response_text": "All right, power on the Stealth Boy, Lily.",
+      "index": "2"
+    },
+    {
+      "topic": "DoctorHenryToLily02",
+      "topic_text": "DoctorHenryToLily02",
+      "emotion": "Neutral 50",
+      "response_text": "Interesting. Try thinking aggressive thoughts now. Think about smashing a Radscorpion.",
+      "index": "3"
+    },
+    {
+      "topic": "DoctorHenryToLily03",
+      "topic_text": "DoctorHenryToLily03",
+      "emotion": "Neutral 50",
+      "response_text": "All right, we're done here. Go ahead and power the Stealth Boy down, Lily.",
+      "index": "4"
+    },
+    {
+      "topic": "DoctorHenryToLily04",
+      "topic_text": "DoctorHenryToLily04",
+      "emotion": "Neutral 50",
+      "response_text": "I'll get back to you on that in a moment. Once I've analyzed the results - uh, oh.",
+      "index": "5"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "We don't have time to talk, let's get this fight going.{Doc Henry at the battle of Hoover Dam}",
+      "index": "6"
+    },
+    {
+      "topic": "VDialogueRemnantsVRemDoctorHenryTopic000",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Yes, yes.",
+      "index": "28"
+    },
+    {
+      "topic": "VDialogueRemnantsVRemDoctorHenryTopic001",
+      "topic_text": "Something's wrong with my cyber-dog. I was told to come to you.",
+      "emotion": "Neutral 50",
+      "response_text": "It's neural degradation. Bio med gel can only preserve a living brain for so long, so you'll need to find a replacement.",
+      "index": "29"
+    },
+    {
+      "topic": "VDialogueRemnantsVRemDoctorHenryTopic002",
+      "topic_text": "How goes your research for the Nightkin cure?",
+      "emotion": "Neutral 50",
+      "response_text": "Promising, but I won't be able to synthesize the drug anytime soon. I really should get back to my work.",
+      "index": "33"
+    },
+    {
+      "topic": "VDialogueRemnantsVRemDoctorHenryTopic003",
+      "topic_text": "Arcade Gannon has asked me to gather all the former members of the Enclave in the Mojave.",
+      "emotion": "Neutral 50",
+      "response_text": "{work not yet complete}You must have something important in mind. I'm willing to go to this little reunion, but my work here isn't complete.",
+      "index": "34"
+    },
+    {
+      "topic": "VDialogueRemnantsVRemDoctorHenryTopic009",
+      "topic_text": "This brain is from Rey, one of Old Lady Gibson's dogs.",
+      "emotion": "Neutral 50",
+      "response_text": "All right, let's see here... neural pathways look good... definitely a breed of guard dog.",
+      "index": "38"
+    },
+    {
+      "topic": "VDialogueRemnantsVRemDoctorHenryTopic012",
+      "topic_text": "Does Stealth Boy use hurt humans?",
+      "emotion": "Neutral 50",
+      "response_text": "It's possible, but I've yet to see any hard evidence or hear of any cases where humans were negatively affected.",
+      "index": "40"
+    },
+    {
+      "topic": "VDialogueRemnantsVRemDoctorHenryTopic013",
+      "topic_text": "Why are you helping the Nightkin?",
+      "emotion": "Neutral 50",
+      "response_text": "Because Marcus asked me to and because it's a reason for me to get up in the morning. I'd like to get one more grand accomplishment done.",
+      "index": "42"
+    },
+    {
+      "topic": "VDialogueRemnantsVRemDoctorHenryTopic014",
+      "topic_text": "I'd like to help. What do you need me to do?",
+      "emotion": "Neutral 50",
+      "response_text": "I'm not convinced that the Nightstalker mutation is a natural one, and I need someone to investigate their lair for proof.",
+      "index": "43"
+    },
+    {
+      "topic": "VDialogueRemnantsVRemDoctorHenryTopic015",
+      "topic_text": "Let's talk about something else.",
+      "emotion": "Neutral 50",
+      "response_text": "If we must.",
+      "index": "46"
+    },
+    {
+      "topic": "VDialogueRemnantsVRemDoctorHenryTopic016",
+      "topic_text": "I have a new brain for Rex.",
+      "emotion": "Neutral 50",
+      "response_text": "Very well, show me what you've brought so that I can analyze its potential.",
+      "index": "47"
+    },
+    {
+      "topic": "VDialogueRemnantsVRemDoctorHenryTopic019",
+      "topic_text": "Transplant Rey's brain into Rex.",
+      "emotion": "Neutral 50",
+      "response_text": "Have a seat. This will take awhile.",
+      "index": "49"
+    },
+    {
+      "topic": "VDialogueRemnantsVRemDoctorHenryTopic020",
+      "topic_text": "I got a brain from Lupa, the mother of many Legion Mongrels.",
+      "emotion": "Neutral 50",
+      "response_text": "Let's take a look... exceptional synapse responses... descended from some type of cattle dog, I imagine.",
+      "index": "50"
+    },
+    {
+      "topic": "VDialogueRemnantsVRemDoctorHenryTopic021",
+      "topic_text": "Transplant Lupa's brain into Rex.",
+      "emotion": "Neutral 50",
+      "response_text": "Have a seat. This will take awhile.",
+      "index": "52"
+    },
+    {
+      "topic": "VDialogueRemnantsVRemDoctorHenryTopic022",
+      "topic_text": "Hold off on the transplant.",
+      "emotion": "Neutral 50",
+      "response_text": "All right.{shrugging}Your call.",
+      "index": "53"
+    },
+    {
+      "topic": "VDialogueRemnantsVRemDoctorHenryTopic024",
+      "topic_text": "I took down a Fiend dog named Violetta.",
+      "emotion": "Neutral 50",
+      "response_text": "Big brain on this one. All right, let's see... damn, heavy amounts of the chemicals used in the drug Turbo are present.",
+      "index": "54"
+    },
+    {
+      "topic": "VDialogueRemnantsVRemDoctorHenryTopic025",
+      "topic_text": "Transplant Violetta's brain into Rex.",
+      "emotion": "Neutral 50",
+      "response_text": "Have a seat. This will take awhile.",
+      "index": "56"
+    },
+    {
+      "topic": "VDialogueRemnantsVRemDoctorHenryTopic026",
+      "topic_text": "What makes you think that the Nightstalker mutation isn't natural?",
+      "emotion": "Neutral 50",
+      "response_text": "I've compared the brain chemistry of a Nightkin to one of the local Nightstalkers we killed. They both exhibit similar neurochemical changes.",
+      "index": "57"
+    },
+    {
+      "topic": "VDialogueRemnantsVRemDoctorHenryTopic028",
+      "topic_text": "Go ahead and start the tests.",
+      "emotion": "Neutral 50",
+      "response_text": "Very well. Please stand back - I don't want any erroneous readings. You're welcome to stay and observe if you want, though.",
+      "index": "59"
+    },
+    {
+      "topic": "VDialogueRemnantsVRemDoctorHenryTopic029",
+      "topic_text": "Don't start just yet. I'll be back.",
+      "emotion": "Neutral 50",
+      "response_text": "{impatient}Oh, all right.",
+      "index": "61"
+    },
+    {
+      "topic": "VDialogueRemnantsVRemDoctorHenryTopic031",
+      "topic_text": "I found a chewed up Stealth Boy in the Nightstalker lair.",
+      "emotion": "Neutral 50",
+      "response_text": "Hmmm... there's still power, but the casing is cracked. I'm astonished that exposure to the stealth radiation could induce mutations so rapidly.",
+      "index": "62"
+    },
+    {
+      "topic": "VDialogueRemnantsVRemDoctorHenryTopic032",
+      "topic_text": "Why Lily and not some other Nightkin?",
+      "emotion": "Neutral 50",
+      "response_text": "Lily is eccentric, certainly, but I've never felt she was dangerous. More importantly, she asked if she could help me in some way.",
+      "index": "68"
+    },
+    {
+      "topic": "VDialogueRemnantsVRemDoctorHenryTopic033",
+      "topic_text": "I'll talk to Lily, then.",
+      "emotion": "Neutral 50",
+      "response_text": "I'll be waiting.",
+      "index": "70"
+    },
+    {
+      "topic": "VDialogueRemnantsVRemDoctorHenryTopic034",
+      "topic_text": "I'm surprised to find another human here.",
+      "emotion": "Neutral 50",
+      "response_text": "I prefer the solitude, and having a bunch of Super Mutants around tends to keep things safe and quiet.",
+      "index": "71"
+    },
+    {
+      "topic": "VDialogueRemnantsVRemDoctorHenryTopic035",
+      "topic_text": "You're a scientist?",
+      "emotion": "Neutral 50",
+      "response_text": "Yes. Specializing in neuroscience, both human and canine. Of course, this lab is nothing compared to what I had when I was with the Enclave.",
+      "index": "72"
+    },
+    {
+      "topic": "VDialogueRemnantsVRemDoctorHenryTopic036",
+      "topic_text": "Canine neuroscience?",
+      "emotion": "Neutral 50",
+      "response_text": "Cyber-dogs and the like. It's not a field I work in much anymore.",
+      "index": "73"
+    },
+    {
+      "topic": "VDialogueRemnantsVRemDoctorHenryTopic037",
+      "topic_text": "You were with the Enclave?",
+      "emotion": "Neutral 50",
+      "response_text": "Yes, but the leadership and I didn't see eye to eye, so I left. It was the right decision, since the Enclave's oil rig was destroyed not long after.",
+      "index": "74"
+    },
+    {
+      "topic": "VDialogueRemnantsVRemDoctorHenryTopic038",
+      "topic_text": "What are you working on?",
+      "emotion": "Neutral 50",
+      "response_text": "The Nightkin have varying degrees of mental instability due their addiction to Stealth Boy use. I've been trying to come up with a cure.",
+      "index": "75"
+    },
+    {
+      "topic": "VDialogueRemnantsVRemDoctorHenryTopic041",
+      "topic_text": "I could look for the source of the Nightstalker mutation for you.",
+      "emotion": "Neutral 50",
+      "response_text": "Thank you. I strongly suspect that the source of the mutation is artificial, but the Super Mutants found nothing. Your fresh eyes may do better.",
+      "index": "78"
+    },
+    {
+      "topic": "VDialogueRemnantsVRemDoctorHenryTopic042",
+      "topic_text": "What are the risks of the experiment?",
+      "emotion": "Neutral 50",
+      "response_text": "Possibly immediate and permanent mental damage. There's a reason the Stealth Boy Mark IIs never got beyond the prototype stage.",
+      "index": "80"
+    },
+    {
+      "topic": "VDialogueRemnantsVRemDoctorHenryTopic043",
+      "topic_text": "Why is the Stealth Boy Mark II riskier?",
+      "emotion": "Neutral 50",
+      "response_text": "The stealth field has been modulated to use less power and thus last longer, but for some reason it has pronounced negative effects on the user.",
+      "index": "82"
+    },
+    {
+      "topic": "VDialogueRemnantsVRemDoctorHenryTopic044",
+      "topic_text": "I need to think about this.",
+      "emotion": "Neutral 50",
+      "response_text": "Once you're done thinking, talk to Lily.",
+      "index": "85"
+    },
+    {
+      "topic": "VEndingRex",
+      "topic_text": "VEndingRex",
+      "emotion": "Neutral 50",
+      "response_text": "{narrating}He had survived police service in Colorado, the Great War, combat duty with the Legion, and being the companion of The King.",
+      "index": "86"
+    },
+    {
+      "topic": "VMS41VRemDoctorHenryTopic000",
+      "topic_text": "The risk to Lily is too great. Don't keep running the test.",
+      "emotion": "Neutral 50",
+      "response_text": "All right. I'll dismantle the prototype to avoid any further incidents with the Nightkin.",
+      "index": "96"
+    },
+    {
+      "topic": "VMS41VRemDoctorHenryTopic001",
+      "topic_text": "I think Lily should continue to wear the Mark II prototype.",
+      "emotion": "Neutral 50",
+      "response_text": "Very well. It will be worth it, I'm sure.",
+      "index": "97"
+    },
+    {
+      "topic": "VMS41VRemDoctorHenryTopic002",
+      "topic_text": "What do you want to do?",
+      "emotion": "Neutral 50",
+      "response_text": "I'm close to the cure, I can feel it. Lily's continued help will give me the last bit of data that I need.",
+      "index": "98"
+    },
+    {
+      "topic": "VMS41VRemDoctorHenryTopic003",
+      "topic_text": "Let me think about this.",
+      "emotion": "Neutral 50",
+      "response_text": "I understand. Get back to me with an answer as soon as you can.",
+      "index": "99"
+    },
+    {
+      "topic": "VMS41VRemDoctorHenryTopic004",
+      "topic_text": "What will happen to Lily?",
+      "emotion": "Neutral 50",
+      "response_text": "Permanent damage to her mind is a certainty. Even the cure won't help her.",
+      "index": "100"
+    },
+    {
+      "topic": "VMS41VRemDoctorHenryTopic005< Science 90 >",
+      "topic_text": "Use neuro-peptide stimulators on a Nightstalker brain. Results should be similar to a live brain.",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] That's... brilliant. Simple, yet elegant. I can't believe I didn't think of that.",
+      "index": "101"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Yes, yes.",
+      "index": "103"
+    }
+  ],
+  "combat": []
+}

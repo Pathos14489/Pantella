@@ -1,0 +1,321 @@
+{
+  "name": "Diane",
+  "url": "/wiki/Diane_(Fallout:_New_Vegas)",
+  "dialogue_name": "VRRCDiane.txt",
+  "dialogue_url": "/wiki/VRRCDiane.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "00140E6D",
+  "ref_id": "00140E6E",
+  "editor_id": "VRRCDiane",
+  "location": "Red Rock drug lab",
+  "location_url": "/wiki/Red_Rock_drug_lab",
+  "descriptions": [
+    "Diane is a Great Khan living in the Red Rock Canyon in 2281.",
+    "Jack and Diane are advisers to Papa Khan. The pair run a drug-trafficking ring and supply the Great Khans with drugs. Jack makes the drugs, and Diane handles the business. According to Regis, Jack and Diane have been close since childhood, and Jack is protective of her.",
+    "Jack & Diane is a song title by John \"Cougar\" Mellencamp about \"two American kids doing the best they can,\" similar to the pair of Great Khans that share their name."
+  ],
+  "race": "Human",
+  "gender": "Female",
+  "affiliation": "Great KhansJack",
+  "role": "Drug dealerAdviser",
+  "detailed_location": "Red Rock drug lab",
+  "voice_actor": "Zoë Bell",
+  "special": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 3,
+    "Intelligence": 3,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "level": "12",
+  "tag_skills": [
+    {
+      "Guns:": "72"
+    },
+    {
+      "Melee Weap.:": "72"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "120"
+    },
+    {
+      "Critical Chance:": "5%"
+    },
+    {
+      "Unarmed Dam.:": "1.15"
+    },
+    {
+      "Poison Resist.:": "15%"
+    },
+    {
+      "Rad. Resist.:": "6%"
+    },
+    {
+      "Carry Weight:": "210"
+    }
+  ],
+  "karma": "Neutral",
+  "voice_type": "FemaleAdult06",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "DianeCaesar",
+      "topic_text": "So, about the alliance with Caesar's Legion....",
+      "emotion": "Happy 50",
+      "response_text": "Don't worry, Jack and I have talked it over. We'll talk up the idea of breaking the alliance.",
+      "index": "1"
+    },
+    {
+      "topic": "DianeWork",
+      "topic_text": "I'm looking to make a few caps. Got any work for me?",
+      "emotion": "Disgust 35",
+      "response_text": "I don't have any compelling reason to trust you, given your behavior. So no, I'm not really inclined to give you a job.",
+      "index": "4"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Anger 50",
+      "response_text": "Get away from me, you lunatic!",
+      "index": "14"
+    },
+    {
+      "topic": "JackDianeMedicine",
+      "topic_text": "Have you started making meds yet?",
+      "emotion": "Happy 20",
+      "response_text": "Yeah, you made a pretty good argument. We'll keep it small for now, but if it turns a profit we might expand.",
+      "index": "28"
+    },
+    {
+      "topic": "JackMerchant",
+      "topic_text": "What do you have for sale?",
+      "emotion": "Happy 10",
+      "response_text": "Jack handles the small-time purchases. You should talk to him unless you're looking for a major shipment.",
+      "index": "30"
+    },
+    {
+      "topic": "JackandDianeCaesar",
+      "topic_text": "What do you think about Caesar?",
+      "emotion": "Disgust 15",
+      "response_text": "Well, it's not like I'm super-attached to working with Caesar or anything, but if it'll stop his patrols from harassing my runners, I'm all for it.",
+      "index": "31"
+    },
+    {
+      "topic": "JackandDianeInfo",
+      "topic_text": "What is it you do here?",
+      "emotion": "Happy 15",
+      "response_text": "We keep the Great Khans from falling apart, essentially. Jack manufactures the chems, I organize the runners and the shipments.",
+      "index": "33"
+    },
+    {
+      "topic": "JackandDianeKhans",
+      "topic_text": "Tell me a little about the Great Khans.",
+      "emotion": "Sad 20",
+      "response_text": "I'll spare you the history lesson - talk to Papa Khan if you want to hear that story.",
+      "index": "34"
+    },
+    {
+      "topic": "VMS45VRRCDianeTopic000",
+      "topic_text": "Caesar isn't going to let you run drugs as an ally any more than he supports it now. He hates chems.",
+      "emotion": "Surprise 50",
+      "response_text": "I haven't heard anything like that. Do you have any proof?",
+      "index": "37"
+    },
+    {
+      "topic": "VMS45VRRCDianeTopic001",
+      "topic_text": "Not yet, but I'll find some.",
+      "emotion": "Neutral 50",
+      "response_text": "Okay, come on back when you do.",
+      "index": "38"
+    },
+    {
+      "topic": "VMS45VRRCDianeTopic002",
+      "topic_text": "No, and finding some would be too much work. Never mind.",
+      "emotion": "Disgust 10",
+      "response_text": "Okay, I won't bother.",
+      "index": "39"
+    },
+    {
+      "topic": "VMS46NullLinks",
+      "topic_text": "VMS46NullLinks",
+      "emotion": "Disgust 15",
+      "response_text": "We've got an associate in the Crimson Caravan Trading Company who distributes for us in Outer Vegas. He's been after us for a new shipment.",
+      "index": "40"
+    },
+    {
+      "topic": "VMS46VRRCDianeTopic000",
+      "topic_text": "Sure, just tell me who I'm looking for and where to start.",
+      "emotion": "Anger 10",
+      "response_text": "About three weeks ago I sent Anders southeast to find a route into Arizona to open new markets for our product.",
+      "index": "41"
+    },
+    {
+      "topic": "VMS46VRRCDianeTopic001",
+      "topic_text": "Sounds like more trouble than it's worth. I'll pass.",
+      "emotion": "Sad 15",
+      "response_text": "Okay then. Job'll be waiting if you change your mind.",
+      "index": "43"
+    },
+    {
+      "topic": "VMS46VRRCDianeTopic002",
+      "topic_text": "Okay, I'll be back as soon as I have any news.",
+      "emotion": "Happy 25",
+      "response_text": "Thanks. Prove you're reliable on this, and I'll have more for you later.",
+      "index": "44"
+    },
+    {
+      "topic": "VMS46VRRCDianeTopic003",
+      "topic_text": "Sure, what have you got?",
+      "emotion": "Anger 10",
+      "response_text": "With Anders out of commission for so long, we're shorthanded on runners, and some backlogs have piled up.",
+      "index": "45"
+    },
+    {
+      "topic": "VMS46VRRCDianeTopic005",
+      "topic_text": "Sure, I'll do it.",
+      "emotion": "Happy 25",
+      "response_text": "Great. Here's the package - your contact is Don Hostetler at the Crimson Caravan. Come back and see me when you're done.",
+      "index": "49"
+    },
+    {
+      "topic": "VMS46VRRCDianeTopic006",
+      "topic_text": "Okay, I'll do that.",
+      "emotion": "Neutral 50",
+      "response_text": "Anything else?",
+      "index": "50"
+    },
+    {
+      "topic": "VMS46VRRCDianeTopic008",
+      "topic_text": "Piece of cake.",
+      "emotion": "Fear 25",
+      "response_text": "Don't get cocky, the Fiends are twitchy. Most of them won't bother a Khan, but the ones outside the Vault... well, they're outside for a reason.",
+      "index": "51"
+    },
+    {
+      "topic": "VMS46VRRCDianeTopic010",
+      "topic_text": "Medical supplies are always scarce, and they don't kill the buyer as often. Think of the profits!",
+      "emotion": "Happy 15",
+      "response_text": "[SUCCEEDED] You've got a point. Selling meds to the locals could be a pretty nice side gig. All right, I'll tell Jack to give it a try.",
+      "index": "55"
+    },
+    {
+      "topic": "VMS46VRRCDianeTopic011",
+      "topic_text": "I'll take the caps.",
+      "emotion": "Happy 25",
+      "response_text": "Here you go, you've earned these.",
+      "index": "57"
+    },
+    {
+      "topic": "VMS46VRRCDianeTopic012",
+      "topic_text": "I'll take the recipe.",
+      "emotion": "Happy 25",
+      "response_text": "Here you go. Enjoy it.",
+      "index": "58"
+    },
+    {
+      "topic": "VMS46VRRCDianeTopic013",
+      "topic_text": "What alliance?",
+      "emotion": "Disgust 15",
+      "response_text": "Papa Khan has been talking to Caesar's emissary for weeks now - they're always going on about crushing the NCR.",
+      "index": "59"
+    },
+    {
+      "topic": "VMS46VRRCDianeTopic014",
+      "topic_text": "Why are things so tough?",
+      "emotion": "Fear 20",
+      "response_text": "Red Rock Canyon isn't exactly the most hospitable place - there's no food, barely any water, and nothing anybody wants.",
+      "index": "61"
+    },
+    {
+      "topic": "VMS46VRRCDianeTopic015",
+      "topic_text": "Let's talk about something else.",
+      "emotion": "Surprise 10",
+      "response_text": "Sure, what do you want to know?",
+      "index": "63"
+    },
+    {
+      "topic": "VMS46VRRCDianeTopic016",
+      "topic_text": "So you're drug dealers?",
+      "emotion": "Anger 20",
+      "response_text": "We're supplying things people want in exchange for things our tribe needs. Don't judge us.",
+      "index": "64"
+    },
+    {
+      "topic": "VMS46VRRCDianeTopic017",
+      "topic_text": "Who do you sell to?",
+      "emotion": "Anger 5",
+      "response_text": "We make regular shipments to a lot of settlements around the Mojave - a lot of our business comes from the Fiends lately.",
+      "index": "65"
+    },
+    {
+      "topic": "VMS46VRRCDianeTopic018",
+      "topic_text": "Good to know. I had some other questions.",
+      "emotion": "Neutral 50",
+      "response_text": "Like what?",
+      "index": "67"
+    },
+    {
+      "topic": "VMS46VRRCDianeTopic019",
+      "topic_text": "Not yet, but I had more questions.",
+      "emotion": "Neutral 50",
+      "response_text": "Okay, but please find him as soon as you can.",
+      "index": "68"
+    },
+    {
+      "topic": "VMS46VRRCDianeTopic020",
+      "topic_text": "I'm afraid he's dead.",
+      "emotion": "Neutral 50",
+      "response_text": "What? How? What happened?",
+      "index": "69"
+    },
+    {
+      "topic": "VMS46VRRCDianeTopic021",
+      "topic_text": "<Truth> I killed him.",
+      "emotion": "Neutral 50",
+      "response_text": "What? Why the hell would you do that? Are you insane?",
+      "index": "70"
+    },
+    {
+      "topic": "VMS46VRRCDianeTopic022",
+      "topic_text": "<Lie> The Legion caught him and crucified him. He was dead when I found him.",
+      "emotion": "Neutral 50",
+      "response_text": "Dammit! Okay, well, thank you for finding out at least. Was there something else you needed?",
+      "index": "71"
+    },
+    {
+      "topic": "VMS46VRRCDianeTopic024",
+      "topic_text": "I didn't know he worked for you.",
+      "emotion": "Neutral 50",
+      "response_text": "Oh, because that makes it so much better! Get out of my sight, I have nothing to say to you any more!",
+      "index": "72"
+    },
+    {
+      "topic": "VMS46VRRCDianeTopic025",
+      "topic_text": "It was fun. He made a noise like a deflating balloon.",
+      "emotion": "Neutral 50",
+      "response_text": "You're psychotic! Get out of my sight, I have nothing to say to you any more!",
+      "index": "73"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Catch you later.",
+      "index": "74"
+    }
+  ],
+  "combat": []
+}

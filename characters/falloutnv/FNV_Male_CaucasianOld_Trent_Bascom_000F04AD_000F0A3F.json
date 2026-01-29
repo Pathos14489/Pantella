@@ -1,0 +1,163 @@
+{
+  "name": "Trent Bascom",
+  "url": "/wiki/Trent_Bascom",
+  "dialogue_name": "1ETrentBascom.txt",
+  "dialogue_url": "/wiki/1ETrentBascom.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000F04AD",
+  "ref_id": "000F0A3F",
+  "editor_id": "1ETrentBascom",
+  "location": "NCR sharecropper farms",
+  "location_url": "/wiki/NCR_sharecropper_farms",
+  "descriptions": [
+    "Trent Bascom is a farmer living at the NCR sharecropper farms in 2281. He can be found tending crops towards the southwestern corner of the farm.",
+    "Found working on his crops in the southwestern part of the farms, Trent is one of the critics of the NCR's approach to farmers at the sharecropper farms. Originally making a living in the Hub, Trent moved to the Mojave after the Thaler Act was enacted."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "New California Republic",
+  "role": "Farmer",
+  "detailed_location": "NCR sharecropper farms",
+  "voice_actor": "Gregory Alan Williams",
+  "special": {
+    "Strength": 7,
+    "Perception": 6,
+    "Endurance": 7,
+    "Charisma": 3,
+    "Intelligence": 4,
+    "Agility": 5,
+    "Luck": 4
+  },
+  "level": "1",
+  "tag_skills": [
+    {
+      "Melee Weap.:": "33"
+    },
+    {
+      "Repair:": "27"
+    },
+    {
+      "Survival:": "33"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Neutral",
+  "voice_type": "MaleAdult06",
+  "geck_race": "CaucasianOld",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Fear 10",
+      "response_text": "{NCR - Shunned}Hey, I'm just a farmer. I don't want any trouble and I don't have anything valuable.",
+      "index": "1"
+    },
+    {
+      "topic": "vDialogueSharecropper1ETrentBascomTopic000",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Adios.",
+      "index": "8"
+    },
+    {
+      "topic": "vDialogueSharecropper1ETrentBascomTopic001",
+      "topic_text": "You work these fields?",
+      "emotion": "Neutral 50",
+      "response_text": "Sure do. Came from The Hub on account of the Thaler Act. Farming's decent work, but the whole thing's a bum deal.",
+      "index": "9"
+    },
+    {
+      "topic": "vDialogueSharecropper1ETrentBascomTopic002",
+      "topic_text": "What's the Thaler Act?",
+      "emotion": "Neutral 50",
+      "response_text": "Something the politicians back in Shady Sands came up with. They pay us to move here and farm the land. They even protect the fields.",
+      "index": "10"
+    },
+    {
+      "topic": "vDialogueSharecropper1ETrentBascomTopic003",
+      "topic_text": "Why is this work a bum deal?",
+      "emotion": "Disgust 20",
+      "response_text": "Bad soil and rationed water. It's to be expected around here, but the rationing's off. Worst part is NCR won't admit it.",
+      "index": "11"
+    },
+    {
+      "topic": "vDialogueSharecropper1ETrentBascomTopic004",
+      "topic_text": "What are NCR troopers doing here?",
+      "emotion": "Neutral 50",
+      "response_text": "They're part of the deal, the Thaler Act. We work the fields while they protect the crops and the water.",
+      "index": "13"
+    },
+    {
+      "topic": "vDialogueSharecropper1ETrentBascomTopic005",
+      "topic_text": "What kind of crops do you grow?",
+      "emotion": "Neutral 50",
+      "response_text": "Everything I can. Farmers out here don't have the luxury of being picky. I get by mostly on maize and tobacco.",
+      "index": "16"
+    },
+    {
+      "topic": "vDialogueSharecropper1ETrentBascomTopic006",
+      "topic_text": "Let's talk about something else.",
+      "emotion": "Neutral 50",
+      "response_text": "Can do.",
+      "index": "17"
+    },
+    {
+      "topic": "vDialogueSharecropper1ETrentBascomTopic007",
+      "topic_text": "Water was being diverted to Westside, but I took care of the problem.",
+      "emotion": "Neutral 50",
+      "response_text": "Westside, huh? I hope the NCR does something about those thieving bastards. I appreciate it, and so do the rest of the farmers.",
+      "index": "18"
+    },
+    {
+      "topic": "vDialogueSharecropper1ETrentBascomTopic008",
+      "topic_text": "<Lie> The NCR admitted there's bad pipes somewhere, and took care of the problem.",
+      "emotion": "Neutral 50",
+      "response_text": "That's what I figured. Don't know why the heck they're so stubborn they couldn't just admit it.",
+      "index": "20"
+    },
+    {
+      "topic": "vDialogueSharecropper1ETrentBascomTopic009",
+      "topic_text": "Me? I have no idea what you're talking about.",
+      "emotion": "Neutral 50",
+      "response_text": "Sure you don't. All just a happy coincidence, am I right?",
+      "index": "21"
+    },
+    {
+      "topic": "vDialogueSharecropper1ETrentBascomTopic010",
+      "topic_text": "What are you going to do now?",
+      "emotion": "Neutral 50",
+      "response_text": "I hear the Brahmin ranchers out in Redding are looking for some hard workers, so I might try there first. I hate working with Brahmin, though.",
+      "index": "22"
+    },
+    {
+      "topic": "vDialogueSharecropper1ETrentBascomTopic011",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Good luck to you out here.",
+      "index": "23"
+    },
+    {
+      "topic": "vDialogueSharecropper1ETrentBascomTopic012",
+      "topic_text": "Can't you just grow less crops?",
+      "emotion": "Neutral 50",
+      "response_text": "I wouldn't be able to meet the quota, and the NCR would kick me out of my job, anyway. Nah, it's better I get out on my own terms.",
+      "index": "24"
+    },
+    {
+      "topic": "vDialogueSharecropper1ETrentBascomTopic013",
+      "topic_text": "I'm looking for Corporal White. I was told that he'd spoken to you.",
+      "emotion": "Neutral 50",
+      "response_text": "Yes, he said he was looking into the water shortage, but I haven't heard back from him. Got the feeling he wasn't here in any official way.",
+      "index": "25"
+    }
+  ],
+  "conversation": [],
+  "combat": []
+}

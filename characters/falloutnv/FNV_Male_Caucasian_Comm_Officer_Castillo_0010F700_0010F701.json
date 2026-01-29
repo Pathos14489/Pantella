@@ -1,0 +1,109 @@
+{
+  "name": "Comm Officer Castillo",
+  "url": "/wiki/Castillo",
+  "dialogue_name": "RSAlphaCastillo.txt",
+  "dialogue_url": "/wiki/RSAlphaCastillo.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "0010F700",
+  "ref_id": "0010F701",
+  "editor_id": "RSAlphaCastillo",
+  "location": "Ranger Station Alpha",
+  "location_url": "/wiki/Ranger_Station_Alpha",
+  "descriptions": [
+    "Comm Officer Castillo is an NCR Ranger living at Ranger Station Alpha in 2281.",
+    "A straightforward Ranger, Castillo has never had a taste for history, preferring the abbreviated versions. When asked about the Rangers, he simply states they are the elite of the NCR military and the best fighters in the wasteland.",
+    "Return to Sender: Castillo is one of the people the player character can give the upgrade codes to."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "New California Republic Rangers",
+  "role": "Communications OfficerRanger",
+  "detailed_location": "Ranger Station Alpha",
+  "voice_actor": "Liam O'Brien",
+  "special": {
+    "Strength": 5,
+    "Perception": 6,
+    "Endurance": 6,
+    "Charisma": 4,
+    "Intelligence": 5,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "level": "6",
+  "tag_skills": [
+    {
+      "Guns:": "48"
+    },
+    {
+      "Sneak:": "48"
+    },
+    {
+      "Unarmed:": "48"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Neutral",
+  "voice_type": "MaleAdult05",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "{Player not in NCR gear}This post isn't someplace a civilian ought to be.",
+      "index": "1"
+    },
+    {
+      "topic": "RSAlphaQuestCommRangerAlphaTopic002",
+      "topic_text": "Anything going on around here?",
+      "emotion": "Neutral 50",
+      "response_text": "Just the usual. Legion scouts try to slip across the river a couple times a week, but they always end up floating downriver with holes in their heads.",
+      "index": "4"
+    },
+    {
+      "topic": "VMSRSAlphaQuestRSCommRangerAlphaTopic002",
+      "topic_text": "Sergeant Reyes at Camp Forlorn Hope sent me with a security update for your radio.",
+      "emotion": "Neutral 50",
+      "response_text": "{Player in NCR gear}Oh, right. She radioed ahead and mentioned that somebody was coming by.",
+      "index": "5"
+    },
+    {
+      "topic": "VMSRSAlphaQuestRSCommRangerAlphaTopic027",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Don't get killed out there.",
+      "index": "7"
+    },
+    {
+      "topic": "vDialogueRangerStationAlphaRSAlphaCastilloTopic000",
+      "topic_text": "What is this place?",
+      "emotion": "Neutral 50",
+      "response_text": "Ranger Station Alpha. Ranger Lineholm is in command here.",
+      "index": "8"
+    },
+    {
+      "topic": "vDialogueRangerStationAlphaRSAlphaCastilloTopic001",
+      "topic_text": "Tell me about the Rangers.",
+      "emotion": "Neutral 50",
+      "response_text": "I'm not really much of a historian. The short version is that the Rangers are the elite of the NCR military. Best fighters in the wasteland.",
+      "index": "9"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Don't get killed out there.",
+      "index": "10"
+    }
+  ],
+  "combat": []
+}

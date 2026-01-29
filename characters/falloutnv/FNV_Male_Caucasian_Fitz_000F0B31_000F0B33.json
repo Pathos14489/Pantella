@@ -1,0 +1,171 @@
+{
+  "name": "Fitz",
+  "url": "/wiki/Fitz",
+  "dialogue_name": "GnGFitz.txt",
+  "dialogue_url": "/wiki/GnGFitz.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": true,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000F0B31",
+  "ref_id": "000F0B33",
+  "editor_id": "GnGFitz",
+  "location": "Grub n' Gulp Rest Stop",
+  "location_url": "/wiki/Grub_n%27_Gulp_Rest_Stop",
+  "descriptions": [
+    "Fitz is the co-owner of the Grub n' Gulp Rest Stop with Lupe in 2281.",
+    "Fitz sells food to any travelers that decide to stop by. He sells a small number of various foods such as radroach meat and iguana bits.",
+    "Not Worth a Hill of Corn and Beans: Fitz is one of the three meat suppliers for Camp McCarran on Farber's list. He can be convinced to trade with McCarran either by being told he'll be paid in caps, or by being persuaded to trade in exchange for vegetables via a Speech 60 check or a Barter 60 check. Either skill check results in a larger reward than the former option."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Lupe(co-worker)New California Republic",
+  "role": "Meat vendor",
+  "detailed_location": "Grub n' Gulp rest stop",
+  "voice_actor": "Yuri Lowenthal",
+  "special": {
+    "Strength": 4,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 7,
+    "Intelligence": 5,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "level": "1",
+  "tag_skills": [
+    {
+      "Barter:": "34"
+    },
+    {
+      "Guns:": "32"
+    },
+    {
+      "Speech:": "34"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Neutral",
+  "voice_type": "MaleAdult01Default",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "Welcome to the Grub n' Gulp!",
+      "index": "1"
+    },
+    {
+      "topic": "VDialogueVegasEast1EFitzTopic000",
+      "topic_text": "Show me what you have for sale.",
+      "emotion": "Neutral 50",
+      "response_text": "Sure thing!",
+      "index": "3"
+    },
+    {
+      "topic": "VDialogueVegasEast1EFitzTopic001",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "See you later!",
+      "index": "5"
+    },
+    {
+      "topic": "VDialogueVegasEast1EFitzTopic002",
+      "topic_text": "May I ask you some questions?",
+      "emotion": "Neutral 50",
+      "response_text": "Sure. Fire away.",
+      "index": "6"
+    },
+    {
+      "topic": "VDialogueVegasEast1EFitzTopic003",
+      "topic_text": "Where can I find a doctor around here?",
+      "emotion": "Neutral 50",
+      "response_text": "Doctor Usanagi runs a medical clinic up the road.",
+      "index": "7"
+    },
+    {
+      "topic": "VDialogueVegasEast1EFitzTopic004",
+      "topic_text": "Is there any place to buy weapons and armor?",
+      "emotion": "Neutral 50",
+      "response_text": "I think there a few places, but I've heard that the Gun Runners sell the best.",
+      "index": "8"
+    },
+    {
+      "topic": "VDialogueVegasEast1EFitzTopic005",
+      "topic_text": "I don't have any more questions. Let's talk about something else.",
+      "emotion": "Neutral 50",
+      "response_text": "All right, then.",
+      "index": "9"
+    },
+    {
+      "topic": "VDialogueVegasEast1EFitzTopic006",
+      "topic_text": "McCarran is looking for a regular delivery of meat from local merchants.",
+      "emotion": "Neutral 50",
+      "response_text": "Really?  Well, I obviously couldn't supply enough to feed the entire camp, but I'm game.  What kind of caps are we talking here?",
+      "index": "10"
+    },
+    {
+      "topic": "VDialogueVegasEast1EFitzTopic007",
+      "topic_text": "Corporal Farber said they can pay you the going market price in caps.",
+      "emotion": "Neutral 50",
+      "response_text": "Hey, that sounds good to me.  No more wasted meat just laying around to rot.  I can keep my stock fresh and keep the caps flowing.",
+      "index": "11"
+    },
+    {
+      "topic": "VDialogueVegasEast1EFitzTopic008",
+      "topic_text": "They have an tons of vegetables and water.  How about expanding your business?",
+      "emotion": "Neutral 50",
+      "response_text": "Expanding isn't a bad idea.  Maybe I could open up a small cafe restaurant with the more diverse inventory...",
+      "index": "14"
+    },
+    {
+      "topic": "VDialogueVegasEast1EFitzTopic009",
+      "topic_text": "McCarran could work out a regular exchange of fresh vegetables and clean water.",
+      "emotion": "Neutral 50",
+      "response_text": "Rations do get tight from time-to-time and it would be nice to keep a regular stock of goods.",
+      "index": "17"
+    },
+    {
+      "topic": "VDialogueVegasEast1EFitzTopic010",
+      "topic_text": "Show me what you have for sale.",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah.",
+      "index": "20"
+    },
+    {
+      "topic": "VDialogueVegasEast1EFitzTopic011",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "See you later!",
+      "index": "21"
+    },
+    {
+      "topic": "VDialogueVegasEast1EFitzTopic012",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Good luck to ya.",
+      "index": "22"
+    },
+    {
+      "topic": "VDialogueVegasEast1EFitzTopic013",
+      "topic_text": "How's business?",
+      "emotion": "Neutral 50",
+      "response_text": "I do decent enough. The NCR patrols usually stop by for a quick bite, and travelers like yourself pass by a couple times a week.",
+      "index": "23"
+    },
+    {
+      "topic": "vDialogueGrubnGulp1EFitzTopic000",
+      "topic_text": "What is this place?",
+      "emotion": "Neutral 50",
+      "response_text": "Just a little rest stop that me and my good friend Lupe set up. Last stop on your way into New Vegas, first stop on your way out, that's what I say.",
+      "index": "24"
+    }
+  ],
+  "conversation": [],
+  "combat": []
+}

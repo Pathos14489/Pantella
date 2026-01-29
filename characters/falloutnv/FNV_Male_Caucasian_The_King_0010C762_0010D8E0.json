@@ -1,0 +1,991 @@
+{
+  "name": "The King",
+  "url": "/wiki/The_King",
+  "dialogue_name": "VFSTheKing.txt",
+  "dialogue_url": "/wiki/VFSTheKing.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "0010C762",
+  "ref_id": "0010D8E0",
+  "editor_id": "VFSTheKing",
+  "location": "King's School of Impersonation",
+  "location_url": "/wiki/King%27s_School_of_Impersonation",
+  "descriptions": [
+    "The King is an Elvis impersonator who leads a gang called the \"Kings,\" operating out of the School of Impersonation located in southern Freeside in 2281.",
+    "Born in the mid-2240s,",
+    "Unlike other gangs in the Mojave Wasteland, the Kings are built on respect and do not look for their next fight or skirmish. Instead, the Kings are staunch anarchists that believe in complete personal freedom and that \"every man is a king in ",
+    "The King's righthand man is Pacer, a childhood friend who sometimes tends to undermine his peaceful intentions. The Kings largely lets him do as he pleases unabated; tolerating his unscrupulous and violent tendencies towards strangers and squatters.",
+    "The King also owns a cyberdog named Rex that he bought from a prospector a few years ago. Rex has always been nothing but a cyberhound, but The King has become concerned for Rex as his brain is beginning to degrade, and hopes that traveling with the Courier will allow him to get the help he needs and give him a little more bite and a little less bark.",
+    "PC Playstation 3 If one speaks to The King about joining the Kings before the completion of his quest Nothin' But a Hound Dog, he might decline. Returning later after completing it, the option will not be reopened, (unless The King owes you a favor which is earned in another mission) and it will be thereafter impossible to join the King's gang. It is uncertain if this is a bug or intentional."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Kings",
+  "role": "The Kings gang leaderKing of Spades",
+  "detailed_location": "King's School of Impersonation",
+  "voice_actor": "James Horan",
+  "special": {
+    "Strength": 5,
+    "Perception": 6,
+    "Endurance": 6,
+    "Charisma": 5,
+    "Intelligence": 5,
+    "Agility": 7,
+    "Luck": 5
+  },
+  "level": "16",
+  "tag_skills": [
+    {
+      "Guns:": "94"
+    },
+    {
+      "Speech:": "90"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "150"
+    },
+    {
+      "Dam. Threshold:": "5"
+    }
+  ],
+  "karma": "Neutral",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "Look, Rexie, someone new's come to see us.{Sighs}Poor boy. He hasn't been feeling well lately. I'm the King. What can I do for you?",
+      "index": "1"
+    },
+    {
+      "topic": "VEndingKings",
+      "topic_text": "VEndingKings",
+      "emotion": "Neutral 50",
+      "response_text": "{Narrating}With the King dead and most of their gang slain by the Courier, the remaining Kings fled the area, never to be heard from again.",
+      "index": "18"
+    },
+    {
+      "topic": "VFSKingHsuOfferStart",
+      "topic_text": "VFSKingHsuOfferStart",
+      "emotion": "Neutral 50",
+      "response_text": "Let me guess. The NCR couldn't get me to dance to their tune so now they're asking again a little less nicely, right?",
+      "index": "43"
+    },
+    {
+      "topic": "VFSKingSendsPlayerAfterPacer",
+      "topic_text": "VFSKingSendsPlayerAfterPacer",
+      "emotion": "Neutral 50",
+      "response_text": "I want you to back him up. See this through, and there'll be something good waiting for you when you get back.",
+      "index": "44"
+    },
+    {
+      "topic": "VFSKingSendsPlayerToNegotiate",
+      "topic_text": "VFSKingSendsPlayerToNegotiate",
+      "emotion": "Neutral 50",
+      "response_text": "What is that fool doing? I need you to head out there and try to defuse the situation. Tell them I'm willing to cooperate.",
+      "index": "45"
+    },
+    {
+      "topic": "VFSKingUltimatumStart",
+      "topic_text": "VFSKingUltimatumStart",
+      "emotion": "Neutral 50",
+      "response_text": "Let me guess. The NCR couldn't get me to dance to their tune so now they're asking again a little less nicely, right?",
+      "index": "46"
+    },
+    {
+      "topic": "VFreeformFreesideFSTheKingTopic000",
+      "topic_text": "50 caps.",
+      "emotion": "Neutral 50",
+      "response_text": "That's Pace for you. He means well, but he doesn't like strangers. Here, to make amends.",
+      "index": "47"
+    },
+    {
+      "topic": "VFreeformFreesideVFSTheKingTopic000",
+      "topic_text": "500 caps.",
+      "emotion": "Neutral 50",
+      "response_text": "You're kidding me, right? No, from the look in your eye I can tell you're not kidding. Wow, you should really be more careful with your money.",
+      "index": "49"
+    },
+    {
+      "topic": "VFreeformFreesideVFSTheKingTopic001",
+      "topic_text": "It's not worth mentioning.",
+      "emotion": "Neutral 50",
+      "response_text": "You're modest. I respect that. So what can I do for you?",
+      "index": "53"
+    },
+    {
+      "topic": "VFreeformFreesideVFSTheKingTopic002",
+      "topic_text": "Nothing, I talked my way in.",
+      "emotion": "Neutral 50",
+      "response_text": "Pace must be losing his touch. Either that or you're a smooth one. So what can I do for you?",
+      "index": "54"
+    },
+    {
+      "topic": "VFreeformFreesideVFSTheKingTopic003",
+      "topic_text": "I'm looking for a way into the Strip.",
+      "emotion": "Neutral 50",
+      "response_text": "I might just be able to help you with that. But it's not something I do easily, or often. You'd have to earn it. You willing to do that?",
+      "index": "55"
+    },
+    {
+      "topic": "VFreeformFreesideVFSTheKingTopic006",
+      "topic_text": "Sure. What do I have to do?",
+      "emotion": "Neutral 50",
+      "response_text": "I'll start you off with something easy. Did you notice the bodyguards for hire near the gates when you entered Freeside?",
+      "index": "56"
+    },
+    {
+      "topic": "VFreeformFreesideVFSTheKingTopic007",
+      "topic_text": "Not really. I guess I'll go find another way.",
+      "emotion": "Neutral 50",
+      "response_text": "Then I wish you luck. But know that there are only two ways in there, me or those robots. Good luck working things out with the tin cans.",
+      "index": "57"
+    },
+    {
+      "topic": "VFreeformFreesideVFSTheKingTopic008",
+      "topic_text": "Yes.",
+      "emotion": "Neutral 50",
+      "response_text": "It's good money if you can stay alive long enough. Freeside's not as safe as it used to be, so the money is well earned.",
+      "index": "58"
+    },
+    {
+      "topic": "VFreeformFreesideVFSTheKingTopic009",
+      "topic_text": "Sure, I've got one waiting outside for me.",
+      "emotion": "Neutral 50",
+      "response_text": "It's good money if you can stay alive long enough. Freeside's not as safe as it used to be, so the money is well earned.",
+      "index": "63"
+    },
+    {
+      "topic": "VFreeformFreesideVFSTheKingTopic011",
+      "topic_text": "Sure.",
+      "emotion": "Neutral 50",
+      "response_text": "Okay, then. Once you part ways, return here. I'll look forward to hearing your report. Oh, and take this to cover the hiring cost.",
+      "index": "68"
+    },
+    {
+      "topic": "VFreeformFreesideVFSTheKingTopic012",
+      "topic_text": "Why are you so interested in this?",
+      "emotion": "Neutral 50",
+      "response_text": "You may have noticed that some of those guards out there are Kings, too. I'm just looking out for my men.",
+      "index": "69"
+    },
+    {
+      "topic": "VFreeformFreesideVFSTheKingTopic013",
+      "topic_text": "Why can't your men look into this?",
+      "emotion": "Neutral 50",
+      "response_text": "I've tried, but he can smell a King a mile away. Probably knows all our faces by now. He's not a stupid man, I'll give him that.",
+      "index": "71"
+    },
+    {
+      "topic": "VFreeformFreesideVFSTheKingTopic014",
+      "topic_text": "I have better things to do.",
+      "emotion": "Neutral 50",
+      "response_text": "That's too bad. We could have helped each other out. If you change your mind, stop back. The job might still be waiting for you.",
+      "index": "74"
+    },
+    {
+      "topic": "VFreeformFreesideVFSTheKingTopic015",
+      "topic_text": "Orris is a fraud. He fakes attacks on his clients and then plays hero.",
+      "emotion": "Neutral 50",
+      "response_text": "So that's how it happens... Okay, then. I'll have some guys pull him off the street when no one's looking.",
+      "index": "75"
+    },
+    {
+      "topic": "VFreeformFreesideVFSTheKingTopic016",
+      "topic_text": "Not much. He seemed legit to me.",
+      "emotion": "Neutral 50",
+      "response_text": "Oh he did, did he? Well that just ain't good enough. Get back out there and hire him again. Hire him a hundred times if that's what it takes.",
+      "index": "81"
+    },
+    {
+      "topic": "VFreeformFreesideVFSTheKingTopic017",
+      "topic_text": "Orris shouldn't be a problem any longer.",
+      "emotion": "Neutral 50",
+      "response_text": "Ah, so it went down like that, huh? I guess it can't be helped now.",
+      "index": "83"
+    },
+    {
+      "topic": "VFreeformFreesideVFSTheKingTopic018",
+      "topic_text": "About that favor you owe me...",
+      "emotion": "Neutral 50",
+      "response_text": "Ask away.",
+      "index": "85"
+    },
+    {
+      "topic": "VFreeformFreesideVFSTheKingTopic019",
+      "topic_text": "I need you to stop the violence against NCR citizens in Freeside.",
+      "emotion": "Neutral 50",
+      "response_text": "So I'm supposed to just start giving in to the demands of random strangers that come in here, huh? I don't think so.",
+      "index": "86"
+    },
+    {
+      "topic": "VFreeformFreesideVFSTheKingTopic020",
+      "topic_text": "The NCR is distributing supplies in a building down by the old train station.",
+      "emotion": "Neutral 50",
+      "response_text": "Handing out supplies? Like food and stuff? That ain't nothing to get ruffled over. You find anything else?",
+      "index": "89"
+    },
+    {
+      "topic": "VFreeformFreesideVFSTheKingTopic021",
+      "topic_text": "Where did you get the robot dog?",
+      "emotion": "Neutral 50",
+      "response_text": "I got Rex here from a salvager a few years ago. He was a little dinged up when I got him, but one of the Followers fixed him right up.",
+      "index": "90"
+    },
+    {
+      "topic": "VFreeformFreesideVFSTheKingTopic022",
+      "topic_text": "Is there something wrong with him?",
+      "emotion": "Neutral 50",
+      "response_text": "He's been acting peculiar for some time now. I took him to the Followers and had him checked out, and they said his brain is bad or something.",
+      "index": "91"
+    },
+    {
+      "topic": "VFreeformFreesideVFSTheKingTopic023",
+      "topic_text": "He doesn't seem very happy.",
+      "emotion": "Neutral 50",
+      "response_text": "He goes through spells like this from time to time. The Followers said his brain is going bad or something.",
+      "index": "92"
+    },
+    {
+      "topic": "VFreeformFreesideVFSTheKingTopic024",
+      "topic_text": "Let's talk about something else.",
+      "emotion": "Neutral 50",
+      "response_text": "Sure, what's on your mind?",
+      "index": "93"
+    },
+    {
+      "topic": "VFreeformFreesideVFSTheKingTopic025",
+      "topic_text": "What can you tell me about Freeside?",
+      "emotion": "Neutral 50",
+      "response_text": "To understand Freeside, you have to look back a few years. Originally, we were all just tribes making a living in this area.",
+      "index": "94"
+    },
+    {
+      "topic": "VFreeformFreesideVFSTheKingTopic027",
+      "topic_text": "Tell me about the Kings.",
+      "emotion": "Neutral 50",
+      "response_text": "We're different than other gangs, and not just because we dress better. We're not just a group of thugs looking for our next fight.",
+      "index": "100"
+    },
+    {
+      "topic": "VFreeformFreesideVFSTheKingTopic028",
+      "topic_text": "I have other things to do.",
+      "emotion": "Neutral 50",
+      "response_text": "That's all right. My friends got beat so bad they'll be recuperating for quite some time, so head over there when you can.",
+      "index": "102"
+    },
+    {
+      "topic": "VFreeformFreesideVFSTheKingTopic029",
+      "topic_text": "Do you always charge people to come talk to you?",
+      "emotion": "Neutral 50",
+      "response_text": "Charge? Ha ha. Pace must be at it again. What did he take you for?",
+      "index": "103"
+    },
+    {
+      "topic": "VFreeformFreesideVFSTheKingTopic030",
+      "topic_text": "This building is... interesting. What do you know about it?",
+      "emotion": "Neutral 50",
+      "response_text": "Near as I can tell, it was some sort of religious institution.",
+      "index": "104"
+    },
+    {
+      "topic": "VFreeformFreesideVFSTheKingTopic031",
+      "topic_text": "Can they do anything?",
+      "emotion": "Neutral 50",
+      "response_text": "No, they said they don't have the tools to help him.",
+      "index": "107"
+    },
+    {
+      "topic": "VFreeformFreesideVFSTheKingTopic032",
+      "topic_text": "Is he going to be okay?",
+      "emotion": "Neutral 50",
+      "response_text": "For now, but they said eventually he's going to get worse. I don't know what to do.",
+      "index": "108"
+    },
+    {
+      "topic": "VFreeformFreesideVFSTheKingTopic033",
+      "topic_text": "Can I help somehow?",
+      "emotion": "Neutral 50",
+      "response_text": "I don't know. Maybe. If you found a way to help my poor Rex here, I'd be much obliged.",
+      "index": "109"
+    },
+    {
+      "topic": "VFreeformFreesideVFSTheKingTopic034",
+      "topic_text": "Absolutely. I'll see that he gets better.",
+      "emotion": "Neutral 50",
+      "response_text": "I can't thank you enough. Now, there's a few things you should know about ol' Rex here if you're going to be traveling together.",
+      "index": "111"
+    },
+    {
+      "topic": "VFreeformFreesideVFSTheKingTopic035",
+      "topic_text": "I'll pass.",
+      "emotion": "Neutral 50",
+      "response_text": "I completely understand. No reason you should take on someone else's problems. Let me know if you change your mind, though.",
+      "index": "117"
+    },
+    {
+      "topic": "VFreeformFreesideVFSTheKingTopic036",
+      "topic_text": "About Rex here...",
+      "emotion": "Neutral 50",
+      "response_text": "What about him?",
+      "index": "119"
+    },
+    {
+      "topic": "VFreeformFreesideVFSTheKingTopic037",
+      "topic_text": "Let's talk about something else.",
+      "emotion": "Neutral 50",
+      "response_text": "Like what?",
+      "index": "120"
+    },
+    {
+      "topic": "VFreeformFreesideVFSTheKingTopic038",
+      "topic_text": "I think I already killed him...",
+      "emotion": "Neutral 50",
+      "response_text": "So it went down like that, huh? I guess it can't be helped now.",
+      "index": "121"
+    },
+    {
+      "topic": "VFreeformFreesideVFSTheKingTopic039",
+      "topic_text": "I was hoping you might have some work for me.",
+      "emotion": "Neutral 50",
+      "response_text": "Maybe so. Maybe so. You look like you might be able to handle yourself. Tell you what.",
+      "index": "123"
+    },
+    {
+      "topic": "VFreeformFreesideVFSTheKingTopic041",
+      "topic_text": "Orris left town after I had a little talk with him.",
+      "emotion": "Neutral 50",
+      "response_text": "Convinced him, huh? I could use more men with your powers of persuasion.",
+      "index": "127"
+    },
+    {
+      "topic": "VFreeformFreesideVFSTheKingTopic042",
+      "topic_text": "Will it be dangerous? I like dangerous.",
+      "emotion": "Neutral 50",
+      "response_text": "In that case, some of the things I need handled will be right up your alley.",
+      "index": "129"
+    },
+    {
+      "topic": "VFreeformFreesideVFSTheKingTopic045",
+      "topic_text": "I'm a little busy right now.",
+      "emotion": "Neutral 50",
+      "response_text": "I beg your pardon, then. I'll let you get about your business.",
+      "index": "130"
+    },
+    {
+      "topic": "VFreeformFreesideVFSTheKingTopic046{Learned about Doc Henry and tell the King}",
+      "topic_text": "Julie Farkas said a man in Jacobstown can treat Rex.",
+      "emotion": "Neutral 50",
+      "response_text": "She said what? Why didn't she just say so when I was there? Actually, come to think of it, I was pretty angry when I went down there.",
+      "index": "131"
+    },
+    {
+      "topic": "VFreeformFreesideVFSTheKingTopic047",
+      "topic_text": "I'm afraid so.",
+      "emotion": "Neutral 50",
+      "response_text": "Then I must refuse. The people here have the right to do what they want and are beholden to none. I won't take that away from them.",
+      "index": "137"
+    },
+    {
+      "topic": "VFreeformFreesideVFSTheKingTopic048",
+      "topic_text": "The violence needs to stop.",
+      "emotion": "Neutral 50",
+      "response_text": "And whose job is it to stop it? Yours? Mine? Who are we to tell people what to do? No man has that right.",
+      "index": "138"
+    },
+    {
+      "topic": "VFreeformFreesideVFSTheKingTopic049",
+      "topic_text": "There's still time to solve this peacefully.",
+      "emotion": "Neutral 50",
+      "response_text": "Says the one with a squad of armed soldiers behind them. No, I don't think a peaceful solution is possible. Not anymore.",
+      "index": "139"
+    },
+    {
+      "topic": "VFreeformFreesideVFSTheKingTopic050",
+      "topic_text": "These men have orders to kill you all if you refuse. Are you sure?",
+      "emotion": "Neutral 50",
+      "response_text": "That I don't want to sign away my freedom and that of all the people I'm responsible for at gunpoint? Yeah, I'm sure.",
+      "index": "140"
+    },
+    {
+      "topic": "VFreeformFreesideVFSTheKingTopic051{Speech check >= 80}",
+      "topic_text": "And when you're dead? What will happen to their freedom then?",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] Honestly, I hadn't thought it through that far. I'd guess someone would come and take over this place.",
+      "index": "141"
+    },
+    {
+      "topic": "VFreeformFreesideVFSTheKingTopic052",
+      "topic_text": "The NCR is just trying to protect its people.",
+      "emotion": "Neutral 50",
+      "response_text": "And I'm trying to protect mine. If the NCR wants peace so much, the first step would be to get these soldiers out of here.",
+      "index": "146"
+    },
+    {
+      "topic": "VFreeformFreesideVFSTheKingTopic053",
+      "topic_text": "Actually, they want to make you an offer.",
+      "emotion": "Neutral 50",
+      "response_text": "An offer, huh? All right, let's hear it.",
+      "index": "147"
+    },
+    {
+      "topic": "VFreeformFreesideVFSTheKingTopic054",
+      "topic_text": "You've got them all wrong.",
+      "emotion": "Neutral 50",
+      "response_text": "Wrong, huh? And I suppose they sent all of these soldiers just to make nice. Lucky me.",
+      "index": "148"
+    },
+    {
+      "topic": "VFreeformFreesideVFSTheKingTopic055",
+      "topic_text": "What if they are?",
+      "emotion": "Neutral 50",
+      "response_text": "Then I'm afraid we're going to have ourselves a tussle. Now say what you came to say or get out.",
+      "index": "149"
+    },
+    {
+      "topic": "VFreeformFreesideVFSTheKingTopic056",
+      "topic_text": "Freeside gets more food, water, and electricity.",
+      "emotion": "Neutral 50",
+      "response_text": "That doesn't sound half bad... what's the catch?",
+      "index": "150"
+    },
+    {
+      "topic": "VFreeformFreesideVFSTheKingTopic060",
+      "topic_text": "The Kings have to stop the violence against people from the NCR.",
+      "emotion": "Neutral 50",
+      "response_text": "Hmmm, people around here *would* be a lot less ornery if there were more supplies to go around. It'd be rough at first, but I think we could manage.",
+      "index": "151"
+    },
+    {
+      "topic": "VFreeformFreesideVFSTheKingTopic063",
+      "topic_text": "No catch. You just make sure no King attack an NCR citizen from now on.",
+      "emotion": "Neutral 50",
+      "response_text": "That's not so bad. I might have to make an example of a few of the more hotheaded guys, but otherwise, that sounds fair.",
+      "index": "153"
+    },
+    {
+      "topic": "VFreeformFreesideVFSTheKingTopic065",
+      "topic_text": "So why isn't every man in Freeside in your gang?",
+      "emotion": "Neutral 50",
+      "response_text": "We've tried to pass our philosophy on to the people of Freeside, but not everyone is ready to be a King.",
+      "index": "155"
+    },
+    {
+      "topic": "VFreeformFreesideVFSTheKingTopic066",
+      "topic_text": "I want to join the Kings.",
+      "emotion": "Neutral 50",
+      "response_text": "Normally, we don't let outsiders join, but I think I can make an exception in your case. I'll have one of the guys spread the word.",
+      "index": "158"
+    },
+    {
+      "topic": "VFreeformFreesideVFSTheKingTopic067",
+      "topic_text": "Can you get me into the Strip?",
+      "emotion": "Neutral 50",
+      "response_text": "Sure can. I have a friend who has just what you're looking for, has a shop over yonder by the east gate, named Mick & Ralph's.",
+      "index": "166"
+    },
+    {
+      "topic": "VFreeformFreesideVFSTheKingTopic068",
+      "topic_text": "I could really use some money...",
+      "emotion": "Neutral 50",
+      "response_text": "Caps are a little tight these days, but with our guards making more and those supplies comin' in I reckon I can spare some.",
+      "index": "168"
+    },
+    {
+      "topic": "VFreeformFreesideVFSTheKingTopic069",
+      "topic_text": "I'd like to think about it.",
+      "emotion": "Neutral 50",
+      "response_text": "That's a good idea. I don't give out favors everyday, so you probably shouldn't rush to pick something.",
+      "index": "169"
+    },
+    {
+      "topic": "VFreeformFreesideVFSTheKingTopic070",
+      "topic_text": "Tell me more about him.",
+      "emotion": "Neutral 50",
+      "response_text": "Not a whole lot to tell. There were only a few books left in here when we found it, and those were rotted away.",
+      "index": "171"
+    },
+    {
+      "topic": "VFreeformFreesideVFSTheKingTopic071",
+      "topic_text": "I wanted to talk about something else.",
+      "emotion": "Neutral 50",
+      "response_text": "Fine by me, just remember I owe you one. Now what did you want to talk about?",
+      "index": "174"
+    },
+    {
+      "topic": "VFreeformFreesideVFSTheKingTopic072",
+      "topic_text": "I need you to stop the violence against NCR citizens in Freeside.",
+      "emotion": "Neutral 50",
+      "response_text": "Whoa... that's a doozy. Truth be told, I don't even know if I can pull something like that off.",
+      "index": "175"
+    },
+    {
+      "topic": "VFreeformFreesideVFSTheKingTopic073",
+      "topic_text": "All I'm asking is that you try.",
+      "emotion": "Neutral 50",
+      "response_text": "I'll give it my best. You've earned that much. But this makes us even, you hear?",
+      "index": "176"
+    },
+    {
+      "topic": "VFreeformFreesideVFSTheKingTopic074",
+      "topic_text": "The Kings will follow your leadership.",
+      "emotion": "Neutral 50",
+      "response_text": "Damn straight they will. It's some of the other locals that I'm worried about.",
+      "index": "177"
+    },
+    {
+      "topic": "VFreeformFreesideVFSTheKingTopic075",
+      "topic_text": "Well, if you can't do it...",
+      "emotion": "Neutral 50",
+      "response_text": "Hold on now, I didn't say I couldn't do it, just that I couldn't guarantee it, and even that's probably stretching the truth a little.",
+      "index": "180"
+    },
+    {
+      "topic": "VFreeformFreesideVFSTheKingTopic076",
+      "topic_text": "I need you to stop the violence against NCR citizens.",
+      "emotion": "Neutral 50",
+      "response_text": "Is that so? That's a mighty tall order for someone I barely know. Now, if you were to help me out some, that might change my mind.",
+      "index": "182"
+    },
+    {
+      "topic": "VFreeformFreesideVFSTheKingTopic077",
+      "topic_text": "Can I join the Kings?",
+      "emotion": "Neutral 50",
+      "response_text": "Whoa, there. Not just anyone can be a King. First of all, we usually only accept people native to the area.",
+      "index": "186"
+    },
+    {
+      "topic": "VFreeformFreesideVFSTheKingTopic078",
+      "topic_text": "I'll head over right away.",
+      "emotion": "Neutral 50",
+      "response_text": "Good. I like that enthusiasm. Return when you have some information we can use.",
+      "index": "189"
+    },
+    {
+      "topic": "VFreeformFreesideVFSTheKingTopic079",
+      "topic_text": "I'll look into it when I can.",
+      "emotion": "Neutral 50",
+      "response_text": "Good. Return here when you've found something.",
+      "index": "190"
+    },
+    {
+      "topic": "VFreeformFreesideVFSTheKingTopic080",
+      "topic_text": "The Local men were attacked by soldiers. One of the men was identified by rank.",
+      "emotion": "Neutral 50",
+      "response_text": "Bunch of soldier boys, huh? They usually don't come around these parts since their big base is on the other side of the Strip.",
+      "index": "191"
+    },
+    {
+      "topic": "VFreeformFreesideVFSTheKingTopic081",
+      "topic_text": "If this was a school, what was taught here?",
+      "emotion": "Neutral 50",
+      "response_text": "As far as we can tell, the guy that built this place was considered the coolest of the cool, and taught other people how to be more like him.",
+      "index": "196"
+    },
+    {
+      "topic": "VFreeformFreesideVFSTheKingTopic083",
+      "topic_text": "I'm still looking into the matter.",
+      "emotion": "Neutral 50",
+      "response_text": "Then there's no sense in us talkin' about it.",
+      "index": "198"
+    },
+    {
+      "topic": "VFreeformFreesideVFSTheKingTopic084",
+      "topic_text": "I wanted to ask you some questions.",
+      "emotion": "Neutral 50",
+      "response_text": "Go ahead. Throw some questions at me.",
+      "index": "199"
+    },
+    {
+      "topic": "VFreeformFreesideVFSTheKingTopic085",
+      "topic_text": "They refuse to serve Locals.",
+      "emotion": "Neutral 50",
+      "response_text": "Ah, that would explain the goons. They're here to keep people like my friends away from the food. That ain't something I support. No sir.",
+      "index": "200"
+    },
+    {
+      "topic": "VFreeformFreesideVFSTheKingTopic086",
+      "topic_text": "I still haven't found anything.",
+      "emotion": "Neutral 50",
+      "response_text": "Keep at it. Those boys are here for a reason.",
+      "index": "201"
+    },
+    {
+      "topic": "VFreeformFreesideVFSTheKingTopic087",
+      "topic_text": "Can I ask you a few questions?",
+      "emotion": "Neutral 50",
+      "response_text": "Sure can. What did you want to know?",
+      "index": "202"
+    },
+    {
+      "topic": "VFreeformFreesideVFSTheKingTopic088",
+      "topic_text": "It seemed fairly innocent.",
+      "emotion": "Neutral 50",
+      "response_text": "Nothing's innocent in Freeside. You should know that by now.",
+      "index": "203"
+    },
+    {
+      "topic": "VFreeformFreesideVFSTheKingTopic090",
+      "topic_text": "Let's talk about something else.",
+      "emotion": "Neutral 50",
+      "response_text": "Sure thing. What'd you have in mind?",
+      "index": "206"
+    },
+    {
+      "topic": "VFreeformFreesideVFSTheKingTopic091",
+      "topic_text": "And that's where you got the name from.",
+      "emotion": "Neutral 50",
+      "response_text": "Well, that and the giant sign outside. This place could have been \"The King's House of Dog Chow\" and I still would have taken the name.",
+      "index": "207"
+    },
+    {
+      "topic": "VFreeformFreesideVFSTheKingTopic092",
+      "topic_text": "Is that what you guys do, pretend to be this guy?",
+      "emotion": "Neutral 50",
+      "response_text": "Somethin' like that, yeah. There were some working tapes here when we first got here, so we know what he sounded like.",
+      "index": "209"
+    },
+    {
+      "topic": "VFreeformFreesideVFSTheKingTopic094",
+      "topic_text": "What are you going to do?",
+      "emotion": "Neutral 50",
+      "response_text": "I'm gonna see that those supplies are distributed a little m{ore}- what the hell?",
+      "index": "212"
+    },
+    {
+      "topic": "VFreeformFreesideVFSTheKingTopic095",
+      "topic_text": "They said someone was sent to discuss the issue with you.",
+      "emotion": "Neutral 50",
+      "response_text": "Wait a minute, wait a minute. They said what?",
+      "index": "213"
+    },
+    {
+      "topic": "VFreeformFreesideVFSTheKingTopic096",
+      "topic_text": "Let's not act rashly here.",
+      "emotion": "Neutral 50",
+      "response_text": "Don't worry, I'm not gonna do anything uncalled for.",
+      "index": "214"
+    },
+    {
+      "topic": "VFreeformFreesideVFSTheKingTopic097",
+      "topic_text": "They said the man was severely beaten and barely survived.",
+      "emotion": "Neutral 50",
+      "response_text": "Huh, that would explain why they're all riled at us. Seems like we have a big misunderst{anding}- what the hell?",
+      "index": "215"
+    },
+    {
+      "topic": "VFreeformFreesideVFSTheKingTopic099",
+      "topic_text": "What can you tell me about Pacer?",
+      "emotion": "Neutral 50",
+      "response_text": "Pace? He and I grew up together around here. We've been through a lot together, and there's no man I'd rather have at my side in a pinch.",
+      "index": "216"
+    },
+    {
+      "topic": "VFreeformFreesideVFSTheKingTopic100",
+      "topic_text": "Who are the important people in Freeside?",
+      "emotion": "Neutral 50",
+      "response_text": "There's me, but I don't really like talking about myself. There's Julie Farkas and the other Followers down at the ol' Mormon Fort.",
+      "index": "219"
+    },
+    {
+      "topic": "VFreeformFreesideVFSTheKingTopic101",
+      "topic_text": "Tell me about Julie Farkas.",
+      "emotion": "Neutral 50",
+      "response_text": "Julie represents the Followers of the Apocalypse. They're a group that tries to help people out whenever they can, so we get along just fine.",
+      "index": "223"
+    },
+    {
+      "topic": "VFreeformFreesideVFSTheKingTopic102",
+      "topic_text": "I'd like to hear about the Garret Twins.",
+      "emotion": "Neutral 50",
+      "response_text": "Them twins run the Atomic Wrangler, the only working casino here in Freeside. It's become pretty much{thee}the place to go around these parts.",
+      "index": "227"
+    },
+    {
+      "topic": "VFreeformFreesideVFSTheKingTopic103",
+      "topic_text": "Who are the Van Graffs?",
+      "emotion": "Neutral 50",
+      "response_text": "They're a family-run business from out west that deal in weapons mostly. A word of caution, though. They're not a friendly bunch. Not at all.",
+      "index": "229"
+    },
+    {
+      "topic": "VFreeformFreesideVFSTheKingTopic104",
+      "topic_text": "What's the skinny on Mick and Ralph?",
+      "emotion": "Neutral 50",
+      "response_text": "Mick and Ralph sell all sorts of things at a small store over by the east gate. They've done all right by us, and they'll do all right by you.",
+      "index": "232"
+    },
+    {
+      "topic": "VFreeformFreesideVFSTheKingTopic105",
+      "topic_text": "They were distributing supplies down by the old train station, but I dealt with them.",
+      "emotion": "Neutral 50",
+      "response_text": "I'll send some guys to check out your story, but that's some good news for a change.",
+      "index": "234"
+    },
+    {
+      "topic": "VFreeformFreesideVFSTheKingTopic107",
+      "topic_text": "I hate to tell you this, but Rex is dead.",
+      "emotion": "Neutral 50",
+      "response_text": "{Overwhelmed by emotion}That's... that's terrible. I hope the poor little guy gave as good as he got.{Sad, but proud}He always was a fighter.",
+      "index": "238"
+    },
+    {
+      "topic": "VFreeformFreesideVFSTheKingTopic109",
+      "topic_text": "You know, I really don't pay attention to him, so your guess is as good as mine.",
+      "emotion": "Neutral 50",
+      "response_text": "I expect you to treat my Rexie with a little more care. I'm expecting him back now, you hear?",
+      "index": "240"
+    },
+    {
+      "topic": "VFreeformFreesideVFSTheKingTopic110",
+      "topic_text": "He sure did.",
+      "emotion": "Neutral 50",
+      "response_text": "You're a man of your word, no doubt about it. I can't thank you enough.",
+      "index": "242"
+    },
+    {
+      "topic": "VFreeformFreesideVFSTheKingTopic111",
+      "topic_text": "I don't have to give him back just yet, do I?",
+      "emotion": "Neutral 50",
+      "response_text": "No no, you can hold onto him for a little while longer, I think. You deserve that much at least, for what you've done.",
+      "index": "244"
+    },
+    {
+      "topic": "VFreeformFreesideVFSTheKingTopic112",
+      "topic_text": "Should I leave you two alone?",
+      "emotion": "Neutral 50",
+      "response_text": "Naw, I'm just happy to see my pup back on his feet and happy. I can't thank you enough for this.",
+      "index": "246"
+    },
+    {
+      "topic": "VMS29KingOfferStart",
+      "topic_text": "VMS29KingOfferStart",
+      "emotion": "Neutral 50",
+      "response_text": "Okay, I need some answers, now. These guys just barged in here and said they were under orders to keep me here until you arrived.",
+      "index": "248"
+    },
+    {
+      "topic": "VMS29KingUltimatumStart",
+      "topic_text": "VMS29KingUltimatumStart",
+      "emotion": "Neutral 50",
+      "response_text": "Maybe you can tell me what the hell is going on here. These stony face bastards haven't said a word other than to say they're here under orders.",
+      "index": "250"
+    },
+    {
+      "topic": "VMS29VFSTheKingTopic000",
+      "topic_text": "I'm here to deliver an ultimatum from the NCR. Cease hostilities against the NCR or perish.",
+      "emotion": "Neutral 50",
+      "response_text": "An ultimatum? Do you even know who you're talking to? We're the Kings, and no King will ever accept an ultimatum.",
+      "index": "251"
+    },
+    {
+      "topic": "VMS29VFSTheKingTopic001",
+      "topic_text": "The NCR wants you to curb the violence in Freeside. Or else.",
+      "emotion": "Neutral 50",
+      "response_text": "You know, it's that \"or else\" part that gets stuck in my craw. It just sounds a little too much like you're trying to tell us what to do.",
+      "index": "253"
+    },
+    {
+      "topic": "VMS29VFSTheKingTopic002",
+      "topic_text": "NCR citizens are dying in Freeside and the NCR wants you to stop it.",
+      "emotion": "Neutral 50",
+      "response_text": "Well, Freeside citizens are also being attacked and I'd like you all to stop it, but I'm guessing that's not going to happen, is it?",
+      "index": "255"
+    },
+    {
+      "topic": "VMS29VFSTheKingTopic003",
+      "topic_text": "I've been instructed to offer you more resources in exchange for your word that the violence stops.",
+      "emotion": "Neutral 50",
+      "response_text": "That sounds fair. And all I have to do is try to tone down the attacks on the Squatters, you say?",
+      "index": "257"
+    },
+    {
+      "topic": "VMS29VFSTheKingTopic004",
+      "topic_text": "I apologize for their rudeness. The NCR wants peace in Freeside, and offers additional supplies.",
+      "emotion": "Neutral 50",
+      "response_text": "And I suppose they want me to help see that happen? That seems pretty reasonable.",
+      "index": "258"
+    },
+    {
+      "topic": "VMS29VFSTheKingTopic005",
+      "topic_text": "Don't take that tone with me. These soldiers would wipe the floor with your men.",
+      "emotion": "Neutral 50",
+      "response_text": "Sounds like a challenge. Boys, let's do this!",
+      "index": "259"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYEGoodbye.",
+      "topic_text": "I have to go.",
+      "emotion": "Neutral 50",
+      "response_text": "All right. I'll see you later.",
+      "index": "260"
+    },
+    {
+      "topic": "VFSKingGreetsPlayerWithLadies",
+      "topic_text": "VFSKingGreetsPlayerWithLadies",
+      "emotion": "Neutral 50",
+      "response_text": "Ah, my little friend has come at last. Not me, darling, though you were doing just fine.",
+      "index": "261"
+    },
+    {
+      "topic": "VFSKingTellsLadiesToLeave",
+      "topic_text": "VFSKingTellsLadiesToLeave",
+      "emotion": "Neutral 50",
+      "response_text": "Ladies, take five. I need to talk to my friend here.",
+      "index": "262"
+    },
+    {
+      "topic": "VFSKingTellsPacerToAttack",
+      "topic_text": "VFSKingTellsPacerToAttack",
+      "emotion": "Neutral 50",
+      "response_text": "Pace, I want you to take some guys down there and seize half of those supplies.",
+      "index": "263"
+    },
+    {
+      "topic": "VFSKingTellsRexToGoWithYou",
+      "topic_text": "VFSKingTellsRexToGoWithYou",
+      "emotion": "Neutral 50",
+      "response_text": "Rex, this is your new master. Protect him as you would me.",
+      "index": "264"
+    },
+    {
+      "topic": "VFSKingThanksPacer",
+      "topic_text": "VFSKingThanksPacer",
+      "emotion": "Neutral 50",
+      "response_text": "We'll deal with that should the time come, Pace. Now I'm sure these gentlemen are as anxious to get out of here as we are to see them go.",
+      "index": "266"
+    },
+    {
+      "topic": "VMS19PacerAttackingNews",
+      "topic_text": "VMS19PacerAttackingNews",
+      "emotion": "Neutral 50",
+      "response_text": "Lay it on me. What's going on?",
+      "index": "267"
+    },
+    {
+      "topic": "VMS29KingAndPacerArgue",
+      "topic_text": "VMS29KingAndPacerArgue",
+      "emotion": "Neutral 50",
+      "response_text": "Pace, this isn't really a good time to have this discussion...",
+      "index": "268"
+    }
+  ],
+  "combat": [
+    {
+      "topic": "AcceptYield",
+      "topic_text": "AcceptYield",
+      "emotion": "Neutral 50",
+      "response_text": "You best not do that again.",
+      "index": "270"
+    },
+    {
+      "topic": "Assault",
+      "topic_text": "Assault",
+      "emotion": "Neutral 50",
+      "response_text": "You wanna tussle?",
+      "index": "271"
+    },
+    {
+      "topic": "AssaultNoCrime",
+      "topic_text": "AssaultNoCrime",
+      "emotion": "Neutral 50",
+      "response_text": "Now that just wasn't called for.",
+      "index": "272"
+    },
+    {
+      "topic": "Attack",
+      "topic_text": "Attack",
+      "emotion": "Neutral 50",
+      "response_text": "Huh!",
+      "index": "273"
+    },
+    {
+      "topic": "AvoidThreat",
+      "topic_text": "AvoidThreat",
+      "emotion": "Neutral 50",
+      "response_text": "Look out!",
+      "index": "277"
+    },
+    {
+      "topic": "Death",
+      "topic_text": "Death",
+      "emotion": "Neutral 50",
+      "response_text": "{Death sound}",
+      "index": "278"
+    },
+    {
+      "topic": "DeathResponse",
+      "topic_text": "DeathResponse",
+      "emotion": "Neutral 50",
+      "response_text": "Now you've gone and done it.",
+      "index": "279"
+    },
+    {
+      "topic": "FireExplosive",
+      "topic_text": "FireExplosive",
+      "emotion": "Neutral 50",
+      "response_text": "Get down!",
+      "index": "280"
+    },
+    {
+      "topic": "Flee",
+      "topic_text": "Flee",
+      "emotion": "Fear 50",
+      "response_text": "Time to get scarce!",
+      "index": "281"
+    },
+    {
+      "topic": "GuardTrespass",
+      "topic_text": "GuardTrespass",
+      "emotion": "Neutral 50",
+      "response_text": "You're treading on dangerous ground. I suggest you split.",
+      "index": "282"
+    },
+    {
+      "topic": "Hit",
+      "topic_text": "Hit",
+      "emotion": "Neutral 50",
+      "response_text": "Oof!",
+      "index": "283"
+    },
+    {
+      "topic": "Murder",
+      "topic_text": "Murder",
+      "emotion": "Anger 50",
+      "response_text": "I'm not gonna stand for that!",
+      "index": "286"
+    },
+    {
+      "topic": "MurderNoCrime",
+      "topic_text": "MurderNoCrime",
+      "emotion": "Neutral 50",
+      "response_text": "That just ain't right.",
+      "index": "287"
+    },
+    {
+      "topic": "PowerAttack",
+      "topic_text": "PowerAttack",
+      "emotion": "Neutral 50",
+      "response_text": "Haaa!",
+      "index": "288"
+    },
+    {
+      "topic": "Steal",
+      "topic_text": "Steal",
+      "emotion": "Neutral 50",
+      "response_text": "I reckon that don't belong to you.",
+      "index": "290"
+    }
+  ]
+}

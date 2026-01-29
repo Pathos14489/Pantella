@@ -1,0 +1,207 @@
+{
+  "name": "Chauncey",
+  "url": "/wiki/Chauncey",
+  "dialogue_name": "VMS18Chauncey.txt",
+  "dialogue_url": "/wiki/VMS18Chauncey.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "0010D4EA",
+  "ref_id": "0010D4EE",
+  "editor_id": "VMS18Chauncey",
+  "location": "Ultra-Luxe Bathhouse",
+  "location_url": "/wiki/Ultra-Luxe#Bathhouse",
+  "descriptions": [
+    "Chauncey is a member of the White Glove Society and resides at the Ultra-Luxe in 2281.",
+    "Chauncey is a White Glove who objects to Mortimer's cannibalistic ways. He wants to stop Mortimer from returning to feeding on humans. Chauncey was complicit in recent Strip kidnappings and has intimate knowledge of the group's transgressions. Recently, he has fallen out of favor with Mortimer and subsequently, an assassin was hired to kill him after a meeting with the Courier in the bathhouse steam room at 4 p.m.",
+    "Beyond the Beef: After finding the matchbook on the detective, the player will find Chauncey in the steam room waiting. After the meeting, the assassin Mortimer hired to assassinate Chauncey will come in and kill him with a silenced .22 pistol."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "White Glove Society",
+  "role": "Informant",
+  "detailed_location": "Ultra-Luxe",
+  "voice_actor": "Avery K. Waddell",
+  "special": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 6,
+    "Charisma": 3,
+    "Intelligence": 4,
+    "Agility": 6,
+    "Luck": 4
+  },
+  "level": "4",
+  "tag_skills": [
+    {
+      "Guns:": "43"
+    },
+    {
+      "Melee Weap.:": "41"
+    },
+    {
+      "Unarmed:": "43"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Neutral",
+  "voice_type": "MaleAdult02",
+  "geck_race": "AfricanAmerican",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "Who are you?{nervously}",
+      "index": "1"
+    },
+    {
+      "topic": "VMS18VMS18ChaunceyTopic000",
+      "topic_text": "You first.",
+      "emotion": "Neutral 50",
+      "response_text": "You don't know? <Sighs> Good. That's good. So they didn't send you after me.",
+      "index": "4"
+    },
+    {
+      "topic": "VMS18VMS18ChaunceyTopic001",
+      "topic_text": "I'm looking for someone who went missing.",
+      "emotion": "Neutral 50",
+      "response_text": "So was the man I'm supposed to be meeting here. Where is he?",
+      "index": "6"
+    },
+    {
+      "topic": "VMS18VMS18ChaunceyTopic002",
+      "topic_text": "Just someone who found a matchbook.",
+      "emotion": "Neutral 50",
+      "response_text": "Matchbook? What about the man I gave it to?",
+      "index": "7"
+    },
+    {
+      "topic": "VMS18VMS18ChaunceyTopic003",
+      "topic_text": "He's dead.",
+      "emotion": "Neutral 50",
+      "response_text": "Oh my goodness me! They must know he was talking to someone on the inside.",
+      "index": "8"
+    },
+    {
+      "topic": "VMS18VMS18ChaunceyTopic004",
+      "topic_text": "<Lie> He couldn't make it, so he sent me instead.",
+      "emotion": "Neutral 50",
+      "response_text": "{using 'devil' as a curse here}The devil he did. He was supposed to meet me days ago. Are you in Mortimer's employ, then?",
+      "index": "10"
+    },
+    {
+      "topic": "VMS18VMS18ChaunceyTopic008",
+      "topic_text": "[Attack] I am now.",
+      "emotion": "Neutral 50",
+      "response_text": "Not for long.",
+      "index": "11"
+    },
+    {
+      "topic": "VMS18VMS18ChaunceyTopic009",
+      "topic_text": "Who are you afraid of?",
+      "emotion": "Neutral 50",
+      "response_text": "Mortimer. If he realizes it was me the investigator was planning to meet, he'll have me killed.",
+      "index": "12"
+    },
+    {
+      "topic": "VMS18VMS18ChaunceyTopic010",
+      "topic_text": "What were you supposed to discuss here?",
+      "emotion": "Neutral 50",
+      "response_text": "The girl. The one who disappeared. I know what happened to her.",
+      "index": "13"
+    },
+    {
+      "topic": "VMS18VMS18ChaunceyTopic011",
+      "topic_text": "So is Mortimer behind the disappearances?",
+      "emotion": "Neutral 50",
+      "response_text": "Yes. The White Glove Society strictly forbids eating humans. But we weren't always the White Glove Society.",
+      "index": "14"
+    },
+    {
+      "topic": "VMS18VMS18ChaunceyTopic012",
+      "topic_text": "How do you know what happened to the girl?",
+      "emotion": "Neutral 50",
+      "response_text": "Because I distracted her fiancee while they took her. Well, I'm not proud of it! But I had to. They could see I was having second thoughts.",
+      "index": "19"
+    },
+    {
+      "topic": "VMS18VMS18ChaunceyTopic013",
+      "topic_text": "What about Ted Gunderson?",
+      "emotion": "Neutral 50",
+      "response_text": "He's alive, as far as I know. They're trying to keep him fresh. Mortimer has special plans for him.",
+      "index": "23"
+    },
+    {
+      "topic": "VMS18VMS18ChaunceyTopic014",
+      "topic_text": "Wouldn't they punish Mortimer for the deception?",
+      "emotion": "Neutral 50",
+      "response_text": "They might. But to him the legacy of returning to the old ways is worth his own life. I don't think he expects it, though. I don't, either.",
+      "index": "28"
+    },
+    {
+      "topic": "VMS18VMS18ChaunceyTopic015",
+      "topic_text": "Where are they keeping Ted?",
+      "emotion": "Neutral 50",
+      "response_text": "I don't know exactly. I wasn't in on it. I think some of them have stopped trusting me.",
+      "index": "31"
+    },
+    {
+      "topic": "VMS18VMS18ChaunceyTopic016",
+      "topic_text": "Ted's father is a wealthy man. With his resources, this should be easy to stop.",
+      "emotion": "Neutral 50",
+      "response_text": "That may be true, but I wouldn't recommend it. He's built a reputation, and it isn't for calmness and impartiality.",
+      "index": "40"
+    },
+    {
+      "topic": "VMS18VMS18ChaunceyTopic017",
+      "topic_text": "Why is everyone around here dressed up and wearing masks?",
+      "emotion": "Neutral 50",
+      "response_text": "Those are all members of the White Glove Society. Our founder, Marjorie, gave us all a dress code. There's only one rule to it.",
+      "index": "45"
+    },
+    {
+      "topic": "VMS18VMS18ChaunceyTopic018",
+      "topic_text": "Any suggestions on how to get Ted out?",
+      "emotion": "Neutral 50",
+      "response_text": "Hmm. Well, they'll all be sampling Pre-War wines before the meal. Maybe it's as simple as drugging them.",
+      "index": "51"
+    },
+    {
+      "topic": "VMS18VMS18ChaunceyTopic019",
+      "topic_text": "Where is your mask?",
+      "emotion": "Neutral 50",
+      "response_text": "Hmm. Must've forgotten to put it on. How embarrassing.{coy}",
+      "index": "57"
+    },
+    {
+      "topic": "VMS18VMS18ChaunceyTopic020",
+      "topic_text": "I'm looking for someone.",
+      "emotion": "Neutral 50",
+      "response_text": "Oh. Well, it's a big hotel. You should talk to Marjorie - she's in charge and she can probably help you find anyone you might need.{First word betrays he's hiding something. Short beat after it as he thinks of what to say.}",
+      "index": "58"
+    },
+    {
+      "topic": "VMS18VMS18ChaunceyTopic021",
+      "topic_text": "Let me ask you about something else.",
+      "emotion": "Neutral 50",
+      "response_text": "Go ahead.",
+      "index": "61"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Let's plan on meeting again as soon as- Wait. Did you hear something? Were you followed?",
+      "index": "62"
+    }
+  ],
+  "combat": []
+}

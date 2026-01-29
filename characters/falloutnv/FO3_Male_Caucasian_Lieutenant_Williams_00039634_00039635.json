@@ -1,0 +1,173 @@
+{
+  "name": "Lieutenant Williams",
+  "url": "/wiki/Williams_(Fallout_3)",
+  "dialogue_name": "MQ09EnclaveOfficer.txt",
+  "dialogue_url": "/wiki/MQ09EnclaveOfficer.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "00039634",
+  "ref_id": "00039635",
+  "editor_id": "MQ09EnclaveOfficer",
+  "location": "Raven Rock",
+  "location_url": "/wiki/Raven_Rock",
+  "descriptions": [
+    "Lieutenant Williams (named in-game as Enclave Officer) is an Enclave officer stationed at Raven Rock in 2277.",
+    "Williams is one of the only Enclave officers present at Raven Rock. He patrols the cell blocks in section 3A of the base. He may be ordered by President Eden to report to his commanding officer for reassignment, but he remains at his post for the duration of the Lone Wanderer's exploration."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Enclave Department of the Army",
+  "role": "Patrol officer",
+  "detailed_location": "Raven Rock",
+  "voice_actor": "Stephen Russell",
+  "special": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 5,
+    "Intelligence": 5,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "level": "1",
+  "misc_skills": [],
+  "karma": "Evil",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "I guess you'd better be on your way... Sorry for the uhh, for the interruption.Play soundmq09_greeting_000bf7ce_1.ogghttps://fallout.fandom.com/wiki/File:Mq09_greeting_000bf7ce_1.oggnoicon",
+      "index": "1"
+    },
+    {
+      "topic": "MQ09OfficerBribeAttempt",
+      "topic_text": "500 caps says you never saw me. Understand?",
+      "emotion": "Neutral 50",
+      "response_text": "Are you bribing me?",
+      "index": "5"
+    },
+    {
+      "topic": "MQ09OfficerBribeGoGetSPEECH",
+      "topic_text": "Sure. You stay here while I get the caps. I'll be right back.",
+      "emotion": "Neutral 50",
+      "response_text": "Right here? Okay...",
+      "index": "6"
+    },
+    {
+      "topic": "MQ09OfficerBribeNevermind",
+      "topic_text": "On second thought, you're not worth the caps.",
+      "emotion": "Anger 50",
+      "response_text": "GUARDS!",
+      "index": "8"
+    },
+    {
+      "topic": "MQ09OfficerBribeRightHere",
+      "topic_text": "Look, here are the caps. Let's just pretend we never saw each other.",
+      "emotion": "Neutral 50",
+      "response_text": "Well, okay. Hand 'em over.",
+      "index": "9"
+    },
+    {
+      "topic": "MQ09OfficerCHA",
+      "topic_text": "I'm on my way up to see the President. How about I put in a good word for you?",
+      "emotion": "Neutral 50",
+      "response_text": "I, uhh... You are? I mean, you would?",
+      "index": "10"
+    },
+    {
+      "topic": "MQ09OfficerFailureKill",
+      "topic_text": "Well then, I guess I'll just have to kill you.",
+      "emotion": "Anger 80",
+      "response_text": "That's it. GUARDS!",
+      "index": "12"
+    },
+    {
+      "topic": "MQ09OfficerGoingtoLeaveNow",
+      "topic_text": "Okay, I'm just going to slowly walk away now...",
+      "emotion": "Neutral 50",
+      "response_text": "You're not going anywhere! GUARDS!",
+      "index": "13"
+    },
+    {
+      "topic": "MQ09OfficerGreetSPEECH",
+      "topic_text": "Whoa, whoa. Let's calm down. I'm supposed to be here.",
+      "emotion": "Neutral 50",
+      "response_text": "On who's authority? I have no records of that. You're supposed to be in a holding cell.",
+      "index": "14"
+    },
+    {
+      "topic": "MQ09OfficerKillYou",
+      "topic_text": "10 caps says I can kill you before the guards get here.",
+      "emotion": "Anger 50",
+      "response_text": "That's it. GUARDS!",
+      "index": "15"
+    },
+    {
+      "topic": "MQ09OfficerOutOfMyWay",
+      "topic_text": "Get out of my way.",
+      "emotion": "Neutral 50",
+      "response_text": "You will stand down and return to your cell at once. That's an order!",
+      "index": "16"
+    },
+    {
+      "topic": "MQ09OfficerPresidentChump",
+      "topic_text": "Your boss. So you'd better let me past before you get in trouble.",
+      "emotion": "Neutral 50",
+      "response_text": "Colonel Autumn is the only one authorized to see the President.",
+      "index": "17"
+    },
+    {
+      "topic": "MQ09OfficerPresidentSaysSo",
+      "topic_text": "The President wants to speak to me in his office.",
+      "emotion": "Neutral 50",
+      "response_text": "What? No one sees the President except Colonel Autumn.",
+      "index": "19"
+    },
+    {
+      "topic": "MQ09OfficerTakeAHikeSPEECH",
+      "topic_text": "Take a hike, before you get squashed.",
+      "emotion": "Neutral 50",
+      "response_text": "I, uhh... I have somewhere else to be.",
+      "index": "21"
+    },
+    {
+      "topic": "MQ09OfficerWhoAreYou",
+      "topic_text": "Who the hell are you?",
+      "emotion": "Neutral 50",
+      "response_text": "Lieutenant Williams. I'm ordering you to stand down at once.{shaky, scared}",
+      "index": "22"
+    },
+    {
+      "topic": "SpeechChallengeFailure",
+      "topic_text": "SpeechChallengeFailure",
+      "emotion": "Neutral 50",
+      "response_text": "I'm not listening to anything you have to say, prisoner! Stand down at once!{shaky, scared, trying to sound tough}",
+      "index": "23"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "I have to go now.",
+      "emotion": "Anger 50",
+      "response_text": "No way. Not on my watch. GUARDS!Play soundmq09_goodbye_0003c17e_1.ogghttps://fallout.fandom.com/wiki/File:Mq09_goodbye_0003c17e_1.oggnoicon",
+      "index": "24"
+    },
+    {
+      "topic": "MQ09OfficerConv",
+      "topic_text": "MQ09OfficerConv",
+      "emotion": "Neutral 50",
+      "response_text": "Yes, sir.Play soundmq09_mq09officerconv_0003962d_1.ogghttps://fallout.fandom.com/wiki/File:Mq09_mq09officerconv_0003962d_1.oggnoicon",
+      "index": "25"
+    }
+  ],
+  "combat": []
+}

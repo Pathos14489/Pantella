@@ -1,0 +1,203 @@
+{
+  "name": "Robert",
+  "url": "/wiki/Robert_(Fallout_3)",
+  "dialogue_name": "TheFamilyRobert.txt",
+  "dialogue_url": "/wiki/TheFamilyRobert.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000200CD",
+  "ref_id": "00020F5C",
+  "editor_id": "TheFamilyRobert",
+  "location": "Meresti service tunnel",
+  "location_url": "/wiki/Meresti_service_tunnel",
+  "descriptions": [
+    "Robert is a member of the Family as well as its sentry and doorman in Fallout 3, protecting the entrance to the service tunnel connected to the Meresti Metro station where they reside in the Capital Wasteland in 2277.",
+    "Born in 2243,",
+    "When Vance first came around to the idea of forming the Family, Robert was inspired by his teachings and decided to stay and protect his friend as a bodyguard, later extending his protection to those Vance considered part of the Family.",
+    "Due to his duties as the doorman, Robert spends much time separated from the cultish elements of the Family infused by Vance and does not profess them as much, even remarking negatively on having to memorize and orally recite the gang's guiding rules at will.",
+    "Robert stands behind a wall of sandbags within the Meresti Metro station, occasionally wandering the small area between the sandbags and the Family's headquarters.",
+    "One may potentially fail Blood Ties if Robert is provoked into attacking along with the Family. After Ian West makes his decision, the Family and Arefu factions are merged, but Robert will remain hostile. If he is killed after this point, the quest will fail."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "The Family",
+  "role": "Bodyguard",
+  "detailed_location": "Meresti Metro station",
+  "voice_actor": "Jeff Baker",
+  "special": {
+    "Strength": 6,
+    "Perception": 7,
+    "Endurance": 5,
+    "Charisma": 3,
+    "Intelligence": 3,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "mod_special_values": {
+    "Strength": 6,
+    "Perception": 8,
+    "Endurance": 5,
+    "Charisma": 3,
+    "Intelligence": 3,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "level": "6→14",
+  "tag_skills": [
+    {
+      "Explosives:": "55→90(57→92)"
+    },
+    {
+      "Small Guns:": "53→88"
+    },
+    {
+      "Sneak:": "53→88"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "95→135"
+    },
+    {
+      "Critical Chance:": "5%"
+    },
+    {
+      "Unarmed Dam.:": "1.25"
+    },
+    {
+      "Poison Resist.:": "20%"
+    },
+    {
+      "Rad. Resist.:": "8%"
+    },
+    {
+      "Carry Weight:": "210"
+    }
+  ],
+  "karma": "Neutral",
+  "voice_type": "MaleAdult01DefaultDC",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah, I remember you. What's up?",
+      "index": "1"
+    },
+    {
+      "topic": "MS09FamRobertCT01",
+      "topic_text": "Just exploring, sorry.",
+      "emotion": "Anger 50",
+      "response_text": "Well, go explore somewhere else. This place is off limits to explorers.",
+      "index": "5"
+    },
+    {
+      "topic": "MS09FamRobertCT02",
+      "topic_text": "I'm not telling you jack. Now let me get by!",
+      "emotion": "Anger 50",
+      "response_text": "Ok, sure. Look, I don't have time for your bullshit. Turn around and go back the way you came.",
+      "index": "6"
+    },
+    {
+      "topic": "MS09FamRobertCT02Bribe",
+      "topic_text": "I'm wondering what I could do with all these spare caps I have...",
+      "emotion": "Happy 50",
+      "response_text": "Sounds like an interesting problem.",
+      "index": "8"
+    },
+    {
+      "topic": "MS09FamRobertCT02Bribe01",
+      "topic_text": "That's very helpful. Here you go.",
+      "emotion": "Neutral 50",
+      "response_text": "I suggest taking the door around the corner if you want to get where I think you're going. You'll find it unlocked in a moment.",
+      "index": "10"
+    },
+    {
+      "topic": "MS09FamRobertCT02Bribe02",
+      "topic_text": "I don't have that many caps.",
+      "emotion": "Disgust 50",
+      "response_text": "Oh well. Tough luck for you I guess.",
+      "index": "12"
+    },
+    {
+      "topic": "MS09FamRobertCT02Bribe03",
+      "topic_text": "On second thought, maybe I'll hang onto them.",
+      "emotion": "Anger 50",
+      "response_text": "Then quit wasting my damn time, asshole!",
+      "index": "13"
+    },
+    {
+      "topic": "MS09FamRobertCT02PerkEntry",
+      "topic_text": "I don't know... For some reason, I feel like I belong here.",
+      "emotion": "Happy 50",
+      "response_text": "Vance said others of our kind would find us! Sorry I was so harsh, but I don't share our leader's ability to feel others of our kind.",
+      "index": "14"
+    },
+    {
+      "topic": "MS09FamRobertCT02SC",
+      "topic_text": "I really need to get by you. It's important I find what I'm looking for.",
+      "emotion": "Disgust 50",
+      "response_text": "Alright, alright. I guess you look harmless enough.",
+      "index": "16"
+    },
+    {
+      "topic": "MS09FamRobertCT03Letter",
+      "topic_text": "Hang on a second. I have a letter for Ian West from his sister.",
+      "emotion": "Surprise 60",
+      "response_text": "Oh, the new kid? Yeah, Vance said we should be expecting someone soon.",
+      "index": "18"
+    },
+    {
+      "topic": "MS09TLLaws",
+      "topic_text": "Please, help me understand your Laws.",
+      "emotion": "Disgust 50",
+      "response_text": "Well, usually everyone has a rule or something they have to yell out at our gang meetings.",
+      "index": "20"
+    },
+    {
+      "topic": "MS09TLWhatisMeresti",
+      "topic_text": "What is this place?",
+      "emotion": "Neutral 50",
+      "response_text": "This lovely hole in the ground is Meresti, the headquarters of the Family.",
+      "index": "22"
+    },
+    {
+      "topic": "MS09TLWhoAreFamily",
+      "topic_text": "Tell me about the Family.",
+      "emotion": "Disgust 60",
+      "response_text": "We are a badass gang and we don't take shit from nobody.",
+      "index": "23"
+    },
+    {
+      "topic": "SpeechChallengeFailure",
+      "topic_text": "SpeechChallengeFailure",
+      "emotion": "Disgust 70",
+      "response_text": "I don't care what you need, this place is off limits and that's that.",
+      "index": "25"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "I have to go now.",
+      "emotion": "Neutral 50",
+      "response_text": "Just remember I got my eyes on you. We all do.",
+      "index": "26"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Neutral 50",
+      "response_text": "Oh, it's you again. What's up?",
+      "index": "28"
+    }
+  ],
+  "combat": []
+}

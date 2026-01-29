@@ -1,0 +1,459 @@
+{
+  "name": "Bryce Anders",
+  "url": "/wiki/Bryce_Anders",
+  "dialogue_name": "V03BryceAnders.txt",
+  "dialogue_url": "/wiki/V03BryceAnders.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000EF3AA",
+  "ref_id": "000EF3E9",
+  "editor_id": "V03BryceAnders",
+  "location": "Vault 3",
+  "location_url": "/wiki/Vault_3",
+  "descriptions": [
+    "Bryce Anders is a member of the New California Republic Rangers stuck in Vault 3 in Fallout: New Vegas.",
+    "Around late 2281, while stationed at Camp McCarran in the Mojave Wasteland, Anders was ordered by Colonel James Hsu to find a way into Vault 3 and take out the leader of the Fiends, Motor-Runner, who controlled much of the South Vegas ruins adjacent to the military headquarters and were constantly harassing the troops there;",
+    "Though his initial infiltration was successful, managing to thin the raiders' numbers, Anders was eventually discovered and suffered a wound to his leg while escaping into a hidden section of the Vault, confident the raiders' drugged-up state meant they would quickly forget about him and give up the chase."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "New California Republic Rangers",
+  "role": "Ranger",
+  "detailed_location": "Vault 3Convince Anders to head back:Camp McCarran",
+  "voice_actor": "Emerson Brooks",
+  "special": {
+    "Strength": 5,
+    "Perception": 6,
+    "Endurance": 6,
+    "Charisma": 4,
+    "Intelligence": 5,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "level": "13",
+  "tag_skills": [
+    {
+      "Guns:": "80"
+    },
+    {
+      "Sneak:": "80"
+    },
+    {
+      "Unarmed:": "80"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Good",
+  "voice_type": "MaleAdult01DefaultB",
+  "geck_race": "Hispanic",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "It's better not to do a lot of talking on assassination missions.",
+      "index": "1"
+    },
+    {
+      "topic": "VMS07AndersKey",
+      "topic_text": "What was the name of the Fiend who was carrying keys?",
+      "emotion": "Neutral 50",
+      "response_text": "Daniel. Probably find him back in the Residential Wing somewhere.",
+      "index": "10"
+    },
+    {
+      "topic": "VMS07DoctorBag",
+      "topic_text": "Let me take another look at that leg.",
+      "emotion": "Neutral 50",
+      "response_text": "How's it look, doc?",
+      "index": "11"
+    },
+    {
+      "topic": "VMS07Greeting",
+      "topic_text": "VMS07Greeting",
+      "emotion": "Neutral 50",
+      "response_text": "Thanks for the assistance taking out Motor-Runner. I'll be heading back to McCarran. I'll put in a good word for you.",
+      "index": "12"
+    },
+    {
+      "topic": "VMS07V03BryceAndersTopic000",
+      "topic_text": "I was sent here by Colonel Hsu.",
+      "emotion": "Neutral 50",
+      "response_text": "Hsu sent you? This was my mission!{\"Shoe\"}",
+      "index": "13"
+    },
+    {
+      "topic": "VMS07V03BryceAndersTopic001",
+      "topic_text": "What can you tell me about this place?",
+      "emotion": "Neutral 50",
+      "response_text": "What are you looking to find out?",
+      "index": "15"
+    },
+    {
+      "topic": "VMS07V03BryceAndersTopic002",
+      "topic_text": "Never mind, I'm leaving now.",
+      "emotion": "Neutral 50",
+      "response_text": "Make yourself scarce. If you get yourself in trouble, I'm not going to cover your back.",
+      "index": "16"
+    },
+    {
+      "topic": "VMS07V03BryceAndersTopic003",
+      "topic_text": "What am I doing here? What are you doing here?",
+      "emotion": "Neutral 50",
+      "response_text": "Why I'm here is my business. If you don't have a question for me then get lost.",
+      "index": "17"
+    },
+    {
+      "topic": "VMS07V03BryceAndersTopic004",
+      "topic_text": "What can you tell me about what happened here?",
+      "emotion": "Neutral 50",
+      "response_text": "The Fiends killed everyone living here, and now they are squatting in their home.",
+      "index": "18"
+    },
+    {
+      "topic": "VMS07V03BryceAndersTopic005",
+      "topic_text": "What is this place?",
+      "emotion": "Neutral 50",
+      "response_text": "This was Vault 3, but I'm sure you can tell that by all the 3s all over the damn place. Now it is a drug den for the goddamn Fiends.",
+      "index": "19"
+    },
+    {
+      "topic": "VMS07V03BryceAndersTopic006",
+      "topic_text": "Who are the Fiends?",
+      "emotion": "Neutral 50",
+      "response_text": "The Fiends are degenerate drug addicts who kill and rape for fun, basically. They're human garbage - though I'm not sure about the human part.",
+      "index": "20"
+    },
+    {
+      "topic": "VMS07V03BryceAndersTopic007",
+      "topic_text": "The Colonel was concerned. You missed your check-in.",
+      "emotion": "Neutral 50",
+      "response_text": "You can go back to old Hsu and tell him that the mission will be completed. I just need a couple more days.{\"Shoe\"}",
+      "index": "21"
+    },
+    {
+      "topic": "VMS07V03BryceAndersTopic008",
+      "topic_text": "Colonel Hsu thinks you need additional support.",
+      "emotion": "Neutral 50",
+      "response_text": "Is that right? And what sort of support, exactly, is it that you have to offer?",
+      "index": "22"
+    },
+    {
+      "topic": "VMS07V03BryceAndersTopic009",
+      "topic_text": "I'm sure you can handle it alone. I'll leave you to it.",
+      "emotion": "Neutral 50",
+      "response_text": "Good idea. Try not to get hurt out there.",
+      "index": "23"
+    },
+    {
+      "topic": "VMS07V03BryceAndersTopic010",
+      "topic_text": "I want to help you rescue the hostages.",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah? Nice thought, but that's not my primary mission. If you want to go it solo, more power to you.",
+      "index": "24"
+    },
+    {
+      "topic": "VMS07V03BryceAndersTopic011SPEECH attempt to convince Bryce to help take out Motor-Runner",
+      "topic_text": "The only way you're going to take out Motor-Runner is if we work together.",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] I guess you're right. I won't be able to move fast, but I can more than hold my own in a firefight. Here, take the key...",
+      "index": "25"
+    },
+    {
+      "topic": "VMS07V03BryceAndersTopic012",
+      "topic_text": "Let me take out Motor-Runner for you.",
+      "emotion": "Neutral 50",
+      "response_text": "Bad idea on all sorts of levels. Leave it to the professionals, kid.",
+      "index": "31"
+    },
+    {
+      "topic": "VMS07V03BryceAndersTopic014",
+      "topic_text": "What's the hold-up - if you don't mind my asking?",
+      "emotion": "Neutral 50",
+      "response_text": "What's it look like? I caught one in the leg. I killed a dozen of those degenerates sneaking my way in... but one got a drop on me.{hates admitting it}",
+      "index": "32"
+    },
+    {
+      "topic": "VMS07V03BryceAndersTopic015MEDICINE attempt to convince Bryce",
+      "topic_text": "I'm afraid your leg looks - and smells - like it's on the verge of infection.",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] Goddammit. I know. Was just hoping that, uh...",
+      "index": "35"
+    },
+    {
+      "topic": "VMS07V03BryceAndersTopic016",
+      "topic_text": "If you head for McCarran now, I think you'll make it in time - even at a limp.",
+      "emotion": "Neutral 50",
+      "response_text": "Goddammit. Fine. I'll head back. Are you saying you'll handle Motor-Runner yourself?",
+      "index": "38"
+    },
+    {
+      "topic": "VMS07V03BryceAndersTopic017",
+      "topic_text": "I have a doctor's bag right here. It should be enough to get you on your feet.",
+      "emotion": "Neutral 50",
+      "response_text": "What are we waiting for? I've got a high-value target to kill!",
+      "index": "39"
+    },
+    {
+      "topic": "VMS07V03BryceAndersTopic018",
+      "topic_text": "I'll check in with you and Colonel Hsu when it's done.",
+      "emotion": "Neutral 50",
+      "response_text": "All right. Let me give you the key to the Maintenance Wing...",
+      "index": "41"
+    },
+    {
+      "topic": "VMS07V03BryceAndersTopic019",
+      "topic_text": "I don't have a spare doctor's bag I can spare.",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah? Well, there's a ton of pharmaceuticals out there. Maybe you can find one and bring it back to me. It'd be a great help...",
+      "index": "45"
+    },
+    {
+      "topic": "VMS07V03BryceAndersTopic021",
+      "topic_text": "Let's talk about something else.",
+      "emotion": "Neutral 50",
+      "response_text": "Okay, but make it quick.",
+      "index": "46"
+    },
+    {
+      "topic": "VMS07V03BryceAndersTopic022",
+      "topic_text": "Tell me what an NCR ranger is doing here.",
+      "emotion": "Neutral 50",
+      "response_text": "Tell me why I should tell you anything. I don't know you.",
+      "index": "47"
+    },
+    {
+      "topic": "VMS07V03BryceAndersTopic023",
+      "topic_text": "<Lie>I'm an independent contractor with the NCR.",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] Oh, my apologies sir. I was sent here by Colonel Hsu to exterminate Motor-Runner, the leader of the Fiends.",
+      "index": "48"
+    },
+    {
+      "topic": "VMS07V03BryceAndersTopic024",
+      "topic_text": "I just have a couple questions.",
+      "emotion": "Neutral 50",
+      "response_text": "Okay, what do you need?",
+      "index": "50"
+    },
+    {
+      "topic": "VMS07V03BryceAndersTopic024DUPLICATE000",
+      "topic_text": "I just have a couple questions.",
+      "emotion": "Neutral 50",
+      "response_text": "Okay, what do you need?",
+      "index": "51"
+    },
+    {
+      "topic": "VMS07V03BryceAndersTopic025",
+      "topic_text": "I didn't come here to do your job for you.",
+      "emotion": "Neutral 50",
+      "response_text": "Well, take this goddamn key anyways. It'll get you into the Maintenance Wing. Maybe you'll brave up and do the right thing. Good luck.",
+      "index": "52"
+    },
+    {
+      "topic": "VMS07V03BryceAndersTopic026",
+      "topic_text": "I could use your help taking care of Motor-Runner.",
+      "emotion": "Neutral 50",
+      "response_text": "Okay, I'll follow you down to Motor-Runner. Here, take the key to the maintenance wing.",
+      "index": "56"
+    },
+    {
+      "topic": "VMS07V03BryceAndersTopic026DUPLICATE000",
+      "topic_text": "I could use your help taking care of Motor-Runner.",
+      "emotion": "Neutral 50",
+      "response_text": "Okay, I'll follow you down to Motor-Runner. Here, take the key to the maintenance wing.",
+      "index": "59"
+    },
+    {
+      "topic": "VMS07V03BryceAndersTopic028",
+      "topic_text": "<Lie> I think your leg's in good enough shape. You're all set.",
+      "emotion": "Neutral 50",
+      "response_text": "Really? It doesn't feel any better... but I'll take your word on it. Motor-Runner, here I come.",
+      "index": "62"
+    },
+    {
+      "topic": "VMS07V03BryceAndersTopic028DUPLICATE000",
+      "topic_text": "<Lie> I think you are healthy enough to take care of Motor-Runner yourself.",
+      "emotion": "Neutral 50",
+      "response_text": "Really? I didn't think my leg was up to full speed yet, but I'll take your word on it.",
+      "index": "63"
+    },
+    {
+      "topic": "VMS07V03BryceAndersTopic029",
+      "topic_text": "Just making sure you're okay. I'll be back.",
+      "emotion": "Neutral 50",
+      "response_text": "Thanks for the concern, doc.",
+      "index": "65"
+    },
+    {
+      "topic": "VMS07V03BryceAndersTopic029DUPLICATE000",
+      "topic_text": "Not right now, just making sure you are ok. I'll be back later.",
+      "emotion": "Neutral 50",
+      "response_text": "Okay, thanks again for the medical care doc.",
+      "index": "67"
+    },
+    {
+      "topic": "VMS07V03BryceAndersTopic030",
+      "topic_text": "What can you tell me about the Fiends?",
+      "emotion": "Neutral 50",
+      "response_text": "They're a bunch of degenerate, drug-addicted killers and rapists who've turned the west side of Vegas into a war zone.",
+      "index": "69"
+    },
+    {
+      "topic": "VMS07V03BryceAndersTopic030DUPLICATE000",
+      "topic_text": "What can you tell me about the Fiends?",
+      "emotion": "Neutral 50",
+      "response_text": "The Fiends are a bunch of raider junkie fucks who have been causing a lot of trouble in the area outside of Vegas.",
+      "index": "71"
+    },
+    {
+      "topic": "VMS07V03BryceAndersTopic031",
+      "topic_text": "What can you tell me about Vault 3?",
+      "emotion": "Neutral 50",
+      "response_text": "The inhabitants of the Vault were simple traders. They made a good living for themselves before they were all killed by the fiends.",
+      "index": "73"
+    },
+    {
+      "topic": "VMS07V03BryceAndersTopic031DUPLICATE000",
+      "topic_text": "What can you tell me about Vault 3?",
+      "emotion": "Neutral 50",
+      "response_text": "The inhabitants of the Vault were simple traders. They made a good living for themselves for a couple weeks.",
+      "index": "74"
+    },
+    {
+      "topic": "VMS07V03BryceAndersTopic032",
+      "topic_text": "What was your mission again?",
+      "emotion": "Neutral 50",
+      "response_text": "I was sent here to kill Motor-Runner, the leader of the Fiends.",
+      "index": "76"
+    },
+    {
+      "topic": "VMS07V03BryceAndersTopic032DUPLICATE000",
+      "topic_text": "What was your mission again?",
+      "emotion": "Neutral 50",
+      "response_text": "I was sent here to kill Motor-Runner, the leader of the Fiends.",
+      "index": "78"
+    },
+    {
+      "topic": "VMS07V03BryceAndersTopic033",
+      "topic_text": "Let's talk about something else.",
+      "emotion": "Neutral 50",
+      "response_text": "Like what?",
+      "index": "80"
+    },
+    {
+      "topic": "VMS07V03BryceAndersTopic033DUPLICATE000",
+      "topic_text": "Let's talk about something else.",
+      "emotion": "Neutral 50",
+      "response_text": "Okay, tell me what's on your mind.",
+      "index": "81"
+    },
+    {
+      "topic": "VMS07V03BryceAndersTopic034",
+      "topic_text": "I'm not sure how much I can help. But I have another question.",
+      "emotion": "Neutral 50",
+      "response_text": "Your talking slows my healing process. Be snappy about it.",
+      "index": "82"
+    },
+    {
+      "topic": "VMS07V03BryceAndersTopic035",
+      "topic_text": "Come on. It's time for us to go take care of Motor-Runner.",
+      "emotion": "Neutral 50",
+      "response_text": "Roger that shit. Let's go.",
+      "index": "83"
+    },
+    {
+      "topic": "VMS07V03BryceAndersTopic035DUPLICATE000",
+      "topic_text": "Follow me, let's go take care of Motor-Runner.",
+      "emotion": "Neutral 50",
+      "response_text": "Okay, let's get him.",
+      "index": "84"
+    },
+    {
+      "topic": "VMS07V03BryceAndersTopic036",
+      "topic_text": "Wait here.",
+      "emotion": "Neutral 50",
+      "response_text": "Okay, I'll wait.",
+      "index": "85"
+    },
+    {
+      "topic": "VMS07V03BryceAndersTopic036DUPLICATE000",
+      "topic_text": "Wait here.",
+      "emotion": "Neutral 50",
+      "response_text": "Okay, I'll wait.",
+      "index": "86"
+    },
+    {
+      "topic": "VMS07V03BryceAndersTopic037",
+      "topic_text": "I can handle myself pretty well. I found you didn't I?",
+      "emotion": "Neutral 50",
+      "response_text": "I guess you probably can. You look tough enough at least. I'm not sure how long it'll take this leg to heal up.",
+      "index": "87"
+    },
+    {
+      "topic": "VMS07V03BryceAndersTopic037DUPLICATE000SPEECH attempt for Bryce to let you take out Motor Runner",
+      "topic_text": "I can handle myself just fine. I found you, didn't I?",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] I guess you have a point. And I don't know how long it'll be before I'm on both feet...",
+      "index": "89"
+    },
+    {
+      "topic": "VMS07V03BryceAndersTopic038",
+      "topic_text": "Let me ask you something else.",
+      "emotion": "Neutral 50",
+      "response_text": "Do you ever quit? Go on.",
+      "index": "92"
+    },
+    {
+      "topic": "VMS07V03BryceAndersTopic039",
+      "topic_text": "Alright, I don't want to cause you any trouble.",
+      "emotion": "Neutral 50",
+      "response_text": "See that you don't.",
+      "index": "93"
+    },
+    {
+      "topic": "VMS07V03BryceAndersTopic039DUPLICATE000",
+      "topic_text": "All right, fine. I don't want to cause you any trouble.",
+      "emotion": "Neutral 50",
+      "response_text": "First sensible thing I've heard you say.",
+      "index": "94"
+    },
+    {
+      "topic": "VMS07V03BryceAndersTopic040",
+      "topic_text": "I have another couple of questions for you.",
+      "emotion": "Neutral 50",
+      "response_text": "Be quick about it.",
+      "index": "95"
+    },
+    {
+      "topic": "VMS07V03BryceAndersTopic040DUPLICATE000",
+      "topic_text": "Let me ask you some questions.",
+      "emotion": "Neutral 50",
+      "response_text": "Be quick about it.",
+      "index": "96"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYEGoodbye.",
+      "topic_text": "Never mind, I'm leaving now.",
+      "emotion": "Neutral 50",
+      "response_text": "Make yourself scarce. If you get yourself in trouble, I'm not going to cover your back.",
+      "index": "97"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "Hello",
+      "emotion": "Neutral 50",
+      "response_text": "What the hell do you want?",
+      "index": "98"
+    }
+  ],
+  "combat": []
+}

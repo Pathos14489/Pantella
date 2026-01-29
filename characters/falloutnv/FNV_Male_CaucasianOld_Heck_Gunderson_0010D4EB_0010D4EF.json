@@ -1,0 +1,231 @@
+{
+  "name": "Heck Gunderson",
+  "url": "/wiki/Heck_Gunderson",
+  "dialogue_name": "VMS18HeckGunderson.txt",
+  "dialogue_url": "/wiki/VMS18HeckGunderson.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "0010D4EB",
+  "ref_id": "0010D4EF",
+  "editor_id": "VMS18HeckGunderson",
+  "location": "Ultra-Luxecasino floor",
+  "location_url": "/wiki/Ultra-Luxe",
+  "descriptions": [
+    "Heck Gunderson, called \"Hurricane Heck\" for his unscrupulous business practices, is a brahmin baron from California visiting New Vegas in 2281.",
+    "A wealthy brahmin baron and one of the largest landowners in Nevada and California,",
+    "With his vast amount of land and large herds of brahmin and big horners,",
+    "Though he is reluctant to explain his business to the Courier, he hints that he came to New Vegas to negotiate with the White Glove Society over food distribution.",
+    "He can be found in the Ultra-Luxe casino, sitting at the bar and accompanied by one of his bodyguards, a Gunderson hired hand.",
+    "If one decides to attack members of the White Glove Society, Heck will come to the Courier's aid if he is nearby."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "NCR",
+  "role": "Brahmin baron3 of Diamonds",
+  "detailed_location": "Ultra-Luxe",
+  "voice_actor": "Peter Renaday",
+  "special": {
+    "Strength": 5,
+    "Perception": 6,
+    "Endurance": 6,
+    "Charisma": 3,
+    "Intelligence": 4,
+    "Agility": 6,
+    "Luck": 4
+  },
+  "mod_special_values": {
+    "Strength": 5,
+    "Perception": 7,
+    "Endurance": 6,
+    "Charisma": 3,
+    "Intelligence": 4,
+    "Agility": 6,
+    "Luck": 4
+  },
+  "tag_skills": [
+    {
+      "Guns:": "71"
+    },
+    {
+      "Melee Weap.:": "69"
+    },
+    {
+      "Unarmed:": "71"
+    }
+  ],
+  "karma": "Neutral",
+  "voice_type": "MaleOld02",
+  "geck_race": "CaucasianOld",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "What's this about the White Glove Society?",
+      "index": "1"
+    },
+    {
+      "topic": "VMS18SecuritronArrestHeck",
+      "topic_text": "VMS18SecuritronArrestHeck",
+      "emotion": "Anger 80",
+      "response_text": "What in blazes? That's my son you're talking about! He ain't dead. I'm looking for him.{enraged. he's being arrested for his son's murder.}",
+      "index": "10"
+    },
+    {
+      "topic": "VMS18VMS18HeckGundersonTopic000",
+      "topic_text": "No, I haven't.",
+      "emotion": "Sad 50",
+      "response_text": "<Sighs> Ain't nobody got one darned piece of news about my boy? Not one lousy speck of information?",
+      "index": "14"
+    },
+    {
+      "topic": "VMS18VMS18HeckGundersonTopic002",
+      "topic_text": "<Lie> Yes, I saw him here in the hotel.",
+      "emotion": "Neutral 50",
+      "response_text": "What? Oh, my God! Where?",
+      "index": "16"
+    },
+    {
+      "topic": "VMS18VMS18HeckGundersonTopic003",
+      "topic_text": "You lost your son?",
+      "emotion": "Neutral 50",
+      "response_text": "My boy, Ted. He was right here. I didn't leave him but a minute. I told him to stay put while I talked some things over with the White Glove folks.",
+      "index": "17"
+    },
+    {
+      "topic": "VMS18VMS18HeckGundersonTopic004",
+      "topic_text": "So you're a rancher?",
+      "emotion": "Neutral 50",
+      "response_text": "Yep, got a whole mess of brahmins to my name. Bighorners, too.",
+      "index": "21"
+    },
+    {
+      "topic": "VMS18VMS18HeckGundersonTopic005",
+      "topic_text": "Did you say something about a white glove?",
+      "emotion": "Neutral 50",
+      "response_text": "That's what they call themselves, the folk that run this place. They're the ones dressed all fancy with their bowties and shiny dresses.",
+      "index": "25"
+    },
+    {
+      "topic": "VMS18VMS18HeckGundersonTopic006",
+      "topic_text": "What business did you have here at the hotel?",
+      "emotion": "Neutral 50",
+      "response_text": "That's between me and the White Glove Society.",
+      "index": "28"
+    },
+    {
+      "topic": "VMS18VMS18HeckGundersonTopic007",
+      "topic_text": "Let me help find your son.",
+      "emotion": "Neutral 50",
+      "response_text": "I'd be more than happy to have you. Heck, I'll hire anybody with a pair of legs and at least one good eye at this point.",
+      "index": "30"
+    },
+    {
+      "topic": "VMS18VMS18HeckGundersonTopic009",
+      "topic_text": "He's over in the bathhouse, wearing a skimpy two-piece bathing suit.",
+      "emotion": "Anger 75",
+      "response_text": "What in Creation is the matter with you? Ain't you ever been a parent? Ain't you ever been worried you lost someone?",
+      "index": "33"
+    },
+    {
+      "topic": "VMS18VMS18HeckGundersonTopic010",
+      "topic_text": "Sorry. I didn't realize the situation was so serious.",
+      "emotion": "Neutral 50",
+      "response_text": "You're dead right it's serious. I ain't seen my son in hours. Don't know where he went.",
+      "index": "35"
+    },
+    {
+      "topic": "VMS18VMS18HeckGundersonTopic012",
+      "topic_text": "<Lie> I don't know who took him. I just found him.",
+      "emotion": "Neutral 50",
+      "response_text": "Confound it! I just don't know how I'm supposed to sleep knowing whoever done this got away.",
+      "index": "38"
+    },
+    {
+      "topic": "VMS18VMS18HeckGundersonTopic013",
+      "topic_text": "You can blame the White Glove Society. They're all cannibals.",
+      "emotion": "Neutral 50",
+      "response_text": "Well that does it! None of them maniacs will ever do business with Heck Gunderson long as they live.",
+      "index": "41"
+    },
+    {
+      "topic": "VMS18VMS18HeckGundersonTopic014",
+      "topic_text": "Your son is confused. He doesn't know what he's saying.",
+      "emotion": "Neutral 50",
+      "response_text": "You better be right. Cause I got me a mind to wipe this town off the map if some of the folks running it are to blame.",
+      "index": "45"
+    },
+    {
+      "topic": "VMS18VMS18HeckGundersonTopic015",
+      "topic_text": "Let's not be hasty. You don't have to punish the entire Strip.",
+      "emotion": "Neutral 50",
+      "response_text": "The heck I don't! It's their support that gives these bastards power.",
+      "index": "47"
+    },
+    {
+      "topic": "VMS18VMS18HeckGundersonTopic016",
+      "topic_text": "That's just what they'd want. You'd be driving the city to eat each other.",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] I don't like this place. Whole Strip, really. Ever since I got here, the stink of it... it's flooded my nostrils.",
+      "index": "50"
+    },
+    {
+      "topic": "VMS18VMS18HeckGundersonTopic017",
+      "topic_text": "That sounds like a fantastic idea.",
+      "emotion": "Neutral 50",
+      "response_text": "Sometimes I got me so many ideas, it's a wonder they don't all just burst outta my head.",
+      "index": "52"
+    },
+    {
+      "topic": "VMS18VMS18HeckGundersonTopic018",
+      "topic_text": "But, but, but... that's so unfair. You should only punish the man who did it.",
+      "emotion": "Neutral 50",
+      "response_text": "[FAILED] No, that ain't enough. It ain't just him. It's this hotel. It's the whole damn Strip, and everybody who takes their money here.",
+      "index": "54"
+    },
+    {
+      "topic": "VMS18VMS18HeckGundersonTopic020",
+      "topic_text": "Why is your bodyguard allowed to have a gun?",
+      "emotion": "Neutral 50",
+      "response_text": "Made me a special arrangement with the hotel. They want to do business with me, they got to play by my rules.",
+      "index": "56"
+    },
+    {
+      "topic": "VMS18VMS18HeckGundersonTopic021",
+      "topic_text": "Ted's been kidnapped. He's here in the hotel.",
+      "emotion": "Neutral 50",
+      "response_text": "He's here? Bless you, I thought he was a goner for sure.",
+      "index": "59"
+    },
+    {
+      "topic": "VMS18VMS18HeckGundersonTopic022",
+      "topic_text": "Ted's dead.",
+      "emotion": "Neutral 50",
+      "response_text": "{Breaking - his son died}Confound it. I knew I shoulda stayed with him. Ted, I'm so sorry, boy.",
+      "index": "62"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Choke on your goodbyes.",
+      "index": "64"
+    },
+    {
+      "topic": "VMS18TedReturned",
+      "topic_text": "VMS18TedReturned",
+      "emotion": "Neutral 50",
+      "response_text": "Oh my god! Ted! Are you all right?{reunited with his lost son}",
+      "index": "67"
+    }
+  ],
+  "combat": []
+}

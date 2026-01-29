@@ -1,0 +1,121 @@
+{
+  "name": "Lulu",
+  "url": "/wiki/Lulu",
+  "dialogue_name": "DLC01Lulu.txt",
+  "dialogue_url": "/wiki/DLC01Lulu.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "xx004138",
+  "ref_id": "xx0045FC",
+  "editor_id": "DLC01Lulu",
+  "location": "The Pitt Uptown",
+  "location_url": "/wiki/The_Pitt_Uptown",
+  "descriptions": [
+    "Lulu is a raider and chef in the Pitt in 2277.",
+    "Lulu roams Uptown's walkways, praising Lord Ashur and feeding noodles to Uptown's raider population. An insane but fiercely loyal follower of Ashur, Lulu refers to everyone as \"pets\" belonging to Ashur, because Ashur chose all of them, including herself, to be in his company. She makes a distinction between \"good\" and \"bad\" pets: those who contribute and earn their keep are \"good,\" while the \"bad\" ones are drowned in the Monongahela River.",
+    "Lulu appears only in the Fallout 3 add-on The Pitt.",
+    "Lulu's noodles and position in Uptown parallel the location of Lulu's Noodles in Pittsburgh's Oakland region."
+  ],
+  "race": "Human",
+  "gender": "Female",
+  "affiliation": "Pitt raiders",
+  "role": "Chef",
+  "detailed_location": "The Pitt Uptown",
+  "voice_actor": "Vanessa Richardson",
+  "special": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 3,
+    "Intelligence": 3,
+    "Agility": 7,
+    "Luck": 5
+  },
+  "level": "1→20→30 (Broken Steelonly)",
+  "tag_skills": [
+    {
+      "Melee Weap.:": "32→100"
+    },
+    {
+      "Small Guns:": "34→100"
+    },
+    {
+      "Unarmed:": "28→100"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "65→160→210"
+    },
+    {
+      "Critical Chance:": "5%"
+    },
+    {
+      "Unarmed Dam.:": "1.9→5.5"
+    },
+    {
+      "Poison Resist.:": "15%"
+    },
+    {
+      "Rad. Resist.:": "6%"
+    },
+    {
+      "Carry Weight:": "210"
+    }
+  ],
+  "karma": "Evil",
+  "voice_type": "DLC01RaiderFemaleGruffVoice",
+  "geck_race": "AsianRaider",
+  "topics": [
+    {
+      "topic": "DLC01HavenResponse1A",
+      "topic_text": "What do you mean about Ashur's \"keen eyes\"?",
+      "emotion": "Happy 50",
+      "response_text": "The Lord of The Pitt knows all, and his eyes see promise where others see rubble.{Slightly rapturous, as if speaking of a god}",
+      "index": "1"
+    },
+    {
+      "topic": "DLC01HavenResponse1B",
+      "topic_text": "I'll tell you what's special about me: I kick ass.",
+      "emotion": "Happy 50",
+      "response_text": "Ha! That rules out your wit. It must be something else that makes you so interesting to our lord.",
+      "index": "4"
+    },
+    {
+      "topic": "DLC01SpecialOption2A",
+      "topic_text": "Yes, I'll have some food.",
+      "emotion": "Happy 50",
+      "response_text": "Then here... Delicious food for you! Eat, and be good.",
+      "index": "6"
+    },
+    {
+      "topic": "DLC01SpecialOption2B",
+      "topic_text": "No thanks.",
+      "emotion": "Happy 50",
+      "response_text": "Then go, and be good. Remember, Lulu has got her eye on you!{Creepy but slightly friendly.}",
+      "index": "8"
+    },
+    {
+      "topic": "DLC01SpecialOption2C",
+      "topic_text": "Don't call me a pet, you freak.",
+      "emotion": "Happy 50",
+      "response_text": "Oh, but aren't we all pets of our Lord? He built this menagerie, and chose each of us to live in his world.{insane, but rapturous}",
+      "index": "9"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Happy 50",
+      "response_text": "Well, if it isn't Ashur's newest pet! He doesn't let many mongrels into his mansion.{Slightly giddy, somewhat mocking}",
+      "index": "12"
+    }
+  ],
+  "conversation": [],
+  "combat": []
+}

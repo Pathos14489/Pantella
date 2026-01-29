@@ -1,0 +1,187 @@
+{
+  "name": "Plik",
+  "url": "/wiki/Plik",
+  "dialogue_name": "DLC04FF06Host.txt",
+  "dialogue_url": "/wiki/DLC04FF06Host.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "xx009B5A",
+  "ref_id": "xx009B5B",
+  "editor_id": "DLC04FF06Host",
+  "location": "Coastal grotto",
+  "location_url": "/wiki/Coastal_grotto",
+  "descriptions": [
+    "Plik is a ghoul inhabitant of Point Lookout in the year 2277.",
+    "A jovial host of his prestigious hunting club for society's richest (or most bored) clientèle, Plik has witnessed the spread of feral ghouls in the area, and seeks to limit this encroachment while attempting an enterprising scheme in the process.",
+    "Plik runs a little hunting club out of the coastal grotto, but it is \"strictly for high-rollers.\" It appears Plik has a scientific background and has taken extensive notes on the anatomy of feral ghouls, referenced in his journal which will grant the Ghoul Ecology perk upon reading.",
+    "Plik appears only in the Fallout 3 add-on Point Lookout.",
+    "Plik and his safari were described by developer Joel Burgess as his \"pet project.\" Voice actor Jeff Baker, who also portrayed Desmond Lockheart, was originally supposed to voice Plik and put on a Southern accent; in the game files, Plik shares a voice type with Desmond. However, Plik's script never made its way into the voice recording session with Baker, and the mistake was not realized until long after the session was concluded. As such, Burgess simply recorded Plik's voiceover himself. Burgess self-deprecatingly joked that Plik's voiceover is him doing his \"best impression of Grover wishing he had Robitussin.\""
+  ],
+  "race": "Ghoul",
+  "gender": "Male",
+  "role": "Safari organizerPart-time ghoul \"biologist\"",
+  "detailed_location": "Coastal grotto",
+  "voice_actor": "Joel Burgess",
+  "special": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 4,
+    "Intelligence": 4,
+    "Agility": 6,
+    "Luck": 4
+  },
+  "level": "6",
+  "tag_skills": [
+    {
+      "Melee Weap.:": "54(56)"
+    },
+    {
+      "Small Guns:": "54(56)"
+    },
+    {
+      "Sneak:": "54"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Evil",
+  "voice_type": "DLC04UniqueDesmond",
+  "geck_race": "Ghoul",
+  "topics": [
+    {
+      "topic": "DLC04FF06hostEthics",
+      "topic_text": "You round up Ghouls for slaughter? Isn't that... unethical of you?",
+      "emotion": "Anger 50",
+      "response_text": "Have I tried to chew on your skull, sir? Perhaps you've noticed my ability to string words into complete sentences?{Sarcasm barely bridled by good manners}",
+      "index": "1"
+    },
+    {
+      "topic": "DLC04FF06hostPayEnter",
+      "topic_text": "Here's 1,000 caps. Let's get this show on the road.",
+      "emotion": "Happy 50",
+      "response_text": "That's the spirit! The other participants are waiting, so just press the button inside to let me know when to begin.",
+      "index": "5"
+    },
+    {
+      "topic": "DLC04FF06hostPayIncredulous",
+      "topic_text": "A thousand caps? That's outrageous!",
+      "emotion": "Neutral 50",
+      "response_text": "I've found that price keeps the riff-raff out. You aren't riff-raff, now, are you?",
+      "index": "6"
+    },
+    {
+      "topic": "DLC04FF06HostPayInsufficient",
+      "topic_text": "I'm a bit short on caps at the moment.",
+      "emotion": "Neutral 50",
+      "response_text": "Perhaps you're in the wrong place?  Do come back when you have the means.",
+      "index": "7"
+    },
+    {
+      "topic": "DLC04FF06hostPayRepeatable",
+      "topic_text": "That was fun! Can we do it again?",
+      "emotion": "Neutral 50",
+      "response_text": "Your enthusiasm is flattering, but I'll need time to round up more fodder. Could I trouble you to return in a day or two?",
+      "index": "8"
+    },
+    {
+      "topic": "DLC04FF06hostPayRepfAccept",
+      "topic_text": "500 caps? Here you go.",
+      "emotion": "Neutral 50",
+      "response_text": "Gristle and gore await! Proceed inside and use the button, as before.",
+      "index": "10"
+    },
+    {
+      "topic": "DLC04FF06hostPayRepPoorhouse",
+      "topic_text": "I'm short on caps at the moment...",
+      "emotion": "Disgust 50",
+      "response_text": "I'm sure you're good for it, but I require cash.",
+      "index": "11"
+    },
+    {
+      "topic": "DLC04FF06hostPayRepReject",
+      "topic_text": "Never mind.",
+      "emotion": "Neutral 50",
+      "response_text": "I hope you'll reconsider. Simply not the same without you.",
+      "index": "12"
+    },
+    {
+      "topic": "DLC04FF06HostReg01",
+      "topic_text": "Registered for what, exactly?",
+      "emotion": "Neutral 50",
+      "response_text": "Only the finest bit of sport you've ever enjoyed!",
+      "index": "13"
+    },
+    {
+      "topic": "DLC04FF06HostReg02",
+      "topic_text": "I don't like the sound of this. I'm out of here.",
+      "emotion": "Neutral 50",
+      "response_text": "Your loss, I'm afraid. Come back if you reconsider.",
+      "index": "15"
+    },
+    {
+      "topic": "DLC04FF06Rules00TopLvl",
+      "topic_text": "Tell me more about the Safari.",
+      "emotion": "Happy 50",
+      "response_text": "I do hope you enjoyed it. What shall we discuss?",
+      "index": "16"
+    },
+    {
+      "topic": "DLC04FF06rulesBasics",
+      "topic_text": "What's the basic idea?",
+      "emotion": "Neutral 50",
+      "response_text": "The participants - that's you - assemble in the arena. Once you've made your preparations, signal me with the button inside to begin the hunt.",
+      "index": "19"
+    },
+    {
+      "topic": "DLC04FF06RulesEscape",
+      "topic_text": "What if we get overwhelmed? How do I get out?",
+      "emotion": "Neutral 50",
+      "response_text": "Not an option, I'm afraid. The thrill wouldn't be the same if you knew I'd release you at the first sign of trouble, now would it?",
+      "index": "22"
+    },
+    {
+      "topic": "DLC04FF06rulesSupplies",
+      "topic_text": "Do you have weapons for me to use?",
+      "emotion": "Neutral 50",
+      "response_text": "Weapons are your own responsibility, ma'am. I'm sure you have your own preferences, after all.",
+      "index": "23"
+    },
+    {
+      "topic": "DLC04TalkSomethingElse",
+      "topic_text": "Let's talk about something else.",
+      "emotion": "Neutral 50",
+      "response_text": "On with the action, eh?",
+      "index": "25"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "",
+      "emotion": "Happy 50",
+      "response_text": "Welcome! Welcome to my extraordinary Safari. Shall we get you registered?{True Salesman, Born to serve.}",
+      "index": "26"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "I have to go now.",
+      "emotion": "Neutral 50",
+      "response_text": "As you please.",
+      "index": "32"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Neutral 50",
+      "response_text": "High roller, coming through!",
+      "index": "33"
+    }
+  ],
+  "combat": []
+}

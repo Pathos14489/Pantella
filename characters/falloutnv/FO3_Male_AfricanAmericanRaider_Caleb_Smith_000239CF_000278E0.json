@@ -1,0 +1,154 @@
+{
+  "name": "Caleb Smith",
+  "url": "/wiki/Caleb_Smith",
+  "dialogue_name": "CalebSmith.txt",
+  "dialogue_url": "/wiki/CalebSmith.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000239CF",
+  "ref_id": "000278E0",
+  "editor_id": "CalebSmith",
+  "location": "Temple of the Union,Lincoln Memorial",
+  "location_url": "/wiki/Temple_of_the_Union",
+  "descriptions": [
+    "Caleb Smith is a runaway slave and member of the Abolitionists in the Capital Wasteland in 2277. He appears in Fallout 3.",
+    "Born to enslaved parents in the Capital Wasteland around 2245,",
+    "After escaping from his bondage, Caleb looked for a way to survive in the wasteland and found it by falling in with a band of raiders. The extent of his activities while in the gang are unclear, but when Caleb learned about Hannibal Hamlin's mission and the Temple of the Union, he abandoned the raider lifestyle and journeyed there to join Hannibal and fulfill his mission to free and unite slaves across the wasteland.",
+    "Within the Abolitionists, Caleb was the first to become a follower of Hannibal and cemented his loyalty by offering his masonry skills to restore any stone structure his leader asked of him;",
+    "Whether by training under the more battle-hardened members of the group or as a hold-over from his raider days, Caleb is skilled in and even prefers the use of melee weapons rather than firearms, though he proves willing to expand his repertoire by asking his fellow freedom fighter Simone Cameron for firearms training.",
+    "Caleb can always be found at the Temple of the Union, working on a stone slab containing an old, faded inscription from the Lincoln Memorial that he's trying to restore.",
+    "If the Lone Wanderer completes Head of State by helping the Abolitionists clear out the Lincoln Memorial so they can move in, he will relocate there and reside at his tent for the rest of the game.",
+    "Although the Fallout 3 Official Game Guide suggests that Caleb is able to use both melee weapons and firearms, ambient conversation with Simone points out his inability to shoot.",
+    "Like the other members of the Abolitionists, Caleb's name is a reference to a historical figure of the American Civil War, namely Caleb B. Smith, who served as U.S. President Abraham Lincoln's Secretary of the Interior from 1861 to 1863."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Raiders(formerly)Abolitionists",
+  "role": "StonemasonRaider (formerly)Slave (formerly)",
+  "detailed_location": "Temple of the UnionHelped the Abolitionists:Lincoln MemorialCaleb's tent",
+  "voice_actor": "Pete Papageorge",
+  "special": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 6,
+    "Charisma": 2,
+    "Intelligence": 4,
+    "Agility": 6,
+    "Luck": 4
+  },
+  "level": "6",
+  "tag_skills": [
+    {
+      "Melee Weap.:": "34"
+    },
+    {
+      "Small Guns:": "35"
+    },
+    {
+      "Sneak:": "35"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "100"
+    }
+  ],
+  "karma": "Good",
+  "voice_type": "MaleAdult02DC",
+  "geck_race": "AfricanAmericanRaider",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Anger 50",
+      "response_text": "Not now. We can talk after the Slaver attack.",
+      "index": "1"
+    },
+    {
+      "topic": "MS06CalebsNeeds",
+      "topic_text": "Hannibal says you need something?",
+      "emotion": "Surprise 50",
+      "response_text": "Hannibal told you about Lincoln's Memorial?",
+      "index": "13"
+    },
+    {
+      "topic": "MS06GetPicture",
+      "topic_text": "Where the hell am I supposed to get a picture of the Memorial?",
+      "emotion": "Fear 50",
+      "response_text": "Our ancestors honored Lincoln's life with a display in the Museum of History. I'm hoping that a picture of the Memorial still survives in there.",
+      "index": "16"
+    },
+    {
+      "topic": "MS06HamlinInfo",
+      "topic_text": "I'm supposed to promise to keep this place safe. Why should I?",
+      "emotion": "Sad 50",
+      "response_text": "Somebody's got to look out for those that can't look out for themselves.",
+      "index": "17"
+    },
+    {
+      "topic": "MS06LincolnsHead",
+      "topic_text": "What is that stone head?",
+      "emotion": "Neutral 50",
+      "response_text": "The stone head is from the statue of Abraham Lincoln. Hannibal wants me to reattach it to the statue in the Memorial.",
+      "index": "22"
+    },
+    {
+      "topic": "MS06SlaveStory",
+      "topic_text": "So, you used to be a slave?",
+      "emotion": "Surprise 50",
+      "response_text": "Long time ago. Eight years I think.",
+      "index": "23"
+    },
+    {
+      "topic": "MS06TempleUnion",
+      "topic_text": "Why do you stay here? Why not keep running?",
+      "emotion": "Sad 50",
+      "response_text": "We are the only hope for runaway slaves everywhere.",
+      "index": "26"
+    },
+    {
+      "topic": "MS06WhatDoYouDo",
+      "topic_text": "What do you do here?",
+      "emotion": "Happy 50",
+      "response_text": "My former master trained me in masonry. I fix things.",
+      "index": "29"
+    },
+    {
+      "topic": "MS06YouKnowAPlace",
+      "topic_text": "I'll bet you know where I can find one.",
+      "emotion": "Surprise 50",
+      "response_text": "Yes. There might be one in the Museum of History. Alejandra says they have a special exhibit all about Lincoln.",
+      "index": "31"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "I have to go now.",
+      "emotion": "Neutral 50",
+      "response_text": "Okay.",
+      "index": "32"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Neutral 50",
+      "response_text": "Go talk to Hannibal, stranger.",
+      "index": "38"
+    },
+    {
+      "topic": "MS06PackageStart",
+      "topic_text": "MS06PackageStart",
+      "emotion": "Surprise 50",
+      "response_text": "I'm tired. <yawn> Time for bed.",
+      "index": "46"
+    }
+  ],
+  "combat": []
+}

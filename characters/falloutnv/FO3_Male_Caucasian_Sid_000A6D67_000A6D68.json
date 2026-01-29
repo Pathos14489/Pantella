@@ -1,0 +1,92 @@
+{
+  "name": "Sid",
+  "url": "/wiki/Sid_(Fallout_3)",
+  "dialogue_name": "MQ08DerangedCaptive.txt",
+  "dialogue_url": "/wiki/MQ08DerangedCaptive.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000A6D67",
+  "ref_id": "000A6D68",
+  "editor_id": "MQ08DerangedCaptive",
+  "location": "Vault 87",
+  "location_url": "/wiki/Vault_87",
+  "descriptions": [
+    "Sid is an insane human in Vault 87 in 2277. He is trapped in Isolation Room 03.",
+    "Sid and a group of his friends were captured by super mutants in Vault 87. His friends were mutated into extremely deformed creatures, and he was told that he would soon meet the same fate. Upon the Lone Wanderer's arrival in Vault 87, Sid, having lost almost all rational thought as a result of his situation, is openly hostile towards them and all others.",
+    "In the G.E.C.K., there are dialogue options explaining that he killed all of the people in his isolation room and was moved to another isolation room by super mutants, which will explain the isolation room with two dead wastelanders and a raider."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "role": "Prisoner",
+  "detailed_location": "Vault 87",
+  "voice_actor": "Mark Lampert",
+  "special": {
+    "Strength": 7,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 3,
+    "Intelligence": 3,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "level": "7→15",
+  "tag_skills": [
+    {
+      "Melee Weap.:": "60→94(62→96)"
+    },
+    {
+      "Small Guns:": "58→92(60→94)"
+    },
+    {
+      "Unarmed:": "56→90"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "120→160"
+    },
+    {
+      "Critical Chance:": "5%"
+    },
+    {
+      "Unarmed Dam.:": "3.30→5.00"
+    },
+    {
+      "Poison Resist.:": "20%"
+    },
+    {
+      "Rad. Resist.:": "8%"
+    },
+    {
+      "Carry Weight:": "220"
+    }
+  ],
+  "karma": "Neutral",
+  "voice_type": "MaleUniqueMQ08Sid",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Anger 100",
+      "response_text": "No! It's all over me! I can feel it... it's invading my mind!{insane}",
+      "index": "1"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Anger 80",
+      "response_text": "All dead! They're all dead!{insane}",
+      "index": "4"
+    }
+  ],
+  "combat": []
+}

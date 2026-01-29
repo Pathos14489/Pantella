@@ -1,0 +1,150 @@
+{
+  "name": "Private Renolds",
+  "url": "/wiki/Renolds",
+  "dialogue_name": "NVTechatticupNCRRenolds.txt",
+  "dialogue_url": "/wiki/NVTechatticupNCRRenolds.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "001300F0",
+  "ref_id": "00134B9C",
+  "editor_id": "NVTechatticupNCRRenolds",
+  "location": "Techatticup Mine",
+  "location_url": "/wiki/Techatticup_Mine",
+  "descriptions": [
+    "Private Renolds is an NCR trooper on a road west of Techatticup Mine in 2281.",
+    "Renolds and his squad were recently ambushed by Caesar's Legion and taken captive in the mine farther down the road. Renolds was able to escape but two of his fellow troopers remain in captivity. He states that \"bastard Alexus\" is responsible for the ambush.",
+    "If the player character rescues the hostages before talking to Renolds, they can respond to his request by saying, \"were they the hostages in the mine?\" This will garner surprise and appreciation from him."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "NCR Army",
+  "role": "Soldier",
+  "detailed_location": "West ofTechatticup Mine",
+  "voice_actor": "Emerson Brooks",
+  "special": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 5,
+    "Intelligence": 5,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "level": "5",
+  "tag_skills": [
+    {
+      "Explosives:": "46"
+    },
+    {
+      "Guns:": "46"
+    },
+    {
+      "Melee Weap.:": "46"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Neutral",
+  "voice_type": "MaleAdult01DefaultB",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Fear 20",
+      "response_text": "Thank goodness you're here. My squad needs help.",
+      "index": "1"
+    },
+    {
+      "topic": "VTechatticupNVTechatticupNCRRenoldsTopic000",
+      "topic_text": "Why are you out here alone?",
+      "emotion": "Fear 20",
+      "response_text": "My squad was ambushed by a Legion party lead by that bastard Alexus.",
+      "index": "8"
+    },
+    {
+      "topic": "VTechatticupNVTechatticupNCRRenoldsTopic001",
+      "topic_text": "I'm busy right now.",
+      "emotion": "Disgust 20",
+      "response_text": "If you want to be that way I'll leave you alone.",
+      "index": "10"
+    },
+    {
+      "topic": "VTechatticupNVTechatticupNCRRenoldsTopic002",
+      "topic_text": "I'll take a look and see if there's anything I can do.",
+      "emotion": "Happy 20",
+      "response_text": "That's already more than I was expecting. I'll keep watch to make sure no more Legion come up the road. Good Luck.",
+      "index": "11"
+    },
+    {
+      "topic": "VTechatticupNVTechatticupNCRRenoldsTopic003",
+      "topic_text": "You sure they're still alive?",
+      "emotion": "Fear 10",
+      "response_text": "There's a slim chance. But if the Legion wanted us dead, our heads would already be on pikes.",
+      "index": "12"
+    },
+    {
+      "topic": "VTechatticupNVTechatticupNCRRenoldsTopic004",
+      "topic_text": "Extra encouragement would also increase their chances.",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] I understand. Here's what I have on me. Now go before it's too late.",
+      "index": "13"
+    },
+    {
+      "topic": "VTechatticupNVTechatticupNCRRenoldsTopic006",
+      "topic_text": "The odds are too small. You're on your own.",
+      "emotion": "Sad 50",
+      "response_text": "There's no way I can take on the Legion by myself. I'll be here if you change your mind.",
+      "index": "15"
+    },
+    {
+      "topic": "VTechatticupNVTechatticupNCRRenoldsTopic008",
+      "topic_text": "I changed my mind. I'll save your squad.",
+      "emotion": "Happy 20",
+      "response_text": "Really? I can't thank you enough. I'll wait here and watch the road. Good luck in there.",
+      "index": "16"
+    },
+    {
+      "topic": "VTechatticupNVTechatticupNCRRenoldsTopic009",
+      "topic_text": "Your friends are safe.",
+      "emotion": "Happy 20",
+      "response_text": "They must have run straight back to camp. I bet they didn't even stop and say thanks.",
+      "index": "17"
+    },
+    {
+      "topic": "VTechatticupNVTechatticupNCRRenoldsTopic010",
+      "topic_text": "They're still in the mine.",
+      "emotion": "Neutral 50",
+      "response_text": "Can you hurry? I know those Legion bastards are tough but my friends won't last long with all the radiation in there.",
+      "index": "19"
+    },
+    {
+      "topic": "VTechatticupNVTechatticupNCRRenoldsTopic012",
+      "topic_text": "Were they the NCR hostages in the mine?",
+      "emotion": "Fear 10",
+      "response_text": "Were? What do you mean were?",
+      "index": "20"
+    },
+    {
+      "topic": "VTechatticupNVTechatticupNCRRenoldsTopic013",
+      "topic_text": "They're already dead.",
+      "emotion": "Anger 50",
+      "response_text": "Legion bastards. They'll pay for that.",
+      "index": "21"
+    },
+    {
+      "topic": "VTechatticupNVTechatticupNCRRenoldsTopic014",
+      "topic_text": "I got them out alive.",
+      "emotion": "Happy 20",
+      "response_text": "I was worried Alexus had already thrown them down a mineshaft. I'll run by camp and see how they're doing when I get a chance. Thanks for the help.",
+      "index": "22"
+    }
+  ],
+  "conversation": [],
+  "combat": []
+}

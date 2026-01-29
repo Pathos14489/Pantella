@@ -1,0 +1,101 @@
+{
+  "name": "Bone",
+  "url": "/wiki/Bone_(character)",
+  "dialogue_name": "DLC01Bone.txt",
+  "dialogue_url": "/wiki/DLC01Bone.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "xx003E4C",
+  "ref_id": "xx003E5F",
+  "editor_id": "DLC01Bone",
+  "location": "The Mill",
+  "location_url": "/wiki/The_Mill",
+  "descriptions": [
+    "Bone is a Pitt raider who watches Pitt slaves in the Mill.",
+    "Bone can be found leaning against the wall, opposite the entrance to the office that leads to the steelyard. She is considerably less vicious than most of the other Pitt raiders, and, provided that one proves themselves in the Arena, she can hold a civil conversation with them.",
+    "During fights in the Arena, she can be seen in the audience above the fight area. She will comment on each of the Lone Wanderer's successes after they finish fighting.",
+    "Bone appears only in the Fallout 3 add-on The Pitt."
+  ],
+  "race": "Human",
+  "gender": "Female",
+  "affiliation": "Pitt raiders",
+  "role": "Slaver",
+  "detailed_location": "The Mill",
+  "voice_actor": "Vanessa Richardson",
+  "special": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 3,
+    "Intelligence": 3,
+    "Agility": 7,
+    "Luck": 5
+  },
+  "level": "1→4→9",
+  "tag_skills": [
+    {
+      "Melee Weap.:": "32→45→66"
+    },
+    {
+      "Small Guns:": "34→47→68"
+    },
+    {
+      "Unarmed:": "28→41→62"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "25→55→85"
+    },
+    {
+      "Critical Chance:": "5%"
+    },
+    {
+      "Unarmed Dam.:": "1.9→2.55→3.6"
+    },
+    {
+      "Poison Resist.:": "15%"
+    },
+    {
+      "Rad. Resist.:": "6%"
+    },
+    {
+      "Carry Weight:": "210"
+    }
+  ],
+  "karma": "Evil",
+  "voice_type": "DLC01RaiderFemaleColdVoice",
+  "geck_race": "CaucasianRaider",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "Look scab, you don't want my attention.{Laughs like a jackal at his own jokes.}",
+      "index": "1"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "I have to go now.",
+      "emotion": "Neutral 50",
+      "response_text": "Bone.",
+      "index": "8"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Neutral 50",
+      "response_text": "{Silence.}",
+      "index": "9"
+    }
+  ],
+  "combat": []
+}

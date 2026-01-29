@@ -1,0 +1,364 @@
+{
+  "name": "Anthony Ling",
+  "url": "/wiki/Anthony_Ling",
+  "dialogue_name": "AnthonyLing.txt",
+  "dialogue_url": "/wiki/AnthonyLing.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": true,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000156DB",
+  "ref_id": "00017A04",
+  "editor_id": "AnthonyLing",
+  "location": "Tenpenny Tower",
+  "location_url": "/wiki/Tenpenny_Tower",
+  "descriptions": [
+    "Anthony Ling is the owner of Tenpenny Tower's sole clothing store, New Urban Apparel, and one of the tower's residents in Fallout 3. He is one of several openly gay characters in the game, representing the polar opposite of the gruff, gritty Shrapnel or Flak.",
+    "The proprietor of Tenpenny Tower's finest (and only) clothing store, Ling carries a selection of pre-War apparel salvaged throughout the years.",
+    "As a whole, he fits in with the snobbish, privileged residents of the tower. Ling suggests \"retail therapy\" as a means of solving their problems, telling Margaret Primrose to purchase new clothes rather than mope (and that is to someone he considers a friend),",
+    "Perhaps the most interesting relationship he has is with Lydia Montenegro. The two proprietors trade  barbs, which might very well be mistaken for genuine hatred (the least of which is Ling calling Montenegro's boutique an \"antique shop,\" to which she replies by calling his threads \"atrocious\" and needing new material). However, Ling's repartees and melodramatic responses show it is just ribbing.",
+    "Ling is prone to flirting with the security detail at Tenpenny Tower, making a variety of more or less subtle passes. None of them reciprocate his advances,",
+    "Despite his flamboyance and flirting, some residents remain oblivious of his homosexuality. Irving Cheng, who seeks Ling's advice on making himself more attractive to his wife,",
+    "Tenpenny Tower",
+    "Tenpenny Tower: Anthony Ling is one of the residents who needs to be convinced to allow ghouls to live in the tower.",
+    "Xbox 360 Occasionally, he can be found wandering around the areas of Vault 101 and Megaton (blown-up). The player character can speak to him and he will act as if he is still in Tenpenny Tower."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Tenpenny Tower",
+  "role": "Store owner",
+  "detailed_location": "Tenpenny Tower",
+  "voice_actor": "Gregory Gorton",
+  "special": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 7,
+    "Intelligence": 5,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "mod_special_values": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 7,
+    "Intelligence": 5,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "level": "4",
+  "tag_skills": [
+    {
+      "Barter:": "49"
+    },
+    {
+      "Melee Weap.:": "45"
+    },
+    {
+      "Speech:": "49"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "45"
+    },
+    {
+      "Critical Chance:": "5%"
+    },
+    {
+      "Unarmed Dam.:": "1.15"
+    },
+    {
+      "Poison Resist.:": "15%"
+    },
+    {
+      "Rad. Resist.:": "6%"
+    },
+    {
+      "Carry Weight:": "200"
+    },
+    {
+      "Damage Res.:": "3%"
+    }
+  ],
+  "karma": "Good",
+  "voice_type": "MaleAdult01DefaultBDC",
+  "geck_race": "Asian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Happy 100",
+      "response_text": "Things have been perfectly fabulous since you exterminated that filthy vermin!{self important snob congratulating the player}",
+      "index": "1"
+    },
+    {
+      "topic": "MS12Basement",
+      "topic_text": "Do you know anything about the basement?",
+      "emotion": "Neutral 50",
+      "response_text": "I hear there're some tunnels underground for use in emergencies. Ask Gustavo, he's in charge of all those kinds of things.",
+      "index": "15"
+    },
+    {
+      "topic": "MS12BigotNeighbors",
+      "topic_text": "What if all your other neighbors agree?",
+      "emotion": "Disgust 100",
+      "response_text": "If my neighbors lose their minds and agree to such a thing, then I hope security shoots them in the head with their zombie friends.{self important snob}",
+      "index": "16"
+    },
+    {
+      "topic": "MS12BigotNevermind",
+      "topic_text": "Whatever.",
+      "emotion": "Anger 50",
+      "response_text": "Um-hmm. Would you mind bothering someone else? PLEASE!{self important snob losing patience}",
+      "index": "17"
+    },
+    {
+      "topic": "MS12BigotSpeech",
+      "topic_text": "This is happening. You're going to have to deal with it, or get forced out.",
+      "emotion": "Anger 100",
+      "response_text": "Grrr. You'll regret this. I've spent years collecting all this fabulous merchandise. I won't stand for this! Where the hell am I supposed to go?{bigot facing retribution}",
+      "index": "18"
+    },
+    {
+      "topic": "MS12BigotSpeechBad",
+      "topic_text": "I don't care. Get your stuff together and get out of here.",
+      "emotion": "Anger 50",
+      "response_text": "You'll pay for this. Dearly.{bigot promising revenge}",
+      "index": "19"
+    },
+    {
+      "topic": "MS12BigotSpeechGood",
+      "topic_text": "I'm sure you'll find something suitable, don't worry.",
+      "emotion": "Fear 50",
+      "response_text": "The only suitable place is Tenpenny Tower. Everywhere else stinks and caters to low-life scum like you. I'll die out there. I just know it.{defeated bigot trying to make hero feel bad}",
+      "index": "20"
+    },
+    {
+      "topic": "MS12BigotSpeechNeutral",
+      "topic_text": "Good luck.",
+      "emotion": "Fear 50",
+      "response_text": "Whatever. My death will be on your head.{defeated bigot trying to make hero feel bad}",
+      "index": "21"
+    },
+    {
+      "topic": "MS12IntroToGhoul1",
+      "topic_text": "The only good place for a Ghoul is at the end of a rope.",
+      "emotion": "Happy 100",
+      "response_text": "Wow! You're a brutal thing aren't you... You're right, of course. You should offer to help Gustavo and his troopers in fighting those Ghouls.{shocked but approving of the players brutality}",
+      "index": "22"
+    },
+    {
+      "topic": "MS12IntroToGhoul2",
+      "topic_text": "Most Ghouls are in need of a serious makeover. Huh? Am I right?",
+      "emotion": "Happy 100",
+      "response_text": "Ha ha ha! You bet. But who would dare touch them to give it to them?{laughing at the misfortunes of others}",
+      "index": "23"
+    },
+    {
+      "topic": "MS12IntroToGhoul3",
+      "topic_text": "What do you have against Ghouls, anyway?",
+      "emotion": "Disgust 100",
+      "response_text": "That's a silly question. What I have against Ghouls, is that they are Ghouls!{arrogant bigot}",
+      "index": "24"
+    },
+    {
+      "topic": "MS12ResidentsBranch",
+      "topic_text": "What's it like living at Tenpenny Tower?",
+      "emotion": "Happy 100",
+      "response_text": "Only those deserving to live here can afford it. And let me tell you, those who do, live in style!{self important snob}",
+      "index": "25"
+    },
+    {
+      "topic": "MS12ResidentsBranch1",
+      "topic_text": "I've noticed the quality of living is rather high here, isn't it?",
+      "emotion": "Happy 100",
+      "response_text": "And you can thank me for that. I'm the resident guide to all things fabulous.{gloating}",
+      "index": "26"
+    },
+    {
+      "topic": "MS12ResidentsBranch2",
+      "topic_text": "I bet people are dying to live here. You're all lucky you can afford it.",
+      "emotion": "Anger 50",
+      "response_text": "People ARE dying to get in here. Like those dirty Ghouls... or at least they should be dying. Security has got to get their act together.{annoyed}",
+      "index": "28"
+    },
+    {
+      "topic": "MS12ResidentsBranch3",
+      "topic_text": "Blah blah blah!",
+      "emotion": "Disgust 75",
+      "response_text": "You are in definite need of an attitude adjustment. Like those God-awful Ghouls scrabbling at the gate all the time.{annoyed}",
+      "index": "31"
+    },
+    {
+      "topic": "MS12ResidentsGhoulsAbout these Ghouls...",
+      "topic_text": "Are you worried about those Ghouls?",
+      "emotion": "Anger 100",
+      "response_text": "They were told they can't live here. But those zombies are too stupid to understand.{self important snob}",
+      "index": "33"
+    },
+    {
+      "topic": "MS12ResidentsGhoulsChoice1MS12ResidentsGhoulsChoiceGood",
+      "topic_text": "I might be able to solve this problem.",
+      "emotion": "Surprise 100",
+      "response_text": "Hmm. You're certainly welcome to try, aren't you? Talk to Chief Gustavo.{glad someone is taking charge}",
+      "index": "35"
+    },
+    {
+      "topic": "MS12ResidentsGhoulsChoice2MS12ResidentsGhoulsChoiceBad",
+      "topic_text": "I'll go tell them there's nothing here worth dying over.",
+      "emotion": "Disgust 100",
+      "response_text": "What are you suggesting by that? I don't think I like your tone!{self important indignation}",
+      "index": "36"
+    },
+    {
+      "topic": "MS12ResidentsGhoulsChoice3MS12ResidentsGhoulsChoiceNeutral",
+      "topic_text": "It's only a matter of time.",
+      "emotion": "Disgust 5",
+      "response_text": "I suppose it is, isn't it?{bored by the conversation}",
+      "index": "37"
+    },
+    {
+      "topic": "MS12ResidentsNeighbors",
+      "topic_text": "How would you feel about having a few Ghoul neighbors?",
+      "emotion": "Anger 100",
+      "response_text": "It's my turn, eh? Well, you won't be getting me to go along with your ridiculous plan.{angry}",
+      "index": "38"
+    },
+    {
+      "topic": "MS12ResidentsNeighborsBad",
+      "topic_text": "Yeah. Ghouls are disgusting creatures.",
+      "emotion": "Disgust 50",
+      "response_text": "You don't have to tell me that.{(agreeing) self important snob}",
+      "index": "42"
+    },
+    {
+      "topic": "MS12ResidentsNeighborsGood",
+      "topic_text": "I've met these Ghouls. They're civilized and pose no threat.",
+      "emotion": "Disgust 100",
+      "response_text": "Why would you hang out with dirty vermin like that? You enjoy sifting through feces?{self important snob}",
+      "index": "43"
+    },
+    {
+      "topic": "MS12ResidentsNeighborsNeutral",
+      "topic_text": "Whatever.",
+      "emotion": "Disgust 50",
+      "response_text": "Don't you have something better to do?{self important snob}",
+      "index": "45"
+    },
+    {
+      "topic": "SpeechChallengeFailure",
+      "topic_text": "SpeechChallengeFailure",
+      "emotion": "Anger 100",
+      "response_text": "In case you haven't noticed, I run a fabulous shop, and live in the most fabulous of places. You can't push people like me around! Ha!{self important snob}",
+      "index": "46"
+    },
+    {
+      "topic": "TenpennyAllistairTenpenny",
+      "topic_text": "Tell me about Allistair Tenpenny.",
+      "emotion": "Neutral 50",
+      "response_text": "A very well dressed gentleman, when he bothers to get dressed. He hardly ever leaves his penthouse suite.",
+      "index": "47"
+    },
+    {
+      "topic": "TenpennyGREETINGChoice1",
+      "topic_text": "You really think you can improve my look?",
+      "emotion": "Neutral 50",
+      "response_text": "With my fashion sense and your bottlecaps, there's no limit to what we can do for your image! I can't wait to get started!{snobby merchant excited to find a new client}",
+      "index": "48"
+    },
+    {
+      "topic": "TenpennyGREETINGChoice2",
+      "topic_text": "You got a problem with the way I dress?",
+      "emotion": "Disgust 100",
+      "response_text": "Fine. Keep wearing that trashy outfit. I don't care. You probably couldn't afford to upgrade your look anyway. Ah, I could have made you fabulous.{snobby merchant after he got rebuked}",
+      "index": "49"
+    },
+    {
+      "topic": "TenpennyGREETINGChoice3",
+      "topic_text": "Whatever.",
+      "emotion": "Neutral 50",
+      "response_text": "Look, if you don't care about yourself, then no one else will. And nothing says \"I love me\" better than a fabulous new look. Am I right? I'm right.{snobby clothes merchant trying to encourage a slacker}",
+      "index": "50"
+    },
+    {
+      "topic": "TenpennyVendor",
+      "topic_text": "I'd like to do business with you.",
+      "emotion": "Neutral 50",
+      "response_text": "I only carry the finest garments.",
+      "index": "51"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "DialogueTenpennyConv00",
+      "topic_text": "DialogueTenpennyConv00",
+      "emotion": "Happy 100",
+      "response_text": "Everything's just fabulous!{overly happy}",
+      "index": "52"
+    },
+    {
+      "topic": "DialogueTenpennyConv01",
+      "topic_text": "DialogueTenpennyConv01",
+      "emotion": "Neutral 50",
+      "response_text": "Ewwww! Labcoats are so last century. I have a better idea, Doc. Why don't you come to New Urban Apparel, and I'll give you a complete make-over!{playfully chiding a customer}",
+      "index": "57"
+    },
+    {
+      "topic": "DialogueTenpennyConv02",
+      "topic_text": "DialogueTenpennyConv02",
+      "emotion": "Neutral 50",
+      "response_text": "Looks like someone woke up on the wrong side of the bed. I bet I could help you end up on the right side! Haha! Have good day, dear.{flirting}",
+      "index": "62"
+    },
+    {
+      "topic": "DialogueTenpennyConv03",
+      "topic_text": "DialogueTenpennyConv03",
+      "emotion": "Sad 50",
+      "response_text": "Ouch! You wound me!{playfully sad (verging on melodrama)}",
+      "index": "68"
+    },
+    {
+      "topic": "DialogueTenpennyEatStartTopic",
+      "topic_text": "DialogueTenpennyEatStartTopic",
+      "emotion": "Neutral 50",
+      "response_text": "Time for a snack.{hungry and on his way to get food}",
+      "index": "69"
+    },
+    {
+      "topic": "DialogueTenpennySleepStartTopic",
+      "topic_text": "DialogueTenpennySleepStartTopic",
+      "emotion": "Happy 50",
+      "response_text": "Time to get some beauty rest!{tired and heading off to bed}",
+      "index": "70"
+    },
+    {
+      "topic": "GOODBYE",
+      "topic_text": "I have to go now.",
+      "emotion": "Happy 50",
+      "response_text": "Bu-bye!{self important fashion merchant}",
+      "index": "71"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Surprise 50",
+      "response_text": "Hey! What are you up to old man?{confused and slightly suspicious}",
+      "index": "74"
+    }
+  ],
+  "combat": [
+    {
+      "topic": "BarterExit",
+      "topic_text": "BarterExit",
+      "emotion": "Neutral 50",
+      "response_text": "You must come back soon.",
+      "index": "91"
+    }
+  ]
+}

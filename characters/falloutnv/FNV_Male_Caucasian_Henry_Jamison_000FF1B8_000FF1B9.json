@@ -1,0 +1,159 @@
+{
+  "name": "Henry Jamison",
+  "url": "/wiki/Henry_Jamison",
+  "dialogue_name": "HenryJamison.txt",
+  "dialogue_url": "/wiki/HenryJamison.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000FF1B8",
+  "ref_id": "000FF1B9",
+  "editor_id": "HenryJamison",
+  "location": "Atomic Wrangler Casino",
+  "location_url": "/wiki/Atomic_Wrangler_Casino",
+  "descriptions": [
+    "Henry Jamison is the corrupt, wealthy manager of the New Vegas branch of the Crimson Caravan, residing in Freeside in 2281. He can be found at the Atomic Wrangler.",
+    "Henry Jamison is part of the Jamison family, a clan of wealthy and influential brahmin barons from Redding in New California who have invested heavily into the Crimson Caravan. With pressure from the Jamison family, Alice McLafferty posted Henry at the New Vegas branch.",
+    "Henry was far from suited for the job, always keeping the New Vegas branch underperforming due to his poor management skills before Alice McLafferty was sent from the Hub to straighten out the branch. Being arrogant, self-centered and irresponsible, Henry cares very little about anything besides indulging himself on gambling, drinking and prostitutes that the position can offer him and holds McLafferty in contempt for attempting to sack him.",
+    "Because of his poor management of the New Vegas branch, the Crimson Caravan wants him gone, but his family ties won't allow him to be fired. Alice McLafferty has tried urging him and his parents to make him quit or allow her to fire him, but both refuse. She is looking for someone who can help her oust him from his position. Henry can be found in Freeside gambling more at the Atomic Wrangler on the slots. For him to quit the Crimson Caravan, he wants all of his debt to the Omertas paid off in addition to a hefty severance package."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Crimson Caravan",
+  "role": "Branch manager",
+  "detailed_location": "Atomic Wrangler",
+  "voice_actor": "Yuri Lowenthal",
+  "special": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 4,
+    "Intelligence": 4,
+    "Agility": 6,
+    "Luck": 4
+  },
+  "level": "3",
+  "tag_skills": [
+    {
+      "Guns:": "39"
+    },
+    {
+      "Melee Weap.:": "39"
+    },
+    {
+      "Sneak:": "39"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Neutral",
+  "voice_type": "MaleAdult01Default",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "Shove off. You're making my luck turn bad.",
+      "index": "1"
+    },
+    {
+      "topic": "VDialogueCrimsonCaravanHenryJamisonTopic000",
+      "topic_text": "I'm here to talk about ending your employment with the Crimson Caravan Company.",
+      "emotion": "Neutral 50",
+      "response_text": "Fuck no. No matter what that old bitch McLafferty says, my dad said I could be in charge of the New Vegas branch.",
+      "index": "3"
+    },
+    {
+      "topic": "VDialogueCrimsonCaravanHenryJamisonTopic001",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah, whatever.",
+      "index": "5"
+    },
+    {
+      "topic": "VDialogueCrimsonCaravanHenryJamisonTopic002",
+      "topic_text": "{NCR - Mixed}Look, I take advantage of the NCR, too, but I don't make them my enemy.",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah, all right. If McLafferty complains long enough, my folks might haul me back to California just to shut her up. Tell the old hag I'm gone.",
+      "index": "6"
+    },
+    {
+      "topic": "VDialogueCrimsonCaravanHenryJamisonTopic003",
+      "topic_text": "{NCR - liked}The NCR thinks pretty highly of me. Let's say I get word to your parents...",
+      "emotion": "Neutral 50",
+      "response_text": "All right, all right! I believe you. Just don't say anything to my folks. You can tell the old hag I'm gone.",
+      "index": "7"
+    },
+    {
+      "topic": "VDialogueCrimsonCaravanHenryJamisonTopic004",
+      "topic_text": "What do you know about the Omertas?",
+      "emotion": "Neutral 50",
+      "response_text": "One of the families that runs the Strip. They're a pack of cheaters, but you still don't want to fuck with them.",
+      "index": "8"
+    },
+    {
+      "topic": "VDialogueCrimsonCaravanHenryJamisonTopic005",
+      "topic_text": "Maybe we can make a deal. What do you want from the Crimson Caravan in exchange for quitting?",
+      "emotion": "Neutral 50",
+      "response_text": "I want my debt with the Omertas paid off. And I want one of those severance package things. A big one.",
+      "index": "9"
+    },
+    {
+      "topic": "VDialogueCrimsonCaravanHenryJamisonTopic006< Barter 50 >",
+      "topic_text": "The better deal would be for me to walk away and let the Omertas handle you.",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] Fine, whatever. Forget the severance. Just get the Omertas off my back, and you can tell McLafferty she won't see my face again.",
+      "index": "11"
+    },
+    {
+      "topic": "VDialogueCrimsonCaravanHenryJamisonTopic007< Speech 50 >",
+      "topic_text": "So you don't have the Omertas' money yet? I'll let them know about that.",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] Wha-? No, no wait. Look, I just need time. Don't rat me out to them.",
+      "index": "13"
+    },
+    {
+      "topic": "VDialogueCrimsonCaravanHenryJamisonTopic008",
+      "topic_text": "Never mind.",
+      "emotion": "Neutral 50",
+      "response_text": "We done, then?",
+      "index": "16"
+    },
+    {
+      "topic": "VDialogueCrimsonCaravanHenryJamisonTopic009",
+      "topic_text": "Fine. I'll let McLafferty know we've struck a deal.",
+      "emotion": "Neutral 50",
+      "response_text": "You do that. And tell the old bitch to pay up quick, you hear?",
+      "index": "17"
+    },
+    {
+      "topic": "VDialogueCrimsonCaravanHenryJamisonTopic010",
+      "topic_text": "What brought you to New Vegas?",
+      "emotion": "Neutral 50",
+      "response_text": "I wanted to be where the action is, so I got my dad to pull some strings and get me a cushy position with the Crimson Caravan.",
+      "index": "18"
+    },
+    {
+      "topic": "VDialogueCrimsonCaravanHenryJamisonTopic011",
+      "topic_text": "{RACKET complete}I'm in good with the Omertas - ask around. Feel like quitting yet?",
+      "emotion": "Neutral 50",
+      "response_text": "Uh, yeah, actually. I'm still good for the money, but I'll get it some other way. You can tell the old hag I'm gone.",
+      "index": "20"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah, whatever.",
+      "index": "21"
+    }
+  ],
+  "combat": []
+}

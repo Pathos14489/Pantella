@@ -1,0 +1,271 @@
+{
+  "name": "Bannon",
+  "url": "/wiki/Bannon",
+  "dialogue_name": "Bannon.txt",
+  "dialogue_url": "/wiki/Bannon.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": true,
+  "can_repair": true,
+  "can_be_companion": false,
+  "base_id": "000156B5",
+  "ref_id": "0001E74B",
+  "editor_id": "Bannon",
+  "location": "Potomac Attire,Rivet City market",
+  "location_url": "/wiki/Potomac_Attire",
+  "descriptions": [
+    "Bannon is the owner of Potomac Attire, a clothing store in the Rivet City marketplace, and a member of the Rivet City Council representing civilian interests in Fallout 3.",
+    "Bannon is Rivet City's fashionista and most ruthless merchant. After immigrating to the city in 2265, at the young age of 18, his trade in clothes of all kinds led to a meteoric rise in the power structure of the city and its marketplace. By the age of thirty, he is the civilian representative on the Rivet City Council, and convinced himself that the City's position as the strongest settlement in the wasteland is entirely due to his leadership and sponsoring its development. In fact, he claims that he organized and heads the city council, and considers the \"equality\" of citizens in Rivet City as a smokescreen to conceal its oligarch, Bannon of the Potomac Attire.",
+    "Bannon is perfectly aware that his version of history is warped and inaccurate, but keeps telling it because few at Rivet City know the real version of the events or care enough to confront him.",
+    "Although Bannon would like to be the City's sole ruler, he's actually one of three, representing the civilians - primarily market traders. The other representatives are Madison Li (science) and Harkness (security). Bannon is the most predatory member of the council, consistently advocating for measures that would increase the flow of caps into the treasury at the expense of the outside. This, in turn, would greatly increase Bannon's fortunes, as he can tap into the city's funds as a council member - to the point he's accused of treating them as a personal bank account.",
+    "Despite Bannon's posturing and ego,",
+    "Bannon's greed has earned him the sworn enmity of Seagrave Holmes, a working class trader who's worked on the Rivet City carrier all his life. Holmes is fed up with Bannon's disinterest in representing the merchants,",
+    "Aware that Seagrave does actually stand a chance of displacing him on the council, Bannon is willing to play dirty to preserve his position and getting dirt on Holmes.",
+    "On the personal side, Bannon is childless"
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Rivet City Council",
+  "role": "City Council member and civilian representativeOwner ofPotomac Attire",
+  "detailed_location": "Potomac Attire,Rivet City market",
+  "voice_actor": "Jeff Baker",
+  "special": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 7,
+    "Intelligence": 5,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "mod_special_values": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 7,
+    "Intelligence": 5,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "level": "4",
+  "tag_skills": [
+    {
+      "Barter:": "49"
+    },
+    {
+      "Melee Weap.:": "45"
+    },
+    {
+      "Speech:": "49"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "40"
+    },
+    {
+      "Critical Chance:": "5%"
+    },
+    {
+      "Unarmed Dam.:": "1.15"
+    },
+    {
+      "Poison Resist.:": "15%"
+    },
+    {
+      "Rad. Resist.:": "6%"
+    },
+    {
+      "Carry Weight:": "200"
+    },
+    {
+      "Damage Res.:": "3%"
+    }
+  ],
+  "karma": "Good",
+  "voice_type": "MaleAdult01DefaultDC",
+  "geck_race": "AfricanAmerican",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Anger 50",
+      "response_text": "The market is closing soon. You'd better make it quick.",
+      "index": "1"
+    },
+    {
+      "topic": "MS03RCHistory1",
+      "topic_text": "You lied to me about Rivet City's history! Pinkerton told me the truth!",
+      "emotion": "Happy 15",
+      "response_text": "So? Who cares about that old coot, or his pathetic story? It's people like me that have turned his little \"science station\" into someplace great.",
+      "index": "17"
+    },
+    {
+      "topic": "MS03RCHistory2AMS03RivetCityHistory2A",
+      "topic_text": "That makes sense. And it explains why you're on the Council.",
+      "emotion": "Happy 50",
+      "response_text": "Precisely! After sponsoring the settlement and organizing the city council, I took my rightful place at its head.",
+      "index": "21"
+    },
+    {
+      "topic": "MS03RCHistory2BMS03RivetCityHistory2B",
+      "topic_text": "Hasn't Rivet City been around for longer than twelve years?",
+      "emotion": "Disgust 10",
+      "response_text": "Well, yes, but it was hardly anyplace of importance until I arrived on the scene. That's all ancient history now. No one would ever care about it.",
+      "index": "23"
+    },
+    {
+      "topic": "MS08TopicPinkerton",
+      "topic_text": "Is there anyone on this ship named Pinkerton?",
+      "emotion": "Surprise 50",
+      "response_text": "Now there's a name I haven't heard in a while.",
+      "index": "29"
+    },
+    {
+      "topic": "MS14TedFind",
+      "topic_text": "Where can I find Ted Strayer?",
+      "emotion": "Neutral 50",
+      "response_text": "Have you tried the common room?  That's where he sleeps.",
+      "index": "32"
+    },
+    {
+      "topic": "RCBannonInsultClothes",
+      "topic_text": "How dare you insult my taste in clothes.",
+      "emotion": "Fear 50",
+      "response_text": "I...I meant no offense!",
+      "index": "35"
+    },
+    {
+      "topic": "RCBannonNotGoodEnough",
+      "topic_text": "So I'm not good enough to shop here?",
+      "emotion": "Fear 50",
+      "response_text": "That's not what I meant.",
+      "index": "38"
+    },
+    {
+      "topic": "RCBannonRefinement",
+      "topic_text": "I see you are also a person of refinement.",
+      "emotion": "Disgust 50",
+      "response_text": "Between you and me, keeping out the riff raff is good for business.",
+      "index": "40"
+    },
+    {
+      "topic": "RCBannonSeagraveAgree",
+      "topic_text": "Seagrave? Oh yeah. He's clueless.",
+      "emotion": "Anger 50",
+      "response_text": "So you've met him, eh? Well he wants to replace me on the council. Now, I can't have that. No siree.",
+      "index": "41"
+    },
+    {
+      "topic": "RCBannonSeagraveDisagree",
+      "topic_text": "Whoever this Seagrave is, you think he's a threat to your influence?",
+      "emotion": "Surprise 50",
+      "response_text": "A threat? No, of course not! Well, maybe. He wants to replace me on the council.",
+      "index": "44"
+    },
+    {
+      "topic": "RCBannonSeagraveExit",
+      "topic_text": "It's really none of my business.",
+      "emotion": "Happy 50",
+      "response_text": "Don't want to get mixed up in politics, eh? Don't blame you.",
+      "index": "47"
+    },
+    {
+      "topic": "RCBannonSeagraveLetter",
+      "topic_text": "I found a letter in Seagrave's room. It's from some Slavers...",
+      "emotion": "Surprise 50",
+      "response_text": "Really? I...I mean, I'm shocked. Shocked I tell you.",
+      "index": "48"
+    },
+    {
+      "topic": "RCTopicCityCouncilI heard that Rivet City is run by some sort of Council?",
+      "topic_text": "So you're on the City Council.",
+      "emotion": "Neutral 50",
+      "response_text": "Doctor Li, Chief Harkness and I are all on the council. We meet every Monday morning.",
+      "index": "51"
+    },
+    {
+      "topic": "RCTopicDiegoAngela",
+      "topic_text": "I heard Angela Staley has a crush on Diego.",
+      "emotion": "Disgust 50",
+      "response_text": "Disgusting, isn't it? Someone should talk to that boy. He has no business hanging around that tramp if he's going to be a priest.",
+      "index": "59"
+    },
+    {
+      "topic": "RCTopicHangarDeckPeople",
+      "topic_text": "What is this I hear about the Hangar Deck and Upper Deck?",
+      "emotion": "Disgust 50",
+      "response_text": "The people that live on the Hangar Deck are the great unwashed masses.",
+      "index": "60"
+    },
+    {
+      "topic": "RCTopicRivetCityWhat kind of place is this Rivet City?",
+      "topic_text": "Why are you guys living on this boat?",
+      "emotion": "Happy 50",
+      "response_text": "It's a place to live, safe from Raiders and Super Mutants.",
+      "index": "63"
+    },
+    {
+      "topic": "RCTopicWedding",
+      "topic_text": "When are Angela and Diego getting married?",
+      "emotion": "Disgust 50",
+      "response_text": "The happy nuptials are at three tomorrow.{Droll, with a bit of sarcasm.}",
+      "index": "65"
+    },
+    {
+      "topic": "RivetCityBarter",
+      "topic_text": "I'm here to do business with you.",
+      "emotion": "Anger 50",
+      "response_text": "If I must.",
+      "index": "67"
+    },
+    {
+      "topic": "RivetCityRepair",
+      "topic_text": "I need you to repair my stuff.",
+      "emotion": "Neutral 50",
+      "response_text": "I'll see what I can do.",
+      "index": "70"
+    },
+    {
+      "topic": "SpeechChallengeFailure",
+      "topic_text": "SpeechChallengeFailure",
+      "emotion": "Disgust 10",
+      "response_text": "That's just a technicality, really. This wasn't what you'd call a \"settlement\" until I whipped them all into shape. More of a \"camp,\" really.",
+      "index": "71"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYEI have to go now.",
+      "topic_text": "It's been a pleasure, Mr. Bannon.",
+      "emotion": "Happy 50",
+      "response_text": "Come back soon.",
+      "index": "74"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Anger 50",
+      "response_text": "You're here because I convinced the Council your business was worth the risk. Don't disappoint me. Oh, and don't kill anybody else either.",
+      "index": "75"
+    },
+    {
+      "topic": "RCGoodbye",
+      "topic_text": "RCGoodbye",
+      "emotion": "Neutral 50",
+      "response_text": "Of course. Just don't touch it. I don't want any grease stains from that kitchen on it.",
+      "index": "86"
+    },
+    {
+      "topic": "RCPackageEnd",
+      "topic_text": "RCPackageEnd",
+      "emotion": "Happy 50",
+      "response_text": "Well, I need to go open up.",
+      "index": "94"
+    }
+  ],
+  "combat": []
+}

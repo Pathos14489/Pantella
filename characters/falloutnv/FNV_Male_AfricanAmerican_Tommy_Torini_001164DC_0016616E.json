@@ -1,0 +1,239 @@
+{
+  "name": "Tommy Torini",
+  "url": "/wiki/Tommy_Torini",
+  "dialogue_name": "VMSTopsTommyTorini.txt",
+  "dialogue_url": "/wiki/VMSTopsTommyTorini.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "001164DC",
+  "ref_id": "0016616E",
+  "editor_id": "VMSTopsTommyTorini",
+  "location": "The Aces",
+  "location_url": "/wiki/The_Aces",
+  "descriptions": [
+    "Tommy Torini is a Chairmen talent agent and the manager for the Aces theater at the Tops, living in New Vegas in 2281.",
+    "The self-declared \"talent manager, show scheduler, and all-around man in charge\" of the Aces Theater, as well as one of the founders of the theater, However, since Benny had the Singer killed by Swank prior to the events of Fallout: New Vegas (a event seen in the graphic novel All Roads), he is looking for additional acts.",
+    "Tommy will hang around the Aces theater, but will also get up on stage and dance with the Rad Pack. He cannot be interacted with while dancing.",
+    "Note: His eyepatch cannot be looted, as it is marked as unusable.",
+    "Tommy Torini appears in Fallout: New Vegas. He is also mentioned in the graphic novel All Roads.",
+    "Tommy Torini bears significant resemblance to American entertainer Sammy Davis Jr., including the missing eye. Sammy lost his left eye in a car collision, but elected to be fitted with a glass eye (after wearing an eyepatch for six months). Likewise, Tommy's 'Rad Pack Revue' is an obvious nod to Frank Sinatra's 'Rat Pack'; of which, Sammy Davis Jr. was the only black member."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Mojave Boot-Riders(formerly)ChairmenRad Pack Revue",
+  "role": "The AcesmanagerTalent agentDancer6 of Diamonds",
+  "detailed_location": "The Tops",
+  "voice_actor": "Ron Yuan",
+  "special": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 3,
+    "Intelligence": 3,
+    "Agility": 7,
+    "Luck": 5
+  },
+  "level": "20",
+  "tag_skills": [
+    {
+      "Energy Weap.:": "99"
+    },
+    {
+      "Guns:": "100"
+    },
+    {
+      "Melee Weap.:": "100"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Neutral",
+  "voice_type": "MaleAdult08",
+  "geck_race": "AfricanAmerican",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Surprise 35",
+      "response_text": "Swank filled me in about Benny. Hell of a thing, baby. Hell of a thing.",
+      "index": "1"
+    },
+    {
+      "topic": "TommyToriniBenny",
+      "topic_text": "What do you think about Benny?",
+      "emotion": "Surprise 50",
+      "response_text": "Benny? Ahh, he's an all right cat, you dig? He don't got much musical talent, but he knows how to run a business. When he's around, anyways.",
+      "index": "12"
+    },
+    {
+      "topic": "TommyToriniBillyBargain",
+      "topic_text": "I want to talk to you about how much you're paying Billy Knight.",
+      "emotion": "Happy 50",
+      "response_text": "That comedian you mean? Yeah, he practically begged me to hire him. Didn't even haggle.",
+      "index": "13"
+    },
+    {
+      "topic": "TommyToriniIntro",
+      "topic_text": "What do you do here?",
+      "emotion": "Happy 75",
+      "response_text": "Well, apart from serving as talent manager, show scheduler, and all-around man in charge of this fine theater, I happen to be its headline act.",
+      "index": "14"
+    },
+    {
+      "topic": "TommyToriniStrip",
+      "topic_text": "What other entertainment is there on the Strip?",
+      "emotion": "Pained 50",
+      "response_text": "Now why would you want to go breaking Tommy's heart asking a question like that?",
+      "index": "16"
+    },
+    {
+      "topic": "TommyToriniTalent",
+      "topic_text": "Let's talk about the acts I recruited.",
+      "emotion": "Happy 50",
+      "response_text": "The cowboy act? Yeah, he dropped on in here not too long before you. He's got chops, baby, real chops, and I ain't just talking about that mustache.",
+      "index": "19"
+    },
+    {
+      "topic": "TommyToriniTheater",
+      "topic_text": "Tell me about this theater.",
+      "emotion": "Happy 35",
+      "response_text": "Well, it was my idea - well, me and the rest of the Rad Pack boys. We took it to Benny, and he thought it was a good idea.",
+      "index": "33"
+    },
+    {
+      "topic": "TommyToriniWork",
+      "topic_text": "Swank mentioned you might be looking for some new acts. Can I help?",
+      "emotion": "Happy 100",
+      "response_text": "Sure, baby, sure. Tommy's always looking for new talent to bring to the Aces.",
+      "index": "35"
+    },
+    {
+      "topic": "TopsAllSeenBenny",
+      "topic_text": "Have you seen Benny?",
+      "emotion": "Happy 30",
+      "response_text": "Dig it, baby, he beat feet to his suite. You scare the big boss man or something?",
+      "index": "38"
+    },
+    {
+      "topic": "VMSTopsTalentPoolVMSTopsTommyToriniTopic000",
+      "topic_text": "Sure, I'll keep an eye out.",
+      "emotion": "Happy 35",
+      "response_text": "Ring-a-ding! My card.",
+      "index": "39"
+    },
+    {
+      "topic": "VMSTopsTalentPoolVMSTopsTommyToriniTopic001",
+      "topic_text": "Talent scouting isn't really my thing. I think I'll pass.",
+      "emotion": "Neutral 50",
+      "response_text": "All right, well, if you change your mind, just let me know.",
+      "index": "40"
+    },
+    {
+      "topic": "VMSTopsTalentPoolVMSTopsTommyToriniTopic002",
+      "topic_text": "Hang on, this comes out to 1,500 caps for Billy! He's worth three times that!",
+      "emotion": "Surprise 50",
+      "response_text": "[SUCCEEDED] All right, you drive a hard bargain, baby. Tell you what, I'll bump him up to 3,000. That's fair. Here's your cut.",
+      "index": "41"
+    },
+    {
+      "topic": "VMSTopsTalentPoolVMSTopsTommyToriniTopic003",
+      "topic_text": "Yeah, I hear you. Any idea where he goes when he disappears like that?",
+      "emotion": "Disgust 10",
+      "response_text": "[SUCCEEDED] Well, now, you didn't hear this from Tommy, but Benny likes to go off on a bender now and then.",
+      "index": "43"
+    },
+    {
+      "topic": "VMSTopsTalentPoolVMSTopsTommyToriniTopic004",
+      "topic_text": "Let's talk about something else.",
+      "emotion": "Happy 75",
+      "response_text": "Sure thing, baby. What can Tommy do for you?",
+      "index": "47"
+    },
+    {
+      "topic": "VMSTopsTalentPoolVMSTopsTommyToriniTopic005",
+      "topic_text": "Okay, sorry, I didn't mean anything by it.",
+      "emotion": "Happy 25",
+      "response_text": "It's cool, baby. Tommy's a forgiving fella.",
+      "index": "48"
+    },
+    {
+      "topic": "VMSTopsTalentPoolVMSTopsTommyToriniTopic006",
+      "topic_text": "Really? What kind of entertainment do you have?",
+      "emotion": "Pained 15",
+      "response_text": "Well, acts are a little bit thin on the ground right now, but every night from eight to midnight, we got the Rad Pack Revue!",
+      "index": "49"
+    },
+    {
+      "topic": "VMSTopsTalentPoolVMSTopsTommyToriniTopic007Maybe I could help you find some more acts for your show.",
+      "topic_text": "I've reconsidered about the talent scouting.",
+      "emotion": "Happy 100",
+      "response_text": "Glad to hear it, baby! My card - pass it on if you see any good acts out there.",
+      "index": "51"
+    },
+    {
+      "topic": "VMSTopsTalentPoolVMSTopsTommyToriniTopic008",
+      "topic_text": "Sounds great.",
+      "emotion": "Happy 30",
+      "response_text": "You know it, baby!",
+      "index": "52"
+    },
+    {
+      "topic": "VMSTopsTalentPoolVMSTopsTommyToriniTopic009",
+      "topic_text": "Make it 5% and you've got a deal.",
+      "emotion": "Surprise 35",
+      "response_text": "[SUCCEEDED] Ooh, a sharp customer! All right, all right, 5% it is.",
+      "index": "53"
+    },
+    {
+      "topic": "VMSTopsTalentPoolVMSTopsTommyToriniTopic010",
+      "topic_text": "Thanks.",
+      "emotion": "Happy 50",
+      "response_text": "Any day, baby, any day.",
+      "index": "55"
+    },
+    {
+      "topic": "VMSTopsTalentPoolVMSTopsTommyToriniTopic011",
+      "topic_text": "Hang on, this comes out to 1,500 caps for Billy! He's worth three times that!",
+      "emotion": "Surprise 50",
+      "response_text": "[SUCCEEDED] All right, you drive a hard bargain, baby. Tell you what, I'll bump him up to 3,000. That's fair. Here's your cut.",
+      "index": "56"
+    },
+    {
+      "topic": "VMSTopsTalentPoolVMSTopsTommyToriniTopic012",
+      "topic_text": "Thanks.",
+      "emotion": "Happy 50",
+      "response_text": "Any day, baby, any day.",
+      "index": "58"
+    },
+    {
+      "topic": "VMSTopsTalentPoolVMSTopsTommyToriniTopic013",
+      "topic_text": "Billy's worth three times what you're paying him.",
+      "emotion": "Surprise 50",
+      "response_text": "[SUCCEEDED] All right, you drive a hard bargain, baby. Tell you what, I'll bump him up to 3,000. That's fair. Here's the difference for your cut.",
+      "index": "59"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYEGoodbye.",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Take it easy, baby.",
+      "index": "61"
+    }
+  ],
+  "combat": [
+    {
+      "topic": "RadioHello",
+      "topic_text": "RadioHello",
+      "emotion": "Neutral 50",
+      "response_text": "{Manhattan}",
+      "index": "62"
+    }
+  ]
+}

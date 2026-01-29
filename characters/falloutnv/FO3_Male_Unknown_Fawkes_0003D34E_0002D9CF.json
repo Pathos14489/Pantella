@@ -1,0 +1,723 @@
+{
+  "name": "Fawkes",
+  "url": "/wiki/Fawkes",
+  "dialogue_name": "MQ08Fawkes.txt",
+  "dialogue_url": "/wiki/MQ08Fawkes.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": true,
+  "base_id": "0003D34E",
+  "ref_id": "0002D9CF",
+  "editor_id": "MQ08Fawkes",
+  "location": "Vault 87",
+  "location_url": "/wiki/Vault_87",
+  "descriptions": [
+    "Fawkes is a Vault 87 super mutant residing in a cell within the ancient Vault in the Capital Wasteland in 2277, imprisoned there by his brethren for his peaceful nature and interest in learning history instead of killing humans. He appears in Fallout 3 as a possible companion of the Lone Wanderer.",
+    "An anomaly even among his brethren, whereas the majority of mutants found in the former capital city are aggressive, barely intelligent brutes, the one named \"Fawkes\" proves to be an educated, soft-spoken person that keeps his violent impulses in check. One of the original dwellers of Vault 87, Fawkes says he can still remember glimpses of his past, of the Vault in its prime, with scientists and regular dwellers walking through the halls. However, these glimpses are all that remains, and the inability to recall his former human identity torments him to no end.",
+    "In truth, Fawkes' origin is much the same as any other super mutant spawned within Vault 87: he was captured by the renegade group of mutants that overpowered the scientists and was exposed to the modified strain of the Forced Evolutionary Virus used in the Vault's Evolutionary Experimentation Program. However, unlike other victims of the mutation process, one managed to survive with his mind intact. Where others would succumb to the excruciating pain of the transformation and become insane, he retained enough of his intelligence to be capable of cognizant speech immediately after the process completed. He was branded a failure by his captors and locked up in one of the old isolation wards in the Vault's medical wing. Where normally he would be killed, the super mutants considered him different enough to keep him alive as a curiosity.",
+    "The mutant coped with the loneliness he felt from being trapped in his cell for decades on end after he discovered a working terminal left in the isolation room he was imprisoned in. Thanks to its connection to the Vault's data mainframe, he was able to extensively study history, literature, science and other subjects, as the book files gave him a wealth of knowledge and insight. In fact, it is from the history books that the mutant took his name of \"Fawkes\", inspired by the record of a man willing to fight and die for his beliefs, a sentiment Fawkes agreed with. However, sometime shortly before the Lone Wanderer left Vault 101 in 2277, Fawkes' super mutant captors discovered the terminal and his attachment to the knowledge it offered, and destroyed it out of a cruel desire to torment him further.",
+    "Fawkes lives in Isolation Room 05, serving as his cell in Vault 87. If he is released during Finding the Garden of Eden, he can be found afterward at the Museum of History inside the lobby. Later on, if one behaved peacefully and/or friendly to Fawkes in Vault 87, he will later appear outside the front gate of Raven Rock during The American Dream.",
+    "If Broken Steel is installed and the Lone Wanderer activates Project Purity themselves, he can generally be found either in the Citadel in the room with Sawbones or in the Jefferson Memorial.",
+    "Fawkes is limited in the weapons he can use and will only equip weapons from the following list. He will not equip any unique versions of the weapons below, including:",
+    "Fawkes appears in Fallout 3, Fallout Shelter Online, Fallout: The Board Game, and Fallout: Wasteland Warfare.",
+    "A series of unused holotapes that were meant to be found in Vault 87, but ended up cut from the final release, shed possible light on the identity of Fawkes. These unused assets take the form of diary entrees and progress over an unspecified amount of time. Although Fawkes shares the same voice as most of the Fallout 3's super mutants, he is explicitly defined within the game's dialogue files as being the speaker in the final recording.",
+    "Though nothing is left to document why these recordings were not included in the final version of the game, Fawkes' demonstrated intelligence does not appear to be present in the fifth holotape recording; this is consistent with his statement that he had to work to become as intelligent and well-spoken again as he was at the time of meeting the Lone Wanderer.",
+    "Security officer Shelton Delacroix began to record a personal diary at the behest of the staff of Vault 87. He was glad to have been assigned to one of the newer Vaults, and that he was guarding the laboratory level rather then the reactor room.",
+    "One day two of his fellow security staff, Sykes and Cossler, dragged an unconscious man from the dorms into the labs. When he asked them what for they glared at him, angry at him for getting involved in something that he didn't have authority to. They warned him not to tell anyone what he saw, or else, with Sykes patting his 10mm. When they left he snuck into the containment room and was shocked at the deformed thing that had once been a man. His organs on the surface of his body, as if they were trying to push through his now green and brown skin. The horrible stench emanating in the room caused him to stagger out into the hallway, coming to the realization that the monster he saw was one of the missing people. Having no other outlet for his horror he recorded it in his logs, this an action that would be his undoing.",
+    "Upon finding one of his older recordings, Delacroix became a wanted man. A friend in security warned him to run before they grabbed him, he ran away and hid in the reactor level. With the realization that he had no where to run, nor anyone to turn to he recorded what would be his last thoughts about his wife in Dorm E that he loved her, just as security captured him."
+  ],
+  "race": "Super mutant",
+  "gender": "Male",
+  "affiliation": "Vault 87 super mutantsLone Wanderer(optional)",
+  "role": "PrisonerCompanion",
+  "detailed_location": "Vault 87Underworld(optional)",
+  "voice_actor": "Wes Johnson",
+  "special": {
+    "Strength": 9,
+    "Perception": 3,
+    "Endurance": 8,
+    "Charisma": 5,
+    "Intelligence": 3,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "level": "6→30",
+  "misc_skills": [
+    {
+      "Critical Chance:": "5%"
+    },
+    {
+      "Unarmed Dam.:": "4.25"
+    },
+    {
+      "Poison Resist.:": "35%"
+    },
+    {
+      "Rad. Resist.:": "14%"
+    }
+  ],
+  "karma": "Neutral",
+  "voice_type": "CreatureSuperMutantDC",
+  "topics": [
+    {
+      "topic": "DLC03MQ11FollowerNotGoing",
+      "topic_text": "Never mind, Fawkes.",
+      "emotion": "Neutral 50",
+      "response_text": "Shouldn't someone be starting the purifier in order to prevent our imminent demise?",
+      "index": "1"
+    },
+    {
+      "topic": "DLC03MQ11SendFollowerIn",
+      "topic_text": "Fawkes, I need you to start the purifier. The code is 2-1-6.",
+      "emotion": "Neutral 50",
+      "response_text": "Ah, of course. My immunity to radiation makes me a far better candidate for surviving in there.",
+      "index": "4"
+    },
+    {
+      "topic": "FollowersFired",
+      "topic_text": "You're fired, Fawkes. Stop following me around.",
+      "emotion": "Sad 25",
+      "response_text": "Are you certain?",
+      "index": "13"
+    },
+    {
+      "topic": "FollowersFiredNo",
+      "topic_text": "No, I'm not. Stay here.",
+      "emotion": "Neutral 50",
+      "response_text": "Very well.",
+      "index": "14"
+    },
+    {
+      "topic": "FollowersFiredYes",
+      "topic_text": "Yes, I'm certain.",
+      "emotion": "Sad 25",
+      "response_text": "I'm disappointed, but I cannot say I'm surprised. If you change your mind, I shall be studying in the American History Museum, downtown.",
+      "index": "15"
+    },
+    {
+      "topic": "FollowersHired",
+      "topic_text": "Care to join me, Fawkes? I would appreciate your assistance.",
+      "emotion": "Happy 50",
+      "response_text": "My friend, I am saddened to hear that you have turned away from a noble path.",
+      "index": "16"
+    },
+    {
+      "topic": "FollowersLetsGo",
+      "topic_text": "Let's get going.",
+      "emotion": "Happy 25",
+      "response_text": "With all due haste.",
+      "index": "21"
+    },
+    {
+      "topic": "FollowersLetsGoNotYet1",
+      "topic_text": "Not just yet. I wanted to talk to you about something.",
+      "emotion": "Neutral 10",
+      "response_text": "Yes, best to formulate a plan. What is it?",
+      "index": "22"
+    },
+    {
+      "topic": "FollowersLetsGoNotYet2",
+      "topic_text": "I just wanted to make sure you were still here. Goodbye.",
+      "emotion": "Anger 10",
+      "response_text": "If there's one thing I've learned, it's patience. I can wait.",
+      "index": "23"
+    },
+    {
+      "topic": "FollowersPPurity",
+      "topic_text": "Fawkes, I need you to go into that chamber and turn on the purifier.",
+      "emotion": "Sad 50",
+      "response_text": "I’m sorry, my companion, but no. We all have our own destinies, and yours culminates here. I would not rob you of that.",
+      "index": "24"
+    },
+    {
+      "topic": "FollowersTactics",
+      "topic_text": "Let's talk about your tactics.",
+      "emotion": "Sad 10",
+      "response_text": "Yes, the unpleasant necessities of battle. Your suggestions?",
+      "index": "25"
+    },
+    {
+      "topic": "FollowersTacticsCombat",
+      "topic_text": "I want you to change your combat style.",
+      "emotion": "Neutral 50",
+      "response_text": "In what way?",
+      "index": "26"
+    },
+    {
+      "topic": "FollowersTacticsCombatEND",
+      "topic_text": "Let's talk about something else.",
+      "emotion": "Disgust 10",
+      "response_text": "Gladly.{Considers the previous topic slightly distasteful}",
+      "index": "27"
+    },
+    {
+      "topic": "FollowersTacticsCombatGOODBYE",
+      "topic_text": "That's all. Let's get going.",
+      "emotion": "Happy 25",
+      "response_text": "Yes, let's be on our way.",
+      "index": "28"
+    },
+    {
+      "topic": "FollowersTacticsCombatMelee",
+      "topic_text": "I like what you're doing. Stick with the melee.",
+      "emotion": "Sad 25",
+      "response_text": "At least my strength is useful for something. <sigh>{Weary sigh at the end.}",
+      "index": "29"
+    },
+    {
+      "topic": "FollowersTacticsCombatRanged",
+      "topic_text": "You're not bad with a ranged weapon. Keep it up.",
+      "emotion": "Sad 25",
+      "response_text": "Of course. It's so much more respectable than simply killing people at arm's reach.{Said with some reproachful irony.}",
+      "index": "31"
+    },
+    {
+      "topic": "FollowersTacticsDistance",
+      "topic_text": "Let's talk about how close you're following me.",
+      "emotion": "Neutral 50",
+      "response_text": "As you wish. What about it?",
+      "index": "33"
+    },
+    {
+      "topic": "FollowersTacticsDistanceDefault",
+      "topic_text": "You're good where you are.",
+      "emotion": "Neutral 50",
+      "response_text": "I'll endeavor to continue, then.",
+      "index": "34"
+    },
+    {
+      "topic": "FollowersTacticsDistanceEND",
+      "topic_text": "Your distance is good. Let's talk about something else.",
+      "emotion": "Happy 25",
+      "response_text": "Certainly. What have you got in mind?",
+      "index": "36"
+    },
+    {
+      "topic": "FollowersTacticsDistanceGOODBYE",
+      "topic_text": "All right, you're good. Let's get out of here.",
+      "emotion": "Happy 25",
+      "response_text": "Yes, let's.",
+      "index": "37"
+    },
+    {
+      "topic": "FollowersTacticsDistanceLong",
+      "topic_text": "Keep hanging back.",
+      "emotion": "Neutral 20",
+      "response_text": "By all means. I simply hope I'm not too far in reserve, in case of unforeseen trouble.",
+      "index": "38"
+    },
+    {
+      "topic": "FollowersTacticsEnd",
+      "topic_text": "Enough about tactics.",
+      "emotion": "Happy 25",
+      "response_text": "Indeed. There are far more interesting things in the world than warfare.",
+      "index": "40"
+    },
+    {
+      "topic": "FollowersTrade",
+      "topic_text": "Let's trade equipment.",
+      "emotion": "Happy 25",
+      "response_text": "Yes, by all means, let's.{Appreciates being trusted by the player}",
+      "index": "41"
+    },
+    {
+      "topic": "FollowersWait",
+      "topic_text": "Wait here.",
+      "emotion": "Fear 15",
+      "response_text": "If you insist. But do be careful - I can hardly repay your kindness while waiting back here.{Honest concern for the player}",
+      "index": "42"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "Hurry and cycle the airlock, so I can start the purifier!",
+      "index": "43"
+    },
+    {
+      "topic": "HireFawkes1AHireFawkes1B",
+      "topic_text": "I could always use a hand. Would you like to follow me?",
+      "emotion": "Neutral 50",
+      "response_text": "My friend, I would be honored to follow a hero such as yourself. Shall we go?",
+      "index": "78"
+    },
+    {
+      "topic": "MQ08FawkesCT01",
+      "topic_text": "Yes, I'm human. But what are you?",
+      "emotion": "Surprise 50",
+      "response_text": "Me? You care who I am?",
+      "index": "79"
+    },
+    {
+      "topic": "MQ08FawkesCT02",
+      "topic_text": "Give me one good reason not to kill you.",
+      "emotion": "Surprise 50",
+      "response_text": "What's the matter with you? I assure you I'm unlike the others in this dank place.",
+      "index": "82"
+    },
+    {
+      "topic": "MQ08FawkesCT03",
+      "topic_text": "A friendly Super Mutant. Well, now I've seen everything.",
+      "emotion": "Disgust 50",
+      "response_text": "Ugh. Must you use that vulgar term?",
+      "index": "84"
+    },
+    {
+      "topic": "MQ08FawkesCT04",
+      "topic_text": "You're kind of weirding me out. I've got to go.",
+      "emotion": "Sad 50",
+      "response_text": "No, please. I haven't had a civil conversation all my life! Don't go!",
+      "index": "87"
+    },
+    {
+      "topic": "MQ08FawkesCT05",
+      "topic_text": "It's amazing how well you can speak.",
+      "emotion": "Neutral 50",
+      "response_text": "Yes. I suppose it is. When my captors placed me here, they were too stupid to realize this room contained a working terminal.",
+      "index": "89"
+    },
+    {
+      "topic": "MQ08FawkesCT06",
+      "topic_text": "That's quite an unusual name.",
+      "emotion": "Neutral 50",
+      "response_text": "It was taken from a historical entry in the computer. The name comes from a man who was willing to fight and die for what he believed in.",
+      "index": "92"
+    },
+    {
+      "topic": "MQ08FawkesCT07",
+      "topic_text": "Sorry, I have more important things to do.",
+      "emotion": "Sad 50",
+      "response_text": "Very well. If this is what's to be expected from interacting with humans, then I'm likely better off in here than out there amongst you.",
+      "index": "94"
+    },
+    {
+      "topic": "MQ08FawkesCT07a",
+      "topic_text": "Yikes! I'd say whoever beat you with the ugly stick overdid it.",
+      "emotion": "Neutral 50",
+      "response_text": "Your arrogance against my kind is hardly surprising.",
+      "index": "95"
+    },
+    {
+      "topic": "MQ08FawkesCT08",
+      "topic_text": "Why have you been imprisoned?",
+      "emotion": "Neutral 50",
+      "response_text": "Because I'm a curiosity; an anomaly. They don't know why I'm different than they are and I think it fascinates them.",
+      "index": "98"
+    },
+    {
+      "topic": "MQ08FawkesCT09",
+      "topic_text": "How come they've kept you alive?",
+      "emotion": "Neutral 50",
+      "response_text": "I think when I was created, something went wrong and I didn't come out like they planned.",
+      "index": "100"
+    },
+    {
+      "topic": "MQ08FawkesCT10",
+      "topic_text": "I wish I could stay and chat, but I need to find something important.",
+      "emotion": "Neutral 50",
+      "response_text": "Let me guess... you're here for the G.E.C.K.. am I right?",
+      "index": "102"
+    },
+    {
+      "topic": "MQ08FawkesCT10a",
+      "topic_text": "If you've been here as long as I imagine maybe you can help me.",
+      "emotion": "Neutral 50",
+      "response_text": "Perhaps. I assume you're here to find the G.E.C.K.",
+      "index": "103"
+    },
+    {
+      "topic": "MQ08FawkesCT10b",
+      "topic_text": "This is a huge waste of time.",
+      "emotion": "Neutral 50",
+      "response_text": "Is it? What if I told you I could help you find the G.E.C.K.?",
+      "index": "104"
+    },
+    {
+      "topic": "MQ08FawkesCTIntell01",
+      "topic_text": "How ironic that the others consider you a mutant of their kind.",
+      "emotion": "Surprise 50",
+      "response_text": "Yes, indeed it is ironic.",
+      "index": "105"
+    },
+    {
+      "topic": "MQ08FawkesCTQuickSkip01",
+      "topic_text": "I am indeed, but I have no time to discuss these matters.",
+      "emotion": "Neutral 50",
+      "response_text": "Yes, you do appear a bit harried and you obviously didn't come into the depths of this place to chat with me.",
+      "index": "108"
+    },
+    {
+      "topic": "MQ08FawkesGECK01",
+      "topic_text": "What do you know about the G.E.C.K.?",
+      "emotion": "Neutral 50",
+      "response_text": "I know what it is, I know where it is and best of all, I know how you can get your hands on it.",
+      "index": "110"
+    },
+    {
+      "topic": "MQ08FawkesGECK02",
+      "topic_text": "The G.E.C.K.? Never heard of it. <Lie.>",
+      "emotion": "Disgust 50",
+      "response_text": "I read a tape once on how to tell if someone's lying and I must say you're a terrible liar.",
+      "index": "111"
+    },
+    {
+      "topic": "MQ08FawkesGECK03",
+      "topic_text": "Why would you help me?",
+      "emotion": "Neutral 50",
+      "response_text": "Because, you can help me.",
+      "index": "114"
+    },
+    {
+      "topic": "MQ08FawkesGECK04",
+      "topic_text": "Good, tell me everything you know about it, then!",
+      "emotion": "Happy 50",
+      "response_text": "Not so fast. Quid pro quo, my friend. If I'm to do this service for you, I expect to get something in return.",
+      "index": "117"
+    },
+    {
+      "topic": "MQ08FawkesGECK05",
+      "topic_text": "How about you tell me all you know and I don't paint the wall with your brains?",
+      "emotion": "Disgust 50",
+      "response_text": "What is it with your kind? This is why the bombs fell you know.",
+      "index": "119"
+    },
+    {
+      "topic": "MQ08FawkesGECK06",
+      "topic_text": "Why would I have difficulty getting the G.E.C.K.?",
+      "emotion": "Neutral 50",
+      "response_text": "The chamber in which the G.E.C.K. resides is absolutely flooded with radiation. It's unlikely you'd survive very long.",
+      "index": "122"
+    },
+    {
+      "topic": "MQ08FawkesGECK07",
+      "topic_text": "I'm not worried. I can mow down whatever's in my way.",
+      "emotion": "Neutral 50",
+      "response_text": "Unless your weapons can destroy radiation, I'd say that will prove difficult.",
+      "index": "125"
+    },
+    {
+      "topic": "MQ08FawkesGECK08",
+      "topic_text": "How do I get you out?",
+      "emotion": "Neutral 50",
+      "response_text": "At the end of the hallway to your right is a maintenance room.",
+      "index": "128"
+    },
+    {
+      "topic": "MQ08FawkesGECK09",
+      "topic_text": "How do I know you won't run the second I get you out?",
+      "emotion": "Neutral 50",
+      "response_text": "There's no way to prove it, you'll just have to take my word for it.",
+      "index": "132"
+    },
+    {
+      "topic": "MQ08FawkesGECKExit",
+      "topic_text": "Sorry, I have to get going. I don't have time for this.",
+      "emotion": "Disgust 50",
+      "response_text": "So be it. Take your device and leave me here. It's what I expected.",
+      "index": "135"
+    },
+    {
+      "topic": "MQ08FawkesGECKFastSC",
+      "topic_text": "You obviously know all about the G.E.C.K., so let's help each other out.",
+      "emotion": "Neutral 50",
+      "response_text": "Indeed. Your powers of deduction are quite impressive. I do indeed know where it is and how to get it.",
+      "index": "137"
+    },
+    {
+      "topic": "MQ08FawkesGECKYes",
+      "topic_text": "Okay, Fawkes. You've got a deal.",
+      "emotion": "Neutral 50",
+      "response_text": "I'm glad to see you are a sensible person.",
+      "index": "140"
+    },
+    {
+      "topic": "MQ08FawkesInsulted01",
+      "topic_text": "I'm used to your kind being less cordial. My apologies.",
+      "emotion": "Happy 60",
+      "response_text": "I appreciate your understanding and your tone leads me to believe you're a reasonable person.",
+      "index": "142"
+    },
+    {
+      "topic": "MQ08FawkesInsulted02",
+      "topic_text": "Very well. You were saying?",
+      "emotion": "Neutral 50",
+      "response_text": "I appreciate your understanding.",
+      "index": "144"
+    },
+    {
+      "topic": "MQ08FawkesInsulted03",
+      "topic_text": "You belong in that cage, you freak!",
+      "emotion": "Sad 80",
+      "response_text": "Sigh. Very well.",
+      "index": "146"
+    },
+    {
+      "topic": "MQ08FawkesTLComeWithMe",
+      "topic_text": "You can't come with me?",
+      "emotion": "Neutral 50",
+      "response_text": "Sorry, I'm afraid a Super Mutant wouldn't be welcome in the places you frequent.",
+      "index": "148"
+    },
+    {
+      "topic": "MQ08FawkesTLGECK",
+      "topic_text": "Do you know what the G.E.C.K. does?",
+      "emotion": "Neutral 50",
+      "response_text": "Some say it does nothing; that it's simply a pipe dream or a legend. Others feel the device is actually beneficial.",
+      "index": "150"
+    },
+    {
+      "topic": "MQ08FawkesTLGetYouOut",
+      "topic_text": "Remind me how to get you out of that room.",
+      "emotion": "Neutral 50",
+      "response_text": "At the end of the hallway to your right is a maintenance room.",
+      "index": "155"
+    },
+    {
+      "topic": "MQ08FawkesTLJailRelease",
+      "topic_text": "What do I do once I trip the fire control console?",
+      "emotion": "Neutral 50",
+      "response_text": "I'll stay here until you've cleared a path to me.",
+      "index": "161"
+    },
+    {
+      "topic": "MQ08FawkesTLStory",
+      "topic_text": "So, tell me more about yourself.",
+      "emotion": "Neutral 50",
+      "response_text": "I was born here, in this place. I don't mean that in the literal sense of course.",
+      "index": "163"
+    },
+    {
+      "topic": "MQ08FawkesTLStory01",
+      "topic_text": "So, you've been stuck in that cell ever since?",
+      "emotion": "Neutral 50",
+      "response_text": "Yes. I've never been anywhere else. I used to mark the passage of time, but after a few years, it didn't seem to matter anymore.",
+      "index": "168"
+    },
+    {
+      "topic": "MQ08FawkesTLStory02",
+      "topic_text": "How did you become so articulate?",
+      "emotion": "Neutral 50",
+      "response_text": "The terminal in my cell used to connect with Vault 87's mainframe. That gave me access to the history, literature, science and fiction book files.",
+      "index": "170"
+    },
+    {
+      "topic": "MQ08FawkesTLStory03",
+      "topic_text": "Do you remember who you were?",
+      "emotion": "Neutral 50",
+      "response_text": "I don't remember enough to tell you everything about my former self. My metamorphosis destroyed a good deal of my long term memory.",
+      "index": "173"
+    },
+    {
+      "topic": "MQ08FawkesTLStory04",
+      "topic_text": "How do you know the layout of this place?",
+      "emotion": "Neutral 50",
+      "response_text": "These hallways are familiar to me... I think I used to be a resident here in better times.",
+      "index": "178"
+    },
+    {
+      "topic": "MQ08FawkesTLStory05",
+      "topic_text": "You have quite an unusual name.",
+      "emotion": "Neutral 50",
+      "response_text": "It was taken from a historical entry in the computer. The name comes from a man who was willing to fight and die for what he believed in.",
+      "index": "181"
+    },
+    {
+      "topic": "MQ08FawkesTLStoryContinue",
+      "topic_text": "Let's continue on now.",
+      "emotion": "Neutral 50",
+      "response_text": "Very well.",
+      "index": "183"
+    },
+    {
+      "topic": "MQ08SheltonTape05",
+      "topic_text": "MQ08SheltonTape05",
+      "emotion": "Neutral 50",
+      "response_text": "Stupid machine... how you work this thing... this thing is stupid! Smash it!",
+      "index": "184"
+    },
+    {
+      "topic": "RRFawkesGreeting1A",
+      "topic_text": "Fawkes? What the hell are you doing out here?",
+      "emotion": "Happy 50",
+      "response_text": "I saw your capture, and a little cleverness allowed me to follow your captors. I only wish I could have arrived sooner to aid your escape!",
+      "index": "185"
+    },
+    {
+      "topic": "RRFawkesGreeting1B",
+      "topic_text": "What makes you think I wanted a monster like you following me?",
+      "emotion": "Sad 10",
+      "response_text": "You were my rescuer and my only connection to this world, so I felt compelled to see you safe.",
+      "index": "187"
+    },
+    {
+      "topic": "RRFawkesGreeting1C",
+      "topic_text": "Looks like you've got a new toy, huh?",
+      "emotion": "Neutral 50",
+      "response_text": "Yes... and a most fascinating one at that. This technology is amazing.",
+      "index": "189"
+    },
+    {
+      "topic": "RRFawkesGreeting2A",
+      "topic_text": "I could always use a hand. Would you like to follow me?",
+      "emotion": "Happy 50",
+      "response_text": "I appreciate the offer, but I must decline. I have an entire world to explore, and I must not be delayed any further.",
+      "index": "191"
+    },
+    {
+      "topic": "RRFawkesGreeting2B",
+      "topic_text": "I was in that situation once, myself. Deal with it.",
+      "emotion": "Anger 25",
+      "response_text": "It seems I didn't know you as well as I had thought. My mistake.",
+      "index": "195"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "I have to go now.",
+      "emotion": "Happy 50",
+      "response_text": "Farewell, my friend. I suspect we may meet again.",
+      "index": "198"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Happy 50",
+      "response_text": "Here's the G.E.C.K. Our bargain is complete.",
+      "index": "210"
+    },
+    {
+      "topic": "IdleChatter",
+      "topic_text": "Idle Chatter",
+      "emotion": "Neutral 50",
+      "response_text": "",
+      "index": "223"
+    },
+    {
+      "topic": "MQ08FawkesSay01",
+      "topic_text": "MQ08FawkesSay01",
+      "emotion": "Neutral 50",
+      "response_text": "You... over there. Please, come speak to me. I'm in the room to your left. Use the intercom next to the window.",
+      "index": "242"
+    },
+    {
+      "topic": "SuperJoke1",
+      "topic_text": "SuperJoke1",
+      "emotion": "Neutral 50",
+      "response_text": "Who there?",
+      "index": "243"
+    },
+    {
+      "topic": "SuperJoke2",
+      "topic_text": "SuperJoke2",
+      "emotion": "Neutral 50",
+      "response_text": "Humans.",
+      "index": "244"
+    },
+    {
+      "topic": "SuperJoke3",
+      "topic_text": "SuperJoke3",
+      "emotion": "Neutral 50",
+      "response_text": "Humans who?",
+      "index": "245"
+    },
+    {
+      "topic": "SuperJoke4",
+      "topic_text": "SuperJoke4",
+      "emotion": "Neutral 50",
+      "response_text": "Kill the humans! Kill them all! Aggghhh!!",
+      "index": "246"
+    },
+    {
+      "topic": "SuperJoke5",
+      "topic_text": "SuperJoke5",
+      "emotion": "Neutral 50",
+      "response_text": "Ha ha ha ha ha ha ha ha ha! Oh... oh... ha ha ha ha ha ha.... That a good one! Ha ha ha ha ha!",
+      "index": "247"
+    },
+    {
+      "topic": "SuperTalk1",
+      "topic_text": "SuperTalk1",
+      "emotion": "Neutral 50",
+      "response_text": "I'm hungry! I need something to eat. Meat would be good... A Brahmin head, roasted just a bit, with some...",
+      "index": "248"
+    },
+    {
+      "topic": "SuperTalk2",
+      "topic_text": "SuperTalk2",
+      "emotion": "Neutral 50",
+      "response_text": "Shut up, you stupid! Leave me alone! All you do is complain!",
+      "index": "256"
+    }
+  ],
+  "combat": [
+    {
+      "topic": "Attack",
+      "topic_text": "Attack",
+      "emotion": "Neutral 50",
+      "response_text": "Vengeance is mine!",
+      "index": "261"
+    },
+    {
+      "topic": "AvoidThreat",
+      "topic_text": "AvoidThreat",
+      "emotion": "Neutral 50",
+      "response_text": "Get away! Get away!",
+      "index": "307"
+    },
+    {
+      "topic": "AvoidThreatResponse",
+      "topic_text": "AvoidThreatResponse",
+      "emotion": "Neutral 50",
+      "response_text": "Moooove!",
+      "index": "313"
+    },
+    {
+      "topic": "Death",
+      "topic_text": "Death",
+      "emotion": "Neutral 50",
+      "response_text": "Agghh!",
+      "index": "317"
+    },
+    {
+      "topic": "DeathResponse",
+      "topic_text": "DeathResponse",
+      "emotion": "Neutral 50",
+      "response_text": "You can't kill us all!",
+      "index": "333"
+    },
+    {
+      "topic": "FireExplosive",
+      "topic_text": "FireExplosive",
+      "emotion": "Neutral 50",
+      "response_text": "Grenade!",
+      "index": "337"
+    },
+    {
+      "topic": "Flee",
+      "topic_text": "Flee",
+      "emotion": "Neutral 50",
+      "response_text": "Retreat!",
+      "index": "342"
+    },
+    {
+      "topic": "Hit",
+      "topic_text": "Hit",
+      "emotion": "Neutral 50",
+      "response_text": "Ooof!",
+      "index": "343"
+    },
+    {
+      "topic": "PowerAttack",
+      "topic_text": "PowerAttack",
+      "emotion": "Neutral 50",
+      "response_text": "You're mine!",
+      "index": "359"
+    }
+  ]
+}

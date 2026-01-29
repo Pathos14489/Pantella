@@ -1,0 +1,70 @@
+{
+  "name": "Kidd",
+  "url": "/wiki/Kidd",
+  "dialogue_name": "DLC03GhoulKidd.txt",
+  "dialogue_url": "/wiki/DLC03GhoulKidd.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "xx00B39F",
+  "ref_id": "xx00B9DB",
+  "editor_id": "DLC03GhoulKidd",
+  "location": "Old Olney underground",
+  "location_url": "/wiki/Old_Olney_underground",
+  "descriptions": [
+    "Kidd is a ghoul encountered in the Old Olney underground in Fallout 3.",
+    "One of Sanders' ghouls who tried to establish a new Underworld, literally beneath Old Olney, Kidd and his partner, Wint, are the only survivors after a knocked-down wall unleashed a nest of deathclaws on the nascent community.",
+    "Kidd appears only in the Fallout 3 add-on Broken Steel.",
+    "Wint and Kidd are named after the eponymous assassin pair from Ian Fleming's Diamonds Are Forever novel and its film adaptation. In the latter, the two assassins are portrayed as a gay couple.",
+    "Meta sources"
+  ],
+  "race": "Ghoul",
+  "gender": "Male",
+  "affiliation": "Other ghouls living inOld Olney undergroundWint",
+  "role": "Survivor",
+  "detailed_location": "Old Olney underground",
+  "voice_actor": "Mike Rosson",
+  "special": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 2,
+    "Intelligence": 5,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "mod_special_values": {
+    "Strength": 5,
+    "Perception": 6,
+    "Endurance": 6,
+    "Charisma": 2,
+    "Intelligence": 5,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "level": "1",
+  "misc_skills": [
+    {
+      "Hit Points:": "70(75)"
+    }
+  ],
+  "karma": "Neutral",
+  "voice_type": "MaleGenericGhoulDC",
+  "geck_race": "Ghoul",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "Hey, talk to Wint, okay? I'm just following his lead.",
+      "index": "1"
+    }
+  ],
+  "conversation": [],
+  "combat": []
+}

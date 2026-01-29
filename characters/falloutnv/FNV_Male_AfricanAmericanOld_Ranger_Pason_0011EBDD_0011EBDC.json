@@ -1,0 +1,104 @@
+{
+  "name": "Ranger Pason",
+  "url": "/wiki/Pason",
+  "dialogue_name": "RSDeltaPason.txt",
+  "dialogue_url": "/wiki/RSDeltaPason.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "0011EBDD",
+  "ref_id": "0011EBDC",
+  "editor_id": "RSDeltaPason",
+  "location": "Ranger Station Delta",
+  "location_url": "/wiki/Ranger_Station_Delta",
+  "descriptions": [
+    "Ranger Pason is an NCR Ranger stationed at Ranger Station Delta in 2281.",
+    "Pason is a very professional and rather blunt man.",
+    "Like previous ranger reports, one of his was manipulated, falsely attributing the loss of an NCR patrol to enemy action.",
+    "Ranger Pason can be killed in a fight with cazadores, but by looting his corpse or robobrain, one can advance the questline of Return to Sender.",
+    "The NCR Rangers at the ranger stations, including Pason, were written by additional area designer Matt MacLean, who worked on the quest Return to Sender."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "New California Republic Rangers",
+  "role": "Ranger",
+  "detailed_location": "Ranger Station Delta",
+  "voice_actor": "Liam O'Brien",
+  "special": {
+    "Strength": 5,
+    "Perception": 6,
+    "Endurance": 6,
+    "Charisma": 4,
+    "Intelligence": 5,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "level": "7",
+  "tag_skills": [
+    {
+      "Guns:": "56"
+    },
+    {
+      "Sneak:": "56"
+    },
+    {
+      "Unarmed:": "56"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Neutral",
+  "voice_type": "MaleAdult05",
+  "geck_race": "AfricanAmericanOld",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "{Player not in NCR gear}No sudden moves and you and I will do all right. What do you want?",
+      "index": "1"
+    },
+    {
+      "topic": "VMSRSDeltaQuestRSRangerDeltaPasonTopic007",
+      "topic_text": "You filed a report which said Legion Super Mutants wiped out an NCR patrol.",
+      "emotion": "Surprise 10",
+      "response_text": "No, I didn't. You might hear that kind of nonsense from a drunk trooper on the Strip, but not from me. The Legion doesn't have Super Mutants.",
+      "index": "4"
+    },
+    {
+      "topic": "VMSRSDeltaQuestRSRangerDeltaPasonTopic009",
+      "topic_text": "What are you doing out here?",
+      "emotion": "Neutral 50",
+      "response_text": "Keeping watch on the river and looking for anyone trying to cross it. The Legion likes to send infiltration teams over on rafts.",
+      "index": "6"
+    },
+    {
+      "topic": "vDialogueRangerStationDeltaRSDeltaPasonTopic000",
+      "topic_text": "I'd like to know more about the NCR Rangers.",
+      "emotion": "Neutral 50",
+      "response_text": "Best of the best, that's all there is to it. Really nothing more to say than that.",
+      "index": "7"
+    },
+    {
+      "topic": "vDialogueRangerStationDeltaRSRangerDeltaPasonTopic002",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "See you around.",
+      "index": "8"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "See you around.",
+      "index": "9"
+    }
+  ],
+  "combat": []
+}

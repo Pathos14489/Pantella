@@ -1,0 +1,175 @@
+{
+  "name": "Pat Neusbaum",
+  "url": "/wiki/Pat_Neusbaum",
+  "dialogue_name": "PatNeusbaum.txt",
+  "dialogue_url": "/wiki/PatNeusbaum.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "0002449E",
+  "ref_id": "00025092",
+  "editor_id": "PatNeusbaum",
+  "location": "Neusbaum residence",
+  "location_url": "/wiki/Neusbaum_residence",
+  "descriptions": [
+    "Pat Neusbaum is one of the inhabitants of Vault 112 and part of the Tranquility Lane virtual reality simulation, found in Fallout 3.",
+    "The proud all-American wife of George Neusbaum and mother of Timmy, Pat is resident 375 of Vault 112, hooked up at lounger 37 for over 200 years. After numerous other simulations, she was finally placed by Stanislaus Braun, her tormentor, in the role of a shy housewife, fretting over her son, though unable to offer more than platitudes.",
+    "Old Lady Dithers tops her list of worries, as she considers her to be crazy and a potential bad influence on Timmy. However, rather than confront her directly, she wants her husband to break up any potential contact between the two.",
+    "Her vitals in 2277 are 82 bpm, 121/80 mmHG, 36.6°C or 97.9°F, with 19 breaths per minute and nominal stress levels: Perfectly normal for a woman her age."
+  ],
+  "race": "Human",
+  "gender": "Female",
+  "affiliation": "Vault 112",
+  "role": "Braun's victim",
+  "detailed_location": "Neusbaum residence,Tranquility Lane",
+  "voice_actor": "Shari Elliker",
+  "special": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 5,
+    "Intelligence": 4,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "mod_special_values": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 5,
+    "Intelligence": 4,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "level": "0",
+  "tag_skills": [
+    {
+      "Barter:": "25"
+    },
+    {
+      "Medicine:": "23"
+    },
+    {
+      "Melee Weap.:": "27"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "25"
+    },
+    {
+      "Damage Res.:": "3%"
+    }
+  ],
+  "karma": "Good",
+  "voice_type": "FemaleAdult01DefaultDC",
+  "geck_race": "CaucasianOld",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "Have you talked to Betty? I think she's waiting for you.",
+      "index": "1"
+    },
+    {
+      "topic": "MQ04ResidentChitChat1",
+      "topic_text": "Nice day, isn't it?",
+      "emotion": "Neutral 50",
+      "response_text": "It sure is. But it always is here!",
+      "index": "3"
+    },
+    {
+      "topic": "MQ04ResidentChitChat2",
+      "topic_text": "What can you tell me about the neighborhood?",
+      "emotion": "Neutral 50",
+      "response_text": "Well, George and I have been here... why, as long as I can remember.",
+      "index": "4"
+    },
+    {
+      "topic": "MQ04ResidentDad",
+      "topic_text": "Have you seen my dad?",
+      "emotion": "Neutral 50",
+      "response_text": "No sweetie, I haven't. I'm sure he'll come looking for you before long, though.",
+      "index": "5"
+    },
+    {
+      "topic": "MQ04ResidentMabel",
+      "topic_text": "What can you tell me about Mabel Henderson?",
+      "emotion": "Neutral 50",
+      "response_text": "Mabel? She's nice enough, I suppose. A bit of a gossip, maybe. And she never seemed too fond of my boy Timmy.",
+      "index": "6"
+    },
+    {
+      "topic": "MQ04ResidentRockwells",
+      "topic_text": "Can you tell me anything about the Rockwells' marriage?",
+      "emotion": "Neutral 50",
+      "response_text": "I don't know what sort of thing you'd want to hear about... There was that one time Janet waved a rolling pin at Martha...",
+      "index": "9"
+    },
+    {
+      "topic": "MQ04ResidentSimulation",
+      "topic_text": "This is a pretty convincing simulation...",
+      "emotion": "Neutral 50",
+      "response_text": "What? Oh, sweetie. Maybe you should just run along and play.",
+      "index": "11"
+    },
+    {
+      "topic": "MQ04ResidentTimmy",
+      "topic_text": "What can you tell me about Timmy Neusbaum?",
+      "emotion": "Neutral 50",
+      "response_text": "Timmy? Oh, he's a good boy. George and I are so proud of him.",
+      "index": "12"
+    },
+    {
+      "topic": "MQ04WhoIsBetty",
+      "topic_text": "Who is Betty?",
+      "emotion": "Neutral 50",
+      "response_text": "Oh, you know Betty.",
+      "index": "15"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Neutral 50",
+      "response_text": "George, I thought I told you to have a talk with Timmy about Old Lady Dithers.",
+      "index": "17"
+    },
+    {
+      "topic": "TranqLaneTalk1",
+      "topic_text": "TranqLaneTalk1",
+      "emotion": "Neutral 50",
+      "response_text": "Oh, stop it. You know I don't trust that woman one bit.",
+      "index": "19"
+    },
+    {
+      "topic": "TranqLaneTalk2",
+      "topic_text": "TranqLaneTalk2",
+      "emotion": "Neutral 50",
+      "response_text": "It's not funny, George. I'm not joking around.{annoyed, snapping}",
+      "index": "21"
+    },
+    {
+      "topic": "TranqLaneTalk3",
+      "topic_text": "TranqLaneTalk3",
+      "emotion": "Neutral 50",
+      "response_text": "Well I'm not going to go running off to hear what she has to say today. Now find something useful to do.",
+      "index": "23"
+    },
+    {
+      "topic": "TranqLaneTalk4",
+      "topic_text": "TranqLaneTalk4",
+      "emotion": "Neutral 50",
+      "response_text": "She's been talking to Timmy again. I want him to stay away from her. She's nuts, and she shouldn't be anywhere near him.",
+      "index": "25"
+    }
+  ],
+  "combat": []
+}

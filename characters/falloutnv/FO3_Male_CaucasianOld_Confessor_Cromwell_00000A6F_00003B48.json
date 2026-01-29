@@ -1,0 +1,280 @@
+{
+  "name": "Confessor Cromwell",
+  "url": "/wiki/Cromwell",
+  "dialogue_name": "ConfessorCromwell.txt",
+  "dialogue_url": "/wiki/ConfessorCromwell.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "00000A6F",
+  "ref_id": "00003B48",
+  "editor_id": "ConfessorCromwell",
+  "location": "Near theatomic bomb",
+  "location_url": "/wiki/Atomic_bomb_(Fallout_3)",
+  "descriptions": [
+    "Confessor Cromwell is a member of the Church of the Children of Atom residing in Megaton in the Capital Wasteland in Fallout 3, where he leads the Children in the worship of the undetonated atomic bomb that gave Megaton its name.",
+    "Cromwell traveled across the Capital Wasteland in his youth before settling in Megaton, where he first encountered the Children of Atom. In his personal quarters in Megaton, he keeps a personal journal on a terminal.",
+    "Considered the \"father of the undying Glow,\"",
+    "At some point between the 2250s and the 2270s, Cromwell sent an expedition to spread the word of Atom to the rest of the wasteland along the East Coast, led by Martin and including Tektus. The expedition's path eventually brought them to the Island off the coast of the state of Maine, far north from the Capital Wastes. After becoming a High Confessor himself following Martin's disappearance, Tektus still maintains respect for Cromwell, referring to him as \"Atom's great prophet.\"",
+    "When the Last Son of Atom arrived at Isolde's village in the Commonwealth in 2286, he claimed to have studied the faith under Cromwell at Megaton.",
+    "Cromwell can be seen standing in the center of town, next to the bomb, praying to it in ankle-deep irradiated water. He even beseeches Atom to \"shape his fragile form.\" He is heard preaching to his audience about the teachings of the Children of Atom, mainly on the subject of \"birthing a thousand stars,\" relating to his (and the Children of Atom's) belief that inside every atom is an entire universe.",
+    "Confessor Cromwell appears in Fallout 3, and as a legendary dweller in Fallout Shelter. He is also mentioned in the Fallout 4 add-on Far Harbor."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Church of the Children of Atom",
+  "role": "Religious leader",
+  "detailed_location": "Megaton",
+  "voice_actor": "Peter Gil",
+  "special": {
+    "Strength": 5,
+    "Perception": 4,
+    "Endurance": 4,
+    "Charisma": 7,
+    "Intelligence": 5,
+    "Agility": 4,
+    "Luck": 4
+  },
+  "mod_special_values": {
+    "Strength": 5,
+    "Perception": 4,
+    "Endurance": 5,
+    "Charisma": 7,
+    "Intelligence": 5,
+    "Agility": 5,
+    "Luck": 4
+  },
+  "level": "5",
+  "tag_skills": [
+    {
+      "Medicine:": "49"
+    },
+    {
+      "Small Guns:": "49(51)"
+    },
+    {
+      "Speech:": "53"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "45(50)"
+    }
+  ],
+  "karma": "Good",
+  "geck_race": "CaucasianOld",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "Who have we here? Could it be? A new addition to our humble little community? Dear child, welcome! Welcome to Megaton!{Gasps in mock surprise before speaking.}",
+      "index": "1"
+    },
+    {
+      "topic": "MegCromwellChurch1",
+      "topic_text": "What do you believe?",
+      "emotion": "Neutral 50",
+      "response_text": "The Church of the Children of Atom is based on the idea that each single atomic mass in all of creation contains within it an entire universe.",
+      "index": "7"
+    },
+    {
+      "topic": "MegCromwellChurch2",
+      "topic_text": "Why do you worship the bomb?",
+      "emotion": "Neutral 50",
+      "response_text": "Those who were called to Atom during the Great Division were very fortunate. They were permitted to aid in the process of Atom's creation.",
+      "index": "11"
+    },
+    {
+      "topic": "MegCromwellChurch3",
+      "topic_text": "What the hell is wrong with you people?",
+      "emotion": "Sad 50",
+      "response_text": "It's a shame that you so easily mock us without even knowing our doctrine.",
+      "index": "14"
+    },
+    {
+      "topic": "MegCromwellChurchEnd",
+      "topic_text": "Let's talk about something else.",
+      "emotion": "Neutral 50",
+      "response_text": "As you wish.",
+      "index": "16"
+    },
+    {
+      "topic": "MegCromwellChurchOfAtom",
+      "topic_text": "Tell me about the Church of Atom.",
+      "emotion": "Neutral 50",
+      "response_text": "Yes? What would you like to know?",
+      "index": "17"
+    },
+    {
+      "topic": "MegCromwellDonate",
+      "topic_text": "Do you accept donations?",
+      "emotion": "Happy 50",
+      "response_text": "Why yes, we do. How much would you like to donate?",
+      "index": "18"
+    },
+    {
+      "topic": "MegCromwellDonate10",
+      "topic_text": "<Donate 10 caps.>",
+      "emotion": "Happy 50",
+      "response_text": "Thank you.",
+      "index": "21"
+    },
+    {
+      "topic": "MegCromwellDonate100",
+      "topic_text": "<Donate 100 caps.>",
+      "emotion": "Happy 50",
+      "response_text": "Thank you.",
+      "index": "25"
+    },
+    {
+      "topic": "MegCromwellDonate50",
+      "topic_text": "<Donate 50 caps.>",
+      "emotion": "Happy 50",
+      "response_text": "Thank you.",
+      "index": "29"
+    },
+    {
+      "topic": "MegCromwellDonateEnd",
+      "topic_text": "I've changed my mind.",
+      "emotion": "Neutral 50",
+      "response_text": "Very well.",
+      "index": "33"
+    },
+    {
+      "topic": "MegTownDirections",
+      "topic_text": "I could use some directions around town.",
+      "emotion": "Neutral 50",
+      "response_text": "In each our own way, we are all lost. Where would you like to be, brother?",
+      "index": "35"
+    },
+    {
+      "topic": "MegTownDirectionsBed",
+      "topic_text": "Where can I rent a bed?",
+      "emotion": "Neutral 50",
+      "response_text": "Up at Moriarty's at the south end of town. Talk to Nova, she'll help you out.",
+      "index": "37"
+    },
+    {
+      "topic": "MegTownDirectionsClinic",
+      "topic_text": "Where's the closest clinic?",
+      "emotion": "Neutral 50",
+      "response_text": "Atom can only heal the wounds of the soul. For wounds of the body, you should see Doc Church. His clinic is directly to the north the Church.",
+      "index": "38"
+    },
+    {
+      "topic": "MegTownDirectionsEquipment",
+      "topic_text": "I need some equipment. Where's the nearest general store?",
+      "emotion": "Happy 50",
+      "response_text": "Seek out Moira at Craterside Supply, although the true pilgrim relies on Atom to supply all that he needs.",
+      "index": "39"
+    },
+    {
+      "topic": "MegTownDirectionsGoBack",
+      "topic_text": "Let's talk about something else.",
+      "emotion": "Surprise 50",
+      "response_text": "What do you wish to discuss?",
+      "index": "40"
+    },
+    {
+      "topic": "MegTownDirectionsWeapons",
+      "topic_text": "Is there a weapons dealer around here?",
+      "emotion": "Neutral 50",
+      "response_text": "It saddens me to think how quickly we resort to violence.",
+      "index": "41"
+    },
+    {
+      "topic": "MegTownEnd",
+      "topic_text": "That's all I needed to know.",
+      "emotion": "Neutral 50",
+      "response_text": "Very well.",
+      "index": "42"
+    },
+    {
+      "topic": "MegTownFatherChoice",
+      "topic_text": "I'm looking for my father. Middle-aged guy. Maybe you've seen him?",
+      "emotion": "Neutral 50",
+      "response_text": "Many of the transient visitors end up at one of Megaton's seedier establishments.{ }",
+      "index": "43"
+    },
+    {
+      "topic": "MegTownMegaton",
+      "topic_text": "What can you tell me about Megaton?",
+      "emotion": "Neutral 50",
+      "response_text": "Megaton  Atom's sacred village. He has chosen this place for the site of his shrine and we have been called.",
+      "index": "45"
+    },
+    {
+      "topic": "MegTownRumorsWhat's the word around town?",
+      "topic_text": "What's the news?",
+      "emotion": "Neutral 50",
+      "response_text": "News? My friend, I take effort not to be involved in such worldly business. Earthly pursuits distract from Atom.",
+      "index": "48"
+    },
+    {
+      "topic": "MegTownWastelandKnow anything about the area outside Megaton?",
+      "topic_text": "Confessor, have you ever traveled outside of Megaton?",
+      "emotion": "Neutral 50",
+      "response_text": "In my youth, I traveled quite a bit. But... that was a different life. I assume that you are seeking information and advice, yes?",
+      "index": "50"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "I have to go now.",
+      "emotion": "Neutral 50",
+      "response_text": "I wish you well on your path.{Calm and peaceful.}",
+      "index": "53"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Neutral 50",
+      "response_text": "Light shine upon you, Sheriff.",
+      "index": "56"
+    },
+    {
+      "topic": "MegCromwellPrayEvening",
+      "topic_text": "MegCromwellPrayEvening",
+      "emotion": "Neutral 50",
+      "response_text": "Behold! He is coming with the clouds! And every eye shall be blind with his glory! Every ear shall be stricken deaf to hear the thunder of his voice!",
+      "index": "63"
+    },
+    {
+      "topic": "MegatonTalk1",
+      "topic_text": "MegatonTalk",
+      "emotion": "Neutral 50",
+      "response_text": "Yes, good wife?",
+      "index": "80"
+    },
+    {
+      "topic": "MegatonTalk2",
+      "topic_text": "MegatonTalk2",
+      "emotion": "Neutral 50",
+      "response_text": "I've been concerned about church attendance lately, Mother. The town's inability to fully accept Atom's promise is... most discouraging.",
+      "index": "82"
+    },
+    {
+      "topic": "MegatonTalk3",
+      "topic_text": "MegatonTalk3",
+      "emotion": "Anger 50",
+      "response_text": "Glorious, Maya! Simply glorious. I sense that His coming is upon us... any day now...",
+      "index": "84"
+    }
+  ],
+  "combat": [
+    {
+      "topic": "Attack",
+      "topic_text": "Attack",
+      "emotion": "Neutral 50",
+      "response_text": "In Atom's name, you'll pay for your transgressions!",
+      "index": "86"
+    }
+  ]
+}

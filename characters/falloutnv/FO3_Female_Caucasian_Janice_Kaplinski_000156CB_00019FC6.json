@@ -1,0 +1,185 @@
+{
+  "name": "Janice Kaplinski",
+  "url": "/wiki/Janice_Kaplinski",
+  "dialogue_name": "JaniceKaplinski.txt",
+  "dialogue_url": "/wiki/JaniceKaplinski.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000156CB",
+  "ref_id": "00019FC6",
+  "editor_id": "JaniceKaplinski",
+  "location": "Rivet City science lab",
+  "location_url": "/wiki/Rivet_City_science_lab",
+  "descriptions": [
+    "Janice Kaplinski (2247 or 2248 – 2277) is the chief botanist of Rivet City's science team in 2277.",
+    "Born around 2247 to 2248,",
+    "In her time under Dr. Li's tutelage, Janice has come into her own as an accomplished botanist. She is every bit the equal to Doctor Li and James in technical knowledge, though she lacks their genius or ambition.",
+    "Personality-wise, Janice is a complete workaholic whose time is split between working in the lab, eating (always at the Weatherly Hotel, where she prefers to consume the science team's produce),",
+    "In 2277, James, who had recently escaped Vault 101, visited the Rivet City science lab, hoping to enlist Doctor Li's support in reviving Project Purity. Doctor Li angrily refused to help him, claiming that she had moved on and too much time had passed.",
+    "After the Lone Wanderer rescued James from Vault 112, and James and Doctor Li agreed to restart work on Project Purity, Janice was part of the team sent to help restart the purifier. She had high hopes for the project, having heard Doctor Li talk about it often, and eagerly looked forward to contributing, understanding that Doctor Li had secretly wanted to come back for many years.",
+    "After the Lone Wanderer cleared the facility of its super mutant occupiers, Janice worked with the others to get the facility reoperational. However, while the Lone Wanderer was occupied, the Enclave stormed the facility and took her and James captive. Because James was refusing to hand over control of the purifier to them, Colonel Augustus Autumn executed Janice right in front of his, and the newly-arrived Lone Wanderer's, eyes.",
+    "Janice interacts primarily with the members of the Rivet City science team, but even then only in a professional sense for the most part: she may be observed briefly talking to Henry Young or Garza regarding maintenance of the hydroponics, while she only engages in generic small talk with Anna Holt.",
+    "Janice has a deeper bond with Doctor Li; her admiration for Doctor Li is a \"classic case of hero worship,\" and Janice has complete faith in Doctor Li and their work together. Meanwhile, she is also close friends with Doctor Preston, who treats her like the daughter he never had, often trying to motivate Janice to lighten up and interact with others more.",
+    "Janice spends most of her day in the Rivet City science lab conducting experiments and talking with other lab personnel. At 7:00 a.m., she leaves the lab for the Weatherly Hotel to eat for around two hours before returning to the lab. She spends the entire day in the lab until leaving again for the Weatherly Hotel at night, with the exact time dependent on the day of the week:",
+    "At 10 p.m., Janice goes to sleep in the science team's quarters inside the lab."
+  ],
+  "race": "Human",
+  "gender": "Female",
+  "affiliation": "Madison LiProject Purity",
+  "role": "Botanist",
+  "detailed_location": "Science lab,Rivet CityJefferson Memorial",
+  "voice_actor": "Shari Elliker",
+  "special": {
+    "Strength": 3,
+    "Perception": 6,
+    "Endurance": 3,
+    "Charisma": 4,
+    "Intelligence": 8,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "level": "4",
+  "tag_skills": [
+    {
+      "Explosives:": "50"
+    },
+    {
+      "Medicine:": "54"
+    },
+    {
+      "Science:": "54(59)"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "35"
+    },
+    {
+      "Critical Chance:": "5%"
+    },
+    {
+      "Unarmed Dam.:": "1.05"
+    },
+    {
+      "Poison Resist.:": "10%"
+    },
+    {
+      "Rad. Resist.:": "4%"
+    },
+    {
+      "Carry Weight:": "180 lbs"
+    }
+  ],
+  "karma": "Good",
+  "voice_type": "FemaleAdult01DefaultDC",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "Didn't your dad tell you about the blockage? I thought you'd be off taking care of that now.{concerned}",
+      "index": "1"
+    },
+    {
+      "topic": "MQ03ScientistLookingForFather",
+      "topic_text": "I'm looking for my father. Have you seen him?",
+      "emotion": "Neutral 50",
+      "response_text": "I did see a man talking to Doctor Li, but I really shouldn't be discussing it.",
+      "index": "10"
+    },
+    {
+      "topic": "MQ05PPScientistGetItWorking",
+      "topic_text": "Do you think Project Purity will ever work again?",
+      "emotion": "Neutral 50",
+      "response_text": "I sure hope so, or it's just going to crush Doctor Li completely. Especially after your father came back and all.",
+      "index": "13"
+    },
+    {
+      "topic": "MQ05ScientistAnythingIShouldKnow",
+      "topic_text": "Anything I should know about this place?",
+      "emotion": "Neutral 50",
+      "response_text": "Doctor Li has been waiting to come back here for twenty years, okay? Twenty. That's a long time.",
+      "index": "14"
+    },
+    {
+      "topic": "MQ05ScientistWhatsYourStory",
+      "topic_text": "What's your story?",
+      "emotion": "Neutral 50",
+      "response_text": "I've been with Doctor Li for about ten years now. She needed an assistant, and I needed something to do.",
+      "index": "16"
+    },
+    {
+      "topic": "MS03RCHistory1Could I ask you about Rivet City's history?",
+      "topic_text": "Know anything about Rivet City's history?",
+      "emotion": "Neutral 50",
+      "response_text": "If it hasn't got to do with the science quarters, I'm probably not the one to ask. And Doctor Li's so busy, you really shouldn't disturb her work.",
+      "index": "18"
+    },
+    {
+      "topic": "MS08AboutZimmer",
+      "topic_text": "What do you know about Zimmer?",
+      "emotion": "Anger 50",
+      "response_text": "Other than him being an egotistical, arrogant, condescending pain in the ass? Nothing.{venting annoyance}",
+      "index": "20"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYEI have to go now.",
+      "topic_text": "Farewell.",
+      "emotion": "Neutral 50",
+      "response_text": "So long.",
+      "index": "22"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Happy 50",
+      "response_text": "Doctor Li, the new solutions will be ready in a few hours.",
+      "index": "23"
+    },
+    {
+      "topic": "MQ05Talk01",
+      "topic_text": "MQ05InfoGeneral",
+      "emotion": "Neutral 50",
+      "response_text": "Yes, Doctor?",
+      "index": "30"
+    },
+    {
+      "topic": "MQ05TalkResponse01",
+      "topic_text": "MQ05TalkResponse01",
+      "emotion": "Neutral 50",
+      "response_text": "I'm already taking care of that. I'll let you know if there are any abnormal results.",
+      "index": "31"
+    },
+    {
+      "topic": "MS08ZimmerBugScientist2",
+      "topic_text": "MS08ZimmerBugScientist2",
+      "emotion": "Disgust 20",
+      "response_text": "Do they not use the word \"no\" in the Commonwealth. It means, \"aint going to happen.\" Your missing robot just isn't a priority right now.{annoyed but trying to remain professional}",
+      "index": "34"
+    },
+    {
+      "topic": "MS08ZimmerBugScientist4",
+      "topic_text": "MS08ZimmerBugScientist4",
+      "emotion": "Disgust 50",
+      "response_text": "Fine. Your \"android.\" Whatever you call it, it doesn't change the fact that I'm a very busy woman. Will you please drop it and let me work?{annoyed but trying to remain professional}",
+      "index": "39"
+    },
+    {
+      "topic": "RCGoodbye",
+      "topic_text": "RCGoodbye",
+      "emotion": "Surprise 50",
+      "response_text": "They should be just fine. Try it again.",
+      "index": "40"
+    }
+  ],
+  "combat": []
+}

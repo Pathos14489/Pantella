@@ -1,0 +1,95 @@
+{
+  "name": "Harris",
+  "url": "/wiki/Harris",
+  "dialogue_name": "DLC01Harris.txt",
+  "dialogue_url": "/wiki/DLC01Harris.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": true,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "xx003E4E",
+  "ref_id": "xx003E61",
+  "editor_id": "DLC01Harris",
+  "location": "Vertigo Bar and Grill",
+  "location_url": "/wiki/Vertigo_Bar_and_Grill",
+  "descriptions": [
+    "Harris is a bartender in the Downtown area of the Pitt in 2277.",
+    "Harris operates the Vertigo Bar and Grill, taking particular pleasure in supplying the rest of his fellow Pitt raiders with alcohol.",
+    "If the Lone Wanderer visits the grill after gaining their freedom in the arena, Harris will welcome them to the establishment and readily serve them.",
+    "Harris appears only in the Fallout 3 add-on The Pitt.",
+    " Harris has a tendency to accidentally fall from the building and die."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Pitt raiders",
+  "role": "Bartender",
+  "detailed_location": "Vertigo Bar and Grill",
+  "voice_actor": "Craig Sechler",
+  "special": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 3,
+    "Intelligence": 3,
+    "Agility": 7,
+    "Luck": 5
+  },
+  "mod_special_values": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 3,
+    "Intelligence": 3,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "tag_skills": [
+    {
+      "Melee Weap.:": "32→45→66"
+    },
+    {
+      "Small Guns:": "34→47→68"
+    },
+    {
+      "Unarmed:": "28→41→62"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "25→55→85"
+    },
+    {
+      "Critical Chance:": "5%"
+    },
+    {
+      "Unarmed Dam.:": "1.9→2.55→3.6"
+    },
+    {
+      "Poison Resist.:": "15%"
+    },
+    {
+      "Rad. Resist.:": "6%"
+    },
+    {
+      "Carry Weight:": "210"
+    }
+  ],
+  "karma": "Evil",
+  "voice_type": "DLC01RaiderMaleColdVoice",
+  "geck_race": "AfricanAmericanRaider",
+  "topics": [
+    {
+      "topic": "DLC01HarrisBarter",
+      "topic_text": "Let me see what drinks you have.",
+      "emotion": "Sad 50",
+      "response_text": "It hurts my heart to see a sober customer.",
+      "index": "1"
+    }
+  ],
+  "conversation": [],
+  "combat": []
+}

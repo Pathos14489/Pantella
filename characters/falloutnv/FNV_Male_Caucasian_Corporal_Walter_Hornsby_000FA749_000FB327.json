@@ -1,0 +1,87 @@
+{
+  "name": "Corporal Walter Hornsby",
+  "url": "/wiki/Walter_Hornsby",
+  "dialogue_name": "CorporalHornsby.txt",
+  "dialogue_url": "/wiki/CorporalHornsby.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000FA749",
+  "ref_id": "000FB327",
+  "editor_id": "CorporalHornsby",
+  "location": "Camp McCarran terminal building",
+  "location_url": "/wiki/Camp_McCarran_terminal_building",
+  "descriptions": [
+    "Corporal Walter Hornsby is an NCR military police stationed at Camp McCarran in 2281.",
+    "Corporal Hornsby is part of the NCR Army contingent deployed to the Mojave Wasteland in compliance with an executive order signed by President Kimball. Serving under Lieutenant Carrie Boyd, Walter is an MP stationed at Camp McCarran. He is monitoring the interrogation of a Legion prisoner of war, found standing guard next to the door to the interrogation room where the officer is being detained."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "NCR military police",
+  "role": "Guard",
+  "detailed_location": "Terminal building,Camp McCarran",
+  "voice_actor": "Jesse Burch",
+  "special": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 5,
+    "Intelligence": 5,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "level": "1",
+  "tag_skills": [
+    {
+      "Explosives:": "30"
+    },
+    {
+      "Guns:": "30"
+    },
+    {
+      "Melee Weap.:": "30"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Neutral",
+  "voice_type": "MaleAdult03",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "I'll take it from here.",
+      "index": "1"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "HELLO",
+      "topic_text": "Hello",
+      "emotion": "Neutral 50",
+      "response_text": "Boyd's in there with a prisoner right now. Boy, is she pissed.",
+      "index": "3"
+    },
+    {
+      "topic": "VFreeformMcCarran2POWCleanup",
+      "topic_text": "VFreeformMcCarran2POWCleanup",
+      "emotion": "Neutral 50",
+      "response_text": "Not at all, ma'am. I'll get right on it.",
+      "index": "4"
+    },
+    {
+      "topic": "VFreeformMcCarran2POWGetUp",
+      "topic_text": "VFreeformMcCarran2POWGetUp",
+      "emotion": "Neutral 50",
+      "response_text": "Get your ass up.",
+      "index": "5"
+    }
+  ],
+  "combat": []
+}

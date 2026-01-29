@@ -1,0 +1,273 @@
+{
+  "name": "Lieutenant Hayes",
+  "url": "/wiki/Hayes_(Fallout:_New_Vegas)",
+  "dialogue_name": "PrimmCorporalHayes.txt",
+  "dialogue_url": "/wiki/PrimmCorporalHayes.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000E2C94",
+  "ref_id": "00099CFE",
+  "editor_id": "PrimmCorporalHayes",
+  "location": "NCR tent",
+  "location_url": "/wiki/NCR_tent",
+  "descriptions": [
+    "Completed I Fought the LawCamp Forlorn Hope",
+    "Lieutenant Hayes is an officer of the New California Republic Army stationed in Primm in the Mojave Wasteland in 2281, trying to muster a counteroffensive to take back the town from escaped convicts threatening its citizens. He appears in Fallout: New Vegas.",
+    "Prior to October 2281, the lieutenant was posted to 1st Company of the 5th Army Battalion in the New California Republic Army,",
+    "With only a slim hope that needed supplies and reinforcements will escape the mess of red tape locking down the Mojave Outpost, Hayes resigns his unit to simple containment rather than direct intervention, ordering his marksmen to block attempts by convicts to escape south and endanger the Outpost from their small camp on the town's western outskirts, but leaving the citizens trapped in the Vikki and Vance Casino to fend for themselves.",
+    "Upon his death, a message will appear stating that \"Lieutenant Hayes has died!\" similar to the prompt that appears when a companion dies.",
+    "Hayes was originally intended to have a rank of corporal instead of lieutenant, as indicated by his G.E.C.K. Editor ID (PrimmCorporalHayes)."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "New California Republic Army",
+  "role": "Garrison commander",
+  "detailed_location": "PrimmNCR tentCompleted I Fought the LawCamp Forlorn Hope",
+  "voice_actor": "Jesse Burch",
+  "special": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 5,
+    "Intelligence": 5,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "level": "1",
+  "tag_skills": [
+    {
+      "Explosives:": "30"
+    },
+    {
+      "Guns:": "30"
+    },
+    {
+      "Melee Weap.:": "30"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Good",
+  "voice_type": "MaleAdult03",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "I'm Lieutenant Hayes of the New California Republic Army, 5th Battalion, 1st Company. What's your business?",
+      "index": "1"
+    },
+    {
+      "topic": "LtHayesGoodbye",
+      "topic_text": "I should be going.",
+      "emotion": "Neutral 50",
+      "response_text": "Fine by me.",
+      "index": "3"
+    },
+    {
+      "topic": "LtHayesHelpPrimmPC asks Hayes to establish law in Primm",
+      "topic_text": "Primm is in dire need of some real law.",
+      "emotion": "Neutral 50",
+      "response_text": "We know Primm is a great strategic point, and we aren't blind to the needs of the town, but we're barely holding our own against the Powder Gangers.",
+      "index": "4"
+    },
+    {
+      "topic": "LtHayesNcrLawNevermindNever mind, I'll find someone else.",
+      "topic_text": "I'll look for another solution.",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah, good luck with that.",
+      "index": "11"
+    },
+    {
+      "topic": "LtHayesPrisonAttack",
+      "topic_text": "Classified or not, I want to help make the attack.",
+      "emotion": "Neutral 50",
+      "response_text": "Some Powder Gangers did you wrong, is that it? Get in line.",
+      "index": "12"
+    },
+    {
+      "topic": "LtHayesPrisonAttackDont",
+      "topic_text": "Tell them to call off the attack on the prison, or they'll get wiped out.",
+      "emotion": "Neutral 50",
+      "response_text": "I don't remember saying there was going to be an attack on the prison, waster. You've overstayed your welcome.",
+      "index": "15"
+    },
+    {
+      "topic": "LtHayesPrisonAttackFail",
+      "topic_text": "The attack on the prison was a success.",
+      "emotion": "Neutral 50",
+      "response_text": "That explains why there's been no sit-rep from Sergeant Lee.",
+      "index": "16"
+    },
+    {
+      "topic": "LtHayesPrisonAttackSpeech",
+      "topic_text": "I want to help your troops take the prison back. Believe me.",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] Some Powder Gangers did you wrong, is that it? Well, get in line.",
+      "index": "18"
+    },
+    {
+      "topic": "LtHayesPrisonAttackSuccess",
+      "topic_text": "The attack on the prison was a success.",
+      "emotion": "Neutral 50",
+      "response_text": "I'm not surprised. Criminals like to act tough, but they're no match for military discipline.",
+      "index": "22"
+    },
+    {
+      "topic": "LtHayesVMS04ChompsDead",
+      "topic_text": "There was another man involved at Sloan, but he's dead.",
+      "emotion": "Neutral 50",
+      "response_text": "I see. Thanks for saving us the trouble.",
+      "index": "23"
+    },
+    {
+      "topic": "LtHayesVMS04ExposeChomps",
+      "topic_text": "Chomps Lewis, the foreman at Sloan, was also involved.",
+      "emotion": "Neutral 50",
+      "response_text": "All right. I'll have him brought in for questioning.",
+      "index": "24"
+    },
+    {
+      "topic": "LtHayesVMS04ExposeTyrone",
+      "topic_text": "Tyrone has been selling chemical supplies to the Great Khans. Here - I got these from him.",
+      "emotion": "Anger 5",
+      "response_text": "Tyrone wasn't authorized to deliver any of this. There were reports of our supplies being used by the Great Khans to make illegal chems.",
+      "index": "25"
+    },
+    {
+      "topic": "LtHayesVMS04HideChomps",
+      "topic_text": "<Lie> No, there wasn't anyone else.",
+      "emotion": "Neutral 50",
+      "response_text": "All right. Thanks for all your help.",
+      "index": "29"
+    },
+    {
+      "topic": "LtHayesWhatYouDoWhat are you doing out here?",
+      "topic_text": "What are you doing out here?",
+      "emotion": "Neutral 50",
+      "response_text": "We were sent out here to hold back the tide of convicts from the correctional facility.",
+      "index": "30"
+    },
+    {
+      "topic": "VMS02AnyNPCAboutNCRAny idea what the NCR's up to in Primm?",
+      "topic_text": "Does the NCR have any plans to attack the prison north of here?",
+      "emotion": "Neutral 50",
+      "response_text": "Military operations are classified information. The brass is familiar with the situation at the NCRCF.",
+      "index": "32"
+    },
+    {
+      "topic": "nVPrimmDeputyConvPrimmCorporalHayesTopic000",
+      "topic_text": "What's the problem with your mission?",
+      "emotion": "Neutral 50",
+      "response_text": "The mission isn't a problem. The problem is with supplies. The convicts are better armed and organized than our intel initially suggested.",
+      "index": "34"
+    },
+    {
+      "topic": "nVPrimmDeputyConvPrimmCorporalHayesTopic001",
+      "topic_text": "Tell me about the correctional facility.",
+      "emotion": "Neutral 50",
+      "response_text": "Most people just call it NCRCF. That's NCR Correctional Facility{As an aside, explaining the acronym}.",
+      "index": "36"
+    },
+    {
+      "topic": "nVPrimmDeputyConvPrimmCorporalHayesTopic002",
+      "topic_text": "Do you have any information on the convicts?",
+      "emotion": "Neutral 50",
+      "response_text": "Not much. They've taken to calling themselves Powder Gangers. Mostly because they've taken to using the explosives meant to clear boulders as weapons.",
+      "index": "38"
+    },
+    {
+      "topic": "nVPrimmDeputyConvPrimmCorporalHayesTopic003",
+      "topic_text": "I have some other questions.",
+      "emotion": "Neutral 50",
+      "response_text": "I have some free time, ask away.",
+      "index": "41"
+    },
+    {
+      "topic": "nVPrimmDeputyConvPrimmCorporalHayesTopic004",
+      "topic_text": "That's it for now.",
+      "emotion": "Neutral 50",
+      "response_text": "Goodbye.",
+      "index": "42"
+    },
+    {
+      "topic": "nVPrimmDeputyConvPrimmCorporalHayesTopic005",
+      "topic_text": "What do you need to take over protecting the town?",
+      "emotion": "Neutral 50",
+      "response_text": "What we need, more than anything, is bodies.",
+      "index": "43"
+    },
+    {
+      "topic": "nVPrimmDeputyConvPrimmCorporalHayesTopic006",
+      "topic_text": "Who did you say I should talk to again?",
+      "emotion": "Neutral 50",
+      "response_text": "Knight, he's at Mojave outpost.",
+      "index": "47"
+    },
+    {
+      "topic": "nVPrimmDeputyConvPrimmCorporalHayesTopic007",
+      "topic_text": "Not yet, but I will soon.",
+      "emotion": "Neutral 50",
+      "response_text": "Roger.",
+      "index": "48"
+    },
+    {
+      "topic": "nVPrimmDeputyConvPrimmCorporalHayesTopic008",
+      "topic_text": "Yes. Tell the troops to come protect Primm.",
+      "emotion": "Neutral 50",
+      "response_text": "Roger, I'll radio them over now.",
+      "index": "49"
+    },
+    {
+      "topic": "nVPrimmDeputyConvPrimmCorporalHayesTopic009",
+      "topic_text": "Let me think about it.",
+      "emotion": "Neutral 50",
+      "response_text": "It's your choice, but those rangers are only coming if we get our support.",
+      "index": "50"
+    },
+    {
+      "topic": "nVPrimmDeputyConvPrimmCorporalHayesTopic010",
+      "topic_text": "What's the New California Republic?",
+      "emotion": "Neutral 50",
+      "response_text": "Where do you come from that you haven't heard of the NCR? Nevermind, it doesn't matter much.",
+      "index": "51"
+    },
+    {
+      "topic": "nVPrimmDeputyConvPrimmCorporalHayesTopic011",
+      "topic_text": "Can you tell me more about the NCR?",
+      "emotion": "Neutral 50",
+      "response_text": "Sure can. The NCR was founded from the survivors of one of the great Vaults. We started as a small settlement called Shady Sands.",
+      "index": "53"
+    },
+    {
+      "topic": "nVPrimmDeputyConvPrimmCorporalHayesTopic012",
+      "topic_text": "What's the Legion?",
+      "emotion": "Anger 75",
+      "response_text": "Caesar's Legion.{Lots of spite}",
+      "index": "55"
+    },
+    {
+      "topic": "nVPrimmDeputyConvPrimmCorporalHayesTopic014",
+      "topic_text": "Why is the NCR interested in this desert?",
+      "emotion": "Neutral 50",
+      "response_text": "It is no secret. Our interest here is two fold.",
+      "index": "58"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "PrimmNCRSheriffConvo",
+      "topic_text": "PrimmNCRSheriffConvo",
+      "emotion": "Neutral 50",
+      "response_text": "Are you ready to depart for Primm?",
+      "index": "61"
+    }
+  ],
+  "combat": []
+}

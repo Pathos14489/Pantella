@@ -1,0 +1,242 @@
+{
+  "name": "Leaf Mother Laurel",
+  "url": "/wiki/Laurel",
+  "dialogue_name": "OasisLeafMotherLaurel.txt",
+  "dialogue_url": "/wiki/OasisLeafMotherLaurel.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "0002A276",
+  "ref_id": "0002A2C3",
+  "editor_id": "OasisLeafMotherLaurel",
+  "location": "Oasis",
+  "location_url": "/wiki/Oasis",
+  "descriptions": [
+    "Leaf Mother Laurel is the Elder of the Treeminders in Oasis, in the year 2277.",
+    "The wife of Tree Father Birch and fellow leader of the people of Oasis, Leaf Mother Laurel spends much of her day wandering around Oasis, tending the plants and flowers, and speaking with the people of the village with her daughter Sapling Yew usually at her side or playing nearby. She believes it is her responsibility to tend to the spiritual and mental well-being of her fellow villagers.",
+    "Not much else is known about Leaf Mother Laurel, other than her passion to let the whole Capital Wasteland experience Harold's \"gift,\" contrary to her husband's belief.",
+    "Tree Father Birch is her husband and Sapling Yew is her daughter.",
+    "Leaf Mother Laurel is always in Oasis. She can be found at the outdoor hut in the mornings, sitting on the middle log. She also wanders around in Oasis and maintains the vegetation. She spends her evenings usually sitting on a stump with her husband and sleeps in a secluded spot with both her husband and child.",
+    "Laurel is the common name for Laurus nobilis, a type of tree. All of the human residents in Oasis have horticultural names."
+  ],
+  "race": "Human",
+  "gender": "Female",
+  "affiliation": "Treeminders",
+  "role": "Leader (Leaf Mother)",
+  "detailed_location": "Oasis",
+  "voice_actor": "Diana Sowle",
+  "special": {
+    "Strength": 5,
+    "Perception": 6,
+    "Endurance": 5,
+    "Charisma": 7,
+    "Intelligence": 4,
+    "Agility": 4,
+    "Luck": 4
+  },
+  "level": "2→10",
+  "tag_skills": [
+    {
+      "Barter:": "37→75"
+    },
+    {
+      "Melee Weap.:": "33→71"
+    },
+    {
+      "Speech:": "37→75"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "40→80"
+    }
+  ],
+  "karma": "Good",
+  "voice_type": "FemaleOld01DC",
+  "geck_race": "AfricanAmericanOldAged",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Sad 100",
+      "response_text": "By insulting the Tree Father, you've insulted us all. You are no longer a guest here. I'd advise you to leave immediately.",
+      "index": "1"
+    },
+    {
+      "topic": "MS10FinTLRewardTree Father Birch said you may have a gift for me?",
+      "topic_text": "You said someone had gifts for me?",
+      "emotion": "Happy 50",
+      "response_text": "Yes, I believe Branchtender Linden, Bloomseer Poplar and my little Yew mentioned they had some things for you as gifts.",
+      "index": "14"
+    },
+    {
+      "topic": "MS10LaurelEndgame01",
+      "topic_text": "I was glad to do it. Oasis needs to be shared with the world.",
+      "emotion": "Happy 50",
+      "response_text": "In your short visit here I can see you've learned much. That's a rare gift in these turbulent times.",
+      "index": "18"
+    },
+    {
+      "topic": "MS10LaurelEndgame02",
+      "topic_text": "Sure, I guess.",
+      "emotion": "Happy 50",
+      "response_text": "Perhaps you haven't learned quite as much as I hoped from your visit here, but I'm glad to see you made the right choice in the end.",
+      "index": "21"
+    },
+    {
+      "topic": "MS10LaurelEndgame03",
+      "topic_text": "I could have used a pile of caps instead, but whatever.",
+      "emotion": "Sad 50",
+      "response_text": "I'm saddened that worldly possessions and wealth still drive you, but I'm glad to see you made the right choice in the end.",
+      "index": "24"
+    },
+    {
+      "topic": "MS10LaurelPostCT01",
+      "topic_text": "Doesn't anybody care what your god thinks?",
+      "emotion": "Happy 80",
+      "response_text": "Of course we do! He yearns to share His miracles with the whole world... to give the gift of life back to the dead Wasteland!",
+      "index": "27"
+    },
+    {
+      "topic": "MS10LaurelPostCT02",
+      "topic_text": "Why don't any of you listen to Harold?",
+      "emotion": "Happy 80",
+      "response_text": "Of course we do! He yearns to share His miracles with the whole world... to give the gift of life back to the dead Wasteland!",
+      "index": "30"
+    },
+    {
+      "topic": "MS10LaurelPostCT03",
+      "topic_text": "This is a waste of my time.",
+      "emotion": "Sad 90",
+      "response_text": "I can understand your frustration. Seeing Him in so much pain makes me feel a sense of sadness in my heart too.",
+      "index": "33"
+    },
+    {
+      "topic": "MS10LaurelPostCT04",
+      "topic_text": "How can I possibly help?",
+      "emotion": "Neutral 50",
+      "response_text": "I heard what my husband wanted you to do. What I propose is an alternative.",
+      "index": "36"
+    },
+    {
+      "topic": "MS10LaurelPostCT05",
+      "topic_text": "Uh oh... I see where this is going...",
+      "emotion": "Neutral 50",
+      "response_text": "I heard what my husband wanted you to do. What I propose is an alternative.",
+      "index": "39"
+    },
+    {
+      "topic": "MS10LaurelPostCT06",
+      "topic_text": "I give up. Just let me know what you want now.",
+      "emotion": "Neutral 50",
+      "response_text": "I heard what my husband wanted you to do. What I propose is an alternative.",
+      "index": "42"
+    },
+    {
+      "topic": "MS10TLCaves",
+      "topic_text": "Any information you could give me on the caves below Oasis would be helpful.",
+      "emotion": "Happy 60",
+      "response_text": "If the Great One knows you to be worthy of his grace, he will allow you to pass through to his heart.",
+      "index": "45"
+    },
+    {
+      "topic": "MS10TLDoNow",
+      "topic_text": "What will you do now?",
+      "emotion": "Sad 70",
+      "response_text": "I'll mourn Him with every ounce of my being. This has been a tremendous loss to the world.",
+      "index": "46"
+    },
+    {
+      "topic": "MS10TLTaskTalk",
+      "topic_text": "I have some questions about the task you gave me.",
+      "emotion": "Happy 70",
+      "response_text": "Certainly, please ask them.",
+      "index": "51"
+    },
+    {
+      "topic": "MS10TLTaskTalk01",
+      "topic_text": "Why don't you just travel to Harold's heart on your own?",
+      "emotion": "Happy 60",
+      "response_text": "The Great One has not yet allowed us entry below ground. We were uncertain as to why until you arrived.",
+      "index": "52"
+    },
+    {
+      "topic": "MS10TLTaskTalk03Where did the sap come from?",
+      "topic_text": "Where did the Liniment come from?",
+      "emotion": "Happy 50",
+      "response_text": "The Liniment was made by Bloomseer Poplar. Her knowledge of His gifts and how they can be used to help us is nothing short of astounding.",
+      "index": "53"
+    },
+    {
+      "topic": "MS10TLTaskTalk04",
+      "topic_text": "Where is the entrance to the caves?",
+      "emotion": "Neutral 50",
+      "response_text": "The entrance to the caves is to the southwest of the Pavilion.",
+      "index": "54"
+    },
+    {
+      "topic": "MS10TLTreeminderWhat did you have to do to become a Treeminder?",
+      "topic_text": "May I ask you about the Treeminders?",
+      "emotion": "Happy 80",
+      "response_text": "Please, go right ahead.",
+      "index": "55"
+    },
+    {
+      "topic": "MS10TLTreeminder01",
+      "topic_text": "How did the Treeminders begin?",
+      "emotion": "Neutral 50",
+      "response_text": "I'm afraid I can take none of the credit for my husband's creation.",
+      "index": "56"
+    },
+    {
+      "topic": "MS10TLTreeminder02",
+      "topic_text": "How do the Treeminders normally handle other Outsiders?",
+      "emotion": "Happy 70",
+      "response_text": "Without His blessing, we would not allow an Outsider inside this vale.",
+      "index": "58"
+    },
+    {
+      "topic": "MS10TLTreeminder03",
+      "topic_text": "Could I become a Treeminder?",
+      "emotion": "Neutral 50",
+      "response_text": "Although we would welcome you with open arms, you were obviously drawn here to help us.",
+      "index": "59"
+    },
+    {
+      "topic": "MS10TopicBailout",
+      "topic_text": "I'd like to ask about something else.",
+      "emotion": "Happy 70",
+      "response_text": "Yes?",
+      "index": "61"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Anger 70",
+      "response_text": "Oasis is no longer a refuge for you, Outsider.",
+      "index": "62"
+    },
+    {
+      "topic": "MS10Argue",
+      "topic_text": "MS10Argue",
+      "emotion": "Anger 50",
+      "response_text": "Once again, my husband, we are at an impasse. I suggest we speak to the Outsider.{calming down from argument but still a bit annoyed}",
+      "index": "63"
+    },
+    {
+      "topic": "MS10TreemindersCeremonySay",
+      "topic_text": "MS10TreemindersCeremonySay",
+      "emotion": "Neutral 50",
+      "response_text": "...and, diminishing from day to day, you may disappear; except where you serve the health and good purposes of mankind, may no trace of you be found.",
+      "index": "66"
+    }
+  ],
+  "combat": []
+}

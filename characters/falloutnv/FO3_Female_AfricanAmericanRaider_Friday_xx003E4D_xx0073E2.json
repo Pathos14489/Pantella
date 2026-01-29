@@ -1,0 +1,116 @@
+{
+  "name": "Friday",
+  "url": "/wiki/Friday",
+  "dialogue_name": "DLC01Friday.txt",
+  "dialogue_url": "/wiki/DLC01Friday.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": true,
+  "can_repair": true,
+  "can_be_companion": false,
+  "base_id": "xx003E4D",
+  "ref_id": "xx0073E2",
+  "editor_id": "DLC01Friday",
+  "location": "The Pitt Downtown",
+  "location_url": "/wiki/The_Pitt_Downtown",
+  "descriptions": [
+    "Friday is a merchant and mechanic of Friday's Repairs in the Pitt around 2277.",
+    "Together with Trouble Man, Friday operates her own repair shop and merchant stand where she sells a variety of equipment and repairs broken weaponry. Although she is mild-mannered, she is a ruthless businesswoman.",
+    "As business is usually slow, she is ready for the Lone Wanderer to spend their money at her store after their ascent from fighting in the area.",
+    "She can be found in Downtown after the battles in the Hole have been completed. She is generally located right above Kai and her approximate location can be found up the stairs by Midea's quarters and across the planks.",
+    "Friday appears only in the Fallout 3 add-on The Pitt."
+  ],
+  "race": "Human",
+  "gender": "Female",
+  "affiliation": "Pitt raidersTrouble Man",
+  "role": "Merchant",
+  "detailed_location": "Friday's Repairs (Downtown)",
+  "voice_actor": "Vanessa Richardson",
+  "special": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 3,
+    "Intelligence": 3,
+    "Agility": 7,
+    "Luck": 5
+  },
+  "level": "1→4→9",
+  "tag_skills": [
+    {
+      "Melee Weap.:": "32→45→66"
+    },
+    {
+      "Small Guns:": "34→47→68"
+    },
+    {
+      "Unarmed:": "28→41→62"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "25→55→85"
+    },
+    {
+      "Critical Chance:": "5%"
+    },
+    {
+      "Unarmed Dam.:": "1.9→2.55→3.6"
+    },
+    {
+      "Poison Resist.:": "15%"
+    },
+    {
+      "Rad. Resist.:": "6%"
+    },
+    {
+      "Carry Weight:": "210"
+    }
+  ],
+  "karma": "Evil",
+  "voice_type": "DLC01RaiderFemaleColdVoice",
+  "geck_race": "AfricanAmericanRaider",
+  "topics": [
+    {
+      "topic": "DLC01FridayBarter",
+      "topic_text": "Show me what you've got.",
+      "emotion": "Disgust 50",
+      "response_text": "You'd best not be wasting my time, newbie.",
+      "index": "1"
+    },
+    {
+      "topic": "DLC01FridayRepair",
+      "topic_text": "I need you to repair some equipment.",
+      "emotion": "Disgust 50",
+      "response_text": "You'd best not be wasting my time, newbie.",
+      "index": "4"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "Well now, a grinder made it out of the hole. That hasn't happened in a while. Well, I hope you have some money, newbie.",
+      "index": "7"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "I have to go now.",
+      "emotion": "Neutral 50",
+      "response_text": "Try spending some more money next time.",
+      "index": "12"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Neutral 50",
+      "response_text": "{Silence.}",
+      "index": "15"
+    }
+  ],
+  "combat": []
+}

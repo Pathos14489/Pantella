@@ -1,0 +1,290 @@
+{
+  "name": "Rachael",
+  "url": "/wiki/Rachael_(Fallout_3)",
+  "dialogue_name": "Rachael.txt",
+  "dialogue_url": "/wiki/Rachael.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": true,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "0002B89B",
+  "ref_id": "0002B8A4",
+  "editor_id": "Rachael",
+  "location": "Republic of Dave",
+  "location_url": "/wiki/Republic_of_Dave",
+  "descriptions": [
+    "Rachael is a young girl living in the Republic of Dave in 2277.",
+    "Rachael is the 11 year old daughter of Dave and gets excited about any visitors from the outside. She is inquisitive, does well at school, and knows all of President Daddy's (Dave's) rules by heart."
+  ],
+  "race": "Human",
+  "gender": "Female",
+  "affiliation": "Republic of Dave",
+  "role": "Daughter of DaveGateguard",
+  "detailed_location": "Republic of Dave",
+  "voice_actor": "Stephanie Joy",
+  "special": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 5,
+    "Intelligence": 4,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "tag_skills": [
+    {
+      "Barter:": "30"
+    },
+    {
+      "Medicine:": "28"
+    },
+    {
+      "Melee Weap.:": "32"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "25"
+    },
+    {
+      "Critical Chance:": "5%"
+    },
+    {
+      "Unarmed Dam.:": "1.15"
+    },
+    {
+      "Poison Resist.:": "15%"
+    },
+    {
+      "Rad. Resist.:": "6%"
+    },
+    {
+      "Carry Weight:": "210"
+    },
+    {
+      "Damage Res.:": "2%"
+    }
+  ],
+  "karma": "Good",
+  "voice_type": "FemaleChild01DC",
+  "geck_race": "CaucasianChild",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Happy 50",
+      "response_text": "You're my hero, ma'am. I want to be just like you when I grow up.",
+      "index": "1"
+    },
+    {
+      "topic": "RDBacktoTopics",
+      "topic_text": "I think I get the idea. Let me ask you something else.",
+      "emotion": "Neutral 50",
+      "response_text": "Alright then.",
+      "index": "8"
+    },
+    {
+      "topic": "RDGottaGo",
+      "topic_text": "I've got to go.",
+      "emotion": "Neutral 50",
+      "response_text": "Yes, you do.",
+      "index": "9"
+    },
+    {
+      "topic": "RDGuardChildatHeart",
+      "topic_text": "Don't worry. I'm just here to play Republic with you.",
+      "emotion": "Happy 50",
+      "response_text": "I like playing Republic. Even though stupid Ralphie always gets to play as Dave!",
+      "index": "10"
+    },
+    {
+      "topic": "RDGuardEnter",
+      "topic_text": "I think I'd like to meet Dave.",
+      "emotion": "Neutral 50",
+      "response_text": "Okay, I'll take you, but President Daddy doesn't always like new people.",
+      "index": "12"
+    },
+    {
+      "topic": "RDGuardGoAway",
+      "topic_text": "I'm just a wanderer. I'll be going now.",
+      "emotion": "Fear 50",
+      "response_text": "Strangers need to stay outside or get permission from President Daddy! Else the Army of Dave will shoot you!",
+      "index": "14"
+    },
+    {
+      "topic": "RDGuardNice",
+      "topic_text": "I'm not here to hurt anyone. What is this place?",
+      "emotion": "Fear 50",
+      "response_text": "This is the Republic of Dave, duh! It's named for President Daddy! But you have to talk to him if you want to stay here.",
+      "index": "15"
+    },
+    {
+      "topic": "RDGuardNoThanks",
+      "topic_text": "Um... I don't think so. I'll stay out here.",
+      "emotion": "Neutral 50",
+      "response_text": "Okay. Just don't hang around the fence. President Daddy's guards don't like that.",
+      "index": "17"
+    },
+    {
+      "topic": "RDGuardWhoIsDave",
+      "topic_text": "Wait, who's this Dave guy, and why does he have his own Republic?",
+      "emotion": "Neutral 50",
+      "response_text": "He's the president of the Republic of Dave, duh. You can ask over at the Museum of Dave if you don't believe me.",
+      "index": "18"
+    },
+    {
+      "topic": "RDNeverMind",
+      "topic_text": "Actually, I think I have all the info I need.",
+      "emotion": "Neutral 50",
+      "response_text": "Alright then.",
+      "index": "20"
+    },
+    {
+      "topic": "RDSubElectionSuggestion",
+      "topic_text": "Have you considered running for the presidency?",
+      "emotion": "Neutral 50",
+      "response_text": "I'm too young!  I can't even vote yet.",
+      "index": "21"
+    },
+    {
+      "topic": "RDTopicElectionResults",
+      "topic_text": "Have you heard the election results?",
+      "emotion": "Neutral 50",
+      "response_text": "Did Dave win it again? I'd have voted for him if they'd let me.",
+      "index": "22"
+    },
+    {
+      "topic": "RDTopicKill",
+      "topic_text": "Your Republic is forfeit. Prepare to be reclaimed by the Wasteland!",
+      "emotion": "Fear 50",
+      "response_text": "Daddy Dave! Help us! Please!",
+      "index": "23"
+    },
+    {
+      "topic": "RDTopicRoD",
+      "topic_text": "I'd like to know more about the Republic.",
+      "emotion": "Neutral 50",
+      "response_text": "Um, okay. As long as President Daddy says it's all right.",
+      "index": "25"
+    },
+    {
+      "topic": "RDTopicRoDEND",
+      "topic_text": "That's all I need to know.",
+      "emotion": "Neutral 50",
+      "response_text": "Uh huh.",
+      "index": "26"
+    },
+    {
+      "topic": "RDTopicThisPlace",
+      "topic_text": "What's your take on the Republic?",
+      "emotion": "Sad 50",
+      "response_text": "Everyone says that daddy is the best man, ever ever. I don't know, but that's what Shawna says, so I guess it's true.",
+      "index": "27"
+    },
+    {
+      "topic": "RDTopicWhosInCharge",
+      "topic_text": "Tell me more about this Dave guy.",
+      "emotion": "Neutral 50",
+      "response_text": "Daddy? He's not so bad. Shawna says he's the most important man to ever walk the Wastes.",
+      "index": "28"
+    },
+    {
+      "topic": "RDTopicWivesDave has two wives?",
+      "topic_text": "You have two mommies?",
+      "emotion": "Neutral 50",
+      "response_text": "That's what President Daddy says, but I only remember having the one mommy before.",
+      "index": "30"
+    },
+    {
+      "topic": "RDTopicYourselfWhat can you tell me about yourself?",
+      "topic_text": "So, what have you been up to, kid?",
+      "emotion": "Neutral 50",
+      "response_text": "I like to play with the toys in the museum, but Shawna always yells at me.",
+      "index": "31"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYEI have to go now.",
+      "topic_text": "Talk to you later, kid.",
+      "emotion": "Neutral 50",
+      "response_text": "That's what Dave always says.",
+      "index": "32"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Neutral 50",
+      "response_text": "Have you heard about Dave, lady?",
+      "index": "33"
+    },
+    {
+      "topic": "RDElectionTalk",
+      "topic_text": "DaveElectionTalk",
+      "emotion": "Neutral 50",
+      "response_text": "Ugh why can't I just vote now?",
+      "index": "37"
+    },
+    {
+      "topic": "RDGuardEscortDone",
+      "topic_text": "RDGuardEscortDone",
+      "emotion": "Neutral 50",
+      "response_text": "President Daddy, there is a Wastelander who wishes to see you, sir!",
+      "index": "38"
+    },
+    {
+      "topic": "RDPlayTalk",
+      "topic_text": "RDPlayTalk",
+      "emotion": "Neutral 50",
+      "response_text": "Can't right now. Why don't you ask Mary?",
+      "index": "39"
+    },
+    {
+      "topic": "RDStudentTalk",
+      "topic_text": "RDStudentTalk",
+      "emotion": "Sad 50",
+      "response_text": "But I already know everything about Dave...",
+      "index": "41"
+    },
+    {
+      "topic": "RDStudentTalk1",
+      "topic_text": "RDStudentTalk1",
+      "emotion": "Neutral 50",
+      "response_text": "I thought grandpa Tom just gave Dave the Republic...",
+      "index": "42"
+    },
+    {
+      "topic": "RDStudentTalk2",
+      "topic_text": "RDStudentTalk2",
+      "emotion": "Sad 50",
+      "response_text": "But I thought grandpa just got really, really old...",
+      "index": "43"
+    },
+    {
+      "topic": "RDStudentTalk3",
+      "topic_text": "RDStudentTalk3",
+      "emotion": "Neutral 50",
+      "response_text": "It wasn't very long ago... I think I remember...",
+      "index": "44"
+    },
+    {
+      "topic": "RDStudentTalk4",
+      "topic_text": "RDStudentTalk4",
+      "emotion": "Anger 50",
+      "response_text": "Why am I always picked on in class? Make someone else do it!",
+      "index": "45"
+    },
+    {
+      "topic": "RDStudentTalk5",
+      "topic_text": "RDStudentTalk5",
+      "emotion": "Neutral 50",
+      "response_text": "Why does Daddy need merits? Can't he just be Daddy?",
+      "index": "46"
+    }
+  ],
+  "combat": []
+}

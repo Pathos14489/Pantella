@@ -1,0 +1,315 @@
+{
+  "name": "Nova",
+  "url": "/wiki/Nova",
+  "dialogue_name": "Nova.txt",
+  "dialogue_url": "/wiki/Nova.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "00000A63",
+  "ref_id": "00003B3F",
+  "editor_id": "Nova",
+  "location": "Moriarty's Saloon",
+  "location_url": "/wiki/Moriarty%27s_Saloon",
+  "descriptions": [
+    "Nova is one of the residents of Megaton, serving as the self-described whore at Moriarty's Saloon in 2277.",
+    "Nova spends most of her time hanging around the bar talking to Gob, Moriarty, Jericho, and other customers. Every now and then, she goes up to her room with a client. Her standards are not exactly high, but she explicitly states that she does not serve ghouls.",
+    "She has lived in Megaton since around 2272, but has grown unenthusiastic during her stay.",
+    "Nova works at Moriarty's Saloon as a sex worker and can be found hanging out on the saloon's first floor talking to the locals and the Lone Wanderer.",
+    "Cost: 120 caps."
+  ],
+  "race": "Human",
+  "gender": "Female",
+  "affiliation": "Megaton",
+  "role": "Sex Worker",
+  "detailed_location": "Moriarty's Saloon",
+  "voice_actor": "Karen Carbone",
+  "special": {
+    "Strength": 4,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 8,
+    "Intelligence": 3,
+    "Agility": 7,
+    "Luck": 3
+  },
+  "level": "4",
+  "tag_skills": [
+    {
+      "Barter:": "48"
+    },
+    {
+      "Sneak:": "46"
+    },
+    {
+      "Speech:": "48"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Good",
+  "voice_type": "FemaleAdult02DC",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "Bed",
+      "topic_text": "How much for a room?",
+      "emotion": "Neutral 50",
+      "response_text": "Since Colin's not running the show anymore, it's just the room now. 120 caps. Up front.",
+      "index": "1"
+    },
+    {
+      "topic": "BedNO",
+      "topic_text": "No, thanks.",
+      "emotion": "Neutral 50",
+      "response_text": "Okay, then.",
+      "index": "3"
+    },
+    {
+      "topic": "BedYES",
+      "topic_text": "Actually, I don't have 120 caps.",
+      "emotion": "Neutral 50",
+      "response_text": "Well, you aren't gonna get very far with no money.{Flirty.}",
+      "index": "4"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "Well, hello there, Miss Dangerous. What can I do for you?",
+      "index": "7"
+    },
+    {
+      "topic": "MQ01GNRTopic",
+      "topic_text": "What's all this about Galaxy News Radio?",
+      "emotion": "Surprise 60",
+      "response_text": "You serious?",
+      "index": "13"
+    },
+    {
+      "topic": "MQ01NovaHelps01",
+      "topic_text": "I talked to Moriarty already, and he's trying to charge me for the info.",
+      "emotion": "Happy 80",
+      "response_text": "Ha ha. Yeah, that's Colin's style all right. He sells information so much, you'd think the bar was just a hobby.",
+      "index": "17"
+    },
+    {
+      "topic": "MQ01NovaHelps02",
+      "topic_text": "Enough with the tough chick routine. Tell me more!",
+      "emotion": "Disgust 70",
+      "response_text": "Ohhh. You like it rough, huh? Well, that costs extra.",
+      "index": "18"
+    },
+    {
+      "topic": "MQ01NovaHelps03",
+      "topic_text": "Look, if you can give me more information or point me in the right direction...",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah, I help you, then Moriarty kicks my sweet ass out the door.",
+      "index": "20"
+    },
+    {
+      "topic": "MQ01NovaHelpsLadykiller",
+      "topic_text": "Look, sweetie. I'd love to spend time with you, but I need to find my Dad.",
+      "emotion": "Neutral 50",
+      "response_text": "Mmmm. I'd love to spend time with you too.",
+      "index": "23"
+    },
+    {
+      "topic": "MQ01TerminalTopic",
+      "topic_text": "What can you tell me about Moriarty's terminal?",
+      "emotion": "Neutral 50",
+      "response_text": "That stupid thing is his pride and joy. He keeps all of his dirty little secrets in it about everything that goes on in this godforsaken town.",
+      "index": "26"
+    },
+    {
+      "topic": "MQ01TerminalTopic01",
+      "topic_text": "I really need to get into that terminal.",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah, and? So does ninety percent of Megaton. Take a number.",
+      "index": "28"
+    },
+    {
+      "topic": "MQ01TerminalTopic01SC",
+      "topic_text": "Help me get into that terminal, Nova. Finding my Dad means everything to me.",
+      "emotion": "Happy 70",
+      "response_text": "Well, all right. You seem like a good kid. It isn't your fault Moriarty is such an asshole.",
+      "index": "30"
+    },
+    {
+      "topic": "MQ01TerminalTopic02",
+      "topic_text": "I'm sick of this shit. Help me get into the terminal so I can find what I need!",
+      "emotion": "Disgust 50",
+      "response_text": "Nice attitude, jackass.",
+      "index": "32"
+    },
+    {
+      "topic": "MQ01TerminalTopic03",
+      "topic_text": "All right, thanks.",
+      "emotion": "Neutral 50",
+      "response_text": "You're welcome.",
+      "index": "33"
+    },
+    {
+      "topic": "MQ01TerminalTopicLadykiller",
+      "topic_text": "Hey, sweetie. What can you tell me about Moriarty's terminal? I need in...",
+      "emotion": "Happy 80",
+      "response_text": "Mmmmm. I bet you want in. But enough about us.",
+      "index": "34"
+    },
+    {
+      "topic": "MegNovaGobTopic",
+      "topic_text": "What's the story with that Ghoul?",
+      "emotion": "Neutral 50",
+      "response_text": "Who, Gob? Well, if you can get past how he looks, he's a sweetheart. Colin's awfully hard on him, though.",
+      "index": "36"
+    },
+    {
+      "topic": "MegNovaGobTopic1",
+      "topic_text": "Where did he come from?",
+      "emotion": "Neutral 50",
+      "response_text": "He don't talk about it much but apparently, there's a whole city of Ghouls somewhere down in DC.",
+      "index": "37"
+    },
+    {
+      "topic": "MegNovaGobTopic2",
+      "topic_text": "Do you ever... you know... work with him?",
+      "emotion": "Neutral 50",
+      "response_text": "With Gob? Well, he's sweet... and I know that he'd like to, it's just... well...",
+      "index": "40"
+    },
+    {
+      "topic": "MegNovaGobTopic3",
+      "topic_text": "Why is Moriarty so hard on him?",
+      "emotion": "Anger 50",
+      "response_text": "Well, the miserable bastard is hard on all of us. But Gob gets it the worst. I guess just because he's different, you know?",
+      "index": "43"
+    },
+    {
+      "topic": "MegNovaGobTopicEND",
+      "topic_text": "Let's talk about something else.",
+      "emotion": "Neutral 50",
+      "response_text": "Sure thing, baby. What did you have on your mind?",
+      "index": "44"
+    },
+    {
+      "topic": "MegNovaHireTopic",
+      "topic_text": "So, what's it take to hire you?",
+      "emotion": "Neutral 50",
+      "response_text": "It used to be that Colin decided that stuff. But, with him gone, I'm thinking about retiring. So, no new clients. Sorry.",
+      "index": "45"
+    },
+    {
+      "topic": "MegNovaRadioTopic",
+      "topic_text": "What were you saying about radio stations?",
+      "emotion": "Neutral 50",
+      "response_text": "Huh? Oh, you mean why was Gob banging on that radio? Well, out there in the Wastes, there are two stations that broadcast.",
+      "index": "47"
+    },
+    {
+      "topic": "MegTownEnd",
+      "topic_text": "That's all I needed to know.",
+      "emotion": "Neutral 50",
+      "response_text": "Right.",
+      "index": "50"
+    },
+    {
+      "topic": "MegTownFatherChoice",
+      "topic_text": "I'm looking for my father. Middle-aged guy. Maybe you've seen him?",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah, I remember that man. I saw him talking to Moriarty. It's hard to forget handsome men like that.",
+      "index": "51"
+    },
+    {
+      "topic": "SpeechChallengeFailure",
+      "topic_text": "SpeechChallengeFailure",
+      "emotion": "Neutral 50",
+      "response_text": "Sorry, kid. It's not worth the shitstorm I'll bring on myself.",
+      "index": "52"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "I have to go now.",
+      "emotion": "Neutral 50",
+      "response_text": "Take care of yourself, hon.",
+      "index": "53"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Happy 70",
+      "response_text": "Lookin's free, the rest will cost ya.",
+      "index": "60"
+    },
+    {
+      "topic": "MegBarRadioChatter",
+      "topic_text": "MegBarRadioChatter",
+      "emotion": "Neutral 50",
+      "response_text": "Just give it up, Gob. You're not going to get anything.",
+      "index": "70"
+    },
+    {
+      "topic": "MegNovaRadioTalk",
+      "topic_text": "MegNovaRadioTalk",
+      "emotion": "Disgust 100",
+      "response_text": "I told you Gob, it ain't the radio. The Enclave station comes in fine. It's Galaxy News. Their signal's been shit lately.",
+      "index": "71"
+    },
+    {
+      "topic": "MegatonHelloResponse",
+      "topic_text": "MegatonHelloResponse",
+      "emotion": "Neutral 50",
+      "response_text": "Hello, Mother Maya.",
+      "index": "72"
+    },
+    {
+      "topic": "MegatonTalk1",
+      "topic_text": "MegatonTalk",
+      "emotion": "Fear 50",
+      "response_text": "Yeah, Colin?",
+      "index": "74"
+    },
+    {
+      "topic": "MegatonTalk2",
+      "topic_text": "MegatonTalk2",
+      "emotion": "Neutral 50",
+      "response_text": "I'm tired. I think I'm going to knock off early. I know you won't mind.",
+      "index": "80"
+    },
+    {
+      "topic": "MegatonTalk3",
+      "topic_text": "MegatonTalk3",
+      "emotion": "Neutral 50",
+      "response_text": "I... I'm sorry, Colin. I've been tired lately, you know? I ain't been myself. Don't worry, I'll pull it together. I promise.",
+      "index": "84"
+    },
+    {
+      "topic": "MegatonTalk4",
+      "topic_text": "MegatonTalk4",
+      "emotion": "Neutral 50",
+      "response_text": "You're all heart, you know that, Colin?{ }",
+      "index": "90"
+    },
+    {
+      "topic": "MegatonTalk5",
+      "topic_text": "MegatonTalk5",
+      "emotion": "Neutral 50",
+      "response_text": "Sorry, hon. I'm a lifer here. Just go drink your drink.",
+      "index": "94"
+    }
+  ],
+  "combat": [
+    {
+      "topic": "Attack",
+      "topic_text": "Attack",
+      "emotion": "Neutral 50",
+      "response_text": "Colin! We need help over here!",
+      "index": "95"
+    }
+  ]
+}

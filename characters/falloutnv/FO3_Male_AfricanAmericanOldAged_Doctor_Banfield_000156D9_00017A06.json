@@ -1,0 +1,425 @@
+{
+  "name": "Doctor Banfield",
+  "url": "/wiki/Julius_Banfield",
+  "dialogue_name": "DoctorBanfield.txt",
+  "dialogue_url": "/wiki/DoctorBanfield.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": true,
+  "is_merchant": true,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000156D9",
+  "ref_id": "00017A06",
+  "editor_id": "DoctorBanfield",
+  "location": "Wellness center",
+  "location_url": "/wiki/Wellness_center",
+  "descriptions": [
+    "Doctor Julius Banfield is the only doctor in Tenpenny Tower in Fallout 3.",
+    "The physician for Tenpenny Tower, Banfield runs the wellness center, and is responsible for the health of the Tower's residents.",
+    "It's not clear where Banfield comes from, but he does make mention of some of his scientific colleagues publishing papers. Much of Banfield's knowledge of ghouls, for example, comes from papers published by his colleagues, although he never actually verified their findings (and, unsurprisingly, has never been published).",
+    "Of course, his lack of interaction with real ghouls makes it easy to maintain his prejudices, brushing them off as mere caution.",
+    "Regardless of his views on ghouls, Banfield is a competent, if conservative doctor. He refuses to perform surgeries unless absolutely necessary, believing that if the risk of infection outweighs the benefits, there's no reason to open up a patient.",
+    "As the sole doctor in Tenpenny Tower, Banfield has a complex web of relationships with most of its residents (although not with Tenpenny, as mentioned above). Anthony Ling, the Tower's fashion expert, consistently tries to convince Banfield for a makeover. The doctor consistently refuses, believing that labcoats never go out of style. In fact, Ling tends to grate a bit with his insistence,",
+    "He's on good terms with Security Chief Gustavo,",
+    "The situation is different with Margaret Primrose and other women. The two are good friends, engaging frequently in playful banter. Banfield believes Margaret works too hard and routinely threatens to prescribe her a vacation, making her aghast.",
+    "With Lydia Montenegro, his relationship is friendly and more professional.",
+    "On the other end is Tiffany Cheng. The wife of Irving Cheng doesn't make frivolous requests, instead suffering from high levels of stress due to her husband's inattentiveness and preoccupation with communism. Banfield would like her to relax and stop daydreaming about violence directed at her spouse,",
+    "Finally, there's Susan Lancaster. Banfield is one of her primary lovers, and the two frequently indulge in a roleplay fetish, playing doctor and nurse."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Tenpenny Tower",
+  "role": "Doctor",
+  "detailed_location": "Wellness center,Tenpenny Tower",
+  "voice_actor": "Paul Eiding",
+  "special": {
+    "Strength": 4,
+    "Perception": 6,
+    "Endurance": 4,
+    "Charisma": 6,
+    "Intelligence": 7,
+    "Agility": 5,
+    "Luck": 4
+  },
+  "level": "1",
+  "tag_skills": [
+    {
+      "Barter:": "31"
+    },
+    {
+      "Medicine:": "33"
+    },
+    {
+      "Science:": "58(63)"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Good",
+  "voice_type": "MaleOld01DC",
+  "geck_race": "AfricanAmericanOldAged",
+  "topics": [
+    {
+      "topic": "DoctorAddiction",
+      "topic_text": "I think I might be addicted to something.",
+      "emotion": "Neutral 50",
+      "response_text": "I can give you something that'll should help.",
+      "index": "1"
+    },
+    {
+      "topic": "DoctorAddictionNO",
+      "topic_text": "I think I'll tough it out.",
+      "emotion": "Neutral 50",
+      "response_text": "Your choice, but an addiction ain't an easy thing to kick.",
+      "index": "3"
+    },
+    {
+      "topic": "DoctorAddictionYES",
+      "topic_text": "I don't have 50 caps.",
+      "emotion": "Neutral 50",
+      "response_text": "Well, this might go better for you if you hadn't blown your money on Jet, don't you think?",
+      "index": "4"
+    },
+    {
+      "topic": "DoctorMedical",
+      "topic_text": "I'm hurt. I need help, Doc.",
+      "emotion": "Neutral 50",
+      "response_text": "Well, you're standing fine, but you could use some switching up. That'll be 50 caps.",
+      "index": "6"
+    },
+    {
+      "topic": "DoctorMedical33YES",
+      "topic_text": "All right, here's your money.",
+      "emotion": "Neutral 50",
+      "response_text": "Alright, hold still.",
+      "index": "11"
+    },
+    {
+      "topic": "DoctorMedical66YES",
+      "topic_text": "All right, here's your money.",
+      "emotion": "Neutral 50",
+      "response_text": "Now... where did I put that scalpel? Ah! There it is...",
+      "index": "13"
+    },
+    {
+      "topic": "DoctorMedical99YES",
+      "topic_text": "All right, here's your money.",
+      "emotion": "Neutral 50",
+      "response_text": "Here, bite down on this. It'll help with the pain.",
+      "index": "15"
+    },
+    {
+      "topic": "DoctorMedicalContNO",
+      "topic_text": "That's all I need.",
+      "emotion": "Neutral 50",
+      "response_text": "Okay then. Try not to get killed out there.",
+      "index": "17"
+    },
+    {
+      "topic": "DoctorMedicalContYES",
+      "topic_text": "There was something else I needed...",
+      "emotion": "Neutral 50",
+      "response_text": "Let's get on with it then.",
+      "index": "18"
+    },
+    {
+      "topic": "DoctorMedicalNO",
+      "topic_text": "On second thought, I'll be fine.",
+      "emotion": "Neutral 50",
+      "response_text": "Then stop wasting my time.",
+      "index": "19"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Anger 50",
+      "response_text": "All better now, you big baby. Can I get back to work now?",
+      "index": "20"
+    },
+    {
+      "topic": "MS08MedicalClue1",
+      "topic_text": "Do you know anything about some android who needed a surgeon?",
+      "emotion": "Neutral 50",
+      "response_text": "Hmm... If I recall, he was looking for a surgeon and some kind of computer genius. But those rumors are ancient history by now.",
+      "index": "29"
+    },
+    {
+      "topic": "MS08MedicalClue2",
+      "topic_text": "What do you know about this android from the Commonwealth?",
+      "emotion": "Neutral 50",
+      "response_text": "Have you heard the so called \"android recording?\" Didn't know what to make it of myself.  Here's a spare copy of that old holotape. Take a listen.",
+      "index": "30"
+    },
+    {
+      "topic": "MS08MedicalClue3",
+      "topic_text": "Ever do any facial surgery? Maybe on someone from the Commonwealth?",
+      "emotion": "Neutral 50",
+      "response_text": "Facial surgery's too dangerous. Plus you need some specialized prewar equipment. Hmm. That reminds me of an old hoax. Here's a copy of that holotape.",
+      "index": "32"
+    },
+    {
+      "topic": "MS08MedicalClue3Bribe",
+      "topic_text": "You ever do a face job on an android from the North? <Jingle purse of 100 caps.>",
+      "emotion": "Neutral 50",
+      "response_text": "Facial surgery's too dangerous. Plus you need some specialized prewar equipment. Hmm. That reminds me of an old hoax. Here's a copy of that holotape.",
+      "index": "35"
+    },
+    {
+      "topic": "MS08MedicalClue3Stat",
+      "topic_text": "A patient of mine needs a facial epidermal augmentation. You ever perform one?",
+      "emotion": "Neutral 50",
+      "response_text": "Facial surgery's too dangerous. Plus you need some specialized prewar equipment. Hmm. That reminds me of an old hoax. Here's a copy of that holotape.",
+      "index": "36"
+    },
+    {
+      "topic": "MS08MedicalClue4",
+      "topic_text": "You know who might have a Lipoplasticator or Micro Dermal Graftilizer?",
+      "emotion": "Neutral 50",
+      "response_text": "I heard old Pinkerton at Rivet City had a Lipoplasticator and Micro Dermal Graftilizer. I'd be lying if I said I wasn't jealous.",
+      "index": "37"
+    },
+    {
+      "topic": "MS08MedicalClue4Bribe",
+      "topic_text": "Here's 100 caps for the locale of a Lipoplasticator or Micro Dermal Graftilizer.",
+      "emotion": "Neutral 50",
+      "response_text": "I heard old Pinkerton at Rivet City had a Lipoplasticator and Micro Dermal Graftilizer. I'd be lying if I said I wasn't jealous.",
+      "index": "40"
+    },
+    {
+      "topic": "MS08MedicalClue4Stat",
+      "topic_text": "I need to find a Micro Dermal Graftilizer for epidermal augmentation surgery.",
+      "emotion": "Neutral 50",
+      "response_text": "I heard old Pinkerton at Rivet City had a Lipoplasticator and Micro Dermal Graftilizer. I'd be lying if I said I wasn't jealous.",
+      "index": "41"
+    },
+    {
+      "topic": "MS12Basement",
+      "topic_text": "Hey doc, what do you know about the basement area?",
+      "emotion": "Neutral 50",
+      "response_text": "There's those access tunnels that lead underground - those are sealed by a door... Then there is someplace down there where they keep the generators.{trying to recall an obscure fact}",
+      "index": "42"
+    },
+    {
+      "topic": "MS12FinResidents",
+      "topic_text": "What's it like living at Tenpenny Tower?",
+      "emotion": "Happy 100",
+      "response_text": "It's fine now that those Ghouls are taken care of. I've been treating less cases related to frazzled nerves and upset stomachs.{self important doctor showing genuine appreciation}",
+      "index": "45"
+    },
+    {
+      "topic": "MS12IntroToGhoul1",
+      "topic_text": "I shoot Ghouls first, and ask questions later.",
+      "emotion": "Surprise 100",
+      "response_text": "I wasn't meaning to imply they should be slaughtered... though, I suppose these days, that might be the best solution.{slightly shocked at the players brutality}",
+      "index": "47"
+    },
+    {
+      "topic": "MS12IntroToGhoul2",
+      "topic_text": "It's a good thing those walls are so high.",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah, it's what keeps those Ghouls from coming in.",
+      "index": "48"
+    },
+    {
+      "topic": "MS12IntroToGhoul3",
+      "topic_text": "Sure they look a little weird, but they're not diseased vermin.",
+      "emotion": "Surprise 75",
+      "response_text": "Well, umm. I guess I must confess... I've never examined a Ghoul up close... you're right. I shouldn't make assumptions.{self important doctor realizing he was prejudiced}",
+      "index": "49"
+    },
+    {
+      "topic": "MS12ResidentsBranch",
+      "topic_text": "What's it like living at Tenpenny Tower?",
+      "emotion": "Happy 50",
+      "response_text": "People are healthy here, they eat well and have a strong roof over their head.{doctor explaining how good the people here have it}",
+      "index": "50"
+    },
+    {
+      "topic": "MS12ResidentsBranch1",
+      "topic_text": "I'm a little shocked by how healthy everyone looks.",
+      "emotion": "Happy 75",
+      "response_text": "Tenpenny is very selective about who he allows to live here. The correct genes and living conditions make for a relatively disease free environment.{self important doctor}",
+      "index": "51"
+    },
+    {
+      "topic": "MS12ResidentsBranch2",
+      "topic_text": "It must be nice having patients who can pay their medical bills, huh?",
+      "emotion": "Anger 50",
+      "response_text": "I'm not sure what you are trying to imply... but it's no crime to be paid for doing work. Tenpenny charges me rent too, you know.{slightly annoyed}",
+      "index": "54"
+    },
+    {
+      "topic": "MS12ResidentsBranch3",
+      "topic_text": "Sure. Whatever you say, doc.",
+      "emotion": "Disgust 75",
+      "response_text": "If you don't mind, I have better things to do.{annoyed}",
+      "index": "57"
+    },
+    {
+      "topic": "MS12ResidentsGhoulsAbout these Ghouls...",
+      "topic_text": "Know much about those Ghouls?",
+      "emotion": "Surprise 100",
+      "response_text": "My current theory is that the destructive disease of the Ghoul condition will always eventually render him little more than a mindless killer.{self important doctor telling his theory}",
+      "index": "59"
+    },
+    {
+      "topic": "MS12ResidentsGhoulsChoice1MS12ResidentsGhoulsChoiceGood",
+      "topic_text": "I can take care of this problem once and for all.",
+      "emotion": "Happy 100",
+      "response_text": "I wish you luck. You'll want to talk to Chief Gustavo first. He may be able to lend you a soldier or two.{glad someone is doing something to help}",
+      "index": "62"
+    },
+    {
+      "topic": "MS12ResidentsGhoulsChoice2MS12ResidentsGhoulsChoiceBad",
+      "topic_text": "I don't suppose you've consulted any Ghouls on your little theory?",
+      "emotion": "Disgust 100",
+      "response_text": "Well... not exactly. But my colleagues have published papers...{self important indignation}",
+      "index": "63"
+    },
+    {
+      "topic": "MS12ResidentsGhoulsChoice3MS12ResidentsGhoulsChoiceNeutral",
+      "topic_text": "Yep.",
+      "emotion": "Disgust 10",
+      "response_text": "If you don't mind, I have something things to attend to.{trying to get out of the conversation}",
+      "index": "65"
+    },
+    {
+      "topic": "MS12ResidentsNeighbors",
+      "topic_text": "How would you feel about having a few Ghoul neighbors?",
+      "emotion": "Surprise 75",
+      "response_text": "I knew it was only a matter of time before you asked me about that... I've decided I want to do my own study of Ghoul physiology.{hesitant but sincere}",
+      "index": "66"
+    },
+    {
+      "topic": "MS12ResidentsNeighborsBad",
+      "topic_text": "You're a wise man, Banfield. Ghouls are meant to be feared.",
+      "emotion": "Neutral 50",
+      "response_text": "I'm not afraid. Just cautious. But perhaps you're right. It's better not to take chances.{snob losing prejudice}",
+      "index": "71"
+    },
+    {
+      "topic": "MS12ResidentsNeighborsGood",
+      "topic_text": "I've met these ghouls. They seem healthy. All things considered.",
+      "emotion": "Surprise 50",
+      "response_text": "Well... If they don't mind me giving them a thorough exam and if they agree to follow any directives I give them regarding health and hygiene...{letting go of prejudice}",
+      "index": "72"
+    },
+    {
+      "topic": "MS12ResidentsNeighborsGoodPetition",
+      "topic_text": "Would you tell Mister Tenpenny that you wouldn't mind Ghoul neighbors?",
+      "emotion": "Surprise 50",
+      "response_text": "Sure. No problem.",
+      "index": "74"
+    },
+    {
+      "topic": "MS12ResidentsNeighborsNeutral",
+      "topic_text": "Whatever.",
+      "emotion": "Disgust 25",
+      "response_text": "My time is very important to me. I don't suppose you can waste your's somewhere else?{self important doctor}",
+      "index": "75"
+    },
+    {
+      "topic": "SpeechChallengeFailure",
+      "topic_text": "SpeechChallengeFailure",
+      "emotion": "Neutral 50",
+      "response_text": "I'm not at liberty to say.",
+      "index": "76"
+    },
+    {
+      "topic": "TenpennyAllistairTenpenny",
+      "topic_text": "Tell me about Allistair Tenpenny.",
+      "emotion": "Disgust 50",
+      "response_text": "He's the landlord, although you hardly ever see him. I had to treat him once for bed sores, if you know what I mean.",
+      "index": "77"
+    },
+    {
+      "topic": "TenpennyGREETINGChoice1",
+      "topic_text": "Being a doctor is a great service to a community.",
+      "emotion": "Happy 75",
+      "response_text": "Yes. The healing art is a rewarding occupation. Is there something I can help you with?{flattered doctor}",
+      "index": "79"
+    },
+    {
+      "topic": "TenpennyGREETINGChoice2",
+      "topic_text": "I hear doctors make a ton of caps.",
+      "emotion": "Anger 50",
+      "response_text": "It isn't cheap to live here. Is there something you want?{resentful}",
+      "index": "80"
+    },
+    {
+      "topic": "TenpennyGREETINGChoice3",
+      "topic_text": "Blah blah blah.",
+      "emotion": "Neutral 50",
+      "response_text": "You should take more interest in your well-being. Carelessness leads to the spread of disease. Is there something you need?{doctor scolding a patient}",
+      "index": "81"
+    },
+    {
+      "topic": "TenpennyVendor",
+      "topic_text": "I'd like to do business with you.",
+      "emotion": "Neutral 50",
+      "response_text": "I have some first aid supplies I can sell.",
+      "index": "82"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "DialogueTenpennyConv00",
+      "topic_text": "DialogueTenpennyConv00",
+      "emotion": "Happy 10",
+      "response_text": "Right. Sure thing, Anthony.{humoring someone}",
+      "index": "83"
+    },
+    {
+      "topic": "DialogueTenpennyConv01",
+      "topic_text": "DialogueTenpennyConv01",
+      "emotion": "Happy 25",
+      "response_text": "I'm afraid the lab coat never goes out of style for me. But I appreciate your concern.{amused but hinging on annoyance.}",
+      "index": "89"
+    },
+    {
+      "topic": "DialogueTenpennyConv02",
+      "topic_text": "DialogueTenpennyConv02",
+      "emotion": "Happy 25",
+      "response_text": "Well, that's more than I had in mind. Maybe I'll just order a new labcoat instead.{amused}",
+      "index": "94"
+    },
+    {
+      "topic": "DialogueTenpennyEatStartTopic",
+      "topic_text": "DialogueTenpennyEatStartTopic",
+      "emotion": "Neutral 50",
+      "response_text": "Mmm. I think I'll go grab a bite to eat.{hungry and on his way to get food}",
+      "index": "100"
+    },
+    {
+      "topic": "DialogueTenpennySleepStartTopic",
+      "topic_text": "DialogueTenpennySleepStartTopic",
+      "emotion": "Happy 50",
+      "response_text": "Early to bed, early to rise.{tired and heading off to bed}",
+      "index": "101"
+    },
+    {
+      "topic": "DialogueTenpennySusanSleepWithStartTopic",
+      "topic_text": "DialogueTenpennySusanSleepWithStartTopic",
+      "emotion": "Happy 50",
+      "response_text": "It's play time. I wonder if we will play doctor and nurse again?{to himself under his breath, thinking about his mistress}",
+      "index": "102"
+    },
+    {
+      "topic": "GOODBYE",
+      "topic_text": "I have to go now.",
+      "emotion": "Neutral 50",
+      "response_text": "Don't get hurt out here.{self important physician}",
+      "index": "103"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Surprise 50",
+      "response_text": "You feeling alright, Daring? You having a flash back or something?{confused and slightly suspicious}",
+      "index": "106"
+    }
+  ],
+  "combat": []
+}

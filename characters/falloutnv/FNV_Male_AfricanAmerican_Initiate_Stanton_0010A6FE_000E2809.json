@@ -1,0 +1,136 @@
+{
+  "name": "Initiate Stanton",
+  "url": "/wiki/Stanton",
+  "dialogue_name": "HVInitiateStanton.txt",
+  "dialogue_url": "/wiki/HVInitiateStanton.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "0010A6FE",
+  "ref_id": "000E2809",
+  "editor_id": "HVInitiateStanton",
+  "location": "Hidden Valley bunker",
+  "location_url": "/wiki/Hidden_Valley_bunker",
+  "descriptions": [
+    "Initiate Stanton is an initiate of the Mojave Brotherhood of Steel, patrolling in the Hidden Valley bunker in 2281.",
+    "Stanton and Melissa Watkins went to the scorpion gulch to fight the radscorpions there, as part of their own training exercise authorized by Ramos outside of the bunker. They apparently realized the scorpions were too much for them to handle so they fled back to the bunker. Unaware that he did, Stanton dropped his laser pistol while fighting the scorpions. He was the last person to check out the laser pistol, and filed a false report to the effect that he returned it. Stanton risks being assigned to the latrine-cleaning duty, or even exiled if the missing laser pistol is not returned. Unfortunately, he cannot return to the scorpion gulch to recover the laser pistol because entering and exiting the bunker without authorization is not possible due to the bunker's state of lockdown.",
+    "He can be found sleeping around 9:30am in the easternmost room of Hidden Valley bunker L1. During the afternoon, he can often be found in class sometimes hiding behind the blackboards.",
+    "Pistol Packing"
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Mojave Brotherhood of Steel",
+  "detailed_location": "Hidden Valley bunker",
+  "voice_actor": "Avery K. Waddell",
+  "special": {
+    "Strength": 8,
+    "Perception": 7,
+    "Endurance": 8,
+    "Charisma": 4,
+    "Intelligence": 3,
+    "Agility": 6,
+    "Luck": 4
+  },
+  "level": "1→10 (player level x0.5)",
+  "tag_skills": [
+    {
+      "Energy Weap.:": "33→66"
+    },
+    {
+      "Explosives:": "33→66"
+    },
+    {
+      "Guns:": "31→64"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Neutral",
+  "voice_type": "MaleAdult02",
+  "geck_race": "AfricanAmerican",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "Hey, I heard the pistol got returned. Thanks a lot! I am{emph}never going to listen to Watkins again, believe me.",
+      "index": "1"
+    },
+    {
+      "topic": "HVStantonAskAboutWeapon",
+      "topic_text": "You were the last one to check out the missing laser pistol, right?",
+      "emotion": "Neutral 50",
+      "response_text": "Oh man, I told Watkins this wasn't going to work.",
+      "index": "5"
+    },
+    {
+      "topic": "VDialogueHiddenValleyHVInitiateStantonTopic000",
+      "topic_text": "Fine, I'll find the gun for you.",
+      "emotion": "Neutral 50",
+      "response_text": "Great! When you find it, just turn it into Torres and I'll be in the clear.",
+      "index": "11"
+    },
+    {
+      "topic": "VDialogueHiddenValleyHVInitiateStantonTopic001",
+      "topic_text": "Why do the records show that the gun was turned back in?",
+      "emotion": "Neutral 50",
+      "response_text": "Oh, I sort of altered the records after we got back. That was Watkins' idea, too. That girl is nothing but trouble.",
+      "index": "12"
+    },
+    {
+      "topic": "VDialogueHiddenValleyHVInitiateStantonTopic002",
+      "topic_text": "Sorry, I can't help you.",
+      "emotion": "Neutral 50",
+      "response_text": "Oh man, I am so screwed! Look, if you change your mind, I'd really appreciate it.",
+      "index": "14"
+    },
+    {
+      "topic": "VDialogueHiddenValleyHVInitiateStantonTopic003",
+      "topic_text": "I'm trying to help Torres find a missing laser pistol. Have you seen it around?",
+      "emotion": "Neutral 50",
+      "response_text": "No, no idea. Sorry.",
+      "index": "15"
+    },
+    {
+      "topic": "VDialogueHiddenValleyHVInitiateStantonTopic004",
+      "topic_text": "I have to be going.",
+      "emotion": "Neutral 50",
+      "response_text": "Okay, see you around.",
+      "index": "16"
+    },
+    {
+      "topic": "VDialogueHiddenValleyHVInitiateStantonTopic005",
+      "topic_text": "I'll try my best to find it.",
+      "emotion": "Neutral 50",
+      "response_text": "Hey, no pressure. I'm just grateful you're willing to help me out.",
+      "index": "17"
+    },
+    {
+      "topic": "VDialogueHiddenValleyHVInitiateStantonTopic006",
+      "topic_text": "Could you be a little more specific about where you dropped it?",
+      "emotion": "Neutral 50",
+      "response_text": "I'm pretty sure I dropped in when we made our escape. We had been surrounded and had climbed up on this big rock to hold them off.",
+      "index": "18"
+    },
+    {
+      "topic": "VDialogueHiddenValleyHVInitiateStantonTopic007",
+      "topic_text": "I better go and start looking.",
+      "emotion": "Neutral 50",
+      "response_text": "Good luck!",
+      "index": "21"
+    },
+    {
+      "topic": "VDialogueHiddenValleyHVInitiateStantonTopic008",
+      "topic_text": "Can I just get you another laser pistol?",
+      "emotion": "Neutral 50",
+      "response_text": "No, weapon check-in protocol includes verifying the serial number of the weapon, so a different gun would be noticed.",
+      "index": "22"
+    }
+  ],
+  "conversation": [],
+  "combat": []
+}

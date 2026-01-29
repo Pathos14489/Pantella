@@ -1,0 +1,194 @@
+{
+  "name": "James Hargrave",
+  "url": "/wiki/James_Hargrave",
+  "dialogue_name": "JamesHargrave.txt",
+  "dialogue_url": "/wiki/JamesHargrave.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": true,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000156C4",
+  "ref_id": "0001E75E",
+  "editor_id": "JamesHargrave",
+  "location": "Rivet City",
+  "location_url": "/wiki/Rivet_City",
+  "descriptions": [
+    "James Hargrave is a young inhabitant of Rivet City in 2277.",
+    "James Hargrave is one of Rivet City's few children. His father is deceased, having died while in the wasteland, specifically Andale.",
+    "James is alternately sullen and wild and will do just about anything on a dare. He is capable of holding a grudge for months. He is loyal to his only friend C.J. who he picks on mercilessly. C.J. tolerates the abuse as there are no other children in the city.",
+    "James' familial relationship is a sore spot (particularly should his mother also become deceased for whatever reason),",
+    "James is the son of Tammy Hargrave, an emotionally abusive alcoholic who wouldn't mind selling him into slavery, and a father who died in the wasteland. His only friend, as there are no other children in the city, is C.J. Young. He and C.J. spend their time playing in the storage room or hanging around on the flight deck. He has developed a reputation similar to his mother, and a similar resentment towards her.",
+    "The RunawaysLight-Fingers Hargrave",
+    "PC Playstation 3 James runs away but can never be found; this is often accompanied by him also leaving C.J. behind, who continues running around Rivet City but with the player unable to interact with her in any way."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Rivet City",
+  "role": "Troublemaker",
+  "detailed_location": "Rivet City",
+  "voice_actor": "Sean McCoy",
+  "special": {
+    "Strength": 3,
+    "Perception": 4,
+    "Endurance": 3,
+    "Charisma": 3,
+    "Intelligence": 3,
+    "Agility": 5,
+    "Luck": 4
+  },
+  "level": "1",
+  "tag_skills": [],
+  "misc_skills": [],
+  "karma": "Good",
+  "voice_type": "MaleChild01DC",
+  "geck_race": "HispanicChild",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Happy 50",
+      "response_text": "You're my hero, mister. I want to be just like you when I grow up.",
+      "index": "1"
+    },
+    {
+      "topic": "MS03RCHistory1Could I ask you about Rivet City's history?",
+      "topic_text": "Heard any stories about the city's history?",
+      "emotion": "Anger 25",
+      "response_text": "Yeah, dad built it to fight off the Mirelurks! And mom - she's, like, the Mirelurk queen!",
+      "index": "7"
+    },
+    {
+      "topic": "RCJamesHargraveDifuse",
+      "topic_text": "Hey, I didn't mean to upset you...",
+      "emotion": "Anger 50",
+      "response_text": "Go jump off the flight deck, asshole.",
+      "index": "9"
+    },
+    {
+      "topic": "RCJamesHargraveFamily",
+      "topic_text": "So, where's your family?",
+      "emotion": "Anger 50",
+      "response_text": "My mom is probably drunk, and my dad's dead.",
+      "index": "10"
+    },
+    {
+      "topic": "RCJamesHargraveProvoke",
+      "topic_text": "Ooh! That hurt! Do us all a favor and just run away from home.",
+      "emotion": "Anger 50",
+      "response_text": "I'll show you. I'll show all of you!",
+      "index": "13"
+    },
+    {
+      "topic": "RCJamesHargraveSaveYourself",
+      "topic_text": "This is your mess, kid. Get yourself out of it.",
+      "emotion": "Anger 50",
+      "response_text": "You're still an asshole. Well, guess what. I'm going to follow you anyway.",
+      "index": "15"
+    },
+    {
+      "topic": "RCJamesHargraveScared",
+      "topic_text": "You don't need to be scared, son.",
+      "emotion": "Anger 50",
+      "response_text": "I ain't scared, and I ain't your son.",
+      "index": "17"
+    },
+    {
+      "topic": "RCJamesHargraveSteal",
+      "topic_text": "I bet you aren't afraid of anything. Would you steal some ammo for me?",
+      "emotion": "Disgust 50",
+      "response_text": "Of course I'm not afraid. I'll take it and he'll never know. I'll have it by tomorrow.",
+      "index": "19"
+    },
+    {
+      "topic": "RCJamesHargraveTakeHome",
+      "topic_text": "Sure, kid. Sorry I said those things. Let's get you home.",
+      "emotion": "Surprise 50",
+      "response_text": "Thanks, mister.",
+      "index": "22"
+    },
+    {
+      "topic": "RCJamesHargraveTaunt",
+      "topic_text": "Your mother's a bitch and you're a spoiled little punk.",
+      "emotion": "Anger 50",
+      "response_text": "Oh yeah? Well...well...you're an asshole.{He's desperate for an insult and this is all he can come up with.}",
+      "index": "24"
+    },
+    {
+      "topic": "RCTopicJameHargraveProblem",
+      "topic_text": "I've met your mother. No wonder you're such a brat.",
+      "emotion": "Anger 50",
+      "response_text": "What did you say about my mother? You... you take that back!",
+      "index": "25"
+    },
+    {
+      "topic": "RCTopicTammyHargraveDrunk",
+      "topic_text": "You're too chicken to run away.",
+      "emotion": "Anger 50",
+      "response_text": "Shut up, butt wipe.",
+      "index": "26"
+    },
+    {
+      "topic": "SpeechChallengeFailure",
+      "topic_text": "SpeechChallengeFailure",
+      "emotion": "Disgust 50",
+      "response_text": "You first, asshole.",
+      "index": "29"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYEI have to go now.",
+      "topic_text": "I gotta run. Stay out of trouble, James.",
+      "emotion": "Neutral 50",
+      "response_text": "Whatever.",
+      "index": "30"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Fear 50",
+      "response_text": "Mom, can I go to C.J.'s?",
+      "index": "31"
+    },
+    {
+      "topic": "RCGoodbye",
+      "topic_text": "RCGoodbye",
+      "emotion": "Fear 50",
+      "response_text": "Fu...I mean, yes sir, Chief Harkness.",
+      "index": "40"
+    },
+    {
+      "topic": "RCGoodbye02",
+      "topic_text": "RCGoodbye02",
+      "emotion": "Anger 50",
+      "response_text": "She's not a bitch, you are! I hate you! You're ruining my life.",
+      "index": "46"
+    },
+    {
+      "topic": "RCPackageEnd",
+      "topic_text": "RCPackageEnd",
+      "emotion": "Happy 50",
+      "response_text": "I'm done, mom. I'm going to go play with C.J.",
+      "index": "47"
+    },
+    {
+      "topic": "RCResponse01",
+      "topic_text": "RCResponse01",
+      "emotion": "Neutral 50",
+      "response_text": "I don't know, what do you want to do?",
+      "index": "50"
+    },
+    {
+      "topic": "RCResponse03",
+      "topic_text": "RCResponse03",
+      "emotion": "Anger 100",
+      "response_text": "Stop that! You're so stupid. My Mom says you're ugly and a bitch too.",
+      "index": "51"
+    }
+  ],
+  "combat": []
+}

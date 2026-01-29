@@ -1,0 +1,153 @@
+{
+  "name": "Ted Gunderson",
+  "url": "/wiki/Ted_Gunderson",
+  "dialogue_name": "VMS18TedGunderson.txt",
+  "dialogue_url": "/wiki/VMS18TedGunderson.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": true,
+  "base_id": "0010D4EC",
+  "ref_id": "0010D4F0",
+  "editor_id": "VMS18TedGunderson",
+  "location": "Ultra-Luxe kitchen",
+  "location_url": "/wiki/Ultra-Luxe#Kitchens",
+  "descriptions": [
+    "Ted Gunderson is a character found in the Ultra-Luxe casino in 2281.",
+    "Ill-mannered and entitled, he is the son of notorious brahmin baron Heck Gunderson. While accompanying his father to the Ultra-Luxe, Ted Gunderson was mistakenly kidnapped by the faction of the White Glove Society loyal to Mortimer, who intended to serve him at a special dinner designed to convert the society to cannibalism. He can be found in the Ultra-Luxe kitchens.",
+    "When Ted's identity is discovered, however, Mortimer voices his new unwillingness to serve Ted, and requests the Courier to find a new \"main course\" to continue on with their plan. Mortimer also gives the Courier the option of killing Ted and framing his father for the murder."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Heck Gunderson",
+  "role": "Ranch hand",
+  "detailed_location": "Ultra-Luxe",
+  "voice_actor": "Ari Rubin",
+  "special": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 6,
+    "Charisma": 3,
+    "Intelligence": 4,
+    "Agility": 10,
+    "Luck": 4
+  },
+  "mod_special_values": {
+    "Strength": 5,
+    "Perception": 6,
+    "Endurance": 6,
+    "Charisma": 3,
+    "Intelligence": 4,
+    "Agility": 11,
+    "Luck": 4
+  },
+  "level": "4",
+  "tag_skills": [
+    {
+      "Guns:": "43(45)"
+    },
+    {
+      "Melee Weap.:": "41"
+    },
+    {
+      "Unarmed:": "43"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Neutral",
+  "voice_type": "MaleAdult04",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "Come on, move it.",
+      "index": "1"
+    },
+    {
+      "topic": "VMS18VMS18TedGundersonTopic000",
+      "topic_text": "Calm down. I've come to get you out of here.",
+      "emotion": "Neutral 50",
+      "response_text": "My daddy sent you?",
+      "index": "4"
+    },
+    {
+      "topic": "VMS18VMS18TedGundersonTopic001",
+      "topic_text": "There's no time to explain. We have to go now.",
+      "emotion": "Neutral 50",
+      "response_text": "All right, fine. I'm right behind you.",
+      "index": "7"
+    },
+    {
+      "topic": "VMS18VMS18TedGundersonTopic002",
+      "topic_text": "Some members of the White Glove Society. They were going to eat you.",
+      "emotion": "Neutral 50",
+      "response_text": "What in the sam hell? Eat me? What kind of sick bastards would eat a person?",
+      "index": "8"
+    },
+    {
+      "topic": "VMS18VMS18TedGundersonTopic004",
+      "topic_text": "The White Glove Society isn't to blame. Just Mortimer and a few others.",
+      "emotion": "Neutral 50",
+      "response_text": "To hell with that. You've seen those freaks. They dress the same, talk the same. You can bet they all eat the same, too.",
+      "index": "10"
+    },
+    {
+      "topic": "VMS18VMS18TedGundersonTopic005",
+      "topic_text": "You should have them all killed. It would serve them right.",
+      "emotion": "Neutral 50",
+      "response_text": "I never liked them White Shoes in the first place. We'd be doing the Strip a service.",
+      "index": "12"
+    },
+    {
+      "topic": "VMS18VMS18TedGundersonTopic006",
+      "topic_text": "You're right. Let's make sure they're all killed.",
+      "emotion": "Neutral 50",
+      "response_text": "Damn right, I'm right.",
+      "index": "14"
+    },
+    {
+      "topic": "VMS18VMS18TedGundersonTopic007",
+      "topic_text": "I could always leave you here if you aren't going to listen.",
+      "emotion": "Neutral 50",
+      "response_text": "All right, all right. But there's gonna be some justice one way or another. I'll see to that.",
+      "index": "16"
+    },
+    {
+      "topic": "VMS18VMS18TedGundersonTopic008",
+      "topic_text": "[Attack] Doesn't matter. I'm going to finish what they started.",
+      "emotion": "Neutral 50",
+      "response_text": "The hell you will.",
+      "index": "18"
+    },
+    {
+      "topic": "VMS18VMS18TedGundersonTopic012",
+      "topic_text": "Your dad's powerful. Someone wants him to feud with the White Glove Society.",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] My daddy's got a lot of enemies. It don't make no sense that the White Pants Society would kidnap me. He's here to do business with them.",
+      "index": "19"
+    },
+    {
+      "topic": "VMS18VMS18TedGundersonTopic013",
+      "topic_text": "Er... probably just some mixed up people who are really sorry.",
+      "emotion": "Neutral 50",
+      "response_text": "[FAILED] Who gives a rat's patoot if they're sorry? Sorry's what they'll be when they're strung up and lynched by my daddy's posse.",
+      "index": "22"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "VMS18TedReturned",
+      "topic_text": "VMS18TedReturned",
+      "emotion": "Neutral 50",
+      "response_text": "Quit your hollering. I'm fine.{slightly annoyed by a doting parent}",
+      "index": "24"
+    }
+  ],
+  "combat": []
+}

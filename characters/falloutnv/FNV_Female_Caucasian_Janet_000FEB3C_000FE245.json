@@ -1,0 +1,227 @@
+{
+  "name": "Janet",
+  "url": "/wiki/Janet_(Fallout:_New_Vegas)",
+  "dialogue_name": "NellisCrimsonCaravanJanet.txt",
+  "dialogue_url": "/wiki/NellisCrimsonCaravanJanet.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000FEB3C",
+  "ref_id": "000FE245",
+  "editor_id": "NellisCrimsonVaravanJanet",
+  "location": "Crimson Caravan Company",
+  "location_url": "/wiki/Crimson_Caravan_Company",
+  "descriptions": [
+    "Janet is a caravaneer working for the Crimson Caravan in 2281.",
+    "Janet is a redhead working at the Crimson Caravan Company in the brahmin pens. During the day, she can be found tending to the brahmin herd and cleaning up their droppings, and at night sleeping in the barracks. During breaks, she stares at Nellis Air Force Base through binoculars and watches a young man who stares at her as well.",
+    "After completing Cass' quest Heartache by the Number with the violent solution (unless the Courier stealthily kills Alice), the Crimson Caravaneers become hostile, including Janet. NCR affiliated armor can be worn to complete the quest."
+  ],
+  "race": "Human",
+  "gender": "Female",
+  "affiliation": "Crimson CaravanBoomers(optional)",
+  "role": "CaravaneerLove interest",
+  "detailed_location": "Crimson Caravan CompanyNellis Air Force Base(optional)",
+  "voice_actor": "Courtenay Taylor",
+  "special": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 6,
+    "Charisma": 3,
+    "Intelligence": 4,
+    "Agility": 6,
+    "Luck": 4
+  },
+  "mod_special_values": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 7,
+    "Charisma": 3,
+    "Intelligence": 4,
+    "Agility": 7,
+    "Luck": 4
+  },
+  "level": "5",
+  "tag_skills": [
+    {
+      "Guns:": "47(49)"
+    },
+    {
+      "Melee Weap.:": "45"
+    },
+    {
+      "Unarmed:": "47(49)"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "70(75)"
+    }
+  ],
+  "karma": "Neutral",
+  "voice_type": "FemaleAdult04",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "You should go talk to Blake or Alice, they handle most of our contact with visitors.",
+      "index": "1"
+    },
+    {
+      "topic": "VDialogueCrimsonCaravan1ECrimsonCaravanWorkerCFTopic000",
+      "topic_text": "I don't suppose you watch the Boomers over in Nellis sometimes, do you?",
+      "emotion": "Neutral 50",
+      "response_text": "I watch all sorts of things with my binoculars. Who wants to know, and why?",
+      "index": "8"
+    },
+    {
+      "topic": "VDialogueCrimsonCaravan1ECrimsonCaravanWorkerCFTopic001",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Bye.",
+      "index": "9"
+    },
+    {
+      "topic": "VDialogueCrimsonCaravan1ECrimsonCaravanWorkerCFTopic002",
+      "topic_text": "No reason. I'll be off now.",
+      "emotion": "Neutral 50",
+      "response_text": "Alright then, goodbye.",
+      "index": "10"
+    },
+    {
+      "topic": "VDialogueCrimsonCaravan1ECrimsonCaravanWorkerCFTopic003",
+      "topic_text": "I've been inside Nellis. There's a young man there who has a crush on you.",
+      "emotion": "Neutral 50",
+      "response_text": "Nice-looking blonde boy? I always wondered if he was watching me back! What's he like?",
+      "index": "11"
+    },
+    {
+      "topic": "VDialogueCrimsonCaravan1ECrimsonCaravanWorkerCFTopic004",
+      "topic_text": "He's nice, maybe a little naive. Seems convinced you're the love of his life.",
+      "emotion": "Neutral 50",
+      "response_text": "Really? That's so sweet!",
+      "index": "12"
+    },
+    {
+      "topic": "VDialogueCrimsonCaravan1ECrimsonCaravanWorkerCFTopic006",
+      "topic_text": "He's a catch. You should see him blush when I flirt with him.",
+      "emotion": "Neutral 50",
+      "response_text": "Well, you don't have to do that anymore! Sounds like I better hurry to him.",
+      "index": "14"
+    },
+    {
+      "topic": "VDialogueCrimsonCaravan1ECrimsonCaravanWorkerCFTopic007",
+      "topic_text": "He's a special sort of guy - perfect for a special sort of gal.",
+      "emotion": "Neutral 50",
+      "response_text": "Ooh, I've just got to meet him! Is there any way the Boomers would let me visit Nellis?",
+      "index": "16"
+    },
+    {
+      "topic": "VDialogueCrimsonCaravan1ECrimsonCaravanWorkerCFTopic011",
+      "topic_text": "<Lie> You have permission. They know you're coming.",
+      "emotion": "Surprise 50",
+      "response_text": "[SUCCEEDED]{Surprise}Really? Thank you so much! I'll get going right away.",
+      "index": "17"
+    },
+    {
+      "topic": "VDialogueCrimsonCaravan1ECrimsonCaravanWorkerCFTopic012",
+      "topic_text": "I'm not sure. Let me think about it and I'll come back to you.",
+      "emotion": "Neutral 50",
+      "response_text": "Ok, let me know when you have an idea.",
+      "index": "19"
+    },
+    {
+      "topic": "VDialogueCrimsonCaravan1ECrimsonCaravanWorkerCFTopic013",
+      "topic_text": "I'll ask Pearl to make an exception for you.",
+      "emotion": "Neutral 50",
+      "response_text": "This is so exciting! Let me know how it turns out.",
+      "index": "20"
+    },
+    {
+      "topic": "VDialogueCrimsonCaravan1ECrimsonCaravanWorkerCFTopic014",
+      "topic_text": "I doubt it.",
+      "emotion": "Neutral 50",
+      "response_text": "Just my luck. I finally find the perfect guy, and he's a Boomer.",
+      "index": "21"
+    },
+    {
+      "topic": "VDialogueCrimsonCaravan1ECrimsonCaravanWorkerCFTopic015",
+      "topic_text": "Actually, I wanted to talk to you about him again.",
+      "emotion": "Neutral 50",
+      "response_text": "I was hoping you would. What's going on?",
+      "index": "22"
+    },
+    {
+      "topic": "VDialogueCrimsonCaravan1ECrimsonCaravanWorkerCFTopic017",
+      "topic_text": "He's doing well. I'll come back when I have some more information.",
+      "emotion": "Neutral 50",
+      "response_text": "Ok, talk to you soon.",
+      "index": "24"
+    },
+    {
+      "topic": "VDialogueCrimsonCaravan1ECrimsonCaravanWorkerCFTopic018",
+      "topic_text": "I got a Boomer uniform for you to wear while you cross to Nellis.",
+      "emotion": "Neutral 50",
+      "response_text": "Well, with McLafferty dead, I guess my contract is done and I'm free to leave. I'm off to meet my admirer!",
+      "index": "25"
+    },
+    {
+      "topic": "VDialogueCrimsonCaravan1ECrimsonCaravanWorkerCFTopic019",
+      "topic_text": "Not yet, but I hope to very soon.",
+      "emotion": "Neutral 50",
+      "response_text": "Okay, I'll be around.",
+      "index": "28"
+    },
+    {
+      "topic": "VDialogueCrimsonCaravanNellisCrimsonCaravanJanetTopic000",
+      "topic_text": "I'm still working on it.",
+      "emotion": "Neutral 50",
+      "response_text": "Okay, well let me know what she says.",
+      "index": "29"
+    },
+    {
+      "topic": "VDialogueCrimsonCaravanNellisCrimsonCaravanJanetTopic001",
+      "topic_text": "I convinced her to pay you what you're owed. You're free to leave.",
+      "emotion": "Happy 50",
+      "response_text": "That's great! I can't believe you went through all this trouble for me. Thank you!",
+      "index": "30"
+    },
+    {
+      "topic": "VDialogueCrimsonCaravanNellisCrimsonCaravanJanetTopic002",
+      "topic_text": "You're free to leave, but McLafferty won't pay you. That's the deal.",
+      "emotion": "Sad 5",
+      "response_text": "I see. Well, thank you for trying. I'm off to go see my admirer now.",
+      "index": "31"
+    },
+    {
+      "topic": "VDialogueCrimsonCaravanNellisCrimsonCaravanJanetTopic003",
+      "topic_text": "Well, you won't be getting any caps, but McLafferty won't be a problem for you.",
+      "emotion": "Neutral 50",
+      "response_text": "Oh, I see. Well, I guess I'm off to see my admirer now.",
+      "index": "32"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "VFreeformNellisNellisJackTopic022",
+      "topic_text": "{Girlfriend reply 1}",
+      "emotion": "Neutral 50",
+      "response_text": "Hi there, it is great to meet you as well.",
+      "index": "33"
+    },
+    {
+      "topic": "VFreeformNellisNellisJackTopic023",
+      "topic_text": "{Girlfriend reply 2}",
+      "emotion": "Neutral 50",
+      "response_text": "And you're even more handsome up close. Do you think it'll be okay if I hang around here for a little while, so we can get to know each other better?",
+      "index": "34"
+    }
+  ],
+  "combat": []
+}

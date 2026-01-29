@@ -1,0 +1,286 @@
+{
+  "name": "Tiffany Cheng",
+  "url": "/wiki/Tiffany_Cheng",
+  "dialogue_name": "TiffanyCheng.txt",
+  "dialogue_url": "/wiki/TiffanyCheng.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000156DD",
+  "ref_id": "00017A0C",
+  "editor_id": "TiffanyCheng",
+  "location": "Tenpenny Tower",
+  "location_url": "/wiki/Tenpenny_Tower",
+  "descriptions": [
+    "Tiffany Cheng is a resident of Tenpenny Tower in Fallout 3.",
+    "Tiffany Cheng spends most of her days avoiding her husband, drinking in the Federalist Lounge, or shopping down on the first level. She eats at the Café Beau Monde and then returns to the Cheng suite and spends some time in her room before going to sleep."
+  ],
+  "race": "Human",
+  "gender": "Female",
+  "affiliation": "Tenpenny Tower",
+  "role": "Resident",
+  "detailed_location": "Tenpenny Tower",
+  "voice_actor": "Diana Sowle",
+  "special": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 4,
+    "Intelligence": 4,
+    "Agility": 6,
+    "Luck": 4
+  },
+  "mod_special_values": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 4,
+    "Intelligence": 4,
+    "Agility": 7,
+    "Luck": 4
+  },
+  "level": "4",
+  "tag_skills": [
+    {
+      "Barter:": "41"
+    },
+    {
+      "Small Guns:": "45(47)"
+    },
+    {
+      "Unarmed:": "41"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "40"
+    },
+    {
+      "Critical Chance:": "4%"
+    },
+    {
+      "Unarmed Dam.:": "2.55"
+    },
+    {
+      "Poison Resist.:": "15%"
+    },
+    {
+      "Rad. Resist.:": "6%"
+    },
+    {
+      "Carry Weight:": "210"
+    },
+    {
+      "Damage Res.:": "3%"
+    }
+  ],
+  "karma": "Good",
+  "voice_type": "FemaleOld01DC",
+  "geck_race": "CaucasianOldAged",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Fear 100",
+      "response_text": "No!!! Don't!{in the middle of an attack against his town}",
+      "index": "1"
+    },
+    {
+      "topic": "MS12Basement",
+      "topic_text": "Do you know how I can get into the basement?",
+      "emotion": "Surprise 50",
+      "response_text": "Maybe try talking to Mister Tenpenny or Chief Gustavo. They're probably the ones who would know.{she doesn't have any idea but trying to be helpful}",
+      "index": "9"
+    },
+    {
+      "topic": "MS12FinResidents",
+      "topic_text": "What's it like living at Tenpenny Tower?",
+      "emotion": "Happy 100",
+      "response_text": "It's a lot better now with those Ghouls out of the picture!{self important but showing appreciation}",
+      "index": "10"
+    },
+    {
+      "topic": "MS12Greeting1",
+      "topic_text": "You put up with a lot from your husband, huh?",
+      "emotion": "Happy 50",
+      "response_text": "Do you know he tried forming a committee to discuss the Ghoul situation? A committee! He made himself Chairman, of course.{fed up with her husband's silly ideas}",
+      "index": "12"
+    },
+    {
+      "topic": "MS12Greeting2",
+      "topic_text": "Isn't a wife supposed to honor and obey her husband?",
+      "emotion": "Surprise 100",
+      "response_text": "Ha! You try being married to my husband for five minutes. I dare you!{mocking her husband}",
+      "index": "15"
+    },
+    {
+      "topic": "MS12Greeting3",
+      "topic_text": "Whatever.",
+      "emotion": "Disgust 50",
+      "response_text": "Is there something you want? If not, I'm busy telling my neighbors to ignore my husband and his silly committee to discuss the Ghoul situation.{annoyed}",
+      "index": "18"
+    },
+    {
+      "topic": "MS12IntroToGhoul1",
+      "topic_text": "I could take a whole pack of Ghouls without breaking a sweat.",
+      "emotion": "Happy 100",
+      "response_text": "That's terrific! A real man of action. That's just what we need!{happy to have a hero}",
+      "index": "20"
+    },
+    {
+      "topic": "MS12IntroToGhoul2",
+      "topic_text": "I've dealt with enough Ghouls to know I don't ever want to see one again.",
+      "emotion": "Disgust 75",
+      "response_text": "Yeah. They make me nervous. They certainly are disturbing looking.{thinking about something unpleasant}",
+      "index": "21"
+    },
+    {
+      "topic": "MS12IntroToGhoul3",
+      "topic_text": "Stop worrying about those Ghouls.",
+      "emotion": "Neutral 50",
+      "response_text": "I wish I could. I get nightmares from time to time.",
+      "index": "22"
+    },
+    {
+      "topic": "MS12ResidentsBranch",
+      "topic_text": "What's it like living at Tenpenny Tower?",
+      "emotion": "Fear 50",
+      "response_text": "It's very clean and safe here. Well, mostly safe. They say those Ghouls won't get in. But I don't know.{nervous}",
+      "index": "23"
+    },
+    {
+      "topic": "MS12ResidentsGhoulsAbout these Ghouls...",
+      "topic_text": "You know anything about these Ghouls?",
+      "emotion": "Fear 100",
+      "response_text": "They're living in the nearby tunnels. They scare me!{nervous}",
+      "index": "24"
+    },
+    {
+      "topic": "MS12ResidentsGhoulsChoice1MS12ResidentsGhoulsChoiceGood",
+      "topic_text": "Don't worry. I'll take care of the problem.",
+      "emotion": "Happy 100",
+      "response_text": "Really? Chief Gustavo is going to want to hear about that. You should talk to him right away.{surprised but happy someone is finally taking care of problem}",
+      "index": "26"
+    },
+    {
+      "topic": "MS12ResidentsGhoulsChoice2MS12ResidentsGhoulsChoiceBad",
+      "topic_text": "It's only natural to be afraid of the unknown...",
+      "emotion": "Disgust 100",
+      "response_text": "Perhaps you're right. But, I prefer to keep my nightmares a fantasy and not test my luck with the real thing. Thank you very much.{self important indignation}",
+      "index": "27"
+    },
+    {
+      "topic": "MS12ResidentsGhoulsChoice3MS12ResidentsGhoulsChoiceNeutral",
+      "topic_text": "Whatever.",
+      "emotion": "Disgust 5",
+      "response_text": "I wish I was as unconcerned as you.{mildly sarcastic}",
+      "index": "28"
+    },
+    {
+      "topic": "MS12ResidentsNeighbors",
+      "topic_text": "How would you feel about having a few Ghoul neighbors?",
+      "emotion": "Fear 50",
+      "response_text": "It's my turn, eh? I'm still worried, but if the others are willing to let them live here, I guess I could try it. But they better behave!{hesitant but sincere}",
+      "index": "29"
+    },
+    {
+      "topic": "MS12ResidentsNeighborsBad",
+      "topic_text": "It's wise to be afraid of Ghouls.",
+      "emotion": "Neutral 50",
+      "response_text": "I think so. I mean, something that ugly must be evil... right?{snob losing prejudice}",
+      "index": "32"
+    },
+    {
+      "topic": "MS12ResidentsNeighborsGood",
+      "topic_text": "I've met these Ghouls. They seem friendly enough.",
+      "emotion": "Surprise 50",
+      "response_text": "Well... you seem like you know what you're talking about. I guess I'd be willing to give it a try. I might not spend much time with them.{letting go of prejudice}",
+      "index": "33"
+    },
+    {
+      "topic": "MS12ResidentsNeighborsGoodPetition",
+      "topic_text": "Would you tell Mister Tenpenny that you wouldn't mind Ghoul neighbors?",
+      "emotion": "Surprise 50",
+      "response_text": "I guess so.",
+      "index": "35"
+    },
+    {
+      "topic": "MS12ResidentsNeighborsNeutral",
+      "topic_text": "Whatever.",
+      "emotion": "Disgust 50",
+      "response_text": "I just remembered I need to be someplace else.{self important snob}",
+      "index": "36"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "DialogueTenpennyConv00",
+      "topic_text": "DialogueTenpennyConv00",
+      "emotion": "Anger 25",
+      "response_text": "What? Are you kidding me?! Mind your own damn business. I don't go turning lights on in your closet, do I? Jeez!{annoyed that he is prying into her personal life}",
+      "index": "37"
+    },
+    {
+      "topic": "DialogueTenpennyConv01",
+      "topic_text": "DialogueTenpennyConv01",
+      "emotion": "Surprise 50",
+      "response_text": "Why? You haven't seen him have you?!{doesn't want to run into her annoying husband}",
+      "index": "45"
+    },
+    {
+      "topic": "DialogueTenpennyConv02",
+      "topic_text": "DialogueTenpennyConv02",
+      "emotion": "Sad 50",
+      "response_text": "I suppose it is.{not convinced}",
+      "index": "51"
+    },
+    {
+      "topic": "DialogueTenpennyConv03",
+      "topic_text": "DialogueTenpennyConv03",
+      "emotion": "Disgust 100",
+      "response_text": "Whatever. He loves those damn meetings, and that stupid \"Community Manifesto\" of his more than me. He hardly knows I exist!{annoyed with her husband}",
+      "index": "58"
+    },
+    {
+      "topic": "DialogueTenpennyEatStartTopic",
+      "topic_text": "DialogueTenpennyEatStartTopic",
+      "emotion": "Neutral 50",
+      "response_text": "Well. I guess I better get some food.{hungry and on her way to get food}",
+      "index": "61"
+    },
+    {
+      "topic": "DialogueTenpennySleepStartTopic",
+      "topic_text": "DialogueTenpennySleepStartTopic",
+      "emotion": "Disgust 50",
+      "response_text": "I'm tired as hell.{tired and heading off to bed}",
+      "index": "62"
+    },
+    {
+      "topic": "DialogueTenpennyTiffanyChengAvoidHusbandTopic",
+      "topic_text": "DialogueTenpennyTiffanyChengAvoidHusbandTopic",
+      "emotion": "Neutral 50",
+      "response_text": "Irving! God! Can't a woman get a little time to herself!?",
+      "index": "63"
+    },
+    {
+      "topic": "GOODBYE",
+      "topic_text": "I have to go now.",
+      "emotion": "Neutral 50",
+      "response_text": "Oh, all right. See you!{naively self important}",
+      "index": "64"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Surprise 50",
+      "response_text": "What are you doing, Dashwood?{confused and slightly suspicious}",
+      "index": "67"
+    }
+  ],
+  "combat": []
+}

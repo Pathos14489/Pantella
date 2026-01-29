@@ -1,0 +1,515 @@
+{
+  "name": "Winthrop",
+  "url": "/wiki/Winthrop",
+  "dialogue_name": "Winthrop.txt",
+  "dialogue_url": "/wiki/Winthrop.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": true,
+  "can_be_companion": false,
+  "base_id": "000156EE",
+  "ref_id": "00026004",
+  "editor_id": "Winthrop",
+  "location": "Underworld",
+  "location_url": "/wiki/Underworld",
+  "descriptions": [
+    "Winthrop is the technician of Underworld in 2277.",
+    "Winthrop is Underworld's technician. He checks on the electricity, makes sure any plumbing is in working order, and generally takes care of everything maintenance-wise. He restored and reprogrammed the robot Cerberus, and is responsible for its maintenance. Winthrop sleeps for a few hours in his little workshop off the concourse and is occasionally joined by his friend Greta."
+  ],
+  "race": "Ghoul",
+  "gender": "Male",
+  "affiliation": "Underworld",
+  "role": "Technician",
+  "detailed_location": "Underworld",
+  "voice_actor": "Mike Rosson",
+  "special": {
+    "Strength": 4,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 6,
+    "Intelligence": 7,
+    "Agility": 4,
+    "Luck": 5
+  },
+  "level": "5",
+  "tag_skills": [
+    {
+      "Barter:": "54"
+    },
+    {
+      "Lockpick:": "52"
+    },
+    {
+      "Science:": "56"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "45"
+    },
+    {
+      "Critical Chance:": "5%"
+    },
+    {
+      "Unarmed Dam.:": "1.15"
+    },
+    {
+      "Poison Resist.:": "15%"
+    },
+    {
+      "Rad. Resist.:": "6%"
+    },
+    {
+      "Carry Weight:": "190"
+    },
+    {
+      "Damage Res.:": "1%"
+    }
+  ],
+  "karma": "Neutral",
+  "voice_type": "MaleGenericGhoulDC",
+  "geck_race": "Ghoul",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Surprise 50",
+      "response_text": "Oh, well would you look at that? We got us a smoothskin visitor! Hoooeeee, we ain't seen one of your type in a long time.",
+      "index": "1"
+    },
+    {
+      "topic": "MS08TechnicalClue1",
+      "topic_text": "Do you know anything about an android from the Commonwealth?",
+      "emotion": "Neutral 50",
+      "response_text": "Rumors about facial surgery and reprogramming its memory. That's ancient gossip by now. Forget about it, smoothskin.",
+      "index": "8"
+    },
+    {
+      "topic": "MS08TechnicalClue2",
+      "topic_text": "What do you know about the android from the Commonwealth?",
+      "emotion": "Neutral 50",
+      "response_text": "A bunch of bullshit, that's all that was. Here, take this old holotape. It's just some guy pulling a clever prank. Had lots of folk convinced though.{doubting the rumors}",
+      "index": "9"
+    },
+    {
+      "topic": "MS08TechnicalClue3",
+      "topic_text": "You know anything about the mind wipe on that escaped android?",
+      "emotion": "Happy 50",
+      "response_text": "I used to this it was all so much bullshit. But then I got this holotape. Here, listen to it yourself.{bragging that he's in the know}",
+      "index": "11"
+    },
+    {
+      "topic": "MS08TechnicalClue3Bribe",
+      "topic_text": "Got any info on an android mind wipe? Here's a 100 cap \"research fee.\"",
+      "emotion": "Happy 50",
+      "response_text": "I used to this it was all so much bullshit. But then I got this holotape. Here, listen to it yourself.{bragging that he's in the know}",
+      "index": "14"
+    },
+    {
+      "topic": "MS08TechnicalClue3Stat",
+      "topic_text": "You know how they rewrote engrams in a cluster of Android memory subroutines?",
+      "emotion": "Happy 50",
+      "response_text": "I used to this it was all so much bullshit. But then I got this holotape. Here, listen to it yourself.{bragging that he's in the know}",
+      "index": "15"
+    },
+    {
+      "topic": "MS08TechnicalClue4",
+      "topic_text": "Do you know who did the memory transfer on the escaped android?",
+      "emotion": "Surprise 50",
+      "response_text": "It was old cranky Pinkerton who did it. Over at Rivet City. One day I mean to visit him and chat him up about it.{bragging that he is in the know}",
+      "index": "16"
+    },
+    {
+      "topic": "MS08TechnicalClue4Bribe",
+      "topic_text": "I'll give you 100 caps if you know who did the mind wipe on that android.",
+      "emotion": "Surprise 50",
+      "response_text": "It was old cranky Pinkerton who did it. Over at Rivet City. One day I mean to visit him and chat him up about it.{bragging that he is in the know}",
+      "index": "19"
+    },
+    {
+      "topic": "MS08TechnicalClue4Stat",
+      "topic_text": "Do you know anything about the AI swap on that Commonwealth android?",
+      "emotion": "Surprise 50",
+      "response_text": "It was old cranky Pinkerton who did it. Over at Rivet City. One day I mean to visit him and chat him up about it.{bragging that he is in the know}",
+      "index": "20"
+    },
+    {
+      "topic": "MS14BackOffSounds like a normal guy.",
+      "topic_text": "Damn. Another dead end. Thanks anyway.",
+      "emotion": "Surprise 50",
+      "response_text": "Is there anything else you need?",
+      "index": "21"
+    },
+    {
+      "topic": "MS14CrowleyWhat can you tell me about Mister Crowley?",
+      "topic_text": "What do you know about Mister Crowley?",
+      "emotion": "Surprise 50",
+      "response_text": "Who? Never heard of him.{Confused, distracted.}",
+      "index": "22"
+    },
+    {
+      "topic": "MS14PersuadeCrowleyCome on. You can tell me. Ahzrukhal said so. <Lie.>",
+      "topic_text": "Don't make me beat it out of you.",
+      "emotion": "Fear 50",
+      "response_text": "Alright! Alright!",
+      "index": "23"
+    },
+    {
+      "topic": "SpeechChallengeFailure",
+      "topic_text": "SpeechChallengeFailure",
+      "emotion": "Disgust 10",
+      "response_text": "Meh. Not going to tell the likes of you.{doesn't think the player is worthy of the information, or can be trusted with it}",
+      "index": "26"
+    },
+    {
+      "topic": "UnderworldTownTopic",
+      "topic_text": "What can you tell me about Underworld?",
+      "emotion": "Neutral 50",
+      "response_text": "We were driven underground... hrm... almost fifty years ago now. Between the Super Mutants, the beasts, and you crazy humans, it's not safe up there.",
+      "index": "27"
+    },
+    {
+      "topic": "UnderworldWinthropGreeting1",
+      "topic_text": "Oh, you're one of those Ghouls! Just like Gob!",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah, we're a whole city of 'em, actually... wait, you know Gob?",
+      "index": "30"
+    },
+    {
+      "topic": "UnderworldWinthropGreeting2",
+      "topic_text": "Smoothskin? What does that mean?",
+      "emotion": "Anger 50",
+      "response_text": "Smoothskin? You know, because your skin is so smooth... and tasty...",
+      "index": "38"
+    },
+    {
+      "topic": "UnderworldWinthropGreeting3",
+      "topic_text": "Where am I?",
+      "emotion": "Neutral 50",
+      "response_text": "You're in Underworld, smoothskin. It's the only safe place for we Ghouls in D.C. We're here, out of sight and out of mind.",
+      "index": "40"
+    },
+    {
+      "topic": "UnderworldWinthropGreeting3a",
+      "topic_text": "The Brotherhood of Steel? What's your beef with them?",
+      "emotion": "Neutral 50",
+      "response_text": "Bastards. They don't seem to be able to tell us apart from the Super Mutants. Or, maybe they just don't care. They see us and shoot on sight.",
+      "index": "43"
+    },
+    {
+      "topic": "UnderworldWinthropGreeting3b",
+      "topic_text": "A city full of Ghouls, huh?",
+      "emotion": "Neutral 50",
+      "response_text": "That's right. And so long as you don't bother us, we won't bother you. Feel free to come and go, trade, sleep, whatever.",
+      "index": "45"
+    },
+    {
+      "topic": "UnderworldWinthropGreeting3c",
+      "topic_text": "All right. I'm going to go have a look around.",
+      "emotion": "Neutral 50",
+      "response_text": "Enjoy your stay. Just... try and keep from shooting up the place.",
+      "index": "48"
+    },
+    {
+      "topic": "UnderworldWinthropGreetingGob1",
+      "topic_text": "Yeah, he's up in Megaton tending bar.",
+      "emotion": "Surprise 50",
+      "response_text": "Megaton! Way up there? I always did wonder what happened to that boy. When he disappeared, I just figured it was the Super Mutants what got him.",
+      "index": "50"
+    },
+    {
+      "topic": "UnderworldWinthropGreetingGob2",
+      "topic_text": "Yeah, he's in Megaton working for some jackass.",
+      "emotion": "Neutral 50",
+      "response_text": "You mean... he's a slave? Oh, that's terrible... even still, you should stop by Carol's Place and let his ma know that he's still alive.",
+      "index": "52"
+    },
+    {
+      "topic": "UnderworldWinthropJob",
+      "topic_text": "What do you do around here, Winthrop?",
+      "emotion": "Neutral 50",
+      "response_text": "Me? I keep every hunk of old rusted pre-war garbage around here in operating condition.",
+      "index": "54"
+    },
+    {
+      "topic": "UnderworldWinthropJob1",
+      "topic_text": "Why? What's wrong?",
+      "emotion": "Neutral 50",
+      "response_text": "We've scavenged just about all of the scrap metal from all of the places we can safely get to.",
+      "index": "60"
+    },
+    {
+      "topic": "UnderworldWinthropJob1Accept",
+      "topic_text": "Sure, Winthrop. I think I can help you out.",
+      "emotion": "Neutral 50",
+      "response_text": "Well, alright. That's good to hear, stranger. Just come on back to me when you've gathered some Scrap Metal.",
+      "index": "64"
+    },
+    {
+      "topic": "UnderworldWinthropJob1Decline",
+      "topic_text": "Take care of your own problems.",
+      "emotion": "Neutral 50",
+      "response_text": "That's a shame, stranger. A real shame. Let me know if you change your mind, we'll still need the parts.",
+      "index": "66"
+    },
+    {
+      "topic": "UnderworldWinthropJob1HowMuch",
+      "topic_text": "What sort of payment are we talking about?",
+      "emotion": "Neutral 50",
+      "response_text": "Well, we got Stimpaks, but the Doc keeps us healed up, so we don't really need 'em. So I could trade one of those for five bits of Scrap Metal.",
+      "index": "67"
+    },
+    {
+      "topic": "UnderworldWinthropJob1Rob",
+      "topic_text": "I have a better idea. How about I do nothing and you give me what you have?",
+      "emotion": "Neutral 50",
+      "response_text": "What? What are you talking about? Do nothing?",
+      "index": "69"
+    },
+    {
+      "topic": "UnderworldWinthropJob1Rob1",
+      "topic_text": "Yes. As in, \"I won't make a five egg omelet out of your face.\"",
+      "emotion": "Neutral 50",
+      "response_text": "You... you wouldn't dare. I've got... I mean... I'll call for help.",
+      "index": "70"
+    },
+    {
+      "topic": "UnderworldWinthropJob1Rob1a",
+      "topic_text": "You'll be dead long before help gets here.",
+      "emotion": "Neutral 50",
+      "response_text": "Fine, Fine, you asshole. I offered you a fair trade, and this is how it is? Here, take it. Take it all and get the fuck out.",
+      "index": "77"
+    },
+    {
+      "topic": "UnderworldWinthropJob1Rob1b",
+      "topic_text": "Go ahead and yell. I'll kill every last one of you.",
+      "emotion": "Neutral 50",
+      "response_text": "This is the last mistake you'll ever make! Help! Someone help me!",
+      "index": "79"
+    },
+    {
+      "topic": "UnderworldWinthropJob1Rob2",
+      "topic_text": "Heh. I was just kidding. Now, what were you saying about a job?",
+      "emotion": "Neutral 50",
+      "response_text": "You've got a strange way of joking, stranger.",
+      "index": "80"
+    },
+    {
+      "topic": "UnderworldWinthropJob2",
+      "topic_text": "This is so fascinating, I can't bear to talk about it any longer.",
+      "emotion": "Neutral 50",
+      "response_text": "Hey, you asked. Don't blame me if you don't like what you hear.",
+      "index": "82"
+    },
+    {
+      "topic": "UnderworldWinthropPartsChangeMind",
+      "topic_text": "You wanted me to get some Scrap Metal for you, right?",
+      "emotion": "Neutral 50",
+      "response_text": "Oh? Have you changed your mind? Are you willing to trade some scrap?",
+      "index": "83"
+    },
+    {
+      "topic": "UnderworldWinthropPartsChangeMindNo",
+      "topic_text": "No, I haven't changed my mind.",
+      "emotion": "Neutral 50",
+      "response_text": "They why are we even talking about this? I'm very busy, you know.",
+      "index": "84"
+    },
+    {
+      "topic": "UnderworldWinthropPartsChangeMindReward",
+      "topic_text": "What were you offering to trade?",
+      "emotion": "Neutral 50",
+      "response_text": "I'll trade you five bits of Scrap Metal for a Stimpak, a pack of Radway, or a dose of Rad-X. Easy deal.",
+      "index": "85"
+    },
+    {
+      "topic": "UnderworldWinthropPartsChangeMindYes",
+      "topic_text": "Yes, I've changed my mind. I'll bring you some Scrap Metal",
+      "emotion": "Neutral 50",
+      "response_text": "You have? Good. Excellent! We need those parts something awful. This place is falling apart.",
+      "index": "86"
+    },
+    {
+      "topic": "UnderworldWinthropPartsTrade",
+      "topic_text": "I have some scrap metal for you.",
+      "emotion": "Neutral 50",
+      "response_text": "Oh, good, the vents are rattling again. I need to get up there and take care of it. What do you have?",
+      "index": "88"
+    },
+    {
+      "topic": "UnderworldWinthropPartsTrade10",
+      "topic_text": "I've got 10 bits of Scrap Metal to trade.",
+      "emotion": "Neutral 50",
+      "response_text": "Ten parts, eh? Alright, what do you want in trade?",
+      "index": "91"
+    },
+    {
+      "topic": "UnderworldWinthropPartsTrade15",
+      "topic_text": "I've got 15 bits of Scrap Metal to trade.",
+      "emotion": "Neutral 50",
+      "response_text": "Fifteen? Well, alright! A deal's a deal, so what do you want in return?",
+      "index": "92"
+    },
+    {
+      "topic": "UnderworldWinthropPartsTrade20",
+      "topic_text": "I've got 20 bits of Scrap Metal to trade.",
+      "emotion": "Neutral 50",
+      "response_text": "Twenty! That's great! I knew this'd work out! Just tell me what you want in return for the parts.",
+      "index": "93"
+    },
+    {
+      "topic": "UnderworldWinthropPartsTrade25",
+      "topic_text": "I've got 25 bits of Scrap Metal to trade.",
+      "emotion": "Neutral 50",
+      "response_text": "I didn't expect you to bring back so much! That'll set me up for quite some time. So, what'd you have in mind for payment?",
+      "index": "94"
+    },
+    {
+      "topic": "UnderworldWinthropPartsTrade5",
+      "topic_text": "I've got 5 bits of Scrap Metal to trade.",
+      "emotion": "Neutral 50",
+      "response_text": "Alright, sounds good. What to you want for 'em?",
+      "index": "95"
+    },
+    {
+      "topic": "UnderworldWinthropPartsTradeDeal",
+      "topic_text": "What was our deal again?",
+      "emotion": "Neutral 50",
+      "response_text": "For every five bits of Scrap Metal you give me, I'll give you a Stimpak, some RadAway, or a dose of Rad-X. I need scrap, you need goods. We both win.",
+      "index": "96"
+    },
+    {
+      "topic": "UnderworldWinthropPartsTradeEND",
+      "topic_text": "Actually, never mind. I don't want to trade any Scrap Metal.",
+      "emotion": "Sad 50",
+      "response_text": "Okay, then. Your call. Let me know when you do.",
+      "index": "97"
+    },
+    {
+      "topic": "UnderworldWinthropPartsTradeRadaway",
+      "topic_text": "I'll take the RadAway.",
+      "emotion": "Neutral 50",
+      "response_text": "Alright, five bits of Scrap Metal for one dose of RadAway. That's a done deal.",
+      "index": "98"
+    },
+    {
+      "topic": "UnderworldWinthropPartsTradeStimpak",
+      "topic_text": "I'll take the Stimpak.",
+      "emotion": "Neutral 50",
+      "response_text": "Five bits of Scrap Metal for me, one Stimpak for you  it's been a pleasure doing business.",
+      "index": "103"
+    },
+    {
+      "topic": "UnderworldWinthropPartsTradeStimpakRadX",
+      "topic_text": "I'll take some Rad-X.",
+      "emotion": "Neutral 50",
+      "response_text": "One for you, five for me. Use it in good health.",
+      "index": "108"
+    },
+    {
+      "topic": "UnderworldWinthropRepair",
+      "topic_text": "Can you repair my things?",
+      "emotion": "Neutral 50",
+      "response_text": "Can you pay me? Then I can repair your stuff.",
+      "index": "113"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "I have to go now.",
+      "emotion": "Neutral 50",
+      "response_text": "Let me know if you have any of that Scrap Metal to sell!",
+      "index": "116"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Neutral 50",
+      "response_text": "Scrap metal is in short supply around here.",
+      "index": "118"
+    },
+    {
+      "topic": "UnderworldTalkAhzrukhalWinthropPatchwork2",
+      "topic_text": "UnderworldTalkAhzrukhalWinthropPatchwork2",
+      "emotion": "Neutral 50",
+      "response_text": "It's about Patchwork. You need to stop feeding him booze, Ahzrukhal. The boy can barely stand most of the time, and you just keep serving him.",
+      "index": "137"
+    },
+    {
+      "topic": "UnderworldTalkAhzrukhalWinthropPatchwork4",
+      "topic_text": "UnderworldTalkAhzrukhalWinthropPatchwork4",
+      "emotion": "Neutral 50",
+      "response_text": "And wouldn't it be a shame if your ventilation went down and all of your customers went to Carol's? Just think about it, Ahzrukhal.",
+      "index": "139"
+    },
+    {
+      "topic": "UnderworldTalkAhzrukhalWinthropPatchwork6",
+      "topic_text": "UnderworldTalkAhzrukhalWinthropPatchwork6",
+      "emotion": "Neutral 50",
+      "response_text": "I'm not threatening you, I'm just sayin'. No equipment. No business. Either way, my problem is solved. Think about it. We'll talk later.",
+      "index": "141"
+    },
+    {
+      "topic": "UnderworldTalkCerberusWinthropAlert2",
+      "topic_text": "UnderworldTalkCerberusWinthropAlert2",
+      "emotion": "Neutral 50",
+      "response_text": "No news is good news, eh, Cerberus? What about you, how are you doing?",
+      "index": "143"
+    },
+    {
+      "topic": "UnderworldTalkCerberusWinthropAlert4",
+      "topic_text": "UnderworldTalkCerberusWinthropAlert4",
+      "emotion": "Neutral 50",
+      "response_text": "<sighs>You're a terrible conversationalist, Cerberus.",
+      "index": "145"
+    },
+    {
+      "topic": "UnderworldTalkCerberusWinthropDiagnostic1",
+      "topic_text": "UnderworldTalkCerberusWinthropDiagnostic1",
+      "emotion": "Neutral 50",
+      "response_text": "Unit diagnostics system compiling... diagnostics system ready. Running level 2 diagnostics... complete. Report prepared.",
+      "index": "148"
+    },
+    {
+      "topic": "UnderworldTalkCerberusWinthropDiagnostic3",
+      "topic_text": "UnderworldTalkCerberusWinthropDiagnostic3",
+      "emotion": "Neutral 50",
+      "response_text": "Unit weapon system 2B ammunition level low. Please service at earliest convenience.",
+      "index": "150"
+    },
+    {
+      "topic": "UnderworldTalkPatchworkWinthropDrunk2",
+      "topic_text": "UnderworldTalkPatchworkWinthropDrunk2",
+      "emotion": "Neutral 50",
+      "response_text": "C'mon, I'm worried that I'm going to find you dead one of these days. Listen to yourself. You can barely talk. You're a mess, man.",
+      "index": "154"
+    },
+    {
+      "topic": "UnderworldTalkPatchworkWinthropDrunk4",
+      "topic_text": "UnderworldTalkPatchworkWinthropDrunk4",
+      "emotion": "Neutral 50",
+      "response_text": "Alright, I can't even talk to you about this right now. Let's just deal with it later.",
+      "index": "156"
+    },
+    {
+      "topic": "UnderworldTalkResponseShort1",
+      "topic_text": "UnderworldTalkHelloResponseShort",
+      "emotion": "Neutral 50",
+      "response_text": "No time, no time. Everything around here is always busted. Can't ever get a break.",
+      "index": "158"
+    },
+    {
+      "topic": "UnderworldTalkResponseShort2",
+      "topic_text": "UnderworldTalkResponseShort2",
+      "emotion": "Neutral 50",
+      "response_text": "She's dead, you damn fool robot. Thanks for reminding me.",
+      "index": "163"
+    }
+  ],
+  "combat": []
+}

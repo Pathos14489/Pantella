@@ -1,0 +1,150 @@
+{
+  "name": "Private Ortega",
+  "url": "/wiki/Ortega",
+  "dialogue_name": "1ESharecropperPrivateOrtega.txt",
+  "dialogue_url": "/wiki/1ESharecropperPrivateOrtega.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000F3BF8",
+  "ref_id": "000F3BF9",
+  "editor_id": "1ESharecropperPrivateOrtega",
+  "location": "NCR sharecropper farms",
+  "location_url": "/wiki/NCR_sharecropper_farms",
+  "descriptions": [
+    "Private Ortega is an  NCR soldier guarding their sharecropper farms in 2281.",
+    "A trooper serving in the NCR Army since 2279, Private Ortega ensures the safety of the farms. Mostly, this means patrolling and taking potshots at molerats.",
+    "Like her superior, Lieutenant Romanowski, she believes any complaints by the sharecroppers are the result of incompetence, rather than genuine lack of resources."
+  ],
+  "race": "Human",
+  "gender": "Female",
+  "affiliation": "NCR Army",
+  "role": "Guard",
+  "detailed_location": "NCR sharecropper farms",
+  "voice_actor": "April Stewart",
+  "special": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 5,
+    "Intelligence": 5,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "level": "5",
+  "tag_skills": [
+    {
+      "Explosives:": "46"
+    },
+    {
+      "Guns:": "46"
+    },
+    {
+      "Melee Weap.:": "46"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Neutral",
+  "voice_type": "FemaleAdult03",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "Is there something I can do for you?",
+      "index": "1"
+    },
+    {
+      "topic": "VDialogueVegasEast1ESharecropperTrooperCFTopic000",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Bye.",
+      "index": "2"
+    },
+    {
+      "topic": "VDialogueVegasEast1ESharecropperTrooperCFTopic001",
+      "topic_text": "I could use some directions.",
+      "emotion": "Neutral 50",
+      "response_text": "I'll help you if I can. What are you looking for?",
+      "index": "3"
+    },
+    {
+      "topic": "VDialogueVegasEast1ESharecropperTrooperCFTopic002",
+      "topic_text": "I need a doctor.",
+      "emotion": "Neutral 50",
+      "response_text": "There's the medic at Camp McCarran, but I've also heard there's a civilian doctor in the northeast part of New Vegas. I don't know for sure.",
+      "index": "4"
+    },
+    {
+      "topic": "VDialogueVegasEast1ESharecropperTrooperCFTopic003",
+      "topic_text": "I'm looking to buy and sell things.",
+      "emotion": "Neutral 50",
+      "response_text": "The Crimson Caravan Company is north of here. They have just about everything you need.",
+      "index": "5"
+    },
+    {
+      "topic": "VDialogueVegasEast1ESharecropperTrooperCFTopic004",
+      "topic_text": "What do you do around here?",
+      "emotion": "Neutral 50",
+      "response_text": "I'm a private in the NCR army, and I've been proudly serving for two years now.",
+      "index": "7"
+    },
+    {
+      "topic": "VDialogueVegasEast1ESharecropperTrooperCFTopic005",
+      "topic_text": "Tell me about the farms.",
+      "emotion": "Neutral 50",
+      "response_text": "It's NCR-owned farmland. It produces a lot of the crops that supply McCarran and the Dam. The farmers are all civilians, though.",
+      "index": "12"
+    },
+    {
+      "topic": "VDialogueVegasEast1ESharecropperTrooperCFTopic006",
+      "topic_text": "Who's ungrateful?",
+      "emotion": "Neutral 50",
+      "response_text": "I shouldn't have brought it up. It's not my place to spread gossip.",
+      "index": "14"
+    },
+    {
+      "topic": "VDialogueVegasEast1ESharecropperTrooperCFTopic007",
+      "topic_text": "Anything you tell me stays with me.",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] All right. Some of the farmers, especially Trent Bascom, claim the NCR isn't giving them the water they need to meet their crop quotas.",
+      "index": "15"
+    },
+    {
+      "topic": "VDialogueVegasEast1ESharecropperTrooperCFTopic008",
+      "topic_text": "Come on, you can tell me.",
+      "emotion": "Neutral 50",
+      "response_text": "[FAILED] Not my place to talk. Sorry.",
+      "index": "17"
+    },
+    {
+      "topic": "VDialogueVegasEast1ESharecropperTrooperCFTopic009",
+      "topic_text": "Are there more dangerous posts?",
+      "emotion": "Neutral 50",
+      "response_text": "Oh, you'd better believe it. I feel sorry for the troops who are charged with keeping the Fiends from overrunning everything.",
+      "index": "18"
+    },
+    {
+      "topic": "VDialogueVegasEast1ESharecropperTrooperCFTopic011",
+      "topic_text": "If the Fiends are so dangerous, why hasn't the NCR wiped them out?",
+      "emotion": "Neutral 50",
+      "response_text": "Current orders are to hold the line and nothing more. That's all we seem to do these days - hold the line.",
+      "index": "21"
+    },
+    {
+      "topic": "VDialogueVegasEast1ESharecropperTrooperCFTopic012",
+      "topic_text": "I'm looking for work.",
+      "emotion": "Neutral 50",
+      "response_text": "Well, I know Major Dhatri is offering bounties on some of the Fiends - that's the gang that controls the southeast part of the city.",
+      "index": "23"
+    }
+  ],
+  "conversation": [],
+  "combat": []
+}

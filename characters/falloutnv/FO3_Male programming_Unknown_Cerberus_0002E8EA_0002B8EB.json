@@ -1,0 +1,185 @@
+{
+  "name": "Cerberus",
+  "url": "/wiki/Cerberus",
+  "dialogue_name": "Cerberus.txt",
+  "dialogue_url": "/wiki/Cerberus.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "0002E8EA",
+  "ref_id": "0002B8EB",
+  "editor_id": "Cerberus",
+  "location": "Underworld",
+  "location_url": "/wiki/Underworld",
+  "descriptions": [
+    "Cerberus is a Mister Gutsy defending the Underworld, a major ghoul settlement  in Fallout 3.",
+    "Painstakingly maintained by Winthrop, Cerberus is a Mister Gutsy living up to his name as the guardian of the Underworld. Or rather, guard dog, defending from threats foreign and domestic. He's keenly aware of the irony.",
+    "Cerberus is very adept at masking his self-awareness. He only speaks normally when speaking to outsiders. Winthrop receives the driest of status reports, to the point of malicious compliance, such as claiming he cannot parse his commands when Winthrop tries to chat.",
+    "He isn't far off the mark; Cerberus is ancient. Its systems are old and worn, and whenever Winthrop runs diagnostics (using code 662-847-B), Cerberus spits out a multi-level diagnostic that consistently returns numerous errors including low ammo levels in unit 2B, fluctuating contact in his cognition system with no known source of failure, constant target recognition system failures, and class two failures in its locomotion systems, with a 47% probability of graduating to a class one failure. Winthrop tries to keep on top of the repairs, but he prioritizes keeping the Underworld from falling apart, and most of the time Cerberus goes without maintenance. The noisy, old Mister Gutsy just patrols the concourse endlessly, with tech reports just piling up and Winthrop constantly promising to take him offline for repairs for later. It's likely the unaddressed cognition system failures are responsible for his self-awareness, much like Sawbones' damage due to a generator overload was.",
+    "Cerberus patrols the entire Underworld concourse using an 11 marker route, 24 hours a day.",
+    "Cerberus (Κέρβερος) is a mythical creature from Greek mythology, with three heads and sometimes portrayed with a serpentine tail and snakes protruding from its body. Cerberus was placed by Hades at the gates of the Underworld, to protect them against trespassers and escapees. This Mister Gutsy parallels it not just by being a guard dog, but also having three eyes (heads) and three arms (snakes)."
+  ],
+  "race": "Mister Gutsy",
+  "gender": "Male programming",
+  "affiliation": "Underworld",
+  "role": "Guard",
+  "detailed_location": "Underworld",
+  "voice_actor": "Jeff Baker",
+  "special": {
+    "Strength": 5,
+    "Perception": 6,
+    "Endurance": 5,
+    "Charisma": 5,
+    "Intelligence": 5,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "level": "9",
+  "misc_skills": [],
+  "karma": "Neutral",
+  "voice_type": "RobotMisterGutsyDC",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "Atten-shun! Civilian on deck!",
+      "index": "1"
+    },
+    {
+      "topic": "TLCerberus1",
+      "topic_text": "So what are you, the guard dog?",
+      "emotion": "Neutral 50",
+      "response_text": "I am Cerberus! It is my solemn duty to guard the citizens of Underworld against any and all threats, both foreign and domestic!",
+      "index": "7"
+    },
+    {
+      "topic": "TLCerberus2",
+      "topic_text": "What can you tell me about Underworld?",
+      "emotion": "Neutral 50",
+      "response_text": "This is a town full of peace-loving Ghouls, so check your bigotry at the door. They're just like humans! They feel, they hurt, they bleed...",
+      "index": "9"
+    },
+    {
+      "topic": "TLCerberus3",
+      "topic_text": "You ever get outside, Cerberus? Into the Wasteland?",
+      "emotion": "Neutral 50",
+      "response_text": "Negatory! I have been programmed to remain on premises at all times! In the event of hostilities, I will respond with deadly force!",
+      "index": "13"
+    },
+    {
+      "topic": "TLCerberusRobotics",
+      "topic_text": "<Disable Cerberus' combat inhibitor.>",
+      "emotion": "Neutral 50",
+      "response_text": "Whoa Nelly! Sensing combat inhibitor removal! Guns are hot! Firing for effect! Welcome to Hell, you zombie freaks!",
+      "index": "16"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "I have to go now.",
+      "emotion": "Neutral 50",
+      "response_text": "Closing dialog system.",
+      "index": "17"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Neutral 50",
+      "response_text": "Welcome, visitor.",
+      "index": "19"
+    },
+    {
+      "topic": "MS14Suit",
+      "topic_text": "MS14SuitHead",
+      "emotion": "Anger 50",
+      "response_text": "Pansy! Take a shot of vitamin M and keep fighting!{Spoken like a marine drill sergeant}",
+      "index": "23"
+    },
+    {
+      "topic": "MS14SuitCombat",
+      "topic_text": "MS14SuitCombat",
+      "emotion": "Anger 50",
+      "response_text": "Gear up, soldier!",
+      "index": "26"
+    },
+    {
+      "topic": "MS14SuitEmpty",
+      "topic_text": "MS14SuitEmpty",
+      "emotion": "Anger 50",
+      "response_text": "Head wound! Too bad you're out of morhpine.{Spoken like a marine drill sergeant}",
+      "index": "29"
+    },
+    {
+      "topic": "MS14SuitStart",
+      "topic_text": "MS14SuitStart",
+      "emotion": "Anger 50",
+      "response_text": "Listen up you god-damn puke! You are now wearing prototype medic power armor. You take care of me, and I'll take care of you.{Shouted like a marine drill sergeant.}",
+      "index": "34"
+    }
+  ],
+  "combat": [
+    {
+      "topic": "AcceptYield",
+      "topic_text": "AcceptYield",
+      "emotion": "Anger 50",
+      "response_text": "Do that again and I'll put my foot so far up your ass you'll cough up boot polish!",
+      "index": "37"
+    },
+    {
+      "topic": "Assault",
+      "topic_text": "Assault",
+      "emotion": "Anger 50",
+      "response_text": "What is your major malfunction, maggot?",
+      "index": "38"
+    },
+    {
+      "topic": "Attack",
+      "topic_text": "Attack",
+      "emotion": "Anger 50",
+      "response_text": "Eat hot lead, you commie bastard!",
+      "index": "40"
+    },
+    {
+      "topic": "Death",
+      "topic_text": "Death",
+      "emotion": "Anger 50",
+      "response_text": "Tell my mama I've done my best.",
+      "index": "58"
+    },
+    {
+      "topic": "GuardTrespass",
+      "topic_text": "GuardTrespass",
+      "emotion": "Neutral 50",
+      "response_text": "You had better remove yourself from this area before I am forced to declare you an enemy of the U.S. of A.",
+      "index": "61"
+    },
+    {
+      "topic": "Murder",
+      "topic_text": "Murder",
+      "emotion": "Anger 50",
+      "response_text": "You are the lowest form of commie scumbag I've ever had the misfortune to lay eyes on!",
+      "index": "67"
+    },
+    {
+      "topic": "Pickpocket",
+      "topic_text": "Pickpocket",
+      "emotion": "Anger 50",
+      "response_text": "Please tell me that you did not just do what I think you did!",
+      "index": "70"
+    },
+    {
+      "topic": "Steal",
+      "topic_text": "Steal",
+      "emotion": "Anger 50",
+      "response_text": "I thought I had seen every species of moronic petty bullshit, but you've just topped the list. Congratulations.",
+      "index": "71"
+    }
+  ]
+}

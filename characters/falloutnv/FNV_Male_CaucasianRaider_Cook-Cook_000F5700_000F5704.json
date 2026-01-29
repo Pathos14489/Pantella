@@ -1,0 +1,145 @@
+{
+  "name": "Cook-Cook",
+  "url": "/wiki/Cook-Cook",
+  "dialogue_name": "1ECookCook.txt",
+  "dialogue_url": "/wiki/1ECookCook.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000F5700",
+  "ref_id": "000F5704",
+  "editor_id": "1ECookCook",
+  "location": "South Vegas ruins",
+  "location_url": "/wiki/South_Vegas_ruins",
+  "descriptions": [
+    "Cook-Cook is a high-ranking member of the Fiends, second to Motor-Runner, in the Mojave Wasteland in 2281.",
+    "Even among the Fiends, Cook-Cook stands out as depraved. He is a notorious sociopath with a borderline amorous affection for his pet brahmin, Queenie,",
+    "He gained his name not just because he prefers the use of fire-based weapons to feed his pyromania, but because he is also an allegedly exceptional, if unhygienic, cook.",
+    "By 2281, Cook-Cook brought his group of Fiends to a camp located just north of the Poseidon gas station, within some ruined buildings, where he also lets his beloved Queenie graze nearby and makes his signature stew."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Fiends",
+  "role": "Fiend leader",
+  "detailed_location": "North ofSouth Vegas ruins west entrance",
+  "voice_actor": "Gregory Alan Williams",
+  "special": {
+    "Strength": 8,
+    "Perception": 10,
+    "Endurance": 8,
+    "Charisma": 1,
+    "Intelligence": 9,
+    "Agility": 6,
+    "Luck": 6
+  },
+  "level": "14",
+  "tag_skills": [
+    {
+      "Energy Weap.:": "15"
+    },
+    {
+      "Guns:": "58"
+    },
+    {
+      "Melee Weap.:": "63"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "195"
+    },
+    {
+      "Dam. Threshold:": "13"
+    }
+  ],
+  "karma": "Very Evil",
+  "voice_type": "MaleAdult06",
+  "geck_race": "CaucasianRaider",
+  "topics": [
+    {
+      "topic": "1EExtraFiends1ECookCookTopic000",
+      "topic_text": "Why do they call you Cook-Cook?",
+      "emotion": "Neutral 50",
+      "response_text": "If I had to guess, it's because I cook shit for the rest of the gang. I'm a{draw this out}good cook. Maybe I'll make you dinner sometime.",
+      "index": "1"
+    },
+    {
+      "topic": "1EExtraFiends1ECookCookTopic001",
+      "topic_text": "I'll remember that.",
+      "emotion": "Neutral 50",
+      "response_text": "Goddamn right.",
+      "index": "2"
+    },
+    {
+      "topic": "1EExtraFiends1ECookCookTopic002",
+      "topic_text": "Oh. You've got a little pet. How sweet.",
+      "emotion": "Neutral 50",
+      "response_text": "{Even creepier baby talk}You are! Yes that's right!",
+      "index": "3"
+    },
+    {
+      "topic": "CookCookFiends",
+      "topic_text": "Do you know Violet and Driver Nephi?",
+      "emotion": "Neutral 50",
+      "response_text": "Course I do. You want to meet them? Heh. Even money whether Violet's dogs rip you apart or Nephi caves in your skull with that iron of his.",
+      "index": "4"
+    },
+    {
+      "topic": "CookCookFood",
+      "topic_text": "So, you cook all these animals around here?",
+      "emotion": "Neutral 50",
+      "response_text": "That's right. Brahmin, mole rats, lizards... the occasional traveler lost in the wrong part of town.",
+      "index": "7"
+    },
+    {
+      "topic": "CookCookIntro",
+      "topic_text": "Who are you?",
+      "emotion": "Neutral 50",
+      "response_text": "Who am I? I'm the scariest motherfucker you're ever gonna meet. I'm Cook-Cook, bitch, better not forget it.",
+      "index": "9"
+    },
+    {
+      "topic": "CookCookNCR",
+      "topic_text": "What do you think of the NCR?",
+      "emotion": "Neutral 50",
+      "response_text": "NCR? Bunch of soft little bitches, they've got no stomach for life in the wasteland. Got some choice strange, though, I'll give 'em that.",
+      "index": "11"
+    },
+    {
+      "topic": "CookCookQueenie",
+      "topic_text": "What's a \"Queenie?\"",
+      "emotion": "Neutral 50",
+      "response_text": "*That's* Queenie. She's the prettiest Brahmin in the Wastelands.{Really creepy baby talk}Aren't you, Queenie, yes you are, who's a good girl?",
+      "index": "13"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "Something on your mind?",
+      "index": "14"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "FiendCookCookGrief",
+      "topic_text": "FiendCookCookGrief",
+      "emotion": "Anger 100",
+      "response_text": "No! Queenie! Hahahaha! I'm going to burn the world for you, Queenie!",
+      "index": "16"
+    },
+    {
+      "topic": "GOODBYE",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah, whatever.",
+      "index": "17"
+    }
+  ],
+  "combat": []
+}

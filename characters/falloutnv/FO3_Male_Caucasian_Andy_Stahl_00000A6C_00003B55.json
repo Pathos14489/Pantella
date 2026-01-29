@@ -1,0 +1,224 @@
+{
+  "name": "Andy Stahl",
+  "url": "/wiki/Andy_Stahl",
+  "dialogue_name": "AndyStahl.txt",
+  "dialogue_url": "/wiki/AndyStahl.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "00000A6C",
+  "ref_id": "00003B55",
+  "editor_id": "AndyStahl",
+  "location": "The Brass Lantern",
+  "location_url": "/wiki/The_Brass_Lantern",
+  "descriptions": [
+    "Andy Stahl is the business manager of the Brass Lantern in Megaton in Fallout 3. He's the brother of Jenny Stahl and Leo Stahl, who mean the world to him.",
+    "The oldest of the Stahl siblings running Moriarty's competition,",
+    "That said, Andy isn't actually happy in Megaton, considering it a hole and a dead end, with its only saving grace being the revenue it generates for him and his family.",
+    "The combination of hostility and constant work causes other Megaton denizens to consider him a workaholic.\n",
+    "Notes"
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Megaton",
+  "role": "The Brass Lantern's owner",
+  "detailed_location": "Megaton",
+  "voice_actor": "Craig Sechler",
+  "special": {
+    "Strength": 4,
+    "Perception": 4,
+    "Endurance": 4,
+    "Charisma": 7,
+    "Intelligence": 6,
+    "Agility": 4,
+    "Luck": 6
+  },
+  "level": "4",
+  "tag_skills": [
+    {
+      "Barter:": "50"
+    },
+    {
+      "Lockpick:": "44"
+    },
+    {
+      "Speech:": "50"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Good",
+  "voice_type": "MaleAdult04DC",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Sad 50",
+      "response_text": "Hey, I've been wanting to talk to you. Leo told me what you said to him. You know, about his problem.Play soundFO3 AndyStahl WantingToTalk.ogghttps://fallout.fandom.com/wiki/File:FO3_AndyStahl_WantingToTalk.oggnoicon",
+      "index": "1"
+    },
+    {
+      "topic": "MegAndyGreetingIntimidate",
+      "topic_text": "Do I look like someone that you want to blow off?",
+      "emotion": "Fear 50",
+      "response_text": "Okay, tough guy. Say what's on your mind.{Annoyed, but intimidated nonetheless. }Play soundFO3 AndyStahl OkayToughGuy.ogghttps://fallout.fandom.com/wiki/File:FO3_AndyStahl_OkayToughGuy.oggnoicon",
+      "index": "12"
+    },
+    {
+      "topic": "MegAndyGreetingPolite",
+      "topic_text": "I'm sorry to interrupt, Andy. I just had a few questions.",
+      "emotion": "Disgust 50",
+      "response_text": "[sighs] I suppose. Just make it quick.Play soundFO3 AndyStahl MakeItQuick.ogghttps://fallout.fandom.com/wiki/File:FO3_AndyStahl_MakeItQuick.oggnoicon",
+      "index": "14"
+    },
+    {
+      "topic": "MegTownDirections",
+      "topic_text": "I could use some directions around town.",
+      "emotion": "Disgust 50",
+      "response_text": "You know, you're right  I guess I do look like a sign post. [sighs] Where do you want to go?{Annoyed at being interrupted. Sarcastic.}Play soundFO3 AndyStahl LookLikeASignPost.ogghttps://fallout.fandom.com/wiki/File:FO3_AndyStahl_LookLikeASignPost.oggnoicon",
+      "index": "15"
+    },
+    {
+      "topic": "MegTownDirectionsBar",
+      "topic_text": "Is there a bar in town?",
+      "emotion": "Neutral 50",
+      "response_text": "Are you joking? Yes, there's a bar  The Brass Lantern. It's easy to find since you're standing in it.Play soundFo3 AndyStahl AreYouJoking.ogghttps://fallout.fandom.com/wiki/File:Fo3_AndyStahl_AreYouJoking.oggnoicon",
+      "index": "16"
+    },
+    {
+      "topic": "MegTownDirectionsBed",
+      "topic_text": "Where can I rent a bed?",
+      "emotion": "Neutral 50",
+      "response_text": "Up at Moriarty's at the south end of town. Talk to Nova, she'll help you out.Play soundFO3 AndyStahl UpAtMoriartys.ogghttps://fallout.fandom.com/wiki/File:FO3_AndyStahl_UpAtMoriartys.oggnoicon",
+      "index": "17"
+    },
+    {
+      "topic": "MegTownDirectionsClinic",
+      "topic_text": "Where's the closest clinic?",
+      "emotion": "Neutral 50",
+      "response_text": "You'll want to see Doc Church next to the Crater. Take your time.{Coldly. He might be wishing for your death just so you'll leave him alone.}Play soundFO3 AndyStahl WantToSeeDoc.ogghttps://fallout.fandom.com/wiki/File:FO3_AndyStahl_WantToSeeDoc.oggnoicon",
+      "index": "18"
+    },
+    {
+      "topic": "MegTownDirectionsGoBack",
+      "topic_text": "Let's talk about something else.",
+      "emotion": "Anger 50",
+      "response_text": "Oh, no problem. I'm not busy at all. Yep. Plenty of time to talk to strangers.{Extremely sarcastic.}Play soundFO3 AndyStahl ImNotBusy.ogghttps://fallout.fandom.com/wiki/File:FO3_AndyStahl_ImNotBusy.oggnoicon",
+      "index": "19"
+    },
+    {
+      "topic": "MegTownDirectionsWeapons",
+      "topic_text": "Is there a weapons dealer around here?",
+      "emotion": "Neutral 50",
+      "response_text": "Go see Moira at Craterside Supply. She sells some weapons. Makes some too, from what I hear. Her place is down by the crater.Play soundFO3 AndyStahl GoSeeMoira.ogghttps://fallout.fandom.com/wiki/File:FO3_AndyStahl_GoSeeMoira.oggnoicon",
+      "index": "20"
+    },
+    {
+      "topic": "MegTownEnd",
+      "topic_text": "That's all I needed to know.",
+      "emotion": "Neutral 50",
+      "response_text": "Right.Play soundFO3 AndyStahl Right.ogghttps://fallout.fandom.com/wiki/File:FO3_AndyStahl_Right.oggnoicon",
+      "index": "21"
+    },
+    {
+      "topic": "MegTownFatherChoice",
+      "topic_text": "I'm looking for my father. Middle-aged guy. Maybe you've seen him?",
+      "emotion": "Neutral 50",
+      "response_text": "Not in here, I haven't.{ }Play soundFO3 AndyStahl NotInHere.ogghttps://fallout.fandom.com/wiki/File:FO3_AndyStahl_NotInHere.oggnoicon",
+      "index": "22"
+    },
+    {
+      "topic": "MegTownGoodbye",
+      "topic_text": "I need to get going.",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah, all right.Play soundFO3 AndyStahl YeahAllRight.ogghttps://fallout.fandom.com/wiki/File:FO3_AndyStahl_YeahAllRight.oggnoicon",
+      "index": "23"
+    },
+    {
+      "topic": "MegTownMegaton",
+      "topic_text": "What can you tell me about Megaton?",
+      "emotion": "Neutral 50",
+      "response_text": "It's a hole. A dead end. So why I do stay? Well... it's a hole that makes me money.{ }Play soundFO3 AndyStahl ItsAHole.ogghttps://fallout.fandom.com/wiki/File:FO3_AndyStahl_ItsAHole.oggnoicon",
+      "index": "24"
+    },
+    {
+      "topic": "MegTownRumors",
+      "topic_text": "What's the word around town?",
+      "emotion": "Neutral 50",
+      "response_text": "Moriarty pisses in his still  crazy bastard thinks it's hilarious. Besides, you'll get your throat cut in that pit. You're much better off here.{Very flippant and blowing the player off.}Play soundFO3 AndyStahl PissesInHisStill.ogghttps://fallout.fandom.com/wiki/File:FO3_AndyStahl_PissesInHisStill.oggnoicon",
+      "index": "25"
+    },
+    {
+      "topic": "MegTownWasteland",
+      "topic_text": "Know anything about the area outside Megaton?",
+      "emotion": "Neutral 50",
+      "response_text": "Outside of Megaton? Any place other than here sounds like heaven to me. Fuck this place.Play soundFO3 AndyStahl OutsideOfMegation.ogghttps://fallout.fandom.com/wiki/File:FO3_AndyStahl_OutsideOfMegation.oggnoicon",
+      "index": "27"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYEI have to go now.",
+      "topic_text": "Talk to you later, Andy.",
+      "emotion": "Neutral 50",
+      "response_text": "Whatever. I need to get back to work.{ }Play soundFO3 AndyStahl BackToWork.ogghttps://fallout.fandom.com/wiki/File:FO3_AndyStahl_BackToWork.oggnoicon",
+      "index": "29"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Anger 75",
+      "response_text": "Can I help you, Sheriff?{Annoyed at being interrupted.}Play soundFO3 AndyStahl CanIHelpYouSheriff…https://fallout.fandom.com/wiki/File:FO3_AndyStahl_CanIHelpYouSheriff.oggnoicon",
+      "index": "32"
+    },
+    {
+      "topic": "MegatonTalk1",
+      "topic_text": "MegatonTalk",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah, Leo... what do you need?Play soundFO3 AndyStahl WhatDoYouNeed.ogghttps://fallout.fandom.com/wiki/File:FO3_AndyStahl_WhatDoYouNeed.oggnoicon",
+      "index": "38"
+    },
+    {
+      "topic": "MegatonTalk2",
+      "topic_text": "MegatonTalk2",
+      "emotion": "Neutral 50",
+      "response_text": "I noticed some irregularities in the logs here. Are you tracking the drinks that you're selling like I told you?Play soundFO3 AndyStahl NoticedSomeIrregul…https://fallout.fandom.com/wiki/File:FO3_AndyStahl_NoticedSomeIrregularities.oggnoicon",
+      "index": "40"
+    },
+    {
+      "topic": "MegatonTalk3",
+      "topic_text": "MegatonTalk3",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah. Good idea. Not gonna happen.Play soundFO3 AndyStahl GoodIdea.ogghttps://fallout.fandom.com/wiki/File:FO3_AndyStahl_GoodIdea.oggnoicon",
+      "index": "42"
+    },
+    {
+      "topic": "MegatonTalk4",
+      "topic_text": "MegatonTalk4",
+      "emotion": "Neutral 50",
+      "response_text": "If these books don't add up, I don't know how much money we have, then how are we supposed to stay in business? Would you just be more careful?Play soundFO3 AndyStahl BooksDontAddUp.ogghttps://fallout.fandom.com/wiki/File:FO3_AndyStahl_BooksDontAddUp.oggnoicon",
+      "index": "44"
+    },
+    {
+      "topic": "MegatonTalk5",
+      "topic_text": "MegatonTalk5",
+      "emotion": "Neutral 50",
+      "response_text": "You can tell me that when you're the one paying the bills, Leo.Play soundFO3 AndyStahl YouCanTellMe.ogghttps://fallout.fandom.com/wiki/File:FO3_AndyStahl_YouCanTellMe.oggnoicon",
+      "index": "46"
+    }
+  ],
+  "combat": [
+    {
+      "topic": "Attack",
+      "topic_text": "Attack",
+      "emotion": "Neutral 50",
+      "response_text": "I've had enough of you!Play soundFO3 AndyStahl HadEnoughOfYou.ogghttps://fallout.fandom.com/wiki/File:FO3_AndyStahl_HadEnoughOfYou.oggnoicon",
+      "index": "48"
+    }
+  ]
+}

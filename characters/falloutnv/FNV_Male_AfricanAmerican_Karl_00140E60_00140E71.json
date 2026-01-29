@@ -1,0 +1,163 @@
+{
+  "name": "Karl",
+  "url": "/wiki/Karl_(Fallout:_New_Vegas)",
+  "dialogue_name": "VRRCKarl.txt",
+  "dialogue_url": "/wiki/VRRCKarl.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "00140E60",
+  "ref_id": "00140E71",
+  "editor_id": "VRRCKarl",
+  "location": "Great Khan longhouse",
+  "location_url": "/wiki/Great_Khan_longhouse",
+  "descriptions": [
+    "Karl is a frumentarius for Caesar's Legion quartering in Red Rock Canyon in 2281, acting as the Legion's emissary to the Great Khans.",
+    "Karl is one of the Legion's frumentarii, whose duty is to scout the wastes and make contact with tribes that may be able to help further Caesar's cause.  While he professes to respect the Great Khans as fellow warriors, the reality is quite different, as his journal shows. Located in a footlocker in his room at the Great Khan longhouse, the journal reveals that Karl, in his time as a guest of the Great Khans, has developed considerable contempt for them and views them as nothing more than barbarous savages. He deliberately hides the fact that the Legion forbids women from being anything more than servants and slaves, even telling a female Khan that she will be able to serve in Caesar's army as an explorer.",
+    " If the Courier has low reputation with the Legion, Karl may attack on sight. The Great Khans will not intervene for the Courier or Karl.",
+    "Frumentarii: Alerio · Cato Hostilius · Gabban · Karl · Picus · Disguised frumentarius · Ulysses (formerly)\nConsul: M. Licinius Crassus · M. Scribonius Libo Drusus (of the consul)"
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Caesar's Legion",
+  "role": "FrumentariiAmbassador",
+  "detailed_location": "Red Rock Canyon",
+  "voice_actor": "Gregory Alan Williams",
+  "special": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 6,
+    "Charisma": 4,
+    "Intelligence": 4,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "level": "12",
+  "tag_skills": [
+    {
+      "Guns:": "74(76)"
+    },
+    {
+      "Melee Weap.:": "76(78)"
+    },
+    {
+      "Unarmed:": "76"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "155"
+    }
+  ],
+  "karma": "Neutral",
+  "voice_type": "MaleAdult06",
+  "geck_race": "AfricanAmerican",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Happy 50",
+      "response_text": "You're the one making a name for yourself among the troops, aren't you? What is it you need?",
+      "index": "1"
+    },
+    {
+      "topic": "KarlCaesar",
+      "topic_text": "Who are you?",
+      "emotion": "Happy 50",
+      "response_text": "My name is Karl. Glorious Caesar has sent me as an emissary to the Great Khans as a token of our alliance.",
+      "index": "13"
+    },
+    {
+      "topic": "KarlGreatKhans",
+      "topic_text": "What do you think of the Great Khans?",
+      "emotion": "Disgust 50",
+      "response_text": "{Shifty, doesn't really believe what he's saying.}They're a tribe of fine warriors, with many proud traditions and a glorious history. They will be worthy additions to the Legion.",
+      "index": "14"
+    },
+    {
+      "topic": "RRCLegionAmbush",
+      "topic_text": "RRCLegionAmbush",
+      "emotion": "Disgust 35",
+      "response_text": "You've been a persistent annoyance. I had hoped to avoid this, but it seems I have no choice but to deal with you myself.",
+      "index": "17"
+    },
+    {
+      "topic": "VMS45VRRCKarlTopic000",
+      "topic_text": "Let's get this over with then.",
+      "emotion": "Anger 30",
+      "response_text": "Well-spoken.",
+      "index": "18"
+    },
+    {
+      "topic": "VMS45VRRCKarlTopic001",
+      "topic_text": "Send your whole damned Legion if you want - I'll water the desert with their blood.",
+      "emotion": "Fear 100",
+      "response_text": "Noooooooo!",
+      "index": "19"
+    },
+    {
+      "topic": "VMS45VRRCKarlTopic002",
+      "topic_text": "But surely a warrior in service of glorious Caesar is the equal of any tribe's finest?",
+      "emotion": "Anger 30",
+      "response_text": "[SUCCEEDED]{Getting annoyed}Of course I am!{Smoother, recovering}That is to say, Caesar has many fine warriors, and I wouldn't wish to compare them to the Great Khans.",
+      "index": "20"
+    },
+    {
+      "topic": "VMS45VRRCKarlTopic003",
+      "topic_text": "Because you know they'd come up lacking?",
+      "emotion": "Anger 50",
+      "response_text": "[SUCCEEDED]{Furious}Enough! How dare you compare Caesar's finest to this tribe of savages? The mightiest Great Khan is scarcely a match for a Legion recruit!",
+      "index": "22"
+    },
+    {
+      "topic": "VMS45VRRCKarlTopic004",
+      "topic_text": "Interesting opinion, Karl. I wonder what Papa Khan will say about this.",
+      "emotion": "Disgust 50",
+      "response_text": "You motherless bastard. You'll pay for this!",
+      "index": "25"
+    },
+    {
+      "topic": "VMS45VRRCKarlTopic006",
+      "topic_text": "What alliance?",
+      "emotion": "Anger 10",
+      "response_text": "In exchange for great Caesar's promise of all the lands west of New Vegas, the Khans have agreed to fight alongside the Legion when the time comes.",
+      "index": "26"
+    },
+    {
+      "topic": "VMS45VRRCKarlTopic007",
+      "topic_text": "What's your role in Caesar's Legion?",
+      "emotion": "Happy 20",
+      "response_text": "I am one of the{Fru-men-TAR-ee-eye}frumentarii: it is my duty to scout the Wastes in Caesar's name and make contact with any tribes that might serve a useful purpose.",
+      "index": "27"
+    },
+    {
+      "topic": "VMS45VRRCKarlTopic008",
+      "topic_text": "What does the Legion want with the Great Khans?",
+      "emotion": "Disgust 50",
+      "response_text": "Though they have been cruelly oppressed by the NCR, the Khans remain great warriors.{Choking on this a little; he's lying and it galls him}The Legion is honored to have such allies in battle.",
+      "index": "29"
+    },
+    {
+      "topic": "VMS45VRRCKarlTopic009",
+      "topic_text": "I had some other questions.",
+      "emotion": "Neutral 50",
+      "response_text": "Speak, then.",
+      "index": "30"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Yes. Goodbye.",
+      "index": "31"
+    }
+  ],
+  "combat": []
+}

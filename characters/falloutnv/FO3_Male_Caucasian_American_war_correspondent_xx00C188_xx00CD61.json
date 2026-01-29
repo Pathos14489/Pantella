@@ -1,0 +1,71 @@
+{
+  "name": "American war correspondent",
+  "url": "/wiki/American_war_correspondent",
+  "dialogue_name": "DLC02FF009Photographer.txt",
+  "dialogue_url": "/wiki/DLC02FF009Photographer.txt",
+  "spawned_dead": false,
+  "spawned": true,
+  "essential": true,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "xx00C188",
+  "ref_id": "xx00CD61",
+  "editor_id": "DLC02FF009Photographer",
+  "location": "U.S. Army field headquarters",
+  "location_url": "/wiki/U.S._Army_field_headquarters",
+  "descriptions": [
+    "The American war correspondent is a reporter found in the Anchorage Reclamation simulation in the Fallout 3 add-on Operation: Anchorage.",
+    "A grizzled war correspondent for the Capitol Post, Washington's most prominent daily newspaper. He was dispatched to the frontlines of the Reclamation to cover the final stages of the Reclamation.",
+    "The simulated correspondent is an ardent patriot, informing soldiers that everyone on the home front is rooting for them,",
+    "The American war correspondent appears only in the Fallout 3 add-on Operation: Anchorage."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Capitol Post",
+  "role": "Reporter",
+  "detailed_location": "Anchorage Reclamation simulationU.S. Army field headquarters",
+  "voice_actor": "Christopher Crutchfield Walker",
+  "special": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 5,
+    "Intelligence": 5,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "mod_special_values": {
+    "Strength": 5,
+    "Perception": 6,
+    "Endurance": 5,
+    "Charisma": 5,
+    "Intelligence": 5,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "level": "1",
+  "karma": "Neutral",
+  "voice_type": "DLC02MaleGeneric3",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "DLC02FF009PhotoSay",
+      "topic_text": "DLC02FF009PhotoSay",
+      "emotion": "Happy 75",
+      "response_text": "All right boys, I'm going to make you famous. Get yourselves into a heroic pose.{grizzled war correspondent}",
+      "index": "1"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Happy 75",
+      "response_text": "Good luck, soldier. Everyone back home's rooting for you. Who knows, maybe your mug will end up on the front page of the Capital Post!{grizzled war correspondent}",
+      "index": "5"
+    }
+  ],
+  "conversation": [],
+  "combat": []
+}

@@ -1,0 +1,171 @@
+{
+  "name": "Ramsey",
+  "url": "/wiki/Ramsey",
+  "dialogue_name": "DLC01Ramsey.txt",
+  "dialogue_url": "/wiki/DLC01Ramsey.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "xx002211",
+  "ref_id": "xx0021F3",
+  "editor_id": "DLC01Ramsey",
+  "location": "Train tunnel",
+  "location_url": "/wiki/Train_tunnel_(The_Pitt)",
+  "descriptions": [
+    "Ramsey is a slaver from Paradise Falls located at the train tunnel in the year 2277.",
+    "Ramsey and his group of slavers have been operating in the northern regions of the Capital Wasteland looking to enslave any lost wastelanders to sell to the raiders from The Pitt.",
+    "Ramsey is currently impatiently awaiting the arrival of one of the Pitt raiders, supposedly a man,",
+    "Ramsey’s entry in the Wasteland Census claims that Wernher had been enslaved by Ramsey’s group before deactivating his collar and escaping, prompting Ramsey to employ Pitt raiders to hunt down and re-capture him. However, neither Ramsey nor Wernher make any mention of this, and Wernher simply refers to Ramsey’s group as a group of slavers waiting to make a sale, while also mentioning that he has spied on them.",
+    "Ramsey appears only in the Fallout 3 add-on The Pitt."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Paradise Falls",
+  "role": "Slaver",
+  "detailed_location": "Train tunnel",
+  "special": {
+    "Strength": 6,
+    "Perception": 4,
+    "Endurance": 4,
+    "Charisma": 6,
+    "Intelligence": 4,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "tag_skills": [
+    {
+      "Barter:": "40"
+    },
+    {
+      "Melee Weap.:": "40(42)"
+    },
+    {
+      "Small Guns:": "40(42)"
+    }
+  ],
+  "karma": "Evil",
+  "voice_type": "DLC01SlaverMaleVoiceType",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "DLC01RamseyBuySlaves1",
+      "topic_text": "600 for all three? You've got a deal.",
+      "emotion": "Disgust 50",
+      "response_text": "Finally. Here's the key to the gate. Do whatever you want with 'em. I couldn't care less.",
+      "index": "1"
+    },
+    {
+      "topic": "DLC01RamseyBuySlaves2",
+      "topic_text": "I need to think about it.",
+      "emotion": "Anger 50",
+      "response_text": "What? Are you serious? You'd better hurry back here. I'd like to sell this meat some time before I'm an old man.",
+      "index": "4"
+    },
+    {
+      "topic": "DLC01RamseyBuySlaves3",
+      "topic_text": "This is too much work. I'll just kill you.",
+      "emotion": "Anger 50",
+      "response_text": "Oh, I knew not to trust you Pitt bastards!",
+      "index": "6"
+    },
+    {
+      "topic": "DLC01RamseyGreeting1",
+      "topic_text": "Yeah, that's me. I'm here to buy these slaves.",
+      "emotion": "Neutral 50",
+      "response_text": "About damn time you showed up. We've been waiting here for-fucking-ever.{Midly annoyed and ansty.}",
+      "index": "7"
+    },
+    {
+      "topic": "DLC01RamseyGreeting2",
+      "topic_text": "What are you doing out here?",
+      "emotion": "Anger 50",
+      "response_text": "Waiting for Santa Claus, what do you think? We're here to do business.{Angry at having his time wasted.}",
+      "index": "13"
+    },
+    {
+      "topic": "DLC01RamseyGreeting2a",
+      "topic_text": "Who are you waiting for?",
+      "emotion": "Anger 50",
+      "response_text": "Not that it's any of your business, but we're waiting for some dudes who live up north.",
+      "index": "15"
+    },
+    {
+      "topic": "DLC01RamseyGreeting2b",
+      "topic_text": "I'll leave you to that, then.",
+      "emotion": "Anger 50",
+      "response_text": "Yes. Go. Asshole.",
+      "index": "18"
+    },
+    {
+      "topic": "DLC01RamseyGreetingBW",
+      "topic_text": "I'm whoever you want me to be, baby.",
+      "emotion": "Happy 50",
+      "response_text": "Well, that's how it is, huh? Well, right now I want you to be a customer.",
+      "index": "19"
+    },
+    {
+      "topic": "DLC01RamseyGreetingCombat",
+      "topic_text": "Who, me? No. I'm just here to kill you slaving bastards.",
+      "emotion": "Surprise 50",
+      "response_text": "Oh? Is that so? Well then, kill away!{Mocking surprise.}",
+      "index": "21"
+    },
+    {
+      "topic": "DLC01RamseyGreetingEND",
+      "topic_text": "Oops. I'm in the wrong place. I'll just be going.",
+      "emotion": "Anger 50",
+      "response_text": "Damn right. Piss off.",
+      "index": "22"
+    },
+    {
+      "topic": "DLC01RamseyWantToBuy1",
+      "topic_text": "I want to buy your slaves.",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah? Well, like I said: 200 each.",
+      "index": "23"
+    },
+    {
+      "topic": "DLC01RamseyWantToBuyEND",
+      "topic_text": "I just wanted to check on you.",
+      "emotion": "Anger 50",
+      "response_text": "You're gonna be checking my foot up your ass if you don't leave us alone.",
+      "index": "27"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Anger 50",
+      "response_text": "Hey! You're that asshole that shot up Paradise Falls! Oh, this is gonna be fun!",
+      "index": "30"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "DLC01PlayerAttackSlaves",
+      "topic_text": "DLC01PlayerAttackSlaves",
+      "emotion": "Neutral 50",
+      "response_text": "Hey! Hands off the merchandise!",
+      "index": "36"
+    },
+    {
+      "topic": "DLC01RamseyGetEm",
+      "topic_text": "DLC01RamseyGetEm",
+      "emotion": "Neutral 50",
+      "response_text": "Hey! There's someone in the pen! Get 'em!",
+      "index": "37"
+    },
+    {
+      "topic": "DLC01RamseyTauntSlaves",
+      "topic_text": "DLC01RamseyHarrassSlaves",
+      "emotion": "Neutral 50",
+      "response_text": "Hey! Wake up, you fucks!",
+      "index": "38"
+    }
+  ],
+  "combat": []
+}

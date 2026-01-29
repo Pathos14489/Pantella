@@ -1,0 +1,199 @@
+{
+  "name": "Aurelius of Phoenix",
+  "url": "/wiki/Aurelius_of_Phoenix",
+  "dialogue_name": "NVCCAurelius.txt",
+  "dialogue_url": "/wiki/NVCCAurelius.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "0012B512",
+  "ref_id": "0012D6E2",
+  "editor_id": "NVCCAurelius",
+  "location": "Cottonwood Cove HQ",
+  "location_url": "/wiki/Cottonwood_Cove_HQ",
+  "descriptions": [
+    "Aurelius of Phoenix is a centurion of Caesar's Legion, acting as the commanding officer of the Legion garrison at Cottonwood Cove in the Mojave Wasteland in Fallout: New Vegas.",
+    "A man of great stature, standing at 6'7\" (2.01 m),",
+    "Aurelius takes pride in his standing as a centurion, but does not take kindly to those he believes are unworthy of superior positions",
+    "Despite his incredible ego and cruel streak against NCR soldiers, Aurelius does seem to have a softer side, with a toy car, a teddy bear and a Grognak the Barbarian comic in his office. There is also beer and cigarettes there, and the question of whether it is his personal stash or confiscated contraband remains open.",
+    "Frumentarii: Alerio · Cato Hostilius · Gabban · Karl · Picus · Disguised frumentarius · Ulysses (formerly)\nConsul: M. Licinius Crassus · M. Scribonius Libo Drusus (of the consul)"
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Caesar's Legion",
+  "role": "Commanding officer5 of Clubs",
+  "detailed_location": "Cottonwood Cove HQ",
+  "voice_actor": "Yuri Lowenthal",
+  "special": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 6,
+    "Charisma": 4,
+    "Intelligence": 4,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "level": "15",
+  "tag_skills": [
+    {
+      "Guns:": "86"
+    },
+    {
+      "Unarmed:": "88"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "170"
+    },
+    {
+      "Dam. Threshold:": "23"
+    }
+  ],
+  "karma": "Neutral",
+  "voice_type": "MaleAdult01Default",
+  "geck_race": "Hispanic",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Surprise 100",
+      "response_text": "{you don't like being eclipsed, KAI-zar}Caesar may have deemed you worthy to bear his mark, but your reputation preceeds you.",
+      "index": "1"
+    },
+    {
+      "topic": "VFreeformCottonwoodCoveNVCCAureliusTopic002",
+      "topic_text": "Will you pay a bounty for NCR troops I kill?",
+      "emotion": "Neutral 50",
+      "response_text": "The killing of Profligates should never go unrewarded. I'll pay you a small sum per tag.",
+      "index": "11"
+    },
+    {
+      "topic": "VFreeformCottonwoodCoveNVCCAureliusTopic003<BARTER 35, player asks to use dog tags as currency for supplies>",
+      "topic_text": "If you trade me ammo and supplies instead, I can stay in the area, racking up kills.",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] Go see{de-CAN-us se-VERH-us}Decanus Severus when you have tags, in that case. He watches over our stores.",
+      "index": "12"
+    },
+    {
+      "topic": "VFreeformCottonwoodCoveNVCCAureliusTopic004",
+      "topic_text": "I'll come back when I've made some kills.",
+      "emotion": "Neutral 50",
+      "response_text": "Yes, stop wasting my time.",
+      "index": "14"
+    },
+    {
+      "topic": "VFreeformCottonwoodCoveNVCCAureliusTopic007",
+      "topic_text": "One.",
+      "emotion": "Neutral 50",
+      "response_text": "{Disappointed}Killing one Profligate is the work of a child.",
+      "index": "15"
+    },
+    {
+      "topic": "VFreeformCottonwoodCoveNVCCAureliusTopic008",
+      "topic_text": "Two.",
+      "emotion": "Neutral 50",
+      "response_text": "Just two?{hmph}",
+      "index": "16"
+    },
+    {
+      "topic": "VFreeformCottonwoodCoveNVCCAureliusTopic009",
+      "topic_text": "Three.",
+      "emotion": "Neutral 50",
+      "response_text": "So you're getting some exercise.",
+      "index": "17"
+    },
+    {
+      "topic": "VFreeformCottonwoodCoveNVCCAureliusTopic010",
+      "topic_text": "Here, take all the dog tags I've got.",
+      "emotion": "Neutral 50",
+      "response_text": "{Impressed}A good bit of hunting. Here's your payment.",
+      "index": "18"
+    },
+    {
+      "topic": "VFreeformCottonwoodCoveNVCCAureliusTopic011",
+      "topic_text": "Five.",
+      "emotion": "Neutral 50",
+      "response_text": "Hardly a day's work, but then again, you're not Legion.",
+      "index": "19"
+    },
+    {
+      "topic": "VFreeformCottonwoodCoveNVCCAureliusTopic012",
+      "topic_text": "Never mind.",
+      "emotion": "Neutral 50",
+      "response_text": "Was there something else you wanted to bother me with?",
+      "index": "20"
+    },
+    {
+      "topic": "VFreeformCottonwoodCoveNVCCAureliusTopic017",
+      "topic_text": "I have dog tags to turn in.",
+      "emotion": "Neutral 50",
+      "response_text": "{Mildly amused}Hmm, perhaps I was wrong about your skills. You've killed more NCR than most recruits.",
+      "index": "21"
+    },
+    {
+      "topic": "VFreeformCottonwoodCoveNVCCAureliusTopic018",
+      "topic_text": "Does the Legion see much action here?",
+      "emotion": "Neutral 50",
+      "response_text": "As much as the Profligates' cowardice will allow. They haven't found the balls to attack us here, but we catch them out on patrols.",
+      "index": "26"
+    },
+    {
+      "topic": "VFreeformCottonwoodCoveNVCCAureliusTopic020",
+      "topic_text": "That's some armor you're wearing.",
+      "emotion": "Neutral 50",
+      "response_text": "It is the armor of a{Ken-TOO-ree-on}Centurion. You have the rare honor of beholding it unspattered by the blood of my inferiors.",
+      "index": "28"
+    },
+    {
+      "topic": "VFreeformCottonwoodCoveNVCCAureliusTopic021",
+      "topic_text": "How do I reach Fortification Hill?",
+      "emotion": "Neutral 50",
+      "response_text": "Cursor{Luh-CUH-lus}Lucullus is waiting for you at the docks. He'll take you to{KAI-zar}Caesar.",
+      "index": "29"
+    },
+    {
+      "topic": "VFreeformCottonwoodCoveNVCCAureliusTopic022",
+      "topic_text": "An NCR officer asked me to plant this listening device here. <Give Aurelius the NCR bug>",
+      "emotion": "Neutral 100",
+      "response_text": "{contempt}The things the Profligates will build, to spy on us like cowards with little machines!",
+      "index": "30"
+    },
+    {
+      "topic": "VFreeformCottonwoodCoveNVCCAureliusTopic023",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "{LATIN}{\"wallae\"}Vale.",
+      "index": "32"
+    },
+    {
+      "topic": "VFreeformCottonwoodCoveNVCCAureliusTopic024",
+      "topic_text": "You must be the one in charge here.",
+      "emotion": "Neutral 50",
+      "response_text": "{irritated}Of course I am, you fool. I am a{Ken-TOO-ree-on}Centurion!",
+      "index": "33"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "{LATIN}{\"wallae\"}Vale.",
+      "index": "36"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "Hello",
+      "emotion": "Neutral 50",
+      "response_text": "{AH-way}Ave.",
+      "index": "37"
+    }
+  ],
+  "combat": []
+}

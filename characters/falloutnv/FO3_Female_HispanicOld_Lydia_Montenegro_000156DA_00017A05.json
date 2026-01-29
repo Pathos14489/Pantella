@@ -1,0 +1,486 @@
+{
+  "name": "Lydia Montenegro",
+  "url": "/wiki/Lydia_Montenegro",
+  "dialogue_name": "LydiaMontenegro.txt",
+  "dialogue_url": "/wiki/LydiaMontenegro.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": true,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000156DA",
+  "ref_id": "00017A05",
+  "editor_id": "LydiaMontenegro",
+  "location": "Tenpenny Tower",
+  "location_url": "/wiki/Tenpenny_Tower",
+  "descriptions": [
+    "Lydia Montenegro is a resident of Tenpenny Tower in 2277.",
+    "Lydia runs the Boutique Le Chic, which serves as the general store. She speaks as though she's running a high-end shop and not peddling salvage to wasteland dwellers, such is the elitist illusion she lives under. Lydia spends her days in the shop, then relaxes at the Federalist Lounge with her friend Michael Hawthorne.",
+    "Tenpenny Tower: She is one of several bigoted residents that the Lone Wanderer must convince to change her views if they choose to advocate for Roy Phillips and the rest of the ghouls' admission into Tenpenny Tower.",
+    "She will leave the tower if her safe in Boutique le Chic is looted, claiming it's not safe despite all the guards. If her safe is looted before she is spoken to, which triggers her to leave and wander aimlessly around the wasteland, she will only come back if Roy and his gang are killed.",
+    "If she is convinced to leave, or simply killed, house upgrades will no longer be available to buy. If this happens, the only other option is to let the ghouls invade the tower. After the invasion, Michael Masters will take over the shop, and his shop will sell the house upgrades.",
+    "PC Playstation 3 Xbox 360 If she decides to leave Tenpenny Tower, she supposedly heads out to Megaton and can be found outside the main gate causing tremendous graphics lag for some reason. Scaring her away or killing her instantly removes her effect on performance. Note that if you kill her while she is at Megaton, all of the guards outside Tenpenny Tower will become hostile, regardless of whether the killing is witnessed. "
+  ],
+  "race": "Human",
+  "gender": "Female",
+  "affiliation": "Tenpenny Tower",
+  "role": "Merchant",
+  "detailed_location": "Boutique Le Chic",
+  "voice_actor": "Shari Elliker",
+  "special": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 7,
+    "Intelligence": 5,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "mod_special_values": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 7,
+    "Intelligence": 5,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "level": "1",
+  "tag_skills": [
+    {
+      "Barter:": "34"
+    },
+    {
+      "Melee Weap.:": "30"
+    },
+    {
+      "Speech:": "34"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Good",
+  "voice_type": "FemaleAdult01DefaultDC",
+  "geck_race": "HispanicOld",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Happy 100",
+      "response_text": "Those Ghouls wont be bothering us anymore, will they?{self important snob congratulating the player}",
+      "index": "1"
+    },
+    {
+      "topic": "HD02HouseStuff",
+      "topic_text": "I hear you're the person to see about buying stuff for my suite.",
+      "emotion": "Happy 80",
+      "response_text": "Good to see that old suite finally found an owner.",
+      "index": "15"
+    },
+    {
+      "topic": "HD02HouseStuff01",
+      "topic_text": "Can you tell me what the items do?",
+      "emotion": "Happy 80",
+      "response_text": "Of course I can!",
+      "index": "18"
+    },
+    {
+      "topic": "HD02HouseStuff02",
+      "topic_text": "Tell me about your Themes.",
+      "emotion": "Happy 50",
+      "response_text": "Some people don't like living in a boring old suite.",
+      "index": "20"
+    },
+    {
+      "topic": "HD02HouseStuff02Clear",
+      "topic_text": "I'd like to change my house's Theme.",
+      "emotion": "Happy 80",
+      "response_text": "Okay, consider it done. Anything else?",
+      "index": "23"
+    },
+    {
+      "topic": "HD02HouseStuff03",
+      "topic_text": "Okay, let me take a look at your stuff.",
+      "emotion": "Happy 80",
+      "response_text": "Sure thing!",
+      "index": "24"
+    },
+    {
+      "topic": "HD02HouseStuff04",
+      "topic_text": "Enough about the suite. Let's talk about something else.",
+      "emotion": "Neutral 50",
+      "response_text": "Okay.",
+      "index": "25"
+    },
+    {
+      "topic": "HD02HouseStuffSub01",
+      "topic_text": "Tell me about the My First Infirmary.",
+      "emotion": "Neutral 50",
+      "response_text": "If you're wounded or you've hurt one of your limbs badly, this setup will allow you to heal it up as good as any other Wasteland Doctor.",
+      "index": "26"
+    },
+    {
+      "topic": "HD02HouseStuffSub02",
+      "topic_text": "Tell me about the Jukebox.",
+      "emotion": "Neutral 50",
+      "response_text": "If you feel like filling your place with a whole bunch of music, switch this beautiful pre-war antique on.",
+      "index": "27"
+    },
+    {
+      "topic": "HD02HouseStuffSub03",
+      "topic_text": "Tell me about the My First Laboratory.",
+      "emotion": "Neutral 50",
+      "response_text": "This setup is great for experimenting and coming up with all sorts of useful concoctions.",
+      "index": "28"
+    },
+    {
+      "topic": "HD02HouseStuffSub04",
+      "topic_text": "Tell me about the Nuka-Cola Machine.",
+      "emotion": "Neutral 50",
+      "response_text": "One push of a button and you can get your hands on an Ice Cold Nuka-Cola!",
+      "index": "30"
+    },
+    {
+      "topic": "HD02HouseStuffSub05",
+      "topic_text": "Tell me about the Workbench.",
+      "emotion": "Neutral 50",
+      "response_text": "If you feel like tinkering and want to build some custom gizmos, this setup will help you do it.",
+      "index": "31"
+    },
+    {
+      "topic": "HD02HouseStuffSub08",
+      "topic_text": "That's enough about the items.",
+      "emotion": "Neutral 50",
+      "response_text": "Sounds good.",
+      "index": "32"
+    },
+    {
+      "topic": "HD02HouseTheme01",
+      "topic_text": "I'm interested in the Vault Theme.",
+      "emotion": "Happy 70",
+      "response_text": "Feeling a bit homesick are we?{coy}",
+      "index": "33"
+    },
+    {
+      "topic": "HD02HouseTheme02",
+      "topic_text": "I'm interested in the Raider Theme.",
+      "emotion": "Happy 70",
+      "response_text": "Into the blood and guts look, eh?{coy}",
+      "index": "35"
+    },
+    {
+      "topic": "HD02HouseTheme03",
+      "topic_text": "I'm interested in the Wasteland Explorer Theme.",
+      "emotion": "Happy 70",
+      "response_text": "Longing for the great outdoors are we?{coy}",
+      "index": "37"
+    },
+    {
+      "topic": "HD02HouseTheme04",
+      "topic_text": "I'm interested in the Science Theme.",
+      "emotion": "Happy 70",
+      "response_text": "You're the intellectual type, eh?{coy}",
+      "index": "39"
+    },
+    {
+      "topic": "HD02HouseTheme05",
+      "topic_text": "I'm interested in the Pre-War Theme.",
+      "emotion": "Happy 70",
+      "response_text": "Feeling a bit nostalgic are we?{coy}",
+      "index": "41"
+    },
+    {
+      "topic": "HD02HouseTheme05a",
+      "topic_text": "I'm interested in the Love Machine Theme.",
+      "emotion": "Happy 70",
+      "response_text": "Feeling a bit anxious, perhaps?{coy}",
+      "index": "43"
+    },
+    {
+      "topic": "HD02HouseTheme06",
+      "topic_text": "Let me ask about something else.",
+      "emotion": "Happy 50",
+      "response_text": "Sure.",
+      "index": "45"
+    },
+    {
+      "topic": "HD02HouseThemeNo",
+      "topic_text": "Actually, let me pick another Theme.",
+      "emotion": "Happy 80",
+      "response_text": "Certainly!",
+      "index": "46"
+    },
+    {
+      "topic": "HD02HouseThemeYes",
+      "topic_text": "Sounds good to me.",
+      "emotion": "Happy 70",
+      "response_text": "Well then, let's make a deal!",
+      "index": "47"
+    },
+    {
+      "topic": "MS12Basement",
+      "topic_text": "What can you tell me about the basement?",
+      "emotion": "Surprise 50",
+      "response_text": "What are you talking about? You mean the basement of Tenpenny Tower? What a random question. Why should I know anything about a basement?{confused and snippy, she is high class lady, what use does she have for grubby basements?}",
+      "index": "48"
+    },
+    {
+      "topic": "MS12BigotNeighbors",
+      "topic_text": "What if all your other neighbors agree?",
+      "emotion": "Disgust 100",
+      "response_text": "Then my neighbors will have lost their minds. Just like you have. Now go away.{self important snob}",
+      "index": "50"
+    },
+    {
+      "topic": "MS12BigotNevermind",
+      "topic_text": "Whatever.",
+      "emotion": "Anger 50",
+      "response_text": "Who let you in here in the first place? Does Mister Tenpenny know there's a lunatic walking around his tower?{self important snob losing patience}",
+      "index": "51"
+    },
+    {
+      "topic": "MS12BigotSpeech",
+      "topic_text": "This is happening. You're going to have to deal with it, or get forced out.",
+      "emotion": "Anger 100",
+      "response_text": "You horrible little zombie-lover! What right do you and your disgusting buddies have to push honest, hardworking, important people around like that?{bigot facing retribution}",
+      "index": "52"
+    },
+    {
+      "topic": "MS12BigotSpeechBad",
+      "topic_text": "I don't care. Get your stuff together and get out of here.",
+      "emotion": "Anger 50",
+      "response_text": "Just you wait. I'll find a way to repay you for this.{bigot promising revenge}",
+      "index": "54"
+    },
+    {
+      "topic": "MS12BigotSpeechGood",
+      "topic_text": "I'm sure you'll find something suitable, don't worry.",
+      "emotion": "Fear 50",
+      "response_text": "Don't worry? Did you just step out of a vault? Haven't you seen what's out there? I'm doomed. And it's all your fault!{defeated bigot trying to make hero feel bad}",
+      "index": "55"
+    },
+    {
+      "topic": "MS12BigotSpeechNeutral",
+      "topic_text": "Good luck.",
+      "emotion": "Fear 50",
+      "response_text": "When I die, it'll be your fault.{defeated bigot trying to make hero feel bad}",
+      "index": "56"
+    },
+    {
+      "topic": "MS12IntroToGhoul1",
+      "topic_text": "I could kill a Ghoul or two, if I had to.",
+      "emotion": "Surprise 100",
+      "response_text": "I bet you could. Talk to Gustavo. He could use someone like you. You could kill those Ghouls in the tunnels. Get rid of them once and for all!{getting excited}",
+      "index": "57"
+    },
+    {
+      "topic": "MS12IntroToGhoul2",
+      "topic_text": "When I see a Ghoul in the distance, I tend to turn around and go the other way.",
+      "emotion": "Sad 50",
+      "response_text": "Well, that's not very brave, though it's not a bad policy either. If you decide to conquer your fear of Ghouls by killing a couple, talk to Gustavo.{disappointed}",
+      "index": "58"
+    },
+    {
+      "topic": "MS12IntroToGhoul3",
+      "topic_text": "Ghouls are all right.",
+      "emotion": "Surprise 100",
+      "response_text": "What? Have you lost your mind?{clearly the person she is talking to is a lunatic}",
+      "index": "59"
+    },
+    {
+      "topic": "MS12ResidentsBranch",
+      "topic_text": "What's it like living at Tenpenny Tower?",
+      "emotion": "Happy 50",
+      "response_text": "Tenpenny is a classy place. Just look at me. Look at my shop. Can't find top shelf class like that anywhere else.{self important snob}",
+      "index": "60"
+    },
+    {
+      "topic": "MS12ResidentsBranch1",
+      "topic_text": "Good thing the tower was still structurally sound after the war.",
+      "emotion": "Neutral 50",
+      "response_text": "Indeed. Though Tenpenny has put a lot of work into restoring it. And he's hired security to keep us safe.{bragging}",
+      "index": "61"
+    },
+    {
+      "topic": "MS12ResidentsBranch2",
+      "topic_text": "This place feels more like a prison than a home.",
+      "emotion": "Fear 50",
+      "response_text": "I've never been in prison, so I wouldn't know. All I know is that I'm safe in here. Out there you got all kinds of nastiness. Like those Ghouls.{defending her gated community}",
+      "index": "64"
+    },
+    {
+      "topic": "MS12ResidentsBranch3",
+      "topic_text": "<Say nothing.>",
+      "emotion": "Neutral 50",
+      "response_text": "Not used to civilized discourse, eh? You're from out there in the Wasteland, right? You must be pretty tough to survive out there. Ever kill a Ghoul?{hinting the player can help }",
+      "index": "66"
+    },
+    {
+      "topic": "MS12ResidentsGhoulsAbout these Ghouls...",
+      "topic_text": "Are you afraid of the Ghouls trying to get into Tenpenny?",
+      "emotion": "Anger 100",
+      "response_text": "If they got in here, they'd get their filth over everything. You can smell them a mile away!{self important snob}",
+      "index": "67"
+    },
+    {
+      "topic": "MS12ResidentsGhoulsChoice1MS12ResidentsGhoulsChoiceGood",
+      "topic_text": "I can handle those Ghouls.",
+      "emotion": "Happy 100",
+      "response_text": "Really? Perhaps you can. We'd all be terribly grateful. Chief Gustavo will want to know you're willing to help.{happy someone is finally taking charge}",
+      "index": "69"
+    },
+    {
+      "topic": "MS12ResidentsGhoulsChoice2MS12ResidentsGhoulsChoiceBad",
+      "topic_text": "I make it a point to stay clear of trouble.",
+      "emotion": "Disgust 100",
+      "response_text": "Well... I just thought... Never mind.{self important indignation}",
+      "index": "70"
+    },
+    {
+      "topic": "MS12ResidentsGhoulsChoice3MS12ResidentsGhoulsChoiceNeutral",
+      "topic_text": "Good luck.",
+      "emotion": "Disgust 10",
+      "response_text": "Yeah. Thanks.{mild sarcasm}",
+      "index": "71"
+    },
+    {
+      "topic": "MS12ResidentsNeighbors",
+      "topic_text": "How would you feel about having a few Ghoul neighbors?",
+      "emotion": "Happy 75",
+      "response_text": "Ah yes. I was wondering when you'd try me.{sarcastically sweet}",
+      "index": "72"
+    },
+    {
+      "topic": "MS12ResidentsNeighborsBad",
+      "topic_text": "Yeah, Ghouls would make horrible neighbors.",
+      "emotion": "Disgust 50",
+      "response_text": "Quite right. Perhaps you're not as stupid as you seem.{(agreeing) self important snob}",
+      "index": "76"
+    },
+    {
+      "topic": "MS12ResidentsNeighborsGood",
+      "topic_text": "I've met these Ghouls. They're civilized and pose no threat.",
+      "emotion": "Disgust 100",
+      "response_text": "I think you must have been out in the sun too long. Perhaps I could sell you a nice hat to keep your brain from frying?{self important snob}",
+      "index": "77"
+    },
+    {
+      "topic": "MS12ResidentsNeighborsNeutral",
+      "topic_text": "Whatever.",
+      "emotion": "Disgust 50",
+      "response_text": "Is there something I can help you with? If not, why don't you find somewhere else to be?{self important snob}",
+      "index": "78"
+    },
+    {
+      "topic": "SpeechChallengeFailure",
+      "topic_text": "SpeechChallengeFailure",
+      "emotion": "Anger 100",
+      "response_text": "Who do you think you are? I pay good money to live here. And I run a most prestigious store. You can't push me around like that!{self important snob}",
+      "index": "79"
+    },
+    {
+      "topic": "TenpennyAllistairTenpenny",
+      "topic_text": "Tell me about Allistair Tenpenny.",
+      "emotion": "Neutral 50",
+      "response_text": "He stays in his penthouse suite most of the time. So long as we pay the rent, he lets us live here.",
+      "index": "80"
+    },
+    {
+      "topic": "TenpennyGREETINGChoice1",
+      "topic_text": "Nice place you have here.",
+      "emotion": "Neutral 50",
+      "response_text": "Your taste in shopping venue is impeccable. How may I assist you?{snobby merchant}",
+      "index": "81"
+    },
+    {
+      "topic": "TenpennyGREETINGChoice2",
+      "topic_text": "This is a store?",
+      "emotion": "Disgust 100",
+      "response_text": "You wouldn't know true value if it slapped you in the face!{snobby indignation}",
+      "index": "82"
+    },
+    {
+      "topic": "TenpennyGREETINGChoice3",
+      "topic_text": "Whatever.",
+      "emotion": "Disgust 100",
+      "response_text": "Just try not to break anything, okay?{snobby merchant talking to a poor person}",
+      "index": "83"
+    },
+    {
+      "topic": "TenpennyVendor",
+      "topic_text": "I'd like to do business with you.",
+      "emotion": "Neutral 50",
+      "response_text": "My Boutique has many unique items for the discerning customer.",
+      "index": "84"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "DialogueTenpennyConv00",
+      "topic_text": "DialogueTenpennyConv00",
+      "emotion": "Happy 50",
+      "response_text": "We all feel safe knowing you and your men have this place locked up tight. Thank you!{genuinely appreciative}",
+      "index": "85"
+    },
+    {
+      "topic": "DialogueTenpennyConv01",
+      "topic_text": "DialogueTenpennyConv01",
+      "emotion": "Happy 100",
+      "response_text": "Antique shop? Really, Anthony, you need some new material! And I'm not just talking about your jokes either, darling. Those threads are atrocious!{playful repartee}",
+      "index": "91"
+    },
+    {
+      "topic": "DialogueTenpennyConv02",
+      "topic_text": "DialogueTenpennyConv02",
+      "emotion": "Happy 50",
+      "response_text": "Do you realize how often you use that word? You be careful, darling, or you'll wear it out like you've worn out your sense of style.{playfully teasing a friend}",
+      "index": "96"
+    },
+    {
+      "topic": "DialogueTenpennyConv03",
+      "topic_text": "DialogueTenpennyConv03",
+      "emotion": "Happy 100",
+      "response_text": "At least I'm not some dried up tart, prancing around like the queen of America, carelessly spouting grotesque phrases. \"Fabulousity?\" Really now!{playful repartee (\"fab-u-loss-i-tee\")}",
+      "index": "101"
+    },
+    {
+      "topic": "DialogueTenpennyEatStartTopic",
+      "topic_text": "DialogueTenpennyEatStartTopic",
+      "emotion": "Neutral 50",
+      "response_text": "It's time for a little bite of something delicious.{hungry and on her way to get food}",
+      "index": "104"
+    },
+    {
+      "topic": "DialogueTenpennySleepStartTopic",
+      "topic_text": "DialogueTenpennySleepStartTopic",
+      "emotion": "Neutral 50",
+      "response_text": "Whew! I'm sleepy. Time to hit the pillows!{tired and heading off to bed}",
+      "index": "105"
+    },
+    {
+      "topic": "GOODBYE",
+      "topic_text": "I have to go now.",
+      "emotion": "Happy 50",
+      "response_text": "Charming!{(insincere) self important antiques dealer}",
+      "index": "106"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Surprise 50",
+      "response_text": "Daring! What on earth are you up to?{confused and slightly suspicious}",
+      "index": "109"
+    }
+  ],
+  "combat": [
+    {
+      "topic": "BarterExit",
+      "topic_text": "BarterExit",
+      "emotion": "Neutral 50",
+      "response_text": "It's been a pleasure doing business.",
+      "index": "122"
+    }
+  ]
+}

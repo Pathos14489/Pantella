@@ -1,0 +1,170 @@
+{
+  "name": "Dusty McBride",
+  "url": "/wiki/Dusty_McBride",
+  "dialogue_name": "DustyMcBride.txt",
+  "dialogue_url": "/wiki/DustyMcBride.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000B8FA0",
+  "ref_id": "000B8FA6",
+  "editor_id": "DustyMcBride",
+  "location": "McBride house",
+  "location_url": "/wiki/McBride_house",
+  "descriptions": [
+    "Dusty McBride is a rancher living in Novac in 2281.",
+    "Dusty and Alice, his wife, are the salt of Novac's earth. Honest, hardworking, and married for more than 50 years, they've seen much of what wasteland has to offer. Despite that, their love is as strong as ever as they continue to raise brahmin together in Novac."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Novac",
+  "role": "Rancher",
+  "detailed_location": "McBride house",
+  "voice_actor": "Jude Ciccolella",
+  "special": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 6,
+    "Charisma": 3,
+    "Intelligence": 4,
+    "Agility": 6,
+    "Luck": 4
+  },
+  "mod_special_values": {
+    "Strength": 5,
+    "Perception": 6,
+    "Endurance": 7,
+    "Charisma": 3,
+    "Intelligence": 4,
+    "Agility": 7,
+    "Luck": 4
+  },
+  "level": "4",
+  "tag_skills": [
+    {
+      "Guns:": "43(45)"
+    },
+    {
+      "Melee Weap.:": "41"
+    },
+    {
+      "Unarmed:": "43(45)"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "140(145)"
+    }
+  ],
+  "karma": "Neutral",
+  "voice_type": "MaleOld01",
+  "geck_race": "CaucasianOld",
+  "topics": [
+    {
+      "topic": "DustyMcBrideHowsBusiness",
+      "topic_text": "How is business lately?",
+      "emotion": "Neutral 50",
+      "response_text": "You must mean what's left of it. Somebody's been attacking our animals at night. We're down to less than half of what we had a few weeks back.",
+      "index": "1"
+    },
+    {
+      "topic": "DustyMcBrideLookAtWhoDidIt",
+      "topic_text": "Did you get a look at the attacker?",
+      "emotion": "Neutral 50",
+      "response_text": "Beg your pardon mister, but them two-headed beeves ain't worth getting shot over.",
+      "index": "2"
+    },
+    {
+      "topic": "DustyMcBrideLosingLivestock",
+      "topic_text": "I heard you've been losing livestock.",
+      "emotion": "Neutral 50",
+      "response_text": "Losing don't describe it. It's a massacre. Few more days and there won't be nothing left to lose.",
+      "index": "10"
+    },
+    {
+      "topic": "DustyMcBrideNoOneWillAttack",
+      "topic_text": "No one is going to attack your corral from now on.",
+      "emotion": "Neutral 50",
+      "response_text": "Well I don't know how you done it, but I do know how I can thank you. Please take this, compliments of Alice and myself.",
+      "index": "11"
+    },
+    {
+      "topic": "DustyMcBrideNotDoneYet",
+      "topic_text": "Not yet.",
+      "emotion": "Neutral 50",
+      "response_text": "Well don't worry yourself too much over it. We'll get by.",
+      "index": "15"
+    },
+    {
+      "topic": "DustyMcBrideSeeIfICanHelp",
+      "topic_text": "I'll see if I can catch whoever's responsible.",
+      "emotion": "Neutral 50",
+      "response_text": "We'd be grateful. Especially if you find 'em before they get my whole stock. But don't go getting yourself killed over it.",
+      "index": "16"
+    },
+    {
+      "topic": "DustyMcBrideTellMeWhatYouKnow",
+      "topic_text": "Tell me what you know about the attacks.",
+      "emotion": "Neutral 50",
+      "response_text": "Every night around midnight Alice and I'll wake up to some crazy hollering and gun shots. You'd think the world was ending all over again.",
+      "index": "18"
+    },
+    {
+      "topic": "DustyMcBrideWhatDoYouDo",
+      "topic_text": "What do you do here in Novac?",
+      "emotion": "Neutral 50",
+      "response_text": "Oh, I tend to my ranch, that's about it. Alice'll tell you. I don't get out a whole lot.",
+      "index": "20"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "You seen Alice? Ain't like her to be gone this long.",
+      "index": "21"
+    },
+    {
+      "topic": "SnipersRevengeBooneWife",
+      "topic_text": "What can you tell me about Boone's wife?",
+      "emotion": "Neutral 50",
+      "response_text": "Well, to be honest with you, I don't really know them two as well as I might.",
+      "index": "25"
+    },
+    {
+      "topic": "SnipersRevengeComeOutside",
+      "topic_text": "Come with me. There's something you should see, in front of the dinosaur.",
+      "emotion": "Neutral 50",
+      "response_text": "You sure seem worked up about something. I suppose I can hear you out.",
+      "index": "27"
+    },
+    {
+      "topic": "VMQ01LookingForManny",
+      "topic_text": "I'm looking for a man in a checkered coat. Have you seen anyone like that?",
+      "emotion": "Neutral 50",
+      "response_text": "Can't say as I have, but we usually keep to ourselves down here. You might have more luck up by the motel.",
+      "index": "28"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "So long.",
+      "index": "30"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "Hello",
+      "emotion": "Neutral 50",
+      "response_text": "Howdy.",
+      "index": "31"
+    }
+  ],
+  "combat": []
+}

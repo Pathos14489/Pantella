@@ -1,0 +1,274 @@
+{
+  "name": "Scribe Ibsen",
+  "url": "/wiki/Ibsen",
+  "dialogue_name": "HVScribeIbsen.txt",
+  "dialogue_url": "/wiki/HVScribeIbsen.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "0010AF1B",
+  "ref_id": "000E3488",
+  "editor_id": "HVScribeIbsen",
+  "location": "Hidden Valley",
+  "location_url": "/wiki/Hidden_Valley",
+  "descriptions": [
+    "Scribe Ibsen is a Mojave Brotherhood of Steel Scribe living in the Hidden Valley bunker in 2281.",
+    "Scribe Ibsen is a data analyst for the Brotherhood of Steel; he specializes in retrieving and storing data.",
+    "Hidden Valley computer virus",
+    "Still in the Dark",
+    "If Veronica is an active companion, she will tell Ibsen not to work too hard.",
+    "Ibsen is a Danish given name and surname, commonly associated with Norwegian playwright Henrik Ibsen.",
+    "Playstation 3 Xbox 360 This character, Nolan McNamara, Lars Taggart and Oliver Swanick share the same tone and voice (maybe even the same file) for the farewell \"Later\" at the end of their dialogue."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Mojave Brotherhood of Steel",
+  "role": "Scientist",
+  "detailed_location": "Hidden Valley bunker",
+  "voice_actor": "Yuri Lowenthal",
+  "special": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 5,
+    "Intelligence": 5,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "level": "1",
+  "tag_skills": [
+    {
+      "Guns:": "30"
+    },
+    {
+      "Science:": "30"
+    },
+    {
+      "Unarmed:": "28"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Neutral",
+  "voice_type": "MaleAdult01Default",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "I'll track the virus from over here. You just concentrate on locating the terminals hosting it.",
+      "index": "1"
+    },
+    {
+      "topic": "VDialogueHiddenValleyHVScribeIbsenTopic000",
+      "topic_text": "Something wrong?",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah, I'm in charge of keeping this data system up and running, but accessing it is a little, ah, touch and go at the moment.",
+      "index": "8"
+    },
+    {
+      "topic": "VDialogueHiddenValleyHVScribeIbsenTopic001Why's that?",
+      "topic_text": "Why's that?",
+      "emotion": "Neutral 50",
+      "response_text": "One of our exploratory patrols - back when we had exploratory patrols - found a data disc in some ruins out in the waste.",
+      "index": "9"
+    },
+    {
+      "topic": "VDialogueHiddenValleyHVScribeIbsenTopic002Why no more patrols?",
+      "topic_text": "Why aren't there any patrols anymore?",
+      "emotion": "Neutral 50",
+      "response_text": "Oh, there are patrols. Just not exploratory ones. We've been in a state of lockdown for... well, let's just say it's been a while.",
+      "index": "11"
+    },
+    {
+      "topic": "VDialogueHiddenValleyHVScribeIbsenTopic003That's terrible.",
+      "topic_text": "That's horrible.",
+      "emotion": "Neutral 50",
+      "response_text": "Nah, it's not so bad. The world outside isn't exactly a paradise, you know? Still, you can only breathe recirculated air for so long.",
+      "index": "13"
+    },
+    {
+      "topic": "VDialogueHiddenValleyHVScribeIbsenTopic004",
+      "topic_text": "A virus?",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah, some Pre-War jackass with too much time on his hands apparently decided to inflict his misery on those around him.",
+      "index": "15"
+    },
+    {
+      "topic": "VDialogueHiddenValleyHVScribeIbsenTopic005Anything I can do?",
+      "topic_text": "Anything I can do to help?",
+      "emotion": "Neutral 50",
+      "response_text": "I suppose it couldn't hurt to get another pair of eyes on this. Maybe you'll be able to come up with something coming at it fresh.",
+      "index": "17"
+    },
+    {
+      "topic": "VDialogueHiddenValleyHVScribeIbsenTopic006{Ask Ibsen about Hardin trying to become Elder}",
+      "topic_text": "What do you think of Hardin trying to get McNamara dismissed?",
+      "emotion": "Neutral 50",
+      "response_text": "{Testy, Frustrated}I don't have time to think about silly things like politics right now. My main concern right now is getting this blasted datastore up and running.",
+      "index": "20"
+    },
+    {
+      "topic": "VDialogueHiddenValleyHVScribeIbsenTopic007What do I do?",
+      "topic_text": "What do I need to do?",
+      "emotion": "Neutral 50",
+      "response_text": "You'll need to locate it on three different terminals in this area in one minute. Any longer and it'll jump, and you'll have to start all over.",
+      "index": "23"
+    },
+    {
+      "topic": "VDialogueHiddenValleyHVScribeIbsenTopic008Why the lockdown?",
+      "topic_text": "Why the lockdown?",
+      "emotion": "Neutral 50",
+      "response_text": "That's... not really for me to say. It's a bit of a touchy subject. You should probably forget I mentioned it.",
+      "index": "28"
+    },
+    {
+      "topic": "VDialogueHiddenValleyHVScribeIbsenTopic009",
+      "topic_text": "I have to be going.",
+      "emotion": "Neutral 50",
+      "response_text": "Please, don't let me stop you. I know what it's like to have a lot on your mind.",
+      "index": "29"
+    },
+    {
+      "topic": "VDialogueHiddenValleyHVScribeIbsenTopic010",
+      "topic_text": "I've had better.",
+      "emotion": "Neutral 50",
+      "response_text": "You and me both. The Elder wants this data store operational pronto, but it doesn't look like the damn thing will be working anytime soon.",
+      "index": "30"
+    },
+    {
+      "topic": "VDialogueHiddenValleyHVScribeIbsenTopic011",
+      "topic_text": "Need any help?",
+      "emotion": "Neutral 50",
+      "response_text": "I could use some assistance, sure, but I highly doubt you have the technical background to help us deal with this virus.",
+      "index": "31"
+    },
+    {
+      "topic": "VDialogueHiddenValleyHVScribeIbsenTopic015",
+      "topic_text": "I'll give it a try, then.",
+      "emotion": "Neutral 50",
+      "response_text": "Best of luck to you. I'll tell the others to take a break so they don't get in your way. Oh, and I'll keep track of when it jumps for you.",
+      "index": "32"
+    },
+    {
+      "topic": "VDialogueHiddenValleyHVScribeIbsenTopic016",
+      "topic_text": "Sounds complicated. I'll leave you to it.",
+      "emotion": "Neutral 50",
+      "response_text": "We'll get it eventually, but it's frustrating that it's taking so long.",
+      "index": "34"
+    },
+    {
+      "topic": "VDialogueHiddenValleyHVScribeIbsenTopic017{ Science >= 70 }",
+      "topic_text": "Can the virus's files be partitioned so read-access is only provided by the kernel administrator?",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] What? No, that... that's brilliant! It would let us seal a portion of the virus to a particular terminal, even when the other parts move.",
+      "index": "35"
+    },
+    {
+      "topic": "VDialogueHiddenValleyHVScribeIbsenTopic018",
+      "topic_text": "Maybe I'll try another time.",
+      "emotion": "Neutral 50",
+      "response_text": "I'm almost out of ideas, so you'd be more than welcome to.",
+      "index": "37"
+    },
+    {
+      "topic": "VDialogueHiddenValleyHVScribeIbsenTopic019",
+      "topic_text": "Yes.",
+      "emotion": "Neutral 50",
+      "response_text": "All right. I'll monitor when it jumps. When I give the signal, start checking terminals.",
+      "index": "38"
+    },
+    {
+      "topic": "VDialogueHiddenValleyHVScribeIbsenTopic020",
+      "topic_text": "Perhaps another time.",
+      "emotion": "Neutral 50",
+      "response_text": "We'll continue our own efforts in the meantime.",
+      "index": "39"
+    },
+    {
+      "topic": "VDialogueHiddenValleyHVScribeIbsenTopic021",
+      "topic_text": "Not right now. I want to ask you a few questions.",
+      "emotion": "Neutral 50",
+      "response_text": "I suppose I could take a small break, but I can only spare a little time. Ask away.",
+      "index": "40"
+    },
+    {
+      "topic": "VDialogueHiddenValleyHVScribeIbsenTopic022",
+      "topic_text": "What kind of information is in the datastore?",
+      "emotion": "Neutral 50",
+      "response_text": "{Excited, this is his favorite subject}Oh, all kinds of things! There was already information regarding the layout and systems of this bunker, but we've since added our own data as well.",
+      "index": "41"
+    },
+    {
+      "topic": "VDialogueHiddenValleyHVScribeIbsenTopic023",
+      "topic_text": "About the virus...",
+      "emotion": "Neutral 50",
+      "response_text": "Yes, did you have an idea that might help us?",
+      "index": "43"
+    },
+    {
+      "topic": "VDialogueHiddenValleyHVScribeIbsenTopic024",
+      "topic_text": "No, it's nothing.",
+      "emotion": "Neutral 50",
+      "response_text": "I do that all the time myself. One moment I'll think I've solved the conundrum, and the next I'm back to square one. Don't let it bother you.",
+      "index": "44"
+    },
+    {
+      "topic": "VDialogueHiddenValleyHVScribeIbsenTopic025",
+      "topic_text": "How do I get access to more topics in the datastore?",
+      "emotion": "Neutral 50",
+      "response_text": "Well, you'd have to get a senior-level member of the chapter to unlock a topic for you. I've given you access to what I can, but that's not much.",
+      "index": "46"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "HVIbsenTenSeconds",
+      "topic_text": "HVIbsenTenSeconds",
+      "emotion": "Neutral 50",
+      "response_text": "Ten seconds!",
+      "index": "49"
+    },
+    {
+      "topic": "HVIbsenThirtySeconds",
+      "topic_text": "HVIbsenThirtySeconds",
+      "emotion": "Neutral 50",
+      "response_text": "Thirty seconds left!",
+      "index": "50"
+    },
+    {
+      "topic": "HVIbsenVeronica",
+      "topic_text": "HVIbsenVeronica",
+      "emotion": "Neutral 50",
+      "response_text": "Hmm? Oh, it's you, Veronica.",
+      "index": "51"
+    },
+    {
+      "topic": "HVIbsenVirusEnd",
+      "topic_text": "HVIbsenVirusEnd",
+      "emotion": "Neutral 50",
+      "response_text": "Damn, it's jumped! I thought we might have had it that time.",
+      "index": "53"
+    },
+    {
+      "topic": "HVIbsenVirusStart",
+      "topic_text": "HVIbsenVirusStart",
+      "emotion": "Neutral 50",
+      "response_text": "The virus just jumped! Find which terminals it went to!",
+      "index": "54"
+    },
+    {
+      "topic": "HVIbsenVirusWiped",
+      "topic_text": "HVIbsenVirusWiped",
+      "emotion": "Neutral 50",
+      "response_text": "That's it! We got it! The virus has been purged!",
+      "index": "55"
+    }
+  ],
+  "combat": []
+}

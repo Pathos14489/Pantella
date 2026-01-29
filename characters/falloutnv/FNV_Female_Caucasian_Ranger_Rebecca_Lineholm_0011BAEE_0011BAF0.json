@@ -1,0 +1,137 @@
+{
+  "name": "Ranger Rebecca Lineholm",
+  "url": "/wiki/Rebecca_Lineholm",
+  "dialogue_name": "RSAlphaLineholm.txt",
+  "dialogue_url": "/wiki/RSAlphaLineholm.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "0011BAEE",
+  "ref_id": "0011BAF0",
+  "editor_id": "RSAlphaLineholm",
+  "location": "Ranger Station Alpha",
+  "location_url": "/wiki/Ranger_Station_Alpha",
+  "descriptions": [
+    "NCR Ranger Rebecca Lineholm is the commanding officer of Ranger Station Alpha in 2281.",
+    "Ranger Lineholm joined the NCR Rangers in 2271. After grueling training, she experienced the proudest moment of her life when she got her Ranger badge. Currently she's in charge of Ranger Station Alpha, once on the frontlines of the war with the Legion, now a mostly support outpost with a minimal chance of running afoul of critters, raiders, or the Legion.",
+    "The NCR Rangers at the ranger stations, including Lineholm, were written by additional area designer Matt MacLean, who worked on the quest Return to Sender."
+  ],
+  "race": "Human",
+  "gender": "Female",
+  "affiliation": "New California Republic Rangers",
+  "role": "Ranger",
+  "detailed_location": "Ranger Station Alpha",
+  "voice_actor": "April Stewart",
+  "special": {
+    "Strength": 5,
+    "Perception": 6,
+    "Endurance": 6,
+    "Charisma": 4,
+    "Intelligence": 5,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "level": "7",
+  "tag_skills": [
+    {
+      "Guns:": "56"
+    },
+    {
+      "Sneak:": "56"
+    },
+    {
+      "Unarmed:": "56"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Neutral",
+  "voice_type": "FemaleAdult03",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "{Player in NCR gear}{suspicious}You're not part of this post as far as I know. What do you want?",
+      "index": "1"
+    },
+    {
+      "topic": "VMSRSAlphaQuestRSRangerAlphaLineholmTopic003",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "So long.",
+      "index": "4"
+    },
+    {
+      "topic": "VMSRSAlphaQuestRSRangerAlphaLineholmTopic004",
+      "topic_text": "Sgt. Reyes sent me - she's curious about the high casualties at this station.",
+      "emotion": "Surprise 50",
+      "response_text": "{confused}\"High casualties?\" We've had one broken ankle, but nobody at this post has died.",
+      "index": "5"
+    },
+    {
+      "topic": "VMSRSAlphaQuestRSRangerAlphaLineholmTopic005",
+      "topic_text": "Reyes' information says otherwise.",
+      "emotion": "Neutral 50",
+      "response_text": "Any injury, illness, or death gets radioed to Ranger HQ at Camp Golf.",
+      "index": "6"
+    },
+    {
+      "topic": "VMSRSAlphaQuestRSRangerAlphaLineholmTopic006",
+      "topic_text": "Maybe you're lying to keep morale up.",
+      "emotion": "Anger 50",
+      "response_text": "Do a fucking headcount, then. Everybody's right where they're supposed to be.",
+      "index": "8"
+    },
+    {
+      "topic": "VMSRSAlphaQuestRSRangerAlphaLineholmTopic008",
+      "topic_text": "What do you do here?",
+      "emotion": "Neutral 50",
+      "response_text": "Ranger Station Alpha used to be the frontline outpost for NCR. When we moved onto the Dam, this station has fallen into more a support role.",
+      "index": "9"
+    },
+    {
+      "topic": "VMSRSAlphaQuestRSRangerAlphaLineholmTopic009",
+      "topic_text": "How could Reyes have been wrong?",
+      "emotion": "Neutral 50",
+      "response_text": "There are other Ranger posts around. Reyes might have mixed up the report.",
+      "index": "10"
+    },
+    {
+      "topic": "VMSRSAlphaQuestRSRangerAlphaLineholmTopic010",
+      "topic_text": "Let's talk about something else.",
+      "emotion": "Neutral 50",
+      "response_text": "Reyes got the numbers wrong - not much more to it than that.",
+      "index": "11"
+    },
+    {
+      "topic": "vDialogueRangerStationAlphaRSAlphaLineholmTopic000",
+      "topic_text": "Any interesting places around here?",
+      "emotion": "Neutral 50",
+      "response_text": "Have you ever heard the story of the bomber that crashed into the lake before the War? Supposedly it's mostly intact, even after all that time.",
+      "index": "12"
+    },
+    {
+      "topic": "vDialogueRangerStationAlphaRSAlphaLineholmTopic001",
+      "topic_text": "So, you're a Ranger?",
+      "emotion": "Neutral 50",
+      "response_text": "For about ten years now. Toughest training I've ever done, and was the proudest day of my life when I got my Ranger badge.",
+      "index": "13"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "So long.",
+      "index": "15"
+    }
+  ],
+  "combat": []
+}

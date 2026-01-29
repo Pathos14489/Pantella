@@ -1,0 +1,79 @@
+{
+  "name": "Frank",
+  "url": "/wiki/Frank_(Paradise_Falls)",
+  "dialogue_name": "ParadiseFallsBarTender.txt",
+  "dialogue_url": "/wiki/ParadiseFallsBarTender.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "00066E68",
+  "ref_id": "00066E6F",
+  "editor_id": "ParadiseFallsBarTender",
+  "location": "Paradise Falls",
+  "location_url": "/wiki/Paradise_Falls",
+  "descriptions": [
+    "Frank is the slave bartender of Paradise Falls in 2277.",
+    "Frank was captured by slavers in a raid north of Megaton and has been a servant for a few months, working as Paradise Falls' bartender.",
+    "PC Playstation 3 Xbox 360 It is possible that if one attacks his body with a weapon even after he is dead, the slavers will turn hostile. "
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Slaves",
+  "role": "Bartender",
+  "detailed_location": "Paradise Falls",
+  "voice_actor": "Jeff Baker",
+  "special": {
+    "Strength": 6,
+    "Perception": 4,
+    "Endurance": 4,
+    "Charisma": 6,
+    "Intelligence": 4,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "mod_special_values": {
+    "Strength": 6,
+    "Perception": 4,
+    "Endurance": 5,
+    "Charisma": 6,
+    "Intelligence": 4,
+    "Agility": 7,
+    "Luck": 5
+  },
+  "level": "3",
+  "tag_skills": [
+    {
+      "Barter:": "41"
+    },
+    {
+      "Melee Weap.:": "41"
+    },
+    {
+      "Small Guns:": "41(43)"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "35(40)"
+    }
+  ],
+  "karma": "Evil",
+  "voice_type": "MaleAdult01DefaultDC",
+  "geck_race": "Hispanic",
+  "topics": [
+    {
+      "topic": "PFFFBarScene2",
+      "topic_text": "PFFFBarScene2",
+      "emotion": "Neutral 50",
+      "response_text": "Please! No! I didn't! I swear!",
+      "index": "1"
+    }
+  ],
+  "conversation": [],
+  "combat": []
+}

@@ -1,0 +1,206 @@
+{
+  "name": "Eddie",
+  "url": "/wiki/Eddie_(Fallout:_New_Vegas)",
+  "dialogue_name": "NCRCFEddie.txt",
+  "dialogue_url": "/wiki/NCRCFEddie.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "0008D0E9",
+  "ref_id": "000D7036",
+  "editor_id": "NCRCFEddie",
+  "location": "NCR CF administration",
+  "location_url": "/wiki/NCR_CF_administration",
+  "descriptions": [
+    "Eddie is the leader of the Powder Gangers operating in the NCR Correctional Facility in 2281. He appears as a minor faction leader in Fallout: New Vegas.",
+    "Eddie is the leader of the Powder Gangers and can be found on the top floor of the administration office in the NCR Correctional Facility, having occupied the warden's office. Eddie, a former NCR prisoner, assumed control over the Powder Gangers after Samuel Cooke, the original leader of the prisoner uprising, left north with a group of followers to Vault 19 in order to wage a personal war against the NCR. Since then, Eddie has led the former prisoners as they have raided caravans passing near the NCRCF, always making sure that every Powder Ganger gives him a cut of the spoils.",
+    "If asked for work, Eddie will give the quest I Fought the Law. Killing him will result in the failure of the quest unless progressed far enough to betray him to the NCR. A positive reputation with the Powder Gangers will grant dynamite and various gunpowders from him. He will give out a maximum of 5 dynamite and 20 each of rifle and pistol powder once an Idolized status with the Powder Gangers is attained.",
+    "Eddie is protected at all times by three Powder Ganger bodyguards, as well as his good buddy Scrambler, the toughest member of the Powder Gangers.",
+    "Narrated by Eddie",
+    "#"
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Powder Gangers",
+  "role": "Powder Ganger leader",
+  "detailed_location": "NCR Correctional Facility",
+  "voice_actor": "Emerson Brooks",
+  "special": {
+    "Strength": 6,
+    "Perception": 6,
+    "Endurance": 6,
+    "Charisma": 6,
+    "Intelligence": 5,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "level": "5",
+  "tag_skills": [
+    {
+      "Energy Weap.:": "50"
+    },
+    {
+      "Explosives:": "45"
+    },
+    {
+      "Guns:": "43"
+    },
+    {
+      "Melee Weap.:": "43"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "75→105"
+    },
+    {
+      "Dam. Threshold:": "4→5"
+    }
+  ],
+  "karma": "Evil",
+  "voice_type": "MaleAdult01DefaultB",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "{Prison under attack}No time to talk. We've got trouble.",
+      "index": "1"
+    },
+    {
+      "topic": "VEndingNCRCF",
+      "topic_text": "VEndingNCRCF",
+      "emotion": "Neutral 50",
+      "response_text": "{narrating}After Hoover Dam, the leaderless Powder Gangers at the Correctional Facility vanished into the wastes, leaving the prison empty.",
+      "index": "13"
+    },
+    {
+      "topic": "VFreeformNCRCFNCRCFEddieTopic000",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "{dismissive, slightly unfriendly}Yeah, get out of here.",
+      "index": "21"
+    },
+    {
+      "topic": "VFreeformNCRCFNCRCFEddieTopic001",
+      "topic_text": "What do you need done?",
+      "emotion": "Neutral 50",
+      "response_text": "This is Powder Ganger territory - my territory. Most of the guys around here understand that. One, Chavez, doesn't.",
+      "index": "22"
+    },
+    {
+      "topic": "VFreeformNCRCFNCRCFEddieTopic002",
+      "topic_text": "Got any spare powder and dynamite available?",
+      "emotion": "Anger 20",
+      "response_text": "{Player lost Good rep}Nope, not for you. Rumor is you've been working against us, so the deal's off.",
+      "index": "26"
+    },
+    {
+      "topic": "VFreeformNCRCFNCRCFEddieTopic003",
+      "topic_text": "You've got trouble. The NCR are planning a raid on this place soon.",
+      "emotion": "Anger 20",
+      "response_text": "{explosion heard}Sounds like they're already here. There's no way I'm letting them take me alive.",
+      "index": "29"
+    },
+    {
+      "topic": "VFreeformNCRCFNCRCFEddieTopic006",
+      "topic_text": "Chavez has been dealt with. You won't see him around here anymore.",
+      "emotion": "Neutral 50",
+      "response_text": "I'm happy you cleaned that up for me, but we've got another situation to worry about. There's a merchant hanging around near the prison.",
+      "index": "31"
+    },
+    {
+      "topic": "VFreeformNCRCFNCRCFEddieTopic007",
+      "topic_text": "What exactly is \"funny\" about that merchant you want me to check out?",
+      "emotion": "Neutral 50",
+      "response_text": "{Non-dummy}Most people already know we run this territory, and are usually in a hurry to get out. Not this guy. It's like he wants us to come get him.",
+      "index": "33"
+    },
+    {
+      "topic": "VFreeformNCRCFNCRCFEddieTopic008",
+      "topic_text": "I got rid of him.",
+      "emotion": "Neutral 50",
+      "response_text": "Good. Had him figured for NCR, one of the rangers maybe. Anyway, speaking of the NCR, I need you to take a walk down to Primm.",
+      "index": "35"
+    },
+    {
+      "topic": "VFreeformNCRCFNCRCFEddieTopic009",
+      "topic_text": "What am I looking for in Primm?",
+      "emotion": "Neutral 50",
+      "response_text": "I know the NCR has troops near Primm, so talk to the locals and find out if any of those troops are going to be coming our way.",
+      "index": "37"
+    },
+    {
+      "topic": "VFreeformNCRCFNCRCFEddieTopic010",
+      "topic_text": "I'll do it.",
+      "emotion": "Neutral 50",
+      "response_text": "Good. Chavez and his boys were last seen south of here. If you're lucky and he's careless, he might still be there.",
+      "index": "38"
+    },
+    {
+      "topic": "VFreeformNCRCFNCRCFEddieTopic011",
+      "topic_text": "How did you end up in this place?",
+      "emotion": "Neutral 50",
+      "response_text": "Why do you care? Answer: you shouldn't. I don't feel like trading life stories.",
+      "index": "39"
+    },
+    {
+      "topic": "VFreeformNCRCFNCRCFEddieTopic012",
+      "topic_text": "How did the breakout happen?",
+      "emotion": "Neutral 50",
+      "response_text": "It was all Cooke's idea. He and his boys managed to swipe some dynamite and hide it away in their cells.",
+      "index": "40"
+    },
+    {
+      "topic": "VFreeformNCRCFNCRCFEddieTopic013",
+      "topic_text": "What can you tell me about the prison?",
+      "emotion": "Neutral 50",
+      "response_text": "The NCR called it a \"work-release\" prison. We lucky prisoners got the privilege of fixing up the rail lines and blasting rock for new lines.",
+      "index": "42"
+    },
+    {
+      "topic": "VFreeformNCRCFNCRCFEddieTopic014",
+      "topic_text": "Where is Cooke now?",
+      "emotion": "Neutral 50",
+      "response_text": "He and his crew went north. I heard talk about some sort of \"big plan\" to get back at the NCR, but haven't seen them since.",
+      "index": "44"
+    },
+    {
+      "topic": "VFreeformNCRCFNCRCFEddieTopic016",
+      "topic_text": "What do you know about Cooke?",
+      "emotion": "Neutral 50",
+      "response_text": "One mean son of a bitch. Really, truly hates the NCR for some reason, and he got a lot of the other guys around to his way of thinking.",
+      "index": "45"
+    },
+    {
+      "topic": "VFreeformNCRCFNCRCFEddieTopic017",
+      "topic_text": "I'll need to think about this.",
+      "emotion": "Neutral 50",
+      "response_text": "Fuck you for wasting my time, then.",
+      "index": "46"
+    },
+    {
+      "topic": "VFreeformNCRCFNCRCFEddieTopic018",
+      "topic_text": "You only want me to deal with Chavez?",
+      "emotion": "Neutral 50",
+      "response_text": "Chavez is the ringleader. Without him, his crew will fall apart, and I don't give a shit about those guys.",
+      "index": "47"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "{dismissive, slightly unfriendly}Yeah, get out of here.",
+      "index": "48"
+    }
+  ],
+  "combat": []
+}

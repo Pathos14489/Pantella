@@ -1,0 +1,175 @@
+{
+  "name": "Faydra",
+  "url": "/wiki/Faydra",
+  "dialogue_name": "DLC01Faydra.txt",
+  "dialogue_url": "/wiki/DLC01Faydra.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "xx0032E4",
+  "ref_id": "xx0032ED",
+  "editor_id": "DLC01Faydra",
+  "location": "The Mill",
+  "location_url": "/wiki/The_Mill",
+  "descriptions": [
+    "Faydra is one of the Pitt raiders in Fallout 3.",
+    "Faydra guards the entrance to the arena, also known as the Hole. During her time in this position, she has scavenged several pieces of equipment from past fighters who died in the arena. As she has seen many past fighters fall, it takes someone of considerable combat capabilities to impress her.",
+    "She coordinates the fights that take place in the arena",
+    "If the Lone Wanderer is lacking in sufficient weaponry for fighting in the arena, Faydra will offer a few spare weapons in a locker nearby, as well as two doses of Rad-X on a medical tray.",
+    "She stands around in front of the Hole, waiting for an unlucky scab to get booted down and thrown into the fight.",
+    "She is friends with Spook.",
+    "Dropping any consumable items near Faydra will result in her picking them up. However, pickpocketing will reveal that they are not in her inventory.",
+    "Faydra appears only in the Fallout 3 add-on The Pitt.",
+    "Faydra's name in the G.E.C.K. is sometimes spelled \"Phaedra.\""
+  ],
+  "race": "Human",
+  "gender": "Female",
+  "affiliation": "Pitt raiders",
+  "role": "Arena manager",
+  "detailed_location": "The Mill",
+  "voice_actor": "Vanessa Richardson",
+  "special": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 3,
+    "Intelligence": 3,
+    "Agility": 7,
+    "Luck": 5
+  },
+  "level": "1→4→9",
+  "tag_skills": [
+    {
+      "Melee Weap.:": "32→45→66"
+    },
+    {
+      "Small Guns:": "34→47→68"
+    },
+    {
+      "Unarmed:": "28→41→62"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "25→55→85"
+    }
+  ],
+  "karma": "Evil",
+  "voice_type": "DLC01RaiderFemaleColdVoice",
+  "geck_race": "DLCPittCaucasianMut",
+  "topics": [
+    {
+      "topic": "DLC01PhaedraArenaFight",
+      "topic_text": "I'm ready to fight.",
+      "emotion": "Neutral 50",
+      "response_text": "This'll be your last fight, scab. One more and I don't get to call you that anymore. You ready?",
+      "index": "1"
+    },
+    {
+      "topic": "DLC01PhaedraArenaFightNO",
+      "topic_text": "No, not yet.",
+      "emotion": "Neutral 50",
+      "response_text": "I'm not surprised. Just don't take too long. And don't get yourself killed anywhere but in here.",
+      "index": "4"
+    },
+    {
+      "topic": "DLC01PhaedraArenaFightWho",
+      "topic_text": "Who am I going to be fighting?",
+      "emotion": "Neutral 50",
+      "response_text": "You're going up against Gruber. He's one of the only slaves to win in the Hole. There's only ever been... what? Three?",
+      "index": "5"
+    },
+    {
+      "topic": "DLC01PhaedraArenaFightYES",
+      "topic_text": "Let's do it!",
+      "emotion": "Neutral 50",
+      "response_text": "Well all right! That's what I like to hear! Get on in there!",
+      "index": "12"
+    },
+    {
+      "topic": "DLC01PhaedraArenaSignUp",
+      "topic_text": "I want to fight in the Arena.",
+      "emotion": "Neutral 50",
+      "response_text": "Oh yeah? You sure you're ready to die?",
+      "index": "15"
+    },
+    {
+      "topic": "DLC01PhaedraGreeting1",
+      "topic_text": "Where do I sign up?",
+      "emotion": "Neutral 50",
+      "response_text": "You don't sign up. You tell me that you want to fight. I set up a fight. You die, and I repeat it with the next jackass slave who comes in here.",
+      "index": "16"
+    },
+    {
+      "topic": "DLC01PhaedraGreeting2",
+      "topic_text": "What goes on down here?",
+      "emotion": "Neutral 50",
+      "response_text": "What? One of the boys hit you upside the head a little too hard? This is the arena. You want to fight? You tell me. I'll set it up.",
+      "index": "18"
+    },
+    {
+      "topic": "DLC01PhaedraGreetingSignUpNO",
+      "topic_text": "Not right now.",
+      "emotion": "Neutral 50",
+      "response_text": "I'm not surprised. Just don't take too long. And don't get yourself killed anywhere but in here.",
+      "index": "20"
+    },
+    {
+      "topic": "DLC01PhaedraGreetingSignUpYES",
+      "topic_text": "Yes. Put me down for a fight.",
+      "emotion": "Neutral 50",
+      "response_text": "Well, all right. I've got one for you right away. Or you can take some time to put your affairs in order. It's up to you.",
+      "index": "21"
+    },
+    {
+      "topic": "DLC01PhaedraTopicArenaRules",
+      "topic_text": "What are the Arena Rules?",
+      "emotion": "Neutral 50",
+      "response_text": "It's pretty simple. When the gates open, you fight. The last one standing wins.",
+      "index": "22"
+    },
+    {
+      "topic": "DLC01PhaedraTopicArenaWeapons",
+      "topic_text": "Do I get any weapons?",
+      "emotion": "Neutral 50",
+      "response_text": "You have what you take in with you.",
+      "index": "25"
+    },
+    {
+      "topic": "DLC01PhaedraTopicOtherFighters",
+      "topic_text": "Tell me about other slaves who have fought in the Arena.",
+      "emotion": "Neutral 50",
+      "response_text": "What's to tell? Most die. One or two have made it out, but that's about it.",
+      "index": "27"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "Not bad, grinder. Not bad. The Bear Brothers were some pretty mean sons o' bitches.",
+      "index": "28"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "I have to go now.",
+      "emotion": "Neutral 50",
+      "response_text": "Come back when you're ready to fight.",
+      "index": "42"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Happy 50",
+      "response_text": "I don't see why Ashur's wasting his time with you.",
+      "index": "45"
+    }
+  ],
+  "combat": []
+}

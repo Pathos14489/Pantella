@@ -1,0 +1,176 @@
+{
+  "name": "Paulie Cantelli",
+  "url": "/wiki/Paulie_Cantelli",
+  "dialogue_name": "PaulieCantelli.txt",
+  "dialogue_url": "/wiki/PaulieCantelli.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": true,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000156B6",
+  "ref_id": "0001E74C",
+  "editor_id": "PaulieCantelli",
+  "location": "A Quick Fix,Rivet City market",
+  "location_url": "/wiki/A_Quick_Fix",
+  "descriptions": [
+    "Paulie Cantelli is the co-proprietor of A Quick Fix in Rivet City in 2277.",
+    "Paulie and his wife Cindy run A Quick Fix, the chem dispensary in the Rivet City market. The shop is well known for its good stock;",
+    "Paulie spends his time chronically abusing chems as dangerous as Psycho and trying to get others to join his binges. His constant pestering of Mei Wong has exacerbated her nervousness,",
+    "Rivet City security, as well as everyone else, is well aware of Paulie's addiction. Chief Harkness is among the people who try to get him to at least slow down on his usage, to little effect.",
+    "He is normally seen roaming around anywhere in Rivet City."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Rivet City",
+  "role": "Chem addict",
+  "detailed_location": "Rivet City",
+  "voice_actor": "Jeff Baker",
+  "special": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 7,
+    "Intelligence": 5,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "mod_special_values": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 7,
+    "Intelligence": 5,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "level": "4",
+  "tag_skills": [
+    {
+      "Barter:": "49"
+    },
+    {
+      "Melee Weap.:": "45"
+    },
+    {
+      "Speech:": "49"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Neutral",
+  "voice_type": "MaleAdult01DefaultDC",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "Haven't seen you in here before. Do you need a fix? I might have what you need. You can always come see Paulie to get what you need.",
+      "index": "1"
+    },
+    {
+      "topic": "MS03RCHistory1Could I ask you about Rivet City's history?",
+      "topic_text": "I'm trying to find out Rivet City's history. Can you help?",
+      "emotion": "Surprise 50",
+      "response_text": "Huh? History? What history? No history here, man.{Said while heavily drugged and confused.}",
+      "index": "6"
+    },
+    {
+      "topic": "MS14TedFind",
+      "topic_text": "Where can I find Ted Strayer?",
+      "emotion": "Neutral 50",
+      "response_text": "Have you tried the common room?  That's where he sleeps.",
+      "index": "8"
+    },
+    {
+      "topic": "RCPaulieCantelliBadForYou",
+      "topic_text": "You shouldn't take that stuff. It'll kill you.",
+      "emotion": "Fear 50",
+      "response_text": "That's what Cindy says too. But I got the itch. I need it bad.",
+      "index": "11"
+    },
+    {
+      "topic": "RCPaulieCantelliGiveDrugs",
+      "topic_text": "Here. Have some Psycho.",
+      "emotion": "Happy 50",
+      "response_text": "Thanks, man. I really need this fix.",
+      "index": "12"
+    },
+    {
+      "topic": "RCPaulieCantelliStash",
+      "topic_text": "You're a junkie? Tell me where you keep your stash. Now!",
+      "emotion": "Sad 50",
+      "response_text": "Okay, okay! I steal them from Doc Preston. There's an empty room across from the Staley's. I hide them in the file cabinet in there.",
+      "index": "13"
+    },
+    {
+      "topic": "RCPaulieCantelliStealDrugs",
+      "topic_text": "Why don't you just take them from your shop?",
+      "emotion": "Sad 50",
+      "response_text": "My wife, Cindy. She's always watching the inventory. If I take any, she'll lock me out.",
+      "index": "14"
+    },
+    {
+      "topic": "RCTopicHangarDeckPeople",
+      "topic_text": "What is this I hear about the Hangar Deck and Upper Deck?",
+      "emotion": "Anger 50",
+      "response_text": "Damn Upper Deckers. They think they're better than us. Well, screw them.",
+      "index": "15"
+    },
+    {
+      "topic": "RCTopicRivetCityWhat kind of place is this Rivet City?",
+      "topic_text": "Why are you guys living on this boat?",
+      "emotion": "Happy 50",
+      "response_text": "It's a place to live, safe from Raiders and Super Mutants.",
+      "index": "16"
+    },
+    {
+      "topic": "RivetCityBarterI'm here to do business with you.",
+      "topic_text": "I need some chems.",
+      "emotion": "Happy 50",
+      "response_text": "Let's get high.",
+      "index": "18"
+    },
+    {
+      "topic": "SpeechChallengeFailure",
+      "topic_text": "SpeechChallengeFailure",
+      "emotion": "Fear 50",
+      "response_text": "So you can take it? No way!",
+      "index": "19"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYEI have to go now.",
+      "topic_text": "I've got to run, Paulie.",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah. Me too.",
+      "index": "20"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Surprise 50",
+      "response_text": "Hey, Commander. Just walking the deck here. Yep, just walking the deck.{Quickly, nervous, has something to hide.}",
+      "index": "22"
+    },
+    {
+      "topic": "RCGoodbye",
+      "topic_text": "RCGoodbye",
+      "emotion": "Fear 50",
+      "response_text": "I know, I know. Tonight's my last night. Honest.",
+      "index": "32"
+    },
+    {
+      "topic": "RCPackageEnd",
+      "topic_text": "RCPackageEnd",
+      "emotion": "Surprise 50",
+      "response_text": "Oh! Got to get to the store. Cindy will kill me if I'm late again.",
+      "index": "37"
+    }
+  ],
+  "combat": []
+}

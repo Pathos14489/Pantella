@@ -1,0 +1,250 @@
+{
+  "name": "Captain Gilles",
+  "url": "/wiki/Gilles",
+  "dialogue_name": "VBSCaptainGilles.txt",
+  "dialogue_url": "/wiki/VBSCaptainGilles.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "0012AC9E",
+  "ref_id": "00133044",
+  "editor_id": "VBSCaptainGilles",
+  "location": "Bitter Springs",
+  "location_url": "/wiki/Bitter_Springs",
+  "descriptions": [
+    "Captain Gilles is an NCR captain located in the Bitter Springs refugee camp in 2281.",
+    "Captain Gilles is stationed at Bitter Springs in the north east region of the Mojave Wasteland. She is tasked with keeping the camp operational, but with the NCR's resources in other areas, she finds it difficult to do so. If left unchecked, the camp could soon become a dying spot for refugees.",
+    "The eternal lack of resources, lack of hands to help, and the generally poor situation of  refugees are a disaster in the making. Worst of all, for the past six months someone has been shooting at the camp, killing soldiers and refugees and devastating an already shocked population. By the time the Courier arrives, eight refugees and three soldiers were killed, always with a single bullet to the head from extreme range.",
+    "Climb Ev'ry MountainNo, Not Much",
+    "I Forgot to Remember to Forget",
+    "The ending slide in question",
+    "Captain Gilles appears in Craig Boone's ending slides, illustrating Boone's bad ending, where he travels into New California and kills the officer responsible for the Bitter Springs Massacre. However, as Dhatri unambiguously identifies the officer as male, this is likely a case of reusing existing assets for illustration, rather than identifying Gilles as the reponsible party."
+  ],
+  "race": "Human",
+  "gender": "Female",
+  "affiliation": "NCR Army",
+  "role": "Commander",
+  "detailed_location": "Bitter Springs",
+  "voice_actor": "April Stewart",
+  "special": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 5,
+    "Intelligence": 5,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "level": "6",
+  "tag_skills": [],
+  "misc_skills": [],
+  "karma": "Neutral",
+  "voice_type": "FemaleAdult03",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "CaptGillesFlag",
+      "topic_text": "Why is the flag upside down?",
+      "emotion": "Disgust 20",
+      "response_text": "{Confused and annoyed by a spectacularly dumb question}Of course I'm aware. It's a distress call. This camp is in bad shape, and if we don't get relief soon, I don't know what will happen.",
+      "index": "1"
+    },
+    {
+      "topic": "CaptainGillesAid",
+      "topic_text": "What can I do to help?",
+      "emotion": "Anger 30",
+      "response_text": "{Relieved}At this point, I'll take anything you can give me. We need more troops, fresh supplies, and medical relief.",
+      "index": "3"
+    },
+    {
+      "topic": "CaptainGillesCamp",
+      "topic_text": "What is this place?",
+      "emotion": "Sad 10",
+      "response_text": "This is the Bitter Springs refugee camp. We've been maintaining it for a few years now, ever since Caesar's Legion started seriously pushing west.",
+      "index": "7"
+    },
+    {
+      "topic": "CaptainGillesOscar",
+      "topic_text": "I've dealt with the attacks on the camp. They won't be a problem any more.",
+      "emotion": "Happy 50",
+      "response_text": "You did? Who was it? Any information you can give me would be a big help for my reports.",
+      "index": "11"
+    },
+    {
+      "topic": "CaptainGillesRadioactiveSupplies",
+      "topic_text": "<Lie, give radioactive supplies> These supplies should be \"helpful.\" Enjoy them.",
+      "emotion": "Happy 30",
+      "response_text": "Where did you get this? You know what, it doesn't even matter. Thank you. This will be a tremendous help.",
+      "index": "13"
+    },
+    {
+      "topic": "CaptainGillesRadioactiveSuppliesScience",
+      "topic_text": "These supplies are irradiated, but if we filter them with Rad-X they'll be safe.",
+      "emotion": "Happy 30",
+      "response_text": "[SUCCEEDED] We do have some spare Rad-X in the supply tent. That might work. Thank you.",
+      "index": "14"
+    },
+    {
+      "topic": "CaptainGillesSupplies",
+      "topic_text": "I found these supply caches in some caves up the mountain. Maybe they'll help.",
+      "emotion": "Happy 50",
+      "response_text": "Where did you get these? You know what, it doesn't even matter. Thank you. These will be a tremendous help.",
+      "index": "16"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Surprise 20",
+      "response_text": "You're back. Any progress on saving our skins?",
+      "index": "19"
+    },
+    {
+      "topic": "VMS36VBSCaptainGillesTopic000",
+      "topic_text": "Where would you get new troops from?",
+      "emotion": "Sad 50",
+      "response_text": "{Frustrated}I don't know. The NCR's stretched thin as it is. I've put in requests at Camp Golf, Forlorn Hope, McCarran - but things are no better there.",
+      "index": "38"
+    },
+    {
+      "topic": "VMS36VBSCaptainGillesTopic001",
+      "topic_text": "What kind of supplies?",
+      "emotion": "Anger 25",
+      "response_text": "{Frustrated}Food, blankets, clothes, tools. The army used to ship out caches of supplies regularly, but with the Legion so active we haven't gotten any in months.",
+      "index": "40"
+    },
+    {
+      "topic": "VMS36VBSCaptainGillesTopic002",
+      "topic_text": "How can I help with medical supplies?",
+      "emotion": "Neutral 50",
+      "response_text": "You'll want to talk to Lieutenant Markland about that, he's our medical officer. He should be down at the medical tent now.",
+      "index": "41"
+    },
+    {
+      "topic": "VMS36VBSCaptainGillesTopic003",
+      "topic_text": "What's this about someone killing refugees?",
+      "emotion": "Fear 25",
+      "response_text": "{Worried, a little afraid}It started about six months ago. At first it was just supplies going missing - we figured it was refugees. Then people started dying.",
+      "index": "42"
+    },
+    {
+      "topic": "VMS36VBSCaptainGillesTopic004",
+      "topic_text": "I'd like to ask about something else.",
+      "emotion": "Neutral 50",
+      "response_text": "{Stressed}Okay, but make it quick - I'm very busy here.",
+      "index": "45"
+    },
+    {
+      "topic": "VMS36VBSCaptainGillesTopic005",
+      "topic_text": "Why are there so many Great Khan tags around the camp?",
+      "emotion": "Disgust 10",
+      "response_text": "This whole area used to be a Great Khan encampment before they relocated to Red Rock Canyon. We just haven't had the manpower to clean it all up yet.",
+      "index": "46"
+    },
+    {
+      "topic": "VMS36VBSCaptainGillesTopic006",
+      "topic_text": "I see. Well, that's too bad. Good luck.",
+      "emotion": "Disgust 20",
+      "response_text": "{Sarcastic}Thanks. Your concern is touching.",
+      "index": "47"
+    },
+    {
+      "topic": "VMS36VBSCaptainGillesTopic007",
+      "topic_text": "I don't need any reward, just keep these people fed and healthy.",
+      "emotion": "Happy 70",
+      "response_text": "{Grateful}That's very generous of you. I appreciate it.",
+      "index": "48"
+    },
+    {
+      "topic": "VMS36VBSCaptainGillesTopic008",
+      "topic_text": "Whatever you can spare would be a big help.",
+      "emotion": "Happy 30",
+      "response_text": "{Pleased}Here, take this. I hope you put it to good use.",
+      "index": "49"
+    },
+    {
+      "topic": "VMS36VBSCaptainGillesTopic009",
+      "topic_text": "I dragged myself all over Hell's half-acre for you, I expect something substantial!",
+      "emotion": "Disgust 30",
+      "response_text": "{Cold}If a reward is all you're concerned with, here.{Bitter}Enjoy it.",
+      "index": "50"
+    },
+    {
+      "topic": "VMS36VBSCaptainGillesTopic010",
+      "topic_text": "I've got other questions.",
+      "emotion": "Surprise 10",
+      "response_text": "{Stressed}Sure, but make them quick.",
+      "index": "51"
+    },
+    {
+      "topic": "VMS36VBSCaptainGillesTopic011",
+      "topic_text": "Not yet, but I had some questions.",
+      "emotion": "Surprise 10",
+      "response_text": "Sure, just make them quick.",
+      "index": "52"
+    },
+    {
+      "topic": "VMS37VBSCaptainGillesTopic000",
+      "topic_text": "It was a Great Khan named Oscar Velasco. His family was killed by the NCR, and he wanted revenge.",
+      "emotion": "Fear 20",
+      "response_text": "{Suddenly reserved}Ah. I should have expected as much. There's still a lot of bad blood between the Khans and the NCR, ever since the incident here.",
+      "index": "53"
+    },
+    {
+      "topic": "VMS37VBSCaptainGillesTopic001",
+      "topic_text": "You mean the massacre three years ago?",
+      "emotion": "Disgust 20",
+      "response_text": "{Pointed emphasis}The incident, yes. It was a tragic mistake, but the NCR has done everything it can to make amends since then.",
+      "index": "55"
+    },
+    {
+      "topic": "VMS37VBSCaptainGillesTopic002",
+      "topic_text": "What incident?",
+      "emotion": "Disgust 20",
+      "response_text": "{Reluctant}About three years ago, this canyon was the main encampment for the Great Khans. NCR's 1st Recon tracked them here after a raid and made an attack.",
+      "index": "56"
+    },
+    {
+      "topic": "VMS37VBSCaptainGillesTopic003",
+      "topic_text": "Like what? It looks to me like the NCR ran the Khans out of Bitter Springs altogether.",
+      "emotion": "Anger 10",
+      "response_text": "We provided medical aid to the wounded -{emphasis}all the wounded - and permitted the Khans to resettle at Red Rock Canyon.",
+      "index": "58"
+    },
+    {
+      "topic": "VMS37VBSCaptainGillesTopic004",
+      "topic_text": "Well, it's taken care of now. I convinced him to leave Bitter Springs alone.",
+      "emotion": "Happy 50",
+      "response_text": "{Grateful}I don't know how you did it, but thank you.",
+      "index": "59"
+    },
+    {
+      "topic": "VMS37VBSCaptainGillesTopic005",
+      "topic_text": "That's very noble of you. I'd like to talk about something else though.",
+      "emotion": "Happy 20",
+      "response_text": "{Relieved}Sure. What do you need?",
+      "index": "61"
+    },
+    {
+      "topic": "VMS37VBSCaptainGillesTopic006",
+      "topic_text": "Any idea why a Great Khan would be so far from Red Rock Canyon?",
+      "emotion": "Disgust 30",
+      "response_text": "{Reluctant}About three years ago, NCR's 1st Recon launched an attack on the Khan encampment here.",
+      "index": "62"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Good luck.",
+      "index": "65"
+    }
+  ],
+  "combat": []
+}

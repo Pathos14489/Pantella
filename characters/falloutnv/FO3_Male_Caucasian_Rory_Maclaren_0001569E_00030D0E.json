@@ -1,0 +1,207 @@
+{
+  "name": "Rory Maclaren",
+  "url": "/wiki/Rory_Maclaren",
+  "dialogue_name": "RoryMaclaren.txt",
+  "dialogue_url": "/wiki/RoryMaclaren.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "0001569E",
+  "ref_id": "00030D0E",
+  "editor_id": "RoryMaclaren",
+  "location": "Paradise Fallsbox",
+  "location_url": "/wiki/Paradise_Falls",
+  "descriptions": [
+    "Rory Maclaren is a slave being held in Paradise Falls in the year 2277.",
+    "Instead of waiting until someone wants to purchase him, he is highly motivated to escape and is constantly thinking of escape methods. He dislikes being pushed around and has attacked his captors many times. He is forced to be in the Box permanently where unruly slaves go.",
+    "Rescue From Paradise",
+    "Rescue from Paradise: As a condition of leaving Paradise Falls, Penny will ask the Lone Wanderer to escort Rory to the entrance.",
+    "Once freed, he will travel to Moriarty's Saloon. Provided he survives, he will stand in the room to the right where Mr. Burke is found. When attempting dialogue, he will only say \"Hey. Talk fast, they hate it when I talk to customers.\"",
+    "His line \"Can't nobody eat fifty eggs,\" is a reference to the film Cool Hand Luke."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "detailed_location": "\"The Box\" inParadise FallsMegaton(if saved)",
+  "voice_actor": "Jeff Baker",
+  "special": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 5,
+    "Intelligence": 5,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "mod_special_values": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 6,
+    "Charisma": 5,
+    "Intelligence": 5,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "level": "1",
+  "misc_skills": [
+    {
+      "Hit Points:": "70(75)"
+    },
+    {
+      "Critical Chance:": "5%"
+    },
+    {
+      "Unarmed Dam.:": "0.75"
+    },
+    {
+      "Poison Resist.:": "20%(25%)"
+    },
+    {
+      "Rad. Resist.:": "8%(10%)"
+    },
+    {
+      "Carry Weight:": "200"
+    },
+    {
+      "Damage Res.:": "5%"
+    }
+  ],
+  "karma": "Good",
+  "voice_type": "MaleAdult01DefaultDC",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "Thanks for getting me out of there. I owe you one.",
+      "index": "1"
+    },
+    {
+      "topic": "MQ07RoryExplainChoice1",
+      "topic_text": "I came for the kids. Penny wanted you free, so here we are.",
+      "emotion": "Surprise 50",
+      "response_text": "Penny? She wanted you to set me free?",
+      "index": "12"
+    },
+    {
+      "topic": "MQ07RoryExplainChoice2",
+      "topic_text": "I need you out of here now, so I can get Penny out.",
+      "emotion": "Neutral 50",
+      "response_text": "Okay, fine. If it'll help Penny, I'll do it. What do you want me to do?",
+      "index": "15"
+    },
+    {
+      "topic": "MQ07RoryExplainChoice3",
+      "topic_text": "If you don't leave, Penny won't leave. She'll be killed. Is that what you want?",
+      "emotion": "Neutral 50",
+      "response_text": "No... No, I want Penny to be safe. She shouldn't be having second thoughts just because of me.",
+      "index": "16"
+    },
+    {
+      "topic": "MQ07RoryFinishBeCareful",
+      "topic_text": "We need to be careful. Stay low and stay quiet.",
+      "emotion": "Neutral 50",
+      "response_text": "You got it. I'll stay right with you. Get me to the front gate, and I can make a run for it from there.",
+      "index": "19"
+    },
+    {
+      "topic": "MQ07RoryFinishOnYourOwn",
+      "topic_text": "You're on your own, pal. I've got more important things to do.",
+      "emotion": "Neutral 50",
+      "response_text": "That's it, huh? Just toss me out of the box and into the meat grinder?",
+      "index": "20"
+    },
+    {
+      "topic": "MQ07RoryFinishRunForIt",
+      "topic_text": "We'll have to run for it.",
+      "emotion": "Neutral 50",
+      "response_text": "Okay, if you say so. I'll be right behind you. If you can get me to the front gate, I can take it from there.",
+      "index": "22"
+    },
+    {
+      "topic": "MQ07RoryFollowLetsGo",
+      "topic_text": "Let's go.",
+      "emotion": "Neutral 50",
+      "response_text": "Right behind you.",
+      "index": "23"
+    },
+    {
+      "topic": "MQ07RoryFollowNM",
+      "topic_text": "Never mind.",
+      "emotion": "Neutral 50",
+      "response_text": "Okay. Let's get the hell out of here.",
+      "index": "24"
+    },
+    {
+      "topic": "MQ07RoryFollowWait",
+      "topic_text": "Wait here.",
+      "emotion": "Neutral 50",
+      "response_text": "Man, I hope you know what you're doing.",
+      "index": "25"
+    },
+    {
+      "topic": "MQ07RoryGreetingChoice1",
+      "topic_text": "I'm here to set you free.",
+      "emotion": "Neutral 50",
+      "response_text": "What? Are you kidding me? This is another one of Forty's tricks, isn't it. Well I'm not falling for it.",
+      "index": "26"
+    },
+    {
+      "topic": "MQ07RoryGreetingChoice2",
+      "topic_text": "No time to talk. We've got to move, right now.",
+      "emotion": "Neutral 50",
+      "response_text": "Where are we going? What's going on? Who the hell ARE you?",
+      "index": "27"
+    },
+    {
+      "topic": "MQ07RoryGreetingChoice3",
+      "topic_text": "I'm the guy who's going to kill you if you don't get moving.",
+      "emotion": "Neutral 50",
+      "response_text": "What? What's going on? Who are you?",
+      "index": "28"
+    },
+    {
+      "topic": "MQ07RoryLetsGoChoice1",
+      "topic_text": "Penny asked me to get you out of here.",
+      "emotion": "Neutral 50",
+      "response_text": "She did? Is she safe? Can I see her?",
+      "index": "30"
+    },
+    {
+      "topic": "MQ07RoryLetsGoChoice2",
+      "topic_text": "There's no time for explanations. We've got to move!",
+      "emotion": "Neutral 50",
+      "response_text": "Look, I'm not going anywhere until you tell me what's going on. For all I know, you're just trying to trick me into another beating.",
+      "index": "31"
+    },
+    {
+      "topic": "MQ07RoryLetsGoChoice3",
+      "topic_text": "You want to get out of here, or you want to waste time asking questions?",
+      "emotion": "Neutral 50",
+      "response_text": "Fine, fine. Let's go. What's the plan?",
+      "index": "32"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "I have to go now.",
+      "emotion": "Neutral 50",
+      "response_text": "It's only a matter of time now.",
+      "index": "33"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Neutral 50",
+      "response_text": "Can't nobody eat fifty eggs...",
+      "index": "34"
+    }
+  ],
+  "combat": []
+}

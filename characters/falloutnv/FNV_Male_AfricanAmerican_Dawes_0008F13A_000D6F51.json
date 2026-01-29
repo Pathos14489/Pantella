@@ -1,0 +1,137 @@
+{
+  "name": "Dawes",
+  "url": "/wiki/Dawes_(Fallout:_New_Vegas)",
+  "dialogue_name": "NCRCFDawes.txt",
+  "dialogue_url": "/wiki/NCRCFDawes.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "0008F13A",
+  "ref_id": "000D6F51",
+  "editor_id": "NCRCFDawes",
+  "location": "Visitors centerentrance",
+  "location_url": "/wiki/Visitors_center",
+  "descriptions": [
+    "Dawes is a Powder Ganger who guards the NCR Correctional Facility entrance in 2281.",
+    "A glorified gate guard,",
+    "Dawes will grant access to the NCR Correctional Facility to a character who has a sufficient reputation with the Powder Gangers in exchange for 100 caps."
+  ],
+  "race": "Human, African American",
+  "gender": "Male",
+  "affiliation": "Powder Gangers",
+  "role": "Door guard",
+  "detailed_location": "NCR Correctional Facility",
+  "voice_actor": "Ari Rubin",
+  "special": {
+    "Strength": 5,
+    "Perception": 6,
+    "Endurance": 5,
+    "Charisma": 3,
+    "Intelligence": 3,
+    "Agility": 5,
+    "Luck": 4
+  },
+  "level": "3",
+  "tag_skills": [
+    {
+      "Explosives:": "36"
+    },
+    {
+      "Guns:": "36"
+    },
+    {
+      "Melee Weap.:": "36"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Evil",
+  "voice_type": "MaleAdult04",
+  "geck_race": "AfricanAmerican",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Fear 50",
+      "response_text": "{Prison under attack}There's still more troopers out there!",
+      "index": "1"
+    },
+    {
+      "topic": "VFreeformNCRCFNCRCFDawesTopic000",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Yup.",
+      "index": "8"
+    },
+    {
+      "topic": "VFreeformNCRCFNCRCFDawesTopic001",
+      "topic_text": "What is this place?",
+      "emotion": "Neutral 50",
+      "response_text": "This? This is - or was - the big house. The New California Republic Correctional Facility. Not much \"correcting\" went on here, just slave labor.",
+      "index": "9"
+    },
+    {
+      "topic": "VFreeformNCRCFNCRCFDawesTopic002",
+      "topic_text": "Can I go in?",
+      "emotion": "Neutral 50",
+      "response_text": "{he does know}Well, I don't know. Depends on if you can make it worth my time. A hundred caps sounds right to me.",
+      "index": "11"
+    },
+    {
+      "topic": "VFreeformNCRCFNCRCFDawesTopic003",
+      "topic_text": "Here's the caps.",
+      "emotion": "Neutral 50",
+      "response_text": "All right, you can go on in. Can't guarantee your safety, though. Just saying.",
+      "index": "13"
+    },
+    {
+      "topic": "VFreeformNCRCFNCRCFDawesTopic004",
+      "topic_text": "Never mind.",
+      "emotion": "Anger 10",
+      "response_text": "Quit wasting my time.",
+      "index": "14"
+    },
+    {
+      "topic": "VFreeformNCRCFNCRCFDawesTopic005",
+      "topic_text": "What did you do to end up in here?",
+      "emotion": "Neutral 50",
+      "response_text": "Me? I ran with the toughest gang in the Hub. You've heard of the Hub, right? It's, uh, west of here, I think, back in California.",
+      "index": "15"
+    },
+    {
+      "topic": "VFreeformNCRCFNCRCFDawesTopic006",
+      "topic_text": "If you're free, why are you sticking around?",
+      "emotion": "Neutral 50",
+      "response_text": "We've got the biggest, baddest fort in the wasteland. There's water and power, and if we need grub, we just go out and steal it.",
+      "index": "16"
+    },
+    {
+      "topic": "VFreeformNCRCFNCRCFDawesTopic007",
+      "topic_text": "What exactly is a Powder Ganger?",
+      "emotion": "Neutral 50",
+      "response_text": "That's us. We got sent here to fix the rails and make some new ones, and for that we got to use dynamite.",
+      "index": "17"
+    },
+    {
+      "topic": "VFreeformNCRCFNCRCFDawesTopic008",
+      "topic_text": "Who's in charge of the prison now?",
+      "emotion": "Neutral 50",
+      "response_text": "{Eddie alive}That'll be Eddie. You can usually find him sitting in the warden's old chair up in the main building.",
+      "index": "19"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah, whatever.",
+      "index": "21"
+    }
+  ],
+  "combat": []
+}

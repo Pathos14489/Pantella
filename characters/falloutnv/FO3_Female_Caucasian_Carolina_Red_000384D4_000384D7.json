@@ -1,0 +1,165 @@
+{
+  "name": "Carolina Red",
+  "url": "/wiki/Carolina_Red",
+  "dialogue_name": "CarolinaRed.txt",
+  "dialogue_url": "/wiki/CarolinaRed.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000384D4",
+  "ref_id": "000384D7",
+  "editor_id": "CarolinaRed",
+  "location": "Slaver barracks,Paradise Falls",
+  "location_url": "/wiki/Slaver_barracks",
+  "descriptions": [
+    "Carolina Red is a cruel female slaver in Paradise Falls in the year 2277.",
+    "Perhaps the least pleasant slaver in the camp, Red is a stern-faced psychopath who was abused and tortured all through her life. Even her fellow slavers give her a wide berth. Red loves to tell stories about her father, who once cut the legs off a man just to watch and laugh as he attempted to crawl away before crushing his skull with a rock because he was bored. After she tells the story, she pauses and then mentions that, come to think about it, that was \"pretty funny,\" illustrating just how sociopathic and twisted she has become - even for a slaver."
+  ],
+  "race": "Human",
+  "gender": "Female",
+  "affiliation": "Slavers",
+  "role": "Slaver",
+  "detailed_location": "Paradise Falls",
+  "voice_actor": "Shari Elliker",
+  "special": {
+    "Strength": 6,
+    "Perception": 4,
+    "Endurance": 4,
+    "Charisma": 6,
+    "Intelligence": 4,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "level": "3→10",
+  "tag_skills": [
+    {
+      "Barter:": "41→74"
+    },
+    {
+      "Melee Weap.:": "41→74(43→76)"
+    },
+    {
+      "Small Guns:": "41→74(43→76)"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "75→110"
+    },
+    {
+      "Critical Chance:": "5%"
+    },
+    {
+      "Unarmed Dam.:": "1.15"
+    },
+    {
+      "Poison Resist.:": "15%"
+    },
+    {
+      "Rad. Resist.:": "6%"
+    },
+    {
+      "Carry Weight:": "210"
+    },
+    {
+      "Damage Res.:": "5%(17%)"
+    }
+  ],
+  "karma": "Very Evil",
+  "voice_type": "FemaleAdult01DefaultDC",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Disgust 50",
+      "response_text": "Why, look at what we have here. Some fresh meat, right out of the Wastes!",
+      "index": "1"
+    },
+    {
+      "topic": "PFCarolinaRedMean",
+      "topic_text": "Why are you so goddamned mean?",
+      "emotion": "Neutral 50",
+      "response_text": "I'm ain't mean. Not by a long shot.",
+      "index": "5"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "I have to go now.",
+      "emotion": "Neutral 50",
+      "response_text": "Y'all come back real soon.",
+      "index": "9"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Neutral 50",
+      "response_text": "<sniffs>You smell llike the Wasteland.",
+      "index": "10"
+    },
+    {
+      "topic": "PFLaugh",
+      "topic_text": "PFLaugh",
+      "emotion": "Neutral 50",
+      "response_text": "HAHAHAHAHAHAHA!",
+      "index": "18"
+    },
+    {
+      "topic": "PFTalkCarolinaRedYmir1",
+      "topic_text": "PFTalkCarolinaRedYmir1",
+      "emotion": "Neutral 50",
+      "response_text": "Oh, good. I always love questions from my favorite smelly barman.",
+      "index": "19"
+    },
+    {
+      "topic": "PFTalkCarolinaRedYmir3",
+      "topic_text": "PFTalkCarolinaRedYmir3",
+      "emotion": "Neutral 50",
+      "response_text": "Well... if I had to guess why that was, I guess it would be because you smell, you're drunk all the fucking time, and I don't like you very much.",
+      "index": "21"
+    },
+    {
+      "topic": "PFTalkCarolinaRedYmir5",
+      "topic_text": "PFTalkCarolinaRedYmir5",
+      "emotion": "Neutral 50",
+      "response_text": "Honey, I'll take anything you feel like paying for.",
+      "index": "23"
+    },
+    {
+      "topic": "PFTalkHiResponse1",
+      "topic_text": "PFTalkHiResponse1",
+      "emotion": "Neutral 50",
+      "response_text": "Whatever.",
+      "index": "25"
+    },
+    {
+      "topic": "PFTalkJotunCarolinaRed2",
+      "topic_text": "PFTalkJotunCarolinaRed2",
+      "emotion": "Neutral 50",
+      "response_text": "You don't really say much, do you?",
+      "index": "32"
+    },
+    {
+      "topic": "PFTalkJotunCarolinaRed4",
+      "topic_text": "PFTalkJotunCarolinaRed4",
+      "emotion": "Neutral 50",
+      "response_text": "I have to say, I like a man who knows how to look pretty and stay quiet...",
+      "index": "34"
+    },
+    {
+      "topic": "PFTalkYmirCarolinaRed2",
+      "topic_text": "PFTalkYmirCarolinaRed2",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah. Wow. And what boy doesn't want to grow up to be like his dad? Especially your boy.{Extremely sarcastic. }",
+      "index": "36"
+    }
+  ],
+  "combat": []
+}

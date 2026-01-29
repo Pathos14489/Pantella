@@ -1,0 +1,251 @@
+{
+  "name": "Vulpes Inculta",
+  "url": "/wiki/Vulpes_Inculta",
+  "dialogue_name": "VLegionaryVulpesInculta.txt",
+  "dialogue_url": "/wiki/VLegionaryVulpesInculta.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "001300E2",
+  "ref_id": "0013BF5B",
+  "editor_id": "VLegionaryVulpesInculta",
+  "location": "In front ofNipton Town Hall",
+  "location_url": "/wiki/Nipton_Town_Hall",
+  "descriptions": [
+    "Vulpes Inculta is the leader of the frumentarii in Caesar's Legion and one of the trusted men of Caesar, traveling in the Mojave Wasteland with a group of legionaries who attacked Nipton in 2281.",
+    "An individual from a tribe south of \"the Utah\", Vulpes was brought into Caesar's Legion as a child.",
+    "According to Ulysses, Vulpes Inculta was responsible for the destruction of the Twisted Hairs at Dry Wells",
+    "Vulpes is a devout believer of the dogma of Caesar perpetuating all his acts for the Legion, and firmly holds loyalty up as one the Legion's core tenets along with martial excellence and justice.",
+    "Vulpes Inculta appears in Fallout: New Vegas and is mentioned in its add-on Lonesome Road.",
+    "In Latin, vulpes translates as \"fox,\" while inculta can translate as \"uncultivated\" or \"rough.\" According to Joshua Sawyer, \"desert fox\" was one intended meaning behind Vulpes' name, but he acknowledged that he was not sure of the process behind naming the character, and it may have changed at some point.",
+    "Frumentarii: Alerio · Cato Hostilius · Gabban · Karl · Picus · Disguised frumentarius · Ulysses (formerly)\nConsul: M. Licinius Crassus · M. Scribonius Libo Drusus (of the consul)"
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Caesar's Legion",
+  "role": "Leader of the frumentariiJack of Clubs",
+  "detailed_location": "Town Hall,NiptonThe FortNew Vegas Strip",
+  "voice_actor": "Jason Spisak",
+  "special": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 5,
+    "Intelligence": 5,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "mod_special_values": {
+    "Strength": 5,
+    "Perception": 6,
+    "Endurance": 4,
+    "Charisma": 5,
+    "Intelligence": 5,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "level": "10→30→50 (DLCs only)",
+  "tag_skills": [
+    {
+      "Guns:": "66→100"
+    },
+    {
+      "Science:": "66→100"
+    },
+    {
+      "Unarmed:": "64→100"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "110→210→310"
+    }
+  ],
+  "karma": "Very Evil",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "{surprised}Well, isn't this a surprise. I was just finishing up here. To think that we might have missed each other!",
+      "index": "1"
+    },
+    {
+      "topic": "VNiptonVLegionaryVulpesIncultaTopic000",
+      "topic_text": "I'll do as you ask.",
+      "emotion": "Neutral 50",
+      "response_text": "Then I bid you{WAH-lay}\"Vale\" - until we meet again.",
+      "index": "13"
+    },
+    {
+      "topic": "VNiptonVLegionaryVulpesIncultaTopic006",
+      "topic_text": "Your crimes are unforgivable.",
+      "emotion": "Neutral 50",
+      "response_text": "{carefree}As are all crimes. If you feel strongly about it, attack us, and soon you won't feel a thing.",
+      "index": "14"
+    },
+    {
+      "topic": "VNiptonVLegionaryVulpesIncultaTopic007",
+      "topic_text": "What \"lessons\" did you teach here?",
+      "emotion": "Neutral 50",
+      "response_text": "Where to begin? That you are weak, and we are strong? This much was known already.",
+      "index": "16"
+    },
+    {
+      "topic": "VNiptonVLegionaryVulpesIncultaTopic008",
+      "topic_text": "Tell me about Caesar's Legion.",
+      "emotion": "Neutral 50",
+      "response_text": "The Legion is civilization reborn. Our culture is based on virtues such as martial excellence, loyalty, and justice.",
+      "index": "20"
+    },
+    {
+      "topic": "VNiptonVLegionaryVulpesIncultaTopic009",
+      "topic_text": "How can I serve the Legion?",
+      "emotion": "Neutral 50",
+      "response_text": "You bear the Mark of{KAI-zar}Caesar. That makes you special.",
+      "index": "23"
+    },
+    {
+      "topic": "VNiptonVLegionaryVulpesIncultaTopic010",
+      "topic_text": "Your \"civilization\" sounds like a pack of snarling dogs.",
+      "emotion": "Neutral 50",
+      "response_text": "{scoffing guffaw}Indeed, our hounds demonstrate greater loyalty to each other every day than the wretched inhabitants of this town.",
+      "index": "27"
+    },
+    {
+      "topic": "VNiptonVLegionaryVulpesIncultaTopic012",
+      "topic_text": "I'm going to wear your head like you wear that dog's.",
+      "emotion": "Neutral 50",
+      "response_text": "{calling to arms, frightened}Legionaries?! We have a problem!",
+      "index": "28"
+    },
+    {
+      "topic": "VNiptonVLegionaryVulpesIncultaTopic013",
+      "topic_text": "What exactly happened here?",
+      "emotion": "Neutral 50",
+      "response_text": "Nipton was a wicked place, debased and corrupt. It served all comers, so long as they paid.",
+      "index": "29"
+    },
+    {
+      "topic": "VNiptonVLegionaryVulpesIncultaTopic014",
+      "topic_text": "You captured everyone?",
+      "emotion": "Neutral 50",
+      "response_text": "Yes, and herded them to the center of town. I told them their sins, the foremost being disloyalty.",
+      "index": "32"
+    },
+    {
+      "topic": "VNiptonVLegionaryVulpesIncultaTopic015",
+      "topic_text": "Sounds like they got what was coming to them.",
+      "emotion": "Neutral 50",
+      "response_text": "Yes, they did. As will all the rest of you, in due time.",
+      "index": "35"
+    },
+    {
+      "topic": "VNiptonVLegionaryVulpesIncultaTopic016",
+      "topic_text": "I admire the purity of the Legion's justice.",
+      "emotion": "Neutral 50",
+      "response_text": "You're unusually bright for a Profligate. Well done.",
+      "index": "39"
+    },
+    {
+      "topic": "VNiptonVLegionaryVulpesIncultaTopic017",
+      "topic_text": "You slaughtered innocent civilians?",
+      "emotion": "Neutral 50",
+      "response_text": "{scoffing Ha!}Innocent? Hardly.",
+      "index": "43"
+    },
+    {
+      "topic": "VNiptonVLegionaryVulpesIncultaTopic018",
+      "topic_text": "I've heard enough.",
+      "emotion": "Neutral 50",
+      "response_text": "I think your eyes will see more than I could ever tell you. Take your time. Enjoy the sights.",
+      "index": "47"
+    },
+    {
+      "topic": "VNiptonVLegionaryVulpesIncultaTopic020",
+      "topic_text": "Who is this Legatus you mention?",
+      "emotion": "Neutral 50",
+      "response_text": "{admiring}Legatus Lanius, Monster of the East! Quite a man, if man he be.",
+      "index": "49"
+    },
+    {
+      "topic": "VNiptonVLegionaryVulpesIncultaTopic021",
+      "topic_text": "Tell me about Caesar.",
+      "emotion": "Neutral 50",
+      "response_text": "What can be said? He's a man of towering intellect, the founder of the Legion, conquerer of 86 tribes.",
+      "index": "53"
+    },
+    {
+      "topic": "VNiptonVLegionaryVulpesIncultaTopic022",
+      "topic_text": "Who are you?",
+      "emotion": "Neutral 50",
+      "response_text": "I am{WUHL-pace In-CUL-tah}Vulpes Inculta, of{KAI-zar's}Caesar's Legion. I serve my master as the greatest of his{froo-men-TAR-ee}Frumentarii.",
+      "index": "56"
+    }
+  ],
+  "conversation": [],
+  "combat": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "{Strip, High Rep}The eyes of the mighty{KAI-zar}Caesar are upon you. He appreciates your service, and bestows upon you the exceptional gift of his Mark.",
+      "index": "1"
+    },
+    {
+      "topic": "VFreeformTheFortVVulpesIncultaStripTopic000",
+      "topic_text": "Why does Caesar want to see me?",
+      "emotion": "Neutral 50",
+      "response_text": "Go to him, and you will understand.",
+      "index": "8"
+    },
+    {
+      "topic": "VFreeformTheFortVVulpesIncultaStripTopic001",
+      "topic_text": "If this is a trap, I'm going to take a lot of you with me.",
+      "emotion": "Neutral 50",
+      "response_text": "{offended}The mighty{KAI-zar}Caesar has bestowed upon you his Mark and guaranteed safe-conduct. If he wanted you dead, you would be dead already.",
+      "index": "9"
+    },
+    {
+      "topic": "VFreeformTheFortVVulpesIncultaStripTopic002",
+      "topic_text": "Tell Caesar I accept his invitation.",
+      "emotion": "Neutral 50",
+      "response_text": "Seek Caesar by way of Cottonwood Cove, south of Nelson. The Cursor Lucullus will be waiting.",
+      "index": "10"
+    },
+    {
+      "topic": "VFreeformTheFortVVulpesIncultaStripTopic003",
+      "topic_text": "Who are you?",
+      "emotion": "Neutral 50",
+      "response_text": "I am{WUHL-pace In-CUL-tah}Vulpes Inculta, of{KAI-zar's}Caesar's Legion. I serve my master as the greatest of his{froo-men-TAR-ee}Frumentarii.",
+      "index": "11"
+    },
+    {
+      "topic": "VFreeformTheFortVVulpesIncultaStripTopic004",
+      "topic_text": "What are the Frumentarii?",
+      "emotion": "Neutral 50",
+      "response_text": "We are soldiers of a different stripe, capable in battle, but skilled as infiltrators and agents as well.",
+      "index": "12"
+    },
+    {
+      "topic": "VFreeformTheFortVVulpesIncultaStripTopic005",
+      "topic_text": "You again? How'd you find me here?",
+      "emotion": "Neutral 50",
+      "response_text": "I am the greatest of his{KAI-zar's}Caesar's{froo-men-TAR-ee}Frumentarii. It was not a challenge to find you. Nor is this my first visit to the Strip.",
+      "index": "13"
+    },
+    {
+      "topic": "VFreeformTheFortVVulpesIncultaStripTopic006",
+      "topic_text": "How do you know about Benny?",
+      "emotion": "Neutral 50",
+      "response_text": "Little escapes the notice of{KAI-zar}Caesar's Legion. We know a great deal about the Vegas Strip, and the comings and goings of those who frequent it.",
+      "index": "14"
+    }
+  ]
+}

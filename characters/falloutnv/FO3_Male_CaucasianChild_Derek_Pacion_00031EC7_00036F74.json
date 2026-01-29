@@ -1,0 +1,263 @@
+{
+  "name": "Derek Pacion",
+  "url": "/wiki/Derek_Pacion",
+  "dialogue_name": "DerekPacion.txt",
+  "dialogue_url": "/wiki/DerekPacion.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": true,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "00031EC7",
+  "ref_id": "00036F74",
+  "editor_id": "DerekPacion",
+  "location": "Canterbury Commons",
+  "location_url": "/wiki/Canterbury_Commons",
+  "descriptions": [
+    "Derek Pacion is a young boy and resident of Canterbury Commons in the Capital Wasteland in Fallout 3.",
+    "By 2277, the 15-year-old Derek has lived in Canterbury Commons all his life, originally raised by his parents, Louis Pacion and Daisy Roe, a pair of traders who met and settled down. When they were killed in separate raider attacks (Daisy six years ago and Louis three years ago), Derek was left to the care of his \"Uncle Roe,\" the town mayor.",
+    "Since then, Derek has become introverted and reserved as he works around the trade town as a general assistant, but does not really say much unless it is necessary. He harbors a secret crush on Machete but has never worked up the courage to approach her. He devotes much of his free time to reading intact pre-War Hubris Comics material and drawing posters of the town's local \"hero\", the Mechanist who \"protects\" Canterbury Commons from the ant armies of the AntAgonizer.",
+    "At some point after 2277, one of Derek's autographed drawings of the Mechanist came into the possession of Isabel Cruz, a young woman with a knack for mechanics who would later craft her own identity of the Mechanist and attempt to \"save\" the Commonwealth with a robot army in 2287.",
+    "After the deaths of both his parents prior to 2277, Derek is looked after by his foster uncle, Canterbury mayor Ernest Roe. Derek often travels to the Republic of Dave to see his friend Ralph, Dave's son.",
+    "Derek also knew Scott Wollinski before he became the Mechanist. An optional conversation topic reveals that Derek convinced Scott to become a superhero and fight the AntAgonizer after she destroyed a robot, escalating the conflict between the two in Canterbury Commons to dangerous levels.",
+    "Derek Pacion appears in Fallout 3 and is mentioned in the Fallout 4 add-on Automatron."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Canterbury Commons",
+  "role": "General assistant",
+  "detailed_location": "Uncle Roe's house",
+  "voice_actor": "Sean McCoy",
+  "special": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 2,
+    "Intelligence": 5,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "level": "2",
+  "misc_skills": [
+    {
+      "Hit Points:": "35"
+    },
+    {
+      "Damage Res.:": "3%"
+    }
+  ],
+  "karma": "Good",
+  "voice_type": "MaleChild01DC",
+  "geck_race": "CaucasianChild",
+  "topics": [
+    {
+      "topic": "CCDirections",
+      "topic_text": "Can I get some directions around town?",
+      "emotion": "Happy 50",
+      "response_text": "Uncle Roe and I live in the old town hall, and Mr. Porter runs the diner across the street. It's not really a big place, you know?",
+      "index": "1"
+    },
+    {
+      "topic": "CCFirstMeeting1A",
+      "topic_text": "Don't sell yourself short. Even the little jobs can be important.",
+      "emotion": "Disgust 25",
+      "response_text": "Sounds like you've never spent a day mucking out Brahmin pens with a busted shovel.",
+      "index": "2"
+    },
+    {
+      "topic": "CCFirstMeeting1B",
+      "topic_text": "Calm down, kid. Can you actually say a whole sentence at once?",
+      "emotion": "Fear 50",
+      "response_text": "Sorry. I mean, I'm Derek. Welcome to Canterbury, Miss. Commons. Canterbury Commons. Miss.{Very embarrassed and flustered}",
+      "index": "4"
+    },
+    {
+      "topic": "CCFirstMeeting1C",
+      "topic_text": "I already talked to your uncle. I figured I'd talk to you, too.",
+      "emotion": "Neutral 50",
+      "response_text": "Huh. Why'd you want to do that?",
+      "index": "5"
+    },
+    {
+      "topic": "CCFirstMeeting2A",
+      "topic_text": "Sometimes people can have hidden depths even they don't know about.",
+      "emotion": "Happy 15",
+      "response_text": "I guess, sure. I'll keep an eye out for any hidden depths, okay?",
+      "index": "7"
+    },
+    {
+      "topic": "CCFirstMeeting2B",
+      "topic_text": "Now that I think about it, I'm not really sure.",
+      "emotion": "Sad 10",
+      "response_text": "Well, if you figure it out, be sure to let me know, okay? I'm kind of busy.",
+      "index": "8"
+    },
+    {
+      "topic": "CCFirstMeeting2C",
+      "topic_text": "Because I wanted to talk to the world's biggest pain in the ass, apparently.",
+      "emotion": "Anger 25",
+      "response_text": "Well, hope you had fun with that.",
+      "index": "9"
+    },
+    {
+      "topic": "CCTownHistory1",
+      "topic_text": "What can you tell me about Canterbury Commons?",
+      "emotion": "Surprise 25",
+      "response_text": "It's okay, I guess. I heard it's safer than most places, because the raiders don't bother us. But I've never been anywhere else, so I don't know.",
+      "index": "10"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Happy 75",
+      "response_text": "Can't talk now. They're fighting! This is awesome!{(quickly) with extreme excited}",
+      "index": "11"
+    },
+    {
+      "topic": "MS02AboutAntAgonizer",
+      "topic_text": "What can you tell me about the AntAgonizer?",
+      "emotion": "Happy 50",
+      "response_text": "I don't know much about her, except she really, really doesn't like people. That's kinda cool. I mean, sometimes people are jerks.",
+      "index": "20"
+    },
+    {
+      "topic": "MS02AboutMechanist",
+      "topic_text": "What can you tell me about the Mechanist?",
+      "emotion": "Happy 50",
+      "response_text": "I knew the Mechanist back when he was just a normal-hero. He used to be called Scott, and he fixed up stuff around town!",
+      "index": "23"
+    },
+    {
+      "topic": "MS02AboutOther",
+      "topic_text": "Know anything else that could help me stop them?",
+      "emotion": "Fear 25",
+      "response_text": "No way! Don't stop them! They're awesome!",
+      "index": "26"
+    },
+    {
+      "topic": "MS02AboutSupersDo you know anything about the AntAgonizer or the Mechanist?",
+      "topic_text": "What do you know about the AntAgonizer and the Mechanist?",
+      "emotion": "Happy 50",
+      "response_text": "You mean the super-heroes? Yeah, I try to watch all of their fights!",
+      "index": "45"
+    },
+    {
+      "topic": "MS02AboutSupersExit",
+      "topic_text": "That's enough about them.",
+      "emotion": "Happy 50",
+      "response_text": "Well, okay.",
+      "index": "46"
+    },
+    {
+      "topic": "MS02AboutWeaknesses",
+      "topic_text": "What are their super powers? Do they have any weaknesses?",
+      "emotion": "Happy 50",
+      "response_text": "That's easy! The AntAgonizer's suit makes her super-agile, but I guess her ants are pretty weak on their own. Just watch out for her royal guard.",
+      "index": "47"
+    },
+    {
+      "topic": "MS02Goodbye",
+      "topic_text": "Never mind.",
+      "emotion": "Anger 50",
+      "response_text": "That's right! Go away!",
+      "index": "50"
+    },
+    {
+      "topic": "MS02Greeting1a",
+      "topic_text": "Yeah, I saw it. What can you tell me about them?",
+      "emotion": "Surprise 75",
+      "response_text": "The AntAgonizer, she's this evil supervillain who's trying to wipe out humans with her ants. And the Mechanist protects us with his robots!{overly excited}",
+      "index": "51"
+    },
+    {
+      "topic": "MS02Greeting1b",
+      "topic_text": "This is serious business. You could get hurt. What do you know about them?",
+      "emotion": "Sad 25",
+      "response_text": "You sound like Uncle Roe. He never lets me watch when they fight.{emotionally crushed, was excited, but is now not really interested in talking about it}",
+      "index": "54"
+    },
+    {
+      "topic": "MS02Greeting1c",
+      "topic_text": "Are those jokers for real? What's up with the silly costumes?",
+      "emotion": "Surprise 100",
+      "response_text": "No way, they're awesome! And their suits are really cool, too!{excited}",
+      "index": "56"
+    },
+    {
+      "topic": "MS02Greeting2a",
+      "topic_text": "Life around here is pretty hard, huh?",
+      "emotion": "Sad 50",
+      "response_text": "Yeah, I guess. There's no one to play with. Everyone is so serious. It really kinda sucks.{awkward}",
+      "index": "59"
+    },
+    {
+      "topic": "MS02Greeting2b",
+      "topic_text": "Those guys must really liven the place up, huh? Anyone ever get hurt?",
+      "emotion": "Surprise 50",
+      "response_text": "You think they're neat too, huh? It's not like they ever hurt anyone. Well not, like, really badly hurt, or anything.{emphasizing \"not, like, really BADLY hurt...\"}",
+      "index": "62"
+    },
+    {
+      "topic": "MS02Greeting2c",
+      "topic_text": "You're insane, kid.",
+      "emotion": "Anger 25",
+      "response_text": "Oh yeah? Well... well...{Trying to come up with a comeback.}",
+      "index": "66"
+    },
+    {
+      "topic": "MS02Job",
+      "topic_text": "He promised me money for a job. Pay up, or else.",
+      "emotion": "Anger 50",
+      "response_text": "First you took away my uncle, and now you took away them, too? Fine - here! Take it and go away forever!",
+      "index": "68"
+    },
+    {
+      "topic": "SpeechChallengeFailure",
+      "topic_text": "SpeechChallengeFailure",
+      "emotion": "Fear 50",
+      "response_text": "Umm. I just remembered something I need to do. Bye.{getting weird vibes and running away}",
+      "index": "71"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "CCMentor1",
+      "topic_text": "CCMentor1",
+      "emotion": "Sad 10",
+      "response_text": "It was okay.{Sullen}",
+      "index": "72"
+    },
+    {
+      "topic": "CCMentor3",
+      "topic_text": "CCMentor3",
+      "emotion": "Sad 10",
+      "response_text": "I guess.{Sullen}",
+      "index": "76"
+    },
+    {
+      "topic": "CCMentor5",
+      "topic_text": "CCMentor5",
+      "emotion": "Fear 25",
+      "response_text": "No, no, never mind. Pretend I didn't say anything.{Embarrassed and ending the conversation}",
+      "index": "80"
+    },
+    {
+      "topic": "GOODBYE",
+      "topic_text": "I have to go now.",
+      "emotion": "Happy 50",
+      "response_text": "Say hi to the Mechanist for me!",
+      "index": "82"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Anger 15",
+      "response_text": "Aw, you made this place get so boring.{bored frustration}",
+      "index": "90"
+    }
+  ],
+  "combat": []
+}

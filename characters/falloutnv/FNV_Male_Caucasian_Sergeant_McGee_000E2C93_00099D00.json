@@ -1,0 +1,109 @@
+{
+  "name": "Sergeant McGee",
+  "url": "/wiki/McGee",
+  "dialogue_name": "PrimmLanceCorporalMcGee.txt",
+  "dialogue_url": "/wiki/PrimmLanceCorporalMcGee.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000E2C93",
+  "ref_id": "00099D00",
+  "editor_id": "PrimmLanceCorporalMcGee",
+  "location": "NCR tent",
+  "location_url": "/wiki/NCR_tent",
+  "descriptions": [
+    "Sergeant McGee is a member of the New California Republic Army stationed in Primm in 2281.",
+    "Born and raised in the Hub, McGee is a veteran non-commissioned officer of the 5th Battalion, 1st Company under Lieutenant Hayes. He is on his second tour of duty, following whatever orders the lieutenant gives."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "NCR Army",
+  "role": "SoldierSheriff (optional)",
+  "detailed_location": "PrimmCamp Forlorn Hope(optional)",
+  "voice_actor": "Liam O'Brien",
+  "special": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 5,
+    "Intelligence": 5,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "level": "1→33→55 (DLCs only)(Player level x 1.1)",
+  "tag_skills": [
+    {
+      "Explosives:": "30→100"
+    },
+    {
+      "Guns:": "30→100"
+    },
+    {
+      "Melee Weap.:": "30→100"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Neutral",
+  "voice_type": "MaleAdult05",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "Primm is secure against outside threats. Be interesting to see how long the natives stay grateful.",
+      "index": "1"
+    },
+    {
+      "topic": "SgtMcGeeAboutGeneral information about McGee personally",
+      "topic_text": "Where are you from?",
+      "emotion": "Neutral 50",
+      "response_text": "I'm from Hub originally, but it's been a long time since I saw it. I'm on my second tour here. Most Non-Commissioned Officers are.",
+      "index": "5"
+    },
+    {
+      "topic": "SgtMcGeeGoodbye",
+      "topic_text": "I need to get going.",
+      "emotion": "Neutral 50",
+      "response_text": "You were the one who came talking to me.",
+      "index": "6"
+    },
+    {
+      "topic": "SgtMcGeeLatestNewsWhat's the news?",
+      "topic_text": "Powder Gangers have taken over Primm.",
+      "emotion": "Neutral 50",
+      "response_text": "Do you think I'm blind? Of course I can see the Powder Gangers have taken over Primm.",
+      "index": "7"
+    },
+    {
+      "topic": "VMS02AnyNPCAboutNCRAny idea what the NCR's up to in Primm?",
+      "topic_text": "Does the NCR have any plans to attack the prison north of here?",
+      "emotion": "Neutral 50",
+      "response_text": "I have no idea. I just go and do what they tell me.",
+      "index": "11"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "PrimmNCRSheriffConvo",
+      "topic_text": "PrimmNCRSheriffConvo",
+      "emotion": "Neutral 50",
+      "response_text": "Yes Lieutenant!",
+      "index": "12"
+    }
+  ],
+  "combat": [
+    {
+      "topic": "RNVNewsStory2",
+      "topic_text": "RNVNewsStoryLine2",
+      "emotion": "Neutral 50",
+      "response_text": "{McGee:}People of Primm, the NCR wishes to inform you that you are under their jurisdiction now. And from now on, you're gonna be living by our rules.",
+      "index": "14"
+    }
+  ]
+}

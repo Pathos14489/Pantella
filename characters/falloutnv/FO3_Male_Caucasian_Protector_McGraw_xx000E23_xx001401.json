@@ -1,0 +1,306 @@
+{
+  "name": "Protector McGraw",
+  "url": "/wiki/McGraw",
+  "dialogue_name": "DLC02ProtectorMcGraw.txt",
+  "dialogue_url": "/wiki/DLC02ProtectorMcGraw.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "xx000E23",
+  "ref_id": "xx001401",
+  "editor_id": "DLC02ProtectorMcGraw",
+  "location": "Outcast outpost",
+  "location_url": "/wiki/Outcast_outpost",
+  "descriptions": [
+    "Protector McGraw is a high-ranking member of the Brotherhood Outcasts, and the commanding officer of the Outcast outpost at Bailey's Crossroads in the Fallout 3 add-on Operation: Anchorage.",
+    "One of the more personable Outcasts, McGraw can be direct, but polite in his dealing with wastelanders, rather than rude and condescending, which is a noted departure from the leadership style demonstrated by other Outcasts. McGraw leads an independent patrol focusing on recovering technology from a recently uncovered compound belonging to Virtual Strategic Solutions. Located in Bailey's Crossroads, the facility is located deep within super mutant country and the patrol could be wiped out at any minute. However, McGraw is willing to risk his life to uncover its secrets, and the lives of his men.",
+    "Their mission has not been going well. The Outcasts have suffered significant casualties due to constant mutant attacks, to the point that a single concentrated assault could wipe them all out.",
+    "In fact, his second in command, Defender Sibley, does not trust the protector and doubts both his motives and apparent lack of will.",
+    "McGraw's decisions have grown erratic as a result of this pressure. In order to acquire some means of interfacing with the simulation pod at VSS, McGraw had Defender Morrill abduct Gary 23 from the derelict Vault 108. When the clone proved unable to understand the Outcasts and remove the Pip-Boy 3000 he was wearing, McGraw ordered Olin and the others to cut off his arm and remove it by force. Both the device and the clone were lost.",
+    "All of these factors mean that McGraw is ready to make the ultimate sacrifice: Negotiate with a local to secure a mutually beneficial deal and trade precious tech for their services.",
+    "Note: 30 MFC are guaranteed to spawn, with a 75% chance for 15 more. Laser rifle's condition is randomly leveled, and has 65% max.",
+    "Protector McGraw appears only in the Fallout 3 add-on Operation: Anchorage.",
+    "Outcast members Sibley, Olin, McGraw and Morrill, all of who appear in the Fallout 3 add-on Operation: Anchorage, appear to be named after buildings on the campus of Cornell University, including Sibley Hall, Olin Hall, Olin Library, McGraw Hall, McGraw Tower and Morrill Hall."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Brotherhood of Steel(formerly)Brotherhood Outcasts",
+  "role": "VSS outpost commanding officer",
+  "detailed_location": "Outcast outpost",
+  "special": {
+    "Strength": 5,
+    "Perception": 7,
+    "Endurance": 6,
+    "Charisma": 4,
+    "Intelligence": 3,
+    "Agility": 6,
+    "Luck": 4
+  },
+  "mod_special_values": {
+    "Strength": 7,
+    "Perception": 7,
+    "Endurance": 6,
+    "Charisma": 4,
+    "Intelligence": 3,
+    "Agility": 4,
+    "Luck": 4
+  },
+  "level": "20",
+  "tag_skills": [
+    {
+      "Big Guns:": "100"
+    },
+    {
+      "Energy Weap.:": "100"
+    },
+    {
+      "Small Guns:": "100(96)"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "170"
+    },
+    {
+      "Critical Chance:": "4%"
+    },
+    {
+      "Unarmed Dam.:": "1.3"
+    },
+    {
+      "Poison Resist.:": "25%"
+    },
+    {
+      "Rad. Resist.:": "10%"
+    },
+    {
+      "Carry Weight:": "200(220)"
+    },
+    {
+      "Damage Res.:": "40%"
+    }
+  ],
+  "karma": "Neutral",
+  "voice_type": "DLC02MaleUniqueMcGraw",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "DLC02McGrawSell",
+      "topic_text": "Got anything to trade?",
+      "emotion": "Neutral 50",
+      "response_text": "Absolutely. You're always welcome to trade with us at any time. We pick up odds and ends from all over the Wasteland, so keep checking back.",
+      "index": "1"
+    },
+    {
+      "topic": "DLC02OA1McGrawBackOut",
+      "topic_text": "Maybe I should just be going.",
+      "emotion": "Neutral 50",
+      "response_text": "You realize I could force you to stay?",
+      "index": "3"
+    },
+    {
+      "topic": "DLC02OA1McGrawExplain1",
+      "topic_text": "I was just exploring. I didn't mean to intrude.",
+      "emotion": "Neutral 50",
+      "response_text": "Under different circumstances, that wouldn't be nearly enough of an explanation.",
+      "index": "5"
+    },
+    {
+      "topic": "DLC02OA1McGrawExplain2",
+      "topic_text": "Hey, I'm just here to help. I heard your radio broadcast.",
+      "emotion": "Neutral 50",
+      "response_text": "Well, you're certainly not the help that Morrill had in mind, but from the looks of you, you might be useful in other ways.",
+      "index": "7"
+    },
+    {
+      "topic": "DLC02OA1McGrawExplain3",
+      "topic_text": "You can't have me killed if you're dead.",
+      "emotion": "Anger 50",
+      "response_text": "Try me, reject. Ouutcassttsss! Hostile in base!",
+      "index": "8"
+    },
+    {
+      "topic": "DLC02OA1McGrawGreet1",
+      "topic_text": "What? No, of course I'm one of you... uhh, sir. <Lie>",
+      "emotion": "Neutral 50",
+      "response_text": "I'm not an idiot. That computer you've got on your wrist there? That's not our tech.",
+      "index": "9"
+    },
+    {
+      "topic": "DLC02OA1McGrawGreet2",
+      "topic_text": "How did you know?",
+      "emotion": "Neutral 50",
+      "response_text": "That device on your wrist. That's not our tech. That, and the fact that none of us would be stupid enough to take our armor off.",
+      "index": "13"
+    },
+    {
+      "topic": "DLC02OA1McGrawGreet3",
+      "topic_text": "Guilty as charged. But it looks like you need help just the same.",
+      "emotion": "Neutral 50",
+      "response_text": "You're not wrong. So for now I'll overlook the fact that you've got some of our tech.",
+      "index": "21"
+    },
+    {
+      "topic": "DLC02OA1McGrawGreet4",
+      "topic_text": "I've dealt with your group before. Fort Independence, right?",
+      "emotion": "Neutral 50",
+      "response_text": "Yes, that is our main base of operations in the area. If Casdin is willing to trust you, then I hope we can work together.",
+      "index": "24"
+    },
+    {
+      "topic": "DLC02OA1McGrawGreet5",
+      "topic_text": "I killed your buddies at Fort Independence. Now it's your turn.",
+      "emotion": "Anger 50",
+      "response_text": "You arrogant little shit. Outcasssttssss! We've got a hostile!",
+      "index": "25"
+    },
+    {
+      "topic": "DLC02OA1McGrawGreetINT",
+      "topic_text": "So, my Pip-Boy makes me unique, and you need my help because of that...",
+      "emotion": "Surprise 50",
+      "response_text": "So you do have half a brain. That's good.",
+      "index": "26"
+    },
+    {
+      "topic": "DLC02OA1McGrawGreetPER",
+      "topic_text": "I must have something you want, so let's cut to the chase.",
+      "emotion": "Neutral 50",
+      "response_text": "Heh, all right. You're obviously sharper than the average rubble dweller.",
+      "index": "29"
+    },
+    {
+      "topic": "DLC02OA1McGrawHowHelp1",
+      "topic_text": "Well, what do you want me to do?",
+      "emotion": "Neutral 50",
+      "response_text": "Records indicate there's some high-value tech in this base, but we can't get to it. The armory is sealed by a blast door, and we can't get it open.",
+      "index": "32"
+    },
+    {
+      "topic": "DLC02OA1McGrawHowHelp1b",
+      "topic_text": "Spit it out, McGraw. I ain't got all day.",
+      "emotion": "Neutral 50",
+      "response_text": "Wasting your time, am I? You're in MY house, reject. You'd do well to remember that. Now shut up and listen. This could be worth your while.",
+      "index": "36"
+    },
+    {
+      "topic": "DLC02OA1McGrawHowHelp1c",
+      "topic_text": "You guys treat outsiders like shit, but you still beg for help. Typical.",
+      "emotion": "Neutral 50",
+      "response_text": "I apologize for the gruffness of my men, but as you can see, everyone's under quite a bit of... duress. Maybe if I explain our situation?",
+      "index": "40"
+    },
+    {
+      "topic": "DLC02OA1McGrawHowHelp1d",
+      "topic_text": "If you've got a paying job, I'm in. What's the situation?",
+      "emotion": "Neutral 50",
+      "response_text": "Ah, so you're a mercenary. Suddenly everything has become much clearer... All right, I'll get right to the point.",
+      "index": "44"
+    },
+    {
+      "topic": "DLC02OA1McGrawHowHelp2",
+      "topic_text": "First let's talk about what I get out of this.",
+      "emotion": "Neutral 50",
+      "response_text": "You wasters, always thinking of yourselves.",
+      "index": "48"
+    },
+    {
+      "topic": "DLC02OA1McGrawNo",
+      "topic_text": "Maybe later. I just remembered I have somewhere else to be.",
+      "emotion": "Neutral 50",
+      "response_text": "Look, local. I'm trying to be reasonable with you. Don't make me reconsider that decision.",
+      "index": "51"
+    },
+    {
+      "topic": "DLC02OA1McGrawSimulation",
+      "topic_text": "Simulation? Like... a computer simulation? Of what?",
+      "emotion": "Neutral 50",
+      "response_text": "It's the liberation of Anchorage, Alaska from Chinese Communists. It was a pretty significant event in American history, according to our Scribe.",
+      "index": "53"
+    },
+    {
+      "topic": "DLC02OA1McGrawSimulationb",
+      "topic_text": "So it's a computer game. I get it. Sounds like fun!",
+      "emotion": "Neutral 50",
+      "response_text": "Well it's not. It's a hyper-realistic military training simulation of the liberation of Anchorage, Alaska from Chinese Communists.",
+      "index": "57"
+    },
+    {
+      "topic": "DLC02OA1McGrawSimulationc",
+      "topic_text": "Simulation, huh? Piece of cake.",
+      "emotion": "Neutral 50",
+      "response_text": "Don't be so sure. It's the liberation of Anchorage, Alaska from Chinese Communists. A pretty significant event in American history, I'm told.",
+      "index": "61"
+    },
+    {
+      "topic": "DLC02OA1McGrawSimulationd",
+      "topic_text": "Oh, great. Let me guess, more psychotic little girls...",
+      "emotion": "Surprise 50",
+      "response_text": "Umm.... Noooo....",
+      "index": "65"
+    },
+    {
+      "topic": "DLC02OA1McGrawYes",
+      "topic_text": "Okay, sure. I'll do it.",
+      "emotion": "Neutral 50",
+      "response_text": "Very well. Sibley will take you to the simulator.",
+      "index": "70"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "Everything well with you? We're still busy cataloging all the gear you uncovered.",
+      "index": "71"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "DLC02FinSibleyMcGrawEndConv",
+      "topic_text": "DLC02FinSibleyMcGrawEndConv",
+      "emotion": "Neutral 50",
+      "response_text": "Burn in hell, traitor!",
+      "index": "112"
+    },
+    {
+      "topic": "DLC02OA1FightIntoRuins",
+      "topic_text": "DLC02OA1FightIntoRuins",
+      "emotion": "Neutral 50",
+      "response_text": "Yes, sir! Proceeding.",
+      "index": "116"
+    },
+    {
+      "topic": "DLC02OA1FightToBase",
+      "topic_text": "DLC02OA1FightToBase",
+      "emotion": "Neutral 50",
+      "response_text": "Area clear. Returning to base.",
+      "index": "119"
+    },
+    {
+      "topic": "DLC02OA1FightToRuins",
+      "topic_text": "DLC02OA1FightChatter1",
+      "emotion": "Neutral 50",
+      "response_text": "Ready. Let's hit the ruins.",
+      "index": "122"
+    },
+    {
+      "topic": "DLC02OA1SibleyMcGraw1",
+      "topic_text": "DLC02OA1SibleyMcGraw1",
+      "emotion": "Neutral 50",
+      "response_text": "Noted, Defender. That'll be all.",
+      "index": "125"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Neutral 50",
+      "response_text": "Welcome back.",
+      "index": "129"
+    }
+  ],
+  "combat": []
+}

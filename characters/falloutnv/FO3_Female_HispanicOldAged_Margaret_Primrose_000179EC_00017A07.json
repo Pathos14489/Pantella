@@ -1,0 +1,294 @@
+{
+  "name": "Margaret Primrose",
+  "url": "/wiki/Margaret_Primrose",
+  "dialogue_name": "MargaretPrimrose.txt",
+  "dialogue_url": "/wiki/MargaretPrimrose.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": true,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000179EC",
+  "ref_id": "00017A07",
+  "editor_id": "MargaretPrimrose",
+  "location": "Café Beau Monde",
+  "location_url": "/wiki/Caf%C3%A9_Beau_Monde",
+  "descriptions": [
+    "Margaret Primrose runs the Café Beau Monde in Tenpenny Tower in Fallout 3.",
+    "Margaret owns and operates the Café Beau Monde. Because the cafe only serves the residents of Tenpenny Tower, her clientele is limited, allowing Margaret to prepare and serve all the meals. The restaurant is open from 6:00 AM to 9:00 PM, and Margaret is the service provider the entire time. When the restaurant closes, she generally spends her time in her room.",
+    "Margaret says she picked up cooking from her late mother. She explains that her mother wasn't always the best, though she showed her love for her family through cooking. Since Allistair Tenpenny refuses to come down from his suite, Margaret has to prepare all his meals and take them up to him herself."
+  ],
+  "race": "Human",
+  "gender": "Female",
+  "affiliation": "Tenpenny Tower",
+  "role": "Store owner",
+  "detailed_location": "Café Beau Monde",
+  "voice_actor": "Diana Sowle",
+  "special": {
+    "Strength": 4,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 7,
+    "Intelligence": 5,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "mod_special_values": {
+    "Strength": 4,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 7,
+    "Intelligence": 5,
+    "Agility": 7,
+    "Luck": 5
+  },
+  "level": "4",
+  "tag_skills": [
+    {
+      "Barter:": "49"
+    },
+    {
+      "Small Guns:": "47(49)"
+    },
+    {
+      "Speech:": "49"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Neutral",
+  "voice_type": "FemaleOld01DC",
+  "geck_race": "HispanicOldAged",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Happy 100",
+      "response_text": "Thank you for dealing with those Ghouls. You're a real hero.{self important snob showing uncharacteristic genuine appreciation}",
+      "index": "1"
+    },
+    {
+      "topic": "MS12Basement",
+      "topic_text": "You ever go down to the basement?",
+      "emotion": "Neutral 50",
+      "response_text": "I haven't. But every so often Gustavo takes someone down there to work on the generators when we lose power. That hasn't happened in awhile, though.",
+      "index": "10"
+    },
+    {
+      "topic": "MS12FinResidents",
+      "topic_text": "What's it like living at Tenpenny Tower?",
+      "emotion": "Happy 100",
+      "response_text": "Well, I feel a lot safer now that those Ghouls have stopped bothering us. That's for sure.{self important snob showing uncharacteristic genuine appreciation}",
+      "index": "11"
+    },
+    {
+      "topic": "MS12IntroToGhoul1",
+      "topic_text": "The only thing a Ghoul should have to prove is how fast it can die.",
+      "emotion": "Surprise 100",
+      "response_text": "That's rather extreme, though near enough to the truth. Talk to Gustavo. He might be able to use you in the fight against the Ghouls.{mildly shocked}",
+      "index": "13"
+    },
+    {
+      "topic": "MS12IntroToGhoul2",
+      "topic_text": "Yeah, I wouldn't want Ghouls living here either.",
+      "emotion": "Neutral 50",
+      "response_text": "There must be something we can do. Talk to Gustavo, he might have some way for you to assist us in dealing with the problem.",
+      "index": "14"
+    },
+    {
+      "topic": "MS12IntroToGhoul3",
+      "topic_text": "I think they've proven something just staying alive in that condition.",
+      "emotion": "Surprise 75",
+      "response_text": "I guess I never thought of it that way. It's probably really hard just living day to day like that. Now I feel a little ashamed.{sincere}",
+      "index": "15"
+    },
+    {
+      "topic": "MS12ResidentsBranch",
+      "topic_text": "What's it like living at Tenpenny Tower?",
+      "emotion": "Happy 100",
+      "response_text": "It's a great place to live. I've always dreamed of giving people fresh meals, and a place to relax and enjoy a good conversation or two.{with pride at her social standing}",
+      "index": "16"
+    },
+    {
+      "topic": "MS12ResidentsBranch1",
+      "topic_text": "Running a cafe can't be easy.",
+      "emotion": "Happy 50",
+      "response_text": "Indeed! Everyone who lives here has worked hard to get here.{gloating}",
+      "index": "18"
+    },
+    {
+      "topic": "MS12ResidentsBranch2",
+      "topic_text": "Not everyone is as lucky as you.",
+      "emotion": "Surprise 100",
+      "response_text": "Lucky? Perhaps I should feel lucky. But really, we've all worked hard to get what we have. I think it's fair to say we DESERVE to live here.{justifying her privelaged life}",
+      "index": "20"
+    },
+    {
+      "topic": "MS12ResidentsBranch3",
+      "topic_text": "Whatever.",
+      "emotion": "Disgust 50",
+      "response_text": "You're lucky they even let you in here. I'm surprised they did, since it will only encourage those Ghouls who want to live here.{with mild disdain}",
+      "index": "22"
+    },
+    {
+      "topic": "MS12ResidentsGhoulsAbout these Ghouls...",
+      "topic_text": "Those Ghouls have you stressed out, too?",
+      "emotion": "Neutral 50",
+      "response_text": "Chief Gustavo assures us that he's increased the number of the security team, and will kill any zombies on sight.{self important snob brushing off concern for her safety}",
+      "index": "24"
+    },
+    {
+      "topic": "MS12ResidentsGhoulsChoice1MS12ResidentsGhoulsChoiceGood",
+      "topic_text": "I might be able to do something.",
+      "emotion": "Happy 100",
+      "response_text": "Really? That'd be wonderful. Talk to Chief Gustavo about it.{surprised but happy someone is taking charge}",
+      "index": "25"
+    },
+    {
+      "topic": "MS12ResidentsGhoulsChoice2MS12ResidentsGhoulsChoiceBad",
+      "topic_text": "I wonder if Ghouls will like your cooking?",
+      "emotion": "Surprise 100",
+      "response_text": "I hope I don't have to find out... though, everyone loves my cooking.{self important indignation}",
+      "index": "26"
+    },
+    {
+      "topic": "MS12ResidentsGhoulsChoice3MS12ResidentsGhoulsChoiceNeutral",
+      "topic_text": "<Say nothing.>",
+      "emotion": "Fear 50",
+      "response_text": "Those Ghouls got you scared too, huh?{confiding}",
+      "index": "27"
+    },
+    {
+      "topic": "MS12ResidentsNeighbors",
+      "topic_text": "How would you feel about having a few Ghoul neighbors?",
+      "emotion": "Surprise 75",
+      "response_text": "Oh, I know you've been lobbying for those Ghouls... and I've already been thinking it over. I guess I would be willing to give it a try.{hesitant but sincere}",
+      "index": "28"
+    },
+    {
+      "topic": "MS12ResidentsNeighborsBad",
+      "topic_text": "You're right. Ghouls are disgusting.",
+      "emotion": "Surprise 50",
+      "response_text": "I agree, though I wonder if they can help it. They seem rather pathetic, don't they? It seems like a horrible way to have to live.{snob losing prejudice}",
+      "index": "31"
+    },
+    {
+      "topic": "MS12ResidentsNeighborsGood",
+      "topic_text": "What if they kept themselves clean and didn't bother anyone?",
+      "emotion": "Surprise 50",
+      "response_text": "I don't know. As long as they don't cause trouble. And they'd have to try to fit in with our established community.{letting go of prejudice}",
+      "index": "32"
+    },
+    {
+      "topic": "MS12ResidentsNeighborsGoodPetition",
+      "topic_text": "Would you tell Mister Tenpenny that you wouldn't mind Ghoul neighbors?",
+      "emotion": "Surprise 50",
+      "response_text": "I guess so. Sure.",
+      "index": "34"
+    },
+    {
+      "topic": "MS12ResidentsNeighborsNeutral",
+      "topic_text": "Perhaps.",
+      "emotion": "Disgust 50",
+      "response_text": "You're a little weird, aren't you?{self important snob}",
+      "index": "35"
+    },
+    {
+      "topic": "TenpennyAllistairTenpenny",
+      "topic_text": "Tell me about Allistair Tenpenny.",
+      "emotion": "Disgust 50",
+      "response_text": "Every day it's the same thing. The man has no imagination with his meals.",
+      "index": "36"
+    },
+    {
+      "topic": "TenpennyGREETINGChoice1",
+      "topic_text": "And a pretty smile it is!",
+      "emotion": "Happy 100",
+      "response_text": "Very kind of you to say so. Thank you!{gladly accepting a compliment}",
+      "index": "38"
+    },
+    {
+      "topic": "TenpennyGREETINGChoice2",
+      "topic_text": "I don't need a smile. What I need is some food.",
+      "emotion": "Disgust 50",
+      "response_text": "Most people consider mistreating food service providers as an invitation to get a little something unexpected in their meal.{warning an unruly guest}",
+      "index": "39"
+    },
+    {
+      "topic": "TenpennyGREETINGChoice3",
+      "topic_text": "Whatever you say.",
+      "emotion": "Happy 50",
+      "response_text": "Well. Like I said. Take a seat anywhere, except at Mister Tenpenny's table.",
+      "index": "41"
+    },
+    {
+      "topic": "TenpennyVendorI'd like to do business with you.",
+      "topic_text": "Can I get something to eat?",
+      "emotion": "Happy 100",
+      "response_text": "What are you in the mood for?",
+      "index": "42"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "DialogueTenpennyConv00",
+      "topic_text": "DialogueTenpennyConv00",
+      "emotion": "Sad 25",
+      "response_text": "Yeah. I know. It's just... Well, I've been busy.{tired}",
+      "index": "43"
+    },
+    {
+      "topic": "DialogueTenpennyConv01",
+      "topic_text": "DialogueTenpennyConv01",
+      "emotion": "Surprise 75",
+      "response_text": "Thank you for saying so, sir. It's always my great pleasure. If you'd ever like to try another dish, I have an extensive menu of delicacies.{flattered and hinting that her talents are under utilized}",
+      "index": "51"
+    },
+    {
+      "topic": "DialogueTenpennyConv02",
+      "topic_text": "DialogueTenpennyConv02",
+      "emotion": "Surprise 10",
+      "response_text": "Of course Mister Tenpenny.{covering up her hurt feelings}",
+      "index": "60"
+    },
+    {
+      "topic": "DialogueTenpennyEatStartTopic",
+      "topic_text": "DialogueTenpennyEatStartTopic",
+      "emotion": "Neutral 50",
+      "response_text": "Think I'll take a moment for myself, and eat a little something.{hungry and on his way to get food}",
+      "index": "64"
+    },
+    {
+      "topic": "DialogueTenpennySleepStartTopic",
+      "topic_text": "DialogueTenpennySleepStartTopic",
+      "emotion": "Neutral 50",
+      "response_text": "I think I'll turn in for the night.{tired and heading off to bed}",
+      "index": "65"
+    },
+    {
+      "topic": "GOODBYE",
+      "topic_text": "I have to go now.",
+      "emotion": "Happy 50",
+      "response_text": "Have a good one!{(sincere) self important cafe owner}",
+      "index": "66"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Surprise 50",
+      "response_text": "You're up to something. I can tell.{confused and slightly suspicious}",
+      "index": "69"
+    }
+  ],
+  "combat": [
+    {
+      "topic": "BarterExit",
+      "topic_text": "BarterExit",
+      "emotion": "Happy 100",
+      "response_text": "Enjoy your meal.",
+      "index": "82"
+    }
+  ]
+}

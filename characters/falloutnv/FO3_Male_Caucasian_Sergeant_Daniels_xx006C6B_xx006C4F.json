@@ -1,0 +1,132 @@
+{
+  "name": "Sergeant Daniels",
+  "url": "/wiki/Daniels_(Mothership_Zeta)",
+  "dialogue_name": "DLC05CryoDaniel.txt",
+  "dialogue_url": "/wiki/DLC05CryoDaniel.txt",
+  "spawned_dead": false,
+  "spawned": true,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "xx006C6B",
+  "ref_id": "xx006C4F",
+  "editor_id": "DLC05CryoDaniel",
+  "location": "Cryo lab",
+  "location_url": "/wiki/Cryo_lab",
+  "descriptions": [
+    "Sergeant Daniels is a soldier found in the cryo lab section of Mothership Zeta.",
+    "Daniels was the NCO in charge of Elliott Tercorien's medic squad. Assigned to the 108th Infantry Battalion, the six medics handled casualties caused by the Chinese Army during the Battle of Anchorage.",
+    "Daniels was not a medic, instead erecting field tents and requesting medical evacuation via radio, after the medics completed field surgery or if the wounds were too severe to be safely treated on the battlefield. He was abducted in the middle of the night with the rest of his squad,",
+    "Unlike Tercorien, the rest of his squad were used for torturous medical experiments, which would leave them in horrific pain were they conscious.",
+    "Among the Stars",
+    "Sergeant Daniels appears only in the Fallout 3 add-on Mothership Zeta.",
+    "Daniels appears to have two voice actors. Most of his dialogue is voiced by the same actor as Elliott Tercorien, who is uncredited and unknown. However, the line said upon his exit from cryostasis (\"Elliott... Is that you? What... What's going on? Where the hell are we?\") is voiced by audio director Mark Lampert. Daniels shares this distinction with Beckett."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "108th Infantry Battalion,United States Army",
+  "detailed_location": "Cryo lab,MothershipZeta",
+  "voice_actor": "Mark Lampert(alternate)",
+  "special": {
+    "Strength": 4,
+    "Perception": 6,
+    "Endurance": 4,
+    "Charisma": 6,
+    "Intelligence": 7,
+    "Agility": 5,
+    "Luck": 4
+  },
+  "level": "5→30",
+  "tag_skills": [
+    {
+      "Barter:": "53→100"
+    },
+    {
+      "Medicine:": "65→100"
+    },
+    {
+      "Science:": "55→100"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "235→360"
+    },
+    {
+      "Damage Res.:": "37%"
+    }
+  ],
+  "voice_type": "DLC05NPCUniqueTercorien",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "DLC05BridgeInterDoNothing",
+      "topic_text": "Get a move on it!",
+      "emotion": "Neutral 50",
+      "response_text": "Yes sir.Play soundDlc05bridg_dlc05bridgeinte_00005…https://fallout.fandom.com/wiki/File:Dlc05bridg_dlc05bridgeinte_000058c8_1.oggnoicon",
+      "index": "1"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "Sir?Play soundDlc05bridgeld_greeting_000058c4_…https://fallout.fandom.com/wiki/File:Dlc05bridgeld_greeting_000058c4_1.oggnoicon",
+      "index": "2"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "DLC05ConvERoomEngine",
+      "topic_text": "DLC05ConvERoomEngine",
+      "emotion": "Neutral 50",
+      "response_text": "What is that thing?Play soundDlc05conve_dlc05converoome_00009…https://fallout.fandom.com/wiki/File:Dlc05conve_dlc05converoome_000098fc_1.oggnoicon",
+      "index": "10"
+    },
+    {
+      "topic": "DLC05ConvERoomEngineGasTrap",
+      "topic_text": "DLC05ConvERoomEngineGasTrap",
+      "emotion": "Neutral 50",
+      "response_text": "They're trying to gas us again.Play soundDlc05conve_dlc05converoome_00009…https://fallout.fandom.com/wiki/File:Dlc05conve_dlc05converoome_000098ff_1.oggnoicon",
+      "index": "11"
+    },
+    {
+      "topic": "DLC05ConvERoomEpoxy",
+      "topic_text": "DLC05ConvERoomEpoxy",
+      "emotion": "Neutral 50",
+      "response_text": "Grab some of that epoxy, our weapons could use the field repair.Play soundDlc05conve_dlc05converoome_00009…https://fallout.fandom.com/wiki/File:Dlc05conve_dlc05converoome_00009905_1.oggnoicon",
+      "index": "12"
+    },
+    {
+      "topic": "DLC05ConvERoomFilthyStructures",
+      "topic_text": "DLC05ConvERoomFilthyStructures",
+      "emotion": "Neutral 50",
+      "response_text": "This place is filthy.Play soundDlc05conve_dlc05converoomf_00009…https://fallout.fandom.com/wiki/File:Dlc05conve_dlc05converoomf_00009908_1.oggnoicon",
+      "index": "13"
+    },
+    {
+      "topic": "DLC05ConvERoomFirstRoom",
+      "topic_text": "DLC05ConvERoomFirstRoom",
+      "emotion": "Neutral 50",
+      "response_text": "Those guys in there look busy.Play soundDlc05conve_dlc05converoomf_00009…https://fallout.fandom.com/wiki/File:Dlc05conve_dlc05converoomf_00009902_1.oggnoicon",
+      "index": "14"
+    },
+    {
+      "topic": "DLC05ConvERoomGasTrap",
+      "topic_text": "DLC05ConvERoomGasTrap",
+      "emotion": "Neutral 50",
+      "response_text": "They're flooding the room with gas.Play soundDlc05conve_dlc05converoomg_00009…https://fallout.fandom.com/wiki/File:Dlc05conve_dlc05converoomg_0000990b_1.oggnoicon",
+      "index": "15"
+    },
+    {
+      "topic": "DLC05CryoSquadTalk",
+      "topic_text": "DLC05CryoSquadTalk",
+      "emotion": "Neutral 50",
+      "response_text": "Elliott... Is that you?  What... What's going on? Where the hell are we?Play soundDlc05cryoq_dlc05cryosquadt_00006…https://fallout.fandom.com/wiki/File:Dlc05cryoq_dlc05cryosquadt_00006c07_1.oggnoicon",
+      "index": "16"
+    }
+  ],
+  "combat": []
+}

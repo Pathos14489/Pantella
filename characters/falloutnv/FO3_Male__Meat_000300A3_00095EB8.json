@@ -1,0 +1,59 @@
+{
+  "name": "Meat",
+  "url": "/wiki/Meat",
+  "dialogue_name": "",
+  "dialogue_url": null,
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000300A3",
+  "ref_id": "00095EB8",
+  "editor_id": "Meat",
+  "location": "The Chop Shop",
+  "location_url": "/wiki/The_Chop_Shop_(Fallout_3)",
+  "descriptions": [
+    "Meat is a friendly glowing one that can be found in the Chop Shop in Fallout 3.",
+    "Meat is one of two glowing one test subjects Doctor Barrows keeps at the ghoul clinic, the other being Ethyl. They are former residents of Underworld,"
+  ],
+  "race": "Glowing one",
+  "gender": "Male",
+  "affiliation": "Doctor Barrows",
+  "role": "Subject of observation",
+  "detailed_location": "The Chop Shop,Underworld",
+  "voice_actor": "Mike Rosson",
+  "special": {
+    "Strength": 7,
+    "Perception": 5,
+    "Endurance": 10,
+    "Charisma": 5,
+    "Intelligence": 5,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "level": "9 (glowing one), 4 (ghoul)",
+  "tag_skills": [
+    {
+      "Barter:": "41"
+    },
+    {
+      "Small Guns:": "45"
+    },
+    {
+      "Unarmed:": "41"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "240 (glowing one)"
+    }
+  ],
+  "karma": "Evil (glowing one)Neutral (ghoul)",
+  "topics": [],
+  "conversation": [],
+  "combat": []
+}

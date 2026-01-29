@@ -1,0 +1,148 @@
+{
+  "name": "Malcolm Holmes",
+  "url": "/wiki/Malcolm_Holmes",
+  "dialogue_name": "SSHQMalcolmHolmes.txt",
+  "dialogue_url": "/wiki/SSHQMalcolmHolmes.txt",
+  "spawned_dead": false,
+  "spawned": true,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": true,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "0010596B",
+  "ref_id": "0010651A",
+  "editor_id": "SSHQMalcolmHolmes",
+  "location": "Mojave Wasteland",
+  "location_url": "/wiki/Mojave_Wasteland",
+  "descriptions": [
+    "Malcolm Holmes is a retired trader living in the Mojave Wasteland in 2281.",
+    "Malcolm Holmes was a collector of star bottle caps to get the treasure that's hidden in the Sunset Sarsaparilla headquarters building. He claims to have retired from collecting the caps, but if the Courier pickpockets him (or kills him), they will find up to six star bottle caps in his inventory. Holmes also warns that there are people willing to kill for the blue star caps, including someone named Allen Marks.",
+    "The Legend of the Star",
+    "The Legend of the Star: Sometime after the player character has picked up their first star bottle cap, they will encounter a man who claims he has been following them. Holmes approaches and introduces himself as a retired trader who noticed they had the same interest in the bottle caps that he collected long ago. He also mentions that if enough caps are collected, the treasure can be claimed from someone named Festus.",
+    "PC Malcolm's chest will sometimes be invisible when he initially approaches you. Simply loading from the last save fixes this."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "role": "TraderStar bottle cap adventurer",
+  "detailed_location": "Mojave Wasteland",
+  "voice_actor": "Avery K. Waddell",
+  "special": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 10,
+    "Intelligence": 5,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "level": "1",
+  "misc_skills": [],
+  "karma": "Very Good",
+  "voice_type": "MaleAdult02",
+  "geck_race": "AfricanAmericanOld",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "{ Malcolm Holmes top level topics }",
+      "index": "1"
+    },
+    {
+      "topic": "VFreeformSSHQMalcolmHolmesTopic011",
+      "topic_text": "I'd like to trade.",
+      "emotion": "Neutral 50",
+      "response_text": "Oh, that's right! Here, let me show you what I've got on hand.",
+      "index": "6"
+    },
+    {
+      "topic": "VFreeformSSHQMalcolmHolmesTopic012",
+      "topic_text": "I'd like to know more about star hunting.",
+      "emotion": "Neutral 50",
+      "response_text": "There's not much more to tell. Get enough stars and the treasure's yours. Just watch out for some of the other people collecting them.",
+      "index": "7"
+    },
+    {
+      "topic": "VFreeformSSHQMalcolmHolmesTopic013",
+      "topic_text": "No, I have to be going.",
+      "emotion": "Neutral 50",
+      "response_text": "If you say so. Maybe we'll meet again.",
+      "index": "8"
+    },
+    {
+      "topic": "VFreeformSSHQSSHQMalcolmHolmesTopic001",
+      "topic_text": "Why were you following me?",
+      "emotion": "Neutral 50",
+      "response_text": "It started off innocently enough. I was traveling, as I often do, and happened to observe you picking up one of those blue-star caps.",
+      "index": "9"
+    },
+    {
+      "topic": "VFreeformSSHQSSHQMalcolmHolmesTopic003",
+      "topic_text": "Don't follow me. You'll live longer.",
+      "emotion": "Neutral 50",
+      "response_text": "Okay, you're a dangerous sort. I get that. But I have some information I think you'll find useful, which made me follow you for a spell.",
+      "index": "11"
+    },
+    {
+      "topic": "VFreeformSSHQSSHQMalcolmHolmesTopic004",
+      "topic_text": "What's so special about these caps?",
+      "emotion": "Neutral 50",
+      "response_text": "There's an old wasteland legend that says somewhere out there is a fabulous treasure from before the war.",
+      "index": "12"
+    },
+    {
+      "topic": "VFreeformSSHQSSHQMalcolmHolmesTopic005",
+      "topic_text": "Why didn't you say anything then and there?",
+      "emotion": "Neutral 50",
+      "response_text": "I had to make sure of your disposition. There's a lot of jumpy folks out there that'd shoot a man as soon as talk to him.",
+      "index": "14"
+    },
+    {
+      "topic": "VFreeformSSHQSSHQMalcolmHolmesTopic006",
+      "topic_text": "This is getting creepy. I'm leaving, and don't follow me.",
+      "emotion": "Neutral 50",
+      "response_text": "Fine. Just do me a favor. If you find more of those things, and plan on keeping them, watch out for a man named Allen Marks.",
+      "index": "16"
+    },
+    {
+      "topic": "VFreeformSSHQSSHQMalcolmHolmesTopic016",
+      "topic_text": "Where can I find more of these caps?",
+      "emotion": "Neutral 50",
+      "response_text": "All over the place. The easiest place to find them is unopened bottles of Sunset Sarsaparilla.",
+      "index": "18"
+    },
+    {
+      "topic": "VFreeformSSHQSSHQMalcolmHolmesTopic017",
+      "topic_text": "So you collect these caps too?",
+      "emotion": "Neutral 50",
+      "response_text": "Nah, I gave it up years ago. Too dangerous. And even if I did still collect them, I'd tell you the same.",
+      "index": "22"
+    },
+    {
+      "topic": "VFreeformSSHQSSHQMalcolmHolmesTopic019",
+      "topic_text": "What kind of treasure are we talking about?",
+      "emotion": "Neutral 50",
+      "response_text": "No one knows. Money? Weapons? Water? It is, or maybe was, something of value, and that's enough to get people motivated.",
+      "index": "24"
+    },
+    {
+      "topic": "VFreeformSSHQSSHQMalcolmHolmesTopic022",
+      "topic_text": "You mentioned someone named Festus. Who's that?",
+      "emotion": "Neutral 50",
+      "response_text": "It's said that the treasure is guarded by a man named Festus, and he's the one who asks for the blue-star caps.",
+      "index": "25"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYEGoodbye.",
+      "topic_text": "Thanks for the info, but I'll be going now.",
+      "emotion": "Neutral 50",
+      "response_text": "No problem. If you do end up trying to collect more stars, watch out for a man named Allen Marks. He's killed several people for their stars already.",
+      "index": "28"
+    }
+  ],
+  "combat": []
+}

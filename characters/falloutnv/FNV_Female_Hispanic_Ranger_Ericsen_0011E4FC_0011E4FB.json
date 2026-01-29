@@ -1,0 +1,96 @@
+{
+  "name": "Ranger Ericsen",
+  "url": "/wiki/Ericsen",
+  "dialogue_name": "RSBravoEricsen.txt",
+  "dialogue_url": "/wiki/RSBravoEricsen.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "0011E4FC",
+  "ref_id": "0011E4FB",
+  "editor_id": "RSBravoEricsen",
+  "location": "Ranger Station Bravo",
+  "location_url": "/wiki/Ranger_Station_Bravo",
+  "descriptions": [
+    "Ranger Ericsen is the commander of Ranger Station Bravo in 2281.",
+    "Ericsen is the commander of Ranger Station Bravo.",
+    "Ranger Ericsen can clear Tilden to give the player character ammunition,",
+    "The NCR Rangers at the ranger stations, including Ericsen, were written by additional area designer Matt MacLean, who worked on the quest Return to Sender."
+  ],
+  "race": "Human",
+  "gender": "Female",
+  "affiliation": "New California Republic Rangers",
+  "role": "Ranger",
+  "detailed_location": "Ranger Station Bravo",
+  "voice_actor": "Mela Lee",
+  "special": {
+    "Strength": 5,
+    "Perception": 6,
+    "Endurance": 6,
+    "Charisma": 4,
+    "Intelligence": 5,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "level": "7",
+  "tag_skills": [
+    {
+      "Guns:": "56"
+    },
+    {
+      "Sneak:": "56"
+    },
+    {
+      "Unarmed:": "56"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Neutral",
+  "voice_type": "FemaleAdult09",
+  "geck_race": "Hispanic",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "{Player in NCR gear}You don't walk like any trooper I've ever seen, but I'll let it slide. What do you want?",
+      "index": "1"
+    },
+    {
+      "topic": "VMSRSBravoQuestRSRangerBravoEricsenTopic000",
+      "topic_text": "What do you do out here?",
+      "emotion": "Neutral 50",
+      "response_text": "We're here to make sure the Legion doesn't try to sneak around Lake Mead and come at NCR from another direction.",
+      "index": "4"
+    },
+    {
+      "topic": "VMSRSBravoQuestRSRangerBravoEricsenTopic002",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Yep.",
+      "index": "5"
+    },
+    {
+      "topic": "VMSRSBravoQuestRSRangerBravoEricsenTopic006",
+      "topic_text": "Tilden mentioned you had surplus ammo. Mind if I have some?",
+      "emotion": "Neutral 50",
+      "response_text": "{NCR - Rascal+}You're not stationed here, but your rep with the NCR speaks for itself. It's mostly rifle rounds, but I'll throw in a few boxes of pistol ammo.",
+      "index": "6"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Yep.",
+      "index": "9"
+    }
+  ],
+  "combat": []
+}

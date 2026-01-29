@@ -1,0 +1,513 @@
+{
+  "name": "Harkness",
+  "url": "/wiki/Harkness",
+  "dialogue_name": "Harkness.txt",
+  "dialogue_url": "/wiki/Harkness.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": true,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000156AA",
+  "ref_id": "0001DB54",
+  "editor_id": "Harkness",
+  "location": "Rivet City",
+  "location_url": "/wiki/Rivet_City",
+  "descriptions": [
+    "Harkness, designation A3-21, is an android and Rivet City's security chief in the year 2277. His past is scattered across the Capital Wasteland for the Lone Wanderer to find and decide what fate will befall him.",
+    "Rivet City's hard-nosed security chief, 35-year-old Harkness has a rough but fair demeanor. He is known for his very fair treatment of Rivet City's Hangar Deck and Upper Deck citizens, something which makes him popular with the former group.",
+    "Harkness is a prototype Generation 3 synthetic humanoid, or \"synth,\" and the most advanced android ever created by the Institute as of 2277. \"Self determination is NOT a malfunction,\" as Harkness would later say in a holotape before escaping.",
+    "While he successfully escaped the Commonwealth, he was hunted by the Synth Retention Bureau like any other escapee. He needed to get facial reconstruction surgery, an altered voice, and have his memories of being a synth suppressed/replaced with those of his new Harkness persona. This was all necessary to hinder the SRB's investigation and help him start a new life.",
+    "Upon assuming his new persona, Harkness joined the Rivet City security force, eventually becoming its chief officer and member of the council.",
+    "During the day, Harkness will be outside Flak 'N Shrapnel's weapon store in the Rivet City marketplace. He may be on the top floor of the bridge tower from midnight to 6 a.m. When meeting him for the first time, if the player character tells him they are going to leave, he'll be stuck at the entrance for the rest of the game. However, the player character can still walk past him without incident.",
+    "Harkness appears in Fallout 3, Fallout Shelter and Fallout Shelter Online."
+  ],
+  "race": "Android (Synth)",
+  "affiliation": "Rivet City CouncilRivet City security forceSynth Retention Bureau(formerly)",
+  "role": "Rivet City security chiefCouncil memberCourser(formerly)[1]",
+  "detailed_location": "Rivet City",
+  "voice_actor": "Craig SechlerJeff Baker(audio logs)",
+  "special": {
+    "Strength": 6,
+    "Perception": 6,
+    "Endurance": 5,
+    "Charisma": 5,
+    "Intelligence": 4,
+    "Agility": 6,
+    "Luck": 4
+  },
+  "mod_special_values": {
+    "Strength": 12,
+    "Perception": 5,
+    "Endurance": 11,
+    "Charisma": 5,
+    "Intelligence": 5,
+    "Agility": 6,
+    "Luck": 3
+  },
+  "level": "8→20→30",
+  "tag_skills": [
+    {
+      "Melee Weap.:": "63→100"
+    },
+    {
+      "Small Guns:": "63→100"
+    },
+    {
+      "Speech:": "61→100"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "105→165→215"
+    },
+    {
+      "Damage Res.:": "15%(39%)"
+    }
+  ],
+  "karma": "Good",
+  "voice_type": "MaleUniqueHarkness",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Surprise 50",
+      "response_text": "Is there a problem?",
+      "index": "1"
+    },
+    {
+      "topic": "MQ03HarknessFatherDisappeared",
+      "topic_text": "He's disappeared, and I'm just trying to find him. That's all.",
+      "emotion": "Neutral 50",
+      "response_text": "All right, all right. You can go on in. If I hear about any trouble, you're gonna wind up in the river. You get me?",
+      "index": "13"
+    },
+    {
+      "topic": "MQ03HarknessFatherSeeLi",
+      "topic_text": "He doesn't live here. He came here to see Doctor Li.",
+      "emotion": "Neutral 50",
+      "response_text": "Doctor Li, eh?",
+      "index": "14"
+    },
+    {
+      "topic": "MQ03HarknessFatherVault",
+      "topic_text": "I'm sure you don't know him. He's lived in a Vault his whole life.",
+      "emotion": "Neutral 50",
+      "response_text": "Oh yeah? And I'm a fairy princess.",
+      "index": "17"
+    },
+    {
+      "topic": "MQ03HarknessFatherWhyMatter",
+      "topic_text": "Why does it matter who he is? Just let me pass.",
+      "emotion": "Neutral 50",
+      "response_text": "It matters because I don't let just anybody wander around on this boat. I'm responsible for these people.",
+      "index": "19"
+    },
+    {
+      "topic": "MQ03HarknessGreetFather",
+      "topic_text": "I'm looking for my father.",
+      "emotion": "Neutral 50",
+      "response_text": "And who might your father be? If he lives on this boat, I know him.",
+      "index": "21"
+    },
+    {
+      "topic": "MQ03HarknessGreetLeave",
+      "topic_text": "Forget it. I'm out of here.",
+      "emotion": "Neutral 50",
+      "response_text": "Thanks for visiting Rivet City. Don't feel compelled to stop by again anytime soon.{annoyed, sarcastic}",
+      "index": "22"
+    },
+    {
+      "topic": "MQ03HarknessGreetLi",
+      "topic_text": "I'm looking for a Doctor Li.",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah? Let me guess -- no, she's not expecting you, but it's really important and you need to see her right away.",
+      "index": "23"
+    },
+    {
+      "topic": "MQ03HarknessGreetSnotty",
+      "topic_text": "I don't answer to you, pal.",
+      "emotion": "Neutral 50",
+      "response_text": "On this boat, you sure as hell do. You don't get on without my say-so.",
+      "index": "25"
+    },
+    {
+      "topic": "MQ03HarknessGreetWander",
+      "topic_text": "Oh, I'm just wandering around.",
+      "emotion": "Neutral 50",
+      "response_text": "Is that so?",
+      "index": "27"
+    },
+    {
+      "topic": "MQ03HarknessLiCHA",
+      "topic_text": "Hey, it's no big deal. I just need to see her for a minute, and I'll be gone.",
+      "emotion": "Neutral 50",
+      "response_text": "Fine. Just don't bother her. She's real busy, what with all her work.",
+      "index": "30"
+    },
+    {
+      "topic": "MQ03HarknessLiFather",
+      "topic_text": "My father came to see her. I'm trying to find him.",
+      "emotion": "Neutral 50",
+      "response_text": "Hmm. Older guy, in his fifties or so?",
+      "index": "32"
+    },
+    {
+      "topic": "MQ03HarknessLiINT",
+      "topic_text": "I have some questions about her recent work in hydroponics.",
+      "emotion": "Neutral 50",
+      "response_text": "Err, what? I don't know much about her work.",
+      "index": "35"
+    },
+    {
+      "topic": "MQ03HarknessLiPersonal",
+      "topic_text": "It's personal, okay? I swear I won't cause any trouble.",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah, yeah. Fine. But I've got my eye on you. You hear me?",
+      "index": "38"
+    },
+    {
+      "topic": "MS03HarknessGreetRCHistory",
+      "topic_text": "I'm here to do research on the city's history.",
+      "emotion": "Surprise 10",
+      "response_text": "Research, huh?{Suspicious}",
+      "index": "41"
+    },
+    {
+      "topic": "MS03RCHistory1",
+      "topic_text": "Do you know about Rivet City's history?",
+      "emotion": "Anger 10",
+      "response_text": "I don't exactly have time to worry about the history around here, now do I? I've got to worry about what's happening on it now.",
+      "index": "43"
+    },
+    {
+      "topic": "MS08AndroidDeadHarkness",
+      "topic_text": "Zimmer thought you were an android. Don't worry, I set him straight.",
+      "emotion": "Neutral 50",
+      "response_text": "I knew there was something about that guy I hated. An android? Good lord... Anyway, thanks for talking to him for me. I... I appreciate that.",
+      "index": "44"
+    },
+    {
+      "topic": "MS08FinHarknessNowWhat",
+      "topic_text": "Well... now that you know the truth. What are you going to do?",
+      "emotion": "Neutral 50",
+      "response_text": "I have two sets of memories... one android, one human... some of these are mine, some belong to someone else.",
+      "index": "45"
+    },
+    {
+      "topic": "MS08FinHarknessWhatCallYou",
+      "topic_text": "So what do I call you, now? Harkness or A3-21?",
+      "emotion": "Neutral 50",
+      "response_text": "Well... I'm not really sure... look, just call me Harkness. That's who I am to the people on this boat who rely on me. It's who I am now...",
+      "index": "47"
+    },
+    {
+      "topic": "MS08FinHarknessWhy",
+      "topic_text": "So why did you do go ahead with the change? Was it worth it?",
+      "emotion": "Neutral 50",
+      "response_text": "I don't know... every time I retrieved one of the runaway androids, they'd fill my head with ideas about self-determination, freedom...",
+      "index": "49"
+    },
+    {
+      "topic": "MS08Harkness1",
+      "topic_text": "I'm not sure how to put this... You're not who you think you are.",
+      "emotion": "Surprise 50",
+      "response_text": "What's that supposed to mean?{security chief trying to intimidate a civilian}",
+      "index": "52"
+    },
+    {
+      "topic": "MS08Harkness1a",
+      "topic_text": "This isn't an existential debate. You're a robot from the Commonwealth.",
+      "emotion": "Surprise 50",
+      "response_text": "Excuse me?{(man being told he is a robot) shocked disbelief turning into frustration}",
+      "index": "54"
+    },
+    {
+      "topic": "MS08Harkness2",
+      "topic_text": "I don't suppose you know that you're a robot, do you?",
+      "emotion": "Neutral 50",
+      "response_text": "I had a feeling you were going to be a problem. I should never have let you in here.{security chief trying to intimidate a civilian}",
+      "index": "56"
+    },
+    {
+      "topic": "MS08Harkness2a",
+      "topic_text": "I'm being completely serious. You're a robot from the Commonwealth.",
+      "emotion": "Surprise 50",
+      "response_text": "Have you been hitting Paulie's private stash? Just what I need. More strung-out chem heads on my boat.{(man being told he is a robot) shocked disbelief turning into frustration}",
+      "index": "58"
+    },
+    {
+      "topic": "MS08Harkness3",
+      "topic_text": "We need to talk.",
+      "emotion": "Happy 50",
+      "response_text": "That's what my wife said right before she left to go live with her mother.{stern security chief trying to be funny}",
+      "index": "60"
+    },
+    {
+      "topic": "MS08Harkness3a",
+      "topic_text": "Those memories of your wife aren't real. You're a robot from the Commonwealth.",
+      "emotion": "Sad 50",
+      "response_text": "What? My wife disappeared while I was in a coma. The only good memories I have are of her, the rest are... Trust me, those are as real as they come.{distant with a touch of sadness mixed with anger}",
+      "index": "62"
+    },
+    {
+      "topic": "MS08Harkness4",
+      "topic_text": "You're a robot from the Commonwealth. You belong to a man named Zimmer.",
+      "emotion": "Neutral 50",
+      "response_text": "Are you out of your mind? I've never been to the Commonwealth. I never even heard of the place before Zimmer arrived.{(man being told he is a robot) shocked disbelief turning into frustration}",
+      "index": "65"
+    },
+    {
+      "topic": "MS08Harkness5",
+      "topic_text": "I can see you aren't going to believe me. Never mind. Forget I said anything.",
+      "emotion": "Anger 50",
+      "response_text": "Quit wasting my time! If I catch you bothering anyone else, I'll make you wish you never set foot on this boat.{upset}",
+      "index": "68"
+    },
+    {
+      "topic": "MS08HarknessAudioLogAudio",
+      "topic_text": "MS08HarknessAudioLogAudio",
+      "emotion": "Neutral 50",
+      "response_text": "My designation is A3-21. I'm a synthetic humanoid from the Commonwealth, and I'm about to undergo a memory transfer.{A Three Dash Twenty One calm but with a undercurrent of fear}",
+      "index": "70"
+    },
+    {
+      "topic": "MS08HarknessEnd1",
+      "topic_text": "What are you going to do about Zimmer? He's the one you were running away from.",
+      "emotion": "Anger 75",
+      "response_text": "I'll tell you what I'm going to do. I'm going to shove him into a very small box, and send him north where he belongs.{venting anger about the man trying to ruin his life}",
+      "index": "80"
+    },
+    {
+      "topic": "MS08HarknessEnd1a",
+      "topic_text": "Actually, I was hoping you'd let me kill him.",
+      "emotion": "Neutral 50",
+      "response_text": "Hmmm... He is a security threat, isn't he? All right. I authorize you to carry out Doctor Zimmer's execution.{really satisfied the guys is a security threat, and he CAN have him killed.}",
+      "index": "81"
+    },
+    {
+      "topic": "MS08HarknessEnd1b",
+      "topic_text": "Sometimes you have to kill the bad guys.",
+      "emotion": "Happy 50",
+      "response_text": "Thank you for warning me about Zimmer, and for keeping this a secret. Here's a little token of my gratitude. Best weapon a man could ask for.{appreciative}",
+      "index": "84"
+    },
+    {
+      "topic": "MS08HarknessEnd1c",
+      "topic_text": "Is violence really necessary? Can't you just... kick him off the boat?",
+      "emotion": "Surprise 25",
+      "response_text": "I suppose if I'm careful I could trump up some charges and throw him out...{thinking to himself}",
+      "index": "87"
+    },
+    {
+      "topic": "MS08HarknessEnd2",
+      "topic_text": "Don't worry, Harkness. Your secret is safe with me.",
+      "emotion": "Fear 10",
+      "response_text": "Thank you. I'm really not sure how people would react if they found out I'm, you know... not entirely human.{real concern for his safety}",
+      "index": "89"
+    },
+    {
+      "topic": "MS08HarknessEnd3",
+      "topic_text": "Zimmer's waiting. He'll want to take you home now.",
+      "emotion": "Fear 50",
+      "response_text": "The man on that audio recording seemed determined not to go back. And he was talking with my voice... but he wasn't really me. I'm somebody else.{(having an existential crisis) wondering if he should be scared or not.}",
+      "index": "91"
+    },
+    {
+      "topic": "MS08HarknessEnd3a",
+      "topic_text": "People will kill you when they find out. The Commonwealth is where you belong.",
+      "emotion": "Surprise 50",
+      "response_text": "You're right. It's not safe for me here. I don't know what I'll face in the North, but from the way Zimmer talks about it, it sounds like a paradise.{coming to agree with leaving}",
+      "index": "94"
+    },
+    {
+      "topic": "MS08HarknessEnd3b",
+      "topic_text": "You're more than \"just a machine.\" You're a person, Harkness. You belong here.",
+      "emotion": "Surprise 50",
+      "response_text": "You're right. I have friends here. And Rivet City needs me to protect it.{weighing the reasons why he should stay}",
+      "index": "98"
+    },
+    {
+      "topic": "MS08HarknessEnd3c",
+      "topic_text": "It's your decision. I'm sure you'll do the right thing.",
+      "emotion": "Fear 50",
+      "response_text": "The more I think about it, the more that recording haunts me. It sounds pretty bad for people -- androids -- like me in the Commonwealth.{growing firm in his decision to hide (androids spoken as a correction to the word \"people\")}",
+      "index": "102"
+    },
+    {
+      "topic": "MS08HarknessNoProof1",
+      "topic_text": "I know you don't believe me, but I'm telling the truth!",
+      "emotion": "Disgust 10",
+      "response_text": "Truth? If there's one thing I've learned it's this: There is no such thing as \"THE Truth,\" just the appearance of truth.{frustrated}",
+      "index": "105"
+    },
+    {
+      "topic": "MS08HarknessNoProof2",
+      "topic_text": "Threaten me all you want, but it won't change the truth!",
+      "emotion": "Disgust 10",
+      "response_text": "Truth? If there's one thing I've learned it's this: There is no such thing as \"THE Truth,\" just the appearance of truth.{frustrated}",
+      "index": "108"
+    },
+    {
+      "topic": "MS08HarknessProof1",
+      "topic_text": "The facts will speak for themselves. I have pictures and an audio testimony!",
+      "emotion": "Surprise 10",
+      "response_text": "All right, I'll humor you...{doubting the evidence, but willing to give it a look}",
+      "index": "111"
+    },
+    {
+      "topic": "MS08HarknessProof2",
+      "topic_text": "Threaten me all you want, but I have pictures and an audio testimony!",
+      "emotion": "Surprise 10",
+      "response_text": "All right, I'll humor you...{doubting the evidence, but willing to give it a look}",
+      "index": "120"
+    },
+    {
+      "topic": "MS08HarknessProofConvince1",
+      "topic_text": "It’s not real blood, Harkness. It’s synthetic, just like everything else.",
+      "emotion": "Surprise 100",
+      "response_text": "I'm not sure what to say... I'm not sure what to even think about all this...{shocked by the evidence that he isn't the person he thought he was}",
+      "index": "129"
+    },
+    {
+      "topic": "MS08HarknessProofConvince2",
+      "topic_text": "You were made to look and act human. But you’re not. The evidence proves that.",
+      "emotion": "Surprise 100",
+      "response_text": "I'm not sure what to say... I'm not sure what to even think about all this...{shocked by the evidence that he isn't the person he thought he was}",
+      "index": "131"
+    },
+    {
+      "topic": "MS08HarknessProofConvince3",
+      "topic_text": "I’m sorry about this, I really am. But it’s true. You’re not human.",
+      "emotion": "Surprise 100",
+      "response_text": "I'm not sure what to say... I'm not sure what to even think about all this...{shocked by the evidence that he isn't the person he thought he was}",
+      "index": "133"
+    },
+    {
+      "topic": "MS08HarknessRestoreMemory2",
+      "topic_text": "Welcome back to reality, you filthy android. Activate A3-21 Recall Code Violet.",
+      "emotion": "Pained 100",
+      "response_text": "Agggggghh!!!",
+      "index": "135"
+    },
+    {
+      "topic": "MS08HarknessRestoreMemory3",
+      "topic_text": "Sorry Harkness, but this is the only way. Activate A3-21 Recall Code Violet.",
+      "emotion": "Pained 100",
+      "response_text": "Agggggghh!!!{Screaming in shock and pain.}",
+      "index": "138"
+    },
+    {
+      "topic": "MS08TopicPinkerton",
+      "topic_text": "Is there anyone on this ship named Pinkerton?",
+      "emotion": "Disgust 25",
+      "response_text": "Are those rumors still floating around? Look, I don't have time for swapping ghost stories with you.{annoyed}",
+      "index": "141"
+    },
+    {
+      "topic": "MS14TedFind",
+      "topic_text": "Where can I find Ted Strayer?",
+      "emotion": "Neutral 50",
+      "response_text": "Have you tried the common room?  That's where he sleeps.",
+      "index": "143"
+    },
+    {
+      "topic": "MS15TLHarknessAbe",
+      "topic_text": "I'm looking for someone named Abraham Washington.",
+      "emotion": "Neutral 50",
+      "response_text": "He has a \"museum\" on the Midship Deck called the Capital Preservation Society. Shouldn't be hard to find. Just follow the signs.",
+      "index": "146"
+    },
+    {
+      "topic": "RCDirectionsInCharge",
+      "topic_text": "Who's in charge around here?",
+      "emotion": "Neutral 50",
+      "response_text": "It doesn't work like that. I'm in charge of security. Doctor Li runs most of everything else.",
+      "index": "147"
+    },
+    {
+      "topic": "RCDirectionsScienceLab",
+      "topic_text": "Where is Doctor Li's lab?",
+      "emotion": "Neutral 50",
+      "response_text": "The door on the left goes to the stairwell. From there, just keep heading west.",
+      "index": "149"
+    },
+    {
+      "topic": "RCTopicCityCouncil",
+      "topic_text": "I heard you're on some sort of City Council.",
+      "emotion": "Neutral 50",
+      "response_text": "Bannon and Doctor Li and I all meet on Monday mornings to talk about city wide issues.",
+      "index": "150"
+    },
+    {
+      "topic": "RCTopicCJYoungMissing",
+      "topic_text": "Have you seen C.J. Young lately?",
+      "emotion": "Neutral 50",
+      "response_text": "Henry told me her and James were missing. I'll have security keep an eye out for them.",
+      "index": "152"
+    },
+    {
+      "topic": "RCTopicDoctorLi",
+      "topic_text": "What can you tell me about Doctor Li?",
+      "emotion": "Neutral 50",
+      "response_text": "She's one of the members of the Council. Runs the science lab here. Don't bother her unless it's important.",
+      "index": "154"
+    },
+    {
+      "topic": "RCTopicHangarDeckPeople",
+      "topic_text": "What is this I hear about the Hangar Deck and Upper Deck?",
+      "emotion": "Disgust 50",
+      "response_text": "That's just folks blowing off steam.",
+      "index": "156"
+    },
+    {
+      "topic": "RCTopicRivetCity",
+      "topic_text": "Why did all you decide to live on this rusty old tub?",
+      "emotion": "Happy 50",
+      "response_text": "We're the safest, most secure city in the Wasteland. Nothing can get in here without our say so.",
+      "index": "159"
+    },
+    {
+      "topic": "SpeechChallengeFailure",
+      "topic_text": "SpeechChallengeFailure",
+      "emotion": "Fear 50",
+      "response_text": "You're right. It's probably not safe for me here. But from the sound of the man on that recording, it's not safe for me in the Commonwealth either.{uncertain}",
+      "index": "160"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "MS08ConfrontationA",
+      "topic_text": "MS08ConfrontationA",
+      "emotion": "Anger 50",
+      "response_text": "Zimmer. I hear you're looking for an android.{confrontational}",
+      "index": "162"
+    },
+    {
+      "topic": "MS08ConfrontationB",
+      "topic_text": "MS08ConfrontationB",
+      "emotion": "Anger 50",
+      "response_text": "What the hell are you talking about, Zimmer? I swear! I've got enough crackpots on this damn boat!{hot headed and annoyed}",
+      "index": "166"
+    },
+    {
+      "topic": "RCGoodbye",
+      "topic_text": "RCGoodbye",
+      "emotion": "Happy 50",
+      "response_text": "Good thing too. I don't feel like busting heads tonight.",
+      "index": "171"
+    },
+    {
+      "topic": "RCPackageEnd",
+      "topic_text": "RCPackageEnd",
+      "emotion": "Neutral 50",
+      "response_text": "Time for my walk around.",
+      "index": "178"
+    }
+  ],
+  "combat": []
+}

@@ -1,0 +1,136 @@
+{
+  "name": "Wint",
+  "url": "/wiki/Wint",
+  "dialogue_name": "DLC03GhoulWint.txt",
+  "dialogue_url": "/wiki/DLC03GhoulWint.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "xx00B39E",
+  "ref_id": "xx00B9DC",
+  "editor_id": "DLC03GhoulWint",
+  "location": "Old Olney underground",
+  "location_url": "/wiki/Old_Olney_underground",
+  "descriptions": [
+    "Wint is a ghoul found in the Old Olney underground in the year 2277.",
+    "Part of Sanders' group of ghoul settlers, trying to set up a place like the Underworld (only better), Wint and his partner, Kidd, are the only survivors. What seemed like a good idea at the time turned out to be a complete disaster when the ghouls found out just why Old Olney was abandoned: Deathclaws came at them full bore when they knocked down walls in the undergrond to expand their living area.",
+    "The only reason he and Kidd survived was because they ran faster than the rest and managed to get clear of the nest while the deathclaws were busy ripping the rest of the ghouls apart.",
+    "Anyone trying to go in the opposite direction, such as the Lone Wanderer searching for lost technology, is better off turning around and running away, in Wint's opinion.",
+    "Shock Value: Upon entering the Old Olney underground to find a Tesla coil, Wint and Kidd can be encountered fleeing the fledgling ghoul community. Wint can provide some information on what happened, after which he and Kidd will leave using the ladder and disappear permanently.",
+    "Wint appears only in the Fallout 3 add-on Broken Steel.",
+    "Wint and Kidd are named after the eponymous assassin pair from Ian Fleming's Diamonds Are Forever novel and its film adaptation. In the latter, the two assassins are portrayed as a gay couple.",
+    "Meta sources"
+  ],
+  "race": "Ghoul",
+  "gender": "Male",
+  "affiliation": "Old Olney underground's ghoulsKidd",
+  "role": "Survivor",
+  "detailed_location": "Old Olney underground",
+  "voice_actor": "Mike Rosson",
+  "special": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 2,
+    "Intelligence": 5,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "mod_special_values": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 6,
+    "Charisma": 2,
+    "Intelligence": 5,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "level": "1",
+  "misc_skills": [
+    {
+      "Hit Points:": "70(75)"
+    }
+  ],
+  "karma": "Neutral",
+  "voice_type": "MaleGenericGhoulDC",
+  "geck_race": "Ghoul",
+  "topics": [
+    {
+      "topic": "DLC03BS2WintDeathclawsA",
+      "topic_text": "I'm not afraid of Deathclaws.",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah? Well then you're stupid.",
+      "index": "1"
+    },
+    {
+      "topic": "DLC03BS2WintDeathclawsB",
+      "topic_text": "If there are so many Deathclaws around, how'd you survive?",
+      "emotion": "Neutral 50",
+      "response_text": "Heh. We ran faster than the others, that's how.",
+      "index": "5"
+    },
+    {
+      "topic": "DLC03BS2WintDeathclawsC",
+      "topic_text": "Why are you down here?",
+      "emotion": "Neutral 50",
+      "response_text": "Look, this wasn't how it was supposed to go down.",
+      "index": "10"
+    },
+    {
+      "topic": "DLC03BS2WintGreetA",
+      "topic_text": "Who are you? What are you doing in here?",
+      "emotion": "Neutral 50",
+      "response_text": "Hey, uhh... I'm Wint. This is Kidd. We're, well it's kind of a long story.",
+      "index": "14"
+    },
+    {
+      "topic": "DLC03BS2WintGreetB",
+      "topic_text": "Oh, great. Ghouls. I hate ghouls.",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah, nice to see you too. Listen, I'd love to chat but I'm kind of trying to avoid getting killed.{sarcastic}",
+      "index": "16"
+    },
+    {
+      "topic": "DLC03BS2WintGreetC",
+      "topic_text": "I'm looking for Olney Powerworks. You know where that is?",
+      "emotion": "Neutral 50",
+      "response_text": "Oh yeah, yeah. Sure thing. Just right through here.",
+      "index": "18"
+    },
+    {
+      "topic": "DLC03BS2WintHelpA",
+      "topic_text": "Can you help me get to Olney Powerworks?",
+      "emotion": "Neutral 50",
+      "response_text": "Help you?",
+      "index": "20"
+    },
+    {
+      "topic": "DLC03BS2WintHelpB",
+      "topic_text": "You're never going to make it.",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah, well. We're not gonna get a better chance than this, so we're gonna take it.",
+      "index": "24"
+    },
+    {
+      "topic": "DLC03BS2WintHelpC",
+      "topic_text": "You're going to help me, or I'm going to kill you.",
+      "emotion": "Neutral 50",
+      "response_text": "Haha, what? You serious?",
+      "index": "26"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "What the...?",
+      "index": "29"
+    }
+  ],
+  "conversation": [],
+  "combat": []
+}

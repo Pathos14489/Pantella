@@ -1,0 +1,154 @@
+{
+  "name": "Martha Wilson",
+  "url": "/wiki/Martha_Wilson",
+  "dialogue_name": "MarthaWilson.txt",
+  "dialogue_url": "/wiki/MarthaWilson.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "00029AA5",
+  "ref_id": "0002DC74",
+  "editor_id": "MarthaWilson",
+  "location": "The Wilson's house",
+  "location_url": "/wiki/The_Wilson%27s_house",
+  "descriptions": [
+    "Martha Wilson is an inhabitant of Andale in 2277.",
+    "Martha is the rather quiet wife of Bill Wilson. If asked her opinion on Andale or other matters, she will be fairly perplexed that someone cared enough to ask.",
+    "As part of a family that carries on a tradition of cannibalism as the main way of life in Andale, Martha helps keep the house clean and cooks meals while her husband Bill goes to work with Jack Smith in the aforementioned \"family business.\"",
+    "Our Little Secret: Martha is one of Andale's cannibals. Should the Lone Wanderer uncover this secret, upon leaving the shed behind the Smiths' house, the inhabitants of Andale will confront them.",
+    "If she is asked about Old Man Harris (after talking to him) she will disclose the fact that he is her father, then states that she \"...probably shouldn't have said that.\""
+  ],
+  "race": "Human",
+  "gender": "Female",
+  "affiliation": "Andale",
+  "role": "WifeCannibal",
+  "detailed_location": "The Wilson's house, Andale",
+  "voice_actor": "Shari Elliker",
+  "special": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 5,
+    "Intelligence": 4,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "level": "1→8 (equal to player's level)",
+  "tag_skills": [
+    {
+      "Barter:": "30→62"
+    },
+    {
+      "Medicine:": "28→60"
+    },
+    {
+      "Melee Weap.:": "32→64"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "65→100"
+    },
+    {
+      "Critical Chance:": "5%"
+    },
+    {
+      "Unarmed Dam.:": "1.15"
+    },
+    {
+      "Poison Resist.:": "15%"
+    },
+    {
+      "Rad. Resist.:": "6%"
+    },
+    {
+      "Carry Weight:": "210"
+    },
+    {
+      "Damage Res.:": "0%(4%)"
+    }
+  ],
+  "karma": "Evil",
+  "voice_type": "FemaleAdult01DefaultDC",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "AndaleJuniorLivingHere",
+      "topic_text": "Do you like living in Andale?",
+      "emotion": "Neutral 50",
+      "response_text": "Are you joking? It's fantastic here! The best town in the USA! Has been for... why it's been so many years running that I've lost count!",
+      "index": "1"
+    },
+    {
+      "topic": "AndaleOldManHarrisTopic",
+      "topic_text": "What's wrong with that Harris guy?",
+      "emotion": "Neutral 50",
+      "response_text": "Well, dad always was a bit off his rocker.",
+      "index": "2"
+    },
+    {
+      "topic": "AndaleOldManHarrisTopicMartha1",
+      "topic_text": "Wait... He's your dad?",
+      "emotion": "Neutral 50",
+      "response_text": "Oh dear... I let that slip didn't I? He used to be. Until I got married. I can't really say much more than that.",
+      "index": "3"
+    },
+    {
+      "topic": "AndaleOldManHarrisTopicMartha2",
+      "topic_text": "It's true. And they smell funny.",
+      "emotion": "Neutral 50",
+      "response_text": "Mr. Harris does not smell funny! But... okay, old people do sort of smell funny.",
+      "index": "4"
+    },
+    {
+      "topic": "AndaleTownTopicTell me about Andale.",
+      "topic_text": "What do you think of Andale?",
+      "emotion": "Happy 50",
+      "response_text": "Oh, well, no one ever asks me MY opinion about anything, but I love it here.",
+      "index": "5"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "Why, hello there. I'd heard there was someone new coming. How can our little family help you?",
+      "index": "6"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "AndaleTalk2",
+      "topic_text": "AndaleTalk2",
+      "emotion": "Neutral 50",
+      "response_text": "I don't like that stranger nosing around here. He isn't like the others... This one is a bit more... I don't know. There's something about him.",
+      "index": "10"
+    },
+    {
+      "topic": "AndaleTalk4",
+      "topic_text": "AndaleTalk4",
+      "emotion": "Neutral 50",
+      "response_text": "I know, it's just, you know how I get: worry, worry, worry. That's me!",
+      "index": "13"
+    },
+    {
+      "topic": "GOODBYE",
+      "topic_text": "I have to go now.",
+      "emotion": "Neutral 50",
+      "response_text": "We'll see you again, won't we?",
+      "index": "15"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Neutral 50",
+      "response_text": "I'm worried about something, Bill.",
+      "index": "17"
+    }
+  ],
+  "combat": []
+}

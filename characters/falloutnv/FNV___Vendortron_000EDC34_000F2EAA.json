@@ -1,0 +1,114 @@
+{
+  "name": "Vendortron",
+  "url": "/wiki/Vendortron",
+  "dialogue_name": "GunRunnerProtectron.txt",
+  "dialogue_url": "/wiki/GunRunnerProtectron.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": true,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000EDC34",
+  "ref_id": "000F2EAA",
+  "editor_id": "GunRunnerProtectron",
+  "location": "Gun Runners",
+  "location_url": "/wiki/Gun_Runners_(Fallout:_New_Vegas)",
+  "descriptions": [
+    "Vendortron is a Protectron robot in the Mojave Wasteland in 2281.",
+    "Located at the Gun Runners kiosk outside of Freeside, Vendortron, befitting its name, serves as the primary vendor for the weapons and ammunition produced and sold by the Gun Runners. According to the Vendortron itself, the kiosk was built around it in order to deter theft and assault. As such, it is impossible to kill Vendortron or pickpocket it.",
+    "The store has five inventory tiers (the inventory is random and may not include all weapons listed below):",
+    "Finishing the Honest Hearts add-on will also make the .45 Auto pistol, .45 Auto submachine gun, war club, yao guai gauntlet, tomahawk, and fire bomb available for purchase. Similarly, after completing Lonesome Road, rockets and nails will be sold. Sometimes, however, rockets and nails can be purchased before even starting Lonesome Road.",
+    "On a terminal inside the Gun Runners factory, it is suggested that the Vendortron's name be changed from Vendortron to an actual name \"like Bob. We're not calling it Bob\" which is a reference to the 2000 post-apocalyptic science fiction film Titan A.E."
+  ],
+  "race": "Protectron",
+  "affiliation": "Gun Runners",
+  "role": "Merchant",
+  "detailed_location": "Gun Runners",
+  "voice_actor": "Dante Reid",
+  "special": {
+    "Strength": 5,
+    "Perception": 4,
+    "Endurance": 5,
+    "Charisma": 5,
+    "Intelligence": 5,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "level": "3",
+  "misc_skills": [
+    {
+      "Hit Points:": "45"
+    },
+    {
+      "Poison Resist.:": "20%"
+    },
+    {
+      "Rad. Resist.:": "8%"
+    }
+  ],
+  "karma": "Neutral",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "{Player in combat}The store is currently unavailable due to unexpected circumstances. Please come back later.",
+      "index": "1"
+    },
+    {
+      "topic": "VDialogueEastVegas1EGunRunnerProtectronTopic001",
+      "topic_text": "Show me what you have for sale.",
+      "emotion": "Neutral 50",
+      "response_text": "I am ready to process our transaction.",
+      "index": "3"
+    },
+    {
+      "topic": "VDialogueEastVegas1EGunRunnerProtectronTopic003",
+      "topic_text": "What is this place?",
+      "emotion": "Neutral 50",
+      "response_text": "This is the New Vegas branch of the Gun Runners, supplying the wasteland with only the finest armaments since 2155.",
+      "index": "4"
+    },
+    {
+      "topic": "VDialogueVegasEast1EGunRunnerProtectronTopic000",
+      "topic_text": "How did you get inside there?",
+      "emotion": "Neutral 50",
+      "response_text": "This kiosk was specially constructed around me to deter theft and assault.",
+      "index": "5"
+    },
+    {
+      "topic": "VDialogueVegasEast1EGunRunnerProtectronTopic001",
+      "topic_text": "That's some impressive weaponry. Where did it all come from?",
+      "emotion": "Neutral 50",
+      "response_text": "All Gun Runner merchandise is constructed on-site.",
+      "index": "6"
+    },
+    {
+      "topic": "VDialogueVegasEast1EGunRunnerProtectronTopic003",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Come back and see us again soon.",
+      "index": "7"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Come back and see us again soon.",
+      "index": "8"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "Hello",
+      "emotion": "Neutral 50",
+      "response_text": "Hello, potential customer.",
+      "index": "9"
+    }
+  ],
+  "combat": []
+}

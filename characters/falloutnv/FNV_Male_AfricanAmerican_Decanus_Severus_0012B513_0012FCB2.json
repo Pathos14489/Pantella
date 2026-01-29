@@ -1,0 +1,345 @@
+{
+  "name": "Decanus Severus",
+  "url": "/wiki/Severus",
+  "dialogue_name": "NVCCSeverus.txt",
+  "dialogue_url": "/wiki/NVCCSeverus.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "0012B513",
+  "ref_id": "0012FCB2",
+  "editor_id": "NVCCSeverus",
+  "location": "Cottonwood Cove",
+  "location_url": "/wiki/Cottonwood_Cove",
+  "descriptions": [
+    "Decanus Severus is a member of Caesar's Legion, serving as quartermaster and second-in-command to Centurion Aurelius of Phoenix at Cottonwood Cove in the Mojave Wasteland in Fallout: New Vegas.",
+    "Once serving as the leader of his own contubernium while assigned to the Legion garrison in the cove, sometime before 2281, Severus transitioned to the role of quartermaster after Aurelius arrived and took command of the cove.",
+    "In his role as quartermaster, beyond taking care of the stocks of equipment and the spoils of war brought back by raiding parties, Severus also coordinates Legion patrols. The biggest problem faced by Aurelis' garrison is not the fact that the NCR avoids engagement with their raiding parties, particularly after the sabotage of Camp Searchlight by Vulpes Inculta, but rather that the army's liberal use of land mines allows them to cover large swaths of the countryside and curtail Legion operations, with Severus' men presently unable to develop a reliable method of disarming them.",
+    "Decanus Severus, located outside the tent immediately north of the HQ building, will trade dogtags in varying amounts in exchange for certain items and differing amounts of Legion fame (see bugs). The rewards he can give and the dogtag amount required for each is as follows:",
+    "Weapons: (Note: asking to redeem for weapons immediately removes five dogtags from the player's inventory)",
+    "Armor: (Note: asking to redeem for armor immediately removes five dogtags from the player's inventory)",
+    "Explosives:",
+    "Ammunition:",
+    "Food:",
+    "Due to several bugs with Severus' dialogue, turning in dogtags five at a time in exchange for food will yield the most fame per tag, granting +12 Legion fame for five tags.  Turning in 25 dogtags five at a time is sufficient to become Liked, 10 for Accepted and 5 for Neutral. Turning in 40 tags five at a time, followed by another 3 tags in one set of three will achieve Idolized status with the Legion.",
+    "Frumentarii: Alerio · Cato Hostilius · Gabban · Karl · Picus · Disguised frumentarius · Ulysses (formerly)\nConsul: M. Licinius Crassus · M. Scribonius Libo Drusus (of the consul)"
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Caesar's Legion",
+  "role": "Second-in-commandQuartermaster",
+  "detailed_location": "Cottonwood Cove",
+  "voice_actor": "Gregory Alan Williams",
+  "special": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 6,
+    "Charisma": 4,
+    "Intelligence": 4,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "level": "13",
+  "tag_skills": [],
+  "misc_skills": [],
+  "karma": "Neutral",
+  "voice_type": "MaleAdult06",
+  "geck_race": "AfricanAmerican",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "{Annoyed}You're the one{Luh-CUL-us}Lucullus said would come?{Blunt}You'll find him waiting for you, down at the docks.",
+      "index": "1"
+    },
+    {
+      "topic": "VFreeformCottonwoodCoveNVCCSeverusTopic000",
+      "topic_text": "I have some questions.",
+      "emotion": "Neutral 50",
+      "response_text": "Very well.",
+      "index": "8"
+    },
+    {
+      "topic": "VFreeformCottonwoodCoveNVCCSeverusTopic001",
+      "topic_text": "What is this place?",
+      "emotion": "Neutral 50",
+      "response_text": "{irritated by player's stupidity}A Legion outpost. What's it look like?",
+      "index": "9"
+    },
+    {
+      "topic": "VFreeformCottonwoodCoveNVCCSeverusTopic002",
+      "topic_text": "What is your role here?",
+      "emotion": "Neutral 50",
+      "response_text": "I'm an officer of the Legion, of the rank{de-CAN-us}Decanus. When we encamped, I commanded a{con-too-BER-nee-um}contubernium of eight Legionaries.",
+      "index": "11"
+    },
+    {
+      "topic": "VFreeformCottonwoodCoveNVCCSeverusTopic003",
+      "topic_text": "I have dog tags to turn in.",
+      "emotion": "Neutral 50",
+      "response_text": "{gruff}In trade for what?{DUPLICATE?}",
+      "index": "13"
+    },
+    {
+      "topic": "VFreeformCottonwoodCoveNVCCSeverusTopic004",
+      "topic_text": "I have dog tags to turn in.",
+      "emotion": "Neutral 50",
+      "response_text": "{gruff}What do you want to trade for?",
+      "index": "14"
+    },
+    {
+      "topic": "VFreeformCottonwoodCoveNVCCSeverusTopic005",
+      "topic_text": "Food supplies.",
+      "emotion": "Neutral 50",
+      "response_text": "How many tags worth?",
+      "index": "15"
+    },
+    {
+      "topic": "VFreeformCottonwoodCoveNVCCSeverusTopic006",
+      "topic_text": "Ammo.",
+      "emotion": "Neutral 50",
+      "response_text": "What type of ammo?",
+      "index": "16"
+    },
+    {
+      "topic": "VFreeformCottonwoodCoveNVCCSeverusTopic007",
+      "topic_text": "Firearms.",
+      "emotion": "Neutral 50",
+      "response_text": "Firearms of what kind?",
+      "index": "17"
+    },
+    {
+      "topic": "VFreeformCottonwoodCoveNVCCSeverusTopic008",
+      "topic_text": "Armor.",
+      "emotion": "Neutral 50",
+      "response_text": "{gruff}What sort of armor?",
+      "index": "18"
+    },
+    {
+      "topic": "VFreeformCottonwoodCoveNVCCSeverusTopic009",
+      "topic_text": "Just letting you know.",
+      "emotion": "Neutral 50",
+      "response_text": "{gruff}Wasting my time is more like it.",
+      "index": "19"
+    },
+    {
+      "topic": "VFreeformCottonwoodCoveNVCCSeverusTopic010",
+      "topic_text": "Do you see much action against the NCR?",
+      "emotion": "Neutral 50",
+      "response_text": "As much as their cowardice will allow. The Profligates avoid open battle, but on good days we find one of their patrols.",
+      "index": "20"
+    },
+    {
+      "topic": "VFreeformCottonwoodCoveNVCCSeverusTopic012",
+      "topic_text": "20 gauge shotgun shells.",
+      "emotion": "Neutral 50",
+      "response_text": "{gruff}Here.{DUPLICATE?}",
+      "index": "22"
+    },
+    {
+      "topic": "VFreeformCottonwoodCoveNVCCSeverusTopic013",
+      "topic_text": "9 mm.",
+      "emotion": "Neutral 50",
+      "response_text": "{gruff}Here.",
+      "index": "23"
+    },
+    {
+      "topic": "VFreeformCottonwoodCoveNVCCSeverusTopic014",
+      "topic_text": "10 mm.",
+      "emotion": "Neutral 50",
+      "response_text": "{gruff}Here.{DUPLICATE?}",
+      "index": "24"
+    },
+    {
+      "topic": "VFreeformCottonwoodCoveNVCCSeverusTopic015",
+      "topic_text": ".22 LR.",
+      "emotion": "Neutral 50",
+      "response_text": "{gruff}Here.{DUPLICATE?}",
+      "index": "25"
+    },
+    {
+      "topic": "VFreeformCottonwoodCoveNVCCSeverusTopic016",
+      "topic_text": ".357 Magnum.",
+      "emotion": "Neutral 50",
+      "response_text": "{gruff}Here.{DUPLICATE?}",
+      "index": "26"
+    },
+    {
+      "topic": "VFreeformCottonwoodCoveNVCCSeverusTopic017",
+      "topic_text": "Small Energy Cells.",
+      "emotion": "Neutral 50",
+      "response_text": "{gruff}Here.{DUPLICATE?}",
+      "index": "27"
+    },
+    {
+      "topic": "VFreeformCottonwoodCoveNVCCSeverusTopic018",
+      "topic_text": "10 mm Submachine Gun [30 tags].",
+      "emotion": "Neutral 50",
+      "response_text": "{gruff}Take it.{DUPLICATE?}",
+      "index": "28"
+    },
+    {
+      "topic": "VFreeformCottonwoodCoveNVCCSeverusTopic019",
+      "topic_text": "Explosives.",
+      "emotion": "Neutral 50",
+      "response_text": "{gruff}Dynamite or grenades?",
+      "index": "29"
+    },
+    {
+      "topic": "VFreeformCottonwoodCoveNVCCSeverusTopic020",
+      "topic_text": "Dynamite [3 tags].",
+      "emotion": "Neutral 50",
+      "response_text": "{gruff}Watch yourself with this.",
+      "index": "30"
+    },
+    {
+      "topic": "VFreeformCottonwoodCoveNVCCSeverusTopic021",
+      "topic_text": "Grenades [3 tags]",
+      "emotion": "Neutral 50",
+      "response_text": "{gruff}Watch yourself with this.{DUPLICATE?}",
+      "index": "31"
+    },
+    {
+      "topic": "VFreeformCottonwoodCoveNVCCSeverusTopic022",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "{LATIN}{\"WALL-ae\"}Vale.",
+      "index": "32"
+    },
+    {
+      "topic": "VFreeformCottonwoodCoveNVCCSeverusTopic024",
+      "topic_text": "9 mm Submachine Gun [20 tags].",
+      "emotion": "Neutral 50",
+      "response_text": "{gruff}Take it.{DUPLICATE?}",
+      "index": "33"
+    },
+    {
+      "topic": "VFreeformCottonwoodCoveNVCCSeverusTopic025",
+      "topic_text": "Laser Pistol [25 tags].",
+      "emotion": "Neutral 50",
+      "response_text": "{gruff}Take it.{DUPLICATE?}",
+      "index": "34"
+    },
+    {
+      "topic": "VFreeformCottonwoodCoveNVCCSeverusTopic026",
+      "topic_text": "Laser Rifle [50 tags].",
+      "emotion": "Neutral 50",
+      "response_text": "{gruff}Take it.{DUPLICATE?}",
+      "index": "35"
+    },
+    {
+      "topic": "VFreeformCottonwoodCoveNVCCSeverusTopic027",
+      "topic_text": "Leather Armor [15 tags].",
+      "emotion": "Neutral 50",
+      "response_text": "{gruff}This is your size.",
+      "index": "36"
+    },
+    {
+      "topic": "VFreeformCottonwoodCoveNVCCSeverusTopic028",
+      "topic_text": "Reinforced Leather Armor [20 tags].",
+      "emotion": "Neutral 50",
+      "response_text": "{gruff}This is your size.{DUPLICATE?}",
+      "index": "37"
+    },
+    {
+      "topic": "VFreeformCottonwoodCoveNVCCSeverusTopic036",
+      "topic_text": "I can teach you to make Powder Charges.",
+      "emotion": "Neutral 50",
+      "response_text": "If they're more powerful than the Profligates' landmines, by all means show me how.",
+      "index": "38"
+    },
+    {
+      "topic": "VFreeformCottonwoodCoveNVCCSeverusTopic037",
+      "topic_text": "One.",
+      "emotion": "Neutral 50",
+      "response_text": "{gruff}Here, this is edible.",
+      "index": "39"
+    },
+    {
+      "topic": "VFreeformCottonwoodCoveNVCCSeverusTopic038",
+      "topic_text": "Three.",
+      "emotion": "Neutral 50",
+      "response_text": "{gruff}Here, this is edible.",
+      "index": "40"
+    },
+    {
+      "topic": "VFreeformCottonwoodCoveNVCCSeverusTopic039",
+      "topic_text": "Five.",
+      "emotion": "Neutral 50",
+      "response_text": "{gruff}Here, this is edible.",
+      "index": "41"
+    },
+    {
+      "topic": "VFreeformCottonwoodCoveNVCCSeverusTopic040",
+      "topic_text": "Ten.",
+      "emotion": "Neutral 50",
+      "response_text": "{gruff}Here, this is edible.",
+      "index": "42"
+    },
+    {
+      "topic": "VFreeformCottonwoodCoveNVCCSeverusTopic042",
+      "topic_text": "That's it for now.",
+      "emotion": "Neutral 50",
+      "response_text": "{gruff}Are we done, then?",
+      "index": "43"
+    },
+    {
+      "topic": "VFreeformCottonwoodCoveNVCCSeverusTopic044",
+      "topic_text": "Study this as long as you need. <Show him the Powder Charge schematic.>",
+      "emotion": "Neutral 50",
+      "response_text": "Tin cans, gunpowder, scrap metal, and duct tape?{Humph!}We won't have any trouble finding those ingredients!",
+      "index": "44"
+    },
+    {
+      "topic": "VFreeformCottonwoodCoveNVCCSeverusTopic045",
+      "topic_text": "I can show you how to disarm the NCR's mines.",
+      "emotion": "Neutral 50",
+      "response_text": "{gruff, interested}That would be worth knowing, especially if we can then rearm and reuse them.",
+      "index": "45"
+    },
+    {
+      "topic": "VFreeformCottonwoodCoveNVCCSeverusTopic046<Player teaches Severus how to disarm NCR munitions>",
+      "topic_text": "The trick is to rush the mine and press the blinking red light.",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] The light is a button that can interrupt detonation?{Humph!}We were too busy throwing ourselves to the ground to figure that out.",
+      "index": "46"
+    },
+    {
+      "topic": "VFreeformCottonwoodCoveNVCCSeverusTopic047",
+      "topic_text": "Another time, perhaps.",
+      "emotion": "Neutral 50",
+      "response_text": "{gruff}If you have nothing to teach, don't make the offer.",
+      "index": "49"
+    },
+    {
+      "topic": "VFreeformCottonwoodCoveNVCCSeverusTopic049",
+      "topic_text": "Your Centurion said I could trade dog tags for supplies.",
+      "emotion": "Neutral 50",
+      "response_text": "{gruff}What of it?",
+      "index": "50"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "{LATIN}{\"WALL-ae\"}Vale.",
+      "index": "51"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "Hello",
+      "emotion": "Neutral 50",
+      "response_text": "{AH-way}Ave.",
+      "index": "52"
+    }
+  ],
+  "combat": []
+}

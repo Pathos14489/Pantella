@@ -1,0 +1,409 @@
+{
+  "name": "Ronald Laren",
+  "url": "/wiki/Ronald_Laren",
+  "dialogue_name": "RonaldLaren.txt",
+  "dialogue_url": "/wiki/RonaldLaren.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000388E1",
+  "ref_id": "000388E2",
+  "editor_id": "RonaldLaren",
+  "location": "Ronald Laren's home",
+  "location_url": "/wiki/Ronald_Laren%27s_home",
+  "descriptions": [
+    "Ronald Laren is one of Girdershade's two inhabitants in 2277.",
+    "After his wife died, he wandered the wasteland before settling in Girdershade. Living close to Sierra Petrovita has increased his negative feelings regarding his loneliness, as he misses the physical intimacy he once shared with his wife. As a result, he has made several advances at Sierra, but she is oblivious to his motivations due to her pursuit of Nuka-Cola. Ronald is angered by her rejection, and although he does not want to physically force himself on her, he still wishes to spite her in other ways.",
+    "According to Sierra, Ronald is a skilled fighter. She recalls one occasion where he killed two raiders at Girdershade and punched their leader, Lug-Nut, in the face.",
+    "Ronald Laren will not spawn until one has started The Nuka-Cola Challenge."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Nuka-Cola fan club",
+  "role": "Neighbor",
+  "detailed_location": "Ronald Laren's home,Girdershade",
+  "voice_actor": "Jeff Baker",
+  "special": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 3,
+    "Intelligence": 3,
+    "Agility": 7,
+    "Luck": 5
+  },
+  "level": "91 (factory)",
+  "tag_skills": [
+    {
+      "Melee Weap.:": "66"
+    },
+    {
+      "Small Guns:": "68"
+    },
+    {
+      "Unarmed:": "62"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "105"
+    },
+    {
+      "Critical Chance:": "5%"
+    },
+    {
+      "Unarmed Dam.:": "3.60"
+    },
+    {
+      "Poison Resist.:": "15%"
+    },
+    {
+      "Rad. Resist.:": "6%"
+    },
+    {
+      "Carry Weight:": "210"
+    }
+  ],
+  "karma": "NeutralEvil (Nuka-Cola Factory)",
+  "voice_type": "MaleAdult01DefaultDC",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "DialogGirdershadeTLGrady",
+      "topic_text": "Do you know someone named Grady?",
+      "emotion": "Disgust 70",
+      "response_text": "Grady? Maybe. Why you asking?",
+      "index": "1"
+    },
+    {
+      "topic": "DialogGirdershadeTLGrady01",
+      "topic_text": "I have a package for you from him.",
+      "emotion": "Surprise 100",
+      "response_text": "Holy crap! You have it?",
+      "index": "2"
+    },
+    {
+      "topic": "DialogGirdershadeTLGrady02",
+      "topic_text": "I found him dead.",
+      "emotion": "Surprise 90",
+      "response_text": "Holy crap! That son-of-a-bitch took my caps and ran and now he ends up dead?",
+      "index": "4"
+    },
+    {
+      "topic": "DialogGirdershadeTLGrady03",
+      "topic_text": "I bumped into him a while back is all. (Lie)",
+      "emotion": "Anger 90",
+      "response_text": "You did huh? Well, if you ever see that lowlife again, tell him Ronald wants his damn package delivered or bring me back my caps.",
+      "index": "6"
+    },
+    {
+      "topic": "DialogGirdershadeTLGrady04",
+      "topic_text": "Sure, here you go.",
+      "emotion": "Happy 50",
+      "response_text": "Hey, thanks a bunch for bringing it to me. You could have been a jerk and sold it to someone else, but you didn't.",
+      "index": "7"
+    },
+    {
+      "topic": "DialogGirdershadeTLGrady04Nice",
+      "topic_text": "Sure, here you go and you don't owe me a single cap.",
+      "emotion": "Disgust 90",
+      "response_text": "Well, that's awfully generous of you seeing as I never made a deal with you in the first place.",
+      "index": "9"
+    },
+    {
+      "topic": "DialogGirdershadeTLGrady04SC",
+      "topic_text": "I'll sell it to you...for 300 caps.",
+      "emotion": "Disgust 90",
+      "response_text": "Fine, fine. Anything to get it! Here's your caps, now hand it over.",
+      "index": "11"
+    },
+    {
+      "topic": "DialogGirdershadeTLGrady05",
+      "topic_text": "Hang on a second. You want it, you need to pay for it.",
+      "emotion": "Disgust 80",
+      "response_text": "Shrewd kid, very shrewd.",
+      "index": "12"
+    },
+    {
+      "topic": "DialogGirdershadeTLGrady06",
+      "topic_text": "I'm not giving you anything.",
+      "emotion": "Disgust 100",
+      "response_text": "Ohhh... I know how this game's played, kid.",
+      "index": "14"
+    },
+    {
+      "topic": "DialogGirdershadeTLGrady07",
+      "topic_text": "Nope, sorry. I'm holding onto it.",
+      "emotion": "Disgust 90",
+      "response_text": "Fine, be an asshole. When you get hungry for caps, you know who to talk to.",
+      "index": "16"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Happy 50",
+      "response_text": "Lemme go, beautiful! I'm gonna' get us some Quantum!",
+      "index": "17"
+    },
+    {
+      "topic": "MS05FinTLLocalSights",
+      "topic_text": "Is there anything else interesting to see near Girdershade?",
+      "emotion": "Neutral 50",
+      "response_text": "My friend, you are at the ass end of the Capital Wasteland. If it weren't for Sierra I'd be out of here.",
+      "index": "27"
+    },
+    {
+      "topic": "MS05FinTLNukaCola",
+      "topic_text": "I have some more Quantum for you.",
+      "emotion": "Disgust 50",
+      "response_text": "Why would I want that piss water? Get it away from me.",
+      "index": "30"
+    },
+    {
+      "topic": "MS05FinTLSierraDead",
+      "topic_text": "Sierra is dead.",
+      "emotion": "Surprise 90",
+      "response_text": "What? What the hell happened?",
+      "index": "31"
+    },
+    {
+      "topic": "MS05FinTLSierraDead00",
+      "topic_text": "The Nuka-Cola Corporation had her killed! (Lie)",
+      "emotion": "Surprise 100",
+      "response_text": "Crap! This has to be about the Nuka-Cola machine I got for her!",
+      "index": "32"
+    },
+    {
+      "topic": "MS05FinTLSierraDead01",
+      "topic_text": "Sorry, I don't know. (Lie)",
+      "emotion": "Disgust 50",
+      "response_text": "Are you shittin' me? What a waste! Oh man.",
+      "index": "35"
+    },
+    {
+      "topic": "MS05FinTLSierraDead02",
+      "topic_text": "I killed her. Got a problem with that, tough guy?",
+      "emotion": "Surprise 100",
+      "response_text": "What?? You're crazy! How could you just go and kill her like that?!",
+      "index": "37"
+    },
+    {
+      "topic": "MS05FinTLSierraDead03",
+      "topic_text": "You sound like you were in love with her.",
+      "emotion": "Surprise 50",
+      "response_text": "Love? What are you talking about.",
+      "index": "39"
+    },
+    {
+      "topic": "MS05FinTLSierraDead04",
+      "topic_text": "Yeah, it's a shame. She was beautiful.",
+      "emotion": "Happy 50",
+      "response_text": "Wasn't she?",
+      "index": "42"
+    },
+    {
+      "topic": "MS05FinTLSierraDead05",
+      "topic_text": "Well, you found me. Now try and kill me, tough guy.",
+      "emotion": "Surprise 100",
+      "response_text": "You!? You killed her!?",
+      "index": "46"
+    },
+    {
+      "topic": "MS05RonaldCT01",
+      "topic_text": "What's it to you?",
+      "emotion": "Neutral 50",
+      "response_text": "Because I'm making sure that no one messes with her. She's my girl, you know.",
+      "index": "48"
+    },
+    {
+      "topic": "MS05RonaldCT02",
+      "topic_text": "I was checking out Sierra's Nuka-Cola Collection.",
+      "emotion": "Disgust 50",
+      "response_text": "That better be all you were checking out. I don't like guys messing with my woman.",
+      "index": "52"
+    },
+    {
+      "topic": "MS05RonaldCT03",
+      "topic_text": "Screw you, buddy! What are you, her husband?",
+      "emotion": "Disgust 50",
+      "response_text": "Nope. I'm not the marrying type.",
+      "index": "55"
+    },
+    {
+      "topic": "MS05RonaldCT04",
+      "topic_text": "She never said anything about you two being together.",
+      "emotion": "Neutral 50",
+      "response_text": "Well, that's likely because it's none of anyone's business but ours.",
+      "index": "59"
+    },
+    {
+      "topic": "MS05RonaldCT05",
+      "topic_text": "I'm not messing with anything.",
+      "emotion": "Disgust 50",
+      "response_text": "Good. I aim to keep it that way.",
+      "index": "63"
+    },
+    {
+      "topic": "MS05RonaldCT05a",
+      "topic_text": "Hey, she's my girl! Take a number!",
+      "emotion": "Disgust 50",
+      "response_text": "I think you'd better calm down and think long and hard about that.",
+      "index": "65"
+    },
+    {
+      "topic": "MS05RonaldCT06",
+      "topic_text": "What are you driving at?",
+      "emotion": "Happy 50",
+      "response_text": "Wow, you are as naive as you look.",
+      "index": "70"
+    },
+    {
+      "topic": "MS05RonaldCT07",
+      "topic_text": "I don't have time for this nonsense.",
+      "emotion": "Disgust 50",
+      "response_text": "All right, suit yourself.",
+      "index": "72"
+    },
+    {
+      "topic": "MS05RonaldCT07a",
+      "topic_text": "What the hell is wrong with you? You're sick...",
+      "emotion": "Happy 50",
+      "response_text": "Born and raised that way and damn proud of it.",
+      "index": "74"
+    },
+    {
+      "topic": "MS05RonaldCT08",
+      "topic_text": "Nope, I still don't get it.",
+      "emotion": "Neutral 50",
+      "response_text": "New to this stuff, eh kid?",
+      "index": "76"
+    },
+    {
+      "topic": "MS05RonaldCT09",
+      "topic_text": "That's disgusting!",
+      "emotion": "Disgust 50",
+      "response_text": "What are you, some kind of choir boy? Bah, maybe you're just not old enough to understand yet.",
+      "index": "78"
+    },
+    {
+      "topic": "MS05RonaldCT10",
+      "topic_text": "Can't say I blame you.",
+      "emotion": "Happy 50",
+      "response_text": "Now you're speaking my language.",
+      "index": "82"
+    },
+    {
+      "topic": "MS05RonaldQuestOffer01",
+      "topic_text": "Oh, really? Sounds interesting. Go on...",
+      "emotion": "Neutral 50",
+      "response_text": "I know she's asked you to find her some Nuka-Cola Quantum. Heck, she asks everyone that wanders through here.",
+      "index": "84"
+    },
+    {
+      "topic": "MS05RonaldQuestOffer02",
+      "topic_text": "Just what is it you need me to do?",
+      "emotion": "Neutral 50",
+      "response_text": "I know she's asked you to find her some Nuka-Cola Quantum. Heck, she asks everyone that wanders through here.",
+      "index": "88"
+    },
+    {
+      "topic": "MS05RonaldQuestOffer03",
+      "topic_text": "Look, I've got things to do. I'm not interested.",
+      "emotion": "Disgust 50",
+      "response_text": "Fine. Oh, and I wouldn't bother running back to Sierra and warning her about our little chat. She won't even understand what you're talking about.",
+      "index": "92"
+    },
+    {
+      "topic": "MS05RonaldSubQuestAccepted",
+      "topic_text": "Yeah, sure. I'm always for making more caps.",
+      "emotion": "Happy 50",
+      "response_text": "Thought you might. Good. I'll see you soon then.",
+      "index": "94"
+    },
+    {
+      "topic": "MS05RonaldSubQuestBlackWidow",
+      "topic_text": "Tell you what, handsome. Find me some Quantum and we'll make it a threesome.",
+      "emotion": "Surprise 50",
+      "response_text": "Holy shit! Are you for real? Hell yeah!",
+      "index": "95"
+    },
+    {
+      "topic": "MS05RonaldSubQuestDelayed",
+      "topic_text": "Sorry, I'm not interested in your offer.",
+      "emotion": "Happy 50",
+      "response_text": "Well, look... don't answer me now, just keep it in mind. If you find some and you've had a change of heart, I'll still  buy 'em.",
+      "index": "97"
+    },
+    {
+      "topic": "MS05RonaldSubQuestSC",
+      "topic_text": "How about you pay me double for each Quantum bottle.",
+      "emotion": "Disgust 50",
+      "response_text": "You devious bastard. I didn't figure you were that clever.",
+      "index": "100"
+    },
+    {
+      "topic": "MS05TLLocalSights",
+      "topic_text": "Is there anything else interesting to see near Girdershade?",
+      "emotion": "Neutral 50",
+      "response_text": "My friend, you are at the ass end of the Capital Wasteland. If it weren't for Sierra I'd be out of here.",
+      "index": "103"
+    },
+    {
+      "topic": "MS05TLMoreAboutPlant",
+      "topic_text": "What do you know about the Nuka-Cola Bottling Facility?",
+      "emotion": "Neutral 50",
+      "response_text": "Well, Sierra may be as nutty as a fruitcake, but she's right.",
+      "index": "106"
+    },
+    {
+      "topic": "MS05TLMoreAboutSoda",
+      "topic_text": "What do you know about Nuka-Cola Quantum?",
+      "emotion": "Disgust 50",
+      "response_text": "That stuff is some of the nastiest shit I've ever had.",
+      "index": "109"
+    },
+    {
+      "topic": "MS05TLNukaCola",
+      "topic_text": "Here's all the Nuka-Cola Quantum I'm carrying.",
+      "emotion": "Neutral 50",
+      "response_text": "Sorry, don't want anymore. Thirty was all I needed... and now Sierra's mine.",
+      "index": "112"
+    },
+    {
+      "topic": "SpeechChallengeFailure",
+      "topic_text": "SpeechChallengeFailure",
+      "emotion": "Disgust 50",
+      "response_text": "No, I don't think so. Take what you can get.",
+      "index": "120"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "I have to go now.",
+      "emotion": "Neutral 50",
+      "response_text": "Sure thing, honey.",
+      "index": "126"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Happy 50",
+      "response_text": "Sorry, darling. I'm on a mission of mercy... for me!",
+      "index": "138"
+    },
+    {
+      "topic": "MS05RonaldConv",
+      "topic_text": "MS05RonaldConv",
+      "emotion": "Neutral 50",
+      "response_text": "Yep. I'll be seeing you, soon I hope.",
+      "index": "148"
+    }
+  ],
+  "combat": []
+}

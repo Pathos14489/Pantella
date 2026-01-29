@@ -1,0 +1,176 @@
+{
+  "name": "Martha Simpson",
+  "url": "/wiki/Martha_Simpson",
+  "dialogue_name": "MarthaSimpson.txt",
+  "dialogue_url": "/wiki/MarthaSimpson.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000244A1",
+  "ref_id": "00025097",
+  "editor_id": "MarthaSimpson",
+  "location": "Simpson residence",
+  "location_url": "/wiki/Simpson_residence",
+  "descriptions": [
+    "Martha Simpson is one of the inhabitants of Vault 112 trapped inside the Tranquility Lane virtual reality simulation in Fallout 3.",
+    "Resident 227 of Vault 112, Martha has been trapped with her fellow dwellers by Stanislaus Braun for over 200 years.",
+    "The irony is that while there was some chemistry between Roger and Martha, Rockwell pushed her away and denied it, much to Martha's frustration. He wanted to keep his marriage intact. Janet noticed that chemistry too, but after a bitter fight in front of an open window earlier in the year, she finally believed Roger's word.",
+    "It seems that she's also been ostracized from the community to a degree. Only Mabel Henderson shows consistent interest in her life, and the two are good friends.",
+    "Henderson's vitals indicate a state of elevated stress: 92 beats per minute, 150/80 mmHg of blood pressure, 98.9°F/37.16°C temperature, and 20 breaths per minute, similar to Timmy Neusbaum."
+  ],
+  "race": "Human",
+  "gender": "Female",
+  "affiliation": "Vault 112",
+  "role": "Braun's prisoner",
+  "detailed_location": "Simpson residence,Tranquility Lane",
+  "voice_actor": "Shari Elliker",
+  "special": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 5,
+    "Intelligence": 5,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "mod_special_values": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 5,
+    "Intelligence": 5,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "level": "0",
+  "misc_skills": [
+    {
+      "Hit Points:": "30"
+    }
+  ],
+  "karma": "Good",
+  "voice_type": "FemaleAdult01DefaultDC",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "Hello there. Good to see you.",
+      "index": "1"
+    },
+    {
+      "topic": "MQ04ResidentChitChat1",
+      "topic_text": "Nice day, isn't it?",
+      "emotion": "Neutral 50",
+      "response_text": "I suppose. I hadn't really noticed.",
+      "index": "3"
+    },
+    {
+      "topic": "MQ04ResidentChitChat2",
+      "topic_text": "What can you tell me about the neighborhood?",
+      "emotion": "Neutral 50",
+      "response_text": "I like it well enough, I suppose. Mabel is good company most of the time, and... well, the other neighbors are mostly very nice.",
+      "index": "4"
+    },
+    {
+      "topic": "MQ04ResidentDad",
+      "topic_text": "Have you seen my dad?",
+      "emotion": "Neutral 50",
+      "response_text": "I don't think so, but then I haven't really been looking for him. Sorry.",
+      "index": "5"
+    },
+    {
+      "topic": "MQ04ResidentMabel",
+      "topic_text": "What can you tell me about Mabel Henderson?",
+      "emotion": "Neutral 50",
+      "response_text": "Mabel's been a good friend to me. She's always interested in what's going on with my life, which is more than I can say for some people.",
+      "index": "6"
+    },
+    {
+      "topic": "MQ04ResidentRockwells",
+      "topic_text": "Can you tell me anything about the Rockwells' marriage?",
+      "emotion": "Fear 20",
+      "response_text": "Why are you asking me? I don't know anything. And why should I care about their marriage, anyway?",
+      "index": "8"
+    },
+    {
+      "topic": "MQ04ResidentSimulation",
+      "topic_text": "This is a pretty convincing simulation...",
+      "emotion": "Neutral 50",
+      "response_text": "Sorry, kiddo, but I'm not in the mood for jokes.",
+      "index": "9"
+    },
+    {
+      "topic": "MQ04ResidentTimmy",
+      "topic_text": "What can you tell me about Timmy Neusbaum?",
+      "emotion": "Neutral 50",
+      "response_text": "That boy is in trouble, if you ask me. Pat babies him like you wouldn't believe... Acts like he's still an infant.",
+      "index": "10"
+    },
+    {
+      "topic": "MQ04RockwellsMarthaNevermind",
+      "topic_text": "Okay, if you say so.",
+      "emotion": "Anger 20",
+      "response_text": "People around here should mind their own business.{annoyed}",
+      "index": "12"
+    },
+    {
+      "topic": "MQ04RockwellsMarthaYouKnowSomething",
+      "topic_text": "Oh, come on. You know something, don't you? What's the story?",
+      "emotion": "Neutral 50",
+      "response_text": "There's no story. Never was. Roger and I... Nothing ever happened.",
+      "index": "13"
+    },
+    {
+      "topic": "SpeechChallengeFailure",
+      "topic_text": "SpeechChallengeFailure",
+      "emotion": "Anger 30",
+      "response_text": "It's none of your business. Now leave me alone.{very annoyed}",
+      "index": "17"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Neutral 50",
+      "response_text": "Hi, Mabel. How's it going?",
+      "index": "18"
+    },
+    {
+      "topic": "TranqLaneTalk1",
+      "topic_text": "TranqLaneTalk1",
+      "emotion": "Neutral 50",
+      "response_text": "Mabel, I meant to ask you. Have you seen the new RobCo catalog? I thought you might be interested, since you don't seem to like your Mr. Handy.",
+      "index": "20"
+    },
+    {
+      "topic": "TranqLaneTalk2",
+      "topic_text": "TranqLaneTalk2",
+      "emotion": "Neutral 50",
+      "response_text": "I suppose so. I haven't really noticed.{embarrassed, trying to deflect conversation}",
+      "index": "22"
+    },
+    {
+      "topic": "TranqLaneTalk3",
+      "topic_text": "TranqLaneTalk3",
+      "emotion": "Neutral 50",
+      "response_text": "You know there's nothing to worry about, right? It's perfectly safe. They build them so they won't ever hurt their owners.",
+      "index": "26"
+    },
+    {
+      "topic": "TranqLaneTalk5",
+      "topic_text": "TranqLaneTalk5",
+      "emotion": "Neutral 50",
+      "response_text": "Oh Mabel, you worry too much. It's fine.{laughing, trying to be calming}",
+      "index": "28"
+    }
+  ],
+  "combat": []
+}

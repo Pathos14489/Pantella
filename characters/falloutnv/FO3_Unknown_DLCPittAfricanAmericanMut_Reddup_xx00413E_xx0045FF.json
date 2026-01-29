@@ -1,0 +1,136 @@
+{
+  "name": "Reddup",
+  "url": "/wiki/Reddup",
+  "dialogue_name": "DLC01Reddup.txt",
+  "dialogue_url": "/wiki/DLC01Reddup.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "xx00413E",
+  "ref_id": "xx0045FF",
+  "editor_id": "DLC01Phantom",
+  "location": "The Pitt Uptown",
+  "location_url": "/wiki/The_Pitt_Uptown",
+  "descriptions": [
+    "Reddup is a Pitt raider in the Pitt in 2277.",
+    "Reddup is a former slave who fought his way up through the arena. He is one of only three known individuals to have achieved this; the others being Gruber and Squill.",
+    "The Lone Wanderer’s interaction with Mex upon first arriving in The Pitt shapes their interactions with Reddup as well. Should the Lone Wanderer kill Mex and his group, Reddup and his group will ambush them upon entering Downtown, only sparing them at Ashur’s order despite his own desire to kill them. If the Lone Wanderer has disguised themselves as a slave, Mex will send them in normally, and Reddup’s group will not appear.",
+    "The Lone Wanderer will gain another chance to interact with Reddup upon gaining their freedom by fighting in the arena. If he had not previously interacted with them, Reddup will be dismissive of them and tell them to watch their step, to which the Lone Wanderer can reply with comments of their own.",
+    "Reddup appears only in the Fallout 3 add-on The Pitt.",
+    "Reddup shares his name with a Western Pennsylvania expression, \"redd up\", meaning \"tidy up\" or \"clean up\"."
+  ],
+  "race": "Human",
+  "affiliation": "Pitt raidersPitt slaves(formerly)",
+  "role": "Slaver",
+  "detailed_location": "The Pitt Uptown",
+  "voice_actor": "James Lewis",
+  "special": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 3,
+    "Intelligence": 3,
+    "Agility": 7,
+    "Luck": 5
+  },
+  "level": "1→20→30 (Broken Steelonly)",
+  "tag_skills": [
+    {
+      "Melee Weap.:": "32→100"
+    },
+    {
+      "Small Guns:": "34→100"
+    },
+    {
+      "Unarmed:": "28→100"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "65→160→210"
+    },
+    {
+      "Critical Chance:": "5%"
+    },
+    {
+      "Unarmed Dam.:": "1.9→5.5"
+    },
+    {
+      "Poison Resist.:": "15%"
+    },
+    {
+      "Rad. Resist.:": "6%"
+    },
+    {
+      "Carry Weight:": "210"
+    }
+  ],
+  "karma": "Evil",
+  "voice_type": "DLC01RaiderMaleGruffVoice",
+  "geck_race": "DLCPittAfricanAmericanMut",
+  "topics": [
+    {
+      "topic": "DLC01HavenResponse1A",
+      "topic_text": "That seems like a real risk, considering there are so few safety rails.",
+      "emotion": "Anger 50",
+      "response_text": "Oh, you're definitely looking at a lot of risk, up here.",
+      "index": "1"
+    },
+    {
+      "topic": "DLC01HavenResponse1B",
+      "topic_text": "If you don't like it, I hear there's an opening for work Downtown.",
+      "emotion": "Happy 25",
+      "response_text": "I already fought my way outta there once. There ain't no force in The Pitt that could make me go back there again.{Boasting}",
+      "index": "3"
+    },
+    {
+      "topic": "DLC01ReddupAmbush1",
+      "topic_text": "Can't we talk this through?",
+      "emotion": "Neutral 50",
+      "response_text": "Ah, talk to this! Get her, boys!",
+      "index": "5"
+    },
+    {
+      "topic": "DLC01ReddupAmbush2",
+      "topic_text": "I'm going to find you and kill you.",
+      "emotion": "Neutral 50",
+      "response_text": "Good luck! Get her, boys!",
+      "index": "7"
+    },
+    {
+      "topic": "DLC01SpecialOption",
+      "topic_text": "Remember your little ambush at the gate? Let's settle the score.",
+      "emotion": "Happy 50",
+      "response_text": "What, you didn't like our little welcome? Us big kids playing too rough with you?{Mocking}",
+      "index": "9"
+    },
+    {
+      "topic": "DLC01SpecialOption2A",
+      "topic_text": "Nah, I'm just messing with you.",
+      "emotion": "Disgust 50",
+      "response_text": "Yeah, that's right! Keep walking, little shit.{Disgusted that the player backed down}",
+      "index": "11"
+    },
+    {
+      "topic": "DLC01SpecialOption2B",
+      "topic_text": "Time for a rematch, just you and me.",
+      "emotion": "Anger 50",
+      "response_text": "That's it! This is between me and the little shit! Nobody else!{Yelling for everyone to hear}",
+      "index": "12"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "What? You thought you could kill my buddies at the gate and we'd just let you walk in here?",
+      "index": "14"
+    }
+  ],
+  "conversation": [],
+  "combat": []
+}

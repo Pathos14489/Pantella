@@ -1,0 +1,204 @@
+{
+  "name": "Defender Morgan",
+  "url": "/wiki/Anne_Marie_Morgan",
+  "dialogue_name": "DefenderMorgan.txt",
+  "dialogue_url": "/wiki/DefenderMorgan.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "00043DEB",
+  "ref_id": "00043DEE",
+  "editor_id": "DefenderMorgan",
+  "location": "OutsideFort Independence",
+  "location_url": "/wiki/Fort_Independence",
+  "descriptions": [
+    "Defender Anne Marie Morgan is a soldier of the Brotherhood of Steel Outcasts, stationed at Fort Independence in Fallout 3.",
+    "Posted on the perimeter of Fort Independence alongside Rococo Rockfowl, Defender Morgan is a tough soldier who does not take her duties lightly. She is a close friend of Protector Henry Casdin, the leader of the Outcasts, and is fiercely loyal to their cause.",
+    "Most wastelanders approaching the Outcasts' base will quickly learn to respect her laser rifle and no-nonsense attitude.",
+    "The easiest way to impress Morgan is to keep up with her. She is erudite and well read, seeing Elder Lyons as Captain Ahab from Moby-Dick, in that his crusade against the super mutants will get him and others killed in the end.",
+    "Morgan is set to respawn, which is unusual for named non-player characters. Due to her location, she may be attacked and killed by random enemies (usually raiders in nearby Fairfax) as she patrols the area around the fort. In this case, she respawns after every 24-48 in-game hours."
+  ],
+  "race": "Human",
+  "gender": "Female",
+  "affiliation": "Brotherhood of Steel(formerly)Brotherhood Outcasts",
+  "role": "Perimeter guard, soldier",
+  "detailed_location": "Fort Independence",
+  "voice_actor": "Shari Elliker",
+  "special": {
+    "Strength": 7,
+    "Perception": 7,
+    "Endurance": 6,
+    "Charisma": 4,
+    "Intelligence": 3,
+    "Agility": 4,
+    "Luck": 4
+  },
+  "mod_special_values": {
+    "Strength": 9,
+    "Perception": 7,
+    "Endurance": 6,
+    "Charisma": 4,
+    "Intelligence": 3,
+    "Agility": 2,
+    "Luck": 4
+  },
+  "level": "5→15 (player level x1.25)",
+  "tag_skills": [
+    {
+      "Big Guns:": "61→91"
+    },
+    {
+      "Energy Weap.:": "63→93"
+    },
+    {
+      "Small Guns:": "57→87(53→83)"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "70→105"
+    },
+    {
+      "Damage Res.:": "48%"
+    }
+  ],
+  "karma": "Good",
+  "voice_type": "FemaleAdult01DefaultDC",
+  "geck_race": "AfricanAmerican",
+  "topics": [
+    {
+      "topic": "AboutBrotherhood1Do you sell any specialty items?",
+      "topic_text": "What have you got against the Brotherhood?",
+      "emotion": "Anger 50",
+      "response_text": "You mean, apart from the fact that they ditched their mission and went native?",
+      "index": "1"
+    },
+    {
+      "topic": "AboutBrotherhood2AMS07AboutBrotherhood2A",
+      "topic_text": "But they're heroes! They defend the Capital Wasteland!",
+      "emotion": "Anger 25",
+      "response_text": "And all at the cost of throwing away the lives of soldiers for a mission they didn't sign on for.",
+      "index": "4"
+    },
+    {
+      "topic": "AboutBrotherhood2BMS07AboutBrotherhood2B",
+      "topic_text": "So, you just figure you'll strike out on your own as Outcasts?",
+      "emotion": "Anger 50",
+      "response_text": "Not hardly. We've got our mission, we'll stick with it, and to hell with Lyons and his soldier sycophants.",
+      "index": "7"
+    },
+    {
+      "topic": "AboutBrotherhood2CMS07AboutBrotherhood2C",
+      "topic_text": "By that analogy, you think Lyons will be killed by the Super Mutants?",
+      "emotion": "Surprise 50",
+      "response_text": "Huh. And here I thought we had the only remaining copy of that...{Surprised, but muttered under breath.}",
+      "index": "10"
+    },
+    {
+      "topic": "AboutOutcasts1MS07AboutOutcasts1",
+      "topic_text": "Tell me about the Outcasts.",
+      "emotion": "Neutral 25",
+      "response_text": "We collect technology, and most people want what we've collected.",
+      "index": "15"
+    },
+    {
+      "topic": "FFOutcastWork2A",
+      "topic_text": "I'm not sure. Tell me more about this work.",
+      "emotion": "Neutral 10",
+      "response_text": "We may be the best-equipped people in the world, but we've still only got so many people out there looking to recover the past's technology.",
+      "index": "21"
+    },
+    {
+      "topic": "FFOutcastWork2B",
+      "topic_text": "Sounds good. I'm in.",
+      "emotion": "Happy 25",
+      "response_text": "Okay, but first you'll have to talk with Protector Casdin. You can work out the details with him.",
+      "index": "24"
+    },
+    {
+      "topic": "FFOutcastWork2C",
+      "topic_text": "I'll pass. If I can't be a member, I won't be your errand boy.",
+      "emotion": "Disgust 25",
+      "response_text": "Suit yourself. Why don't you go talk with Lyons? He's always got time for your kind.{A bit nasty and derogatory with the phrase \"your kind\"}",
+      "index": "25"
+    },
+    {
+      "topic": "FFOutcastsCombatGreet1",
+      "topic_text": "FFOutcastsCombatGreet1",
+      "emotion": "Anger 25",
+      "response_text": "Keep your head down, idiot! Raider incoming!{Tough and agitated.}",
+      "index": "26"
+    },
+    {
+      "topic": "FFOutcastsGreeting1AMS07OutcastGreeting1A",
+      "topic_text": "Thanks for the help. Who are you?",
+      "emotion": "Neutral 50",
+      "response_text": "Defender Anne Marie Morgan, with the Outcasts.",
+      "index": "27"
+    },
+    {
+      "topic": "FFOutcastsGreeting1BMS07OutcastGreeting1B",
+      "topic_text": "Trust me, I don't plan to die anytime soon.",
+      "emotion": "Anger 25",
+      "response_text": "Yeah, that's what they all say. Usually just before stepping on a landmine.",
+      "index": "29"
+    },
+    {
+      "topic": "FFOutcastsGreeting1CMS07OutcastGreeting1C",
+      "topic_text": "I'd hate if my corpse ruined this lovely Wasteland. It'd clash with the drapes.",
+      "emotion": "Happy 30",
+      "response_text": "Yeah, the red would never go with all this brown. But if we remodel and still need a corpse, we'll call you, 'kay?{Playing along and having fun.}",
+      "index": "31"
+    },
+    {
+      "topic": "FFOutcastsGreeting1DMS07OutcastGreeting1D",
+      "topic_text": "Shut up and get that fucking gun out of my face.",
+      "emotion": "Disgust 30",
+      "response_text": "Wrong answer, scum.",
+      "index": "33"
+    },
+    {
+      "topic": "FFOutcastsWork1MS07OutcastWork",
+      "topic_text": "You collect technology? How do I sign up?",
+      "emotion": "Anger 10",
+      "response_text": "We aren't recruiting, kid. Old sap Lyons might trust walk-ins, but we don't.",
+      "index": "34"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Anger 10",
+      "response_text": "If you're going to get yourself killed out here, you mind doing it further away from our bunker?{Jokingly sarcastic}",
+      "index": "37"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "FFOutcastsCallcasdin",
+      "topic_text": "Callcasdin",
+      "emotion": "Happy 25",
+      "response_text": "Protector Casdin, sir! We've got a local interested in the job!",
+      "index": "41"
+    },
+    {
+      "topic": "GOODBYEI have to go now.",
+      "topic_text": "I'll just be on my way, then.",
+      "emotion": "Anger 5",
+      "response_text": "Then get moving.",
+      "index": "42"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Neutral 50",
+      "response_text": "Stay in line, and you'll be okay.",
+      "index": "43"
+    }
+  ],
+  "combat": []
+}

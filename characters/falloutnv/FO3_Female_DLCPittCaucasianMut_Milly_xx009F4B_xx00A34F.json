@@ -1,0 +1,204 @@
+{
+  "name": "Milly",
+  "url": "/wiki/Milly",
+  "dialogue_name": "DLC01Milly.txt",
+  "dialogue_url": "/wiki/DLC01Milly.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "xx009F4B",
+  "ref_id": "xx00A34F",
+  "editor_id": "DLC01Milly",
+  "location": "The Pitt Downtown",
+  "location_url": "/wiki/The_Pitt_Downtown",
+  "descriptions": [
+    "Milly is a Pitt slave in the Pitt's Downtown in the year 2277.",
+    "Milly and Wild Bill were extremely close friends, having worked the mill together for a long time.",
+    "She has also taken to appropriating stimpaks where she can find them, hiding them in nondescript objects in the area and offering them to those who bring her news related to Wild Bill’s whereabouts.",
+    "Milly never actually grinds metal, she simply walks around the Downtown area, waiting for news from Wild Bill.",
+    "Milly appears only in The Pitt add-on for Fallout 3."
+  ],
+  "race": "Human",
+  "gender": "Female",
+  "affiliation": "Pitt slavesWild Bill",
+  "role": "Slave",
+  "detailed_location": "The Pitt Downtown(Market Square)",
+  "voice_actor": "Francie Glick",
+  "special": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 4,
+    "Intelligence": 4,
+    "Agility": 6,
+    "Luck": 4
+  },
+  "mod_special_values": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 4,
+    "Intelligence": 4,
+    "Agility": 7,
+    "Luck": 4
+  },
+  "level": "1",
+  "tag_skills": [
+    {
+      "Melee Weap.:": "31"
+    },
+    {
+      "Small Guns:": "31(33)"
+    },
+    {
+      "Sneak:": "31(33)"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Neutral",
+  "voice_type": "DLC01SlaveFemale02VoiceType",
+  "geck_race": "DLCPittCaucasianMut",
+  "topics": [
+    {
+      "topic": "DLC01MillyGreeting1a",
+      "topic_text": "Who's Wild Bill?",
+      "emotion": "Neutral 50",
+      "response_text": "Bill's a friend of mine, a very dear friend.  We've worked the mill together for a long time.",
+      "index": "1"
+    },
+    {
+      "topic": "DLC01MillyGreeting1b",
+      "topic_text": "Yes, I found him in the Steelyard.",
+      "emotion": "Happy 50",
+      "response_text": "Oh! That's wonderful!  Where is he now?  Did he come back with you?",
+      "index": "5"
+    },
+    {
+      "topic": "DLC01MillyGreeting1c",
+      "topic_text": "No, I haven't seen him.",
+      "emotion": "Neutral 50",
+      "response_text": "No?  Well, if you do see him, could you let me know?",
+      "index": "6"
+    },
+    {
+      "topic": "DLC01MillyGreeting1d",
+      "topic_text": "Who's Wild Bill again?",
+      "emotion": "Neutral 50",
+      "response_text": "Bill's a friend of mine, a very dear friend.  We've worked the mill together for a long time.",
+      "index": "7"
+    },
+    {
+      "topic": "DLC01MillyGreeting1e",
+      "topic_text": "No, I'm still looking.",
+      "emotion": "Sad 50",
+      "response_text": "Oh, okay...",
+      "index": "10"
+    },
+    {
+      "topic": "DLC01MillyGreeting2a",
+      "topic_text": "Yes, I'll help out.",
+      "emotion": "Neutral 50",
+      "response_text": "Thank you so much. Just... be careful out there. Bill would never forgive himself if someone got hurt looking for him.",
+      "index": "11"
+    },
+    {
+      "topic": "DLC01MillyGreeting2b",
+      "topic_text": "No, I don't want to help.",
+      "emotion": "Neutral 50",
+      "response_text": "Well, okay.  I hope you'll change your mind.",
+      "index": "12"
+    },
+    {
+      "topic": "DLC01MillyGreeting3a",
+      "topic_text": "Bill's dead. I found his body in the Steelyard.  I'm sorry, Milly.",
+      "emotion": "Sad 50",
+      "response_text": "He's dead?  But he promised us he would come back... I... I have to let the others know.",
+      "index": "13"
+    },
+    {
+      "topic": "DLC01MillyGreeting3b",
+      "topic_text": "Bill said to let you know he's OK, but he can't come back anytime soon. <Lie.>",
+      "emotion": "Happy 50",
+      "response_text": "As long as I know he's okay, then that's all that matters. Thank you for your help.  I'll tell the others that Bill is alright.{Speech Challenge (1930454888)}",
+      "index": "15"
+    },
+    {
+      "topic": "DLC01MillyGreeting3Bailout",
+      "topic_text": "I'm just kidding, I found Bill dead in the Steelyard.",
+      "emotion": "Neutral 50",
+      "response_text": "He's dead?  But he promised us he would come back... I... I have to let the others know.  Thank you for your help.",
+      "index": "17"
+    },
+    {
+      "topic": "DLC01MillyGreeting3c1",
+      "topic_text": "I heard Bill's blood-curdling screams and I knew I was too late... <Lie.>",
+      "emotion": "Sad 50",
+      "response_text": "Oh no!{Speech Challenge (1930454888)}",
+      "index": "19"
+    },
+    {
+      "topic": "DLC01MillyGreeting3c2",
+      "topic_text": "I saw multiple Trogs clawing, tearing, chewing on his limbs... <Lie.>",
+      "emotion": "Sad 50",
+      "response_text": "That's horrible! Poor Bill!",
+      "index": "20"
+    },
+    {
+      "topic": "DLC01MillyGreeting3c3",
+      "topic_text": "I scared off the Trogs and ran to Bill.  He was still alive... <Lie.>",
+      "emotion": "Neutral 50",
+      "response_text": "Bill, he was alive?",
+      "index": "21"
+    },
+    {
+      "topic": "DLC01MillyGreeting3c4",
+      "topic_text": "Barely. He was calling for you. I had to put him out of his misery... <Lie.>",
+      "emotion": "Neutral 50",
+      "response_text": "Please, please stop.  I can't hear anymore of it.  I don't feel so well.",
+      "index": "22"
+    },
+    {
+      "topic": "DLC01MillyGreeting3c5",
+      "topic_text": "He's one tough bastard. Took every shot of my pistol... <Lie.>",
+      "emotion": "Neutral 50",
+      "response_text": "I think, I think I'm going to faint. Please stop it.",
+      "index": "23"
+    },
+    {
+      "topic": "DLC01MillyGreeting3c6",
+      "topic_text": "And one large concrete block... to the head. <Lie.>",
+      "emotion": "Neutral 50",
+      "response_text": "I don't feel...  I'm going to...",
+      "index": "24"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "You can take weapons into the Hole.",
+      "index": "25"
+    },
+    {
+      "topic": "SpeechChallengeFailure",
+      "topic_text": "SpeechChallengeFailure",
+      "emotion": "Neutral 50",
+      "response_text": "That's sweet of you trying to keep my hopes up, to convince me he's still alive. But I can tell you're not telling me the truth.",
+      "index": "40"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Neutral 25",
+      "response_text": "Guess you earned your ticket out of Downtown.{A little congratulatory, a little resentful}",
+      "index": "45"
+    }
+  ],
+  "combat": []
+}

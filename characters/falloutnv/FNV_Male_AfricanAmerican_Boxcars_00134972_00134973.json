@@ -1,0 +1,205 @@
+{
+  "name": "Boxcars",
+  "url": "/wiki/Boxcars",
+  "dialogue_name": "VNiptonBoxcars2.txt",
+  "dialogue_url": "/wiki/VNiptonBoxcars2.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "00134972",
+  "ref_id": "00134973",
+  "editor_id": "vNiptonBoxcars2",
+  "location": "Nipton General Store",
+  "location_url": "/wiki/Nipton_General_Store",
+  "descriptions": [
+    "Boxcars is a member of the Powder Gangers and one of the few survivors of the massacre of Nipton carried out by Caesar's Legion in the Mojave Wasteland in 2281. He appears in Fallout: New Vegas.",
+    "Like many of the Powder Gangers, Boxcars is a former convict from the NCR Correctional Facility who escaped during the mass breakout orchestrated by Samuel Cooke in 2281 and joined Eddie's newly formed Powder Gangers. Boxcars was among the group who were in Nipton on the day Vulpes Inculta and the forces of the Legion captured the town's population, including the locals, the Powder Gangers, and members of the New California Republic Army; the gangsters had been tricked by Nipton's mayor Joseph B. Steyn into plotting to capture and ransom the soldiers, but in reality it was to lure them in so they would be vulnerable to the Legion.",
+    "With their assembled captives, the Legion instituted a \"lottery\" where everyone received a ticket determining their fate and then the Legion would carry them out.",
+    "After the executions were finished, the remaining victims received their non-lethal but arguably worse fates. Some surviving Powder Gangers were enslaved and taken by the Legion.",
+    "When first speaking with him, Boxcars will demand a supply of Med-X to deal with the pain from his crippled legs. Depending on the number of doses given, the player character receives a moderate amount of Karma gain though this will not affect one's reputation with the Powder Gangers. He can be given Med-X in amounts of one (+20 Karma), two (+30 Karma), three (+40 Karma), or five (+50 Karma), but only one option can be chosen per transaction."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Powder Gangers",
+  "role": "Escaped convictSecond-place lottery \"winner\"",
+  "detailed_location": "NiptonNipton General Store",
+  "voice_actor": "Avery K. Waddell",
+  "special": {
+    "Strength": 5,
+    "Perception": 6,
+    "Endurance": 5,
+    "Charisma": 3,
+    "Intelligence": 3,
+    "Agility": 5,
+    "Luck": 4
+  },
+  "level": "3",
+  "tag_skills": [
+    {
+      "Explosives:": "38"
+    },
+    {
+      "Guns:": "36"
+    },
+    {
+      "Melee Weap.:": "36"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "40"
+    }
+  ],
+  "karma": "Evil",
+  "voice_type": "MaleAdult02",
+  "geck_race": "AfricanAmerican",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Anger 40",
+      "response_text": "{in pain, recognizing player as an enemy of Powder Gangers}{outraged}Are you fucking kidding me?",
+      "index": "1"
+    },
+    {
+      "topic": "VNiptonvNiptonBoxcars2Topic000",
+      "topic_text": "What happened to this town?",
+      "emotion": "Anger 40",
+      "response_text": "{irritated, impatient}The Legion happened. What the fuck's it look like?",
+      "index": "12"
+    },
+    {
+      "topic": "VNiptonvNiptonBoxcars2Topic001",
+      "topic_text": "How did you survive?",
+      "emotion": "Neutral 50",
+      "response_text": "{bitter chuckle}Luck, that's how! I'm just that fucking lucky!",
+      "index": "13"
+    },
+    {
+      "topic": "VNiptonvNiptonBoxcars2Topic002",
+      "topic_text": "Why are you still here?",
+      "emotion": "Anger 40",
+      "response_text": "{sarcastic}I dunno, I just love it here.{angry}What the fuck do you think, asshole?",
+      "index": "15"
+    },
+    {
+      "topic": "VNiptonvNiptonBoxcars2Topic003",
+      "topic_text": "Tell me about the lottery.",
+      "emotion": "Anger 30",
+      "response_text": "{surly}It ain't like we came to Nipton to play it! Me and my crew had it worked out to kidnap some NCR troopers who come to town to get laid.",
+      "index": "17"
+    },
+    {
+      "topic": "VNiptonvNiptonBoxcars2Topic005",
+      "topic_text": "Do you know anything about some NCR supplies?",
+      "emotion": "Neutral 50",
+      "response_text": "I saw some Legion assholes carrying crates to a cave north of here. May have been NCR shit, I don't fucking know.",
+      "index": "19"
+    },
+    {
+      "topic": "VNiptonvNiptonBoxcars2Topic008",
+      "topic_text": "I took care of that slave caravan.",
+      "emotion": "Anger 25",
+      "response_text": "{surly, sarcastic}You know what I'd be real excited about? If you'd showed up and saved me before they smashed my legs.",
+      "index": "20"
+    },
+    {
+      "topic": "VNiptonvNiptonBoxcars2Topic009",
+      "topic_text": "What happened to the mayor?",
+      "emotion": "Happy 25",
+      "response_text": "{lightening up}Him? When his ticket came up, they burned him alive on a pile of tires.",
+      "index": "22"
+    },
+    {
+      "topic": "VNiptonvNiptonBoxcars2Topic010",
+      "topic_text": "How'd your plan go wrong?",
+      "emotion": "Anger 25",
+      "response_text": "{bitter}We get in position and next thing we know, we're surrounded by those fucking Legion freaks.",
+      "index": "23"
+    },
+    {
+      "topic": "VNiptonvNiptonBoxcars2Topic011",
+      "topic_text": "Let's talk about something else.",
+      "emotion": "Neutral 50",
+      "response_text": "{surly}Like what?",
+      "index": "26"
+    },
+    {
+      "topic": "VNiptonvNiptonBoxcars2Topic012",
+      "topic_text": "What happened after everyone got lottery tickets?",
+      "emotion": "Anger 50",
+      "response_text": "{hating the memory}What do you think? He started drawing tickets, and that's how people got punished.",
+      "index": "27"
+    },
+    {
+      "topic": "VNiptonvNiptonBoxcars2Topic013",
+      "topic_text": "You said some of the people were enslaved?",
+      "emotion": "Anger 25",
+      "response_text": "{surly}Yeah, a bunch of those Legion fucks dragged them off right away. They was headed East, if you're feeling heroic.",
+      "index": "31"
+    },
+    {
+      "topic": "VNiptonvNiptonBoxcars2Topic014",
+      "topic_text": "I'll do what I can to save them.",
+      "emotion": "Anger 25",
+      "response_text": "{surly}Don't act like you'd be doing me a favor. I don't give a fuck.",
+      "index": "32"
+    },
+    {
+      "topic": "VNiptonvNiptonBoxcars2Topic015",
+      "topic_text": "It's not my problem.",
+      "emotion": "Anger 25",
+      "response_text": "{irritated but agreeing}That's how I figure it. Got problems of my own to handle.",
+      "index": "33"
+    },
+    {
+      "topic": "VNiptonvNiptonBoxcars2Topic016",
+      "topic_text": "I can spare some Med-X.",
+      "emotion": "Anger 25",
+      "response_text": "{appeased}Then you're a fucking dream come true, ain't ya? How much you gonna give me?",
+      "index": "34"
+    },
+    {
+      "topic": "VNiptonvNiptonBoxcars2Topic020",
+      "topic_text": "One dose.",
+      "emotion": "Anger 25",
+      "response_text": "Big fucking deal. Hand it over.",
+      "index": "35"
+    },
+    {
+      "topic": "VNiptonvNiptonBoxcars2Topic021",
+      "topic_text": "Two doses.",
+      "emotion": "Anger 25",
+      "response_text": "{appeased}Good enough. Hand it over.",
+      "index": "36"
+    },
+    {
+      "topic": "VNiptonvNiptonBoxcars2Topic022",
+      "topic_text": "Three doses.",
+      "emotion": "Anger 25",
+      "response_text": "{appeased}Three doses? That's almost enough for a party.",
+      "index": "37"
+    },
+    {
+      "topic": "VNiptonvNiptonBoxcars2Topic023",
+      "topic_text": "Five doses.",
+      "emotion": "Anger 25",
+      "response_text": "{appeased}Five doses?{Niiiiice}Nice. A fella could put himself out of his misery with five doses.",
+      "index": "38"
+    },
+    {
+      "topic": "VNiptonvNiptonBoxcars2Topic024",
+      "topic_text": "I don't have any Med-X for you.",
+      "emotion": "Neutral 50",
+      "response_text": "{surly}Bullshit. You're holding, you just want it all for yourself!",
+      "index": "39"
+    }
+  ],
+  "conversation": [],
+  "combat": []
+}

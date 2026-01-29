@@ -1,0 +1,115 @@
+{
+  "name": "General Jingwei",
+  "url": "/wiki/Jingwei",
+  "dialogue_name": "DLC02GeneralJingwei.txt",
+  "dialogue_url": "/wiki/DLC02GeneralJingwei.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "xx0018D2",
+  "ref_id": "xx0018D3",
+  "editor_id": "DLC02GeneralJingwei",
+  "location": "Chinese Compound",
+  "location_url": null,
+  "descriptions": [
+    "General Jingwei was a pre-War member of the People's Liberation Army, serving as the field commander during the Chinese occupation of Anchorage, Alaska. A digital avatar made in his likeness appears in the Anchorage Reclamation simulation in the Fallout 3 add-on Operation: Anchorage.",
+    "Nothing is known of Jingwei's career, such as how he attained the rank of general before he led the PLA forces to invade the North American continent. The initial invasion under his command was sweeping across the state, up until the Americans retaliated and the Battle of Anchorage ended with the expulsion of communist forces in 2077. His men knew him to be a cruel, but effective commander that demanded absolute loyalty, while his foes saw him as a ruthless and highly efficient tactician with a menacing tendency to bouts of savagery, yet always fighting with a certain sense of honor, no matter how twisted his actions were.",
+    "Within the Anchorage Reclamation simulation developed at the Virtual Strategic Solutions facility in Washington, D.C., he is presented as the final foe faced by the user at the Chinese occupied refinery, with his death paving the way for liberating Anchorage.",
+    "The presence of his personal weapon in the sealed armory at the VSS facility in 2277 suggests that he was actually killed or captured during the Anchorage Reclamation.",
+    "General Jingwei appears only in the Fallout 3 add-on Operation: Anchorage."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "People's Liberation ArmyIron Army",
+  "role": "Commander",
+  "detailed_location": "Chinese compound",
+  "voice_actor": "Ashley Cheng",
+  "special": {
+    "Strength": 5,
+    "Perception": 6,
+    "Endurance": 6,
+    "Charisma": 5,
+    "Intelligence": 5,
+    "Agility": 7,
+    "Luck": 5
+  },
+  "level": "10→200→300 (Broken Steelonly) (10 times current player character level)",
+  "tag_skills": [
+    {
+      "Big Guns:": "77→100"
+    },
+    {
+      "Small Guns:": "79→100"
+    },
+    {
+      "Speech:": "75→100"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Critical Chance:": "5%"
+    },
+    {
+      "Unarmed Dam.:": "1.35"
+    },
+    {
+      "Poison Resist.:": "25%"
+    },
+    {
+      "Rad. Resist.:": "10%"
+    },
+    {
+      "Carry Weight:": "200"
+    },
+    {
+      "Damage Res.:": "31%"
+    }
+  ],
+  "karma": "Neutral",
+  "voice_type": "DLC02MaleChinese1",
+  "geck_race": "Asian",
+  "topics": [
+    {
+      "topic": "DLC02OA4GeneralGreeting1",
+      "topic_text": "You've already lost, General. Don't throw away your dignity.",
+      "emotion": "Neutral 50",
+      "response_text": "You will never take me prisoner!Play soundDlc02oa4_dlc02oa4generalgr_00002…https://fallout.fandom.com/wiki/File:Dlc02oa4_dlc02oa4generalgr_00002976_1.oggnoicon",
+      "index": "1"
+    },
+    {
+      "topic": "DLC02OA4GeneralGreeting2",
+      "topic_text": "It's over, Jingwei. Surrender and lay down your arms.",
+      "emotion": "Neutral 50",
+      "response_text": "Surrender? Never!Play soundDlc02oa4_dlc02oa4generalgr_00002…https://fallout.fandom.com/wiki/File:Dlc02oa4_dlc02oa4generalgr_00002977_1.oggnoicon",
+      "index": "2"
+    },
+    {
+      "topic": "DLC02OA4GeneralGreeting3",
+      "topic_text": "I'm going to kill you SO MUCH.",
+      "emotion": "Neutral 50",
+      "response_text": "I'll see your blood on my blade before today is done!Play soundFO3OA Jingwei BloodOnMyBlade.ogghttps://fallout.fandom.com/wiki/File:FO3OA_Jingwei_BloodOnMyBlade.oggnoicon",
+      "index": "3"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "You fool! You will be crushed by the might of the Chinese Army!Play soundFO3OA Jingwei YouWillBeCrushed.ogghttps://fallout.fandom.com/wiki/File:FO3OA_Jingwei_YouWillBeCrushed.oggnoicon",
+      "index": "4"
+    },
+    {
+      "topic": "SpeechChallengeFailure",
+      "topic_text": "SpeechChallengeFailure",
+      "emotion": "Neutral 50",
+      "response_text": "Your head will be mounted as a trophy, dog!Play soundFo3OA GeneralJingwei MountedAsAT…https://fallout.fandom.com/wiki/File:Fo3OA_GeneralJingwei_MountedAsATrophy.oggnoicon",
+      "index": "5"
+    }
+  ],
+  "conversation": [],
+  "combat": []
+}

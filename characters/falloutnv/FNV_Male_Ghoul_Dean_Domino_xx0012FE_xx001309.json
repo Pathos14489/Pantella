@@ -1,0 +1,2094 @@
+{
+  "name": "Dean Domino",
+  "url": "/wiki/Dean_Domino",
+  "dialogue_name": "NVDLC01Dean.txt",
+  "dialogue_url": "/wiki/NVDLC01Dean.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": true,
+  "base_id": "xx0012FE",
+  "ref_id": "xx001309",
+  "editor_id": "NVDLC01Dean",
+  "location": "Sierra MadreResidential District",
+  "location_url": "/wiki/Sierra_Madre",
+  "descriptions": [
+    "Dean Domino, also known as the King of Swing, is a famous pre-War lounge singer and known con artist. Now ghoulified and trapped within the Sierra Madre villa in 2281, Dean plays a key part in Father Elijah's schemes in the Fallout: New Vegas add-on Dead Money.",
+    "Pre-War poster promoting Dean Domino's performance.",
+    "His signature song being \"Saw Her Yesterday\", Domino and his orchestra gave performances across the United States and Europe (including Paris, including the casinos on the Las Vegas Strip.",
+    "He was invited to perform at the Sierra Madre, where he quickly found himself in the shadow of the casino's founder, Frederick Sinclair. While Domino was quite irritated by this, it was the fact that Sinclair, despite suffering several quite severe financial losses throughout the 2070s, still maintained an unwavering optimistic and easy-going attitude that especially triggered his ire. Soon, Domino found himself consumed with jealousy and he became single-mindedly determined to put Sinclair \"in his place\" by taking everything from him that he held dear. He enlisted the help of his former lover Vera Keyes, a starlet who had caught Sinclair's eye. Domino introduced them to each other as part of his plan to break into the casino vault, where he would take whatever it was that Sinclair had there that was so important.",
+    "However, Keyes got cold feet, so in order to ensure her continued cooperation, Domino began to blackmail her with evidence of a Med-X and Super Stimpak addiction, unaware that her addictions were a result of her being terminally ill.",
+    "His final gig was to be at the Tampico, but that all changed when the bombs dropped; the security holograms activated and the Gala Event turned into a massacre.",
+    "Domino survived the apocalypse, during which he began to undergo ghoulification. He stubbornly refused to let go of the Sierra Madre's treasure, having become obsessed with it, and so spent the next two hundred years evading and mapping out the casino's security system, while plotting his grand heist, oblivious to the fact that Sinclair had long since discovered Domino's plan and prepared a trap within the casino vault. However, he was captured by Dog, fitted with an explosive collar, and forced to work for Father Elijah in breaking into the casino (and already managed to trigger the Gala event at least once for him).",
+    "Needing a replacement for Keyes' part of his plan, Domino finally found an opportunity when Christine Royce was captured by Dog and brought to the Sierra Madre. While she was still out cold, he dragged her to the Villa's clinic and placed her in an Auto-Doc, which he programmed to perform surgery on her vocal cords, altering her voice to sound like Keyes', so she could at some point be used to unlock the vault. It was something of a leap in the dark on his part, as he actually held some doubt towards Royce making the intended recovery from the procedure.",
+    "Domino is a quick thinker, and is quite skilled with guns, specifically pistols, having spent some of his free time back in the pre-War days at the shooting range, and uses a knife for a sidearm. He is very paranoid, setting up many booby traps and hiding several 'secret stashes' throughout the Villa.",
+    "Dean has a rather fragile ego, and is very vengeful towards anyone who bruises it, making sure they meet dire consequences down the line. Expressing irritation, aggression, or contempt will earn his ire, as well as challenging his sense of self importance, as he will double cross able partners simply because he perceives their competence a personal insult. His voice has been unaltered by ghoulification; it remains clear as opposed to gravelly like other ghouls.",
+    "Dean Domino appears in the Fallout: New Vegas add-on Dead Money, and is mentioned in Fallout: New Vegas and its add-on Lonesome Road.",
+    "Ghoul Dean with hair, concept art from Chris Avellone's GDC 2012 presentation",
+    "External"
+  ],
+  "race": "Ghoul",
+  "gender": "Male",
+  "affiliation": "Sierra Madre(pre-War, false pretenses)",
+  "role": "Lounge singerCon artistThiefCompanion",
+  "detailed_location": "Sierra Madre",
+  "voice_actor": "Barry Dennen",
+  "special": {
+    "Strength": 6,
+    "Perception": 4,
+    "Endurance": 8,
+    "Charisma": 7,
+    "Intelligence": 6,
+    "Agility": 8,
+    "Luck": 5
+  },
+  "level": "5→35→50 (DLCs only)",
+  "tag_skills": [
+    {
+      "Explosives:": "45→100"
+    },
+    {
+      "Guns:": "53→100"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "105→255→330(DLCs only)"
+    }
+  ],
+  "karma": "Neutral",
+  "geck_race": "Ghoul",
+  "topics": [
+    {
+      "topic": "FollowersAcknowledgeMyOrder",
+      "topic_text": "FollowersAcknowledgeMyOrder",
+      "emotion": "Neutral 50",
+      "response_text": "I hear you.",
+      "index": "1"
+    },
+    {
+      "topic": "FollowersFired",
+      "topic_text": "It's time for us to part ways.",
+      "emotion": "Neutral 50",
+      "response_text": "You sure? I mean... look, you can't just tell me to walk now, you know. That's... well, not very friendly.",
+      "index": "2"
+    },
+    {
+      "topic": "FollowersFiredNo",
+      "topic_text": "On second thought, stick with me for a little longer.",
+      "emotion": "Neutral 50",
+      "response_text": "{Relieved}That's a relief.{Beat, changes tone to false confidence}I-I mean, not like I care. I'm fine on my own.",
+      "index": "3"
+    },
+    {
+      "topic": "FollowersFiredYes",
+      "topic_text": "Yes, I'm sure.",
+      "emotion": "Neutral 50",
+      "response_text": "I can't say it hasn't been fun...{quiet}well, I can, but I'll save it for my memoirs.",
+      "index": "4"
+    },
+    {
+      "topic": "FollowersHired",
+      "topic_text": "I think we should travel together.",
+      "emotion": "Neutral 50",
+      "response_text": "Lose the second-stringer, and I'll make the time.",
+      "index": "5"
+    },
+    {
+      "topic": "FollowersLetsGo",
+      "topic_text": "Let's get going.",
+      "emotion": "Neutral 50",
+      "response_text": "Music to my ears.",
+      "index": "7"
+    },
+    {
+      "topic": "FollowersOverburdened",
+      "topic_text": "FollowersOverburdened",
+      "emotion": "Neutral 50",
+      "response_text": "{Dismissive}Get a porter, carrying someone's bags - not my style.",
+      "index": "8"
+    },
+    {
+      "topic": "FollowersStealthing",
+      "topic_text": "FollowersStealthing",
+      "emotion": "Neutral 50",
+      "response_text": "{Quiet, to himself}This crouching's hell on my knees.",
+      "index": "9"
+    },
+    {
+      "topic": "FollowersTactics",
+      "topic_text": "Let's talk about your tactics.",
+      "emotion": "Neutral 50",
+      "response_text": "{Curious, suspicious}Tactics? What, we going to get into a shootout soon, or...?",
+      "index": "10"
+    },
+    {
+      "topic": "FollowersTacticsCombat",
+      "topic_text": "I want you to change your combat style.",
+      "emotion": "Neutral 50",
+      "response_text": "Style's not something you just change, friend.",
+      "index": "11"
+    },
+    {
+      "topic": "FollowersTacticsCombatAggressive",
+      "topic_text": "I want you to attack enemies the moment you see them.",
+      "emotion": "Neutral 50",
+      "response_text": "{Scoffs}Yeah, right.{Beat}Oh, you're serious. You bet.",
+      "index": "12"
+    },
+    {
+      "topic": "FollowersTacticsCombatEND",
+      "topic_text": "Let's talk about something else.",
+      "emotion": "Neutral 50",
+      "response_text": "{Slight irriation}Sure, let's jaw all day and all night, why not?",
+      "index": "13"
+    },
+    {
+      "topic": "FollowersTacticsCombatGOODBYE",
+      "topic_text": "That's all. Let's get going.",
+      "emotion": "Neutral 50",
+      "response_text": "If that's all, let's shake a leg.",
+      "index": "14"
+    },
+    {
+      "topic": "FollowersTacticsCombatMelee",
+      "topic_text": "Switch to a melee weapon.",
+      "emotion": "Neutral 50",
+      "response_text": "Boxing's not really my thing. I prefer the gentle touch... but all right, it's your show.",
+      "index": "15"
+    },
+    {
+      "topic": "FollowersTacticsCombatPassive",
+      "topic_text": "I want you not to attack enemies unless I've already engaged them.",
+      "emotion": "Neutral 50",
+      "response_text": "{Relieved}All you, trust me.",
+      "index": "16"
+    },
+    {
+      "topic": "FollowersTacticsCombatRanged",
+      "topic_text": "I want you to use ranged weapons.",
+      "emotion": "Neutral 50",
+      "response_text": "{Nods, totally lying}I'll be sure to cover you, don't you worry.",
+      "index": "17"
+    },
+    {
+      "topic": "FollowersTacticsDistance",
+      "topic_text": "Let's talk about how close you're following me.",
+      "emotion": "Neutral 50",
+      "response_text": "You're the one who dragged me out of my apartment, so yeah, I'm keeping close. So what?",
+      "index": "18"
+    },
+    {
+      "topic": "FollowersTacticsDistanceDefault",
+      "topic_text": "Stay close to me.",
+      "emotion": "Neutral 50",
+      "response_text": "{Nods}Like dancing with your shadow.",
+      "index": "19"
+    },
+    {
+      "topic": "FollowersTacticsDistanceEND",
+      "topic_text": "Your distance is good. Let's talk about something else.",
+      "emotion": "Neutral 50",
+      "response_text": "All right.",
+      "index": "20"
+    },
+    {
+      "topic": "FollowersTacticsDistanceGOODBYE",
+      "topic_text": "All right, you're good. Let's get out of here.",
+      "emotion": "Neutral 50",
+      "response_text": "Enough gum-flapping, Madre's not getting any younger.",
+      "index": "21"
+    },
+    {
+      "topic": "FollowersTacticsDistanceLong",
+      "topic_text": "Keep your distance. Try to flank them.",
+      "emotion": "Neutral 50",
+      "response_text": "{Rolls eyes}Oh, you bet. I'll flank them... might take me a while, though, so you just hold tight.",
+      "index": "22"
+    },
+    {
+      "topic": "FollowersTacticsEnd",
+      "topic_text": "Enough about tactics.",
+      "emotion": "Neutral 50",
+      "response_text": "Fine. \"Tactics\" means \"stay out of sight\" around here anyway.",
+      "index": "23"
+    },
+    {
+      "topic": "FollowersTrade",
+      "topic_text": "Let's trade equipment.",
+      "emotion": "Neutral 50",
+      "response_text": "{Eager}Let's deal.",
+      "index": "24"
+    },
+    {
+      "topic": "FollowersWait",
+      "topic_text": "Wait here.",
+      "emotion": "Neutral 50",
+      "response_text": "{Nods, but slight worry}Don't be long.",
+      "index": "25"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Disgust 10",
+      "response_text": "{Cold, menacing}So you showed. Felt the collar start kicking again as soon as the elevator doors rattled open.{<THEATER: Dean greets Player at the Theater (Hates Player opener). Dean is about to spring a trap once the convo is done: Holograms around Player>}",
+      "index": "26"
+    },
+    {
+      "topic": "NVDLC01DeanDialogueAutoDocCorridor",
+      "topic_text": "NVDLC01DeanDialogueAutoDocCorridor",
+      "emotion": "Fear 50",
+      "response_text": "What, you need surgery done? Let's get out of here... those speakers on the wall are making my nerves do a dance.{Player keeps going deeper into the clinic, and Dean doesn't want Christine (a victim he put here) found.}",
+      "index": "51"
+    },
+    {
+      "topic": "NVDLC01DeanDialogueGateLock",
+      "topic_text": "NVDLC01DeanDialogueGateLock",
+      "emotion": "Anger 10",
+      "response_text": "{Not really happy to hear this, it's like someone left his door unlocked in a dangerous neighborhood}Oh, looks like you already forced the gate.{Beat, under his breath}Now, everybody and their mother can walk right in, thanks.",
+      "index": "52"
+    },
+    {
+      "topic": "NVDLC01DeanDialogueInClinic",
+      "topic_text": "NVDLC01DeanDialogueInClinic",
+      "emotion": "Fear 10",
+      "response_text": "Watch for Hologram security, not as nice as the lady at the fountain, trust me.",
+      "index": "53"
+    },
+    {
+      "topic": "NVDLC01DeanDialogueMedicalDistrict",
+      "topic_text": "NVDLC01DeanDialogueMedicalDistrict",
+      "emotion": "Surprise 10",
+      "response_text": "{Confused}What are we doing here?{Sarcastic}We're not going to find a doctor on call at this hour, trust me.{Player has entered the medical district. Confusion, then uneasy sarcasm.}",
+      "index": "54"
+    },
+    {
+      "topic": "NVDLC01DeanDialogueNVDLC01DeanTopic000",
+      "topic_text": "Are you going to give me the key or not?",
+      "emotion": "Fear 50",
+      "response_text": "{Paranoia sets in}Look... I give you this key, and there's nothing to keep you from just killing me and running. And as I see it...",
+      "index": "56"
+    },
+    {
+      "topic": "NVDLC01DeanDialogueNVDLC01DeanTopic002",
+      "topic_text": "Come on, Dean, turning me to ash? Hardly the way to end a beautiful partnership.",
+      "emotion": "Neutral 50",
+      "response_text": "It's a shame... I regret it. Still, you dames are all the same - things get a little hot, you get cold feet. That's why I'm still alive. You? Well...",
+      "index": "59"
+    },
+    {
+      "topic": "NVDLC01DeanDialogueNVDLC01DeanTopic003",
+      "topic_text": "Know anything about this Gala Event we're supposed to trigger?",
+      "emotion": "Neutral 50",
+      "response_text": "{Chewing it over}Supposed to be the Grand Opening of the Sierra Madre. Lot of lights, music, the works.",
+      "index": "60"
+    },
+    {
+      "topic": "NVDLC01DeanDialogueNVDLC01DeanTopic005",
+      "topic_text": "I found this Holotape in your safe.",
+      "emotion": "Disgust 20",
+      "response_text": "{Disdainful}You don't just stop robbing casinos, do you? What's that tape... oh, the one with Sinclair's woman, Vera.",
+      "index": "62"
+    },
+    {
+      "topic": "NVDLC01DeanDialogueNVDLC01DeanTopic006",
+      "topic_text": "{Hates PC}That's all I wanted to know. Ready to die?",
+      "emotion": "Anger 20",
+      "response_text": "Always asking questions when you should be shooting. You're a piece of work, I'll give you that.",
+      "index": "64"
+    },
+    {
+      "topic": "NVDLC01DeanDialogueNVDLC01DeanTopic007",
+      "topic_text": "I need you to stay here and fire off the Gala Event.",
+      "emotion": "Neutral 50",
+      "response_text": "Unless you get some Hologram guards lit up in the courtyard below? No dice.",
+      "index": "65"
+    },
+    {
+      "topic": "NVDLC01DeanDialogueNVDLC01DeanTopic008",
+      "topic_text": "Vera Hologram? You know the holographic woman?",
+      "emotion": "Anger 10",
+      "response_text": "Yeah - don't you? Or...{Frowns}guess Vera Keyes got lost along with the rest of the holo-archives when the bomb hit, huh?",
+      "index": "68"
+    },
+    {
+      "topic": "NVDLC01DeanDialogueNVDLC01DeanTopic009",
+      "topic_text": "You're not a betting man, which means I'm betting you have the key to the exit on you.",
+      "emotion": "Fear 10",
+      "response_text": "[SUCCEEDED]{Bluffing, slightly uneasy}Lucky guess... you sure about that? Because if you make a mistake... well, Sierra Madre's got us both.",
+      "index": "70"
+    },
+    {
+      "topic": "NVDLC01DeanDialogueNVDLC01DeanTopic010",
+      "topic_text": "{THEATER: Player has rescued Dean}Are you all right?",
+      "emotion": "Neutral 50",
+      "response_text": "{Relieved}Yeah, now. Talk about a captive audience.{Frowns, thinking it over}Or captive entertainer? Eh - whatever.{<Dean gives key to his safe - where supplies, and Vera's Holotape are found. He also gives the Entertainer Pass, to open Theater up. Thanks.>}",
+      "index": "72"
+    },
+    {
+      "topic": "NVDLC01DeanDialogueNVDLC01DeanTopic011",
+      "topic_text": "What are you talking about?",
+      "emotion": "Neutral 50",
+      "response_text": "Might be a bit rude, but that chair you're sitting in - it's got a shaped charge in the seat cushion.",
+      "index": "73"
+    },
+    {
+      "topic": "NVDLC01DeanDialogueNVDLC01DeanTopic013",
+      "topic_text": "Better be a shaped charge, or you're going to kill both of us.",
+      "emotion": "Happy 20",
+      "response_text": "[SUCCEEDED]{Impressed}Sounds like you've done some blue collar construction work in your life, your Ma must be proud. Still...",
+      "index": "74"
+    },
+    {
+      "topic": "NVDLC01DeanDialogueNVDLC01DeanTopic014",
+      "topic_text": "Hnh?",
+      "emotion": "Anger 10",
+      "response_text": "{Frowns}Great, a moron - just what I need.{Beat}Look? That seat you're sitting in? It's a{emph}bomb. Go boom.",
+      "index": "76"
+    },
+    {
+      "topic": "NVDLC01DeanDialogueNVDLC01DeanTopic015",
+      "topic_text": "<Storage Blue Node. Do not translate.>",
+      "emotion": "Anger 50",
+      "response_text": "Get up without my permission, I'll blast your ass so far through your head, it'll turn the moon cherry pie red.",
+      "index": "77"
+    },
+    {
+      "topic": "NVDLC01DeanDialogueNVDLC01DeanTopic016",
+      "topic_text": "I'll save my questions for the end - please, go on.",
+      "emotion": "Happy 10",
+      "response_text": "[SUCCEEDED]{Pleased}And that's what I've missed - a rapt audience.",
+      "index": "86"
+    },
+    {
+      "topic": "NVDLC01DeanDialogueNVDLC01DeanTopic017",
+      "topic_text": "Look - I need your help to get into the Sierra Madre.",
+      "emotion": "Anger 20",
+      "response_text": "{Irritated, bad side starts coming out}Oh, of course you do. Now, it's like we're married with these big wedding rings around our necks.",
+      "index": "88"
+    },
+    {
+      "topic": "NVDLC01DeanDialogueNVDLC01DeanTopic020",
+      "topic_text": "Misund...? Ummm.",
+      "emotion": "Disgust 10",
+      "response_text": "Christ, if that collar blows, I don't know if you'd know the difference, you'd probably still keep walking around with that dumb, blank look.",
+      "index": "90"
+    },
+    {
+      "topic": "NVDLC01DeanDialogueNVDLC01DeanTopic021",
+      "topic_text": "I'll cooperate. What do you want?",
+      "emotion": "Happy 20",
+      "response_text": "{Slightly friendlier, let's-make-a-deal}Good, good - then we're in business. I may be a betting man, but I like it when the odds are in our favor.",
+      "index": "92"
+    },
+    {
+      "topic": "NVDLC01DeanDialogueNVDLC01DeanTopic022",
+      "topic_text": "No, based on your response, I'm sure of it.",
+      "emotion": "Fear 10",
+      "response_text": "All right, all right... look, I'll hand it over, I promise. No need to get all upset. We can both come out ahead in this.",
+      "index": "95"
+    },
+    {
+      "topic": "NVDLC01DeanDialogueNVDLC01DeanTopic024",
+      "topic_text": "I'm positive you have it. Now, I'll just kill you and take it.",
+      "emotion": "Disgust 20",
+      "response_text": "{Flustered}What? Hey, hey... now... w-wait... I...{angered}ah, forget it. Time for the hard way.{<THEATER: Dean curses Player, getting ready to fight to the death>}",
+      "index": "96"
+    },
+    {
+      "topic": "NVDLC01DeanDialogueNVDLC01DeanTopic025",
+      "topic_text": "I think she was sick, yes. Found a medical report in her Suite.",
+      "emotion": "Anger 10",
+      "response_text": "{Frowns}What are you talking about? Medical report? Vera wasn't...",
+      "index": "97"
+    },
+    {
+      "topic": "NVDLC01DeanDialogueNVDLC01DeanTopic026",
+      "topic_text": "Why did you need her?",
+      "emotion": "Neutral 50",
+      "response_text": "Because she could get closer to Sinclair than I ever could. He built this place for her... well, after the two \"chanced\" to meet.",
+      "index": "101"
+    },
+    {
+      "topic": "NVDLC01DeanDialogueNVDLC01DeanTopic027",
+      "topic_text": "I'm not sure.",
+      "emotion": "Neutral 50",
+      "response_text": "That's... hmm. Never mind, doesn't change anything. The Sierra Madre's still waiting for us to crack it open.",
+      "index": "102"
+    },
+    {
+      "topic": "NVDLC01DeanDialogueNVDLC01DeanTopic028",
+      "topic_text": "Are you really that stupid?",
+      "emotion": "Neutral 50",
+      "response_text": "I waited an entire lifetime! Sitting in that Villa, watching it all fall apart - Sinclair's Sierra Madre towering over everything? Untouched?!",
+      "index": "103"
+    },
+    {
+      "topic": "NVDLC01DeanDialogueNVDLC01DeanTopic029",
+      "topic_text": "Have other people shown up in search of the Sierra Madre?",
+      "emotion": "Neutral 50",
+      "response_text": "Tourists, you bet. They don't stay long... and they don't stay alive long.",
+      "index": "107"
+    },
+    {
+      "topic": "NVDLC01DeanDialogueNVDLC01DeanTopic031",
+      "topic_text": "Is anyone else alive around here?",
+      "emotion": "Fear 10",
+      "response_text": "{Choosing his words carefully, the locals are, well, zombies}\"Alive's\" a tricky word. The locals, the Ghost People? Not sure it applies to them.",
+      "index": "109"
+    },
+    {
+      "topic": "NVDLC01DeanDialogueNVDLC01DeanTopic033",
+      "topic_text": "That's the plan. Are you going to be able to do it safely?",
+      "emotion": "Neutral 50",
+      "response_text": "{Skeptical}Well... \"safely?\" Around here, that word doesn't come cheap.",
+      "index": "111"
+    },
+    {
+      "topic": "NVDLC01DeanDialogueNVDLC01DeanTopic034",
+      "topic_text": "I could just jab both wires into you, close the circuit that way.",
+      "emotion": "Surprise 20",
+      "response_text": "Really? You don't strike me as the type, especially after our little \"how can I cooperate\" chat at my home.",
+      "index": "113"
+    },
+    {
+      "topic": "NVDLC01DeanDialogueNVDLC01DeanTopic035",
+      "topic_text": "If re-connecting the speakers is part of the Gala Event, yes.",
+      "emotion": "Fear 10",
+      "response_text": "Look... I strike up the speaker system, there's going to be ghosts all over this place. Any change in the sounds around here...",
+      "index": "115"
+    },
+    {
+      "topic": "NVDLC01DeanDialogueNVDLC01DeanTopic036",
+      "topic_text": "Look, I need you to stay here and do it.",
+      "emotion": "Surprise 10",
+      "response_text": "{Like told to wait in a DMZ}In the middle of town here? Alone? On a{emph}rooftop, with a big lightshow in the air?{<Dean doesn't want to stay in a DMZ with zombies all around.>}",
+      "index": "117"
+    },
+    {
+      "topic": "NVDLC01DeanDialogueNVDLC01DeanTopic037",
+      "topic_text": "I'm not going to help you.",
+      "emotion": "Neutral 50",
+      "response_text": "That so?",
+      "index": "119"
+    },
+    {
+      "topic": "NVDLC01DeanDialogueNVDLC01DeanTopic038",
+      "topic_text": "Have you tried to deal with them?",
+      "emotion": "Neutral 50",
+      "response_text": "Tried talking to them, bribing them, leaving food - nothing. In the years since, they haven't changed their approach, but I sure have.",
+      "index": "120"
+    },
+    {
+      "topic": "NVDLC01DeanDialogueNVDLC01DeanTopic039",
+      "topic_text": "Our collars... these \"neckties\" are linked. I die, you die.",
+      "emotion": "Anger 50",
+      "response_text": "That's an interesting clause.{Frowns}That's a real bad contract you have. We have.",
+      "index": "123"
+    },
+    {
+      "topic": "NVDLC01DeanDialogueNVDLC01DeanTopic040",
+      "topic_text": "Your negotiation skills assume you're bargaining from a position of strength.",
+      "emotion": "Anger 50",
+      "response_text": "[SUCCEEDED]{Frowns, suspicious}What are you talking about?",
+      "index": "124"
+    },
+    {
+      "topic": "NVDLC01DeanDialogueNVDLC01DeanTopic042",
+      "topic_text": "Either deal with me as an equal, or I walk.",
+      "emotion": "Anger 10",
+      "response_text": "Just like all the rest. Strolling in here, thinking you own the place. I've been here longer than{emph}any of you tourists.",
+      "index": "126"
+    },
+    {
+      "topic": "NVDLC01DeanDialogueNVDLC01DeanTopic046",
+      "topic_text": "It's starting to make sense, now that I've met you.",
+      "emotion": "Happy 50",
+      "response_text": "{Laughs}All right, all right... looks like marriage finally caught me.",
+      "index": "128"
+    },
+    {
+      "topic": "NVDLC01DeanDialogueNVDLC01DeanTopic047",
+      "topic_text": "What weapons are you skilled with?",
+      "emotion": "Neutral 50",
+      "response_text": "Not one for fighting if we can avoid it. Still, wasn't bad at the pistol range and over the years, I've learned how to handle a knife...",
+      "index": "130"
+    },
+    {
+      "topic": "NVDLC01DeanDialogueNVDLC01DeanTopic048",
+      "topic_text": "Meet at the Fountain, and we'll hear what the next step is.",
+      "emotion": "Neutral 50",
+      "response_text": "Not leaving me much choice. The Fountain, huh?{Beat}Hope the Hologram's still working and the battery's running strong.",
+      "index": "132"
+    },
+    {
+      "topic": "NVDLC01DeanDialogueNVDLC01DeanTopic049",
+      "topic_text": "How tough are they?",
+      "emotion": "Neutral 50",
+      "response_text": "You shoot them, they get back up. You stab them, they get back up.",
+      "index": "135"
+    },
+    {
+      "topic": "NVDLC01DeanDialogueNVDLC01DeanTopic050",
+      "topic_text": "I'm a fair shot. One shot, one kill is how I handle problems.",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED]{Studying player}Well... you seem like you know how to handle yourself. All right.",
+      "index": "138"
+    },
+    {
+      "topic": "NVDLC01DeanDialogueNVDLC01DeanTopic052",
+      "topic_text": "Where did they come from?",
+      "emotion": "Neutral 50",
+      "response_text": "{Slight exasperation, as if he's thought about this a lot, then tries to recall Hamlet quote}Friend... \"there's more mysteries in heaven and earth...\" wait, no, \"there is more between heaven and earth...\" oh, forget it.",
+      "index": "142"
+    },
+    {
+      "topic": "NVDLC01DeanDialogueNVDLC01DeanTopic053",
+      "topic_text": "I think you can manage walking there without me. Now get going.",
+      "emotion": "Fear 10",
+      "response_text": "Wait, wait... wait just a minute. I'm not walking out there on my own.",
+      "index": "145"
+    },
+    {
+      "topic": "NVDLC01DeanDialogueNVDLC01DeanTopic055",
+      "topic_text": "Focus?",
+      "emotion": "Neutral 50",
+      "response_text": "Always had the Sierra Madre to keep my mind occupied.",
+      "index": "146"
+    },
+    {
+      "topic": "NVDLC01DeanDialogueNVDLC01DeanTopic057",
+      "topic_text": "Any reason you can't find your way there?",
+      "emotion": "Neutral 50",
+      "response_text": "I know what's out there. It's why I've planted a mine field, shotguns, and explosives all the way on the road to my little boudoir here.",
+      "index": "148"
+    },
+    {
+      "topic": "NVDLC01DeanDialogueNVDLC01DeanTopic058",
+      "topic_text": "Fine. Get up and follow me.",
+      "emotion": "Neutral 50",
+      "response_text": "All right... partner.",
+      "index": "150"
+    },
+    {
+      "topic": "NVDLC01DeanDialogueNVDLC01DeanTopic059",
+      "topic_text": "Well, if I can get here, others will be, soon enough. Fountain's the safest place.",
+      "emotion": "Neutral 50",
+      "response_text": "That's... a good point. All right, let me grab some smokes, and I'll meet you at the Fountain.",
+      "index": "152"
+    },
+    {
+      "topic": "NVDLC01DeanDialogueNVDLC01DeanTopic060",
+      "topic_text": "{Opener}I had questions I wanted to ask.",
+      "emotion": "Neutral 50",
+      "response_text": "All right, keep it short, we don't have a lot of time.",
+      "index": "153"
+    },
+    {
+      "topic": "NVDLC01DeanDialogueNVDLC01DeanTopic061",
+      "topic_text": "{After asking 1 Q}I had other questions.",
+      "emotion": "Disgust 20",
+      "response_text": "{Slight irritation}Of course you do. Let's hear 'em.",
+      "index": "154"
+    },
+    {
+      "topic": "NVDLC01DeanDialogueNVDLC01DeanTopic062",
+      "topic_text": "Is there anything else about them I should know?",
+      "emotion": "Fear 10",
+      "response_text": "{Dean gets deadly serious here, his fear should foreshadow end of Act 2}Whatever we do - don't rile them up. Normally, there's only a few, maybe a pack. There's more out there, a lot more.",
+      "index": "156"
+    },
+    {
+      "topic": "NVDLC01DeanDialogueNVDLC01DeanTopic063",
+      "topic_text": "What are the Vending Machines all over town?",
+      "emotion": "Neutral 50",
+      "response_text": "Those little company stores? Sinclair's toy boxes, put in a casino chip, get a treat,{angry at self}like you're some dog doing tricks.",
+      "index": "158"
+    },
+    {
+      "topic": "NVDLC01DeanDialogueNVDLC01DeanTopic064",
+      "topic_text": "I've never seen machines like those before.",
+      "emotion": "Disgust 10",
+      "response_text": "{Took vending machines for granted, realizes player may not}Yeah, well, machines like those weren't unusual before the Bomb. Maybe to you, they're amazing, to me, they're grifters without the personality.",
+      "index": "161"
+    },
+    {
+      "topic": "NVDLC01DeanDialogueNVDLC01DeanTopic065",
+      "topic_text": "Grifters?",
+      "emotion": "Disgust 5",
+      "response_text": "Sinclair made sure if you spent money here, it went{emph}one direction - although that's not how{emph}he described it.",
+      "index": "162"
+    },
+    {
+      "topic": "NVDLC01DeanDialogueNVDLC01DeanTopic066",
+      "topic_text": "How did he describe it?",
+      "emotion": "Disgust 10",
+      "response_text": "Called it \"self-sufficient.\" Like he was doing the residents a favor. Right.",
+      "index": "163"
+    },
+    {
+      "topic": "NVDLC01DeanDialogueNVDLC01DeanTopic067",
+      "topic_text": "What other items can you get out of the machines?",
+      "emotion": "Neutral 50",
+      "response_text": "If it's an emergency, you can get chems for any... uh... condition. Sinclair left that for doctors and trained professionals, not the common folk.",
+      "index": "164"
+    },
+    {
+      "topic": "NVDLC01DeanDialogueNVDLC01DeanTopic068",
+      "topic_text": "Where can I find these cards?",
+      "emotion": "Neutral 50",
+      "response_text": "Around. Don't have much use for them myself, not worth the risk to get them.",
+      "index": "166"
+    },
+    {
+      "topic": "NVDLC01DeanDialogueNVDLC01DeanTopic069",
+      "topic_text": "Tell me about the Cloud.",
+      "emotion": "Neutral 50",
+      "response_text": "The Cloud? Showed up after the Bomb.{Frowns}I think. I got used to it in small doses. Now, it covers the city.",
+      "index": "168"
+    },
+    {
+      "topic": "NVDLC01DeanDialogueNVDLC01DeanTopic070",
+      "topic_text": "What can you tell me about the Villa and the town?",
+      "emotion": "Neutral 50",
+      "response_text": "Residential area, clinic, police station - should keep away from the police station, it's a Ghost People hangout.",
+      "index": "171"
+    },
+    {
+      "topic": "NVDLC01DeanDialogueNVDLC01DeanTopic071",
+      "topic_text": "{THEATER: 1st Time, Hates player}Don't act stupid. Let's get out of here.",
+      "emotion": "Anger 50",
+      "response_text": "{Slightly defensive, angry, echoing player's \"stupid\" accusation}Stupid? No, playing it smart.{Emph}You're the dumb one, waltzing in here without realizing who the headliner is.{<Dean bids farewell to the Player. The trap springs, and he retreats to the stage's scaffolding/hallways to avoid harm - Holograms are on>}",
+      "index": "174"
+    },
+    {
+      "topic": "NVDLC01DeanDialogueNVDLC01DeanTopic072",
+      "topic_text": "{THEATER: Dean fight}This is where it ends, Dean, give up.",
+      "emotion": "Disgust 20",
+      "response_text": "I can take a chump like you even if I didn't have eight lives lined up behind me, and a rising soundtrack. So put your dancing shoes on - let's go.{<THEATER: Dean curses Player, getting ready to fight to the death>}",
+      "index": "175"
+    },
+    {
+      "topic": "NVDLC01DeanDialogueNVDLC01DeanTopic073",
+      "topic_text": "{THEATER: 1st Time, Likes player}How did you get up there?",
+      "emotion": "Fear 10",
+      "response_text": "{Slight nervous}No idea... woke up here, thought I was dreaming for a second... right back on stage, the mic...{Thinking about to the show days...}",
+      "index": "176"
+    },
+    {
+      "topic": "NVDLC01DeanDialogueNVDLC01DeanTopic074",
+      "topic_text": "According to the marker, you're slated for a spot in Puesta del Sol.",
+      "emotion": "Neutral 50",
+      "response_text": "No... looks like a{emph}rooftop in Puesta del Sol. In better days, nice view. Now? It's the last place anyone wants to stand when this event goes off.{Correcting player, then takes a breath - this isn't good news.}",
+      "index": "179"
+    },
+    {
+      "topic": "NVDLC01DeanDialogueNVDLC01DeanTopic075",
+      "topic_text": "{THEATER: 1st Time, Hates player}If you think you can take me, come down and try it.",
+      "emotion": "Neutral 50",
+      "response_text": "No... no, no... I'm not leaving this spot. Why dirty my hands when the Sierra Madre can kill you for me?",
+      "index": "182"
+    },
+    {
+      "topic": "NVDLC01DeanDialogueNVDLC01DeanTopic078",
+      "topic_text": "{THEATER: Player has rescued Dean}Yeah, lucky us. Love getting shot at by Pre-War ghosts.",
+      "emotion": "Neutral 50",
+      "response_text": "Look, I'm more about the short goodbyes than long thankful speeches...{sincere}but I appreciate you bailing me out of a tight spot there - partner.",
+      "index": "184"
+    },
+    {
+      "topic": "NVDLC01DeanDialogueNVDLC01DeanTopic079",
+      "topic_text": "{THEATER: Player has rescued Dean}Don't have time for the song and dance, Dean.",
+      "emotion": "Neutral 50",
+      "response_text": "I know you didn't do it out of the goodness of your heart. So... instead of empty words and a flourish, let me give you something more useful.",
+      "index": "186"
+    },
+    {
+      "topic": "NVDLC01DeanDialogueNVDLC01DeanTopic081",
+      "topic_text": "{THEATER: Dean fight}So, what, you're going to risk blowing off your own head to kill me?",
+      "emotion": "Disgust 20",
+      "response_text": "{Smug, confident}No, I'm not.{emph}I'll get out in time - you won't.{Already planning ahead, as if free and clear already}Once I kill you, exit stage left, and my collar will go quiet.",
+      "index": "187"
+    },
+    {
+      "topic": "NVDLC01DeanDialogueNVDLC01DeanTopic082",
+      "topic_text": "{THEATER: 1st Time, Hates player}So, stabbing me in the back for the Sierra Madre?",
+      "emotion": "Surprise 10",
+      "response_text": "{Incredulous}You think{emph}I'm the bad guy here? I'm not the one slapping bomb collars on innocent folks and flicking the switch.{<Dean bids farewell to the Player. The trap springs, and he retreats to the stage's scaffolding/hallways to avoid harm - Holograms are on>}",
+      "index": "188"
+    },
+    {
+      "topic": "NVDLC01DeanDialogueNVDLC01DeanTopic083",
+      "topic_text": "Any idea why he wants you there?",
+      "emotion": "Neutral 50",
+      "response_text": "Partner, I'm not sure this guy's operating with a full deck. My bet? Process of elimination, lowest common denominator.",
+      "index": "190"
+    },
+    {
+      "topic": "NVDLC01DeanDialogueNVDLC01DeanTopic084",
+      "topic_text": "What do you mean?",
+      "emotion": "Happy 10",
+      "response_text": "{Confiding, superior}There's a private elevator, Sinclair's elevator. It's up in the Executive Suites, in Vera's room.{Beat, emph}Not a coincidence.",
+      "index": "193"
+    },
+    {
+      "topic": "NVDLC01DeanDialogueNVDLC01DeanTopic085",
+      "topic_text": "Tell me. The short version.",
+      "emotion": "Neutral 50",
+      "response_text": "Elevator's up in the Executive Suites. Voice-activated. Speak the right phrase, in the right tone of voice, and it's open sesame.",
+      "index": "195"
+    },
+    {
+      "topic": "NVDLC01DeanDialogueNVDLC01DeanTopic086",
+      "topic_text": "Voice?",
+      "emotion": "Disgust 10",
+      "response_text": "Yeah, the woman, the Starlet, Vera - her voice.{Grumbles to himself}Didn't realize there was so many holotapes of her still around, otherwise... eh, never mind.",
+      "index": "197"
+    },
+    {
+      "topic": "NVDLC01DeanDialogueNVDLC01DeanTopic087",
+      "topic_text": "So you don't know the phrase?",
+      "emotion": "Neutral 50",
+      "response_text": "{Thinking}No, that I still had to figure out - still do. Sinclair wrote stuff down, was obsessive about it. Just got to find where.",
+      "index": "198"
+    },
+    {
+      "topic": "NVDLC01DeanDialogueNVDLC01DeanTopic088",
+      "topic_text": "{Likes PC}All right, I'll head out and see what I can do on my end.",
+      "emotion": "Neutral 50",
+      "response_text": "Go knock yourself out. I'm just going to catch my breath a bit. That performance... well, more pressure than I was expecting.",
+      "index": "199"
+    },
+    {
+      "topic": "NVDLC01DeanDialogueNVDLC01DeanTopic089",
+      "topic_text": "Security? What security?",
+      "emotion": "Neutral 50",
+      "response_text": "Didn't see anyone come in? Well... they'll be here soon.",
+      "index": "200"
+    },
+    {
+      "topic": "NVDLC01DeanDialogueNVDLC01DeanTopic090",
+      "topic_text": "How so?",
+      "emotion": "Disgust 20",
+      "response_text": "Sinclair was already puppy-eyed, so all I had to do was the introductions.{Disgusted}She smiled, fluttered her eyes, showed a little leg...",
+      "index": "202"
+    },
+    {
+      "topic": "NVDLC01DeanDialogueNVDLC01DeanTopic092",
+      "topic_text": "Go on.",
+      "emotion": "Happy 10",
+      "response_text": "All she had to do was get inside the Sierra Madre for the Gala, then use her voice to open the door.{Smiles}After that... smooth sailing.",
+      "index": "205"
+    },
+    {
+      "topic": "NVDLC01DeanDialogueNVDLC01DeanTopic093",
+      "topic_text": "So what happened?",
+      "emotion": "Neutral 50",
+      "response_text": "{Quiet, reflective}The Bomb. Vera got sealed in here.{Throwaway}A few hundred years go by, give-or-take.{Emph}Almost the end of the story - then you came along.",
+      "index": "207"
+    },
+    {
+      "topic": "NVDLC01DeanDialogueNVDLC01DeanTopic094",
+      "topic_text": "What was your problem with Sinclair?",
+      "emotion": "Surprise 20",
+      "response_text": "{Slight surprise, hasn't given a lot of thought to this in a long time}Problem? All high-and-mighty. Lording it over everyone. Acting so self-righteous, like nothing could touch him. He was the one with the problem.",
+      "index": "209"
+    },
+    {
+      "topic": "NVDLC01DeanDialogueNVDLC01DeanTopic095",
+      "topic_text": "But what did he do to you?",
+      "emotion": "Anger 50",
+      "response_text": "Do to me?{Frowns}What, weren't you listening? He thought he was{emph}better than me. Don't believe me? Look around.",
+      "index": "212"
+    },
+    {
+      "topic": "NVDLC01DeanDialogueNVDLC01DeanTopic096",
+      "topic_text": "Forget Sinclair. If Vera was the key, she's dead.",
+      "emotion": "Disgust 10",
+      "response_text": "{Mocking, he's echoing one of his songs}I only saw her yesterday. Well, a few yesterdays.",
+      "index": "215"
+    },
+    {
+      "topic": "NVDLC01DeanDialogueNVDLC01DeanTopic098",
+      "topic_text": "So you're going to prove it now? How?",
+      "emotion": "Neutral 50",
+      "response_text": "I didn't know at first. Then the old man showed up. You showed up. Then... that woman showed up, covered in scars.",
+      "index": "216"
+    },
+    {
+      "topic": "NVDLC01DeanDialogueNVDLC01DeanTopic099",
+      "topic_text": "And if she is alive?",
+      "emotion": "Neutral 50",
+      "response_text": "Then she can make some beautiful music. I'm not banking on it.",
+      "index": "220"
+    },
+    {
+      "topic": "NVDLC01DeanDialogueNVDLC01DeanTopic105",
+      "topic_text": "I found one of your stashes. Why did you leave them around the Villa?",
+      "emotion": "Neutral 50",
+      "response_text": "Why? Survival. I still needed to leave the Residential Area to scrounge up supplies, and I don't like taking chances.",
+      "index": "221"
+    },
+    {
+      "topic": "NVDLC01DeanDialogueNVDLC01DeanTopic106",
+      "topic_text": "Scrounge supplies? Like what?",
+      "emotion": "Neutral 50",
+      "response_text": "{Defensive}I still need to eat. At least I think I do. The Villa provides... even if it's not as glamorous as the Cantina Madrid.",
+      "index": "224"
+    },
+    {
+      "topic": "NVDLC01DeanDialogueNVDLC01DeanTopic107",
+      "topic_text": "I'm not going to let any harm come to you, all right?",
+      "emotion": "Neutral 50",
+      "response_text": "{Reluctant}No... you're not the type, but accidents happen, good intentions or no.",
+      "index": "227"
+    },
+    {
+      "topic": "NVDLC01DeanDialogueNVDLC01DeanTopic108",
+      "topic_text": "{THEATER: 1st Time, Likes player}How did you get from the Gala Event to here?",
+      "emotion": "Neutral 50",
+      "response_text": "{Sounds like dupe of another line, isn't, this one's friendlier, more confused}I was already was halfway off the rooftop, through the service tunnel and making a break for the gate before the light show started...",
+      "index": "230"
+    },
+    {
+      "topic": "NVDLC01DeanDialogueNVDLC01DeanTopic109",
+      "topic_text": "How do you make it?",
+      "emotion": "Neutral 50",
+      "response_text": "Scrape some Cloud Residue off the walls, mash it in a Tin Can with some Junk Food from the machines, then hold your nose and down it.",
+      "index": "233"
+    },
+    {
+      "topic": "NVDLC01DeanDialogueNVDLC01DeanTopic111",
+      "topic_text": "<Lie> Dean, I wouldn't leave you here, I swear.",
+      "emotion": "Disgust 10",
+      "response_text": "{Disdainful}Sure, nice words, nice promises... not worth a dime out here in the shadow of the Sierra Madre.{Not buying the offer.}",
+      "index": "236"
+    },
+    {
+      "topic": "NVDLC01DeanDialogueNVDLC01DeanTopic112",
+      "topic_text": "What about Christine?",
+      "emotion": "Neutral 50",
+      "response_text": "Christine, that her name? Nice name. I mean, you can't see it on posters, but... never mind.",
+      "index": "238"
+    },
+    {
+      "topic": "NVDLC01DeanDialogueNVDLC01DeanTopic113",
+      "topic_text": "And the woman? The Auto-Doc victim - what about her?",
+      "emotion": "Neutral 50",
+      "response_text": "Little Miss Silence...? Maybe she needs to be in some place where she can be seen, but being heard isn't important?",
+      "index": "242"
+    },
+    {
+      "topic": "NVDLC01DeanDialogueNVDLC01DeanTopic114",
+      "topic_text": "Why... it sure is interesting. Are you thinking what I'm thinking?",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] Yeah... maybe the drain in power, that'll cause the security systems to shut down enough to let us in. But... getting back out?",
+      "index": "243"
+    },
+    {
+      "topic": "NVDLC01DeanDialogueNVDLC01DeanTopic115",
+      "topic_text": "What happens during the Gala Event?",
+      "emotion": "Neutral 50",
+      "response_text": "Oh, it'll light up the casino, light up the sky... set the speakers in the Villa to play beautiful, soothing music.{Oh, sure, it'll be all sweetness and roses...}",
+      "index": "246"
+    },
+    {
+      "topic": "NVDLC01DeanDialogueNVDLC01DeanTopic117",
+      "topic_text": "Can you tell me about her?",
+      "emotion": "Neutral 50",
+      "response_text": "Vera was a big star, back before the Bomb. Not the best actress, but... well, she had other talents. Nice voice, nice legs.",
+      "index": "249"
+    },
+    {
+      "topic": "NVDLC01DeanDialogueNVDLC01DeanTopic118",
+      "topic_text": "Introductions? You knew her before?",
+      "emotion": "Neutral 50",
+      "response_text": "Of course. What, some kind of surprise to you that I knew people once? Used to have my name in lights, all right?",
+      "index": "252"
+    },
+    {
+      "topic": "NVDLC01DeanDialogueNVDLC01DeanTopic120",
+      "topic_text": "I found some medical records in the Villa Clinic. You brought her in for treatment, right?",
+      "emotion": "Surprise 10",
+      "response_text": "{Slight surprise}The Clinic?{Beat, a little wary}Yeah, I did bring her in. Before the Gala... well, before the first Gala Event. A few lifetimes ago.{Dean's initially worried he's been \"caught\" at the opening of this thread, then recovers, tries to dismiss it.}",
+      "index": "255"
+    },
+    {
+      "topic": "NVDLC01DeanDialogueNVDLC01DeanTopic121",
+      "topic_text": "So the visitors all killed each other?",
+      "emotion": "Neutral 50",
+      "response_text": "Sure. First, they figure they can get out, escape.{Beat, slow, emph}Then they start thinking it over, start thinking about how they can have it all.",
+      "index": "259"
+    },
+    {
+      "topic": "NVDLC01DeanDialogueNVDLC01DeanTopic122",
+      "topic_text": "What happened to the people who came to the Villa?",
+      "emotion": "Neutral 50",
+      "response_text": "Dead. Either got killed by one of the Villa's attractions, locals, or the beautiful weather.",
+      "index": "262"
+    },
+    {
+      "topic": "NVDLC01DeanDialogueNVDLC01DeanTopic123",
+      "topic_text": "Any advice to getting through this?",
+      "emotion": "Neutral 50",
+      "response_text": "Well... considering my life's on the line, too, yeah, a few things.",
+      "index": "265"
+    },
+    {
+      "topic": "NVDLC01DeanDialogueNVDLC01DeanTopic124",
+      "topic_text": "The Gala Event's tied into the casino's generators?",
+      "emotion": "Anger 10",
+      "response_text": "{Frowns, remembers player doesn't know this}Right, look - so, not everything about the Villa was the pinnacle of bright ideas.",
+      "index": "269"
+    },
+    {
+      "topic": "NVDLC01DeanDialogueNVDLC01DeanTopic127",
+      "topic_text": "What do you mean about the Sierra Madre broadcast?",
+      "emotion": "Neutral 50",
+      "response_text": "Well, Vera's beautiful voice doesn't run on casino power, exactly. Her broadcast is tied into the emergency broadcast signal for the Sierra Madre.",
+      "index": "272"
+    },
+    {
+      "topic": "NVDLC01DeanDialogueNVDLC01DeanTopic128",
+      "topic_text": "So... it's not an invitation, it's a call for help.",
+      "emotion": "Sad 20",
+      "response_text": "Yeah. The Sierra Madre's last song, one only a few people are ever going to hear. A little sad, but what can you do?",
+      "index": "275"
+    },
+    {
+      "topic": "NVDLC01DeanDialogueNVDLC01DeanTopic131",
+      "topic_text": "I'm not following you.",
+      "emotion": "Neutral 50",
+      "response_text": "Odd Man out... dead weight. Someone you need holding the toolbox, the nurse passing the scalpel, the chauffer driving you to the concert.",
+      "index": "276"
+    },
+    {
+      "topic": "NVDLC01DeanDialogueNVDLC01DeanTopic132",
+      "topic_text": "Wait, what Holograms? What are you talking about?",
+      "emotion": "Fear 10",
+      "response_text": "{Uneasy}Look... those ghosts are going to come out of the wings behind you in a second, the security types,{emph}not the \"friendly\" bald types.",
+      "index": "278"
+    },
+    {
+      "topic": "NVDLC01DeanDialogueNVDLC01DeanTopic134",
+      "topic_text": "So how do I get you out of there?",
+      "emotion": "Neutral 50",
+      "response_text": "Trust me - as soon as you can, run to the door to the{emph}left - use the key you got out of the music rag there, and camp out.",
+      "index": "280"
+    },
+    {
+      "topic": "NVDLC01DeanDialogueNVDLC01DeanTopic135",
+      "topic_text": "All right, I'll break to my right, head for the locked door.",
+      "emotion": "Neutral 50",
+      "response_text": "{DUPE}Good, go, and don't get yourself killed - do that, and we're both done.",
+      "index": "282"
+    },
+    {
+      "topic": "NVDLC01DeanDialogueNVDLC01DeanTopic136",
+      "topic_text": "I need a little more than that to go on if we're going to break out of here.",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] Uh... right. Uh... let's see... when you get the door open, there'll be an exit door dead ahead.{Emph}Don't take it.",
+      "index": "285"
+    },
+    {
+      "topic": "NVDLC01DeanDialogueNVDLC01DeanTopic137",
+      "topic_text": "This casino's security system is pissing me off.",
+      "emotion": "Fear 10",
+      "response_text": "{Slight nervous}You are preaching to the choir. Sinclair and his security... don't even get me started. Those Holograms...{Being slightly casual in his speech here, even though his life is in danger.}",
+      "index": "290"
+    },
+    {
+      "topic": "NVDLC01DeanDialogueNVDLC01DeanTopic138",
+      "topic_text": "Dean, the theater speakers are wired to a central sound system, right?",
+      "emotion": "Anger 10",
+      "response_text": "[SUCCEEDED]{Slight frustration - what's the player getting at?}Yeah... yeah, so what? We got bigger problems with the Holograms... no, no, wait, you're right.{Reverses his tone, realizes the player's thinking long term, which is smart.}",
+      "index": "291"
+    },
+    {
+      "topic": "NVDLC01DeanDialogueNVDLC01DeanTopic139",
+      "topic_text": "Calm down, think. Do you know specifically where?",
+      "emotion": "Neutral 50",
+      "response_text": "Uh... let's see. Um, once you break right, watch each turn in the corridor, one'll be on your right past my dressing room - and up.",
+      "index": "294"
+    },
+    {
+      "topic": "NVDLC01DeanDialogueNVDLC01DeanTopic141",
+      "topic_text": "Getting backstage is a temporary measure if I can't find the security terminal.",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED]{Thinking}Yeah... yeah, right. So... let's see... security's here because the show hasn't started. Guests aren't allowed in, so...",
+      "index": "297"
+    },
+    {
+      "topic": "NVDLC01DeanDialogueNVDLC01DeanTopic142",
+      "topic_text": "Good thing you mentioned that before I ran back there, \"partner.\"",
+      "emotion": "Anger 10",
+      "response_text": "Look, I'm in danger here, all right, not exactly thinking with a level head, so cut me some slack.{Beat}Please.{Genuinely sorry at the end, realizes player could leave him out to dry.}",
+      "index": "303"
+    },
+    {
+      "topic": "NVDLC01DeanDialogueNVDLC01DeanTopic143",
+      "topic_text": "That's the radios and speakers - what about a central sound system?",
+      "emotion": "Neutral 50",
+      "response_text": "The speakers are all controlled by a central console.{Thinking}It's the farthest from the only door out of here...",
+      "index": "304"
+    },
+    {
+      "topic": "NVDLC01DeanDialogueNVDLC01DeanTopic146",
+      "topic_text": "All right, makes sense. Where's the music?",
+      "emotion": "Neutral 50",
+      "response_text": "The Holotape should be where I left it... no, wait. It's... it's in Vera's dressing room, probably. May... may be a key to her room on my desk.",
+      "index": "307"
+    },
+    {
+      "topic": "NVDLC01DeanDialogueNVDLC01DeanTopic147",
+      "topic_text": "Wait - I need to head to the door to your left or my left?",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] What? Oh, my left - your right. So, yeah, run to the door on your right.{Beat}Heh, almost got you killed there.{To himself}Us killed there.",
+      "index": "310"
+    },
+    {
+      "topic": "NVDLC01DeanDialogueNVDLC01DeanTopic148",
+      "topic_text": "What are you doing with a key to her room?",
+      "emotion": "Disgust 10",
+      "response_text": "Do I have to spell it out? Come on. Time's wasting, and those Holograms are going to be on us any second.",
+      "index": "312"
+    },
+    {
+      "topic": "NVDLC01DeanDialogueNVDLC01DeanTopic149",
+      "topic_text": "The key is a song by Vera Keyes.",
+      "emotion": "Surprise 20",
+      "response_text": "What? Are you sure?{Beat, realizes}That song... that stupid song of hers... no, that makes perfect sense.",
+      "index": "313"
+    },
+    {
+      "topic": "NVDLC01DeanDialogueNVDLC01DeanTopic150",
+      "topic_text": "Fine with me. Come on, let's settle this.",
+      "emotion": "Happy 10",
+      "response_text": "Oh, I'm not going to fight you - I'm going to let{emph}security show you out. Didn't see anyone come in? Well... they'll be here soon.",
+      "index": "315"
+    },
+    {
+      "topic": "NVDLC01DeanDialogueNVDLC01DeanTopic152",
+      "topic_text": "The song still exists in fragments in the Sierra Madre archives on each floor.",
+      "emotion": "Neutral 50",
+      "response_text": "Guess Vera echoes down through the ages, then. Sierra Madre hasn't completely forgotten her.",
+      "index": "316"
+    },
+    {
+      "topic": "NVDLC01DeanDialogueNVDLC01DeanTopic153",
+      "topic_text": "And the collars? You sound awfully eager to kill someone whose life is tied to yours.",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] No... no... the collars... I know what happened now. Sure, mine activated... but it feels different, the electronic tapdance inside.",
+      "index": "318"
+    },
+    {
+      "topic": "NVDLC01DeanDialogueNVDLC01DeanTopic154",
+      "topic_text": "<Lie> I'm not sure how to do it yet. You said you had a recording outside?",
+      "emotion": "Neutral 50",
+      "response_text": "Well, yeah in the Villa.{More to himself}But I have one inside, too.",
+      "index": "322"
+    },
+    {
+      "topic": "NVDLC01DeanDialogueNVDLC01DeanTopic155",
+      "topic_text": "The one who put these collars on us wanted me to deal with everyone first.",
+      "emotion": "Disgust 10",
+      "response_text": "Figures... wish he'd show himself, although I'm betting he's not doing that until we've cracked the vault.",
+      "index": "324"
+    },
+    {
+      "topic": "NVDLC01DeanDialogueNVDLC01DeanTopic156",
+      "topic_text": "Wait - you said you have one inside? Where's the song recording you have?",
+      "emotion": "Neutral 50",
+      "response_text": "It's safe. I hope. Right now, let's focus on getting everyone{emph}else to safety, all right? Everybody else all right?",
+      "index": "327"
+    },
+    {
+      "topic": "NVDLC01DeanDialogueNVDLC01DeanTopic157",
+      "topic_text": "Christine is alive. Dog... well...",
+      "emotion": "Neutral 50",
+      "response_text": "Forget that walking stomach, not interested in being his lunch... just glad the girl's all right. Where is she? Is she here?",
+      "index": "328"
+    },
+    {
+      "topic": "NVDLC01DeanDialogueNVDLC01DeanTopic158",
+      "topic_text": "Christine is dead. Dog... well...",
+      "emotion": "Anger 20",
+      "response_text": "{Frustrated}Dead? For the love of... this whole heist was a gamble anyway. So much for back-up plans.",
+      "index": "331"
+    },
+    {
+      "topic": "NVDLC01DeanDialogueNVDLC01DeanTopic159",
+      "topic_text": "<Lie> If by \"recording inside\" you meant Christine, she's dead.",
+      "emotion": "Anger 20",
+      "response_text": "{DUPE: Frustrated}Dead? For the love of... Chopping up her voice box was a gamble anyway. So much for back-up plans.",
+      "index": "332"
+    },
+    {
+      "topic": "NVDLC01DeanDialogueNVDLC01DeanTopic160",
+      "topic_text": "If by \"recording inside,\" you meant Christine, she's dead.",
+      "emotion": "Neutral 50",
+      "response_text": "Figured that out, huh? Clever.",
+      "index": "333"
+    },
+    {
+      "topic": "NVDLC01DeanDialogueNVDLC01DeanTopic161",
+      "topic_text": "The one who put these collars on us wanted me to deal with everyone first.",
+      "emotion": "Neutral 50",
+      "response_text": "Figures... wish he'd show himself, although I'm betting he's not doing that until we've cracked the vault.",
+      "index": "334"
+    },
+    {
+      "topic": "NVDLC01DeanDialogueNVDLC01DeanTopic162",
+      "topic_text": "No - believe it or not, I wasn't going to leave you to die.",
+      "emotion": "Neutral 50",
+      "response_text": "You know... people can still surprise me. All right, I believe you. You got spine.{Raises an eyebrow}Guess the bombs left a little human goodwill behind.",
+      "index": "337"
+    },
+    {
+      "topic": "NVDLC01DeanDialogueNVDLC01DeanTopic163",
+      "topic_text": "If it means I can get out of this alive, yes, that's why I'm here.",
+      "emotion": "Neutral 50",
+      "response_text": "At least you're honest, can't blame you. I'd have done the same if there was a trigger to my head... or a collar on my neck.",
+      "index": "338"
+    },
+    {
+      "topic": "NVDLC01DeanDialogueNVDLC01DeanTopic164",
+      "topic_text": "Yes, that's the next step. You going to be all right?",
+      "emotion": "Neutral 50",
+      "response_text": "{Brushoff, needs player to leave}I'll be fine, don't worry about me. Go on ahead, I'm going to try and unwind.",
+      "index": "339"
+    },
+    {
+      "topic": "NVDLC01DeanDialogueNVDLC01DeanTopic165",
+      "topic_text": "Now that I've got the signal established to this floor, yes.",
+      "emotion": "Neutral 50",
+      "response_text": "All right - well, thanks for bailing me out.",
+      "index": "340"
+    },
+    {
+      "topic": "NVDLC01DeanDialogueNVDLC01DeanTopic167",
+      "topic_text": "<Do Not Translate: Additional Storage Nodes>",
+      "emotion": "Neutral 50",
+      "response_text": "So - what, you're heading to the main terminal now that you've got this floor unlocked?",
+      "index": "341"
+    },
+    {
+      "topic": "NVDLC01DeanDialogueNVDLC01DeanTopic168",
+      "topic_text": "Wait, you were trying to smuggle one inside? Where is it?",
+      "emotion": "Neutral 50",
+      "response_text": "It's safe. I hope. Right now, let's focus on getting everyone{emph}else to safety, all right? Everybody else all right?",
+      "index": "345"
+    },
+    {
+      "topic": "NVDLC01DeanDialogueNVDLC01DeanTopic169",
+      "topic_text": "If you were using Christine's voice box to smuggle Vera's voice in, she's dead.",
+      "emotion": "Neutral 50",
+      "response_text": "And here I thought I was being clever.{To himself}Teach me to hold my cards a little closer to the chest... whole heist was a gamble anyway.",
+      "index": "346"
+    },
+    {
+      "topic": "NVDLC01DeanDialogueNVDLC01DeanTopic170",
+      "topic_text": "<Lie> If Christine's throat surgery was your plan, too late, she's dead.",
+      "emotion": "Surprise 50",
+      "response_text": "[SUCCEEDED] Dead? After all I went through... after all that hauling her body through the streets?",
+      "index": "348"
+    },
+    {
+      "topic": "NVDLC01DeanDialogueNVDLC01DeanTopic171",
+      "topic_text": "Christine is alive. Dog... well...",
+      "emotion": "Neutral 50",
+      "response_text": "Forget that walking stomach, not interested in being his lunch... just glad the girl's all right. Where is she? Is she here?",
+      "index": "352"
+    },
+    {
+      "topic": "NVDLC01DeanDialogueNVDLC01DeanTopic172",
+      "topic_text": "Christine is dead. Dog... well...",
+      "emotion": "Disgust 20",
+      "response_text": "{Frustrated}Dead? For the love of... chopping up her voice box was a gamble anyway. So much for back-up plans.",
+      "index": "355"
+    },
+    {
+      "topic": "NVDLC01DeanDialogueNVDLC01DeanTopic173",
+      "topic_text": "Still trying to find out. Not sure.",
+      "emotion": "Neutral 50",
+      "response_text": "All right... even if they all end up dead, though, you say there's a way to recover the song from the Sierra Madre archives.",
+      "index": "357"
+    },
+    {
+      "topic": "NVDLC01DeanDialogueNVDLC01DeanTopic175",
+      "topic_text": "I found this Holotape in your safe.",
+      "emotion": "Anger 10",
+      "response_text": "Yeah? Little bit of two-reel memories... we're here to steal from the Sierra Madre, not from each other.{Player found a blackmail tape Dean used for heist.}",
+      "index": "359"
+    },
+    {
+      "topic": "NVDLC01DeanDialogueNVDLC01DeanTopic176",
+      "topic_text": "Were you blackmailing Vera Keyes to break into the Sierra Madre?",
+      "emotion": "Neutral 50",
+      "response_text": "Blackmail is such a strong word. I asked her, she said yes, then... she started to get cold feet.",
+      "index": "360"
+    },
+    {
+      "topic": "NVDLC01DeanDialogueNVDLC01DeanTopic177",
+      "topic_text": "What did you want her to do?",
+      "emotion": "Neutral 50",
+      "response_text": "Sinclair built this whole town to accommodate her. Same with the casino's voice lock. He wanted to make sure she had access to everything.",
+      "index": "362"
+    },
+    {
+      "topic": "NVDLC01DeanDialogueNVDLC01DeanTopic178",
+      "topic_text": "What were you blackmailing her with?",
+      "emotion": "Neutral 50",
+      "response_text": "What{emph}wasn't I blackmailing her with.{Flippant}Chem use, indiscretions, more chem use... the usual Hollywood tune.",
+      "index": "364"
+    },
+    {
+      "topic": "NVDLC01DeanDialogueNVDLC01DeanTopic180",
+      "topic_text": "Really? What makes you think you can slip out?",
+      "emotion": "Happy 10",
+      "response_text": "{Smug, dismissive}Way I figure it, you'll try and run for the exit, and only I know where the key is - and where the safest place in the whole theater is: backstage.",
+      "index": "368"
+    },
+    {
+      "topic": "NVDLC01DeanDialogueNVDLC01DeanTopic181",
+      "topic_text": "I guess I should have figured you'd have an escape plan. Clever.",
+      "emotion": "Happy 10",
+      "response_text": "{Smug}I'm not a betting man, I've come too far to leave it to chance.",
+      "index": "370"
+    },
+    {
+      "topic": "NVDLC01DeanDialogueNVDLC01DeanTopic184",
+      "topic_text": "So as long as I make sure I don't run for the exit...",
+      "emotion": "Fear 10",
+      "response_text": "{Uneasy}What... what now? Try and come back{emph}here?",
+      "index": "371"
+    },
+    {
+      "topic": "NVDLC01DeanDialogueNVDLC01DeanTopic186",
+      "topic_text": "Really? You're a terrible liar. See you soon, Dean.",
+      "emotion": "Anger 20",
+      "response_text": "{Frustrated}Of all the... where the hell are those stupid Holograms already?{Beat}Even if you get back here, you won't live long, trust me.",
+      "index": "373"
+    },
+    {
+      "topic": "NVDLC01DeanDialogueNVDLC01DeanTopic190",
+      "topic_text": "If I clear out all the Ghost People in the area, will you change your mind?",
+      "emotion": "Neutral 50",
+      "response_text": "No, you want to know why? Because there's more beneath the streets, in the buildings, and oh - everywhere else.",
+      "index": "374"
+    },
+    {
+      "topic": "NVDLC01DeanDialogueNVDLC01DeanTopic191",
+      "topic_text": "All right. What's it going to take?",
+      "emotion": "Disgust 20",
+      "response_text": "Take? It's not going to take anything because you couldn't{emph}offer me anything to stay here.",
+      "index": "376"
+    },
+    {
+      "topic": "NVDLC01DeanDialogueNVDLC01DeanTopic192",
+      "topic_text": "The Villa has Holograms everywhere. If I switch on some to cover the area...",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] Well... yeah. If the Hologram systems still work, that'd do the trick.",
+      "index": "378"
+    },
+    {
+      "topic": "NVDLC01DeanDialogueNVDLC01DeanTopic193",
+      "topic_text": "I could just throw you off the roof. What about that?",
+      "emotion": "Fear 10",
+      "response_text": "You're full of it - you kill me, we both die. You wouldn't dare.",
+      "index": "382"
+    },
+    {
+      "topic": "NVDLC01DeanDialogueNVDLC01DeanTopic194",
+      "topic_text": "Let me hunt around, maybe there's something I can do to protect the area.",
+      "emotion": "Anger 10",
+      "response_text": "{Frowns}You can look all you want... I still feel safer with a pair of Hologram escorts to make it through the area.",
+      "index": "384"
+    },
+    {
+      "topic": "NVDLC01DeanDialogueNVDLC01DeanTopic195",
+      "topic_text": "I switched on two Holograms to cover the courtyard, those should protect you.",
+      "emotion": "Neutral 50",
+      "response_text": "{Thinking}You powered the Holograms up?{Beat}Well... yeah, that's pretty good protection.{To himself}Sure worked at the fountain, Vera kept the Ghost People away.",
+      "index": "385"
+    },
+    {
+      "topic": "NVDLC01DeanDialogueNVDLC01DeanTopic196",
+      "topic_text": "Okay, let me see if I can reactivate the Holograms.",
+      "emotion": "Neutral 50",
+      "response_text": "If I remember correctly, there should be two Holograms you can switch on in the area... just don't remember how.",
+      "index": "387"
+    },
+    {
+      "topic": "NVDLC01DeanDialogueNVDLC01DeanTopic197",
+      "topic_text": "I don't need to kill you, you know.",
+      "emotion": "Surprise 10",
+      "response_text": "{Slight surprise, confused}What? What are you talking about?",
+      "index": "389"
+    },
+    {
+      "topic": "NVDLC01DeanDialogueNVDLC01DeanTopic199",
+      "topic_text": "{THEATER: 1st Time, Hates player}How did you get from the Gala Event to here?",
+      "emotion": "Anger 20",
+      "response_text": "{Sounds like dupe of another line, isn't, this one's angrier, smug}Me? I was halfway off the rooftop, through the service tunnel and bee-lining for the gate before the light show started...",
+      "index": "390"
+    },
+    {
+      "topic": "NVDLC01DeanDialogueNVDLC01DeanTopic200",
+      "topic_text": "I could break both your legs, leave you here on the roof.",
+      "emotion": "Disgust 10",
+      "response_text": "{Wary}You wouldn't. You need me to strike up the sparking chords there. Breaking my legs isn't any way to get{emph}me to dance.",
+      "index": "395"
+    },
+    {
+      "topic": "NVDLC01DeanDialogueNVDLC01DeanTopic202",
+      "topic_text": "No, it only means I wouldn't come back for you. Ever.",
+      "emotion": "Anger 10",
+      "response_text": "You wouldn't...{frowns}no, yeah, you would. I would. If I thought you screaming wouldn't attract more of the locals.",
+      "index": "396"
+    },
+    {
+      "topic": "NVDLC01DeanDialogueNVDLC01DeanTopic206",
+      "topic_text": "If you don't do this, I'll go shut off the Holograms now.",
+      "emotion": "Surprise 20",
+      "response_text": "What? You wouldn't. I mean... no, wait, you would. You don't bluff, ever since you first showed up in the Villa and we chatted.",
+      "index": "398"
+    },
+    {
+      "topic": "NVDLC01DeanDialogueNVDLC01DeanTopic207",
+      "topic_text": "Dean... a man with cold feet isn't someone I'd share a bed with.",
+      "emotion": "Disgust 10",
+      "response_text": "Wait, hold on. I didn't say I was scared.{Snorts}Heh, heh. Cold feet? Don't be ridiculous. I've played to worse crowds than this, I can hold the fort here.",
+      "index": "402"
+    },
+    {
+      "topic": "NVDLC01DeanDialogueNVDLC01DeanTopic208",
+      "topic_text": "I'm not about to trade your life for mine, got it? Remember the collars.",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED]{DUPE: Reluctant, convincing}Well... yeah. You got a point.",
+      "index": "403"
+    },
+    {
+      "topic": "NVDLC01DeanDialogueNVDLC01DeanTopic209",
+      "topic_text": "Don't trust me? Then trust our collars. I die, you die. Got it?",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED]{DUPE: Reluctant, convincing}Well... yeah. You got a point.",
+      "index": "405"
+    },
+    {
+      "topic": "NVDLC01DeanDialogueNVDLC01DeanTopic210",
+      "topic_text": "Vera's stayed powered up since the bombs fell... those Holograms will, too.",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED]{Reluctant, convincing}Well... yeah. You got a point.",
+      "index": "407"
+    },
+    {
+      "topic": "NVDLC01DeanDialogueNVDLC01DeanTopic211",
+      "topic_text": "You must know me enough by now to know I'm not going to put you in danger.",
+      "emotion": "Anger 10",
+      "response_text": "Oh, right, after all the \"we'll both blow up if you don't do as I say\" talk we first had. Not put me in danger? Right.",
+      "index": "409"
+    },
+    {
+      "topic": "NVDLC01DeanDialogueNVDLC01DeanTopic212",
+      "topic_text": "There's a Hologram guarding the courtyard below, you're covered.",
+      "emotion": "Fear 10",
+      "response_text": "Unless he's got a friend, no dice. Nobody relies on a single escape route unless they want to get caught.",
+      "index": "412"
+    },
+    {
+      "topic": "NVDLC01DeanDialogueShortcut",
+      "topic_text": "NVDLC01DeanDialogueShortcut",
+      "emotion": "Neutral 50",
+      "response_text": "Don't have to take the long way back - there's a shortcut across the way, you see.{Dean has just joined the party, they're striking up a conversation.}",
+      "index": "414"
+    },
+    {
+      "topic": "NVDLC01DeanDialogueSitInvite",
+      "topic_text": "NVDLC01DeanDialogueSitInvite",
+      "emotion": "Neutral 50",
+      "response_text": "Have a seat - came all this way, least I can do is let you rest your feet for a second.",
+      "index": "416"
+    },
+    {
+      "topic": "NVDLC01DeanHolotapeBlackmail",
+      "topic_text": "NVDLC01DeanHolotapeBlackmail",
+      "emotion": "Happy 50",
+      "response_text": "{Dean walking in on Vera as she's getting ready}Pretty as a picture.{<AUDIO: Holotape Filter for whole topic. No ghoul filter for Dean.>A recording of Dean walking into Vera's dressing room, predatory, blackmail.}",
+      "index": "421"
+    },
+    {
+      "topic": "NVDLC01DeanTheaterOpenConvoPlayerHatedBark",
+      "topic_text": "NVDLC01DeanTheaterOpenConvoPlayerHatedBark",
+      "emotion": "Anger 20",
+      "response_text": "{Gloating a bit}Hey... guess who finally showed.{Malicious}You weren't on the guest list. Guess I'll need to call security, have them show you the door.{Dean warns PC they made a deadly mistake coming to get him at Theater. Invites player to become acquainted with (Holograms).}",
+      "index": "432"
+    },
+    {
+      "topic": "NVDLC01DeanTheaterOpenConvoPlayerLikedBark",
+      "topic_text": "NVDLC01DeanTheaterOpenConvoPlayerLikedBark",
+      "emotion": "Fear 10",
+      "response_text": "{Relieved to see a familiar face}You... partner, are you a sight for sore eyes. Unfriendly crowd tonight, in a lethal way - if you could calm the house down, I'd be grateful.{Dean's anxious, hemmed in by lethal holograms set to kill, glad to see player, hoping the PC can bail him out.}",
+      "index": "433"
+    },
+    {
+      "topic": "NVDLC01DeanTheaterPlayerHatedBarkTopic01",
+      "topic_text": "NVDLC01DeanTheaterPlayerHatedBarkTopic01",
+      "emotion": "Anger 10",
+      "response_text": "{Slightly irritated, still superior}Now, now... that's{emph}my room. You want your own dressing room, you have to work for it.{Dean admonishes, cynically, player when he/she goes into Dean's old dressing room in the backstage of the Theater}",
+      "index": "434"
+    },
+    {
+      "topic": "NVDLC01DeanTheaterPlayerHatedBarkTopic02",
+      "topic_text": "NVDLC01DeanTheaterPlayerHatedBarkTopic02",
+      "emotion": "Surprise 20",
+      "response_text": "{Terminal blows up}What the blazes... piece of junk!{Beat, cold, gets it}You rigged that terminal, didn't you. Didn't want security showing you out, eh? We'll see.{Dean curses, insulting the old Stage Manager's computer terminal (in the closed area of the backstage), after it blows up when he tried to use it.}",
+      "index": "435"
+    },
+    {
+      "topic": "NVDLC01DeanTheaterPlayerHatedBarkTopic03",
+      "topic_text": "NVDLC01DeanTheaterPlayerHatedBarkTopic03",
+      "emotion": "Anger 20",
+      "response_text": "{Cold}So... can't leave well enough alone, have to enter Vera's room. Some things are better left in the past, \"partner.\"{Player enters another dressing room backstage of a long-dead starlet Dean used to know.}",
+      "index": "436"
+    },
+    {
+      "topic": "NVDLC01DeanTheaterPlayerHatedBarkTopic04",
+      "topic_text": "NVDLC01DeanTheaterPlayerHatedBarkTopic04",
+      "emotion": "Fear 5",
+      "response_text": "{Slightly unnerved, player's about to break his last line of defense}Don't do it. Leave that projector alone - I'm warning you.{Dean threatens PC to stop triggering the event that will disable his last line of defense against the player.}",
+      "index": "437"
+    },
+    {
+      "topic": "NVDLC01DeanTheaterPlayerHatedBarkTopic05",
+      "topic_text": "NVDLC01DeanTheaterPlayerHatedBarkTopic05",
+      "emotion": "Anger 10",
+      "response_text": "{Slow, then challenging, bravado}So... you think you have what it takes to beat{emph}me, on{emph}my stage, in{emph}my town? Come on down, we'll see.{Dean challenges, in an act of desperation, the player to come down and hunt him.}",
+      "index": "438"
+    },
+    {
+      "topic": "NVDLC01DeanTheaterPlayerLikedBarkTopic01",
+      "topic_text": "NVDLC01DeanTheaterPlayerLikedBarkTopic01",
+      "emotion": "Happy 10",
+      "response_text": "{Happy, excusing, then defensive}Hey, you found my old room. I mean, it's a little small... and hey, watch the hands in there, I remember where I left{emph}everything, got it?",
+      "index": "439"
+    },
+    {
+      "topic": "NVDLC01DeanTheaterPlayerLikedBarkTopic02",
+      "topic_text": "NVDLC01DeanTheaterPlayerLikedBarkTopic02",
+      "emotion": "Surprise 10",
+      "response_text": "{Working on a computer, trying to shut it down}Hnh. Maybe I can shut down these ghosts using the Stage Manager's old termin...{blows up}dammit!{Beat, frowns}Well, so much for that idea.{Dean curses, insulting old Stage Manager's computer (backstage), after blows up when tried to disable Holograms. PC's only chance to escape alive.}",
+      "index": "440"
+    },
+    {
+      "topic": "NVDLC01DeanTheaterPlayerLikedBarkTopic03",
+      "topic_text": "NVDLC01DeanTheaterPlayerLikedBarkTopic03",
+      "emotion": "Happy 10",
+      "response_text": "{Encouraged}Hey, you're making real progress, good.{Realizes the player's close to uncovering dirty laundry, so masks it behind \"show some respect\"}Uh, look that's... Vera's room, so careful what you touch in there, be respectful.{Dean excited the player is making headway, even if hesitant to share his old life's links when player discovers Vera's dressing room backstage.}",
+      "index": "441"
+    },
+    {
+      "topic": "NVDLC01DeanTheaterPlayerLikedBarkTopic04",
+      "topic_text": "NVDLC01DeanTheaterPlayerLikedBarkTopic04",
+      "emotion": "Fear 10",
+      "response_text": "{Urgent}All right, now calm the audience down and let's go home.{Beat, under his breath}And when my part plays, no cracking jokes - that was the hairstyle back then, all right?{Dean urges the player to hurry up in disabling the Theater's Hologram security, cracks joke about seeing old self perform in holograms.}",
+      "index": "442"
+    },
+    {
+      "topic": "NVDLC01DeanTheaterPlayerLikedBarkTopic05",
+      "topic_text": "NVDLC01DeanTheaterPlayerLikedBarkTopic05",
+      "emotion": "Happy 10",
+      "response_text": "Oh, man... nice job. Good thing{emph}I was distracting them while you flicked them off.{Puffing up}We're a good team - I run the show while you run the box office.{Dean's jubilant when the Holograms vanish. He congratulates the player, although trying to make himself appear as having been stronger than he was i}",
+      "index": "443"
+    },
+    {
+      "topic": "NVDLC01DeanTheaterRandomPleadTopic01",
+      "topic_text": "NVDLC01DeanTheaterRandomPleadTopic01",
+      "emotion": "Fear 10",
+      "response_text": "Hurry, would you? Get me out of this mess.{Beat}Got to sue my agent for this.{Dean, noticeably scared, urges the player to get him out of the Hologram mess.}",
+      "index": "444"
+    },
+    {
+      "topic": "NVDLC01DeanTheaterRandomPleadTopic02",
+      "topic_text": "NVDLC01DeanTheaterRandomPleadTopic02",
+      "emotion": "Fear 10",
+      "response_text": "Get me out of here, they've got me trapped!{Dean, panicking, pleads to the player to save his life.}",
+      "index": "445"
+    },
+    {
+      "topic": "NVDLC01DeanTheaterRandomPleadTopic03",
+      "topic_text": "NVDLC01DeanTheaterRandomPleadTopic03",
+      "emotion": "Fear 10",
+      "response_text": "{To himself}Hold it together, Dean, you've been in worse jams. Like Madrid.{Reflecting}Christ - Madrid.{Tries to calm himself down in the middle of being pinned down.}",
+      "index": "446"
+    },
+    {
+      "topic": "NVDLC01DeanTheaterRandomTauntTopic01",
+      "topic_text": "NVDLC01DeanTheaterRandomTauntTopic01",
+      "emotion": "Disgust 10",
+      "response_text": "{Taunt}How long you think you can keep dancing around out there? Song's going to end soon, you along with it.{Dean, a flicker of doubt in his voice, curses at the player for not having died yet.}",
+      "index": "447"
+    },
+    {
+      "topic": "NVDLC01DeanTheaterRandomTauntTopic02",
+      "topic_text": "NVDLC01DeanTheaterRandomTauntTopic02",
+      "emotion": "Disgust 20",
+      "response_text": "{Taunt}You won't get out of here alive. Even if you reach me, you don't have the guts to fight.{Dean, irritated that the player is still alive, taunts his/her resolve.}",
+      "index": "448"
+    },
+    {
+      "topic": "NVDLC01DeanTheaterRandomTauntTopic03",
+      "topic_text": "NVDLC01DeanTheaterRandomTauntTopic03",
+      "emotion": "Disgust 20",
+      "response_text": "I'm calling the tune here - this is my theater, my show, I've waited my life to get back here. You? Not even worth the time it'd take to kill you.{Dean, pretends to have the upper hand against the player, defying him/her to hurry up and die.}",
+      "index": "449"
+    },
+    {
+      "topic": "NVDLC01DeanTheaterToSelfOverTopic01",
+      "topic_text": "NVDLC01DeanTheaterToSelfOverTopic01",
+      "emotion": "Neutral 50",
+      "response_text": "I am out of here... well, not to the Villa, just out of the damn theater first chance I get.",
+      "index": "450"
+    },
+    {
+      "topic": "NVDLC01DeanTheaterToSelfOverTopic02",
+      "topic_text": "NVDLC01DeanTheaterToSelfOverTopic02",
+      "emotion": "Neutral 50",
+      "response_text": "Got to say this for Sinclair, he sure knew how to keep things locked down, the tight-assed prick.",
+      "index": "451"
+    },
+    {
+      "topic": "NVDLC01DeanTheaterToSelfOverTopic03",
+      "topic_text": "NVDLC01DeanTheaterToSelfOverTopic03",
+      "emotion": "Disgust 10",
+      "response_text": "{Under his breath, after battle in the theater}Not going to be performing here again, that's for sure.",
+      "index": "452"
+    },
+    {
+      "topic": "NVDLC01DeanTheaterToSelfPlayerHatedTopic01",
+      "topic_text": "NVDLC01DeanTheaterToSelfPlayerHatedTopic01",
+      "emotion": "Anger 20",
+      "response_text": "{Looking around}Hnh. Theater's almost the same as it was.",
+      "index": "453"
+    },
+    {
+      "topic": "NVDLC01DeanTheaterToSelfPlayerHatedTopic02",
+      "topic_text": "NVDLC01DeanTheaterToSelfPlayerHatedTopic02",
+      "emotion": "Anger 20",
+      "response_text": "{Looking around}This place... hasn't changed at all.",
+      "index": "454"
+    },
+    {
+      "topic": "NVDLC01DeanTheaterToSelfPlayerHatedTopic03",
+      "topic_text": "NVDLC01DeanTheaterToSelfPlayerHatedTopic03",
+      "emotion": "Anger 50",
+      "response_text": "Wonder what happened to the suckers.{Frowns}Might have gotten taken away, like I did?",
+      "index": "455"
+    },
+    {
+      "topic": "NVDLC01DeanTheaterToSelfPlayerHatedTopic04",
+      "topic_text": "NVDLC01DeanTheaterToSelfPlayerHatedTopic04",
+      "emotion": "Fear 10",
+      "response_text": "That audience... better lay low, get a feel for the crowd.",
+      "index": "456"
+    },
+    {
+      "topic": "NVDLC01DeanTheaterToSelfPlayerHatedTopic05",
+      "topic_text": "NVDLC01DeanTheaterToSelfPlayerHatedTopic05",
+      "emotion": "Neutral 50",
+      "response_text": "Good thing, someone walks in here, they're toast.",
+      "index": "457"
+    },
+    {
+      "topic": "NVDLC01DeanTheaterToSelfPlayerLikedTopic01",
+      "topic_text": "NVDLC01DeanTheaterToSelfPlayerLikedTopic01",
+      "emotion": "Disgust 50",
+      "response_text": "{Frustrated}First time on stage in a hundred years, and it has to be this?",
+      "index": "458"
+    },
+    {
+      "topic": "NVDLC01DeanTheaterToSelfPlayerLikedTopic02",
+      "topic_text": "NVDLC01DeanTheaterToSelfPlayerLikedTopic02",
+      "emotion": "Neutral 50",
+      "response_text": "{Looking around}Hnh. Theater's almost the same as it was.",
+      "index": "459"
+    },
+    {
+      "topic": "NVDLC01DeanTheaterToSelfPlayerLikedTopic03",
+      "topic_text": "NVDLC01DeanTheaterToSelfPlayerLikedTopic03",
+      "emotion": "Surprise 50",
+      "response_text": "Where the hell did everyone else go?",
+      "index": "460"
+    },
+    {
+      "topic": "NVDLC01DeanTheaterToSelfPlayerLikedTopic04",
+      "topic_text": "NVDLC01DeanTheaterToSelfPlayerLikedTopic04",
+      "emotion": "Fear 50",
+      "response_text": "Need some help here... and that audience is{emph}not looking friendly.",
+      "index": "461"
+    },
+    {
+      "topic": "NVDLC01DeanTheaterToSelfPlayerLikedTopic05",
+      "topic_text": "NVDLC01DeanTheaterToSelfPlayerLikedTopic05",
+      "emotion": "Neutral 50",
+      "response_text": "Hope my partner fared better than I did... better not have left me high and dry, get-even's not going to be pretty.",
+      "index": "462"
+    },
+    {
+      "topic": "NVDLC01DeanToChristineTopic01",
+      "topic_text": "NVDLC01DeanToChristineTopic01",
+      "emotion": "Happy 50",
+      "response_text": "So... what's your story, beautiful?",
+      "index": "463"
+    },
+    {
+      "topic": "NVDLC01DeanToChristineTopic02",
+      "topic_text": "NVDLC01DeanToChristineTopic02",
+      "emotion": "Fear 10",
+      "response_text": "{Gently bringing it up, worried she remembers him}Eh... those scars? What happened, somebody... something carve you up, or...?",
+      "index": "466"
+    },
+    {
+      "topic": "NVDLC01DeanToChristineTopic03",
+      "topic_text": "NVDLC01DeanToChristineTopic03",
+      "emotion": "Neutral 50",
+      "response_text": "Look, you obviously{emph}hear good - even if you aren't much of a talker.",
+      "index": "468"
+    },
+    {
+      "topic": "NVDLC01DeanToDogTopic01",
+      "topic_text": "NVDLC01DeanToDogTopic01",
+      "emotion": "Surprise 20",
+      "response_text": "Where the hell did you get this one. \"Dog?\" What, so you don't forget your name?",
+      "index": "472"
+    },
+    {
+      "topic": "NVDLC01DeanToDogTopic02",
+      "topic_text": "NVDLC01DeanToDogTopic02",
+      "emotion": "Anger 50",
+      "response_text": "Why are you so carved up -{frowns, a little incredulous}that a{emph}bear trap on your arm?",
+      "index": "475"
+    },
+    {
+      "topic": "NVDLC01DeanToDogTopic03",
+      "topic_text": "NVDLC01DeanToDogTopic03",
+      "emotion": "Anger 50",
+      "response_text": "{Getting angry}Stop looking at me, you idiot. I can hear your stomach growling from here, I don't like it.",
+      "index": "478"
+    },
+    {
+      "topic": "NVDLC01DeanVaultHelpTopic01",
+      "topic_text": "NVDLC01DeanVaultHelpTopic01",
+      "emotion": "Surprise 10",
+      "response_text": "{Uncertain of controls}Is... is this thing on? You hear me down there?{Beat, studying dials}Trying to help you out here... disable the speakers, play a little music...{<AUDIO: Dean speaks through player's radio-collar.><Dean tells the player that he's trying to disable the Vault's security speakers.>}",
+      "index": "481"
+    },
+    {
+      "topic": "NVDLC01DeanVaultHelpTopic02",
+      "topic_text": "NVDLC01DeanVaultHelpTopic02",
+      "emotion": "Happy 10",
+      "response_text": "{snaps fingers as music kicks in, ohhh yeah}...and that's more like it, got a beat you can swing to.{Beat}And they won't set off your collar any more -{lower, tougher}just hit that guy where it hurts.{<AUDIO: Radio collar. Dean succeeds in disabling the Vault's security speakers.>}",
+      "index": "483"
+    },
+    {
+      "topic": "NVDLC01ETDeanBellTowerBark",
+      "topic_text": "NVDLC01ETDeanBellTowerBark",
+      "emotion": "Neutral 50",
+      "response_text": "I'm not one for church, but there's a bell tower to the north that has a nice view of the Sierra Madre.{To himself, remembering the Cloud}Well, did, anyway.{<Dean tells the player that he's seen a bell tower to the north that should have an excellent view of the casino>}",
+      "index": "484"
+    },
+    {
+      "topic": "NVDLC01ETDeanGasBark",
+      "topic_text": "NVDLC01ETDeanGasBark",
+      "emotion": "Neutral 50",
+      "response_text": "{Sniffing air}You smell gas? I smell gas.{Beat}Might be a valve nearby, we can use it to torch any locals that come near us.{<Dean smells gas, wonders if there is a useful gas valve nearby>}",
+      "index": "485"
+    },
+    {
+      "topic": "NVDLC01ETDeanHouseBark",
+      "topic_text": "NVDLC01ETDeanHouseBark",
+      "emotion": "Disgust 10",
+      "response_text": "Surprised these homes weren't robbed blind, folks leaving the key out like that.{Beat, grumbles}If only the Sierra Madre'd done the same.{<Snarky comment about the house key being left outside of the locked door>}",
+      "index": "486"
+    },
+    {
+      "topic": "NVDLC01ETDeanSierraMadre",
+      "topic_text": "NVDLC01ETDeanSierraMadre",
+      "emotion": "Neutral 50",
+      "response_text": "{Whistles softly, appreciating}Now,{emph}there's a view.{To casino}Hello, beautiful.{<Stepping out onto the roof with the view of the Sierra Madre, Dean makes a comment about the view>}",
+      "index": "487"
+    },
+    {
+      "topic": "NVDLC01EndingDean",
+      "topic_text": "NVDLC01EndingDean",
+      "emotion": "Neutral 50",
+      "response_text": "{Dean Dead: Narration, a little wistful at the memory}Dean Domino, entertainer, singer... thief... had his last show on the Sierra Madre stage.{Dean is dead, narrating what happened to him at the end of the game when the end credits play.}",
+      "index": "488"
+    },
+    {
+      "topic": "NVDLC01GalaEventActivate",
+      "topic_text": "NVDLC01GalaEventActivate",
+      "emotion": "Disgust 10",
+      "response_text": "{Not happy, but sees an opportunity}What are you waiting for? Rubbing it in?{Slight disgust/eager}Strike up the band already.{AUDIO: From a speaker.}",
+      "index": "500"
+    },
+    {
+      "topic": "NVDLC01GodToDeanTopic01",
+      "topic_text": "NVDLC01GodToDeanTopic01",
+      "emotion": "Neutral 50",
+      "response_text": "I used to know a ventriloquist with more skill than you. At least he had the sense to know his own name, without carving it into his chest.",
+      "index": "504"
+    },
+    {
+      "topic": "NVDLC01GodToDeanTopic02",
+      "topic_text": "NVDLC01GodToDeanTopic02",
+      "emotion": "Neutral 50",
+      "response_text": "Sierra Madre's mine, my heart's right where it belongs.",
+      "index": "506"
+    },
+    {
+      "topic": "NVDLC01WTDeanEnterBark",
+      "topic_text": "NVDLC01WTDeanEnterBark",
+      "emotion": "Fear 10",
+      "response_text": "{Quiet, slightly nervous}Let's head through the hole in the wall there - if we go backstage, we avoid the locals.{<The player enters west town for the first time and Dean suggest the player head through the hole in the wall to avoid the ghost people.>}",
+      "index": "508"
+    },
+    {
+      "topic": "NVDLC01WTDeanGalaBark",
+      "topic_text": "NVDLC01WTDeanGalaBark",
+      "emotion": "Neutral 50",
+      "response_text": "If your marker's right, think the roost we're looking for is to the southeast.{<Tells the player that the roof with the marker is to the south east>}",
+      "index": "509"
+    },
+    {
+      "topic": "NVDLC01WTDeanSneakBark",
+      "topic_text": "NVDLC01WTDeanSneakBark",
+      "emotion": "Fear 20",
+      "response_text": "{Quiet}I am all about keeping low in this section of town... so let's see about creeping by the locals, all right?{<Dean suggests finding a way to sneak around the ghost people rather than fight them>}",
+      "index": "510"
+    },
+    {
+      "topic": "NVDLC01WTDeanTreeBark",
+      "topic_text": "NVDLC01WTDeanTreeBark",
+      "emotion": "Disgust 20",
+      "response_text": "{To himself, sarcastic}Ah, aren't the trees lovely this time of year, all blooming and green...{<Sarcastic comment on how lovely the dead trees are this time of year>}",
+      "index": "511"
+    },
+    {
+      "topic": "NVDLC01WTDeanUmbrellasBark",
+      "topic_text": "NVDLC01WTDeanUmbrellasBark",
+      "emotion": "Neutral 50",
+      "response_text": "{Walked into a nice patio, appreciative}Nice spot for sunning.{Beat, to himself}Well, if the sun ever touched here.{<Comment about the small courtyard set up with the lawn chairs and the umbrellas>}",
+      "index": "512"
+    },
+    {
+      "topic": "PLAYERINIRONSITES",
+      "topic_text": "PLAYER IN IRON SITES",
+      "emotion": "Neutral 50",
+      "response_text": "Don't be ridiculous - point that somewhere else, will you?",
+      "index": "513"
+    },
+    {
+      "topic": "PLAYERLAYMINE",
+      "topic_text": "PLAYER LAY MINE",
+      "emotion": "Neutral 50",
+      "response_text": "{Slightly wistful, quiet}A little party favor before the grand finale.",
+      "index": "514"
+    },
+    {
+      "topic": "PLAYERTHROWGRENADE",
+      "topic_text": "PLAYER THROW GRENADE",
+      "emotion": "Neutral 50",
+      "response_text": "Watch where you're chucking those things!",
+      "index": "515"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYEGoodbye.",
+      "topic_text": "That's enough for now.",
+      "emotion": "Neutral 50",
+      "response_text": "{Shrugs, dismissive}I'd shed a tear, but I'm sure we'll be chatting again.",
+      "index": "516"
+    },
+    {
+      "topic": "NVDLC01DeanDialogueAloneIdleAct1",
+      "topic_text": "NVDLC01DeanDialogueAloneIdleAct1",
+      "emotion": "Disgust 20",
+      "response_text": "{Irritated}You'd think it was Spring the way tourists keep rolling in.{Dean is talking to himself in these lines.}",
+      "index": "518"
+    },
+    {
+      "topic": "NVDLC01DeanDialogueAutoDocBark",
+      "topic_text": "NVDLC01DeanDialogueAutoDocBark",
+      "emotion": "Neutral 50",
+      "response_text": "{Looking around}Sinclair's little surgery carts.{To himself}Kept them around for his lady friend.",
+      "index": "524"
+    },
+    {
+      "topic": "NVDLC01DeanDialogueClinicBark",
+      "topic_text": "NVDLC01DeanDialogueClinicBark",
+      "emotion": "Disgust 20",
+      "response_text": "{Pretending to find the scene distasteful}There's a picture, a bunch of headless saps all waiting for the pearly gates. Whoever did this... messed up.{<Dean is looking at medical stretchers with headless corpses on them. He put them there to examine, doesn't want player to know.>}",
+      "index": "525"
+    },
+    {
+      "topic": "NVDLC01DeanDialogueGala02BrokenCatwalk",
+      "topic_text": "NVDLC01DeanDialogueGala02BrokenCatwalk",
+      "emotion": "Neutral 50",
+      "response_text": "{To himself, broken catwalk ahead}Guess we're going the long way around.",
+      "index": "526"
+    },
+    {
+      "topic": "NVDLC01DeanDialogueGala02PostCloud",
+      "topic_text": "NVDLC01DeanDialogueGala02PostCloud",
+      "emotion": "Pained 20",
+      "response_text": "{Coughs}See? That...{coughs again}wasn't so bad, was it?",
+      "index": "527"
+    },
+    {
+      "topic": "NVDLC01DeanDialogueGala02ToxicCloud",
+      "topic_text": "NVDLC01DeanDialogueGala02ToxicCloud",
+      "emotion": "Disgust 10",
+      "response_text": "{Commenting about the toxic Cloud}Looks like we'll have to go through this pea soup. I can get you across.",
+      "index": "528"
+    },
+    {
+      "topic": "NVDLC01DeanDialogueGenericIdle",
+      "topic_text": "NVDLC01DeanDialogueGenericIdle",
+      "emotion": "Surprise 10",
+      "response_text": "{1st Time Police Station}What are we doing in here? Planning to toss me in a cell?",
+      "index": "529"
+    },
+    {
+      "topic": "NVDLC01DeanDialogueGhostBark",
+      "topic_text": "NVDLC01DeanDialogueGhostBark",
+      "emotion": "Fear 10",
+      "response_text": "{Little nervous}We're not heading to the police station, are we? Ghost People hunt there.",
+      "index": "563"
+    },
+    {
+      "topic": "NVDLC01DeanDialogueGhostDeadBark",
+      "topic_text": "NVDLC01DeanDialogueGhostDeadBark",
+      "emotion": "Anger 20",
+      "response_text": "He's not dead... it's a trick.{Beat}Get an axe.",
+      "index": "564"
+    },
+    {
+      "topic": "NVDLC01DeanDialoguePoliceBark",
+      "topic_text": "NVDLC01DeanDialoguePoliceBark",
+      "emotion": "Fear 10",
+      "response_text": "{A little quiet}The police station... Ghost People love this place, no idea why. Might be the Holograms nearby.",
+      "index": "566"
+    },
+    {
+      "topic": "NVDLC01DeanDialoguePostGala",
+      "topic_text": "NVDLC01DeanDialoguePostGala",
+      "emotion": "Happy 50",
+      "response_text": "Holy Mary, Mother, and Joe - now{emph}there's a show.{Dean is commenting on fireworks display in the sky, the Grand Opening of the Sierra Madre. Mixed feelings about it.}",
+      "index": "567"
+    },
+    {
+      "topic": "NVDLC01DeanDialoguePreGalaBad",
+      "topic_text": "NVDLC01DeanDialoguePreGalaBad",
+      "emotion": "Anger 20",
+      "response_text": "{Angry}We'll see who's holding the cards in the end...{Forced to stand and wait in a dangerous area, irritated about it (and worried). Dean is talking to himself in these lines.}",
+      "index": "578"
+    },
+    {
+      "topic": "NVDLC01DeanDialoguePreGalaGood",
+      "topic_text": "NVDLC01DeanDialoguePreGalaGood",
+      "emotion": "Disgust 50",
+      "response_text": "Sinclair, you better appreciate all I do to screw you over.{Forced to stand and wait in a dangerous area, but confident in the player. Dean is talking to himself in these lines.}",
+      "index": "586"
+    },
+    {
+      "topic": "NVDLC01DeanDialogueStashBark",
+      "topic_text": "NVDLC01DeanDialogueStashBark",
+      "emotion": "Anger 10",
+      "response_text": "{First Time}Hey, those are my emergency supplies!{Beat, backpedaling, knows how it sounds}Uh... I-I mean... I know we're in a bad spot here... just, uh, leave me something, all right?{Line plays when player finds one of Dean's caches in the Villa he squirreled away for emergencies. It's an emergency.}",
+      "index": "592"
+    },
+    {
+      "topic": "NVDLC01DeanDialogueVendingBark",
+      "topic_text": "NVDLC01DeanDialogueVendingBark",
+      "emotion": "Happy 10",
+      "response_text": "{Nods}Those machines... Sinclair's little gifts,{to himself}lasted longer than he did.{Normal tone}If you need food, stims...{slightly condescending}put in a chip, hold out your hand.{Dean doesn't like these machines. Recognizes their worth, just hates their tie to Sinclair (casino founder), feels it made people beg like dogs.}",
+      "index": "596"
+    }
+  ],
+  "combat": [
+    {
+      "topic": "AcceptYield",
+      "topic_text": "AcceptYield",
+      "emotion": "Anger 10",
+      "response_text": "Fine, fine - don't want us both blowing up anyway.",
+      "index": "597"
+    },
+    {
+      "topic": "ArmorIneffective",
+      "topic_text": "ArmorIneffective",
+      "emotion": "Neutral 50",
+      "response_text": "They're cutting through this like paper!",
+      "index": "598"
+    },
+    {
+      "topic": "Assault",
+      "topic_text": "Assault",
+      "emotion": "Neutral 50",
+      "response_text": "What're you doing that for?{Beat, angry, vicious}Fine, let's settle this.",
+      "index": "599"
+    },
+    {
+      "topic": "Attack",
+      "topic_text": "Attack",
+      "emotion": "Neutral 50",
+      "response_text": "Time to cash this one out.",
+      "index": "600"
+    },
+    {
+      "topic": "AvoidThreat",
+      "topic_text": "AvoidThreat",
+      "emotion": "Surprise 20",
+      "response_text": "{Just found a bomb in his pocket}Whoa! Whoa, whoa,{emph}whoa!",
+      "index": "605"
+    },
+    {
+      "topic": "Crippled",
+      "topic_text": "Crippled",
+      "emotion": "Disgust 20",
+      "response_text": "{Under his breath}Can finally park in handicapped spaces now.",
+      "index": "606"
+    },
+    {
+      "topic": "Death",
+      "topic_text": "Death",
+      "emotion": "Sad 10",
+      "response_text": "{To himself}Vera, sweetheart... see you soon.",
+      "index": "607"
+    },
+    {
+      "topic": "FireExplosive",
+      "topic_text": "FireExplosive",
+      "emotion": "Happy 10",
+      "response_text": "{Mixing an explosive, slightly eager}Let me whip up a special cocktail...",
+      "index": "611"
+    },
+    {
+      "topic": "Flee",
+      "topic_text": "Flee",
+      "emotion": "Neutral 50",
+      "response_text": "Valor, you're up - discretion and me, we're outta here.",
+      "index": "612"
+    },
+    {
+      "topic": "Frenzy",
+      "topic_text": "Frenzy",
+      "emotion": "Anger 20",
+      "response_text": "Let's bring down the house!",
+      "index": "613"
+    },
+    {
+      "topic": "HealthHalf",
+      "topic_text": "HealthHalf",
+      "emotion": "Neutral 50",
+      "response_text": "Uh... could use a little boost here.",
+      "index": "614"
+    },
+    {
+      "topic": "HealthQuarter",
+      "topic_text": "HealthQuarter",
+      "emotion": "Pained 20",
+      "response_text": "{Frustrated, in pain}I'm bleeding green here, any ideas?",
+      "index": "616"
+    },
+    {
+      "topic": "Hit",
+      "topic_text": "Hit",
+      "emotion": "Neutral 50",
+      "response_text": "{As if stung}Ah!",
+      "index": "617"
+    },
+    {
+      "topic": "KOed",
+      "topic_text": "KOed",
+      "emotion": "Neutral 50",
+      "response_text": "Unff!",
+      "index": "618"
+    },
+    {
+      "topic": "KnockedBack",
+      "topic_text": "KnockedBack",
+      "emotion": "Neutral 50",
+      "response_text": "Nnnf!",
+      "index": "619"
+    },
+    {
+      "topic": "NoAmmo",
+      "topic_text": "NoAmmo",
+      "emotion": "Neutral 50",
+      "response_text": "Bullets all cashed out here!",
+      "index": "620"
+    },
+    {
+      "topic": "OnFire",
+      "topic_text": "OnFire",
+      "emotion": "Fear 20",
+      "response_text": "Ah! Get a rug, put me out, something!",
+      "index": "621"
+    },
+    {
+      "topic": "Poisoned",
+      "topic_text": "Poison",
+      "emotion": "Neutral 50",
+      "response_text": "{Warning}I can help you in the Cloud, not for long, though.{<Watching the player enter a poisonous cloud, warning.>}",
+      "index": "622"
+    },
+    {
+      "topic": "PowerAttack",
+      "topic_text": "PowerAttack",
+      "emotion": "Neutral 50",
+      "response_text": "{TEMP: Not sure needed. Power attack.}",
+      "index": "624"
+    },
+    {
+      "topic": "Regenerating",
+      "topic_text": "Regenerating",
+      "emotion": "Happy 10",
+      "response_text": "Feeling the music.",
+      "index": "625"
+    },
+    {
+      "topic": "Steal",
+      "topic_text": "Steal",
+      "emotion": "Disgust 10",
+      "response_text": "{Sarcastic}If you find a place to pawn that, go right ahead.",
+      "index": "627"
+    },
+    {
+      "topic": "UsedDoctorBag",
+      "topic_text": "UsedDoctorBag",
+      "emotion": "Happy 10",
+      "response_text": "Yeah... that's the sweet stuff.",
+      "index": "629"
+    },
+    {
+      "topic": "Wake",
+      "topic_text": "Wake",
+      "emotion": "Neutral 50",
+      "response_text": "{Getting up after being knocked unconscious}Don't want to repeat that number.",
+      "index": "630"
+    },
+    {
+      "topic": "WeaponIneffective",
+      "topic_text": "WeaponIneffective",
+      "emotion": "Neutral 50",
+      "response_text": "Song and dance might work better than what I've got.",
+      "index": "632"
+    }
+  ]
+}

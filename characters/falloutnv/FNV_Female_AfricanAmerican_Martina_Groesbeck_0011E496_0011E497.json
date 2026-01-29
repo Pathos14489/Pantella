@@ -1,0 +1,146 @@
+{
+  "name": "Martina Groesbeck",
+  "url": "/wiki/Martina_Groesbeck",
+  "dialogue_name": "MartinaGroesbeck.txt",
+  "dialogue_url": "/wiki/MartinaGroesbeck.txt",
+  "spawned_dead": false,
+  "spawned": true,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "0011E496",
+  "ref_id": "0011E497",
+  "editor_id": "MartinaGroesbeck",
+  "location": "Vault 21",
+  "location_url": "/wiki/Vault_21",
+  "descriptions": [
+    "Martina Groesbeck is a woman living in Vault 21 on the New Vegas Strip in 2281.",
+    "Martina came to New Vegas to strike it rich as a professional gambler. However, things did not quite go as planned for on the professional part only to lose most of her money. After failing that, she started doing odd jobs, mostly for Sarah Weintraub in keeping Vault 21 clean and tidy, to make a living.",
+    "Her biggest score yet, though, is the spot she landed as Captain Ronald Curtis' informant, hanging around casinos (and unknowingly gathering intel for Caesar's Legion).",
+    "The Finger of Suspicion: The Courier can rescue her by killing the Omerta thugs, completing a Speech check, or by a dialogue option available upon having completed How Little We Know."
+  ],
+  "race": "Human",
+  "gender": "Female",
+  "affiliation": "Ronald Curtis",
+  "role": "Spy",
+  "detailed_location": "Vault 21",
+  "voice_actor": "Katherine Pawlak",
+  "special": {
+    "Strength": 4,
+    "Perception": 6,
+    "Endurance": 4,
+    "Charisma": 5,
+    "Intelligence": 4,
+    "Agility": 7,
+    "Luck": 3
+  },
+  "mod_special_values": {
+    "Strength": 4,
+    "Perception": 6,
+    "Endurance": 4,
+    "Charisma": 6,
+    "Intelligence": 4,
+    "Agility": 7,
+    "Luck": 3
+  },
+  "level": "6",
+  "tag_skills": [
+    {
+      "Guns:": "51"
+    },
+    {
+      "Melee Weap.:": "49"
+    },
+    {
+      "Unarmed:": "51"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Neutral",
+  "voice_type": "FemaleAdult01Default",
+  "geck_race": "AfricanAmerican",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "Thank you! They were going to kill me!",
+      "index": "1"
+    },
+    {
+      "topic": "VDialogueVault21MartinaGroesbeckTopic000",
+      "topic_text": "Are you all right?",
+      "emotion": "Neutral 50",
+      "response_text": "I'll be fine... eventually.",
+      "index": "3"
+    },
+    {
+      "topic": "VDialogueVault21MartinaGroesbeckTopic001",
+      "topic_text": "You were lucky. I might not be around next time.",
+      "emotion": "Neutral 50",
+      "response_text": "There won't be a next time. I hope.",
+      "index": "4"
+    },
+    {
+      "topic": "VDialogueVault21MartinaGroesbeckTopic002",
+      "topic_text": "Why were the Omertas out to kill you?",
+      "emotion": "Neutral 50",
+      "response_text": "I... may have overheard some things at Gomorrah that I passed on to the NCR. That's all! Honest.",
+      "index": "5"
+    },
+    {
+      "topic": "VDialogueVault21MartinaGroesbeckTopic003",
+      "topic_text": "Goodbye.",
+      "emotion": "Happy 50",
+      "response_text": "Goodbye!",
+      "index": "6"
+    },
+    {
+      "topic": "VDialogueVault21MartinaGroesbeckTopic008",
+      "topic_text": "Save your thanks - this was a job, nothing more.",
+      "emotion": "Neutral 50",
+      "response_text": "Oh. Um... okay.",
+      "index": "7"
+    },
+    {
+      "topic": "VDialogueVault21MartinaGroesbeckTopic009",
+      "topic_text": "You work with the NCR? It was the Legion who sent me to protect you.",
+      "emotion": "Disgust 50",
+      "response_text": "{slightly insulted}What? I only talk to Captain Curtis over at McCarran. I would never work with slavers. Honest.",
+      "index": "8"
+    },
+    {
+      "topic": "VDialogueVault21MartinaGroesbeckTopic010",
+      "topic_text": "So, you're a spy.",
+      "emotion": "Neutral 50",
+      "response_text": "No! Well, not really. I mean, I'm not listening through doors or sneaking around or anything. People talk out loud, and I just pay attention.",
+      "index": "9"
+    },
+    {
+      "topic": "VDialogueVault21MartinaGroesbeckTopic011",
+      "topic_text": "Dangerous work.",
+      "emotion": "Neutral 50",
+      "response_text": "It isn't normally. The NCR wanted me to just gamble and listen, nothing else.",
+      "index": "11"
+    },
+    {
+      "topic": "VDialogueVault21MartinaGroesbeckTopic012",
+      "topic_text": "Let's talk about something else now.",
+      "emotion": "Neutral 50",
+      "response_text": "Okay.",
+      "index": "12"
+    },
+    {
+      "topic": "VDialogueVault21MartinaGroesbeckTopic013",
+      "topic_text": "What do you do around here?",
+      "emotion": "Neutral 50",
+      "response_text": "I do odd jobs here and there, usually helping Sarah keep the Vault tidy. I came to New Vegas to be a professional gambler.",
+      "index": "13"
+    }
+  ],
+  "conversation": [],
+  "combat": []
+}

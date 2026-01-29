@@ -1,0 +1,685 @@
+{
+  "name": "Abraham Washington",
+  "url": "/wiki/Abraham_Washington",
+  "dialogue_name": "AbrahamWashington.txt",
+  "dialogue_url": "/wiki/AbrahamWashington.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000156CF",
+  "ref_id": "0001E769",
+  "editor_id": "AbrahamWashington",
+  "location": "Capitol Preservation Society",
+  "location_url": "/wiki/Capitol_Preservation_Society",
+  "descriptions": [
+    "Abraham Washington is the owner and curator of the Capitol Preservation Society in Rivet City in 2277.",
+    "The 45 year old Abraham continues his parents' work at the Capitol Preservation Society, focusing on preserving the history of the United States, or at least an approximation thereof. Washington believes that his collection will eventually allow others to explore the American heritage, learn about the sacrifices made by those who came before,",
+    "His greatest fear is that uneducated people and their casual disdain for history will cause America to fade from memory, and the once great nation will only be a blasted wasteland to future generations.",
+    "However, despite his fervent dedication to history, it could be said that Washington is doing more harm to understanding the history of the United States than good. He has no formal education in history and lacks the essential knowledge to reconstruct the past. As such, he tends to fill in the blanks drawing on his imagination and wasteland knowledge, confusing events, people, places, and even technologies.",
+    "Abraham is more concerned with collecting all of the relics of the nation's past rather than accurately reconstructing history as it happened.",
+    "He primarily cares about increasing the size of his collection and the number of visitors to his museum.",
+    "Abraham sees himself as a humble patriot, devoted to the memory of the former United States and the preservation of its history.",
+    "His devotion to Lincoln has resulted in him treating other presidents unfairly when it comes to considering their accomplishments. He has resolved to treat Abraham Lincoln as the ultimate president with no equal, to the point that he downplays the achievements of other presidents, including James Monroe, whose Monroe Doctrine played a significant role in American foreign policy.",
+    "Abraham will wake up in his room at 10 a.m., stay there for an hour, then head to the Capitol Preservation Society, where he will stay for the next 14 hours. At 12 a.m., he will return to his room, and at 2 a.m., he will retire to his bed.",
+    "Abraham has two unused AI packages, AbrahamWashingtonEat14x2 and AbrahamWashingtonEat22x2, which indicate that he would also be intended to have lunch and dinner at the Weatherly Hotel from 2 to 4 p.m. and 10 p.m. to 12 a.m. There is fully implemented dialogue that is unable to play because Abraham does not use these packages.",
+    "When asked about the history of the Declaration of Independence, Washington will state the following:",
+    "It is a prime example of Abraham's casual approach to historical knowledge. The main errors are:",
+    "In spite of Washington's common misunderstandings towards history, others in the Capital Wasteland appear to have a more accurate picture of certain events, such as Three Dog.",
+    "* Only after selling him Lincoln's repeater.",
+    "Abraham Washington appears in Fallout 3 and Fallout Shelter.",
+    "His name is a portmanteau of Abraham Lincoln and George Washington, two of the United States' most influential presidents."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Rivet City",
+  "role": "Curator in theCapitol Preservation Society",
+  "detailed_location": "Capitol Preservation Society, Rivet City",
+  "voice_actor": "Paul Eiding",
+  "special": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 4,
+    "Intelligence": 4,
+    "Agility": 6,
+    "Luck": 4
+  },
+  "mod_special_values": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 4,
+    "Intelligence": 4,
+    "Agility": 7,
+    "Luck": 4
+  },
+  "level": "4",
+  "tag_skills": [
+    {
+      "Barter:": "41"
+    },
+    {
+      "Small Guns:": "45(47)"
+    },
+    {
+      "Unarmed:": "41"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "40"
+    },
+    {
+      "Critical Chance:": "4%"
+    },
+    {
+      "Unarmed Dam.:": "2.55"
+    },
+    {
+      "Poison Resist.:": "15%"
+    },
+    {
+      "Rad. Resist.:": "6%"
+    },
+    {
+      "Carry Weight:": "210"
+    },
+    {
+      "Damage Res.:": "4%"
+    }
+  ],
+  "karma": "Good",
+  "voice_type": "MaleOld01DC",
+  "geck_race": "CaucasianOldAged",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Happy 50",
+      "response_text": "I can't wait to add the Declaration to the Society's collection.",
+      "index": "1"
+    },
+    {
+      "topic": "MS03RCHistory1Could I ask you about Rivet City's history?",
+      "topic_text": "Do you know the history of Rivet City?",
+      "emotion": "Surprise 25",
+      "response_text": "It's funny, now that you ask... I can tell you all about the Capital, but I really haven't got any idea about Rivet City itself.",
+      "index": "16"
+    },
+    {
+      "topic": "MS06BuyActionFigure",
+      "topic_text": "What will you give me for this toy of Lincoln?",
+      "emotion": "Happy 50",
+      "response_text": "Quite a nice specimen you have there. How about I give you 10 caps for it?",
+      "index": "20"
+    },
+    {
+      "topic": "MS06BuyDraftPoster",
+      "topic_text": "How much for this war poster?",
+      "emotion": "Happy 50",
+      "response_text": "That would look fantastic on the museum wall! What do you say to 60 caps?",
+      "index": "21"
+    },
+    {
+      "topic": "MS06BuyHat",
+      "topic_text": "Are you interested in Lincoln's hat?",
+      "emotion": "Surprise 70",
+      "response_text": "Lincoln's actual hat? Amazing! I must have it for the museum!",
+      "index": "22"
+    },
+    {
+      "topic": "MS06BuyLincolnDiary",
+      "topic_text": "I found Lincoln's diary.",
+      "emotion": "Surprise 60",
+      "response_text": "Oh my goodness! Hand written by one of the greatest presidents of our country?",
+      "index": "24"
+    },
+    {
+      "topic": "MS06BuyNo",
+      "topic_text": "I'd rather keep it.",
+      "emotion": "Neutral 50",
+      "response_text": "Very well, but I doubt anyone else will appreciate its value as much as I do.",
+      "index": "26"
+    },
+    {
+      "topic": "MS06BuyPennies",
+      "topic_text": "I have a collection of pennies with Lincoln's face on them.",
+      "emotion": "Surprise 60",
+      "response_text": "Pennies, eh? That's the old money they used long ago.",
+      "index": "27"
+    },
+    {
+      "topic": "MS06BuyRecording",
+      "topic_text": "Are you interested in buying a recording of Lincoln's voice?",
+      "emotion": "Surprise 60",
+      "response_text": "An actual recording of Lincoln's voice? Amazing!",
+      "index": "29"
+    },
+    {
+      "topic": "MS06BuyRifle",
+      "topic_text": "Would you like to make an offer on Lincoln's Rifle?",
+      "emotion": "Happy 60",
+      "response_text": "I can't believe you have that artifact in your possession! What an amazing addition it would make to the museum.",
+      "index": "31"
+    },
+    {
+      "topic": "MS06BuyWantedPoster",
+      "topic_text": "I've got a wanted poster for Lincoln's assassin.",
+      "emotion": "Happy 60",
+      "response_text": "Interesting. I'd love to have that in the museum's collection.",
+      "index": "33"
+    },
+    {
+      "topic": "MS06BuyYesIt's a deal.",
+      "topic_text": "You've got a deal. Here you go.",
+      "emotion": "Happy 50",
+      "response_text": "Thanks much!",
+      "index": "35"
+    },
+    {
+      "topic": "MS06YesActionFigure",
+      "topic_text": "Not for that price. I want more.",
+      "emotion": "Happy 50",
+      "response_text": "Very well, here you are. Worth every cap.",
+      "index": "36"
+    },
+    {
+      "topic": "MS06YesDraftPoster",
+      "topic_text": "This poster is worth more than that.",
+      "emotion": "Happy 50",
+      "response_text": "Very well, here you are. Worth every cap.",
+      "index": "37"
+    },
+    {
+      "topic": "MS06YesHat",
+      "topic_text": "For Lincoln's own hat? Come on. You can do better than that.",
+      "emotion": "Happy 50",
+      "response_text": "Very well, here you are. Worth every cap.",
+      "index": "38"
+    },
+    {
+      "topic": "MS06YesLincolnDiary",
+      "topic_text": "Not enough. Make me a better offer.",
+      "emotion": "Happy 50",
+      "response_text": "Very well, here you are. Worth every cap.",
+      "index": "39"
+    },
+    {
+      "topic": "MS06YesPenniesYou'll have to do better than that.",
+      "topic_text": "Make it 30 and you have a deal.",
+      "emotion": "Happy 50",
+      "response_text": "Very well, here you are. Worth every cap.",
+      "index": "40"
+    },
+    {
+      "topic": "MS06YesRecordingThat price is an insult. You can do better.",
+      "topic_text": "Make it 80 and you have a deal.",
+      "emotion": "Happy 50",
+      "response_text": "Very well, here you are. Worth every cap.",
+      "index": "41"
+    },
+    {
+      "topic": "MS06YesRifleYou're kidding, right? It's worth twice that.",
+      "topic_text": "Make it 125 and you have a deal.",
+      "emotion": "Happy 50",
+      "response_text": "Very well, here you are. Worth every cap.",
+      "index": "42"
+    },
+    {
+      "topic": "MS06YesWantedPosterNo way. I need a lot more than that.",
+      "topic_text": "Make it 90 and you have a deal.",
+      "emotion": "Happy 50",
+      "response_text": "Very well, here you are. Worth every cap.",
+      "index": "43"
+    },
+    {
+      "topic": "MS15AbeWashBackground01",
+      "topic_text": "So, you really care about these relics?",
+      "emotion": "Surprise 50",
+      "response_text": "Why, of course I do!",
+      "index": "44"
+    },
+    {
+      "topic": "MS15AbeWashBackground02",
+      "topic_text": "I suppose I see your point.",
+      "emotion": "Neutral 50",
+      "response_text": "Then we understand each other. Hundreds of years ago, people studied history as a career. Then, when the bombs fell, it was almost lost.",
+      "index": "46"
+    },
+    {
+      "topic": "MS15AbeWashBackground03",
+      "topic_text": "Looks like a bunch of junk to me.",
+      "emotion": "Disgust 50",
+      "response_text": "That's just the attitude I have come to expect from uneducated individuals.",
+      "index": "49"
+    },
+    {
+      "topic": "MS15AbeWashBackground04",
+      "topic_text": "I wish I knew more about America.",
+      "emotion": "Happy 50",
+      "response_text": "Oh, it's so good to finally meet... I mean, to yet again meet someone who actually cares about history!",
+      "index": "52"
+    },
+    {
+      "topic": "MS15AbeWashBackground05",
+      "topic_text": "Whatever, old timer.",
+      "emotion": "Disgust 50",
+      "response_text": "Bah! Sometimes I feel like it's hopeless.",
+      "index": "53"
+    },
+    {
+      "topic": "MS15AbeWashBackgroundBad",
+      "topic_text": "This place is a dump.",
+      "emotion": "Disgust 50",
+      "response_text": "Sigh. I was hoping seeing these pieces of the past would snap you out of your pessimism. I see I was wrong.",
+      "index": "54"
+    },
+    {
+      "topic": "MS15AbeWashBackgroundGood",
+      "topic_text": "I found it quite entertaining.",
+      "emotion": "Neutral 50",
+      "response_text": "It makes me so happy to hear that! Feel free to look around all you like.",
+      "index": "55"
+    },
+    {
+      "topic": "MS15AbeWashBackgroundTop",
+      "topic_text": "Well, I've looked around a bit.",
+      "emotion": "Neutral 50",
+      "response_text": "Oh? And have you come to any conclusions?",
+      "index": "56"
+    },
+    {
+      "topic": "MS15AbeWashCT00HaveIt",
+      "topic_text": "Before you continue... I have the Declaration of Independence.",
+      "emotion": "Surprise 80",
+      "response_text": "What? You have the Declaration? Unbelievable!",
+      "index": "57"
+    },
+    {
+      "topic": "MS15AbeWashCT00HaveItDone01",
+      "topic_text": "Yes... I recovered it all by myself.",
+      "emotion": "Happy 80",
+      "response_text": "By bringing this to me, do you realize you've just written yourself into the history books?",
+      "index": "59"
+    },
+    {
+      "topic": "MS15AbeWashCT00HaveItDone02",
+      "topic_text": "Yes... but I had a little help from Sydney.",
+      "emotion": "Happy 80",
+      "response_text": "By bringing this to me, do you realize you've both just written yourselves into the history books?",
+      "index": "65"
+    },
+    {
+      "topic": "MS15AbeWashCT00HaveItDone03",
+      "topic_text": "Yes... but I had a little help from Sydney. She didn't make it, though.",
+      "emotion": "Happy 80",
+      "response_text": "By bringing this to me, do you realize you've both just written yourselves into the history books?",
+      "index": "69"
+    },
+    {
+      "topic": "MS15AbeWashCT00HaveItDone04",
+      "topic_text": "Nah, I was just kidding.",
+      "emotion": "Disgust 80",
+      "response_text": "Well that's just plain rude. I would hope you'd be kinder to an old man just trying to serve his nation!",
+      "index": "73"
+    },
+    {
+      "topic": "MS15AbeWashCT00a",
+      "topic_text": "Yes, it's an interesting collection indeed.",
+      "emotion": "Happy 50",
+      "response_text": "Ah, a fellow scholar I see!",
+      "index": "75"
+    },
+    {
+      "topic": "MS15AbeWashCT00b",
+      "topic_text": "It's an interesting collection of garbage.",
+      "emotion": "Neutral 50",
+      "response_text": "One man's garbage is another's treasure trove. Don't underestimate these documents. They may not look like much, but their value is immeasurable.",
+      "index": "78"
+    },
+    {
+      "topic": "MS15AbeWashCT00c",
+      "topic_text": "Oh good, I was looking for some kindling.",
+      "emotion": "Anger 80",
+      "response_text": "Watch your tone, sir. To suggest the destruction of such fine specimens is almost, well... blasphemy!",
+      "index": "80"
+    },
+    {
+      "topic": "MS15AbeWashCT01",
+      "topic_text": "All right, I'll bite. Which document is missing?",
+      "emotion": "Neutral 50",
+      "response_text": "In 1776, the Second Judgmental Congress got together and adopted a document drafted by none other than Thomas Jefferson himself.",
+      "index": "83"
+    },
+    {
+      "topic": "MS15AbeWashCT02",
+      "topic_text": "Who cares...",
+      "emotion": "Disgust 50",
+      "response_text": "Your rude tone leads me to believe you aren't interested in a little proposal I have for you.",
+      "index": "86"
+    },
+    {
+      "topic": "MS15AbeWashCT02a",
+      "topic_text": "What's missing is my ability to stay awake in this snoreatorium.",
+      "emotion": "Neutral 50",
+      "response_text": "My friend, the sleeping fox catches no moss.",
+      "index": "88"
+    },
+    {
+      "topic": "MS15AbeWashCT02bIntell",
+      "topic_text": "It has to be the Declaration of Independence.",
+      "emotion": "Surprise 80",
+      "response_text": "Why, yes! Your knowledge of American History is quite impressive!",
+      "index": "90"
+    },
+    {
+      "topic": "MS15AbeWashCT03",
+      "topic_text": "Maybe later. I've got better things to do right now.",
+      "emotion": "Neutral 50",
+      "response_text": "Shame. Very well, you're free to look around but with your level of patience I suspect you'll become bored rather quickly.",
+      "index": "92"
+    },
+    {
+      "topic": "MS15AbeWashCT04",
+      "topic_text": "Let me take a leap of faith here... you want me to find it for you.",
+      "emotion": "Surprise 50",
+      "response_text": "Indeed I do. Without the Declaration, the rest of these relics are almost meaningless. I must have it!",
+      "index": "93"
+    },
+    {
+      "topic": "MS15AbeWashCT04a",
+      "topic_text": "What's your point?",
+      "emotion": "Happy 80",
+      "response_text": "Well, I was hoping you'd realize what I want. I want you to get the Declaration for me.",
+      "index": "95"
+    },
+    {
+      "topic": "MS15AbeWashCT04b",
+      "topic_text": "If you want me to retrieve the Declaration, all you have to do is ask.",
+      "emotion": "Happy 50",
+      "response_text": "Oh, would you? It would mean so much to me and the Society's collection here.",
+      "index": "98"
+    },
+    {
+      "topic": "MS15AbeWashCT05",
+      "topic_text": "Skip the history lesson, professor.",
+      "emotion": "Neutral 50",
+      "response_text": "A man of few words. Very well.",
+      "index": "99"
+    },
+    {
+      "topic": "MS15AbeWashCT11",
+      "topic_text": "Thank you, it's quite an honor. Now, for my reward?",
+      "emotion": "Happy 50",
+      "response_text": "Please, accept this holotape as a token of my esteem and the esteem of every citizen of the United States.",
+      "index": "103"
+    },
+    {
+      "topic": "MS15AbeWashCT12",
+      "topic_text": "Okay pops, just hand over the reward and you can get back to your history books.",
+      "emotion": "Disgust 50",
+      "response_text": "Well! The founding fathers would be disappointed in your fiery tone.",
+      "index": "105"
+    },
+    {
+      "topic": "MS15AbeWashRewardChatter01",
+      "topic_text": "I suppose that's good enough for me.",
+      "emotion": "Happy 50",
+      "response_text": "Marvelous! Then you've decided?",
+      "index": "107"
+    },
+    {
+      "topic": "MS15AbeWashRewardChatter02",
+      "topic_text": "Can the speech, Abe. I need to get paid.",
+      "emotion": "Happy 50",
+      "response_text": "Heroes of the United States will receive rewards befitting their rank, I can assure you. Your prize will be no different.",
+      "index": "108"
+    },
+    {
+      "topic": "MS15AbeWashRewardChatter03",
+      "topic_text": "Can we stop beating around the bush, please? What's the reward?",
+      "emotion": "Neutral 50",
+      "response_text": "Sorry, my mind tends to wander. I would see to it you receive a worthwhile trade.",
+      "index": "111"
+    },
+    {
+      "topic": "MS15Bailout",
+      "topic_text": "Let me ask you something else.",
+      "emotion": "Neutral 50",
+      "response_text": "Certainly.",
+      "index": "114"
+    },
+    {
+      "topic": "MS15DeclineQuestPost",
+      "topic_text": "Um... no. I've still got more important things to do.",
+      "emotion": "Disgust 50",
+      "response_text": "What could be more important than completing my collection? Without that document, what is the U.S.A. now? Nothing!",
+      "index": "115"
+    },
+    {
+      "topic": "MS15FinTLAbeWashCT01",
+      "topic_text": "How's the museum business?",
+      "emotion": "Happy 50",
+      "response_text": "Oh, it treats me well. I'm sure it will be even better now that we have the Declaration of Independence.",
+      "index": "117"
+    },
+    {
+      "topic": "MS15FinTLAbeWashLooking",
+      "topic_text": "Is the museum looking to acquire anything else?",
+      "emotion": "Happy 50",
+      "response_text": "Well, yes. Any document of historical significance would be of benefit to the Society.",
+      "index": "119"
+    },
+    {
+      "topic": "MS15MuseumBillofRights",
+      "topic_text": "I have a document you may want. The Bill of Rights...",
+      "emotion": "Surprise 50",
+      "response_text": "Oh my! I never expected anyone to find this! I didn't even know it was still intact!",
+      "index": "122"
+    },
+    {
+      "topic": "MS15MuseumMagnaCarta",
+      "topic_text": "I've recovered a copy of the Magna Carta. Interested?",
+      "emotion": "Happy 50",
+      "response_text": "Indeed I am. Although there were several copies made of the document, I certainly never expected to come across one intact.",
+      "index": "124"
+    },
+    {
+      "topic": "MS15MuseumNo",
+      "topic_text": "No thanks, I think I'll hold onto it.",
+      "emotion": "Disgust 70",
+      "response_text": "How very disappointing!",
+      "index": "126"
+    },
+    {
+      "topic": "MS15MuseumYesBoR",
+      "topic_text": "Will you give me 125 caps for it?",
+      "emotion": "Happy 80",
+      "response_text": "You drive a hard bargain, but it's worth every cap.",
+      "index": "130"
+    },
+    {
+      "topic": "MS15MuseumYesMC",
+      "topic_text": "Will you give me 100 caps for it?",
+      "emotion": "Happy 80",
+      "response_text": "You drive a hard bargain, but it's worth every cap.",
+      "index": "132"
+    },
+    {
+      "topic": "MS15QuestNo",
+      "topic_text": "Not now. Maybe another time.",
+      "emotion": "Sad 50",
+      "response_text": "A famous man once said that patience and perseverance have a magical effect before which difficulties disappear and obstacles vanish.",
+      "index": "134"
+    },
+    {
+      "topic": "MS15QuestReward",
+      "topic_text": "Slow down there, gramps. What's this reward you're talking about?",
+      "emotion": "Neutral 50",
+      "response_text": "You'd secure your place in history. The man who rediscovered the Declaration of Independence. Imagine the fanfare!",
+      "index": "136"
+    },
+    {
+      "topic": "MS15QuestWait",
+      "topic_text": "Let me think about this for a bit, and I'll get back to you.",
+      "emotion": "Sad 60",
+      "response_text": "Oh dear. Well, I can't make you go. Only to appeal to your sense of patriotism and to do it for your country.",
+      "index": "138"
+    },
+    {
+      "topic": "MS15QuestYes",
+      "topic_text": "I'd love to be a part of history, and bring you the Declaration.",
+      "emotion": "Happy 50",
+      "response_text": "Excellent! You won't regret it, I promise you! Imagine, you are taking part in another chapter of American History. I envy you.",
+      "index": "139"
+    },
+    {
+      "topic": "MS15TLAnythingElse",
+      "topic_text": "Is there anything else you're looking for?",
+      "emotion": "Neutral 50",
+      "response_text": "Well, yes. Any document of historical significance would be of benefit to the Society.",
+      "index": "141"
+    },
+    {
+      "topic": "MS15TLDeclarationTopic",
+      "topic_text": "I have a few questions about the Declaration of Independence.",
+      "emotion": "Happy 50",
+      "response_text": "Please ask then. After all, knowledge is power!",
+      "index": "144"
+    },
+    {
+      "topic": "MS15TLDeclarationTopic01",
+      "topic_text": "What does the Declaration of Independence look like?",
+      "emotion": "Neutral 50",
+      "response_text": "A piece of what was called parchment... sort of a thick paper. Has faded hand-written writing all over it.",
+      "index": "145"
+    },
+    {
+      "topic": "MS15TLDeclarationTopic02",
+      "topic_text": "What's the history behind the document?",
+      "emotion": "Neutral 50",
+      "response_text": "On July the 4th in 1776, a group calling themselves the Second Judgmental Congress got together at Fort McHarry in Maryland.",
+      "index": "147"
+    },
+    {
+      "topic": "MS15TLDeclarationTopic03SC",
+      "topic_text": "All this info on the Declaration... Where'd you get it? I don't like secrets.",
+      "emotion": "Happy 50",
+      "response_text": "Well, ummm. This is quite embarrassing actually.",
+      "index": "150"
+    },
+    {
+      "topic": "MS15TLGotIt",
+      "topic_text": "I have the Declaration of Independence.",
+      "emotion": "Surprise 50",
+      "response_text": "Oh my lord, I never expect... I mean, I am utterly shocked!",
+      "index": "153"
+    },
+    {
+      "topic": "MS15TLGotItSydney",
+      "topic_text": "Sydney and I have the Declaration of Independence.",
+      "emotion": "Surprise 50",
+      "response_text": "Oh my lord, I never expect... I mean, I am utterly shocked!",
+      "index": "161"
+    },
+    {
+      "topic": "MS15TLGotItSydneyDead",
+      "topic_text": "I have the Declaration of Independence.",
+      "emotion": "Surprise 50",
+      "response_text": "Oh my lord, I never expect... I mean, I am utterly shocked!",
+      "index": "165"
+    },
+    {
+      "topic": "MS15TLLocation",
+      "topic_text": "Can you show me how to get to the National Archives on my map?",
+      "emotion": "Neutral 50",
+      "response_text": "In the D.C. Ruins you'll find the National Archives. Or what's left of it anyway.",
+      "index": "169"
+    },
+    {
+      "topic": "MS17FinTLBuyBackViolin",
+      "topic_text": "I broke a promise to someone and I'd like to buy back the violin for 300 caps.",
+      "emotion": "Happy 80",
+      "response_text": "It takes moxie to admit you've done something wrong. I admire that.",
+      "index": "172"
+    },
+    {
+      "topic": "MS17TLBuySoilStrad",
+      "topic_text": "I have a very unique item for sale, a genuine Stradivarius violin.",
+      "emotion": "Surprise 50",
+      "response_text": "Incredible! I've heard of those items. They were used to make music many many years ago I believe.",
+      "index": "176"
+    },
+    {
+      "topic": "MS17TLBuySoilStradAbeWash01",
+      "topic_text": "Sure, that sounds fair.",
+      "emotion": "Neutral 50",
+      "response_text": "Well, that's wonderful. Here are your caps. Thanks very much!",
+      "index": "179"
+    },
+    {
+      "topic": "MS17TLBuySoilStradAbeWash02",
+      "topic_text": "Let me consider your offer.",
+      "emotion": "Neutral 50",
+      "response_text": "Certainly, don't let me stand in your way.",
+      "index": "181"
+    },
+    {
+      "topic": "MS17TLBuySoilStradAbeWash03SC",
+      "topic_text": "How about we make it 300 caps?",
+      "emotion": "Neutral 50",
+      "response_text": "Well, that's wonderful. Here are your caps. Thanks very much!",
+      "index": "182"
+    },
+    {
+      "topic": "RCTopicCPS",
+      "topic_text": "What is the Capital Preservation Society?",
+      "emotion": "Happy 50",
+      "response_text": "I'm collecting artifacts. Historical artifacts. Um...all sorts of things from old DC.",
+      "index": "184"
+    },
+    {
+      "topic": "SpeechChallengeFailure",
+      "topic_text": "SpeechChallengeFailure",
+      "emotion": "Neutral 50",
+      "response_text": "Certain information came to light. I paid a fortune in caps and obtained it.",
+      "index": "186"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "I have to go now.",
+      "emotion": "Happy 60",
+      "response_text": "I hope next time I see you, the Declaration will be in hand.",
+      "index": "189"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Happy 70",
+      "response_text": "Welcome to the Capital Preservation Society!",
+      "index": "196"
+    },
+    {
+      "topic": "RCGoodbye",
+      "topic_text": "RCGoodbye",
+      "emotion": "Surprise 50",
+      "response_text": "Er...uh...yes. I think so. No, I'm quite certain. Yes.",
+      "index": "203"
+    },
+    {
+      "topic": "RCPackageEnd",
+      "topic_text": "RCPackageEnd",
+      "emotion": "Disgust 50",
+      "response_text": "Damn! I forgot to eat breakfast again.",
+      "index": "204"
+    }
+  ],
+  "combat": []
+}

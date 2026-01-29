@@ -1,0 +1,271 @@
+{
+  "name": "Orris",
+  "url": "/wiki/Orris",
+  "dialogue_name": "VFSOrris.txt",
+  "dialogue_url": "/wiki/VFSOrris.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "00115C38",
+  "ref_id": "00115C60",
+  "editor_id": "VFSOrris",
+  "location": "Freeside",
+  "location_url": "/wiki/Freeside",
+  "descriptions": [
+    "Orris is a conman and bodyguard for hire operating in Freeside in 2281.",
+    "This burly Freeside local is a bodyguard known for ripping off his clients by faking attacks on them and playing the hero. Ironically, he is one of the more popular guns for hire operating in the area, paying a group of local thugs to assist in his scam. His actions have earned him hundreds of caps, much higher than the average salary of his more legitimate co-workers. This is why he has attracted the suspicion of the King.",
+    "G.I. Blues",
+    "G.I. Blues: The King asks the Courier to find out why Orris is getting more money and attention than the other bodyguards.",
+    "Upon exposing Orris as a fraud to the King, he will no longer be available for hire. The King will explain this beforehand, saying that he will send some of his men to \"pull Orris off the street when no one's looking.\" True to his word, the bodyguard will have disappeared from Freeside's north gate, having already been caught and taken away by the Kings."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Freeside thugs",
+  "role": "Conman",
+  "detailed_location": "Freeside",
+  "voice_actor": "Liam O'Brien",
+  "special": {
+    "Strength": 5,
+    "Perception": 6,
+    "Endurance": 6,
+    "Charisma": 5,
+    "Intelligence": 5,
+    "Agility": 7,
+    "Luck": 5
+  },
+  "mod_special_values": {
+    "Strength": 5,
+    "Perception": 6,
+    "Endurance": 6,
+    "Charisma": 5,
+    "Intelligence": 5,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "level": "16",
+  "tag_skills": [
+    {
+      "Guns:": "94(92)"
+    },
+    {
+      "Speech:": "90"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Neutral",
+  "voice_type": "MaleAdult05",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "Don't bother me right now. I've got to get back to see if any customers are waiting.",
+      "index": "1"
+    },
+    {
+      "topic": "VFSOrrisAfterCombat",
+      "topic_text": "VFSOrrisAfterCombat",
+      "emotion": "Happy 70",
+      "response_text": "Nothing to worry about. If you had hired one of those other hacks, you'd be up to your ass in lowlife right about now.",
+      "index": "8"
+    },
+    {
+      "topic": "VFSOrrisSecondRun",
+      "topic_text": "VFSOrrisSecondRun",
+      "emotion": "Anger 65",
+      "response_text": "So tell me, did you really think I'd be stupid enough to fall for this again? One of my men saw you go in and out of the Kings' place.",
+      "index": "9"
+    },
+    {
+      "topic": "VFreeformFreesideVFSOrrisTopic000",
+      "topic_text": "Why do I need a bodyguard crossing Freeside?",
+      "emotion": "Neutral 50",
+      "response_text": "Just look around. People here are as like to stab you as say hello. That is, if I weren't at your side.",
+      "index": "11"
+    },
+    {
+      "topic": "VFreeformFreesideVFSOrrisTopic001",
+      "topic_text": "How much for your services?",
+      "emotion": "Neutral 50",
+      "response_text": "Two hundred caps gets you my watchful eye for a trip to the south gate.",
+      "index": "12"
+    },
+    {
+      "topic": "VFreeformFreesideVFSOrrisTopic002",
+      "topic_text": "What if I'm not going to the south gate?",
+      "emotion": "Neutral 50",
+      "response_text": "Sorry, but all the people with real money are heading for the Strip, so that's the way I go. You want to go somewhere else, hire one of these losers.",
+      "index": "13"
+    },
+    {
+      "topic": "VFreeformFreesideVFSOrrisTopic003",
+      "topic_text": "I don't think I need your services. Sorry.",
+      "emotion": "Neutral 50",
+      "response_text": "I'm sure Freeside will disabuse you of that notion soon enough. Farewell.",
+      "index": "14"
+    },
+    {
+      "topic": "VFreeformFreesideVFSOrrisTopic004",
+      "topic_text": "Okay, I'll hire you.",
+      "emotion": "Neutral 50",
+      "response_text": "Done and done. I want to mention a few things up front. In order to ensure your safety, I need you to follow my instructions to the letter.",
+      "index": "15"
+    },
+    {
+      "topic": "VFreeformFreesideVFSOrrisTopic005",
+      "topic_text": "Two hundred caps! That's twice what everyone else is charging!",
+      "emotion": "Neutral 50",
+      "response_text": "Hey, you want the best, you have to pay for it.",
+      "index": "18"
+    },
+    {
+      "topic": "VFreeformFreesideVFSOrrisTopic006{Intelligence check > 5}",
+      "topic_text": "Hey you only fired three shots and there are four guys there...",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] Er, noticed that, did you? I keenly aimed one of the shots through some soft tissue of one of them to hit the man behind him.",
+      "index": "19"
+    },
+    {
+      "topic": "VFreeformFreesideVFSOrrisTopic007",
+      "topic_text": "Why did you run ahead like that?",
+      "emotion": "Neutral 50",
+      "response_text": "Call it a hunch. You do this job for long enough, and you learn to trust your instincts.",
+      "index": "22"
+    },
+    {
+      "topic": "VFreeformFreesideVFSOrrisTopic008",
+      "topic_text": "Let's keep moving.",
+      "emotion": "Neutral 50",
+      "response_text": "My thoughts exactly. Time is money, after all.",
+      "index": "23"
+    },
+    {
+      "topic": "VFreeformFreesideVFSOrrisTopic009",
+      "topic_text": "Or, you just faked this whole thing to drum up repeat business.",
+      "emotion": "Neutral 50",
+      "response_text": "That's an interesting theory you've got there. I'd suggest you keep it to yourself. Let's get moving.",
+      "index": "24"
+    },
+    {
+      "topic": "VFreeformFreesideVFSOrrisTopic010",
+      "topic_text": "After you.",
+      "emotion": "Neutral 50",
+      "response_text": "Stay close. I wouldn't want something to happen to you.",
+      "index": "25"
+    },
+    {
+      "topic": "VFreeformFreesideVFSOrrisTopic011{Barter check >= 50}",
+      "topic_text": "I want all the money you have on you. I could make it to the Kings from here.",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] I ought to take my chances and kill you right here, but you may be right. Here, take this.",
+      "index": "26"
+    },
+    {
+      "topic": "VFreeformFreesideVFSOrrisTopic012",
+      "topic_text": "I don't have that kind of money.",
+      "emotion": "Neutral 50",
+      "response_text": "You want the best, you have to be prepared to pay for it.",
+      "index": "29"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "VFSOrrisChats01",
+      "topic_text": "VFSOrrisChats01",
+      "emotion": "Neutral 50",
+      "response_text": "To your left here is the Old Mormon Fort. You get roughed up, the Followers there will patch you right up. Not that I ever need their services.",
+      "index": "30"
+    },
+    {
+      "topic": "VFSOrrisChats02",
+      "topic_text": "VFSOrrisChats02",
+      "emotion": "Neutral 50",
+      "response_text": "Up ahead on the next block is where the Kings hang out. Don't let them scare you, if they don't outnumber you five to one you'll be fine.",
+      "index": "31"
+    },
+    {
+      "topic": "VFSOrrisChats03",
+      "topic_text": "VFSOrrisChats03",
+      "emotion": "Neutral 50",
+      "response_text": "Down to the right here is the fun part of town. You haven't seen Freeside till you've been to the Wrangler.",
+      "index": "32"
+    },
+    {
+      "topic": "VFSOrrisCursesPlayer",
+      "topic_text": "VFSOrrisCursesPlayer",
+      "emotion": "Neutral 50",
+      "response_text": "It's regrettable, but it looks like I'm about to lose another customer.",
+      "index": "33"
+    },
+    {
+      "topic": "VFSOrrisCursesThug",
+      "topic_text": "VFSOrrisCursesThug",
+      "emotion": "Neutral 50",
+      "response_text": "You idiot! What part of \"play dead\" do you not understand?",
+      "index": "34"
+    },
+    {
+      "topic": "VFSOrrisEnd01",
+      "topic_text": "VFSOrrisEnd01",
+      "emotion": "Happy 60",
+      "response_text": "Well, here we are. No worse for wear, are you? I trust that if you need to cross Freeside again, you'll know who to hire.",
+      "index": "35"
+    },
+    {
+      "topic": "VFSOrrisFinalStretch",
+      "topic_text": "VFSOrrisFinalStretch",
+      "emotion": "Neutral 50",
+      "response_text": "That was rather invigorating, wasn't it? Let's keep moving, it's only a little further to the gate.",
+      "index": "37"
+    },
+    {
+      "topic": "VFSOrrisIveGotThis",
+      "topic_text": "VFSOrrisIveGotThis",
+      "emotion": "Neutral 50",
+      "response_text": "Gotcha! Thought you could ambush us, huh?",
+      "index": "38"
+    },
+    {
+      "topic": "VFSOrrisLeaveThemToMe",
+      "topic_text": "VFSOrrisLeaveThemToMe",
+      "emotion": "Neutral 50",
+      "response_text": "Leave them to me!",
+      "index": "39"
+    },
+    {
+      "topic": "VFSOrrisLeaves",
+      "topic_text": "VFSOrrisLeaves",
+      "emotion": "Neutral 50",
+      "response_text": "Just so you know, heading out here breaks our contract. This is why I ask people to pay up front. See you around.",
+      "index": "40"
+    },
+    {
+      "topic": "VFSOrrisMistaken",
+      "topic_text": "VFSOrrisMistaken",
+      "emotion": "Neutral 50",
+      "response_text": "Hmmm, I guess they were harmless after all. I'm not often mistaken, you know.",
+      "index": "42"
+    },
+    {
+      "topic": "VFSOrrisThisWay",
+      "topic_text": "VFSOrrisThisWay",
+      "emotion": "Neutral 50",
+      "response_text": "I'll scout ahead. You follow at a distance.",
+      "index": "43"
+    },
+    {
+      "topic": "VFSOrrisWarning01",
+      "topic_text": "VFSOrrisWarning01",
+      "emotion": "Neutral 50",
+      "response_text": "Hey, slow down. I don't like the look of some of those men ahead. Let's take a different way around.",
+      "index": "44"
+    }
+  ],
+  "combat": []
+}

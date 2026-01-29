@@ -1,0 +1,378 @@
+{
+  "name": "Rotface",
+  "url": "/wiki/Rotface",
+  "dialogue_name": "VFSRotface.txt",
+  "dialogue_url": "/wiki/VFSRotface.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "0010C683",
+  "ref_id": "0010D8E1",
+  "editor_id": "VFSRotface",
+  "location": "Freeside's east gate",
+  "location_url": "/wiki/Freeside%27s_east_gate",
+  "descriptions": [
+    "Rotface is a gossiping ghoul beggar residing at Freeside in 2281.",
+    "Rotface is sitting against a destroyed building next to Mick & Ralph's, just past Freeside's east gate. He has lived on the streets of Freeside for a long time, so he knows lots of odd information and general gossip. He is even willing to disclose these bits and pieces for a price, of course."
+  ],
+  "race": "Ghoul",
+  "gender": "Male",
+  "role": "VagrantGossiper",
+  "detailed_location": "Freeside",
+  "voice_actor": "Sam Riegel",
+  "special": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 5,
+    "Intelligence": 4,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "mod_special_values": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 5,
+    "Intelligence": 4,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "level": "6",
+  "tag_skills": [
+    {
+      "Barter:": "50"
+    },
+    {
+      "Medicine:": "48"
+    },
+    {
+      "Melee Weap.:": "52"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "90(95)"
+    }
+  ],
+  "karma": "Neutral",
+  "voice_type": "MaleGhoul02",
+  "geck_race": "Ghoul",
+  "topics": [
+    {
+      "topic": "FSRotfaceDontGiveCap",
+      "topic_text": "Sorry, maybe another time.",
+      "emotion": "Neutral 50",
+      "response_text": "I understand. Well, have a good day.",
+      "index": "1"
+    },
+    {
+      "topic": "FSRotfaceGiveCap",
+      "topic_text": "Sure, here you go.",
+      "emotion": "Neutral 50",
+      "response_text": "The first thing you should know is that Freeside is run by a pack of yahoos that call themselves the Kings.",
+      "index": "2"
+    },
+    {
+      "topic": "FSRotfaceSoliciting",
+      "topic_text": "Are you soliciting me?",
+      "emotion": "Neutral 50",
+      "response_text": "Ha ha ha, oh that's rich. You're not exactly my type, no offense. No, I meant I could give you a tip. Earn my money, so to speak.",
+      "index": "63"
+    },
+    {
+      "topic": "FSRotfaceWhatKindofTip",
+      "topic_text": "What kind of tip?",
+      "emotion": "Neutral 50",
+      "response_text": "You look like you're new around here, so I'm sure I know all sorts of things you'd find useful. If not, well, it's only a cap.",
+      "index": "64"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "Hey buddy, spare a cap? I can make it worth your while.",
+      "index": "66"
+    },
+    {
+      "topic": "VFreeformFreesideVFSRotfaceTopic000{Ask if he's heard about NCR soldiers in the area.}",
+      "topic_text": "You know anything about NCR soldiers prowling the area?",
+      "emotion": "Neutral 50",
+      "response_text": "Could be. Could be. That kind of information doesn't come cheap, though. I'll need at least 150 caps for this one.",
+      "index": "91"
+    },
+    {
+      "topic": "VFreeformFreesideVFSRotfaceTopic001",
+      "topic_text": "You drive a hard bargain. Here you go.",
+      "emotion": "Neutral 50",
+      "response_text": "Much appreciated. The guys you're talking about have been spotted near the old train station in the northwest.",
+      "index": "93"
+    },
+    {
+      "topic": "VFreeformFreesideVFSRotfaceTopic002{Barter check >= 25}",
+      "topic_text": "If you ever want me to buy another tip from you, that price'll come down.",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] You're a scoundrel. I'll let it go for 50, but no lower.",
+      "index": "95"
+    },
+    {
+      "topic": "VFreeformFreesideVFSRotfaceTopic003",
+      "topic_text": "Done.",
+      "emotion": "Neutral 50",
+      "response_text": "Much appreciated. The guys you're talking about have been spotted near the old train station in the northwest.",
+      "index": "97"
+    },
+    {
+      "topic": "VFreeformFreesideVFSRotfaceTopic004",
+      "topic_text": "Sorry, too rich for me.",
+      "emotion": "Neutral 50",
+      "response_text": "Then I can't help you with that, but I do have lots of other tips that come much, much cheaper...",
+      "index": "99"
+    },
+    {
+      "topic": "VFreeformFreesideVFSRotfaceTopic005",
+      "topic_text": "Do you know the password?",
+      "emotion": "Neutral 50",
+      "response_text": "It'll cost you 250 caps.",
+      "index": "100"
+    },
+    {
+      "topic": "VFreeformFreesideVFSRotfaceTopic006{Barter >= 50}",
+      "topic_text": "I've already paid good money for this information. A hundred more caps, no more.",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] Fine, fine. One hundred it is, but only because you're a good customer.",
+      "index": "101"
+    },
+    {
+      "topic": "VFreeformFreesideVFSRotfaceTopic007",
+      "topic_text": "Fine.",
+      "emotion": "Neutral 50",
+      "response_text": "Much appreciated. The guys you're talking about have been spotted near the old train station in the northwest.",
+      "index": "103"
+    },
+    {
+      "topic": "VFreeformFreesideVFSRotfaceTopic008",
+      "topic_text": "Here you go.",
+      "emotion": "Neutral 50",
+      "response_text": "Wow, I might have to head down to the Wrangler tonight with all these caps weighing me down.",
+      "index": "105"
+    },
+    {
+      "topic": "VFreeformFreesideVFSRotfaceTopic009",
+      "topic_text": "Thanks, I'll go check it out.",
+      "emotion": "Neutral 50",
+      "response_text": "Good luck!",
+      "index": "106"
+    },
+    {
+      "topic": "VFreeformFreesideVFSRotfaceTopic012",
+      "topic_text": "Whoa, now. Watch where you point that thing. It's dangerous.",
+      "emotion": "Neutral 50",
+      "response_text": "Dangerous... I like that. Maybe it's time people starting being afraid of me rather than the other way around.",
+      "index": "107"
+    },
+    {
+      "topic": "VFreeformFreesideVFSRotfaceTopic013",
+      "topic_text": "Sorry, too rich for me.",
+      "emotion": "Neutral 50",
+      "response_text": "Then I can't help you with that, but I do have lots of other tips that come much, much cheaper...",
+      "index": "110"
+    },
+    {
+      "topic": "VFreeformFreesideVFSRotfaceTopic015",
+      "topic_text": "{ Holder for Rotface extra lines }",
+      "emotion": "Neutral 50",
+      "response_text": "Hey, listen, I'd love to sell you some more info, but you've tapped everything I've heard lately.",
+      "index": "111"
+    },
+    {
+      "topic": "VFreeformFreesideVFSRotfaceTopic016",
+      "topic_text": "Yeah, it looks great.",
+      "emotion": "Neutral 50",
+      "response_text": "Exactly what I was thinking. It's nice to have a little style, you know?",
+      "index": "118"
+    },
+    {
+      "topic": "VFreeformFreesideVFSRotfaceTopic017",
+      "topic_text": "It's not exactly what I would have bought for myself.",
+      "emotion": "Neutral 50",
+      "response_text": "Oh yeah, what would you have gotten?",
+      "index": "121"
+    },
+    {
+      "topic": "VFreeformFreesideVFSRotfaceTopic018",
+      "topic_text": "Good for you. No one should have to be afraid all the time.",
+      "emotion": "Neutral 50",
+      "response_text": "Unfortunately, it comes with the territory around here. But being afraid sucks, no doubt about it.",
+      "index": "122"
+    },
+    {
+      "topic": "VFreeformFreesideVFSRotfaceTopic019",
+      "topic_text": "You look like an idiot.",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah, it does look pretty sweet, doesn't{it}i- hey, screw you! Who asked you anyway? The crap I put up with...",
+      "index": "126"
+    },
+    {
+      "topic": "VFreeformFreesideVFSRotfaceTopic020",
+      "topic_text": "Probably a weapon, given how dangerous it is around here.",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah... that's a good idea... no sense making money and waiting for someone to just come and take it, right?",
+      "index": "127"
+    },
+    {
+      "topic": "VFreeformFreesideVFSRotfaceTopic021",
+      "topic_text": "I'd have saved the money, so I could someday get the hell out of here.",
+      "emotion": "Neutral 50",
+      "response_text": "Hmmm... you're a long-term thinker, man. I like that. You might be on to something there.",
+      "index": "128"
+    },
+    {
+      "topic": "VFreeformFreesideVFSRotfaceTopic022",
+      "topic_text": "I'd have given the money away.",
+      "emotion": "Neutral 50",
+      "response_text": "...Really? Wow, it never occurred to me to actually give the money away. Do people really do things like that?{Long pause at the beginning as he's trying to decide if he heard the player right.}",
+      "index": "129"
+    },
+    {
+      "topic": "VFreeformFreesideVFSRotfaceTopic023",
+      "topic_text": "Now you'll get some respect. You should give some hell to the people that used to push you around.",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah... yeah, that's a good idea. They'll learn that shouldn't have messed with me. Just wait till they get what's coming to them!",
+      "index": "130"
+    },
+    {
+      "topic": "VFreeformFreesideVFSRotfaceTopic024",
+      "topic_text": "No, you could make a real difference.",
+      "emotion": "Neutral 50",
+      "response_text": "You really think so, pal? I'll start looking into it. I bet I can help a lot of people around here.",
+      "index": "131"
+    },
+    {
+      "topic": "VFreeformFreesideVFSRotfaceTopic025",
+      "topic_text": "Freeside's problems are too big for you to have much impact.",
+      "emotion": "Neutral 50",
+      "response_text": "You're probably right. This place has been going downhill for a long time. Maybe I could start over somewhere else.",
+      "index": "132"
+    },
+    {
+      "topic": "VFreeformFreesideVFSRotfaceTopic026",
+      "topic_text": "You believed that crap I said about giving the money away?",
+      "emotion": "Neutral 50",
+      "response_text": "What? N-No, I knew you were just kidding. Ha ha. You're a funny one, all right.",
+      "index": "136"
+    },
+    {
+      "topic": "VFreeformFreesideVFSRotfaceTopic027",
+      "topic_text": "I go places all the time. It's actually pretty easy to just pick up and leave.",
+      "emotion": "Neutral 50",
+      "response_text": "That's true, you seem to always be on the move and it seems to be working out for you pretty well.",
+      "index": "137"
+    },
+    {
+      "topic": "VFreeformFreesideVFSRotfaceTopic028",
+      "topic_text": "You wouldn't last ten seconds out in the waste.",
+      "emotion": "Neutral 50",
+      "response_text": "That's a hell of a thing to say. Build up a man's hopes, then dash them in front of him.",
+      "index": "139"
+    },
+    {
+      "topic": "VFreeformFreesideVFSRotfaceTopic029",
+      "topic_text": "Sure, but what about this place? Isn't it your home?",
+      "emotion": "Neutral 50",
+      "response_text": "This place is a shithole, but yeah, it's home. I've lived here all my life. I'd be leaving a piece of myself behind if I left.",
+      "index": "141"
+    },
+    {
+      "topic": "VFreeformFreesideVFSRotfaceTopic030",
+      "topic_text": "I'm sorry. Sorry you're such a prissy asshole.",
+      "emotion": "Neutral 50",
+      "response_text": "You're a real piece of work, you know that?",
+      "index": "144"
+    },
+    {
+      "topic": "VFreeformFreesideVFSRotfaceTopic031",
+      "topic_text": "I'm sorry. I was out of line before.",
+      "emotion": "Neutral 50",
+      "response_text": "It's cool. I'm just a little touchy about people making fun of me, especially smoothskins. But you're not all bad. Take the Followers, for example.",
+      "index": "145"
+    },
+    {
+      "topic": "VFreeformFreesideVFSRotfaceTopic032",
+      "topic_text": "I've already forgotten it.",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah, I bet you have. Not important enough for you to remember, huh?",
+      "index": "148"
+    },
+    {
+      "topic": "VFreeformFreesideVFSRotfaceTopic033",
+      "topic_text": "Very classy.",
+      "emotion": "Neutral 50",
+      "response_text": "You said it. With these threads, people are finally going to start noticing me.",
+      "index": "149"
+    },
+    {
+      "topic": "VFreeformFreesideVFSRotfaceTopic034",
+      "topic_text": "As good as a ghoul in a suit can look.",
+      "emotion": "Neutral 50",
+      "response_text": "Fuck you, human. We don't all share your wonderful complexion. Some of us have to make do, you know?",
+      "index": "150"
+    },
+    {
+      "topic": "VFreeformFreesideVFSRotfaceTopic035",
+      "topic_text": "I don't care. Do you have any new info?",
+      "emotion": "Neutral 50",
+      "response_text": "Yeesh, you're just all business, aren't you? Well, I like how I look, and that's what's important. Though it'd be nice if other people did too.{Emphasis on the first \"I\" in \"I like how I look\". Also, the last sentence is said quickly and slightly under his breath.}",
+      "index": "153"
+    },
+    {
+      "topic": "VFreeformFreesideVFSRotfaceTopic036",
+      "topic_text": "Sure. What is it?",
+      "emotion": "Neutral 50",
+      "response_text": "I don't want to mention it out in plain sight like this. You never know who might be listening. Follow me.",
+      "index": "154"
+    },
+    {
+      "topic": "VFreeformFreesideVFSRotfaceTopic037",
+      "topic_text": "No right now. I'm busy.",
+      "emotion": "Neutral 50",
+      "response_text": "Well, don't wait too long. What I've got is something you'd need to act on, quick.",
+      "index": "155"
+    },
+    {
+      "topic": "VFreeformFreesideVFSRotfaceTopic038",
+      "topic_text": "Don't shoot! Here you go.",
+      "emotion": "Neutral 50",
+      "response_text": "Wow, I didn't think it would be this easy. I should have done this years ago. Guess I'll be going then.",
+      "index": "156"
+    },
+    {
+      "topic": "VFreeformFreesideVFSRotfaceTopic039",
+      "topic_text": "Why are you doing this?",
+      "emotion": "Neutral 50",
+      "response_text": "Man, I'm tired of scrounging for caps from ungrateful idiots like you. It's past time I moved on to bigger and better things.",
+      "index": "158"
+    },
+    {
+      "topic": "VFreeformFreesideVFSRotfaceTopic040",
+      "topic_text": "I'm not giving you my caps.",
+      "emotion": "Neutral 50",
+      "response_text": "Then you give me no choice.",
+      "index": "160"
+    },
+    {
+      "topic": "VFreeformFreesideVFSRotfaceTopic041",
+      "topic_text": "I have a better idea. Why don't I just take all my caps back from your corpse?",
+      "emotion": "Neutral 50",
+      "response_text": "You're welcome to try.",
+      "index": "161"
+    }
+  ],
+  "conversation": [],
+  "combat": []
+}

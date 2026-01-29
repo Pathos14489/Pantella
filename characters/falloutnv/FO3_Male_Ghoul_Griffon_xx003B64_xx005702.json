@@ -1,0 +1,460 @@
+{
+  "name": "Griffon",
+  "url": "/wiki/Griffon",
+  "dialogue_name": "DLC03Griffon.txt",
+  "dialogue_url": "/wiki/DLC03Griffon.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "xx003B64",
+  "ref_id": "xx005702",
+  "editor_id": "DLC03Griffon",
+  "location": "Underworld",
+  "location_url": "/wiki/Underworld",
+  "descriptions": [
+    "Griffon is a ghoul resident of the Underworld and a conman hawking the fake Aqua Cura within the Museum of History in the Capital Wasteland in the Fallout 3 add-on Broken Steel.",
+    "An entrepreneur of dubious morals, after the Lone Wanderer reactivated Project Purity with the help of the Brotherhood of Steel in 2277, Griffon cooked up a scheme revolving around purchasing the bottled Aqua Pura and stashing it away to sell it later to those the Brotherhood refuses to barter with, such as raiders, slavers, the Brotherhood Outcasts, and others. Seeing a way to double the profit, he also emptied some bottles and filled them with irradiated water to sell to ghouls in Underworld, claiming that his \"Aqua Cura\" could help reverse the ghoul condition, a dubious claim Griffon supports with the \"evidence\" that he himself is looking pretty healthy for a ghoul. In reality, his head of hair is actually a wig he found in the Museum Authority stock room. among other extraordinary effects.",
+    "Griffon appears only in the Fallout 3 add-on Broken Steel.",
+    "Griffon's character and style of salesmanship evoke 19th century snake-oil peddlers, complete with the large-covered traveling wagon, big flashy banner, set on a stage and spreading fraudulent claims over the \"miracles\" his product can perform."
+  ],
+  "race": "Ghoul",
+  "gender": "Male",
+  "affiliation": "Ghoul guard",
+  "role": "Aqua Curasalesman",
+  "detailed_location": "Museum of HistoryMuseum Authority Building",
+  "voice_actor": "Mike Rosson",
+  "special": {
+    "Strength": 4,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 7,
+    "Intelligence": 5,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "level": "10",
+  "tag_skills": [
+    {
+      "Barter:": "79"
+    },
+    {
+      "Small Guns:": "77"
+    },
+    {
+      "Sneak:": "79"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Neutral",
+  "voice_type": "MaleGenericGhoulDC",
+  "geck_race": "Ghoul",
+  "topics": [
+    {
+      "topic": "DLC03AudioHolotapesWQ02GriffonExplains",
+      "topic_text": "DLC03AudioHolotapesWQ02GriffonExplains",
+      "emotion": "Neutral 50",
+      "response_text": "This is Griffon recording. All you clowns listen up. I'm leaving you in charge of the bottling operation while I'm away doing my thing at Underworld.",
+      "index": "1"
+    },
+    {
+      "topic": "DLC03WQ02BuyBottle",
+      "topic_text": "I might like a bottle of Aqua Cura. How much are you selling them for?",
+      "emotion": "Happy 50",
+      "response_text": "Well friend, how much would you be willing to pay? For such an AMAZING product as the Amazing Aqua Cura?{enthusiastic snake oil sales pitch}",
+      "index": "7"
+    },
+    {
+      "topic": "DLC03WQ02End",
+      "topic_text": "I've seen your bottling operation. The jig is up.",
+      "emotion": "Fear 100",
+      "response_text": "My what now? My bottling operation? Oh you mean where I add my secret ingredient to the Aqua Pura.{worried his con is discovered}",
+      "index": "11"
+    },
+    {
+      "topic": "DLC03WQ02EndBlackmail",
+      "topic_text": "That's NOT Aqua Pura. If you want my silence, you'll have to buy it.",
+      "emotion": "Anger 50",
+      "response_text": "Why you... I ought to... <Grumble>{angry}",
+      "index": "12"
+    },
+    {
+      "topic": "DLC03WQ02EndBlackmail1",
+      "topic_text": "We split the profits 50/50 or this will end badly for you.",
+      "emotion": "Disgust 50",
+      "response_text": "Fine. 50/50 it is. But only of the profits. I still have to recoup my initial investment. You come back once a week, and I'll give you your share.{annoyed he has to share}",
+      "index": "16"
+    },
+    {
+      "topic": "DLC03WQ02EndBlackmail2",
+      "topic_text": "Fine, 20/80 in your favor. But if you stiff me, you'll regret it.",
+      "emotion": "Disgust 50",
+      "response_text": "Fine. 20/80 it is. But only of the profits. I still have to recoup my initial investment. You come back once a week, and I'll give you your share.{annoyed he has to share}",
+      "index": "19"
+    },
+    {
+      "topic": "DLC03WQ02EndBlackmail3",
+      "topic_text": "Forget all that. Just give me 300 caps this once, and we'll call it even.",
+      "emotion": "Surprise 50",
+      "response_text": "Hmm. That's pretty steep...{considering if he's being ripped off}",
+      "index": "20"
+    },
+    {
+      "topic": "DLC03WQ02EndConfess",
+      "topic_text": "Either you tell them, or I tell them. Your call.",
+      "emotion": "Surprise 50",
+      "response_text": "I can't believe it... I have a good thing going here... Why mess that up for me? What have I done to you?{shocked and annoyed}",
+      "index": "23"
+    },
+    {
+      "topic": "DLC03WQ02EndReal",
+      "topic_text": "Look. I won't expose your lies... but only if you start selling real Aqua Pura.",
+      "emotion": "Disgust 50",
+      "response_text": "That's seriously going to cut into my profits... but perhaps you're right.{annoyed but resigned}",
+      "index": "27"
+    },
+    {
+      "topic": "DLC03WQ02GreetingA1",
+      "topic_text": "Is that any different from regular Aqua Pura?",
+      "emotion": "Fear 100",
+      "response_text": "Why? Have you heard otherwise?{suddenly worried his scam is found out}",
+      "index": "31"
+    },
+    {
+      "topic": "DLC03WQ02GreetingA1a",
+      "topic_text": "No. I mean, you just changed the name? Or did you do something to it?",
+      "emotion": "Neutral 50",
+      "response_text": "I changed the name to help Ghouls realize its amazing properties. And, well, just between us...{confidentially, snakeoil salesman confiding in an allyEmphasis on \"amazing\"}",
+      "index": "32"
+    },
+    {
+      "topic": "DLC03WQ02GreetingA1b",
+      "topic_text": "You can get Aqua Pura for free. Why pay for yours?",
+      "emotion": "Sad 50",
+      "response_text": "The Brotherhood doesn't deliver to Underworld, you know. There's shipping expenses and all that. Not to mention sneaking past Super Mutants.{defensively explaining}",
+      "index": "34"
+    },
+    {
+      "topic": "DLC03WQ02GreetingA2",
+      "topic_text": "You got a nice head of hair. For a Ghoul, I mean.",
+      "emotion": "Happy 100",
+      "response_text": "Aha! That's right my good fellow. The Amazing Aqua Cura will rescue, restore, and regrow your hair back from premature balding.{enthusiastic, snake-oil sales pitch}",
+      "index": "36"
+    },
+    {
+      "topic": "DLC03WQ02GreetingA3",
+      "topic_text": "Tell you what. I'll trade you a piece of blue sky for a bottle.",
+      "emotion": "Fear 50",
+      "response_text": "Ha ha ha.{nervous laughter}",
+      "index": "42"
+    },
+    {
+      "topic": "DLC03WQ02GreetingB1",
+      "topic_text": "Got a free sample I could try?",
+      "emotion": "Surprise 50",
+      "response_text": "A FREE sample you say? Hmm... Well... I normally don't do this... but, for YOU, for this ONE TIME ONLY, a VERY special VIP promotional offer...{snake oil salesmen}",
+      "index": "45"
+    },
+    {
+      "topic": "DLC03WQ02GreetingB2",
+      "topic_text": "How much are you selling them for?",
+      "emotion": "Happy 50",
+      "response_text": "Well friend, how much would you be willing to pay? For such an AMAZING product as the Amazing Aqua Cura?{enthusiastic snake oil sales pitch}",
+      "index": "51"
+    },
+    {
+      "topic": "DLC03WQ02GreetingB2a",
+      "topic_text": "I don't know, 40 caps?",
+      "emotion": "Surprise 50",
+      "response_text": "No, sir. Try again. Lower!{extremely enthusiastic, asking to guess the LOW LOW price!}",
+      "index": "54"
+    },
+    {
+      "topic": "DLC03WQ02GreetingB2b",
+      "topic_text": "Do I really have to guess?",
+      "emotion": "Neutral 50",
+      "response_text": "Why yes! You can't imagine how low the special introductory price is. Go on, just guess. You'll never believe it!",
+      "index": "64"
+    },
+    {
+      "topic": "DLC03WQ02GreetingB2c",
+      "topic_text": "I'm done playing your guessing game.",
+      "emotion": "Disgust 50",
+      "response_text": "Fine. You're blocking all the real customers anyway. Go on. Get out of here.{annoyed}",
+      "index": "68"
+    },
+    {
+      "topic": "DLC03WQ02GreetingB2Poor",
+      "topic_text": "Well, if I had 10 caps, I might buy a bottle.",
+      "emotion": "Sad 50",
+      "response_text": "Oh. I didn't realize you were so poor. Well, tough break kid. Maybe you can find someone who can spot you the caps?{disappointed}",
+      "index": "69"
+    },
+    {
+      "topic": "DLC03WQ02GreetingB3",
+      "topic_text": "I think I'll pass. Thanks anyway.",
+      "emotion": "Surprise 50",
+      "response_text": "Oh really? I'm sure you'll change your mind after you discover how AMAZING the product really is! Stick around, I give regular demonstrations.{trying to keep a potential customer, snake oil salesmen}",
+      "index": "71"
+    },
+    {
+      "topic": "DLC03WQ02GreetingNotInterested",
+      "topic_text": "Look, I'm not really interested in buying your Aqua Cura.",
+      "emotion": "Surprise 100",
+      "response_text": "Wh-ell, w-hell, well... if you aren't here to buy the Amazing Aqua Cura, what are you here for?{blustering exaggerated shock}",
+      "index": "72"
+    },
+    {
+      "topic": "DLC03WQ02GreetingPoor",
+      "topic_text": "I don't quite have 10 caps.",
+      "emotion": "Disgust 50",
+      "response_text": "Well then I presume you won't mind if I focus on the customers who actually brought money with them? Have a nice day, and good luck finding a job.{not going to waste his time}",
+      "index": "73"
+    },
+    {
+      "topic": "DLC03WQ02GreetingPoorCanPay",
+      "topic_text": "Sure. Here's 10 caps. Give me a bottle of the \"Amazing\" Aqua Cura.",
+      "emotion": "Happy 100",
+      "response_text": "Right you are! Pleasure doing business with you, sir. Come again!{extremely enthusiastic snake oils salesmen}",
+      "index": "74"
+    },
+    {
+      "topic": "DLC03WQ02Irradiated",
+      "topic_text": "Pip-Boy analysis shows that your Aqua Cura is irradiated. Interesting...",
+      "emotion": "Surprise 50",
+      "response_text": "Uhhhh... What? That doohickey on your wrist says the water's irradiated? That's a pretty fancy device if it can know something like that...{nervous his scam is uncovered}",
+      "index": "76"
+    },
+    {
+      "topic": "DLC03WQ02Irradiated1",
+      "topic_text": "You're clearly up to something. There's no denying it. Talk. Now!",
+      "emotion": "Disgust 50",
+      "response_text": "Oh alright, alright. But if you start blabbing, I've got some buddies with itching trigger fingers...{annoyed his scam was found out}",
+      "index": "79"
+    },
+    {
+      "topic": "DLC03WQ02Irradiated2",
+      "topic_text": "There's nothing wrong with my Pip-Boy. You sir, are a liar.",
+      "emotion": "Disgust 100",
+      "response_text": "Ha! I'd like to see you try and prove that...{arrogantly daring then cutting himself shortemphasis on \"prove\"}",
+      "index": "83"
+    },
+    {
+      "topic": "DLC03WQ02Irradiated3",
+      "topic_text": "Relax. I don't care. Take these morons for all their worth. I'm just curious.",
+      "emotion": "Surprise 50",
+      "response_text": "It's true, I got a thing going.{leveling with a fellow criminal}",
+      "index": "86"
+    },
+    {
+      "topic": "DLC03WQ02Location",
+      "topic_text": "Care to tell me where this water operation of yours is located?",
+      "emotion": "Fear 50",
+      "response_text": "No, not really.{nervous and upset he's being questioned}",
+      "index": "94"
+    },
+    {
+      "topic": "DLC03WQ02Source",
+      "topic_text": "I'm curious. Where'd you get all this Aqua Pura?",
+      "emotion": "Fear 100",
+      "response_text": "Really, what's it matter to you anyway?{nervous his scam might be found out}",
+      "index": "96"
+    },
+    {
+      "topic": "DLC03WQ02SourceA1",
+      "topic_text": "I'm not interested in making trouble. I'm just curious where you got the water.",
+      "emotion": "Surprise 50",
+      "response_text": "Alright. But keep your mouth shut about it...{explaining a secret}",
+      "index": "97"
+    },
+    {
+      "topic": "DLC03WQ02SourceA2",
+      "topic_text": "I'd have thought giving Aqua Pura to a Ghoul would seem like a waste.",
+      "emotion": "Anger 50",
+      "response_text": "Huh. I hadn't pegged you as a bigot. My mistake.{offended}",
+      "index": "102"
+    },
+    {
+      "topic": "DLC03WQ02SourceA3",
+      "topic_text": "Just making conversation. I really don't care where you got the stuff.",
+      "emotion": "Surprise 50",
+      "response_text": "Oh. Sorry. I guess I'm just a little sensitive about the question. Some people think giving Aqua Pura to Ghouls is a waste, afterall.{apologizing}",
+      "index": "103"
+    },
+    {
+      "topic": "DLC03WQ02WigTopic",
+      "topic_text": "Who does your hair? It looks rather similar to mine, doesn't it?",
+      "emotion": "Fear 50",
+      "response_text": "Aheh. Um... yeah, look at that. We practically have the same hair cut. What are the chances of that? Aheh.{extremely nervous}",
+      "index": "105"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Surprise 25",
+      "response_text": "I don't have your money yet. Once a week, remember?{somewhat surprised}",
+      "index": "106"
+    },
+    {
+      "topic": "SpeechChallengeFailure",
+      "topic_text": "SpeechChallengeFailure",
+      "emotion": "Sad 100",
+      "response_text": "Oh I'm sorry! I'm fresh out of free samples. Try again tomorrow!{lying, snakeoil sales man}",
+      "index": "123"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "DLC03WQ02Confession",
+      "topic_text": "DLC03WQ02Confession",
+      "emotion": "Fear 100",
+      "response_text": "Ah... my  um... LOYAL customers and FRIENDS!{nervous con-man, talking his way out of retribution}",
+      "index": "130"
+    },
+    {
+      "topic": "DLC03WQ02Pitch",
+      "topic_text": "DLC03WQ02GriffonSalesPitch",
+      "emotion": "Happy 100",
+      "response_text": "Come one, come all! Taste the smooth succulent sensation of radiation reversing - Aqua Cura! - It's simply Amazing!{enthusiastic, snake oil sales pitch}",
+      "index": "148"
+    },
+    {
+      "topic": "DLC03WQ02Pitch01",
+      "topic_text": "DLC03WQ02GriffonSalesPitch1",
+      "emotion": "Happy 100",
+      "response_text": "That's right! With each swig of pure Aqua Cura, you're one step closer to being your old self again!{enthusiastic snake oil sales pitch}",
+      "index": "168"
+    },
+    {
+      "topic": "DLC03WQ02Pitch02",
+      "topic_text": "DLC03WQ02GriffonSalesPitch2",
+      "emotion": "Happy 100",
+      "response_text": "Well fear no longer! Cast your gaze upon my luxurious coiffure. And now you too can get your hair back with the Amazing Aqua Cura!{enthusiastic snake oil sales pitch}",
+      "index": "169"
+    },
+    {
+      "topic": "DLC03WQ02Pitch03",
+      "topic_text": "DLC03WQ02GriffonSalesPitch3",
+      "emotion": "Happy 100",
+      "response_text": "Try the Amazing Aqua Cura! Guaranteed to have you feeling better in seven days or less, or your money back!{enthusiastic snake oil sales pitch}",
+      "index": "171"
+    },
+    {
+      "topic": "DLC03WQ02Pitch04",
+      "topic_text": "DLC03WQ02GriffonSalesPitch4",
+      "emotion": "Happy 100",
+      "response_text": "Simply sign up for our \"Friends and Family Referral Program\" and get deep discounts on bulk orders of the Amazing Aqua Cura!{enthusiastic snake oil sales pitch}",
+      "index": "172"
+    },
+    {
+      "topic": "DLC03WQ02Pitch05",
+      "topic_text": "DLC03WQ02GriffonSalesPitch5",
+      "emotion": "Happy 100",
+      "response_text": "Just drink one bottle with every meal, and you'll start seeing the positive effects the very next day. It's that easy.{enthusiastic snake oil sales pitch}",
+      "index": "174"
+    },
+    {
+      "topic": "DLC03WQ02Pitch06",
+      "topic_text": "DLC03WQ02GriffonSalesPitch6",
+      "emotion": "Happy 100",
+      "response_text": "Put your mind at rest. Heat up a cup of Aqua Cura before bedtime, and sail away on sweet dreams of a brighter future.{enthusiastic snake oil sales pitch}",
+      "index": "176"
+    },
+    {
+      "topic": "DLC03WQ02Pitch07",
+      "topic_text": "DLC03WQ02GriffonSalesPitch7",
+      "emotion": "Happy 100",
+      "response_text": "And you know what? THEY are ALREADY enjoying the many benefits that Aqua Cura brings.{enthusiastic snake oil sales pitch (THEY = the audience's neighbors)}",
+      "index": "178"
+    },
+    {
+      "topic": "DLC03WQ02Pitch08",
+      "topic_text": "DLC03WQ02GriffonSalesPitch8",
+      "emotion": "Happy 100",
+      "response_text": "That's right, it removes stains as well as headaches! The Amazing Aqua Cura!{enthusiastic snake oil sales pitch}",
+      "index": "180"
+    },
+    {
+      "topic": "DLC03WQ02Pitch09",
+      "topic_text": "DLC03WQ02GriffonSalesPitch9",
+      "emotion": "Happy 100",
+      "response_text": "Rinse it out with the Amazing Aqua Cura and you'll instantly SEE why it's THE ONLY product you'll ever need again.{(enthusiastic) \"SEE\" is a pun, because you are rinsing out your eye -- enthusiastic snake oil sales pitch}",
+      "index": "181"
+    },
+    {
+      "topic": "DLC03WQ02Pitch10",
+      "topic_text": "DLC03WQ02GriffonSalesPitch10",
+      "emotion": "Happy 100",
+      "response_text": "Take a clean bandage, soak it in Aqua Cura, wrap it around your wound, and see your skin restore itself in just minutes! Guaranteed!{enthusiastic snake oil sales pitch}",
+      "index": "182"
+    },
+    {
+      "topic": "DLC03WQ02Pitch11",
+      "topic_text": "DLC03WQ02GriffonSalesPitch11",
+      "emotion": "Happy 100",
+      "response_text": "Slip a little Aqua Cura in her drink, be the next man she lays eyes on, and she'll be sure to fall in love with you.{enthusiastic snake oil sales pitch}",
+      "index": "183"
+    },
+    {
+      "topic": "DLC03WQ02Pitch12",
+      "topic_text": "DLC03WQ02GriffonSalesPitch12",
+      "emotion": "Happy 100",
+      "response_text": "Studies have proven that 10 out of 10 drinkers of Aqua Cura do 50% better on all standardized tests! It's a scientific fact!{enthusiastic snake oil sales pitch}",
+      "index": "186"
+    },
+    {
+      "topic": "DLC03WQ02Pitch13",
+      "topic_text": "DLC03WQ02GriffonSalesPitch13",
+      "emotion": "Happy 100",
+      "response_text": "Drink Aqua Cura regularly and put even Grognak to shame! Men will fear you, women will love you. Guaranteed!{enthusiastic snake oil sales pitch}",
+      "index": "187"
+    },
+    {
+      "topic": "DLC03WQ02Pitch14",
+      "topic_text": "DLC03WQ02GriffonSalesPitch14",
+      "emotion": "Happy 100",
+      "response_text": "Scientific tests conclude, beyond a reasonable doubt, that rinsing out your ears each morning with Aqua Cura, guarantees your hearing will come back!{enthusiastic snake oil sales pitch}",
+      "index": "188"
+    },
+    {
+      "topic": "DLC03WQ02Pitch15",
+      "topic_text": "DLC03WQ02GriffonSalesPitch15",
+      "emotion": "Happy 100",
+      "response_text": "You could be suffering from a common ailment, one of the many cured by the Amazing Aqua Cura!{enthusiastic snake oil sales pitch}",
+      "index": "190"
+    },
+    {
+      "topic": "DLC03WQ02Pitch16",
+      "topic_text": "DLC03WQ02GriffonSalesPitch16",
+      "emotion": "Happy 100",
+      "response_text": "Brush your teeth morning, afternoon, and evening, rinsing religiously with Aqua Cura, and find your breath as sweet as a spring time breeze!{enthusiastic snake oil sales pitch}",
+      "index": "193"
+    },
+    {
+      "topic": "DLC03WQ02Pitch17",
+      "topic_text": "DLC03WQ02GriffonSalesPitch17",
+      "emotion": "Happy 100",
+      "response_text": "Now, with the Amazing Aqua Cura, your days of droopy skin and gaping sores are over!{enthusiastic snake oil sales pitch}",
+      "index": "194"
+    },
+    {
+      "topic": "GOODBYE",
+      "topic_text": "I have to go now.",
+      "emotion": "Surprise 50",
+      "response_text": "Come back before supplies run out!{enthusiastic snake oil salesman}",
+      "index": "197"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Happy 100",
+      "response_text": "Step right up!{enthusiastic snake oil salesman}",
+      "index": "199"
+    }
+  ],
+  "combat": []
+}

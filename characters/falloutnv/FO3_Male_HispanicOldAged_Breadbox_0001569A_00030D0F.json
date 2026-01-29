@@ -1,0 +1,192 @@
+{
+  "name": "Breadbox",
+  "url": "/wiki/Breadbox",
+  "dialogue_name": "Breadbox.txt",
+  "dialogue_url": "/wiki/Breadbox.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "0001569A",
+  "ref_id": "00030D0F",
+  "editor_id": "Breadbox",
+  "location": "Slave house",
+  "location_url": "/wiki/Slave_house",
+  "descriptions": [
+    "Breadbox is a slave in Paradise Falls in 2277.",
+    "Breadbox is the oldest slave in the camp, having been enslaved for over 30 years.",
+    "He lives in the adult pen with other enslaved individuals, including Jeanette, Bleak, and Bronson.",
+    "Breadbox can be heard giving advice to Bronson, encouraging him to take care of himself, to think as optimistically as possible about his capture, and warning him that alcohol will not solve and only exacerbate his problems.",
+    "Breadbox is a slave locked up in the Paradise Falls slave pen, and can be found there the entire day. If one is able to open the gate and free the other slaves, Breadbox is the only one that will not flee, making him the only slave that can only be found at the pens unless killed."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "role": "Slave",
+  "detailed_location": "Slave house,Paradise Falls",
+  "voice_actor": "Paul Eiding",
+  "special": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 5,
+    "Intelligence": 5,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "mod_special_values": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 6,
+    "Charisma": 5,
+    "Intelligence": 5,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "level": "1",
+  "misc_skills": [
+    {
+      "Hit Points:": "70(75)"
+    },
+    {
+      "Critical Chance:": "5%"
+    },
+    {
+      "Unarmed Dam.:": "0.75"
+    },
+    {
+      "Poison Resist.:": "20%(25%)"
+    },
+    {
+      "Rad. Resist.:": "8%(10%)"
+    },
+    {
+      "Carry Weight:": "200"
+    },
+    {
+      "Damage Res.:": "5%"
+    }
+  ],
+  "karma": "Good",
+  "geck_race": "HispanicOldAged",
+  "topics": [
+    {
+      "topic": "FFPFSlaveGateIsOpen",
+      "topic_text": "The gate's open. Run for it!",
+      "emotion": "Neutral 50",
+      "response_text": "What? No, I never said that.",
+      "index": "1"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "Oh... hey! What do you need, young fellow?",
+      "index": "3"
+    },
+    {
+      "topic": "PFBreadboxHowAreYou",
+      "topic_text": "Are you okay? You seem a little out of it.",
+      "emotion": "Neutral 50",
+      "response_text": "What? You'll have to speak up!",
+      "index": "6"
+    },
+    {
+      "topic": "PFBreadboxHowAreYou1",
+      "topic_text": "I said: Are you all right?",
+      "emotion": "Neutral 50",
+      "response_text": "I don't know where the clinic is, they don't let us out of the pens, you know?",
+      "index": "7"
+    },
+    {
+      "topic": "PFBreadboxHowAreYou2",
+      "topic_text": "Never mind, you crazy old bastard.",
+      "emotion": "Neutral 50",
+      "response_text": "I still can't hear you!",
+      "index": "10"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "I have to go now.",
+      "emotion": "Neutral 50",
+      "response_text": "Come back if you need something. Not like I'm going anywhere.",
+      "index": "11"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Neutral 50",
+      "response_text": "Oh.... hi!",
+      "index": "12"
+    },
+    {
+      "topic": "PFTalkBleakBreadbox2",
+      "topic_text": "PFTalkBleakBreadbox2",
+      "emotion": "Neutral 50",
+      "response_text": "You're not just getting yourself in trouble here, girl. You need to relax. Work with 'em. It ain't so bad once you adjust. I've been here for almost-",
+      "index": "19"
+    },
+    {
+      "topic": "PFTalkBleakBreadbox4",
+      "topic_text": "PFTalkBleakBreadbox4",
+      "emotion": "Neutral 50",
+      "response_text": "Fine, fine. But when you get your head popped, don't say that I didn't warn you.",
+      "index": "21"
+    },
+    {
+      "topic": "PFTalkBreadboxBleak1",
+      "topic_text": "PFTalkBreadboxBleak1",
+      "emotion": "Neutral 50",
+      "response_text": "Whatever you're up to, girl, I want nothing to do with it. I'm too old to be involved in these crazy escape plans of yours.",
+      "index": "23"
+    },
+    {
+      "topic": "PFTalkBreadboxBleak3",
+      "topic_text": "PFTalkBreadboxBleak3",
+      "emotion": "Neutral 50",
+      "response_text": "I'm fine right where I am, Bleak. There's more to this life than always fighting to change things. Sometimes, there is greater peace in acceptance.",
+      "index": "25"
+    },
+    {
+      "topic": "PFTalkBreadboxBleak5",
+      "topic_text": "PFTalkBreadboxBleak5",
+      "emotion": "Neutral 50",
+      "response_text": "I don't need help, Bleak. But thank you.",
+      "index": "27"
+    },
+    {
+      "topic": "PFTalkBreadboxBronson1",
+      "topic_text": "PFTalkBreadboxBronson1",
+      "emotion": "Neutral 50",
+      "response_text": "Now that's an odd question. Why would you want to know about that?",
+      "index": "29"
+    },
+    {
+      "topic": "PFTalkBreadboxBronson3",
+      "topic_text": "PFTalkBreadboxBronson3",
+      "emotion": "Neutral 50",
+      "response_text": "Well, you know how they like to mess with you? They used to mess with me too. \"See what fits inside a breadbox\". It's something I'd rather forget.",
+      "index": "31"
+    },
+    {
+      "topic": "PFTalkBronsonBreadbox2",
+      "topic_text": "PFTalkBronsonBreadbox2",
+      "emotion": "Neutral 50",
+      "response_text": "It's hard here, boy, trust me. I been a slave for thirty years. But you need to find your peace inside yourself, not at the bottom of a bottle.",
+      "index": "33"
+    },
+    {
+      "topic": "PFTalkBronsonBreadbox4",
+      "topic_text": "PFTalkBronsonBreadbox4",
+      "emotion": "Neutral 50",
+      "response_text": "I'm sorry that you think that way. I hope that one day, you come around. I'm here to help you if that happens.",
+      "index": "35"
+    }
+  ],
+  "combat": []
+}

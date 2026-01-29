@@ -1,0 +1,318 @@
+{
+  "name": "Chris Haversam",
+  "url": "/wiki/Chris_Haversam",
+  "dialogue_name": "ChrisHaversam.txt",
+  "dialogue_url": "/wiki/ChrisHaversam.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000810E9",
+  "ref_id": "000840C8",
+  "editor_id": "ChrisHaversam",
+  "location": "REPCONN Test Site",
+  "location_url": "/wiki/REPCONN_Test_Site",
+  "descriptions": [
+    "Chris Haversam is an engineer living in the REPCONN test site in 2281.",
+    "Chris Haversam grew up in Vault 34 and was assigned as the vault reactor engineer due to his technical aptitude (and preference for machines that don't shoot people, which made him a preferred pick over fellow engineers Houser and Mitchell.) He believed the radiation he would absorb from his many visits to the vault reactor would turn him into a ghoul, although most of the management dismissed his claims as neurotic.",
+    "Eventually, his hair began falling out due to natural reasons, but Chris insisted he was becoming a ghoul due to radiation from the Vault reactor and subsequently left the Vault. The vault descended into chaos shortly after his departure, when the reactor became unstable and began leaking dangerous radiation, turning most of the residents into actual ghouls.",
+    "Believing himself to be a ghoul, Haversam joined the Bright Brotherhood in 2279.",
+    "Come Fly With Me: Chris sends the Courier to find Isotope-239 igniting agent and thrust control modules so the ghouls' rockets can take off.",
+    "The player character can convince Chris that he is indeed human with a Speech check (50) or with the Black Widow perk, and the rest of the Bright Brotherhood needs to leave him behind. The Courier is given the choice to help him sabotage the rockets so the ghouls die in flight. Alternatively, they can convince Chris not to sabotage the rockets, and he will send them off with no hard feelings before heading for Novac."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Bright BrotherhoodVault 34(formerly)Novac(optional)",
+  "role": "Aerospace engineerMechanicVault dweller (formerly)",
+  "detailed_location": "REPCONN test siteNovac(optional)",
+  "voice_actor": "Sam Riegel",
+  "special": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 2,
+    "Intelligence": 5,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "level": "10",
+  "misc_skills": [],
+  "karma": "Good",
+  "voice_type": "MaleAdult10",
+  "geck_race": "CaucasianOld",
+  "topics": [
+    {
+      "topic": "ChrisHavIntercomGoodbye",
+      "topic_text": "Got it.",
+      "emotion": "Neutral 50",
+      "response_text": "Let's hope you do.",
+      "index": "1"
+    },
+    {
+      "topic": "ChrisHavIntercomUpstairsGoodbye",
+      "topic_text": "Okay.",
+      "emotion": "Neutral 50",
+      "response_text": "Hurry up.",
+      "index": "4"
+    },
+    {
+      "topic": "ChrisHavIntercomWhere",
+      "topic_text": "Where are you located?",
+      "emotion": "Neutral 50",
+      "response_text": "Like I said, find the metal staircase in the big room on the east side of the building. It's where they used to make rockets.",
+      "index": "5"
+    },
+    {
+      "topic": "ChrisHavIntercomWho",
+      "topic_text": "Who are you?",
+      "emotion": "Neutral 50",
+      "response_text": "Who I am doesn't matter, smoothskin. Stop wasting time and get up here.",
+      "index": "7"
+    },
+    {
+      "topic": "ChrisHavLabBetraySabotageNoThe PC talks Chris out of sabotage",
+      "topic_text": "That'd be murder, Chris. And you're no murderer.",
+      "emotion": "Neutral 50",
+      "response_text": "What, you think I'm too stupid to pull it off? I know enough to get their rockets working, don't I? So I can make them fail, too!",
+      "index": "8"
+    },
+    {
+      "topic": "ChrisHavLabBetraySabotageYes",
+      "topic_text": "Come to think of it, sabotage is a great idea.",
+      "emotion": "Neutral 50",
+      "response_text": "Then bring me Sugar Bombs. Three boxes should do the trick. Add those to the fuel mixture and \"Boom!\"",
+      "index": "19"
+    },
+    {
+      "topic": "ChrisHavLabBetraySugarBombs",
+      "topic_text": "I've got some Sugar Bombs.",
+      "emotion": "Neutral 50",
+      "response_text": "I said I need three boxes of Sugar Bombs, not less than three.",
+      "index": "23"
+    },
+    {
+      "topic": "ChrisHavLabGetFuelPC offers to find fuel for rockets",
+      "topic_text": "I'll track down the igniting agent.",
+      "emotion": "Neutral 50",
+      "response_text": "Very well. We don't need a huge amount. Two to three liters should be enough.",
+      "index": "27"
+    },
+    {
+      "topic": "ChrisHavLabGetPartsI'll try to find the parts you need.",
+      "topic_text": "I'll track down the thrust control modules.",
+      "emotion": "Neutral 50",
+      "response_text": "All right. Anything else?",
+      "index": "28"
+    },
+    {
+      "topic": "ChrisHavLabGoodbye",
+      "topic_text": "I need to be going.",
+      "emotion": "Neutral 50",
+      "response_text": "All right. I'll be here, obviously.",
+      "index": "29"
+    },
+    {
+      "topic": "ChrisHavLabGoodbyeSpeech",
+      "topic_text": "Sorry.",
+      "emotion": "Neutral 50",
+      "response_text": "Quiet.",
+      "index": "34"
+    },
+    {
+      "topic": "ChrisHavLabHaveFuelPC Turns in jar of atomic fuel",
+      "topic_text": "I found an entire container of the igniting agent.",
+      "emotion": "Neutral 50",
+      "response_text": "Yes, that's the stuff. And the container's shielding must be intact, or you'd be dead by now.",
+      "index": "36"
+    },
+    {
+      "topic": "ChrisHavLabHaveFuelSouvenirPC hands over one or more souvenirs",
+      "topic_text": "What about this rocket souvenir? The stuff inside glows.",
+      "emotion": "Neutral 50",
+      "response_text": "Yes, that's Isotope-239, all right. And there's enough here to launch the rockets.",
+      "index": "43"
+    },
+    {
+      "topic": "ChrisHavLabHavePartsPC turns in computer parts",
+      "topic_text": "I found the thrust control modules.",
+      "emotion": "Neutral 50",
+      "response_text": "Indeed you did. And they seem to be in excellent condition.",
+      "index": "51"
+    },
+    {
+      "topic": "ChrisHavLabIntercom",
+      "topic_text": "What's the deal with all the rockets down here?",
+      "emotion": "Neutral 50",
+      "response_text": "That's none of your business, smoothskin!",
+      "index": "60"
+    },
+    {
+      "topic": "ChrisHavLabKeepTalking",
+      "topic_text": "I still have questions.",
+      "emotion": "Neutral 50",
+      "response_text": "All right. Go on.",
+      "index": "64"
+    },
+    {
+      "topic": "ChrisHavLabPathetic",
+      "topic_text": "You're pathetic. No wonder they're leaving you behind.",
+      "emotion": "Neutral 50",
+      "response_text": "Leave me alone! Everyone else does!",
+      "index": "65"
+    },
+    {
+      "topic": "ChrisHavLabReadyToHelpPC says he wants to help",
+      "topic_text": "What else do you need?",
+      "emotion": "Neutral 50",
+      "response_text": "To sabotage the rockets, I'll still need a quantity of the igniting agent.",
+      "index": "66"
+    },
+    {
+      "topic": "ChrisHavLabRocketsReady<Play Jason's Speech.>",
+      "topic_text": "That's everything, right? Let the \"Great Journey\" begin.",
+      "emotion": "Neutral 50",
+      "response_text": "Yes, that's everything. I'll tell Jason the rockets are ready. It's time to get this over with.",
+      "index": "77"
+    },
+    {
+      "topic": "ChrisHavLabTaskChangePC asks for help with different task",
+      "topic_text": "Actually, I'd like to help with something else.",
+      "emotion": "Neutral 50",
+      "response_text": "All right. What would you rather be doing?",
+      "index": "79"
+    },
+    {
+      "topic": "ChrisHavLabTaskHintsPC asks for task tips",
+      "topic_text": "Can you give me any tips for my current task?",
+      "emotion": "Neutral 50",
+      "response_text": "REPCONN has been ransacked so many times by scavengers, it's hard to know where the components might turn up. IF they turn up.",
+      "index": "81"
+    },
+    {
+      "topic": "ChrisHavLabTaskSamePC will keep working on current task",
+      "topic_text": "I'll stick with my current task.",
+      "emotion": "Neutral 50",
+      "response_text": "All right. Carry on.",
+      "index": "85"
+    },
+    {
+      "topic": "ChrisHavLabWhatIsThisPlace",
+      "topic_text": "So the \"Great Journey\" will use those rockets?",
+      "emotion": "Neutral 50",
+      "response_text": "Obviously. It's taken months, but I've nearly got them in working order. Soon they'll take us to the Far Beyond.",
+      "index": "86"
+    },
+    {
+      "topic": "ChrisHavLabYoureNoGhoulChrisHavLabWhatDoYouDo",
+      "topic_text": "What do you do here?",
+      "emotion": "Neutral 50",
+      "response_text": "I'm the flock's resident engineer. I've always been good with machines. Jason says the Great Journey would've been impossible without me.",
+      "index": "88"
+    },
+    {
+      "topic": "ChrisHavNovacConfessSabotage",
+      "topic_text": "I sabotaged the rockets.",
+      "emotion": "Anger 50",
+      "response_text": "You bastard! Those ghouls declared me a Saint!",
+      "index": "106"
+    },
+    {
+      "topic": "ChrisHavNovacMechFailure",
+      "topic_text": "It was some sort of mechanical failure.",
+      "emotion": "Sad 50",
+      "response_text": "I suppose there was always that risk. It's just that Jason was so certain...",
+      "index": "107"
+    },
+    {
+      "topic": "ChrisHavTalksDuringSpeech",
+      "topic_text": "ChrisHavTalksDuringSpeech",
+      "emotion": "Neutral 50",
+      "response_text": "What?{shocked to hear Jason call him human}",
+      "index": "108"
+    },
+    {
+      "topic": "ChrisHavTellsJasonReady",
+      "topic_text": "ChrisHavTellsJasonReady",
+      "emotion": "Neutral 50",
+      "response_text": "The rockets are ready, Jason. The Great Journey can begin. Good luck, I guess.",
+      "index": "111"
+    },
+    {
+      "topic": "ChrisHavUpsGoodbye",
+      "topic_text": "I guess I'll be going.",
+      "emotion": "Anger 60",
+      "response_text": "Stay away from me.",
+      "index": "114"
+    },
+    {
+      "topic": "ChrisHavUpsHello",
+      "topic_text": "Hey, you're not a ghoul!",
+      "emotion": "Anger 60",
+      "response_text": "Your pranks won't work on me, smoothskin. They won't work on Jason, either.",
+      "index": "117"
+    },
+    {
+      "topic": "ChrisHavUpsWhoIsJason",
+      "topic_text": "Who is Jason?",
+      "emotion": "Anger 50",
+      "response_text": "Jason is the prophet. The only reason you're up here is because he wants to talk to you.",
+      "index": "119"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "Welcome to Novac. It's not very exciting here, but the people are friendly enough.",
+      "index": "121"
+    },
+    {
+      "topic": "SpeechChallengeFailure",
+      "topic_text": "SpeechChallengeFailure",
+      "emotion": "Anger 75",
+      "response_text": "Do you think that men go bald normally? I am sick, and I have embraced my change. Leave me be.",
+      "index": "153"
+    },
+    {
+      "topic": "VDialogueChrisHaversamChrisHaversamTopic000",
+      "topic_text": "Where can I find Jason?",
+      "emotion": "Neutral 50",
+      "response_text": "The great one can be found upstairs. Don't think about wasting his time. He's very important. You should feel lucky to be granted some of his time.",
+      "index": "154"
+    },
+    {
+      "topic": "VDialogueChrisHaversamChrisHaversamTopic001",
+      "topic_text": "Nevermind, I'll go looking for your components.",
+      "emotion": "Neutral 50",
+      "response_text": "Hurry back. Never have we been so close.",
+      "index": "155"
+    },
+    {
+      "topic": "VDialogueChrisHaversamChrisHaversamTopic002",
+      "topic_text": "Can the launch wait a few minutes?",
+      "emotion": "Neutral 50",
+      "response_text": "Very few. Time is wasting. Hurry back so we can begin.",
+      "index": "156"
+    },
+    {
+      "topic": "VDialogueChrisHaversamChrisHaversamTopic003",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Goodbye, thank you.",
+      "index": "157"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "ChrisHavTellsJasonGoodToGo",
+      "topic_text": "ChrisHavTellsJasonGoodToGo",
+      "emotion": "Neutral 50",
+      "response_text": "Hey Jason, your rockets are ready!",
+      "index": "158"
+    }
+  ],
+  "combat": []
+}

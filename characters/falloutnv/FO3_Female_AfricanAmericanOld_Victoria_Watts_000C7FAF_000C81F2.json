@@ -1,0 +1,193 @@
+{
+  "name": "Victoria Watts",
+  "url": "/wiki/Victoria_Watts",
+  "dialogue_name": "VictoriaWatts.txt",
+  "dialogue_url": "/wiki/VictoriaWatts.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000C7FAF",
+  "ref_id": "000C81F2",
+  "editor_id": "VictoriaWatts",
+  "location": "Rivet City",
+  "location_url": "/wiki/Rivet_City",
+  "descriptions": [
+    "Victoria Watts is a resident of Rivet City and a field agent of the Railroad in 2277.",
+    "This mysterious woman is allied with a clandestine group of ex-slaves, Abolitionists, working together with them and her like-minded colleagues up north to form a new type of underground railroad. She is forceful and bright and doesn't tolerate foolishness.",
+    "The Railroad works to protect escaped synths, who according to them, are akin to slaves. In January 2276, she volunteered to track a courser, who attempt to reclaim escaped synths, that was traveling south, for Railroad leader Pinky Thompson.",
+    "A year later, she lives in the Capital Wasteland, registered as a resident of Rivet City. She stays to serve as a bodyguard for Harkness, helping to safeguard his true identity after the arrival of the head of the Synth Retention Bureau, Dr. Zimmer, and his synth bodyguard Armitage, searching for their missing \"property.\"",
+    "Prior to the beginning of the quest The Replicated Man, Victoria Watts lives in the Rivet City market, staying in the eastern area around the pool table. She will interact with other residents, eat, and use furniture objects, but will not sleep at any time.",
+    "After delivering her quest-related message, Victoria will remain in the general vicinity where she first encountered the Lone Wanderer. She may attempt to travel to Rivet City, but she is incapable of fast-traveling and only moves position if the Lone Wanderer is in the same active map cell as her. As a result, she is almost certain to be killed in the wasteland if encountered far away from Rivet City.",
+    "If Victoria Watts reaches Rivet City, she will return to her regular schedule in the Rivet City market. She can be spoken to again but has no additional dialogue."
+  ],
+  "race": "Human",
+  "gender": "Female",
+  "affiliation": "The RailroadAbolitionists",
+  "role": "MessengerBodyguard",
+  "detailed_location": "Rivet City",
+  "voice_actor": "Shari Elliker",
+  "special": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 4,
+    "Intelligence": 4,
+    "Agility": 6,
+    "Luck": 4
+  },
+  "mod_special_values": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 4,
+    "Intelligence": 4,
+    "Agility": 7,
+    "Luck": 4
+  },
+  "level": "10",
+  "tag_skills": [
+    {
+      "Barter:": "69"
+    },
+    {
+      "Small Guns:": "73(75)"
+    },
+    {
+      "Unarmed:": "69(71)"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "70(75)"
+    },
+    {
+      "Critical Chance:": "4%"
+    },
+    {
+      "Unarmed Dam.:": "3.95"
+    },
+    {
+      "Poison Resist.:": "15%(20%)"
+    },
+    {
+      "Rad. Resist.:": "6%(8%)"
+    },
+    {
+      "Carry Weight:": "210"
+    },
+    {
+      "Damage Res.:": "1%"
+    }
+  ],
+  "karma": "Neutral",
+  "voice_type": "FemaleAdult01DefaultDC",
+  "geck_race": "AfricanAmericanOld",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Disgust 80",
+      "response_text": "You've been rather busy lately. Asking questions. \"Investigating.\" So, is that it? You're some kind of investigator? A detective for hire?",
+      "index": "1"
+    },
+    {
+      "topic": "RailroadRepsonse2a",
+      "topic_text": "What would you have me do?",
+      "emotion": "Neutral 50",
+      "response_text": "You really want to help? Take this. It's an internal component from the very android you're searching for. Don't ask how I obtained it.",
+      "index": "12"
+    },
+    {
+      "topic": "RailroadRepsonse2b",
+      "topic_text": "This conversation's over, Ms. Watts. Now step aside.",
+      "emotion": "Anger 50",
+      "response_text": "Fine. Blow me off. Live in denial. But take this. It's an internal component from the very android you're searching for.",
+      "index": "15"
+    },
+    {
+      "topic": "RailroadResponse1a",
+      "topic_text": "Who the hell are you?",
+      "emotion": "Neutral 50",
+      "response_text": "Fine, let's cut to the chase. My name is Victoria Watts. I work for a movement whose goals are directly opposed to your own, apparently.",
+      "index": "18"
+    },
+    {
+      "topic": "RailroadResponse1b",
+      "topic_text": "I think you're confusing me with someone else...",
+      "emotion": "Neutral 50",
+      "response_text": "Am I? You haven't talked to someone lately about a missing android? Or nosed around and found some information you should have left buried?{ }",
+      "index": "20"
+    },
+    {
+      "topic": "RailroadResponse1c",
+      "topic_text": "Look, whoever this missing android is, I just want to help. Okay?",
+      "emotion": "Surprise 50",
+      "response_text": "Well... If that's true, then the first thing you need to do is halt your investigation. No more questions, no more searching.",
+      "index": "22"
+    },
+    {
+      "topic": "RailroadResponse1d",
+      "topic_text": "What I do with my own time is my own goddamn business.",
+      "emotion": "Anger 100",
+      "response_text": "Don't you realize what you're doing? The path you're on has the potential to ruin a man's life. Is that what you really want?",
+      "index": "24"
+    },
+    {
+      "topic": "TLRailroadAnythingElse",
+      "topic_text": "Anything else I should know?",
+      "emotion": "Neutral 50",
+      "response_text": "Just understand that this android is now, for all intents and purposes, a man. He looks human, he acts human. He believes he IS human.",
+      "index": "26"
+    },
+    {
+      "topic": "TLRailroadHumanSlaves",
+      "topic_text": "What about human slaves? Don't you try to help them, too?",
+      "emotion": "Sad 50",
+      "response_text": "Yes, if we are able. But there are others in the Wasteland who assist in the plight of human slaves. Our android brethren have only us.",
+      "index": "29"
+    },
+    {
+      "topic": "TLRailroadJoin",
+      "topic_text": "Can I join the Railroad?",
+      "emotion": "Happy 80",
+      "response_text": "Tell you what. You deliver that component to Zimmer and tell him the android is dead, and you can consider yourself a member in good standing.",
+      "index": "30"
+    },
+    {
+      "topic": "TLRailroadMovement",
+      "topic_text": "What's this \"movement\" you mentioned?",
+      "emotion": "Neutral 50",
+      "response_text": "We call ourselves the Railroad. Our mission is the rescue and salvation of synthetic humanoids. Androids, as they're more commonly known.",
+      "index": "31"
+    },
+    {
+      "topic": "TLRailroadReward",
+      "topic_text": "If I help you, is there some kind of reward?",
+      "emotion": "Happy 80",
+      "response_text": "Of course! If you help me, and thus the android, God and the universe will smile upon you. Is there any better compensation?",
+      "index": "32"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "I have to go now.",
+      "emotion": "Neutral 50",
+      "response_text": "You know what you need to do.",
+      "index": "33"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Surprise 50",
+      "response_text": "Don't you have a component to deliver?",
+      "index": "34"
+    }
+  ],
+  "combat": []
+}

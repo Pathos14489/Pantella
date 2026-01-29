@@ -1,0 +1,153 @@
+{
+  "name": "Razz",
+  "url": "/wiki/Razz",
+  "dialogue_name": "2CRazz.txt",
+  "dialogue_url": "/wiki/2CRazz.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "00104314",
+  "ref_id": "00104318",
+  "editor_id": "2CRazz",
+  "location": "Camp Golf",
+  "location_url": "/wiki/Camp_Golf",
+  "descriptions": [
+    "Private Razz is an NCR soldier and part of the Misfits living in Camp Golf in the Mojave Wasteland in 2281.",
+    "Razz was born in slums of the Boneyard and got out the first chance he got, leaving his family behind. He joined the Fiends in the Mojave for a time, but joined the New California Republic Army later since Fiends tend to not last long when the NCR are around; in his words, he joined because \"at least this way the badasses with the top-shelf guns\" would be on his side.",
+    "He was once addicted to Psycho, but has since kicked the habit.",
+    "He has a rotten attitude for pretty much everything, like how the NCR Rangers get to stay in the resort, while the grunts have to live in tents.",
+    "Razz was written by area designer Travis Stout, who also wrote the rest of the Misfits."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "NCR ArmyThe MisfitsFiends(formerly)",
+  "role": "Misfit",
+  "detailed_location": "Camp Golf, near thetents",
+  "voice_actor": "Jesse Burch",
+  "special": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 5,
+    "Intelligence": 5,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "level": "5",
+  "tag_skills": [
+    {
+      "Explosives:": "46"
+    },
+    {
+      "Guns:": "46"
+    },
+    {
+      "Melee Weap.:": "46"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Neutral",
+  "voice_type": "MaleAdult03",
+  "geck_race": "Hispanic",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Happy 30",
+      "response_text": "Okay, okay, I admit it - knowing how to use these guns right is pretty cool.",
+      "index": "1"
+    },
+    {
+      "topic": "MagsShapeUp1",
+      "topic_text": "I got you the stuff.",
+      "emotion": "Happy 50",
+      "response_text": "Hoo-hoo! Hot damn, it's gonna be a party in the camp tonight!",
+      "index": "13"
+    },
+    {
+      "topic": "RazzArmy",
+      "topic_text": "Why are you in the Army?",
+      "emotion": "Disgust 20",
+      "response_text": "Shit, man, it was this or the Fiends, and Fiends don't last too long in the NCR.",
+      "index": "16"
+    },
+    {
+      "topic": "RazzCampGolf",
+      "topic_text": "Can you tell me anything about Camp Golf?",
+      "emotion": "Disgust 50",
+      "response_text": "What you want to know? Whole place used to be some kinda rich bastard resort, back before the war.",
+      "index": "20"
+    },
+    {
+      "topic": "RazzHistory",
+      "topic_text": "So, what's your story?",
+      "emotion": "Neutral 50",
+      "response_text": "Ain't much to tell. Grew up out west, in the Boneyard. Heard of it?",
+      "index": "22"
+    },
+    {
+      "topic": "RazzMisfits",
+      "topic_text": "Know anything about your squadmates?",
+      "emotion": "Anger 15",
+      "response_text": "We don't talk too much, mostly. Poindexter's a smartass prick.",
+      "index": "24"
+    },
+    {
+      "topic": "VFreeformCampGolf2CRazzTopic000",
+      "topic_text": "That's charming. It's good to know team-building is alive and well.",
+      "emotion": "Disgust 15",
+      "response_text": "[FAILED] Hey, you asked. Don't want the answer, don't ask a guy's opinion.",
+      "index": "26"
+    },
+    {
+      "topic": "VFreeformCampGolf2CRazzTopic001",
+      "topic_text": "Sounds like a bunch of winners.",
+      "emotion": "Anger 15",
+      "response_text": "Whatever. Not like I need any of them. I do just fine on my own.",
+      "index": "28"
+    },
+    {
+      "topic": "VFreeformCampGolf2CRazzTopic002",
+      "topic_text": "Angry... juice?",
+      "emotion": "Happy 30",
+      "response_text": "Psycho! The big red one! I used to run with the Fiends, I still got the hookups. Smuggle some in and you'll see an improvement.",
+      "index": "29"
+    },
+    {
+      "topic": "VFreeformCampGolf2CRazzTopic003",
+      "topic_text": "Okay, tell me where to get it.",
+      "emotion": "Happy 30",
+      "response_text": "My man Jack at Red Rock Canyon got the goods. But listen: once you get folks dosed on Psycho, ain't a lot of room for much else.",
+      "index": "30"
+    },
+    {
+      "topic": "VFreeformCampGolf2CRazzTopic004",
+      "topic_text": "I'm convinced this is a good idea, let's do it.",
+      "emotion": "Surprise 30",
+      "response_text": "Right. Head to Red Rock Canyon - that's deep Khan territory, so watch your back. Talk to Jack, tell him Razz wants the usual. See you soon.",
+      "index": "32"
+    },
+    {
+      "topic": "VFreeformCampGolf2CRazzTopic005",
+      "topic_text": "On second thought, I'll talk to the others first.",
+      "emotion": "Disgust 20",
+      "response_text": "Whatever.",
+      "index": "33"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Right.",
+      "index": "34"
+    }
+  ],
+  "combat": []
+}

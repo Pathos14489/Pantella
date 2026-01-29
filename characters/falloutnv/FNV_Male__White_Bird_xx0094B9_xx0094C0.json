@@ -1,0 +1,142 @@
+{
+  "name": "White Bird",
+  "url": "/wiki/White_Bird",
+  "dialogue_name": "NVDLC02SorrowShaman.txt",
+  "dialogue_url": "/wiki/NVDLC02SorrowShaman.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "xx0094B9",
+  "ref_id": "xx0094C0",
+  "editor_id": "NVDLC02SorrowShaman",
+  "location": "White Bird's cave",
+  "location_url": "/wiki/White_Bird%27s_cave",
+  "descriptions": [
+    "White Bird is a tribal shaman living in The Narrows in Zion Canyon in 2281.",
+    "White Bird is the shaman of the Sorrows tribe in Zion. He has knowledge of tribal medicine and tribe members must go to him to complete their rite of passage. White Bird lives in his own cave at the Sorrows camp.",
+    "Rite of Passage",
+    "Upon completion of Crush the White Legs or Flight from Zion White Bird will no longer be found in his cave.",
+    "White Bird appears only in the Fallout: New Vegas add-on Honest Hearts.",
+    "With the Wild Wasteland trait, he will instruct the Courier to drink the tea and say \"Take drugs, kill a bear!\" which is a reference to the \"Advice Dog\" meme."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Sorrows",
+  "role": "Tribe Shaman",
+  "detailed_location": "White Bird's cave,Sorrows camp",
+  "voice_actor": "Alejandro Furth",
+  "special": {
+    "Strength": 4,
+    "Perception": 6,
+    "Endurance": 5,
+    "Charisma": 6,
+    "Intelligence": 6,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "tag_skills": [
+    {
+      "Speech:": "32"
+    },
+    {
+      "Survival:": "30(35)"
+    },
+    {
+      "Unarmed:": "30"
+    }
+  ],
+  "karma": "Neutral",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Happy 50",
+      "response_text": "Visions guide you. You listen? Heh. Maybe yes, maybe no.",
+      "index": "1"
+    },
+    {
+      "topic": "NVDLC02DialogueShamanNVDLC02SorrowShamanTopic000",
+      "topic_text": "Wait a minute, what if I don't want to do any of that?",
+      "emotion": "Disgust 50",
+      "response_text": "<White Bird stares at you wordlessly.>",
+      "index": "8"
+    },
+    {
+      "topic": "NVDLC02DialogueShamanNVDLC02SorrowShamanTopic001",
+      "topic_text": "I have the sacred datura here.",
+      "emotion": "Happy 50",
+      "response_text": "These roots make sacred vision tea. You drink, you see path before you. Ready?",
+      "index": "9"
+    },
+    {
+      "topic": "NVDLC02DialogueShamanNVDLC02SorrowShamanTopic003",
+      "topic_text": "All right, let's do this.",
+      "emotion": "Happy 50",
+      "response_text": "Drink. Tea is strong. Tea is bitter. Wisdom is strong. Wisdom is bitter. You see?",
+      "index": "10"
+    },
+    {
+      "topic": "NVDLC02DialogueShamanNVDLC02SorrowShamanTopic004",
+      "topic_text": "Not yet. I need a moment.",
+      "emotion": "Disgust 50",
+      "response_text": "Tea will wait. Me? Maybe not.",
+      "index": "11"
+    },
+    {
+      "topic": "NVDLC02DialogueShamanNVDLC02SorrowShamanTopic005",
+      "topic_text": "It's done.",
+      "emotion": "Sad 50",
+      "response_text": "Then visions of truth are at an end. Will you learn from truth? Maybe yes. Maybe no. Only for you to decide.",
+      "index": "12"
+    },
+    {
+      "topic": "NVDLC02DialogueShamanNVDLC02SorrowShamanTopic007",
+      "topic_text": "Okay then. I guess I'll just... go then.",
+      "emotion": "Anger 50",
+      "response_text": "Go! Return maybe yes, return maybe no. But go.",
+      "index": "14"
+    },
+    {
+      "topic": "NVDLC02DialogueShamanNVDLC02SorrowShamanTopic008",
+      "topic_text": "What? I don't know what \"visions of truth\" means.",
+      "emotion": "Happy 100",
+      "response_text": "{Mystical chanty-type stuff}Take drugs! Kill a bear!",
+      "index": "15"
+    },
+    {
+      "topic": "NVDLC02DialogueShamanNVDLC02SorrowShamanTopic009",
+      "topic_text": "Crazy old man. I'm not doing anything for you.",
+      "emotion": "Surprise 50",
+      "response_text": "Spirits guide you whether you listen or not. Smarter to listen, hmm?",
+      "index": "17"
+    },
+    {
+      "topic": "NVDLC02DialogueShamanNVDLC02SorrowShamanTopic011",
+      "topic_text": "< DO NOT RECORD - PLACEHOLDER >",
+      "emotion": "Neutral 50",
+      "response_text": "<White Bird stares at you wordlessly.>",
+      "index": "18"
+    },
+    {
+      "topic": "NVDLC02DialogueShamanNVDLC02SorrowShamanTopic014",
+      "topic_text": "Umm... tell me about this vision quest again?",
+      "emotion": "Anger 50",
+      "response_text": "You go to cave. Find Ghost of She. Lay ghost to rest. This your quest. Bring peace where was strife. Go!",
+      "index": "19"
+    },
+    {
+      "topic": "NVDLC02DialogueShamanNVDLC02SorrowShamanTopic015",
+      "topic_text": "Who or what is the Ghost of She?",
+      "emotion": "Sad 50",
+      "response_text": "Sad story. Not for your ears from my lips. Ask midwife. She speak to your ears.",
+      "index": "20"
+    }
+  ],
+  "conversation": [],
+  "combat": []
+}

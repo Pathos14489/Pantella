@@ -1,0 +1,340 @@
+{
+  "name": "Big Sal",
+  "url": "/wiki/Big_Sal",
+  "dialogue_name": "VMS21BigSal.txt",
+  "dialogue_url": "/wiki/VMS21BigSal.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "0010C6F4",
+  "ref_id": "0011267A",
+  "editor_id": "VMS21BigSal",
+  "location": "Gomorrah",
+  "location_url": "/wiki/Gomorrah",
+  "descriptions": [
+    "Big Sal is a high-ranking member of the Omertas living in the Gomorrah in 2281.",
+    "Big Sal is Nero's right-hand man and is in charge of the usual day-to-day operations of the Gomorrah casino. Officially, that is all he does - run the casino and ensure a substantial and regular tribute is paid as Mr. House demands.",
+    "Less publicly, Big Sal has a deep resentment for Mr. House and his way of keeping a tight hold on the Strip while staying hidden away in the Lucky 38 casino. Driven by lust to pocket the Gomorrah casino's profits and perhaps take over the Strip themselves, Big Sal and his boss Nero have secretly forged an alliance with Caesar. Sal himself is in charge of planning the coming attack on the Strip, recruiting various locals from the New Vegas area to assist with the project; Troike supplies the family with cheap and top-quality guns, Clanden assists with the construction of a gas bomb to kill the residents of the Strip, and Cachino is in charge of logistics in preparation for the Omertas' grand plans.",
+    "How Little We Know: The player character can choose to either kill Big Sal and Nero for Cachino or kill Cachino by order of Big Sal.",
+    "Big Sal is voiced by Alex Rocco. \"Big Sal\" may be a nod to his most famous role as Vegas Mob boss Moe Greene in 1972's The Godfather."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Omertas",
+  "role": "Right hand man",
+  "detailed_location": "Personal suite,Gomorrah",
+  "voice_actor": "Alex Rocco",
+  "special": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 3,
+    "Intelligence": 3,
+    "Agility": 7,
+    "Luck": 5
+  },
+  "mod_special_values": {
+    "Strength": 6,
+    "Perception": 6,
+    "Endurance": 4,
+    "Charisma": 3,
+    "Intelligence": 3,
+    "Agility": 7,
+    "Luck": 5
+  },
+  "level": "20→25 (equal to player character's level)",
+  "tag_skills": [
+    {
+      "Energy Weap.:": "99→100"
+    },
+    {
+      "Guns:": "100"
+    },
+    {
+      "Melee Weap.:": "100"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "160→185"
+    }
+  ],
+  "karma": "Evil",
+  "geck_race": "CaucasianOld",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Anger 15",
+      "response_text": "This is my room, now you get the fuck out before you get yourself hurt.",
+      "index": "1"
+    },
+    {
+      "topic": "VMS21BossGreeting",
+      "topic_text": "VMS21BigSalGreeting",
+      "emotion": "Neutral 50",
+      "response_text": "So I assume you know why we called you here?",
+      "index": "12"
+    },
+    {
+      "topic": "vDialogueGomorrahVMS21BigSalTopic000",
+      "topic_text": "I'd like to talk to you about Troike.",
+      "emotion": "Neutral 50",
+      "response_text": "Ah, Troike? What's he want? Some more Jet, a fresh batch of girls? Maybe a guy or two this time?",
+      "index": "13"
+    },
+    {
+      "topic": "vDialogueGomorrahVMS21BigSalTopic001",
+      "topic_text": "What kind of business do you do here?",
+      "emotion": "Neutral 50",
+      "response_text": "We run a hotel. What do you think our business is?",
+      "index": "14"
+    },
+    {
+      "topic": "vDialogueGomorrahVMS21BigSalTopic002{Barter Options}",
+      "topic_text": "<Lie>Troike wants to see about negotiation some lower prices for weapons for you guys.",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] Really? That was his idea? Alright, he can go. Hopefully he finds us some good deals out there.",
+      "index": "15"
+    },
+    {
+      "topic": "vDialogueGomorrahVMS21BigSalTopic003",
+      "topic_text": "Actually, I'd like to see about getting him out of his obligations to you.",
+      "emotion": "Neutral 50",
+      "response_text": "{laughs}Why would I want to do that?",
+      "index": "17"
+    },
+    {
+      "topic": "vDialogueGomorrahVMS21BigSalTopic004",
+      "topic_text": "Something about his story doesn't sit right with me.",
+      "emotion": "Neutral 50",
+      "response_text": "What? That he's a murdering Jet-head? Not a new story around here.",
+      "index": "18"
+    },
+    {
+      "topic": "vDialogueGomorrahVMS21BigSalTopic005",
+      "topic_text": "On second thought, let's talk about something else.",
+      "emotion": "Neutral 50",
+      "response_text": "Okay, what's on your mind?",
+      "index": "19"
+    },
+    {
+      "topic": "vDialogueGomorrahVMS21BigSalTopic006{Speech Options}",
+      "topic_text": "Troike is pretty strung out. He'll be more trouble than he is worth.",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] Yeah, I see where you're coming from. Okay, tell Troike he can hit the road.",
+      "index": "20"
+    },
+    {
+      "topic": "vDialogueGomorrahVMS21BigSalTopic007",
+      "topic_text": "He seems pretty tired.",
+      "emotion": "Happy 25",
+      "response_text": "I bet he does. That's from hookers and chems. His work for us is the most restful part of his day.",
+      "index": "22"
+    },
+    {
+      "topic": "vDialogueGomorrahVMS21BigSalTopic008{Speech, Convince Sal or Nero to buy guns from Mick & Ralph again}",
+      "topic_text": "You should buy guns from Mick and Ralph, people are starting to ask questions.",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] Alright, you've done some good work for us. I'll do this as a favor for you.",
+      "index": "23"
+    },
+    {
+      "topic": "vDialogueGomorrahVMS21BigSalTopic009",
+      "topic_text": "No idea.",
+      "emotion": "Neutral 50",
+      "response_text": "Well you've been a real thorn in our side. We've got business plans. You set us back a little bit, I'll admit that.",
+      "index": "26"
+    },
+    {
+      "topic": "vDialogueGomorrahVMS21BigSalTopic010",
+      "topic_text": "I hear you lost some guns.",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah, we lost some guns{in a mocking tone}you little weasel. However, we can get more guns. You slowed us down but you can't stop us.",
+      "index": "28"
+    },
+    {
+      "topic": "vDialogueGomorrahVMS21BigSalTopic011",
+      "topic_text": "Time to die, Sal.",
+      "emotion": "Neutral 50",
+      "response_text": "Alright, let's dance.",
+      "index": "30"
+    },
+    {
+      "topic": "vDialogueGomorrahVMS21BigSalTopic012",
+      "topic_text": "Cachino! Shoot now.",
+      "emotion": "Neutral 50",
+      "response_text": "Cachino? What the fu...{fuck interrupted}",
+      "index": "31"
+    },
+    {
+      "topic": "vDialogueGomorrahVMS21BigSalTopic013",
+      "topic_text": "I have proof one of your Lieutenants is dealing behind your back.",
+      "emotion": "Neutral 50",
+      "response_text": "Do you now? Let's see it.",
+      "index": "32"
+    },
+    {
+      "topic": "vDialogueGomorrahVMS21BigSalTopic014",
+      "topic_text": "Is it worth 100 caps to you?",
+      "emotion": "Neutral 50",
+      "response_text": "Here, now give it over.",
+      "index": "33"
+    },
+    {
+      "topic": "vDialogueGomorrahVMS21BigSalTopic015{Barter Options}",
+      "topic_text": "I'll give it to you for 200 caps.",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] Ok, that sounds fair.",
+      "index": "35"
+    },
+    {
+      "topic": "vDialogueGomorrahVMS21BigSalTopic016",
+      "topic_text": "I wanted to ask you another question first.",
+      "emotion": "Neutral 50",
+      "response_text": "Make it snappy.",
+      "index": "37"
+    },
+    {
+      "topic": "vDialogueGomorrahVMS21BigSalTopic017",
+      "topic_text": "Actually I have some other business to take care of.",
+      "emotion": "Neutral 50",
+      "response_text": "Thanks for wasting my time.",
+      "index": "38"
+    },
+    {
+      "topic": "vDialogueGomorrahVMS21BigSalTopic018",
+      "topic_text": "How is Cachino going to be handled?",
+      "emotion": "Neutral 50",
+      "response_text": "He'll be handled in the way the Family handles these situations. I want you there for this, come meet me in my office.",
+      "index": "39"
+    },
+    {
+      "topic": "vDialogueGomorrahVMS21BigSalTopic019",
+      "topic_text": "Cachino mentioned you had something big planned.",
+      "emotion": "Neutral 50",
+      "response_text": "Did he now? Funny that, more backstabbing. Yeah, we got something big planned. I was actually hoping to jaw at you about that.",
+      "index": "40"
+    },
+    {
+      "topic": "vDialogueGomorrahVMS21BigSalTopic020",
+      "topic_text": "What kind of help do you need?",
+      "emotion": "Neutral 50",
+      "response_text": "Two of the players, Troike and Clanden, have some problems that need to be solved. Ask them what they need.",
+      "index": "43"
+    },
+    {
+      "topic": "vDialogueGomorrahVMS21BigSalTopic021",
+      "topic_text": "Tell me about the plan.",
+      "emotion": "Neutral 50",
+      "response_text": "The plan is called Racket, but that's all the info you're going to get out of me right now.",
+      "index": "44"
+    },
+    {
+      "topic": "vDialogueGomorrahVMS21BigSalTopic022",
+      "topic_text": "Let's talk about something else",
+      "emotion": "Neutral 50",
+      "response_text": "What's on your mind?",
+      "index": "45"
+    },
+    {
+      "topic": "vDialogueGomorrahVMS21BigSalTopic023",
+      "topic_text": "I don't have any more questions right now.",
+      "emotion": "Neutral 50",
+      "response_text": "Alright, come back any time.",
+      "index": "46"
+    },
+    {
+      "topic": "vDialogueGomorrahVMS21BigSalTopic024{Updates on Racket}",
+      "topic_text": "I helped Troike out, like you asked.",
+      "emotion": "Neutral 50",
+      "response_text": "I heard, we'll be needing those guns. Word on the street is you handled those Fiend freaks like a real pro.",
+      "index": "47"
+    },
+    {
+      "topic": "vDialogueGomorrahVMS21BigSalTopic025",
+      "topic_text": "Did one of your contractors get lost?",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah, Clanden will be hard to replace but not impossible. We'll find contractors just like him without breaking a sweat.",
+      "index": "50"
+    },
+    {
+      "topic": "vDialogueGomorrahVMS21BigSalTopic026{Speech options}",
+      "topic_text": "As a last request, will you tell me more about your plan?",
+      "emotion": "Surprise 50",
+      "response_text": "[SUCCEEDED] Are you shitting me? You didn't even know what the plan was? Yeah, as a last request I guess we can give you that courtesy.",
+      "index": "51"
+    },
+    {
+      "topic": "vDialogueGomorrahVMS21BigSalTopic027",
+      "topic_text": "What was Cachino's role in the plan?",
+      "emotion": "Neutral 50",
+      "response_text": "As one of our captains, Cachino was{pause}kind of like a project manager. He made sure people had what they needed to get their jobs done.",
+      "index": "53"
+    },
+    {
+      "topic": "vDialogueGomorrahVMS21BigSalTopic028",
+      "topic_text": "So tell me about your plan.",
+      "emotion": "Neutral 50",
+      "response_text": "Caesar asked us to provide a distraction on the Strip. So when he gives the word we're going to launch an all out assault on the Strip.",
+      "index": "54"
+    },
+    {
+      "topic": "vDialogueGomorrahVMS21BigSalTopic029",
+      "topic_text": "<Lie> Well Nero didn't tell me any of this when he convinced me to take you out.",
+      "emotion": "Neutral 50",
+      "response_text": "The fuck? I knew there had to be someone higher up helping you. Nero, you backstabbing, two-timing motherfucker. I knew this day would come.",
+      "index": "57"
+    },
+    {
+      "topic": "vDialogueGomorrahVMS21BigSalTopic030",
+      "topic_text": "Can I buy out the rest of his contract for 300 caps?",
+      "emotion": "Neutral 50",
+      "response_text": "{Pensive}Yeah, that sounds alright to me. I bet we can find someone to do his work for that much. Tell him to get going.",
+      "index": "58"
+    },
+    {
+      "topic": "vGomorrahBossChips",
+      "topic_text": "I'm planning on playing some games in the Casino.",
+      "emotion": "Neutral 50",
+      "response_text": "You play some games, have some fun. You did right by us.",
+      "index": "59"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Thanks for wasting my time.",
+      "index": "60"
+    },
+    {
+      "topic": "VMS21CachinoExecution1",
+      "topic_text": "VMS21CachinoExecution1",
+      "emotion": "Neutral 50",
+      "response_text": "Cachino, you've really disappointed me.",
+      "index": "62"
+    },
+    {
+      "topic": "VMS21CachinoExecution3",
+      "topic_text": "VMS21CachinoExecution3",
+      "emotion": "Anger 50",
+      "response_text": "I don't wanna fucking hear it. You've lost the trust of the family. Goodbye, I hope Hell isn't too hot for you.",
+      "index": "64"
+    },
+    {
+      "topic": "VMS21OfficeBark",
+      "topic_text": "VMS21OfficeBark",
+      "emotion": "Neutral 50",
+      "response_text": "Let's have some words. Take a seat on the couch so we can get to talking.",
+      "index": "65"
+    }
+  ],
+  "combat": []
+}

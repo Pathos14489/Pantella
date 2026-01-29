@@ -1,0 +1,343 @@
+{
+  "name": "Scribe Bowditch",
+  "url": "/wiki/Bowditch",
+  "dialogue_name": "ScribeBowditch.txt",
+  "dialogue_url": "/wiki/ScribeBowditch.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": true,
+  "can_be_companion": false,
+  "base_id": "000156EC",
+  "ref_id": "000210E4",
+  "editor_id": "ScribeBowditch",
+  "location": "Citadel laboratory",
+  "location_url": "/wiki/Citadel_laboratory",
+  "descriptions": [
+    "Scribe Bowditch is the proctor of the Order of the Shield and head of the Brotherhood of Steel's smithy in the Citadel in Fallout 3.",
+    "Scribe Bowditch is the proctor of the Order of the Shield, responsible for maintaining the defenses of the chapter. He was the mastermind behind the establishment of the Citadel out of the ruins of the Pentagon, complete with its crane-operated outer gate.",
+    "Although getting on in years, he believes that he still has some big achievements left before he passes on the position to a younger scribe. He reflects on his youth, particularly on excursions with other Brotherhood members, noting that the times he was shot at were always the lowest points of his career.",
+    "A very knowledgeable scholar, he is among the few to be acquainted with the Brotherhood's own history, claiming to be able to fill several texts on the organization's details.",
+    "During the day, Scribe Bowditch can be found at the smithy in the Citadel laboratory. At night, he sleeps in the barracks that are located on the other side of the laboratory."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Brotherhood of Steel",
+  "role": "ScientistProctorfor theOrder of the Shield",
+  "detailed_location": "The Citadel'slaboratory",
+  "voice_actor": "Jeff Baker",
+  "special": {
+    "Strength": 3,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 6,
+    "Intelligence": 7,
+    "Agility": 4,
+    "Luck": 6
+  },
+  "level": "4",
+  "tag_skills": [
+    {
+      "Medicine:": "47"
+    },
+    {
+      "Science:": "47"
+    },
+    {
+      "Speech:": "45"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "40"
+    },
+    {
+      "Critical Chance:": "6%"
+    },
+    {
+      "Unarmed Dam.:": "1.15"
+    },
+    {
+      "Poison Resist.:": "15%"
+    },
+    {
+      "Rad. Resist.:": "6%"
+    },
+    {
+      "Carry Weight:": "180"
+    },
+    {
+      "Damage Res.:": "2%"
+    }
+  ],
+  "karma": "Good",
+  "voice_type": "MaleAdult01DefaultDC",
+  "geck_race": "AfricanAmerican",
+  "topics": [
+    {
+      "topic": "AboutBrotherhood1Do you sell any specialty items?",
+      "topic_text": "Can you tell me more about the Brotherhood of Steel?",
+      "emotion": "Neutral 50",
+      "response_text": "Oh yes, I can. In fact, I suspect I could write several texts on the various details of the Brotherhood.",
+      "index": "1"
+    },
+    {
+      "topic": "AboutBrotherhood2AMS07AboutBrotherhood2A",
+      "topic_text": "What are the central beliefs of the Brotherhood?",
+      "emotion": "Sad 25",
+      "response_text": "I'm afraid the answer to that is a lot more nuanced than others might suggest.",
+      "index": "3"
+    },
+    {
+      "topic": "AboutBrotherhood2BMS07AboutBrotherhood2B",
+      "topic_text": "What have been the highlights of your time with the Brotherhood?",
+      "emotion": "Happy 25",
+      "response_text": "I like to think that I've still got some big achievements left in me, although some of my joints seem to disagree these days.",
+      "index": "6"
+    },
+    {
+      "topic": "AboutBrotherhood2CMS07AboutBrotherhood2C",
+      "topic_text": "What's the biggest challenge the Brotherhood has ever faced?",
+      "emotion": "Fear 25",
+      "response_text": "It seems like whichever challenge we're facing is always the biggest one. Survival at first, then expansion, and now cohesion.",
+      "index": "8"
+    },
+    {
+      "topic": "AboutBrotherhood2returnMS07AboutBrotherhood2return",
+      "topic_text": "That's enough for now.",
+      "emotion": "Neutral 50",
+      "response_text": "Okay. Anything else?",
+      "index": "11"
+    },
+    {
+      "topic": "AboutOutcasts1MS07AboutOutcasts1",
+      "topic_text": "Tell me more about the Outcasts.",
+      "emotion": "Sad 10",
+      "response_text": "It's a rather sad story, I'm afraid. Last year, some of our soldiers had grave disagreements with the decisions of Elder Lyons.",
+      "index": "12"
+    },
+    {
+      "topic": "AboutOutcasts2AMS07AboutOutcasts2A",
+      "topic_text": "What sort of disagreements did they have?",
+      "emotion": "Anger 25",
+      "response_text": "Where Elder Lyons has fought to protect the people of the Capital Wasteland, the Outcasts demanded we move on and leave them to their fates.",
+      "index": "15"
+    },
+    {
+      "topic": "AboutOutcasts2BMS07AboutOutcasts2B",
+      "topic_text": "Who were the exiles?",
+      "emotion": "Sad 10",
+      "response_text": "The soldiers rallied behind Paladin Casdin, who was one of Elder Lyons' original squad. They served together for over twenty years.",
+      "index": "18"
+    },
+    {
+      "topic": "AboutOutcasts2CMS07AboutOutcasts2C",
+      "topic_text": "What are you doing about them?",
+      "emotion": "Sad 25",
+      "response_text": "As much as some of our soldiers would like to see them shot for deserting, there's not much we can do. We're too busy with the Super Mutants.",
+      "index": "21"
+    },
+    {
+      "topic": "AboutOutcasts2returnMS07AboutOutcasts2return",
+      "topic_text": "Enough about the Outcasts.",
+      "emotion": "Sad 25",
+      "response_text": "It is a rather discouraging subject, isn't it?",
+      "index": "24"
+    },
+    {
+      "topic": "AboutOutcasts3AMS07AboutOutcasts3A",
+      "topic_text": "It sounds like it was quite a loss. Is there any way to reconcile them?",
+      "emotion": "Sad 25",
+      "response_text": "Lyons and Casdin would have to agree to any sort of reconciliation, and that's pretty unlikely. They're both quite proud and... stubborn.{Not entirely comfortable speaking ill of either of them}",
+      "index": "25"
+    },
+    {
+      "topic": "AboutOutcasts3BMS07AboutOutcasts3B",
+      "topic_text": "If so many people agreed with him, maybe he has a good point.",
+      "emotion": "Sad 10",
+      "response_text": "That's the thing, really. Casdin's \"technology first\" sort of attitude is more traditional in the Brotherhood always used to operate, out West.{Emphasis on the \"IS\" in \"...sort of attitude IS more traditional\"}",
+      "index": "27"
+    },
+    {
+      "topic": "AboutOutcasts3CMS07AboutOutcasts3C",
+      "topic_text": "Well, good riddance to them. If you waver in your oaths, you get punished.",
+      "emotion": "Sad 10",
+      "response_text": "You sound like some of the hard-liners. We all served together for years, but now some of the soldiers hate them as much as the Super Mutants.",
+      "index": "30"
+    },
+    {
+      "topic": "CitScribeAbout",
+      "topic_text": "What do you Scribes do?",
+      "emotion": "Neutral 50",
+      "response_text": "Why, a great many things!",
+      "index": "31"
+    },
+    {
+      "topic": "CitScribeAboutEND",
+      "topic_text": "That's all I needed.",
+      "emotion": "Neutral 50",
+      "response_text": "Very well.",
+      "index": "33"
+    },
+    {
+      "topic": "CitScribeAboutOrdersWhat are the Orders?",
+      "topic_text": "Could you name the Orders?",
+      "emotion": "Neutral 50",
+      "response_text": "Of course. There's the Order of the Sword, Order of the Shield, and Order of the Quill.",
+      "index": "36"
+    },
+    {
+      "topic": "CitScribeAboutWhatOrderWhat Order are you a part of?",
+      "topic_text": "Which Order do you serve, Squire Bowditch?",
+      "emotion": "Neutral 50",
+      "response_text": "I am Proctor of the Order of the Shield. I oversee the others in my Order, and make sure our defenses are up to snuff.",
+      "index": "39"
+    },
+    {
+      "topic": "DLC03TLCitadelEnclave",
+      "topic_text": "So... Any thoughts on the Enclave?",
+      "emotion": "Neutral 50",
+      "response_text": "The data you recovered gives our best chance at finishing the fight. I only hope we didn't miss anything in the decryption.",
+      "index": "42"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "Hrm? Yes, hello. I've heard about you. We don't get many strangers here in the Citadel, especially those who walk about unescorted.",
+      "index": "47"
+    },
+    {
+      "topic": "MS08TechnicalClue1",
+      "topic_text": "Do you know anything about an android from the Commonwealth?",
+      "emotion": "Neutral 50",
+      "response_text": "Supposedly he needed facial reconstruction and memory wipe. At first we were thrilled about the idea of androids. Turns out it was just a hoax.",
+      "index": "50"
+    },
+    {
+      "topic": "MS08TechnicalClue2",
+      "topic_text": "What do you know about the android from the Commonwealth?",
+      "emotion": "Neutral 50",
+      "response_text": "It's a hoax. Here listen to this \"android recording.\" We analyzed it. That's clearly a human man speaking.{doubting the rumors}",
+      "index": "51"
+    },
+    {
+      "topic": "MS08TechnicalClue3",
+      "topic_text": "You know anything about the mind wipe on that escaped android?",
+      "emotion": "Happy 50",
+      "response_text": "Most believe it's a hoax. Here's some evidence for you to consider for yourself. Take this holotape.{bragging that he's in the know}",
+      "index": "53"
+    },
+    {
+      "topic": "MS08TechnicalClue3Bribe",
+      "topic_text": "Got any info on an android mind wipe? Here's a 100 cap \"research fee.\"",
+      "emotion": "Happy 50",
+      "response_text": "Most believe it's a hoax. Here's some evidence for you to consider for yourself. Take this holotape.{bragging that he's in the know}",
+      "index": "56"
+    },
+    {
+      "topic": "MS08TechnicalClue3Stat",
+      "topic_text": "You know how they rewrote engrams in a cluster of Android memory subroutines?",
+      "emotion": "Happy 50",
+      "response_text": "Most believe it's a hoax. Here's some evidence for you to consider for yourself. Take this holotape.{bragging that he's in the know}",
+      "index": "57"
+    },
+    {
+      "topic": "MS08TechnicalClue4",
+      "topic_text": "Do you know who did the memory transfer on the escaped android?",
+      "emotion": "Surprise 50",
+      "response_text": "Normally I don't traffic in unsubstantiated rumor, but... they say old Pinkerton is hiding out somewhere in Rivet City and that he did it.{bragging that he is in the know}",
+      "index": "58"
+    },
+    {
+      "topic": "MS08TechnicalClue4Bribe",
+      "topic_text": "I'll give you 100 caps if you know who did the mind wipe on that android.",
+      "emotion": "Surprise 50",
+      "response_text": "Normally I don't traffic in unsubstantiated rumor, but... they say old Pinkerton is hiding out somewhere in Rivet City and that he did it.{bragging that he is in the know}",
+      "index": "61"
+    },
+    {
+      "topic": "MS08TechnicalClue4Stat",
+      "topic_text": "Do you know anything about the AI swap on that Commonwealth android?",
+      "emotion": "Surprise 50",
+      "response_text": "Normally I don't traffic in unsubstantiated rumor, but... they say old Pinkerton is hiding out somewhere in Rivet City and that he did it.{bragging that he is in the know}",
+      "index": "62"
+    },
+    {
+      "topic": "SpeechChallengeFailure",
+      "topic_text": "SpeechChallengeFailure",
+      "emotion": "Disgust 10",
+      "response_text": "I'm trained in resisting all forms of coercion. You're wasting your time.{doesn't think the player is worthy of the information, or can be trusted with it}",
+      "index": "63"
+    },
+    {
+      "topic": "TLCitadelEnclave",
+      "topic_text": "So... Any thoughts on the Enclave?",
+      "emotion": "Neutral 50",
+      "response_text": "They're sporting some pretty impressive Power Armor, I'll give them that. The Advanced Mark II.",
+      "index": "64"
+    },
+    {
+      "topic": "TLCitadelSuperMutant",
+      "topic_text": "Care to share anything about the Super Mutants?",
+      "emotion": "Disgust 50",
+      "response_text": "They're relentless. Like nothing I've ever seen before. I honestly think they see our Brothers in Power Armor as some kind of... canned meal.",
+      "index": "66"
+    },
+    {
+      "topic": "TLScribeRepair",
+      "topic_text": "Could you repair my equipment?",
+      "emotion": "Neutral 50",
+      "response_text": "I suppose that I can. The Brotherhood can make use of Wasteland currency to trade.",
+      "index": "68"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "CitTalkBowditchElderLyons1",
+      "topic_text": "CitTalkBowditchElderLyons1",
+      "emotion": "Neutral 50",
+      "response_text": "Ah... you're a bit early today, sir. Regardless, I'm happy to report that the development of the Mark II Recon Armor unit is proceeding as planned.",
+      "index": "70"
+    },
+    {
+      "topic": "CitTalkBowditchElderLyons3",
+      "topic_text": "CitTalkBowditchElderLyons3",
+      "emotion": "Neutral 50",
+      "response_text": "There may be a slight delay in the enhancement of the ambulatory gyroscope. A few of the parts I need were lost in the recent... inventory reduction.",
+      "index": "72"
+    },
+    {
+      "topic": "CitTalkBowditchElderLyons5",
+      "topic_text": "CitTalkBowditchElderLyons5",
+      "emotion": "Neutral 50",
+      "response_text": "Thank you, sir. I appreciate it.",
+      "index": "74"
+    },
+    {
+      "topic": "CitTalkHail",
+      "topic_text": "CitTalkHail.",
+      "emotion": "Neutral 50",
+      "response_text": "It is, Scribe Peabody. Thank you.",
+      "index": "76"
+    },
+    {
+      "topic": "GOODBYE",
+      "topic_text": "I have to go now.",
+      "emotion": "Neutral 50",
+      "response_text": "Back to work.",
+      "index": "77"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Neutral 50",
+      "response_text": "Hail.",
+      "index": "79"
+    }
+  ],
+  "combat": []
+}

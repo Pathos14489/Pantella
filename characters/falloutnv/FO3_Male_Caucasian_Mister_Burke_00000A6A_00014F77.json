@@ -1,0 +1,435 @@
+{
+  "name": "Mister Burke",
+  "url": "/wiki/Burke_(Fallout_3)",
+  "dialogue_name": "MisterBurke.txt",
+  "dialogue_url": "/wiki/MisterBurke.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "00000A6A",
+  "ref_id": "00014F77",
+  "editor_id": "MisterBurke",
+  "location": "Moriarty's Saloon,Megaton",
+  "location_url": "/wiki/Moriarty%27s_Saloon",
+  "descriptions": [
+    "Tenpenny Tower (optional)",
+    "Mister Burke is an associate of Allistair Tenpenny operating in Megaton in the Capital Wasteland in Fallout 3.",
+    "Little to nothing is known about Burke's past before 2277 save for that he and Tenpenny first met sometime around when Allistair first began accepting tenants and building a security force for Tenpenny Tower.",
+    "It was originally an off-hand suggestion by Allistair, complaining about how the sight of Megaton ruined his view from his penthouse balcony (though he also suggested for the town to be vacated beforehand) that led to Burke coming to the shantytown and trying to learn more about its people and especially the bomb residing at its center.",
+    "Mister Burke can typically be found sitting in a chair in Moriarty's Saloon prior to starting The Power of the Atom. After one accepts the fusion pulse charge and arms the bomb in Megaton, he will return to Tenpenny Tower and wait for the Lone Wanderer to rendezvous with him on the balcony. If Megaton is successfully destroyed, he will then spend all of his time in or on the same floor as his suite. However, in any outcome where the bomb does not go off and he is not killed, Burke will simply be disabled the next time the player leaves his current location cell, disappearing from the game.",
+    "During the hallucination sequence of the quest Walking with Spirits in the Point Lookout add-on, a character named Mister Break will appear leaning against an atomic bomb, similar to the Megaton bomb but much larger. After interacting with him, the bomb explodes, and the Lone Wanderer wakes up outside of the sacred bog. The character looks identical to Mister Burke, including his clothing. When spoken to, he will respond in Tobar the Ferryman's voice and he gives a warning to not get up, saying \"you might hurt yourself.\".",
+    "Mister Burke appears in Fallout 3 and Fallout Shelter."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Allistair TenpennyRoy Phillips(optional)",
+  "role": "Right-hand man",
+  "detailed_location": "MegatonMoriarty's SaloonTenpenny Tower(optional)",
+  "voice_actor": "Wes Johnson",
+  "special": {
+    "Strength": 5,
+    "Perception": 7,
+    "Endurance": 5,
+    "Charisma": 7,
+    "Intelligence": 4,
+    "Agility": 4,
+    "Luck": 4
+  },
+  "mod_special_values": {
+    "Strength": 4,
+    "Perception": 7,
+    "Endurance": 4,
+    "Charisma": 6,
+    "Intelligence": 9,
+    "Agility": 2,
+    "Luck": 15
+  },
+  "level": "12→20→30",
+  "tag_skills": [
+    {
+      "Barter:": "84→100"
+    },
+    {
+      "Melee Weap.:": "80→100"
+    },
+    {
+      "Speech:": "89→100"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Damage Res.:": "0%(4%)"
+    }
+  ],
+  "karma": "Very Evil",
+  "voice_type": "DLC04UniqueTobar (Mister Break)",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Anger 100",
+      "response_text": "Not now!{cutting off discussion because he's about to get in a fight with someone else}",
+      "index": "1"
+    },
+    {
+      "topic": "MS11BombHelpChoice",
+      "topic_text": "Messing with that bomb seems pretty technical. What if I can't do it?",
+      "emotion": "Disgust 60",
+      "response_text": "Lack the aptitude, you mean? You're not re-wiring the thing, just attaching the Pulse Charge to the detonator.",
+      "index": "36"
+    },
+    {
+      "topic": "MS11BurkeAcceptWidow",
+      "topic_text": "I have a \"proposition\" of my own. Would you like to hear it, Mister Burke?",
+      "emotion": "Happy 100",
+      "response_text": "Color me intrigued. Go on...{cautiously flirting, but maintain his cool in control demeanor}",
+      "index": "38"
+    },
+    {
+      "topic": "MS11BurkeAcceptWidow1",
+      "topic_text": "You see, I live here, lover. And surely you wouldn't want to hurt me...",
+      "emotion": "Surprise 100",
+      "response_text": "Well... I... I mean... Of course not... I must admit, I've never met a woman quite like you before. This changes everything...{flustered and completely charmed and infatuated. Not sure what to say}",
+      "index": "39"
+    },
+    {
+      "topic": "MS11BurkeAcceptWidow2",
+      "topic_text": "Burke, you silly man. You'll pay me 500 extra caps... and like it.",
+      "emotion": "Happy 100",
+      "response_text": "Five hundred you say? Well... Um... Yes. Yes, I think that can be arranged.{a powerful man flirting with a dangerous woman}",
+      "index": "42"
+    },
+    {
+      "topic": "MS11BurkeAccpetObjectiveChoice1",
+      "topic_text": "Throw in an extra 500 caps, and you've got yourself a deal.",
+      "emotion": "Happy 100",
+      "response_text": "Well played!  An extra 500 caps, in addition to the base fee, when Megaton lies in ruins. Here's the Fusion Pulse Charge. Place it in the bomb.",
+      "index": "45"
+    },
+    {
+      "topic": "MS11BurkeAccpetObjectiveChoice2",
+      "topic_text": "Megaton is under my protection. You're going to leave... now.",
+      "emotion": "Disgust 80",
+      "response_text": "Oh. I see. I didn't realize Megaton had any guardian beyond its intrepid sheriff. Very well, then. I'll take my leave, as you suggested.",
+      "index": "47"
+    },
+    {
+      "topic": "MS11BurkeAccpetObjectiveChoice3",
+      "topic_text": "All right, Mister Burke. I'll do it. Megaton will burn.",
+      "emotion": "Happy 80",
+      "response_text": "Excellent! I had a feeling about you. Here's the Fusion Pulse Charge. It needs to be installed inside the bomb.",
+      "index": "48"
+    },
+    {
+      "topic": "MS11BurkeAccpetObjectiveChoice5",
+      "topic_text": "You're out of your mind, Burke. There's no way I'm helping you.",
+      "emotion": "Sad 70",
+      "response_text": "Now that is a disappointment. Well, if you change your mind, the offer still stands. Good day.",
+      "index": "50"
+    },
+    {
+      "topic": "MS11BurkeDisarmedChoice",
+      "topic_text": "I've disarmed the bomb, Burke. That thing will never explode now.",
+      "emotion": "Anger 100",
+      "response_text": "You did WHAT? Are you out of your goddamned mind? Do you have any idea how long we've pained to put this plan into motion?{Incredibly angry}",
+      "index": "52"
+    },
+    {
+      "topic": "MS11BurkeExplainChoice1",
+      "topic_text": "Go on. I'm listening.",
+      "emotion": "Surprise 50",
+      "response_text": "The undetonated atomic bomb for which this town is named is still very much alive. All it needs is a little motivation.",
+      "index": "55"
+    },
+    {
+      "topic": "MS11BurkeExplainChoice2",
+      "topic_text": "Wait... You're going to destroy the town?",
+      "emotion": "Happy 50",
+      "response_text": "No, no, I'm merely a recruiter. YOU get to have the real fun.",
+      "index": "58"
+    },
+    {
+      "topic": "MS11BurkeExplainChoice3",
+      "topic_text": "You're a sick man, Burke. This conversation's over.",
+      "emotion": "Neutral 50",
+      "response_text": "It seems I have misjudged you. Very well. I'll simply find someone with more entrepreneurial spirit. Good day.",
+      "index": "61"
+    },
+    {
+      "topic": "MS11BurkeExplainTattleTail",
+      "topic_text": "Simms wants me to disarm the bomb...",
+      "emotion": "Disgust 75",
+      "response_text": "Simms is an idiot. He prides himself on his position as mayor and sheriff of this scrapyard.{with loathing}",
+      "index": "62"
+    },
+    {
+      "topic": "MS11BurkeExplainTattleTail1",
+      "topic_text": "All right. Say I decide to help you. What's in it for me?",
+      "emotion": "Happy 50",
+      "response_text": "You mean besides doing the world a favor by removing this pestilent scab of a town?{joking about a disgusting town he wants to destroy}",
+      "index": "63"
+    },
+    {
+      "topic": "MS11BurkeExplainTattleTail2",
+      "topic_text": "Too many lives are at stake, Burke! I'm going to defuse that bomb.",
+      "emotion": "Neutral 50",
+      "response_text": "I advise you against that particular course of action. If you interfere with my employer's wishes, you will find he can be quite  disagreeable.{deadly serious... veiled threat}",
+      "index": "65"
+    },
+    {
+      "topic": "MS11BurkeExplainTattleTail3",
+      "topic_text": "Forget I mentioned it.",
+      "emotion": "Anger 10",
+      "response_text": "You would do well to side with my employer in this little matter. Life could otherwise become quite unbearable for you.{calm, very real, very serious threat}",
+      "index": "66"
+    },
+    {
+      "topic": "MS11BurkeExplainTattleTailSpeech",
+      "topic_text": "I told Simms I'd disarm it. Maybe some extra caps would change my mind...",
+      "emotion": "Surprise 50",
+      "response_text": "Indeed. A man's word is worth his weight in caps. I suppose I could arrange for a bonus of say, 500 caps in addition to the base fee.{slimy business man agreeing to a bribe}",
+      "index": "67"
+    },
+    {
+      "topic": "MS11BurkeFollowupChoice3",
+      "topic_text": "We're talking a lot of innocent lives here, Burke. Can I warn them?",
+      "emotion": "Disgust 60",
+      "response_text": "Absolutely not! The place, the people, they're one and the same! Sacrifices for a nobler future.",
+      "index": "69"
+    },
+    {
+      "topic": "MS11BurkeGreetingChoice1",
+      "topic_text": "Mister Burke, is it? Please, continue. I find myself... enthralled.",
+      "emotion": "Happy 65",
+      "response_text": "Finally, someone with a modicum of civility and common sense.",
+      "index": "71"
+    },
+    {
+      "topic": "MS11BurkeGreetingChoice2",
+      "topic_text": "It does?",
+      "emotion": "Surprise 50",
+      "response_text": "Don't you see? You're a free agent! You've no ties here, no interest in this settlement's affairs. Megaton means nothing to you!",
+      "index": "74"
+    },
+    {
+      "topic": "MS11BurkeGreetingChoice3",
+      "topic_text": "If you've got a point, make it.",
+      "emotion": "Happy 50",
+      "response_text": "As you wish. I'm looking to employ an individual with no ties to Megaton, no interest in its future.",
+      "index": "77"
+    },
+    {
+      "topic": "MS11GoodbyeChoiceGoodbye.",
+      "topic_text": "It's time for me to go.",
+      "emotion": "Happy 60",
+      "response_text": "Don't let me keep you.{saying goodbye}",
+      "index": "79"
+    },
+    {
+      "topic": "MS12Basement",
+      "topic_text": "I've heard this place has a basement. How do I get to it?",
+      "emotion": "Surprise 50",
+      "response_text": "That area is off limits to residents and visitors. Only Gustavo and authorized technicians are allowed down there.{surprised at the apparent randomness of the question and making sure it is understood the player is not to go there}",
+      "index": "80"
+    },
+    {
+      "topic": "MS12ResidentsBranch",
+      "topic_text": "What's it like living at Tenpenny Tower?",
+      "emotion": "Neutral 50",
+      "response_text": "It's a piece of Utopia jutting up from the Wasteland. Tenpenny is a true visionary. I do my part to assist him in unfolding his Master Plan.{with vicarious self satisfaction}",
+      "index": "82"
+    },
+    {
+      "topic": "MS12ResidentsGhoulsAbout these Ghouls...",
+      "topic_text": "Are you doing something about those Ghouls?",
+      "emotion": "Neutral 50",
+      "response_text": "We have the situation... contained.{Bureaucratic slyness}",
+      "index": "84"
+    },
+    {
+      "topic": "MS12ResidentsGhoulsChoice1MS12ResidentsGhoulsChoiceGood",
+      "topic_text": "Contained? Don't you want a permanent solution?",
+      "emotion": "Disgust 5",
+      "response_text": "If you can do a better job than Chief Gustavo, perhaps you can go enlighten him. I have important matters to attend to. If you'll excuse me?{mild sarcasm}",
+      "index": "85"
+    },
+    {
+      "topic": "MS12ResidentsGhoulsChoice2MS12ResidentsGhoulsChoiceBad",
+      "topic_text": "For an evil minion, you're not very bright. You can't \"contain\" Ghouls.",
+      "emotion": "Anger 100",
+      "response_text": "Ahem. I advise you to speak more civilly. Perhaps you can go enlighten Chief Gustavo. I have pressing \"evil minion\" things to do.{angry sarcastic indignation}",
+      "index": "86"
+    },
+    {
+      "topic": "MS12ResidentsGhoulsChoice3MS12ResidentsGhoulsChoiceNeutral",
+      "topic_text": "Whatever.",
+      "emotion": "Disgust 5",
+      "response_text": "If there's nothing else, I have better things to be doing right now.{mild annoyance}",
+      "index": "87"
+    },
+    {
+      "topic": "MS12ResidentsNeighbors",
+      "topic_text": "How would you feel about having a few Ghoul neighbors?",
+      "emotion": "Disgust 50",
+      "response_text": "I spend most of my days out acquiring and managing various... assets for Mister Tenpenny. So it matter's little to me personally.{self important bureaucrat}",
+      "index": "88"
+    },
+    {
+      "topic": "MS12ResidentsNeighborsBad",
+      "topic_text": "Ghouls are disgusting, aren't they?",
+      "emotion": "Neutral 50",
+      "response_text": "It best not to dwell on such things.{self important bureaucrat}",
+      "index": "91"
+    },
+    {
+      "topic": "MS12ResidentsNeighborsGood",
+      "topic_text": "Tenpenny seems rather heartless.",
+      "emotion": "Neutral 50",
+      "response_text": "In time, after Tenpenny's projects have come to fruition, things like ghouls and other aberrations of nature will be a thing of the past.{self important bureaucrat}",
+      "index": "93"
+    },
+    {
+      "topic": "MS12ResidentsNeighborsNeutral",
+      "topic_text": "Whatever.",
+      "emotion": "Neutral 50",
+      "response_text": "Apathy is a condition of the present blight. In the future men will have passion and ideals again. Like Mister Tenpenny. Now, if you'll excuse me.{self important bureaucrat}",
+      "index": "95"
+    },
+    {
+      "topic": "MS14CrowleyWhat can you tell me about Mister Crowley?",
+      "topic_text": "Have you ever heard of a Mister Crowley?",
+      "emotion": "Neutral 50",
+      "response_text": "Never heard of him.",
+      "index": "96"
+    },
+    {
+      "topic": "PLAYERINIRONSITES",
+      "topic_text": "PLAYER IN IRON SITES",
+      "emotion": "Neutral 50",
+      "response_text": "Put that away. Unless you plan on using it.{confidently and calmly }",
+      "index": "98"
+    },
+    {
+      "topic": "SpeechChallengeFailure",
+      "topic_text": "SpeechChallengeFailure",
+      "emotion": "Neutral 50",
+      "response_text": "Is that the best you can do? I'm afraid I'm not impressed.",
+      "index": "103"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "I have to go now.",
+      "emotion": "Neutral 50",
+      "response_text": "Time is wasting.",
+      "index": "106"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Neutral 50",
+      "response_text": "Who do we have here?",
+      "index": "112"
+    },
+    {
+      "topic": "MS11BattleTopic",
+      "topic_text": "MS11BattleTopic",
+      "emotion": "Neutral 50",
+      "response_text": "I'm sorry? Sheriff, what are you hollering about?{calm, cool, like a panther about to pounce}",
+      "index": "125"
+    },
+    {
+      "topic": "MS11BurkeAndPhillips",
+      "topic_text": "MS11BurkeAndPhillips",
+      "emotion": "Neutral 50",
+      "response_text": "Is that so? Do it then, Phillips. Set you feral pets upon me. I could use a bit of sport. After I’ve dealt with them, I'll turn my attention to you.",
+      "index": "129"
+    },
+    {
+      "topic": "MS11FinBurkeThreatenPlayer",
+      "topic_text": "MS11FinBurkeThreatenPlayer",
+      "emotion": "Anger 100",
+      "response_text": "You've made a grievous error in judgement. Watch your back.{a deadly serious death threat}",
+      "index": "134"
+    },
+    {
+      "topic": "MS11NukeView",
+      "topic_text": "MS11NukeView",
+      "emotion": "Happy 100",
+      "response_text": "Now that, my friend, is beautiful.{Watching an atomic bomb explode in the distance}",
+      "index": "135"
+    }
+  ],
+  "combat": [
+    {
+      "topic": "AcceptYield",
+      "topic_text": "AcceptYield",
+      "emotion": "Disgust 50",
+      "response_text": "Now, can we please behave like civilized adults.{condescending and  threatening}",
+      "index": "138"
+    },
+    {
+      "topic": "Assault",
+      "topic_text": "Assault",
+      "emotion": "Disgust 50",
+      "response_text": "I can assure you, I'm NOT someone to trifle with.{smugly threatening an assailant}",
+      "index": "139"
+    },
+    {
+      "topic": "Attack",
+      "topic_text": "Attack",
+      "emotion": "Disgust 50",
+      "response_text": "So, you're a masochist...{smugly taunting an opponent he is certain to beat}",
+      "index": "140"
+    },
+    {
+      "topic": "DeathResponse",
+      "topic_text": "DeathResponse",
+      "emotion": "Disgust 50",
+      "response_text": "There. You see? Natural selection at it's finest.{smugly indifferent to another man's death}",
+      "index": "142"
+    },
+    {
+      "topic": "Flee",
+      "topic_text": "Flee",
+      "emotion": "Fear 50",
+      "response_text": "I've underestimated you. Let's continue this another time!{retreating away from a fight}",
+      "index": "145"
+    },
+    {
+      "topic": "Hit",
+      "topic_text": "Hit",
+      "emotion": "Pained 100",
+      "response_text": "I just had this suit tailored!{gritting through the pain of getting shot and taunting his attacker}",
+      "index": "146"
+    },
+    {
+      "topic": "Murder",
+      "topic_text": "Murder",
+      "emotion": "Disgust 50",
+      "response_text": "Hmm. Some people have no respect for the sanctity of life.{smugly indifferent to the death of another man}",
+      "index": "147"
+    },
+    {
+      "topic": "MurderNoCrime",
+      "topic_text": "MurderNoCrime",
+      "emotion": "Disgust 50",
+      "response_text": "Hmm. Some people have no respect for the sanctity of life.{smugly indifferent to the death of another man}",
+      "index": "149"
+    },
+    {
+      "topic": "Pickpocket",
+      "topic_text": "Pickpocket",
+      "emotion": "Anger 50",
+      "response_text": "If you wish to keep all your fingers, you'll keep them to yourself.{caught a pickpocket}",
+      "index": "151"
+    }
+  ]
+}

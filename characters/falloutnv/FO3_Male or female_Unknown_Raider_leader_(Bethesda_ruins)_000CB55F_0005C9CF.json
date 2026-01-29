@@ -1,0 +1,77 @@
+{
+  "name": "Raider leader (Bethesda ruins)",
+  "url": "/wiki/Raider_leader_(Bethesda_ruins)",
+  "dialogue_name": "",
+  "dialogue_url": null,
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": true,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000CB55F",
+  "ref_id": "0005C9CF",
+  "editor_id": "BethRuinsLvlRaiderBoss",
+  "location": "Bethesda ruinseast offices",
+  "location_url": "/wiki/Bethesda_ruins",
+  "descriptions": [
+    "The Bethesda ruins raider boss is a notable member of the raiders inhabiting the Bethesda ruins in 2277.",
+    "The boss patrols the area in the Bethesda east offices where the Lockpick bobblehead is located.",
+    "* 15% chance of spawning",
+    "PC Playstation 3 Xbox 360 The boss, much like the rest of the raiders, respawns. This creates an infinite source of the U.S. Army: 30 Handy Flamethrower Recipes skill book. "
+  ],
+  "race": "Human",
+  "gender": "Male or female",
+  "affiliation": "Raiders",
+  "role": "Raider boss",
+  "detailed_location": "Bethesda ruins, east offices",
+  "voice_actor": "James Lewis(male)Shari Elliker(female)",
+  "special": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 3,
+    "Intelligence": 3,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "level": "4",
+  "tag_skills": [
+    {
+      "Big Guns:": "41"
+    },
+    {
+      "Melee Weap.:": "45"
+    },
+    {
+      "Small Guns:": "45"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "55"
+    },
+    {
+      "Critical Chance:": "5%"
+    },
+    {
+      "Unarmed Dam.:": "1.15"
+    },
+    {
+      "Poison Resist.:": "15%"
+    },
+    {
+      "Rad. Resist.:": "6%"
+    },
+    {
+      "Carry Weight:": "210"
+    }
+  ],
+  "karma": "Evil",
+  "voice_type": "MaleGroupRaiderDC",
+  "topics": [],
+  "conversation": [],
+  "combat": []
+}

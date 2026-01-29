@@ -1,0 +1,215 @@
+{
+  "name": "Goalie Ledoux",
+  "url": "/wiki/Ledoux",
+  "dialogue_name": "SDOLedoux.txt",
+  "dialogue_url": "/wiki/SDOLedoux.txt",
+  "spawned_dead": false,
+  "spawned": true,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000CADC2",
+  "ref_id": "000CADDE",
+  "editor_id": "SDOLedoux",
+  "location": "OutsideRed Racer factory",
+  "location_url": "/wiki/Red_Racer_factory",
+  "descriptions": [
+    "Goalie Ledoux is a hockey-obsessed gang leader in Fallout 3.",
+    "Ledoux is the leader of the Sudden-Death Overtime gang and is obsessed with the ancient ice sport, hockey that his own ancestors played. Winger Mercier was sent to procure a secret formula for a new type of Nuka-Cola while Ledoux made contact with the buyer.",
+    "PC Playstation 3 Xbox 360 Goalie Ledoux will remain at the Red Racer factory, even after his crew has run off. "
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Sudden-Death Overtime",
+  "role": "Gang leader",
+  "detailed_location": "Red Racer factory",
+  "voice_actor": "James Lewis",
+  "special": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 3,
+    "Intelligence": 3,
+    "Agility": 7,
+    "Luck": 5
+  },
+  "level": "9",
+  "tag_skills": [
+    {
+      "Melee Weap.:": "66(68)"
+    },
+    {
+      "Small Guns:": "68(70)"
+    },
+    {
+      "Unarmed:": "62"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Evil",
+  "voice_type": "MaleGroupRaiderDC",
+  "geck_race": "CaucasianRaider",
+  "topics": [
+    {
+      "topic": "DialogLedoux01",
+      "topic_text": "I've got the formula for Nuka-Cola Clear.",
+      "emotion": "Disgust 80",
+      "response_text": "Mercier didn't make it? Damn! How do they expect us to play when we don't even have enough people on our team?",
+      "index": "1"
+    },
+    {
+      "topic": "DialogLedoux02",
+      "topic_text": "I'm here to tell you Mercier is dead.",
+      "emotion": "Disgust 80",
+      "response_text": "Mercier didn't make it? Damn! How do they expect us to play when we don't even have enough people on our team?",
+      "index": "3"
+    },
+    {
+      "topic": "DialogLedoux03",
+      "topic_text": "None of your damn business!",
+      "emotion": "Disgust 90",
+      "response_text": "Penalty! That's gonna be 2 minutes in the box for you.",
+      "index": "5"
+    },
+    {
+      "topic": "DialogLedoux04",
+      "topic_text": "Hey, take it easy, I was just passing through.",
+      "emotion": "Disgust 90",
+      "response_text": "Don't take slapshots at me like that! We saw you come out of the Nuka-Cola Plant and we know you've got the formula.",
+      "index": "7"
+    },
+    {
+      "topic": "DialogLedoux05",
+      "topic_text": "Who are you and why are you talking like that?",
+      "emotion": "Disgust 50",
+      "response_text": "The name's Goalie Ledoux and I'm captain of Sudden-Death Overtime, the last of the icegangs.",
+      "index": "9"
+    },
+    {
+      "topic": "DialogLedoux06",
+      "topic_text": "What's with the masks, anyway?",
+      "emotion": "Disgust 50",
+      "response_text": "This is the mask of my icegang, Sudden-Death Overtime. I'm the team captain, Goalie Ledoux.",
+      "index": "12"
+    },
+    {
+      "topic": "DialogLedoux07",
+      "topic_text": "I think you've taken a few too many blows to the head, weirdo!",
+      "emotion": "Disgust 90",
+      "response_text": "Penalty! No one tries to put one passed Goalie Ledoux!",
+      "index": "15"
+    },
+    {
+      "topic": "DialogLedoux08",
+      "topic_text": "Okay, if you say so.",
+      "emotion": "Disgust 70",
+      "response_text": "Now look, you gonna sell us that formula or do we have to faceoff?",
+      "index": "17"
+    },
+    {
+      "topic": "DialogLedoux09",
+      "topic_text": "Well, \"captain\", are we gonna fight or try and make a deal?",
+      "emotion": "Disgust 50",
+      "response_text": "That's up to you. We can make a deal or we can faceoff.",
+      "index": "19"
+    },
+    {
+      "topic": "DialogLedoux10",
+      "topic_text": "I think you're all crazy, and I'm getting out of here.",
+      "emotion": "Disgust 90",
+      "response_text": "Penalty! No one tries to put one past Goalie Ledoux!",
+      "index": "21"
+    },
+    {
+      "topic": "DialogLedouxFaceoff",
+      "topic_text": "Screw it, I'm going for the faceoff!",
+      "emotion": "Disgust 70",
+      "response_text": "Well, you're a little shorthanded, but you showed up for the game. The least I can do is make sure it's a short period.{sarcastic}",
+      "index": "23"
+    },
+    {
+      "topic": "DialogLedouxSell",
+      "topic_text": "Fine, I'll take it.",
+      "emotion": "Happy 50",
+      "response_text": "Now that's teamwork! Good choice.",
+      "index": "25"
+    },
+    {
+      "topic": "DialogLedouxSellSC",
+      "topic_text": "Make it 400 caps and it's all yours.",
+      "emotion": "Happy 50",
+      "response_text": "Nicely played; and I know talent when I see it. Here you go.",
+      "index": "27"
+    },
+    {
+      "topic": "DialogLedouxWait",
+      "topic_text": "Can I think about it?",
+      "emotion": "Disgust 50",
+      "response_text": "No, no, no. When you're in the game, you have to make split-second decisions; think on your feet. Now come on...",
+      "index": "29"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "Sorry, we've got practice. Maybe we'll cross sticks again one day.",
+      "index": "30"
+    },
+    {
+      "topic": "SpeechChallengeFailure",
+      "topic_text": "SpeechChallengeFailure",
+      "emotion": "Disgust 80",
+      "response_text": "[Makes buzzer noise]. Nice try, but that's a miss. 250 is the score... you in?",
+      "index": "32"
+    },
+    {
+      "topic": "SuperDuperMartTOPIC",
+      "topic_text": "FFsuperDuperMartTOPIC",
+      "emotion": "Neutral 50",
+      "response_text": "We're back.  Somebody open up the... Hang on, something' ain't right here.{Raider captain over intercom, returning from a raid. NOTE: add radio/intercom filter.}",
+      "index": "33"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "FFEU18RaiderTaunt",
+      "topic_text": "FFEU18RaiderTaunt",
+      "emotion": "Happy 50",
+      "response_text": "Just say the word and it's all over. Course then we'd have to skin you alive and eat your liver.",
+      "index": "34"
+    },
+    {
+      "topic": "GOODBYE",
+      "topic_text": "I have to go now.",
+      "emotion": "Neutral 50",
+      "response_text": "Thanks for the disk. Maybe we'll cross sticks again some day.",
+      "index": "41"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Disgust 70",
+      "response_text": "No one messes with Sudden-Death Overtime. No one.",
+      "index": "42"
+    }
+  ],
+  "combat": [
+    {
+      "topic": "Attack",
+      "topic_text": "Attack",
+      "emotion": "Anger 70",
+      "response_text": "I'm gonna mount you on my fucking wall!{angry, screaming}",
+      "index": "43"
+    },
+    {
+      "topic": "Flee",
+      "topic_text": "Flee",
+      "emotion": "Neutral 50",
+      "response_text": "Graaaahhhhh! No!",
+      "index": "50"
+    }
+  ]
+}

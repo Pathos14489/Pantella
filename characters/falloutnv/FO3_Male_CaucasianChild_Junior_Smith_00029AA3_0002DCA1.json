@@ -1,0 +1,119 @@
+{
+  "name": "Junior Smith",
+  "url": "/wiki/Junior_Smith",
+  "dialogue_name": "JuniorSmith.txt",
+  "dialogue_url": "/wiki/JuniorSmith.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": true,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "00029AA3",
+  "ref_id": "0002DCA1",
+  "editor_id": "JuniorSmith",
+  "location": "The Smith's house,Old Man Harris' house",
+  "location_url": "/wiki/The_Smith%27s_house",
+  "descriptions": [
+    "Jack \"Junior\" Smith is the son of Jack Smith and Linda Smith and resides in Andale in 2277.",
+    "Junior is the son of Jack and Linda Smith, and one of two children in Andale, the other one being Jenny Wilson, with whom he seems to get along well."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Andale",
+  "role": "Son",
+  "detailed_location": "Andale",
+  "voice_actor": "Sean McCoy",
+  "special": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 5,
+    "Intelligence": 5,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "level": "1",
+  "misc_skills": [
+    {
+      "Hit Points:": "30"
+    },
+    {
+      "Critical Chance:": "5%"
+    },
+    {
+      "Unarmed Dam.:": "0.75"
+    },
+    {
+      "Poison Resist.:": "20%"
+    },
+    {
+      "Rad. Resist.:": "20%"
+    },
+    {
+      "Carry Weight:": "200"
+    },
+    {
+      "Damage Res.:": "0%(3%)"
+    }
+  ],
+  "karma": "Neutral",
+  "voice_type": "MaleChild01DC",
+  "geck_race": "CaucasianChild",
+  "topics": [
+    {
+      "topic": "AndaleJuniorLivingHere",
+      "topic_text": "Do you like living in Andale?",
+      "emotion": "Neutral 50",
+      "response_text": "It's okay, I guess. There aren't a lot of kids around here and no one who comes to visit stays around long.",
+      "index": "1"
+    },
+    {
+      "topic": "AndaleJuniorParents",
+      "topic_text": "What do your parents do?",
+      "emotion": "Neutral 50",
+      "response_text": "The same thing that all parents do! My mom cooks and cleans the house and my dad goes to work with Mr. Wilson.",
+      "index": "3"
+    },
+    {
+      "topic": "AndaleTownTopic",
+      "topic_text": "Tell me about Andale.",
+      "emotion": "Sad 50",
+      "response_text": "It's swell! Except... I wish there were more kids. And my dad says that I'm gonna have to marry smelly ol' Jenny Wilson some day.",
+      "index": "5"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Happy 50",
+      "response_text": "You're my hero, mister. I want to be just like you when I grow up.",
+      "index": "8"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "AndaleHelloResponseShortJunior",
+      "topic_text": "AndaleHelloResponseShort",
+      "emotion": "Neutral 50",
+      "response_text": "Hello, Mrs. Wilson.",
+      "index": "16"
+    },
+    {
+      "topic": "GOODBYE",
+      "topic_text": "I have to go now.",
+      "emotion": "Neutral 50",
+      "response_text": "So long!",
+      "index": "21"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Neutral 50",
+      "response_text": "Dinner smells great, mom!",
+      "index": "24"
+    }
+  ],
+  "combat": []
+}

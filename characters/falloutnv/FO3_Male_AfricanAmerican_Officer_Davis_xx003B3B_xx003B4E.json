@@ -1,0 +1,73 @@
+{
+  "name": "Officer Davis",
+  "url": "/wiki/Davis_(Broken_Steel)",
+  "dialogue_name": "DLC03WQ01Guard1.txt",
+  "dialogue_url": "/wiki/DLC03WQ01Guard1.txt",
+  "spawned_dead": false,
+  "spawned": true,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "xx003B3B",
+  "ref_id": "xx003B4E",
+  "editor_id": "DLC03WQ01Guard1",
+  "location": "BetweenRivet CityandCanterbury Commons",
+  "location_url": "/wiki/Rivet_City",
+  "descriptions": [
+    "Officer Davis is an inexperienced member of the Rivet City security force in 2277.",
+    "Rivet City has contracted with the Brotherhood of Steel to help escort water caravans to their destination, in exchange for getting money and technology from the Brotherhood. Officer Davis is one of the security team hoping to be paid with technology.",
+    "Officer Davis appears only in the Fallout 3 add-on Broken Steel."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Rivet City security force",
+  "role": "Officer",
+  "detailed_location": "Rivet City",
+  "voice_actor": "Jeff Baker",
+  "special": {
+    "Strength": 6,
+    "Perception": 6,
+    "Endurance": 5,
+    "Charisma": 3,
+    "Intelligence": 3,
+    "Agility": 7,
+    "Luck": 4
+  },
+  "level": "1→5 (equal to player level)",
+  "tag_skills": [
+    {
+      "Melee Weap.:": "31"
+    },
+    {
+      "Small Guns:": "33(38)"
+    },
+    {
+      "Unarmed:": "29"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "70"
+    },
+    {
+      "Damage Res.:": "28%"
+    }
+  ],
+  "karma": "Good",
+  "voice_type": "MaleAdult01DefaultDC",
+  "geck_race": "AfricanAmerican",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Surprise 50",
+      "response_text": "They came out of nowhere. I need to get back to report to Lepelletier. She'll want to know what happened. Thanks for the help!{shell shocked. Lepelletier: la-Pell-a-Teer}",
+      "index": "1"
+    }
+  ],
+  "conversation": [],
+  "combat": []
+}

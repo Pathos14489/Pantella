@@ -1,0 +1,318 @@
+{
+  "name": "Manya Vargas",
+  "url": "/wiki/Manya_Vargas",
+  "dialogue_name": "Manya.txt",
+  "dialogue_url": "/wiki/Manya.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "00000A68",
+  "ref_id": "00003B58",
+  "editor_id": "Manya",
+  "location": "Nathan and Manya's house",
+  "location_url": "/wiki/Nathan_and_Manya%27s_house",
+  "descriptions": [
+    "Manya Vargas is a former caravaneer, an elderly resident of Megaton, and the wife of Nathan Vargas in Fallout 3.",
+    "Born in Megaton,",
+    "Manya is descended from one of the founders of Megaton, and one of the people most knowledgeable about the town's history.",
+    "The Vargas family didn't stop at just increasing defense. After initially helping her father as a scavenger,",
+    "Eventually, they both amassed enough caps to retire in relative comfort at Megaton.",
+    "As a result of her provenance, Manya is a full citizen of Megaton, with a spartan, but permanent home, unlike most of the transients living in the common house. While other members denizens keep an eye out for strangers, Manya's decades on the caravan trail left her with the uncanny ability to spot a raider spy from a hundred meters, making her much more comfortable around strangers.",
+    "Her beloved husband is  her biggest headache. Since they retired in Megaton, Nathan took it upon himself to be the Enclave's greatest (and only) advocate in the town after Enclave Radio came on the air, basically proselytizing on its behalf, while trying to scrounge up parts for his gunsmithing.",
+    "She also struggles with what appears to be Nathan's senility: He routinely forgets to pick up items for her from Moira,",
+    "Both Manya and her husband share their surname with Paladin Vargas, a member of the Lyons' Pride in the East Coast Brotherhood as well as Manny Vargas in Fallout: New Vegas. Their familial relationship, if any, is not known, though it is stated in the Wasteland Census that Paladin Vargas is of no relation to Nathaniel Vargas. It's likely that they are all a nod to Snake Vargas, one of the starting characters in Wasteland and a significant character in the lore of that franchise."
+  ],
+  "race": "Human",
+  "gender": "Female",
+  "affiliation": "MegatonThe Railroad",
+  "role": "Resident",
+  "detailed_location": "Nathan and Manya's house, Megaton",
+  "voice_actor": "Diana Sowle",
+  "special": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 4,
+    "Intelligence": 4,
+    "Agility": 6,
+    "Luck": 4
+  },
+  "mod_special_values": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 4,
+    "Intelligence": 4,
+    "Agility": 7,
+    "Luck": 4
+  },
+  "level": "4",
+  "tag_skills": [
+    {
+      "Barter:": "41"
+    },
+    {
+      "Small Guns:": "45(47)"
+    },
+    {
+      "Unarmed:": "41(43)"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "80(85)"
+    }
+  ],
+  "karma": "Good",
+  "voice_type": "FemaleOld01DC",
+  "geck_race": "CaucasianOld",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "Well hey there, stranger! I'm Manya. The old coot wandering around here is my husband, Nathan.",
+      "index": "1"
+    },
+    {
+      "topic": "MS08SympathizerClue1",
+      "topic_text": "I'm interested in this android from the Commonwealth.",
+      "emotion": "Neutral 50",
+      "response_text": "We don't do that anymore. Well, not until the heat dies down. The Railroad isn't operating anymore. Best forget it about it now.",
+      "index": "9"
+    },
+    {
+      "topic": "MS08SympathizerClue2",
+      "topic_text": "I know you know something about this android from the Commonwealth.",
+      "emotion": "Fear 10",
+      "response_text": "Last I heard, they were looking for a surgeon and a computer technician. But you best keep your head down, honey. Those hounds are still out there.{hushed and conspiratorial}",
+      "index": "10"
+    },
+    {
+      "topic": "MS08SympathizerClue3Are you part of the Railroad? What do you know about this android?",
+      "topic_text": "I know you're part of the Railroad. What do you know about the android?",
+      "emotion": "Neutral 50",
+      "response_text": "A while back they were asking around for a computer genius to give our friend a new set of memories. You know, a clean slate and all that.{hushed and conspiratorial}",
+      "index": "11"
+    },
+    {
+      "topic": "MS08SympathizerClue4Do you know where this android had his face or memory replaced?",
+      "topic_text": "I know you know where this android received his operations. Talk.",
+      "emotion": "Surprise 50",
+      "response_text": "Pinkerton at Rivet City took care of him a while back. Was a complete success. No one will recognize that robot now. I'm glad.{hushed and conspiratorial}",
+      "index": "12"
+    },
+    {
+      "topic": "MegManyaMegaton",
+      "topic_text": "I had some questions about this town's history.",
+      "emotion": "Neutral 50",
+      "response_text": "I can tell you just about anything you want to know, honey. Megaton's history ain't no secret.",
+      "index": "14"
+    },
+    {
+      "topic": "MegManyaMegatonAirplaneParts",
+      "topic_text": "What's this place made of?",
+      "emotion": "Neutral 50",
+      "response_text": "Long ago, before the war, there used to be machines  they were like buses, but they flew through the sky, taking people anywhere they wanted to go.",
+      "index": "15"
+    },
+    {
+      "topic": "MegManyaMegatonAirplaneParts1",
+      "topic_text": "So why didn't they move the bomb?",
+      "emotion": "Neutral 50",
+      "response_text": "Some of us wanted to. But the Church of Atom was just getting its start then. We needed their help to build the walls and clear the wreckage.",
+      "index": "19"
+    },
+    {
+      "topic": "MegManyaMegatonAirplaneParts2",
+      "topic_text": "There are a lot of parts here for just one machine.",
+      "emotion": "Neutral 50",
+      "response_text": "Good eye. You're right honey, there are. There was an air station a couple of miles from here. It'd been stripped of everything except the planes.",
+      "index": "22"
+    },
+    {
+      "topic": "MegManyaMegatonAirplaneParts3",
+      "topic_text": "Why build the walls out of some old flying machine?",
+      "emotion": "Neutral 50",
+      "response_text": "It's a hell of a lot easier than trying to find enough parts to build walls and houses from nothing. The scrap was there, why not use it?",
+      "index": "25"
+    },
+    {
+      "topic": "MegManyaMegatonAirplanePartsEND",
+      "topic_text": "I had another question about Megaton.",
+      "emotion": "Neutral 50",
+      "response_text": "Sure thing, hon.",
+      "index": "27"
+    },
+    {
+      "topic": "MegManyaMegatonEND",
+      "topic_text": "I don't want to talk about Megaton anymore.",
+      "emotion": "Neutral 50",
+      "response_text": "Well, you come on back any time you want to hear more.",
+      "index": "28"
+    },
+    {
+      "topic": "MegManyaMegatonHistory",
+      "topic_text": "How did the town start?",
+      "emotion": "Neutral 50",
+      "response_text": "Well, originally, it started as a hole in the ground. My papi talked about how his father and the original settlers just hid in this crater.",
+      "index": "29"
+    },
+    {
+      "topic": "MegManyaMegatonHistory1",
+      "topic_text": "Why did they build the walls?",
+      "emotion": "Neutral 50",
+      "response_text": "Well, the Raiders, for one. Once the town got big enough, they'd wait until the traders and their guards were away, then come in and clean us out!",
+      "index": "33"
+    },
+    {
+      "topic": "MegManyaMegatonHistory2",
+      "topic_text": "So it was just a collection of traders in the beginning?",
+      "emotion": "Neutral 50",
+      "response_text": "Not at first. It was a collection of people trying to get into the vault, people worshipping the bomb, and a few other refugees.",
+      "index": "37"
+    },
+    {
+      "topic": "MegManyaMegatonHistory3",
+      "topic_text": "So anyone can live in Megaton?",
+      "emotion": "Neutral 50",
+      "response_text": "No. Space is limited these days. You see all of these people wandering around here? They live up in the common house and aren't really citizens.",
+      "index": "40"
+    },
+    {
+      "topic": "MegManyaMegatonHistoryEND",
+      "topic_text": "That's enough of the history lesson.",
+      "emotion": "Neutral 50",
+      "response_text": "If you say so, honey.",
+      "index": "43"
+    },
+    {
+      "topic": "MegManyaMegatonHowDidYouGetHere",
+      "topic_text": "How did you get here?",
+      "emotion": "Neutral 50",
+      "response_text": "I was born here, actually. Just like my papi. Oh, for a while I helped him scavenge and then later on his caravan.",
+      "index": "44"
+    },
+    {
+      "topic": "MegManyaMegatonOtherPeople",
+      "topic_text": "Where did everyone else come from?",
+      "emotion": "Neutral 50",
+      "response_text": "Oh, they come from all over... all over. You name it. The Stahl family grew up out east somewhere. Lucy's from some little settlement to the north.",
+      "index": "47"
+    },
+    {
+      "topic": "MegManyaMegatonWhosInCharge",
+      "topic_text": "Who's in charge around here?",
+      "emotion": "Neutral 50",
+      "response_text": "Well, technically, no one. But you can't put two people in a room together without one of them trying to govern the other.",
+      "index": "50"
+    },
+    {
+      "topic": "MegManyaMegatonWhosInChargeEND",
+      "topic_text": "I think I get the picture.",
+      "emotion": "Neutral 50",
+      "response_text": "All right then. Anything else you wanted to know?",
+      "index": "62"
+    },
+    {
+      "topic": "MegManyaMegatonWhosInChargeMoriarty",
+      "topic_text": "Tell me about Colin Moriarty.",
+      "emotion": "Anger 50",
+      "response_text": "That man is the scum of the Earth. He keeps the drunks around here soaking in liquor and that poor Nova, that girl deserves better.",
+      "index": "63"
+    },
+    {
+      "topic": "MegManyaMegatonWhosInChargeSimms",
+      "topic_text": "Tell me about Lucas Simms.",
+      "emotion": "Neutral 50",
+      "response_text": "That man tries to bring law to this place. Lost cause if you ask me, but I respect his trying. He does seem to keep people in line though.",
+      "index": "66"
+    },
+    {
+      "topic": "MegTownEnd",
+      "topic_text": "That's all I needed to know.",
+      "emotion": "Neutral 50",
+      "response_text": "Sure thing, honey.",
+      "index": "68"
+    },
+    {
+      "topic": "MegTownRumors",
+      "topic_text": "What's the word around town?",
+      "emotion": "Sad 100",
+      "response_text": "I'm sorry, I just haven't been paying any attention at all since Nathan died.{Still missing her husband.}",
+      "index": "69"
+    },
+    {
+      "topic": "SpeechChallengeFailure",
+      "topic_text": "SpeechChallengeFailure",
+      "emotion": "Fear 25",
+      "response_text": "I don't know anything about that.{afraid the player knows the secret, trying to keep the matter secret}",
+      "index": "73"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "I have to go now.",
+      "emotion": "Neutral 50",
+      "response_text": "Come back if you need something, honey.",
+      "index": "74"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Neutral 50",
+      "response_text": "I got nothin' to say to you.",
+      "index": "79"
+    },
+    {
+      "topic": "MegatonTalk1",
+      "topic_text": "MegatonTalk",
+      "emotion": "Fear 50",
+      "response_text": "Yes, Nathan?{ }",
+      "index": "84"
+    },
+    {
+      "topic": "MegatonTalk2",
+      "topic_text": "MegatonTalk2",
+      "emotion": "Neutral 50",
+      "response_text": "Nathan, you promised me you'd talk to Moira about getting those flower seeds. Please, don't forget. Again.",
+      "index": "86"
+    },
+    {
+      "topic": "MegatonTalk3",
+      "topic_text": "MegatonTalk3",
+      "emotion": "Neutral 50",
+      "response_text": "*Tsk* You boys and your toys. I know better than to touch your things, dear. If it's lost, YOU lost it.",
+      "index": "88"
+    },
+    {
+      "topic": "MegatonTalk4",
+      "topic_text": "MegatonTalk4",
+      "emotion": "Neutral 50",
+      "response_text": "Thank you, Nathan dear.{sarcastic but sweet}",
+      "index": "90"
+    }
+  ],
+  "combat": [
+    {
+      "topic": "Attack",
+      "topic_text": "Attack",
+      "emotion": "Neutral 50",
+      "response_text": "Nathan! Help!",
+      "index": "92"
+    },
+    {
+      "topic": "Death",
+      "topic_text": "Death",
+      "emotion": "Pained 100",
+      "response_text": "Nathan...{Calling out for her husband as she dies.}",
+      "index": "95"
+    }
+  ]
+}

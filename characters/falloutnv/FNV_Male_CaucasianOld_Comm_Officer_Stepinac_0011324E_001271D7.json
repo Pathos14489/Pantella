@@ -1,0 +1,149 @@
+{
+  "name": "Comm Officer Stepinac",
+  "url": "/wiki/Stepinac",
+  "dialogue_name": "RSCharlieStepinac.txt",
+  "dialogue_url": "/wiki/RSCharlieStepinac.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "0011324E",
+  "ref_id": "001271D7",
+  "editor_id": "RSCharlieStepinac",
+  "location": "Ranger Station Charlie",
+  "location_url": "/wiki/Ranger_Station_Charlie",
+  "descriptions": [
+    "Comm Officer Stepinac is an NCR Ranger posted at Ranger Station Charlie in 2281.",
+    "When the commander of Ranger Station Charlie, Ranger Beaumont, departed from his post to lead a mandatory patrol, he left Stepinac in charge of the outpost.",
+    "Recently, the ranger station had received an excess shipment of medicine and first aid equipment, which was more than necessary for a small outpost. The radioman is under orders from top brass to keep a close eye on the supplies. Highly loyal to his superiors, Stepinac is most unwilling to commit to any action that would get ordinary civilians into trouble with the NCR.",
+    "Stepinac is an uncommon Croatian surname."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "New California Republic Rangers",
+  "role": "Comm officer",
+  "detailed_location": "Ranger Station Charlie",
+  "voice_actor": "Liam O'Brien",
+  "special": {
+    "Strength": 5,
+    "Perception": 6,
+    "Endurance": 6,
+    "Charisma": 4,
+    "Intelligence": 5,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "level": "5",
+  "tag_skills": [
+    {
+      "Guns:": "48"
+    },
+    {
+      "Sneak:": "48"
+    },
+    {
+      "Unarmed:": "48"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "145"
+    }
+  ],
+  "karma": "Neutral",
+  "voice_type": "MaleAdult05",
+  "geck_race": "CaucasianOld",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "{Player in NCR gear}Hey there. Is McCarran having you check up on us?",
+      "index": "1"
+    },
+    {
+      "topic": "VMSRSCharlieQuestTopic001",
+      "topic_text": "Anything unusual happening around here?",
+      "emotion": "Neutral 50",
+      "response_text": "All quiet at the moment. Ranger{BOH-mont}Beaumont is in charge here, but he's off leading a patrol.",
+      "index": "4"
+    },
+    {
+      "topic": "vDialogueRangerStationCharlieRSCharlieStepinacTopic000",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "See you around.",
+      "index": "7"
+    },
+    {
+      "topic": "vDialogueRangerStationCharlieRSCharlieStepinacTopic001",
+      "topic_text": "I've brought new security codes for this station's radio from Sergeant Reyes.",
+      "emotion": "Neutral 50",
+      "response_text": "Simple enough to change. I doubt the Legion's listening in on us - they're not that sophisticated - but better safe than sorry, right?",
+      "index": "8"
+    },
+    {
+      "topic": "vDialogueRangerStationCharlieRSCharlieStepinacTopic002",
+      "topic_text": "What was that about McCarran?",
+      "emotion": "Neutral 50",
+      "response_text": "Radio signal out here can be pretty spotty because of all the hills. Sometimes our scheduled updates don't go through.",
+      "index": "9"
+    },
+    {
+      "topic": "vDialogueRangerStationCharlieRSCharlieStepinacTopic003",
+      "topic_text": "What is this place?",
+      "emotion": "Neutral 50",
+      "response_text": "Ranger Station Charlie. We're responsible for keeping the highway up through Novac civilized.",
+      "index": "12"
+    },
+    {
+      "topic": "vDialogueRangerStationCharlieRSCharlieStepinacTopic004",
+      "topic_text": "Mind if I take some of those extra medical supplies?",
+      "emotion": "Neutral 50",
+      "response_text": "{NCR - Devil}Something tells me this isn't the first time you've done things that the NCR would find... objectionable.",
+      "index": "13"
+    },
+    {
+      "topic": "vDialogueRangerStationCharlieRSCharlieStepinacTopic005",
+      "topic_text": "Tell me about the Rangers.",
+      "emotion": "Neutral 50",
+      "response_text": "We're part scout, part commando, part sheriff. The training is brutal, and I'd say eight out of ten recruits washes out before the end.",
+      "index": "16"
+    },
+    {
+      "topic": "vDialogueRangerStationCharlieRSCharlieStepinacTopic006",
+      "topic_text": "Let's talk about something else.",
+      "emotion": "Neutral 50",
+      "response_text": "Sure.",
+      "index": "18"
+    },
+    {
+      "topic": "vDialogueRangerStationCharlieRSCharlieStepinacTopic007",
+      "topic_text": "Are there a lot of Rangers in the Mojave?",
+      "emotion": "Neutral 50",
+      "response_text": "Couple dozen, I'd say, most of them posted at stations like this one. We either man the station or patrol the immediate area.",
+      "index": "19"
+    },
+    {
+      "topic": "vDialogueRangerStationCharlieRSCharlieStepinacTopic008",
+      "topic_text": "How does someone become a Ranger?",
+      "emotion": "Neutral 50",
+      "response_text": "The Rangers mostly draw from the basic NCR army. A trooper who shows exceptional skill at fighting and scouting can be nominated for the training.",
+      "index": "20"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "See you around.",
+      "index": "21"
+    }
+  ],
+  "combat": []
+}

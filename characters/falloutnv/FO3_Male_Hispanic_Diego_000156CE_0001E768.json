@@ -1,0 +1,223 @@
+{
+  "name": "Diego",
+  "url": "/wiki/Diego",
+  "dialogue_name": "Diego.txt",
+  "dialogue_url": "/wiki/Diego.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": true,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000156CE",
+  "ref_id": "0001E768",
+  "editor_id": "Diego",
+  "location": "Saint Monica's Church",
+  "location_url": "/wiki/Saint_Monica%27s_Church",
+  "descriptions": [
+    "Diego is the acolyte of Saint Monica's Church and seminarian to Father Clifford in 2277.",
+    "Diego, now 18, was abandoned by his father in Rivet City a few years prior to 2277. Father Clifford took Diego in, and the pair have become like father and son.",
+    "As part of his trainee duties, Diego is responsible for preparing Sunday service in the church and helping Father Clifford aid the community, such as providing spiritual support for Doctor Preston's patients.",
+    "Diego is pursued romantically by Angela Staley, who has tried all manner of methods to seduce him, including direct verbal propositions. he keeps her company in the late afternoon to early in the evening on the flight deck.",
+    "Father Clifford is also aware of Angela Staley's attempts to seduce Diego, or at least the rumors. He has told Diego that she is his temptation before he can be accepted into the priesthood.",
+    "Should Father Clifford die, Diego will take his place as priest of the church."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Saint Monica's Church",
+  "role": "Acolyte",
+  "detailed_location": "Rivet City",
+  "voice_actor": "Craig Sechler",
+  "special": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 4,
+    "Intelligence": 4,
+    "Agility": 6,
+    "Luck": 4
+  },
+  "mod_special_values": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 4,
+    "Intelligence": 4,
+    "Agility": 7,
+    "Luck": 4
+  },
+  "level": "4",
+  "tag_skills": [
+    {
+      "Barter:": "41"
+    },
+    {
+      "Small Guns:": "45(47)"
+    },
+    {
+      "Unarmed:": "41(43)"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "40(45)"
+    }
+  ],
+  "karma": "Good",
+  "voice_type": "MaleAdult04DC",
+  "geck_race": "Hispanic",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Happy 50",
+      "response_text": "I'm Diego, the acolyte for Saint Monica's.",
+      "index": "1"
+    },
+    {
+      "topic": "MS03RCHistory1",
+      "topic_text": "Could I ask you about Rivet City's history?",
+      "emotion": "Sad 10",
+      "response_text": "I heard tell the place used to be run by Raiders, until someone cleared the whole place out. But I don't really know for sure.",
+      "index": "6"
+    },
+    {
+      "topic": "RCChurchDonation",
+      "topic_text": "I'd like to make a donation to the church.",
+      "emotion": "Neutral 50",
+      "response_text": "Father Clifford takes the donations. You'll have to talk to him.",
+      "index": "7"
+    },
+    {
+      "topic": "RCDiegoChurch",
+      "topic_text": "There's a church in Rivet City?",
+      "emotion": "Happy 50",
+      "response_text": "Oh, yes! Father Clifford conducts services every Sunday morning. You should come.",
+      "index": "8"
+    },
+    {
+      "topic": "RCDiegoCrazy",
+      "topic_text": "You're a fool to pass up a chance at love with Angela.",
+      "emotion": "Fear 50",
+      "response_text": "Father Clifford says she is my trial. My temptation.",
+      "index": "10"
+    },
+    {
+      "topic": "RCDiegoKeepSecret",
+      "topic_text": "Okay, I believe you. I was just curious about it.",
+      "emotion": "Happy 50",
+      "response_text": "I forgive you. More importantly, God forgives you.",
+      "index": "12"
+    },
+    {
+      "topic": "RCDiegoPriest",
+      "topic_text": "If you're the acolyte, who's the priest?",
+      "emotion": "Happy 50",
+      "response_text": "Father Clifford. The sanctuary is in the ship's fore, on the upper deck. The good father holds services every Sunday morning.",
+      "index": "13"
+    },
+    {
+      "topic": "RCDiegoThreaten",
+      "topic_text": "If you don't stop seeing her, I'll tell Father Clifford about it.",
+      "emotion": "Fear 50",
+      "response_text": "I swear to you, our relationship is chaste. I am only her friend.",
+      "index": "14"
+    },
+    {
+      "topic": "RCTopicDiegoAngelaI heard Angela Staley has a crush on Diego.",
+      "topic_text": "I hear Angela Staley has a crush on you.",
+      "emotion": "Fear 50",
+      "response_text": "What are you talking about? I'm a man of the cloth! Well, I will be as soon as Father Clifford...",
+      "index": "17"
+    },
+    {
+      "topic": "RCTopicHangarDeckPeople",
+      "topic_text": "What is this I hear about the Hangar Deck and Upper Deck?",
+      "emotion": "Sad 50",
+      "response_text": "It's a shame really. Everyone should just get along.",
+      "index": "28"
+    },
+    {
+      "topic": "RCTopicSaintMonica",
+      "topic_text": "Who is this Saint Monica?",
+      "emotion": "Fear 50",
+      "response_text": "Saint Monica saved her own son's soul from eternal damnation.",
+      "index": "31"
+    },
+    {
+      "topic": "RCTopicWeddingWhen are Angela and Diego getting married?",
+      "topic_text": "When are you and Angela getting married?",
+      "emotion": "Happy 50",
+      "response_text": "Tomorrow at three. You can come if you like. We've invited everyone in Rivet City.",
+      "index": "34"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYEI have to go now.",
+      "topic_text": "Goodbye, Diego.",
+      "emotion": "Happy 50",
+      "response_text": "God bless you.",
+      "index": "35"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Happy 50",
+      "response_text": "Chief Harkness. It's always comforting to see you on your rounds.",
+      "index": "36"
+    },
+    {
+      "topic": "RCGoodbye",
+      "topic_text": "RCGoodbye",
+      "emotion": "Happy 50",
+      "response_text": "My relationship with Angela is strictly platonic, Commander. Saint Monica's blessing to you.",
+      "index": "46"
+    },
+    {
+      "topic": "RCGoodbye03",
+      "topic_text": "RCGoodbye03",
+      "emotion": "Neutral 50",
+      "response_text": "It's ready for you, Father.",
+      "index": "64"
+    },
+    {
+      "topic": "RCIDo",
+      "topic_text": "RCBride",
+      "emotion": "Happy 50",
+      "response_text": "I do.",
+      "index": "65"
+    },
+    {
+      "topic": "RCLoveYou",
+      "topic_text": "RCLoveYou",
+      "emotion": "Happy 50",
+      "response_text": "I love you too, Angela.",
+      "index": "66"
+    },
+    {
+      "topic": "RCPackageEnd",
+      "topic_text": "RCPackageEnd",
+      "emotion": "Neutral 50",
+      "response_text": "Good morning, Father Clifford.",
+      "index": "67"
+    },
+    {
+      "topic": "RCResponse01",
+      "topic_text": "RCResponse01",
+      "emotion": "Fear 50",
+      "response_text": "A little. Aren't you? We don't have a place to live, and your father is going to have to support us.",
+      "index": "73"
+    },
+    {
+      "topic": "RCSermon",
+      "topic_text": "RCSermon",
+      "emotion": "Neutral 50",
+      "response_text": "Today we hear the story of Saint Monica.",
+      "index": "76"
+    }
+  ],
+  "combat": []
+}

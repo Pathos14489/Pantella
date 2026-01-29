@@ -1,0 +1,129 @@
+{
+  "name": "Armitage",
+  "url": "/wiki/Armitage",
+  "dialogue_name": "Armitage.txt",
+  "dialogue_url": "/wiki/Armitage.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "0001E7AE",
+  "ref_id": "0001E7AF",
+  "editor_id": "Armitage",
+  "location": "Rivet City science lab",
+  "location_url": "/wiki/Rivet_City_science_lab",
+  "descriptions": [
+    "Armitage is a third generation synth bodyguard protecting Dr. Zimmer of the Synth Retention Bureau (who insists on calling him an android), during his mission to Rivet City in 2277. He appears in Fallout 3.",
+    "Constructed in 2242, the physically imposing Armitage is quiet, reserved, and utterly deadly to anyone who threatens his charge, and can blend in with normal human populations with ease. Although he is technically of the same class or generation as A3-21, the synth Zimmer is pursuing,",
+    "Armitage shadows Zimmer everywhere, entering rooms and sweeping them for potential threats,",
+    "As a third generation synth, Armitage can eat and digest food like humans.",
+    "Naturally, his politeness ends the moment Zimmer is threatened. Anyone approaching will be told to keep their distance",
+    "Armitage shares his schedule with Zimmer, shadowing him everywhere across the derelict after the player meets Zimmer in the Rivet City science lab and watches the cutscene. They will move from deck to deck, sweeping the area for A3-21, and retire to eat or drink in the evening. Once The Replicated Man is completed, Armitage disappears, one way or the other.",
+    "The Replicated Man",
+    "The name Armitage is not unprecedented in science fiction: Characters with this name appear in multiple works, including the 1984 cyberpunk classic, Neuromancer, where Armitage is the protagonist's handler, the 1991 Armitage series set in the Judge Dredd universe, with the main character a hard-boiled Detective-Judge from Brit-Cit, and the 1995 OVA Armitage III, where the protagonist is an advanced Type-III android named Naomi Armitage."
+  ],
+  "race": "Synth, 3rd gen",
+  "gender": "Male",
+  "affiliation": "The InstituteSynth Retention Bureau",
+  "role": "Dr. Zimmer's bodyguard",
+  "detailed_location": "Rivet City science lab",
+  "voice_actor": "Gus Travers",
+  "special": {
+    "Strength": 6,
+    "Perception": 7,
+    "Endurance": 5,
+    "Charisma": 3,
+    "Intelligence": 3,
+    "Agility": 6,
+    "Luck": 4
+  },
+  "level": "8",
+  "tag_skills": [
+    {
+      "Energy Weap.:": "63"
+    },
+    {
+      "Melee Weap.:": "61(63)"
+    },
+    {
+      "Small Guns:": "61(63)"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "65"
+    },
+    {
+      "Critical Chance:": "4%"
+    },
+    {
+      "Unarmed Dam.:": "1.2"
+    },
+    {
+      "Poison Resist.:": "20%"
+    },
+    {
+      "Rad. Resist.:": "8%"
+    },
+    {
+      "Carry Weight:": "210"
+    },
+    {
+      "Damage Res.:": "8%"
+    }
+  ],
+  "karma": "Evil",
+  "voice_type": "MaleAdult05DC",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Anger 100",
+      "response_text": "Lay a hand on Doctor Zimmer, and I'll snap your neck like a chicken bone.",
+      "index": "1"
+    },
+    {
+      "topic": "MS03RCHistory1Could I ask you about Rivet City's history?",
+      "topic_text": "Know anything about the history of Rivet City?",
+      "emotion": "Disgust 15",
+      "response_text": "No, thank you. Please leave Mr Zimmer and myself alone.",
+      "index": "3"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYEI have to go now.",
+      "topic_text": "Um... I guess I'll be going.",
+      "emotion": "Neutral 50",
+      "response_text": "Then go.",
+      "index": "5"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Neutral 50",
+      "response_text": "Humph.{A body guard saying \"talk to the boss, i aint got nothing to say to you.\"}",
+      "index": "6"
+    },
+    {
+      "topic": "RCGoodbye",
+      "topic_text": "RCGoodbye",
+      "emotion": "Neutral 50",
+      "response_text": "Brock.{A greeting, implying respect and caution.}",
+      "index": "16"
+    },
+    {
+      "topic": "RCResponse01",
+      "topic_text": "RCResponse01",
+      "emotion": "Neutral 50",
+      "response_text": "Just some water.",
+      "index": "22"
+    }
+  ],
+  "combat": []
+}

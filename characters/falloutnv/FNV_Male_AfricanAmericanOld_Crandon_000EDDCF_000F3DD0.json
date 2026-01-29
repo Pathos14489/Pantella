@@ -1,0 +1,220 @@
+{
+  "name": "Crandon",
+  "url": "/wiki/Crandon",
+  "dialogue_name": "NorthVegasCrandon.txt",
+  "dialogue_url": "/wiki/NorthVegasCrandon.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000EDDCF",
+  "ref_id": "000F3DD0",
+  "editor_id": "NorthVegasCrandon",
+  "location": "North Vegas Square",
+  "location_url": "/wiki/North_Vegas_Square",
+  "descriptions": [
+    "Crandon is a wastelander and the de facto leader of the small independent community inhabiting North Vegas Square in the Mojave Wasteland in 2281. He appears in Fallout: New Vegas.",
+    "After Mr. House rose up and resurrected the New Vegas Strip with the Three Families in 2274, evicting every other squatter inhabiting the old Vegas ruins, the disparate groups looked for a new homestead to call their own. While some planted their stake in places like Freeside and Westside, for Crandon and several likeminded survivors including Jules, that took the form of a small, protected hovel known as North Vegas Square surrounding an old hotel in the blocks of Outer Vegas.",
+    "Taking the leadership role upon himself, Crandon, along with Jules and others who are good with a gun, keep order in the Square,",
+    "Crandon was written by area designer Jorge Salgado, who also worked on the quest Someone to Watch Over Me."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "role": "WatchmanCommunity leader",
+  "detailed_location": "North Vegas Square",
+  "voice_actor": "Jude Ciccolella",
+  "special": {
+    "Strength": 5,
+    "Perception": 6,
+    "Endurance": 5,
+    "Charisma": 10,
+    "Intelligence": 4,
+    "Agility": 4,
+    "Luck": 4
+  },
+  "level": "7",
+  "tag_skills": [
+    {
+      "Barter:": "57(62)"
+    },
+    {
+      "Melee Weap.:": "53"
+    },
+    {
+      "Speech:": "57"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Good",
+  "voice_type": "MaleOld01",
+  "geck_race": "AfricanAmericanOld",
+  "topics": [
+    {
+      "topic": "CrandonJoinUp",
+      "topic_text": "Need a hand with any trouble?",
+      "emotion": "Neutral 50",
+      "response_text": "You want to help us out? What makes you think we want you around here, huh?",
+      "index": "1"
+    },
+    {
+      "topic": "CrandonNorthVegas",
+      "topic_text": "Tell me about North Vegas.",
+      "emotion": "Neutral 50",
+      "response_text": "We've been here for a few years, just looking for a place we can call our own.",
+      "index": "2"
+    },
+    {
+      "topic": "CrandonStuffToDo",
+      "topic_text": "What is there to do here?",
+      "emotion": "Neutral 50",
+      "response_text": "Keep your nose to the ground, stranger, that's what. Mind your own business and let us mind our own, are we clear?",
+      "index": "4"
+    },
+    {
+      "topic": "CrandonStuffToDoRepeat",
+      "topic_text": "What was that about salvage and traps?",
+      "emotion": "Neutral 50",
+      "response_text": "That's right, the H&H Tools factory on the main drag. It's been sealed for ages, and it's lousy with traps. Still, might be something valuable to you.",
+      "index": "7"
+    },
+    {
+      "topic": "CrandonTownWatch",
+      "topic_text": "Tell me more about your role here.",
+      "emotion": "Neutral 50",
+      "response_text": "Jules, myself, and a few others patrol the streets and sewers. Any punks come up out of the rest of the city, we give 'em the run off.",
+      "index": "8"
+    },
+    {
+      "topic": "CrandonWatchStage1",
+      "topic_text": "What would you like me to do?",
+      "emotion": "Neutral 50",
+      "response_text": "Some squatters decided to take space where they don't belong, over by the playground. We'd prefer to keep 'em off the streets and out of sight.",
+      "index": "10"
+    },
+    {
+      "topic": "CrandonWatchStage2",
+      "topic_text": "Got any more work for me?",
+      "emotion": "Happy 30",
+      "response_text": "Good work with those newcomers. I think you can handle more serious business... with more serious rewards.",
+      "index": "14"
+    },
+    {
+      "topic": "CrandonWatchStage3",
+      "topic_text": "Anything else you'd like me to do?",
+      "emotion": "Neutral 50",
+      "response_text": "You know, this time I may actually need a gun with a brain.",
+      "index": "16"
+    },
+    {
+      "topic": "CrandonWhoAreYou",
+      "topic_text": "Who are you?",
+      "emotion": "Neutral 50",
+      "response_text": "Name's Crandon, stranger. I keep an eye out for trouble around here.",
+      "index": "18"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "Can I help you with something, stranger?",
+      "index": "19"
+    },
+    {
+      "topic": "VDialogueVegasNorthNorthVegasCrandonTopic000",
+      "topic_text": "I'm a friend, trust me.",
+      "emotion": "Neutral 50",
+      "response_text": "[FAILED] Really? You'll forgive me if I ask you to back that claim up, won't you?",
+      "index": "26"
+    },
+    {
+      "topic": "VDialogueVegasNorthNorthVegasCrandonTopic001",
+      "topic_text": "What kind of trouble?",
+      "emotion": "Neutral 50",
+      "response_text": "Folks that don't belong. Murderers, rapists, extortionists, and everything in between.",
+      "index": "28"
+    },
+    {
+      "topic": "VDialogueVegasNorthNorthVegasCrandonTopic002",
+      "topic_text": "Doesn't the NCR keep order around here?",
+      "emotion": "Surprise 40",
+      "response_text": "NCR... did you just crawl out from under a rock? Those folks only care about{emphasize all three \"theirs\"}their business, their people and their pockets.",
+      "index": "30"
+    },
+    {
+      "topic": "VDialogueVegasNorthNorthVegasCrandonTopic004",
+      "topic_text": "I'm not interested in this, right now.",
+      "emotion": "Neutral 50",
+      "response_text": "Suit yourself.",
+      "index": "32"
+    },
+    {
+      "topic": "VDialogueVegasNorthNorthVegasCrandonTopic005",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "I'll see you around.",
+      "index": "33"
+    },
+    {
+      "topic": "VDialogueVegasNorthNorthVegasCrandonTopic007",
+      "topic_text": "If you've got the caps, I'll back any claim you want.",
+      "emotion": "Neutral 50",
+      "response_text": "[FAILED] Hmm. Honesty's a good trait, stranger, but I don't deal with mercenaries unless I'm damn sure they can be trusted.",
+      "index": "34"
+    },
+    {
+      "topic": "VDialogueVegasNorthNorthVegasCrandonTopic008",
+      "topic_text": "I'm on it.",
+      "emotion": "Neutral 50",
+      "response_text": "I like your speed, stranger. Let me know when that's done.",
+      "index": "37"
+    },
+    {
+      "topic": "VDialogueVegasNorthNorthVegasCrandonTopic009",
+      "topic_text": "I've got other things in mind, right now.",
+      "emotion": "Neutral 50",
+      "response_text": "Mercs with a brain are no good to me, stranger. Let me know when you start behaving like a real gun.",
+      "index": "38"
+    },
+    {
+      "topic": "VDialogueVegasNorthNorthVegasCrandonTopic010",
+      "topic_text": "I'll deal with them.",
+      "emotion": "Neutral 50",
+      "response_text": "Glad to hear it. Let me know when they're gone.",
+      "index": "39"
+    },
+    {
+      "topic": "VDialogueVegasNorthNorthVegasCrandonTopic012",
+      "topic_text": "Okay, I'll go see her.",
+      "emotion": "Neutral 50",
+      "response_text": "I like your enthusiasm, stranger. Let me know when that's done.",
+      "index": "40"
+    },
+    {
+      "topic": "VDialogueVegasNorthNorthVegasCrandonTopic014FiendResult",
+      "topic_text": "I haven't sent them to the sewers, yet.",
+      "emotion": "Anger 30",
+      "response_text": "I thought you'd be made of stronger stuff, merc. Don't prove me wrong or I'll have to find someone else with the guts to do what's right.",
+      "index": "41"
+    },
+    {
+      "topic": "VDialogueVegasNorthNorthVegasCrandonTopic015SquatterResult",
+      "topic_text": "I've dealt with those newcomers.",
+      "emotion": "Neutral 50",
+      "response_text": "That's good to hear. Can't ever be too careful with strangers around here.",
+      "index": "45"
+    },
+    {
+      "topic": "VDialogueVegasNorthNorthVegasCrandonTopic016",
+      "topic_text": "I'm not interested in this right now.",
+      "emotion": "Neutral 50",
+      "response_text": "Suit yourself.",
+      "index": "49"
+    }
+  ],
+  "conversation": [],
+  "combat": []
+}

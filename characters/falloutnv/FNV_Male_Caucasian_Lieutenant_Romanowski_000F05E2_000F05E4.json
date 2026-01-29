@@ -1,0 +1,150 @@
+{
+  "name": "Lieutenant Romanowski",
+  "url": "/wiki/Romanowski",
+  "dialogue_name": "1ERomanowski.txt",
+  "dialogue_url": "/wiki/1ERomanowski.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000F05E2",
+  "ref_id": "000F05E4",
+  "editor_id": "1ERomanowski",
+  "location": "NCR sharecropper farms",
+  "location_url": "/wiki/NCR_sharecropper_farms",
+  "descriptions": [
+    "Lieutenant Romanowski is an NCR officer stationed at the NCR sharecropper farms in 2281.",
+    "Romanowski is the man responsible for providing military protection to the farms and sharecroppers, to prevent unauthorized procurement of foodstuffs. In other words, he stops wastelanders from stealing crops.",
+    "Lieutenant Romanowski's name is a portmanteau of Roman Polanski, the director of the 1974 film Chinatown which served as inspiration to The White Wash quest."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "NCR army",
+  "role": "Officer",
+  "detailed_location": "NCR sharecropper farms",
+  "voice_actor": "Emerson Brooks",
+  "special": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 5,
+    "Intelligence": 5,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "level": "5",
+  "tag_skills": [
+    {
+      "Explosives:": "46"
+    },
+    {
+      "Guns:": "46"
+    },
+    {
+      "Melee Weap.:": "46"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Neutral",
+  "voice_type": "MaleAdult01DefaultB",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "What is it, trooper? You're not assigned to my squad, as far as I know.",
+      "index": "1"
+    },
+    {
+      "topic": "vDialogueSharecropper1ERomanowskiTopic000",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Carry on.",
+      "index": "4"
+    },
+    {
+      "topic": "vDialogueSharecropper1ERomanowskiTopic001",
+      "topic_text": "Why are these fields being guarded?",
+      "emotion": "Neutral 50",
+      "response_text": "A lot of the crops grown here support the various NCR camps in the region - McCarran, Golf, and Forlorn Hope, to name a few.",
+      "index": "5"
+    },
+    {
+      "topic": "vDialogueSharecropper1ERomanowskiTopic002",
+      "topic_text": "What can you tell me about these fields?",
+      "emotion": "Happy 25",
+      "response_text": "Impressive, aren't they? You don't see anything like this outside of NCR territory, that's for sure.",
+      "index": "7"
+    },
+    {
+      "topic": "vDialogueSharecropper1ERomanowskiTopic003",
+      "topic_text": "Trent Bascom says he's not getting his full allotment of water.",
+      "emotion": "Neutral 50",
+      "response_text": "The Office of Science and Industry has carefully calculated the amount of water needed for these crops. The whole thing is handled by computer.",
+      "index": "9"
+    },
+    {
+      "topic": "vDialogueSharecropper1ERomanowskiTopic004",
+      "topic_text": "I'm looking for Corporal White. Trent told me you'd seen him.",
+      "emotion": "Anger 5",
+      "response_text": "Corporal White is currently solving the mystery of the{sarcasm}Great Water Shortage. Tried to convince me he had proof, even. I didn't buy any of it.",
+      "index": "12"
+    },
+    {
+      "topic": "vDialogueSharecropper1ERomanowskiTopic005",
+      "topic_text": "You haven't heard anything more from White?",
+      "emotion": "Disgust 10",
+      "response_text": "Haven't seen him. Serves him right if the NCR declares him AWOL.",
+      "index": "14"
+    },
+    {
+      "topic": "vDialogueSharecropper1ERomanowskiTopic006",
+      "topic_text": "Do you have something against White?",
+      "emotion": "Anger 10",
+      "response_text": "He's a glory hound, always looking for a way to get promoted to Ranger. Thinks he's too good to be a regular trooper like the rest of us.",
+      "index": "15"
+    },
+    {
+      "topic": "vDialogueSharecropper1ERomanowskiTopic007",
+      "topic_text": "Let's talk about something else.",
+      "emotion": "Disgust 50",
+      "response_text": "Yes, please do.",
+      "index": "16"
+    },
+    {
+      "topic": "vDialogueSharecropper1ERomanowskiTopic008",
+      "topic_text": "Crops in Westside - the apparent water shortage here can't be a coincidence, then.",
+      "emotion": "Anger 5",
+      "response_text": "{doesn't get it}I... really don't see the connection.{trying to save face}Look, I'm a soldier, not a scientist. I just do my job.",
+      "index": "17"
+    },
+    {
+      "topic": "vDialogueSharecropper1ERomanowskiTopic009",
+      "topic_text": "The fields should be getting their full supply of water again.",
+      "emotion": "Anger 5",
+      "response_text": "That's... great? So there was a problem, after all. Huh.{making excuses}Well, I'm not a scientist, so it's not my fault if I didn't see anything wrong.",
+      "index": "18"
+    },
+    {
+      "topic": "vDialogueSharecropper1ERomanowskiTopic010",
+      "topic_text": "What can you tell me about the Followers of the Apocalypse?",
+      "emotion": "Neutral 50",
+      "response_text": "They're based out of the old fort in Freeside. They supposedly helped the NCR out at some point, but they go their own way now.",
+      "index": "19"
+    },
+    {
+      "topic": "vDialogueSharecropper1ERomanowskiTopic011",
+      "topic_text": "What do you know about the Followers of the Apocalypse?",
+      "emotion": "Neutral 50",
+      "response_text": "They're based out of the old fort in Freeside. They supposedly helped the NCR out at some point, but they go their own way now.",
+      "index": "21"
+    }
+  ],
+  "conversation": [],
+  "combat": []
+}

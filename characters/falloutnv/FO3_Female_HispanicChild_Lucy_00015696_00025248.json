@@ -1,0 +1,402 @@
+{
+  "name": "Lucy",
+  "url": "/wiki/Lucy_(Fallout_3)",
+  "dialogue_name": "Lucy.txt",
+  "dialogue_url": "/wiki/Lucy.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": true,
+  "can_be_enslaved": false,
+  "is_doctor": true,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "00015696",
+  "ref_id": "00025248",
+  "editor_id": "Lucy",
+  "location": "Little Lamplight",
+  "location_url": "/wiki/Little_Lamplight",
+  "descriptions": [
+    "Lucy (real name Lucia) is the doctor of Little Lamplight in 2277.",
+    "Lucy was born in Little Lamplight eleven years ago. She has learned practical medicine from Red, and she considers her to be like an older sister. By the age of seven, she was incredibly talented in healing. After a cave-in, she used her skills to save Mayor MacCready's life. Since then, she has cared a little more about him than everyone else and has become his companion.",
+    "In Lucy's clinic in the office building, there is a banner reading \"The doctor is in,\" a line from the Peanuts comic strip."
+  ],
+  "race": "Human",
+  "gender": "Female",
+  "affiliation": "Little Lamplight",
+  "role": "Doctor",
+  "detailed_location": "Little Lamplight",
+  "voice_actor": "Stephanie Joy",
+  "special": {
+    "Strength": 4,
+    "Perception": 6,
+    "Endurance": 4,
+    "Charisma": 6,
+    "Intelligence": 7,
+    "Agility": 5,
+    "Luck": 4
+  },
+  "level": "1",
+  "tag_skills": [
+    {
+      "Barter:": "31"
+    },
+    {
+      "Medicine:": "33"
+    },
+    {
+      "Science:": "33"
+    }
+  ],
+  "karma": "Neutral",
+  "voice_type": "FemaleChild01DC",
+  "geck_race": "HispanicChild",
+  "topics": [
+    {
+      "topic": "DoctorAddictionI think I might be addicted to something.",
+      "topic_text": "I think I might be addicted to something. Can you help?",
+      "emotion": "Disgust 10",
+      "response_text": "I swear, you and Zip, just full of your own little chemical problems, aren't you?",
+      "index": "1"
+    },
+    {
+      "topic": "DoctorAddictionNO",
+      "topic_text": "I think I'll tough it out.",
+      "emotion": "Neutral 50",
+      "response_text": "Your call, mungo.",
+      "index": "5"
+    },
+    {
+      "topic": "DoctorAddictionYES",
+      "topic_text": "I don't have 50 caps.",
+      "emotion": "Disgust 25",
+      "response_text": "I suppose if you can't afford treatment, maybe you can't afford your next fix. So that works out, doesn't it?",
+      "index": "6"
+    },
+    {
+      "topic": "DoctorMedicalI'm hurt. I need help, Doc.",
+      "topic_text": "Can I get some medical treatment?",
+      "emotion": "Disgust 50",
+      "response_text": "That takes a lot of nerve, threatening to bury us all alive and then crawling to me for help. As RJ would say, \"Fuck off, mungo.\"",
+      "index": "8"
+    },
+    {
+      "topic": "DoctorMedical33YESAll right, here's your money.",
+      "topic_text": "Sure, fine.",
+      "emotion": "Neutral 50",
+      "response_text": "Okay, now hold still.",
+      "index": "25"
+    },
+    {
+      "topic": "DoctorMedical66YESAll right, here's your money.",
+      "topic_text": "Sure, fine.",
+      "emotion": "Neutral 50",
+      "response_text": "Hold on, this is going to ouch a bit.",
+      "index": "28"
+    },
+    {
+      "topic": "DoctorMedical99YESAll right, here's your money.",
+      "topic_text": "Sure, fine.",
+      "emotion": "Neutral 50",
+      "response_text": "This is going to hurt, so you'd better not start crying.",
+      "index": "31"
+    },
+    {
+      "topic": "DoctorMedicalNOOn second thought, I'll be fine.",
+      "topic_text": "At those prices, I'll take care of myself.",
+      "emotion": "Anger 10",
+      "response_text": "Fine. Less of my supplies you're using up.",
+      "index": "34"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "Okay, you should be fine, and ready to run off and play.{Just woken up.}",
+      "index": "35"
+    },
+    {
+      "topic": "LLAboutLamplight",
+      "topic_text": "How do you keep healthy here?",
+      "emotion": "Neutral 50",
+      "response_text": "There's always one big sister or another who knows her way around a compress and a sewing needle, so we take care of most of the little scrapes.",
+      "index": "45"
+    },
+    {
+      "topic": "LLAboutLamplight2A",
+      "topic_text": "So, you're the only doctor in this whole place?",
+      "emotion": "Happy 10",
+      "response_text": "Well, we all know the basics. Combat first aid, you know? But I've got the most experience at the tough stuff.",
+      "index": "48"
+    },
+    {
+      "topic": "LLAboutLamplight2B",
+      "topic_text": "That sounds like it's pretty useful fungus.",
+      "emotion": "Neutral 50",
+      "response_text": "It is, especially for dealing with the low-level radiation we all get from the water. The fungus just soaks it right up.",
+      "index": "51"
+    },
+    {
+      "topic": "LLAboutLamplight2C",
+      "topic_text": "That's all I need to know for now.",
+      "emotion": "Neutral 50",
+      "response_text": "Well, until you come asking for a bandage, at least.",
+      "index": "54"
+    },
+    {
+      "topic": "LLDirHospital",
+      "topic_text": "Where can I find a doctor?",
+      "emotion": "Disgust 10",
+      "response_text": "Yeah, that's me. I'm only on duties when I'm in the office.{A little irritated}",
+      "index": "55"
+    },
+    {
+      "topic": "LLDirections",
+      "topic_text": "Can you give me directions?",
+      "emotion": "Neutral 50",
+      "response_text": "Well, where to?",
+      "index": "56"
+    },
+    {
+      "topic": "LLFirstMeetingResponseAFriendly First Response",
+      "topic_text": "I'm a guest in town. Mayor MacCready let me in for rescuing your friends.",
+      "emotion": "Surprise 50",
+      "response_text": "You saved Penny and Sammy and Squirrel? I can see why RJ let you in! Thanks, for all of us!",
+      "index": "57"
+    },
+    {
+      "topic": "LLFirstMeetingResponseBRude First Response",
+      "topic_text": "I rescued those captured kids. I'm a big hero.",
+      "emotion": "Surprise 50",
+      "response_text": "You brought back Penny and Sammy and Squirrel? Well, I guess that does make you a pretty big hero. Thanks!{Emphasis on \"You\"}",
+      "index": "64"
+    },
+    {
+      "topic": "LLFungusTrade1",
+      "topic_text": "I've got Buffout to trade for fungus.",
+      "emotion": "Happy 25",
+      "response_text": "Excellent. I should be able to synthesize the proteins from this into something that'll fight rickets. Here's your fungus in return.",
+      "index": "71"
+    },
+    {
+      "topic": "LLLMQ06TellMeAboutVault87",
+      "topic_text": "What do you know about Vault 87?",
+      "emotion": "Neutral 50",
+      "response_text": "That's where the monsters come from. We don't go back there. It's called Murder Pass for a reason, you know?{condescending}",
+      "index": "74"
+    },
+    {
+      "topic": "LLMungo",
+      "topic_text": "Why does everyone call me a mungo?",
+      "emotion": "Anger 25",
+      "response_text": "It means an adult. We don't really see many of you around, and we're glad of it.",
+      "index": "76"
+    },
+    {
+      "topic": "MS08MedicalClue1",
+      "topic_text": "Do you know anything about some android who needed a surgeon?",
+      "emotion": "Neutral 50",
+      "response_text": "Oh yeah! That crazy old story about an escaped robot, right? He was looking for a surgeon and a computer expert. Yeah, that sounds right.",
+      "index": "79"
+    },
+    {
+      "topic": "MS08MedicalClue2",
+      "topic_text": "What do you know about this android from the Commonwealth?",
+      "emotion": "Surprise 50",
+      "response_text": "Oh you mean that old \"android recording?\" Have you heard it? It's great. Here's a spare copy of that old holotape. It's either real or a great joke.{excited}",
+      "index": "80"
+    },
+    {
+      "topic": "MS08MedicalClue3",
+      "topic_text": "Ever do any facial surgery? Maybe on someone from the Commonwealth?",
+      "emotion": "Neutral 50",
+      "response_text": "Oh if I got my hands on the right gear I might try it. It's dangerous though. Prone to infection. Reminds me of an old hoax. Listen to this holotape.",
+      "index": "82"
+    },
+    {
+      "topic": "MS08MedicalClue3Bribe",
+      "topic_text": "You ever do a face job on an android from the North? <Jingle purse of 100 caps.>",
+      "emotion": "Neutral 50",
+      "response_text": "Oh if I got my hands on the right gear I might try it. It's dangerous though. Prone to infection. Reminds me an old hoax. Listen to this holotape.",
+      "index": "85"
+    },
+    {
+      "topic": "MS08MedicalClue3Stat",
+      "topic_text": "A patient of mine needs a facial epidermal augmentation. You ever perform one?",
+      "emotion": "Neutral 50",
+      "response_text": "Oh if I got my hands on the right gear I might try it. It's dangerous though. Prone to infection. Reminds me an old hoax. Listen to this holotape.",
+      "index": "86"
+    },
+    {
+      "topic": "MS08MedicalClue4",
+      "topic_text": "You know who might have a Lipoplasticator or Micro Dermal Graftilizer?",
+      "emotion": "Neutral 50",
+      "response_text": "Guess old Pinkerton at Rivet City has some shiny prewar tech. He might have what you're looking for.",
+      "index": "87"
+    },
+    {
+      "topic": "MS08MedicalClue4Bribe",
+      "topic_text": "Here's 100 caps for the locale of a Lipoplasticator or Micro Dermal Graftilizer.",
+      "emotion": "Neutral 50",
+      "response_text": "Guess old Pinkerton at Rivet City has some shiny prewar tech. He might have what you're looking for.",
+      "index": "90"
+    },
+    {
+      "topic": "MS08MedicalClue4Stat",
+      "topic_text": "I need to find a Micro Dermal Graftilizer for epidermal augmentation surgery.",
+      "emotion": "Neutral 50",
+      "response_text": "Guess old Pinkerton at Rivet City has some shiny prewar tech. He might have what you're looking for.",
+      "index": "91"
+    },
+    {
+      "topic": "SpeechChallengeFailure",
+      "topic_text": "SpeechChallengeFailure",
+      "emotion": "Neutral 50",
+      "response_text": "Mmm. Let's talk about something else.{considering, then brushing off the question pretending she was never asked a question.}",
+      "index": "92"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "I'll let you get back to work.",
+      "emotion": "Neutral 50",
+      "response_text": "Thanks. Hopefully, it'll just be skinned knees and bloody noses, today.",
+      "index": "93"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Anger 50",
+      "response_text": "I don't know why RJ's letting you back in, but if you touch any of my kids, I'll make sure you never have any of your own.",
+      "index": "95"
+    },
+    {
+      "topic": "LLFoodConv1",
+      "topic_text": "LLFoodConv1",
+      "emotion": "Neutral 50",
+      "response_text": "You know it, Eclair. Keeping the masses fed?",
+      "index": "101"
+    },
+    {
+      "topic": "LLKnockTales1",
+      "topic_text": "LLKnockTales1",
+      "emotion": "Anger 5",
+      "response_text": "Make it quick, Knock Knock.{A little harried}",
+      "index": "102"
+    },
+    {
+      "topic": "LLKnockTales5",
+      "topic_text": "LLKnockTales5",
+      "emotion": "Anger 5",
+      "response_text": "Yeah, yeah, great story.{A little harried}",
+      "index": "103"
+    },
+    {
+      "topic": "LLLucyMedical1",
+      "topic_text": "LLLucyMedical1",
+      "emotion": "Sad 10",
+      "response_text": "Joseph, can I ask you a question?",
+      "index": "104"
+    },
+    {
+      "topic": "LLLucyMedical3",
+      "topic_text": "LLLucyMedical3",
+      "emotion": "Fear 10",
+      "response_text": "I've been seeing a few cases of bent bones and weak teeth in some of the younger ones. Any clue in those books about what it could be?",
+      "index": "106"
+    },
+    {
+      "topic": "LLLucyMedical5",
+      "topic_text": "LLLucyMedical5",
+      "emotion": "Anger 50",
+      "response_text": "Great, so they just need to eat more? I'm sure Eclair will be thrilled to hear that.{Very sarcastic}",
+      "index": "108"
+    },
+    {
+      "topic": "LLLucyMedical7",
+      "topic_text": "LLLucyMedical7",
+      "emotion": "Sad 10",
+      "response_text": "Thanks, Joseph. I think that's all I need.",
+      "index": "110"
+    },
+    {
+      "topic": "LLLucyMedicalChatter",
+      "topic_text": "LLLucyMedicalChatter",
+      "emotion": "Disgust 10",
+      "response_text": "Hold still, you big baby.",
+      "index": "112"
+    },
+    {
+      "topic": "LLLunchConv1",
+      "topic_text": "LLLunchConv1",
+      "emotion": "Happy 50",
+      "response_text": "So, how's everything going, big, scary, mayor-man?{Teasing}",
+      "index": "119"
+    },
+    {
+      "topic": "LLLunchConv3",
+      "topic_text": "LLLunchConv3",
+      "emotion": "Sad 25",
+      "response_text": "I'm still seeing the same sorts of cases. Stubbed toes, bloody noses, a few stabbings. We could really use more medicine, though.{Teasing}",
+      "index": "121"
+    },
+    {
+      "topic": "LLLunchConv5",
+      "topic_text": "LLLunchConv5",
+      "emotion": "Anger 25",
+      "response_text": "Sure, fine.{Curt, and a little angry}",
+      "index": "123"
+    },
+    {
+      "topic": "LLMayorDailyCheck1",
+      "topic_text": "LLMayorDailyCheck1",
+      "emotion": "Anger 25",
+      "response_text": "Nothing much, RJ. One nearly lost an eye - said they thought it would look cool. I patched him up and smacked him on the head for being an idiot.",
+      "index": "125"
+    },
+    {
+      "topic": "LLPrincessBullyResponse",
+      "topic_text": "LLPrincessBullyResponse",
+      "emotion": "Anger 5",
+      "response_text": "Oh, probably because MacCready likes me more than he likes you. That seems like a good reason to me!{Mocking and mean}",
+      "index": "126"
+    },
+    {
+      "topic": "LLRandomConv1",
+      "topic_text": "LLConversation1",
+      "emotion": "Fear 15",
+      "response_text": "Heya. Are you feeling alright? You look a little stiff.",
+      "index": "127"
+    },
+    {
+      "topic": "LLRandomConv2",
+      "topic_text": "LLConversation2",
+      "emotion": "Disgust 5",
+      "response_text": "Busy, like always. Somebody's always got a tummy ache or a runny nose or a knife wound. You know how it is.",
+      "index": "128"
+    },
+    {
+      "topic": "LLRandomConvEnding",
+      "topic_text": "LLRandomConvEnding",
+      "emotion": "Fear 15",
+      "response_text": "Hee hee! Okay, later then!{giggling laughter, like at a dirty joke}",
+      "index": "130"
+    },
+    {
+      "topic": "LLWhatsUp1",
+      "topic_text": "LLWhatsUp1",
+      "emotion": "Neutral 15",
+      "response_text": "Hello, there. What're you up to? Not getting into too much trouble?",
+      "index": "132"
+    },
+    {
+      "topic": "LLWhatsUp2",
+      "topic_text": "LLWhatsUp2",
+      "emotion": "Anger 5",
+      "response_text": "Keeping everyone from killing themselves. Same as ever.",
+      "index": "133"
+    }
+  ],
+  "combat": []
+}

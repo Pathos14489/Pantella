@@ -1,0 +1,504 @@
+{
+  "name": "Chief Gustavo",
+  "url": "/wiki/Gustavo_(Fallout_3)",
+  "dialogue_name": "ChiefGustavo.txt",
+  "dialogue_url": "/wiki/ChiefGustavo.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": true,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "0005C341",
+  "ref_id": "00020680",
+  "editor_id": "ChiefGustavo",
+  "location": "Tenpenny Tower",
+  "location_url": "/wiki/Tenpenny_Tower",
+  "descriptions": [
+    "Chief Gustavo is the security chief of Tenpenny Tower in 2277.",
+    "Prior to becoming security chief of Tenpenny Tower, Gustavo worked his way up to become leader of a mercenary band of professional fighters. Mister Burke was rescued by Gustavo and his band, and quickly hired him and his men to form the  security force at the Tower. His personality is gruff, but also good natured in a \"Don't give me grief, I'm just doing my job, ma'am\" sort of manner. However, he soon becomes a loud no-nonsense hard-ass when his team or his charges are in immediate danger. He is particularly hostile to ghouls. \"The only good ghoul is a dead ghoul,\" is a fond saying of his, particularly if ghouls are nearby. He expressed that \"it's only a matter of time before they go zombie\" and people shouldn't take the risk. He even goes as far to say that you would be doing them a favor by putting a bullet between their eyes.",
+    "In charge of the protection of Allistair Tenpenny as well as the other residents, Gustavo is naturally concerned with the intentions of Roy Phillips and his gang, and speculates that he is planning to rush Tenpenny Tower with hordes of feral ghouls. While Tenpenny is a massive bigot and \"doesn't care how big their pile of bottle caps is,\" Gustavo might not even care about the ghouls, but they are really starting to get on his nerve with their amount of pleading.",
+    "After the Lone Wanderer's first encounter with Gustavo, he is found sitting in the lobby of the hotel or sleeping outside during the night, most of the time he will stand guard at the entrance.",
+    "Tenpenny Tower: Gustavo will task the Wanderer with getting rid of the ghoul menace if asked."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Allistair Tenpenny",
+  "role": "Security Chief",
+  "detailed_location": "Tenpenny Tower",
+  "voice_actor": "Pete Papageorge",
+  "special": {
+    "Strength": 6,
+    "Perception": 6,
+    "Endurance": 5,
+    "Charisma": 5,
+    "Intelligence": 4,
+    "Agility": 6,
+    "Luck": 4
+  },
+  "level": "12",
+  "tag_skills": [
+    {
+      "Melee Weap.:": "82"
+    },
+    {
+      "Small Guns:": "82(87)"
+    },
+    {
+      "Speech:": "80"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Evil",
+  "voice_type": "MaleAdult02DC",
+  "geck_race": "Hispanic",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Anger 50",
+      "response_text": "This better be important.{gruff mercenary saying hello}",
+      "index": "1"
+    },
+    {
+      "topic": "MS12Basement",
+      "topic_text": "What can you tell me about the basement of Tenpenny Tower?",
+      "emotion": "Anger 50",
+      "response_text": "You mean the generator room? What the hell do you need to know about that for? That area is strictly off limits.{threatening}",
+      "index": "17"
+    },
+    {
+      "topic": "MS12Basement1",
+      "topic_text": "Just curious.",
+      "emotion": "Neutral 50",
+      "response_text": "There's an emergency entrance to the tunnels, you know for when the bombs fell. We siphon power from the Metro grid to keep our generators running.",
+      "index": "19"
+    },
+    {
+      "topic": "MS12Basement2",
+      "topic_text": "Touchy subject, huh? What the matter, hiding some kind of big secret?",
+      "emotion": "Neutral 50",
+      "response_text": "There's no secret. It's just a sensitive area we don't need idiots and assholes screwing around in.{gruff, and getting upset}",
+      "index": "20"
+    },
+    {
+      "topic": "MS12Basement3",
+      "topic_text": "Never mind. Forget I asked.",
+      "emotion": "Disgust 20",
+      "response_text": "But I've got better things to do than play tour guide, so unless there's some kind of emergency, this conversation's over.{gruff and annoyed}",
+      "index": "23"
+    },
+    {
+      "topic": "MS12BasementKey1",
+      "topic_text": "If I promise not to touch anything, will you let me in?",
+      "emotion": "Anger 75",
+      "response_text": "I've got the only key, and I ain't lending it to you. I lost it once and had to make a new one. Tenpenny practically bit my head off. So forget it.{angry}",
+      "index": "24"
+    },
+    {
+      "topic": "MS12BasementKey2",
+      "topic_text": "Look, I'm not an idiot. I won't break anything.",
+      "emotion": "Anger 75",
+      "response_text": "I don't care who you think you are. You're not getting in down there.{angry}",
+      "index": "25"
+    },
+    {
+      "topic": "MS12BasementKey3",
+      "topic_text": "Sorry for bothering you.",
+      "emotion": "Disgust 50",
+      "response_text": "Right.{dismissive}",
+      "index": "27"
+    },
+    {
+      "topic": "MS12GustavoGhoulsArentBad",
+      "topic_text": "I've met them. Roy Phillips and those other Ghouls don't seem all that bad.",
+      "emotion": "Anger 50",
+      "response_text": "Look kid. I don't care what you think about them. Unless Tenpenny says otherwise. They aren't allowed in here. End of story. Quit wasting my time.{annoyed}",
+      "index": "28"
+    },
+    {
+      "topic": "MS12ResidentsBranch",
+      "topic_text": "What's it like living at Tenpenny Tower?",
+      "emotion": "Happy 50",
+      "response_text": "Tenpenny is always on time with the money. And we get fairly comfortable digs with side benefits.{seasoned mercenary happy with current assignment}",
+      "index": "29"
+    },
+    {
+      "topic": "MS12ResidentsGhouls",
+      "topic_text": "How's that Ghoul situation coming along?",
+      "emotion": "Anger 75",
+      "response_text": "That damn Roy Phillips won't take no for an answer. Keeps showing up, looking for a handout. He and his kind aren't wanted. End of story.{hardened mercenary}",
+      "index": "30"
+    },
+    {
+      "topic": "MS12ResidentsGhoulsHelp",
+      "topic_text": "I can help with your Ghoul problem. Where are they hiding out?",
+      "emotion": "Surprise 100",
+      "response_text": "Really? You? You're welcome to give it a try. But don't come crying to me when you get hurt.{surprised the player has courage}",
+      "index": "34"
+    },
+    {
+      "topic": "MS12ResidentsGhoulsHelpAccept",
+      "topic_text": "Sure, sounds good. I would have done it for free.",
+      "emotion": "Happy 100",
+      "response_text": "Yeah right. Good luck soldier. I'm not coming after you to rescue your ass if you get in trouble. You're on your own.{(\"Yeah right\" said skeptically) but happy to find such a good recruit}",
+      "index": "39"
+    },
+    {
+      "topic": "MS12ResidentsGhoulsHelpExtra",
+      "topic_text": "I'll take it. And any other help you can offer.",
+      "emotion": "Neutral 50",
+      "response_text": "Here, you can take this rifle and ammo. But don't waste it shooting at shadows.{bitter mercenary accepting a volunteer}",
+      "index": "41"
+    },
+    {
+      "topic": "MS12ResidentsGhoulsHelpPeaceful",
+      "topic_text": "I'm going to find a non-violent solution to your Ghoul problem.",
+      "emotion": "Surprise 50",
+      "response_text": "That's a laugh. Roy Phillips can't be reasoned with. Trust me. But go ahead and try to talk some sense into him. It's your funeral.{mocking}",
+      "index": "43"
+    },
+    {
+      "topic": "MS12ResidentsGhoulsHelpSpeech",
+      "topic_text": "You want this problem resolved or not? You can spare more than that...",
+      "emotion": "Neutral 50",
+      "response_text": "Well... maybe you're right. It was something I was going to have to do eventually anyway. How about another 200 caps?{grudingly accepting a higher fee}",
+      "index": "46"
+    },
+    {
+      "topic": "MS12ResidentsGhoulsPersuade",
+      "topic_text": "Perhaps the residents could be \"persuaded\" to let the Ghouls live here.",
+      "emotion": "Anger 100",
+      "response_text": "You're out of line. Those filthy bitches can stay living in those metro tunnels. They'll move in here over my dead body.{angry}",
+      "index": "50"
+    },
+    {
+      "topic": "MS12ResidentsGhoulsPersuadeBad",
+      "topic_text": "I was just kidding. Ghouls are filthy creatures that should be slaughtered.",
+      "emotion": "Happy 50",
+      "response_text": "Quite right! You're not such a moron after all.{amused and coming around to like the player}",
+      "index": "51"
+    },
+    {
+      "topic": "MS12ResidentsGhoulsPersuadeGood",
+      "topic_text": "That can be arranged. You don't look like much.",
+      "emotion": "Neutral 50",
+      "response_text": "Are you threatening me? You're obviously an idiot, so I'll let that one slide. But I'm warning you, I won't hesitate to kill you if I have to.{deadly serious}",
+      "index": "52"
+    },
+    {
+      "topic": "MS12ResidentsGhoulsPersuadeNeutral",
+      "topic_text": "We'll see.",
+      "emotion": "Disgust 50",
+      "response_text": "Whatever.{dismissing an annoying person}",
+      "index": "53"
+    },
+    {
+      "topic": "MS12ResidentsGhoulsTalk",
+      "topic_text": "Have you even tried talking to the Ghouls? I bet you can work something out.",
+      "emotion": "Anger 50",
+      "response_text": "Tenpenny doesn't care how big their pile of bottlecaps is. He won't let Ghouls live here. Those Ghouls need to give up and go bother someone else.{annoyed mercenary}",
+      "index": "54"
+    },
+    {
+      "topic": "MS12ResidentsGhoulsTalkBad",
+      "topic_text": "Yeah, Ghouls are too much trouble.",
+      "emotion": "Happy 50",
+      "response_text": "That's right. You never know when they'll go zombie on your ass. Perhaps you're smarter than you look.{grudging respect}",
+      "index": "55"
+    },
+    {
+      "topic": "MS12ResidentsGhoulsTalkGood",
+      "topic_text": "You're all bigots.",
+      "emotion": "Neutral 50",
+      "response_text": "Your bleeding heart is liable to get you in a lot of trouble one day.{bitter mercenary telling it like it is}",
+      "index": "56"
+    },
+    {
+      "topic": "MS12ResidentsGhoulsTalkNeutral",
+      "topic_text": "Whatever. It's not really any of my business.",
+      "emotion": "Neutral 50",
+      "response_text": "No, but perhaps it might be.{suggesting player could help}",
+      "index": "59"
+    },
+    {
+      "topic": "MS12REsidentsGhoulsWhat",
+      "topic_text": "What the hell's a Ghoul anyway? Some kind of diseased human?",
+      "emotion": "Surprise 50",
+      "response_text": "You serious? You don't know what a Ghoul is?",
+      "index": "60"
+    },
+    {
+      "topic": "MS12ResidentsNeighbors",
+      "topic_text": "How would you feel about having a few Ghoul neighbors?",
+      "emotion": "Anger 100",
+      "response_text": "HELL NO! Tenpenny won't allow it. And I take my orders from him.{angry mercenary}",
+      "index": "64"
+    },
+    {
+      "topic": "MS12ResidentsNeighborsBad",
+      "topic_text": "Yeah, Ghouls don't belong here.",
+      "emotion": "Anger 50",
+      "response_text": "So why the hell would you even suggest such a retarded idea? Are you done wasting my time?{angry mercenary}",
+      "index": "67"
+    },
+    {
+      "topic": "MS12ResidentsNeighborsGood",
+      "topic_text": "What if Tenpenny will let Ghouls live here?",
+      "emotion": "Anger 50",
+      "response_text": "He'd be out of his goddamn mind... but like I said. Ultimately I work for him, so whatever he says, goes. But I wouldn't like it.{angry mercenary}",
+      "index": "68"
+    },
+    {
+      "topic": "MS12ResidentsNeighborsNeutral",
+      "topic_text": "Whatever.",
+      "emotion": "Anger 50",
+      "response_text": "Are you done wasting my time?{gruff mercenary}",
+      "index": "69"
+    },
+    {
+      "topic": "SpeechChallengeFailure",
+      "topic_text": "SpeechChallengeFailure",
+      "emotion": "Anger 100",
+      "response_text": "Listen up good. I'm running the show here, not you. Now get out hell out of here!{scoffing at someone offering to help}",
+      "index": "70"
+    },
+    {
+      "topic": "TenpennyVendor",
+      "topic_text": "You got an armament supply? Want to do some trade?",
+      "emotion": "Neutral 50",
+      "response_text": "I guess we could do a little trading. Here's what I got.{gruff mercenary}",
+      "index": "74"
+    },
+    {
+      "topic": "TPIntercomGhoul",
+      "topic_text": "I can help take care of that little Ghoul problem for you.",
+      "emotion": "Surprise 10",
+      "response_text": "Is that so? And why should I believe that? You ever kill a Ghoul before?{gruff mercenary testing a civilian's mettle}",
+      "index": "76"
+    },
+    {
+      "topic": "TPIntercomGhoul1",
+      "topic_text": "I've killed so many Ghouls, I've stopped counting.",
+      "emotion": "Neutral 50",
+      "response_text": "Is that so? Then I'm sure you can handle yourself out there in the Wasteland just fine. Are you done wasting my time?{gruff mercenary belittling a civilian}",
+      "index": "77"
+    },
+    {
+      "topic": "TPIntercomGhoul2",
+      "topic_text": "I kill Ghouls and rent-a-cops with attitudes who ask too many questions.",
+      "emotion": "Neutral 50",
+      "response_text": "Oh ho! Looks like we got a live one here! I think we better leave this one outside. Good bye, kid. Try not to get eaten by anything out there.{gruff mercenary laughing with his buddies about a punk kid}",
+      "index": "78"
+    },
+    {
+      "topic": "TPIntercomGhoul3",
+      "topic_text": "You going to let me in or not?",
+      "emotion": "Neutral 50",
+      "response_text": "Listen. Like I've told those Ghouls a thousand times, I can't just let in every drifter that lands at the gate.{gruff mercenary barking at a civilian}",
+      "index": "79"
+    },
+    {
+      "topic": "TPIntercomLastTry1",
+      "topic_text": "Maybe you'd accept this 100 caps as \"insurance\" of my good behavior?",
+      "emotion": "Surprise 10",
+      "response_text": "You're poor, and stupid. Count your damn purse before you go offering people gifts.{gruff mercenary accepting a bribe}",
+      "index": "81"
+    },
+    {
+      "topic": "TPIntercomLastTry2",
+      "topic_text": "Ah come on. Let me in. Pretty please, with sugar on top?",
+      "emotion": "Neutral 50",
+      "response_text": "Ummm. No. Unless by \"sugar\" you meant to sweeten my day with, say, a gift of 100 caps.{gruff}",
+      "index": "89"
+    },
+    {
+      "topic": "TPIntercomLastTry2A",
+      "topic_text": "I'm a little low on caps at the moment.",
+      "emotion": "Surprise 10",
+      "response_text": "This ain't a goddamn soup kitchen. Sorry, kid. Go find a ditch to crawl into and stop bothering me.{gruff mercenary trying to get rid of a pestering vagrant}",
+      "index": "90"
+    },
+    {
+      "topic": "TPIntercomLastTry2B",
+      "topic_text": "You won't be getting a bribe from me.",
+      "emotion": "Neutral 50",
+      "response_text": "Then you won't be getting past this gate.{gruff}",
+      "index": "95"
+    },
+    {
+      "topic": "TPIntercomLastTry3",
+      "topic_text": "Let me in asshole!",
+      "emotion": "Disgust 50",
+      "response_text": "Goodbye.{gruffly dismissive}",
+      "index": "96"
+    },
+    {
+      "topic": "TPIntercomLook",
+      "topic_text": "I just want to look around a little. Come on. I won't hurt anybody.",
+      "emotion": "Anger 10",
+      "response_text": "This ain't a theme park, kid. And even if it was, you wouldn't be able to afford the admission. Now bugger off!{gruff mercenary trying to get rid of an annoying kid}",
+      "index": "97"
+    },
+    {
+      "topic": "TpIntercomLook1",
+      "topic_text": "That's where you're mistaken. Does 100 caps sound about right?",
+      "emotion": "Surprise 10",
+      "response_text": "You're poor, and stupid. Count your damn purse before you go offering people gifts.{gruff mercenary accepting a bribe}",
+      "index": "98"
+    },
+    {
+      "topic": "TpIntercomLook2",
+      "topic_text": "Come on, let me in. Just for a little while. I won't cause any trouble.",
+      "emotion": "Disgust 10",
+      "response_text": "You're not getting in. Stop trying. It's not working. I'm done talking to you.{gruff mercenary trying to get rid of an annoying person trying to get in}",
+      "index": "102"
+    },
+    {
+      "topic": "TpIntercomLook3",
+      "topic_text": "Open the damn gate! I'm done being interrogated by you!",
+      "emotion": "Surprise 10",
+      "response_text": "You're really not in a position to be threatening me. I'm safe on the other side of this wall, and you are out there, exposed and unsafe.{sarcastic}",
+      "index": "104"
+    },
+    {
+      "topic": "TPIntercommBurke",
+      "topic_text": "I'm here to see Mister Burke.",
+      "emotion": "Neutral 50",
+      "response_text": "He's expecting you? Why didn't you say so right away? Just a moment...{barking orders at a civilian through an intercomm}",
+      "index": "106"
+    },
+    {
+      "topic": "TPIntercommGREETING1",
+      "topic_text": "Is that how you treat all your guests?",
+      "emotion": "Anger 50",
+      "response_text": "What? No, just those damn Ghouls. Sorry, thought you were one of them.{angry mercenary calming down}",
+      "index": "108"
+    },
+    {
+      "topic": "TPIntercommGREETING2",
+      "topic_text": "Do you kiss your mother with that mouth?",
+      "emotion": "Surprise 25",
+      "response_text": "What? Oh. Sorry 'bout that. I thought you were one of those damned Ghouls looking for a handout.{gruff mercenary caught off guard}",
+      "index": "110"
+    },
+    {
+      "topic": "TPIntercommGREETING3",
+      "topic_text": "I don't think you're talking to the person you think you are.",
+      "emotion": "Surprise 10",
+      "response_text": "Oh? Thought you were that damn Ghoul. Well then. Back to business as usual. Ahem...{gruff mercenary caught off guard recomposing himself (mildly sarcastic)}",
+      "index": "112"
+    },
+    {
+      "topic": "TPIntercomTenpenny",
+      "topic_text": "I'm here to see Tenpenny.",
+      "emotion": "Neutral 50",
+      "response_text": "Hahaha! That's rich. What would a man like Tenpenny want to do with a Waste-rat like you?{gruff mercenary laughing at a ridiculous notion}",
+      "index": "114"
+    },
+    {
+      "topic": "TPIntercomTenpenny1",
+      "topic_text": "I have a lucrative offer for Tenpenny. Let me in, or you'll come to regret it.",
+      "emotion": "Neutral 50",
+      "response_text": "Just a minute. Let's not be hasty. If Tenpenny is interested in what you have to say, I suppose you should get your chance.{gruff mercenary reluctantly letting in someone past his check point}",
+      "index": "115"
+    },
+    {
+      "topic": "TPIntercomTenpenny2",
+      "topic_text": "Tenpenny is expecting me. I'm a new tenant. <Lie.>",
+      "emotion": "Surprise 50",
+      "response_text": "Nice try kid! I know everyone who lives here, even the new ones. It's my job, and I take my job very seriously.{gruff mercenary amused at the audacity of the player to lie to him}",
+      "index": "118"
+    },
+    {
+      "topic": "TPIntercomTenpenny3",
+      "topic_text": "Just let me in already!",
+      "emotion": "Anger 10",
+      "response_text": "Nope. Now get the hell out of here.{gruff mercenary}",
+      "index": "120"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "DialogueTenpennyConv00",
+      "topic_text": "DialogueTenpennyConv00",
+      "emotion": "Anger 100",
+      "response_text": "That's right. And the safety's off. Back off.{threatening a man who just hit on him}",
+      "index": "121"
+    },
+    {
+      "topic": "DialogueTenpennyConv01",
+      "topic_text": "DialogueTenpennyConv01",
+      "emotion": "Anger 25",
+      "response_text": "I'm sorry? What?!{caught off guard, and covering it with gruff anger}",
+      "index": "131"
+    },
+    {
+      "topic": "DialogueTenpennyConv03",
+      "topic_text": "DialogueTenpennyConv03",
+      "emotion": "Anger 100",
+      "response_text": "You're wasting your time. I don't want to have to tell you again. This gun is loaded. I'd hate for it to accidentally go off in your direction.{(angry) telling off a man who hit on him}",
+      "index": "140"
+    },
+    {
+      "topic": "DialogueTenpennyEatStartTopic",
+      "topic_text": "DialogueTenpennyEatStartTopic",
+      "emotion": "Neutral 50",
+      "response_text": "Time to take five.{hungry and on his way to get food}",
+      "index": "141"
+    },
+    {
+      "topic": "DialogueTenpennySleepStartTopic",
+      "topic_text": "DialogueTenpennySleepStartTopic",
+      "emotion": "Disgust 50",
+      "response_text": "Well, there's another day done.{tired and heading off to bed}",
+      "index": "142"
+    },
+    {
+      "topic": "GOODBYE",
+      "topic_text": "I have to go now.",
+      "emotion": "Neutral 50",
+      "response_text": "I still got my eye on you.{gruff mercenary}",
+      "index": "143"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Neutral 50",
+      "response_text": "You got anything to report, Ling?{gruff}",
+      "index": "148"
+    },
+    {
+      "topic": "MS12ArgumentTopic",
+      "topic_text": "MS12ArgumentTopic",
+      "emotion": "Anger 100",
+      "response_text": "How many times do we have to go through this? You're not getting in!{yelling at a obstinate enemy on the other end of an intercom}",
+      "index": "167"
+    },
+    {
+      "topic": "TenpennyGustavoGreetPlayer",
+      "topic_text": "TenpennyGustavoGreetPlayer",
+      "emotion": "Anger 10",
+      "response_text": "Welcome to Tenpenny Tower! Don't do anything stupid.{gruff mercenary giving a warning to be on best behavior}",
+      "index": "170"
+    }
+  ],
+  "combat": [
+    {
+      "topic": "Attack",
+      "topic_text": "Attack",
+      "emotion": "Neutral 50",
+      "response_text": "Ghouls! On me!{professional mercenaries fighting an overwhelming force}",
+      "index": "171"
+    },
+    {
+      "topic": "DeathResponse",
+      "topic_text": "DeathResponse",
+      "emotion": "Neutral 50",
+      "response_text": "That zombie's a real corpse now!{(killed a monster) professional mercenaries fighting an overwhelming force}",
+      "index": "178"
+    }
+  ]
+}

@@ -1,0 +1,230 @@
+{
+  "name": "Philippe",
+  "url": "/wiki/Philippe",
+  "dialogue_name": "VMS18Philippe.txt",
+  "dialogue_url": "/wiki/VMS18Philippe.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "0010D4E9",
+  "ref_id": "00118343",
+  "editor_id": "VMS18Philippe",
+  "location": "Ultra-Luxe kitchen",
+  "location_url": "/wiki/Ultra-Luxe#Kitchens",
+  "descriptions": [
+    "Philippe is a member of the White Glove Society within the Ultra-Luxe resort on the Strip where he serves as the head chef of the Gourmand restaurant in 2281. He appears in Fallout: New Vegas.",
+    "According to the man himself, when Philippe was five, his father left the family, which led his chem addict mother to \"bring home a series of strange men who insisted upon him calling them 'Uncle.'\" His sisters would also lock him in a shipping crate whenever they did not want him around, and he also experienced an unspecified traumatic incident involving his brother. All of this seems to suggest that Philippe's aggressive attitude in adulthood is not due to his \"just liking to shout at people,\" as he claims, but rather the severely traumatic experiences of his childhood.",
+    "After becoming the head chef of the Ultra-Luxe resort's in-house restaurant, the Gourmand, when the White Glove Society joined Mr. House's Free Economic Zone of New Vegas as one of the Three Families, Philippe has made a habit of being intensely abusive to his subordinates, shouting and cursing at anyone who ranks beneath him in the cooking staff hierarchy — which is everyone — all while insisting they \"deserve it\" and that he likes shouting at them.",
+    "Beyond the Beef: Philippe is the one preparing the meal for the White Gloves' exclusive dinner. Along with his experiments in creating imitation strange meat pie, he is colluding with Mortimer to serve a meal of human flesh to the White Gloves for the plan to return them to cannibalism, whether using the meat of Ted Gunderson or Carlyle St. Clair III.",
+    "If the Courier passes the Medicine 55 skill check to properly diagnose Philippe's hostile and abusive behavior as a result of self-suppressed childhood trauma, Philippe initially ridicules the idea. In recounting his childhood experiences as evidence that the Courier is wrong about him, however, Philippe stops and realizes the Courier is right. He leaves his post, saying the Courier can take over for the feast that night for all he cares, as he needs to be alone."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "White Glove Society",
+  "role": "Gourmandhead chef",
+  "detailed_location": "Ultra-Luxe kitchen",
+  "voice_actor": "Jesse Burch",
+  "special": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 6,
+    "Charisma": 3,
+    "Intelligence": 4,
+    "Agility": 6,
+    "Luck": 4
+  },
+  "level": "4",
+  "tag_skills": [
+    {
+      "Guns:": "43"
+    },
+    {
+      "Melee Weap.:": "41"
+    },
+    {
+      "Unarmed:": "43"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Very Evil",
+  "voice_type": "MaleAdult03",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "Leave me alone. Haven't you done enough?",
+      "index": "1"
+    },
+    {
+      "topic": "VMS18VMS18PhilippeTopic000",
+      "topic_text": "Yes, sir.",
+      "emotion": "Neutral 50",
+      "response_text": "Don't make eye contact with me! Look at the floor. And get back to work!",
+      "index": "6"
+    },
+    {
+      "topic": "VMS18VMS18PhilippeTopic001",
+      "topic_text": "I think you may have me confused with someone else.",
+      "emotion": "Neutral 50",
+      "response_text": "Oh really? So despite your filthy face and your vacant expression and your complete lack of human dignity, you're telling me you're not a server?{angry and sarcastic}",
+      "index": "7"
+    },
+    {
+      "topic": "VMS18VMS18PhilippeTopic002",
+      "topic_text": "Who do you think you are, talking to me that way?",
+      "emotion": "Neutral 50",
+      "response_text": "Who do-? Who the fuck do you think I am? I'm the fucking god of New Vegas brahmin fusion cuisine, that's who.{Repeating back \"who do you think you are?\" stunned that someone would dare ask.}",
+      "index": "8"
+    },
+    {
+      "topic": "VMS18VMS18PhilippeTopic004",
+      "topic_text": "[Attack] You'll be feeding birds when I'm through with you.",
+      "emotion": "Neutral 50",
+      "response_text": "I'll carve that stupid look off your inbred face!{about to attack with a knife.}",
+      "index": "11"
+    },
+    {
+      "topic": "VMS18VMS18PhilippeTopic005",
+      "topic_text": "<Lie> Oh no, you have it right. I'm a server.",
+      "emotion": "Neutral 50",
+      "response_text": "Well then why the fuck are you still standing there like you aren't the lowest form of life ever to be flushed down the evolutionary toilet?",
+      "index": "13"
+    },
+    {
+      "topic": "VMS18VMS18PhilippeTopic006",
+      "topic_text": "<Lie> I'm here to talk business.  Interested in putting out a cookbook?",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] What, me? The supreme ruler of the Nevada dining scene? Teach lowlife half-wits to make food that doesn't smell like burning excrement?",
+      "index": "14"
+    },
+    {
+      "topic": "VMS18VMS18PhilippeTopic007",
+      "topic_text": "Hey, could I, uh, buy some of your recipes?",
+      "emotion": "Neutral 50",
+      "response_text": "Yes, of course.{sweetly}",
+      "index": "16"
+    },
+    {
+      "topic": "VMS18VMS18PhilippeTopic008",
+      "topic_text": "You're screwed up in the head.",
+      "emotion": "Neutral 50",
+      "response_text": "[FAILED] Yeah. You know why? It gets worse every time some sniveling wet blanket cries about how I need to tiptoe around his precious feelings.",
+      "index": "18"
+    },
+    {
+      "topic": "VMS18VMS18PhilippeTopic009",
+      "topic_text": "Your predisposition towards anger suggests unresolved issues in your past.",
+      "emotion": "Neutral 50",
+      "response_text": "[?] What kind of harebrained fucking psychobabble bullshit is that?",
+      "index": "20"
+    },
+    {
+      "topic": "VMS18VMS18PhilippeTopic010",
+      "topic_text": "I'm a new honorary member of the White Glove Society.",
+      "emotion": "Neutral 50",
+      "response_text": "Well what do you want? I'm very busy here.",
+      "index": "22"
+    },
+    {
+      "topic": "VMS18VMS18PhilippeTopic012",
+      "topic_text": "You may be projecting. Tell me more about your parents.",
+      "emotion": "Neutral 50",
+      "response_text": "[?] Oh. I see how it is. You think because my father walked out on us when I was five, now I have to yell at people.",
+      "index": "23"
+    },
+    {
+      "topic": "VMS18VMS18PhilippeTopic013",
+      "topic_text": "What about the banquet?",
+      "emotion": "Neutral 50",
+      "response_text": "Forget about the fucking banquet. You know what? You can do it. You be the star chef. Take my recipes.",
+      "index": "28"
+    },
+    {
+      "topic": "VMS18VMS18PhilippeTopic014",
+      "topic_text": "You go do that, then.",
+      "emotion": "Neutral 50",
+      "response_text": "How could they treat me like that?{to himself, sadly}",
+      "index": "30"
+    },
+    {
+      "topic": "VMS18VMS18PhilippeTopic015",
+      "topic_text": "I was just wondering where I could find tonight's wines.",
+      "emotion": "Neutral 50",
+      "response_text": "Well why don't you fucking try checking the serving table in the wine room, for fuck's sake? Circular room, two rooms down? Ring any bells? Christ!",
+      "index": "31"
+    },
+    {
+      "topic": "VMS18VMS18PhilippeTopic017",
+      "topic_text": "It'll be huge. I'll advance you a hundred caps, plus half the gross.",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] All right. Don't get me wrong, I love my job here, but they don't pay me what I'm worth. Too many people skimming off the top.",
+      "index": "33"
+    },
+    {
+      "topic": "VMS18VMS18PhilippeTopic018",
+      "topic_text": "Yes. We're a major publisher. But as a sign of good faith I'll need recipes.",
+      "emotion": "Neutral 50",
+      "response_text": "<grunts> You're pushing your luck. Here. I have a few copies on me. This better be good enough.",
+      "index": "35"
+    },
+    {
+      "topic": "VMS18VMS18PhilippeTopic019",
+      "topic_text": "Uh... how about you give me your recipes and then we'll see.",
+      "emotion": "Neutral 50",
+      "response_text": "Yes, of course.{sweetly}",
+      "index": "37"
+    },
+    {
+      "topic": "VMS18VMS18PhilippeTopic020",
+      "topic_text": "I'll advance you a hundred caps and then... wait, I don't have that much on me.",
+      "emotion": "Neutral 50",
+      "response_text": "A hundred caps? I have that much between the cushions of my day bed.",
+      "index": "39"
+    },
+    {
+      "topic": "VMS18VMS18PhilippeTopic022",
+      "topic_text": "I think I saw a radroach in the pantry. You should check it out.",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] No! It'll ruin my ingredients!",
+      "index": "41"
+    },
+    {
+      "topic": "VMS18VMS18PhilippeTopic023",
+      "topic_text": "Would you, uh, go step in the pantry for a minute?",
+      "emotion": "Neutral 50",
+      "response_text": "[FAILED] Now why the fuck would I do that? I don't have time for games. Stop wasting my time.",
+      "index": "42"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "About time.",
+      "index": "43"
+    },
+    {
+      "topic": "VMS18PhilippeDetectTed",
+      "topic_text": "VMS18PhilippeDetectTed",
+      "emotion": "Neutral 50",
+      "response_text": "You get back here with our dinner!",
+      "index": "44"
+    },
+    {
+      "topic": "VMS18PhilippeTrapped",
+      "topic_text": "VMS18PhilippeTrapped",
+      "emotion": "Neutral 50",
+      "response_text": "What the- ? You son of a- ! Goddamn motherf- ! Ugh! Let me out!",
+      "index": "45"
+    }
+  ],
+  "combat": []
+}

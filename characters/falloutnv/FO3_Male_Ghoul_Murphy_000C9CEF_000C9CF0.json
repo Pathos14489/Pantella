@@ -1,0 +1,200 @@
+{
+  "name": "Murphy",
+  "url": "/wiki/Murphy_(Fallout_3)",
+  "dialogue_name": "Murphy.txt",
+  "dialogue_url": "/wiki/Murphy.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": true,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000C9CEF",
+  "ref_id": "000C9CF0",
+  "editor_id": "Murphy",
+  "location": "Northwest Seneca Station",
+  "location_url": "/wiki/Northwest_Seneca_Station",
+  "descriptions": [
+    "Murphy is a ghoul scientist living inside Northwest Seneca Station in 2277.",
+    "Murphy has set up a small laboratory inside the station, from which he and his assistant Barrett are attempting to synthesize and sell the potent chem Ultrajet, as regular Jet has a limited effect on ghouls.",
+    "His assistant acts primarily as a bodyguard, but can also be seen assisting Murphy with other tasks."
+  ],
+  "race": "Ghoul",
+  "gender": "Male",
+  "affiliation": "Barrett",
+  "role": "Scientist",
+  "detailed_location": "Northwest Seneca Station",
+  "voice_actor": "Mike Rosson",
+  "special": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 4,
+    "Intelligence": 4,
+    "Agility": 6,
+    "Luck": 4
+  },
+  "level": "10→20 (player level x1.2)",
+  "tag_skills": [
+    {
+      "Melee Weap.:": "73→100"
+    },
+    {
+      "Small Guns:": "73→100"
+    },
+    {
+      "Speech:": "71→100"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Neutral",
+  "voice_type": "MaleGenericGhoulDC",
+  "geck_race": "Ghoul",
+  "topics": [
+    {
+      "topic": "DialogMurphy01",
+      "topic_text": "Steal your secrets? Not at all.",
+      "emotion": "Fear 50",
+      "response_text": "Good. I was afraid I was gonna have to abandon my lab here. That would mean starting all over again.",
+      "index": "1"
+    },
+    {
+      "topic": "DialogMurphy02",
+      "topic_text": "What secrets?",
+      "emotion": "Disgust 90",
+      "response_text": "The secret of making Ultrajet obviously!",
+      "index": "3"
+    },
+    {
+      "topic": "DialogMurphy03",
+      "topic_text": "Yeah sure, I'm here for everything you got. Hand it over, zombie!",
+      "emotion": "Anger 70",
+      "response_text": "No! No way! You're not taking the formula from me!",
+      "index": "5"
+    },
+    {
+      "topic": "DialogMurphy04",
+      "topic_text": "Ultrajet? That some sort of super chem?",
+      "emotion": "Neutral 50",
+      "response_text": "I suppose you could say that. Ultrajet is almost double the potency of Jet... perfect for Ghouls. Jet barely affects us you see.",
+      "index": "6"
+    },
+    {
+      "topic": "DialogMurphy05",
+      "topic_text": "What the heck are you talking about?",
+      "emotion": "Neutral 50",
+      "response_text": "You never heard of it? Ultrajet is almost double the potency of Jet... perfect for Ghouls. Jet barely affects us you see.",
+      "index": "9"
+    },
+    {
+      "topic": "DialogMurphy06",
+      "topic_text": "Stop trying to talk your way out of this, zombie!",
+      "emotion": "Anger 90",
+      "response_text": "What the hell is your problem? Fine! You're gonna be like that...",
+      "index": "12"
+    },
+    {
+      "topic": "DialogMurphy07",
+      "topic_text": "Yeah sure, what do you need?",
+      "emotion": "Neutral 50",
+      "response_text": "It takes 3 things to make Ultrajet. Two of the ingredients I got plenty of. The other one is a little harder to find: Sugar Bombs.",
+      "index": "13"
+    },
+    {
+      "topic": "DialogMurphy08",
+      "topic_text": "Nothing's free in this world, Murphy.",
+      "emotion": "Disgust 80",
+      "response_text": "Yeah, no kidding. I didn't think you were a freakin' charity.",
+      "index": "16"
+    },
+    {
+      "topic": "DialogMurphy09",
+      "topic_text": "No way. I'm not helping you make chems!",
+      "emotion": "Disgust 70",
+      "response_text": "Fine, fine. Sheesh. Take it easy. You change your mind, gimme a shout.",
+      "index": "19"
+    },
+    {
+      "topic": "DialogMurphyMoreCapsSC",
+      "topic_text": "Make it 30 caps each and you got yourself a deal.",
+      "emotion": "Disgust 70",
+      "response_text": "Fine, anything to get what I need. Now scram, I got some preparing to do!",
+      "index": "20"
+    },
+    {
+      "topic": "DialogMurphyTLBarrett",
+      "topic_text": "What's the deal with Barrett?",
+      "emotion": "Neutral 50",
+      "response_text": "He's my assistant and my backup. In case things get rough. I wouldn't mess with him if I were you.",
+      "index": "21"
+    },
+    {
+      "topic": "DialogMurphyTLFamily",
+      "topic_text": "Have you ever heard of The Family?",
+      "emotion": "Disgust 80",
+      "response_text": "Sure. I stay away from them and they don't bother me. It's a good relationship. They live somewhere East of here.",
+      "index": "22"
+    },
+    {
+      "topic": "DialogMurphyTLSBombs",
+      "topic_text": "Here's all the Sugar Bombs I've got.",
+      "emotion": "Happy 70",
+      "response_text": "Good... good. There's more out there, so go and find it.",
+      "index": "24"
+    },
+    {
+      "topic": "DialogMurphyTLUltrajet",
+      "topic_text": "Can I buy some Ultrajet?",
+      "emotion": "Neutral 50",
+      "response_text": "Hmmm, so you wanna live life on the wild side, huh? Okay. Go for it.",
+      "index": "27"
+    },
+    {
+      "topic": "DialogMurphyWait",
+      "topic_text": "Let me think about it a bit.",
+      "emotion": "Disgust 70",
+      "response_text": "What is it with you people? Stop thinking so much. That's what got us all here in the first place.",
+      "index": "29"
+    },
+    {
+      "topic": "DialogMurphyYes",
+      "topic_text": "Alright, Murphy... I'm in.",
+      "emotion": "Disgust 60",
+      "response_text": "Good. Now get going, I have a ton of preparation to do.",
+      "index": "30"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Disgust 90",
+      "response_text": "So, what did ya bring me?",
+      "index": "31"
+    },
+    {
+      "topic": "SpeechChallengeFailure",
+      "topic_text": "SpeechChallengeFailure",
+      "emotion": "Disgust 70",
+      "response_text": "Nope. It's 15 each. You wanna do it or what?",
+      "index": "34"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "I have to go now.",
+      "emotion": "Neutral 50",
+      "response_text": "Yep, do what you gotta do.",
+      "index": "35"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Happy 60",
+      "response_text": "You got the stuff, I got the caps. A match made in heaven.",
+      "index": "36"
+    }
+  ],
+  "combat": []
+}

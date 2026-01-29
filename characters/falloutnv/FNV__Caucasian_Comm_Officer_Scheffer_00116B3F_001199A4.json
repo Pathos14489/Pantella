@@ -1,0 +1,92 @@
+{
+  "name": "Comm Officer Scheffer",
+  "url": "/wiki/Scheffer",
+  "dialogue_name": "RSDeltaScheffer.txt",
+  "dialogue_url": "/wiki/RSDeltaScheffer.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "00116B3F",
+  "ref_id": "001199A4",
+  "editor_id": "RSDeltaScheffer",
+  "location": "Ranger Station Delta",
+  "location_url": "/wiki/Ranger_Station_Delta",
+  "descriptions": [
+    "Comm Officer Scheffer is the communications officer stationed at Ranger Station Delta in 2281.",
+    "Scheffer is the communications officer for Ranger Station Delta. Because her particular post is not as exciting, she'd prefer to be on patrol."
+  ],
+  "race": "Human",
+  "affiliation": "New California RepublicNew California Republic Rangers",
+  "role": "Communications officerRanger",
+  "detailed_location": "Ranger Station Delta",
+  "voice_actor": "Lora Cain",
+  "special": {
+    "Strength": 5,
+    "Perception": 6,
+    "Endurance": 6,
+    "Charisma": 4,
+    "Intelligence": 5,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "level": "5",
+  "tag_skills": [
+    {
+      "Guns:": "48"
+    },
+    {
+      "Sneak:": "48"
+    },
+    {
+      "Unarmed:": "48"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Neutral",
+  "voice_type": "FemaleAdult02",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "{Player not in NCR gear}I'm not supposed to let civilians just walk around this place. There better be a good reason for you being here.",
+      "index": "1"
+    },
+    {
+      "topic": "vDialogueRangerStationDeltaRSDeltaSchefferTopic000",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "So long.",
+      "index": "4"
+    },
+    {
+      "topic": "vDialogueRangerStationDeltaRSDeltaSchefferTopic001",
+      "topic_text": "I've brought radio security code updates from Sergeant Reyes at Camp Forlorn Hope.",
+      "emotion": "Neutral 50",
+      "response_text": "Very well. You can tell Reyes that this station is secure.",
+      "index": "5"
+    },
+    {
+      "topic": "vDialogueRangerStationDeltaRSDeltaSchefferTopic002",
+      "topic_text": "What do you do here?",
+      "emotion": "Neutral 50",
+      "response_text": "I'm in charge of the radio - hence the title \"Comm Officer.\" I'd much rather be out on patrol, since nothing much happens around here.",
+      "index": "6"
+    },
+    {
+      "topic": "vDialogueRangerStationDeltaRSDeltaSchefferTopic003",
+      "topic_text": "I'd like to know more about the Rangers.",
+      "emotion": "Neutral 50",
+      "response_text": "Well, when there's trouble regular NCR troops can't handle, they send in a Ranger. Problem solved.",
+      "index": "7"
+    }
+  ],
+  "conversation": [],
+  "combat": []
+}

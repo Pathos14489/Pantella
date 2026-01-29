@@ -1,0 +1,63 @@
+{
+  "name": "Mary Holden",
+  "url": "/wiki/Mary_Holden",
+  "dialogue_name": "CG04MaryHolden.txt",
+  "dialogue_url": "/wiki/CG04MaryHolden.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "00057507",
+  "ref_id": "0005750B",
+  "editor_id": "CG04MaryHolden",
+  "location": "Vault 101",
+  "location_url": null,
+  "descriptions": [
+    "Mary Holden is a resident of Vault 101 in Fallout 3.",
+    "During the chaos of the Lone Wanderer's escape from Vault 101, Mary's husband Tom wishes to flee the Vault with her, but she would prefer that they simply return to their quarters.",
+    "However, if the Lone Wanderer manages to reach the guards before Tom does, neither Tom nor Mary will be killed, and instead will flee together into a separate inaccessible hallway. Even if they do survive, they disappear from the game, and do not appear in Trouble on the Homefront."
+  ],
+  "race": "Human",
+  "gender": "Female",
+  "affiliation": "Vault 101",
+  "role": "Vault 101 resident",
+  "detailed_location": "Vault 101",
+  "voice_actor": "Jan Johns",
+  "special": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 10,
+    "Intelligence": 5,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "level": "1",
+  "misc_skills": [],
+  "karma": "Neutral",
+  "voice_type": "FemaleAdult04DC",
+  "geck_race": "Asian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Fear 75",
+      "response_text": "Tom wouldn't listen to me. You know how he gets.Play soundFO3 MaryHolden TomWouldntListen.ogghttps://fallout.fandom.com/wiki/File:FO3_MaryHolden_TomWouldntListen.oggnoicon",
+      "index": "1"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "CG04AtriumConv1",
+      "topic_text": "CG04AtriumConv1",
+      "emotion": "Fear 50",
+      "response_text": "We should just go back to our quarters.Play soundFO3_MaryHolden_GoBackToOurQuarte…https://fallout.fandom.com/wiki/File:FO3_MaryHolden_GoBackToOurQuarters.oggnoicon",
+      "index": "2"
+    }
+  ],
+  "combat": []
+}

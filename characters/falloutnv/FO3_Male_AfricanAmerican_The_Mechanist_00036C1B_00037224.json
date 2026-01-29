@@ -1,0 +1,261 @@
+{
+  "name": "The Mechanist",
+  "url": "/wiki/Mechanist_(Fallout_3)",
+  "dialogue_name": "Mechanist.txt",
+  "dialogue_url": "/wiki/Mechanist.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "00036C1B",
+  "ref_id": "00037224",
+  "editor_id": "Mechanist",
+  "location": "Town Entrance,Robot repair center",
+  "location_url": "/wiki/Robot_repair_center",
+  "descriptions": [
+    "The Mechanist (real name Scott \"Bean\" Wollinski) is a man who controls various robots. He is fighting his nemesis, the AntAgonizer, in the town of Canterbury Commons and is dressed in the Mechanist's costume, a robot styled suit.",
+    "Scott \"Bean\" Wollinski was born to simple bean farmers, raised by his father until he was 15, who then sold him to a caravan merchant hoping he would have a better life. He traveled with the caravans for a few years working as an indentured servant. This is where he got the nickname \"Bean\" because his purchase was paid for with beans. He eventually bought his freedom and settled down in Canterbury Commons, where he lived a life of solitude, hiding in the electronics store, fiddling around with junk. After the AntAgonizer started showing up, he became the Mechanist to protect the town.",
+    "He will attack the Lone Wanderer if he finds out that they work for the AntAgonizer (or if he suspects that they are working for her). If one convinces him they are not a secret agent, they can work with him. Not giving him the AntAgonizer's suit however will also cause him to attack the Wanderer. Alternately, he can be convinced to give up his life as the Mechanist, either through a Speech check or the Black Widow perk, since he's causing the town more harm than good.",
+    "The Mechanist is voiced by Pete Papageorge in English. In localized versions of the game, his voice is dubbed by Shintarou Oohata (Japanese), Denis Nekrasov (Russian) and Luis Bajo (Spanish)."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Canterbury CommonsAntAgonizer",
+  "role": "Town protector",
+  "detailed_location": "Robot repair center",
+  "voice_actor": "Pete Papageorge",
+  "special": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 7,
+    "Intelligence": 5,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "mod_special_values": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 6,
+    "Intelligence": 5,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "level": "3→12",
+  "tag_skills": [
+    {
+      "Barter:": "42→87(40→85)"
+    },
+    {
+      "Melee Weap.:": "40→85"
+    },
+    {
+      "Speech:": "42→87(40→85)"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "40→85"
+    },
+    {
+      "Critical Chance:": "5%"
+    },
+    {
+      "Unarmed Dam.:": "1.25"
+    },
+    {
+      "Poison Resist.:": "20%"
+    },
+    {
+      "Rad. Resist.:": "8%"
+    },
+    {
+      "Carry Weight:": "200"
+    },
+    {
+      "Damage Res.:": "16%(42%)"
+    }
+  ],
+  "karma": "Neutral",
+  "voice_type": "MaleAdult02DC",
+  "geck_race": "AfricanAmerican",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Anger 80",
+      "response_text": "Aha! Vile AntAgonizer! You've got a lot of moxie, invading my private sanctum! Pretty courageous, for a spineless insect!{annoyed}",
+      "index": "1"
+    },
+    {
+      "topic": "MS02Retire",
+      "topic_text": "Darling, your fighting is scaring the whole town. Won't you stop for me?",
+      "emotion": "Sad 50",
+      "response_text": "Is... Is that true? Have I really become a threat to the town? Do you really feel that way?{Having trouble handling the change in worldview.}",
+      "index": "24"
+    },
+    {
+      "topic": "MS02RetireNo",
+      "topic_text": "Wait! I'm not a secret agent! I'm here to help!",
+      "emotion": "Neutral 50",
+      "response_text": "A likely story! But perhaps you're telling the truth. Go on...",
+      "index": "36"
+    },
+    {
+      "topic": "MS02RetireYes",
+      "topic_text": "You really have lost your mind, haven't you?",
+      "emotion": "Happy 50",
+      "response_text": "Your mind-games won't work with me, ant-spawn!",
+      "index": "38"
+    },
+    {
+      "topic": "MS02SuitChallenge",
+      "topic_text": "You don't need to worry about this suit. There are other threats out there.",
+      "emotion": "Happy 75",
+      "response_text": "Were it in any other hands, I would worry. But I know I can trust you, my faithful sidekick.",
+      "index": "42"
+    },
+    {
+      "topic": "MS02SuitNo",
+      "topic_text": "If you want the suit, you'll have to take it from me.",
+      "emotion": "Anger 75",
+      "response_text": "If violence is my only recourse, then violence it shall be.{angry and about to start combat}",
+      "index": "48"
+    },
+    {
+      "topic": "MS02SuitReitreExit",
+      "topic_text": "My mistake. Never mind.",
+      "emotion": "Happy 10",
+      "response_text": "Quite all right. Now, give me the AntAgonizer's suit, so that its evil may not fall into the wrong hands!",
+      "index": "49"
+    },
+    {
+      "topic": "MS02SuitRetire1",
+      "topic_text": "Wait. First, let's talk about what you've been doing.",
+      "emotion": "Anger 10",
+      "response_text": "Quickly, then! Evil never pauses to contemplate its actions, so I see little reason that we should, either.",
+      "index": "50"
+    },
+    {
+      "topic": "MS02SuitWhy",
+      "topic_text": "Why do you want the suit?",
+      "emotion": "Disgust 25",
+      "response_text": "I can hardly leave it lying around for someone else to find, now can I? The threat of the AntAgonizer must be put to an end forever!{angry and about to start combat}",
+      "index": "51"
+    },
+    {
+      "topic": "MS02SuitYes",
+      "topic_text": "Here, you can have it. Just move on and leave Canterbury alone.",
+      "emotion": "Happy 50",
+      "response_text": "Excellent. The evil taint of the AntAgonizer will never darken the land again! Now that the AntAgonizer is taken care of, Canterbury Commons is safe!",
+      "index": "53"
+    },
+    {
+      "topic": "MS02SuperheroExplain1aMS02SuperheroExplain1",
+      "topic_text": "I've had enough of you and your silly costume. Get ready to die.",
+      "emotion": "Happy 60",
+      "response_text": "Why, you aren't a citizen at all! You must be a vile minion of my arch-nemesis, the AntAgonizer! Obviously, we must battle at once!{Almost delighted to realize this}",
+      "index": "56"
+    },
+    {
+      "topic": "MS02SuperheroExplain1bMS02SuperheroExplain1",
+      "topic_text": "I'm just here to talk. We can find a peaceful way to stop this fighting.",
+      "emotion": "Sad 25",
+      "response_text": "I realize you mean well, but I'm afraid you're being naive. The AntAgonizer is a madwoman, and the only thing that will stop her is force.{Condescending.}",
+      "index": "58"
+    },
+    {
+      "topic": "MS02SuperheroExplain1cMS02SuperheroExplain3",
+      "topic_text": "I've come to help you get rid of the AntAgonizer.",
+      "emotion": "Surprise 50",
+      "response_text": "Oh! Well, in that case, welcome! Welcome, dear citizen!{deciding what to do with a new recruit}",
+      "index": "61"
+    },
+    {
+      "topic": "MS02SuperheroExplain2a",
+      "topic_text": "You just want to keep fighting the AntAgonizer. You're as bad as she is.",
+      "emotion": "Disgust 50",
+      "response_text": "Lies! Slander! I'll never let you compare a noble hero like myself to that, that base villain!{with authoritative gusto}",
+      "index": "69"
+    },
+    {
+      "topic": "MS02SuperheroExplain2b",
+      "topic_text": "Why did you decide to become the Mechanist?",
+      "emotion": "Sad 50",
+      "response_text": "Long ago, I was a mere citizen like yourself. Beyond a talent for computers, I had no power in this world.{rising excitement}",
+      "index": "72"
+    },
+    {
+      "topic": "MS02SuperheroExplain2c",
+      "topic_text": "I suppose you're right. Maybe we can work together.",
+      "emotion": "Happy 75",
+      "response_text": "Aha! That's the spirit, chum! You seem quite capable - you got to me after all. You can be my official sidekick!{glad to find a partner to help defend the town}",
+      "index": "78"
+    },
+    {
+      "topic": "MS02SuperheroExplain3a",
+      "topic_text": "Let's go put an end to the AntAgonizer once and for all!",
+      "emotion": "Anger 25",
+      "response_text": "In all of my time against the AntAgonizer, I've never been able to get to her vile sanctum.{Oblivious to any double entendre}",
+      "index": "81"
+    },
+    {
+      "topic": "MS02SuperheroExplain3b",
+      "topic_text": "There's bound to be a peaceful solution. I'll try to convince her to give up.",
+      "emotion": "Disgust 50",
+      "response_text": "The AntAgonizer does not listen to reason. She does not understand true human emotions, like mercy or love.{disdainfully}",
+      "index": "85"
+    },
+    {
+      "topic": "MS02SuperheroExplain3c",
+      "topic_text": "Whatever. I just want her dead so I can get paid.",
+      "emotion": "Surprise 50",
+      "response_text": "Oh... well... I suppose the ends justify the means...{taken aback}",
+      "index": "88"
+    },
+    {
+      "topic": "SpeechChallengeFailure",
+      "topic_text": "SpeechChallengeFailure",
+      "emotion": "Sad 50",
+      "response_text": "Endangering the town? That goes against everything the Mechanist stands for. I can't believe I would ever become something like that...{Sad, and on the verge of repentance.}",
+      "index": "92"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "I have to go now.",
+      "emotion": "Neutral 50",
+      "response_text": "Stay wary, citizen. And keep your laser handy!",
+      "index": "98"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Neutral 50",
+      "response_text": "Yes, citizen?",
+      "index": "100"
+    },
+    {
+      "topic": "MS02Battle",
+      "topic_text": "MS02Confrontation",
+      "emotion": "Neutral 50",
+      "response_text": "You'll never get away with terrorizing this town. Not while it's under the protection of the Mechanist!{super hero shouting while his armies of robots defend an innocent town}",
+      "index": "101"
+    }
+  ],
+  "combat": [
+    {
+      "topic": "Flee",
+      "topic_text": "Flee",
+      "emotion": "Anger 50",
+      "response_text": "Another vile minion of yours? We'll settle this another day, AntAgonizer!",
+      "index": "106"
+    }
+  ]
+}

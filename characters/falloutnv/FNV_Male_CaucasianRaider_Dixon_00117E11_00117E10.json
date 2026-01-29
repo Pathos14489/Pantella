@@ -1,0 +1,148 @@
+{
+  "name": "Dixon",
+  "url": "/wiki/Dixon_(Fallout:_New_Vegas)",
+  "dialogue_name": "VFSHighTimesDealer.txt",
+  "dialogue_url": "/wiki/VFSHighTimesDealer.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": true,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "00117E11",
+  "ref_id": "00117E10",
+  "editor_id": "VFSHighTimesDealer",
+  "location": "Freeside's east gate",
+  "location_url": "/wiki/Freeside%27s_east_gate",
+  "descriptions": [
+    "Dixon is a local and drug dealer living in Freeside in Fallout: New Vegas.",
+    "A street-side chem pusher with perpetually glassy and bloodshot eyes, Dixon sells the usual fare of chems as well as his own self-styled flavors of whiskey and Jet to anyone with the caps to afford his prices. As a local of Freeside all his life, like most he considers the NCR squatters to be scum and treats them as less than people.",
+    "Despite his staunch hatred for NCR squatters, he is not above selling to all the denizens of Freeside, including the locals themselves. Two of his regular customers are members of the Followers of the Apocalypse: Bill Ronte, a former engineer, is now addicted to Dixon's whiskey, and Jacob Hoff, a former chemist, is now addicted to Dixon's Jet. Dixon's exploitation of both sides of the population of Freeside leads to some questioning if he is secretly in league with NCR to try and keep the locals pacified through addiction.",
+    "Dixon hangs around near Freeside's east gate (in front of Mick & Ralph's as well as just past Rotface) both night and day.",
+    "High Times: Dixon needs to be persuaded (or killed) in order to cut off Jacob Hoff and Bill Ronte from their addictions so they can get clean and return to the Followers of the Apocalypse.",
+    "At one point during development Dixon was slated to have two thugs in his employ, serving as bodyguards or enforcers, and armed with varmint rifles (both thugs also carry the incorrect ammunition for the weapon, like Dixon). Though not present in the game, both thugs are still present in the game's code and can be brought into the game using console commands.",
+    "Playstation 3 Xbox 360 Occasionally, Dixon's inventory will not reset after buying all his chems, even after a few days. "
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Freeside",
+  "role": "Drug dealer7 of Spades",
+  "detailed_location": "Freeside's east gate",
+  "voice_actor": "Liam O'Brien",
+  "special": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 7,
+    "Intelligence": 5,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "level": "10",
+  "tag_skills": [
+    {
+      "Barter:": "70(75)"
+    },
+    {
+      "Melee Weap.:": "66(68)"
+    },
+    {
+      "Speech:": "70"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Neutral",
+  "voice_type": "MaleAdult05",
+  "geck_race": "CaucasianRaider",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "Looking for a fix, man? I got what you need.",
+      "index": "1"
+    },
+    {
+      "topic": "VFreeformFreesideVFSHighTimesDealerTopic000",
+      "topic_text": "Do you know anything about Bill or Jacob?",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah, man. Those cats are out of their domes addicted to my shit. They can't get enough. Pretty hilarious to watch.",
+      "index": "2"
+    },
+    {
+      "topic": "VFreeformFreesideVFSHighTimesDealerTopic001",
+      "topic_text": "What are you selling?",
+      "emotion": "Neutral 50",
+      "response_text": "Have a look, baby.",
+      "index": "3"
+    },
+    {
+      "topic": "VFreeformFreesideVFSHighTimesDealerTopic006",
+      "topic_text": "I need you to stop supplying Bill and Jacob.",
+      "emotion": "Neutral 50",
+      "response_text": "Really? Aw, you're such a saint.",
+      "index": "4"
+    },
+    {
+      "topic": "VFreeformFreesideVFSHighTimesDealerTopic007",
+      "topic_text": "Maybe some caps could persuade you to leave them alone?",
+      "emotion": "Neutral 50",
+      "response_text": "300 caps and I'll stop selling to them. Otherwise, it is just too much fun watching them spiral downward.",
+      "index": "6"
+    },
+    {
+      "topic": "VFreeformFreesideVFSHighTimesDealerTopic008<Attack>",
+      "topic_text": "<Attack> Screw that.  It'd be a lot cheaper and easier for me to kill you.",
+      "emotion": "Neutral 50",
+      "response_text": "Ooo, I always enjoy a good scrap!",
+      "index": "7"
+    },
+    {
+      "topic": "VFreeformFreesideVFSHighTimesDealerTopic009",
+      "topic_text": "All right.  Take the caps and leave them alone.",
+      "emotion": "Neutral 50",
+      "response_text": "Hey, nice doing business with you, Mr. Moneybags.",
+      "index": "8"
+    },
+    {
+      "topic": "VFreeformFreesideVFSHighTimesDealerTopic010<Speech>",
+      "topic_text": "So the NCR is supplying you with cheap chems? To keep Freeside down?",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] Wait, man! You can't go around saying shit like that!",
+      "index": "12"
+    },
+    {
+      "topic": "VFreeformFreesideVFSHighTimesDealerTopic011",
+      "topic_text": "Nevermind.  I don't have enough to cover that.",
+      "emotion": "Neutral 50",
+      "response_text": "Heh, you sorry sad sack.  Come back when you've got the caps.",
+      "index": "15"
+    },
+    {
+      "topic": "VFreeformFreesideVFSHighTimesDealerTopic013DUPLICATE000",
+      "topic_text": "Are you trying to kill your customers?",
+      "emotion": "Neutral 50",
+      "response_text": "Those fools are from NCR. I love seeing those squatters in agony.",
+      "index": "16"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "VFSHighTimesDealerDone",
+      "topic_text": "VFSHighTimesDealerDone",
+      "emotion": "Neutral 50",
+      "response_text": "Get lost.",
+      "index": "18"
+    },
+    {
+      "topic": "VFSHighTimesDealerHello",
+      "topic_text": "VFSHighTimesDealerHello",
+      "emotion": "Neutral 50",
+      "response_text": "Friggin' troll NCR squatters.  A bunch of mouth-breathing wastes of space, if you ask me.",
+      "index": "19"
+    }
+  ],
+  "combat": []
+}

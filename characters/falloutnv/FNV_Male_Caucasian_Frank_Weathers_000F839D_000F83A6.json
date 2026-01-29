@@ -1,0 +1,206 @@
+{
+  "name": "Frank Weathers",
+  "url": "/wiki/Frank_Weathers",
+  "dialogue_name": "1EFrankWeathers.txt",
+  "dialogue_url": "/wiki/1EFrankWeathers.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000F839D",
+  "ref_id": "000F83A6",
+  "editor_id": "1EFrankWeathers",
+  "location": "Aerotech Office Park",
+  "location_url": "/wiki/Aerotech_Office_Park",
+  "descriptions": [
+    "Frank Weathers is a former farmer and refugee living in the Aerotech Office Park in 2281.",
+    "A former farmer hailing from Junktown, where he owned over 100 acres (0.4 square kilometers),",
+    "This frustration, coupled with him eventually losing his job, caused him to abuse his family, beating his wife and children for the slightest problem. His drinking problem compounded the issues to the point that he was forced to seek help from the Followers of the Apocalypse at the Old Mormon Fort, getting kicked out in the process.",
+    "As of his residence in Aerotech, his personality still reflects the same abuser who drove his family off.",
+    "After completing Left My Heart, the Courier can make him commit suicide through a Speech check (35). However, if they complete Left My Heart without talking to Frank, he can't be spoken to afterward."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "New California Republic",
+  "role": "Farmer (formerly)RefugeeAbusive husband/father",
+  "detailed_location": "Aerotech tent,Aerotech Office Park",
+  "voice_actor": "Emerson Brooks",
+  "special": {
+    "Strength": 4,
+    "Perception": 4,
+    "Endurance": 5,
+    "Charisma": 3,
+    "Intelligence": 4,
+    "Agility": 7,
+    "Luck": 8
+  },
+  "level": "3",
+  "tag_skills": [
+    {
+      "Guns:": "84"
+    },
+    {
+      "Melee Weap.:": "81"
+    },
+    {
+      "Unarmed:": "77"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "110"
+    }
+  ],
+  "karma": "Neutral",
+  "voice_type": "MaleAdult01DefaultB",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "Dammit, I'll find them eventually! Mark my words!",
+      "index": "1"
+    },
+    {
+      "topic": "vDialogueVegasEast21EFrankWeathersTopic000",
+      "topic_text": "Wow, some protector you turned out to be.",
+      "emotion": "Neutral 50",
+      "response_text": "Go ahead, mock me. Nothing you say can be worse than my own shame.",
+      "index": "5"
+    },
+    {
+      "topic": "vDialogueVegasEast21EFrankWeathersTopic001",
+      "topic_text": "I'm so sorry. Can I help?",
+      "emotion": "Neutral 50",
+      "response_text": "You'd do that for a complete stranger? Thank you, friend. The army says they don't have the available manpower - as if this city is more important.",
+      "index": "6"
+    },
+    {
+      "topic": "vDialogueVegasEast21EFrankWeathersTopic002",
+      "topic_text": "Wait a minute - why didn't they take you, too?",
+      "emotion": "Neutral 50",
+      "response_text": "I... God help me, I ran! I abandoned my family to those butchers. Not a day goes by I don't hate myself for that.",
+      "index": "8"
+    },
+    {
+      "topic": "vDialogueVegasEast21EFrankWeathersTopic004<Honest Option>",
+      "topic_text": "Yes. They're all dead.",
+      "emotion": "Pained 60",
+      "response_text": "Oh God no! I haven't been the best father, but I didn't deserve this!",
+      "index": "9"
+    },
+    {
+      "topic": "vDialogueVegasEast21EFrankWeathersTopic006",
+      "topic_text": "I'm sorry. She didn't make it.",
+      "emotion": "Neutral 50",
+      "response_text": "Oh. Oh, I see. Well... thank you for saving my children, at least.",
+      "index": "20"
+    },
+    {
+      "topic": "vDialogueVegasEast21EFrankWeathersTopic009",
+      "topic_text": "Not yet.",
+      "emotion": "Neutral 50",
+      "response_text": "Please, hurry!",
+      "index": "22"
+    },
+    {
+      "topic": "vDialogueVegasEast21EFrankWeathersTopic012",
+      "topic_text": "Who are you?",
+      "emotion": "Neutral 50",
+      "response_text": "My name's Frank Weathers. I'm a farmer, got a few hundred acres near Junktown. Well, I was a farmer. I guess I'm not much of anything now.",
+      "index": "23"
+    },
+    {
+      "topic": "vDialogueVegasEast21EFrankWeathersTopic013",
+      "topic_text": "What do you know about the Legion?",
+      "emotion": "Neutral 50",
+      "response_text": "{Vehement}They're cannibals, slavers, and worse.",
+      "index": "24"
+    },
+    {
+      "topic": "vDialogueVegasEast21EFrankWeathersTopic014",
+      "topic_text": "Why'd you come all the way out to New Vegas?",
+      "emotion": "Neutral 50",
+      "response_text": "Why does anybody? I thought I'd strike it rich at the tables, make my fortune and never have to plow those damn fields again.",
+      "index": "27"
+    },
+    {
+      "topic": "vDialogueVegasEast21EFrankWeathersTopic015",
+      "topic_text": "About your family...",
+      "emotion": "Neutral 50",
+      "response_text": "Yes? Have you found them?",
+      "index": "29"
+    },
+    {
+      "topic": "vDialogueVegasEast21EFrankWeathersTopic016",
+      "topic_text": "What happened to your family?",
+      "emotion": "Neutral 50",
+      "response_text": "We were crossing the Mojave, not far from Searchlight, when a band of Caesar's Legion slavers came out of nowhere. They took my family.",
+      "index": "30"
+    },
+    {
+      "topic": "vDialogueVegasEast21EFrankWeathersTopic018<Speech - Confront>",
+      "topic_text": "Your family doesn't want you around. You need to clean up, Frank.",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] You're right. I've been a mean son of a bitch the past couple years.",
+      "index": "32"
+    },
+    {
+      "topic": "vDialogueVegasEast21EFrankWeathersTopic019<Be mean>",
+      "topic_text": "Why would I tell an abusive bastard like you?",
+      "emotion": "Surprise 50",
+      "response_text": "{Surprised}What?! Why won't you tell me?",
+      "index": "37"
+    },
+    {
+      "topic": "vDialogueVegasEast21EFrankWeathersTopic021<Barter>",
+      "topic_text": "Show me some caps and I'll tell you exactly where to go.",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] Here, I don't have much left at this point. Please, just tell me where they are.",
+      "index": "39"
+    },
+    {
+      "topic": "vDialogueVegasEast21EFrankWeathersTopic022",
+      "topic_text": "Hey thanks, Frank. Go to hell.",
+      "emotion": "Anger 70",
+      "response_text": "Dammit, I'll find them eventually! Mark my words!",
+      "index": "40"
+    },
+    {
+      "topic": "vDialogueVegasEast21EFrankWeathersTopic024<Speech - Anger>",
+      "topic_text": "You're a slimy yellow-bellied bastard. You don't deserve a family!",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] You're right. I've been a mean son of a bitch the past couple years.",
+      "index": "41"
+    },
+    {
+      "topic": "vDialogueVegasEast21EFrankWeathersTopic025",
+      "topic_text": "They mentioned going to the Old Mormon Fort in Freeside.",
+      "emotion": "Neutral 50",
+      "response_text": "Crap, those goody-goodies kicked me out of there once already. No way I'm getting in.",
+      "index": "44"
+    },
+    {
+      "topic": "vDialogueVegasEast21EFrankWeathersTopic027<Speech - Suicide>",
+      "topic_text": "Think about it, Frank. What do you have to live for?",
+      "emotion": "Pained 50",
+      "response_text": "[SUCCEEDED] You're right. I've got nothing left...",
+      "index": "47"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Goodbye.",
+      "index": "50"
+    }
+  ],
+  "combat": []
+}

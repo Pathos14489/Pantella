@@ -1,0 +1,200 @@
+{
+  "name": "Mei Wong",
+  "url": "/wiki/Mei_Wong",
+  "dialogue_name": "MeiWong.txt",
+  "dialogue_url": "/wiki/MeiWong.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": true,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000156BF",
+  "ref_id": "0001E758",
+  "editor_id": "MeiWong",
+  "location": "Rivet City",
+  "location_url": "/wiki/Rivet_City",
+  "descriptions": [
+    "Mei Wong is a former slave staying in Rivet City in 2277.",
+    "Mei is a reserved woman who does not like to talk. She was previously a slave, once held at Paradise Falls, and was owned by Allistair Tenpenny, but she managed to escape and went into hiding. Her past is known by Harkness and he has promised that she is safe in town. She is knowledgeable about the slavers and suspects that Sister could be a slaver but she is unable to prove her hunch and she is scared of him. Luckily, he does not recognize her.",
+    "She lives in the common room of Rivet City and can usually be found there or in the Rivet City market. Mei can sometimes be found outside, wandering the flight deck, near James Hargrave and C.J. Young's baseball field.",
+    "* The gun will appear only if you choose to provide her with 25 caps to buy a weapon from Flak 'N Shrapnel's."
+  ],
+  "race": "Human",
+  "gender": "Female",
+  "role": "Former slave",
+  "detailed_location": "Common room,Rivet City",
+  "voice_actor": "Shari Elliker",
+  "special": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 4,
+    "Intelligence": 4,
+    "Agility": 6,
+    "Luck": 4
+  },
+  "level": "4",
+  "tag_skills": [
+    {
+      "Barter:": "41"
+    },
+    {
+      "Small Guns:": "45(47)"
+    },
+    {
+      "Unarmed:": "41"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Good",
+  "voice_type": "FemaleAdult01DefaultDC",
+  "geck_race": "Asian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Fear 50",
+      "response_text": "Well? Are you going to help me or turn me over to the Slaver?{stage whisper}",
+      "index": "1"
+    },
+    {
+      "topic": "MS03RCHistory1Could I ask you about Rivet City's history?",
+      "topic_text": "Would you mind me asking about Rivet City's history?",
+      "emotion": "Fear 40",
+      "response_text": "I... I don't really know anything about that. I'd appreciate being left alone, please.",
+      "index": "6"
+    },
+    {
+      "topic": "MS14TedFind",
+      "topic_text": "Where can I find Ted Strayer?",
+      "emotion": "Neutral 50",
+      "response_text": "Have you tried the common room?  That's where he sleeps.",
+      "index": "7"
+    },
+    {
+      "topic": "RCMeiWongDontWorry",
+      "topic_text": "Don't worry. I would never turn in a runaway slave.",
+      "emotion": "Surprise 50",
+      "response_text": "Really? Oh, thank you.",
+      "index": "10"
+    },
+    {
+      "topic": "RCMeiWongGun",
+      "topic_text": "Here's 25 caps. Maybe you can buy yourself a gun.",
+      "emotion": "Happy 50",
+      "response_text": "Thank you! I'll go to Flak and Shrapnel's just before closing.",
+      "index": "12"
+    },
+    {
+      "topic": "RCMeiWongIntimidate",
+      "topic_text": "Yes. I'm one of them. Have been for years. <lie>",
+      "emotion": "Fear 50",
+      "response_text": "No! Don't take me back! I would rather die than be a slave for that awful Allistair Tenpenny.",
+      "index": "17"
+    },
+    {
+      "topic": "RCMeiWongIntroduction",
+      "topic_text": "I'm not going to hurt you. What are you so scared of?",
+      "emotion": "Sad 50",
+      "response_text": "I suppose it doesn't matter if I tell you.",
+      "index": "18"
+    },
+    {
+      "topic": "RCMeiWongNotMyProblem",
+      "topic_text": "Hey, it's none of my business. Let the past be the past.",
+      "emotion": "Sad 50",
+      "response_text": "That's easy to say. You don't have anyone from your past after you.",
+      "index": "21"
+    },
+    {
+      "topic": "RCMeiWongNuts",
+      "topic_text": "Lady, you're nuts.",
+      "emotion": "Fear 50",
+      "response_text": "I'm sorry. I'm just so on edge all the time.",
+      "index": "23"
+    },
+    {
+      "topic": "RCMeiWongRevealed",
+      "topic_text": "You're a runaway. I had to tell Sister about you.",
+      "emotion": "Surprise 50",
+      "response_text": "Oh, my God! What am I going to do now? How could you?",
+      "index": "24"
+    },
+    {
+      "topic": "RCMeiWongSister",
+      "topic_text": "Who's this Sister? A nun?",
+      "emotion": "Fear 50",
+      "response_text": "No. He's a big, scary Slaver. He's staying at the Weatherly Hotel. I try to avoid him because he might recognize me.",
+      "index": "26"
+    },
+    {
+      "topic": "RCMeiWongSlave",
+      "topic_text": "So you're an escaped slave? Now I understand...",
+      "emotion": "Fear 50",
+      "response_text": "No! Please, don't tell Sister. I think he's a Slaver. I don't want to be taken by him.",
+      "index": "27"
+    },
+    {
+      "topic": "RCMeiWongThinkAboutIt",
+      "topic_text": "Let me think about it.",
+      "emotion": "Sad 50",
+      "response_text": "I...I am at your mercy.",
+      "index": "28"
+    },
+    {
+      "topic": "RCMeiWongYourOwn",
+      "topic_text": "You're on your own. I'm not getting involved.",
+      "emotion": "Sad 50",
+      "response_text": "I suppose it was wrong of me to ask you for help. I won't talk to you about this again.",
+      "index": "29"
+    },
+    {
+      "topic": "SpeechChallengeFailure",
+      "topic_text": "SpeechChallengeFailure",
+      "emotion": "Anger 50",
+      "response_text": "You...oh. You don't know. You're just trying to trick me. Well, it won't work.",
+      "index": "30"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYEI have to go now.",
+      "topic_text": "So long.",
+      "emotion": "Neutral 50",
+      "response_text": "Farewell.",
+      "index": "31"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Anger 50",
+      "response_text": "Ted, could you please not put your stuff on my bed or all over the floor?",
+      "index": "32"
+    },
+    {
+      "topic": "RCGoodbye",
+      "topic_text": "RCGoodbye",
+      "emotion": "Fear 50",
+      "response_text": "Thank you, Chief. I'm terrified that he will recognize me. I hope he leaves soon.",
+      "index": "37"
+    },
+    {
+      "topic": "RCPackageEnd",
+      "topic_text": "RCPackageEnd",
+      "emotion": "Neutral 50",
+      "response_text": "Thank you, Cindy.",
+      "index": "48"
+    },
+    {
+      "topic": "RCResponse01",
+      "topic_text": "RCResponse01",
+      "emotion": "Surprise 50",
+      "response_text": "Do you have anything to calm my nerves? Paulie keeps trying to get me to try Psycho, but that stuff rots your brain.",
+      "index": "51"
+    }
+  ],
+  "combat": []
+}

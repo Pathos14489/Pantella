@@ -1,0 +1,95 @@
+{
+  "name": "Great Khan armorer",
+  "url": "/wiki/Great_Khan_armorer",
+  "dialogue_name": "VRRCGreatKhanaArmoryHF.txt",
+  "dialogue_url": "/wiki/VRRCGreatKhanaArmoryHF.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": true,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "0014EDBE",
+  "ref_id": "0014EDBF",
+  "editor_id": "VRRCGreatKhanaArmoryHF",
+  "location": "Great Khan armory",
+  "location_url": "/wiki/Great_Khan_armory",
+  "descriptions": [
+    "The Great Khan armorer is a member of the Great Khans living in the Mojave Wasteland in 2281.",
+    "Located in the basement of a ruined house southeast of Red Rock Canyon, close to the Spring Mt. Ranch State Park, along with a single Khan as a guard, the armorer serves her tribe by managing their supply of weapons and ammo. With an Accepted reputation with the Khans, she'll even sell her wares to outsiders."
+  ],
+  "race": "Human",
+  "gender": "Female",
+  "affiliation": "Great Khans",
+  "role": "Merchant",
+  "detailed_location": "Great Khan armory",
+  "voice_actor": "Katherine Pawlak",
+  "special": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 3,
+    "Intelligence": 3,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "level": "8",
+  "tag_skills": [
+    {
+      "Guns:": "57"
+    },
+    {
+      "Melee Weap.:": "57"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "100"
+    },
+    {
+      "Critical Chance:": "5%"
+    },
+    {
+      "Unarmed Dam.:": "1.15"
+    },
+    {
+      "Poison Resist.:": "15%"
+    },
+    {
+      "Rad. Resist.:": "6%"
+    },
+    {
+      "Carry Weight:": "210"
+    }
+  ],
+  "karma": "Neutral",
+  "voice_type": "FemaleAdult01Default",
+  "geck_race": "Hispanic",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "They tell me I'm supposed to sell you weapons. Interested?",
+      "index": "1"
+    },
+    {
+      "topic": "vDialogueGreatKhansGenericVRRCGreatKhanaArmoryHFTopic000",
+      "topic_text": "Yes, please.",
+      "emotion": "Neutral 50",
+      "response_text": "Take a look.",
+      "index": "2"
+    },
+    {
+      "topic": "vDialogueGreatKhansGenericVRRCGreatKhanaArmoryHFTopic001",
+      "topic_text": "No, thanks.",
+      "emotion": "Neutral 50",
+      "response_text": "Then get out of here.",
+      "index": "3"
+    }
+  ],
+  "conversation": [],
+  "combat": []
+}

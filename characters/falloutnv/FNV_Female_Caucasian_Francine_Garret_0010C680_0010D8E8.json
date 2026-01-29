@@ -1,0 +1,270 @@
+{
+  "name": "Francine Garret",
+  "url": "/wiki/Francine_Garret",
+  "dialogue_name": "VFSFrancineGarret.txt",
+  "dialogue_url": "/wiki/VFSFrancineGarret.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": true,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "0010C680",
+  "ref_id": "0010D8E8",
+  "editor_id": "VFSFrancineGarret",
+  "location": "Atomic Wrangler Casino",
+  "location_url": "/wiki/Atomic_Wrangler_Casino",
+  "descriptions": [
+    "Francine Garret is one of the two co-owners of the Atomic Wrangler Casino, along with her twin brother, James, living in Freeside in 2281.",
+    "Sister of James Garret and co-owner of the Atomic Wrangler Casino, Francine appears to be the business and financial account of the Wrangler, handling its profits and interest. She is rather uptight about her business and will do anything to keep the Wrangler star attraction of Freeside, as she lets James take care of its entertainment and appearance.",
+    "Francine stays at the counter of the Atomic Wrangler from 7 AM to midnight, then heads upstairs to sleep until dawn.",
+    "Francine Garret (and her brother James) are the Two of Spades in the deck of Vault playing cards included with the Collector's Edition of Fallout: New Vegas.",
+    "PC Xbox 360 After the quest Debt Collector, the option to ask about Santiago and how much he owes her will still be there. "
+  ],
+  "race": "Human",
+  "gender": "Female",
+  "affiliation": "Atomic Wrangler Casino",
+  "role": "Casino owner",
+  "detailed_location": "Atomic Wrangler CasinoFreeside",
+  "voice_actor": "Cindy Robinson",
+  "special": {
+    "Strength": 5,
+    "Perception": 6,
+    "Endurance": 6,
+    "Charisma": 10,
+    "Intelligence": 5,
+    "Agility": 7,
+    "Luck": 5
+  },
+  "tag_skills": [
+    {
+      "Energy Weap.:": "77"
+    },
+    {
+      "Guns:": "94"
+    },
+    {
+      "Speech:": "95(100)"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Neutral",
+  "voice_type": "FemaleAdult07",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "{Concerned}I heard about your run on The Tops. Don't even think about trying that crap here.",
+      "index": "1"
+    },
+    {
+      "topic": "VFreeformFreesideFSFrancineGarretTopic000",
+      "topic_text": "What goods and services do you have to offer?",
+      "emotion": "Neutral 50",
+      "response_text": "We've got liquor, chems, and whores a plenty. Pick your fix and we'll oblige. Our only rule is no sampling the merchandise. Caps paid in advance.",
+      "index": "28"
+    },
+    {
+      "topic": "VFreeformFreesideFSFrancineGarretTopic001",
+      "topic_text": "I'd like to see what you have on tap.",
+      "emotion": "Neutral 50",
+      "response_text": "Caps up front. We don't do tabs here.",
+      "index": "30"
+    },
+    {
+      "topic": "VFreeformFreesideFSFrancineGarretTopic002",
+      "topic_text": "I'm looking for a little R&R.",
+      "emotion": "Neutral 50",
+      "response_text": "Since you're new, I'll lay out the rules for you. The prostitutes here aren't slaves. They decide who they service.",
+      "index": "31"
+    },
+    {
+      "topic": "VFreeformFreesideFSFrancineGarretTopic003",
+      "topic_text": "I'd like to help you with your debt collection.",
+      "emotion": "Neutral 50",
+      "response_text": "Great. There are three people who need to be tracked down, a real mixed basket of fruits. Their names are Grecks, Santiago, and Lady Jane.",
+      "index": "35"
+    },
+    {
+      "topic": "VFreeformFreesideFSFrancineGarretTopic005",
+      "topic_text": "I'd like a room.",
+      "emotion": "Neutral 50",
+      "response_text": "Just a few caps and it's yours.",
+      "index": "38"
+    },
+    {
+      "topic": "VFreeformFreesideFSFrancineGarretTopic006",
+      "topic_text": "[Give 10 caps] Here you go.",
+      "emotion": "Neutral 50",
+      "response_text": "Up the steps, last room on the left. If you leave the Wrangler, we'll assume you're checking out.",
+      "index": "41"
+    },
+    {
+      "topic": "VFreeformFreesideFSFrancineGarretTopic007",
+      "topic_text": "Nevermind, I changed my mind.",
+      "emotion": "Neutral 50",
+      "response_text": "Alright. What can I get you, then?",
+      "index": "43"
+    },
+    {
+      "topic": "VFreeformFreesideFSFrancineGarretTopic010",
+      "topic_text": "Do you have any work you need done around here?",
+      "emotion": "Neutral 50",
+      "response_text": "I have some work I need handled. Back before we instituted the caps up front rule, we used to allow customers tabs.",
+      "index": "44"
+    },
+    {
+      "topic": "VFreeformFreesideFSFrancineGarretTopic011",
+      "topic_text": "Will I have to shoot anyone? Because I really want to shoot someone.",
+      "emotion": "Neutral 50",
+      "response_text": "I'd prefer you not kill anyone with a debt. It's a bit difficult to collect on a corpse.",
+      "index": "49"
+    },
+    {
+      "topic": "VFreeformFreesideFSFrancineGarretTopic013",
+      "topic_text": "What kind of caps are we talking here?",
+      "emotion": "Neutral 50",
+      "response_text": "If you bring all of their debts back, we'll give you a cut of each. 25% is more than fair. It would add up to 150 caps if you bring them all in.",
+      "index": "51"
+    },
+    {
+      "topic": "VFreeformFreesideFSFrancineGarretTopic014",
+      "topic_text": "Eh, sorry.  I've got some other things I need to handle first.",
+      "emotion": "Neutral 50",
+      "response_text": "Fair enough. Anything else you need? I'm a busy woman.",
+      "index": "52"
+    },
+    {
+      "topic": "VFreeformFreesideFSFrancineGarretTopic015",
+      "topic_text": "You've got yourself a deal.",
+      "emotion": "Neutral 50",
+      "response_text": "Great. There are three people who need to be tracked down, a real mixed basket of fruits. Their names are Grecks, Santiago, and Lady Jane.",
+      "index": "53"
+    },
+    {
+      "topic": "VFreeformFreesideFSFrancineGarretTopic016<Speech more money>",
+      "topic_text": "Hey, I'm doing all of the work here.  50/50 and I'm game.",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] Alright. 50/50 it is, but you better bring back all of the caps. If we hear you crossed us, the next bounty hunter will be coming for you.",
+      "index": "56"
+    },
+    {
+      "topic": "VFreeformFreesideVFSFrancineGarretTopic000",
+      "topic_text": "I think I have all of the debts collected.",
+      "emotion": "Neutral 50",
+      "response_text": "I don't care how you handled those lumps of human refuse, but you got the job done. We need you to hunt down another person.",
+      "index": "58"
+    },
+    {
+      "topic": "VFreeformFreesideVFSFrancineGarretTopic001<Barter>",
+      "topic_text": "This kind of work costs time and money.  50/50 would cover my expenses.",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] All right. 50/50 it is, but you better bring back all of the caps.",
+      "index": "86"
+    },
+    {
+      "topic": "VFreeformFreesideVFSFrancineGarretTopic002",
+      "topic_text": "How am I supposed to get to the Strip?",
+      "emotion": "Neutral 50",
+      "response_text": "See the King. I'm sure he could work something out to get you in. You'll need to prove you're worth his time, but it'll be well worth it.",
+      "index": "89"
+    },
+    {
+      "topic": "VFreeformFreesideVFSFrancineGarretTopic003",
+      "topic_text": "If I see McCaffery on the Strip, I'll be sure to take care of him.",
+      "emotion": "Neutral 50",
+      "response_text": "Good. Just stop on back when he's dead and you'll be rewarded handsomely. Bring his hat as proof of the kill.",
+      "index": "90"
+    },
+    {
+      "topic": "VFreeformFreesideVFSFrancineGarretTopic004",
+      "topic_text": "I have some other business to handle, maybe later.",
+      "emotion": "Neutral 50",
+      "response_text": "Just bring back his hat if you decide to take care of him for us. He stole 2,000 caps.",
+      "index": "91"
+    },
+    {
+      "topic": "VFreeformFreesideVFSFrancineGarretTopic005",
+      "topic_text": "I took care of McCaffery.",
+      "emotion": "Neutral 50",
+      "response_text": "Yes! Where is his hat?!",
+      "index": "93"
+    },
+    {
+      "topic": "VFreeformFreesideVFSFrancineGarretTopic006",
+      "topic_text": "Right here. <Give McCaffery's hat>",
+      "emotion": "Neutral 50",
+      "response_text": "This is great news. No one screws with the Garret Twins and gets away with it. I need to find a place on the wall for this.",
+      "index": "94"
+    },
+    {
+      "topic": "VFreeformFreesideVFSFrancineGarretTopic007",
+      "topic_text": "The Followers are looking to trade for supplies.",
+      "emotion": "Neutral 50",
+      "response_text": "Interesting... Well, you're going to need to speak with my brother James. He handles all of the trading contracts and general operations.",
+      "index": "97"
+    },
+    {
+      "topic": "VFreeformFreesideVFSFrancineGarretTopic008<Speech more money>",
+      "topic_text": "Hey, I'm doing all of the work here.  50/50 and I'm game.",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] Alright. 50/50 it is, but you better bring back all of the caps. If we hear you crossed us, the next bounty hunter will be coming for you.",
+      "index": "98"
+    },
+    {
+      "topic": "VFreeformFreesideVFSFrancineGarretTopic009",
+      "topic_text": "<Lie and give 600 caps> I collected all of the debts.",
+      "emotion": "Neutral 50",
+      "response_text": "I don't care how you handled those lumps of human refuse, but you got the job done. We need you to hunt down another person.",
+      "index": "100"
+    },
+    {
+      "topic": "VFreeformFreesideVFSFrancineGarretTopic011",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Goodbye.",
+      "index": "112"
+    },
+    {
+      "topic": "VFreeformFreesideVFSFrancineGarretTopic012",
+      "topic_text": "Grecks?",
+      "emotion": "Neutral 50",
+      "response_text": "Grecks is a bit cracked, but mostly harmless. Just don't mention anything about his lazy eye.",
+      "index": "113"
+    },
+    {
+      "topic": "VFreeformFreesideVFSFrancineGarretTopic013",
+      "topic_text": "Lady Jane?",
+      "emotion": "Neutral 50",
+      "response_text": "Lady Jane fancies herself a high roller, but she's just another dirtbag NCR prospector. I'm not sure where to find her.",
+      "index": "115"
+    },
+    {
+      "topic": "VFreeformFreesideVFSFrancineGarretTopic014",
+      "topic_text": "Santiago?",
+      "emotion": "Neutral 50",
+      "response_text": "Santiago is a suave son of a bitch, but a total pansy when it comes to fisticuffs. He owes 212 caps and should be around Freeside as well.",
+      "index": "117"
+    },
+    {
+      "topic": "VFreeformFreesideVFSFrancineGarretTopic015",
+      "topic_text": "That's all for now.",
+      "emotion": "Neutral 50",
+      "response_text": "Anything else you need?",
+      "index": "118"
+    },
+    {
+      "topic": "VFreeformFreesideVFSFrancineGarretTopic016<Barter>",
+      "topic_text": "This kind of work costs time and money.  50/50 would cover my expenses.",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] All right. 50/50 it is, but you better bring back all of the caps.",
+      "index": "119"
+    }
+  ],
+  "conversation": [],
+  "combat": []
+}

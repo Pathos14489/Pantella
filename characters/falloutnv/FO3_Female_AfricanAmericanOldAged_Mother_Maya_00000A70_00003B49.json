@@ -1,0 +1,212 @@
+{
+  "name": "Mother Maya",
+  "url": "/wiki/Maya",
+  "dialogue_name": "MotherMaya.txt",
+  "dialogue_url": "/wiki/MotherMaya.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "00000A70",
+  "ref_id": "00003B49",
+  "editor_id": "MotherMaya",
+  "location": "Church of the Children of Atom",
+  "location_url": "/wiki/Children_of_Atom",
+  "descriptions": [
+    "Mother Maya is an inhabitant of Megaton in 2277.",
+    "Mother Maya is Confessor Cromwell's wife, but they do not announce this to others, as they are both occupied with spreading the ideals of church.",
+    "Mother Maya is kind, and treats ghouls like Gob with respect and an air of reverence because of their spiritual beliefs.",
+    "Maya is said to be 41 years old in the game guide, but appears to be more advanced in age.",
+    "Playstation 3 If Lucas Simms and/or Cromwell are killed, she will not mention anything about their death and talk as if they are still alive. "
+  ],
+  "race": "Human",
+  "gender": "Female",
+  "affiliation": "Church of the Children of Atom",
+  "role": "Religious leader",
+  "detailed_location": "Children of Atom,Megaton",
+  "voice_actor": "Diana Sowle",
+  "special": {
+    "Strength": 5,
+    "Perception": 4,
+    "Endurance": 4,
+    "Charisma": 7,
+    "Intelligence": 5,
+    "Agility": 4,
+    "Luck": 4
+  },
+  "mod_special_values": {
+    "Strength": 5,
+    "Perception": 4,
+    "Endurance": 5,
+    "Charisma": 7,
+    "Intelligence": 5,
+    "Agility": 5,
+    "Luck": 4
+  },
+  "level": "4",
+  "tag_skills": [
+    {
+      "Medicine:": "44"
+    },
+    {
+      "Small Guns:": "42(44)"
+    },
+    {
+      "Speech:": "48"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Good",
+  "voice_type": "FemaleOld01DC",
+  "geck_race": "AfricanAmericanOldAged",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Happy 50",
+      "response_text": "Hello, sweet child. Hello. I don't believe we've met. I'm Mother Maya, prophet of the Atom and embracer of the universal Light.",
+      "index": "1"
+    },
+    {
+      "topic": "MegMotherMayaBarChoice1",
+      "topic_text": "I... uh... only drink for medicinal reasons.",
+      "emotion": "Sad 75",
+      "response_text": "Even still, I cannot aid you on this path with a clear conscience.{He doesn't really beleive you. At all. }",
+      "index": "7"
+    },
+    {
+      "topic": "MegMotherMayaBarChoice2",
+      "topic_text": "I'm actually just looking for some food.",
+      "emotion": "Neutral 50",
+      "response_text": "Well, in that case I recommend the Brass Lantern. It's directly across from the Church. You can't miss it.",
+      "index": "8"
+    },
+    {
+      "topic": "MegMotherMayaBarEnd",
+      "topic_text": "Can you help me find something else?",
+      "emotion": "Neutral 50",
+      "response_text": "Certainly.",
+      "index": "9"
+    },
+    {
+      "topic": "MegMotherMayaChurch",
+      "topic_text": "Tell me about the Church.",
+      "emotion": "Neutral 50",
+      "response_text": "For those answers I shall direct you to my husband, Confessor Cromwell.",
+      "index": "10"
+    },
+    {
+      "topic": "MegTownDirections",
+      "topic_text": "I could use some directions around town.",
+      "emotion": "Neutral 50",
+      "response_text": "In each our own way, we are all lost. Where would you like to be, sweet child?",
+      "index": "11"
+    },
+    {
+      "topic": "MegTownDirectionsBar",
+      "topic_text": "Is there a bar in town?",
+      "emotion": "Neutral 50",
+      "response_text": "I apologize, but I cannot encourage the consumption of alcohol. Alcohol impedes our personal quest for the Grand Division.",
+      "index": "12"
+    },
+    {
+      "topic": "MegTownDirectionsBed",
+      "topic_text": "Where can I rent a bed?",
+      "emotion": "Neutral 50",
+      "response_text": "Up at Moriarty's at the south end of town. Talk to Nova, she'll help you out.",
+      "index": "13"
+    },
+    {
+      "topic": "MegTownDirectionsClinic",
+      "topic_text": "Where's the closest clinic?",
+      "emotion": "Neutral 50",
+      "response_text": "You'll want to see Doc Church next to the Crater. You can't miss it.",
+      "index": "14"
+    },
+    {
+      "topic": "MegTownDirectionsEquipment",
+      "topic_text": "I need some equipment. Where's the nearest general store?",
+      "emotion": "Happy 50",
+      "response_text": "Seek out Moira at Craterside Supply. She's a darling girl.",
+      "index": "15"
+    },
+    {
+      "topic": "MegTownDirectionsGoBack",
+      "topic_text": "Let's talk about something else.",
+      "emotion": "Surprise 50",
+      "response_text": "What else do you require, sweet child?",
+      "index": "16"
+    },
+    {
+      "topic": "MegTownDirectionsWeapons",
+      "topic_text": "Is there a weapons dealer around here?",
+      "emotion": "Neutral 50",
+      "response_text": "It saddens me to think how quickly we resort to violence.",
+      "index": "17"
+    },
+    {
+      "topic": "MegTownEnd",
+      "topic_text": "That's all I needed to know.",
+      "emotion": "Neutral 50",
+      "response_text": "As you wish, child.",
+      "index": "18"
+    },
+    {
+      "topic": "MegTownRumors",
+      "topic_text": "What's the word around town?",
+      "emotion": "Neutral 50",
+      "response_text": "I'm not one to gossip, but I do know a few things. For instance, did you hear that Lucas wants someone to disarm our bomb?",
+      "index": "19"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "I have to go now.",
+      "emotion": "Neutral 50",
+      "response_text": "Walk in the Glow.",
+      "index": "21"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Neutral 50",
+      "response_text": "Welcome. Join us in the Glow, won't you?",
+      "index": "24"
+    },
+    {
+      "topic": "MegatonTalk1",
+      "topic_text": "MegatonTalk",
+      "emotion": "Neutral 50",
+      "response_text": "Yes, darling.",
+      "index": "29"
+    },
+    {
+      "topic": "MegatonTalk2",
+      "topic_text": "MegatonTalk2",
+      "emotion": "Neutral 50",
+      "response_text": "I've been having those visions again. Not while I sleep, dear husband, but waking dreams. I see Atom, finally free! His glory revealed at last!",
+      "index": "31"
+    },
+    {
+      "topic": "MegatonTalk3",
+      "topic_text": "MegatonTalk3",
+      "emotion": "Anger 50",
+      "response_text": "We should stay our course, dearest husband. Atom's power penetrates us all, does it not? Soon, every soul of Megaton will revel in His glory!",
+      "index": "33"
+    }
+  ],
+  "combat": [
+    {
+      "topic": "Attack",
+      "topic_text": "Attack",
+      "emotion": "Neutral 50",
+      "response_text": "By Atom, stop this!",
+      "index": "35"
+    }
+  ]
+}

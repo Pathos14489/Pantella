@@ -1,0 +1,229 @@
+{
+  "name": "Alice Hostetler",
+  "url": "/wiki/Alice_Hostetler",
+  "dialogue_name": "NorthVegasAliceHostetler.txt",
+  "dialogue_url": "/wiki/NorthVegasAliceHostetler.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000F6371",
+  "ref_id": "000F6373",
+  "editor_id": "NorthVegasAliceHostetler",
+  "location": "Hostetler home",
+  "location_url": "/wiki/Hostetler_home",
+  "descriptions": [
+    "Alice Hostetler is a struggling young farmer living in the Mojave Wasteland in 2281.",
+    "Alice is the daughter of Don and Becky Hostetler. She lived in Hostetler home and hated her life as a farmer, due to the fact that the crops that her family grew died from radiation before they could be of any use. For this reason, she ran off with Andy Scabb to North Vegas Square, unknowingly becoming involved in the illegal activities of Scabb's gang, which has made her parents especially concerned for her well-being and in danger of becoming victims of the gang themselves.",
+    "Although Andy Scabb claims to want to help Alice escape the dump, he is actually a criminal who intends to use her father's association to the Crimson Caravan company to rob the business and the Hostetler household, then skip town. They plan to use Alice to carry out the dirty work and then subsequently dispose of her once the money has been acquired.",
+    "Someone to Watch Over Me: Crandon needs someone to visit Mrs. Hostetler because her daughter is getting to know the wrong crowd of people. Mrs. Hostetler wants someone to spy on her daughter, Alice, to see what her new friends are up to.",
+    "Until Someone to Watch Over Me is started, Alice Hostetler is not at her home. One can find a message in Andy Scabb's room in The Gray, that is evidence that proves that siding with criminals is not the right lifestyle for Alice. After one deals with Scabb, Alice will return to Hostetler home attempting to steal the Crimson Caravan earnings. She will confront the Courier, threatening to kill them if they interfere. The note found in Scabb's room can be shown to her to help talk her out of committing a crime.",
+    "Alice has a few unique animations, such as when she flails her arms around or reads the note (if that option is selected)."
+  ],
+  "race": "Human",
+  "gender": "Female",
+  "affiliation": "Andy ScabbHostetler home",
+  "role": "FarmerTroubled youth",
+  "detailed_location": "Hostetler homeAerotech Office Park(potentially)Boulder City(potentially)",
+  "voice_actor": "Zoë Bell",
+  "special": {
+    "Strength": 6,
+    "Perception": 4,
+    "Endurance": 6,
+    "Charisma": 6,
+    "Intelligence": 4,
+    "Agility": 6,
+    "Luck": 3
+  },
+  "mod_special_values": {
+    "Strength": 6,
+    "Perception": 4,
+    "Endurance": 7,
+    "Charisma": 6,
+    "Intelligence": 4,
+    "Agility": 7,
+    "Luck": 3
+  },
+  "level": "5",
+  "tag_skills": [
+    {
+      "Barter:": "38"
+    },
+    {
+      "Guns:": "45(47)"
+    },
+    {
+      "Melee Weap.:": "40"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "115(120)"
+    }
+  ],
+  "karma": "Good",
+  "voice_type": "FemaleAdult06",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Anger 40",
+      "response_text": "Back off! I know how to use this gun, and I'm not afraid to shoot if you try anything!",
+      "index": "1"
+    },
+    {
+      "topic": "VDialogueVegasNorthNorthVegasAliceHostetlerTopic000",
+      "topic_text": "I'm not here to hurt you.",
+      "emotion": "Anger 30",
+      "response_text": "Then what the hell{emphasis}do you want? Don't try anything, I mean it!",
+      "index": "9"
+    },
+    {
+      "topic": "VDialogueVegasNorthNorthVegasAliceHostetlerTopic001",
+      "topic_text": "What's going on here?",
+      "emotion": "Anger 50",
+      "response_text": "It's payback time, that's what! They've got no right to screw me over, and I'm tired of it!",
+      "index": "10"
+    },
+    {
+      "topic": "VDialogueVegasNorthNorthVegasAliceHostetlerTopic002",
+      "topic_text": "<Attack> Time to put you down!",
+      "emotion": "Anger 80",
+      "response_text": "You too? Think I'm just a little girl? I'll show you!",
+      "index": "11"
+    },
+    {
+      "topic": "VDialogueVegasNorthNorthVegasAliceHostetlerTopic003",
+      "topic_text": "I'm here to help you. Andy sent me.",
+      "emotion": "Neutral 50",
+      "response_text": "Dammit, I can take care of this by myself! That bitch is going to pay for all these years of bossing me around.",
+      "index": "12"
+    },
+    {
+      "topic": "VDialogueVegasNorthNorthVegasAliceHostetlerTopic004",
+      "topic_text": "I just want to talk, that's all.",
+      "emotion": "Fear 30",
+      "response_text": "[SUCCEEDED] Okay, but this better not be a trick!",
+      "index": "13"
+    },
+    {
+      "topic": "VDialogueVegasNorthNorthVegasAliceHostetlerTopic011",
+      "topic_text": "Alice, Andy's just using you to get the money.",
+      "emotion": "Surprise 50",
+      "response_text": "Wh-What are you talking about? Andy wants to help me leave this hole... doesn't he?",
+      "index": "15"
+    },
+    {
+      "topic": "VDialogueVegasNorthNorthVegasAliceHostetlerTopic012",
+      "topic_text": "Do you have the money?",
+      "emotion": "Anger 50",
+      "response_text": "She's guarding it, I know she is!",
+      "index": "16"
+    },
+    {
+      "topic": "VDialogueVegasNorthNorthVegasAliceHostetlerTopic015",
+      "topic_text": "No, look at this note I found in his room.",
+      "emotion": "Anger 50",
+      "response_text": "... That- that- that son of a bitch! I'll take the money and I'll kill him too!",
+      "index": "20"
+    },
+    {
+      "topic": "VDialogueVegasNorthNorthVegasAliceHostetlerTopic016",
+      "topic_text": "What do you really want, Alice?",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] I... I don't know what I want. But I hate this place, and I hate these people.",
+      "index": "21"
+    },
+    {
+      "topic": "VDialogueVegasNorthNorthVegasAliceHostetlerTopic017",
+      "topic_text": "They care for you, in their own way.",
+      "emotion": "Sad 50",
+      "response_text": "Do they? Look at my Mother, all she cares for is a patch of bare dirt where nothing green will ever grow to feed us.",
+      "index": "26"
+    },
+    {
+      "topic": "VDialogueVegasNorthNorthVegasAliceHostetlerTopic022",
+      "topic_text": "Okay, go ahead. I'll wait for you.",
+      "emotion": "Anger 50",
+      "response_text": "Yeah, okay... I'll shoot the lock off the door and... and then.... Argh, dammit!",
+      "index": "29"
+    },
+    {
+      "topic": "VDialogueVegasNorthNorthVegasAliceHostetlerTopic047",
+      "topic_text": "I don't care about this. Sort it out yourselves.",
+      "emotion": "Anger 80",
+      "response_text": "Oh, you think I won't do it? I'll show you!",
+      "index": "31"
+    },
+    {
+      "topic": "VDialogueVegasNorthNorthVegasAliceHostetlerTopic054",
+      "topic_text": "Give me your gun, Alice.",
+      "emotion": "Neutral 50",
+      "response_text": "Fine. Take it. But what the hell am I supposed to do now?",
+      "index": "32"
+    },
+    {
+      "topic": "VDialogueVegasNorthNorthVegasAliceHostetlerTopic055",
+      "topic_text": "I should've known you don't have what it takes.",
+      "emotion": "Anger 80",
+      "response_text": "Oh, you think I won't do it? You think I'm not right in wanting back my life!? I'll show you!",
+      "index": "33"
+    },
+    {
+      "topic": "VDialogueVegasNorthNorthVegasAliceHostetlerTopic057",
+      "topic_text": "You should stay with your family - reconcile with them.",
+      "emotion": "Sad 50",
+      "response_text": "Maybe you're right... but what will they think? How can I look them in the face ever again?",
+      "index": "34"
+    },
+    {
+      "topic": "VDialogueVegasNorthNorthVegasAliceHostetlerTopic058",
+      "topic_text": "You should get out of here and never come back.",
+      "emotion": "Sad 80",
+      "response_text": "You're right, there's no place for me here. Just... just tell them I'm sorry, and that they won't have to worry about me, ever again.",
+      "index": "36"
+    },
+    {
+      "topic": "VDialogueVegasNorthNorthVegasAliceHostetlerTopic064",
+      "topic_text": "Only you can answer that.",
+      "emotion": "Surprise 50",
+      "response_text": "[SUCCEEDED]... It's all me, isn't it? The pain, the anger, my joy, all of that's just me.",
+      "index": "37"
+    },
+    {
+      "topic": "VDialogueVegasNorthNorthVegasAliceHostetlerTopic077",
+      "topic_text": "Now there really is no turning back.",
+      "emotion": "Pained 70",
+      "response_text": "Father... what's he going to do to me? I can't stay here, I can't hide from this!",
+      "index": "40"
+    },
+    {
+      "topic": "VDialogueVegasNorthNorthVegasAliceHostetlerTopic078",
+      "topic_text": "That was great! Good job, Alice.",
+      "emotion": "Pained 80",
+      "response_text": "Are you out of your mind? I just... no, no, no!",
+      "index": "41"
+    },
+    {
+      "topic": "VDialogueVegasNorthNorthVegasAliceHostetlerTopic080",
+      "topic_text": "Once I have my share, you can get out of here.",
+      "emotion": "Anger 80",
+      "response_text": "I don't want to get out, do you hear me! I just... no, no, no!",
+      "index": "42"
+    },
+    {
+      "topic": "VDialogueVegasNorthNorthVegasAliceHostetlerTopic081",
+      "topic_text": "Grab the money and run far away.",
+      "emotion": "Anger 80",
+      "response_text": "You think I really care about the money? I just... no, no, no!",
+      "index": "43"
+    }
+  ],
+  "conversation": [],
+  "combat": []
+}

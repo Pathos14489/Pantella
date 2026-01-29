@@ -1,0 +1,92 @@
+{
+  "name": "Susie Mack",
+  "url": "/wiki/Susie_Mack",
+  "dialogue_name": "CG03SusieMack.txt",
+  "dialogue_url": "/wiki/CG03SusieMack.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": true,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "0001CFDD",
+  "ref_id": "00034203",
+  "editor_id": "CG03SusieMack",
+  "location": "Vault 101",
+  "location_url": null,
+  "descriptions": [
+    "Susie Mack is a resident of Vault 101 in 2277.",
+    "Susie is the daughter of Allen and Gloria Mack, and the younger sister of both Stevie and Wally. Susie despises the Tunnel Snakes, and Wally wouldn't dare tease her, as she will give worse than she gets. She has a secret crush on Butch DeLoria. During Future Imperfect she has no respect for the Lone Wanderer, and is seen as an arrogant type, especially when she gets G.O.A.T. results from Mr. Brotch.",
+    "Three years later, she becomes more philosophical, befriending Amata after the Lone Wanderer's escape, and upon their return appears to have matured as she is more friendly with the Wanderer.",
+    "Out of the Vault: If the Lone Wanderer resolves the situation in the rebels' favor, Susie can be encountered alive in the wasteland, during which she will explain that some order has been restored to Vault 101.",
+    "* Only during Out of the Vault.",
+    "PC Susie Mack's G.O.A.T. test results sometimes skip completely and she walks out of the room."
+  ],
+  "race": "Human",
+  "gender": "Female",
+  "affiliation": "Vault 101",
+  "role": "Vault resident",
+  "detailed_location": "Vault 101",
+  "voice_actor": "Jan Johns(Future Imperfect)Karen Carbone(Trouble on the Homefront)",
+  "special": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 5,
+    "Intelligence": 5,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "level": "1",
+  "misc_skills": [
+    {
+      "Hit Points:": "30"
+    },
+    {
+      "Critical Chance:": "5%"
+    },
+    {
+      "Unarmed Dam.:": "0.75"
+    },
+    {
+      "Poison Resist.:": "20%"
+    },
+    {
+      "Rad. Resist.:": "8%"
+    },
+    {
+      "Carry Weight:": "200"
+    }
+  ],
+  "karma": "Good",
+  "voice_type": "FemaleAdult02FemaleAdult04",
+  "geck_race": "CaucasianCaucasianChild (Growing Up Fast)",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 100",
+      "response_text": "Shh!{she's taking the test}Play soundFO3 SusieMack Shh.ogghttps://fallout.fandom.com/wiki/File:FO3_SusieMack_Shh.oggnoicon",
+      "index": "1"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "CG03FreddieSusieConv",
+      "topic_text": "CG03FreddieSusieConv",
+      "emotion": "Neutral 50",
+      "response_text": "Great. Good luck on the G.O.A.T.Play soundFO3 SusieMack GoodLuckOnTheGOAT.ogghttps://fallout.fandom.com/wiki/File:FO3_SusieMack_GoodLuckOnTheGOAT.oggnoicon",
+      "index": "5"
+    },
+    {
+      "topic": "CG03TurnInTestTopic",
+      "topic_text": "CG03TurnInTestTopic",
+      "emotion": "Disgust 25",
+      "response_text": "Here. What's the stupid test say I'm going to be doing for the rest of my life?{Susie is a bit of a ball-breaker}Play soundFO3 SusieMack StupidTestSay.ogghttps://fallout.fandom.com/wiki/File:FO3_SusieMack_StupidTestSay.oggnoicon",
+      "index": "9"
+    }
+  ],
+  "combat": []
+}

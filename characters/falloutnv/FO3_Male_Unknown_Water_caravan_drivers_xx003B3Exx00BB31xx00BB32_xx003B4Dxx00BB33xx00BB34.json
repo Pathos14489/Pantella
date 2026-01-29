@@ -1,0 +1,71 @@
+{
+  "name": "Water caravan drivers",
+  "url": "/wiki/Water_caravan_driver",
+  "dialogue_name": "DLC03WQWaterDriver.txt",
+  "dialogue_url": "/wiki/DLC03WQWaterDriver.txt",
+  "spawned_dead": false,
+  "spawned": true,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "xx003B3Exx00BB31xx00BB32",
+  "ref_id": "xx003B4Dxx00BB33xx00BB34",
+  "editor_id": "DLC03WQ01CaravanDriverDLC03WQWaterDriverADLC03WQWaterDriverB",
+  "location": "Francis Scott Key BridgeRivet City",
+  "location_url": "/wiki/Francis_Scott_Key_Bridge",
+  "descriptions": [
+    "Water caravan drivers are caravaneers for the Water Distribution Network at Rivet City in the Fallout 3 add-on Broken Steel.",
+    "These weary drivers are a few of the wasteland scavengers",
+    "Protecting the Water Way: The Lone Wanderer is tasked with speaking to Officers Davis and Lorin, who are accompanying a water caravan driver and his brahmin at Francis Scott Key Bridge. Upon reaching the site, the driver and the brahmin will immediately die. The driver's appearance is randomly chosen from standard wastelanders.",
+    "^ (Note)   Although these non-player characters are named \"water caravan drivers,\" they are not actually seen leading any of the water caravans that travel around the Capital Wasteland. Apart from the one scripted caravan during Protecting the Water Way, all other water caravans are led by scavengers; however, the water caravan driver and scavenger NPCs are functionally identical in terms of their stats and traits.",
+    "These water caravan drivers appear only in the Fallout 3 add-on Broken Steel."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Water Distribution Network",
+  "role": "Caravaneer",
+  "detailed_location": "OutsideRivet City",
+  "voice_actor": "Jeff BakerGregory Gorton",
+  "special": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 5,
+    "Intelligence": 5,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "level": "1→5",
+  "tag_skills": [
+    {
+      "Science:": "30"
+    },
+    {
+      "Small Guns:": "30"
+    },
+    {
+      "Unarmed:": "28"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "115→135"
+    }
+  ],
+  "karma": "Neutral",
+  "voice_type": "MaleAdult01DefaultMaleAdult01DefaultB",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Happy 50",
+      "response_text": "Sit down. Grab a beer. It's free!{jovial}",
+      "index": "1"
+    }
+  ],
+  "conversation": [],
+  "combat": []
+}

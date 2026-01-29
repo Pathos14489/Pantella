@@ -1,0 +1,386 @@
+{
+  "name": "Simon",
+  "url": "/wiki/Simon_(Fallout:_New_Vegas)",
+  "dialogue_name": "VFSSimon.txt",
+  "dialogue_url": "/wiki/VFSSimon.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "00118374",
+  "ref_id": "001185D4",
+  "editor_id": "VFSSimon",
+  "location": "Freeside",
+  "location_url": "/wiki/Freeside",
+  "descriptions": [
+    "Simon is the door guard and face of the Van Graff family living in Freeside in 2281.",
+    "Simon has been with the Van Graff family for a couple years and is responsible for guarding the door at the Silver Rush. His duties include weapon checks and turning away drunks and addicts while keeping a very professional, authoritarian attitude.",
+    "Xbox 360 If a save is done and afterwards Simon attacks the player, caused by the player attacking a civilian in Freeside, a bug may appear in a reload of previous save where Simon still attacks the player without said civilian attack performed. This causes the player to automatically fail the Birds of a Feather quest. "
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Van Graffs",
+  "role": "Door guard",
+  "detailed_location": "Freeside",
+  "voice_actor": "Avery K. Waddell",
+  "special": {
+    "Strength": 8,
+    "Perception": 7,
+    "Endurance": 8,
+    "Charisma": 2,
+    "Intelligence": 4,
+    "Agility": 7,
+    "Luck": 5
+  },
+  "level": "17",
+  "tag_skills": [
+    {
+      "Energy Weap.:": "95"
+    },
+    {
+      "Unarmed:": "65"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "135"
+    },
+    {
+      "Dam. Threshold:": "15"
+    }
+  ],
+  "karma": "Neutral",
+  "voice_type": "MaleAdult02",
+  "geck_race": "AfricanAmerican",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "Don't talk to me, rookie!",
+      "index": "1"
+    },
+    {
+      "topic": "VFSSimonCallsItADay",
+      "topic_text": "VFSSimonCallsItADay",
+      "emotion": "Neutral 50",
+      "response_text": "It's just about closing time. Let's go see the boss about getting paid.",
+      "index": "13"
+    },
+    {
+      "topic": "VFSSimonSearch",
+      "topic_text": "VFSSimonSearch",
+      "emotion": "Neutral 50",
+      "response_text": "I'm afraid I'm going to have to search you before letting you in. The only weapons allowed on the premises are the ones we're selling.",
+      "index": "15"
+    },
+    {
+      "topic": "VFSSimonSearchDone",
+      "topic_text": "VFSSimonSearchDone",
+      "emotion": "Neutral 50",
+      "response_text": "There, I've stowed all of your weapons. You're clear to enter. When you leave, I'll hand them all back to you.",
+      "index": "16"
+    },
+    {
+      "topic": "VMS29aVFSSimonTopic000",
+      "topic_text": "Okay, search away.",
+      "emotion": "Neutral 50",
+      "response_text": "This should only take a moment.",
+      "index": "17"
+    },
+    {
+      "topic": "VMS29aVFSSimonTopic001",
+      "topic_text": "That's not going to happen.",
+      "emotion": "Neutral 50",
+      "response_text": "Then you're not going to shop here.",
+      "index": "18"
+    },
+    {
+      "topic": "VMS29aVFSVanGraffThug09Topic000",
+      "topic_text": "That's right.",
+      "emotion": "Neutral 50",
+      "response_text": "Well, no time for pleasantries. I've got your gear right here, but let's see if you can follow instructions.",
+      "index": "19"
+    },
+    {
+      "topic": "VMS29aVFSVanGraffThug09Topic001",
+      "topic_text": "How did you know?",
+      "emotion": "Neutral 50",
+      "response_text": "You can always tell a rookie. You look too eager. Give the job a few hours, and the shine'll come right off.",
+      "index": "21"
+    },
+    {
+      "topic": "VMS29aVFSVanGraffThug09Topic002",
+      "topic_text": "Looks like we're stuck with each other.",
+      "emotion": "Neutral 50",
+      "response_text": "I've been paired with worse, I guess. Anyway, let's see if you can follow instructions.",
+      "index": "22"
+    },
+    {
+      "topic": "VMS29aVFSVanGraffThug09Topic003",
+      "topic_text": "Laser.",
+      "emotion": "Neutral 50",
+      "response_text": "Good choice. I prefer laser-based weapons myself, but the boss lady said she wants at least one guard using a plasma rifle.",
+      "index": "23"
+    },
+    {
+      "topic": "VMS29aVFSVanGraffThug09Topic004",
+      "topic_text": "Plasma.",
+      "emotion": "Neutral 50",
+      "response_text": "Nothing wrong with going plasma. Just make sure you hit what you're aiming at.",
+      "index": "34"
+    },
+    {
+      "topic": "VMS29aVFSVanGraffThug09Topic005",
+      "topic_text": "What's the difference?",
+      "emotion": "Neutral 50",
+      "response_text": "Lasers have a high rate of fire, but not a lot of stopping power. Plasma on the other hand is slow as a mule, but with a kick to match.",
+      "index": "35"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "VFSPacerGreetsSimon",
+      "topic_text": "VFSPacerGreetsSimon",
+      "emotion": "Neutral 50",
+      "response_text": "{Tiny bit of distaste here, he doesn't like Pacer}What can I say? Business has been good lately. We can afford the help.",
+      "index": "37"
+    },
+    {
+      "topic": "VFSSimonBomberAftermath",
+      "topic_text": "VFSSimonBomberAftermath",
+      "emotion": "Neutral 50",
+      "response_text": "Now what in the{stressed}hell do you suppose that was about?",
+      "index": "39"
+    },
+    {
+      "topic": "VFSSimonBomberAnnounce",
+      "topic_text": "VFSSimonBomberAnnounce",
+      "emotion": "Neutral 50",
+      "response_text": "Looks like that guy's headed this way. Don't screw it up.",
+      "index": "40"
+    },
+    {
+      "topic": "VFSSimonBomberCleanUp",
+      "topic_text": "VFSSimonBomberCleanUp",
+      "emotion": "Neutral 50",
+      "response_text": "Help me clean this up. No one's going to want to shop here with a corpse out front.",
+      "index": "41"
+    },
+    {
+      "topic": "VFSSimonBomberLetIn",
+      "topic_text": "VFSSimonBomberLetIn",
+      "emotion": "Neutral 50",
+      "response_text": "You're doing that on purpose, aren't you?",
+      "index": "42"
+    },
+    {
+      "topic": "VFSSimonBomberStopHim",
+      "topic_text": "VFSSimonBomberStopHim",
+      "emotion": "Neutral 50",
+      "response_text": "Stop him!",
+      "index": "43"
+    },
+    {
+      "topic": "VFSSimonCallsForBackup",
+      "topic_text": "VFSSimonCallsForBackup",
+      "emotion": "Neutral 50",
+      "response_text": "I could use some help out here!",
+      "index": "44"
+    },
+    {
+      "topic": "VFSSimonDrunkAnnounce",
+      "topic_text": "VFSSimonDrunkComment",
+      "emotion": "Neutral 50",
+      "response_text": "Here comes a winner. I'll let you handle this one.",
+      "index": "45"
+    },
+    {
+      "topic": "VFSSimonDrunkElsewhere",
+      "topic_text": "VFSSimonDrunkElsewhere",
+      "emotion": "Neutral 50",
+      "response_text": "More like he's going to the Wrangler for another drink. You watch.",
+      "index": "46"
+    },
+    {
+      "topic": "VFSSimonDrunkPolicy",
+      "topic_text": "VFSSimonDrunkPolicy",
+      "emotion": "Neutral 50",
+      "response_text": "Good. Stick to the rules.",
+      "index": "47"
+    },
+    {
+      "topic": "VFSSimonDrunkRebuke",
+      "topic_text": "VFSSimonRebuke",
+      "emotion": "Neutral 50",
+      "response_text": "Hoo boy, Gloria's gonna have your ass for letting that wino in. You're not starting the day well, rookie.",
+      "index": "48"
+    },
+    {
+      "topic": "VFSSimonGamblerAnnounce",
+      "topic_text": "VFSSimonGamblerAnnounce",
+      "emotion": "Neutral 50",
+      "response_text": "Heads up. Looks like we've got another customer.",
+      "index": "49"
+    },
+    {
+      "topic": "VFSSimonGamblerClean",
+      "topic_text": "VFSSimonGamblerClean",
+      "emotion": "Neutral 50",
+      "response_text": "He's clean.",
+      "index": "50"
+    },
+    {
+      "topic": "VFSSimonGamblerLetIn",
+      "topic_text": "VFSSimonGamblerLetIn",
+      "emotion": "Neutral 50",
+      "response_text": "You just going to let everyone in without checking them? Bad move, rookie. That's going in my report.",
+      "index": "51"
+    },
+    {
+      "topic": "VFSSimonGamblerLostAnotherOne",
+      "topic_text": "VFSSimonGamblerLostAnotherOne",
+      "emotion": "Neutral 50",
+      "response_text": "You keep losing us business like that, and you can forget about being paid.",
+      "index": "52"
+    },
+    {
+      "topic": "VFSSimonGamblerNoPatDown",
+      "topic_text": "VFSSimonGamblerNoPatDown",
+      "emotion": "Neutral 50",
+      "response_text": "You don't listen too well, do you? We're supposed to pat everyone down. That's going in my report.",
+      "index": "53"
+    },
+    {
+      "topic": "VFSSimonGamblerPeoplePerson",
+      "topic_text": "VFSSimonGamblerPeoplePerson",
+      "emotion": "Neutral 50",
+      "response_text": "Wow, you're a real people person, aren't you?",
+      "index": "54"
+    },
+    {
+      "topic": "VFSSimonLongDay",
+      "topic_text": "VFSSimonLongDay",
+      "emotion": "Neutral 50",
+      "response_text": "Settle in. You've got some hours left before your shift ends.",
+      "index": "55"
+    },
+    {
+      "topic": "VFSSimonManClean",
+      "topic_text": "VFSSimonManClean",
+      "emotion": "Neutral 50",
+      "response_text": "He's clean.",
+      "index": "56"
+    },
+    {
+      "topic": "VFSSimonNormalAnnounce",
+      "topic_text": "VFSSimonNormalAnnounce",
+      "emotion": "Neutral 50",
+      "response_text": "Another one coming. You're on.",
+      "index": "57"
+    },
+    {
+      "topic": "VFSSimonNormalDrivenOff",
+      "topic_text": "VFSSimonNormalDrivenOff",
+      "emotion": "Neutral 50",
+      "response_text": "You know, guarding the door's not{stressed}that complicated. Maybe you'd be better off in another line of work.",
+      "index": "58"
+    },
+    {
+      "topic": "VFSSimonNormalNoSearch",
+      "topic_text": "VFSSimonNormalNoSearch",
+      "emotion": "Neutral 50",
+      "response_text": "It's almost like I never said anything at all.",
+      "index": "59"
+    },
+    {
+      "topic": "VFSSimonNormalSearch",
+      "topic_text": "VFSSimonNormalSearch",
+      "emotion": "Neutral 50",
+      "response_text": "He's clean.",
+      "index": "60"
+    },
+    {
+      "topic": "VFSSimonNormalWentIn",
+      "topic_text": "VFSSimonNormalWentIn",
+      "emotion": "Neutral 50",
+      "response_text": "See? Not so hard is it?",
+      "index": "61"
+    },
+    {
+      "topic": "VFSSimonPacerAnnounce",
+      "topic_text": "VFSSimonPacerAnnounce",
+      "emotion": "Neutral 50",
+      "response_text": "Crap.{stressed}This I do not need today. Keep your head straight, rookie. Things are about to get interesting.",
+      "index": "62"
+    },
+    {
+      "topic": "VFSSimonPacerCleanup",
+      "topic_text": "VFSSimonPacerCleanup",
+      "emotion": "Neutral 50",
+      "response_text": "Come on, help me clean this up.",
+      "index": "63"
+    },
+    {
+      "topic": "VFSSimonPacerDead",
+      "topic_text": "VFSSimonPacerDead",
+      "emotion": "Neutral 50",
+      "response_text": "Oh man, Gloria's going to be pissed when she hears about this. Still, he started it, so we probably won't go to war with the Kings.",
+      "index": "64"
+    },
+    {
+      "topic": "VFSSimonPacerPeaceful",
+      "topic_text": "VFSSimonPacerPeaceful",
+      "emotion": "Neutral 50",
+      "response_text": "Way to keep your head, rookie. There's hope for you yet.",
+      "index": "65"
+    },
+    {
+      "topic": "VFSSimonPlayerAttackedCustomer",
+      "topic_text": "VFSSimonPlayerAttackedCustomer",
+      "emotion": "Neutral 50",
+      "response_text": "What the hell are you doing?",
+      "index": "66"
+    },
+    {
+      "topic": "VFSSimonPlayerLetSomeoneBy",
+      "topic_text": "VFSSimonPlayerLetSomeoneBy",
+      "emotion": "Neutral 50",
+      "response_text": "We're supposed to pat everyone down. Didn't you hear that part of my instructions?",
+      "index": "67"
+    },
+    {
+      "topic": "VFSSimonPlayerRunningOff",
+      "topic_text": "VFSSimonPlayerRunningOff",
+      "emotion": "Neutral 50",
+      "response_text": "What did I tell you about trying to make off with that gear?",
+      "index": "71"
+    },
+    {
+      "topic": "VFSSimonPostBomb",
+      "topic_text": "VFSSimonPostBomb",
+      "emotion": "Neutral 50",
+      "response_text": "Oh shit. Oh shit shit shit.",
+      "index": "72"
+    },
+    {
+      "topic": "VFSSimonTellsYouToLookAround",
+      "topic_text": "VFSSimonTellsYouToLookAround",
+      "emotion": "Neutral 50",
+      "response_text": "Good. Look around and get a feel for where customers and risks can enter and exit the area while I get your gear ready.",
+      "index": "73"
+    },
+    {
+      "topic": "VFSSimonWomanClean",
+      "topic_text": "VFSSimonWomanClean",
+      "emotion": "Neutral 50",
+      "response_text": "She's clean.",
+      "index": "74"
+    }
+  ],
+  "combat": []
+}

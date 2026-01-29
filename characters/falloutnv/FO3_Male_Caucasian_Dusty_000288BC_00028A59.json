@@ -1,0 +1,242 @@
+{
+  "name": "Dusty",
+  "url": "/wiki/Dusty_(Fallout_3)",
+  "dialogue_name": "BigtownSentry.txt",
+  "dialogue_url": "/wiki/BigtownSentry.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000288BC",
+  "ref_id": "00028A59",
+  "editor_id": "BigtownSentry",
+  "location": "Big TownWatchpost",
+  "location_url": "/wiki/Big_Town",
+  "descriptions": [
+    "Dusty is the watchman in Big Town in the year 2277, who can, for the most part, be found sitting on the chair overlooking the bridge - the only way into Big Town.",
+    "Pappy has given Dusty the responsibility of guarding the only entrance to Big Town - the rope bridge at the settlement's north end. He isn't very eager and usually sits dozing on his chair, perhaps one of the reasons why the super mutants seem to just walk in, take their \"food,\" and leave. Dusty is jittery and desperate and lacks the know-how to properly prepare the town's defenses for another attack.",
+    "He is the sole sentry against the endless onslaught of super mutants from the German Town PD and the slavers from Paradise Falls. He often laments at the fact that if the mutants don't kill everyone, the slavers will enslave them. He, like all the other Big Towners, originates from Little Lamplight. He seems shocked by the position that he and the other residents are currently in.",
+    "As Big Town's sentry, Dusty levels with the player character and is by far the toughest citizen of Big Town. However, his combat performance is still mediocre, he is not well equipped and he lacks morale to deal with most threats that might attack the settlement."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Big TownLittle Lamplight(formerly)",
+  "role": "Guard",
+  "detailed_location": "Big Town",
+  "voice_actor": "Jeff Baker",
+  "special": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 5,
+    "Intelligence": 4,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "level": "1→20→30 (Broken Steelonly)",
+  "tag_skills": [
+    {
+      "Barter:": "30→100"
+    },
+    {
+      "Medicine:": "28→100"
+    },
+    {
+      "Melee Weap.:": "32→100"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Critical Chance:": "5%"
+    },
+    {
+      "Unarmed Dam.:": "1.15"
+    },
+    {
+      "Poison Resist.:": "15%"
+    },
+    {
+      "Rad. Resist.:": "6%"
+    },
+    {
+      "Carry Weight:": "220"
+    },
+    {
+      "Damage Res.:": "28%"
+    }
+  ],
+  "karma": "Neutral",
+  "voice_type": "MaleAdult01DefaultDC",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "BigtownSentryGreeting1A",
+      "topic_text": "So, you're under constant threat?",
+      "emotion": "Neutral 50",
+      "response_text": "There was a Super Mutant attack recently and where there's one big ugly, there are ten more just waiting to grab you by the throat.{(Introverted) He speaks like a soldier who's been out in the field too long.}",
+      "index": "1"
+    },
+    {
+      "topic": "BigtownSentryGreeting1B",
+      "topic_text": "Where do the Super Mutants come from?",
+      "emotion": "Neutral 50",
+      "response_text": "Skulk up toward Germantown, near the police station. They always come from that direction.",
+      "index": "3"
+    },
+    {
+      "topic": "BigtownSentryGreeting1C",
+      "topic_text": "Paradise Falls? Where's that?",
+      "emotion": "Neutral 50",
+      "response_text": "Nearby. Slavers move quick and come from all directions. Someone else might know where they nest.",
+      "index": "4"
+    },
+    {
+      "topic": "BigtownSentryGreeting2A",
+      "topic_text": "I want a new opening speech. One that acknowledges me as King.",
+      "emotion": "Neutral 50",
+      "response_text": "Don't think you'll scare anyone here. You could shoot down everyone in town, and I wouldn't flinch.",
+      "index": "5"
+    },
+    {
+      "topic": "BigtownSentryGreeting2B",
+      "topic_text": "You've accepted death? Killing all of you should be easy, then.",
+      "emotion": "Anger 50",
+      "response_text": "We're under attack, again! Everyone get down!{Warning the other residents of the town.}",
+      "index": "9"
+    },
+    {
+      "topic": "BigtownSentryGreeting2C",
+      "topic_text": "Aw, that's no fun. I prefer my victims energetic and in agony.",
+      "emotion": "Neutral 50",
+      "response_text": "Big talk, killer. Why don't you leave, and let me watch out for people less discriminating than yourself.",
+      "index": "10"
+    },
+    {
+      "topic": "BigtownSentryGreetingEND",
+      "topic_text": "I just need somewhere to trade my salvage.",
+      "emotion": "Neutral 50",
+      "response_text": "There isn't anything here that hasn't been destroyed or dragged away. You're better off scavenging the dead out in the wasteland.",
+      "index": "11"
+    },
+    {
+      "topic": "BigtownTownServices",
+      "topic_text": "Do you have any traders in town? Any doctors?",
+      "emotion": "Neutral 50",
+      "response_text": "There's nothing here but the stench of death, and the threat of attack looming over every sunset.{Introverted. Dusty is speaking almost entirely to himself.}",
+      "index": "12"
+    },
+    {
+      "topic": "BigtownTownWhatsWrongThis place looks like a ghost town.",
+      "topic_text": "What are you on the lookout for?",
+      "emotion": "Neutral 50",
+      "response_text": "Two very angry types of movements. Slow, lumbering, powerful movements and jerky, erratic, excitable movements. Both coming for the kill.{Introverted. Dusty is mainly talking to himself.}",
+      "index": "15"
+    },
+    {
+      "topic": "BigtownTownWhereDidYouComeFromWhere did you people come from, anyway?",
+      "topic_text": "How did you people get here?",
+      "emotion": "Neutral 50",
+      "response_text": "Sometimes you'll see small, tired dots on the horizon instead of angry, anxious ones. Those are settlers who come here from Lamplight. Poor fools.{Introverted. He is talking mainly to himself.}",
+      "index": "16"
+    },
+    {
+      "topic": "BigtownTownWhosInCharge",
+      "topic_text": "Who's in charge here?",
+      "emotion": "Neutral 50",
+      "response_text": "Only the winds and dirt-piles of the wasteland.",
+      "index": "17"
+    },
+    {
+      "topic": "BigtownTownWhosWho",
+      "topic_text": "Who lives here?",
+      "emotion": "Neutral 50",
+      "response_text": "Just a bunch of children who had to turn into adults too fast. If only we were all little again...",
+      "index": "20"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Anger 50",
+      "response_text": "Hey! Who are you?{trying to sound tough and intimidating}",
+      "index": "21"
+    },
+    {
+      "topic": "MS01GreetingA1",
+      "topic_text": "I mean you no harm. I'm a simple traveler.",
+      "emotion": "Fear 50",
+      "response_text": "Right. What do you want?{unbelieving and suspicious}",
+      "index": "24"
+    },
+    {
+      "topic": "MS01GreetingA2",
+      "topic_text": "I'm Queen of the Wasteland. What does it matter? You going to let me in or not?",
+      "emotion": "Fear 50",
+      "response_text": "Take it easy. I'm just doing my job. What do you want?",
+      "index": "25"
+    },
+    {
+      "topic": "MS01GreetingA3",
+      "topic_text": "I'm escorting Sticky from Little Lamplight.",
+      "emotion": "Fear 50",
+      "response_text": "Alright. And now that you're done, what are you still doing here?{suspicious}",
+      "index": "27"
+    },
+    {
+      "topic": "MS01GreetingA4",
+      "topic_text": "I was the one who rescued your friend from the Super Mutants.",
+      "emotion": "Surprise 75",
+      "response_text": "That was you? Wow! Well, don't just stand there, come on in!{astonished and happy}",
+      "index": "28"
+    },
+    {
+      "topic": "MS01GreetingB1",
+      "topic_text": "I just want to look around a little. Don't worry about me. I won't hurt you.",
+      "emotion": "Anger 50",
+      "response_text": "Well, you can never be too careful. Be warned it's not safe here. Super Mutants have attacked recently and carried off some of our friends.{trying to sound tough but really is sad about his friends}",
+      "index": "32"
+    },
+    {
+      "topic": "MS01GreetingB2",
+      "topic_text": "Oh, I don't know. I was thinking I'd start a few fires and kill some people.",
+      "emotion": "Anger 50",
+      "response_text": "A funny guy, huh? Well... fine. You may as well come on in.{trying to sound tough but really is sad about his friends}",
+      "index": "34"
+    },
+    {
+      "topic": "MS01GreetingB3",
+      "topic_text": "Do you harass all of your visitors like this?",
+      "emotion": "Anger 50",
+      "response_text": "Well, you can never be too careful! Be warned it's not safe here. Super Mutants attacked recently and carried off some of our friends.{trying to sound tough but really is sad about his friends}",
+      "index": "37"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYEI have to go now.",
+      "topic_text": "All right. I'm going to get going.",
+      "emotion": "Neutral 50",
+      "response_text": "Don't be distracted by the size. Stay calm; shoot straight.{Introverted. He is talking mainly to himself.}",
+      "index": "39"
+    },
+    {
+      "topic": "MS01Sentry",
+      "topic_text": "MS01Sentry",
+      "emotion": "Fear 100",
+      "response_text": "Muties! Muties! The Muties are coming!{calling alarm after spotting \"super mutants\"}",
+      "index": "40"
+    }
+  ],
+  "combat": [
+    {
+      "topic": "Attack",
+      "topic_text": "Attack",
+      "emotion": "Fear 50",
+      "response_text": "I can't stop them all by myself!",
+      "index": "46"
+    }
+  ]
+}

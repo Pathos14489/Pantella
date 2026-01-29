@@ -1,0 +1,99 @@
+{
+  "name": "Alerio¹",
+  "url": "/wiki/Alerio",
+  "dialogue_name": "VVMQ02AlerioStrip.txt",
+  "dialogue_url": "/wiki/VVMQ02AlerioStrip.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "0013A5FE",
+  "ref_id": "0013A5FF",
+  "editor_id": "vVMQ02AlerioStrip",
+  "location": "OutsideThe Tops",
+  "location_url": "/wiki/The_Tops",
+  "descriptions": [
+    "Alerio is a frumentarius of Caesar's Legion in 2281. He watches all activity on the New Vegas Strip and reports the information back to Caesar.",
+    "If Vulpes Inculta dies, he is the person who informs the Courier that Caesar wishes to have an audience with him. Alerio will also provide them with the Mark of Caesar which will provide safe passage to the Fort.",
+    "Render Unto Caesar: If Vulpes Inculta dies before the Courier reaches the Strip, Alerio will invite the Courier to meet Caesar himself.",
+    "PC Playstation 3 Xbox 360 Long after inviting you to meet with Caesar, he may appear, run to the Courier, and initiate dialogue saying only \"What do you need?\" while your only option will be to end the conversation. This can even occur inside private hotel suites. (This can happen if you never met Caesar, or even if you have already killed Caesar).",
+    "Frumentarii: Alerio · Cato Hostilius · Gabban · Karl · Picus · Disguised frumentarius · Ulysses (formerly)\nConsul: M. Licinius Crassus · M. Scribonius Libo Drusus (of the consul)"
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Caesar's Legion",
+  "role": "Informant",
+  "detailed_location": "New Vegas Strip",
+  "voice_actor": "Yuri Lowenthal",
+  "special": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 10,
+    "Intelligence": 5,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "level": "1",
+  "misc_skills": [],
+  "karma": "Neutral",
+  "voice_type": "MaleAdult01Default",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "{Strip}The eyes of the mighty{KAI-zar}Caesar are upon you. He admires your accomplishments, and bestows upon you the exceptional gift of his Mark.",
+      "index": "1"
+    },
+    {
+      "topic": "VFreeformTheFortvVMQ02AlerioStripTopic000",
+      "topic_text": "You said Caesar has an offer for me. What kind of offer?",
+      "emotion": "Neutral 50",
+      "response_text": "{KAI-zar}Caesar chose not to give me that information. I was only told to find you and bring you the message.",
+      "index": "6"
+    },
+    {
+      "topic": "VFreeformTheFortvVMQ02AlerioStripTopic001",
+      "topic_text": "If this is a trap, I'm going to take a lot of you with me.",
+      "emotion": "Anger 5",
+      "response_text": "{offended}The mighty{KAI-zar}Caesar has bestowed upon you his Mark and guaranteed safe-conduct. If he wanted you dead, you would be dead already.",
+      "index": "7"
+    },
+    {
+      "topic": "VFreeformTheFortvVMQ02AlerioStripTopic002",
+      "topic_text": "Tell Caesar I accept his invitation.",
+      "emotion": "Neutral 50",
+      "response_text": "{Strip}Seek{KAI-zar}Caesar by way of Cottonwood Cove, south of Nelson. The Cursor Lucullus will be waiting.",
+      "index": "8"
+    },
+    {
+      "topic": "VFreeformTheFortvVMQ02AlerioStripTopic003",
+      "topic_text": "How did you find me here?",
+      "emotion": "Neutral 50",
+      "response_text": "I am one of{KAI-zar's}Caesar's{froo-men-TAR-ee}Frumentarii, an infiltrator, a spy. You were not difficult to track.",
+      "index": "9"
+    },
+    {
+      "topic": "VFreeformTheFortvVMQ02AlerioStripTopic004",
+      "topic_text": "Why does Caesar want to see me?",
+      "emotion": "Neutral 50",
+      "response_text": "Go to him, and you will understand.",
+      "index": "10"
+    },
+    {
+      "topic": "VFreeformTheFortvVMQ02AlerioStripTopic005",
+      "topic_text": "How do you know about Benny?",
+      "emotion": "Neutral 50",
+      "response_text": "Little escapes the notice of{KAI-zar}Caesar. He has eyes everywhere.",
+      "index": "11"
+    }
+  ],
+  "conversation": [],
+  "combat": []
+}

@@ -1,0 +1,147 @@
+{
+  "name": "Branchtender Cypress",
+  "url": "/wiki/Cypress",
+  "dialogue_name": "OasisBranchtenderCypress.txt",
+  "dialogue_url": "/wiki/OasisBranchtenderCypress.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "0002A279",
+  "ref_id": "0002A2BD",
+  "editor_id": "OasisBranchtenderCypress",
+  "location": "Oasis",
+  "location_url": "/wiki/Oasis",
+  "descriptions": [
+    "Branchtender Cypress is a member of the Treeminders and one of Oasis' armed defenders in Fallout 3.",
+    "Before he arrived in Oasis, Cypress was a wasteland adventurer for many years, where he made use of a missile launcher for at least some time.",
+    "Although Cypress is extremely loyal to Birch's ideals, he does not like that Birch and Leaf Mother Laurel constantly argue about whether to share Oasis' gift with the wasteland, as their arguments make the rest of the Treeminders uncomfortable.",
+    "When the Lone Wanderer arrives in Oasis, Cypress is welcoming towards them, provided that they don't do anything to offend the Treeminders.",
+    "He can be normally found hanging out around the gate to the caves.",
+    "Cypress is the common name for Cupressaceae, a family of trees. All of the human residents in Oasis have horticultural names."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Treeminders",
+  "role": "Guard (Branchtender)",
+  "detailed_location": "Oasis",
+  "voice_actor": "Gregory Gorton",
+  "special": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 4,
+    "Intelligence": 4,
+    "Agility": 6,
+    "Luck": 4
+  },
+  "level": "2→10 (player level x1)",
+  "tag_skills": [
+    {
+      "Melee Weap.:": "35→73"
+    },
+    {
+      "Small Guns:": "35→73"
+    },
+    {
+      "Sneak:": "35→73"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Good",
+  "voice_type": "MaleAdult01DefaultBDC",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Sad 70",
+      "response_text": "I'm afraid you're no longer welcome in His home. Please begone.",
+      "index": "1"
+    },
+    {
+      "topic": "MS10FinTLReward",
+      "topic_text": "Tree Father Birch said you may have a gift for me?",
+      "emotion": "Happy 70",
+      "response_text": "We're very much alike, you and I. We both searched the Wasteland seeking answers, but I found my answer here.",
+      "index": "6"
+    },
+    {
+      "topic": "MS10TLBirchLaurelTopic",
+      "topic_text": "What's your opinion of Tree Father Birch and Leaf Mother Laurel?",
+      "emotion": "Neutral 50",
+      "response_text": "I wish they wouldn't argue so much. It makes everyone uncomfortable.",
+      "index": "9"
+    },
+    {
+      "topic": "MS10TLCavesAny information you could give me on the caves below Oasis would be helpful.",
+      "topic_text": "May I have the key to the caves?",
+      "emotion": "Happy 70",
+      "response_text": "Sure. Here you go. Good luck to you!",
+      "index": "10"
+    },
+    {
+      "topic": "MS10TLDoNow",
+      "topic_text": "What will you do now?",
+      "emotion": "Neutral 50",
+      "response_text": "I'll do what I do best. I'll make sure Oasis never falls even if it means my own death.",
+      "index": "11"
+    },
+    {
+      "topic": "MS10TLJoinTopic",
+      "topic_text": "So, how did you end up here?",
+      "emotion": "Neutral 50",
+      "response_text": "I was an Outsider like yourself... wandering the world aimlessly, wasting my life trying to seek my fortune.",
+      "index": "12"
+    },
+    {
+      "topic": "MS10TLTreeminder",
+      "topic_text": "What did you have to do to become a Treeminder?",
+      "emotion": "Neutral 50",
+      "response_text": "Actually, you already did some of it. I had to do the Ceremony and meet with the Great One.",
+      "index": "14"
+    },
+    {
+      "topic": "MS10TLTreeminderCypress01",
+      "topic_text": "I think you're right. Who knows what would happen to this place?",
+      "emotion": "Fear 70",
+      "response_text": "Exactly! I was out there once like you. I wandered the Wasteland for many years.",
+      "index": "19"
+    },
+    {
+      "topic": "MS10TLTreeminderCypress02",
+      "topic_text": "What if all the Treeminders don't agree with you?",
+      "emotion": "Fear 70",
+      "response_text": "That would worry me. I was out there once like you. I wandered the Wasteland for many years.",
+      "index": "22"
+    },
+    {
+      "topic": "MS10TLTreeminderCypress03",
+      "topic_text": "I don't think Leaf Mother Laurel is going to like hearing you say that!",
+      "emotion": "Disgust 70",
+      "response_text": "Go tell her what you want, my opinion is my own. That's one of the founding ideals of the Treeminders.",
+      "index": "25"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Disgust 70",
+      "response_text": "It's time for you to leave.",
+      "index": "27"
+    },
+    {
+      "topic": "MS10TreemindersCeremonySay",
+      "topic_text": "MS10TreemindersCeremonySay",
+      "emotion": "Neutral 50",
+      "response_text": "Leave our homes and bodies immediately; live no longer in them, but pass over into places where you can harm no one.",
+      "index": "28"
+    }
+  ],
+  "combat": []
+}

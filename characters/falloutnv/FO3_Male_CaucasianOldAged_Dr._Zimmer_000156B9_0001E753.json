@@ -1,0 +1,335 @@
+{
+  "name": "Dr. Zimmer",
+  "url": "/wiki/Zimmer",
+  "dialogue_name": "Zimmer.txt",
+  "dialogue_url": "/wiki/Zimmer.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000156B9",
+  "ref_id": "0001E753",
+  "editor_id": "Zimmer",
+  "location": "Rivet City science lab",
+  "location_url": "/wiki/Rivet_City_science_lab",
+  "descriptions": [
+    "Dr. Zimmer is the director of the Institute's Synth Retention Bureau from the Commonwealth and a temporary resident of Rivet City in the Capital Wasteland in 2277. He appears in Fallout 3.",
+    "Born in 2219,",
+    "Later that same year, Zimmer left the Institute and journeyed south to the Capital Wasteland to conduct a personal search for a missing android. Accompanied by his android bodyguard, Armitage, he made his way to Rivet City in the hopes that their renowned science lab and its staff, especially fellow scientist Dr. Madison Li, could assist in the search for his missing property.",
+    "Upon arrival to the aircraft carrier and making himself known to the lab faculty, Li personally refused him the right to speak with her.",
+    "By the time the Sole Survivor enters the Institute in 2287, Zimmer is stated to be missing in action, with Justin Ayo filling his position at the SRB. According to Ayo, Zimmer's absence is the result of a mission to reclaim \"high profile\" units in an unspecified location.",
+    "The Replicated Man: Zimmer wants the Lone Wanderer to hunt down a rogue android.",
+    "Zimmer appears in Fallout 3 and Fallout Shelter Online. He is mentioned in Fallout 4.",
+    "A voice type exists for Zimmer in the game files of Fallout 4, though it is not used anywhere and no recorded voice lines are found in the files. This indicates that Zimmer was originally intended to reappear in the game but the idea was scrapped early into development."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "The Institute(Synth Retention Bureau)",
+  "role": "Scientist",
+  "detailed_location": "Rivet City science lab",
+  "voice_actor": "Paul Eiding",
+  "special": {
+    "Strength": 3,
+    "Perception": 6,
+    "Endurance": 3,
+    "Charisma": 4,
+    "Intelligence": 8,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "level": "1",
+  "tag_skills": [
+    {
+      "Explosives:": "32"
+    },
+    {
+      "Medicine:": "36"
+    },
+    {
+      "Science:": "36"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "20"
+    }
+  ],
+  "karma": "Evil",
+  "voice_type": "MaleOld01NPCMZimmer",
+  "geck_race": "CaucasianOldAged",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Disgust 50",
+      "response_text": "There's nothing more to discuss. Now, run along.{dismissive and condescending}",
+      "index": "1"
+    },
+    {
+      "topic": "MS03RCHistory1Could I ask you about Rivet City's history?",
+      "topic_text": "Do you know the history behind Rivet City?",
+      "emotion": "Disgust 5",
+      "response_text": "Looks to me like a giant boat ran aground and a bunch of savages moved in. History lesson over.",
+      "index": "11"
+    },
+    {
+      "topic": "MS08AndroidDeadLieZimmer",
+      "topic_text": "The android is dead. See, here's an internal component. <Lie.>",
+      "emotion": "Anger 80",
+      "response_text": "What? Let me see that! This is a Neuro-Servo... Unique to the A3-21... I... And you say you got this from his corpse?",
+      "index": "12"
+    },
+    {
+      "topic": "MS08AndroidFound",
+      "topic_text": "I've found your android. It's Harkness, Rivet City's security chief!",
+      "emotion": "Surprise 100",
+      "response_text": "Harkness, you say? Yes... Yes, that makes sense. He used to work for a special branch of the Commonwealth Police, after all...{caught by surprise}",
+      "index": "15"
+    },
+    {
+      "topic": "MS08AndroidInstructions",
+      "topic_text": "So... Any suggestions for finding this android?",
+      "emotion": "Neutral 50",
+      "response_text": "Like I've said, I suspect he's had facial reconstruction, and possibly even a mind wipe.{unintentionally but definitely condescending}",
+      "index": "19"
+    },
+    {
+      "topic": "MS08AndroidLeadsMedicalMS08AndroidLeads",
+      "topic_text": "His face job was done here, at Rivet City! By someone named Pinkerton!",
+      "emotion": "Happy 50",
+      "response_text": "Excellent! Find this Pinkerton and \"interview\" him. He may very well know the android's whereabouts.{hinting at violent means or breaking and entering}",
+      "index": "27"
+    },
+    {
+      "topic": "MS08AndroidLeadsOther",
+      "topic_text": "The person who did the surgery and reprogramming is here at Rivet City!",
+      "emotion": "Surprise 100",
+      "response_text": "Really? Here? Surely not one of Doctor Li's trained monkeys...{(to himself) surprised}",
+      "index": "34"
+    },
+    {
+      "topic": "MS08AndroidLeadsTechnical",
+      "topic_text": "His memory transfer was done by a tech named Pinkerton. Here at Rivet City!",
+      "emotion": "Surprise 50",
+      "response_text": "Excellent news! We're close... so close.{Shocked and pleased, then becoming patronizing}",
+      "index": "37"
+    },
+    {
+      "topic": "MS08AndroidSpeechThisOne",
+      "topic_text": "Okay, so if others have escaped... why are you coming after this one?",
+      "emotion": "Neutral 50",
+      "response_text": "This particular android... Designation A3-21, is... different. Special. The most advanced synthetic humanoid I've ever developed.",
+      "index": "45"
+    },
+    {
+      "topic": "MS08AndroidStillLooking",
+      "topic_text": "I'm still looking, don't worry. I'll find him.",
+      "emotion": "Disgust 50",
+      "response_text": "Not soon enough! I don't think I can stand another day in this barbaric backwoods...{unintentionally but definitely condescending.}",
+      "index": "48"
+    },
+    {
+      "topic": "MS08AndroidTech",
+      "topic_text": "I need to know more about what I'm dealing with. What is an android exactly?",
+      "emotion": "Neutral 50",
+      "response_text": "Forget everything you know about robots. Those buckets are mere children's toys compared to the real thing.{condescending}",
+      "index": "49"
+    },
+    {
+      "topic": "MS08AndroidZimmerGuilt",
+      "topic_text": "Why would an android feel guilt? Come on, Zimmer, what aren't you telling me?",
+      "emotion": "Neutral 50",
+      "response_text": "By God, you're as annoying as you are clever. Very well. I'll tell you what you want to know, if it helps you locate my property.",
+      "index": "51"
+    },
+    {
+      "topic": "MS08AndroidZimmerProd",
+      "topic_text": "If this android \"wandered\" off, why would he want a new mind and face?",
+      "emotion": "Neutral 50",
+      "response_text": "Maybe.... MAYBE he didn't exactly wander off. Maybe he fled. Escaped captivity, as it were, if he began to misinterpret his \"situation.\"",
+      "index": "55"
+    },
+    {
+      "topic": "MS08Commonwealth",
+      "topic_text": "So tell me about the Commonwealth.",
+      "emotion": "Disgust 50",
+      "response_text": "The Commonwealth itself is nothing but a war-ravaged quagmire of violence and despair. Inside the sealed environment of the Institute, however...{condescending}",
+      "index": "58"
+    },
+    {
+      "topic": "MS08GREETING1",
+      "topic_text": "That depends. What exactly are we talking about, here?",
+      "emotion": "Happy 60",
+      "response_text": "To the point. I like that. Well, as it turns out, I've misplaced some very sensitive \"property.\"{unintentionally but definitely condescending}",
+      "index": "60"
+    },
+    {
+      "topic": "MS08GREETING2",
+      "topic_text": "You have a problem with the way I look?",
+      "emotion": "Surprise 100",
+      "response_text": "How amusing. You've mistaken my metaphor for a derogatory remark. I need a local, you see. Someone with verve.{unintentionally but definitely condescending}",
+      "index": "61"
+    },
+    {
+      "topic": "MS08GREETING3",
+      "topic_text": "I'm listening.",
+      "emotion": "Neutral 50",
+      "response_text": "This could be an opportunity of a lifetime for you! I've misplaced some very sensitive property. And you will help me find it!{unintentionally but definitely condescending}",
+      "index": "63"
+    },
+    {
+      "topic": "MS08GREETINGA1",
+      "topic_text": "Missing property? What kind of property?",
+      "emotion": "Happy 50",
+      "response_text": "Hmmm... how do I put this in a way you'll understand?{unintentionally but definitely condescending}",
+      "index": "64"
+    },
+    {
+      "topic": "MS08GREETINGA3",
+      "topic_text": "Cut to the chase, Zimmer. What's the job?",
+      "emotion": "Surprise 50",
+      "response_text": "You'll be searching for an android! Do you know what an android is? No, I imagine you don't.{unintentionally but definitely condescending}",
+      "index": "68"
+    },
+    {
+      "topic": "MS08GREETINGB1",
+      "topic_text": "Sounds like slavery to me. You sure they don't \"wander off\" on purpose?",
+      "emotion": "Surprise 100",
+      "response_text": "Nonsense! This is a machine we're talking about. Can you enslave a generator, or a water purifier? Of course not. The same principle applies.{unintentionally but definitely condescending}",
+      "index": "75"
+    },
+    {
+      "topic": "MS08GREETINGB2",
+      "topic_text": "Interesting... But what's this got to do with me, exactly?",
+      "emotion": "Anger 10",
+      "response_text": "You're helping me retrieve this android! Aren't you?{unintentionally but definitely condescending}",
+      "index": "79"
+    },
+    {
+      "topic": "MS08GREETINGB3",
+      "topic_text": "Enough techno-babble, Zimmer. Just tell me what you want me to do.",
+      "emotion": "Anger 10",
+      "response_text": "Isn't it quite clear? You are to locate my android!{unintentionally but definitely condescending}",
+      "index": "83"
+    },
+    {
+      "topic": "MS08GREETINGB4Science",
+      "topic_text": "I know what an android is. I dabble in AI programming myself.",
+      "emotion": "Surprise 50",
+      "response_text": "Oh. I hadn't realized anyone in the Wasteland was so knowledgeable. And you certainly don't look much like a scientist...{arrogant}",
+      "index": "86"
+    },
+    {
+      "topic": "MS08GREETINGC1",
+      "topic_text": "I'll be compensated for my services, right?",
+      "emotion": "Neutral 50",
+      "response_text": "Of course. I have at my disposal advanced technology from the Commonwealth.{unintentionally but definitely condescending}",
+      "index": "89"
+    },
+    {
+      "topic": "MS08GREETINGC2",
+      "topic_text": "I'm not sure how it is up north, but around here, we get paid for our work.",
+      "emotion": "Happy 50",
+      "response_text": "I'm sorry, it slipped my mind. I have at my disposal advanced technology from the Commonwealth.{unintentionally but definitely condescending}",
+      "index": "91"
+    },
+    {
+      "topic": "MS08GREETINGC3",
+      "topic_text": "Tell me, Zimmer. Is your wallet as big as your mouth?",
+      "emotion": "Disgust 10",
+      "response_text": "How quaint. Of course you'll be rewarded! I have at my disposal advanced technology from the Commonwealth.{unintentionally but definitely condescending}",
+      "index": "93"
+    },
+    {
+      "topic": "MS08GREETINGNoMS08GREETING4No",
+      "topic_text": "Sorry, I've got better things to do.",
+      "emotion": "Disgust 50",
+      "response_text": "You're as ignorant as all the other rats on this boat. When you realize I have the real cheese, you'll come crawling back. They always do.{arrogant}",
+      "index": "95"
+    },
+    {
+      "topic": "MS08GREETINGYesMS08GREETING4Yes",
+      "topic_text": "Sure. I'll look into finding your android for you.",
+      "emotion": "Happy 50",
+      "response_text": "Excellent. Locate my android, and you won't be disappointed.{arrogant}",
+      "index": "97"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "I have to go now.",
+      "emotion": "Neutral 50",
+      "response_text": "Of course you do.{condescending}",
+      "index": "99"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Neutral 50",
+      "response_text": "Hurry up.{arrogant and anxious}",
+      "index": "101"
+    },
+    {
+      "topic": "MS08ConfrontationA",
+      "topic_text": "MS08ConfrontationA",
+      "emotion": "Surprise 50",
+      "response_text": "Why yes! I'm anxious to retrieve him and return to the Commonwealth where he belongs. He's a very expensive piece of equipment.{arrogant}",
+      "index": "114"
+    },
+    {
+      "topic": "MS08ConfrontationB",
+      "topic_text": "MS08ConfrontationB",
+      "emotion": "Happy 50",
+      "response_text": "There you are! I must say, you had me completely fooled. You're very clever A3-21, but not clever enough. Now, come with me!{\"A-three-dash-twenty-one\"  like an arrogant parent to an ignorant child}",
+      "index": "117"
+    },
+    {
+      "topic": "MS08ZimmerArgueA",
+      "topic_text": "MS08ZimmerArgueA",
+      "emotion": "Disgust 50",
+      "response_text": "But surely one of you glorified test tube jockeys can assist me? For the most advanced scientific center in the Capital Wasteland, I find your...{condescending}",
+      "index": "121"
+    },
+    {
+      "topic": "MS08ZimmerBugScientist1",
+      "topic_text": "MS08ZimmerBugScientist1",
+      "emotion": "Disgust 50",
+      "response_text": "Stop what you're doing. I have something important to discuss with you.{arrogant}",
+      "index": "126"
+    },
+    {
+      "topic": "MS08ZimmerBugScientist3",
+      "topic_text": "MS08ZimmerBugScientist3",
+      "emotion": "Anger 50",
+      "response_text": "He's not just a robot!{arrogant and getting angry}",
+      "index": "132"
+    },
+    {
+      "topic": "MS08ZimmerBugScientist5",
+      "topic_text": "MS08ZimmerBugScientist5",
+      "emotion": "Neutral 50",
+      "response_text": "I came to this leaky boat specifically to solicit your help. I'd hoped you \"Project Purity\" people would be more accommodating.{arrogant}",
+      "index": "134"
+    },
+    {
+      "topic": "RCGoodbye",
+      "topic_text": "RCGoodbye",
+      "emotion": "Neutral 50",
+      "response_text": "Yes, of course. I'll watch my alcohol intake.",
+      "index": "136"
+    },
+    {
+      "topic": "RCPackageEnd",
+      "topic_text": "RCPackageEnd",
+      "emotion": "Disgust 50",
+      "response_text": "No sign of him, Armitage. Let's look elsewhere.",
+      "index": "144"
+    }
+  ],
+  "combat": []
+}

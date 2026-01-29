@@ -1,0 +1,182 @@
+{
+  "name": "O'Hanrahan",
+  "url": "/wiki/O%27Hanrahan",
+  "dialogue_name": "2COHanrahan.txt",
+  "dialogue_url": "/wiki/2COHanrahan.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "00104312",
+  "ref_id": "00104319",
+  "editor_id": "2COHanrahan",
+  "location": "Camp Golf",
+  "location_url": "/wiki/Camp_Golf",
+  "descriptions": [
+    "Private O'Hanrahan is an NCR soldier and part of the Misfits living in Camp Golf in 2281.",
+    "O'Hanrahan's family got by with farming 40 acres of farmland (primarily maize and brahmin). Despite some lean years, the family had a good life, until a string of bad harvests forced the family to make some hard decisions. His father realized he can't feed a family of five without someone starving, so as the oldest child, he was sent to join the Army. After leaving his mother, father, and two sisters, he went through basic training and was shipped out to New Vegas to be part of the Mojave Campaign.",
+    "Despite his great strength and physically imposing stature, O'Hanrahan is essentially a gentle giant. He likes being assigned to the picturesque Camp Golf and gets along fine with the rest of the squad, despite his dislike for violence and hurting people. He attributes this to the influence of his mother, who always reminded him that he needs to mind himself due to his strength and size.",
+    "As far as problems with the Misfits are concerned, he believes that they are tied not so much to the absence of rigorous training, but the fact that they don't talk to each other and are mostly just cross with each other. He believes that a little more basic human niceness would go a long way towards getting the squad in shape.",
+    "He's wary of advancing his proposition to the squad, as he fears they wouldn't take him seriously, on account of his straightforward personality.",
+    "O'Hanrahan was written by area designer Travis Stout, who also wrote the rest of the Misfits."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "NCR ArmyThe Misfits",
+  "role": "Misfit Soldier",
+  "detailed_location": "Camp Golf, near thetents",
+  "voice_actor": "Jesse Burch",
+  "special": {
+    "Strength": 8,
+    "Perception": 5,
+    "Endurance": 6,
+    "Charisma": 5,
+    "Intelligence": 4,
+    "Agility": 4,
+    "Luck": 5
+  },
+  "level": "5",
+  "tag_skills": [
+    {
+      "Explosives:": "46"
+    },
+    {
+      "Guns:": "46"
+    },
+    {
+      "Melee Weap.:": "46"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Neutral",
+  "voice_type": "MaleAdult03",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Happy 50",
+      "response_text": "It sure is nice to see everybody working together like family. Maybe now the baby Jesus won't cry his self to sleep every night.",
+      "index": "1"
+    },
+    {
+      "topic": "MagsShapeUp1",
+      "topic_text": "How's that human niceness working out?",
+      "emotion": "Happy 50",
+      "response_text": "Boy, the squad sure is working together a lot better now! I think we're gonna be A-Okay!",
+      "index": "13"
+    },
+    {
+      "topic": "OHanrahanArmy",
+      "topic_text": "How'd you end up in the Army?",
+      "emotion": "Sad 30",
+      "response_text": "Well, as it turns out, we had a string of bad harvests a few years back. Pa said he couldn't afford to feed but three youngins, or we'd starve.",
+      "index": "16"
+    },
+    {
+      "topic": "OHanrahanCampGolf",
+      "topic_text": "What do you think of Camp Golf?",
+      "emotion": "Happy 35",
+      "response_text": "Oh, it's a fine place. The lake is real{purty}pretty, and we don't get bothered much by them Legion fellers.",
+      "index": "19"
+    },
+    {
+      "topic": "OHanrahanFighting",
+      "topic_text": "Why are you so afraid of fighting?",
+      "emotion": "Fear 40",
+      "response_text": "I ain't scared! I just don't like hurting folks, is all. Ma always used to tell me \"boy, you're the biggest and the strongest, so you mind yourself!\"",
+      "index": "20"
+    },
+    {
+      "topic": "OHanrahanHistory",
+      "topic_text": "Tell me a little more about yourself.",
+      "emotion": "Neutral 50",
+      "response_text": "Well, I was born on a farm out in California. Weren't much - me, Ma and Pa, my two sisters and about 40 acres of corn and brahmin.",
+      "index": "22"
+    },
+    {
+      "topic": "OHanrahanMisfits",
+      "topic_text": "Can you tell me about your squadmates?",
+      "emotion": "Happy 25",
+      "response_text": "They're mostly pretty nice - Poindexter showed me how to make fireworks! Razz kinda scares me sometimes, but I don't mind. He's had a hard life.",
+      "index": "24"
+    },
+    {
+      "topic": "VFreeformCampGolf2COHanrahanTopic003",
+      "topic_text": "Yes, it's true. I don't know why.",
+      "emotion": "Neutral 50",
+      "response_text": "Some folks just ain't cut out for Army life, I guess.",
+      "index": "25"
+    },
+    {
+      "topic": "VFreeformCampGolf2COHanrahanTopic004",
+      "topic_text": "Yes, but it's a classified secret. Don't tell anybody.",
+      "emotion": "Neutral 50",
+      "response_text": "Oh, don't worry! I won't!",
+      "index": "26"
+    },
+    {
+      "topic": "VFreeformCampGolf2COHanrahanTopic005",
+      "topic_text": "Yes. He was sabotaging the Army to force the NCR to go home.",
+      "emotion": "Neutral 50",
+      "response_text": "Well that don't make no sense. We came all this way; why don't he want to stay? It's nice here.",
+      "index": "27"
+    },
+    {
+      "topic": "VFreeformCampGolf2COHanrahanTopic006",
+      "topic_text": "Human niceness?",
+      "emotion": "Sad 25",
+      "response_text": "That's right. Folks just don't talk to other folks, and everybody's always cross with each other.",
+      "index": "28"
+    },
+    {
+      "topic": "VFreeformCampGolf2COHanrahanTopic007",
+      "topic_text": "That's the dumbest thing I've ever heard.",
+      "emotion": "Sad 25",
+      "response_text": "Maybe you just ain't had a healthy dose of human niceness in a while.",
+      "index": "29"
+    },
+    {
+      "topic": "VFreeformCampGolf2COHanrahanTopic008",
+      "topic_text": "What do you mean?",
+      "emotion": "Sad 25",
+      "response_text": "Folks just don't talk to other folks, and everybody's always cross with each other.",
+      "index": "30"
+    },
+    {
+      "topic": "VFreeformCampGolf2COHanrahanTopic009",
+      "topic_text": "So you think I should find ways to convince the Misfits to get along?",
+      "emotion": "Happy 20",
+      "response_text": "That'd be swell. Only, if they knew the idea came from me, they probably wouldn't take you serious no more, so maybe you oughta think about it first.",
+      "index": "31"
+    },
+    {
+      "topic": "VFreeformCampGolf2COHanrahanTopic010",
+      "topic_text": "Okay, I'll try to convince them.",
+      "emotion": "Happy 50",
+      "response_text": "Okay!",
+      "index": "33"
+    },
+    {
+      "topic": "VFreeformCampGolf2COHanrahanTopic011",
+      "topic_text": "On second thought, I'll ask around first.",
+      "emotion": "Happy 20",
+      "response_text": "Whatever you think's best.",
+      "index": "34"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Toodle-oo!",
+      "index": "35"
+    }
+  ],
+  "combat": []
+}

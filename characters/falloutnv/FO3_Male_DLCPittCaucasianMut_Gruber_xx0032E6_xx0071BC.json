@@ -1,0 +1,72 @@
+{
+  "name": "Gruber",
+  "url": "/wiki/Gruber",
+  "dialogue_name": "DLC01ArenaCombatant03.txt",
+  "dialogue_url": "/wiki/DLC01ArenaCombatant03.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "xx0032E6",
+  "ref_id": "xx0071BC",
+  "editor_id": "DLC01ArenaCombatant03a",
+  "location": "The Hole",
+  "location_url": "/wiki/The_Hole_(The_Pitt)",
+  "descriptions": [
+    "Gruber is a released slave and the champion of the Hole by 2277.",
+    "Gruber was once a Pitt slave, but he became one of the few to win his freedom through fighting in the arena.",
+    "When the Lone Wanderer is set up to fight him as their final test in the arena, Faydra predicts that they will not survive.",
+    "At one point in development, Gruber was supposed to be accompanied by two generic raider fighters during his fight.",
+    "Gruber appears only in the Fallout 3 add-on The Pitt."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Pitt slaves(formerly)Pitt raiders",
+  "role": "Arena champion",
+  "detailed_location": "The Hole",
+  "voice_actor": "James Lewis",
+  "special": {
+    "Strength": 6,
+    "Perception": 7,
+    "Endurance": 5,
+    "Charisma": 3,
+    "Intelligence": 3,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "level": "8→11→14→17 (Broken Steel only)",
+  "tag_skills": [
+    {
+      "Energy Weap.:": "64→77→90→100 (Broken Steel only)"
+    },
+    {
+      "Small Guns:": "62→75→88→100 (Broken Steel only)"
+    },
+    {
+      "Sneak:": "62→75→88→100 (Broken Steel only)"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "75→90→105→120 (Broken Steel only)"
+    }
+  ],
+  "karma": "Neutral",
+  "voice_type": "DLC01RaiderMaleGruffVoice",
+  "geck_race": "DLCPittCaucasianMut",
+  "topics": [
+    {
+      "topic": "DLC01ArenaCombatantTaunt",
+      "topic_text": "DLC01ArenaCombatantTaunt",
+      "emotion": "Neutral 50",
+      "response_text": "C'mon! C'mon you bastard!{Taunting.}",
+      "index": "1"
+    }
+  ],
+  "conversation": [],
+  "combat": []
+}

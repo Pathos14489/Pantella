@@ -1,0 +1,104 @@
+{
+  "name": "Paladin Jensen",
+  "url": "/wiki/Jensen_(Broken_Steel)",
+  "dialogue_name": "DLC03EncounterFBBrotherhoodA04.txt",
+  "dialogue_url": "/wiki/DLC03EncounterFBBrotherhoodA04.txt",
+  "spawned_dead": false,
+  "spawned": true,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "xx002E0A",
+  "ref_id": "xx002E0F",
+  "editor_id": "DLC03EncounterFBBrotherhoodA04",
+  "location": "Fort Bannister",
+  "location_url": "/wiki/Fort_Bannister",
+  "descriptions": [
+    "Paladin Jensen is a paladin of the Brotherhood of Steel in 2277.",
+    "A scout for the Brotherhood of Steel, Jensen is apt to make tactical blunders that put both himself and his teammates in jeopardy. He firmly denies that he's a liability. In fact, he models all his actions on his favorite superhero, Captain Cosmos.",
+    "After Broken Steel is loaded, Jensen is held prisoner inside a tent in the Talon Company camp at Fort Bannister. He was sent to scout out Fort Bannister in preparation for a Brotherhood of Steel assault against Talon Company in response to their attacks on Aqua Pura caravans but was found and captured.",
+    "Paladin Jensen appears only in the Fallout 3 add-on Broken Steel.",
+    "PC Jensen and his squadmates may continue firing at a dead body, and they won't stop even if one disposes/hides the body. "
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Brotherhood of Steel",
+  "role": "ScoutCaptive of Talon Company",
+  "detailed_location": "Fort Bannister",
+  "voice_actor": "Jeff Baker",
+  "special": {
+    "Strength": 5,
+    "Perception": 7,
+    "Endurance": 6,
+    "Charisma": 4,
+    "Intelligence": 3,
+    "Agility": 6,
+    "Luck": 4
+  },
+  "mod_special_values": {
+    "Strength": 7,
+    "Perception": 7,
+    "Endurance": 6,
+    "Charisma": 4,
+    "Intelligence": 3,
+    "Agility": 4,
+    "Luck": 4
+  },
+  "level": "11",
+  "tag_skills": [
+    {
+      "Big Guns:": "74"
+    },
+    {
+      "Energy Weap.:": "76"
+    },
+    {
+      "Small Guns:": "74(70)"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "125"
+    },
+    {
+      "Damage Res.:": "20%"
+    }
+  ],
+  "voice_type": "MaleAdult01DefaultDC",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "DLC03EncounterFBPrisonerA1",
+      "topic_text": "Okay, you're free. Now what?",
+      "emotion": "Happy 100",
+      "response_text": "Now I'm going to go kick some Talon Company ass!{with exaggerated bravado}",
+      "index": "1"
+    },
+    {
+      "topic": "DLC03EncounterFBPrisonerA2",
+      "topic_text": "What are you doing here?",
+      "emotion": "Anger 100",
+      "response_text": "The Brotherhood is getting ready for a little payback. We're tired of Talon Company ambushing our water caravans.{fiercly}",
+      "index": "2"
+    },
+    {
+      "topic": "DLC03EncounterFBPrisonerA3",
+      "topic_text": "I don't think so.",
+      "emotion": "Anger 100",
+      "response_text": "Fine! I'll just have to escape on my own. Don't worry, it won't take me long.",
+      "index": "6"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Disgust 100",
+      "response_text": "Don't you realize by now, you'll get nothing from me, you damn dirty merc!{sternly, to someone who's torturing him for information}",
+      "index": "7"
+    }
+  ],
+  "conversation": [],
+  "combat": []
+}

@@ -1,0 +1,635 @@
+{
+  "name": "Doctor 8",
+  "url": "/wiki/8",
+  "dialogue_name": "NVDLC03Doctor8.txt",
+  "dialogue_url": "/wiki/NVDLC03Doctor8.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "xx006874",
+  "ref_id": "xx003D43",
+  "editor_id": "NVDLC03Doctor8LVL",
+  "location": "Big MT",
+  "location_url": "/wiki/Big_MT",
+  "descriptions": [
+    "Doctor 8 is a pre-War acoustician operating at the Big MT in 2281.",
+    "Doctor 8 is a pre-War doctor who became a think tank to continue his work at the Big MT. He has lost the ability to talk due to damage sustained to his voice module during an encounter with another visitor, Elijah. Instead, he transmits RobCo sound waves, which appears in subtitles as patterned RobCo terminal symbols. However, after passing a 75 Science check or a 7 Perception check, the Courier seems to understand his language, although this does not alter the subtitled text.",
+    "If the player character has shown 8 the fully upgraded sonic emitter, and if they don't have a 100 in Science or 85 in Medicine to convince Doctor Klein, 8 will side with the player character in convincing Klein to back down.",
+    "Doctor 8 appears only in the Fallout: New Vegas add-on Old World Blues.",
+    "Chris Avellone wrote Doctor 8, in addition to the other members of the Think Tank."
+  ],
+  "race": "Think tank",
+  "gender": "Male",
+  "affiliation": "Think Tank",
+  "role": "Acoustician",
+  "detailed_location": "The Think Tank",
+  "special": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 5,
+    "Intelligence": 5,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "level": "6",
+  "misc_skills": [
+    {
+      "Hit Points:": "125"
+    },
+    {
+      "Critical Chance:": "5%"
+    },
+    {
+      "Melee Dam.:": "5"
+    },
+    {
+      "Unarmed Dam.:": "3.5"
+    },
+    {
+      "Poison Resist.:": "50%"
+    },
+    {
+      "Radiation Res.:": "8%"
+    }
+  ],
+  "karma": "Neutral",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Surprise 50",
+      "response_text": "@@[#-!!!!-#]@@!{AUDIO: Dr. 8 detects incoming transmission!}",
+      "index": "1"
+    },
+    {
+      "topic": "NVDLC03Dialogue8NVDLC03Doctor8LVLTopic000",
+      "topic_text": "Uh... what was that?",
+      "emotion": "Anger 50",
+      "response_text": "@@[=$+<_*]@@? = @@[=$+<_*]@@? @@[<*$(^=)#]@@!{AUDIO: 8 is repeating his question, angrily. \"I said, what are you doing here? Why are you talking to me?\"}",
+      "index": "4"
+    },
+    {
+      "topic": "NVDLC03Dialogue8NVDLC03Doctor8LVLTopic002",
+      "topic_text": "I have no idea what you're saying right now.",
+      "emotion": "Disgust 50",
+      "response_text": "@@[$$]@@{AUDIO: \"Like it matters.\"}",
+      "index": "5"
+    },
+    {
+      "topic": "NVDLC03Dialogue8NVDLC03Doctor8LVLTopic003",
+      "topic_text": "Did something happen with your voice module?",
+      "emotion": "Pained 50",
+      "response_text": "@@[$((*&^#%]@@. @@[*.......]@@... @@[$((*&^#%]@@.{AUDIO: \"Sort of. It's hard to explain, but yes, the voice module is broken.\"}",
+      "index": "6"
+    },
+    {
+      "topic": "NVDLC03Dialogue8NVDLC03Doctor8LVLTopic005",
+      "topic_text": "It's me again. I wanted to ask some questions.",
+      "emotion": "Disgust 50",
+      "response_text": "@@[=$+<_*]@@? @@[$((*&^#%]@@. @@[$$]@@.{AUDIO: \"What? Questions? Sigh. Very well.\"}",
+      "index": "7"
+    },
+    {
+      "topic": "NVDLC03Dialogue8NVDLC03Doctor8LVLTopic008",
+      "topic_text": "Who are you?",
+      "emotion": "Neutral 50",
+      "response_text": "@@[=$+<_*]@@? @@[$((*#8#%]@@. @@[$((*&^#%]@@.{AUDIO: \"Who am I? I am Dr. 8, audio engineer at this facility.\"}",
+      "index": "9"
+    },
+    {
+      "topic": "NVDLC03Dialogue8NVDLC03Doctor8LVLTopic009",
+      "topic_text": "Do you know anything about Dr. Mobius or the Forbidden Zone?",
+      "emotion": "Fear 50",
+      "response_text": "@@[#-!!!!-#]@@! @@[#-????-#]@@! @@[#-!!!!-#]@@!{AUDIO: \"Dr. Mobius! Where? Is he here? He'll destroy us all!\"}",
+      "index": "10"
+    },
+    {
+      "topic": "NVDLC03Dialogue8NVDLC03Doctor8LVLTopic013",
+      "topic_text": "You're emitting characters in patterns of 8, bracketed, with tone adjustment at the end.",
+      "emotion": "Surprise 50",
+      "response_text": "[SUCCEEDED] @@[#-????-#]@@! @@[*.......]@@... @@[$((*&^#%]@@.{AUDIO: Why, yes, that's correct. Well done.}",
+      "index": "11"
+    },
+    {
+      "topic": "NVDLC03Dialogue8NVDLC03Doctor8LVLTopic014",
+      "topic_text": "Wait, after listening a bit - that's RobCo termlink protocol you're broadcasting, right?",
+      "emotion": "Surprise 50",
+      "response_text": "[SUCCEEDED] @@[#-????-#]@@! @@[*.......]@@... @@[$((*&^#%]@@.{AUDIO: \"Why, yes, that's correct. Well done.\"}",
+      "index": "13"
+    },
+    {
+      "topic": "NVDLC03Dialogue8NVDLC03Doctor8LVLTopic015",
+      "topic_text": "Can you tell me about these technologies Klein wants?",
+      "emotion": "Fear 50",
+      "response_text": "@@[$((*&^#%]@@. @@[*.......]@@... @@[#-!!!!-#]@@!{AUDIO: \"These technologies are extremely dangerous... I think. But they are all that will protect us!\"}",
+      "index": "15"
+    },
+    {
+      "topic": "NVDLC03Dialogue8NVDLC03Doctor8LVLTopic016",
+      "topic_text": "Tell me about the Big Empty.",
+      "emotion": "Anger 50",
+      "response_text": "@@[=$+<_*]@@? @@[<*$(^=)#]@@!{AUDIO: \"Big Empty? I don't know of any such place!\"}",
+      "index": "16"
+    },
+    {
+      "topic": "NVDLC03Dialogue8NVDLC03Doctor8LVLTopic017",
+      "topic_text": "Tell me about the Big Empty... uh, Big Mountain, that is.",
+      "emotion": "Sad 50",
+      "response_text": "@@[$((*&^#%]@@. @@[*.......]@@... @@[$((*&^#%]@@.{AUDIO: \"Well, it's the nexus of all our research. Our home, you might say.\"}",
+      "index": "17"
+    },
+    {
+      "topic": "NVDLC03Dialogue8NVDLC03Doctor8LVLTopic018",
+      "topic_text": "Your voice module got damaged, I heard. In an attack.",
+      "emotion": "Pained 50",
+      "response_text": "@@[$((*&^#%]@@. @@[*.......]@@... @@[$((*&^#%]@@.{AUDIO: \"Sort of. It's hard to explain, but yes, the voice module is broken.\"}",
+      "index": "18"
+    },
+    {
+      "topic": "NVDLC03Dialogue8NVDLC03Doctor8LVLTopic019",
+      "topic_text": "All right, all right... just calm down. Didn't mean to alarm you.",
+      "emotion": "Sad 50",
+      "response_text": "@@[$((*&^#%]@@. @@[*.......]@@... @@[$((*&^#%]@@.{AUDIO: \"I apologize for my emotional display. But it is a serious matter what you have brought up.\"}",
+      "index": "19"
+    },
+    {
+      "topic": "NVDLC03Dialogue8NVDLC03Doctor8LVLTopic022",
+      "topic_text": "You sound a little down.",
+      "emotion": "Sad 50",
+      "response_text": "@@[$((*&^#%]@@. @@[*.......]@@...{AUDIO: \"It's seen better days, better times... long ago.\"}",
+      "index": "20"
+    },
+    {
+      "topic": "NVDLC03Dialogue8NVDLC03Doctor8LVLTopic025",
+      "topic_text": "No need to get indignant, was just asking a question.",
+      "emotion": "Anger 50",
+      "response_text": "@@[<*$(^=)#]@@!{AUDIO: \"You need to learn manners.\"}",
+      "index": "21"
+    },
+    {
+      "topic": "NVDLC03Dialogue8NVDLC03Doctor8LVLTopic028",
+      "topic_text": "You sound agitated. Or you're percolating. Or something.",
+      "emotion": "Fear 50",
+      "response_text": "@@[#-????-#]@@! @@[#-!!!!-#]@@!{AUDIO: \"Don't be a fool! You must retrieve them!\"}",
+      "index": "22"
+    },
+    {
+      "topic": "NVDLC03Dialogue8NVDLC03Doctor8LVLTopic032",
+      "topic_text": "Sounds important. I think.",
+      "emotion": "Neutral 50",
+      "response_text": "@@[$((*&^#%]@@. @@[$((*&^#%]@@.{AUDIO: \"I have a very important role here doing stuff.\"}",
+      "index": "23"
+    },
+    {
+      "topic": "NVDLC03Dialogue8NVDLC03Doctor8LVLTopic034",
+      "topic_text": "I have no idea what you just said. Moreso than usual.",
+      "emotion": "Disgust 50",
+      "response_text": "@@[*.......]@@... @@[$((*&^#%]@@.{AUDIO: \"Oh, I won't even bother remembering this.\"}",
+      "index": "24"
+    },
+    {
+      "topic": "NVDLC03Dialogue8NVDLC03Doctor8LVLTopic040",
+      "topic_text": "I'm just full of surprises.",
+      "emotion": "Happy 50",
+      "response_text": "@@[$((*&^#%]@@.{AUDIO: \"I am quite impressed.\"}",
+      "index": "25"
+    },
+    {
+      "topic": "NVDLC03Dialogue8NVDLC03Doctor8LVLTopic043",
+      "topic_text": "Well, I just heard the rhythm in the sequence is all.",
+      "emotion": "Happy 50",
+      "response_text": "@@[$((*&^#%]@@. @@[$((*&^#%]@@.{AUDIO: \"I am quite impressed.\"}",
+      "index": "26"
+    },
+    {
+      "topic": "NVDLC03Dialogue8NVDLC03Doctor8LVLTopic046",
+      "topic_text": "Trust me, I'll get the technologies, all right?",
+      "emotion": "Fear 50",
+      "response_text": "@@[*.......]@@... @@[#-!!!!-#]@@!{AUDIO: \"You need to hurry!\"}",
+      "index": "27"
+    },
+    {
+      "topic": "NVDLC03Dialogue8NVDLC03Doctor8LVLTopic047",
+      "topic_text": "No, haven't dealt with Mobius yet.",
+      "emotion": "Fear 50",
+      "response_text": "@@[*.......]@@... @@[#-!!!!-#]@@!{AUDIO: \"You need to hurry!\"}",
+      "index": "28"
+    },
+    {
+      "topic": "NVDLC03Dialogue8NVDLC03Doctor8LVLTopic048",
+      "topic_text": "I'll talk to Klein in a second, quit pressuring me.",
+      "emotion": "Fear 50",
+      "response_text": "@@[*.......]@@... @@[#-!!!!-#]@@!{AUDIO: \"You need to hurry!\"}",
+      "index": "29"
+    },
+    {
+      "topic": "NVDLC03Dialogue8NVDLC03Doctor8LVLTopic049",
+      "topic_text": "You're welcome, 8. It was my pleasure.",
+      "emotion": "Happy 50",
+      "response_text": "@@[*.......]@@... @@[#-!!!!-#]@@!",
+      "index": "30"
+    },
+    {
+      "topic": "NVDLC03Dialogue8NVDLC03Doctor8LVLTopic051",
+      "topic_text": "Heh-heh, nice pun on the header file ref.",
+      "emotion": "Neutral 50",
+      "response_text": "@@[#-@$$@-#]@@. @@[*.......]@@... @@[$((*&^#%]@@?",
+      "index": "31"
+    },
+    {
+      "topic": "NVDLC03Dialogue8NVDLC03Doctor8LVLTopic056",
+      "topic_text": "Your damaged voice module... can you tell me about the attack?",
+      "emotion": "Pained 50",
+      "response_text": "@@[$((*&^#%]@@. @@[*.......]@@... @@[$((*&^#%]@@.{AUDIO: \"Sort of. It's hard to explain, but yes, the voice module is broken.\"}",
+      "index": "32"
+    },
+    {
+      "topic": "NVDLC03Dialogue8NVDLC03Doctor8LVLTopic059",
+      "topic_text": "I agree. If someone would take the time, you're more than just sound effects in a tank.",
+      "emotion": "Disgust 50",
+      "response_text": "@@[=$+<_*]@@? @@[$((*&^#%]@@. @@[$$]@@.{AUDIO: \"What? Questions? Sigh. Very well.\"}",
+      "index": "33"
+    },
+    {
+      "topic": "NVDLC03Dialogue8NVDLC03Doctor8LVLTopic061",
+      "topic_text": "How did you fire up the Sonic Emitter when I arrived again?",
+      "emotion": "Sad 50",
+      "response_text": "@@[*.......]@@... @@[*.......]@@..? @@[*......*]@@.{AUDIO: \"Um... a little embarrassed about this, but yes, I creamed hard into your gun.\"}",
+      "index": "34"
+    },
+    {
+      "topic": "NVDLC03Dialogue8NVDLC03Doctor8LVLTopic062",
+      "topic_text": "Well, there had to be some other way to fire it up. Can we at least talk it over next time?",
+      "emotion": "Sad 50",
+      "response_text": "@@[*.......]@@. @@[.......*]@@.{AUDIO: \"Yes... ahem... sorry about that.\"}",
+      "index": "35"
+    },
+    {
+      "topic": "NVDLC03Dialogue8NVDLC03Doctor8LVLTopic064",
+      "topic_text": "I usually just take a fusion cell and oscillate its charge, vibrates for like, an hour.",
+      "emotion": "Happy 50",
+      "response_text": "{Female}@@[=$+<_*]@@? @@[$((((..%]@@. @@[$$]@@!{AUDIO: \"That's not a bad idea! Thanks!\"}",
+      "index": "36"
+    },
+    {
+      "topic": "NVDLC03Dialogue8NVDLC03Doctor8LVLTopic065",
+      "topic_text": "Usually, I can find some Cram lying around. Put some duct tape around the lid, good to go.",
+      "emotion": "Happy 50",
+      "response_text": "@@[=$+<_*]@@? @@[$((((..%]@@. @@[$$]@@!{AUDIO: \"That's not a bad idea! Thanks!\"}",
+      "index": "38"
+    },
+    {
+      "topic": "NVDLC03Dialogue8NVDLC03Doctor8LVLTopic067",
+      "topic_text": "If that's RobCo termlink protocol, doesn't that mean it can be hacked?",
+      "emotion": "Surprise 50",
+      "response_text": "[SUCCEEDED] @@[#-????-#]@@! @@[*.......]@@... @@[$((*&^#%]@@.{AUDIO: \"Why, yes, that's correct. Well done.\"}",
+      "index": "40"
+    },
+    {
+      "topic": "NVDLC03Dialogue8NVDLC03Doctor8LVLTopic068",
+      "topic_text": "If that's termlink code, don't worry, I'm not going to take advantage of your exposed code.",
+      "emotion": "Neutral 50",
+      "response_text": "@@[$((*&^#%]@@. @@[*.......]@@... @@[$((*&^#%]@@.",
+      "index": "42"
+    },
+    {
+      "topic": "NVDLC03Dialogue8NVDLC03Doctor8LVLTopic069",
+      "topic_text": "It'll only take a second to violate your rights and make your voice mine.",
+      "emotion": "Fear 50",
+      "response_text": "@@[#-!!!!-#]@@! @@[#-????-#]@@! @@[#-!!!!-#]@@!",
+      "index": "45"
+    },
+    {
+      "topic": "NVDLC03Dialogue8NVDLC03Doctor8LVLTopic070",
+      "topic_text": "Not a problem. I know what it's like to be experimented on.",
+      "emotion": "Happy 50",
+      "response_text": "@@[*.......]@@... @@[#-!!!!-#]@@!",
+      "index": "48"
+    },
+    {
+      "topic": "NVDLC03Dialogue8NVDLC03Doctor8LVLTopic073",
+      "topic_text": "All right. Let's see what you have. I'll take these Energy Cells...",
+      "emotion": "Neutral 50",
+      "response_text": "@@[##]@@",
+      "index": "49"
+    },
+    {
+      "topic": "NVDLC03Dialogue8NVDLC03Doctor8LVLTopic074",
+      "topic_text": "And some Microfusion Cells...",
+      "emotion": "Neutral 50",
+      "response_text": "@@[##]@@",
+      "index": "50"
+    },
+    {
+      "topic": "NVDLC03Dialogue8NVDLC03Doctor8LVLTopic075",
+      "topic_text": "Now, unlock your room, I want what's in there.",
+      "emotion": "Neutral 50",
+      "response_text": "@@[........]@@... @@[##]@@",
+      "index": "51"
+    },
+    {
+      "topic": "NVDLC03Dialogue8NVDLC03Doctor8LVLTopic076",
+      "topic_text": "And lastly, if I ever need you to blindly agree with me, you will. Understood?",
+      "emotion": "Neutral 50",
+      "response_text": "@@[=$+<_*]@@?",
+      "index": "52"
+    },
+    {
+      "topic": "NVDLC03Dialogue8NVDLC03Doctor8LVLTopic077",
+      "topic_text": "I know it won't work on attack protocols. Still, I may need someone on my side in a debate.",
+      "emotion": "Neutral 50",
+      "response_text": "@@[*.......]@@... @@[$((*&^#%]@@.",
+      "index": "53"
+    },
+    {
+      "topic": "NVDLC03Dialogue8NVDLC03Doctor8LVLTopic078",
+      "topic_text": "You don't really have a choice. And thanks for the gear.",
+      "emotion": "Neutral 50",
+      "response_text": "@@[##]@@",
+      "index": "54"
+    },
+    {
+      "topic": "NVDLC03Dialogue8NVDLC03Doctor8LVLTopic079",
+      "topic_text": "Calm down. I don't plan on hacking your voice module this time.",
+      "emotion": "Fear 50",
+      "response_text": "@@[*.......]@@... @@[#-!!!!-#]@@!{AUDIO: \"You need to hurry!\"}",
+      "index": "55"
+    },
+    {
+      "topic": "NVDLC03Dialogue8NVDLC03Doctor8LVLTopic083",
+      "topic_text": "So one of the visitors didn't damage it - he reprogrammed it.",
+      "emotion": "Happy 50",
+      "response_text": "@@[*.......]@@... @@[#-!!!!-#]@@!",
+      "index": "56"
+    },
+    {
+      "topic": "NVDLC03Dialogue8NVDLC03Doctor8LVLTopic086",
+      "topic_text": "I know what it means to be attacked without warning, trust me, 8.",
+      "emotion": "Surprise 50",
+      "response_text": "[SUCCEEDED] @@[#-????-#]@@! @@[*.......]@@... @@[$((*&^#%]@@.{AUDIO: \"Why, yes, that's correct. Well done.\"}",
+      "index": "57"
+    },
+    {
+      "topic": "NVDLC03Dialogue8NVDLC03Doctor8LVLTopic087",
+      "topic_text": "Now that we know each other better, can you tell me about the Sonic Emitter?",
+      "emotion": "Neutral 50",
+      "response_text": "@@[$((*&^#%]@@. @@[*.......]@@... @@[$((*&^#%]@@.",
+      "index": "59"
+    },
+    {
+      "topic": "NVDLC03Dialogue8NVDLC03Doctor8LVLTopic088",
+      "topic_text": "Really? Huh.",
+      "emotion": "Neutral 50",
+      "response_text": "@@[$((*&^#%]@@. @@[$((*&^#%]@@.",
+      "index": "62"
+    },
+    {
+      "topic": "NVDLC03Dialogue8NVDLC03Doctor8LVLTopic095",
+      "topic_text": "Higgs' Village? Can you point it out on my Pip-Boy?",
+      "emotion": "Neutral 50",
+      "response_text": "@@[$((*&^#%]@@.",
+      "index": "65"
+    },
+    {
+      "topic": "NVDLC03Dialogue8NVDLC03Doctor8LVLTopic096",
+      "topic_text": "No, I've been there. Higgs Village, right? Your house is there?",
+      "emotion": "Neutral 50",
+      "response_text": "@@[$((*&^#%]@@. @@[*.......]@@... @@[$((*&^#%]@@.",
+      "index": "66"
+    },
+    {
+      "topic": "NVDLC03Dialogue8NVDLC03Doctor8LVLTopic101",
+      "topic_text": "So there's an emitter code in your house in Higgs?",
+      "emotion": "Neutral 50",
+      "response_text": "@@[$((*&^#%]@@.",
+      "index": "67"
+    },
+    {
+      "topic": "NVDLC03Dialogue8NVDLC03Doctor8LVLTopic102",
+      "topic_text": "Um... got anything to help me \"pass\" the \"time?\"",
+      "emotion": "Neutral 50",
+      "response_text": "@@[=$+<_*]@@?{AUDIO: \"What are you talking about?\"}",
+      "index": "68"
+    },
+    {
+      "topic": "NVDLC03Dialogue8NVDLC03Doctor8LVLTopic103",
+      "topic_text": "Oh, two codes. One for the jukebox, and one for the opera. Nice. I'll keep an eye out.",
+      "emotion": "Neutral 50",
+      "response_text": "@@[()]@@",
+      "index": "69"
+    },
+    {
+      "topic": "NVDLC03Dialogue8NVDLC03Doctor8LVLTopic109",
+      "topic_text": "I got the Emitter fully upgraded.",
+      "emotion": "Neutral 50",
+      "response_text": "@@[()]@@",
+      "index": "70"
+    },
+    {
+      "topic": "NVDLC03Dialogue8NVDLC03Doctor8LVLTopic110",
+      "topic_text": "I'm happy, too. Can't let this thing gather dust.",
+      "emotion": "Neutral 50",
+      "response_text": "@@[)**(]@@",
+      "index": "72"
+    },
+    {
+      "topic": "NVDLC03Dialogue8NVDLC03Doctor8LVLTopic113",
+      "topic_text": "Are you okay? You look... really happy.",
+      "emotion": "Neutral 50",
+      "response_text": "@@[)*-*-*-*(]@@",
+      "index": "73"
+    },
+    {
+      "topic": "NVDLC03Dialogue8NVDLC03Doctor8LVLTopic116",
+      "topic_text": "You should be proud. It's a nice device.",
+      "emotion": "Neutral 50",
+      "response_text": "@@[#-....-#]@@... @@[#-????-#]@@! @@[#-!!!!-#]@@.",
+      "index": "75"
+    },
+    {
+      "topic": "NVDLC03Dialogue8NVDLC03Doctor8LVLTopic121",
+      "topic_text": "I mean, literally, got anything to help pass the time?",
+      "emotion": "Neutral 50",
+      "response_text": "@@[*.......]@@...",
+      "index": "77"
+    },
+    {
+      "topic": "NVDLC03Dialogue8NVDLC03Doctor8LVLTopic122",
+      "topic_text": "Got anything for me? Let's see.",
+      "emotion": "Neutral 50",
+      "response_text": "@@[*.......]@@... @@[$((*&^#%]@@.",
+      "index": "80"
+    },
+    {
+      "topic": "NVDLC03Dialogue8NVDLC03Doctor8LVLTopic123",
+      "topic_text": "Good to see you, too, 8. Any new discoveries today?",
+      "emotion": "Neutral 50",
+      "response_text": "@@[*.......]@@... @@[$((*&^#%]@@.",
+      "index": "81"
+    },
+    {
+      "topic": "NVDLC03DialogueKleinNVDLC03DoctorBorousLVLTopic003",
+      "topic_text": "How much surgery did you do on me? I feel like a badly-put-together jigsaw puzzle.",
+      "emotion": "Neutral 50",
+      "response_text": "@@[*.......]@@... @@[$((*&^#%]@@.{AUDIO: Dr. 8 is a little proud here, talking about brain transmissions and shit. Oh, yeah.}",
+      "index": "82"
+    },
+    {
+      "topic": "NVDLC03DialogueKleinNVDLC03DoctorDalaLVLTopic015",
+      "topic_text": "You removed my brain?",
+      "emotion": "Neutral 50",
+      "response_text": "@@[$((*&^#%]@@. @@[*.......]@@... @@[$((*&^#%]@@.{AUDIO: Dr. 8 is a little proud here, talking about brain transmissions and shit. Oh, yeah.}",
+      "index": "84"
+    },
+    {
+      "topic": "NVDLC03DialogueKleinNVDLC03DoctorKlein01Topic021",
+      "topic_text": "I can't let you dissect the Mojave. Or let you leave.",
+      "emotion": "Surprise 50",
+      "response_text": "@@[=$+<_*]@@?{AUDIO: Dr. 8 suggests a plan of action.}",
+      "index": "85"
+    },
+    {
+      "topic": "NVDLC03DialogueKleinNVDLC03DoctorKleinLVLTopic017",
+      "topic_text": "< Debug Topic Node - Do Not Translate. >",
+      "emotion": "Neutral 50",
+      "response_text": "@@[=$+<_*]@@? @@[*.......]@@... @@[$((*&^#%]@@.{AUDIO: Dr. 8 is calmly suggesting a reasonable course of action here.}",
+      "index": "90"
+    },
+    {
+      "topic": "NVDLC03DialogueKleinNVDLC03DoctorKleinLVLTopic031",
+      "topic_text": "I'll help. What do you need me to do?",
+      "emotion": "Neutral 50",
+      "response_text": "@@[$((*&^#%]@@.{AUDIO: Dr. 8 is indicating his contribution, modestly.}",
+      "index": "92"
+    },
+    {
+      "topic": "NVDLC03DialogueKleinNVDLC03DoctorKleinLVLTopic039",
+      "topic_text": "The faster I can get through this, the better.",
+      "emotion": "Anger 50",
+      "response_text": "@@[<*$(^=)#]@@!{AUDIO: Dr. 8 is saying, \"hey, what about my item! I made something, too!\"}",
+      "index": "94"
+    },
+    {
+      "topic": "NVDLC03DialogueKleinNVDLC03DoctorKleinLVLTopic043",
+      "topic_text": "< Debug Topic Node - Gun Branch/Skill Check Storage - Do Not Translate. >",
+      "emotion": "Surprise 50",
+      "response_text": "@@[$((*&^#%]@@.{AUDIO: There's no \"maybe.\" It can't. Right now.}",
+      "index": "95"
+    },
+    {
+      "topic": "NVDLC03DialogueKleinNVDLC03DoctorKleinLVLTopic049",
+      "topic_text": "If you have the gun already, I don't understand what you need.",
+      "emotion": "Surprise 50",
+      "response_text": "@@[.......!]@@{AUDIO: Take the revelation noise, make it small, repeated, stage 1. (8's sonically ejaculating into the gun.)}",
+      "index": "98"
+    },
+    {
+      "topic": "NVDLC03DialogueKleinNVDLC03DoctorOLVLTopic001",
+      "topic_text": "What are these technologies?",
+      "emotion": "Anger 50",
+      "response_text": "@@[<*$(^=)#]@@!{AUDIO: Dr. 8 is saying, \"hey, what about my item! I made something, too!\"}",
+      "index": "101"
+    },
+    {
+      "topic": "NVDLC03DialogueKleinNVDLC03DoctorOLVLTopic002",
+      "topic_text": "I'll head out, then, and be back with these... things.",
+      "emotion": "Neutral 50",
+      "response_text": "@@[$((*&^#%]@@.{AUDIO: Dr. 8 is indicating his contribution, modestly.}",
+      "index": "102"
+    },
+    {
+      "topic": "NVDLC03DialogueKleinNVDLC03DoctorOLVLTopic003",
+      "topic_text": "Wait... so this gun you gave me can disable Force Fields?",
+      "emotion": "Surprise 50",
+      "response_text": "@@[=$+<_*]@@?{AUDIO: What? I don't think so.}",
+      "index": "103"
+    },
+    {
+      "topic": "NVDLC03X8Countdown08",
+      "topic_text": "NVDLC03X8Countdown08",
+      "emotion": "Neutral 50",
+      "response_text": "@@[$((*#8#%]@@.{2D}{AUDIO: \"8, counting down.\"}",
+      "index": "105"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYEGoodbye.",
+      "topic_text": "I'll be going now.",
+      "emotion": "Disgust 50",
+      "response_text": "@@[$$]@@{AUDIO: Again, \"Like it matters. Get lost.\"}",
+      "index": "106"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "Hello",
+      "emotion": "Neutral 50",
+      "response_text": "@@[=$+<_*]@@?",
+      "index": "107"
+    }
+  ],
+  "combat": [
+    {
+      "topic": "AcceptYield",
+      "topic_text": "AcceptYield",
+      "emotion": "Neutral 50",
+      "response_text": "@@[<#$(^=)#]@@!",
+      "index": "110"
+    },
+    {
+      "topic": "Assault",
+      "topic_text": "Assault",
+      "emotion": "Neutral 50",
+      "response_text": "@@[=$+<_*]@@?",
+      "index": "111"
+    },
+    {
+      "topic": "Attack",
+      "topic_text": "Attack",
+      "emotion": "Neutral 50",
+      "response_text": "@@[<#$(^=)#]@@!",
+      "index": "112"
+    },
+    {
+      "topic": "AvoidThreat",
+      "topic_text": "AvoidThreat",
+      "emotion": "Neutral 50",
+      "response_text": "@@[<#$(^=)#]@@!",
+      "index": "115"
+    },
+    {
+      "topic": "Death",
+      "topic_text": "Death",
+      "emotion": "Neutral 50",
+      "response_text": "@@[*.......]@@...",
+      "index": "116"
+    },
+    {
+      "topic": "Flee",
+      "topic_text": "Flee",
+      "emotion": "Neutral 50",
+      "response_text": "@@[#-!!!!-#]@@!",
+      "index": "117"
+    },
+    {
+      "topic": "Hit",
+      "topic_text": "Hit",
+      "emotion": "Neutral 50",
+      "response_text": "@@[<#$(^=)#]@@!",
+      "index": "118"
+    },
+    {
+      "topic": "PowerAttack",
+      "topic_text": "PowerAttack",
+      "emotion": "Neutral 50",
+      "response_text": "@@[!!!!!!!!]@@",
+      "index": "120"
+    }
+  ]
+}

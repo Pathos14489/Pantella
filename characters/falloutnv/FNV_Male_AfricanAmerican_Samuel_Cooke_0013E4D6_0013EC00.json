@@ -1,0 +1,254 @@
+{
+  "name": "Samuel Cooke",
+  "url": "/wiki/Samuel_Cooke",
+  "dialogue_name": "VVault19SamuelCooke.txt",
+  "dialogue_url": "/wiki/VVault19SamuelCooke.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "0013E4D6",
+  "ref_id": "0013EC00",
+  "editor_id": "VVault19SamuelCooke",
+  "location": "Vault 19blue overseer's office",
+  "location_url": "/wiki/Vault_19",
+  "descriptions": [
+    "Samuel Cooke is an anarchist revolutionary and former inmate of the NCR Correctional Facility in the Mojave Wasteland until he masterminded a mass breakout in 2281 that led to the shutdown of Interstate 15 and the creation of the highwaymen gang known as the Powder Gangers; Cooke himself left the prison and took his own independent gang to shelter in Vault 19 and continue planning his retaliation against the New California Republic. He appears in Fallout: New Vegas.",
+    "A standout even among his fellow convicts within the NCR's justice system, Samuel Cooke's hatred of the republic is primarily motivated by political ideology, rather than just the general feeling of animosity that most common criminals usual hold towards the established authorities within the region; the 23rd-century revolutionary sees it as having become a corrupt, tyrannical beast that wantonly conquers and annexes territory, often without consent of those within that governed area, while forcing its imposed rules, laws and other regulations like its high taxes onto the wasteland regardless of whether it is accepted by the inhabitants or not.",
+    "Cooke's prison sentence landed him a spot in the \"work-release\" program run out of the NCR Correctional Facility in the Mojave Wasteland. There, he labored under armed supervision repairing railways and using dynamite to blast rock obstructions for the Republic's supply chains to support their war against Caesar's Legion. Despite the harshness of his new circumstances, incarceration in frontier territory did nothing to extinguish the blazing fire in Cooke's heart fueled by revenge against the NCR.",
+    "While acting the model prisoner, vocal anti-NCR sentiments aside,",
+    "Eventually, sometime around October 2281, the convicts saw an opportunity. Due to NCR military command drawing away more and more of the facility's staff to the Hoover Dam garrison to defend against Legion aggression, there were fewer guards to supervise them despite requests and pleas from the warden.",
+    "Despite his role as the mastermind and driving force of the breakout, Cooke did not stick around and left the prison behind together with his group of followers, allowing for Eddie to take control of the Correctional Facility and form the highwaymen gang known as the Powder Gangers.",
+    "After abandoning the prison, Cooke brought his men north, looking for a defensible base of operations to resume his scheming against the republic. With the knowledge of its location that he acquired at some point, Cooke installed his group within the abandoned walls of Vault 19 below a parking lot close to Bonnie Springs,",
+    "However, against his lofty goals, Cooke has faced mounting insubordination from Lem, who has begun to rethink the choice to leave a well-rationed prison sentence for meager pickings in an old Vault. He spread his skepticism among the other escapees, raising ideas of going back and surrendering to the NCR; Cooke has so far managed to keep them in the Vault,",
+    "The character's name is a reference to the real-life 1960s singer-songwriter Samuel \"Sam\" Cooke; one of his most famous songs, \"Chain Gang,\" documents the harsh life of prison labor.",
+    "Playstation 3 Xbox 360 The convicts and Cooke may be hostile if the player has a Vilified reputation with the Powder Gangers, or if the player killed Papa Khan."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "role": "Escaped convictGang leaderAnti-NCR revolutionary",
+  "detailed_location": "Vault 19",
+  "voice_actor": "Avery K. Waddell",
+  "special": {
+    "Strength": 5,
+    "Perception": 6,
+    "Endurance": 5,
+    "Charisma": 3,
+    "Intelligence": 3,
+    "Agility": 5,
+    "Luck": 4
+  },
+  "level": "10→20 (player level x 1.2)",
+  "tag_skills": [
+    {
+      "Explosives:": "64→100"
+    },
+    {
+      "Guns:": "62→100"
+    },
+    {
+      "Melee Weap.:": "62→100"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Neutral",
+  "voice_type": "MaleAdult02",
+  "geck_race": "AfricanAmerican",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Anger 50",
+      "response_text": "{Hated}Fuck off.",
+      "index": "1"
+    },
+    {
+      "topic": "VEndingPowderGang",
+      "topic_text": "VEndingPowderGang",
+      "emotion": "Neutral 50",
+      "response_text": "{narrating}With Cooke dead, the Powder Gangers at Vault 19 fell apart.",
+      "index": "12"
+    },
+    {
+      "topic": "VMS42VVault19SamuelCookeTopic000",
+      "topic_text": "I took care of those geckos.",
+      "emotion": "Anger 60",
+      "response_text": "You won't get a fucking cap from me, and you're lucky I don't blow your goddamn head off.",
+      "index": "20"
+    },
+    {
+      "topic": "VMS42VVault19SamuelCookeTopic015",
+      "topic_text": "<GENERAL QUESTIONS>",
+      "emotion": "Neutral 50",
+      "response_text": "What do you want to know?",
+      "index": "22"
+    },
+    {
+      "topic": "VMS42VVault19SamuelCookeTopic019",
+      "topic_text": "What's going on here?",
+      "emotion": "Anger 50",
+      "response_text": "That coward Lem has been talking about surrendering to the NCR. Now the men are confused, not sure who's leading this gang. Fucking idiots.",
+      "index": "28"
+    },
+    {
+      "topic": "VMS42VVault19SamuelCookeTopic023",
+      "topic_text": "Do you know anything about this vault?",
+      "emotion": "Neutral 50",
+      "response_text": "Some of the computers still work, but the only files are diaries and garbage. Typical vault.",
+      "index": "30"
+    },
+    {
+      "topic": "VMS42VVault19SamuelCookeTopic025",
+      "topic_text": "Who are you?",
+      "emotion": "Neutral 50",
+      "response_text": "You really don't know? I'm Samuel Cooke. I was the brains behind the NCRCF prison break.",
+      "index": "31"
+    },
+    {
+      "topic": "VMS42VVault19SamuelCookeTopic027",
+      "topic_text": "Tell me about NCR.",
+      "emotion": "Anger 50",
+      "response_text": "Their \"republic\" is a joke. They're a bunch of tyrants led by an even greater tyrant, that idiot Kimball.",
+      "index": "32"
+    },
+    {
+      "topic": "VMS42VVault19SamuelCookeTopic032",
+      "topic_text": "Tell me about Lem.",
+      "emotion": "Neutral 50",
+      "response_text": "He was an inmate like the rest of us. He had his uses, but he's a coward and a troublemaker.",
+      "index": "34"
+    },
+    {
+      "topic": "VMS42VVault19SamuelCookeTopic034",
+      "topic_text": "Who's Lem?",
+      "emotion": "Neutral 50",
+      "response_text": "He was an inmate like the rest of us. He was useful during the jailbreak, but now...",
+      "index": "35"
+    },
+    {
+      "topic": "VMS42VVault19SamuelCookeTopic035",
+      "topic_text": "How did you end up in prison?",
+      "emotion": "Neutral 50",
+      "response_text": "I was blowing up supply caravans along the 15 freeway. The NCR got wise to my ambush spots, picked me up and threw me in a cage.",
+      "index": "37"
+    },
+    {
+      "topic": "VMS42VVault19SamuelCookeTopic036",
+      "topic_text": "Tell me about the prison break.",
+      "emotion": "Happy 50",
+      "response_text": "A beautiful thing. Saved a little blast powder here, hid a makeshift weapon there, and one day I orchestrated a little symphony for the  NCR.",
+      "index": "38"
+    },
+    {
+      "topic": "VMS42VVault19SamuelCookeTopic038",
+      "topic_text": "Why did you kill Lem?",
+      "emotion": "Neutral 50",
+      "response_text": "Didn't have a choice. He was confusing the men, and I need to control them or we're just a bunch of disorganized idiots.",
+      "index": "39"
+    },
+    {
+      "topic": "VMS42VVault19SamuelCookeTopic039",
+      "topic_text": "Why can't you do it?",
+      "emotion": "Disgust 50",
+      "response_text": "I have to keep an eye on that bastard Lem. The second I turn my back, he might go crying to the NCR.",
+      "index": "40"
+    },
+    {
+      "topic": "VMS42VVault19SamuelCookeTopic041",
+      "topic_text": "What do you want the sulfur for?",
+      "emotion": "Neutral 50",
+      "response_text": "Explosives. Bombs. Big, big fucking bombs. You gonna help us or not?",
+      "index": "42"
+    },
+    {
+      "topic": "VMS42VVault19SamuelCookeTopic046",
+      "topic_text": "Why do you want to join the Great Khans?",
+      "emotion": "Neutral 50",
+      "response_text": "There aren't enough of us here to make a real impact on the NCR, and the Khans probably hate the NCR more than we do. Strength in numbers, they say.",
+      "index": "43"
+    },
+    {
+      "topic": "VMS42VVault19SamuelCookeTopic047",
+      "topic_text": "I'll do it.",
+      "emotion": "Happy 50",
+      "response_text": "Great. Come back as soon as you can.",
+      "index": "45"
+    },
+    {
+      "topic": "VMS42VVault19SamuelCookeTopic048",
+      "topic_text": "I'll do it.",
+      "emotion": "Happy 50",
+      "response_text": "Great. Get to it. Oh, and take this - there's some weird shit with this Vault's security and some doors will only open if you have a keycard.",
+      "index": "46"
+    },
+    {
+      "topic": "VMS42VVault19SamuelCookeTopic058",
+      "topic_text": "So, what brought you to this place?",
+      "emotion": "Neutral 50",
+      "response_text": "Heard there was an abandoned vault along this mountain ridge, and that the wildlife here had teeth big enough to keep the NCR away.",
+      "index": "47"
+    },
+    {
+      "topic": "VMS42VVault19SamuelCookeTopic059",
+      "topic_text": "Tell me about the area outside the vault.",
+      "emotion": "Neutral 50",
+      "response_text": "It's a fucking deathtrap around here. Fiends swarm all over Vault 3 in the east, and there are fucking Deathclaws south of that, at Quarry Junction.",
+      "index": "48"
+    },
+    {
+      "topic": "VMS42VVault19SamuelCookeTopic071",
+      "topic_text": "Tell me about the Fiends.",
+      "emotion": "Neutral 50",
+      "response_text": "Like raiders, but worse - these guys are messed up on every damn chem there is. You can spot them by the horned skulls they wear as hats.",
+      "index": "50"
+    },
+    {
+      "topic": "VMS42VVault19SamuelCookeTopic074",
+      "topic_text": "Tell me about Quarry Junction.",
+      "emotion": "Neutral 50",
+      "response_text": "The NCR's been mining there for awhile, but now it's full of Deathclaws. Don't go there unless you want a quick, bloody death.",
+      "index": "51"
+    },
+    {
+      "topic": "VMS42VVault19SamuelCookeTopic076",
+      "topic_text": "Tell me about McCarran.",
+      "emotion": "Disgust 50",
+      "response_text": "It's the main base for the NCR, and a breeding ground for oppression in the name of patriotic bullshit. Do humanity a favor and blow it up.",
+      "index": "52"
+    },
+    {
+      "topic": "VMS42VVault19SamuelCookeTopic078",
+      "topic_text": "Tell me about the Great Khans.",
+      "emotion": "Neutral 50",
+      "response_text": "They've been through some rough times, but they can hold their own. I wouldn't mind taking the boys and signing up with them, if it weren't for Lem.",
+      "index": "53"
+    },
+    {
+      "topic": "VMS42VVault19SamuelCookeTopic094",
+      "topic_text": "Tell me about the super mutants.",
+      "emotion": "Neutral 50",
+      "response_text": "I've heard the muties there are different. Completely insane, and supposedly they use some kind of invisibility technology. I'd stay away.",
+      "index": "54"
+    },
+    {
+      "topic": "VMS42VVault19SamuelCookeTopic218",
+      "topic_text": "Yes.",
+      "emotion": "Happy 50",
+      "response_text": "Good. Hey, I got another job for you if you're interested.",
+      "index": "55"
+    },
+    {
+      "topic": "VMS42VVault19SamuelCookeTopic221",
+      "topic_text": "Yes. You can join then, but he says you would all still have to pass the initiation rite.",
+      "emotion": "Neutral 50",
+      "response_text": "I'd rather not, but fair enough. We'll do it.",
+      "index": "56"
+    }
+  ],
+  "conversation": [],
+  "combat": []
+}

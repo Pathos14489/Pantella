@@ -1,0 +1,101 @@
+{
+  "name": "Sergeant Cooper",
+  "url": "/wiki/Cooper_(Fallout:_New_Vegas)",
+  "dialogue_name": "VCFHSergeantCooper.txt",
+  "dialogue_url": "/wiki/VCFHSergeantCooper.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "001258E0",
+  "ref_id": "00125C1A",
+  "editor_id": "VCFHSergeantCooper",
+  "location": "Camp Forlorn Hope",
+  "location_url": "/wiki/Camp_Forlorn_Hope",
+  "descriptions": [
+    "Sergeant Cooper is a New California Republic soldier living in the Mojave Wasteland in 2281.",
+    "Sergeant Cooper is a squad leader based at Camp Forlorn Hope. His squad, with help from the Courier, assaults the Legion camp at Nelson during the side quest Restoring Hope."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "NCR Army",
+  "role": "Soldier",
+  "detailed_location": "Camp Forlorn Hope",
+  "voice_actor": "Liam O'Brien",
+  "special": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 5,
+    "Intelligence": 5,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "level": "12→15 (equal to player level)",
+  "tag_skills": [
+    {
+      "Explosives:": "74"
+    },
+    {
+      "Guns:": "74"
+    },
+    {
+      "Melee Weap.:": "74"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Neutral",
+  "voice_type": "MaleAdult05",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Happy 25",
+      "response_text": "I've heard of you, glad to have you on our side.",
+      "index": "1"
+    },
+    {
+      "topic": "VMS30VCFHSergeantCooperTopic000",
+      "topic_text": "Let's do this.",
+      "emotion": "Anger 5",
+      "response_text": "We don't have many troops, so we can only attack from one direction. Where should we focus the attack?",
+      "index": "7"
+    },
+    {
+      "topic": "VMS30VCFHSergeantCooperTopic001",
+      "topic_text": "I'm not ready yet.",
+      "emotion": "Anger 15",
+      "response_text": "Make it quick, we don't want to lose the element of surprise.",
+      "index": "8"
+    },
+    {
+      "topic": "VMS30VCFHSergeantCooperTopic002",
+      "topic_text": "Let's attack from the north.",
+      "emotion": "Anger 10",
+      "response_text": "North it is. Reports also say that they might have some NCR hostages. If that's true we need to do what we can to save them. So stay sharp.",
+      "index": "9"
+    },
+    {
+      "topic": "VMS30VCFHSergeantCooperTopic003",
+      "topic_text": "We should attack from the ridge on the east.",
+      "emotion": "Anger 10",
+      "response_text": "East it is. Reports also say that they might have some NCR hostages. If that's true we need to do what we can to save them. So stay sharp.",
+      "index": "13"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "I'll be here.",
+      "index": "17"
+    }
+  ],
+  "combat": []
+}

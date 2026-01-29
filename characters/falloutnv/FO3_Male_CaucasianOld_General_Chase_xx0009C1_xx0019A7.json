@@ -1,0 +1,329 @@
+{
+  "name": "General Chase",
+  "url": "/wiki/Constantine_Chase",
+  "dialogue_name": "DLC02GeneralChase.txt",
+  "dialogue_url": "/wiki/DLC02GeneralChase.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": true,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "xx0009C1",
+  "ref_id": "xx0019A7",
+  "editor_id": "DLC02GeneralChase",
+  "location": "U.S. Army field headquarters",
+  "location_url": "/wiki/U.S._Army_field_headquarters",
+  "descriptions": [
+    "General Constantine Chase was a pre-War United States Army general, commanding officer of the Anchorage Reclamation, a military operation that repelled Chinese forces from Alaska in January 2077. The Lone Wanderer encounters and receives orders from a computer-generated reconstruction of Chase during their run through the Anchorage Reclamation simulation in the Fallout 3 add-on Operation: Anchorage.",
+    "Holding the highest general officer rank, Constantine Chase was one of the most prominent pre-War military officers, as the commander for the Battle of Anchorage responsible for driving the People's Liberation Army from Alaska. He was a competent officer, noted for his gruff personality and staunch anti-communism, bordering on paranoia,",
+    "Confident that RobCo and General Atomics would succeed in the project, Chase announced the development of the superweapon during a press conference at the Pentagon in June 2072. In his trademark style, Chase announced that the weapon would \"leave every single yellow-bellied Red shaking in their Commie booties\" and that \"liberty ",
+    "Chase was forced to rely on regular forces in the final stages of reclamation, bolstered by combat robots and newly deployed winterized T-51b power armor units.",
+    "Following the liberation of Anchorage, Chase was retained as the commander of Anchorage Command, dealing with major supply shortages as the Army dealt with remnants of Chinese forces in Alaska, as late as September 2077.",
+    "The simulated General Chase is true to his colorful personality, peppering his sentences with mild profanities and anti-communist expressions, and generally portrays him as a larger-than-life figure, a born leader calmly comanding his troops while smoking a cigar: Troops that are underdogs grappling with an overwhelming, implacable foe, rather than the remnants of the PLA after ten years of attrition in Alaska.",
+    "The simulated Chase does not extend the same privilege to curse and break protocol to other soldiers, and is quick to reprimand the trainee running through it for not showing the proper respect,",
+    "The simulated version of General Chase appears only in the Anchorage Reclamation simulation, while the real General Constantine Chase is mentioned several times in Fallout 3, as well as its add-ons Operation: Anchorage and Mothership Zeta (holotape and General Chase's overcoat). Chase is also mentioned in Fallout 4 (including Chase himself and his R&D company),",
+    "A breakdown of the ribbons on Chase's uniform.",
+    "Note"
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "United States ArmyChase R&D",
+  "role": "Commander of U.S. forces inAnchorageFounder and owner of Chase R&D",
+  "detailed_location": "Anchorage Reclamation simulationU.S. Army field headquarters, Command tent",
+  "voice_actor": "Jerry Whiddon",
+  "special": {
+    "Strength": 5,
+    "Perception": 6,
+    "Endurance": 6,
+    "Charisma": 5,
+    "Intelligence": 5,
+    "Agility": 7,
+    "Luck": 5
+  },
+  "mod_special_values": {
+    "Strength": 5,
+    "Perception": 6,
+    "Endurance": 6,
+    "Charisma": 6,
+    "Intelligence": 5,
+    "Agility": 7,
+    "Luck": 5
+  },
+  "level": "10",
+  "tag_skills": [
+    {
+      "Big Guns:": "77"
+    },
+    {
+      "Small Guns:": "79"
+    },
+    {
+      "Speech:": "75"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "120"
+    },
+    {
+      "Critical Chance:": "5%"
+    },
+    {
+      "Unarmed Dam.:": "1.35"
+    },
+    {
+      "Poison Resist.:": "25%"
+    },
+    {
+      "Rad. Resist.:": "10%"
+    },
+    {
+      "Carry Weight:": "100"
+    },
+    {
+      "Damage Res.:": "20%"
+    }
+  ],
+  "karma": "Neutral",
+  "voice_type": "DLC02MaleUniqueGeneralChase",
+  "geck_race": "CaucasianOld",
+  "topics": [
+    {
+      "topic": "DLC02OA3ChaseApologize01",
+      "topic_text": "Yes sir, understood perfectly sir!",
+      "emotion": "Disgust 90",
+      "response_text": "At ease, soldier. We're all a bit strung out from the last Commie bombing run on our Field H.Q.",
+      "index": "1"
+    },
+    {
+      "topic": "DLC02OA3ChaseApologize02",
+      "topic_text": "Very clear. Sorry, sir.",
+      "emotion": "Disgust 90",
+      "response_text": "We're all a bit strung out from the last Commie bombing run on our Field H.Q.",
+      "index": "3"
+    },
+    {
+      "topic": "DLC02OA3ChaseApologize03",
+      "topic_text": "Pfft... this isn't even real.",
+      "emotion": "Anger 90",
+      "response_text": "Soldier, you're fixing to have a size 10 combat boot shoved up your candy ass.",
+      "index": "5"
+    },
+    {
+      "topic": "DLC02OA3ChaseStart01",
+      "topic_text": "<Allow the General to continue.>",
+      "emotion": "Disgust 90",
+      "response_text": "Unfortunately while you were up there climbing mountains, we were down here getting our butts kicked.",
+      "index": "7"
+    },
+    {
+      "topic": "DLC02OA3ChaseStart02",
+      "topic_text": "Thank you, sir.",
+      "emotion": "Disgust 50",
+      "response_text": "No need to thank me. I know a genuine true-blooded soldier when I see one... and that's why I sent you.",
+      "index": "10"
+    },
+    {
+      "topic": "DLC02OA3ChaseStart03",
+      "topic_text": "We sure sent those Red Chinese packing!",
+      "emotion": "Disgust 90",
+      "response_text": "Now hold on there, soldier. You see these fancy little gold stars on my uniform?",
+      "index": "14"
+    },
+    {
+      "topic": "DLC02OA3ChaseStart04",
+      "topic_text": "Yeah, yeah... make with the next objective so I can finish the simulation.",
+      "emotion": "Anger 100",
+      "response_text": "This is no simulation, soldier! That's real blood you see out there on the snow!",
+      "index": "17"
+    },
+    {
+      "topic": "DLC02OA3ChaseStart05",
+      "topic_text": "Anything I can do to assist, sir?",
+      "emotion": "Neutral 50",
+      "response_text": "I didn't call you down here for a pep talk and cigars. You've earned yourself a field promotion, soldier.",
+      "index": "19"
+    },
+    {
+      "topic": "DLC02OA3ChaseStart06",
+      "topic_text": "That's a shame, sir.",
+      "emotion": "Anger 80",
+      "response_text": "Damn Red bastards... can't wait to push them all the way back to Beijing.",
+      "index": "22"
+    },
+    {
+      "topic": "DLC02OA3ChaseStart07",
+      "topic_text": "They knew the drill when they signed up, sir.",
+      "emotion": "Disgust 70",
+      "response_text": "Commie sons-of-bitches. It'll be a cold day in hell before I let them cross Canada into the mainland.",
+      "index": "25"
+    },
+    {
+      "topic": "DLC02OA3ChaseStart08",
+      "topic_text": "What are my orders, sir?",
+      "emotion": "Disgust 90",
+      "response_text": "There are three hardened targets that stand between us and the Chinese Headquarters. That's where your Strike Team comes in.",
+      "index": "28"
+    },
+    {
+      "topic": "DLC02OA3ChaseStart09",
+      "topic_text": "I'm not sure I'm ready, sir.",
+      "emotion": "Disgust 90",
+      "response_text": "Well you'd better be, soldier. We're running short on time and that was NOT an offer, that was an order.",
+      "index": "30"
+    },
+    {
+      "topic": "DLC02OA4ChaseGreet1",
+      "topic_text": "Sir, Yes Sir!",
+      "emotion": "Neutral 50",
+      "response_text": "With the General's death, our boys can secure this refinery and be on their way to Anchorage proper.",
+      "index": "33"
+    },
+    {
+      "topic": "DLC02OA4ChaseGreet2",
+      "topic_text": "What, that's it? I was just starting to have fun!",
+      "emotion": "Neutral 50",
+      "response_text": "This concludes the simulation, and this portion of your training. But if you're thirsty for more, soldier, your commanding officer can oblige.",
+      "index": "42"
+    },
+    {
+      "topic": "DLC02OA4ChaseGreet3",
+      "topic_text": "Am I done? Is the simulation over?",
+      "emotion": "Neutral 50",
+      "response_text": "You've got an attitude problem, soldier, and this simulation is going to recommend a swift kick in the ass to correct it.",
+      "index": "49"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "That'll do, soldier. Stand down!",
+      "index": "54"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "DLC02OA3Brief01",
+      "topic_text": "DLC02OA3Brief01",
+      "emotion": "Disgust 90",
+      "response_text": "Okay... pay attention, soldier. I'm only going to go through this once.",
+      "index": "61"
+    },
+    {
+      "topic": "DLC02OA3Brief02",
+      "topic_text": "DLC02OA3Brief02",
+      "emotion": "Anger 70",
+      "response_text": "We've set up our new Field H.Q. down here. The area is pretty secure now that the Artillery Guns are gone.",
+      "index": "62"
+    },
+    {
+      "topic": "DLC02OA3Brief03",
+      "topic_text": "DLC02OA3Brief03",
+      "emotion": "Neutral 50",
+      "response_text": "The first of the three targets we need to handle is their Chimera Depot over here.",
+      "index": "63"
+    },
+    {
+      "topic": "DLC02OA3Brief03a",
+      "topic_text": "DLC02OA3Brief03a",
+      "emotion": "Neutral 50",
+      "response_text": "Be careful on your approach, you're going to have to get through the Enemy Camp on the way.",
+      "index": "64"
+    },
+    {
+      "topic": "DLC02OA3Brief04",
+      "topic_text": "DLC02OA3Brief04",
+      "emotion": "Neutral 50",
+      "response_text": "Once you breach the perimeter of the Depot, you need to take out both of the main fuel tanks.",
+      "index": "65"
+    },
+    {
+      "topic": "DLC02OA3Brief05",
+      "topic_text": "DLC02OA3Brief05",
+      "emotion": "Neutral 50",
+      "response_text": "Your second target is all the way over here. The Chinese have set up a listening post set into the side of Calliway Ridge.",
+      "index": "66"
+    },
+    {
+      "topic": "DLC02OA3Brief05a",
+      "topic_text": "DLC02OA3Brief05a",
+      "emotion": "Disgust 100",
+      "response_text": "There are some abandoned mines along the route, so keep your eyes and ears open. It's a great place for an ambush.",
+      "index": "67"
+    },
+    {
+      "topic": "DLC02OA3Brief06",
+      "topic_text": "DLC02OA3Brief06",
+      "emotion": "Neutral 50",
+      "response_text": "You need to clear the place of personnel so we can get our intelligence boys in there to start decoding.",
+      "index": "68"
+    },
+    {
+      "topic": "DLC02OA3Brief07",
+      "topic_text": "DLC02OA3Brief07",
+      "emotion": "Neutral 50",
+      "response_text": "Once the first two targets are down, the last obstacle standing in the way is their damn Pulse Field.",
+      "index": "69"
+    },
+    {
+      "topic": "DLC02OA3Brief08",
+      "topic_text": "DLC02OA3Brief08",
+      "emotion": "Neutral 50",
+      "response_text": "You need to cross it then cause it to overload so we can mop up the place with the T-51b's.",
+      "index": "70"
+    },
+    {
+      "topic": "DLC02OA3Brief09",
+      "topic_text": "DLC02OA3Brief09",
+      "emotion": "Disgust 90",
+      "response_text": "Let me warn you now. Unless you have some sort of a death wish, I wouldn't even go near the field until the first two targets are down.",
+      "index": "71"
+    },
+    {
+      "topic": "DLC02OA3Brief10",
+      "topic_text": "DLC02OA3Brief10",
+      "emotion": "Neutral 50",
+      "response_text": "Lieutenant Morgan will be your eyes and ears for Operation Anchorage, so get everything else you need from him.",
+      "index": "72"
+    },
+    {
+      "topic": "DLC02OA3Brief11",
+      "topic_text": "DLC02OA3Brief1",
+      "emotion": "Neutral 50",
+      "response_text": "Uncle Sam's invested a lot of money turning you into a killing machine... time to pay him back. Dismissed.",
+      "index": "73"
+    },
+    {
+      "topic": "DLC02VoicesTalkChaseResponse01",
+      "topic_text": "DLC02VoicesTalkChaseResponse01",
+      "emotion": "Disgust 90",
+      "response_text": "Good, good. Keep monitoring the battlefield and let me know when we've punched through the Pulse Field.",
+      "index": "74"
+    },
+    {
+      "topic": "DLC02VoicesTalkChaseResponse02",
+      "topic_text": "DLC02VoicesTalkChaseResponse02",
+      "emotion": "Disgust 90",
+      "response_text": "Well, tell those men they need to be ready. As soon as the Pulse Field is down, we need them cocked, locked and ready to rock.",
+      "index": "75"
+    },
+    {
+      "topic": "DLC02VoicesTalkChaseResponse03",
+      "topic_text": "DLC02VoicesTalkChaseResponse03",
+      "emotion": "Anger 100",
+      "response_text": "Well you tell them that if they want their viable liberation contingency ready in case Operation: Anchorage fails, they need to get off their asses!",
+      "index": "76"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Neutral 50",
+      "response_text": "The U.S. Army needs more soldiers like you. Carry on.",
+      "index": "77"
+    }
+  ],
+  "combat": []
+}

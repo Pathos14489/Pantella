@@ -1,0 +1,115 @@
+{
+  "name": "Big Beard",
+  "url": "/wiki/Big_Beard",
+  "dialogue_name": "VMS21aHiredGun01.txt",
+  "dialogue_url": "/wiki/VMS21aHiredGun01.txt",
+  "spawned_dead": false,
+  "spawned": true,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "001158B2",
+  "ref_id": "001258D1",
+  "editor_id": "VMS21aHiredGun01",
+  "location": "Atomic Wrangler Casino",
+  "location_url": "/wiki/Atomic_Wrangler_Casino",
+  "descriptions": [
+    "Big Beard is a gun-for-hire residing in the Atomic Wrangler Casino in Freeside in Fallout: New Vegas.",
+    "At some point prior to 2281, Big Beard and Little Beard came into owing a debt to Carlitos Wayne, though it's only known that it involved their beards.",
+    "As partnered guns-for-hire, Big Beard typically acts as the one to talk to, based off who has the bigger whiskers."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "FreesideLittle Beard",
+  "role": "Gun for hire",
+  "detailed_location": "Atomic Wrangler Casino,Freeside",
+  "voice_actor": "Alex Mendoza",
+  "special": {
+    "Strength": 7,
+    "Perception": 4,
+    "Endurance": 6,
+    "Charisma": 3,
+    "Intelligence": 4,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "level": "8",
+  "tag_skills": [
+    {
+      "Guns:": "67(69)"
+    },
+    {
+      "Melee Weap.:": "62(64)"
+    },
+    {
+      "Repair:": "56"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Neutral",
+  "voice_type": "MaleAdult07",
+  "geck_race": "AfricanAmerican",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "Let me guess. You want to know my secret - how I got my beard to grow in so thick.",
+      "index": "1"
+    },
+    {
+      "topic": "VMS21aVMS21aHiredGun01Topic000",
+      "topic_text": "Does the name \"Carlitos\" ring a bell?",
+      "emotion": "Neutral 50",
+      "response_text": "{suspicious}Depends on why you're asking.",
+      "index": "4"
+    },
+    {
+      "topic": "VMS21aVMS21aHiredGun01Topic001",
+      "topic_text": "What sort of debt do you owe Carlitos?",
+      "emotion": "Neutral 50",
+      "response_text": "Let's just say it had something to do with the beards, and leave it at that.",
+      "index": "5"
+    },
+    {
+      "topic": "VMS21aVMS21aHiredGun01Topic002",
+      "topic_text": "Never mind.",
+      "emotion": "Neutral 50",
+      "response_text": "See you around.",
+      "index": "6"
+    },
+    {
+      "topic": "VMS21aVMS21aHiredGun01Topic003",
+      "topic_text": "Carlitos is ready to cash in his chips.",
+      "emotion": "Neutral 50",
+      "response_text": "I see. Well, he can count on Little Beard and me for an assist. Tell us where and when, and we'll be there.",
+      "index": "8"
+    },
+    {
+      "topic": "VMS21aVMS21aHiredGun01Topic004",
+      "topic_text": "Carlitos says he's ready to cash in his chips.",
+      "emotion": "Neutral 50",
+      "response_text": "I see. Well, he can count on Little Beard and me for an assist. Tell us where and when, and we'll be there.",
+      "index": "10"
+    },
+    {
+      "topic": "VMS21aVMS21aHiredGun01Topic005",
+      "topic_text": "The \"where\" is Freeside, and \"now\" would be a good time.",
+      "emotion": "Neutral 50",
+      "response_text": "{intently - going into battle}The Beards will be there.",
+      "index": "11"
+    },
+    {
+      "topic": "VMS21aVMS21aHiredGun01Topic007",
+      "topic_text": "What's your trick?",
+      "emotion": "Neutral 50",
+      "response_text": "Sorry, but I can't tell you that. Trade secret.",
+      "index": "12"
+    }
+  ],
+  "conversation": [],
+  "combat": []
+}

@@ -1,0 +1,188 @@
+{
+  "name": "Marjorie",
+  "url": "/wiki/Marjorie_(Fallout:_New_Vegas)",
+  "dialogue_name": "VMS18Marjorie.txt",
+  "dialogue_url": "/wiki/VMS18Marjorie.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "0010D4E7",
+  "ref_id": "0010D4F1",
+  "editor_id": "VMS18Marjorie",
+  "location": "The Gourmand",
+  "location_url": "/wiki/The_Gourmand",
+  "descriptions": [
+    "Marjorie is the head of the White Glove Society living in New Vegas in 2281.",
+    "Marjorie and Mortimer are the two conflicting leaders of the White Gloves and by default becomes the most influential member if, during the quest Beyond the Beef, Mortimer is ousted. She is not fond of being accused of cannibalism.",
+    "If the Courier has at least \"accepted\" reputation with the Strip, she will give him/her a formal wear outfit and a membership as a White Glove Society member during the quest Beyond the Beef.",
+    "PC Playstation 3 Xbox 360 Although Chauncey tells you to find Marjorie at the restaurant, she may not be able to be found outside of the members' section, making Beyond the Beef impossible to complete without an appropriate White Glove disguise. Very often, she stays stuck between chairs in the room. "
+  ],
+  "race": "Human",
+  "gender": "Female",
+  "affiliation": "White Glove Society",
+  "role": "FounderQueen of Diamonds",
+  "detailed_location": "Ultra-Luxe",
+  "voice_actor": "Diane Pershing",
+  "special": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 6,
+    "Charisma": 3,
+    "Intelligence": 4,
+    "Agility": 6,
+    "Luck": 4
+  },
+  "level": "11",
+  "tag_skills": [
+    {
+      "Guns:": "71"
+    },
+    {
+      "Melee Weap.:": "69"
+    },
+    {
+      "Unarmed:": "71"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Neutral",
+  "voice_type": "FemaleOld03",
+  "geck_race": "CaucasianOld",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "Oh- oh my. How unfortunate! And in front of all these people, too.{fretting - a little flustered}",
+      "index": "1"
+    },
+    {
+      "topic": "VMS18VMS18MarjorieTopic000",
+      "topic_text": "I'm looking for someone who went missing here recently.",
+      "emotion": "Neutral 50",
+      "response_text": "This again? I thought all this was settled. I answered every one of that investigator's questions to his satisfaction and gave all the help I could.",
+      "index": "11"
+    },
+    {
+      "topic": "VMS18VMS18MarjorieTopic001",
+      "topic_text": "The White Glove Society used to eat human flesh?",
+      "emotion": "Neutral 50",
+      "response_text": "Now didn't I already tell you that we don't do that sort of thing? We do not engage in cannibalism here under any circumstances.",
+      "index": "14"
+    },
+    {
+      "topic": "VMS18VMS18MarjorieTopic002",
+      "topic_text": "Who did you talk to about the disappearance?",
+      "emotion": "Neutral 50",
+      "response_text": "There was an investigator who came through here last week. He'd been hired by a young man whose bride-to-be went missing during their stay here.",
+      "index": "17"
+    },
+    {
+      "topic": "VMS18VMS18MarjorieTopic003",
+      "topic_text": "It's okay. I eat people too. You can tell me the truth.",
+      "emotion": "Anger 50",
+      "response_text": "You disgust me. How dare you say such a filthy thing in my establishment? I ought to have you arrested.",
+      "index": "20"
+    },
+    {
+      "topic": "VMS18VMS18MarjorieTopic004",
+      "topic_text": "<Lie> It's okay. I eat people too. You can tell me the truth.",
+      "emotion": "Anger 50",
+      "response_text": "You disgust me. How dare you say such a filthy thing in my establishment? I ought to have you arrested.",
+      "index": "22"
+    },
+    {
+      "topic": "VMS18VMS18MarjorieTopic005",
+      "topic_text": "Is there any way I could talk to the investigator?",
+      "emotion": "Neutral 50",
+      "response_text": "Why yes, I think so. If he hasn't checked out yet, that is.",
+      "index": "24"
+    },
+    {
+      "topic": "VMS18VMS18MarjorieTopic006",
+      "topic_text": "I'm investigating someone else. A man. And he just recently went missing.",
+      "emotion": "Neutral 50",
+      "response_text": "A man? Well then this... well this can't be. Two disappearances in my hotel? What will people say?",
+      "index": "27"
+    },
+    {
+      "topic": "VMS18VMS18MarjorieTopic007",
+      "topic_text": "Do you work here?",
+      "emotion": "Neutral 50",
+      "response_text": "I do, but one can hardly call it work. I think of myself as a caretaker rather than a common laborer.",
+      "index": "30"
+    },
+    {
+      "topic": "VMS18VMS18MarjorieTopic008",
+      "topic_text": "Heck Gunderson said he was here to talk business with you. What business?",
+      "emotion": "Neutral 50",
+      "response_text": "What else? Mr. Gunderson and I have been discussing his livestock.",
+      "index": "34"
+    },
+    {
+      "topic": "VMS18VMS18MarjorieTopic009",
+      "topic_text": "I want to join the White Glove Society. I was told I'd need a sponsor.",
+      "emotion": "Neutral 50",
+      "response_text": "Why yes, of course. The White Glove Society is the most exclusive club in all of New Vegas. Perhaps the entire world.",
+      "index": "40"
+    },
+    {
+      "topic": "VMS18VMS18MarjorieTopic010",
+      "topic_text": "Would you be willing to sponsor me as an honorary member now?",
+      "emotion": "Neutral 50",
+      "response_text": "The answer is still no, I fear. You need to be the talk of the town, really. Think big! Your name should be on everyone's lips.",
+      "index": "48"
+    },
+    {
+      "topic": "VMS18VMS18MarjorieTopic011",
+      "topic_text": "Caesar wishes to extend your society an offer of alliance with his Legion.",
+      "emotion": "Neutral 50",
+      "response_text": "Tell your ruler we have no interest in such ties. Caesar's Legion is a collection of unclean barbarians.",
+      "index": "53"
+    },
+    {
+      "topic": "VMS18VMS18MarjorieTopic012",
+      "topic_text": "How is your new cuisine faring?",
+      "emotion": "Neutral 50",
+      "response_text": "Why it's splendid. Simply to die for.",
+      "index": "59"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Ta-ta.",
+      "index": "62"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "Hello",
+      "emotion": "Neutral 50",
+      "response_text": "How do you do?",
+      "index": "63"
+    }
+  ],
+  "combat": [
+    {
+      "topic": "RNVNewsStory2",
+      "topic_text": "RNVNewsStoryLine2",
+      "emotion": "Neutral 50",
+      "response_text": "{Marjorie:}Mr. Gunderson is no longer a welcome guest at the Ultra-Luxe.",
+      "index": "64"
+    },
+    {
+      "topic": "RNVNewsStory3",
+      "topic_text": "RNVNewsStoryLine3",
+      "emotion": "Neutral 50",
+      "response_text": "{Marjorie:}Nor is he allowed to sample the world-class cuisine of the Gourmand, New Vegas' only 5-star restaurant.",
+      "index": "65"
+    }
+  ]
+}

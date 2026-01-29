@@ -1,0 +1,396 @@
+{
+  "name": "Silus",
+  "url": "/wiki/Silus",
+  "dialogue_name": "Silus.txt",
+  "dialogue_url": "/wiki/Silus.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000EE688",
+  "ref_id": "000F2DEF",
+  "editor_id": "Silus",
+  "location": "Camp McCarran terminal building",
+  "location_url": "/wiki/Camp_McCarran_terminal_building",
+  "descriptions": [
+    "Silus is a centurion of Caesar's Legion, captured during battle and brought to Camp McCarran in 2281.",
+    "An exceptional member of the Legion, Silus is unique not in bravery, but in his insight and intelligence, as despite Legion indoctrination, he has managed to retain freedom of thought and skills of critical observation. He earned the rank of centurion through bravery and devotion, serving Caesar unquestioningly for years. Among many, he and his men wiped out countless NCR patrols to allow Legion operatives to move freely,",
+    "He was not blind to Caesar's degenerating health, or his own worth. Before his last mission, he waited for three days until his leader's headache subsided, despite the time-critical nature of his assignment. The delay resulted in Silus' centuria being ambushed and routed by the NCR.",
+    "Silus recognized Captain Ronald Curtis upon being brought into the base, having met him years earlier during the latter's frumentarii training. He did not know his current name,",
+    "While Lt. Boyd tries, in vain, to pry some useful information from him, Silus continues to believe that he is still a loyal officer of the Legion, as he refused to kill one of its greatest soldiers (himself) and did not divulge even the slightest bit of information.",
+    "Silus Treatment",
+    "Silus Treatment: Silus is held captive in Camp McCarran, and the NCR is attempting to interrogate him. He will not give information to the NCR, and interrogator Carrie Boyd is looking for help. She informs the player character that the NCR does not allow torture of prisoners. They can suggest a truth serum, beating the prisoner, or calling him names. Silus may also be freed, resulting in a few special dialogue lines from Caesar.",
+    "Silus has a low intelligence dialogue option, though it's limited to a single line.",
+    "Silus directly translates to \"snub-nosed\" in Latin.",
+    "Frumentarii: Alerio · Cato Hostilius · Gabban · Karl · Picus · Disguised frumentarius · Ulysses (formerly)\nConsul: M. Licinius Crassus · M. Scribonius Libo Drusus (of the consul)"
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Caesar's Legion",
+  "role": "CenturionPrisoner of War",
+  "detailed_location": "Camp McCarran terminal building",
+  "voice_actor": "Jesse Burch",
+  "special": {
+    "Strength": 7,
+    "Perception": 4,
+    "Endurance": 5,
+    "Charisma": 6,
+    "Intelligence": 4,
+    "Agility": 5,
+    "Luck": 4
+  },
+  "level": "10",
+  "tag_skills": [
+    {
+      "Guns:": "65"
+    },
+    {
+      "Melee Weap.:": "69"
+    },
+    {
+      "Unarmed:": "65"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Neutral",
+  "voice_type": "MaleAdult03",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "What an ugly little worm you are. What pile of excrement did the lieutenant pluck you from, worm?",
+      "index": "1"
+    },
+    {
+      "topic": "VFreeformMcCarran2SilusTopic000",
+      "topic_text": "I'm a friend of the Legion. I'm here to help.",
+      "emotion": "Neutral 50",
+      "response_text": "Caesar's eyes truly are everywhere. And here I thought they'd send assassins instead. Did the officer send you?{relieved}",
+      "index": "12"
+    },
+    {
+      "topic": "VFreeformMcCarran2SilusTopic001",
+      "topic_text": "<Lie> I'm with the Legion. I'm here to kill you before you talk.",
+      "emotion": "Neutral 50",
+      "response_text": "[?] You're nothing. You're some inept mercenary the NCR is paying to supplement its own incompetent soldiers.",
+      "index": "13"
+    },
+    {
+      "topic": "VFreeformMcCarran2SilusTopic002",
+      "topic_text": "[Speech] I think you're confused. I'm with the excrement right now.",
+      "emotion": "Neutral 50",
+      "response_text": "[?] You must have some reason to be in your line of work. Tell me, what did the Legion do to you?",
+      "index": "15"
+    },
+    {
+      "topic": "VFreeformMcCarran2SilusTopic003",
+      "topic_text": "[Speech] You... *smell* like excrement. So there.",
+      "emotion": "Neutral 50",
+      "response_text": "[FAILED] I must admit that a conversation with an imbecile may be far worse than the kind of torture I was anticipating.",
+      "index": "18"
+    },
+    {
+      "topic": "VFreeformMcCarran2SilusTopic004",
+      "topic_text": "You're about to tell me everything you know, Silus.",
+      "emotion": "Neutral 50",
+      "response_text": "Of course, of course. All you had to do was ask. I'll tell you everything I know.",
+      "index": "20"
+    },
+    {
+      "topic": "VFreeformMcCarran2SilusTopic005",
+      "topic_text": "[Attack] Uh oh. Now you've made me angry.",
+      "emotion": "Neutral 50",
+      "response_text": "I can take anything you've got.",
+      "index": "24"
+    },
+    {
+      "topic": "VFreeformMcCarran2SilusTopic006",
+      "topic_text": "What officer?",
+      "emotion": "Neutral 50",
+      "response_text": "I don't know what name he goes by here. But I saw him when they brought me in, and I recognized him.",
+      "index": "25"
+    },
+    {
+      "topic": "VFreeformMcCarran2SilusTopic007",
+      "topic_text": "I work independently.",
+      "emotion": "Neutral 50",
+      "response_text": "Hmm... perhaps not, then.",
+      "index": "32"
+    },
+    {
+      "topic": "VFreeformMcCarran2SilusTopic008",
+      "topic_text": "How many agents of the Legion *are* there here?",
+      "emotion": "Neutral 50",
+      "response_text": "I know of only the one other. Though I wouldn't be surprised if there were a great many.",
+      "index": "33"
+    },
+    {
+      "topic": "VFreeformMcCarran2SilusTopic009",
+      "topic_text": "I understand.",
+      "emotion": "Neutral 50",
+      "response_text": "Good. But for her to trust you to re-enter the room, she'll need to believe you've been doing what she expects of you.",
+      "index": "34"
+    },
+    {
+      "topic": "VFreeformMcCarran2SilusTopic010",
+      "topic_text": "Go over that one more time.",
+      "emotion": "Neutral 50",
+      "response_text": "Very well.",
+      "index": "36"
+    },
+    {
+      "topic": "VFreeformMcCarran2SilusTopic011",
+      "topic_text": "[Speech] You must miss giving orders, now that all your men are dead.",
+      "emotion": "Neutral 50",
+      "response_text": "[?] Foot soldiers of the Legion are trained to not have to think for themselves - to have conflict removed from their minds.",
+      "index": "38"
+    },
+    {
+      "topic": "VFreeformMcCarran2SilusTopic012",
+      "topic_text": "[Speech] Sounds to me like you were too gutless to follow Caesar's orders.",
+      "emotion": "Anger 80",
+      "response_text": "[SUCCEEDED] I'll show you gutless, you sniveling bastard. I'll spill your guts all over this room!{Losing his cool.}",
+      "index": "41"
+    },
+    {
+      "topic": "VFreeformMcCarran2SilusTopic014",
+      "topic_text": "You're a danger to him alive. Your knowledge threatens him.",
+      "emotion": "Neutral 50",
+      "response_text": "[?] I've told them nothing. They've gotten nowhere. I'm a centurion, for Christ's sake. I deserve his trust.",
+      "index": "42"
+    },
+    {
+      "topic": "VFreeformMcCarran2SilusTopic015",
+      "topic_text": "Caesar's laws are absolute. He does not grant exceptions.",
+      "emotion": "Neutral 50",
+      "response_text": "[?] You have to let this go. I'll disappear. No one will ever see me again. That was always the plan in the first place.",
+      "index": "43"
+    },
+    {
+      "topic": "VFreeformMcCarran2SilusTopic016",
+      "topic_text": "So in addition to treason, you're also a deserter.",
+      "emotion": "Surprise 50",
+      "response_text": "[SUCCEEDED] No! That's not what I meant! I-",
+      "index": "44"
+    },
+    {
+      "topic": "VFreeformMcCarran2SilusTopic018",
+      "topic_text": "You sure talk tough for someone who's afraid to die.",
+      "emotion": "Neutral 50",
+      "response_text": "[?] You think I could get where I was in the Legion army if I feared death?",
+      "index": "48"
+    },
+    {
+      "topic": "VFreeformMcCarran2SilusTopic019",
+      "topic_text": "But I want to know how a coward can attain the rank of centurion.",
+      "emotion": "Neutral 50",
+      "response_text": "[?] Coward? I've faced odds that would make your NCR soldiers wet themselves.",
+      "index": "49"
+    },
+    {
+      "topic": "VFreeformMcCarran2SilusTopic020",
+      "topic_text": "I'll be right back.",
+      "emotion": "Neutral 50",
+      "response_text": "Take your time.",
+      "index": "52"
+    },
+    {
+      "topic": "VFreeformMcCarran2SilusTopic021",
+      "topic_text": "You shouldn't have done that. I'm the only friend you have right now.",
+      "emotion": "Neutral 50",
+      "response_text": "[?] You've made your intentions clear. The Legion has abandoned me.",
+      "index": "53"
+    },
+    {
+      "topic": "VFreeformMcCarran2SilusTopic022",
+      "topic_text": "Did you honestly believe you could escape death?",
+      "emotion": "Neutral 50",
+      "response_text": "[?] If I had killed myself then I would've been murdering one of Caesar's greatest soldiers. Either choice is a betrayal of the Legion, as I see it.",
+      "index": "54"
+    },
+    {
+      "topic": "VFreeformMcCarran2SilusTopic023",
+      "topic_text": "Oh, but I do, Silus. Unlike you, I follow Caesar's orders.",
+      "emotion": "Anger 50",
+      "response_text": "[SUCCEEDED] I've done everything Caesar ever asked of me, and this is how I am repaid? With assassination?",
+      "index": "55"
+    },
+    {
+      "topic": "VFreeformMcCarran2SilusTopic025",
+      "topic_text": "[Attack] Lucky you. You can borrow my dentures when I knock all your teeth out.",
+      "emotion": "Neutral 50",
+      "response_text": "It'll take more than that to get me to talk, worm.",
+      "index": "58"
+    },
+    {
+      "topic": "VFreeformMcCarran2SilusTopic026",
+      "topic_text": "If his empire falls, it'll probably be because his centurions are so gullible.",
+      "emotion": "Neutral 50",
+      "response_text": "What? What do you mean?",
+      "index": "59"
+    },
+    {
+      "topic": "VFreeformMcCarran2SilusTopic028",
+      "topic_text": "I'll be the judge of that. Let's hear what you've got to say.",
+      "emotion": "Neutral 50",
+      "response_text": "Something is wrong with Caesar. Something he is attempting to hide from his men. But it was obvious before we set out on this last mission.",
+      "index": "60"
+    },
+    {
+      "topic": "VFreeformMcCarran2SilusTopic029",
+      "topic_text": "[Attack] If you've got any last words, you'd better say them now, Legion scum.",
+      "emotion": "Neutral 50",
+      "response_text": "{LATIN}Cedo nulli.{SAY-dough NOO-lee. \"I yield to no one.\" Said defiantly through gritted teeth.}",
+      "index": "63"
+    },
+    {
+      "topic": "VFreeformMcCarran2SilusTopic030",
+      "topic_text": "You've been tricked, Silus. I'm working with the NCR. I just got you to talk.",
+      "emotion": "Anger 80",
+      "response_text": "No! You slimy bastard!{outrage - realizing he's been tricked.}",
+      "index": "64"
+    },
+    {
+      "topic": "VFreeformMcCarran2SilusTopic031",
+      "topic_text": "And if you can't go through with it, you look even weaker.",
+      "emotion": "Anger 50",
+      "response_text": "[SUCCEEDED] You think I'm going to slit my throat for some megalomaniacal self-appointed dictator?",
+      "index": "67"
+    },
+    {
+      "topic": "VFreeformMcCarran2SilusTopic034",
+      "topic_text": "I think I've heard all I need to. You've been very helpful.",
+      "emotion": "Neutral 50",
+      "response_text": "I hope the Legion burns your wretched body at the stake when they conquer this place.",
+      "index": "70"
+    },
+    {
+      "topic": "VFreeformMcCarran2SilusTopic035",
+      "topic_text": "Who's the operative?",
+      "emotion": "Neutral 50",
+      "response_text": "I don't know. I know he sends intelligence by radio in the middle of the night. Sometimes that intelligence would find its way to my century.",
+      "index": "72"
+    },
+    {
+      "topic": "VFreeformMcCarran2SilusTopic036",
+      "topic_text": "I don't believe you. You're lying.",
+      "emotion": "Neutral 50",
+      "response_text": "Then you're a fool. That man reports to Caesar on what I do here. The Legion isn't going to take me back.",
+      "index": "73"
+    },
+    {
+      "topic": "VFreeformMcCarran2SilusTopic037",
+      "topic_text": "Maybe I'll beat some more useful information out of you.",
+      "emotion": "Neutral 50",
+      "response_text": "Beat me all you like, but it won't make my information any more useful. You can take what I have or leave it.",
+      "index": "76"
+    },
+    {
+      "topic": "VFreeformMcCarran2SilusTopic038",
+      "topic_text": "There must be more you can tell me.",
+      "emotion": "Neutral 50",
+      "response_text": "There is one other thing that may interest you. I know that Caesar has planted a spy here.",
+      "index": "77"
+    },
+    {
+      "topic": "VFreeformMcCarran2SilusTopic039",
+      "topic_text": "Yes, I have it here.",
+      "emotion": "Neutral 50",
+      "response_text": "Good! Give it to me.",
+      "index": "82"
+    },
+    {
+      "topic": "VFreeformMcCarran2SilusTopic040",
+      "topic_text": "No, not yet.",
+      "emotion": "Neutral 50",
+      "response_text": "Hurry!",
+      "index": "85"
+    },
+    {
+      "topic": "VFreeformMcCarran2SilusTopic042",
+      "topic_text": "[Attack] Then I may as well beat you to death for personal satisfaction.",
+      "emotion": "Neutral 50",
+      "response_text": "Let's see you try.",
+      "index": "86"
+    },
+    {
+      "topic": "VFreeformMcCarran2SilusTopic046",
+      "topic_text": "<Continue Listening>",
+      "emotion": "Neutral 50",
+      "response_text": "Time was essential for my mission, but we waited three days for him to dispatch us. Another of his headaches. Does that sound like a man in command?",
+      "index": "87"
+    },
+    {
+      "topic": "VFreeformMcCarran2SilusTopic047",
+      "topic_text": "<Continue Listening>",
+      "emotion": "Neutral 50",
+      "response_text": "I haven't breathed a word about the officer we planted here - he continues to radio intelligence to Caesar's camp nearly every night.",
+      "index": "90"
+    },
+    {
+      "topic": "VFreeformMcCarran2SilusTopic048",
+      "topic_text": "I'm with the Legion. I'm here to kill you before you talk.",
+      "emotion": "Neutral 50",
+      "response_text": "What? No! Listen, Caesar's secrets are safe with me. I stayed alive because Caesar would've wanted it. I'm useless to him dead.",
+      "index": "92"
+    },
+    {
+      "topic": "VFreeformMcCarran2SilusTopic049",
+      "topic_text": "[Attack] Caesar's laws are absolute. He does not grant exceptions.",
+      "emotion": "Neutral 50",
+      "response_text": "Then he's a fool!{enraged}",
+      "index": "93"
+    },
+    {
+      "topic": "VFreeformMcCarran2SilusTopic050",
+      "topic_text": "Very well. I'll try and help you.",
+      "emotion": "Neutral 50",
+      "response_text": "I knew you'd be reasonable. Now... how did you find me? Did the officer send you?",
+      "index": "94"
+    },
+    {
+      "topic": "VFreeformMcCarran2SilusTopic051",
+      "topic_text": "But not to me. I'll sever your head and carry it with me always - a message to would-be traitors.",
+      "emotion": "Neutral 50",
+      "response_text": "No! Stay away from me!",
+      "index": "95"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "VFreeformMcCarran2POW1",
+      "topic_text": "VFreeformMcCarran2POW1",
+      "emotion": "Neutral 50",
+      "response_text": "Lieutenant. I was just thinking about you.",
+      "index": "96"
+    },
+    {
+      "topic": "VFreeformMcCarran2POW2Beating",
+      "topic_text": "VFreeformMcCarran2POW2Beating",
+      "emotion": "Neutral 50",
+      "response_text": "You think this'll make me talk? A beating. This the best you can do?",
+      "index": "108"
+    },
+    {
+      "topic": "VFreeformMcCarran2POW2Int",
+      "topic_text": "VFreeformMcCarran2POW2Int",
+      "emotion": "Neutral 50",
+      "response_text": "Lieutenant, this woman is an agent of the Legion on a mission to kill me.",
+      "index": "111"
+    },
+    {
+      "topic": "VFreeformMcCarran2POW2Speech",
+      "topic_text": "VFreeformMcCarran2POW2Speech",
+      "emotion": "Neutral 50",
+      "response_text": "Your friend is a miserable fucking degenerate.",
+      "index": "117"
+    }
+  ],
+  "combat": []
+}

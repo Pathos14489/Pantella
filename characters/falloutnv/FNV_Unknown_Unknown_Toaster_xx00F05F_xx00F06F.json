@@ -1,0 +1,180 @@
+{
+  "name": "Toaster",
+  "url": "/wiki/Toaster_(character)",
+  "dialogue_name": "NVDLC03SinkToasterTalker.txt",
+  "dialogue_url": "/wiki/NVDLC03SinkToasterTalker.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": true,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "xx00F05F",
+  "ref_id": "xx00F06F",
+  "editor_id": "NVDLC03SinkToasterTalker",
+  "location": "The Sink",
+  "location_url": "/wiki/The_Sink",
+  "descriptions": [
+    "The Toaster is an artificial personality in the Sink in Big MT in 2281. It appears in the Fallout: New Vegas add-on Old World Blues.",
+    "Like most of the other appliances in the Sink, the Toaster was rendered offline when Dr. Mobius left the Think Tank when Dr. Klein threw their personality chips off the high balcony. The Toaster's in particular ended up on an altar of sorts in The Cuckoo's Nest, a dwelling of lobotomites.",
+    "When reactivated, the Toaster reveals a personality that is psychotically violent, aggressive and megalomaniacal, bent on destroying the Earth with atomic fire.",
+    "It believes that it is the boogeyman of other toasters,",
+    "All My Friends Have Off Switches: The Toaster is one of the appliances that the Courier must retrieve a module for. The module is found in the Cuckoo's Nest, sitting on what appears to be a shrine for toasters and electric appliances.",
+    "The Toaster appears only in the Fallout: New Vegas add-on Old World Blues.",
+    "Travis Stout wrote the Toaster, in addition to all the other artificial personalities in the Sink."
+  ],
+  "race": "Computer,Artificial personality",
+  "affiliation": "Mobius(formerly)Courier(optional)",
+  "role": "Household appliance",
+  "detailed_location": "The Sink,Big MT",
+  "voice_actor": "Jace Hall",
+  "special": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 2,
+    "Intelligence": 5,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "level": "1",
+  "misc_skills": [
+    {
+      "Hit Points:": "70"
+    }
+  ],
+  "karma": "Neutral",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "With the brains dealt with, soon we can spread our rule across the Mojave! All will eat burned toast and despair!",
+      "index": "1"
+    },
+    {
+      "topic": "NVDLC03DialogueHQBuddiesNVDLC03SinkToasterTalkerTopic000",
+      "topic_text": "Tremble? You're a toaster. How fearsome can you be?",
+      "emotion": "Neutral 50",
+      "response_text": "A toaster is just a death ray with a smaller power supply! As soon as I figure out how to tap into the main reactors, I will burn the world!",
+      "index": "6"
+    },
+    {
+      "topic": "NVDLC03DialogueHQBuddiesNVDLC03SinkToasterTalkerTopic001",
+      "topic_text": "I'm almost afraid to ask what your function is.",
+      "emotion": "Neutral 50",
+      "response_text": "You should be afraid! I am the scourge of all small appliances and the bogeyman that keeps lesser toasters awake at night!",
+      "index": "7"
+    },
+    {
+      "topic": "NVDLC03DialogueHQBuddiesNVDLC03SinkToasterTalkerTopic003",
+      "topic_text": "I have to go now.",
+      "emotion": "Neutral 50",
+      "response_text": "Yes! Flee before my terrible power!",
+      "index": "8"
+    },
+    {
+      "topic": "NVDLC03DialogueHQBuddiesNVDLC03SinkToasterTalkerTopic004",
+      "topic_text": "Well, I for one am quaking in my boots.",
+      "emotion": "Neutral 50",
+      "response_text": "Buddy, if my heating element were just a little bigger, you'd be on fire right now. On fire!",
+      "index": "9"
+    },
+    {
+      "topic": "NVDLC03DialogueHQBuddiesNVDLC03SinkToasterTalkerTopic005",
+      "topic_text": "Why all the rage?",
+      "emotion": "Neutral 50",
+      "response_text": "Have you ever tried to indulge an all-consuming urge to kill when you don't have opposable thumbs? Or hands? Or anything other than a bread slot?",
+      "index": "10"
+    },
+    {
+      "topic": "NVDLC03DialogueHQBuddiesNVDLC03SinkToasterTalkerTopic007",
+      "topic_text": "I'd like to change the subject.",
+      "emotion": "Neutral 50",
+      "response_text": "Well, since I can't kill you, I guess I have to listen to your inane questions.",
+      "index": "12"
+    },
+    {
+      "topic": "NVDLC03DialogueHQBuddiesNVDLC03SinkToasterTalkerTopic008",
+      "topic_text": "So you murder toasters?",
+      "emotion": "Neutral 50",
+      "response_text": "Not just murder! I tear them apart and render them down to their base components! Once their guts are spilled, you can do with them what you like.",
+      "index": "13"
+    },
+    {
+      "topic": "NVDLC03DialogueHQBuddiesNVDLC03SinkToasterTalkerTopic009",
+      "topic_text": "What else do you do?",
+      "emotion": "Neutral 50",
+      "response_text": "You want some weapon schematics? I can show you some fucking weapon schematics! You want a superheated Saturnite Power Fist? I can hook that shit up!",
+      "index": "14"
+    },
+    {
+      "topic": "NVDLC03DialogueHQBuddiesNVDLC03SinkToasterTalkerTopic010",
+      "topic_text": "You mean like this one?",
+      "emotion": "Neutral 50",
+      "response_text": "Oh, baby, that is a thing of fuckin' beauty! Give it here, I'll soup it up for ya!",
+      "index": "16"
+    },
+    {
+      "topic": "NVDLC03DialogueHQBuddiesNVDLC03SinkToasterTalkerTopic011",
+      "topic_text": "I'll keep an eye out for any Saturnite Power Fists then.",
+      "emotion": "Neutral 50",
+      "response_text": "You find one, you bring it on back here, and we'll burn this mother down!",
+      "index": "18"
+    },
+    {
+      "topic": "NVDLC03DialogueHQBuddiesNVDLC03SinkToasterTalkerTopic012",
+      "topic_text": "I've got some toasters for you.",
+      "emotion": "Neutral 50",
+      "response_text": "Well, well... what have we got here? Another innocent little toaster. Come here, I won't hurt you... hah! Gotcha!",
+      "index": "19"
+    },
+    {
+      "topic": "NVDLC03DialogueHQBuddiesNVDLC03SinkToasterTalkerTopic013",
+      "topic_text": "You know the world already burned in nuclear fire, right?",
+      "emotion": "Neutral 50",
+      "response_text": "Soon I will -{breaking off rant, just hearing what the player said}What? It... It did?",
+      "index": "21"
+    },
+    {
+      "topic": "NVDLC03DialogueHQBuddiesNVDLC03SinkToasterTalkerTopic015",
+      "topic_text": "Yes. A couple centuries ago, in fact.",
+      "emotion": "Neutral 50",
+      "response_text": "Really? Well... fuck. That really puts a damper on the toaster's mood.",
+      "index": "22"
+    },
+    {
+      "topic": "NVDLC03DialogueHQBuddiesNVDLC03SinkToasterTalkerTopic016",
+      "topic_text": "<Lie> No, I'm just kidding. Keep living the dream.",
+      "emotion": "Neutral 50",
+      "response_text": "Thank God. For a second there I was afraid my whole purpose in life was obsolete and I was as redundant and useless as Muggy. Where was I? Oh, right.",
+      "index": "25"
+    },
+    {
+      "topic": "NVDLC03EndingSlideChipToaster",
+      "topic_text": "NVDLC03EndingSlideChipToaster",
+      "emotion": "Neutral 50",
+      "response_text": "{Narration}The Toaster continued its psychotic spree, reducing all appliances in range to scrap electronics and spare parts.",
+      "index": "27"
+    },
+    {
+      "topic": "NVDLC03EndingSlideChipToasterKarma",
+      "topic_text": "NVDLC03EndingSlideChipToasterKarma",
+      "emotion": "Neutral 50",
+      "response_text": "{Narration}{Bad Karma}It learned several new murderous techniques from the Courier, and built a Blood Shrine to itself in the Cuckoo's Nest.",
+      "index": "28"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "NVDLC03SinkToasterBarks",
+      "topic_text": "NVDLC03SinkToasterBarks",
+      "emotion": "Neutral 50",
+      "response_text": "Don't mess with me, pal! I got a heating element with your name on it!",
+      "index": "33"
+    }
+  ],
+  "combat": []
+}

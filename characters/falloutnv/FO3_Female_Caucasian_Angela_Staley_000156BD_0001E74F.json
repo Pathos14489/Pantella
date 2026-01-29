@@ -1,0 +1,280 @@
+{
+  "name": "Angela Staley",
+  "url": "/wiki/Angela_Staley",
+  "dialogue_name": "AngelaStaley.txt",
+  "dialogue_url": "/wiki/AngelaStaley.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": true,
+  "is_doctor": false,
+  "is_merchant": true,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000156BD",
+  "ref_id": "0001E74F",
+  "editor_id": "AngelaStaley",
+  "location": "Gary's Galley,Rivet City market",
+  "location_url": "/wiki/Gary%27s_Galley",
+  "descriptions": [
+    "Angela Staley is the daughter of Gary Staley, running a family restaurant, Gary's Galley, in Rivet City in Fallout 3.",
+    "The sixteen-year-old Angela is a polite teenager inching towards adulthood. After a rough childhood that she survived with her dad, the two settled in Rivet City and set up a restaurant.",
+    "Due to her age, most men onboard are polite and refuse to make advances. Commander Lana Danvers likely plays a role here, warning off potential suitors to be careful with the \"jailbait\" (i.e. Angela). This includes Diego, an acolyte at Saint Monica's Church, who insists that his frequent meetings with her are purely platonic in nature.",
+    "Meanwhile, Diego sometimes appears to not even notice that she is there.",
+    "People around her are largely unaware of her desires. Shrapnel, the gun merchant, still sees her as a little girl (who can easily disable him with the incredibly polite \"Mister Shrapnel\"),",
+    "Two people are somewhat aware of the situation. First is Vera Weatherly, a fellow parishioner and proprietor of the local hotel, who notices that the two have feelings for each other, and tries to gently steer Angela away from him on account of his faith.",
+    "Angela's determination is matched by her pragmatism. She is not starstruck: she is aware that Diego will require support should he decide to leave God's service. If or when she manages to reach her goal, it turns out that she immediately finds them a home: a room below decks, where the newlyweds will not have to share space with her father.",
+    "Angela wakes up at 8 a.m. and eats breakfast at her father's restaurant, Gary's Galley, until 10 a.m. Afterwards, she will work at the restaurant serving customers until 6 p.m., when the shift ends. After that, she will move around the hangar, browsing stalls and chatting with other residents until 8 p.m., then return home for an hour. At 9 p.m., she will meet Diego on the flight deck and stay with him until 12 a.m., at which time she will go home and go to sleep. This is the same every day except Sunday, on which she wakes up at 7 a.m. for Sunday service in Saint Monica's Church, then stays there until 11 a.m. before returning to her normal schedule.",
+    "If Gary dies, Angela's schedule will shift; she will provide services at the restaurant for much longer hours, from 7 a.m. to 9 p.m., after which her schedule will continue as normal. If Diego breaks up with her in A Nice Day for a Right Wedding, she will stay at home after 9 p.m.",
+    "PC Removing her via commands or enslaving may lead to crashes and/or corrupted saves, because other Rivet City residents (e.g. Gary Staley) are scripted to interact with her. The solution is to resurrect and re-enable Angela or disable NPCs, like Gary Staley."
+  ],
+  "race": "Human",
+  "gender": "Female",
+  "affiliation": "Rivet City",
+  "role": "Barmaid",
+  "detailed_location": "Gary's Galley,Rivet City market",
+  "voice_actor": "Jan Johns",
+  "special": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 7,
+    "Intelligence": 5,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "mod_special_values": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 7,
+    "Intelligence": 5,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "level": "4",
+  "tag_skills": [
+    {
+      "Barter:": "49"
+    },
+    {
+      "Melee Weap.:": "45"
+    },
+    {
+      "Speech:": "49"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "40(45)"
+    },
+    {
+      "Critical Chance:": "5%"
+    },
+    {
+      "Unarmed Dam.:": "1.15"
+    },
+    {
+      "Poison Resist.:": "15%(20%)"
+    },
+    {
+      "Rad. Resist.:": "6%(8%)"
+    },
+    {
+      "Carry Weight:": "200"
+    },
+    {
+      "Damage Res.:": "2%"
+    }
+  ],
+  "karma": "Good",
+  "voice_type": "FemaleAdult04DC",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Happy 50",
+      "response_text": "Hi. I'm Angela. My dad runs Gary's Galley. If you want anything to eat, talk to him.",
+      "index": "1"
+    },
+    {
+      "topic": "MS03RCHistory1",
+      "topic_text": "Could I ask you about Rivet City's history?",
+      "emotion": "Neutral 50",
+      "response_text": "I heard the place was settled by mercenaries who used to scavenge DC. But I don't really know.",
+      "index": "7"
+    },
+    {
+      "topic": "RCAngelaGreetNasty",
+      "topic_text": "You're a sweet little thing. Do you charge by the hour?",
+      "emotion": "Surprise 50",
+      "response_text": "What?! That's gross!",
+      "index": "8"
+    },
+    {
+      "topic": "RCAngelaGreetNice",
+      "topic_text": "You're a polite young woman.",
+      "emotion": "Happy 50",
+      "response_text": "Thank you. If you're hungry, stop by Gary's Galley.",
+      "index": "10"
+    },
+    {
+      "topic": "RCAngelaNameGalley",
+      "topic_text": "Why is this place called Gary's Galley?",
+      "emotion": "Sad 50",
+      "response_text": "It's named after my dad. He's dead. I used to help him run it, but now it's just me.",
+      "index": "14"
+    },
+    {
+      "topic": "RCAngelaNature",
+      "topic_text": "Unfortunately you can't force a man's attentions.",
+      "emotion": "Disgust 50",
+      "response_text": "Especially if he is a priest with a thick skull.",
+      "index": "16"
+    },
+    {
+      "topic": "RCAngelaPheromone",
+      "topic_text": "I have some ant queen pheromones that might do the trick.",
+      "emotion": "Happy 50",
+      "response_text": "Really? Oh, thank you! I just know I can seduce Diego with this.",
+      "index": "18"
+    },
+    {
+      "topic": "RCAngelaSeduce",
+      "topic_text": "Men are such pigs. Forget him.",
+      "emotion": "Sad 50",
+      "response_text": "You're right. I should. But I can't.",
+      "index": "22"
+    },
+    {
+      "topic": "RCAngelaStaleyManTrouble",
+      "topic_text": "Do the men on this ship give you much trouble?",
+      "emotion": "Surprise 50",
+      "response_text": "You mean like hitting on me?",
+      "index": "23"
+    },
+    {
+      "topic": "RCGaryNotNow",
+      "topic_text": "Not now. I'm busy",
+      "emotion": "Neutral 50",
+      "response_text": "Suit yourself.",
+      "index": "25"
+    },
+    {
+      "topic": "RCTopicCJYoungMissing",
+      "topic_text": "Have you seen C.J. Young lately?",
+      "emotion": "Surprise 50",
+      "response_text": "I thought I saw her and James heading to the gate bridge.",
+      "index": "26"
+    },
+    {
+      "topic": "RCTopicDiegoAngelaI heard Angela Staley has a crush on Diego.",
+      "topic_text": "So, you and Diego are in love?",
+      "emotion": "Sad 50",
+      "response_text": "Well, one of us is. Sometimes it seems like he doesn't even know I'm there.",
+      "index": "28"
+    },
+    {
+      "topic": "RCTopicDoctorLiWhat can you tell me about Doctor Li?",
+      "topic_text": "So what's the story with Doctor Li?",
+      "emotion": "Disgust 50",
+      "response_text": "She's not very social. Stays in her lab in the stern.",
+      "index": "36"
+    },
+    {
+      "topic": "RCTopicJameHargraveProblemI've met your mother. No wonder you're such a brat.",
+      "topic_text": "Why is James Hargrave such a brat?",
+      "emotion": "Anger 50",
+      "response_text": "James' mom, Tammy, is a real bitch. She treats him like crap.",
+      "index": "38"
+    },
+    {
+      "topic": "RCTopicRivetCityWhat kind of place is this Rivet City?",
+      "topic_text": "What's it like living on a giant ship?",
+      "emotion": "Disgust 50",
+      "response_text": "It's noisy, dark, and smelly.",
+      "index": "40"
+    },
+    {
+      "topic": "RCTopicWeddingWhen are Angela and Diego getting married?",
+      "topic_text": "When are you and Diego getting married?",
+      "emotion": "Happy 50",
+      "response_text": "Oh! We forgot to invite you! You should come. Be at the church by 3 o'clock tomorrow.",
+      "index": "42"
+    },
+    {
+      "topic": "RivetCityBarterI'm here to do business with you.",
+      "topic_text": "Yeah, what do you have?",
+      "emotion": "Happy 50",
+      "response_text": "Here's a menu.",
+      "index": "43"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYEI have to go now.",
+      "topic_text": "I'd better get going, Angela.",
+      "emotion": "Happy 50",
+      "response_text": "Thank you for coming to Gary's Galley.",
+      "index": "44"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Happy 50",
+      "response_text": "I'm so nervous! Just think. Diego and I will be husband and wife.",
+      "index": "45"
+    },
+    {
+      "topic": "RCGoodbye",
+      "topic_text": "RCGoodbye",
+      "emotion": "Happy 50",
+      "response_text": "Really? That would be wonderful. I don't have enough caps right now, but I've been saving them up.",
+      "index": "62"
+    },
+    {
+      "topic": "RCGoodbye02",
+      "topic_text": "RCGoodbye02",
+      "emotion": "Happy 100",
+      "response_text": "Don't worry, Diego. I'll take care of you. I even found a room below decks for us. Our love will sustain us.",
+      "index": "73"
+    },
+    {
+      "topic": "RCGoodbye03",
+      "topic_text": "RCGoodbye03",
+      "emotion": "Neutral 50",
+      "response_text": "I'm on my break, so I'm just looking around. I guess you don't have anything new today.",
+      "index": "79"
+    },
+    {
+      "topic": "RCIDo",
+      "topic_text": "RCBride",
+      "emotion": "Happy 50",
+      "response_text": "I do.",
+      "index": "80"
+    },
+    {
+      "topic": "RCLoveYou",
+      "topic_text": "RCLoveYou",
+      "emotion": "Happy 50",
+      "response_text": "I love you Diego.",
+      "index": "81"
+    },
+    {
+      "topic": "RCPackageEnd",
+      "topic_text": "RCPackageEnd",
+      "emotion": "Neutral 50",
+      "response_text": "Dad, my shift's over. I'm going to do some shopping.",
+      "index": "82"
+    },
+    {
+      "topic": "RCResponse01",
+      "topic_text": "RCResponse01",
+      "emotion": "Sad 50",
+      "response_text": "I guess. We don't get to talk much. I just wish Diego would notice that I'm not a child anymore.",
+      "index": "85"
+    }
+  ],
+  "combat": []
+}

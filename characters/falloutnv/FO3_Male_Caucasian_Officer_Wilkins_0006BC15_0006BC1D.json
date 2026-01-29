@@ -1,0 +1,67 @@
+{
+  "name": "Officer Wilkins",
+  "url": "/wiki/Wilkins_(Vault_101)",
+  "dialogue_name": "Vault101Security09.txt",
+  "dialogue_url": "/wiki/Vault101Security09.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "0006BC15",
+  "ref_id": "0006BC1D",
+  "editor_id": "Vault101Security09",
+  "location": "",
+  "location_url": null,
+  "descriptions": [
+    "Officer Wilkins is a member of Vault 101 security in 2277.",
+    "Related to Janice and Jim Wilkins, Officer Wilkins is much less forgiving than Officer Taylor and he blames the Lone Wanderer directly for the chaos currently affecting Vault 101. He is liable to attack as soon as he gives the Lone Wanderer a tongue-lashing.",
+    "Trouble on the Homefront: Wilkins is one of the security guards encountered in the vault and one of the few guards that are hostile. He is in possession of one of the passwords unlocking the terminal in the jail section of Vault 101.",
+    "When the Lone Wanderer returns to the vault in Trouble on the Homefront, Wilkins angrily talks about how much he despises them and their father, blaming the two for the dire situation Vault 101 is in after they escaped, saying, \"You never should have left, kid. And now we'll make sure that nobody ever leaves again!\" This is most likely due to the deaths of his two children during the vault riot.",
+    "If the player chooses to destroy the Vault's life support systems, and he is not killed, he never leaves the vault, permanently staying in the same position or searching for the Wanderer (if hostile but escaped)."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Vault 101 security",
+  "role": "Security guard",
+  "detailed_location": "Vault 101",
+  "voice_actor": "Jeff Baker",
+  "special": {
+    "Strength": 6,
+    "Perception": 6,
+    "Endurance": 4,
+    "Charisma": 3,
+    "Intelligence": 3,
+    "Agility": 7,
+    "Luck": 4
+  },
+  "level": "1→10",
+  "tag_skills": [
+    {
+      "Energy Weap.:": "31→70"
+    },
+    {
+      "Melee Weap.:": "31→70"
+    },
+    {
+      "Small Guns:": "33→72"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Evil",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Anger 75",
+      "response_text": "You never should have left, kid. Now, we'll make sure nobody ever leaves again!Play soundFO3 Wilkins NeverShouldHaveLeft.ogghttps://fallout.fandom.com/wiki/File:FO3_Wilkins_NeverShouldHaveLeft.oggnoicon",
+      "index": "1"
+    }
+  ],
+  "conversation": [],
+  "combat": []
+}

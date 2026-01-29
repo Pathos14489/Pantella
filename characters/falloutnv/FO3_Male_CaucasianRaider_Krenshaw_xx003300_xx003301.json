@@ -1,0 +1,120 @@
+{
+  "name": "Krenshaw",
+  "url": "/wiki/Krenshaw",
+  "dialogue_name": "DLC01Krenshaw.txt",
+  "dialogue_url": "/wiki/DLC01Krenshaw.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "xx003300",
+  "ref_id": "xx003301",
+  "editor_id": "DLC01Krenshaw",
+  "location": "The Pitt Uptown",
+  "location_url": "/wiki/The_Pitt_Uptown",
+  "descriptions": [
+    "Krenshaw is Ashur's second-in-command of the Pitt in 2277.",
+    "After the betrayal and departure of Wernher, Krenshaw became Ashur’s second-in-command.",
+    "When the Lone Wanderer gains their freedom by successfully winning a set of fights in the arena, Krenshaw congratulates them on their accomplishments and relays that Ashur wishes to see them, also providing them with \"gifts\" from him, those being their previously confiscated items.",
+    "Krenshaw has growing concerns that the slaves plan to revolt and is also worried that the auto axes they manufactured will be used in their plan to overthrow the Pitt raiders. When the Lone Wanderer first arrives in Haven, Krenshaw and Ashur are seen debating the issue, during which Krenshaw becomes frustrated at Ashur's lack of concern over it. However, he ultimately wins Ashur over, and the two construct a plan with which to address the situation, with Ashur advising Krenshaw to put his guards on alert and keep an eye on Midea, as any important occurrences would be sure to go through her.",
+    "Krenshaw appears only in the add-on The Pitt for Fallout 3."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Pitt raiders",
+  "role": "Right-hand man",
+  "detailed_location": "Haven",
+  "voice_actor": "James Lewis",
+  "special": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 2,
+    "Intelligence": 5,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "misc_skills": [],
+  "karma": "Evil",
+  "voice_type": "DLC01RaiderMaleGruffVoice",
+  "geck_race": "CaucasianRaider",
+  "topics": [
+    {
+      "topic": "DLC01KrenshawDirectionsA",
+      "topic_text": "Where can I find Ashur?",
+      "emotion": "Neutral 50",
+      "response_text": "He watches over the city from Haven, his tower in Uptown. Take the northeast exit from here and look for the tallest building in town.",
+      "index": "1"
+    },
+    {
+      "topic": "DLC01KrenshawDirectionsB",
+      "topic_text": "He just expects me to jump to attention?",
+      "emotion": "Neutral 50",
+      "response_text": "No, he expects you to accept his courteous invitation. Or at least to guess what would happen if you keep him waiting.{Euphemisms barely covering threats}",
+      "index": "4"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "Well now, aren't you quite the scrapper? Congratulations.",
+      "index": "8"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "DLC01Q3Scene01",
+      "topic_text": "DLC01Q3Scene01",
+      "emotion": "Anger 50",
+      "response_text": "I'm telling you, they're planning something!{In the middle of a heated debate, pounding on the table on \"planning\"}",
+      "index": "13"
+    },
+    {
+      "topic": "DLC01Q3Scene04",
+      "topic_text": "DLC01Q3Scene04",
+      "emotion": "Anger 25",
+      "response_text": "And I suppose you'll follow that up by raising the dead?{Irritated mockery of Ashur's confidence}",
+      "index": "14"
+    },
+    {
+      "topic": "DLC01Q3Scene06",
+      "topic_text": "DLC01Q3Scene06",
+      "emotion": "Anger 25",
+      "response_text": "Sir, we've had sightings of Wernher back in the city, and there's been an increase in chatter between slaves.{Frustrated, and tired of joking. Pounding on the desk at \"Sir\"}",
+      "index": "15"
+    },
+    {
+      "topic": "DLC01Q3Scene08",
+      "topic_text": "DLC01Q3Scene08",
+      "emotion": "Surprise 25",
+      "response_text": "What?{Interrupted and suddenly confused}",
+      "index": "16"
+    },
+    {
+      "topic": "DLC01Q3Scene10",
+      "topic_text": "DLC01Q3Scene10",
+      "emotion": "Anger 50",
+      "response_text": "Whatever we call them, they've been gathering makeshift weapons.{Irritated and dismissive of the correction}",
+      "index": "17"
+    },
+    {
+      "topic": "DLC01Q3Scene14",
+      "topic_text": "DLC01Q3Scene14",
+      "emotion": "Anger 10",
+      "response_text": "Yes, sir!{As a soldier receiving orders. Saluting smartly.}",
+      "index": "18"
+    },
+    {
+      "topic": "DLC01SceneInterrupt",
+      "topic_text": "DLC01SceneInterrupt",
+      "emotion": "Anger 50",
+      "response_text": "Can't you see I'm busy?",
+      "index": "19"
+    }
+  ],
+  "combat": []
+}

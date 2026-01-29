@@ -1,0 +1,154 @@
+{
+  "name": "Cursor Lucullus",
+  "url": "/wiki/Lucullus",
+  "dialogue_name": "NVCCLucullus.txt",
+  "dialogue_url": "/wiki/NVCCLucullus.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "0012B515",
+  "ref_id": "0012FCB4",
+  "editor_id": "NVCCLucullus",
+  "location": "The Fort",
+  "location_url": "/wiki/The_Fort",
+  "descriptions": [
+    "Cursor Lucullus is a ferryman for Caesar's Legion in Cottonwood Cove in 2281.",
+    "Little is known of Lucullus. He is a cursor (courier) who transports Caesar's Legion members and allies from Cottonwood Cove to the Fort. When compared to other legionaries, he is noticeably taller.",
+    "* After releasing the radioactive barrels into Cottonwood Cove.",
+    "Area designer Robert Lee wrote and scripted for Lucullus.",
+    "PC On newer hardware, when traveling to the Fort after talking to Lucullus, the loading screen will be glitched and will never end, even though the player has already loaded into the area. Using coc thefort can circumvent this bug, but will break some of the game's scripts and is not recommended as a fix. Running the 4GB Patcher mod will permanently fix this bug.",
+    "Frumentarii: Alerio · Cato Hostilius · Gabban · Karl · Picus · Disguised frumentarius · Ulysses (formerly)\nConsul: M. Licinius Crassus · M. Scribonius Libo Drusus (of the consul)"
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Caesar's Legion",
+  "role": "Cursor",
+  "detailed_location": "Cottonwood CoveThe Fort",
+  "voice_actor": "Ari Rubin",
+  "special": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 6,
+    "Charisma": 4,
+    "Intelligence": 4,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "level": "13",
+  "tag_skills": [
+    {
+      "Guns:": "78"
+    },
+    {
+      "Melee Weap.:": "80"
+    },
+    {
+      "Unarmed:": "80"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Neutral",
+  "voice_type": "MaleAdult04",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "{Shocked}I warned them about that truck weeks ago. Always be prepared for any hazardous radiation I said.",
+      "index": "1"
+    },
+    {
+      "topic": "VFreeformCottonwoodCoveNVCCLucullusTopic000",
+      "topic_text": "I'm ready to travel with you.",
+      "emotion": "Neutral 50",
+      "response_text": "The trip will take a few hours. Take your place on the boat.",
+      "index": "10"
+    },
+    {
+      "topic": "VFreeformCottonwoodCoveNVCCLucullusTopic001",
+      "topic_text": "What'll happen at the Fort?",
+      "emotion": "Neutral 50",
+      "response_text": "You'll be meeting face-to-face with the mighty{KAI-zar}Caesar himself, founder of the Legion, conquerer of 86 tribes.",
+      "index": "11"
+    },
+    {
+      "topic": "VFreeformCottonwoodCoveNVCCLucullusTopic002",
+      "topic_text": "Who are you?",
+      "emotion": "Neutral 50",
+      "response_text": "I am Cursor{Luh-CULL-us}Lucullus, and my orders are to escort you to the Legion's camp at Fortification Hill. Are you ready to go?",
+      "index": "15"
+    },
+    {
+      "topic": "VFreeformCottonwoodCoveNVCCLucullusTopic003",
+      "topic_text": "Here's the chip.",
+      "emotion": "Neutral 50",
+      "response_text": "The guard in the weather station will return the Chip to you when you're ready for{KAI-zar's}Caesar's mission. Otherwise, we can return to Cottonwood Cove.",
+      "index": "16"
+    },
+    {
+      "topic": "VFreeformCottonwoodCoveNVCCLucullusTopic004",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "{LATIN}{\"wallae\"}Vale.",
+      "index": "17"
+    },
+    {
+      "topic": "VFreeformCottonwoodCoveNVCCLucullusTopic004DUPLICATE000",
+      "topic_text": "Who are you calling \"Dissolute?\"",
+      "emotion": "Neutral 50",
+      "response_text": "All who are not Legion are \"Dissolute.\" They live in squalor, unrestrained by morality, lacking moderation, temper, and self-control.",
+      "index": "18"
+    },
+    {
+      "topic": "VFreeformCottonwoodCoveNVCCLucullusTopic005",
+      "topic_text": "What have I done to earn this honor?",
+      "emotion": "Neutral 50",
+      "response_text": "You'd know better than I would. But you must be remarkable, for{KAI-zar}Caesar to take such an interest.",
+      "index": "21"
+    },
+    {
+      "topic": "VFreeformCottonwoodCoveNVCCLucullusTopic006",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "{WALL-ae}Vale, as you wish. My orders are to wait here until you're ready to make the trip.",
+      "index": "22"
+    },
+    {
+      "topic": "VFreeformCottonwoodCoveNVCCLucullusTopic007",
+      "topic_text": "Why are you surprised to see a woman receive this honor?",
+      "emotion": "Neutral 50",
+      "response_text": "{a ridiculous question, but it's your duty to be polite}Women are physically and intellectually inferior to men. Their role is to bear children and ensure the survival of our species.",
+      "index": "23"
+    },
+    {
+      "topic": "VFreeformCottonwoodCoveNVCCLucullusTopic008",
+      "topic_text": "I'm ready to return to Cottonwood Cove.",
+      "emotion": "Neutral 50",
+      "response_text": "Very well.",
+      "index": "25"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "{LATIN}{\"WALL-ae\"}Vale.",
+      "index": "26"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "Hello",
+      "emotion": "Neutral 50",
+      "response_text": "{AH-way}Ave.",
+      "index": "27"
+    }
+  ],
+  "combat": []
+}

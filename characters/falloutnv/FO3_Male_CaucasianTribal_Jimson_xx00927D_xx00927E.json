@@ -1,0 +1,185 @@
+{
+  "name": "Jimson",
+  "url": "/wiki/Jimson",
+  "dialogue_name": "DLC04Jimson.txt",
+  "dialogue_url": "/wiki/DLC04Jimson.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "xx00927D",
+  "ref_id": "xx00927E",
+  "editor_id": "DLC04Jimson",
+  "location": "Ark & Dove Cathedral",
+  "location_url": "/wiki/Ark_%26_Dove_Cathedral",
+  "descriptions": [
+    "Jimson is one of the inhabitants of Point Lookout and a member of the Point Lookout tribals in 2277.",
+    "Deeply superstitious and the most senior member of the tribals except for Jackson, he is responsible for spreading the message of communication to the followers not yet picking up on telepathic messages from the great leader. He is also the gatekeeper for the tribals at the Ark & Dove Cathedral and stands at the gate a majority of the time. After the Lone Wanderer has been accepted into the tribe, he will return inside the cathedral and talk to other tribals.",
+    "The Lone Wanderer will have to talk to Jimson to get into the cathedral for the Walking with Spirits quest. He will send them to the Mother Punga plant to pick seeds in order to join the tribe.",
+    "Jimson appears only in the Fallout 3 add-on Point Lookout.",
+    "The name \"Jimson\" is a reference to \"Jimson Weed,\" also known as \"Jamestown Weed,\" which is a powerful natural hallucinogen. Similarly, Woodrose, another tribal member, shares her name with another natural hallucinogen."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Tribals",
+  "role": "TribalDoorman",
+  "detailed_location": "Ark & Dove Cathedral",
+  "voice_actor": "James Lewis",
+  "special": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 2,
+    "Intelligence": 5,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "level": "1",
+  "misc_skills": [],
+  "karma": "Neutral",
+  "voice_type": "DLC04MaleTribalFriendly",
+  "geck_race": "CaucasianTribal",
+  "topics": [
+    {
+      "topic": "DLC04AboutLeader",
+      "topic_text": "Who leads this tribe?",
+      "emotion": "Surprise 50",
+      "response_text": "Leader? That would be Jackson, a man of great wisdom. He has withdrawn to his Cavern of Communion, the better to contemplate the unknowable!",
+      "index": "1"
+    },
+    {
+      "topic": "DLC04AboutMansion",
+      "topic_text": "Why did you attack the mansion?",
+      "emotion": "Neutral 50",
+      "response_text": "Our most enlightened one divined that the fates themselves did decree the mansion must be burnt to the ground!",
+      "index": "6"
+    },
+    {
+      "topic": "DLC04AboutPunga",
+      "topic_text": "How do you get so much Punga Fruit to grow here?",
+      "emotion": "Happy 50",
+      "response_text": "It is a gift from the earth itself, in acknowledgement of our perfect balance with nature and the higher planes.",
+      "index": "9"
+    },
+    {
+      "topic": "DLC04AboutTribals",
+      "topic_text": "What does this tribe believe in?",
+      "emotion": "Happy 50",
+      "response_text": "We espouse the expansion of the perfect mind, and the rejection of the corrupt physical!",
+      "index": "14"
+    },
+    {
+      "topic": "DLC04JacksonLocation",
+      "topic_text": "Where can I find Jackson?",
+      "emotion": "Anger 50",
+      "response_text": "Couldn't tell you where he goes for his meditations. I swear, nobody tells me nothing. Maybe ask one of the others?",
+      "index": "19"
+    },
+    {
+      "topic": "DLC04WakeUp1A",
+      "topic_text": "What happened to me? Why does my head hurt so much?",
+      "emotion": "Happy 75",
+      "response_text": "That is merely the sensation of your consciousness rushing to embrace its true potential. It is the feeling of having no boundaries. No limits!",
+      "index": "21"
+    },
+    {
+      "topic": "DLC04WakeUp1B",
+      "topic_text": "Did it work? Is the ritual complete?",
+      "emotion": "Happy 75",
+      "response_text": "For a time, we feared your mind had journeyed too far from your body, and you had departed our world. But you returned to us again, at long last!",
+      "index": "27"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "",
+      "emotion": "Neutral 50",
+      "response_text": "Please wait until my meditations are complete.",
+      "index": "36"
+    },
+    {
+      "topic": "DLC04TribalEntry1A",
+      "topic_text": "I seek the wisdom of your people. May I join your tribe?",
+      "emotion": "Neutral 50",
+      "response_text": "What's this? A humble traveler, seeking the guidance of our awakened minds? Truly, this is a glorious day!",
+      "index": "1"
+    },
+    {
+      "topic": "DLC04TribalEntry1B",
+      "topic_text": "Seriously? \"The threshold of transcendence\"? Just let me in, already.",
+      "emotion": "Neutral 50",
+      "response_text": "What? No, you're doing it wrong! If you want to join, you're supposed to get into the right mindset, you know?{Frustrated at the mocking player's attitude}",
+      "index": "1"
+    },
+    {
+      "topic": "DLC04TribalEntry2A",
+      "topic_text": "I have no fear. I will take your test, and I will be victorious!",
+      "emotion": "Neutral 50",
+      "response_text": "You may not be so brave when you face the Ritual of the Mother Seed. Stronger souls than you have attempted it and lost their minds.",
+      "index": "1"
+    },
+    {
+      "topic": "DLC04TribalEntry2B",
+      "topic_text": "I'm not so sure about this. Tell me more.",
+      "emotion": "Neutral 50",
+      "response_text": "Your caution is a credit to your wisdom - only a fool eats before he knows the meal. You are worthy to attempt the Ritual of the Mother Seed!",
+      "index": "1"
+    },
+    {
+      "topic": "DLC04TribalEntry3A",
+      "topic_text": "Oh, okay. Verily, I shall taketh your test. And I shall, um, succeedeth!",
+      "emotion": "Neutral 50",
+      "response_text": "Seed!",
+      "index": "1"
+    },
+    {
+      "topic": "DLC04TribalEntry3B",
+      "topic_text": "Sure. Do some crazy ritual. Whatever.",
+      "emotion": "Neutral 50",
+      "response_text": "Okay, be that way. It's called the Ritual of the Mother Seed. Laugh if you want, but it will open your mind to the world!{Frustrated at the mocking player's attitude}",
+      "index": "1"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Neutral 50",
+      "response_text": "Let your earthly cares slip away, like a pebble in the sea.",
+      "index": "45"
+    },
+    {
+      "topic": "DLC04IntercomBark",
+      "topic_text": "DLC04IntercomBark",
+      "emotion": "Neutral 50",
+      "response_text": "Hark! Who goes there?",
+      "index": "1"
+    }
+  ],
+  "combat": [
+    {
+      "topic": "AcceptYield",
+      "topic_text": "AcceptYield",
+      "emotion": "Neutral 50",
+      "response_text": "Be at peace.",
+      "index": "54"
+    },
+    {
+      "topic": "Attack",
+      "topic_text": "Attack",
+      "emotion": "Anger 50",
+      "response_text": "Sleep forever!",
+      "index": "55"
+    },
+    {
+      "topic": "Death",
+      "topic_text": "Death",
+      "emotion": "Neutral 50",
+      "response_text": "At last...",
+      "index": "60"
+    }
+  ]
+}

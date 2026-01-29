@@ -1,0 +1,111 @@
+{
+  "name": "Alexus",
+  "url": "/wiki/Alexus",
+  "dialogue_name": "NVLegionaryAlexus.txt",
+  "dialogue_url": "/wiki/NVLegionaryAlexus.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "001300EE",
+  "ref_id": "001300F2",
+  "editor_id": "NVLegionaryAlexus",
+  "location": "Techatticup Mine",
+  "location_url": "/wiki/Techatticup_Mine",
+  "descriptions": [
+    "Decanus Alexus is a Caesar's Legion officer camped out in Techatticup Mine in 2281.",
+    "Both Alexus and Dead Sea are legionary decanii, leading constant attacks and hostilities in NCR lands around the Colorado River, attacking places such as Camp Forlorn Hope and Nelson, taking NCR troopers as hostages and patrolling southwest lands.",
+    "Anywhere I Wander",
+    "Anywhere I Wander: Alexus possesses the key that unlocks the cells of two NCR soldiers. The Courier can obtain it by killing him or stealing it from him.",
+    "PC Alexus may not spawn at all. This does not necessarily interfere with the quest Anywhere I Wander, as the locked gates to the NCR captives can still be picked with Lockpick 50. ",
+    "Frumentarii: Alerio · Cato Hostilius · Gabban · Karl · Picus · Disguised frumentarius · Ulysses (formerly)\nConsul: M. Licinius Crassus · M. Scribonius Libo Drusus (of the consul)"
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Caesar's Legion",
+  "role": "Jailer2 of Clubs(withDead Sea)",
+  "detailed_location": "Techatticup Mine",
+  "voice_actor": "Yuri Lowenthal",
+  "special": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 10,
+    "Intelligence": 5,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "level": "1",
+  "tag_skills": [
+    {
+      "Guns:": "30"
+    },
+    {
+      "Science:": "30"
+    },
+    {
+      "Unarmed:": "28"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "70"
+    },
+    {
+      "Dam. Threshold:": "0(8)"
+    }
+  ],
+  "karma": "Neutral",
+  "voice_type": "MaleAdult01Default",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "A tribe called the Great Khans has joined us. They'd better be good fighters.",
+      "index": "1"
+    },
+    {
+      "topic": "VTechatticupNVLegionaryAlexusTopic002",
+      "topic_text": "I just wandered in here.",
+      "emotion": "Neutral 50",
+      "response_text": "",
+      "index": "5"
+    },
+    {
+      "topic": "VTechatticupNVLegionaryAlexusTopic003",
+      "topic_text": "I'm here about the hostages.",
+      "emotion": "Neutral 50",
+      "response_text": "",
+      "index": "6"
+    },
+    {
+      "topic": "VTechatticupNVLegionaryAlexusTopic004",
+      "topic_text": "Can you let them go?",
+      "emotion": "Neutral 50",
+      "response_text": "",
+      "index": "7"
+    },
+    {
+      "topic": "VTechatticupNVLegionaryAlexusTopic005",
+      "topic_text": "I'll be going now.",
+      "emotion": "Neutral 50",
+      "response_text": "",
+      "index": "8"
+    },
+    {
+      "topic": "VTechatticupNVLegionaryAlexusTopic006",
+      "topic_text": "I want one of their heads.",
+      "emotion": "Neutral 50",
+      "response_text": "",
+      "index": "9"
+    }
+  ],
+  "conversation": [],
+  "combat": []
+}

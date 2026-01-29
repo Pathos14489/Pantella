@@ -1,0 +1,503 @@
+{
+  "name": "Sunny Smiles",
+  "url": "/wiki/Sunny_Smiles",
+  "dialogue_name": "GSSunnySmiles.txt",
+  "dialogue_url": "/wiki/GSSunnySmiles.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "00104E84",
+  "ref_id": "00104E85",
+  "editor_id": "GSSunnySmiles",
+  "location": "Goodsprings",
+  "location_url": "/wiki/Goodsprings",
+  "descriptions": [
+    "Sunny Smiles is a resident of Goodsprings, serving as a dedicated town guard as well as a small-time gecko hunter in the Mojave Wasteland in Fallout: New Vegas.",
+    "A talented trapper and survivalist, Sunny Smiles moved to Goodsprings sometime before 2281, where her skills primarily came in handy hunting and culling the geckos inhabiting the hills around the town, allowing the townsfolk to subsist on their meat while selling the hides for caps with the general store owner, Chet. Her talent with a rifle is also very useful to the people living in the sleepy settlement, helping keep it clear of radscorpions and coyotes which always seem to find a way to get into the town trying to get at the namesake water source. Her job is no small problem, either: the wildlife tends to get agitated whenever humans come near and attack them, injuring or even killing the townsfolk, especially anything that comes from the lands north of Goodsprings.",
+    "Aside from her hunting, Sunny also defends the town from threats when the need arises, especially taking a more proactive approach when she knows trouble is brewing, such as the case with Joe Cobb and his group of Powder Gangers.",
+    "Being content with the small prospects of living in Goodsprings, Sunny keeps herself uninvolved in the greater politics of the Mojave Wasteland and cares little for the New California Republic or Caesar's Legion. Her opinion of the NCR's expansionism is that they tend to be \"pushy,\" but they have made the roads safer, even if it was done entirely for the benefit of their own settlers as opposed to the locals."
+  ],
+  "race": "Human",
+  "gender": "Female",
+  "affiliation": "Goodsprings",
+  "role": "Town guardGeckohunter",
+  "detailed_location": "Prospector Saloon",
+  "voice_actor": "Katherine PawlakPaige King(beta)",
+  "special": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 4,
+    "Intelligence": 4,
+    "Agility": 6,
+    "Luck": 4
+  },
+  "level": "2",
+  "tag_skills": [
+    {
+      "Guns:": "35"
+    },
+    {
+      "Melee Weap.:": "35"
+    },
+    {
+      "Sneak:": "35"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "90"
+    },
+    {
+      "Dam. Threshold:": "5"
+    }
+  ],
+  "karma": "Very Good",
+  "voice_type": "FemaleAdult01Default",
+  "geck_race": "Hispanic",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "Let me see what you got. Yeah, these'll do just fine. Just fine.",
+      "index": "1"
+    },
+    {
+      "topic": "PLAYERFIREWEAPON",
+      "topic_text": "PLAYER FIRE WEAPON",
+      "emotion": "Neutral 50",
+      "response_text": "Hey! Do that somewhere else.",
+      "index": "34"
+    },
+    {
+      "topic": "PLAYERINIRONSITES",
+      "topic_text": "PLAYER IN IRON SITES",
+      "emotion": "Neutral 50",
+      "response_text": "That safety better be on.",
+      "index": "36"
+    },
+    {
+      "topic": "PLAYERLAYMINE",
+      "topic_text": "PLAYER LAY MINE",
+      "emotion": "Neutral 50",
+      "response_text": "What the hell? That's dangerous.",
+      "index": "38"
+    },
+    {
+      "topic": "PLAYERTHROWGRENADE",
+      "topic_text": "PLAYER THROW GRENADE",
+      "emotion": "Neutral 50",
+      "response_text": "Get down!",
+      "index": "40"
+    },
+    {
+      "topic": "VCG02GSSunnySmilesTopic000",
+      "topic_text": "Okay, I'm in.",
+      "emotion": "Neutral 50",
+      "response_text": "Follow me. It's just down to the southeast a short ways.",
+      "index": "42"
+    },
+    {
+      "topic": "VCG02GSSunnySmilesTopic001",
+      "topic_text": "[END TUTORIAL] I think I've learned enough.",
+      "emotion": "Neutral 50",
+      "response_text": "Suit yourself. Hope this helped you some.",
+      "index": "43"
+    },
+    {
+      "topic": "VCG02GSSunnySmilesTopic002",
+      "topic_text": "Sure, I'll come with you.",
+      "emotion": "Neutral 50",
+      "response_text": "Shouldn't take more than a couple minutes. Especially with two of us.",
+      "index": "44"
+    },
+    {
+      "topic": "VCG02GSSunnySmilesTopic003",
+      "topic_text": "[END TUTORIAL] I've had enough of geckos for one day.",
+      "emotion": "Neutral 50",
+      "response_text": "I don't blame you. They're good eating, but that's about it.",
+      "index": "46"
+    },
+    {
+      "topic": "VCG02GSSunnySmilesTopic004",
+      "topic_text": "I ran out of ammo.",
+      "emotion": "Neutral 50",
+      "response_text": "Yep, I'd say you're getting a little trigger happy there. Try to slow down a bit. Concentrate on hitting your target.",
+      "index": "47"
+    },
+    {
+      "topic": "VCG02GSSunnySmilesTopic005",
+      "topic_text": "I wanted to ask you some questions.",
+      "emotion": "Neutral 50",
+      "response_text": "Well let's just finish this first, all right? Then we can talk. Preferably somewhere where I can get a stiff drink and Cheyenne can keep cool.",
+      "index": "49"
+    },
+    {
+      "topic": "VCG02GSSunnySmilesTopic006",
+      "topic_text": "Couldn't hurt.",
+      "emotion": "Neutral 50",
+      "response_text": "All right, then. We'll need a couple ingredients to get started. Gonna want some Xander Root and a Broc Flower.{Neutral - not overly cheery.}",
+      "index": "52"
+    },
+    {
+      "topic": "VCG02GSSunnySmilesTopic007",
+      "topic_text": "[END TUTORIAL] No need. I think I've got it covered from here.",
+      "emotion": "Neutral 50",
+      "response_text": "Okay, say no more.",
+      "index": "55"
+    },
+    {
+      "topic": "VCG02GSSunnySmilesTopic009",
+      "topic_text": "[END TUTORIAL] I think I know what I need to know.",
+      "emotion": "Neutral 50",
+      "response_text": "{Sadly - her dog died}Okay. Well... good luck to you. I'm heading back to the Prospector. I could use a drink about now.",
+      "index": "56"
+    },
+    {
+      "topic": "VCG02LastObjective",
+      "topic_text": "VCG02LastObjective",
+      "emotion": "Neutral 50",
+      "response_text": "Hey, do me a favor. Trudy - she's the bartender up at the Prospector, kind of the town mom - she likes to meet newcomers.{Neutral}",
+      "index": "57"
+    },
+    {
+      "topic": "VCG02QuestTransition",
+      "topic_text": "VCG02QuestTransition",
+      "emotion": "Neutral 50",
+      "response_text": "One more thing I wanted to show you.",
+      "index": "59"
+    },
+    {
+      "topic": "VFreeformGoodspringsGSSunnySmilesTopic000",
+      "topic_text": "What does the NCR keep you safe from?",
+      "emotion": "Neutral 50",
+      "response_text": "Well, the wildlife for one thing. Rowdy locals for another.",
+      "index": "61"
+    },
+    {
+      "topic": "VFreeformGoodspringsGSSunnySmilesTopic001",
+      "topic_text": "Let's talk about the areas around Goodsprings.",
+      "emotion": "Neutral 50",
+      "response_text": "Sure. What did you want to know?",
+      "index": "64"
+    },
+    {
+      "topic": "VFreeformGoodspringsGSSunnySmilesTopic002",
+      "topic_text": "What other towns are nearby?",
+      "emotion": "Neutral 50",
+      "response_text": "Southeast of here is Primm - can't miss it, since it has this giant old rollercoaster right in the middle of town. The NCR's got an outpost there.",
+      "index": "65"
+    },
+    {
+      "topic": "VFreeformGoodspringsGSSunnySmilesTopic003",
+      "topic_text": "What kind of creatures are out there?",
+      "emotion": "Neutral 50",
+      "response_text": "Around here, mostly coyotes and geckos. The coyotes are pretty dangerous in large packs, but otherwise they're nothing to really worry about.",
+      "index": "68"
+    },
+    {
+      "topic": "VFreeformGoodspringsGSSunnySmilesTopic004",
+      "topic_text": "That's all I wanted to know. Let's talk about something else.",
+      "emotion": "Neutral 50",
+      "response_text": "If you want to know anything else, just ask.",
+      "index": "71"
+    },
+    {
+      "topic": "VFreeformGoodspringsGSSunnySmilesTopic005",
+      "topic_text": "What do you do around here?",
+      "emotion": "Neutral 50",
+      "response_text": "I hunt geckos, mostly. The meat's pretty good and I can always find a buyer for the hides.",
+      "index": "72"
+    },
+    {
+      "topic": "VFreeformGoodspringsGSSunnySmilesTopic006",
+      "topic_text": "How many are there?",
+      "emotion": "Neutral 50",
+      "response_text": "At least six, Joe Cobb included. They look pretty mean.",
+      "index": "74"
+    },
+    {
+      "topic": "VFreeformGoodspringsGSSunnySmilesTopic007",
+      "topic_text": "Where's Trudy and the rest?",
+      "emotion": "Neutral 50",
+      "response_text": "They're getting set up in cover, but it might not go well unless we get out there soon.",
+      "index": "76"
+    },
+    {
+      "topic": "VFreeformGoodspringsGSSunnySmilesTopic008",
+      "topic_text": "Let's go.",
+      "emotion": "Neutral 50",
+      "response_text": "Oh, Easy Pete came through with the dynamite. Here's your supply. I really hope I don't blow myself up.",
+      "index": "77"
+    },
+    {
+      "topic": "VFreeformGoodspringsGSSunnySmilesTopic009",
+      "topic_text": "I wish I could've done more to save him.",
+      "emotion": "Neutral 50",
+      "response_text": "At least his death was quick. Cobb's gang had much worse in mind for him.",
+      "index": "79"
+    },
+    {
+      "topic": "VFreeformGoodspringsGSSunnySmilesTopic012",
+      "topic_text": "What do you know about the other group?",
+      "emotion": "Neutral 50",
+      "response_text": "Got a funny name. Call themselves Caesar's Legion. Never seen 'em in these parts, so I couldn't tell you much.",
+      "index": "80"
+    },
+    {
+      "topic": "VFreeformGoodspringsGSSunnySmilesTopic013",
+      "topic_text": "NCR?",
+      "emotion": "Neutral 50",
+      "response_text": "The New California Republic. Bunch of settlers and soldiers coming in from the West, fixing on making Nevada their own.",
+      "index": "83"
+    },
+    {
+      "topic": "VFreeformGoodspringsGSSunnySmilesTopic014",
+      "topic_text": "Yes, terrible shame. Did you find anything of value on the Powder Gangers?",
+      "emotion": "Neutral 50",
+      "response_text": "Looting the bodies isn't a priority to me, but you go right on ahead.",
+      "index": "86"
+    },
+    {
+      "topic": "VFreeformGoodspringsGSSunnySmilesTopic015",
+      "topic_text": "We all knew what we were getting into.",
+      "emotion": "Neutral 50",
+      "response_text": "You're right, we did. I just wish things had turned out better.",
+      "index": "87"
+    },
+    {
+      "topic": "VFreeformGoodspringsGSSunnySmilesTopic016",
+      "topic_text": "I need to get to Primm. Can you suggest a route?",
+      "emotion": "Neutral 50",
+      "response_text": "Sure can. Take the road southeast out of town till it hits the freeway. Primm is the town with the roller coaster, straight south. Can't miss it.",
+      "index": "88"
+    },
+    {
+      "topic": "VFreeformGoodspringsGSSunnySmilesTopic019",
+      "topic_text": "Doc Mitchell said you could teach me to survive in the desert.",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah, I guess there's a thing or two I could show you. Sounds like you need all the help you can get after what they done to you.",
+      "index": "91"
+    },
+    {
+      "topic": "VFreeformGoodspringsGSSunnySmilesTopic020",
+      "topic_text": "I'm a little short on caps. I don't suppose there's any work available?",
+      "emotion": "Neutral 50",
+      "response_text": "Not in Goodsprings, no. But if you're up for a little scavenging, there's always the schoolhouse.",
+      "index": "93"
+    },
+    {
+      "topic": "VFreeformGoodspringsGSSunnySmilesTopic021",
+      "topic_text": "A magazine on locksmiths?",
+      "emotion": "Neutral 50",
+      "response_text": "If the lock's too much for you to handle, reading through the magazine might give you the edge you need.",
+      "index": "96"
+    },
+    {
+      "topic": "VFreeformGoodspringsGSSunnySmilesTopic022",
+      "topic_text": "What are the bobby pins for?",
+      "emotion": "Neutral 50",
+      "response_text": "You'll need those to pick the lock. Be careful, though - put too much pressure on them and they'll snap.",
+      "index": "97"
+    },
+    {
+      "topic": "VFreeformGoodspringsGSSunnySmilesTopic025",
+      "topic_text": "All right. I'll go take a look at that safe when I have a chance.",
+      "emotion": "Neutral 50",
+      "response_text": "Always happy to help someone down on their luck.",
+      "index": "98"
+    },
+    {
+      "topic": "VFreeformGoodspringsGSSunnySmilesTopic026",
+      "topic_text": "Actually, I already cracked that safe.",
+      "emotion": "Happy 50",
+      "response_text": "Oh. Well, go ahead and keep the stuff I gave you, anyway. It'll be more useful to you than me.",
+      "index": "99"
+    },
+    {
+      "topic": "VFreeformGoodspringsGSSunnySmilesTopic027",
+      "topic_text": "Would Chet be willing to give us his supplies?",
+      "emotion": "Anger 5",
+      "response_text": "{annoyed at Chet's selfishness}I don't think \"give\" is in Chet's vocabulary. Even with the town at stake, he'd still make you barter with him.",
+      "index": "100"
+    },
+    {
+      "topic": "VFreeformGoodspringsGoodspringsSunnySmilesTopic000",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "I'll be waiting.",
+      "index": "101"
+    },
+    {
+      "topic": "VFreeformGoodspringsGoodspringsSunnySmilesTopic001",
+      "topic_text": "I'm going to help Ringo take on the powder gangers. I might need your help.",
+      "emotion": "Neutral 50",
+      "response_text": "Say no more. I'm in.",
+      "index": "103"
+    },
+    {
+      "topic": "VFreeformGoodspringsGoodspringsSunnySmilesTopic002",
+      "topic_text": "Well, that was easy.",
+      "emotion": "Neutral 50",
+      "response_text": "Joe Cobb talks about leaving us alone if we hand over Ringo, but I know his type. He and his friends will come after the town eventually.",
+      "index": "104"
+    },
+    {
+      "topic": "VFreeformGoodspringsGoodspringsSunnySmilesTopic003",
+      "topic_text": "Just like that?",
+      "emotion": "Neutral 50",
+      "response_text": "Just like that. I have a feeling that I'm going to end up fighting those guys one way or another, so I might as well get it over with.",
+      "index": "114"
+    },
+    {
+      "topic": "VFreeformGoodspringsGoodspringsSunnySmilesTopic004",
+      "topic_text": "We might die horribly. Well, maybe not me.",
+      "emotion": "Neutral 50",
+      "response_text": "That's inspiring. You might want to keep your optimism to yourself if you try to recruit anyone else.",
+      "index": "115"
+    },
+    {
+      "topic": "VFreeformGoodspringsGoodspringsSunnySmilesTopic005",
+      "topic_text": "Any ideas on how to convince Trudy to join us?",
+      "emotion": "Neutral 50",
+      "response_text": "A silver tongue would help. Convincing Trudy that we had a good plan to win the fight would also help.",
+      "index": "116"
+    },
+    {
+      "topic": "VFreeformGoodspringsGoodspringsSunnySmilesTopic007",
+      "topic_text": "How can I get Easy Pete's dynamite?",
+      "emotion": "Neutral 50",
+      "response_text": "Easy Pete's pretty protective of his dynamite. You'd have to convince him you know a thing or two about explosives before he handed it over.",
+      "index": "117"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "I'll be waiting.",
+      "index": "118"
+    },
+    {
+      "topic": "VCG02SunnyBark",
+      "topic_text": "VCG02SunnyBark",
+      "emotion": "Neutral 50",
+      "response_text": "Now, see those sarsaparilla bottles on that fence there? Take this and try to hit a couple of 'em.",
+      "index": "120"
+    },
+    {
+      "topic": "VCG02SunnyShotReaction",
+      "topic_text": "VCG02SunnyShotReaction",
+      "emotion": "Neutral 50",
+      "response_text": "That's the right idea. Look down the sight.",
+      "index": "122"
+    }
+  ],
+  "combat": [
+    {
+      "topic": "AcceptYield",
+      "topic_text": "AcceptYield",
+      "emotion": "Neutral 50",
+      "response_text": "What the hell were you thinking?",
+      "index": "125"
+    },
+    {
+      "topic": "Assault",
+      "topic_text": "Assault",
+      "emotion": "Neutral 50",
+      "response_text": "Ow!",
+      "index": "126"
+    },
+    {
+      "topic": "Attack",
+      "topic_text": "Attack",
+      "emotion": "Neutral 50",
+      "response_text": "Come on!",
+      "index": "129"
+    },
+    {
+      "topic": "AvoidThreat",
+      "topic_text": "AvoidThreat",
+      "emotion": "Neutral 50",
+      "response_text": "Get out of the way!",
+      "index": "132"
+    },
+    {
+      "topic": "Death",
+      "topic_text": "Death",
+      "emotion": "Neutral 50",
+      "response_text": "Ugh!",
+      "index": "134"
+    },
+    {
+      "topic": "DeathResponse",
+      "topic_text": "DeathResponse",
+      "emotion": "Neutral 50",
+      "response_text": "You'll pay for that!",
+      "index": "137"
+    },
+    {
+      "topic": "FireExplosive",
+      "topic_text": "FireExplosive",
+      "emotion": "Neutral 50",
+      "response_text": "Fire in the hole!",
+      "index": "139"
+    },
+    {
+      "topic": "Flee",
+      "topic_text": "Flee",
+      "emotion": "Neutral 50",
+      "response_text": "I gotta get outta here!",
+      "index": "141"
+    },
+    {
+      "topic": "GuardTrespass",
+      "topic_text": "GuardTrespass",
+      "emotion": "Neutral 50",
+      "response_text": "Hey! No trespassing.",
+      "index": "144"
+    },
+    {
+      "topic": "Hit",
+      "topic_text": "Hit",
+      "emotion": "Neutral 50",
+      "response_text": "Ahh!",
+      "index": "147"
+    },
+    {
+      "topic": "Murder",
+      "topic_text": "Murder",
+      "emotion": "Neutral 50",
+      "response_text": "You won't get away with that.",
+      "index": "153"
+    },
+    {
+      "topic": "MurderNoCrime",
+      "topic_text": "MurderNoCrime",
+      "emotion": "Neutral 50",
+      "response_text": "Not my problem.",
+      "index": "156"
+    },
+    {
+      "topic": "PowerAttack",
+      "topic_text": "PowerAttack",
+      "emotion": "Neutral 50",
+      "response_text": "Ahhh!",
+      "index": "159"
+    },
+    {
+      "topic": "Steal",
+      "topic_text": "Steal",
+      "emotion": "Neutral 50",
+      "response_text": "Hands off!",
+      "index": "163"
+    }
+  ]
+}

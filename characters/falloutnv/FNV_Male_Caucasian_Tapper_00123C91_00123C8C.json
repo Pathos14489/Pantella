@@ -1,0 +1,111 @@
+{
+  "name": "Tapper",
+  "url": "/wiki/Tapper",
+  "dialogue_name": "VFSKingWaterPumpGreeter.txt",
+  "dialogue_url": "/wiki/VFSKingWaterPumpGreeter.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "00123C91",
+  "ref_id": "00123C8C",
+  "editor_id": "VFSKingWaterPumpGreeter",
+  "location": "Freeside",
+  "location_url": "/wiki/Freeside",
+  "descriptions": [
+    "Tapper is a water merchant for the Kings living in Freeside in 2281.",
+    "He is a member of the Kings who was ordered by The King to guard their water pump.",
+    "After helping Bill Ronte in the quest High Times, the Courier can drink water directly from the pump for free.",
+    "Tapper takes care of the water pump installed at Freeside, but one needs to pay caps if they wish to drink from it. As an alternative, one can buy bottled water from him, as well.",
+    "PC Playstation 3 Xbox 360 Tapper shares the same bug as Elder McNamara, Head Paladin Hardin, Scribe Ibsen and the range master, saying Antony's unique way of saying \"Later.\" "
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Kings",
+  "role": "Water merchant",
+  "detailed_location": "Freeside- Pump",
+  "voice_actor": "Yuri Lowenthal",
+  "special": {
+    "Strength": 6,
+    "Perception": 8,
+    "Endurance": 5,
+    "Charisma": 3,
+    "Intelligence": 3,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "level": "15",
+  "tag_skills": [
+    {
+      "Energy Weap.:": "87"
+    },
+    {
+      "Guns:": "81"
+    },
+    {
+      "Melee Weap.:": "83"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Neutral",
+  "voice_type": "MaleAdult01Default",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "Hey, you helped out Bill Ronte so the Followers worked out a deal for you to drink free.",
+      "index": "1"
+    },
+    {
+      "topic": "VFreeformFreesideVFSKingWaterPumpGreeterTopic000",
+      "topic_text": "Why charge for water?",
+      "emotion": "Neutral 50",
+      "response_text": "If we let everyone run amok, the damn NCR would shut us down. Gotta have some way to regulate usage.",
+      "index": "3"
+    },
+    {
+      "topic": "VFreeformFreesideVFSKingWaterPumpGreeterTopic001",
+      "topic_text": "How much for a drink?",
+      "emotion": "Neutral 50",
+      "response_text": "Just a few caps for a good long swig.",
+      "index": "4"
+    },
+    {
+      "topic": "VFreeformFreesideVFSKingWaterPumpGreeterTopic002",
+      "topic_text": "Can I buy bottled water?",
+      "emotion": "Neutral 50",
+      "response_text": "Sure thing.",
+      "index": "6"
+    },
+    {
+      "topic": "VFreeformFreesideVFSKingWaterPumpGreeterTopic003",
+      "topic_text": "<Pay 10 caps>",
+      "emotion": "Neutral 50",
+      "response_text": "Don't get wise. We charge per use, so make that first drink worth the caps.",
+      "index": "7"
+    },
+    {
+      "topic": "VFreeformFreesideVFSKingWaterPumpGreeterTopic004",
+      "topic_text": "Never mind.",
+      "emotion": "Neutral 50",
+      "response_text": "Anything else you want?",
+      "index": "8"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "VFSWaterPumpBark",
+      "topic_text": "VFSWaterPumpBark",
+      "emotion": "Neutral 50",
+      "response_text": "The pump is property of The King. You'll need to pay if you want a drink.",
+      "index": "9"
+    }
+  ],
+  "combat": []
+}

@@ -1,0 +1,432 @@
+{
+  "name": "Michael Angelo",
+  "url": "/wiki/Michael_Angelo",
+  "dialogue_name": "VMS22MichaelAngelo.txt",
+  "dialogue_url": "/wiki/VMS22MichaelAngelo.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "0011253E",
+  "ref_id": "0011253F",
+  "editor_id": "VMS22MichaelAngelo",
+  "location": "Michael Angelo's workshop",
+  "location_url": "/wiki/Michael_Angelo%27s_workshop",
+  "descriptions": [
+    "Michael Angelo, born Sheldon Weintraub and nicknamed informally as Mickey is a former resident of Vault 21 and the sole proprietor of his eponymous workshop on the New Vegas Strip in Fallout: New Vegas.",
+    "Born in Vault 21, Sheldon spent his adolescence inside the vault with his sister, Sarah Weintraub.",
+    "In 2274, Robert House, self-proclaimed proprietor of the New Vegas Strip, contacted the vault residents with an offer: joining the resurgence of the once bustling pre-War city as he began its renovations from that year onwards. Having never previously opened to the outside world, many residents felt threatened by the gambit of an \"unknown future teetering on a precarious balance,\" which was a stark contrast to the stable isolated society they had maintained happily for nearly two-hundred years.",
+    "Their fates, along with the other residents, were ultimately sealed in a high stakes game of Blackjack, a tradition of the vault's society. Those few hard-liners who sided with House challenged their opposition and, in an \"extremely risky, and fateful, gambit,\" those same hard-liners proved victorious,",
+    "This process required pushing out the vault's residents, some of whom resettled in the soon to be thriving city,",
+    "Describing it as a \"marvel to behold\" initially, venturing out into this new world granted Sheldon a new purpose in life: using the newfound inspiration it provided to create works of art, a relative rarity in the post-War world.",
+    "Billboards, signs and lights were sure to attract visitors to the gleaming jewel that would become New Vegas. Setting the artist up with his own sprawling workshop, his skills were put to use creating nearly every neon light show and eye catching billboard or sign present on the Strip by 2281.",
+    "House's request would not be his only struggle, however, as the artist became stricken with a fear of the outside world and large open spaces, preventing him from leaving the Strip from the safety of his workshop.",
+    "PC Xbox 360 Upon passing the agoraphobia medicine check, you can restart the conversation, and pass the check again. Since you get experience for each successful check, you can gain infinite experience by completing the conversation item repeatedly."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Vault 21(formerly}New Vegas Strip",
+  "role": "Commercial artist5 of Diamonds",
+  "detailed_location": "Michael Angelo's workshop",
+  "voice_actor": "Jesse Burch",
+  "special": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 5,
+    "Intelligence": 5,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "level": "1",
+  "misc_skills": [],
+  "karma": "Good",
+  "voice_type": "MaleAdult03",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Surprise 30",
+      "response_text": "Oh... Hello. I am Michael Angelo. How can I-",
+      "index": "1"
+    },
+    {
+      "topic": "VMS22MichaelAngeloTopic000",
+      "topic_text": "No, I'm not here for anything like that. Who are you?",
+      "emotion": "Happy 70",
+      "response_text": "That's great to hear, really great. I am Sheldon, from Vault 21, although here I go by my artistic name, \"Michael Angelo.\"",
+      "index": "7"
+    },
+    {
+      "topic": "VMS22MichaelAngeloTopic001",
+      "topic_text": "(Lie) A messenger?... Why, yes! Of course, Mr. House and I go way, waaaay back.",
+      "emotion": "Pained 80",
+      "response_text": "{Hesitant Warning}[FAILED] I know important people here in the Strip. Powerful people. You, uh, can't get anything out of me.",
+      "index": "9"
+    },
+    {
+      "topic": "VMS22MichaelAngeloTopic002",
+      "topic_text": "(Lie) Of course I act on behalf of Mr. House. Why else would I be here?",
+      "emotion": "Sad 70",
+      "response_text": "{Frantically Apologetic}[SUCCEEDED] I am sorry, meant no offense. The billboards are not ready yet... Please, I need more time, more materials!",
+      "index": "10"
+    },
+    {
+      "topic": "VMS22MichaelAngeloTopic003",
+      "topic_text": "Why are you so jittery about Mr. House?",
+      "emotion": "Pained 70",
+      "response_text": "{Taking Offense}Because spending myself to the edge of artistic oblivion for Mr. House sums up my existence since I had to leave Vault 21, that's why.",
+      "index": "11"
+    },
+    {
+      "topic": "VMS22MichaelAngeloTopic004",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Oh... All right. So, Ah... Bye.",
+      "index": "12"
+    },
+    {
+      "topic": "VMS22MichaelAngeloTopic005",
+      "topic_text": "Okay. Game's over. Now pay up or I'll break your bones one by one, little man!",
+      "emotion": "Fear 80",
+      "response_text": "{Fearful}What!? No, please! Here, take the caps but please don't hurt me!",
+      "index": "13"
+    },
+    {
+      "topic": "VMS22MichaelAngeloTopic006",
+      "topic_text": "You lived in Vault 21? Tell me about that.",
+      "emotion": "Neutral 50",
+      "response_text": "Most people don't, uh, understand what it means to grow up in a vault. Its corridors, its walls, radiate a warmth that feels, safe, honest.",
+      "index": "14"
+    },
+    {
+      "topic": "VMS22MichaelAngeloTopic007",
+      "topic_text": "I guess you're having trouble with Mr. House requests. What's the problem?",
+      "emotion": "Sad 80",
+      "response_text": "{Accusative, then thoughtful nostalgia}It's this place - my inspiration ebbs and I don't know how to stop it! I can't feel the warmth anymore...",
+      "index": "16"
+    },
+    {
+      "topic": "VMS22MichaelAngeloTopic008",
+      "topic_text": "An artist - rare thing to see. What's your story?",
+      "emotion": "Happy 30",
+      "response_text": "Well, I, uh, not much, really. Vault 21 was my home, my dear home. I left it to explore the outside world.",
+      "index": "17"
+    },
+    {
+      "topic": "VMS22MichaelAngeloTopic009",
+      "topic_text": "(Lie) You really believed I wasn't working for Mr. House? Chump.",
+      "emotion": "Fear 40",
+      "response_text": "[SUCCEEDED] I should've known that Mr. House wouldn't have sent just anybody. Anything I might I offer to, well, encourage discretion?",
+      "index": "19"
+    },
+    {
+      "topic": "VMS22MichaelAngeloTopic010",
+      "topic_text": "Spare parts, assembly tools, generators. Mr. House won't buy your excuse.",
+      "emotion": "Fear 40",
+      "response_text": "[SUCCEEDED] I should've known that Mr. House wouldn't have sent just anybody. Anything I might I offer to, well, encourage discretion?",
+      "index": "20"
+    },
+    {
+      "topic": "VMS22MichaelAngeloTopic011",
+      "topic_text": "Lets see... You've got that thingy... there. Power, uh, re-circulators here....",
+      "emotion": "Neutral 50",
+      "response_text": "{Suddenly Suspicious}Wait a minute... Do you even know what I do here? Who are you, really?",
+      "index": "21"
+    },
+    {
+      "topic": "VMS22MichaelAngeloTopic012",
+      "topic_text": "Your failure would not amuse Mr. House. Unless I be persuaded otherwise.",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] You've made your point. What would it take to... convince you to keep silent until I manage to finish Mr. House's requests?",
+      "index": "22"
+    },
+    {
+      "topic": "VMS22MichaelAngeloTopic013",
+      "topic_text": "Better cough up some caps or Mr. House finds about your sorry excuses.",
+      "emotion": "Anger 70",
+      "response_text": "[FAILED]Sorry excuses?.. That's does it! Tell Mr. House to hire a better artist, if he can find one in this barren wasteland!",
+      "index": "23"
+    },
+    {
+      "topic": "VMS22MichaelAngeloTopic014",
+      "topic_text": "Relax. I was just kidding. What's all this fretting about Mr. House?",
+      "emotion": "Happy 50",
+      "response_text": "{Surprised Relief}You were, really? Okay. For a moment I thought you were going to tighten my screws - like everyone else around here.",
+      "index": "24"
+    },
+    {
+      "topic": "VMS22MichaelAngeloTopic015",
+      "topic_text": "Have you seen the cost of pliers, duct-tape and saws lately? 300 caps.",
+      "emotion": "Anger 50",
+      "response_text": "{Angry Resignation}[SUCCEEDED] Yeah, I imagine that it takes a lot to fill the void of such a bottomless soul. Take the caps and leave me to my sorrows.",
+      "index": "25"
+    },
+    {
+      "topic": "VMS22MichaelAngeloTopic016",
+      "topic_text": "Artists are scarce. I bet you get paid handsomely. Cough up 300 caps.",
+      "emotion": "Disgust 60",
+      "response_text": "{Taking Offense}[FAILED] What!? I don't get paid near enough to what my talent deserves!? A 150 caps is my final offer.",
+      "index": "26"
+    },
+    {
+      "topic": "VMS22MichaelAngeloTopic017",
+      "topic_text": "Oh, so you've got lots of caps on you? Then I guess I can just beat them out of you.",
+      "emotion": "Fear 90",
+      "response_text": "{Fearful}What!? No, please! Here, take the caps but please don't hurt me!",
+      "index": "27"
+    },
+    {
+      "topic": "VMS22MichaelAngeloTopic018",
+      "topic_text": "(Lie) So, uh, wasn't it clever how I tricked you? I'm... working for Mr. House!",
+      "emotion": "Fear 50",
+      "response_text": "{Hesitant Warning}[FAILED] I know important people here in the Strip. Powerful people. You, uh, can't get anything out of me.",
+      "index": "28"
+    },
+    {
+      "topic": "VMS22MichaelAngeloTopic019",
+      "topic_text": "All right. 150 caps will do.",
+      "emotion": "Neutral 50",
+      "response_text": "Here. Now, please leave me be. I have had enough bullying for today.",
+      "index": "29"
+    },
+    {
+      "topic": "VMS22MichaelAngeloTopic020",
+      "topic_text": "300 caps it is.",
+      "emotion": "Neutral 50",
+      "response_text": "Here. Now, please leave me be. I have had enough bullying for today.",
+      "index": "30"
+    },
+    {
+      "topic": "VMS22MichaelAngeloTopic022",
+      "topic_text": "You exhibit clear symptoms of acute agoraphobia. I can help.",
+      "emotion": "Surprise 40",
+      "response_text": "[SUCCEEDED] Ah, an educated fellow? Now that is almost as rare as artistry! So, how can you help me regain my inspiration?",
+      "index": "31"
+    },
+    {
+      "topic": "VMS22MichaelAngeloTopic023",
+      "topic_text": "Oh, that's, uh, I have it at the tip of my tongue... Agomorrahphobia! I'll help.",
+      "emotion": "Neutral 50",
+      "response_text": "Maybe you are thinking of Agoraphobia? Yes, you are right. I need something to bring back my inspiration. Any ideas?",
+      "index": "32"
+    },
+    {
+      "topic": "VMS22MichaelAngeloTopic024",
+      "topic_text": "So, is this fear of the outside world draining your inspiration?",
+      "emotion": "Fear 30",
+      "response_text": "Yes, I think so... But, please, uh, keep quiet about it. Without inspiration I am as good as a tumbleweed drifting in the barren wasteland.",
+      "index": "33"
+    },
+    {
+      "topic": "VMS22MichaelAngeloTopic025",
+      "topic_text": "It sounds as if you don't like this place. What is wrong with it?",
+      "emotion": "Neutral 50",
+      "response_text": "I feel haunted by something terrible. Working in such a huge workshop often makes me shiver... I can't even leave the Strip!",
+      "index": "34"
+    },
+    {
+      "topic": "VMS22MichaelAngeloTopic026",
+      "topic_text": "Why don't you pack up and return to Vault 21?",
+      "emotion": "Neutral 50",
+      "response_text": "Wouldn't that be great... No - Mr. House filled it with concrete. Only a few rooms and halls remain. My sister was able to turn them into a hotel.",
+      "index": "35"
+    },
+    {
+      "topic": "VMS22MichaelAngeloTopic027",
+      "topic_text": "You seem to dread hearing about Mr. House's requests. What is the problem?",
+      "emotion": "Sad 50",
+      "response_text": "{Accusative, then thoughtful nostalgia}It's this place - my inspiration ebbs and I don't know how to stop it! I can't feel the warmth anymore...",
+      "index": "36"
+    },
+    {
+      "topic": "VMS22MichaelAngeloTopic028",
+      "topic_text": "Relax. I was just kidding.",
+      "emotion": "Happy 50",
+      "response_text": "{Surprised Relief}You were, really? Okay. For a moment I thought you were going to tighten my screws - like everyone else around here.",
+      "index": "37"
+    },
+    {
+      "topic": "VMS22MichaelAngeloTopic029",
+      "topic_text": "Have you seen the cost of pliers, duct-tape and saws lately? 300 caps.",
+      "emotion": "Anger 50",
+      "response_text": "{Angry Resignation}[SUCCEEDED] Yeah, I imagine that it takes a lot to fill the void of such a bottomless soul. Take the caps and leave me to my sorrows.",
+      "index": "38"
+    },
+    {
+      "topic": "VMS22MichaelAngeloTopic030",
+      "topic_text": "Artists are scarce. I bet you get paid handsomely. Cough up 300 caps.",
+      "emotion": "Disgust 60",
+      "response_text": "{Taking Offense}[FAILED] What!? I don't get paid near enough to what my talent deserves!? A 150 caps is my final offer.",
+      "index": "39"
+    },
+    {
+      "topic": "VMS22MichaelAngeloTopic031",
+      "topic_text": "Several years of psychoanalysis, and a few thousand caps a month, will fix you.",
+      "emotion": "Surprise 50",
+      "response_text": "What? Are you serious? I am an artist! I need inspiration, not therapy.",
+      "index": "40"
+    },
+    {
+      "topic": "VMS22MichaelAngeloTopic032",
+      "topic_text": "I know this guy in Freeside, really good at trepanation. You'd be amazed how h-.",
+      "emotion": "Surprise 50",
+      "response_text": "Stop right there!... I'm sorry, but there's nothing wrong with my brain. What I need is something that inspires ideas back into my work.",
+      "index": "41"
+    },
+    {
+      "topic": "VMS22MichaelAngeloTopic033",
+      "topic_text": "Grow a pair and go out into the real world to find your inspiration!",
+      "emotion": "Anger 50",
+      "response_text": "I... what does this have to do with my - never mind! I just can't go outside, get it? There has to be another way.",
+      "index": "42"
+    },
+    {
+      "topic": "VMS22MichaelAngeloTopic034",
+      "topic_text": "I could escort you into the wasteland. It's not so bad.",
+      "emotion": "Surprise 50",
+      "response_text": "{Sudden Realization}Thank you for the offer but I think I really can't go to see... wait a minute. I know! I don't have to necessarily be there to see it.",
+      "index": "43"
+    },
+    {
+      "topic": "VMS22MichaelAngeloTopic035",
+      "topic_text": "What do you mean?",
+      "emotion": "Happy 80",
+      "response_text": "Yes. Yes! That's it! I have a camera! It is old but it should work. Perhaps you could bring me images of inspiring landmarks?",
+      "index": "44"
+    },
+    {
+      "topic": "VMS22MichaelAngeloTopic036",
+      "topic_text": "I'll help you. Do you have any landmarks in mind?",
+      "emotion": "Neutral 50",
+      "response_text": "I always wanted to see the Dinosaur and its Thermometer sign at Novac. Then, there's the famous Bison Steve sign.",
+      "index": "45"
+    },
+    {
+      "topic": "VMS22MichaelAngeloTopic037",
+      "topic_text": "Mickey, photography is a risky business. This is going to cost you. A lot.",
+      "emotion": "Sad 60",
+      "response_text": "There's an opportunity for profit anywhere, uh? Even if it means preying on the helpless. Okay, you... shuckster - 150 caps each if they are good.",
+      "index": "47"
+    },
+    {
+      "topic": "VMS22MichaelAngeloTopic038",
+      "topic_text": "You know, I'm tired of this. I think I'll just beat you senseless instead.",
+      "emotion": "Fear 80",
+      "response_text": "{Fearful}What!? No, please! Here, take the caps but please don't hurt me!",
+      "index": "48"
+    },
+    {
+      "topic": "VMS22MichaelAngeloTopic039",
+      "topic_text": "Ok, you've got a deal. I'll return with the pictures.",
+      "emotion": "Happy 60",
+      "response_text": "Thank you! I really can't thank you enough for this. Please, get me all the pictures. I will compensate you accordingly.",
+      "index": "49"
+    },
+    {
+      "topic": "VMS22MichaelAngeloTopic040",
+      "topic_text": "I have some fresh pictures for you.",
+      "emotion": "Neutral 50",
+      "response_text": "Oh, that's wonderful! Just what I need. Thank you, brave one! Here's some compensation for your work.",
+      "index": "51"
+    },
+    {
+      "topic": "VMS22MichaelAngeloTopic041",
+      "topic_text": "I'm glad we have an understanding. Now, do you have any landmarks in mind?",
+      "emotion": "Neutral 50",
+      "response_text": "I always wanted to see the Dinosaur and its Thermometer sign at Novac. Then, there's the famous Bison Steve sign.",
+      "index": "52"
+    },
+    {
+      "topic": "VMS22MichaelAngeloTopic042",
+      "topic_text": "You're not making this easy. Screw it. Hand over the caps or drop dead.",
+      "emotion": "Fear 80",
+      "response_text": "{Fearful}What!? No, please! Here, take the caps but please don't hurt me!",
+      "index": "54"
+    },
+    {
+      "topic": "VMS22MichaelAngeloTopic043",
+      "topic_text": "That's a very... inspired choice, Mickey.",
+      "emotion": "Anger 60",
+      "response_text": "{Still afraid}Now that you have all you care for, please... leave, and don't come back!",
+      "index": "55"
+    },
+    {
+      "topic": "VMS22MichaelAngeloTopic044",
+      "topic_text": "Groveling brings out the worst in me. I'm going to enjoy this.",
+      "emotion": "Fear 90",
+      "response_text": "Aaaaahhhhh - Help!",
+      "index": "56"
+    },
+    {
+      "topic": "VMS22MichaelAngeloTopic045",
+      "topic_text": "Tell me about you again.",
+      "emotion": "Neutral 50",
+      "response_text": "I am Sheldon, from Vault 21, although here I go by my artistic name, \"Michael Angelo.\"",
+      "index": "57"
+    },
+    {
+      "topic": "VMS22MichaelAngeloTopic046",
+      "topic_text": "You mentioned growing up in Vault 21. Can you tell me about that?",
+      "emotion": "Neutral 50",
+      "response_text": "Most people don't, uh, understand what it means to grow up in a vault. Its corridors, its walls, radiate a warmth that feels, safe, honest.",
+      "index": "58"
+    },
+    {
+      "topic": "VMS22MichaelAngeloTopic047",
+      "topic_text": "What's your story, Michael Angelo?",
+      "emotion": "Neutral 50",
+      "response_text": "Well, I, uh, not much, really. Vault 21 was my home, my dear home. I left it to explore the outside world.",
+      "index": "60"
+    },
+    {
+      "topic": "VMS22MichaelAngeloTopic048",
+      "topic_text": "I have some ideas that may help with your agoraphobia problem.",
+      "emotion": "Happy 70",
+      "response_text": "That's great to hear, really great.",
+      "index": "62"
+    },
+    {
+      "topic": "VMS22MichaelAngeloTopic049",
+      "topic_text": "What landmarks did you want me to photograph?",
+      "emotion": "Neutral 50",
+      "response_text": "I always wanted to see the Dinosaur and its Thermometer sign at Novac. Then, there's the famous Bison Steve sign.",
+      "index": "63"
+    },
+    {
+      "topic": "VMS22MichaelAngeloTopic050",
+      "topic_text": "I took all the pictures you wanted. There was something about a reward...",
+      "emotion": "Happy 90",
+      "response_text": "You have earned it, my friend! Now I can finally unveil my masterpieces to the world, all thanks to you. Come visit me again sometime.",
+      "index": "65"
+    },
+    {
+      "topic": "VMS22MichaelAngeloTopic055",
+      "topic_text": "Let's see. Walk half the world or rough you up right now... Mickey, you lose.",
+      "emotion": "Fear 80",
+      "response_text": "{Fearful}What!? No, please! Here, take the caps but please don't hurt me!",
+      "index": "66"
+    },
+    {
+      "topic": "VMS22VMS22MichaelAngeloTopic000",
+      "topic_text": "I need more film for the camera",
+      "emotion": "Neutral 50",
+      "response_text": "Here.",
+      "index": "67"
+    },
+    {
+      "topic": "VMS22VMS22MichaelAngeloTopic001",
+      "topic_text": "Do you know Doc Mitchell?",
+      "emotion": "Happy 50",
+      "response_text": "{Surprised}You mean, Mitch? It's been ages since I've heard the name. My sister and I used to call him \"Mole-butt.\" Don't ask.",
+      "index": "68"
+    }
+  ],
+  "conversation": [],
+  "combat": []
+}

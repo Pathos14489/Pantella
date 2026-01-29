@@ -1,0 +1,103 @@
+{
+  "name": "O-Dog",
+  "url": "/wiki/O-Dog",
+  "dialogue_name": "DLC01ODog.txt",
+  "dialogue_url": "/wiki/DLC01ODog.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "xx00413D",
+  "ref_id": "xx0045FE",
+  "editor_id": "DLC01ODog",
+  "location": "The Pitt Uptown",
+  "location_url": "/wiki/The_Pitt_Uptown",
+  "descriptions": [
+    "O-Dog is a member of the Pitt raiders who is commonly seen walking around the courtyard of Haven in 2277.",
+    "O-Dog has a unique view of the world, considering all individuals to be differing grades of \"meat.\"",
+    "Being another competent user of precision firearms, O-Dog is infatuated with Vikia and competes with Duke to get her attention, though he is rarely successful.",
+    "O-Dog spends a lot of time shooting at beer bottles on an opposite building with his .32 hunting rifle. He can also be found walking around Uptown.",
+    "Due to the fact that he possesses strange meat and refers to the player and other humans as \"meat\" and \"sausage,\" it is implied that he is a cannibal.",
+    "O-Dog appears only in the Fallout 3 add-on The Pitt.",
+    "His name and proclivity for referring to people as meat products is a reference to Pittsburgh's landmark restaurant in Oakland (Uptown in game, where O-Dog is located), Essie's Original Hot Dog Shop (shortened simply to \"The O\" by locals). Due to the Covid-19 pandemic, Essie's Original Hot Dog shop closed in April of 2020. Hot dogs that were served from \"The O\" were referred to simply as O-Dogs."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Pitt raiders",
+  "role": "Sniper",
+  "detailed_location": "The Pitt Uptown",
+  "voice_actor": "Craig Sechler",
+  "special": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 3,
+    "Intelligence": 3,
+    "Agility": 7,
+    "Luck": 5
+  },
+  "level": "1→4→9",
+  "tag_skills": [
+    {
+      "Melee Weap.:": "32→45→66"
+    },
+    {
+      "Small Guns:": "34→47→68"
+    },
+    {
+      "Unarmed:": "28→41→62"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "25→55→85"
+    },
+    {
+      "Critical Chance:": "5%"
+    },
+    {
+      "Unarmed Dam.:": "1.9→2.55→3.6"
+    },
+    {
+      "Poison Resist.:": "15%"
+    },
+    {
+      "Rad. Resist.:": "6%"
+    },
+    {
+      "Carry Weight:": "210"
+    }
+  ],
+  "karma": "Evil",
+  "voice_type": "DLC01RaiderMaleColdVoice",
+  "geck_race": "AsianRaider",
+  "topics": [
+    {
+      "topic": "DLC01HavenResponse1A",
+      "topic_text": "Oh, that's real appetizing.",
+      "emotion": "Happy 50",
+      "response_text": "Hey, it's not pretty, but it's the truth. We're all just meat in the grinder out here. Today's hotshot is tomorrow's Trog-chow.",
+      "index": "1"
+    },
+    {
+      "topic": "DLC01HavenResponse1B",
+      "topic_text": "I'm more than just meat. You wait and see.",
+      "emotion": "Happy 25",
+      "response_text": "Not hardly. Deep down, we're all meat, and even the best of us is just gonna be Trog-chow someday.{Light-heartedly}",
+      "index": "4"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Disgust 25",
+      "response_text": "Saw you earn your ticket Uptown. Don't start thinking that makes you special. You're still just meat.",
+      "index": "6"
+    }
+  ],
+  "conversation": [],
+  "combat": []
+}

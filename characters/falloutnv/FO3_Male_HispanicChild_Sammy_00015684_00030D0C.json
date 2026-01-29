@@ -1,0 +1,403 @@
+{
+  "name": "Sammy",
+  "url": "/wiki/Sammy_(Fallout_3)",
+  "dialogue_name": "Sammy.txt",
+  "dialogue_url": "/wiki/Sammy.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "00015684",
+  "ref_id": "00030D0C",
+  "editor_id": "Sammy",
+  "location": "Child slave house",
+  "location_url": "/wiki/Child_slave_house",
+  "descriptions": [
+    "Sammy is a boy from Little Lamplight who was kidnapped and put into one of Paradise Falls' slave pens in 2277.",
+    "Sammy is the best friend of Squirrel and the youngest member of Little Lamplight's scavenging team. He has the duty of watching Little Lamplight's back door, where Princess pokes fun at him for having a somewhat feminine face. He is highly talented aiming with rifles, but his aim did not help when slavers captured him and his friends. Him and Squirrel were captured on a trading run for Little Lamplight and sold to Eulogy Jones by Rip Smithy. The two have been held captive for around a month. Sammy is irritated by Squirrel's escape attempts because he has not been involved."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Little Lamplight",
+  "role": "Child",
+  "detailed_location": "Child slave house,Paradise FallsLittle Lamplight (optional)",
+  "voice_actor": "Sean McCoy",
+  "special": {
+    "Strength": 3,
+    "Perception": 4,
+    "Endurance": 3,
+    "Charisma": 3,
+    "Intelligence": 3,
+    "Agility": 7,
+    "Luck": 7
+  },
+  "level": "1",
+  "tag_skills": [
+    {
+      "Explosives:": "29"
+    },
+    {
+      "Small Guns:": "35"
+    },
+    {
+      "Sneak:": "35"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "20"
+    },
+    {
+      "Critical Chance:": "7%"
+    },
+    {
+      "Unarmed Dam.:": "1.10"
+    },
+    {
+      "Poison Resist.:": "10%"
+    },
+    {
+      "Rad. Resist.:": "4%"
+    },
+    {
+      "Carry Weight:": "180"
+    },
+    {
+      "Damage Res.:": "5%"
+    }
+  ],
+  "karma": "Good",
+  "voice_type": "MaleChild01DC",
+  "geck_race": "HispanicChild",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "Thanks for getting us out of there, mungo. We're gonna head back home now.",
+      "index": "1"
+    },
+    {
+      "topic": "LLClasses",
+      "topic_text": "Do you like classes with Joseph?",
+      "emotion": "Anger 25",
+      "response_text": "Yeah. What I don't like's being bugged when I'm trying to learn.",
+      "index": "38"
+    },
+    {
+      "topic": "LLDirections",
+      "topic_text": "Can you give me directions?",
+      "emotion": "Anger 25",
+      "response_text": "Where to, mungo?{grudgingly}",
+      "index": "39"
+    },
+    {
+      "topic": "LLGuarding",
+      "topic_text": "Do you enjoy guarding the back gate?",
+      "emotion": "Neutral 50",
+      "response_text": "No, because Princess always bosses me around and there's never nothing to gun.",
+      "index": "40"
+    },
+    {
+      "topic": "LLPrincessNickname",
+      "topic_text": "Can you tell me why Princess gets angry about her nickname?",
+      "emotion": "Disgust 25",
+      "response_text": "So, a long time ago, Princess convinced everyone that she should be mayor.",
+      "index": "44"
+    },
+    {
+      "topic": "LLPrincessNickname2A",
+      "topic_text": "She was only mayor for five minutes?",
+      "emotion": "Happy 50",
+      "response_text": "Yeah! MacCready said we needed someone to watch out for us, not to lord over us. Then he popped her one! She hasn't even tried since then.",
+      "index": "51"
+    },
+    {
+      "topic": "LLPrincessNickname2B",
+      "topic_text": "Does she still hold a grudge against them?",
+      "emotion": "Neutral 50",
+      "response_text": "No way. I think she's got a crush on him. She's all weird for him.",
+      "index": "53"
+    },
+    {
+      "topic": "LLPrincessNickname2C",
+      "topic_text": "Thanks, Sammy. That's useful information.",
+      "emotion": "Neutral 50",
+      "response_text": "Thanks. Maybe you can take her down a peg, huh?{chuckles a little at the compliment}",
+      "index": "54"
+    },
+    {
+      "topic": "MQ07SammyGetLost",
+      "topic_text": "Get lost, kid.",
+      "emotion": "Neutral 50",
+      "response_text": "Thanks for nothing, ass.",
+      "index": "55"
+    },
+    {
+      "topic": "MQ07SammyHostileGreet1",
+      "topic_text": "You're already out. Can't you just run home from here?",
+      "emotion": "Neutral 50",
+      "response_text": "You saw what happened to that other guy. Same thing'd happen to me if I try to run away now.",
+      "index": "56"
+    },
+    {
+      "topic": "MQ07SammyHostileGreet2",
+      "topic_text": "Sure, what can I do to help, kid?",
+      "emotion": "Neutral 50",
+      "response_text": "This collar. It's gotta get turned off, or else I can't get out of here. You saw what happened to that other guy.",
+      "index": "59"
+    },
+    {
+      "topic": "MQ07SammyHostileGreet3",
+      "topic_text": "Why is this my problem? In case you hadn't noticed, I've already got problems.",
+      "emotion": "Neutral 50",
+      "response_text": "I just thought maybe you could do something, since they're all gonna shoot you anyway.",
+      "index": "62"
+    },
+    {
+      "topic": "MQ07SammyHostileResponse1",
+      "topic_text": "I'll get you kids out of here.",
+      "emotion": "Neutral 50",
+      "response_text": "You're okay for a mungo. Squirrel and Penny are still stuck inside. You need to get the key to the slave pen to get 'em out.",
+      "index": "65"
+    },
+    {
+      "topic": "MQ07SammyHostileResponse2",
+      "topic_text": "Let me think about it.",
+      "emotion": "Neutral 50",
+      "response_text": "Think about it? Come on, mungo. You can do it.",
+      "index": "67"
+    },
+    {
+      "topic": "MQ07SammyHostileResponse3",
+      "topic_text": "Sorry kid. You're on your own.",
+      "emotion": "Neutral 50",
+      "response_text": "Thanks for nothing, mungo.",
+      "index": "69"
+    },
+    {
+      "topic": "MQ07SammyHowDoIGetYouOut",
+      "topic_text": "How can I get you out of here?",
+      "emotion": "Neutral 50",
+      "response_text": "Can't you just shoot them all?",
+      "index": "70"
+    },
+    {
+      "topic": "MQ07SammyLLNo",
+      "topic_text": "Nope. Never heard of it.",
+      "emotion": "Neutral 50",
+      "response_text": "Sure. Most mungos like you don't know where it is. We like it that way.",
+      "index": "71"
+    },
+    {
+      "topic": "MQ07SammyLLYes",
+      "topic_text": "Yeah, I've heard of it.",
+      "emotion": "Neutral 50",
+      "response_text": "Well we need to get out of here and get back there. Right now. So you gotta help us, okay?",
+      "index": "73"
+    },
+    {
+      "topic": "MQ07SammyLLYesMayor",
+      "topic_text": "Mayor MacCready's the one who sent me to get you.",
+      "emotion": "Surprise 50",
+      "response_text": "Really? I knew it! I knew he'd come to get us!{surprised, thrilled}",
+      "index": "74"
+    },
+    {
+      "topic": "MQ07SammyPlanToGetOut",
+      "topic_text": "Don't worry, I've got a plan.",
+      "emotion": "Neutral 50",
+      "response_text": "You do? Great!",
+      "index": "76"
+    },
+    {
+      "topic": "MQ07SammyShootAnyOtherIdeas",
+      "topic_text": "That's the best you can come up with? Don't you have any other ideas?",
+      "emotion": "Neutral 50",
+      "response_text": "Well, I mean, Squirrel thinks maybe he could use the computer in here to turn off the collars.",
+      "index": "78"
+    },
+    {
+      "topic": "MQ07SammyShootNo",
+      "topic_text": "No way. I can't take them all on.",
+      "emotion": "Neutral 50",
+      "response_text": "No? You sure?",
+      "index": "81"
+    },
+    {
+      "topic": "MQ07SammyStage90Choice1",
+      "topic_text": "Pipe down, short stuff. I'm trying to get you out of here.",
+      "emotion": "Neutral 50",
+      "response_text": "What? That's a load of shit. We're not stupid, you know. We've seen what you mungos are like.",
+      "index": "84"
+    },
+    {
+      "topic": "MQ07SammyStage90Choice2",
+      "topic_text": "Do you want to get rescued or not?",
+      "emotion": "Neutral 50",
+      "response_text": "Rescued? This is a pretty stupid way to rescue anybody, mungo.",
+      "index": "86"
+    },
+    {
+      "topic": "MQ07SammyStage90Choice3",
+      "topic_text": "MacCready sent me. I'm here to rescue you.",
+      "emotion": "Neutral 50",
+      "response_text": "God, why didn't you say that?",
+      "index": "87"
+    },
+    {
+      "topic": "MQ07SammyStage90FineStayHere",
+      "topic_text": "Fine. Would you rather stay here with the Slavers?",
+      "emotion": "Neutral 50",
+      "response_text": "Well... No. You better be telling the truth, mungo, or else we're going to kill you in your sleep.",
+      "index": "90"
+    },
+    {
+      "topic": "MQ07SammyStage90KeepQuiet",
+      "topic_text": "Keep quiet, will you? Let's get out of here, then we can talk.",
+      "emotion": "Neutral 50",
+      "response_text": "What is there to talk about? I know what you're doing. You're going to take us somewhere and make us work for you... or worse.",
+      "index": "92"
+    },
+    {
+      "topic": "MQ07SammyStage90Lamplight",
+      "topic_text": "Look, I came from Little Lamplight.",
+      "emotion": "Neutral 50",
+      "response_text": "You did? You better not be lying. Fine, let's go.",
+      "index": "94"
+    },
+    {
+      "topic": "MQ07SammyWhoAreYou",
+      "topic_text": "Who are you?",
+      "emotion": "Neutral 50",
+      "response_text": "I'm Sammy. I'm from Little Lamplight. Me and Squirrel and Penny... We aren't supposed to be here.",
+      "index": "95"
+    },
+    {
+      "topic": "MQ07SammyWhyShouldIHelpYou",
+      "topic_text": "Why would I help you? What's in it for me?",
+      "emotion": "Neutral 50",
+      "response_text": "Look, we're not supposed to be in here. We live in Little Lamplight. Ever heard of it?",
+      "index": "97"
+    },
+    {
+      "topic": "SpeechChallengeFailure",
+      "topic_text": "Can you tell me why Princess gets angry about her nickname?",
+      "emotion": "Anger 25",
+      "response_text": "No. Because I don't trust you.",
+      "index": "98"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYEI have to go now.",
+      "topic_text": "Stay cool, Sammy.",
+      "emotion": "Anger 10",
+      "response_text": "Okay.{surly, just barely saying \" 'kay\"}",
+      "index": "100"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Neutral 50",
+      "response_text": "We're free!",
+      "index": "101"
+    },
+    {
+      "topic": "LLBackGateConv2",
+      "topic_text": "LLBackGateConv2",
+      "emotion": "Anger 10",
+      "response_text": "What?{Mumbled, slightly sullen.}",
+      "index": "106"
+    },
+    {
+      "topic": "LLBackGateConv4",
+      "topic_text": "LLBackGateConv4",
+      "emotion": "Sad 50",
+      "response_text": "Someday, you're gonna get yours, Princess.{Sullen, mumbled, and a little defeated.}",
+      "index": "108"
+    },
+    {
+      "topic": "LLClassConv1",
+      "topic_text": "LLClassConv1",
+      "emotion": "Neutral 50",
+      "response_text": "I wanna know more about shooting.",
+      "index": "110"
+    },
+    {
+      "topic": "LLClassConv4",
+      "topic_text": "LLClassConv4",
+      "emotion": "Neutral 50",
+      "response_text": "Yes, teacher.{A little frustrated at being told what he already knows.}",
+      "index": "112"
+    },
+    {
+      "topic": "LLMayorDailyCheck1",
+      "topic_text": "LLMayorDailyCheck1",
+      "emotion": "Disgust 25",
+      "response_text": "Everything's okay out back, Mayor. Same as ever.{bored}",
+      "index": "114"
+    },
+    {
+      "topic": "LLPrincessBullyResponse",
+      "topic_text": "LLPrincessBullyResponse",
+      "emotion": "Sad 50",
+      "response_text": "Nothing, I guess.{mumbled, sullen.}",
+      "index": "115"
+    },
+    {
+      "topic": "LLRandomConv1",
+      "topic_text": "LLConversation1",
+      "emotion": "Anger 25",
+      "response_text": "Hello. How's it going?{mumbled, apathetic}",
+      "index": "116"
+    },
+    {
+      "topic": "LLRandomConv2",
+      "topic_text": "LLConversation2",
+      "emotion": "Anger 25",
+      "response_text": "I'm fine.{mumbled, sullen.}",
+      "index": "117"
+    },
+    {
+      "topic": "LLRandomConvEnding",
+      "topic_text": "LLRandomConvEnding",
+      "emotion": "Anger 25",
+      "response_text": "Fine. Bye now.{mumbled}",
+      "index": "118"
+    },
+    {
+      "topic": "LLSammyLunchDelivery",
+      "topic_text": "LLSammyLunchDelivery",
+      "emotion": "Sad 50",
+      "response_text": "Here's food, Princess.{A little sullen}",
+      "index": "119"
+    },
+    {
+      "topic": "LLWhatsUp1",
+      "topic_text": "LLWhatsUp1",
+      "emotion": "Anger 25",
+      "response_text": "Hello. What's up?{mumbled, as in \" 'lo. 'sup?\"}",
+      "index": "121"
+    },
+    {
+      "topic": "LLWhatsUp2",
+      "topic_text": "LLWhatsUp2",
+      "emotion": "Anger 25",
+      "response_text": "Nothing.{mumbled}",
+      "index": "122"
+    },
+    {
+      "topic": "MQ07SammyFetchSquirrelTopic",
+      "topic_text": "",
+      "emotion": "Neutral 50",
+      "response_text": "Hey, that's the mungo. Go talk to him.",
+      "index": "123"
+    }
+  ],
+  "combat": []
+}

@@ -1,0 +1,277 @@
+{
+  "name": "Penny",
+  "url": "/wiki/Penny_(Fallout_3)",
+  "dialogue_name": "Penny.txt",
+  "dialogue_url": "/wiki/Penny.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "00015691",
+  "ref_id": "00030D0D",
+  "editor_id": "Penny",
+  "location": "Child slave house",
+  "location_url": "/wiki/Child_slave_house",
+  "descriptions": [
+    "Penelope, more commonly referred to as Penny, is one of several Little Lamplight children who have been captured by slavers at Paradise Falls in 2277.",
+    "She spends much time alone in a corner of the slave house and laments that Rory Maclaren is in danger of dying due to being isolated in the Box for a long period. She has become fond of the man.",
+    "Outside of her role as a child slave, Penny is a scavenger adept at foraging food and understanding wasteland animals. At Lamplight, she admires her brother Joseph and she aspires to be like him due to his resourcefulness and wisdom."
+  ],
+  "race": "Human",
+  "gender": "Female",
+  "affiliation": "Little Lamplight",
+  "role": "Child",
+  "detailed_location": "Child slave house,Paradise FallsLittle Lamplight",
+  "voice_actor": "Stephanie Joy",
+  "special": {
+    "Strength": 3,
+    "Perception": 4,
+    "Endurance": 3,
+    "Charisma": 3,
+    "Intelligence": 3,
+    "Agility": 7,
+    "Luck": 7
+  },
+  "level": "1",
+  "tag_skills": [
+    {
+      "Explosives:": "29"
+    },
+    {
+      "Small Guns:": "35"
+    },
+    {
+      "Sneak:": "35"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Good",
+  "voice_type": "FemaleChild01DC",
+  "geck_race": "AfricanAmericanChild",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "Thanks for helping us, mungo. You're not so bad for a mungo.",
+      "index": "1"
+    },
+    {
+      "topic": "LLClasses",
+      "topic_text": "What do you think about these classes?",
+      "emotion": "Anger 15",
+      "response_text": "It's great, but Bumble's always trying to bug him when he's trying to teach me.",
+      "index": "23"
+    },
+    {
+      "topic": "LLNicknames",
+      "topic_text": "Why do you have the nickname Penny?",
+      "emotion": "Anger 30",
+      "response_text": "It's not a nickname! My name's Penelope.{A little indignant}",
+      "index": "25"
+    },
+    {
+      "topic": "MQ07PennyCHILDLeaveRory",
+      "topic_text": "Penny, come on. Rory's a mungo. You've got to stick with your friends.",
+      "emotion": "Neutral 50",
+      "response_text": "I know, I know... but he was so nice to me. I just wanted him to be safe.",
+      "index": "27"
+    },
+    {
+      "topic": "MQ07PennyLetsGoSPEECH",
+      "topic_text": "Penny, come on. You can't save Rory. It's time to save yourself.",
+      "emotion": "Neutral 50",
+      "response_text": "I know... I just wanted him to be safe. They were gonna sell him and then he was gonna leave and I'd never see him again and... and...",
+      "index": "29"
+    },
+    {
+      "topic": "MQ07PennyRoryChoice1",
+      "topic_text": "We don't have time for this. We need to leave. Now!",
+      "emotion": "Neutral 50",
+      "response_text": "Nuh-uh. Not without Rory.",
+      "index": "31"
+    },
+    {
+      "topic": "MQ07PennyRoryChoice2",
+      "topic_text": "Okay, what do you want me to do?",
+      "emotion": "Neutral 50",
+      "response_text": "You'll help? Oh, thank you!",
+      "index": "34"
+    },
+    {
+      "topic": "MQ07PennyRoryChoice3",
+      "topic_text": "Fine, let's get Rory and get the hell out of here.",
+      "emotion": "Neutral 50",
+      "response_text": "I can't. If they see me out there, they'll throw me back in and then I'll never get out. You have to do it.",
+      "index": "37"
+    },
+    {
+      "topic": "MQ07PennyRoryDead",
+      "topic_text": "I tried, but he didn't make it.",
+      "emotion": "Neutral 50",
+      "response_text": "Poor Rory... He was a nice man. He deserved better.",
+      "index": "40"
+    },
+    {
+      "topic": "MQ07PennyRorySafe1",
+      "topic_text": "I got him out, all right. Now it's your turn.",
+      "emotion": "Neutral 50",
+      "response_text": "You saved him? Really?",
+      "index": "42"
+    },
+    {
+      "topic": "MQ07PennyRorySafe2",
+      "topic_text": "Yes, he's safe. Now get moving!",
+      "emotion": "Neutral 50",
+      "response_text": "Okay, okay!",
+      "index": "45"
+    },
+    {
+      "topic": "MQ07PennyRorySafeLIE",
+      "topic_text": "Um... sure. Maybe you'll see him sometime later. Not now, though. <Lie.>",
+      "emotion": "Neutral 50",
+      "response_text": "Okay, if you say so. I'm getting out of here, then.",
+      "index": "47"
+    },
+    {
+      "topic": "MQ07PennyTLLetsGo",
+      "topic_text": "Come on, let's go. We need to get you out of here now.",
+      "emotion": "Anger 50",
+      "response_text": "I already told Sammy AND Squirrel I'm not going. I'm not leaving Rory!{defiant, petulant}",
+      "index": "49"
+    },
+    {
+      "topic": "MQ07PennyTLWhyStillHere",
+      "topic_text": "Why are you still in here? It's time to go.",
+      "emotion": "Neutral 50",
+      "response_text": "No! I'm not leaving while they've still got Rory locked up!",
+      "index": "51"
+    },
+    {
+      "topic": "SpeechChallengeFailure",
+      "topic_text": "SpeechChallengeFailure",
+      "emotion": "Neutral 50",
+      "response_text": "No! I'm not leaving him!",
+      "index": "53"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYEI have to go now.",
+      "topic_text": "I'm out of here.",
+      "emotion": "Neutral 50",
+      "response_text": "Fine, go.",
+      "index": "54"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Neutral 50",
+      "response_text": "You're the best mungo ever!",
+      "index": "56"
+    },
+    {
+      "topic": "LLClassConv1",
+      "topic_text": "LLClassConv1",
+      "emotion": "Fear 50",
+      "response_text": "Can you tell me more about growing up, big brother?",
+      "index": "64"
+    },
+    {
+      "topic": "LLClassConv3",
+      "topic_text": "LLClassConv3",
+      "emotion": "Sad 25",
+      "response_text": "Well, then why you do have to go to Big Town when you grow up?{A little sad, since she knows her brother has to leave for Big Town soon.}",
+      "index": "66"
+    },
+    {
+      "topic": "LLClassConv5",
+      "topic_text": "LLClassConv5",
+      "emotion": "Sad 25",
+      "response_text": "Well, okay.{Grudgingly accepting.}",
+      "index": "68"
+    },
+    {
+      "topic": "LLFoodConv1",
+      "topic_text": "LLFoodConv1",
+      "emotion": "Happy 25",
+      "response_text": "May I have some food, please?",
+      "index": "70"
+    },
+    {
+      "topic": "LLLunchConv1",
+      "topic_text": "LLLunchConv1",
+      "emotion": "Fear 25",
+      "response_text": "Big brother, can I ask you something?",
+      "index": "71"
+    },
+    {
+      "topic": "LLLunchConv3",
+      "topic_text": "LLLunchConv3",
+      "emotion": "Fear 25",
+      "response_text": "What's going to happen when you get too old and have to leave Lamplight?",
+      "index": "73"
+    },
+    {
+      "topic": "LLLunchConv5",
+      "topic_text": "LLLunchConv5",
+      "emotion": "Fear 25",
+      "response_text": "And when I grow up, I can come join you there, too!",
+      "index": "75"
+    },
+    {
+      "topic": "LLLunchConv6",
+      "topic_text": "LLLunchConv6",
+      "emotion": "Fear 25",
+      "response_text": "But I still hope you don't have to leave too soon, okay?",
+      "index": "76"
+    },
+    {
+      "topic": "LLRandomConv1",
+      "topic_text": "LLConversation1",
+      "emotion": "Happy 25",
+      "response_text": "Hello. How are you doing?",
+      "index": "78"
+    },
+    {
+      "topic": "LLRandomConv2",
+      "topic_text": "LLConversation2",
+      "emotion": "Happy 25",
+      "response_text": "It's always nicer to be in here than out there.",
+      "index": "79"
+    },
+    {
+      "topic": "LLRandomConvEnding",
+      "topic_text": "LLRandomConvEnding",
+      "emotion": "Neutral 25",
+      "response_text": "That makes sense. Talk to you later.",
+      "index": "80"
+    },
+    {
+      "topic": "LLRandomExclamation",
+      "topic_text": "LLRandomExclamation",
+      "emotion": "Anger 60",
+      "response_text": "He's not your uncle, Bumble!",
+      "index": "81"
+    },
+    {
+      "topic": "LLWhatsUp1",
+      "topic_text": "LLWhatsUp1",
+      "emotion": "Happy 25",
+      "response_text": "Hello. Anything interesting happening?",
+      "index": "82"
+    },
+    {
+      "topic": "LLWhatsUp2",
+      "topic_text": "LLWhatsUp2",
+      "emotion": "Happy 25",
+      "response_text": "Just relaxing. Nothing much.",
+      "index": "83"
+    }
+  ],
+  "combat": []
+}

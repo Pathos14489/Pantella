@@ -1,0 +1,115 @@
+{
+  "name": "Mel",
+  "url": "/wiki/Mel_(Fallout_3)",
+  "dialogue_name": "FFEU09NPC.txt",
+  "dialogue_url": "/wiki/FFEU09NPC.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "00058059",
+  "ref_id": "0005805C",
+  "editor_id": "FFEU09NPC",
+  "location": "Random encounter",
+  "location_url": "/wiki/Fallout_3_random_encounters",
+  "descriptions": [
+    "Mel is a wannabe mugger the Lone Wanderer may come across during the Locked and Unloaded random encounter. He wants the player character to give him all of their caps. He will appear as friendly on the radar, and his clearly unassertive and stammering speaking voice makes his demands indeed pathetic.",
+    "Mel used to live at a mercenary settlement, but after being forced out, he has taken up the role of a highwayman in the Capital Wasteland. He possesses an unloaded sawed-off shotgun and will threaten the Lone Wanderer with it should they encounter him. However, he poses very little threat owing to his nervousness, ineptitude, and lack of ammunition.",
+    "There may be several conversation options, depending on the skills:",
+    "If a skill-based topic is used, Mel will end the conversation without turning hostile and will cower as if fleeing. If one refuses to be give anything, he may turn hostile. Mel will also fight any roving hostiles that travel near him (i.e. raiders or critters). But, since his shotgun is unloaded, he is limited to fighting unarmed. He is about as tough as an average raider, although, without weapons, he poses a limited threat.",
+    "Mel is an homage to Mel Gibson, the actor who played Mad Max. In Mad Max 2, Gibson threatened the Gyro Captain using an unloaded sawed-off shotgun."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "role": "Highwayman",
+  "detailed_location": "Capital Wasteland",
+  "voice_actor": "Jeff Baker",
+  "special": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 4,
+    "Intelligence": 4,
+    "Agility": 6,
+    "Luck": 4
+  },
+  "tag_skills": [
+    {
+      "Melee Weap.:": "40"
+    },
+    {
+      "Small Guns:": "40"
+    },
+    {
+      "Sneak:": "40"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Evil",
+  "voice_type": "MaleAdult01DefaultDC",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "FFEU09A1",
+      "topic_text": "Back off or I'll make you regret threatening me.",
+      "emotion": "Fear 50",
+      "response_text": "Hey, hey. I didn't mean anything by it. Just trying to get by out here in the Wastes, you know?",
+      "index": "1"
+    },
+    {
+      "topic": "FFEU09A2",
+      "topic_text": "How about I give you 5 caps and you leave me alone?",
+      "emotion": "Happy 50",
+      "response_text": "You got yourself a deal. Um, what happens next... Oh, right. I'm gonna go.",
+      "index": "5"
+    },
+    {
+      "topic": "FFEU09A3",
+      "topic_text": "Bullshit. A mugger in the Wasteland? A real Raider would've shot me already.",
+      "emotion": "Disgust 25",
+      "response_text": "Alright. Alright. I wasn't going to shoot you. Damn gun's outta shells, anyway.",
+      "index": "7"
+    },
+    {
+      "topic": "FFEU09A4",
+      "topic_text": "That gun doesn't look loaded.",
+      "emotion": "Surprise 50",
+      "response_text": "What? How did you know that?",
+      "index": "9"
+    },
+    {
+      "topic": "FFEU09A5",
+      "topic_text": "All right. I haven't killed anyone all day. Let's go.",
+      "emotion": "Neutral 50",
+      "response_text": "You've done this before, haven't you? Fine time for me to be out of bullets...",
+      "index": "11"
+    },
+    {
+      "topic": "FFEU09A6",
+      "topic_text": "I can't give you all my stuff, sorry.",
+      "emotion": "Sad 50",
+      "response_text": "Ah, man. Now I have to kill you... Dammit, I'm out of bullets, too...",
+      "index": "12"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "Uh, hey. I'm outta here... so... see ya.",
+      "index": "13"
+    },
+    {
+      "topic": "SpeechChallengeFailure",
+      "topic_text": "SpeechChallengeFailure",
+      "emotion": "Anger 50",
+      "response_text": "Um, no dice, roadkill. Now hand over what you got.",
+      "index": "16"
+    }
+  ],
+  "conversation": [],
+  "combat": []
+}

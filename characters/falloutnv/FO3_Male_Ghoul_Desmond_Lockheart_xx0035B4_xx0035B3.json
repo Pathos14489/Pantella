@@ -1,0 +1,676 @@
+{
+  "name": "Desmond Lockheart",
+  "url": "/wiki/Desmond_Lockheart",
+  "dialogue_name": "DLC04Desmond.txt",
+  "dialogue_url": "/wiki/DLC04Desmond.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "xx0035B4",
+  "ref_id": "xx0035B3",
+  "editor_id": "DLC04Desmond",
+  "location": "Calvert Mansion",
+  "location_url": "/wiki/Calvert_Mansion",
+  "descriptions": [
+    "Desmond Lockheart is a former British intelligence agent from the pre-War era turned ghoul, presently residing in Point Lookout, Maryland as a central character in the Fallout 3 add-on Point Lookout.",
+    "Born in the era before the Great War over 250 years ago,",
+    "Towards the latter half of the 21st century, in the face of impending nuclear devastation, members of the highest political and social strata as well as well-connected members of national intelligence agencies made preparations, either to live through it or ensure their enemies did not, what Desmond himself refers to as a \"great game.\" In Lockheart's case, he elected to undergo a procedure involving controlled exposure to normally lethal doses of radiation, leading to his later ghoulification, one of the few known cases of ghouls existing before the bombs.",
+    "Sometime before or after his ghoulification, Desmond carried out an unspecified sabotage on the St. Aubin medical facility beneath the lighthouse at Point Lookout controlled by his rival Professor Calvert, resulting in the latter being reduced to a disembodied brain (albeit one possessed with psychic powers), which further deepened Calvert's hate for Desmond.",
+    "In the aftermath of the Great War, Desmond abandoned all political or ideological motivations. His years of experience had taught him a core lesson: so long as any rivals from the Old World still lived, they would come for him to finish the \"great game.\" On Calvert's psychic command, his subordinates, a group of tribals native to the region, have led repeat assaults on the mansion by 2277, attempting to take out the ghoul and appease their deity brain.",
+    "Desmond Lockheart appears only in the Fallout 3 add-on Point Lookout and is mentioned in the Fallout 76 update Skyline Valley."
+  ],
+  "race": "Ghoul",
+  "gender": "Male",
+  "affiliation": "United Kingdom(pre-War)",
+  "role": "ScientistGovernment agent (formerly)",
+  "detailed_location": "Point LookoutCalvert Mansion",
+  "voice_actor": "Jeff Baker",
+  "special": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 4,
+    "Intelligence": 4,
+    "Agility": 6,
+    "Luck": 4
+  },
+  "level": "5→30(1.3 x player characters level)",
+  "tag_skills": [
+    {
+      "Melee Weap.:": "49→100"
+    },
+    {
+      "Small Guns:": "49→100(54→105)"
+    },
+    {
+      "Sneak:": "49→100"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "335→460"
+    }
+  ],
+  "karma": "Good",
+  "voice_type": "DLC04UniqueDesmond",
+  "geck_race": "Ghoul",
+  "topics": [],
+  "conversation": [
+    {
+      "topic": "DC04MQPQDesmondTLDoing",
+      "topic_text": "What are you doing down here?",
+      "emotion": "Neutral 50",
+      "response_text": "I'm pulling all the data that I can from Calvert's computers. Everything the little bastard gathered is here.",
+      "index": "1"
+    },
+    {
+      "topic": "DC04MQPQDesmondTLFuture",
+      "topic_text": "What will you do now that he's dead?",
+      "emotion": "Neutral 50",
+      "response_text": "Now that we're rid of Calvert, I'll be heading north to pursue my next rival.",
+      "index": "3"
+    },
+    {
+      "topic": "DLC04AboutMansion",
+      "topic_text": "Why would they want to attack the mansion?",
+      "emotion": "Happy 50",
+      "response_text": "Damned if I know. It was abandoned when I got here.",
+      "index": "6"
+    },
+    {
+      "topic": "DLC04AboutNadine",
+      "topic_text": "Have you seen a woman named Nadine?",
+      "emotion": "Happy 50",
+      "response_text": "I've been around for a long goddamn time. The last time I knew a bird named Nadine, I still had skin.",
+      "index": "8"
+    },
+    {
+      "topic": "DLC04AboutPointLookout",
+      "topic_text": "Tell me more about Point Lookout.",
+      "emotion": "Anger 50",
+      "response_text": "I'm here on my own business. You wouldn't understand it even if I tried to explain it to you.",
+      "index": "12"
+    },
+    {
+      "topic": "DLC04AboutTribals",
+      "topic_text": "What do you know about the Tribals?",
+      "emotion": "Anger 50",
+      "response_text": "They're brainless morons who worship some crazy spirit. What's to know?",
+      "index": "18"
+    },
+    {
+      "topic": "DLC04DesFakeGoodbye",
+      "topic_text": "I have to go now.",
+      "emotion": "Happy 50",
+      "response_text": "Now, hold on there. Not so fuckin' fast. You can be useful to me. I need someone willing to get their hands dirty.",
+      "index": "19"
+    },
+    {
+      "topic": "DLC04DesmondGreeting1A",
+      "topic_text": "Do you know why the Tribals were attacking?",
+      "emotion": "Neutral 50",
+      "response_text": "Not a fuckin' clue. It'd be easy to chalk it up to their crazy religion, but if I'm right, and I always am, there's something else going on.",
+      "index": "22"
+    },
+    {
+      "topic": "DLC04DesmondGreeting1C",
+      "topic_text": "Any chance of getting more training?",
+      "emotion": "Happy 25",
+      "response_text": "Oh, there's always a chance, certainly. But what you earn depends on how well you can follow directions.",
+      "index": "24"
+    },
+    {
+      "topic": "DLC04DesmondOffer",
+      "topic_text": "What do you want me to do about the Tribals?",
+      "emotion": "Anger 25",
+      "response_text": "You need to learn to pay attention when I speak.",
+      "index": "27"
+    },
+    {
+      "topic": "DLC04DesmondOffer2A",
+      "topic_text": "Okay, but how can I infiltrate them?",
+      "emotion": "Anger 25",
+      "response_text": "Easy-peasy, right about now they'll be wondering what happened to their hunting party.",
+      "index": "33"
+    },
+    {
+      "topic": "DLC04DesmondOffer2B",
+      "topic_text": "What sort of reward are you offering?",
+      "emotion": "Happy 25",
+      "response_text": "The only reliable currency in the world: information. You provide me with valuable info about the Tribals, I pay in kind.",
+      "index": "34"
+    },
+    {
+      "topic": "DLC04DesmondOffer2C",
+      "topic_text": "No, not interested.",
+      "emotion": "Disgust 25",
+      "response_text": "Sorry, but that's not really an option. I was only being polite in pretending that it was.",
+      "index": "36"
+    },
+    {
+      "topic": "DLC04DesmondOffer3A",
+      "topic_text": "Become a tribal? No way.",
+      "emotion": "Anger 75",
+      "response_text": "What, like you've never done something unpleasant for the promise of your own personal gain? Give it a rest, saint.",
+      "index": "38"
+    },
+    {
+      "topic": "DLC04DesmondOffer3B",
+      "topic_text": "You really think they'll just let me in like that?",
+      "emotion": "Happy 25",
+      "response_text": "These are people who think cutting a hole in their skull can expand their mind. They're not exactly scholars over there.",
+      "index": "41"
+    },
+    {
+      "topic": "DLC04DesmondPast",
+      "topic_text": "What's your story?",
+      "emotion": "Surprise 50",
+      "response_text": "My story? Tell you what, kid. My story's a lot like a Deathclaw's tongue.",
+      "index": "44"
+    },
+    {
+      "topic": "DLC04DesmondReward",
+      "topic_text": "Why should I work with you, again?",
+      "emotion": "Anger 50",
+      "response_text": "What's the difference between you and me, kid? What makes a gifted killer like yourself into a rock-hard bastard like me?",
+      "index": "47"
+    },
+    {
+      "topic": "DLC04DesmondReward1A",
+      "topic_text": "I'm pretty sure I just saved your life, you know.",
+      "emotion": "Anger 50",
+      "response_text": "No, but you helped me out, and that's something. Can't let you think I'm not a gracious host, can I?",
+      "index": "50"
+    },
+    {
+      "topic": "DLC04DesmondReward1B",
+      "topic_text": "What kind of failsafe are you talking about?",
+      "emotion": "Neutral 50",
+      "response_text": "The type that kills everyone outside of my saferoom and leaves a hell of a mess to clean up. Standard type.",
+      "index": "52"
+    },
+    {
+      "topic": "DLC04DesmondSt185Greeting1",
+      "topic_text": "Calm down, there. You'll make a mess.",
+      "emotion": "Neutral 50",
+      "response_text": "Moron! You cannot possibly comprehend what this is worth!",
+      "index": "55"
+    },
+    {
+      "topic": "DLC04DesmondSt185Greeting1a",
+      "topic_text": "So, where's my cut?",
+      "emotion": "Neutral 50",
+      "response_text": "You're free to take whatever you find in this disgusting place.",
+      "index": "61"
+    },
+    {
+      "topic": "DLC04DesmondSt185Greeting1b",
+      "topic_text": "Neat! I want some of it.",
+      "emotion": "Neutral 50",
+      "response_text": "You're free to take whatever you find in this disgusting place.",
+      "index": "67"
+    },
+    {
+      "topic": "DLC04DesmondSt185Greeting2",
+      "topic_text": "What's so great about his stuff?",
+      "emotion": "Neutral 50",
+      "response_text": "Moron! You cannot possibly comprehend what this is worth!",
+      "index": "73"
+    },
+    {
+      "topic": "DLC04DesmondSt50Greeting1",
+      "topic_text": "I'm tired of you pushing me around, Desmond.",
+      "emotion": "Neutral 50",
+      "response_text": "What? You betrayed me because I wasn't polite? Are you out of your fucking mind?",
+      "index": "79"
+    },
+    {
+      "topic": "DLC04DesmondSt50Greeting1a",
+      "topic_text": "I don't take orders from anyone.",
+      "emotion": "Neutral 50",
+      "response_text": "Fine then. Would it make your little feelbads all better if I said please?",
+      "index": "80"
+    },
+    {
+      "topic": "DLC04DesmondSt50Greeting1a1",
+      "topic_text": "That'll do. Let's go.",
+      "emotion": "Neutral 50",
+      "response_text": "I've waited a long time for this.",
+      "index": "82"
+    },
+    {
+      "topic": "DLC04DesmondSt50Greeting1a2",
+      "topic_text": "And I'm supposed to help you for free?",
+      "emotion": "Neutral 50",
+      "response_text": "I'm 250 years old, so I think I have a shiny thing or two that might interest your tiny brain.",
+      "index": "84"
+    },
+    {
+      "topic": "DLC04DesmondSt50Greeting1a3",
+      "topic_text": "Very nice. Now can you say \"please don't kill me?\"",
+      "emotion": "Neutral 50",
+      "response_text": "No, I can't. But let's see if you can!",
+      "index": "87"
+    },
+    {
+      "topic": "DLC04DesmondSt50Greeting1b",
+      "topic_text": "And now you'll pay for it with your life.",
+      "emotion": "Neutral 50",
+      "response_text": "Is that so? I've come a long way, my friend. I highly doubt that my journey will end today!",
+      "index": "88"
+    },
+    {
+      "topic": "DLC04DesmondSt50Greeting2",
+      "topic_text": "I've been looking for you. I'm not going to side with this crazy brain thing.",
+      "emotion": "Neutral 50",
+      "response_text": "Well now, finally you show some goddamn sense.",
+      "index": "89"
+    },
+    {
+      "topic": "DLC04DesmondSt50Greeting2a",
+      "topic_text": "Because I'm done taking orders from you. After this, we're through.",
+      "emotion": "Neutral 50",
+      "response_text": "After this, I won't require your services any longer. I suppose that works out now, doesn't it?",
+      "index": "91"
+    },
+    {
+      "topic": "DLC04DesmondSt50Greeting2b",
+      "topic_text": "I figured it was the best way to get him to drop his guard.",
+      "emotion": "Neutral 50",
+      "response_text": "And you... Impressive. Very impressive. Perhaps there's more to you than meets the eye.{Starts out continuing his tirade and interrupts himself.}",
+      "index": "94"
+    },
+    {
+      "topic": "DLC04DesmondSt50Greeting2b1",
+      "topic_text": "It happens to us all. Let's go.",
+      "emotion": "Happy 50",
+      "response_text": "Brace yourself, my friend. You're about to witness the end of an era!",
+      "index": "96"
+    },
+    {
+      "topic": "DLC04DesmondSt50Greeting2b2",
+      "topic_text": "No. You were right not to trust me. Die.",
+      "emotion": "Neutral 50",
+      "response_text": "If nothing else, I have to say that you were good sport!",
+      "index": "97"
+    },
+    {
+      "topic": "DLC04DesmondSt50Greeting2c",
+      "topic_text": "Because I wanted to. Just like I want to kill you now.",
+      "emotion": "Neutral 50",
+      "response_text": "Nihilism is so boring. Try it if you must, I could use the warmup before I kill the professor!",
+      "index": "99"
+    },
+    {
+      "topic": "DLC04DesmondSt50Greeting3",
+      "topic_text": "I just wanted to see you up close when I told you I was going to kill you.",
+      "emotion": "Neutral 50",
+      "response_text": "After 250 years, you think I'll go down to you? Ha! Try it!",
+      "index": "100"
+    },
+    {
+      "topic": "DLC04DesTribalReturn1A",
+      "topic_text": "I'm in. I found out where their leader is hiding.",
+      "emotion": "Anger 50",
+      "response_text": "And? You didn't go track him down and grill him for information?",
+      "index": "101"
+    },
+    {
+      "topic": "DLC04DesTribalReturn1B",
+      "topic_text": "Those idiots let me in with open arms. I have the location of their leader.",
+      "emotion": "Happy 25",
+      "response_text": "Nice work -- as if sneaking into a compound of morons is any kind of work. So why haven't you tracked down their leader and grilled him for info?",
+      "index": "103"
+    },
+    {
+      "topic": "DLC04MQ01DesmondST10Greeting1",
+      "topic_text": "So, who is this brain thing, anyway?",
+      "emotion": "Neutral 50",
+      "response_text": "HIM! I should have known. My old rival... so close to his family home. Only he would be so stupid.",
+      "index": "105"
+    },
+    {
+      "topic": "DLC04MQ01DesmondST10Greeting2",
+      "topic_text": "You know this guy? What's going on here?",
+      "emotion": "Neutral 50",
+      "response_text": "Calvert is my old rival. Centuries, we've played this game. I knew he'd be stupid enough to hide so close to his family home.",
+      "index": "110"
+    },
+    {
+      "topic": "DLC04MQ01DesmondST10Greeting3",
+      "topic_text": "So, now you want me to do something else, right?",
+      "emotion": "Neutral 50",
+      "response_text": "Of course I fucking want you to do something else. You don't expect me to trod around this mudhole my self, do you?",
+      "index": "114"
+    },
+    {
+      "topic": "DLC04MQ01DesmondST10Greeting3a",
+      "topic_text": "Maybe you should watch your tone, old man.",
+      "emotion": "Neutral 50",
+      "response_text": "Or what? You think I haven't been shot before? Think that you, over the thousands who have tried, can take me down?",
+      "index": "115"
+    },
+    {
+      "topic": "DLC04MQ01DesmondST10Greeting3a1",
+      "topic_text": "What do you want me to do?",
+      "emotion": "Neutral 50",
+      "response_text": "So, those half-wits are getting messages from the Professor, right? So, he's off somewhere broadcasting to 'em.",
+      "index": "117"
+    },
+    {
+      "topic": "DLC04MQ01DesmondST10Greeting3a1a",
+      "topic_text": "What's your plan, old man?",
+      "emotion": "Neutral 50",
+      "response_text": "If I know Professor Calvert, and I do, he's using a high frequency cognitive sine broadcast.",
+      "index": "120"
+    },
+    {
+      "topic": "DLC04MQ01DesmondST10Greeting3a1a1",
+      "topic_text": "That big wheel down by the docks, right?",
+      "emotion": "Neutral 50",
+      "response_text": "Right. Attach it to the bottom car, then turn it on and spin the jammer to the top. No fuckin' problem.",
+      "index": "123"
+    },
+    {
+      "topic": "DLC04MQ01DesmondST10Greeting3a1a2",
+      "topic_text": "I'm afraid of heights.",
+      "emotion": "Neutral 50",
+      "response_text": "Well, that's just too bad, ain't it? But since you're so afraid, attach the thing to one of the cars and then spin it around to get it to the top.",
+      "index": "126"
+    },
+    {
+      "topic": "DLC04MQ01DesmondST10Greeting3a1b",
+      "topic_text": "So, how do we shut him down?",
+      "emotion": "Neutral 50",
+      "response_text": "If I know the Professor, he's using a high frequency cognitive sine broadcast.",
+      "index": "129"
+    },
+    {
+      "topic": "DLC04MQ01DesmondST10Greeting3a2",
+      "topic_text": "Oh, I can't wait to hear this.",
+      "emotion": "Neutral 50",
+      "response_text": "So, those half-wits are getting messages from the Professor, right? So, he's off somewhere broadcasting to them.",
+      "index": "132"
+    },
+    {
+      "topic": "DLC04MQ01DesmondST10Greeting3b",
+      "topic_text": "Right, right. You're mean, we get it.",
+      "emotion": "Neutral 50",
+      "response_text": "You're goddamn right, I am. Now, let's get on with the work, shall we?",
+      "index": "135"
+    },
+    {
+      "topic": "DLC04MQ01DesmondST10Greeting3c",
+      "topic_text": "There'd better be something good at the end of this.",
+      "emotion": "Neutral 50",
+      "response_text": "Nothing but the best for people who stay in my good graces. Now, you ready to stop whining and listen?",
+      "index": "136"
+    },
+    {
+      "topic": "DLC04MQ01DesmondST25Greeting1",
+      "topic_text": "That brain contacted me. He wants me to destroy the Jammer.",
+      "emotion": "Disgust 50",
+      "response_text": "I can't exactly say I'm surprised. You're not thinking about doing it, are you?",
+      "index": "137"
+    },
+    {
+      "topic": "DLC04MQ01DesmondST25Greeting1a",
+      "topic_text": "I might be. Motivate me not to.",
+      "emotion": "Neutral 50",
+      "response_text": "Are you fucking joking? I suppose you aren't. What is it you people use for money these days? Those bottle caps?",
+      "index": "138"
+    },
+    {
+      "topic": "DLC04MQ01DesmondST25Greeting1a1",
+      "topic_text": "Pleasure doing business with you.",
+      "emotion": "Neutral 50",
+      "response_text": "Piss off and do what you're told.",
+      "index": "140"
+    },
+    {
+      "topic": "DLC04MQ01DesmondST25Greeting1a2",
+      "topic_text": "That might do. We'll see.",
+      "emotion": "Neutral 50",
+      "response_text": "This isn't a game, you twit. Piss off and do what you're told.",
+      "index": "141"
+    },
+    {
+      "topic": "DLC04MQ01DesmondST25Greeting1b",
+      "topic_text": "Why would I do that? We're buddies, you and me!",
+      "emotion": "Neutral 50",
+      "response_text": "Whatever we are, we are not \"buddies.\"",
+      "index": "142"
+    },
+    {
+      "topic": "DLC04MQ01DesmondST25Greeting1c",
+      "topic_text": "I haven't decided. I'll let you know.",
+      "emotion": "Neutral 50",
+      "response_text": "If you cross me, it'll be the last fuckin' mistake you ever make in this life.",
+      "index": "144"
+    },
+    {
+      "topic": "DLC04MQ01DesmondST25Greeting2",
+      "topic_text": "Nope. Nothing at all.",
+      "emotion": "Neutral 50",
+      "response_text": "Then why are you wasting my fuckin' time? Don't you have somewhere to be?",
+      "index": "146"
+    },
+    {
+      "topic": "DLC04MQ04DesmondQuestion1",
+      "topic_text": "What do you need me to do again?",
+      "emotion": "Neutral 50",
+      "response_text": "Were you not paying attention? I need you to take that Cogwave Jammer over to the Ferris wheel by the docks.",
+      "index": "147"
+    },
+    {
+      "topic": "DLC04MQ04DesmondQuestion2",
+      "topic_text": "What does the Cogwave Jammer do?",
+      "emotion": "Neutral 50",
+      "response_text": "At some point, Professor Calvert developed the ability to speak inside people's heads. Problem is, he's not so good at it.",
+      "index": "150"
+    },
+    {
+      "topic": "DLC04MQ04DesmondQuestion3",
+      "topic_text": "How does Professor Calvert control the Tribals?",
+      "emotion": "Neutral 50",
+      "response_text": "You saw it. He uses his device to talk to their soft-headed leader in those caves. They think he's a fuckin' god, and they do what he wants.",
+      "index": "153"
+    },
+    {
+      "topic": "DLC04MQ04DesmondQuestionEND",
+      "topic_text": "That's all.",
+      "emotion": "Neutral 50",
+      "response_text": "Well, I'm glad I could be of fuckin' help to you.",
+      "index": "156"
+    },
+    {
+      "topic": "DLC04MQ04DesmondQuestionTL",
+      "topic_text": "I have some questions about what I'm supposed to be doing.",
+      "emotion": "Neutral 50",
+      "response_text": "Well, get on with it. We haven't got a lot of time, you know.",
+      "index": "157"
+    },
+    {
+      "topic": "DLC04MQ04DesmondST10Greeting1",
+      "topic_text": "I'm really tired of being a pawn in this game, Desmond.",
+      "emotion": "Neutral 50",
+      "response_text": "Well, that's good since the game is almost done. He's in the lighthouse, the little fuck. Right under my nose the whole time!",
+      "index": "158"
+    },
+    {
+      "topic": "DLC04MQ04DesmondST10Greeting1a",
+      "topic_text": "I need some time to get ready.",
+      "emotion": "Neutral 50",
+      "response_text": "I suggest you hurry your pretty self up. I'm sure the bastard's got some sort of escape plan.",
+      "index": "160"
+    },
+    {
+      "topic": "DLC04MQ04DesmondST10Greeting1b",
+      "topic_text": "Then let's go in there and do this.",
+      "emotion": "Neutral 50",
+      "response_text": "Now that's more like it. Follow me! You're about to witness the end of an era!",
+      "index": "161"
+    },
+    {
+      "topic": "DLC04MQ04DesmondST10Greeting1c",
+      "topic_text": "I'm done with you.",
+      "emotion": "Neutral 50",
+      "response_text": "Not hardly. I'll be here, and you'll be back. But you'd best hurry, or I may reconsider that reward I promised you.",
+      "index": "162"
+    },
+    {
+      "topic": "DLC04MQ04DesmondST10Greeting2",
+      "topic_text": "So where is he?",
+      "emotion": "Neutral 50",
+      "response_text": "The lighthouse. He's got a lab under there, the little fuck. Right under my nose the whole time!",
+      "index": "164"
+    },
+    {
+      "topic": "DLC04MQ04DesmondST10Greeting3",
+      "topic_text": "It's great to see you alive! I was worried.",
+      "emotion": "Neutral 50",
+      "response_text": "Well, aren't you a fuckin' softie. But Calvert is here. He's got a lab under the lighthouse, the little fuck. Right under my nose the whole time!",
+      "index": "167"
+    },
+    {
+      "topic": "DLC04MQ04DesmondST15Greeting1",
+      "topic_text": "Yes, I am. Let's go.",
+      "emotion": "Neutral 50",
+      "response_text": "At last! Our game is ending!",
+      "index": "170"
+    },
+    {
+      "topic": "DLC04MQ04DesmondST15Greeting1a",
+      "topic_text": "Wait... game?",
+      "emotion": "Neutral 50",
+      "response_text": "When great men rise, they will clash. It's inevitable. Calvert and I are both men of great power.",
+      "index": "171"
+    },
+    {
+      "topic": "DLC04MQ04DesmondST15Greeting1b",
+      "topic_text": "Let's get this over with.",
+      "emotion": "Neutral 50",
+      "response_text": "Follow me!",
+      "index": "173"
+    },
+    {
+      "topic": "DLC04MQ04DesmondST15Greeting2",
+      "topic_text": "I'm not ready yet.",
+      "emotion": "Neutral 50",
+      "response_text": "Well, hurry it up!",
+      "index": "174"
+    },
+    {
+      "topic": "DLC04MQ04DesmondST15Greeting3",
+      "topic_text": "I had something I wanted to ask you...",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah, what is it?",
+      "index": "175"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "",
+      "emotion": "Anger 25",
+      "response_text": "Here to give me a piece of your mind?",
+      "index": "176"
+    },
+    {
+      "topic": "SpeechChallengeFailure",
+      "topic_text": "SpeechChallengeFailure",
+      "emotion": "Neutral 50",
+      "response_text": "Nice try. Your payment is coming, and you're not getting a fucking pence until you're done.",
+      "index": "221"
+    }
+  ],
+  "combat": [
+    {
+      "topic": "DLC04DesmondLabChatter",
+      "topic_text": "DesmondLabChatter",
+      "emotion": "Neutral 50",
+      "response_text": "Fight through this place!",
+      "index": "223"
+    },
+    {
+      "topic": "DLC04DesmondLabTrapped",
+      "topic_text": "DLC04DesmondLabTrapped",
+      "emotion": "Neutral 50",
+      "response_text": "Dammit! Trapped! I knew he'd try this!",
+      "index": "227"
+    },
+    {
+      "topic": "DLC04MansionSiegeStart",
+      "topic_text": "DLC04MansionSiegeStart",
+      "emotion": "Anger 50",
+      "response_text": "You! You're no tribal! Get in here and help me fight these bastards off, goddamnit!",
+      "index": "228"
+    },
+    {
+      "topic": "DLC04MQ02DesmondChatter",
+      "topic_text": "DLC04MQ02DesmondChatter",
+      "emotion": "Neutral 50",
+      "response_text": "Hey!  Over Here!{Telling the player look at him instead of take off in the wrong direction.}",
+      "index": "232"
+    },
+    {
+      "topic": "DLC04MQ02DesmondStage01",
+      "topic_text": "DLC04MQ02DesmondStage01",
+      "emotion": "Neutral 50",
+      "response_text": "I don't know who you are but you need to help me if you want to stay alive.{When player first sees Desmond.  He's in a hurry.}",
+      "index": "239"
+    },
+    {
+      "topic": "DLC04MQ02DesmondStage02",
+      "topic_text": "DLC04MQ02DesmondStage02",
+      "emotion": "Neutral 50",
+      "response_text": "Good job blocking off that hole!  Hurry and get in here!  It looks like they are about to breach from the East wing!{Player just blocked the first breach from the attic in the West wing.  Desmond meets him, possibly thanks him with some dialogue, then says they are }",
+      "index": "243"
+    },
+    {
+      "topic": "DLC04MQ05aDesmondTalkPlayer",
+      "topic_text": "DLC04MQ05aDemondTalkPlayer",
+      "emotion": "Neutral 50",
+      "response_text": "At last! He's just ahead! I'll circle around and distract him. You take him from the front.",
+      "index": "248"
+    },
+    {
+      "topic": "DLC04MQ05bDesmondConfrontBrain1",
+      "topic_text": "DLC04MQ05bDesmondConfrontBrain1",
+      "emotion": "Anger 50",
+      "response_text": "There you are, you slippery bastard! At last! Let's end this, here and now!",
+      "index": "249"
+    },
+    {
+      "topic": "DLC04MQ05bDesmondConfrontBrain3",
+      "topic_text": "DLC04MQ05bDesmondConfrontBrain3",
+      "emotion": "Neutral 50",
+      "response_text": "No, Calvert! I brought someone with me, someone very special. This stranger tricked you into letting me find where you were hiding.",
+      "index": "256"
+    },
+    {
+      "topic": "DLC04MQ05bDesmondConfrontBrain5",
+      "topic_text": "DLC04MQ05bDesmondConfrontBrain5",
+      "emotion": "Neutral 50",
+      "response_text": "Well, we shall see, shan't we? Destroy him!",
+      "index": "263"
+    },
+    {
+      "topic": "GOODBYE",
+      "topic_text": "I have to go now.",
+      "emotion": "Anger 25",
+      "response_text": "Back to business.",
+      "index": "266"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Anger 50",
+      "response_text": "Come on, hurry up!",
+      "index": "275"
+    }
+  ]
+}

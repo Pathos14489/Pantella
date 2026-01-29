@@ -1,0 +1,84 @@
+{
+  "name": "Ezekiel",
+  "url": "/wiki/Ezekiel_(Fallout:_New_Vegas)",
+  "dialogue_name": "VRRCEzekiel.txt",
+  "dialogue_url": "/wiki/VRRCEzekiel.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "00148C26",
+  "ref_id": "00148C27",
+  "editor_id": "VRRCEzekiel",
+  "location": "188 Trading Post",
+  "location_url": "/wiki/188_Trading_Post",
+  "descriptions": [
+    "Ezekiel is a member of the Followers of the Apocalypse, camping out at the 188 Trading Post in 2281.",
+    "A Followers anthropologist, Ezekiel specializes in pre-War history and tribal cultures. He is particularly interested in modern tribes that emerged from the ashes of nuclear holocaust and is usually out in the field researching or looking for other tribes to study.",
+    "Of all the tribes he has studied, the Great Khans fascinate him the most. He sees them not as simple raiders, but as a fascinating tribe with a unique culture and customs, empathizing with their tragic past, especially the near-extirpation by the Vault Dweller and the fall of the New Khans at the hands of his grandson. Their resilience and particularly the origins of their martial culture are a topic of fascination, shared by few other scholars."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Followers of the Apocalypse",
+  "role": "Anthropologist",
+  "detailed_location": "188 Trading Post",
+  "voice_actor": "Alex Mendoza",
+  "special": {
+    "Strength": 5,
+    "Perception": 6,
+    "Endurance": 6,
+    "Charisma": 5,
+    "Intelligence": 5,
+    "Agility": 7,
+    "Luck": 5
+  },
+  "level": "16",
+  "tag_skills": [
+    {
+      "Guns:": "94(96)"
+    },
+    {
+      "Speech:": "90"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Neutral",
+  "voice_type": "MaleAdult07",
+  "geck_race": "Hispanic",
+  "topics": [
+    {
+      "topic": "EzekielGreatKhans",
+      "topic_text": "Julie Farkas said you might know something about the Great Khans.",
+      "emotion": "Happy 35",
+      "response_text": "Oh my, yes! They're a fascinating tribe with a long and, unfortunately, tragic history.",
+      "index": "1"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "You look like someone with a question. What can I do for you?",
+      "index": "4"
+    },
+    {
+      "topic": "VMS45VRRCEzekielTopic000",
+      "topic_text": "This is fascinating. Please continue.",
+      "emotion": "Pained 20",
+      "response_text": "Well, after they migrated to the Mojave, we established relations with them, but that soured when all they wanted was to make drugs.",
+      "index": "5"
+    },
+    {
+      "topic": "VMS45VRRCEzekielTopic001",
+      "topic_text": "Can I get the abridged version?",
+      "emotion": "Sad 20",
+      "response_text": "Oh, of course! I'm sorry, I do tend to get wrapped up in my own theories and forget that not everyone finds them as fascinating as I do.",
+      "index": "7"
+    }
+  ],
+  "conversation": [],
+  "combat": []
+}

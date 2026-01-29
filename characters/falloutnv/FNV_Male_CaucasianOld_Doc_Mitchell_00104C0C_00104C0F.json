@@ -1,0 +1,989 @@
+{
+  "name": "Doc Mitchell",
+  "url": "/wiki/Doc_Mitchell",
+  "dialogue_name": "DocMitchell.txt",
+  "dialogue_url": "/wiki/DocMitchell.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": true,
+  "is_merchant": true,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "00104C0C",
+  "ref_id": "00104C0F",
+  "editor_id": "DocMitchell",
+  "location": "Doc Mitchell's house",
+  "location_url": "/wiki/Doc_Mitchell%27s_house",
+  "descriptions": [
+    "Doc Mitchell is a surgeon and doctor living in Goodsprings in 2281.",
+    "Mitchell was born in Vault 21, where he was known by the nickname \"Mole Butt\" by the younger residents.",
+    "However, his wife died close to Goodsprings due to the weak immune system she had from living in a vault her whole life. Unable to continue without his wife, he settled down and retired there so he could always remain close to her, but also secured the position as the town's doctor.",
+    "When the Courier was ambushed and shot in the head by Benny, Victor brought them to Mitchell for treatment. They subsequently recovered thanks to the medical care provided by the doctor.",
+    "Mitchell's dialogue is influenced by the Courier's choice of S.P.E.C.I.A.L. attributes.",
+    "* Only during Run Goodsprings Run.",
+    "Doc Mitchell appears in Fallout: New Vegas and is mentioned in the add-on Old World Blues. He also appears in Showdown in Skull Canyon, a supplement for Fallout: The Roleplaying Game.",
+    "PC Doc Mitchell will not fix radiation poisoning if the player character selects any other fix after that choice until they exit out of dialogue with him."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Vault 21(formerly)Goodsprings",
+  "role": "Doctor",
+  "detailed_location": "Doc Mitchell's house",
+  "voice_actor": "Michael HoganH. Richard Greene(beta)",
+  "special": {
+    "Strength": 4,
+    "Perception": 6,
+    "Endurance": 4,
+    "Charisma": 6,
+    "Intelligence": 7,
+    "Agility": 5,
+    "Luck": 4
+  },
+  "level": "1",
+  "tag_skills": [
+    {
+      "Barter:": "31"
+    },
+    {
+      "Medicine:": "33"
+    },
+    {
+      "Science:": "33"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "50"
+    },
+    {
+      "Dam. Threshold:": "2"
+    }
+  ],
+  "karma": "Good",
+  "geck_race": "CaucasianOld",
+  "topics": [
+    {
+      "topic": "DoctorAddiction",
+      "topic_text": "I think I might be addicted to something.",
+      "emotion": "Neutral 50",
+      "response_text": "Sure. I can help you out.",
+      "index": "1"
+    },
+    {
+      "topic": "DoctorAddictionNO",
+      "topic_text": "I think I'll tough it out.",
+      "emotion": "Neutral 50",
+      "response_text": "Suit yourself.",
+      "index": "2"
+    },
+    {
+      "topic": "DoctorAddictionYES",
+      "topic_text": "Yes, cure me.",
+      "emotion": "Neutral 50",
+      "response_text": "Okay... all done.",
+      "index": "3"
+    },
+    {
+      "topic": "DoctorMedical",
+      "topic_text": "I'm hurt. I need help, Doc.",
+      "emotion": "Neutral 50",
+      "response_text": "I don't see nothing wrong with you.",
+      "index": "4"
+    },
+    {
+      "topic": "DoctorMedical33YESAll right, here's your money.",
+      "topic_text": "Okay, fix me. Here's 100 caps.",
+      "emotion": "Neutral 50",
+      "response_text": "Okay. Hold still.",
+      "index": "7"
+    },
+    {
+      "topic": "DoctorMedical66YESHere's your money.",
+      "topic_text": "Okay, fix me. Here's 75 caps.",
+      "emotion": "Neutral 50",
+      "response_text": "Okay. Hold still.",
+      "index": "9"
+    },
+    {
+      "topic": "DoctorMedical99YESAll right, fix me.",
+      "topic_text": "Okay, fix me. Here's 50 caps.",
+      "emotion": "Neutral 50",
+      "response_text": "Okay. Hold still.",
+      "index": "11"
+    },
+    {
+      "topic": "DoctorMedicalNO",
+      "topic_text": "On second thought, I'll be fine.",
+      "emotion": "Neutral 50",
+      "response_text": "Suit yourself.",
+      "index": "13"
+    },
+    {
+      "topic": "DoctorRadiation",
+      "topic_text": "Can you heal my radiation?",
+      "emotion": "Neutral 50",
+      "response_text": "Sure. I can help you out.",
+      "index": "14"
+    },
+    {
+      "topic": "DoctorRadiationNO",
+      "topic_text": "No, thanks.",
+      "emotion": "Neutral 50",
+      "response_text": "Suit yourself.",
+      "index": "15"
+    },
+    {
+      "topic": "DoctorRadiationYESDo it.",
+      "topic_text": "Here's your 100 caps. Do it.",
+      "emotion": "Neutral 50",
+      "response_text": "Okay... all done.",
+      "index": "16"
+    },
+    {
+      "topic": "DoctorSupplies",
+      "topic_text": "I need medical supplies.",
+      "emotion": "Neutral 50",
+      "response_text": "Sure.",
+      "index": "18"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "We can chat later. The sooner you finish these tests the sooner you can get out of here.",
+      "index": "19"
+    },
+    {
+      "topic": "PLAYERFIREWEAPON",
+      "topic_text": "PLAYER FIRE WEAPON",
+      "emotion": "Neutral 50",
+      "response_text": "Do that someplace else!",
+      "index": "28"
+    },
+    {
+      "topic": "PLAYERINIRONSITES",
+      "topic_text": "PLAYER IN IRON SITES",
+      "emotion": "Neutral 50",
+      "response_text": "How about you line that up on a tin can instead?",
+      "index": "30"
+    },
+    {
+      "topic": "PLAYERLAYMINE",
+      "topic_text": "PLAYER LAY MINE",
+      "emotion": "Neutral 50",
+      "response_text": "I hope I don't forget that's there.",
+      "index": "32"
+    },
+    {
+      "topic": "PLAYERTHROWGRENADE",
+      "topic_text": "PLAYER THROW GRENADE",
+      "emotion": "Neutral 50",
+      "response_text": "Out of the way!",
+      "index": "34"
+    },
+    {
+      "topic": "VCG01DocMitchellTopic000",
+      "topic_text": "Cat.",
+      "emotion": "Neutral 50",
+      "response_text": "House.",
+      "index": "36"
+    },
+    {
+      "topic": "VCG01DocMitchellTopic001",
+      "topic_text": "Feed.",
+      "emotion": "Neutral 50",
+      "response_text": "House.",
+      "index": "37"
+    },
+    {
+      "topic": "VCG01DocMitchellTopic002",
+      "topic_text": "Newspaper.",
+      "emotion": "Neutral 50",
+      "response_text": "House.",
+      "index": "38"
+    },
+    {
+      "topic": "VCG01DocMitchellTopic003",
+      "topic_text": "Train.",
+      "emotion": "Neutral 50",
+      "response_text": "House.",
+      "index": "39"
+    },
+    {
+      "topic": "VCG01DocMitchellTopic004",
+      "topic_text": "Kick.",
+      "emotion": "Neutral 50",
+      "response_text": "House.",
+      "index": "40"
+    },
+    {
+      "topic": "VCG01DocMitchellTopic005",
+      "topic_text": "Dinner.",
+      "emotion": "Neutral 50",
+      "response_text": "House.",
+      "index": "41"
+    },
+    {
+      "topic": "VCG01DocMitchellTopic006",
+      "topic_text": "Shelter.",
+      "emotion": "Neutral 50",
+      "response_text": "Night.",
+      "index": "42"
+    },
+    {
+      "topic": "VCG01DocMitchellTopic007",
+      "topic_text": "Burglarize.",
+      "emotion": "Neutral 50",
+      "response_text": "Night.",
+      "index": "43"
+    },
+    {
+      "topic": "VCG01DocMitchellTopic008",
+      "topic_text": "Renovate.",
+      "emotion": "Neutral 50",
+      "response_text": "Night.",
+      "index": "44"
+    },
+    {
+      "topic": "VCG01DocMitchellTopic009",
+      "topic_text": "Target.",
+      "emotion": "Neutral 50",
+      "response_text": "Night.",
+      "index": "45"
+    },
+    {
+      "topic": "VCG01DocMitchellTopic010",
+      "topic_text": "Investment.",
+      "emotion": "Neutral 50",
+      "response_text": "Night.",
+      "index": "46"
+    },
+    {
+      "topic": "VCG01DocMitchellTopic011",
+      "topic_text": "Demolish.",
+      "emotion": "Neutral 50",
+      "response_text": "Night.",
+      "index": "47"
+    },
+    {
+      "topic": "VCG01DocMitchellTopic012",
+      "topic_text": "Campfire.",
+      "emotion": "Neutral 50",
+      "response_text": "Enemy.",
+      "index": "48"
+    },
+    {
+      "topic": "VCG01DocMitchellTopic013",
+      "topic_text": "Dream.",
+      "emotion": "Neutral 50",
+      "response_text": "Bandit.",
+      "index": "49"
+    },
+    {
+      "topic": "VCG01DocMitchellTopic014",
+      "topic_text": "Shroud.",
+      "emotion": "Neutral 50",
+      "response_text": "Bandit.",
+      "index": "50"
+    },
+    {
+      "topic": "VCG01DocMitchellTopic015",
+      "topic_text": "Sleep.",
+      "emotion": "Neutral 50",
+      "response_text": "Bandit.",
+      "index": "51"
+    },
+    {
+      "topic": "VCG01DocMitchellTopic016",
+      "topic_text": "Treasure.",
+      "emotion": "Neutral 50",
+      "response_text": "Bandit.",
+      "index": "52"
+    },
+    {
+      "topic": "VCG01DocMitchellTopic017",
+      "topic_text": "Silencer.",
+      "emotion": "Neutral 50",
+      "response_text": "Bandit.",
+      "index": "53"
+    },
+    {
+      "topic": "VCG01DocMitchellTopic018",
+      "topic_text": "Bribe.",
+      "emotion": "Neutral 50",
+      "response_text": "Light.",
+      "index": "54"
+    },
+    {
+      "topic": "VCG01DocMitchellTopic019",
+      "topic_text": "Crush.",
+      "emotion": "Neutral 50",
+      "response_text": "Light.",
+      "index": "55"
+    },
+    {
+      "topic": "VCG01DocMitchellTopic020",
+      "topic_text": "Stab.",
+      "emotion": "Neutral 50",
+      "response_text": "Light.",
+      "index": "56"
+    },
+    {
+      "topic": "VCG01DocMitchellTopic022",
+      "topic_text": "Swiss cheese.",
+      "emotion": "Neutral 50",
+      "response_text": "Light.",
+      "index": "57"
+    },
+    {
+      "topic": "VCG01DocMitchellTopic023",
+      "topic_text": "Vaporize.",
+      "emotion": "Neutral 50",
+      "response_text": "Light.",
+      "index": "58"
+    },
+    {
+      "topic": "VCG01DocMitchellTopic024",
+      "topic_text": "Reasonable.",
+      "emotion": "Neutral 50",
+      "response_text": "Light.",
+      "index": "59"
+    },
+    {
+      "topic": "VCG01DocMitchellTopic025",
+      "topic_text": "Dark.",
+      "emotion": "Neutral 50",
+      "response_text": "Mother.",
+      "index": "60"
+    },
+    {
+      "topic": "VCG01DocMitchellTopic026",
+      "topic_text": "Heavy.",
+      "emotion": "Neutral 50",
+      "response_text": "Mother.",
+      "index": "61"
+    },
+    {
+      "topic": "VCG01DocMitchellTopic027",
+      "topic_text": "Beam.",
+      "emotion": "Neutral 50",
+      "response_text": "Mother.",
+      "index": "62"
+    },
+    {
+      "topic": "VCG01DocMitchellTopic028",
+      "topic_text": "Flash.",
+      "emotion": "Neutral 50",
+      "response_text": "Mother.",
+      "index": "63"
+    },
+    {
+      "topic": "VCG01DocMitchellTopic029",
+      "topic_text": "Inspiration.",
+      "emotion": "Neutral 50",
+      "response_text": "Mother.",
+      "index": "64"
+    },
+    {
+      "topic": "VCG01DocMitchellTopic030",
+      "topic_text": "Torch.",
+      "emotion": "Neutral 50",
+      "response_text": "Mother.",
+      "index": "65"
+    },
+    {
+      "topic": "VCG01DocMitchellTopic031",
+      "topic_text": "Caretaker.",
+      "emotion": "Neutral 50",
+      "response_text": "Okay. Now I got a few statements. I want you to tell me how much they sound like something you'd say.",
+      "index": "66"
+    },
+    {
+      "topic": "VCG01DocMitchellTopic032",
+      "topic_text": "Genes.",
+      "emotion": "Neutral 50",
+      "response_text": "Okay. Now I've got a few statements. I want you to tell me how much they sound like something you'd say.",
+      "index": "68"
+    },
+    {
+      "topic": "VCG01DocMitchellTopic033",
+      "topic_text": "Cookie jar.",
+      "emotion": "Neutral 50",
+      "response_text": "Okay. Now I've got a few statements. I want you to tell me how much they sound like something you'd say.",
+      "index": "70"
+    },
+    {
+      "topic": "VCG01DocMitchellTopic034",
+      "topic_text": "Tantrum.",
+      "emotion": "Neutral 50",
+      "response_text": "Okay. Now I've got a few statements. I want you to tell me how much they sound like something you'd say.",
+      "index": "72"
+    },
+    {
+      "topic": "VCG01DocMitchellTopic035",
+      "topic_text": "Tattle.",
+      "emotion": "Neutral 50",
+      "response_text": "Okay. Now I've got a few statements. I want you to tell me how much they sound like something you'd say.",
+      "index": "74"
+    },
+    {
+      "topic": "VCG01DocMitchellTopic036",
+      "topic_text": "Regret.",
+      "emotion": "Neutral 50",
+      "response_text": "Okay. Now I've got a few statements. I want you to tell me how much they sound like something you'd say.",
+      "index": "76"
+    },
+    {
+      "topic": "VCG01DocMitchellTopic037",
+      "topic_text": "Human shield.",
+      "emotion": "Disgust 10",
+      "response_text": "Hmm. Sometimes when you give tests like this, you learn more than you was hoping for, and I reckon that ain't always the best thing.",
+      "index": "78"
+    },
+    {
+      "topic": "VCG01DocMitchellTopic038",
+      "topic_text": "Strongly agree.",
+      "emotion": "Neutral 50",
+      "response_text": "I ain't given to relying on others for support.",
+      "index": "82"
+    },
+    {
+      "topic": "VCG01DocMitchellTopic039",
+      "topic_text": "Agree.",
+      "emotion": "Neutral 50",
+      "response_text": "I ain't given to relying on others for support.",
+      "index": "83"
+    },
+    {
+      "topic": "VCG01DocMitchellTopic040",
+      "topic_text": "No opinion.",
+      "emotion": "Neutral 50",
+      "response_text": "I ain't given to relying on others for support.",
+      "index": "84"
+    },
+    {
+      "topic": "VCG01DocMitchellTopic041",
+      "topic_text": "Disagree.",
+      "emotion": "Neutral 50",
+      "response_text": "I ain't given to relying on others for support.",
+      "index": "85"
+    },
+    {
+      "topic": "VCG01DocMitchellTopic042",
+      "topic_text": "Strongly disagree.",
+      "emotion": "Neutral 50",
+      "response_text": "I ain't given to relying on others for support.",
+      "index": "86"
+    },
+    {
+      "topic": "VCG01DocMitchellTopic043",
+      "topic_text": "Strongly agree.",
+      "emotion": "Neutral 50",
+      "response_text": "I'm always fixing to be the center of attention.",
+      "index": "87"
+    },
+    {
+      "topic": "VCG01DocMitchellTopic044",
+      "topic_text": "Agree.",
+      "emotion": "Neutral 50",
+      "response_text": "I'm always fixing to be the center of attention.",
+      "index": "88"
+    },
+    {
+      "topic": "VCG01DocMitchellTopic045",
+      "topic_text": "No opinion.",
+      "emotion": "Neutral 50",
+      "response_text": "I'm always fixing to be the center of attention.",
+      "index": "89"
+    },
+    {
+      "topic": "VCG01DocMitchellTopic046",
+      "topic_text": "Disagree.",
+      "emotion": "Neutral 50",
+      "response_text": "I'm always fixing to be the center of attention.",
+      "index": "90"
+    },
+    {
+      "topic": "VCG01DocMitchellTopic047",
+      "topic_text": "Strongly disagree.",
+      "emotion": "Neutral 50",
+      "response_text": "I'm always fixing to be the center of attention.",
+      "index": "91"
+    },
+    {
+      "topic": "VCG01DocMitchellTopic048",
+      "topic_text": "Strongly agree.",
+      "emotion": "Neutral 50",
+      "response_text": "I'm slow to embrace new ideas.",
+      "index": "92"
+    },
+    {
+      "topic": "VCG01DocMitchellTopic049",
+      "topic_text": "No opinion.",
+      "emotion": "Neutral 50",
+      "response_text": "I'm slow to embrace new ideas.",
+      "index": "93"
+    },
+    {
+      "topic": "VCG01DocMitchellTopic050",
+      "topic_text": "Agree.",
+      "emotion": "Neutral 50",
+      "response_text": "I'm slow to embrace new ideas.",
+      "index": "94"
+    },
+    {
+      "topic": "VCG01DocMitchellTopic051",
+      "topic_text": "Disagree.",
+      "emotion": "Neutral 50",
+      "response_text": "I'm slow to embrace new ideas.",
+      "index": "95"
+    },
+    {
+      "topic": "VCG01DocMitchellTopic052",
+      "topic_text": "Strongly disagree.",
+      "emotion": "Neutral 50",
+      "response_text": "I'm slow to embrace new ideas.",
+      "index": "96"
+    },
+    {
+      "topic": "VCG01DocMitchellTopic053",
+      "topic_text": "Strongly agree.",
+      "emotion": "Neutral 50",
+      "response_text": "I charge in to deal with my problems head-on.",
+      "index": "97"
+    },
+    {
+      "topic": "VCG01DocMitchellTopic054",
+      "topic_text": "Agree.",
+      "emotion": "Neutral 50",
+      "response_text": "I charge in to deal with my problems head-on.",
+      "index": "98"
+    },
+    {
+      "topic": "VCG01DocMitchellTopic055",
+      "topic_text": "No opinion.",
+      "emotion": "Neutral 50",
+      "response_text": "I charge in to deal with my problems head-on.",
+      "index": "99"
+    },
+    {
+      "topic": "VCG01DocMitchellTopic056",
+      "topic_text": "Disagree.",
+      "emotion": "Neutral 50",
+      "response_text": "I charge in to deal with my problems head-on.",
+      "index": "100"
+    },
+    {
+      "topic": "VCG01DocMitchellTopic057",
+      "topic_text": "Strongly disagree.",
+      "emotion": "Neutral 50",
+      "response_text": "I charge in to deal with my problems head-on.",
+      "index": "101"
+    },
+    {
+      "topic": "VCG01DocMitchellTopic058",
+      "topic_text": "Strongly agree.",
+      "emotion": "Neutral 50",
+      "response_text": "Almost done here. What do you say you have a look at this? Tell me what you see.",
+      "index": "102"
+    },
+    {
+      "topic": "VCG01DocMitchellTopic059",
+      "topic_text": "Agree.",
+      "emotion": "Happy 20",
+      "response_text": "Almost done here. What do you say you have a look at this? Tell me what you see.",
+      "index": "103"
+    },
+    {
+      "topic": "VCG01DocMitchellTopic060",
+      "topic_text": "No opinion.",
+      "emotion": "Happy 20",
+      "response_text": "Almost done here. What do you say you have a look at this? Tell me what you see.",
+      "index": "104"
+    },
+    {
+      "topic": "VCG01DocMitchellTopic061",
+      "topic_text": "Disagree.",
+      "emotion": "Happy 20",
+      "response_text": "Almost done here. What do you say you have a look at this? Tell me what you see.",
+      "index": "105"
+    },
+    {
+      "topic": "VCG01DocMitchellTopic062",
+      "topic_text": "Strongly disagree.",
+      "emotion": "Happy 20",
+      "response_text": "Almost done here. What do you say you have a look at this? Tell me what you see.",
+      "index": "106"
+    },
+    {
+      "topic": "VCG01DocMitchellTopic063",
+      "topic_text": "A broken chain.",
+      "emotion": "Neutral 50",
+      "response_text": "Okay. How about this one?",
+      "index": "107"
+    },
+    {
+      "topic": "VCG01DocMitchellTopic064",
+      "topic_text": "A chemical reaction.",
+      "emotion": "Neutral 50",
+      "response_text": "Okay. How about this one?",
+      "index": "108"
+    },
+    {
+      "topic": "VCG01DocMitchellTopic065",
+      "topic_text": "A shadow in a doorframe.",
+      "emotion": "Neutral 50",
+      "response_text": "Okay. How about this one?",
+      "index": "109"
+    },
+    {
+      "topic": "VCG01DocMitchellTopic066",
+      "topic_text": "An oozing wound.",
+      "emotion": "Neutral 50",
+      "response_text": "Okay. How about this one?",
+      "index": "110"
+    },
+    {
+      "topic": "VCG01DocMitchellTopic067",
+      "topic_text": "An angry two-headed ant.",
+      "emotion": "Neutral 50",
+      "response_text": "Okay. How about this one?",
+      "index": "111"
+    },
+    {
+      "topic": "VCG01DocMitchellTopic068",
+      "topic_text": "I see a priceless work of art.",
+      "emotion": "Neutral 50",
+      "response_text": "Last one.",
+      "index": "112"
+    },
+    {
+      "topic": "VCG01DocMitchellTopic069",
+      "topic_text": "It's some piece of space-age technology.",
+      "emotion": "Neutral 50",
+      "response_text": "Last one.",
+      "index": "113"
+    },
+    {
+      "topic": "VCG01DocMitchellTopic070",
+      "topic_text": "A ship at sea.",
+      "emotion": "Neutral 50",
+      "response_text": "Last one.",
+      "index": "114"
+    },
+    {
+      "topic": "VCG01DocMitchellTopic071",
+      "topic_text": "I'm too embarrassed to say what it looks like.",
+      "emotion": "Neutral 50",
+      "response_text": "Last one.",
+      "index": "115"
+    },
+    {
+      "topic": "VCG01DocMitchellTopic072",
+      "topic_text": "A light in the darkness.",
+      "emotion": "Happy 20",
+      "response_text": "Well, that's all she wrote.",
+      "index": "116"
+    },
+    {
+      "topic": "VCG01DocMitchellTopic073",
+      "topic_text": "A bearded man.",
+      "emotion": "Happy 20",
+      "response_text": "Well, that's all she wrote.",
+      "index": "120"
+    },
+    {
+      "topic": "VCG01DocMitchellTopic074",
+      "topic_text": "A mushroom cloud.",
+      "emotion": "Happy 20",
+      "response_text": "Well, that's all she wrote.",
+      "index": "122"
+    },
+    {
+      "topic": "VCG01DocMitchellTopic075",
+      "topic_text": "A head on a pillow.",
+      "emotion": "Happy 20",
+      "response_text": "Well, that's all she wrote.",
+      "index": "124"
+    },
+    {
+      "topic": "VCG01DocMitchellTopic076",
+      "topic_text": "<Doc Outro>",
+      "emotion": "Neutral 50",
+      "response_text": "Well, if you're heading back out there, you ought to have this.",
+      "index": "126"
+    },
+    {
+      "topic": "VCG01DocMitchellTopic083",
+      "topic_text": "Thanks for patching me up, Doc.",
+      "emotion": "Neutral 50",
+      "response_text": "Don't mention it. It's what I'm here for.",
+      "index": "138"
+    },
+    {
+      "topic": "VCG01DocMitchellTopic084",
+      "topic_text": "You shouldn't have gone through my stuff.",
+      "emotion": "Neutral 50",
+      "response_text": "Didn't have much choice, I'm afraid. But I understand the sentiment.",
+      "index": "139"
+    },
+    {
+      "topic": "VEndingGoodsprings",
+      "topic_text": "VEndingGoodsprings",
+      "emotion": "Neutral 50",
+      "response_text": "{narrating}Travelers continued to stop by Goodsprings Source for water on the Long 15, but rarely would anyone venture into the ruins of Goodsprings itself.",
+      "index": "140"
+    },
+    {
+      "topic": "VFreeformGoodSpringsDocMitchellSpeechCheck",
+      "topic_text": "Isn't it customary for a doctor to prescribe follow-up medication?",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] Of course. You been through a lot. Ain't much, but these'll do you right if the pain flares up.",
+      "index": "150"
+    },
+    {
+      "topic": "VFreeformGoodSpringsDocMitchellTellMeAboutYouVCG01DocMitchellTellMeAboutYou",
+      "topic_text": "Tell me about yourself, Doc.",
+      "emotion": "Neutral 50",
+      "response_text": "Well, I already told you I came from a vault. After that, was a traveling doctor for a spell.",
+      "index": "154"
+    },
+    {
+      "topic": "VFreeformGoodSpringsDocMitchellTownInfoVCG01DocMitchellTownInfo",
+      "topic_text": "What else can you tell me about Goodsprings?",
+      "emotion": "Neutral 50",
+      "response_text": "Well, there's a general store just up the road. Run by a fella named Chet. He don't got nothing fancy, but he's got your basics covered.",
+      "index": "158"
+    },
+    {
+      "topic": "VFreeformGoodSpringsDocMitchellWhereIsThis",
+      "topic_text": "What town is this?",
+      "emotion": "Neutral 50",
+      "response_text": "This here's Goodsprings. Named after the water we got here, just down the road to the southeast. Goodsprings Source, they call it.",
+      "index": "164"
+    },
+    {
+      "topic": "VFreeformGoodSpringsDocMitchellWhoRescuedVCG01DocMitchellWhoRescued",
+      "topic_text": "Who was it that rescued me?",
+      "emotion": "Neutral 50",
+      "response_text": "That'd be Victor. Curious fella. Sort of odd. And I don't just mean 'cause he's a robot. I couldn't tell you much about him.",
+      "index": "166"
+    },
+    {
+      "topic": "VFreeformGoodSpringsDocMitchellWhoShotMe",
+      "topic_text": "Do you know anything about the man that shot me?",
+      "emotion": "Neutral 50",
+      "response_text": "I didn't see him or the men with him. You might ask around town, though. Could be someone saw which way they was headed.",
+      "index": "169"
+    },
+    {
+      "topic": "VFreeformGoodspringsDocMitchellShootoutBags",
+      "topic_text": "They'll be using explosives. Do you have something for more serious injuries?",
+      "emotion": "Neutral 50",
+      "response_text": "I ain't got much, but it'll do you more good out there than it will in here. Take what I got.",
+      "index": "171"
+    },
+    {
+      "topic": "VFreeformGoodspringsDocMitchellShootoutHelp",
+      "topic_text": "The town is going to be attacked by bandits. Anything you can do to help?",
+      "emotion": "Neutral 50",
+      "response_text": "Seems like wherever I go it's always the same. Folks just never leave each other alone.",
+      "index": "172"
+    },
+    {
+      "topic": "VFreeformGoodspringsDocMitchellTopic000",
+      "topic_text": "You said before you had something taken from you.",
+      "emotion": "Neutral 50",
+      "response_text": "Well, ain't we all, right? That was a long time ago.{Lying}I don't pay it much mind anymore.",
+      "index": "174"
+    },
+    {
+      "topic": "VFreeformGoodspringsDocMitchellTopic001",
+      "topic_text": "I saw your old vault on the Strip. Vault 21, right? Mr. House filled it with concrete?",
+      "emotion": "Neutral 50",
+      "response_text": "{Bitter, attempting to hide it}Yep. He sure did. Wanted himself a hotel, and to make sure once he made the change there'd never be any going back.",
+      "index": "175"
+    },
+    {
+      "topic": "VFreeformGoodspringsDocMitchellTopic002",
+      "topic_text": "<Lie> I'll need all the medical supplies you can spare for an injured man down by the highway.",
+      "emotion": "Neutral 50",
+      "response_text": "Are you sure? What kind of injuries are we talking about?",
+      "index": "178"
+    },
+    {
+      "topic": "VFreeformGoodspringsDocMitchellTopic003",
+      "topic_text": "Never mind.",
+      "emotion": "Neutral 50",
+      "response_text": "Must not be that serious, then.",
+      "index": "180"
+    },
+    {
+      "topic": "VFreeformGoodspringsDocMitchellTopic004< Medicine 25 >",
+      "topic_text": "Breathing is uneven, and he's coughing up blood. Possible internal injuries.",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] All right, that does sound bad. Here, take these - it should be enough. Good luck!",
+      "index": "181"
+    },
+    {
+      "topic": "VFreeformGoodspringsDocMitchellTopic005",
+      "topic_text": "Is that when you settled out here with your wife?",
+      "emotion": "Neutral 50",
+      "response_text": "Eventually we made our way out here. But uh...",
+      "index": "183"
+    },
+    {
+      "topic": "VFreeformGoodspringsDocMitchellTopic006",
+      "topic_text": "Let's talk about something else.",
+      "emotion": "Neutral 50",
+      "response_text": "What'd you have in mind?",
+      "index": "187"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "You take care, now.",
+      "index": "188"
+    },
+    {
+      "topic": "VCG01DocFarewellTransition",
+      "topic_text": "VCG01DocFarewellTransition",
+      "emotion": "Neutral 50",
+      "response_text": "All right. I guess that about does it.",
+      "index": "189"
+    },
+    {
+      "topic": "VCG01DocPsychIntro",
+      "topic_text": "VCG01DocPsychIntro",
+      "emotion": "Surprise 15",
+      "response_text": "Well, we know your vitals are good.",
+      "index": "191"
+    },
+    {
+      "topic": "VCG01DocReactions",
+      "topic_text": "VCG01DocReactions",
+      "emotion": "Sad 50",
+      "response_text": "Sorry, son. I fixed up your head as best I knew how. I guess I missed a spot.",
+      "index": "194"
+    },
+    {
+      "topic": "VCG01DocTraitIntro",
+      "topic_text": "VCG01DocTraitIntro",
+      "emotion": "Neutral 50",
+      "response_text": "Before I turn you loose, I need one more thing from you.",
+      "index": "210"
+    },
+    {
+      "topic": "VCG01Intro",
+      "topic_text": "VCG01Intro",
+      "emotion": "Neutral 50",
+      "response_text": "You're awake. How about that.",
+      "index": "213"
+    }
+  ],
+  "combat": [
+    {
+      "topic": "AcceptYield",
+      "topic_text": "AcceptYield",
+      "emotion": "Neutral 50",
+      "response_text": "That's better.",
+      "index": "228"
+    },
+    {
+      "topic": "Assault",
+      "topic_text": "Assault",
+      "emotion": "Neutral 50",
+      "response_text": "Why would you do that?",
+      "index": "229"
+    },
+    {
+      "topic": "Attack",
+      "topic_text": "Attack",
+      "emotion": "Neutral 50",
+      "response_text": "You'll get yours!",
+      "index": "232"
+    },
+    {
+      "topic": "AvoidThreat",
+      "topic_text": "AvoidThreat",
+      "emotion": "Neutral 50",
+      "response_text": "Trouble...",
+      "index": "235"
+    },
+    {
+      "topic": "Death",
+      "topic_text": "Death",
+      "emotion": "Neutral 50",
+      "response_text": "Ahh...",
+      "index": "237"
+    },
+    {
+      "topic": "DeathResponse",
+      "topic_text": "DeathResponse",
+      "emotion": "Neutral 50",
+      "response_text": "Darn it...",
+      "index": "240"
+    },
+    {
+      "topic": "FireExplosive",
+      "topic_text": "FireExplosive",
+      "emotion": "Neutral 50",
+      "response_text": "Get outta the way!",
+      "index": "242"
+    },
+    {
+      "topic": "Flee",
+      "topic_text": "Flee",
+      "emotion": "Neutral 50",
+      "response_text": "I should go!",
+      "index": "244"
+    },
+    {
+      "topic": "GuardTrespass",
+      "topic_text": "GuardTrespass",
+      "emotion": "Neutral 50",
+      "response_text": "You shouldn't be here.",
+      "index": "247"
+    },
+    {
+      "topic": "Hit",
+      "topic_text": "Hit",
+      "emotion": "Neutral 50",
+      "response_text": "Ack!",
+      "index": "250"
+    },
+    {
+      "topic": "Murder",
+      "topic_text": "Murder",
+      "emotion": "Neutral 50",
+      "response_text": "What are you thinking?",
+      "index": "256"
+    },
+    {
+      "topic": "MurderNoCrime",
+      "topic_text": "MurderNoCrime",
+      "emotion": "Neutral 50",
+      "response_text": "Hate to see that.",
+      "index": "259"
+    },
+    {
+      "topic": "PowerAttack",
+      "topic_text": "PowerAttack",
+      "emotion": "Neutral 50",
+      "response_text": "Huragh!",
+      "index": "262"
+    },
+    {
+      "topic": "Steal",
+      "topic_text": "Steal",
+      "emotion": "Neutral 50",
+      "response_text": "You should give that back.",
+      "index": "266"
+    }
+  ]
+}

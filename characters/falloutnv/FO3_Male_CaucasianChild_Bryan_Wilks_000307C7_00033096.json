@@ -1,0 +1,677 @@
+{
+  "name": "Bryan Wilks",
+  "url": "/wiki/Bryan_Wilks",
+  "dialogue_name": "BryanWilks.txt",
+  "dialogue_url": "/wiki/BryanWilks.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": true,
+  "can_be_enslaved": true,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000307C7",
+  "ref_id": "00033096",
+  "editor_id": "BryanWilks",
+  "location": "Super-Duper Mart,Grayditch",
+  "location_url": "/wiki/Super-Duper_Mart_(Fallout_3)",
+  "descriptions": [
+    "Bryan Wilks is an eight-year-old survivor of Grayditch in Fallout 3. Talking to him automatically begins the quest Those!",
+    "The only son of Fred Wilks, Bryan came to Grayditch with his dad in 2276. The town was a stopover in their travels further, but the bricked houses and a small community provided welcome respite",
+    "Though young, Bryan was raised to survive in the wasteland and Fred trusted his son with a supply key for emergencies, trusting his judgement.",
+    "Bryan's dad set an example by making supply runs for the town and  hunting giant ants whenever they menaced the town. He partnered up with William Brandice, whose son, Will Brandice, was the only other child in the settlement.",
+    "It is worth noting that Bryan has yet to grasp the finer points of language or metaphor. He considered Doctor Weston Lesko a nice person, despite his evident lack of social skills and occasional argument with his father.",
+    "During the attack, he hid underneath a demolished car, evading the mandibles of the creatures that killed off the rest of the settlement.",
+    "Those!: Bryan automatically approaches the player when they near Grayditch, asking for help finding his father and figuring out what happened to him. Afterwards, he takes shelter in a closed Pulowski Preservation shelter next to the diner near his home, waiting for the player to find his dad and then Doctor Lesko.",
+    "While in the Pulowski Preservation shelter, Bryan will say \"Now I know what a TV dinner feels like.\" This is a reference to the movie Die Hard, where John McClane says the same thing while crawling through a narrow ventilation shaft."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Grayditch",
+  "role": "Survivor",
+  "detailed_location": "GrayditchRivet City(optional)Little Lamplight(optional)Paradise Falls(optional)",
+  "voice_actor": "Sean McCoy",
+  "special": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 5,
+    "Intelligence": 5,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "level": "1",
+  "misc_skills": [],
+  "karma": "Good",
+  "voice_type": "MaleChild01DC",
+  "geck_race": "CaucasianChild",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Anger 50",
+      "response_text": "No! I'm not talking to you anymore! You're a jerk and I hate you!",
+      "index": "1"
+    },
+    {
+      "topic": "MS04AdoptionTLBryanNo",
+      "topic_text": "Actually, I give up. I can't find anywhere that will take you in.",
+      "emotion": "Sad 50",
+      "response_text": "Oh, okay. I understand. Thanks for trying though.",
+      "index": "23"
+    },
+    {
+      "topic": "MS04AdoptionTLBryanYesLL",
+      "topic_text": "I found a place with lots of kids your age. I'll tell you how to get there.",
+      "emotion": "Happy 80",
+      "response_text": "Well, it would have been nicer to live with Vera, but this will probably be pretty fun too!",
+      "index": "26"
+    },
+    {
+      "topic": "MS04AdoptionTLBryanYesPF",
+      "topic_text": "Sure did. It's a beautiful place called Paradise Falls. Here, put this on.",
+      "emotion": "Fear 100",
+      "response_text": "W-what is this weird thing?",
+      "index": "29"
+    },
+    {
+      "topic": "MS04AdoptionTLBryanYesPF01",
+      "topic_text": "It's a Paradise Welcome Necklace. It'll help you find your way, you lucky devil!",
+      "emotion": "Happy 70",
+      "response_text": "I can't believe everything you've done for me. Most people would have kept on walking when I ran up to them screaming like I did.",
+      "index": "30"
+    },
+    {
+      "topic": "MS04AdoptionTLBryanYesPF02",
+      "topic_text": "Something to remember me by. It'll lead you home.",
+      "emotion": "Happy 70",
+      "response_text": "I can't believe everything you've done for me. Most people would have kept on walking when I ran up to them screaming like I did.",
+      "index": "32"
+    },
+    {
+      "topic": "MS04AdoptionTLBryanYesPF03",
+      "topic_text": "It's a slave collar, I sold your dumb ass for caps.",
+      "emotion": "Anger 100",
+      "response_text": "You son-of-a-bitch!!!!",
+      "index": "34"
+    },
+    {
+      "topic": "MS04AdoptionTLBryanYesVera",
+      "topic_text": "I sure did, Bryan. Vera said she'd take you in!",
+      "emotion": "Surprise 90",
+      "response_text": "You really found her!? Oh, thank you so much!",
+      "index": "36"
+    },
+    {
+      "topic": "MS04Bailout",
+      "topic_text": "Let me ask you something else.",
+      "emotion": "Neutral 50",
+      "response_text": "All right. What is it?",
+      "index": "39"
+    },
+    {
+      "topic": "MS04BryanCT01",
+      "topic_text": "Those what? What's the matter?",
+      "emotion": "Fear 90",
+      "response_text": "Those... THINGS. They keep coming. They scare me! Make it stop!",
+      "index": "40"
+    },
+    {
+      "topic": "MS04BryanCT02",
+      "topic_text": "Calm down, kid.",
+      "emotion": "Neutral 50",
+      "response_text": "No... those things will get me! I can't. Gotta' keep going!",
+      "index": "41"
+    },
+    {
+      "topic": "MS04BryanCT03",
+      "topic_text": "What the heck is your problem?",
+      "emotion": "Neutral 50",
+      "response_text": "Those things... they're gonna' get me too! Can't stop now!",
+      "index": "42"
+    },
+    {
+      "topic": "MS04BryanCT04",
+      "topic_text": "Hey, hey. Calm down. It's going to be okay. I promise.",
+      "emotion": "Sad 50",
+      "response_text": "You won't leave me like all the other grown-ups? You... you can help me?",
+      "index": "43"
+    },
+    {
+      "topic": "MS04BryanCT04a",
+      "topic_text": "Hey, kid. It's okay. I'm a big, tough guy. I can take care of you!",
+      "emotion": "Neutral 50",
+      "response_text": "You look stronger than all the other grown-ups. Can you... can you protect me?",
+      "index": "44"
+    },
+    {
+      "topic": "MS04BryanCT04b",
+      "topic_text": "Look, kid. There's no such thing as monsters.",
+      "emotion": "Happy 50",
+      "response_text": "R... really? No monsters?",
+      "index": "46"
+    },
+    {
+      "topic": "MS04BryanCT05",
+      "topic_text": "Unless you tell me what the problem is I can't help you.",
+      "emotion": "Sad 50",
+      "response_text": "THOSE things! It's all their fault! They did this to us!",
+      "index": "48"
+    },
+    {
+      "topic": "MS04BryanCT06",
+      "topic_text": "Okay kid. I'm going to say it once. Stop your whining!",
+      "emotion": "Anger 50",
+      "response_text": "No! You don't care! The grown-ups never cared! Now they're all dead! Well, fine! You'll just die too!",
+      "index": "49"
+    },
+    {
+      "topic": "MS04BryanCT06a",
+      "topic_text": "Is that a warning, or a threat?",
+      "emotion": "Sad 50",
+      "response_text": "See! I knew it! You don't care! No one ever cares!",
+      "index": "50"
+    },
+    {
+      "topic": "MS04BryanCT06b",
+      "topic_text": "All right, I'm sorry. Calm down and tell me what's going on.",
+      "emotion": "Fear 50",
+      "response_text": "Please don't get mad at me... I'm scared. I don't know what to do.",
+      "index": "52"
+    },
+    {
+      "topic": "MS04BryanCT07",
+      "topic_text": "I'd like to help, but I need to know more first.",
+      "emotion": "Fear 50",
+      "response_text": "Those... big things. They're all over Grayditch and they killed everyone!",
+      "index": "54"
+    },
+    {
+      "topic": "MS04BryanCT08",
+      "topic_text": "Sorry, kid. Help costs caps, and you look pretty broke to me.",
+      "emotion": "Sad 50",
+      "response_text": "You grown-ups are all the same! All you care about is your stuff!",
+      "index": "56"
+    },
+    {
+      "topic": "MS04BryanCT08a",
+      "topic_text": "I don't know... you look like a tasty snack for a monster.",
+      "emotion": "Anger 90",
+      "response_text": "Why are you so mean!? All you care about is yourself! Well, fine!",
+      "index": "58"
+    },
+    {
+      "topic": "MS04BryanWilksAnger01",
+      "topic_text": "Don't be like that. I'm sorry for being mean.",
+      "emotion": "Surprise 50",
+      "response_text": "Okay, I forgive you.",
+      "index": "60"
+    },
+    {
+      "topic": "MS04BryanWilksAnger02",
+      "topic_text": "Okay, okay. I'm sorry.",
+      "emotion": "Neutral 50",
+      "response_text": "No! They always just say sorry, but then it turns out to be a bunch of lies.",
+      "index": "61"
+    },
+    {
+      "topic": "MS04BryanWilksAnger03",
+      "topic_text": "What's it going to take for you to forgive me?",
+      "emotion": "Neutral 50",
+      "response_text": "When I was bad, my pappa made me apologize three times. Then he decided if I was really or sorry or not.",
+      "index": "63"
+    },
+    {
+      "topic": "MS04BryanWilksAnger04",
+      "topic_text": "Forget it, I don't care. I'm out of here.",
+      "emotion": "Disgust 50",
+      "response_text": "Fine. Hmph.",
+      "index": "65"
+    },
+    {
+      "topic": "MS04BryanWilksAngerSorry",
+      "topic_text": "I'm sorry! There, that's three.",
+      "emotion": "Happy 50",
+      "response_text": "Good. You did it. Now I'll talk to you.",
+      "index": "66"
+    },
+    {
+      "topic": "MS04BryanWilksAngrySorryClever",
+      "topic_text": "Okay. \"I'm sorry three times!\" Ha! That's exactly what you said to say!",
+      "emotion": "Disgust 50",
+      "response_text": "Oh man! You got me!",
+      "index": "69"
+    },
+    {
+      "topic": "MS04BryanWilksFatherDead01",
+      "topic_text": "Bryan, I'm sorry, but your father is dead.",
+      "emotion": "Sad 80",
+      "response_text": "Yeah... I snuck back home a little while ago and found him laying there.",
+      "index": "71"
+    },
+    {
+      "topic": "MS04BryanWilksFatherDead02",
+      "topic_text": "Your father's dead.",
+      "emotion": "Sad 80",
+      "response_text": "Yeah... I snuck back home a little while ago and found him laying there.",
+      "index": "75"
+    },
+    {
+      "topic": "MS04BryanWilksFatherDead03",
+      "topic_text": "Sorry, kid. Your old man is ant food.",
+      "emotion": "Disgust 70",
+      "response_text": "Well you don't have to be such a meanie about it.",
+      "index": "79"
+    },
+    {
+      "topic": "MS04BryanWilksFatherDead04",
+      "topic_text": "Fine, I'll take care of everything.",
+      "emotion": "Anger 70",
+      "response_text": "You gotta stop it so this can't happen to anyone else's family ever again!",
+      "index": "84"
+    },
+    {
+      "topic": "MS04BryanWilksFatherDead05",
+      "topic_text": "I'll stop whatever started this, I promise you.",
+      "emotion": "Anger 70",
+      "response_text": "You gotta stop it so this can't happen to anyone else's family ever again!",
+      "index": "86"
+    },
+    {
+      "topic": "MS04BryanWilksFatherDead06",
+      "topic_text": "My part in this is all done. Sorry, kid.",
+      "emotion": "Sad 100",
+      "response_text": "Please don't go! Please!",
+      "index": "89"
+    },
+    {
+      "topic": "MS04BryanWilksFatherDead07",
+      "topic_text": "People die all the time out here. Get used to it.",
+      "emotion": "Sad 100",
+      "response_text": "Why does everyone who comes through here have to be so mean!?",
+      "index": "91"
+    },
+    {
+      "topic": "MS04BryanWilksFatherDead09",
+      "topic_text": "Why don't you just forget about it and clear on out of here?",
+      "emotion": "Sad 80",
+      "response_text": "Look, my dad used to always say \"You can do whatever you want in life but the family comes first.\"",
+      "index": "93"
+    },
+    {
+      "topic": "MS04BryanWilksIntroExtender",
+      "topic_text": "If you're talking about the Fire Ants, I'm already working on it.",
+      "emotion": "Surprise 80",
+      "response_text": "You-you are?! I can't believe it!",
+      "index": "95"
+    },
+    {
+      "topic": "MS04BryanWilksIntroExtenderCaps",
+      "topic_text": "Sorry, kid. Help costs caps, and you look pretty broke to me.",
+      "emotion": "Fear 70",
+      "response_text": "Look, I know if you find my pappa he's gotta have some caps with him. He'd pay you! Please, mister!",
+      "index": "99"
+    },
+    {
+      "topic": "MS04BryanWilksIntroExtenderNope",
+      "topic_text": "I got my own problems right now, kid.",
+      "emotion": "Anger 90",
+      "response_text": "Why are you so mean!?",
+      "index": "101"
+    },
+    {
+      "topic": "MS04BryanWilksPost50NeverMet01",
+      "topic_text": "Hey, are you okay? You shouldn't be alone in a place like this.",
+      "emotion": "Sad 70",
+      "response_text": "My name's Bryan Wilks. I live in Grayditch. Well, that is, I did until those Fire Ants turned this place into a cemetery.",
+      "index": "103"
+    },
+    {
+      "topic": "MS04BryanWilksPost50NeverMet02",
+      "topic_text": "Calm down, calm down. Just who the heck are you?",
+      "emotion": "Sad 70",
+      "response_text": "My name's Bryan Wilks. I live in Grayditch. Well, that is, I did until those Fire Ants turned this place into a cemetery.",
+      "index": "106"
+    },
+    {
+      "topic": "MS04BryanWilksPost50NeverMet03",
+      "topic_text": "That's wonderful, kid. Now scram.",
+      "emotion": "Happy 50",
+      "response_text": "Awww, come on. You're pretty tough taking out all those ants by yourself!",
+      "index": "109"
+    },
+    {
+      "topic": "MS04BryanWilksPostDungeonLeskoWay01",
+      "topic_text": "I'm just glad you're safe.",
+      "emotion": "Sad 60",
+      "response_text": "I wish I had something to give you for all the work you did, but I never really had much to start with.",
+      "index": "112"
+    },
+    {
+      "topic": "MS04BryanWilksPostDungeonLeskoWay02",
+      "topic_text": "Yep, it was all me.",
+      "emotion": "Sad 60",
+      "response_text": "I wish I had something to give you for all the work you did, but I never really had much to start with.",
+      "index": "114"
+    },
+    {
+      "topic": "MS04BryanWilksPostDungeonLeskoWay03",
+      "topic_text": "All the ants are dead so I'm done here. Go home.",
+      "emotion": "Sad 60",
+      "response_text": "I wish I had something to give you for all the work you did, but I never really had much to start with.",
+      "index": "116"
+    },
+    {
+      "topic": "MS04BryanWilksPreStage50CT01",
+      "topic_text": "Don't worry, Bryan... I think I know how to take care of these ants.",
+      "emotion": "Sad 50",
+      "response_text": "Just be careful, mister... I don't wanna lose you too.",
+      "index": "118"
+    },
+    {
+      "topic": "MS04BryanWilksPreStage50CT02",
+      "topic_text": "I know where the Ant Queen lives.",
+      "emotion": "Surprise 70",
+      "response_text": "You do?!",
+      "index": "120"
+    },
+    {
+      "topic": "MS04BryanWilksPreStage50CT03",
+      "topic_text": "Haven't found a thing. (Lie)",
+      "emotion": "Disgust 50",
+      "response_text": "Awww shucks. Well, keep trying, mister. I promise I'll be good and stay right here for you.",
+      "index": "122"
+    },
+    {
+      "topic": "MS04FinTLAdopted",
+      "topic_text": "So, how are you getting along now that you've left Grayditch behind?",
+      "emotion": "Happy 50",
+      "response_text": "Oh, Vera is the nicest lady ever! It's so cool that you brought me here!",
+      "index": "124"
+    },
+    {
+      "topic": "MS04FindaHome01",
+      "topic_text": "I can't leave you here alone. Let me find you a place to live.",
+      "emotion": "Surprise 50",
+      "response_text": "Really? You mean it!?",
+      "index": "137"
+    },
+    {
+      "topic": "MS04FindaHome02",
+      "topic_text": "Yeah, you'll be better off staying at home.",
+      "emotion": "Fear 50",
+      "response_text": "I dunno... I kinda' don't like it in here. Gonna be really lonely.",
+      "index": "140"
+    },
+    {
+      "topic": "MS04FindaHome03",
+      "topic_text": "Let me think about it.",
+      "emotion": "Fear 50",
+      "response_text": "Well, okay. Just don't forget about me.",
+      "index": "142"
+    },
+    {
+      "topic": "MS04TLDoctorLesko",
+      "topic_text": "Mind if I ask you some important stuff about Doctor Lesko?",
+      "emotion": "Happy 50",
+      "response_text": "Naw, go ahead. I like talking to you.",
+      "index": "143"
+    },
+    {
+      "topic": "MS04TLDoctorLesko01",
+      "topic_text": "Did your pappa ever tell you what he thought of Lesko?",
+      "emotion": "Sad 50",
+      "response_text": "Well, I remember once they were all yelling at each other and stuff. Kinda weird cause Doc Lesko is so nice and all.",
+      "index": "144"
+    },
+    {
+      "topic": "MS04TLDoctorLesko02",
+      "topic_text": "Before Lesko showed up, were there ever ants in Grayditch?",
+      "emotion": "Sad 50",
+      "response_text": "Well, there used to be like big regular ants once in a while... but pappa could usually hunt 'em down with Mr. Brandice across the street.",
+      "index": "147"
+    },
+    {
+      "topic": "MS04TLDoctorLesko03",
+      "topic_text": "Do you trust Lesko?",
+      "emotion": "Sad 50",
+      "response_text": "I dunno. I mean, he always talked real funny and didn't let me touch anything in his house.",
+      "index": "149"
+    },
+    {
+      "topic": "MS04TLDoctorLesko04",
+      "topic_text": "I found him, actually... inside Marigold Metro.",
+      "emotion": "Surprise 90",
+      "response_text": "Really?! Oh my gosh!",
+      "index": "151"
+    },
+    {
+      "topic": "MS04TLFindaHome",
+      "topic_text": "Any idea where I can look for someone to take care of you?",
+      "emotion": "Neutral 50",
+      "response_text": "Well, pappa always told me about my cousin Vera. She lives on some big, giant ship somewhere or something.",
+      "index": "154"
+    },
+    {
+      "topic": "MS04TLFoundPappa",
+      "topic_text": "I think I have some bad news for you.",
+      "emotion": "Fear 90",
+      "response_text": "Oh no! What happened?",
+      "index": "156"
+    },
+    {
+      "topic": "MS04TLGrayditch",
+      "topic_text": "What happened here?",
+      "emotion": "Neutral 50",
+      "response_text": "It used to be kinda' nice. No one bothered us there, I guess because we were so close to D.C.",
+      "index": "158"
+    },
+    {
+      "topic": "MS04TLGrayditch01",
+      "topic_text": "Did you know the others in town very well?",
+      "emotion": "Neutral 50",
+      "response_text": "Naw. People don't like to stay long in Grayditch. The D.C. Ruins aren't a great place to make a home, you know?",
+      "index": "160"
+    },
+    {
+      "topic": "MS04TLGrayditch02",
+      "topic_text": "Who else lived in Grayditch?",
+      "emotion": "Neutral 50",
+      "response_text": "Ummm, besides me and my pappa, there was Doc Lesko who stayed with us and Will Brandice and his momma and pappa too.",
+      "index": "162"
+    },
+    {
+      "topic": "MS04TLGrayditchResidents",
+      "topic_text": "Mind if I ask about some of the people who lived here?",
+      "emotion": "Happy 50",
+      "response_text": "Naw, go ahead. It's just nice to talk to anyone about stuff at all.",
+      "index": "164"
+    },
+    {
+      "topic": "MS04TLGrayditchResidents00Bail",
+      "topic_text": "About the other people from Grayditch...",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah?",
+      "index": "165"
+    },
+    {
+      "topic": "MS04TLGrayditchResidents00a",
+      "topic_text": "Tell me about this \"Doc Lesko.\"",
+      "emotion": "Neutral 50",
+      "response_text": "He was a strange man. He paid pappa some caps to help him build a shack and carry a bunch of junk into it.",
+      "index": "166"
+    },
+    {
+      "topic": "MS04TLGrayditchResidents00b",
+      "topic_text": "Tell me about the Brandice Family.",
+      "emotion": "Happy 50",
+      "response_text": "Well, there was Will... he was sorta my friend. And then there was his dad and his mom.",
+      "index": "168"
+    },
+    {
+      "topic": "MS04TLGrayditchResidentsBrandice01",
+      "topic_text": "Where did the Brandices live?",
+      "emotion": "Happy 50",
+      "response_text": "Right across the street actually. It was pretty swell having someone to hang out with so close by.",
+      "index": "169"
+    },
+    {
+      "topic": "MS04TLGrayditchResidentsBrandice02",
+      "topic_text": "So, you and Will were good friends?",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah, Will was super nice to me. He was like a year older than me I think. He even shared his comic books with me.",
+      "index": "170"
+    },
+    {
+      "topic": "MS04TLGrayditchResidentsBrandice03",
+      "topic_text": "How about Will's parents?",
+      "emotion": "Neutral 50",
+      "response_text": "Well, his mom was nice too. She was kind of quiet, but she always took care of me and my pappa when we came over.",
+      "index": "172"
+    },
+    {
+      "topic": "MS04TLGrayditchResidentsBrandice04",
+      "topic_text": "Will's dad was scary? How so?",
+      "emotion": "Disgust 50",
+      "response_text": "He was like always watching me and my dad real careful, like he didn't trust us or something.",
+      "index": "175"
+    },
+    {
+      "topic": "MS04TLGrayditchResidentsLesko01",
+      "topic_text": "Where did Doctor Lesko stay?",
+      "emotion": "Neutral 50",
+      "response_text": "He spent all of his of time in that shack next door to my house.",
+      "index": "178"
+    },
+    {
+      "topic": "MS04TLGrayditchResidentsLesko02",
+      "topic_text": "Do you have any idea what Doctor Lesko was doing in Grayditch?",
+      "emotion": "Sad 50",
+      "response_text": "Naw. He was a nice man, but he never wanted to play with me very much and we barely talked.",
+      "index": "180"
+    },
+    {
+      "topic": "MS04TLGrayditchResidentsLesko03",
+      "topic_text": "Did Doctor Lesko have any weird stuff in his place?",
+      "emotion": "Neutral 50",
+      "response_text": "I dunno, all kinds of doohickeys. Boxes with lots of lights, some funny glass bottles....",
+      "index": "182"
+    },
+    {
+      "topic": "MS04TLHelp",
+      "topic_text": "Okay. I'll go look for your father.",
+      "emotion": "Surprise 90",
+      "response_text": "You will? Really? Thanks a whole lot!",
+      "index": "184"
+    },
+    {
+      "topic": "MS04TLHelp01",
+      "topic_text": "Is there anywhere you can hide while I search?",
+      "emotion": "Neutral 50",
+      "response_text": "Well, there is the personal shelter next to the old diner.",
+      "index": "187"
+    },
+    {
+      "topic": "MS04TLHelp02",
+      "topic_text": "This probably isn't the best place for you to stand...",
+      "emotion": "Disgust 50",
+      "response_text": "You think I didn't know that? I been hiding in this place for days!",
+      "index": "190"
+    },
+    {
+      "topic": "MS04TLHelp03",
+      "topic_text": "Okay kid, I said I'd do it. Now scram!",
+      "emotion": "Disgust 80",
+      "response_text": "Humph... you don't gotta be such a jerk about it.",
+      "index": "193"
+    },
+    {
+      "topic": "MS04TLHelpChildAtHeart",
+      "topic_text": "Hey, I know it's scary to be alone. Just hang in there!",
+      "emotion": "Happy 90",
+      "response_text": "Wow, you sound as nice as my pappa.",
+      "index": "196"
+    },
+    {
+      "topic": "MS04TLHelpSC",
+      "topic_text": "Look, anything else you can do to help might save lives.",
+      "emotion": "Neutral 50",
+      "response_text": "You know, maybe this will help and maybe it won't, but pappa hid a bunch of stuff behind the old diner in a dumpster.",
+      "index": "200"
+    },
+    {
+      "topic": "MS04TLMarigold",
+      "topic_text": "What can you tell me about Marigold Station?",
+      "emotion": "Fear 90",
+      "response_text": "Whoa! That's a bad place. My dad said to never, ever go down there.",
+      "index": "202"
+    },
+    {
+      "topic": "MS04TLWhatAreThose",
+      "topic_text": "Can you tell me more about the things attacking Grayditch?",
+      "emotion": "Neutral 50",
+      "response_text": "Well, they're big ugly things that crawl around on six legs. They got huge teeth and skitter around grabbing everything in their path.",
+      "index": "204"
+    },
+    {
+      "topic": "MS04TLWhatAreThose02",
+      "topic_text": "Have they always been around?",
+      "emotion": "Neutral 50",
+      "response_text": "Naw. Those things started coming around only in the last few months.",
+      "index": "207"
+    },
+    {
+      "topic": "MS04TLWhatAreThose03",
+      "topic_text": "Is there any special way to hurt them?",
+      "emotion": "Neutral 50",
+      "response_text": "My pappa had a gun, and he said it hurt those things, but he said they were the dumbest Fuckin' Ants he ever saw.",
+      "index": "209"
+    },
+    {
+      "topic": "MS04TLWhatAreThose04Ento",
+      "topic_text": "Did you hear anyone mention anything about an Ant Queen?",
+      "emotion": "Neutral 50",
+      "response_text": "Well... yeah. I think I heard Doc Lesko mention something like a queen or something.",
+      "index": "211"
+    },
+    {
+      "topic": "MS04TLWhereHouse",
+      "topic_text": "Where's your house?",
+      "emotion": "Neutral 50",
+      "response_text": "Look for the house nearest to the billboard that's sticking out of the ground. It's pretty close to the diner, you can't miss it.",
+      "index": "214"
+    },
+    {
+      "topic": "SpeechChallengeFailure",
+      "topic_text": "SpeechChallengeFailure",
+      "emotion": "Fear 50",
+      "response_text": "No! Those things! They're right behind me! Leave me alone!",
+      "index": "215"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "I have to go now.",
+      "emotion": "Happy 70",
+      "response_text": "{Shooting Noise}I wish I was tough like you!{Make a gun shooting noise like a kid would.}",
+      "index": "217"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Surprise 70",
+      "response_text": "Holy moley! You actually came back like you said you would! Did you find me a home?",
+      "index": "229"
+    },
+    {
+      "topic": "MS04ShelterTalk",
+      "topic_text": "MS04ShelterTalk",
+      "emotion": "Neutral 50",
+      "response_text": "Wow, sure is hot in here.",
+      "index": "244"
+    }
+  ],
+  "combat": []
+}

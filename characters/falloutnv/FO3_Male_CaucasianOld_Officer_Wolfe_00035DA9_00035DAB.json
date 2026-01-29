@@ -1,0 +1,116 @@
+{
+  "name": "Officer Wolfe",
+  "url": "/wiki/Wolfe_(Vault_101)",
+  "dialogue_name": "CG04Vault101Security08.txt",
+  "dialogue_url": "/wiki/CG04Vault101Security08.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "00035DA9",
+  "ref_id": "00035DAB",
+  "editor_id": "CG04Vault101Security08",
+  "location": "Vault 101",
+  "location_url": null,
+  "descriptions": [
+    "Officer Wolfe is a Vault 101 security guard in Fallout 3. Together with Officer Park, he is the last obstacle between the Lone Wanderer and the Capital Wasteland.",
+    "One of Allen Mack's friends, Officer Wolfe was posted to the Vault blast door together with Officer Park to watch for any additional escape attempts. He does not want to breathe the irradiated air outside, preferring the recycled atmosphere of the Vault."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Vault 101 security",
+  "role": "Security officer",
+  "detailed_location": "Vault 101",
+  "voice_actor": "Jeff Baker",
+  "special": {
+    "Strength": 1,
+    "Perception": 4,
+    "Endurance": 6,
+    "Charisma": 3,
+    "Intelligence": 3,
+    "Agility": 5,
+    "Luck": 4
+  },
+  "level": "2",
+  "tag_skills": [
+    {
+      "Medicine:": "29"
+    },
+    {
+      "Repair:": "29"
+    },
+    {
+      "Science:": "29"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Evil",
+  "voice_type": "MaleAdult01DefaultDC",
+  "geck_race": "CaucasianOld",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Surprise 75",
+      "response_text": "Just keep your hands where I can see them.Play soundFO3_JohnKendall_KeepYourHands.ogghttps://fallout.fandom.com/wiki/File:FO3_JohnKendall_KeepYourHands.oggnoicon",
+      "index": "1"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "CG04GuardExitYell",
+      "topic_text": "CG04GuardExitYell",
+      "emotion": "Fear 50",
+      "response_text": "I'm not crazy enough to go out there!Play soundFO3 Vault101Security NotCrazyEno…https://fallout.fandom.com/wiki/File:FO3_Vault101Security_NotCrazyEnough.oggnoicon",
+      "index": "2"
+    },
+    {
+      "topic": "CG04SecurityBarks",
+      "topic_text": "CG04SecurityBarks",
+      "emotion": "Surprise 75",
+      "response_text": "He's opening the Vault door! Get the Overseer! We need this door open now!Play soundFO3_Park_NeedThisDoorOpen.ogghttps://fallout.fandom.com/wiki/File:FO3_Park_NeedThisDoorOpen.oggnoicon",
+      "index": "5"
+    },
+    {
+      "topic": "CG04SecurityConv1",
+      "topic_text": "CG04SecurityConv1",
+      "emotion": "Neutral 100",
+      "response_text": "Pretty quiet. You?Play soundFO3 Vault101Security PrettyQuiet…https://fallout.fandom.com/wiki/File:FO3_Vault101Security_PrettyQuiet.oggnoicon",
+      "index": "7"
+    },
+    {
+      "topic": "GOODBYE",
+      "topic_text": "I have to go now.",
+      "emotion": "Neutral 100",
+      "response_text": "All right. We better get back to it. Be careful.Play soundFO3 Vault101Security BetterGetBa…https://fallout.fandom.com/wiki/File:FO3_Vault101Security_BetterGetBack.oggnoicon",
+      "index": "15"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Neutral 100",
+      "response_text": "Hey, Chief. Any news?Play soundFO3 Vault101Security HeyChief.ogghttps://fallout.fandom.com/wiki/File:FO3_Vault101Security_HeyChief.oggnoicon",
+      "index": "18"
+    },
+    {
+      "topic": "IdleChatter",
+      "topic_text": "Idle Chatter",
+      "emotion": "Anger 50",
+      "response_text": "If I ever get my hands on that kid, so help me...Play soundFO3 Vault101Security GetMyHandsO…https://fallout.fandom.com/wiki/File:FO3_Vault101Security_GetMyHandsOn.oggnoicon",
+      "index": "24"
+    }
+  ],
+  "combat": [
+    {
+      "topic": "Attack",
+      "topic_text": "Attack",
+      "emotion": "Disgust 50",
+      "response_text": "Take that, you little buggers!Play soundFO3 Vault101Security TakeThat.ogghttps://fallout.fandom.com/wiki/File:FO3_Vault101Security_TakeThat.oggnoicon",
+      "index": "35"
+    }
+  ]
+}

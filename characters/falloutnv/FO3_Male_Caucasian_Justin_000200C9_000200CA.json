@@ -1,0 +1,165 @@
+{
+  "name": "Justin",
+  "url": "/wiki/Justin_(Fallout_3)",
+  "dialogue_name": "TheFamilyJustin.txt",
+  "dialogue_url": "/wiki/TheFamilyJustin.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000200C9",
+  "ref_id": "000200CA",
+  "editor_id": "TheFamilyJustin",
+  "location": "Meresti Metro station",
+  "location_url": "/wiki/Meresti_Metro_station",
+  "descriptions": [
+    "Justin is a member of the Family in 2277.",
+    "Since the age of fourteen, Justin has been a member of the Family, and is a great admirer of Vance, who saved him from an Enclave patrol of the wasteland. Justin is a strong believer in Vance's vampire stories and helps preach these stories to his fellow Family members. He is eager, headstrong, and very friendly to those he does not perceive as a threat. Justin feels a close bond with Ian West, a recent member of The Family, and it almost borders on love. He is often found spending time with Ian.",
+    "Justin mentions that if it were not for Vance, the guards at Rivet City would still be beating him."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "The Family",
+  "role": "Caretaker forIan West",
+  "detailed_location": "Rivet City(formerly)Meresti Metro station",
+  "voice_actor": "Craig Sechler",
+  "special": {
+    "Strength": 6,
+    "Perception": 7,
+    "Endurance": 5,
+    "Charisma": 3,
+    "Intelligence": 3,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "level": "6→14",
+  "tag_skills": [
+    {
+      "Explosives:": "55→90"
+    },
+    {
+      "Small Guns:": "53→88(55→90)"
+    },
+    {
+      "Sneak:": "53→88"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Neutral",
+  "voice_type": "MaleAdult04DC",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Fear 50",
+      "response_text": "I thought I knew everyone in the Family, but I don't recognize you. You must be one of Vance's new initiates.",
+      "index": "1"
+    },
+    {
+      "topic": "MS09FamJustinCT01",
+      "topic_text": "He's needed at home. His family is dead.",
+      "emotion": "Sad 50",
+      "response_text": "Yes, I know. He told me.",
+      "index": "5"
+    },
+    {
+      "topic": "MS09FamJustinCT01ImpartialMed",
+      "topic_text": "I'm not here to take sides, just to make sure Vance hasn't omitted any facts.",
+      "emotion": "Surprise 70",
+      "response_text": "I'd never thought of it that way. I suppose he should get a chance to talk to someone like you.",
+      "index": "8"
+    },
+    {
+      "topic": "MS09FamJustinCT01SC",
+      "topic_text": "He needs to talk to someone from the outside, to get some perspective.",
+      "emotion": "Surprise 70",
+      "response_text": "I'd never thought of it that way. I suppose he should get a chance to talk to someone like you.",
+      "index": "10"
+    },
+    {
+      "topic": "MS09FamJustinCT02",
+      "topic_text": "He doesn't belong here.",
+      "emotion": "Sad 70",
+      "response_text": "How do you know that? If you've spoken to him like I have, I think you can see he's truly one of us.",
+      "index": "12"
+    },
+    {
+      "topic": "MS09TLLaws",
+      "topic_text": "Please, help me understand your Laws.",
+      "emotion": "Disgust 50",
+      "response_text": "Well, Vance makes each of us remember a rule, and when we all gather in the common area, we have to say it out loud. Kinda weird.",
+      "index": "14"
+    },
+    {
+      "topic": "MS09TLLookingforIanWest",
+      "topic_text": "I'm looking for Ian West. Have you seen him?",
+      "emotion": "Surprise 50",
+      "response_text": "Ian? What do you want from him?",
+      "index": "16"
+    },
+    {
+      "topic": "MS09TLWhatisMeresti",
+      "topic_text": "What is this place?",
+      "emotion": "Neutral 50",
+      "response_text": "Well, Vance told me that this place was called Meresti. It was named aftersome townway across the ocean in a place calledRomania.",
+      "index": "18"
+    },
+    {
+      "topic": "MS09TLWhoAreFamily",
+      "topic_text": "Tell me about the Family.",
+      "emotion": "Disgust 60",
+      "response_text": "It's a great way to get back at those assholes out there who think we're losers.",
+      "index": "19"
+    },
+    {
+      "topic": "SpeechChallengeFailure",
+      "topic_text": "SpeechChallengeFailure",
+      "emotion": "Disgust 70",
+      "response_text": "It's outsider's perspectives that drove him here in the first place.",
+      "index": "21"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "I have to go now.",
+      "emotion": "Happy 50",
+      "response_text": "I understand. Goodbye.",
+      "index": "23"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Neutral 50",
+      "response_text": "I've never seen you around here before.",
+      "index": "28"
+    },
+    {
+      "topic": "MS09MerestiRandom01",
+      "topic_text": "MS09MerestiRandom01",
+      "emotion": "Neutral 50",
+      "response_text": "Yes, Vance. What is it?",
+      "index": "32"
+    },
+    {
+      "topic": "MS09MerestiResponsestoFamily",
+      "topic_text": "MS09MerestiResponsestoFamily",
+      "emotion": "Happy 60",
+      "response_text": "Cool! I knew you'd get the hang of it. Good job, Alan!",
+      "index": "34"
+    },
+    {
+      "topic": "MS09MerestiResponsestoVance",
+      "topic_text": "MS09MerestiRandom02",
+      "emotion": "Sad 50",
+      "response_text": "I don't think so. He still seems pretty out of it, but considering what happened...",
+      "index": "38"
+    }
+  ],
+  "combat": []
+}

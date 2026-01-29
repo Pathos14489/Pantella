@@ -1,0 +1,251 @@
+{
+  "name": "Knight Captain Dusk",
+  "url": "/wiki/Dusk",
+  "dialogue_name": "KnightCaptainDusk.txt",
+  "dialogue_url": "/wiki/KnightCaptainDusk.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000156E7",
+  "ref_id": "000210EB",
+  "editor_id": "KnightCaptainDusk",
+  "location": "Citadel A ring",
+  "location_url": "/wiki/Citadel_A_ring",
+  "descriptions": [
+    "Knight Captain Dusk or Dusky is one of the Lyons' Pride snipers in Fallout 3.",
+    "Self-confident and a skilled sharpshooter, Dusk is one of two Lyons' Pride snipers, claiming to be the best shot in not only the group, but the entire Brotherhood of Steel chapter.",
+    "If asked her thoughts on super mutants, aside from insisting she can kill any within a mile, Dusk recommends shooting masters in the head from a distance to avoid their \"meat grinder\" weaponry.",
+    "Her cold demeanor is known within the Brotherhood as Glade can be overheard telling Dusk how scary she is, to which she replies that multiple people have informed her about this before.",
+    "Dusk is a member of the Lyons' Pride. She has a fairly friendly rivalry with Knight Captain Colvin, who is the Pride's other sniper, competing over kill counts and who the better shot is. She and Paladin Glade converse during live fire drills, where he compliments her shooting abilities, but she has a distrust for Knight Captain Gallows due to his secretive persona."
+  ],
+  "race": "Human",
+  "gender": "Female",
+  "affiliation": "Lyons' Brotherhood of SteelLyons' Pride",
+  "role": "Sniper",
+  "detailed_location": "The Citadel'sA ring",
+  "voice_actor": "Shari Elliker",
+  "special": {
+    "Strength": 7,
+    "Perception": 7,
+    "Endurance": 6,
+    "Charisma": 4,
+    "Intelligence": 3,
+    "Agility": 4,
+    "Luck": 4
+  },
+  "level": "4→7→11",
+  "tag_skills": [
+    {
+      "Big Guns:": "44→57→74"
+    },
+    {
+      "Energy Weap.:": "46→59→76"
+    },
+    {
+      "Small Guns:": "40→53→70"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "70→95→125"
+    },
+    {
+      "Damage Res.:": "48%"
+    }
+  ],
+  "karma": "Good",
+  "voice_type": "FemaleAdult01DefaultDC",
+  "geck_race": "Asian",
+  "topics": [
+    {
+      "topic": "CitDuskApology1",
+      "topic_text": "I think we got off on the wrong foot...",
+      "emotion": "Neutral 50",
+      "response_text": "It takes some stones to admit a mistake. Maybe you're not so bad, stranger. Tell you what, buy me a drink sometime and we'll call it even.",
+      "index": "1"
+    },
+    {
+      "topic": "CitDuskApology2",
+      "topic_text": "I've had enough of your shit, Dusk.",
+      "emotion": "Neutral 50",
+      "response_text": "Oh? Oh really? Look, I know how you wasters are. You cap a few Radscorpions and think you can walk around like you own the fucking place.",
+      "index": "3"
+    },
+    {
+      "topic": "CitDuskApologyEND",
+      "topic_text": "Yeah, whatever.",
+      "emotion": "Neutral 50",
+      "response_text": "That's what I thought.",
+      "index": "6"
+    },
+    {
+      "topic": "CitDuskEnclave",
+      "topic_text": "Do you know about the Enclave?",
+      "emotion": "Neutral 50",
+      "response_text": "I never thought much about 'em until you showed up. They have the bots, but they've been buzzing around for as long as I can remember.",
+      "index": "7"
+    },
+    {
+      "topic": "CitDuskGallows",
+      "topic_text": "What do you think about Gallows?",
+      "emotion": "Neutral 50",
+      "response_text": "I don't trust him. I know, I know, I should take faith in my brother, but he disappears for days out into the Wastes.",
+      "index": "9"
+    },
+    {
+      "topic": "CitDuskGreeting1",
+      "topic_text": "So what's your story?",
+      "emotion": "Neutral 50",
+      "response_text": "My \"story\"? I blow the head off of anything more'n two hundred meters downrange.",
+      "index": "12"
+    },
+    {
+      "topic": "CitDuskGreeting1a",
+      "topic_text": "You mean you were the best shot. I'm here now.",
+      "emotion": "Happy 50",
+      "response_text": "Hey, Wasteland humor! I like that! Got any more... funny man?",
+      "index": "14"
+    },
+    {
+      "topic": "CitDuskGreeting1b",
+      "topic_text": "That's impressive. Competition must be stiff around here.",
+      "emotion": "Neutral 50",
+      "response_text": "Damn right it is. Last time I checked, it wasn't called the \"Sisterhood of Steel.\" Hell, even Sarah has to prove herself to the knuckle draggers.",
+      "index": "16"
+    },
+    {
+      "topic": "CitDuskGreeting2",
+      "topic_text": "Dusk? Oh, let me guess! Your real name's Dawn. Or is it Twilight?",
+      "emotion": "Anger 20",
+      "response_text": "Ha. Funny. Here's some free advice: You're our guest, so I'd be real careful about who you insult.",
+      "index": "18"
+    },
+    {
+      "topic": "CitDuskGreeting2a",
+      "topic_text": "Please. Like I'm afraid of you people.",
+      "emotion": "Neutral 50",
+      "response_text": "See? That. Right there. That's the sort of shit that'll land a little girl like you in the infirmary.",
+      "index": "20"
+    },
+    {
+      "topic": "CitDuskGreeting2b",
+      "topic_text": "Sorry, I was just joking around.",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah, see... my friends can joke about my name. Last I checked you're not on that list. But I'll let it go, you just watch yourself.",
+      "index": "22"
+    },
+    {
+      "topic": "CitDuskGreetingEND",
+      "topic_text": "Good to know.",
+      "emotion": "Neutral 50",
+      "response_text": "Right to the point. I like that. What do you need?",
+      "index": "23"
+    },
+    {
+      "topic": "CitTownCitadelEND",
+      "topic_text": "That's all I needed.",
+      "emotion": "Neutral 50",
+      "response_text": "All right then.",
+      "index": "24"
+    },
+    {
+      "topic": "DLC03TLCitadelEnclave",
+      "topic_text": "So... Any thoughts on the Enclave?",
+      "emotion": "Neutral 50",
+      "response_text": "There's no sport in launching missiles from space. It's so... Impersonal.",
+      "index": "25"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "What the  goddammit! Didn't anyone ever teach you not to creep up on people during a live fire exercise?",
+      "index": "28"
+    },
+    {
+      "topic": "TLCitadelEnclave",
+      "topic_text": "So... Any thoughts on the Enclave?",
+      "emotion": "Happy 10",
+      "response_text": "Honestly? I can't wait to see if one of those helmets can stop a hollow-point round at 100 yards. I'm thinking... not.",
+      "index": "40"
+    },
+    {
+      "topic": "TLCitadelSuperMutant",
+      "topic_text": "Care to share anything about the Super Mutants?",
+      "emotion": "Neutral 50",
+      "response_text": "I can tell you that those heavily armored ones, the Masters? They favor heavy weapons  Miniguns and Missile Launchers.",
+      "index": "41"
+    },
+    {
+      "topic": "TLLyonsPride",
+      "topic_text": "What can you tell me about the Lyons' Pride?",
+      "emotion": "Neutral 50",
+      "response_text": "We're the most elite tactical unit ever assembled in the Brotherhood of Steel, here or anywhere else. Hell, ain't nothin' Sarah's cubs can't handle.",
+      "index": "43"
+    },
+    {
+      "topic": "TLPrideJob",
+      "topic_text": "What do you do here?",
+      "emotion": "Neutral 50",
+      "response_text": "I'm a sniper with the Pride. Put any mutie bastard within one mile of me and my rifle and, well... pack it up troops. Fight's over.",
+      "index": "44"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "CitTalkDuskGlade1",
+      "topic_text": "CitTalkDuskGlade1",
+      "emotion": "Neutral 50",
+      "response_text": "Bullshit. That third shot dropped by a couple of inches.",
+      "index": "46"
+    },
+    {
+      "topic": "CitTalkDuskGlade3",
+      "topic_text": "CitTalkDuskGlade3",
+      "emotion": "Neutral 50",
+      "response_text": "I care. If I were aiming for his nose, that'd be fine. But I wasn't. I was going for the eye. Sloppy...",
+      "index": "48"
+    },
+    {
+      "topic": "CitTalkDuskGlade5",
+      "topic_text": "CitTalkDuskGlade5",
+      "emotion": "Neutral 50",
+      "response_text": "A few people. But I don't get tired of hearing it.",
+      "index": "50"
+    },
+    {
+      "topic": "CitTalkDuskKodiak1",
+      "topic_text": "CitTalkDuskKodiak1",
+      "emotion": "Neutral 50",
+      "response_text": "For someone who should be preparing for an assault, you seem to have a lot of time to be social.",
+      "index": "52"
+    },
+    {
+      "topic": "CitTalkDuskKodiak3",
+      "topic_text": "CitTalkDuskKodiak3",
+      "emotion": "Neutral 50",
+      "response_text": "Well, the rest of us have work to do.",
+      "index": "53"
+    },
+    {
+      "topic": "GOODBYE",
+      "topic_text": "I have to go now.",
+      "emotion": "Neutral 50",
+      "response_text": "Try and be more careful about when you sneak up on people.",
+      "index": "55"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Neutral 50",
+      "response_text": "Hail.",
+      "index": "60"
+    }
+  ],
+  "combat": []
+}

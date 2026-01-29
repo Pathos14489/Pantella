@@ -1,0 +1,175 @@
+{
+  "name": "Billy Knight",
+  "url": "/wiki/Billy_Knight",
+  "dialogue_name": "VMSTopsBillyKnight.txt",
+  "dialogue_url": "/wiki/VMSTopsBillyKnight.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "0011F9BA",
+  "ref_id": "0011F9BF",
+  "editor_id": "VMSTopsBillyKnight",
+  "location": "New Vegas Strip",
+  "location_url": "/wiki/New_Vegas_Strip",
+  "descriptions": [
+    "Billy Knight is a street comedian living on the Strip in 2281. He stands outside of the Tops casino, next to a gate dividing the Strip.",
+    "Billy Knight is a longtime professional comedian who has clearly fallen on hard times.",
+    "Note: The text in parentheses are parts of the line spoken by Billy Knight which are not in the subtitles.",
+    "PC After picking up Talent Pool from Tommy Torini, Billy may disappear from the game for no apparent reason. To fix this, open the console window (~ by default on US keyboards) and enter prid 0011F9BF, then enable."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Chairmen(optional)",
+  "role": "Street Comedian",
+  "detailed_location": "The StripThe Aces(optional)",
+  "voice_actor": "Rob Corddry",
+  "special": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 5,
+    "Intelligence": 4,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "mod_special_values": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 5,
+    "Intelligence": 4,
+    "Agility": 7,
+    "Luck": 5
+  },
+  "level": "4",
+  "tag_skills": [
+    {
+      "Barter:": "42"
+    },
+    {
+      "Medicine:": "40"
+    },
+    {
+      "Melee Weap.:": "44"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Neutral",
+  "voice_type": "MaleUniqueBillyKnight",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "BillyKnightComedy",
+      "topic_text": "How long have you been doing comedy?",
+      "emotion": "Surprise 30",
+      "response_text": "If you believe my mother, since she first laid eyes on me. First thing she said was \"Boy! That's a funny-looking kid!\"Play soundvmstopstal_billyknightcome_0011f…https://fallout.fandom.com/wiki/File:Vmstopstal_billyknightcome_0011ffff_1.oggnoicon",
+      "index": "1"
+    },
+    {
+      "topic": "BillyKnightintro",
+      "topic_text": "Who are you?",
+      "emotion": "Disgust 25",
+      "response_text": "The name's Knight. Billy Knight. And this here is what a lifelong career in comedy will get you.Play soundvmstopstal_billyknightintr_00120…https://fallout.fandom.com/wiki/File:Vmstopstal_billyknightintr_00120014_1.oggnoicon",
+      "index": "4"
+    },
+    {
+      "topic": "BillyKnightwork",
+      "topic_text": "Tommy Torini at the Tops is hiring entertainers. I could put in a word for you.",
+      "emotion": "Happy 100",
+      "response_text": "Yeah? Hey, you're all right! Tell him I'll do it for a hundred a night! No! Fifty! No, twenty! Ten!Play soundvmstopstal_billyknightwork_00120…https://fallout.fandom.com/wiki/File:Vmstopstal_billyknightwork_00120001_1.oggnoicon",
+      "index": "5"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Anger 25",
+      "response_text": "Hey, come on, pal, I'm trying to put on a show here!Play soundvmstopstalentpool_greeting_00120…https://fallout.fandom.com/wiki/File:Vmstopstalentpool_greeting_0012000b_1.oggnoicon",
+      "index": "8"
+    },
+    {
+      "topic": "VMStops_talentpoolVMSTopsBillyKnightTopic000",
+      "topic_text": "Sorry, I didn't mean to interrupt.",
+      "emotion": "Neutral 50",
+      "response_text": "Jeez, some people....Play soundvmstopstal vmstopstalentpo_0011f…https://fallout.fandom.com/wiki/File:Vmstopstal_vmstopstalentpo_0011fffd_1.oggnoicon",
+      "index": "11"
+    },
+    {
+      "topic": "VMStops_talentpoolVMSTopsBillyKnightTopic001",
+      "topic_text": "I just have a few questions.",
+      "emotion": "Neutral 50",
+      "response_text": "All right, but make it snappy, this isn't exactly a lucrative career enterprise here.Play soundvmstopstal vmstopstalentpo_00120…https://fallout.fandom.com/wiki/File:Vmstopstal_vmstopstalentpo_00120004_1.oggnoicon",
+      "index": "12"
+    },
+    {
+      "topic": "VMStops_talentpoolVMSTopsBillyKnightTopic002",
+      "topic_text": "But we're standing on a street corner in the middle of nowhere.",
+      "emotion": "Sad 30",
+      "response_text": "That's exactly my point, kid. Exactly my point.Play soundvmstopstal_vmstopstalentpo_00120…https://fallout.fandom.com/wiki/File:Vmstopstal_vmstopstalentpo_00120017_1.oggnoicon",
+      "index": "13"
+    },
+    {
+      "topic": "VMStops_talentpoolVMSTopsBillyKnightTopic003",
+      "topic_text": "It's very impressive.",
+      "emotion": "Happy 50",
+      "response_text": "Woof! If you're not the most sarcastic fella I ever met, your standards are so low they could use you at the Annual Gomorrah Saucy Limbo Competition.Play soundvmstopstal_vmstopstalentpo_00120…https://fallout.fandom.com/wiki/File:Vmstopstal_vmstopstalentpo_0012000e_1.oggnoicon",
+      "index": "14"
+    },
+    {
+      "topic": "VMStops_talentpoolVMSTopsBillyKnightTopic004",
+      "topic_text": "So you're looking for your big break?",
+      "emotion": "Happy 25",
+      "response_text": "A break's better than a shot - less chance of lead poisoning. Hey, if you know any gigs hiring, I'll work cheap. Real cheap. I'll take peanuts!Play soundvmstopstal_vmstopstalentpo_00120…https://fallout.fandom.com/wiki/File:Vmstopstal_vmstopstalentpo_00120018_1.oggnoicon",
+      "index": "18"
+    },
+    {
+      "topic": "VMStops_talentpoolVMSTopsBillyKnightTopic005",
+      "topic_text": "With jokes like that, no wonder you're working the street.",
+      "emotion": "Pained 20",
+      "response_text": "Hey, now, come on! I prefer the term \"outdoor entertainment bonanza.\" Besides, have you seen the caps whores make in this town? I should be so lucky!Play soundvmstopstal_vmstopstalentpo_00120…https://fallout.fandom.com/wiki/File:Vmstopstal_vmstopstalentpo_00120003_1.oggnoicon",
+      "index": "19"
+    },
+    {
+      "topic": "VMStops_talentpoolVMSTopsBillyKnightTopic006",
+      "topic_text": "Don't sell yourself short. You're worth a lot more than that.",
+      "emotion": "Surprise 25",
+      "response_text": "[SUCCEEDED] Whoa, geez, what was I thinking? You're right, I oughta go in there with a cool head, tell him how much I'm really worth.Play soundvmstopstal_vmstopstalentpo_00120…https://fallout.fandom.com/wiki/File:Vmstopstal_vmstopstalentpo_00120015_1.oggnoicon",
+      "index": "20"
+    },
+    {
+      "topic": "VMStops_talentpoolVMSTopsBillyKnightTopic007",
+      "topic_text": "Sure, here's his card.",
+      "emotion": "Happy 50",
+      "response_text": "Sweet daisies, here I come!Play soundvmstopstal_vmstopstalentpo_0011f…https://fallout.fandom.com/wiki/File:Vmstopstal_vmstopstalentpo_0011fffc_1.oggnoicon",
+      "index": "23"
+    },
+    {
+      "topic": "VMStops_talentpoolVMSTopsBillyKnightTopic009",
+      "topic_text": "Look, just hang out here for a bit, I want to make sure you get a deal.",
+      "emotion": "Surprise 20",
+      "response_text": "Hey, okay, but don't take too long, I don't want to miss this!Play soundvmstopstal_vmstopstalentpo_00120…https://fallout.fandom.com/wiki/File:Vmstopstal_vmstopstalentpo_0012000a_1.oggnoicon",
+      "index": "24"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYEGoodbye.",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Sure, later.Play soundvmstopstalentpool_goodbye_00127d…https://fallout.fandom.com/wiki/File:Vmstopstalentpool_goodbye_00127d45_1.oggnoicon",
+      "index": "25"
+    },
+    {
+      "topic": "TopsBillyKnightPerformanceStrings",
+      "topic_text": "TopsBillyKnightPerformanceStrings",
+      "emotion": "Happy 100",
+      "response_text": "It's great to be here at the Tops, folks. The room I'm in has a lovely little closet. A nail.Play soundvmstopsper_topsbillyknight_00125…https://fallout.fandom.com/wiki/File:Vmstopsper_topsbillyknight_0012547f_1.oggnoicon",
+      "index": "26"
+    }
+  ],
+  "combat": []
+}

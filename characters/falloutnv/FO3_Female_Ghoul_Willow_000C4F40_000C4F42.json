@@ -1,0 +1,141 @@
+{
+  "name": "Willow",
+  "url": "/wiki/Willow_(Fallout_3)",
+  "dialogue_name": "Willow.txt",
+  "dialogue_url": "/wiki/Willow.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000C4F40",
+  "ref_id": "000C4F42",
+  "editor_id": "Willow",
+  "location": "Outside onThe Mall",
+  "location_url": "/wiki/The_Mall",
+  "descriptions": [
+    "Willow is a ghoul who serves as the sentry of Underworld in the year 2277.",
+    "Underworld's forward observer, Willow is young and satirical, calling visitors to the Mall \"tourists\" and inquiring if they have a death wish as they have entered a combat zone.",
+    "She claims that she is not harassed by super mutants, who she calls \"knuckle draggers,\" chalking it up to them seeing ghouls as family.",
+    "She provides basic information about Underworld, giving directions and pointing out that not many of its inhabitants are hospitable, but if one has caps and is not a \"ghoul hater,\" then the residents are willing to engage in trade.",
+    "She can usually be found on the Mall, wandering around just outside the entrance to the Museum of History."
+  ],
+  "race": "Ghoul",
+  "gender": "Female",
+  "affiliation": "Underworld",
+  "role": "Sentry",
+  "detailed_location": "The Mall, close to theMuseum of History's entrance",
+  "voice_actor": "Audrey Wasilewski",
+  "special": {
+    "Strength": 4,
+    "Perception": 7,
+    "Endurance": 3,
+    "Charisma": 4,
+    "Intelligence": 4,
+    "Agility": 5,
+    "Luck": 2
+  },
+  "level": "20",
+  "tag_skills": [
+    {
+      "Sneak:": "100"
+    },
+    {
+      "Speech:": "100"
+    },
+    {
+      "Unarmed:": "100"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "155"
+    },
+    {
+      "Critical Chance:": "2%"
+    },
+    {
+      "Unarmed Dam.:": "5.5"
+    },
+    {
+      "Poison Resist.:": "10%"
+    },
+    {
+      "Rad. Resist.:": "4%"
+    },
+    {
+      "Carry Weight:": "190"
+    },
+    {
+      "Damage Res.:": "1%(13%)"
+    }
+  ],
+  "karma": "Good",
+  "voice_type": "FemaleGenericGhoulDC",
+  "geck_race": "Ghoul",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Surprise 50",
+      "response_text": "Another human with a death wish... Welcome to the Mall, tourist.{Can't believe she's talking to someone who just wandered into a combat zone}",
+      "index": "1"
+    },
+    {
+      "topic": "TLWillow1",
+      "topic_text": "Um... Where the hell did you come from?",
+      "emotion": "Disgust 75",
+      "response_text": "Nice to meet you, too...",
+      "index": "3"
+    },
+    {
+      "topic": "TLWillow2",
+      "topic_text": "You're crazy to stand out here! Aren't you afraid of the Super Mutants?",
+      "emotion": "Neutral 50",
+      "response_text": "Those knuckle draggers? Nah. They don't bother us Ghouls. Maybe they see us as kin or something. I dunno. Now, those other assholes...",
+      "index": "6"
+    },
+    {
+      "topic": "TLWillow3",
+      "topic_text": "I'm not a tourist...",
+      "emotion": "Surprise 100",
+      "response_text": "Come on! Here you are in the Mall of our nation's fine capital, taking in the sights, visiting the monuments!",
+      "index": "7"
+    },
+    {
+      "topic": "TLWillow4",
+      "topic_text": "Other assholes?",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah, you know. Those humans, like you. Well, maybe not like you, I dunno, but humans all the same.",
+      "index": "9"
+    },
+    {
+      "topic": "TLWillow5",
+      "topic_text": "Did you say a city of Ghouls?",
+      "emotion": "Happy 75",
+      "response_text": "Sure did. Underworld. It's right inside the Museum of History, then through the big skull.",
+      "index": "12"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "I have to go now.",
+      "emotion": "Neutral 50",
+      "response_text": "Till next time, sightseer.",
+      "index": "14"
+    }
+  ],
+  "combat": [
+    {
+      "topic": "Attack",
+      "topic_text": "Attack",
+      "emotion": "Neutral 50",
+      "response_text": "Die, human! DIE!",
+      "index": "15"
+    }
+  ]
+}

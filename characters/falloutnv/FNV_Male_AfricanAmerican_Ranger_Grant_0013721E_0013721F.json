@@ -1,0 +1,256 @@
+{
+  "name": "Ranger Grant",
+  "url": "/wiki/Grant_(Fallout:_New_Vegas)",
+  "dialogue_name": "VHDCaptainGraham.txt",
+  "dialogue_url": "/wiki/VHDCaptainGraham.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "0013721E",
+  "ref_id": "0013721F",
+  "editor_id": "VHDCaptainGraham",
+  "location": "Hoover Dam",
+  "location_url": "/wiki/Hoover_Dam",
+  "descriptions": [
+    "Ranger Grant is an NCR Ranger coordinating security during President Kimball's visit and speech at Hoover Dam in 2281.",
+    "Grant is a long time NCR ranger, best described as the \"shoot first, never ask questions\" type of soldier, someone who doesn't mind going into combat, so long as his soldiers shoot alongside him. He was injured at one point during his service. He also seems to enjoy (and even volunteer for) more dangerous missions.",
+    "Despite wearing his eyepatch on his right eye, he takes aim using that eye. This is due to the aiming animation only being for right eye dominant characters."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "NCR",
+  "role": "Presidential security",
+  "detailed_location": "Hoover Dam",
+  "voice_actor": "Liam O'Brien",
+  "special": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 5,
+    "Intelligence": 5,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "level": "16",
+  "tag_skills": [
+    {
+      "Explosives:": "90"
+    },
+    {
+      "Guns:": "90"
+    },
+    {
+      "Melee Weap.:": "90"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Neutral",
+  "voice_type": "MaleAdult05",
+  "geck_race": "AfricanAmerican",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Anger 50",
+      "response_text": "Not now!",
+      "index": "1"
+    },
+    {
+      "topic": "VHDAssassinationDialogVHDCaptainGrahamTopic000",
+      "topic_text": "I found a bomb on the President's vertibird.",
+      "emotion": "Surprise 10",
+      "response_text": "A bomb on the President's vertibird? Only a limited number of people had access to the vertibird.",
+      "index": "13"
+    },
+    {
+      "topic": "VHDAssassinationDialogVHDCaptainGrahamTopic001",
+      "topic_text": "I found an assassin in the tower.",
+      "emotion": "Anger 25",
+      "response_text": "Damnit! I can't believe the Legion actually got someone past our security. Good job catching him.",
+      "index": "16"
+    },
+    {
+      "topic": "VHDAssassinationDialogVHDCaptainGrahamTopic002",
+      "topic_text": "I found a detonator on that man over there.",
+      "emotion": "Surprise 10",
+      "response_text": "What the hell? This must control some sort of bomb that he was going to use to kill the President.",
+      "index": "19"
+    },
+    {
+      "topic": "VHDAssassinationDialogVHDCaptainGrahamTopic003",
+      "topic_text": "<Starting Converstation for VMQ03a>",
+      "emotion": "Happy 25",
+      "response_text": "I've heard of you. I'm glad you're here to help us out. This is a delicate matter and we need all the help we can get from people we can trust.",
+      "index": "21"
+    },
+    {
+      "topic": "VHDAssassinationDialogVHDCaptainGrahamTopic005",
+      "topic_text": "We're all fine here, thank you. How are you?",
+      "emotion": "Anger 50",
+      "response_text": "{Radio}Quit goofing off and clear the channel. I'll be damned if the President dies on my watch because you were screwing around.",
+      "index": "30"
+    },
+    {
+      "topic": "VHDAssassinationDialogVHDCaptainGrahamTopic006",
+      "topic_text": "I'm all set.",
+      "emotion": "Happy 10",
+      "response_text": "Good. The President doesn't arrive until tomorrow. Get some rest, I'll brief you in the morning.",
+      "index": "31"
+    },
+    {
+      "topic": "VHDAssassinationDialogVHDCaptainGrahamTopic007",
+      "topic_text": "I'm ready. When will the President be here?",
+      "emotion": "Happy 5",
+      "response_text": "Looks like that's his vertibird coming right now. It's show time, let's not mess this up.",
+      "index": "32"
+    },
+    {
+      "topic": "VHDAssassinationDialogVHDCaptainGrahamTopic008",
+      "topic_text": "I need to prepare first.",
+      "emotion": "Anger 5",
+      "response_text": "Make it quick.",
+      "index": "34"
+    },
+    {
+      "topic": "VHDAssassinationDialogVHDCaptainGrahamTopic009",
+      "topic_text": "I have some questions.",
+      "emotion": "Anger 5",
+      "response_text": "Ask your questions, but keep it short.",
+      "index": "35"
+    },
+    {
+      "topic": "VHDAssassinationDialogVHDCaptainGrahamTopic010",
+      "topic_text": "<Ranger Graham Morning Conversation>",
+      "emotion": "Neutral 50",
+      "response_text": "Glad you could join us. Most of my men are already on duty and the crowd has already started gathering outside.",
+      "index": "36"
+    },
+    {
+      "topic": "VHDAssassinationDialogVHDCaptainGrahamTopic011",
+      "topic_text": "Can I use my weapons during the President's visit?",
+      "emotion": "Happy 15",
+      "response_text": "We trust you, so you're free to have your weapons. Just don't do anything too crazy and we'll back you up.",
+      "index": "38"
+    },
+    {
+      "topic": "VHDAssassinationDialogVHDCaptainGrahamTopic012",
+      "topic_text": "Not yet.",
+      "emotion": "Anger 15",
+      "response_text": "Well, hurry it up. We don't have much time.",
+      "index": "41"
+    },
+    {
+      "topic": "VHDAssassinationDialogVHDCaptainGrahamTopic015",
+      "topic_text": "What are your security arrangements?",
+      "emotion": "Neutral 50",
+      "response_text": "Security detail consists of rangers stationed here at the dam. Some will keep an eye on the crowd while others will watch the perimeter.",
+      "index": "42"
+    },
+    {
+      "topic": "VHDAssassinationDialogVHDCaptainGrahamTopic016",
+      "topic_text": "Do you have a detailed schedule for the visit?",
+      "emotion": "Happy 15",
+      "response_text": "I have a full itinerary here. Here you go.",
+      "index": "45"
+    },
+    {
+      "topic": "VHDAssassinationDialogVHDCaptainGrahamTopic017",
+      "topic_text": "Do you have any leads on possible security threats?",
+      "emotion": "Anger 5",
+      "response_text": "The Legion will definitely try something, but we don't have any solid leads yet.",
+      "index": "47"
+    },
+    {
+      "topic": "VHDAssassinationDialogVHDCaptainGrahamTopic018",
+      "topic_text": "What can I do to help?",
+      "emotion": "Happy 15",
+      "response_text": "Someone like you... I'm just glad to have you on board. Do whatever you can. Security sweeps, talk to people, keep an eye out.",
+      "index": "51"
+    },
+    {
+      "topic": "VHDAssassinationDialogVHDCaptainGrahamTopic019",
+      "topic_text": "So what's the plan for today?",
+      "emotion": "Anger 10",
+      "response_text": "The plan is to get through today without the shit hitting the fan.",
+      "index": "53"
+    },
+    {
+      "topic": "VHDAssassinationDialogVHDCaptainGrahamTopic020",
+      "topic_text": "Let's get this show on the road.",
+      "emotion": "Neutral 50",
+      "response_text": "President Kimball is arriving shortly. If you want to do any last minute security sweeps or take a look around for anything suspicious, do it now.",
+      "index": "57"
+    },
+    {
+      "topic": "VHDAssassinationDialogVHDCaptainGrahamTopic021",
+      "topic_text": "I've made my preparations. Let's get started.",
+      "emotion": "Neutral 50",
+      "response_text": "Good. The President doesn't arrive until tomorrow. Let's get some rest and we'll have a brief talk first thing in the morning.",
+      "index": "59"
+    },
+    {
+      "topic": "VHDAssassinationDialogVHDCaptainGrahamTopic022",
+      "topic_text": "I'm done with questions.",
+      "emotion": "Neutral 50",
+      "response_text": "If there's nothing else, then let's get moving.",
+      "index": "60"
+    },
+    {
+      "topic": "VHDAssassinationDialogVHDCaptainGrahamTopic023",
+      "topic_text": "I'm going to need access everywhere.",
+      "emotion": "Happy 15",
+      "response_text": "Alright, I'll give you full access.",
+      "index": "61"
+    },
+    {
+      "topic": "VHDAssassinationDialogVHDCaptainGrahamTopic024",
+      "topic_text": "I have access, right?",
+      "emotion": "Anger 15",
+      "response_text": "Not a chance. Only the necessary personnel have authorization.",
+      "index": "62"
+    },
+    {
+      "topic": "VHDAssassinationDialogVHDCaptainGrahamTopic025",
+      "topic_text": "Sounds good.",
+      "emotion": "Disgust 5",
+      "response_text": "{Sarcastic}Well I'm glad I have your approval.",
+      "index": "63"
+    },
+    {
+      "topic": "VHDAssassinationDialogVHDCaptainGrahamTopic026",
+      "topic_text": "No more questions.",
+      "emotion": "Neutral 50",
+      "response_text": "If there's nothing else, then let's get moving.",
+      "index": "64"
+    },
+    {
+      "topic": "VHDAssassinationDialogVMQ03aAssassinationRadioTopic000",
+      "topic_text": "I found a Legion sniper on the roof of the tower.",
+      "emotion": "Anger 50",
+      "response_text": "{Radio}Damnit! I can't believe the Legion actually got someone past our security. Good job catching him.",
+      "index": "65"
+    },
+    {
+      "topic": "VHDAssassinationDialogVMQ03aAssassinationRadioTopic001",
+      "topic_text": "Nothing to report.",
+      "emotion": "Anger 50",
+      "response_text": "{Radio}Then stay off the line and get back to work!",
+      "index": "68"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Bye.",
+      "index": "69"
+    }
+  ],
+  "combat": []
+}

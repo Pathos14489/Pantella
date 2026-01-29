@@ -1,0 +1,291 @@
+{
+  "name": "Lieutenant Monroe",
+  "url": "/wiki/Monroe_(Fallout:_New_Vegas)",
+  "dialogue_name": "BCLieutenantMonroe.txt",
+  "dialogue_url": "/wiki/BCLieutenantMonroe.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "0010C6DD",
+  "ref_id": "0010C6DE",
+  "editor_id": "BCLieutenantMonroe",
+  "location": "Boulder City",
+  "location_url": "/wiki/Boulder_City",
+  "descriptions": [
+    "Lieutenant Monroe is a member of the New California Republic Army stationed at Boulder City in the Mojave Wasteland in 2281. He appears in Fallout: New Vegas.",
+    "As a lieutenant in the New California Republic's standing army, Monroe coordinates patrols and combat operations in the eastern parts of the Mojave Wasteland, including the areas around Novac and Boulder City. He is a strict military man who follows whatever orders he receives from military command, even if he does not like them.",
+    "Around mid-October 2281, one of Monroe's patrol squads encountered the Great Khan band led by McMurphy and Jessup, who were escorting the Chairmen leader Benny back to New Vegas, on their way back from Novac. They quickly entered combat, with the squad radioing Monroe for reinforcements. However, instead of waiting, they chased the Great Khans into the Boulder City ruins, where they were then ambushed in a crossfire. Most of the squad escaped unharmed, but Privates Ackerman and Gilbert were taken hostage in the Great Khans' hideout.",
+    "Once informed of the situation, Lt. Monroe secured a perimeter around the ruins with troopers cutting off the raiders' escape. However, he has so far been unwilling to commit to a direct assault as it would certainly result in the deaths of both hostages, let alone any more of his men."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "New California Republic Army",
+  "role": "Commanding officer",
+  "detailed_location": "Boulder CityDid not betray Monroe:Camp Forlorn Hope",
+  "voice_actor": "Emerson Brooks",
+  "special": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 5,
+    "Intelligence": 5,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "level": "8",
+  "tag_skills": [
+    {
+      "Explosives:": "58"
+    },
+    {
+      "Guns:": "58"
+    },
+    {
+      "Melee Weap.:": "58"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Neutral",
+  "voice_type": "MaleAdult01DefaultB",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "We've got a situation with some Great Khans right now. The brass at McCarran has ordered me to lock down the ruins until it's been resolved.",
+      "index": "1"
+    },
+    {
+      "topic": "VFreeformBoulderCityBCLieutenantMonroeTopic001",
+      "topic_text": "How much money would it take for you to look the other way while the Great Khans left?",
+      "emotion": "Neutral 50",
+      "response_text": "You mean... just let them go? How would I explain this to my superiors?",
+      "index": "13"
+    },
+    {
+      "topic": "VFreeformBoulderCityBCLieutenantMonroeTopic002",
+      "topic_text": "These Great Khans might have something of mine - a Platinum Chip.",
+      "emotion": "Neutral 50",
+      "response_text": "Once the Great Khans have been killed or captured, you're welcome to retrieve any property they've taken from you.",
+      "index": "15"
+    },
+    {
+      "topic": "VFreeformBoulderCityBCLieutenantMonroeTopic009",
+      "topic_text": "Look at it this way - nobody dies.",
+      "emotion": "Neutral 50",
+      "response_text": "500 caps would go a long way for some soldier's families.",
+      "index": "16"
+    },
+    {
+      "topic": "VFreeformBoulderCityBCLieutenantMonroeTopic011",
+      "topic_text": "Never mind. Forget I said anything.",
+      "emotion": "Neutral 50",
+      "response_text": "Right.",
+      "index": "17"
+    },
+    {
+      "topic": "VFreeformBoulderCityBCLieutenantMonroeTopic013",
+      "topic_text": "Done. Here's the caps.",
+      "emotion": "Neutral 50",
+      "response_text": "This doesn't feel quite right, but it resolves things and gets my troopers back in one piece.",
+      "index": "18"
+    },
+    {
+      "topic": "VFreeformBoulderCityBCLieutenantMonroeTopic014",
+      "topic_text": "I'll be back with the caps.",
+      "emotion": "Neutral 50",
+      "response_text": "All right.",
+      "index": "19"
+    },
+    {
+      "topic": "VFreeformBoulderCityBCLieutenantMonroeTopic015",
+      "topic_text": "The Great Khans let the hostages go in exchange for their own freedom.",
+      "emotion": "Neutral 50",
+      "response_text": "My hands are tied. I can't go against orders... can I?",
+      "index": "20"
+    },
+    {
+      "topic": "VFreeformBoulderCityBCLieutenantMonroeTopic016",
+      "topic_text": "Go for it. The Great Khans have nowhere to run.",
+      "emotion": "Neutral 50",
+      "response_text": "You cut a deal with the Khans? Damn it. Attacking them now doesn't feel right, but orders are orders.",
+      "index": "21"
+    },
+    {
+      "topic": "VFreeformBoulderCityBCLieutenantMonroeTopic017< Barter 45 >",
+      "topic_text": "400 caps is a less suspicious amount. You have enough trouble here as it is.",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] That makes sense, and it's still more than these troopers see in a month.",
+      "index": "22"
+    },
+    {
+      "topic": "VFreeformBoulderCityBCLieutenantMonroeTopic023",
+      "topic_text": "What's going on with the Great Khans?",
+      "emotion": "Neutral 50",
+      "response_text": "One of my patrols was on its way back from Novac when it came under fire from the Great Khans.",
+      "index": "24"
+    },
+    {
+      "topic": "VFreeformBoulderCityBCLieutenantMonroeTopic025",
+      "topic_text": "You're the officer here. Make the call.",
+      "emotion": "Sad 5",
+      "response_text": "I don't like it, but orders are orders.",
+      "index": "27"
+    },
+    {
+      "topic": "VFreeformBoulderCityBCLieutenantMonroeTopic026",
+      "topic_text": "Here's the caps.",
+      "emotion": "Neutral 50",
+      "response_text": "This doesn't feel quite right, but it resolves things and gets my troopers back in one piece.",
+      "index": "28"
+    },
+    {
+      "topic": "VFreeformBoulderCityBCLieutenantMonroeTopic029",
+      "topic_text": "I'm still working on it.",
+      "emotion": "Neutral 50",
+      "response_text": "Very well. Keep me updated.",
+      "index": "29"
+    },
+    {
+      "topic": "VFreeformBoulderCityBCLieutenantMonroeTopic030",
+      "topic_text": "About that bribe...",
+      "emotion": "Neutral 50",
+      "response_text": "500 caps was the amount requested.",
+      "index": "30"
+    },
+    {
+      "topic": "VFreeformBoulderCityBCLieutenantMonroeTopic031",
+      "topic_text": "If you have any integrity, then you'll honor the deal.",
+      "emotion": "Neutral 50",
+      "response_text": "You're right. The Great Khans are free to go.",
+      "index": "32"
+    },
+    {
+      "topic": "VFreeformBoulderCityBCLieutenantMonroeTopic032",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "{nodding}Goodbye.",
+      "index": "33"
+    },
+    {
+      "topic": "VFreeformBoulderCityBCLieutenantMonroeTopic033",
+      "topic_text": "Forget what I said. Kill them all.",
+      "emotion": "Neutral 50",
+      "response_text": "I don't like it, but orders are orders.",
+      "index": "34"
+    },
+    {
+      "topic": "VFreeformBoulderCityBCLieutenantMonroeTopic034",
+      "topic_text": "Can I ask you some questions?",
+      "emotion": "Neutral 50",
+      "response_text": "Shoot.",
+      "index": "35"
+    },
+    {
+      "topic": "VFreeformBoulderCityBCLieutenantMonroeTopic035",
+      "topic_text": "<Lie> I didn't have a choice - they started shooting first.",
+      "emotion": "Neutral 50",
+      "response_text": "Knowing the Khans, they were probably drugged up to hell and back.{Not quite believing the player, but not really having any evidence to the contrary.}",
+      "index": "36"
+    },
+    {
+      "topic": "VFreeformBoulderCityBCLieutenantMonroeTopic036",
+      "topic_text": "Like you said, things went bad.",
+      "emotion": "Neutral 50",
+      "response_text": "Right... probably just bad luck.{Somewhat disbelieving - he knows the player isn't telling the whole truth.}",
+      "index": "38"
+    },
+    {
+      "topic": "VFreeformBoulderCityBCLieutenantMonroeTopic037",
+      "topic_text": "That was me, \"negotiating.\"",
+      "emotion": "Anger 50",
+      "response_text": "You were supposed to negotiate for the safety of my troopers, damn it.{Controlled anger - he trusted the player to handle things diplomatically, and the player started a fight instead.}",
+      "index": "39"
+    },
+    {
+      "topic": "VFreeformBoulderCityBCLieutenantMonroeTopic038",
+      "topic_text": "I may be able to negotiate a deal with the Great Khans.",
+      "emotion": "Neutral 50",
+      "response_text": "Normally, I'd turn you down since I have no idea who you are, but considering that the hostages are as good as dead when we attack...",
+      "index": "40"
+    },
+    {
+      "topic": "VFreeformBoulderCityBCLieutenantMonroeTopic047",
+      "topic_text": "I could sneak in there and try to get your people out.",
+      "emotion": "Neutral 50",
+      "response_text": "As soon as you free them, the rest of my squad will move in and provide covering fire.",
+      "index": "43"
+    },
+    {
+      "topic": "VFreeformBoulderCityBCLieutenantMonroeTopic048",
+      "topic_text": "I understand.",
+      "emotion": "Neutral 50",
+      "response_text": "Good luck.",
+      "index": "46"
+    },
+    {
+      "topic": "VFreeformBoulderCityBCLieutenantMonroeTopic052",
+      "topic_text": "What are you going to do about the hostages?",
+      "emotion": "Neutral 50",
+      "response_text": "Acceptable casualties, I've been told. I don't like it, but the brass has their reasons.",
+      "index": "47"
+    },
+    {
+      "topic": "VFreeformBoulderCityBCLieutenantMonroeTopic055",
+      "topic_text": "I'm unable to work out a deal. The Great Khans are all yours.",
+      "emotion": "Neutral 50",
+      "response_text": "It was worth a try. I'll have to proceed with the attack as ordered, then.",
+      "index": "48"
+    },
+    {
+      "topic": "VFreeformBoulderCityBCLieutenantMonroeTopic059",
+      "topic_text": "Let's talk about something else.",
+      "emotion": "Neutral 50",
+      "response_text": "All right.",
+      "index": "49"
+    },
+    {
+      "topic": "VFreeformBoulderCityBCLieutenantMonroeTopic060",
+      "topic_text": "What can you tell me about Hoover Dam?",
+      "emotion": "Neutral 50",
+      "response_text": "It's one of the biggest sources of electrical power in the region, so the NCR's fortified the place pretty heavily.",
+      "index": "50"
+    },
+    {
+      "topic": "VFreeformBoulderCityBCLieutenantMonroeTopic061",
+      "topic_text": "Is there anything you can tell me about the Great Khans?",
+      "emotion": "Neutral 50",
+      "response_text": "They're an outlaw group, primarily trafficking in drugs and other contraband. They usually stay out of NCR territory, though.",
+      "index": "52"
+    },
+    {
+      "topic": "VFreeformBoulderCityBCLieutenantMonroeTopic062",
+      "topic_text": "Where can I find McCarran?",
+      "emotion": "Neutral 50",
+      "response_text": "Camp McCarran is the headquarters for the NCR military in this region. It occupies the old airport next to New Vegas.",
+      "index": "53"
+    },
+    {
+      "topic": "VFreeformBoulderCityBCLieutenantMonroeTopic063",
+      "topic_text": "The President is coming to Hoover Dam?",
+      "emotion": "Neutral 50",
+      "response_text": "It's probably just a political thing - you know, give a few speeches, shake hands with the troops, boost morale.",
+      "index": "54"
+    },
+    {
+      "topic": "VFreeformBoulderCityBCLieutenantMonroeTopic066",
+      "topic_text": "What happened to Boulder City?",
+      "emotion": "Neutral 50",
+      "response_text": "Destroyed during the Battle of Hoover Dam a couple of years ago. The town was set up as a trap for Caesar's Legion.{Spoken with pride about a significant victory.}",
+      "index": "55"
+    }
+  ],
+  "conversation": [],
+  "combat": []
+}

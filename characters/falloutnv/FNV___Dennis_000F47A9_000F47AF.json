@@ -1,0 +1,84 @@
+{
+  "name": "Dennis",
+  "url": "/wiki/Dennis_(Fallout:_New_Vegas)",
+  "dialogue_name": "Vault3Prisoner03.txt",
+  "dialogue_url": "/wiki/Vault3Prisoner03.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000F47A9",
+  "ref_id": "000F47AF",
+  "editor_id": "Vault3Prisoner03",
+  "location": "Vault 3 living quarters",
+  "location_url": "/wiki/Vault_3#Living_quarters",
+  "descriptions": [
+    "Dennis is a prisoner of the Fiends in Vault 3 in 2281.",
+    "Dennis is a ghoul being held hostage by the Fiends. It is possible to free him, Rick Lancer, and Rachael in the cell with a Lockpick skill of 75.",
+    "PC Playstation 3 Xbox 360 Dennis may be seen pacing as if in the cell but is actually outside the cell."
+  ],
+  "race": "Ghoul",
+  "affiliation": "None",
+  "role": "CaravaneerPrisoner",
+  "detailed_location": "Vault 3",
+  "voice_actor": "Chris Andrew Ciulla",
+  "special": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 5,
+    "Intelligence": 4,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "mod_special_values": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 5,
+    "Intelligence": 4,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "level": "13",
+  "tag_skills": [
+    {
+      "Barter:": "86"
+    },
+    {
+      "Medicine:": "84"
+    },
+    {
+      "Melee Weap.:": "88"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "125(130)"
+    }
+  ],
+  "karma": "Good",
+  "voice_type": "MaleGenericGhoul",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "Are you going to free me or what?",
+      "index": "1"
+    },
+    {
+      "topic": "VMS07Greeting",
+      "topic_text": "VMS07Greeting",
+      "emotion": "Neutral 50",
+      "response_text": "Thanks for the help. We'll find our own way out.",
+      "index": "4"
+    }
+  ],
+  "conversation": [],
+  "combat": []
+}

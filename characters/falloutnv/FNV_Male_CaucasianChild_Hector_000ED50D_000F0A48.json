@@ -1,0 +1,129 @@
+{
+  "name": "Hector",
+  "url": "/wiki/Hector",
+  "dialogue_name": "WestsideHector.txt",
+  "dialogue_url": "/wiki/WestsideHector.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": true,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000ED50D",
+  "ref_id": "000F0A48",
+  "editor_id": "WestsideHector",
+  "location": "Westside",
+  "location_url": "/wiki/Westside",
+  "descriptions": [
+    "Hector is a Westside child and errand boy in 2281.",
+    "Unassuming and ignored by adults, Hector is nevertheless one of the crucial members of the Westside Co-op. When Tom Anderson and Clayton Ettienne were talking about Anderson's idea to divert water from the local cistern and use it on the crops but were trying to work out a plan on how not to cause suspicion from the NCR. Hector overheard them talking about this and volunteered himself since no one pays attention to him or his brahmin and he already makes a living by delivering stuff around for the people of Westside.",
+    "With Hector and his brahmin delivering water to irrigate the crops of the co-op, the crops flourished. This allowed them to produce food for use and export. Eventually, Hector was caught in the act by Corporal White and forced to rat Anderson out, but, as far as Hector knows, the situation was resolved. He has a feeling it wasn't in a good way, though.",
+    "The White Wash: Hector tells the Courier what is really happening to the water if they fail the Intelligence check with Anderson.",
+    "Hector shares the same dialogue lines as other Westside residents, which can end up with him humorously stating \"That Sweetie sure is something.\"",
+    "Westside thugs were meant to harass the Courier after they confronted Hector in the north cistern but were eventually cut from The White Wash. The thugs are still in the game's files, alongside their dialogue for accosting the Courier and potentially attacking them based on player choice."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Westside Cooperative",
+  "role": "CourierFarmhand",
+  "detailed_location": "Westside",
+  "voice_actor": "Anthony Crehan",
+  "special": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 10,
+    "Intelligence": 5,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "level": "1",
+  "misc_skills": [],
+  "karma": "Neutral",
+  "voice_type": "MaleChild01",
+  "geck_race": "CaucasianChild",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "Oh, hello.",
+      "index": "1"
+    },
+    {
+      "topic": "VMS101EHectorTopic008",
+      "topic_text": "Why is this water so special?",
+      "emotion": "Neutral 50",
+      "response_text": "'Cause it's clean. The crops taste funny if you don't use clean water, but the NCR won't give us any and it's too expensive to buy.",
+      "index": "4"
+    },
+    {
+      "topic": "vDialogueWestsideWestsideHectorTopic000",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Bye.",
+      "index": "5"
+    },
+    {
+      "topic": "vDialogueWestsideWestsideHectorTopic001",
+      "topic_text": "What do you do here?",
+      "emotion": "Neutral 50",
+      "response_text": "I deliver things and stuff for the people here. They give me caps to do it.",
+      "index": "6"
+    },
+    {
+      "topic": "vDialogueWestsideWestsideHectorTopic002",
+      "topic_text": "Do you know anything about Corporal White?",
+      "emotion": "Fear 20",
+      "response_text": "{nervous, hiding a secret}Corporal White? I don't know where he -{obviously changing his lie mid-sentence}uh, I mean, never heard of him. Uh, I gotta go...",
+      "index": "7"
+    },
+    {
+      "topic": "vDialogueWestsideWestsideHectorTopic006",
+      "topic_text": "You look like you're gathering water. The Westside isn't supposed to have a water supply.",
+      "emotion": "Neutral 50",
+      "response_text": "Uh... it's for the co-ops. Mr. Anderson told me to do it - he said it wasn't stealing if it's for the good of everybody.",
+      "index": "8"
+    },
+    {
+      "topic": "vDialogueWestsideWestsideHectorTopic008",
+      "topic_text": "It's stealing, no matter who it's for. Corporal White found out, didn't he?",
+      "emotion": "Neutral 50",
+      "response_text": "He caught me and made me tell on Mr. Anderson. I don't know what happened after that, but when I asked, Mr. Anderson said not to worry.",
+      "index": "9"
+    },
+    {
+      "topic": "vDialogueWestsideWestsideHectorTopic011< Speech 80 >",
+      "topic_text": "If something happened to White, tell me. You know it's the right thing to do.",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] I didn't want to get Mr. Anderson in trouble. He says the Westside needs to be able to take care of itself.",
+      "index": "11"
+    },
+    {
+      "topic": "vDialogueWestsideWestsideHectorTopic013",
+      "topic_text": "{Child At Heart}It's okay if you tell me - I won't get you in trouble.",
+      "emotion": "Neutral 50",
+      "response_text": "I didn't want to get Mr. Anderson in trouble. He says the Westside needs to be able to take care of itself.",
+      "index": "14"
+    },
+    {
+      "topic": "vDialogueWestsideWestsideHectorTopic014",
+      "topic_text": "You sure you don't know anything?",
+      "emotion": "Neutral 50",
+      "response_text": "No. I gotta go.",
+      "index": "16"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Bye.",
+      "index": "17"
+    }
+  ],
+  "combat": []
+}

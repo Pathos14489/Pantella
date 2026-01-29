@@ -1,0 +1,189 @@
+{
+  "name": "Shrapnel",
+  "url": "/wiki/Shrapnel",
+  "dialogue_name": "Shrapnel.txt",
+  "dialogue_url": "/wiki/Shrapnel.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": true,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": true,
+  "can_repair": true,
+  "can_be_companion": false,
+  "base_id": "000156B4",
+  "ref_id": "0001E74A",
+  "editor_id": "Shrapnel",
+  "location": "Flak 'N Shrapnel's,Rivet City market",
+  "location_url": "/wiki/Flak_%27N_Shrapnel%27s",
+  "descriptions": [
+    "Shrapnel is a merchant who lives in Rivet City with his partner Flak. Together, they run the Flak 'N Shrapnel's weapons store in the Rivet City market in Fallout 3.",
+    "Together with Flak, he is an example of the representation of LGBT people in the series.",
+    "Shrapnel is a former raider whose edge never dulled. He is a grizzled veteran of the wastelands and quite coarse in his interactions. Ever since settling in Rivet City with Flak, he has focused on selling weapons and ammunition. He gets along well with Flak thanks to their shared interest in guns, to the point of being almost polite, but he has a hard time toning down his attitude towards other denizens of the ship. He is making an effort to be more polite, at Flak's request.",
+    "Shrapnel is an alcoholic. The gun trade brings in enough money to allow him frequent visits the Muddy Rudder,",
+    "Like Flak, he prefers not to talk about their past, keeping their violent history under wraps.",
+    "Shrapnel is on decent terms with the rest of the denizens. He is almost friendly with Brock, almost polite with Vera Weatherly,",
+    "Shrapnel has a complex daily schedule, with some packages overlapping:",
+    "Things change if Flak is dead:"
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Rivet City",
+  "role": "Merchant",
+  "detailed_location": "Flak 'N Shrapnel's",
+  "voice_actor": "Pete Papageorge",
+  "special": {
+    "Strength": 4,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 7,
+    "Intelligence": 5,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "level": "8",
+  "tag_skills": [
+    {
+      "Barter:": "69"
+    },
+    {
+      "Energy Weap.:": "65"
+    },
+    {
+      "Small Guns:": "67(69)"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "60"
+    },
+    {
+      "Critical Chance:": "5%"
+    },
+    {
+      "Unarmed Dam.:": "1.15"
+    },
+    {
+      "Poison Resist.:": "15%"
+    },
+    {
+      "Rad. Resist.:": "6%"
+    },
+    {
+      "Carry Weight:": "190"
+    }
+  ],
+  "karma": "Good",
+  "voice_type": "MaleAdult02DC",
+  "geck_race": "CaucasianOld",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "We're going to close soon. You'd better get out of here.",
+      "index": "1"
+    },
+    {
+      "topic": "MS03RCHistory1Could I ask you about Rivet City's history?",
+      "topic_text": "Can I ask you about Rivet City's history?",
+      "emotion": "Anger 25",
+      "response_text": "History? Fuck if I know. Hell, fuck if I care.",
+      "index": "6"
+    },
+    {
+      "topic": "MS08TopicPinkertonIs there anyone on this ship named Pinkerton?",
+      "topic_text": "You ever hear of a guy named Pinkerton?",
+      "emotion": "Surprise 50",
+      "response_text": "You mean genius boy?",
+      "index": "7"
+    },
+    {
+      "topic": "RCShrapnelGuns",
+      "topic_text": "Know where I can offload some guns?",
+      "emotion": "Disgust 50",
+      "response_text": "You're kidding right? Flak and Shrapnel's, in the market. I'm Shrapnel, you idiot.",
+      "index": "10"
+    },
+    {
+      "topic": "RCShrapnelLikeGuns",
+      "topic_text": "Man, I love guns. Nothing's better than the kick of a .44!",
+      "emotion": "Neutral 50",
+      "response_text": "Ain't seen many of those around lately. They're tough to come by.",
+      "index": "11"
+    },
+    {
+      "topic": "RCShrapnelNoLikeGuns",
+      "topic_text": "Any fool can use a gun.",
+      "emotion": "Disgust 50",
+      "response_text": "Said like a soon-to-be-dead Wastelander.",
+      "index": "12"
+    },
+    {
+      "topic": "RCShrapnelToughGuy",
+      "topic_text": "You some sort of tough guy? You want to try me?",
+      "emotion": "Disgust 50",
+      "response_text": "Ain't worth the ammo. Just walk away before security hauls you away.",
+      "index": "13"
+    },
+    {
+      "topic": "RCShrapnelWhine",
+      "topic_text": "What's your problem? Loosen up, pal.",
+      "emotion": "Disgust 50",
+      "response_text": "I'm short on time and your five minutes are up. See ya.",
+      "index": "14"
+    },
+    {
+      "topic": "RCTopicGetDrinksWhere can I get a stiff drink?",
+      "topic_text": "Is there anywhere I can get a drink on this tub?",
+      "emotion": "Happy 50",
+      "response_text": "Try the Muddy Rudder. They don't ask too many questions down on the lower deck.",
+      "index": "15"
+    },
+    {
+      "topic": "RivetCityBarterI'm here to do business with you.",
+      "topic_text": "I'm thinking of buying some ordinance.",
+      "emotion": "Happy 50",
+      "response_text": "Whatchya lookin' for?",
+      "index": "16"
+    },
+    {
+      "topic": "RivetCityRepair",
+      "topic_text": "I need you to repair my stuff.",
+      "emotion": "Neutral 50",
+      "response_text": "Let's have a look at it.",
+      "index": "17"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYEI have to go now.",
+      "topic_text": "Time for me to go.",
+      "emotion": "Happy 50",
+      "response_text": "Come back soon. We've always got a lot of ammo in stock.",
+      "index": "18"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Surprise 50",
+      "response_text": "I can't get that god damned laser pistol working. Think I should ask Seagrave to look at it?",
+      "index": "19"
+    },
+    {
+      "topic": "RCGoodbye",
+      "topic_text": "RCGoodbye",
+      "emotion": "Fear 50",
+      "response_text": "I learned my lesson, Danvers. Just keep those damn Raiders away from me.",
+      "index": "27"
+    },
+    {
+      "topic": "RCPackageEnd",
+      "topic_text": "RCPackageEnd",
+      "emotion": "Surprise 50",
+      "response_text": "Damn. I feel hung over.",
+      "index": "38"
+    }
+  ],
+  "combat": []
+}

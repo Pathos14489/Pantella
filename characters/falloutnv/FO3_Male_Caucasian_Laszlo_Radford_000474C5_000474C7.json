@@ -1,0 +1,65 @@
+{
+  "name": "Laszlo Radford",
+  "url": "/wiki/Laszlo_Radford",
+  "dialogue_name": "FFEU06NPC1.txt",
+  "dialogue_url": "/wiki/FFEU06NPC1.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000474C5",
+  "ref_id": "000474C7",
+  "editor_id": "FFEU06NPC1",
+  "location": "Random encounter",
+  "location_url": "/wiki/Fallout_3_random_encounters",
+  "descriptions": [
+    "Laszlo Radford is a wastelander roaming the Capital Wasteland in 2277. He appears in Fallout 3.",
+    "Little to nothing is known about Laszlo's past, including how he first came to be affiliated with Sam Warrick; for unknown reasons, Warrick developed a one-sided rivalry with Radford, whereas Radford considers him a friend.",
+    "By 2277, Laszlo freely roams the Capital Wasteland searching for intact copies of Grognak the Barbarian comic books. Recently, he acquired a railway rifle that he uses to make a sport out of beheading feral ghouls with railway spikes.",
+    "Laszlo is noted to be highly bloodthirsty, and described as \"a madman who fights first, fights again, and then thinks for a bit afterward.\"",
+    "Laszlo Radford only appears in a random encounter after the player character obtains at least one schematic for the railway rifle. He is always hostile and attacks on sight.",
+    "On Laszlo's body, one will find two sets of leather armor including the one he has equipped."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Sam Warrick",
+  "role": "Random encounter",
+  "detailed_location": "Capital Wasteland",
+  "voice_actor": "Gregory Gorton",
+  "special": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 3,
+    "Intelligence": 3,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "tag_skills": [],
+  "misc_skills": [],
+  "karma": "Neutral",
+  "voice_type": "MaleAdult01DefaultBDC",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "Attack",
+      "topic_text": "Attack",
+      "emotion": "Anger 50",
+      "response_text": "The right to bear arms shall never be infringed!",
+      "index": "1"
+    },
+    {
+      "topic": "GuardTrespass",
+      "topic_text": "GuardTrespass",
+      "emotion": "Anger 50",
+      "response_text": "You'll never take me alive!",
+      "index": "5"
+    }
+  ],
+  "conversation": [],
+  "combat": []
+}

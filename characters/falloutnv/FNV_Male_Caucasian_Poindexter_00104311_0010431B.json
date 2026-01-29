@@ -1,0 +1,202 @@
+{
+  "name": "Poindexter",
+  "url": "/wiki/Poindexter",
+  "dialogue_name": "2CPoindexter.txt",
+  "dialogue_url": "/wiki/2CPoindexter.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "00104311",
+  "ref_id": "0010431B",
+  "editor_id": "2CPoindexter",
+  "location": "Camp Golf",
+  "location_url": "/wiki/Camp_Golf",
+  "descriptions": [
+    "Private Poindexter is an NCR soldier and part of the Misfits living in Camp Golf in the Mojave Wasteland in 2281.",
+    "Soldiers tend to be an exceptional type of human. Selfless, brave, and unafraid of hard work. Poindexter is none of these things, but he is a self-serving know-it-all with a Hoover Dam sized ego and thinly veiled contempt for his fellow troopers. To himself, he's a certified genius whom everyone at the Camp looks up to. To everyone else, he's an annoying smart-ass who cannot follow orders.",
+    "If anyone wonders what someone like Poindexter is doing in the ranks of New California's military, it's simple: He figures that the benefits offered by the Army, both in terms of money and prestige, are worth the risk of bodily harm. To minimize the risk to himself, he deliberately rides the \"mediocrity gradient\", doing just well enough to stay in service, but not good enough to be sent to the front lines. That way, he can eventually \"work\" his way to a cushy desk job back in New California as, technically, a veteran.",
+    "Poindexter's unused Caravan challenge dialogue",
+    "PC Playstation 3 Xbox 360 Poindexter is marked as \"Respawns,\" meaning if he is killed he will be resurrected within three days of his death."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "NCR ArmyThe Misfits",
+  "role": "Misfit",
+  "detailed_location": "Camp Golf, near thetents",
+  "voice_actor": "Liam O'Brien",
+  "special": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 3,
+    "Intelligence": 8,
+    "Agility": 5,
+    "Luck": 4
+  },
+  "level": "5",
+  "tag_skills": [
+    {
+      "Explosives:": "46"
+    },
+    {
+      "Guns:": "46"
+    },
+    {
+      "Melee Weap.:": "46"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Neutral",
+  "voice_type": "MaleAdult05",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "CaravanOffer",
+      "topic_text": "Want to play a hand of Caravan?",
+      "emotion": "Neutral 50",
+      "response_text": "A fascinating proposition. Naturally, my considerable genius makes me a master of the game, so try not to be disappointed if you lose miserably.",
+      "index": "1"
+    },
+    {
+      "topic": "CaravanPlayerLoses",
+      "topic_text": "CaravanPlayerLoses",
+      "emotion": "Neutral 50",
+      "response_text": "I am unsurprised regarding your appalling lack of talent. Perhaps you'd care to try another hand? After all, you can only improve.",
+      "index": "2"
+    },
+    {
+      "topic": "CaravanPlayerWins",
+      "topic_text": "CaravanPlayerWins",
+      "emotion": "Neutral 50",
+      "response_text": "Well now, this is an unexpected variable. You really must let me challenge you to a rematch, so I can analyze what passes for your strategy.",
+      "index": "3"
+    },
+    {
+      "topic": "CaravanRematchNo",
+      "topic_text": "I'm all done playing for now.",
+      "emotion": "Neutral 50",
+      "response_text": "As you wish. Once you've salved your battered ego, perhaps you'll make another go of it.",
+      "index": "4"
+    },
+    {
+      "topic": "CaravanRematchYes",
+      "topic_text": "Yeah, let's play again.",
+      "emotion": "Neutral 50",
+      "response_text": "Very well. I would wish you luck, but of course peerless intellect is all that matters here.",
+      "index": "5"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Disgust 10",
+      "response_text": "While I have already internalized the new skills we have discussed, I feel as though my solution was nevertheless more practical.",
+      "index": "6"
+    },
+    {
+      "topic": "MagsShapeUp1",
+      "topic_text": "I think you'll find that the Misfits' records are now much improved.",
+      "emotion": "Happy 50",
+      "response_text": "You actually did it? My friend, I am without doubt a genius, but I must say, you've given me a run for my money. Bravo. Bravo.",
+      "index": "19"
+    },
+    {
+      "topic": "PoindexterArmy",
+      "topic_text": "How'd a guy like you end up in the Army?",
+      "emotion": "Disgust 10",
+      "response_text": "It's a simple idea: the Army offers fiscal security and generous benefits at the cost of substantial personal risk - if you're on the front line.",
+      "index": "22"
+    },
+    {
+      "topic": "PoindexterHistory",
+      "topic_text": "Tell me about yourself.",
+      "emotion": "Disgust 25",
+      "response_text": "To what purpose? It's highly unlikely you'd understand anything I'd say.",
+      "index": "25"
+    },
+    {
+      "topic": "PoindexterMisfits",
+      "topic_text": "Are you in charge around here?",
+      "emotion": "Sad 10",
+      "response_text": "In a strictly official capacity, no.",
+      "index": "27"
+    },
+    {
+      "topic": "VFreeformCampGolf2CPoindexterTopic001",
+      "topic_text": "So, that's a no, then?",
+      "emotion": "Anger 20",
+      "response_text": "I suppose if you must stick with your narrow, parochial view of \"in charge,\" then yes, it's a no. Are we done?",
+      "index": "29"
+    },
+    {
+      "topic": "VFreeformCampGolf2CPoindexterTopic002",
+      "topic_text": "I wonder if anyone else would share that sentiment.",
+      "emotion": "Sad 30",
+      "response_text": "Genius is seldom appreciated in its own time.",
+      "index": "30"
+    },
+    {
+      "topic": "VFreeformCampGolf2CPoindexterTopic003",
+      "topic_text": "Great, maybe you can help me get this squad working together!",
+      "emotion": "Neutral 50",
+      "response_text": "[FAILED] Why would I? If this unit improves its performance, we'll be shipped to the front lines. That's hardly conducive to living a long life.",
+      "index": "31"
+    },
+    {
+      "topic": "VFreeformCampGolf2CPoindexterTopic004",
+      "topic_text": "He thinks you might respond better to someone who isn't an authority figure.",
+      "emotion": "Fear 15",
+      "response_text": "This is an unexpected variable. I had hoped to coast on an easy wave of mediocrity to a cushy government pension.",
+      "index": "34"
+    },
+    {
+      "topic": "VFreeformCampGolf2CPoindexterTopic005",
+      "topic_text": "I guess you don't feel so smart now, huh?",
+      "emotion": "Anger 25",
+      "response_text": "Your insults are both unhelpful and unwanted. I'll thank you to keep them to yourself.",
+      "index": "35"
+    },
+    {
+      "topic": "VFreeformCampGolf2CPoindexterTopic006",
+      "topic_text": "Maybe I can help out.",
+      "emotion": "Disgust 10",
+      "response_text": "And how would you propose accomplishing such a goal?",
+      "index": "36"
+    },
+    {
+      "topic": "VFreeformCampGolf2CPoindexterTopic008",
+      "topic_text": "It occurs to me that I might cheat.",
+      "emotion": "Surprise 10",
+      "response_text": "Hmm... an intriguing proposition.",
+      "index": "37"
+    },
+    {
+      "topic": "VFreeformCampGolf2CPoindexterTopic015",
+      "topic_text": "I'll do it. Work is overrated anyways.",
+      "emotion": "Happy 30",
+      "response_text": "Excellent! Squad readiness records can be accessed from two terminals at the resort: the main terminal in the lobby or a secure one in a back office.",
+      "index": "40"
+    },
+    {
+      "topic": "VFreeformCampGolf2CPoindexterTopic016",
+      "topic_text": "Maybe I'll ask around a little more instead.",
+      "emotion": "Disgust 20",
+      "response_text": "As you wish; I'm sure the optimal solution will become apparent to you in time.",
+      "index": "43"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "I somehow suspect you'll be back to converse with me later.",
+      "index": "44"
+    }
+  ],
+  "combat": []
+}

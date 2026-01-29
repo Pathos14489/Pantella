@@ -1,0 +1,2000 @@
+{
+  "name": "Rose of Sharon Cassidy",
+  "url": "/wiki/Rose_of_Sharon_Cassidy",
+  "dialogue_name": "RoseofSharonCassidy.txt",
+  "dialogue_url": "/wiki/RoseofSharonCassidy.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": true,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": true,
+  "base_id": "00133FDD",
+  "ref_id": "00135F19",
+  "editor_id": "RoseofSharonCassidy",
+  "location": "Mojave Outpost barracks",
+  "location_url": "/wiki/Mojave_Outpost_barracks",
+  "descriptions": [
+    "Rose of Sharon Cassidy, also known as Cass and Whiskey Rose, is the owner of the Cassidy Caravans trading outfit based in New California. By 2281, she has been left stuck due to messy circumstances at the Mojave Outpost in the southwestern Mojave Wasteland, drinking her troubles away. She appears in Fallout: New Vegas as a potential companion of the Courier.",
+    "Cass was born circa 2244",
+    "However, one day, her father decided to travel once more and left for the east, disappearing from their lives and leaving Cass' mother to raise their adolescent daughter alone. Despite the negative impact of John's actions in walking out on his family, Cass holds no animosity over his decision as an adult and firmly believes her father was not the kind of man who abandoned his family on a whim; she was too young to understand why her dad left when he did, and by the time her mother died due to an unspecified illness sometime between 2257 and 2261, still holding onto the hope her husband would return, she was an unruly teenager incapable of listening.",
+    "After John's departure, Cass kept two of his effects as a form of familial legacy: a rose pendant, and her name, Rose of Sharon, which she says John took from a pre-War novel about \"dirt pilgrims.\" Cass originally thought that the necklace was her mother's, but eventually learned that it was John who gave the pendant to her mother, in turn giving Cass a greater sense of connection to both of her parents by wearing it.",
+    "At some point into her adult years, Cass carved out a living in the wasteland by starting a caravan bearing her family's name and getting into the water trade after realizing that someone with a good pair of traveling legs was valuable to disparate settlements. It was successful, for a time; by 2281, however, worn down by years of hard luck and terrible misfortunes, the last Cassidy is left a despondent merchant who has every reason to get out of the caravan business, yet remains chained to it by her stubborn sense of pride. As smart, tough, and steady with a gun as she's been, Cass has learned the hard way that she is not nearly savvy enough to survive the ruthless caravan wars that have flared up in Nevada since the NCR's expansion, particularly against the biggest competitors like the Crimson Caravan and the Van Graffs.",
+    "She was on layover at the Mojave Outpost when NCR Ranger reports came through that her caravan had been attacked and \"burned to ash,\" but despite her strong objections, Ranger Jackson refused to let her leave to handle it. Stuck with nothing to do but drink, threats along the road into New Vegas grew, and problems with NCR paperwork remained still, perpetually hampering her hopes of escaping the counter of the outpost's bar, leaving nothing else at mind except learning what became of her legacy.",
+    "Like her father, Cass has an aggressive and eager, sometimes even impatient attitude, often telling the Courier to hurry up or get on with it, and does not take well to personal insults or her time having been wasted.",
+    "While running a caravan bestowed Cass with knowledge of the world that is quite considerable, it is not without holes. For example, she is not aware that golf is a sport, rather than a person, while referring to Camp Golf as a monument to a man of that name",
+    "She is also very outspoken on the NCR and Caesar's Legion, mostly keen on pointing out the bureaucratic messes of the NCR and the Legion's use of women as breeding tools. She does begrudgingly concede that Legion supply lines are \"safe as houses,\" due to their fierce reprisals against raiders, unlike NCR supply lines which are sparsely defended and subject to the Republic's hefty taxes.",
+    "Cass treats sex casually and has no qualms about lying with men who catch her interest, especially those who are not \"soft.\" Despite this approach, she does not like over-inebriated NCR soldiers, calling them whiskey dicks over their inebriation making them unable to perform.",
+    "Rose of Sharon Cassidy appears in Fallout: New Vegas and Fallout: Wasteland Warfare.",
+    "Spare Us the Cutter: Cass cut content"
+  ],
+  "race": "Human",
+  "affiliation": "Cassidy CaravansCourier(optional)",
+  "role": "Water MerchantOwner of Cassidy CaravansCompanion",
+  "detailed_location": "Mojave Outpost barracks",
+  "voice_actor": "Rachel Roswell",
+  "special": {
+    "Strength": 7,
+    "Perception": 6,
+    "Endurance": 4,
+    "Charisma": 4,
+    "Intelligence": 4,
+    "Agility": 6,
+    "Luck": 4
+  },
+  "level": "5→22→37 (DLCs only)",
+  "tag_skills": [
+    {
+      "Guns:": "47→100"
+    },
+    {
+      "Melee Weap.:": "49→100"
+    },
+    {
+      "Sneak:": "47→100"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Neutral",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "CompanionGoodbye",
+      "topic_text": "I've heard enough. Let's move on.",
+      "emotion": "Neutral 50",
+      "response_text": "All right, then.",
+      "index": "1"
+    },
+    {
+      "topic": "FollowersAcknowledgeMyOrder",
+      "topic_text": "FollowersAcknowledgeMyOrder",
+      "emotion": "Neutral 50",
+      "response_text": "Makes sense to me.",
+      "index": "2"
+    },
+    {
+      "topic": "FollowersFired",
+      "topic_text": "It's time for us to part ways.",
+      "emotion": "Sad 10",
+      "response_text": "{Little regretful}If you're sure... your loss.",
+      "index": "5"
+    },
+    {
+      "topic": "FollowersFiredNo",
+      "topic_text": "On second thought, stick with me for a little longer.",
+      "emotion": "Neutral 50",
+      "response_text": "Don't be playing with my heart now, gets me pissed.",
+      "index": "8"
+    },
+    {
+      "topic": "FollowersFiredYes",
+      "topic_text": "Yes, I'm sure.",
+      "emotion": "Anger 10",
+      "response_text": "{Slight sass, told to leave}Fine then.",
+      "index": "13"
+    },
+    {
+      "topic": "FollowersFiredYesSuite",
+      "topic_text": "I'd like you to go back to the Lucky 38 for now.",
+      "emotion": "Fear 10",
+      "response_text": "{Wary, doesn't like 38}All right... don't be long.{Under her breath}Robots there give me the creeps.",
+      "index": "15"
+    },
+    {
+      "topic": "FollowersHired",
+      "topic_text": "I think we should travel together.",
+      "emotion": "Disgust 10",
+      "response_text": "Can't be any worse than here.",
+      "index": "18"
+    },
+    {
+      "topic": "FollowersLetsGo",
+      "topic_text": "Let's get going.",
+      "emotion": "Neutral 50",
+      "response_text": "Let's hit the road.",
+      "index": "23"
+    },
+    {
+      "topic": "FollowersOverburdened",
+      "topic_text": "FollowersOverburdened",
+      "emotion": "Neutral 50",
+      "response_text": "{Irritated}Carrying too much shit to move.",
+      "index": "25"
+    },
+    {
+      "topic": "FollowersStealthing",
+      "topic_text": "FollowersStealthing",
+      "emotion": "Neutral 50",
+      "response_text": "{Going stealthy, quiet}Bad guys won't see us coming.",
+      "index": "29"
+    },
+    {
+      "topic": "FollowersTactics",
+      "topic_text": "Let's talk about your tactics.",
+      "emotion": "Neutral 50",
+      "response_text": "{Wary}I'm listening.",
+      "index": "34"
+    },
+    {
+      "topic": "FollowersTacticsCombat",
+      "topic_text": "I want you to change your combat style.",
+      "emotion": "Neutral 50",
+      "response_text": "My{emph}style suits me just fine. But go ahead anyway.",
+      "index": "38"
+    },
+    {
+      "topic": "FollowersTacticsCombatAggressive",
+      "topic_text": "I want you to attack enemies the moment you see them.",
+      "emotion": "Neutral 50",
+      "response_text": "{Eager}I'll do like I'm doing then -{slight evil, likes hurting people}except I'll try to smile less.",
+      "index": "41"
+    },
+    {
+      "topic": "FollowersTacticsCombatEND",
+      "topic_text": "Let's talk about something else.",
+      "emotion": "Neutral 50",
+      "response_text": "No arguing here.",
+      "index": "47"
+    },
+    {
+      "topic": "FollowersTacticsCombatGOODBYE",
+      "topic_text": "That's all. Let's get going.",
+      "emotion": "Neutral 50",
+      "response_text": "Let's hit the road.",
+      "index": "51"
+    },
+    {
+      "topic": "FollowersTacticsCombatMelee",
+      "topic_text": "Switch to a melee weapon.",
+      "emotion": "Happy 10",
+      "response_text": "{Pleased}All right. <Cracks knuckles>",
+      "index": "54"
+    },
+    {
+      "topic": "FollowersTacticsCombatPassive",
+      "topic_text": "I want you not to attack enemies unless I've already engaged them.",
+      "emotion": "Surprise 10",
+      "response_text": "{Slight confusion}Thought I was already holding back.",
+      "index": "60"
+    },
+    {
+      "topic": "FollowersTacticsCombatRanged",
+      "topic_text": "I want you to use ranged weapons.",
+      "emotion": "Neutral 50",
+      "response_text": "{Pleased}Could use a little target practice.",
+      "index": "64"
+    },
+    {
+      "topic": "FollowersTacticsDistance",
+      "topic_text": "Let's talk about how close you're following me.",
+      "emotion": "Neutral 50",
+      "response_text": "{Confused}What, I got whiskey on my breath?",
+      "index": "68"
+    },
+    {
+      "topic": "FollowersTacticsDistanceDefault",
+      "topic_text": "Stay close to me.",
+      "emotion": "Neutral 50",
+      "response_text": "About as close as I can get without crawling up your ass.",
+      "index": "72"
+    },
+    {
+      "topic": "FollowersTacticsDistanceEND",
+      "topic_text": "Your distance is good. Let's talk about something else.",
+      "emotion": "Neutral 50",
+      "response_text": "What now?",
+      "index": "80"
+    },
+    {
+      "topic": "FollowersTacticsDistanceGOODBYE",
+      "topic_text": "All right, you're good. Let's get out of here.",
+      "emotion": "Neutral 50",
+      "response_text": "{Heading out with player}Sounds good to me.",
+      "index": "82"
+    },
+    {
+      "topic": "FollowersTacticsDistanceLong",
+      "topic_text": "Keep your distance. Try to flank them.",
+      "emotion": "Neutral 50",
+      "response_text": "Like your thinking.",
+      "index": "84"
+    },
+    {
+      "topic": "FollowersTacticsEnd",
+      "topic_text": "Enough about tactics.",
+      "emotion": "Neutral 50",
+      "response_text": "Fine, let's focus on the bad guys.",
+      "index": "85"
+    },
+    {
+      "topic": "FollowersTrade",
+      "topic_text": "Let's trade equipment.",
+      "emotion": "Neutral 50",
+      "response_text": "Let's distribute the weight.",
+      "index": "88"
+    },
+    {
+      "topic": "FollowersWait",
+      "topic_text": "Wait here.",
+      "emotion": "Neutral 50",
+      "response_text": "{Shrugs}Sitting tight.{Beat, low, a little smug}And pretty.",
+      "index": "91"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Anger 20",
+      "response_text": "Go to hell.",
+      "index": "94"
+    },
+    {
+      "topic": "GoodbyeMojave",
+      "topic_text": "Never mind. I'll be going.",
+      "emotion": "Neutral 50",
+      "response_text": "You take care now.",
+      "index": "164"
+    },
+    {
+      "topic": "PLAYERFIREWEAPON",
+      "topic_text": "PLAYER FIRE WEAPON",
+      "emotion": "Anger 10",
+      "response_text": "{Irritated, player fired a gun near her}Would you keep it down?",
+      "index": "165"
+    },
+    {
+      "topic": "PLAYERINIRONSITES",
+      "topic_text": "PLAYER IN IRON SITES",
+      "emotion": "Anger 10",
+      "response_text": "{Player's aiming at her}Pull that trigger, you'll wish you hadn't.",
+      "index": "169"
+    },
+    {
+      "topic": "PLAYERLAYMINE",
+      "topic_text": "PLAYER LAY MINE",
+      "emotion": "Neutral 50",
+      "response_text": "{Low, sees mine laid}I'll keep the dancing to a minimum.",
+      "index": "174"
+    },
+    {
+      "topic": "PLAYERTHROWGRENADE",
+      "topic_text": "PLAYER THROW GRENADE",
+      "emotion": "Neutral 50",
+      "response_text": "Watch out below!",
+      "index": "179"
+    },
+    {
+      "topic": "VDialogueCassCassTopic000",
+      "topic_text": "No, only looking around.",
+      "emotion": "Anger 30",
+      "response_text": "Well, keep those eyes up and turning - or I'll set 'em spinning.",
+      "index": "182"
+    },
+    {
+      "topic": "VDialogueCassCassTopic001",
+      "topic_text": "Just minding my business.",
+      "emotion": "Anger 5",
+      "response_text": "{Slight sneer}Your business, huh? Now there's a store worth tending.",
+      "index": "184"
+    },
+    {
+      "topic": "VDialogueCassCassTopic002",
+      "topic_text": "Wanted to ask some questions about the outpost.",
+      "emotion": "Anger 5",
+      "response_text": "Got no time or answers for you.{Snorts}Ask a drifter in need of a few caps, they'll give you all the answers you need.",
+      "index": "186"
+    },
+    {
+      "topic": "VDialogueCassRoseofSharonCassidyTopic000",
+      "topic_text": "There's other places to go.",
+      "emotion": "Disgust 10",
+      "response_text": "{Irritated}Where? Like Vegas? Chewed and spit enough friends out. East? Get put in one of Caesar's little \"camps?\" No thanks.",
+      "index": "187"
+    },
+    {
+      "topic": "VDialogueCassRoseofSharonCassidyTopic001",
+      "topic_text": "Be my guest.",
+      "emotion": "Pained 20",
+      "response_text": "{Drunk out of her skull}Oh my fucking god... get away from me, all three... four of you, don't need your...",
+      "index": "190"
+    },
+    {
+      "topic": "VDialogueCassRoseofSharonCassidyTopic002",
+      "topic_text": "<Storage Node for Variables: Do Not Translate.>",
+      "emotion": "Neutral 50",
+      "response_text": "Still, Jackson's not letting me out of his sight as long as there's still trouble up North.",
+      "index": "194"
+    },
+    {
+      "topic": "VDialogueCassRoseofSharonCassidyTopic003",
+      "topic_text": "Crimson Caravan sent me, they want to buy out your caravan.",
+      "emotion": "Surprise 10",
+      "response_text": "{Disbelief}They want to buy Cassidy Caravans? Don't they know it's burned to ash?",
+      "index": "204"
+    },
+    {
+      "topic": "VDialogueCassRoseofSharonCassidyTopic004",
+      "topic_text": "Wait, what happened to your caravan?",
+      "emotion": "Anger 10",
+      "response_text": "{Frowns, sighs}Mojave happened - hit by raiders packing some heavy firepower. Can't believe the Crimson Caravan haven't heard.",
+      "index": "206"
+    },
+    {
+      "topic": "VDialogueCassRoseofSharonCassidyTopic007",
+      "topic_text": "So even if you have nothing, you won't sell?",
+      "emotion": "Neutral 50",
+      "response_text": "If someone came up to you and offered you a thousand caps for your{emph}name, would{emph}you take it?",
+      "index": "208"
+    },
+    {
+      "topic": "VDialogueCassRoseofSharonCassidyTopic008",
+      "topic_text": "I have the offer letter here, the terms are fair.",
+      "emotion": "Neutral 50",
+      "response_text": "{Studying letter}Alice McLafferty, eh? No, I see the zeroes... and I know she's good for them.",
+      "index": "211"
+    },
+    {
+      "topic": "VDialogueCassRoseofSharonCassidyTopic009",
+      "topic_text": "I'm prepared to offer you the terms, plus 750 caps.",
+      "emotion": "Surprise 5",
+      "response_text": "[SUCCEEDED]{Impressed}You're obviously putting your money where your mouth is - on top of that offer letter, that is a lot of caps.",
+      "index": "213"
+    },
+    {
+      "topic": "VDialogueCassRoseofSharonCassidyTopic010",
+      "topic_text": "I'm not going to offer money, I wanted to drink for it.",
+      "emotion": "Anger 5",
+      "response_text": "[SUCCEEDED] You challenging me? Serious now.",
+      "index": "217"
+    },
+    {
+      "topic": "VDialogueCassRoseofSharonCassidyTopic011",
+      "topic_text": "That amount's enough to start a new caravan... with the old name.",
+      "emotion": "Anger 5",
+      "response_text": "Old name? What old name?",
+      "index": "221"
+    },
+    {
+      "topic": "VDialogueCassRoseofSharonCassidyTopic013",
+      "topic_text": "Far from it, to turn down the original terms.",
+      "emotion": "Pained 5",
+      "response_text": "All right, it's a deal, hand over that paper. Hnh. Can't believe I'm parting with it.",
+      "index": "222"
+    },
+    {
+      "topic": "VDialogueCassRoseofSharonCassidyTopic014",
+      "topic_text": "The Crimson Caravan will most likely change the name once they buy it.",
+      "emotion": "Surprise 5",
+      "response_text": "So you're telling me, I could take this money you're offering, give them nothing, and then go on to strike up another caravan, same as before?",
+      "index": "224"
+    },
+    {
+      "topic": "VDialogueCassRoseofSharonCassidyTopic022",
+      "topic_text": "If you made the caravan, you're responsible for killing it.",
+      "emotion": "Anger 20",
+      "response_text": "[SUCCEEDED]{Low, angry}{emph}What did you just say to me? Cause you sure as hell got my attention now.",
+      "index": "226"
+    },
+    {
+      "topic": "VDialogueCassRoseofSharonCassidyTopic023",
+      "topic_text": "[NCR] I think they're both rangers, one desert, one NCR.",
+      "emotion": "Neutral 50",
+      "response_text": "Hnh. Maybe you're right. Brimmed hats always throw me off.",
+      "index": "228"
+    },
+    {
+      "topic": "VDialogueCassRoseofSharonCassidyTopic025",
+      "topic_text": "Are you sure?",
+      "emotion": "Neutral 50",
+      "response_text": "Look, I know you came all this way, and that takes some drive, especially these days.",
+      "index": "230"
+    },
+    {
+      "topic": "VDialogueCassRoseofSharonCassidyTopic026",
+      "topic_text": "This Outpost is the last place you want to be trapped.",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] That... that's a good point, it's the caravan clearance that's got me stuck here. I'm sure this bar's getting tired of propping me up.",
+      "index": "232"
+    },
+    {
+      "topic": "VDialogueCassRoseofSharonCassidyTopic028",
+      "topic_text": "Who believes in holding on to a dead caravan?",
+      "emotion": "Anger 10",
+      "response_text": "Me, that's who. I'm not going to let it go just yet. There... there might be some survivors... or...",
+      "index": "234"
+    },
+    {
+      "topic": "VDialogueCassRoseofSharonCassidyTopic030",
+      "topic_text": "I may be honest, but at least I'm not blinded by pride.",
+      "emotion": "Neutral 50",
+      "response_text": "{Blinks}That's fair.{Beat}But there's been that voice inside me saying the same thing, and whiskey wasn't killing it.",
+      "index": "236"
+    },
+    {
+      "topic": "VDialogueCassRoseofSharonCassidyTopic033",
+      "topic_text": "Helped out Jackson and cleared the road North.",
+      "emotion": "Neutral 50",
+      "response_text": "{Takes a breath}Guess that settles that, then.",
+      "index": "238"
+    },
+    {
+      "topic": "VDialogueCassRoseofSharonCassidyTopic034",
+      "topic_text": "I feel great, actually. Another?",
+      "emotion": "Surprise 20",
+      "response_text": "Another?!",
+      "index": "239"
+    },
+    {
+      "topic": "VDialogueCassRoseofSharonCassidyTopic035",
+      "topic_text": "Looking for a man who shot me.",
+      "emotion": "Surprise 5",
+      "response_text": "{Echoing}A man who shot you.",
+      "index": "241"
+    },
+    {
+      "topic": "VDialogueCassRoseofSharonCassidyTopic036",
+      "topic_text": "Still feel a little parched.",
+      "emotion": "Surprise 20",
+      "response_text": "You want... want to drink more?",
+      "index": "242"
+    },
+    {
+      "topic": "VDialogueCassRoseofSharonCassidyTopic037",
+      "topic_text": "I flll fnnne.",
+      "emotion": "Happy 20",
+      "response_text": "<Laughs> All right, all right, you just hang on to the bar here... that's it.",
+      "index": "243"
+    },
+    {
+      "topic": "VDialogueCassRoseofSharonCassidyTopic038",
+      "topic_text": "{Sold Caravan}What will you do now?",
+      "emotion": "Sad 5",
+      "response_text": "{Sighs}That's the question I been asking myself.",
+      "index": "245"
+    },
+    {
+      "topic": "VDialogueCassRoseofSharonCassidyTopic040",
+      "topic_text": "I'll be going now.",
+      "emotion": "Neutral 50",
+      "response_text": "Take care now.",
+      "index": "246"
+    },
+    {
+      "topic": "VDialogueCassRoseofSharonCassidyTopic041",
+      "topic_text": "What will you do now?",
+      "emotion": "Sad 5",
+      "response_text": "{Slightly confused}No idea. Maybe... head back West? Though the idea of heading back there with my tail between my legs isn't appealing.",
+      "index": "247"
+    },
+    {
+      "topic": "VDialogueCassRoseofSharonCassidyTopic043",
+      "topic_text": "I'll get a dozen bottles of whiskey and be back.",
+      "emotion": "Happy 5",
+      "response_text": "I'll be waiting, then.{Beat, smiling}And training.",
+      "index": "248"
+    },
+    {
+      "topic": "VDialogueCassRoseofSharonCassidyTopic044",
+      "topic_text": "Here's a dozen bottles, let's go.",
+      "emotion": "Neutral 50",
+      "response_text": "All right then, I already got a head start, but I'll go first anyway.",
+      "index": "249"
+    },
+    {
+      "topic": "VDialogueCassRoseofSharonCassidyTopic045",
+      "topic_text": "Got the whiskey, let's do this.",
+      "emotion": "Neutral 50",
+      "response_text": "All right then, I already got a head start, but I'll go first anyway.",
+      "index": "250"
+    },
+    {
+      "topic": "VDialogueCassRoseofSharonCassidyTopic046",
+      "topic_text": "Yeah... well, feel a... a little dizzy.",
+      "emotion": "Happy 5",
+      "response_text": "You know you put up a good fight. I'm impressed.",
+      "index": "251"
+    },
+    {
+      "topic": "VDialogueCassRoseofSharonCassidyTopic049",
+      "topic_text": "When I mmmet you I thought you were thbiggst bitch.",
+      "emotion": "Happy 20",
+      "response_text": "Awwww. Now ain't that sweet.",
+      "index": "255"
+    },
+    {
+      "topic": "VDialogueCassRoseofSharonCassidyTopic051",
+      "topic_text": "Looking to join up with me again?",
+      "emotion": "Neutral 50",
+      "response_text": "Was reminded why I left this place soon as I walked in.{Nods}Let's go.",
+      "index": "256"
+    },
+    {
+      "topic": "VDialogueCassRoseofSharonCassidyTopic054",
+      "topic_text": "Surprised you can see me from that deep in the bottle.",
+      "emotion": "Disgust 5",
+      "response_text": "Deep?{Laughs, then matter of fact}Ain't deep by half. Closed down the bar yesterday, going to close it again today - rinse and repeat.",
+      "index": "257"
+    },
+    {
+      "topic": "VDialogueCassRoseofSharonCassidyTopic055",
+      "topic_text": "Was looking for someone worth my time, I was mistaken.",
+      "emotion": "Anger 20",
+      "response_text": "A sober woman might take insult at that.{Serious}Me, I might just bust you one.",
+      "index": "258"
+    },
+    {
+      "topic": "VDialogueCassRoseofSharonCassidyTopic056",
+      "topic_text": "How about a drink instead?",
+      "emotion": "Neutral 50",
+      "response_text": "How about a drink? How about a{emph}couple, is what you mean.",
+      "index": "260"
+    },
+    {
+      "topic": "VDialogueCassRoseofSharonCassidyTopic057",
+      "topic_text": "You any good in a fight?",
+      "emotion": "Neutral 50",
+      "response_text": "I'm fair with chucking dynamite{rising smugness}and not bad with a pistol, if I do say so myself.{Beat, a little lower}Carry a knife, too, but that's more for practical reasons.",
+      "index": "261"
+    },
+    {
+      "topic": "VDialogueCassRoseofSharonCassidyTopic058",
+      "topic_text": "Where did you learn to shoot?",
+      "emotion": "Neutral 50",
+      "response_text": "Short of caps is what taught me, mostly. Ammo's expensive... so I learned to make every shot count.",
+      "index": "264"
+    },
+    {
+      "topic": "VDialogueCassRoseofSharonCassidyTopic059",
+      "topic_text": "You've used explosives?",
+      "emotion": "Neutral 50",
+      "response_text": "Dynamite's for when you don't have enough bullets, want to clear a pass, or scare off Geckos from a caravan.",
+      "index": "266"
+    },
+    {
+      "topic": "VDialogueCassRoseofSharonCassidyTopic062",
+      "topic_text": "Don't really want to talk about it.",
+      "emotion": "Anger 5",
+      "response_text": "Fine, then, not trying to pry. Just wondering what would make a Courier run around the desert without a contract is all. Forget I asked.",
+      "index": "269"
+    },
+    {
+      "topic": "VDialogueCassRoseofSharonCassidyTopic063",
+      "topic_text": "Twice. In the head.",
+      "emotion": "Surprise 5",
+      "response_text": "{Echoing}And you got better.",
+      "index": "270"
+    },
+    {
+      "topic": "VDialogueCassRoseofSharonCassidyTopic065",
+      "topic_text": "Maybe it's not where you go, it's the company.",
+      "emotion": "Disgust 10",
+      "response_text": "{Incredulous}\"It's the company?\" That has{emph}got to be the biggest load of Brahmin shit I've ever heard.",
+      "index": "271"
+    },
+    {
+      "topic": "VDialogueCassRoseofSharonCassidyTopic066",
+      "topic_text": "Running and gunning sounds interesting.",
+      "emotion": "Neutral 50",
+      "response_text": "Jackson might have something for you, if you haven't already spoken to that old buzzard.",
+      "index": "273"
+    },
+    {
+      "topic": "VDialogueCassRoseofSharonCassidyTopic067",
+      "topic_text": "Never mind. Let's move on.",
+      "emotion": "Neutral 50",
+      "response_text": "Sounds good to me.",
+      "index": "275"
+    },
+    {
+      "topic": "VDialogueCassRoseofSharonCassidyTopic068",
+      "topic_text": "Why not? I could use someone who knows the roads.",
+      "emotion": "Happy 5",
+      "response_text": "So you're looking for someone to help, not just tag along? Hnh.",
+      "index": "276"
+    },
+    {
+      "topic": "VDialogueCassRoseofSharonCassidyTopic069",
+      "topic_text": "Any other weapons you know how to use?",
+      "emotion": "Neutral 50",
+      "response_text": "What, you mean like spears? No, none of that. Mom was a tribal, but she didn't teach me anything like that.",
+      "index": "277"
+    },
+    {
+      "topic": "VDialogueCassRoseofSharonCassidyTopic070",
+      "topic_text": "Your mother was a tribal?",
+      "emotion": "Neutral 50",
+      "response_text": "You know, like one of the tribes from the East - we got 'em out West, too. NCR's herding 'em up, though, domesticating them.",
+      "index": "278"
+    },
+    {
+      "topic": "VDialogueCassRoseofSharonCassidyTopic071",
+      "topic_text": "Tell me about your Dad.",
+      "emotion": "Neutral 50",
+      "response_text": "Not much to tell. He ended up walking East one day when I was young and never came back. Not a family deserter like some, though.",
+      "index": "281"
+    },
+    {
+      "topic": "VDialogueCassRoseofSharonCassidyTopic072",
+      "topic_text": "Any idea why he went East?",
+      "emotion": "Neutral 50",
+      "response_text": "Not a clue. When he left, I was too in my crib to understand why, and around the time Mom passed, I was too into my teens to listen.",
+      "index": "284"
+    },
+    {
+      "topic": "VDialogueCassRoseofSharonCassidyTopic073",
+      "topic_text": "Where'd you get that pendant?",
+      "emotion": "Happy 5",
+      "response_text": "Gift from my Dad, along with my name.{Wistful}Rose of Sharon Cassidy.",
+      "index": "286"
+    },
+    {
+      "topic": "VDialogueCassRoseofSharonCassidyTopic075",
+      "topic_text": "Just needed a little pick-me-up.",
+      "emotion": "Neutral 50",
+      "response_text": "Well, keep it away from me, won't have anything to do with it.",
+      "index": "289"
+    },
+    {
+      "topic": "VDialogueCassRoseofSharonCassidyTopic076",
+      "topic_text": "What's the problem?",
+      "emotion": "Neutral 50",
+      "response_text": "My father had heart problems, and it ran down the family tree to me.",
+      "index": "290"
+    },
+    {
+      "topic": "VDialogueCassRoseofSharonCassidyTopic079",
+      "topic_text": "If your world's a whiskey bottle, there's more out there.",
+      "emotion": "Disgust 10",
+      "response_text": "{Sarcastic}Oh, that's got just the right bite of judgment to it, stings a little, too.{Beat}Did you hear that from a Followers preacher?",
+      "index": "292"
+    },
+    {
+      "topic": "VDialogueCassRoseofSharonCassidyTopic080",
+      "topic_text": "You could come with me.",
+      "emotion": "Surprise 5",
+      "response_text": "Go with you?{Thinking}And why the hell would I do that.",
+      "index": "294"
+    },
+    {
+      "topic": "VDialogueCassRoseofSharonCassidyTopic081",
+      "topic_text": "That's... one way to put it.",
+      "emotion": "Neutral 50",
+      "response_text": "Didn't ask Mom to elaborate. Never heard her complain about his bedroom behavior, only complain he wasn't around to do it no more.",
+      "index": "296"
+    },
+    {
+      "topic": "VDialogueCassRoseofSharonCassidyTopic082",
+      "topic_text": "Do you really want to stay in this shithole?",
+      "emotion": "Disgust 5",
+      "response_text": "{Player's got a point}Hnh. The Outpost lost its charm about three bottles ago, and that was just this morning.",
+      "index": "297"
+    },
+    {
+      "topic": "VDialogueCassRoseofSharonCassidyTopic083",
+      "topic_text": "Stay here, you know exactly what's going to happen, day in, day out.",
+      "emotion": "Neutral 50",
+      "response_text": "So fighting boredom is your argument, huh?",
+      "index": "298"
+    },
+    {
+      "topic": "VDialogueCassRoseofSharonCassidyTopic084",
+      "topic_text": "What's wrong?",
+      "emotion": "Disgust 5",
+      "response_text": "{Sarcastic}Aside from the TV-faced robots, the dust, and the old man smell in every room? Nothing, it's a paradise.",
+      "index": "299"
+    },
+    {
+      "topic": "VDialogueCassRoseofSharonCassidyTopic085",
+      "topic_text": "All right. Come on, let's go.",
+      "emotion": "Neutral 50",
+      "response_text": "{Relieved to be leaving}Thank god, the sooner the better.",
+      "index": "302"
+    },
+    {
+      "topic": "VDialogueCassRoseofSharonCassidyTopic086",
+      "topic_text": "Is whiskey your drink of choice?",
+      "emotion": "Neutral 50",
+      "response_text": "Not sure if I chose it or it chose me.{Beat}Dad ran a bar a long time ago, and it was a labor of love, Mom said. Didn't sound like it made her happy.",
+      "index": "303"
+    },
+    {
+      "topic": "VDialogueCassRoseofSharonCassidyTopic087",
+      "topic_text": "Whiskey Rose?",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah, on account of my name... and the blossoms on my cheeks when I drink too much.",
+      "index": "306"
+    },
+    {
+      "topic": "VDialogueCassRoseofSharonCassidyTopic088",
+      "topic_text": "I've met him. Nice impersonation.",
+      "emotion": "Disgust 5",
+      "response_text": "Yeah, he's been with NCR so long all he can see is the worst outcome of everything - so he doesn't do anything.",
+      "index": "309"
+    },
+    {
+      "topic": "VDialogueCassRoseofSharonCassidyTopic091",
+      "topic_text": "Are you all right?",
+      "emotion": "Anger 5",
+      "response_text": "All right? No, I'm not all right.",
+      "index": "310"
+    },
+    {
+      "topic": "VDialogueCassRoseofSharonCassidyTopic093",
+      "topic_text": "What are you trying to forget?",
+      "emotion": "Anger 5",
+      "response_text": "Lost my caravan heading north, the driver burned to ash - and they didn't even take the cargo, they just burned that, too.",
+      "index": "313"
+    },
+    {
+      "topic": "VDialogueCassRoseofSharonCassidyTopic094",
+      "topic_text": "Back West?",
+      "emotion": "Sad 5",
+      "response_text": "Yeah, if you couldn't tell, I'm not from around here and I'm not NCR. I run a caravan... or did.",
+      "index": "314"
+    },
+    {
+      "topic": "VDialogueCassRoseofSharonCassidyTopic095",
+      "topic_text": "Uh, how about you keep your hands by your sides.",
+      "emotion": "Neutral 50",
+      "response_text": "Don't worry, not looking to throw punches just yet.{Beat}And something tells me hitting you would be a mistake I wouldn't want to repeat.",
+      "index": "315"
+    },
+    {
+      "topic": "VDialogueCassRoseofSharonCassidyTopic096",
+      "topic_text": "Why would they do that?",
+      "emotion": "Anger 5",
+      "response_text": "My guess is Legion, they're trying to cut NCR's supply line... and the Mojave Outpost is proof. Got us locked up tighter than a New Vegas virgin.",
+      "index": "316"
+    },
+    {
+      "topic": "VDialogueCassRoseofSharonCassidyTopic099",
+      "topic_text": "Who's Jackson?",
+      "emotion": "Disgust 5",
+      "response_text": "NCR officer, trooper, whatever - runs the place. He's over in the main building, the one{emph}without a bar.",
+      "index": "319"
+    },
+    {
+      "topic": "VDialogueCassRoseofSharonCassidyTopic100",
+      "topic_text": "What are you going to do?",
+      "emotion": "Sad 10",
+      "response_text": "Drink. Got a lot of memories to drown. If I die while doing it, so be it. Got nowhere else to go.",
+      "index": "322"
+    },
+    {
+      "topic": "VDialogueCassRoseofSharonCassidyTopic101",
+      "topic_text": "So you're out of the caravan business?",
+      "emotion": "Sad 5",
+      "response_text": "Sure am. Burned for the last time, and this time, it's for good. Worse, it's not done kicking me - I'm still{emph}trapped here.",
+      "index": "323"
+    },
+    {
+      "topic": "VDialogueCassRoseofSharonCassidyTopic102",
+      "topic_text": "I'd slow down on that whiskey, if I were you.",
+      "emotion": "Anger 10",
+      "response_text": "Yeah, well, you{emph}aren't me, so good-for-fucking-you.",
+      "index": "324"
+    },
+    {
+      "topic": "VDialogueCassRoseofSharonCassidyTopic103",
+      "topic_text": "That drinking's going to get you in trouble in a second.",
+      "emotion": "Anger 5",
+      "response_text": "Trouble's already come and went, so anything{emph}you bring will make my next drink go down easier.",
+      "index": "325"
+    },
+    {
+      "topic": "VDialogueCassRoseofSharonCassidyTopic104",
+      "topic_text": "Already cleared the roads for Jackson.",
+      "emotion": "Surprise 10",
+      "response_text": "{Blinks}No shit? Drink's on me, then.",
+      "index": "326"
+    },
+    {
+      "topic": "VDialogueCassRoseofSharonCassidyTopic105",
+      "topic_text": "Anything you can tell me about the Outpost?",
+      "emotion": "Neutral 50",
+      "response_text": "You're looking at it. It's a watering hole without much to brag about.",
+      "index": "328"
+    },
+    {
+      "topic": "VDialogueCassRoseofSharonCassidyTopic106",
+      "topic_text": "That fucking monument outside?",
+      "emotion": "Disgust 10",
+      "response_text": "Don't even tell me you missed it coming in. It's like NCR showing its dick to all the East.",
+      "index": "331"
+    },
+    {
+      "topic": "VDialogueCassRoseofSharonCassidyTopic107",
+      "topic_text": "Covered in blood?",
+      "emotion": "Neutral 50",
+      "response_text": "{Slight exasperation}I'm speaking figurative, isn't any blood on their damn hands.{Beat, to herself, serious}Course, when Caesar comes walking through here, there'll be blood for real.",
+      "index": "334"
+    },
+    {
+      "topic": "VDialogueCassRoseofSharonCassidyTopic108",
+      "topic_text": "What are those statues supposed to be?",
+      "emotion": "Disgust 10",
+      "response_text": "{Irritated, doesn't much care}One's a ranger, one's an NCR trooper, supposed to represent unification of West and East... or some such shit.",
+      "index": "337"
+    },
+    {
+      "topic": "VDialogueCassRoseofSharonCassidyTopic109",
+      "topic_text": "Jean-Baptiste in Freeside wanted to meet with you.",
+      "emotion": "Disgust 5",
+      "response_text": "Jean-Baptiste? Sounds like someone got knocked out of the good book so hard his name broke.",
+      "index": "339"
+    },
+    {
+      "topic": "VDialogueCassRoseofSharonCassidyTopic111",
+      "topic_text": "A doctor helped patch me up.",
+      "emotion": "Neutral 50",
+      "response_text": "Two shots in the head without an Auto-Doc is a lot of patching. Hope you thanked him properly.",
+      "index": "341"
+    },
+    {
+      "topic": "VDialogueCassRoseofSharonCassidyTopic112",
+      "topic_text": "Why are you here at the bar?",
+      "emotion": "Neutral 50",
+      "response_text": "Whiskey and me are old friends, keeps me going when times get rough. Like now.",
+      "index": "343"
+    },
+    {
+      "topic": "VDialogueCassRoseofSharonCassidyTopic113",
+      "topic_text": "Any work around here?",
+      "emotion": "Neutral 50",
+      "response_text": "If you're looking to sign on with a caravan, no - traders are bottled up tight here.",
+      "index": "346"
+    },
+    {
+      "topic": "VDialogueCassRoseofSharonCassidyTopic114",
+      "topic_text": "Any other work?",
+      "emotion": "Neutral 50",
+      "response_text": "I don't know, seems to be a lot of attention on Nipton. Word is, one of the snipers in the nest on the roof spotted smoke from the East.",
+      "index": "349"
+    },
+    {
+      "topic": "VDialogueCassRoseofSharonCassidyTopic115",
+      "topic_text": "Sniper on the roof?",
+      "emotion": "Disgust 5",
+      "response_text": "Yeah, her name's... Ghost or something...{mocking}fucking scary, ooooooh.{Sarcastic}Guess it's cause you'll never see her 'til your dead.",
+      "index": "350"
+    },
+    {
+      "topic": "VDialogueCassRoseofSharonCassidyTopic116",
+      "topic_text": "He wanted something I was carrying.",
+      "emotion": "Disgust 5",
+      "response_text": "So he robbed you? Robbing a courier's low, and any family or group he's with is going to get a black eye for it.",
+      "index": "353"
+    },
+    {
+      "topic": "VDialogueCassRoseofSharonCassidyTopic118",
+      "topic_text": "I don't think it was personal.",
+      "emotion": "Surprise 10",
+      "response_text": "{Slight incredulous that the player would be dismissive of being shot}Well if it wasn't before, it is now.",
+      "index": "356"
+    },
+    {
+      "topic": "VDialogueCassRoseofSharonCassidyTopic119",
+      "topic_text": "Benny, wore a checkered suit.",
+      "emotion": "Neutral 50",
+      "response_text": "{Frowns}Can't say I've heard the name. Or heard about any man dressed like a seat cover.",
+      "index": "358"
+    },
+    {
+      "topic": "VDialogueCassRoseofSharonCassidyTopic120",
+      "topic_text": "Didn't introduce himself, wore a bad suit.",
+      "emotion": "Neutral 50",
+      "response_text": "Bad suit, huh? Well, if assholes had taste, we'd all be feasting on shit.",
+      "index": "359"
+    },
+    {
+      "topic": "VDialogueCassRoseofSharonCassidyTopic121",
+      "topic_text": "Go back West, then, see if I care.",
+      "emotion": "Anger 10",
+      "response_text": "Fine, I will, jackass.",
+      "index": "362"
+    },
+    {
+      "topic": "VDialogueCassRoseofSharonCassidyTopic123",
+      "topic_text": "Well, in the meantime, he's given me a suite at the Lucky 38.",
+      "emotion": "Fear 5",
+      "response_text": "Does it come with its own Deathclaw? Trust me, if you can't see it, something just as nasty's waiting.",
+      "index": "365"
+    },
+    {
+      "topic": "VDialogueCassRoseofSharonCassidyTopic124",
+      "topic_text": "Good, go back to your famil... oh wait, they're fucking dead.",
+      "emotion": "Anger 20",
+      "response_text": "{Cold}You son of a bitch.{Beat}You know, I was just going to give you a piece of my mind and now? Now I'm going to put you down.",
+      "index": "368"
+    },
+    {
+      "topic": "VDialogueCassRoseofSharonCassidyTopic125",
+      "topic_text": "Life means we have to make tough choices - me included.",
+      "emotion": "Neutral 50",
+      "response_text": "Who you are comes from the choices you make when life{emph}gets tough.",
+      "index": "369"
+    },
+    {
+      "topic": "VDialogueCassRoseofSharonCassidyTopic126",
+      "topic_text": "<Attack>That's it. Tired of listening to you anyway.",
+      "emotion": "Surprise 10",
+      "response_text": "{Surprised}You're seriously going to draw on me? Fine, do it, see what happens.",
+      "index": "371"
+    },
+    {
+      "topic": "VDialogueCassRoseofSharonCassidyTopic127",
+      "topic_text": "<Lie> The Mojave's a hard place. But I need to rise above that.",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED]{Hesitating}Well... all right. I'll stick around for a little while longer, but if you get out of line again...",
+      "index": "372"
+    },
+    {
+      "topic": "VDialogueCassRoseofSharonCassidyTopic128",
+      "topic_text": "Tough words, but I needed to hear them. I'll change, I promise.",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED]{Hesitating}Well... all right. I'll stick around for a little while longer, but if you get out of line again...",
+      "index": "374"
+    },
+    {
+      "topic": "VDialogueCassRoseofSharonCassidyTopic129",
+      "topic_text": "<Lie> I'll change Cass, I promise.",
+      "emotion": "Anger 5",
+      "response_text": "[SUCCEEDED]{Hesitating}I'll hold you to that promise, then. I'm not known for my patience, though.",
+      "index": "376"
+    },
+    {
+      "topic": "VDialogueCassRoseofSharonCassidyTopic130",
+      "topic_text": "I've made mistakes. You judging me doesn't help.",
+      "emotion": "Sad 5",
+      "response_text": "[SUCCEEDED]{Hesitating}All right... maybe I was a little harsh. I can be that way.",
+      "index": "378"
+    },
+    {
+      "topic": "VDialogueCassRoseofSharonCassidyTopic131",
+      "topic_text": "Look, the Mojave's a tough place, all right?",
+      "emotion": "Anger 10",
+      "response_text": "You need to be tougher. If you let the Mojave get you down, then you've given up on life.",
+      "index": "380"
+    },
+    {
+      "topic": "VDialogueCassRoseofSharonCassidyTopic134",
+      "topic_text": "Can we talk about this?",
+      "emotion": "Disgust 20",
+      "response_text": "Fuck that. You can walk the road to hell on your own.",
+      "index": "382"
+    },
+    {
+      "topic": "VDialogueCassRoseofSharonCassidyTopic141",
+      "topic_text": "I already took care of Jackson. Er, the Jackson problem.",
+      "emotion": "Surprise 10",
+      "response_text": "{Blinks}No shit? Drink's on me, then.",
+      "index": "383"
+    },
+    {
+      "topic": "VDialogueCassRoseofSharonCassidyTopic142",
+      "topic_text": "He's... gone, don't think he can help. Anything else?",
+      "emotion": "Neutral 50",
+      "response_text": "I don't know, seems to be a lot of attention on Nipton. Word is, one of the snipers in the nest on the roof spotted smoke from the East.",
+      "index": "385"
+    },
+    {
+      "topic": "VDialogueCassRoseofSharonCassidyTopic143",
+      "topic_text": "How'd you get started in the caravan business?",
+      "emotion": "Neutral 50",
+      "response_text": "Started? Took to it like a fish to water...{hesitant}well, if you know what a fish is.",
+      "index": "386"
+    },
+    {
+      "topic": "VDialogueCassRoseofSharonCassidyTopic144",
+      "topic_text": "What the hell is a fish?",
+      "emotion": "Neutral 50",
+      "response_text": "It's this... slimy, scaled thing, like a Lakelurk, except no legs. Well, most times. They're like birds, except they stay underwater.",
+      "index": "387"
+    },
+    {
+      "topic": "VDialogueCassRoseofSharonCassidyTopic145",
+      "topic_text": "[Intelligence] I'm familiar. Do *you* know what a fish is?",
+      "emotion": "Surprise 5",
+      "response_text": "{Suddenly unsure}Well... of course I do.",
+      "index": "390"
+    },
+    {
+      "topic": "VDialogueCassRoseofSharonCassidyTopic146",
+      "topic_text": "So you just started in the caravan...?",
+      "emotion": "Neutral 50",
+      "response_text": "Actually, it sort of fell on me. My feet get antsy if I stay in one place, like the Mojave Outpost.",
+      "index": "391"
+    },
+    {
+      "topic": "VDialogueCassRoseofSharonCassidyTopic147",
+      "topic_text": "So you traveled a lot.",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah. West, East - and passed through places enough times people would sometimes pay me some caps to take something to the next town.",
+      "index": "393"
+    },
+    {
+      "topic": "VDialogueCassRoseofSharonCassidyTopic148",
+      "topic_text": "What, like a courier?",
+      "emotion": "Neutral 50",
+      "response_text": "Well, not as glamorous, I guess - roads back West were safer in most places.{Beat, to herself}Most.",
+      "index": "394"
+    },
+    {
+      "topic": "VDialogueCassRoseofSharonCassidyTopic149",
+      "topic_text": "How's caravan life in the Mojave?",
+      "emotion": "Neutral 50",
+      "response_text": "Well, I'm not one for soft living... or soft men, let me tell you. I'm guessing neither are you.",
+      "index": "396"
+    },
+    {
+      "topic": "VDialogueCassRoseofSharonCassidyTopic150",
+      "topic_text": "[Cherchez La Femme] That's... rarely an issue.",
+      "emotion": "Surprise 20",
+      "response_text": "{Frowns}What?{Beat}Oh. Damn, no offense meant. Sometimes I get so drunk, I don't care who I share a bed with, so that's fine with me.",
+      "index": "398"
+    },
+    {
+      "topic": "VDialogueCassRoseofSharonCassidyTopic151",
+      "topic_text": "[Black Widow] Soft men don't stay that way around me, I've found.",
+      "emotion": "Disgust 5",
+      "response_text": "Well, don't let the soldiers drink too much, and I'd agree with you most time. Fucking whiskey dicks.",
+      "index": "400"
+    },
+    {
+      "topic": "VDialogueCassRoseofSharonCassidyTopic153",
+      "topic_text": "[Confirmed Bachelor] As long as we keep it on that level.",
+      "emotion": "Neutral 50",
+      "response_text": "{Frowns}What?{Beat}Oh. All right.{Beat}Guess you've got a Legion outlook on things. No problems here, there's a lot more of that in the Mojave than you see.",
+      "index": "401"
+    },
+    {
+      "topic": "VDialogueCassRoseofSharonCassidyTopic154",
+      "topic_text": "[Ladykiller] Miss Cassidy... are you flirting with me?",
+      "emotion": "Anger 5",
+      "response_text": "Don't take that as anything more than my words.{Teasing}I bet you're a real sweetheart the way you leave that trail of broken-hearts behind you.",
+      "index": "402"
+    },
+    {
+      "topic": "VDialogueCassRoseofSharonCassidyTopic155",
+      "topic_text": "What can you tell me about New Vegas?",
+      "emotion": "Neutral 50",
+      "response_text": "Much as anyone else. Cazador trap - you fly in, the city sucks a pint out of you, then you're out on the street.",
+      "index": "404"
+    },
+    {
+      "topic": "VDialogueCassRoseofSharonCassidyTopic156",
+      "topic_text": "And caravan life's the same way?",
+      "emotion": "Disgust 5",
+      "response_text": "{Raises an eyebrow}The Caravan fighting here in the Mojave... it's been downright brutal. The amount of caravan space you reserve for ammo alone...",
+      "index": "407"
+    },
+    {
+      "topic": "VDialogueCassRoseofSharonCassidyTopic157",
+      "topic_text": "Do you deal mostly with NCR?",
+      "emotion": "Neutral 50",
+      "response_text": "Anyone wise does. Vegas families pay on time, from what I've heard - even the Omertas. The White Gloves pay on time, but they're... creepy.",
+      "index": "409"
+    },
+    {
+      "topic": "VDialogueCassRoseofSharonCassidyTopic158",
+      "topic_text": "Can you tell me anything about this Platinum Chip?",
+      "emotion": "Neutral 50",
+      "response_text": "{Suspicious}Well, no idea why your friend Mr. House wants it, but I'm guessing it's not for the caps.",
+      "index": "411"
+    },
+    {
+      "topic": "VDialogueCassRoseofSharonCassidyTopic159",
+      "topic_text": "What about Caesar's Legion?",
+      "emotion": "Anger 20",
+      "response_text": "{Defensive, a little angry - hates these guys}The Legion? What about them?",
+      "index": "414"
+    },
+    {
+      "topic": "VDialogueCassRoseofSharonCassidyTopic160",
+      "topic_text": "All right, just asking.",
+      "emotion": "Sad 5",
+      "response_text": "Look, not meaning to fly off the handle like that.",
+      "index": "416"
+    },
+    {
+      "topic": "VDialogueCassRoseofSharonCassidyTopic161",
+      "topic_text": "Do they deal with any caravans at all?",
+      "emotion": "Neutral 50",
+      "response_text": "There's some caravans that deal with the Legion, yes. And as much as it pains me to say it, any caravan marked by the Legion is safe as houses.",
+      "index": "417"
+    },
+    {
+      "topic": "VDialogueCassRoseofSharonCassidyTopic162",
+      "topic_text": "You sound frustrated.",
+      "emotion": "Anger 5",
+      "response_text": "I am. If NCR took the same stand and committed patrols to the roads, then I think that'd solve a lot of their problems right there.",
+      "index": "419"
+    },
+    {
+      "topic": "VDialogueCassRoseofSharonCassidyTopic164",
+      "topic_text": "There must be good parts to the Republic.",
+      "emotion": "Anger 5",
+      "response_text": "NCR tries. It's just that trying doesn't mean a whole lot when you're paying your respects to the dead.",
+      "index": "421"
+    },
+    {
+      "topic": "VDialogueCassRoseofSharonCassidyTopic165",
+      "topic_text": "Any other differences between Legion and NCR?",
+      "emotion": "Neutral 50",
+      "response_text": "Much as I hate the Legion, caravan life would be a hell of a lot easier if they ran the roads.",
+      "index": "424"
+    },
+    {
+      "topic": "VDialogueCassRoseofSharonCassidyTopic166",
+      "topic_text": "What do you think of NCR?",
+      "emotion": "Anger 5",
+      "response_text": "NCR's my country, and I support it. Anyone who says otherwise, I'll feed them my knee.",
+      "index": "427"
+    },
+    {
+      "topic": "VDialogueCassRoseofSharonCassidyTopic167",
+      "topic_text": "There's a \"but\" in there.",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah, there is.",
+      "index": "429"
+    },
+    {
+      "topic": "VDialogueCassRoseofSharonCassidyTopic168",
+      "topic_text": "You support it no matter what?",
+      "emotion": "Neutral 50",
+      "response_text": "I'm not some blind, flag-saluting do-as-they-will NCR lover. They're family, but let me tell you what family means.",
+      "index": "430"
+    },
+    {
+      "topic": "VDialogueCassRoseofSharonCassidyTopic169",
+      "topic_text": "So they lack direction?",
+      "emotion": "Neutral 50",
+      "response_text": "They try to put their stake in everything they see.",
+      "index": "433"
+    },
+    {
+      "topic": "VDialogueCassRoseofSharonCassidyTopic170",
+      "topic_text": "Yeah, I got that part, thanks.",
+      "emotion": "Neutral 50",
+      "response_text": "So NCR, tries to hold on to everything. They can't, because it's too big for them to get their arms around.",
+      "index": "435"
+    },
+    {
+      "topic": "VDialogueCassRoseofSharonCassidyTopic172",
+      "topic_text": "So the Mojave suffers.",
+      "emotion": "Sad 5",
+      "response_text": "Aside from the people in the towns, it's the soldiers that suffer for it most.",
+      "index": "437"
+    },
+    {
+      "topic": "VDialogueCassRoseofSharonCassidyTopic173",
+      "topic_text": "So what's the alternative?",
+      "emotion": "Neutral 50",
+      "response_text": "Look, don't get me wrong.",
+      "index": "440"
+    },
+    {
+      "topic": "VDialogueCassRoseofSharonCassidyTopic174",
+      "topic_text": "There's other alternatives.",
+      "emotion": "Neutral 50",
+      "response_text": "Look... and what I'm about to say, I don't mean as any offense to you, I know where your sympathies lie.",
+      "index": "444"
+    },
+    {
+      "topic": "VDialogueCassRoseofSharonCassidyTopic175",
+      "topic_text": "What do you mean?",
+      "emotion": "Neutral 50",
+      "response_text": "Some caravans deal with the Legion now because the security. If towns could get the same protection? A lot more tempting than you'd think.",
+      "index": "445"
+    },
+    {
+      "topic": "VDialogueCassRoseofSharonCassidyTopic177",
+      "topic_text": "You sure you want to do this?",
+      "emotion": "Anger 10",
+      "response_text": "Oh, I'm sure. Killing never felt so good, could almost hear the dead behind me guiding my hand.",
+      "index": "448"
+    },
+    {
+      "topic": "VDialogueCassRoseofSharonCassidyTopic178",
+      "topic_text": "Got it. Let's loot the place.",
+      "emotion": "Happy 20",
+      "response_text": "{Grim, pleased}Music to my ears.",
+      "index": "450"
+    },
+    {
+      "topic": "VDialogueCassRoseofSharonCassidyTopic180",
+      "topic_text": "You all right?",
+      "emotion": "Sad 5",
+      "response_text": "{Takes a breath}Yeah... yeah, I am. Never realized had all that anger in me.{Beat, cold}Makes me wonder how much more I can settle with bullets.",
+      "index": "451"
+    },
+    {
+      "topic": "VDialogueCassRoseofSharonCassidyTopic181",
+      "topic_text": "So that's it, then.",
+      "emotion": "Neutral 50",
+      "response_text": "That's it.{Beat}Except for one thing... thanks.",
+      "index": "454"
+    },
+    {
+      "topic": "VDialogueCassRoseofSharonCassidyTopic183",
+      "topic_text": "Are you all right?",
+      "emotion": "Sad 5",
+      "response_text": "Feels... I don't know. I guess I feel relieved. I don't know what I feel.",
+      "index": "457"
+    },
+    {
+      "topic": "VDialogueCassRoseofSharonCassidyTopic184",
+      "topic_text": "Better than the alternative.",
+      "emotion": "Sad 5",
+      "response_text": "No... no, I know. Just hard to say how I feel right now.",
+      "index": "461"
+    },
+    {
+      "topic": "VDialogueCassRoseofSharonCassidyTopic186",
+      "topic_text": "I'm for that, let's go kill them.",
+      "emotion": "Anger 10",
+      "response_text": "Don't care much for which one we kill first, whether settling accounts with McLafferty or making that bitch Gloria eat her hair.",
+      "index": "462"
+    },
+    {
+      "topic": "VDialogueCassRoseofSharonCassidyTopic187",
+      "topic_text": "There's another way - we can get evidence, let NCR take them down.",
+      "emotion": "Anger 20",
+      "response_text": "NCR? Are you out of your fucking mind?",
+      "index": "465"
+    },
+    {
+      "topic": "VDialogueCassRoseofSharonCassidyTopic188",
+      "topic_text": "The harm to the Van Graffs would last longer - and travel back West.",
+      "emotion": "Neutral 50",
+      "response_text": "All right, if you poke around the Van Graffs and Alice, fine.",
+      "index": "468"
+    },
+    {
+      "topic": "VDialogueCassRoseofSharonCassidyTopic190",
+      "topic_text": "Here's the evidence of the deal. Without its twin, there's no proof.",
+      "emotion": "Neutral 50",
+      "response_text": "So there's just one more safe to crack? Hope you can get to it.",
+      "index": "470"
+    },
+    {
+      "topic": "VDialogueCassRoseofSharonCassidyTopic191",
+      "topic_text": "Here's both pieces of evidence.",
+      "emotion": "Surprise 5",
+      "response_text": "{Impressed}No shit. There it is, the blood, the motive, as clear as day. They must have penned these with snake venom.",
+      "index": "473"
+    },
+    {
+      "topic": "VDialogueCassRoseofSharonCassidyTopic192",
+      "topic_text": "Not yet.",
+      "emotion": "Anger 10",
+      "response_text": "I held off on filling them full of holes, so unless you give me a good reason to cool my heels soon, I'm not waiting much longer.",
+      "index": "475"
+    },
+    {
+      "topic": "VDialogueCassRoseofSharonCassidyTopic193",
+      "topic_text": "Because of what happened to your caravan.",
+      "emotion": "Surprise 5",
+      "response_text": "{Blinks}You're saying... they might need to do the same thing to each other some day. And evidence is easier than bullets.",
+      "index": "476"
+    },
+    {
+      "topic": "VDialogueCassRoseofSharonCassidyTopic194",
+      "topic_text": "No one enters into a deal like this unless they have dirt on their partner.",
+      "emotion": "Neutral 50",
+      "response_text": "{Blinks}No... No, I'd agree with that. And Alice and Gloria are two crows that'd keep something like that in their nest.",
+      "index": "477"
+    },
+    {
+      "topic": "VDialogueCassRoseofSharonCassidyTopic196",
+      "topic_text": "Anyone you trust in NCR?",
+      "emotion": "Neutral 50",
+      "response_text": "{Blinks}Well... Jackson in the Mojave Outpost could get it to folks in the West. I wouldn't trust anyone closer to the Colorado.",
+      "index": "478"
+    },
+    {
+      "topic": "VDialogueCassRoseofSharonCassidyTopic197",
+      "topic_text": "We have to try.",
+      "emotion": "Neutral 50",
+      "response_text": "All right, let's do it, listen to what he has to say.",
+      "index": "480"
+    },
+    {
+      "topic": "VDialogueCassRoseofSharonCassidyTopic200",
+      "topic_text": "Where was your caravan hit?",
+      "emotion": "Sad 5",
+      "response_text": "{Sighs}Up side of Vegas, hear tell. Trapped at the Mojave Outpost, so I wasn't able to run there when I heard.",
+      "index": "481"
+    },
+    {
+      "topic": "VDialogueCassRoseofSharonCassidyTopic201",
+      "topic_text": "How did you catch word of it?",
+      "emotion": "Neutral 50",
+      "response_text": "Got word back on what happened from Rangers, guess they found enough in the wreckage to identify it.",
+      "index": "483"
+    },
+    {
+      "topic": "VDialogueCassRoseofSharonCassidyTopic202",
+      "topic_text": "Think there's anything left?",
+      "emotion": "Neutral 50",
+      "response_text": "{Sighs}Only wishful thinking on my part, most likely. At the least, I'd like to pay my respects.",
+      "index": "484"
+    },
+    {
+      "topic": "VDialogueCassRoseofSharonCassidyTopic204",
+      "topic_text": "Already been there, nothing worth finding.",
+      "emotion": "Neutral 50",
+      "response_text": "Well, I still wouldn't mind going there and crossing my heart a few times, if only to make me feel a bit better.",
+      "index": "486"
+    },
+    {
+      "topic": "VDialogueCassRoseofSharonCassidyTopic205",
+      "topic_text": "Let's go, then.",
+      "emotion": "Sad 5",
+      "response_text": "Thanks, I appreciate it.",
+      "index": "488"
+    },
+    {
+      "topic": "VDialogueCassRoseofSharonCassidyTopic206",
+      "topic_text": "I may have already searched the area.",
+      "emotion": "Neutral 50",
+      "response_text": "Well, you have to know what to look for.",
+      "index": "491"
+    },
+    {
+      "topic": "VDialogueCassRoseofSharonCassidyTopic208",
+      "topic_text": "Why would they have done it during the day?",
+      "emotion": "Neutral 50",
+      "response_text": "No idea. Maybe catch the sun in their eyes? Maybe they wanted the caravan to come to them, walk into an ambush?",
+      "index": "492"
+    },
+    {
+      "topic": "VDialogueCassRoseofSharonCassidyTopic210",
+      "topic_text": "Know anything about Mr. House?",
+      "emotion": "Neutral 50",
+      "response_text": "Not much, and I haven't had occasion to look for anything more than that.",
+      "index": "495"
+    },
+    {
+      "topic": "VDialogueCassRoseofSharonCassidyTopic211",
+      "topic_text": "Is there anything salvagable?",
+      "emotion": "Neutral 50",
+      "response_text": "Not sure, let's look around.",
+      "index": "500"
+    },
+    {
+      "topic": "VDialogueCassRoseofSharonCassidyTopic212",
+      "topic_text": "Want to go check it out?",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah, it's a ways, though, hell of a detour. You sure?",
+      "index": "501"
+    },
+    {
+      "topic": "VDialogueCassRoseofSharonCassidyTopic216",
+      "topic_text": "Want to check it out?",
+      "emotion": "Anger 5",
+      "response_text": "Yeah, something's wrong, I can feel it.",
+      "index": "502"
+    },
+    {
+      "topic": "VDialogueCassRoseofSharonCassidyTopic217",
+      "topic_text": "We'll make the time.",
+      "emotion": "Neutral 50",
+      "response_text": "All right then, let's move out.",
+      "index": "504"
+    },
+    {
+      "topic": "VDialogueCassRoseofSharonCassidyTopic218",
+      "topic_text": "Got it, let's start looting.",
+      "emotion": "Anger 10",
+      "response_text": "Don't have to tell me twice, feel more alive than I ever have.",
+      "index": "505"
+    },
+    {
+      "topic": "VDialogueCassRoseofSharonCassidyTopic220",
+      "topic_text": "He's with the Van Graffs.",
+      "emotion": "Neutral 50",
+      "response_text": "{Thinking}The only Van Graffs I know are the ones out West - well, except for Gloria Van Graff, and I don't know her all that well, nor do I want to.",
+      "index": "506"
+    },
+    {
+      "topic": "VDialogueCassRoseofSharonCassidyTopic221",
+      "topic_text": "Let's do it, then.",
+      "emotion": "Anger 5",
+      "response_text": "Don't matter much how we settle this, as long as it gets settled.",
+      "index": "508"
+    },
+    {
+      "topic": "VDialogueCassRoseofSharonCassidyTopic222",
+      "topic_text": "See anything at the caravan site?",
+      "emotion": "Neutral 50",
+      "response_text": "No... still eating at me, though. Wouldn't mind taking another look. Something's off.",
+      "index": "509"
+    },
+    {
+      "topic": "VDialogueCassRoseofSharonCassidyTopic223",
+      "topic_text": "See anything at the second caravan site?",
+      "emotion": "Neutral 50",
+      "response_text": "Nothing yet, but... something's there. Just got to look around and find it.",
+      "index": "511"
+    },
+    {
+      "topic": "VDialogueCassRoseofSharonCassidyTopic224",
+      "topic_text": "Any idea what was up at the site of the last caravan?",
+      "emotion": "Neutral 50",
+      "response_text": "Not sure yet, something's definitely wrong. They were massacred, we should look around, find out why.",
+      "index": "512"
+    },
+    {
+      "topic": "VDialogueCassRoseofSharonCassidyTopic225",
+      "topic_text": "Interested in... uh... following me to Freeside?",
+      "emotion": "Neutral 50",
+      "response_text": "I'm already shadowing you, aren't I? Lead on, I'll follow.",
+      "index": "513"
+    },
+    {
+      "topic": "VDialogueCassRoseofSharonCassidyTopic226",
+      "topic_text": "Where do you usually go to drink?",
+      "emotion": "Neutral 50",
+      "response_text": "There's usually a bar in every stop along the road. Helps me sleep. Well, not really, but I tell myself that.",
+      "index": "518"
+    },
+    {
+      "topic": "VDialogueCassRoseofSharonCassidyTopic227",
+      "topic_text": "Wait, you can make Moonshine?",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah, what else you going to do with an empty bottle? Wait for it to refill itself?",
+      "index": "520"
+    },
+    {
+      "topic": "VDialogueCassRoseofSharonCassidyTopic228",
+      "topic_text": "Here's the items for making some Moonshine.",
+      "emotion": "Neutral 50",
+      "response_text": "{Warning}Look, no guarantee on the quality, only the results. And don't drink too much of this stuff or you might go blind.",
+      "index": "522"
+    },
+    {
+      "topic": "VDialogueCassRoseofSharonCassidyTopic229",
+      "topic_text": "Can you make me some of your Moonshine?",
+      "emotion": "Neutral 50",
+      "response_text": "Don't have all the ingredients you need - come back when you have 'em, and I'd be happy to get something cooking.",
+      "index": "525"
+    },
+    {
+      "topic": "VDialogueCassRoseofSharonCassidyTopic230",
+      "topic_text": "I took care of Jackson. Er, the Jackson problem.",
+      "emotion": "Neutral 50",
+      "response_text": "{Takes a breath}Guess that settles that, then.",
+      "index": "526"
+    },
+    {
+      "topic": "VDialogueCassRoseofSharonCassidyTopic232",
+      "topic_text": "Uh... Jackson? He can't help us, he's... gone.",
+      "emotion": "Anger 5",
+      "response_text": "Don't matter much how we settle this, as long as it gets settled.",
+      "index": "527"
+    },
+    {
+      "topic": "VEndingCass",
+      "topic_text": "VEndingCass",
+      "emotion": "Sad 10",
+      "response_text": "{Narrating Her Own Ending, slow and sad}Rose of Sharon Cassidy died as her caravan died - in an unmarked grave, another victim of the Mojave.",
+      "index": "528"
+    },
+    {
+      "topic": "VEndingRoseofSharonCassidyComplete",
+      "topic_text": "<Do Not Translate>",
+      "emotion": "Neutral 50",
+      "response_text": "{Narrating Her Own Ending}That night, Cass kicked in the door of his room to celebrate, only to find the man on the bed was an NCR soldier whose barracks had been destroyed.",
+      "index": "542"
+    },
+    {
+      "topic": "VEndingRoseofSharonCassidyNCR",
+      "topic_text": "<Do Not Translate>",
+      "emotion": "Neutral 50",
+      "response_text": "{Narrating Her Own Ending}She was about to tell the Courier not to get too proud of himself, then she figured he knew that already.",
+      "index": "545"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "All right, then.",
+      "index": "551"
+    },
+    {
+      "topic": "VCassFreesideSass01",
+      "topic_text": "VCassFreesideSass01",
+      "emotion": "Disgust 10",
+      "response_text": "{To a bad come-on}Stake a claim somewhere else, pretty boy.",
+      "index": "552"
+    },
+    {
+      "topic": "VCassFreesideSass02",
+      "topic_text": "VCassFreesideSass02",
+      "emotion": "Anger 10",
+      "response_text": "{To a bad come-on}Looking for target practice, you keep talking.",
+      "index": "553"
+    },
+    {
+      "topic": "VCassFreesideSass03",
+      "topic_text": "VCassFreesideSass03",
+      "emotion": "Disgust 10",
+      "response_text": "{To a bad come-on}No, and ain't looking to be a babysitter, neither.",
+      "index": "555"
+    },
+    {
+      "topic": "VCassFreesideSass04",
+      "topic_text": "VCassFreesideSass04",
+      "emotion": "Anger 10",
+      "response_text": "{To a bad come-on, Under her breath}Somebody's asking for a boot in their fusebox.",
+      "index": "556"
+    },
+    {
+      "topic": "VCassFreesideSass05",
+      "topic_text": "VCassFreesideSass05",
+      "emotion": "Disgust 10",
+      "response_text": "{To a bad come-on}I'm not the{emph}man you need, pretty boy.",
+      "index": "558"
+    },
+    {
+      "topic": "VCassFreesideSass06",
+      "topic_text": "VCassFreesideSass06",
+      "emotion": "Disgust 10",
+      "response_text": "{To a bad come-on}Got enough on my shoulders without adding more dead weight to 'em.",
+      "index": "560"
+    },
+    {
+      "topic": "VCassFreesideSass07",
+      "topic_text": "VCassFreesideSass07",
+      "emotion": "Disgust 10",
+      "response_text": "{To a bad come-on}A drink wouldn't make you any prettier, slick.",
+      "index": "561"
+    },
+    {
+      "topic": "VCassFreesideSassGeneral",
+      "topic_text": "VCassFreesideSassGeneral",
+      "emotion": "Disgust 10",
+      "response_text": "{To a bad come-on}Looking for love or to put me to sleep, kid?",
+      "index": "563"
+    },
+    {
+      "topic": "VCassJBCAttack",
+      "topic_text": "VCassJBCAttack",
+      "emotion": "Surprise 10",
+      "response_text": "{Attacked out of the blue}What the hell is this shit?",
+      "index": "569"
+    },
+    {
+      "topic": "VCassJBCPostAttack",
+      "topic_text": "VCassJBCPostAttack",
+      "emotion": "Surprise 10",
+      "response_text": "{Calming down, just avoided a surprise attack}What the hell was that all about?",
+      "index": "570"
+    },
+    {
+      "topic": "VCassLocationBitterSprings",
+      "topic_text": "VCassLocationBitterSprings",
+      "emotion": "Neutral 50",
+      "response_text": "Heard NCR recon fucked up here once, with the Khans.",
+      "index": "571"
+    },
+    {
+      "topic": "VCassLocationBlackMt",
+      "topic_text": "VCassLocationBlackMt",
+      "emotion": "Neutral 50",
+      "response_text": "Crazy ass radio signals around here, couldn't make sense of them.",
+      "index": "576"
+    },
+    {
+      "topic": "VCassLocationBoulderCity",
+      "topic_text": "VCassLocationBoulderCity",
+      "emotion": "Neutral 50",
+      "response_text": "Should hit the Big Horn saloon here.",
+      "index": "579"
+    },
+    {
+      "topic": "VCassLocationCampGolf",
+      "topic_text": "VCassLocationCampGolf",
+      "emotion": "Neutral 50",
+      "response_text": "Not much reason to ship water here, but liquor... hard to meet demand.",
+      "index": "583"
+    },
+    {
+      "topic": "VCassLocationCampGuardian",
+      "topic_text": "VCassLocationCampGuardian",
+      "emotion": "Neutral 50",
+      "response_text": "Just goes to show you, no matter where you go, there's NCR trying to hold onto every corner of the world.",
+      "index": "594"
+    },
+    {
+      "topic": "VCassLocationCottonwood",
+      "topic_text": "VCassLocationCottonwood",
+      "emotion": "Anger 5",
+      "response_text": "{To herself}Should kill all these slavers.",
+      "index": "599"
+    },
+    {
+      "topic": "VCassLocationFiends",
+      "topic_text": "VCassLocationFiends",
+      "emotion": "Surprise 5",
+      "response_text": "Shit. Fiends.",
+      "index": "606"
+    },
+    {
+      "topic": "VCassLocationForlornHope",
+      "topic_text": "VCassLocationForlornHope",
+      "emotion": "Neutral 50",
+      "response_text": "Another proud NCR camp.",
+      "index": "612"
+    },
+    {
+      "topic": "VCassLocationFort",
+      "topic_text": "VCassLocationFort",
+      "emotion": "Fear 5",
+      "response_text": "Be damn careful here.",
+      "index": "616"
+    },
+    {
+      "topic": "VCassLocationFort2",
+      "topic_text": "VCassLocationFort2",
+      "emotion": "Surprise 5",
+      "response_text": "Can't belive we're fucking back here.",
+      "index": "623"
+    },
+    {
+      "topic": "VCassLocationFreeside",
+      "topic_text": "VCassLocationFreeside",
+      "emotion": "Disgust 5",
+      "response_text": "Hometown of the Van Graffs, don't care for this place too much.",
+      "index": "633"
+    },
+    {
+      "topic": "VCassLocationGeneralIdle",
+      "topic_text": "VCassLocationGeneralIdle",
+      "emotion": "Neutral 50",
+      "response_text": "Sure could use a drink.",
+      "index": "644"
+    },
+    {
+      "topic": "VCassLocationGoodsprings",
+      "topic_text": "VCassLocationGoodsprings",
+      "emotion": "Neutral 50",
+      "response_text": "{Curious, walked into town}Looking to step on your own grave?",
+      "index": "651"
+    },
+    {
+      "topic": "VCassLocationHiddenValley",
+      "topic_text": "VCassLocationHiddenValley",
+      "emotion": "Surprise 5",
+      "response_text": "What's that hum?",
+      "index": "656"
+    },
+    {
+      "topic": "VCassLocationHooverDam",
+      "topic_text": "VCassLocationHooverDam",
+      "emotion": "Happy 5",
+      "response_text": "Check out those guns - rumor had it they used to shoot planes down before the war.",
+      "index": "660"
+    },
+    {
+      "topic": "VCassLocationJacobstown",
+      "topic_text": "VCassLocationJacobstown",
+      "emotion": "Pained 5",
+      "response_text": "{Shivers}Place is fucking cold.",
+      "index": "664"
+    },
+    {
+      "topic": "VCassLocationMojaveOutpost",
+      "topic_text": "VCassLocationMojaveOutpost",
+      "emotion": "Anger 5",
+      "response_text": "{Slight irritation}Back here again?",
+      "index": "671"
+    },
+    {
+      "topic": "VCassLocationNCR",
+      "topic_text": "VCassLocationNCR",
+      "emotion": "Neutral 50",
+      "response_text": "Be careful they don't charge us any tolls.",
+      "index": "677"
+    },
+    {
+      "topic": "VCassLocationNCRCF",
+      "topic_text": "VCassLocationNCRCF",
+      "emotion": "Neutral 50",
+      "response_text": "Looks like prisoners are in charge now.",
+      "index": "679"
+    },
+    {
+      "topic": "VCassLocationNellis",
+      "topic_text": "VCassLocationNellis",
+      "emotion": "Happy 5",
+      "response_text": "Folks here have access to Lake Mead, fresh drinking water.",
+      "index": "682"
+    },
+    {
+      "topic": "VCassLocationNelson",
+      "topic_text": "VCassLocationNelson",
+      "emotion": "Sad 5",
+      "response_text": "{somber}Guess the miners got fucked.",
+      "index": "692"
+    },
+    {
+      "topic": "VCassLocationNipton",
+      "topic_text": "VCassLocationNipton",
+      "emotion": "Disgust 5",
+      "response_text": "I think I'm going to be sick.",
+      "index": "695"
+    },
+    {
+      "topic": "VCassLocationNovac",
+      "topic_text": "VCassLocationNovac",
+      "emotion": "Neutral 50",
+      "response_text": "This place reminds me the Old World had too much time on its hands.",
+      "index": "702"
+    },
+    {
+      "topic": "VCassLocationPrimm",
+      "topic_text": "VCassLocationPrimm",
+      "emotion": "Neutral 50",
+      "response_text": "Said there's a courier office here?",
+      "index": "709"
+    },
+    {
+      "topic": "VCassLocationQuarryJunction",
+      "topic_text": "VCassLocationQuarryJunction",
+      "emotion": "Neutral 50",
+      "response_text": "Smells like deathclaw.",
+      "index": "717"
+    },
+    {
+      "topic": "VCassLocationRangerStation",
+      "topic_text": "VCassLocationRangerStation",
+      "emotion": "Happy 5",
+      "response_text": "Rest stop.",
+      "index": "720"
+    },
+    {
+      "topic": "VCassLocationRedRock",
+      "topic_text": "VCassLocationRedRock",
+      "emotion": "Surprise 5",
+      "response_text": "These boys and girls can really down the bottles.",
+      "index": "724"
+    },
+    {
+      "topic": "VCassLocationStreet",
+      "topic_text": "VCassLocationStreet",
+      "emotion": "Neutral 50",
+      "response_text": "The Street - Vegas Boulevard.",
+      "index": "740"
+    },
+    {
+      "topic": "VCassLocationStrip",
+      "topic_text": "VCassLocationStrip",
+      "emotion": "Neutral 50",
+      "response_text": "Chairmen, Omertas... a whole bunch of families rule Vegas, don't step out a line as long as money's to be made.",
+      "index": "746"
+    },
+    {
+      "topic": "VCassReactBad",
+      "topic_text": "VCassReactBad",
+      "emotion": "Anger 10",
+      "response_text": "{Commenting on player's behavior}Think that was a mistake.",
+      "index": "757"
+    },
+    {
+      "topic": "VCassReactLike",
+      "topic_text": "VCassReactLike",
+      "emotion": "Happy 10",
+      "response_text": "{Commenting on player's behavior}What I would have done.",
+      "index": "760"
+    },
+    {
+      "topic": "VCassReactReallyBad",
+      "topic_text": "VCassReallyBadReact",
+      "emotion": "Anger 20",
+      "response_text": "{Commenting on player's behavior}That was fucked up.",
+      "index": "763"
+    },
+    {
+      "topic": "VCassReactReallyLike",
+      "topic_text": "VCassReallyLike",
+      "emotion": "Happy 20",
+      "response_text": "{Commenting on player's behavior}Set an example, others will follow.",
+      "index": "767"
+    },
+    {
+      "topic": "VCassWhiskeyRosePerk",
+      "topic_text": "VCassWhiskeyRosePerk",
+      "emotion": "Happy 10",
+      "response_text": "That hit the spot.",
+      "index": "770"
+    }
+  ],
+  "combat": [
+    {
+      "topic": "AcceptYield",
+      "topic_text": "AcceptYield",
+      "emotion": "Anger 10",
+      "response_text": "Next time, I'll put a nail in your head.",
+      "index": "776"
+    },
+    {
+      "topic": "ArmorIneffective",
+      "topic_text": "ArmorIneffective",
+      "emotion": "Anger 10",
+      "response_text": "Shoulda fought naked, it'd hurt less.",
+      "index": "778"
+    },
+    {
+      "topic": "Assault",
+      "topic_text": "Assault",
+      "emotion": "Anger 10",
+      "response_text": "I'm going to knock you off your axles.",
+      "index": "782"
+    },
+    {
+      "topic": "Attack",
+      "topic_text": "Attack",
+      "emotion": "Anger 10",
+      "response_text": "{Grim, angry}Someone's looking to cash their chips early.",
+      "index": "787"
+    },
+    {
+      "topic": "AvoidThreat",
+      "topic_text": "AvoidThreat",
+      "emotion": "Surprise 30",
+      "response_text": "Scatter!",
+      "index": "795"
+    },
+    {
+      "topic": "Crippled",
+      "topic_text": "Crippled",
+      "emotion": "Anger 10",
+      "response_text": "{Crippled in the leg, grim}Tagged me, need a doctor bag.",
+      "index": "798"
+    },
+    {
+      "topic": "Death",
+      "topic_text": "Death",
+      "emotion": "Anger 10",
+      "response_text": "{Death Noise 2}",
+      "index": "803"
+    },
+    {
+      "topic": "DeathResponse",
+      "topic_text": "DeathResponse",
+      "emotion": "Sad 10",
+      "response_text": "{Quiet}Their trouble's all gone.",
+      "index": "805"
+    },
+    {
+      "topic": "FireExplosive",
+      "topic_text": "FireExplosive",
+      "emotion": "Happy 10",
+      "response_text": "Fuse lit!",
+      "index": "809"
+    },
+    {
+      "topic": "Flee",
+      "topic_text": "Flee",
+      "emotion": "Pained 20",
+      "response_text": "Not looking to die here.",
+      "index": "811"
+    },
+    {
+      "topic": "GuardTrespass",
+      "topic_text": "GuardTrespass",
+      "emotion": "Anger 10",
+      "response_text": "You're outstaying your welcome.",
+      "index": "816"
+    },
+    {
+      "topic": "HealthHalf",
+      "topic_text": "HealthHalf",
+      "emotion": "Pained 10",
+      "response_text": "Might need to rest soon.",
+      "index": "817"
+    },
+    {
+      "topic": "HealthQuarter",
+      "topic_text": "HealthQuarter",
+      "emotion": "Pained 20",
+      "response_text": "{Dying}Too stupid to die... but getting there.",
+      "index": "820"
+    },
+    {
+      "topic": "Murder",
+      "topic_text": "Murder",
+      "emotion": "Disgust 10",
+      "response_text": "Going to run out of friends at the rate you're going.",
+      "index": "827"
+    },
+    {
+      "topic": "MurderNoCrime",
+      "topic_text": "MurderNoCrime",
+      "emotion": "Neutral 50",
+      "response_text": "Well, that's all wrapped up.",
+      "index": "831"
+    },
+    {
+      "topic": "NoAmmo",
+      "topic_text": "NoAmmo",
+      "emotion": "Anger 10",
+      "response_text": "Reloading! Wait, no, I'm out!",
+      "index": "834"
+    },
+    {
+      "topic": "Poisoned",
+      "topic_text": "Poison",
+      "emotion": "Anger 10",
+      "response_text": "Feel... weak all of a sudden.",
+      "index": "839"
+    },
+    {
+      "topic": "Regenerating",
+      "topic_text": "Regenerating",
+      "emotion": "Anger 10",
+      "response_text": "{Rush of health}MMmmahh. <Smacks lips>",
+      "index": "842"
+    },
+    {
+      "topic": "Steal",
+      "topic_text": "Steal",
+      "emotion": "Anger 10",
+      "response_text": "Think I didn't see that?",
+      "index": "847"
+    },
+    {
+      "topic": "UsedDoctorBag",
+      "topic_text": "UsedDoctorBag",
+      "emotion": "Anger 10",
+      "response_text": "{Impressed by own medical skill}Didn't even leave a scar.",
+      "index": "849"
+    },
+    {
+      "topic": "Wake",
+      "topic_text": "Wake",
+      "emotion": "Anger 10",
+      "response_text": "{Wakes up from hurt}Feels like a Brahmin kicked me.",
+      "index": "852"
+    },
+    {
+      "topic": "WeaponBroke",
+      "topic_text": "WeaponBroke",
+      "emotion": "Anger 10",
+      "response_text": "Gotta spare gun handy?",
+      "index": "857"
+    },
+    {
+      "topic": "WeaponIneffective",
+      "topic_text": "WeaponIneffective",
+      "emotion": "Anger 10",
+      "response_text": "This weapon's on its last legs.",
+      "index": "860"
+    }
+  ]
+}

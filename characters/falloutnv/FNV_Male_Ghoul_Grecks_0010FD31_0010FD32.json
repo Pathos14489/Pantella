@@ -1,0 +1,181 @@
+{
+  "name": "Grecks",
+  "url": "/wiki/Grecks",
+  "dialogue_name": "VFSDebtGrecks.txt",
+  "dialogue_url": "/wiki/VFSDebtGrecks.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "0010FD31",
+  "ref_id": "0010FD32",
+  "editor_id": "VFSDebtGrecks",
+  "location": "Freeside",
+  "location_url": "/wiki/Freeside",
+  "descriptions": [
+    "Grecks is a lazy-eyed ghoul living in Freeside in 2281.",
+    "Grecks can be found in the north east of Freeside, and is easily recognized by his lazy eye. He has a history of gambling and drinking, and does not like to pay his debts. According to him, he got his lazy eye from an incident with a \"scum-humping water baron.\"",
+    "Grecks was written by area designer Robert Lee. Although some other characters around Freeside's exterior were cut for performance reasons, Grecks was kept due to his quest importance."
+  ],
+  "race": "Ghoul",
+  "gender": "Male",
+  "affiliation": "Freeside",
+  "role": "DrunkDebtor",
+  "detailed_location": "Freeside",
+  "voice_actor": "Chris Andrew Ciulla",
+  "special": {
+    "Strength": 4,
+    "Perception": 2,
+    "Endurance": 3,
+    "Charisma": 5,
+    "Intelligence": 3,
+    "Agility": 3,
+    "Luck": 6
+  },
+  "mod_special_values": {
+    "Strength": 4,
+    "Perception": 2,
+    "Endurance": 3,
+    "Charisma": 5,
+    "Intelligence": 3,
+    "Agility": 4,
+    "Luck": 6
+  },
+  "level": "8",
+  "tag_skills": [
+    {
+      "Barter:": "55"
+    },
+    {
+      "Lockpick:": "49"
+    },
+    {
+      "Medicine:": "51"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Neutral",
+  "voice_type": "MaleGenericGhoul",
+  "geck_race": "Ghoul",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "Hey man, can you spare a few caps?",
+      "index": "1"
+    },
+    {
+      "topic": "VFreeformFreesideVFSDebtGrecksTopic000",
+      "topic_text": "Are you the Grecks who owes the Garrets?",
+      "emotion": "Neutral 50",
+      "response_text": "That all depends on who's asking.",
+      "index": "2"
+    },
+    {
+      "topic": "VFreeformFreesideVFSDebtGrecksTopic002",
+      "topic_text": "Sure, man. Here you go. <Punch Grecks in the face>",
+      "emotion": "Neutral 50",
+      "response_text": "Ow! What the hell was that for?!",
+      "index": "3"
+    },
+    {
+      "topic": "VFreeformFreesideVFSDebtGrecksTopic003",
+      "topic_text": "Your hangman, if you don't start being straight with me.",
+      "emotion": "Neutral 50",
+      "response_text": "Whoa, yeah. I guess the Garrets sent you after me? Look, I've got the caps right here, just don't hurt me.",
+      "index": "4"
+    },
+    {
+      "topic": "VFreeformFreesideVFSDebtGrecksTopic004",
+      "topic_text": "You owe the Garrets a good lump of caps. I'm here to collect.",
+      "emotion": "Neutral 50",
+      "response_text": "Ah crap. I was hoping they'd forget about my tab. Look, I've got the caps right here, just don't hurt me.",
+      "index": "5"
+    },
+    {
+      "topic": "VFreeformFreesideVFSDebtGrecksTopic006",
+      "topic_text": "Cough em up, Grecks.",
+      "emotion": "Neutral 50",
+      "response_text": "Interest?! The Garrets said nothing about interest on their tabs. Look man, I've got the caps right here, just don't hurt me.",
+      "index": "6"
+    },
+    {
+      "topic": "VFreeformFreesideVFSDebtGrecksTopic007<Press for extra caps>",
+      "topic_text": "You don't cheat the Garrets and walk away. Cough up the rest or you're rat bait.",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] Okay! Here. That's everything I've got except the clothes on my back. I'm sorry about this.",
+      "index": "7"
+    },
+    {
+      "topic": "VFreeformFreesideVFSDebtGrecksTopic008",
+      "topic_text": "That'll do. Mess with the Garrets again and you're dead.",
+      "emotion": "Neutral 50",
+      "response_text": "I won't. Thanks for not killing me.",
+      "index": "9"
+    },
+    {
+      "topic": "VFreeformFreesideVFSDebtGrecksTopic009",
+      "topic_text": "Thanks for the caps, now enjoy the zombie afterlife.",
+      "emotion": "Neutral 50",
+      "response_text": "Oh God! Help! Help!",
+      "index": "10"
+    },
+    {
+      "topic": "VFreeformFreesideVFSDebtGrecksTopic010<Press for clothing>",
+      "topic_text": "Heh, I think I'll make an example of you. Give me your clothes, or you get dead.",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] Anything, take it! Just don't kill me, man!",
+      "index": "11"
+    },
+    {
+      "topic": "VFreeformFreesideVFSDebtGrecksTopic011",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "See you.",
+      "index": "13"
+    },
+    {
+      "topic": "VFreeformFreesideVFSDebtGrecksTopic013",
+      "topic_text": "Sheesh, you're one ugly sonofabitch!",
+      "emotion": "Neutral 50",
+      "response_text": "What? Thank you Mr. Obvious. I haven't heard that in a while.",
+      "index": "14"
+    },
+    {
+      "topic": "VFreeformFreesideVFSDebtGrecksTopic014",
+      "topic_text": "Yeah, and your eye! That shit is hilarious!",
+      "emotion": "Neutral 50",
+      "response_text": "<Twitches> My eye? A scum-humping water baron did this to me. No one talks trash about my eye.",
+      "index": "16"
+    },
+    {
+      "topic": "VFreeformFreesideVFSDebtGrecksTopic015",
+      "topic_text": "Seriously zombie, are you looking at me or someone off that direction?!",
+      "emotion": "Anger 75",
+      "response_text": "That's it! No one insults the eye!",
+      "index": "17"
+    },
+    {
+      "topic": "VFreeformFreesideVFSDebtGrecksTopic017",
+      "topic_text": "Oh, by the way. That damn eye of yours is creepy. Get it checked out.",
+      "emotion": "Neutral 50",
+      "response_text": "<Twitches> A scum-humping water baron did this to me. No one trash-talks the eye.",
+      "index": "18"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "VFSGrecksHello",
+      "topic_text": "VFSGrecksHello",
+      "emotion": "Neutral 50",
+      "response_text": "Those rat-bastard Garrets stopped offering tabs.  Now where the hell am I supposed to go for free drinks?",
+      "index": "19"
+    }
+  ],
+  "combat": []
+}

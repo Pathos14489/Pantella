@@ -1,0 +1,363 @@
+{
+  "name": "Evan King",
+  "url": "/wiki/Evan_King",
+  "dialogue_name": "EvanKing.txt",
+  "dialogue_url": "/wiki/EvanKing.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "0001D5F6",
+  "ref_id": "0001D70F",
+  "editor_id": "EvanKing",
+  "location": "Watchpost",
+  "location_url": null,
+  "descriptions": [
+    "Evan King is a resident of the town of Arefu and is the lone defender of the town in the year 2277.",
+    "Evan King has lived in Arefu his entire life. Over the years, he has seen the settlement shrink from its high of thirty residents down to its current low of five, four if one does not count the missing Ian West. Despite the settlement’s decline, he is still responsible for defending its residents and maintaining the town’s security, going so far as to demolish the northern half of the settlement’s bridge to prevent an attack from that direction.",
+    "In recent times, however, a developing conflict with a gang known as The Family has put King in a difficult position and put him at odds with the town’s remaining residents.",
+    "Should the Lone Wanderer intervene in the conflict and attempt to make peace between Arefu and The Family, King is more than willing to accept either of Vance’s proposals for an agreement, though he will be even more pleased with an agreement that involves Alan helping to defend the town."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Arefu",
+  "role": "Mayor/Sheriff[1]",
+  "detailed_location": "Arefu",
+  "voice_actor": "Paul Eiding",
+  "special": {
+    "Strength": 6,
+    "Perception": 6,
+    "Endurance": 5,
+    "Charisma": 5,
+    "Intelligence": 4,
+    "Agility": 6,
+    "Luck": 4
+  },
+  "level": "6",
+  "tag_skills": [
+    {
+      "Melee Weap.:": "54(56)"
+    },
+    {
+      "Small Guns:": "54(56)"
+    },
+    {
+      "Speech:": "52"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "65"
+    },
+    {
+      "Critical Chance:": "4%"
+    },
+    {
+      "Unarmed Dam.:": "1.2"
+    },
+    {
+      "Poison Resist.:": "20%"
+    },
+    {
+      "Rad. Resist.:": "8%"
+    },
+    {
+      "Carry Weight:": "210"
+    },
+    {
+      "Damage Res.:": "13%"
+    }
+  ],
+  "karma": "Good",
+  "voice_type": "MaleOld01DC",
+  "geck_race": "CaucasianOldAged",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Surprise 90",
+      "response_text": "Well, holy shit! You're back!",
+      "index": "1"
+    },
+    {
+      "topic": "MS09EvanKingEndgame01",
+      "topic_text": "It's done, Evan. The Family will never bother Arefu again.",
+      "emotion": "Happy 80",
+      "response_text": "I don't know how you did it, but goddamn am I glad you walked up that ramp and lent us a hand.",
+      "index": "15"
+    },
+    {
+      "topic": "MS09EvanKingEndgame02",
+      "topic_text": "Yeah, I took care of your problem.",
+      "emotion": "Happy 80",
+      "response_text": "I don't know how you did it, but goddamn am I glad you walked up that ramp and lent us a hand.",
+      "index": "20"
+    },
+    {
+      "topic": "MS09EvanKingEndgame03",
+      "topic_text": "The Family's been dealt with and you owe me big.",
+      "emotion": "Neutral 50",
+      "response_text": "If I had two caps to rub together, I'd still give them to you. Afraid I'm as poor as a Brahmin herder though.",
+      "index": "25"
+    },
+    {
+      "topic": "MS09EvanKingEndgame04",
+      "topic_text": "No, he wasn't with the Family. <Lie.>",
+      "emotion": "Sad 80",
+      "response_text": "Damn. Well maybe he just made a run for Megaton or something. Hope you can find him one day.",
+      "index": "31"
+    },
+    {
+      "topic": "MS09EvanKingEndgame05",
+      "topic_text": "Sorry, but Ian's dead. <Lie.>",
+      "emotion": "Sad 80",
+      "response_text": "Damn. That poor kid.",
+      "index": "33"
+    },
+    {
+      "topic": "MS09EvanKingEndgame06",
+      "topic_text": "He's fine. He's living with Lucy now. <Lie.>",
+      "emotion": "Happy 80",
+      "response_text": "You're just full of surprises today, aren't you?",
+      "index": "35"
+    },
+    {
+      "topic": "MS09EvanKingIntroCT01",
+      "topic_text": "Who did you think I was?",
+      "emotion": "Anger 50",
+      "response_text": "I thought you were one of the Family. They're some lowlife gangers who've been giving us a hell of a lot of trouble lately.",
+      "index": "37"
+    },
+    {
+      "topic": "MS09EvanKingIntroCT01FamilyFirst",
+      "topic_text": "Let me guess, you thought I was from the Family.",
+      "emotion": "Surprise 70",
+      "response_text": "Wait... you aren't one of them but you know about them? What's going on here?",
+      "index": "39"
+    },
+    {
+      "topic": "MS09EvanKingIntroCT01Letter",
+      "topic_text": "Well, I have this letter for the West Family.",
+      "emotion": "Neutral 50",
+      "response_text": "That's great, but I got bigger problems than being the town post office right now.",
+      "index": "40"
+    },
+    {
+      "topic": "MS09EvanKingIntroCT02",
+      "topic_text": "I'm just passing through.",
+      "emotion": "Disgust 100",
+      "response_text": "Nobody just passes through here. There's nothing to get to by way of this shithole. You've found yourself at a dead-end.",
+      "index": "42"
+    },
+    {
+      "topic": "MS09EvanKingIntroCT03",
+      "topic_text": "Next time you shoot at me like that, you'd better not miss.",
+      "emotion": "Disgust 70",
+      "response_text": "Don't play tough with me. I was shooting my gun when you were still an itch in your daddy's pants!",
+      "index": "45"
+    },
+    {
+      "topic": "MS09EvanKingIntroCT04",
+      "topic_text": "What kind of trouble?",
+      "emotion": "Disgust 70",
+      "response_text": "Well at first they'd do typical gang bullshit. You know, break stuff and make lots of noise, but they always kept their distance.",
+      "index": "48"
+    },
+    {
+      "topic": "MS09EvanKingIntroCT05",
+      "topic_text": "Are they Raiders or Slavers?",
+      "emotion": "Fear 70",
+      "response_text": "No way. If they were, you'd be staring at a burned out ghost town. I think the Family are just a bunch of punks.",
+      "index": "50"
+    },
+    {
+      "topic": "MS09EvanKingIntroCT06",
+      "topic_text": "Oh come on, it's just gang nonsense.",
+      "emotion": "Fear 70",
+      "response_text": "That's what I thought at first.",
+      "index": "53"
+    },
+    {
+      "topic": "MS09EvanKingIntroCT07",
+      "topic_text": "Why don't you fight back?",
+      "emotion": "Disgust 50",
+      "response_text": "Yeah sure. I'll just go and take all of them out by myself. What are you, crazy?",
+      "index": "56"
+    },
+    {
+      "topic": "MS09EvanKingIntroCT07SC",
+      "topic_text": "What's got you so spooked?",
+      "emotion": "Fear 50",
+      "response_text": "Sigh. Look... you can call me crazy if you want but there just is something odd about those creeps.",
+      "index": "58"
+    },
+    {
+      "topic": "MS09EvanKingIntroCT08",
+      "topic_text": "You ever take one of them out?",
+      "emotion": "Disgust 70",
+      "response_text": "Are you out of your mind? I drop one of them and the rest will use me as a bullet catcher.",
+      "index": "61"
+    },
+    {
+      "topic": "MS09EvanKingIntroCT09",
+      "topic_text": "What are you, some kind of a wimp?",
+      "emotion": "Disgust 50",
+      "response_text": "Look, pal. If you think I'm gonna get my ass shot off playing the hero, you're dead wrong.",
+      "index": "63"
+    },
+    {
+      "topic": "MS09EvanKingIntroCT10",
+      "topic_text": "I'd be glad to help. What do you need?",
+      "emotion": "Neutral 50",
+      "response_text": "I don't want to take my eyes off the ramp here. There's no telling when the Family will return.",
+      "index": "65"
+    },
+    {
+      "topic": "MS09EvanKingIntroCT11",
+      "topic_text": "Help costs caps.",
+      "emotion": "Disgust 70",
+      "response_text": "Do I look like I just stepped out of Tenpenny Tower? I barely have a pot to piss in.",
+      "index": "68"
+    },
+    {
+      "topic": "MS09EvanKingIntroCT12",
+      "topic_text": "Sounds like you're pretty screwed. You're on your own.",
+      "emotion": "Disgust 50",
+      "response_text": "Fine. That's what I've come to expect from strangers. Always thinking of themselves.",
+      "index": "69"
+    },
+    {
+      "topic": "MS09EvanKingMiniIntroFamilyFirstCT01",
+      "topic_text": "I was hoping to find out what the Family did here.",
+      "emotion": "Disgust 70",
+      "response_text": "At first they just showed up and carried on like a bunch of kids down there by the riverbed, scaring the Brahmin and stuff like that.",
+      "index": "72"
+    },
+    {
+      "topic": "MS09EvanKingMiniIntroFamilyFirstCT02",
+      "topic_text": "Look, maybe you better explain what's going on first.",
+      "emotion": "Neutral 50",
+      "response_text": "I'll tell you what's going on... the Family's been bothering our town for weeks.",
+      "index": "74"
+    },
+    {
+      "topic": "MS09EvanKingMiniIntroFamilyFirstCT03",
+      "topic_text": "No, I lied. I'm their newest member!",
+      "emotion": "Anger 100",
+      "response_text": "What the fuck? You liar!",
+      "index": "77"
+    },
+    {
+      "topic": "MS09FinTLHelpMe",
+      "topic_text": "Any help you can provide would be appreciated.",
+      "emotion": "Neutral 50",
+      "response_text": "I've been saving up stuff for emergencies in case things with Arefu got tremendously bad.",
+      "index": "78"
+    },
+    {
+      "topic": "MS09FinTLHowAreThings",
+      "topic_text": "How are things going now?",
+      "emotion": "Neutral 50",
+      "response_text": "Things are much better. We all don't have to stay inside our houses and we sleep much better at night.",
+      "index": "81"
+    },
+    {
+      "topic": "MS09FinTLProposal",
+      "topic_text": "I have a proposal for you from Vance, the Family's leader.",
+      "emotion": "Neutral 50",
+      "response_text": "Interesting. It seems they wish to enter into some kind of agreement.",
+      "index": "86"
+    },
+    {
+      "topic": "MS09TLHaveMessage",
+      "topic_text": "I have a message for the West family from their daughter.",
+      "emotion": "Sad 50",
+      "response_text": "I can't take that. You're just going to have to bring it back to Lucy or to Ian if you can find him.",
+      "index": "89"
+    },
+    {
+      "topic": "MS09TLTrainyard",
+      "topic_text": "This may sound odd, but is there a trainyard outside Arefu?",
+      "emotion": "Neutral 50",
+      "response_text": "Well, yeah actually. Meresti Trainyard almost due east of here.",
+      "index": "91"
+    },
+    {
+      "topic": "MS09TLWestsBite",
+      "topic_text": "I discovered that the Wests had bite marks on their necks made by a human!",
+      "emotion": "Surprise 80",
+      "response_text": "What!? The Family must be a pack of cannibals!",
+      "index": "92"
+    },
+    {
+      "topic": "MS09TLWestsDead",
+      "topic_text": "Don't worry, Evan. I'll figure out what happened to the Wests.",
+      "emotion": "Happy 50",
+      "response_text": "Thanks kid. You're all right.",
+      "index": "96"
+    },
+    {
+      "topic": "MS09TLWestsDeadCT01",
+      "topic_text": "No, I only found the parents' bodies.",
+      "emotion": "Disgust 70",
+      "response_text": "This has to be the work of the Family! I've caught that weirdo leader of theirs talking to Ian down by the river.",
+      "index": "104"
+    },
+    {
+      "topic": "MS09TLWestsDeadCT02",
+      "topic_text": "Nope, and it's unlikely they left him alive.",
+      "emotion": "Disgust 70",
+      "response_text": "What am I gonna do? The Wests' lives were my responsibility and look what happened!",
+      "index": "106"
+    },
+    {
+      "topic": "MS09TLWestsDeadCT03",
+      "topic_text": "No, and enough with the third degree already!",
+      "emotion": "Disgust 70",
+      "response_text": "Sorry... sorry. I just don't know what to do. The West's lives were my responsibility and look what happened!",
+      "index": "109"
+    },
+    {
+      "topic": "MS09TLWhereIsEveryone",
+      "topic_text": "Can you tell me more about what's been going on around here?",
+      "emotion": "Disgust 50",
+      "response_text": "There used to be more families living here. Most of them have dismantled their shacks and moved on to greener pastures.",
+      "index": "112"
+    },
+    {
+      "topic": "MS09TLWhoAreFamilyTell me about the Family.",
+      "topic_text": "Where do you think I can find the Family?",
+      "emotion": "Disgust 100",
+      "response_text": "I think they live somewhere east or northeast of here. Problem is, they always travel in the dark so I can't see exactly where they go.",
+      "index": "114"
+    },
+    {
+      "topic": "SpeechChallengeFailure",
+      "topic_text": "SpeechChallengeFailure",
+      "emotion": "Disgust 60",
+      "response_text": "Nothing. The Family are just a bunch of damn punks.",
+      "index": "116"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "I have to go now.",
+      "emotion": "Anger 50",
+      "response_text": "Next time I see the Family, there's gonna be hell to pay.",
+      "index": "117"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Neutral 50",
+      "response_text": "I take it you found the place.",
+      "index": "121"
+    }
+  ],
+  "combat": []
+}

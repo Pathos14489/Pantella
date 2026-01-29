@@ -1,0 +1,159 @@
+{
+  "name": "Melody",
+  "url": "/wiki/Melody",
+  "dialogue_name": "FortMelody.txt",
+  "dialogue_url": "/wiki/FortMelody.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": true,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "00122B97",
+  "ref_id": "00122B98",
+  "editor_id": "FortMelody",
+  "location": "The Fort, in the brahmin pen",
+  "location_url": "/wiki/The_Fort",
+  "descriptions": [
+    "Melody is a child slave at The Fort in 2281.",
+    "Melody mostly helps with taking care of the brahmin of the Fort and can usually be found at the brahmin pen. When not helping with the brahmin, she brings food and water to the legionaries.",
+    "Frumentarii: Alerio · Cato Hostilius · Gabban · Karl · Picus · Disguised frumentarius · Ulysses (formerly)\nConsul: M. Licinius Crassus · M. Scribonius Libo Drusus (of the consul)"
+  ],
+  "race": "Human",
+  "affiliation": "Caesar's Legion",
+  "role": "Child slave",
+  "detailed_location": "The Fort",
+  "voice_actor": "Ashley McGullam",
+  "special": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 5,
+    "Intelligence": 5,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "level": "1",
+  "misc_skills": [],
+  "karma": "Neutral",
+  "voice_type": "FemaleChild01",
+  "geck_race": "HispanicChild",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Fear 50",
+      "response_text": "{quiet, shy - nervous young girl}I can't talk to you. It's not allowed.",
+      "index": "1"
+    },
+    {
+      "topic": "VFreeformTheFortFortMelodyTopic001< Speech - 50 >",
+      "topic_text": "I'm a friend. It's okay for you to talk to friends, right?",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] I guess that's okay. Um, if you're a friend, can you help me?",
+      "index": "5"
+    },
+    {
+      "topic": "VFreeformTheFortFortMelodyTopic002",
+      "topic_text": "{Child At Heart}Don't worry - I won't tell on you if you don't tell on me.",
+      "emotion": "Happy 25",
+      "response_text": "Okay. Um... do you think you could help me?",
+      "index": "7"
+    },
+    {
+      "topic": "VFreeformTheFortFortMelodyTopic003",
+      "topic_text": "{Dumb PC}Moo! That's what Brahmin say.",
+      "emotion": "Happy 50",
+      "response_text": "{giggles}They do say that! I guess you can be my friend.",
+      "index": "8"
+    },
+    {
+      "topic": "VFreeformTheFortFortMelodyTopic010",
+      "topic_text": "What do you do here?",
+      "emotion": "Neutral 50",
+      "response_text": "Um... I help take care of the Brahmin. I sometimes bring water and food to people. Um... that's it.",
+      "index": "10"
+    },
+    {
+      "topic": "VFreeformTheFortFortMelodyTopic011",
+      "topic_text": "What did you need help with?",
+      "emotion": "Neutral 50",
+      "response_text": "Antony took Sergeant Teddy away and gave him to the stinky dogs. I want him back!",
+      "index": "11"
+    },
+    {
+      "topic": "VFreeformTheFortFortMelodyTopic012",
+      "topic_text": "Uhh... wouldn't Sergeant Teddy be dead?",
+      "emotion": "Neutral 50",
+      "response_text": "He's a toy. I'm not a baby, you know.",
+      "index": "12"
+    },
+    {
+      "topic": "VFreeformTheFortFortMelodyTopic013",
+      "topic_text": "They let you have toys here?",
+      "emotion": "Neutral 50",
+      "response_text": "I kept him secret, but I think somebody told on me.",
+      "index": "13"
+    },
+    {
+      "topic": "VFreeformTheFortFortMelodyTopic014",
+      "topic_text": "I can't help you with that right now.",
+      "emotion": "Sad 50",
+      "response_text": "Oh, okay.",
+      "index": "14"
+    },
+    {
+      "topic": "VFreeformTheFortFortMelodyTopic015",
+      "topic_text": "I'll see what I can do.",
+      "emotion": "Neutral 50",
+      "response_text": "Thanks!",
+      "index": "15"
+    },
+    {
+      "topic": "VFreeformTheFortFortMelodyTopic016",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Bye.",
+      "index": "16"
+    },
+    {
+      "topic": "VFreeformTheFortFortMelodyTopic018",
+      "topic_text": "I got Sergeant Teddy - he's a little chewed up.",
+      "emotion": "Happy 50",
+      "response_text": "That's okay, I'll fix him! Can I have him now?",
+      "index": "17"
+    },
+    {
+      "topic": "VFreeformTheFortFortMelodyTopic019",
+      "topic_text": "Here you go.",
+      "emotion": "Neutral 50",
+      "response_text": "Thank you!",
+      "index": "18"
+    },
+    {
+      "topic": "VFreeformTheFortFortMelodyTopic020",
+      "topic_text": "Not so fast. What will you give me for him?",
+      "emotion": "Neutral 50",
+      "response_text": "But... I don't have anything. I thought you were my friend!",
+      "index": "19"
+    },
+    {
+      "topic": "VFreeformTheFortFortMelodyTopic021",
+      "topic_text": "Why did Antony take him away?",
+      "emotion": "Neutral 50",
+      "response_text": "Antony said he was punishing me for trying to hide it from the Legion.",
+      "index": "20"
+    },
+    {
+      "topic": "VFreeformTheFortFortMelodyTopic022",
+      "topic_text": "< Tear Sergeant Teddy in half. >",
+      "emotion": "Sad 100",
+      "response_text": "{crying}Sergeant Teddy!",
+      "index": "21"
+    }
+  ],
+  "conversation": [],
+  "combat": []
+}

@@ -1,0 +1,294 @@
+{
+  "name": "Cliff Briscoe",
+  "url": "/wiki/Cliff_Briscoe",
+  "dialogue_name": "CliffBriscoe.txt",
+  "dialogue_url": "/wiki/CliffBriscoe.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": true,
+  "is_doctor": false,
+  "is_merchant": true,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "0008CD27",
+  "ref_id": "0008CD28",
+  "editor_id": "CliffBriscoe",
+  "location": "Dino Bite gift shop",
+  "location_url": "/wiki/Dino_Bite_gift_shop",
+  "descriptions": [
+    "Cliff Briscoe is a resident of Novac and the owner of the Dino Bite gift shop in Fallout: New Vegas.",
+    "At some point while living in Novac, Cliff took over the ownership of the Dino Bite gift shop inside the Dinky the T-Rex statue. He soon after discovered that the place had an excess of Dinky the T-Rex souvenirs as well as some rocket souvenirs from REPCONN Aerospace,",
+    "Cliff maintains a friendship with the proprietor of the Dino Dee-lite Motel, Jeannie May Crawford, to which she always directs new visitors to his shop, and Cliff reciprocates by offering anyone who mentions her name a discount.",
+    "Yes"
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Novac",
+  "role": "MerchantHotel manager (optional)",
+  "detailed_location": "Dino Bite gift shop",
+  "voice_actor": "Gregory Alan Williams",
+  "special": {
+    "Strength": 4,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 7,
+    "Intelligence": 5,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "mod_special_values": {
+    "Strength": 4,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 7,
+    "Intelligence": 5,
+    "Agility": 7,
+    "Luck": 5
+  },
+  "level": "4",
+  "tag_skills": [
+    {
+      "Barter:": "46"
+    },
+    {
+      "Guns:": "48(50)"
+    },
+    {
+      "Speech:": "46"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Neutral",
+  "voice_type": "MaleAdult06",
+  "geck_race": "AfricanAmericanOld",
+  "topics": [
+    {
+      "topic": "CaravanOffer",
+      "topic_text": "Want to play a hand of Caravan?",
+      "emotion": "Neutral 50",
+      "response_text": "A fellow enthusiast, huh? That's great! Let's play.",
+      "index": "1"
+    },
+    {
+      "topic": "CaravanPlayerLoses",
+      "topic_text": "CaravanPlayerLoses",
+      "emotion": "Neutral 50",
+      "response_text": "Don't take it to heart. I've studied the strategies of the masters.",
+      "index": "2"
+    },
+    {
+      "topic": "CaravanPlayerWins",
+      "topic_text": "CaravanPlayerWins",
+      "emotion": "Neutral 50",
+      "response_text": "Huh. I wonder where I went wrong. Let's try that again.",
+      "index": "3"
+    },
+    {
+      "topic": "CaravanRematchNo",
+      "topic_text": "I'm all done playing for now.",
+      "emotion": "Neutral 50",
+      "response_text": "Shucks, well, let's do it again sometime.",
+      "index": "4"
+    },
+    {
+      "topic": "CaravanRematchYes",
+      "topic_text": "Yeah, let's play again.",
+      "emotion": "Neutral 50",
+      "response_text": "I've got a good feeling about this hand.",
+      "index": "5"
+    },
+    {
+      "topic": "CliffBriscoeBarterCheck",
+      "topic_text": "You don't have any offers for the rockets. You'd be lucky to get money at all.",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] Okay, I admit it. They've been collecting dust since before I got here. You can have them dirt cheap.",
+      "index": "6"
+    },
+    {
+      "topic": "CliffBriscoeBarterFail",
+      "topic_text": "But... the price tag seems so excessive on the souvenir rockets. Could you make it lower?",
+      "emotion": "Neutral 50",
+      "response_text": "[FAILED] Are you kidding me? I can't ship these things fast enough. People love them!",
+      "index": "7"
+    },
+    {
+      "topic": "CliffBriscoeBuyCollection",
+      "topic_text": "I'd like to buy all of your remaining rocket souvenirs.",
+      "emotion": "Surprise 65",
+      "response_text": "Really? I never thought I'd see the day.",
+      "index": "8"
+    },
+    {
+      "topic": "CliffBriscoeBuyDinoSouvenir",
+      "topic_text": "I'd like to buy a dinosaur souvenir.",
+      "emotion": "Neutral 50",
+      "response_text": "Great. Here you go!",
+      "index": "11"
+    },
+    {
+      "topic": "CliffBriscoeBuyRocketSouvenir",
+      "topic_text": "I'd like to buy one of those souvenir rockets.",
+      "emotion": "Neutral 50",
+      "response_text": "Really? I mean, that's great! I'm sure you'll be quite pleased with it.",
+      "index": "12"
+    },
+    {
+      "topic": "CliffBriscoeHaveGuns",
+      "topic_text": "What about supplies? And guns? Do you sell those?",
+      "emotion": "Surprise 50",
+      "response_text": "Guns? I, uh, well... yeah, I guess I might have a few.",
+      "index": "13"
+    },
+    {
+      "topic": "CliffBriscoeJeannieMaySentMe",
+      "topic_text": "Jeannie May sent me.",
+      "emotion": "Happy 50",
+      "response_text": "Bless her. Seems like every traveler I get in here tells me the same thing.",
+      "index": "15"
+    },
+    {
+      "topic": "CliffBriscoeJustBecause",
+      "topic_text": "Just because.",
+      "emotion": "Neutral 50",
+      "response_text": "You just... did it? Just like that, on a whim?",
+      "index": "18"
+    },
+    {
+      "topic": "CliffBriscoeKilledJeannieMay",
+      "topic_text": "I killed Jeannie May. Do I still get my discount?",
+      "emotion": "Neutral 50",
+      "response_text": "Ki- killed her? Why would you do something like that?",
+      "index": "24"
+    },
+    {
+      "topic": "CliffBriscoeMissedWakeup",
+      "topic_text": "She missed my wake-up call.",
+      "emotion": "Neutral 50",
+      "response_text": "I- I'm sorry to hear that. She's a nice woman. Was. She might've grown on you.",
+      "index": "25"
+    },
+    {
+      "topic": "CliffBriscoeMyBusiness",
+      "topic_text": "That's my business.",
+      "emotion": "Neutral 50",
+      "response_text": "Lord almighty. I can't for the life of me imagine her doing anything that'd make someone want to kill her.",
+      "index": "29"
+    },
+    {
+      "topic": "CliffBriscoeNotSafe",
+      "topic_text": "I'm not really sure it's safe to carry those things around.",
+      "emotion": "Neutral 50",
+      "response_text": "I understand if that's how you feel. But keep in mind that I've been selling these for years and I'm fine.",
+      "index": "32"
+    },
+    {
+      "topic": "CliffBriscoeOpenStore",
+      "topic_text": "I'd like to see what you've got for sale.",
+      "emotion": "Neutral 50",
+      "response_text": "Sure thing. Have a look.",
+      "index": "34"
+    },
+    {
+      "topic": "CliffBriscoeRecommendation",
+      "topic_text": "Jeannie May sent me.",
+      "emotion": "Neutral 50",
+      "response_text": "Bless her. Seems like every traveler I get in here tells me the same thing.",
+      "index": "35"
+    },
+    {
+      "topic": "CliffBriscoeRocketFactory",
+      "topic_text": "Tell me about the rocket factory.",
+      "emotion": "Neutral 50",
+      "response_text": "Oh, that? It's just a bit west of Novac, up in the mountains. Lots of broken equipment and such. Place is deserted. Or used to be, I guess.",
+      "index": "38"
+    },
+    {
+      "topic": "CliffBriscoeScienceRocketIs there radioactive material in your rocket souvenirs? It would explain the glow and the illnesses.",
+      "topic_text": "Is there radioactive material in your rocket souvenirs?",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] I, ah, well I don't really know. Would that sour you on buying one if it did?",
+      "index": "40"
+    },
+    {
+      "topic": "CliffBriscoeSouvenirInfo",
+      "topic_text": "Tell me more about the souvenir rockets.",
+      "emotion": "Neutral 50",
+      "response_text": "They're scale replicas of the real thing. Very detailed. Got a liquid in them that makes them glow.",
+      "index": "41"
+    },
+    {
+      "topic": "CliffBriscoeWhatDoYouSell",
+      "topic_text": "What do you sell here?",
+      "emotion": "Neutral 50",
+      "response_text": "Well, there's t-rex figurines, of course. That's our bread and butter.",
+      "index": "45"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "Welcome to the Dino Bite Gift Shop. My name's Cliff. If you're here for the t-rex figurines, you're just in time. There's still a few left.",
+      "index": "47"
+    },
+    {
+      "topic": "NovacGhoulInfo",
+      "topic_text": "What can you tell me about the ghouls spotted to the west?",
+      "emotion": "Neutral 50",
+      "response_text": "I don't know what else I could tell you. You could give No-bark a try, though, or Jeannie May.",
+      "index": "54"
+    },
+    {
+      "topic": "SnipersRevengeBooneWife",
+      "topic_text": "What can you tell me about Boone's wife?",
+      "emotion": "Neutral 50",
+      "response_text": "Can't say we spoke much. Boone did most of the buying for them. She was in the store once, but she didn't stay long.",
+      "index": "55"
+    },
+    {
+      "topic": "SnipersRevengeComeOutside",
+      "topic_text": "Come with me. There's something you should see, in front of the dinosaur.",
+      "emotion": "Neutral 50",
+      "response_text": "I guess I can leave the store for a minute. I hope I don't miss any customers.",
+      "index": "57"
+    },
+    {
+      "topic": "VDialogueCliffBriscoeCliffBriscoeTopic001",
+      "topic_text": "How did they end up here?",
+      "emotion": "Neutral 50",
+      "response_text": "Well, they unloaded what they had left on the Dino Bite as a tax write-off. But that was before my time.",
+      "index": "59"
+    },
+    {
+      "topic": "VDialogueCliffBriscoeCliffBriscoeTopic002",
+      "topic_text": "Let's talk about something else.",
+      "emotion": "Neutral 50",
+      "response_text": "{Cheery}That's a great idea.",
+      "index": "61"
+    },
+    {
+      "topic": "VMQ01LookingForManny",
+      "topic_text": "I'm looking for a man in a checkered coat. Have you seen anyone like that?",
+      "emotion": "Neutral 50",
+      "response_text": "Sure, but he didn't buy any souvenirs, if that's what you're wondering. Sounded like he didn't have his money with him.",
+      "index": "62"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Come back soon, now.",
+      "index": "65"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "Hello",
+      "emotion": "Neutral 50",
+      "response_text": "Welcome. Come on in!",
+      "index": "66"
+    }
+  ],
+  "combat": []
+}

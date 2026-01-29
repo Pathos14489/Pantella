@@ -1,0 +1,578 @@
+{
+  "name": "Sergeant Montgomery",
+  "url": "/wiki/Benjamin_Montgomery",
+  "dialogue_name": "DLC02SgtMontgomery.txt",
+  "dialogue_url": "/wiki/DLC02SgtMontgomery.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": true,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "xx00A044",
+  "ref_id": "xx0015F1",
+  "editor_id": "DLC02SgtMontgomery",
+  "location": "Anchorage Cliffs",
+  "location_url": null,
+  "descriptions": [
+    "Gunnery Sergeant Benjamin \"Benji\" Montgomery is a United States Marine serving with an airborne unit fighting the invading Red Chinese during the Anchorage Reclamation simulation in 2277.",
+    "Benjamin Montgomery has fought on the Anchorage front line for several tours under the command of General Chase, and he has become an integral part of Chase's forces. He is a highly loyal and highly competent soldier, who gives nicknames to those he is more friendly with. He is assigned as the Lone Wanderer's active party member and soon becomes a close ally, fighting alongside them during many crucial stages in the Anchorage Reclamation.",
+    "Benjamin Montgomery appears only in the Fallout 3 add-on Operation: Anchorage.",
+    "Sergeant Montgomery often mentions Uncle Sam in his dialogue, indicating that his last name may be a reference to the artist James Montgomery Flagg, best known for the 1917 poster depicting Uncle Sam, created for recruitment into the United States Army during World War I."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "United States of AmericaUnited States Marine Corps",
+  "role": "ParatrooperStrike team leader",
+  "detailed_location": "Anchorage Reclamation simulationU.S. Army field headquarters",
+  "voice_actor": "Craig Sechler",
+  "special": {
+    "Strength": 5,
+    "Perception": 6,
+    "Endurance": 6,
+    "Charisma": 5,
+    "Intelligence": 5,
+    "Agility": 7,
+    "Luck": 5
+  },
+  "level": "1→20→30 (Broken Steel only)",
+  "tag_skills": [
+    {
+      "Big Guns:": "32→100"
+    },
+    {
+      "Small Guns:": "34→100"
+    },
+    {
+      "Speech:": "30→100"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Critical Chance:": "5%"
+    },
+    {
+      "Unarmed Dam.:": "1.35"
+    },
+    {
+      "Poison Resist.:": "25%"
+    },
+    {
+      "Rad. Resist.:": "10%"
+    },
+    {
+      "Carry Weight:": "200"
+    },
+    {
+      "Damage Res.:": "32%"
+    }
+  ],
+  "karma": "Neutral",
+  "voice_type": "DLC02MaleUniqueMontgomery",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "DLC02OA2MontgomeryReturns01",
+      "topic_text": "Glad to see you made it in one piece.",
+      "emotion": "Disgust 90",
+      "response_text": "Yeah, I almost bought it out on the cliffs. Didn't know the Reds were so handy with a Sniper Rifle.",
+      "index": "1"
+    },
+    {
+      "topic": "DLC02OA2MontgomeryReturns02",
+      "topic_text": "Let's cut the chatter... we've got some guns to destroy.",
+      "emotion": "Neutral 50",
+      "response_text": "Roger that.",
+      "index": "3"
+    },
+    {
+      "topic": "DLC02OA2MontgomeryReturns03",
+      "topic_text": "What took you so damn long?",
+      "emotion": "Disgust 90",
+      "response_text": "Yeah, yeah. Don't break your arm patting yourself on the back, rookie. You took the easy way in.",
+      "index": "5"
+    },
+    {
+      "topic": "DLC02OA2MontgomeryReturns04",
+      "topic_text": "Yep. Let's go.",
+      "emotion": "Happy 90",
+      "response_text": "I got your six.",
+      "index": "7"
+    },
+    {
+      "topic": "DLC02OA2MontgomeryReturns05",
+      "topic_text": "Hang on a second. Do you have any spare ammo?",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah, I can spare a few rounds.",
+      "index": "8"
+    },
+    {
+      "topic": "DLC02OA2MontgomeryReturns06",
+      "topic_text": "Hell yeah. See if you can keep up.",
+      "emotion": "Disgust 90",
+      "response_text": "No sweat. You're on point, rookie.",
+      "index": "10"
+    },
+    {
+      "topic": "DLC02OA3MontgomeryStart01",
+      "topic_text": "That's not necessary, Benji.",
+      "emotion": "Happy 100",
+      "response_text": "Hell, saluting is the least I can do. Do you have any idea how many of our guys you saved by taking out those guns?",
+      "index": "11"
+    },
+    {
+      "topic": "DLC02OA3MontgomeryStart01Intelligence",
+      "topic_text": "Enough! There has to be a way to halt this simulation. A passcode or something.",
+      "emotion": "Surprise 100",
+      "response_text": "Simulation? What the hell are you talking about? This is as real as it gets, G.I.",
+      "index": "12"
+    },
+    {
+      "topic": "DLC02OA3MontgomeryStart02",
+      "topic_text": "Thanks for the compliments, Sergeant.",
+      "emotion": "Happy 50",
+      "response_text": "You deserve it, sir.",
+      "index": "14"
+    },
+    {
+      "topic": "DLC02OA3MontgomeryStart03",
+      "topic_text": "There's no time for chit chat, Sergeant.",
+      "emotion": "Sad 50",
+      "response_text": "Yes, sir. Sorry, sir.",
+      "index": "16"
+    },
+    {
+      "topic": "DLC02OA3MontgomeryStart04",
+      "topic_text": "Yeah, I guess I did kind of save the day.",
+      "emotion": "Surprise 100",
+      "response_text": "Oh ho! Listen to this guy!{sarcasm}",
+      "index": "17"
+    },
+    {
+      "topic": "DLC02OA3MontgomeryStart05",
+      "topic_text": "All in a day's work, Benji.",
+      "emotion": "Neutral 50",
+      "response_text": "All in a day's work he says. Yeah sure... every day I wake up and single-handedly infiltrate a Commie infested base on a suicide mission.{first line to self aloud/friendly sarcasm}",
+      "index": "19"
+    },
+    {
+      "topic": "DLC02OA3MontgomeryStart06",
+      "topic_text": "You save some, you lose others. Who cares as long as the job gets done?",
+      "emotion": "Surprise 90",
+      "response_text": "Who cares?",
+      "index": "21"
+    },
+    {
+      "topic": "DLC02OA3MontgomeryStart07",
+      "topic_text": "Don't worry, Benji. I'll make officers out of all of 'em.",
+      "emotion": "Happy 100",
+      "response_text": "That's the spirit, buddy!",
+      "index": "24"
+    },
+    {
+      "topic": "DLC02OA3MontgomeryStart08",
+      "topic_text": "I never asked to be a role model. I just want to get through this.",
+      "emotion": "Sad 100",
+      "response_text": "We all want to get through this. None of us asked to be here. We ALL left things behind when this shit started.",
+      "index": "26"
+    },
+    {
+      "topic": "DLC02OA3MontgomeryStart09",
+      "topic_text": "These soldiers aren't even real. This is all a sham.",
+      "emotion": "Surprise 100",
+      "response_text": "Wow, this place must really be getting to you.",
+      "index": "28"
+    },
+    {
+      "topic": "DLC02OA3MontgomeryStart09Science",
+      "topic_text": "I wouldn't even presume to argue with this simulation's A.I. subroutines.",
+      "emotion": "Disgust 100",
+      "response_text": "Subroutines? This is an Army gig, not the Navy. You sure those artillery guns going off didn't shake something loose up there?",
+      "index": "31"
+    },
+    {
+      "topic": "DLC02OA3MontgomeryStart10",
+      "topic_text": "Yeah, you're right. Sorry Benji!",
+      "emotion": "Happy 100",
+      "response_text": "That's the spirit, buddy!",
+      "index": "34"
+    },
+    {
+      "topic": "DLC02OA3MontgomeryStart11",
+      "topic_text": "I suppose. Let's just get through this.",
+      "emotion": "Happy 70",
+      "response_text": "Don't worry. We WILL get through this. I'll be there every step of the way to give you a hand.",
+      "index": "36"
+    },
+    {
+      "topic": "DLC02OA3MontgomeryStart12",
+      "topic_text": "Let's just drop the whole thing, okay?",
+      "emotion": "Disgust 100",
+      "response_text": "Fine. I guess we have a job to do, so let's get to it.",
+      "index": "37"
+    },
+    {
+      "topic": "DLC02OA3MontgomeryStartGo01",
+      "topic_text": "So, where do we stand with the Strike Team?",
+      "emotion": "Happy 80",
+      "response_text": "Everyone's ready to go kick some Commie ass... sir.",
+      "index": "38"
+    },
+    {
+      "topic": "DLC02OA3MontgomeryStartGo02",
+      "topic_text": "Let's get the Strike Team moving, Sergeant.",
+      "emotion": "Neutral 50",
+      "response_text": "Yes sir. What are your orders?",
+      "index": "40"
+    },
+    {
+      "topic": "DLC02OA3MontgomeryStartGo03",
+      "topic_text": "Let's do this smooth and by the numbers. Follow my lead.",
+      "emotion": "Neutral 50",
+      "response_text": "Yes sir. What are your orders?",
+      "index": "41"
+    },
+    {
+      "topic": "DLC02STTLMontgomeryOrdersReplenish",
+      "topic_text": "Radio to base that we need replacements.",
+      "emotion": "Neutral 50",
+      "response_text": "Can do. What unit should we request?",
+      "index": "42"
+    },
+    {
+      "topic": "DLC02STTLMontgomeryOrdersReplenish01",
+      "topic_text": "Have them send us an Infantryman.",
+      "emotion": "Happy 70",
+      "response_text": "You got it, sir.",
+      "index": "43"
+    },
+    {
+      "topic": "DLC02STTLMontgomeryOrdersReplenish02",
+      "topic_text": "Have them send us a Grenadier.",
+      "emotion": "Neutral 50",
+      "response_text": "No problem, they should arrive shortly.",
+      "index": "44"
+    },
+    {
+      "topic": "DLC02STTLMontgomeryOrdersReplenish03",
+      "topic_text": "Have them send us a Missile Unit.",
+      "emotion": "Happy 50",
+      "response_text": "Missile Unit on its way, sir.",
+      "index": "45"
+    },
+    {
+      "topic": "DLC02STTLMontgomeryOrdersReplenish04",
+      "topic_text": "Have them send us a Sniper.",
+      "emotion": "Neutral 50",
+      "response_text": "They'll be here momentarily, sir.",
+      "index": "46"
+    },
+    {
+      "topic": "DLC02STTLMontgomeryOrdersReplenish05",
+      "topic_text": "Have them send us a Mister Gutsy.",
+      "emotion": "Neutral 50",
+      "response_text": "Command will send it right out to us, sir.",
+      "index": "47"
+    },
+    {
+      "topic": "DLC02STTLMontgomeryOrdersReplenish06",
+      "topic_text": "Have them send us a Sentry Bot.",
+      "emotion": "Neutral 50",
+      "response_text": "It's on its way from the motor pool as we speak, sir.",
+      "index": "48"
+    },
+    {
+      "topic": "DLC02STTLMontgomeryOrdersReplenish07",
+      "topic_text": "Actually, cancel that order.",
+      "emotion": "Neutral 50",
+      "response_text": "No problem, sir.",
+      "index": "49"
+    },
+    {
+      "topic": "DLC02STTLMontgomeryRallyAttack",
+      "topic_text": "Attack the enemy in the Mines.",
+      "emotion": "Neutral 50",
+      "response_text": "Yes sir. We'll attack the enemy at the Mining Town.",
+      "index": "50"
+    },
+    {
+      "topic": "DLC02STTLMontgomeryRallyGoToCamp",
+      "topic_text": "Wait for me outside the Chinese Ice Camp on the way to the Chimera Depot.",
+      "emotion": "Neutral 50",
+      "response_text": "Yes sir. On our way. We'll wait for you by the Ice Camp.",
+      "index": "54"
+    },
+    {
+      "topic": "DLC02STTLMontgomeryRallyGoToChimera",
+      "topic_text": "Now that the Ice Camp is out of the way, head up to the Chimera Depot.",
+      "emotion": "Neutral 50",
+      "response_text": "Yes sir.  On our way. We'll wait for you by the Chimera Depot.",
+      "index": "55"
+    },
+    {
+      "topic": "DLC02STTLMontgomeryRallyGoToListen",
+      "topic_text": "Now that we've dealt with the Mining Town, head to the Listening Post.",
+      "emotion": "Neutral 50",
+      "response_text": "Yes sir.  On our way. We'll wait for you by the Listening Post.",
+      "index": "56"
+    },
+    {
+      "topic": "DLC02STTLMontgomeryRallyGoToMines",
+      "topic_text": "Wait for me just outside the Mining Town on the way to the Listening Post.",
+      "emotion": "Neutral 50",
+      "response_text": "Yes sir.  On our way. We'll wait for you by the Mining Town.",
+      "index": "57"
+    },
+    {
+      "topic": "DLC02STTLMontgomeryRallyWait",
+      "topic_text": "I'll scope out the enemy at the Mining Town. Have the team wait here.",
+      "emotion": "Neutral 50",
+      "response_text": "Yes sir. We'll wait here. Let us know when you want us to attack the enemy at that location.",
+      "index": "58"
+    },
+    {
+      "topic": "DLC02STTLMontgomeryStatus",
+      "topic_text": "What's our current status on the targets?",
+      "emotion": "Neutral 50",
+      "response_text": "As soon as we take out the Pulse Field, I'll radio Chase to send in the shock troops.",
+      "index": "62"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Happy 100",
+      "response_text": "It's been an honor working with you. I don't think I've ever seen bravery like that on any battlefield.",
+      "index": "68"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "DLC02MontBoomSay01",
+      "topic_text": "DLC02MontBoomSay01",
+      "emotion": "Happy 100",
+      "response_text": "Hell yeah! Take that you Red bastards!",
+      "index": "105"
+    },
+    {
+      "topic": "DLC02MontBoomSay02",
+      "topic_text": "DLC02MontBoomSay02",
+      "emotion": "Happy 100",
+      "response_text": "That's two. Let's finish the job.",
+      "index": "106"
+    },
+    {
+      "topic": "DLC02MontBoomSay03",
+      "topic_text": "DLC02MontBoomSay03",
+      "emotion": "Sad 100",
+      "response_text": "Ha ha! And they all come tumbling down! Yeah!",
+      "index": "107"
+    },
+    {
+      "topic": "DLC02MontTrigger01",
+      "topic_text": "DLC02MontTrigger01",
+      "emotion": "Fear 90",
+      "response_text": "Woah... watch your step near those ledges. That is a HELL of a long fall.",
+      "index": "108"
+    },
+    {
+      "topic": "DLC02MontTrigger02",
+      "topic_text": "DLC02MontTrigger02",
+      "emotion": "Anger 70",
+      "response_text": "Eyes on, we got company up ahead!",
+      "index": "109"
+    },
+    {
+      "topic": "DLC02MontTrigger03",
+      "topic_text": "DLC02MontTrigger03",
+      "emotion": "Neutral 50",
+      "response_text": "We're crossing that pipe? And here I thought I was the one with the death wish.",
+      "index": "110"
+    },
+    {
+      "topic": "DLC02MontTrigger04",
+      "topic_text": "DLC02MontTrigger04",
+      "emotion": "Happy 70",
+      "response_text": "If I live just one more day without seeing another catwalk, I'll die a happy man.",
+      "index": "111"
+    },
+    {
+      "topic": "DLC02MontTrigger05",
+      "topic_text": "DLC02MontTrigger05",
+      "emotion": "Disgust 70",
+      "response_text": "Through this next structure is the entrance to the Artillery Base. I dunno what they got waiting for us, so keep a sharp watch.",
+      "index": "112"
+    },
+    {
+      "topic": "DLC02MontTrigger06",
+      "topic_text": "DLC02MontTrigger06",
+      "emotion": "Disgust 70",
+      "response_text": "Here's the entrance. Place is probably swarming with Reds.",
+      "index": "113"
+    },
+    {
+      "topic": "DLC02MontTrigger07",
+      "topic_text": "DLC02MontTrigger07",
+      "emotion": "Surprise 100",
+      "response_text": "Holy shit...",
+      "index": "114"
+    },
+    {
+      "topic": "DLC02MontTrigger08",
+      "topic_text": "DLC02MontTrigger08",
+      "emotion": "Disgust 90",
+      "response_text": "There! See 'em down there? That's their damn Chimera tanks. Don't worry, they're well out of range.",
+      "index": "115"
+    },
+    {
+      "topic": "DLC02MontTrigger09",
+      "topic_text": "DLC02MontTrigger09",
+      "emotion": "Anger 70",
+      "response_text": "Hmm. Looks like the Commies are getting low on ammo for the big guns. Maybe we didn't even need to come up here.",
+      "index": "116"
+    },
+    {
+      "topic": "DLC02MontTrigger10",
+      "topic_text": "DLC02MontTrigger10",
+      "emotion": "Disgust 90",
+      "response_text": "Yeah, yeah.... so I was wrong. Let's keep moving.",
+      "index": "117"
+    },
+    {
+      "topic": "DLC02MontTrigger11",
+      "topic_text": "DLC02MontTrigger11",
+      "emotion": "Neutral 50",
+      "response_text": "That's the Front down there. These guns are pounding on our guys. Let's take 'em out!",
+      "index": "118"
+    },
+    {
+      "topic": "DLC02MontTrigger12",
+      "topic_text": "DLC02MontTrigger12",
+      "emotion": "Disgust 80",
+      "response_text": "Alrighty chief... we got three of those things to take down. You lead the way.",
+      "index": "119"
+    },
+    {
+      "topic": "DLC02MontTrigger13",
+      "topic_text": "DLC02MontTrigger12",
+      "emotion": "Anger 80",
+      "response_text": "Plant that thing and let's go!",
+      "index": "120"
+    },
+    {
+      "topic": "DLC02MontTrigger14",
+      "topic_text": "DLC02MontTrigger14",
+      "emotion": "Disgust 90",
+      "response_text": "Let's blow this beast apart!",
+      "index": "121"
+    },
+    {
+      "topic": "DLC02MontTrigger15",
+      "topic_text": "DLC02MontTrigger15",
+      "emotion": "Anger 90",
+      "response_text": "Last gun! Blow that thing off the map!",
+      "index": "122"
+    },
+    {
+      "topic": "DLC02OA2MontTalk01",
+      "topic_text": "DLC02OA2MontTalk01",
+      "emotion": "Fear 90",
+      "response_text": "That was a hell of a nasty fall you took. When your chute bunched up like that I thought you were a goner. I hope the other guys made it...",
+      "index": "123"
+    },
+    {
+      "topic": "DLC02OA2MontTalk03",
+      "topic_text": "DLC02OA2MontTalk03",
+      "emotion": "Happy 90",
+      "response_text": "I don't think their patrols spotted us coming in, so at least we still have the jump on 'em.",
+      "index": "124"
+    },
+    {
+      "topic": "DLC02OA2MontTalk04",
+      "topic_text": "DLC02OA2MontTalk04",
+      "emotion": "Neutral 50",
+      "response_text": "You still have your gear, so I'm gonna let you make the call. You can go in quiet or guns blazing.",
+      "index": "125"
+    },
+    {
+      "topic": "DLC02OA2MontTalk06",
+      "topic_text": "DLC02OA2MontTalk06",
+      "emotion": "Disgust 90",
+      "response_text": "We'll still meet at the rendezvous point inside as planned then we'll blow those artillery guns to hell.",
+      "index": "126"
+    },
+    {
+      "topic": "DLC02OA2MontTalk07",
+      "topic_text": "DLC02OA2MontTalk07",
+      "emotion": "Disgust 90",
+      "response_text": "Just watch yourself. The Reds up here don't take prisoners. Good luck!",
+      "index": "127"
+    },
+    {
+      "topic": "DLC02OA4MontgomerySay",
+      "topic_text": "DLC02OA4MontgomerySay",
+      "emotion": "Surprise 100",
+      "response_text": "This is Montgomery to Field H.Q. We are go for the attack! Send in the tin cans! I repeat, we are go for the attack!",
+      "index": "128"
+    },
+    {
+      "topic": "GOODBYE",
+      "topic_text": "As you were.",
+      "emotion": "Neutral 50",
+      "response_text": "Roger that.",
+      "index": "129"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Fear 100",
+      "response_text": "Hey... hey! Wake up. Come on... snap out of it.",
+      "index": "132"
+    }
+  ],
+  "combat": [
+    {
+      "topic": "Assault",
+      "topic_text": "Assault",
+      "emotion": "Disgust 100",
+      "response_text": "Watch where you point that thing!",
+      "index": "133"
+    },
+    {
+      "topic": "Attack",
+      "topic_text": "Attack",
+      "emotion": "Anger 100",
+      "response_text": "Over there, over there! Get 'em!",
+      "index": "136"
+    },
+    {
+      "topic": "AvoidThreat",
+      "topic_text": "AvoidThreat",
+      "emotion": "Fear 100",
+      "response_text": "Stop and drop!",
+      "index": "141"
+    },
+    {
+      "topic": "FireExplosive",
+      "topic_text": "FireExplosive",
+      "emotion": "Neutral 50",
+      "response_text": "Fire in the hole!",
+      "index": "144"
+    },
+    {
+      "topic": "Hit",
+      "topic_text": "Hit",
+      "emotion": "Pained 100",
+      "response_text": "Ugh... taking fire!",
+      "index": "146"
+    },
+    {
+      "topic": "Pickpocket",
+      "topic_text": "Pickpocket",
+      "emotion": "Disgust 100",
+      "response_text": "Keep your hands to yourself.",
+      "index": "154"
+    }
+  ]
+}

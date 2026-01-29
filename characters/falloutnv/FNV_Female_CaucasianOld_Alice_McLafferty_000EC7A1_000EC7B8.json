@@ -1,0 +1,339 @@
+{
+  "name": "Alice McLafferty",
+  "url": "/wiki/Alice_McLafferty",
+  "dialogue_name": "AliceMcLafferty.txt",
+  "dialogue_url": "/wiki/AliceMcLafferty.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000EC7A1",
+  "ref_id": "000EC7B8",
+  "editor_id": "AliceMcLafferty",
+  "location": "Crimson Caravan main office",
+  "location_url": "/wiki/Crimson_Caravan_main_office",
+  "descriptions": [
+    "Alice McLafferty is a member of the Crimson Caravan Company, serving as manager of its branch office near New Vegas in the Mojave Wasteland. Sent over from her former position managing the CCC headquarters in the Hub in 2281, McLafferty is a shrewd businesswoman who runs all her day-to-day activities with utmost efficiency and a degree of ruthlessness infamous among company employees, She appears in Fallout: New Vegas.",
+    "Business-minded with a stern countenance,",
+    "The bulk of her career was spent managing the heart of operations for the CCC in the Hub. However, by the turn of the 2280s, their branch near New Vegas had been showing a streak of under-performance largely thanks to the incompetency of its CEO Henry Jamison,",
+    "Behind the scenes of her position managing the CCC's interests in New Vegas, Alice struck a deal with Gloria Van Graff of rival merchant house the Van Graffs where they would help the other in eliminating their competition in the Mojave: Gloria had her mercenaries carry out ambushes, staged as Brotherhood raids on the assets of Cassidy Caravans to force the owner into accepting a buyout from Alice,",
+    "Alice McLafferty appears in Fallout: New Vegas and the Fallout: The Roleplaying Game supplement book Settler's Guide Book."
+  ],
+  "race": "Human",
+  "gender": "Female",
+  "affiliation": "Crimson Caravan Company",
+  "role": "Branch manager6 of Hearts",
+  "detailed_location": "Crimson Caravan CompanyMain office",
+  "voice_actor": "Diane Pershing",
+  "special": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 4,
+    "Intelligence": 4,
+    "Agility": 6,
+    "Luck": 4
+  },
+  "level": "15",
+  "tag_skills": [
+    {
+      "Guns:": "96"
+    },
+    {
+      "Melee Weap.:": "96"
+    },
+    {
+      "Sneak:": "96"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "115"
+    }
+  ],
+  "karma": "Neutral",
+  "voice_type": "FemaleOld03",
+  "geck_race": "CaucasianOld",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "Welcome to the Crimson Caravan Company, New Vegas branch. What may I do for you?",
+      "index": "1"
+    },
+    {
+      "topic": "VDialogueCrimsonCaravanAliceMcLaffertyTopic000",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "It's been a pleasure.",
+      "index": "3"
+    },
+    {
+      "topic": "VDialogueCrimsonCaravanAliceMcLaffertyTopic001",
+      "topic_text": "I'm looking for work.",
+      "emotion": "Neutral 50",
+      "response_text": "I'm afraid we have no current openings for caravaneers or guards, but I'm in need of a runner.",
+      "index": "4"
+    },
+    {
+      "topic": "VDialogueCrimsonCaravanAliceMcLaffertyTopic002",
+      "topic_text": "I'll take it. What do I need to do?",
+      "emotion": "Neutral 50",
+      "response_text": "Deliver this invoice to Dr. Hildern. You can find him somewhere inside Camp McCarran.",
+      "index": "5"
+    },
+    {
+      "topic": "VDialogueCrimsonCaravanAliceMcLaffertyTopic003",
+      "topic_text": "Actually, I don't have time for this right now.",
+      "emotion": "Anger 20",
+      "response_text": "{slightly annoyed - player asked for work, then turned down the job}I see. Was there anything else, then?",
+      "index": "6"
+    },
+    {
+      "topic": "VDialogueCrimsonCaravanAliceMcLaffertyTopic004",
+      "topic_text": "I delivered the invoice, just as you asked.",
+      "emotion": "Happy 10",
+      "response_text": "Well, you've proven yourself reliable so far. Would you be interested in more important jobs?",
+      "index": "7"
+    },
+    {
+      "topic": "VDialogueCrimsonCaravanAliceMcLaffertyTopic005",
+      "topic_text": "What other work do you have available?",
+      "emotion": "Neutral 50",
+      "response_text": "As much as I like to handle matters personally, I can't be everywhere at once.",
+      "index": "8"
+    },
+    {
+      "topic": "VDialogueCrimsonCaravanAliceMcLaffertyTopic006",
+      "topic_text": "I'd like to know more about the Crimson Caravan Company.",
+      "emotion": "Neutral 50",
+      "response_text": "Certainly. What would you like to know?",
+      "index": "12"
+    },
+    {
+      "topic": "VDialogueCrimsonCaravanAliceMcLaffertyTopic007",
+      "topic_text": "How long have you been in business?",
+      "emotion": "Neutral 50",
+      "response_text": "The Crimson Caravan Company has been in business for over 130 years. We're partially responsible for the progress in the NCR.",
+      "index": "13"
+    },
+    {
+      "topic": "VDialogueCrimsonCaravanAliceMcLaffertyTopic008",
+      "topic_text": "Does the Crimson Caravan have any competition?",
+      "emotion": "Neutral 50",
+      "response_text": "Well, the Gun Runners continue to dominate the weapons market, and the Mormon traders from New Canaan control the majority of the northern routes.",
+      "index": "14"
+    },
+    {
+      "topic": "VDialogueCrimsonCaravanAliceMcLaffertyTopic009",
+      "topic_text": "You're well-dressed for this place.",
+      "emotion": "Neutral 50",
+      "response_text": "Normally, I oversee company operations at the Hub in California. However, the New Vegas branch has been underperforming in recent years.",
+      "index": "15"
+    },
+    {
+      "topic": "VDialogueCrimsonCaravanAliceMcLaffertyTopic010",
+      "topic_text": "I don't have any more questions. Let's talk about something else.",
+      "emotion": "Neutral 50",
+      "response_text": "All right. Is there anything else I can do for you?",
+      "index": "17"
+    },
+    {
+      "topic": "VDialogueCrimsonCaravanAliceMcLaffertyTopic011",
+      "topic_text": "The Crimson Caravan Company no longer has to worry about Henry Jamison.",
+      "emotion": "Anger 30",
+      "response_text": "Yes, I'd heard something about his untimely death. There will be a lot of questions from his family, so I trust you had nothing to do with this.",
+      "index": "18"
+    },
+    {
+      "topic": "VDialogueCrimsonCaravanAliceMcLaffertyTopic012",
+      "topic_text": "Cassidy Caravans has been bought out, and is now part of the Crimson Caravan Company.",
+      "emotion": "Happy 25",
+      "response_text": "Very good. On occasion it's proven to be more profitable in the long run to simply buy out the competition, and this is one of those occasions.",
+      "index": "26"
+    },
+    {
+      "topic": "VDialogueCrimsonCaravanAliceMcLaffertyTopic013",
+      "topic_text": "I have the Gun Runner holotape.",
+      "emotion": "Anger 15",
+      "response_text": "{Alarm, no deaths}The Gun Runners detected an intruder roaming around, so they'll like be aware of the theft soon enough.",
+      "index": "27"
+    },
+    {
+      "topic": "VDialogueCrimsonCaravanAliceMcLaffertyTopic014",
+      "topic_text": "Tell me about the negotiation.",
+      "emotion": "Neutral 50",
+      "response_text": "There's a small trading outfit, Cassidy Caravans, that I'm interested in acquiring. They've been rather competitive, so it's time to buy them out.",
+      "index": "33"
+    },
+    {
+      "topic": "VDialogueCrimsonCaravanAliceMcLaffertyTopic015",
+      "topic_text": "I want to know more about the problem with Henry Jamison.",
+      "emotion": "Neutral 50",
+      "response_text": "The Jamisons are very wealthy ranchers back in Redding, California and significant investors in the Crimson Caravan Company.",
+      "index": "36"
+    },
+    {
+      "topic": "VDialogueCrimsonCaravanAliceMcLaffertyTopic016",
+      "topic_text": "Janet's asked me to talk to you about releasing her from her contract.",
+      "emotion": "Anger 5",
+      "response_text": "{snorting, a bit contemptuous}Ah, yes, her infatuation with a Boomer she's never met. It's a small camp, and word gets around.",
+      "index": "40"
+    },
+    {
+      "topic": "VDialogueCrimsonCaravanAliceMcLaffertyTopic017",
+      "topic_text": "What's the Gun Runner job about?",
+      "emotion": "Neutral 50",
+      "response_text": "The quality of the Gun Runners' armaments is due to their manufacturing process. They craft all weapons on-site.",
+      "index": "44"
+    },
+    {
+      "topic": "VDialogueCrimsonCaravanAliceMcLaffertyTopic018",
+      "topic_text": "I'll see what I can do.",
+      "emotion": "Neutral 50",
+      "response_text": "Thank you. Was there something else?",
+      "index": "47"
+    },
+    {
+      "topic": "VDialogueCrimsonCaravanAliceMcLaffertyTopic019",
+      "topic_text": "I need to be reminded about a job you wanted me to do.",
+      "emotion": "Neutral 50",
+      "response_text": "{Non-Dummy}Of course. Which one?",
+      "index": "48"
+    },
+    {
+      "topic": "VDialogueCrimsonCaravanAliceMcLaffertyTopic020< Speech 75 >",
+      "topic_text": "Are you really going to ruin what's supposed to be a time of happiness for her?",
+      "emotion": "Anger 5",
+      "response_text": "{grumbling}[SUCCEEDED] Being sentimental is not how I made the Crimson Caravan so successful, but I'll allow it, just this once.",
+      "index": "50"
+    },
+    {
+      "topic": "VDialogueCrimsonCaravanAliceMcLaffertyTopic021",
+      "topic_text": "You'll have to find someone else for the Gun Runner job. That's not something I do.",
+      "emotion": "Neutral 50",
+      "response_text": "I understand. No hard feelings, but you will, of course, keep our conversation on the matter strictly confidential.",
+      "index": "53"
+    },
+    {
+      "topic": "VDialogueCrimsonCaravanAliceMcLaffertyTopic022< Barter 65 >",
+      "topic_text": "Opening up trade with the Boomers would be easier with Janet in their camp, wouldn't you agree?",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] Intriguing. Janet puts in a good word for me, and the Crimson Caravan gains exclusive access to the Boomers. Yes, that works for me.",
+      "index": "54"
+    },
+    {
+      "topic": "VDialogueCrimsonCaravanAliceMcLaffertyTopic023",
+      "topic_text": "I need to consider your offer.",
+      "emotion": "Neutral 50",
+      "response_text": "Take all the time you need.",
+      "index": "57"
+    },
+    {
+      "topic": "VDialogueCrimsonCaravanAliceMcLaffertyTopic024",
+      "topic_text": "You have a deal.",
+      "emotion": "Neutral 50",
+      "response_text": "I'm glad to hear it.",
+      "index": "58"
+    },
+    {
+      "topic": "VDialogueCrimsonCaravanAliceMcLaffertyTopic025",
+      "topic_text": "Are work contracts common for the Crimson Caravan Company?",
+      "emotion": "Neutral 50",
+      "response_text": "Most merchant companies -{correcting herself, emphasizes \"successful\"}successful merchant companies, rather - have them. It can be inconvenient to replace employees on short notice.",
+      "index": "59"
+    },
+    {
+      "topic": "VDialogueCrimsonCaravanAliceMcLaffertyTopic027",
+      "topic_text": "What kind of upkeep expenses?",
+      "emotion": "Neutral 50",
+      "response_text": "Food, water, living quarters, medicine, and clothes - just the basic stuff. It all comes out of the Company's coffers.",
+      "index": "61"
+    },
+    {
+      "topic": "VDialogueCrimsonCaravanAliceMcLaffertyTopic028",
+      "topic_text": "Are work contracts legal?",
+      "emotion": "Neutral 50",
+      "response_text": "Yes, and they have been for decades now. The hired hands know what they're signing up for - we don't hide anything with fancy talk.",
+      "index": "62"
+    },
+    {
+      "topic": "VDialogueCrimsonCaravanAliceMcLaffertyTopic029",
+      "topic_text": "It seems like that the companies are getting the better deal.",
+      "emotion": "Happy 20",
+      "response_text": "{grinning}That's because we are.{more serious}We always pay up when the contract ends, though. Won't stay in business long if you've got a reputation as a cheat.",
+      "index": "63"
+    },
+    {
+      "topic": "VDialogueCrimsonCaravanAliceMcLaffertyTopic030",
+      "topic_text": "Is there anything else you need me to do?",
+      "emotion": "Neutral 50",
+      "response_text": "Something has actually come up. A prospector recently came through here and spent a lot of caps on supplies.",
+      "index": "64"
+    },
+    {
+      "topic": "VDialogueCrimsonCaravanAliceMcLaffertyTopic031",
+      "topic_text": "I had some questions about bottle cap currency.",
+      "emotion": "Neutral 50",
+      "response_text": "What would you like to know?",
+      "index": "67"
+    },
+    {
+      "topic": "VDialogueCrimsonCaravanAliceMcLaffertyTopic032",
+      "topic_text": "The bottle cap press is no longer a problem.",
+      "emotion": "Happy 10",
+      "response_text": "Good. I'm sure you were thorough. Here's your payment for a job well done.",
+      "index": "68"
+    },
+    {
+      "topic": "VDialogueCrimsonCaravanAliceMcLaffertyTopic034",
+      "topic_text": "Why is a bottle cap press a problem for you?",
+      "emotion": "Neutral 50",
+      "response_text": "People have been counterfeiting bottle caps forever, but it's always been small scale.",
+      "index": "69"
+    },
+    {
+      "topic": "VDialogueCrimsonCaravanAliceMcLaffertyTopic035",
+      "topic_text": "Are new bottle caps ever made?",
+      "emotion": "Neutral 50",
+      "response_text": "Certainly. Bottle caps do wear out or get damaged. Some people even insist on using bottle caps in explosive devices for some reason.",
+      "index": "71"
+    },
+    {
+      "topic": "VDialogueCrimsonCaravanAliceMcLaffertyTopic036",
+      "topic_text": "What makes a bottle cap genuine?",
+      "emotion": "Neutral 50",
+      "response_text": "Lots of little things - the paint on the label, the machining, the type of metal it's made from.",
+      "index": "73"
+    },
+    {
+      "topic": "VDialogueCrimsonCaravanAliceMcLaffertyTopic037",
+      "topic_text": "I'm looking for Cass. The Van Graffs told me to check in with you.",
+      "emotion": "Neutral 50",
+      "response_text": "{Cass not hired}Coincidentally, I'm also looking for her. I've got a business offer she'd be interested in.",
+      "index": "75"
+    },
+    {
+      "topic": "VDialogueCrimsonCaravanAliceMcLaffertyTopic038",
+      "topic_text": "Cass isn't around anymore, so I won't be able to complete the negotiation for you.",
+      "emotion": "Neutral 50",
+      "response_text": "A pity. I guess I'll have to find some other way to acquire her caravan's assets. Thanks for letting me know.",
+      "index": "77"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "It's been a pleasure.",
+      "index": "78"
+    }
+  ],
+  "combat": []
+}

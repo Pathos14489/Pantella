@@ -1,0 +1,150 @@
+{
+  "name": "Lupe",
+  "url": "/wiki/Lupe",
+  "dialogue_name": "GnGLupe.txt",
+  "dialogue_url": "/wiki/GnGLupe.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": true,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000EF468",
+  "ref_id": "000EFB4E",
+  "editor_id": "GnGLupe",
+  "location": "Grub n' Gulp Rest Stop",
+  "location_url": "/wiki/Grub_n%27_Gulp_Rest_Stop",
+  "descriptions": [
+    "Lupe is the co-owner of the Grub n' Gulp rest stop with Fitz in 2281.",
+    "Lupe is a water vendor at the Grub n' Gulp rest stop. She sells both purified and dirty water, stating that a little fallout never killed anyone.",
+    "PC Playstation 3 Xbox 360 Both Fitz and Lupe lack an AI package to keep them at their storefronts.  If anything pulls them away from their stores, such as nearby combat, they will remain where they stand and will not return to their storefronts. "
+  ],
+  "race": "Human",
+  "gender": "Female",
+  "affiliation": "Fitz(co-worker)NCR",
+  "role": "Water vendor",
+  "detailed_location": "Grub n' Gulp rest stop",
+  "voice_actor": "Courtenay Taylor",
+  "special": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 7,
+    "Intelligence": 5,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "level": "1",
+  "tag_skills": [
+    {
+      "Barter:": "34"
+    },
+    {
+      "Melee Weap.:": "30"
+    },
+    {
+      "Speech:": "34"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Neutral",
+  "voice_type": "FemaleAdult04",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "You need water? I got water, clean and fresh, straight from Lake Mead.",
+      "index": "1"
+    },
+    {
+      "topic": "VDialogueVegasWest1EWaterSellerTopic000",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Until next time!",
+      "index": "4"
+    },
+    {
+      "topic": "VDialogueVegasWest1EWaterSellerTopic001",
+      "topic_text": "Show me what you have for sale.",
+      "emotion": "Neutral 50",
+      "response_text": "Glad to do it.",
+      "index": "5"
+    },
+    {
+      "topic": "VDialogueVegasWest1EWaterSellerTopic002",
+      "topic_text": "Where do you get your water?",
+      "emotion": "Neutral 50",
+      "response_text": "The NCR fixed up the pipe network pretty good, and water merchants like me are allowed to have some of it to sell.",
+      "index": "6"
+    },
+    {
+      "topic": "VDialogueVegasWest1EWaterSellerTopic003",
+      "topic_text": "Are there many water merchants around here?",
+      "emotion": "Neutral 50",
+      "response_text": "There's a few independent ones like me, but it's mostly the big trading outfits that deal in water, like the Crimson Caravan Company.",
+      "index": "8"
+    },
+    {
+      "topic": "VDialogueVegasWest1EWaterSellerTopic004",
+      "topic_text": "Anything I should know about New Vegas?",
+      "emotion": "Neutral 50",
+      "response_text": "They won't just let anybody into the Strip, but you should be able to have a good time in Freeside itself. Just, uh, keep a close eye on your caps.",
+      "index": "9"
+    },
+    {
+      "topic": "VDialogueVegasWest1EWaterSellerTopic005",
+      "topic_text": "Tell me about the Fiends.",
+      "emotion": "Neutral 50",
+      "response_text": "They're a bunch of crazies hopped up on all kind of drugs. Apparently, they're using one of the old vaults as a hideout.",
+      "index": "10"
+    },
+    {
+      "topic": "VDialogueVegasWest1EWaterSellerTopic006",
+      "topic_text": "What do you know about the NCR?",
+      "emotion": "Neutral 50",
+      "response_text": "Their main base is right over there by the old airport - it's called Camp McCarran now. Some people like to paint 'em all as a bunch of bullies.",
+      "index": "12"
+    },
+    {
+      "topic": "VDialogueVegasWest1EWaterSellerTopic007",
+      "topic_text": "I have some general questions for you.",
+      "emotion": "Neutral 50",
+      "response_text": "Shoot.",
+      "index": "14"
+    },
+    {
+      "topic": "VDialogueVegasWest1EWaterSellerTopic008",
+      "topic_text": "That's all I want to know right now.",
+      "emotion": "Neutral 50",
+      "response_text": "All right.",
+      "index": "15"
+    },
+    {
+      "topic": "VDialogueVegasWest1EWaterSellerTopic009",
+      "topic_text": "Who sells equipment around here?",
+      "emotion": "Neutral 50",
+      "response_text": "The Crimson Caravan Company's the big dog around here. Keep following the road north and you'll eventually come across their camp.",
+      "index": "16"
+    },
+    {
+      "topic": "VDialogueVegasWest1EWaterSellerTopic010",
+      "topic_text": "Know where I can find a doctor?",
+      "emotion": "Neutral 50",
+      "response_text": "I'm pretty sure they've got a doc over at Camp McCarran, but I don't know if he'll treat just anybody.",
+      "index": "17"
+    },
+    {
+      "topic": "VDialogueVegasWest1EWaterSellerTopic011",
+      "topic_text": "Do you get a lot of customers?",
+      "emotion": "Neutral 50",
+      "response_text": "The caravans or NCR patrols usually don't stop, but we usually get people like yourself wandering on by a few times a week.",
+      "index": "18"
+    }
+  ],
+  "conversation": [],
+  "combat": []
+}

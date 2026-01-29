@@ -1,0 +1,451 @@
+{
+  "name": "Ashur",
+  "url": "/wiki/Ishmael_Ashur",
+  "dialogue_name": "DLC01Ashur.txt",
+  "dialogue_url": "/wiki/DLC01Ashur.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "xx000F20",
+  "ref_id": "xx000F25",
+  "editor_id": "DLC01Ashur",
+  "location": "Haven",
+  "location_url": "/wiki/Haven",
+  "descriptions": [
+    "Ishmael Ashur, formally known as the Lord of The Pitt, is the leader of the raiders occupying the Pitt. A former soldier of the Brotherhood of Steel, he single-handedly revitalized the city following its near-destruction by the Brotherhood and is the central character in the Fallout 3 add-on The Pitt.",
+    "Born on the West Coast, Ashur was picked for the Brotherhood of Steel expedition to D.C. under Star Paladin Owyn Lyons. With their innability to contact the Midwestern Brotherhood, the Brotherhood was forced to continue their mission and head towards Washington, D.C. During their travels, the expedition came across the ruins of the pre-War city of Pittsburgh, Pennsylvania. Now known as \"the Pitt,\" the city was lawless; gangs, raiders, slavers and many other kinds of horrors all freely wandered the streets, and anarchy ruled unchecked. The few innocent inhabitants had to scratch out a living in this terrorizing environment, most of who were either sick or dying from the combined effects of the intense radiation and pollution from pre-War industrial factories damaged by the bombs spewing into the atmosphere.",
+    "Horrified by what they saw, the Brotherhood attacked the Pitt in an event known as \"the Scourge,\" as their forces combed the ruins and killed anyone who dared to put up a fight. Due to their sheer superior technological and combat abilities, the Brotherhood sustained virtually no losses but wiped out much of the Pitt's population. By the time The Scourge was over, only a handful of raider gangs still existed in any large form. Although the intent of the Scourge remains unclear, the Brotherhood took many non-mutated children, such as Paladin Kodiak, from the Pitt and placed them into initiate training.",
+    "The Scourge was a blessing in disguise as Ashur easily established himself as a leading presence in the chaotic aftermath. Presenting himself as a mere initiate dragged along unwillingly by the Brotherhood's dogma, he rallied the people around him. The Brotherhood had killed most of the trogs and the wildmen infesting the city at that time, giving the Pitt a reprieve, calming it down and allowing Ashur to rebuild. What's more, while the looting by Lyons was severe, it left behind a substantial amount of material and especially people to rebuild with. What the Brotherhood considered \"damaged goods,\" Ashur saw as a readily available stockpile of material. Some choices were ironic: while the Brotherhood took Greg Bear, and left behind his elder brothers, considered too far gone, Ashur took them under his wing and molded them into some of his finest soldiers.",
+    "Instead of trying to return to the Brotherhood, Ashur chose to remain and rebuild the Pitt to its former strength because he was touched by the tenacious locals who had endured great hardship before, during and after the Scourge. A more practical reasons was discovering that it contained the only operational steel mill anyone in the Brotherhood had ever seen, allowing the Pitt's denizens to build and maintain their own equipment versus scavenging pre-War ruins. To maintain control, Ashur formed his own organization and, using his Brotherhood training and expertise, quickly began killing off the leaders of the remaining raider gangs to cement his dominance. Low-ranking raiders who did not rebel were conscripted, and the \"Lord of the Pitt\" grew in power to the point where his territory extended from the steelyards to encompass most of the city's ruins. Ashur organized his forces into a functioning government under his autocratic rule, turning them into a standing army with the fiercest raiders becoming his top lieutenants. With the Pitt firmly under his control, Ashur occupied an intact skyscraper, renamed as Haven as his palace to watch over his city.",
+    "However, it was not long before he realized that raider gangs would not be enough to bring the Pitt to its full potential. He resorted to using slave labor overseen by his raiders to carry out the tasks necessary to fire up the old industries again, relying on slave hubs like Paradise Falls in the Capital Wasteland to provide the bodies necessary. Unlike Caesar's Legion or the Slaver's Guild, Ashur does not believe in a firmly stratified society; he insists on referring to slaves as \"workers,\" believing that this small difference is important in the big scheme of things, especially since he openly invites them to earn their freedom.",
+    "Though brutal, Ashur's measures have resulted in success and the Pitt's strength has grown in the decades since, with Ashur importing large numbers of slaves, even entire towns captured by slavers,",
+    "One crucial obstacle to the Pitt's future was the Troglodyte Degeneration Contagion that had been ravaging the city for decades, even before Ashur's time, and which made natural procreation and repopulation impossible. It was a stroke of luck that changed things; a scientist named Sandra Kundanika traveled to the city after hearing about the Pitt's status as an up-and-coming civilization in the wastes. Sandra managed to gain an audience with Ashur and was welcomed into his inner circle. The two developed feelings for each other, becoming lovers.",
+    "A year before 2277, Sandra had become pregnant and gave birth to Ashur's child, a daughter named Marie. It was with the birth of his daughter that Ashur's mission had a breakthrough; Marie was born with a natural immunity to radiation as well as the mutating properties of the Pitt,",
+    "Ashur's ultimate goal is to create a strong foundation for a future nation capable of standing on its own. He truly believes he is on the right track, since in only a couple of decades, he managed to establish an army and a functioning industry, and with a few more years, a solution to the hellish radiation and contamination of the Pitt would come.",
+    "Ashur spends the majority of his time in his office at the top of Haven, but is occasionally seen giving speeches to the slaves of the Pitt every once in a while. He also runs the Pitt's radio station.",
+    "Despite insisting to the Lone Wanderer that the residents of Downtown be called \"workers,\" Ashur himself still refers to them as \"slaves\" a few times in dialogue.",
+    "Ishmael Ashur appears in the Fallout 3 add-on The Pitt and Fallout Shelter Online."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Pitt raidersBrotherhood of Steel(formerly)",
+  "role": "Leader of The Pitt raidersSoldier (formerly)Scholar",
+  "detailed_location": "Haven",
+  "voice_actor": "James Lewis",
+  "special": {
+    "Strength": 5,
+    "Perception": 6,
+    "Endurance": 6,
+    "Charisma": 5,
+    "Intelligence": 5,
+    "Agility": 7,
+    "Luck": 5
+  },
+  "mod_special_values": {
+    "Strength": 6,
+    "Perception": 6,
+    "Endurance": 6,
+    "Charisma": 6,
+    "Intelligence": 5,
+    "Agility": 6,
+    "Luck": 6
+  },
+  "level": "7→17 (1.5x current player level)",
+  "tag_skills": [
+    {
+      "Big Guns:": "62→100"
+    },
+    {
+      "Small Guns:": "64→100"
+    },
+    {
+      "Speech:": "60→100"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "85→135"
+    },
+    {
+      "Critical Chance:": "5%(6%)"
+    },
+    {
+      "Unarmed Dam.:": "1.35"
+    },
+    {
+      "Poison Resist.:": "25%"
+    },
+    {
+      "Rad. Resist.:": "10%"
+    },
+    {
+      "Carry Weight:": "200(210)"
+    },
+    {
+      "Damage Res.:": "36%"
+    }
+  ],
+  "karma": "Neutral",
+  "voice_type": "DLC01UniqueAshur",
+  "geck_race": "AfricanAmericanRaider",
+  "topics": [
+    {
+      "topic": "DLC01AboutBrotherhood",
+      "topic_text": "Do you ever miss the Brotherhood of Steel?",
+      "emotion": "Disgust 50",
+      "response_text": "Not in the slightest. During the Scourge, we looted The Pitt and left the rest of it to rot. I was just a dumb convert who got stuck here afterwards.",
+      "index": "1"
+    },
+    {
+      "topic": "DLC01AboutMarie1",
+      "topic_text": "How's Marie doing?",
+      "emotion": "Happy 50",
+      "response_text": "My little Marie is the very picture of health. And eventually, she'll make it possible for a new generation of healthy babies in The Pitt.",
+      "index": "8"
+    },
+    {
+      "topic": "DLC01AboutPitt",
+      "topic_text": "Can we talk about The Pitt?",
+      "emotion": "Happy 20",
+      "response_text": "Now that everything's quieted down, I guess we've got time for the full story. What do you want to know?",
+      "index": "12"
+    },
+    {
+      "topic": "DLC01AboutPitt2A",
+      "topic_text": "How did you rebuild after the Scourge?",
+      "emotion": "Happy 20",
+      "response_text": "It wasn't actually that tough. The Scourge had cleared out a lot of Trogs, so we had space to move in.",
+      "index": "14"
+    },
+    {
+      "topic": "DLC01AboutPitt2B",
+      "topic_text": "Why do you keep slaves in The Pitt?",
+      "emotion": "Sad 25",
+      "response_text": "First of all, they aren't \"slaves.\" They're \"workers.\" They can earn their freedom, like you did.",
+      "index": "21"
+    },
+    {
+      "topic": "DLC01AboutPitt2C",
+      "topic_text": "Why are The Pitt's slaves treated so poorly?",
+      "emotion": "Sad 25",
+      "response_text": "First of all, they aren't \"slaves.\" They're \"workers.\" They can earn their freedom, like you did.",
+      "index": "26"
+    },
+    {
+      "topic": "DLC01AboutPitt2Exit",
+      "topic_text": "That's all I need to know.",
+      "emotion": "Happy 20",
+      "response_text": "Okay.",
+      "index": "31"
+    },
+    {
+      "topic": "DLC01AshurAboutThePitt",
+      "topic_text": "Wait, can you tell me more about what you're doing in The Pitt?",
+      "emotion": "Sad 25",
+      "response_text": "Ever since the city was scourged, we've done what everyone does: whatever's necessary to survive.{A little sad - he's not proud of the part he played in scourging the city all those years ago.}",
+      "index": "32"
+    },
+    {
+      "topic": "DLC01AshurDefense01A",
+      "topic_text": "I'm sorry, but it was the only way to lure Wernher out of hiding.",
+      "emotion": "Anger 10",
+      "response_text": "Clever thinking, but couldn't you have let us in on your little plan?{Speech Challenge (1930454888)}",
+      "index": "35"
+    },
+    {
+      "topic": "DLC01AshurDefense01B",
+      "topic_text": "Um... It won't happen again?",
+      "emotion": "Anger 50",
+      "response_text": "You're fucking right, it won't. I ought to have you thrown out of town. In pieces.",
+      "index": "38"
+    },
+    {
+      "topic": "DLC01AshurEndPitt",
+      "topic_text": "What do you mean about the city's future?",
+      "emotion": "Happy 25",
+      "response_text": "Now that Marie's back, we have a chance at curing the disease that's been ravaging The Pitt since the bombs.",
+      "index": "40"
+    },
+    {
+      "topic": "DLC01AshurEndReward",
+      "topic_text": "So, you're not going to kill me?",
+      "emotion": "Happy 25",
+      "response_text": "I probably should. Hell, I still might. But you got rid of Wernher, and things are looking good, so you're welcome in my city. For now.",
+      "index": "43"
+    },
+    {
+      "topic": "DLC01AshurEndSlaves",
+      "topic_text": "Now that you have Marie back, please set the slaves free.",
+      "emotion": "Sad 50",
+      "response_text": "I wish I could, but you have to see things in the bigger picture. Without those workers, this city would fall apart.{Not happy that he has to keep people in forced labor}",
+      "index": "49"
+    },
+    {
+      "topic": "DLC01AshurMeeting01A",
+      "topic_text": "I heard The Pitt was building an army. I'm here to join.",
+      "emotion": "Happy 50",
+      "response_text": "You heard right. And after a show like that, how could I refuse someone of your talents?",
+      "index": "56"
+    },
+    {
+      "topic": "DLC01AshurMeeting01B",
+      "topic_text": "It's complicated. How about we just say I'm new in town and looking for work?",
+      "emotion": "Neutral 50",
+      "response_text": "I understand. We've all got a past, and damn few of us have reason to be proud of it.",
+      "index": "59"
+    },
+    {
+      "topic": "DLC01AshurMeeting01C",
+      "topic_text": "I'm the badass who'll be running this place once I kill you.",
+      "emotion": "Happy 50",
+      "response_text": "I figured it'd be something like that. Goodbye, new blood.{Calmly signing the player's death warrant}",
+      "index": "62"
+    },
+    {
+      "topic": "DLC01AshurMeeting02A",
+      "topic_text": "Never heard of him. Why? <Lie.>",
+      "emotion": "Anger 50",
+      "response_text": "Wernher used to be my second-in-command, until he betrayed me. He was exiled to the slave pens, but he escaped not too long ago.{Speech Challenge (1930454888)}",
+      "index": "65"
+    },
+    {
+      "topic": "DLC01AshurMeeting02B",
+      "topic_text": "I met the man, but he seemed like trouble, so I steered clear. <Lie.>",
+      "emotion": "Anger 50",
+      "response_text": "Then you know he's not to be trusted. He escaped after a failed coup, and I believe he's working with the slaves to plan a revolt.{Speech Challenge (1930454888)}",
+      "index": "68"
+    },
+    {
+      "topic": "DLC01AshurMeeting02C",
+      "topic_text": "Yes, I do. He's the one who brought me here.",
+      "emotion": "Happy 50",
+      "response_text": "I appreciate your honesty. It's a rare virtue in this age.{pleased at the honesty.}",
+      "index": "70"
+    },
+    {
+      "topic": "DLC01AshurMeeting03A",
+      "topic_text": "Sounds like a good deal. I'll track him down.",
+      "emotion": "Happy 75",
+      "response_text": "That's what I wanted to hear! You've got a bright future ahead of you in The Pitt, new blood.{Proud of the player for picking the winning side}",
+      "index": "73"
+    },
+    {
+      "topic": "DLC01AshurMeeting03B",
+      "topic_text": "Thanks, but I've got other plans.",
+      "emotion": "Surprise 25",
+      "response_text": "Ah, of course. Would these plans happen to involve stealing a precious little something from me?{Playing as if asking innocently - he knows what's up}",
+      "index": "76"
+    },
+    {
+      "topic": "DLC01AshurNote1",
+      "topic_text": "Diary 1: To Marie",
+      "emotion": "Neutral 50",
+      "response_text": "Test, one, two. Looks like this thing's on. Marie, if you're there, this is your father speaking: Ishmael Ashur, sometimes called Lord of The Pitt.{Hesitates briefly at first, but gets into his stride, basically making a \"video diary\" for his newborn daughter, in case something happens to him.}",
+      "index": "79"
+    },
+    {
+      "topic": "DLC01AshurNote2",
+      "topic_text": "Diary 2: The Scourge",
+      "emotion": "Neutral 50",
+      "response_text": "Marie, the first thing you need to know is that I wasn't always the Lord of The Pitt. Long before I was a king, I was a scholar and a soldier.",
+      "index": "83"
+    },
+    {
+      "topic": "DLC01AshurNote3",
+      "topic_text": "Diary 3: The Mill",
+      "emotion": "Neutral 50",
+      "response_text": "Marie, you know those fights in the Mill's arena? Well, its first fight was when I woke up to someone pulling me out from a pile of rubble.",
+      "index": "88"
+    },
+    {
+      "topic": "DLC01AshurNote4",
+      "topic_text": "Diary 4: The Cure",
+      "emotion": "Neutral 50",
+      "response_text": "As word of a new settlement got out, the city started growing, and fast. When Raiders attacked, I'd kill the leader and recruit the rest.",
+      "index": "93"
+    },
+    {
+      "topic": "DLC01AshurReward02A",
+      "topic_text": "So, what do I do now?",
+      "emotion": "Happy 50",
+      "response_text": "That's up to you. We'll keep working on the cure and keep the city running. You're free to come and go as you like.",
+      "index": "100"
+    },
+    {
+      "topic": "DLC01AshurReward02B",
+      "topic_text": "Guess it's time to kick back and live the life of luxury.",
+      "emotion": "Happy 50",
+      "response_text": "Sure if that's what you want. I'm sure Harris will keep pouring drinks down your throat, as long as you can afford them.",
+      "index": "103"
+    },
+    {
+      "topic": "DLC01AshurWernherOffer1A",
+      "topic_text": "He made me an offer, but now that I know the score, I'm joining your side.",
+      "emotion": "Happy 50",
+      "response_text": "A wise decision, new blood. A very wise decision. It looks like Wernher underestimated you.",
+      "index": "106"
+    },
+    {
+      "topic": "DLC01AshurWernherOffer1B",
+      "topic_text": "He said you had the key to ruling the city, and I'm here to collect.",
+      "emotion": "Happy 50",
+      "response_text": "That's an interesting way to put it. But yes, I suppose the city's future does rest squarely upon it.",
+      "index": "109"
+    },
+    {
+      "topic": "DLC01AshurWernherOffer1C",
+      "topic_text": "I have no idea what you're talking about.",
+      "emotion": "Disgust 50",
+      "response_text": "Then that means you're either a liar or a moron. And neither one is a trait I like to see in my army.",
+      "index": "118"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Anger 50",
+      "response_text": "You kidnapped my daughter, fought my raiders, and gave the workers the ridiculous idea that they can free themselves.{Coldly furious}",
+      "index": "120"
+    },
+    {
+      "topic": "SpeechChallengeFailure",
+      "topic_text": "SpeechChallengeFailure",
+      "emotion": "Surprise 50",
+      "response_text": "Is that so? My second-in-command Wernher betrays me, works with slaves to escape justice, and then you magically appear among the slaves in my city?{Obviously knows the player is lying.}",
+      "index": "132"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "DLC01AshurCalledOutside2",
+      "topic_text": "DLC01AshurCalledOutside2",
+      "emotion": "Anger 50",
+      "response_text": "Damnit, I'm on my way.{Speaking to intercom. Frustrated at being interrupted, but knows it's important}",
+      "index": "137"
+    },
+    {
+      "topic": "DLC01AshurLeavingToPlayer",
+      "topic_text": "DLC01AshurLeavingToPlayer",
+      "emotion": "Neutral 25",
+      "response_text": "Just head back and talk to Sandra. She'll explain all about the cure. Then you'll see why you have to put an end to Wernher.",
+      "index": "138"
+    },
+    {
+      "topic": "DLC01AshurMarketSpeech01",
+      "topic_text": "DLC01AshurMarketSpeech01",
+      "emotion": "Neutral 50",
+      "response_text": "Citizens of The Pitt, workers of Downtown, traders of Uptown, and all fierce souls who do what must be done!",
+      "index": "140"
+    },
+    {
+      "topic": "DLC01AshurMarketSpeech03",
+      "topic_text": "DLC01AshurMarketSpeech03",
+      "emotion": "Neutral 50",
+      "response_text": "Very well, Midea. If that is the will of the workers, then this man shall be their champion!",
+      "index": "149"
+    },
+    {
+      "topic": "DLC01ConfrontPlayer",
+      "topic_text": "DLC01ConfrontPlayer",
+      "emotion": "Anger 50",
+      "response_text": "I should have gunned you down long ag... what the hell is that?!{Furious, but interrupted by surprise ambush of Trogs}",
+      "index": "156"
+    },
+    {
+      "topic": "DLC01Q3Scene02",
+      "topic_text": "DLC01Q3Scene02",
+      "emotion": "Neutral 50",
+      "response_text": "And I'm telling you, I've got it covered.{In control, and calming a hotheaded subordinate}",
+      "index": "157"
+    },
+    {
+      "topic": "DLC01Q3Scene03",
+      "topic_text": "DLC01Q3Scene03",
+      "emotion": "Neutral 50",
+      "response_text": "I'll be with you, right after I maintain some order and dispense a little justice.{Friendly, but busy}",
+      "index": "158"
+    },
+    {
+      "topic": "DLC01Q3Scene05",
+      "topic_text": "DLC01Q3Scene05",
+      "emotion": "Happy 25",
+      "response_text": "No, but I may heal the infirm later in the week. Time permitting, of course.{Calmly deflecting Krenshaw's joke}",
+      "index": "159"
+    },
+    {
+      "topic": "DLC01Q3Scene07",
+      "topic_text": "DLC01Q3Scene07",
+      "emotion": "Anger 25",
+      "response_text": "Workers.{Interrupting and correcting Krenshaw's choice of words. Serious about the change of words}",
+      "index": "160"
+    },
+    {
+      "topic": "DLC01Q3Scene09",
+      "topic_text": "DLC01Q3Scene09",
+      "emotion": "Anger 10",
+      "response_text": "We call them \"workers.\" Helps with morale, reminds them they might earn their freedom, someday.{Explaining careful politics, and very serious about the issue}",
+      "index": "161"
+    },
+    {
+      "topic": "DLC01Q3Scene11",
+      "topic_text": "DLC01Q3Scene11",
+      "emotion": "Anger 10",
+      "response_text": "All right, all right. Put your guards on alert, tell them to be on the lookout for anyone loitering too long downtown.{Getting down to important business}",
+      "index": "162"
+    },
+    {
+      "topic": "DLC01Q3Scene12",
+      "topic_text": "DLC01Q3Scene12",
+      "emotion": "Anger 50",
+      "response_text": "And keep a watch on Midea at all times - anything big happens, it's bound to go through her.{Important business, talking about a dangerous insurgent}",
+      "index": "163"
+    },
+    {
+      "topic": "DLC01Q3Scene13",
+      "topic_text": "DLC01Q3Scene13",
+      "emotion": "Anger 10",
+      "response_text": "Now, I've got a very important meeting with our new friend, so if anything big comes up, you use the intercom.{Wrapping up business, talking jokingly about meeting with the player}",
+      "index": "164"
+    },
+    {
+      "topic": "DLC01Q3Scene15",
+      "topic_text": "DLC01Q3Scene15",
+      "emotion": "Anger 10",
+      "response_text": "Okay, break's over.{Dismissing a subordinate to get to work}",
+      "index": "165"
+    },
+    {
+      "topic": "DLC01SceneInterrupt",
+      "topic_text": "DLC01SceneInterrupt",
+      "emotion": "Anger 25",
+      "response_text": "Not now.",
+      "index": "166"
+    },
+    {
+      "topic": "DLC01SpeechAnnouncement",
+      "topic_text": "DLC01SpeechAnnouncement",
+      "emotion": "Neutral 50",
+      "response_text": "All workers report to the Square. All workers report to the Square.",
+      "index": "167"
+    },
+    {
+      "topic": "GOODBYE",
+      "topic_text": "I have to go now.",
+      "emotion": "Disgust 15",
+      "response_text": "Don't let me keep you.",
+      "index": "168"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Neutral 50",
+      "response_text": "It's about time we had a talk.{Stern, but approachable}",
+      "index": "172"
+    }
+  ],
+  "combat": []
+}

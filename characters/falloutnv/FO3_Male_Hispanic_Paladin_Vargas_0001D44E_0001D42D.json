@@ -1,0 +1,101 @@
+{
+  "name": "Paladin Vargas",
+  "url": "/wiki/Vargas_(Brotherhood_of_Steel)",
+  "dialogue_name": "MQ01Vargas.txt",
+  "dialogue_url": "/wiki/MQ01Vargas.txt",
+  "spawned_dead": false,
+  "spawned": true,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "0001D44E",
+  "ref_id": "0001D42D",
+  "editor_id": "MQ01Vargas",
+  "location": "GNR building plaza,Citadel",
+  "location_url": "/wiki/GNR_building_plaza_(Fallout_3)",
+  "descriptions": [
+    "Paladin Vargas is a Brotherhood of Steel soldier and sergeant of the elite Lyons' Pride squad in Fallout 3. He is initially encountered patrolling the lobby of the Galaxy News Radio building. After completing the Following in His Footsteps quest, he can be seen patrolling the Citadel. When traveling across the bridge during the quest Take it Back!, Vargas could be killed. If he does survive, he will disappear from the game.",
+    "Paladin Vargas is a professional soldier with little capacity for nonsense. Although he is four years older than Sentinel Lyons, he is a sergeant of the Lyons' Pride, responsible for managing the squad and carrying out her orders. He is her right hand, providing her with his experience, advice, and mentoring the Sentinel when needed. The two have a very close friendship, though they both maintain professionalism at all times.",
+    "In particular, Vargas is responsible for evaluating Pride candidates, such as Initiate Reddin.",
+    "Vargas keeps a copy of Guns and Bullets under his bunk. Unknown to him, Squire Maxson sneaks in and reads it whenever Vargas is away.",
+    "He has no relation to Nathaniel Vargas or Manya Vargas of Megaton.",
+    "* Only until the end of Following in His Footsteps."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Brotherhood of SteelLyons' Pride",
+  "role": "Lyons' Pride sergeant",
+  "detailed_location": "GNR building plazaCitadel",
+  "voice_actor": "Pete Papageorge",
+  "special": {
+    "Strength": 5,
+    "Perception": 7,
+    "Endurance": 6,
+    "Charisma": 4,
+    "Intelligence": 3,
+    "Agility": 6,
+    "Luck": 4
+  },
+  "mod_special_values": {
+    "Strength": 7,
+    "Perception": 7,
+    "Endurance": 6,
+    "Charisma": 4,
+    "Intelligence": 3,
+    "Agility": 4,
+    "Luck": 4
+  },
+  "level": "6",
+  "tag_skills": [
+    {
+      "Big Guns:": "52"
+    },
+    {
+      "Energy Weap.:": "54"
+    },
+    {
+      "Small Guns:": "52(48)"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Good",
+  "voice_type": "MaleAdult02DC",
+  "geck_race": "Hispanic",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "It's time for fighting, not for talking.",
+      "index": "1"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "MQ01LyonsPrideA2",
+      "topic_text": "MQ01LyonsPrideA2",
+      "emotion": "Anger 50",
+      "response_text": "Initiate! Shut it! You'll have your fill of death soon enough.{preemptory order (sergeant to private)}",
+      "index": "4"
+    },
+    {
+      "topic": "MQ01LyonsPrideVargas",
+      "topic_text": "MQ01LyonsPrideVargas",
+      "emotion": "Neutral 50",
+      "response_text": "That's all of 'em.{calling to Sarah from a distance}",
+      "index": "6"
+    }
+  ],
+  "combat": [
+    {
+      "topic": "Attack",
+      "topic_text": "Attack",
+      "emotion": "Neutral 50",
+      "response_text": "You there! Moron! We're crashing your little party so keep your head down.{shouted at the player as they join the fight}",
+      "index": "22"
+    }
+  ]
+}

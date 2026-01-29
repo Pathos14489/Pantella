@@ -1,0 +1,246 @@
+{
+  "name": "Shorty",
+  "url": "/wiki/Shorty_(Fallout_3)",
+  "dialogue_name": "Shorty.txt",
+  "dialogue_url": "/wiki/Shorty.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": true,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "0002AB95",
+  "ref_id": "00028029",
+  "editor_id": "Shorty",
+  "location": "Germantown Police HQ,Big Town",
+  "location_url": "/wiki/Germantown_Police_HQ",
+  "descriptions": [
+    "Shorty is one of the residents of Big Town in 2277.",
+    "Despite being of short stature, Shorty's nickname actually originates from his bad temper, with his neighbors in Big Town calling him \"Short-T.\"",
+    "* Only if the Small Guns path is taken in Big Trouble in Big Town."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Big TownLittle Lamplight(formerly)",
+  "role": "Resident of Big TownSuper mutantcaptive",
+  "detailed_location": "Germantown Police HQBig Town",
+  "voice_actor": "Gregory Gorton",
+  "special": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 4,
+    "Intelligence": 4,
+    "Agility": 6,
+    "Luck": 4
+  },
+  "mod_special_values": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 4,
+    "Intelligence": 4,
+    "Agility": 7,
+    "Luck": 4
+  },
+  "level": "4→8",
+  "tag_skills": [
+    {
+      "Barter:": "41→59"
+    },
+    {
+      "Small Guns:": "47→65(49→67)"
+    },
+    {
+      "Unarmed:": "43→61(45→63)"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "85→105(90→110)"
+    },
+    {
+      "Critical Chance:": "4%"
+    },
+    {
+      "Unarmed Dam.:": "2.55"
+    },
+    {
+      "Poison Resist.:": "15%(20%)"
+    },
+    {
+      "Rad. Resist.:": "6%(8%)"
+    },
+    {
+      "Carry Weight:": "210"
+    },
+    {
+      "Damage Res.:": "1%"
+    }
+  ],
+  "karma": "Neutral",
+  "voice_type": "MaleAdult01DefaultBDC",
+  "geck_race": "Asian",
+  "topics": [
+    {
+      "topic": "BigtownTownServicesDo you have any traders in town? Any doctors?",
+      "topic_text": "What's there to do here, anyway?",
+      "emotion": "Anger 50",
+      "response_text": "Hey, I'm not your personal tour guide! Besides, there's nothing to do in Big Town. Super Mutants tore everything apart.{Shorty has an inflated sense of importance, and he gets offended when asked for directions.}",
+      "index": "1"
+    },
+    {
+      "topic": "BigtownTownWhatsWrongThis place looks like a ghost town.",
+      "topic_text": "What do you think will happen to Big Town?",
+      "emotion": "Disgust 25",
+      "response_text": "You've seen those Super Mutants and their ... appetite. There's no way Bigtown will survive with them around.{Shorty is referring to his time in Germantown, when he was almost eaten by a super mutant.}",
+      "index": "3"
+    },
+    {
+      "topic": "BigtownTownWhereDidYouComeFromWhere did you people come from, anyway?",
+      "topic_text": "Do you know how Big Town got started?",
+      "emotion": "Disgust 25",
+      "response_text": "From the look of things, I'd say a Super Mutant sat down in a ditch one day and shat out this town.{Shorty is indignant. He has a natural sense of self-importance that has been challenged.}",
+      "index": "4"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Anger 50",
+      "response_text": "Well, hotshot. Are you going to teach us something, or just stand there looking stupid?{annoyed}",
+      "index": "7"
+    },
+    {
+      "topic": "MS01RedShortyDead",
+      "topic_text": "Red's dead.",
+      "emotion": "Neutral 50",
+      "response_text": "That sucks! Really? She's dead? Damnit. Let's get out of here, and maybe we can kill a few Super Mutants on the way out! Come on!",
+      "index": "17"
+    },
+    {
+      "topic": "MS01RedShortyFollow",
+      "topic_text": "You and Red, follow me.",
+      "emotion": "Neutral 50",
+      "response_text": "We'll stick with you, don't worry!{happy to be rescued, scared they aren't safe yet}",
+      "index": "18"
+    },
+    {
+      "topic": "MS01RedShortyGiveWeapon",
+      "topic_text": "Looks like you could use a weapon.",
+      "emotion": "Surprise 50",
+      "response_text": "Hell, yeah! Lay it on me.{happy to be rescued, scared they aren't safe yet}",
+      "index": "21"
+    },
+    {
+      "topic": "MS01ShortyA1",
+      "topic_text": "Hold on, short stuff. Who are you and what are you doing here?",
+      "emotion": "Fear 75",
+      "response_text": "What does it look like? The Super Mutants raided Big Town and dragged me off here. I'm sure they're about to eat me. You can't just leave me here!",
+      "index": "22"
+    },
+    {
+      "topic": "MS01ShortyA2",
+      "topic_text": "What makes you think I'm here to rescue you?",
+      "emotion": "Fear 75",
+      "response_text": "That isn't funny! We've got to get out of here before the Super Mutants come back to have me for lunch!",
+      "index": "23"
+    },
+    {
+      "topic": "MS01ShortyA3",
+      "topic_text": "Sorry, I'm not here to rescue you. In fact, I've got to get going.",
+      "emotion": "Fear 100",
+      "response_text": "You can't just leave me here! They're going to eat me!",
+      "index": "24"
+    },
+    {
+      "topic": "MS01ShortyA4",
+      "topic_text": "Okay, I'll help you.",
+      "emotion": "Happy 100",
+      "response_text": "Then let's get out of here! Don't forget we've got to get Red, too. She's still upstairs in the holding pens.",
+      "index": "25"
+    },
+    {
+      "topic": "MS01ShortyRescueRed1",
+      "topic_text": "Come on, let's get out of here.",
+      "emotion": "Anger 50",
+      "response_text": "Alright! Move it!{barking orders}",
+      "index": "27"
+    },
+    {
+      "topic": "MS01ShortyRescueRed2",
+      "topic_text": "Red's fine. Let's go!",
+      "emotion": "Anger 50",
+      "response_text": "Alright, if you say so boss. But if we get to Big Town and she isn't there, I'll kill you.{distrustful and deadly serious}",
+      "index": "28"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "BigTownGoodbye",
+      "topic_text": "BigTownGoodbye",
+      "emotion": "Anger 50",
+      "response_text": "I keep asking you about that, but you never listen. Next time, I'm just going to thrust a hammer and nails into your hands.{Shorty is upset that no one listens to his requests.}",
+      "index": "29"
+    },
+    {
+      "topic": "BigTownResponse",
+      "topic_text": "BigTownResponse",
+      "emotion": "Neutral 50",
+      "response_text": "Well, you could help ME by resetting the barricades.{Shorty emphasizes the word \"me.\" He is big on his own importance.}",
+      "index": "35"
+    },
+    {
+      "topic": "BigTownResponse02",
+      "topic_text": "BigTownResponse02",
+      "emotion": "Anger 20",
+      "response_text": "You better get started then. Hurry up! I don't like to wait.{Pappy's attempt at dissuading Shorty has no effect.}",
+      "index": "39"
+    },
+    {
+      "topic": "GOODBYE",
+      "topic_text": "Wait here until I get back.",
+      "emotion": "Fear 75",
+      "response_text": "If you're not back soon, we're outta here!{scared}",
+      "index": "41"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Surprise 100",
+      "response_text": "Come on, let me loose!{excited (getting rescued from certain death)}",
+      "index": "47"
+    },
+    {
+      "topic": "MS01CrowdSay",
+      "topic_text": "MS01CrowdSay",
+      "emotion": "Anger 100",
+      "response_text": "Die Mutants, DIE!!!!{(cheering) in an excited cheering mob}",
+      "index": "58"
+    },
+    {
+      "topic": "MS01KitchenConversation",
+      "topic_text": "MS01KitchenConversation",
+      "emotion": "Anger 75",
+      "response_text": "You freak! You're going to eat me, aren't you?{angry (covering fear)}",
+      "index": "65"
+    },
+    {
+      "topic": "MS01RedShortyReunion",
+      "topic_text": "MS01RedShortyReunion",
+      "emotion": "Happy 100",
+      "response_text": "Me too! Now, let's get the hell out of here!{happy}",
+      "index": "70"
+    }
+  ],
+  "combat": [
+    {
+      "topic": "Attack",
+      "topic_text": "Attack",
+      "emotion": "Anger 50",
+      "response_text": "You'll have to kill me this time, mutie bastards!",
+      "index": "72"
+    }
+  ]
+}

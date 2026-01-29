@@ -1,0 +1,262 @@
+{
+  "name": "Michael Hawthorne",
+  "url": "/wiki/Michael_Hawthorne",
+  "dialogue_name": "MichaelHawthorne.txt",
+  "dialogue_url": "/wiki/MichaelHawthorne.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000156D6",
+  "ref_id": "00017A12",
+  "editor_id": "MichaelHawthorne",
+  "location": "Federalist Lounge",
+  "location_url": "/wiki/Federalist_Lounge",
+  "descriptions": [
+    "Michael Hawthorne is a frequent patron at Tenpenny Tower's Federalist Lounge and is known to be the local drunk.",
+    "Michael Hawthorne is one of Tenpenny Tower's residents and a primary visitor to its Federalist Lounge. His drinking habits have taken over his life and his life savings, to the point where he may as well have a reserved seat at the lounge due to how frequent his visits are.",
+    "Despite his constant drunken stupor, he has formed friendships with some of the other residents. He and Dashwood can be overheard poking fun at one another, the latter teasing him for being “pickled” to the point where Margaret Primrose's café may substitute him for a pickle in someone’s sandwich as supply runs low; the former then returns a jest of his own, musing that the café might also be running out of “dried up old raisins” like Dashwood.",
+    "On the rare occasion that Michael is not found drinking, he can be located rendezvousing with the local courtesan, Susan Lancaster. In spite of saying he “does not give a damn about anything,”",
+    "Upon first encountering the Lone Wanderer, Michael may point out that ghouls are one of the reasons he drinks. He may then ask if one has experience “dealing with their kind,” and mentions that he has never actually met a ghoul despite being prejudiced towards them.",
+    "Michael Hawthorne wanders Tenpenny Tower but always returns to the Federalist Lounge for a drink. On Wednesday nights, he can be seen in bed with the local courtesan of the tower, Susan Lancaster.",
+    "Upon first meeting him, he will jovially ask the Lone Wanderer to share a drink with him, in which he will then begin discussing the ghoul business around the tower."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Tenpenny Tower",
+  "role": "Local drunk",
+  "detailed_location": "Tenpenny Tower",
+  "voice_actor": "Gregory Gorton",
+  "special": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 4,
+    "Intelligence": 4,
+    "Agility": 6,
+    "Luck": 4
+  },
+  "mod_special_values": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 4,
+    "Intelligence": 4,
+    "Agility": 7,
+    "Luck": 4
+  },
+  "level": "4",
+  "tag_skills": [
+    {
+      "Barter:": "41"
+    },
+    {
+      "Small Guns:": "45(47)"
+    },
+    {
+      "Unarmed:": "41"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Good",
+  "voice_type": "MaleAdult01DefaultBDC",
+  "geck_race": "CaucasianOld",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Surprise 100",
+      "response_text": "Don't suppose you'll let me finish this drink before killing me? Hmm?{there is a full scale massacre going on, and he is drinking pretending it isn't happening.}",
+      "index": "1"
+    },
+    {
+      "topic": "MS12Basement",
+      "topic_text": "I don't suppose you know anything about the basement? And some tunnels?",
+      "emotion": "Surprise 50",
+      "response_text": "Tunnels in the basement? No can't say that I do.{high class alcoholic struggling to remember something}",
+      "index": "11"
+    },
+    {
+      "topic": "MS12FinResidents",
+      "topic_text": "What's it like living at Tenpenny Tower?",
+      "emotion": "Happy 100",
+      "response_text": "It's clean and safe  since those Ghouls left  and Tenpenny knows how to stock the lounge with the good stuff. Stop by. Share a drink!{high class alcoholic}",
+      "index": "15"
+    },
+    {
+      "topic": "MS12Greeting1",
+      "topic_text": "I'm nobody in particular. But I'm sure you'll soon come to like me.",
+      "emotion": "Happy 100",
+      "response_text": "Oh, fine. We'll have to share a drink sometime. I'm always in the Federalist Lounge. There's certainly plenty to drink about.{snobby self important alcoholic}",
+      "index": "17"
+    },
+    {
+      "topic": "MS12Greeting2",
+      "topic_text": "I'm your worst nightmare.",
+      "emotion": "Neutral 50",
+      "response_text": "Well, then you'll excuse me if I don't invite you to share a drink?{snobby self important alcoholic brushing off a put down}",
+      "index": "20"
+    },
+    {
+      "topic": "MS12Greeting3",
+      "topic_text": "<Say nothing.>",
+      "emotion": "Surprise 100",
+      "response_text": "I'm glad to meet someone who doesn't want to talk my ear off. We should get a drink together. I hate when people talk while I'm drinking. Don't you?{snobby self important alcoholic}",
+      "index": "22"
+    },
+    {
+      "topic": "MS12IntroToGhoul1",
+      "topic_text": "You could say I'm an expert when it comes to dealing with Ghouls.",
+      "emotion": "Surprise 75",
+      "response_text": "Really? Fantastic! You can give that Gustavo a lesson or two!{happy to have a hero and frustrated at person who isn't fixing the problem}",
+      "index": "25"
+    },
+    {
+      "topic": "MS12IntroToGhoul2",
+      "topic_text": "Let's just say I never met a Ghoul I liked.",
+      "emotion": "Sad 50",
+      "response_text": "They do seem a bit anti-social don't they?{high class alcoholic concurring with a drinking buddy}",
+      "index": "26"
+    },
+    {
+      "topic": "MS12IntroToGhoul3",
+      "topic_text": "Look, I know enough about Ghouls not to hate them.",
+      "emotion": "Neutral 50",
+      "response_text": "Oh. I see. Well. I've never met one, so I wouldn't know. I just always thought... I guess I really don't know what I thought...{high class alcoholic coming to terms with his bigotry, and losing his train of thought}",
+      "index": "28"
+    },
+    {
+      "topic": "MS12ResidentsBranch",
+      "topic_text": "What's it like living at Tenpenny Tower?",
+      "emotion": "Happy 50",
+      "response_text": "Well it's a great place to live... IF you don't mind GHOULS breathing down your neck.{(emphasize IF and GHOULS) high class alcoholic muttering under his breath}",
+      "index": "29"
+    },
+    {
+      "topic": "MS12ResidentsGhoulsAbout these Ghouls...",
+      "topic_text": "I don't suppose you know much about those Ghouls?",
+      "emotion": "Fear 50",
+      "response_text": "We haven't discussed this already? Apparently there's a pack of zombies living in the tunnels. Gustavo says he has it under control.{high class alcoholic}",
+      "index": "30"
+    },
+    {
+      "topic": "MS12ResidentsGhoulsChoice1MS12ResidentsGhoulsChoiceGood",
+      "topic_text": "I might be able to help deal with the problem.",
+      "emotion": "Happy 100",
+      "response_text": "Yeah? Talk to Gustavo. He may wish to employ your assistance.{surprised but happy someone is taking charge}",
+      "index": "32"
+    },
+    {
+      "topic": "MS12ResidentsGhoulsChoice2MS12ResidentsGhoulsChoiceBad",
+      "topic_text": "You ever wonder if maybe you drink too much?",
+      "emotion": "Disgust 100",
+      "response_text": "Look around... what else is there to do?{self important indignation}",
+      "index": "33"
+    },
+    {
+      "topic": "MS12ResidentsGhoulsChoice3MS12ResidentsGhoulsChoiceNeutral",
+      "topic_text": "Cheers.",
+      "emotion": "Disgust 10",
+      "response_text": "We shall simply have to ignore them until they bugger off.{(resigned) self important snob}",
+      "index": "34"
+    },
+    {
+      "topic": "MS12ResidentsNeighbors",
+      "topic_text": "How would you feel about having a few Ghoul neighbors?",
+      "emotion": "Surprise 75",
+      "response_text": "I know you've been talking to the others about the Ghouls... and I've been mulling the whole thing over a few cocktails... well more than a few...{hesitant but sincere}",
+      "index": "35"
+    },
+    {
+      "topic": "MS12ResidentsNeighborsBad",
+      "topic_text": "It's wise to be afraid of Ghouls. They'll kill you when you aren't looking.",
+      "emotion": "Neutral 50",
+      "response_text": "So I've heard. I have to wonder though, if they are all mindless killing machines, why do some of them want to be treated like humans so badly?{snob losing prejudice}",
+      "index": "39"
+    },
+    {
+      "topic": "MS12ResidentsNeighborsGood",
+      "topic_text": "I've met these Ghouls. They're civilized and pose no threat.",
+      "emotion": "Surprise 50",
+      "response_text": "Really? Well... As long as they don't bother me... I guess,  I really don't care.{letting go of prejudice}",
+      "index": "40"
+    },
+    {
+      "topic": "MS12ResidentsNeighborsGoodPetition",
+      "topic_text": "Would you tell Mister Tenpenny that you wouldn't mind Ghoul neighbors?",
+      "emotion": "Surprise 50",
+      "response_text": "What the hell? Sure.",
+      "index": "41"
+    },
+    {
+      "topic": "MS12ResidentsNeighborsNeutral",
+      "topic_text": "Perhaps.",
+      "emotion": "Surprise 50",
+      "response_text": "You're the one that asked the question. If you don't mind, I'd like to get another drink.{high class alcoholic}",
+      "index": "42"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "DialogueTenpennyConv00",
+      "topic_text": "DialogueTenpennyConv00",
+      "emotion": "Surprise 75",
+      "response_text": "Oh that? It was nothing. A one time indiscretion, I assure you. Won't happen again, ol' chap. Scouts honor and all that. Care for a drink?{a high class drunk dismissing mention of a disturbance he cause either}",
+      "index": "43"
+    },
+    {
+      "topic": "DialogueTenpennyConv01",
+      "topic_text": "DialogueTenpennyConv01",
+      "emotion": "Surprise 75",
+      "response_text": "What? Oh right. Hah! That's a good one, Daring. I'm fine really. I've been drinking since I was a toddler. I can hold my liquor. What's new with you?{confused, then gets the joke. \"Daring\" is the nickname of his friend}",
+      "index": "49"
+    },
+    {
+      "topic": "DialogueTenpennyConv02",
+      "topic_text": "DialogueTenpennyConv02",
+      "emotion": "Happy 50",
+      "response_text": "Indeed! I'll drink to that! Cheers!{making a toast}",
+      "index": "54"
+    },
+    {
+      "topic": "DialogueTenpennyEatStartTopic",
+      "topic_text": "DialogueTenpennyEatStartTopic",
+      "emotion": "Neutral 50",
+      "response_text": "My stomach is growling at me.{hungry and on his way to get food}",
+      "index": "60"
+    },
+    {
+      "topic": "DialogueTenpennySleepStartTopic",
+      "topic_text": "DialogueTenpennySleepStartTopic",
+      "emotion": "Neutral 50",
+      "response_text": "Well. I better go pass out for a while.{tired and heading off to bed}",
+      "index": "61"
+    },
+    {
+      "topic": "DialogueTenpennySusanSleepWithStartTopic",
+      "topic_text": "DialogueTenpennySusanSleepWithStartTopic",
+      "emotion": "Surprise 50",
+      "response_text": "I'm umm... I'm going to go stretch my legs for awhile. Take a little walk around the tower to loosen up my nerves a little.{covering for his sneaking out to be with his mistress}",
+      "index": "62"
+    },
+    {
+      "topic": "GOODBYE",
+      "topic_text": "I have to go now.",
+      "emotion": "Neutral 50",
+      "response_text": "Right on!{high class alcoholic}",
+      "index": "63"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Surprise 50",
+      "response_text": "Daring! What the bloody hell are you up to this time?{confused and slightly suspicious}",
+      "index": "66"
+    }
+  ],
+  "combat": []
+}

@@ -1,0 +1,192 @@
+{
+  "name": "Bleak",
+  "url": "/wiki/Bleak",
+  "dialogue_name": "Bleak.txt",
+  "dialogue_url": "/wiki/Bleak.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "0001569D",
+  "ref_id": "00030D12",
+  "editor_id": "Bleak",
+  "location": "Slave house,Paradise Falls",
+  "location_url": "/wiki/Slave_house",
+  "descriptions": [
+    "Bleak is a slave being held at Paradise Falls in Fallout 3.",
+    "Bleak is a slave that continuously plans her escape from Paradise Falls, spending her days memorizing the slavers' patrols and routine in hopes of using it to her advantage. Ultimately, it rests upon her shoulders to carry out the breakout as she actively works towards it, and has both a sober mind and the will to escape.",
+    "Bleak can be found at the Paradise Falls slave house for the entire day.",
+    "Xbox 360 Despite any efforts to free Bleak or make her leave the compound (which include killing all the slavers in Paradise Falls), she may remain in the holding cell repeating phrases like \"I've got to get out of here\" and is seemingly unaware that she is no longer obstructed from leaving (this may sometimes occur if the Rescue from Paradise quest has already been completed). "
+  ],
+  "race": "Human",
+  "gender": "Female",
+  "role": "Slave",
+  "detailed_location": "Slave house,Paradise Falls",
+  "voice_actor": "Shari Elliker",
+  "special": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 5,
+    "Intelligence": 5,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "mod_special_values": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 6,
+    "Charisma": 5,
+    "Intelligence": 5,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "level": "1",
+  "misc_skills": [
+    {
+      "Hit Points:": "70(75)"
+    },
+    {
+      "Critical Chance:": "5%"
+    },
+    {
+      "Unarmed Dam.:": "0.75"
+    },
+    {
+      "Poison Resist.:": "20%(25%)"
+    },
+    {
+      "Rad. Resist.:": "8%(10%)"
+    },
+    {
+      "Carry Weight:": "200"
+    },
+    {
+      "Damage Res.:": "5%"
+    }
+  ],
+  "karma": "Good",
+  "voice_type": "FemaleAdult01DefaultDC",
+  "geck_race": "AfricanAmerican",
+  "topics": [
+    {
+      "topic": "FFPFSlaveGateIsOpen",
+      "topic_text": "The gate's open. Run for it!",
+      "emotion": "Neutral 50",
+      "response_text": "Now's our chance! Let's go!",
+      "index": "1"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "I'm getting out of here!",
+      "index": "2"
+    },
+    {
+      "topic": "PFBleakView",
+      "topic_text": "What are you looking at?",
+      "emotion": "Anger 50",
+      "response_text": "I'm watching the patrols, what do you think I'm looking at?",
+      "index": "5"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "I have to go now.",
+      "emotion": "Neutral 50",
+      "response_text": "Come back... please.",
+      "index": "7"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Neutral 50",
+      "response_text": "Awful... just awful...",
+      "index": "8"
+    },
+    {
+      "topic": "PFTalkBleakBreadbox1",
+      "topic_text": "PFTalkBleakBreadbox1",
+      "emotion": "Neutral 50",
+      "response_text": "Keep your voice down, old man. Listen, if you're not part of the solution, then you're part of the problem. Help or shut up.",
+      "index": "15"
+    },
+    {
+      "topic": "PFTalkBleakBreadbox3",
+      "topic_text": "PFTalkBleakBreadbox3",
+      "emotion": "Neutral 50",
+      "response_text": "I don't care, Breadbox. I'm getting out of here. Stay if you want, just keep out of my way, or I'll assume that you're with them.",
+      "index": "17"
+    },
+    {
+      "topic": "PFTalkBleakBronson1",
+      "topic_text": "PFTalkBleakBronson1",
+      "emotion": "Neutral 50",
+      "response_text": "You got the right one this time? Are you serious? Here, let me see. Hand it to me.",
+      "index": "19"
+    },
+    {
+      "topic": "PFTalkBleakBronson3",
+      "topic_text": "PFTalkBleakBronson3",
+      "emotion": "Neutral 50",
+      "response_text": "What the-? Dammit Bronson! This isn't what I asked for! I needed one of the detonators not... whatever this is!",
+      "index": "21"
+    },
+    {
+      "topic": "PFTalkBleakBronson5",
+      "topic_text": "PFTalkBleakBronson5",
+      "emotion": "Neutral 50",
+      "response_text": "How many times have we gone over this, Bronson? Can't you stay sober enough to do one little thing?",
+      "index": "23"
+    },
+    {
+      "topic": "PFTalkBleakBronson7",
+      "topic_text": "PFTalkBleakBronson7",
+      "emotion": "Neutral 50",
+      "response_text": "I suppose I can do that. Just don't let me down again, Bronson. I need your help.",
+      "index": "25"
+    },
+    {
+      "topic": "PFTalkBreadboxBleak2",
+      "topic_text": "PFTalkBreadboxBleak2",
+      "emotion": "Neutral 50",
+      "response_text": "Are you serious? You want to die here? In this place? An old good for nothing slave? I mean come on, there so much more to...",
+      "index": "27"
+    },
+    {
+      "topic": "PFTalkBreadboxBleak4",
+      "topic_text": "PFTalkBreadboxBleak4",
+      "emotion": "Neutral 50",
+      "response_text": "All right, all right. You know where to find me if you change your mind.",
+      "index": "29"
+    },
+    {
+      "topic": "PFTalkBronsonBleak2",
+      "topic_text": "PFTalkBronsonBleak2",
+      "emotion": "Neutral 50",
+      "response_text": "That deal we made, we're still square, right? You know what you need to do?",
+      "index": "31"
+    },
+    {
+      "topic": "PFTalkBronsonBleak4",
+      "topic_text": "PFTalkBronsonBleak4",
+      "emotion": "Neutral 50",
+      "response_text": "Good, Bronson. Don't let me down.",
+      "index": "33"
+    },
+    {
+      "topic": "PFTalkHiResponse1",
+      "topic_text": "PFTalkHiResponse1",
+      "emotion": "Neutral 50",
+      "response_text": "Not now. Someone will hear.",
+      "index": "35"
+    }
+  ],
+  "combat": []
+}

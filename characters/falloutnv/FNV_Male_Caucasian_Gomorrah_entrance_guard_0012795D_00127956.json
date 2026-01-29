@@ -1,0 +1,126 @@
+{
+  "name": "Gomorrah entrance guard",
+  "url": "/wiki/Gomorrah_entrance_guard",
+  "dialogue_name": "VGomEntranceGuard.txt",
+  "dialogue_url": "/wiki/VGomEntranceGuard.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "0012795D",
+  "ref_id": "00127956",
+  "editor_id": "vGOMEntranceGuard",
+  "location": "Gomorrahcasino floor",
+  "location_url": "/wiki/Gomorrah",
+  "descriptions": [
+    "The Gomorrah entrance guard (named Omerta thug in-game) is an Omerta gang member found in the entrance hall of Gomorrah in 2281.",
+    "The Gomorrah entrance guard is a unique Omerta thug who guards the Gomorrah entrance.",
+    "The Courier is required to submit all their weapons to the guard before going any further. It's possible to smuggle holdout weapons past him though."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Omertas",
+  "role": "Greeter",
+  "detailed_location": "Gomorrah",
+  "voice_actor": "Emerson Brooks",
+  "special": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 4,
+    "Intelligence": 4,
+    "Agility": 7,
+    "Luck": 5
+  },
+  "level": "16",
+  "tag_skills": [
+    {
+      "Energy Weap.:": "85"
+    },
+    {
+      "Guns:": "89"
+    },
+    {
+      "Melee Weap.:": "87"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "140"
+    },
+    {
+      "Critical Chance:": "5%"
+    },
+    {
+      "Unarmed Dam.:": "1.15"
+    },
+    {
+      "Poison Resist.:": "15%"
+    },
+    {
+      "Rad. Resist.:": "6%"
+    },
+    {
+      "Carry Weight:": "210"
+    }
+  ],
+  "karma": "Evil",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "vDialogueGomorrahGenericvGOMEntranceGuardTopic000",
+      "topic_text": "Here you go. <Hand over all weapons>",
+      "emotion": "Neutral 50",
+      "response_text": "You'll get these back on your way out.",
+      "index": "1"
+    },
+    {
+      "topic": "vDialogueGomorrahGenericvGOMEntranceGuardTopic001",
+      "topic_text": "Okay. <Keep holdout weapons>",
+      "emotion": "Neutral 50",
+      "response_text": "You'll get these back on your way out.",
+      "index": "2"
+    },
+    {
+      "topic": "vDialogueGomorrahGenericvGOMEntranceGuardTopic002",
+      "topic_text": "Nevermind, I'll be back.",
+      "emotion": "Neutral 50",
+      "response_text": "Then get the fuck out of here.",
+      "index": "3"
+    },
+    {
+      "topic": "vDialogueGomorrahGenericvGOMEntranceGuardTopic003",
+      "topic_text": "Sorry, no one parts me from my weapons.",
+      "emotion": "Neutral 50",
+      "response_text": "You sure you want it to go down this way? You're going to have every Omerta in this place jumping down your throat.",
+      "index": "4"
+    },
+    {
+      "topic": "vDialogueGomorrahGenericvGOMEntranceGuardTopic004",
+      "topic_text": "Yep, let's rock.",
+      "emotion": "Neutral 50",
+      "response_text": "All right, this is going to be fun.",
+      "index": "5"
+    },
+    {
+      "topic": "vDialogueGomorrahGenericvGOMEntranceGuardTopic005",
+      "topic_text": "Nevermind, I'll be back.",
+      "emotion": "Neutral 50",
+      "response_text": "All right, come back any time.",
+      "index": "6"
+    },
+    {
+      "topic": "vGOMEntranceGreeting",
+      "topic_text": "vGOMEntranceGreeting",
+      "emotion": "Neutral 50",
+      "response_text": "Hey, no one but Omertas are allowed to carry guns into Gomorrah! Check your weapons with me.",
+      "index": "7"
+    }
+  ],
+  "conversation": [],
+  "combat": []
+}

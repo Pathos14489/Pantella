@@ -1,0 +1,334 @@
+{
+  "name": "Manny Vargas",
+  "url": "/wiki/Manny_Vargas",
+  "dialogue_name": "MannyVargas.txt",
+  "dialogue_url": "/wiki/MannyVargas.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000941DC",
+  "ref_id": "0009649B",
+  "editor_id": "MannyVargas",
+  "location": "Dino Bite gift shop",
+  "location_url": "/wiki/Dino_Bite_gift_shop",
+  "descriptions": [
+    "Manny Vargas is a former Great Khan who is a veteran NCR Army sniper living in Novac in Fallout: New Vegas.",
+    "Born and raised in North Vegas, Manny once ran with the Great Khans",
+    "The good run lasted until the Bitter Springs Massacre. Both Manny and Craig were stationed at Camp Golf at the time. Knowing he would have to face his former comrades, Manny faked an illness and stayed back in camp. He is not clear on what happened, just that a lot of people died and many of them did not want to be a part of the fighting at all. Although he harbors no ill will towards the Army, blaming only the chaos of the battlefield for the massacre, it made it impossible for him to continue serving. The fact that people would sometimes call him a murderer to his face when they secured a Mojave town did not help.",
+    "Manny and Craig took their papers and left to find a new life in the wasteland. Manny convinced his friend to settle at Novac, where their rifles could do some good.",
+    "When Carla was abducted by the Legion, Craig came to his friend to confide in him, but Manny failed to hide his satisfaction at her disappearance. The grieving husband could not take this kind of reaction from his best friend and turned his back on him. Although Manny hoped Craig would come around, Boone did not. Instead, he disappeared from Novac, eventually returning grim, cold and a shell of a man.",
+    "Manny was left without a friend in Novac. He was widely respected for his role as a sniper and leadership in security matters, but although people look up to him and depend on him, nobody really cares about his feelings.",
+    "Manny was Craig Boone's closest friend ever since their time in First Recon, although their friendship was tested by Carla and her personality. When he later lost his friend's trust, Manny also lost his closest confidante and the only person who seemed to understand what he felt.",
+    "Although he is no longer a member of the Great Khans, he is still loyal to them and helps them when they are in need, proving the doubters wrong."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Great Khans(formerly)NCR Army(formerly)First Recon(formerly)Novac",
+  "role": "Sniper2 of Hearts(withBoone)",
+  "detailed_location": "Dinky the T-Rex,NovacManny Vargas' room",
+  "voice_actor": "Shane Johnson",
+  "special": {
+    "Strength": 4,
+    "Perception": 8,
+    "Endurance": 6,
+    "Charisma": 7,
+    "Intelligence": 4,
+    "Agility": 5,
+    "Luck": 7
+  },
+  "level": "4",
+  "misc_skills": [],
+  "karma": "Neutral",
+  "voice_type": "MaleAdult09",
+  "geck_race": "Hispanic",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "You have any luck with the ghouls? I'm counting on you.",
+      "index": "1"
+    },
+    {
+      "topic": "MannyVargasMVQ01Answer",
+      "topic_text": "VMQ01MannyVargasAnswer",
+      "emotion": "Neutral 50",
+      "response_text": "The guy you're looking for, Benny, he was traveling with some members from my old gang. They were going to Boulder City.",
+      "index": "3"
+    },
+    {
+      "topic": "MannyVargasProtectTownFrom",
+      "topic_text": "What do you protect your town from?",
+      "emotion": "Neutral 50",
+      "response_text": "You name it. Anything that comes within a thousand yards that looks like trouble.",
+      "index": "4"
+    },
+    {
+      "topic": "MannyVargasVMQ01",
+      "topic_text": "I'm looking for a man in a checkered coat.",
+      "emotion": "Neutral 50",
+      "response_text": "Sure, I know him. What do you want with him?",
+      "index": "7"
+    },
+    {
+      "topic": "MannyVargasVMQ01TurnIn",
+      "topic_text": "The ghouls are no longer at REPCONN.",
+      "emotion": "Neutral 50",
+      "response_text": "Really? Unbelievable, man! I knew that wasn't gonna be easy.",
+      "index": "9"
+    },
+    {
+      "topic": "MannyVargasWhatArgueWithBoonesWife",
+      "topic_text": "What did you and Boone's wife argue about?",
+      "emotion": "Neutral 50",
+      "response_text": "Man, you name it.",
+      "index": "11"
+    },
+    {
+      "topic": "MannyVargasWhatGangWereYouInSo you were in some gang? Were they tough?",
+      "topic_text": "So you were in a gang? Were they tough?",
+      "emotion": "Neutral 50",
+      "response_text": "Were they tough? I was in the Khans, man. It doesn't get any badder.{I can't believe you just asked me that.}",
+      "index": "16"
+    },
+    {
+      "topic": "MannyVargasWhoAreYou",
+      "topic_text": "Who are you?",
+      "emotion": "Neutral 50",
+      "response_text": "I'm Manny. I'm on security detail here.",
+      "index": "17"
+    },
+    {
+      "topic": "MannyVargasWhosBoone",
+      "topic_text": "Who's Boone?",
+      "emotion": "Neutral 50",
+      "response_text": "Boone's a sniper, same as me. Used to spot for him when we were enlisted with the NCR.",
+      "index": "19"
+    },
+    {
+      "topic": "MannyVargasWhyOnBadTerms",
+      "topic_text": "Why are you on bad terms with Boone?",
+      "emotion": "Disgust 10",
+      "response_text": "Me and his wife, we didn't see eye-to-eye on some things. We had some pretty big arguments.",
+      "index": "22"
+    },
+    {
+      "topic": "SnipersRevengeComeOutside",
+      "topic_text": "Come with me. There's something you should see, in front of the dinosaur.",
+      "emotion": "Happy 35",
+      "response_text": "What, now? This better be good.",
+      "index": "24"
+    },
+    {
+      "topic": "SnipersRevengeDidYouDoIt",
+      "topic_text": "Did you have anything to do with Boone's wife's disappearance?",
+      "emotion": "Happy 25",
+      "response_text": "Believe me. When I heard the news, my first thought was, I owe somebody. Big. I figured Boone would come around after a while.",
+      "index": "26"
+    },
+    {
+      "topic": "SnipersRevengeHurtBoonesWife",
+      "topic_text": "Who would want to hurt Boone's wife?",
+      "emotion": "Neutral 50",
+      "response_text": "Man, everybody. That girl didn't have one friend in this whole town. She didn't want any.",
+      "index": "28"
+    },
+    {
+      "topic": "SnipersRevengeTooFar",
+      "topic_text": "SnipersRevengeTooFar",
+      "emotion": "Neutral 50",
+      "response_text": "Maybe some other time. I'm not really in the mood for a hike.",
+      "index": "31"
+    },
+    {
+      "topic": "VDialogueNovacMannyVargasTopic000",
+      "topic_text": "I have a score to settle.",
+      "emotion": "Neutral 50",
+      "response_text": "Doesn't surprise me. Guy seemed like he'd do whatever it takes to get what he wants. Probably makes a lot of enemies.",
+      "index": "32"
+    },
+    {
+      "topic": "VDialogueNovacMannyVargasTopic001",
+      "topic_text": "What was your tour with the NCR like?",
+      "emotion": "Neutral 50",
+      "response_text": "Oh, it was great. I wouldn't trade it.",
+      "index": "35"
+    },
+    {
+      "topic": "VDialogueNovacMannyVargasTopic002",
+      "topic_text": "So why'd you leave?",
+      "emotion": "Neutral 50",
+      "response_text": "Ah, well... I just felt like it was time, you know? Wanted to have a home.{Fidgety, dodging the real answer.}",
+      "index": "37"
+    },
+    {
+      "topic": "VDialogueNovacMannyVargasTopic003",
+      "topic_text": "What did happen at Bitter Springs?",
+      "emotion": "Neutral 50",
+      "response_text": "I still don't know exactly. Just that a lot of people died who didn't want to be part of the fighting at all.",
+      "index": "40"
+    },
+    {
+      "topic": "VDialogueNovacMannyVargasTopic004",
+      "topic_text": "Let's talk about something else.",
+      "emotion": "Neutral 50",
+      "response_text": "Sure thing.",
+      "index": "43"
+    },
+    {
+      "topic": "VDialogueNovacMannyVargasTopic005",
+      "topic_text": "He has something of mine.",
+      "emotion": "Neutral 50",
+      "response_text": "You talking about that chip? Man, I don't think he's giving it up.",
+      "index": "44"
+    },
+    {
+      "topic": "VDialogueNovacMannyVargasTopic006",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Later.",
+      "index": "45"
+    },
+    {
+      "topic": "VDialogueNovacMannyVargasTopic007",
+      "topic_text": "I'm looking for answers.",
+      "emotion": "Neutral 50",
+      "response_text": "Must be something pretty important to be chasing a guy like that.",
+      "index": "46"
+    },
+    {
+      "topic": "VDialogueNovacMannyVargasTopic008",
+      "topic_text": "None of your business.",
+      "emotion": "Neutral 50",
+      "response_text": "Hey, doesn't matter to me. I was just curious.",
+      "index": "47"
+    },
+    {
+      "topic": "VDialogueNovacMannyVargasTopic009",
+      "topic_text": "Whatever he's doing, I want in on it.",
+      "emotion": "Neutral 50",
+      "response_text": "A piece of the action, huh? I don't think he's the sharing type, but okay.",
+      "index": "48"
+    },
+    {
+      "topic": "VDialogueNovacMannyVargasTopic010",
+      "topic_text": "<Lie> He's a good friend of mine. I'm trying to help him out.",
+      "emotion": "Neutral 50",
+      "response_text": "{skeptical but going with it because he doesn't care}Oh yeah? A good friend? If you say so, man.",
+      "index": "49"
+    },
+    {
+      "topic": "VDialogueNovacMannyVargasTopic011",
+      "topic_text": "Forget it. I'll find him on my own.",
+      "emotion": "Neutral 50",
+      "response_text": "{Shrugs}Hey, do what you want. I'm just trying to make it easier on you.",
+      "index": "50"
+    },
+    {
+      "topic": "VDialogueNovacMannyVargasTopic012",
+      "topic_text": "What do you need?",
+      "emotion": "Neutral 50",
+      "response_text": "{NO-vack}Novac, it's home for me now. I want that to be for good. I like it here, and I've left too many homes behind.",
+      "index": "51"
+    },
+    {
+      "topic": "VDialogueNovacMannyVargasTopic013",
+      "topic_text": "You've had your needs neglected for far too long, haven't you? I can tell.",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah, I... everybody depends on you, you know? But they don't ask you about how you feel. What you worry about.{Surprised at meeting an understanding soul.}",
+      "index": "54"
+    },
+    {
+      "topic": "VDialogueNovacMannyVargasTopic014",
+      "topic_text": "Any idea why they went that way?",
+      "emotion": "Neutral 50",
+      "response_text": "No clue. I know Benny hadn't paid up yet. Maybe that was where they were supposed to get square.",
+      "index": "56"
+    },
+    {
+      "topic": "VDialogueNovacMannyVargasTopic015",
+      "topic_text": "Where is Boulder City?",
+      "emotion": "Neutral 50",
+      "response_text": "It's straight up Route 93 from here. Just keep following the road north.",
+      "index": "57"
+    },
+    {
+      "topic": "VDialogueNovacMannyVargasTopic016",
+      "topic_text": "That's all I needed to know.",
+      "emotion": "Neutral 50",
+      "response_text": "Glad I could help.",
+      "index": "58"
+    },
+    {
+      "topic": "VDialogueNovacMannyVargasTopic017",
+      "topic_text": "Sure. Maybe I can help ease your mind.",
+      "emotion": "Neutral 50",
+      "response_text": "See? I was right about you.{in a positive way}",
+      "index": "61"
+    },
+    {
+      "topic": "VDialogueNovacMannyVargasTopic018",
+      "topic_text": "I can't. I'm in a hurry.",
+      "emotion": "Neutral 50",
+      "response_text": "Say no more. I hope things work out for you.",
+      "index": "62"
+    },
+    {
+      "topic": "VDialogueNovacMannyVargasTopic019",
+      "topic_text": "Why don't you deal with it?",
+      "emotion": "Neutral 50",
+      "response_text": "I would. But I've gotta watch the road. Caesar's Legion has been taking territory just east of here. They took Nelson.",
+      "index": "63"
+    },
+    {
+      "topic": "VDialogueNovacMannyVargasTopic020",
+      "topic_text": "What needs to be done?",
+      "emotion": "Neutral 50",
+      "response_text": "Well they gotta go, or this'll be a ghost town before long.",
+      "index": "65"
+    },
+    {
+      "topic": "VDialogueNovacMannyVargasTopic021",
+      "topic_text": "Okay, I'll see what can be done about it.",
+      "emotion": "Neutral 50",
+      "response_text": "It'd mean a lot to me.",
+      "index": "67"
+    },
+    {
+      "topic": "VDialogueNovacMannyVargasTopic023",
+      "topic_text": "Now about the man I'm looking for...",
+      "emotion": "Neutral 50",
+      "response_text": "Okay, I'll tell you everything I know, like I promised.",
+      "index": "68"
+    },
+    {
+      "topic": "VDialogueNovacMannyVargasTopic024",
+      "topic_text": "What was I supposed to do again?",
+      "emotion": "Neutral 50",
+      "response_text": "Just head over to the REPCONN test site west of here. See if you can get the ghouls out of there.",
+      "index": "69"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah, see you.",
+      "index": "70"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "Hello",
+      "emotion": "Neutral 50",
+      "response_text": "Hey.",
+      "index": "71"
+    }
+  ],
+  "combat": []
+}

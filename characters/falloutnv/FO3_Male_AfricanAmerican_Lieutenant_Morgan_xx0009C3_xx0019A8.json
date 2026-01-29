@@ -1,0 +1,302 @@
+{
+  "name": "Lieutenant Morgan",
+  "url": "/wiki/Thomas_Morgan",
+  "dialogue_name": "DLC02LtMorgan.txt",
+  "dialogue_url": "/wiki/DLC02LtMorgan.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": true,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "xx0009C3",
+  "ref_id": "xx0019A8",
+  "editor_id": "DLC02LtMorgan",
+  "location": "U.S. Army field headquarters",
+  "location_url": "/wiki/U.S._Army_field_headquarters",
+  "descriptions": [
+    "Lieutenant Thomas Morgan is an intelligence and logistics officer providing American soldiers with intel and clearing requisitions at the U.S. Army field headquarters in the Anchorage Reclamation simulation in the Fallout 3 add-on Operation: Anchorage.",
+    "Thomas Morgan is a young officer of the Intelligence Corps,",
+    "As part of his duties, Morgan processes intel, combining reconnaissance reports, radar monitoring and other data,",
+    "He also ensures that soldiers equip themselves with the correct gear for upcoming missions, using requisition terminals that ensure proper paperwork is filled (though he dislikes the amount of bureaucracy),",
+    "He refers to the strike team as \"Patterson's suicide team.\"",
+    "1 He carries a 10mm pistol skinned with the wasteland version graphics, instead of the pre-War version typical in the simulation. He cannot be induced to draw the weapon, nor can it be pickpocketed from him.",
+    "Thomas Morgan appears only in a simulation in the Fallout 3 add-on Operation: Anchorage."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "United States Army(Intelligence Corps)",
+  "role": "Second in command",
+  "detailed_location": "Anchorage Reclamation simulationU.S. Army field headquarters, command tent",
+  "voice_actor": "Craig Sechler",
+  "special": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 2,
+    "Intelligence": 5,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "voice_type": "DLC02MaleGeneric2",
+  "geck_race": "AfricanAmerican",
+  "topics": [
+    {
+      "topic": "DLC02OA3MorganStart01",
+      "topic_text": "Very funny, Lieutenant.",
+      "emotion": "Disgust 90",
+      "response_text": "Hey, all I got to keep me warm out here in this freezebox is my sense of humor.",
+      "index": "1"
+    },
+    {
+      "topic": "DLC02OA3MorganStart02",
+      "topic_text": "Suicide Squad? Why do they call it that?",
+      "emotion": "Disgust 70",
+      "response_text": "Do I really have to answer that? You aren't going after civilian targets you know... this is the big leagues.",
+      "index": "3"
+    },
+    {
+      "topic": "DLC02OA3MorganStart03",
+      "topic_text": "Hey, I didn't sign up for this.",
+      "emotion": "Neutral 50",
+      "response_text": "None of us did. We all just end up doing what we're supposed to do and hopefully make the enemy die in the process.",
+      "index": "5"
+    },
+    {
+      "topic": "DLC02OA3MorganStart04",
+      "topic_text": "This Strike Team... I've never led troops like that before.",
+      "emotion": "Happy 90",
+      "response_text": "Don't worry about it. Sergeant Montgomery will be your squad commander and he knows all the in's and out's of the team.",
+      "index": "7"
+    },
+    {
+      "topic": "DLC02OA3MorganStart05",
+      "topic_text": "I hope you know more about this Strike Team, cause I sure don't.",
+      "emotion": "Happy 90",
+      "response_text": "Don't worry about it. Sergeant Montgomery will be your squad commander and he knows all the in's and out's of the team.",
+      "index": "10"
+    },
+    {
+      "topic": "DLC02OA3MorganStart06",
+      "topic_text": "You can tell General Chase I don't need a Strike Team... I work alone.",
+      "emotion": "Happy 100",
+      "response_text": "Ha ha! Cocky bastard, aren't ya? You planning on taking on the whole Red Army alone?",
+      "index": "13"
+    },
+    {
+      "topic": "DLC02OA3TLIntel",
+      "topic_text": "I'm looking for your latest intel reports.",
+      "emotion": "Neutral 50",
+      "response_text": "That's my specialty. What target did you need a report on?",
+      "index": "17"
+    },
+    {
+      "topic": "DLC02OA3TLIntel01",
+      "topic_text": "Give me the latest on the Chimera Depot.",
+      "emotion": "Neutral 50",
+      "response_text": "You've got two fuel tanks to destroy. One in the central courtyard of the facility and one near the rear gate.",
+      "index": "18"
+    },
+    {
+      "topic": "DLC02OA3TLIntel02",
+      "topic_text": "Give me the latest on the Listening Post.",
+      "emotion": "Disgust 90",
+      "response_text": "Oh, this place is a honey pot, lemme tell you.{sarcasm}",
+      "index": "20"
+    },
+    {
+      "topic": "DLC02OA3TLIntel03",
+      "topic_text": "Give me the latest on the Pulse Field.",
+      "emotion": "Disgust 90",
+      "response_text": "The problem out there isn't the Field itself... I mean, you wouldn't be foolish enough to drag robots out there with you.",
+      "index": "23"
+    },
+    {
+      "topic": "DLC02OA3TLQuartermaster",
+      "topic_text": "I need some new gear. Can you set me up?",
+      "emotion": "Sad 90",
+      "response_text": "Sorry, that's all Uncle Sam is going to issue ya. Maybe you could find some more stuff out there in the field.",
+      "index": "26"
+    },
+    {
+      "topic": "DLC02OA3TLStrikeTeam",
+      "topic_text": "I need to discuss my Strike Team.",
+      "emotion": "Neutral 50",
+      "response_text": "Okay, that's what I'm here for.",
+      "index": "30"
+    },
+    {
+      "topic": "DLC02OA3TLStrikeTeam01",
+      "topic_text": "How do I put together my Strike Team?",
+      "emotion": "Happy 70",
+      "response_text": "Uncle Sam's made it really easy for you. All you have to do is use Patterson's Terminal here in the Command Tent.",
+      "index": "31"
+    },
+    {
+      "topic": "DLC02OA3TLStrikeTeam02",
+      "topic_text": "Can't I just take a whole bunch of guys with me?",
+      "emotion": "Fear 70",
+      "response_text": "No way. The bigger your Strike Team, the bigger your footprint on all of the Chinese sensing devices. You need to think small.",
+      "index": "34"
+    },
+    {
+      "topic": "DLC02OA3TLStrikeTeam03",
+      "topic_text": "What if I lose a Strike Team member?",
+      "emotion": "Sad 60",
+      "response_text": "You can always speak to your Strike Team squad leader and requisition a new unit if you've lost one.",
+      "index": "37"
+    },
+    {
+      "topic": "DLC02OA3TLTargets",
+      "topic_text": "I need some more information about my objectives.",
+      "emotion": "Neutral 50",
+      "response_text": "Sure, what did you need to know?",
+      "index": "38"
+    },
+    {
+      "topic": "DLC02OA3TLTargets01",
+      "topic_text": "About the Chimera Depot...",
+      "emotion": "Happy 70",
+      "response_text": "Yes?",
+      "index": "39"
+    },
+    {
+      "topic": "DLC02OA3TLTargets01A",
+      "topic_text": "What exactly IS a Chimera?",
+      "emotion": "Neutral 50",
+      "response_text": "Put simply, it's a co-opted mining rig that's been changed into an armored vehicle -- bigger and tougher than any tank we have in our arsenal.",
+      "index": "40"
+    },
+    {
+      "topic": "DLC02OA3TLTargets01B",
+      "topic_text": "How do I take out the Fuel Tanks?",
+      "emotion": "Happy 90",
+      "response_text": "Take the Explosive Charges I gave you and locate both of the fuel tanks. Just stick 'em on and boom. Couldn't be easier.",
+      "index": "42"
+    },
+    {
+      "topic": "DLC02OA3TLTargets01C",
+      "topic_text": "What's the point of taking out the Chimera Depot?",
+      "emotion": "Disgust 70",
+      "response_text": "Well, I don't know about you, but if I was running across the main battlefield I'd like a few less of those monstrosities shooting at me.",
+      "index": "44"
+    },
+    {
+      "topic": "DLC02OA3TLTargets01D",
+      "topic_text": "Let me ask you about another target.",
+      "emotion": "Neutral 50",
+      "response_text": "Absolutely.",
+      "index": "46"
+    },
+    {
+      "topic": "DLC02OA3TLTargets02",
+      "topic_text": "About that Listening Post...",
+      "emotion": "Neutral 50",
+      "response_text": "Go on.",
+      "index": "47"
+    },
+    {
+      "topic": "DLC02OA3TLTargets02A",
+      "topic_text": "How exactly do I \"secure\" the Listening Post?",
+      "emotion": "Neutral 50",
+      "response_text": "Basically, you need to clear it of all personnel and make it safe for occupation by our troops.",
+      "index": "48"
+    },
+    {
+      "topic": "DLC02OA3TLTargets02B",
+      "topic_text": "What can I expect to find inside the post?",
+      "emotion": "Neutral 50",
+      "response_text": "The Chinese have a team of commandos they call their Crimson Dragoons. They're pretty much the best soldiers they've got.",
+      "index": "50"
+    },
+    {
+      "topic": "DLC02OA3TLTargets02C",
+      "topic_text": "What's the urgency in securing this facility?",
+      "emotion": "Neutral 50",
+      "response_text": "Well the Chinese Army not only uses the Listening Post to spot our forces and relay battle information, they also use it for air traffic control.",
+      "index": "52"
+    },
+    {
+      "topic": "DLC02OA3TLTargets03",
+      "topic_text": "About the Pulse Field...",
+      "emotion": "Neutral 50",
+      "response_text": "What did you need to know?",
+      "index": "54"
+    },
+    {
+      "topic": "DLC02OA3TLTargets03A",
+      "topic_text": "What does the Pulse Field do?",
+      "emotion": "Disgust 80",
+      "response_text": "Well, it generates a grid-based, localized electromagnetic pulse. Anything mechanical that goes through there gets all its circuits fried.",
+      "index": "55"
+    },
+    {
+      "topic": "DLC02OA3TLTargets03B",
+      "topic_text": "How am I going to destroy the Pulse Field?",
+      "emotion": "Neutral 50",
+      "response_text": "There's a bunker the Chinese have set up to monitor the area somewhere beyond the emitters.",
+      "index": "57"
+    },
+    {
+      "topic": "DLC02OA3TLTargets03C",
+      "topic_text": "This is the last objective?",
+      "emotion": "Neutral 50",
+      "response_text": "Yup. If you take down the Pulse Field, we'll send the T-51b shock troops in to blast through their defenses, and then it's on to the Headquarters.",
+      "index": "60"
+    },
+    {
+      "topic": "DLC02OA3TLTargets04",
+      "topic_text": "Let me change the subject.",
+      "emotion": "Happy 70",
+      "response_text": "Okay, whatever you need.",
+      "index": "61"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "You've hit the targets, now the only thing left is the refinery. Good luck.",
+      "index": "62"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "DLC02VoicesTalkMorgan01",
+      "topic_text": "DLC02VoicesTalkMorgan01",
+      "emotion": "Fear 70",
+      "response_text": "I'd say about 20 percent, sir. But that number significantly decreases if we can get the tin cans in there.",
+      "index": "69"
+    },
+    {
+      "topic": "DLC02VoicesTalkMorgan02",
+      "topic_text": "DLC02VoicesTalkMorgan02",
+      "emotion": "Neutral 50",
+      "response_text": "The T-51b units are at 95 percent readiness level. We've had a bit of trouble adapting them to the cold.",
+      "index": "70"
+    },
+    {
+      "topic": "DLC02VoicesTalkMorgan03",
+      "topic_text": "DLC02VoicesTalkMorgan03",
+      "emotion": "Fear 90",
+      "response_text": "Sorry sir, they said the technicians are still dragging their heels a bit on the fusion power plant issues.",
+      "index": "71"
+    },
+    {
+      "topic": "GOODBYE",
+      "topic_text": "I have to go now.",
+      "emotion": "Fear 100",
+      "response_text": "Remember that your Strike Team members got families too you know. Let's send 'em home alive instead of in a pine box, got it?",
+      "index": "72"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Neutral 50",
+      "response_text": "The General is very anxious to speak with you.",
+      "index": "80"
+    }
+  ],
+  "combat": []
+}

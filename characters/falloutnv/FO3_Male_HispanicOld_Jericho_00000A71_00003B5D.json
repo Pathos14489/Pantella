@@ -1,0 +1,565 @@
+{
+  "name": "Jericho",
+  "url": "/wiki/Jericho_(Fallout_3)",
+  "dialogue_name": "Jericho.txt",
+  "dialogue_url": "/wiki/Jericho.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": true,
+  "base_id": "00000A71",
+  "ref_id": "00003B5D",
+  "editor_id": "Jericho",
+  "location": "Jericho's house",
+  "location_url": "/wiki/Jericho%27s_house",
+  "descriptions": [
+    "Jericho is a former raider residing in Megaton in the Capital Wasteland in Fallout 3. He is a possible companion of the Lone Wanderer.",
+    "In his past, Jericho was a ruthless and deadly raider, killing and stealing for measly amounts of caps and loot for even the slightest of reasons. After fighting along with other raider gangs for many years and becoming a crack shot with a rifle, Jericho saw fit to retire and settled down in Megaton to enjoy his twilight years. Despite being out of the game for a long time, he has not lost touch with his raider ways. While the smug-lipped, foul-mouth Jericho will lend his marksmanship to protect the town, he more often than not prefers to guzzle booze and spew curses at passersby completely care-free. Rumors are abound that he also occasionally does some odd jobs for Colin Moriarty.",
+    "By the time the Lone Wanderer leaves Vault 101 in 2277, Jericho has begun having thoughts about getting back out into the wastes to fight and kill freely, though he'd prefer if he was paid for equipment expenses upfront as a start.",
+    "Jericho appears in Fallout 3 and Fallout Shelter.",
+    "PC Playstation 3 Xbox 360 Like all other Megaton characters, Jericho might go missing or turn up dead. See recovering missing non-player character in Fallout 3 on how to resolve this issue.",
+    "Jericho's name is a reference to the biblical city of Jericho, the remains of which are a UNESCO World Heritage Site and considered to be the oldest fortified city in the world."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Raiders(formerly)MegatonLone Wanderer(Optional)",
+  "role": "Raider(formerly)GuardCompanion",
+  "detailed_location": "Megaton",
+  "voice_actor": "James Lewis",
+  "special": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 3,
+    "Intelligence": 3,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "mod_special_values": {
+    "Strength": 11,
+    "Perception": 6,
+    "Endurance": 12,
+    "Charisma": 2,
+    "Intelligence": 3,
+    "Agility": 7,
+    "Luck": 6
+  },
+  "level": "5→20→30",
+  "tag_skills": [
+    {
+      "Big Guns:": "45→100"
+    },
+    {
+      "Melee Weap.:": "49→100"
+    },
+    {
+      "Small Guns:": "49→100"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Critical Chance:": "5%"
+    },
+    {
+      "Unarmed Dam.:": "1.15"
+    },
+    {
+      "Poison Resist.:": "15%"
+    },
+    {
+      "Rad. Resist.:": "6%"
+    },
+    {
+      "Damage Res.:": "15%"
+    }
+  ],
+  "karma": "Neutral",
+  "voice_type": "Jericho",
+  "geck_race": "HispanicOld",
+  "topics": [
+    {
+      "topic": "FollowersFired",
+      "topic_text": "Get out of here, Jericho. You're fired.",
+      "emotion": "Neutral 50",
+      "response_text": "What? Are you serious?",
+      "index": "1"
+    },
+    {
+      "topic": "FollowersFiredNo",
+      "topic_text": "Nah. I'm just kidding.",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah, very funny. Ha ha. Hilarious.",
+      "index": "2"
+    },
+    {
+      "topic": "FollowersFiredYes",
+      "topic_text": "Don't make me repeat myself.",
+      "emotion": "Neutral 50",
+      "response_text": "I see how it is: the old man can't keep up. Whatever. I'm gonna go see if there's anything left of Megaton.",
+      "index": "3"
+    },
+    {
+      "topic": "FollowersHired",
+      "topic_text": "Let's get back out there, Jericho.",
+      "emotion": "Neutral 50",
+      "response_text": "Sorry, kid. I just can't roll with someone like you.",
+      "index": "5"
+    },
+    {
+      "topic": "FollowersJerichoAboutYou",
+      "topic_text": "You don't look like you belong here. What's your story?",
+      "emotion": "Neutral 50",
+      "response_text": "There ain't much to tell. I used to live out in the Wastes. I was a real bastard back then. But I've put all that behind me.",
+      "index": "11"
+    },
+    {
+      "topic": "FollowersJerichoAboutYouEND",
+      "topic_text": "Let's talk about something else.",
+      "emotion": "Neutral 50",
+      "response_text": "Whatever, kid. Whatever.",
+      "index": "12"
+    },
+    {
+      "topic": "FollowersJerichoHire",
+      "topic_text": "Are you interested in joining up with me?",
+      "emotion": "Neutral 50",
+      "response_text": "No offense, kid, but you're not exactly the type I'm used to runnin' with.",
+      "index": "13"
+    },
+    {
+      "topic": "FollowersJerichoHire1",
+      "topic_text": "Out there in the Wastes, man. You must be bored to tears in this town.",
+      "emotion": "Neutral 50",
+      "response_text": "I left all that behind me. There's nothing but bullshit out there: killing... stealing... violence... I'm not that guy anymore.",
+      "index": "22"
+    },
+    {
+      "topic": "FollowersJerichoHire1a",
+      "topic_text": "Yeah... Killing. Stealing. Sounds fun, doesn't it?",
+      "emotion": "Neutral 50",
+      "response_text": "You know, I do miss it sometimes... it's a life of freedom, you know?",
+      "index": "23"
+    },
+    {
+      "topic": "FollowersJerichoHire1a1",
+      "topic_text": "You should come with me. I could use a hand.",
+      "emotion": "Neutral 50",
+      "response_text": "No offense, kid, but you're not exactly the type I'm used to runnin' with.",
+      "index": "25"
+    },
+    {
+      "topic": "FollowersJerichoHire1a1a",
+      "topic_text": "Here you go. Let's get out of here.",
+      "emotion": "Neutral 50",
+      "response_text": "Haha! This is gonna be great! Some good ol' fashioned violence!",
+      "index": "32"
+    },
+    {
+      "topic": "FollowersJerichoHire1a1b",
+      "topic_text": "Actually, never mind. I don't need your help.",
+      "emotion": "Neutral 50",
+      "response_text": "Huhn. I see how it is. No use for a washed up old waster, huh? Well, kid, the offer's open any time you wanna take it.",
+      "index": "35"
+    },
+    {
+      "topic": "FollowersJerichoHire1a2",
+      "topic_text": "Finding a crew might be tough. Good luck, though.",
+      "emotion": "Neutral 50",
+      "response_text": "What the hell? You get me all worked up and then cut me off? Well... look... if you ever need a hand out there, you know where to find me.",
+      "index": "36"
+    },
+    {
+      "topic": "FollowersJerichoHire1b",
+      "topic_text": "You're right. That sounds terrible.",
+      "emotion": "Neutral 50",
+      "response_text": "Huhn. Yeah... you're right. Stupid idea anyway.",
+      "index": "38"
+    },
+    {
+      "topic": "FollowersJerichoHire2",
+      "topic_text": "You know what? Forget I said anything.",
+      "emotion": "Anger 50",
+      "response_text": "Why the fuck would you start saying it if you weren't going to finish. Back out where? What are you talking about?",
+      "index": "39"
+    },
+    {
+      "topic": "FollowersJerichoHire2a",
+      "topic_text": "I was talking about the Wastes. You must be going crazy in this place.",
+      "emotion": "Neutral 50",
+      "response_text": "You know, I do miss it sometimes... it's a life of freedom, you know?",
+      "index": "40"
+    },
+    {
+      "topic": "FollowersJerichoHire2b",
+      "topic_text": "No, really. Never mind.",
+      "emotion": "Neutral 50",
+      "response_text": "I see how it is. You'd best think twice before fucking with me again.",
+      "index": "42"
+    },
+    {
+      "topic": "FollowersLetsGo",
+      "topic_text": "Let's get going.",
+      "emotion": "Neutral 50",
+      "response_text": "Right on. I'm ready for more action.",
+      "index": "43"
+    },
+    {
+      "topic": "FollowersLetsGoNotYet1",
+      "topic_text": "Not just yet. I wanted to talk to you about something.",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah? What do you want now?",
+      "index": "44"
+    },
+    {
+      "topic": "FollowersLetsGoNotYet2",
+      "topic_text": "I just wanted to make sure you were still here. Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "What the fu... you think that's funny?",
+      "index": "45"
+    },
+    {
+      "topic": "FollowersPPurity",
+      "topic_text": "Jericho, I need you to go into that chamber and turn on the purifier.",
+      "emotion": "Anger 50",
+      "response_text": "Fuck that. Do your own dirty work.",
+      "index": "46"
+    },
+    {
+      "topic": "FollowersTactics",
+      "topic_text": "Let's talk about your tactics.",
+      "emotion": "Neutral 50",
+      "response_text": "You think you got a better idea?",
+      "index": "47"
+    },
+    {
+      "topic": "FollowersTacticsCombat",
+      "topic_text": "I want you to change your combat style.",
+      "emotion": "Neutral 50",
+      "response_text": "Oh yeah? To what?",
+      "index": "48"
+    },
+    {
+      "topic": "FollowersTacticsCombatEND",
+      "topic_text": "Let's talk about something else.",
+      "emotion": "Neutral 50",
+      "response_text": "You talk too damn much, anyone ever told you that?",
+      "index": "49"
+    },
+    {
+      "topic": "FollowersTacticsCombatGOODBYE",
+      "topic_text": "That's all. Let's get going.",
+      "emotion": "Neutral 50",
+      "response_text": "Right behind you, kid.",
+      "index": "50"
+    },
+    {
+      "topic": "FollowersTacticsCombatMelee",
+      "topic_text": "I like what you're doing. Stick with the melee.",
+      "emotion": "Neutral 50",
+      "response_text": "Shit yeah, you do.",
+      "index": "51"
+    },
+    {
+      "topic": "FollowersTacticsCombatRanged",
+      "topic_text": "You're not bad with a ranged weapon. Keep it up.",
+      "emotion": "Anger 50",
+      "response_text": "You're goddamn right I'm not bad. I've been doin' this for 25 goddamn years.",
+      "index": "53"
+    },
+    {
+      "topic": "FollowersTacticsDistance",
+      "topic_text": "Let's talk about how close you're following me.",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah... okay. You got a better idea?",
+      "index": "55"
+    },
+    {
+      "topic": "FollowersTacticsDistanceDefault",
+      "topic_text": "You're good where you are.",
+      "emotion": "Neutral 50",
+      "response_text": "You're damn right I'm good, kid.",
+      "index": "56"
+    },
+    {
+      "topic": "FollowersTacticsDistanceEND",
+      "topic_text": "Your distance is good. Let's talk about something else.",
+      "emotion": "Neutral 50",
+      "response_text": "Talk, talk, talk...",
+      "index": "58"
+    },
+    {
+      "topic": "FollowersTacticsDistanceGOODBYE",
+      "topic_text": "All right, you're good. Let's get out of here.",
+      "emotion": "Neutral 50",
+      "response_text": "C'mon, kid, why are we standin' around here?",
+      "index": "59"
+    },
+    {
+      "topic": "FollowersTacticsDistanceLong",
+      "topic_text": "Keep hanging back.",
+      "emotion": "Neutral 50",
+      "response_text": "That's what I'm doing. Why do you think I'm standing back here in East Bumfuck?",
+      "index": "60"
+    },
+    {
+      "topic": "FollowersTacticsEnd",
+      "topic_text": "Enough about tactics.",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah. Less talking about killing. More killing!",
+      "index": "62"
+    },
+    {
+      "topic": "FollowersTrade",
+      "topic_text": "Let's trade equipment.",
+      "emotion": "Neutral 50",
+      "response_text": "Sure, gimme whatever you got.",
+      "index": "63"
+    },
+    {
+      "topic": "FollowersWait",
+      "topic_text": "Wait here.",
+      "emotion": "Neutral 50",
+      "response_text": "Don't piss around, I don't want to be standing here with my thumb up my ass all day.",
+      "index": "64"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "Oh, fuck no. I don't take that shit from anyone. You're dead!",
+      "index": "65"
+    },
+    {
+      "topic": "MegJerichoMoriartyQuestion1",
+      "topic_text": "So where's the key?",
+      "emotion": "Neutral 50",
+      "response_text": "It's dangling around Colin's neck. Get it... if you can.",
+      "index": "83"
+    },
+    {
+      "topic": "MegJerichoMoriartyQuestion2",
+      "topic_text": "Why haven't you robbed him?",
+      "emotion": "Neutral 50",
+      "response_text": "My robbin' days are over, kid. I'm just here to drink and stink.",
+      "index": "84"
+    },
+    {
+      "topic": "MegJerichoMoriartyQuestion3",
+      "topic_text": "Sounds risky. What if he catches me?",
+      "emotion": "Neutral 50",
+      "response_text": "He'll probably blow your head off. That is, unless you can draw faster than a pissed off Irishman.",
+      "index": "85"
+    },
+    {
+      "topic": "MegJerichoMoriartyQuestionEND",
+      "topic_text": "Thanks for the info, Jericho.",
+      "emotion": "Neutral 50",
+      "response_text": "Anytime. It'll be worth it to see the look on that asshole's face.",
+      "index": "86"
+    },
+    {
+      "topic": "MegJerichoPersuade1",
+      "topic_text": "Did I miss something? What's your problem with me?",
+      "emotion": "Anger 50",
+      "response_text": "You're from the outside and I've lived too much of my life out there to trust every jackass nobody that wanders in from the Wasteland.",
+      "index": "87"
+    },
+    {
+      "topic": "MegJerichoPersuade2",
+      "topic_text": "Whatever your problem is, I suggest you get over it. Now.",
+      "emotion": "Surprise 50",
+      "response_text": "Well, now. That's something I didn't expect. You're scrappy for a little Vault twerp aren't you?",
+      "index": "89"
+    },
+    {
+      "topic": "MegJerichoPersuadeEnd",
+      "topic_text": "Never mind...",
+      "emotion": "Neutral 50",
+      "response_text": "You're goddamn right \"nevermind\".",
+      "index": "93"
+    },
+    {
+      "topic": "MegJerichoRumorBribe10",
+      "topic_text": "This should buy you something. <Give 10 caps.>",
+      "emotion": "Neutral 50",
+      "response_text": "Ha ha! You're gonna have to do better than that, kid! Thanks for the drink, though.",
+      "index": "94"
+    },
+    {
+      "topic": "MegJerichoRumorBribe10a",
+      "topic_text": "Funny. I'll take my caps back now.",
+      "emotion": "Neutral 50",
+      "response_text": "Alright, alright, I'm just fucking with you.",
+      "index": "96"
+    },
+    {
+      "topic": "MegJerichoRumorBribe10b",
+      "topic_text": "You're an asshole, Jericho.",
+      "emotion": "Neutral 50",
+      "response_text": "You love me.",
+      "index": "98"
+    },
+    {
+      "topic": "MegJerichoRumorBribe20",
+      "topic_text": "Go for the top shelf. On me. <Give 20 caps.>",
+      "emotion": "Anger 50",
+      "response_text": "Whoa, twenty caps! Look at the big spender! Alright then, I can see you're in it for the big money, so I'll tell you all about Moriarty's.{The first half of this line is spoken in a sarcastic \"Golly gee gosh, Mister Wilson, a whole dollar!\" way.}",
+      "index": "99"
+    },
+    {
+      "topic": "MegJerichoRumorBribeEnd",
+      "topic_text": "I don't think so.",
+      "emotion": "Neutral 50",
+      "response_text": "Your call, kid.",
+      "index": "103"
+    },
+    {
+      "topic": "MegTownEnd",
+      "topic_text": "That's all I needed to know.",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah.",
+      "index": "104"
+    },
+    {
+      "topic": "MegTownFatherChoice",
+      "topic_text": "I'm looking for my father. Middle-aged guy. Maybe you've seen him?",
+      "emotion": "Neutral 50",
+      "response_text": "Are you fucking kidding me? Get out of my face.",
+      "index": "105"
+    },
+    {
+      "topic": "MegTownRumors",
+      "topic_text": "What's the word around town?",
+      "emotion": "Neutral 50",
+      "response_text": "Remember what I told you, kid: Moriarty keeps his money locked up right next to his bed.",
+      "index": "112"
+    },
+    {
+      "topic": "MegTownWastelandKnow anything about the area outside Megaton?",
+      "topic_text": "What do you know about the Wasteland?",
+      "emotion": "Neutral 50",
+      "response_text": "None of your fucking business.",
+      "index": "114"
+    },
+    {
+      "topic": "MegTownWhatDoYouDo",
+      "topic_text": "What do you do around here?",
+      "emotion": "Neutral 50",
+      "response_text": "Me? I don't do a damn thing. Well, unless you count staying piss drunk and making Moriarty rich as something.",
+      "index": "117"
+    },
+    {
+      "topic": "SpeechChallengeFailure",
+      "topic_text": "SpeechChallengeFailure",
+      "emotion": "Neutral 50",
+      "response_text": "Heh. Yeah right. I don't think so.",
+      "index": "120"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "Let's go.",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah, let's get to the action.",
+      "index": "121"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Neutral 50",
+      "response_text": "Are we actually gonna do something, or am I gonna stand here all day?",
+      "index": "129"
+    },
+    {
+      "topic": "IdleChatter",
+      "topic_text": "Idle Chatter",
+      "emotion": "Neutral 50",
+      "response_text": "There's not a lot of cash in bein' good, you know.",
+      "index": "144"
+    },
+    {
+      "topic": "MegBarRadioChatter",
+      "topic_text": "MegBarRadioChatter",
+      "emotion": "Neutral 50",
+      "response_text": "You just leave that fucking thing alone, Gob?",
+      "index": "169"
+    },
+    {
+      "topic": "MegatonHelloResponse",
+      "topic_text": "MegatonHelloResponse",
+      "emotion": "Neutral 50",
+      "response_text": "<grumbles>",
+      "index": "170"
+    },
+    {
+      "topic": "MegatonTalk1",
+      "topic_text": "MegatonTalk",
+      "emotion": "Fear 50",
+      "response_text": "Oh, hey Jericho, baby! What's going on?{Flirty, but cautious.}",
+      "index": "174"
+    },
+    {
+      "topic": "MegatonTalk2",
+      "topic_text": "MegatonTalk2",
+      "emotion": "Neutral 50",
+      "response_text": "I've got blood in my alcohol stream. I blame you. Fix it.",
+      "index": "176"
+    },
+    {
+      "topic": "MegatonTalk4",
+      "topic_text": "MegatonTalk4",
+      "emotion": "Neutral 50",
+      "response_text": "Jenny, baby. That was a long time ago. I've left all that behind me now.",
+      "index": "185"
+    }
+  ],
+  "combat": [
+    {
+      "topic": "AcceptYield",
+      "topic_text": "AcceptYield",
+      "emotion": "Neutral 50",
+      "response_text": "Just don't fuckin' do it again.",
+      "index": "190"
+    },
+    {
+      "topic": "Assault",
+      "topic_text": "Assault",
+      "emotion": "Neutral 50",
+      "response_text": "Are you out of your fuckin' mind?",
+      "index": "191"
+    },
+    {
+      "topic": "Attack",
+      "topic_text": "Attack",
+      "emotion": "Neutral 50",
+      "response_text": "I'm gonna tear you a new asshole!",
+      "index": "192"
+    },
+    {
+      "topic": "AvoidThreat",
+      "topic_text": "AvoidThreat",
+      "emotion": "Neutral 50",
+      "response_text": "Run! Grenade!",
+      "index": "216"
+    },
+    {
+      "topic": "FireExplosive",
+      "topic_text": "FireExplosive",
+      "emotion": "Neutral 50",
+      "response_text": "Eat this!",
+      "index": "221"
+    },
+    {
+      "topic": "Hit",
+      "topic_text": "Hit",
+      "emotion": "Pained 100",
+      "response_text": "That didn't even hurt.",
+      "index": "223"
+    }
+  ]
+}

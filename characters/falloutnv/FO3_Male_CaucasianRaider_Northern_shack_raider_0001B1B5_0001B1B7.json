@@ -1,0 +1,79 @@
+{
+  "name": "Northern shack raider",
+  "url": "/wiki/Northern_shack_raider",
+  "dialogue_name": "",
+  "dialogue_url": null,
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": true,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "0001B1B5",
+  "ref_id": "0001B1B7",
+  "editor_id": "EvergreenMillsRaiderBoss02",
+  "location": "Northern shack",
+  "location_url": "/wiki/Northern_shack",
+  "descriptions": [
+    "The northern shack raider is a unique raider living in Evergreen Mills in 2277.",
+    "He spends his time inside of the northern shack in Evergreen Mills with a female raider. The two will sleep in the same bed every evening and wander around the shack each day.",
+    "He is always hostile to the Lone Wanderer and attacks on sight.",
+    "Despite being named \"Raider\" in-game, he has a unique model, unused by any other character in the game, and a unique editor ID.",
+    "The northern shack raider only appears in Fallout 3."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Raiders",
+  "role": "Raider boss",
+  "detailed_location": "Northern shack,Evergreen Mills",
+  "voice_actor": "James Lewis",
+  "special": {
+    "Strength": 7,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 3,
+    "Intelligence": 3,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "level": "1→4→9",
+  "tag_skills": [
+    {
+      "Melee Weap.:": "34→47→68"
+    },
+    {
+      "Small Guns:": "32→45→66"
+    },
+    {
+      "Unarmed:": "30→43→64"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "30→60→90"
+    },
+    {
+      "Critical Chance:": "5%"
+    },
+    {
+      "Unarmed Dam.:": "2→2.65→3.7"
+    },
+    {
+      "Poison Resist.:": "20%"
+    },
+    {
+      "Rad. Resist.:": "8%"
+    },
+    {
+      "Carry Weight:": "220"
+    }
+  ],
+  "karma": "Evil",
+  "voice_type": "MaleGroupRaiderDC",
+  "geck_race": "CaucasianRaider",
+  "topics": [],
+  "conversation": [],
+  "combat": []
+}

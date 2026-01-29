@@ -1,0 +1,219 @@
+{
+  "name": "Mother Curie III",
+  "url": "/wiki/Curie_III",
+  "dialogue_name": "DLC03WQ03MotherCurie.txt",
+  "dialogue_url": "/wiki/DLC03WQ03MotherCurie.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "xx004C77",
+  "ref_id": "xx004C78",
+  "editor_id": "DLC03WQ03MotherCurie",
+  "location": "Holy Light Monastery",
+  "location_url": "/wiki/Holy_Light_Monastery",
+  "descriptions": [
+    "Mother Curie III, or Curie the Third, is a member of the Church of the Children of Atom and the founder and leader of the Apostles of the Eternal Light in the Fallout 3 add-on Broken Steel.",
+    "Mother Curie is from Megaton.",
+    "In her vision, Atom called upon his flock to seek not Division, but instead \"Enlightenment;\" she believes that salvation in Eternal Light can only be attained through Atom's supreme and total Enlightenment",
+    "Curie would eventually convince some of Cromwell's other followers, such as Brother Gerard, to reject his ways and follow her teachings (seeing the notion of Division as misguided and the atomic bomb in Megaton as a \"Great Symbol of Atom.\")  They went on to found a new order of the cult in Springvale, the Apostles of the Eternal Light. They constructed their monastery in a ruined home, adding exterior walls in front and installing a tabernacle. From the podium, radiation devices can be activated on the pulpit to irradiate new prospects, between which a bathtub rests. The actual order resides in the basement, while Brother Gerard remains outside as a gatekeeper.",
+    "It was in Springvale, sometime after the formation of the Water Distribution Network, that Curie was approached by four members of the Brotherhood of Steel who were making a water delivery to Megaton. When Curie told them where she was from, they gave her the barrels of Aqua Pura they were carrying and told her to share it with her people.",
+    "Curie is so focused on her work that she is totally unprepared for any \"casual\" visitors.",
+    "Curie III can be convinced that people cannot be forced into accepting \"salvation,\" in that deceiving wastelanders with irradiated water to spread the word of their cult is wrong and a mockery of her faith.",
+    "Mother Curie III appears only in the Broken Steel add-on for Fallout 3.",
+    "Mother Curie III's name is a reference to Dr. Marie Curie, the discoverer of radiation and two radioactive elements, who eventually died of radiation poisoning."
+  ],
+  "race": "HumanFeral ghoul(optional)",
+  "gender": "Female",
+  "affiliation": "Church of the Children of Atom(formerly)Apostles of the Eternal Light",
+  "role": "Cult leader",
+  "detailed_location": "Holy Light MonasteryMegaton ruins(optional)",
+  "voice_actor": "Karen Carbone",
+  "special": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 10,
+    "Intelligence": 5,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "mod_special_values": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 6,
+    "Charisma": 10,
+    "Intelligence": 5,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "level": "1",
+  "misc_skills": [
+    {
+      "Hit Points:": "70(75)"
+    },
+    {
+      "Critical Chance:": "5%"
+    },
+    {
+      "Unarmed Dam.:": "0.75"
+    },
+    {
+      "Poison Resist.:": "20%(25%)"
+    },
+    {
+      "Rad. Resist.:": "8%(10%)"
+    },
+    {
+      "Carry Weight:": "200"
+    },
+    {
+      "Damage Res.:": "5%"
+    }
+  ],
+  "karma": "Neutral",
+  "voice_type": "FemaleAdult02DC",
+  "geck_race": "HispanicOldAged",
+  "topics": [
+    {
+      "topic": "DLC03AboutApostles",
+      "topic_text": "Why are you doing all of this?",
+      "emotion": "Happy 50",
+      "response_text": "Why, to offer Enlightenment to all those who suffer, of course. No more, no less.{Sweet and honestly meaning well}",
+      "index": "1"
+    },
+    {
+      "topic": "DLC03AboutApostles2A",
+      "topic_text": "Turning people into Ghouls? But that requires an amazing amount of radiation!",
+      "emotion": "Happy 50",
+      "response_text": "That's correct, it does. But we can work miracles with our holy water. Free of impurities, this \"Aqua Pura\" is perfect for carrying Atom's blessing.",
+      "index": "5"
+    },
+    {
+      "topic": "DLC03AboutApostles2B",
+      "topic_text": "Enough cultist crap. This is sick.",
+      "emotion": "Sad 25",
+      "response_text": "You are welcome to your own beliefs, of course. But I would ask you not to profane in our monastery.{A little scolding, as a sweet old grandmother might be}",
+      "index": "10"
+    },
+    {
+      "topic": "DLC03AboutHolyWater",
+      "topic_text": "How do you make your \"holy water\"?",
+      "emotion": "Happy 50",
+      "response_text": "It was a gift from Atom. I was meditating right here in Springvale, when four of His armored angels came to me.",
+      "index": "11"
+    },
+    {
+      "topic": "DLC03CurieMeeting1A",
+      "topic_text": "Luminescent Mother, I need to speak with you about your holy water.",
+      "emotion": "Happy 50",
+      "response_text": "Yes? If you wanted some, I'm sure that Brother Gerard would have gladly given you a bottle or two. We don't charge for charity, you know.",
+      "index": "18"
+    },
+    {
+      "topic": "DLC03CurieMeeting1C",
+      "topic_text": "I'm putting an end to your twisted cult, right now.",
+      "emotion": "Sad 25",
+      "response_text": "Ah. We are accustomed to this sort of religious persecution. However, I refuse to respond to violence with violence.{Disappointed in the player}",
+      "index": "19"
+    },
+    {
+      "topic": "DLC03StopApostles",
+      "topic_text": "You need to stop contaminating the Aqua Pura for your holy water.",
+      "emotion": "Surprise 25",
+      "response_text": "Don't be silly! How else will we spread the word to the unenlightened?",
+      "index": "20"
+    },
+    {
+      "topic": "DLC03StopApostles2A",
+      "topic_text": "You can't trick people into enlightenment. They have to accept it knowingly.",
+      "emotion": "Sad 25",
+      "response_text": "Hmm... You have a point, one cannot be forced into salvation against one's will. To do so would be unjust, even in Atom's name.",
+      "index": "24"
+    },
+    {
+      "topic": "DLC03StopApostles2B",
+      "topic_text": "If you don't stop, I'll have to make you stop. Forcibly if I have to.",
+      "emotion": "Sad 25",
+      "response_text": "If you feel you must resort to violence, then you will do so. I will not fight you.",
+      "index": "30"
+    },
+    {
+      "topic": "DLC03StopApostles2C",
+      "topic_text": "There must be something I can do to convince you.",
+      "emotion": "Sad 50",
+      "response_text": "Give it time, child. Soon Atom will enlighten your eyes and you will come to realize the truth for yourself.",
+      "index": "32"
+    },
+    {
+      "topic": "DLC03StopApostles3A",
+      "topic_text": "I don't want to have to fight you.",
+      "emotion": "Anger 25",
+      "response_text": "You never need to fight, my dear. But I'm afraid you simply aren't going to convince us to stop our holy work just because you disapprove.{Slightly chiding}",
+      "index": "33"
+    },
+    {
+      "topic": "DLC03StopApostles3B",
+      "topic_text": "This has gone on too long. Time to die.",
+      "emotion": "Sad 75",
+      "response_text": "Such a shame it had to come to this...{Disappointed in the player resorting to violence.}",
+      "index": "34"
+    },
+    {
+      "topic": "DLC03StopApostles3C",
+      "topic_text": "What makes you so sure you're right, anyway? Who are you to speak for Atom?",
+      "emotion": "Sad 50",
+      "response_text": "I suppose it's a fair question... Ever since I was a girl, I knew I was destined for something special. I always resisted the feeling. Me? Special?{heart to heart}",
+      "index": "35"
+    },
+    {
+      "topic": "DLC03WQ03Megaton",
+      "topic_text": "You'll see the true power of Atom when I detonate that bomb in Megaton.",
+      "emotion": "Surprise 50",
+      "response_text": "No! No you mustn't! We left Cromwell's church precisely because we DON'T believe in the Great Division.{shocked and appalled}",
+      "index": "43"
+    },
+    {
+      "topic": "DLC03WQ03Prophet",
+      "topic_text": "I am the Prophet of Atom. Stop irradiating water.",
+      "emotion": "Surprise 100",
+      "response_text": "Why... you ARE the Prophet of Atom! I didn't recognize you until now... Your eyes are aglow, your very skin radiates with Atom's Heat!{in religious fervor}",
+      "index": "46"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Surprise 50",
+      "response_text": "Oh, my! I wasn't expecting a pilgrim to our shrine! We're hardly prepared for casual visitors, I'm afraid.",
+      "index": "55"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "DLC03WQ03Sermon",
+      "topic_text": "DLC03WQ03Sermon",
+      "emotion": "Happy 50",
+      "response_text": "Children of the Light, hear my words and feel Atom's warmth!{giving a sermon}",
+      "index": "66"
+    },
+    {
+      "topic": "GOODBYE",
+      "topic_text": "I have to go now.",
+      "emotion": "Happy 50",
+      "response_text": "Thank you for choosing wisdom over violence.",
+      "index": "73"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Happy 50",
+      "response_text": "Be at peace, dear.",
+      "index": "75"
+    }
+  ],
+  "combat": []
+}

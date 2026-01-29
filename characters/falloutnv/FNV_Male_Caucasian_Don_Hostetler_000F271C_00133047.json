@@ -1,0 +1,125 @@
+{
+  "name": "Don Hostetler",
+  "url": "/wiki/Don_Hostetler",
+  "dialogue_name": "NorthVegasMrHostetler.txt",
+  "dialogue_url": "/wiki/NorthVegasMrHostetler.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000F271C",
+  "ref_id": "00133047",
+  "editor_id": "NorthVegasMrHostetler",
+  "location": "Crimson Caravan main office",
+  "location_url": "/wiki/Crimson_Caravan_main_office",
+  "descriptions": [
+    "Hostetler home (night)",
+    "Don Hostetler is the husband of Becky Hostetler and father of Alice Hostetler, working under Alice McLafferty at the New Vegas branch of the Crimson Caravan Company in the Mojave Wasteland in 2281. He appears in Fallout: New Vegas.",
+    "In order to provide a modicum of comfort for his family, Don got a job as an accounts manager for the Crimson Caravan, working under Alice McLafferty for the New Vegas branch's main office near Freeside.",
+    "Despite his wife's belief in him as a hard worker and family man, in secret Don is far from squeaky clean: he has been carrying out an affair with his secretary, Angie Beckers and covers for it with his long work hours.",
+    "Aba Daba Honeymoon: After taking over for the injured Anders, the Courier is sent by Diane to deliver drug shipments for the Great Khans, including paying a visit to Don with a mildly suspicious package."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Crimson Caravan CompanyGreat Khans(client)",
+  "role": "Accounts managerChempusher",
+  "detailed_location": "CCC compoundMain office(day)Hostetler home(night)",
+  "voice_actor": "Gregory Alan Williams",
+  "special": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 5,
+    "Intelligence": 4,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "mod_special_values": {
+    "Strength": 6,
+    "Perception": 6,
+    "Endurance": 4,
+    "Charisma": 5,
+    "Intelligence": 4,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "tag_skills": [
+    {
+      "Barter:": "26"
+    },
+    {
+      "Medicine:": "24"
+    },
+    {
+      "Melee Weap.:": "28"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Good",
+  "voice_type": "MaleAdult06",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Anger 80",
+      "response_text": "{Reining Immense Anger}I should kill you, right here, for what you've done.",
+      "index": "1"
+    },
+    {
+      "topic": "MrHostetlerAffair",
+      "topic_text": "I've got to talk to you about Alice.",
+      "emotion": "Neutral 50",
+      "response_text": "{Topic is a nuisance}I really don't have time for this right now.",
+      "index": "5"
+    },
+    {
+      "topic": "MrHostetlerCaravan",
+      "topic_text": "Is there any work to be had here?",
+      "emotion": "Neutral 50",
+      "response_text": "You know, hiring isn't really my department. You should talk to Ms. McLafferty about work for hire.",
+      "index": "6"
+    },
+    {
+      "topic": "MrHostetlerDrugDelivery",
+      "topic_text": "I've got a package here from your friends Jack and Diane.",
+      "emotion": "Surprise 50",
+      "response_text": "Huh? Oh! Oh, right. Yeah. I'll take that. You should go now, before you draw any attention.",
+      "index": "8"
+    },
+    {
+      "topic": "MrHostetlerIntro",
+      "topic_text": "Who are you?",
+      "emotion": "Neutral 50",
+      "response_text": "The name's Hostetler - Don Hostetler. Can I help you with something?",
+      "index": "9"
+    },
+    {
+      "topic": "VDialogueVegasNorthNorthVegasMrHostetlerTopic000",
+      "topic_text": "Alice's \"friends\" plan to use her to steal your Crimson Caravan earnings.",
+      "emotion": "Neutral 50",
+      "response_text": "{Visibly bothered}Nonsense! Alice's a good girl. She may be going through a hard time, but...",
+      "index": "11"
+    },
+    {
+      "topic": "VDialogueVegasNorthNorthVegasMrHostetlerTopic002",
+      "topic_text": "I've got proof of what I've said.",
+      "emotion": "Anger 50",
+      "response_text": "I don't want to talk about this, didn't you hear? Now, get lost before we run you off the hard way.",
+      "index": "14"
+    },
+    {
+      "topic": "VDialogueVegasNorthNorthVegasMrHostetlerTopic004",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah, that's right - good to say bye to you.",
+      "index": "15"
+    }
+  ],
+  "conversation": [],
+  "combat": []
+}

@@ -1,0 +1,211 @@
+{
+  "name": "Anna Holt",
+  "url": "/wiki/Anna_Holt",
+  "dialogue_name": "AnnaHolt.txt",
+  "dialogue_url": "/wiki/AnnaHolt.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "00038DF5",
+  "ref_id": "00038DF6",
+  "editor_id": "AnnaHolt",
+  "location": "Rivet City science lab",
+  "location_url": "/wiki/Rivet_City_science_lab",
+  "descriptions": [
+    "Anna Holt is a botanist and member of the scientist staff that works under Doctor Madison Li together with Janice Kaplinski on portable fusion power and hydroponics experiments in Fallout 3.",
+    "Holt is responsible for the gestation of naturally occurring foodstuffs during her tenure in the Rivet City science lab, where she works under the esteemed Doctor Madison Li.",
+    "Furthermore, the distractions from her work by visitors is certainly not helping her less than cheery disposition,",
+    "She gladly uprooted and took her research to the Jefferson Memorial with the rest of the laboratory staff when James returned from Vault 112 with the knowledge of how to successfully complete Project Purity. After the team restarted the project with little trouble, she was held hostage with the other scientists by the invading Enclave. While most of the scientists escaped shortly after the altercation, Holt was kidnapped by the Enclave and held captive at Raven Rock.",
+    "Astonished by the technological and manufacturing capabilities that the Enclave possessed, she openly told them everything about the staff, project and even how to improve upon the existing design, ensuring its completion and functionality under Enclave control.",
+    "She worked very hard to gain the trust of the Enclave and was rewarded with access to their laboratories."
+  ],
+  "race": "Human",
+  "gender": "Female",
+  "affiliation": "Project PurityEnclave Research and Development Division(afterThe Waters of Life)",
+  "role": "BotanistUpper deck citizen[1]",
+  "detailed_location": "Rivet Cityscience labJefferson MemorialRaven Rock",
+  "voice_actor": "Karen Carbone",
+  "special": {
+    "Strength": 3,
+    "Perception": 6,
+    "Endurance": 3,
+    "Charisma": 4,
+    "Intelligence": 8,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "level": "1",
+  "tag_skills": [
+    {
+      "Explosives:": "32"
+    },
+    {
+      "Medicine:": "36"
+    },
+    {
+      "Science:": "36(41)"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "20"
+    },
+    {
+      "Critical Chance:": "5%"
+    },
+    {
+      "Unarmed Dam.:": "1.05"
+    },
+    {
+      "Poison Resist.:": "10%"
+    },
+    {
+      "Rad. Resist.:": "4%"
+    },
+    {
+      "Carry Weight:": "180"
+    },
+    {
+      "Damage Res.:": "3%"
+    }
+  ],
+  "karma": "Neutral",
+  "voice_type": "FemaleAdult02DC",
+  "geck_race": "CaucasianOld",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "I think you'd better leave now.",
+      "index": "1"
+    },
+    {
+      "topic": "MQ03ScientistLookingForFather",
+      "topic_text": "I'm looking for my father. Have you seen him?",
+      "emotion": "Neutral 50",
+      "response_text": "Look, some of us are trying to get work done here. There have been enough disruptions recently.",
+      "index": "7"
+    },
+    {
+      "topic": "MQ09AnnaBeenHelpingThem",
+      "topic_text": "You've been helping them?!",
+      "emotion": "Fear 50",
+      "response_text": "Of course! You've seen the kind of technology these people have. They want to help people. They want to change the Wasteland.",
+      "index": "9"
+    },
+    {
+      "topic": "MQ09AnnaGetOutWhileYouCan",
+      "topic_text": "Get out of here while you can! They'll be here any second!",
+      "emotion": "Surprise 50",
+      "response_text": "Get out? Why on earth would I want to do that?",
+      "index": "11"
+    },
+    {
+      "topic": "MQ09AnnaGreetWhatDoingHere",
+      "topic_text": "Wait a minute. What are you doing here?",
+      "emotion": "Fear 50",
+      "response_text": "They... they captured me. Brought me here from Project Purity.",
+      "index": "13"
+    },
+    {
+      "topic": "MQ09AnnaGreetWhoAreYou",
+      "topic_text": "Who are you?",
+      "emotion": "Neutral 50",
+      "response_text": "I'm Anna. Anna Holt. I used to work for Doctor Li.",
+      "index": "15"
+    },
+    {
+      "topic": "MQ09AnnaHowMuchTellThem",
+      "topic_text": "How much did you tell them?",
+      "emotion": "Neutral 50",
+      "response_text": "Everything they needed to know to improve on the original design, and to make sure it's actually completed.",
+      "index": "17"
+    },
+    {
+      "topic": "MQ09AnnaKnowHowToGetOut",
+      "topic_text": "Do you know how to get out of here?",
+      "emotion": "Neutral 50",
+      "response_text": "I'm afraid I'm not able to help you with that.",
+      "index": "18"
+    },
+    {
+      "topic": "MQ09AnnaWhatThings",
+      "topic_text": "What have you told them?",
+      "emotion": "Neutral 50",
+      "response_text": "They wanted information. About Doctor Li, about Project Purity. They want to know how to start it up, and why it wouldn't work.",
+      "index": "20"
+    },
+    {
+      "topic": "MQ09AnnaWhyAbandonLi",
+      "topic_text": "Why would you abandon everything you worked for with Doctor Li?",
+      "emotion": "Neutral 50",
+      "response_text": "Look, it's not personal. Really, it's not. But Doctor Li... She's scraping by. She's scavenging for parts in the Wastes.",
+      "index": "22"
+    },
+    {
+      "topic": "MQ09AnnaYoureATraitor",
+      "topic_text": "You've betrayed Doctor Li, and my father.",
+      "emotion": "Neutral 50",
+      "response_text": "I'm sorry you see it that way. What are you going to do, kill me over it?",
+      "index": "25"
+    },
+    {
+      "topic": "MS08AboutZimmer",
+      "topic_text": "What do you know about Zimmer?",
+      "emotion": "Disgust 50",
+      "response_text": "He's from up north. He was bragging about how great it is up there.",
+      "index": "27"
+    },
+    {
+      "topic": "RCTopicDoctorLiWhat can you tell me about Doctor Li?",
+      "topic_text": "Is Doctor Li as smart as they say she is?",
+      "emotion": "Surprise 50",
+      "response_text": "She's certainly head and shoulders above most everyone else around here. Though that's not saying much.",
+      "index": "29"
+    },
+    {
+      "topic": "RCTopicGetDrinksWhere can I get a stiff drink?",
+      "topic_text": "Can I get a drink around here? Preferably somewhere clean.",
+      "emotion": "Happy 50",
+      "response_text": "The Weatherly Hotel is a good choice. It's on the upper deck.",
+      "index": "30"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "MS08ZimmerArgueB",
+      "topic_text": "MS08ZimmerArgueB",
+      "emotion": "Anger 50",
+      "response_text": "Look, Doctor Zimmer, we’ve been over this. We don’t know about your runaway robot, and we don’t care. This lab is dedicated to solving real problems.{frustrated}",
+      "index": "31"
+    },
+    {
+      "topic": "MS08ZimmerBugScientist2",
+      "topic_text": "MS08ZimmerBugScientist2",
+      "emotion": "Disgust 20",
+      "response_text": "We've ALL already told you we're too busy to help. Now if you please, Mister Zimmer...{annoyed but trying to remain professional}",
+      "index": "36"
+    },
+    {
+      "topic": "MS08ZimmerBugScientist4",
+      "topic_text": "MS08ZimmerBugScientist4",
+      "emotion": "Disgust 50",
+      "response_text": "Insulting me won't get you what you want, \"DOCTOR\" Zimmer. Now, if you'll excuse me? PLEASE!{annoyed but trying to remain professional \"doctor\" said with contempt}",
+      "index": "41"
+    },
+    {
+      "topic": "RCResponse01",
+      "topic_text": "RCResponse01",
+      "emotion": "Fear 50",
+      "response_text": "But I did, Doctor Li. I put it right where you told me to.",
+      "index": "42"
+    }
+  ],
+  "combat": []
+}

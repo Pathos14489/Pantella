@@ -1,0 +1,220 @@
+{
+  "name": "Sister",
+  "url": "/wiki/Sister",
+  "dialogue_name": "Sister.txt",
+  "dialogue_url": "/wiki/Sister.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "0001E745",
+  "ref_id": "0001E756",
+  "editor_id": "Sister",
+  "location": "Rivet City",
+  "location_url": "/wiki/Rivet_City",
+  "descriptions": [
+    "Sister is a slaver found in Rivet City in Fallout 3.",
+    "One of the least personable denizens of the City, the 29-year-old Sister is a beast of a man with an incredibly short fuse. Nobody knows where he got the nickname from, and even fewer manage to walk away if they make the mistake of asking him about it. Despite numerous altercations with other citizens, he managed to avoid getting thrown off by Harkness and Lana Danvers.",
+    "Sister is well-known among the citizens of Rivet City as a murderous sociopath",
+    "Sister has been looking for it for a while, but the trail has gone cold. Most of his fellow slavers think that Sister just abandoned his mission, but Sister is still trying to find any clue, unaware that his prey hides in plain sight. His biggest worry is that Zimmer, the source of the contract, might hire someone else for the job.",
+    "He is a regular patron over at the Muddy Rudder, drinking any alcohol he can get his hands on, including whiskey",
+    "Rivet City residents"
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "SlaversofParadise Falls",
+  "role": "Slaver",
+  "detailed_location": "Rivet City",
+  "voice_actor": "Gregory Gorton",
+  "special": {
+    "Strength": 6,
+    "Perception": 4,
+    "Endurance": 4,
+    "Charisma": 6,
+    "Intelligence": 4,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "mod_special_values": {
+    "Strength": 6,
+    "Perception": 4,
+    "Endurance": 5,
+    "Charisma": 6,
+    "Intelligence": 4,
+    "Agility": 7,
+    "Luck": 5
+  },
+  "level": "4",
+  "tag_skills": [
+    {
+      "Barter:": "46"
+    },
+    {
+      "Melee Weap.:": "46"
+    },
+    {
+      "Small Guns:": "46(48)"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "40(45)"
+    },
+    {
+      "Critical Chance:": "5%"
+    },
+    {
+      "Unarmed Dam.:": "1.15"
+    },
+    {
+      "Poison Resist.:": "15%(20%)"
+    },
+    {
+      "Rad. Resist.:": "6%(8%)"
+    },
+    {
+      "Carry Weight:": "210"
+    },
+    {
+      "Damage Res.:": "2%"
+    }
+  ],
+  "karma": "Evil",
+  "voice_type": "MaleAdult01DefaultBDC",
+  "geck_race": "Asian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "They call me Sister. Don't ask.",
+      "index": "1"
+    },
+    {
+      "topic": "MS03RCHistory1Could I ask you about Rivet City's history?",
+      "topic_text": "Have you heard anything about the history of Rivet City?",
+      "emotion": "Anger 50",
+      "response_text": "Do I look like someone who cares?",
+      "index": "3"
+    },
+    {
+      "topic": "MS08SlaverClue1",
+      "topic_text": "I found this info about an android from the Commonwealth. Care to elaborate?",
+      "emotion": "Surprise 50",
+      "response_text": "It's none of your God damn business.{arrogant}",
+      "index": "4"
+    },
+    {
+      "topic": "MS08SlaverClue2",
+      "topic_text": "What do you know about an android from the Commonwealth?",
+      "emotion": "Neutral 50",
+      "response_text": "Here's a copy of the so-called \"android recording.\" I'm done wasting my time on that old job. Don't tell Eulogy though. I kinda like it here.",
+      "index": "7"
+    },
+    {
+      "topic": "MS08SlaverClue3",
+      "topic_text": "You know anything about an android who needed some surgery?",
+      "emotion": "Neutral 50",
+      "response_text": "I guess I can trust you not to spread it around. Zimmer has put it out that he will pay to find this slave, but he wants him alive.",
+      "index": "9"
+    },
+    {
+      "topic": "MS08SlaverClue3Bribe",
+      "topic_text": "I'll give you 100 caps for what you've got on this android.",
+      "emotion": "Neutral 50",
+      "response_text": "I guess I can trust you not to spread it around. Zimmer has put it out that he will pay to find this slave, but he wants him alive.",
+      "index": "16"
+    },
+    {
+      "topic": "MS08SlaverClue3Stat",
+      "topic_text": "I'm losing my patience! Tell me about the android with the face job!",
+      "emotion": "Neutral 50",
+      "response_text": "I guess I can trust you not to spread it around. Zimmer has put it out that he will pay to find this slave, but he wants him alive.",
+      "index": "19"
+    },
+    {
+      "topic": "MS08SlaverClue4",
+      "topic_text": "You have any info on where this Commonwealth android is hiding?",
+      "emotion": "Neutral 50",
+      "response_text": "Why has Zimmer hired you too? I can't find a trace of that robot. I'm sure he's here somewhere though. Don't tell Eulogy I told you, though.",
+      "index": "22"
+    },
+    {
+      "topic": "MS08SlaverClue4Bribe",
+      "topic_text": "Here's a 100 cap \"donation.\" Now, where's that escaped android?",
+      "emotion": "Neutral 50",
+      "response_text": "Why has Zimmer hired you too? I can't find a trace of that robot. I'm sure he's here somewhere though. Don't tell Eulogy I told you, though.",
+      "index": "25"
+    },
+    {
+      "topic": "MS08SlaverClue4Stat",
+      "topic_text": "Tell me where this android disappeared to, or I'll make you disappear. Got it?",
+      "emotion": "Neutral 50",
+      "response_text": "Why has Zimmer hired you too? I can't find a trace of that robot. I'm sure he's here somewhere though. Don't tell Eulogy I told you, though.",
+      "index": "26"
+    },
+    {
+      "topic": "RCSisterName",
+      "topic_text": "But you're a man. Why do they call you Sister?",
+      "emotion": "Anger 50",
+      "response_text": "Are you making fun of my name? It's a damn good thing for you this place is crawling with security. Otherwise I'd kick your ass.",
+      "index": "27"
+    },
+    {
+      "topic": "RCSisterOkay",
+      "topic_text": "Hey, I don't want any trouble.",
+      "emotion": "Disgust 50",
+      "response_text": "Smart move. What did you want?",
+      "index": "28"
+    },
+    {
+      "topic": "RCTopicMeiWongsProblem",
+      "topic_text": "Did you know that Mei Wong is a runaway slave?",
+      "emotion": "Surprise 50",
+      "response_text": "No. Interesting.",
+      "index": "29"
+    },
+    {
+      "topic": "SpeechChallengeFailure",
+      "topic_text": "SpeechChallengeFailure",
+      "emotion": "Anger 10",
+      "response_text": "Um. Yeah. Sorry. Not telling. Change the subject now.{mildly threatening}",
+      "index": "31"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYEI have to go now.",
+      "topic_text": "I've got things to do.",
+      "emotion": "Neutral 50",
+      "response_text": "So do I.",
+      "index": "32"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Neutral 50",
+      "response_text": "I need another whiskey, Belle.",
+      "index": "33"
+    },
+    {
+      "topic": "RCGoodbye",
+      "topic_text": "RCGoodbye",
+      "emotion": "Neutral 50",
+      "response_text": "Armitage.{Said like a greeting, instead of hello.}",
+      "index": "40"
+    },
+    {
+      "topic": "RCPackageEnd",
+      "topic_text": "RCPackageEnd",
+      "emotion": "Disgust 50",
+      "response_text": "I'll get you yet, you bastard.{muttering to himself.}",
+      "index": "49"
+    }
+  ],
+  "combat": []
+}

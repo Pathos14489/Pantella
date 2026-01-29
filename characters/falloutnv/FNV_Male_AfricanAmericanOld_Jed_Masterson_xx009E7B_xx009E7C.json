@@ -1,0 +1,464 @@
+{
+  "name": "Jed Masterson",
+  "url": "/wiki/Jed_Masterson",
+  "dialogue_name": "NVDLC02Jed.txt",
+  "dialogue_url": "/wiki/NVDLC02Jed.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": true,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "xx009E7B",
+  "ref_id": "xx009E7C",
+  "editor_id": "NVDLC02Jed",
+  "location": "Inside thenorthern passage",
+  "location_url": "/wiki/Northern_passage",
+  "descriptions": [
+    "Jed Masterson is a traveling merchant who works for the Happy Trails Caravan Company in 2281.",
+    "Masterson was a caravaneer who headed a Happy Trails caravan run into Zion Canyon, looking to delay Happy Trail's demise by trading with the Mormons in New Canaan, who had always been reliable for trade.",
+    "He had never been to Zion before and needed someone with a Pip-Boy 3000 in order to map out the area and its natural hazards; The Courier was able to fill this role, but was unable to protect Masterson and the other caravaneers from their untimely deaths when the caravan was ambushed by White Legs when they arrived in Zion.",
+    "Jed will react to the deaths of his traveling companions.",
+    "Jed Masterson appears only in the Fallout: New Vegas add-on Honest Hearts.",
+    "Jed Masterson was written by area designer Travis Stout.",
+    "PC Xbox 360 His corpse may never disappear."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Happy Trails Caravan Company",
+  "role": "Caravan boss",
+  "detailed_location": "Northern passageSouthern passage",
+  "voice_actor": "Dave Fennoy",
+  "special": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 4,
+    "Intelligence": 4,
+    "Agility": 6,
+    "Luck": 4
+  },
+  "level": "1",
+  "tag_skills": [
+    {
+      "Guns:": "31"
+    },
+    {
+      "Melee Weap.:": "31"
+    },
+    {
+      "Sneak:": "31"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "65"
+    },
+    {
+      "Critical Chance:": "4%"
+    },
+    {
+      "Unarmed Dam.:": "1.1"
+    },
+    {
+      "Poison Resist.:": "15%"
+    },
+    {
+      "Rad. Resist.:": "6%"
+    },
+    {
+      "Carry Weight:": "210"
+    },
+    {
+      "Dam. Threshold:": "2"
+    }
+  ],
+  "karma": "Neutral",
+  "geck_race": "AfricanAmericanOld",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Anger 25",
+      "response_text": "Come on, come on, no time to waste!",
+      "index": "1"
+    },
+    {
+      "topic": "NVDLC02DialogueCaravanMasterNVDLC02CaravanMasterTopic000",
+      "topic_text": "Okay, let's do it! Zion here we come!",
+      "emotion": "Surprise 50",
+      "response_text": "Just like that, huh? You got guts, I'll give you that. You sure you want to jump in blind? Ain't got no questions about where we're going or why?",
+      "index": "7"
+    },
+    {
+      "topic": "NVDLC02DialogueCaravanMasterNVDLC02JedTopic000",
+      "topic_text": "Yes, I'm sure.",
+      "emotion": "Happy 25",
+      "response_text": "Well, all right then. Let's get moving. We've got a long road ahead of us...",
+      "index": "16"
+    },
+    {
+      "topic": "NVDLC02DialogueCaravanMasterNVDLC02JedTopic001",
+      "topic_text": "Actually, let me take care of some more things first.",
+      "emotion": "Happy 10",
+      "response_text": "Fair enough. Come on back when you're ready.",
+      "index": "17"
+    },
+    {
+      "topic": "NVDLC02DialogueCaravanMasterNVDLC02JedTopic002",
+      "topic_text": "Why the weight limit?",
+      "emotion": "Surprise 20",
+      "response_text": "You ain't never been to Zion, have you? We'll be passing through a whole mess of narrow slot canyons and high, rough passes.",
+      "index": "18"
+    },
+    {
+      "topic": "NVDLC02DialogueCaravanMasterNVDLC02JedTopic003{Survival 50+}",
+      "topic_text": "Relax, I've humped this load across the Mojave on my own two feet long enough. I can handle it.",
+      "emotion": "Happy 15",
+      "response_text": "[SUCCEEDED] Hmm... all right, I reckon you know your limits.",
+      "index": "20"
+    },
+    {
+      "topic": "NVDLC02DialogueCaravanMasterNVDLC02JedTopic005",
+      "topic_text": "{Caravan Master reactivity}",
+      "emotion": "Surprise 50",
+      "response_text": "Hang on - ain't you the one that wiped out the Crimson Caravan's Vegas branch not too long ago?",
+      "index": "26"
+    },
+    {
+      "topic": "NVDLC02DialogueCaravanMasterNVDLC02JedTopic006{Strong Back Perk}",
+      "topic_text": "Not only could I carry my own gear, I could carry yours, his, and one of your brahmins'.",
+      "emotion": "Surprise 35",
+      "response_text": "Heh. I do believe you could.",
+      "index": "31"
+    },
+    {
+      "topic": "NVDLC02DialogueCaravanMasterNVDLC02JedTopic007{Pack Rat Perk}",
+      "topic_text": "Don't worry about me. I'm used to finding out-of-the-way places to stuff my gear.",
+      "emotion": "Disgust 35",
+      "response_text": "Heh. All right, I'll believe you - Lord knows I ain't going to pat you down to find out for myself.",
+      "index": "32"
+    },
+    {
+      "topic": "NVDLC02DialogueCaravanMasterNVDLC02JedTopic008",
+      "topic_text": "Tell me about Happy Trails Caravan Company.",
+      "emotion": "Happy 15",
+      "response_text": "We're a smaller company out of Sac-Town, up in the northern part of the NCR. We run some business through New Reno, there on the \"Little Loop.\"",
+      "index": "33"
+    },
+    {
+      "topic": "NVDLC02DialogueCaravanMasterNVDLC02JedTopic009",
+      "topic_text": "What can you tell me about New Canaan?",
+      "emotion": "Happy 10",
+      "response_text": "Don't know much about the place, but I can tell you about the people. The New Canaanites were some kind of religious group from before the War.",
+      "index": "35"
+    },
+    {
+      "topic": "NVDLC02DialogueCaravanMasterNVDLC02JedTopic010",
+      "topic_text": "I understand this caravan is headed to Zion. What can you tell me about the area?",
+      "emotion": "Happy 25",
+      "response_text": "Well, I ain't never been inside, myself. Did some trading with the New Canaanites from their mission there, but that was all on the outskirts.",
+      "index": "38"
+    },
+    {
+      "topic": "NVDLC02DialogueCaravanMasterNVDLC02JedTopic011",
+      "topic_text": "I haven't been through Utah recently - what's the situation like?",
+      "emotion": "Disgust 40",
+      "response_text": "Well, it ain't good, I'll tell you that. It's not like the Mojave or the NCR - hell, even Arizona under Caesar is safer.",
+      "index": "41"
+    },
+    {
+      "topic": "NVDLC02DialogueCaravanMasterNVDLC02JedTopic012",
+      "topic_text": "How about a game of Caravan to kill some time?",
+      "emotion": "Happy 50",
+      "response_text": "Should have figured you for a player. All right, let's play.",
+      "index": "44"
+    },
+    {
+      "topic": "NVDLC02DialogueCaravanMasterNVDLC02JedTopic013",
+      "topic_text": "Tell me more about the job.",
+      "emotion": "Happy 25",
+      "response_text": "The job is simple - help us get this caravan into Zion and find New Canaan. The pay is 25 caps per day, half up front, half on return.",
+      "index": "46"
+    },
+    {
+      "topic": "NVDLC02DialogueCaravanMasterNVDLC02JedTopic014",
+      "topic_text": "Who is Joshua Graham, and why shouldn't I talk about him?",
+      "emotion": "Anger 35",
+      "response_text": "Just don't. It makes the New Canaanites powerful uncomfortable, and it scares the britches off the tribals.",
+      "index": "49"
+    },
+    {
+      "topic": "NVDLC02DialogueCaravanMasterNVDLC02JedTopic015",
+      "topic_text": "All right, I'll come back when I'm carrying less than 75 pounds.",
+      "emotion": "Happy 10",
+      "response_text": "There's a chest over yonder, you can store your extra in that. It'll be safe as can be until you get back.",
+      "index": "51"
+    },
+    {
+      "topic": "NVDLC02DialogueCaravanMasterNVDLC02JedTopic016",
+      "topic_text": "Why can't you get to Salt Lake City?",
+      "emotion": "Disgust 20",
+      "response_text": "Without New Canaan's mission in Zion, the only ways to Salt Lake City are down the old I-80 or up through Ogden.",
+      "index": "53"
+    },
+    {
+      "topic": "NVDLC02DialogueCaravanMasterNVDLC02JedTopic017{Barter 45+}",
+      "topic_text": "It sounds like Happy Trails isn't in the best financial shape.",
+      "emotion": "Sad 50",
+      "response_text": "[SUCCEEDED] You ain't wrong. Losing the Salt Lake City run really stung us. If we can't re-establish contact with this run, we'll be in real trouble.",
+      "index": "56"
+    },
+    {
+      "topic": "NVDLC02DialogueCaravanMasterNVDLC02JedTopic018",
+      "topic_text": "Do you know anything about their religion?",
+      "emotion": "Surprise 5",
+      "response_text": "I ain't a prayin' man myself. They paid for their goods and dealt square with us, that's all I ever cared about.",
+      "index": "58"
+    },
+    {
+      "topic": "NVDLC02DialogueCaravanMasterNVDLC02JedTopic019",
+      "topic_text": "You don't know what happened to their mission?",
+      "emotion": "Fear 10",
+      "response_text": "Nope - hence this caravan. If we don't make contact with the New Canaanites, Happy Trails might as well just shrivel up and die.",
+      "index": "60"
+    },
+    {
+      "topic": "NVDLC02DialogueCaravanMasterNVDLC02JedTopic020",
+      "topic_text": "Tell me about the raiders.",
+      "emotion": "Disgust 40",
+      "response_text": "They're about what you'd expect - crazy, jacked up on chems, violent as hell, and not too bright.",
+      "index": "61"
+    },
+    {
+      "topic": "NVDLC02DialogueCaravanMasterNVDLC02JedTopic021",
+      "topic_text": "Degenerate tribes?",
+      "emotion": "Surprise 20",
+      "response_text": "That's right. The folks that lived in Zion before the war, they didn't just get a little savage, they're downright feral.",
+      "index": "63"
+    },
+    {
+      "topic": "NVDLC02DialogueCaravanMasterNVDLC02JedTopic022",
+      "topic_text": "Warlords? How dangerous are they?",
+      "emotion": "Fear 50",
+      "response_text": "Dangerous enough we won't be going near them if we can help it. I got no desire for my head to decorate some little gas station fort's walls, thanks.",
+      "index": "66"
+    },
+    {
+      "topic": "NVDLC02DialogueCaravanMasterNVDLC02JedTopic024",
+      "topic_text": "I had some other questions.",
+      "emotion": "Happy 20",
+      "response_text": "Shoot.",
+      "index": "67"
+    },
+    {
+      "topic": "NVDLC02DialogueCaravanMasterNVDLC02JedTopic025",
+      "topic_text": "That's all for now, but I'll be back.",
+      "emotion": "Happy 15",
+      "response_text": "Yeah, reckon you will.",
+      "index": "68"
+    },
+    {
+      "topic": "NVDLC02EndingFinale",
+      "topic_text": "NVDLC02EndingFinale",
+      "emotion": "Neutral 50",
+      "response_text": "{Narration - Finale}And with that, the Courier walked out of the history of the tribes of Zion and back to the gathering storm of the Mojave Wasteland.",
+      "index": "69"
+    },
+    {
+      "topic": "NVDLC02EndingHappyTrails",
+      "topic_text": "NVDLC02EndingHappyTrails",
+      "emotion": "Neutral 50",
+      "response_text": "{Narration - Daniel killed}Already weakened by several seasons of bad trading, the Happy Trails Caravan Company was devastated by the failure of its expedition.",
+      "index": "70"
+    },
+    {
+      "topic": "NVDLC02EndingStart",
+      "topic_text": "NVDLC02EndingStart",
+      "emotion": "Neutral 50",
+      "response_text": "{Narration - Intro}And so it was that the conflict between the New{KAY-neh-nites}Canaanites and the White Legs was finally resolved.",
+      "index": "83"
+    },
+    {
+      "topic": "NVDLC02IntroSlides01",
+      "topic_text": "NVDLC02IntroSlides01",
+      "emotion": "Neutral 50",
+      "response_text": "{Narration}A few decades back, folks in the NCR started to hear about a community in northern Utah called New Canaan.",
+      "index": "85"
+    },
+    {
+      "topic": "NVDLC02IntroSlides02",
+      "topic_text": "NVDLC02IntroSlides02",
+      "emotion": "Neutral 50",
+      "response_text": "{Narration}Didn't know much about them, except that they were religious folks. Sent out missionaries to talk to the tribes.",
+      "index": "86"
+    },
+    {
+      "topic": "NVDLC02IntroSlides03",
+      "topic_text": "NVDLC02IntroSlides03",
+      "emotion": "Neutral 50",
+      "response_text": "{Narration}We've seen our share of cults, but the New Canaanites, they were honest traders. Good fighters, too. Raiders wouldn't tangle with 'em.",
+      "index": "87"
+    },
+    {
+      "topic": "NVDLC02IntroSlides04",
+      "topic_text": "NVDLC02IntroSlides04",
+      "emotion": "Neutral 50",
+      "response_text": "{Narration}But then the Legion appeared in Arizona. I reckon you know all about them.",
+      "index": "88"
+    },
+    {
+      "topic": "NVDLC02IntroSlides05",
+      "topic_text": "NVDLC02IntroSlides05",
+      "emotion": "Neutral 50",
+      "response_text": "{Narration}Turns out Caesar's first war chief, the Malpais Legate, was a New Canaanite. Joshua Graham.",
+      "index": "89"
+    },
+    {
+      "topic": "NVDLC02IntroSlides06",
+      "topic_text": "NVDLC02IntroSlides06",
+      "emotion": "Neutral 50",
+      "response_text": "{Narration}Legend goes that Graham was the meanest, toughest son of a bitch in the whole damned Legion.",
+      "index": "90"
+    },
+    {
+      "topic": "NVDLC02IntroSlides07",
+      "topic_text": "NVDLC02IntroSlides07",
+      "emotion": "Neutral 50",
+      "response_text": "{Narration}Well at Hoover Dam, the Malpais Legate finally met his match. Hanlon and Oliver kicked his New Canaanite butt right back over the river.",
+      "index": "92"
+    },
+    {
+      "topic": "NVDLC02IntroSlides08",
+      "topic_text": "NVDLC02IntroSlides08",
+      "emotion": "Neutral 50",
+      "response_text": "{Narration}Caesar had to make an example for the others, to show them that even at the highest level, failure wouldn't be tolerated.",
+      "index": "93"
+    },
+    {
+      "topic": "NVDLC02IntroSlides09",
+      "topic_text": "NVDLC02IntroSlides09",
+      "emotion": "Neutral 50",
+      "response_text": "{Narration}He had Graham covered in pitch, lit on fire, and thrown into the Grand Canyon. People say he didn't even scream on the way down.",
+      "index": "94"
+    },
+    {
+      "topic": "NVDLC02IntroSlides10",
+      "topic_text": "NVDLC02IntroSlides10",
+      "emotion": "Neutral 50",
+      "response_text": "{Narration}Not long after, some of the slaves and tribals started to talk. Said Graham wasn't dead. Shouldn't have been any surprise.",
+      "index": "95"
+    },
+    {
+      "topic": "NVDLC02IntroSlides11",
+      "topic_text": "NVDLC02IntroSlides11",
+      "emotion": "Neutral 50",
+      "response_text": "{Narration}All this talk bothered Caesar, so he forbade anyone from speaking his name. Wanted to erase Joshua Graham from history.",
+      "index": "96"
+    },
+    {
+      "topic": "NVDLC02IntroSlides12",
+      "topic_text": "NVDLC02IntroSlides12",
+      "emotion": "Neutral 50",
+      "response_text": "{Narration}He got his wish. Joshua Graham disappeared. And in his place came legends of the Burned Man walking the wastes.",
+      "index": "97"
+    },
+    {
+      "topic": "NVDLC02IntroSlidesDLC",
+      "topic_text": "NVDLC02IntroSlidesDLC",
+      "emotion": "Neutral 50",
+      "response_text": "{Do not record - Honest Hearts}",
+      "index": "98"
+    },
+    {
+      "topic": "NVDLC02IntroSlidesFNV",
+      "topic_text": "NVDLC02IntroSlidesFNV",
+      "emotion": "Neutral 50",
+      "response_text": "{Do not record - Fallout New Vegas}",
+      "index": "99"
+    },
+    {
+      "topic": "NVDLC02IntroSlidesFinale",
+      "topic_text": "NVDLC02IntroSlidesFinale",
+      "emotion": "Neutral 50",
+      "response_text": "{Narration}Probably just a tribal ghost story. But New Canaan's been silent for a long time. Maybe it's a coincidence. Maybe the Malpais Legate is dead.",
+      "index": "100"
+    },
+    {
+      "topic": "NVDLC02IntroSlidesStart",
+      "topic_text": "NVDLC02IntroSlidesStart",
+      "emotion": "Neutral 50",
+      "response_text": "{Narration}The paths we're following are slow going, so you might as well keep your ears open and listen to what old Jed has to say.",
+      "index": "102"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "NVDLC02AmbushJedAlertBark01",
+      "topic_text": "NVDLC02AmbushJedAlertBark01",
+      "emotion": "Neutral 50",
+      "response_text": "{Jed becomes alerted by a sound ahead of the party. Stops dead on his tracks, cautious.}Shhhhh! Hold on, now...{finger to his lips, he shushes the rest of the crew.}Could swear I heard something up ahead.",
+      "index": "103"
+    },
+    {
+      "topic": "NVDLC02AmbushJedBark01",
+      "topic_text": "NVDLC02AmbushJedBark01",
+      "emotion": "Neutral 50",
+      "response_text": "{Alarmed, recognizes that they've been ambushed}Goddammit, ambush! Cover, people! Watch yourselves!",
+      "index": "104"
+    },
+    {
+      "topic": "NVDLC02AmbushJedBark02",
+      "topic_text": "NVDLC02AmbushJedBark02",
+      "emotion": "Neutral 50",
+      "response_text": "{Trying to calm his crew under an onslaught of fire, and flying tomahawks.}Holy hell! Stay low, people, stay low...",
+      "index": "105"
+    },
+    {
+      "topic": "NVDLC02AmbushJedBark03",
+      "topic_text": "NVDLC02AmbushJedBark03",
+      "emotion": "Neutral 50",
+      "response_text": "{Notices Stella falling down}Stella!... Oh no!{as he runs to her fallen body, small pause}Don't you die on me, woman, you hear?",
+      "index": "106"
+    },
+    {
+      "topic": "NVDLC02AmbushJedBark04",
+      "topic_text": "NVDLC02AmbushJedBark04",
+      "emotion": "Neutral 50",
+      "response_text": "{Notices the player being hit, and falling down, and rushes to aid}On your feet! Keep fighting!{helps player on her/his feet}Come on now, I got ya...",
+      "index": "107"
+    },
+    {
+      "topic": "NVDLC02JedBarks",
+      "topic_text": "NVDLC02JedBarks",
+      "emotion": "Neutral 50",
+      "response_text": "Come on, down this path. We're almost there.",
+      "index": "108"
+    },
+    {
+      "topic": "NVDLC02JedForceGreetPt2TOPIC",
+      "topic_text": "NVDLC02JedForceGreetPt2TOPIC",
+      "emotion": "Neutral 50",
+      "response_text": "{exasperated}Goddammit, Stella, heard you the first time, and the fifteenth, too.",
+      "index": "110"
+    },
+    {
+      "topic": "NVDLC02JedForceGreetTOPIC",
+      "topic_text": "NVDLC02JedForceGreet",
+      "emotion": "Anger 25",
+      "response_text": "All right, people. Been a long couple weeks, but here we are.{a big deal - Wha-la!}Zion.",
+      "index": "113"
+    }
+  ],
+  "combat": [
+    {
+      "topic": "RadioHello",
+      "topic_text": "RadioHello",
+      "emotion": "Neutral 50",
+      "response_text": "Howdy. My name is Jed Masterson, and I'm a caravan boss for the Happy Trails Caravan Company.",
+      "index": "117"
+    }
+  ]
+}

@@ -1,0 +1,108 @@
+{
+  "name": "Stockholm",
+  "url": "/wiki/Stockholm",
+  "dialogue_name": "Stockholm.txt",
+  "dialogue_url": "/wiki/Stockholm.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "00003B1C",
+  "ref_id": "00003B26",
+  "editor_id": "Stockholm",
+  "location": "Above the entrance",
+  "location_url": null,
+  "descriptions": [
+    "Stockholm is a sentry in Megaton in 2277.",
+    "Stockholm is the guard for Megaton and watches the gate. He resides in the guard tower outside the city above the main gate.",
+    "When talked to on the balcony, Stockholm will complain that the more time he spends talking to the Lone Wanderer, the less time he spends watching for raiders, and wonders how the Lone Wanderer got up there at all. This is the only interaction possible.",
+    "The Fallout 3 Official Game Guide states that his name is \"Solomon.\" As the guide was written off of an earlier version of the game, it is possible that this was Stockholm's name, until it was changed at the last minute."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "role": "Gate guard",
+  "detailed_location": "Megaton",
+  "voice_actor": "Jeff Baker",
+  "special": {
+    "Strength": 6,
+    "Perception": 7,
+    "Endurance": 5,
+    "Charisma": 3,
+    "Intelligence": 3,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "level": "1",
+  "tag_skills": [
+    {
+      "Explosives:": "34"
+    },
+    {
+      "Small Guns:": "32"
+    },
+    {
+      "Sneak:": "32"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "30"
+    },
+    {
+      "Critical Chance:": "5%"
+    },
+    {
+      "Unarmed Dam.:": "1.25"
+    },
+    {
+      "Poison Resist.:": "20%"
+    },
+    {
+      "Rad. Resist.:": "8%"
+    },
+    {
+      "Carry Weight:": "210"
+    }
+  ],
+  "karma": "Good",
+  "voice_type": "MaleAdult01DefaultDC",
+  "geck_race": "Hispanic",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "The more time I spend talking to you, the less I'm spending watching for Raiders.",
+      "index": "1"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "I have to go now.",
+      "emotion": "Neutral 50",
+      "response_text": "Gotcha.",
+      "index": "3"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Neutral 50",
+      "response_text": "Why am I looking at you?",
+      "index": "4"
+    }
+  ],
+  "combat": [
+    {
+      "topic": "Hit",
+      "topic_text": "Hit",
+      "emotion": "Pained 100",
+      "response_text": "Alarm!",
+      "index": "5"
+    }
+  ]
+}

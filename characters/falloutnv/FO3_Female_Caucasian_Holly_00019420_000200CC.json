@@ -1,0 +1,157 @@
+{
+  "name": "Holly",
+  "url": "/wiki/Holly_(Fallout_3)",
+  "dialogue_name": "TheFamilyHolly.txt",
+  "dialogue_url": "/wiki/TheFamilyHolly.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "00019420",
+  "ref_id": "000200CC",
+  "editor_id": "TheFamilyHolly",
+  "location": "Meresti Metro station",
+  "location_url": "/wiki/Meresti_Metro_station",
+  "descriptions": [
+    "Holly is the wife of Vance and a member of the Family in 2277. She has several reservations about her husband's beliefs but supports him completely.",
+    "Holly is the oldest female member of the group and was the first to join Vance when he decided to exile himself to Meresti. Over the years, she has grown fond of Vance, and they have enjoyed a healthy relationship. She is often found following Vance around wherever he goes, and they share the same bed. Since she is a veteran member of the Family, the rest of them accept her relationship with Vance and do not feel she is trying to get anything out of him or use him to get what she wants. She is strong-willed and intelligent."
+  ],
+  "race": "Human",
+  "gender": "Female",
+  "affiliation": "The Family",
+  "role": "Wife",
+  "detailed_location": "Meresti trainyard",
+  "voice_actor": "Shari Elliker",
+  "special": {
+    "Strength": 6,
+    "Perception": 7,
+    "Endurance": 5,
+    "Charisma": 3,
+    "Intelligence": 3,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "level": "6→14",
+  "tag_skills": [
+    {
+      "Explosives:": "55→90"
+    },
+    {
+      "Small Guns:": "53→88(55→90)"
+    },
+    {
+      "Sneak:": "53→88"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Neutral",
+  "voice_type": "FemaleAdult01DefaultDC",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "I don't think we've been properly introduced. I'm Holly... Vance's wife.",
+      "index": "1"
+    },
+    {
+      "topic": "MS09FamHollyCT01Scoundrel",
+      "topic_text": "Come on, all I want to do is talk. What harm could little old me do?",
+      "emotion": "Happy 70",
+      "response_text": "Well, I guess so. You seem like a pretty nice guy.",
+      "index": "4"
+    },
+    {
+      "topic": "MS09FamHollyCT02Charisma",
+      "topic_text": "Hey, I'm just here to help. All I want to do is be someone he can talk to.",
+      "emotion": "Happy 70",
+      "response_text": "Well, I guess so. You seem like a pretty nice guy.",
+      "index": "6"
+    },
+    {
+      "topic": "MS09FamHollyCT03",
+      "topic_text": "Maybe it will, or maybe it's just messing him up more.",
+      "emotion": "Anger 50",
+      "response_text": "You don't think he's already messed up? Come on. Don't kid yourself.",
+      "index": "8"
+    },
+    {
+      "topic": "MS09FamHollyCT04",
+      "topic_text": "Sorry, I think he needs to be with his real family.",
+      "emotion": "Disgust 50",
+      "response_text": "You just don't get it, do you? We are his \"real\" family, okay?",
+      "index": "10"
+    },
+    {
+      "topic": "MS09TLLaws",
+      "topic_text": "Please, help me understand your Laws.",
+      "emotion": "Happy 60",
+      "response_text": "Each of us is required to speak one of the Laws when we hold our ceremonies. I say the First Law.",
+      "index": "11"
+    },
+    {
+      "topic": "MS09TLLookingforIanWest",
+      "topic_text": "I'm looking for Ian West. Have you seen him?",
+      "emotion": "Neutral 50",
+      "response_text": "I'm afraid Vance has him in isolation and there is no way I'm going to override Vance's orders.",
+      "index": "13"
+    },
+    {
+      "topic": "MS09TLWhatisMeresti",
+      "topic_text": "What is this place?",
+      "emotion": "Sad 70",
+      "response_text": "This is Meresti, the home of the Family. It's the only safe place for these poor people.",
+      "index": "16"
+    },
+    {
+      "topic": "MS09TLWhoAreFamily",
+      "topic_text": "Tell me about the Family.",
+      "emotion": "Sad 60",
+      "response_text": "My husband started this group not long ago. He was trying to save them from a life of hardship and ridicule.",
+      "index": "17"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "I have to go now.",
+      "emotion": "Neutral 50",
+      "response_text": "It was good talking to you.",
+      "index": "19"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Neutral 50",
+      "response_text": "Hello there, stranger.",
+      "index": "24"
+    },
+    {
+      "topic": "MS09MerestiRandom01",
+      "topic_text": "MS09MerestiRandom01",
+      "emotion": "Happy 50",
+      "response_text": "Yes, my love?",
+      "index": "29"
+    },
+    {
+      "topic": "MS09MerestiResponsestoFamily",
+      "topic_text": "MS09MerestiResponsestoFamily",
+      "emotion": "Happy 60",
+      "response_text": "Yep. We're both extremely proud of you. You've come such a long way in a short amount of time.",
+      "index": "32"
+    },
+    {
+      "topic": "MS09MerestiResponsestoVance",
+      "topic_text": "MS09MerestiRandom02",
+      "emotion": "Happy 50",
+      "response_text": "Oh come now, Vance. You are doing what's best for these people. If it wasn't for you, they'd be living in the Wastes... or dead.",
+      "index": "36"
+    }
+  ],
+  "combat": []
+}

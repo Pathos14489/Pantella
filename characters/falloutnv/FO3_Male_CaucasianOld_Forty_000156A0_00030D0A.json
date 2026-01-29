@@ -1,0 +1,206 @@
+{
+  "name": "Forty",
+  "url": "/wiki/Forty",
+  "dialogue_name": "Forty.txt",
+  "dialogue_url": "/wiki/Forty.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000156A0",
+  "ref_id": "00030D0A",
+  "editor_id": "Forty",
+  "location": "Paradise Falls",
+  "location_url": "/wiki/Paradise_Falls",
+  "descriptions": [
+    "Forty is a slaver at Paradise Falls and is Eulogy Jones' fairly dim-witted second-in-command in 2277.",
+    "Forty is Eulogy's second in command and earned his nickname from the fact that, throughout his life, he has killed 40 men. However, killing slaves is something Forty considers \"sport\" and does not count toward his total."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Slavers",
+  "role": "Slaver",
+  "detailed_location": "Paradise Falls",
+  "voice_actor": "Pete Papageorge",
+  "special": {
+    "Strength": 6,
+    "Perception": 7,
+    "Endurance": 5,
+    "Charisma": 3,
+    "Intelligence": 3,
+    "Agility": 6,
+    "Luck": 4
+  },
+  "level": "10→30 (Broken Steelonly)",
+  "tag_skills": [
+    {
+      "Energy Weap.:": "72→100"
+    },
+    {
+      "Melee Weap.:": "70→100"
+    },
+    {
+      "Small Guns:": "70→100"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Evil",
+  "voice_type": "MaleAdult02DC",
+  "geck_race": "CaucasianOld",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Anger 50",
+      "response_text": "...the fuck you lookin' at? Huh?{confrontational, intimidating}",
+      "index": "1"
+    },
+    {
+      "topic": "MQ07FortyBailout",
+      "topic_text": "Sorry, I didn't mean to bother you.",
+      "emotion": "Neutral 50",
+      "response_text": "Whatever. Get the hell out of here.",
+      "index": "10"
+    },
+    {
+      "topic": "MQ07FortyDistraction1",
+      "topic_text": "Just stopping by to see how things are going. Tired? Need a break?",
+      "emotion": "Neutral 50",
+      "response_text": "Since when are we such good buddies? Huh?",
+      "index": "11"
+    },
+    {
+      "topic": "MQ07FortyDistraction2",
+      "topic_text": "I think Eulogy is looking for you.",
+      "emotion": "Neutral 50",
+      "response_text": "You think so, do you?",
+      "index": "13"
+    },
+    {
+      "topic": "MQ07FortyDistractionSPEECH",
+      "topic_text": "They must pay you really well to put up with this boring job.",
+      "emotion": "Surprise 50",
+      "response_text": "Huh?",
+      "index": "15"
+    },
+    {
+      "topic": "MQ07FortyGreet1",
+      "topic_text": "Nothing. Nothing at all.",
+      "emotion": "Anger 50",
+      "response_text": "Goddamn right, nothing. Now get outta my way.",
+      "index": "17"
+    },
+    {
+      "topic": "MQ07FortyGreet2",
+      "topic_text": "Lucky break there. He almost got away.",
+      "emotion": "Neutral 50",
+      "response_text": "Ain't none of 'em getting nowhere. Not with them collars on. Asshole should've known better.",
+      "index": "18"
+    },
+    {
+      "topic": "MQ07FortyGreet3",
+      "topic_text": "How the hell did you make that guy's head explode?",
+      "emotion": "Neutral 50",
+      "response_text": "He did it. Dumb shit should've known the collar would blow. Now somebody's gotta clean up this mess.",
+      "index": "19"
+    },
+    {
+      "topic": "MQ07FortySpeechSuccess1",
+      "topic_text": "I was just wondering, really. I figure you must make more than the others.",
+      "emotion": "Neutral 50",
+      "response_text": "Maybe... And maybe it's time to see Eulogy about a raise.",
+      "index": "20"
+    },
+    {
+      "topic": "MQ07FortySpeechSuccess2",
+      "topic_text": "It just seems like you do most of the work around here.",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah, so maybe I get a raw deal sometimes. Everybody does out here. That's the way shit goes.",
+      "index": "21"
+    },
+    {
+      "topic": "MQ07FortySpeechSuccess3",
+      "topic_text": "Sorry, I don't mean to pry. It just seems like you should be doing more than this.",
+      "emotion": "Neutral 50",
+      "response_text": "Well... I mean, yeah. I ain't exactly in charge here, but I'm Eulogy's right-hand man.",
+      "index": "23"
+    },
+    {
+      "topic": "SpeechChallengeFailure",
+      "topic_text": "SpeechChallengeFailure",
+      "emotion": "Neutral 50",
+      "response_text": "Hey, I got an idea.",
+      "index": "25"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "I have to go now.",
+      "emotion": "Neutral 50",
+      "response_text": "Get outta here.",
+      "index": "27"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Neutral 50",
+      "response_text": "I've killed people for looking at me like that.",
+      "index": "29"
+    },
+    {
+      "topic": "MQ07BreakoutSceneConv",
+      "topic_text": "MQ07BreakoutSceneConv",
+      "emotion": "Anger 50",
+      "response_text": "Thought you'd get out of here, did you? You little shit. Get back inside, now.{furious, slightly out of breath}",
+      "index": "33"
+    },
+    {
+      "topic": "MQ07CrimsonFortyConversation",
+      "topic_text": "MQ07CrimsonFortyConversation",
+      "emotion": "Neutral 50",
+      "response_text": "All right, all right. Just keep quiet.",
+      "index": "36"
+    },
+    {
+      "topic": "MQ07FortySlavesBought",
+      "topic_text": "MQ07FortySlavesBought",
+      "emotion": "Neutral 50",
+      "response_text": "The little shits are your problem now. I see 'em around here again, I'm gonna shoot 'em. We clear?",
+      "index": "40"
+    },
+    {
+      "topic": "MQ07FortyWarnPlayer",
+      "topic_text": "MQ07FortyWarnPlayer",
+      "emotion": "Neutral 50",
+      "response_text": "Hey, back away from the kid.",
+      "index": "41"
+    },
+    {
+      "topic": "PFTalkFortyEulogyJones1",
+      "topic_text": "PFTalkFortyEulogyJones1",
+      "emotion": "Neutral 50",
+      "response_text": "What are you talking about, man? There's nothing wrong out here. Everything looks just fine to me.",
+      "index": "43"
+    },
+    {
+      "topic": "PFTalkFortyEulogyJones3",
+      "topic_text": "PFTalkFortyEulogyJones3",
+      "emotion": "Neutral 50",
+      "response_text": "Okay, yeah. I see what you mean. I'll get on it right away, Eulogy.",
+      "index": "45"
+    },
+    {
+      "topic": "PFTalkHiResponse1",
+      "topic_text": "PFTalkHiResponse1",
+      "emotion": "Neutral 50",
+      "response_text": "So I look like I wanna be talking to you, scrub?",
+      "index": "47"
+    }
+  ],
+  "combat": []
+}

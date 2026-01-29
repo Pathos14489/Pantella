@@ -1,0 +1,277 @@
+{
+  "name": "Lieutenant Markland",
+  "url": "/wiki/Markland",
+  "dialogue_name": "VBSLieutenantMarkland.txt",
+  "dialogue_url": "/wiki/VBSLieutenantMarkland.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": true,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "0012AC9F",
+  "ref_id": "00133043",
+  "editor_id": "VBSLieutenantMarkland",
+  "location": "Bitter Springs",
+  "location_url": "/wiki/Bitter_Springs",
+  "descriptions": [
+    "Lieutenant Markland is an NCR army doctor stationed at Bitter Springs in 2281.",
+    "Markland is the medical officer and field medic at Bitter Springs. While he has extensive medical knowledge and field first aid (treating trench foot, making a tourniquet, etc.), he was not trained to treat the psychological trauma from which many of the refugees suffer.",
+    "Markland is markedly tall, much like Arcade Gannon, Aurelius of Phoenix and Lucullus."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "NCR Army",
+  "role": "Doctor",
+  "detailed_location": "Bitter Springs",
+  "voice_actor": "Liam O'Brien",
+  "special": {
+    "Strength": 4,
+    "Perception": 6,
+    "Endurance": 4,
+    "Charisma": 6,
+    "Intelligence": 7,
+    "Agility": 5,
+    "Luck": 4
+  },
+  "level": "6",
+  "tag_skills": [
+    {
+      "Barter:": "52"
+    },
+    {
+      "Medicine:": "54(59)"
+    },
+    {
+      "Science:": "54"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Good",
+  "voice_type": "MaleAdult05",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "DoctorAddiction",
+      "topic_text": "I think I might be addicted to something.",
+      "emotion": "Neutral 50",
+      "response_text": "If you've seen half the things I've seen out in the Wasteland, I can't say I blame you. I might be able to help with that.",
+      "index": "1"
+    },
+    {
+      "topic": "DoctorAddictionNO",
+      "topic_text": "I think I'll tough it out.",
+      "emotion": "Neutral 50",
+      "response_text": "Suits me - I've got plenty of other patients to take care of.",
+      "index": "2"
+    },
+    {
+      "topic": "DoctorAddictionYESYes, cure me.",
+      "topic_text": "Yes, cure me. Here's 50 caps.",
+      "emotion": "Neutral 50",
+      "response_text": "All right, there you go. And don't complain about the taste.",
+      "index": "3"
+    },
+    {
+      "topic": "DoctorMedical",
+      "topic_text": "I'm hurt. I need help, Doc.",
+      "emotion": "Neutral 50",
+      "response_text": "Let me take a look.{Beat}Really? That's it? You've got a few scrapes and a hangnail. Come back when you're really hurt.",
+      "index": "5"
+    },
+    {
+      "topic": "DoctorMedical33YESAll right, here's your money.",
+      "topic_text": "Okay, fix me. Here's 100 caps.",
+      "emotion": "Neutral 50",
+      "response_text": "Okay, that's about the best I can do. Try not to get hurt that bad again, it's not like I've got an endless supply of bandages.",
+      "index": "9"
+    },
+    {
+      "topic": "DoctorMedical66YESHere's your money.",
+      "topic_text": "Okay, fix me. Here's 75 caps.",
+      "emotion": "Neutral 50",
+      "response_text": "Okay, that's about the best I can do. Try not to get hurt that bad again, it's not like I've got an endless supply of bandages.",
+      "index": "11"
+    },
+    {
+      "topic": "DoctorMedical99YESAll right, fix me.",
+      "topic_text": "Okay, fix me. Here's 50 caps.",
+      "emotion": "Neutral 50",
+      "response_text": "Okay, that's about the best I can do. Try not to get hurt that bad again, it's not like I've got an endless supply of bandages.",
+      "index": "13"
+    },
+    {
+      "topic": "DoctorMedicalNO",
+      "topic_text": "On second thought, I'll be fine.",
+      "emotion": "Neutral 50",
+      "response_text": "Swing back by if you change your mind. I'll see what I can do for you.",
+      "index": "15"
+    },
+    {
+      "topic": "DoctorRadiation",
+      "topic_text": "Can you heal my radiation?",
+      "emotion": "Neutral 50",
+      "response_text": "Well, one thing we do have is a good supply of Rad-Away. Sure, I can help you with that.",
+      "index": "16"
+    },
+    {
+      "topic": "DoctorRadiationNO",
+      "topic_text": "No, thanks.",
+      "emotion": "Neutral 50",
+      "response_text": "All right, but don't blame me if you end up sterile.",
+      "index": "17"
+    },
+    {
+      "topic": "DoctorRadiationYESDo it.",
+      "topic_text": "Here's your 100 caps. Do it.",
+      "emotion": "Neutral 50",
+      "response_text": "Just stand still and try to ignore the tingling.",
+      "index": "18"
+    },
+    {
+      "topic": "DoctorSupplies",
+      "topic_text": "I need medical supplies.",
+      "emotion": "Neutral 50",
+      "response_text": "I'd love to help you out, but I'm pretty strapped here as it is. I really don't have anything to sell you.",
+      "index": "20"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Fear 20",
+      "response_text": "{Impressed}It was you that rescued President Kimball, wasn't it? You're becoming quite the celebrity already.",
+      "index": "22"
+    },
+    {
+      "topic": "LtMarklandAid",
+      "topic_text": "Captain Gilles said to talk to you about medical aid for the camp.",
+      "emotion": "Happy 30",
+      "response_text": "{Pleased}Hey, if you can help, I'll take whatever I can get. Doctor's Bags would be a huge help, but what I really need are medical texts.",
+      "index": "33"
+    },
+    {
+      "topic": "LtMarklandMedicine",
+      "topic_text": "I found those books you wanted.",
+      "emotion": "Happy 50",
+      "response_text": "{Excited}Both of them? Wow, that's very resourceful. Thank you.",
+      "index": "40"
+    },
+    {
+      "topic": "LtMarklandNullLink",
+      "topic_text": "LtMarklandNullLink",
+      "emotion": "Sad 20",
+      "response_text": "Doctor's Bags would be a huge help too.",
+      "index": "43"
+    },
+    {
+      "topic": "LtMarklandSupplies",
+      "topic_text": "<Give 1 Doctor's Bag> I brought you a Doctor's Bag. I hope it helps.",
+      "emotion": "Happy 30",
+      "response_text": "{Grateful}Are you kidding? The supplies in this are going to save lives. Thank you.",
+      "index": "45"
+    },
+    {
+      "topic": "LtMarklandSupplies2",
+      "topic_text": "<Give 3 Doctor's Bags> I brought you these Doctor's Bags. I hope they help.",
+      "emotion": "Happy 75",
+      "response_text": "{Grateful}Thank you, this will keep us well-stocked for a good long while.",
+      "index": "46"
+    },
+    {
+      "topic": "LtMarklandSupplies3",
+      "topic_text": "<Give 2 Doctor's Bags> I brought you these Doctor's Bags. I hope they help.",
+      "emotion": "Happy 50",
+      "response_text": "{Grateful}These will be a big help, thanks.",
+      "index": "47"
+    },
+    {
+      "topic": "LtMarklandTraining",
+      "topic_text": "LtMarklandTraining",
+      "emotion": "Happy 45",
+      "response_text": "{Happy}Thank you, that was very helpful. I don't think I'll need those books after all.",
+      "index": "48"
+    },
+    {
+      "topic": "VMS36VBSLieutenantMarklandTopic000",
+      "topic_text": "Medical texts? Aren't you a doctor?",
+      "emotion": "Pained 30",
+      "response_text": "{Frustrated, a little sad}I'm an Army field medic. I can treat bullet wounds, shrapnel, trenchfoot, no problem.",
+      "index": "49"
+    },
+    {
+      "topic": "VMS36VBSLieutenantMarklandTopic001",
+      "topic_text": "I'll keep my eyes open for books on pediatrics or psychological trauma, then.",
+      "emotion": "Happy 30",
+      "response_text": "{Grateful}Thank you. Any help you can give would be a godsend.",
+      "index": "51"
+    },
+    {
+      "topic": "VMS36VBSLieutenantMarklandTopic002",
+      "topic_text": "My friend here is a doctor, maybe he could give you some training in those areas instead.",
+      "emotion": "Happy 40",
+      "response_text": "{Excited}Yeah? Hey, sure, that would be fantastic!",
+      "index": "52"
+    },
+    {
+      "topic": "VMS36VBSLieutenantMarklandTopic003",
+      "topic_text": "Any idea where I might find those books?",
+      "emotion": "Surprise 10",
+      "response_text": "{Thoughtful}Caravan companies are probably your best bet. Smaller traders aren't likely to have anything that esoteric.",
+      "index": "53"
+    },
+    {
+      "topic": "VMS36VBSLieutenantMarklandTopic004",
+      "topic_text": "Okay, I'll see what I can do.",
+      "emotion": "Surprise 10",
+      "response_text": "Thanks. Anything else?",
+      "index": "54"
+    },
+    {
+      "topic": "VMS40VBSLieutenantMarklandTopic000",
+      "topic_text": "Don't sweat it, I was glad to help.",
+      "emotion": "Happy 20",
+      "response_text": "{Grateful}Well, still. Thanks again.",
+      "index": "55"
+    },
+    {
+      "topic": "VMS40VBSLieutenantMarklandTopic001",
+      "topic_text": "Well, if you've got a surplus, maybe you could spare a little medicine?",
+      "emotion": "Pained 10",
+      "response_text": "{A little embarassed that he forgot to offer payment}Oh! Oh, yeah, sure, I think I can spare a little. Here. And thanks again.",
+      "index": "56"
+    },
+    {
+      "topic": "VMS40VBSLieutenantMarklandTopic002",
+      "topic_text": "Some spare meds would be great - and those books weren't cheap.",
+      "emotion": "Pained 25",
+      "response_text": "{A little embarassed that he forgot to offer payment}Oh! Right, of course, I can give you a few spare meds and a few caps. Here.",
+      "index": "57"
+    },
+    {
+      "topic": "VMS40VBSLieutenantMarklandTopic003",
+      "topic_text": "Thanks, that should cover my expenses.",
+      "emotion": "Happy 45",
+      "response_text": "{Pleased}No problem, here you go. I'm kind of amazed you found them at all. Thanks again for everything.",
+      "index": "58"
+    },
+    {
+      "topic": "VMS40VBSLieutenantMarklandTopic004",
+      "topic_text": "Those books were pretty expensive. Maybe you can cough up a little more?",
+      "emotion": "Surprise 35",
+      "response_text": "{Hesitant - thinks he's being ripped off but doesn't want to say it}Really? Wow. Well, you did pay for them, so here you go. Thanks again for everything.",
+      "index": "59"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Stay safe out there.",
+      "index": "60"
+    }
+  ],
+  "combat": []
+}

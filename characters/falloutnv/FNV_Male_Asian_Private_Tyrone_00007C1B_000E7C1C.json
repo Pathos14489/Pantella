@@ -1,0 +1,151 @@
+{
+  "name": "Private Tyrone",
+  "url": "/wiki/Tyrone_(Fallout:_New_Vegas)",
+  "dialogue_name": "PrimmTyrone.txt",
+  "dialogue_url": "/wiki/PrimmTyrone.txt",
+  "spawned_dead": false,
+  "spawned": true,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "00007C1B",
+  "ref_id": "000E7C1C",
+  "editor_id": "PrimmTyrone",
+  "location": "NCR camp outsidePrimm",
+  "location_url": "/wiki/Primm",
+  "descriptions": [
+    "Tyrone is an NCR trooper found outside of Primm in Fallout: New Vegas.",
+    "Tyrone is an NCR trooper that is stationed somewhere across the border in California, who makes deliveries to the troops in Primm a few times each month.",
+    "Tyrone's unexpected price hike is not without reason as the NCR brass were beginning to receive reports that their chemical supplies were reaching the Great Khans, who in turn use the supplies to create drugs to sell to the Fiends.",
+    "Only with Black Widow"
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "NCR armyChomps Lewis",
+  "role": "SoldierTrafficker",
+  "detailed_location": "NCR tent,Primm",
+  "voice_actor": "Emerson Brooks",
+  "special": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 5,
+    "Intelligence": 5,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "level": "3",
+  "tag_skills": [
+    {
+      "Explosives:": "38"
+    },
+    {
+      "Guns:": "38"
+    },
+    {
+      "Melee Weap.:": "38"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Neutral",
+  "voice_type": "MaleAdult01DefaultB",
+  "geck_race": "Asian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "Hey, hey. What can Tyrone do for you?",
+      "index": "1"
+    },
+    {
+      "topic": "vFreeformSloanPrimmTyroneTopic000",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Later.",
+      "index": "4"
+    },
+    {
+      "topic": "vFreeformSloanPrimmTyroneTopic001",
+      "topic_text": "What do you do here?",
+      "emotion": "Neutral 50",
+      "response_text": "Just making some deliveries to the troops here in Primm. I'm stationed in California, but I come across the border a couple times a month.",
+      "index": "5"
+    },
+    {
+      "topic": "vFreeformSloanPrimmTyroneTopic002",
+      "topic_text": "A friend in Sloan told me to come to you about some chemical supplies.",
+      "emotion": "Surprise 50",
+      "response_text": "{hushed}You trying to get me busted? Keep your damn voice down - Lieutenant Hayes already has his eye on me.",
+      "index": "6"
+    },
+    {
+      "topic": "vFreeformSloanPrimmTyroneTopic003",
+      "topic_text": "You were already paid in advance.",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah, and as it turns out, the advance wasn't enough. The price has gone up. That's just how it goes.",
+      "index": "10"
+    },
+    {
+      "topic": "vFreeformSloanPrimmTyroneTopic004< Speech 40 >",
+      "topic_text": "I say the word and someone else will start making deliveries to Nevada, not you.",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] I've reconsidered my position, and I think it would be in my best interest if I were to sacrifice my profit on this particular deal.",
+      "index": "11"
+    },
+    {
+      "topic": "vFreeformSloanPrimmTyroneTopic005< Barter 35 >",
+      "topic_text": "Is 300 caps worth being known as a deal-breaker? Seems like bad business to me.",
+      "emotion": "Disgust 25",
+      "response_text": "[SUCCEEDED] Fine, I'll just eat the cost and do a favor for Chomps. Just this one time only.",
+      "index": "13"
+    },
+    {
+      "topic": "vFreeformSloanPrimmTyroneTopic006",
+      "topic_text": "Here's 300 caps. Hand over those supplies.",
+      "emotion": "Happy 50",
+      "response_text": "Pleasure doing business with you.{winking}Of course, this whole deal never happened, am I right?",
+      "index": "15"
+    },
+    {
+      "topic": "vFreeformSloanPrimmTyroneTopic007",
+      "topic_text": "Never mind. Let's talk about something else.",
+      "emotion": "Neutral 50",
+      "response_text": "Whatever. You know where to find me.",
+      "index": "16"
+    },
+    {
+      "topic": "vFreeformSloanPrimmTyroneTopic008",
+      "topic_text": "About those chemical supplies...",
+      "emotion": "Neutral 50",
+      "response_text": "Still got 'em. You ready to pay up?",
+      "index": "17"
+    },
+    {
+      "topic": "vFreeformSloanPrimmTyroneTopic009",
+      "topic_text": "How do you like being part of the NCR military?",
+      "emotion": "Neutral 50",
+      "response_text": "It's better than farming or herding Brahmin. As long as they don't send me to the front lines, I'm a happy man.",
+      "index": "18"
+    },
+    {
+      "topic": "vFreeformSloanPrimmTyroneTopic010",
+      "topic_text": "How about you and I come to another arrangement. It'll be worth it - trust me.",
+      "emotion": "Neutral 50",
+      "response_text": "{Black Widow}Well, it has been awhile. All right, let's do this.",
+      "index": "19"
+    },
+    {
+      "topic": "vFreeformSloanPrimmTyroneTopic011",
+      "topic_text": "I'm sorry, but all these muscles make it hard to hear sometimes. What was that about risk?",
+      "emotion": "Fear 20",
+      "response_text": "{Strength 7+}{intimidated by player's strength}Uh, never mind. Take the supplies. All yours, friend.",
+      "index": "20"
+    }
+  ],
+  "conversation": [],
+  "combat": []
+}

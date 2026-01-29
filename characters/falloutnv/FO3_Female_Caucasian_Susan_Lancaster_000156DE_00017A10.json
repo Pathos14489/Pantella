@@ -1,0 +1,325 @@
+{
+  "name": "Susan Lancaster",
+  "url": "/wiki/Susan_Lancaster",
+  "dialogue_name": "SusanLancaster.txt",
+  "dialogue_url": "/wiki/SusanLancaster.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": true,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000156DE",
+  "ref_id": "00017A10",
+  "editor_id": "SusanLancaster",
+  "location": "Tenpenny Tower",
+  "location_url": "/wiki/Tenpenny_Tower",
+  "descriptions": [
+    "Susan Lancaster is a former slaver from Paradise Falls who now lives in Tenpenny Tower as its resident \"courtesan\" in the year 2277.",
+    "For some time, Susan was a member of the Paradise Falls slavers. By 2277, she had gained residence at Tenpenny Tower, where she made a living as a high-class prostitute, or \"escort\" as the Tower's residents prefer.",
+    "Susan regularly services many of the tower's male residents, including Doctor Banfield, Herbert Dashwood, and Allistair Tenpenny himself. She maintains a rivalry with local gossip Millicent Wellington, who disapproves of her promiscuity, and is secretly carrying out an affair with her husband Edgar. When not with her customers, she spends her free time shopping or drinking at the Federalist Lounge, taking her meals at the Café Beau Monde.",
+    "Susan can be found in a different bed every night of the week between 10 p.m. and midnight, always wearing sexy sleepwear. On Monday, she's in Wellington's bed, she is with Banfield both Tuesday and Thursday night, Hawthorne on Wednesday, Mr. Cheng on Friday, while Sunday nights are spent with Dashwood. Even after moving in with Mister Burke, she continues her weekly rounds and never gets around to sharing a bed with him. She has sexual relations with every man in Tenpenny Tower, except Anthony Ling, who is implied to be homosexual, thus having no use for her \"services.\"",
+    "* During the hours of 6:00 p.m. to 6:00 a.m."
+  ],
+  "race": "Human, Caucasian",
+  "gender": "Female",
+  "affiliation": "Slavers(formerly)",
+  "role": "ProstituteSlaver (formerly)",
+  "detailed_location": "Paradise Falls(formerly)Tenpenny Tower",
+  "voice_actor": "Karen Carbone",
+  "special": {
+    "Strength": 4,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 8,
+    "Intelligence": 3,
+    "Agility": 7,
+    "Luck": 3
+  },
+  "mod_special_values": {
+    "Strength": 4,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 8,
+    "Intelligence": 3,
+    "Agility": 8,
+    "Luck": 3
+  },
+  "level": "4",
+  "tag_skills": [
+    {
+      "Barter:": "48(50)"
+    },
+    {
+      "Speech:": "48(50)"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "92"
+    },
+    {
+      "Critical Chance:": "3%"
+    },
+    {
+      "Unarmed Dam.:": "1.10"
+    },
+    {
+      "Poison Resist.:": "15%"
+    },
+    {
+      "Rad. Resist.:": "6%"
+    },
+    {
+      "Carry Weight:": "190"
+    }
+  ],
+  "karma": "Good",
+  "voice_type": "FemaleAdult02DC",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Fear 100",
+      "response_text": "Please! Don't hurt me!{in the middle of an attack against his town}",
+      "index": "1"
+    },
+    {
+      "topic": "MS12Basement",
+      "topic_text": "You ever been to the basement? I hear there's an escape tunnel...",
+      "emotion": "Disgust 25",
+      "response_text": "Yeah, supposedly there's some kind of emergency access to the Metro tunnels.",
+      "index": "12"
+    },
+    {
+      "topic": "MS12BigotNeighbors",
+      "topic_text": "What if all your other neighbors agree?",
+      "emotion": "Disgust 100",
+      "response_text": "There's no way they'd agree to letting Ghouls live here. We all came here to get away from things like Ghouls, and disease, and all that ugliness.{self important snob}",
+      "index": "15"
+    },
+    {
+      "topic": "MS12BigotNevermind",
+      "topic_text": "Whatever.",
+      "emotion": "Anger 50",
+      "response_text": "Why do you keep bothering me?{self important snob losing patience}",
+      "index": "16"
+    },
+    {
+      "topic": "MS12BigotSpeech",
+      "topic_text": "This is happening. You're going to have to deal with it, or get forced out.",
+      "emotion": "Anger 100",
+      "response_text": "I'm done with the Wasteland! And I've been everywhere else. There isn't anything better than this. Damn you and your Ghouls!{bigot facing retribution}",
+      "index": "17"
+    },
+    {
+      "topic": "MS12BigotSpeechBad",
+      "topic_text": "I don't care. Get your stuff together and get out of here.",
+      "emotion": "Anger 50",
+      "response_text": "I'm not going. I'll talk to Tenpenny. I bet I can live in Burke's place. He's never around anyway.{angry but hatching a plan}",
+      "index": "18"
+    },
+    {
+      "topic": "MS12BigotSpeechGood",
+      "topic_text": "I'm sure you'll find something suitable, don't worry.",
+      "emotion": "Anger 50",
+      "response_text": "I'm not going anywhere. I'll talk to Tenpenny. I bet I can live in Burke's place. He's never around anyway.{angry but hatching a plan}",
+      "index": "21"
+    },
+    {
+      "topic": "MS12BigotSpeechNeutral",
+      "topic_text": "Good luck.",
+      "emotion": "Anger 50",
+      "response_text": "I got a plan. I'll talk to Tenpenny. I bet I can live in Burke's place. He's never around anyway.{angry but hatching a plan}",
+      "index": "24"
+    },
+    {
+      "topic": "MS12FinResidents",
+      "topic_text": "What's it like living at Tenpenny Tower?",
+      "emotion": "Happy 100",
+      "response_text": "Business is still good!{self important prostitute showing appreciation}",
+      "index": "27"
+    },
+    {
+      "topic": "MS12Greeting1",
+      "topic_text": "You bet! I like meeting new people.",
+      "emotion": "Happy 100",
+      "response_text": "Me too. Especially rich fine young men!{prostitute flirting}",
+      "index": "29"
+    },
+    {
+      "topic": "MS12Greeting2",
+      "topic_text": "I'm a little busy at the moment. Maybe we can chat later.",
+      "emotion": "Disgust 50",
+      "response_text": "Your loss. You fancy yourself a man of action? Think you're man enough to handle a couple of Ghouls?{(frustrated) baiting the player into helping her}",
+      "index": "33"
+    },
+    {
+      "topic": "MS12Greeting3",
+      "topic_text": "<Say nothing.>",
+      "emotion": "Happy 100",
+      "response_text": "The strong silent type, eh? We're in luck! Ever met a Ghoul before?{scheming to get the player's help}",
+      "index": "36"
+    },
+    {
+      "topic": "MS12IntroToGhoul1",
+      "topic_text": "I'm no stranger to violence, if that's what you're getting at.",
+      "emotion": "Happy 100",
+      "response_text": "You're exactly the kind of man we need around here!{stroking the player's ego so he'll agree to help}",
+      "index": "39"
+    },
+    {
+      "topic": "MS12IntroToGhoul2",
+      "topic_text": "Actually, I'm not a big fan of Ghouls.",
+      "emotion": "Disgust 50",
+      "response_text": "Neither am I! I came here to get away from all that!{playing on sympathies to get help}",
+      "index": "43"
+    },
+    {
+      "topic": "MS12IntroToGhoul3",
+      "topic_text": "Ghouls aren't so bad, once you get to know them.",
+      "emotion": "Neutral 50",
+      "response_text": "Fine. Never mind. I thought you were a real man. Turns out you're just a scared little boy.{frustrated that the player won't help}",
+      "index": "49"
+    },
+    {
+      "topic": "MS12ResidentsBranch",
+      "topic_text": "What's it like living at Tenpenny Tower?",
+      "emotion": "Happy 50",
+      "response_text": "Beats living out there in Wasteland, trust me. See, I'm not like these other puffed up fogies. I earned my way into privilege. I worked to get here.{thinking about her past hardship and proud of her current accomplishments}",
+      "index": "51"
+    },
+    {
+      "topic": "MS12ResidentsGhoulsAbout these Ghouls...",
+      "topic_text": "Those Ghouls sure have people worked up, don't they?",
+      "emotion": "Fear 100",
+      "response_text": "Are you going to do something about the problem, or not?{self important prostitute}",
+      "index": "52"
+    },
+    {
+      "topic": "MS12ResidentsGhoulsChoice1MS12ResidentsGhoulsChoiceGood",
+      "topic_text": "I'll take care of those Ghouls. Stop worrying about it.",
+      "emotion": "Surprise 100",
+      "response_text": "You're something else. Not like these other losers.{grateful of her protector}",
+      "index": "53"
+    },
+    {
+      "topic": "MS12ResidentsGhoulsChoice2MS12ResidentsGhoulsChoiceBad",
+      "topic_text": "Yeah, about that... I'm not really in the Ghoul extermination business.",
+      "emotion": "Disgust 100",
+      "response_text": "I was hoping we could get to know each other better. What was I thinking?{self important indignation}",
+      "index": "55"
+    },
+    {
+      "topic": "MS12ResidentsGhoulsChoice3MS12ResidentsGhoulsChoiceNeutral",
+      "topic_text": "<Say nothing.>",
+      "emotion": "Disgust 100",
+      "response_text": "You're a bit of a loser, aren't you?{self important indignation}",
+      "index": "57"
+    },
+    {
+      "topic": "MS12ResidentsNeighbors",
+      "topic_text": "How would you feel about having a few Ghoul neighbors?",
+      "emotion": "Anger 100",
+      "response_text": "I know all about your plan to get your Ghoul pals in here, and I'm putting a stop to it. You can't just go around pushing us around like that!{angry}",
+      "index": "58"
+    },
+    {
+      "topic": "MS12ResidentsNeighborsBad",
+      "topic_text": "Yeah. Ghouls are disgusting creatures.",
+      "emotion": "Disgust 50",
+      "response_text": "They sure are, so why suggest they move in here? Or, were you joking? Well, you aren't very funny.{self important snob}",
+      "index": "63"
+    },
+    {
+      "topic": "MS12ResidentsNeighborsGood",
+      "topic_text": "I've met these Ghouls. They aren't so bad.",
+      "emotion": "Disgust 100",
+      "response_text": "Well, if you don't mind their stink, then you should go squat with them in their dirty tunnels, and leave us civilized people alone.{self important prostitute}",
+      "index": "64"
+    },
+    {
+      "topic": "MS12ResidentsNeighborsGoodPetition",
+      "topic_text": "Would you tell Mister Tenpenny that you wouldn't mind Ghoul neighbors?",
+      "emotion": "Anger 100",
+      "response_text": "Damn it! Whatever... I'll freaking sign it. They can move into my old place. Burke's digs are better than mine anyway. Not that you'll lever know!{prostitute getting evicted (\"Not that you'll ever know\" suggesting the player will never be allowed into her room)}",
+      "index": "65"
+    },
+    {
+      "topic": "MS12ResidentsNeighborsNeutral",
+      "topic_text": "Whatever.",
+      "emotion": "Disgust 50",
+      "response_text": "Has anyone told you how annoying you are?{self important prostitute}",
+      "index": "66"
+    },
+    {
+      "topic": "SpeechChallengeFailure",
+      "topic_text": "SpeechChallengeFailure",
+      "emotion": "Anger 100",
+      "response_text": "I've hung with tougher assholes than you. I can handle myself. I'm not afraid of you. Besides, I'm one of Tenpenny's favorites!{self important prostitute}",
+      "index": "67"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "DialogueTenpennyConv00",
+      "topic_text": "DialogueTenpennyConv00",
+      "emotion": "Sad 100",
+      "response_text": "Why thank you, dear! How charming of you to say so. Perhaps you and I should start spending some time together? Eh? Ahahah.{flirting suggestively before walking away}",
+      "index": "68"
+    },
+    {
+      "topic": "DialogueTenpennyConv01",
+      "topic_text": "DialogueTenpennyConv01",
+      "emotion": "Happy 100",
+      "response_text": "Why thank you Allistair love. Er, I mean: MISTER Tenpenny!{accidentally familiar then covering up (but flirting in a way that says she doesn't think she has to hide the fact she's his mistress)}",
+      "index": "74"
+    },
+    {
+      "topic": "DialogueTenpennyConv02",
+      "topic_text": "DialogueTenpennyConv02",
+      "emotion": "Happy 100",
+      "response_text": "Hehe. Of course, love. Until then. Be good boy now! Hahaha.{giggling and trying (not very hard) to be dignified.}",
+      "index": "80"
+    },
+    {
+      "topic": "DialogueTenpennyEatStartTopic",
+      "topic_text": "DialogueTenpennyEatStartTopic",
+      "emotion": "Neutral 50",
+      "response_text": "I'm starving!{hungry and on her way to get food}",
+      "index": "88"
+    },
+    {
+      "topic": "DialogueTenpennySleepStartTopic",
+      "topic_text": "DialogueTenpennySleepStartTopic",
+      "emotion": "Happy 50",
+      "response_text": "<Yawn> I'm off to bed. Sweet dreams!{tired and heading off to bed}",
+      "index": "89"
+    },
+    {
+      "topic": "DialogueTenpennySusanSleepWithStartTopic",
+      "topic_text": "DialogueTenpennySusanSleepWithStartTopic",
+      "emotion": "Happy 50",
+      "response_text": "It's time to earn mamma some sugar.{high class prostitute on her way to her john}",
+      "index": "90"
+    },
+    {
+      "topic": "GOODBYE",
+      "topic_text": "I have to go now.",
+      "emotion": "Neutral 50",
+      "response_text": "Later, then.{(saying goodbye) self important prostitute}",
+      "index": "91"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Surprise 50",
+      "response_text": "Daring... you're up to no good, aren't you? Naughty, naughty old man!{playfully suspicious}",
+      "index": "94"
+    }
+  ],
+  "combat": []
+}

@@ -1,0 +1,223 @@
+{
+  "name": "Jessup",
+  "url": "/wiki/Jessup",
+  "dialogue_name": "BCJessup.txt",
+  "dialogue_url": "/wiki/BCJessup.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "0010C0BE",
+  "ref_id": "0010C0BF",
+  "editor_id": "BCJessup",
+  "location": "Great Khan hideout",
+  "location_url": "/wiki/Great_Khan_hideout",
+  "descriptions": [
+    "Jessup is a member of the Great Khans in the Mojave Wasteland who led the group that was hired to help Chairmen leader Benny ambush the Courier and steal the platinum chip in 2281. Their return trip to Red Rock Canyon would later end up stalled due to getting trapped in Boulder City, locked in a stalemate against the New California Republic Army. He appears in Fallout: New Vegas and the graphic novel All Roads.",
+    "Sometime prior to October 2281, a \"friend\" of Jessup in New Vegas contacted him and offered him and his fellow Great Khans a job:",
+    "After meeting with Benny and learning that their destination was so in order to set up an ambush for a package courier to steal their cargo, Jessup argued against the choice of murder on the basis that the target had not personally wronged Benny, which went against the Great Khans' ethics. However, he was convinced by his partner McMurphy to let it slide so long as Benny was the one who delivered the killing shot.",
+    "During the journey to Goodsprings, Jessup watched closely over fellow Great Khan Chance, concerned about the latter's heavy chem abuse in attempting to dull his painful memories of the Bitter Springs Massacre, even defying Benny to save his friend when Chance impulsively broke off to engage a gang of Fiends who were slaughtering a village of tribals.",
+    "After Chance died in the night, a combination of his severe burn wounds and a lethal drug overdose secretly orchestrated by Benny, Jessup and McMurphy stayed behind temporarily to ensure that he would be given a decent burial, staring down Benny and causing him to relent when the Chairman insisted on leaving to ensure they could reach Goodsprings in time.",
+    "Once the ambush was carried out and they captured the courier, Jessup was the one who dug the shallow grave they intended to bury the body in on the plot of the Goodsprings Cemetery. After Benny obtained the platinum chip they were carrying, he put a bullet in the courier's head and left the work to the Great Khans.",
+    "A short time after leaving the cemetery, the group entered Goodsprings itself and stopped off in the Prospector Saloon. According to Trudy, they were rowdy and rude, demanding drinks for free. She was eventually able to wrangle payment from them, but this caused one of them to \"accidentally\" knock down her radio in revenge before leaving.",
+    "Due to extenuating circumstances including the recent mass breakout at the NCR Correctional Facility and an infestation of deathclaws along Interstate 15, the Great Khans found themselves forced to take a much longer route across the Mojave to return home. First traveling through Primm (and unknowingly being spotted by Deputy Beagle),",
+    "Following a run-in with an NCR Army patrol north of the roadside town, the Great Khans were forced to flee into Boulder City, where they took shelter in the ruins left from the First Battle of Hoover Dam years prior, along with capturing NCR privates Ackerman and Gilbert as hostages. However, the firefight led to McMurphy sustaining fatal wounds that he eventually died from, leaving just Jessup and a handful of Khans left against the troopers led by Lieutenant Monroe. Rather than face the NCR directly, Benny used the cover of night to slip away alone and flee back to New Vegas with the platinum chip, leaving the Great Khans trapped and outgunned. Jessup has since been trying to come up with a plan that would allow him and his Great Khans to get back to Red Rock Canyon without a few extra holes in them.",
+    "While enraged at Benny's betrayal, Jessup managed to extract a small bit of revenge: Jessup managed to steal Benny's engraved cigarette lighter before he escaped, something he had been planning on doing ever since he saw it during their journey, though at the time McMurphy had talked him down.",
+    "If Boulder City Showdown is completed with the Great Khans still alive, Jessup will return to Red Rock Canyon. There, he can still be interacted with but has no additional dialogue, such as not reacting to Benny being killed nor changes in the player character's reputation with the Great Khans.",
+    "In All Roads, when Benny refers to Chance as the Great Khans' friend, Jessup corrects him by saying that Chance is \"family,\" though it is unclear as to whether this is literal.",
+    "Jessup appears in Fallout: New Vegas and the graphic novel All Roads."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Great KhansBenny(formerly)",
+  "role": "MercenarySquad leader",
+  "detailed_location": "Boulder CityRuined section(Great Khan hideout)Help the Great Khans in Boulder City:Red Rock Canyon",
+  "voice_actor": "Liam O'Brien",
+  "special": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 4,
+    "Intelligence": 3,
+    "Agility": 6,
+    "Luck": 4
+  },
+  "mod_special_values": {
+    "Strength": 6,
+    "Perception": 6,
+    "Endurance": 5,
+    "Charisma": 4,
+    "Intelligence": 3,
+    "Agility": 6,
+    "Luck": 4
+  },
+  "level": "10→15 (player level x1.3)",
+  "tag_skills": [
+    {
+      "Explosives:": "62(64)"
+    },
+    {
+      "Guns:": "64"
+    },
+    {
+      "Melee Weap.:": "64"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "165"
+    }
+  ],
+  "karma": "Neutral",
+  "voice_type": "MaleAdult05",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "{Player attacked NCR, NCR troops not all dead}Kill every last one of those NCR troopers and then we'll talk.",
+      "index": "1"
+    },
+    {
+      "topic": "VFreeformBoulderCityBCJessupTopic000",
+      "topic_text": "Why don't you just shoot your way out of here?",
+      "emotion": "Neutral 50",
+      "response_text": "I'm not afraid of a gunfight, but I'd rather get back to Red Rock without a few extra holes in me if I can help it.",
+      "index": "5"
+    },
+    {
+      "topic": "VFreeformBoulderCityBCJessupTopic001",
+      "topic_text": "The troopers are all dead. You're free to go.",
+      "emotion": "Surprise 50",
+      "response_text": "Yeah, that's a pretty piece of work. Makes me wonder why you'd turn on the NCR, especially when they had us cold.",
+      "index": "6"
+    },
+    {
+      "topic": "VFreeformBoulderCityBCJessupTopic002",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah,{as in, \"go on, get out\"}go on.",
+      "index": "8"
+    },
+    {
+      "topic": "VFreeformBoulderCityBCJessupTopic003",
+      "topic_text": "I got better.",
+      "emotion": "Neutral 50",
+      "response_text": "And here I thought us Great Khans were tough to kill. So, what happens now?",
+      "index": "9"
+    },
+    {
+      "topic": "VFreeformBoulderCityBCJessupTopic008",
+      "topic_text": "Not quite. When I kill you, however, the job will get done right.",
+      "emotion": "Anger 100",
+      "response_text": "You think you can take me, punk?",
+      "index": "10"
+    },
+    {
+      "topic": "VFreeformBoulderCityBCJessupTopic020",
+      "topic_text": "The NCR troopers have been paid to look the other way.",
+      "emotion": "Neutral 50",
+      "response_text": "Then we are out of here. Here - a souvenir for you. It's Benny's lighter. Shove it up his ass when you catch up with him.",
+      "index": "11"
+    },
+    {
+      "topic": "VFreeformBoulderCityBCJessupTopic022",
+      "topic_text": "Let's talk about settling things between you and the NCR.",
+      "emotion": "Neutral 50",
+      "response_text": "What's to negotiate? The NCR backs off, we walk out of here, nobody gets hurt.",
+      "index": "12"
+    },
+    {
+      "topic": "VFreeformBoulderCityBCJessupTopic033",
+      "topic_text": "Where's the Platinum Chip?",
+      "emotion": "Anger 50",
+      "response_text": "Don't have it. Benny stole it, right before he stabbed us in the back. He's probably back at the Strip by now, laughing at me.",
+      "index": "14"
+    },
+    {
+      "topic": "VFreeformBoulderCityBCJessupTopic034",
+      "topic_text": "Well, I'm not, and I believe you have something of mine.",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah... about that...",
+      "index": "15"
+    },
+    {
+      "topic": "VFreeformBoulderCityBCJessupTopic035",
+      "topic_text": "I want some more answers.",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah? On what?",
+      "index": "16"
+    },
+    {
+      "topic": "VFreeformBoulderCityBCJessupTopic036",
+      "topic_text": "What can you tell me about Benny?",
+      "emotion": "Neutral 50",
+      "response_text": "He's one of the Chairmen, big shots who run The Tops casino in New Vegas. A friend from the city contacted me with info on a big job.",
+      "index": "17"
+    },
+    {
+      "topic": "VFreeformBoulderCityBCJessupTopic037",
+      "topic_text": "Never mind. Let's talk about something else.",
+      "emotion": "Neutral 50",
+      "response_text": "Fine.",
+      "index": "19"
+    },
+    {
+      "topic": "VFreeformBoulderCityBCJessupTopic038",
+      "topic_text": "Any chance you're willing to surrender?",
+      "emotion": "Neutral 50",
+      "response_text": "And face NCR \"justice?\" No thanks. I'd rather not spend the next ten years doing hard labor.",
+      "index": "20"
+    },
+    {
+      "topic": "VFreeformBoulderCityBCJessupTopic039",
+      "topic_text": "What do you know about the Platinum Chip?",
+      "emotion": "Neutral 50",
+      "response_text": "Just a big, fancy poker chip as far as I know. Don't know why anyone would make one out of platinum, though.",
+      "index": "21"
+    },
+    {
+      "topic": "VFreeformBoulderCityBCJessupTopic040",
+      "topic_text": "I'm willing to hear other suggestions.",
+      "emotion": "Neutral 50",
+      "response_text": "{Jessup mentions bribe option}We'd try to bribe our way out, but seeing as how Benny didn't pay us yet, that won't happen.",
+      "index": "22"
+    },
+    {
+      "topic": "VFreeformBoulderCityBCJessupTopic041",
+      "topic_text": "Why did Benny betray you?",
+      "emotion": "Neutral 50",
+      "response_text": "He's a snake, that's why. He owed us the rest of the pay for the job, so maybe he didn't want to pay up.",
+      "index": "23"
+    },
+    {
+      "topic": "VFreeformBoulderCityBCJessupTopic042< Speech - 45 >",
+      "topic_text": "Free the hostages now, and I'll have the NCR escort you out of their territory.",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] I can't believe I'm doing this, but all right, the hostages can go. The NCR had better keep their end of the deal, though.",
+      "index": "24"
+    },
+    {
+      "topic": "VFreeformBoulderCityBCJessupTopic043",
+      "topic_text": "I'm a ghost, here to haunt you. Oooooh...",
+      "emotion": "Anger 10",
+      "response_text": "{annoyed at the player's flippant reaction}All right, quit fucking around. You survived and you tracked us down. What now?",
+      "index": "27"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah,{as in, \"go on, get out\"}go on.",
+      "index": "28"
+    }
+  ],
+  "combat": []
+}

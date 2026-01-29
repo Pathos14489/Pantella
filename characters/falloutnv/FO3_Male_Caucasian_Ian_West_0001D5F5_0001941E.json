@@ -1,0 +1,465 @@
+{
+  "name": "Ian West",
+  "url": "/wiki/Ian_West",
+  "dialogue_name": "IanWest.txt",
+  "dialogue_url": "/wiki/IanWest.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "0001D5F5",
+  "ref_id": "0001941E",
+  "editor_id": "IanWest",
+  "location": "Meresti Metro station,Arefu",
+  "location_url": "/wiki/Meresti_Metro_station",
+  "descriptions": [
+    "Ian West is a resident of Arefu and a member of the Family in 2277.",
+    "He has an older sister, Lucy, who is a decade older than him, and she would lend an ear whenever he needed to talk about his feelings. Their parents were killed and Vance crossed paths with Ian, who felt a kinship with Ian. Ian was left alone in Arefu as the settlement's only child when Lucy moved to Megaton, causing Ian to become depressed. Ian was taken by Vance back to The Family's home. Ian now wonders what he should do for the future. Another member of the Family, Justin, feels a close bond with Ian and it almost borders on love.",
+    "Ian West lived with his parents in Arefu for many years with a strange condition that caused him to have a hunger for human flesh. He claims that this condition may have been caused when he hit his head when he was younger. Ian states that he and Lucy were playing outside, when a scavenger started harassing the brahmin outside of Arefu. When Ian went to warn him to stop, the scavenger shoved him aside, causing Ian to hit his head on a rock. Ian then jumped up and tore the scavenger's throat open with his teeth before his sister Lucy pulled him off The Family were attacking at this point, and so the act was witnessed by their leader, Vance. Subsequently, the Family took him in and tried to convince him that he was not a monster. Disturbed by his strange hunger for human flesh, Ian goes under the guidance of Vance."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "The Family",
+  "role": "Vampire",
+  "detailed_location": "Meresti Metro stationWest residence,Arefu(optional)",
+  "voice_actor": "Jeff Baker",
+  "special": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 5,
+    "Intelligence": 5,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "mod_special_values": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 6,
+    "Charisma": 5,
+    "Intelligence": 5,
+    "Agility": 7,
+    "Luck": 5
+  },
+  "level": "5 → 12",
+  "tag_skills": [
+    {
+      "Science:": "50→85"
+    },
+    {
+      "Small Guns:": "52→87(54→89)"
+    },
+    {
+      "Unarmed:": "50→85(52→87)"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "55→90(60→95)"
+    }
+  ],
+  "karma": "Neutral",
+  "voice_type": "MaleAdult01DefaultDC",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "DialogFamilyIanWestArefu",
+      "topic_text": "I know it's painful, but let's talk about what happened in Arefu.",
+      "emotion": "Sad 50",
+      "response_text": "It actually kinda makes me feel better to talk about it. Go ahead.",
+      "index": "1"
+    },
+    {
+      "topic": "DialogFamilyIanWestArefu01",
+      "topic_text": "Why did you... do what you did to your own parents?",
+      "emotion": "Disgust 50",
+      "response_text": "I wish I could answer that, I really do. I don't even remember it happening.",
+      "index": "2"
+    },
+    {
+      "topic": "DialogFamilyIanWestArefu02",
+      "topic_text": "How did Vance know you were one of them?",
+      "emotion": "Surprise 80",
+      "response_text": "That's the weird thing. He has some sort of crazy sixth sense about it or something. Maybe all of our kind do.",
+      "index": "5"
+    },
+    {
+      "topic": "DialogFamilyIanWestArefu03",
+      "topic_text": "How did you end up leaving Arefu?",
+      "emotion": "Sad 70",
+      "response_text": "I don't remember how long I sat there on the floor staring at my parent's bodies. Seemed like days.",
+      "index": "7"
+    },
+    {
+      "topic": "DialogFamilyIanWestArefu04",
+      "topic_text": "I saw the Family's mark on the wall. What's up with that?",
+      "emotion": "Sad 80",
+      "response_text": "Vance told me later that he was basically covering for me and allowing the Family to... to feed at the same time.",
+      "index": "11"
+    },
+    {
+      "topic": "DialogFamilyIanWestBailout",
+      "topic_text": "Let's talk about something else.",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah, okay.",
+      "index": "14"
+    },
+    {
+      "topic": "DialogFamilyIanWestStory",
+      "topic_text": "Would you mind if I asked about your unusual hunger?",
+      "emotion": "Sad 50",
+      "response_text": "I suppose not.",
+      "index": "15"
+    },
+    {
+      "topic": "DialogFamilyIanWestStory01",
+      "topic_text": "When did you first discover you had the hunger?",
+      "emotion": "Happy 60",
+      "response_text": "I was about 10 years old and I was playing with Lucy down under the overpass. We loved throwing rocks in the water.",
+      "index": "16"
+    },
+    {
+      "topic": "DialogFamilyIanWestStory02",
+      "topic_text": "What did Lucy say she saw you do to that Wastelander?",
+      "emotion": "Sad 90",
+      "response_text": "She said I like... changed into another person... that I even glared at her and raised my arms like I was going to kill her.",
+      "index": "20"
+    },
+    {
+      "topic": "DialogFamilyIanWestStory03",
+      "topic_text": "Did you ever talk to your parents about it?",
+      "emotion": "Sad 50",
+      "response_text": "Lucy said Mom and Dad would never have understood. She told me to keep what I did a secret and that she'd try and help me.",
+      "index": "23"
+    },
+    {
+      "topic": "DialogFamilyIanWestStory04",
+      "topic_text": "Do you really believe in vampires?",
+      "emotion": "Neutral 50",
+      "response_text": "I dunno. I really don't. I mean, I'm not totally dumb. I know they were in stories and all that.",
+      "index": "26"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Anger 70",
+      "response_text": "I thought I told you I didn't want to talk to you any more! I'm not going home and that's it!",
+      "index": "29"
+    },
+    {
+      "topic": "MS09Bailout",
+      "topic_text": "Let me ask you something else.",
+      "emotion": "Neutral 50",
+      "response_text": "Sure.",
+      "index": "39"
+    },
+    {
+      "topic": "MS09FinTLHowAreThings",
+      "topic_text": "How are things going now?",
+      "emotion": "Happy 50",
+      "response_text": "I've learned a bit more from Vance and I've been allowed around Meresti. I really think you helped me make the right decision. Thanks!",
+      "index": "40"
+    },
+    {
+      "topic": "MS09FinTLLetterI delivered the letter to Ian.",
+      "topic_text": "I have a letter for you from your sister, Lucy.",
+      "emotion": "Neutral 50",
+      "response_text": "She... she really misses being home and she's asked about me in here a lot!",
+      "index": "44"
+    },
+    {
+      "topic": "MS09IanWestCombatIntroCT01",
+      "topic_text": "Evan King sent me to look for you.",
+      "emotion": "Sad 50",
+      "response_text": "Yeah, I guess I should have known this would happen.",
+      "index": "46"
+    },
+    {
+      "topic": "MS09IanWestCombatIntroCT02",
+      "topic_text": "You're tough to find.",
+      "emotion": "Disgust 50",
+      "response_text": "Maybe that's because I don't want to be found.",
+      "index": "47"
+    },
+    {
+      "topic": "MS09IanWestCombatIntroCT03",
+      "topic_text": "No time to discuss it. We're getting the heck out of here!",
+      "emotion": "Disgust 50",
+      "response_text": "I'm not going anywhere. I'm staying right here.",
+      "index": "49"
+    },
+    {
+      "topic": "MS09IanWestCombatIntroCT04",
+      "topic_text": "Vance is dead, Ian. I'm so sorry.",
+      "emotion": "Sad 90",
+      "response_text": "He's dead... you killed him? But he was my only chance to understand what the hell is happening to me!",
+      "index": "51"
+    },
+    {
+      "topic": "MS09IanWestCombatIntroCT05",
+      "topic_text": "Well, Vance isn't going to be able to help anymore.",
+      "emotion": "Surprise 90",
+      "response_text": "Wait. What do you mean? He's dead... you killed him?",
+      "index": "52"
+    },
+    {
+      "topic": "MS09IanWestCombatIntroCT06",
+      "topic_text": "Sorry, pal. Vance is worm food.",
+      "emotion": "Anger 90",
+      "response_text": "You son-of-a-bitch! You KILLED him and you think it's funny?!",
+      "index": "54"
+    },
+    {
+      "topic": "MS09IanWestCombatIntroCT07SC",
+      "topic_text": "Look, this place isn't the answer. You need to go home and face your demons.",
+      "emotion": "Sad 90",
+      "response_text": "Maybe you're right. It was easier to run away with the Family than to face what I did.",
+      "index": "57"
+    },
+    {
+      "topic": "MS09IanWestCombatIntroCT08",
+      "topic_text": "If you want to stay, then stay. You have to do what you feel is right.",
+      "emotion": "Sad 50",
+      "response_text": "I can never go home. This was always meant to be my home and until something tells me otherwise, this is where I wanna be.",
+      "index": "59"
+    },
+    {
+      "topic": "MS09IanWestCombatIntroCT09",
+      "topic_text": "Do what you want. This is a waste of time.",
+      "emotion": "Disgust 70",
+      "response_text": "Yeah, that's just what I thought you'd end up saying.",
+      "index": "61"
+    },
+    {
+      "topic": "MS09IanWestCombatIntroCT10Letter",
+      "topic_text": "Read this letter, Ian. Lucy wrote it. I bet that would change your mind.",
+      "emotion": "Happy 50",
+      "response_text": "She... she really misses being home and she's asked about me in here a lot!",
+      "index": "63"
+    },
+    {
+      "topic": "MS09IanWestHatesMeTrackCT01Letter",
+      "topic_text": "Read this letter, Ian. Lucy wrote it. I bet that would change your mind.",
+      "emotion": "Happy 50",
+      "response_text": "She... she really misses being home and she's asked about me in here a lot!",
+      "index": "66"
+    },
+    {
+      "topic": "MS09IanWestHatesMeTrackCT02",
+      "topic_text": "I changed my mind, Ian. I think you should stay here.",
+      "emotion": "Happy 50",
+      "response_text": "Thank you, somehow just hearing you say that helps me a lot.",
+      "index": "72"
+    },
+    {
+      "topic": "MS09IanWestHatesMeTrackCT03",
+      "topic_text": "Nothing I can say will change your mind will it?",
+      "emotion": "Sad 50",
+      "response_text": "Unless you can prove to me there's a good reason to leave, I'm staying right here in Meresti. Even alone if I have to.",
+      "index": "75"
+    },
+    {
+      "topic": "MS09IanWestHatesMeTrackCT04",
+      "topic_text": "Never mind.",
+      "emotion": "Disgust 50",
+      "response_text": "Yeah... that's what I thought.",
+      "index": "76"
+    },
+    {
+      "topic": "MS09IanWestIntroCT01",
+      "topic_text": "I've been looking for you.",
+      "emotion": "Sad 50",
+      "response_text": "I guess I shouldn't be surprised. I'm sure Evan King is pretty pissed right about now.",
+      "index": "77"
+    },
+    {
+      "topic": "MS09IanWestIntroCT02",
+      "topic_text": "You're a bitch to find.",
+      "emotion": "Disgust 50",
+      "response_text": "Well, maybe that's because I don't want to be found.",
+      "index": "79"
+    },
+    {
+      "topic": "MS09IanWestIntroCT03",
+      "topic_text": "Nothing. Sorry, my mistake.",
+      "emotion": "Disgust 50",
+      "response_text": "Whatever.",
+      "index": "81"
+    },
+    {
+      "topic": "MS09IanWestIntroCT04",
+      "topic_text": "I'm sorry, Ian, but your parents are dead.",
+      "emotion": "Anger 70",
+      "response_text": "You think I don't know that? You think I don't know what I did?!",
+      "index": "82"
+    },
+    {
+      "topic": "MS09IanWestIntroCT05",
+      "topic_text": "I'm here to take you home, Ian.",
+      "emotion": "Sad 70",
+      "response_text": "Home? I don't have a home anymore. I made sure of that, didn't I?",
+      "index": "83"
+    },
+    {
+      "topic": "MS09IanWestIntroCT06",
+      "topic_text": "Pack your shit. We're getting out of this insane asylum!",
+      "emotion": "Anger 50",
+      "response_text": "Why can't everyone just leave me alone and let me make my own decisions? I can't stand this anymore!",
+      "index": "84"
+    },
+    {
+      "topic": "MS09IanWestIntroCT07",
+      "topic_text": "You seem awfully troubled, Ian. What did you do...",
+      "emotion": "Sad 90",
+      "response_text": "I killed them! My own parents!",
+      "index": "86"
+    },
+    {
+      "topic": "MS09IanWestIntroCT07a",
+      "topic_text": "I know what you did. Vance told me everything.",
+      "emotion": "Sad 50",
+      "response_text": "Then you must think I'm some kind of a monster.",
+      "index": "89"
+    },
+    {
+      "topic": "MS09IanWestIntroCT08",
+      "topic_text": "It doesn't matter what happened in the past.",
+      "emotion": "Sad 70",
+      "response_text": "Of course it matters! The past is what's keeping me up at night.",
+      "index": "90"
+    },
+    {
+      "topic": "MS09IanWestIntroCT09",
+      "topic_text": "Get a hold of yourself!",
+      "emotion": "Sad 90",
+      "response_text": "Don't you understand me? I killed them, okay?! My mother and father are dead because of me!",
+      "index": "93"
+    },
+    {
+      "topic": "MS09IanWestIntroCT10",
+      "topic_text": "Look, Ian. I know loss, too. I know it hurts. But staying here isn't the answer.",
+      "emotion": "Sad 50",
+      "response_text": "There's something inside me... something completely messed up!",
+      "index": "95"
+    },
+    {
+      "topic": "MS09IanWestIntroCT11",
+      "topic_text": "I give up. Fine, stay here and cry.",
+      "emotion": "Disgust 50",
+      "response_text": "Hmph. Just like Vance said. Humans will never understand us; just sit on their high horse and ridicule us.",
+      "index": "101"
+    },
+    {
+      "topic": "MS09IanWestIntroCT12",
+      "topic_text": "Maybe I can help you.",
+      "emotion": "Sad 50",
+      "response_text": "Help? How can you help? There's something inside me... something completely messed up!",
+      "index": "104"
+    },
+    {
+      "topic": "MS09IanWestIntroCT13",
+      "topic_text": "Then stay. I think you belong here with the Family.",
+      "emotion": "Happy 50",
+      "response_text": "Thank you for understanding. This place is all I've got, and I don't wanna lose it.",
+      "index": "110"
+    },
+    {
+      "topic": "MS09IanWestIntroCT14",
+      "topic_text": "Yeah, something's wrong. You're all a bunch of murderers.",
+      "emotion": "Anger 50",
+      "response_text": "Vance said it's not murder! Hell, we kill Brahmin every day just because we need to eat. Why is THAT okay?",
+      "index": "112"
+    },
+    {
+      "topic": "MS09IanWestIntroCT15",
+      "topic_text": "If Lucy is still alive I bet she misses you.",
+      "emotion": "Disgust 50",
+      "response_text": "She does? If she cared so much, why did she leave when she did?",
+      "index": "115"
+    },
+    {
+      "topic": "MS09IanWestIntroCT16Letter",
+      "topic_text": "Read this letter, Ian. Lucy wrote it. I bet it will change your mind.",
+      "emotion": "Happy 50",
+      "response_text": "She... she really misses being home and she's asked about me in here a lot!",
+      "index": "118"
+    },
+    {
+      "topic": "MS09IanWestIntroCT17SC",
+      "topic_text": "Let's go home, Ian. The only way to beat your nightmares is to face them.",
+      "emotion": "Happy 80",
+      "response_text": "You know, for a second there you sounded just like Vance. And you're right.",
+      "index": "122"
+    },
+    {
+      "topic": "MS09IanWestxCombatIntroCT01",
+      "topic_text": "Looks like I'm breaking you out of your cell...",
+      "emotion": "Surprise 90",
+      "response_text": "..Ian. My name's Ian West. Who are you?",
+      "index": "126"
+    },
+    {
+      "topic": "MS09IanWestxCombatIntroCT02",
+      "topic_text": "Are you a prisoner here or something?",
+      "emotion": "Surprise 90",
+      "response_text": "No... not at all. My name's Ian West.",
+      "index": "128"
+    },
+    {
+      "topic": "MS09IanWestxCombatIntroCT02a",
+      "topic_text": "Who the hell are you supposed to be?",
+      "emotion": "Disgust 60",
+      "response_text": "My name's Ian West. And who the hell are YOU supposed to be?",
+      "index": "130"
+    },
+    {
+      "topic": "MS09IanWestxCombatIntroCT04",
+      "topic_text": "Calm down, Ian. Tell me everything from the beginning.",
+      "emotion": "Anger 60",
+      "response_text": "How the hell do you expect me to calm down? I can't believe this is happening again! All the people I care about always leave!",
+      "index": "132"
+    },
+    {
+      "topic": "MS09IanWestxCombatIntroCT05",
+      "topic_text": "I have no clue what you're talking about.",
+      "emotion": "Sad 70",
+      "response_text": "Evan King probably sent you to look for me, didn't he!? Well you can tell him I'll never set foot in Arefu again. NEVER!",
+      "index": "135"
+    },
+    {
+      "topic": "MS09IanWestxCombatIntroCT06",
+      "topic_text": "What the hell is your problem?",
+      "emotion": "Anger 70",
+      "response_text": "I can't believe this is happening again! All the people I care about always leave me!",
+      "index": "137"
+    },
+    {
+      "topic": "SpeechChallengeFailure",
+      "topic_text": "SpeechChallengeFailure",
+      "emotion": "Disgust 50",
+      "response_text": "No, I'm sorry. I'll never set foot in that place again.",
+      "index": "140"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "I have to go now.",
+      "emotion": "Sad 50",
+      "response_text": "Yeah... goodbye.",
+      "index": "142"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Anger 70",
+      "response_text": "Get the heck out of my face!",
+      "index": "144"
+    }
+  ],
+  "combat": []
+}

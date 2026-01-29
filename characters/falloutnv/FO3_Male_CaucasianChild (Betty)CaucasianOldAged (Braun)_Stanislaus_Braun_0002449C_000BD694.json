@@ -1,0 +1,769 @@
+{
+  "name": "Stanislaus Braun",
+  "url": "/wiki/Stanislaus_Braun",
+  "dialogue_name": "Betty.txt",
+  "dialogue_url": "/wiki/Betty.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": true,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "0002449C",
+  "ref_id": "000BD694",
+  "editor_id": "Betty",
+  "location": "Town park",
+  "location_url": null,
+  "descriptions": [
+    "Doctor Stanislaus Braun is a scientist, a former member of the Vault-Tec Corporation, and the overseer of Vault 112. He appears as a young girl named Betty when in the Tranquility Lane simulation.",
+    "Hailing from the German town of Kronach in Bavaria,",
+    "Among his myriad other experiments were those in the field of advanced life preservation. The United States Army contracted Braun to develop cutting-edge methods for preserving human life beyond its natural limit in case of nuclear war. When the Great War broke out on October 23, 2077, Braun escaped to safety in Vault 112.",
+    "After going through at least two previous simulated scenarios that he eventually became bored with,",
+    "For the past two centuries, Braun has been repeatedly creating and exploring new simulated worlds, at least three of which were \"Toucan Lagoon,\" \"Slalom Chalet\" and \"Tranquility Lane.\" However, he often became bored with simply watching the Vault inhabitants being miserable and later began using his special access as its creator to directly manipulate the simulations to impose cruelty and agony on the Vault's inhabitants as a means of alleviating his boredom. In his psychopathic hubris, Braun commissioned the inclusion of a \"Chinese Invasion\" program, loaned and sourced from Virtual Strategic Solutions' in-house Anchorage Reclamation simulation by General Chase, intending to use it as a means to permanently end the simulation once he was finished with his experiments. However, Braun discovered that while initiating the program, called \"the failsafe,\" would result in the permanent deaths of the simulation's inhabitants, hard-coded safety protocols would not allow the program to end his life, in all likelihood leaving him isolated and alone in the simulated world.",
+    "By 2277, Braun and the captive Vault dwellers have been kept in their loungers for over 200 years, sustained only by their life support machines. This is the point that Braun believes if any of them tried to return to the real world, himself included, they would \"crumble to dust.\"",
+    "A short time later, James' child, the Lone Wanderer, entered the Vault as well trying to find him. They entered an unoccupied lounger and met Braun as Betty, who asked them to commit a series of heinous acts like making a child cry and breaking apart a loving marriage, culminating in a killing spree of all the inhabitants, all to continue entertaining him. The Lone Wanderer either complied with Braun's requests and was eventually allowed to leave along with James while the others were left trapped at Braun's mercy, or they discovered and activated the failsafe, ending the inhabitants' tormented lives and leaving Braun trapped by himself in the simulation.",
+    "A psychopath and narcissist at heart, Braun is arrogant and has a tremendous ego coupled with an inflated sense of his own intelligence. Coupled with severe anger issues, he lashes out over perceived slights, believes that he is always right and answers even simple questions with lengthy condescending digressions.",
+    "He also has a sadistic side, lacking any empathy for the inhabitants of Vault 112 that he's kept trapped in a simulated world where they are routinely killed, resurrected, mind-wiped and killed again, and does not have any mercy as he views them all as mere playthings for his own amusement. Braun views death in the simulation as a minor deterrence as he can normally resurrect his victims at any time he desires.",
+    "Tranquility Lane",
+    "Tranquility Lane: Braun (as Betty) is the man pulling the strings when the Lone Wanderer enters the Tranquility Lane lounger trying to rescue James. To escape, Braun asks them to complete several instructions that involve harming the trapped Vault inhabitants in different ways:",
+    "If the Lone Wanderer tries to harm Betty in Tranquility Lane, even after completing the quest, Betty will say they cannot do that in the simulation and make them pay by instantly killing the Lone Wanderer in what appears to be a pulse blast."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Vault 112",
+  "role": "Overseer",
+  "detailed_location": "Tranquility Lane",
+  "voice_actor": "Dee Bradley Baker(Stanislaus Braun)Corrieanne Stein(Betty)",
+  "special": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 2,
+    "Intelligence": 5,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "tag_skills": [
+    {
+      "Explosives:": "32"
+    },
+    {
+      "Medicine:": "36"
+    },
+    {
+      "Science:": "136"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Evil (Betty)Neutral (Braun)",
+  "voice_type": "FemaleUniqueBetty",
+  "geck_race": "CaucasianChild (Betty)CaucasianOldAged (Braun)",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Anger 50",
+      "response_text": "Do you realize what you’ve done? You’ve triggered the Failsafe! Ruined everything! The subjects will die, and I’ll be stuck here in this hell! Alone!{German}",
+      "index": "1"
+    },
+    {
+      "topic": "MQ04Betty1Q1CantDoThis",
+      "topic_text": "You can't do this to me!",
+      "emotion": "Neutral 50",
+      "response_text": "On the contrary, I believe you'll find that here, I can do most anything I like.{menacing, gloating   German}",
+      "index": "83"
+    },
+    {
+      "topic": "MQ04Betty1Q1WhatElse",
+      "topic_text": "What else do I have to do?",
+      "emotion": "Neutral 50",
+      "response_text": "An excellent question. Timmy was easy, and therefore boring. I desire some real entertainment.{German}",
+      "index": "87"
+    },
+    {
+      "topic": "MQ04Betty1Q3GetMeOutofHere",
+      "topic_text": "If you're in charge, get me the hell out of here!",
+      "emotion": "Neutral 50",
+      "response_text": "Ha ha. You're not really in a position to be demanding anything, are you?",
+      "index": "90"
+    },
+    {
+      "topic": "MQ04Betty1Q3SoYoureInCharge",
+      "topic_text": "So you're in charge here...",
+      "emotion": "Neutral 50",
+      "response_text": "Isn't it obvious by now? You've only been here a short while and you're already doing just as I ask.{condescending, gloating   German}",
+      "index": "92"
+    },
+    {
+      "topic": "MQ04Betty1Q3WhatBenefits",
+      "topic_text": "What kind of benefits?",
+      "emotion": "Neutral 50",
+      "response_text": "Ah ah ah! That's another question, and you've already had your answer for now.{gloating, condescending}",
+      "index": "94"
+    },
+    {
+      "topic": "MQ04Betty1Q4IWantToSeeHim",
+      "topic_text": "I want to see him. Now!",
+      "emotion": "Neutral 50",
+      "response_text": "Hmm. No, no I don't think so.",
+      "index": "96"
+    },
+    {
+      "topic": "MQ04Betty1Q4WhatDoIHaveToDo",
+      "topic_text": "What do I have to do to see him?",
+      "emotion": "Neutral 50",
+      "response_text": "Ahhh, now that is just the sort of question you should be asking.{gloating, pleased }",
+      "index": "98"
+    },
+    {
+      "topic": "MQ04Betty1Q4WhatHaveYouDone",
+      "topic_text": "What have you done to him?",
+      "emotion": "Neutral 50",
+      "response_text": "Were I you, I'd be more concerned with myself at the moment.",
+      "index": "100"
+    },
+    {
+      "topic": "MQ04Betty1Q5CrazyArentYou",
+      "topic_text": "You're out of your goddamn mind. You know that, right?",
+      "emotion": "Sad 20",
+      "response_text": "Oh, come now. Would you court death so brazenly?{disappointed   German}",
+      "index": "102"
+    },
+    {
+      "topic": "MQ04Betty1Q5IfInControlHelp",
+      "topic_text": "If you're in control here, can you please help me?",
+      "emotion": "Surprise 50",
+      "response_text": "But I am helping you!",
+      "index": "104"
+    },
+    {
+      "topic": "MQ04Betty1Q5WhyALittleGirl",
+      "topic_text": "Why the hell would you want to look like a little girl?",
+      "emotion": "Neutral 50",
+      "response_text": "Why not? I have been in this place for two hundred years. This is something to keep me amused.",
+      "index": "106"
+    },
+    {
+      "topic": "MQ04Betty1QHowDoIGetOut",
+      "topic_text": "How do I get out of here?",
+      "emotion": "Surprise 20",
+      "response_text": "An interesting choice... Certainly not what I had anticipated.{mild surprise, amusement  German}",
+      "index": "108"
+    },
+    {
+      "topic": "MQ04Betty1QNextTask",
+      "topic_text": "What do you want me to do?",
+      "emotion": "Neutral 50",
+      "response_text": "Pay a visit to the Rockwells. They're very happily married, and I'd like you to change that.{German}",
+      "index": "110"
+    },
+    {
+      "topic": "MQ04Betty1QNextTaskAccept",
+      "topic_text": "Fine, but it's only because I want more answers from you.",
+      "emotion": "Neutral 50",
+      "response_text": "Rationalize it any way you'd like. If you succeed, we'll continue our discussion.{German}",
+      "index": "112"
+    },
+    {
+      "topic": "MQ04Betty1QNextTaskAcceptMean",
+      "topic_text": "Ha! That's it? No problem.",
+      "emotion": "Neutral 50",
+      "response_text": "Excellent. I so enjoy that \"can-do\" spirit.",
+      "index": "113"
+    },
+    {
+      "topic": "MQ04Betty1QNextTaskRefuse",
+      "topic_text": "No, I won't do that to them.",
+      "emotion": "Sad 10",
+      "response_text": "Then I'm afraid we have nothing more to say to one another.{disappointed, dismissive}",
+      "index": "114"
+    },
+    {
+      "topic": "MQ04Betty1QNotPlayingGames",
+      "topic_text": "I'm not playing anymore of your games.",
+      "emotion": "Neutral 50",
+      "response_text": "No? Then I'm afraid you'll never be leaving.",
+      "index": "115"
+    },
+    {
+      "topic": "MQ04Betty1QRefuse",
+      "topic_text": "No. I'm not doing anything else for you.",
+      "emotion": "Anger 50",
+      "response_text": "Then once again we find ourselves at an impasse. How disappointing.{German}",
+      "index": "117"
+    },
+    {
+      "topic": "MQ04Betty1QWhatIsThisPlace",
+      "topic_text": "What is this place?",
+      "emotion": "Neutral 50",
+      "response_text": "Tranquility Lane is a simulation, a reality designed to play home to the denizens of Vault 112.{German}",
+      "index": "118"
+    },
+    {
+      "topic": "MQ04Betty1QWhereIsDad",
+      "topic_text": "Where's my father?",
+      "emotion": "Neutral 50",
+      "response_text": "Ah, yes. A predictable question, I suppose.{disappointed  German}",
+      "index": "121"
+    },
+    {
+      "topic": "MQ04Betty1QWhoAreYou",
+      "topic_text": "Just who are you?",
+      "emotion": "Neutral 50",
+      "response_text": "I was known as Dr. Stanislaus Braun, but here I choose this identity.{German}",
+      "index": "125"
+    },
+    {
+      "topic": "MQ04Betty3ANextTaskGetItOverWith",
+      "topic_text": "Fine. Let's just get this over with.",
+      "emotion": "Neutral 50",
+      "response_text": "Oh, come now. Show some enthusiasm!{German}",
+      "index": "128"
+    },
+    {
+      "topic": "MQ04Betty3ANextTaskGreat",
+      "topic_text": "It's about time! What do I get to do?",
+      "emotion": "Neutral 50",
+      "response_text": "Ah, now that's the spirit.",
+      "index": "131"
+    },
+    {
+      "topic": "MQ04Betty3ANextTaskSarcastic",
+      "topic_text": "Oh, great. I'm really looking forward to doing more for your amusement.",
+      "emotion": "Neutral 50",
+      "response_text": "Your sarcasm is unappreciated. This could be so much fun if you'd allow yourself to see it.{German}",
+      "index": "134"
+    },
+    {
+      "topic": "MQ04Betty3ANextTaskWhatIsIt",
+      "topic_text": "I'm not agreeing to anything before you tell me what it is.",
+      "emotion": "Neutral 50",
+      "response_text": "Attempting to maintain the illusion of control, are we? How quaint. Very well...{German}",
+      "index": "137"
+    },
+    {
+      "topic": "MQ04Betty3ExplainingToDo",
+      "topic_text": "I did what you wanted. Now you have some explaining to do.",
+      "emotion": "Neutral 50",
+      "response_text": "You have amused me thus far, but I still don't think you're quite in a position to be demanding anything.{German}",
+      "index": "139"
+    },
+    {
+      "topic": "MQ04Betty3FatherIWantToSeeHim",
+      "topic_text": "I want to see him. Where is he?",
+      "emotion": "Neutral 50",
+      "response_text": "If you continue to behave, and do as I ask, I may be willing to release both of you. But first you have work to do.{German}",
+      "index": "141"
+    },
+    {
+      "topic": "MQ04Betty3FatherLying",
+      "topic_text": "How do I know you're not lying to me? Maybe you haven't seen him at all.",
+      "emotion": "Neutral 50",
+      "response_text": "Oh dear, now you don't even believe me? How disappointing.",
+      "index": "142"
+    },
+    {
+      "topic": "MQ04Betty3FatherTakeMeToHim",
+      "topic_text": "Enough games! Take me to him now!",
+      "emotion": "Neutral 50",
+      "response_text": "No, I don't think I'll do that. I'm having far too much fun to stop now.{mildly amused}",
+      "index": "144"
+    },
+    {
+      "topic": "MQ04Betty3FunWhatsNext",
+      "topic_text": "I've got to admit, this is kind of fun. What can I do next?",
+      "emotion": "Neutral 50",
+      "response_text": "I'm pleased to see I'm not the only one being entertained. You're far more agreeable than your father.{German}",
+      "index": "146"
+    },
+    {
+      "topic": "MQ04Betty3HateItButDoIt",
+      "topic_text": "I don't want to do this... But I will.",
+      "emotion": "Happy 50",
+      "response_text": "Of course you will. And you never know... You might enjoy it.{amused}",
+      "index": "149"
+    },
+    {
+      "topic": "MQ04Betty3NeverSeeItComing",
+      "topic_text": "All right, fine. I'll do it.",
+      "emotion": "Neutral 50",
+      "response_text": "Excellent. I look forward to seeing what you come up with. Remember, creativity is key!{German}",
+      "index": "150"
+    },
+    {
+      "topic": "MQ04Betty3Nevermind",
+      "topic_text": "Nothing, never mind.",
+      "emotion": "Neutral 50",
+      "response_text": "I see.",
+      "index": "152"
+    },
+    {
+      "topic": "MQ04Betty3NowWhat",
+      "topic_text": "Now what?",
+      "emotion": "Neutral 50",
+      "response_text": "To the point, aren't we?{German}",
+      "index": "153"
+    },
+    {
+      "topic": "MQ04Betty3VaultCanLiveOutsideAgain",
+      "topic_text": "You don't need to stay here. You can live in the real world again.",
+      "emotion": "Surprise 30",
+      "response_text": "The \"real world'\"? Ha ha ha.{German}",
+      "index": "156"
+    },
+    {
+      "topic": "MQ04Betty3VaultLetThesePeopleGo",
+      "topic_text": "Let these people go. There's no reason to keep them here.",
+      "emotion": "Neutral 50",
+      "response_text": "Oh, but there is! They continue to amuse me. That is purpose enough for their lives, don't you think?{German}",
+      "index": "161"
+    },
+    {
+      "topic": "MQ04Betty3VaultWhyHaventYouLeft",
+      "topic_text": "Why haven't you left after all this time?",
+      "emotion": "Neutral 50",
+      "response_text": "I have no desire to leave. Here I wield more power than I could ever hope to in the outside world.{German}",
+      "index": "163"
+    },
+    {
+      "topic": "MQ04Betty3WhatDidDadWant",
+      "topic_text": "What did my father want from you?",
+      "emotion": "Neutral 50",
+      "response_text": "Your father, frustrating as he was, recognized the significance of some of my previous work.{German}",
+      "index": "165"
+    },
+    {
+      "topic": "MQ04Betty3WhatIsThisPlace",
+      "topic_text": "What... is this place?",
+      "emotion": "Neutral 50",
+      "response_text": "Tranquility Lane was designed to be a home away from home. A new way of sustaining life after the apocalypse.{German}",
+      "index": "168"
+    },
+    {
+      "topic": "MQ04Betty3WheresDad",
+      "topic_text": "Where's my father now?",
+      "emotion": "Neutral 50",
+      "response_text": "He's here, and he is unharmed. He has merely been rendered unable to bother me.{German}",
+      "index": "171"
+    },
+    {
+      "topic": "MQ04Betty3WontDoIt",
+      "topic_text": "I said I wouldn't do that, and I meant it!",
+      "emotion": "Neutral 50",
+      "response_text": "Yes, yes. How very noble of you. You'll change your mind eventually.",
+      "index": "172"
+    },
+    {
+      "topic": "MQ04Betty4BeingHonest",
+      "topic_text": "How do I know you're being honest with me?",
+      "emotion": "Neutral 50",
+      "response_text": "I think you'll find that I've been quite honest with you thus far. You have no discernable reason to mistrust me.{German}",
+      "index": "175"
+    },
+    {
+      "topic": "MQ04Betty4DontDeserveThis",
+      "topic_text": "But these people... They don't deserve to be punished.",
+      "emotion": "Neutral 50",
+      "response_text": "I'm afraid you're not in a position to decide what they do or do not deserve. They are under my control, not yours.{German}",
+      "index": "178"
+    },
+    {
+      "topic": "MQ04Betty4Enthusiastic",
+      "topic_text": "I can't wait. What do you want me to do?",
+      "emotion": "Neutral 50",
+      "response_text": "Your enthusiasm is inspiring. It's a shame you didn't arrive earlier.{German}",
+      "index": "180"
+    },
+    {
+      "topic": "MQ04Betty4ForcingMeToBeEvil",
+      "topic_text": "You're forcing me to do things against my nature, and I hate you for it.",
+      "emotion": "Neutral 50",
+      "response_text": "I don't recall asking for your feelings on the matter.{German}",
+      "index": "183"
+    },
+    {
+      "topic": "MQ04Betty4SlasherSoundsLikeFun",
+      "topic_text": "Sounds like fun.",
+      "emotion": "Neutral 50",
+      "response_text": "I thought you might find it amusing. It draws upon an old urban legend, a story told over campfires many years ago.{German}",
+      "index": "189"
+    },
+    {
+      "topic": "MQ04Betty4WhatSlasher",
+      "topic_text": "Who the hell is the Pint-Sized Slasher?",
+      "emotion": "Neutral 50",
+      "response_text": "He is a figure of myth, born of old campfire stories. You will make him a reality.{German}",
+      "index": "192"
+    },
+    {
+      "topic": "MQ04Betty4WhyDoingThis",
+      "topic_text": "Why are you doing all of this?",
+      "emotion": "Surprise 10",
+      "response_text": "Because I can, of course.{surprised at the question}",
+      "index": "194"
+    },
+    {
+      "topic": "MQ04Betty4YouCouldLeave",
+      "topic_text": "But you could leave the Vault, find somewhere else to live.",
+      "emotion": "Neutral 50",
+      "response_text": "Are you mad? I've been here for almost 200 years. My body is in no condition to be used for anything.{German}",
+      "index": "196"
+    },
+    {
+      "topic": "MQ04BettyAnotherChanceFunny",
+      "topic_text": "Yeah, real funny.",
+      "emotion": "Neutral 50",
+      "response_text": "It is kind of funny, but for a different reason. Tranquility Lane is different than most places. People here don't stay dead.",
+      "index": "199"
+    },
+    {
+      "topic": "MQ04BettyAnotherChanceHow",
+      "topic_text": "How can I have another chance?",
+      "emotion": "Neutral 50",
+      "response_text": "Tranquility Lane is special. If people die here, they don't really stay dead. Well, most people anyway.{innocent}",
+      "index": "202"
+    },
+    {
+      "topic": "MQ04BettyDoneLetMeOut",
+      "topic_text": "I did what you wanted. Now let me out.",
+      "emotion": "Neutral 50",
+      "response_text": "Yes, yes. I suppose you've earned the right to do as you like.{German}",
+      "index": "205"
+    },
+    {
+      "topic": "MQ04BettyDoneSureWasFun",
+      "topic_text": "That sure was fun!",
+      "emotion": "Happy 50",
+      "response_text": "I had the distinct impression you enjoyed yourself. We are alike, you and I.{German}",
+      "index": "208"
+    },
+    {
+      "topic": "MQ04BettyHowKnowMe",
+      "topic_text": "How do you know who I am?",
+      "emotion": "Neutral 50",
+      "response_text": "I know everything, my dear boy.{German}",
+      "index": "211"
+    },
+    {
+      "topic": "MQ04BettyInvasionDeadHaha",
+      "topic_text": "Sure did. And now you're all alone.",
+      "emotion": "Neutral 50",
+      "response_text": "Alone... What will I do now? I have no one. Nothing. You've destroyed everything that mattered to me.{German}",
+      "index": "213"
+    },
+    {
+      "topic": "MQ04BettyInvasionTLDad",
+      "topic_text": "I came here for my father. Now where is he?",
+      "emotion": "Neutral 50",
+      "response_text": "Didn't you figure it out? The dog. So loyal, so trusting... so annoying.{German}",
+      "index": "214"
+    },
+    {
+      "topic": "MQ04BettyInvasionTLDadSafe",
+      "topic_text": "So my father's okay? I can... get him back?",
+      "emotion": "Sad 50",
+      "response_text": "Yes, I'm sure he's fine. No doubt when you leave the simulation, he'll be waiting for you.{German}",
+      "index": "218"
+    },
+    {
+      "topic": "MQ04BettyInvasionTLGECK",
+      "topic_text": "Tell me about the G.E.C.K.",
+      "emotion": "Neutral 50",
+      "response_text": "The Garden of Eden Creation Kit. It was for terraforming, for restoring the world after a nuclear disaster.{German}",
+      "index": "220"
+    },
+    {
+      "topic": "MQ04BettyInvasionTLOkayToGo",
+      "topic_text": "So... I'm free to leave?",
+      "emotion": "Sad 100",
+      "response_text": "Isn't it obvious? You've run the failsafe, disrupted everything. I have no power over you.{German}",
+      "index": "222"
+    },
+    {
+      "topic": "MQ04BettyInvasionTLPlace",
+      "topic_text": "Tell me about this place, about Tranquility Lane.",
+      "emotion": "Sad 50",
+      "response_text": "You know enough. You know this was my perfect simulation, my exquisite creation.{German}",
+      "index": "224"
+    },
+    {
+      "topic": "MQ04BettyInvasionTLWho",
+      "topic_text": "Tell me exactly who you are. Who you really are.",
+      "emotion": "Sad 50",
+      "response_text": "Why do you torment me? You know who I am. You know that I am really Doctor Braun, that I created this place...{German}",
+      "index": "228"
+    },
+    {
+      "topic": "MQ04BettyInvasionTop1",
+      "topic_text": "I'm calling the shots now!",
+      "emotion": "Anger 50",
+      "response_text": "You? No! I... I am the creator of this world!{German}",
+      "index": "232"
+    },
+    {
+      "topic": "MQ04BettyInvasionTop2",
+      "topic_text": "It's all over. Now shut up, and answer my questions.",
+      "emotion": "Anger 100",
+      "response_text": "It is NOT over! It's not over until I say so! Do you understand me? I... I...{German}",
+      "index": "234"
+    },
+    {
+      "topic": "MQ04BettyInvasionTop3",
+      "topic_text": "You'll just reset everything anyway. Who cares?",
+      "emotion": "Anger 50",
+      "response_text": "I CAN'T reset it, don't you see? The failsafe disabled the security protocols. They're all dead. For good!{German}",
+      "index": "236"
+    },
+    {
+      "topic": "MQ04BettyInvasionTop4",
+      "topic_text": "I put these people out of their misery. You're getting exactly what you deserve.",
+      "emotion": "Anger 50",
+      "response_text": "You've taken them all from me. You've left me with nothing!{German}",
+      "index": "238"
+    },
+    {
+      "topic": "MQ04BettyKillPlayer",
+      "topic_text": "MQ04BettyKillPlayer",
+      "emotion": "Anger 50",
+      "response_text": "You can't do that here.",
+      "index": "240"
+    },
+    {
+      "topic": "MQ04BettyLiveHereDont",
+      "topic_text": "What? I don't live here.",
+      "emotion": "Happy 50",
+      "response_text": "You do now.{innocent}",
+      "index": "242"
+    },
+    {
+      "topic": "MQ04BettyLiveHereWhat",
+      "topic_text": "Is this some kind of a game?",
+      "emotion": "Neutral 50",
+      "response_text": "Do you like games? I love to play games!{innocent}",
+      "index": "245"
+    },
+    {
+      "topic": "MQ04BettyLiveHereWhatever",
+      "topic_text": "Sure, kid. Whatever you say.",
+      "emotion": "Neutral 50",
+      "response_text": "That's right! It IS whatever I say! Boy, you learn fast.",
+      "index": "247"
+    },
+    {
+      "topic": "MQ04BettyNotNowBailOut",
+      "topic_text": "I'm just looking around. I'll come back later.",
+      "emotion": "Sad 50",
+      "response_text": "But... But I want to play now!",
+      "index": "249"
+    },
+    {
+      "topic": "MQ04BettyTLDad",
+      "topic_text": "Where is my father?",
+      "emotion": "Happy 50",
+      "response_text": "Oh, don't worry about that now. There are things to do!",
+      "index": "250"
+    },
+    {
+      "topic": "MQ04BettyTLMoreInfo",
+      "topic_text": "Tell me more about this place.",
+      "emotion": "Neutral 50",
+      "response_text": "Maybe later. First I want to see how you get along with Timmy.{amused}",
+      "index": "253"
+    },
+    {
+      "topic": "MQ04BettyTLReminder",
+      "topic_text": "What am I supposed to be doing again?",
+      "emotion": "Happy 50",
+      "response_text": "Take on the role of the Pint-Sized Slasher, and kill everyone on Tranquility Lane. I'll be waiting.{amused  German}",
+      "index": "256"
+    },
+    {
+      "topic": "MQ04BettyTLWhoAreYou",
+      "topic_text": "Who are you?",
+      "emotion": "Happy 50",
+      "response_text": "Don't you worry about that. You just go have fun with Timmy.",
+      "index": "260"
+    },
+    {
+      "topic": "MQ04BettyTask2GetOnWithIt",
+      "topic_text": "Let's just get this over with.",
+      "emotion": "Neutral 50",
+      "response_text": "I'm glad you've chosen to see reason.",
+      "index": "264"
+    },
+    {
+      "topic": "MQ04BettyTask2Refuse1",
+      "topic_text": "I don't really have a choice, do I?",
+      "emotion": "Happy 50",
+      "response_text": "There's always a choice. Sometimes it's just easier to make.{German}",
+      "index": "267"
+    },
+    {
+      "topic": "MQ04BettyTask2Refuse2",
+      "topic_text": "Fine, I'll do it.",
+      "emotion": "Happy 50",
+      "response_text": "I'm glad you've chosen to be cooperative.",
+      "index": "268"
+    },
+    {
+      "topic": "MQ04BettyTask2RefuseAgain",
+      "topic_text": "No. I said I wouldn't do it, and I meant it.",
+      "emotion": "Anger 50",
+      "response_text": "Well then, we have little else to say to one another.",
+      "index": "269"
+    },
+    {
+      "topic": "MQ04BettyYouveSeenMyFather",
+      "topic_text": "You've seen my father? Where is he?",
+      "emotion": "Neutral 50",
+      "response_text": "Oh, I don't think we're quite ready to talk about that. We haven't even been formally introduced yet.",
+      "index": "270"
+    },
+    {
+      "topic": "MQ04FatherKnowHesHere",
+      "topic_text": "Look, I know he's in here. I mean, in the Vault.",
+      "emotion": "Surprise 50",
+      "response_text": "Your father? Oh, I had no idea. This is simply too rich.{surprised, thrilled, menacing}",
+      "index": "271"
+    },
+    {
+      "topic": "MQ04FatherOlderGuy",
+      "topic_text": "He looks like me, but older. He's got to be here.",
+      "emotion": "Surprise 50",
+      "response_text": "Well now, doesn't this just change everything!",
+      "index": "277"
+    },
+    {
+      "topic": "MQ04FatherScientist",
+      "topic_text": "He's a scientist. He's looking for Doctor Braun.",
+      "emotion": "Surprise 50",
+      "response_text": "Oh my. What a splendid turn of events. I had no idea the two of you were related!",
+      "index": "283"
+    },
+    {
+      "topic": "MQ04GameDetailsCrazy",
+      "topic_text": "What? That's crazy!",
+      "emotion": "Neutral 50",
+      "response_text": "No, Timmy's the one who's crazy. You'll see.",
+      "index": "287"
+    },
+    {
+      "topic": "MQ04GameDetailsThatsIt",
+      "topic_text": "That's it? I can do that.",
+      "emotion": "Neutral 50",
+      "response_text": "You can? I guess we'll see, huh?",
+      "index": "289"
+    },
+    {
+      "topic": "MQ04GameDetailsWhatKindOfGame",
+      "topic_text": "What kind of a game is this?",
+      "emotion": "Neutral 50",
+      "response_text": "It'll be funny. Come on, you'll see.",
+      "index": "291"
+    },
+    {
+      "topic": "MQ04GameDetailsWhosTimmy",
+      "topic_text": "Timmy Neusbaum? Who's that?",
+      "emotion": "Happy 50",
+      "response_text": "He's the only other kid that lives here besides you. He's a big crybaby... You'll see.",
+      "index": "293"
+    },
+    {
+      "topic": "MQ04GameFatherNow",
+      "topic_text": "No games. You tell me where my father is. Now, you little brat.",
+      "emotion": "Neutral 50",
+      "response_text": "Oh, don't be mean. That's not a good way to start.",
+      "index": "295"
+    },
+    {
+      "topic": "MQ04GameNo1",
+      "topic_text": "No thanks. No games for me.",
+      "emotion": "Neutral 50",
+      "response_text": "Ha ha. You don't get to say no.",
+      "index": "297"
+    },
+    {
+      "topic": "MQ04GameNo2",
+      "topic_text": "Look, kid. I'm not interested in playing games.",
+      "emotion": "Anger 20",
+      "response_text": "I said, I want to play a game.{insistent, increasing in agitation}",
+      "index": "299"
+    },
+    {
+      "topic": "MQ04GameOkay",
+      "topic_text": "A game? Okay, I guess...",
+      "emotion": "Happy 50",
+      "response_text": "I knew you would!{innocent, thrilled}",
+      "index": "304"
+    },
+    {
+      "topic": "MQ04GameWhatsGoingOn",
+      "topic_text": "What the hell's going on here?",
+      "emotion": "Neutral 50",
+      "response_text": "We're going to play a game now, silly. That's what's going on.",
+      "index": "308"
+    },
+    {
+      "topic": "MQ04LookingForMyFather",
+      "topic_text": "I'm looking for my father. Have you seen him?",
+      "emotion": "Neutral 50",
+      "response_text": "Gee, I don't know. What's he like?",
+      "index": "309"
+    },
+    {
+      "topic": "MQ04WhereAmI",
+      "topic_text": "Where am I?",
+      "emotion": "Happy 50",
+      "response_text": "This is Tranquility Lane. We all live here, and now so do you.{innocent}",
+      "index": "310"
+    },
+    {
+      "topic": "MQ04WhoAreYou",
+      "topic_text": "And you are...?",
+      "emotion": "Neutral 50",
+      "response_text": "I'm Betty. I live here on Tranquility Lane. Want to play a game?",
+      "index": "311"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "I have to go now.",
+      "emotion": "Neutral 50",
+      "response_text": "You have lots of work to do!{cheery yet menacing}",
+      "index": "312"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Happy 100",
+      "response_text": "Hi there!",
+      "index": "317"
+    },
+    {
+      "topic": "MQ04BettyWhistling",
+      "topic_text": "MQ04BettyWhistling",
+      "emotion": "Neutral 50",
+      "response_text": "<whistling>{whistle specific Tranquility Lane tune}",
+      "index": "327"
+    }
+  ],
+  "combat": [
+    {
+      "topic": "Attack",
+      "topic_text": "Attack",
+      "emotion": "Neutral 50",
+      "response_text": "I am in control here.{emphasis on \"I\"}",
+      "index": "328"
+    },
+    {
+      "topic": "Pickpocket",
+      "topic_text": "Pickpocket",
+      "emotion": "Surprise 50",
+      "response_text": "Really now. What are you thinking?",
+      "index": "331"
+    }
+  ]
+}

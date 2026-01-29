@@ -1,0 +1,176 @@
+{
+  "name": "Pretty Sarah",
+  "url": "/wiki/Pretty_Sarah",
+  "dialogue_name": "WestsidePrettySarah.txt",
+  "dialogue_url": "/wiki/WestsidePrettySarah.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000F6252",
+  "ref_id": "000F6253",
+  "editor_id": "WestsidePrettySarah",
+  "location": "Casa Madrid Apartments",
+  "location_url": "/wiki/Casa_Madrid_Apartments",
+  "descriptions": [
+    "Pretty Sarah is the pimp of the Casa Madrid Apartments in Westside in 2281.",
+    "Although it may seem odd for a woman to be pimping prostitutes, for Sarah it is just a way to earn money. The wasteland and the hardship she suffered made her tough as nails and capable of taking whatever comes her way.",
+    "She is not deflective of her past; she downright avoids the topic, and for good reason."
+  ],
+  "race": "Human",
+  "gender": "Female",
+  "affiliation": "WestsideMarco",
+  "role": "Pimp",
+  "detailed_location": "Casa Madrid Apartments, Westside",
+  "voice_actor": "Lora Cain",
+  "special": {
+    "Strength": 6,
+    "Perception": 4,
+    "Endurance": 8,
+    "Charisma": 2,
+    "Intelligence": 8,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "level": "9",
+  "misc_skills": [
+    {
+      "Hit Points:": "120"
+    },
+    {
+      "Critical Chance:": "5%"
+    },
+    {
+      "Unarmed Dam.:": "1.75"
+    },
+    {
+      "Poison Resist.:": "35%"
+    },
+    {
+      "Rad. Resist.:": "14%"
+    },
+    {
+      "Carry Weight:": "210"
+    },
+    {
+      "Dam. Threshold:": "3"
+    }
+  ],
+  "karma": "Neutral",
+  "voice_type": "FemaleAdult02",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Anger 20",
+      "response_text": "{Player in combat}Leave me out of your fight!",
+      "index": "1"
+    },
+    {
+      "topic": "VCasaSarahAboutWhores",
+      "topic_text": "Who's the merchandise?",
+      "emotion": "Neutral 50",
+      "response_text": "{Non-Dummy}Three flavors to choose from - Sweetie, Maude, and Jimmy. Sweetie's the house favorite, for reasons that should be obvious.",
+      "index": "11"
+    },
+    {
+      "topic": "VCasaSarahChill",
+      "topic_text": "You sure know how to make a girl feel welcome.",
+      "emotion": "Neutral 50",
+      "response_text": "Just needed to make the situation clear is all. How can I help you?",
+      "index": "16"
+    },
+    {
+      "topic": "VCasaSarahDSJKillAgreeFine by me.",
+      "topic_text": "Fine by me.",
+      "emotion": "Neutral 50",
+      "response_text": "So long as we understand each other.",
+      "index": "17"
+    },
+    {
+      "topic": "VCasaSarahDSJKillExplainI found this in Dermot's room. <Show her Dermot's ledger.>",
+      "topic_text": "I found this in Dermot's room. <Show her Dermot's ledger.>",
+      "emotion": "Neutral 50",
+      "response_text": "{tentative}I'll take a look, just to see what sort of shit they were into.",
+      "index": "18"
+    },
+    {
+      "topic": "VCasaSarahDSJKillShrugOffWe'll see how it goes.",
+      "topic_text": "We'll see how it goes.",
+      "emotion": "Neutral 50",
+      "response_text": "That's right, we will. Anything I can help you with?",
+      "index": "21"
+    },
+    {
+      "topic": "VCasaSarahNotWhore",
+      "topic_text": "I'm not a whore, you ugly bitch.",
+      "emotion": "Neutral 50",
+      "response_text": "Then there's no problem here - and no need to get nasty. How can I help you?",
+      "index": "22"
+    },
+    {
+      "topic": "VFreeformCasaMadridWestsidePrettySarahTopic000",
+      "topic_text": "I'm interested in learning more about Dermot and Saint James.",
+      "emotion": "Neutral 50",
+      "response_text": "They don't look like much, but they earn a pretty good living by selling scrap and salvage.",
+      "index": "23"
+    },
+    {
+      "topic": "VFreeformCasaMadridWestsidePrettySarahTopic001",
+      "topic_text": "What do you do around here?",
+      "emotion": "Neutral 50",
+      "response_text": "I look after the only reasons anyone would want to spend any time here. I'm a pimp.",
+      "index": "27"
+    },
+    {
+      "topic": "VFreeformCasaMadridWestsidePrettySarahTopic002",
+      "topic_text": "How did you get burned so badly?",
+      "emotion": "Neutral 50",
+      "response_text": "We don't talk about that. Next topic.",
+      "index": "31"
+    },
+    {
+      "topic": "VFreeformCasaMadridWestsidePrettySarahTopic003",
+      "topic_text": "{Cook-Cook dead}You might be interested to know that I killed a fiend named Cook-Cook.",
+      "emotion": "Neutral 50",
+      "response_text": "You did? Well, that's one hell of a service to humanity, then.",
+      "index": "32"
+    },
+    {
+      "topic": "VFreeformCasaMadridWestsidePrettySarahTopic004",
+      "topic_text": "Take a look at this ledger I found in Dermot's room.",
+      "emotion": "Neutral 50",
+      "response_text": "I'll take a look, but you better have a good reason for asking me to violate his privacy.",
+      "index": "35"
+    },
+    {
+      "topic": "VFreeformCasaMadridWestsidePrettySarahTopic008",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "You know where to find me.",
+      "index": "38"
+    },
+    {
+      "topic": "VFreeformCasaMadridWestsidePrettySarahTopic011",
+      "topic_text": "You're not one of the merchandise?",
+      "emotion": "Neutral 50",
+      "response_text": "Most of my body is scarred all over, like a ghoul. Nobody around who'd want to screw that. No, I just run things.",
+      "index": "39"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "You know where to find me.",
+      "index": "40"
+    }
+  ],
+  "combat": []
+}

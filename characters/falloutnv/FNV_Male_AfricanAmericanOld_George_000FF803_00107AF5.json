@@ -1,0 +1,152 @@
+{
+  "name": "George",
+  "url": "/wiki/George_(Fallout:_New_Vegas)",
+  "dialogue_name": "NellisGeorge.txt",
+  "dialogue_url": "/wiki/NellisGeorge.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000FF803",
+  "ref_id": "00107AF5",
+  "editor_id": "NellisGeorge",
+  "location": "Fields' shack",
+  "location_url": "/wiki/Fields%27_shack",
+  "descriptions": [
+    "George is a prospector found near Fields' shack in Fallout: New Vegas.",
+    "George is a self-proclaimed gambler and scavenger that can be found near Nellis Air Force Base. He says that he makes his money from gambling and \"reclaiming goods that are no longer being used.\" He places double or nothing wagers with travelers, betting that they cannot get to the gate of Nellis AFB and back alive.",
+    "George was written by area designer Robert Lee."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "none",
+  "role": "Prospector",
+  "detailed_location": "Fields' shack",
+  "voice_actor": "Gregory Alan Williams",
+  "special": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 4,
+    "Intelligence": 4,
+    "Agility": 6,
+    "Luck": 4
+  },
+  "mod_special_values": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 4,
+    "Intelligence": 4,
+    "Agility": 7,
+    "Luck": 4
+  },
+  "level": "0",
+  "tag_skills": [
+    {
+      "Guns:": "31(33)"
+    },
+    {
+      "Melee Weap.:": "31"
+    },
+    {
+      "Sneak:": "31(33)"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Neutral",
+  "voice_type": "MaleAdult06",
+  "geck_race": "AfricanAmericanOld",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "Whoa there, pal. You better slow down, or you'll get blown up like the rest of the idiots who thought they'd scavenge in Boomer territory.",
+      "index": "1"
+    },
+    {
+      "topic": "VFreeformNellisNellisGeorgeTopic000",
+      "topic_text": "Thanks for the warning. What's going on past those signs?",
+      "emotion": "Neutral 50",
+      "response_text": "Oh lordy lordy, you haven't heard of the Boomers? What rock have you been living under?",
+      "index": "7"
+    },
+    {
+      "topic": "VFreeformNellisNellisGeorgeTopic001",
+      "topic_text": "300 caps? Nah, I've got better things to spend my caps on.",
+      "emotion": "Neutral 50",
+      "response_text": "Suit yourself. Come back and see me when you get tired of picking shrapnel out of your backside.",
+      "index": "9"
+    },
+    {
+      "topic": "VFreeformNellisNellisGeorgeTopic002",
+      "topic_text": "Is there a way to get past?",
+      "emotion": "Neutral 50",
+      "response_text": "There is a way, and I'll tell you... for a little wager?",
+      "index": "10"
+    },
+    {
+      "topic": "VFreeformNellisNellisGeorgeTopic007",
+      "topic_text": "Wager? Let's hear it.",
+      "emotion": "Neutral 50",
+      "response_text": "Well, I know the secret to get past. If you give me the caps, I'll tell you.",
+      "index": "11"
+    },
+    {
+      "topic": "VFreeformNellisNellisGeorgeTopic009",
+      "topic_text": "<Pay 300 caps> You've got yourself a bet.",
+      "emotion": "Neutral 50",
+      "response_text": "Okay, here you go. That page has the details, but it's all in the timing as you move from building to building.",
+      "index": "13"
+    },
+    {
+      "topic": "VFreeformNellisNellisGeorgeTopic010<Barter>",
+      "topic_text": "300 caps? I'm a bit short right now. How about 200?",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] Alright, I suppose I can cut you a deal, but not a cap lower. I gotta make a living here.",
+      "index": "15"
+    },
+    {
+      "topic": "VFreeformNellisNellisGeorgeTopic012<Speech>",
+      "topic_text": "You can tell me, or you can tell the underside of my boot.",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] Whoa, simmer down. I'll tell you. I'm a gambler and a scavenger.",
+      "index": "19"
+    },
+    {
+      "topic": "VFreeformNellisNellisGeorgeTopic019",
+      "topic_text": "I believe you said you would double my money.",
+      "emotion": "Neutral 50",
+      "response_text": "Yep, here are your caps.",
+      "index": "22"
+    },
+    {
+      "topic": "VFreeformNellisNellisGeorgeTopic020That was X caps.",
+      "topic_text": "That was 600 caps.",
+      "emotion": "Neutral 50",
+      "response_text": "Sorry about that, poor memory. Here you go.",
+      "index": "23"
+    },
+    {
+      "topic": "VFreeformNellisNellisGeorgeTopic021",
+      "topic_text": "<Lie> Make it 700 caps or I'll tell the Boomers to adjust their trajectory.",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] You drive a hard bargain. Here you go. Have a nice{sarcasm on nice}day.",
+      "index": "25"
+    },
+    {
+      "topic": "VFreeformNellisNellisGeorgeTopic022",
+      "topic_text": "Yep, thanks for the compliment. Bye!",
+      "emotion": "Neutral 50",
+      "response_text": "Aren't you forgetting... nevermind. Goodbye.",
+      "index": "28"
+    }
+  ],
+  "conversation": [],
+  "combat": []
+}

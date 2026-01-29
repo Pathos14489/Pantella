@@ -1,0 +1,218 @@
+{
+  "name": "Tulip",
+  "url": "/wiki/Tulip",
+  "dialogue_name": "Tulip.txt",
+  "dialogue_url": "/wiki/Tulip.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": true,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000156F8",
+  "ref_id": "000B7622",
+  "editor_id": "Tulip",
+  "location": "Underworld Outfitters",
+  "location_url": "/wiki/Underworld_Outfitters",
+  "descriptions": [
+    "Tulip is the proprietor of Underworld Outfitters in 2277.",
+    "Tulip is known for her shrewd business sense, well-stocked inventory, and her ability to obtain unique items."
+  ],
+  "race": "Ghoul",
+  "gender": "Female",
+  "affiliation": "UnderworldThe RailroadUnderworld Outfitters",
+  "role": "Trader",
+  "detailed_location": "Underworld Outfitters",
+  "voice_actor": "Audrey Wasilewski",
+  "special": {
+    "Strength": 4,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 7,
+    "Intelligence": 5,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "level": "1",
+  "tag_skills": [
+    {
+      "Barter:": "34"
+    },
+    {
+      "Energy Weap.:": "30"
+    },
+    {
+      "Small Guns:": "32(34)"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "25"
+    },
+    {
+      "Critical Chance:": "5%"
+    },
+    {
+      "Unarmed Dam.:": "1.15"
+    },
+    {
+      "Poison Resist.:": "15%"
+    },
+    {
+      "Rad. Resist.:": "6%"
+    },
+    {
+      "Carry Weight:": "190"
+    }
+  ],
+  "karma": "Good",
+  "voice_type": "FemaleGenericGhoulDC",
+  "geck_race": "Ghoul",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "Oh... a human... well, hello. Welcome to Underworld Outfitters! It's... it's been so long since I had a customer!",
+      "index": "1"
+    },
+    {
+      "topic": "MS08SympathizerClue1",
+      "topic_text": "I'm interested in this android from the Commonwealth.",
+      "emotion": "Neutral 50",
+      "response_text": "Ooh. We had to shut down the Railroad. Got too hot. You're endangering people by talking about it. Those Commonwealth hunters are deadly serious.{hushed and conspiratorial}",
+      "index": "5"
+    },
+    {
+      "topic": "MS08SympathizerClue2",
+      "topic_text": "I know you know something about this android from the Commonwealth.",
+      "emotion": "Fear 10",
+      "response_text": "They were looking for a surgeon and a techie to do some advanced stuff to make him seem like a different person.{hushed and conspiratorial}",
+      "index": "6"
+    },
+    {
+      "topic": "MS08SympathizerClue3Are you part of the Railroad? What do you know about this android?",
+      "topic_text": "I know you're part of the Railroad. What do you know about the android?",
+      "emotion": "Neutral 50",
+      "response_text": "They were looking for a tech wizard a while back. Someone who could fiddle with the android's memories.{hushed and conspiratorial}",
+      "index": "8"
+    },
+    {
+      "topic": "MS08SympathizerClue4Do you know where this android had his face or memory replaced?",
+      "topic_text": "I know you know where this android received his operations. Talk.",
+      "emotion": "Surprise 50",
+      "response_text": "Heard Pinkerton at Rivet City fixed him up good. That robot doesn't even know he's a robot. But they are still after him. So we all better lay low.{hushed and conspiratorial}",
+      "index": "10"
+    },
+    {
+      "topic": "MS14BackOffSounds like a normal guy.",
+      "topic_text": "Is that a hint? You want me to bribe you? No way.",
+      "emotion": "Disgust 50",
+      "response_text": "Sheesh. Wastelanders get dumber every day.",
+      "index": "11"
+    },
+    {
+      "topic": "MS14CrowleyWhat can you tell me about Mister Crowley?",
+      "topic_text": "Does Crowley come in here a lot? What's his angle?",
+      "emotion": "Neutral 50",
+      "response_text": "I'm not going to rat on a customer. Unless you... you know.",
+      "index": "12"
+    },
+    {
+      "topic": "MS14PersuadeCrowleyCome on. You can tell me. Ahzrukhal said so. <Lie.>",
+      "topic_text": "What... oh! A bribe. Why didn't you just say so. Here's 20 caps.",
+      "emotion": "Disgust 50",
+      "response_text": "Ooh, a big spender.{Sarcasm.}",
+      "index": "13"
+    },
+    {
+      "topic": "SpeechChallengeFailure",
+      "topic_text": "SpeechChallengeFailure",
+      "emotion": "Fear 25",
+      "response_text": "Ummm. Yeah. Sorry. Don't know.{afraid the player knows the secret, trying to keep the matter secret}",
+      "index": "16"
+    },
+    {
+      "topic": "UnderworldTulipCustomers",
+      "topic_text": "You don't get a lot of customers, do you?",
+      "emotion": "Sad 50",
+      "response_text": "No, not really. To tell you the truth, everyone around here who wants a gun already has one.",
+      "index": "17"
+    },
+    {
+      "topic": "UnderworldTulipEconomy",
+      "topic_text": "What do you do with the money you make down here?",
+      "emotion": "Neutral 50",
+      "response_text": "Well... we spend it at Carol's. Or the Ninth Circle, but I don't like it there.",
+      "index": "19"
+    },
+    {
+      "topic": "UnderworldTulipServices",
+      "topic_text": "Let me see what you have for sale.",
+      "emotion": "Neutral 50",
+      "response_text": "If any of the armor fails to protect your life, I'll give you a full refund.",
+      "index": "21"
+    },
+    {
+      "topic": "UnderworldTulipUnderworldHistory",
+      "topic_text": "Do you know anything about Underworld?",
+      "emotion": "Neutral 50",
+      "response_text": "Well, yeah. There's a lot of old pamphlets and stuff down here. I've pretty much read it all.",
+      "index": "24"
+    },
+    {
+      "topic": "UnderworldTulipUnderworldHistory1",
+      "topic_text": "What was this place before the Ghouls moved in?",
+      "emotion": "Neutral 50",
+      "response_text": "It used to be part of the Museum of History. The exhibit that used to be here was focused on what happens after death: hell and whatnot.",
+      "index": "25"
+    },
+    {
+      "topic": "UnderworldTulipUnderworldHistory2",
+      "topic_text": "How did all of the Ghouls end up here?",
+      "emotion": "Neutral 50",
+      "response_text": "At first it was just a couple people after the war. This was one of the only places that wasn't falling down or on fire after the bombs fell.",
+      "index": "31"
+    },
+    {
+      "topic": "UnderworldTulipUnderworldHistory3",
+      "topic_text": "Isn't it dangerous being this deep into the city?",
+      "emotion": "Neutral 50",
+      "response_text": "Not really. The Super Mutants leave us alone. I guess whatever they do that turns people like them doesn't work on us.",
+      "index": "35"
+    },
+    {
+      "topic": "UnderworldTulipUnderworldHistoryEND",
+      "topic_text": "That's all I needed to know.",
+      "emotion": "Neutral 50",
+      "response_text": "Come back any time! It's... kind of lonely down here.",
+      "index": "39"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "I have to go now.",
+      "emotion": "Neutral 50",
+      "response_text": "Come back soon! ...please.",
+      "index": "40"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Neutral 50",
+      "response_text": "Welcome to Underworld Outfitters!",
+      "index": "41"
+    },
+    {
+      "topic": "UnderworldTalkResponseShort1",
+      "topic_text": "UnderworldTalkHelloResponseShort",
+      "emotion": "Neutral 50",
+      "response_text": "Hello!",
+      "index": "46"
+    }
+  ],
+  "combat": []
+}

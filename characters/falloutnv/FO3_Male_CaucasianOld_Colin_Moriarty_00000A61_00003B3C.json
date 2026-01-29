@@ -1,0 +1,452 @@
+{
+  "name": "Colin Moriarty",
+  "url": "/wiki/Colin_Moriarty",
+  "dialogue_name": "ColinMoriarty.txt",
+  "dialogue_url": "/wiki/ColinMoriarty.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "00000A61",
+  "ref_id": "00003B3C",
+  "editor_id": "ColinMoriarty",
+  "location": "Moriarty's Saloon",
+  "location_url": "/wiki/Moriarty%27s_Saloon",
+  "descriptions": [
+    "Colin Moriarty is a resident of Megaton and the owner of Moriarty's Saloon in Fallout 3.",
+    "Colin Moriarty, who is 50 years old in 2277, has lived in Megaton almost his entire life. According to Herbert Dashwood, he came to the former United States as a child.",
+    "After coming to the U.S., Colin's father amassed his wealth using nearby trade routes, and helped secure Megaton as a trading hub in the area. Colin's father died during a raider attack in 2241 and his son inherited his wealth, including the saloon.",
+    "He is a very proactive businessman and a staunch supporter of the \"just business\" approach to economics; if someone wants something from him, it had better be worth his while.",
+    "Moriarty is also adamantly self-assured that Megaton is his town and that Sheriff Lucas Simms is only \"a facade\" and \"an illusion of order that ",
+    "Due to his outlook on life, he believes that the message that Three Dog is promoting on Galaxy News Radio, the \"Good Fight\", is both crazy and stupid. He furthermore cares little for news about the wasteland,",
+    "As it turns out, the Lone Wanderer had met Moriarty even before their father left Vault 101. On their way to the Vault to ensure the infant Lone Wanderer's safety, James and Star Paladin Cross stayed in Moriarty's Saloon shortly after the Lone Wanderer's birth.",
+    "He spends most of his time in the saloon, but occasionally goes outside to smoke, leaning on the rail out in front of the bar."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Megaton",
+  "role": "Saloon owner",
+  "detailed_location": "Moriarty's Saloon",
+  "voice_actor": "Mike Rosson",
+  "special": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 7,
+    "Intelligence": 5,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "level": "6→10",
+  "tag_skills": [
+    {
+      "Barter:": "59→79"
+    },
+    {
+      "Melee Weap.:": "55→75(57→77)"
+    },
+    {
+      "Speech:": "59→79"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "50→70"
+    },
+    {
+      "Critical Chance:": "5%"
+    },
+    {
+      "Unarmed Dam.:": "1.15"
+    },
+    {
+      "Poison Resist.:": "15%"
+    },
+    {
+      "Rad. Resist.:": "6%"
+    },
+    {
+      "Carry Weight:": "200"
+    },
+    {
+      "Damage Res.:": "10%"
+    }
+  ],
+  "karma": "Neutral",
+  "voice_type": "MaleUniqueMoriarty",
+  "geck_race": "CaucasianOld",
+  "topics": [
+    {
+      "topic": "CGTransitionTopic",
+      "topic_text": "CGTransitionTopic",
+      "emotion": "Neutral 50",
+      "response_text": "No, no, put that away. This one's on the house. And now a toast. To James and his cheery cherub. May your future be safe, bright, and boring as hell.",
+      "index": "1"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Happy 50",
+      "response_text": "Colin Moriarty, at your service! Welcome to Moriarty's! My saloon, my home, my slice of heaven in this backwoods little burg.",
+      "index": "2"
+    },
+    {
+      "topic": "MQ01GNRTopic",
+      "topic_text": "What's all this about Galaxy News Radio?",
+      "emotion": "Neutral 50",
+      "response_text": "Galaxy News Radio is some loudmouth radio station located in the ruins of D.C.",
+      "index": "35"
+    },
+    {
+      "topic": "MQ01MoriartyFavor01",
+      "topic_text": "Sure, anything to get the information.",
+      "emotion": "Happy 50",
+      "response_text": "Eager, eh? Good... I like that. It's nice to have a doer in this shithole of a town for a change.",
+      "index": "38"
+    },
+    {
+      "topic": "MQ01MoriartyFavor02",
+      "topic_text": "So, you want me to do your dirty work?",
+      "emotion": "Happy 50",
+      "response_text": "Who said anything about dirty work? You need some caps, I'm giving you a way to get 'em. It's just business.",
+      "index": "42"
+    },
+    {
+      "topic": "MQ01MoriartyFavor03",
+      "topic_text": "No way, Moriarty. No favors.",
+      "emotion": "Disgust 60",
+      "response_text": "Fine. Go find Daddy yourself then. I'll be here when you change your mind.",
+      "index": "46"
+    },
+    {
+      "topic": "MS11FinDeliverLetterTopic",
+      "topic_text": "MS11FinDeliverLetterTopic",
+      "emotion": "Neutral 50",
+      "response_text": "Here. These letters arrived for you while you were gone. I'm not a fucking post office you know.{mildly annoyed}",
+      "index": "47"
+    },
+    {
+      "topic": "MegGobDrinks",
+      "topic_text": "I need a drink.",
+      "emotion": "Neutral 50",
+      "response_text": "I used to make Gob take care of this, but what do you need?",
+      "index": "51"
+    },
+    {
+      "topic": "MegMoriartyChoice10a",
+      "topic_text": "My Dad told me we were born in Vault 101...",
+      "emotion": "Surprise 60",
+      "response_text": "Aaahhhh. I see. You know, I heard about the brainwashin' that goes on down there. From some other fella, escaped, oh... five years back.",
+      "index": "53"
+    },
+    {
+      "topic": "MegMoriartyChoice10b",
+      "topic_text": "Oh, I wasn't born in the Vault? That's complete bullshit, and you know it.",
+      "emotion": "Surprise 60",
+      "response_text": "Aaahhhh. I see. You know, I heard about the brainwashin' that goes on down there. From some other fella, escaped, oh... five years back.",
+      "index": "56"
+    },
+    {
+      "topic": "MegMoriartyChoice10c",
+      "topic_text": "You're wrong. My Dad never would have lied to me.",
+      "emotion": "Surprise 60",
+      "response_text": "Aaahhhh. I see. You know, I heard about the brainwashin' that goes on down there. From some other fella, escaped, oh... five years back.",
+      "index": "59"
+    },
+    {
+      "topic": "MegMoriartyChoice10d",
+      "topic_text": "You're a liar, Moriarty. I know where I grew up.",
+      "emotion": "Surprise 60",
+      "response_text": "Aaahhhh. I see. You know, I heard about the brainwashin' that goes on down there. From some other fella, escaped, oh... five years back.",
+      "index": "62"
+    },
+    {
+      "topic": "MegMoriartyChoice1b",
+      "topic_text": "Huh? My father and I were born in Vault 101...",
+      "emotion": "Neutral 50",
+      "response_text": "Is that what your father told you? That you were born in that hole? That HE was born there as well?",
+      "index": "65"
+    },
+    {
+      "topic": "MegMoriartyChoice1c",
+      "topic_text": "You're lying. The Vault's been sealed for 200 years!",
+      "emotion": "Neutral 50",
+      "response_text": "Ha ha ha ha ha! God in Heaven, would you listen to yourself? Do you honestly believe that's true? The lies they've put into that head of yours....",
+      "index": "70"
+    },
+    {
+      "topic": "MegMoriartyChoice1d",
+      "topic_text": "Tell me what you know! Tell me everything!",
+      "emotion": "Neutral 50",
+      "response_text": "Ah, temper, temper. And your father was so reserved. Take after our mum, do we? God rest her soul.",
+      "index": "74"
+    },
+    {
+      "topic": "MegMoriartyChoice2a",
+      "topic_text": "I was kidding! Dad talked about you all time. Now really, where is he? <Lie.>",
+      "emotion": "Surprise 100",
+      "response_text": "Did he? Well, our time together was brief, but... that is the way of it out here. When a bond is forged, little else matters, hmm?",
+      "index": "80"
+    },
+    {
+      "topic": "MegMoriartyChoice2b",
+      "topic_text": "Look, I just want to find my Dad. Do you know where he is?",
+      "emotion": "Neutral 50",
+      "response_text": "You seem like a nice kid, so I'm going to be straight with you.",
+      "index": "83"
+    },
+    {
+      "topic": "MegMoriartyChoice2c",
+      "topic_text": "Let's cut to the chase. How much for you to tell me where my father is?",
+      "emotion": "Neutral 50",
+      "response_text": "You catch on quick, kid. That's the way of it out here, for sure. You want something, you take it. Or you pay in cold, hard caps. Say... 100.",
+      "index": "86"
+    },
+    {
+      "topic": "MegMoriartyChoice2d",
+      "topic_text": "Tell me where he is, Moriarty, or I'll beat it out of you!",
+      "emotion": "Neutral 50",
+      "response_text": "Ha ha ha ha ha ha ha! Oh, kid... ah... I'll let that one go, chalk it up to youthful arrogance.",
+      "index": "88"
+    },
+    {
+      "topic": "MegMoriartyChoice3a",
+      "topic_text": "I don't have 100 caps.",
+      "emotion": "Neutral 50",
+      "response_text": "All right, kid. Let me help you out, you know... for old time's sake.",
+      "index": "92"
+    },
+    {
+      "topic": "MegMoriartyChoice3aFavorDone",
+      "topic_text": "I don't have 100 caps.",
+      "emotion": "Disgust 60",
+      "response_text": "All right kid. Then I guess there's nothing else we have to say to each other. Come back to me when you have the caps, and we'll talk.",
+      "index": "94"
+    },
+    {
+      "topic": "MegMoriartyChoice3b",
+      "topic_text": "All right, Moriarty. Here's 100 caps. Now where's my father?",
+      "emotion": "Neutral 50",
+      "response_text": "Excellent! Your dad raised a smart kid. Really no substitute for the love of a father, now is there?",
+      "index": "95"
+    },
+    {
+      "topic": "MegMoriartyChoice3c",
+      "topic_text": "No thanks. I'll find out on my own.",
+      "emotion": "Neutral 50",
+      "response_text": "So you've said. And yet you came back once... Somehow I think we'll be having this conversation again. I look forward to it.",
+      "index": "97"
+    },
+    {
+      "topic": "MegMoriartyChoice3d",
+      "topic_text": "100 caps!? Are you nuts? I don't have that kind of money!",
+      "emotion": "Happy 80",
+      "response_text": "Guilty as charged.",
+      "index": "100"
+    },
+    {
+      "topic": "MegMoriartyChoice4a",
+      "topic_text": "300? What the hell? You said it was 100 caps!",
+      "emotion": "Neutral 50",
+      "response_text": "I did say it was 100 caps. And as I recall, you said no. So now I'm saying it's 300 caps. What will you say this time?",
+      "index": "103"
+    },
+    {
+      "topic": "MegMoriartyChoice4b",
+      "topic_text": "I'm sorry, but we had a deal for 100 caps.",
+      "emotion": "Neutral 50",
+      "response_text": "Oh, no no no. I offered a deal for 100 caps. You declined. So now I'm offering a new deal for 300 caps.",
+      "index": "104"
+    },
+    {
+      "topic": "MegMoriartyChoice4c",
+      "topic_text": "This is ridiculous. Forget it.",
+      "emotion": "Happy 50",
+      "response_text": "Didn't you say that last time, too? I have a feeling you'll be coming back again.",
+      "index": "106"
+    },
+    {
+      "topic": "MegMoriartyChoice5a",
+      "topic_text": "Okay, let's just take a step back. 100 caps was reasonable, wasn't it?",
+      "emotion": "Neutral 50",
+      "response_text": "Well, I suppose it was. All right; because I'm such a softy, I'll honor our original agreement.",
+      "index": "107"
+    },
+    {
+      "topic": "MegMoriartyChoice5b",
+      "topic_text": "Fine, 300 caps. Now spill it.",
+      "emotion": "Happy 30",
+      "response_text": "Nothing like the sound of caps jingling in your pocket is there? Always brightens my day.",
+      "index": "111"
+    },
+    {
+      "topic": "MegMoriartyChoice5c",
+      "topic_text": "I don't have 300 caps.",
+      "emotion": "Happy 30",
+      "response_text": "Well, that's a shame for you, isn't it? You don't have the caps, and I guess I don't have the information. Disappointment all around.{mocking}",
+      "index": "116"
+    },
+    {
+      "topic": "MegMoriartyChoice6a",
+      "topic_text": "Fine, here's your 100 caps.",
+      "emotion": "Happy 70",
+      "response_text": "Now that wasn't so difficult was it?",
+      "index": "117"
+    },
+    {
+      "topic": "MegMoriartyChoice6b",
+      "topic_text": "Yeah, yeah. Here, take your 100 caps. I hope you choke on them.",
+      "emotion": "Surprise 70",
+      "response_text": "How can you be so rude when I'm going to provide you with such a useful public service?{Very mocking tone}",
+      "index": "120"
+    },
+    {
+      "topic": "MegMoriartyChoice6c",
+      "topic_text": "Forget it. I'll come back.",
+      "emotion": "Neutral 50",
+      "response_text": "I'll be here.",
+      "index": "123"
+    },
+    {
+      "topic": "MegMoriartyChoice6d",
+      "topic_text": "Wait a second! I handled Silver for you, and you still want me to pay?",
+      "emotion": "Disgust 80",
+      "response_text": "It's called economics, kid. You got something I want and I got something you want. Nothing's free.",
+      "index": "124"
+    },
+    {
+      "topic": "MegMoriartysBuy",
+      "topic_text": "I want to buy a drink.",
+      "emotion": "Neutral 50",
+      "response_text": "No problem at all. I'll take care of you until that lazy zombie wakes up to do his job.",
+      "index": "126"
+    },
+    {
+      "topic": "MegTLMoriartyFavor",
+      "topic_text": "Look, I need a way to get some caps or I'll never have the money to pay you.",
+      "emotion": "Neutral 50",
+      "response_text": "If you're looking for a handout, you can forget it. But if you're looking for work, there's a favor you could do for me.",
+      "index": "129"
+    },
+    {
+      "topic": "MegTownEnd",
+      "topic_text": "That's all I needed to know.",
+      "emotion": "Neutral 50",
+      "response_text": "If you say so.",
+      "index": "132"
+    },
+    {
+      "topic": "MegTownFatherChoice",
+      "topic_text": "What was it you said about my father, again?",
+      "emotion": "Neutral 50",
+      "response_text": "It's like I said, kid. Your dad was here for a bit, but didn't stay long. Said he was going to the Galaxy News Radio station. Southeast, in D.C.{ }",
+      "index": "133"
+    },
+    {
+      "topic": "MegTownMegaton",
+      "topic_text": "What can you tell me about Megaton?",
+      "emotion": "Neutral 50",
+      "response_text": "Stay the fuck out of my business, don't go where you don't belong, and buy your drinks here. That's all you need to know.{ }",
+      "index": "141"
+    },
+    {
+      "topic": "MegTownRumors",
+      "topic_text": "What's the word around town?",
+      "emotion": "Neutral 50",
+      "response_text": "I own a saloon, kid. Rumors are part and parcel. So I'll give you this one for free...",
+      "index": "142"
+    },
+    {
+      "topic": "MegTownWasteland",
+      "topic_text": "Know anything about the area outside Megaton?",
+      "emotion": "Neutral 50",
+      "response_text": "The Wasteland? Why the hell would you want to go out there? Listen to me, lass, Megaton has everything you could possibly need. Why go anywhere else?",
+      "index": "144"
+    },
+    {
+      "topic": "MegTownWhatDoYouDo",
+      "topic_text": "What do you do around here?",
+      "emotion": "Neutral 50",
+      "response_text": "I keep these yokels knee deep in booze and poon. They keep me knee deep in caps. It's a fair trade, if you ask me.",
+      "index": "146"
+    },
+    {
+      "topic": "SpeechChallengeFailure",
+      "topic_text": "SpeechChallengeFailure",
+      "emotion": "Happy 60",
+      "response_text": "I'm being reasonable. I'm also being a businessman.",
+      "index": "147"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "I have to go now.",
+      "emotion": "Neutral 50",
+      "response_text": "A little bit of caps for so much information... think about it.{ }",
+      "index": "153"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Happy 70",
+      "response_text": "Yeah, what the hell do you want?",
+      "index": "164"
+    },
+    {
+      "topic": "MS11SimmsMurderedSay",
+      "topic_text": "MS11SimmsMurderedSay",
+      "emotion": "Anger 50",
+      "response_text": "Gob!{yelling at his slave to get to work}",
+      "index": "182"
+    },
+    {
+      "topic": "MegatonHelloResponse",
+      "topic_text": "MegatonHelloResponse",
+      "emotion": "Neutral 50",
+      "response_text": "And a hello to you, lass.",
+      "index": "184"
+    },
+    {
+      "topic": "MegatonTalk1",
+      "topic_text": "MegatonTalk",
+      "emotion": "Fear 50",
+      "response_text": "What did you say to me? WHAT did you say to me? Did I give you permission to speak, you disgusting corpse?",
+      "index": "188"
+    },
+    {
+      "topic": "MegatonTalk2",
+      "topic_text": "MegatonTalk2",
+      "emotion": "Neutral 50",
+      "response_text": "These floors are filthy, you useless fucking zombie! Next time you sweep, put your back into it.",
+      "index": "192"
+    },
+    {
+      "topic": "MegatonTalk3",
+      "topic_text": "MegatonTalk3",
+      "emotion": "Neutral 50",
+      "response_text": "Shut yer gob, Gob! Ain't that why I named you that to begin with? Cause you talk too goddamn much? Now get your rotting ass back to work!",
+      "index": "196"
+    },
+    {
+      "topic": "MegatonTalk4",
+      "topic_text": "MegatonTalk4",
+      "emotion": "Neutral 50",
+      "response_text": "All right, all right! Stop your pathetic sniveling and just do what you're fucking told.{ }",
+      "index": "201"
+    }
+  ],
+  "combat": [
+    {
+      "topic": "Attack",
+      "topic_text": "Attack",
+      "emotion": "Neutral 50",
+      "response_text": "Time for you to die, lad.",
+      "index": "205"
+    }
+  ]
+}

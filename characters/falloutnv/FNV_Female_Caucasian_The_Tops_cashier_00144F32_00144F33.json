@@ -1,0 +1,241 @@
+{
+  "name": "The Tops cashier",
+  "url": "/wiki/The_Tops_cashier",
+  "dialogue_name": "VCashierTheTops.txt",
+  "dialogue_url": "/wiki/VCashierTheTops.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "00144F32",
+  "ref_id": "00144F33",
+  "editor_id": "vCashierTheTops",
+  "location": "The Tops",
+  "location_url": "/wiki/The_Tops",
+  "descriptions": [
+    "The Tops cashier is the cashier at The Tops casino in 2281, located on the first floor.",
+    "Like most cashiers in the game, the Tops cashier has a very terse tone of voice."
+  ],
+  "race": "Human",
+  "gender": "Female",
+  "affiliation": "The Tops",
+  "role": "Cashier",
+  "detailed_location": "The Tops",
+  "voice_actor": "Debra Wilson",
+  "special": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 5,
+    "Intelligence": 5,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "level": "1",
+  "tag_skills": [
+    {
+      "Guns:": "30"
+    },
+    {
+      "Science:": "30"
+    },
+    {
+      "Unarmed:": "28"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Neutral",
+  "voice_type": "FemaleAdult10",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "Welcome to The Tops. How can I help you?",
+      "index": "1"
+    },
+    {
+      "topic": "vDialogueCasinoCashiervCashierTheTopsTopic000",
+      "topic_text": "[PRESS DEMO] Enough gambling, more fighting. Take me to the no man's land near Camp Forlorn Hope.",
+      "emotion": "Neutral 50",
+      "response_text": "You'll need someone to watch your back - Craig Boone, an NCR sniper, will be joining you. Keep your head down out there!",
+      "index": "2"
+    },
+    {
+      "topic": "vDialogueCasinoCashiervCashierTheTopsTopic009",
+      "topic_text": "I'd like to exchange caps for chips.",
+      "emotion": "Neutral 50",
+      "response_text": "How many chips would you like?",
+      "index": "3"
+    },
+    {
+      "topic": "vDialogueCasinoCashiervCashierTheTopsTopic010",
+      "topic_text": "1 chip for 1 cap.",
+      "emotion": "Neutral 50",
+      "response_text": "Here's your chip. Is there anything else I can help you with?",
+      "index": "4"
+    },
+    {
+      "topic": "vDialogueCasinoCashiervCashierTheTopsTopic011",
+      "topic_text": "5 chips for 5 caps.",
+      "emotion": "Neutral 50",
+      "response_text": "Here's your chips. Is there anything else I can help you with?",
+      "index": "5"
+    },
+    {
+      "topic": "vDialogueCasinoCashiervCashierTheTopsTopic012",
+      "topic_text": "20 chips for 20 caps.",
+      "emotion": "Neutral 50",
+      "response_text": "Here's your chips. Is there anything else I can help you with?",
+      "index": "6"
+    },
+    {
+      "topic": "vDialogueCasinoCashiervCashierTheTopsTopic013",
+      "topic_text": "100 chips for 100 caps.",
+      "emotion": "Neutral 50",
+      "response_text": "Here's your chips. Is there anything else I can help you with?",
+      "index": "7"
+    },
+    {
+      "topic": "vDialogueCasinoCashiervCashierTheTopsTopic014",
+      "topic_text": "500 chips for 500 caps.",
+      "emotion": "Neutral 50",
+      "response_text": "Here's your chips. Is there anything else I can help you with?",
+      "index": "8"
+    },
+    {
+      "topic": "vDialogueCasinoCashiervCashierTheTopsTopic021",
+      "topic_text": "1000 chips for 1000 caps.",
+      "emotion": "Neutral 50",
+      "response_text": "Here's your chips. Is there anything else I can help you with?",
+      "index": "9"
+    },
+    {
+      "topic": "vDialogueCasinoCashiervCashierTheTopsTopic022",
+      "topic_text": "I'd like to exchange Legion money for chips.",
+      "emotion": "Neutral 50",
+      "response_text": "How many chips would you like?",
+      "index": "10"
+    },
+    {
+      "topic": "vDialogueCasinoCashiervCashierTheTopsTopic023",
+      "topic_text": "4 chips for 1 Legion Denarius.",
+      "emotion": "Neutral 50",
+      "response_text": "Here's your chips. Is there anything else I can help you with?",
+      "index": "11"
+    },
+    {
+      "topic": "vDialogueCasinoCashiervCashierTheTopsTopic024",
+      "topic_text": "100 chips for 1 Legion Aureus or 25 Legion Denarii.",
+      "emotion": "Neutral 50",
+      "response_text": "Here's your chips. Is there anything else I can help you with?",
+      "index": "12"
+    },
+    {
+      "topic": "vDialogueCasinoCashiervCashierTheTopsTopic025",
+      "topic_text": "20 chips for 5 Legion Denarii.",
+      "emotion": "Neutral 50",
+      "response_text": "Here's your chips. Is there anything else I can help you with?",
+      "index": "13"
+    },
+    {
+      "topic": "vDialogueCasinoCashiervCashierTheTopsTopic026",
+      "topic_text": "40 chips for 10 Legion Denarii.",
+      "emotion": "Neutral 50",
+      "response_text": "Here's your chips. Is there anything else I can help you with?",
+      "index": "14"
+    },
+    {
+      "topic": "vDialogueCasinoCashiervCashierTheTopsTopic027",
+      "topic_text": "80 chips for 20 Legion Denarii.",
+      "emotion": "Neutral 50",
+      "response_text": "Here's your chips. Is there anything else I can help you with?",
+      "index": "15"
+    },
+    {
+      "topic": "vDialogueCasinoCashiervCashierTheTopsTopic028",
+      "topic_text": "Never mind.",
+      "emotion": "Neutral 50",
+      "response_text": "Is there anything else I can help you with?",
+      "index": "16"
+    },
+    {
+      "topic": "vDialogueCasinoCashiervCashierTheTopsTopic030",
+      "topic_text": "I'd like to exchange NCR money for chips.",
+      "emotion": "Neutral 50",
+      "response_text": "How many chips would you like?",
+      "index": "17"
+    },
+    {
+      "topic": "vDialogueCasinoCashiervCashierTheTopsTopic033",
+      "topic_text": "I'd like to turn in my chips.",
+      "emotion": "Neutral 50",
+      "response_text": "In what currency would you like your payout? Non-caps currencies will have fractions paid out in caps.",
+      "index": "18"
+    },
+    {
+      "topic": "vDialogueCasinoCashiervCashierTheTopsTopic034",
+      "topic_text": "2 chips for $5 NCR.",
+      "emotion": "Neutral 50",
+      "response_text": "Here's your chips. Is there anything else I can help you with?",
+      "index": "19"
+    },
+    {
+      "topic": "vDialogueCasinoCashiervCashierTheTopsTopic035",
+      "topic_text": "8 chips for $20 NCR.",
+      "emotion": "Neutral 50",
+      "response_text": "Here's your chips. Is there anything else I can help you with?",
+      "index": "20"
+    },
+    {
+      "topic": "vDialogueCasinoCashiervCashierTheTopsTopic036",
+      "topic_text": "40 chips for $100 NCR.",
+      "emotion": "Neutral 50",
+      "response_text": "Here's your chips. Is there anything else I can help you with?",
+      "index": "21"
+    },
+    {
+      "topic": "vDialogueCasinoCashiervCashierTheTopsTopic037",
+      "topic_text": "I'll take my payout in caps.",
+      "emotion": "Neutral 50",
+      "response_text": "Caps it is. Will there be anything else?",
+      "index": "22"
+    },
+    {
+      "topic": "vDialogueCasinoCashiervCashierTheTopsTopic038",
+      "topic_text": "Pay me in NCR money.",
+      "emotion": "Neutral 50",
+      "response_text": "Here's your NCR money. Will there be anything else?",
+      "index": "23"
+    },
+    {
+      "topic": "vDialogueCasinoCashiervCashierTheTopsTopic039",
+      "topic_text": "Legion money, please.",
+      "emotion": "Neutral 50",
+      "response_text": "Very well. Will there be anything else?",
+      "index": "24"
+    },
+    {
+      "topic": "vDialogueCasinoCashiervCashierTheTopsTopic046",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Enjoy your stay at The Tops.",
+      "index": "25"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Thank you, and enjoy your stay at The Tops.",
+      "index": "26"
+    }
+  ],
+  "combat": []
+}

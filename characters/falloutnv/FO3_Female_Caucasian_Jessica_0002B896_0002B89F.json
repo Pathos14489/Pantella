@@ -1,0 +1,186 @@
+{
+  "name": "Jessica",
+  "url": "/wiki/Jessica_(Fallout_3)",
+  "dialogue_name": "Jessica.txt",
+  "dialogue_url": "/wiki/Jessica.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "0002B896",
+  "ref_id": "0002B89F",
+  "editor_id": "Jessica",
+  "location": "Republic of Dave capitol building",
+  "location_url": "/wiki/Republic_of_Dave_capitol_building",
+  "descriptions": [
+    "Jessica is a resident of the Republic of Dave in 2277.",
+    "She is Dave's new younger wife and lives in the Republic of Dave. Her husband is a survivalist and has made sure his wife and older children know how to fight. Jessica is 24 and has never left the Republic; she fences but is extremely naive, conceited, and catty, especially when dealing with the first wife, Rosie.",
+    "Jessica appears in Fallout 3 and Fallout Shelter Online."
+  ],
+  "race": "Human",
+  "gender": "Female",
+  "affiliation": "Republic of Dave",
+  "role": "Wife of Dave",
+  "detailed_location": "Republic of Dave",
+  "voice_actor": "Shari Elliker",
+  "special": {
+    "Strength": 6,
+    "Perception": 7,
+    "Endurance": 5,
+    "Charisma": 3,
+    "Intelligence": 3,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "level": "3→7",
+  "tag_skills": [
+    {
+      "Explosives:": "42→60"
+    },
+    {
+      "Small Guns:": "40→60(42→62)"
+    },
+    {
+      "Sneak:": "40→58"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Good",
+  "voice_type": "FemaleAdult01DefaultDC",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "Dave says you're okay? Fine.",
+      "index": "1"
+    },
+    {
+      "topic": "RDGottaGo",
+      "topic_text": "I've got to go.",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah, and I have to get back to work.",
+      "index": "2"
+    },
+    {
+      "topic": "RDNeverMind",
+      "topic_text": "Actually, I think I have all the info I need.",
+      "emotion": "Neutral 50",
+      "response_text": "Glad to hear it.",
+      "index": "3"
+    },
+    {
+      "topic": "RDSubElectionOpponentsWho's running in the election?",
+      "topic_text": "You know, Rosie is running for president now.",
+      "emotion": "Neutral 50",
+      "response_text": "Poor girl doesn't stand much of a chance, does she?",
+      "index": "4"
+    },
+    {
+      "topic": "RDSubElectionSuggestion",
+      "topic_text": "Have you considered running for the presidency?",
+      "emotion": "Fear 50",
+      "response_text": "No way!  You'd have to be crazy to run against him.",
+      "index": "8"
+    },
+    {
+      "topic": "RDTopicElection",
+      "topic_text": "I'd like to discuss the election with you.",
+      "emotion": "Neutral 50",
+      "response_text": "I'll help you if I can.",
+      "index": "9"
+    },
+    {
+      "topic": "RDTopicGoVote",
+      "topic_text": "You should go vote, if you haven't already.",
+      "emotion": "Neutral 50",
+      "response_text": "I went and voted.",
+      "index": "10"
+    },
+    {
+      "topic": "RDTopicRoD",
+      "topic_text": "I'd like to know more about the Republic.",
+      "emotion": "Sad 50",
+      "response_text": "Rosie is dead. Can't honestly say I care very much.",
+      "index": "12"
+    },
+    {
+      "topic": "RDTopicRoDEND",
+      "topic_text": "That's all I need to know.",
+      "emotion": "Neutral 50",
+      "response_text": "Okay.",
+      "index": "15"
+    },
+    {
+      "topic": "RDTopicThisPlace",
+      "topic_text": "What's your take on the Republic?",
+      "emotion": "Neutral 50",
+      "response_text": "Dave is a great leader. He's going to bring civilization back to the Wasteland. One day, they'll say it all started here.",
+      "index": "16"
+    },
+    {
+      "topic": "RDTopicWhosInCharge",
+      "topic_text": "Tell me more about this Dave guy.",
+      "emotion": "Anger 50",
+      "response_text": "That's President Dave to you, Wastelander. Call him by his full name, or we'll shoot you.",
+      "index": "17"
+    },
+    {
+      "topic": "RDTopicWivesDave has two wives?",
+      "topic_text": "You're Dave's second wife?",
+      "emotion": "Anger 50",
+      "response_text": "First wife! Rosie is the second wife, since she's the oldest and not good for anything anymore!",
+      "index": "19"
+    },
+    {
+      "topic": "RDTopicYourselfWhat can you tell me about yourself?",
+      "topic_text": "Could you tell me more about yourself, Jessica?",
+      "emotion": "Anger 50",
+      "response_text": "All I have to say is Dave is my husband. Mine, do you understand? I don't care what Rosie has to say about it.",
+      "index": "20"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYEI have to go now.",
+      "topic_text": "See you, Jessica.",
+      "emotion": "Neutral 50",
+      "response_text": "Stay away from Dave. He's mine.",
+      "index": "22"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Neutral 50",
+      "response_text": "Hello Mister President.",
+      "index": "24"
+    },
+    {
+      "topic": "RDElectionTalk",
+      "topic_text": "DaveElectionTalk",
+      "emotion": "Disgust 50",
+      "response_text": "Um, yeah.",
+      "index": "30"
+    },
+    {
+      "topic": "RDFeudTalk",
+      "topic_text": "DaveFeudTalk",
+      "emotion": "Anger 50",
+      "response_text": "Or else what?  Yeah, thought so.",
+      "index": "31"
+    },
+    {
+      "topic": "RDPackageDone",
+      "topic_text": "RDPackageDone",
+      "emotion": "Happy 50",
+      "response_text": "All done! Dave is the best!",
+      "index": "33"
+    }
+  ],
+  "combat": []
+}

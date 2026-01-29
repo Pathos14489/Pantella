@@ -1,0 +1,183 @@
+{
+  "name": "Mrs. Weathers",
+  "url": "/wiki/Weathers_(Fallout:_New_Vegas)",
+  "dialogue_name": "NVCCMrsWeathers.txt",
+  "dialogue_url": "/wiki/NVCCMrsWeathers.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "00130BB9",
+  "ref_id": "00130B99",
+  "editor_id": "NVCCMrsWeathers",
+  "location": "Cottonwood Cove, in the slave pen",
+  "location_url": "/wiki/Cottonwood_Cove",
+  "descriptions": [
+    "Mrs. Weathers is a capture of Caesar's Legion being held in Cottonwood Cove in 2281.",
+    "Mrs. Weathers and her two children, Kenny Weathers and Sammy Weathers, were captured by the Legion while relocating in the Mojave. Her abusive husband, Frank Weathers, abandoned them to the Legion after fleeing the attack."
+  ],
+  "race": "Human",
+  "gender": "Female",
+  "role": "Capture",
+  "detailed_location": "Cottonwood CoveOld Mormon Fort(optional)",
+  "voice_actor": "Diane Pershing",
+  "special": {
+    "Strength": 4,
+    "Perception": 7,
+    "Endurance": 3,
+    "Charisma": 4,
+    "Intelligence": 4,
+    "Agility": 5,
+    "Luck": 2
+  },
+  "mod_special_values": {
+    "Strength": 4,
+    "Perception": 7,
+    "Endurance": 4,
+    "Charisma": 4,
+    "Intelligence": 4,
+    "Agility": 6,
+    "Luck": 2
+  },
+  "level": "1",
+  "tag_skills": [
+    {
+      "Sneak:": "28(30)"
+    },
+    {
+      "Speech:": "26"
+    },
+    {
+      "Unarmed:": "24(26)"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "20(25)"
+    }
+  ],
+  "karma": "Neutral",
+  "voice_type": "FemaleOld03",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "Please, ma'am - take pity on us. Free us, I'm begging you!",
+      "index": "1"
+    },
+    {
+      "topic": "VFreeformCottonwoodCoveNVCCMrsWeathersTopic001",
+      "topic_text": "Frank sent me to free you.",
+      "emotion": "Neutral 50",
+      "response_text": "{Afraid}That man knows where we are? Just when I didn't think this could get any worse!",
+      "index": "5"
+    },
+    {
+      "topic": "VFreeformCottonwoodCoveNVCCMrsWeathersTopic002",
+      "topic_text": "He was hurting you?",
+      "emotion": "Neutral 50",
+      "response_text": "Ever since he lost his job a few years back he hasn't been the same. He took a switch to us for the tiniest things.",
+      "index": "7"
+    },
+    {
+      "topic": "VFreeformCottonwoodCoveNVCCMrsWeathersTopic004",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Anything you can do to help, just please get us out of here.",
+      "index": "9"
+    },
+    {
+      "topic": "VFreeformCottonwoodCoveNVCCMrsWeathersTopic005",
+      "topic_text": "Trust me, your troubles are over. <Set off the explosive in her collar>",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED]{Screaming}No! Not like this!",
+      "index": "10"
+    },
+    {
+      "topic": "VFreeformCottonwoodCoveNVCCMrsWeathersTopic007",
+      "topic_text": "I've paid for the three of you. You are free to go.",
+      "emotion": "Neutral 50",
+      "response_text": "{shocked disbelief}Th-thank you! I don't know that we'll ever be able to repay you, but we'll do our best one day once I've found a place to settle.",
+      "index": "12"
+    },
+    {
+      "topic": "VFreeformCottonwoodCoveNVCCMrsWeathersTopic008<SPEECH - Player tells her to make a run for it>",
+      "topic_text": "Cry freedom! Run for it!",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED]{wanting to believe}You think we can make it? You really do?",
+      "index": "13"
+    },
+    {
+      "topic": "VFreeformCottonwoodCoveNVCCMrsWeathersTopic009",
+      "topic_text": "<Give Mrs. Weathers the key from Canyon Runner>",
+      "emotion": "Neutral 50",
+      "response_text": "{shocked disbelief}Th-thank you! I don't know that we'll ever be able to repay you, but we'll do our best one day once I've found a place to settle.",
+      "index": "18"
+    },
+    {
+      "topic": "VFreeformCottonwoodCoveNVCCMrsWeathersTopic010",
+      "topic_text": "I'll see what I can do.",
+      "emotion": "Neutral 50",
+      "response_text": "{desperate}Thank you! Thank you so much!",
+      "index": "19"
+    },
+    {
+      "topic": "VFreeformCottonwoodCoveNVCCMrsWeathersTopic011",
+      "topic_text": "Let me deactivate your collar.",
+      "emotion": "Neutral 50",
+      "response_text": "No way. If the guard catches you, we'll be beaten.",
+      "index": "20"
+    },
+    {
+      "topic": "VFreeformCottonwoodCoveNVCCMrsWeathersTopic012",
+      "topic_text": "Hold still. <Deactivate the charge and remove her collar>",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] My goodness! I swear my heart skipped a beat!",
+      "index": "24"
+    },
+    {
+      "topic": "VFreeformCottonwoodCoveNVCCMrsWeathersTopic013",
+      "topic_text": "Looks tougher than I thought. We'll have to find another solution.",
+      "emotion": "Neutral 50",
+      "response_text": "{pleading}Anything that gets us out of here, please.",
+      "index": "26"
+    },
+    {
+      "topic": "VFreeformCottonwoodCoveNVCCMrsWeathersTopic014",
+      "topic_text": "<Lie> I paid for your release. You're free to go.",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] Finally! Let's get out of here!",
+      "index": "27"
+    },
+    {
+      "topic": "VFreeformCottonwoodCoveNVCCMrsWeathersTopic015",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "One of these days we'll be free.",
+      "index": "30"
+    },
+    {
+      "topic": "VFreeformCottonwoodCoveNVCCMrsWeathersTopic016",
+      "topic_text": "How were you captured?",
+      "emotion": "Neutral 50",
+      "response_text": "My family was ambushed by a pack of Legion raiders near Searchlight and Frank ran off, the gutless coward!",
+      "index": "31"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "{Pleading}Anything that gets us out of here, please.",
+      "index": "33"
+    }
+  ],
+  "combat": []
+}

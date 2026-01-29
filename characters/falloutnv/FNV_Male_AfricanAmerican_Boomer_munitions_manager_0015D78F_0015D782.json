@@ -1,0 +1,65 @@
+{
+  "name": "Boomer munitions manager",
+  "url": "/wiki/Boomer_munitions_manager",
+  "dialogue_name": "BoomerMessCM.txt",
+  "dialogue_url": "/wiki/BoomerMessCM.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": true,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "0015D78F",
+  "ref_id": "0015D782",
+  "editor_id": "BoomerMessCM",
+  "location": "Mess hall & munitions storage",
+  "location_url": "/wiki/Mess_hall_%26_munitions_storage",
+  "descriptions": [
+    "The Boomer munitions manager is the weapons stock manager for the Boomers living at Nellis Air Force Base in Fallout: New Vegas.",
+    "He keeps the armory for the Boomers at Nellis Air Force Base and can be found in the mess hall & munitions storage. The player character can trade with him after Pearl gives permission. The permission is automatically granted after the player character has gained a reputation of at least \"Accepted\" with the Boomers. He resets just like the rest of the vendors, every Wednesday and Sunday.",
+    "The Boomer munitions manager stocks explosives ammo such as grenades, mines, 40mm grenades, 25mm grenades, and missiles.",
+    "Xbox 360 The munitions manager will never give any dialogue option for accepting missiles and their variants, preventing increasing Boomers fame by selling him some."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Boomers",
+  "role": "Munitions manager",
+  "detailed_location": "Mess hall & munitions storage,Nellis Air Force Base",
+  "voice_actor": "Gregory Alan Williams",
+  "level": "16",
+  "misc_skills": [
+    {
+      "Hit Points:": "145"
+    }
+  ],
+  "karma": "Neutral",
+  "voice_type": "MaleAdult06",
+  "geck_race": "AfricanAmerican",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah?",
+      "index": "1"
+    },
+    {
+      "topic": "VFreeformNellisTopic003",
+      "topic_text": "Could I buy some spare munitions?",
+      "emotion": "Neutral 50",
+      "response_text": "Sure. Pearl gave the green light. Take a look at the manifest.",
+      "index": "2"
+    },
+    {
+      "topic": "VFreeformNellisTopic004",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Later.",
+      "index": "4"
+    }
+  ],
+  "conversation": [],
+  "combat": []
+}

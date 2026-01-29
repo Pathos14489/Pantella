@@ -1,0 +1,222 @@
+{
+  "name": "Kimba",
+  "url": "/wiki/Kimba",
+  "dialogue_name": "Kimba.txt",
+  "dialogue_url": "/wiki/Kimba.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": true,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "0002AB94",
+  "ref_id": "00027F3D",
+  "editor_id": "Kimba",
+  "location": "Big Town",
+  "location_url": "/wiki/Big_Town",
+  "descriptions": [
+    "Kimba is one of Big Town's few surviving residents in 2277.",
+    "Hoping against hope for some outside help, Kimba goes along with the rest of the inhabitants' wishes most of the time, even if they contradict her logical thoughts. Despite the terrible current situation, Kimba remains stable and soft-spoken, and she is always ready to pitch in, learn a new skill and fight for her friends.",
+    "As with all the inhabitants of Big Town, she used to live in Little Lamplight.",
+    "She is the only non-player character in the base game who uses a BB gun for a weapon."
+  ],
+  "race": "Human",
+  "gender": "Female",
+  "affiliation": "Big TownLittle Lamplight(formerly)",
+  "role": "Resident",
+  "detailed_location": "Big Town",
+  "voice_actor": "Shari Elliker",
+  "special": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 4,
+    "Intelligence": 4,
+    "Agility": 6,
+    "Luck": 4
+  },
+  "level": "2→6(equal to player characters level)",
+  "tag_skills": [
+    {
+      "Barter:": "31→50"
+    },
+    {
+      "Small Guns:": "35→54"
+    },
+    {
+      "Unarmed:": "31→54"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "30→50"
+    },
+    {
+      "Poison Resist.:": "15%"
+    },
+    {
+      "Rad. Resist.:": "6%"
+    },
+    {
+      "Damage Res.:": "0%(24%)"
+    }
+  ],
+  "karma": "Neutral",
+  "voice_type": "FemaleAdult01DefaultDC",
+  "geck_race": "AfricanAmerican",
+  "topics": [
+    {
+      "topic": "BigtownTownServices",
+      "topic_text": "Do you have any traders in town? Any doctors?",
+      "emotion": "Neutral 50",
+      "response_text": "No. Red used to run a medical clinic, but Super Mutants captured her in the last attack.{Kimba tries to be helpful.}",
+      "index": "1"
+    },
+    {
+      "topic": "BigtownTownWhatsWrongThis place looks like a ghost town.",
+      "topic_text": "Why do Super Mutants keep attacking the town?",
+      "emotion": "Fear 25",
+      "response_text": "Whenever those... things come, they grab a few people instead of killing them. No one knows what happens after that. No one wants to know.{Kimba is afraid of the supermutants and doesn't want to think about what happened to her friends.}",
+      "index": "4"
+    },
+    {
+      "topic": "BigtownTownWhereDidYouComeFrom",
+      "topic_text": "Where did you people come from, anyway?",
+      "emotion": "Happy 25",
+      "response_text": "Oh, Little Lamplight is where most of us came from. Red and Pappy and Flash and Bittercup. We used to play together, when we were kids.{Kimba is eager to remember happier times.}",
+      "index": "6"
+    },
+    {
+      "topic": "BigtownTownWhosInCharge",
+      "topic_text": "Who's in charge here?",
+      "emotion": "Neutral 50",
+      "response_text": "No one's really in charge of Bigtown. There's nothing much to be in charge of.",
+      "index": "9"
+    },
+    {
+      "topic": "BigtownTownWhosWhoWho lives here?",
+      "topic_text": "Who lives here, anyway?",
+      "emotion": "Happy 50",
+      "response_text": "Well, I mainly hang around Pappy. He's not such a bad guy. You should have seen him when he first got here, so bright and positive.",
+      "index": "12"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Surprise 50",
+      "response_text": "I'm confused. What am I supposed to be doing? Can you show me?",
+      "index": "14"
+    },
+    {
+      "topic": "MS01AboutRed",
+      "topic_text": "I'm looking for a woman named Red. Sticky promised me some caps...",
+      "emotion": "Sad 75",
+      "response_text": "Red was taken with the others in the last attack by the Super Mutants. She's the doctor. If you rescue her, I'm sure she'll give you your money.{sad}",
+      "index": "19"
+    },
+    {
+      "topic": "MS01QuestHook",
+      "topic_text": "Do you know where the Super Mutants took your friends?",
+      "emotion": "Happy 100",
+      "response_text": "Oh, they're somewhere to the northeast. In a police station or something. Thanks for rescuing our friends!{hopeful}",
+      "index": "21"
+    },
+    {
+      "topic": "MS01QuestHookA1MS01QuestHook1",
+      "topic_text": "Settle down now. It'll be okay. Do you know where they took them?",
+      "emotion": "Fear 75",
+      "response_text": "They took them to the north, to the police station or something. Do you think you can find them? And rescue them?{flustered and scared}",
+      "index": "26"
+    },
+    {
+      "topic": "MS01QuestHookA2MS01QuestHook2",
+      "topic_text": "Yep. Growing up sucks. Now... do you actually know anything useful?",
+      "emotion": "Surprise 75",
+      "response_text": "You mean like where they took them? I don't know exactly... Um... to the north. Northeast to be more precise. You're going to rescue them?!{confused and frightened}",
+      "index": "27"
+    },
+    {
+      "topic": "MS01QuestHookA3MS01QuestHook3",
+      "topic_text": "Your friends will have to rescue themselves. I'm not going to.",
+      "emotion": "Sad 100",
+      "response_text": "Oh. Well... If you change your mind... we'd be awfully grateful. Those are our friends...{let down and depressed and imploring}",
+      "index": "28"
+    },
+    {
+      "topic": "MS01QuestHookA4",
+      "topic_text": "I'll think about it, but I can't rescue your friends now.",
+      "emotion": "Sad 100",
+      "response_text": "Oh. Well... If you change your mind... we'd be awfully grateful. Those are our friends...{let down and depressed and imploring}",
+      "index": "29"
+    },
+    {
+      "topic": "MS01QuestHookB1",
+      "topic_text": "Don't worry. If they're alive, I'll find them and rescue them.",
+      "emotion": "Happy 100",
+      "response_text": "Oh that's wonderful! Thank you so much! We don't have much, but if you can bring them back alive, we'll give you everything we can!{excited to have found a hero}",
+      "index": "30"
+    },
+    {
+      "topic": "MS01QuestHookB2",
+      "topic_text": "I'll consider rescuing them. I'm assuming there's some kind of reward?",
+      "emotion": "Happy 75",
+      "response_text": "Yes, of course we'd reward you! I mean... we don't have much... but our friends are very important to us! Don't worry, you'll get paid. Thank you!{happiness tainted by her would-be hero's demand for reward}",
+      "index": "31"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "BigTownGoodbye",
+      "topic_text": "BigTownGoodbye",
+      "emotion": "Neutral 50",
+      "response_text": "Don't worry about it, Timebomb. Just try not to strain yourself, okay?{Kimba is concerned about Timebomb's health.}",
+      "index": "32"
+    },
+    {
+      "topic": "BigTownResponse",
+      "topic_text": "BigTownResponse",
+      "emotion": "Neutral 50",
+      "response_text": "Everyone eventually finds their place in town, Sticky. Don't worry about it.{Kimba is restating the \"matter of fact.\"}",
+      "index": "41"
+    },
+    {
+      "topic": "BigTownResponse02",
+      "topic_text": "BigTownResponse02",
+      "emotion": "Neutral 50",
+      "response_text": "That’s funny, I thought we were an autonomous collective.{Kimba is confused over the sudden change in hierarchy.}",
+      "index": "46"
+    },
+    {
+      "topic": "GOODBYE",
+      "topic_text": "I have to go now.",
+      "emotion": "Fear 100",
+      "response_text": "I'm so tired of being frightened all the time!{exhausted}",
+      "index": "48"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Happy 100",
+      "response_text": "Oh it's you! Hello!",
+      "index": "51"
+    },
+    {
+      "topic": "MS01CrowdSay",
+      "topic_text": "MS01CrowdSay",
+      "emotion": "Neutral 50",
+      "response_text": "Yay!{(cheering) in an excited cheering mob}",
+      "index": "61"
+    }
+  ],
+  "combat": [
+    {
+      "topic": "Attack",
+      "topic_text": "Attack",
+      "emotion": "Surprise 50",
+      "response_text": "I think I'm getting the hang of this.",
+      "index": "67"
+    }
+  ]
+}

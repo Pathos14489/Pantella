@@ -1,0 +1,151 @@
+{
+  "name": "Comm Officer Lenk",
+  "url": "/wiki/Lenk",
+  "dialogue_name": "RSFoxtrotLenk.txt",
+  "dialogue_url": "/wiki/RSFoxtrotLenk.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "00116B40",
+  "ref_id": "00152E90",
+  "editor_id": "RSFoxtrotLenk",
+  "location": "Ranger Station Foxtrot",
+  "location_url": "/wiki/Ranger_Station_Foxtrot",
+  "descriptions": [
+    "Comm Officer Lenk is a communications officer stationed at Ranger Station Foxtrot in 2281.",
+    "Lenk is an NCR Ranger, filling the role of comm officer at station Foxtrot. She is very jumpy and becomes agitated when first talked to. She will tell the Courier that she was out on patrol near the Hoover Dam when her squad was ambushed by a Legion  squad, whereupon she was knocked unconscious. The Legion soldiers killed, butchered, and mutilated her squad but left her alive.",
+    "Afterwards, still suffering from the traumatic experience, she no longer had the nerve she once did."
+  ],
+  "race": "Human",
+  "gender": "Female",
+  "affiliation": "New California Republic Rangers",
+  "role": "Communications Officer",
+  "detailed_location": "Ranger Station Foxtrot",
+  "voice_actor": "Gwen McGee",
+  "special": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 5,
+    "Intelligence": 5,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "level": "5",
+  "tag_skills": [
+    {
+      "Explosives:": "46"
+    },
+    {
+      "Guns:": "46"
+    },
+    {
+      "Melee Weap.:": "46"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Neutral",
+  "voice_type": "FemaleAdult05",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Fear 50",
+      "response_text": "{Player not in NCR gear}{fearful}You're here for the money. I told the Omertas I was good for it! I just need more time!",
+      "index": "1"
+    },
+    {
+      "topic": "VMSRSFoxtrotQuestTopic001",
+      "topic_text": "What do you do here?",
+      "emotion": "Neutral 50",
+      "response_text": "I operate the radio and call it in if we see any Great Khans moving out in large groups from Red Rock Canyon.",
+      "index": "4"
+    },
+    {
+      "topic": "vDialogueRangerStationFoxtrotRSCommRangerFoxtrotTopic000",
+      "topic_text": "I brought updated radio security codes from Camp Forlorn Hope.",
+      "emotion": "Surprise 5",
+      "response_text": "Oh. Uh... well, yeah, I can do that. Um, thanks.",
+      "index": "5"
+    },
+    {
+      "topic": "vDialogueRangerStationFoxtrotRSFoxtrotLenkTopic000",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Watch out for Great Khans.",
+      "index": "6"
+    },
+    {
+      "topic": "vDialogueRangerStationFoxtrotRSFoxtrotLenkTopic001",
+      "topic_text": "<Lie> I'm here because of your debt to the Omertas. Pay me what you've got and you'll get more time.",
+      "emotion": "Happy 5",
+      "response_text": "Here's all the caps I've saved up so far. See? That's a pretty good chunk of what I owe right there!",
+      "index": "7"
+    },
+    {
+      "topic": "vDialogueRangerStationFoxtrotRSFoxtrotLenkTopic002",
+      "topic_text": "What happened between you and the Omertas?",
+      "emotion": "Neutral 50",
+      "response_text": "I talked to the cashier at Gomorrah into forwarding me some chips - I was convinced I was due for a hot streak.",
+      "index": "8"
+    },
+    {
+      "topic": "vDialogueRangerStationFoxtrotRSFoxtrotLenkTopic004",
+      "topic_text": "I thought NCR Rangers were supposed to be tough and fearless.",
+      "emotion": "Neutral 50",
+      "response_text": "I... don't want to talk about it.",
+      "index": "11"
+    },
+    {
+      "topic": "vDialogueRangerStationFoxtrotRSFoxtrotLenkTopic005",
+      "topic_text": "Fine. Let's talk about something else.",
+      "emotion": "Neutral 50",
+      "response_text": "Yes.",
+      "index": "12"
+    },
+    {
+      "topic": "vDialogueRangerStationFoxtrotRSFoxtrotLenkTopic006< Speech 30 >",
+      "topic_text": "If you don't tell me, someone else will. I'd rather hear your version.",
+      "emotion": "Fear 5",
+      "response_text": "[SUCCEEDED] We were on patrol near the Dam when a Legion raiding party jumped us. Didn't even have to time to radio it in.",
+      "index": "13"
+    },
+    {
+      "topic": "vDialogueRangerStationFoxtrotRSFoxtrotLenkTopic007",
+      "topic_text": "You were too tough to kill, and you'll get payback on the Legion some day.",
+      "emotion": "Happy 5",
+      "response_text": "Maybe. But, thanks for saying it, anyway.",
+      "index": "18"
+    },
+    {
+      "topic": "vDialogueRangerStationFoxtrotRSFoxtrotLenkTopic008",
+      "topic_text": "Interesting. Let's move on to something else.",
+      "emotion": "Neutral 50",
+      "response_text": "{relieved}Yeah.",
+      "index": "19"
+    },
+    {
+      "topic": "vDialogueRangerStationFoxtrotRSFoxtrotLenkTopic009",
+      "topic_text": "Pathetic. The Rangers should never have let you become one in the first place.",
+      "emotion": "Sad 10",
+      "response_text": "{mournful}I... I was different back then.",
+      "index": "20"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Watch out for Great Khans.",
+      "index": "21"
+    }
+  ],
+  "combat": []
+}

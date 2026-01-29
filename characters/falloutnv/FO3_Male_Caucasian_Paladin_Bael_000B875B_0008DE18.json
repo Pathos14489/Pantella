@@ -1,0 +1,126 @@
+{
+  "name": "Paladin Bael",
+  "url": "/wiki/Bael",
+  "dialogue_name": "PaladinBael.txt",
+  "dialogue_url": "/wiki/PaladinBael.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000B875B",
+  "ref_id": "0008DE18",
+  "editor_id": "PaladinBael",
+  "location": "Citadelgate",
+  "location_url": "/wiki/The_Citadel",
+  "descriptions": [
+    "Paladin Bael is a Brotherhood of Steel paladin in charge of guarding the entrance to the Citadel in Fallout 3.",
+    "Bael is an experienced fighter, but his conversational skills leave something to be desired. However, his commanding presence ensures that unwanted visitors stay well away from the Citadel's entrance.",
+    "Although he is initially dismissive and hostile towards the Lone Wanderer and their abilities, as he would be towards any other wastelander, After the Battle of Project Purity, he ceases to guard the gate.",
+    "Bael guards the Citadel's gate until Take it Back! is completed."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Brotherhood of Steel",
+  "role": "Gate guard",
+  "detailed_location": "The Citadel",
+  "voice_actor": "Pete Papageorge",
+  "special": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 6,
+    "Charisma": 4,
+    "Intelligence": 3,
+    "Agility": 6,
+    "Luck": 4
+  },
+  "mod_special_values": {
+    "Strength": 8,
+    "Perception": 5,
+    "Endurance": 6,
+    "Charisma": 4,
+    "Intelligence": 3,
+    "Agility": 4,
+    "Luck": 4
+  },
+  "level": "4→7→11",
+  "tag_skills": [
+    {
+      "Big Guns:": "44→57→74"
+    },
+    {
+      "Melee Weap.:": "48→61→78"
+    },
+    {
+      "Small Guns:": "40→53→70"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "70→95→125"
+    },
+    {
+      "Damage Res.:": "40%"
+    }
+  ],
+  "karma": "Good",
+  "voice_type": "MaleAdult02DC",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "FFPAWhoCan someone in the Citadel train me to wear Power Armor?",
+      "topic_text": "Can anyone in there teach me how to use power armor?",
+      "emotion": "Neutral 50",
+      "response_text": "Of course. But you'd have to secure the permission of Elder Lyons and well... I just don't see that happening. So move along.",
+      "index": "1"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Surprise 50",
+      "response_text": "You! You're back! We... We all thought... you know.",
+      "index": "2"
+    },
+    {
+      "topic": "TLBrotherhood",
+      "topic_text": "What can you tell me about the Brotherhood of Steel?",
+      "emotion": "Disgust 20",
+      "response_text": "I can see you're trying to appeal to my good nature. Pity for you I don't have one.",
+      "index": "8"
+    },
+    {
+      "topic": "TLCitadel",
+      "topic_text": "What is this place?",
+      "emotion": "Neutral 50",
+      "response_text": "You're standing in front of the Citadel, headquarters to the Brotherhood of Steel. Capital Wasteland detachment.",
+      "index": "10"
+    },
+    {
+      "topic": "TLCitadelEnter",
+      "topic_text": "Can I come in?",
+      "emotion": "Anger 20",
+      "response_text": "Negative. No Super Mutants, civilians or traveling salesmen allowed.",
+      "index": "11"
+    },
+    {
+      "topic": "TLCitadelSuperMutantCare to share anything about the Super Mutants?",
+      "topic_text": "Anything about the Super Mutants I should know?",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah, the city ruins are crawling with them. They've pretty much overrun all of old D.C.",
+      "index": "14"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "MQ05LiEndSpeech",
+      "topic_text": "MQ05LiEndSpeech",
+      "emotion": "Neutral 50",
+      "response_text": "I'm sorry, ma'am. No unauthorized civilians allowed inside the Citadel. You'll have to leave now.",
+      "index": "16"
+    }
+  ],
+  "combat": []
+}

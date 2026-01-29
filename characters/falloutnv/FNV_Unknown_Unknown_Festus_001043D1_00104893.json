@@ -1,0 +1,344 @@
+{
+  "name": "Festus",
+  "url": "/wiki/Festus_(Fallout:_New_Vegas)",
+  "dialogue_name": "NVCRFestus.txt",
+  "dialogue_url": "/wiki/NVCRFestus.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "001043D1",
+  "ref_id": "00104893",
+  "editor_id": "NVCRFestus",
+  "location": "Sunset Sarsaparilla headquarters",
+  "location_url": "/wiki/Sunset_Sarsaparilla_headquarters",
+  "descriptions": [
+    "Festus the Animated Rancher is a robot residing in the lobby of the Sunset Sarsaparilla headquarters in the Mojave Wasteland.",
+    "An animatronic automaton made by RobCo Industries at the request of the Sunset Sarsaparilla Company, Festus was designed as an interactive display for visitors and tourists.",
+    "Before the Great War, a false urban legend circulated that if anyone collected enough specially marked bottle caps and turned them in to the Sunset Sarsparilla Company, they would receive a prize. However, due to the increased drink sales that it brought in, Sunset Sarsaparilla executives saw an opportunity and refused to publicly refute the rumors. They specially commissioned Festus from RobCo to capitalize on the legend's popularity and instituted the \"prize\" as Festus recounting the \"Legend of the Star,\" the alleged origin of Sunset Sarsaparilla. Eventually, enough \"winners\" complained about the lackluster prize that they had to begin giving out mass-produced Sunset Sarsaparilla deputy badges.",
+    "The legend has persisted after the war, becoming a grandiose tale of the wasteland and attracting people like Malcolm Holmes and Allen Marks to find and collect star bottle caps. These collectors sought out all the caps they could find, some by any means necessary. Some collectors such as Marks and Jacklyn even resorted to murdering people for their star caps, with Marks gaining a reputation for killing anyone who might have some on them.",
+    "By 2281, Festus is still operational despite centuries of wear and tear: his wooden cabinet has been shot several times, breaking the front glass window and taking his right arm and right eye. Festus' speaker is also damaged, shifting in quality and volume as the prerecorded lines are played.",
+    "If the dialogue option \"I Feel Lucky\" is chosen, the Courier has the option to play a variant of Blackjack called Lucky Horseshoes with Festus, who will provide instructions.",
+    "Festus is a reference to the character Festus of the 1952 radio and 1955 television Western drama series Gunsmoke."
+  ],
+  "race": "Robot",
+  "affiliation": "Sunset Sarsaparilla Company",
+  "role": "Company spokesman/mascot",
+  "detailed_location": "Sunset Sarsaparilla headquarters",
+  "voice_actor": "Dave B. Mitchell",
+  "special": {
+    "Strength": 1,
+    "Perception": 10,
+    "Endurance": 10,
+    "Charisma": 1,
+    "Intelligence": 5,
+    "Agility": 5,
+    "Luck": 10
+  },
+  "level": "2",
+  "misc_skills": [],
+  "karma": "Neutral",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "Howdy, pardner! Welcome to the headquarters of the Sunset Sarsaparilla Company. Wrangle up a stool and listen to ol' Festus jaw a while.",
+      "index": "1"
+    },
+    {
+      "topic": "SSHQFestusAdvisory",
+      "topic_text": "Silly Ol' Advisory.",
+      "emotion": "Neutral 50",
+      "response_text": "I'm sorry, I didn't quite understand that. Could you repeat it?",
+      "index": "4"
+    },
+    {
+      "topic": "SSHQFestusDepositStars",
+      "topic_text": "<Deposit your Sunset Sarsaparilla Stars in the slot.>",
+      "emotion": "Neutral 50",
+      "response_text": "Wahoo, you did it pardner! Bully for you! Ol' Festus knew you could do it. I suppose you'll be wanting that prize now.",
+      "index": "24"
+    },
+    {
+      "topic": "SSHQFestusGoodbye",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Sorry to see you go so soon. Be sure to drink a Sunset Sarsaparilla for me!",
+      "index": "47"
+    },
+    {
+      "topic": "SSHQFestusKiddingMe",
+      "topic_text": "Is this some kind of joke?",
+      "emotion": "Neutral 50",
+      "response_text": "The Sunset Sarsaparilla Company has received a number of complaints regarding the prize awarded for handing in Sunset Sarsaparilla Stars.",
+      "index": "48"
+    },
+    {
+      "topic": "SSHQFestusLHInstructions",
+      "topic_text": "How do I play?",
+      "emotion": "Neutral 50",
+      "response_text": "Lucky Horseshoes is played with cards numbered two through ten and aces, which have a value of one.",
+      "index": "52"
+    },
+    {
+      "topic": "SSHQFestusLHStart",
+      "topic_text": "I feel lucky.",
+      "emotion": "Neutral 50",
+      "response_text": "If this is your first rodeo with the ol' horseshoes, say \"How do I play?\". Otherwise, say \"Lucky Horseshoes\" to begin.",
+      "index": "59"
+    },
+    {
+      "topic": "SSHQFestusLuckyHorseshoes",
+      "topic_text": "Lucky Horseshoes.",
+      "emotion": "Neutral 50",
+      "response_text": "All right, let's play, pardner! Press the blue button to draw a card, the red button to hold, or the yeller button to quit.",
+      "index": "60"
+    },
+    {
+      "topic": "SSHQFestusMenu",
+      "topic_text": "Pleased to meetcha.",
+      "emotion": "Neutral 50",
+      "response_text": "New in town, pardner? Well, let ol' Festus give you the lay of the land.",
+      "index": "61"
+    },
+    {
+      "topic": "SSHQFestusStarInfo",
+      "topic_text": "Star Info.",
+      "emotion": "Neutral 50",
+      "response_text": "Ah, new to the hunt, are you? Well listen carefully, as ol' Festus don't like to repeat himself.",
+      "index": "66"
+    },
+    {
+      "topic": "SSHQFestusUmWhat",
+      "topic_text": "Um, what? Is that it?",
+      "emotion": "Neutral 50",
+      "response_text": "The Sunset Sarsaparilla Company has received a number of complaints regarding the prize awarded for handing in Sunset Sarsaparilla Stars.",
+      "index": "70"
+    },
+    {
+      "topic": "SSHQFestusWheresThePrize",
+      "topic_text": "What the hell? Where's the real prize?",
+      "emotion": "Neutral 50",
+      "response_text": "The Sunset Sarsaparilla Company has received a number of complaints regarding the prize awarded for handing in Sunset Sarsaparilla Stars.",
+      "index": "74"
+    },
+    {
+      "topic": "SSHQLHFestusDraw",
+      "topic_text": "SSHQLHFestusDraw",
+      "emotion": "Neutral 50",
+      "response_text": "Ol' Festus is still holding. You go again, pardner.",
+      "index": "78"
+    },
+    {
+      "topic": "SSHQLHPlayerDraw",
+      "topic_text": "<Press the blue button to draw a card.>",
+      "emotion": "Neutral 50",
+      "response_text": "Looks like you got an ace, pardner.",
+      "index": "108"
+    },
+    {
+      "topic": "SSHQLHPlayerHold<Press the red button to hold.>",
+      "topic_text": "<Press the red Hold button.>",
+      "emotion": "Neutral 50",
+      "response_text": "If you hold now, pardner, I'll win! Let's pretend you drew, shall we?",
+      "index": "121"
+    },
+    {
+      "topic": "VFreeformSSHQNVCRFestusTopic000",
+      "topic_text": "<Press the yellow button to quit.>",
+      "emotion": "Neutral 50",
+      "response_text": "That's too bad. Ol' Festus was looking forward to a good tussle.",
+      "index": "124"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Take care, pardner. And keep drinking Sunset Sarsaparilla!",
+      "index": "125"
+    },
+    {
+      "topic": "SSHQFestusAddendum1",
+      "topic_text": "SSHQFestusAddendum1",
+      "emotion": "Neutral 50",
+      "response_text": "It has come to our attention that some of our loyal customers are less than pleased with the reward for their Sunset Sarsaparilla Stars.",
+      "index": "126"
+    },
+    {
+      "topic": "SSHQFestusAddendum2",
+      "topic_text": "SSHQFestusAddendum2",
+      "emotion": "Neutral 50",
+      "response_text": "Our motto at Sunset Sarsaparilla is that the customer always comes first, so we have seen fit to provide an alternate reward for your Stars.",
+      "index": "127"
+    },
+    {
+      "topic": "SSHQFestusAddendum3",
+      "topic_text": "SSHQFestusAddendum3",
+      "emotion": "Neutral 50",
+      "response_text": "Head through the double doors and take a left at the intersection. Follow the hallway all the way to its end, and you'll come to our prize vault.",
+      "index": "128"
+    },
+    {
+      "topic": "SSHQFestusAddendum4",
+      "topic_text": "SSHQFestusAddendum4",
+      "emotion": "Neutral 50",
+      "response_text": "An attendant will be there to distribute your prize. We here at Sunset Sarsaparilla would like to thank you once again for your patronage.",
+      "index": "129"
+    },
+    {
+      "topic": "SSHQFestusLOS1",
+      "topic_text": "SSHQFestusLOS1",
+      "emotion": "Neutral 50",
+      "response_text": "Looooong ago, people didn't really have many choices when it came to soft drinks. It was either water, or Nuka-cola.",
+      "index": "130"
+    },
+    {
+      "topic": "SSHQFestusLOS10",
+      "topic_text": "SSHQFestusLOS10",
+      "emotion": "Neutral 50",
+      "response_text": "The next day, the man came downstairs to find a single bottle with a note beneath it on the bar.",
+      "index": "131"
+    },
+    {
+      "topic": "SSHQFestusLOS11",
+      "topic_text": "SSHQFestusLOS11",
+      "emotion": "Neutral 50",
+      "response_text": "The man picked up the note, and found it contained a recipe for making a sarsaparilla-flavored drink, and was signed with a blue star.",
+      "index": "132"
+    },
+    {
+      "topic": "SSHQFestusLOS12",
+      "topic_text": "SSHQFestusLOS12",
+      "emotion": "Neutral 50",
+      "response_text": "Opening the bottle, the man found the inside of the cap had the same blue star on it. He also found that the drink was delicious.",
+      "index": "133"
+    },
+    {
+      "topic": "SSHQFestusLOS13",
+      "topic_text": "SSHQFestusLOS13",
+      "emotion": "Neutral 50",
+      "response_text": "That night, the local sheriff visited the saloon and reported that the stranger had been found on the side of the town road, murdered.",
+      "index": "134"
+    },
+    {
+      "topic": "SSHQFestusLOS14",
+      "topic_text": "SSHQFestusLOS14",
+      "emotion": "Neutral 50",
+      "response_text": "He had apparently been attacked by bandits on his way to the saloon the previous day.",
+      "index": "135"
+    },
+    {
+      "topic": "SSHQFestusLOS15",
+      "topic_text": "SSHQFestusLOS15",
+      "emotion": "Neutral 50",
+      "response_text": "Stunned by the news, the man told the sheriff about the note, bottle, and the deal he had with the stranger.",
+      "index": "136"
+    },
+    {
+      "topic": "SSHQFestusLOS16",
+      "topic_text": "SSHQFestusLOS16",
+      "emotion": "Neutral 50",
+      "response_text": "The sheriff suggested that maybe the bandits, in a fit of remorse, delivered the items. After taking all of the stranger's money, of course.",
+      "index": "137"
+    },
+    {
+      "topic": "SSHQFestusLOS17",
+      "topic_text": "SSHQFestusLOS17",
+      "emotion": "Neutral 50",
+      "response_text": "Now, I don't know about you, but old Festus here never met a bandit that felt anything akin to remorse.",
+      "index": "138"
+    },
+    {
+      "topic": "SSHQFestusLOS18",
+      "topic_text": "SSHQFestusLOS18",
+      "emotion": "Neutral 50",
+      "response_text": "The man felt the same, and had his own idea about what had happened. He went on to become rich selling the sarsaparilla drink, and started a company.",
+      "index": "139"
+    },
+    {
+      "topic": "SSHQFestusLOS19",
+      "topic_text": "SSHQFestusLOS18",
+      "emotion": "Neutral 50",
+      "response_text": "And to this day, you can get a Sunset Sarsaparilla and enjoy the refreshing taste of that very same drink.",
+      "index": "140"
+    },
+    {
+      "topic": "SSHQFestusLOS2",
+      "topic_text": "SSHQFestusLOS2",
+      "emotion": "Neutral 50",
+      "response_text": "Now, the threat of legal action forces me to say that Nuka-cola is a swell beverage, but sometimes people just wanted something different, you know?",
+      "index": "141"
+    },
+    {
+      "topic": "SSHQFestusLOS20",
+      "topic_text": "SSHQFestusLOS20",
+      "emotion": "Neutral 50",
+      "response_text": "And sometimes, you can even find a blue star under the cap, just like that man did so many years ago.",
+      "index": "142"
+    },
+    {
+      "topic": "SSHQFestusLOS21",
+      "topic_text": "SSHQFestusLOS21",
+      "emotion": "Neutral 50",
+      "response_text": "And that's the Legend of the Star. Hope you enjoyed it, and hope you continue enjoying Sunset Sarsaparilla!",
+      "index": "143"
+    },
+    {
+      "topic": "SSHQFestusLOS3",
+      "topic_text": "SSHQFestusLOS3",
+      "emotion": "Neutral 50",
+      "response_text": "So one day a man, a saloon owner in a small town, decided to make a new type of soft drink, something that tasted far different than anything else.",
+      "index": "144"
+    },
+    {
+      "topic": "SSHQFestusLOS4",
+      "topic_text": "SSHQFestusLOS4",
+      "emotion": "Neutral 50",
+      "response_text": "But the man was at a loss as to what kind of flavor to use. He asked all of his patrons for ideas, but they were no help at all.",
+      "index": "145"
+    },
+    {
+      "topic": "SSHQFestusLOS5",
+      "topic_text": "SSHQFestusLOS5",
+      "emotion": "Neutral 50",
+      "response_text": "Then one day, a stranger walked into the saloon. When asked what he'd like, the stranger replied, \"You got anything with sarsaparilla in it?\"",
+      "index": "146"
+    },
+    {
+      "topic": "SSHQFestusLOS6",
+      "topic_text": "SSHQFestusLOS6",
+      "emotion": "Neutral 50",
+      "response_text": "The man had never heard of a drink with sarsaparilla in it, and said so. The stranger told the man that he'd make a deal with him.",
+      "index": "147"
+    },
+    {
+      "topic": "SSHQFestusLOS7",
+      "topic_text": "SSHQFestusLOS7",
+      "emotion": "Neutral 50",
+      "response_text": "If the man bought the ingredients, the stranger promised to meet him by sundown the next day and teach him how to make a sarsaparilla drink.",
+      "index": "148"
+    },
+    {
+      "topic": "SSHQFestusLOS8",
+      "topic_text": "SSHQFestusLOS8",
+      "emotion": "Neutral 50",
+      "response_text": "The man happily agreed to the deal, and had the ingredients waiting the following day. But the sun came and went, and the stranger never came.",
+      "index": "149"
+    },
+    {
+      "topic": "SSHQFestusLOS9",
+      "topic_text": "SSHQFestusLOS9",
+      "emotion": "Neutral 50",
+      "response_text": "The man figured he had been tricked and went to sleep, leaving the ingredients he had purchased down by the bar.",
+      "index": "150"
+    }
+  ],
+  "combat": []
+}

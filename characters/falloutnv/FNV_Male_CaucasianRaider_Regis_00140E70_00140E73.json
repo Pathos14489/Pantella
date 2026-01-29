@@ -1,0 +1,266 @@
+{
+  "name": "Regis",
+  "url": "/wiki/Regis",
+  "dialogue_name": "VRRCRegis.txt",
+  "dialogue_url": "/wiki/VRRCRegis.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "00140E70",
+  "ref_id": "00140E73",
+  "editor_id": "VRRCRegis",
+  "location": "Great Khan longhouse",
+  "location_url": "/wiki/Great_Khan_longhouse",
+  "descriptions": [
+    "Regis is an advisor and second in command of the Great Khans living in Red Rock Canyon in 2281.",
+    "Regis acts as Papa Khan's right-hand man. This position is also literal, as Regis takes the seat to Papa's right in the Great Khan's longhouse. Regis is also the Great Khan's chief law enforcer and as such, will warn the Courier to watch their step.",
+    "Jack describes him as, \"Cool. Scary, but cool,\" Regis has the highest Strength stat of all the Great Khans and is the only named Khan to exclusively use melee weapons, possibly explaining Jerry's description of him.",
+    "Regis is the only one of Papa Khan's advisors who is suspicious of Karl and Caesar's Legion",
+    "Oh My Papa",
+    "We Are Legion"
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Great Khans",
+  "role": "Advisor toPapa KhanChief law enforcer[1]",
+  "detailed_location": "Red Rock Canyon",
+  "voice_actor": "Shane Johnson",
+  "special": {
+    "Strength": 7,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 3,
+    "Intelligence": 3,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "level": "12",
+  "tag_skills": [
+    {
+      "Guns:": "72"
+    },
+    {
+      "Melee Weap.:": "74"
+    },
+    {
+      "Unarmed:": "70"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Neutral",
+  "voice_type": "MaleAdult09",
+  "geck_race": "CaucasianRaider",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Surprise 10",
+      "response_text": "I haven't seen you before - what brings you to the Great Khans?",
+      "index": "1"
+    },
+    {
+      "topic": "KarlCaesar",
+      "topic_text": "Who are you?",
+      "emotion": "Anger 20",
+      "response_text": "Name's Regis - I'm Papa Khan's advisor and right-hand man. I'm also the chief enforcer of the tribe's laws - so watch your behavior.",
+      "index": "9"
+    },
+    {
+      "topic": "RegisCaesar",
+      "topic_text": "RegisCaesar",
+      "emotion": "Surprise 15",
+      "response_text": "I heard you try to convince Papa Khan not to join with Caesar's Legion. I'd like to talk to you about that for a moment.",
+      "index": "10"
+    },
+    {
+      "topic": "RegisNCR",
+      "topic_text": "What's your opinion of the NCR?",
+      "emotion": "Disgust 20",
+      "response_text": "That's a complicated question. They've done horrible things to our people to be sure, and I've gladly killed many of their soldiers in battle.",
+      "index": "13"
+    },
+    {
+      "topic": "RegisPapaKhan",
+      "topic_text": "Tell me about Papa Khan.",
+      "emotion": "Happy 30",
+      "response_text": "Papa is one of the best leaders the Khans have ever had. He's kept us together through all of our hardships, ever since we left California.",
+      "index": "17"
+    },
+    {
+      "topic": "VMS45VRRCKarlTopic005",
+      "topic_text": "So if you were in charge of the tribe, you'd fight with the NCR against Caesar if asked?",
+      "emotion": "Surprise 20",
+      "response_text": "I suppose if asked, I would. But that's a moot point, because Papa's in charge now, and he's not going anywhere.",
+      "index": "19"
+    },
+    {
+      "topic": "VMS45VRRCRegisTopic000",
+      "topic_text": "Who are you?",
+      "emotion": "Fear 15",
+      "response_text": "Name's Regis. I'm Papa's second-in-command. You might say I... share your concern about Caesar.",
+      "index": "20"
+    },
+    {
+      "topic": "VMS45VRRCRegisTopic001",
+      "topic_text": "What is it you had in mind?",
+      "emotion": "Anger 10",
+      "response_text": "You want to convince Papa not to ally with Caesar, right? Trust me, you'll get nowhere just talking to him about it.",
+      "index": "21"
+    },
+    {
+      "topic": "VMS45VRRCRegisTopic002",
+      "topic_text": "Why should I listen to you?",
+      "emotion": "Anger 20",
+      "response_text": "Because Papa listens to me. And because I actually know how to get things done around here.",
+      "index": "23"
+    },
+    {
+      "topic": "VMS45VRRCRegisTopic003",
+      "topic_text": "So what do I do?",
+      "emotion": "Happy 15",
+      "response_text": "Papa can be a stubborn man, but he's not a tyrant. He listens to his tribe, and to four voices in particular: me, Jack and Diane, and Melissa.",
+      "index": "24"
+    },
+    {
+      "topic": "VMS45VRRCRegisTopic004",
+      "topic_text": "Aren't you convinced already, if we're having this conversation?",
+      "emotion": "Anger 10",
+      "response_text": "I have my doubts about Caesar, yes, but I won't publicly go against Papa Khan based on nothing more than doubts.",
+      "index": "26"
+    },
+    {
+      "topic": "VMS45VRRCRegisTopic005",
+      "topic_text": "What would convince Jack and Diane to support me?",
+      "emotion": "Happy 15",
+      "response_text": "You'd have to talk to them - but those two have been thick as thieves since they were kids. Convince one and the other will come around.",
+      "index": "28"
+    },
+    {
+      "topic": "VMS45VRRCRegisTopic006",
+      "topic_text": "What about Melissa?",
+      "emotion": "Sad 20",
+      "response_text": "Ah, Melissa. She's a bit of a dreamer. Last time she was in camp, Karl filled her head with stories of serving the Legion as a{SPECK-you-lay-tor-ay}speculatore.",
+      "index": "29"
+    },
+    {
+      "topic": "VMS45VRRCRegisTopic007",
+      "topic_text": "What did you mean about Papa's hatred poisoning his mind?",
+      "emotion": "Disgust 10",
+      "response_text": "Nothing, forget about it. I shouldn't be talking about this with an outsider.",
+      "index": "31"
+    },
+    {
+      "topic": "VMS45VRRCRegisTopic008",
+      "topic_text": "Okay, I'll see what I can do to convince everyone.",
+      "emotion": "Anger 15",
+      "response_text": "Good. Oh, one more thing: Caesar's representative, Karl, has become fast friends with Papa. Karl's the one who has him so fixated on this alliance.",
+      "index": "34"
+    },
+    {
+      "topic": "VMS45VRRCRegisTopic009",
+      "topic_text": "I don't think I actually want to do that.",
+      "emotion": "Sad 20",
+      "response_text": "I see. Then the Great Khans will fight for the Legion should Caesar give the call. If you change your mind, let me know.",
+      "index": "36"
+    },
+    {
+      "topic": "VMS45VRRCRegisTopic010",
+      "topic_text": "I'll think about it, but I have other questions for now.",
+      "emotion": "Neutral 50",
+      "response_text": "All right, what is it you wanted?",
+      "index": "37"
+    },
+    {
+      "topic": "VMS45VRRCRegisTopic011",
+      "topic_text": "How would I do that?",
+      "emotion": "Disgust 20",
+      "response_text": "Karl talks prettily about the honor and nobility of the Great Khans, but I suspect his actual opinion is less flattering.",
+      "index": "38"
+    },
+    {
+      "topic": "VMS45VRRCRegisTopic012",
+      "topic_text": "I'll keep that in mind.",
+      "emotion": "Neutral 50",
+      "response_text": "I would too, if I were you.",
+      "index": "40"
+    },
+    {
+      "topic": "VMS45VRRCRegisTopic013",
+      "topic_text": "I'm not afraid of Karl, and I don't feel like wasting my time on him.",
+      "emotion": "Disgust 10",
+      "response_text": "If you say so.",
+      "index": "41"
+    },
+    {
+      "topic": "VMS45VRRCRegisTopic015",
+      "topic_text": "Nothing, never mind.",
+      "emotion": "Disgust 10",
+      "response_text": "Suit yourself.",
+      "index": "42"
+    },
+    {
+      "topic": "VMS45VRRCRegisTopic016",
+      "topic_text": "Tell me about Bitter Springs.",
+      "emotion": "Sad 50",
+      "response_text": "I really don't like to talk about it. Let's just say it was a tragedy and the NCR is to blame, and we'll leave it at that.",
+      "index": "43"
+    },
+    {
+      "topic": "VMS45VRRCRegisTopic017",
+      "topic_text": "Never mind, I have other questions.",
+      "emotion": "Neutral 50",
+      "response_text": "Sure, go ahead.",
+      "index": "44"
+    },
+    {
+      "topic": "VMS45VRRCRegisTopic018",
+      "topic_text": "What kind of doubts?",
+      "emotion": "Disgust 25",
+      "response_text": "I just don't trust the words of Caesar's ambassador that much. He's promising a lot, and I don't see the advantage for him. It makes me suspicious.",
+      "index": "45"
+    },
+    {
+      "topic": "VMS45VRRCRegisTopic019",
+      "topic_text": "We fight for Caesar.",
+      "emotion": "Sad 30",
+      "response_text": "As you wish. When Caesar goes to war, we go with him.",
+      "index": "46"
+    },
+    {
+      "topic": "VMS45VRRCRegisTopic020",
+      "topic_text": "We fight for the NCR.",
+      "emotion": "Fear 30",
+      "response_text": "As you wish. When the Republic goes to war, we go with it.",
+      "index": "47"
+    },
+    {
+      "topic": "VMS45VRRCRegisTopic021",
+      "topic_text": "I'm giving leadership to you. I want you to take the tribe north, and find yourselves a new life.",
+      "emotion": "Surprise 25",
+      "response_text": "{Surprised, didn't expect this}I... very well. If that's what you want, that's what we'll do.",
+      "index": "48"
+    },
+    {
+      "topic": "VMS45VRRCRegisTopic022",
+      "topic_text": "We fight for ourselves. Bring our warriors to the battle and kill everyone.",
+      "emotion": "Fear 30",
+      "response_text": "{Uncertain, thinks this is probably a suicide attack}As you wish, chieftain.",
+      "index": "50"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Until next time.",
+      "index": "51"
+    }
+  ],
+  "combat": []
+}

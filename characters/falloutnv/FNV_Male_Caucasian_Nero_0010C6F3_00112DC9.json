@@ -1,0 +1,214 @@
+{
+  "name": "Nero",
+  "url": "/wiki/Nero",
+  "dialogue_name": "VMS21Nero.txt",
+  "dialogue_url": "/wiki/VMS21Nero.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "0010C6F3",
+  "ref_id": "00112DC9",
+  "editor_id": "VMS21Nero",
+  "location": "Gomorrah",
+  "location_url": "/wiki/Gomorrah",
+  "descriptions": [
+    "Nero is the leader of the Omertas living in the Gomorrah casino in 2281.",
+    "Nero is the head of the Omertas. Unlike his right hand man Big Sal, he is mostly absent in the presence of the general public, instead coordinating the shady operations of the casino from the privacy and comfort of his own hotel room. He thus leaves most of the day-to-day business to Big Sal and the lieutenant Cachino. He does not appreciate intruders violating his inner sanctum.",
+    "Though he pretends to be loyal to Mr. House and the other Strip Families, he is secretly planning to help Caesar's Legion take over New Vegas. In exchange for being given control of the Strip after the Legion's planned conquest of the Mojave, Nero and the Omertas pledged to Caesar to raid the NCR Embassy and the other Families' casinos. Once the Legion has marched across Hoover Dam, they will be able to take New Vegas without facing resistance from Mr. House, the other Families, or the NCR."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Omertas",
+  "role": "Mob bossCasino ownerAce of Diamonds",
+  "detailed_location": "GomorrahPersonal suite",
+  "voice_actor": "Alex Mendoza",
+  "special": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 3,
+    "Intelligence": 3,
+    "Agility": 7,
+    "Luck": 5
+  },
+  "level": "20→25 (equal to player level)",
+  "tag_skills": [
+    {
+      "Energy Weap.:": "99→100"
+    },
+    {
+      "Guns:": "100"
+    },
+    {
+      "Melee Weap.:": "100"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Evil",
+  "voice_type": "MaleAdult07",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Disgust 15",
+      "response_text": "Get the fuck out of my room.",
+      "index": "1"
+    },
+    {
+      "topic": "VMS21BossGreeting",
+      "topic_text": "VMS21BigSalGreeting",
+      "emotion": "Neutral 50",
+      "response_text": "Is this you asking for a last request?",
+      "index": "11"
+    },
+    {
+      "topic": "vDialogueGomorrahVMS21BigSalTopic000",
+      "topic_text": "I'd like to talk to you about Troike.",
+      "emotion": "Neutral 50",
+      "response_text": "My associate Big Sal deals with Troike and his business. When my shift down here is done you can talk to him.",
+      "index": "12"
+    },
+    {
+      "topic": "vDialogueGomorrahVMS21BigSalTopic008{Speech, Convince Sal or Nero to buy guns from Mick & Ralph again}",
+      "topic_text": "You should buy guns from Mick and Ralph, people are starting to ask questions.",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] We don't want to draw attention to ourselves. Alright, we'll give them a little bit of extra business.",
+      "index": "13"
+    },
+    {
+      "topic": "vDialogueGomorrahVMS21BigSalTopic013",
+      "topic_text": "I have proof one of your Lieutenants is dealing behind your back.",
+      "emotion": "Neutral 50",
+      "response_text": "Like hell you do, show me what you have or get the fuck out of my face.",
+      "index": "15"
+    },
+    {
+      "topic": "vDialogueGomorrahVMS21BigSalTopic015{Barter Options}",
+      "topic_text": "This will be worth your while, so much that you won't regret paying 300 caps for it.",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] This'll be worth your while. I wouldn't be here talking to you otherwise.",
+      "index": "16"
+    },
+    {
+      "topic": "vDialogueGomorrahVMS21BigSalTopic018",
+      "topic_text": "How is Cachino going to be handled?",
+      "emotion": "Neutral 50",
+      "response_text": "Come to my office and you'll see.",
+      "index": "18"
+    },
+    {
+      "topic": "vDialogueGomorrahVMS21BigSalTopic020",
+      "topic_text": "What kind of help do you need?",
+      "emotion": "Neutral 50",
+      "response_text": "We have two contractors, a guy named Troike and one named Clanden. They've both been running into some issues.",
+      "index": "19"
+    },
+    {
+      "topic": "vDialogueGomorrahVMS21BigSalTopic021",
+      "topic_text": "Tell me about the plan.",
+      "emotion": "Neutral 50",
+      "response_text": "We call it Racket, and it is going to show Not-At-Home and every other fucker in our business just what the Family can do.",
+      "index": "20"
+    },
+    {
+      "topic": "vDialogueGomorrahVMS21BigSalTopic022",
+      "topic_text": "Let's talk about something else",
+      "emotion": "Neutral 50",
+      "response_text": "Okay, let's chat.",
+      "index": "21"
+    },
+    {
+      "topic": "vDialogueGomorrahVMS21BigSalTopic023",
+      "topic_text": "I don't have any more questions right now.",
+      "emotion": "Neutral 50",
+      "response_text": "Come find me when you have something you need to say.",
+      "index": "22"
+    },
+    {
+      "topic": "vDialogueGomorrahVMS21BigSalTopic027",
+      "topic_text": "What was Cachino's role in the plan?",
+      "emotion": "Neutral 50",
+      "response_text": "Cachino was my Man Friday. He took care of what needed to be taken care of. Had no idea what a dumb son of a bitch he was.",
+      "index": "23"
+    },
+    {
+      "topic": "vDialogueGomorrahVMS21NeroTopic000",
+      "topic_text": "What kind of business do you do here?",
+      "emotion": "Neutral 50",
+      "response_text": "All kinds of business, most of it is ours.",
+      "index": "24"
+    },
+    {
+      "topic": "vDialogueGomorrahVMS21NeroTopic001",
+      "topic_text": "I'll show it to you for 100 caps.",
+      "emotion": "Neutral 50",
+      "response_text": "I'll show you what I have, but if it doesn't rock my world then we're going to have a long talk.",
+      "index": "25"
+    },
+    {
+      "topic": "vDialogueGomorrahVMS21NeroTopic002{Updates on Racket}",
+      "topic_text": "I helped Troike out, like you asked.",
+      "emotion": "Neutral 50",
+      "response_text": "I heard, we'll be needing those guns. Word on the street is you handled those Fiend freaks like a real pro.",
+      "index": "26"
+    },
+    {
+      "topic": "vDialogueGomorrahVMS21NeroTopic003",
+      "topic_text": "Let's talk about something else.",
+      "emotion": "Neutral 50",
+      "response_text": "I'm not sure I have anything I want to hear from you, but you can have your moment.",
+      "index": "29"
+    },
+    {
+      "topic": "vDialogueGomorrahVMS21NeroTopic004",
+      "topic_text": "Nevermind.",
+      "emotion": "Neutral 50",
+      "response_text": "Then get the fuck out of my face.",
+      "index": "30"
+    },
+    {
+      "topic": "vDialogueGomorrahVMS21NeroTopic005",
+      "topic_text": "Cachino was talking about big plans for the Family.",
+      "emotion": "Anger 50",
+      "response_text": "Really? That two-faced son of a bitch. I'm glad now that we kept him mostly out of the loop. Look, we could use your help with some things.",
+      "index": "31"
+    },
+    {
+      "topic": "vGomorrahBossChips",
+      "topic_text": "I'm planning on playing some games in the Casino.",
+      "emotion": "Neutral 50",
+      "response_text": "{Laughs}Real subtle. Here you go. Play some games. Have some fun.",
+      "index": "33"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "VMS21CachinoExecution1",
+      "topic_text": "VMS21CachinoExecution1",
+      "emotion": "Neutral 50",
+      "response_text": "Cachino, we've been friends for a long time. A real long time, but this time you really fucked up.",
+      "index": "34"
+    },
+    {
+      "topic": "VMS21CachinoExecution3",
+      "topic_text": "VMS21CachinoExecution3",
+      "emotion": "Disgust 50",
+      "response_text": "You've been with the Family long enough to know how this goes. I'm sorry you had to fuck this up. Goodbye, you were a real benefit to the business.",
+      "index": "36"
+    },
+    {
+      "topic": "VMS21OfficeBark",
+      "topic_text": "VMS21OfficeBark",
+      "emotion": "Neutral 50",
+      "response_text": "Please, have a seat. Let's have a bit of a pow-wow.",
+      "index": "37"
+    }
+  ],
+  "combat": []
+}

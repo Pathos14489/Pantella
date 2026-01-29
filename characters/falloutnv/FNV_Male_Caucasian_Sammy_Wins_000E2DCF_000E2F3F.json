@@ -1,0 +1,116 @@
+{
+  "name": "Sammy Wins",
+  "url": "/wiki/Sammy_Wins",
+  "dialogue_name": "SammyWins.txt",
+  "dialogue_url": "/wiki/SammyWins.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000E2DCF",
+  "ref_id": "000E2F3F",
+  "editor_id": "SammyWins",
+  "location": "Wins hideout",
+  "location_url": "/wiki/Wins_hideout",
+  "descriptions": [
+    "Sammy Wins is an \"up-and coming criminal\" living with his partner Pauline Wins at their hideout in 2281.",
+    "He and Pauline previously robbed the Vikki and Vance Casino, taking Vance's lucky hat, Vikki's bonnet and Vance's 9mm submachine gun. After Primm Slim caught them, Pauline distracted and hacked Primm Slim while Sammy took all the loot. Afterward, they returned to their shack near Westside, where they began to devise a plan to rob all of the Strip's casinos."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Pauline Wins",
+  "role": "Thief",
+  "detailed_location": "Wins hideout",
+  "voice_actor": "Emerson Brooks",
+  "special": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 3,
+    "Intelligence": 3,
+    "Agility": 7,
+    "Luck": 5
+  },
+  "mod_special_values": {
+    "Strength": 6,
+    "Perception": 6,
+    "Endurance": 4,
+    "Charisma": 3,
+    "Intelligence": 3,
+    "Agility": 7,
+    "Luck": 5
+  },
+  "tag_skills": [
+    {
+      "Energy Weap.:": "30"
+    },
+    {
+      "Guns:": "34"
+    },
+    {
+      "Melee Weap.:": "32"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Neutral",
+  "voice_type": "MaleAdult01DefaultB",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "What are you doing here, stranger? You looking to start some trouble?",
+      "index": "1"
+    },
+    {
+      "topic": "SammyGunI know you have the gun, Sammy.",
+      "topic_text": "I know the two of you stole Vance's gun down in Primm.",
+      "emotion": "Neutral 50",
+      "response_text": "So? That's just one of our crimes! We're depraved, stone-cold degenerates, you know? You don't want to mess with us!",
+      "index": "4"
+    },
+    {
+      "topic": "SammyNeverHeardofYou",
+      "topic_text": "You sound pretty tough. I wonder why I've never heard of you.",
+      "emotion": "Neutral 50",
+      "response_text": "Simple! Up 'til now, we committed our crimes stealthily, leaving no evidence behind. So we never built a rep.",
+      "index": "5"
+    },
+    {
+      "topic": "SammyPaulineConvincedI convinced Pauline that you shouldn't go through with this.",
+      "topic_text": "Pauline says you should give me the gun.",
+      "emotion": "Neutral 50",
+      "response_text": "Really? Oh, thank god! I love that woman, but I swear this time she was gonna get us killed!",
+      "index": "7"
+    },
+    {
+      "topic": "SammyPlanWhat is your plan?",
+      "topic_text": "What's your plan?",
+      "emotion": "Neutral 50",
+      "response_text": "You'll have to ask Pauline about that! She's the brains of our operation. I'm the muscle.",
+      "index": "9"
+    },
+    {
+      "topic": "SammyWhoAreYou",
+      "topic_text": "Who are you?",
+      "emotion": "Neutral 50",
+      "response_text": "Me? I'm Sammy, of Sammy and Pauline, the wasteland's most dangerous and notorious criminal duo!",
+      "index": "10"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "HELLO",
+      "topic_text": "Hello",
+      "emotion": "Neutral 50",
+      "response_text": "Thanks for talking us out of our evil ways. I'm starting on that novel soon. Pauline is so happy. You are a nice person! Hurray!",
+      "index": "12"
+    }
+  ],
+  "combat": []
+}

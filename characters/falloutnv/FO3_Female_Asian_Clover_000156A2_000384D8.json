@@ -1,0 +1,335 @@
+{
+  "name": "Clover",
+  "url": "/wiki/Clover",
+  "dialogue_name": "Clover.txt",
+  "dialogue_url": "/wiki/Clover.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": true,
+  "base_id": "000156A2",
+  "ref_id": "000384D8",
+  "editor_id": "Clover",
+  "location": "Eulogy's pad",
+  "location_url": "/wiki/Eulogy%27s_pad",
+  "descriptions": [
+    "Clover is a slave residing in Paradise Falls in the Capital Wasteland in Fallout 3. She is a possible companion of the Lone Wanderer.",
+    "Originally captured a few months ago prior to the Lone Wanderer leaving Vault 101 in 2277, Clover and her fellow slave Crimson were systematically broken mentally by the torture and abuse perpetrated by the slavers of Paradise Falls until they became obedient to their captors. Eulogy Jones himself claimed both as his personal slaves, using them for sex, personal protection, and as stress relief while continuing to abuse them to no end.",
+    "Clover's utter devotion to Eulogy Jones borders on the extreme; ready to fulfill his wishes at a moment's notice. Eulogy actually expects her to anticipate his desires before he even speaks of them and would subject her to verbal abuse whenever she failed to do so or even simply fell behind while following him.",
+    "Due to the constant stream of abuse she has suffered, Clover is desperate for Eulogy's attention and whenever he's displeased, she immediately apologizes profusely, begging him to let her make up for it and assuming the blame no matter how minor it was.",
+    "A corollary of her situation is that she is extremely jealous of Eulogy, particularly when Crimson is concerned. She regularly nags her \"daddy\" to sell his other slave off, so that he can be alone with her. These requests typically earn a berating from Jones with a reminder that Crimson is to be left alone, unless he says otherwise.",
+    "Ironically, Eulogy's supposed \"favorite\" is the one he's most looking to sell off at a high price.",
+    "Clover appears in Fallout 3 and Fallout Shelter Online.",
+    "Xbox 360 Trading certain headgear to her will cause her to wear it, but when the player removes it from her inventory, it will become a \"default\" piece of gear. Other headgear may be given to her to replace it, and she will wear it as normal, but as soon as they remove said headgear from her, she will revert to the previous headgear. It has been confirmed with the stormchaser hat and eyeglasses. "
+  ],
+  "race": "Human",
+  "gender": "Female",
+  "affiliation": "Eulogy JonesLone Wanderer(optional)",
+  "role": "Enslaved womanCompanion",
+  "detailed_location": "Eulogy's pad,Paradise Falls",
+  "voice_actor": "Jan Johns",
+  "special": {
+    "Strength": 6,
+    "Perception": 4,
+    "Endurance": 4,
+    "Charisma": 6,
+    "Intelligence": 4,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "mod_special_values": {
+    "Strength": 6,
+    "Perception": 4,
+    "Endurance": 4,
+    "Charisma": 6,
+    "Intelligence": 4,
+    "Agility": 7,
+    "Luck": 5
+  },
+  "level": "1→20→30 (Broken Steelonly)",
+  "tag_skills": [
+    {
+      "Barter:": "32→100"
+    },
+    {
+      "Melee Weap.:": "32→100"
+    },
+    {
+      "Small Guns:": "34→100"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Critical Chance:": "5%"
+    },
+    {
+      "Unarmed Dam.:": "1.15"
+    },
+    {
+      "Poison Resist.:": "15%"
+    },
+    {
+      "Rad. Resist.:": "6%"
+    },
+    {
+      "Damage Res.:": "5%"
+    }
+  ],
+  "karma": "Evil",
+  "voice_type": "FemaleAdult04DC",
+  "geck_race": "Asian",
+  "topics": [
+    {
+      "topic": "FollowersFired",
+      "topic_text": "Leave me alone, Clover. You're fired.",
+      "emotion": "Anger 10",
+      "response_text": "Wait... what? Why?",
+      "index": "1"
+    },
+    {
+      "topic": "FollowersFiredNo",
+      "topic_text": "On second thought, stay with me.",
+      "emotion": "Neutral 50",
+      "response_text": "I was worried for a second.",
+      "index": "2"
+    },
+    {
+      "topic": "FollowersFiredYes",
+      "topic_text": "Because I say so. Go.",
+      "emotion": "Anger 10",
+      "response_text": "If that's the way you're going to play, lover. I'll be waiting at Eulogy's place when you come crawling back.",
+      "index": "3"
+    },
+    {
+      "topic": "FollowersHired",
+      "topic_text": "How would you like to come with me, Clover?",
+      "emotion": "Happy 50",
+      "response_text": "Sorry, honey. Three's a crowd. Come back when I can have you all to myself.{Sultry, dangerous.}",
+      "index": "4"
+    },
+    {
+      "topic": "FollowersLetsGo",
+      "topic_text": "Let's get going.",
+      "emotion": "Happy 25",
+      "response_text": "Oh yes, let's!{Playful and sultry}",
+      "index": "6"
+    },
+    {
+      "topic": "FollowersLetsGoNotYet1",
+      "topic_text": "Not just yet. I wanted to talk to you about something.",
+      "emotion": "Anger 10",
+      "response_text": "Oh, make it quick. I'm getting bored. I hate being bored.{Petulant, turning to violent.}",
+      "index": "7"
+    },
+    {
+      "topic": "FollowersLetsGoNotYet2",
+      "topic_text": "I just wanted to make sure you were still here. Goodbye.",
+      "emotion": "Anger 25",
+      "response_text": "You big tease!",
+      "index": "8"
+    },
+    {
+      "topic": "FollowersPPurity",
+      "topic_text": "Clover, I need you to go into that chamber and turn on the purifier.",
+      "emotion": "Sad 50",
+      "response_text": "Honey, you are out of your mind if you think I'm going in there. Find yourself another guinea pig.",
+      "index": "9"
+    },
+    {
+      "topic": "FollowersTactics",
+      "topic_text": "Let's talk about your tactics.",
+      "emotion": "Happy 25",
+      "response_text": "What are you thinking, lover?",
+      "index": "10"
+    },
+    {
+      "topic": "FollowersTacticsCombat",
+      "topic_text": "I want you to change your combat style.",
+      "emotion": "Happy 50",
+      "response_text": "What would you like? I think you'll find I'm quite flexible.{Sultry, with suggestive pause before \"flexible\"}",
+      "index": "11"
+    },
+    {
+      "topic": "FollowersTacticsCombatEND",
+      "topic_text": "Let's talk about something else.",
+      "emotion": "Sad 10",
+      "response_text": "Oh, does it always have to be talk?",
+      "index": "12"
+    },
+    {
+      "topic": "FollowersTacticsCombatGOODBYE",
+      "topic_text": "That's all. Let's get going.",
+      "emotion": "Happy 50",
+      "response_text": "Oh, time for fun already? Goody!",
+      "index": "13"
+    },
+    {
+      "topic": "FollowersTacticsCombatMelee",
+      "topic_text": "I like what you're doing. Stick with the melee.",
+      "emotion": "Happy 25",
+      "response_text": "My pleasure, lover.",
+      "index": "14"
+    },
+    {
+      "topic": "FollowersTacticsCombatRanged",
+      "topic_text": "You're not bad with a ranged weapon. Keep it up.",
+      "emotion": "Happy 25",
+      "response_text": "Anything for you, lover.",
+      "index": "16"
+    },
+    {
+      "topic": "FollowersTacticsDistance",
+      "topic_text": "Let's talk about how close you're following me.",
+      "emotion": "Happy 50",
+      "response_text": "How close would you like?{Highly suggestive}",
+      "index": "18"
+    },
+    {
+      "topic": "FollowersTacticsDistanceDefault",
+      "topic_text": "You're good where you are.",
+      "emotion": "Happy 50",
+      "response_text": "Glad you like it.",
+      "index": "19"
+    },
+    {
+      "topic": "FollowersTacticsDistanceEND",
+      "topic_text": "Your distance is good. Let's talk about something else.",
+      "emotion": "Sad 10",
+      "response_text": "Is it going to be all talk?",
+      "index": "21"
+    },
+    {
+      "topic": "FollowersTacticsDistanceGOODBYE",
+      "topic_text": "All right, you're good. Let's get out of here.",
+      "emotion": "Happy 25",
+      "response_text": "Yes, please.",
+      "index": "22"
+    },
+    {
+      "topic": "FollowersTacticsDistanceLong",
+      "topic_text": "Keep hanging back.",
+      "emotion": "Neutral 20",
+      "response_text": "Eulogy used to like me to stay ten steps behind him. Usually.",
+      "index": "23"
+    },
+    {
+      "topic": "FollowersTacticsEnd",
+      "topic_text": "Enough about tactics.",
+      "emotion": "Happy 25",
+      "response_text": "Yes, enough about boring old tactics.",
+      "index": "25"
+    },
+    {
+      "topic": "FollowersTrade",
+      "topic_text": "Let's trade equipment.",
+      "emotion": "Happy 25",
+      "response_text": "You're always welcome to take whatever you want, lover.{Sultry}",
+      "index": "26"
+    },
+    {
+      "topic": "FollowersWait",
+      "topic_text": "Wait here.",
+      "emotion": "Sad 50",
+      "response_text": "But it's so boring all alone!{Petulant}",
+      "index": "27"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Happy 50",
+      "response_text": "Oh, it's been too long since I got to play rough.{Manic, sexy, and dangerous}",
+      "index": "28"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "Let's go.",
+      "emotion": "Neutral 50",
+      "response_text": "Whatever you say, honey.",
+      "index": "42"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Sad 50",
+      "response_text": "I'm bored!{Petulant, she draws out the bored \"bored\"}",
+      "index": "45"
+    },
+    {
+      "topic": "IdleChatter",
+      "topic_text": "Idle Chatter",
+      "emotion": "Neutral 50",
+      "response_text": "Aww, aren't you cute?",
+      "index": "56"
+    },
+    {
+      "topic": "PFTalkCloverCrimson1",
+      "topic_text": "PFTalkCloverCrimson1",
+      "emotion": "Neutral 50",
+      "response_text": "Were they talking about how bad you look again? I mean, I hate to break it to you: they're right.",
+      "index": "62"
+    },
+    {
+      "topic": "PFTalkCloverCrimson3",
+      "topic_text": "PFTalkCloverCrimson3",
+      "emotion": "Neutral 50",
+      "response_text": "Pfft. You're just mad because I'm daddy's favorite.",
+      "index": "64"
+    },
+    {
+      "topic": "PFTalkCloverEulogyJones1",
+      "topic_text": "PFTalkCloverEulogyJones1",
+      "emotion": "Neutral 50",
+      "response_text": "Right away, daddy. I'm sorry, I'm so sorry!",
+      "index": "66"
+    },
+    {
+      "topic": "PFTalkCloverEulogyJones3",
+      "topic_text": "PFTalkCloverEulogyJones3",
+      "emotion": "Neutral 50",
+      "response_text": "Please forgive me, daddy. It won't happen again, just tell me what you need. Anything! I'll do anything!",
+      "index": "68"
+    },
+    {
+      "topic": "PFTalkCrimsonClover2",
+      "topic_text": "PFTalkCrimsonClover2",
+      "emotion": "Neutral 50",
+      "response_text": "You should go talk to him, maybe he'll buy you off of Mr. Eulogy since daddy's gotten tired of you.",
+      "index": "70"
+    },
+    {
+      "topic": "PFTalkCrimsonClover4",
+      "topic_text": "PFTalkCrimsonClover4",
+      "emotion": "Neutral 50",
+      "response_text": "Keep running your mouth, Crimson. That's why he don't like you no more.",
+      "index": "74"
+    },
+    {
+      "topic": "PFTalkEulogyJonesClover2",
+      "topic_text": "PFTalkEulogyJonesClover2",
+      "emotion": "Neutral 50",
+      "response_text": "I wanted to talk to you about... you know, about her.",
+      "index": "76"
+    },
+    {
+      "topic": "PFTalkEulogyJonesClover4",
+      "topic_text": "PFTalkEulogyJonesClover4",
+      "emotion": "Neutral 50",
+      "response_text": "Okay, okay. I'm sorry...",
+      "index": "78"
+    },
+    {
+      "topic": "PFTalkHiResponse1",
+      "topic_text": "PFTalkHiResponse1",
+      "emotion": "Neutral 50",
+      "response_text": "Stuff it.",
+      "index": "80"
+    }
+  ],
+  "combat": []
+}

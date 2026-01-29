@@ -1,0 +1,67 @@
+{
+  "name": "John Bear",
+  "url": "/wiki/John_Bear",
+  "dialogue_name": "DLC01ArenaCombatant02a.txt",
+  "dialogue_url": "/wiki/DLC01ArenaCombatant02a.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "xx0032F7",
+  "ref_id": "xx0071B5",
+  "editor_id": "DLC01ArenaCombatant02a",
+  "location": "The Hole",
+  "location_url": "/wiki/The_Hole_(The_Pitt)",
+  "descriptions": [
+    "John Bear is an arena fighter in the Pitt in 2277 alongside his brother Grudd Bear.",
+    "During the Scourge, his other brother Greg was taken in by the Brotherhood. However, he and Grudd were left behind due to being \"too wild and mean.\" They were then taken in by Ishmael Ashur for his raider army, and in his words, they became two of his \"finest soldiers.\" By 2277, the Bear Brothers had become undefeated fighters in the Hole.",
+    "Grudd and John employ a particular effective method of attack, in which Grudd holds back and uses his Flamer to attack the target, while John attacks the target directly with his Deathclaw Gauntlet. Thanks to an addiction to RadAway, they are both nearly impervious to the arena’s radiation traps.",
+    "John is the brother of Grudd and Greg Bear.",
+    "John Bear appears only in the Fallout 3 add-on The Pitt."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Pitt raiders[1]",
+  "role": "Arena fighter",
+  "detailed_location": "The Hole",
+  "voice_actor": "James Lewis",
+  "special": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 3,
+    "Intelligence": 3,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "mod_special_values": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 3,
+    "Intelligence": 3,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "level": "4→9",
+  "tag_skills": [],
+  "misc_skills": [],
+  "karma": "Neutral",
+  "voice_type": "DLC01RaiderMaleGruffVoice",
+  "geck_race": "DLCPittAfricanAmericanMut",
+  "topics": [
+    {
+      "topic": "DLC01ArenaCombatantTaunt",
+      "topic_text": "DLC01ArenaCombatantTaunt",
+      "emotion": "Neutral 50",
+      "response_text": "C'mon! C'mon you bastard!{Taunting.}",
+      "index": "1"
+    }
+  ],
+  "conversation": [],
+  "combat": []
+}

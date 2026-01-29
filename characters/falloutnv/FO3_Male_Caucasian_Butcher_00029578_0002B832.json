@@ -1,0 +1,376 @@
+{
+  "name": "Butcher",
+  "url": "/wiki/Butcher",
+  "dialogue_name": "RRButcher.txt",
+  "dialogue_url": "/wiki/RRButcher.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": true,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "00029578",
+  "ref_id": "0002B832",
+  "editor_id": "RRButcher",
+  "location": "Statesman Hotelroof,Ranger Compound",
+  "location_url": "/wiki/Statesman_Hotel",
+  "descriptions": [
+    "Butcher (real name Carl) is the Reilly's Rangers medic in Fallout 3.  He can be found with the rest of the team on the roof of the Statesman Hotel, waiting for Reilly to return. After completing the Reilly's Rangers quest, he and the other rangers can be found at the Ranger compound.",
+    "Born in 2246 as Carl,",
+    "By 2277, Butcher was a fixture of the Rangers, with an active, open-ended contract with Reilly, paid 70 caps per mission on top of any salvage he recovered. He also earned three merits and zero demerits, behind Brick (five to one), but ahead of Donovan (two to null). His professional relationship with Reilly changed shortly before the mission to Vernon Square. While he was always flirty with Reilly, she brushed it off as merc humor, until she realized it was not. The budding relationship boosted morale between them, despite Reilly's concern over it adversely affecting their relationship within the company.",
+    "The next mission would put that to the test. Reilly opted to scout Vernon Square, both to gather salvage and to train Theo, a new ranger on a probationary contract. Butcher hoped to pick through the ruins of Our Lady of Hope Hospital to find more medical materials and supplies.",
+    "Soon, he would discover that he had very little time for anything but survival. While the team was mapping Vernon Square, they were ambushed by an unusually large horde of super mutants, forcing them to retreat into the ruined hospital and fight a running battle across the street to the Statesman Hotel. For reasons unknown to the Rangers, the super mutants were particularly bloodthirsty and kept coming after them. Once in the hotel, the Rangers made a fighting retreat to the roof. Theo was mortally wounded in the fighting, with Butcher unable to save him.",
+    "Butcher appears in Fallout 3 and Fallout: Wasteland Warfare.",
+    "In 2277, he is 31 according to Reilly's terminal."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Reilly's Rangers",
+  "role": "Medic[1]",
+  "detailed_location": "Statesman HotelRanger compound",
+  "voice_actor": "Gus Travers",
+  "special": {
+    "Strength": 6,
+    "Perception": 7,
+    "Endurance": 5,
+    "Charisma": 3,
+    "Intelligence": 3,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "mod_special_values": {
+    "Strength": 6,
+    "Perception": 7,
+    "Endurance": 5,
+    "Charisma": 3,
+    "Intelligence": 3,
+    "Agility": 6,
+    "Luck": 6
+  },
+  "level": "10",
+  "tag_skills": [
+    {
+      "Explosives:": "73(74)"
+    },
+    {
+      "Small Guns:": "71(82)"
+    },
+    {
+      "Sneak:": "71(72)"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "105"
+    },
+    {
+      "Critical Chance:": "5%(6%)"
+    },
+    {
+      "Unarmed Dam.:": "1.25"
+    },
+    {
+      "Poison Resist.:": "20%"
+    },
+    {
+      "Rad. Resist.:": "8%"
+    },
+    {
+      "Carry Weight:": "210"
+    },
+    {
+      "Damage Res.:": "21%"
+    }
+  ],
+  "karma": "Good",
+  "voice_type": "MaleAdult05DC",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Happy 70",
+      "response_text": "Welcome back. It's great to see you again.",
+      "index": "1"
+    },
+    {
+      "topic": "MS18ButcherCT01",
+      "topic_text": "I'm afraid this is it.",
+      "emotion": "Neutral 50",
+      "response_text": "Hmmm, and you made it all the way up here alive?",
+      "index": "16"
+    },
+    {
+      "topic": "MS18ButcherCT02",
+      "topic_text": "No time for chatter. I'm here to get you guys out.",
+      "emotion": "Disgust 60",
+      "response_text": "Hang on there. First, I need to know if Reilly is okay. I assume she made it somewhere if you're here.",
+      "index": "20"
+    },
+    {
+      "topic": "MS18ButcherCT02a",
+      "topic_text": "A medic, huh? Can you patch me up?",
+      "emotion": "Disgust 80",
+      "response_text": "Sorry, no can do. I used the last of my supplies on us when we got to the roof.",
+      "index": "22"
+    },
+    {
+      "topic": "MS18ButcherCT02b",
+      "topic_text": "Well, looks like you got yourselves into a mess. Nice work.",
+      "emotion": "Disgust 60",
+      "response_text": "Tough guy routine, eh?",
+      "index": "28"
+    },
+    {
+      "topic": "MS18ButcherCT03",
+      "topic_text": "Yeah, she's fine. They patched her up and she's resting in Underworld.",
+      "emotion": "Happy 70",
+      "response_text": "That's a relief. I told her she was nuts when she decided to try and sneak out of here. Guess I was wrong. Now, let's talk about getting out of here.",
+      "index": "34"
+    },
+    {
+      "topic": "MS18ButcherCT04",
+      "topic_text": "Who put you in charge?",
+      "emotion": "Disgust 70",
+      "response_text": "Reilly did. I'm the second in command of the Rangers. Now, can you just answer the question?",
+      "index": "37"
+    },
+    {
+      "topic": "MS18ButcherCT04a",
+      "topic_text": "The shit's about to hit the fan up here, and you're asking questions?",
+      "emotion": "Anger 90",
+      "response_text": "Look, Reilly once told me all we got in this shitty world is each other. I buy into that theory quite a bit.",
+      "index": "38"
+    },
+    {
+      "topic": "MS18ButcherCT05",
+      "topic_text": "We'll chat about stuff later. We have to get out of here, right now!",
+      "emotion": "Anger 80",
+      "response_text": "Listen. I don't know who you are. I don't even know why Reilly sent you. One thing I do know is that you're beginning to piss me off.",
+      "index": "41"
+    },
+    {
+      "topic": "MS18ButcherCT06",
+      "topic_text": "Okay, fine. Yes, she's alive. She's safe in Underworld. Satisfied?",
+      "emotion": "Disgust 60",
+      "response_text": "Yes, very. Now let's talk about getting the hell off of this roof.",
+      "index": "43"
+    },
+    {
+      "topic": "MS18ButcherCT06a",
+      "topic_text": "Look, let's get out of here and I promise I'll take you to her.",
+      "emotion": "Sad 70",
+      "response_text": "All right. I'm sorry. We're just... very close. If something's happened to her, I don't know what I'll do.",
+      "index": "46"
+    },
+    {
+      "topic": "MS18ButcherCT07",
+      "topic_text": "Doesn't look like the elevator works anymore.",
+      "emotion": "Neutral 50",
+      "response_text": "You're right. What we need is something to power the elevator motor up here and get the thing going.",
+      "index": "48"
+    },
+    {
+      "topic": "MS18ButcherCT08",
+      "topic_text": "Are there any other ways off this roof?",
+      "emotion": "Disgust 90",
+      "response_text": "Well, I can think of a faster way, but I doubt you'd survive the fall.",
+      "index": "51"
+    },
+    {
+      "topic": "MS18ButcherCT08b",
+      "topic_text": "I'll call the shots from here.",
+      "emotion": "Disgust 80",
+      "response_text": "You can call anything you like, but the other Rangers will only follow me.",
+      "index": "52"
+    },
+    {
+      "topic": "MS18ButcherCT09",
+      "topic_text": "Okay, I'll go back and look for the Fission Battery.",
+      "emotion": "Neutral 50",
+      "response_text": "All right. We'll hold the roof position here.",
+      "index": "54"
+    },
+    {
+      "topic": "MS18ButcherCT10",
+      "topic_text": "Why don't one of you come with me?",
+      "emotion": "Fear 80",
+      "response_text": "We have to hold this position at all costs. If... well, if you don't make it back, I can't afford to lose the elevator or we're never getting down.",
+      "index": "56"
+    },
+    {
+      "topic": "MS18ButcherCT11",
+      "topic_text": "Maybe I can fix the elevator.",
+      "emotion": "Neutral 50",
+      "response_text": "Maybe you can, but we'd still need the fission battery. It's the only way to locally feed power into the elevator's electronics.",
+      "index": "59"
+    },
+    {
+      "topic": "MS18ButcherCTNR01",
+      "topic_text": "Reilly? Who's that? Never heard of her.",
+      "emotion": "Fear 70",
+      "response_text": "She's our commander. I hope she's still alive. When I saw you come up here, I assumed she'd sent you.",
+      "index": "60"
+    },
+    {
+      "topic": "MS18ButcherCTNR02",
+      "topic_text": "I don't know any Reilly, but I do know we need to get the hell off this roof.",
+      "emotion": "Fear 70",
+      "response_text": "She didn't send you? Dammit, that means she might be dead.",
+      "index": "62"
+    },
+    {
+      "topic": "MS18ButcherCTNR03",
+      "topic_text": "I don't know a Reilly, and I'm out of here.",
+      "emotion": "Disgust 80",
+      "response_text": "Well, I got news for you. You're stuck up here like the rest of us. There's no going back the way you came.",
+      "index": "64"
+    },
+    {
+      "topic": "MS18ButcherCTNR04",
+      "topic_text": "Yeah, let's do it.",
+      "emotion": "Happy 80",
+      "response_text": "I know you don't know me from the shit under your boots, but I promise you when we get out of this you'll be paid well for it.",
+      "index": "66"
+    },
+    {
+      "topic": "MS18ButcherCTNR05",
+      "topic_text": "I'd like to help, but nothing's free.",
+      "emotion": "Happy 70",
+      "response_text": "Heh heh. Spoken just like a merc.",
+      "index": "68"
+    },
+    {
+      "topic": "MS18ButcherCTNR06",
+      "topic_text": "Screw this. I'm out of here.",
+      "emotion": "Disgust 80",
+      "response_text": "Like it or not, you're stuck up here too. You can't go back.",
+      "index": "71"
+    },
+    {
+      "topic": "MS18FinBailout",
+      "topic_text": "Let's discuss something else.",
+      "emotion": "Neutral 50",
+      "response_text": "Fine by me.",
+      "index": "73"
+    },
+    {
+      "topic": "MS18FinTLHowAreThings",
+      "topic_text": "What's been happening since you've been back?",
+      "emotion": "Neutral 50",
+      "response_text": "Things seem better now. Reilly's gained back her confidence a bit. We've been doing stuff here and there.",
+      "index": "74"
+    },
+    {
+      "topic": "MS18FinTLMedicalGateway",
+      "topic_text": "Yeah, I think I'm hurt.",
+      "emotion": "Neutral 50",
+      "response_text": "That's funny, you look fine to me. Maybe you should just get some rest.",
+      "index": "79"
+    },
+    {
+      "topic": "MS18TLButcherHeal",
+      "topic_text": "Got anything for these injuries?",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah, here you go. It's all I've got.",
+      "index": "82"
+    },
+    {
+      "topic": "MS18TLButcherStory",
+      "topic_text": "Tell me how this all happened.",
+      "emotion": "Neutral 50",
+      "response_text": "Well, we were on a contract to map the Vernon Square area of the D.C. Ruins. That's what we do, you see... usually it's routine.",
+      "index": "85"
+    },
+    {
+      "topic": "MS18TLColumbiaHeights",
+      "topic_text": "What can you tell me about Vernon Square?",
+      "emotion": "Fear 70",
+      "response_text": "There's something about this area. I can't put my finger on it, but just like the Mall, there is an unusually high concentration of Super Mutants.",
+      "index": "89"
+    },
+    {
+      "topic": "MS18TLGotBattery",
+      "topic_text": "I have a Fission Battery that will fix that express elevator.",
+      "emotion": "Surprise 70",
+      "response_text": "Great. Now get it hooked up to the elevator so we can get out of here.",
+      "index": "91"
+    },
+    {
+      "topic": "MS18TLHeresSomeAmmo",
+      "topic_text": "Here, I brought you some ammo.",
+      "emotion": "Happy 50",
+      "response_text": "Whew. That makes me feel a whole lot better. Thanks.",
+      "index": "95"
+    },
+    {
+      "topic": "MS18TLHowDidYouSurvive",
+      "topic_text": "How have you guys survived up here?",
+      "emotion": "Neutral 50",
+      "response_text": "I'd say it was a whole lot of luck. We set as many traps as we could behind us and killed as many Super Mutants as possible.",
+      "index": "97"
+    },
+    {
+      "topic": "MS18TLMoreRangers",
+      "topic_text": "Tell me more about Reilly's Rangers.",
+      "emotion": "Neutral 50",
+      "response_text": "We're mercs, but instead of hunt and destroy we map the ruins for sale to the highest bidder... and make a good living at it, too.",
+      "index": "100"
+    },
+    {
+      "topic": "MS18TLWhereIsCell",
+      "topic_text": "Any clue where I can find a Fission Battery?",
+      "emotion": "Neutral 50",
+      "response_text": "When we passed the maintenance room, I spied a deactivated Protectron inside. Just wrench open its access panel and you'll find it.",
+      "index": "102"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "I have to go now.",
+      "emotion": "Neutral 50",
+      "response_text": "Watch yourself... I don't wanna lose another man.",
+      "index": "103"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Happy 50",
+      "response_text": "Good to see you in one piece.",
+      "index": "109"
+    }
+  ],
+  "combat": [
+    {
+      "topic": "M18RadioNeedHelp01",
+      "topic_text": "M18RadioNeedHelp01",
+      "emotion": "Neutral 50",
+      "response_text": "Our supplies are running out and we've already sustained a casualty. We're trapped on the roof level of the Statesman Hotel.",
+      "index": "114"
+    },
+    {
+      "topic": "M18RadioNeedHelp02",
+      "topic_text": "M18RadioNeedHelp02",
+      "emotion": "Neutral 50",
+      "response_text": "If assistance is not possible, please attempt to contact Reilly, who's made for Underworld inside the Museum of History.",
+      "index": "118"
+    },
+    {
+      "topic": "RadioGoodbye",
+      "topic_text": "RadioGoodbye",
+      "emotion": "Neutral 50",
+      "response_text": "Roof access to the Statesman Hotel is only through the adjoining hospital. Please hurry! Butcher out.",
+      "index": "119"
+    },
+    {
+      "topic": "RadioHello",
+      "topic_text": "RadioHello",
+      "emotion": "Neutral 50",
+      "response_text": "Repeating message. This is Butcher of Reilly's Rangers sending out an S.O.S. on all known friendly frequencies.",
+      "index": "123"
+    }
+  ]
+}

@@ -1,0 +1,346 @@
+{
+  "name": "Star Paladin Cross",
+  "url": "/wiki/Cross",
+  "dialogue_name": "StarPaladinCross.txt",
+  "dialogue_url": "/wiki/StarPaladinCross.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": true,
+  "base_id": "000156E5",
+  "ref_id": "00062735",
+  "editor_id": "StarPaladinCross",
+  "location": "Citadel laboratory",
+  "location_url": "/wiki/Citadel_laboratory",
+  "descriptions": [
+    "Star Paladin Cross is a member of the Brotherhood of Steel residing in the Capital Wasteland in Fallout 3. She is a possible companion of the Lone Wanderer.",
+    "It is well known among the Brotherhood's members that Cross is actually a cyborg; she no longer has a need to eat or sleep. This was the result of Scribe Reginald Rothchild performing an operation in order to save her life after she was gravely wounded while protecting Elder Owyn Lyons in the past.",
+    "Sometime after the Brotherhood arrived in the Capital Wasteland, they were approached to provide protection for the scientists of Project Purity; Cross in particular helped to guard the endeavor from when it was in its infancy in 2257. However, following the death of a lead scientist, Catherine, in childbirth, the progress ground to a halt. With super mutant attacks increasing,",
+    "By 2277, Cross' service to the Brotherhood has led to her achieving the rank of star paladin as well as holding the title of Keeper of the ARM. She primarily acts as seneschal (steward) to Elder Lyons.",
+    "Being the second highest-ranked soldier in the Brotherhood (behind Sentinel Sarah Lyons), Cross answers only to the elder, who has given her leave to pursue Project Purity's restoration as she sees fit.",
+    "In traveling with the Lone Wanderer, Cross can express how she knew James well;",
+    "† Cross wears a unique variant of power armor, editor ID FollowersOutfitCross, form ID 00066c73, though it does not have better statistics than any other power armor and is simply called power armor.",
+    "Star Paladin Cross appears in Fallout 3, Fallout Shelter, Fallout Shelter Online, and Fallout: Wasteland Warfare."
+  ],
+  "race": "Human(Cyborg)",
+  "gender": "Female",
+  "affiliation": "Brotherhood of SteelLone Wanderer(optional)",
+  "role": "Keeper of the ARM[1][2]Seneschal to Elder Lyons[1]Companion",
+  "detailed_location": "Citadel laboratory",
+  "voice_actor": "Shari Elliker",
+  "special": {
+    "Strength": 5,
+    "Perception": 7,
+    "Endurance": 6,
+    "Charisma": 4,
+    "Intelligence": 3,
+    "Agility": 6,
+    "Luck": 4
+  },
+  "mod_special_values": {
+    "Strength": 7,
+    "Perception": 7,
+    "Endurance": 6,
+    "Charisma": 4,
+    "Intelligence": 3,
+    "Agility": 4,
+    "Luck": 4
+  },
+  "level": "5→20→30",
+  "tag_skills": [
+    {
+      "Big Guns:": "48→100"
+    },
+    {
+      "Energy Weap.:": "50→100"
+    },
+    {
+      "Small Guns:": "44→100"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Critical Chance:": "4%"
+    },
+    {
+      "Unarmed Dam.:": "1.3"
+    },
+    {
+      "Rad. Resist.:": "20%"
+    },
+    {
+      "Damage Res.:": "32%(72%)"
+    }
+  ],
+  "karma": "Good",
+  "voice_type": "FemaleAdult01DefaultDC",
+  "geck_race": "AfricanAmericanOld",
+  "topics": [
+    {
+      "topic": "FollowersFired",
+      "topic_text": "We must part ways, Paladin Cross.",
+      "emotion": "Neutral 50",
+      "response_text": "Are you certain?",
+      "index": "1"
+    },
+    {
+      "topic": "FollowersFiredNo",
+      "topic_text": "On second thought, stay with me.",
+      "emotion": "Neutral 50",
+      "response_text": "Very well. I shall stay with you.",
+      "index": "2"
+    },
+    {
+      "topic": "FollowersFiredYes",
+      "topic_text": "We must part ways, Paladin Cross.",
+      "emotion": "Neutral 50",
+      "response_text": "Very well. I shall return to my duties at the Citadel should you require my aid once again.",
+      "index": "3"
+    },
+    {
+      "topic": "FollowersHireCrossTopic",
+      "topic_text": "You knew my father?",
+      "emotion": "Happy 20",
+      "response_text": "I did. And you as well!",
+      "index": "4"
+    },
+    {
+      "topic": "FollowersHireCrossTopic1",
+      "topic_text": "I loved him so much. I'll never forget him.",
+      "emotion": "Neutral 50",
+      "response_text": "And so our deeds are carried on through our sons and our daughters.",
+      "index": "12"
+    },
+    {
+      "topic": "FollowersHireCrossTopic1a",
+      "topic_text": "Go ahead.",
+      "emotion": "Neutral 50",
+      "response_text": "I escorted your father across the Wastes. It was the best I could contribute to his efforts to restore fresh water to the people.",
+      "index": "19"
+    },
+    {
+      "topic": "FollowersHireCrossTopic1b",
+      "topic_text": "I don't suppose I could stop you.",
+      "emotion": "Neutral 50",
+      "response_text": "Wry. Much like James was.",
+      "index": "28"
+    },
+    {
+      "topic": "FollowersHireCrossTopic2",
+      "topic_text": "Why does it matter how a man dies? Death is death.",
+      "emotion": "Neutral 50",
+      "response_text": "True. And in the end, death claims us all. But how we die can say just as much about our lives as how we lived.",
+      "index": "31"
+    },
+    {
+      "topic": "FollowersHireCrossTopic3",
+      "topic_text": "He died as he lived. A selfish asshole.",
+      "emotion": "Neutral 50",
+      "response_text": "Then you did not know the man. I knew your father, I knew his goodness, and I will not have you sully the memory of a noble man.",
+      "index": "41"
+    },
+    {
+      "topic": "FollowersHireCrossTopicComeWith1",
+      "topic_text": "What about the Enclave?",
+      "emotion": "Neutral 50",
+      "response_text": "As a Star Paladin, I answer only to Elder Lyons. He has given me leave to pursue the restoration of Project Purity as I see fit.",
+      "index": "43"
+    },
+    {
+      "topic": "FollowersHireCrossTopicComeWith2",
+      "topic_text": "I would be honored, Star Paladin Cross.",
+      "emotion": "Neutral 50",
+      "response_text": "Then I shall follow your leave and submit to your command.",
+      "index": "45"
+    },
+    {
+      "topic": "FollowersHireCrossTopicComeWith3",
+      "topic_text": "Perhaps later.",
+      "emotion": "Neutral 50",
+      "response_text": "Certainly. I shall remain here. Should you change your mind, simply return to me. I shall come with you for the asking.",
+      "index": "48"
+    },
+    {
+      "topic": "FollowersHired",
+      "topic_text": "I would like your assistance once again, Paladin Cross.",
+      "emotion": "Neutral 50",
+      "response_text": "It is regrettable, but I cannot follow one such as you. Restore your good name, and perhaps I shall reconsider.",
+      "index": "49"
+    },
+    {
+      "topic": "FollowersLetsGo",
+      "topic_text": "Let's get going.",
+      "emotion": "Neutral 50",
+      "response_text": "Very well. I stand by your side.",
+      "index": "52"
+    },
+    {
+      "topic": "FollowersLetsGoNotYet1",
+      "topic_text": "Not just yet. I wanted to talk to you about something.",
+      "emotion": "Neutral 50",
+      "response_text": "What do you wish to speak to me about?",
+      "index": "53"
+    },
+    {
+      "topic": "FollowersLetsGoNotYet2",
+      "topic_text": "I just wanted to make sure you were still here. Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "As I am a \"man of my word\", there is nowhere else that I could possibly be.",
+      "index": "54"
+    },
+    {
+      "topic": "FollowersPPurity",
+      "topic_text": "Star Paladin Cross, I need you to go into that chamber and turn on the purifier.",
+      "emotion": "Sad 50",
+      "response_text": "My friend... It's been my pleasure accompanying you, but we both know this is your fight to finish. Stay strong, and honor your father's memory.",
+      "index": "55"
+    },
+    {
+      "topic": "FollowersTactics",
+      "topic_text": "Let's talk about your tactics.",
+      "emotion": "Neutral 50",
+      "response_text": "I am open to your suggestions.",
+      "index": "56"
+    },
+    {
+      "topic": "FollowersTacticsCombat",
+      "topic_text": "I want you to change your combat style.",
+      "emotion": "Neutral 50",
+      "response_text": "A member of the Brotherhood is trained in all weapons as an Initiate. What do you wish?",
+      "index": "57"
+    },
+    {
+      "topic": "FollowersTacticsCombatEND",
+      "topic_text": "Let's talk about something else.",
+      "emotion": "Happy 50",
+      "response_text": "If conversation is what you wish, perhaps you should have brought along a Scribe.{Chuckling warmly.}",
+      "index": "58"
+    },
+    {
+      "topic": "FollowersTacticsCombatGOODBYE",
+      "topic_text": "That's all. Let's get going.",
+      "emotion": "Neutral 50",
+      "response_text": "I shall remain vigilant.",
+      "index": "59"
+    },
+    {
+      "topic": "FollowersTacticsCombatMelee",
+      "topic_text": "I like what you're doing. Stick with the melee.",
+      "emotion": "Neutral 50",
+      "response_text": "I appreciate the compliment. It is where I am most comfortable.",
+      "index": "60"
+    },
+    {
+      "topic": "FollowersTacticsCombatRanged",
+      "topic_text": "You're not bad with a ranged weapon. Keep it up.",
+      "emotion": "Anger 50",
+      "response_text": "The same can be said of any Brother. We are trained well and tempered in the fires of battle.",
+      "index": "62"
+    },
+    {
+      "topic": "FollowersTacticsDistance",
+      "topic_text": "Let's talk about how close you're following me.",
+      "emotion": "Neutral 50",
+      "response_text": "I am open to your suggestions.",
+      "index": "64"
+    },
+    {
+      "topic": "FollowersTacticsDistanceDefault",
+      "topic_text": "You're good where you are.",
+      "emotion": "Neutral 50",
+      "response_text": "I thought it so.",
+      "index": "65"
+    },
+    {
+      "topic": "FollowersTacticsDistanceEND",
+      "topic_text": "Your distance is good. Let's talk about something else.",
+      "emotion": "Neutral 50",
+      "response_text": "As the Codex says: \"Through discourse, we gain the strength of our Brothers' minds.\"",
+      "index": "67"
+    },
+    {
+      "topic": "FollowersTacticsDistanceGOODBYE",
+      "topic_text": "All right, you're good. Let's get out of here.",
+      "emotion": "Neutral 50",
+      "response_text": "Should you require advice, I am here.",
+      "index": "68"
+    },
+    {
+      "topic": "FollowersTacticsDistanceLong",
+      "topic_text": "Keep hanging back.",
+      "emotion": "Neutral 50",
+      "response_text": "I've had no compelling reason to do anything different from what you asked.",
+      "index": "69"
+    },
+    {
+      "topic": "FollowersTacticsEnd",
+      "topic_text": "Enough about tactics.",
+      "emotion": "Neutral 50",
+      "response_text": "It is always a subject worthy of discussion.",
+      "index": "71"
+    },
+    {
+      "topic": "FollowersTrade",
+      "topic_text": "Let's trade equipment.",
+      "emotion": "Neutral 50",
+      "response_text": "In the words of Elder Theis: \"A Brother well equipped is a Brother keeping to his duty.\"",
+      "index": "72"
+    },
+    {
+      "topic": "FollowersWait",
+      "topic_text": "Wait here.",
+      "emotion": "Neutral 50",
+      "response_text": "I shall reflect on the battles past and the battles to come until your return.",
+      "index": "73"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "I am disappointed that things have come to this.",
+      "index": "74"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "CitTalkAtEase",
+      "topic_text": "CitTalkAtEase.",
+      "emotion": "Neutral 50",
+      "response_text": "At ease.",
+      "index": "89"
+    },
+    {
+      "topic": "CitTalkKnightCrossResponse1",
+      "topic_text": "CitTalkKnightStarPaladinCrossResponse1",
+      "emotion": "Neutral 50",
+      "response_text": "Hail.",
+      "index": "90"
+    },
+    {
+      "topic": "GOODBYE",
+      "topic_text": "Let's go.",
+      "emotion": "Neutral 50",
+      "response_text": "Lead the way.",
+      "index": "93"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Neutral 50",
+      "response_text": "I am vigilant.",
+      "index": "97"
+    },
+    {
+      "topic": "IdleChatter",
+      "topic_text": "Idle Chatter",
+      "emotion": "Neutral 50",
+      "response_text": "",
+      "index": "99"
+    }
+  ],
+  "combat": []
+}

@@ -1,0 +1,207 @@
+{
+  "name": "Layla",
+  "url": "/wiki/Layla_(Fallout:_New_Vegas)",
+  "dialogue_name": "VickyVanceExNCR1.txt",
+  "dialogue_url": "/wiki/VickyVanceExNCR1.txt",
+  "spawned_dead": false,
+  "spawned": true,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000E8D1A",
+  "ref_id": "000E8D1E",
+  "editor_id": "VickyVanceExNCR1",
+  "location": "Vicki & Vance Casino",
+  "location_url": "/wiki/Vicki_%26_Vance_Casino",
+  "descriptions": [
+    "Layla is a deserter from the New California Republic hiding out in Primm in 2281.",
+    "A demoralized soldier of the New California Republic Army, Layla and her three fellow soldiers have thrown away their uniforms and deserted from the front lines of the war with Caesar's Legion, to avoid the risk of capture and torture at the hands of the legionaries.",
+    "New Canaan up north is an attractive option to them, though they lost all their money gambling in New Vegas and must come up with creative ways of generating income. The Courier can choose to deal with the deserters in several ways, resulting in their deaths or the group leaving Primm, headed for New Canaan.",
+    "Killing her, or her team of thugs, as they flee after completing A Team of Moronic Mercenaries peacefully has no affect on Karma, and items in the casino that have changed from owned to unowned will remain lootable without loss of Karma. Their bodies also remain in the casino."
+  ],
+  "race": "Human",
+  "gender": "Female",
+  "affiliation": "NCR Army(formerly)Deserters",
+  "role": "Deserter leader",
+  "detailed_location": "Vikki and Vance Casino,Primm",
+  "voice_actor": "Mela Lee",
+  "special": {
+    "Strength": 7,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 3,
+    "Intelligence": 3,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "level": "5",
+  "tag_skills": [
+    {
+      "Guns:": "48(50)"
+    },
+    {
+      "Melee Weap.:": "45(47)"
+    },
+    {
+      "Unarmed:": "44"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Neutral",
+  "voice_type": "FemaleAdult09",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Surprise 50",
+      "response_text": "What are you doing here? This is our casino, punk.",
+      "index": "1"
+    },
+    {
+      "topic": "VDialogueVickyVanceVickyVanceExNCR1Topic000",
+      "topic_text": "Hey, just checking the place out. Now I'll just be on my way...",
+      "emotion": "Neutral 50",
+      "response_text": "We don't take kindly to tourists on our turf. You're gonna need to pay a fine if you want to leave in one piece. 100 caps should cover it.",
+      "index": "3"
+    },
+    {
+      "topic": "VDialogueVickyVanceVickyVanceExNCR1Topic001",
+      "topic_text": "Okay. Here.",
+      "emotion": "Neutral 50",
+      "response_text": "Thanks.  We're leaving now, we don't want no more trouble.",
+      "index": "4"
+    },
+    {
+      "topic": "VDialogueVickyVanceVickyVanceExNCR1Topic002",
+      "topic_text": "I don't have that many caps.",
+      "emotion": "Neutral 50",
+      "response_text": "Alright, since you look new and didn't know better, we'll cut you some slack.  50 caps.",
+      "index": "5"
+    },
+    {
+      "topic": "VDialogueVickyVanceVickyVanceExNCR1Topic003",
+      "topic_text": "But I don't even have that much.",
+      "emotion": "Neutral 50",
+      "response_text": "That's alright, we'll take what we can from your body before the law shows up.",
+      "index": "6"
+    },
+    {
+      "topic": "VDialogueVickyVanceVickyVanceExNCR1Topic004",
+      "topic_text": "<Pay 50 caps> Okay, here.",
+      "emotion": "Neutral 50",
+      "response_text": "Thanks, Let's get out of here boys.",
+      "index": "7"
+    },
+    {
+      "topic": "VDialogueVickyVanceVickyVanceExNCR1Topic005",
+      "topic_text": "<Attack> I guess I'll serve as their justice then.",
+      "emotion": "Neutral 50",
+      "response_text": "You won't live to regret those words!",
+      "index": "8"
+    },
+    {
+      "topic": "VDialogueVickyVanceVickyVanceExNCR1Topic017",
+      "topic_text": "Punk?  Thats my line.",
+      "emotion": "Neutral 50",
+      "response_text": "Heh, you've got moxy, buddy, but we don't take kindly to tourists on our turf. 100 caps should cover this trip into our territory.",
+      "index": "9"
+    },
+    {
+      "topic": "VDialogueVickyVanceVickyVanceExNCR1Topic021",
+      "topic_text": "Are you deserters?",
+      "emotion": "Neutral 50",
+      "response_text": "I like to think that we are Prisoners Of War that managed to escape before capture.",
+      "index": "10"
+    },
+    {
+      "topic": "VDialogueVickyVanceVickyVanceExNCR1Topic023",
+      "topic_text": "I guess I can understand that.",
+      "emotion": "Neutral 50",
+      "response_text": "We figured we'd make some money in New Vegas and then beat feet.",
+      "index": "12"
+    },
+    {
+      "topic": "VDialogueVickyVanceVickyVanceExNCR1Topic024",
+      "topic_text": "<Attack> Well then. It sounds like there might be a bounty on your heads.",
+      "emotion": "Neutral 50",
+      "response_text": "Perhaps, but you won't be the one to collect!",
+      "index": "14"
+    },
+    {
+      "topic": "VDialogueVickyVanceVickyVanceExNCR1Topic025",
+      "topic_text": "So that's it? You've resorted to robbing and raiding to solve your problems?",
+      "emotion": "Happy 25",
+      "response_text": "Our luck has gone south since we lost all of our money gambling in Vegas. We didn't go AWOL from duty to become raiders.",
+      "index": "15"
+    },
+    {
+      "topic": "VDialogueVickyVanceVickyVanceExNCR1Topic026",
+      "topic_text": "<Attack> Well, I think your luck just ran out.",
+      "emotion": "Neutral 50",
+      "response_text": "Looks like we've got a wannabe hero on our hands, boys.",
+      "index": "18"
+    },
+    {
+      "topic": "VDialogueVickyVanceVickyVanceExNCR1Topic027",
+      "topic_text": "Why not just turn yourselves in?",
+      "emotion": "Neutral 50",
+      "response_text": "No fucking way. We're deserters now, the NCR isn't going to throw us a ticker-tape parade for going home.",
+      "index": "19"
+    },
+    {
+      "topic": "VDialogueVickyVanceVickyVanceExNCR1Topic028",
+      "topic_text": "You're right.  You're totally screwed.",
+      "emotion": "Neutral 50",
+      "response_text": "I'm getting tired of your chatter. Hand over 100 caps, or we start using you for target practice.",
+      "index": "20"
+    },
+    {
+      "topic": "VDialogueVickyVanceVickyVanceExNCR1Topic029<Speech>",
+      "topic_text": "Your turf? I guess the news hasn't reached you yet, Primm has law again.",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] Fuck, we lose again.",
+      "index": "21"
+    },
+    {
+      "topic": "VDialogueVickyVanceVickyVanceExNCR1Topic031",
+      "topic_text": "<Attack> Well, in that case, maybe I'll do the town a favor and take you down.",
+      "emotion": "Neutral 50",
+      "response_text": "So be it. Perhaps your corpse will be better at coughing up the caps...",
+      "index": "26"
+    },
+    {
+      "topic": "VDialogueVickyVanceVickyVanceExNCR1Topic033",
+      "topic_text": "Well, they do have a few more troops than the four of you...",
+      "emotion": "Neutral 50",
+      "response_text": "No biggie there. We've been avoiding the patrols and staying low key until this mess.",
+      "index": "27"
+    },
+    {
+      "topic": "VDialogueVickyVanceVickyVanceExNCR1Topic037",
+      "topic_text": "It would be safer to run and find someplace to hide.",
+      "emotion": "Neutral 50",
+      "response_text": "Maybe you're right. Come on, boys, lets get the hell out of here before the law shows up.",
+      "index": "28"
+    },
+    {
+      "topic": "VDialogueVickyVanceVickyVanceExNCR1Topic039",
+      "topic_text": "<Attack> Murdering deserters. Well, I think I've heard enough.",
+      "emotion": "Neutral 50",
+      "response_text": "And it'll be the last thing you hear!",
+      "index": "29"
+    },
+    {
+      "topic": "VDialogueVickyVanceVickyVanceExNCR1Topic040",
+      "topic_text": "I imagine the NCR doesn't deal with deserters kindly.",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah, if we see the NCR, they'll be waiting for us with a bullet to the brain pan.",
+      "index": "30"
+    }
+  ],
+  "conversation": [],
+  "combat": []
+}

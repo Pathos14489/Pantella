@@ -1,0 +1,202 @@
+{
+  "name": "Tom Anderson",
+  "url": "/wiki/Tom_Anderson",
+  "dialogue_name": "WestsideAnderson.txt",
+  "dialogue_url": "/wiki/WestsideAnderson.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000F1095",
+  "ref_id": "000F36EA",
+  "editor_id": "WestsideAnderson",
+  "location": "Casa Madrid Apartments",
+  "location_url": "/wiki/Casa_Madrid_Apartments",
+  "descriptions": [
+    "Tom Anderson is the co-owner of the Westside Cooperative, living in Westside in 2281.",
+    "Anderson trained with the Followers of the Apocalypse and previously ran operations for the NCR's Office of Science and Industry.",
+    "He states that politicians back in Shady Sands are too detached from reality to advocate for the best interests of the citizens, only concerning themselves with productivity and growth.",
+    "Tom Anderson appears in Fallout: New Vegas.",
+    "Tom Anderson was written by Joshua Sawyer, who also co-wrote The White Wash with Jeff Husges."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Followers of the ApocalypseOffice of Science and Industry(formerly)Westside Cooperative",
+  "role": "Westside Co-opco-owner",
+  "detailed_location": "Casa Madrid Apartments,Westside",
+  "voice_actor": "Ron Yuan",
+  "special": {
+    "Strength": 6,
+    "Perception": 7,
+    "Endurance": 5,
+    "Charisma": 3,
+    "Intelligence": 3,
+    "Agility": 6,
+    "Luck": 4
+  },
+  "level": "7",
+  "tag_skills": [
+    {
+      "Energy Weap.:": "55"
+    },
+    {
+      "Guns:": "53(55)"
+    },
+    {
+      "Melee Weap.:": "53(55)"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Neutral",
+  "voice_type": "MaleAdult08",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "I'm not getting sucked into your fight, friend.",
+      "index": "1"
+    },
+    {
+      "topic": "VFreeformCasaMadrid1EAndersonTopic000",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Take care.",
+      "index": "4"
+    },
+    {
+      "topic": "VFreeformCasaMadrid1EAndersonTopic002",
+      "topic_text": "I heard Corporal White came here to investigate a water shortage.",
+      "emotion": "Neutral 50",
+      "response_text": "No one by that name has come here, I'm afraid. You must've heard wrong. You can ask around if you'd like - they'll all tell you the same thing.{Mildly threatening - he's hinting that the player should back off from this line of questioning.}",
+      "index": "5"
+    },
+    {
+      "topic": "VFreeformCasaMadrid1EAndersonTopic003",
+      "topic_text": "Tell me about the co-op.",
+      "emotion": "Neutral 50",
+      "response_text": "The co-op is comprised of Westside locals and run by Clayton Etienne. They produce all of their own food and share in the profits of the co-op.",
+      "index": "6"
+    },
+    {
+      "topic": "VFreeformCasaMadrid1EAndersonTopic005",
+      "topic_text": "What do you do here?",
+      "emotion": "Neutral 50",
+      "response_text": "I'm with the Followers of the Apocalypse, and I help the locals in Westside grow crops. Unlike the NCR, the Followers don't expect anything back.",
+      "index": "7"
+    },
+    {
+      "topic": "VFreeformCasaMadrid1EAndersonTopic006",
+      "topic_text": "Do you have a problem with the NCR?",
+      "emotion": "Neutral 50",
+      "response_text": "I don't go looking for fights with them, but they don't have the best interests of people in mind. Certainly not locals.",
+      "index": "10"
+    },
+    {
+      "topic": "VFreeformCasaMadrid1EAndersonTopic009",
+      "topic_text": "Hector told me everything.",
+      "emotion": "Neutral 50",
+      "response_text": "I suppose there's no point in denying it any longer. I killed Corporal White to protect Westside's self-reliance. It was rash, and I regret it now.",
+      "index": "12"
+    },
+    {
+      "topic": "VFreeformCasaMadrid1EAndersonTopic010",
+      "topic_text": "You need to answer for your crime.",
+      "emotion": "Neutral 50",
+      "response_text": "I'll surrender on one condition - you protect Westside's secret. Without that water, this community won't survive long.",
+      "index": "14"
+    },
+    {
+      "topic": "VFreeformCasaMadrid1EAndersonTopic011",
+      "topic_text": "You have a deal.",
+      "emotion": "Neutral 50",
+      "response_text": "Thank you. I won't make any trouble when they come for me.",
+      "index": "16"
+    },
+    {
+      "topic": "VFreeformCasaMadrid1EAndersonTopic012",
+      "topic_text": "No, I'm not going to lie for you.",
+      "emotion": "Neutral 50",
+      "response_text": "Then you leave me no choice.",
+      "index": "17"
+    },
+    {
+      "topic": "VFreeformCasaMadrid1EAndersonTopic013",
+      "topic_text": "Say I keep Westside's secret - what's in it for me?",
+      "emotion": "Neutral 50",
+      "response_text": "Ten percent of the co-op's profits.",
+      "index": "18"
+    },
+    {
+      "topic": "VFreeformCasaMadrid1EAndersonTopic014",
+      "topic_text": "Ten percent it is.",
+      "emotion": "Neutral 50",
+      "response_text": "Good. Tell Etienne about our deal and I'll turn myself in.",
+      "index": "19"
+    },
+    {
+      "topic": "VFreeformCasaMadrid1EAndersonTopic015",
+      "topic_text": "I'd rather not turn you in, but someone else might come looking for White.",
+      "emotion": "Neutral 50",
+      "response_text": "If the NCR thinks White was killed by, say, members from the Scorpions gang, it may be enough for them to close the case.",
+      "index": "21"
+    },
+    {
+      "topic": "VFreeformCasaMadrid1EAndersonTopic016",
+      "topic_text": "Consider it done. You stay free and Westside keeps getting water.",
+      "emotion": "Neutral 50",
+      "response_text": "Thank you. What happened was regrettable, but I'll make sure it never happens again.",
+      "index": "22"
+    },
+    {
+      "topic": "VFreeformCasaMadrid1EAndersonTopic019< Barter - 50 >",
+      "topic_text": "Westside's secret is easily worth more, but I'm willing to settle for twenty percent.",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] Twenty percent it is. Etienne won't like it, but at least our secret will be safe.",
+      "index": "23"
+    },
+    {
+      "topic": "VFreeformCasaMadrid1EAndersonTopic020",
+      "topic_text": "I could say that... if the price was right.",
+      "emotion": "Neutral 50",
+      "response_text": "Perhaps a partnership in the co-op would be enough. Say, ten percent of daily profits?",
+      "index": "28"
+    },
+    {
+      "topic": "VFreeformCasaMadrid1EAndersonTopic026",
+      "topic_text": "If I don't turn you in, will you stop stealing NCR water?",
+      "emotion": "Neutral 50",
+      "response_text": "That's not a bargain I can accept. Westside depends on that water for survival and self-reliance.",
+      "index": "29"
+    },
+    {
+      "topic": "VFreeformCasaMadridWestsideAndersonTopic000",
+      "topic_text": "It was easy to figure out that the NCR water shortage points to you - save me some time, will you?",
+      "emotion": "Neutral 50",
+      "response_text": "{PC Intelligence 6+}Fair enough. Since you seem to have pieced it together, I won't insult you by denying it any further.",
+      "index": "30"
+    },
+    {
+      "topic": "VFreeformCasaMadridWestsideAndersonTopic001",
+      "topic_text": "You should know I've been helpful to the Followers, so come clean about White if you know something.",
+      "emotion": "Neutral 50",
+      "response_text": "Some of the other Followers mentioned you. All right - the truth, then.",
+      "index": "33"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Take care.",
+      "index": "36"
+    }
+  ],
+  "combat": []
+}

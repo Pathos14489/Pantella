@@ -1,0 +1,321 @@
+{
+  "name": "Clanden",
+  "url": "/wiki/Clanden",
+  "dialogue_name": "VMS21Cachino.txt",
+  "dialogue_url": "/wiki/VMS21Cachino.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "0010C6F9",
+  "ref_id": "0011267B",
+  "editor_id": "VMS21Clanden",
+  "location": "Gomorrah suites",
+  "location_url": "/wiki/Gomorrah#Suites_level",
+  "descriptions": [
+    "Clanden is a mercenary; a proficient bomb maker and snuff pornographer contracted by the Omertas for their plan to take over the New Vegas Strip. He lives in a suite at Gomorrah in 2281.",
+    "To outsiders, Clanden is friendly and welcoming, offering help to anyone who approaches him and wishing them success in their gambling.",
+    "In truth, Clanden is anything but innocuous. A special guest of the leaders of the Omertas, Nero and Big Sal, Clanden's expertise is needed to carry out an attack on the Strip for the Legion when they attack Hoover Dam, so that they can distract the NCR Army. Clanden's expertise with explosives allows the Omertas to potentially engineer a big enough attack to force the NCR to respond and weaken their positions at Camp McCarran. Since he has to engineer a way to kill many people in a large area relatively quickly, he settled on a gas attack, using chlorine obtained from the Ultra-Luxe.",
+    "In return for his services, Clanden is provided with caps, a luxury suite,",
+    "There are several cut alternatives for how to deal with Clanden when helping Cachino during How Little We Know.",
+    "This was a pair of additional options for dealing with Clanden if the snuff tapes were obtained. They would only become available if the tapes were brought to Cachino first before being shown to Clanden, and they correspond to Cachino's suggestion to use the tapes to lure Clanden somewhere he can be easily disposed of (options which do not exist outside of this cut content).",
+    "Clanden could then be asked about his \"exotic tastes\" in women, after which there would be two skill/perk checks. If passed, he would take the player character to his \"playroom\" (the locked room in the Suites level with the dead Gomorrah prostitute) before turning hostile, at which point he could then be killed without any of the Omertas turning hostile (and in fact, they could even assist the player in killing him).",
+    "It was intended that Clanden would use a combat knife to attack here instead of his revolver, and that he would also immediately hit the player once when combat started, but this is commented out in his scripting.",
+    "In-game, this path is still fully implemented and is only blocked by a condition checking for quest objective 33 (investigate Clanden) being disabled. As such, it can be made available by using the console command setobjectivedisplayed VMS21 33 0 after showing Cachino the snuff tapes. To avoid issues, after talking to Clanden and passing either check, use the console command setobjectivedisplayed VMS21 33 1 to re-enable the investigation objective.",
+    "The two checks in question are a Speech 45 check or a Black Widow check,  with the context differing depending on the check:",
+    "In this path, the player character lies that they've been sent by the Omertas deliver a new prostitute to Clanden's \"playroom.\" Clanden excitedly follows until discovering the truth, at which point he attacks the player character out of anger.",
+    "In this path, the player character \"volunteers\" to be Clanden's new \"playtoy.\" Once entering the \"playroom,\" he would then attack the player character as part of his sadistic \"exotic tastes.\"",
+    "Like mentioned above, having the snuff tapes and also examining the dead Gomorrah prostitute in Clanden's \"playroom\" with Medicine 35+ would make it possible for the Courier to tell Captain Marie Pappas in the NCR Military Police HQ about a murder at Gomorrah. However, in-game, Pappas cannot be told that Clanden is the killer; even when shown the snuff tapes, the only option is to say the person in the tapes is unknown. The option to say the person is Clanden exists, but is cut due to the relevant quest objective, index 71, being unused:",
+    "Objective 71 was supposed to become active after showing the snuff tapes to Cachino. Afterwards, when talking to Captain Pappas (and also having evidence of the murder through the Medicine check above), the full conversation would be available:",
+    "After doing this, walking through the Gomorrah lobby would trigger a scripted event in which four NCR MPs enter Gomorrah, head to Clanden's room in the suites, and arrest him:",
+    "After this, Clanden would be taken away from Gomorrah by the MPs. For the rest of the game, he would then be found in an inaccessible prison cell in the NCR Military Police HQ. Clanden has no further dialogue with the player about this scenario (if spoken to, he would still say his generic lines). He will not attempt to escape even if his cell door is opened. The NCR will not turn hostile if he is killed in his jail cell.",
+    "On the other hand, Cachino still has a unique line for the player reporting back to him:",
+    "Afer this, the quest would continue as usual. This option is fully implemented apart from the initial condition blocking it; to access it, simply use the console command setobjectivedisplayed VMS21 71 1.",
+    "PC Playstation 3 Xbox 360 The Gomorrah prostitute may be found alive, standing inside the locked room. This appears to be the case especially if the player character has picked the lock to the room instead of opening it with Clanden's looted key. She will greet the Courier, utter random phrases, and even wander out into the hallway. Attempting to speak with the \"corpse\" will still prompt for the Medical skill check. She will still respawn even after being completely dismembered. "
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Omertas",
+  "role": "Explosives expertSadistic murdererSnuff film producer",
+  "detailed_location": "GomorrahPersonal suite",
+  "voice_actor": "Jesse Burch",
+  "special": {
+    "Strength": 3,
+    "Perception": 6,
+    "Endurance": 3,
+    "Charisma": 4,
+    "Intelligence": 8,
+    "Agility": 7,
+    "Luck": 5
+  },
+  "mod_special_values": {
+    "Strength": 3,
+    "Perception": 6,
+    "Endurance": 3,
+    "Charisma": 4,
+    "Intelligence": 8,
+    "Agility": 8,
+    "Luck": 5
+  },
+  "level": "18",
+  "tag_skills": [
+    {
+      "Explosives:": "100"
+    },
+    {
+      "Medicine:": "100"
+    },
+    {
+      "Science:": "100"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "145"
+    }
+  ],
+  "karma": "Evil",
+  "voice_type": "MaleAdult03",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "Hey, thanks for all the hard work back there. I'm going to run a tight ship here, don't you worry.",
+      "index": "1"
+    },
+    {
+      "topic": "vDialogueGomorrahVMS21CachinoTopic000",
+      "topic_text": "The Omertas won't take kindly to hearing about your relationship with Joana.",
+      "emotion": "Neutral 50",
+      "response_text": "Joana? That bitch spreading lies about me? I've got a lesson to teach her about loose lips.",
+      "index": "8"
+    },
+    {
+      "topic": "vDialogueGomorrahVMS21CachinoTopic001",
+      "topic_text": "I hear you've been doing some business on the side.",
+      "emotion": "Neutral 50",
+      "response_text": "Business? What the fuck do you mean business? You looking to get yourself burned?",
+      "index": "9"
+    },
+    {
+      "topic": "vDialogueGomorrahVMS21CachinoTopic002",
+      "topic_text": "What can you tell me about Gomorrah?",
+      "emotion": "Neutral 50",
+      "response_text": "I banged Lot's wife and licked her salty ass. The fuck do I look like? I'm the one asking the questions here.",
+      "index": "11"
+    },
+    {
+      "topic": "vDialogueGomorrahVMS21CachinoTopic003",
+      "topic_text": "I hear you've been dealing with some business that is off limits for the family.",
+      "emotion": "Neutral 50",
+      "response_text": "I don't give half a dick what you've heard. Now get the fuck out of my face before I burn your sorry ass.",
+      "index": "13"
+    },
+    {
+      "topic": "vDialogueGomorrahVMS21CachinoTopic004",
+      "topic_text": "Is this journal worth 100 caps to you?",
+      "emotion": "Neutral 50",
+      "response_text": "I can pay you for it, of course. I also have some information about the Family's business that you might find interesting.",
+      "index": "14"
+    },
+    {
+      "topic": "vDialogueGomorrahVMS21CachinoTopic005",
+      "topic_text": "I found this ledger that proves some of your side business.",
+      "emotion": "Neutral 50",
+      "response_text": "Where the fuck did you get that?{Nervous}Okay, listen buddy... That's some dangerous shit you got there.",
+      "index": "19"
+    },
+    {
+      "topic": "vDialogueGomorrahVMS21CachinoTopic006",
+      "topic_text": "Do you think the Family would like to see this?",
+      "emotion": "Neutral 50",
+      "response_text": "I can't stop you, but that's gonna mean my death. I can make it worth your while to give it to me though.",
+      "index": "22"
+    },
+    {
+      "topic": "vDialogueGomorrahVMS21CachinoTopic007",
+      "topic_text": "I think I'm going to keep this for a little while.",
+      "emotion": "Neutral 50",
+      "response_text": "All right, all right.  I can't stop you, but I think we can help each other out.",
+      "index": "24"
+    },
+    {
+      "topic": "vDialogueGomorrahVMS21CachinoTopic008<Barter Option>",
+      "topic_text": "I'll consider giving this to you, for some cash up front.",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] Okay, you got me by the balls. Here's a couple hundred caps, maybe that'll buy your friendship.",
+      "index": "26"
+    },
+    {
+      "topic": "vDialogueGomorrahVMS21CachinoTopic009",
+      "topic_text": "Why don't you try and take it from me?",
+      "emotion": "Neutral 50",
+      "response_text": "You wanna come into a back room and give me a chance? Didn't think so.",
+      "index": "28"
+    },
+    {
+      "topic": "vDialogueGomorrahVMS21CachinoTopic010",
+      "topic_text": "Clanden has been handled already.",
+      "emotion": "Happy 35",
+      "response_text": "Oh? Is that so, well I can't say that I'm sad to see that fucker gone.",
+      "index": "30"
+    },
+    {
+      "topic": "vDialogueGomorrahVMS21CachinoTopic011",
+      "topic_text": "Tell me about this Troike.",
+      "emotion": "Neutral 50",
+      "response_text": "He's a skittish little fucker. Spends half the day pumping his body full of chems and the other half pumping hookers with his willy.",
+      "index": "33"
+    },
+    {
+      "topic": "vDialogueGomorrahVMS21CachinoTopic012",
+      "topic_text": "Do you know anything about what they are planning?",
+      "emotion": "Neutral 50",
+      "response_text": "No, just that it involves guns and muscle. Also that it's big. Very big. Only Nero and Big Sal know everything, and they ain't telling.",
+      "index": "37"
+    },
+    {
+      "topic": "vDialogueGomorrahVMS21CachinoTopic013",
+      "topic_text": "Um, nevermind. Sorry I said something.",
+      "emotion": "Neutral 50",
+      "response_text": "Damn right you're sorry.",
+      "index": "38"
+    },
+    {
+      "topic": "vDialogueGomorrahVMS21CachinoTopic014",
+      "topic_text": "That's all the questions I have for now. I may have more later.",
+      "emotion": "Neutral 50",
+      "response_text": "Okay. You can find me here, or upstairs in my room. I'll let the muscle know you're a friend of mine, that should let you get around a little easier.",
+      "index": "39"
+    },
+    {
+      "topic": "vDialogueGomorrahVMS21CachinoTopic015",
+      "topic_text": "I have a couple more questions.",
+      "emotion": "Neutral 50",
+      "response_text": "Okay toss 'em at me.",
+      "index": "40"
+    },
+    {
+      "topic": "vDialogueGomorrahVMS21CachinoTopic016{Tell Cachino the bosses plans have been disrupted}",
+      "topic_text": "Troike is on his way to destroy the guns for me.",
+      "emotion": "Neutral 50",
+      "response_text": "You better get outside for a little bit. I'm sure they are going to look for the infamous courier when things go to hell.",
+      "index": "41"
+    },
+    {
+      "topic": "vDialogueGomorrahVMS21CachinoTopic017",
+      "topic_text": "I have some questions about the Bosses plans.",
+      "emotion": "Neutral 50",
+      "response_text": "Alright, let's have them.",
+      "index": "49"
+    },
+    {
+      "topic": "vDialogueGomorrahVMS21CachinoTopic018What's the next step in breaking up the bosses plans?",
+      "topic_text": "What's the next step in breaking up the bosses plans?",
+      "emotion": "Neutral 50",
+      "response_text": "Now we cut off the head of the serpent. Big Sal and Nero have to die.",
+      "index": "50"
+    },
+    {
+      "topic": "vDialogueGomorrahVMS21CachinoTopic019",
+      "topic_text": "Why do they need to die?",
+      "emotion": "Neutral 50",
+      "response_text": "As long as they're alive, they can start up their plans again. All you've managed to do is stall them. I guarantee you they have contingencies.",
+      "index": "51"
+    },
+    {
+      "topic": "vDialogueGomorrahVMS21CachinoTopic020",
+      "topic_text": "How do we take care of the bosses?",
+      "emotion": "Neutral 50",
+      "response_text": "They're a little bit upset about what's been done to muck up their plans. They tasked me to find out who's responsible.",
+      "index": "52"
+    },
+    {
+      "topic": "vDialogueGomorrahVMS21CachinoTopic021",
+      "topic_text": "What happens when the bosses are gone?",
+      "emotion": "Neutral 50",
+      "response_text": "When they're gone I'm gonna run this joint. Don't worry, I'll take care of the place.",
+      "index": "54"
+    },
+    {
+      "topic": "vDialogueGomorrahVMS21CachinoTopic022{Speech Check}",
+      "topic_text": "They are going to expect something from me, you can do it and surprise them.",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] Alright, I'll take care of them. Just give me the word when to start shooting.",
+      "index": "55"
+    },
+    {
+      "topic": "vDialogueGomorrahVMS21CachinoTopic023",
+      "topic_text": "Let's go take care of the bosses.",
+      "emotion": "Neutral 50",
+      "response_text": "Hurry and get ready. I'll give you a gun when you get to the room.",
+      "index": "57"
+    },
+    {
+      "topic": "vDialogueGomorrahVMS21CachinoTopic024",
+      "topic_text": "I'm not ready to take out the bosses yet.",
+      "emotion": "Neutral 50",
+      "response_text": "Hurry and get ready. I'll give you a gun when you get to the room.",
+      "index": "59"
+    },
+    {
+      "topic": "vDialogueGomorrahVMS21CachinoTopic025",
+      "topic_text": "I found these tapes in Clanden's room, can you verify this is him?",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah this is Clanden, this guy is one sick motherfucker. The way I see it you have a few options.",
+      "index": "61"
+    },
+    {
+      "topic": "vGomorrahBossChips",
+      "topic_text": "I'm planning on playing some games in the Casino.",
+      "emotion": "Neutral 50",
+      "response_text": "Of course, after all you did for me, here are some chips for you. Play, have some fun.",
+      "index": "65"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "VMS21CachinoExecution1",
+      "topic_text": "VMS21CachinoExecution1",
+      "emotion": "Fear 65",
+      "response_text": "I'm sorry boss... Sometimes I just can't control myself. I dunno what's wrong with me. I swear, I can turn this around. Just gimme another chance.",
+      "index": "66"
+    },
+    {
+      "topic": "VMS21CachinoExecution2",
+      "topic_text": "VMS21CachinoExecution2",
+      "emotion": "Fear 65",
+      "response_text": "I'm sorry boss... Sometimes I just can't control myself. I dunno what's wrong with me. I swear, I can turn this around. Just gimme another chance.",
+      "index": "68"
+    },
+    {
+      "topic": "VMS21CachinoGun",
+      "topic_text": "VMS21CachinoGun",
+      "emotion": "Neutral 50",
+      "response_text": "Hey, here is that gun I promised you. I suggest using it while they are talking, I'm pretty sure they're going to kill you after they've talked.",
+      "index": "70"
+    }
+  ],
+  "combat": [
+    {
+      "topic": "RNVNewsStory2",
+      "topic_text": "RNVNewsStoryLine2",
+      "emotion": "Neutral 50",
+      "response_text": "{Cachino:}Before he left, Nero told me him and Big Sal were real tired, see? Said they were gonna go camping up at Lake Mead.",
+      "index": "72"
+    },
+    {
+      "topic": "RNVNewsStory3",
+      "topic_text": "RNVNewsStoryLine3",
+      "emotion": "Neutral 50",
+      "response_text": "{Cachino:}Said he'd always wanted to sleep with the Lakelurks.",
+      "index": "73"
+    }
+  ]
+}

@@ -1,0 +1,187 @@
+{
+  "name": "Allen Mack",
+  "url": "/wiki/Allen_Mack",
+  "dialogue_name": "CG04AllenMack.txt",
+  "dialogue_url": "/wiki/CG04AllenMack.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000569B1",
+  "ref_id": "000569B4",
+  "editor_id": "CG04VaultSecurity03",
+  "location": "Vault 101",
+  "location_url": "/wiki/Vault_101",
+  "descriptions": [
+    "Allen Mack is a resident of Vault 101, a fervent isolationist, and its potential overseer in Fallout 3.",
+    "The head of the Mack household, Allen is a powerful presence in the Vault, and believes that it's a good life, sealed forever underground. Anyone who goes out of their way to mess it up is a sworn enemy of his.",
+    "His redeeming feature is his love for his family. While strict, Allen genuinely loves and cares about his children: When his son, Wally, had his tenth birthday, he managed to coax Andy the Mr. Handy to perform magic tricks, and organized a game of Hunt the Mutant in the Vault's atrium.",
+    "When James escaped from the Vault 19 years later, Allen's worst fears were confirmed. He fought against the radroach infestation, personally saving many lives,",
+    "Allen Mack is the husband of Gloria Mack, and the father of Wally, Steve and Susie Mack. His father-in-law is Stanley Armstrong. He also has two sisters-in-law, Beatrice Armstrong and Mary Kendall.",
+    "Allen Mack banging on the window.",
+    "* Only during Trouble on the Homefront if he becomes the overseer.",
+    "During the quest Escape!, it is impossible to enter the room where the Macks live (without console commands). Viewing Vault 101 in the G.E.C.K. reveals that Mack's \"room\" is just a short stretch of the corridor without an entrance. It is impossible to enter his room due to the fact that he is scripted to become the new overseer should the current one die."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Vault 101",
+  "role": "Vault dwellerOverseer (optional)",
+  "detailed_location": "Vault 101",
+  "voice_actor": "Pete Papageorge",
+  "special": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 5,
+    "Intelligence": 5,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "mod_special_values": {
+    "Strength": 5,
+    "Perception": 6,
+    "Endurance": 5,
+    "Charisma": 5,
+    "Intelligence": 5,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "level": "1",
+  "tag_skills": [
+    {
+      "Melee Weap.:": "31"
+    },
+    {
+      "Small Guns:": "33"
+    },
+    {
+      "Unarmed:": "29"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "30"
+    },
+    {
+      "Critical Chance:": "Escape: 5%TOTH: 4%%"
+    },
+    {
+      "Unarmed Dam.:": "Escape: +0.75TOTH: +1.95"
+    },
+    {
+      "Poison Resist.:": "20%"
+    },
+    {
+      "Rad. Resist.:": "8%"
+    },
+    {
+      "Carry Weight:": "Escape!: 200TOTH: 210"
+    },
+    {
+      "Damage Res.:": "2%"
+    }
+  ],
+  "karma": "Neutral",
+  "voice_type": "MaleAdult02DC",
+  "geck_race": "AsianOld",
+  "topics": [
+    {
+      "topic": "CGTransitionTopic",
+      "topic_text": "CGTransitionTopic",
+      "emotion": "Neutral 50",
+      "response_text": "Ahh, it's my stupid ankle, doc. Sprained, broken, I don't know. Slipped on some grease in one of the maintenance tunnels.Play soundFO3 AllenMack ItsMyAnkle.ogghttps://fallout.fandom.com/wiki/File:FO3_AllenMack_ItsMyAnkle.oggnoicon",
+      "index": "1"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Anger 75",
+      "response_text": "You just couldn't let us live in peace, could you? You couldn't have a home, so you decided to destroy ours.Play soundFO3 AllenMack LiveInPeace.ogghttps://fallout.fandom.com/wiki/File:FO3_AllenMack_LiveInPeace.oggnoicon",
+      "index": "3"
+    },
+    {
+      "topic": "MS16OptionsInfo1MS16Info1",
+      "topic_text": "I just want to know why you won't open the Vault.",
+      "emotion": "Anger 25",
+      "response_text": "Most of the people in here will just get themselves killed out there. You know that better than anyone. But down here, they've got a safe life.Play soundFO3 AllenMack MostOfThePeople.ogghttps://fallout.fandom.com/wiki/File:FO3_AllenMack_MostOfThePeople.oggnoicon",
+      "index": "15"
+    },
+    {
+      "topic": "MS16OptionsLeaveMS16Leave",
+      "topic_text": "You know, I just don't care anymore. Let me leave and I'll never come back.",
+      "emotion": "Disgust 50",
+      "response_text": "That should save us all some trouble. Now get moving, before I decide to make an example of you.Play soundFO3 AllenMack SaveUsAll.ogghttps://fallout.fandom.com/wiki/File:FO3_AllenMack_SaveUsAll.oggnoicon",
+      "index": "18"
+    },
+    {
+      "topic": "MS16OptionsSolution",
+      "topic_text": "I believe I have the solution to the Vault's problems.",
+      "emotion": "Happy 25",
+      "response_text": "Really? Humor me.{Mockingly amused.}Play soundFO3 AllenMack HumorMe.ogghttps://fallout.fandom.com/wiki/File:FO3_AllenMack_HumorMe.oggnoicon",
+      "index": "19"
+    },
+    {
+      "topic": "MS16OptionsStopOthersMS16StopOthers",
+      "topic_text": "I agree with you. Let me get the rebels to stop.",
+      "emotion": "Surprise 75",
+      "response_text": "Huh. I wasn't expecting to hear that!Play soundFO3 AllenMack WasntExpecting.ogghttps://fallout.fandom.com/wiki/File:FO3_AllenMack_WasntExpecting.oggnoicon",
+      "index": "20"
+    },
+    {
+      "topic": "MS16OptionsStopYouMS16StopYou",
+      "topic_text": "Be reasonable. You need to open the Vault.",
+      "emotion": "Surprise 25",
+      "response_text": "You know what? I hear the last Overseer tried being reasonable about things, and you killed him for his efforts.Play soundFO3 AllenMack TheLastOverseer.ogghttps://fallout.fandom.com/wiki/File:FO3_AllenMack_TheLastOverseer.oggnoicon",
+      "index": "23"
+    },
+    {
+      "topic": "MS16OptionsViolenceMS16Violence",
+      "topic_text": "I think I'll just kill you, now.",
+      "emotion": "Surprise 50",
+      "response_text": "What a coincidence! I was thinking just the same thing!Play soundFO3 AllenMack WhatACoincidence.ogghttps://fallout.fandom.com/wiki/File:FO3_AllenMack_WhatACoincidence.oggnoicon",
+      "index": "25"
+    },
+    {
+      "topic": "MS16OverseerViolenceShortcut",
+      "topic_text": "And you're dead.",
+      "emotion": "Anger 75",
+      "response_text": "It's about time someone finished you!{Enraged}Play soundFO3 AllenMack ItsAboutTime.ogghttps://fallout.fandom.com/wiki/File:FO3_AllenMack_ItsAboutTime.oggnoicon",
+      "index": "26"
+    },
+    {
+      "topic": "MS16OverseerWelcome1A",
+      "topic_text": "You're the one who's been holding his people hostage!",
+      "emotion": "Happy 25",
+      "response_text": "Is that what they say? And you believed them? Ha!Play soundFO3 AllenMack WhatTheySay.ogghttps://fallout.fandom.com/wiki/File:FO3_AllenMack_WhatTheySay.oggnoicon",
+      "index": "27"
+    },
+    {
+      "topic": "MS16OverseerWelcome1B",
+      "topic_text": "Hold on, I'm here to talk.",
+      "emotion": "Anger 25",
+      "response_text": "Really? Because you weren't here to talk with the last Overseer. That's why I'm in charge, now.Play soundFO3 AllenMack YouWerentHere.ogghttps://fallout.fandom.com/wiki/File:FO3_AllenMack_YouWerentHere.oggnoicon",
+      "index": "32"
+    },
+    {
+      "topic": "MS16OverseerWelcome1C",
+      "topic_text": "You shut up about my dad! Just shut up!",
+      "emotion": "Happy 50",
+      "response_text": "What's the matter, runt? Did I hit a sore spot?{Mocking}Play soundFO3 AllenMack HitASoreSpot.ogghttps://fallout.fandom.com/wiki/File:FO3_AllenMack_HitASoreSpot.oggnoicon",
+      "index": "37"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "CG04SecurityBarks",
+      "topic_text": "CG04SecurityBarks",
+      "emotion": "Anger 100",
+      "response_text": "You! This is your fault! You and your stupid father! He had to go and leave, didn’t he? He had to mess things up for everybody!Play soundFO3_AllenMack_ThisIsYourFault.ogghttps://fallout.fandom.com/wiki/File:FO3_AllenMack_ThisIsYourFault.oggnoicon",
+      "index": "45"
+    }
+  ],
+  "combat": []
+}

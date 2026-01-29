@@ -1,0 +1,195 @@
+{
+  "name": "Quinn",
+  "url": "/wiki/Quinn",
+  "dialogue_name": "Quinn.txt",
+  "dialogue_url": "/wiki/Quinn.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000156F4",
+  "ref_id": "0002B8DF",
+  "editor_id": "Quinn",
+  "location": "Underworld",
+  "location_url": "/wiki/Underworld",
+  "descriptions": [
+    "Quinn is a friendly ghoul scavenger from the settlement of the Underworld in Fallout 3.",
+    "A veteran of countless battles across the wastes, Quinn is a wandering ghoul trader who roams the blasted expanse of the former United States.\n",
+    "Although Quinn enjoys solitude and his long life taught him to distrust humans, he's a good judge of character and doesn't make rash judgments,",
+    "His stories aren't just gossip and random facts. Quinn keeps on top of happenings in the wasteland, especially the vicinity of the Mall."
+  ],
+  "race": "Ghoul",
+  "gender": "Male",
+  "affiliation": "Underworld",
+  "role": "Trader and procurement specialist",
+  "detailed_location": "Museum of HistoryUnderworld",
+  "voice_actor": "Mike Rosson",
+  "special": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 4,
+    "Intelligence": 4,
+    "Agility": 6,
+    "Luck": 4
+  },
+  "level": "7",
+  "tag_skills": [
+    {
+      "Barter:": "55"
+    },
+    {
+      "Small Guns:": "59"
+    },
+    {
+      "Unarmed:": "55"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "55"
+    },
+    {
+      "Critical Chance:": "4%"
+    },
+    {
+      "Unarmed Dam.:": "3.25"
+    },
+    {
+      "Poison Resist.:": "15%"
+    },
+    {
+      "Rad. Resist.:": "6%"
+    },
+    {
+      "Carry Weight:": "210"
+    },
+    {
+      "Damage Res.:": "1%"
+    }
+  ],
+  "karma": "Good",
+  "voice_type": "MaleGenericGhoulDC",
+  "geck_race": "Ghoul",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "Oh, why hello there. Pleasure to meet you! I'm Quinn.",
+      "index": "1"
+    },
+    {
+      "topic": "MS06MemorialSo this is the Lincoln Memorial?",
+      "topic_text": "Is the Lincoln Memorial around here somewhere?",
+      "emotion": "Disgust 50",
+      "response_text": "Yeah. Just east of here. Bunch of guys with guns are holed up there.",
+      "index": "6"
+    },
+    {
+      "topic": "MS14BackOffSounds like a normal guy.",
+      "topic_text": "Why should I have to pay for gossip?",
+      "emotion": "Neutral 50",
+      "response_text": "I don't give away anything for free. Besides, its obviously worth something to you.",
+      "index": "8"
+    },
+    {
+      "topic": "MS14Bribe",
+      "topic_text": "Oh look! I dropped these 50 caps in your pocket...",
+      "emotion": "Disgust 50",
+      "response_text": "Very funny.",
+      "index": "9"
+    },
+    {
+      "topic": "MS14CrowleyWhat can you tell me about Mister Crowley?",
+      "topic_text": "So, what's that Mister Crowley up to?",
+      "emotion": "Surprise 50",
+      "response_text": "I might know something interesting, if you're willing to pay for it.",
+      "index": "12"
+    },
+    {
+      "topic": "MS14PersuadeCrowleyCome on. You can tell me. Ahzrukhal said so. <Lie.>",
+      "topic_text": "How about I don't. How about you just tell me.",
+      "emotion": "Fear 50",
+      "response_text": "Okay! Okay! No need to get upset.",
+      "index": "13"
+    },
+    {
+      "topic": "SpeechChallengeFailure",
+      "topic_text": "SpeechChallengeFailure",
+      "emotion": "Disgust 50",
+      "response_text": "I don't think so.",
+      "index": "16"
+    },
+    {
+      "topic": "UnderworldQuinnGreeting1",
+      "topic_text": "What? You're not going to tell me how rare it is to see a human in Underworld?",
+      "emotion": "Neutral 50",
+      "response_text": "Me? No, not at all. I'm used to your people. Truth is, I spend most of my time away from Underworld.",
+      "index": "17"
+    },
+    {
+      "topic": "UnderworldQuinnGreeting1a",
+      "topic_text": "Where do you go?",
+      "emotion": "Neutral 50",
+      "response_text": "Oh, here and there and everywhere. I've explored all up and down the coast, from the Commonwealth, to the Pitt, all the way down to Crater Banks.",
+      "index": "18"
+    },
+    {
+      "topic": "UnderworldQuinnGreeting1b",
+      "topic_text": "Wow, I just realized... I don't care.",
+      "emotion": "Neutral 50",
+      "response_text": "Suit yourself. But you're missing out. Do you want something else?",
+      "index": "21"
+    },
+    {
+      "topic": "UnderworldQuinnGreeting2",
+      "topic_text": "Nice to meet you, Quinn.",
+      "emotion": "Neutral 50",
+      "response_text": "You too, stranger. I know a lot of people around here don't take kindly to humans wandering around, but I've met a lot of your people in my travels.",
+      "index": "22"
+    },
+    {
+      "topic": "UnderworldQuinnGreeting2a",
+      "topic_text": "Travel? Where do you go?",
+      "emotion": "Neutral 50",
+      "response_text": "Oh, here and there and everywhere. I've explored all up and down the coast, from the Commonwealth, to the Pitt, all the way down to Crater Banks.",
+      "index": "23"
+    },
+    {
+      "topic": "UnderworldQuinnGreeting2b",
+      "topic_text": "Oh, I just remembered... I don't care.",
+      "emotion": "Neutral 50",
+      "response_text": "Suit yourself. But you're missing out. Do you want something else?",
+      "index": "26"
+    },
+    {
+      "topic": "UnderworldQuinnGreetingEND",
+      "topic_text": "Oh, God. I'm out of here.",
+      "emotion": "Neutral 50",
+      "response_text": "Suit yourself. I'll be here if you change your mind.",
+      "index": "27"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Sad 50",
+      "response_text": "Too bad about Crowley. I heard Tenpenny put out a contract on him.",
+      "index": "28"
+    },
+    {
+      "topic": "UnderworldTalkResponseShort1",
+      "topic_text": "UnderworldTalkHelloResponseShort",
+      "emotion": "Neutral 50",
+      "response_text": "Hey, hello! I just got back! Good to see you!",
+      "index": "33"
+    }
+  ],
+  "combat": []
+}

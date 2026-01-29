@@ -1,0 +1,101 @@
+{
+  "name": "The Tops floor manager",
+  "url": "/wiki/The_Tops_floor_manager",
+  "dialogue_name": "VFloorManagerTheTops.txt",
+  "dialogue_url": "/wiki/VFloorManagerTheTops.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "00145F8A",
+  "ref_id": "00151EE0",
+  "editor_id": "vFloorManagerTheTops",
+  "location": "The Topscasino floor",
+  "location_url": "/wiki/The_Tops",
+  "descriptions": [
+    "The Tops floor manager is the manager of the floor for The Tops casino in 2281.",
+    "The Tops floor manager is a member of the Chairmen responsible making their casino more approachable and guest friendly. The casino does this by having their floor manager give out special prizes like food and drink (and even a free hotel room), which entices Strip visitors to make use of the establishment (which, in reality, brings in more caps for the Chairmen).",
+    "The Tops floor manager will give the Courier food and drinks to encourage the player to gamble. The food and drinks will be given if the player wins some money. If you win too much and break the bank, the floor manager will ask the player to stop gambling at that establishment."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Chairmen",
+  "role": "Floor Manager",
+  "detailed_location": "The Tops",
+  "voice_actor": "Jesse Burch",
+  "special": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 5,
+    "Intelligence": 5,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "level": "1",
+  "misc_skills": [
+    {
+      "Hit Points:": "70"
+    }
+  ],
+  "karma": "Neutral",
+  "voice_type": "MaleAdult03",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "{Small Fry}Looks like you've hit a lucky streak there. You must be thirsty by now - here, have a drink on the house and keep on playing!",
+      "index": "1"
+    },
+    {
+      "topic": "vCasinoCompsTheTopsvFloorManagerTheTopsTopic000",
+      "topic_text": "What? Why?",
+      "emotion": "Neutral 50",
+      "response_text": "Let's be straight, baby: there's lucky and there's *too* lucky. You keep up like this and you're gonna break the bank.",
+      "index": "5"
+    },
+    {
+      "topic": "vCasinoCompsTheTopsvFloorManagerTheTopsTopic001",
+      "topic_text": "Sure, okay, I'm out of here.",
+      "emotion": "Neutral 50",
+      "response_text": "Smart move, kid. We're happy to have you come on in and spend some dough at the bar, take in a show, whatever - but you're cut off from the games.",
+      "index": "7"
+    },
+    {
+      "topic": "vCasinoCompsTheTopsvFloorManagerTheTopsTopic002",
+      "topic_text": "Fuck off, creep, I'm not going anywhere.",
+      "emotion": "Neutral 50",
+      "response_text": "Fine, then, you want to play rough? We'll play rough!",
+      "index": "8"
+    },
+    {
+      "topic": "vCasinoCompsTheTopsvFloorManagerTheTopsTopic003",
+      "topic_text": "Try to throw me out and you'll be leaving - in pieces.",
+      "emotion": "Neutral 50",
+      "response_text": "{Terrified}Jesus Christ!",
+      "index": "9"
+    },
+    {
+      "topic": "vCasinoCompsTheTopsvFloorManagerTheTopsTopic004",
+      "topic_text": "All right, I'm going.",
+      "emotion": "Neutral 50",
+      "response_text": "You're free to enjoy the shows and the bar, but no more games for you at The Tops. Thanks for playing.",
+      "index": "10"
+    },
+    {
+      "topic": "vCasinoCompsTheTopsvFloorManagerTheTopsTopic005",
+      "topic_text": "What? Why?",
+      "emotion": "Neutral 50",
+      "response_text": "You've taken us for a ride, and we want you out.",
+      "index": "11"
+    }
+  ],
+  "conversation": [],
+  "combat": []
+}

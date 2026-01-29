@@ -1,0 +1,135 @@
+{
+  "name": "Saint James",
+  "url": "/wiki/Saint_James",
+  "dialogue_name": "WestsideSaintJames.txt",
+  "dialogue_url": "/wiki/WestsideSaintJames.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000F889B",
+  "ref_id": "000F889D",
+  "editor_id": "WestsideSaintJames",
+  "location": "Casa Madrid Apartments",
+  "location_url": "/wiki/Casa_Madrid_Apartments",
+  "descriptions": [
+    "Saint James is a slaver living in Westside in 2281.",
+    "Saint James, together with his partner Dermot, used to work as a prospector scavenging around New Vegas, but in secret has turned to slavery by selling refugees as slaves to the Fiends.",
+    "On top of his psychosis, Saint James is an active pedophile. He is only kept manageable by a teddy bear from a little blonde girl that they kidnapped, originally part of one of the missing families from Aerotech Office Park, that Dermot bribed him with to keep him away from the \"merchandise.\"",
+    "Keeping himself from molesting children is not the only use for the teddy bear, as it has been a regular accessory to his sessions with Sweetie, his favorite prostitute."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "DermotFiendsWestside",
+  "role": "ProspectorSlaver",
+  "detailed_location": "Casa Madrid Apartments, Westside",
+  "voice_actor": "Jesse Burch",
+  "special": {
+    "Strength": 5,
+    "Perception": 6,
+    "Endurance": 5,
+    "Charisma": 6,
+    "Intelligence": 7,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "level": "7",
+  "tag_skills": [
+    {
+      "Guns:": "59"
+    },
+    {
+      "Melee Weap.:": "60"
+    },
+    {
+      "Speech:": "64"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "130"
+    }
+  ],
+  "karma": "Evil",
+  "voice_type": "MaleAdult03",
+  "geck_race": "AfricanAmerican",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Happy 10",
+      "response_text": "{Player in combat}Yeah! Fight! Fight!",
+      "index": "1"
+    },
+    {
+      "topic": "VCasaStJamesAboutStJames",
+      "topic_text": "What do you do around here?",
+      "emotion": "Neutral 50",
+      "response_text": "{saying the minimum, guarded}Me and Dermot work salvage around New Vegas.",
+      "index": "5"
+    },
+    {
+      "topic": "VCasaStJamesCoyotes",
+      "topic_text": "Some people have gone missing, and they were last seen dealing with you.",
+      "emotion": "Fear 20",
+      "response_text": "{irritated}I don't know a thing about no missing refugees from that Aerotech camp. Go cry to somebody else.",
+      "index": "6"
+    },
+    {
+      "topic": "VCasaStJamesLedger",
+      "topic_text": "I found this ledger in Dermot's room.",
+      "emotion": "Neutral 50",
+      "response_text": "You got his book?{shouting for Dermot as you attack player}Dermot, this bastard got your book! He got your book!",
+      "index": "7"
+    },
+    {
+      "topic": "VCasaStJamesTeddyBear",
+      "topic_text": "Look what I found in your room. <Show him the teddy bear.>",
+      "emotion": "Neutral 50",
+      "response_text": "{unstable, bungling your lies}What you doing stealing my stuff? That ain't even mine. I mean it's mine, but it's private. Give it back!",
+      "index": "9"
+    },
+    {
+      "topic": "VFreeformCasaMadrid1ESaintJamesTopic000",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah, fuck off.",
+      "index": "11"
+    },
+    {
+      "topic": "VFreeformCasaMadrid1ESaintJamesTopic001",
+      "topic_text": "I didn't mention Aerotech.",
+      "emotion": "Neutral 50",
+      "response_text": "{bungling your lie}Yeah, well, I must've heard rumors, and, uh...{losing patience}fuck you! You got nothing on me and Dermot.",
+      "index": "12"
+    },
+    {
+      "topic": "VFreeformCasaMadridWestsideSaintJamesTopic000",
+      "topic_text": "Tell me about Dermot, your partner.",
+      "emotion": "Neutral 50",
+      "response_text": "{unstable and not especially bright}What do you even mean? He's Dermot.",
+      "index": "13"
+    },
+    {
+      "topic": "VFreeformCasaMadridWestsideSaintJamesTopic001",
+      "topic_text": "I hear you spend most of your caps on Sweetie.",
+      "emotion": "Neutral 50",
+      "response_text": "That's private. I don't go asking about how you like to get laid, and I don't wanna know. Enough of that.",
+      "index": "15"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Fuck off.",
+      "index": "16"
+    }
+  ],
+  "combat": []
+}

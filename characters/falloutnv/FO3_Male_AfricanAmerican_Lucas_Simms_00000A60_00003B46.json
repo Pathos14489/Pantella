@@ -1,0 +1,509 @@
+{
+  "name": "Lucas Simms",
+  "url": "/wiki/Lucas_Simms",
+  "dialogue_name": "LucasSimms.txt",
+  "dialogue_url": "/wiki/LucasSimms.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "00000A60",
+  "ref_id": "00003B46",
+  "editor_id": "LucasSimms",
+  "location": "Megaton,Lucas Simms' house",
+  "location_url": "/wiki/Megaton",
+  "descriptions": [
+    "Lucas Simms is a resident of Megaton, serving as the sheriff and de facto mayor, in the Capital Wasteland in Fallout 3.",
+    "A native of Megaton, Lucas Simms grew up in the town and gained a deep understanding of what it takes to survive in the wasteland. Despite the harsh standard of living in the Capital Wastes, Lucas never surrendered his childhood cowboy fantasy, eventually acting on it to appoint himself the sheriff of Megaton in his adulthood; by 2277, few if any of the residents dispute his self-made position.",
+    "Along with his capacity as sheriff, Lucas also takes care of any public duty necessary for the people of his town - mayor, judge, etc. - and deals with most troublemakers by unceremoniously throwing them out of the town.",
+    "Despite his public position, most of the day-to-day affairs of Megaton are actually managed by Colin Moriarty, Simms' rival for control over the town.",
+    "Among the inhabiting residents, Lucas is generally well-liked. While big and intimidating at first, he often wins people over with his friendliness, charm, and the rustic Wild West aesthetic he lives out (even naming his son after a pre-War outlaw of the Old West).",
+    "Largely unknown to the public, at some point in his life, Simms also achieved membership in the secretive Regulators, serving the group's mission of combating evil and anarchy in the wasteland.",
+    "According to the Fallout 3 Official Game Guide Pre-War Collectors Edition's Afterword, written by Moira Brown, Harden Simms took over his father's position of sheriff of Megaton sometime before or around 2297. She also notes that Harden often claims while drunk that the Lone Wanderer was responsible for his father's death, indicating that Lucas died sometime around or after 2277.",
+    "If Lucas, Moriarty, or both are killed, Manya Vargas, Leo Stahl, and Harden will have unique dialogue when next talked to.",
+    "Lucas Simms appears in Fallout 3, Fallout Shelter, Fallout Shelter Online and Fallout: Wasteland Warfare."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "MegatonRegulators",
+  "role": "SheriffMayor",
+  "detailed_location": "Lucas Simms' house(Megaton)",
+  "voice_actor": "Gregory L. Williams",
+  "special": {
+    "Strength": 5,
+    "Perception": 6,
+    "Endurance": 6,
+    "Charisma": 5,
+    "Intelligence": 5,
+    "Agility": 7,
+    "Luck": 5
+  },
+  "mod_special_values": {
+    "Strength": 5,
+    "Perception": 7,
+    "Endurance": 6,
+    "Charisma": 6,
+    "Intelligence": 5,
+    "Agility": 7,
+    "Luck": 5
+  },
+  "level": "6→10 (player level x2)",
+  "tag_skills": [
+    {
+      "Big Guns:": "57→77"
+    },
+    {
+      "Small Guns:": "64→84(69→89)"
+    },
+    {
+      "Speech:": "55→75(57→77)"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "60→80"
+    },
+    {
+      "Damage Res.:": "4%(10%)"
+    }
+  ],
+  "karma": "Good",
+  "geck_race": "AfricanAmerican",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Anger 50",
+      "response_text": "Not now!{impatiently trying to get onto some difficult business.}",
+      "index": "1"
+    },
+    {
+      "topic": "MS11BackToTopicList",
+      "topic_text": "Let's talk about something else.",
+      "emotion": "Neutral 50",
+      "response_text": "All right. What's on your mind?",
+      "index": "34"
+    },
+    {
+      "topic": "MS11BombChoiceDisarmChoiceGood",
+      "topic_text": "I don't need a reward. I couldn't sleep at night knowing you could all die.",
+      "emotion": "Neutral 50",
+      "response_text": "Well that's mighty decent of you. Just don't, you know... go blowing us up. All right?{just got told by the player that he would disarm the bomb that everyone is afraid of}",
+      "index": "35"
+    },
+    {
+      "topic": "MS11BombChoiceDisarmChoiceNeutralAccept",
+      "topic_text": "100 caps? All right, I'll take a look at it.",
+      "emotion": "Neutral 50",
+      "response_text": "Great! Go ahead and see what you can do. Just be careful.",
+      "index": "36"
+    },
+    {
+      "topic": "MS11BombChoiceDisarmChoiceNeutralReject",
+      "topic_text": "Not my problem. Good luck, Sheriff.",
+      "emotion": "Neutral 50",
+      "response_text": "You're the one that brought it up. Not me.",
+      "index": "37"
+    },
+    {
+      "topic": "MS11BombChoiceDisarmChoiceSpeech",
+      "topic_text": "Demolition expertise doesn't come cheap. I want 500 caps.",
+      "emotion": "Neutral 50",
+      "response_text": "That's pretty steep....  Fine. Do it and you'll get your money. Don't screw up, though, or we'll ALL regret it.{haggling over the price to disarm a bomb}",
+      "index": "38"
+    },
+    {
+      "topic": "MS11BombChoiceExplode",
+      "topic_text": "Actually, Sheriff, I plan on detonating that bomb.",
+      "emotion": "Neutral 50",
+      "response_text": "I knew I shouldn't have trusted you. Dammit, boy! You picked the wrong man to mess with. Now I've got to put you in the ground.{upset that he was provoked into killing the player. This is not an idle threat. He means to do it and is confident he can}",
+      "index": "39"
+    },
+    {
+      "topic": "MS11BombChoiceTattleTail",
+      "topic_text": "I met a man named Burke. He said he'd pay me to rig the bomb to explode.",
+      "emotion": "Anger 50",
+      "response_text": "He said what?! Oh, I never did like the look of him...{smoldering anger}",
+      "index": "40"
+    },
+    {
+      "topic": "MS11BombChoiceTattleTail1",
+      "topic_text": "What if he asks someone else to explode the bomb? You should do something.",
+      "emotion": "Anger 75",
+      "response_text": "Good point. Come with me. You're about to get an education in Wasteland justice.{smoldering anger }",
+      "index": "42"
+    },
+    {
+      "topic": "MS11BombChoiceTattleTail2",
+      "topic_text": "He gave me this Fusion Pulse Charge to rig to the bomb. Here, take it.",
+      "emotion": "Fear 50",
+      "response_text": "Jesus! Gimme that thing!{ jumpy and snatching something dangerous of the players hands}",
+      "index": "44"
+    },
+    {
+      "topic": "MS11BombChoiceTattleTail3",
+      "topic_text": "Actually, I think he was just kidding.",
+      "emotion": "Anger 50",
+      "response_text": "You better stop playing games with me, boy!{strict and authoritarian}",
+      "index": "48"
+    },
+    {
+      "topic": "MS11BombHelpChoiceMessing with that bomb seems pretty technical. What if I can't do it?",
+      "topic_text": "I'm not sure I can disarm the bomb.",
+      "emotion": "Disgust 10",
+      "response_text": "I thought you knew what you were doing. If it's just nerves, maybe some chems will help. But if you can't handle it, don't go fiddling with it!{concerned someone unskilled might try to disarm the bomb}",
+      "index": "50"
+    },
+    {
+      "topic": "MS11LucasBomb",
+      "topic_text": "Let's discuss this bomb.",
+      "emotion": "Neutral 50",
+      "response_text": "What about it?",
+      "index": "51"
+    },
+    {
+      "topic": "MS11LucasBomb1a",
+      "topic_text": "Don't you think someone should disarm that thing?",
+      "emotion": "Neutral 50",
+      "response_text": "I don't trust any of the locals to tinker with it. Besides, most people don't even realize it's still a threat.",
+      "index": "52"
+    },
+    {
+      "topic": "MS11LucasBomb1b",
+      "topic_text": "Who would build a town around a bomb? That's crazy!",
+      "emotion": "Neutral 50",
+      "response_text": "It's not like the place was put up over night. Megaton's been here for decades, been growing and growing ever since.",
+      "index": "55"
+    },
+    {
+      "topic": "MS11LucasBomb1c",
+      "topic_text": "One day, that thing's going to go off. You're living on borrowed time.",
+      "emotion": "Disgust 15",
+      "response_text": "Maybe. Maybe...{ }",
+      "index": "59"
+    },
+    {
+      "topic": "MS11LucasBomb2a",
+      "topic_text": "I can see about disarming that bomb for you.",
+      "emotion": "Neutral 50",
+      "response_text": "Oh, all right. Fine. But listen here. Just take a look at it first. Go easy.{deadly serious}",
+      "index": "61"
+    },
+    {
+      "topic": "MS11LucasBomb2b",
+      "topic_text": "Whatever. I don't plan on sticking around very long, anyway.",
+      "emotion": "Happy 50",
+      "response_text": "Fine. Enjoy your stay in Megaton. Don't get into any trouble and we'll go on pretending we're friends.{mock sincerity}",
+      "index": "63"
+    },
+    {
+      "topic": "MS11LucasBomb2c",
+      "topic_text": "If that bomb ever explodes, it would be doing the world a favor...",
+      "emotion": "Anger 50",
+      "response_text": "Oh really? Is that so?{deadly serious, authoritative}",
+      "index": "64"
+    },
+    {
+      "topic": "MS11LucasGreet1a",
+      "topic_text": "Nice town you got here, sheriff. It's a pleasure to meet you.",
+      "emotion": "Surprise 50",
+      "response_text": "Friendly AND well-mannered? I think we're gonna get along just fine. You treat my people nice, and you're welcome to stay as long as you'd like.{Happily surprised that this person who just came from underground isn't some kind of social pariah, or psychopath.}",
+      "index": "67"
+    },
+    {
+      "topic": "MS11LucasGreet1b",
+      "topic_text": "Pffft. Nice hat, Calamity Jane.",
+      "emotion": "Surprise 10",
+      "response_text": "So that's the way it's gonna be, huh? That's fine. That's fine...",
+      "index": "68"
+    },
+    {
+      "topic": "MS11LucasGreet1c",
+      "topic_text": "<Say nothing.>",
+      "emotion": "Neutral 50",
+      "response_text": "The quiet type, huh? Fine. Might help keep you out of trouble. I hope you're not a weirdo. Got enough of those already.{responding to someone that just shrugged his shoulders indifferent to the conversation}",
+      "index": "70"
+    },
+    {
+      "topic": "MS11LucasGreet3a",
+      "topic_text": "Right. Message received.",
+      "emotion": "Neutral 50",
+      "response_text": "I'm glad we understand each other. Now, is there something I can help you with?",
+      "index": "71"
+    },
+    {
+      "topic": "MS11LucasGreet3b",
+      "topic_text": "You don't scare me.",
+      "emotion": "Surprise 50",
+      "response_text": "You got something you want to prove, boy?{challenging a fight}",
+      "index": "72"
+    },
+    {
+      "topic": "MS11LucasGreet3c",
+      "topic_text": "<Say nothing.>",
+      "emotion": "Neutral 50",
+      "response_text": "God, I hope you ain't one of those psychotic quiet types. So... is there anything else I can do for you?",
+      "index": "74"
+    },
+    {
+      "topic": "MS11LucasGreet4a",
+      "topic_text": "There's a new sheriff in town! It's time to die, asshole.",
+      "emotion": "Happy 50",
+      "response_text": "I ain't killed a drifter in weeks. This should be fun!{(cocky) about to get into a fight}",
+      "index": "75"
+    },
+    {
+      "topic": "MS11LucasGreet4bI want your hat. What do you think about that?",
+      "topic_text": "I want that hat. What do you think about that?",
+      "emotion": "Surprise 50",
+      "response_text": "I think you're suicidal. Try me.{challenging to a fight}",
+      "index": "76"
+    },
+    {
+      "topic": "MS11LucasGreet4c",
+      "topic_text": "Ha! I'm just messing with you.",
+      "emotion": "Neutral 50",
+      "response_text": "Fucking psycho Wastelanders...",
+      "index": "77"
+    },
+    {
+      "topic": "MS11LucasGreet5a",
+      "topic_text": "You're dead.",
+      "emotion": "Happy 50",
+      "response_text": "Let's do it, then!{about to get into a fight}",
+      "index": "78"
+    },
+    {
+      "topic": "MS11LucasGreet5b",
+      "topic_text": "I'm just messing with you. Relax!",
+      "emotion": "Neutral 50",
+      "response_text": "I've got my eye on you, drifter...",
+      "index": "79"
+    },
+    {
+      "topic": "MegLucasGreetChoiceBadChoiceNeutral",
+      "topic_text": "Sure. Whatever.",
+      "emotion": "Anger 50",
+      "response_text": "Glad we understand each other.{deadly serious.}",
+      "index": "80"
+    },
+    {
+      "topic": "MegLucasMegatonChoiceBackToTopics",
+      "topic_text": "Let's talk about something else.",
+      "emotion": "Neutral 50",
+      "response_text": "All right, shoot.{as in \"all right, go ahead and ask your question.\"}",
+      "index": "81"
+    },
+    {
+      "topic": "MegLucasMegatonChoiceBar",
+      "topic_text": "Know where I can get a drink?",
+      "emotion": "Neutral 50",
+      "response_text": "Sure. Head over to Moriarty's for spirits. Or, if you want something to eat, head over to the Brass Lantern.",
+      "index": "82"
+    },
+    {
+      "topic": "MegLucasMegatonChoiceClinic",
+      "topic_text": "Does the town have a doctor?",
+      "emotion": "Happy 50",
+      "response_text": "Yep. He's a bit cranky, but he means well. Just make sure there's something actually wrong with you before you bother him.",
+      "index": "83"
+    },
+    {
+      "topic": "MegLucasMegatonChoiceName",
+      "topic_text": "Why is the town called Megaton?",
+      "emotion": "Neutral 50",
+      "response_text": "The town's named after the bomb that's sitting in the middle of it. It hasn't gone off. Yet.",
+      "index": "85"
+    },
+    {
+      "topic": "MegTownDirections",
+      "topic_text": "I could use some directions around town.",
+      "emotion": "Neutral 50",
+      "response_text": "Sure thing, partner. What do you need to find?",
+      "index": "86"
+    },
+    {
+      "topic": "MegTownDirectionsBar",
+      "topic_text": "Is there a bar in town?",
+      "emotion": "Neutral 50",
+      "response_text": "Sure is  Moriarty's. The entrance is on the top level, opposite the Main Gate.",
+      "index": "87"
+    },
+    {
+      "topic": "MegTownDirectionsBed",
+      "topic_text": "Where can I rent a bed?",
+      "emotion": "Neutral 50",
+      "response_text": "Up at Moriarty's at the south end of town. Talk to Nova, she'll help you out.",
+      "index": "89"
+    },
+    {
+      "topic": "MegTownDirectionsClinic",
+      "topic_text": "Where's the closest clinic?",
+      "emotion": "Neutral 50",
+      "response_text": "Our clinic is down in the crater, by the bomb. Doc Church is a little rough around the edges, but the man's got talent and compassion.",
+      "index": "90"
+    },
+    {
+      "topic": "MegTownDirectionsEquipment",
+      "topic_text": "I need some equipment. Where's the nearest general store?",
+      "emotion": "Happy 50",
+      "response_text": "Moira sells all kinds of stuff at her place, Craterside Supply. Take a guess where it is? Heh heh heh heh.",
+      "index": "91"
+    },
+    {
+      "topic": "MegTownDirectionsGoBack",
+      "topic_text": "Let's talk about something else.",
+      "emotion": "Surprise 50",
+      "response_text": "Sure thing. What's on your mind?",
+      "index": "93"
+    },
+    {
+      "topic": "MegTownDirectionsWeapons",
+      "topic_text": "Is there a weapons dealer around here?",
+      "emotion": "Neutral 50",
+      "response_text": "You'll probably want to see Moira at Craterside Supply. She sells some weapons. Makes some too, from what I hear. Her place is down by the crater.",
+      "index": "94"
+    },
+    {
+      "topic": "MegTownEnd",
+      "topic_text": "That's all I needed to know.",
+      "emotion": "Neutral 50",
+      "response_text": "Right.",
+      "index": "95"
+    },
+    {
+      "topic": "MegTownFatherChoice",
+      "topic_text": "Now that I'm helping you, maybe you can help me. I'm looking for my dad...",
+      "emotion": "Surprise 50",
+      "response_text": "Well, come to think of it, I do remember a stranger coming through here. Had a look in his eye. You know the kind a man gets when he's got a purpose.{remembering}",
+      "index": "96"
+    },
+    {
+      "topic": "MegTownMegatonWhat can you tell me about Megaton?",
+      "topic_text": "Tell me more about your town.",
+      "emotion": "Neutral 50",
+      "response_text": "What do you want to know?",
+      "index": "99"
+    },
+    {
+      "topic": "MegTownWasteland",
+      "topic_text": "Know anything about the area outside Megaton?",
+      "emotion": "Neutral 100",
+      "response_text": "It's called \"The Wasteland\" for a reason. But there are settlements, too, spread all around. The human race is stubborn like that.",
+      "index": "100"
+    },
+    {
+      "topic": "SpeechChallengeFailure",
+      "topic_text": "SpeechChallengeFailure",
+      "emotion": "Anger 10",
+      "response_text": "Not an option, I'm afraid. We aren't exactly rolling in cash, down here.",
+      "index": "102"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "I have to go now.",
+      "emotion": "Neutral 50",
+      "response_text": "Don't blow us up, now.{joking, but to cover up serious nervousness}",
+      "index": "104"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Happy 25",
+      "response_text": "We're all still breathing. So I know you didn't screw up. You got something on your mind?{trying to muster patience and be kind}",
+      "index": "115"
+    },
+    {
+      "topic": "MS11BattleTopic",
+      "topic_text": "MS11BattleTopic",
+      "emotion": "Neutral 50",
+      "response_text": "You there! Burke! Explain your business in Megaton.{commanding, almost yelling}",
+      "index": "126"
+    },
+    {
+      "topic": "MS11LucasSimmsSayToPlayer",
+      "topic_text": "MS11LucasSimmsSayToPlayer",
+      "emotion": "Neutral 50",
+      "response_text": "Well I'll be damned. You're from that vault! Vault 101! Ha ha! I ain't seen one of those jumpsuits in a LONG time!",
+      "index": "130"
+    },
+    {
+      "topic": "MegatonHelloResponse",
+      "topic_text": "MegatonHelloResponse",
+      "emotion": "Neutral 50",
+      "response_text": "Howdy.",
+      "index": "132"
+    },
+    {
+      "topic": "MegatonTalk1",
+      "topic_text": "MegatonTalk",
+      "emotion": "Neutral 50",
+      "response_text": "What's up, son?",
+      "index": "134"
+    },
+    {
+      "topic": "MegatonTalk2",
+      "topic_text": "MegatonTalk2",
+      "emotion": "Neutral 50",
+      "response_text": "I wanted to tell you, I saw the patch job you did on that leaky section of roof. That was... That was really responsible of you, son. Thank you.",
+      "index": "136"
+    },
+    {
+      "topic": "MegatonTalk3",
+      "topic_text": "MegatonTalk3",
+      "emotion": "Neutral 50",
+      "response_text": "*Sigh.* You're right, Harden. You're right. No more broken promises. Let me just... get my affairs settled, and I'll free up some time. Okay?",
+      "index": "138"
+    },
+    {
+      "topic": "MegatonTalk4",
+      "topic_text": "MegatonTalk4",
+      "emotion": "Neutral 50",
+      "response_text": "I know, Harden. I know. You make me proud every day, son. What can I say, you're just like your dad! He he he he he.",
+      "index": "140"
+    }
+  ],
+  "combat": [
+    {
+      "topic": "AcceptYield",
+      "topic_text": "AcceptYield",
+      "emotion": "Anger 50",
+      "response_text": "Fine. One more chance. Do something that dumb again, and you're dead.{gruff and threatening, accepting a surrender from a trouble maker}",
+      "index": "142"
+    },
+    {
+      "topic": "Assault",
+      "topic_text": "Assault",
+      "emotion": "Anger 50",
+      "response_text": "Are you out of your goddamned mind?{gruff sheriff getting assaulted by a trouble maker}",
+      "index": "143"
+    },
+    {
+      "topic": "Attack",
+      "topic_text": "Attack",
+      "emotion": "Neutral 50",
+      "response_text": "Now THAT was a mistake.",
+      "index": "145"
+    },
+    {
+      "topic": "Flee",
+      "topic_text": "Flee",
+      "emotion": "Fear 50",
+      "response_text": "I give up already!{retreating}",
+      "index": "152"
+    },
+    {
+      "topic": "Murder",
+      "topic_text": "Murder",
+      "emotion": "Anger 50",
+      "response_text": "What the hell? No one gets away with murder in my town!{sheriff about to start shooting}",
+      "index": "153"
+    }
+  ]
+}

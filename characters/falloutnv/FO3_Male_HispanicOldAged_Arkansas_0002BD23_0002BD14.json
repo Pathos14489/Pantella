@@ -1,0 +1,90 @@
+{
+  "name": "Arkansas",
+  "url": "/wiki/Arkansas",
+  "dialogue_name": "",
+  "dialogue_url": null,
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": true,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "0002BD23",
+  "ref_id": "0002BD14",
+  "editor_id": "Arkansas",
+  "location": "Minefield",
+  "location_url": "/wiki/Minefield",
+  "descriptions": [
+    "Arkansas is a sniper residing in Minefield in the Capital Wasteland in Fallout 3.",
+    "The last remaining member of a tribe made up of military survivors who resided in the town of Ridgefield, Arkansas was a small boy when slavers from Paradise Falls came to the town and captured nearly everyone else.",
+    "Swearing revenge on the slavers, Arkansas began spreading rumors that the town had been repopulated in hopes of luring the slavers that took his tribe back, this time into a trap set by him. The trap succeeded, and when the slavers returned to the town, they found themselves under attack from Arkansas who used a combination of sniper fire and landmines to defend the town, wiping out the slaver group. Following this encounter, slaving raids on the town ceased entirely, and Ridgefield from then on became known as Minefield.",
+    "Aside from targeting inanimate objects nearby, from his perch in a three-story building at the north end of town, Arkansas will fire upon the vehicles scattered about the area, causing them to explode, when the player character approaches."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Minefield",
+  "role": "Sniper",
+  "detailed_location": "Minefield",
+  "voice_actor": "Paul Eiding",
+  "special": {
+    "Strength": 4,
+    "Perception": 9,
+    "Endurance": 5,
+    "Charisma": 1,
+    "Intelligence": 3,
+    "Agility": 6,
+    "Luck": 6
+  },
+  "mod_special_values": {
+    "Strength": 4,
+    "Perception": 9,
+    "Endurance": 6,
+    "Charisma": 1,
+    "Intelligence": 3,
+    "Agility": 7,
+    "Luck": 6
+  },
+  "level": "3→12",
+  "tag_skills": [
+    {
+      "Energy Weap.:": "46→85"
+    },
+    {
+      "Small Guns:": "40→79"
+    },
+    {
+      "Sneak:": "40→79"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "40→85(45→90)"
+    },
+    {
+      "Critical Chance:": "6%"
+    },
+    {
+      "Unarmed Dam.:": "1.25"
+    },
+    {
+      "Poison Resist.:": "20%(25%)"
+    },
+    {
+      "Rad. Resist.:": "8%(10%)"
+    },
+    {
+      "Carry Weight:": "190"
+    },
+    {
+      "Damage Res.:": "2%"
+    }
+  ],
+  "karma": "Neutral",
+  "voice_type": "MaleOld01DC",
+  "geck_race": "HispanicOldAged",
+  "topics": [],
+  "conversation": [],
+  "combat": []
+}

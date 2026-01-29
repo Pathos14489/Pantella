@@ -1,0 +1,206 @@
+{
+  "name": "Gary Staley",
+  "url": "/wiki/Gary_Staley",
+  "dialogue_name": "GaryStaley.txt",
+  "dialogue_url": "/wiki/GaryStaley.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": true,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000156BC",
+  "ref_id": "0001E74E",
+  "editor_id": "GaryStaley",
+  "location": "Gary's Galley,Rivet City market",
+  "location_url": "/wiki/Gary%27s_Galley",
+  "descriptions": [
+    "Gary Staley is a trader who lives in Rivet City and runs the Gary's Galley restaurant in 2277.",
+    "Gary is the owner and cook of Gary's Galley. He views himself as a gourmet chef, although he serves nothing more but canned food and an assortment of fruits and vegetables. He does occasionally sell high-quality produce, albeit at exorbitant prices.",
+    "* Only if Angela is also dead."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Rivet City",
+  "role": "CookDiner Owner",
+  "detailed_location": "Gary's Galley,Rivet City market",
+  "voice_actor": "Jeff Baker",
+  "special": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 7,
+    "Intelligence": 5,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "mod_special_values": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 7,
+    "Intelligence": 5,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "level": "4",
+  "tag_skills": [
+    {
+      "Barter:": "49"
+    },
+    {
+      "Melee Weap.:": "45"
+    },
+    {
+      "Speech:": "49"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "40(45)"
+    }
+  ],
+  "karma": "Good",
+  "voice_type": "MaleAdult01DefaultDC",
+  "geck_race": "CaucasianOld",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "Let me introduce myself. I am Gary Staley gourmet chef and gourmand. I'll be preparing your meal.",
+      "index": "1"
+    },
+    {
+      "topic": "MS03RCHistory1Could I ask you about Rivet City's history?",
+      "topic_text": "Do you know anything about Rivet City's history?",
+      "emotion": "Happy 5",
+      "response_text": "I know a lot of places opened up when they got the hydroponics bay working, but that's hardly the start of it all, is it?",
+      "index": "7"
+    },
+    {
+      "topic": "MS14TedFind",
+      "topic_text": "Where can I find Ted Strayer?",
+      "emotion": "Neutral 50",
+      "response_text": "Have you tried the common room?  That's where he sleeps.",
+      "index": "11"
+    },
+    {
+      "topic": "RCGaryNotNow",
+      "topic_text": "Not now. I'm busy",
+      "emotion": "Neutral 50",
+      "response_text": "Suit yourself.",
+      "index": "14"
+    },
+    {
+      "topic": "RCGaryStaleyBadFood",
+      "topic_text": "How do I know your slop is even edible?",
+      "emotion": "Anger 50",
+      "response_text": "Why you...",
+      "index": "15"
+    },
+    {
+      "topic": "RCGaryStaleyHungry",
+      "topic_text": "I am getting a bit hungry.",
+      "emotion": "Happy 50",
+      "response_text": "Perfect timing then! My Galley is in the market, at the far end. I'll save you some Mirelurk Cakes.",
+      "index": "18"
+    },
+    {
+      "topic": "RCGaryStaleyJudgeMyself",
+      "topic_text": "I hunt for my own food.",
+      "emotion": "Fear 50",
+      "response_text": "Ah, a true Wasteland warrior. Still, you should stop by my Galley in the market and try a Mirelurk cake. I'm sure you'll love it.",
+      "index": "19"
+    },
+    {
+      "topic": "RCGaryStaleyLoveMirelurk",
+      "topic_text": "I'm partial to Mirelurk Cakes myself.",
+      "emotion": "Happy 50",
+      "response_text": "Then you are in for a treat!",
+      "index": "20"
+    },
+    {
+      "topic": "RCGaryStaleyOtherFood",
+      "topic_text": "Mirelurk gives me gas. I'd rather have squirrel.",
+      "emotion": "Disgust 50",
+      "response_text": "Uh...maybe you should sit in the corner. I can check to see if we have any squirrel if you wish.",
+      "index": "21"
+    },
+    {
+      "topic": "RCTopicDiegoAngelaI heard Angela Staley has a crush on Diego.",
+      "topic_text": "I heard your daughter has a crush on Diego.",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah, I know. Thank God he's a priest. At least I know nothing's going on between them.",
+      "index": "22"
+    },
+    {
+      "topic": "RCTopicPaulieAddict",
+      "topic_text": "Did you know that Paulie Cantelli is an addict?",
+      "emotion": "Sad 50",
+      "response_text": "Yeah. He comes by every night around closing time and tries to get Cindy to let him close up.",
+      "index": "29"
+    },
+    {
+      "topic": "RCTopicWedding",
+      "topic_text": "When are Angela and Diego getting married?",
+      "emotion": "Happy 50",
+      "response_text": "If you want a good seat, get to the church before three tomorrow.",
+      "index": "31"
+    },
+    {
+      "topic": "RivetCityBarterI'm here to do business with you.",
+      "topic_text": "I'm hungry.",
+      "emotion": "Happy 50",
+      "response_text": "Here is our menu, sir.",
+      "index": "33"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYEI have to go now.",
+      "topic_text": "I should let you get back to your customers, Gary.",
+      "emotion": "Happy 50",
+      "response_text": "Thank you for coming to Gary's Galley.",
+      "index": "35"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Happy 50",
+      "response_text": "You've grown up so fast, Angela. I remember when you first learned to walk, and now you're getting married!",
+      "index": "36"
+    },
+    {
+      "topic": "RCGoodbye",
+      "topic_text": "RCGoodbye",
+      "emotion": "Sad 50",
+      "response_text": "I don't see her much these days. I'd much rather she spend her time with Diego than with someone like that Ted Strayer.",
+      "index": "43"
+    },
+    {
+      "topic": "RCGoodbye02",
+      "topic_text": "RCGoodbye02",
+      "emotion": "Sad 100",
+      "response_text": "Sorry. I just don't have enough money, Angela. I really wish I could.",
+      "index": "57"
+    },
+    {
+      "topic": "RCGoodbye03",
+      "topic_text": "RCGoodbye03",
+      "emotion": "Neutral 50",
+      "response_text": "Your mom was no Saint Monica. I wouldn't want someone like her. Besides, I like cooking.",
+      "index": "61"
+    },
+    {
+      "topic": "RCPackageEnd",
+      "topic_text": "RCPackageEnd",
+      "emotion": "Neutral 50",
+      "response_text": "Better open up. The breakfast crowd will be here soon.",
+      "index": "62"
+    }
+  ],
+  "combat": []
+}

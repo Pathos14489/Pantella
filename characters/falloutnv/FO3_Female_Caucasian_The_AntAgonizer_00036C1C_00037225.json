@@ -1,0 +1,299 @@
+{
+  "name": "The AntAgonizer",
+  "url": "/wiki/Tanya_Christoff",
+  "dialogue_name": "AntAgonizer.txt",
+  "dialogue_url": "/wiki/AntAgonizer.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "00036C1C",
+  "ref_id": "00037225",
+  "editor_id": "AntAgonizer",
+  "location": "Canterbury Commons's entrance,AntAgonizer's lair,random encounter*",
+  "location_url": "/wiki/Canterbury_Commons",
+  "descriptions": [
+    "Tanya Christoff, currently known as the AntAgonizer, is a \"supervillain\" residing in an underground lair near the town of Canterbury Commons in Fallout 3. She has been terrorizing the town with a horde of giant ants, and has recently begun to fight the Mechanist and his robots.",
+    "Tanya is the daughter of caravan drivers, who perished in a giant ant attack that both spared her and left her orphaned.",
+    "In particular, she blamed the Canterbury Commons, a trading hub which her parents helped make popular as a result of their trade route, that she now interpreted as a \"blight\" upon the Capital Wasteland.",
+    "Subsequently, Tanya became a recluse that townspeople would spot living in a sewer system to the north, caked in dirt and mud.",
+    "Meanwhile, Dominic dismisses the AntAgonizer as a \"crazy with an ant suit,\" and nothing more than a \"sideshow freak\" to the people of Canterbury Commons, with little regard given to her ultimate fate.",
+    "The Mechanist especially despises the AntAgonizer, to a point that he becomes angry at the mention of her name, and is suspicious that those around him are colluding with her.",
+    "It is unclear at which point the AntAgonizer began to don her own costume, but according to Derek her suit makes her \"super agile,\" and she herself thinks it makes her \"more than any ant could hope to be.\"",
+    "The AntAgonizer is currently not in a sound state of mind, genuinely believing that she is not only an ant, but an \"Ant Queen\"—one that reigns over a court of her own making.",
+    "She believes she was rescued from crawling in the \"muck of mankind\" when she was a larva, and is now trying to put an end to humanity's time.",
+    "If questioned about whether she truly thinks she is an ant, the AntAgonizer will deny the allegation and defensively ask whether the Lone Wanderer thinks she is insane.",
+    "A cause for why Tanya developed the AntAgonizer persona stems from her childhood, as each time she recalls her family, she speaks of them in a disgusted manner.",
+    "The Superhuman Gambit: After witnessing the latest battle between the AntAgonizer and Mechanist, the Lone Wanderer is offered payment by Uncle Roe to put an end to the struggle between the \"supers.\"",
+    "Tanya Christoff/the AntAgonizer appears in Fallout 3 and Fallout Shelter Online. The namesake fictional character is mentioned in the Pip-Boy game Grognak & the Ruby Ruins in Fallout 4 and by the comic book expert in the Fallout 76 update Expeditions: The Pitt.",
+    "PC Xbox 360 Sometimes she can glitch and end up standing outside of Megaton, still dressed in her costume but unaccompanied by her ants. This bug can occur if The Superhuman Gambit was completed without visiting her. "
+  ],
+  "race": "Human",
+  "gender": "Female",
+  "affiliation": "Giant ants(minions)The Mechanist(nemesis)",
+  "role": "\"Supervillain\"",
+  "detailed_location": "Canterbury CommonsAntAgonizer's lair",
+  "voice_actor": "Shari Elliker",
+  "special": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 7,
+    "Intelligence": 5,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "mod_special_values": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 6,
+    "Intelligence": 5,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "level": "3→12",
+  "tag_skills": [
+    {
+      "Barter:": "42→87(40→85)"
+    },
+    {
+      "Melee Weap.:": "40→85"
+    },
+    {
+      "Speech:": "42→87(40→85)"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "35→80"
+    },
+    {
+      "Critical Chance:": "5%"
+    },
+    {
+      "Unarmed Dam.:": "1.15"
+    },
+    {
+      "Poison Resist.:": "15%"
+    },
+    {
+      "Rad. Resist.:": "6%"
+    },
+    {
+      "Carry Weight:": "200"
+    },
+    {
+      "Damage Res.:": "16%(42%)"
+    }
+  ],
+  "karma": "Evil",
+  "voice_type": "FemaleAdult01DefaultDC",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Disgust 50",
+      "response_text": "So, Mechanist! You've come to throw yourself on the mercy of the Ant Queen?",
+      "index": "1"
+    },
+    {
+      "topic": "MS02AntOrigin",
+      "topic_text": "You got this \"AntAgonizer\" idea from a comic, didn't you?",
+      "emotion": "Surprise 75",
+      "response_text": "What? No! No children's book could possibly capture the true depth of the AntAgonizer!{She totally did, but she's surprised anyone else could know, and trying (badly) to cover it up}",
+      "index": "21"
+    },
+    {
+      "topic": "MS02AntOrigin2A",
+      "topic_text": "I read that the AntAgonizer was an orphaned girl who could still be redeemed.",
+      "emotion": "Surprise 75",
+      "response_text": "You... You really believe that?{Shocked, totally dropping her facade}",
+      "index": "22"
+    },
+    {
+      "topic": "MS02AntOrigin2B",
+      "topic_text": "From what I read, Grognak totally kicked her ass!",
+      "emotion": "Anger 75",
+      "response_text": "Lies! Grognak could never defeat me! He's not even real! Not like the AntAgonizer!",
+      "index": "27"
+    },
+    {
+      "topic": "MS02Retire",
+      "topic_text": "We all make mistakes, but there's still a chance for us. I believe in you.",
+      "emotion": "Surprise 75",
+      "response_text": "You're wrong. Humans are cruel, hurtful beasts! They can't be saved... we can't be...{Growing uncertainty}",
+      "index": "29"
+    },
+    {
+      "topic": "MS02RetireNo",
+      "topic_text": "Now that I have your suit, I'd say you don't have a chance at all. Time to die.",
+      "emotion": "Surprise 75",
+      "response_text": "What?! No!{Shocked and betrayed}",
+      "index": "39"
+    },
+    {
+      "topic": "MS02RetireYes",
+      "topic_text": "Certainly. Good luck in your new life.",
+      "emotion": "Sad 25",
+      "response_text": "Thank you. I don't know how I can...{Sincere and overwhelmed}",
+      "index": "40"
+    },
+    {
+      "topic": "MS02SuitChallenge",
+      "topic_text": "Don't waste your time with this suit. It isn't worthy of your attention.",
+      "emotion": "Happy 75",
+      "response_text": "You're right. Why bother with a trophy of one pitiful human, when I can go forth and make a trophy of the entire world!",
+      "index": "42"
+    },
+    {
+      "topic": "MS02SuitNo",
+      "topic_text": "If you want the suit, you'll have to take it from me.",
+      "emotion": "Anger 75",
+      "response_text": "Very well. I never got a chance to take it from the Mechanist's corpse, so yours will have to do.{angry and about to start combat}",
+      "index": "45"
+    },
+    {
+      "topic": "MS02SuitReitreExit",
+      "topic_text": "My apologies, Ant Queen. Please, continue.",
+      "emotion": "Anger 50",
+      "response_text": "As I thought. Now, give me the Mechanist's suit!",
+      "index": "46"
+    },
+    {
+      "topic": "MS02SuitRetire1",
+      "topic_text": "Wait. First, let's talk about what you've been doing.",
+      "emotion": "Anger 50",
+      "response_text": "You would dare to tell the AntAgonizer to wait? No human commands the Ant Queen!",
+      "index": "47"
+    },
+    {
+      "topic": "MS02SuitWhy",
+      "topic_text": "Why do you want the suit?",
+      "emotion": "Happy 50",
+      "response_text": "Isn't it only fitting to gloat over the corpse of one's fallen foe? To revel in a victory over a larger and stronger opponent overcome?{angry and about to start combat}",
+      "index": "49"
+    },
+    {
+      "topic": "MS02SuitYes",
+      "topic_text": "Here, you can have it. Just move on and leave Canterbury alone.",
+      "emotion": "Happy 65",
+      "response_text": "Excellent. It shall make a fine memento of a nemesis bested. A trophy of a foe... antagonized!{Over the top, and relishing using her super-name. like a cheesy supervillain.}",
+      "index": "51"
+    },
+    {
+      "topic": "MS02SuperheroExplain1aMS02SuperheroExplain1",
+      "topic_text": "Your ants are a joke. Time to die, crazy lady!",
+      "emotion": "Anger 50",
+      "response_text": "My loyal subjects are the result of 100 million years of evolution, and they'll outlive your pitiful kind. We'll see who has the last laugh!{haughty}",
+      "index": "54"
+    },
+    {
+      "topic": "MS02SuperheroExplain1bMS02SuperheroExplain1",
+      "topic_text": "Your days of terrorizing the town are over. Give up and you won't get hurt.",
+      "emotion": "Surprise 50",
+      "response_text": "Ha ha! You would walk here and presume to command me?{haughty condescending amusement}",
+      "index": "56"
+    },
+    {
+      "topic": "MS02SuperheroExplain1cMS02SuperheroExplain3",
+      "topic_text": "Relax. I'm here to help you get rid of that Mechanist character.",
+      "emotion": "Surprise 75",
+      "response_text": "This is an unexpected surprise! A human who understands its place.{almost to herself.}",
+      "index": "60"
+    },
+    {
+      "topic": "MS02SuperheroExplain2a",
+      "topic_text": "You do realize you're not really an ant... right?",
+      "emotion": "Surprise 65",
+      "response_text": "Of course I do! Do you think I'm insane?!{Sounding slightly insane.}",
+      "index": "63"
+    },
+    {
+      "topic": "MS02SuperheroExplain2b",
+      "topic_text": "Without your suit, you're just a normal human like anyone else.",
+      "emotion": "Anger 50",
+      "response_text": "Lies! Unlike the rest of you peasants, I was born for greatness. I was never meant to crawl in the muck of mankind!",
+      "index": "66"
+    },
+    {
+      "topic": "MS02SuperheroExplain2c",
+      "topic_text": "Maybe you're right. Maybe I should join your side.",
+      "emotion": "Disgust 75",
+      "response_text": "Yes, you would join me in fighting the Mechanist! Him and his little tin men, made by humans to kill humans for other humans.{dripping with disgust and loathing}",
+      "index": "72"
+    },
+    {
+      "topic": "MS02SuperheroExplain3a",
+      "topic_text": "I swear, we will destroy the Mechanist and his pitiful toys!",
+      "emotion": "Happy 65",
+      "response_text": "Excellent! Rise, my loyal soldier, and prepare for battle! We leave to fight the Mechanist immediately! Humanity shall fall; our colony shall feast!{gleefully}",
+      "index": "74"
+    },
+    {
+      "topic": "MS02SuperheroExplain3b",
+      "topic_text": "There's bound to be a peaceful solution. I'll try to convince him to give up.",
+      "emotion": "Disgust 40",
+      "response_text": "Ha! When it comes to the struggle for power, there is no peace! There is only strength and conflict!{condescending}",
+      "index": "78"
+    },
+    {
+      "topic": "MS02SuperheroExplain3c",
+      "topic_text": "I don't give a damn about your court. I just want the Mechanist dead.",
+      "emotion": "Happy 40",
+      "response_text": "You're a rebellious little soldier, but I respect your strength. You may work with my colony for now. Humanity shall fall and our colony shall feast!{A little surprised at the impertinence, a little pleased.}",
+      "index": "81"
+    },
+    {
+      "topic": "SpeechChallengeFailure",
+      "topic_text": "SpeechChallengeFailure",
+      "emotion": "Happy 50",
+      "response_text": "Perhaps humanity isn't dead yet, but I'll be sure to help it along. Its writhing corpse shall feed my colony well.{Emphasis on the \"Yet\". Positively delicious satisfaction in the phrase \"feed my colony well\"}",
+      "index": "85"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "I have to go now.",
+      "emotion": "Anger 100",
+      "response_text": "Well, then, get going! I'm busy plotting!{cranky}",
+      "index": "90"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Anger 100",
+      "response_text": "You are in the presence of ant royalty!{regal and a little deranged}",
+      "index": "92"
+    },
+    {
+      "topic": "MS02Battle",
+      "topic_text": "MS02Confrontation",
+      "emotion": "Neutral 50",
+      "response_text": "Now, fool, tremble before the might of the AntAgonizer!{evil super villain shouting while her armies of ants destroy an innocent town}",
+      "index": "93"
+    },
+    {
+      "topic": "MS02BattleFlee",
+      "topic_text": "MS02BattleFlee",
+      "emotion": "Anger 50",
+      "response_text": "Another do-gooder? No matter! My plans can wait for now, Mechanist!{Over-the-top super-villain}",
+      "index": "98"
+    }
+  ],
+  "combat": [
+    {
+      "topic": "Flee",
+      "topic_text": "Flee",
+      "emotion": "Anger 50",
+      "response_text": "What's this? Another do-gooder? You haven't seen the last of me, Mechanist!",
+      "index": "100"
+    }
+  ]
+}

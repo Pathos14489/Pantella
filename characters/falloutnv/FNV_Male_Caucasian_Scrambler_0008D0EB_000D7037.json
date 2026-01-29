@@ -1,0 +1,118 @@
+{
+  "name": "Scrambler",
+  "url": "/wiki/Scrambler",
+  "dialogue_name": "NCRCFScrambler.txt",
+  "dialogue_url": "/wiki/NCRCFScrambler.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "0008D0EB",
+  "ref_id": "000D7037",
+  "editor_id": "NCRCFScrambler",
+  "location": "NCR CF administration",
+  "location_url": "/wiki/NCR_CF_administration",
+  "descriptions": [
+    "Scrambler is allegedly the toughest member of the Powder Gangers living in the NCR Correctional Facility in 2281.",
+    "What Scrambler has to say to the Courier marks him as an extremely violent and psychotic individual who has a very nonchalant attitude towards his crimes, including homicide and infanticide, which he describes as \"not much\" when asked what he did to be sent to the NCRCF. He is also one of Eddie's bodyguards or, as he puts it, he \"keeps an eye\" on him.",
+    "On occasion, friendly Powder Gangers may warn the Courier that Scrambler is acting up more than usual and advise to stay away from him.",
+    "He can be found in the warden's office of the correctional facility, guarding Eddie, and never leaving Eddie's side except to chase an attacker.",
+    "Scrambler never leaves Eddie's side, unless lured away."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Powder Gangers",
+  "role": "Elite bodyguard",
+  "detailed_location": "NCR Correctional Facility",
+  "voice_actor": "Alex Mendoza",
+  "special": {
+    "Strength": 10,
+    "Perception": 5,
+    "Endurance": 10,
+    "Charisma": 3,
+    "Intelligence": 3,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "level": "5",
+  "tag_skills": [
+    {
+      "Guns:": "49"
+    },
+    {
+      "Melee Weap.:": "51"
+    },
+    {
+      "Unarmed:": "67"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "115"
+    },
+    {
+      "Dam. Threshold:": "4→5"
+    }
+  ],
+  "karma": "Evil",
+  "voice_type": "MaleAdult07",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Anger 50",
+      "response_text": "What are you looking at?",
+      "index": "1"
+    },
+    {
+      "topic": "VFreeformNCRCFNCRCFScramblerTopic000",
+      "topic_text": "What do you do around here?",
+      "emotion": "Neutral 50",
+      "response_text": "{Eddie alive}I keep an eye on my buddy Eddie. Anybody messes with him and I scramble them real good.",
+      "index": "3"
+    },
+    {
+      "topic": "VFreeformNCRCFNCRCFScramblerTopic001",
+      "topic_text": "Why are you called Scrambler?",
+      "emotion": "Neutral 50",
+      "response_text": "Why? It's because I mess up people so bad they don't know what part goes where when I'm done.",
+      "index": "5"
+    },
+    {
+      "topic": "VFreeformNCRCFNCRCFScramblerTopic004",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "That's right. Fuck off.",
+      "index": "6"
+    },
+    {
+      "topic": "VFreeformNCRCFNCRCFScramblerTopic005",
+      "topic_text": "What did you do to end up in here?",
+      "emotion": "Neutral 50",
+      "response_text": "Not much, just killed a bunch of people. Maybe a couple of kids, too. Whatever.",
+      "index": "7"
+    },
+    {
+      "topic": "VFreeformNCRCFNCRCFScramblerTopic006",
+      "topic_text": "How did you all break out?",
+      "emotion": "Neutral 50",
+      "response_text": "Dynamite. Lots and lots of dynamite. You should've seen the body parts flying everywhere.",
+      "index": "8"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Uh-huh.",
+      "index": "9"
+    }
+  ],
+  "combat": []
+}

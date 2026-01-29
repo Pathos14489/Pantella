@@ -1,0 +1,133 @@
+{
+  "name": "Knight Dillon",
+  "url": "/wiki/Dillon_(Fallout_3)",
+  "dialogue_name": "GNRKnightDillon.txt",
+  "dialogue_url": "/wiki/GNRKnightDillon.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "00025955",
+  "ref_id": "00025956",
+  "editor_id": "GNRKnightDillon",
+  "location": "GNR building plaza",
+  "location_url": "/wiki/GNR_building_plaza_(Fallout_3)",
+  "descriptions": [
+    "Knight Dillon is a Brotherhood of Steel member inside the Galaxy News Radio building in 2277.",
+    "Knight Dillon guards the GNR station interior alongside Knight Finley and Knight Sergeant Wilks. He hates the super mutants like the rest of the Brotherhood.",
+    "He is a fan of GNR, claiming that it is the only radio station in the Capital Wasteland that \"tells it like it really is.\"",
+    "Knight Dillon spends his day guarding the Galaxy News Radio building."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Brotherhood of Steel",
+  "role": "Guard",
+  "detailed_location": "GNR building plaza",
+  "voice_actor": "Jeff Baker",
+  "special": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 6,
+    "Charisma": 4,
+    "Intelligence": 3,
+    "Agility": 6,
+    "Luck": 4
+  },
+  "mod_special_values": {
+    "Strength": 8,
+    "Perception": 5,
+    "Endurance": 6,
+    "Charisma": 4,
+    "Intelligence": 3,
+    "Agility": 4,
+    "Luck": 4
+  },
+  "level": "4",
+  "tag_skills": [
+    {
+      "Big Guns:": "44"
+    },
+    {
+      "Energy Weap.:": "46"
+    },
+    {
+      "Small Guns:": "44(40)"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Good",
+  "voice_type": "MaleAdult01DefaultDC",
+  "geck_race": "AfricanAmerican",
+  "topics": [
+    {
+      "topic": "GNRGalaxyNewsRadio",
+      "topic_text": "What's this building for?",
+      "emotion": "Neutral 50",
+      "response_text": "You got a Pip-Boy. Tune into Galaxy News Radio and listen. It's the only radio station in the Capital Wasteland that tells it like it really is.",
+      "index": "1"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "Pleased to meet you. I'm Knight Dillon. If there's anything you need here, I'll try and help.",
+      "index": "2"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GNRGoodbyes",
+      "topic_text": "GNRGoodbyes",
+      "emotion": "Neutral 50",
+      "response_text": "Nah, I guess you're right.",
+      "index": "4"
+    },
+    {
+      "topic": "GNRResponses03",
+      "topic_text": "GNRResponses03",
+      "emotion": "Happy 50",
+      "response_text": "Just ready to take down some Super Mutants, brother. Otherwise, all quiet.",
+      "index": "8"
+    },
+    {
+      "topic": "GNRResponses04",
+      "topic_text": "GNRResponses04",
+      "emotion": "Happy 50",
+      "response_text": "Yes, that was an excellent shot, brother. I can only hope to be as good as you someday.",
+      "index": "9"
+    },
+    {
+      "topic": "GNRResponses05",
+      "topic_text": "GNRResponses05",
+      "emotion": "Neutral 50",
+      "response_text": "Anything in particular we should be looking out for?",
+      "index": "10"
+    },
+    {
+      "topic": "GNRResponses06",
+      "topic_text": "GNRResponses06",
+      "emotion": "Neutral 50",
+      "response_text": "What's up, sir? Expecting something in particular?",
+      "index": "11"
+    },
+    {
+      "topic": "GOODBYE",
+      "topic_text": "I have to go now.",
+      "emotion": "Neutral 50",
+      "response_text": "You're welcome back anytime. The Brotherhood never forgets its allies.",
+      "index": "12"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Disgust 50",
+      "response_text": "I can't believe we're stuck out here babysitting a radio station.",
+      "index": "14"
+    }
+  ],
+  "combat": []
+}

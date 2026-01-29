@@ -1,0 +1,279 @@
+{
+  "name": "Ranger Andy",
+  "url": "/wiki/Andy_(Ranger)",
+  "dialogue_name": "RangerAndy.txt",
+  "dialogue_url": "/wiki/RangerAndy.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "0008F0BA",
+  "ref_id": "0008F0B8",
+  "editor_id": "RangerAndy",
+  "location": "Ranger Andy's bungalow",
+  "location_url": "/wiki/Ranger_Andy%27s_bungalow",
+  "descriptions": [
+    "Ranger Andy is a former NCR Ranger living in Novac in 2281.",
+    "A veteran of the NCR Rangers, Andy is the closest Novac has to a proper lawman, watching the town while Vargas and Boone watch the highway.",
+    "If he was still in his prime, he would not bat an eye and keep limping about. However, Andy has problems with his arm and leg, leftover from his service and the incident that forced him into retirement. A few years back, he led a team of Rangers to act upon intel that there were Legion slavers holed up in a burned-out house a few kilometers from their station. The place was deserted, save for a scrawny child hiding in the closet. Andy tried to pick him up, to take him to the station and into proper care, but the child hid back in the closet, leaving him with a live grenade at his feet. Although he survived the explosion, half his body was mangled and he couldn't continue to serve.",
+    "He settled at Novac, becoming the closest the town has to a sheriff. He had an eye for people and was one of the few who did not dislike Carla Boone based on her behavior. He considered her a sweet girl, even if she had a tendency to be pretty direct about the quality of life in Novac. He believed it was just a coping mechanism with living on the frontier, reminding herself that there was a better life out there. To keep his spirits up, he stays in touch with the Rangers over at Ranger Station Charlie through his ham radio, with patrols checking up on him regularly. They joke it is paying respects, something Andy takes in stride with a smile on his face - one of the few his retirement affords him. But as of when the Courier arrives in Novac, Ranger Station Charlie has not responded in a couple of days and has had him worried enough to ask a stranger to check up on them for him.",
+    "Audio in the files for Fallout: New Vegas include several of Andy's lines recorded by fellow voice actor Gregory Alan Williams."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "NovacNCR Rangers(formerly)",
+  "role": "Citizen",
+  "detailed_location": "Ranger Andy's bungalow,Novac",
+  "voice_actor": "Emerson Brooks",
+  "special": {
+    "Strength": 5,
+    "Perception": 6,
+    "Endurance": 6,
+    "Charisma": 4,
+    "Intelligence": 5,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "level": "10",
+  "tag_skills": [
+    {
+      "Guns:": "68"
+    },
+    {
+      "Sneak:": "68"
+    },
+    {
+      "Unarmed:": "68"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Neutral",
+  "voice_type": "MaleAdult01DefaultB",
+  "geck_race": "AfricanAmericanOld",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Happy 20",
+      "response_text": "We haven't met yet. You must be new in town. I'm Andy.",
+      "index": "1"
+    },
+    {
+      "topic": "RangerAndyLeg",
+      "topic_text": "Did you do something to your leg?",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah. Twice. Actually the first time it was more like half my body. Knocked me out of the Rangers.",
+      "index": "6"
+    },
+    {
+      "topic": "RangerAndyLegStory",
+      "topic_text": "What happened?",
+      "emotion": "Neutral 50",
+      "response_text": "A few years back, we get a tip that some Legion slavers were holed up in this burnt out house a few klicks from where we were stationed.",
+      "index": "8"
+    },
+    {
+      "topic": "RangerAndySomethingElse",
+      "topic_text": "Let's talk about something else.",
+      "emotion": "Happy 30",
+      "response_text": "<Laughs>Yeah. I'm with you there.",
+      "index": "11"
+    },
+    {
+      "topic": "RangerAndyStationAcceptLogQuest",
+      "topic_text": "I'll come back when I know more.",
+      "emotion": "Neutral 50",
+      "response_text": "Be careful out there.",
+      "index": "13"
+    },
+    {
+      "topic": "RangerAndyStationCompletion",
+      "topic_text": "RangerAndyStationCompletion",
+      "emotion": "Neutral 50",
+      "response_text": "Well, thanks for telling me. I know that knowledge didn't come without risk.",
+      "index": "14"
+    },
+    {
+      "topic": "RangerAndyStationDeclineLogQuest",
+      "topic_text": "I'm not interested in this town's problems.",
+      "emotion": "Neutral 50",
+      "response_text": "Sorry you feel that way. Then again, I'm not so sure I want to know who did this, myself.",
+      "index": "19"
+    },
+    {
+      "topic": "RangerAndyStationLookIntoOffer",
+      "topic_text": "Would you feel better if I checked on your NCR friends for you?",
+      "emotion": "Neutral 50",
+      "response_text": "Uh... no. No. They're gonna think I'm having trouble letting go. They're good soldiers. I don't give them enough credit.",
+      "index": "20"
+    },
+    {
+      "topic": "RangerAndyStationNCRWeak",
+      "topic_text": "The Rangers are soft. They're probably already dead.",
+      "emotion": "Anger 60",
+      "response_text": "Obviously you don't know the first damn thing about the Rangers. Without them, nobody in these parts would be safe.",
+      "index": "21"
+    },
+    {
+      "topic": "RangerAndyStationProbablyNothing",
+      "topic_text": "A station full of Rangers ought to be able to handle themselves.",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah, who am I kidding? It's funny, you get stuck in your room for a few weeks, you start to worry the world's gonna fall apart without you.",
+      "index": "23"
+    },
+    {
+      "topic": "RangerAndyStationRansacked",
+      "topic_text": "I went to the ranger station. Everyone there was wiped out.",
+      "emotion": "Neutral 50",
+      "response_text": "What? What happened?",
+      "index": "25"
+    },
+    {
+      "topic": "RangerAndyStationReportLie",
+      "topic_text": "<Lie> The attackers are all dead too. It's impossible to identify them.",
+      "emotion": "Sad 50",
+      "response_text": "Those were good men at the station. Good men. This whole town was sleeping a lot easier because of them.",
+      "index": "26"
+    },
+    {
+      "topic": "RangerAndyStationReportNoDetails",
+      "topic_text": "I don't know the details. I just saw a lot of dead rangers.",
+      "emotion": "Anger 70",
+      "response_text": "God damn it! I just spoke to them the other day. If this is some kind of sick joke-",
+      "index": "31"
+    },
+    {
+      "topic": "RangerAndyStationReportTrue",
+      "topic_text": "Members of Caesar's Legion ambushed them.",
+      "emotion": "Sad 40",
+      "response_text": "Those were good men at the station. Good men. This whole town was sleeping a lot easier because of them.",
+      "index": "35"
+    },
+    {
+      "topic": "RangerAndyStationReportUnsure",
+      "topic_text": "Actually, I'm still not sure.",
+      "emotion": "Anger 30",
+      "response_text": "Please, if you know the truth, tell me. Those guys were friends of mine.",
+      "index": "40"
+    },
+    {
+      "topic": "RangerAndyStationReturnWithLog",
+      "topic_text": "I found out who killed the Rangers at Station Charlie.",
+      "emotion": "Fear 30",
+      "response_text": "I'm afraid to ask.",
+      "index": "42"
+    },
+    {
+      "topic": "RangerAndyUsefulKnowledge",
+      "topic_text": "Your body is injured, not your mind. You're kidding yourself if you think you're useless.",
+      "emotion": "Happy 35",
+      "response_text": "Heh. People don't exactly line up to find out what's in my head. Can't remember the last time someone suggested I knew something worth knowing.",
+      "index": "43"
+    },
+    {
+      "topic": "RangerAndyWhatDoYouDo",
+      "topic_text": "What do you do here, Andy?",
+      "emotion": "Neutral 50",
+      "response_text": "Right now? A whole lot of sitting on my keister and counting cracks in the ceiling. I wouldn't wish it on anybody.",
+      "index": "47"
+    },
+    {
+      "topic": "RangerAndyWithNCR",
+      "topic_text": "You're with the NCR, right?",
+      "emotion": "Neutral 50",
+      "response_text": "Was. Was with them. That was back when my arm and leg used to work better.",
+      "index": "49"
+    },
+    {
+      "topic": "SnipersRevengeBooneWife",
+      "topic_text": "What can you tell me about Boone's wife?",
+      "emotion": "Happy 25",
+      "response_text": "Carla was a knockout. Whenever Boone walked around with her, he always had this funny grin on his face like he couldn't believe his luck.",
+      "index": "54"
+    },
+    {
+      "topic": "SnipersRevengeComeOutside",
+      "topic_text": "Come with me. There's something you should see, in front of the dinosaur.",
+      "emotion": "Neutral 50",
+      "response_text": "As long as we don't go too far. Jeannie May would have a fit if she saw me out and about.",
+      "index": "60"
+    },
+    {
+      "topic": "SnipersRevengeTooFar",
+      "topic_text": "SnipersRevengeTooFar",
+      "emotion": "Neutral 50",
+      "response_text": "Hey, I'm sorry, but I've gotta turn around. Leg's giving me some trouble.",
+      "index": "62"
+    },
+    {
+      "topic": "SnipersRevengeWrongWithBoone",
+      "topic_text": "What's wrong with Boone?",
+      "emotion": "Neutral 50",
+      "response_text": "Had his wife taken. I don't think he'll ever be the same as he was. Damn shame.",
+      "index": "63"
+    },
+    {
+      "topic": "SpeechChallengeFailure",
+      "topic_text": "SpeechChallengeFailure",
+      "emotion": "Neutral 50",
+      "response_text": "No, I don't think I have much to offer in that department either. Too many blows to the head during combat drills.",
+      "index": "65"
+    },
+    {
+      "topic": "VDialogueNovacRangerAndyTopic000",
+      "topic_text": "Hey, just because you're idle and you'll never walk again... I forgot where I was going with that.",
+      "emotion": "Neutral 50",
+      "response_text": "{Trying to be polite after getting unintentionally offended}I'm sure it was very inspiring.",
+      "index": "66"
+    },
+    {
+      "topic": "VDialogueNovacRangerAndyTopic001",
+      "topic_text": "What did you do?",
+      "emotion": "Neutral 50",
+      "response_text": "I go to grab him out of there and I notice he's holding something in his hand. Something metal.",
+      "index": "67"
+    },
+    {
+      "topic": "VDialogueNovacRangerAndyTopic002",
+      "topic_text": "Tell me about the Rangers.",
+      "emotion": "Neutral 50",
+      "response_text": "They're the NCR's finest. A one-man platoon, each of 'em.",
+      "index": "71"
+    },
+    {
+      "topic": "VFreeformNovacRangerAndyTopic000",
+      "topic_text": "<Lie> I think the attackers were dead too... so it's... hard to tell.",
+      "emotion": "Neutral 50",
+      "response_text": "In Ranger school, they teach you how to spot a liar. I don't know why you're lying, but have it your way. We'll protect this town or die trying.",
+      "index": "74"
+    },
+    {
+      "topic": "VMQ01LookingForManny",
+      "topic_text": "I'm looking for a man in a checkered coat. Have you seen anyone like that?",
+      "emotion": "Neutral 50",
+      "response_text": "No, but I've been laid up for a while now. Haven't been able to keep an eye on things like usual.",
+      "index": "75"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Hey, uh. Wait a sec. I know what I said, but...  if you find yourself by Ranger Station Charlie, let me know what you find. I'd be interested.",
+      "index": "77"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "Hello",
+      "emotion": "Neutral 50",
+      "response_text": "Hey. Welcome.",
+      "index": "79"
+    }
+  ],
+  "combat": []
+}

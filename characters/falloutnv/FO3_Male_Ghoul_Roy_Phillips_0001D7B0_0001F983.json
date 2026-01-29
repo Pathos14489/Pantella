@@ -1,0 +1,371 @@
+{
+  "name": "Roy Phillips",
+  "url": "/wiki/Roy_Phillips",
+  "dialogue_name": "RoyPhillips.txt",
+  "dialogue_url": "/wiki/RoyPhillips.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "0001D7B0",
+  "ref_id": "0001F983",
+  "editor_id": "RoyPhillips",
+  "location": "Warrington station,Tenpenny Tower",
+  "location_url": "/wiki/Warrington_station",
+  "descriptions": [
+    "Roy Phillips is a ghoul living in the Warrington tunnels in Fallout 3.",
+    "Roy is a pre-War ghoul that is the leader of a group of fellow ghoul dissidents living inside the Warrington Metro Station tunnels. They have decided to try to force Mr. Allistair Tenpenny into letting them move into his tower, after their attempts to peacefully pay to be let in were met with bigotry and threats.",
+    "As an ex-cop with a no-nonsense, black-and-white world view that has carried over into his new life as a ghoul, he has come to terms with his ghoulhood and yet demands that humans treat ghouls with respect. He has no patience for bigots. Bessie Lynn is his ghoulfriend.",
+    "Tenpenny Tower: Speaking to Roy Phillips is one of two ways to start the quest.",
+    "Even by asking Roy about the human residents, then finding the bodies in the storage room, then asking Roy about the killings, Karma is still lost if he is killed."
+  ],
+  "race": "Ghoul",
+  "gender": "Male",
+  "role": "Police officer (pre-War)Leader",
+  "detailed_location": "Warrington stationTenpenny Tower",
+  "voice_actor": "Mike Rosson",
+  "special": {
+    "Strength": 6,
+    "Perception": 6,
+    "Endurance": 5,
+    "Charisma": 5,
+    "Intelligence": 4,
+    "Agility": 6,
+    "Luck": 4
+  },
+  "level": "10→20 (PClevel x 1.20)",
+  "tag_skills": [
+    {
+      "Melee Weap.:": "73→100"
+    },
+    {
+      "Small Guns:": "73→100"
+    },
+    {
+      "Speech:": "71→100"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "90→140"
+    },
+    {
+      "Critical Chance:": "4%"
+    },
+    {
+      "Unarmed Dam.:": "1.20"
+    },
+    {
+      "Poison Resist.:": "20%"
+    },
+    {
+      "Rad. Resist.:": "8%"
+    },
+    {
+      "Carry Weight:": "210"
+    },
+    {
+      "Damage Res.:": "15%"
+    }
+  ],
+  "karma": "Good",
+  "voice_type": "MaleGenericGhoulDC",
+  "geck_race": "Ghoul",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Happy 75",
+      "response_text": "Great job kid! Meet me around front.",
+      "index": "1"
+    },
+    {
+      "topic": "MS12FinMurderedTopicWhere are the other Tenpenny Tower residents?",
+      "topic_text": "I notice a distinct lack of non-Ghoul tenants.",
+      "emotion": "Happy 100",
+      "response_text": "Let's just say those two-faced smoothskins didn't like the new management. So they all got themselves \"evicted.\" Can't say it's a shame.{deeply amused that he has murdered a bunch of people}",
+      "index": "17"
+    },
+    {
+      "topic": "MS12FinResidents",
+      "topic_text": "What's it like living at Tenpenny Tower?",
+      "emotion": "Happy 100",
+      "response_text": "Beats the Wasteland and dirty tunnels, that's for damn sure!{happy not to be homeless}",
+      "index": "19"
+    },
+    {
+      "topic": "MS12GhoulBranch",
+      "topic_text": "So what are you doing in the Metro tunnels?",
+      "emotion": "Neutral 50",
+      "response_text": "Biding our time, making plans, getting ready. Tenpenny and his pack of elitist wannabes can't keep us out of that tower forever.",
+      "index": "20"
+    },
+    {
+      "topic": "MS12GhoulBranchHelp",
+      "topic_text": "I might be able to get you in there.",
+      "emotion": "Anger 50",
+      "response_text": "I already got a plan. They think I’m a monster. I’ll show them the real monsters!{angry but amused about his scheme for vengeance}",
+      "index": "26"
+    },
+    {
+      "topic": "MS12GhoulBranchHelpHelpGate",
+      "topic_text": "Right on. Kill those elitists. I think I can help you with that escape door.",
+      "emotion": "Happy 50",
+      "response_text": "Now you're talking my language. Alright, here's the plan.{starting to like the player}",
+      "index": "29"
+    },
+    {
+      "topic": "MS12GhoulBranchHelpHelpGateFun",
+      "topic_text": "This is going to be fun!",
+      "emotion": "Happy 50",
+      "response_text": "Indeed. Remember. I'll be waiting for you to get that door open. Don't keep me waiting long, kid.{reminding his enthusiastic co-conspirator about the plan}",
+      "index": "31"
+    },
+    {
+      "topic": "MS12GhoulBranchHelpHelpGateTryTalk",
+      "topic_text": "Well, maybe I should talk to Tenpenny. There may be a peaceful solution.",
+      "emotion": "Disgust 50",
+      "response_text": "Try it if you like. Go talk to Tenpenny. Ask him he wants us living there.  It won't work. So when you fail, we can do it my way.{scoffing at a bad idea}",
+      "index": "32"
+    },
+    {
+      "topic": "MS12GhoulBranchHelpTryTalk",
+      "topic_text": "Let me try talking to Tenpenny. Maybe he wouldn't mind you living there.",
+      "emotion": "Neutral 50",
+      "response_text": "Ha! Those snooty bitches probably can't stand living with each other, let alone with us.{amused by the player's naivete}",
+      "index": "33"
+    },
+    {
+      "topic": "MS12GhoulBranchNevermind",
+      "topic_text": "It's not really any of my business. Sorry I asked.",
+      "emotion": "Neutral 50",
+      "response_text": "You're right. It's none of your business. You best get out of here, kid. Before something ugly happens.{threatening}",
+      "index": "36"
+    },
+    {
+      "topic": "MS12GhoulBranchTenpenny",
+      "topic_text": "It's Tenpenny's tower. He can do whatever he wants.",
+      "emotion": "Neutral 50",
+      "response_text": "Not sure where you come from kid, but out here in the Wasteland, everything's up for grabs. And you only get to keep what you can hold onto.{tough guy schooling a naive do-gooder}",
+      "index": "37"
+    },
+    {
+      "topic": "MS12GhoulBranchTenpennyBothJerks",
+      "topic_text": "Whatever. You're no better than Tenpenny.",
+      "emotion": "Neutral 50",
+      "response_text": "If I'm no better than Tenpenny, then he should let me into that tower. But he won't. So, I'm busting in.{defending his hardline plan to kill Tenpenny}",
+      "index": "40"
+    },
+    {
+      "topic": "MS12GhoulBranchTenpennyBothJerksLeaving",
+      "topic_text": "Whatever. I'm leaving.",
+      "emotion": "Anger 50",
+      "response_text": "That's the smartest thing you've said since you met me.{smoldering with anger}",
+      "index": "41"
+    },
+    {
+      "topic": "MS12GhoulBranchTenpennyGoodluck",
+      "topic_text": "Good luck with that. I'll have none of it.",
+      "emotion": "Anger 50",
+      "response_text": "You got a lot to learn, kid. A lot. Like for instance how not to piss off an angry Ghoul. You best get out of here, before I get real ugly.{threatening}",
+      "index": "42"
+    },
+    {
+      "topic": "MS12GhoulBranchTenpennyZombie",
+      "topic_text": "You're a zombie! People should shoot you!",
+      "emotion": "Neutral 50",
+      "response_text": "Oh yeah? Fine. It's on!{ responding to a challenge... starting a fight  }",
+      "index": "43"
+    },
+    {
+      "topic": "MS12GhoulBranchWhy",
+      "topic_text": "You're secure in these tunnels. Why try to get into Tenpenny, anyway?",
+      "emotion": "Anger 50",
+      "response_text": "Ghouls aren't built for luxury and comfort, is that it? You think Ghouls belong scurrying around in the dark dank under belly of the Wasteland?{getting angry at a bigot}",
+      "index": "44"
+    },
+    {
+      "topic": "MS12GhoulGREETINGGateNot",
+      "topic_text": "I'll get that door open, and then you can let your hordes in.",
+      "emotion": "Neutral 50",
+      "response_text": "Well get going, then! Open the door! What's taking you so damn long? Hurry up!{Anxious to put his master plan into action}",
+      "index": "46"
+    },
+    {
+      "topic": "MS12GhoulGREETINGMoveInI can get them to let you move in / You can now move in.",
+      "topic_text": "I think I can convince them to let you live there.",
+      "emotion": "Neutral 50",
+      "response_text": "You think so, do you? Give it a shot kid, but you're dreaming. I'll wait to give you a shot, but then we're doing it my way.{pessimistic}",
+      "index": "47"
+    },
+    {
+      "topic": "MS12GhoulKill",
+      "topic_text": "Gustavo hired me to kill you.",
+      "emotion": "Anger 50",
+      "response_text": "Is that so? He isn't man enough to do it himself? Sends a boy to do his dirty work. You think you got what it takes?{flexing before a fight}",
+      "index": "50"
+    },
+    {
+      "topic": "MS12GhoulKill1",
+      "topic_text": "Relax. It's just a warning, not a threat. I'm not going to kill you.",
+      "emotion": "Neutral 50",
+      "response_text": "I see...  that's smart of you. I'd lay you flat if you tried anything stupid. So don't.{overcoming his suspicion the player is setting him up}",
+      "index": "52"
+    },
+    {
+      "topic": "MS12GhoulKill2",
+      "topic_text": "Anything you want to say before you meet your maker?",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah. FUCK YOU!",
+      "index": "54"
+    },
+    {
+      "topic": "MS12GhoulKill3",
+      "topic_text": "I don't have to kill you. If you were to give me a handful of caps...",
+      "emotion": "Anger 50",
+      "response_text": "You picked the wrong Ghoul to fuck with, kid.{restrained but angry as hell and about to start shooting}",
+      "index": "55"
+    },
+    {
+      "topic": "MS12Nevermind",
+      "topic_text": "Let's talk about something else.",
+      "emotion": "Anger 50",
+      "response_text": "I'm getting impatient.{starting to get annoyed}",
+      "index": "56"
+    },
+    {
+      "topic": "MS12TenpennyDeadTopic",
+      "topic_text": "What happened to Mister Tenpenny?",
+      "emotion": "Happy 100",
+      "response_text": "I'm afraid Tenpenny and I had little disagreement. Not to worry though. He soon had a little \"accident.\" Problem solved.{happily smiling while talking about killing someone he hated.}",
+      "index": "57"
+    },
+    {
+      "topic": "WarringtonGhoul",
+      "topic_text": "So tell me, what's it like being a Ghoul?",
+      "emotion": "Neutral 50",
+      "response_text": "You better choose your next words really carefully, cause you're startin' to piss me off...{threatening}",
+      "index": "58"
+    },
+    {
+      "topic": "WarringtonGhoulChoiceBad",
+      "topic_text": "You eat people's brains, right? So what's it like being a zombie?",
+      "emotion": "Neutral 50",
+      "response_text": "You got balls. Real big ones. I'll assume you're kidding 'cause no one shit talks me and lives.{threatening to uphold his bluster, but deep down likes the player for being a tough guy}",
+      "index": "59"
+    },
+    {
+      "topic": "WarringtonGhoulChoiceGood",
+      "topic_text": "I didn't mean to offend. I'm not prejudiced.",
+      "emotion": "Neutral 50",
+      "response_text": "Sure, whatever you say. You pretentious two-faced asshole.{telling the player off for being a bigot who pretends not to be prejudiced}",
+      "index": "61"
+    },
+    {
+      "topic": "WarringtonGhoulChoiceGoodChoiceBad",
+      "topic_text": "You're the prejudiced asshole, not me. So you're ugly. Big deal.",
+      "emotion": "Neutral 50",
+      "response_text": "Maybe I misjudged. Pardons. So yeah, people treat us like shit. But it just makes us stronger.{gruff but coming to like the player because he's a frank straight talker, he is discussing his condition of being a Ghoul}",
+      "index": "62"
+    },
+    {
+      "topic": "WarringtonGhoulChoiceGoodChoiceGood",
+      "topic_text": "No, really. I mean it. I don't care if you're a Ghoul or not.",
+      "emotion": "Neutral 50",
+      "response_text": "Uh-huh? Fine, whatever. Being a Ghoul ain't anything worse than any other thing somebody's got to deal with.{doesn't believe the player is being sincere, but bugrudingly giving him the benefit of the doubt}",
+      "index": "64"
+    },
+    {
+      "topic": "WarringtonGhoulChoiceGoodChoiceNeutral",
+      "topic_text": "Whatever.",
+      "emotion": "Neutral 50",
+      "response_text": "Uh-huh. Didn't think so.{said dismissively to someone who just backed down from a fight}",
+      "index": "67"
+    },
+    {
+      "topic": "WarringtonGhoulChoiceNeutral",
+      "topic_text": "Ah... Nevermind.",
+      "emotion": "Neutral 50",
+      "response_text": "Right. I thought so. I'm warning you. I don't take shit from no one.{assuming the worst of the person he is talking to}",
+      "index": "68"
+    },
+    {
+      "topic": "WarringtonGreetingChoiceBad",
+      "topic_text": "Mind your fucking business, that's who.",
+      "emotion": "Neutral 50",
+      "response_text": "Listen good. I'll say this only once. I can respect a man's privacy. But I don't put up with bullshit.{setting down the law firmly (but likes that the player has guts to talk to him rudely)}",
+      "index": "69"
+    },
+    {
+      "topic": "WarringtonGreetingChoiceGood",
+      "topic_text": "You got nothing to worry about. I'm harmless.",
+      "emotion": "Neutral 50",
+      "response_text": "Harmless? Well, you're lucky I don't stick you and take your shit. Watch yourself, we don't take kindly to strangers, 'specially sweet-talking ones.{haughty and threatening}",
+      "index": "71"
+    },
+    {
+      "topic": "WarringtonGreetingChoiceNeutral",
+      "topic_text": "<Say nothing.>",
+      "emotion": "Neutral 50",
+      "response_text": "Not much to say? That's good. It'll keep you out of trouble. Be warned: don't cause me or mine no problems, or I'll end you.{suspicious and threatening}",
+      "index": "72"
+    },
+    {
+      "topic": "WarringtonKilledFerals",
+      "topic_text": "I killed a bunch of crazy Ghouls in the Metro tunnels...",
+      "emotion": "Disgust 50",
+      "response_text": "So you you killed a bunch of Feral Ghouls. Is that supposed to sound impressive?{dismissive}",
+      "index": "73"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "I have to go now.",
+      "emotion": "Anger 100",
+      "response_text": "Hurry up. Those bigots got big comeuppance waiting for them. I mean to give it to them soon. Now get!{letting his anger mix with enthusiasm}",
+      "index": "75"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Anger 25",
+      "response_text": "Well? Is it done yet? Did you get that door open?{impatient}",
+      "index": "80"
+    },
+    {
+      "topic": "MS11BurkeAndPhillips",
+      "topic_text": "MS11BurkeAndPhillips",
+      "emotion": "Neutral 50",
+      "response_text": "Look, Burke. I... I don't care how you got past the others. I could... I could have you torn apart in an instant, with a snap of my fingers!",
+      "index": "89"
+    },
+    {
+      "topic": "MS12ArgumentTopic",
+      "topic_text": "MS12ArgumentTopic",
+      "emotion": "Anger 100",
+      "response_text": "You can tell Tenpenny he can kiss my ass! We got plenty of bottlecaps! Let me in, goddamnit!{yelling at a obstinate enemy on the other end of an intercom}",
+      "index": "94"
+    },
+    {
+      "topic": "MS12RoyPhillipsSayToPlayer",
+      "topic_text": "MS12RoyPhillipsSayToPlayer",
+      "emotion": "Happy 75",
+      "response_text": "Great job kid! Meet me around front. I have something for you to keep the ferals from gnawing on your ass!{excited and blood thirsty}",
+      "index": "98"
+    }
+  ],
+  "combat": [
+    {
+      "topic": "Attack",
+      "topic_text": "Attack",
+      "emotion": "Happy 100",
+      "response_text": "Die, bitch!{angry ghoul glad to be killing things}",
+      "index": "104"
+    }
+  ]
+}

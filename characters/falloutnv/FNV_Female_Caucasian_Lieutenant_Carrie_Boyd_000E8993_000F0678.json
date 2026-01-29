@@ -1,0 +1,335 @@
+{
+  "name": "Lieutenant Carrie Boyd",
+  "url": "/wiki/Carrie_Boyd",
+  "dialogue_name": "LieutenantBoyd.txt",
+  "dialogue_url": "/wiki/LieutenantBoyd.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000E8993",
+  "ref_id": "000F0678",
+  "editor_id": "LieutenantBoyd",
+  "location": "Camp McCarran terminal building",
+  "location_url": "/wiki/Camp_McCarran_terminal_building",
+  "descriptions": [
+    "Lieutenant Carrie Boyd is an military police officer at Camp McCarran in 2281.",
+    "Carrie Boyd is highly observant and notes anyone who comes into McCarran,",
+    "Carrie Boyd is an avid smoker and retains a sardonic and laconic demeanor in spite of (or perhaps because of) the amount of work on her plate. But Boyd is far more sadistic of an officer than her demeanor lets on, however. As mentioned before, she finds the humanitarian laws pertaining to the human rights of POWs as constraining and takes a wry pleasure in the act",
+    "Boyd loathes Caesar's Legion like any NCR officer would and is invested in NCR's propaganda against the Followers of the Apocalypse, questioning whether the Followers as a whole are doing more harm than good.",
+    "After completing Silus Treatment, she will move around the building, but can often be found in her office on the east side of the second floor."
+  ],
+  "race": "Human",
+  "gender": "Female",
+  "affiliation": "NCR military police",
+  "role": "Head of military police forCamp McCarran",
+  "detailed_location": "Camp McCarran terminal building",
+  "voice_actor": "Laura Bailey",
+  "special": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 5,
+    "Intelligence": 5,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "level": "10",
+  "tag_skills": [
+    {
+      "Explosives:": "66"
+    },
+    {
+      "Guns:": "66"
+    },
+    {
+      "Melee Weap.:": "66"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Neutral",
+  "voice_type": "FemaleAdult11",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "Why don't you wait in the other room while I chat with Silus here?",
+      "index": "1"
+    },
+    {
+      "topic": "VFreeformMcCarran2LieutenantBoydAnders",
+      "topic_text": "What else can you tell me about Anders?",
+      "emotion": "Neutral 50",
+      "response_text": "I don't know him very well, myself. I seem to remember that he was the man to call on if you needed someone to get in and get out quietly.",
+      "index": "19"
+    },
+    {
+      "topic": "VFreeformMcCarran2LieutenantBoydBreakIns",
+      "topic_text": "Tell me about the break-ins.",
+      "emotion": "Neutral 50",
+      "response_text": "Maybe break-in isn't the right word. We didn't find signs of forced entry. But I've had reports of someone sneaking into the control tower at night.",
+      "index": "21"
+    },
+    {
+      "topic": "VFreeformMcCarran2LieutenantBoydContrerasTurnIn",
+      "topic_text": "I have proof that Sgt. Contreras is involved in criminal activity.",
+      "emotion": "Neutral 50",
+      "response_text": "That may be the worst-kept secret on the base. I'd be more surprised if you had proof he wasn't involved in criminal activity.{emphasize \"wasn't.\"}",
+      "index": "24"
+    },
+    {
+      "topic": "VFreeformMcCarran2LieutenantBoydCplWhiteTurnIn",
+      "topic_text": "I have an update on Corporal White.",
+      "emotion": "Neutral 50",
+      "response_text": "I've already talked to Anderson, actually. Came in, confessed, and gave you credit for the whole thing.",
+      "index": "30"
+    },
+    {
+      "topic": "VFreeformMcCarran2LieutenantBoydMissing",
+      "topic_text": "Who's missing?",
+      "emotion": "Neutral 50",
+      "response_text": "Well, there's Anders. He's a Ranger. That one's not suspicious so much as worrisome - he left on a dangerous assignment.",
+      "index": "34"
+    },
+    {
+      "topic": "VFreeformMcCarran2LieutenantBoydThefts",
+      "topic_text": "You said there have been thefts?",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah. We keep coming up short on our weekly supply inventory checks. Guns and ammo, mostly. Not the kind of things you like to see go missing.",
+      "index": "36"
+    },
+    {
+      "topic": "VFreeformMcCarran2LieutenantBoydTopic000",
+      "topic_text": "Who are you?",
+      "emotion": "Neutral 50",
+      "response_text": "Not big on reading nametags, huh? That's okay, my name is long and difficult to pronounce. Ready for it?",
+      "index": "39"
+    },
+    {
+      "topic": "VFreeformMcCarran2LieutenantBoydTopic001",
+      "topic_text": "Do you need any help?",
+      "emotion": "Neutral 50",
+      "response_text": "No, I've got this one. I don't think he's going to have much information of value, so I'm just tormenting him for fun. Thanks, though.",
+      "index": "42"
+    },
+    {
+      "topic": "VFreeformMcCarran2LieutenantBoydTopic002",
+      "topic_text": "Have you noticed anything suspicious lately?",
+      "emotion": "Neutral 50",
+      "response_text": "Now what kind of MP would I be if I didn't notice anything suspicious?",
+      "index": "46"
+    },
+    {
+      "topic": "VFreeformMcCarran2LieutenantBoydTopic004",
+      "topic_text": "Let's talk about something else.",
+      "emotion": "Neutral 50",
+      "response_text": "Suit yourself.",
+      "index": "48"
+    },
+    {
+      "topic": "VFreeformMcCarran2LieutenantBoydTopic006",
+      "topic_text": "I'll keep an eye out for your missing supplies.",
+      "emotion": "Neutral 50",
+      "response_text": "Good. The more guns you can recover, the more I'll be able to use to shoot Contreras for being inept.",
+      "index": "49"
+    },
+    {
+      "topic": "VFreeformMcCarran2LieutenantBoydTopic007",
+      "topic_text": "Why don't you just beat your prisoner senseless?",
+      "emotion": "Neutral 50",
+      "response_text": "I like the way you think. Have I said that yet?",
+      "index": "50"
+    },
+    {
+      "topic": "VFreeformMcCarran2LieutenantBoydTopic008",
+      "topic_text": "What about a truth drug?",
+      "emotion": "Neutral 50",
+      "response_text": "Don't have anything like that. Sounds nice. Like the kind of thing I'd want to take home and use on my husband.",
+      "index": "53"
+    },
+    {
+      "topic": "VFreeformMcCarran2LieutenantBoydTopic009",
+      "topic_text": "Have you tried calling him hurtful names?",
+      "emotion": "Neutral 50",
+      "response_text": "Yes, and one time I thought I saw a tear when I told him his uniform was unflattering. But I think he just got some dust in his eye.",
+      "index": "55"
+    },
+    {
+      "topic": "VFreeformMcCarran2LieutenantBoydTopic010",
+      "topic_text": "Okay. Let's get started.",
+      "emotion": "Neutral 50",
+      "response_text": "That's the spirit. Okay, I'll go in and have a word with him. Then I'll call you in.",
+      "index": "56"
+    },
+    {
+      "topic": "VFreeformMcCarran2LieutenantBoydTopic011",
+      "topic_text": "I'm not interested in doing that right now.",
+      "emotion": "Neutral 50",
+      "response_text": "You sure? You're missing out. Well, you're always welcome, if you should change your mind.",
+      "index": "57"
+    },
+    {
+      "topic": "VFreeformMcCarran2LieutenantBoydTopic012",
+      "topic_text": "He wants you to increase water flow to Freeside. Said it'd be lost otherwise.",
+      "emotion": "Neutral 50",
+      "response_text": "Man, that guy's got water on the brain. Knows more about water pipes than any man should.",
+      "index": "58"
+    },
+    {
+      "topic": "VFreeformMcCarran2LieutenantBoydTopic013",
+      "topic_text": "He was killed by a man named Anderson he caught stealing water from the NCR.",
+      "emotion": "Neutral 50",
+      "response_text": "Anderson. I've heard of him, if it's the same guy. Water nerd from the Followers of the Apocalypse. Used to handle some of the operations for OSI.",
+      "index": "60"
+    },
+    {
+      "topic": "VFreeformMcCarran2LieutenantBoydTopic014",
+      "topic_text": "A gang called the Scorpions murdered him. A man named Anderson witnessed it.",
+      "emotion": "Neutral 50",
+      "response_text": "Shit. That's why you don't go wandering off looking for some call girl on the Strip without telling somebody first.",
+      "index": "67"
+    },
+    {
+      "topic": "VFreeformMcCarran2LieutenantBoydTopic015",
+      "topic_text": "Never mind.",
+      "emotion": "Neutral 50",
+      "response_text": "Okay, well let me know if you find out anything.",
+      "index": "69"
+    },
+    {
+      "topic": "VFreeformMcCarran2LieutenantBoydTopic016",
+      "topic_text": "Anyone else missing?",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah. The man I'm more interested in is Corporal White.",
+      "index": "70"
+    },
+    {
+      "topic": "VFreeformMcCarran2LieutenantBoydTopic017",
+      "topic_text": "I hacked into his computer and found evidence that he's selling NCR guns.",
+      "emotion": "Neutral 50",
+      "response_text": "Little bastard. I'm sure some of those find their way into the hands of our enemies, too.",
+      "index": "72"
+    },
+    {
+      "topic": "VFreeformMcCarran2LieutenantBoydTopic018",
+      "topic_text": "No, nothing else.",
+      "emotion": "Neutral 50",
+      "response_text": "Well, that's a shame about Corporal White. He knew better than that.",
+      "index": "73"
+    },
+    {
+      "topic": "VFreeformMcCarran2LieutenantBoydTopic019",
+      "topic_text": "He admitted to manufacturing and selling chems.",
+      "emotion": "Neutral 50",
+      "response_text": "He's trafficking chems? I don't know how he thought he could get away with that.{stunned for first sentence. second is more of an aside, like muttering to yourself \"what an idiot.\"}",
+      "index": "74"
+    },
+    {
+      "topic": "VFreeformMcCarran2LieutenantBoydTopic020",
+      "topic_text": "Would you be willing to give me the control tower access key so I can check it out?",
+      "emotion": "Neutral 50",
+      "response_text": "Sure, if you want to investigate. It's not like there's anything to steal up there. Just a bunch of old communications equipment.",
+      "index": "75"
+    },
+    {
+      "topic": "VFreeformMcCarran2LieutenantBoydTopic021",
+      "topic_text": "I object to the use of violence against prisoners of war.",
+      "emotion": "Neutral 50",
+      "response_text": "Aw, tear my heart out, why don't you? Well, maybe you can find a way to play with his mind - get him out of his comfort zone.",
+      "index": "78"
+    },
+    {
+      "topic": "VFreeformMcCarran2LieutenantBoydTopic022",
+      "topic_text": "Is that a big deal?",
+      "emotion": "Neutral 50",
+      "response_text": "Better believe it. Everybody, everybody in Caesar's Legion from Caesar on down will kill themselves before they can be captured.",
+      "index": "81"
+    },
+    {
+      "topic": "VFreeformMcCarran2LieutenantBoydTopic023",
+      "topic_text": "What do you think it means?",
+      "emotion": "Neutral 50",
+      "response_text": "Well, I don't know about you, but to me that sounds like a man who's willing to cooperate. Except he hasn't.",
+      "index": "84"
+    },
+    {
+      "topic": "VFreeformMcCarran2LieutenantBoydTopic024",
+      "topic_text": "So you want me to do what you can't.",
+      "emotion": "Neutral 50",
+      "response_text": "I think if you rough him up enough and really put some fear into him, he'll sing like a choir boy.",
+      "index": "86"
+    },
+    {
+      "topic": "VFreeformMcCarran2LieutenantBoydWhiteWash",
+      "topic_text": "I'll see what I can find out about Cpl. White for you.",
+      "emotion": "Neutral 50",
+      "response_text": "Word around the base is he'd been going regularly to visit a hooker named Dazzle at Gomorrah. That's a casino on the Strip. Classy place.{Classy place is sarcastic. The place is a dump.}",
+      "index": "89"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Yep. See you round.",
+      "index": "92"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "Hello",
+      "emotion": "Neutral 50",
+      "response_text": "You got something to say or do you always look like that?",
+      "index": "93"
+    },
+    {
+      "topic": "VFreeformMcCarran2POW1",
+      "topic_text": "VFreeformMcCarran2POW1",
+      "emotion": "Neutral 50",
+      "response_text": "Long time, no see, Silus.",
+      "index": "94"
+    },
+    {
+      "topic": "VFreeformMcCarran2POW2Beating",
+      "topic_text": "VFreeformMcCarran2POW2Beating",
+      "emotion": "Neutral 50",
+      "response_text": "Whoa, easy there! You're supposed to rough him up a little, not kill him.",
+      "index": "107"
+    },
+    {
+      "topic": "VFreeformMcCarran2POW2Int",
+      "topic_text": "VFreeformMcCarran2POW2Int",
+      "emotion": "Neutral 50",
+      "response_text": "All that shouting. Honestly, Silus, you get free room and board. The least you could do is be a good guest.",
+      "index": "121"
+    },
+    {
+      "topic": "VFreeformMcCarran2POW2Speech",
+      "topic_text": "VFreeformMcCarran2POW2Speech",
+      "emotion": "Neutral 50",
+      "response_text": "Is something the matter, Silus? You look upset.",
+      "index": "128"
+    },
+    {
+      "topic": "VFreeformMcCarran2POWCleanup",
+      "topic_text": "VFreeformMcCarran2POWCleanup",
+      "emotion": "Neutral 50",
+      "response_text": "Mind cleaning up our mess, Corporal?",
+      "index": "136"
+    },
+    {
+      "topic": "VFreeformMcCarran2POWEnough",
+      "topic_text": "VFreeformMcCarran2POWEnough",
+      "emotion": "Neutral 50",
+      "response_text": "All right, you can stop for a sec.",
+      "index": "137"
+    }
+  ],
+  "combat": []
+}

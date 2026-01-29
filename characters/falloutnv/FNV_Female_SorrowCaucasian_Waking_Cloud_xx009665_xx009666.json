@@ -1,0 +1,915 @@
+{
+  "name": "Waking Cloud",
+  "url": "/wiki/Waking_Cloud",
+  "dialogue_name": "NVDLC02WakingCloud.txt",
+  "dialogue_url": "/wiki/NVDLC02WakingCloud.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": true,
+  "base_id": "xx009665",
+  "ref_id": "xx009666",
+  "editor_id": "NVDLC02WakingCloud",
+  "location": "Sorrows camp",
+  "location_url": "/wiki/Sorrows_camp",
+  "descriptions": [
+    "Waking Cloud is a tribal living in Zion Canyon in 2281.",
+    "Waking Cloud is a Sorrows tribal, and one of Daniel's first converts. Daniel saved her life when she was giving birth to her third child, and taught her how to properly deliver children. She then became the Sorrows' midwife, and has started to learn Daniel's Mormon faith. Waking Cloud speaks with a good level of English, indicating she has been learning for a while.",
+    "Waking Cloud has a husband and three children, however her husband was killed by a White Leg as one of the first Sorrows to be evacuated to Grand Staircase. Daniel knows of this, but has kept it from Waking Cloud, fearing her reaction. Waking Cloud suspects that something is amiss, but trusts Daniel enough to know that he would not keep anything important from her.",
+    "Waking Cloud appears only in the Fallout: New Vegas add-on Honest Hearts.",
+    "Waking Cloud was written by Travis Stout."
+  ],
+  "race": "Human",
+  "gender": "Female",
+  "affiliation": "SorrowsCourier(optional)",
+  "role": "MidwifeGuideCompanion",
+  "detailed_location": "Sorrows camp",
+  "voice_actor": "Misi Lecube",
+  "special": {
+    "Strength": 4,
+    "Perception": 6,
+    "Endurance": 5,
+    "Charisma": 6,
+    "Intelligence": 6,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "level": "1→50",
+  "tag_skills": [
+    {
+      "Speech:": "32→100"
+    },
+    {
+      "Survival:": "30→100"
+    },
+    {
+      "Unarmed:": "30→100"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "370→615"
+    },
+    {
+      "Poison Resist.:": "20%"
+    },
+    {
+      "Rad. Resist.:": "8%"
+    },
+    {
+      "Carry Weight:": "190"
+    }
+  ],
+  "karma": "Neutral",
+  "geck_race": "SorrowCaucasian",
+  "topics": [
+    {
+      "topic": "FollowersAcknowledgeMyOrder",
+      "topic_text": "FollowersAcknowledgeMyOrder",
+      "emotion": "Neutral 50",
+      "response_text": "As you say.",
+      "index": "1"
+    },
+    {
+      "topic": "FollowersFiredIt's time for us to part ways.",
+      "topic_text": "Go back to your people's camp.",
+      "emotion": "Neutral 50",
+      "response_text": "Daniel was firm about my staying with you. Are you certain?",
+      "index": "2"
+    },
+    {
+      "topic": "FollowersFiredNo",
+      "topic_text": "On second thought, stick with me for a little longer.",
+      "emotion": "Neutral 50",
+      "response_text": "Good. Daniel's decisions are wise. You are wise for respecting them.",
+      "index": "3"
+    },
+    {
+      "topic": "FollowersFiredYes",
+      "topic_text": "Yes, I'm sure.",
+      "emotion": "Neutral 50",
+      "response_text": "If that is your wish, I cannot change your mind. I will wait for you at the Sorrows' camp until you return.",
+      "index": "4"
+    },
+    {
+      "topic": "FollowersHiredI think we should travel together.",
+      "topic_text": "I want you to travel with me.",
+      "emotion": "Neutral 50",
+      "response_text": "I am happy to offer you what guidance I can. Let's go.",
+      "index": "5"
+    },
+    {
+      "topic": "FollowersLetsGo",
+      "topic_text": "Let's get going.",
+      "emotion": "Neutral 50",
+      "response_text": "I walk in your footsteps.",
+      "index": "6"
+    },
+    {
+      "topic": "FollowersOverburdened",
+      "topic_text": "FollowersOverburdened",
+      "emotion": "Neutral 50",
+      "response_text": "I will be more useful to you traveling light.",
+      "index": "7"
+    },
+    {
+      "topic": "FollowersStealthing",
+      "topic_text": "FollowersStealthing",
+      "emotion": "Neutral 50",
+      "response_text": "We pass like moonlight on still water.",
+      "index": "8"
+    },
+    {
+      "topic": "FollowersTactics",
+      "topic_text": "Let's talk about your tactics.",
+      "emotion": "Neutral 50",
+      "response_text": "Battle is not my strongest skill, but I am eager to learn from you.",
+      "index": "9"
+    },
+    {
+      "topic": "FollowersTacticsCombat",
+      "topic_text": "I want you to change your combat style.",
+      "emotion": "Neutral 50",
+      "response_text": "How shall I fight?",
+      "index": "10"
+    },
+    {
+      "topic": "FollowersTacticsCombatAggressive",
+      "topic_text": "I want you to attack enemies the moment you see them.",
+      "emotion": "Neutral 50",
+      "response_text": "Isn't a more diplomatic approach preferable?{Slight sigh}Very well, but I'm not comfortable with this.",
+      "index": "11"
+    },
+    {
+      "topic": "FollowersTacticsCombatENDLet's talk about something else.",
+      "topic_text": "That's it for your tactics. Let's talk about something else.",
+      "emotion": "Neutral 50",
+      "response_text": "What did you have in mind?",
+      "index": "12"
+    },
+    {
+      "topic": "FollowersTacticsCombatGOODBYE",
+      "topic_text": "That's all. Let's get going.",
+      "emotion": "Neutral 50",
+      "response_text": "I will try to follow your example.",
+      "index": "13"
+    },
+    {
+      "topic": "FollowersTacticsCombatMelee",
+      "topic_text": "Switch to a melee weapon.",
+      "emotion": "Neutral 50",
+      "response_text": "I will fight with my fists as best I can.",
+      "index": "14"
+    },
+    {
+      "topic": "FollowersTacticsCombatPassive",
+      "topic_text": "I want you not to attack enemies unless I've already engaged them.",
+      "emotion": "Neutral 50",
+      "response_text": "That seems sensible. I'd prefer to let you choose the targets.",
+      "index": "15"
+    },
+    {
+      "topic": "FollowersTacticsCombatRanged",
+      "topic_text": "I want you to use ranged weapons.",
+      "emotion": "Neutral 50",
+      "response_text": "My skills lie elsewhere, but I will do as you bid.",
+      "index": "16"
+    },
+    {
+      "topic": "FollowersTacticsDistance",
+      "topic_text": "Let's talk about how close you're following me.",
+      "emotion": "Neutral 50",
+      "response_text": "How close do you prefer me to follow?",
+      "index": "17"
+    },
+    {
+      "topic": "FollowersTacticsDistanceDefault",
+      "topic_text": "Stay close to me.",
+      "emotion": "Neutral 50",
+      "response_text": "I will do my best to stay close.",
+      "index": "18"
+    },
+    {
+      "topic": "FollowersTacticsDistanceEND",
+      "topic_text": "Your distance is good. Let's talk about something else.",
+      "emotion": "Neutral 50",
+      "response_text": "What else is there to talk about?",
+      "index": "19"
+    },
+    {
+      "topic": "FollowersTacticsDistanceGOODBYE",
+      "topic_text": "All right, you're good. Let's get out of here.",
+      "emotion": "Neutral 50",
+      "response_text": "Off we go, then.",
+      "index": "20"
+    },
+    {
+      "topic": "FollowersTacticsDistanceLong",
+      "topic_text": "Keep your distance. Try to flank them.",
+      "emotion": "Neutral 50",
+      "response_text": "I'll give you room to work, then.",
+      "index": "21"
+    },
+    {
+      "topic": "FollowersTacticsEnd",
+      "topic_text": "Enough about tactics.",
+      "emotion": "Neutral 50",
+      "response_text": "I will do my best to follow your requests.",
+      "index": "22"
+    },
+    {
+      "topic": "FollowersTrade",
+      "topic_text": "Let's trade equipment.",
+      "emotion": "Neutral 50",
+      "response_text": "If something of mine will help you, take it. I hope you would do the same for me.",
+      "index": "23"
+    },
+    {
+      "topic": "FollowersWait",
+      "topic_text": "Wait here.",
+      "emotion": "Neutral 50",
+      "response_text": "As you wish. I will wait, but please do not be gone long.",
+      "index": "24"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Happy 50",
+      "response_text": "Daniel said that I was to travel with you until you have completed your scouting. Is this pleasing to you?",
+      "index": "25"
+    },
+    {
+      "topic": "NVDLC02DialogueWakingCloudNVDLC02WakingCloudTopic005",
+      "topic_text": "What's your deal?",
+      "emotion": "Pained 25",
+      "response_text": "Waking Cloud is my name. I am midwife to the Sorrows. It sounds ill-omened, no? \"Midwife to sorrows.\"",
+      "index": "32"
+    },
+    {
+      "topic": "NVDLC02DialogueWakingCloudNVDLC02WakingCloudTopic006",
+      "topic_text": "Give me some info on this Daniel. Who is he?",
+      "emotion": "Happy 80",
+      "response_text": "Daniel is a wise man, and a great friend to the Sorrows. He taught me to speak the language of New Canaan - the{maybe slightly mispronounce this}English from the holy books.",
+      "index": "33"
+    },
+    {
+      "topic": "NVDLC02DialogueWakingCloudNVDLC02WakingCloudTopic007",
+      "topic_text": "Who or what is the Father in the Cave?",
+      "emotion": "Surprise 75",
+      "response_text": "Have you not heard of the god of the New Canaanites? He is our protector and our judge. He helped our ancestors find their place here in Zion.",
+      "index": "34"
+    },
+    {
+      "topic": "NVDLC02DialogueWakingCloudNVDLC02WakingCloudTopic008",
+      "topic_text": "Tell me more about your tribe.",
+      "emotion": "Sad 50",
+      "response_text": "We have dwelt in the Narrows since the End That Came In Fire, when the Father in the Caves punished the world and made us forget the holy tongue.",
+      "index": "36"
+    },
+    {
+      "topic": "NVDLC02DialogueWakingCloudNVDLC02WakingCloudTopic009",
+      "topic_text": "Do you have any family?",
+      "emotion": "Happy 50",
+      "response_text": "{Fond reminiscing}I do. A fine husband and three children. I miss them each day, but I take comfort in knowing they are safe.",
+      "index": "40"
+    },
+    {
+      "topic": "NVDLC02DialogueWakingCloudNVDLC02WakingCloudTopic011",
+      "topic_text": "Wait, you think the survivalist is... God?",
+      "emotion": "Disgust 25",
+      "response_text": "I do not know this \"survivalist,\" but the Father in the Caves is the god of the New Canaanites.",
+      "index": "41"
+    },
+    {
+      "topic": "NVDLC02DialogueWakingCloudNVDLC02WakingCloudTopic012",
+      "topic_text": "That doesn't sound like what I've heard about the New Canaanites....",
+      "emotion": "Pained 25",
+      "response_text": "Perhaps you do not fully understand the New Canaanites. I have seen the Father's images.",
+      "index": "44"
+    },
+    {
+      "topic": "NVDLC02DialogueWakingCloudNVDLC02WakingCloudTopic013",
+      "topic_text": "I see. That's fascinating.",
+      "emotion": "Pained 25",
+      "response_text": "I'm sure Daniel could tell you more. His knowledge of the Father is greater than my own.",
+      "index": "47"
+    },
+    {
+      "topic": "NVDLC02DialogueWakingCloudNVDLC02WakingCloudTopic014",
+      "topic_text": "Holy books?",
+      "emotion": "Surprise 50",
+      "response_text": "Yes - the language of the New Canaanites is the holy tongue, for it is the language their sacred books are written in.",
+      "index": "48"
+    },
+    {
+      "topic": "NVDLC02DialogueWakingCloudNVDLC02WakingCloudTopic015",
+      "topic_text": "Have you known him long?",
+      "emotion": "Happy 50",
+      "response_text": "Six years. He attended the birth of my third child.{Fond reminiscence}It was a hard birth. The River nearly carried my water to the Father, and my child's with it.",
+      "index": "50"
+    },
+    {
+      "topic": "NVDLC02DialogueWakingCloudNVDLC02WakingCloudTopic016",
+      "topic_text": "Midwife? I haven't seen any children around.",
+      "emotion": "Sad 50",
+      "response_text": "The children and the old have already been evacuated from the camp. They are safe enough, unless the White Legs come for us in force.",
+      "index": "53"
+    },
+    {
+      "topic": "NVDLC02DialogueWakingCloudNVDLC02WakingCloudTopic017",
+      "topic_text": "What do you do when you're not delivering babies?",
+      "emotion": "Pained 50",
+      "response_text": "I tend to other hurts and sicknesses that afflict our tribe. I also scout the valley for the herbs I use in my medicines.",
+      "index": "54"
+    },
+    {
+      "topic": "NVDLC02DialogueWakingCloudNVDLC02WakingCloudTopic018",
+      "topic_text": "Safe? Where are they?",
+      "emotion": "Sad 50",
+      "response_text": "When we learned that Salt-Upon-Wounds had defiled Zion with his presence, Daniel ordered the children, the old, and the sick evacuated from the camp.",
+      "index": "55"
+    },
+    {
+      "topic": "NVDLC02DialogueWakingCloudNVDLC02WakingCloudTopic019",
+      "topic_text": "About your husband... I'm afraid he was killed by White Legs during the evacuation.",
+      "emotion": "Pained 50",
+      "response_text": "{Shocked, disbelieving}What? No... you must be mistaken. Daniel would have told me!",
+      "index": "58"
+    },
+    {
+      "topic": "NVDLC02DialogueWakingCloudNVDLC02WakingCloudTopic020",
+      "topic_text": "I had other questions.",
+      "emotion": "Happy 50",
+      "response_text": "Certainly. I am happy to share my knowledge.",
+      "index": "59"
+    },
+    {
+      "topic": "NVDLC02DialogueWakingCloudNVDLC02WakingCloudTopic021",
+      "topic_text": "That's all I wanted to know for now.",
+      "emotion": "Happy 50",
+      "response_text": "Then I will look forward to our next speaking.",
+      "index": "60"
+    },
+    {
+      "topic": "NVDLC02DialogueWakingCloudNVDLC02WakingCloudTopic022",
+      "topic_text": "I'm afraid so. Daniel kept it from you because he thought the grief would distract you.",
+      "emotion": "Anger 50",
+      "response_text": "How... how{emphasis}dare he? What gives him the right? I thought Daniel was my friend, but he cares nothing for the Sorrows!",
+      "index": "61"
+    },
+    {
+      "topic": "NVDLC02DialogueWakingCloudNVDLC02WakingCloudTopic023",
+      "topic_text": "Tell me about the Ghost of She.",
+      "emotion": "Sad 100",
+      "response_text": "That is a sad story. I do not like to tell it, but if you are asking, it must be at White Bird's request. That, I will honor.",
+      "index": "62"
+    },
+    {
+      "topic": "NVDLC02DialogueWakingCloudNVDLC02WakingCloudTopic025",
+      "topic_text": "He was only doing what he thought was best for the tribe. It wasn't an easy choice for him.",
+      "emotion": "Disgust 50",
+      "response_text": "Perhaps... I will have to have a{emphasis}very long talk with Daniel when all of this is over. Thank you for telling me this truth.",
+      "index": "68"
+    },
+    {
+      "topic": "NVDLC02DialogueWakingCloudNVDLC02WakingCloudTopic026",
+      "topic_text": "I agree. It was arrogant and cruel - not exactly the kind of thing a friend would do.",
+      "emotion": "Disgust 50",
+      "response_text": "Arrogant... yes. I thought Daniel respected me, saw the Sorrows as his equals... but he manipulates us for his own ends.",
+      "index": "69"
+    },
+    {
+      "topic": "NVDLC02DialogueWakingCloudNVDLC02WakingCloudTopic027",
+      "topic_text": "You're right. Now, what are you going to do about it?",
+      "emotion": "Anger 50",
+      "response_text": "About Daniel... I don't yet know. But I am a woman of the Sorrows, and I will have restitution for my husband.",
+      "index": "70"
+    },
+    {
+      "topic": "NVDLC02DialogueWakingCloudNVDLC02WakingCloudTopic028",
+      "topic_text": "Any advice on how to deal with the situation?",
+      "emotion": "Fear 50",
+      "response_text": "You might rush them and take them by surprise. We would be badly outnumbered then, though, and these will be strong fighters.",
+      "index": "71"
+    },
+    {
+      "topic": "NVDLC02DialogueWakingCloudNVDLC02WakingCloudTopic029",
+      "topic_text": "So the totems are sacred to them somehow? Good to know.",
+      "emotion": "Happy 50",
+      "response_text": "Yes. If their war totems were to... \"disappear,\" they would likely lose the will to fight.",
+      "index": "73"
+    },
+    {
+      "topic": "NVDLC02DialogueWakingCloudNVDLC02WakingCloudTopic030",
+      "topic_text": "Okay then, let's get down there and take care of business.",
+      "emotion": "Fear 50",
+      "response_text": "I will follow your command - but I advise caution if it is possible.",
+      "index": "74"
+    },
+    {
+      "topic": "NVDLC02DialogueWakingCloudNVDLC02WakingCloudTopic032",
+      "topic_text": "What should we do about it?",
+      "emotion": "Pained 50",
+      "response_text": "Disarm the traps if you can - or find the White Legs who placed them and drive them off.",
+      "index": "75"
+    },
+    {
+      "topic": "NVDLC02DialogueWakingCloudNVDLC02WakingCloudTopic033",
+      "topic_text": "These traps must have come from somewhere - I bet the White Legs who placed them are still around.",
+      "emotion": "Anger 50",
+      "response_text": "I would suspect you are right. Perhaps we should try to find them before they lay more traps?",
+      "index": "77"
+    },
+    {
+      "topic": "NVDLC02DialogueWakingCloudNVDLC02WakingCloudTopic035",
+      "topic_text": "Let's take care of it then.",
+      "emotion": "Anger 50",
+      "response_text": "As you say.",
+      "index": "78"
+    },
+    {
+      "topic": "NVDLC02DialogueWakingCloudNVDLC02WakingCloudTopic036",
+      "topic_text": "What do you propose?",
+      "emotion": "Fear 50",
+      "response_text": "Fighting so many at once is a dangerous prospect, unless you are a truly mighty warrior.",
+      "index": "79"
+    },
+    {
+      "topic": "NVDLC02DialogueWakingCloudNVDLC02WakingCloudTopic037",
+      "topic_text": "Big deal, I've killed worse.",
+      "emotion": "Surprise 50",
+      "response_text": "I hope that is truth, and not a boast. But I will respect your leadership.",
+      "index": "81"
+    },
+    {
+      "topic": "NVDLC02DialogueWakingCloudNVDLC02WakingCloudTopic038",
+      "topic_text": "We'd better get to work then.",
+      "emotion": "Anger 50",
+      "response_text": "I stand with you.",
+      "index": "82"
+    },
+    {
+      "topic": "NVDLC02DialogueWakingCloudNVDLC02WakingCloudTopic040",
+      "topic_text": "How would we do that?",
+      "emotion": "Surprise 50",
+      "response_text": "Did Daniel not give you some of the New Canaanites' fire clay? That could easily collapse a cave and trap the beasts inside.",
+      "index": "83"
+    },
+    {
+      "topic": "NVDLC02DialogueWakingCloudNVDLC02WakingCloudTopic041",
+      "topic_text": "< Waking Cloud talks about the Survivalist's cave >",
+      "emotion": "Fear 100",
+      "response_text": "{Fearful, but more awe - this is a sacred place}We should not be here! This place... it belongs to the Father in the Caves! We must not profane it with our touch!",
+      "index": "85"
+    },
+    {
+      "topic": "NVDLC02DialogueWakingCloudNVDLC02WakingCloudTopic042",
+      "topic_text": "What are you talking about?",
+      "emotion": "Surprise 50",
+      "response_text": "The Father in the Caves! The Holy Father who gave the Sorrows His succor and gave the New Canaanites His son!",
+      "index": "86"
+    },
+    {
+      "topic": "NVDLC02DialogueWakingCloudNVDLC02WakingCloudTopic043",
+      "topic_text": "I don't have time for your religious superstitions. It's just a cave, that's all.",
+      "emotion": "Fear 50",
+      "response_text": "It is a holy place! If we go any deeper, we will suffer for it!",
+      "index": "88"
+    },
+    {
+      "topic": "NVDLC02DialogueWakingCloudNVDLC02WakingCloudTopic044",
+      "topic_text": "Holy wrath. Right. I'll keep an eye out for that. Bet it looks a lot like a bear trap.",
+      "emotion": "Anger 50",
+      "response_text": "Do not mock that which you do not know! Such talk can only anger the Father.",
+      "index": "89"
+    },
+    {
+      "topic": "NVDLC02DialogueWakingCloudNVDLC02WakingCloudTopic045",
+      "topic_text": "The Father in the Caves was just a man who lived a long time ago.",
+      "emotion": "Disgust 50",
+      "response_text": "You speak as one who has not heard the tales, who has not seen the sacred images. If you knew, you would not mock.",
+      "index": "90"
+    },
+    {
+      "topic": "NVDLC02DialogueWakingCloudNVDLC02WakingCloudTopic046",
+      "topic_text": "I understand. I'll respect your beliefs, then, but we need to search the cave.",
+      "emotion": "Pained 50",
+      "response_text": "I understand. I would prefer to leave as soon as possible, though.",
+      "index": "91"
+    },
+    {
+      "topic": "NVDLC02DialogueWakingCloudNVDLC02WakingCloudTopic047",
+      "topic_text": "Sounds good. Let's go.",
+      "emotion": "Surprise 50",
+      "response_text": "Before we depart, our shaman, White Bird, asked me to convey his desire to speak with you.",
+      "index": "92"
+    },
+    {
+      "topic": "NVDLC02DialogueWakingCloudNVDLC02WakingCloudTopic048",
+      "topic_text": "I prefer to travel alone, thanks.",
+      "emotion": "Sad 50",
+      "response_text": "The lone Bighorner is the most vulnerable to its enemies. In the herd lies strength - if you reconsider your choice, I will be here.{in peace, go}{PAHZ pah-tah-soo-ba}Paz patasooba.",
+      "index": "94"
+    },
+    {
+      "topic": "NVDLC02DialogueWakingCloudNVDLC02WakingCloudTopic049",
+      "topic_text": "I like your bear glove. Where can I get one?",
+      "emotion": "Surprise 50",
+      "response_text": "A Sorrow's Yao Guai Fist is a sacred symbol. It shows that we belong to the tribe and have willingly undertaken a dangerous quest to aid the tribe.",
+      "index": "95"
+    },
+    {
+      "topic": "NVDLC02DialogueWakingCloudNVDLC02WakingCloudTopic050",
+      "topic_text": "Let's talk about something else.",
+      "emotion": "Happy 50",
+      "response_text": "What would you speak of?",
+      "index": "98"
+    },
+    {
+      "topic": "NVDLC02DialogueWakingCloudNVDLC02WakingCloudTopic051",
+      "topic_text": "Any idea what he wants?",
+      "emotion": "Neutral 50",
+      "response_text": "He did not say. White Bird is notoriously close-lipped. But he is wise, and you would do well to speak to him.",
+      "index": "99"
+    },
+    {
+      "topic": "NVDLC02DialogueWakingCloudNVDLC02WakingCloudTopic051DUPLICATE000",
+      "topic_text": "Any idea what he wants?",
+      "emotion": "Surprise 50",
+      "response_text": "He did not say. White Bird is notoriously close-lipped. But he is wise, and you would do well to speak to him.",
+      "index": "100"
+    },
+    {
+      "topic": "NVDLC02DialogueWakingCloudNVDLC02WakingCloudTopic052",
+      "topic_text": "Okay, I'll talk to him.",
+      "emotion": "Neutral 50",
+      "response_text": "Excellent. His cave overlooks the camp - I will show you where.",
+      "index": "101"
+    },
+    {
+      "topic": "NVDLC02DialogueWakingCloudNVDLC02WakingCloudTopic052DUPLICATE000",
+      "topic_text": "Okay, I'll talk to him.",
+      "emotion": "Happy 50",
+      "response_text": "Excellent. His cave overlooks the camp - I will show you where.",
+      "index": "102"
+    },
+    {
+      "topic": "NVDLC02DialogueWakingCloudNVDLC02WakingCloudTopic053",
+      "topic_text": "Maybe later, if there's time.",
+      "emotion": "Neutral 50",
+      "response_text": "I do hope you will reconsider. I will point out his cave on your map, should you wish to speak to him later.",
+      "index": "103"
+    },
+    {
+      "topic": "NVDLC02DialogueWakingCloudNVDLC02WakingCloudTopic053DUPLICATE000",
+      "topic_text": "Maybe later, if there's time.",
+      "emotion": "Sad 50",
+      "response_text": "As you wish. I will point out his cave on your map, should you wish to speak to him later.",
+      "index": "104"
+    },
+    {
+      "topic": "NVDLC02DialogueWakingCloudNVDLC02WakingCloudTopic054",
+      "topic_text": "<Lie> Daniel isn't avoiding talking about your family. He's just preoccupied with all of this.",
+      "emotion": "Happy 50",
+      "response_text": "This is true? You spoke to him? Oh, that is a relief.{Thank you, friend.}{GRAH-sahs nah-NAY}Grasas, na'ne.",
+      "index": "105"
+    },
+    {
+      "topic": "NVDLC02DialogueWakingCloudNVDLC02WakingCloudTopic055",
+      "topic_text": "I could talk to him, maybe he'll open up more to me.",
+      "emotion": "Happy 50",
+      "response_text": "Perhaps he will. I sometimes feel he thinks he must protect me. If he has news, I would know of it.",
+      "index": "106"
+    },
+    {
+      "topic": "NVDLC02EndingSorrows",
+      "topic_text": "NVDLC02EndingSorrows",
+      "emotion": "Neutral 50",
+      "response_text": "{Narration - Flee from Zion, saved lots}Daniel succeeded in leading the Sorrows out of Zion, as he had wanted to do from the start.",
+      "index": "107"
+    },
+    {
+      "topic": "NVDLC02EndingWakingCloud",
+      "topic_text": "NVDLC02EndingWakingCloud",
+      "emotion": "Neutral 50",
+      "response_text": "{Narration - Daniel hides the truth}Waking Cloud turned bitter and resentful toward Daniel and the New Canaanites when she learned her husband's death had been concealed from her.",
+      "index": "128"
+    },
+    {
+      "topic": "NVDLC02FollowersTacticsGOODBYE",
+      "topic_text": "That's all. Let's get going.",
+      "emotion": "Neutral 50",
+      "response_text": "I will try to follow your example.",
+      "index": "133"
+    },
+    {
+      "topic": "NVDLC02WakingCloudBurialMoundsBark",
+      "topic_text": "< Waking Cloud Burial Mounds Bark >",
+      "emotion": "Neutral 50",
+      "response_text": "Please be respectful here - these are the bones of our ancestors.",
+      "index": "134"
+    },
+    {
+      "topic": "NVDLC02WakingCloudCamps",
+      "topic_text": "< Waking Cloud talks about the White Leg Camps >",
+      "emotion": "Fear 50",
+      "response_text": "Those tents down there - that is a White Leg war camp. Do you see the war totems they've erected around the tents?",
+      "index": "135"
+    },
+    {
+      "topic": "NVDLC02WakingCloudDocksBark",
+      "topic_text": "< Waking Cloud Docks Bark >",
+      "emotion": "Neutral 50",
+      "response_text": "The river is lovely at this time of day, don't you think?",
+      "index": "137"
+    },
+    {
+      "topic": "NVDLC02WakingCloudGenericBarks",
+      "topic_text": "< Waking Cloud Generic Barks >",
+      "emotion": "Neutral 50",
+      "response_text": "It is good to travel with another. I spend so long scouting on my own that I forget what human company is like.",
+      "index": "139"
+    },
+    {
+      "topic": "NVDLC02WakingCloudGhostofSheBark",
+      "topic_text": "< Waking Cloud Ghost of She Bark >",
+      "emotion": "Neutral 50",
+      "response_text": "So this is the Ghost of She's lair. I was never brave enough to try to find it....",
+      "index": "150"
+    },
+    {
+      "topic": "NVDLC02WakingCloudMarysBark",
+      "topic_text": "< Waking Cloud Three Marys Bark >",
+      "emotion": "Neutral 50",
+      "response_text": "{Nervous}We should not be here! The Three Marys is where the White Legs make their camp! We should leave, quickly.",
+      "index": "151"
+    },
+    {
+      "topic": "NVDLC02WakingCloudNarrowsBark",
+      "topic_text": "< Waking Cloud Narrows Bark >",
+      "emotion": "Neutral 50",
+      "response_text": "I am always a little sad to leave the Narrows, and happy to return.",
+      "index": "152"
+    },
+    {
+      "topic": "NVDLC02WakingCloudPineCreekBark",
+      "topic_text": "< Waking Cloud Pine Creek Bark >",
+      "emotion": "Neutral 50",
+      "response_text": "This is Pine Creek, one of the only ways out of Zion Valley. Watch out - many dangerous beasts lair nearby.",
+      "index": "153"
+    },
+    {
+      "topic": "NVDLC02WakingCloudSUW",
+      "topic_text": "What do you know about Salt-Upon-Wounds?",
+      "emotion": "Anger 50",
+      "response_text": "He is war chief of the White Legs, and the worst butcher of them all. The tribes he has crushed are many. The warriors he has slain, countless.",
+      "index": "154"
+    },
+    {
+      "topic": "NVDLC02WakingCloudTabooBark",
+      "topic_text": "< Waking Cloud Taboo Bark >",
+      "emotion": "Neutral 50",
+      "response_text": "These are places of the time before. We should not be here - it is forbidden!",
+      "index": "155"
+    },
+    {
+      "topic": "NVDLC02WakingCloudTraps",
+      "topic_text": "< Waking Cloud talks about the sappers / traps >",
+      "emotion": "Surprise 50",
+      "response_text": "This is the only sure path from the Narrows to Pine Creek! They will be cut to ribbons by these traps!",
+      "index": "156"
+    },
+    {
+      "topic": "NVDLC02WakingCloudVirginBark",
+      "topic_text": "< Waking Cloud Eastern Virgin Bark >",
+      "emotion": "Neutral 50",
+      "response_text": "It has been some time since I visited the Dead Horses. Our tribes don't have much contact with each other.",
+      "index": "157"
+    },
+    {
+      "topic": "NVDLC02WakingCloudYaoGuai",
+      "topic_text": "< Waking Cloud talks about the Yao Guai >",
+      "emotion": "Fear 50",
+      "response_text": "Yao Guai - even our strongest hunters could not hope to kill so many. There must be a nest nearby.",
+      "index": "158"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "ArmorIneffective",
+      "topic_text": "ArmorIneffective",
+      "emotion": "Neutral 50",
+      "response_text": "I cannot defend myself against this!",
+      "index": "159"
+    },
+    {
+      "topic": "Attack",
+      "topic_text": "Attack",
+      "emotion": "Neutral 50",
+      "response_text": "{Attack grunt}",
+      "index": "161"
+    },
+    {
+      "topic": "AvoidThreat",
+      "topic_text": "AvoidThreat",
+      "emotion": "Neutral 50",
+      "response_text": "Beware!",
+      "index": "165"
+    },
+    {
+      "topic": "Crippled",
+      "topic_text": "Crippled",
+      "emotion": "Neutral 50",
+      "response_text": "{Limb crippled, in pain}I fear I will need more than my herbs to fix this....",
+      "index": "168"
+    },
+    {
+      "topic": "DeathResponse",
+      "topic_text": "DeathResponse",
+      "emotion": "Neutral 50",
+      "response_text": "{Sadly}This is how violence always ends....",
+      "index": "170"
+    },
+    {
+      "topic": "FireExplosive",
+      "topic_text": "FireExplosive",
+      "emotion": "Neutral 50",
+      "response_text": "Grenade!",
+      "index": "172"
+    },
+    {
+      "topic": "Flee",
+      "topic_text": "Flee",
+      "emotion": "Neutral 50",
+      "response_text": "We are outmatched!",
+      "index": "174"
+    },
+    {
+      "topic": "HealthHalf",
+      "topic_text": "HealthHalf",
+      "emotion": "Neutral 50",
+      "response_text": "{Half health, in pain}My wounds are getting worse!",
+      "index": "177"
+    },
+    {
+      "topic": "HealthQuarter",
+      "topic_text": "HealthQuarter",
+      "emotion": "Neutral 50",
+      "response_text": "{Quarter health, near death}Even my best herbs won't work if I'm dead... I need help!",
+      "index": "180"
+    },
+    {
+      "topic": "Hit",
+      "topic_text": "Hit",
+      "emotion": "Neutral 50",
+      "response_text": "{Got hit sound 1}",
+      "index": "183"
+    },
+    {
+      "topic": "Murder",
+      "topic_text": "Murder",
+      "emotion": "Neutral 50",
+      "response_text": "What demon would possess you to do such a thing?",
+      "index": "186"
+    },
+    {
+      "topic": "MurderNoCrime",
+      "topic_text": "MurderNoCrime",
+      "emotion": "Neutral 50",
+      "response_text": "I don't much like your way of solving problems.",
+      "index": "188"
+    },
+    {
+      "topic": "NoAmmo",
+      "topic_text": "NoAmmo",
+      "emotion": "Neutral 50",
+      "response_text": "I have no more bullets!",
+      "index": "190"
+    },
+    {
+      "topic": "Poisoned",
+      "topic_text": "Poison",
+      "emotion": "Neutral 50",
+      "response_text": "{Poisoned, woozy}I've been poisoned!",
+      "index": "193"
+    },
+    {
+      "topic": "Regenerating",
+      "topic_text": "Regenerating",
+      "emotion": "Neutral 50",
+      "response_text": "{Rush of health}That should keep me going a while longer.",
+      "index": "196"
+    },
+    {
+      "topic": "Steal",
+      "topic_text": "Steal",
+      "emotion": "Neutral 50",
+      "response_text": "Is thievery not considered wrong where you come from?",
+      "index": "199"
+    },
+    {
+      "topic": "UsedDoctorBag",
+      "topic_text": "UsedDoctorBag",
+      "emotion": "Neutral 50",
+      "response_text": "{Healing a crippled limb, a little surprised}This is much more effective than I expected!",
+      "index": "201"
+    },
+    {
+      "topic": "Wake",
+      "topic_text": "Wake",
+      "emotion": "Neutral 50",
+      "response_text": "{Waking up from being knocked out}This is not the most pleasant place I've woken up.",
+      "index": "203"
+    },
+    {
+      "topic": "WeaponIneffective",
+      "topic_text": "WeaponIneffective",
+      "emotion": "Neutral 50",
+      "response_text": "I don't think I'm hurting them at all!",
+      "index": "206"
+    }
+  ],
+  "combat": [
+    {
+      "topic": "AlertIdle",
+      "topic_text": "AlertIdle",
+      "emotion": "Neutral 50",
+      "response_text": "I am not giving up the search yet.",
+      "index": "209"
+    },
+    {
+      "topic": "AlertToCombat",
+      "topic_text": "AlertToCombat",
+      "emotion": "Neutral 50",
+      "response_text": "Found them!",
+      "index": "211"
+    },
+    {
+      "topic": "AlertToNormal",
+      "topic_text": "AlertToNormal",
+      "emotion": "Neutral 50",
+      "response_text": "Nothing after all.",
+      "index": "213"
+    },
+    {
+      "topic": "CombatToLost",
+      "topic_text": "CombatToLost",
+      "emotion": "Neutral 50",
+      "response_text": "I cannot find them!",
+      "index": "215"
+    },
+    {
+      "topic": "CombatToNormal",
+      "topic_text": "CombatToNormal",
+      "emotion": "Neutral 50",
+      "response_text": "Messy business - I am glad it's over.",
+      "index": "217"
+    },
+    {
+      "topic": "LostIdle",
+      "topic_text": "LostIdle",
+      "emotion": "Neutral 50",
+      "response_text": "Do you see them?",
+      "index": "219"
+    },
+    {
+      "topic": "LostToCombat",
+      "topic_text": "LostToCombat",
+      "emotion": "Neutral 50",
+      "response_text": "There you are!",
+      "index": "221"
+    },
+    {
+      "topic": "LostToNormal",
+      "topic_text": "LostToNormal",
+      "emotion": "Neutral 50",
+      "response_text": "They're gone. Perhaps that means we don't have to kill them.",
+      "index": "223"
+    },
+    {
+      "topic": "NormalToAlert",
+      "topic_text": "NormalToAlert",
+      "emotion": "Neutral 50",
+      "response_text": "Shh! Did you hear something?",
+      "index": "225"
+    },
+    {
+      "topic": "NormalToCombat",
+      "topic_text": "StartCombat",
+      "emotion": "Neutral 50",
+      "response_text": "You leave me no choice!",
+      "index": "227"
+    },
+    {
+      "topic": "StartCombatResponse",
+      "topic_text": "StartCombatResponse",
+      "emotion": "Neutral 50",
+      "response_text": "I'm with you.",
+      "index": "229"
+    }
+  ]
+}

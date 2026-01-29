@@ -1,0 +1,126 @@
+{
+  "name": "Mex",
+  "url": "/wiki/Mex",
+  "dialogue_name": "DLC01Mex.txt",
+  "dialogue_url": "/wiki/DLC01Mex.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "xx006166",
+  "ref_id": "xx006167",
+  "editor_id": "DLC01Mex",
+  "location": "Pitt Bridge",
+  "location_url": "/wiki/Pitt_Bridge",
+  "descriptions": [
+    "Mex is a Pitt raider guarding the gate to the Pitt around 2277.",
+    "Mex once served as a general guard in The Pitt’s Downtown region, but his excessive cruelty and punishment towards the slaves led Ashur to instead have him guard the gates to the city. He now guards the gates against outside threats and disposes of escaped slaves who attempt to cross the bridge, going so far as to lay down mines and shoot escapees with his rifle.",
+    "Upon the Lone Wanderer's arrival, their interaction with Mex depends on the attire they are wearing. Should they be wearing the previously acquired slave outfit, he will assume them to be an escaped slave who was unable to cross the bridge, saying that they are lucky he doesn’t kill them right then and there, instead confiscating their equipment and sending them into Downtown.",
+    "If the Lone Wanderer attempts in vain to reacquire their confiscated equipment from Mex’s locked box, he will have a variety of insulting comments.",
+    "Mex and three of his men keep their guns trained on the road into town all day, ready to blow away any pests or vermin trying to get in.",
+    "Into The Pitt",
+    "Mex appears only in The Pitt add-on for Fallout 3.",
+    "Mex is a reference to the chain of Mad Mex restaurants, which are relatively popular in Pittsburgh, and the surrounding area like in Monroeville and Squirrel Hill."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Pitt raiders",
+  "role": "Guard",
+  "detailed_location": "The Pitt bridge, gate tothe Pitt Downtown",
+  "voice_actor": "James Lewis",
+  "special": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 3,
+    "Intelligence": 3,
+    "Agility": 7,
+    "Luck": 5
+  },
+  "level": "1→4→9",
+  "tag_skills": [
+    {
+      "Melee Weap.:": "32→45→66"
+    },
+    {
+      "Small Guns:": "34→47→68"
+    },
+    {
+      "Unarmed:": "28→41→62"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "25→55→85"
+    },
+    {
+      "Critical Chance:": "5%"
+    },
+    {
+      "Unarmed Dam.:": "1.9→2.55→3.6"
+    },
+    {
+      "Poison Resist.:": "15%"
+    },
+    {
+      "Rad. Resist.:": "6%"
+    },
+    {
+      "Carry Weight:": "210"
+    }
+  ],
+  "karma": "Evil",
+  "voice_type": "DLC01RaiderMaleGruffVoice",
+  "geck_race": "CaucasianRaider",
+  "topics": [
+    {
+      "topic": "DLC01MexGreetingNoOutfit1",
+      "topic_text": "I'm a slave. I couldn't make it out there. Let me back in. <Lie.>",
+      "emotion": "Happy 50",
+      "response_text": "HAHA! I love it. Another slave wandered back here, huh? You couldn't even get over the bridge, could you? You're lucky I don't fuckin' paste you.",
+      "index": "1"
+    },
+    {
+      "topic": "DLC01MexGreetingNoOutfit2",
+      "topic_text": "I heard you had a good thing going here. I've come to join up with you.",
+      "emotion": "Anger 50",
+      "response_text": "Is that so? Well, since we're hirin', you can just head right on in and fill out a fuckin' application.{Dripping sarcasm.}",
+      "index": "4"
+    },
+    {
+      "topic": "DLC01MexGreetingNoOutfit3",
+      "topic_text": "I am death. I've come for you.",
+      "emotion": "Neutral 50",
+      "response_text": "Oh, good. It's been way too long since I killed anybody.",
+      "index": "6"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Happy 50",
+      "response_text": "HAHA! I love it. Another slave wandered back here, huh? What's wrong, couldn't get over the bridge? You're lucky I don't fuckin' paste you.",
+      "index": "7"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "DLC01MexHoldIt",
+      "topic_text": "DLC01MexHoldIt",
+      "emotion": "Neutral 50",
+      "response_text": "Hold it right there, grinder. Inspection.",
+      "index": "19"
+    },
+    {
+      "topic": "DLC01MexYellAtPlayerForTouchingBox",
+      "topic_text": "DLC01MexYellAtPlayerForTouchingBox",
+      "emotion": "Neutral 50",
+      "response_text": "Boo hoo, the mean boss took all of the dumbass slave's goodies! Is 'im gonna cry to Ashur?{Mock crying.}",
+      "index": "21"
+    }
+  ],
+  "combat": []
+}

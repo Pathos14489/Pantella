@@ -1,0 +1,170 @@
+{
+  "name": "Sammy Weathers",
+  "url": "/wiki/Sammy_Weathers",
+  "dialogue_name": "NVCCSammyWeathers.txt",
+  "dialogue_url": "/wiki/NVCCSammyWeathers.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "001364C8",
+  "ref_id": "001364C5",
+  "editor_id": "NVCCSammyWeathers",
+  "location": "Cottonwood Cove, in the slave pen",
+  "location_url": "/wiki/Cottonwood_Cove",
+  "descriptions": [
+    "Sammy Weathers is a capture held in Cottonwood Cove in 2281.",
+    "Sammy Weathers was captured by Caesar's Legion, along with her mother and brother, while relocating in the Mojave Wasteland. Her abusive father, Frank Weathers, fled during the attack.",
+    "When outside of dialogue with Sammy, her voice will be deeper and sound much like Colonel Moore's voice."
+  ],
+  "race": "Human",
+  "gender": "Female",
+  "role": "Capture",
+  "detailed_location": "Cottonwood CoveOld Mormon Fort(optional)",
+  "voice_actor": "Cindy Robinson",
+  "special": {
+    "Strength": 4,
+    "Perception": 7,
+    "Endurance": 3,
+    "Charisma": 4,
+    "Intelligence": 4,
+    "Agility": 5,
+    "Luck": 2
+  },
+  "mod_special_values": {
+    "Strength": 4,
+    "Perception": 8,
+    "Endurance": 4,
+    "Charisma": 4,
+    "Intelligence": 4,
+    "Agility": 6,
+    "Luck": 2
+  },
+  "level": "1",
+  "tag_skills": [
+    {
+      "Sneak:": "28(30)"
+    },
+    {
+      "Speech:": "26"
+    },
+    {
+      "Unarmed:": "24(26)"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "20(25)"
+    }
+  ],
+  "karma": "Neutral",
+  "voice_type": "FemaleAdult07",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Sad 100",
+      "response_text": "{despair}You killed my kin. Why is this happening to me?",
+      "index": "1"
+    },
+    {
+      "topic": "VFreeformCottonwoodCoveNVCCSammyWeathersTopic000",
+      "topic_text": "Don't worry your little head, Sammy. <Set off the explosive in her collar>",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] Why?{sobbing}Why?",
+      "index": "6"
+    },
+    {
+      "topic": "VFreeformCottonwoodCoveNVCCSammyWeathersTopic001",
+      "topic_text": "Let me deactivate your collar.",
+      "emotion": "Neutral 50",
+      "response_text": "{player already killed your mother or brother doing this}So you can kill more of us? Get away from me!",
+      "index": "8"
+    },
+    {
+      "topic": "VFreeformCottonwoodCoveNVCCSammyWeathersTopic002",
+      "topic_text": "I'm working on it.",
+      "emotion": "Neutral 50",
+      "response_text": "Hurry up. The guards keep eyeing me like I'm a piece of meat.",
+      "index": "10"
+    },
+    {
+      "topic": "VFreeformCottonwoodCoveNVCCSammyWeathersTopic003",
+      "topic_text": "<Give Sammy the key from Canyon Runner>",
+      "emotion": "Sad 100",
+      "response_text": "{Doesn't make sense}Why free me now? After what you done? I ain't saying thank you.",
+      "index": "11"
+    },
+    {
+      "topic": "VFreeformCottonwoodCoveNVCCSammyWeathersTopic004",
+      "topic_text": "Hold still. <Deactivate the charge and remove her collar>",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] You did it! Thank you so much!",
+      "index": "12"
+    },
+    {
+      "topic": "VFreeformCottonwoodCoveNVCCSammyWeathersTopic005",
+      "topic_text": "Never mind. I'll see if there is another way to free you.",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah, like get the key from the slavemaster or pay him to release us?",
+      "index": "14"
+    },
+    {
+      "topic": "VFreeformCottonwoodCoveNVCCSammyWeathersTopic006",
+      "topic_text": "I've paid for your freedom. You're free to go.",
+      "emotion": "Neutral 50",
+      "response_text": "{Shocked disbelief}Freedom? I don't know where we'll get a new start, but any place is better than rotting with the legion or Frank.",
+      "index": "15"
+    },
+    {
+      "topic": "VFreeformCottonwoodCoveNVCCSammyWeathersTopic007",
+      "topic_text": "I've paid for your freedom. You're free to go.",
+      "emotion": "Sad 100",
+      "response_text": "{Doesn't make sense}Why free me now? After what you done? I ain't saying thank you.",
+      "index": "16"
+    },
+    {
+      "topic": "VFreeformCottonwoodCoveNVCCSammyWeathersTopic008",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "{muttering}Momma...",
+      "index": "17"
+    },
+    {
+      "topic": "VFreeformCottonwoodCoveNVCCSammyWeathersTopic009",
+      "topic_text": "It was an accident.",
+      "emotion": "Neutral 50",
+      "response_text": "{angry}Accident or not, you're to blame!",
+      "index": "18"
+    },
+    {
+      "topic": "VFreeformCottonwoodCoveNVCCSammyWeathersTopic010",
+      "topic_text": "<Give Sammy the key from Canyon Runner>",
+      "emotion": "Neutral 50",
+      "response_text": "{Shocked disbelief}Freedom? I don't know where we'll get a new start, but any place is better than rotting with the legion or Frank.",
+      "index": "19"
+    },
+    {
+      "topic": "VFreeformCottonwoodCoveNVCCSammyWeathersTopic011",
+      "topic_text": "Goodbye.",
+      "emotion": "Sad 70",
+      "response_text": "<Sad stare>",
+      "index": "20"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "{muttering}Momma...",
+      "index": "21"
+    }
+  ],
+  "combat": []
+}

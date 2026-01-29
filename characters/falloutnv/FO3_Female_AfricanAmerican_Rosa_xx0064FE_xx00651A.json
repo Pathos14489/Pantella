@@ -1,0 +1,135 @@
+{
+  "name": "Rosa",
+  "url": "/wiki/Rosa_Meitner",
+  "dialogue_name": "DLC03WQ03Rosa.txt",
+  "dialogue_url": "/wiki/DLC03WQ03Rosa.txt",
+  "spawned_dead": false,
+  "spawned": true,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "xx0064FE",
+  "ref_id": "xx00651A",
+  "editor_id": "DLC03WQ03Rosa",
+  "location": "OutsideMegaton",
+  "location_url": "/wiki/Megaton",
+  "descriptions": [
+    "Rosa Meitner is a wandering wastelander who is found in the vicinity of Megaton about two weeks after the activation of Project Purity in 2277/2278.",
+    "Rosa is a kindhearted traveler headed for Megaton.",
+    "Witnessing the event was the Lone Wanderer, who had arrived at Megaton around the same time as her. Confused and grief-stricken, she begs the Lone Wanderer for aid, giving them the pamphlet and informing them of her encounter at the Holy Light Monastery. Afterwards, she wanders away from Megaton, inconsolable.",
+    "Rosa only spawns in front of Megaton's entrance after starting Holy Water.",
+    "Rosa Meitner appears in the Fallout 3 add-on Broken Steel and Fallout: Wasteland Warfare."
+  ],
+  "race": "Human",
+  "gender": "Female",
+  "affiliation": "MegatonApostles of the Eternal Light",
+  "role": "Unwitting killer",
+  "detailed_location": "OutsideMegaton",
+  "voice_actor": "Shari Elliker",
+  "special": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 10,
+    "Intelligence": 5,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "mod_special_values": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 6,
+    "Charisma": 10,
+    "Intelligence": 5,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "karma": "Neutral",
+  "voice_type": "FemaleAdult01DefaultDC",
+  "geck_race": "AfricanAmerican",
+  "topics": [
+    {
+      "topic": "DLC03Rosa1B",
+      "topic_text": "Slow down. What happened here?",
+      "emotion": "Fear 25",
+      "response_text": "I just gave him some water I picked up on the way through Springvale. It tasted pure, and it looks clean. How was I supposed to know?{Shocked and a little grief-stricken}",
+      "index": "1"
+    },
+    {
+      "topic": "DLC03Rosa1C",
+      "topic_text": "Accident, huh? Why should I believe that?",
+      "emotion": "Surprise 50",
+      "response_text": "No, please! I just wanted to share some of my water with him! How could that kill him?",
+      "index": "2"
+    },
+    {
+      "topic": "DLC03Rosa2A",
+      "topic_text": "It's okay. You couldn't have known.",
+      "emotion": "Fear 25",
+      "response_text": "No, it's not okay! Not for him! It was supposed to be holy water. The man at the monastery in Springvale said it was blessed!{Shocked and a little grief-stricken}",
+      "index": "3"
+    },
+    {
+      "topic": "DLC03Rosa2B",
+      "topic_text": "I'll look into it. Where did you get the water?",
+      "emotion": "Fear 25",
+      "response_text": "I thought it would help him. It was supposed to be holy water. The man at the monastery in Springvale said it was blessed!{Shocked and a little grief-stricken}",
+      "index": "6"
+    },
+    {
+      "topic": "DLC03Rosa2C",
+      "topic_text": "Sounds to me like you wanted him dead.",
+      "emotion": "Fear 25",
+      "response_text": "No, I promise, I thought it would help! It was supposed to be holy water. The man at the monastery in Springvale said it was blessed!{Shocked and a little grief-stricken}",
+      "index": "9"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Fear 75",
+      "response_text": "What should I do? He asked for water, and I thought I was helping him, not killing him!{Panicked because she just accidentally killed someone}",
+      "index": "12"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "DLC03WQ03MeitnerPanic",
+      "topic_text": "DLC03WQ03MeitnerPanic",
+      "emotion": "Fear 50",
+      "response_text": "No... What do I do?",
+      "index": "15"
+    },
+    {
+      "topic": "DLC03WQ03MeitnerReact1",
+      "topic_text": "DLC03WQ03MeitnerReact1",
+      "emotion": "Fear 80",
+      "response_text": "No! That's not supposed to happen! No, get up! Get up! You can't pass out, you're supposed to get better! I gave you holy water, and everything!",
+      "index": "18"
+    },
+    {
+      "topic": "DLC03WQ03RosaLeaving",
+      "topic_text": "DLC03WQ03RosaLeaving",
+      "emotion": "Fear 50",
+      "response_text": "I can't stay here. Not after something like that...",
+      "index": "19"
+    },
+    {
+      "topic": "DLC03WQ03Scene2",
+      "topic_text": "DLC03WQ03Scene2",
+      "emotion": "Happy 15",
+      "response_text": "Oh, poor dear. Here, I've got some water I can spare.{Ministering to the ill}",
+      "index": "20"
+    },
+    {
+      "topic": "DLC03WQ03Scene4",
+      "topic_text": "DLC03WQ03Scene4",
+      "emotion": "Happy 50",
+      "response_text": "No, bless you. I'm glad to help.{Ministering to the ill}",
+      "index": "21"
+    }
+  ],
+  "combat": []
+}

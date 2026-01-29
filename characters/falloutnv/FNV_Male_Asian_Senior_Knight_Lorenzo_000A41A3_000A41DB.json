@@ -1,0 +1,208 @@
+{
+  "name": "Senior Knight Lorenzo",
+  "url": "/wiki/Lorenzo_(Fallout:_New_Vegas)",
+  "dialogue_name": "HVKnightEDE.txt",
+  "dialogue_url": "/wiki/HVKnightEDE.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000A41A3",
+  "ref_id": "000A41DB",
+  "editor_id": "HVKnightEDE",
+  "location": "Hidden Valley bunker",
+  "location_url": "/wiki/Hidden_Valley_bunker",
+  "descriptions": [
+    "Senior Knight Lorenzo is the head of the Mojave Brotherhood of Steel's maintenance and manufacturing department in Hidden Valley in 2281.",
+    "Working in the bunker's lower levels, Lorenzo is a remarkably polite person who carries the burden of caring for the facility's stockpiles of technology. He feels responsible for the well being of everyone, in particular those who retrieve parts and supplies for vital projects. He has recently realized that the bunker's air filtration systems are deteriorating and reported that fact to Elder McNamara. The elder sent out three squads of paladins to recover parts needed to fix the system, but all three failed to returned and are presumed dead.",
+    "In his spare time, he researches Poseidon Energy's projects, especially its research in military technology.",
+    "During development of ED-E My Love, developer Jason Fader provided temporary voiceover for the broadcasts of Lorenzo and April Martimer. Quest designer Akil Hooper requested two very different voices for the test build to differentiate the broadcasts. Fader performed April's voice like Count Dracula and performed Lorenzo's voice like Inigo Montoya from The Princess Bride. Although Fader's voice was only used for testing purposes during development, and was not intended to be heard in the final game, a bug caused part of Lorenzo's Inigo Montoya impression to appear in-game for one line. Fader's father found the bug on YouTube and called it to his attention, since he recognized Fader's voice.",
+    "PC Playstation 3 Xbox 360 During ED-E My Love, the last line of dialogue in Lorenzo's message to the Courier might unintentionally play a test voiceover line, spoken by developer Jason Fader rather than voice actor Yuri Lowenthal."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Mojave Brotherhood of Steel",
+  "role": "Soldier, repairman",
+  "detailed_location": "Hidden Valley Bunker, L2,Hidden Valley bunker",
+  "voice_actor": "Yuri Lowenthal",
+  "special": {
+    "Strength": 8,
+    "Perception": 7,
+    "Endurance": 8,
+    "Charisma": 4,
+    "Intelligence": 3,
+    "Agility": 6,
+    "Luck": 4
+  },
+  "level": "11",
+  "tag_skills": [
+    {
+      "Energy Weap.:": "69"
+    },
+    {
+      "Explosives:": "69"
+    },
+    {
+      "Guns:": "67"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Good",
+  "voice_type": "MaleAdult01Default",
+  "geck_race": "Asian",
+  "topics": [
+    {
+      "topic": "EDERadioConversation",
+      "topic_text": "EDERadioConversation",
+      "emotion": "Neutral 50",
+      "response_text": "Uh... Hello? Hi. Are you there? Oh, right. You can't respond.{Pause}Listen, I'm using your robot as a relay to get this message to you.",
+      "index": "1"
+    },
+    {
+      "topic": "EDERadioConversation2",
+      "topic_text": "EDERadioConversation",
+      "emotion": "Neutral 50",
+      "response_text": "Uh... Hello? Hi. Are you there? Oh, right. You can't respond.{Pause}Listen, I'm using your robot as a relay to get this message to you.",
+      "index": "5"
+    },
+    {
+      "topic": "EDETopicTest",
+      "topic_text": "Let's talk about something else.",
+      "emotion": "Neutral 50",
+      "response_text": "Oh, well if you change your mind let me know. I have some parts here I can use to upgrade his armor if you leave it with me for a bit.",
+      "index": "9"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "You're the one with that robot, I was hoping you'd bring him my way. Pretty impressive piece of hardware.",
+      "index": "10"
+    },
+    {
+      "topic": "VDialogueHiddenValleyHVKnightEDETopic000I've heard some information from its logs, sounds like it is carrying some Enclave data.",
+      "topic_text": "I've heard some information from its logs, sounds like it is carrying some Enclave data.",
+      "emotion": "Neutral 50",
+      "response_text": "Really? What kind of logs? What kind of data does he have on it?",
+      "index": "16"
+    },
+    {
+      "topic": "VDialogueHiddenValleyHVKnightEDETopic001",
+      "topic_text": "The logs spoke about Enclave Duraframe research and Poseidon Energy research.",
+      "emotion": "Surprise 50",
+      "response_text": "{Surprise}Did... did you say Poseidon Energy? I've been researching some Poseidon projects here.",
+      "index": "18"
+    },
+    {
+      "topic": "VDialogueHiddenValleyHVKnightEDETopic002",
+      "topic_text": "The Elder wants me to retrieve components to help fix the air filtration system.",
+      "emotion": "Neutral 50",
+      "response_text": "{Beat}...So now I'm going to have your death on my conscience, too. Great.",
+      "index": "20"
+    },
+    {
+      "topic": "VDialogueHiddenValleyHVKnightEDETopic005",
+      "topic_text": "Your terminal had some very interesting things to say about the state of the air filtration system.",
+      "emotion": "Neutral 50",
+      "response_text": "{Initially outraged}What were you doing looking at my terminal?{Distracted, calmer}No, never mind that. You can't tell anyone about what you found!",
+      "index": "21"
+    },
+    {
+      "topic": "VDialogueHiddenValleyHVKnightEDETopic006",
+      "topic_text": "So you and the McNamara both know about this?",
+      "emotion": "Neutral 50",
+      "response_text": "{Resigned}...Yes. When I first discovered how much the systems had deteriorated, I reported it to the Elder right away.",
+      "index": "23"
+    },
+    {
+      "topic": "VDialogueHiddenValleyHVKnightEDETopic007",
+      "topic_text": "The rest of the chapter should be told!",
+      "emotion": "Neutral 50",
+      "response_text": "{Panicked}No! Please don't! Everyone would blame me! Look, I'll do whatever you want, just name it!",
+      "index": "25"
+    },
+    {
+      "topic": "VDialogueHiddenValleyHVKnightEDETopic008",
+      "topic_text": "Don't worry, I'll keep your little secret.",
+      "emotion": "Neutral 50",
+      "response_text": "{Relieved}Thank you. There's no telling what would happen if everyone were to suddenly find out, but I trust it wouldn't be good.",
+      "index": "26"
+    },
+    {
+      "topic": "VDialogueHiddenValleyHVKnightEDETopic009",
+      "topic_text": "Vote for Hardin when he calls a tribunal.",
+      "emotion": "Neutral 50",
+      "response_text": "Fine, but you're making a big mistake. Hardin isn't half the leader that McNamara is.",
+      "index": "27"
+    },
+    {
+      "topic": "VDialogueHiddenValleyHVKnightEDETopic011",
+      "topic_text": "I'll have to think on this more.",
+      "emotion": "Sad 25",
+      "response_text": "{Sad}Okay, but I'd really like to take a look at him. Remember, I'll be able to give his armor some extra plating while I've got him here.",
+      "index": "28"
+    },
+    {
+      "topic": "VDialogueHiddenValleyHVKnightEDETopic012",
+      "topic_text": "Er, what?",
+      "emotion": "Neutral 50",
+      "response_text": "{scornful, with a little hysteria}You think you're the first person the Elder's trusted with this? He sent three of our patrols out looking for those components, and they're all dead.",
+      "index": "29"
+    },
+    {
+      "topic": "VDialogueHiddenValleyHVKnightEDETopic013",
+      "topic_text": "Maybe you misheard me.",
+      "emotion": "Neutral 50",
+      "response_text": "No, I heard you quite clearly. You're being sent off to be killed like the others.",
+      "index": "32"
+    },
+    {
+      "topic": "VDialogueHiddenValleyHVKnightEDETopic015",
+      "topic_text": "Just give the details.",
+      "emotion": "Neutral 50",
+      "response_text": "The items I'll need to keep the system running are a differential pressure controller, a reverse pulse cleaner, and several{HEP-uh}HEPA cartridge filters.",
+      "index": "33"
+    },
+    {
+      "topic": "VDialogueHiddenValleyHVKnightEDETopic016",
+      "topic_text": "They're all right here.",
+      "emotion": "Neutral 50",
+      "response_text": "{Had serious doubts the player could do it}Really? I mean, that's great! I knew you could do it all along. I'll get right to work installing these.",
+      "index": "37"
+    },
+    {
+      "topic": "VDialogueHiddenValleyHVKnightEDETopic017",
+      "topic_text": "Not all of them.",
+      "emotion": "Neutral 50",
+      "response_text": "It's amazing that you've found any of them and not gotten gruesomely mangled. Keep up the good work!",
+      "index": "39"
+    },
+    {
+      "topic": "VDialogueHiddenValleyHVKnightEDETopic018",
+      "topic_text": "No, I haven't found any of them yet.",
+      "emotion": "Neutral 50",
+      "response_text": "I don't want to rush you or anything, but time is of the essence. Please try to find those components as soon as you can.",
+      "index": "40"
+    },
+    {
+      "topic": "VDialogueHiddenValleyHVKnightEDETopic019",
+      "topic_text": "I wanted to ask you some questions.",
+      "emotion": "Neutral 50",
+      "response_text": "Sure, what about?",
+      "index": "41"
+    },
+    {
+      "topic": "vQuestEdeGone",
+      "topic_text": "Ok, you can have ED-E for a little bit.",
+      "emotion": "Neutral 50",
+      "response_text": "This is excellent news. I'll send him back to you soon.",
+      "index": "42"
+    }
+  ],
+  "conversation": [],
+  "combat": []
+}

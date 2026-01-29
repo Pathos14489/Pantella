@@ -1,0 +1,142 @@
+{
+  "name": "Anders",
+  "url": "/wiki/Anders_(Fallout:_New_Vegas)",
+  "dialogue_name": "VRRCAnders.txt",
+  "dialogue_url": "/wiki/VRRCAnders.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "001413C2",
+  "ref_id": "001413C3",
+  "editor_id": "vRRCAnders",
+  "location": "On a cross outside ofCottonwood Cove",
+  "location_url": "/wiki/Cottonwood_Cove",
+  "descriptions": [
+    "Anders is a drug runner working for Diane and Jack of the Great Khans found crucified at Cottonwood Cove in 2281.",
+    "Anders was originally sent out of Red Rock Canyon about three weeks before the Courier's arrival there, in order to find a route into Arizona, to open up a new market for the Khans' \"recreational\" goods. However, Anders was apprehended by members of the Caesar's Legion near Cottonwood Cove and promptly crucified for dealing in chems, as Caesar's law dictates.",
+    "If the player character passes the Speech check with Jack for the quest Oh My Papa, therefore bypassing any need to complete any quests, asking Diane for work will cause her to ask for help finding Anders, who will still be on the cross."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Great Khans",
+  "role": "Drug runner",
+  "detailed_location": "Cottonwood CoveRed Rock drug lab(optional)",
+  "voice_actor": "Liam O'Brien",
+  "special": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 3,
+    "Intelligence": 3,
+    "Agility": 7,
+    "Luck": 5
+  },
+  "level": "8",
+  "tag_skills": [
+    {
+      "Energy Weap.:": "55"
+    },
+    {
+      "Guns:": "59"
+    },
+    {
+      "Melee Weap.:": "57"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "70"
+    },
+    {
+      "Critical Chance:": "5%"
+    },
+    {
+      "Unarmed Dam.:": "1.15"
+    },
+    {
+      "Poison Resist.:": "15%"
+    },
+    {
+      "Rad. Resist.:": "6%"
+    },
+    {
+      "Carry Weight:": "210"
+    }
+  ],
+  "karma": "Neutral",
+  "voice_type": "MaleAdult05",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "AndersCross",
+      "topic_text": "Who did this to you?",
+      "emotion": "Pained 80",
+      "response_text": "{In agony}Unh... Legion caught me. Said this... was the penalty for drug runners. Please... let me down.",
+      "index": "1"
+    },
+    {
+      "topic": "AndersDrugs",
+      "topic_text": "You're smuggling drugs?",
+      "emotion": "Pained 50",
+      "response_text": "{In agony}Please... for the love of God, let me down!",
+      "index": "3"
+    },
+    {
+      "topic": "AndersFree",
+      "topic_text": "Let's get you down from there.",
+      "emotion": "Pained 20",
+      "response_text": "Unnnh.",
+      "index": "5"
+    },
+    {
+      "topic": "AndersJackandDiane",
+      "topic_text": "Are you Anders? Jack and Diane sent me to look for you.",
+      "emotion": "Surprise 50",
+      "response_text": "{In agony}Thank God. Let me down, please!",
+      "index": "6"
+    },
+    {
+      "topic": "AndersRot",
+      "topic_text": "I think you're better off where you are. Hang around, I'll be back.",
+      "emotion": "Pained 80",
+      "response_text": "{In agony}No! God, please!",
+      "index": "9"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Pained 80",
+      "response_text": "{In agony}Unnnh... please... help me.",
+      "index": "10"
+    },
+    {
+      "topic": "VMS46vRRCAndersTopic000",
+      "topic_text": "Actually, I have a few questions first.",
+      "emotion": "Neutral 50",
+      "response_text": "Okay, but keep it quick. I'd like to get out of here before the Legionnaires come to check on me.",
+      "index": "13"
+    },
+    {
+      "topic": "VMS46vRRCAndersTopic001",
+      "topic_text": "Good luck on your journey.",
+      "emotion": "Neutral 50",
+      "response_text": "Thanks. See you around.",
+      "index": "14"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYEGoodbye.",
+      "topic_text": "Goodbye.",
+      "emotion": "Fear 50",
+      "response_text": "{In Agony}No, please! Don't leave me here!",
+      "index": "15"
+    }
+  ],
+  "combat": []
+}

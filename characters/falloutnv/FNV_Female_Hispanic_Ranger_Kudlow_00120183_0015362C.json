@@ -1,0 +1,115 @@
+{
+  "name": "Ranger Kudlow",
+  "url": "/wiki/Kudlow",
+  "dialogue_name": "RSFoxtrotKudlow.txt",
+  "dialogue_url": "/wiki/RSFoxtrotKudlow.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "00120183",
+  "ref_id": "0015362C",
+  "editor_id": "RSFoxtrotKudlow",
+  "location": "Ranger Station Foxtrot",
+  "location_url": "/wiki/Ranger_Station_Foxtrot",
+  "descriptions": [
+    "Ranger Kudlow is a member of the New California Republic Rangers and the lead officer stationed at Ranger Station Foxtrot in the Mojave Wasteland in 2281. She appears in Fallout: New Vegas.",
+    "In her post to Ranger Station Foxtrot prior to 2281, Ranger Kudlow's primary mission has been observing the activities of the Great Khans inhabiting Red Rock Canyon to the south of the station.",
+    "Kudlow also has a low opinion of Comm Officer Lenk, having little sympathy for her story of falling into gambling and alcohol to cope with trauma. She disapproves of Lenk's \"jumpy\" tendencies and its effect on group morale after she was assigned to Foxtrot as her last chance to remain a Ranger.",
+    "The Courier may approach Ranger Kudlow and ask her about the outpost's mission and some details about her troops.",
+    "The NCR Rangers at the ranger stations, including Kudlow, were written by additional area designer Matt MacLean, who worked on the quest Return to Sender."
+  ],
+  "race": "Human",
+  "gender": "Female",
+  "affiliation": "NCR Rangers",
+  "role": "Ranger Station lead officer",
+  "detailed_location": "Ranger Station Foxtrot",
+  "voice_actor": "Mela Lee",
+  "special": {
+    "Strength": 5,
+    "Perception": 6,
+    "Endurance": 6,
+    "Charisma": 4,
+    "Intelligence": 5,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "level": "7",
+  "tag_skills": [
+    {
+      "Guns:": "56"
+    },
+    {
+      "Sneak:": "56"
+    },
+    {
+      "Unarmed:": "56"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "155"
+    }
+  ],
+  "karma": "Neutral",
+  "voice_type": "FemaleAdult09",
+  "geck_race": "Hispanic",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "{Player in NCR gear}No run-ins with the Great Khans, I hope? They've been more restless than usual.",
+      "index": "1"
+    },
+    {
+      "topic": "VMSRSFoxtrotQuestTopic005",
+      "topic_text": "What are you doing out here?",
+      "emotion": "Neutral 50",
+      "response_text": "Keeping watch on the Great Khans mostly. They usually stick around Red Rock Canyon, but at least one large group left recently.",
+      "index": "4"
+    },
+    {
+      "topic": "vDialogueRangerStationFoxtrotRSFoxtrotKudlowTopic000",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Be careful out there.",
+      "index": "6"
+    },
+    {
+      "topic": "vDialogueRangerStationFoxtrotRSFoxtrotKudlowTopic001",
+      "topic_text": "I need to confirm your report about Great Khans with trained Deathclaws.",
+      "emotion": "Surprise 10",
+      "response_text": "You must be mistaken - I haven't filed any report like that. Trained deathclaws? I would have remembered that.",
+      "index": "7"
+    },
+    {
+      "topic": "vDialogueRangerStationFoxtrotRSFoxtrotKudlowTopic002",
+      "topic_text": "What do you know about the Great Khans?",
+      "emotion": "Neutral 50",
+      "response_text": "Tough, independent, and as ruthless as they come. They're holed up in Red Rock Canyon, and it's this station's job to keep an eye on them.",
+      "index": "9"
+    },
+    {
+      "topic": "vDialogueRangerStationFoxtrotRSFoxtrotKudlowTopic003",
+      "topic_text": "Lenk told me her story.",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah, it's a damn shame. There was a lot of talk about expelling her from the Rangers, especially once the gambling and drinking started.",
+      "index": "10"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Be careful out there.",
+      "index": "12"
+    }
+  ],
+  "combat": []
+}

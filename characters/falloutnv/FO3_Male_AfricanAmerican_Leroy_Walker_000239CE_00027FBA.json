@@ -1,0 +1,475 @@
+{
+  "name": "Leroy Walker",
+  "url": "/wiki/Leroy_Walker",
+  "dialogue_name": "LeroyWalker.txt",
+  "dialogue_url": "/wiki/LeroyWalker.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000239CE",
+  "ref_id": "00027FBA",
+  "editor_id": "LeroyWalker",
+  "location": "Lincoln Memorial's maintenance room",
+  "location_url": "/wiki/Lincoln_Memorial",
+  "descriptions": [
+    "Leroy Walker is a slaver from Paradise Falls residing in the Lincoln Memorial in the Capital Wasteland in Fallout 3.",
+    "A firm believer in the rule of the strong over the weak, Leroy is unique among other slavers, in that he does not concern himself with the profits made from conducting slavery. Instead, he believes that the transaction of human beings is simply natural law being put into practice, and takes pride in his role as a slave catcher, chasing down runaways in the wasteland.",
+    "During his attempts to recover runaways and return them to Paradise Falls, Leroy became interested in the activities of Hannibal Hamlin and the Abolitionists, and discovered their base at the Temple of the Union. In his eyes, were the Abolitionists to succeed in their mission to reclaim the Lincoln Memorial and make it into a bastion for all runaway slaves in the Capital Wasteland, To combat such a future, Leroy led a six-man team of slavers to occupy the Memorial, shooting anyone who merely sets foot on the front steps, while planning an assault on the Temple of the Union. He also gained an interest in finding the relics of Abraham Lincoln, but not out of reverence; instead, he wanted them found so he could destroy them and deny the Abolitionists any means of moralizing and inspiring more slaves to escape their bondage.",
+    "Leroy can usually be found in the operations office on the first floor of the Memorial, through the door to the left of the front steps.",
+    "Supplying Walker with one artifact will allow the Lone Wanderer access to the Lincoln Memorial without risk of being attacked by the slavers.",
+    "The character's name is a reference to LeRoy Pope Walker, the first Confederate States Secretary of War. Walker issued the orders for the Confederate Army to fire upon Fort Sumter, the opening act of the American Civil War."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Slavers",
+  "role": "Leader",
+  "detailed_location": "Lincoln Memorial",
+  "voice_actor": "Gregory Gorton",
+  "special": {
+    "Strength": 6,
+    "Perception": 4,
+    "Endurance": 4,
+    "Charisma": 6,
+    "Intelligence": 4,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "mod_special_values": {
+    "Strength": 6,
+    "Perception": 4,
+    "Endurance": 4,
+    "Charisma": 6,
+    "Intelligence": 4,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "level": "10→20",
+  "tag_skills": [
+    {
+      "Barter:": "74→100"
+    },
+    {
+      "Melee Weap.:": "74→100"
+    },
+    {
+      "Small Guns:": "74→100(72→98)"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "85→135"
+    }
+  ],
+  "karma": "Evil",
+  "voice_type": "MaleAdult01DefaultBDC",
+  "geck_race": "AfricanAmerican",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "I'm Leroy Walker, and you're probably wondering about what we're doing here.",
+      "index": "1"
+    },
+    {
+      "topic": "MS06AgreeI solemnly swear to protect the Temple of the Union.",
+      "topic_text": "Okay. Where is this ruin?",
+      "emotion": "Happy 50",
+      "response_text": "It's a museum, just past the Washington Monument. I'm only interested in stuff related to Abraham Lincoln. Bring me back whatever you find.",
+      "index": "12"
+    },
+    {
+      "topic": "MS06AlreadyKnowHannibal",
+      "topic_text": "Actually, I already know he's up north, near Old Olney.",
+      "emotion": "Surprise 50",
+      "response_text": "Very clever. Well, I guess I owe you some caps.",
+      "index": "14"
+    },
+    {
+      "topic": "MS06BetrayTemple",
+      "topic_text": "They're up north, near Old Olney.",
+      "emotion": "Surprise 50",
+      "response_text": "Not willing to trade your life for a bunch of runaway slaves, eh?",
+      "index": "15"
+    },
+    {
+      "topic": "MS06BuyActionFigure",
+      "topic_text": "What will you give me for this toy of Lincoln?",
+      "emotion": "Disgust 50",
+      "response_text": "I suppose I could give you 10 caps. It's not very inspiring, is it?",
+      "index": "19"
+    },
+    {
+      "topic": "MS06BuyDraftPoster",
+      "topic_text": "How much for this war poster?",
+      "emotion": "Disgust 50",
+      "response_text": "Those damn abolitionists would use this against us. I'll give you 50 caps. You won't get a better price anywhere else.",
+      "index": "20"
+    },
+    {
+      "topic": "MS06BuyEmancipation",
+      "topic_text": "I have a copy of the Emancipation Proclamation to sell.",
+      "emotion": "Fear 50",
+      "response_text": "Holy shit! I'll give you 150 caps for it. Nobody else will pay that much.",
+      "index": "21"
+    },
+    {
+      "topic": "MS06BuyFight",
+      "topic_text": "I ought to kill you for treating people like this. In fact, I think I will.",
+      "emotion": "Anger 50",
+      "response_text": "Abolitionist!",
+      "index": "22"
+    },
+    {
+      "topic": "MS06BuyGettysburgAddress",
+      "topic_text": "Are you interested in buying the Gettysburg Address?",
+      "emotion": "Disgust 50",
+      "response_text": "Conceived in liberty? I can't let those abolitionists get this. I'll give you 50 caps for it.",
+      "index": "23"
+    },
+    {
+      "topic": "MS06BuyHat",
+      "topic_text": "Are you interested in Lincoln's hat?",
+      "emotion": "Surprise 50",
+      "response_text": "Such strange clothing. We may never truly understand Lincoln and his times.",
+      "index": "24"
+    },
+    {
+      "topic": "MS06BuyLincolnDiary",
+      "topic_text": "I found Lincoln's diary.",
+      "emotion": "Fear 50",
+      "response_text": "This is truly a dangerous book. I'll pay 75 caps for it.",
+      "index": "26"
+    },
+    {
+      "topic": "MS06BuyNo",
+      "topic_text": "I'd rather keep it.",
+      "emotion": "Anger 50",
+      "response_text": "Don't you dare let any slaves get wind of it.",
+      "index": "27"
+    },
+    {
+      "topic": "MS06BuyOffNo",
+      "topic_text": "Um... I seem to be a bit short. But I promise I'll have it by next week.",
+      "emotion": "Disgust 50",
+      "response_text": "Yeah. What a surprise. Don't ask again. That was a one time offer.",
+      "index": "29"
+    },
+    {
+      "topic": "MS06BuyOffSlavers",
+      "topic_text": "How about I buy all the Temple of the Union slaves from you?",
+      "emotion": "Disgust 50",
+      "response_text": "I bet you just want to set them all free",
+      "index": "33"
+    },
+    {
+      "topic": "MS06BuyOffYes",
+      "topic_text": "Here. Take your blood money, all 2500 caps of it.",
+      "emotion": "Happy 50",
+      "response_text": "You've got a deal.",
+      "index": "36"
+    },
+    {
+      "topic": "MS06BuyPennies",
+      "topic_text": "I have a collection of pennies with Lincoln's face on them.",
+      "emotion": "Disgust 50",
+      "response_text": "Not exactly something that will rally slaves, eh? I'll give you 15 caps for it.",
+      "index": "38"
+    },
+    {
+      "topic": "MS06BuyPoster",
+      "topic_text": "How much will you pay for this poster of the Lincoln Memorial?",
+      "emotion": "Fear 50",
+      "response_text": "I wouldn't want abolishionists to find this. How about 100 caps? You know nobody else will buy it.",
+      "index": "39"
+    },
+    {
+      "topic": "MS06BuyRecording",
+      "topic_text": "Are you interested in buying a recording of Lincoln's voice?",
+      "emotion": "Surprise 50",
+      "response_text": "Yeah, I might be interested.",
+      "index": "40"
+    },
+    {
+      "topic": "MS06BuyRifle",
+      "topic_text": "Would you like to make an offer on Lincoln's Rifle?",
+      "emotion": "Surprise 50",
+      "response_text": "His rifle you say? Yes, I am interested.",
+      "index": "42"
+    },
+    {
+      "topic": "MS06BuyWantedPoster",
+      "topic_text": "I've got a wanted poster for Lincoln's assassin.",
+      "emotion": "Surprise 50",
+      "response_text": "Nice! I'll give you 75 caps for it.",
+      "index": "44"
+    },
+    {
+      "topic": "MS06BuyYes",
+      "topic_text": "It's a deal.",
+      "emotion": "Disgust 50",
+      "response_text": "I'll get someone to burn this.",
+      "index": "45"
+    },
+    {
+      "topic": "MS06Combat",
+      "topic_text": "So I'm a prisoner? I don't think so!",
+      "emotion": "Anger 50",
+      "response_text": "Then I'm just going to have to kill you.",
+      "index": "49"
+    },
+    {
+      "topic": "MS06DisagreeProtect escaped slaves? You've got to be kidding. You're worth money to me!",
+      "topic_text": "I've got a lot going on right now. Maybe later.",
+      "emotion": "Neutral 50",
+      "response_text": "I'll keep the offer open. If you don't do it, someone else will. Hell, I'll do it if I have to.",
+      "index": "50"
+    },
+    {
+      "topic": "MS06FindSlaves",
+      "topic_text": "Maybe. How much is it worth to find these slaves for you?",
+      "emotion": "Neutral 50",
+      "response_text": "I'm only interested in the leader, Hannibal Hamlin. You find him, and I'll pay you 100 caps.",
+      "index": "52"
+    },
+    {
+      "topic": "MS06FoundHannibal",
+      "topic_text": "I've found Hannibal Hamlin.",
+      "emotion": "Happy 50",
+      "response_text": "Bravo! I guess I owe you some caps.",
+      "index": "55"
+    },
+    {
+      "topic": "MS06GuardingMemorial",
+      "topic_text": "Looks to me like you're getting ready for war. What are you really doing here?",
+      "emotion": "Surprise 50",
+      "response_text": "You're a sharp one. We're from Paradise Falls. We're hunting runaway slaves. Have you seen any?",
+      "index": "57"
+    },
+    {
+      "topic": "MS06HamlinDead",
+      "topic_text": "Hannibal Hamlin is dead.",
+      "emotion": "Happy 50",
+      "response_text": "This must be my lucky day. That runaway slave of mine is dead, and I didn't even have to pay for it!",
+      "index": "58"
+    },
+    {
+      "topic": "MS06KillSlaves",
+      "topic_text": "How about I just kill them all?",
+      "emotion": "Surprise 50",
+      "response_text": "That's tempting, but no.",
+      "index": "62"
+    },
+    {
+      "topic": "MS06KnowNothing",
+      "topic_text": "Never heard of it. Is it a ruin around here?",
+      "emotion": "Disgust 50",
+      "response_text": "Not exactly. That means you aren't much of a threat to us, so let me tell you a bit more.",
+      "index": "64"
+    },
+    {
+      "topic": "MS06LetYouKnow",
+      "topic_text": "If I find them, you'll be the first to know.",
+      "emotion": "Happy 50",
+      "response_text": "Perfect. Don't go trying to kill them or capture them yourself. I'll take care of that.",
+      "index": "66"
+    },
+    {
+      "topic": "MS06MemorialSo this is the Lincoln Memorial?",
+      "topic_text": "What is this place?",
+      "emotion": "Neutral 50",
+      "response_text": "It's the Lincoln Memorial. This Lincoln guy supposedly freed all the slaves before the bombs dropped.",
+      "index": "68"
+    },
+    {
+      "topic": "MS06NeverHeardOfHim",
+      "topic_text": "Never heard of him. If I find anything, though, I'll be sure to show it to you.",
+      "emotion": "Happy 50",
+      "response_text": "I'm glad to see we understand each other.",
+      "index": "71"
+    },
+    {
+      "topic": "MS06NewOffer",
+      "topic_text": "So if I find anything like that, you might buy it from me?",
+      "emotion": "Surprise 50",
+      "response_text": "I like the way your mind works.",
+      "index": "74"
+    },
+    {
+      "topic": "MS06NoSlaves",
+      "topic_text": "I haven't seen any slaves recently.",
+      "emotion": "Neutral 50",
+      "response_text": "That's too bad.",
+      "index": "76"
+    },
+    {
+      "topic": "MS06NotGetInvolved",
+      "topic_text": "I don't hunt runaway slaves.",
+      "emotion": "Anger 50",
+      "response_text": "I don't like your tone much.",
+      "index": "79"
+    },
+    {
+      "topic": "MS06NotInterestedYeah... that's a problem. Well, I'd better get going.",
+      "topic_text": "Nope. Not really. I think I'll just be on my way.",
+      "emotion": "Anger 50",
+      "response_text": "Not until I say so. I've got a few questions you're going to have to answer first.",
+      "index": "82"
+    },
+    {
+      "topic": "MS06PersuadeLeave",
+      "topic_text": "I've got no beef with you. Let me go and I won't say a word.",
+      "emotion": "Disgust 50",
+      "response_text": "I really shouldn't, but I'll take you at your word.",
+      "index": "84"
+    },
+    {
+      "topic": "MS06RevealTemple",
+      "topic_text": "Not around here, but there is a group of them up north near Old Olney.",
+      "emotion": "Surprise 50",
+      "response_text": "They are?",
+      "index": "86"
+    },
+    {
+      "topic": "MS06TooBusy",
+      "topic_text": "I'm not going to go out of my way to find these slaves for you.",
+      "emotion": "Disgust 50",
+      "response_text": "Then some other wastelander will get the bounty for them.",
+      "index": "91"
+    },
+    {
+      "topic": "MS06WhoAreYou",
+      "topic_text": "Who are you guys?",
+      "emotion": "Neutral 50",
+      "response_text": "We're from Paradise Falls. We're looking for escaped slaves.",
+      "index": "93"
+    },
+    {
+      "topic": "MS06WhyLincoln",
+      "topic_text": "Why are you so interested in Lincoln artifacts?",
+      "emotion": "Fear 50",
+      "response_text": "Slaves all over the Wasteland have started talking about Lincoln and his great war to free the slaves.",
+      "index": "95"
+    },
+    {
+      "topic": "MS06WhyNotYouFind",
+      "topic_text": "Go get them yourself, then.",
+      "emotion": "Disgust 50",
+      "response_text": "I'd love to. Can't spare the men.",
+      "index": "99"
+    },
+    {
+      "topic": "MS06WouldntTellYou",
+      "topic_text": "If I had, I wouldn't tell you.",
+      "emotion": "Anger 50",
+      "response_text": "You are really starting to piss me off.",
+      "index": "102"
+    },
+    {
+      "topic": "MS06YesActionFigure",
+      "topic_text": "Not for that price. I want more.",
+      "emotion": "Disgust 50",
+      "response_text": "Alright you greedy bastard. I'll get someone to burn this.",
+      "index": "105"
+    },
+    {
+      "topic": "MS06YesDraftPoster",
+      "topic_text": "This poster is worth more than that.",
+      "emotion": "Disgust 50",
+      "response_text": "Alright you greedy bastard. I'll get someone to burn this.",
+      "index": "109"
+    },
+    {
+      "topic": "MS06YesEmancipation",
+      "topic_text": "That price is an insult. You'll have to do better than that.",
+      "emotion": "Anger 50",
+      "response_text": "You have me over a barrel. I'll pay your price and have this burned immediately.",
+      "index": "113"
+    },
+    {
+      "topic": "MS06YesGettysburgAddress",
+      "topic_text": "You can do better than that. This is the Gettysburg Address we're talking about.",
+      "emotion": "Fear 50",
+      "response_text": "I suppose you're right. You've got a deal. I'll get someone to burn this.",
+      "index": "117"
+    },
+    {
+      "topic": "MS06YesHat",
+      "topic_text": "For Lincoln's own hat? Come on. You can do better than that.",
+      "emotion": "Disgust 50",
+      "response_text": "Alright you greedy bastard. I'll get someone to burn this.",
+      "index": "122"
+    },
+    {
+      "topic": "MS06YesLincolnDiary",
+      "topic_text": "Not enough. Make me a better offer.",
+      "emotion": "Disgust 50",
+      "response_text": "Alright you greedy bastard. I'll get someone to burn this.",
+      "index": "126"
+    },
+    {
+      "topic": "MS06YesPennies",
+      "topic_text": "You'll have to do better than that.",
+      "emotion": "Disgust 50",
+      "response_text": "Alright you greedy bastard. I'll get someone to burn this.",
+      "index": "130"
+    },
+    {
+      "topic": "MS06YesPoster",
+      "topic_text": "In your dreams. It's worth twice that.",
+      "emotion": "Disgust 50",
+      "response_text": "Alright you greedy bastard. I'll get someone to burn this.",
+      "index": "135"
+    },
+    {
+      "topic": "MS06YesRecording",
+      "topic_text": "That price is an insult. You can do better.",
+      "emotion": "Disgust 50",
+      "response_text": "Alright you greedy bastard. I'll get someone to burn this.",
+      "index": "139"
+    },
+    {
+      "topic": "MS06YesRifle",
+      "topic_text": "You're kidding, right? It's worth twice that.",
+      "emotion": "Disgust 50",
+      "response_text": "Alright you greedy bastard. I'll get someone to burn this.",
+      "index": "143"
+    },
+    {
+      "topic": "MS06YesWantedPoster",
+      "topic_text": "No way. I need a lot more than that.",
+      "emotion": "Disgust 50",
+      "response_text": "Alright you greedy bastard. I'll get someone to burn this.",
+      "index": "148"
+    },
+    {
+      "topic": "SpeechChallengeFailure",
+      "topic_text": "SpeechChallengeFailure",
+      "emotion": "Disgust 50",
+      "response_text": "You've got to be kidding.",
+      "index": "153"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYEI have to go now.",
+      "topic_text": "I'd better get going.",
+      "emotion": "Neutral 50",
+      "response_text": "Good luck in the Museum. Bring me back something and I'll let you get a closer look at the Memorial.",
+      "index": "155"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Surprise 50",
+      "response_text": "Well, who do we have here?",
+      "index": "159"
+    }
+  ],
+  "combat": []
+}

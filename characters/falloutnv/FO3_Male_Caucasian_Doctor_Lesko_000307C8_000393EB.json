@@ -1,0 +1,669 @@
+{
+  "name": "Doctor Lesko",
+  "url": "/wiki/Weston_Lesko",
+  "dialogue_name": "DoctorLesko.txt",
+  "dialogue_url": "/wiki/DoctorLesko.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000307C8",
+  "ref_id": "000393EB",
+  "editor_id": "DoctorLesko",
+  "location": "Marigold station",
+  "location_url": "/wiki/Marigold_station",
+  "descriptions": [
+    "Dr. Weston Lesko is a scientist living in Grayditch, found inside Marigold station in 2277. He is indirectly responsible for causing the destruction of Grayditch.",
+    "The brilliant but aloof Doctor Lesko is determined to achieve one goal: save the wasteland from the mutated wildlife (specifically, giant ants) ravaging it. He seeks to revert the giant ants back to their original pre-War size by genetically manipulating their egg broods, and thus prove to the people of the wastes that they are merely misunderstood creatures. He understands the risks and the \"rhetoric\" of tampering with nature, but he is convinced that his cause is just and his results will speak for themselves.",
+    "Dr. Lesko's experiments did not kick off until after his arrival in Grayditch in November 2276, when he moved into a laboratory shack built with the help of Fred and Bryan Wilks. (Lesko also tried to gain the help of William Brandice, but was flatly refused.) It was here that things began to go wrong.",
+    "As time passed and the batches of Lesko's genetically-modified ants grew, it became clear that they were not growing any smaller. Instead, they were getting more aggressive, and even developed pyrosis (the ability to spew fire from their bodies.) Realizing his error, Lesko retreated into his lab, seeking to correct his mistakes before it was too late and stop the ants' queen from producing more of the unwanted fire ants.",
+    "A devoted scientist, Lesko idolizes scientific principle as much as he does the cooperative, egalitarian society of the ants."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Grayditch",
+  "role": "Entomologist",
+  "detailed_location": "Marigold stationRecently built shack(potentially)",
+  "voice_actor": "Mike Rosson",
+  "special": {
+    "Strength": 3,
+    "Perception": 6,
+    "Endurance": 3,
+    "Charisma": 4,
+    "Intelligence": 8,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "level": "4",
+  "tag_skills": [
+    {
+      "Explosives:": "50"
+    },
+    {
+      "Medicine:": "79"
+    },
+    {
+      "Science:": "54(64)"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "45"
+    }
+  ],
+  "karma": "Good",
+  "voice_type": "MaleUniqueLesko",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "Yes, what did you need?",
+      "index": "1"
+    },
+    {
+      "topic": "MS04Bailout",
+      "topic_text": "Let me ask you something else.",
+      "emotion": "Neutral 50",
+      "response_text": "Yes?",
+      "index": "11"
+    },
+    {
+      "topic": "MS04DoctorLeskoBkgdBail",
+      "topic_text": "Can we skip the story and get to a solution?",
+      "emotion": "Surprise 70",
+      "response_text": "Oh, my. I suppose I do tend to ramble on about all things academic.",
+      "index": "12"
+    },
+    {
+      "topic": "MS04DoctorLeskoCT01",
+      "topic_text": "What the hell are you doing down here?",
+      "emotion": "Neutral 50",
+      "response_text": "Well, I might ask you the same thing.",
+      "index": "14"
+    },
+    {
+      "topic": "MS04DoctorLeskoCT01MetBryanFirst",
+      "topic_text": "Hey! You're that egghe... I mean scientist the kid was talking about.",
+      "emotion": "Neutral 50",
+      "response_text": "Well, yes. I suppose I am.",
+      "index": "16"
+    },
+    {
+      "topic": "MS04DoctorLeskoCT02",
+      "topic_text": "Sorry, I didn't expect to bump into anyone alive down here.",
+      "emotion": "Neutral 50",
+      "response_text": "That is precisely why this is the ideal place for my work.",
+      "index": "18"
+    },
+    {
+      "topic": "MS04DoctorLeskoCT03",
+      "topic_text": "Creep up on YOU? I just crapped my pants for crying out loud!",
+      "emotion": "Disgust 50",
+      "response_text": "That's no way to talk to a man of science!",
+      "index": "20"
+    },
+    {
+      "topic": "MS04DoctorLeskoCT04",
+      "topic_text": "Experiments? What do you mean?",
+      "emotion": "Happy 50",
+      "response_text": "My experiments are of a complex nature and would take a scientist to explain... oh wait! I'm a scientist! How marvelous!",
+      "index": "22"
+    },
+    {
+      "topic": "MS04DoctorLeskoCT05",
+      "topic_text": "You call this a laboratory?",
+      "emotion": "Disgust 50",
+      "response_text": "I've chosen this room as a temporary retreat from which to contemplate my erroneous figures for my experiments.",
+      "index": "25"
+    },
+    {
+      "topic": "MS04DoctorLeskoCT06",
+      "topic_text": "How about we start the experiment by decorating that wall with your brains?",
+      "emotion": "Surprise 50",
+      "response_text": "Oh my! Such rude behavior!",
+      "index": "27"
+    },
+    {
+      "topic": "MS04DoctorLeskoCT07",
+      "topic_text": "Oh, I see. You're trying to make them smaller over time by injecting the eggs.",
+      "emotion": "Happy 50",
+      "response_text": "My word! You understand perfectly! How marvelous!",
+      "index": "29"
+    },
+    {
+      "topic": "MS04DoctorLeskoCT08",
+      "topic_text": "Okay, now how about explaining that for the slower people?",
+      "emotion": "Neutral 50",
+      "response_text": "Hmmm. Let me see. Well... You start with a generation of very large ants.",
+      "index": "30"
+    },
+    {
+      "topic": "MS04DoctorLeskoCT09",
+      "topic_text": "Okay, okay. Enough with the mumbo jumbo.",
+      "emotion": "Neutral 50",
+      "response_text": "Yes, it's fairly obvious you have no clue what I'm dealing with here. Let me explain to you, as I would to a child.",
+      "index": "33"
+    },
+    {
+      "topic": "MS04DoctorLeskoCT09a",
+      "topic_text": "Slow down, professor... Once more in English, okay?",
+      "emotion": "Neutral 50",
+      "response_text": "It's always staggering just how low the intellectual level of the typical Wastelander appears to be. Let me try and explain.",
+      "index": "36"
+    },
+    {
+      "topic": "MS04DoctorLeskoCT10",
+      "topic_text": "So, what's gone wrong?",
+      "emotion": "Neutral 50",
+      "response_text": "Well. I'm afraid I've made slight miscalculations in the mutagen. Instead of lowering their size, the brood hatched with a new biomechanism.",
+      "index": "39"
+    },
+    {
+      "topic": "MS04DoctorLeskoCT11",
+      "topic_text": "Are you aware your new ants breathe fire?!",
+      "emotion": "Neutral 50",
+      "response_text": "Well, this is rather embarrassing so you'll have to forgive me, it appears that I've made a slight miscalculation in my mutagen samples.",
+      "index": "42"
+    },
+    {
+      "topic": "MS04DoctorLeskoCT11a",
+      "topic_text": "I've got news for you, brainiac. It ain't working.",
+      "emotion": "Disgust 70",
+      "response_text": "Hmph. I don't expect a common Wastelander to understand the intricacies of an experiment this delicate.",
+      "index": "46"
+    },
+    {
+      "topic": "MS04DoctorLeskoCT12",
+      "topic_text": "So all that needs to be done is eliminate the remaining Ants?",
+      "emotion": "Fear 70",
+      "response_text": "I'm afraid it's not that simple. The mutagen has already been injected into the Ant Queen. She has enough in her body to last for years.",
+      "index": "50"
+    },
+    {
+      "topic": "MS04DoctorLeskoCT13",
+      "topic_text": "An error? People have died, Lesko!",
+      "emotion": "Disgust 50",
+      "response_text": "A small price to pay for the advancement of science.",
+      "index": "52"
+    },
+    {
+      "topic": "MS04DoctorLeskoCT13a",
+      "topic_text": "I'm shocked you didn't attempt this in a controlled environment first.",
+      "emotion": "Surprise 70",
+      "response_text": "Your knowledge of experimental procedure surprises me!",
+      "index": "55"
+    },
+    {
+      "topic": "MS04DoctorLeskoCT13b",
+      "topic_text": "Ha! You call yourself a scientist? That's rich.",
+      "emotion": "Disgust 50",
+      "response_text": "There's no need to be rude! Science must learn to crawl before it walks.",
+      "index": "58"
+    },
+    {
+      "topic": "MS04DoctorLeskoCT15",
+      "topic_text": "I may be able to help, but it will cost you.",
+      "emotion": "Neutral 50",
+      "response_text": "Imagine. Years from now... the entire population of ants in the Wasteland, back to the size of a peanut.",
+      "index": "60"
+    },
+    {
+      "topic": "MS04DoctorLeskoMutGone01SC",
+      "topic_text": "It was for the greater good Lesko. Man is not ready to play God.",
+      "emotion": "Happy 70",
+      "response_text": "Perhaps man isn't ready, my friend. Not today, but maybe someday.",
+      "index": "62"
+    },
+    {
+      "topic": "MS04DoctorLeskoMutGone01Science",
+      "topic_text": "Your theories were in error, and beyond correction. I had no choice.",
+      "emotion": "Happy 70",
+      "response_text": "Spoken like a true disciple of science! I will restart my calculations from the beginning and learn to crawl before I try to run.",
+      "index": "64"
+    },
+    {
+      "topic": "MS04DoctorLeskoMutGone02",
+      "topic_text": "I can't let you risk people's lives for an experiment.",
+      "emotion": "Anger 100",
+      "response_text": "You utter buffoon! You've set my work back months... perhaps even years!",
+      "index": "66"
+    },
+    {
+      "topic": "MS04DoctorLeskoMutGone03",
+      "topic_text": "Because you're out of your mind!",
+      "emotion": "Anger 100",
+      "response_text": "You utter buffoon! You've set my work back months... perhaps even years!",
+      "index": "69"
+    },
+    {
+      "topic": "MS04DoctorLeskoQuestAccepted",
+      "topic_text": "If it'll stop the ants from burning down Grayditch, I'm in.",
+      "emotion": "Happy 50",
+      "response_text": "You will? How marvelous!",
+      "index": "72"
+    },
+    {
+      "topic": "MS04DoctorLeskoQuestExplain01",
+      "topic_text": "What can I do to help?",
+      "emotion": "Happy 50",
+      "response_text": "Since you've offered, allow me to elaborate.",
+      "index": "74"
+    },
+    {
+      "topic": "MS04DoctorLeskoQuestExplain02",
+      "topic_text": "What exactly do you need?",
+      "emotion": "Happy 50",
+      "response_text": "My portable terminal is set up in the Hatchery Chamber near the Ant Queen. If I can reach it, I can continue to work on improving the mutagen.",
+      "index": "76"
+    },
+    {
+      "topic": "MS04DoctorLeskoQuestExplain03",
+      "topic_text": "So? It's your mistake Doc, you fix it.",
+      "emotion": "Disgust 70",
+      "response_text": "Please, don't insult my intelligence. Had I been able to correct this error easily I would have done so long before you arrived.",
+      "index": "77"
+    },
+    {
+      "topic": "MS04DoctorLeskoQuestExplain04",
+      "topic_text": "If the Queen's your concern, why not deal with it directly?",
+      "emotion": "Fear 70",
+      "response_text": "If she were harmed in any way, months of data would be lost.",
+      "index": "79"
+    },
+    {
+      "topic": "MS04DoctorLeskoQuestExplain05",
+      "topic_text": "Why not just kill the Queen and be done with it?",
+      "emotion": "Disgust 60",
+      "response_text": "If I were to do that months of data would be lost. No, no... the Queen must remain completely unharmed.",
+      "index": "81"
+    },
+    {
+      "topic": "MS04DoctorLeskoQuestExplain06",
+      "topic_text": "So you want me to pop the Queen, huh?",
+      "emotion": "Fear 90",
+      "response_text": "Oh! No, no, no! The Queen mustn't be harmed at all! Months of work would be lost!",
+      "index": "83"
+    },
+    {
+      "topic": "MS04DoctorLeskoQuestExplain07",
+      "topic_text": "Just how will all this undo the mayhem you've caused?",
+      "emotion": "Happy 70",
+      "response_text": "I've rigged the equipment at my portable terminal to emit what I call an Inhibitor Pulse.",
+      "index": "85"
+    },
+    {
+      "topic": "MS04DoctorLeskoQuestExplain08",
+      "topic_text": "This will stop the Fire Ants?",
+      "emotion": "Happy 70",
+      "response_text": "No, it should all wrap up rather nicely.  I've rigged my equipment at my portable terminal to emit what I call an Inhibitor Pulse.",
+      "index": "91"
+    },
+    {
+      "topic": "MS04DoctorLeskoQuestExplain09",
+      "topic_text": "I hope that's everything, I've had enough of ants.",
+      "emotion": "Happy 70",
+      "response_text": "Yes, it should all wrap up rather nicely. I've rigged my equipment at my portable terminal to emit what I call an Inhibitor Pulse.",
+      "index": "97"
+    },
+    {
+      "topic": "MS04DoctorLeskoQuestExplain10",
+      "topic_text": "I'd be glad to help him. Who is he?",
+      "emotion": "Disgust 70",
+      "response_text": "He's a rather bothersome young lad. Always asking interminable questions and interrupting my calculations.",
+      "index": "103"
+    },
+    {
+      "topic": "MS04DoctorLeskoQuestExplain11",
+      "topic_text": "Wilks? I have no idea what you mean.",
+      "emotion": "Disgust 70",
+      "response_text": "He's a rather bothersome young man. Always asking interminable questions and interrupting my calculations.",
+      "index": "105"
+    },
+    {
+      "topic": "MS04DoctorLeskoQuestExplain12",
+      "topic_text": "Who the hell is Bryan Wilks?",
+      "emotion": "Disgust 70",
+      "response_text": "He's a rather bothersome young lad. Always asking interminable questions and interrupting my calculations.",
+      "index": "107"
+    },
+    {
+      "topic": "MS04DoctorLeskoQuestWait",
+      "topic_text": "Let me get back to you on this.",
+      "emotion": "Sad 50",
+      "response_text": "Very well, I've waited this long, a bit longer won't make much difference.",
+      "index": "109"
+    },
+    {
+      "topic": "MS04DoctorLeskoReward01SC",
+      "topic_text": "This is a hefty task, Doc. I'm going to need serious incentive.",
+      "emotion": "Happy 80",
+      "response_text": "Yes, I suppose you're right. Science must learn to acquiesce to your standards in order to advance itself.",
+      "index": "111"
+    },
+    {
+      "topic": "MS04DoctorLeskoReward02",
+      "topic_text": "Books aren't going to buy me new ammunition.",
+      "emotion": "Anger 50",
+      "response_text": "Why can't man follow the ant's example? They work together as a team... every waking moment dedicated to the colony.",
+      "index": "114"
+    },
+    {
+      "topic": "MS04DoctorLeskoReward03",
+      "topic_text": "You want help? Fork over some caps, Einstein.",
+      "emotion": "Anger 50",
+      "response_text": "Why can't man follow the ant's example? They work together as a team... every waking moment dedicated to the colony.",
+      "index": "117"
+    },
+    {
+      "topic": "MS04DoctorLeskoRewardMutagenic",
+      "topic_text": "Mutagenic Bio-what?",
+      "emotion": "Happy 50",
+      "response_text": "I've managed to isolate some of the Fire Ant genes and distill them into human-safe genetic enhancers!",
+      "index": "120"
+    },
+    {
+      "topic": "MS04DoctorLeskoTLAnts",
+      "topic_text": "What else can you tell me about these Fire Ants?",
+      "emotion": "Neutral 50",
+      "response_text": "Well, the mutagen has enhanced their fortitude and provided them with what I call pyrosis; the ability to emit flame biologically.",
+      "index": "123"
+    },
+    {
+      "topic": "MS04DoctorLeskoTLAnts01",
+      "topic_text": "How did you go from changing their size to breathing fire?",
+      "emotion": "Disgust 50",
+      "response_text": "Playing with genetic codes isn't simple... do you realize one tiny tweak at any point in the last million years could have completely changed us?",
+      "index": "125"
+    },
+    {
+      "topic": "MS04DoctorLeskoTLAnts02",
+      "topic_text": "Will anything special hurt the Ants?",
+      "emotion": "Neutral 50",
+      "response_text": "I'm afraid they are not susceptible to anything I can think of that wouldn't harm the garden-variety Giant Ant.",
+      "index": "127"
+    },
+    {
+      "topic": "MS04DoctorLeskoTLAnts03",
+      "topic_text": "Ants exhibit class system behavior, so I'll try and kill the Queen fast.",
+      "emotion": "Disgust 80",
+      "response_text": "Must I again remind you that the Queen is to remain completely unharmed!?",
+      "index": "129"
+    },
+    {
+      "topic": "MS04DoctorLeskoTLAnts04",
+      "topic_text": "How the heck can an ant breathe fire?",
+      "emotion": "Neutral 50",
+      "response_text": "The stimulation of the subject's evolutionary trigger by the mutagen caused a bio-defensive reaction metamorphosing the ant's venom glands.",
+      "index": "132"
+    },
+    {
+      "topic": "MS04DoctorLeskoTLBryanWilks",
+      "topic_text": "What should I do about Bryan Wilks?",
+      "emotion": "Neutral 50",
+      "response_text": "You should take him away from this place; find him a home.",
+      "index": "136"
+    },
+    {
+      "topic": "MS04DoctorLeskoTLBryanWilks01",
+      "topic_text": "Can't you take responsibility for his father's death?",
+      "emotion": "Neutral 50",
+      "response_text": "All scientists take responsibility for their failures, because it comes with the territory.",
+      "index": "140"
+    },
+    {
+      "topic": "MS04DoctorLeskoTLBryanWilks02",
+      "topic_text": "Don't you realize you've ruined his entire life?",
+      "emotion": "Disgust 50",
+      "response_text": "You have your ideals and I have mine. I'm down here to complete my experiments at any cost.",
+      "index": "143"
+    },
+    {
+      "topic": "MS04DoctorLeskoTLBryanWilks03",
+      "topic_text": "You should have at least told him you were alive. He thought he was alone.",
+      "emotion": "Disgust 80",
+      "response_text": "I can't risk leaving this place... I have to continue monitoring the Hatchery for any further mutations in the next brood!",
+      "index": "145"
+    },
+    {
+      "topic": "MS04DoctorLeskoTLChamberStatus",
+      "topic_text": "My work is done, Doctor.",
+      "emotion": "Happy 70",
+      "response_text": "Oh, how marvelous! Please, tell me what happened.",
+      "index": "147"
+    },
+    {
+      "topic": "MS04DoctorLeskoTLChamberStatusClear",
+      "topic_text": "I've killed all the Nest Guardians.",
+      "emotion": "Happy 70",
+      "response_text": "Then I will proceed to my portable terminal at once and make the necessary changes to the formula.",
+      "index": "152"
+    },
+    {
+      "topic": "MS04DoctorLeskoTLChamberStatusClearLie",
+      "topic_text": "I've killed all the Nest Guardians [Lie]",
+      "emotion": "Happy 70",
+      "response_text": "Then I will proceed to my portable terminal at once and make the necessary changes to the formula.",
+      "index": "154"
+    },
+    {
+      "topic": "MS04DoctorLeskoTLChamberStatusClearMutGone",
+      "topic_text": "I've killed all of the Nest Guardians, but I destroyed your mutagen supply.",
+      "emotion": "Anger 100",
+      "response_text": "What?!! How could you do such a foolish thing?",
+      "index": "156"
+    },
+    {
+      "topic": "MS04DoctorLeskoTLChamberStatusNotDone",
+      "topic_text": "Actually, my mistake... I'm not done yet.",
+      "emotion": "Disgust 70",
+      "response_text": "Oh now this is really too much!",
+      "index": "157"
+    },
+    {
+      "topic": "MS04DoctorLeskoTLChamberStatusQueenDead",
+      "topic_text": "I've killed the Ant Queen.",
+      "emotion": "Anger 100",
+      "response_text": "What?! How could you do such a thing?",
+      "index": "159"
+    },
+    {
+      "topic": "MS04DoctorLeskoTLChamberStatusQueenDeadMutGone",
+      "topic_text": "I've killed the Ant Queen and I destroyed your mutagen supply.",
+      "emotion": "Anger 100",
+      "response_text": "You utter buffoon! You've set my work back months... perhaps even years!",
+      "index": "160"
+    },
+    {
+      "topic": "MS04DoctorLeskoTLPost",
+      "topic_text": "So, what will you do now, Doctor?",
+      "emotion": "Neutral 50",
+      "response_text": "Well, I will continue my research. There has to be a way to reduce these creatures to their former size.",
+      "index": "163"
+    },
+    {
+      "topic": "MS04FinTLAntsMarigold",
+      "topic_text": "Why are there Fire Ants still down in the Metro tunnels?",
+      "emotion": "Neutral 50",
+      "response_text": "I'm afraid that's my fault. The last mutagen sample was given to the Ant Queen's entire brood.",
+      "index": "165"
+    },
+    {
+      "topic": "MS04FinTLExperiments",
+      "topic_text": "So, what are you going to do now about your experiments?",
+      "emotion": "Neutral 50",
+      "response_text": "Well, I'm uncertain. This does deal quite a blow to my research.",
+      "index": "168"
+    },
+    {
+      "topic": "MS04FinTLNectar",
+      "topic_text": "Hey, Doc. Will this Fire Ant Nectar do you any good?",
+      "emotion": "Surprise 50",
+      "response_text": "Why, yes it would.",
+      "index": "178"
+    },
+    {
+      "topic": "MS04LeskoPasswordNote",
+      "topic_text": "MS04LeskoPasswordNote",
+      "emotion": "Neutral 50",
+      "response_text": "This could be the fifth time I've forgotten the code to my desktop terminal. I really must learn to be more organized.",
+      "index": "184"
+    },
+    {
+      "topic": "MS04TLBioenhancer",
+      "topic_text": "I'm ready for my Mutagenic Bioenhancer injection and Lab Coat, Doctor.",
+      "emotion": "Happy 70",
+      "response_text": "How marvelous! Here is the promised Lab Coat. I'm certain you'll find it quite useful.",
+      "index": "187"
+    },
+    {
+      "topic": "MS04TLBioenhancerSight",
+      "topic_text": "I'd like the Ant Sight to increase my perception.",
+      "emotion": "Happy 90",
+      "response_text": "How marvelous! Ant Sight it is! Hold still please.",
+      "index": "191"
+    },
+    {
+      "topic": "MS04TLBioenhancerStrong",
+      "topic_text": "I'd like the Ant Might to increase my physical strength.",
+      "emotion": "Happy 90",
+      "response_text": "How marvelous! Ant Might it is! Hold still please.",
+      "index": "192"
+    },
+    {
+      "topic": "MS04TLBioenhancerWait",
+      "topic_text": "Actually, I'm not ready yet.",
+      "emotion": "Happy 70",
+      "response_text": "Very well. Return to me when you're ready.",
+      "index": "193"
+    },
+    {
+      "topic": "MS04TLExperiments",
+      "topic_text": "About your experiments...",
+      "emotion": "Happy 50",
+      "response_text": "Oh my yes, they're quite marvelous!",
+      "index": "194"
+    },
+    {
+      "topic": "MS04TLExperiments01",
+      "topic_text": "What's the goal of your experiments?",
+      "emotion": "Neutral 50",
+      "response_text": "By introducing my mutagen directly into an ant egg, I hope to reduce the size of the adults.",
+      "index": "196"
+    },
+    {
+      "topic": "MS04TLExperiments03",
+      "topic_text": "Something isn't right. You shouldn't have gotten results like these so quickly.",
+      "emotion": "Fear 70",
+      "response_text": "Well... ummm, I may have used a few... ahem, shortcuts. Yes.",
+      "index": "199"
+    },
+    {
+      "topic": "MS04TLExperiments04",
+      "topic_text": "How exactly can I destroy the mutagen?",
+      "emotion": "Surprise 50",
+      "response_text": "Destroy? Oh no no no!",
+      "index": "202"
+    },
+    {
+      "topic": "SpeechChallengeFailure",
+      "topic_text": "SpeechChallengeFailure",
+      "emotion": "Anger 50",
+      "response_text": "Why can't man follow the ant's example? They work together as a team... every waking moment dedicated to the colony.",
+      "index": "204"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "I have to go now.",
+      "emotion": "Neutral 50",
+      "response_text": "Ah well... two steps back, one forward as they say!",
+      "index": "209"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Neutral 50",
+      "response_text": "I'll make it right... they'll see.",
+      "index": "219"
+    }
+  ],
+  "combat": [
+    {
+      "topic": "AcceptYield",
+      "topic_text": "AcceptYield",
+      "emotion": "Neutral 50",
+      "response_text": "I accept your terms.",
+      "index": "230"
+    },
+    {
+      "topic": "Assault",
+      "topic_text": "Assault",
+      "emotion": "Disgust 70",
+      "response_text": "This is highly irregular!",
+      "index": "231"
+    },
+    {
+      "topic": "Attack",
+      "topic_text": "Attack",
+      "emotion": "Anger 80",
+      "response_text": "Have at you!",
+      "index": "232"
+    },
+    {
+      "topic": "AvoidThreat",
+      "topic_text": "AvoidThreat",
+      "emotion": "Fear 90",
+      "response_text": "Oh my! Watch out!",
+      "index": "235"
+    },
+    {
+      "topic": "Flee",
+      "topic_text": "Flee",
+      "emotion": "Fear 80",
+      "response_text": "What a distressing development!",
+      "index": "237"
+    },
+    {
+      "topic": "Hit",
+      "topic_text": "Hit",
+      "emotion": "Pained 100",
+      "response_text": "This is preposterous!",
+      "index": "239"
+    },
+    {
+      "topic": "Pickpocket",
+      "topic_text": "Pickpocket",
+      "emotion": "Neutral 50",
+      "response_text": "Please keep your hands to yourself.",
+      "index": "240"
+    },
+    {
+      "topic": "PowerAttack",
+      "topic_text": "PowerAttack",
+      "emotion": "Disgust 80",
+      "response_text": "I strike this blow for science!",
+      "index": "241"
+    },
+    {
+      "topic": "Steal",
+      "topic_text": "Steal",
+      "emotion": "Anger 70",
+      "response_text": "Please! You're spoiling my experiments!",
+      "index": "243"
+    },
+    {
+      "topic": "Yield",
+      "topic_text": "Yield",
+      "emotion": "Fear 80",
+      "response_text": "Please! I give up! I give up!",
+      "index": "245"
+    }
+  ]
+}

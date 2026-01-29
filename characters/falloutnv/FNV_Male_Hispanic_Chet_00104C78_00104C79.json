@@ -1,0 +1,202 @@
+{
+  "name": "Chet",
+  "url": "/wiki/Chet_(Fallout:_New_Vegas)",
+  "dialogue_name": "GSChet.txt",
+  "dialogue_url": "/wiki/GSChet.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": true,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "00104C78",
+  "ref_id": "00104C79",
+  "editor_id": "GSChet",
+  "location": "Goodsprings General Store",
+  "location_url": "/wiki/Goodsprings_General_Store",
+  "descriptions": [
+    "Chet is a resident of Goodsprings in the Mojave Wasteland and the owner and clerk of the Goodsprings General Store in 2281. He appears in Fallout: New Vegas.",
+    "A long-time resident of Goodsprings since its re-founding as a mining town for the New California Republic in the mid-23rd century, Chet has run the local general store for years, managing to make ends meet thanks to a steady stream of traffic along Interstate 15 from the Core Lands and the common need for travel supplies from rations to ammo.",
+    "Around October 2281, when Benny and the Great Khans he hired to help ambush the Courier came to town afterward, Chet observed the former as a \"New Vegas-type, typical city boy\" and recognized the latter as he apparently was informed about their prolific chem-dealing in the Mojave region.",
+    "Behind his affable salesmanship, Chet is a very self-centered person, caring little about the plight of others while upholding the veneer of looking out for his fellow townsmen. In the case of the fleeing Crimson Caravan trader Ringo and the Powder Gangers chasing him, he believes that handing Ringo over to them is the best course of action to keep Goodsprings from getting involved; if pressed on this view, he claims that this is not \"coward talk,\" reasoning that the town of Goodsprings is made up of survivors with grit but who do not go looking for trouble.",
+    "In his capacity as a trader, Chet has amassed a wealth of knowledge on the goods he sells, particularly the finer points of wasteland weaponry, special types of ammo, and the value of weapon mods."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "GoodspringsHelpJoe Cobbtake over:Powder Gangers",
+  "role": "MerchantStore owner",
+  "detailed_location": "GoodspringsGoodsprings General Store",
+  "voice_actor": "Ari Rubin",
+  "special": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 5,
+    "Intelligence": 5,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "level": "1",
+  "tag_skills": [
+    {
+      "Guns:": "30"
+    },
+    {
+      "Survival:": "30"
+    },
+    {
+      "Unarmed:": "28"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Neutral",
+  "voice_type": "MaleAdult04",
+  "geck_race": "Hispanic",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Fear 50",
+      "response_text": "Cant' do business now! There's a gunfight!",
+      "index": "1"
+    },
+    {
+      "topic": "VFreeformGoodspringsGSChetTopic000",
+      "topic_text": "Fine. Here's 1000 caps.",
+      "emotion": "Happy 50",
+      "response_text": "That's more like it. The people can pick up their extra ammo and leather armor when they're ready. Was there anything else?",
+      "index": "8"
+    },
+    {
+      "topic": "VFreeformGoodspringsGSChetTopic001",
+      "topic_text": "Do you know anything about the people who attacked me?",
+      "emotion": "Neutral 50",
+      "response_text": "The leader was a New Vegas-type, typical city boy. He had a bunch of Great Khans with him, probably hired guns.",
+      "index": "9"
+    },
+    {
+      "topic": "VFreeformGoodspringsGSChetTopic002",
+      "topic_text": "Have you ever been to New Vegas?",
+      "emotion": "Neutral 50",
+      "response_text": "Twice. Both times, I drank a lot of liquor and lost most of my caps at the card tables. In that order, now that I think about it.",
+      "index": "11"
+    },
+    {
+      "topic": "VFreeformGoodspringsGSChetTopic003",
+      "topic_text": "Anything else you can tell me about Great Khans?",
+      "emotion": "Neutral 50",
+      "response_text": "They're tough sons of bitches, mean but not crazy - they'll leave you alone unless you've got something they want.",
+      "index": "14"
+    },
+    {
+      "topic": "VFreeformGoodspringsGSChetTopic005",
+      "topic_text": "I'd like to know more about Mr. House.",
+      "emotion": "Neutral 50",
+      "response_text": "I'm afraid I don't know much myself. Mr. House has got his own casino, the Lucky 38, but nobody goes in or out except his robots.",
+      "index": "16"
+    },
+    {
+      "topic": "VFreeformGoodspringsGSChetTopic006",
+      "topic_text": "Tell me about weapon mods and special ammo.",
+      "emotion": "Neutral 50",
+      "response_text": "Weapon mods are things like silencers, scopes, bigger magazines.",
+      "index": "19"
+    },
+    {
+      "topic": "VFreeformGoodspringsGSChetTopic007",
+      "topic_text": "What makes the surplus ammo inferior?",
+      "emotion": "Neutral 50",
+      "response_text": "It's all about quantity over quality. Trouble is, you'll be cleaning and fixing your gun a lot more than usual when you use those kind of bullets.",
+      "index": "22"
+    },
+    {
+      "topic": "VFreeformGoodspringsGSChetTopic008",
+      "topic_text": "The Powder Gangers need you to donate some supplies to them.",
+      "emotion": "Neutral 50",
+      "response_text": "What? Why the hell would I want to do that?",
+      "index": "23"
+    },
+    {
+      "topic": "VFreeformGoodspringsGSChetTopic009< Barter 25 >",
+      "topic_text": "Give up some supplies now and you won't get your store looted later.",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] All right, all right. I've got some extra leather armor and spare ammo for you.{pleading}Don't hurt anybody if you don't have to, all right?",
+      "index": "25"
+    },
+    {
+      "topic": "VFreeformGoodspringsGSChetTopic010< Speech 25 >",
+      "topic_text": "This is your chance to join the winning side. You have three seconds to decide. One...",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] All right! I can give you some of my extra leather armor and spare ammo.{pleading}Just don't hurt anybody if you don't have to, all right?",
+      "index": "27"
+    },
+    {
+      "topic": "VFreeformGoodspringsGSChetTopic011",
+      "topic_text": "Never mind.",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah, quit it with the crazy talk.",
+      "index": "29"
+    },
+    {
+      "topic": "VFreeformGoodspringsGoodspringsChetTopic000",
+      "topic_text": "Show me what you have for sale.",
+      "emotion": "Neutral 50",
+      "response_text": "I respect the way you've conducted yourself around here. Reminds me of myself in some ways.",
+      "index": "30"
+    },
+    {
+      "topic": "VFreeformGoodspringsGoodspringsChetTopic001",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Take it easy now.",
+      "index": "33"
+    },
+    {
+      "topic": "VFreeformGoodspringsGoodspringsChetTopic002",
+      "topic_text": "I need supplies to fight the Powder Gangers.",
+      "emotion": "Neutral 50",
+      "response_text": "Now just hold on. I never voted to take on the Powder Gangers. That's a thousand cap investment you're talking about.",
+      "index": "34"
+    },
+    {
+      "topic": "VFreeformGoodspringsGoodspringsChetTopic003",
+      "topic_text": "Let them take over the town, then. I'm sure your business will be much better off.",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] You made your point. I can provide people with some leather armor and extra ammo. I sure hope it's worth it.",
+      "index": "36"
+    },
+    {
+      "topic": "VFreeformGoodspringsGoodspringsChetTopic004",
+      "topic_text": "The town's at stake. That has to be worth more than a few supplies.",
+      "emotion": "Neutral 50",
+      "response_text": "[FAILED] Look, you're bringing this on yourselves. There's no way I'm getting involved. But, hey, I'm sure you can buy what you need...{Emphasis on \"buy\".}",
+      "index": "38"
+    },
+    {
+      "topic": "VFreeformGoodspringsGoodspringsChetTopic005",
+      "topic_text": "Never mind.",
+      "emotion": "Neutral 50",
+      "response_text": "Right. Just keep me out of it. Is there anything else?",
+      "index": "39"
+    },
+    {
+      "topic": "VFreeformGoodspringsGoodspringsChetTopic006",
+      "topic_text": "What do you know about the situation with the Powder Gangers?",
+      "emotion": "Neutral 50",
+      "response_text": "If Ringo doesn't head out on his own, I think we should hand him over. The town shouldn't get itself mixed into the problem.",
+      "index": "40"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Take it easy now.",
+      "index": "42"
+    }
+  ],
+  "combat": []
+}

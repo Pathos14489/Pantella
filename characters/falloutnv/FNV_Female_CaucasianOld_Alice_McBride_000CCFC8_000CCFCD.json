@@ -1,0 +1,139 @@
+{
+  "name": "Alice McBride",
+  "url": "/wiki/Alice_McBride",
+  "dialogue_name": "AliceMcBride.txt",
+  "dialogue_url": "/wiki/AliceMcBride.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000CCFC8",
+  "ref_id": "000CCFCD",
+  "editor_id": "AliceMcBride",
+  "location": "McBride house",
+  "location_url": "/wiki/McBride_house",
+  "descriptions": [
+    "Alice McBride is a local farmer living in Novac in 2281.",
+    "Alice and Dusty, her husband, are the salt of Novac's earth. Honest, hardworking, and married for more than 50 years, they've seen much of what wasteland has to offer.",
+    "If Dusty dies the player character will no longer be able to engage Alice in dialogue. When prompted Alice will only express worry for Dusty's whereabouts, even if he was killed right in front of her."
+  ],
+  "race": "Human",
+  "gender": "Female",
+  "affiliation": "Novac",
+  "role": "Wife",
+  "detailed_location": "McBride house",
+  "voice_actor": "Diane Pershing",
+  "special": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 6,
+    "Charisma": 3,
+    "Intelligence": 4,
+    "Agility": 6,
+    "Luck": 4
+  },
+  "mod_special_values": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 6,
+    "Charisma": 3,
+    "Intelligence": 4,
+    "Agility": 7,
+    "Luck": 4
+  },
+  "level": "4",
+  "tag_skills": [
+    {
+      "Guns:": "43(45)"
+    },
+    {
+      "Melee Weap.:": "41"
+    },
+    {
+      "Unarmed:": "43"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Neutral",
+  "voice_type": "FemaleOld03",
+  "geck_race": "CaucasianOld",
+  "topics": [
+    {
+      "topic": "AliceMcBrideIntro",
+      "topic_text": "I just wanted to meet you.",
+      "emotion": "Happy 50",
+      "response_text": "Oh! Well I'm Alice and you've already met my beau, Dusty. He's sweet, ain't he? I don't care what my mama said, I know how to pick 'em.",
+      "index": "1"
+    },
+    {
+      "topic": "AliceMcBridePeopleWhoLiveHere",
+      "topic_text": "What do you think of the people who live here?",
+      "emotion": "Neutral 50",
+      "response_text": "Oh, we keep to ourselves, for the most part. Try not to pry. I think Jeannie May gets bothered that we aren't more sociable, but it's just our way.",
+      "index": "7"
+    },
+    {
+      "topic": "DustyMcBrideTellMeWhatYouKnow",
+      "topic_text": "What can you tell me about the attacks on your ranch?",
+      "emotion": "Neutral 50",
+      "response_text": "Well, it's the strangest thing. Last time it happened I could swear I heard someone cry out for help. Sounded like a big fella.",
+      "index": "12"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "Sorry, I ain't really up to entertaining visitors right now. I'm worried about Dusty.",
+      "index": "15"
+    },
+    {
+      "topic": "SnipersRevengeBooneWife",
+      "topic_text": "What can you tell me about Boone's wife?",
+      "emotion": "Neutral 50",
+      "response_text": "Boone. That's that sniper fella, works in the dinosaur, right? I only met them but once or twice.",
+      "index": "17"
+    },
+    {
+      "topic": "SnipersRevengeComeOutside",
+      "topic_text": "Come with me. There's something you should see, in front of the dinosaur.",
+      "emotion": "Neutral 50",
+      "response_text": "It's kinda late, but I guess if it's important to you.",
+      "index": "19"
+    },
+    {
+      "topic": "VDialogueNovacAliceMcBrideTopic001",
+      "topic_text": "Can we talk about something else?",
+      "emotion": "Neutral 50",
+      "response_text": "{Slight surprise}Oh. Well, all right.",
+      "index": "20"
+    },
+    {
+      "topic": "VDialogueNovacNobarkName",
+      "topic_text": "How did No-bark get his name?",
+      "emotion": "Neutral 50",
+      "response_text": "I'm not sure who started it. It wasn't a very nice name, but he took to calling himself by it, so we all had to.",
+      "index": "21"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Nice of you to visit.",
+      "index": "24"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "Hello",
+      "emotion": "Neutral 50",
+      "response_text": "Look who's here.",
+      "index": "25"
+    }
+  ],
+  "combat": []
+}

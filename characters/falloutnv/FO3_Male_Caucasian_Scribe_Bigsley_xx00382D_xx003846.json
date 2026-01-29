@@ -1,0 +1,578 @@
+{
+  "name": "Scribe Bigsley",
+  "url": "/wiki/Bigsley",
+  "dialogue_name": "DLC03Bigsley.txt",
+  "dialogue_url": "/wiki/DLC03Bigsley.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "xx00382D",
+  "ref_id": "xx003846",
+  "editor_id": "DLC03Bigsley",
+  "location": "Jefferson Memorial",
+  "location_url": "/wiki/Jefferson_Memorial",
+  "descriptions": [
+    "Scribe Bigsley is a disgruntled Lyons' Brotherhood of Steel scribe stationed at the Jefferson Memorial after the Battle of Project Purity, operating as its administrator in the Fallout 3 add-on Broken Steel.",
+    "A competent yet combative individual, Scribe Bigsley's earliest known history is as a part of the Order of the Sword where he modified the output of several laser rifles. These proved unsafe after injuring several initiates, earning him a transfer to a different order. Now in the Order of the Shield, he was continually combative with his superiors, particularly Scribe Bowditch, whose theories of force field resonance Bigsley saw as \"antiquated.\" He was then transferred to the Order of the Quill, where his particularly bad attitude would continue to hamper his career; his new superior Scribe Elizabeth Jameson refused to be drawn into his particular brand of arguments, and subsequently assigned him to field operations. He would later be assigned to Project Purity as the head of the water distribution network.",
+    "Formed in the wake of the Battle of Project Purity, the operational agreement between the Brotherhood of Steel and Rivet City started before a single caravan was sent from Project Purity. Scribe Bigsley successfully negotiated the deal between the Brotherhood and Rivet City to allow the Rivet City Security Force to take over the system once the Brotherhood worked out the initial foundation.",
+    "Initially believing that it would take no more than two weeks to set up, Bigsley was quickly proven wrong,",
+    "As the caravans started to travel, they began to almost immediately be targeted by raiders and bandits.",
+    "The high attrition rate for caravans, and lack of payment for said water delivery service, would have crippled the network, particularly with Project Purity's cash account totaling in only 24 caps at one point.",
+    "Almost out of the blue, a ghoul named Griffon offered to pay for shipments of water in caps and technology, a deal which Bigsley knows Lyons would not approve of, but dismisses such a concern on the basis that Lyons' excessive charity in wartime correlates with having gone senile.",
+    "Within the second week of running Project Purity, Scribe Bigsley was forced to pay the mercenaries with the facility's non-emergency medical supplies, having run out of cigarettes and alcohol in the first week.",
+    "By now, Bigsley's superiors were becoming curious as to why so many deliveries were simply disappearing and how come there was a significant delay in the processing and deliveries made.",
+    "Scribe Bigsley's combative nature and continued poor attitude earned him the ire of his colleagues, particularly due to his inability to read a room and continual insertion of his unwarranted opinions into his superiors' designs.",
+    "He believes that he is following his orders as best as he can by finding the proverbial devil in the details, and acting accordingly; however, it is the abrasive way that he applies the corrections to these problems that causes trouble.",
+    "Caught in the middle of a bureaucratic nightmare, Bigsley knows that the free market would solve all the resource and manpower shortages plaguing the network. However, as it is Lyons' \"little pet 'Purity' project,\" this is not possible. Yet, despite all this, his convictions are not strong enough to follow in Henry Casdin's footsteps and leave for the Outcasts.",
+    "Bigsley is ever-nearing a nervous breakdown, inadvertently taking out his stress and his exhaustion on other people.",
+    "Regardless of the scribes' efforts, Bigsley is stressed and overwhelmed by the growing line of people wishing to talk to him, and can sarcastically reply that a congratulations is in order for the Lone Wanderer tripping over them on their way in.",
+    "Scribe Bigsley appears only in the Fallout 3 add-on Broken Steel."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Lyons' Brotherhood of Steel",
+  "role": "Project Purityadministrator",
+  "detailed_location": "Jefferson Memorial",
+  "voice_actor": "Wes Johnson",
+  "special": {
+    "Strength": 4,
+    "Perception": 6,
+    "Endurance": 4,
+    "Charisma": 4,
+    "Intelligence": 7,
+    "Agility": 6,
+    "Luck": 4
+  },
+  "level": "10",
+  "tag_skills": [
+    {
+      "Repair:": "84"
+    },
+    {
+      "Science:": "84"
+    },
+    {
+      "Small Guns:": "82"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "110"
+    },
+    {
+      "Critical Chance:": "4%"
+    },
+    {
+      "Unarmed Dam.:": "1.1"
+    },
+    {
+      "Poison Resist.:": "15%"
+    },
+    {
+      "Rad. Resist.:": "6%"
+    },
+    {
+      "Carry Weight:": "190"
+    },
+    {
+      "Damage Res.:": "2%"
+    }
+  ],
+  "karma": "Good",
+  "voice_type": "DLC03UniqueBigsley",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "DLC03WQ02AboutGriffon",
+      "topic_text": "Griffon's up to something with the Aqua Pura. What do you know about it?",
+      "emotion": "Neutral 50",
+      "response_text": "Not that it's really any of your business, but we have an arrangement. He buys water, I send him some.",
+      "index": "1"
+    },
+    {
+      "topic": "DLC03WQAbout",
+      "topic_text": "I have some questions about the Project Purity operation.",
+      "emotion": "Surprise 100",
+      "response_text": "By all means, I'd love to answer some questions. I've got nothing better to do.{exhausted and sarcastic}",
+      "index": "5"
+    },
+    {
+      "topic": "DLC03WQAboutBottles",
+      "topic_text": "Ever think about letting people bring in empty bottles to fill up?",
+      "emotion": "Anger 50",
+      "response_text": "I'm sure you can imagine the chaos if we just let anyone who wanted to wade into the basin and fill up a jug?{exhausted}",
+      "index": "6"
+    },
+    {
+      "topic": "DLC03WQAboutDrLi",
+      "topic_text": "Where's Doctor Li?",
+      "emotion": "Disgust 50",
+      "response_text": "Tch. She apparently decided to pursue \"more interesting projects\" up north in the Commonwealth.{belittling, exhausted}",
+      "index": "8"
+    },
+    {
+      "topic": "DLC03WQAboutForgot",
+      "topic_text": "I was going to ask you something but I forgot what it was.",
+      "emotion": "Disgust 100",
+      "response_text": "Yeah, well, when you remember what it was you were going to ask. Take it up with one of the other Scribes, okay? Thanks.{exhausted and done with fools}",
+      "index": "11"
+    },
+    {
+      "topic": "DLC03WQAboutLongDLC03WQAboutAquaPuraB",
+      "topic_text": "How long do you think it'll take to purify the basin?",
+      "emotion": "Surprise 10",
+      "response_text": "I don't think anyone really knows the answer to that. Seems to be going rather quickly though.{exhausted}",
+      "index": "12"
+    },
+    {
+      "topic": "DLC03WQAboutMachine",
+      "topic_text": "Is it hard bottling all that water? Or is it all done by machines?",
+      "emotion": "Disgust 50",
+      "response_text": "You take a bottle, you dunk it under water, and glug glug glug, it fills up. Amazing.{sarcastic, exhausted and done with fools}",
+      "index": "13"
+    },
+    {
+      "topic": "DLC03WQAboutNamedDLC03WQAboutAquaPuraA",
+      "topic_text": "So do you know why they call it Aqua Pura?",
+      "emotion": "Surprise 50",
+      "response_text": "Umm... because it's not irradiated. Really? You couldn't work that one out for yourself?{sarcastic, exhausted and done with fools}",
+      "index": "16"
+    },
+    {
+      "topic": "DLC03WQAboutTopLevel",
+      "topic_text": "Let's discuss some other matters.",
+      "emotion": "Sad 50",
+      "response_text": "<Sigh.>{exhausted}",
+      "index": "17"
+    },
+    {
+      "topic": "DLC03WQBigsley",
+      "topic_text": "Mind if I ask some questions about your role in all of this?",
+      "emotion": "Surprise 50",
+      "response_text": "Sure. It's not like I'm going to be able to get much done today anyway. Ask away.{exhausted}",
+      "index": "18"
+    },
+    {
+      "topic": "DLC03WQBigsleyBContinue",
+      "topic_text": "I'm interested. Continue...",
+      "emotion": "Sad 50",
+      "response_text": "I started out in the Swords. I upped the output of a few Laser Rifles. Apparently some initiates couldn't handle the extra power. A few got hurt.{exhausted (sarcastically reliving unpleasant memories)}",
+      "index": "19"
+    },
+    {
+      "topic": "DLC03WQBigsleyBNevermind",
+      "topic_text": "I'm not in the mood for a long story. Never mind.",
+      "emotion": "Neutral 50",
+      "response_text": "Whatever.{exhausted. dismissive.}",
+      "index": "24"
+    },
+    {
+      "topic": "DLC03WQBigsleyJob",
+      "topic_text": "So how'd you get stuck with this job?",
+      "emotion": "Sad 50",
+      "response_text": "I follow orders, but I'm not exactly a \"yes man.\" I figure a Scribe's job is to find the devil in the details. Consequently I seldom get promoted.{exhausted and resentful}",
+      "index": "25"
+    },
+    {
+      "topic": "DLC03WQBigsleyLyons",
+      "topic_text": "What's your take on Elder Lyons?",
+      "emotion": "Disgust 50",
+      "response_text": "It's probably best if I don't answer that question.{exhausted, frustrated}",
+      "index": "28"
+    },
+    {
+      "topic": "DLC03WQBigsleyOrder",
+      "topic_text": "So what Order of Scribes are you part of?",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah... that's a long story actually.{exhausted (sarcastically reliving unpleasant memories)}",
+      "index": "29"
+    },
+    {
+      "topic": "DLC03WQBigsleyTired",
+      "topic_text": "You look pretty tired.",
+      "emotion": "Surprise 100",
+      "response_text": "I literally can't remember the last time I got sleep... I must have dozed off recently though, if the drool on my desk is any indication. <Sigh.>{exhausted, but trying to make a joke}",
+      "index": "30"
+    },
+    {
+      "topic": "DLC03WQBigsleyTopLevel",
+      "topic_text": "That's all I was curious about.",
+      "emotion": "Sad 50",
+      "response_text": "<Sigh.>{exhausted}",
+      "index": "31"
+    },
+    {
+      "topic": "DLC03WQGreetingA1",
+      "topic_text": "I'm sorry? Who are you?",
+      "emotion": "Sad 50",
+      "response_text": "Excuse me, I'm Bigsley. And I'm just a tad stressed out. Perhaps you saw that little line outside my door?{mildly apologetic, but exhausted}",
+      "index": "32"
+    },
+    {
+      "topic": "DLC03WQGreetingA2",
+      "topic_text": "And a hearty \"hello\" to you too, jerk.",
+      "emotion": "Disgust 50",
+      "response_text": "Oh, I'm sorry. Was I being rude just now? Maybe I should congratulate you on getting through the door.{sarcastic}",
+      "index": "33"
+    },
+    {
+      "topic": "DLC03WQGreetingA3",
+      "topic_text": "I don't know what you're talking about. What's this about a purifier? <Lie.>",
+      "emotion": "Disgust 50",
+      "response_text": "If you want to play make believe, fine. Go right ahead. I've got real problems in the real world to deal with.{annoyed and too busy to be bothered}",
+      "index": "36"
+    },
+    {
+      "topic": "DLC03WQGreetingB1",
+      "topic_text": "Sounds like you have your hands full.",
+      "emotion": "Happy 75",
+      "response_text": "Everyone was so excited about that Purifier: \"Project Purity this,\" and \"Project Purity that.\"{sarcastic}",
+      "index": "38"
+    },
+    {
+      "topic": "DLC03WQGreetingB2",
+      "topic_text": "You're not the only one with problems.",
+      "emotion": "Sad 50",
+      "response_text": "Right. I heard about your dad. Sorry kid. I don't mean to sound unsympathetic, really. But, if you understood the pressure...{sarcastic and unsympathetic}",
+      "index": "42"
+    },
+    {
+      "topic": "DLC03WQGreetingC1",
+      "topic_text": "Is there anything I can do to lend a hand?",
+      "emotion": "Surprise 100",
+      "response_text": "Really? Well, there's plenty of things I need help with.{surprised someone offered to help}",
+      "index": "46"
+    },
+    {
+      "topic": "DLC03WQGreetingC2",
+      "topic_text": "I wish I could help. But, I don't work for free.",
+      "emotion": "Disgust 50",
+      "response_text": "The Brotherhood didn't always work for free either.{annoyed about the direction his leadership has taken}",
+      "index": "49"
+    },
+    {
+      "topic": "DLC03WQGreetingC3",
+      "topic_text": "Not my problem. Good luck with all that.",
+      "emotion": "Anger 50",
+      "response_text": "Yeah. Whatever. Now leave me alone. I need to think.{annoyed.}",
+      "index": "52"
+    },
+    {
+      "topic": "DLC03WQGreetingD1",
+      "topic_text": "How can I help?",
+      "emotion": "Sad 50",
+      "response_text": "Well, I've got Rivet City water caravans needing help with some \"unusually organized\" bandits. Need someone to go investigate what that's all about.{exhausted}",
+      "index": "53"
+    },
+    {
+      "topic": "DLC03WQGreetingD2",
+      "topic_text": "If I get paid, I might lend a hand. What's the job?",
+      "emotion": "Surprise 50",
+      "response_text": "Hmmm... Well, I have two jobs actually.{sizing up a potential ally}",
+      "index": "56"
+    },
+    {
+      "topic": "DLC03WQGriffonDead",
+      "topic_text": "Thought you'd like to know. Griffon's dead.",
+      "emotion": "Disgust 50",
+      "response_text": "He's dead? Greaaaat. I guess I'll just have to find some other way to subsidize the water caravans.{annoyed and disheartened}",
+      "index": "60"
+    },
+    {
+      "topic": "DLC03WQGriffonHintKarma",
+      "topic_text": "I know you've got something set up. Don't worry, I won't tell your superiors.",
+      "emotion": "Surprise 50",
+      "response_text": "Yeah, you don't seem like the goody-goody type. But don't spread this around: So this ghoul, Griffon, comes in wanting to PURCHASE a bunch of water.{letting player in on a little secret}",
+      "index": "61"
+    },
+    {
+      "topic": "DLC03WQGriffonHintSpeechChallenge",
+      "topic_text": "So you guys have something set up on the side?",
+      "emotion": "Surprise 50",
+      "response_text": "We do what we can. Take, for example, this ghoul Griffon. He wanted to PURCHASE a bunch of water.{letting player in on a little secret}",
+      "index": "68"
+    },
+    {
+      "topic": "DLC03WQGriffonScam",
+      "topic_text": "Did you know Griffon's stashing the Aqua Pura and selling irradiated water?",
+      "emotion": "Happy 50",
+      "response_text": "He he. I guess he's more clever than I thought.{tired but amused}",
+      "index": "73"
+    },
+    {
+      "topic": "DLC03WQMegaton",
+      "topic_text": "I think I've found where the Aqua Pura went.",
+      "emotion": "Neutral 50",
+      "response_text": "Don't bother me with the details until you've taken care of the problem. I'm not sending more Aqua Pura until I know it's been handled.",
+      "index": "76"
+    },
+    {
+      "topic": "DLC03WQMegatonNo",
+      "topic_text": "I'm not going to help you with Megaton. I've got better things to do.",
+      "emotion": "Anger 100",
+      "response_text": "I'm a very busy man. I only have time for people who have time for me.{upset, exhausted}",
+      "index": "85"
+    },
+    {
+      "topic": "DLC03WQMegatonYes",
+      "topic_text": "I'll see what I can do about Megaton.",
+      "emotion": "Happy 50",
+      "response_text": "Really? That's great. I'm sorry I can't offer you any support in this. All our resources are tied up at the moment. Good luck.{(exhausted) pleased he's found an ally}",
+      "index": "86"
+    },
+    {
+      "topic": "DLC03WQMegatonYesPaid",
+      "topic_text": "As long as I get paid, you'll get your problem solved.",
+      "emotion": "Happy 50",
+      "response_text": "Of course you'll be paid. Most of our assets have been exhausted by war with the Enclave. But I'm a resourceful fellow. Don't you worry about that.{exhausted}",
+      "index": "88"
+    },
+    {
+      "topic": "DLC03WQRewardMegatonDLC03RewardMegaton",
+      "topic_text": "Megaton's destroyed. I suppose their water shipment isn't much of concern now.",
+      "emotion": "Surprise 50",
+      "response_text": "Heard about that. News traveled fast. I couldn't believe it. I mean, everyone knew it was crazy building a city around that bomb...{shocked}",
+      "index": "90"
+    },
+    {
+      "topic": "DLC03WQRewardRivetCity",
+      "topic_text": "Officer Lepelletier said you'd be rewarding me...",
+      "emotion": "Sad 50",
+      "response_text": "Yes, yes. I received a message from her. It's here somewhere... Well, no matter where it is, I know what it said.{exhausted}",
+      "index": "96"
+    },
+    {
+      "topic": "DLC03WQRivetCity",
+      "topic_text": "Officer Lepelletier is dead.",
+      "emotion": "Surprise 100",
+      "response_text": "What?!{shocked and upset}",
+      "index": "103"
+    },
+    {
+      "topic": "DLC03WQRivetCityNo",
+      "topic_text": "I'm not a fan of Rivet City or risking my life. Good luck with all that.",
+      "emotion": "Anger 100",
+      "response_text": "I'm starting to lose my patience with you. If you aren't here to help, then please: leave.{upset, exhausted}",
+      "index": "114"
+    },
+    {
+      "topic": "DLC03WQRivetCityYes",
+      "topic_text": "I'll see what assistance I can offer Rivet City security.",
+      "emotion": "Happy 50",
+      "response_text": "Great! Hopefully you can get them straightened out. We really can't do this without them.{exhausted but pleased to find an ally}",
+      "index": "115"
+    },
+    {
+      "topic": "DLC03WQRivetCityYesPaid",
+      "topic_text": "I'll lend Officer Lepelletier a hand, but fees may be incurred.",
+      "emotion": "Happy 50",
+      "response_text": "Yes. Yes. Of course you'll be paid. Go see what she needs, lend a hand, take care of whatever their problem is, and you'll have your reward.{exhausted but pleased}",
+      "index": "116"
+    },
+    {
+      "topic": "DLC03WQSellWater",
+      "topic_text": "Seems like a lot of trouble giving it away. Why don't you just sell the water?",
+      "emotion": "Disgust 50",
+      "response_text": "Many of us keep asking that same question. The Brotherhood isn't a postal service.{frustrated}",
+      "index": "117"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Happy 50",
+      "response_text": "Got to hand it to you kid. That was a brave thing you did, risking your life to start the Purifier.{partly sincere, partly sarcastic}",
+      "index": "125"
+    },
+    {
+      "topic": "PLAYERKNOCKOVEROBJECTS",
+      "topic_text": "PLAYER KNOCK OVER OBJECTS",
+      "emotion": "Disgust 50",
+      "response_text": "Pardon the mess.{sarcastic, someone knocked over a stack of papers on his messy desk}",
+      "index": "144"
+    },
+    {
+      "topic": "SpeechChallengeFailure",
+      "topic_text": "SpeechChallengeFailure",
+      "emotion": "Disgust 50",
+      "response_text": "If I did, I wouldn't tell you. I'm just doing what I'm told to do by Lyons. Even if I don't like doing it.{hiding something}",
+      "index": "148"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "DLC03WQBigsleyScribeConv01",
+      "topic_text": "DLC03WQBigsleyScribeConv01",
+      "emotion": "Surprise 50",
+      "response_text": "What? Oh yes. I'm just a little tired. What was this about them running into trouble?{startled awake, exhausted}",
+      "index": "149"
+    },
+    {
+      "topic": "DLC03WQBigsleyScribeConv02",
+      "topic_text": "DLC03WQBigsleyScribeConv02",
+      "emotion": "Anger 50",
+      "response_text": "And...?{as in \"yes, get to the point\"  exhausted}",
+      "index": "160"
+    },
+    {
+      "topic": "DLC03WQBigsleyScribeConv03",
+      "topic_text": "DLC03WQBigsleyScribeConv03",
+      "emotion": "Surprise 75",
+      "response_text": "Oh? And how was your visit? Did Lyons treat you to tea and biscuits?{sarcastic... exhausted}",
+      "index": "175"
+    },
+    {
+      "topic": "DLC03WQBigsleyScribeConv04",
+      "topic_text": "DLC03WQBigsleyScribeConv04",
+      "emotion": "Surprise 50",
+      "response_text": "Indeed you have. Much improved.{(hiding his sarcasm) exhausted}",
+      "index": "184"
+    },
+    {
+      "topic": "DLC03WQBigsleyScribeConv05",
+      "topic_text": "DLC03WQBigsleyScribeConv05",
+      "emotion": "Sad 50",
+      "response_text": "What now?{exhausted}",
+      "index": "192"
+    },
+    {
+      "topic": "DLC03WQBigsleyScribeConv06",
+      "topic_text": "DLC03WQBigsleyScribeConv06",
+      "emotion": "Anger 50",
+      "response_text": "And how the hell is that MY problem?{exhausted}",
+      "index": "197"
+    },
+    {
+      "topic": "DLC03WQBigsleyScribeConv07",
+      "topic_text": "DLC03WQBigsleyScribeConv07",
+      "emotion": "Sad 50",
+      "response_text": "That's a shame.{sarcastic. exhausted}",
+      "index": "203"
+    },
+    {
+      "topic": "DLC03WQBigsleyScribeConv08",
+      "topic_text": "DLC03WQBigsleyScribeConv08",
+      "emotion": "Surprise 50",
+      "response_text": "Excellent. Did anyone die?{(asking a routine question) exhausted}",
+      "index": "209"
+    },
+    {
+      "topic": "DLC03WQBigsleyScribeConv09",
+      "topic_text": "DLC03WQBigsleyScribeConv09",
+      "emotion": "Sad 50",
+      "response_text": "Wonderful. Put them on my desk.{sarcastic, exhausted}",
+      "index": "211"
+    },
+    {
+      "topic": "DLC03WQBigsleyScribeConv10",
+      "topic_text": "DLC03WQBigsleyScribeConv10",
+      "emotion": "Happy 50",
+      "response_text": "Excellent. I'm glad I don't have to oversee that anymore.{well pleased, but exhausted}",
+      "index": "214"
+    },
+    {
+      "topic": "DLC03WQBigsleyScribeConv11",
+      "topic_text": "DLC03WQBigsleyScribeConv11",
+      "emotion": "Anger 50",
+      "response_text": "<Grumble>{(signaling \"not now, go away!\" to underling) low growl, annoyed}",
+      "index": "216"
+    },
+    {
+      "topic": "GOODBYE",
+      "topic_text": "I have to go now.",
+      "emotion": "Happy 50",
+      "response_text": "Good. I could use a moment to myself.{exhausted, glad he's going to be left alone for awhile}",
+      "index": "221"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Disgust 50",
+      "response_text": "I was wondering when you'd show up.{under his breath, annoyed he is being bothered again.}",
+      "index": "227"
+    }
+  ],
+  "combat": [
+    {
+      "topic": "AcceptYield",
+      "topic_text": "AcceptYield",
+      "emotion": "Disgust 50",
+      "response_text": "Next time do try to be civil. Thank you.{annoyed}",
+      "index": "231"
+    },
+    {
+      "topic": "Assault",
+      "topic_text": "Assault",
+      "emotion": "Surprise 50",
+      "response_text": "What are you doing?{shocked/angry}",
+      "index": "232"
+    },
+    {
+      "topic": "Attack",
+      "topic_text": "Attack",
+      "emotion": "Anger 50",
+      "response_text": "I don't want to have to kill you, but I will!{angry}",
+      "index": "234"
+    },
+    {
+      "topic": "AvoidThreat",
+      "topic_text": "AvoidThreat",
+      "emotion": "Surprise 50",
+      "response_text": "Look out!{warning}",
+      "index": "237"
+    },
+    {
+      "topic": "Death",
+      "topic_text": "Death",
+      "emotion": "Surprise 50",
+      "response_text": "Aaauuuggghhhh...{dying}",
+      "index": "238"
+    },
+    {
+      "topic": "Flee",
+      "topic_text": "Flee",
+      "emotion": "Surprise 50",
+      "response_text": "Help!{calling for help}",
+      "index": "239"
+    },
+    {
+      "topic": "Hit",
+      "topic_text": "Hit",
+      "emotion": "Pained 50",
+      "response_text": "Agh!{getting hit}",
+      "index": "241"
+    },
+    {
+      "topic": "Murder",
+      "topic_text": "Murder",
+      "emotion": "Disgust 50",
+      "response_text": "Murderer!{shocked and disgusted}",
+      "index": "244"
+    },
+    {
+      "topic": "Pickpocket",
+      "topic_text": "Pickpocket",
+      "emotion": "Anger 50",
+      "response_text": "What do you think you're doing?{upset, catching a pickpocket}",
+      "index": "245"
+    },
+    {
+      "topic": "PowerAttack",
+      "topic_text": "PowerAttack",
+      "emotion": "Anger 50",
+      "response_text": "Ahhhrgh!{swing a heavy punch}",
+      "index": "247"
+    },
+    {
+      "topic": "Steal",
+      "topic_text": "Steal",
+      "emotion": "Anger 50",
+      "response_text": "How dare you!{angry, catching a thief}",
+      "index": "248"
+    }
+  ]
+}

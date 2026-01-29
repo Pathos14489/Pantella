@@ -1,0 +1,207 @@
+{
+  "name": "Pearl",
+  "url": "/wiki/Pearl_(Fallout:_New_Vegas)",
+  "dialogue_name": "NellisPearl.txt",
+  "dialogue_url": "/wiki/NellisPearl.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000FED43",
+  "ref_id": "000FF26B",
+  "editor_id": "NellisPearl",
+  "location": "Pearl's barracks",
+  "location_url": "/wiki/Pearl%27s_barracks",
+  "descriptions": [
+    "Pearl is a former resident of Vault 34 and the leader of the Boomers tribe inhabiting Nellis Air Force Base in the Mojave Wasteland in 2281. She appears in Fallout: New Vegas.",
+    "Pearl is one of the few still-living members of the Boomers who remembers the details of their origins as residents of Vault 34: she was among the members of a splinter faction within the Vault in the early 2230s that rebelled against their overseer's draconian restrictions on firearms use, Pearl helped in fighting off hostile threats and settling the abandoned ruins of Nellis AFB after they arrived and decided to make it their home.",
+    "While the Boomers' usage of heavy artillery with their howitzers has kept their homeland safe for many years,",
+    "Pearl's title of \"Mother Pearl\" is a reference to \"mother-of-pearl,\" also known as nacre, an organic-inorganic compound produced by molluscs such as clams to coat the inside of their shells; the name comes from its use in the creation of a natural pearl."
+  ],
+  "race": "Human",
+  "gender": "Female",
+  "affiliation": "Vault 34(formerly)Boomers",
+  "role": "Vault dweller (formerly)Tribe leader",
+  "detailed_location": "Nellis Air Force BasePearl's barracks",
+  "voice_actor": "Marianne Muellerleile",
+  "special": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 6,
+    "Charisma": 3,
+    "Intelligence": 4,
+    "Agility": 6,
+    "Luck": 4
+  },
+  "level": "16",
+  "tag_skills": [
+    {
+      "Guns:": "91"
+    },
+    {
+      "Melee Weap.:": "89"
+    },
+    {
+      "Unarmed:": "91"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Good",
+  "voice_type": "FemaleOld01",
+  "geck_race": "HispanicOldAged",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "Welcome, child! Took your sweet time getting here, didn't you?{playful}",
+      "index": "1"
+    },
+    {
+      "topic": "VFreeformNellisNellisPearlTopic000",
+      "topic_text": "Jack is interested in a girl.",
+      "emotion": "Neutral 50",
+      "response_text": "Well well, this is welcome news. Who is she?",
+      "index": "6"
+    },
+    {
+      "topic": "VFreeformNellisNellisPearlTopic001",
+      "topic_text": "You tell me. What do people have to say about me?",
+      "emotion": "Neutral 50",
+      "response_text": "I haven't heard anything. You must not be trying hard enough.",
+      "index": "7"
+    },
+    {
+      "topic": "VFreeformNellisNellisPearlTopic002",
+      "topic_text": "I'm still trying to figure out who to help and how.",
+      "emotion": "Neutral 50",
+      "response_text": "Each of the elders would appreciate assistance with various issues here in Nellis.",
+      "index": "13"
+    },
+    {
+      "topic": "VFreeformNellisNellisPearlTopic003",
+      "topic_text": "She works for the Crimson Caravan.",
+      "emotion": "Neutral 50",
+      "response_text": "She's with those traders? They've tried to contact us before, but I'm not interested in trading with greedy savages.",
+      "index": "16"
+    },
+    {
+      "topic": "VFreeformNellisNellisPearlTopic005",
+      "topic_text": "I've spoken to Loyal. The B-29 is on the way.",
+      "emotion": "Neutral 50",
+      "response_text": "What you have done for us is a miracle, child. You have fulfilled the only dreams we ever had outside our walls.",
+      "index": "18"
+    },
+    {
+      "topic": "VFreeformNellisNellisPearlTopic006",
+      "topic_text": "Just some kookie dame looking for love.",
+      "emotion": "Neutral 50",
+      "response_text": "This presents a bit of a problem. Jack isn't allowed to leave Nellis, and I doubt she would make it through the artillery alive.",
+      "index": "21"
+    },
+    {
+      "topic": "VFreeformNellisNellisPearlTopic007<Speech>",
+      "topic_text": "It would mean a lot to Jack if she could come to Nellis.",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] Hmm, I suppose Jack deserves a chance at love. You can tell Jack she has a free pass to enter, but he is responsible for her actions.",
+      "index": "22"
+    },
+    {
+      "topic": "VFreeformNellisNellisPearlTopic008<Ladykiller>",
+      "topic_text": "Come on, Pearl, think of the joy it would bring Jack. He's in love.",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] You're right. I'd be wrong to deny Jack such joy in his life.",
+      "index": "25"
+    },
+    {
+      "topic": "VFreeformNellisNellisPearlTopic009",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Goodbye.",
+      "index": "28"
+    },
+    {
+      "topic": "VFreeformNellisNellisPearlTopic010",
+      "topic_text": "Where do I start?",
+      "emotion": "Neutral 50",
+      "response_text": "You picked a good time to stop by, for we're swimming in problems. My youngers can tell you all about it.",
+      "index": "29"
+    },
+    {
+      "topic": "VFreeformNellisNellisPearlTopic011<Reputation>",
+      "topic_text": "I assure you, Janet would not be a threat to the tribe.",
+      "emotion": "Neutral 50",
+      "response_text": "Very well, I'll take your word when you say she isn't a threat to the tribe. I will allow her entry if Jack will take responsibility for her.",
+      "index": "33"
+    },
+    {
+      "topic": "VFreeformNellisNellisPearlTopic012<SPEECH TEST: Player presses for details>",
+      "topic_text": "How can we trust each other if you're going to be keeping secrets?",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] You have to keep in mind that you're our first contact with the outside world since I was barely a woman.",
+      "index": "36"
+    },
+    {
+      "topic": "VFreeformNellisNellisPearlTopic013",
+      "topic_text": "Never mind. Let's talk about something else.",
+      "emotion": "Neutral 50",
+      "response_text": "Very well.",
+      "index": "41"
+    },
+    {
+      "topic": "VFreeformNellisNellisPearlTopic014",
+      "topic_text": "Sorry, not interested. I'll be leaving.",
+      "emotion": "Neutral 50",
+      "response_text": "I'll send word to the spotters to let you come and go as you wish. Why not stay awhile before you head out?",
+      "index": "42"
+    },
+    {
+      "topic": "VFreeformNellisNellisPearlTopic015",
+      "topic_text": "I'm looking for a howitzer firing mechanism.",
+      "emotion": "Neutral 50",
+      "response_text": "You may find one in the workshop. You're a friend to the tribe, so I trust it will not find it's way into the wrong hands.",
+      "index": "43"
+    },
+    {
+      "topic": "VFreeformNellisNellisPearlTopic016",
+      "topic_text": "There may be a battle in the near future at the Hoover Dam, can you offer any assistance?",
+      "emotion": "Neutral 50",
+      "response_text": "Of course my child. After all that you have done for us we would love to help you in the upcoming battle.",
+      "index": "45"
+    },
+    {
+      "topic": "VFreeformNellisNellisPearlTopic018",
+      "topic_text": "You didn't exactly roll out a red carpet!",
+      "emotion": "Neutral 50",
+      "response_text": "Those howitzers of ours aren't just for entertainment, child! Explosive ordnance is what keeps the savages at a distance.",
+      "index": "48"
+    },
+    {
+      "topic": "VFreeformNellisNellisPearlTopic019",
+      "topic_text": "You mean you were expecting me? Like a prophecy or something?",
+      "emotion": "Neutral 50",
+      "response_text": "Prophecy? Do we look like a bunch of religious idiots?",
+      "index": "50"
+    },
+    {
+      "topic": "VFreeformNellisNellisPearlTopic020",
+      "topic_text": "I'd like to talk about allowing Janet to visit Jack.",
+      "emotion": "Neutral 50",
+      "response_text": "I'd rather not allow more outsiders in, but I'll hear you out.",
+      "index": "53"
+    },
+    {
+      "topic": "VMS15NellisPearlTopic000",
+      "topic_text": "How might I be of assistance?",
+      "emotion": "Neutral 50",
+      "response_text": "Oh, so many ways! Small ones to begin with, so we can get used to what it's like to have a sav- outsider around and about.",
+      "index": "54"
+    }
+  ],
+  "conversation": [],
+  "combat": []
+}

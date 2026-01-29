@@ -1,0 +1,121 @@
+{
+  "name": "April Martimer",
+  "url": "/wiki/April_Martimer",
+  "dialogue_name": "VFSEDEScientist.txt",
+  "dialogue_url": "/wiki/VFSEDEScientist.txt",
+  "spawned_dead": false,
+  "spawned": true,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "0015882B",
+  "ref_id": "0015882C",
+  "editor_id": "VFSEDEScientist",
+  "location": "Old Mormon Fort",
+  "location_url": "/wiki/Old_Mormon_Fort",
+  "descriptions": [
+    "April Martimer is a scientist living at the Old Mormon Fort in Freeside in 2281.",
+    "April Martimer is a scientist and a member of the Followers of the Apocalypse. She will express her interest in examining ED-E, a prototype duraframe eyebot carrying Poseidon Energy research data, so that she can extract the data and put it to good use in the future. She resents the Brotherhood of Steel, who also have an interest in the eyebot since they will be using the data to their own benefit.",
+    "She will contact the Courier through ED-E once its audio logs are unlocked. Once ED-E is upgraded either by her or the Brotherhood, she will vanish from the fort."
+  ],
+  "race": "Human",
+  "gender": "Female",
+  "affiliation": "Followers of the Apocalypse",
+  "role": "Scientist",
+  "detailed_location": "Old Mormon Fort",
+  "voice_actor": "Gwen McGee",
+  "special": {
+    "Strength": 3,
+    "Perception": 6,
+    "Endurance": 3,
+    "Charisma": 4,
+    "Intelligence": 8,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "level": "8",
+  "tag_skills": [
+    {
+      "Explosives:": "64"
+    },
+    {
+      "Medicine:": "68"
+    },
+    {
+      "Science:": "68(73)"
+    }
+  ],
+  "karma": "Neutral",
+  "voice_type": "FemaleAdult05",
+  "geck_race": "AfricanAmerican",
+  "topics": [
+    {
+      "topic": "EDERadioConversation",
+      "topic_text": "EDERadioConversation",
+      "emotion": "Neutral 50",
+      "response_text": "Hi, sorry to break in, he sounded truly riveting. I don't want to keep you much longer, but I'd like to make a counter suggestion.",
+      "index": "1"
+    },
+    {
+      "topic": "EDERadioConversation3",
+      "topic_text": "EDERadioConversation3",
+      "emotion": "Neutral 50",
+      "response_text": "Hi there, my name is April Martimer. I monitored a communication earlier between you and someone with the Brotherhood of Steel.",
+      "index": "4"
+    },
+    {
+      "topic": "EDERadioConversation4",
+      "topic_text": "EDERadioConversation4",
+      "emotion": "Neutral 50",
+      "response_text": "Hi there, my name is April Martimer. I've heard through various channels that you have some... curious robot with you.",
+      "index": "7"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "Thank you for coming, let's talk about that robot.",
+      "index": "10"
+    },
+    {
+      "topic": "VFreeformFreeside2VFSEDEScientistTopic000",
+      "topic_text": "Can you tell me about the followers?",
+      "emotion": "Neutral 50",
+      "response_text": "There are plenty of people here to talk to you about us and our mission. Let's get to brass tacks and talk about that robot.",
+      "index": "13"
+    },
+    {
+      "topic": "VFreeformFreeside2VFSEDEScientistTopic002",
+      "topic_text": "What would you like it for?",
+      "emotion": "Neutral 50",
+      "response_text": "I've heard through our channels that it has some research that may be related to Enclave and Poseidon Energy technology.",
+      "index": "14"
+    },
+    {
+      "topic": "VFreeformFreeside2VFSEDEScientistTopic003",
+      "topic_text": "What are you going to do with it?",
+      "emotion": "Neutral 50",
+      "response_text": "First I'm going to pull off whatever log data I can. Then, I'll use some of the tech around here to upgrade its weapons systems.",
+      "index": "16"
+    },
+    {
+      "topic": "VFreeformFreeside2VFSEDEScientistTopic004",
+      "topic_text": "Ok, you can take it for a little while.",
+      "emotion": "Neutral 50",
+      "response_text": "Thank you. I'll get it back to you as soon as I can with the upgraded weapons systems.",
+      "index": "18"
+    },
+    {
+      "topic": "VFreeformFreeside2VFSEDEScientistTopic006",
+      "topic_text": "Why don't you want the Brotherhood to have it?",
+      "emotion": "Anger 15",
+      "response_text": "The Brotherhood{Spoke with distain}is all about keeping technology to themselves, and using what they find to protect themselves.",
+      "index": "19"
+    }
+  ],
+  "conversation": [],
+  "combat": []
+}

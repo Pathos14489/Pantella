@@ -1,0 +1,229 @@
+{
+  "name": "Defender Sibley",
+  "url": "/wiki/Sibley",
+  "dialogue_name": "DLC02DefenderSibley.txt",
+  "dialogue_url": "/wiki/DLC02DefenderSibley.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "xx000E24",
+  "ref_id": "xx001400",
+  "editor_id": "DLC02DefenderSibley",
+  "location": "Outcast outpost",
+  "location_url": "/wiki/Outcast_outpost",
+  "descriptions": [
+    "Defender Sibley is a  Brotherhood of Steel Outcast found at the Outcast outpost in the Fallout 3 add-on Operation: Anchorage.",
+    "A grim and hostile individual, Defender Sibley is a Brotherhood hardliner, who firmly believes in the mission of the Brotherhood Outcasts, namely recovering technology and keeping it out of the hands of wastelanders by any means necessary. Anyone outside the Outcasts is a potential threat as far as Sibley is concerned, which is a key issue between him and Protector McGraw; The protector's willingness to negotiate and cooperate with wastelanders is seen by Defender Sibley as evidence of weak will and a danger to Outcast operations.",
+    "This attitude makes him a natural leader to fellow hardliners, particularly those operating under McGraw. While he understands and shares their sentiments, Sibley firmly believes in the chain of command. He follows McGraw's orders, even if he finds them disagreeable, and keeps any whispers of mutiny contained.",
+    "Sibley is not on great terms with Specialist Olin either, especially after the fiasco with Gary 23, which was brutal, and worse, did not result in any progress.",
+    "Defender Sibley appears only in the Fallout 3 add-on Operation: Anchorage.",
+    "Outcast members Sibley, Olin, McGraw and Morrill, all of who appear in the Operation: Anchorage add-on for Fallout 3, appear to be named after buildings on the campus of Cornell University, including Sibley Hall, Olin Hall, Olin Library, McGraw Hall, McGraw Tower and Morrill Hall."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Brotherhood of Steel(formerly)Brotherhood Outcasts",
+  "detailed_location": "Outcast outpost",
+  "special": {
+    "Strength": 3,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 6,
+    "Intelligence": 7,
+    "Agility": 4,
+    "Luck": 6
+  },
+  "mod_special_values": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 6,
+    "Intelligence": 7,
+    "Agility": 2,
+    "Luck": 6
+  },
+  "level": "7→20",
+  "tag_skills": [
+    {
+      "Medicine:": "68→100"
+    },
+    {
+      "Science:": "68→100"
+    },
+    {
+      "Speech:": "66→100"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "95→160"
+    },
+    {
+      "Critical Chance:": "6%"
+    },
+    {
+      "Unarmed Dam.:": "1.15"
+    },
+    {
+      "Poison Resist.:": "15%"
+    },
+    {
+      "Rad. Resist.:": "6%"
+    },
+    {
+      "Carry Weight:": "180(200)"
+    }
+  ],
+  "karma": "Neutral",
+  "voice_type": "DLC02MaleUniqueSibley",
+  "geck_race": "AfricanAmerican",
+  "topics": [
+    {
+      "topic": "DLC02OA1OutcastStory",
+      "topic_text": "What's your story?",
+      "emotion": "Neutral 50",
+      "response_text": "Are you kidding me?",
+      "index": "1"
+    },
+    {
+      "topic": "DLC02OA1SibleyGotProblem",
+      "topic_text": "You got a problem?",
+      "emotion": "Neutral 50",
+      "response_text": "I got loads of problems, chump. You don't want to become one, so shut up and get in the... the simulator thing there. Move it!",
+      "index": "4"
+    },
+    {
+      "topic": "DLC02OA1SibleyGreet1",
+      "topic_text": "Listen, sweetie. I'm kind of lost. Can I talk to whomever's in charge?",
+      "emotion": "Neutral 50",
+      "response_text": "Uhh, sure. Sure thing, miss. I'll take you to Protector McGraw right now.",
+      "index": "5"
+    },
+    {
+      "topic": "DLC02OA1SibleyGreet2",
+      "topic_text": "Whoops, this isn't the Vault. Silly me, must've made a wrong turn.",
+      "emotion": "Neutral 50",
+      "response_text": "You a wiseass, or just stupid?",
+      "index": "6"
+    },
+    {
+      "topic": "DLC02OA1SibleyGreet3",
+      "topic_text": "Nice place you've got here. Mind if I look around?",
+      "emotion": "Neutral 50",
+      "response_text": "Matter of fact, I do mind. I mind enough to put a few rounds in you. Get me?",
+      "index": "8"
+    },
+    {
+      "topic": "DLC02OA1SibleyGreet4",
+      "topic_text": "Wow, what is this place?",
+      "emotion": "Neutral 50",
+      "response_text": "Someplace you locals ain't supposed to be.",
+      "index": "10"
+    },
+    {
+      "topic": "DLC02OA1SibleyMoreInfoSPEECH",
+      "topic_text": "Hey, sorry. I'm just trying to figure out what's going on here.",
+      "emotion": "Neutral 50",
+      "response_text": "What's going on is this whole mission is one big rat-fuck. We've been stuck here for way too long with no results.",
+      "index": "12"
+    },
+    {
+      "topic": "DLC02OA1SibleySorryForAsking",
+      "topic_text": "Sorry for asking. Forget I said anything.",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah, yeah. Whatever.",
+      "index": "14"
+    },
+    {
+      "topic": "DLC02OA1SibleyWhyHostile",
+      "topic_text": "Why are you so hostile?",
+      "emotion": "Neutral 50",
+      "response_text": "Look, we ain't gonna be friends when this is all over, so the less talking we do now the happier I am, got it?",
+      "index": "15"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "Everything okay? Nothing's changed out here, so you can't be done...",
+      "index": "16"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "DLC02FinSibleyMcGrawEndConv",
+      "topic_text": "DLC02FinSibleyMcGrawEndConv",
+      "emotion": "Neutral 50",
+      "response_text": "I'll see you there...",
+      "index": "42"
+    },
+    {
+      "topic": "DLC02OA1ElevatorConv2",
+      "topic_text": "DLC02OA1ElevatorConv2",
+      "emotion": "Neutral 50",
+      "response_text": "McGraw gave orders. It's that simple.",
+      "index": "47"
+    },
+    {
+      "topic": "DLC02OA1ElevatorConv4",
+      "topic_text": "DLC02OA1ElevatorConv4",
+      "emotion": "Neutral 50",
+      "response_text": "That's enough. McGraw's in charge, so we follow his orders, no matter how much we don't like it.",
+      "index": "49"
+    },
+    {
+      "topic": "DLC02OA1FightIntoRuins",
+      "topic_text": "DLC02OA1FightIntoRuins",
+      "emotion": "Neutral 50",
+      "response_text": "Yes, sir! Proceeding.",
+      "index": "50"
+    },
+    {
+      "topic": "DLC02OA1FightToBase",
+      "topic_text": "DLC02OA1FightToBase",
+      "emotion": "Neutral 50",
+      "response_text": "Area clear. Returning to base.",
+      "index": "53"
+    },
+    {
+      "topic": "DLC02OA1FightToRuins",
+      "topic_text": "DLC02OA1FightChatter1",
+      "emotion": "Neutral 50",
+      "response_text": "Ready. Let's hit the ruins.",
+      "index": "56"
+    },
+    {
+      "topic": "DLC02OA1SibleyMcGraw1",
+      "topic_text": "DLC02OA1SibleyMcGraw1",
+      "emotion": "Neutral 50",
+      "response_text": "Yessir.",
+      "index": "59"
+    },
+    {
+      "topic": "DLC02OA1SibleyOlinConv",
+      "topic_text": "DLC02OA1SibleyOlinConv",
+      "emotion": "Neutral 50",
+      "response_text": "Sure, whatever. Just make some progress, okay? We're all looking to get out of here.",
+      "index": "67"
+    },
+    {
+      "topic": "DLC02OA4EndTalk",
+      "topic_text": "DLC02OA4EndTalk",
+      "emotion": "Neutral 50",
+      "response_text": "Well, it's about goddamned time.",
+      "index": "70"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Neutral 50",
+      "response_text": "Nice work in there, soldier.",
+      "index": "71"
+    }
+  ],
+  "combat": []
+}

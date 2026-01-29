@@ -1,0 +1,193 @@
+{
+  "name": "Philip Lem",
+  "url": "/wiki/Philip_Lem",
+  "dialogue_name": "VVault19PhilipLem.txt",
+  "dialogue_url": "/wiki/VVault19PhilipLem.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "0013E4D7",
+  "ref_id": "0013EC01",
+  "editor_id": "VVault19PhilipLem",
+  "location": "Vault 19red overseer's office",
+  "location_url": "/wiki/Vault_19",
+  "descriptions": [
+    "Philip Lem is a Powder Ganger living in Vault 19 in 2281.",
+    "Philip Lem made his living by sneaking into NCR camps and stealing goods and made a well enough living. One day, however, he got sloppy and got caught, avoided hanging, and sent to NCR Correctional Facility.",
+    "Lem decided to follow Cooke's lead on the way out of NCRCF and to Vault 19 but after all was said and done, Lem began to think that the group should turn themselves in back to the NCR believing that the group can't sustain themselves on the limited resources they got",
+    "Why Can't We Be Friends?: After planting the C-4 on the microcline rock, Philip asks the Courier to talk to Papa Khan to secure their alliance.",
+    "Phillip Lem's name is derived from the science-fiction writers Phillip K. Dick and Stanisław Lem. Sydney Wolfram, who designed Vault 19, was reading from both authors at the time."
+  ],
+  "race": "Human",
+  "affiliation": "Powder Gangers",
+  "role": "Thief (formerly)Prisoner (formerly)Gang member",
+  "detailed_location": "Vault 19",
+  "voice_actor": "Sam Riegel",
+  "special": {
+    "Strength": 5,
+    "Perception": 6,
+    "Endurance": 5,
+    "Charisma": 3,
+    "Intelligence": 3,
+    "Agility": 5,
+    "Luck": 4
+  },
+  "level": "1→30→50 (DLCs only)",
+  "tag_skills": [
+    {
+      "Explosives:": "34→100"
+    },
+    {
+      "Guns:": "29→100"
+    },
+    {
+      "Melee Weap.:": "29→100"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Neutral",
+  "voice_type": "MaleAdult10",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Anger 50",
+      "response_text": "{Hated}Fuck you.",
+      "index": "1"
+    },
+    {
+      "topic": "VMS42VVault19PhilipLemTopic000",
+      "topic_text": "What's going on here?",
+      "emotion": "Anger 50",
+      "response_text": "Fucking Cooke has us trapped here. After we escaped from an NCR prison, he dragged us around the wasteland until we ended up in this shit hole.",
+      "index": "12"
+    },
+    {
+      "topic": "VMS42VVault19PhilipLemTopic001",
+      "topic_text": "Tell me about Cooke.",
+      "emotion": "Fear 30",
+      "response_text": "Cooke is just an overambitious prick, and he's going to get us all killed.",
+      "index": "16"
+    },
+    {
+      "topic": "VMS42VVault19PhilipLemTopic002",
+      "topic_text": "Who are you?",
+      "emotion": "Sad 40",
+      "response_text": "I'm a nobody. Just a survivor. Things were well enough until the NCR threw me behind bars.",
+      "index": "17"
+    },
+    {
+      "topic": "VMS42VVault19PhilipLemTopic005",
+      "topic_text": "What did you do?",
+      "emotion": "Anger 30",
+      "response_text": "I made my living sneaking into NCR camps looking for shit to steal. I got sloppy, and then I got caught.",
+      "index": "18"
+    },
+    {
+      "topic": "VMS42VVault19PhilipLemTopic006",
+      "topic_text": "How did you get out?",
+      "emotion": "Neutral 50",
+      "response_text": "Made it out during Cooke's big prison break, like the rest of the guys here.",
+      "index": "19"
+    },
+    {
+      "topic": "VMS42VVault19PhilipLemTopic007",
+      "topic_text": "<GENERAL QUESTIONS>",
+      "emotion": "Neutral 50",
+      "response_text": "Alright. What do you want to know?",
+      "index": "20"
+    },
+    {
+      "topic": "VMS42VVault19PhilipLemTopic008",
+      "topic_text": "Who's Cooke?",
+      "emotion": "Fear 30",
+      "response_text": "Samuel Cooke. It was his idea to organize a jailbreak, but now he's just an overambitious prick who's going to get us all killed.",
+      "index": "24"
+    },
+    {
+      "topic": "VMS42VVault19PhilipLemTopic009",
+      "topic_text": "Tell me about the prison break.",
+      "emotion": "Happy 50",
+      "response_text": "I can be pretty sneaky when I need to be, and the prison guards were a joke.",
+      "index": "25"
+    },
+    {
+      "topic": "VMS42VVault19PhilipLemTopic012",
+      "topic_text": "Who is Samuel Cooke?",
+      "emotion": "Anger 40",
+      "response_text": "Cooke organized the breakout. But he's just an overambitious prick who's going to get us all killed.",
+      "index": "27"
+    },
+    {
+      "topic": "VMS42VVault19PhilipLemTopic141",
+      "topic_text": "Why can't you do it?",
+      "emotion": "Fear 30",
+      "response_text": "I have to watch Cooke. I wouldn't put it past him to just start killing the opposition, starting with me.",
+      "index": "28"
+    },
+    {
+      "topic": "VMS42VVault19PhilipLemTopic142",
+      "topic_text": "I'll do it.",
+      "emotion": "Neutral 50",
+      "response_text": "Thanks. Take this keycard - I tried hacking the locking mechanisms on the doors, but it seems that the only way in is with one of these.",
+      "index": "29"
+    },
+    {
+      "topic": "VMS42VVault19PhilipLemTopic143",
+      "topic_text": "Why would you want to do that?",
+      "emotion": "Neutral 50",
+      "response_text": "Cooke is planning to use the sulfur to make bigger explosives.",
+      "index": "30"
+    },
+    {
+      "topic": "VMS42VVault19PhilipLemTopic179",
+      "topic_text": "Yes.",
+      "emotion": "Neutral 50",
+      "response_text": "Good to hear. Without access to the sulfur, Cooke doesn't have much to offer the gang. I... I guess it's over, then. We can turn ourselves in.",
+      "index": "33"
+    },
+    {
+      "topic": "VMS42VVault19PhilipLemTopic182",
+      "topic_text": "The Khans will accept you as long as you pass the initiation rite.",
+      "emotion": "Happy 50",
+      "response_text": "Well, that's a hell of a lot better than going back to prison.",
+      "index": "34"
+    },
+    {
+      "topic": "VMS42VVault19PhilipLemTopic185",
+      "topic_text": "Why do you want to surrender?",
+      "emotion": "Neutral 50",
+      "response_text": "We can't survive like this - there are too many of us and we don't have the resources. And maybe it's the right thing to do.",
+      "index": "35"
+    },
+    {
+      "topic": "VMS42VVault19PhilipLemTopic189",
+      "topic_text": "Have you considered joining the Great Khans?",
+      "emotion": "Neutral 50",
+      "response_text": "[FAILED] No, this needs to end. I'm tired of running and living like scavengers.",
+      "index": "36"
+    },
+    {
+      "topic": "VMS42VVault19PhilipLemTopic197",
+      "topic_text": "You're doing the right thing.",
+      "emotion": "Neutral 50",
+      "response_text": "Thank you. I think I just needed to hear someone else say it. I suppose without rule of law, we're no better than raiders.",
+      "index": "38"
+    },
+    {
+      "topic": "VMS42VVault19PhilipLemTopic199",
+      "topic_text": "Sure, I'll go talk to them.",
+      "emotion": "Happy 50",
+      "response_text": "Thank you. We'll wait here until we hear from you.",
+      "index": "39"
+    }
+  ],
+  "conversation": [],
+  "combat": []
+}

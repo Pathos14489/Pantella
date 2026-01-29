@@ -1,0 +1,298 @@
+{
+  "name": "Marguerite",
+  "url": "/wiki/Marguerite",
+  "dialogue_name": "DLC04FF03Marguerite.txt",
+  "dialogue_url": "/wiki/DLC04FF03Marguerite.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "xx003F6E",
+  "ref_id": "xx003F6F",
+  "editor_id": "DLC04FF03Marguerite",
+  "location": "Marguerite's shack",
+  "location_url": "/wiki/Marguerite%27s_shack",
+  "descriptions": [
+    "Marguerite is one of the marsh folk of Point Lookout in 2277.",
+    "A tough lady, Marguerite may not share the looks of the locals, but she is not troubled by them because she has been a Point Lookout resident since birth.",
+    "She is the descendant of a family of moonshiners from around the Point Lookout area, who sold their liquor during Prohibition.",
+    "When first encountered, Marguerite pretends to be sick in an attempt to get the Lone Wanderer to gather materials to cure her \"Orange Fever\". If the Lone Wanderer's Medicine is high enough (over 70), she will drop the pretense and ask them to gather items to make moonshine.",
+    "If the Lone Wanderer has a high enough Repair skill (minimum 44), they can also volunteer to fix Marguerite's still for 100 caps (200 caps if a Speech check is passed).",
+    "After completing A Spoonful of Whiskey, Marguerite will make the Lone Wanderer her famous moonshine whenever they ask (once every 24 hrs), provided they give her the ingredients.",
+    "Marguerite appears only in the Fallout 3 add-on Point Lookout."
+  ],
+  "race": "Human(Marshfolk)",
+  "gender": "Female",
+  "affiliation": "Swampfolk",
+  "role": "Moonshiner",
+  "detailed_location": "Marguerite's shack",
+  "voice_actor": "Bari Biern",
+  "special": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 10,
+    "Intelligence": 5,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "level": "1",
+  "misc_skills": [],
+  "karma": "Neutral",
+  "voice_type": "DLC04FemaleNormal",
+  "geck_race": "CaucasianRaider",
+  "topics": [
+    {
+      "topic": "DLC04Marg00AboutYouTopLvl",
+      "topic_text": "I want to know more about you.",
+      "emotion": "Neutral 50",
+      "response_text": "Why, I'm just folk.  What more is there?",
+      "index": "1"
+    },
+    {
+      "topic": "DLC04MargAboutYouOrangeFeverAbout",
+      "topic_text": "How bad is Orange Fever?",
+      "emotion": "Neutral 50",
+      "response_text": "Nothing you can catch, if that's what you were wondering. Marsh folk catch it all the time. Lucky my family has a special still pot for tonic-makin'.",
+      "index": "2"
+    },
+    {
+      "topic": "DLC04MargAboutYouPtLookout",
+      "topic_text": "What do you think of Point Lookout?",
+      "emotion": "Neutral 50",
+      "response_text": "Things aren't wonderful, but I reckon it's hard all around.",
+      "index": "3"
+    },
+    {
+      "topic": "DLC04MargAboutYouStillObservation",
+      "topic_text": "Did you build that still yourself?",
+      "emotion": "Neutral 50",
+      "response_text": "That old thing's been in my family for years and years.",
+      "index": "5"
+    },
+    {
+      "topic": "DLC04MargAboutYouWhyPlayingSick",
+      "topic_text": "Why did you fake being sick?",
+      "emotion": "Neutral 50",
+      "response_text": "Here I thought you were a quick one.",
+      "index": "7"
+    },
+    {
+      "topic": "DLC04MargChangeSubject",
+      "topic_text": "Let's change the subject.",
+      "emotion": "Neutral 50",
+      "response_text": "I thought you'd never ask.",
+      "index": "9"
+    },
+    {
+      "topic": "DLC04MargMedSkillBackoff",
+      "topic_text": "I'm sorry, I guess I just haven't heard of that illness. Maybe I can help.",
+      "emotion": "Neutral 50",
+      "response_text": "I reckon you can, at that.  I just need some help brewing up a little tonic.",
+      "index": "10"
+    },
+    {
+      "topic": "DLC04MargMedSpchChall",
+      "topic_text": "You're faking. We both know it. So let's just cut to the chase.",
+      "emotion": "Neutral 50",
+      "response_text": "Well, I - oh, fine. Maybe you're no hogsfool, but I reckon we both come out better if you can help me cook up some tonic.",
+      "index": "11"
+    },
+    {
+      "topic": "DLC04MargPlayerBelieveSickness",
+      "topic_text": "Orange Fever? That sounds bad. Can I help?",
+      "emotion": "Neutral 50",
+      "response_text": "Awful malady, I do swear. There's a tonic for it, but I reckon I'm not well enough to make it myself.",
+      "index": "12"
+    },
+    {
+      "topic": "DLC04MargPlayerMedSkillSickness",
+      "topic_text": "I've treated enough illnesses to know there's no such thing as Orange Fever.",
+      "emotion": "Neutral 50",
+      "response_text": "Now that is just an awfully rude thing to say, sweetie.",
+      "index": "13"
+    },
+    {
+      "topic": "DLC04MargPlayerSarcasticSickness",
+      "topic_text": "Yeah? I've got the mauve plague. So let's just try not to cough on each other.",
+      "emotion": "Neutral 50",
+      "response_text": "Well sweetie, even if you ain't got sympathy in your heart, I think you need the 'ol tonic as bad as me, even if'n you don't know it yet.",
+      "index": "14"
+    },
+    {
+      "topic": "DLC04MargPlayingSick",
+      "topic_text": "You're sick? What's the matter?",
+      "emotion": "Neutral 50",
+      "response_text": "Reckon it's the Orange Fever.  I do feel light in my head...",
+      "index": "15"
+    },
+    {
+      "topic": "DLC04MargPlayingSickAlternate",
+      "topic_text": "Oh boy, here we go...",
+      "emotion": "Neutral 50",
+      "response_text": "Shouldn't tease somebody come down with Orange Fever, sweetie.",
+      "index": "16"
+    },
+    {
+      "topic": "DLC04MargRepairAlreadyDone",
+      "topic_text": "Actually, I already took care of it.",
+      "emotion": "Neutral 50",
+      "response_text": "Well, I'll be. Here, let me give you something for your trouble.",
+      "index": "17"
+    },
+    {
+      "topic": "DLC04MargRepairChallenge",
+      "topic_text": "I'll get it working like new, but I want 200 caps.",
+      "emotion": "Neutral 50",
+      "response_text": "I reckon you've got a deal, sweetie, but I'd better notice a difference in the tonic.",
+      "index": "18"
+    },
+    {
+      "topic": "DLC04MargRepairFee",
+      "topic_text": "I can fix it up. Let's call it 100 caps of work?",
+      "emotion": "Neutral 50",
+      "response_text": "I reckon I can scrape that together. Go ahead and do what you can for it.",
+      "index": "19"
+    },
+    {
+      "topic": "DLC04MargRepairNoCharge",
+      "topic_text": "Yeah, I can fix it. No charge.",
+      "emotion": "Neutral 50",
+      "response_text": "Aren't you a smart one?  Sweeter tonic's better for both of us, after all.",
+      "index": "20"
+    },
+    {
+      "topic": "DLC04MargRepairStillOffer",
+      "topic_text": "Your still could stand to be fixed up.",
+      "emotion": "Neutral 50",
+      "response_text": "Could it, now?  I suppose you'd know how to see to that, wouldn't you?",
+      "index": "21"
+    },
+    {
+      "topic": "DLC04Quest00TopLvl",
+      "topic_text": "Has the tonic finished brewing?",
+      "emotion": "Neutral 50",
+      "response_text": "Should be ready in a matter of hours. Check back soon.",
+      "index": "22"
+    },
+    {
+      "topic": "DLC04QuestBatteries",
+      "topic_text": "Batteries? For extra \"kick\"?",
+      "emotion": "Neutral 50",
+      "response_text": "You best keep this one to yourself, sweetie.   The family tonic gets real kick from our secret ingredient.  We just need a lil' bit of battery acid.",
+      "index": "29"
+    },
+    {
+      "topic": "DLC04QuestPunga",
+      "topic_text": "We need Punga Fruit?",
+      "emotion": "Neutral 50",
+      "response_text": "Punga fruit and lots of it. The stuff those loonies make at the church is best. Ten of those will do, but might cost you.",
+      "index": "33"
+    },
+    {
+      "topic": "DLC04QuestPungaTurnIn01",
+      "topic_text": "Here, take ten of these refined Punga Fruit.",
+      "emotion": "Neutral 50",
+      "response_text": "Sweet and ripe, too. These will do just fine.",
+      "index": "39"
+    },
+    {
+      "topic": "DLC04QuestPungaTurnIn02",
+      "topic_text": "Twenty wild Punga Fruit, just for you.",
+      "emotion": "Neutral 50",
+      "response_text": "Little scrawny, but they'll do. Thank you, sweetie.",
+      "index": "40"
+    },
+    {
+      "topic": "DLC04QuestYeast",
+      "topic_text": "You mentioned yeast?",
+      "emotion": "Neutral 50",
+      "response_text": "Well, we'll need yeast. You can find it about anywhere, but there's a big stash on the boardwalk. Three sacks is enough.",
+      "index": "41"
+    },
+    {
+      "topic": "DLC04QuestzWaiting",
+      "topic_text": "What now?",
+      "emotion": "Neutral 50",
+      "response_text": "We got everything. Now we wait while it brews. Three days should do the trick.",
+      "index": "43"
+    },
+    {
+      "topic": "DLC04Tonic00TopLvl",
+      "topic_text": "Let's talk about this tonic.",
+      "emotion": "Neutral 50",
+      "response_text": "Secret family technique, been so for generations.",
+      "index": "45"
+    },
+    {
+      "topic": "DLC04TonicQuestAccept",
+      "topic_text": "Okay, I'll bite. What do we need?",
+      "emotion": "Neutral 50",
+      "response_text": "This and that. Let me know when you want to work out the details.",
+      "index": "48"
+    },
+    {
+      "topic": "DLC04TonicQuestReject",
+      "topic_text": "Not interested right now. Sorry.",
+      "emotion": "Neutral 50",
+      "response_text": "That's a righteous shame, but the offer stands. You just say the word, hon.",
+      "index": "49"
+    },
+    {
+      "topic": "DLC04TonicQuestSample",
+      "topic_text": "What is this stuff, anyway?",
+      "emotion": "Neutral 50",
+      "response_text": "Tell you what - have a bit. This is left over from an old batch, but should be a swig or two there. More'n enough to loosen you up, I wager!",
+      "index": "50"
+    },
+    {
+      "topic": "DLC04TonicReallyCureQuery",
+      "topic_text": "Does this tonic really cure anything at all?",
+      "emotion": "Neutral 50",
+      "response_text": "Oh, just about whatever ails you, sweetie!  A real cure-all.  Say, I don't reckon you're the dry type, is you?  Oh, nevermind.",
+      "index": "51"
+    },
+    {
+      "topic": "DLC04TonicWhyHelpYou",
+      "topic_text": "Why exactly should I help you, again?",
+      "emotion": "Neutral 50",
+      "response_text": "Well, I don't rightly expect you to help me out of goodness, though I welcome you to prove me wrong, sweetie.",
+      "index": "52"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "",
+      "emotion": "Neutral 50",
+      "response_text": "Good things, sweetie. Tonic's brewed and bottled.  Here's your pay and cut of the batch. Enjoy it!",
+      "index": "54"
+    },
+    {
+      "topic": "SpeechChallengeFailure",
+      "topic_text": "SpeechChallengeFailure",
+      "emotion": "Neutral 50",
+      "response_text": "*cough* No, sweetie, this is the Orange Fever, and unless I get somebody to help me whip up some tonic, I'm as good as dust for the grave.",
+      "index": "62"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "I have to go now.",
+      "emotion": "Neutral 50",
+      "response_text": "Don't be a stranger, now.",
+      "index": "64"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Neutral 50",
+      "response_text": "My, my. Look at you.",
+      "index": "65"
+    }
+  ],
+  "combat": []
+}

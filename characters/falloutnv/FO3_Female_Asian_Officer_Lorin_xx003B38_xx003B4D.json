@@ -1,0 +1,74 @@
+{
+  "name": "Officer Lorin",
+  "url": "/wiki/Lorin",
+  "dialogue_name": "DLC03WQ01Guard2.txt",
+  "dialogue_url": "/wiki/DLC03WQ01Guard2.txt",
+  "spawned_dead": false,
+  "spawned": true,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "xx003B38",
+  "ref_id": "xx003B4D",
+  "editor_id": "DLC03WQ01Guard2",
+  "location": "BetweenRivet CityandCanterbury Commons",
+  "location_url": "/wiki/Rivet_City",
+  "descriptions": [
+    "Officer Lorin is an inexperienced member of the Rivet City security force in 2277.",
+    "There is usually a small contingent of caravan drivers, brahmin, and disgruntled Rivet City policemen buzzing around the bridge gangplank building. Officer Lorin is one of the most vocal in her displeasure at the almost-constant attacks, but her hand has been forced.",
+    "Following the success at Project Purity, Rivet City decided to help the Brotherhood of Steel distribute the clean water across the wasteland by protecting the water caravans. Lorin was sent out as part of these caravan guards.",
+    "Officer Lorin appears only in the Fallout 3 add-on Broken Steel."
+  ],
+  "race": "Human",
+  "gender": "Female",
+  "affiliation": "Rivet City security force",
+  "role": "Officer",
+  "detailed_location": "Rivet City",
+  "voice_actor": "Shari Elliker",
+  "special": {
+    "Strength": 6,
+    "Perception": 6,
+    "Endurance": 5,
+    "Charisma": 3,
+    "Intelligence": 3,
+    "Agility": 7,
+    "Luck": 4
+  },
+  "level": "1→5 (equal to player level)",
+  "tag_skills": [
+    {
+      "Melee Weap.:": "31"
+    },
+    {
+      "Small Guns:": "33(38)"
+    },
+    {
+      "Unarmed:": "29"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "70"
+    },
+    {
+      "Damage Res.:": "28%"
+    }
+  ],
+  "karma": "Good",
+  "voice_type": "FemaleAdult01DefaultDC",
+  "geck_race": "Asian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Surprise 50",
+      "response_text": "They came out of nowhere. I need to get back to report to Lepelletier. She'll want to know what happened. Thanks for the help!{shell shocked. Lepelletier: la-Pell-a-Teer}",
+      "index": "1"
+    }
+  ],
+  "conversation": [],
+  "combat": []
+}

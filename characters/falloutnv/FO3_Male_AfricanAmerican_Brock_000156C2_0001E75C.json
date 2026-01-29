@@ -1,0 +1,152 @@
+{
+  "name": "Brock",
+  "url": "/wiki/Brock_(Fallout_3)",
+  "dialogue_name": "Brock.txt",
+  "dialogue_url": "/wiki/Brock.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": true,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000156C2",
+  "ref_id": "0001E75C",
+  "editor_id": "Brock",
+  "location": "The Muddy Rudder",
+  "location_url": "/wiki/The_Muddy_Rudder",
+  "descriptions": [
+    "Brock is the bouncer at the Muddy Rudder in Rivet City in 2277.",
+    "Brock works for Belle Bonny as a bouncer at the Muddy Rudder in Rivet City. He intervenes at the slightest sign of trouble, and many people have been sent to Doctor Preston's clinic by him as a result.",
+    "During the day, Brock can be found in the Rivet City market, usually in the morning. He will eat at Gary's Galley and wander about the flight deck in the afternoon for a while. After that, he works at the Muddy Rudder and goes to sleep in the side room of the establishment."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Rivet City",
+  "role": "Bouncer",
+  "detailed_location": "The Muddy Rudder",
+  "voice_actor": "Pete Papageorge",
+  "special": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 3,
+    "Intelligence": 3,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "level": "4",
+  "tag_skills": [
+    {
+      "Big Guns:": "41"
+    },
+    {
+      "Melee Weap.:": "45(47)"
+    },
+    {
+      "Small Guns:": "45(47)"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "40"
+    },
+    {
+      "Critical Chance:": "5%"
+    },
+    {
+      "Unarmed Dam.:": "1.15"
+    },
+    {
+      "Poison Resist.:": "15%"
+    },
+    {
+      "Rad. Resist.:": "6%"
+    },
+    {
+      "Carry Weight:": "210"
+    },
+    {
+      "Damage Res.:": "11%"
+    }
+  ],
+  "karma": "Good",
+  "voice_type": "MaleAdult02DC",
+  "geck_race": "AfricanAmerican",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Disgust 50",
+      "response_text": "I'm Brock, the bouncer. I take care of the troublemakers. You aren't going to be a troublemaker, are you?",
+      "index": "1"
+    },
+    {
+      "topic": "MS03RCHistory1Could I ask you about Rivet City's history?",
+      "topic_text": "Do you know about Rivet City's history?",
+      "emotion": "Neutral 50",
+      "response_text": "I can give you a history of every fight in this place, but a history of the city? I got nothing.",
+      "index": "3"
+    },
+    {
+      "topic": "RCBrockNoSir",
+      "topic_text": "No, sir. I'm just here to drink and talk.",
+      "emotion": "Anger 50",
+      "response_text": "Let's keep it that way.",
+      "index": "6"
+    },
+    {
+      "topic": "RCBrockTroublemaker",
+      "topic_text": "That depends. What makes a troublemaker?",
+      "emotion": "Anger 50",
+      "response_text": "Starting fights, breaking stuff, stealing. Hmmm. I think I'll keep a close eye on you.",
+      "index": "8"
+    },
+    {
+      "topic": "RCTopicHangarDeckPeople",
+      "topic_text": "What is this I hear about the Hangar Deck and Upper Deck?",
+      "emotion": "Disgust 50",
+      "response_text": "Yeah, the folks on the Upper Deck think pretty highly of themselves. They think they're better than us.",
+      "index": "9"
+    },
+    {
+      "topic": "RivetCityBarterI'm here to do business with you.",
+      "topic_text": "I'll have a drink.",
+      "emotion": "Happy 50",
+      "response_text": "Commin' up.",
+      "index": "11"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYEI have to go now.",
+      "topic_text": "I've got to go.",
+      "emotion": "Neutral 50",
+      "response_text": "You know where to find me.",
+      "index": "12"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Fear 50",
+      "response_text": "Armitage.{Said like a greeting, instead of hello.}",
+      "index": "14"
+    },
+    {
+      "topic": "RCGoodbye",
+      "topic_text": "RCGoodbye",
+      "emotion": "Neutral 50",
+      "response_text": "Armitage.{Said like a greeting, instead of hello.}",
+      "index": "28"
+    },
+    {
+      "topic": "RCPackageEnd",
+      "topic_text": "RCPackageEnd",
+      "emotion": "Disgust 50",
+      "response_text": "Belle! Time to get up!",
+      "index": "40"
+    }
+  ],
+  "combat": []
+}

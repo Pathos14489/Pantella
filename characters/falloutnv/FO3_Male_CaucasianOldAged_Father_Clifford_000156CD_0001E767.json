@@ -1,0 +1,279 @@
+{
+  "name": "Father Clifford",
+  "url": "/wiki/Clifford_(Fallout_3)",
+  "dialogue_name": "FatherClifford.txt",
+  "dialogue_url": "/wiki/FatherClifford.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000156CD",
+  "ref_id": "0001E767",
+  "editor_id": "FatherClifford",
+  "location": "Saint Monica's Church",
+  "location_url": "/wiki/Saint_Monica%27s_Church",
+  "descriptions": [
+    "Father Clifford (2237–) is the priest of Saint Monica's Church in Rivet City in Fallout 3.",
+    "Born in 2237, Father Clifford is the head of the Catholic",
+    "Father Clifford also concerns himself with the community as a whole. He and Diego occasionally visit the Rivet City clinic to pray for the patients.",
+    "Clifford is especially fond of telling the sermon about a version of Saint Monica. Monica is popular among the faithful of Rivet City, described as a mother who went on a journey to be with her son and saved his soul in the process.",
+    "Reception towards Father Clifford is widely varied, though everyone seems to agree his sermons are boring. His regular audience is very appreciative of his services, which help them find comfort through faith.",
+    "His most significant relationship is with Diego: After Diego's father abandoned him in Rivet City, Father Clifford took the boy in, and the pair have become like father and son, with Diego eventually deciding to follow in his footsteps and become a priest. Clifford is well aware of Angela Staley's attempts to seduce Diego,",
+    "Father Clifford is normally seen in and around Saint Monica's Church but will roam around the inside of Rivet City talking to other residents. On occasion, Father Clifford can be found in the Muddy Rudder, lecturing anyone present about sin. Every Sunday, he holds a mass which many of Rivet City's inhabitants attend.",
+    "Father Clifford wakes up at 6 a.m. every day and eats at the Weatherly Hotel. At 8 a.m., he returns to Saint Monica's Church to deliver his sermon until 10 a.m., and roams around the church for another hour. If the day is Sunday, he spends that hour interacting with his audience. Afterwards, the father's schedule depends on the day of the week. On Mondays, Wednesdays and Fridays, he will wait until 2 p.m., then go visit the Rivet City clinic with Diego until 4 p.m., then return. On Tuesdays and Thursdays, he will visit the common room until 1 p.m., then return. On weekends, he will stay in the church. At 5 p.m., regardless of the day, he will get dinner at the Weatherly Hotel until 7 p.m. Afterwards, his schedule changes again. On Mondays, Wednesdays and Fridays, he will go preach in the Muddy Rudder until 10 p.m. On Tuesdays and Thursdays, he will visit the common room again and return at 9 p.m. On weekends, he returns to the church. On all days, he will go straight to bed at 10 p.m.",
+    "Father Clifford appears in Fallout 3 and is mentioned in Point Lookout, and also appears in Fallout Shelter Online.",
+    "PC Playstation 3 Xbox 360 The Sunday sermon is often glitched: either Father Clifford is not present at all, but non-player characters shush each other because he is speaking, or he will be present, but not speaking. It is advisable to go to church before starting A Nice Day For a Right Wedding, as the Sunday sermon seems to get stuck because of a bug in that quest."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Rivet CityThe Railroad",
+  "role": "Priest",
+  "detailed_location": "Rivet City",
+  "voice_actor": "Paul Eiding",
+  "special": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 4,
+    "Intelligence": 4,
+    "Agility": 6,
+    "Luck": 4
+  },
+  "mod_special_values": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 4,
+    "Intelligence": 4,
+    "Agility": 7,
+    "Luck": 4
+  },
+  "level": "4",
+  "tag_skills": [
+    {
+      "Barter:": "41"
+    },
+    {
+      "Small Guns:": "45(47)"
+    },
+    {
+      "Unarmed:": "41"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Good",
+  "voice_type": "MaleOld01DC",
+  "geck_race": "CaucasianOldAged",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "I am Father Clifford. This is Saint Monica's church.",
+      "index": "1"
+    },
+    {
+      "topic": "MS03RCHistory1",
+      "topic_text": "What do you know about Rivet City's history?",
+      "emotion": "Sad 5",
+      "response_text": "Oh, it's not the past of the city that I dwell upon, but the future of its inhabitants.",
+      "index": "10"
+    },
+    {
+      "topic": "MS08SympathizerClue1",
+      "topic_text": "I'm interested in this android from the Commonwealth.",
+      "emotion": "Neutral 50",
+      "response_text": "I wouldn't betray one of God's children. Besides, we don't do that anymore. It's been too risky of late. We shut the Railroad down.",
+      "index": "17"
+    },
+    {
+      "topic": "MS08SympathizerClue2",
+      "topic_text": "I know you know something about this android from the Commonwealth.",
+      "emotion": "Neutral 50",
+      "response_text": "It's true. They found him a place to hide. It's not easy. The Commonwealth always sends someone looking. Someone ruthless and determined.{hushed and conspiratorial}",
+      "index": "19"
+    },
+    {
+      "topic": "MS08SympathizerClue3",
+      "topic_text": "I know you're part of the Railroad. What do you know about the android?",
+      "emotion": "Anger 75",
+      "response_text": "He's one of God's creatures, just like you and I.",
+      "index": "23"
+    },
+    {
+      "topic": "MS08SympathizerClue4",
+      "topic_text": "I know you know where this android received his operations. Talk.",
+      "emotion": "Surprise 50",
+      "response_text": "To Pinkerton at Rivet City. He doesn't remember his old life, and now he can't be forced to betray us.{hushed and conspiratorial}",
+      "index": "25"
+    },
+    {
+      "topic": "MS14TedFind",
+      "topic_text": "Where can I find Ted Strayer?",
+      "emotion": "Neutral 50",
+      "response_text": "Have you tried the common room?  That's where he sleeps.",
+      "index": "27"
+    },
+    {
+      "topic": "RCChurchDonate10",
+      "topic_text": "I can only spare 10 caps.",
+      "emotion": "Neutral 50",
+      "response_text": "Every cap is needed. God bless you.",
+      "index": "30"
+    },
+    {
+      "topic": "RCChurchDonate100",
+      "topic_text": "I'd like to donate 100 caps.",
+      "emotion": "Happy 50",
+      "response_text": "A most generous offer. God bless you.",
+      "index": "31"
+    },
+    {
+      "topic": "RCChurchDonate50",
+      "topic_text": "I have 50 caps I can donate.",
+      "emotion": "Happy 50",
+      "response_text": "A kind offering. God bless you.",
+      "index": "32"
+    },
+    {
+      "topic": "RCChurchDonateZero",
+      "topic_text": "Caps? Oh. I thought I could give you some items...",
+      "emotion": "Happy 50",
+      "response_text": "A kind thought, but we don't need your cast off belongings.",
+      "index": "33"
+    },
+    {
+      "topic": "RCChurchDonation",
+      "topic_text": "I'd like to make a donation to the church.",
+      "emotion": "Surprise 50",
+      "response_text": "You would? I mean, certainly!",
+      "index": "34"
+    },
+    {
+      "topic": "RCFatherCliffordChurch",
+      "topic_text": "You're a priest?",
+      "emotion": "Happy 50",
+      "response_text": "Yes. My flock is all of Rivet City. You should come to services this Sunday. I'll be telling the tale of Saint Monica.",
+      "index": "36"
+    },
+    {
+      "topic": "RCFatherCliffordDiegoRumor",
+      "topic_text": "It's just a rumor. I'd ask Diego about it first.",
+      "emotion": "Surprise 50",
+      "response_text": "Of course, you're right. It's not like you saw it with your own eyes. I'm sure it's just gossip.",
+      "index": "37"
+    },
+    {
+      "topic": "RCFatherCliffordSawIt",
+      "topic_text": "I saw them myself, on the light deck. Under the stars... <Lie.>",
+      "emotion": "Fear 50",
+      "response_text": "Ah! Diego! What have you done!",
+      "index": "39"
+    },
+    {
+      "topic": "RCTopicDiegoAngela",
+      "topic_text": "I heard that Diego and Angela are sleeping together. <Lie.>",
+      "emotion": "Anger 50",
+      "response_text": "What! If that's true, I'll defrock him. Not only is he fornicating, but he's doing with such an innocent, young girl.",
+      "index": "42"
+    },
+    {
+      "topic": "RCTopicHangarDeckPeople",
+      "topic_text": "What is this I hear about the Hangar Deck and Upper Deck?",
+      "emotion": "Sad 50",
+      "response_text": "It's a sad state of affairs, but the people that live on those two decks don't trust each other.",
+      "index": "49"
+    },
+    {
+      "topic": "RCTopicMisterLopez",
+      "topic_text": "I think Mister Lopez is suicidal.",
+      "emotion": "Sad 50",
+      "response_text": "Yes, I know. I've been counseling him for some time now.",
+      "index": "52"
+    },
+    {
+      "topic": "RCTopicPaulieAddict",
+      "topic_text": "Did you know that Paulie Cantelli is an addict?",
+      "emotion": "Sad 50",
+      "response_text": "He's totally strung out. It's going to kill him one of these days.",
+      "index": "54"
+    },
+    {
+      "topic": "RCTopicSaintMonica",
+      "topic_text": "Who is this Saint Monica?",
+      "emotion": "Happy 50",
+      "response_text": "She is the patron saint of lost children. Very popular among the faithful of Rivet City. I'm surprised you've never heard of her.",
+      "index": "55"
+    },
+    {
+      "topic": "RCTopicWedding",
+      "topic_text": "Angela and Diego's wedding? I'd love to attend.",
+      "emotion": "Happy 50",
+      "response_text": "You'll have to be at the church by 3 o'clock tomorrow. Don't worry. There will be plenty of seating.",
+      "index": "57"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Anger 50",
+      "response_text": "Diego, you have been fornicating with that strumpet, Angela Staley. Don't try to deny it. I have a witness.",
+      "index": "58"
+    },
+    {
+      "topic": "RCGoodbye",
+      "topic_text": "RCGoodbye",
+      "emotion": "Happy 50",
+      "response_text": "I am a man of peace, Brock. I am only here to preach the word of the Lord.",
+      "index": "82"
+    },
+    {
+      "topic": "RCGoodbye02",
+      "topic_text": "RCGoodbye02",
+      "emotion": "Happy 50",
+      "response_text": "God and Saint Monica hear my sermons. That's good enough for me.",
+      "index": "94"
+    },
+    {
+      "topic": "RCPackageEnd",
+      "topic_text": "RCPackageEnd",
+      "emotion": "Happy 50",
+      "response_text": "Doctor Preston, I'll be back in a couple of days to visit with your patients again.",
+      "index": "95"
+    },
+    {
+      "topic": "RCPriest",
+      "topic_text": "RCPriest",
+      "emotion": "Happy 50",
+      "response_text": "We are gathered here today to witness the union of Diego and Angela in holy matrimony.",
+      "index": "99"
+    },
+    {
+      "topic": "RCResponse01",
+      "topic_text": "RCResponse01",
+      "emotion": "Happy 50",
+      "response_text": "Haven't seen you in church, Danvers. How about this week?",
+      "index": "103"
+    },
+    {
+      "topic": "RCSermon",
+      "topic_text": "RCSermon",
+      "emotion": "Neutral 50",
+      "response_text": "Today we hear the story of Saint Monica.",
+      "index": "107"
+    },
+    {
+      "topic": "RCVows",
+      "topic_text": "RCGroom",
+      "emotion": "Happy 50",
+      "response_text": "Diego, will you take Angela for your lawful wedded wife, to have and to hold, from this day forward...",
+      "index": "132"
+    }
+  ],
+  "combat": []
+}

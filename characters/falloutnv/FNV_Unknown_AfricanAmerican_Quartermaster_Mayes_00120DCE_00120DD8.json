@@ -1,0 +1,284 @@
+{
+  "name": "Quartermaster Mayes",
+  "url": "/wiki/Carl_Mayes",
+  "dialogue_name": "VCFHCarlMayes.txt",
+  "dialogue_url": "/wiki/VCFHCarlMayes.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": true,
+  "is_doctor": false,
+  "is_merchant": true,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "00120DCE",
+  "ref_id": "00120DD8",
+  "editor_id": "VCFHCarlMayes",
+  "location": "Camp Forlorn Hope",
+  "location_url": "/wiki/Camp_Forlorn_Hope",
+  "descriptions": [
+    "Quartermaster Carl Mayes is a New California Republic officer stationed at Camp Forlorn Hope in the Mojave Wasteland in 2281. Usually, he can be found in his tent across from the storage shed.",
+    "Carl Mayes is the quartermaster at Camp Forlorn Hope in 2281, in charge of procurement and distribution of supplies. Short on personnel, as well as supplies, Mayes will take any and all help he can get He has been in the New California Republic Army for a long time and remarks that the situation at Camp Forlorn Hope is the worst he has ever seen. Despite this, Mayes is still loyal to the New California Republic and continues to look for ways to do his job, supplying his unit.",
+    "However, because he is unable to leave the camp personally, he needs someone to go out and bring back supplies. He had previously sent people to HELIOS One to see if they had any supplies they could spare, but they have not yet returned. Ever since the Legion took over Nelson, there has been an increased strain on Mayes, as well as the other servicemembers.",
+    "The Courier can play Caravan with Mayes. However, he will only play a maximum of five games."
+  ],
+  "race": "Human",
+  "affiliation": "New California Republic Army",
+  "role": "Quartermaster",
+  "detailed_location": "Camp Forlorn Hope",
+  "voice_actor": "Jesse Burch",
+  "special": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 5,
+    "Intelligence": 5,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "level": "12",
+  "tag_skills": [
+    {
+      "Explosives:": "74"
+    },
+    {
+      "Guns:": "74"
+    },
+    {
+      "Melee Weap.:": "74"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "125"
+    },
+    {
+      "Dam. Threshold:": "0(2)"
+    }
+  ],
+  "karma": "Neutral",
+  "voice_type": "MaleAdult03",
+  "geck_race": "AfricanAmerican",
+  "topics": [
+    {
+      "topic": "CaravanOffer",
+      "topic_text": "Want to play a hand of Caravan?",
+      "emotion": "Neutral 50",
+      "response_text": "Damn straight I would! Let's see what you got.",
+      "index": "1"
+    },
+    {
+      "topic": "CaravanPlayerLoses",
+      "topic_text": "CaravanPlayerLoses",
+      "emotion": "Neutral 50",
+      "response_text": "That was too easy. How about we play again and this time you actually try.",
+      "index": "2"
+    },
+    {
+      "topic": "CaravanPlayerWins",
+      "topic_text": "CaravanPlayerWins",
+      "emotion": "Neutral 50",
+      "response_text": "Dammit. I should have won that match. Let's play again.",
+      "index": "3"
+    },
+    {
+      "topic": "CaravanRematchNo",
+      "topic_text": "I'm all done playing for now.",
+      "emotion": "Neutral 50",
+      "response_text": "I'll be here if you ever want a rematch.",
+      "index": "4"
+    },
+    {
+      "topic": "CaravanRematchYes",
+      "topic_text": "Yeah, let's play again.",
+      "emotion": "Neutral 50",
+      "response_text": "I hope you're ready for this.",
+      "index": "5"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Happy 50",
+      "response_text": "So I heard you helped take over Nelson from the Legion. Glad to see someone making a difference around here instead of just complaining.",
+      "index": "6"
+    },
+    {
+      "topic": "VMS30VCFHCarlMayesTopic000",
+      "topic_text": "Major Polatli sent me to help you out.",
+      "emotion": "Happy 10",
+      "response_text": "So the Major has you running errands for him. Well, we're short on personnel as well as supplies so we'll take all the help we can get.",
+      "index": "22"
+    },
+    {
+      "topic": "VMS30VCFHCarlMayesTopic001",
+      "topic_text": "How're things around the camp?",
+      "emotion": "Sad 25",
+      "response_text": "Not good. If we don't get more supplies, we're going to have to start using dirt for food and sticks and rocks for weapons.",
+      "index": "23"
+    },
+    {
+      "topic": "VMS30VCFHCarlMayesTopic002",
+      "topic_text": "[PRESS DEMO] I'll look for your men and supplies. Send me to HELIOS One.",
+      "emotion": "Neutral 50",
+      "response_text": "Thanks. Watch your back out there. Never know when those Legion bastards might show up.",
+      "index": "27"
+    },
+    {
+      "topic": "VMS30VCFHCarlMayesTopic003",
+      "topic_text": "A little morbid, isn't it?",
+      "emotion": "Anger 10",
+      "response_text": "Maybe, but the situation around here calls for it. You gonna help or not?",
+      "index": "28"
+    },
+    {
+      "topic": "VMS30VCFHCarlMayesTopic004",
+      "topic_text": "I found the supplies you were looking for.",
+      "emotion": "Sad 25",
+      "response_text": "I take it my men were dead. It's a high price to pay, but these supplies will save a few lives here.",
+      "index": "29"
+    },
+    {
+      "topic": "VMS30VCFHCarlMayesTopic005",
+      "topic_text": "Speaking of supplies... I found some nearby, are they yours?",
+      "emotion": "Sad 50",
+      "response_text": "Damn it all... I sent some men out to get these supplies, but they never returned. I guess the Legion got them on their way back.",
+      "index": "31"
+    },
+    {
+      "topic": "VMS30VCFHCarlMayesTopic006",
+      "topic_text": "Tell me about yourself.",
+      "emotion": "Surprise 5",
+      "response_text": "Me? I've been doing this shit for far too long and have been in too many battles to remember.",
+      "index": "34"
+    },
+    {
+      "topic": "VMS30VCFHCarlMayesTopic007",
+      "topic_text": "About that thing you wanted...",
+      "emotion": "Happy 10",
+      "response_text": "Have you changed your mind? Are you willing to help me out with something real simple?",
+      "index": "36"
+    },
+    {
+      "topic": "VMS30VCFHCarlMayesTopic008",
+      "topic_text": "I'm always willing to give a helping hand.",
+      "emotion": "Sad 10",
+      "response_text": "I want you to collect NCR dogtags from our fallen troopers. That way I can keep track of who's gone and how to reallocate our supplies.",
+      "index": "37"
+    },
+    {
+      "topic": "VMS30VCFHCarlMayesTopic010",
+      "topic_text": "Uh, no thanks, maybe later.",
+      "emotion": "Disgust 10",
+      "response_text": "Suit yourself. Let me know if you change your mind.",
+      "index": "38"
+    },
+    {
+      "topic": "VMS30VCFHCarlMayesTopic011",
+      "topic_text": "I found some NCR dogtags.",
+      "emotion": "Happy 25",
+      "response_text": "Hey, you've been a big help. I wanted to give you something for helping me out. It's not much, but here you go.",
+      "index": "39"
+    },
+    {
+      "topic": "VMS30VCFHCarlMayesTopic012",
+      "topic_text": "Seems easy enough.",
+      "emotion": "Happy 25",
+      "response_text": "It's easy. Just bring back any NCR dogtags you find and I'll try to make it worth your while.",
+      "index": "41"
+    },
+    {
+      "topic": "VMS30VCFHCarlMayesTopic013",
+      "topic_text": "I wanted to ask about your missing men.",
+      "emotion": "Anger 5",
+      "response_text": "What do you want to know?",
+      "index": "42"
+    },
+    {
+      "topic": "VMS30VCFHCarlMayesTopic014",
+      "topic_text": "The situation looks pretty bad here.",
+      "emotion": "Anger 25",
+      "response_text": "Bad? I've been doing this a long time and I haven't been in many places that were worse than this.",
+      "index": "43"
+    },
+    {
+      "topic": "VMS30VCFHCarlMayesTopic015",
+      "topic_text": "Quit complaining, it's not that bad here.",
+      "emotion": "Anger 50",
+      "response_text": "Is that a joke? Have you looked around? Massive casualties, constant raids, barely any food or equipment... does that sound alright to you?",
+      "index": "46"
+    },
+    {
+      "topic": "VMS30VCFHCarlMayesTopic016",
+      "topic_text": "How can I help with your supply problems?",
+      "emotion": "Sad 10",
+      "response_text": "The Major let me send out some troops to gather supplies, but unfortunately they never returned. I'm guessing they ran into some trouble on the way.",
+      "index": "49"
+    },
+    {
+      "topic": "VMS30VCFHCarlMayesTopic017",
+      "topic_text": "Any idea on where I should start looking?",
+      "emotion": "Happy 5",
+      "response_text": "I sent them to HELIOS One to see if they had any supplies they could spare. They've got to be somewhere between here and there.",
+      "index": "51"
+    },
+    {
+      "topic": "VMS30VCFHCarlMayesTopic018",
+      "topic_text": "This sounds pretty dangerous.",
+      "emotion": "Happy 5",
+      "response_text": "It's dangerous, but not as bad now that we've taken back Nelson from the Legion.",
+      "index": "53"
+    },
+    {
+      "topic": "VMS30VCFHCarlMayesTopic019",
+      "topic_text": "I'd like to ask about something else.",
+      "emotion": "Anger 10",
+      "response_text": "Make it quick, I don't have time to stand around talking all day long.",
+      "index": "56"
+    },
+    {
+      "topic": "VMS30VCFHCarlMayesTopic020",
+      "topic_text": "Goodbye.",
+      "emotion": "Anger 25",
+      "response_text": "We really need those supplies, so don't take your sweet time finding them.",
+      "index": "57"
+    },
+    {
+      "topic": "VMS30VCFHCarlMayesTopic021",
+      "topic_text": "Do you know anything about Dr. Richards' missing medical supplies?",
+      "emotion": "Sad 10",
+      "response_text": "No, can't say I do. I've got my own problems to worry about.",
+      "index": "58"
+    },
+    {
+      "topic": "VMS30VCFHCarlMayesTopic023",
+      "topic_text": "I'd like to trade.",
+      "emotion": "Anger 5",
+      "response_text": "I don't have any supplies to spare, but I've got caps if you have anything you don't need.",
+      "index": "59"
+    },
+    {
+      "topic": "VMS30VCFHCarlMayesTopic024",
+      "topic_text": "Thanks, I appreciate it.",
+      "emotion": "Happy 25",
+      "response_text": "You're welcome. Enjoy.",
+      "index": "61"
+    },
+    {
+      "topic": "VMS30VCFHCarlMayesTopic025",
+      "topic_text": "Whatever it is, I think you need it more than I do.",
+      "emotion": "Happy 45",
+      "response_text": "I'm not going to argue with you there. Thanks, I appreciate this.",
+      "index": "62"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Uh huh.",
+      "index": "63"
+    }
+  ],
+  "combat": []
+}

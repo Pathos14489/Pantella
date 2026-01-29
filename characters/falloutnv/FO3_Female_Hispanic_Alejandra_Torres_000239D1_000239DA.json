@@ -1,0 +1,155 @@
+{
+  "name": "Alejandra Torres",
+  "url": "/wiki/Alejandra_Torres",
+  "dialogue_name": "AlejandraTorres.txt",
+  "dialogue_url": "/wiki/AlejandraTorres.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": true,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000239D1",
+  "ref_id": "000239DA",
+  "editor_id": "AlejandraTorres",
+  "location": "Temple of the Union,Lincoln Memorial",
+  "location_url": "/wiki/Temple_of_the_Union",
+  "descriptions": [
+    "Alejandra Torres is a freedwoman working with Hannibal Hamlin as a teacher at the Temple of the Union in Fallout 3.",
+    "Alejandra is a quiet woman of great intelligence.",
+    "A free person again at 21, Alejandra joined Hannibal, becoming the group's teacher, historian, and tinkerer.",
+    "Alejandra is fiercely loyal to Hamlin and fully believes in the dream of once more building a world in which all men are created equal and free."
+  ],
+  "race": "Human",
+  "gender": "Female",
+  "affiliation": "Abolitionists[Non-game 2]",
+  "role": "Freedwoman teacher",
+  "detailed_location": "Lincoln MemorialTemple of the Union",
+  "voice_actor": "Jan Johns",
+  "special": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 4,
+    "Intelligence": 4,
+    "Agility": 6,
+    "Luck": 4
+  },
+  "mod_special_values": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 4,
+    "Intelligence": 4,
+    "Agility": 7,
+    "Luck": 4
+  },
+  "level": "5",
+  "tag_skills": [
+    {
+      "Barter:": "45"
+    },
+    {
+      "Small Guns:": "49(51)"
+    },
+    {
+      "Unarmed:": "45(47)"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "45(50)"
+    },
+    {
+      "Critical Chance:": "4%"
+    },
+    {
+      "Unarmed Dam.:": "2.75"
+    },
+    {
+      "Poison Resist.:": "15%(20%)"
+    },
+    {
+      "Rad. Resist.:": "6%(8%)"
+    },
+    {
+      "Carry Weight:": "210"
+    },
+    {
+      "Damage Res.:": "3%"
+    }
+  ],
+  "karma": "Good",
+  "voice_type": "FemaleAdult04DC",
+  "geck_race": "Hispanic",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Fear 50",
+      "response_text": "Can't talk now. We've heard Slavers are attacking.",
+      "index": "1"
+    },
+    {
+      "topic": "MS06HamlinInfoWhat's the story with Hannibal?",
+      "topic_text": "Why do you think I should swear my allegiance to this place?",
+      "emotion": "Happy 50",
+      "response_text": "We keep the dream alive. The dream of a free world where all men are created equal.",
+      "index": "8"
+    },
+    {
+      "topic": "MS06LincolnsHead",
+      "topic_text": "What is that stone head?",
+      "emotion": "Happy 50",
+      "response_text": "He is the Great Emancipator. He freed all the slaves over a hundred years before the bombs dropped.",
+      "index": "13"
+    },
+    {
+      "topic": "MS06SlaveStory",
+      "topic_text": "So, you used to be a slave?",
+      "emotion": "Anger 50",
+      "response_text": "Yes. For four years. I was young and pretty. I don't need to tell you what my duties were.",
+      "index": "15"
+    },
+    {
+      "topic": "MS06TempleUnionWhat are a bunch of escaped slaves doing holed up here?",
+      "topic_text": "Why are all of you hiding in this place?",
+      "emotion": "Fear 50",
+      "response_text": "We're all runaways. Hannibal wants to make this a place for all escaped slaves, but it's too small.",
+      "index": "18"
+    },
+    {
+      "topic": "MS06WhatDoYouDo",
+      "topic_text": "What do you do here?",
+      "emotion": "Happy 50",
+      "response_text": "I'm an historian. I also tinker with pre-war machines.",
+      "index": "19"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "Thanks. Bye.",
+      "emotion": "Neutral 50",
+      "response_text": "Take care of yourself.",
+      "index": "21"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Fear 50",
+      "response_text": "I've got nothing to say until Hannibal says you're okay.",
+      "index": "26"
+    },
+    {
+      "topic": "MS06PackageStart",
+      "topic_text": "MS06PackageStart",
+      "emotion": "Surprise 50",
+      "response_text": "<yawn> I'm going to bed.",
+      "index": "34"
+    }
+  ],
+  "combat": []
+}

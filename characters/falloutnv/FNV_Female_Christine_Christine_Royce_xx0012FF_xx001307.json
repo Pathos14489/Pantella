@@ -1,0 +1,2184 @@
+{
+  "name": "Christine Royce",
+  "url": "/wiki/Christine_Royce",
+  "dialogue_name": "NVDLC01Christine.txt",
+  "dialogue_url": "/wiki/NVDLC01Christine.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": true,
+  "base_id": "xx0012FF",
+  "ref_id": "xx001307",
+  "editor_id": "NVDLC01Christine",
+  "location": "Sierra MadreVilla clinicinside anAuto-Doc",
+  "location_url": "/wiki/Sierra_Madre",
+  "descriptions": [
+    "Knight Christine Royce is an ex-Brotherhood scribe and an operative of the Circle of Steel, and one of the three companions in the Fallout: New Vegas add-on Dead Money. Her holotapes also appear in the add-on Old World Blues.",
+    "She is the estranged partner of Veronica Santangelo, which plays a part in her determination to hunt down Elder Elijah. The pair were in a lesbian relationship despite the implicit homophobia of their culture, and were subsequently separated.",
+    "Born and raised in the Brotherhood and becoming a scribe,",
+    "Following his long trail of crimes across the wasteland,",
+    "Before the damage could become any worse, she was rescued by Ulysses, who forced his way into the facility using explosives.",
+    "Successfully tracking Elijah down to the derelict Sierra Madre Casino & Resort, Christine ended up caught in a trap and was captured by the super mutant, Dog who himself was enslaved to Elijah. Fitted with an explosive collar, the assassin had no choice but to aid the rogue elder in his attempt to break into the casino.  However, it was not the end of her troubles at the Sierra Madre. The ghoul survivalist, Dean Domino, another of Elijah's unwilling servants who coincidentally was also looking for a way to break into the Casino, saw in Christine an opportunity to finally carry out the plan he'd been working on since before the Great War. After luring Christine into the Villa clinic, Dean trapped her inside a malfunctioning Auto-Doc. Using pre-War routines developed for Vera Keyes,",
+    "After the Courier assembled their team of Dog, Dean, and Christine to carry out Elijah's plan to open the Madre, as the most technically capable member of the heist crew, Christine was assigned to the switching station to help trigger the Gala. Upon reaching the controls in the station, however, she realized that to carry out her part, she had to climb down into a narrow, confined space, surrounded by deteriorated machines that would give off horrifying noise very much like the sounds made by an Auto-Doc. Whether or not she entered the space via the Courier's actions and conduct towards her ultimately determined her opinion of them and her ultimate fate in the Sierra Madre.",
+    "When the team split up to each make their way inside the casino during the Gala, they were all rendered unconscious by a gas sprayed into the foyer.",
+    "Upon being asked why she would go to such lengths, Christine reveals a simple reason; after what feels like a lifetime of suffering, she had her target finally within reach. She had lost him countless times, only to barely pick up the trail, witnessing his horrifying crimes that make the Madre atrocities pale in comparison.",
+    "^ (Note)   Christine is the third-shortest adult character in-game; her height is only 92% of the normal size. Other small characters are Sunny Smiles (95%), Sammy Weathers (92.5%), the Gomorrah floor manager (90%) and the shortest, Irate Ida (85% of normal height).",
+    "Christine Royce appears only in the Fallout: New Vegas add-on Dead Money. However, her voice is also heard in the add-on Old World Blues and she is mentioned in the add-on Lonesome Road.",
+    "I cannot speak for Chris Avellone (who wrote and directed Dead Money), but I believe we were limited by time/scheduling.  Veronica was written and recorded for the base New Vegas game with (IIRC) only a few hooks for Dead Money.  I think reactions to Dead Money content itself would have required a more comprehensive level of (way) advanced planning, i.e., we would have needed to know exactly what Veronica was reacting to in Dead Money at the time that we recorded her for New Vegas.",
+    "Either that or we would have needed to book Felicia Day for more studio time during the development of Dead Money.  That can also be difficult and expensive, especially since voice actors and studio time are generally booked in multiple hour blocks.  It’s difficult to justify if the character is only saying two or three new lines.",
+    "It also gets a little messy when trying to decide where to draw the line.  I think a lot of people would love to see some resolution between Christine and Veronica, but what about Caesar responding to the events of Honest Hearts?  I wrote Joshua Graham and directed Honest Hearts, so I can speak more definitively to that.  The limited reactivity Caesar could have about JG/HH wouldn’t really justify the expense of bringing John Doman back into the studio. And of course the new dialogue (minor as it might be) would still need to be tested.  Caesar had one of the most complex dialogues in New Vegas, so it’s something we really tried to avoid messing with once the game shipped.",
+    "PC Playstation 3 Xbox 360 If the player character has Dean Domino or Dog/God as a companion, the camera may center directly through the player character's head (or chest) during the first bit of dialogue with Christine. "
+  ],
+  "race": "Human",
+  "gender": "Female",
+  "affiliation": "Brotherhood of Steel,Circle of SteelCourierUlysses(formerly)",
+  "role": "Assassin and companionWarden of theSierra Madre(potential)",
+  "detailed_location": "Big MT(formerly)Sierra Madre",
+  "voice_actor": "Laura BaileyVeronica Belmont",
+  "special": {
+    "Strength": 5,
+    "Perception": 8,
+    "Endurance": 7,
+    "Charisma": 5,
+    "Intelligence": 8,
+    "Agility": 6,
+    "Luck": 4
+  },
+  "level": "5 → 35 (max 50)",
+  "tag_skills": [],
+  "misc_skills": [],
+  "karma": "Neutral",
+  "voice_type": "NVDLC01FemaleUniqueChristine",
+  "geck_race": "Christine",
+  "topics": [
+    {
+      "topic": "FollowersAcknowledgeMyOrder",
+      "topic_text": "FollowersAcknowledgeMyOrder",
+      "emotion": "Neutral 50",
+      "response_text": "[Christine nods.]",
+      "index": "1"
+    },
+    {
+      "topic": "FollowersFired",
+      "topic_text": "It's time for us to part ways.",
+      "emotion": "Neutral 50",
+      "response_text": "[Christine raises an eyebrow.]",
+      "index": "2"
+    },
+    {
+      "topic": "FollowersFiredNo",
+      "topic_text": "On second thought, stick with me for a little longer.",
+      "emotion": "Neutral 50",
+      "response_text": "[Christine narrows her eyes, then shrugs.]",
+      "index": "3"
+    },
+    {
+      "topic": "FollowersFiredYes",
+      "topic_text": "Yes, I'm sure.",
+      "emotion": "Neutral 50",
+      "response_text": "[Christine nods.]",
+      "index": "4"
+    },
+    {
+      "topic": "FollowersHired",
+      "topic_text": "I think we should travel together.",
+      "emotion": "Neutral 50",
+      "response_text": "[Christine glances at your companion, shakes her head, then raises her index finger.]",
+      "index": "5"
+    },
+    {
+      "topic": "FollowersLetsGo",
+      "topic_text": "Let's get going.",
+      "emotion": "Neutral 50",
+      "response_text": "[Christine nods.]",
+      "index": "7"
+    },
+    {
+      "topic": "FollowersOverburdened",
+      "topic_text": "FollowersOverburdened",
+      "emotion": "Neutral 50",
+      "response_text": "[Christine puts her palm flat and lowers it to the ground, shakes her head.]",
+      "index": "8"
+    },
+    {
+      "topic": "FollowersStealthing",
+      "topic_text": "FollowersStealthing",
+      "emotion": "Neutral 50",
+      "response_text": "[Christine crouches down.]",
+      "index": "9"
+    },
+    {
+      "topic": "FollowersTactics",
+      "topic_text": "Let's talk about your tactics.",
+      "emotion": "Neutral 50",
+      "response_text": "[Christine raises an eyebrow suspiciously.]",
+      "index": "10"
+    },
+    {
+      "topic": "FollowersTacticsCombat",
+      "topic_text": "I want you to change your combat style.",
+      "emotion": "Neutral 50",
+      "response_text": "[Christine looks at you and waits.]",
+      "index": "11"
+    },
+    {
+      "topic": "FollowersTacticsCombatAggressive",
+      "topic_text": "I want you to attack enemies the moment you see them.",
+      "emotion": "Neutral 50",
+      "response_text": "[Christine narrows her eyes, nods.]",
+      "index": "12"
+    },
+    {
+      "topic": "FollowersTacticsCombatEND",
+      "topic_text": "Let's talk about something else.",
+      "emotion": "Anger 20",
+      "response_text": "[Christine frowns, taps the back of her wrist, then circles her finger.]",
+      "index": "13"
+    },
+    {
+      "topic": "FollowersTacticsCombatGOODBYE",
+      "topic_text": "That's all. Let's get going.",
+      "emotion": "Neutral 50",
+      "response_text": "[Christine nods.]",
+      "index": "14"
+    },
+    {
+      "topic": "FollowersTacticsCombatMelee",
+      "topic_text": "Switch to a melee weapon.",
+      "emotion": "Neutral 50",
+      "response_text": "[Christine nods, and her stance changes slightly.]",
+      "index": "15"
+    },
+    {
+      "topic": "FollowersTacticsCombatPassive",
+      "topic_text": "I want you not to attack enemies unless I've already engaged them.",
+      "emotion": "Neutral 50",
+      "response_text": "[Christine raises an eyebrow, then shrugs.]",
+      "index": "16"
+    },
+    {
+      "topic": "FollowersTacticsCombatRanged",
+      "topic_text": "I want you to use ranged weapons.",
+      "emotion": "Neutral 50",
+      "response_text": "[Christine nods, closes one eye and slowly pulls an invisible trigger.]",
+      "index": "17"
+    },
+    {
+      "topic": "FollowersTacticsDistance",
+      "topic_text": "Let's talk about how close you're following me.",
+      "emotion": "Neutral 50",
+      "response_text": "[Christine tilts her head slightly.]",
+      "index": "18"
+    },
+    {
+      "topic": "FollowersTacticsDistanceDefault",
+      "topic_text": "Stay close to me.",
+      "emotion": "Neutral 50",
+      "response_text": "[Christine nods.]",
+      "index": "19"
+    },
+    {
+      "topic": "FollowersTacticsDistanceEND",
+      "topic_text": "Your distance is good. Let's talk about something else.",
+      "emotion": "Neutral 50",
+      "response_text": "[Christine nods.]",
+      "index": "20"
+    },
+    {
+      "topic": "FollowersTacticsDistanceGOODBYE",
+      "topic_text": "All right, you're good. Let's get out of here.",
+      "emotion": "Neutral 50",
+      "response_text": "[Christine nods.]",
+      "index": "21"
+    },
+    {
+      "topic": "FollowersTacticsDistanceLong",
+      "topic_text": "Keep your distance. Try to flank them.",
+      "emotion": "Neutral 50",
+      "response_text": "[Christine nods, makes a half circle with her hand.]",
+      "index": "22"
+    },
+    {
+      "topic": "FollowersTacticsEnd",
+      "topic_text": "Enough about tactics.",
+      "emotion": "Neutral 50",
+      "response_text": "[Christine nods, waits.]",
+      "index": "23"
+    },
+    {
+      "topic": "FollowersTrade",
+      "topic_text": "Let's trade equipment.",
+      "emotion": "Neutral 50",
+      "response_text": "[Christine nods, adjusts her gear.]",
+      "index": "24"
+    },
+    {
+      "topic": "FollowersWait",
+      "topic_text": "Wait here.",
+      "emotion": "Neutral 50",
+      "response_text": "[Christine nods.]",
+      "index": "25"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Anger 10",
+      "response_text": "Be patient, I'm going.{To herself but chiding the player}Maybe{emph}you should know when to let go.{Christine is walking to the Vault Elevator, asks player to be patient. This is a single bark to prevent breaking scripted sequence.}",
+      "index": "26"
+    },
+    {
+      "topic": "GettingChristinedownintoGalaEventposition",
+      "topic_text": "I need you to go down to the manual bypass room to regulate the power.",
+      "emotion": "Fear 20",
+      "response_text": "[Christine glances at the elevator, her expression becomes worried, then she looks back at you, then reluctantly shakes her head.]",
+      "index": "40"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic000",
+      "topic_text": "That's our captor. He likes giving orders.",
+      "emotion": "Neutral 50",
+      "response_text": "[She circles her finger around the Fountain and moves her fingers and thumb together rapidly, as if talking.]",
+      "index": "41"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic001",
+      "topic_text": "I dealt with the others, and I've got the key phrase.",
+      "emotion": "Surprise 10",
+      "response_text": "{Slight surprise}Surprised that Super Mutant didn't eat you...{under her breath}and don't get me started on Dean.",
+      "index": "43"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic003",
+      "topic_text": "This place... I'm not sure, it doesn't feel like a casino. Not entirely.",
+      "emotion": "Neutral 50",
+      "response_text": "I know. The sealed doors, the security... it's almost a fortress. Think that's why we're being ordered to come here and crack it open?",
+      "index": "45"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic005",
+      "topic_text": "All right, come with me.",
+      "emotion": "Neutral 50",
+      "response_text": "{Player has no companion, Christine comes along.}[Christine nods, and steps slightly behind you, waiting.]",
+      "index": "46"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic007",
+      "topic_text": "Your voice... is that the Starlet's voice?",
+      "emotion": "Disgust 10",
+      "response_text": "{Cold}Guess the Sierra Madre healed me.{Dismissive}It doesn't matter, and to be honest, I miss{emph}my voice.",
+      "index": "47"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic010",
+      "topic_text": "Does that Auto-Doc there work?",
+      "emotion": "Neutral 50",
+      "response_text": "{Glances at medical computer}Yeah, still functional. Lot of garbage data on it, its basic procedures should still work fine.",
+      "index": "49"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic011",
+      "topic_text": "Anything you can download off of it?",
+      "emotion": "Neutral 50",
+      "response_text": "{Slightly impressed}Looks like you got almost everything, not much more{emph}I can extract...{slight smile}\"doctor.\"{Not mocking at the end, she's impressed, means \"doctor\" as a casual compliment.}",
+      "index": "50"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic012",
+      "topic_text": "{Act 3}I had some questions I wanted to ask you.",
+      "emotion": "Neutral 50",
+      "response_text": "{Nods}All right.{Beat}Just glad I can{emph}answer you now.",
+      "index": "55"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic013",
+      "topic_text": "Can the Auto-Doc heal your scars?",
+      "emotion": "Neutral 50",
+      "response_text": "{Slight frustration}No... they run a lot deeper than that.",
+      "index": "56"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic014",
+      "topic_text": "You said you got off lucky?",
+      "emotion": "Sad 50",
+      "response_text": "{Unpleasant memories, cont.}Yeah... I saw records of other \"patients,\" and what had been done to them. Some couldn't hear anything but static. Others, just... gibbering wrecks.",
+      "index": "60"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic015",
+      "topic_text": "Elijah didn't put you in the Auto-Doc... Dean did.",
+      "emotion": "Surprise 50",
+      "response_text": "{Emph, incredulous}Dean?{Beat, echoing disbelief}Dean{Emph}Domino?",
+      "index": "64"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic017",
+      "topic_text": "The elevator to the vault is here, too.",
+      "emotion": "Neutral 50",
+      "response_text": "{Recognition, matter-of-fact}The elevator to the casino vault is here. In the starlet's room? That seems intimate.",
+      "index": "66"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic018",
+      "topic_text": "I dealt with the other two in our team, now I need you to open something.",
+      "emotion": "Anger 50",
+      "response_text": "What?{Frowns}Open something...{beat}my voice. That's why it's hers... someone wanted to use me as a key.",
+      "index": "67"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic019",
+      "topic_text": "How long have you been hunting him?",
+      "emotion": "Neutral 50",
+      "response_text": "Too long. Thought I might have had a chance to settle it before this event happened, but then the chance slipped away again.",
+      "index": "69"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic020",
+      "topic_text": "You could have said something sooner.",
+      "emotion": "Neutral 50",
+      "response_text": "{Reluctant}Wasn't sure until now I could trust you. Now I know.{< voice is restored. Christine says she didn't know who she could trust. Thinks player is worth keeping around. >}",
+      "index": "70"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic021",
+      "topic_text": "Sounds personal.",
+      "emotion": "Sad 50",
+      "response_text": "He... cut me off from someone I cared about a long time ago. He used his status to break us apart. So I had to find a new purpose, same banner.",
+      "index": "74"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic022",
+      "topic_text": "He wasn't trying to torture you, he needed to alter your voice to use an audio-lock.",
+      "emotion": "Neutral 50",
+      "response_text": "To the vault... of course.{Nods}That makes sense.",
+      "index": "76"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic023",
+      "topic_text": "You sound like the woman in the Sierra Madre broadcast.",
+      "emotion": "Surprise 50",
+      "response_text": "{Confused}Do I?{Shakes head}It sounds off to my ears... hard to tell. Not to mention it... hurts like hell to swallow.",
+      "index": "79"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic024",
+      "topic_text": "All right, let me see if I can find another way to do this without sending you down there.",
+      "emotion": "Happy 50",
+      "response_text": "[Christine smiles slightly in relief, and nods. She opens her mouth slightly, then closes it, frustrated.]",
+      "index": "81"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic025",
+      "topic_text": "<Lie> We'll take the elevator up, see if there's another way to do this. After you.",
+      "emotion": "Happy 50",
+      "response_text": "[Christine smiles slightly in relief, and moves to the elevator.]",
+      "index": "83"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic026",
+      "topic_text": "Settle it? You're here to kill him.",
+      "emotion": "Neutral 50",
+      "response_text": "{Cold}Those are my orders. I've seen what he's done, and I believe in those orders.",
+      "index": "84"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic027",
+      "topic_text": "I've found a way to do the bypass from here. You should be able to just use the terminal over there.",
+      "emotion": "Happy 50",
+      "response_text": "[Christine nods gratefully. She glances in the direction of the terminal, looks at you, smiles, gives a thumbs up.]",
+      "index": "85"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic028",
+      "topic_text": "I don't have time for this. Get in the damn elevator.",
+      "emotion": "Anger 50",
+      "response_text": "[Christine shakes her head, more insistently this time. She points at the elevator, then downwards, then holds herself tightly and shakes her head.]",
+      "index": "86"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic029",
+      "topic_text": "Are you all right?",
+      "emotion": "Pained 50",
+      "response_text": "[She looks at you, blinks again, then opens her mouth - but nothing comes out.]",
+      "index": "87"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic033",
+      "topic_text": "Look, I'm here to help.",
+      "emotion": "Fear 20",
+      "response_text": "[She looks shaken. As she glances at the Auto-Doc, she recoils, and her mouth opens - but again, nothing comes out.]",
+      "index": "89"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic035",
+      "topic_text": "This isn't what it looks like.",
+      "emotion": "Anger 10",
+      "response_text": "[The woman opens her mouth again, winces, then frowns and drags a finger across her throat in a slow motion. She looks more angry than pained now.]",
+      "index": "91"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic038",
+      "topic_text": "Don't do that!",
+      "emotion": "Surprise 50",
+      "response_text": "[She looks surprised. Then notices your collar, and raises an eyebrow.]",
+      "index": "94"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic041",
+      "topic_text": "Let's just say we're in this together.",
+      "emotion": "Anger 50",
+      "response_text": "[She frowns, narrows her eyes, then slowly shakes her head.]",
+      "index": "95"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic042",
+      "topic_text": "Those facial scars weren't done by the Auto-Doc - the throat scar was.",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] [She nods... slowly, then puts her hand in front her throat, closes it slowly, then points at you.]",
+      "index": "96"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic045",
+      "topic_text": "What do you mean by that?",
+      "emotion": "Anger 50",
+      "response_text": "[She shakes her head again and draws a line in the air between the two of you.]",
+      "index": "98"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic048",
+      "topic_text": "Look, together we can get out of this.",
+      "emotion": "Anger 20",
+      "response_text": "[She shakes her head - once, then crosses her arms.]",
+      "index": "99"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic051",
+      "topic_text": "I had questions I wanted to ask.",
+      "emotion": "Anger 50",
+      "response_text": "[Christine glances straight up, frowns, then turns back to you and taps her wrist.]",
+      "index": "100"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic052",
+      "topic_text": "{After asking 1 Q}I had other questions.",
+      "emotion": "Disgust 50",
+      "response_text": "[She looks exasperated, then waves her hand in a circle in front of her.]",
+      "index": "101"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic053",
+      "topic_text": "Looks like someone set the bone saws to run random.",
+      "emotion": "Disgust 20",
+      "response_text": "[She shakes her head... then pauses, and shakes her head again, then looks exasperated.]",
+      "index": "104"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic054",
+      "topic_text": "I don't understand why they shaved you bald.",
+      "emotion": "Happy 50",
+      "response_text": "[Christine looks blankly at you. Then touches her head, smiles, then shakes her head.]",
+      "index": "105"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic055",
+      "topic_text": "Wait, the Auto-Doc didn't shave you bald?",
+      "emotion": "Neutral 50",
+      "response_text": "[She waves her hand, then shakes her head - she then nods in the direction of the casino.]",
+      "index": "106"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic056",
+      "topic_text": "No, wait, I want to hear this. You were bald before?",
+      "emotion": "Disgust 50",
+      "response_text": "[She nods with an exasperated look, then makes a circle with her hands, repeats it twice more, then raises her hands and waves them like wings.]",
+      "index": "107"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic057",
+      "topic_text": "[BOS] You were a Brotherhood of Steel Scribe?",
+      "emotion": "Surprise 10",
+      "response_text": "[She nods. She looks impressed.]",
+      "index": "109"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic058",
+      "topic_text": "How the hell did you get out here?",
+      "emotion": "Neutral 50",
+      "response_text": "[She shrugs. Then she points to you and shrugs.]",
+      "index": "110"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic060",
+      "topic_text": "Were you researching something?",
+      "emotion": "Neutral 50",
+      "response_text": "[She shakes her head.]",
+      "index": "111"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic061",
+      "topic_text": "The Auto-Doc didn't do that?",
+      "emotion": "Neutral 50",
+      "response_text": "[She touches one of the scars on her cheeks, shakes head. Then touches the scar on her neck, and nods.]",
+      "index": "112"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic062",
+      "topic_text": "So the Auto-Doc cut your voice box, not your scalp.",
+      "emotion": "Neutral 50",
+      "response_text": "[Christine nods.]",
+      "index": "113"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic063",
+      "topic_text": "I can't restore your voice, we'd need a real Auto-Doc to do that.",
+      "emotion": "Fear 50",
+      "response_text": "[She shivers slightly, and shakes her head.]",
+      "index": "114"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic065",
+      "topic_text": "You think he's using the Pip-Boy? To establish the projector connection?",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] [She nods, and raises her hands, palms facing each other, then rotates in a 180 degree arc and back again.]",
+      "index": "115"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic066",
+      "topic_text": "Wait... that's a Brotherhood of Steel symbol, right? You're a Scribe?",
+      "emotion": "Surprise 10",
+      "response_text": "[SUCCEEDED] [She nods, looks impressed.]",
+      "index": "117"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic067",
+      "topic_text": "How did you get to the main gate? Then get here?",
+      "emotion": "Anger 50",
+      "response_text": "{Deliver this angrier, seems like a dupe, isn't}The Gala went off, the Switching Station opened up - thought the screeching in the Auto-Doc was bad, Station worse.",
+      "index": "119"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic068",
+      "topic_text": "Where were you before?",
+      "emotion": "Neutral 50",
+      "response_text": "[She moves her finger in a wider circle, then raises her hand over her eyes.]",
+      "index": "123"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic069",
+      "topic_text": "Maybe it was a trust issue? He built this place for her, it feels like.",
+      "emotion": "Neutral 50",
+      "response_text": "{Skeptical}It's possible. This place is immense... and it still has power, food dispensers, security... was it all for Pre-War guests?{Beat}Or for her?",
+      "index": "124"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic070",
+      "topic_text": "How did you end up in the Auto-Doc?",
+      "emotion": "Anger 50",
+      "response_text": "[She moves her finger in a circle, frowns, then drags her hand down over her eyes. She raises them again, points to you.]",
+      "index": "125"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic071",
+      "topic_text": "I let you out of the Auto-Doc. I can put you back in there just as fast.",
+      "emotion": "Sad 50",
+      "response_text": "[Her eyes widen, and her eyes gauge yours. She then touches her wounds, and her expression crumbles into anger, as if defeated. She slowly nods.]",
+      "index": "126"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic072",
+      "topic_text": "I have no idea, let's unlock it. The phrase is contained in the lyrics to a song.",
+      "emotion": "Neutral 50",
+      "response_text": "{Nods}All right.{Cold, she knows she may be trapping the player down here}If you go down there, are you prepared... what if you don't come back?{Christine is asking, because she knows that Elijah will show up, and when he does, she's going to suicide and kill him.}",
+      "index": "127"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic073",
+      "topic_text": "Glad we understand each other. Let's go.",
+      "emotion": "Anger 50",
+      "response_text": "{Player has no companion. Christine comes along.}[Christine narrows her eyes slightly. She slowly nods, then steps slightly behind you.]",
+      "index": "128"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic074",
+      "topic_text": "I've got you to come down after me, it'll respond to your voice.",
+      "emotion": "Neutral 50",
+      "response_text": "{Evasive}I... just wanted to make sure you're ready. When you go down there, that may be it for us... we won't be needed anymore.",
+      "index": "130"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic075",
+      "topic_text": "Fine. Would hate to have carved you up anymore than you are.",
+      "emotion": "Anger 50",
+      "response_text": "[Christine's defeated expression vanishes into a stone-faced glare.]",
+      "index": "132"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic078",
+      "topic_text": "It's a decayed speaker. If we stay too long near one, it'll go off.",
+      "emotion": "Neutral 50",
+      "response_text": "[She taps the collar and then opens and closes her hand really fast.]",
+      "index": "133"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic079",
+      "topic_text": "I believe he loved her, wanted to protect her. Too much.",
+      "emotion": "Neutral 50",
+      "response_text": "{To herself}Love makes people do strange things.{Beat, quiet}Won't argue that. It can drive you crazy sometimes if you can't... connect.",
+      "index": "137"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic083",
+      "topic_text": "Get going. I'll meet you at the Fountain in the center of the Villa.",
+      "emotion": "Neutral 50",
+      "response_text": "{Christine goes to the fountain.}[Christine gives a brief nod, then turns and begins to walk.]",
+      "index": "140"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic084",
+      "topic_text": "Look, I'm not trying to order you. But your life is tied to mine.",
+      "emotion": "Anger 50",
+      "response_text": "[She frowns, glances at the collar, looks back at you. She makes a circle with her hands, puts her hand over her eyes and squints.]",
+      "index": "141"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic086",
+      "topic_text": "You're looking for something else. Fine, I can help.",
+      "emotion": "Surprise 50",
+      "response_text": "[She studies you again, then her expression softens slightly. She shakes her head slowly, and gives a silent sigh.]",
+      "index": "143"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic089",
+      "topic_text": "He said he knew you.",
+      "emotion": "Neutral 50",
+      "response_text": "He saw me, before the scars, at a place far from here. It's where he found some of the technology he uses now.",
+      "index": "145"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic090",
+      "topic_text": "I found the phrase for elevator's audio lock.",
+      "emotion": "Surprise 50",
+      "response_text": "{Curious}You did?{Impressed}Looks like even the Old World can't keep you out when you've got a mind to get in.",
+      "index": "148"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic091",
+      "topic_text": "He knew Elijah? How?",
+      "emotion": "Neutral 50",
+      "response_text": "No idea. A courier. Wore an Old World flag on his back. He was the one who pulled me out there, told me where Elijah had gone.",
+      "index": "149"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic092",
+      "topic_text": "Sympathized? Why?",
+      "emotion": "Neutral 50",
+      "response_text": "He said he understood what it meant to track someone who had such a... impact on his past life.",
+      "index": "151"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic094",
+      "topic_text": "There's a chance he'll see reason.",
+      "emotion": "Disgust 50",
+      "response_text": "{Disgusted}Try and reason with him, see what happens. He's so lost in his technology, I don't think he even understands why anymore.",
+      "index": "153"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic095",
+      "topic_text": "You'll have to wait just a little longer.",
+      "emotion": "Anger 10",
+      "response_text": "{Slight irritation}Fine.{Warning player}I hear my collar beeping though, I've got the route to the exit all mapped out.",
+      "index": "154"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic096",
+      "topic_text": "Are you going to be okay here?",
+      "emotion": "Neutral 50",
+      "response_text": "[She nods... then gestures at your hand, offers hers.]",
+      "index": "155"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic097",
+      "topic_text": "<Take her hand.>",
+      "emotion": "Happy 50",
+      "response_text": "[She holds it, meeting your eyes intently for a few moments. She gives your hand a gentle squeeze, then releases it and smiles slightly.]",
+      "index": "156"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic098",
+      "topic_text": "Not in a hand-holding mood right now.",
+      "emotion": "Anger 50",
+      "response_text": "[She frowns, then waves you away and focuses on the terminal.]",
+      "index": "157"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic099",
+      "topic_text": "All right, be ready.",
+      "emotion": "Neutral 50",
+      "response_text": "[She narrows her eyes, determined, and gives a last nod.]",
+      "index": "158"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic100",
+      "topic_text": "I don't understand.",
+      "emotion": "Anger 50",
+      "response_text": "[She tries to open her mouth and nothing comes out. Her eyes narrow and her hands ball into fists.]",
+      "index": "159"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic103",
+      "topic_text": "I'll be back for you, okay?",
+      "emotion": "Anger 50",
+      "response_text": "[Christine tilts her head slightly, glances at your collar, then your Pip-Boy. She opens her mouth, frowns, then closes it.]",
+      "index": "161"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic105",
+      "topic_text": "{Terrifying Presence}Get in that elevator or I'll make those scars on your face a pleasant memory.",
+      "emotion": "Fear 50",
+      "response_text": "[Christine takes a step back from your gaze... her eyes widen in alarm, she takes one step, then two toward the elevator.]",
+      "index": "163"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic106",
+      "topic_text": "What's wrong?",
+      "emotion": "Neutral 50",
+      "response_text": "[Christine studies the elevator frame, raises her hands... then sets them down... then raises them up again.]",
+      "index": "164"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic107",
+      "topic_text": "[Perception] It reminds you of being trapped in the Auto-Doc.",
+      "emotion": "Sad 50",
+      "response_text": "[She turns to you, relieved, and nods... then she turns away, and her face crumbles. She makes motions with her fingers, then clenches her fists.]",
+      "index": "166"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic108",
+      "topic_text": "I have no idea what your problem is.",
+      "emotion": "Anger 50",
+      "response_text": "[Her face becomes angry. She points at the elevator, points downward, then wraps her arms around her and shakes her head.]",
+      "index": "167"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic112",
+      "topic_text": "That's what I'm counting on.",
+      "emotion": "Neutral 50",
+      "response_text": "{To herself}\"Begin again, but know when to let go.\"{Shakes head, skeptical}Let's see what happens.{Christine now knows what she needs to say at the Vault Elevator. She will start heading toward it at the end of the sentence, to bark the password i}",
+      "index": "168"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic113",
+      "topic_text": "{Know about mission}He'll come here, to the Suites - when he does, let him go through.",
+      "emotion": "Neutral 50",
+      "response_text": "I... can't let him leave here. Look, you've done so much, and he's not going to show himself until you go down there.",
+      "index": "169"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic114",
+      "topic_text": "That's why you're waiting. You're going to kill him.",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] I...",
+      "index": "170"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic115",
+      "topic_text": "Do you trust me? If you do, let go of this.",
+      "emotion": "Sad 50",
+      "response_text": "I can't let go. Every time I've thought about it...",
+      "index": "172"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic116",
+      "topic_text": "If he kills you, I won't be able to get out.",
+      "emotion": "Neutral 50",
+      "response_text": "I know. And he{pause}will kill me, I can't get the collar off. Even if I could, I need to be sure - see his eyes, his face, when he dies.",
+      "index": "174"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic117",
+      "topic_text": "Let him come through the suites, follow me. If he escapes, you'll still be here, waiting.",
+      "emotion": "Neutral 50",
+      "response_text": "{Quiet}You have to promise me. Promise me you'll deal with him... if I see him, I...",
+      "index": "175"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic118",
+      "topic_text": "If you try and kill him, I can't let you do it. If you die, you'll kill us both.",
+      "emotion": "Neutral 50",
+      "response_text": "{Quiet}I can't. It's my mission, has been.{Beat}This has to be done.",
+      "index": "176"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic119",
+      "topic_text": "Then I need to keep you from doing it.",
+      "emotion": "Sad 50",
+      "response_text": "I... I didn't want this to happen.{Sighs}Ending him is more important than saving you. For what it's worth... I'm sorry.",
+      "index": "177"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic120",
+      "topic_text": "Christine, please, let go of this. Let me deal with him.",
+      "emotion": "Anger 50",
+      "response_text": "{Hopeful, slight}All right. All right, I'll...{frowns}but I'll need to leave this floor. He'll pick up my collar, and...",
+      "index": "178"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic123",
+      "topic_text": "Don't tell me where you're going - I'll find you after this.",
+      "emotion": "Neutral 50",
+      "response_text": "{Nods, sighs}I...{takes a breath}never mind. Let me get the vault open...{To herself, slowly, quiet as if memorizing it}\"Begin again... but know when to let go.\"{Slight rueful laugh, to player}Sounds like you.{Say this a little tenderly, the player just talked her down from suicide, and Christine's found new purpose.}",
+      "index": "179"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic125",
+      "topic_text": "You can dampen the signal somehow?",
+      "emotion": "Neutral 50",
+      "response_text": "[She is about to nod - then stops, points at herself, and shakes head.]",
+      "index": "180"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic126",
+      "topic_text": "You can interfere with the Speaker's detonation frequency somehow?",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] [She is about to nod - then stops, points at herself, and shakes head.]",
+      "index": "182"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic127",
+      "topic_text": "Does that work with any other collar?",
+      "emotion": "Anger 50",
+      "response_text": "[She frowns, slowly shakes her head - she opens her mouth, then makes the motion of tuning a dial, then points at herself.]",
+      "index": "184"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic128",
+      "topic_text": "Got it, let's move on.",
+      "emotion": "Neutral 50",
+      "response_text": "[She nods, and motions for you to go ahead.]",
+      "index": "185"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic129",
+      "topic_text": "It's just your frequency.",
+      "emotion": "Neutral 50",
+      "response_text": "[She nods, once, then again, points at the two of you, then the Pip-Boy.]",
+      "index": "186"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic131",
+      "topic_text": "You can interfere with the detonation signal from the speakers?",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] [She is about to nod - then stops, points at herself, and shakes head.]",
+      "index": "187"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic132",
+      "topic_text": "Great. How romantic.",
+      "emotion": "Surprise 50",
+      "response_text": "[She looks puzzled for a second, then glares at you and motions you to move on.]",
+      "index": "189"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic134",
+      "topic_text": "He leaves audio logs, too.",
+      "emotion": "Neutral 50",
+      "response_text": "[Christine holds out her hand, and motions at your Pip-Boy.]",
+      "index": "190"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic135",
+      "topic_text": "<Show her the Pip-Boy.>",
+      "emotion": "Neutral 50",
+      "response_text": "[Christine studies the Pip-Boy intently, turning your arm around as if your wrist's a sensor module she just found.]",
+      "index": "191"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic137",
+      "topic_text": "What? What do you want?",
+      "emotion": "Anger 50",
+      "response_text": "[She frowns, and snaps her fingers at your Pip-Boy.]",
+      "index": "193"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic138",
+      "topic_text": "I don't want you messing with this.",
+      "emotion": "Anger 50",
+      "response_text": "[Christine snarls, makes a dismissive wave, and goes back to studying the Fountain intently - then looks at the casino, then the Fountain again.]",
+      "index": "194"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic139",
+      "topic_text": "Do you know what those machines around the Villa are?",
+      "emotion": "Neutral 50",
+      "response_text": "[Christine shakes her head, then pauses, and makes a small circle with her thumb and forefinger.]",
+      "index": "195"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic141",
+      "topic_text": "Careful, that's my arm, all right?",
+      "emotion": "Anger 50",
+      "response_text": "[Her finger stabs through the red buttons, narrowing in on the local map. She scrolls to the Sierra Madre's main gate, frowns, backs out.]",
+      "index": "197"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic144",
+      "topic_text": "You sure seem eager to go.",
+      "emotion": "Neutral 50",
+      "response_text": "[She points at the Fountain, then at your Pip-Boy... pauses, then points at her collar, then yours.]",
+      "index": "200"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic145",
+      "topic_text": "Why do you think he wants you to go the Puesta del Sol Switching Station?",
+      "emotion": "Anger 50",
+      "response_text": "[She frowns, then makes a motion as if typing at keys... then she points at you, raises her left wrist and pantomimes talking into it.]",
+      "index": "202"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic146",
+      "topic_text": "Neither Dean or Dog have the technical aptitude to man the Switching Station?",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] [She slowly nods, looks impressed.]",
+      "index": "204"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic147",
+      "topic_text": "I don't know what you're talking about.",
+      "emotion": "Neutral 50",
+      "response_text": "[She sighs silently, then shakes her head and motions to the West.]",
+      "index": "206"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic148",
+      "topic_text": "I don't have any Sierra Madre Chips on me.",
+      "emotion": "Neutral 50",
+      "response_text": "[She nods, then waits.]",
+      "index": "207"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic149",
+      "topic_text": "Think he might be close, then. Any idea where?",
+      "emotion": "Anger 50",
+      "response_text": "[She surveys the area, focusing upwards. She glances at the casino, frowns. She then looks West, then East.]",
+      "index": "208"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic151",
+      "topic_text": "You make a pretty lousy transmitter, you know.",
+      "emotion": "Neutral 50",
+      "response_text": "[She glares at you. After a second, she pauses, and smiles slightly, shaking her head. She then makes a circle of the skyline with her finger.]",
+      "index": "209"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic152",
+      "topic_text": "Here's a Sierra Madre Chip. I'll need that back.",
+      "emotion": "Neutral 50",
+      "response_text": "[She examines the chip for a second, raises it to her eye, then turns it to the side, gauging its diameter and width.]",
+      "index": "210"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic153",
+      "topic_text": "You want... a small circle?",
+      "emotion": "Anger 50",
+      "response_text": "[She frowns, shakes her head.]",
+      "index": "213"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic154",
+      "topic_text": "We really don't have time for magic tricks right now.",
+      "emotion": "Anger 50",
+      "response_text": "[She frowns, shakes her head.]",
+      "index": "214"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic155",
+      "topic_text": "You can... scrounge more somehow.",
+      "emotion": "Happy 50",
+      "response_text": "[SUCCEEDED] [She smiles, nods.]",
+      "index": "215"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic156",
+      "topic_text": "I don't understand.",
+      "emotion": "Anger 50",
+      "response_text": "[She frowns, looks frustrated for a moment, thinking.]",
+      "index": "217"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic158",
+      "topic_text": "You can make more of those at a Workbench. With the right materials.",
+      "emotion": "Happy 50",
+      "response_text": "[SUCCEEDED] [She smiles, nods.]",
+      "index": "222"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic160",
+      "topic_text": "<Storage Line. Do not translate.>",
+      "emotion": "Anger 20",
+      "response_text": "Thought you'd leave me in that elevator?{Slow anger, remembering how the player trapped her}I haven't forgotten what you did in the Switching Station, not for a second.",
+      "index": "226"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic161",
+      "topic_text": "You need a battery... a Fission Battery... and Scrap Metal? And you can counterfeit the chips?",
+      "emotion": "Surprise 20",
+      "response_text": "[She nods, impressed. Then she points at you, then her and makes a circle.]",
+      "index": "236"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic162",
+      "topic_text": "Can you teach me how to do it?",
+      "emotion": "Neutral 50",
+      "response_text": "[She nods. She then makes a series of hand motions to represent weight and amounts - enough so you think you could do it on your own.]",
+      "index": "237"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic165",
+      "topic_text": "What are you planning to do?",
+      "emotion": "Neutral 50",
+      "response_text": "When we first met, I thought I recognized the collar technology. Just needed some time to experiment with it.",
+      "index": "238"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic166",
+      "topic_text": "You've had your voice back for only a little while, and I'm already sick of listening to you.",
+      "emotion": "Anger 50",
+      "response_text": "{Cold, determined}Silence suits me fine. When your master shows, I'll deal with him, too.{< Christine talks smack back and starts the fight. \"Master\" is delivered with disgust.>}",
+      "index": "242"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic168",
+      "topic_text": "You found a way to modify the collar's radio frequency.",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] I did. And it means I can control your movements.",
+      "index": "243"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic169",
+      "topic_text": "You can modify the detonator signal. I don't see how that helps you.",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] Oh, it helps... as long as I need to control your movements.",
+      "index": "245"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic170",
+      "topic_text": "What are you talking about?",
+      "emotion": "Neutral 50",
+      "response_text": "You'll find out.",
+      "index": "247"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic171",
+      "topic_text": "Can't you communicate some other way? Can you write?",
+      "emotion": "Anger 50",
+      "response_text": "[SUCCEEDED] [Christine frowns, then pauses and traces one of the scars on her head with her finger.]",
+      "index": "249"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic173",
+      "topic_text": "There'll be a second or two of lag while you switch it. That's long enough for me to kill you.",
+      "emotion": "Fear 10",
+      "response_text": "{Slightly uneasy, player is right}We'll see. I don't think you're gonna have the time.",
+      "index": "252"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic174",
+      "topic_text": "You know I didn't put you in the Auto-Doc, right?",
+      "emotion": "Neutral 50",
+      "response_text": "You, Elijah... it doesn't matter. Both of you have run out of places to hide.",
+      "index": "253"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic175",
+      "topic_text": "We're inside the casino. We don't need to fight anymore, it's useless.",
+      "emotion": "Sad 10",
+      "response_text": "[SUCCEEDED] No, I believe you. All along, you were watching out for yourself. I understand.{A little softer here, for a second, Christine is going to pass along some wisdom before the player dies.}",
+      "index": "254"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic176",
+      "topic_text": "I didn't put you in that Auto-Doc. Dean did.",
+      "emotion": "Surprise 50",
+      "response_text": "{Disbelieving}Dean?{Emph}He put me in there? No, I don't believe it. He didn't have any reason to torture me. You, on the other hand...",
+      "index": "261"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic177",
+      "topic_text": "He wasn't trying to torture you, he needed to alter your voice to use an audio-lock.",
+      "emotion": "Neutral 50",
+      "response_text": "An audio-lock to where?{Beat, recognizes what happened}To the Sierra Madre vault. It's voice-activated. And he wanted in.",
+      "index": "262"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic178",
+      "topic_text": "Something to do with the surgery.",
+      "emotion": "Neutral 50",
+      "response_text": "[She pauses, then draws a jagged symbol like electricity in the air, then puts on an odd, staring face.]",
+      "index": "265"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic179",
+      "topic_text": "So... brain damage, or...?",
+      "emotion": "Neutral 50",
+      "response_text": "[She shakes her head... then stops, as if thinking.]",
+      "index": "267"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic180Why... would someone remove your ability to write, or...",
+      "topic_text": "That's a specific form of brain surgery using electrodes. Pre-War.",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] [She nods, slowly, and then makes the motion of typing and drawing X's and lines in the air, and then gives a thumbs up.]",
+      "index": "268"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic181",
+      "topic_text": "You can still do math, that's good to hear.",
+      "emotion": "Happy 50",
+      "response_text": "[She nods, smiles.]",
+      "index": "270"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic182",
+      "topic_text": "You can still do numbers and calculations.",
+      "emotion": "Neutral 50",
+      "response_text": "[She nods.]",
+      "index": "271"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic183",
+      "topic_text": "You were knocked out?",
+      "emotion": "Neutral 50",
+      "response_text": "[She nods. She raises an eyebrow, points at you, makes a circle, then points at your feet.]",
+      "index": "272"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic184",
+      "topic_text": "He's broadcasting from the casino.",
+      "emotion": "Anger 50",
+      "response_text": "[Christine looks at you, frowns. Then glances at the casino, her eyes narrowed. She stops breathing for a second, as if holding it in.]",
+      "index": "273"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic185",
+      "topic_text": "You really want to get to him, don't you.",
+      "emotion": "Neutral 50",
+      "response_text": "[She ignores you for a second, still staring at the casino. Then she glances at you, and her face and stance relax slightly.]",
+      "index": "274"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic186",
+      "topic_text": "No, before we go any further, I need to know what the problem is.",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] [She looks like she's about to shake her head, stops, and then puts her hand over her eyes and squints, as if staring in the distance.]",
+      "index": "276"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic187",
+      "topic_text": "Don't ignore me - your whole body language changed there.",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED]{DUPE}[She looks like she's about to shake her head, stops, and then puts her hand over her eyes and squints, as if staring in the distance.]",
+      "index": "278"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic188",
+      "topic_text": "Aren't you upset?",
+      "emotion": "Neutral 50",
+      "response_text": "{Grim, shakes head}I've... done worse. Much worse... and for more hopeless causes, and I will again.",
+      "index": "280"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic189",
+      "topic_text": "You're looking for the man inside the casino.",
+      "emotion": "Neutral 50",
+      "response_text": "[She nods.]",
+      "index": "281"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic191",
+      "topic_text": "Why are you looking for him?",
+      "emotion": "Anger 50",
+      "response_text": "[She wrinkles her face, frowns, and looks angry. She touches her throat, traces the scar with her finger, then points the finger at the casino.]",
+      "index": "282"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic192",
+      "topic_text": "You want to kill him.",
+      "emotion": "Neutral 50",
+      "response_text": "[She gives a nod. Then another nod, even slower.]",
+      "index": "284"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic195",
+      "topic_text": "I'm fine with killing the son of a bitch. As long as we can torture him first.",
+      "emotion": "Anger 10",
+      "response_text": "[She nods grimly. She seems satisfied.]",
+      "index": "285"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic196",
+      "topic_text": "Could always slap a collar on him and let him run into a wall of speakers.",
+      "emotion": "Neutral 50",
+      "response_text": "[Christine's expression relaxes slightly, and she nods.]",
+      "index": "286"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic197",
+      "topic_text": "I'd like to know why he did all this first and what's so important about the casino.",
+      "emotion": "Anger 50",
+      "response_text": "[Christine's expression becomes furious, and she raises her hands, draws jagged lines in the air.]",
+      "index": "287"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic198",
+      "topic_text": "I'm not out to kill anyone, I just want to get out of here.",
+      "emotion": "Neutral 50",
+      "response_text": "[Christine looks at you, then shakes her head, points at your collar, then the front gate and shakes her head.]",
+      "index": "290"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic199",
+      "topic_text": "I don't care. I'd rather reason with someone first than simply kill them.",
+      "emotion": "Neutral 50",
+      "response_text": "[She then slowly shakes her head and draws an \"X\" in the air.]",
+      "index": "291"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic200",
+      "topic_text": "He came this way for a reason, and I want to know why.",
+      "emotion": "Neutral 50",
+      "response_text": "[She then slowly shakes her head and draws an \"X\" in the air.]",
+      "index": "292"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic204",
+      "topic_text": "I didn't bring you here.",
+      "emotion": "Anger 50",
+      "response_text": "[She looks at you for a moment, studying you. She doesn't move. After a second or two, she frowns.]",
+      "index": "293"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic206",
+      "topic_text": "Now... wait, you're acting like you don't trust me or something.",
+      "emotion": "Neutral 50",
+      "response_text": "[She continues to look at you for a moment, studying you, then her eyes fall to your collar, then your Pip-Boy.]",
+      "index": "295"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic207",
+      "topic_text": "What? What about my feet?",
+      "emotion": "Neutral 50",
+      "response_text": "[She repeats the circling motion again. This time, she lowers her hand and circles her finger inward, until she's pointing at the spot between you.]",
+      "index": "297"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic209",
+      "topic_text": "You want to know how I got here?",
+      "emotion": "Happy 50",
+      "response_text": "[SUCCEEDED] [She smiles, nods.]",
+      "index": "299"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic210",
+      "topic_text": "Followed a radio signal here, a woman's voice.",
+      "emotion": "Neutral 50",
+      "response_text": "[She waits. After a second, she raises her eyebrow again.]",
+      "index": "301"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic211",
+      "topic_text": "None of your business.",
+      "emotion": "Neutral 50",
+      "response_text": "[She shrugs, then taps the back of her palm in the direction of the Fountain.]",
+      "index": "302"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic212",
+      "topic_text": "<Raise an eyebrow back.>",
+      "emotion": "Happy 50",
+      "response_text": "[Almost against her will, she smiles. After a moment, the smile fades, and she points at the ground again.]",
+      "index": "304"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic213",
+      "topic_text": "...I was curious where it led.",
+      "emotion": "Neutral 50",
+      "response_text": "[She looks at you for a second, studying you. Then nods.]",
+      "index": "305"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic216",
+      "topic_text": "Looking to start life as a Prospector, figured this place was a good place to start.",
+      "emotion": "Anger 50",
+      "response_text": "[She frowns, puts her hands on her hips and glares at you. After a second, she rolls her eyes.]",
+      "index": "307"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic218",
+      "topic_text": "If I could leave, I would.",
+      "emotion": "Neutral 50",
+      "response_text": "[She looks at you for a moment, glances at your collar, shrugs. She then lightly grabs her neck with both hands, holds it for a moment.]",
+      "index": "309"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic219",
+      "topic_text": "Me? What about you?",
+      "emotion": "Neutral 50",
+      "response_text": "[She slowly shakes her head, then points at the ground.]",
+      "index": "311"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic220",
+      "topic_text": "Are you saying it's one or the other?",
+      "emotion": "Anger 50",
+      "response_text": "[She frowns. Glances in the direction of the casino, then the exit, then back in the direction of the casino.]",
+      "index": "312"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic224",
+      "topic_text": "Do you know how to get out of here?",
+      "emotion": "Neutral 50",
+      "response_text": "[She points in the direction of the main gate. Then points at your collar, shakes her head, and locks her hands around her neck.]",
+      "index": "314"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic225",
+      "topic_text": "So once the collars are gone, we can just leave?",
+      "emotion": "Neutral 50",
+      "response_text": "[She nods slowly, as if thinking. Then she raises an eyebrow, looks skeptical, then shrugs.]",
+      "index": "316"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic226",
+      "topic_text": "You're saying it'll be difficult to return here if we leave.",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] [She shakes her head, points at herself, then points at you, nods.]",
+      "index": "318"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic227",
+      "topic_text": "You were over the moon?",
+      "emotion": "Neutral 50",
+      "response_text": "[She shakes her head and rolls her eyes.]",
+      "index": "320"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic228",
+      "topic_text": "...to return here if I leave.",
+      "emotion": "Neutral 50",
+      "response_text": "[She nods.]",
+      "index": "321"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic229",
+      "topic_text": "But not you.",
+      "emotion": "Neutral 50",
+      "response_text": "[She nods once.]",
+      "index": "322"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic230",
+      "topic_text": "Why can't you find your way back?",
+      "emotion": "Neutral 50",
+      "response_text": "[She slowly shakes her head. She points at the ground, then moves each leg outward, straddling the place where she's pointing.]",
+      "index": "323"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic231",
+      "topic_text": "You aren't going to leave.",
+      "emotion": "Neutral 50",
+      "response_text": "[She nods.]",
+      "index": "324"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic232",
+      "topic_text": "So you're after the treasure then?",
+      "emotion": "Anger 50",
+      "response_text": "[She frowns, shakes her head... pauses... then tilts her head slightly, nods slowly.]",
+      "index": "325"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic234",
+      "topic_text": "Why would you want to stay here of all places?",
+      "emotion": "Anger 50",
+      "response_text": "[She frowns, makes a mock motion of loading a gun, then hefting it to her shoulder and taking aim at something in the distance.]",
+      "index": "326"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic235",
+      "topic_text": "You were... looking for something?",
+      "emotion": "Neutral 50",
+      "response_text": "[Shakes her head and makes a motion of two fingers walking.]",
+      "index": "328"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic236",
+      "topic_text": "You want to kill something here, then protect this place.",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] [She looks impressed, nods.]",
+      "index": "329"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic237",
+      "topic_text": "Why do you want to do that?",
+      "emotion": "Surprise 50",
+      "response_text": "[She looks at you, as if surprised. Then glances at your collar, wrinkles her face, and points at it.]",
+      "index": "331"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic238",
+      "topic_text": "You're worried someone's going to find this place? Use it to hurt people.",
+      "emotion": "Pained 50",
+      "response_text": "[She nods slowly, hands still locked on her throat. She looks pained for a moment, and she breaks from your gaze.]",
+      "index": "334"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic239",
+      "topic_text": "You can't protect the world from the world... it's useless.",
+      "emotion": "Neutral 50",
+      "response_text": "[She points at your collar, then hers, and shakes her head slowly... then cuts the air with her hand and her face becomes blank.]",
+      "index": "338"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic240",
+      "topic_text": "I'm not the one trying to communicate with hand motions.",
+      "emotion": "Disgust 50",
+      "response_text": "[She gives you a snarl, glances at your collar, makes a dismissive wave.]",
+      "index": "339"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic242",
+      "topic_text": "Things would be a lot easier if you did one snap for yes, two snaps for no.",
+      "emotion": "Neutral 50",
+      "response_text": "[She smiles humorlessly. She then nods once slowly. Then she shakes her head slowly.]",
+      "index": "340"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic243",
+      "topic_text": "Okay, okay, I get it. <Nod slowly.> Better than finger snaps.",
+      "emotion": "Happy 50",
+      "response_text": "[SUCCEEDED] [Her face wrinkles more, and then she gives a reluctant smile.]",
+      "index": "342"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic244",
+      "topic_text": "You were looking for someone?",
+      "emotion": "Neutral 50",
+      "response_text": "[She nods and raises a finger.]",
+      "index": "344"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic245",
+      "topic_text": "A smile... now that's more like it.",
+      "emotion": "Happy 50",
+      "response_text": "[Still smiling, she rolls her eyes, and then slowly taps the back of her wrist.]",
+      "index": "345"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic246",
+      "topic_text": "You really need to relax. This entire place is a Pre-War paradise, you know.",
+      "emotion": "Surprise 50",
+      "response_text": "[She looks at you, surprised. Then she opens her mouth as if to laugh... silently.]",
+      "index": "346"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic247",
+      "topic_text": "Look... we'll find a way to heal you, all right?",
+      "emotion": "Anger 50",
+      "response_text": "[She doesn't look at you, continues to stare darkly in front of her.]",
+      "index": "348"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic248",
+      "topic_text": "Wherever you were, it was hot out.",
+      "emotion": "Neutral 50",
+      "response_text": "[She shakes her head and rolls her eyes.]",
+      "index": "350"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic249",
+      "topic_text": "This charades shit is driving me crazy.",
+      "emotion": "Anger 50",
+      "response_text": "[She frowns and raises her middle finger.]",
+      "index": "351"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic250",
+      "topic_text": "A robot?",
+      "emotion": "Neutral 50",
+      "response_text": "[She shakes her head and pumps her fist near her chest.]",
+      "index": "352"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic251",
+      "topic_text": "Man?",
+      "emotion": "Neutral 50",
+      "response_text": "[She nods. She makes a motion with her hands around her chin, drawing it down, and then she raises her hands and clenches them at the sky.]",
+      "index": "353"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic252",
+      "topic_text": "Or a woman?",
+      "emotion": "Anger 50",
+      "response_text": "[She shakes her head... then stops mid-way, frowns... then tilts her head, as if thinking. She seems lost in thought for a moment.]",
+      "index": "354"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic254",
+      "topic_text": "An... angry, bearded... man.",
+      "emotion": "Neutral 50",
+      "response_text": "{SCRIPT: Knows that Elijah is in Pip-Boy}[She points at your Pip-Boy.]",
+      "index": "356"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic255",
+      "topic_text": "You were looking for a man in a Vault.",
+      "emotion": "Neutral 50",
+      "response_text": "[She shakes her head, points at your Pip-Boy again.]",
+      "index": "358"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic256",
+      "topic_text": "You were looking for a Vault Boy?",
+      "emotion": "Neutral 50",
+      "response_text": "[She shakes her head, points at your Pip-Boy again and makes a talking motion with her hand.]",
+      "index": "359"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic258",
+      "topic_text": "Someone smart.",
+      "emotion": "Neutral 50",
+      "response_text": "[She nods, then circles her ear.]",
+      "index": "360"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic259",
+      "topic_text": "...and nuts.",
+      "emotion": "Anger 50",
+      "response_text": "[She nods, frowns.]",
+      "index": "361"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic260",
+      "topic_text": "Sounds like it's pretty important to you to find this person.",
+      "emotion": "Anger 50",
+      "response_text": "[SUCCEEDED] [She frowns, raises two fingers, and has them walk together. Then she looks down on the two fingers, and her face becomes angry.]",
+      "index": "362"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic261",
+      "topic_text": "I don't understand.",
+      "emotion": "Sad 50",
+      "response_text": "[She repeats the chopping motion, slower, then draws the two fingers apart. She looks sadly at one of the fingers.]",
+      "index": "365"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic262",
+      "topic_text": "He cut you off from someone.",
+      "emotion": "Neutral 50",
+      "response_text": "[She nods.]",
+      "index": "366"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic263",
+      "topic_text": "Family? Husband?",
+      "emotion": "Anger 50",
+      "response_text": "[She frowns, shakes her head, and even more so at husband.]",
+      "index": "367"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic264",
+      "topic_text": "Oh - girlfriend.",
+      "emotion": "Neutral 50",
+      "response_text": "[She hesitates, then waves her hand.]",
+      "index": "368"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic265",
+      "topic_text": "Uh... boyfriend?",
+      "emotion": "Neutral 50",
+      "response_text": "[She shakes her head.]",
+      "index": "369"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic266",
+      "topic_text": "What, your wife?",
+      "emotion": "Neutral 50",
+      "response_text": "[She shakes her head, but rolls it side to side.]",
+      "index": "370"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic267",
+      "topic_text": "Oh - girlfriend.",
+      "emotion": "Neutral 50",
+      "response_text": "[She hesitates, then waves her hand.]",
+      "index": "371"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic268",
+      "topic_text": "Oh- girlfriend.",
+      "emotion": "Neutral 50",
+      "response_text": "[She hesitates, then waves her hand.]",
+      "index": "372"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic269",
+      "topic_text": "You were more than girlfriends - lovers.",
+      "emotion": "Surprise 20",
+      "response_text": "[She nods, and looks at you a little surprised.]",
+      "index": "373"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic270",
+      "topic_text": "Unrequited? Or...",
+      "emotion": "Neutral 50",
+      "response_text": "[She shakes her head, draws the two fingers together, then shakes her head more emphatically.]",
+      "index": "374"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic271",
+      "topic_text": "What, you think I don't understand love?",
+      "emotion": "Neutral 50",
+      "response_text": "[She raises an eyebrow, looks at you.]",
+      "index": "375"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic273",
+      "topic_text": "I understand how important a loved one can be.",
+      "emotion": "Neutral 50",
+      "response_text": "[She nods slowly, studying you. She seems to be gauging you again.]",
+      "index": "376"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic275",
+      "topic_text": "How did you get here from the Gala Event? And onto this floor?",
+      "emotion": "Sad 50",
+      "response_text": "{Deliver this slow, thoughtful, seems like a dupe, isn't}The Gala went off, the Switching Station opened up -{to herself, rueful}thought the screeching in the Auto-Doc was bad, Station worse.",
+      "index": "378"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic276",
+      "topic_text": "What weapons are you skilled at?",
+      "emotion": "Neutral 50",
+      "response_text": "[Christine draws a jagged lightning bolt in the air, pantomimes throwing a grenade, and then pulls an imaginary knife from behind her back.]",
+      "index": "382"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic277",
+      "topic_text": "Energy Weapons, Explosives, Melee, Unarmed, and Guns. Is that all?",
+      "emotion": "Neutral 50",
+      "response_text": "[She nods. Once.]",
+      "index": "385"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic278",
+      "topic_text": "You seem like you've been well-trained.",
+      "emotion": "Neutral 50",
+      "response_text": "[She shrugs slightly, then waits.]",
+      "index": "386"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic279",
+      "topic_text": "Oh, is that all? Guess that'll do.",
+      "emotion": "Anger 50",
+      "response_text": "[She makes a disapproving frown, shakes her head.]",
+      "index": "387"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic280",
+      "topic_text": "So after your speech about control, now you're going to use the collars like Elijah did?",
+      "emotion": "Anger 10",
+      "response_text": "{Frowns, slow}You know what... you're right. I don't need to use the same methods to kill you, and I shouldn't... it would make me as bad as Elijah is.",
+      "index": "388"
+    },
+    {
+      "topic": "NVDLC01ChristineSpeaker",
+      "topic_text": "NVDLC01ChristineSpeaker",
+      "emotion": "Anger 50",
+      "response_text": "[Christine stops, glances at the speaker, then glances at your collar, frowning.]",
+      "index": "390"
+    },
+    {
+      "topic": "NVDLC01ChristineVaultHelpTopic01",
+      "topic_text": "NVDLC01ChristineVaultHelpTopic01",
+      "emotion": "Neutral 50",
+      "response_text": "{Breaks into player's frequency while he's being blasted with turrets, urgency}Seeing what I can do to shut those turrets down from up here... come on... come on...{<AUDIO: From player's bomb collar. Christine tells the player that she's trying to bring the Vault's turrets down.>}",
+      "index": "391"
+    },
+    {
+      "topic": "NVDLC01ChristineVaultHelpTopic02",
+      "topic_text": "NVDLC01ChristineVaultHelpTopic02",
+      "emotion": "Anger 50",
+      "response_text": "...got it, two of 'em down... can't shut down the others - he's cut off access.{frustrated}Dammit!{Beat, cold}Put him down, bury him - whatever it takes!{<Christine succeeds in hampering the Vault's security turrets.><Christine lets the player know that two turrets are now disabled. She urges the pla}",
+      "index": "393"
+    },
+    {
+      "topic": "NVDLC01ChristineVaultPasswordBark",
+      "topic_text": "NVDLC01SuitesChristineVaultPasswordBark",
+      "emotion": "Fear 10",
+      "response_text": "{Hesitates, big moment}\"Begin again -{slightly quieter}but know when to let go.\"{Christine hesitates for a moment, preparing herself to speak the password to open the Vault Elevator. A pregnant pause, then she delivers.}",
+      "index": "394"
+    },
+    {
+      "topic": "NVDLC01DeanToChristineTopic01",
+      "topic_text": "NVDLC01DeanToChristineTopic01",
+      "emotion": "Anger 50",
+      "response_text": "[Christine studies Dean, frowns.]",
+      "index": "395"
+    },
+    {
+      "topic": "NVDLC01DeanToChristineTopic02",
+      "topic_text": "NVDLC01DeanToChristineTopic02",
+      "emotion": "Anger 50",
+      "response_text": "[Christine frowns, tilts her head slightly.]",
+      "index": "397"
+    },
+    {
+      "topic": "NVDLC01DeanToChristineTopic03",
+      "topic_text": "NVDLC01DeanToChristineTopic03",
+      "emotion": "Anger 20",
+      "response_text": "[Christine's eyes narrow.]",
+      "index": "398"
+    },
+    {
+      "topic": "NVDLC01ETChristineSpeakerBark",
+      "topic_text": "NVDLC01ETChristineSpeakerBark",
+      "emotion": "Neutral 50",
+      "response_text": "[Christine taps her collar, makes a sweeping gesture at the area, then begins to pulse her fingers outward, faster and faster.]{She's indicating speakers may be nearby.}",
+      "index": "400"
+    },
+    {
+      "topic": "NVDLC01ETChristineVendBark",
+      "topic_text": "NVDLC01ETChristineVendBark",
+      "emotion": "Neutral 50",
+      "response_text": "[Christine nods at the Vending Machine, then makes a sweeping gesture with both arms and draws them to her chest.]{<After entering a room with a vending machine, Christine indicates to the player that it may be a good time to stock up on supplies>}",
+      "index": "401"
+    },
+    {
+      "topic": "NVDLC01EndingChristine",
+      "topic_text": "NVDLC01EndingChristine",
+      "emotion": "Sad 10",
+      "response_text": "{Christine Dead: Narration}Christine, scarred by her hunt for Elijah and unable to let him go, perished in the Sierra Madre Casino.{This plays if Christine died. Even though narrating, keep this on the somber side.}",
+      "index": "402"
+    },
+    {
+      "topic": "NVDLC01GalaEventActivate",
+      "topic_text": "NVDLC01GalaEventActivate",
+      "emotion": "Neutral 50",
+      "response_text": "[You hear banging from the speaker, as if someone is hammering on a wall with their fists.]",
+      "index": "411"
+    },
+    {
+      "topic": "NVDLC01GalaEventQuestNVDLC01ChristineTopic000",
+      "topic_text": "Now, now... I'll let you out when the event's over. Maybe.",
+      "emotion": "Neutral 50",
+      "response_text": "[The hammering stops for a second... and there's one final bang from the speaker, as if someone is smashing their fist into a wall.]",
+      "index": "413"
+    },
+    {
+      "topic": "NVDLC01GalaEventQuestNVDLC01ChristineTopic003",
+      "topic_text": "Christine? We're almost ready here.",
+      "emotion": "Neutral 50",
+      "response_text": "[A single tap comes from the speaker, then silence.]",
+      "index": "414"
+    },
+    {
+      "topic": "NVDLC01GodToChristineTopic01",
+      "topic_text": "NVDLC01GodToChristineTopic01",
+      "emotion": "Neutral 50",
+      "response_text": "[Christine narrows her eyes, gets into a combat stance.]",
+      "index": "415"
+    },
+    {
+      "topic": "NVDLC01GodToChristineTopic02",
+      "topic_text": "NVDLC01GodToChristineTopic02",
+      "emotion": "Neutral 50",
+      "response_text": "[Christine frowns.]",
+      "index": "416"
+    },
+    {
+      "topic": "NVDLC01WTChristineGalaBark",
+      "topic_text": "NVDLC01WTChristineGalaBark",
+      "emotion": "Neutral 50",
+      "response_text": "[Christine flicks her finger back and forth quickly like a switch, then nods to the north.]{<Indicates to the player that the Switching Station is to the north>}",
+      "index": "417"
+    },
+    {
+      "topic": "NVDLC01WTChristineRoofBark",
+      "topic_text": "NVDLC01WTChristineRoofBark",
+      "emotion": "Neutral 50",
+      "response_text": "[Christine frowns, looks upward, then back at you. She nods her head upwards, then makes the motion of holding a gun at the ready.]{<Indicates that it might be safer to find higher ground>}",
+      "index": "418"
+    },
+    {
+      "topic": "NVDLC01WTChristineSmallSpaceBark",
+      "topic_text": "NVDLC01WTChristineSmallSpaceBark",
+      "emotion": "Fear 20",
+      "response_text": "[Christine's eyes dart around at the walls and the ceiling. She glances at the exit, then takes a slow breath. Sweat appears on her brow.]{<When entering a small underground room Christine indicates that she doesn't like small spaces and would prefer to be above ground>}",
+      "index": "419"
+    },
+    {
+      "topic": "NVDLC01WTChristineTerrifiedSoundBark",
+      "topic_text": "NVDLC01WTChristineTerrifiedSoundBark",
+      "emotion": "Neutral 50",
+      "response_text": "[Christine's eyes dart in the direction of the screeching sound. She looks frightened and trembles slightly, as if fighting an urge to run.]",
+      "index": "420"
+    },
+    {
+      "topic": "PLAYERINIRONSITES",
+      "topic_text": "PLAYER IN IRON SITES",
+      "emotion": "Neutral 50",
+      "response_text": "[Christine frowns, points at your collar, then hers.]",
+      "index": "421"
+    },
+    {
+      "topic": "PLAYERLAYMINE",
+      "topic_text": "PLAYER LAY MINE",
+      "emotion": "Neutral 50",
+      "response_text": "[Christine points at mine, then taps her temple.]",
+      "index": "422"
+    },
+    {
+      "topic": "PLAYERTHROWGRENADE",
+      "topic_text": "PLAYER THROW GRENADE",
+      "emotion": "Neutral 50",
+      "response_text": "[Christine covers her ears.]",
+      "index": "423"
+    },
+    {
+      "topic": "PlayerinsultsChristine",
+      "topic_text": "Just die, tired of listening to you anyway.",
+      "emotion": "Anger 50",
+      "response_text": "{Cold, determined}Silence suits me fine. When your master shows, I'll deal with him, too.{< Christine talks smack back and starts the fight. \"Master\" is delivered with disgust.>}",
+      "index": "424"
+    },
+    {
+      "topic": "Playersaysgoahead",
+      "topic_text": "What do you want to say?",
+      "emotion": "Neutral 50",
+      "response_text": "{Takes a breath}I've been hunting the one who hijacked your Pip-Boy, Elijah, for... some time.{< voice is restored. Christine tells the player about her mission to kill Elijah. >}",
+      "index": "425"
+    },
+    {
+      "topic": "PlayersaystheywerehappytodoitandChristineshouldtakeoffTheyllhandletherest",
+      "topic_text": "Just glad you're safe. Hold up here, I'll take care of Elijah.",
+      "emotion": "Neutral 50",
+      "response_text": "{Studies player, thinks the player is worth it}Good luck. He's... not an easy opponent. If I can, I'll help.{Beat, thinking}Might be able to figure something out using the Sierra Madre's computer systems.{< voice is restored. Christine wishes the player good luck and walks over to the intercom to disable security. >}",
+      "index": "428"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "[Christine nods.]",
+      "index": "429"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueClinicBark",
+      "topic_text": "NVDLC01ChristineDialogueClinicBark",
+      "emotion": "Anger 10",
+      "response_text": "[Christine stares at the headless corpses for a second. Then she makes a slow, angry scowl.]",
+      "index": "430"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueCloudBark",
+      "topic_text": "NVDLC01ChristineCloudBark",
+      "emotion": "Neutral 50",
+      "response_text": "[Christine sniffs the air, then touches her neck and frowns. She gestures at the air and taps her wrist.]",
+      "index": "431"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueCloudTerminal",
+      "topic_text": "NVDLC01ChristineDialogueCloudTerminal",
+      "emotion": "Neutral 50",
+      "response_text": "[Christine looks around, then nods toward a terminal on the far side of the room.]",
+      "index": "432"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueGala02FirstDoor",
+      "topic_text": "NVDLC01ChristineDialogueGala02FirstDoor",
+      "emotion": "Neutral 50",
+      "response_text": "[Christine points to an electrical box on the wall, and twists her hand.]",
+      "index": "433"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueGala02JumpBark",
+      "topic_text": "NVDLC01ChristineDialogueGala02JumpBark",
+      "emotion": "Neutral 50",
+      "response_text": "[Christine shakes her head as you approach the edge of the catwalk. She turns away from the catwalk and begins looking around.]",
+      "index": "434"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueGala02ToxicCloud",
+      "topic_text": "NVDLC01ChristineDialogueGala02ToxicCloud",
+      "emotion": "Neutral 50",
+      "response_text": "[Christine nods at the toxic cloud below, then makes a walking motion with her fingers and slowly shakes her head.]",
+      "index": "435"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueGenericIdleAct3",
+      "topic_text": "NVDLC01ChristineGenericIdle",
+      "emotion": "Pained 10",
+      "response_text": "{Coughs, getting her voice back}The quick... the quick scribe... jumped over the lazy paladin.{Script Notes: Christine has just gotten her voice back. It's a little sore, new, and she's testing it out. These lines would also be duped for the ra}",
+      "index": "436"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueGhostBark",
+      "topic_text": "NVDLC01ChristineGhostBark",
+      "emotion": "Anger 20",
+      "response_text": "[Christine's eyes narrow. She raises an index finger, as if listening, then points ahead grimly and pulls back an imaginary trigger.]",
+      "index": "452"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueGhostDeadBark",
+      "topic_text": "NVDLC01ChristineDialogueGhostDeadBark",
+      "emotion": "Neutral 50",
+      "response_text": "[Christine nods at you, then the Ghost Person on the ground, makes a neck-chopping motion.]",
+      "index": "453"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01ChristineTopic088",
+      "topic_text": "NVDLC01ChristineSuiteIntro2",
+      "emotion": "Neutral 50",
+      "response_text": "{Thinking, determined}Should be able to rewire them, failing that, shoot them,{beat, backpedals, slight frustration}although that'll alert the others, they're on a linked patrol pattern.",
+      "index": "454"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueNVDLC01SuitesIntercomTopic001",
+      "topic_text": "NVDLC01ChristineSuiteIntroBad2",
+      "emotion": "Anger 50",
+      "response_text": "Leaving me in that goddamn elevator in the dark? You'll beg me to do the same to you while the Holograms are tracing lasers across your face.",
+      "index": "455"
+    },
+    {
+      "topic": "NVDLC01ChristineDialoguePoliceBark",
+      "topic_text": "NVDLC01ChristineDialoguePoliceBark",
+      "emotion": "Neutral 50",
+      "response_text": "[Christine studies the area, then the Police Station. She pretends to unload a weapon and holds up the imaginary cartridge, waving it.]",
+      "index": "456"
+    },
+    {
+      "topic": "NVDLC01ChristineDialogueVendingBark",
+      "topic_text": "NVDLC01ChristineVendingBark",
+      "emotion": "Anger 50",
+      "response_text": "[Christine looks at the machine and frowns. She points at the narrow slot on the side and raises an eyebrow.]",
+      "index": "457"
+    },
+    {
+      "topic": "NVDLC01ChristineGalaPositionBarks",
+      "topic_text": "NVDLC01ChristineGalaPositionBarks",
+      "emotion": "Fear 10",
+      "response_text": "[Christine motions to you, points at the door uneasily, then makes a pulling motion with her hand. She seems hesitant to go near it.]{<She is signaling this is where the event takes place.>}",
+      "index": "458"
+    },
+    {
+      "topic": "NVDLC01ChristineSuiteIntro",
+      "topic_text": "NVDLC01ChristineSuiteIntro",
+      "emotion": "Neutral 50",
+      "response_text": "{More military professional}All doors are locked down, security's activated - and emitter signals are lighting up all over this floor.{Beat, comes to a decision}I'll do what I can from here.{<Christine's is determined, building strength - she's going all military precision here, even with wounded voice.>}",
+      "index": "459"
+    },
+    {
+      "topic": "NVDLC01ChristineSuitesBarks",
+      "topic_text": "NVDLC01ChristineSuitesBarks",
+      "emotion": "Pained 50",
+      "response_text": "{Pained}If it's who I think it is, this is Christine... recovered.{Starts getting voice back, surveying room, professional}In what looks like an Old World hotel room, high class, two rooms -{beat}exit's sealed.{<Christine's voice is a little ragged in this sequence, it just healed up.>}",
+      "index": "460"
+    },
+    {
+      "topic": "NVDLC01ChristineSuitesCollarOff",
+      "topic_text": "NVDLC01ChristineSuitesCollarOff",
+      "emotion": "Anger 20",
+      "response_text": "{First bark}Need to reset this damn thing... switching the frequencies... come on, come on...",
+      "index": "462"
+    },
+    {
+      "topic": "NVDLC01ChristineSuitesCollarOn",
+      "topic_text": "NVDLC01ChristineSuitesCollarOn",
+      "emotion": "Happy 20",
+      "response_text": "{Smug, player walked into a trap}That's it... signal frequency's hot, let's see how you deal with this.",
+      "index": "464"
+    },
+    {
+      "topic": "NVDLC01SuitesCollarScanning",
+      "topic_text": "NVDLC01SuitesCollarScanning",
+      "emotion": "Anger 50",
+      "response_text": "{Under her breath, pissed}Think you can run? The longer you try and keep your distance, this scanning frequency will flush you out.",
+      "index": "467"
+    }
+  ],
+  "combat": [
+    {
+      "topic": "AcceptYield",
+      "topic_text": "AcceptYield",
+      "emotion": "Anger 50",
+      "response_text": "[Christine checks herself, stops attacking, looks angry, points at collar.]",
+      "index": "468"
+    },
+    {
+      "topic": "ArmorIneffective",
+      "topic_text": "ArmorIneffective",
+      "emotion": "Anger 30",
+      "response_text": "[Christine quickly taps what she's wearing, makes a hatchet motion.]",
+      "index": "469"
+    },
+    {
+      "topic": "Assault",
+      "topic_text": "Assault",
+      "emotion": "Neutral 50",
+      "response_text": "[Christine points at your collar, then hers.]",
+      "index": "470"
+    },
+    {
+      "topic": "Attack",
+      "topic_text": "Attack",
+      "emotion": "Anger 20",
+      "response_text": "[Christine narrows her eyes, and her stance changes.]",
+      "index": "471"
+    },
+    {
+      "topic": "AvoidThreat",
+      "topic_text": "AvoidThreat",
+      "emotion": "Surprise 30",
+      "response_text": "[Christine makes frantic motions with her hands.]",
+      "index": "472"
+    },
+    {
+      "topic": "Crippled",
+      "topic_text": "Crippled",
+      "emotion": "Pained 30",
+      "response_text": "[Christine taps herself, then waves her hand - she looks in pain.]",
+      "index": "473"
+    },
+    {
+      "topic": "Death",
+      "topic_text": "Death",
+      "emotion": "Pained 20",
+      "response_text": "[Christine clutches her collar as she falls, clawing at it.]",
+      "index": "474"
+    },
+    {
+      "topic": "FireExplosive",
+      "topic_text": "FireExplosive",
+      "emotion": "Neutral 50",
+      "response_text": "[Christine waves for you to get back, makes throwing motion.]",
+      "index": "475"
+    },
+    {
+      "topic": "Flee",
+      "topic_text": "Flee",
+      "emotion": "Pained 20",
+      "response_text": "[Christine shakes her head, waves at you to follow.]",
+      "index": "476"
+    },
+    {
+      "topic": "Frenzy",
+      "topic_text": "Frenzy",
+      "emotion": "Anger 20",
+      "response_text": "[Christine's face peels back in a snarl.]",
+      "index": "477"
+    },
+    {
+      "topic": "HealthHalf",
+      "topic_text": "HealthHalf",
+      "emotion": "Neutral 50",
+      "response_text": "[Christine winces, then tries to hide it.]",
+      "index": "478"
+    },
+    {
+      "topic": "HealthQuarter",
+      "topic_text": "HealthQuarter",
+      "emotion": "Pained 20",
+      "response_text": "[Christine winces, clutches her side.]",
+      "index": "479"
+    },
+    {
+      "topic": "Hit",
+      "topic_text": "Hit",
+      "emotion": "Neutral 50",
+      "response_text": "[Christine takes the blow, doesn't flinch.]",
+      "index": "480"
+    },
+    {
+      "topic": "KOed",
+      "topic_text": "KOed",
+      "emotion": "Neutral 50",
+      "response_text": "[Christine's eyes blank, and she falls.]",
+      "index": "481"
+    },
+    {
+      "topic": "KnockedBack",
+      "topic_text": "KnockedBack",
+      "emotion": "Neutral 50",
+      "response_text": "{TEMP: No line needed.}",
+      "index": "482"
+    },
+    {
+      "topic": "NoAmmo",
+      "topic_text": "NoAmmo",
+      "emotion": "Disgust 20",
+      "response_text": "[Christine taps her gun in frustration.]",
+      "index": "483"
+    },
+    {
+      "topic": "OnFire",
+      "topic_text": "OnFire",
+      "emotion": "Neutral 50",
+      "response_text": "[Christine begins to beat at the flames on her body.]",
+      "index": "484"
+    },
+    {
+      "topic": "Poisoned",
+      "topic_text": "Poison",
+      "emotion": "Pained 10",
+      "response_text": "[Christine looks at you, touches her throat, frowns.]",
+      "index": "485"
+    },
+    {
+      "topic": "PowerAttack",
+      "topic_text": "PowerAttack",
+      "emotion": "Neutral 50",
+      "response_text": "{TEMP: Not sure needed. Power attack.}",
+      "index": "486"
+    },
+    {
+      "topic": "Regenerating",
+      "topic_text": "Regenerating",
+      "emotion": "Neutral 50",
+      "response_text": "[Christine blinks, takes a breath, then nods.]",
+      "index": "487"
+    },
+    {
+      "topic": "Steal",
+      "topic_text": "Steal",
+      "emotion": "Disgust 30",
+      "response_text": "[Christine narrows her eyes, then shakes her head and waves you off.]",
+      "index": "488"
+    },
+    {
+      "topic": "UsedDoctorBag",
+      "topic_text": "UsedDoctorBag",
+      "emotion": "Neutral 50",
+      "response_text": "[Christine checks herself, gives the thumbs up.]",
+      "index": "489"
+    },
+    {
+      "topic": "Wake",
+      "topic_text": "Wake",
+      "emotion": "Neutral 50",
+      "response_text": "[Christine shakes her head, gets quickly back on her feet.]",
+      "index": "490"
+    },
+    {
+      "topic": "WeaponIneffective",
+      "topic_text": "WeaponIneffective",
+      "emotion": "Anger 30",
+      "response_text": "[Christine taps her weapon angrily, assumes defensive stance.]",
+      "index": "492"
+    }
+  ]
+}

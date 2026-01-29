@@ -1,0 +1,230 @@
+{
+  "name": "Doc Cutter",
+  "url": "/wiki/Cutter",
+  "dialogue_name": "Cutter.txt",
+  "dialogue_url": "/wiki/Cutter.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": true,
+  "is_merchant": true,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000156A3",
+  "ref_id": "0002524D",
+  "editor_id": "Cutter",
+  "location": "Cutter's clinic",
+  "location_url": "/wiki/Cutter%27s_clinic",
+  "descriptions": [
+    "Cutter is a doctor who runs the clinic at Paradise Falls in 2277.",
+    "Cutter was born into slavery in the pens at Paradise Falls. As a youth, she learned about wasteland medicine from her mother. After her mother died, Cutter took over the responsibility of taking care of the slaves. However, she became increasingly annoyed with their inability to fight back against their slavers. After almost a decade of being paid for her services, Cutter earned the caps needed to buy her freedom. However, she stayed at Paradise Falls and continues to practice medicine there as a free woman, because the slavers needed a talented medic.",
+    "Cutter also stays in Paradise Falls because she enjoys draining wealthy slavers of their caps, a form of retribution for her life as a slave.",
+    "However, the slavers are not ignorant of Cutter's feelings towards them. Eulogy Jones collects a portion of Cutter's profits, and says that the slavers keep her around because of that cut, on top of keeping them alive.",
+    "The Replicated Man"
+  ],
+  "race": "Human",
+  "gender": "Female",
+  "affiliation": "Slavers",
+  "role": "DoctorSlave (formerly)",
+  "detailed_location": "Cutter's clinic,Paradise Falls",
+  "voice_actor": "Shari Elliker",
+  "special": {
+    "Strength": 4,
+    "Perception": 6,
+    "Endurance": 4,
+    "Charisma": 6,
+    "Intelligence": 7,
+    "Agility": 5,
+    "Luck": 4
+  },
+  "level": "1",
+  "tag_skills": [
+    {
+      "Barter:": "31"
+    },
+    {
+      "Medicine:": "33(38)"
+    },
+    {
+      "Science:": "33"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Very Evil",
+  "voice_type": "FemaleAdult01DefaultDC",
+  "geck_race": "CaucasianOld",
+  "topics": [
+    {
+      "topic": "DoctorMedical",
+      "topic_text": "I'm hurt. I need help, Doc.",
+      "emotion": "Neutral 50",
+      "response_text": "Unless you've got hurt feelings, there's not a damn thing wrong with you. Come back when you've got some injuries that I can earn some money from.",
+      "index": "1"
+    },
+    {
+      "topic": "DoctorMedical33YES",
+      "topic_text": "All right, here's your money.",
+      "emotion": "Neutral 50",
+      "response_text": "Alright, hold still.",
+      "index": "9"
+    },
+    {
+      "topic": "DoctorMedical66YES",
+      "topic_text": "All right, here's your money.",
+      "emotion": "Neutral 50",
+      "response_text": "Alright, hold still.",
+      "index": "12"
+    },
+    {
+      "topic": "DoctorMedical99YES",
+      "topic_text": "All right, here's your money.",
+      "emotion": "Neutral 50",
+      "response_text": "Alright, hold still.",
+      "index": "15"
+    },
+    {
+      "topic": "DoctorMedicalContNO",
+      "topic_text": "That's all I need.",
+      "emotion": "Neutral 50",
+      "response_text": "Alright. Come back anytime you have the caps to pay.",
+      "index": "18"
+    },
+    {
+      "topic": "DoctorMedicalContYES",
+      "topic_text": "There was something else I needed...",
+      "emotion": "Neutral 50",
+      "response_text": "Make it quick.",
+      "index": "19"
+    },
+    {
+      "topic": "DoctorMedicalNO",
+      "topic_text": "On second thought, I'll be fine.",
+      "emotion": "Neutral 50",
+      "response_text": "Then why are you bothering me?",
+      "index": "20"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "Now next time, try to be where the bullets aren't.",
+      "index": "21"
+    },
+    {
+      "topic": "MS08MedicalClue1",
+      "topic_text": "Do you know anything about some android who needed a surgeon?",
+      "emotion": "Neutral 50",
+      "response_text": "You believe that ancient crap? Rumors of an escaped robot looking for a hacksaw and a computer expert. Forget about it.",
+      "index": "32"
+    },
+    {
+      "topic": "MS08MedicalClue2",
+      "topic_text": "What do you know about this android from the Commonwealth?",
+      "emotion": "Neutral 50",
+      "response_text": "That old \"android recording?\" Some of the boys took that seriously. Clearly it was a hoax. Here's a copy of the holotape. Listen for yourself.",
+      "index": "33"
+    },
+    {
+      "topic": "MS08MedicalClue3",
+      "topic_text": "Ever do any facial surgery? Maybe on someone from the Commonwealth?",
+      "emotion": "Neutral 50",
+      "response_text": "Hmm... that reminds me of this old hoax. Here, listen to this. It's clearly a joke. No one's got the tech to do that without risking infection.",
+      "index": "35"
+    },
+    {
+      "topic": "MS08MedicalClue3Bribe",
+      "topic_text": "You ever do a face job on an android from the North? <Jingle purse of 100 caps.>",
+      "emotion": "Neutral 50",
+      "response_text": "Hmm... that reminds me of this old hoax. Here, listen to this. It's clearly a joke. No one's got the tech to do that without risking infection.",
+      "index": "38"
+    },
+    {
+      "topic": "MS08MedicalClue3Stat",
+      "topic_text": "A patient of mine needs a facial epidermal augmentation. You ever perform one?",
+      "emotion": "Neutral 50",
+      "response_text": "Hmm... that reminds me of this old hoax. Here, listen to this. It's clearly a joke. No one's got the tech to do that without risking infection.",
+      "index": "39"
+    },
+    {
+      "topic": "MS08MedicalClue4",
+      "topic_text": "You know who might have a Lipoplasticator or Micro Dermal Graftilizer?",
+      "emotion": "Neutral 50",
+      "response_text": "Try Pinkerton at Rivet City. Heard he has the goods. Hope he doesn't try to actually use them on anyone. Bet he would though. He's nuts.",
+      "index": "40"
+    },
+    {
+      "topic": "MS08MedicalClue4Bribe",
+      "topic_text": "Here's 100 caps for the locale of a Lipoplasticator or Micro Dermal Graftilizer.",
+      "emotion": "Neutral 50",
+      "response_text": "Try Pinkerton at Rivet City. Heard he has the goods. Hope he doesn't try to actually use them on anyone. Bet he would though. He's nuts.",
+      "index": "43"
+    },
+    {
+      "topic": "MS08MedicalClue4Stat",
+      "topic_text": "I need to find a Micro Dermal Graftilizer for epidermal augmentation surgery.",
+      "emotion": "Neutral 50",
+      "response_text": "Try Pinkerton at Rivet City. Heard he has the goods. Hope he doesn't try to actually use them on anyone. Bet he would though. He's nuts.",
+      "index": "44"
+    },
+    {
+      "topic": "PFCutterChems",
+      "topic_text": "Let me see your Chems.",
+      "emotion": "Neutral 50",
+      "response_text": "Hey, it's your body, do what you want to it.",
+      "index": "45"
+    },
+    {
+      "topic": "PFCutterSupplies",
+      "topic_text": "I want to buy medical supplies.",
+      "emotion": "Neutral 50",
+      "response_text": "That's good to hear, since I want to take your caps.",
+      "index": "48"
+    },
+    {
+      "topic": "SpeechChallengeFailure",
+      "topic_text": "SpeechChallengeFailure",
+      "emotion": "Neutral 50",
+      "response_text": "You have to do better than that. I deal with bigger assholes than you on a daily basis.",
+      "index": "51"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "I have to go now.",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah. Come back when you've got more injuries. And some more caps.",
+      "index": "52"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Neutral 50",
+      "response_text": "Can't help you now. Come to the clinic in the morning.",
+      "index": "53"
+    },
+    {
+      "topic": "PFTalkCutterEulogyJones1",
+      "topic_text": "PFTalkCutterEulogyJones1",
+      "emotion": "Neutral 50",
+      "response_text": "Our relationship is strictly business, Eulogy. You know that.",
+      "index": "58"
+    },
+    {
+      "topic": "PFTalkCutterEulogyJones3",
+      "topic_text": "PFTalkCutterEulogyJones3",
+      "emotion": "Neutral 50",
+      "response_text": "Here you go, Eulogy. The usual cut. Count it if you'd like.",
+      "index": "60"
+    },
+    {
+      "topic": "PFTalkHiResponse1",
+      "topic_text": "PFTalkHiResponse1",
+      "emotion": "Neutral 50",
+      "response_text": "Get out of my face.",
+      "index": "61"
+    }
+  ],
+  "combat": []
+}

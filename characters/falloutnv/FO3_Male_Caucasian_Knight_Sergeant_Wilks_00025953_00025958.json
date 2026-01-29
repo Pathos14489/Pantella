@@ -1,0 +1,163 @@
+{
+  "name": "Knight Sergeant Wilks",
+  "url": "/wiki/Wilks_(Brotherhood_of_Steel)",
+  "dialogue_name": "GNRKnightSergeantWilks.txt",
+  "dialogue_url": "/wiki/GNRKnightSergeantWilks.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "00025953",
+  "ref_id": "00025958",
+  "editor_id": "GNRKnightSergeantWilks",
+  "location": "GNR building plaza",
+  "location_url": "/wiki/GNR_building_plaza_(Fallout_3)",
+  "descriptions": [
+    "Knight Sergeant Wilks is a Brotherhood of Steel soldier stationed in the GNR building plaza in 2277.",
+    "Wilks acts as the leader of the security detail assigned to protect the GNR plaza.",
+    "Wilks is the only knight sergeant in Fallout 3."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Brotherhood of Steel",
+  "role": "Guard",
+  "detailed_location": "GNR building plaza",
+  "voice_actor": "Gus Travers",
+  "special": {
+    "Strength": 5,
+    "Perception": 7,
+    "Endurance": 6,
+    "Charisma": 4,
+    "Intelligence": 3,
+    "Agility": 6,
+    "Luck": 4
+  },
+  "mod_special_values": {
+    "Strength": 7,
+    "Perception": 7,
+    "Endurance": 6,
+    "Charisma": 4,
+    "Intelligence": 3,
+    "Agility": 4,
+    "Luck": 4
+  },
+  "level": "4→11",
+  "tag_skills": [
+    {
+      "Big Guns:": "44→74"
+    },
+    {
+      "Energy Weap.:": "46→76"
+    },
+    {
+      "Small Guns:": "44→74(40→70)"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "70→125"
+    },
+    {
+      "Radiation Res.:": "0%(10%)"
+    },
+    {
+      "Damage Res.:": "0%(40%)"
+    }
+  ],
+  "karma": "Good",
+  "voice_type": "MaleAdult05DC",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "GNRGalaxyNewsRadio",
+      "topic_text": "What's this building for?",
+      "emotion": "Neutral 50",
+      "response_text": "This is the last free radio station in the entire D.C. area. The rest of the airwaves are clouded up with Enclave propaganda.",
+      "index": "1"
+    },
+    {
+      "topic": "GNRWilksCT01",
+      "topic_text": "\"Free voice of the people\"? What does that mean?",
+      "emotion": "Neutral 50",
+      "response_text": "Well, the only other station that comes through nice and clear on the radio is the Enclave's station.",
+      "index": "3"
+    },
+    {
+      "topic": "GNRWilksCT02",
+      "topic_text": "What's the Brotherhood doing here?",
+      "emotion": "Neutral 50",
+      "response_text": "We have a relationship with the station here. We stay in this reinforced structure, and protect it from the Super Mutants.",
+      "index": "5"
+    },
+    {
+      "topic": "GNRWilksCT03",
+      "topic_text": "I've got to go now.",
+      "emotion": "Neutral 50",
+      "response_text": "Sure. Good luck to you.",
+      "index": "8"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "Welcome to the Galaxy News Radio Outpost. I'm Sergeant Wilks, and I'm in charge here. What brings you into the D.C. area?",
+      "index": "9"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GNRGoodbyes",
+      "topic_text": "GNRGoodbyes",
+      "emotion": "Neutral 50",
+      "response_text": "Besides the Super Mutants, just anything out of the ordinary. Citadel's orders.",
+      "index": "11"
+    },
+    {
+      "topic": "GNRResponses01",
+      "topic_text": "GNRResponses",
+      "emotion": "Anger 50",
+      "response_text": "You'll do what our orders say, soldier. I'm getting a bit tired of your complaints.",
+      "index": "14"
+    },
+    {
+      "topic": "GNRResponses02",
+      "topic_text": "GNRResponses02",
+      "emotion": "Anger 50",
+      "response_text": "If it's action you want, how about cleaning up this pigsty of a barracks!",
+      "index": "15"
+    },
+    {
+      "topic": "GNRResponses03",
+      "topic_text": "GNRResponses03",
+      "emotion": "Neutral 50",
+      "response_text": "No new orders yet, brother. We're to remain here until further notice and assist any reinforcements that may arrive.",
+      "index": "16"
+    },
+    {
+      "topic": "GNRResponses04",
+      "topic_text": "GNRResponses04",
+      "emotion": "Happy 50",
+      "response_text": "It was a good thing you did, brother. He was about to have you for lunch. You shouldn't be so reckless.",
+      "index": "17"
+    },
+    {
+      "topic": "GOODBYE",
+      "topic_text": "I have to go now.",
+      "emotion": "Neutral 50",
+      "response_text": "Be careful out there.",
+      "index": "18"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Neutral 50",
+      "response_text": "Keep your eyes open, Brother.",
+      "index": "20"
+    }
+  ],
+  "combat": []
+}

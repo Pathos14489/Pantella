@@ -1,0 +1,189 @@
+{
+  "name": "Dazzle",
+  "url": "/wiki/Dazzle",
+  "dialogue_name": "Dazzle.txt",
+  "dialogue_url": "/wiki/Dazzle.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000F43D5",
+  "ref_id": "000F43D7",
+  "editor_id": "Dazzle",
+  "location": "Gomorrah courtyard",
+  "location_url": "/wiki/Gomorrah_courtyard",
+  "descriptions": [
+    "Dazzle is a prostitute living in Gomorrah's courtyard in 2281.",
+    "Dazzle was born around Vegas, but grew up in New Vegas's Westside. Her father left Dazzle's mother when she was young, and Dazzle grew up with her mother until the former was sold  to the Omertas. At some point, she was bought by the Omertas and became a prostitute at Gomorrah on the New Vegas Strip. While she admits that it can be bad at the Gomorrah some days, she will take the Gomorrah over \"that dump\" in Westside.",
+    "As a prostitute at Gomorrah, she later met Corporal White who visited her for her services whenever he could, subsequently divulging information about the NCR crops and water rationing.",
+    "Cost: 25-50-100 caps"
+  ],
+  "race": "Human",
+  "gender": "Female",
+  "affiliation": "Omertas",
+  "role": "Prostitute",
+  "detailed_location": "Gomorrah courtyard",
+  "voice_actor": "Andrea Thompson",
+  "special": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 10,
+    "Intelligence": 5,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "level": "1",
+  "misc_skills": [],
+  "karma": "Neutral",
+  "voice_type": "FemaleAdult08",
+  "geck_race": "Hispanic",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "Hey there, sugar. I'm Dazzle. What can I do for you... or to you? You're so handsome I might just give you a discount.",
+      "index": "1"
+    },
+    {
+      "topic": "vDialogueGomorrahDazzleTopic000",
+      "topic_text": "You ever spend time with a trooper named White?",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah, he used to come around here a lot. Haven't seen him in a while, though. Why?",
+      "index": "10"
+    },
+    {
+      "topic": "vDialogueGomorrahDazzleTopic001",
+      "topic_text": "He's gone missing, and I'm trying to track him down. Any ideas?",
+      "emotion": "Neutral 50",
+      "response_text": "He used to go on and on about water and the farms east of the Strip. He was talking to one of the farmers named Bascom, had some problem with NCR.",
+      "index": "11"
+    },
+    {
+      "topic": "vDialogueGomorrahDazzleTopic004",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Don't be a stranger.",
+      "index": "13"
+    },
+    {
+      "topic": "vDialogueGomorrahDazzleTopic005",
+      "topic_text": "How much for a good time?",
+      "emotion": "Neutral 50",
+      "response_text": "Fuck off. You already screwed me once, and it's not happening again.",
+      "index": "14"
+    },
+    {
+      "topic": "vDialogueGomorrahDazzleTopic006",
+      "topic_text": "Let's party. Here's the hundred caps.",
+      "emotion": "Neutral 50",
+      "response_text": "We can go right over here, baby.",
+      "index": "17"
+    },
+    {
+      "topic": "vDialogueGomorrahDazzleTopic007",
+      "topic_text": "Where are you from?",
+      "emotion": "Neutral 50",
+      "response_text": "Well now, that's unusual. Normally no one cares enough to ask. To be honest, I don't rightly know. My mama was from around these parts.",
+      "index": "18"
+    },
+    {
+      "topic": "vDialogueGomorrahDazzleTopic008",
+      "topic_text": "Never mind.",
+      "emotion": "Neutral 50",
+      "response_text": "Suit yourself. The offer's always open if you feel like changing your mind.",
+      "index": "21"
+    },
+    {
+      "topic": "vDialogueGomorrahDazzleTopic009",
+      "topic_text": "Uhh... twenty, twenty five... yeah, I have enough. Here you go.",
+      "emotion": "Neutral 50",
+      "response_text": "We can go right over here, baby.",
+      "index": "22"
+    },
+    {
+      "topic": "vDialogueGomorrahDazzleTopic010",
+      "topic_text": "How about we just split this Med-X and... relax for a while?",
+      "emotion": "Neutral 50",
+      "response_text": "Hmm... I don't know. Doesn't that... mess you up?",
+      "index": "23"
+    },
+    {
+      "topic": "vDialogueGomorrahDazzleTopic011< Medicine 35 >",
+      "topic_text": "I know the right dose for a little thing like you. Medical training, you know.",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] Well, if you know what you're doing... okay. You show me a good time, and I'll return the favor.",
+      "index": "24"
+    },
+    {
+      "topic": "vDialogueGomorrahDazzleTopic012< Speech 35 >",
+      "topic_text": "I wouldn't offer if it wasn't safe.  Do I look like someone who would hurt you?",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] Well... no I guess not. Okay - you show me a good time, and I'll return the favor.",
+      "index": "26"
+    },
+    {
+      "topic": "vDialogueGomorrahDazzleTopic013",
+      "topic_text": "We girls have to stick together. Any chance you could give me a better deal?",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah, you're right. For you, and just you, fifty caps. Don't tell anyone.",
+      "index": "28"
+    },
+    {
+      "topic": "vDialogueGomorrahDazzleTopic014",
+      "topic_text": "Fifty caps it is. Let's party.",
+      "emotion": "Neutral 50",
+      "response_text": "We can go right over here, baby.",
+      "index": "29"
+    },
+    {
+      "topic": "vDialogueGomorrahDazzleTopic015",
+      "topic_text": "A hundred caps? I think you're the one getting the deal here.",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah, you are different from my usual guys. Fine, fifty caps, but don't tell anyone.",
+      "index": "30"
+    },
+    {
+      "topic": "vDialogueGomorrahDazzleTopic016",
+      "topic_text": "I'm a little short on caps.",
+      "emotion": "Neutral 50",
+      "response_text": "Too bad, baby. Come back when you have the caps. I'll still be here.",
+      "index": "31"
+    },
+    {
+      "topic": "vDialogueGomorrahDazzleTopic017",
+      "topic_text": "Uh... sorry. I don't count so good.",
+      "emotion": "Neutral 50",
+      "response_text": "Forget it, it's done.",
+      "index": "32"
+    },
+    {
+      "topic": "vDialogueGomorrahDazzleTopic018",
+      "topic_text": "< Blink. >",
+      "emotion": "Neutral 50",
+      "response_text": "Ugh. I figured you were a bit slow, but I never thought - forget it, it's done.",
+      "index": "34"
+    },
+    {
+      "topic": "vDialogueGomorrahDazzleTopic019",
+      "topic_text": "Haha. You're dumber than me.",
+      "emotion": "Anger 50",
+      "response_text": "Fuck you. So what do you want now?",
+      "index": "35"
+    },
+    {
+      "topic": "vDialogueGomorrahDazzleTopic020",
+      "topic_text": "I don't have a hundred caps on me.",
+      "emotion": "Neutral 50",
+      "response_text": "Too bad, baby. You know where to find me.",
+      "index": "36"
+    }
+  ],
+  "conversation": [],
+  "combat": []
+}

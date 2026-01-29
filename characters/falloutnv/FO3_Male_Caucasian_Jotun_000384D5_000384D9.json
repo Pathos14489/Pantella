@@ -1,0 +1,182 @@
+{
+  "name": "Jotun",
+  "url": "/wiki/Jotun",
+  "dialogue_name": "Jotun.txt",
+  "dialogue_url": "/wiki/Jotun.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000384D5",
+  "ref_id": "000384D9",
+  "editor_id": "Jotun",
+  "location": "Paradise Falls",
+  "location_url": "/wiki/Paradise_Falls",
+  "descriptions": [
+    "Jotun is a slaver at Paradise Falls in the year 2277.",
+    "Jotun takes on the task of keeping his father Ymir safe, which he describes simply as a \"big job.\"",
+    "He seems to be very awkward and unsocial, responding vaguely and briefly to the Lone Wanderer and only responds to fellow slavers with grunts. His father has always been very proud of him and constantly praises him, bragging to the other slavers about him, which Jotun seems to find quite embarrassing.",
+    "Jotun and his father Ymir are references to Norse mythology."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Slavers",
+  "role": "Slaver",
+  "detailed_location": "Paradise Falls",
+  "voice_actor": "Jeff Baker",
+  "special": {
+    "Strength": 6,
+    "Perception": 4,
+    "Endurance": 4,
+    "Charisma": 6,
+    "Intelligence": 4,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "mod_special_values": {
+    "Strength": 6,
+    "Perception": 4,
+    "Endurance": 4,
+    "Charisma": 6,
+    "Intelligence": 4,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "level": "3→10",
+  "tag_skills": [
+    {
+      "Barter:": "41→74"
+    },
+    {
+      "Melee Weap.:": "41→74"
+    },
+    {
+      "Small Guns:": "41→74(39→72)"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Very Evil",
+  "voice_type": "MaleAdult01DefaultDC",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "Jotun.",
+      "index": "1"
+    },
+    {
+      "topic": "PFJotun",
+      "topic_text": "What do you do around here?",
+      "emotion": "Neutral 50",
+      "response_text": "I keep my father safe.",
+      "index": "5"
+    },
+    {
+      "topic": "PFJotunGreeting1",
+      "topic_text": "Is that your name?",
+      "emotion": "Neutral 50",
+      "response_text": "Yes. Jotun.",
+      "index": "7"
+    },
+    {
+      "topic": "PFJotunGreeting1a",
+      "topic_text": "Well, nice to meet you, err... Jotun.",
+      "emotion": "Neutral 50",
+      "response_text": "No. It isn't. What do you want?",
+      "index": "8"
+    },
+    {
+      "topic": "PFJotunGreeting1b",
+      "topic_text": "What kind of stupid name is Jotun?",
+      "emotion": "Neutral 50",
+      "response_text": "Don't care what you think. What do you want?",
+      "index": "9"
+    },
+    {
+      "topic": "PFJotunGreeting2",
+      "topic_text": "Nice to meet you, Jotun.",
+      "emotion": "Neutral 50",
+      "response_text": "No. It is not nice. What do you want?",
+      "index": "10"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "I have to go now.",
+      "emotion": "Neutral 50",
+      "response_text": "Go, then.",
+      "index": "11"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Neutral 50",
+      "response_text": "<grunts>",
+      "index": "12"
+    },
+    {
+      "topic": "PFFFJotunAnguish",
+      "topic_text": "PFFFJotunAnguish",
+      "emotion": "Neutral 50",
+      "response_text": "FATHER! NO!",
+      "index": "16"
+    },
+    {
+      "topic": "PFLaugh",
+      "topic_text": "PFLaugh",
+      "emotion": "Neutral 50",
+      "response_text": "HAHAHAHAHAHAHA!",
+      "index": "17"
+    },
+    {
+      "topic": "PFTalkHiResponse1",
+      "topic_text": "PFTalkHiResponse1",
+      "emotion": "Neutral 50",
+      "response_text": "<grunts>",
+      "index": "18"
+    },
+    {
+      "topic": "PFTalkJotunCarolinaRed1",
+      "topic_text": "PFTalkJotunCarolinaRed1",
+      "emotion": "Neutral 50",
+      "response_text": "What?",
+      "index": "19"
+    },
+    {
+      "topic": "PFTalkJotunCarolinaRed3",
+      "topic_text": "PFTalkJotunCarolinaRed3",
+      "emotion": "Neutral 50",
+      "response_text": "I talk when I have something to say.",
+      "index": "21"
+    },
+    {
+      "topic": "PFTalkJotunYmir1",
+      "topic_text": "PFTalkJotunYmir1",
+      "emotion": "Neutral 50",
+      "response_text": "Please, father, people are watching.",
+      "index": "23"
+    },
+    {
+      "topic": "PFTalkJotunYmir3",
+      "topic_text": "PFTalkJotunYmir3",
+      "emotion": "Neutral 50",
+      "response_text": "Your praise is the only pride I need, father.",
+      "index": "25"
+    },
+    {
+      "topic": "PFTalkYmirJotun2",
+      "topic_text": "PFTalkYmirJotun2",
+      "emotion": "Neutral 50",
+      "response_text": "Nothing father. Enjoy your drink.",
+      "index": "27"
+    }
+  ],
+  "combat": []
+}

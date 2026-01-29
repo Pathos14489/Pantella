@@ -1,0 +1,283 @@
+{
+  "name": "Cato Hostilius¹",
+  "url": "/wiki/Cato_Hostilius",
+  "dialogue_name": "VHDCatoHostilius.txt",
+  "dialogue_url": "/wiki/VHDCatoHostilius.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "0013F371",
+  "ref_id": "0013F372",
+  "editor_id": "VHDCatoHostilius",
+  "location": "Hoover Dam",
+  "location_url": "/wiki/Hoover_Dam",
+  "descriptions": [
+    "Cato Hostilius is a member of Caesar's Legion, serving as one of the Legion's frumentarii in Fallout: New Vegas.",
+    "In 2281, Cato Hostilius was charged with a mission of reconnaissance on the NCR installation at Hoover Dam, in particular discovering all information he could regarding a scheduled visit by the republic's President Aaron Kimball that Caesar planned to exploit as an opportunity to assassinate the enemy's leader.",
+    "Frumentarii: Alerio · Cato Hostilius · Gabban · Karl · Picus · Disguised frumentarius · Ulysses (formerly)\nConsul: M. Licinius Crassus · M. Scribonius Libo Drusus (of the consul)"
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Caesar's Legion",
+  "role": "Hoover Dam infiltrator7 of Clubs",
+  "detailed_location": "Northwest ofRanger Station DeltaHoover Dam",
+  "voice_actor": "Ari Rubin",
+  "special": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 6,
+    "Charisma": 4,
+    "Intelligence": 4,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "mod_special_values": {
+    "Strength": 6,
+    "Perception": 6,
+    "Endurance": 7,
+    "Charisma": 4,
+    "Intelligence": 4,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "level": "16",
+  "tag_skills": [
+    {
+      "Guns:": "90(92)"
+    },
+    {
+      "Melee Weap.:": "92"
+    },
+    {
+      "Unarmed:": "90(92)"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "150(155)"
+    }
+  ],
+  "karma": "Neutral",
+  "voice_type": "MaleAdult04",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Disgust 10",
+      "response_text": "{Condescending}Didn't expectCaesarto send a woman to do this job.",
+      "index": "1"
+    },
+    {
+      "topic": "VHDAssassinationDialogVHDCatoHostiliusTopic001",
+      "topic_text": "I'm all set. When does the President arrive?",
+      "emotion": "Happy 5",
+      "response_text": "Good timing. Looks like hisVertibirdis arriving early. Here it comes now.",
+      "index": "7"
+    },
+    {
+      "topic": "VHDAssassinationDialogVHDCatoHostiliusTopic002",
+      "topic_text": "Anything you can help me with?",
+      "emotion": "Neutral 50",
+      "response_text": "Well I have a bomb here that can be put on the vertibird that will detonate at a certain altitude, but it's a little unstable and dangerous.",
+      "index": "9"
+    },
+    {
+      "topic": "VHDAssassinationDialogVHDCatoHostiliusTopic003",
+      "topic_text": "Nice to meet you too.",
+      "emotion": "Happy 15",
+      "response_text": "So you're the bigshot that Caesar put in charge of this mission. I've heard about you. You've got quite the reputation already.",
+      "index": "10"
+    },
+    {
+      "topic": "VHDAssassinationDialogVHDCatoHostiliusTopic004",
+      "topic_text": "Let's get on with this.",
+      "emotion": "Happy 15",
+      "response_text": "Right, straight to business. Good. No wonder Caesar sent you.",
+      "index": "14"
+    },
+    {
+      "topic": "VHDAssassinationDialogVHDCatoHostiliusTopic005",
+      "topic_text": "I've made my preparations. Let's get started.",
+      "emotion": "Happy 15",
+      "response_text": "Good.Kimballis scheduled to give his speech tomorrow. We'll rest here tonight and talk the plan over first thing in the morning.",
+      "index": "16"
+    },
+    {
+      "topic": "VHDAssassinationDialogVHDCatoHostiliusTopic006",
+      "topic_text": "Yes, I'm ready.",
+      "emotion": "Happy 25",
+      "response_text": "Good. Now Kimball is scheduled to give his speech tomorrow. We'll rest here tonight and talk over the plan first thing in the morning.",
+      "index": "18"
+    },
+    {
+      "topic": "VHDAssassinationDialogVHDCatoHostiliusTopic007",
+      "topic_text": "I'm not ready yet.",
+      "emotion": "Anger 15",
+      "response_text": "Well hurry it up and get your shit together.",
+      "index": "20"
+    },
+    {
+      "topic": "VHDAssassinationDialogVHDCatoHostiliusTopic008",
+      "topic_text": "Of course I have a plan.",
+      "emotion": "Happy 25",
+      "response_text": "Prepared already. I like it. There's no need to give me the details, it's probably best that way.",
+      "index": "21"
+    },
+    {
+      "topic": "VHDAssassinationDialogVHDCatoHostiliusTopic009",
+      "topic_text": "I haven't given it much thought.",
+      "emotion": "Anger 15",
+      "response_text": "You better start thinking about it soon, we're on a limited time schedule.",
+      "index": "23"
+    },
+    {
+      "topic": "VHDAssassinationDialogVHDCatoHostiliusTopic010",
+      "topic_text": "I don't need a plan to put a bullet in his head.",
+      "emotion": "Neutral 50",
+      "response_text": "True, but I don't think it'll be that easy.",
+      "index": "25"
+    },
+    {
+      "topic": "VHDAssassinationDialogVHDCatoHostiliusTopic011",
+      "topic_text": "It's none of your business.",
+      "emotion": "Anger 15",
+      "response_text": "Fine, be like that. I'm just here to give you whatever information I can to help you get the job done.",
+      "index": "28"
+    },
+    {
+      "topic": "VHDAssassinationDialogVHDCatoHostiliusTopic012",
+      "topic_text": "What sort of information do you have?",
+      "emotion": "Neutral 50",
+      "response_text": "I've been spying in the dam for a while now. I've gathered quite a bit of information from various sources.",
+      "index": "30"
+    },
+    {
+      "topic": "VHDAssassinationDialogVHDCatoHostiliusTopic013",
+      "topic_text": "Let's get moving.",
+      "emotion": "Neutral 50",
+      "response_text": "You're the boss.",
+      "index": "31"
+    },
+    {
+      "topic": "VHDAssassinationDialogVHDCatoHostiliusTopic014",
+      "topic_text": "Do you have any suggestions about the assassination?",
+      "emotion": "Neutral 50",
+      "response_text": "Suggestions, eh? I'd suggest you play to your strengths. There's probably plenty of ways to kill Kimball, just find one that works best for you.",
+      "index": "35"
+    },
+    {
+      "topic": "VHDAssassinationDialogVHDCatoHostiliusTopic015",
+      "topic_text": "What sort of intel have you gathered?",
+      "emotion": "Neutral 50",
+      "response_text": "I've been able to get some basic information on the schedule for Kimball's visit as well as getting some rough security details.",
+      "index": "38"
+    },
+    {
+      "topic": "VHDAssassinationDialogVHDCatoHostiliusTopic016",
+      "topic_text": "How are we getting into the Dam?",
+      "emotion": "Happy 30",
+      "response_text": "I have some disguises for us. I've already got mine. A wealthy Brahmin Baron who bribed his way into seeing the President.",
+      "index": "39"
+    },
+    {
+      "topic": "VHDAssassinationDialogVHDCatoHostiliusTopic017",
+      "topic_text": "Is there anything you can do to help?",
+      "emotion": "Neutral 50",
+      "response_text": "Well, I have a bomb here that can be put on the vertibird that will detonate at a certain altitude, but it's a little unstable and dangerous.",
+      "index": "41"
+    },
+    {
+      "topic": "VHDAssassinationDialogVHDCatoHostiliusTopic018",
+      "topic_text": "I don't have any more questions.",
+      "emotion": "Neutral 50",
+      "response_text": "If there's nothing else, then we should get moving.",
+      "index": "42"
+    },
+    {
+      "topic": "VHDAssassinationDialogVHDCatoHostiliusTopic019",
+      "topic_text": "Tell me about Kimball's schedule.",
+      "emotion": "Neutral 50",
+      "response_text": "The President is scheduled to arrive sometime in the afternoon. It's going to be a short visit to boost morale for the NCR troops.",
+      "index": "43"
+    },
+    {
+      "topic": "VHDAssassinationDialogVHDCatoHostiliusTopic020",
+      "topic_text": "Give me the security details.",
+      "emotion": "Neutral 50",
+      "response_text": "Security is going to be tight. Rangers are stationed all around the observation deck where Kimball is going to give his speech.",
+      "index": "47"
+    },
+    {
+      "topic": "VHDAssassinationDialogVHDCatoHostiliusTopic021",
+      "topic_text": "Let's go back to my other questions.",
+      "emotion": "Neutral 50",
+      "response_text": "Okay, what would you like to know?",
+      "index": "52"
+    },
+    {
+      "topic": "VHDAssassinationDialogVHDCatoHostiliusTopic023",
+      "topic_text": "I'm familiar with explosives, give it here.",
+      "emotion": "Happy 5",
+      "response_text": "Here you go. Put it to good use.",
+      "index": "53"
+    },
+    {
+      "topic": "VHDAssassinationDialogVHDCatoHostiliusTopic024",
+      "topic_text": "How hard can it be to put a bomb on a vertibird?",
+      "emotion": "Disgust 15",
+      "response_text": "Harder than you think. I don't want you blowing us both up, so I'll just hold on to this.",
+      "index": "54"
+    },
+    {
+      "topic": "VHDAssassinationDialogVHDCatoHostiliusTopic025",
+      "topic_text": "No thanks.",
+      "emotion": "Neutral 50",
+      "response_text": "Suit yourself. What else do you want to know?",
+      "index": "55"
+    },
+    {
+      "topic": "VHDAssassinationDialogVHDCatoHostiliusTopic027",
+      "topic_text": "I'm familiar with explosives, give it here.",
+      "emotion": "Happy 15",
+      "response_text": "Here you go. Put it to good use.",
+      "index": "56"
+    },
+    {
+      "topic": "VHDAssassinationDialogVHDCatoHostiliusTopic028",
+      "topic_text": "How hard can it be to put a bomb on a vertibird?",
+      "emotion": "Disgust 15",
+      "response_text": "Harder than you think. I don't want you blowing this, so I'll just hold on to this.",
+      "index": "57"
+    },
+    {
+      "topic": "VHDAssassinationDialogVHDCatoHostiliusTopic029",
+      "topic_text": "I don't need a bomb.",
+      "emotion": "Neutral 50",
+      "response_text": "Suit yourself.",
+      "index": "58"
+    },
+    {
+      "topic": "VHDAssassinationDialogVHDCatoHostiliusTopicMorning",
+      "topic_text": "<Cato Good Morning Dialog>",
+      "emotion": "Neutral 50",
+      "response_text": "Rise and shine. You have a big day ahead of you.",
+      "index": "59"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "See ya.",
+      "index": "61"
+    }
+  ],
+  "combat": []
+}

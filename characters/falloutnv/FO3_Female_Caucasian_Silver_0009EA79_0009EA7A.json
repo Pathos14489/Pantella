@@ -1,0 +1,200 @@
+{
+  "name": "Silver",
+  "url": "/wiki/Sara_Silver",
+  "dialogue_name": "MQ01Silver.txt",
+  "dialogue_url": "/wiki/MQ01Silver.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "0009EA79",
+  "ref_id": "0009EA7A",
+  "editor_id": "MQ01Silver",
+  "location": "Small ranch",
+  "location_url": "/wiki/Small_ranch",
+  "descriptions": [
+    "Sara Silver is a former citizen of Megaton hiding out within Springvale's only habitable building, the small ranch, in 2277.",
+    "Silver was a prostitute who worked for Colin Moriarty in Megaton before they had a falling out and she ran off with her share of her earnings (or so she says), deciding to hide out in Springvale.",
+    "She told Moriarty that she was done hooking and was taking the caps she had earned fair and square; she even slept with him to seal the deal. The next morning Moriarty told her she could not leave, but she grabbed her caps and ran for it."
+  ],
+  "race": "Human",
+  "gender": "Female",
+  "role": "Prostitute(formerly)Chem addict",
+  "detailed_location": "Small ranch,Springvale",
+  "voice_actor": "Shari Elliker",
+  "special": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 5,
+    "Intelligence": 4,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "mod_special_values": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 5,
+    "Intelligence": 4,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "level": "1",
+  "tag_skills": [
+    {
+      "Barter:": "30"
+    },
+    {
+      "Medicine:": "28"
+    },
+    {
+      "Melee Weap.:": "32"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "65(70)"
+    },
+    {
+      "Critical Chance:": "5%"
+    },
+    {
+      "Unarmed Dam.:": "1.15"
+    },
+    {
+      "Poison Resist.:": "15%(20%)"
+    },
+    {
+      "Rad. Resist.:": "6%(8%)"
+    },
+    {
+      "Carry Weight:": "210"
+    },
+    {
+      "Damage Res.:": "2%"
+    }
+  ],
+  "karma": "Good",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah? What is it?Play soundFO3 Silver WhatIsIt.ogghttps://fallout.fandom.com/wiki/File:FO3_Silver_WhatIsIt.oggnoicon",
+      "index": "1"
+    },
+    {
+      "topic": "MegFFSilverCT01",
+      "topic_text": "Yes, and he says you owe him some caps.",
+      "emotion": "Anger 60",
+      "response_text": "That bastard! He... he's a liar! He just wants me dead! Those caps are all mine. I earned them!Play soundFO3 Silver ThatBastard.ogghttps://fallout.fandom.com/wiki/File:FO3_Silver_ThatBastard.oggnoicon",
+      "index": "3"
+    },
+    {
+      "topic": "MegFFSilverCT02",
+      "topic_text": "Just hand over the caps, and I'll be out of your way.",
+      "emotion": "Anger 60",
+      "response_text": "Owe HIM some caps? He's a liar! He just wants you to kill me! Those caps are mine, fair and square.Play soundFO3 Silver OweHimSomeCaps.ogghttps://fallout.fandom.com/wiki/File:FO3_Silver_OweHimSomeCaps.oggnoicon",
+      "index": "4"
+    },
+    {
+      "topic": "MegFFSilverCT03",
+      "topic_text": "I don't deal with junkies. Hand over all your caps. Now!",
+      "emotion": "Anger 90",
+      "response_text": "You're not getting a damn thing from me! You hear me?! Not a damn thing!Play soundFO3 Silver NotGettingAThing.ogghttps://fallout.fandom.com/wiki/File:FO3_Silver_NotGettingAThing.oggnoicon",
+      "index": "5"
+    },
+    {
+      "topic": "MegFFSilverCT04",
+      "topic_text": "Slow down. Tell me your side of the story.",
+      "emotion": "Neutral 50",
+      "response_text": "Look, I used to work for that slob. Doing... you know... favors for guys.Play soundFO3 Silver UsedToWorkFor.ogghttps://fallout.fandom.com/wiki/File:FO3_Silver_UsedToWorkFor.oggnoicon",
+      "index": "6"
+    },
+    {
+      "topic": "MegFFSilverCT04aSC",
+      "topic_text": "Look, just give me the caps and I'll tell him you're gone.",
+      "emotion": "Neutral 50",
+      "response_text": "I am tired of hiding out here like some kind of Wasteland dog.Play soundFO3 Silver TiredOfHiding.ogghttps://fallout.fandom.com/wiki/File:FO3_Silver_TiredOfHiding.oggnoicon",
+      "index": "10"
+    },
+    {
+      "topic": "MegFFSilverCT05",
+      "topic_text": "I don't care. I'm just here for caps.",
+      "emotion": "Neutral 50",
+      "response_text": "Is there something wrong with your hearing? I just told you the caps are mine! You can't have them!Play soundFO3 Silver SomethingWrong.ogghttps://fallout.fandom.com/wiki/File:FO3_Silver_SomethingWrong.oggnoicon",
+      "index": "12"
+    },
+    {
+      "topic": "MegFFSilverCT06",
+      "topic_text": "Look, just give me some of your caps, and I'll tell him you're gone.",
+      "emotion": "Surprise 80",
+      "response_text": "You'd do that for me? I never expected anyone to care enough.Play soundFO3 Silver YoudDoThat.ogghttps://fallout.fandom.com/wiki/File:FO3_Silver_YoudDoThat.oggnoicon",
+      "index": "14"
+    },
+    {
+      "topic": "MegFFSilverCT07",
+      "topic_text": "I don't know. Maybe Moriarty's right and you're just a junkie.",
+      "emotion": "Disgust 80",
+      "response_text": "Look... I feel awful about what I used to have to do for a living, okay? I use the Psycho to make the memories go away.Play soundFO3 Silver IFeelAwful.ogghttps://fallout.fandom.com/wiki/File:FO3_Silver_IFeelAwful.oggnoicon",
+      "index": "16"
+    },
+    {
+      "topic": "MegFFSilverCT08",
+      "topic_text": "You know what, keep your caps and I'll tell Moriarty you're gone.",
+      "emotion": "Surprise 80",
+      "response_text": "You'd do that for me? I can't believe it... you hardly even know me!Play soundFO3 Silver CantBelieveIt.ogghttps://fallout.fandom.com/wiki/File:FO3_Silver_CantBelieveIt.oggnoicon",
+      "index": "18"
+    },
+    {
+      "topic": "MegFFSilverPreMeetMoriarty01",
+      "topic_text": "Who's Moriarty?",
+      "emotion": "Neutral 50",
+      "response_text": "Colin Moriarty... the owner of Moriarty's Saloon in Megaton.Play soundFO3 Silver ColinMoriarty.ogghttps://fallout.fandom.com/wiki/File:FO3_Silver_ColinMoriarty.oggnoicon",
+      "index": "20"
+    },
+    {
+      "topic": "MegFFSilverPreMeetMoriarty02",
+      "topic_text": "Whoa, calm down... Who the hell is Moriarty?",
+      "emotion": "Neutral 50",
+      "response_text": "Colin Moriarty... the owner of Moriarty's Saloon in Megaton.Play soundFO3 Silver ColinMoriarty.ogghttps://fallout.fandom.com/wiki/File:FO3_Silver_ColinMoriarty.oggnoicon",
+      "index": "22"
+    },
+    {
+      "topic": "MegFFSilverPreMeetMoriarty03",
+      "topic_text": "You'd better calm down, before I put you down.",
+      "emotion": "Anger 70",
+      "response_text": "That lying bastard. Roped you into finding me too, huh?Play soundFO3 Silver ThatLyingBastard.ogghttps://fallout.fandom.com/wiki/File:FO3_Silver_ThatLyingBastard.oggnoicon",
+      "index": "24"
+    },
+    {
+      "topic": "MegFFTLSilverOffer",
+      "topic_text": "You don't still offer your... services, do you?",
+      "emotion": "Sad 80",
+      "response_text": "No, sorry. I've left that part of my life behind.Play soundFO3 Silver LeftThatPart.ogghttps://fallout.fandom.com/wiki/File:FO3_Silver_LeftThatPart.oggnoicon",
+      "index": "26"
+    },
+    {
+      "topic": "MegFFTLSilverStory",
+      "topic_text": "What will you do now?",
+      "emotion": "Sad 70",
+      "response_text": "Who knows. Shoot myself up until I forget who I am?Play soundFO3 Silver WhoKnows.ogghttps://fallout.fandom.com/wiki/File:FO3_Silver_WhoKnows.oggnoicon",
+      "index": "27"
+    },
+    {
+      "topic": "SpeechChallengeFailure",
+      "topic_text": "SpeechChallengeFailure",
+      "emotion": "Disgust 60",
+      "response_text": "Look, I don't know who you are. I'm not just handing over my life's earnings to you!Play soundFO3 Silver DontKnowWhoYouAre.ogghttps://fallout.fandom.com/wiki/File:FO3_Silver_DontKnowWhoYouAre.oggnoicon",
+      "index": "29"
+    }
+  ],
+  "conversation": [],
+  "combat": []
+}

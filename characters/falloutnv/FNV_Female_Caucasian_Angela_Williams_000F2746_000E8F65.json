@@ -1,0 +1,300 @@
+{
+  "name": "Angela Williams",
+  "url": "/wiki/Angela_Williams",
+  "dialogue_name": "AngelaWilliams.txt",
+  "dialogue_url": "/wiki/AngelaWilliams.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000F2746",
+  "ref_id": "000E8F65",
+  "editor_id": "Angela Williams",
+  "location": "Camp McCarran terminal building",
+  "location_url": "/wiki/Camp_McCarran_terminal_building",
+  "descriptions": [
+    "Doctor Angela Williams is an NCR Office of Science and Industry (OSI) researcher who is a colleague of Thomas Hildern in 2281.",
+    "Raised on a cattle ranch out West, Angela Williams is a polite, fair and above all, competent member of the OSI team stationed in the Mojave. Speaking with a characteristic ranch twang, she received a comprehensive education from the Office of Science and Industry early in her life.",
+    "Her current assignment is to OSI East, as the head researcher on the Hoover Dam Project. Responsible for optimizing the power output of the dam, Williams knows every inch of the power grid between it and Shady Sands.",
+    "She's not particularly fond of her superior, Dr. Hildern, who seems more concerned with the advancement of himself and his agenda, rather than science. It's more than his personality too, as she's well aware of Hildern's tendency to take credit for the work of an entire team or throwing contractors under the proverbial bus in service of his ambition.",
+    "There Stands the Grass",
+    "PC Playstation 3 Xbox 360 If the Courier asks Angela's opinion of Thomas Hildern and the Speech check (25) succeeds, the Courier can leave the conversation and repeat this as many times as wanted, getting 25 XP every time. "
+  ],
+  "race": "Human",
+  "gender": "Female",
+  "affiliation": "Office of Science and Industry",
+  "role": "Head researcher forHoover Dampower optimization",
+  "detailed_location": "Camp McCarran terminal building",
+  "voice_actor": "Cindy Robinson",
+  "special": {
+    "Strength": 3,
+    "Perception": 6,
+    "Endurance": 3,
+    "Charisma": 4,
+    "Intelligence": 8,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "level": "1",
+  "tag_skills": [
+    {
+      "Explosives:": "32"
+    },
+    {
+      "Medicine:": "36"
+    },
+    {
+      "Science:": "36(41)"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Neutral",
+  "voice_type": "FemaleAdult07",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "Did Dr. Hildern... this really isn't any of my business, but... did he give you a job?",
+      "index": "1"
+    },
+    {
+      "topic": "VFreeformVault22AngelaKearnyTopic000",
+      "topic_text": "What is this place?",
+      "emotion": "Neutral 50",
+      "response_text": "This? The OSI lab. We don't get many visitors. The smell puts people off, I think.",
+      "index": "13"
+    },
+    {
+      "topic": "VFreeformVault22AngelaKearnyTopic001",
+      "topic_text": "Are you a scientist?",
+      "emotion": "Neutral 50",
+      "response_text": "I know I don't sound the part. Get raised by brahmin ranchers, and you never lose the twang. Drives Hildern crazy.",
+      "index": "15"
+    },
+    {
+      "topic": "VFreeformVault22AngelaKearnyTopic002",
+      "topic_text": "What's your role here?",
+      "emotion": "Neutral 50",
+      "response_text": "Head researcher. Mostly on the Dam project, but I help out on other things, when they need me. Got to be flexible.",
+      "index": "18"
+    },
+    {
+      "topic": "VFreeformVault22AngelaKearnyTopic003",
+      "topic_text": "Need help with anything?",
+      "emotion": "Neutral 50",
+      "response_text": "You mean... give you work? No, that'd be up to the administrator. Hildern. He's back there in his office.",
+      "index": "19"
+    },
+    {
+      "topic": "VFreeformVault22AngelaKearnyTopic004",
+      "topic_text": "Mercenaries? What for?",
+      "emotion": "Neutral 50",
+      "response_text": "I can't say. We're not supposed to talk about the research. Not the details. If you're interested, I'm sure he'd see you.",
+      "index": "21"
+    },
+    {
+      "topic": "VFreeformVault22AngelaKearnyTopic005",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Nice to meet you. If you need anything, I'm almost always in the lab.",
+      "index": "22"
+    },
+    {
+      "topic": "VFreeformVault22AngelaKearnyTopic006",
+      "topic_text": "Yes. He asked me to get some data from Vault 22.",
+      "emotion": "Neutral 50",
+      "response_text": "I shouldn’t say anything, I know that. But you’re not the first person Hildern's sent out to the vault.",
+      "index": "23"
+    },
+    {
+      "topic": "VFreeformVault22AngelaKearnyTopic007",
+      "topic_text": "Why so interested?",
+      "emotion": "Neutral 50",
+      "response_text": "Not interested. More concerned. It's just... you're not the first person he's sent to Vault 22. And I know he'd never tell you.{player just asked why she was interested}",
+      "index": "27"
+    },
+    {
+      "topic": "VFreeformVault22AngelaKearnyTopic008",
+      "topic_text": "You're right. It's none of your business.",
+      "emotion": "Neutral 50",
+      "response_text": "We shouldn't even be talking about this, I know. But I think someone should tell you. You're not the first one he's sent to Vault 22.",
+      "index": "28"
+    },
+    {
+      "topic": "VFreeformVault22AngelaKearnyTopic009",
+      "topic_text": "No. Hildern didn't mention anyone else.",
+      "emotion": "Neutral 50",
+      "response_text": "But now he's hired you. Which means one of two things. Either he heard back from Keely, and she failed, or he's given up on her.",
+      "index": "29"
+    },
+    {
+      "topic": "VFreeformVault22AngelaKearnyTopic010",
+      "topic_text": "All right. I'll look for her.",
+      "emotion": "Neutral 50",
+      "response_text": "I had a good feeling about you. Moment you walked in. I mean it.{big smile - player agreed to help her}",
+      "index": "32"
+    },
+    {
+      "topic": "VFreeformVault22AngelaKearnyTopic011",
+      "topic_text": "Maybe Hildern and I need to have another talk.",
+      "emotion": "Neutral 50",
+      "response_text": "No, wait! I don't mean to see any harm come to Dr. Hildern. Unless by \"talk\" you just mean... talk.",
+      "index": "33"
+    },
+    {
+      "topic": "VFreeformVault22AngelaKearnyTopic012",
+      "topic_text": "It never came up. Doesn't bother me.",
+      "emotion": "Neutral 50",
+      "response_text": "No, I knew the danger wouldn't. I'm not trying to scare you off the job.",
+      "index": "34"
+    },
+    {
+      "topic": "VFreeformVault22AngelaKearnyTopic013",
+      "topic_text": "I'll try, but no promises.",
+      "emotion": "Neutral 50",
+      "response_text": "That's all I ask. She might even be able to help you. As long as you don't speak too well of Dr. Hildern.",
+      "index": "35"
+    },
+    {
+      "topic": "VFreeformVault22AngelaKearnyTopic014",
+      "topic_text": "Not my problem. Keely is on her own.",
+      "emotion": "Neutral 50",
+      "response_text": "I know it's not your business to fend for anyone but yourself. If not for her, do it for the caps. That's all I'm asking.",
+      "index": "36"
+    },
+    {
+      "topic": "VFreeformVault22AngelaKearnyTopic015",
+      "topic_text": "I have some questions.",
+      "emotion": "Neutral 50",
+      "response_text": "Of course. Anything.",
+      "index": "37"
+    },
+    {
+      "topic": "VFreeformVault22AngelaKearnyTopic016",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Right. Good luck.",
+      "index": "38"
+    },
+    {
+      "topic": "VFreeformVault22AngelaKearnyTopic017",
+      "topic_text": "Can you tell me anything else about Keely?",
+      "emotion": "Neutral 50",
+      "response_text": "Keely's brilliant... an absolute genius. She plays at being mean, but it's all a front.",
+      "index": "39"
+    },
+    {
+      "topic": "VFreeformVault22AngelaKearnyTopic018",
+      "topic_text": "I hear the food around here is pretty bad.",
+      "emotion": "Neutral 50",
+      "response_text": "It's foul, to tell the truth. Most people try to get what they can from the outside... even if it's just a smuggled candy bar, now and then.",
+      "index": "41"
+    },
+    {
+      "topic": "VFreeformVault22AngelaKearnyTopic019",
+      "topic_text": "What do you think of Dr. Hildern?",
+      "emotion": "Neutral 50",
+      "response_text": "The Director? He's... very well-spoken. And... knowledgeable.{Trying not to say something negative about her boss.}",
+      "index": "43"
+    },
+    {
+      "topic": "VFreeformVault22AngelaKearnyTopic020",
+      "topic_text": "Hildern mentioned the Followers of the Apocalypse...",
+      "emotion": "Neutral 50",
+      "response_text": "My father used say good things about them, but that was years ago... back when they'd teach farmers and ranchers about crop rotation and the like.",
+      "index": "44"
+    },
+    {
+      "topic": "VFreeformVault22AngelaKearnyTopic021",
+      "topic_text": "What's your role here?",
+      "emotion": "Neutral 50",
+      "response_text": "Head researcher. Mostly on the Dam project, but I help out on other things, when they need me. Got to be flexible.",
+      "index": "47"
+    },
+    {
+      "topic": "VFreeformVault22AngelaKearnyTopic022",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Right. Stay safe.",
+      "index": "48"
+    },
+    {
+      "topic": "VFreeformVault22AngelaKearnyTopic023",
+      "topic_text": "Exactly how old is Keely?",
+      "emotion": "Neutral 50",
+      "response_text": "I couldn't get her to say. But she talked about the war - the great war, when the bombs fell - like she'd been there.",
+      "index": "49"
+    },
+    {
+      "topic": "VFreeformVault22AngelaKearnyTopic024",
+      "topic_text": "That's not much of an endorsement. What do you *really* think?",
+      "emotion": "Neutral 50",
+      "response_text": "[FAILED] Wouldn't be right for me to say. He's my boss... and he took a chance, bringing me out here as lead researcher.",
+      "index": "51"
+    },
+    {
+      "topic": "VFreeformVault22AngelaKearnyTopic025",
+      "topic_text": "He seemed focused on results. Maybe not so much on people.",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] He's not what you'd call... warm. Unless he wants something from you. And even then, it's kind of a cold warm.",
+      "index": "52"
+    },
+    {
+      "topic": "VFreeformVault22AngelaKearnyTopic026",
+      "topic_text": "So Dr. Hildern takes credit for your work?",
+      "emotion": "Neutral 50",
+      "response_text": "He sure does. Everyone knows it. I've just got to endure this job until the project is finished.",
+      "index": "54"
+    },
+    {
+      "topic": "VFreeformVault22AngelaKearnyTopic027",
+      "topic_text": "Keely's dead. But I found her research notes.",
+      "emotion": "Neutral 50",
+      "response_text": "Dead? But that's... terrible. You're sure? You saw her body? With the way she looks, maybe she just seemed dead, and she really wasn't...",
+      "index": "57"
+    },
+    {
+      "topic": "VFreeformVault22AngelaKearnyTopic028",
+      "topic_text": "How do Keely and Hildern get along?",
+      "emotion": "Neutral 50",
+      "response_text": "Like a brahmin and a deathclaw. Though I'm not sure which would be which. Bad analogy, maybe - they're both deathclaws, in their way.",
+      "index": "60"
+    },
+    {
+      "topic": "VFreeformVault22AngelaKearnyTopic029",
+      "topic_text": "Keely's dead.",
+      "emotion": "Neutral 50",
+      "response_text": "Dead? But that's... terrible. You're sure? You saw her body? With the way she looks, maybe she just seemed dead, and she really wasn't...{shocked, disbelieving}",
+      "index": "63"
+    },
+    {
+      "topic": "VFreeformVault22AngelaKearnyTopic030",
+      "topic_text": "<Lie> Keely is safe. She's just finishing up some research in the vault.",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] She is? But she didn't call in. Keely wouldn't waste a chance to yell at Dr. Hildern.{doesn't quite believe the player}",
+      "index": "66"
+    },
+    {
+      "topic": "VFreeformVault22AngelaKearnyTopic031",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Thanks again. Really. I owe you.{earnest}",
+      "index": "69"
+    },
+    {
+      "topic": "VFreeformVault22AngelaKearnyTopic032",
+      "topic_text": "<Lie> Yes, Keely's fine. We escaped the Vault together.",
+      "emotion": "Neutral 50",
+      "response_text": "[FAILED] No. That can't be right. Keely would've called in.{doesn't believe the player's story}",
+      "index": "70"
+    }
+  ],
+  "conversation": [],
+  "combat": []
+}

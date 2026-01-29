@@ -1,0 +1,111 @@
+{
+  "name": "Head Scribe Lars Taggart",
+  "url": "/wiki/Lars_Taggart",
+  "dialogue_name": "LarsTaggart.txt",
+  "dialogue_url": "/wiki/LarsTaggart.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000E2F83",
+  "ref_id": "000E2F89",
+  "editor_id": "LarsTaggart",
+  "location": "Hidden Valley",
+  "location_url": "/wiki/Hidden_Valley",
+  "descriptions": [
+    "Head Scribe Lars Taggart is a member of the Mojave chapter of the Brotherhood of Steel, residing within the Hidden Valley bunker in the Mojave Wasteland. He appears in Fallout: New Vegas.",
+    "While his position as head scribe indicates Taggart is meant to be the leading authority of all scribe activities in the bunker, including overseeing research, cataloging data and processing recovered technology, the man consistently neglects his duties according to his subordinate Senior Scribe Linda Schuler, forcing her to pick up the slack instead while remarking about how she is head scribe in all but rank;",
+    "Taggart primarily spends his time fiddling with and coding new virtual reality simulations, leaving it available as a vulnerability.",
+    "The character's name and personality are a nod to the character of \"James Taggart\" from the film Atlas Shrugged.",
+    "Playstation 3 Xbox 360 He shares the same bug with Nolan McNamara, Hardin and Ibsen, saying \"Later\" the same way that Antony should."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Brotherhood of Steel(Mojave chapter)",
+  "role": "Scientist",
+  "detailed_location": "Hidden Valley bunker",
+  "voice_actor": "Yuri Lowenthal",
+  "special": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 5,
+    "Intelligence": 5,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "level": "1",
+  "tag_skills": [
+    {
+      "Guns:": "30"
+    },
+    {
+      "Science:": "30"
+    },
+    {
+      "Unarmed:": "28"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "70"
+    },
+    {
+      "Dam. Threshold:": "0(2)"
+    }
+  ],
+  "karma": "Neutral",
+  "voice_type": "MaleAdult01Default",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "Now that McNamara's lifted that silly lockdown of his, perhaps people around here will come to appreciate our training simulations.",
+      "index": "1"
+    },
+    {
+      "topic": "HVTaggartAskAboutSim",
+      "topic_text": "Did you make the training VR yourself?",
+      "emotion": "Neutral 50",
+      "response_text": "Not far from it. When we reclaimed this bunker, I found a number of VR tapes. Most were corrupted, but a few programs still ran.",
+      "index": "6"
+    },
+    {
+      "topic": "HVTaggartVR",
+      "topic_text": "Do all of the brothers use this equipment?",
+      "emotion": "Neutral 50",
+      "response_text": "Everyone in the base has to spend a minimum of five hours a week running tactical simulations, but outside that, interest is scarce.",
+      "index": "8"
+    },
+    {
+      "topic": "HVTaggartWhoAreYou",
+      "topic_text": "And you are?",
+      "emotion": "Neutral 50",
+      "response_text": "Ah, the outsider. I suppose it's too much to ask that jarhead Ramos to keep outsiders away from my research.",
+      "index": "12"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "HVTaggartVeronica01",
+      "topic_text": "HVTaggartVeronica01",
+      "emotion": "Neutral 50",
+      "response_text": "Y-Yes. Well, it's, ah, nice to see you, too, Veronica.{it's not}",
+      "index": "14"
+    },
+    {
+      "topic": "HVTaggartVeronica02",
+      "topic_text": "HVTaggartVeronica02",
+      "emotion": "Neutral 50",
+      "response_text": "Well, I{slightly stressed}have been working with some UV lights in the pods.",
+      "index": "16"
+    }
+  ],
+  "combat": []
+}

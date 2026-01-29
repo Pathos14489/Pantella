@@ -1,0 +1,98 @@
+{
+  "name": "Knight Captain Durga",
+  "url": "/wiki/Durga",
+  "dialogue_name": "KnightSergeantDurga.txt",
+  "dialogue_url": "/wiki/KnightSergeantDurga.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": true,
+  "can_repair": true,
+  "can_be_companion": false,
+  "base_id": "0001E71A",
+  "ref_id": "0001E71C",
+  "editor_id": "KnightSergeantDurga",
+  "location": "Citadel armory",
+  "location_url": "/wiki/The_Citadel#Citadel_armory",
+  "descriptions": [
+    "Knight Captain Durga is the Brotherhood of Steel quartermaster based out of the Citadel in Fallout 3.",
+    "The Citadel's quartermaster, Knight Captain Durga is not entirely pleased with her position in the Brotherhood of Steel, and makes no attempt to hide it in her interactions.",
+    "Regardless, she takes her role as quartermaster very seriously, and will adamantly refuse to trade with the Lone Wanderer without Elder Lyons' say-so, immediately ending the conversation and informing them of the elder's instructions forbidding trade with outsiders.",
+    "Unlike most other denizens of the Citadel, she refrains from \"archaic\" language (the style of speech employed by Brotherhood of Steel members; such as Star Paladin Cross) in favor of more \"modern\" type speech (\"yeah,\" \"gotcha,\" etc.).",
+    "She is located in the backroom of the armory in the Citadel laboratory. She never sleeps at any point of the day, even though a bed can clearly be seen behind her.",
+    "One needs the permission of Elder Lyons to trade with her. After completing Take it Back!, this permission is no longer needed."
+  ],
+  "race": "Human",
+  "gender": "Female",
+  "affiliation": "Brotherhood of Steel",
+  "role": "Quartermaster",
+  "detailed_location": "Citadel armory",
+  "voice_actor": "Jan Johns",
+  "special": {
+    "Strength": 4,
+    "Perception": 4,
+    "Endurance": 4,
+    "Charisma": 7,
+    "Intelligence": 6,
+    "Agility": 4,
+    "Luck": 6
+  },
+  "level": "4→7→11",
+  "tag_skills": [
+    {
+      "Barter:": "50→66→87"
+    },
+    {
+      "Lockpick:": "44→60→81"
+    },
+    {
+      "Speech:": "50→66→87"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Good",
+  "voice_type": "FemaleAdult04DC",
+  "geck_race": "Hispanic",
+  "topics": [
+    {
+      "topic": "CitDurgaRepair",
+      "topic_text": "Can you repair my gear?",
+      "emotion": "Neutral 50",
+      "response_text": "I should let you know: I'm not going to use any of our equipment to provide parts for you. You'll have to pay for them.",
+      "index": "1"
+    },
+    {
+      "topic": "CitDurgaTrade",
+      "topic_text": "Can I see what you have to trade?",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah, I suppose.",
+      "index": "4"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "Quartermaster Durga here, stranger. I have to say, I'm not sure what you're doing in my armory.",
+      "index": "6"
+    },
+    {
+      "topic": "TLDurgaBarter",
+      "topic_text": "I'd like to buy something.",
+      "emotion": "Neutral 50",
+      "response_text": "I received word from Elder Lyons. He says that you have permission to trade with us. Good for you.",
+      "index": "15"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "BarterExit",
+      "topic_text": "BarterExit",
+      "emotion": "Neutral 50",
+      "response_text": "Don't forget to sign out.",
+      "index": "19"
+    }
+  ],
+  "combat": []
+}

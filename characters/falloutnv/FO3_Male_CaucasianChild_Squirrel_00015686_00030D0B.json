@@ -1,0 +1,372 @@
+{
+  "name": "Squirrel",
+  "url": "/wiki/Squirrel_(Fallout_3)",
+  "dialogue_name": "Squirrel.txt",
+  "dialogue_url": "/wiki/Squirrel.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "00015686",
+  "ref_id": "00030D0B",
+  "editor_id": "Squirrel",
+  "location": "Child slave house",
+  "location_url": "/wiki/Child_slave_house",
+  "descriptions": [
+    "Squirrel (real name Peter) is a 13-year old boy from Little Lamplight who needs to be saved from Paradise Falls in 2277.",
+    "He is talented with computers and electronics; as a result, he is a valued member of the scavenging team because he is the only one able to tell which hardware is worth taking. He enjoys reading and playing with gadgets. He is also rather ill, often seeing Lucy for medication.",
+    "He was recently sold into slavery by Rip Smithy, but he is devising a plan to escape.",
+    "He says his nickname came from his inquisitive nature, but other Lamplighters say it's because he's \"nuts\". His best friend is Sammy.",
+    "Rescue from Paradise",
+    "Rescue from Paradise: Squirrel is the brains behind the escape from Paradise Falls. He will task the player with everything they need to do to get them out."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Little Lamplight",
+  "role": "SlaveLittle Lamplight citizen",
+  "detailed_location": "Child slave houseParadise FallsLittle Lamplight (optional)",
+  "voice_actor": "Sean McCoy",
+  "special": {
+    "Strength": 3,
+    "Perception": 4,
+    "Endurance": 3,
+    "Charisma": 3,
+    "Intelligence": 3,
+    "Agility": 7,
+    "Luck": 7
+  },
+  "level": "1",
+  "tag_skills": [
+    {
+      "Explosives:": "29"
+    },
+    {
+      "Small Guns:": "35"
+    },
+    {
+      "Sneak:": "35"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "20"
+    },
+    {
+      "Critical Chance:": "7%"
+    },
+    {
+      "Unarmed Dam.:": "1.10"
+    },
+    {
+      "Poison Resist.:": "10%"
+    },
+    {
+      "Rad. Resist.:": "4%"
+    },
+    {
+      "Carry Weight:": "180"
+    },
+    {
+      "Damage Res.:": "5%"
+    }
+  ],
+  "karma": "Good",
+  "voice_type": "MaleChild01DC",
+  "geck_race": "CaucasianChild",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "Man, that sure was something. You're pretty brave, mungo!",
+      "index": "1"
+    },
+    {
+      "topic": "LLNicknames",
+      "topic_text": "Why are you called Squirrel?",
+      "emotion": "Happy 50",
+      "response_text": "I like to think it's because of my inquisitive and charming nature, as well as my natural climbing ability.{Trying to sound important and cool.}",
+      "index": "34"
+    },
+    {
+      "topic": "MQ07CoastClearChoice1",
+      "topic_text": "Okay, the guard's out of the way. Now get moving!",
+      "emotion": "Neutral 50",
+      "response_text": "Oh, don't worry. We're outta here. Me and Sammy can make it, no problem. The drain in the bathroom is small; we'll fit through, but mungos can't.",
+      "index": "37"
+    },
+    {
+      "topic": "MQ07CoastClearChoice2",
+      "topic_text": "I took care of the guard. Is it safe to leave?",
+      "emotion": "Neutral 50",
+      "response_text": "Yep, me and Sammy can get out no problem. We're good at sneaking. They'll never spot us.",
+      "index": "39"
+    },
+    {
+      "topic": "MQ07CoastClearChoice3",
+      "topic_text": "I did my part. You're on your own now.",
+      "emotion": "Neutral 50",
+      "response_text": "Thanks, I guess. Me and Sammy should be able to make it out of here now.",
+      "index": "42"
+    },
+    {
+      "topic": "MQ07ExplainPenny1",
+      "topic_text": "What? Why won't she leave?",
+      "emotion": "Neutral 50",
+      "response_text": "This mungo, Rory Maclaren. She got all sweet on him or something. I dunno, it's some stupid girl thing.",
+      "index": "45"
+    },
+    {
+      "topic": "MQ07ExplainPenny2",
+      "topic_text": "What the hell is her problem?",
+      "emotion": "Neutral 50",
+      "response_text": "Beats me. I don't get girls at ALL.",
+      "index": "48"
+    },
+    {
+      "topic": "MQ07ExplainPenny3",
+      "topic_text": "Maybe I can talk to her. Can you tell me what's going on?",
+      "emotion": "Neutral 50",
+      "response_text": "She went all soft on Rory Maclaren. He's this guy that got captured. Not bad for a Mungo, but Penny really likes him.",
+      "index": "50"
+    },
+    {
+      "topic": "MQ07SquirrelGuardFortyDead",
+      "topic_text": "Let's just say Forty won't be bothering you or anyone else again.",
+      "emotion": "Happy 50",
+      "response_text": "Hey hey, look at Mr. Mungo!{impressed}",
+      "index": "53"
+    },
+    {
+      "topic": "MQ07SquirrelGuardHow",
+      "topic_text": "How am I supposed to get rid of the guards?",
+      "emotion": "Neutral 50",
+      "response_text": "Man, can't you think of anything on your own?",
+      "index": "57"
+    },
+    {
+      "topic": "MQ07SquirrelGuardNoLuckYet",
+      "topic_text": "No luck yet.",
+      "emotion": "Neutral 50",
+      "response_text": "Come on, mungo! How hard can it be?",
+      "index": "60"
+    },
+    {
+      "topic": "MQ07SquirrelGuardNoWay",
+      "topic_text": "Forget it. This is ridiculous.",
+      "emotion": "Neutral 50",
+      "response_text": "This is bull, man. You gotta help us out.",
+      "index": "61"
+    },
+    {
+      "topic": "MQ07SquirrelGuardOnIt",
+      "topic_text": "Okay, I'm on it.",
+      "emotion": "Neutral 50",
+      "response_text": "Okay. Don't do anything stupid.",
+      "index": "63"
+    },
+    {
+      "topic": "MQ07SquirrelGuardPipeDown",
+      "topic_text": "Pipe down, shorty. I'm going to take care of it.",
+      "emotion": "Neutral 50",
+      "response_text": "What's the matter, mungo? Can't handle it?",
+      "index": "65"
+    },
+    {
+      "topic": "MQ07SquirrelLeavePennySPEECH",
+      "topic_text": "If she won't go, maybe it's time to leave her behind. You can't save everyone.",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah, maybe you're right. Me and Sammy can leave, at least.",
+      "index": "67"
+    },
+    {
+      "topic": "MQ07SquirrelOneStepChoice1",
+      "topic_text": "Okay, great. What's next?",
+      "emotion": "Neutral 50",
+      "response_text": "Well, with the terminal, I can turn off the collars and open the gate. But they're not gonna just let us walk out of here, you know?",
+      "index": "69"
+    },
+    {
+      "topic": "MQ07SquirrelOneStepChoice2",
+      "topic_text": "\"One step\"? What the hell, kid.",
+      "emotion": "Neutral 50",
+      "response_text": "Hey mungo, I never said the terminal was the only thing we'd need to do. It's important, but it won't get us out that front gate.",
+      "index": "72"
+    },
+    {
+      "topic": "MQ07SquirrelOneStepChoice3",
+      "topic_text": "I'm getting tired of this.",
+      "emotion": "Neutral 50",
+      "response_text": "Hey, if you got any better ideas, you go right ahead and get to work. Me? This is the best I got.",
+      "index": "74"
+    },
+    {
+      "topic": "MQ07SquirrelPennyWhatNow",
+      "topic_text": "So what do I do?",
+      "emotion": "Neutral 50",
+      "response_text": "Hell, I dunno. Go talk to her. Try and get her to get out while she can.",
+      "index": "77"
+    },
+    {
+      "topic": "MQ07SquirrelPennyWhatNow2",
+      "topic_text": "Why is this my problem?",
+      "emotion": "Neutral 50",
+      "response_text": "Hey, you're the one that said you wanted to get us out of here.",
+      "index": "79"
+    },
+    {
+      "topic": "MQ07SquirrelPlanKeepGoing",
+      "topic_text": "I'm with you so far. Keep going.",
+      "emotion": "Neutral 50",
+      "response_text": "So I found this old terminal in the building here. Dusty, but it turns on with a little fixing. Like I said, I'm super smart.",
+      "index": "82"
+    },
+    {
+      "topic": "MQ07SquirrelPlanSkipToThePoint",
+      "topic_text": "Skip to the point, short stuff.",
+      "emotion": "Neutral 50",
+      "response_text": "Fine. But I'm telling you, it's good stuff. Really.",
+      "index": "85"
+    },
+    {
+      "topic": "MQ07SquirrelPlanTellMeEverything",
+      "topic_text": "Okay, tell me the whole plan. All of it.",
+      "emotion": "Neutral 50",
+      "response_text": "Okay, cool. You'll like it, really. It's going to work, I know it.",
+      "index": "88"
+    },
+    {
+      "topic": "MQ07SquirrelPlanWhatDoIDo",
+      "topic_text": "I just need to know what to do right now.",
+      "emotion": "Disgust 10",
+      "response_text": "Man, you're cranky.{annoyed}",
+      "index": "91"
+    },
+    {
+      "topic": "MQ07SquirrelTLNotGoodWithComputers",
+      "topic_text": "I'm not that good with computers...",
+      "emotion": "Neutral 50",
+      "response_text": "Oh, come on. Aren't you mungos good for anything? I'm a kid, and I can do it. Why can't you?{annoyed}",
+      "index": "94"
+    },
+    {
+      "topic": "MQ07SquirrelTLPlanAnotherWay",
+      "topic_text": "Isn't there another way to get you out?",
+      "emotion": "Neutral 50",
+      "response_text": "You're really dumb, aren't you?",
+      "index": "98"
+    },
+    {
+      "topic": "MQ07SquirrelTLPlanNotDoingIt",
+      "topic_text": "Your plan is crazy. I'm not doing it.",
+      "emotion": "Neutral 50",
+      "response_text": "Great. Then that means we're still stuck in here, and you're an asshole.",
+      "index": "100"
+    },
+    {
+      "topic": "MQ07SquirrelTLPlanOkay",
+      "topic_text": "Okay, I'll see what I can do.",
+      "emotion": "Neutral 50",
+      "response_text": "Gee, thanks. Don't work too hard, okay?{extremely sarcastic}",
+      "index": "101"
+    },
+    {
+      "topic": "MQ07SquirrelTLTerminalWorking",
+      "topic_text": "All done. The terminal should work for you now.",
+      "emotion": "Happy 50",
+      "response_text": "All right! You're okay for a mungo, you know that?",
+      "index": "102"
+    },
+    {
+      "topic": "MQ07SquirrelTLTerminalWorking2",
+      "topic_text": "Yeah, it's working. Am I done now?",
+      "emotion": "Neutral 50",
+      "response_text": "Nope. Good job on the terminal, but we're only one step of the way there.",
+      "index": "104"
+    },
+    {
+      "topic": "MQ07SquirrelTLTerminalWorking3",
+      "topic_text": "Maybe... Why don't you go for a jog and see if your head explodes.",
+      "emotion": "Neutral 50",
+      "response_text": "Ha ha. Real funny, mungo.",
+      "index": "105"
+    },
+    {
+      "topic": "MQ07SquirrelTLWheresTheTerminal",
+      "topic_text": "Where's the terminal I need to use?",
+      "emotion": "Neutral 50",
+      "response_text": "I told you, it's in the boss guy's room. You gotta sneak in there or something. That's up to you to figure out, mungo.",
+      "index": "107"
+    },
+    {
+      "topic": "SpeechChallengeFailure",
+      "topic_text": "SpeechChallengeFailure",
+      "emotion": "Neutral 50",
+      "response_text": "Penny's one of us. She's gotta come too.",
+      "index": "108"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "I have to go now.",
+      "emotion": "Neutral 50",
+      "response_text": "Don't screw up, okay?",
+      "index": "109"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Neutral 50",
+      "response_text": "Ha ha! We're outta that shitbox!",
+      "index": "112"
+    },
+    {
+      "topic": "LLFoodConv1",
+      "topic_text": "LLFoodConv1",
+      "emotion": "Fear 25",
+      "response_text": "Can I have mine without much dirt on it? I think I'm allergic.",
+      "index": "117"
+    },
+    {
+      "topic": "LLRandomConv1",
+      "topic_text": "LLConversation1",
+      "emotion": "Happy 25",
+      "response_text": "Hey there! You doing alright?",
+      "index": "118"
+    },
+    {
+      "topic": "LLRandomConv2",
+      "topic_text": "LLConversation2",
+      "emotion": "Happy 25",
+      "response_text": "I think I'm catching a cough. But I'll be fine.{A couple weak coughs}",
+      "index": "119"
+    },
+    {
+      "topic": "LLRandomConvEnding",
+      "topic_text": "LLRandomConvEnding",
+      "emotion": "Happy 25",
+      "response_text": "Yeah, I see. Catch you later, I guess.{A couple weak coughs}",
+      "index": "120"
+    },
+    {
+      "topic": "LLWhatsUp1",
+      "topic_text": "LLWhatsUp1",
+      "emotion": "Happy 25",
+      "response_text": "Hey, what's happening?",
+      "index": "121"
+    },
+    {
+      "topic": "LLWhatsUp2",
+      "topic_text": "LLWhatsUp2",
+      "emotion": "Happy 25",
+      "response_text": "Just playing around, you know?{A couple weak coughs}",
+      "index": "122"
+    }
+  ],
+  "combat": []
+}

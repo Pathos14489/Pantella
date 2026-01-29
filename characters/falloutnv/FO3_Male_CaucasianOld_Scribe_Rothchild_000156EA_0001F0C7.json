@@ -1,0 +1,635 @@
+{
+  "name": "Scribe Rothchild",
+  "url": "/wiki/Reginald_Rothchild",
+  "dialogue_name": "ScribeRothchild.txt",
+  "dialogue_url": "/wiki/ScribeRothchild.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000156EA",
+  "ref_id": "0001F0C7",
+  "editor_id": "ScribeRothchild",
+  "location": "Citadel laboratory",
+  "location_url": "/wiki/Citadel_laboratory",
+  "descriptions": [
+    "Reginald Rothchild is the senior scribe of the Brotherhood of Steel in 2277.",
+    "Scribe Rothchild is in charge of the scribes of the Brotherhood of Steel in the Capital Wasteland,",
+    "Despite that, Rothchild was a part of Star Paladin Owyn Lyons' expedition to Washington, D.C. in 2255.",
+    "Success proved elusive in his own project as well. Despite intense efforts, Rothchild and the rest of his team failed to reactivate Liberty Prime for over twenty years. As he worked on Liberty Prime, he observed the steady deterioration of the chapter under Lyons' leadership and the changes introduced to their mission.\nEspecially after Lyons' insubordination led to the West cutting the D.C. bunker loose, denying them reinforcements and shutting off communications,",
+    "In this situation, the conflict with the Enclave seemed like a death knell for the chapter. However, with the arrival of Madison Li, Rothchild decided to continue his work in a last-ditch attempt at reactivating Liberty Prime.",
+    "When the Enclave finally managed to destroy Liberty Prime by luring him to their satellite relay station in Rockland, Rothchild was heartbroken. The loss set the chapter back years and removed their only significant advantage over the Enclave, which remained a potent threat even with the loss of the purifier and Raven Rock.",
+    "After the fall of Adams AFB, Rothchild returned to his roots, starting work on rebuilding Liberty Prime. Although the task was daunting, requiring immense amounts of salvage to restore its complex systems, especially electrical components and optics, he rose to the challenge.",
+    "He can usually be found in the Citadel laboratory.",
+    "Reginald Rothchild appears in Fallout 3, its add-on Broken Steel, Fallout Shelter, Fallout Shelter Online, and Fallout: Wasteland Warfare."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Brotherhood of Steel",
+  "role": "Scientist",
+  "detailed_location": "Laboratory,Citadel",
+  "voice_actor": "Duncan Hood",
+  "special": {
+    "Strength": 3,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 6,
+    "Intelligence": 7,
+    "Agility": 4,
+    "Luck": 6
+  },
+  "mod_special_values": {
+    "Strength": 6,
+    "Perception": 7,
+    "Endurance": 7,
+    "Charisma": 11,
+    "Intelligence": 6,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "level": "1",
+  "tag_skills": [
+    {
+      "Medicine:": "34"
+    },
+    {
+      "Science:": "34"
+    },
+    {
+      "Speech:": "32"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "25"
+    },
+    {
+      "Critical Chance:": "6%"
+    },
+    {
+      "Unarmed Dam.:": "1.15"
+    },
+    {
+      "Poison Resist.:": "15%"
+    },
+    {
+      "Rad. Resist.:": "6%"
+    },
+    {
+      "Carry Weight:": "180"
+    },
+    {
+      "Damage Res.:": "0%(2%)"
+    }
+  ],
+  "karma": "Good",
+  "geck_race": "CaucasianOld",
+  "topics": [
+    {
+      "topic": "BoSHowLongBeenHere",
+      "topic_text": "How long have you been here?",
+      "emotion": "Neutral 50",
+      "response_text": "We arrived here in '55. Established ourselves in the Citadel within the first few months. The Elder has kept us busy since then.",
+      "index": "1"
+    },
+    {
+      "topic": "BoSIntro",
+      "topic_text": "I'd like to know more about the Brotherhood of Steel.",
+      "emotion": "Neutral 50",
+      "response_text": "I'm afraid you're asking the wrong person.",
+      "index": "2"
+    },
+    {
+      "topic": "BoSRothChildWhySoreSubject",
+      "topic_text": "Why is that a sore subject?",
+      "emotion": "Neutral 50",
+      "response_text": "Much has happened in the 23 years since we left the west coast. Our mission has changed in that time.",
+      "index": "4"
+    },
+    {
+      "topic": "BoSRothchildCommunicationHard",
+      "topic_text": "It must be difficult to communicate with the West Coast.",
+      "emotion": "Neutral 50",
+      "response_text": "Indeed it is. Especially when they refuse any attempts at communication.{wry}",
+      "index": "6"
+    },
+    {
+      "topic": "BoSRothchildSorryNevermind",
+      "topic_text": "Sorry. Never mind.",
+      "emotion": "Neutral 50",
+      "response_text": "No need to apologize.",
+      "index": "7"
+    },
+    {
+      "topic": "BoSRothchildSorrytoBringItUp",
+      "topic_text": "Sorry to have brought it up.",
+      "emotion": "Neutral 50",
+      "response_text": "You are an outsider. You had no way of knowing.",
+      "index": "8"
+    },
+    {
+      "topic": "BoSRothchildTellMeAnyway",
+      "topic_text": "I'd like to hear what you have to say anyway.",
+      "emotion": "Neutral 50",
+      "response_text": "If you insist. What do you want to know?",
+      "index": "9"
+    },
+    {
+      "topic": "BoSRothchildWhatKindofChanges",
+      "topic_text": "What kind of changes?",
+      "emotion": "Neutral 50",
+      "response_text": "We were dispatched with a specific mission. We were sent to locate and secure any technology remaining from before the war.",
+      "index": "10"
+    },
+    {
+      "topic": "BoSRothchildWhyWrongPerson",
+      "topic_text": "Why are you the wrong person to ask?",
+      "emotion": "Neutral 50",
+      "response_text": "Predominantly because the Elder won't like some of what I have to say.{wry}",
+      "index": "15"
+    },
+    {
+      "topic": "BoSWhyHere",
+      "topic_text": "Why are you here in the Capital Wasteland?",
+      "emotion": "Neutral 50",
+      "response_text": "Well, that all depends on who you ask.{wry}",
+      "index": "17"
+    },
+    {
+      "topic": "BosBailOut",
+      "topic_text": "That's all I wanted to know.",
+      "emotion": "Neutral 50",
+      "response_text": "Was there something else, then?",
+      "index": "20"
+    },
+    {
+      "topic": "BosRestofBoSIf you're just a part of the Brotherhood, where's the rest of it?",
+      "topic_text": "You seem to have a pretty small organization.",
+      "emotion": "Neutral 50",
+      "response_text": "The Brotherhood of Steel is bigger than what you see here. We're only a small... division, you could say.{wry}",
+      "index": "21"
+    },
+    {
+      "topic": "BosRothChildWhereRestofBoS",
+      "topic_text": "Then where's the rest of the Brotherhood?",
+      "emotion": "Neutral 50",
+      "response_text": "The West Coast, unless something has changed.",
+      "index": "23"
+    },
+    {
+      "topic": "BosRothchildChangesSoundGood",
+      "topic_text": "Those sound like pretty good changes to me.",
+      "emotion": "Neutral 50",
+      "response_text": "You're an outsider. I don't expect you to understand.",
+      "index": "26"
+    },
+    {
+      "topic": "BosRothchildCommunicationWhatHappened",
+      "topic_text": "Why, what happened?",
+      "emotion": "Neutral 50",
+      "response_text": "Lines of communication were severed years ago. The Western Elders have washed their hands of us.",
+      "index": "30"
+    },
+    {
+      "topic": "BosRothchildLyonsDecision",
+      "topic_text": "He's in charge, so it's his decision, right?",
+      "emotion": "Neutral 50",
+      "response_text": "He's in charge of this detachment, yes. He's not in charge of the Brotherhood.",
+      "index": "31"
+    },
+    {
+      "topic": "BosRothchildSoundLikeBadThing",
+      "topic_text": "You make saving people sound like a bad thing.",
+      "emotion": "Neutral 50",
+      "response_text": "It wasn't why we were sent here. Good or bad has nothing to do with it.",
+      "index": "35"
+    },
+    {
+      "topic": "BosRothchildWhatRepercussions",
+      "topic_text": "What do you mean by \"repercussions\"?",
+      "emotion": "Neutral 50",
+      "response_text": "Some did not approve of the Elder's decisions. Initially, they followed because we are all taught to follow the Elders.",
+      "index": "39"
+    },
+    {
+      "topic": "BosRothchildWhyAskingYou",
+      "topic_text": "Well, I'm asking you. Why are you here?",
+      "emotion": "Neutral 50",
+      "response_text": "I'm here for two reasons. One, Lyons needs me. He always has, just as much as I need him. We've been through a lot together, he and I.",
+      "index": "40"
+    },
+    {
+      "topic": "BosRothchildWhyNotEveryoneAgrees",
+      "topic_text": "But not everyone agrees?",
+      "emotion": "Neutral 50",
+      "response_text": "No, not everyone. But for a variety of reasons, those who disagree are no longer with us.",
+      "index": "42"
+    },
+    {
+      "topic": "CitScribeAboutEND",
+      "topic_text": "That's all I needed.",
+      "emotion": "Neutral 50",
+      "response_text": "Very well.",
+      "index": "43"
+    },
+    {
+      "topic": "DLC03BS1RothGreetA",
+      "topic_text": "I've learned a little bit, but was hoping you could tell me more.",
+      "emotion": "Neutral 50",
+      "response_text": "Yes, I believe I can. Step over here for a moment, will you?",
+      "index": "46"
+    },
+    {
+      "topic": "DLC03BS1RothGreetB",
+      "topic_text": "He said you'd give me the details.",
+      "emotion": "Neutral 50",
+      "response_text": "Well, Owyn does have quite a bit on his mind lately, as I'm sure you can imagine.",
+      "index": "47"
+    },
+    {
+      "topic": "DLC03BS1RothGreetC",
+      "topic_text": "All I know is that you need my help. Again.",
+      "emotion": "Neutral 50",
+      "response_text": "It would seem that way, yes.",
+      "index": "50"
+    },
+    {
+      "topic": "DLC03BS1RothchildGreetA",
+      "topic_text": "I'm sorry about the robot. There wasn't anything anyone could've done.",
+      "emotion": "Neutral 50",
+      "response_text": "Perhaps not, but that doesn't change the fact that it sets us back years... YEARS...",
+      "index": "52"
+    },
+    {
+      "topic": "DLC03BS1RothchildGreetB",
+      "topic_text": "It could've been worse. They could have attacked the Citadel.",
+      "emotion": "Neutral 50",
+      "response_text": "Well, there's certainly nothing stopping them from doing that now, is there?",
+      "index": "54"
+    },
+    {
+      "topic": "DLC03BS1RothchildGreetC",
+      "topic_text": "Hopefully I found something that can help you.",
+      "emotion": "Neutral 50",
+      "response_text": "I don't know what could help at this point. If anything, we should be thankful they waited this long to use... whatever they used.",
+      "index": "56"
+    },
+    {
+      "topic": "DLC03BS1RothchildHaveDataA",
+      "topic_text": "I found some encrypted data at the relay station.",
+      "emotion": "Neutral 50",
+      "response_text": "Ah, yes. Well, I'll see if we can't figure out how to read it. Perhaps it can give us some insight as to just what happened out there.",
+      "index": "58"
+    },
+    {
+      "topic": "DLC03BS1RothchildHaveDataB",
+      "topic_text": "I'm not sure what I found. Some kind of data... Maybe you can figure it out.",
+      "emotion": "Neutral 50",
+      "response_text": "Yes, well... We'll do our best. It won't be the first time we've had to crack one of their codes.",
+      "index": "62"
+    },
+    {
+      "topic": "DLC03BS1RothchildHaveDataC",
+      "topic_text": "Maybe you can focus on analyzing this data instead of crying about your robot.",
+      "emotion": "Neutral 50",
+      "response_text": "Well, I...{offended}",
+      "index": "65"
+    },
+    {
+      "topic": "DLC03BS1TLRothchildPrime",
+      "topic_text": "How is Liberty Prime holding up?",
+      "emotion": "Neutral 50",
+      "response_text": "Performance is exceeding all our expectations.",
+      "index": "68"
+    },
+    {
+      "topic": "DLC03PQTLBoSJob",
+      "topic_text": "Is there anything else I can do to help the Brotherhood?",
+      "emotion": "Happy 80",
+      "response_text": "Yes, yes please. Your help would be most welcome.",
+      "index": "72"
+    },
+    {
+      "topic": "DLC03PQTLBrotherhood",
+      "topic_text": "So, what happens to the Brotherhood now?",
+      "emotion": "Neutral 50",
+      "response_text": "I've been amazingly busy ever since we began clashing with the Enclave. All their technology is amazing.",
+      "index": "78"
+    },
+    {
+      "topic": "DLC03PQTLCamera",
+      "topic_text": "I have Cameras for you, Scribe Rothchild.",
+      "emotion": "Happy 80",
+      "response_text": "Good, good. Please keep bringing them to me... it's my only hope of getting Prime's optics rebuilt.",
+      "index": "81"
+    },
+    {
+      "topic": "DLC03PQTLEnclave",
+      "topic_text": "So, have we totally wiped out the Enclave?",
+      "emotion": "Neutral 50",
+      "response_text": "From the amount of equipment pouring in, I'd say if we didn't destroy them, we certainly threw a major wrench into their works.",
+      "index": "84"
+    },
+    {
+      "topic": "DLC03PQTLPrime",
+      "topic_text": "How's the reconstruction of Liberty Prime going?",
+      "emotion": "Pained 90",
+      "response_text": "We have so much to do putting him back together again. I'm uncertain as to how long it might take. Months? Years?",
+      "index": "85"
+    },
+    {
+      "topic": "DLC03PQTLSensor",
+      "topic_text": "I found some Sensor Modules for you.",
+      "emotion": "Neutral 50",
+      "response_text": "Ah, very nice. I'll have my assembling team get right on it.",
+      "index": "88"
+    },
+    {
+      "topic": "DLC03TLPurifier",
+      "topic_text": "What's going on with the purifier?",
+      "emotion": "Neutral 50",
+      "response_text": "It was determined that the Brotherhood should directly oversee the purifier, so as to prevent any mishaps.",
+      "index": "91"
+    },
+    {
+      "topic": "DLC03TransitionTopic",
+      "topic_text": "DLC03TransitionTopic",
+      "emotion": "Neutral 50",
+      "response_text": "Owyn, why do you keep torturing yourself? Coming down here isn't going to help at all. We have enough to deal with already.",
+      "index": "93"
+    },
+    {
+      "topic": "FFPAWho",
+      "topic_text": "Can someone in the Citadel train me to wear Power Armor?",
+      "emotion": "Neutral 50",
+      "response_text": "Hmph. Typical. Surrounded by the keenest scientific minds in the Capital Wasteland, but do you thirst for our knowledge, our experience? No.",
+      "index": "94"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "I'm sure you'll understand that there's far too much to be done right now. I've no time for chatting.",
+      "index": "97"
+    },
+    {
+      "topic": "MQ06RothChildCutTheShit",
+      "topic_text": "Yeah, yeah. Whatever. Are you going to help or not?",
+      "emotion": "Disgust 10",
+      "response_text": "Taking the loss in stride, are we?{mildly annoyed}",
+      "index": "125"
+    },
+    {
+      "topic": "MQ06RothChildThanksForSympathy",
+      "topic_text": "Thanks for your sympathy.",
+      "emotion": "Neutral 50",
+      "response_text": "Think nothing of it.",
+      "index": "128"
+    },
+    {
+      "topic": "MQ06RothThanksForHelp",
+      "topic_text": "Thanks for your help.",
+      "emotion": "Neutral 50",
+      "response_text": "I wish we could do more, but the Brotherhood potentially faces a very pressing, very real threat in the Enclave.",
+      "index": "130"
+    },
+    {
+      "topic": "MQ06RothThanksForNothing",
+      "topic_text": "Great. Thanks for nothing.",
+      "emotion": "Neutral 50",
+      "response_text": "I find it hard to believe your father raised such a child.",
+      "index": "132"
+    },
+    {
+      "topic": "MQ06RothVaultICanHandleIt",
+      "topic_text": "I can handle it.",
+      "emotion": "Neutral 50",
+      "response_text": "Can you now, without even knowing what the problem is?",
+      "index": "134"
+    },
+    {
+      "topic": "MQ06RothchildAboutDamnTime",
+      "topic_text": "It's about damn time.",
+      "emotion": "Disgust 50",
+      "response_text": "Indeed. Farewell.{annoyed, dismissive.}",
+      "index": "136"
+    },
+    {
+      "topic": "MQ06RothchildAnotherWay",
+      "topic_text": "There's got to be another way.",
+      "emotion": "Neutral 50",
+      "response_text": "You share your father's determination, it seems. And in this case, you are correct. There may well be another way.{bemused}",
+      "index": "137"
+    },
+    {
+      "topic": "MQ06RothchildCaveDontKnow",
+      "topic_text": "Don't you know?",
+      "emotion": "Neutral 50",
+      "response_text": "No, I'm afraid not. After initial attempts to cross the radiation failed, it was decided to focus our efforts elsewhere.",
+      "index": "139"
+    },
+    {
+      "topic": "MQ06RothchildCaveTimetoFindOut",
+      "topic_text": "Well, I guess it's time to find out. I'll go there myself.",
+      "emotion": "Neutral 50",
+      "response_text": "The Brotherhood simply cannot spare the resources necessary to investigate the area. Perhaps you may be more successful.",
+      "index": "141"
+    },
+    {
+      "topic": "MQ06RothchildCaveVault",
+      "topic_text": "So there's a Vault down there, and you've never bothered investigating it?",
+      "emotion": "Neutral 50",
+      "response_text": "Attempts were made, but our resources are stretched thin. The radiation proved fatal, and so our efforts were focused elsewhere.",
+      "index": "143"
+    },
+    {
+      "topic": "MQ06RothchildGettothePoint",
+      "topic_text": "I'm running short on time, here. Let's cut to the chase.",
+      "emotion": "Neutral 50",
+      "response_text": "Yes, well... I am afraid that with the emergence of the Enclave, the Brotherhood is rather busy right now.",
+      "index": "145"
+    },
+    {
+      "topic": "MQ06RothchildHowKnowFather",
+      "topic_text": "How did you know my father?",
+      "emotion": "Neutral 50",
+      "response_text": "I have been a part of the Brotherhood for many years. Enough that I was here when Project Purity first began.",
+      "index": "148"
+    },
+    {
+      "topic": "MQ06RothchildNeedAGeck",
+      "topic_text": "I need to find a G.E.C.K.",
+      "emotion": "Neutral 50",
+      "response_text": "Are you quite sure? I suspect that would be a waste of time. Regardless, the Brotherhood is not in possession of such a device.",
+      "index": "150"
+    },
+    {
+      "topic": "MQ06RothchildNeedVault87",
+      "topic_text": "I need to find Vault 87 right now.",
+      "emotion": "Disgust 50",
+      "response_text": "I take it you were successful, then.{mildly annoyed}",
+      "index": "154"
+    },
+    {
+      "topic": "MQ06RothchildNeedVault87Nice",
+      "topic_text": "Vault 87 has a G.E.C.K., but I don't know where it is.",
+      "emotion": "Neutral 50",
+      "response_text": "Ah. Well, that much I believe I can help with.",
+      "index": "158"
+    },
+    {
+      "topic": "MQ06RothchildNeedaGECKNice",
+      "topic_text": "My father was looking for something called a G.E.C.K. Do you have one?",
+      "emotion": "Neutral 50",
+      "response_text": "A G.E.C.K.? Goodness, no. Certainly not.",
+      "index": "160"
+    },
+    {
+      "topic": "MQ06RothchildNeedaGECKRude",
+      "topic_text": "Geez, don't strain yourself on my account... I just need a G.E.C.K.",
+      "emotion": "Neutral 50",
+      "response_text": "I fail to see how such a device would be useful to you. In fact, I doubt such a thing really works.",
+      "index": "163"
+    },
+    {
+      "topic": "MQ06RothchildSoImScrewed",
+      "topic_text": "So that's it? I'm screwed?",
+      "emotion": "Sad 50",
+      "response_text": "So quick to give up... Disappointing.",
+      "index": "166"
+    },
+    {
+      "topic": "MQ06RothchildSoYouCanFindOne",
+      "topic_text": "So you know how to find one?",
+      "emotion": "Neutral 50",
+      "response_text": "Possibly. I'm afraid I won't be able to assist you directly; the news Doctor Li has brought will require me to be elsewhere.",
+      "index": "168"
+    },
+    {
+      "topic": "MQ06RothchildTLReview",
+      "topic_text": "Where was Vault 87 again?",
+      "emotion": "Neutral 50",
+      "response_text": "Check the map in the lab for reference, if you like. The Vault is to the west of the city, far out in the Capital Wasteland.",
+      "index": "171"
+    },
+    {
+      "topic": "MQ06RothchildThanks",
+      "topic_text": "Thanks for the help.",
+      "emotion": "Neutral 50",
+      "response_text": "You are welcome. If you require further assistance, I may be able to help.",
+      "index": "174"
+    },
+    {
+      "topic": "MQ06RothchildVaultGetThroughRadiation",
+      "topic_text": "How do I get through the radiation?",
+      "emotion": "Neutral 50",
+      "response_text": "Quite simply, you don't. To attempt such a thing would be certain death for you.",
+      "index": "175"
+    },
+    {
+      "topic": "MQ06RothchildWhatever",
+      "topic_text": "Fine, whatever. Let's get to it.",
+      "emotion": "Neutral 50",
+      "response_text": "I find your attitude and lack of respect insulting.",
+      "index": "176"
+    },
+    {
+      "topic": "Mq06RothVaultWhyDifficult",
+      "topic_text": "Why, what's difficult about it?",
+      "emotion": "Neutral 50",
+      "response_text": "The area is highly irradiated; lethal levels are all around the entrance. Gaining direct access will be quite impossible.",
+      "index": "177"
+    },
+    {
+      "topic": "TLCitadelSuperMutant",
+      "topic_text": "Care to share anything about the Super Mutants?",
+      "emotion": "Disgust 50",
+      "response_text": "Not really, no.",
+      "index": "178"
+    },
+    {
+      "topic": "TLRobot",
+      "topic_text": "Are you in charge of the um... the robot?",
+      "emotion": "Neutral 50",
+      "response_text": "I am, and have been since we first found him, well over twenty years ago.",
+      "index": "179"
+    },
+    {
+      "topic": "TLRobotRothchild",
+      "topic_text": "Who built Liberty Prime? Or better yet... why?",
+      "emotion": "Neutral 50",
+      "response_text": "He was developed as a super weapon, back in the days before the war. The first joint operation between RobCo and General Atomics International.",
+      "index": "182"
+    },
+    {
+      "topic": "TLScribeRepairCould you repair my equipment?",
+      "topic_text": "Do you think you could repair my equipment?",
+      "emotion": "Anger 50",
+      "response_text": "Could I? Yes. Will I? No. Go see Peabody or Bowditch.",
+      "index": "185"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "CitTalkRothchildElderLyons1",
+      "topic_text": "CitTalkRothchildElderLyons1",
+      "emotion": "Disgust 20",
+      "response_text": "What is it, Owyn? This robot isn't going to fix itself.",
+      "index": "186"
+    },
+    {
+      "topic": "CitTalkRothchildElderLyons3",
+      "topic_text": "CitTalkRothchildElderLyons3",
+      "emotion": "Neutral 50",
+      "response_text": "We've been over this. A slight modification to one system... and all the subroutines go haywire. Don't worry. I'm on it.",
+      "index": "188"
+    },
+    {
+      "topic": "CitTalkRothchildElderLyons5",
+      "topic_text": "CitTalkRothchildElderLyons5",
+      "emotion": "Neutral 50",
+      "response_text": "All right, all right. I'll see what what I can do.",
+      "index": "190"
+    },
+    {
+      "topic": "DLC03BS1RothchildMapLines",
+      "topic_text": "DLC03BS1RothchildMapLines",
+      "emotion": "Neutral 50",
+      "response_text": "Now, did you have any other questions?",
+      "index": "192"
+    },
+    {
+      "topic": "GOODBYE",
+      "topic_text": "I have to go now.",
+      "emotion": "Neutral 50",
+      "response_text": "Goodbye. Please come back if you find anything interesting.",
+      "index": "205"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Neutral 50",
+      "response_text": "It's good to see you again.",
+      "index": "208"
+    },
+    {
+      "topic": "MQ09ElderSarahConv",
+      "topic_text": "MQ09ElderSarahConv",
+      "emotion": "Neutral 50",
+      "response_text": "I agree. Without the G.E.C.K., the purifier is useless to the Enclave anyway. They may give up before long.",
+      "index": "213"
+    },
+    {
+      "topic": "MQ11ElderSarahConv",
+      "topic_text": "MQ11ElderSarahConv",
+      "emotion": "Neutral 50",
+      "response_text": "Honestly? I don't know. I think we can scrape by, and I suppose if we can't it won't matter in the long run anyway.",
+      "index": "214"
+    }
+  ],
+  "combat": []
+}

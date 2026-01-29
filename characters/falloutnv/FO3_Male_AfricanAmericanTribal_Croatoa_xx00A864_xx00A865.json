@@ -1,0 +1,140 @@
+{
+  "name": "Croatoa",
+  "url": "/wiki/Croatoa",
+  "dialogue_name": "DLC04Croatoa.txt",
+  "dialogue_url": "/wiki/DLC04Croatoa.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "xx00A864",
+  "ref_id": "xx00A865",
+  "editor_id": "DLC04Croatoa",
+  "location": "Ark & Dove Cathedral",
+  "location_url": "/wiki/Ark_%26_Dove_Cathedral",
+  "descriptions": [
+    "Croatoa is a tribal and one of the inhabitants of Point Lookout in 2277.",
+    "Croatoa has been a member of the tribe for some time, as he describes himself as \"not so new\" compared to the Lone Wanderer, who he welcomes upon their acceptance into the tribe.",
+    "He possesses a unique shovel that helps him to grow the punga, as it is covered in a fertilizer of some kind.",
+    "He can be found wandering inside the outer walls of the Ark & Dove Cathedral, oftentimes tending to the punga.",
+    "Croatoa will not become hostile like the unnamed tribals at the cathedral if the Lone Wanderer sides with Desmond during Thought Control, but will still attack if he sees them attacking any other tribals.",
+    "With the Child at Heart perk or by passing a Speech check, the Lone Wanderer can get the fertilizer shovel from him.",
+    "* Only if the Lone Wanderer has got the fertilizer shovel from him.",
+    "Croatoa appears only in the Fallout 3 add-on Point Lookout.",
+    "Croatoan Island is the historical name of Hatteras Island in the Outer Banks of North Carolina. Most famously, the word \"Croatoan\" was found carved into a tree at the site of the missing Roanoke Colony."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Tribals",
+  "role": "Tribal",
+  "detailed_location": "Ark & Dove Cathedral",
+  "voice_actor": "Duncan Hood",
+  "special": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 2,
+    "Intelligence": 5,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "level": "1",
+  "misc_skills": [],
+  "karma": "Neutral",
+  "voice_type": "DLC04MaleTribalGruff",
+  "geck_race": "AfricanAmericanTribal",
+  "topics": [
+    {
+      "topic": "DLC04AboutLeader",
+      "topic_text": "Who leads this tribe?",
+      "emotion": "Happy 50",
+      "response_text": "Look to Jackson. He is the one who knows.",
+      "index": "1"
+    },
+    {
+      "topic": "DLC04AboutMansion",
+      "topic_text": "Why did you attack the mansion?",
+      "emotion": "Neutral 50",
+      "response_text": "That hill is holy. It must be cleared. Jackson told us this.",
+      "index": "3"
+    },
+    {
+      "topic": "DLC04AboutPunga",
+      "topic_text": "How do you get so much Punga Fruit to grow here?",
+      "emotion": "Happy 50",
+      "response_text": "Punga grows strong. I help Punga grow stronger.",
+      "index": "6"
+    },
+    {
+      "topic": "DLC04AboutTribals",
+      "topic_text": "What does this tribe do?",
+      "emotion": "Neutral 50",
+      "response_text": "We dream. Dream of a better world, not falling apart like ours.",
+      "index": "9"
+    },
+    {
+      "topic": "DLC04Croatoa1A",
+      "topic_text": "I love digging in the dirt, but I never can get anything to grow right.",
+      "emotion": "Happy 50",
+      "response_text": "It feels good to work with dirt, doesn't it? Some people call it work, but they don't understand.",
+      "index": "11"
+    },
+    {
+      "topic": "DLC04Croatoa1B",
+      "topic_text": "Guess you and plants think alike, huh?",
+      "emotion": "Happy 50",
+      "response_text": "Maybe. We are both simple. But simple is not the same as stupid.",
+      "index": "17"
+    },
+    {
+      "topic": "DLC04JacksonLocation",
+      "topic_text": "Where can I find Jackson?",
+      "emotion": "Sad 50",
+      "response_text": "Not here?",
+      "index": "18"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "",
+      "emotion": "Neutral 50",
+      "response_text": "Please wait until my meditations are complete.",
+      "index": "19"
+    },
+    {
+      "topic": "SpeechChallengeFailure",
+      "topic_text": "Can you share your secret to getting them to grow?",
+      "emotion": "Neutral 50",
+      "response_text": "My only secret is patience. If I could share it with you, I would.",
+      "index": "29"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Neutral 50",
+      "response_text": "Learn from the Punga. Accept simplicity.",
+      "index": "30"
+    }
+  ],
+  "combat": [
+    {
+      "topic": "Attack",
+      "topic_text": "Attack",
+      "emotion": "Anger 50",
+      "response_text": "Sleep forever!",
+      "index": "39"
+    },
+    {
+      "topic": "Death",
+      "topic_text": "Death",
+      "emotion": "Neutral 50",
+      "response_text": "At last...",
+      "index": "44"
+    }
+  ]
+}

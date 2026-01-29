@@ -1,0 +1,498 @@
+{
+  "name": "Dave",
+  "url": "/wiki/Dave_(Fallout_3)",
+  "dialogue_name": "Dave.txt",
+  "dialogue_url": "/wiki/Dave.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "00029A98",
+  "ref_id": "0002B89E",
+  "editor_id": "Dave",
+  "location": "Republic of Dave capitol building",
+  "location_url": "/wiki/Republic_of_Dave_capitol_building",
+  "descriptions": [
+    "Dave is the self-proclaimed president of the Republic of Dave, a small farmstead on the far northeast edge of the Capital Wasteland in 2277.",
+    "After being exiled from the family farmstead (then known as the Kingdom of Tom under the leadership of his father, Tom), Dave made a living operating as a mercenary in and around the Capital Wasteland, and took part in an ill-fated expedition to Fort Constantine along with a handful of other mercenaries on behalf of Allistair Tenpenny. He eventually returned to the Kingdom of Tom and made a coup d'état, renaming it the \"Republic of Dave\" and giving the citizens the \"freedom of democracy\" in the form of an annual election, in contrast to the dictatorship of Tom.",
+    "Dave decided the marital standards needed changing after inheriting the Republic from his father, allowing polygamous relationships and resulting in his marriage to his second wife, Jessica. The excuse given to his first wife was that he \"needed to re-populate the land of Dave so they could grow and soon own all of the Capital Wasteland.\"",
+    "Dave's activities consist of staying in his office and never going outside of the main building in the Republic of Dave.",
+    "How the Lone Wanderer greets Dave in their first meeting plays a large role in how Dave will interact with the player character. If greeted with the Wasteland Ambassador route, it will give him a false sense that the Republic is being recognized as sovereign, and he will interact fairly well. If one requests asylum, they will receive a neutral interaction from him from there on out. If one tells Dave that his \"Republic is forfeit,\" Dave and all the other inhabitants of the Republic will become hostile.",
+    "Dave appears in Fallout 3 and Fallout Shelter Online.",
+    "Playstation 3 Xbox 360 It is possible to pickpocket Dave's special key for the quest You Gotta Shoot 'Em in the Head and then afterward acquire the key a second time by passing a Speech check. "
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Republic of DaveAllistair Tenpenny(formerly)",
+  "role": "PresidentMercenary (formerly)",
+  "detailed_location": "Republic of Dave capitol building",
+  "voice_actor": "Gregory Gorton",
+  "special": {
+    "Strength": 6,
+    "Perception": 7,
+    "Endurance": 5,
+    "Charisma": 3,
+    "Intelligence": 3,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "level": "5 → 8 (player level x1.5)",
+  "tag_skills": [
+    {
+      "Explosives:": "51"
+    },
+    {
+      "Small Guns:": "49(51)"
+    },
+    {
+      "Sneak:": "49"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Neutral",
+  "voice_type": "MaleAdult01DefaultBDC",
+  "geck_race": "CaucasianOld",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Surprise 50",
+      "response_text": "Do you need more than that gift?",
+      "index": "1"
+    },
+    {
+      "topic": "MS14CrowleyWhat can you tell me about Mister Crowley?",
+      "topic_text": "Mister President, do you know a Ghoul named Mister Crowley?",
+      "emotion": "Surprise 50",
+      "response_text": "There's a name I haven't heard in a long time.",
+      "index": "18"
+    },
+    {
+      "topic": "MS14DaveAboutKey",
+      "topic_text": "Mr. President, what's so special about this key?",
+      "emotion": "Neutral 50",
+      "response_text": "You need all the keys to get through Fort Constantine.",
+      "index": "21"
+    },
+    {
+      "topic": "MS14DaveBigot",
+      "topic_text": "Mister Crowley is alive. He sent me to kill you because you hate Ghouls.",
+      "emotion": "Surprise 50",
+      "response_text": "Me? Hate Ghouls? Preposterous.",
+      "index": "23"
+    },
+    {
+      "topic": "MS14DaveEndNoThreat",
+      "topic_text": "Thank you for sharing your wisdom, Mister President.",
+      "emotion": "Sad 50",
+      "response_text": "It is such a burden being the wisest.",
+      "index": "27"
+    },
+    {
+      "topic": "MS14DaveEndThreat",
+      "topic_text": "Not good enough, Mister President.",
+      "emotion": "Disgust 50",
+      "response_text": "Of course, of course. I should have you killed, but that would be boring.{First part is said dismissively and condescendingly}",
+      "index": "29"
+    },
+    {
+      "topic": "MS14DaveFort",
+      "topic_text": "What happened in the Fort, Mister President?",
+      "emotion": "Neutral 50",
+      "response_text": "Two of us died, including Crowley. The rest achieved the mission goals and were paid.",
+      "index": "31"
+    },
+    {
+      "topic": "MS14DaveGiveKey",
+      "topic_text": "A gift of the key would be a strategic diplomatic move, Mister President.",
+      "emotion": "Anger 50",
+      "response_text": "Hmm. Of course it would. I knew that. I was just testing you to see if you would realize it.",
+      "index": "32"
+    },
+    {
+      "topic": "MS14DaveHowDie",
+      "topic_text": "How did Mister Crowley die, Mister President?",
+      "emotion": "Sad 50",
+      "response_text": "When the Feral Ghouls killed Tara, Dukov realized that he would get more of the commission.",
+      "index": "36"
+    },
+    {
+      "topic": "MS14DaveIntimidate",
+      "topic_text": "I think it would be good for the Republic, Mister President.",
+      "emotion": "Surprise 50",
+      "response_text": "Of course it would. I knew that. You heard me say that before, didn't you. It was my idea after all. Here, take it.",
+      "index": "39"
+    },
+    {
+      "topic": "MS14DaveKillYou",
+      "topic_text": "Your \"Republic\" is a joke, and your presidency is a farce. You need to die.",
+      "emotion": "Anger 50",
+      "response_text": "What! How dare you! I'm going to have you executed.",
+      "index": "41"
+    },
+    {
+      "topic": "MS14DaveWantsKey",
+      "topic_text": "Crowley is alive, Mister President. I'm supposed to bring him the key.",
+      "emotion": "Surprise 50",
+      "response_text": "Alive? I always wondered. He was locked in with a bunch of Feral Ghouls. They won't attack Ghouls, you see.",
+      "index": "43"
+    },
+    {
+      "topic": "MS14HereToKillYouI'm here to kill you, and there's nothing you can do about it.",
+      "topic_text": "Time for the Republic to hold a new election... and a state funeral.",
+      "emotion": "Fear 50",
+      "response_text": "Assassin!",
+      "index": "47"
+    },
+    {
+      "topic": "PLAYERJUMP",
+      "topic_text": "PLAYER JUMP",
+      "emotion": "Neutral 50",
+      "response_text": "Hey, there's no jumping in the capitol.",
+      "index": "48"
+    },
+    {
+      "topic": "RDBacktoTopics",
+      "topic_text": "I think I get the idea. Let me ask you something else.",
+      "emotion": "Anger 10",
+      "response_text": "What now?",
+      "index": "49"
+    },
+    {
+      "topic": "RDDaveAmbassador",
+      "topic_text": "Most exalted President Dave, I am an ambassador from the Wasteland.",
+      "emotion": "Happy 50",
+      "response_text": "You are? Excellent. It's good to see that the Wasteland has finally recognized the sovereign Republic of Dave.",
+      "index": "50"
+    },
+    {
+      "topic": "RDDaveApologizeGoodbye",
+      "topic_text": "I'm sorry. I'll just be leaving...",
+      "emotion": "Anger 10",
+      "response_text": "You do that. Personal note: remind the guards to fire on sight.",
+      "index": "52"
+    },
+    {
+      "topic": "RDDaveAsylum",
+      "topic_text": "I am seeking asylum, Mister President.",
+      "emotion": "Surprise 50",
+      "response_text": "Ahh... another victim of persecution seeking protection from the mighty Republic of Dave. We get a lot of that here.",
+      "index": "53"
+    },
+    {
+      "topic": "RDDaveBRB",
+      "topic_text": "If you'll excuse me a moment, I'll be right back.",
+      "emotion": "Anger 10",
+      "response_text": "Don't waste my time. I've got important things to do around here.",
+      "index": "55"
+    },
+    {
+      "topic": "RDDaveButterfly",
+      "topic_text": "Your father was a monarch? You mean like the butterfly?",
+      "emotion": "Disgust 50",
+      "response_text": "How much radiation have you been exposed to? Not the butterfly, you moron. I meant the kind of leader that holds his office for life.",
+      "index": "57"
+    },
+    {
+      "topic": "RDDaveCitizenship",
+      "topic_text": "I seek citizenship in the Republic of Dave.",
+      "emotion": "Anger 50",
+      "response_text": "First off, you will address me as Mister President. Always. No exceptions.",
+      "index": "60"
+    },
+    {
+      "topic": "RDDaveDictatorship",
+      "topic_text": "I'd say it looks more like a dictatorship.",
+      "emotion": "Anger 50",
+      "response_text": "Dictatorship? You insult me. Obviously the Wasteland radiation has taken away your capacity to reason.",
+      "index": "63"
+    },
+    {
+      "topic": "RDDaveElectionDontKnow",
+      "topic_text": "I really wouldn't know. I just got here.",
+      "emotion": "Neutral 50",
+      "response_text": "Ah, a seeker of knowledge, then? Well, trust me, an election is what separates a president like myself from a monarch like my father.",
+      "index": "64"
+    },
+    {
+      "topic": "RDDaveElectionYes",
+      "topic_text": "Yes, absolutely.",
+      "emotion": "Happy 10",
+      "response_text": "Well then, there you go.  An election is what separates a president like myself from a monarch like my father.",
+      "index": "65"
+    },
+    {
+      "topic": "RDDaveHelp",
+      "topic_text": "What am I supposed to do?",
+      "emotion": "Sad 50",
+      "response_text": "What am I supposed to do?{Mocking/Mimics the player.}",
+      "index": "66"
+    },
+    {
+      "topic": "RDDaveLetStayA1",
+      "topic_text": "There must be something I can do to stay.",
+      "emotion": "Neutral 50",
+      "response_text": "Hmm... now that you mention it, the President could use a new hunting rifle.",
+      "index": "68"
+    },
+    {
+      "topic": "RDDaveLetStayA2",
+      "topic_text": "What if I just make a donation to the Republic... and you let me stay?",
+      "emotion": "Neutral 50",
+      "response_text": "A donation, huh? Well, it just so happens that the Republic of Dave does grant special asylum to its supporters in times of crisis.",
+      "index": "71"
+    },
+    {
+      "topic": "RDDaveLetStayA3",
+      "topic_text": "You crazy, condescending asshole! No one exiles me!",
+      "emotion": "Anger 50",
+      "response_text": "Have it your way. You'll never leave the Republic. Alive, that is.",
+      "index": "74"
+    },
+    {
+      "topic": "RDDaveLetStayB1",
+      "topic_text": "A Hunting Rifle? Fine, I'll be back with one.",
+      "emotion": "Happy 25",
+      "response_text": "Very well. I look forward to it, future refugee.",
+      "index": "75"
+    },
+    {
+      "topic": "RDDaveLetStayB2",
+      "topic_text": "I'll be back with 250 caps.",
+      "emotion": "Happy 25",
+      "response_text": "Very well. I look forward to it, future refugee.",
+      "index": "77"
+    },
+    {
+      "topic": "RDDaveLetStayB3",
+      "topic_text": "I'm not giving you anything.",
+      "emotion": "Neutral 50",
+      "response_text": "Then you have 24 hours to remain in the Republic or face execution. Enjoy your stay.",
+      "index": "79"
+    },
+    {
+      "topic": "RDDaveMonarch",
+      "topic_text": "So, your father was a monarch and you're a president? How does that work?",
+      "emotion": "Neutral 50",
+      "response_text": "My father inherited his political power from birth and renamed this great nation the Kingdom of Tom.",
+      "index": "80"
+    },
+    {
+      "topic": "RDDaveSpyNo",
+      "topic_text": "No, of course not!",
+      "emotion": "Neutral 50",
+      "response_text": "Ah-ha! Just what I'd expect a spy to say! Look, I don't know how you got in here, spy, but there will be consequences for your actions.",
+      "index": "82"
+    },
+    {
+      "topic": "RDDaveSpyRidiculous",
+      "topic_text": "Spy on what?  Your trailer-home?",
+      "emotion": "Anger 20",
+      "response_text": "If the Capitol Building does not meet your incredible standards, feel free to escort yourself out.  In fact, just leave now.",
+      "index": "84"
+    },
+    {
+      "topic": "RDDaveSpyYes",
+      "topic_text": "I don't consider myself a spy so much as... your assassin.",
+      "emotion": "Anger 50",
+      "response_text": "Assassin?  And you really thought you could succeed against the Army of Dave?",
+      "index": "85"
+    },
+    {
+      "topic": "RDDaveStandUp",
+      "topic_text": "Nobody talks to me that way.",
+      "emotion": "Anger 10",
+      "response_text": "The President of the Republic does. Now get out of my sight.",
+      "index": "86"
+    },
+    {
+      "topic": "RDDaveTraveller",
+      "topic_text": "I'm just a traveler. I guess you could say I'm vacationing.",
+      "emotion": "Disgust 50",
+      "response_text": "The Department of Tourist Rights has declared a tourism embargo that affects the entirety of the Republic of Dave.",
+      "index": "87"
+    },
+    {
+      "topic": "RDGottaGo",
+      "topic_text": "I've got to go.",
+      "emotion": "Anger 10",
+      "response_text": "You've wasted enough presidential time. Be gone.",
+      "index": "89"
+    },
+    {
+      "topic": "RDNeverMind",
+      "topic_text": "Actually, I think I have all the info I need.",
+      "emotion": "Neutral 50",
+      "response_text": "Anything else?",
+      "index": "90"
+    },
+    {
+      "topic": "RDSubElectionOpponents",
+      "topic_text": "Who's running in the election?",
+      "emotion": "Neutral 50",
+      "response_text": "Nobody except me. Why would the people need anyone else but Dave? I give them all that they ask for.",
+      "index": "91"
+    },
+    {
+      "topic": "RDSubElectionThrowHat",
+      "topic_text": "I'd like to throw my hat into the ring and run for the presidency.",
+      "emotion": "Fear 10",
+      "response_text": "I'm sorry, but the president must be a citizen of the Republic to run for office.  So you do not qualify.",
+      "index": "94"
+    },
+    {
+      "topic": "RDTopicCountVotes",
+      "topic_text": "Who's eligible to vote?",
+      "emotion": "Neutral 50",
+      "response_text": "That would be Bob, Shawna, Jessica, Rosie and myself. In the Republic, if you're old enough to carry a weapon, you're old enough to vote.",
+      "index": "95"
+    },
+    {
+      "topic": "RDTopicElection",
+      "topic_text": "I'd like to discuss the election with you.",
+      "emotion": "Neutral 50",
+      "response_text": "The election is still going on. What do you want to know?",
+      "index": "113"
+    },
+    {
+      "topic": "RDTopicGoVoteYou should go vote, if you haven't already.",
+      "topic_text": "Did you already vote, Mister President?",
+      "emotion": "Neutral 50",
+      "response_text": "Of course I voted. I was the first to vote. Now I'm just waiting for the rest of the votes to come in.",
+      "index": "114"
+    },
+    {
+      "topic": "RDTopicKill",
+      "topic_text": "Your Republic is forfeit. Prepare to be reclaimed by the Wasteland!",
+      "emotion": "Anger 50",
+      "response_text": "Let's see what the Army of Dave has to say about that, invader!",
+      "index": "115"
+    },
+    {
+      "topic": "RDTopicRoDI'd like to know more about the Republic.",
+      "topic_text": "Anything happening in this place, Mister President?",
+      "emotion": "Neutral 50",
+      "response_text": "There's an election for the next president.",
+      "index": "116"
+    },
+    {
+      "topic": "RDTopicRoDEND",
+      "topic_text": "That's all I need to know.",
+      "emotion": "Neutral 50",
+      "response_text": "Well, good for you then.{Sarcasm}",
+      "index": "119"
+    },
+    {
+      "topic": "RDTopicRoundUp",
+      "topic_text": "Could I help with the election, Mister President?",
+      "emotion": "Neutral 50",
+      "response_text": "Alright sure, why not. The people have a tendency to wait until the last minute to vote, but I'd just like to get it over with.",
+      "index": "120"
+    },
+    {
+      "topic": "RDTopicSecretsBRB",
+      "topic_text": "Forget it, Dave. I'm not giving you any secrets.",
+      "emotion": "Anger 50",
+      "response_text": "Then you are hereby exiled from the Republic of Dave.",
+      "index": "125"
+    },
+    {
+      "topic": "RDTopicSecretsInsult",
+      "topic_text": "I come from the Land of the Mirelurks! They demand you surrender the Republic!",
+      "emotion": "Anger 50",
+      "response_text": "The Republic of Dave does not recognize the rights of Mirelurks or the sovereignty of any Mirelurk nation.",
+      "index": "127"
+    },
+    {
+      "topic": "RDTopicSecretsPersuade",
+      "topic_text": "My nation is a helpless, unarmed village to the north. We beg your assistance.",
+      "emotion": "Neutral 50",
+      "response_text": "My assistance? Hmm... I suppose I can spare a few caps from the Department of Foreign Relations budget. Here.",
+      "index": "129"
+    },
+    {
+      "topic": "RDTopicSecretsTruth",
+      "topic_text": "My former nation was a Vault. The only secrets were kept by the Overseer.",
+      "emotion": "Surprise 50",
+      "response_text": "Interesting... um... well, the Republic of Dave is glad to welcome a former Vault citizen to our fair nation.{Dave wasn't expecting that one.}",
+      "index": "131"
+    },
+    {
+      "topic": "RDTopicThisPlaceWhat's your take on the Republic?",
+      "topic_text": "Any future plans for the Republic, Mister President?",
+      "emotion": "Neutral 50",
+      "response_text": "Well, the Republic of Dave is the only true sovereign nation in the Wasteland. The only really civilized place left in the world.",
+      "index": "133"
+    },
+    {
+      "topic": "RDTopicWhosInChargeTell me more about this Dave guy.",
+      "topic_text": "So, you're in charge here, Mister President?",
+      "emotion": "Neutral 50",
+      "response_text": "That's right. As president, I am head of the Department of Tourist Rights, the Office of Immigrant Affairs, and the Bureau of Davelike Activities.",
+      "index": "135"
+    },
+    {
+      "topic": "RDTopicWivesDave has two wives?",
+      "topic_text": "You have two wives, Mister President?",
+      "emotion": "Neutral 50",
+      "response_text": "Of course. As President of the Republic, I have a mandate to repopulate the Wasteland.",
+      "index": "137"
+    },
+    {
+      "topic": "RDTopicYourselfWhat can you tell me about yourself?",
+      "topic_text": "I'd be interested in learning more about you, Mister President.",
+      "emotion": "Neutral 50",
+      "response_text": "Years ago, I freed these poor people from the wrath of Tom, former monarch of the Kingdom of Tom.",
+      "index": "138"
+    },
+    {
+      "topic": "SpeechChallengeFailure",
+      "topic_text": "SpeechChallengeFailure",
+      "emotion": "Disgust 50",
+      "response_text": "Mister Crowley was a mercenary I worked with a long time ago.",
+      "index": "140"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "I have to go now.",
+      "emotion": "Neutral 50",
+      "response_text": "Very well.",
+      "index": "153"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Surprise 50",
+      "response_text": "Ah! It's the keeper of the key.",
+      "index": "158"
+    },
+    {
+      "topic": "RDElectionTalk",
+      "topic_text": "DaveElectionTalk",
+      "emotion": "Neutral 50",
+      "response_text": "Glad to hear that.",
+      "index": "162"
+    },
+    {
+      "topic": "RDGuardDaveResponse",
+      "topic_text": "RDGuardDaveResponse",
+      "emotion": "Anger 50",
+      "response_text": "I keep telling you, it's Mister President! Now get back to guarding the gate!",
+      "index": "163"
+    },
+    {
+      "topic": "RDPackageDone",
+      "topic_text": "RDPackageDone",
+      "emotion": "Neutral 50",
+      "response_text": "Let's see what we have here.",
+      "index": "164"
+    }
+  ],
+  "combat": []
+}

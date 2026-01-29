@@ -1,0 +1,295 @@
+{
+  "name": "Ignacio Rivas",
+  "url": "/wiki/Ignacio_Rivas",
+  "dialogue_name": "IgnacioRivas.txt",
+  "dialogue_url": "/wiki/IgnacioRivas.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000E07D4",
+  "ref_id": "000E07D8",
+  "editor_id": "IgnacioRivas",
+  "location": "HELIOS One",
+  "location_url": "/wiki/HELIOS_One",
+  "descriptions": [
+    "Ignacio Rivas is a Followers of the Apocalypse scientist living at HELIOS One in 2281. He tends to the management of the plant alongside the NCR.",
+    "Rivas is a member of the Followers of the Apocalypse and has been working with the NCR on getting HELIOS One operational since the NCR took control of the location from the Brotherhood of Steel during Operation: Sunburst. Under the guise of research into the potential for solar energy,",
+    "Despite the relationship of the Followers with the NCR, the NCR allowed Rivas to stay in order to gain as much information about HELIOS One as possible. Meanwhile, Rivas has been deliberately keeping them in the dark to conceal the existence of a powerful weapon, ARCHIMEDES, from them. The NCR hired an additional technician, Fantastic, to help in the repair of HELIOS. Luckily for Rivas, Fantastic turned out to be completely incompetent, having conned his way into the position. So far, he hasn't made any discoveries on HELIOS One's true purpose, much less getting anything at the plant to actually work, and Rivas is not planning on correcting that any time soon.",
+    "From his time at HELIOS, Rivas has learned that it was affiliated with the United States military in some way and holds the key to a secret still-operational orbital laser, ARCHIMEDES, in Earth's orbit. However, Rivas is concerned what would happen if either of the warring factions (the NCR or Caesar's Legion in particular) happened to learn how to utilize the technology."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Followers of the Apocalypse",
+  "role": "Scientist",
+  "detailed_location": "HELIOS One",
+  "voice_actor": "Ron YuanSteve Blum(beta)",
+  "special": {
+    "Strength": 2,
+    "Perception": 3,
+    "Endurance": 5,
+    "Charisma": 6,
+    "Intelligence": 8,
+    "Agility": 5,
+    "Luck": 6
+  },
+  "level": "5",
+  "misc_skills": [],
+  "karma": "Good",
+  "voice_type": "MaleAdult08",
+  "geck_race": "Hispanic",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "What have you done? Get away from me!",
+      "index": "1"
+    },
+    {
+      "topic": "VMS03IgnacioArchimedesIsAWeapon",
+      "topic_text": "You think ARCHIMEDES is a weapon they built here.",
+      "emotion": "Neutral 50",
+      "response_text": "Yes. And the technology they have in this facility is like nothing I've seen. Some of it reminds me of Enclave equipment, but more advanced.",
+      "index": "5"
+    },
+    {
+      "topic": "VMS03IgnacioDivertedPower",
+      "topic_text": "I diverted power to the grid.",
+      "emotion": "Neutral 50",
+      "response_text": "I saw that on the monitors here. And you sent it to everyone. Very admirable.",
+      "index": "8"
+    },
+    {
+      "topic": "VMS03IgnacioDrifter",
+      "topic_text": "More of a drifter.",
+      "emotion": "Neutral 50",
+      "response_text": "I see. Then you must have some special business here, for them to have let you through.",
+      "index": "16"
+    },
+    {
+      "topic": "VMS03IgnacioInterestScientific",
+      "topic_text": "My interest in this place is scientific.",
+      "emotion": "Neutral 50",
+      "response_text": "Then we have that in common. Whom do you typically work with?",
+      "index": "17"
+    },
+    {
+      "topic": "VMS03IgnacioKeepPeace",
+      "topic_text": "I just do what's necessary to keep the peace.",
+      "emotion": "Neutral 50",
+      "response_text": "That's reassuring, although many who've made that claim to the Followers of the Apocalypse over the years have had less than pure intentions.",
+      "index": "18"
+    },
+    {
+      "topic": "VMS03IgnacioMoreAboutFollowers",
+      "topic_text": "Tell me more about the Followers of the Apocalypse.",
+      "emotion": "Neutral 50",
+      "response_text": "Humanity lost many things after the war. Methods of agriculture, techniques for survival.",
+      "index": "24"
+    },
+    {
+      "topic": "VMS03IgnacioNCRDoesntKnow",
+      "topic_text": "The NCR doesn't know about the weapon?",
+      "emotion": "Neutral 50",
+      "response_text": "Not yet. By some miracle they've hired an imbecile to try and decipher the systems here.",
+      "index": "26"
+    },
+    {
+      "topic": "VMS03IgnacioNCREnlistedMe",
+      "topic_text": "The NCR asked me to help increase the plant's power output.",
+      "emotion": "Neutral 50",
+      "response_text": "Then I would say do it. As long as the power of this plant is committed to the regional grid and not to a weapon, we are safe.",
+      "index": "30"
+    },
+    {
+      "topic": "VMS03IgnacioNCRWantsHelp",
+      "topic_text": "They're looking for help getting this plant running.",
+      "emotion": "Neutral 50",
+      "response_text": "Interesting. Forgive me for prying, but I'm curious. Are you with a particular group?",
+      "index": "35"
+    },
+    {
+      "topic": "VMS03IgnacioNotYourConcern",
+      "topic_text": "That's not your concern.",
+      "emotion": "Neutral 50",
+      "response_text": "Interesting. Forgive me for prying, but I'm curious. Are you with a particular group?",
+      "index": "36"
+    },
+    {
+      "topic": "VMS03IgnacioOverloaded",
+      "topic_text": "I overloaded the plant. No one will be able to use it to power a weapon.",
+      "emotion": "Neutral 50",
+      "response_text": "So I saw. Shame to let the energy go to waste, but on the other hand, now we can rest easy. Here, accept these, for your efforts.",
+      "index": "37"
+    },
+    {
+      "topic": "VMS03IgnacioPeace",
+      "topic_text": "Peace.",
+      "emotion": "Neutral 50",
+      "response_text": "That's reassuring, although many who've made that claim to the Followers of the Apocalypse over the years have had less than pure intentions.",
+      "index": "38"
+    },
+    {
+      "topic": "VMS03IgnacioRivasTopic000",
+      "topic_text": "It'll be more fun if we keep it a mystery. Besides, I'm more interested in you.",
+      "emotion": "Neutral 50",
+      "response_text": "You're right. I'm sorry. That imbecile in the next room has me on edge. I used to be more fun.",
+      "index": "44"
+    },
+    {
+      "topic": "VMS03IgnacioRivasTopic001",
+      "topic_text": "Where are the Followers based around here?",
+      "emotion": "Neutral 50",
+      "response_text": "We're scattered, mostly. We go where we're needed. Our largest presence is in Freeside at Old Mormon Fort.",
+      "index": "47"
+    },
+    {
+      "topic": "VMS03IgnacioRivasTopic002",
+      "topic_text": "Do the Followers work together with the NCR?",
+      "emotion": "Neutral 50",
+      "response_text": "We did, for a time. But our goals differ. The NCR only cares to expand their wealth and their reach.",
+      "index": "50"
+    },
+    {
+      "topic": "VMS03IgnacioRivasTopic003",
+      "topic_text": "Go on.",
+      "emotion": "Neutral 50",
+      "response_text": "Other things weren't lost, but were blocked from our collective memory. Knowledge of what we're capable of, and how things spiral out of control.",
+      "index": "53"
+    },
+    {
+      "topic": "VMS03IgnacioRivasTopic004",
+      "topic_text": "I have another question.",
+      "emotion": "Neutral 50",
+      "response_text": "By all means.",
+      "index": "56"
+    },
+    {
+      "topic": "VMS03IgnacioRivasTopic005",
+      "topic_text": "The Brotherhood of Steel knew about ARCHIMEDES?",
+      "emotion": "Neutral 50",
+      "response_text": "I would think you'd know better than I. But perhaps they kept their operation here a secret, even from members of their own order.",
+      "index": "57"
+    },
+    {
+      "topic": "VMS03IgnacioRivasTopic006",
+      "topic_text": "Why are you still here?",
+      "emotion": "Neutral 50",
+      "response_text": "Keeping watch, mostly. Trying to make sure the dangers of this plant are minimized.",
+      "index": "61"
+    },
+    {
+      "topic": "VMS03IgnacioSoldier",
+      "topic_text": "I'm a soldier.",
+      "emotion": "Neutral 50",
+      "response_text": "Well that explains it. NCR? Who do you fight for?{Playing his cards close to the vest.}",
+      "index": "62"
+    },
+    {
+      "topic": "VMS03IgnacioTryNotToGetInvolved",
+      "topic_text": "I try not to get involved.",
+      "emotion": "Neutral 50",
+      "response_text": "Ah, but there's no avoiding it. You can only outrun the choice for so long.",
+      "index": "63"
+    },
+    {
+      "topic": "VMS03IgnacioWantWhatYouWant",
+      "topic_text": "I want what you want.",
+      "emotion": "Neutral 50",
+      "response_text": "That's reassuring, although many who've made that claim over the years have had less than pure intentions.",
+      "index": "66"
+    },
+    {
+      "topic": "VMS03IgnacioWar",
+      "topic_text": "War.",
+      "emotion": "Disgust 50",
+      "response_text": "That's... an unfortunate mistake.",
+      "index": "69"
+    },
+    {
+      "topic": "VMS03IgnacioWhatMoreThanAPlant",
+      "topic_text": "What more is there to this place than a power plant?",
+      "emotion": "Neutral 50",
+      "response_text": "I don't entirely know. Our records on the company that built this place suggest that their dealings were not only in energy, but also in weapons.",
+      "index": "73"
+    },
+    {
+      "topic": "VMS03IgnacioWhereRoutePower",
+      "topic_text": "Where should I route the power?",
+      "emotion": "Neutral 50",
+      "response_text": "Oh, the NCR has their own designs for it, no doubt. But resist the urge to send it only to the thriving communities.",
+      "index": "76"
+    },
+    {
+      "topic": "VMS03IgnacioWhyAreYouHere",
+      "topic_text": "Why are you here?",
+      "emotion": "Neutral 50",
+      "response_text": "I was sent here when we saw that the NCR had taken it. We have no record of the facility, but its original builders were cause for concern.",
+      "index": "78"
+    },
+    {
+      "topic": "VMS03IgnacioWhyTrustMe",
+      "topic_text": "Why would you trust me with this?",
+      "emotion": "Neutral 50",
+      "response_text": "I'm a man of letters. I'd be torn to pieces by the security system they have in that tower. I'd never reach the mainframe.",
+      "index": "82"
+    },
+    {
+      "topic": "VMS03IgnacioWithBrotherhood",
+      "topic_text": "I'm in the Brotherhood of Steel.",
+      "emotion": "Neutral 50",
+      "response_text": "The Brotherhood? I never thought I'd say it, but I'm glad you're here.",
+      "index": "85"
+    },
+    {
+      "topic": "VMS03IgnacioWithLegion",
+      "topic_text": "I serve Caesar.",
+      "emotion": "Disgust 50",
+      "response_text": "Then may you die in his service. I have nothing to say to you.",
+      "index": "90"
+    },
+    {
+      "topic": "VMS03IgnacioWithNCR",
+      "topic_text": "I'm with the NCR.",
+      "emotion": "Neutral 50",
+      "response_text": "That makes sense. It is their facility, after all. At least as long as they can hold it. As for me, I'm with the Followers of the Apocalypse.",
+      "index": "91"
+    },
+    {
+      "topic": "VMS03IgnacioWithNoOne",
+      "topic_text": "My only true allegiance is to myself.",
+      "emotion": "Neutral 50",
+      "response_text": "Then for everyone's sake, I hope you serve a worthy master. Are you a maker of war, or peace?",
+      "index": "92"
+    },
+    {
+      "topic": "VMS03IgnacioYouFirst",
+      "topic_text": "This is your turf. For all I know you could have me killed for my allegiance. Who are you with?",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] Very well. Yes. I'm part of the Followers of the Apocalypse.",
+      "index": "93"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Goodbye.",
+      "index": "97"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "Hello",
+      "emotion": "Neutral 50",
+      "response_text": "Hello.",
+      "index": "98"
+    }
+  ],
+  "combat": []
+}

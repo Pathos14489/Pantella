@@ -1,0 +1,247 @@
+{
+  "name": "Melissa¹",
+  "url": "/wiki/Melissa_Lewis",
+  "dialogue_name": "QJMelissa.txt",
+  "dialogue_url": "/wiki/QJMelissa.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000E595C",
+  "ref_id": "000E5E51",
+  "editor_id": "QJMelissa",
+  "location": "Red Rock Canyon",
+  "location_url": "/wiki/Red_Rock_Canyon",
+  "descriptions": [
+    "Melissa Lewis is a Great Khan member camped out near Quarry Junction in the Mojave Wasteland in 2281.",
+    "Melissa is the daughter of Chomps Lewis and a member of the Great Khans.",
+    "Melissa and two other Khans are awaiting a chems shipment at the Great Khan encampment above Quarry Junction.",
+    "Melissa is unaware of, and unrelated to, the Great Khan crew led by Jessup and McMurphy that ambushed the Courier under Benny, and she does not know of any other Great Khan gangs operating as far into NCR territory as she is (not that she would willingly out a fellow Great Khan).",
+    "Melissa's New Zealand accent was the result of a miscommunication between Joshua Sawyer and another developer that ignored his instructions for all characters native to the Mojave Wasteland to have American accents. Although Sawyer stated that it was a good performance, the strong accent was unintentional and by the time he heard the voice lines, it was too late to change it."
+  ],
+  "race": "Human",
+  "gender": "Female",
+  "affiliation": "Great Khans",
+  "role": "Scout[1]Runner leader[2]Advisor toPapa Khan",
+  "detailed_location": "Great Khan encampment",
+  "voice_actor": "Zoë Bell",
+  "special": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 3,
+    "Intelligence": 3,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "level": "5",
+  "tag_skills": [
+    {
+      "Guns:": "46"
+    },
+    {
+      "Melee Weap.:": "46"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Neutral",
+  "voice_type": "FemaleAdult06",
+  "geck_race": "HispanicRaider",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "That's close enough. What do you want with the Great Khans?",
+      "index": "1"
+    },
+    {
+      "topic": "MelissaCaesar",
+      "topic_text": "Regis says I should talk to you about speaking against the Great Khans' alliance with Caesar.",
+      "emotion": "Neutral 50",
+      "response_text": "You can ask, but why would I do that? Karl's told me all about life in the Legion! He says I've got all the makings of a{SPECK-you-la-tore-ay; over-enunciate like she's not familiar with the word}speculatore.",
+      "index": "5"
+    },
+    {
+      "topic": "VMS45QJMelissaTopic000",
+      "topic_text": "Did he also tell you women aren't permitted to serve in the Legion?",
+      "emotion": "Neutral 50",
+      "response_text": "What? No, he... what do you mean, aren't allowed to serve? Why would he lie about that?",
+      "index": "6"
+    },
+    {
+      "topic": "VMS45QJMelissaTopic001",
+      "topic_text": "If the Great Khans join the Legion, you'll be sold as a slave. An officer's wife, if you're lucky.",
+      "emotion": "Neutral 50",
+      "response_text": "That lying little weasel! I almost fell for it, too! All right, you've got a deal. You can tell Papa I won't support an alliance.",
+      "index": "7"
+    },
+    {
+      "topic": "vFreeformSloanQJMelissaTopic000",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Don't leave a trail.",
+      "index": "8"
+    },
+    {
+      "topic": "vFreeformSloanQJMelissaTopic001",
+      "topic_text": "I'm looking for some Great Khans who stole something from me in Goodsprings.",
+      "emotion": "Neutral 50",
+      "response_text": "The only Khans this far into NCR territory is me and my crew, and I didn't steal squat from you.",
+      "index": "9"
+    },
+    {
+      "topic": "vFreeformSloanQJMelissaTopic002",
+      "topic_text": "What are you doing up here?",
+      "emotion": "Neutral 50",
+      "response_text": "Awaiting a delivery, but it's a no-show. I'm guessing that the Deathclaws in the quarry have something to do with that.",
+      "index": "12"
+    },
+    {
+      "topic": "vFreeformSloanQJMelissaTopic003",
+      "topic_text": "I'll help you with your problem.",
+      "emotion": "Neutral 50",
+      "response_text": "{not trusting player}Is that right? What's your angle?",
+      "index": "13"
+    },
+    {
+      "topic": "vFreeformSloanQJMelissaTopic004",
+      "topic_text": "What kind of delivery are you expecting?",
+      "emotion": "Neutral 50",
+      "response_text": "Supplies to make chems. The NCR's the best source since they're hard to come by anywhere else.",
+      "index": "15"
+    },
+    {
+      "topic": "vFreeformSloanQJMelissaTopic005",
+      "topic_text": "Seems like an odd place to pick up a delivery.",
+      "emotion": "Neutral 50",
+      "response_text": "The Khans and the NCR don't get along - they prefer to shoot us on sight, even if we're not looking for a fight.",
+      "index": "17"
+    },
+    {
+      "topic": "vFreeformSloanQJMelissaTopic006",
+      "topic_text": "No angle. I just want to help.",
+      "emotion": "Neutral 50",
+      "response_text": "{still not trusting}Right. All right, here's the deal.",
+      "index": "18"
+    },
+    {
+      "topic": "vFreeformSloanQJMelissaTopic007",
+      "topic_text": "A favor for a favor.",
+      "emotion": "Neutral 50",
+      "response_text": "All right, fair enough. You help us out, and I'll owe you one.",
+      "index": "21"
+    },
+    {
+      "topic": "vFreeformSloanQJMelissaTopic008",
+      "topic_text": "Well, I am expecting to be paid, of course.",
+      "emotion": "Neutral 50",
+      "response_text": "That's a motive I can understand.",
+      "index": "22"
+    },
+    {
+      "topic": "vFreeformSloanQJMelissaTopic009",
+      "topic_text": "Are these chemicals dangerous?",
+      "emotion": "Neutral 50",
+      "response_text": "I wouldn't eat or drink them, but no, they won't explode if you drop them or anything.",
+      "index": "23"
+    },
+    {
+      "topic": "vFreeformSloanQJMelissaTopic010",
+      "topic_text": "Got it. Let's talk about something else.",
+      "emotion": "Neutral 50",
+      "response_text": "{slightly suspicious}Like what?",
+      "index": "24"
+    },
+    {
+      "topic": "vFreeformSloanQJMelissaTopic011",
+      "topic_text": "Anything else I should know?",
+      "emotion": "Neutral 50",
+      "response_text": "Don't kill anybody if you don't have to. I'm a scout, and I like to keep a low profile.",
+      "index": "25"
+    },
+    {
+      "topic": "vFreeformSloanQJMelissaTopic012",
+      "topic_text": "I got the chems for you.",
+      "emotion": "Neutral 50",
+      "response_text": "You actually came through for us. I... didn't expect that. Anyway, the Great Khans pay their debts and don't forget their friends.",
+      "index": "26"
+    },
+    {
+      "topic": "vFreeformSloanQJMelissaTopic013",
+      "topic_text": "Your supplier was exposed. There won't be any more chemical supplies.",
+      "emotion": "Neutral 50",
+      "response_text": "{suspicious}Uh-huh. And how exactly was he exposed?",
+      "index": "28"
+    },
+    {
+      "topic": "vFreeformSloanQJMelissaTopic014",
+      "topic_text": "Tell me about the Great Khans.",
+      "emotion": "Neutral 50",
+      "response_text": "We're an independent group. We take care of our own and don't take crap from anybody, especially the NCR.",
+      "index": "29"
+    },
+    {
+      "topic": "vFreeformSloanQJMelissaTopic017",
+      "topic_text": "<Lie> Just trying to get on the good side of the Great Khans.",
+      "emotion": "Neutral 50",
+      "response_text": "That's a smart move. The Great Khans look out for their friends.",
+      "index": "30"
+    },
+    {
+      "topic": "vFreeformSloanQJMelissaTopic018",
+      "topic_text": "What happened between the Great Khans and the NCR?",
+      "emotion": "Anger 100",
+      "response_text": "Bitter Springs happened. Women and children died when the NCR attacked the Great Khans there, and the NCR just pretends it never happened.",
+      "index": "31"
+    },
+    {
+      "topic": "vFreeformSloanQJMelissaTopic019",
+      "topic_text": "Where can I find the rest of the Great Khans?",
+      "emotion": "Neutral 50",
+      "response_text": "Our main camp is up in Red Rock Canyon, but we don't allow just anyone to come on in.",
+      "index": "32"
+    },
+    {
+      "topic": "vFreeformSloanQJMelissaTopic020",
+      "topic_text": "Simple. I turned him in.",
+      "emotion": "Neutral 50",
+      "response_text": "{furious}I knew I shouldn't have trusted you! You're going to pay for that!",
+      "index": "34"
+    },
+    {
+      "topic": "vFreeformSloanQJMelissaTopic021",
+      "topic_text": "He was sloppy and trusted the wrong person.",
+      "emotion": "Neutral 50",
+      "response_text": "{annoyed}Well, fuck. I can't believe I'm going back to Red Rock empty-handed. Thanks for trying to help.",
+      "index": "35"
+    },
+    {
+      "topic": "vFreeformSloanQJMelissaTopic022",
+      "topic_text": "<Lie> Beats me.",
+      "emotion": "Neutral 50",
+      "response_text": "I don't think that's the whole story, but fuck it. I'm going back to Red Rock. I've had enough of this place.",
+      "index": "36"
+    },
+    {
+      "topic": "vFreeformSloanQJMelissaTopic023",
+      "topic_text": "Is this delivery legal?",
+      "emotion": "Happy 10",
+      "response_text": "I doubt the NCR thinks so. Heh.",
+      "index": "37"
+    },
+    {
+      "topic": "vFreeformSloanQJMelissaTopic024",
+      "topic_text": "How did you end up joining the Great Khans?",
+      "emotion": "Pained 5",
+      "response_text": "{slight wincing}It wasn't easy. There's a lot of initiation rituals to go through, and I've got the scars to prove it.",
+      "index": "38"
+    }
+  ],
+  "conversation": [],
+  "combat": []
+}

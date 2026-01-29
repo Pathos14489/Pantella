@@ -1,0 +1,190 @@
+{
+  "name": "Blake",
+  "url": "/wiki/Blake_(Fallout:_New_Vegas)",
+  "dialogue_name": "CrimsonCaravanBlake.txt",
+  "dialogue_url": "/wiki/CrimsonCaravanBlake.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": true,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000F1863",
+  "ref_id": "000F1866",
+  "editor_id": "CrimsonCaravanBlake",
+  "location": "Crimson Caravan Company",
+  "location_url": "/wiki/Crimson_Caravan_Company",
+  "descriptions": [
+    "Blake is a merchant and the supply manager for the Crimson Caravan Company's branch office near New Vegas in the Mojave Wasteland in 2281. He appears in Fallout: New Vegas.",
+    "Blake was born and raised in a farming town within the New California Republic's territory called Oak Creek. By the time of his adulthood, control of it effectively belonged to powerful ranchers in the area; unwilling to spend the rest of his life tending to brahmin herds, Blake left, eventually gaining employment with the Crimson Caravan Company. He later accepted the assignment as a supply manager for their branch near New Vegas in the frontier around the turn of the 2280s.",
+    "At some point during his work in New Vegas, Blake became acquainted with Sergeant Daniel Contreras, the supply officer for the Army headquarters at Camp McCarran, and unknowingly became his supplier for medical material that Contreras could then sell to his shadier connections, implicitly for making chems;"
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Crimson Caravan Company",
+  "role": "MerchantSupply manager",
+  "detailed_location": "Crimson Caravan Companycompound",
+  "voice_actor": "Gregory Alan Williams",
+  "special": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 4,
+    "Intelligence": 4,
+    "Agility": 6,
+    "Luck": 4
+  },
+  "level": "5",
+  "tag_skills": [
+    {
+      "Guns:": "47"
+    },
+    {
+      "Melee Weap.:": "47"
+    },
+    {
+      "Sneak:": "47"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "85"
+    }
+  ],
+  "karma": "Neutral",
+  "voice_type": "MaleAdult06",
+  "geck_race": "AfricanAmerican",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Happy 10",
+      "response_text": "If you're looking to buy or sell, you've come to the right man. The Crimson Caravan Company has the widest selection in the wasteland.",
+      "index": "1"
+    },
+    {
+      "topic": "VDialogueCrimsonCaravanCrimsonCaravanBlakeTopic000",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "See ya.",
+      "index": "3"
+    },
+    {
+      "topic": "VDialogueCrimsonCaravanCrimsonCaravanBlakeTopic001",
+      "topic_text": "Show me what you have for sale.",
+      "emotion": "Neutral 50",
+      "response_text": "Can do.",
+      "index": "4"
+    },
+    {
+      "topic": "VDialogueCrimsonCaravanCrimsonCaravanBlakeTopic002",
+      "topic_text": "Contreras sent me for some medical supplies.",
+      "emotion": "Neutral 50",
+      "response_text": "Here you go. Let him know he needs to make another payment if he wants more of this stuff.",
+      "index": "5"
+    },
+    {
+      "topic": "VDialogueCrimsonCaravanCrimsonCaravanBlakeTopic003",
+      "topic_text": "Will do.",
+      "emotion": "Neutral 50",
+      "response_text": "Need anything else?",
+      "index": "6"
+    },
+    {
+      "topic": "VDialogueCrimsonCaravanCrimsonCaravanBlakeTopic004",
+      "topic_text": "Is there something special about these supplies?",
+      "emotion": "Neutral 50",
+      "response_text": "Well, pain-killers are easy to come by, but it isn't easy finding iodine, allergy meds, and a few of these other items. Why do you ask?",
+      "index": "7"
+    },
+    {
+      "topic": "VDialogueCrimsonCaravanCrimsonCaravanBlakeTopic005",
+      "topic_text": "Combining those with chemical cleaners would yield strong chems...",
+      "emotion": "Neutral 50",
+      "response_text": "Really?  Huh, never thought of that.  The Crimson Caravan isn't really in the drug business.",
+      "index": "8"
+    },
+    {
+      "topic": "VDialogueCrimsonCaravanCrimsonCaravanBlakeTopic006",
+      "topic_text": "Some of those could be combined with other chemicals to make drugs...",
+      "emotion": "Neutral 50",
+      "response_text": "Really?  Huh, never thought of that.  The Crimson Caravan isn't really in the drug business.",
+      "index": "9"
+    },
+    {
+      "topic": "VDialogueCrimsonCaravanCrimsonCaravanBlakeTopic009",
+      "topic_text": "McCarran needs a regular shipment of brahmin meat and spices for the mess hall.",
+      "emotion": "Neutral 50",
+      "response_text": "Won't be a problem. We have plenty of spice traders working with us back home, and we could get meat from local Brahmin ranchers.",
+      "index": "10"
+    },
+    {
+      "topic": "VDialogueCrimsonCaravanCrimsonCaravanBlakeTopic010",
+      "topic_text": "McCarran has plenty of caps to cover the shipment. They'll deal with the cost.",
+      "emotion": "Neutral 50",
+      "response_text": "Excellent.  We should be able to get the shipments started in about a week.",
+      "index": "12"
+    },
+    {
+      "topic": "VDialogueCrimsonCaravanCrimsonCaravanBlakeTopic011< Speech 70 >",
+      "topic_text": "Give them a deal on the price, you'll have the upper hand in future, more important negotiations.",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] Well, the Far Go Traders have been trying to edge us out on the new armor contract for the troops. This could swing things in our favor.",
+      "index": "13"
+    },
+    {
+      "topic": "VDialogueCrimsonCaravanCrimsonCaravanBlakeTopic012< Barter 50 >",
+      "topic_text": "McCarran is overstocked with water and fresh vegetables. Arrange for a two for one trade.",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] That should work. We'll do a weighted exchanged based on the going value of meat and vegetables. Water is invaluable in this dusty hole.",
+      "index": "16"
+    },
+    {
+      "topic": "VDialogueCrimsonCaravanCrimsonCaravanBlakeTopic013",
+      "topic_text": "Can you answer some questions for me?",
+      "emotion": "Neutral 50",
+      "response_text": "Maybe. What do you want to know?",
+      "index": "19"
+    },
+    {
+      "topic": "VDialogueCrimsonCaravanCrimsonCaravanBlakeTopic015",
+      "topic_text": "Where does the Crimson Caravan Company get its merchandise?",
+      "emotion": "Neutral 50",
+      "response_text": "Trade routes, my friend, trade routes. Just about every major town in the wasteland has a Crimson Caravan branch in it.",
+      "index": "20"
+    },
+    {
+      "topic": "VDialogueCrimsonCaravanCrimsonCaravanBlakeTopic016",
+      "topic_text": "Do your caravans ever have trouble from bandits?",
+      "emotion": "Neutral 50",
+      "response_text": "Out here, we usually split our caravans into smaller bands - that way, we don't lose everything if they get hit.",
+      "index": "21"
+    },
+    {
+      "topic": "VDialogueCrimsonCaravanCrimsonCaravanBlakeTopic017",
+      "topic_text": "Where are you from?",
+      "emotion": "Neutral 50",
+      "response_text": "A little place in the NCR called Oak Creek. Used to be a farming town until it got taken over by ranchers.",
+      "index": "23"
+    },
+    {
+      "topic": "VDialogueCrimsonCaravanCrimsonCaravanBlakeTopic018",
+      "topic_text": "Hmm. I'll be right back.",
+      "emotion": "Neutral 50",
+      "response_text": "Okay, just let me know when you want to talk numbers.",
+      "index": "25"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "See ya.",
+      "index": "26"
+    }
+  ],
+  "combat": []
+}

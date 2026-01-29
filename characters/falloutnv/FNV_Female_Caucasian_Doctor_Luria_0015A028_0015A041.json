@@ -1,0 +1,126 @@
+{
+  "name": "Doctor Luria",
+  "url": "/wiki/Luria",
+  "dialogue_name": "SafehouseFollowersDoctor.txt",
+  "dialogue_url": "/wiki/SafehouseFollowersDoctor.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": true,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "0015A028",
+  "ref_id": "0015A041",
+  "editor_id": "SafehouseFollowersDoctor",
+  "location": "Followers safehouse",
+  "location_url": "/wiki/Followers_safehouse",
+  "descriptions": [
+    "Doctor Luria is a member of the Followers of the Apocalypse in the Mojave Wasteland in Fallout: New Vegas.",
+    "As one of the Followers, Luria makes regular visits to the Followers safehouse northwest of New Vegas to keep the supplies there furnished for any Follower that needs them. She also offers many medical supplies, including stimpaks, super stimpaks, Rad-X, and RadAway.",
+    "Despite being a doctor, she cannot heal the player character."
+  ],
+  "race": "Human",
+  "gender": "Female",
+  "affiliation": "Followers of the Apocalypse",
+  "role": "Doctor",
+  "detailed_location": "Followers safehouse",
+  "voice_actor": "April Stewart",
+  "special": {
+    "Strength": 4,
+    "Perception": 6,
+    "Endurance": 4,
+    "Charisma": 6,
+    "Intelligence": 7,
+    "Agility": 5,
+    "Luck": 4
+  },
+  "level": "12",
+  "tag_skills": [
+    {
+      "Barter:": "78"
+    },
+    {
+      "Medicine:": "80"
+    },
+    {
+      "Science:": "80(85)"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "120"
+    }
+  ],
+  "karma": "Neutral",
+  "voice_type": "FemaleAdult03",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Happy 30",
+      "response_text": "May I help you?",
+      "index": "1"
+    },
+    {
+      "topic": "vSafehouseSafehouseFollowersDoctorTopic000",
+      "topic_text": "Why are you here?",
+      "emotion": "Happy 30",
+      "response_text": "I like to check up on things from time to time. I can't let this place fall apart, now can I?",
+      "index": "2"
+    },
+    {
+      "topic": "vSafehouseSafehouseFollowersDoctorTopic001",
+      "topic_text": "I could use some stims.",
+      "emotion": "Happy 10",
+      "response_text": "I can give you stims or radiation supplies, which would you prefer?",
+      "index": "4"
+    },
+    {
+      "topic": "vSafehouseSafehouseFollowersDoctorTopic002",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Bye.",
+      "index": "5"
+    },
+    {
+      "topic": "vSafehouseSafehouseFollowersDoctorTopic003",
+      "topic_text": "Are you always here?",
+      "emotion": "Happy 20",
+      "response_text": "I'm usually here a few days out of the week.  Mostly to keep the fridge stocked.  Plus it's nice to get away from it all every now and then.",
+      "index": "6"
+    },
+    {
+      "topic": "vSafehouseSafehouseFollowersDoctorTopic004",
+      "topic_text": "Regular stims.",
+      "emotion": "Happy 30",
+      "response_text": "Here you go.",
+      "index": "7"
+    },
+    {
+      "topic": "vSafehouseSafehouseFollowersDoctorTopic005",
+      "topic_text": "Super stims.",
+      "emotion": "Happy 30",
+      "response_text": "Here you go.",
+      "index": "8"
+    },
+    {
+      "topic": "vSafehouseSafehouseFollowersDoctorTopic006",
+      "topic_text": "Actually, nevermind.",
+      "emotion": "Happy 10",
+      "response_text": "Okay, I'll have them here for you if you want them.",
+      "index": "9"
+    },
+    {
+      "topic": "vSafehouseSafehouseFollowersDoctorTopic007",
+      "topic_text": "Radiation supplies.",
+      "emotion": "Happy 30",
+      "response_text": "Here you go.",
+      "index": "10"
+    }
+  ],
+  "conversation": [],
+  "combat": []
+}

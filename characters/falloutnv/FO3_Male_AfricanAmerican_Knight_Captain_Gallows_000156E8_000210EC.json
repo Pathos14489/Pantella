@@ -1,0 +1,284 @@
+{
+  "name": "Knight Captain Gallows",
+  "url": "/wiki/Irving_Gallows",
+  "dialogue_name": "KnightCaptainGallows.txt",
+  "dialogue_url": "/wiki/KnightCaptainGallows.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": true,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000156E8",
+  "ref_id": "000210EC",
+  "editor_id": "KnightCaptainGallows",
+  "location": "Citadel A ring",
+  "location_url": "/wiki/Citadel_A_ring",
+  "descriptions": [
+    "Knight Captain Gallows is an elite member of Lyons' Pride of the Brotherhood of Steel, found at the Citadel in Fallout 3. His real name is Irving.",
+    "One of the most enigmatic members of the Lyons' Pride, Knight Captain Gallows is a quiet, reserved man who specializes in reconnaissance and stealth assignments,",
+    "For his part, Gallows is simply utterly ruthless and no-nonsense: he focuses exclusively on his job as a soldier and simply refuses to fraternize with other members of the unit, as doing so gets in the way of combat, such as \"crazy\" solo night ops.",
+    "Gallows is amused by the pool's existence for the most part,"
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Lyons' Brotherhood of SteelLyons' Pride",
+  "role": "ScoutSpecial Operator",
+  "detailed_location": "Citadel A ring",
+  "voice_actor": "Pete Papageorge",
+  "special": {
+    "Strength": 7,
+    "Perception": 7,
+    "Endurance": 6,
+    "Charisma": 4,
+    "Intelligence": 3,
+    "Agility": 4,
+    "Luck": 4
+  },
+  "mod_special_values": {
+    "Strength": 9,
+    "Perception": 7,
+    "Endurance": 6,
+    "Charisma": 4,
+    "Intelligence": 3,
+    "Agility": 2,
+    "Luck": 4
+  },
+  "level": "4→7→11",
+  "tag_skills": [
+    {
+      "Big Guns:": "44→57→74"
+    },
+    {
+      "Energy Weap.:": "46→59→76"
+    },
+    {
+      "Small Guns:": "40→53→70"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "70→95→125"
+    },
+    {
+      "Radiation Res.:": "0%(13%)"
+    },
+    {
+      "Damage Res.:": "0%(48%)"
+    }
+  ],
+  "karma": "Good",
+  "voice_type": "MaleAdult02DC",
+  "geck_race": "AfricanAmerican",
+  "topics": [
+    {
+      "topic": "CitGallowsGreeting1",
+      "topic_text": "You don't say much, do you?",
+      "emotion": "Neutral 50",
+      "response_text": "No. I don't.",
+      "index": "1"
+    },
+    {
+      "topic": "CitGallowsGreeting2",
+      "topic_text": "<Say nothing.>",
+      "emotion": "Neutral 50",
+      "response_text": "...",
+      "index": "3"
+    },
+    {
+      "topic": "CitGallowsGreeting2b",
+      "topic_text": "<Continue to say nothing.>",
+      "emotion": "Neutral 50",
+      "response_text": "...",
+      "index": "4"
+    },
+    {
+      "topic": "CitGallowsGreeting2b2",
+      "topic_text": "<Continue to say nothing.>",
+      "emotion": "Neutral 50",
+      "response_text": "...",
+      "index": "5"
+    },
+    {
+      "topic": "CitGallowsName",
+      "topic_text": "So, what's your real name?",
+      "emotion": "Neutral 50",
+      "response_text": "... what's the pool up to now, anyway?",
+      "index": "7"
+    },
+    {
+      "topic": "CitGallowsName1",
+      "topic_text": "Come on, it will really throw those guys for a loop if you tell me.",
+      "emotion": "Neutral 50",
+      "response_text": "Fine. I'm tired of this game. Irving. My name is Irving. There. Go collect your money.",
+      "index": "10"
+    },
+    {
+      "topic": "CitGallowsName2",
+      "topic_text": "Can't we work something out? Maybe share the winnings?",
+      "emotion": "Neutral 50",
+      "response_text": "No. We can't.",
+      "index": "14"
+    },
+    {
+      "topic": "CitGallowsNameEND",
+      "topic_text": "Never mind.",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah. Never mind.",
+      "index": "15"
+    },
+    {
+      "topic": "DLC03TLCitadelEnclave",
+      "topic_text": "So... Any thoughts on the Enclave?",
+      "emotion": "Neutral 50",
+      "response_text": "I hear maybe we've got a new way to kill them. That'll be fun. If it works, of course.",
+      "index": "16"
+    },
+    {
+      "topic": "FFCitGallowsRecon1",
+      "topic_text": "Is there anyway I could help you?",
+      "emotion": "Neutral 50",
+      "response_text": "...",
+      "index": "19"
+    },
+    {
+      "topic": "FFCitGallowsRecon1a",
+      "topic_text": "So, do I get to know, or do I have to guess?",
+      "emotion": "Neutral 50",
+      "response_text": "I need information on locations outside of the city.",
+      "index": "21"
+    },
+    {
+      "topic": "FFCitGallowsRecon1a1",
+      "topic_text": "What do you need me to do?",
+      "emotion": "Neutral 50",
+      "response_text": "Collect location data from the wasteland. When you discover a new location, report it to me. Simple.",
+      "index": "23"
+    },
+    {
+      "topic": "FFCitGallowsRecon1a1a",
+      "topic_text": "I think I can handle that.",
+      "emotion": "Neutral 50",
+      "response_text": "Good. Return to me when you have data to share.",
+      "index": "24"
+    },
+    {
+      "topic": "FFCitGallowsRecon1a1b",
+      "topic_text": "Yeah... not really interested.",
+      "emotion": "Neutral 50",
+      "response_text": "It doesn't matter. The offer stands.",
+      "index": "25"
+    },
+    {
+      "topic": "FFCitGallowsRecon1a2",
+      "topic_text": "What's in it for me?",
+      "emotion": "Neutral 50",
+      "response_text": "You will be rewarded with your choice of ammo.",
+      "index": "26"
+    },
+    {
+      "topic": "FFCitGallowsRecon1a3",
+      "topic_text": "Is that your job? Why do you need me to do it?",
+      "emotion": "Neutral 50",
+      "response_text": "I am occupied containing the Super Mutants and now the Enclave.",
+      "index": "27"
+    },
+    {
+      "topic": "FFCitGallowsRecon1aEND",
+      "topic_text": "Yeah, no thanks.",
+      "emotion": "Neutral 50",
+      "response_text": "Your choice.",
+      "index": "29"
+    },
+    {
+      "topic": "FFCitGallowsRecon1b",
+      "topic_text": "You talk too much. Cut the chatter and get to the point, would you?",
+      "emotion": "Neutral 50",
+      "response_text": "Sarcasm. Very clever.",
+      "index": "30"
+    },
+    {
+      "topic": "FFCitGallowsRecon1c",
+      "topic_text": "Yeah... on second thought, never mind.",
+      "emotion": "Neutral 50",
+      "response_text": "Just as well.",
+      "index": "33"
+    },
+    {
+      "topic": "FFCitGallowsRecon2",
+      "topic_text": "Well. Sounds very exciting. I'll let you get back to that.",
+      "emotion": "Neutral 50",
+      "response_text": "Good. I will.",
+      "index": "34"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "...{Just the sound of breathing. He's being silent here.}",
+      "index": "35"
+    },
+    {
+      "topic": "SpeechChallengeFailure",
+      "topic_text": "SpeechChallengeFailure",
+      "emotion": "Neutral 50",
+      "response_text": "Nice try. I said no.",
+      "index": "39"
+    },
+    {
+      "topic": "TLCitadelEnclave",
+      "topic_text": "So... Any thoughts on the Enclave?",
+      "emotion": "Neutral 50",
+      "response_text": "They're men. They're born, they live, they die. End of story.",
+      "index": "41"
+    },
+    {
+      "topic": "TLCitadelSuperMutant",
+      "topic_text": "Care to share anything about the Super Mutants?",
+      "emotion": "Neutral 50",
+      "response_text": "Shoot 'em, they die. Stab 'em, they die. Strangle 'em? They die.",
+      "index": "42"
+    },
+    {
+      "topic": "TLLyonsPride",
+      "topic_text": "What can you tell me about the Lyons' Pride?",
+      "emotion": "Neutral 50",
+      "response_text": "Sarah appreciates my... methods. I fill a role no one else can.",
+      "index": "43"
+    },
+    {
+      "topic": "TLPrideJobWhat do you do here?",
+      "topic_text": "So what's your specialty in the Lyons' Pride?",
+      "emotion": "Neutral 50",
+      "response_text": "Spec ops. Let's leave it at that.",
+      "index": "44"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "I have to go now.",
+      "emotion": "Neutral 50",
+      "response_text": "And so we part.",
+      "index": "45"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Neutral 50",
+      "response_text": "Hail.",
+      "index": "48"
+    }
+  ],
+  "combat": [
+    {
+      "topic": "Assault",
+      "topic_text": "Assault",
+      "emotion": "Neutral 50",
+      "response_text": "Mistake.",
+      "index": "49"
+    }
+  ]
+}

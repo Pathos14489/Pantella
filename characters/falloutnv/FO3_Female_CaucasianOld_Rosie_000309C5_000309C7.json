@@ -1,0 +1,258 @@
+{
+  "name": "Rosie",
+  "url": "/wiki/Rosie",
+  "dialogue_name": "Rosie.txt",
+  "dialogue_url": "/wiki/Rosie.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000309C5",
+  "ref_id": "000309C7",
+  "editor_id": "Rosie",
+  "location": "Republic of Dave capitol building",
+  "location_url": "/wiki/Republic_of_Dave_capitol_building",
+  "descriptions": [
+    "Rosie is Dave's first wife, and First Lady of the Republic of Dave in 2277.",
+    "Rosie is possibly the most discontented citizen of the Republic of Dave. She'll occasionally speak up, but Dave quickly reminds her where the power of the Republic truly lies. Rosie is extremely intelligent and has many suggestions about how the Republic could be safer, happier, and more efficient. Unfortunately, people rarely ask Rosie what she thinks."
+  ],
+  "race": "Human",
+  "gender": "Female",
+  "affiliation": "Republic of Dave",
+  "role": "Wife of Dave",
+  "detailed_location": "Republic of Dave",
+  "voice_actor": "Karen Carbone",
+  "special": {
+    "Strength": 6,
+    "Perception": 7,
+    "Endurance": 5,
+    "Charisma": 3,
+    "Intelligence": 3,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "mod_special_values": {
+    "Strength": 6,
+    "Perception": 7,
+    "Endurance": 6,
+    "Charisma": 3,
+    "Intelligence": 3,
+    "Agility": 7,
+    "Luck": 5
+  },
+  "level": "3→7 (PClevel x 1.00)",
+  "tag_skills": [
+    {
+      "Explosives:": "42→60"
+    },
+    {
+      "Small Guns:": "40→58(42→60)"
+    },
+    {
+      "Sneak:": "40→58(42→60)"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "40→60(45→65)"
+    },
+    {
+      "Critical Chance:": "5%"
+    },
+    {
+      "Unarmed Dam.:": "1.25"
+    },
+    {
+      "Poison Resist.:": "20%(25%)"
+    },
+    {
+      "Rad. Resist.:": "8%(10%)"
+    },
+    {
+      "Carry Weight:": "210"
+    },
+    {
+      "Damage Res.:": "2%"
+    }
+  ],
+  "karma": "Good",
+  "voice_type": "FemaleAdult02DC",
+  "geck_race": "CaucasianOld",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "Well now... who could have ever thought? Me! President! Things are really going to be different around here.",
+      "index": "1"
+    },
+    {
+      "topic": "RDGottaGo",
+      "topic_text": "I've got to go.",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah, and I have to get back to work.",
+      "index": "10"
+    },
+    {
+      "topic": "RDNeverMind",
+      "topic_text": "Actually, I think I have all the info I need.",
+      "emotion": "Neutral 50",
+      "response_text": "Glad to hear it.",
+      "index": "11"
+    },
+    {
+      "topic": "RDRosieInsipid",
+      "topic_text": "It could be pretty tough, I guess.",
+      "emotion": "Sad 10",
+      "response_text": "Hmm, maybe you're right.  More trouble than it's worth.",
+      "index": "12"
+    },
+    {
+      "topic": "RDRosieInspire",
+      "topic_text": "It's not a betrayal.  This is a free, um, nation... right?",
+      "emotion": "Surprise 20",
+      "response_text": "Yeah, and like Dave says, freedom is the most free freedom that we have!",
+      "index": "13"
+    },
+    {
+      "topic": "RDRosieInsult",
+      "topic_text": "Is it because you're too stupid to be President?",
+      "emotion": "Anger 50",
+      "response_text": "What? Stupid? Well... I guess this was all just a joke to you. You've had your fun, now leave me alone.",
+      "index": "15"
+    },
+    {
+      "topic": "RDRosiePersuade",
+      "topic_text": "You could lead the Republic into a new era! The Democracy of Rosie!",
+      "emotion": "Happy 50",
+      "response_text": "You're right! Dave's just been pushing me around. It's time for a change.",
+      "index": "16"
+    },
+    {
+      "topic": "RDSubElectionOpponentsWho's running in the election?",
+      "topic_text": "You know, Bob is running for president.",
+      "emotion": "Neutral 50",
+      "response_text": "Hmm, I don't know that he stands much of a chance against Dave.",
+      "index": "17"
+    },
+    {
+      "topic": "RDSubElectionSuggestion",
+      "topic_text": "Have you considered running for the presidency?",
+      "emotion": "Neutral 50",
+      "response_text": "Keep your voice down! I'm not really comfortable talking about it out here.",
+      "index": "19"
+    },
+    {
+      "topic": "RDTopicElection",
+      "topic_text": "I'd like to discuss the election with you.",
+      "emotion": "Neutral 50",
+      "response_text": "Election time is always exciting around here.",
+      "index": "24"
+    },
+    {
+      "topic": "RDTopicElectionResults",
+      "topic_text": "Have you heard the election results?",
+      "emotion": "Neutral 50",
+      "response_text": "Dave won again? Well, he's the best choice.",
+      "index": "25"
+    },
+    {
+      "topic": "RDTopicGoVote",
+      "topic_text": "You should go vote, if you haven't already.",
+      "emotion": "Neutral 50",
+      "response_text": "Already did my part.",
+      "index": "33"
+    },
+    {
+      "topic": "RDTopicRoD",
+      "topic_text": "I'd like to know more about the Republic.",
+      "emotion": "Neutral 50",
+      "response_text": "Sure, honey, but don't make it too long or Dave will start wondering why we're talking.",
+      "index": "35"
+    },
+    {
+      "topic": "RDTopicRoDEND",
+      "topic_text": "That's all I need to know.",
+      "emotion": "Neutral 50",
+      "response_text": "Sure, honey.",
+      "index": "37"
+    },
+    {
+      "topic": "RDTopicThisPlace",
+      "topic_text": "What's your take on the Republic?",
+      "emotion": "Neutral 50",
+      "response_text": "We have plenty of food and water here, and the compound is fairly safe. I'm glad the children can be raised here, away from the Wasteland.",
+      "index": "38"
+    },
+    {
+      "topic": "RDTopicWhosInCharge",
+      "topic_text": "Tell me more about this Dave guy.",
+      "emotion": "Happy 50",
+      "response_text": "Dave is a good man. He looks after all the children and makes sure they have plenty to do. He's bought a lot of toys, not that he'd admit it.",
+      "index": "40"
+    },
+    {
+      "topic": "RDTopicWivesDave has two wives?",
+      "topic_text": "You're Dave's first wife, right? He has two?",
+      "emotion": "Neutral 50",
+      "response_text": "Well, yes. Dave and I were married when he was wandering the Wasteland, before inheriting the republic from his father Tom.",
+      "index": "42"
+    },
+    {
+      "topic": "RDTopicYourself",
+      "topic_text": "What can you tell me about yourself?",
+      "emotion": "Surprise 50",
+      "response_text": "Not much to say really. Dave was my husband for many, many years.",
+      "index": "44"
+    },
+    {
+      "topic": "SpeechChallengeFailure",
+      "topic_text": "SpeechChallengeFailure",
+      "emotion": "Sad 50",
+      "response_text": "No... no. I don't think I could. Sorry.",
+      "index": "46"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYEI have to go now.",
+      "topic_text": "Goodbye, Rosie.",
+      "emotion": "Neutral 50",
+      "response_text": "Goodbye. Take care of yourself.",
+      "index": "47"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Happy 50",
+      "response_text": "Hi, Mister President.",
+      "index": "48"
+    },
+    {
+      "topic": "RDElectionTalk",
+      "topic_text": "DaveElectionTalk",
+      "emotion": "Neutral 50",
+      "response_text": "Crazy how it sneaks up on you, y'know?",
+      "index": "50"
+    },
+    {
+      "topic": "RDFeudTalk",
+      "topic_text": "DaveFeudTalk",
+      "emotion": "Anger 50",
+      "response_text": "Don't talk to me that way.",
+      "index": "51"
+    },
+    {
+      "topic": "RDPackageDone",
+      "topic_text": "RDPackageDone",
+      "emotion": "Neutral 50",
+      "response_text": "Fingers crossed.",
+      "index": "53"
+    }
+  ],
+  "combat": []
+}

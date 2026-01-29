@@ -1,0 +1,229 @@
+{
+  "name": "Scribe Vallincourt",
+  "url": "/wiki/Vallincourt",
+  "dialogue_name": "DLC03ScribeVallincourt.txt",
+  "dialogue_url": "/wiki/DLC03ScribeVallincourt.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "xx005685",
+  "ref_id": "xx00672E",
+  "editor_id": "DLC03ScribeVallincourt",
+  "location": "Citadel",
+  "location_url": "/wiki/The_Citadel",
+  "descriptions": [
+    "Scribe Vallincourt is a scribe of the Brotherhood of Steel and one of Head Scribe Rothchild's assistants in the Fallout 3 add-on Broken Steel.",
+    "A member of the Order of the Shield, Vallincourt is as beautiful as she is intelligent.",
+    "After the activation of Project Purity and the breaking of the Enclave at the Jefferson Memorial, her attitude softens.",
+    "After the Lone Wanderer recovers the Tesla coil, Vallincourt leads the fabrication effort on the Tesla cannons meant to tip the scales in the Brotherhood's favor for the attack on Adams Air Force Base.",
+    "Scribe Vallincourt appears only in the Fallout 3 add-on Broken Steel."
+  ],
+  "race": "Human",
+  "gender": "Female",
+  "affiliation": "Brotherhood of Steel(Order of the Shield)",
+  "role": "Assistant",
+  "detailed_location": "The Citadel",
+  "voice_actor": "Karen Carbone",
+  "special": {
+    "Strength": 4,
+    "Perception": 6,
+    "Endurance": 4,
+    "Charisma": 4,
+    "Intelligence": 7,
+    "Agility": 6,
+    "Luck": 4
+  },
+  "tag_skills": [
+    {
+      "Repair:": "84"
+    },
+    {
+      "Science:": "84"
+    },
+    {
+      "Small Guns:": "82"
+    }
+  ],
+  "karma": "Neutral",
+  "voice_type": "DLC03FemaleUniqueVallincourt",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "CitTownCitadelEND",
+      "topic_text": "That's all I needed.",
+      "emotion": "Neutral 50",
+      "response_text": "If you say so.",
+      "index": "1"
+    },
+    {
+      "topic": "DLC03BS2TLVallincourtNeedHelp",
+      "topic_text": "I hear you can help me get into Old Olney.",
+      "emotion": "Neutral 50",
+      "response_text": "Well, maybe. I mean, possibly. I think so, but I'm not certain.",
+      "index": "2"
+    },
+    {
+      "topic": "DLC03BS2VallincourtScramblerA",
+      "topic_text": "What exactly is this thing?",
+      "emotion": "Neutral 50",
+      "response_text": "It's a semi-standard transmitter, only I altered the frequency modulation and jacked up the output.",
+      "index": "6"
+    },
+    {
+      "topic": "DLC03BS2VallincourtScramblerB",
+      "topic_text": "How does the scrambler work?",
+      "emotion": "Neutral 50",
+      "response_text": "It overrides the Enclave signal, so as far as the Deathclaw is concerned, you're in control.",
+      "index": "11"
+    },
+    {
+      "topic": "DLC03BS2VallincourtScramblerC",
+      "topic_text": "Is there anything I need to be concerned about?",
+      "emotion": "Neutral 50",
+      "response_text": "No, I don't think so.",
+      "index": "13"
+    },
+    {
+      "topic": "DLC03BS2VallincourtScramblerDone",
+      "topic_text": "Okay, that's it.",
+      "emotion": "Neutral 50",
+      "response_text": "All right, then. There have been reports of an Enclave camp southeast of Old Olney, so I'd head there if you want to try it out.",
+      "index": "16"
+    },
+    {
+      "topic": "DLC03PQTLBoSJob",
+      "topic_text": "Is there anything else I can do to help the Brotherhood?",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah... actually, I think Rothchild is looking for stuff to rebuild Liberty Prime. You should ask him.",
+      "index": "18"
+    },
+    {
+      "topic": "DLC03PQTLBrotherhood",
+      "topic_text": "So, what happens to the Brotherhood now?",
+      "emotion": "Neutral 50",
+      "response_text": "Now? Now the real work begins.",
+      "index": "19"
+    },
+    {
+      "topic": "DLC03PQTLEnclave",
+      "topic_text": "So, have we totally wiped out the Enclave?",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah, for a while at least. You'll still bump into a few of them in the Wastes... deep scout patrols and outposts.",
+      "index": "22"
+    },
+    {
+      "topic": "DLC03PQTLPrime",
+      "topic_text": "How's the reconstruction of Liberty Prime going?",
+      "emotion": "Disgust 100",
+      "response_text": "Don't even get me started...",
+      "index": "24"
+    },
+    {
+      "topic": "FFDCDogtagsFound1",
+      "topic_text": "Where can I find Scribe Jameson?",
+      "emotion": "Neutral 50",
+      "response_text": "She spends most of her time in the Archives. You'll find them in A Ring, near the great hall.",
+      "index": "27"
+    },
+    {
+      "topic": "FFDCDogtagsFound2",
+      "topic_text": "All right then.",
+      "emotion": "Neutral 50",
+      "response_text": "Glad to be of help.",
+      "index": "28"
+    },
+    {
+      "topic": "FFPAWho",
+      "topic_text": "Can someone in the Citadel train me to wear Power Armor?",
+      "emotion": "Neutral 50",
+      "response_text": "I’m sure Gunny could train you, but he won’t. Not without permission from Elder Lyons. You should ask him... he’s usually near the Lab.",
+      "index": "29"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "I'm sorry, I'm very busy right now. Far too much to analyze. Perhaps one of the other Scribes could help you?",
+      "index": "31"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "CitTalkHail",
+      "topic_text": "CitTalkHail.",
+      "emotion": "Neutral 50",
+      "response_text": "As you were.",
+      "index": "53"
+    },
+    {
+      "topic": "CitTalkKnightDuskResponse1",
+      "topic_text": "CitTalkKnightCaptainDuskResponse1",
+      "emotion": "Neutral 50",
+      "response_text": "Hail.",
+      "index": "55"
+    },
+    {
+      "topic": "CitTalkShortGeneric",
+      "topic_text": "CitTalkShortGeneric",
+      "emotion": "Neutral 50",
+      "response_text": "Enclave strength is at 100%. They're getting reinforcements from somewhere, but we still haven't determined the location of their headquarters.",
+      "index": "56"
+    },
+    {
+      "topic": "CitTalkShortGeneric2",
+      "topic_text": "CitTalkShortGeneric2",
+      "emotion": "Neutral 50",
+      "response_text": "Hmm... All right, thanks for the information.",
+      "index": "61"
+    },
+    {
+      "topic": "GOODBYE",
+      "topic_text": "I have to go now.",
+      "emotion": "Neutral 50",
+      "response_text": "Good luck, and please be careful.",
+      "index": "65"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Happy 100",
+      "response_text": "You did it! You did it!",
+      "index": "69"
+    }
+  ],
+  "combat": [
+    {
+      "topic": "Assault",
+      "topic_text": "Assault",
+      "emotion": "Neutral 50",
+      "response_text": "Do you have any idea who you're dealing with?",
+      "index": "84"
+    },
+    {
+      "topic": "Attack",
+      "topic_text": "Attack",
+      "emotion": "Neutral 50",
+      "response_text": "For the Citadel!",
+      "index": "86"
+    },
+    {
+      "topic": "Death",
+      "topic_text": "Death",
+      "emotion": "Pained 100",
+      "response_text": "Nooo...{dying gasp}",
+      "index": "91"
+    },
+    {
+      "topic": "DeathResponse",
+      "topic_text": "DeathResponse",
+      "emotion": "Neutral 50",
+      "response_text": "A Brother has fallen!",
+      "index": "93"
+    }
+  ]
+}

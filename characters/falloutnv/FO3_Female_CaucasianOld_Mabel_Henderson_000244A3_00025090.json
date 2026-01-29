@@ -1,0 +1,220 @@
+{
+  "name": "Mabel Henderson",
+  "url": "/wiki/Mabel_Henderson",
+  "dialogue_name": "MabelHenderson.txt",
+  "dialogue_url": "/wiki/MabelHenderson.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000244A3",
+  "ref_id": "00025090",
+  "editor_id": "MabelHenderson",
+  "location": "Henderson residence",
+  "location_url": "/wiki/Henderson_residence",
+  "descriptions": [
+    "Mabel Henderson is one of the inhabitants of Vault 112 trapped in the Tranquility Lane virtual reality simulation, met in Fallout 3.",
+    "A resident of Vault 112 for over 200 years,",
+    "However, they also recognize her as a prime source of news on what's going on in Tranquility Lane. This earns Mabel the scorn of some: Pat Neusbaum distrusts and dislikes Mabel both for being a busybody,",
+    "Martha Simpson is Mabel's closest friend and confidante. The one issue on which they disagree is robotics: While Martha is an enthusiast of robots, Mabel dislikes them. Though she has a Mister Handy at home, she feels uncomfortable in its presence, feeling watched and unsafe. If she wasn't reliant on it for house chores, she'd rather get rid of it - completely, rather than picking something out of the \"new\" RobCo catalogue, as Martha suggested.",
+    "By 2277, Henderson's vitals indicate a state of deep contentment: 82 beats per minute, 110/70 mmHg of blood pressure, 98.3°F/36.8°C temperature, 13 breaths per minute, and nominal stress levels.",
+    "Mabel starting her oven, in one of the \"creative\" ways to kill her."
+  ],
+  "race": "Human",
+  "gender": "Female",
+  "affiliation": "Vault 112",
+  "role": "Resident",
+  "detailed_location": "Henderson residence,Tranquility Lane",
+  "voice_actor": "Shari Elliker",
+  "special": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 5,
+    "Intelligence": 4,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "mod_special_values": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 5,
+    "Intelligence": 4,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "level": "0",
+  "tag_skills": [
+    {
+      "Barter:": "25"
+    },
+    {
+      "Medicine:": "23"
+    },
+    {
+      "Melee Weap.:": "27"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Good",
+  "voice_type": "FemaleAdult01DefaultDC",
+  "geck_race": "CaucasianOld",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "Hello there, dear. Beautiful weather we're having, wouldn't you say?",
+      "index": "1"
+    },
+    {
+      "topic": "MQ04MabelUseOven",
+      "topic_text": "I heard you bake really tasty pies. Can you make one for me?",
+      "emotion": "Happy 50",
+      "response_text": "Well sure I can, sweetie!",
+      "index": "3"
+    },
+    {
+      "topic": "MQ04ResidentChitChat1",
+      "topic_text": "Nice day, isn't it?",
+      "emotion": "Neutral 50",
+      "response_text": "Well of course it is. What a silly thing to say. What else would it be?",
+      "index": "5"
+    },
+    {
+      "topic": "MQ04ResidentChitChat2",
+      "topic_text": "What can you tell me about the neighborhood?",
+      "emotion": "Neutral 50",
+      "response_text": "Well, there's certainly never a dull moment. I think it's like any other street, really.",
+      "index": "6"
+    },
+    {
+      "topic": "MQ04ResidentDad",
+      "topic_text": "Have you seen my dad?",
+      "emotion": "Neutral 50",
+      "response_text": "No, I haven't. But when I do, I'll tell him you're looking for him.",
+      "index": "8"
+    },
+    {
+      "topic": "MQ04ResidentRockwells",
+      "topic_text": "Can you tell me anything about the Rockwells' marriage?",
+      "emotion": "Neutral 50",
+      "response_text": "Well, they're just so nice, aren't they? It's good the two of them worked everything out.",
+      "index": "9"
+    },
+    {
+      "topic": "MQ04ResidentSimulationThis is a pretty convincing simulation...",
+      "topic_text": "This is what, some kind of computer simulation?",
+      "emotion": "Happy 20",
+      "response_text": "Computer what now? Why don't you go find Timmy and have a nice game of catch?{amused, dismissive}",
+      "index": "10"
+    },
+    {
+      "topic": "MQ04ResidentTimmy",
+      "topic_text": "What can you tell me about Timmy Neusbaum?",
+      "emotion": "Neutral 50",
+      "response_text": "I'm not one to gossip, but that boy's in trouble, if you ask me. Growing up so attached to his parents like that.",
+      "index": "11"
+    },
+    {
+      "topic": "MQ04RockwellsGossip1",
+      "topic_text": "What do you mean, \"worked everything out\"?",
+      "emotion": "Neutral 50",
+      "response_text": "Oh, I... Well, I'm not one to talk, but there was that fight last year. Everyone could hear them arguing.",
+      "index": "14"
+    },
+    {
+      "topic": "MQ04RockwellsGossip2",
+      "topic_text": "So they've had some problems in the past?",
+      "emotion": "Neutral 50",
+      "response_text": "Well sure, sweetie. Doesn't everyone?",
+      "index": "17"
+    },
+    {
+      "topic": "MQ04RockwellsMindBusiness",
+      "topic_text": "Hey, maybe you should mind your own business.",
+      "emotion": "Surprise 50",
+      "response_text": "Why, I never!{surprised, horrified}",
+      "index": "20"
+    },
+    {
+      "topic": "MQ04RockwellsThanksForTip",
+      "topic_text": "Hey, thanks for the tip.",
+      "emotion": "Neutral 50",
+      "response_text": "Tip? Oh, I wouldn't call it that. Just something I heard, is all.",
+      "index": "22"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Neutral 50",
+      "response_text": "Hi, Martha.",
+      "index": "23"
+    },
+    {
+      "topic": "MQ04MabelRadioTopic",
+      "topic_text": "MQ04MabelRadio",
+      "emotion": "Neutral 50",
+      "response_text": "Oh, dear. Is that old radio on the fritz again? I should turn it off.",
+      "index": "25"
+    },
+    {
+      "topic": "TranqLaneTalk1",
+      "topic_text": "TranqLaneTalk1",
+      "emotion": "Neutral 50",
+      "response_text": "Timmy Neusbaum left his roller skates in my house again. How many times have I talked to Pat about that?",
+      "index": "26"
+    },
+    {
+      "topic": "TranqLaneTalk2",
+      "topic_text": "TranqLaneTalk2",
+      "emotion": "Neutral 50",
+      "response_text": "No, no. I don't like robots. Don't like the one I have, and don't want a new one. If I didn't rely on the thing so much, I'd just get rid of it.",
+      "index": "28"
+    },
+    {
+      "topic": "TranqLaneTalk3",
+      "topic_text": "TranqLaneTalk3",
+      "emotion": "Neutral 50",
+      "response_text": "Roger and Janet seem to be getting along better, don't you think?",
+      "index": "30"
+    },
+    {
+      "topic": "TranqLaneTalk4",
+      "topic_text": "TranqLaneTalk4",
+      "emotion": "Neutral 50",
+      "response_text": "Well, maybe you feel that way. I really don't like it. What if something goes wrong?",
+      "index": "34"
+    },
+    {
+      "topic": "TranqLaneTalk5",
+      "topic_text": "TranqLaneTalk5",
+      "emotion": "Neutral 50",
+      "response_text": "Well, if you ever have any thoughts about it... You know, if you want to talk, you just let me know.",
+      "index": "36"
+    }
+  ],
+  "combat": [
+    {
+      "topic": "MQ04RadioStatic",
+      "topic_text": "MQ04RadioStatic",
+      "emotion": "Neutral 50",
+      "response_text": "",
+      "index": "38"
+    },
+    {
+      "topic": "RadioHello",
+      "topic_text": "RadioHello",
+      "emotion": "Neutral 50",
+      "response_text": "",
+      "index": "39"
+    }
+  ]
+}

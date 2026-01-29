@@ -1,0 +1,103 @@
+{
+  "name": "Ranger Erasmus",
+  "url": "/wiki/Erasmus",
+  "dialogue_name": "RSEchoErasmus.txt",
+  "dialogue_url": "/wiki/RSEchoErasmus.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "0011FB7C",
+  "ref_id": "0011FB7B",
+  "editor_id": "RSEchoErasmus",
+  "location": "Ranger Station Echo",
+  "location_url": "/wiki/Ranger_Station_Echo",
+  "descriptions": [
+    "Ranger Erasmus is an NCR Ranger and the commander of Ranger Station Echo in 2281.",
+    "As the commanding officer of Echo, Erasmus leads the NCR's military effort in the area. At the present, they are inactive, limiting their activity to surveillance of Cottonwood Cove, as they have too few Rangers at their disposal. Caesar's Legion mostly runs skirmishes against the rangers, but the legionaries usually fall back when they realize who they are facing.",
+    "If approached, he may exchange dialogue with the Courier relating to the outpost's mission.",
+    "The NCR Rangers at the ranger stations, including Erasmus, were written by additional area designer Matt MacLean, who worked on the quest Return to Sender."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "New California Republic Rangers",
+  "role": "Ranger",
+  "detailed_location": "Ranger Station Echo",
+  "voice_actor": "Jesse Burch",
+  "special": {
+    "Strength": 5,
+    "Perception": 6,
+    "Endurance": 6,
+    "Charisma": 4,
+    "Intelligence": 5,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "level": "7",
+  "tag_skills": [
+    {
+      "Guns:": "56"
+    },
+    {
+      "Sneak:": "56"
+    },
+    {
+      "Unarmed:": "56"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Neutral",
+  "voice_type": "MaleAdult03",
+  "geck_race": "Hispanic",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "{Player in NCR gear}I don't remember getting informed about any new transfers to this post.",
+      "index": "1"
+    },
+    {
+      "topic": "VMSRSEchoQuestRSRangerEchoErasmusTopic000",
+      "topic_text": "What do you do here?",
+      "emotion": "Neutral 50",
+      "response_text": "The Legion's got a major crossing point down at Cottonwood Cove, so we keep an eye on them from up here.",
+      "index": "4"
+    },
+    {
+      "topic": "vDialogueRangerStationEchoRSRangerEchoErasmusTopic000",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Carry on.",
+      "index": "6"
+    },
+    {
+      "topic": "vDialogueRangerStationEchoRSRangerEchoErasmusTopic001",
+      "topic_text": "Why do you need reinforcements?",
+      "emotion": "Neutral 50",
+      "response_text": "The Legion's been sending raiding parties across the river in larger numbers lately. We don't have the men at this post to intercept them all.",
+      "index": "7"
+    },
+    {
+      "topic": "vDialogueRangerStationEchoRSRangerEchoErasmusTopic003",
+      "topic_text": "Has there been much fighting around here?",
+      "emotion": "Neutral 50",
+      "response_text": "Skirmishes, mostly. The Legion raiding parties usually fall back when they know it's us they're up against.",
+      "index": "8"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Carry on.",
+      "index": "9"
+    }
+  ],
+  "combat": []
+}

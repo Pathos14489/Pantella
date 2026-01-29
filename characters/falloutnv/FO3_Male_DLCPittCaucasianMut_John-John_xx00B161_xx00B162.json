@@ -1,0 +1,96 @@
+{
+  "name": "John-John",
+  "url": "/wiki/John-John",
+  "dialogue_name": "DLC01FF007Slave.txt",
+  "dialogue_url": "/wiki/DLC01FF007Slave.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "xx00B161",
+  "ref_id": "xx00B162",
+  "editor_id": "DLC01FF007Slave",
+  "location": "Pitt steelyard",
+  "location_url": "/wiki/Pitt_steelyard",
+  "descriptions": [
+    "John-John, known as a Pitt slave in-game, is an enslaved resident of the Pitt in the Fallout 3 add-on The Pitt.",
+    "John-John is a slave encountered the first time Lone Wanderer enters the steelyard. Should they save him on their first encounter, he leaves the steelyard and is not mentioned again.",
+    "When taking their first few steps into the steelyard, the Lone Wanderer will notice a slave trying to talk to a trog. This turns out to be John-John, attempting civilized conversation with his now-trog brother Billy. Although John-John gives his best attempt to bring some sense to his brother, he soon realizes that his brother is no longer human. He then slowly backs away, and eventually begins running from Billy, only to be stopped a few feet later at a locked gate. Billy then attacks him. John-John will not fight back and, without the Lone Wanderer’s intervention, will eventually fall victim to his brother. Billy will then promptly attack the Lone Wanderer.",
+    "Should the Lone Wanderer choose to kill Billy, thus saving John-John, he will walk over to his brother's corpse and mourn his loss. He offers no thanks or dialogue options; when a conversation is attempted, he only mourns his brother.",
+    "Mentions of how trogs lose the mental capacity to reason, even with loved ones, are mentioned in Sandra's trog research entry on her research terminal.",
+    "John-John appears only in the Fallout 3 add-on The Pitt."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Pitt slaves",
+  "role": "Slave",
+  "detailed_location": "Pitt steelyard",
+  "voice_actor": "Mark Lampert",
+  "special": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 2,
+    "Intelligence": 5,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "mod_special_values": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 6,
+    "Charisma": 2,
+    "Intelligence": 5,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "level": "1",
+  "misc_skills": [
+    {
+      "Hit Points:": "35(40)"
+    },
+    {
+      "Critical Chance:": "5%"
+    },
+    {
+      "Unarmed Dam.:": "0.75"
+    },
+    {
+      "Poison Resist.:": "20%(25%)"
+    },
+    {
+      "Rad. Resist.:": "8%(10%)"
+    },
+    {
+      "Carry Weight:": "200"
+    },
+    {
+      "Damage Res.:": "2%"
+    }
+  ],
+  "karma": "Good",
+  "voice_type": "DLC01SlaveMale02VoiceType",
+  "geck_race": "DLCPittCaucasianMut",
+  "topics": [
+    {
+      "topic": "DLC01FF007SlaveTalkTopic",
+      "topic_text": "DLC01FF007SlaveTalkTopic",
+      "emotion": "Fear 50",
+      "response_text": "Billy.{pleading with a monster he thinks is his brother}",
+      "index": "1"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Sad 100",
+      "response_text": "It's Billy! I know it's him!{weeping over the corpse of his dead brother}",
+      "index": "6"
+    }
+  ],
+  "conversation": [],
+  "combat": []
+}

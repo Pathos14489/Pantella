@@ -1,0 +1,172 @@
+{
+  "name": "Karl",
+  "url": "/wiki/Karl_(Fallout_3)",
+  "dialogue_name": "TheFamilyKarl.txt",
+  "dialogue_url": "/wiki/TheFamilyKarl.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": true,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000200C4",
+  "ref_id": "000200C5",
+  "editor_id": "TheFamilyKarl",
+  "location": "Meresti Metro station",
+  "location_url": "/wiki/Meresti_Metro_station",
+  "descriptions": [
+    "Karl is a member of the Family in Capital Wasteland in 2277.",
+    "Karl was married to a woman named Skyler and they lived together in Meresti before her death. They used to be shop owners in Megaton, and Vance encountered them while getting supplies. Vance felt a kinship with them and invited them to join him. Karl is gruff and has a short temper; he prefers others leave him alone. He is cynical, suspicious of others and thinks the worst of them.",
+    "Karl does not believe in Vance's vampiric teachings but plays the part in order to keep his store in the Meresti Metro Station. "
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "The Family",
+  "role": "Merchant",
+  "detailed_location": "Meresti Metro station",
+  "voice_actor": "Pete Papageorge",
+  "special": {
+    "Strength": 4,
+    "Perception": 5,
+    "Endurance": 3,
+    "Charisma": 7,
+    "Intelligence": 5,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "level": "6→14",
+  "tag_skills": [
+    {
+      "Barter:": "59→99(64→104)"
+    },
+    {
+      "Small Guns:": "59→97"
+    },
+    {
+      "Speech:": "59→99"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Neutral",
+  "voice_type": "MaleAdult02DC",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "Well, well. I haven't had a customer in a while. Last one I had was a bit chewy... know what I mean?{sarcasm laden}",
+      "index": "1"
+    },
+    {
+      "topic": "MS09FamKarlCT01BlackWidow",
+      "topic_text": "Hey, hot stuff. Why don't you tell me how I can see Ian?",
+      "emotion": "Surprise 70",
+      "response_text": "Now that's more like it! I finally won't have to pay for it anymore. Ha ha ha!{laugh at the end}",
+      "index": "4"
+    },
+    {
+      "topic": "MS09FamKarlCT01Strength",
+      "topic_text": "I'm going to kick your ass all over this Metro station if you don't help me!",
+      "emotion": "Surprise 80",
+      "response_text": "Finally! Someone with some balls around this place!",
+      "index": "6"
+    },
+    {
+      "topic": "MS09FamKarlCT02",
+      "topic_text": "You really have a bad attitude.",
+      "emotion": "Disgust 70",
+      "response_text": "That's me. You don't like it? Tough!",
+      "index": "8"
+    },
+    {
+      "topic": "MS09FamKarlCT03",
+      "topic_text": "Can't you just help out without being so mean?",
+      "emotion": "Sad 50",
+      "response_text": "Awwww. I'm sorry. Did I hurt your feelings? Sniff.{Feign a crying sniffle at the end.}",
+      "index": "9"
+    },
+    {
+      "topic": "MS09FinTLBuyStuff",
+      "topic_text": "Let me see what you have.",
+      "emotion": "Neutral 50",
+      "response_text": "Sure! Take a look around!",
+      "index": "11"
+    },
+    {
+      "topic": "MS09TLBuyStuff",
+      "topic_text": "Can I see what you have for sale?",
+      "emotion": "Disgust 80",
+      "response_text": "If your caps are good, you can buy whatever you like. Beats standing there drooling all over the merchandise.",
+      "index": "12"
+    },
+    {
+      "topic": "MS09TLLaws",
+      "topic_text": "Please, help me understand your Laws.",
+      "emotion": "Disgust 50",
+      "response_text": "When Vance stands on that balcony and starts mouthing off like some kind of preacher, it makes me wanna puke.",
+      "index": "14"
+    },
+    {
+      "topic": "MS09TLLookingforIanWest",
+      "topic_text": "I'm looking for Ian West. Have you seen him?",
+      "emotion": "Disgust 50",
+      "response_text": "Do I look like a fucking babysitter? I don't know where he is. Even if I did, I wouldn't tell you anyway.",
+      "index": "17"
+    },
+    {
+      "topic": "MS09TLWhatisMeresti",
+      "topic_text": "What is this place?",
+      "emotion": "Disgust 70",
+      "response_text": "This place is my place of business. If you wanna buy something, then buy. If you wanna flap your lips, take a hike.",
+      "index": "19"
+    },
+    {
+      "topic": "MS09TLWhoAreFamily",
+      "topic_text": "Tell me about the Family.",
+      "emotion": "Disgust 60",
+      "response_text": "We're the last people you want to mess with... that's for damn sure.",
+      "index": "20"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "I have to go now.",
+      "emotion": "Disgust 50",
+      "response_text": "Say it ain't so!{mocking tone}",
+      "index": "21"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Happy 50",
+      "response_text": "Human or not, I don't care. You got caps, I got stuff.",
+      "index": "25"
+    },
+    {
+      "topic": "MS09MerestiRandom01",
+      "topic_text": "MS09MerestiRandom01",
+      "emotion": "Disgust 50",
+      "response_text": "Yeah, yeah. What is it now?",
+      "index": "30"
+    },
+    {
+      "topic": "MS09MerestiResponsestoFamily",
+      "topic_text": "MS09MerestiResponsestoFamily",
+      "emotion": "Surprise 60",
+      "response_text": "Whoopee! Let's throw a party cause little Alan learned to stop acting like a goddamn animal! Hurray!{heavy on the sarcasm}",
+      "index": "32"
+    },
+    {
+      "topic": "MS09MerestiResponsestoVance",
+      "topic_text": "MS09MerestiRandom02",
+      "emotion": "Disgust 50",
+      "response_text": "Yeah, I've heard this song and dance before. What good is it if we can't really kick those humans where it hurts?",
+      "index": "36"
+    }
+  ],
+  "combat": []
+}

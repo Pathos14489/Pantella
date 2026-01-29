@@ -1,0 +1,92 @@
+{
+  "name": "Grandma Sparkle",
+  "url": "/wiki/Grandma_Sparkle",
+  "dialogue_name": "GrandmaSparkle.txt",
+  "dialogue_url": "/wiki/GrandmaSparkle.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": true,
+  "is_doctor": false,
+  "is_merchant": true,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "0005215F",
+  "ref_id": "00054D93",
+  "editor_id": "GrandmaSparkle",
+  "location": "Wilhelm's Wharf",
+  "location_url": "/wiki/Wilhelm%27s_Wharf",
+  "descriptions": [
+    "Grandma Sparkle is a trader and cook residing at Wilhelm's Wharf in the Capital Wasteland in Fallout 3.",
+    "Coming to inhabit the wharf sometime around 2277, despite recent super mutant and raider incursions, Sparkle has refused to leave her encampment at the wharf, protecting her claim through her skill with a hunting rifle and the support of her family, who frequently go out searching for mirelurk meat.",
+    "Sometimes, Grandma Sparkle may start wearing the motorcycle helmet that is usually found in the fridge next to where she is usually leaning against."
+  ],
+  "race": "Human",
+  "gender": "Female",
+  "role": "Merchant",
+  "detailed_location": "Wilhelm's Wharf",
+  "voice_actor": "Diana Sowle",
+  "special": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 4,
+    "Intelligence": 4,
+    "Agility": 6,
+    "Luck": 4
+  },
+  "mod_special_values": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 4,
+    "Intelligence": 4,
+    "Agility": 7,
+    "Luck": 4
+  },
+  "level": "1",
+  "misc_skills": [],
+  "karma": "Good",
+  "voice_type": "FemaleUniqueSparkle",
+  "geck_race": "HispanicOld",
+  "topics": [
+    {
+      "topic": "FFDCRockCreekGrandmaQuestion",
+      "topic_text": "What are you doing way out here?",
+      "emotion": "Neutral 50",
+      "response_text": "My boys are huntin' 'Lurks. Finest meat you can get, and it don't move around in your stomach like Mole Rat does.",
+      "index": "1"
+    },
+    {
+      "topic": "FFDCRockCreekGrandmaRumors",
+      "topic_text": "Is there anything going on here?",
+      "emotion": "Neutral 50",
+      "response_text": "Some fellas came by here a while ago that said they was lookin' for some troublemaker that came from out of one of them Vaults.",
+      "index": "3"
+    },
+    {
+      "topic": "FFDCRockCreekGrandmaTrade",
+      "topic_text": "I'm interested in trading.",
+      "emotion": "Neutral 50",
+      "response_text": "We always need bullets. Takes damn near a hundred of 'em to kill a 'Guai.",
+      "index": "10"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "Well lookit this! We got us a wanderer all the way out here in Will'im's Wharf! You mus' got some import'int bus'ness out here to be wandrin' around.",
+      "index": "12"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "I have to go now.",
+      "emotion": "Neutral 50",
+      "response_text": "You watch out for 'guai! They're all over!",
+      "index": "16"
+    }
+  ],
+  "combat": []
+}

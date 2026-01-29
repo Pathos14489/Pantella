@@ -1,0 +1,342 @@
+{
+  "name": "Scribe Jameson",
+  "url": "/wiki/Elizabeth_Jameson",
+  "dialogue_name": "ScribeJameson.txt",
+  "dialogue_url": "/wiki/ScribeJameson.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "00025FD0",
+  "ref_id": "00025FD1",
+  "editor_id": "ScribeJameson",
+  "location": "Citadel A ring",
+  "location_url": "/wiki/Citadel_A_ring",
+  "descriptions": [
+    "Scribe Elizabeth Jameson",
+    "Due to her roles within Elder Lyons' chapter of the Brotherhood of Steel, Scribe Jameson is tasked with overseeing the archives and library of the Citadel, alongside ensuring the upkeep of the chapter's scrolls.",
+    "Although she abhors the notion of assigning the holotags recovery task to an outsider, she finds the alternative of Brotherhood deeds and deaths going unreported as \"unthinkable,\" particularly as the Brotherhood lacks the resources to make proper funeral arrangements, and her need to abide by her duty as a keeper of the scrolls.",
+    "Despite such a discrepancy, her priority lies with the Brotherhood, and considers sharing knowledge regarding the holotags as a part of her duty to benefit them.",
+    "She is eager to share her knowledge, but being told by the Lone Wanderer that they do not care or asking her to get to the point in her holotags explanations sees her become curt in her responses; she will resort to commenting that she expected no different from an outsider, or providing them minimal details and saying this is all they need to know.",
+    "Jameson attempts to conduct herself in as amicable a manner as she can, asking the Lone Wanderer to use the rewards she offers for the holotags in \"good health,\" or upon concluding a conversation wish they \"go with peace and knowledge.\"",
+    "Scribe Jameson can be found working in the archives area of the A ring in the Citadel when she is not sleeping."
+  ],
+  "race": "Human",
+  "gender": "Female",
+  "affiliation": "Brotherhood of Steel",
+  "role": "Proctorfor the Order of the Quill[1]Head Librarian[2]",
+  "detailed_location": "Citadel,A Ring",
+  "voice_actor": "Shari Elliker",
+  "special": {
+    "Strength": 3,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 6,
+    "Intelligence": 7,
+    "Agility": 4,
+    "Luck": 6
+  },
+  "level": "6",
+  "tag_skills": [
+    {
+      "Medicine:": "55"
+    },
+    {
+      "Science:": "55"
+    },
+    {
+      "Speech:": "53"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "50"
+    },
+    {
+      "Critical Chance:": "6%"
+    },
+    {
+      "Unarmed Dam.:": "+1.15"
+    },
+    {
+      "Poison Resist.:": "15%"
+    },
+    {
+      "Rad. Resist.:": "6%"
+    },
+    {
+      "Damage Res.:": "2%"
+    }
+  ],
+  "karma": "Good",
+  "voice_type": "FemaleAdult01DefaultDC",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "CitScribeAboutWhat do you Scribes do?",
+      "topic_text": "Tell me a little bit about the Scribes.",
+      "emotion": "Neutral 50",
+      "response_text": "Well, there are a number of Orders within with the Scribes, each dedicated to a specific area of research...",
+      "index": "1"
+    },
+    {
+      "topic": "CitScribeAboutEND",
+      "topic_text": "That's all I needed.",
+      "emotion": "Neutral 50",
+      "response_text": "Very well.",
+      "index": "2"
+    },
+    {
+      "topic": "CitScribeAboutOrders",
+      "topic_text": "What are the Orders?",
+      "emotion": "Neutral 50",
+      "response_text": "The Order of the Sword is responsible for weapons research and development. Guns, ammunition  anything of an offensive nature.",
+      "index": "5"
+    },
+    {
+      "topic": "CitScribeAboutWhatOrder",
+      "topic_text": "What Order are you a part of?",
+      "emotion": "Neutral 50",
+      "response_text": "Actually, I am proctor of the Order of the Quill. I oversee the Archives and Library here in the Citadel.",
+      "index": "8"
+    },
+    {
+      "topic": "CitScribeBrotherhoodBeliefs",
+      "topic_text": "What does the Brotherhood believe?",
+      "emotion": "Neutral 50",
+      "response_text": "We believe in technology, in the triumph of the creations of the ancients over the horrors and evils of the Wasteland.",
+      "index": "11"
+    },
+    {
+      "topic": "CitScribeBrotherhoodEND",
+      "topic_text": "That's all I need to know.",
+      "emotion": "Neutral 50",
+      "response_text": "Very well.",
+      "index": "14"
+    },
+    {
+      "topic": "CitScribeBrotherhoodHistory",
+      "topic_text": "What about the Brotherhood's history in this area?",
+      "emotion": "Neutral 50",
+      "response_text": "We first arrived in the Capital Wasteland in 2255. In those first couple of years, we discovered the Citadel, Super Mutants, and Project Purity!",
+      "index": "15"
+    },
+    {
+      "topic": "CitScribeBrotherhoodMembers",
+      "topic_text": "Who are the members of the Brotherhood?",
+      "emotion": "Neutral 50",
+      "response_text": "Elder Lyons leads us. Star Paladin Cross is his seneschal. Sentinel Lyons', the Elder's daughter, commands the Lyons' Pride, our elite combat squad.",
+      "index": "19"
+    },
+    {
+      "topic": "DLC03TLCitadelEnclave",
+      "topic_text": "So... Any thoughts on the Enclave?",
+      "emotion": "Neutral 50",
+      "response_text": "This is our last chance. Either we finish them off now... Or we won't be around to talk about them anymore.",
+      "index": "22"
+    },
+    {
+      "topic": "FF02DogtagsFound",
+      "topic_text": "I found a Brotherhood Holotag. What should I do with it?",
+      "emotion": "Neutral 50",
+      "response_text": "You have? Oh my. This brings to light a sad affair for the Brotherhood. But perhaps it is something that you can assist us with.",
+      "index": "26"
+    },
+    {
+      "topic": "FFDCScribeJamesonDogtagQ1",
+      "topic_text": "What are the Scrolls that you mentioned?",
+      "emotion": "Neutral 50",
+      "response_text": "Scrolls are kept by the Head Librarian of each Brotherhood bunker. The Scrolls are a record of the Brotherhood itself.",
+      "index": "28"
+    },
+    {
+      "topic": "FFDCScribeJamesonDogtagQ2",
+      "topic_text": "Where can I find Holotags?",
+      "emotion": "Neutral 50",
+      "response_text": "They are on our fallen Brothers throughout the DC Ruins. However, I can't give you a full report on the locations of all of our operations.",
+      "index": "32"
+    },
+    {
+      "topic": "FFDCScribeJamesonDogtagQ3",
+      "topic_text": "Why can't you send your own people to find the Holotags?",
+      "emotion": "Neutral 50",
+      "response_text": "As I told you, with the increase in Super Mutant activity and Elder Lyons' edicts regarding our goals, we are critically short on manpower.",
+      "index": "34"
+    },
+    {
+      "topic": "FFDCScribeJamesonDogtagQ4",
+      "topic_text": "What's my reward if I bring you these Holotags?",
+      "emotion": "Neutral 50",
+      "response_text": "We have access to a great deal of technology, and because of that, there are a number of things that we can continue to produce.",
+      "index": "37"
+    },
+    {
+      "topic": "FFDCScribeJamesonDogtagQEND",
+      "topic_text": "Let's talk about something else.",
+      "emotion": "Neutral 50",
+      "response_text": "As you wish. Just remember: more tags, more reward. I know how you outsiders think.",
+      "index": "39"
+    },
+    {
+      "topic": "FFDCScribeJamesonDogtags",
+      "topic_text": "I wanted to ask about the Holotags.",
+      "emotion": "Neutral 50",
+      "response_text": "Yes? What about them?",
+      "index": "40"
+    },
+    {
+      "topic": "FFDCScribeJamesonDogtagsEND",
+      "topic_text": "Actually, never mind.",
+      "emotion": "Neutral 50",
+      "response_text": "Return if you have more questions.",
+      "index": "41"
+    },
+    {
+      "topic": "FFDCScribeJamesonDogtagsQuestions",
+      "topic_text": "I had a few questions about them.",
+      "emotion": "Neutral 50",
+      "response_text": "It is my duty to provide knowledge that benefits the Brotherhood.",
+      "index": "42"
+    },
+    {
+      "topic": "FFDCScribeJamesonDogtagsSell",
+      "topic_text": "I've found some Holotags.",
+      "emotion": "Neutral 50",
+      "response_text": "Have you? It saddens me to hear of my fallen brethren, but their names and deeds shall be records. Tell me, how many have you found?",
+      "index": "43"
+    },
+    {
+      "topic": "FFDCScribeJamesonDogtagsSell1",
+      "topic_text": "I have one Holotag for you.",
+      "emotion": "Neutral 50",
+      "response_text": "Their names shall be written into the Scrolls to be remembered forever.",
+      "index": "44"
+    },
+    {
+      "topic": "FFDCScribeJamesonDogtagsSell2",
+      "topic_text": "I have two Holotags for you.",
+      "emotion": "Neutral 50",
+      "response_text": "Their names shall be written into the Scrolls to be remembered forever.",
+      "index": "46"
+    },
+    {
+      "topic": "FFDCScribeJamesonDogtagsSell3",
+      "topic_text": "I have three Holotags for you.",
+      "emotion": "Neutral 50",
+      "response_text": "Their names shall be written into the Scrolls to be remembered forever.",
+      "index": "48"
+    },
+    {
+      "topic": "FFDCScribeJamesonDogtagsSell4",
+      "topic_text": "I have four Holotags for you.",
+      "emotion": "Neutral 50",
+      "response_text": "Their names shall be written into the Scrolls to be remembered forever.",
+      "index": "50"
+    },
+    {
+      "topic": "FFDCScribeJamesonDogtagsSell5",
+      "topic_text": "I have five Holotags for you.",
+      "emotion": "Neutral 50",
+      "response_text": "Their names shall be written into the Scrolls to be remembered forever.",
+      "index": "52"
+    },
+    {
+      "topic": "FFDCScribeJamesonDogtagsSellAll",
+      "topic_text": "Take all the Holotags I have.",
+      "emotion": "Neutral 50",
+      "response_text": "Their names shall be written into the Scrolls to be remembered forever.",
+      "index": "54"
+    },
+    {
+      "topic": "FFDCScribeJamesonDogtagsSellEND",
+      "topic_text": "Never mind.",
+      "emotion": "Neutral 50",
+      "response_text": "Very well.",
+      "index": "56"
+    },
+    {
+      "topic": "FFDCScribeJamesonStory1",
+      "topic_text": "Sure, I've got all the time in the world.",
+      "emotion": "Neutral 50",
+      "response_text": "Good. As I'm sure you've noticed, the Brotherhood operates all over the DC ruins, often detached from the main base here at the Citadel.",
+      "index": "57"
+    },
+    {
+      "topic": "FFDCScribeJamesonStory1a",
+      "topic_text": "And without radio equipment, you can't keep track of them?",
+      "emotion": "Neutral 50",
+      "response_text": "Exactly. A Brother fallen in the field may have no one to carry word of his death back to me.",
+      "index": "60"
+    },
+    {
+      "topic": "FFDCScribeJamesonStory1b",
+      "topic_text": "You can't keep track of your own damn soldiers? Who runs this place?",
+      "emotion": "Neutral 50",
+      "response_text": "I would ask that you respect the Elder as you would your own father. And rude as you may be, you are correct. We can't keep track of them.",
+      "index": "64"
+    },
+    {
+      "topic": "FFDCScribeJamesonStory1c",
+      "topic_text": "<Yawn.>",
+      "emotion": "Neutral 50",
+      "response_text": "... okay... well... as you can see, we're having trouble keeping track of our soldiers in the field.",
+      "index": "69"
+    },
+    {
+      "topic": "FFDCScribeJamesonStory2",
+      "topic_text": "How about we skip the story and you just tell me what you want.",
+      "emotion": "Neutral 50",
+      "response_text": "Very well. It's as simple as this. I need someone to collect Holotags from our fallen brethren in the field.",
+      "index": "74"
+    },
+    {
+      "topic": "FFDCScribeJamesonStoryEND",
+      "topic_text": "Frankly, I don't give a damn.",
+      "emotion": "Neutral 50",
+      "response_text": "That's what I would expect an outsider to say.",
+      "index": "76"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Happy 20",
+      "response_text": "Hail, outsider. I am Scribe Jameson.",
+      "index": "77"
+    },
+    {
+      "topic": "TLCitadelEnclave",
+      "topic_text": "So... Any thoughts on the Enclave?",
+      "emotion": "Disgust 50",
+      "response_text": "Quite a few, but most are distinctly unladylike, and unworthy of discussion.",
+      "index": "85"
+    },
+    {
+      "topic": "TLCitadelSuperMutant",
+      "topic_text": "Care to share anything about the Super Mutants?",
+      "emotion": "Neutral 50",
+      "response_text": "The Brotherhood has been battling Super Mutants for decades. First out West, then in Chicago. Now here.",
+      "index": "87"
+    },
+    {
+      "topic": "TLScribeBrotherhood",
+      "topic_text": "I have some questions about the Brotherhood.",
+      "emotion": "Neutral 50",
+      "response_text": "Ah, one of my favorite subjects, of course! What would you like to know?",
+      "index": "89"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "I have to go now.",
+      "emotion": "Neutral 50",
+      "response_text": "Go with peace and knowledge.",
+      "index": "90"
+    }
+  ],
+  "combat": []
+}

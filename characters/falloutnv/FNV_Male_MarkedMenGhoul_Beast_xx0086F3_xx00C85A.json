@@ -1,0 +1,87 @@
+{
+  "name": "Beast",
+  "url": "/wiki/Beast",
+  "dialogue_name": "",
+  "dialogue_url": null,
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "xx0086F3",
+  "ref_id": "xx00C85A",
+  "editor_id": "NVDLC04MarkedMenMarauderBoss",
+  "location": "High Road",
+  "location_url": "/wiki/High_Road",
+  "descriptions": [
+    "Beast is the second of four unique marked men encountered in the Divide in 2281.",
+    "Beast is a marauder residing in a small camp east of the High Road entrance. His health and combat skills are higher than those of a normal marked man and are on par with those of a companion. His armor and mask are a crude imitation of Legate Lanius' armor and he wields a shoulder mounted machine gun.",
+    "Beast appears only in the Fallout: New Vegas add-on Lonesome Road.",
+    "Frumentarii: Alerio · Cato Hostilius · Gabban · Karl · Picus · Disguised frumentarius · Ulysses (formerly)\nConsul: M. Licinius Crassus · M. Scribonius Libo Drusus (of the consul)"
+  ],
+  "race": "Marked man",
+  "gender": "Male",
+  "affiliation": "Caesar's Legion(formerly)",
+  "detailed_location": "High Road entrance",
+  "special": {
+    "Strength": 7,
+    "Perception": 6,
+    "Endurance": 6,
+    "Charisma": 5,
+    "Intelligence": 5,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "mod_special_values": {
+    "Strength": 8,
+    "Perception": 6,
+    "Endurance": 6,
+    "Charisma": 5,
+    "Intelligence": 5,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "level": "40",
+  "tag_skills": [
+    {
+      "Guns:": "100"
+    },
+    {
+      "Melee Weap.:": "100(107)"
+    },
+    {
+      "Unarmed:": "100"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "385"
+    },
+    {
+      "Critical Chance:": "5%(7%)"
+    },
+    {
+      "Unarmed Dam.:": "5.5"
+    },
+    {
+      "Poison Resist.:": "25%"
+    },
+    {
+      "Rad. Resist.:": "10%"
+    },
+    {
+      "Carry Weight:": "220(230)"
+    },
+    {
+      "Dam. Threshold:": "13"
+    }
+  ],
+  "karma": "Neutral",
+  "geck_race": "MarkedMenGhoul",
+  "topics": [],
+  "conversation": [],
+  "combat": []
+}

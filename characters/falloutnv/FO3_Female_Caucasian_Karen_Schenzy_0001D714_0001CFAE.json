@@ -1,0 +1,183 @@
+{
+  "name": "Karen Schenzy",
+  "url": "/wiki/Karen_Schenzy",
+  "dialogue_name": "KarenSchenzy.txt",
+  "dialogue_url": "/wiki/KarenSchenzy.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "0001D714",
+  "ref_id": "0001CFAE",
+  "editor_id": "KarenSchenzy",
+  "location": "Schenzy residence",
+  "location_url": "/wiki/Schenzy_residence",
+  "descriptions": [
+    "Karen Schenzy is a resident of Arefu in 2277.",
+    "The recent conflict with The Family has put the extroverted Karen heavily at odds with the town's leader, Evan King, and his impromptu security measures meant to defend against The Family's incursions. Although she appreciates some of his attempts to help,",
+    "She stays in her home all day, unless the Lone Wanderer has finished the Blood Ties quest and has selected the option for Vance to provide the town with security. Then, she will be seen wandering around Arefu more often.",
+    "Although the Fallout 3 Official Game Guide claims that Karen has taken to wandering around outside of her home to spite Evan King, she will not actually do so in-game unless the conflict with The Family is resolved and Alan is providing security for Arefu."
+  ],
+  "race": "Human",
+  "gender": "Female",
+  "affiliation": "Arefu",
+  "role": "Resident",
+  "detailed_location": "Schenzy residence,Arefu",
+  "voice_actor": "Shari Elliker",
+  "special": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 4,
+    "Intelligence": 4,
+    "Agility": 6,
+    "Luck": 4
+  },
+  "mod_special_values": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 4,
+    "Intelligence": 4,
+    "Agility": 7,
+    "Luck": 4
+  },
+  "level": "5",
+  "tag_skills": [
+    {
+      "Barter:": "45"
+    },
+    {
+      "Small Guns:": "49(51)"
+    },
+    {
+      "Unarmed:": "45(47)"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "45(50)"
+    },
+    {
+      "Critical Chance:": "4%"
+    },
+    {
+      "Unarmed Dam.:": "2.75"
+    },
+    {
+      "Poison Resist.:": "15%(20%)"
+    },
+    {
+      "Rad. Resist.:": "6%(8%)"
+    },
+    {
+      "Carry Weight:": "210"
+    },
+    {
+      "Damage Res.:": "2%"
+    }
+  ],
+  "karma": "Good",
+  "voice_type": "FemaleAdult01DefaultDC",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "...",
+      "index": "1"
+    },
+    {
+      "topic": "MS09FinTLHelpMe",
+      "topic_text": "Any help you can provide would be appreciated.",
+      "emotion": "Happy 50",
+      "response_text": "There are a few interesting places around here I've heard about. I don't know if they'll help you or not, but you're welcome to them.",
+      "index": "9"
+    },
+    {
+      "topic": "MS09KarenSchenzyDoor01",
+      "topic_text": "Evan King sent me. Can I come in?",
+      "emotion": "Anger 80",
+      "response_text": "Oh he did? Well it's about damn time he did something!",
+      "index": "10"
+    },
+    {
+      "topic": "MS09KarenSchenzyDoor02",
+      "topic_text": "I'm from the Family! Let me in!",
+      "emotion": "Anger 80",
+      "response_text": "There's no way I'm letting you wackos in here!",
+      "index": "12"
+    },
+    {
+      "topic": "MS09KarenSchenzyDoor03",
+      "topic_text": "Sorry, my mistake.",
+      "emotion": "Disgust 50",
+      "response_text": "Great, thanks for scaring the shit out of me.",
+      "index": "13"
+    },
+    {
+      "topic": "MS09TLCheckonYou",
+      "topic_text": "Evan King told me to check on you. Is everything okay?",
+      "emotion": "Fear 50",
+      "response_text": "Scared out of my mind. I'm glad he's checking on us, but until someone nips the problem in the bud, we may as well stay inside forever.",
+      "index": "14"
+    },
+    {
+      "topic": "MS09TLEvanKingTopic",
+      "topic_text": "So, what's your take on Evan King?",
+      "emotion": "Disgust 50",
+      "response_text": "He's a spineless wimp. His best solution to the Family is to stay inside our homes and hide. What does that tell them?",
+      "index": "15"
+    },
+    {
+      "topic": "MS09TLLookingforIanWest",
+      "topic_text": "I'm looking for Ian West. Have you seen him?",
+      "emotion": "Neutral 50",
+      "response_text": "I haven't seen any of the Wests since we were told to head indoors.",
+      "index": "17"
+    },
+    {
+      "topic": "MS09TLWestsDead",
+      "topic_text": "Did you know the Wests are dead?",
+      "emotion": "Surprise 50",
+      "response_text": "What?! Oh my God!",
+      "index": "18"
+    },
+    {
+      "topic": "MS09TLWhereIsEveryone",
+      "topic_text": "Can you tell me more about what's been going on around here?",
+      "emotion": "Neutral 50",
+      "response_text": "We're scared shitless. Evan King's got everyone so worked up about the Family, no one wants to set foot outside.",
+      "index": "20"
+    },
+    {
+      "topic": "MS09TLWhoAreFamily",
+      "topic_text": "What do you think about the Family?",
+      "emotion": "Fear 50",
+      "response_text": "All they do is terrorize us. They taunt us to open our doors, throw bottles at our houses and scream at us.",
+      "index": "22"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "I have to go now.",
+      "emotion": "Sad 50",
+      "response_text": "Sure. Go. Just like everyone else.",
+      "index": "24"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Happy 50",
+      "response_text": "Hey, you're back! Let's chat a while.",
+      "index": "29"
+    }
+  ],
+  "combat": []
+}

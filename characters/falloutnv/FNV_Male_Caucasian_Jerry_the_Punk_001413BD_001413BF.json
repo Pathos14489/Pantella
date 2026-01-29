@@ -1,0 +1,256 @@
+{
+  "name": "Jerry the Punk",
+  "url": "/wiki/Jerry_the_Punk",
+  "dialogue_name": "VRRCJerrythePunk.txt",
+  "dialogue_url": "/wiki/VRRCJerrythePunk.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "001413BD",
+  "ref_id": "001413BF",
+  "editor_id": "VRRCJerrythePunk",
+  "location": "Red Rock Canyonnear the arena",
+  "location_url": "/wiki/Red_Rock_Canyon",
+  "descriptions": [
+    "Jerry the Punk is a Great Khan poet living in Red Rock Canyon in 2281.",
+    "Jerry is a young Great Khan who cannot quite complete the ritual initiation to become a fully fledged adult Khan.",
+    "Jerry has a low opinion of the Great Khans, believing them to be rude and lacking in appreciation for his art.",
+    "Jerry the Punk is a reference to William the Bloody, aka Spike, from the television show Buffy the Vampire Slayer. Jerry asks what rhymes with the word \"indulgent,\" and begins to say the word \"effulgent\" before stopping and saying how terrible that would be. only to be mocked, and both characters eventually leave their homes."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Great KhansFollowers of the Apocalypse(optional)",
+  "role": "Poet",
+  "detailed_location": "Red Rock CanyonOld Mormon Fort(optional)",
+  "voice_actor": "Liam O'Brien",
+  "special": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 3,
+    "Intelligence": 3,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "mod_special_values": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 3,
+    "Intelligence": 3,
+    "Agility": 7,
+    "Luck": 5
+  },
+  "level": "10",
+  "tag_skills": [
+    {
+      "Guns:": "65(67)"
+    },
+    {
+      "Melee Weap.:": "65"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "110(115)"
+    },
+    {
+      "Dam. Threshold:": "2"
+    }
+  ],
+  "karma": "Neutral",
+  "voice_type": "MaleAdult05",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Happy 50",
+      "response_text": "I'm so much happier now. Thank you again.",
+      "index": "1"
+    },
+    {
+      "topic": "JerryCaesar",
+      "topic_text": "What do you think about the Khans' alliance with Caesar?",
+      "emotion": "Disgust 25",
+      "response_text": "Huh? Wait, what are you talking about? We're allied with Caesar now? Psh. Typical. Nobody tells me anything.",
+      "index": "10"
+    },
+    {
+      "topic": "JerryFollowers",
+      "topic_text": "The Followers have agreed to take you on as a member. Head to the Old Mormon Fort.",
+      "emotion": "Happy 50",
+      "response_text": "They did? That's great! Thank you! I'm out of this crummy camp!",
+      "index": "11"
+    },
+    {
+      "topic": "JerryInitiation",
+      "topic_text": "What is this initiation?",
+      "emotion": "Disgust 25",
+      "response_text": "Everybody has to do it. Well, everybody who wants to be a Khan, anyways. They toss you into the ring there and beat on you for a solid minute.",
+      "index": "12"
+    },
+    {
+      "topic": "JerryIntro",
+      "topic_text": "What are you doing?",
+      "emotion": "Sad 35",
+      "response_text": "Oh, nothing really. Just trying to psych myself up to try my initiation. Again.{Totally unconvincing roar}Raaaar!",
+      "index": "14"
+    },
+    {
+      "topic": "JerryKhans",
+      "topic_text": "Can you tell me about the Great Khans?",
+      "emotion": "Disgust 35",
+      "response_text": "I can tell you they're a bunch of big dumb jerks with no appreciation for art. I mean, can you believe their initiation?",
+      "index": "15"
+    },
+    {
+      "topic": "JerryPoetry",
+      "topic_text": "I'd like to hear some of your poetry.",
+      "emotion": "Happy 50",
+      "response_text": "You would? Really? Okay, well then, here goes:",
+      "index": "16"
+    },
+    {
+      "topic": "VMS47VRRCJerrythePunkTopic000",
+      "topic_text": "That doesn't sound so bad.",
+      "emotion": "Disgust 40",
+      "response_text": "Sure, maybe not if you're some hulking reprobate like Regis or baked to the gills like Jack. I've tried five times and still haven't made it.",
+      "index": "37"
+    },
+    {
+      "topic": "VMS47VRRCJerrythePunkTopic001",
+      "topic_text": "It sounds like you're not happy being a Great Khan. Maybe you'd be happier someplace else.",
+      "emotion": "Happy 50",
+      "response_text": "[SUCCEEDED] Maybe you're right. Maybe I can find my true calling, someplace they'll appreciate my poetry! Someplace like the Old Mormon Fort, maybe.",
+      "index": "38"
+    },
+    {
+      "topic": "VMS47VRRCJerrythePunkTopic002",
+      "topic_text": "Why don't you just cheat?",
+      "emotion": "Neutral 50",
+      "response_text": "Cheat? The only way I could cheat is if I was so doped up on painkillers that I don't feel anything.",
+      "index": "41"
+    },
+    {
+      "topic": "VMS47VRRCJerrythePunkTopic003",
+      "topic_text": "Just wait here a minute, I'll be back with some Med-X.",
+      "emotion": "Neutral 50",
+      "response_text": "Really? Wow, um... okay. Thanks.",
+      "index": "42"
+    },
+    {
+      "topic": "VMS47VRRCJerrythePunkTopic004",
+      "topic_text": "<Give Med-X> Painkillers like these, you mean?",
+      "emotion": "Neutral 50",
+      "response_text": "Whoa... you were serious. Okay, yeah, this might just work. Thanks.",
+      "index": "43"
+    },
+    {
+      "topic": "VMS47VRRCJerrythePunkTopic005",
+      "topic_text": "Well then, never mind.",
+      "emotion": "Neutral 50",
+      "response_text": "Okay.",
+      "index": "44"
+    },
+    {
+      "topic": "VMS47VRRCJerrythePunkTopic006",
+      "topic_text": "It sounded like you were writing poetry.",
+      "emotion": "Fear 15",
+      "response_text": "Oh. You heard that, huh? Okay, so yeah, I was writing poetry. I know, I know, it's not a very Great Khan-like thing to do.",
+      "index": "45"
+    },
+    {
+      "topic": "VMS47VRRCJerrythePunkTopic007",
+      "topic_text": "You don't sound too eager for your initiation.",
+      "emotion": "Sad 35",
+      "response_text": "Yeah, well, I guess maybe I'm not. But what else can I do?",
+      "index": "47"
+    },
+    {
+      "topic": "VMS47VRRCJerrythePunkTopic008",
+      "topic_text": "I had some other questions, actually.",
+      "emotion": "Neutral 50",
+      "response_text": "Sure, okay.",
+      "index": "48"
+    },
+    {
+      "topic": "VMS47VRRCJerrythePunkTopic009",
+      "topic_text": "Why isn't poetry \"Great Khan-like?\"",
+      "emotion": "Disgust 35",
+      "response_text": "Have you seen this tribe? If it's not an epic drunken ballad of cracking skulls and hearing lamentations they think it's a waste of time.",
+      "index": "49"
+    },
+    {
+      "topic": "VMS47VRRCJerrythePunkTopic010",
+      "topic_text": "I could ask them for you.",
+      "emotion": "Fear 30",
+      "response_text": "You'd do that? Thanks! I mean, I'd go myself, but what if they said no? The Khans wouldn't take me back, and then I'd have nobody.",
+      "index": "50"
+    },
+    {
+      "topic": "VMS47VRRCJerrythePunkTopic011",
+      "topic_text": "Why don't you go there and find out?",
+      "emotion": "Fear 35",
+      "response_text": "I don't know. I mean, I'd go myself, but what if they said no? The Khans wouldn't take me back, and then I'd have nobody.",
+      "index": "51"
+    },
+    {
+      "topic": "VMS47VRRCJerrythePunkTopic012",
+      "topic_text": "Probably. You seem like their type.",
+      "emotion": "Fear 35",
+      "response_text": "You think so? I mean, I'd go myself, but what if they said no? The Khans wouldn't take me back, and then I'd have nobody.",
+      "index": "52"
+    },
+    {
+      "topic": "VMS47VRRCJerrythePunkTopic013",
+      "topic_text": "That's not really my problem, is it?",
+      "emotion": "Sad 35",
+      "response_text": "No, I suppose not.",
+      "index": "53"
+    },
+    {
+      "topic": "VMS47VRRCJerrythePunkTopic014",
+      "topic_text": "What do you know about the Followers of the Apocalypse?",
+      "emotion": "Surprise 25",
+      "response_text": "Not much. They found us when we came to the Mojave, gave us a bunch of books on science and history - I guess they're like teachers or something?",
+      "index": "54"
+    },
+    {
+      "topic": "VMS47VRRCJerrythePunkTopic015",
+      "topic_text": "Wow, that... really was something.",
+      "emotion": "Happy 100",
+      "response_text": "You liked it? Wow, you're the first one who ever did!",
+      "index": "55"
+    },
+    {
+      "topic": "VMS47VRRCJerrythePunkTopic016",
+      "topic_text": "That was terrible. Really, really awful.",
+      "emotion": "Disgust 50",
+      "response_text": "{Sullen youth}Psh. Whatever.",
+      "index": "56"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Whatever.",
+      "index": "57"
+    },
+    {
+      "topic": "JerryPoetryBarks",
+      "topic_text": "JerryPoetryBarks",
+      "emotion": "Neutral 50",
+      "response_text": "Hmm, indulgent, what rhymes with indulgent? Efful- no, no, that's terrible.",
+      "index": "58"
+    }
+  ],
+  "combat": []
+}

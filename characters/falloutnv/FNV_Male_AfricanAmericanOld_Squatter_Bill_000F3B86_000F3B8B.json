@@ -1,0 +1,116 @@
+{
+  "name": "Squatter Bill",
+  "url": "/wiki/Squatter_Bill",
+  "dialogue_name": "1ESquatterWatchQuest1.txt",
+  "dialogue_url": "/wiki/1ESquatterWatchQuest1.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000F3B86",
+  "ref_id": "000F3B8B",
+  "editor_id": "1ESquatterWatchQuest1",
+  "location": "North Vegas Square",
+  "location_url": "/wiki/North_Vegas_Square",
+  "descriptions": [
+    "Squatter Bill is an unwelcome squatter living in the North Vegas Square in 2281.",
+    "He and his two companions have been squatting in the playground area of North Vegas Square, irritating the locals. Crandon asks the Courier to convince them to leave.",
+    "Squatter Bill was written by area designer Jorge Salgado, who also worked on the quest Someone to Watch Over Me."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "role": "Squatter",
+  "detailed_location": "North Vegas SquareCasa Madrid Apartments(optional)",
+  "voice_actor": "Gregory Alan Williams",
+  "special": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 10,
+    "Intelligence": 5,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "mod_special_values": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 6,
+    "Charisma": 10,
+    "Intelligence": 5,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "level": "1",
+  "misc_skills": [
+    {
+      "Hit Points:": "70(75)"
+    }
+  ],
+  "karma": "Neutral",
+  "voice_type": "MaleAdult06",
+  "geck_race": "AfricanAmericanOld",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "What do you want?",
+      "index": "1"
+    },
+    {
+      "topic": "SquattersBribe",
+      "topic_text": "I'd rather not have any trouble. Here's 50 caps, just keep yourself off the streets.",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] Sure. You got a deal.",
+      "index": "3"
+    },
+    {
+      "topic": "SquattersIntimidate",
+      "topic_text": "I'm asking nicely. I only do that *once.*",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] H-Hey... hey, don't worry, I was just kidding. We're going, right boys?",
+      "index": "5"
+    },
+    {
+      "topic": "SquattersKill",
+      "topic_text": "<Attack> Easy, I'm just going to kill you.",
+      "emotion": "Anger 70",
+      "response_text": "Fuck you, asshole! You're gonna regret it!",
+      "index": "7"
+    },
+    {
+      "topic": "SquattersMoveAlong",
+      "topic_text": "Crandon says you're not allowed to stay here. You'll have to go somewhere else.",
+      "emotion": "Neutral 50",
+      "response_text": "Oh really? And how are you gonna make us?",
+      "index": "8"
+    },
+    {
+      "topic": "VDialogueVegasNorth1ESquatterWatchQuest1Topic000",
+      "topic_text": "Fine, take it.",
+      "emotion": "Neutral 50",
+      "response_text": "Pleasure doing business with you.",
+      "index": "9"
+    },
+    {
+      "topic": "VDialogueVegasNorth1ESquatterWatchQuest1Topic001",
+      "topic_text": "A hundred caps? Forget it.",
+      "emotion": "Neutral 50",
+      "response_text": "Then we ain't going nowhere.",
+      "index": "10"
+    },
+    {
+      "topic": "VDialogueVegasNorth1ESquatterWatchQuest1Topic003",
+      "topic_text": "Here you go.",
+      "emotion": "Neutral 50",
+      "response_text": "Pleasure doing business with you.",
+      "index": "11"
+    }
+  ],
+  "conversation": [],
+  "combat": []
+}

@@ -1,0 +1,112 @@
+{
+  "name": "Private Kowalski",
+  "url": "/wiki/Kowalski",
+  "dialogue_name": "BCPrivateKowalski.txt",
+  "dialogue_url": "/wiki/BCPrivateKowalski.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "0011A8D8",
+  "ref_id": "0011A8D9",
+  "editor_id": "BCPrivateKowalski",
+  "location": "Boulder City Memorial",
+  "location_url": "/wiki/Boulder_City_Memorial",
+  "descriptions": [
+    "Private Kowalski is an NCR private encountered in Boulder City in 2281.",
+    "An enlisted soldier in the ranks of the New California Republic Army, normally stationed at Camp McCarran, Private Kowalski has recently received leave and plans to head home to see his family in California with a caravan, going through the 188 Trading Post. During a layover at the post, he decided to make his way to Boulder City, to pay his respects to his older brother, Donald, at the Boulder City Memorial. His brother sacrificed himself so that the rest of the unit could evacuate some of the wounded during the terminal stages of the First Battle of Hoover Dam."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "NCR Army",
+  "role": "Soldier",
+  "detailed_location": "Boulder City",
+  "voice_actor": "Liam O'Brien",
+  "special": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 5,
+    "Intelligence": 5,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "level": "5",
+  "tag_skills": [],
+  "misc_skills": [],
+  "karma": "Good",
+  "voice_type": "MaleAdult05",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "You here to pay your respects, too?",
+      "index": "1"
+    },
+    {
+      "topic": "VFreeformBoulderCityBCPrivateKowalskiTopic000",
+      "topic_text": "You're a little bitch and your brother was, too.",
+      "emotion": "Neutral 50",
+      "response_text": "Oh, now it's on.",
+      "index": "5"
+    },
+    {
+      "topic": "VFreeformBoulderCityBCPrivateKowalskiTopic001",
+      "topic_text": "What is this memorial?",
+      "emotion": "Neutral 50",
+      "response_text": "It commemorates the Battle of Hoover Dam. The rangers lured the best of Caesar's Legion into Boulder City, then blew the whole town up.",
+      "index": "6"
+    },
+    {
+      "topic": "VFreeformBoulderCityBCPrivateKowalskiTopic002",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Bye.",
+      "index": "8"
+    },
+    {
+      "topic": "VFreeformBoulderCityBCPrivateKowalskiTopic004",
+      "topic_text": "I'm sorry to hear that.",
+      "emotion": "Neutral 50",
+      "response_text": "Don't worry about it.",
+      "index": "9"
+    },
+    {
+      "topic": "VFreeformBoulderCityBCPrivateKowalskiTopic005< Speech Option - 30 >",
+      "topic_text": "My apologies. It was rude and disrespectful of me to do that.",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] All right, apology accepted. Don't let it happen again.",
+      "index": "10"
+    },
+    {
+      "topic": "VFreeformBoulderCityBCPrivateKowalskiTopic006",
+      "topic_text": "Where are you normally stationed?",
+      "emotion": "Neutral 50",
+      "response_text": "Camp McCarran, but I'm on leave at the moment - heading back to California to see my folks.",
+      "index": "12"
+    },
+    {
+      "topic": "VFreeformBoulderCityBCPrivateKowalskiTopic008",
+      "topic_text": "Yeah, whatever.",
+      "emotion": "Neutral 50",
+      "response_text": "Just get the fuck away from here, already.",
+      "index": "14"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "BCPrivateKowalskiAttack",
+      "topic_text": "BCPrivateKowalskiAttack",
+      "emotion": "Anger 100",
+      "response_text": "Oh, that's it. Your ass is mine!",
+      "index": "15"
+    }
+  ],
+  "combat": []
+}

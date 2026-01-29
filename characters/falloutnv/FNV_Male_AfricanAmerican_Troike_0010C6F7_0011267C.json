@@ -1,0 +1,333 @@
+{
+  "name": "Troike",
+  "url": "/wiki/Troike",
+  "dialogue_name": "VMS21Troike.txt",
+  "dialogue_url": "/wiki/VMS21Troike.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "0010C6F7",
+  "ref_id": "0011267C",
+  "editor_id": "VMS21Troike",
+  "location": "Gomorrah suites",
+  "location_url": "/wiki/Gomorrah#Suites_level",
+  "descriptions": [
+    "Troike is a smuggler staying in the Gomorrah casino in 2281.",
+    "Troike employs his contacts to smuggle guns bypassing the Strip's security into the casino for the Omertas.",
+    "Troike is initially reluctant to reveal any information about the Omertas, following an incident where he blacked out after taking chems and woke up next to a deceased sex worker, covered in blood.",
+    "If the player character passes a 75 Speech check when talking to Troike about using thermite in the gun room, he can be persuaded to plant the thermite himself. The Courier will then have to leave the casino and once they have returned, Cachino will tell them the Omertas caught Troike burning the guns and that he was shot in the head for doing so, and that Troike had mentioned that the Courier was involved."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Omertas",
+  "role": "JetaddictWeapons smuggler",
+  "detailed_location": "Gomorrah",
+  "voice_actor": "Emerson Brooks",
+  "special": {
+    "Strength": 6,
+    "Perception": 7,
+    "Endurance": 5,
+    "Charisma": 3,
+    "Intelligence": 3,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "level": "10",
+  "tag_skills": [
+    {
+      "Explosives:": "67"
+    },
+    {
+      "Guns:": "65(67)"
+    },
+    {
+      "Sneak:": "65"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Neutral",
+  "voice_type": "MaleAdult01DefaultB",
+  "geck_race": "AfricanAmerican",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Happy 30",
+      "response_text": "I'm getting the heck out of here. You go place that thermite and do what you need to do.",
+      "index": "1"
+    },
+    {
+      "topic": "TroikeBlackmailTopic00",
+      "topic_text": "I found proof of your blackmail.",
+      "emotion": "Neutral 50",
+      "response_text": "Well that motherfucker. What the hell. Damn, thanks for finding this.",
+      "index": "9"
+    },
+    {
+      "topic": "vDialogueGomorrahVMS21TroikeTopic000",
+      "topic_text": "What do you do here?",
+      "emotion": "Neutral 50",
+      "response_text": "I don't see how that's your business. I'm just a guest here, having a little fun.",
+      "index": "11"
+    },
+    {
+      "topic": "vDialogueGomorrahVMS21TroikeTopic001",
+      "topic_text": "So what's your story?",
+      "emotion": "Neutral 50",
+      "response_text": "Hey man, I don't know nothing. Let me have some peace here, buddy.",
+      "index": "12"
+    },
+    {
+      "topic": "vDialogueGomorrahVMS21TroikeTopic002",
+      "topic_text": "Do you know where the knife came from?",
+      "emotion": "Neutral 50",
+      "response_text": "I keep a little switchblade tucked away with me. You never know when you might find some trouble.",
+      "index": "14"
+    },
+    {
+      "topic": "vDialogueGomorrahVMS21TroikeTopic003",
+      "topic_text": "Cachino sent me to ask you about some guns.",
+      "emotion": "Neutral 50",
+      "response_text": "Cachino... Cachino what? Are you kidding me? He must be trying to get me killed.",
+      "index": "15"
+    },
+    {
+      "topic": "vDialogueGomorrahVMS21TroikeTopic004Tell me what happened with the prostitute.",
+      "topic_text": "Tell me what happened with the prostitute.",
+      "emotion": "Neutral 50",
+      "response_text": "Oh man, I don't even like to think about it. All that goddamn blood. It was just in the hotel like any other night.",
+      "index": "18"
+    },
+    {
+      "topic": "vDialogueGomorrahVMS21TroikeTopic005",
+      "topic_text": "What kind of chems were you doing?",
+      "emotion": "Neutral 50",
+      "response_text": "That night? Mostly buffout, I like to cut it with a little bit of jet, and wash it down with some whiskey. That was my standard Saturday night...",
+      "index": "21"
+    },
+    {
+      "topic": "vDialogueGomorrahVMS21TroikeTopic006",
+      "topic_text": "How did the family find out about it?",
+      "emotion": "Neutral 50",
+      "response_text": "When I saw the body I started screaming, a few seconds some of their soldiers were in there cleaning up the room.",
+      "index": "22"
+    },
+    {
+      "topic": "vDialogueGomorrahVMS21TroikeTopic007",
+      "topic_text": "That seems like a lot of chems.",
+      "emotion": "Neutral 50",
+      "response_text": "Like I said, pretty standard for me. I can handle my shit.",
+      "index": "24"
+    },
+    {
+      "topic": "vDialogueGomorrahVMS21TroikeTopic008<Medicine Options>",
+      "topic_text": "That doesn't sound like enough to get you to lose the whole night.",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] What? Yeah, you're right. I wonder what was up with that.",
+      "index": "25"
+    },
+    {
+      "topic": "vDialogueGomorrahVMS21TroikeTopic009",
+      "topic_text": "I have a couple more questions about what happened that night.",
+      "emotion": "Neutral 50",
+      "response_text": "Alright, have at it.",
+      "index": "27"
+    },
+    {
+      "topic": "vDialogueGomorrahVMS21TroikeTopic010",
+      "topic_text": "Let's talk about something else.",
+      "emotion": "Neutral 50",
+      "response_text": "What do you wanna talk about?",
+      "index": "28"
+    },
+    {
+      "topic": "vDialogueGomorrahVMS21TroikeTopic011",
+      "topic_text": "That's it for now.",
+      "emotion": "Neutral 50",
+      "response_text": "See ya.",
+      "index": "29"
+    },
+    {
+      "topic": "vDialogueGomorrahVMS21TroikeTopic012",
+      "topic_text": "Would you like me to try to get you out of your contract?",
+      "emotion": "Neutral 50",
+      "response_text": "You'd do that? For me? I'm not sure what can be done, but you'd be doing me a solid if you would. I've been talking to Big Sal mostly.",
+      "index": "30"
+    },
+    {
+      "topic": "vDialogueGomorrahVMS21TroikeTopic013",
+      "topic_text": "I'm looking to help Cachino break up whatever the Bosses are planning.",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah? Well fuck that. The bosses have my number, and I'm a company man while they've got the goods on me.",
+      "index": "31"
+    },
+    {
+      "topic": "vDialogueGomorrahVMS21TroikeTopic014",
+      "topic_text": "Maybe I can help you out of your contract with the family.",
+      "emotion": "Neutral 50",
+      "response_text": "More power to you if you can, but keep me out of it. I've been doing business with Big Sal, so he's going to be your man.",
+      "index": "32"
+    },
+    {
+      "topic": "vDialogueGomorrahVMS21TroikeTopic015<Speech Option>",
+      "topic_text": "<Lie> If you don't help me, I'll report your work here to NCR.",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] Great. So I'm fucked either way. I guess I don't have any choice but to help you. Just try not to get me killed here.",
+      "index": "33"
+    },
+    {
+      "topic": "vDialogueGomorrahVMS21TroikeTopic016<Speech Option 2, low skill>",
+      "topic_text": "Cachino forgot to tell me what they have on you.",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] I guess if Cachino trusts you I can tell you a little of what happened. It all started with a prostitute in here.",
+      "index": "35"
+    },
+    {
+      "topic": "vDialogueGomorrahVMS21TroikeTopic017",
+      "topic_text": "I have a couple more questions about the guns.",
+      "emotion": "Neutral 50",
+      "response_text": "Okay, try and be fast about it.",
+      "index": "37"
+    },
+    {
+      "topic": "vDialogueGomorrahVMS21TroikeTopic018",
+      "topic_text": "How do you get the guns into the strip?",
+      "emotion": "Neutral 50",
+      "response_text": "I'm pretty proud of myself. It's a stroke of genius, if I can be so modest.",
+      "index": "38"
+    },
+    {
+      "topic": "vDialogueGomorrahVMS21TroikeTopic019",
+      "topic_text": "Give me the Thermite and I'll destroy the weapons.",
+      "emotion": "Neutral 50",
+      "response_text": "Okay, here's the Thermite and a key to the room where the guns are stored. Place the Thermite on the crates in the room.",
+      "index": "42"
+    },
+    {
+      "topic": "vDialogueGomorrahVMS21TroikeTopic020",
+      "topic_text": "Let's talk about something else.",
+      "emotion": "Neutral 50",
+      "response_text": "Alright, let's.",
+      "index": "45"
+    },
+    {
+      "topic": "vDialogueGomorrahVMS21TroikeTopic021",
+      "topic_text": "That's it for now.",
+      "emotion": "Neutral 50",
+      "response_text": "Okay, cool.",
+      "index": "46"
+    },
+    {
+      "topic": "vDialogueGomorrahVMS21TroikeTopic022",
+      "topic_text": "Where do the guns come from?",
+      "emotion": "Neutral 50",
+      "response_text": "I've made lots of contacts over the years. I have some friends back in California that can get their hands on just about anything.",
+      "index": "47"
+    },
+    {
+      "topic": "vDialogueGomorrahVMS21TroikeTopic023{Speech Option, threaten to sell troike out if he doesn't turn in the thermite}",
+      "topic_text": "If you don't deploy the Thermite yourself, I'll tell the bosses what you've been planning.",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] Hey, fuck you.",
+      "index": "49"
+    },
+    {
+      "topic": "vDialogueGomorrahVMS21TroikeTopic024",
+      "topic_text": "What is Thermite?",
+      "emotion": "Neutral 50",
+      "response_text": "Thermite is a mix of rust and aluminum dust. If you add a little heat, a massive{emphasized}amount of heat is spit out.",
+      "index": "52"
+    },
+    {
+      "topic": "vDialogueGomorrahVMS21TroikeTopic025",
+      "topic_text": "Big Sal agreed to let you go.",
+      "emotion": "Neutral 50",
+      "response_text": "Holy shit, really? Okay, I'll help you, but I'm getting the hell out of here first chance I get.",
+      "index": "54"
+    },
+    {
+      "topic": "vDialogueGomorrahVMS21TroikeTopic026",
+      "topic_text": "Your bosses sent me to you to see if you needed any help with your work for them.",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah, I heard you might be coming. I appreciate the help, I'm in kind of a fix.",
+      "index": "55"
+    },
+    {
+      "topic": "vDialogueGomorrahVMS21TroikeTopic027",
+      "topic_text": "Tell me about the problem with the last shipment.",
+      "emotion": "Neutral 50",
+      "response_text": "The Fiends, a group of raiders freaked out on chems, stole my last shipment before I could get it into Vegas.",
+      "index": "57"
+    },
+    {
+      "topic": "vDialogueGomorrahVMS21TroikeTopic028",
+      "topic_text": "How are you getting the weapons into the strip?",
+      "emotion": "Neutral 50",
+      "response_text": "I'm pretty proud of myself. It's a stroke of genius, if I can be so modest.",
+      "index": "59"
+    },
+    {
+      "topic": "vDialogueGomorrahVMS21TroikeTopic029",
+      "topic_text": "Why do you work for the Omertas?",
+      "emotion": "Neutral 50",
+      "response_text": "Sorry, that's my business and no one else's.",
+      "index": "67"
+    },
+    {
+      "topic": "vDialogueGomorrahVMS21TroikeTopic030",
+      "topic_text": "Do you mean these weapon parts?",
+      "emotion": "Surprise 65",
+      "response_text": "What the hell? You got this from the Fiends already? Hot damn, you really are good. Thanks, this is exactly what I needed.",
+      "index": "68"
+    },
+    {
+      "topic": "vDialogueGomorrahVMS21TroikeTopic031",
+      "topic_text": "I'll keep an eye out for them.",
+      "emotion": "Neutral 50",
+      "response_text": "Great, thanks.",
+      "index": "69"
+    },
+    {
+      "topic": "vDialogueGomorrahVMS21TroikeTopic032",
+      "topic_text": "I have a couple more questions.",
+      "emotion": "Neutral 50",
+      "response_text": "Okay, what do you need to know?",
+      "index": "70"
+    },
+    {
+      "topic": "vDialogueGomorrahVMS21TroikeTopic033",
+      "topic_text": "I want to ask about something else.",
+      "emotion": "Neutral 50",
+      "response_text": "Okay, what's on your mind?",
+      "index": "71"
+    },
+    {
+      "topic": "vDialogueGomorrahVMS21TroikeTopic034",
+      "topic_text": "That's all I have for questions right now.",
+      "emotion": "Neutral 50",
+      "response_text": "Alright, you know where to find me.",
+      "index": "72"
+    },
+    {
+      "topic": "vDialogueGomorrahVMS21TroikeTopic035",
+      "topic_text": "I found those weapon parts you needed.",
+      "emotion": "Neutral 50",
+      "response_text": "Well, hot shit. Thank you. Must have been a real bitch getting it from the Fiends, thanks.",
+      "index": "73"
+    },
+    {
+      "topic": "vTroikeGunsThermite",
+      "topic_text": "What can we do to take care of the guns?",
+      "emotion": "Neutral 50",
+      "response_text": "As a little pet project I've been making some thermite. Thermite burns as hot as the devil's asshole and can melt through just about anything.",
+      "index": "74"
+    }
+  ],
+  "conversation": [],
+  "combat": []
+}

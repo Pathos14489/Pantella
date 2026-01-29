@@ -1,0 +1,204 @@
+{
+  "name": "Cindy Cantelli",
+  "url": "/wiki/Cindy_Cantelli",
+  "dialogue_name": "CindyCantelli.txt",
+  "dialogue_url": "/wiki/CindyCantelli.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": true,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000156B7",
+  "ref_id": "0001E74D",
+  "editor_id": "CindyCantelli",
+  "location": "A Quick Fix,Rivet City market",
+  "location_url": "/wiki/A_Quick_Fix",
+  "descriptions": [
+    "Cindy Cantelli is the proprietor of A Quick Fix in 2277.",
+    "Cindy and her husband Paulie own A Quick Fix, the drug dispensary in the Rivet City market. The shop has a reputation for having a good stock.",
+    "She has since developed a crush on Bannon, her neighbor in the market. She ignores Bannon's faults as an egotistical blowhard",
+    "Cindy tends to get nervous and talk too fast when she meets new people.",
+    "For example, despite her firsthand awareness of the evils of addiction, she has no problem disseminating chems with no medical benefit. She also doesn't particularly care that her husband tries to convince others (Mei Wong and Ted Strayer) to take Psycho, a particularly dangerous chem, with him.",
+    "However, Cindy has less empathy for the upper deck, particularly Henry and Christie Young, whose happy marriage and general pompousness irritates her. She makes her disdain for them known anytime she talks to them, calling out Henry's attitude of moral superiority",
+    "Cindy can be found at A Quick Fix during the market's business hours. She eats her lunch in the market and when she isn't doing this she can be found sleeping in her bed.",
+    "Seagrave Holmes incorrectly refers to Christie Young as Cindy in one of his conversations with the former."
+  ],
+  "race": "Human",
+  "gender": "Female",
+  "affiliation": "Rivet City",
+  "role": "Owner ofA Quick Fixchem shop",
+  "detailed_location": "A Quick Fix,Rivet City market",
+  "voice_actor": "Shari Elliker",
+  "special": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 7,
+    "Intelligence": 5,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "mod_special_values": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 7,
+    "Intelligence": 5,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "level": "4",
+  "tag_skills": [
+    {
+      "Barter:": "49"
+    },
+    {
+      "Melee Weap.:": "45"
+    },
+    {
+      "Speech:": "49"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "40(45)"
+    }
+  ],
+  "karma": "Evil",
+  "voice_type": "FemaleAdult01DefaultDC",
+  "geck_race": "AfricanAmerican",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Happy 50",
+      "response_text": "This is A Quick Fix. I mean that's the name of our shop. Paulie and mine that is. My name is Cindy. Cindy Cantelli.",
+      "index": "1"
+    },
+    {
+      "topic": "MS03RCHistory1Could I ask you about Rivet City's history?",
+      "topic_text": "What can you tell me about Rivet City's history?",
+      "emotion": "Surprise 10",
+      "response_text": "Well, I don't really know, to tell the truth. How does any city get started, really?",
+      "index": "7"
+    },
+    {
+      "topic": "MS14TedFind",
+      "topic_text": "Where can I find Ted Strayer?",
+      "emotion": "Neutral 50",
+      "response_text": "Have you tried the common room?  That's where he sleeps.",
+      "index": "10"
+    },
+    {
+      "topic": "RCCindyCantelliSlowDown",
+      "topic_text": "Whoa! Slow down, lady. You're freaking me out.",
+      "emotion": "Fear 50",
+      "response_text": "Sorry. I get nervous easily. When I'm nervous, I'm fast. I mean, I talk. Fast that is. See, I'm doing it again.{Say it all fast and nervous.}",
+      "index": "13"
+    },
+    {
+      "topic": "RCCindyFunny",
+      "topic_text": "I like you. You're funny. I assume you sell Chems?",
+      "emotion": "Surprise 50",
+      "response_text": "Yeah. Paulie and I. Our shop is in the market.",
+      "index": "14"
+    },
+    {
+      "topic": "RCCindyRelax",
+      "topic_text": "Relax. I'm just looking around.",
+      "emotion": "Neutral 50",
+      "response_text": "Oh. Okay. Well let me know if you want anything. To buy that is.",
+      "index": "16"
+    },
+    {
+      "topic": "RCCindySampling",
+      "topic_text": "Damn! You sound like you've been sampling your own stuff.",
+      "emotion": "Fear 50",
+      "response_text": "No, no, no! I would never do that.",
+      "index": "18"
+    },
+    {
+      "topic": "RCTopicDiegoAngela",
+      "topic_text": "I heard Angela Staley has a crush on Diego.",
+      "emotion": "Sad 50",
+      "response_text": "The poor dear. I wish there was something I could do to help her.",
+      "index": "22"
+    },
+    {
+      "topic": "RCTopicGetDrinks",
+      "topic_text": "Where can I get a stiff drink?",
+      "emotion": "Neutral 50",
+      "response_text": "The Muddy Rudder. Belle waters down the liquor, but it's cheap. It's on the lower deck.",
+      "index": "24"
+    },
+    {
+      "topic": "RCTopicPaulieAddictDid you know that Paulie Cantelli is an addict?",
+      "topic_text": "So your husband is an addict?",
+      "emotion": "Sad 50",
+      "response_text": "He's hopeless. I have to keep him away from the shop or he'll rob us blind.",
+      "index": "25"
+    },
+    {
+      "topic": "RCTopicWedding",
+      "topic_text": "When are Angela and Diego getting married?",
+      "emotion": "Happy 50",
+      "response_text": "At 3 o'clock tomorrow. Everyone in Rivet City is invited. I'm sure that includes you.",
+      "index": "27"
+    },
+    {
+      "topic": "RivetCityBarterI'm here to do business with you.",
+      "topic_text": "What do you have for sale?",
+      "emotion": "Happy 50",
+      "response_text": "We've got all kinds of chems.",
+      "index": "28"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYEI have to go now.",
+      "topic_text": "It's time for me to leave, Cindy.",
+      "emotion": "Happy 50",
+      "response_text": "I'm sure you'll be back soon.",
+      "index": "29"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Happy 50",
+      "response_text": "Hey, Vera. Still dodging old Seagrave? He's got eyes for you.",
+      "index": "30"
+    },
+    {
+      "topic": "RCGoodbye",
+      "topic_text": "RCGoodbye",
+      "emotion": "Sad 50",
+      "response_text": "I've got nothing like that here. Why don't you go have a drink in the Muddy Rudder? That should do it.",
+      "index": "48"
+    },
+    {
+      "topic": "RCGoodbye02",
+      "topic_text": "RCGoodbye02",
+      "emotion": "Happy 100",
+      "response_text": "Yes, I got the invitation. I wouldn't miss you and Diego's wedding for anything.{Say the first sentence with a laugh.}",
+      "index": "58"
+    },
+    {
+      "topic": "RCPackageEnd",
+      "topic_text": "RCPackageEnd",
+      "emotion": "Disgust 50",
+      "response_text": "I hope Paulie hasn't injected all our inventory.{muttered to herself}",
+      "index": "59"
+    },
+    {
+      "topic": "RCResponse01",
+      "topic_text": "RCResponse01",
+      "emotion": "Surprise 50",
+      "response_text": "Don't know where he is, and I'm not sure I care. I saw you talking to Bannon the other day. Did he mention me?",
+      "index": "61"
+    }
+  ],
+  "combat": []
+}

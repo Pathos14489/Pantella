@@ -1,0 +1,186 @@
+{
+  "name": "Lieutenant Haggerty",
+  "url": "/wiki/Haggerty",
+  "dialogue_name": "LtHaggerty.txt",
+  "dialogue_url": "/wiki/LtHaggerty.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000E07D5",
+  "ref_id": "000E07DB",
+  "editor_id": "LtHaggerty",
+  "location": "HELIOS One",
+  "location_url": "/wiki/HELIOS_One",
+  "descriptions": [
+    "Lieutenant Haggerty is a soldier of the NCR Army stationed at HELIOS One in the Mojave Wasteland in Fallout: New Vegas.",
+    "The commanding officer of the garrison at the HELIOS One power plant during the Mojave Campaign, Haggerty is not thrilled with the posting. Ever since the NCR wrested control of it from the Brotherhood of Steel, HELIOS has not been considered a priority target due to its minimal power output and the need for troops to shore up defenses along the Colorado. The lieutenant herself is keenly aware that their reduced numbers mean a determined attack by the Legion would wipe them out with ease,",
+    "Her other frustration is being forced to rely on the \"services\" of an idiot with sunglasses, who wormed his way into being the local \"expert\" responsible for reactivating HELIOS."
+  ],
+  "race": "Human",
+  "gender": "Female",
+  "affiliation": "NCR",
+  "role": "Commander",
+  "detailed_location": "HELIOS One",
+  "voice_actor": "April Stewart",
+  "special": {
+    "Strength": 5,
+    "Perception": 6,
+    "Endurance": 6,
+    "Charisma": 4,
+    "Intelligence": 5,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "level": "5",
+  "tag_skills": [
+    {
+      "Guns:": "48"
+    },
+    {
+      "Sneak:": "48"
+    },
+    {
+      "Unarmed:": "48"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Neutral",
+  "voice_type": "FemaleAdult03",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "This is a restricted area. State your business.",
+      "index": "1"
+    },
+    {
+      "topic": "VMS03HaggertyBrother",
+      "topic_text": "<Lie>I heard my brother was stationed here. I want to know he's okay.",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] I wish I could tell you, but we've had so many replacements lately I couldn't be sure. Go in and look around if you want.",
+      "index": "3"
+    },
+    {
+      "topic": "VMS03HaggertyEnterPlant",
+      "topic_text": "I'd like to go into the power plant.",
+      "emotion": "Neutral 50",
+      "response_text": "Why would I want to let you do that?",
+      "index": "7"
+    },
+    {
+      "topic": "VMS03HaggertyFrontLines",
+      "topic_text": "Why are you here, and not on the front lines? Isn't that more important?",
+      "emotion": "Neutral 50",
+      "response_text": "I ask myself the same question all the time. But energy is hard to come by around here. Gives you more control over this area than troops ever could.",
+      "index": "8"
+    },
+    {
+      "topic": "VMS03HaggertyHungry",
+      "topic_text": "I was hungry and was hoping this was some kind of food factory.",
+      "emotion": "Neutral 50",
+      "response_text": "I can't tell whether you're joking or radiation melted part of your brain, but either way I don't see a good reason to let you through.",
+      "index": "10"
+    },
+    {
+      "topic": "VMS03HaggertyIDontHaveOne",
+      "topic_text": "You're right, I don't have a reason.",
+      "emotion": "Neutral 50",
+      "response_text": "I'm glad we sorted this out.",
+      "index": "11"
+    },
+    {
+      "topic": "VMS03HaggertyInvestigate",
+      "topic_text": "I saw this place in the distance and wanted to investigate.",
+      "emotion": "Neutral 50",
+      "response_text": "Or you're a Legion spy trying to infiltrate our perimeter. Give me one good reason I should let you through.",
+      "index": "12"
+    },
+    {
+      "topic": "VMS03HaggertyMorePeopleDefending",
+      "topic_text": "Shouldn't there be more people than this defending a power plant?",
+      "emotion": "Neutral 50",
+      "response_text": "There should. But we're not getting much power out of it so none of our enemies have a big interest in it either. Not like Hoover Dam, anyway.",
+      "index": "13"
+    },
+    {
+      "topic": "VMS03HaggertyPublicProperty",
+      "topic_text": "This is public property and I can do as I please here.",
+      "emotion": "Neutral 50",
+      "response_text": "This is NCR property and we have guns. So you can only do as we please here. And it would please us if you got the hell off our lawn.{emph. second 'we'}",
+      "index": "16"
+    },
+    {
+      "topic": "VMS03HaggertySolarTower",
+      "topic_text": "[Science] I notice your solar tower isn't collecting much sunlight. I can help.",
+      "emotion": "Neutral 50",
+      "response_text": "No need. We already have an expert hard at work on it.",
+      "index": "17"
+    },
+    {
+      "topic": "VMS03HaggertyTakingOver",
+      "topic_text": "[Attack] I'm taking over.",
+      "emotion": "Neutral 50",
+      "response_text": "We've held off tougher enemies than you.",
+      "index": "21"
+    },
+    {
+      "topic": "VMS03HaggertyWithNCR",
+      "topic_text": "[NCR Rep] I'm with the NCR. Anything I can do to help?",
+      "emotion": "Neutral 50",
+      "response_text": "Your being here is a start, soldier. We aren't exactly overflowing with troopers here.",
+      "index": "22"
+    },
+    {
+      "topic": "VMS03LtHaggertyTopic000",
+      "topic_text": "I wanted to check on the troopers sent from Camp Forlorn Hope.",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah, they were here a while ago. Gave them all I could, which wasn't much. But as many problems as we're having here, I know they've got it worse.",
+      "index": "30"
+    },
+    {
+      "topic": "VMS03LtHaggertyTopic001",
+      "topic_text": "I don't need your help. I'm going to carve myself a key from your bones.",
+      "emotion": "Neutral 50",
+      "response_text": "{Slightly fearful}Jesus. You're a real goddamn psycho.",
+      "index": "33"
+    },
+    {
+      "topic": "VMS03LtHaggertyTopic003",
+      "topic_text": "Why was the Brotherhood of Steel here?",
+      "emotion": "Neutral 50",
+      "response_text": "Damned if I know. Put up a hell of a fight, though. We had them outnumbered, I don't know, twenty to one, maybe.",
+      "index": "34"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Later.",
+      "index": "37"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "Hello",
+      "emotion": "Neutral 50",
+      "response_text": "What is it? I'm a busy woman.",
+      "index": "38"
+    },
+    {
+      "topic": "VMS03HaggertyStayWhereYouAre",
+      "topic_text": "VMS03HaggertyStayWhereYouAre",
+      "emotion": "Neutral 50",
+      "response_text": "Stay where you are. You're not allowed in there. This is your only warning.",
+      "index": "39"
+    }
+  ],
+  "combat": []
+}

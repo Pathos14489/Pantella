@@ -1,0 +1,108 @@
+{
+  "name": "White Glove greeter",
+  "url": "/wiki/White_Glove_greeter",
+  "dialogue_name": "VMS18WhiteGloveGreeter.txt",
+  "dialogue_url": "/wiki/VMS18WhiteGloveGreeter.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "0012BAAE",
+  "ref_id": "00163466",
+  "editor_id": "VMS18WhiteGloveGreeter",
+  "location": "Ultra-Luxe",
+  "location_url": "/wiki/Ultra-Luxe",
+  "descriptions": [
+    "The White Glove greeter is a member of the White Glove Society in 2281.",
+    "He roams around Ultra-Luxe and greets anyone entering the casino, confiscating their weapons in the process.",
+    "He will ask the Courier to hand over any weapons. If he/she agrees, he will confiscate all weapons (excluding holdout weapons). Not giving them to him will result in him becoming hostile."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "White Glove Society",
+  "role": "Greeter",
+  "detailed_location": "Ultra-Luxe",
+  "voice_actor": "Jesse Burch",
+  "special": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 6,
+    "Charisma": 3,
+    "Intelligence": 4,
+    "Agility": 6,
+    "Luck": 4
+  },
+  "level": "4",
+  "tag_skills": [
+    {
+      "Guns:": "43"
+    },
+    {
+      "Melee Weap.:": "41"
+    },
+    {
+      "Unarmed:": "43"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Neutral",
+  "voice_type": "MaleAdult03",
+  "geck_race": "CaucasianOld",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "Beg your pardon, but could I trouble you to turn over your weapons?",
+      "index": "1"
+    },
+    {
+      "topic": "VMS18VMS18WhiteGloveGreeterTopic000",
+      "topic_text": "Sure, here you go.",
+      "emotion": "Neutral 50",
+      "response_text": "My deepest apologies for the slightest inconvenience. You have my assurance that everything will be returned upon your departure.",
+      "index": "2"
+    },
+    {
+      "topic": "VMS18VMS18WhiteGloveGreeterTopic001",
+      "topic_text": "<Keep holdout weapons> Sure, here you go.",
+      "emotion": "Neutral 50",
+      "response_text": "My deepest apologies for the slightest inconvenience. You have my assurance that everything will be returned upon your departure.",
+      "index": "5"
+    },
+    {
+      "topic": "VMS18VMS18WhiteGloveGreeterTopic002",
+      "topic_text": "Why do you need my guns?",
+      "emotion": "Neutral 50",
+      "response_text": "I'm afraid those are the rules. If you don't like it you can take your business elsewhere.",
+      "index": "8"
+    },
+    {
+      "topic": "VMS18VMS18WhiteGloveGreeterTopic003",
+      "topic_text": "Could I trouble you to blow it out your ass?",
+      "emotion": "Neutral 50",
+      "response_text": "{Offended}How frightfully uncouth. I'm afraid I must insist you relinquish your weapons.",
+      "index": "9"
+    },
+    {
+      "topic": "VMS18VMS18WhiteGloveGreeterTopic004",
+      "topic_text": "[Attack] Looks like I'll have to kill you, then.",
+      "emotion": "Neutral 50",
+      "response_text": "Well, I never.",
+      "index": "10"
+    },
+    {
+      "topic": "VMS18VMS18WhiteGloveGreeterTopic005",
+      "topic_text": "Where did you take my weapons?",
+      "emotion": "Neutral 50",
+      "response_text": "They'll be handled with the utmost security in our bank.",
+      "index": "11"
+    }
+  ],
+  "conversation": [],
+  "combat": []
+}

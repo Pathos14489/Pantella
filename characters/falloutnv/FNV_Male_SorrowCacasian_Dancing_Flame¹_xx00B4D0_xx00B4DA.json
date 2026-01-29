@@ -1,0 +1,93 @@
+{
+  "name": "Dancing Flame¹",
+  "url": "/wiki/Dancing_Flame",
+  "dialogue_name": "NVDLC02MQ05bDancingFlame.txt",
+  "dialogue_url": "/wiki/NVDLC02MQ05bDancingFlame.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "xx00B4D0",
+  "ref_id": "xx00B4DA",
+  "editor_id": "NVDLC02MQ05bDancingFlame",
+  "location": "Burial mounds",
+  "location_url": "/wiki/Burial_mounds",
+  "descriptions": [
+    "Dancing Flame is a Sorrows tribal found at the burial mounds in the year 2281.",
+    "Dancing Flame is a Sorrows warrior found protecting the Sorrows burial mounds. He only appears during the quest Sanctity of the Dead.",
+    "Dancing Flame appears only in the Fallout: New Vegas add-on Honest Hearts."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Sorrows",
+  "role": "Warrior",
+  "detailed_location": "Burial mounds",
+  "voice_actor": "Alejandro Furth",
+  "special": {
+    "Strength": 4,
+    "Perception": 6,
+    "Endurance": 5,
+    "Charisma": 6,
+    "Intelligence": 6,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "level": "1→50 (player level x0.9)",
+  "tag_skills": [
+    {
+      "Speech:": "32→100"
+    },
+    {
+      "Survival:": "30→100(35→105)"
+    },
+    {
+      "Unarmed:": "30→100"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Neutral",
+  "geck_race": "SorrowCacasian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "You friend of Sorrows, yes? Together we smash White Legs that defile holy places, yes?",
+      "index": "1"
+    },
+    {
+      "topic": "NVDLC02MQ05bNVDLC02MQ05bDancingFlameTopic000",
+      "topic_text": "No, I smash White Legs alone. You stay here so you not get dead.",
+      "emotion": "Neutral 50",
+      "response_text": "Hmph. Since you are friend to Sorrows... we go. But you kill White Legs!",
+      "index": "3"
+    },
+    {
+      "topic": "NVDLC02MQ05bNVDLC02MQ05bDancingFlameTopic001",
+      "topic_text": "Just get out of here, you're no match for hardened White Leg warriors.",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] Because you are friend to Sorrows... very well. We go. Angry ghosts will do for White Legs.",
+      "index": "4"
+    },
+    {
+      "topic": "NVDLC02MQ05bNVDLC02MQ05bDancingFlameTopic003",
+      "topic_text": "Sure, whatever. We go smash White Legs.",
+      "emotion": "Neutral 50",
+      "response_text": "We go!",
+      "index": "6"
+    },
+    {
+      "topic": "NVDLC02MQ05bNVDLC02MQ05bDancingFlameTopic004",
+      "topic_text": "Just wait here a few minutes. Don't do anything crazy.",
+      "emotion": "Neutral 50",
+      "response_text": "We wait, but not forever!",
+      "index": "7"
+    }
+  ],
+  "conversation": [],
+  "combat": []
+}

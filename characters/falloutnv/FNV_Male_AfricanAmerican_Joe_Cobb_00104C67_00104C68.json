@@ -1,0 +1,374 @@
+{
+  "name": "Joe Cobb",
+  "url": "/wiki/Joe_Cobb",
+  "dialogue_name": "GSJoeCobb.txt",
+  "dialogue_url": "/wiki/GSJoeCobb.txt",
+  "spawned_dead": false,
+  "spawned": true,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "00104C67",
+  "ref_id": "00104C68",
+  "editor_id": "GSJoeCobb",
+  "location": "Goodsprings",
+  "location_url": "/wiki/Goodsprings",
+  "descriptions": [
+    "Joe Cobb is the leader of a small gang of Powder Gangers in 2281.",
+    "A career criminal, Cobb has been running with some of the toughest gangs the wasteland has seen. Placed in the NCRCF on a work-release program, he took his freedom when Samuel Cooke triggered the prison break. Salvaging armor from dead guards, he and his men started to haunt the stretch of Long 15 between Sloan and Primm. His recent string of successes was marred when a Crimson Caravan trader going by the name of Ringo decided that combat was the better part of valor and started shooting during a shake down.",
+    "Cobb and his fellow gangers took down the caravan,",
+    "Placeholder lines for some of Joe Cobb's dialogue exist in the game's files, grouped together with other lines that are voiced by Gregory Alan Williams. This may suggest that he was originally intended to voice Cobb. However, the placeholder lines are voiced by someone unknown."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Powder Gangers",
+  "role": "Powder Ganger leaderGoodsprings Mayor (optional)",
+  "detailed_location": "Goodsprings",
+  "voice_actor": "Avery K. Waddell",
+  "special": {
+    "Strength": 5,
+    "Perception": 6,
+    "Endurance": 5,
+    "Charisma": 3,
+    "Intelligence": 3,
+    "Agility": 5,
+    "Luck": 4
+  },
+  "level": "2",
+  "tag_skills": [
+    {
+      "Explosives:": "34"
+    },
+    {
+      "Guns:": "32"
+    },
+    {
+      "Melee Weap.:": "32"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Dam. Threshold:": "5"
+    }
+  ],
+  "karma": "Neutral[1]",
+  "voice_type": "MaleAdult02",
+  "geck_race": "AfricanAmerican",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "We've got people to kill. Keep an eye out.",
+      "index": "1"
+    },
+    {
+      "topic": "PLAYERFIREWEAPON",
+      "topic_text": "PLAYER FIRE WEAPON",
+      "emotion": "Neutral 50",
+      "response_text": "Knock it off!",
+      "index": "13"
+    },
+    {
+      "topic": "PLAYERINIRONSITES",
+      "topic_text": "PLAYER IN IRON SITES",
+      "emotion": "Neutral 50",
+      "response_text": "Go ahead. Try me.",
+      "index": "15"
+    },
+    {
+      "topic": "PLAYERLAYMINE",
+      "topic_text": "PLAYER LAY MINE",
+      "emotion": "Neutral 50",
+      "response_text": "Why the fuck you puttin' that there?",
+      "index": "17"
+    },
+    {
+      "topic": "PLAYERTHROWGRENADE",
+      "topic_text": "PLAYER THROW GRENADE",
+      "emotion": "Neutral 50",
+      "response_text": "Grenade!",
+      "index": "19"
+    },
+    {
+      "topic": "VFreeformGoodspringsGSJoeCobbTopic000",
+      "topic_text": "What say I help you take over this town?",
+      "emotion": "Neutral 50",
+      "response_text": "{player helping Ringo}No. I got a funny feeling about you, and there's no way I'm trusting you to watch my back.",
+      "index": "21"
+    },
+    {
+      "topic": "VFreeformGoodspringsGSJoeCobbTopic001",
+      "topic_text": "Deal.",
+      "emotion": "Neutral 50",
+      "response_text": "While you're doing that, I'll be here waiting for my friends. Join up with us once you're done.",
+      "index": "25"
+    },
+    {
+      "topic": "VFreeformGoodspringsGSJoeCobbTopic002",
+      "topic_text": "Never mind. I need to think about this.",
+      "emotion": "Neutral 50",
+      "response_text": "Fuck you, then.",
+      "index": "26"
+    },
+    {
+      "topic": "VFreeformGoodspringsGSJoeCobbTopic003",
+      "topic_text": "You can't find Ringo yourself?",
+      "emotion": "Neutral 50",
+      "response_text": "There are too many places to hide around here. He'd see me coming and then \"bam\", I'm dead.",
+      "index": "27"
+    },
+    {
+      "topic": "VFreeformGoodspringsGSJoeCobbTopic005",
+      "topic_text": "Here - the spare medical supplies from Doc Mitchell.",
+      "emotion": "Neutral 50",
+      "response_text": "All right! We got all sorts of shit in here. Nice job. Better take some for yourself in case you get hit.",
+      "index": "29"
+    },
+    {
+      "topic": "VFreeformGoodspringsGSJoeCobbTopic007",
+      "topic_text": "What's been going on in the rest of the wasteland?",
+      "emotion": "Neutral 50",
+      "response_text": "Same old shit that's been going on for years. The NCR and Legion are still fighting over Hoover Dam for some reason.",
+      "index": "30"
+    },
+    {
+      "topic": "VFreeformGoodspringsGSJoeCobbTopic008",
+      "topic_text": "What do you know about the Legion?",
+      "emotion": "Fear 10",
+      "response_text": "I've run with some tough gangs, but I gotta admit they all got nothing on the Legion. I hear they stick you up on poles and it takes awhile to die.",
+      "index": "31"
+    },
+    {
+      "topic": "VFreeformGoodspringsGSJoeCobbTopic009",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah.",
+      "index": "33"
+    },
+    {
+      "topic": "VFreeformGoodspringsGSJoeCobbTopic010",
+      "topic_text": "Tell me about the NCR.",
+      "emotion": "Anger 10",
+      "response_text": "{contempt}\"New\" California Republic - nothing new about it. Just a bunch of people with money and power pushing everyone else around.",
+      "index": "34"
+    },
+    {
+      "topic": "VFreeformGoodspringsGSJoeCobbTopic011",
+      "topic_text": "This area is your territory?",
+      "emotion": "Happy 5",
+      "response_text": "{pride}It is now. Me and the rest of the guys busted out of the NCR prison east of here and took over. Now we're calling the shots.",
+      "index": "36"
+    },
+    {
+      "topic": "VFreeformGoodspringsGSJoeCobbTopic012",
+      "topic_text": "What were you in prison for?",
+      "emotion": "Anger 10",
+      "response_text": "None of your damn business. You ought to know better than to ask a man that kind of question.",
+      "index": "37"
+    },
+    {
+      "topic": "VFreeformGoodspringsGSJoeCobbTopic013< Speech 20 >",
+      "topic_text": "I just need to know if I should watch my step around you.",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED]{listing his crimes}Robbed some people, burned some things, killed a few guys.",
+      "index": "38"
+    },
+    {
+      "topic": "VFreeformGoodspringsGSJoeCobbTopic014",
+      "topic_text": "Never mind.",
+      "emotion": "Neutral 50",
+      "response_text": "{warning}Yeah, forget about it.",
+      "index": "40"
+    },
+    {
+      "topic": "VFreeformGoodspringsGSJoeCobbTopic015",
+      "topic_text": "If you run the town, they'll have to work for you. Food, water, and money will be yours.",
+      "emotion": "Neutral 50",
+      "response_text": "{realizing player has a good idea}Shit, yeah. Mayor Cobb - I like the sound of that. Running my own town will give me more pull with the guys at the prison, too.",
+      "index": "41"
+    },
+    {
+      "topic": "VFreeformGoodspringsGSJoeCobbTopic016",
+      "topic_text": "Free food, I guess.",
+      "emotion": "Neutral 50",
+      "response_text": "{thoughtful}Having all the food we want ain't a bad idea, actually. Getting sick of eating prison rations.",
+      "index": "43"
+    },
+    {
+      "topic": "VFreeformGoodspringsGSJoeCobbTopic017",
+      "topic_text": "Forget I said anything.",
+      "emotion": "Anger 10",
+      "response_text": "Make up your damn mind.",
+      "index": "45"
+    },
+    {
+      "topic": "VFreeformGoodspringsGSJoeCobbTopic018",
+      "topic_text": "Do you know anything about Hoover Dam?",
+      "emotion": "Neutral 50",
+      "response_text": "Never been there since the NCR's got troops all over it. Must be pretty important.",
+      "index": "46"
+    },
+    {
+      "topic": "VFreeformGoodspringsGSJoeCobbTopic019",
+      "topic_text": "I already took care of Ringo.",
+      "emotion": "Surprise 10",
+      "response_text": "No shit? I guess the next thing we need to do is hang out and wait for the rest of my gang to show up so we can talk about the plan.",
+      "index": "47"
+    },
+    {
+      "topic": "VFreeformGoodspringsGSJoeCobbTopic022",
+      "topic_text": "I've done all I can. Let's take over Goodsprings.",
+      "emotion": "Neutral 50",
+      "response_text": "It's about time. I saw some of the townies gathering at the saloon, so we've got a militia to take down. We get rid of them and we own this place.",
+      "index": "48"
+    },
+    {
+      "topic": "VFreeformGoodspringsGSJoeCobbTopic023",
+      "topic_text": "Ringo's dead. What now?",
+      "emotion": "Neutral 50",
+      "response_text": "Good. We'll still need a plan before we rush the town. I don't want to embarrass myself and get beat by a bunch of townies.",
+      "index": "49"
+    },
+    {
+      "topic": "VFreeformGoodspringsGSJoeCobbTopic024",
+      "topic_text": "It's easy pickings. Why, you got somewhere else to be?",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah, I guess me and the guys could push this place over pretty easily.",
+      "index": "52"
+    },
+    {
+      "topic": "VFreeformGoodspringsGSJoeCobbTopic025",
+      "topic_text": "So what's next for you guys?",
+      "emotion": "Neutral 50",
+      "response_text": "I figure we'll hang around Goodsprings for awhile, maybe get some of the other gangs to join up with us.",
+      "index": "54"
+    },
+    {
+      "topic": "VFreeformGoodspringsGoodspringsJoeCobbTopic001",
+      "topic_text": "What was that you said about Ringo?",
+      "emotion": "Neutral 50",
+      "response_text": "He's some trader who decided he'd rather shoot than pay the toll for being in our territory. He's hiding somewhere in town.",
+      "index": "56"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah.",
+      "index": "58"
+    },
+    {
+      "topic": "GSJoeCobbIntro",
+      "topic_text": "GSJoeCobbIntro",
+      "emotion": "Anger 50",
+      "response_text": "I'm done being nice. If you don't hand Ringo over soon, I'm going to get my friends and we're burning this town to the ground, got it?",
+      "index": "59"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "Hello",
+      "emotion": "Anger 50",
+      "response_text": "What the hell is your problem?",
+      "index": "60"
+    }
+  ],
+  "combat": [
+    {
+      "topic": "AcceptYield",
+      "topic_text": "AcceptYield",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah, I thought so.",
+      "index": "61"
+    },
+    {
+      "topic": "Assault",
+      "topic_text": "Assault",
+      "emotion": "Neutral 50",
+      "response_text": "What the fuck?",
+      "index": "62"
+    },
+    {
+      "topic": "Attack",
+      "topic_text": "Attack",
+      "emotion": "Neutral 50",
+      "response_text": "Come on!",
+      "index": "65"
+    },
+    {
+      "topic": "AvoidThreat",
+      "topic_text": "AvoidThreat",
+      "emotion": "Neutral 50",
+      "response_text": "Ah, shit!",
+      "index": "68"
+    },
+    {
+      "topic": "DeathResponse",
+      "topic_text": "DeathResponse",
+      "emotion": "Neutral 50",
+      "response_text": "God dammit...",
+      "index": "70"
+    },
+    {
+      "topic": "FireExplosive",
+      "topic_text": "FireExplosive",
+      "emotion": "Neutral 50",
+      "response_text": "Catch!",
+      "index": "72"
+    },
+    {
+      "topic": "Flee",
+      "topic_text": "Flee",
+      "emotion": "Neutral 50",
+      "response_text": "Fuck this!",
+      "index": "74"
+    },
+    {
+      "topic": "GuardTrespass",
+      "topic_text": "GuardTrespass",
+      "emotion": "Neutral 50",
+      "response_text": "Get the fuck outta here.",
+      "index": "77"
+    },
+    {
+      "topic": "Hit",
+      "topic_text": "Hit",
+      "emotion": "Neutral 50",
+      "response_text": "Oof!",
+      "index": "80"
+    },
+    {
+      "topic": "Murder",
+      "topic_text": "Murder",
+      "emotion": "Neutral 50",
+      "response_text": "Murderer!",
+      "index": "86"
+    },
+    {
+      "topic": "MurderNoCrime",
+      "topic_text": "MurderNoCrime",
+      "emotion": "Neutral 50",
+      "response_text": "Cha-ching!",
+      "index": "89"
+    },
+    {
+      "topic": "PowerAttack",
+      "topic_text": "PowerAttack",
+      "emotion": "Neutral 50",
+      "response_text": "Ahhh!",
+      "index": "92"
+    },
+    {
+      "topic": "Steal",
+      "topic_text": "Steal",
+      "emotion": "Neutral 50",
+      "response_text": "That ain't fuckin' yours!",
+      "index": "96"
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "name": "Torcher",
+  "url": "/wiki/Torcher",
+  "dialogue_name": "",
+  "dialogue_url": null,
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000CA6EF",
+  "ref_id": "000CA761",
+  "editor_id": "wastelandTorcher",
+  "location": "MDPL mass relay station",
+  "location_url": "/wiki/MDPL_mass_relay_station",
+  "descriptions": [
+    "Torcher is a named raider who resides in the MDPL mass relay station in 2277.",
+    "Once under the Brotherhood of Steel's protection, the MDPL mass relay station is now home to a small raider scavenger team under Torcher's leadership.",
+    "They carry a flamer and wear a unique raider arclight helmet called \"Torcher's mask\" and a set of raider badlands armor. They have nothing else in their inventory unless the Lone Wanderer has the Lawbringer perk, then Torcher will also carry a finger.",
+    "Torcher is immediately and always hostile towards intruders. As they are on the list of enslavable characters, they can be enslaved and/or turned friendly through the use of the Mesmetron.",
+    "* 15% chance of spawning"
+  ],
+  "race": "Human",
+  "affiliation": "Raiders",
+  "role": "Raider boss",
+  "detailed_location": "MDPL mass relay station",
+  "special": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 3,
+    "Intelligence": 3,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "level": "4→9",
+  "tag_skills": [
+    {
+      "Big Guns:": "46→67(51→72)"
+    },
+    {
+      "Melee Weap.:": "45→66"
+    },
+    {
+      "Small Guns:": "45→66"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "55→85"
+    },
+    {
+      "Critical Chance:": "5%"
+    },
+    {
+      "Unarmed Dam.:": "1.15"
+    },
+    {
+      "Poison Resist.:": "15%"
+    },
+    {
+      "Rad. Resist.:": "6%"
+    },
+    {
+      "Damage Res.:": "18%"
+    }
+  ],
+  "karma": "Evil",
+  "topics": [],
+  "conversation": [],
+  "combat": []
+}

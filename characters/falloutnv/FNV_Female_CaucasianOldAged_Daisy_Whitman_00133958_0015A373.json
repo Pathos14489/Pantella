@@ -1,0 +1,150 @@
+{
+  "name": "Daisy Whitman",
+  "url": "/wiki/Daisy_Whitman",
+  "dialogue_name": "VRemDaisyWhitman.txt",
+  "dialogue_url": "/wiki/VRemDaisyWhitman.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "00133958",
+  "ref_id": "0015A373",
+  "editor_id": "VRemDaisyWhitman",
+  "location": "Dino Dee-lite Motel, on a balcony",
+  "location_url": "/wiki/Dino_Dee-lite_Motel",
+  "descriptions": [
+    "Daisy Whitman is a former Enclave Vertibird pilot living in Novac in 2281.",
+    "An Enclave veteran and citizen, back when the oil rig and Navarro were still flying familiar colors, Daisy was a pilot assigned to a squad under the command of Captain Judah Kreger. Piloting the great flying machines left an indelible mark on her personality, becoming her truest passion. Being in the Enclave mattered little, what was important was being able to taste freedom while airborne. She loved it so much that she was willing to risk her standing by taking the scenic route back to Navarro each time she flew on a mission.",
+    "Flying over 71 missions, she suffered only a single Vertibird loss, walking away from a crash in Klamath that claimed the lives of her two fellow crew members.",
+    "Her career ended when the Chosen One destroyed the oil rig in 2242 and the sacking of Navarro by the New California Republic. Judah Kreger, Orion Moreno, Cannibal Johnson, and a young Arcade Gannon with his mother left Navarro, at first heading south into the NCR. There they tried to integrate into Republic's society but were forced to flee east as the NCR cracked down on Enclave members living in their lands.",
+    "Daisy kept in contact with Arcade, becoming like a mother to him after both ended up settling in the Mojave Wasteland. She found a measure of happiness as a scavenger and by 2281 is living in Novac, helping prospectors take apart engines and isolate parts worth reselling.",
+    "Daisy Whitman and the rest of the Enclave remnants were written by Jeff Husges, who was the designer on the quest For Auld Lang Syne, based on concepts by Joshua Sawyer. Sawyer gave the characters their names.",
+    "Daisy is able to detect the player character from anywhere in her apartment, even when she should not be able to, such as while sleeping, facing the other direction or in a different room. However, it may still be possible to steal some items by crouching and almost simultaneously stealing the item."
+  ],
+  "race": "Human",
+  "gender": "Female",
+  "affiliation": "Enclave Department of the Army(formerly)NovacEnclave remnants",
+  "role": "VertibirdpilotProspector",
+  "detailed_location": "Daisy Whitman's room,NovacRemnants bunker(optional)Hoover Dam(optional)",
+  "voice_actor": "Marianne Muellerleile",
+  "special": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 4,
+    "Intelligence": 3,
+    "Agility": 6,
+    "Luck": 4
+  },
+  "mod_special_values": {
+    "Strength": 6,
+    "Perception": 6,
+    "Endurance": 5,
+    "Charisma": 4,
+    "Intelligence": 3,
+    "Agility": 6,
+    "Luck": 4
+  },
+  "level": "30",
+  "tag_skills": [
+    {
+      "Explosives:": "100(102)"
+    },
+    {
+      "Guns:": "100"
+    },
+    {
+      "Melee Weap.:": "100"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Neutral",
+  "voice_type": "FemaleOld01",
+  "geck_race": "CaucasianOldAged",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "{at Bunker - no plan}I'm ready to fly once we've got a plan. Talk to Judah.",
+      "index": "1"
+    },
+    {
+      "topic": "VDialogueRemnantsVRemDaisyWhitmanTopic000",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "{pilot lingo - means watch your back}Watch your six out there.",
+      "index": "10"
+    },
+    {
+      "topic": "VDialogueRemnantsVRemDaisyWhitmanTopic001",
+      "topic_text": "You were a pilot?",
+      "emotion": "Neutral 50",
+      "response_text": "{clarifying}Vertibird pilot. Seventy-one missions and only lost one chopper. Rotor malfunction over Klamath. Hard landing, but I walked away.",
+      "index": "11"
+    },
+    {
+      "topic": "VDialogueRemnantsVRemDaisyWhitmanTopic002",
+      "topic_text": "What do you do in Novac?",
+      "emotion": "Neutral 50",
+      "response_text": "I help folks strip down the more complicated bits of salvage they bring in - engines, mostly.",
+      "index": "12"
+    },
+    {
+      "topic": "VDialogueRemnantsVRemDaisyWhitmanTopic003",
+      "topic_text": "Did you fly for the NCR?",
+      "emotion": "Sad 10",
+      "response_text": "\"For?\" No, not exactly. It was a long time ago. Things are a lot different these days, and those days are way behind me.",
+      "index": "14"
+    },
+    {
+      "topic": "VDialogueRemnantsVRemDaisyWhitmanTopic004",
+      "topic_text": "Arcade asked me to find you. I'm reuniting the Remnants, and they'll need your piloting skills.",
+      "emotion": "Neutral 50",
+      "response_text": "Told you everything about us, did he? Well, it's been a while since I've had my hands on the controls of a vertibird.",
+      "index": "15"
+    },
+    {
+      "topic": "VDialogueRemnantsVRemDaisyWhitmanTopic005",
+      "topic_text": "I'm sorry I had to kill him - he didn't give me much choice.",
+      "emotion": "Neutral 50",
+      "response_text": "Well, anyway, Judah's given Orion's armor to you now. It'll take a few hours for me to show you how to use it properly, so let's get started.",
+      "index": "18"
+    },
+    {
+      "topic": "VDialogueRemnantsVRemDaisyWhitmanTopic006",
+      "topic_text": "Doesn't matter - he paid for his mistake.",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah, he did.",
+      "index": "19"
+    },
+    {
+      "topic": "VDialogueRemnantsVRemDaisyWhitmanTopic007",
+      "topic_text": "Whatever.",
+      "emotion": "Neutral 50",
+      "response_text": "Right. Moving on, then.",
+      "index": "20"
+    },
+    {
+      "topic": "VDialogueRemnantsVRemDaisyWhitmanTopic008",
+      "topic_text": "How did you like flying vertibirds for the Enclave?",
+      "emotion": "Happy 10",
+      "response_text": "{nostalgia}I never was happier than when I was in the cockpit. I was able to go just about anywhere and everywhere, limited only by the fuel I could carry.",
+      "index": "21"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "{pilot lingo - means watch your back}Watch your six out there.",
+      "index": "24"
+    }
+  ],
+  "combat": []
+}

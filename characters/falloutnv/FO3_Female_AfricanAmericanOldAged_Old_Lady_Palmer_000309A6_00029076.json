@@ -1,0 +1,122 @@
+{
+  "name": "Old Lady Palmer",
+  "url": "/wiki/Lucy_Palmer",
+  "dialogue_name": "OldLadyPalmer.txt",
+  "dialogue_url": "/wiki/OldLadyPalmer.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000309A6",
+  "ref_id": "00029076",
+  "editor_id": "OldLadyPalmer",
+  "location": "",
+  "location_url": null,
+  "descriptions": [
+    "Lucy \"Old Lady\" Palmer is a resident of Vault 101 in 2277.",
+    "Jonas' grandmother lives alone in her apartment where nothing has changed for decades. She is kind and proud of her grandson, and she bakes the most delicious sticky sweetrolls.",
+    "During the escape from Vault 101, one can find a file on the overseer's computer which states that Anne Palmer, her daughter, was the team leader of a scouting party that left the vault to explore the outside world in February 2241.",
+    "Palmer is old enough to have retired from work duty in the vault, and therefore no longer has a Pip-Boy.",
+    "* Only during Growing Up Fast"
+  ],
+  "race": "Human",
+  "gender": "Female",
+  "affiliation": "Vault 101",
+  "role": "Resident",
+  "detailed_location": "Vault 101",
+  "voice_actor": "Diana Sowle",
+  "special": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 5,
+    "Intelligence": 4,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "level": "1",
+  "tag_skills": [
+    {
+      "Barter:": "30"
+    },
+    {
+      "Medicine:": "28"
+    },
+    {
+      "Melee Weap.:": "32(34)"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "25"
+    }
+  ],
+  "karma": "Good",
+  "voice_type": "FemaleOld01DC",
+  "geck_race": "AfricanAmericanOldAged",
+  "topics": [
+    {
+      "topic": "CG02OldLadyPalmerA1",
+      "topic_text": "Yes, ma'am.",
+      "emotion": "Happy 50",
+      "response_text": "Such a nice polite young man you are! Don't ever lose your gift of speaking your mind so directly. We could use more of that down here.Play soundFO3 OLPalmer NiceYoungMan.ogghttps://fallout.fandom.com/wiki/File:FO3_OLPalmer_NiceYoungMan.oggnoicon",
+      "index": "1"
+    },
+    {
+      "topic": "CG02OldLadyPalmerA2",
+      "topic_text": "Oh, you didn't have to bring me a present, Mrs. Palmer.",
+      "emotion": "Happy 50",
+      "response_text": "Fiddlesticks! What 10-year-old doesn't like presents?Play soundFo3 LucyPalmer Fiddlesticks.ogghttps://fallout.fandom.com/wiki/File:Fo3_LucyPalmer_Fiddlesticks.oggnoicon",
+      "index": "5"
+    },
+    {
+      "topic": "CG02OldLadyPalmerA3",
+      "topic_text": "I hope you brought me something better than last year.",
+      "emotion": "Surprise 75",
+      "response_text": "Well now! Young people were more polite back in my day. Respected their elders. Of course, we had a real Overseer back then. Worthy of respect.Play soundFO3 OLPalmer WellNow.ogghttps://fallout.fandom.com/wiki/File:FO3_OLPalmer_WellNow.oggnoicon",
+      "index": "9"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Happy 50",
+      "response_text": "Are you having a nice party? Ten years old, my my my. Seems like only yesterday that your daddy came...Play soundFO3 OLPalmer HavingANice.ogghttps://fallout.fandom.com/wiki/File:FO3_OLPalmer_HavingANice.oggnoicon",
+      "index": "13"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "CG02IntroSurprise",
+      "topic_text": "CG02IntroSurprise",
+      "emotion": "Neutral 50",
+      "response_text": "Surprise!Play soundFO3 OLPalmer Surprise.ogghttps://fallout.fandom.com/wiki/File:FO3_OLPalmer_Surprise.oggnoicon",
+      "index": "20"
+    },
+    {
+      "topic": "CG02IntroYell",
+      "topic_text": "CG02IntroYell",
+      "emotion": "Neutral 50",
+      "response_text": "Happy birthday!Play soundFO3 OLPalmer HappyBirthday.ogghttps://fallout.fandom.com/wiki/File:FO3_OLPalmer_HappyBirthday.oggnoicon",
+      "index": "21"
+    },
+    {
+      "topic": "CG02OldLadyPalmerSpeech",
+      "topic_text": "CG02OldLadyPalmerSpeech",
+      "emotion": "Surprise 25",
+      "response_text": "Can you believe it? He is growing up so fast.Play soundFO3 OLPalmer HeIsGrowing.ogghttps://fallout.fandom.com/wiki/File:FO3_OLPalmer_HeIsGrowing.oggnoicon",
+      "index": "22"
+    },
+    {
+      "topic": "CG02PartyTalkAmataGreeting",
+      "topic_text": "CG02PartyTalkAmataGreeting",
+      "emotion": "Happy 50",
+      "response_text": "Oh, really? They're lovely! You did such a splendid job.Play soundFO3 OLPalmer TheyreLovely.ogghttps://fallout.fandom.com/wiki/File:FO3_OLPalmer_TheyreLovely.oggnoicon",
+      "index": "24"
+    }
+  ],
+  "combat": []
+}

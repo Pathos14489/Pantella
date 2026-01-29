@@ -1,0 +1,1024 @@
+{
+  "name": "Three Dog",
+  "url": "/wiki/Three_Dog",
+  "dialogue_name": "ThreeDog.txt",
+  "dialogue_url": "/wiki/ThreeDog.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "0002248B",
+  "ref_id": "00023943",
+  "editor_id": "ThreeDog",
+  "location": "GNR building plaza",
+  "location_url": "/wiki/GNR_building_plaza_(Fallout_3)",
+  "descriptions": [
+    "Three Dog is the radio host, DJ, and news anchor of the Galaxy News Radio station in the Capital Wasteland in 2277, playing music that would have been heard on the radio in the years leading up to the Great War, as well as the immediate post-War era.",
+    "Born to parents who made their way in the world as members of a traveling theater group, Three Dog grew up listening to rock music, resenting the government that he never knew (but surely caused the Great War) and fully believing in the rights of free speech and communal law. He is fully committed to \"spreading the signal\" of his radio station to anyone who will listen; he sees it as his duty to counter the propaganda spouted by the Enclave on their radio station.",
+    "At some point, before he discovered D.C.'s primary news radio, he was experimenting with Jet and stumbled across Oasis during his travels in the Capital Wasteland. He established GNR in 2272, together with his technician and assistant Margaret. Since he began, he has been broadcasting to the Wasteland with public service announcements and music. At times he makes jests at Enclave Radio, going as far as mocking President John Henry Eden's voice.",
+    "Three Dog believes in what he calls \"fighting the Good Fight,\" which boils down to any action that opposes and antagonizes the wasteland's various oppressors and thugs, be it raider gangs, bands of super mutants, slaving parties, Talon Company death squads or the Enclave's soldiers. To this end, he actively cooperates with the Brotherhood of Steel, letting them use his fortified radio station as an outpost. However, he avoids direct involvement in the war effort, and instead leaves the defense of the radio station to his Brotherhood entourage. Ironically, one of the radio DJ's friends had entrusted him with a key to a military weapons cache.",
+    "By 2287, Three Dog had vanished under unknown circumstances but his legacy lived on. After his disappearance, Phil Goodman, also known as \"The Ghoul of Cool,\" took over his duties as a DJ and the main advocate of the \"Good Fight\". Goodman recruited a company of like-minded mercenaries to carry on fighting in Three Dog's name.",
+    "Three Dog has been mentioned by Travis Miles, DJ for Diamond City Radio. After the Sole Survivor defeats the Institute with the help of either the Minutemen, the Brotherhood of Steel or the Railroad, Travis will say that an old friend used to tell him \"you have to fight the Good Fight.\"",
+    "He stays in the GNR building throughout the entire game.",
+    "Three Dog appears in Fallout 3, in Fallout Shelter, in Fallout: Wasteland Warfare, in Fallout Shelter Online, and is mentioned by Travis Miles and Robert MacCready in Fallout 4. He is also mentioned in the Creation Club content \"Capital Wasteland Mercenaries.\""
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Galaxy News Radio",
+  "role": "Galaxy News Radio DJ/Host",
+  "detailed_location": "GNR building plaza",
+  "voice_actor": "Erik Todd Dellums",
+  "special": {
+    "Strength": 4,
+    "Perception": 4,
+    "Endurance": 4,
+    "Charisma": 7,
+    "Intelligence": 6,
+    "Agility": 4,
+    "Luck": 6
+  },
+  "mod_special_values": {
+    "Strength": 4,
+    "Perception": 4,
+    "Endurance": 4,
+    "Charisma": 8,
+    "Intelligence": 6,
+    "Agility": 4,
+    "Luck": 7
+  },
+  "level": "1",
+  "tag_skills": [
+    {
+      "Barter:": "34(37)"
+    },
+    {
+      "Lockpick:": "28(29)"
+    },
+    {
+      "Speech:": "34(37)"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "25"
+    },
+    {
+      "Critical Chance:": "6%"
+    },
+    {
+      "Unarmed Dam.:": "1.15"
+    },
+    {
+      "Poison Resist.:": "15%"
+    },
+    {
+      "Rad. Resist.:": "6%"
+    },
+    {
+      "Carry Weight:": "190"
+    }
+  ],
+  "karma": "Good",
+  "geck_race": "AfricanAmerican",
+  "topics": [
+    {
+      "topic": "GNRPostQuestStatus",
+      "topic_text": "How are things now that the power's back?",
+      "emotion": "Neutral 50",
+      "response_text": "I can't even tell you the love that I'm getting from the Wasteland.",
+      "index": "1"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Happy 50",
+      "response_text": "What's up?",
+      "index": "4"
+    },
+    {
+      "topic": "MQ01ThreeDogAngerTrack01",
+      "topic_text": "Give me a break. Stop mouthing off and tell me what I need to know.",
+      "emotion": "Disgust 50",
+      "response_text": "If I was your momma, I'd tan your hide for that kind of talk.",
+      "index": "17"
+    },
+    {
+      "topic": "MQ01ThreeDogAngerTrack02",
+      "topic_text": "All right, I'm sorry.",
+      "emotion": "Happy 80",
+      "response_text": "That's okay. This world has a way of getting under your skin and wiping the smile from your face. Makes you bitter. But you gotta fight that!",
+      "index": "19"
+    },
+    {
+      "topic": "MQ01ThreeDogCT01",
+      "topic_text": "You know my father? Is he here? Please, I've been looking for him!",
+      "emotion": "Surprise 60",
+      "response_text": "Hey, hey. One thing at a time. Nah, your old man ain't here. Not anymore.",
+      "index": "20"
+    },
+    {
+      "topic": "MQ01ThreeDogCT02a",
+      "topic_text": "What's with the flashy introduction?",
+      "emotion": "Happy 60",
+      "response_text": "Hey, when you're in the Good Fight, you gotta give it all you got and never ever hold back.",
+      "index": "23"
+    },
+    {
+      "topic": "MQ01ThreeDogCT02b",
+      "topic_text": "You have about two seconds to tell me what I want to know...",
+      "emotion": "Surprise 80",
+      "response_text": "Whoa, whoa, whoa! Someone woke up on the wrong side of the bed this morning.",
+      "index": "25"
+    },
+    {
+      "topic": "MQ01ThreeDogCT02c",
+      "topic_text": "Holy shit! You're that guy from the radio!",
+      "emotion": "Happy 90",
+      "response_text": "Yup! Guilty as charged! He he.",
+      "index": "28"
+    },
+    {
+      "topic": "MQ01ThreeDogCT03",
+      "topic_text": "Wait, why do you trust me so easily? I've never met you before.",
+      "emotion": "Neutral 50",
+      "response_text": "The fact that the Brotherhood let you get up here tells me you're all right with them. That, and your Dad seemed a decent enough guy.",
+      "index": "31"
+    },
+    {
+      "topic": "MQ01ThreeDogCT03a",
+      "topic_text": "How did you know what I needed?",
+      "emotion": "Surprise 70",
+      "response_text": "Oh come on. This is Three Dog you're talking to. I got my ear to the ground and I hear the wagons coming.",
+      "index": "34"
+    },
+    {
+      "topic": "MQ01ThreeDogCT04",
+      "topic_text": "You don't seem like you have much to offer if you spend all your time up here.",
+      "emotion": "Happy 50",
+      "response_text": "Hey, I may have the biggest mouth in the Capital Wasteland, but I've also got the biggest ears.",
+      "index": "39"
+    },
+    {
+      "topic": "MQ01ThreeDogDad",
+      "topic_text": "If you know anything that can help me, I'd appreciate it.",
+      "emotion": "Happy 70",
+      "response_text": "I hear things all the time. Most things aren't useful, but once and a while something will sneak up behind your girl and lift her dress.",
+      "index": "42"
+    },
+    {
+      "topic": "MQ01ThreeDogDad01",
+      "topic_text": "What could I ever do for you? You seem to have everything you need here.",
+      "emotion": "Neutral 50",
+      "response_text": "I have the name and the talent, but what I don't have are people to run out and do the stuff I need.",
+      "index": "48"
+    },
+    {
+      "topic": "MQ01ThreeDogDad02",
+      "topic_text": "Just wipe that stupid look off your face and answer my questions!",
+      "emotion": "Disgust 80",
+      "response_text": "Whoa, whoa. Smoke a peace pipe. Take a deep breath and count to ten. Whatever it is you need to do to calm down.",
+      "index": "51"
+    },
+    {
+      "topic": "MQ01ThreeDogDad03",
+      "topic_text": "Can't you just help me?",
+      "emotion": "Neutral 50",
+      "response_text": "There are different fronts to every fight. Galaxy News Radio is one of them.",
+      "index": "53"
+    },
+    {
+      "topic": "MQ01ThreeDogGoodFight01",
+      "topic_text": "The Good Fight? What's that all about?",
+      "emotion": "Happy 50",
+      "response_text": "Imagine a picture, okay? A picture of the Capital Wasteland. All that brick and rock. A whole lot of nothing, right?",
+      "index": "56"
+    },
+    {
+      "topic": "MQ01ThreeDogGoodFight02",
+      "topic_text": "Whatever you say. You have your problems, I have mine.",
+      "emotion": "Neutral 50",
+      "response_text": "Hey, not everyone's cut out for bigger and better things. Sometimes the smallest roles in the Good Fight are the most important.",
+      "index": "59"
+    },
+    {
+      "topic": "MQ01ThreeDogGoodFight03",
+      "topic_text": "You're going to have a \"Good Fight\" on your hands if you don't help me...",
+      "emotion": "Surprise 80",
+      "response_text": "Hey now. There's no need for that kind of talk. I'm here to help, not to hurt.",
+      "index": "62"
+    },
+    {
+      "topic": "MQ01ThreeDogGoodFight04",
+      "topic_text": "So, people fight back.",
+      "emotion": "Sad 60",
+      "response_text": "They can't, not against those kinds of enemies. They just run away and hide or they stay and die. It just ain't right.",
+      "index": "63"
+    },
+    {
+      "topic": "MQ01ThreeDogGoodFight04Intelligence",
+      "topic_text": "So you fight the Good Fight with your voice on Galaxy News Radio.",
+      "emotion": "Happy 90",
+      "response_text": "Well, holy shit! Aren't you a chip off the old block? You ARE as smart as your dad.",
+      "index": "66"
+    },
+    {
+      "topic": "MQ01ThreeDogGoodFight05",
+      "topic_text": "So, what's this about the Good Fight?",
+      "emotion": "Happy 70",
+      "response_text": "Patience, patience. Three Dog is like a minstrel. Give him some time and your ear and he'll soothe the soul.",
+      "index": "68"
+    },
+    {
+      "topic": "MQ01ThreeDogGoodFight06",
+      "topic_text": "Look, I have problems of my own. I don't have time for this nonsense.",
+      "emotion": "Disgust 60",
+      "response_text": "Hey, now... I may be many things, but one thing I'm not is a pushover.",
+      "index": "71"
+    },
+    {
+      "topic": "MQ01ThreeDogGoodFight07",
+      "topic_text": "I'm amazed you're still alive.",
+      "emotion": "Fear 70",
+      "response_text": "Oh I have plenty of enemies that would love nothing more than to put a bullet between my eyes.",
+      "index": "77"
+    },
+    {
+      "topic": "MQ01ThreeDogGoodFight08",
+      "topic_text": "Words don't kill people. Guns do.",
+      "emotion": "Neutral 50",
+      "response_text": "You're absolutely right, but words get more and more people to join the cause. Guns just create more casualties on your side.",
+      "index": "80"
+    },
+    {
+      "topic": "MQ01ThreeDogGoodFight09",
+      "topic_text": "I understand your fight, but I have other concerns of my own.",
+      "emotion": "Happy 50",
+      "response_text": "Sorry. I'm so used to talking to an audience that can't answer I just assume you want to hear my voice all the time.",
+      "index": "82"
+    },
+    {
+      "topic": "MQ01ThreeDogGoodFight10",
+      "topic_text": "The guys outside are the Brotherhood of Steel? Who are they?",
+      "emotion": "Happy 60",
+      "response_text": "From what I saw, they were the ones who saved your ass.{Coy}",
+      "index": "87"
+    },
+    {
+      "topic": "MQ01ThreeDogGoodFight12",
+      "topic_text": "I don't give a shit about your \"Good Fight.\" You going to help me or not?",
+      "emotion": "Disgust 90",
+      "response_text": "Ok, friend. I've been calm. I've been cool. Now I've had enough of your hostility.",
+      "index": "90"
+    },
+    {
+      "topic": "MQ01ThreeDogQuestHaveDish",
+      "topic_text": "Good news, Three Dog. I already have the dish.",
+      "emotion": "Surprise 80",
+      "response_text": "Whoa! You must be some kind of a psychic or something!",
+      "index": "96"
+    },
+    {
+      "topic": "MQ01ThreeDogQuestRefuse",
+      "topic_text": "No way, I'm not fetching some stupid dish for you.",
+      "emotion": "Disgust 70",
+      "response_text": "You aren't getting the dish for me, you're getting it for YOU.",
+      "index": "98"
+    },
+    {
+      "topic": "MQ01ThreeDogQuestWait",
+      "topic_text": "Let me think about this. I don't know if I'm ready.",
+      "emotion": "Surprise 50",
+      "response_text": "Wow, and here I thought you were in a rush. Whatever, man. Chat me up when you're ready.",
+      "index": "100"
+    },
+    {
+      "topic": "MQ01ThreeDogQuestYes",
+      "topic_text": "You've got yourself a deal.",
+      "emotion": "Happy 70",
+      "response_text": "He he! I sure know how to pick 'em!",
+      "index": "101"
+    },
+    {
+      "topic": "MQ01ThreeDogSkipTask01SC",
+      "topic_text": "Look, Three Dog. If I find my Dad, maybe he can help with the Good Fight.",
+      "emotion": "Neutral 50",
+      "response_text": "Well, your dad is some sort of scientist type. Some kind of egghead or something.",
+      "index": "104"
+    },
+    {
+      "topic": "MQ01ThreeDogSkipTask02",
+      "topic_text": "I know he will. He's always talked about doing what's right.",
+      "emotion": "Neutral 50",
+      "response_text": "When your dad passed through here, I spent a good long time talking to him about all kinds of stuff.",
+      "index": "106"
+    },
+    {
+      "topic": "MQ01ThreeDogSkipTask03",
+      "topic_text": "On second thought, maybe I should contribute. What do you have in mind?",
+      "emotion": "Happy 50",
+      "response_text": "Well good. I'm glad to see you realize there's more to life than just what you need; that there's a bigger picture.",
+      "index": "109"
+    },
+    {
+      "topic": "MQ01ThreeDogSkipTask04",
+      "topic_text": "Rivet City? Where's that?",
+      "emotion": "Surprise 90",
+      "response_text": "You've never heard of Rivet City? Wow. Just... wow.",
+      "index": "111"
+    },
+    {
+      "topic": "MQ01ThreeDogSkipTask05",
+      "topic_text": "Then Rivet City is where I'm headed. Goodbye, Three Dog.",
+      "emotion": "Neutral 50",
+      "response_text": "Goodbye. Remember to keep us tuned in while you're out there, and watch yourself.",
+      "index": "114"
+    },
+    {
+      "topic": "MQ01ThreeDogTaskCT01",
+      "topic_text": "I see where this is going.",
+      "emotion": "Neutral 50",
+      "response_text": "Yep. That shiny thing was our broadcast relay. Now it's swiss cheese. Without it, our broadcast range is quite limited.",
+      "index": "116"
+    },
+    {
+      "topic": "MQ01ThreeDogTaskCT02",
+      "topic_text": "I don't like the sound of this at all.",
+      "emotion": "Disgust 50",
+      "response_text": "Oh, it gets worse.",
+      "index": "118"
+    },
+    {
+      "topic": "MQ01ThreeDogTaskCT02a",
+      "topic_text": "Again with the damn stories. Just get to the point.",
+      "emotion": "Disgust 90",
+      "response_text": "Fine, fine...",
+      "index": "121"
+    },
+    {
+      "topic": "MQ01ThreeDogTaskCT03",
+      "topic_text": "This is starting to sound risky.",
+      "emotion": "Neutral 50",
+      "response_text": "It IS risky. I would never lie to you.",
+      "index": "125"
+    },
+    {
+      "topic": "MQ01ThreeDogTaskCT04",
+      "topic_text": "Super Mutants? Blowing things up? This sounds out of my league.",
+      "emotion": "Neutral 50",
+      "response_text": "Hey, I understand this isn't easy. I mean, most people would be crazy to even try what I'm about to propose.",
+      "index": "131"
+    },
+    {
+      "topic": "MQ01ThreeDogTaskCT04a",
+      "topic_text": "No way in hell am I getting near a Super Mutant!",
+      "emotion": "Disgust 70",
+      "response_text": "Look. You approached me, remember? And no one said this would be a cake walk.",
+      "index": "134"
+    },
+    {
+      "topic": "MQ01ThreeDogTaskCT05",
+      "topic_text": "All right. How can I help?",
+      "emotion": "Neutral 50",
+      "response_text": "One of the Brotherhood guys that passed through here mentioned seeing a dish in one of D.C.'s old museums.",
+      "index": "137"
+    },
+    {
+      "topic": "MQ01ThreeDogTaskCT06",
+      "topic_text": "I'm not sure that I can handle this, Three Dog.",
+      "emotion": "Sad 70",
+      "response_text": "Well, I guess I was wrong about you. Maybe you don't have that spark.",
+      "index": "140"
+    },
+    {
+      "topic": "MQ01ThreeDogTaskCT06a",
+      "topic_text": "This is bullshit! You're blackmailing me!",
+      "emotion": "Anger 60",
+      "response_text": "I want to make sure I'm perfectly clear on this  the Good Fight is bigger than you and your dad.",
+      "index": "143"
+    },
+    {
+      "topic": "MQ01ThreeDogTaskTell",
+      "topic_text": "I'm ready for anything.",
+      "emotion": "Fear 70",
+      "response_text": "Good, 'cause this isn't going to be easy.",
+      "index": "146"
+    },
+    {
+      "topic": "MQ01ThreeDogWait",
+      "topic_text": "This is all a bit much for me. Let me get back to you.",
+      "emotion": "Surprise 90",
+      "response_text": "Wow, I thought you were in a rush. Whatever, man. Chat me up when you're ready.",
+      "index": "152"
+    },
+    {
+      "topic": "MQ02TLAfterMuseum",
+      "topic_text": "Where's the Washington Monument?",
+      "emotion": "Disgust 80",
+      "response_text": "Well, it's only the tallest thing left in the city.",
+      "index": "153"
+    },
+    {
+      "topic": "MQ02TLDirectionstotheMuseum",
+      "topic_text": "What's the best way to get to the Museum?",
+      "emotion": "Neutral 50",
+      "response_text": "Head out the back door of GNR and take the Collapsed Car Tunnel to the other side of Dupont. Then take the metro tunnels until you're there.",
+      "index": "156"
+    },
+    {
+      "topic": "MQ02TLFoundDadAlternate",
+      "topic_text": "Guess what, Three Dog. I found out where my Dad went.",
+      "emotion": "Surprise 100",
+      "response_text": "You did?",
+      "index": "158"
+    },
+    {
+      "topic": "MQ02TLTellMeAboutDad",
+      "topic_text": "Well, yeah! Where's my Dad gone?",
+      "emotion": "Happy 90",
+      "response_text": "When your dad passed through here, he and I talked for a good long time. He's a real stand-up kind of guy.",
+      "index": "161"
+    },
+    {
+      "topic": "MQ02TLTellMeAboutDad01",
+      "topic_text": "No shit! Spill it already, Three Dog.",
+      "emotion": "Surprise 70",
+      "response_text": "Whoa now... take it easy. You asked, so I will provide.",
+      "index": "164"
+    },
+    {
+      "topic": "MQ02TLTellMeAboutDad02",
+      "topic_text": "Please! I miss him so much!",
+      "emotion": "Surprise 70",
+      "response_text": "Whoa now... dry your eyes. A promise is a promise and I will provide.",
+      "index": "168"
+    },
+    {
+      "topic": "MQ02TLTellMeAboutGNR",
+      "topic_text": "Galaxy News Radio, huh? What's it all about?",
+      "emotion": "Neutral 50",
+      "response_text": "Without this place, D.C. would be filled with that crap the Enclave keeps shoveling out on their \"radio station,\" and festering with Muties.",
+      "index": "172"
+    },
+    {
+      "topic": "MQ02TLTellMeAboutMuseumofTech",
+      "topic_text": "Do you know anything helpful about the Museum of Technology?",
+      "emotion": "Neutral 50",
+      "response_text": "Ha! Man's monument to his own demise. All the garbage they displayed in there is the reason half of the world was blown to shit.",
+      "index": "175"
+    },
+    {
+      "topic": "MQ02TLTellMeAboutRelay",
+      "topic_text": "Tell me more about this relay.",
+      "emotion": "Neutral 50",
+      "response_text": "Well, if you check out your radio, you can hear pretty good in this place. Get a few blocks away, still not too bad, maybe a little static.",
+      "index": "178"
+    },
+    {
+      "topic": "MQ02TLTellMeAboutYourself",
+      "topic_text": "So, what's your story?",
+      "emotion": "Disgust 70",
+      "response_text": "Three Dog's seen it all. The Capital Wasteland at its ugliest.",
+      "index": "181"
+    },
+    {
+      "topic": "MQ02TellMeCache",
+      "topic_text": "Yes, please.",
+      "emotion": "Neutral 50",
+      "response_text": "This holotape contains the location of the weapons cache.",
+      "index": "184"
+    },
+    {
+      "topic": "MQ02TellMeCache01",
+      "topic_text": "I did my part. Now it's your turn to contribute to the Good Fight.",
+      "emotion": "Neutral 50",
+      "response_text": "This holotape contains the location of the military weapons cache.",
+      "index": "187"
+    },
+    {
+      "topic": "MQ02TellMeCache02",
+      "topic_text": "Enough with the inane banter! Just tell me already.",
+      "emotion": "Disgust 70",
+      "response_text": "Fine. Some people just don't appreciate the spoken word.",
+      "index": "190"
+    },
+    {
+      "topic": "MQ02TellMeCacheAlternate01",
+      "topic_text": "I guess this is goodbye then. It's been a pleasure, Three Dog.",
+      "emotion": "Happy 80",
+      "response_text": "Now hang on a second there. Three Dog can't let you walk away from here empty-handed like this.",
+      "index": "193"
+    },
+    {
+      "topic": "MQ02TellMeCacheAlternate02",
+      "topic_text": "Well, you got what you wanted, and I already know about Dad, so...",
+      "emotion": "Happy 60",
+      "response_text": "Yeah, I heard you found out about your Dad, and yet you went ahead and kept your promise to me. That takes some real moxie, kid.",
+      "index": "197"
+    },
+    {
+      "topic": "MQ02TellMeCacheAlternate03",
+      "topic_text": "Look, I already know about my Dad, so this was all a waste of time.",
+      "emotion": "Anger 80",
+      "response_text": "Don't ever let anyone make you think that fighting the Good Fight is a waste of time!",
+      "index": "201"
+    },
+    {
+      "topic": "MQ02ThreeDogBailout",
+      "topic_text": "Let me ask you something else.",
+      "emotion": "Neutral 50",
+      "response_text": "Okay. Go for it.",
+      "index": "205"
+    },
+    {
+      "topic": "MQ02ThreeDogCT01",
+      "topic_text": "Thanks, Three Dog. I was just glad to help with the Good Fight.",
+      "emotion": "Happy 100",
+      "response_text": "Hey, you're the one who deserves all the thanks! You struck a major blow against tyranny!",
+      "index": "206"
+    },
+    {
+      "topic": "MQ02ThreeDogCT01a",
+      "topic_text": "I did what had to be done.",
+      "emotion": "Happy 90",
+      "response_text": "And well done indeed.",
+      "index": "214"
+    },
+    {
+      "topic": "MQ02ThreeDogCT02",
+      "topic_text": "Yeah, yeah. It was the thrill of a freakin' lifetime.",
+      "emotion": "Disgust 80",
+      "response_text": "Smoke a peace pipe, man. You know, you are so unlike your father...",
+      "index": "222"
+    },
+    {
+      "topic": "MQ02ThreeDogCT03",
+      "topic_text": "Rivet City? Where's that?",
+      "emotion": "Surprise 90",
+      "response_text": "You've never heard of Rivet City? Wow. Just... wow.",
+      "index": "227"
+    },
+    {
+      "topic": "MQ02ThreeDogCT04",
+      "topic_text": "Then Rivet City is where I'm headed. Goodbye, Three Dog.",
+      "emotion": "Happy 50",
+      "response_text": "Goodbye. Remember to keep us tuned in while you're out there, and watch yourself.",
+      "index": "230"
+    },
+    {
+      "topic": "MQ02ThreeDogCT05",
+      "topic_text": "What kind of bullshit is this? That's all you know?",
+      "emotion": "Disgust 50",
+      "response_text": "Look, I appreciate what you did for me. And I especially appreciate what you did for the people, by fixing up my station.",
+      "index": "231"
+    },
+    {
+      "topic": "MQ02ThreeDogHistoryCT01",
+      "topic_text": "Why bother operating Galaxy News Radio?",
+      "emotion": "Disgust 50",
+      "response_text": "Why candy-coat the news when the world is in danger?",
+      "index": "234"
+    },
+    {
+      "topic": "MQ02ThreeDogHistoryCT02",
+      "topic_text": "You're safe up here in your fortress. What do you know about fighting?",
+      "emotion": "Disgust 80",
+      "response_text": "You've got to understand! If I die, so does the voice of the people! I can't take that risk.",
+      "index": "241"
+    },
+    {
+      "topic": "MQ02ThreeDogHistoryCT03",
+      "topic_text": "I wish I could have met your parents. I bet they were... interesting.",
+      "emotion": "Surprise 90",
+      "response_text": "Parents? Ha! I was born from the sun and have sand in my veins.",
+      "index": "244"
+    },
+    {
+      "topic": "SpeechChallengeFailure",
+      "topic_text": "SpeechChallengeFailure",
+      "emotion": "Neutral 50",
+      "response_text": "I like what you're saying but this is bigger than just you and your dad.",
+      "index": "247"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "I have to go now.",
+      "emotion": "Neutral 50",
+      "response_text": "Anytime you need a place to crash, duck in here. Be glad to provide.",
+      "index": "249"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Happy 70",
+      "response_text": "Well... well. Look at what we have here.",
+      "index": "251"
+    }
+  ],
+  "combat": [
+    {
+      "topic": "RadioGNRMusicExtroSpecific",
+      "topic_text": "RadioGNRMusicExtroSpecific",
+      "emotion": "Neutral 50",
+      "response_text": "That was the Ink Spots, with \"I Don't Want to Set the World on Fire.\"",
+      "index": "268"
+    },
+    {
+      "topic": "RadioGNRMusicIntroGeneric",
+      "topic_text": "RadioGNRMusicIntroGeneric",
+      "emotion": "Neutral 50",
+      "response_text": "Now... some music.",
+      "index": "280"
+    },
+    {
+      "topic": "RadioGNRMusicIntroSpecific",
+      "topic_text": "RadioGNRMusicIntroSpecific",
+      "emotion": "Neutral 50",
+      "response_text": "It's Cole Porter and \"Anything Goes.\"",
+      "index": "282"
+    },
+    {
+      "topic": "RadioGNRNewsLink",
+      "topic_text": "RadioGNRNewsLink",
+      "emotion": "Neutral 50",
+      "response_text": "Here's the latest news. Unemployment is down, stocks are up, and the U.N. has just declared global peace forever! Now the real news. *Sigh*",
+      "index": "294"
+    },
+    {
+      "topic": "RadioGNRNewsPost",
+      "topic_text": "RadioGNRNewsPost",
+      "emotion": "Neutral 50",
+      "response_text": "Sigh. I think we've lost this one, folks. Good kid goes bad, it's the story of the Wasteland, right? It's a sad, sad day for us all.",
+      "index": "304"
+    },
+    {
+      "topic": "RadioGNRNewsStoryDad",
+      "topic_text": "RadioGNRNewsStoryDad",
+      "emotion": "Neutral 50",
+      "response_text": "Whoever lives in there sure as hell doesn't want what you're selling, and no, you can't knock down the door. It weighs like 13 tons.",
+      "index": "317"
+    },
+    {
+      "topic": "RadioGNRNewsStoryGeneric01",
+      "topic_text": "RadioGNRNewsStoryGeneric01",
+      "emotion": "Neutral 50",
+      "response_text": "So if your travels take you to Canterbury Commons, keep your head down and your assault rifle loaded for crazy.",
+      "index": "325"
+    },
+    {
+      "topic": "RadioGNRNewsStoryGeneric02",
+      "topic_text": "RadioGNRNewsStoryGeneric02",
+      "emotion": "Neutral 50",
+      "response_text": "That, my friends, is fighting the good fight.",
+      "index": "330"
+    },
+    {
+      "topic": "RadioGNRNewsStoryGeneric03",
+      "topic_text": "RadioGNRNewsStoryGeneric03",
+      "emotion": "Neutral 50",
+      "response_text": "So if you're out by Grayditch, you may want to pop in and see what's what.",
+      "index": "337"
+    },
+    {
+      "topic": "RadioGNRNewsStoryGeneric04",
+      "topic_text": "RadioGNRNewsStoryGeneric04",
+      "emotion": "Neutral 50",
+      "response_text": "Come on, Al, cut the Ghoulies a break. If they've got the caps and you've got the space, it's a win-win, right? Whadaya say?",
+      "index": "340"
+    },
+    {
+      "topic": "RadioGNRNewsStoryGeneric05",
+      "topic_text": "RadioGNRNewsStoryGeneric05",
+      "emotion": "Neutral 50",
+      "response_text": "The rest of you Brotherhood cats  can't you extend an olive branch or something? You'd think fighting the Super Mutants would be enough...",
+      "index": "343"
+    },
+    {
+      "topic": "RadioGNRNewsStoryGeneric06",
+      "topic_text": "RadioGNRNewsStoryGeneric06",
+      "emotion": "Neutral 50",
+      "response_text": "Today's weather  excessively violent, with a chance of dismemberment. Tune in later for our 5-day forecast.",
+      "index": "348"
+    },
+    {
+      "topic": "RadioGNRNewsStoryGeneric07",
+      "topic_text": "RadioGNRNewsStoryGeneric07",
+      "emotion": "Neutral 50",
+      "response_text": "So if you see a Knight or Paladin out there fighting your battles for you, give him a big thanks. Or even better  some ammo.",
+      "index": "349"
+    },
+    {
+      "topic": "RadioGNRNewsStoryGeneric08",
+      "topic_text": "RadioGNRNewsStoryGeneric08",
+      "emotion": "Neutral 50",
+      "response_text": "Word is, these guys take all the contracts the other mercs won't. In short  there's nothing they won't do. So be careful out there.",
+      "index": "353"
+    },
+    {
+      "topic": "RadioGNRNewsStoryGeneric09",
+      "topic_text": "RadioGNRNewsStoryGeneric09",
+      "emotion": "Neutral 50",
+      "response_text": "Keep that in mind the next time you feel like nosing around that neighborhood.",
+      "index": "356"
+    },
+    {
+      "topic": "RadioGNRNewsStoryGeneric10",
+      "topic_text": "RadioGNRNewsStoryGeneric10",
+      "emotion": "Neutral 50",
+      "response_text": "Look, it was years ago, and I MAY have been experimenting with Jet at the time, but I am telling you, it's out there...",
+      "index": "358"
+    },
+    {
+      "topic": "RadioGNRNewsStoryGenericDLC031A",
+      "topic_text": "RadioGNRNewsStoryGenericDLC031A",
+      "emotion": "Neutral 50",
+      "response_text": "So get your glasses ready, children. This round's on me.",
+      "index": "363"
+    },
+    {
+      "topic": "RadioGNRNewsStoryGenericDLC031B",
+      "topic_text": "RadioGNRNewsStoryGenericDLC031B",
+      "emotion": "Neutral 50",
+      "response_text": "Three Dog's advice? If you've got one of those Mister Dandy butler bots, have him make you some purified water, and count yourself lucky.",
+      "index": "369"
+    },
+    {
+      "topic": "RadioGNRNewsStoryGenericDLC032",
+      "topic_text": "RadioGNRNewsStoryGenericDLC032",
+      "emotion": "Neutral 50",
+      "response_text": "The Enclave's been responsible for enough death and destruction. We need to get back to normal. You know, like fighting Raiders and Super Mutants.",
+      "index": "376"
+    },
+    {
+      "topic": "RadioGNRNewsStoryGenericRELAY",
+      "topic_text": "RadioGNRNewsRELAY",
+      "emotion": "Neutral 50",
+      "response_text": "",
+      "index": "380"
+    },
+    {
+      "topic": "RadioGNRPSAInfos",
+      "topic_text": "RadioGNRPSAInfos",
+      "emotion": "Neutral 50",
+      "response_text": "Those Feral Ghouls that prefer the dark, dank underground? They ARE basically mindless zombies. So kill as many as you damn well please.",
+      "index": "393"
+    },
+    {
+      "topic": "RadioGNRPSAIntro",
+      "topic_text": "RadioGNRPSAIntro",
+      "emotion": "Neutral 50",
+      "response_text": "Time once again for an important GNR Public Service Announcement.",
+      "index": "414"
+    },
+    {
+      "topic": "RadioGNRPlayerExploitsCG04",
+      "topic_text": "RadioGNRPlayerExploitsCG04",
+      "emotion": "Neutral 50",
+      "response_text": "What the hell is going on down there? Revolution? Vacation? Somebody fart? Your guess is as good as mine, kiddies.",
+      "index": "418"
+    },
+    {
+      "topic": "RadioGNRPlayerExploitsDLC03BS1",
+      "topic_text": "RadioGNRPlayerExploitsDLC03BS1",
+      "emotion": "Neutral 50",
+      "response_text": "Look Lyons, I love you guys, you know I do, but your tin soldiers better get these Enclave assholes in check, once and for all, or we're all screwed.",
+      "index": "422"
+    },
+    {
+      "topic": "RadioGNRPlayerExploitsDLC03BS2",
+      "topic_text": "RadioGNRPlayerExploitsDLC03BS2",
+      "emotion": "Neutral 50",
+      "response_text": "Don't you worry children. Three Dog's got his ear to the ground and his mic on standby. As soon as I know more, you'll know more.",
+      "index": "431"
+    },
+    {
+      "topic": "RadioGNRPlayerExploitsDLC03BS3",
+      "topic_text": "RadioGNRPlayerExploitsDLC03BS3",
+      "emotion": "Neutral 50",
+      "response_text": "And if you see that kid from Vault 101, pass along your thanks, cause the Brotherhood did NOT act alone. Thank you 101!",
+      "index": "442"
+    },
+    {
+      "topic": "RadioGNRPlayerExploitsMQ01",
+      "topic_text": "RadioGNRPlayerExploitsMQ01",
+      "emotion": "Neutral 50",
+      "response_text": "And for all you other cats out there listening, if you see the kid from Vault 101 out there, give her a pat on the back and wish her luck.",
+      "index": "455"
+    },
+    {
+      "topic": "RadioGNRPlayerExploitsMQ02",
+      "topic_text": "RadioGNRPlayerExploitsMQ02",
+      "emotion": "Neutral 50",
+      "response_text": "Kid, you get your ass back to GNR, you hear me? We've got some stuff to talk about!",
+      "index": "467"
+    },
+    {
+      "topic": "RadioGNRPlayerExploitsMQ03",
+      "topic_text": "RadioGNRPlayerExploitsMQ03",
+      "emotion": "Neutral 50",
+      "response_text": "And... According to my super secrety sources, Rivet City council member and lead egghead Doctor Madison Li is personally involved.",
+      "index": "473"
+    },
+    {
+      "topic": "RadioGNRPlayerExploitsMQ04",
+      "topic_text": "RadioGNRPlayerExploitsMQ04",
+      "emotion": "Neutral 50",
+      "response_text": "Here's hoping they can hold onto each other this time around.",
+      "index": "476"
+    },
+    {
+      "topic": "RadioGNRPlayerExploitsMQ05",
+      "topic_text": "RadioGNRPlayerExploitsMQ05",
+      "emotion": "Neutral 50",
+      "response_text": "Well, boys and girls, what can I say. Looks like President Eden wasn't completely full of shit after all. Methinks we are screwed...",
+      "index": "485"
+    },
+    {
+      "topic": "RadioGNRPlayerExploitsMQ06",
+      "topic_text": "RadioGNRPlayerExploitsMQ06",
+      "emotion": "Neutral 50",
+      "response_text": "Good luck with that, my friend. Only thing been seen out in those parts is Yao Guai, Super Mutants, and some crazy mountain kids.",
+      "index": "490"
+    },
+    {
+      "topic": "RadioGNRPlayerExploitsMQ07",
+      "topic_text": "RadioGNRPlayerExploitsMQ07",
+      "emotion": "Neutral 50",
+      "response_text": "So what was Vault kid doing out there? You do the math.",
+      "index": "493"
+    },
+    {
+      "topic": "RadioGNRPlayerExploitsMQ08",
+      "topic_text": "RadioGNRPlayerExploitsMQ08",
+      "emotion": "Neutral 50",
+      "response_text": "Good luck, Wanderer. You'll need it.",
+      "index": "507"
+    },
+    {
+      "topic": "RadioGNRPlayerExploitsMQ09",
+      "topic_text": "RadioGNRPlayerExploitsMQ09",
+      "emotion": "Neutral 50",
+      "response_text": "Time for a showdown with the remaining Enclave forces at the Jefferson Memorial? You keep listening, children, and GNR will keep you posted!",
+      "index": "513"
+    },
+    {
+      "topic": "RadioGNRPlayerExploitsMS01",
+      "topic_text": "RadioGNRPlayerExploitsMS01",
+      "emotion": "Neutral 50",
+      "response_text": "Somethin' about Super Mutants takin' residents prisoner... All I know is the kid could have helped, and didn't. Nice going, asshole.",
+      "index": "537"
+    },
+    {
+      "topic": "RadioGNRPlayerExploitsMS02",
+      "topic_text": "RadioGNRPlayerExploitsMS02",
+      "emotion": "Neutral 50",
+      "response_text": "So let's recount - our old friend shows up, weird shit happens, but in the end she saves the day. Yeah, that sounds about right.",
+      "index": "541"
+    },
+    {
+      "topic": "RadioGNRPlayerExploitsMS03",
+      "topic_text": "RadioGNRPlayerExploitsMS03",
+      "emotion": "Neutral 50",
+      "response_text": "Following this thing's advice'll get you killed faster than you can say, \"Hug a deathclaw!\"",
+      "index": "548"
+    },
+    {
+      "topic": "RadioGNRPlayerExploitsMS04",
+      "topic_text": "RadioGNRPlayerExploitsMS04",
+      "emotion": "Neutral 50",
+      "response_text": "Shame, shame, shame on you...",
+      "index": "558"
+    },
+    {
+      "topic": "RadioGNRPlayerExploitsMS05",
+      "topic_text": "RadioGNRPlayerExploitsMS05",
+      "emotion": "Neutral 50",
+      "response_text": "Hey, wouldn't you know it, the lone Wanderer is done collecting bottles of soda. Christ, talk about your slow news days...",
+      "index": "575"
+    },
+    {
+      "topic": "RadioGNRPlayerExploitsMS06",
+      "topic_text": "RadioGNRPlayerExploitsMS06",
+      "emotion": "Neutral 50",
+      "response_text": "One small step backwards for man, one giant evolutionary rewind for mankind.",
+      "index": "579"
+    },
+    {
+      "topic": "RadioGNRPlayerExploitsMS08",
+      "topic_text": "RadioGNRPlayerExploitsMS08",
+      "emotion": "Neutral 50",
+      "response_text": "I'd ask the kid from 101, but I hear she's busy oogling some newly obtained piece of shiny Commonwealth technology. Quite a coinc of dink, that...",
+      "index": "593"
+    },
+    {
+      "topic": "RadioGNRPlayerExploitsMS09",
+      "topic_text": "RadioGNRPlayerExploitsMS09",
+      "emotion": "Neutral 50",
+      "response_text": "In the end, I guess it doesn't really matter. Arefu is quiet once more, thanks to the efforts of the lone wanderer... from Vault 101.",
+      "index": "602"
+    },
+    {
+      "topic": "RadioGNRPlayerExploitsMS10",
+      "topic_text": "RadioGNRPlayerExploitsMS10",
+      "emotion": "Neutral 50",
+      "response_text": "Only you, 101. Only you.",
+      "index": "609"
+    },
+    {
+      "topic": "RadioGNRPlayerExploitsMS11",
+      "topic_text": "RadioGNRPlayerExploitsMS11",
+      "emotion": "Neutral 50",
+      "response_text": "Hey, nice work 101. Next time you're in the neighborhood, pop into the studio. Ole Three Dog's toaster's been on the fritz...",
+      "index": "615"
+    },
+    {
+      "topic": "RadioGNRPlayerExploitsMS12",
+      "topic_text": "RadioGNRPlayerExploitsMS12",
+      "emotion": "Neutral 50",
+      "response_text": "The butcher-at-large? Yep, you guessed it  none other than the kid from Vault 101. Nice going, scumbag.",
+      "index": "626"
+    },
+    {
+      "topic": "RadioGNRPlayerExploitsMS14",
+      "topic_text": "RadioGNRPlayerExploitsMS14",
+      "emotion": "Neutral 50",
+      "response_text": "Maybe I'll just ask around Underworld, hmmm? Cause a little irradiated birdy told me you've been spending some serious time down in Ghoulville...",
+      "index": "634"
+    },
+    {
+      "topic": "RadioGNRPlayerExploitsMS15",
+      "topic_text": "RadioGNRPlayerExploitsMS15",
+      "emotion": "Neutral 50",
+      "response_text": "Huzzah! The time of British oppression is finally over! Now we can finally turn our attention to the Super Mutants, Raiders, and Radscorpions...",
+      "index": "638"
+    },
+    {
+      "topic": "RadioGNRPlayerExploitsMS16",
+      "topic_text": "RadioGNRPlayerExploitsMS16",
+      "emotion": "Neutral 50",
+      "response_text": "She was seen coming OUT of the vault, AGAIN, and headed God knows where. Don't let that revolving door hit you on the ass on the way out...",
+      "index": "642"
+    },
+    {
+      "topic": "RadioGNRPlayerExploitsMS17",
+      "topic_text": "RadioGNRPlayerExploitsMS17",
+      "emotion": "Neutral 50",
+      "response_text": "Ohhh... Bad form, 101. Bad form, indeed...",
+      "index": "646"
+    },
+    {
+      "topic": "RadioGNRPlayerExploitsMS18",
+      "topic_text": "RadioGNRPlayerExploitsMS18",
+      "emotion": "Neutral 50",
+      "response_text": "Oh, and Vault kid? I know you were seen in the vicinity. I hope to God you had nothing to do with this carnage.",
+      "index": "656"
+    },
+    {
+      "topic": "RadioGNRPlayerKarmaHope",
+      "topic_text": "RadioGNRPlayerKarmaHope",
+      "emotion": "Neutral 50",
+      "response_text": "For now, listen close, as I share yet another of our friend's adventures.",
+      "index": "661"
+    },
+    {
+      "topic": "RadioGNRPlayerKarmaParadigm",
+      "topic_text": "RadioGNRPlayerKarmaParadigm",
+      "emotion": "Neutral 50",
+      "response_text": "And now for you other faithful listeners, here's an update on our friend.",
+      "index": "667"
+    },
+    {
+      "topic": "RadioGNRPlayerKarmaScourge",
+      "topic_text": "RadioGNRPlayerKarmaScourge",
+      "emotion": "Neutral 50",
+      "response_text": "Here's the latest news on Vault 101's evil progeny...",
+      "index": "674"
+    },
+    {
+      "topic": "RadioGNRPlayerKarmaTitles",
+      "topic_text": "RadioGNRPlayerKarmaTitles",
+      "emotion": "Neutral 50",
+      "response_text": "Don't lose hope, children. Don't ever lose hope! The kid from Vault 101, the Wasteland's one true Messiah, still walks among us! Just listen to this.",
+      "index": "679"
+    },
+    {
+      "topic": "RadioGoodbye",
+      "topic_text": "RadioGoodbye",
+      "emotion": "Neutral 50",
+      "response_text": "",
+      "index": "797"
+    },
+    {
+      "topic": "RadioHello",
+      "topic_text": "RadioHello",
+      "emotion": "Neutral 50",
+      "response_text": "People of the Capital Wasteland, you can HEAR MEEEE!!!! Yeeeaa haaaa!!! You can't stop the signal, baby!",
+      "index": "798"
+    }
+  ]
+}

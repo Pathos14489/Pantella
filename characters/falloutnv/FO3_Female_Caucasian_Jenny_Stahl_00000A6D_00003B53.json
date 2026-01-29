@@ -1,0 +1,145 @@
+{
+  "name": "Jenny Stahl",
+  "url": "/wiki/Jenny_Stahl",
+  "dialogue_name": "JennyStahl.txt",
+  "dialogue_url": "/wiki/JennyStahl.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": true,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "00000A6D",
+  "ref_id": "00003B53",
+  "editor_id": "JennyStahl",
+  "location": "The Brass Lantern",
+  "location_url": "/wiki/The_Brass_Lantern",
+  "descriptions": [
+    "Jenny Stahl is a citizen of Megaton, and one of the proprietors of the Brass Lantern in 2277.",
+    "Jenny, a 24-year-old member of the Stahl family, is often a mediator between her brothers, Leo and Andy. Growing up somewhere out east,",
+    "She stands outside the Brass Lantern during most of the day, serving local Megaton settlers. At night, she relaxes; advising prospective customers to see her co-worker and brother, Leo."
+  ],
+  "race": "Human",
+  "gender": "Female",
+  "affiliation": "Megaton",
+  "role": "Bartender",
+  "detailed_location": "Megaton",
+  "voice_actor": "Shari Elliker",
+  "special": {
+    "Strength": 4,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 7,
+    "Intelligence": 5,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "level": "4",
+  "tag_skills": [
+    {
+      "Barter:": "49"
+    },
+    {
+      "Small Guns:": "47"
+    },
+    {
+      "Speech:": "49"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Good",
+  "voice_type": "FemaleAdult01DefaultDC",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Happy 50",
+      "response_text": "Now I KNOW I've never seen you in Megaton before. Let me guess  just passing through, right?",
+      "index": "1"
+    },
+    {
+      "topic": "MegJennyFoodChoice",
+      "topic_text": "What's on the menu?",
+      "emotion": "Neutral 50",
+      "response_text": "Sorry, hon. The noodle stand is closed. If you want something, ask Leo in the restaurant.",
+      "index": "12"
+    },
+    {
+      "topic": "MegTownEnd",
+      "topic_text": "That's all I needed to know.",
+      "emotion": "Neutral 50",
+      "response_text": "Let me know if you need anything else!",
+      "index": "16"
+    },
+    {
+      "topic": "MegTownFatherChoice",
+      "topic_text": "I'm looking for my father. Middle-aged guy. Maybe you've seen him?",
+      "emotion": "Neutral 50",
+      "response_text": "Oh man, you're looking for your dad? That is so sweet! Did he run out on you when you were a kid or something?",
+      "index": "17"
+    },
+    {
+      "topic": "MegTownMegaton",
+      "topic_text": "What can you tell me about Megaton?",
+      "emotion": "Neutral 50",
+      "response_text": "Some people hate this place, but I guess it's their right, what the hell do they want out of life? Food, shelter and safety. Works for me.{hyper/drugged up but sarcastic}",
+      "index": "20"
+    },
+    {
+      "topic": "MegTownRumors",
+      "topic_text": "What's the word around town?",
+      "emotion": "Neutral 50",
+      "response_text": "I ain't heard much. Truth be told, I don't really ever leave the Lantern. Too much work, too few hours in the day, y'know?",
+      "index": "21"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "I have to go now.",
+      "emotion": "Neutral 50",
+      "response_text": "Good luck finding your dad.",
+      "index": "22"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Neutral 50",
+      "response_text": "<coughs> Is there... <coughs> ...something you need?",
+      "index": "26"
+    },
+    {
+      "topic": "MegatonTalk1",
+      "topic_text": "MegatonTalk",
+      "emotion": "Neutral 50",
+      "response_text": "Food, Jericho. It's all I had for you yesterday. It's all I have for you today.  It's all I'll ever have for you.",
+      "index": "30"
+    },
+    {
+      "topic": "MegatonTalk3",
+      "topic_text": "MegatonTalk3",
+      "emotion": "Neutral 50",
+      "response_text": "I'm not going to discuss it, Jericho. You know good and goddamn well why I'm like this and don't you dare play dumb with me.",
+      "index": "32"
+    },
+    {
+      "topic": "MegatonTalk5",
+      "topic_text": "MegatonTalk5",
+      "emotion": "Neutral 50",
+      "response_text": "People don't change, Jericho. Now order something and leave me alone.",
+      "index": "34"
+    }
+  ],
+  "combat": [
+    {
+      "topic": "Attack",
+      "topic_text": "Attack",
+      "emotion": "Neutral 50",
+      "response_text": "Leo! Andy! Help me!",
+      "index": "36"
+    }
+  ]
+}

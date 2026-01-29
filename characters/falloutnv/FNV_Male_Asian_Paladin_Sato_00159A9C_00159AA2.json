@@ -1,0 +1,102 @@
+{
+  "name": "Paladin Sato",
+  "url": "/wiki/Sato_(Fallout:_New_Vegas)",
+  "dialogue_name": "SafehouseBoSPaladin.txt",
+  "dialogue_url": "/wiki/SafehouseBoSPaladin.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": true,
+  "can_be_companion": false,
+  "base_id": "00159A9C",
+  "ref_id": "00159AA2",
+  "editor_id": "SafehouseBoSPaladin",
+  "location": "Brotherhood of Steel safehouse",
+  "location_url": "/wiki/Brotherhood_of_Steel_safehouse",
+  "descriptions": [
+    "Paladin Sato is a Brotherhood of Steel soldier living in the Mojave Wasteland in 2281.",
+    "Paladin Sato will visit the Brotherhood of Steel safehouse every 2–3 in-game days and will be able to repair the player character's weapons and armor (up to 100%) for a price."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Brotherhood of Steel",
+  "role": "Repairman",
+  "detailed_location": "Brotherhood of Steel safehouse",
+  "voice_actor": "Ron Yuan",
+  "special": {
+    "Strength": 5,
+    "Perception": 7,
+    "Endurance": 6,
+    "Charisma": 4,
+    "Intelligence": 3,
+    "Agility": 6,
+    "Luck": 4
+  },
+  "mod_special_values": {
+    "Strength": 6,
+    "Perception": 7,
+    "Endurance": 6,
+    "Charisma": 4,
+    "Intelligence": 3,
+    "Agility": 6,
+    "Luck": 4
+  },
+  "level": "11",
+  "tag_skills": [
+    {
+      "Energy Weap.:": "69"
+    },
+    {
+      "Guns:": "67"
+    },
+    {
+      "Repair:": "100"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Good",
+  "voice_type": "MaleAdult08",
+  "geck_race": "Asian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Happy 20",
+      "response_text": "What can I do for you?",
+      "index": "1"
+    },
+    {
+      "topic": "vSafehouseSafehouseBoSPaladinTopic000",
+      "topic_text": "Why are you here?",
+      "emotion": "Happy 20",
+      "response_text": "I'm here to make sure the bunker stays in one piece.",
+      "index": "2"
+    },
+    {
+      "topic": "vSafehouseSafehouseBoSPaladinTopic001",
+      "topic_text": "Can you repair something for me?",
+      "emotion": "Happy 10",
+      "response_text": "Sure thing.",
+      "index": "5"
+    },
+    {
+      "topic": "vSafehouseSafehouseBoSPaladinTopic002",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Later.",
+      "index": "6"
+    },
+    {
+      "topic": "vSafehouseSafehouseBoSPaladinTopic003",
+      "topic_text": "Are you always here?",
+      "emotion": "Happy 10",
+      "response_text": "Not always. I have other places I need to be, but I stop by every few days or so.",
+      "index": "7"
+    }
+  ],
+  "conversation": [],
+  "combat": []
+}

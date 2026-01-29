@@ -1,0 +1,159 @@
+{
+  "name": "Branchtender Linden",
+  "url": "/wiki/Linden",
+  "dialogue_name": "OasisBranchtenderLinden.txt",
+  "dialogue_url": "/wiki/OasisBranchtenderLinden.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "0002A27A",
+  "ref_id": "0002A2BE",
+  "editor_id": "OasisBranchtenderLinden",
+  "location": "Oasis",
+  "location_url": "/wiki/Oasis",
+  "descriptions": [
+    "Branchtender Linden is a member of the Treeminders and one of Oasis' armed defenders in Fallout 3.",
+    "Prior to his arrival in Oasis, Linden was a member of the Brotherhood Outcasts, and, by extension, was once a member of the Brotherhood of Steel.",
+    "Upon meeting the Lone Wanderer, Linden is friendly and welcoming towards them, but will become angry and frustrated if they decide to insult the Treeminders.",
+    "Linden is loyal to the ideals of Leaf Mother Laurel, and fully believes in sharing Oasis's gifts with the rest of the Capital Wasteland.",
+    "Linden is a common name for trees of genus Tilia. All of the human residents in Oasis have horticultural names."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "TreemindersBrotherhood of Steel(formerly)Brotherhood Outcasts(formerly)",
+  "role": "Guard (Branchtender)",
+  "detailed_location": "Oasis",
+  "voice_actor": "Jeff Baker",
+  "special": {
+    "Strength": 5,
+    "Perception": 6,
+    "Endurance": 5,
+    "Charisma": 4,
+    "Intelligence": 4,
+    "Agility": 7,
+    "Luck": 4
+  },
+  "level": "2→10 (player level x1)",
+  "tag_skills": [
+    {
+      "Melee Weap.:": "33→71"
+    },
+    {
+      "Small Guns:": "37"
+    },
+    {
+      "Unarmed:": "33→71"
+    }
+  ],
+  "misc_skills": [],
+  "voice_type": "MaleAdult01DefaultDC",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Anger 70",
+      "response_text": "Was it too much to ask to expect some civility from you? Bah. Get out of my sight.",
+      "index": "1"
+    },
+    {
+      "topic": "MS10FinTLRewardTree Father Birch said you may have a gift for me?",
+      "topic_text": "Leaf Mother Laurel said you may have a gift for me?",
+      "emotion": "Happy 70",
+      "response_text": "I've never known someone to show as much caring as you did towards us. It seems to be rare to run into anyone like that anymore.",
+      "index": "6"
+    },
+    {
+      "topic": "MS10TLBirchLaurelTopic",
+      "topic_text": "What's your opinion of Tree Father Birch and Leaf Mother Laurel?",
+      "emotion": "Happy 50",
+      "response_text": "I've only known them for a very short time, but when I first arrived they immediately took me in and treated me just like a son.",
+      "index": "9"
+    },
+    {
+      "topic": "MS10TLCaves",
+      "topic_text": "Any information you could give me on the caves below Oasis would be helpful.",
+      "emotion": "Neutral 50",
+      "response_text": "Oasis is located near what used to be an old mining town before the bombs fell.",
+      "index": "11"
+    },
+    {
+      "topic": "MS10TLDoNow",
+      "topic_text": "What will you do now?",
+      "emotion": "Neutral 50",
+      "response_text": "I'll remain here and help in anyway that I can. I owe them my life, and I intend to repay that debt until my last breath.",
+      "index": "14"
+    },
+    {
+      "topic": "MS10TLHaroldTopic",
+      "topic_text": "Tell me about your \"god.\"",
+      "emotion": "Neutral 50",
+      "response_text": "Well, I'm not so sure the Great One is a god... I mean, I don't believe in that sort of thing.",
+      "index": "15"
+    },
+    {
+      "topic": "MS10TLJoinTopic",
+      "topic_text": "So, how did you end up here?",
+      "emotion": "Neutral 50",
+      "response_text": "I was found dying in the Wastes not far from here by a trader caravan. They knew about this place and brought me to Bloomseer Poplar.",
+      "index": "19"
+    },
+    {
+      "topic": "MS10TLLindenJoinTopic01",
+      "topic_text": "Dying? How awful! What happened to you?",
+      "emotion": "Neutral 50",
+      "response_text": "I was a Brotherhood of Steel Outcast. We had a deep patrol out here, looking for some tech and then got jumped by some Deathclaws.",
+      "index": "22"
+    },
+    {
+      "topic": "MS10TLLindenJoinTopic02",
+      "topic_text": "Why'd you stay here after you recovered?",
+      "emotion": "Neutral 50",
+      "response_text": "I felt I owed these people for bringing me back from the brink.",
+      "index": "25"
+    },
+    {
+      "topic": "MS10TLLindenJoinTopic03",
+      "topic_text": "I'm not sure I could live with these loonies.",
+      "emotion": "Anger 90",
+      "response_text": "You have a lot of nerve! We've shown you nothing but hospitality and then instead of thanks, you chose to hurl insults?",
+      "index": "27"
+    },
+    {
+      "topic": "MS10TLTreeminder",
+      "topic_text": "What did you have to do to become a Treeminder?",
+      "emotion": "Neutral 50",
+      "response_text": "I sort of fell into it I guess. I woke up here and I just stayed. After a while, I became one of them.",
+      "index": "29"
+    },
+    {
+      "topic": "SpeechChallengeFailure",
+      "topic_text": "SpeechChallengeFailure",
+      "emotion": "Fear 70",
+      "response_text": "I'd prefer not to talk about it. Some people wouldn't appreciate my past.",
+      "index": "30"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Sad 70",
+      "response_text": "Leave us and never look back, Outsider.",
+      "index": "31"
+    },
+    {
+      "topic": "MS10TreemindersCeremonySay",
+      "topic_text": "MS10TreemindersCeremonySay",
+      "emotion": "Neutral 50",
+      "response_text": "In the name of His Frondescence, I call His wrath upon you, so that, wherever you may go, you bear it with you...",
+      "index": "32"
+    }
+  ],
+  "combat": []
+}

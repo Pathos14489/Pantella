@@ -1,0 +1,129 @@
+{
+  "name": "Quartermaster",
+  "url": "/wiki/Quartermaster_(Operation:_Anchorage)",
+  "dialogue_name": "DLC02FieldHQQuartermaster.txt",
+  "dialogue_url": "/wiki/DLC02FieldHQQuartermaster.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "xx002D22",
+  "ref_id": "xx002D23",
+  "editor_id": "DLC02FieldHQQuartermaster",
+  "location": "U.S. Army field headquarters",
+  "location_url": "/wiki/U.S._Army_field_headquarters",
+  "descriptions": [
+    "The quartermaster is a \"vendor\" found at the U.S. Army field headquarters during the Anchorage Reclamation simulation in the Fallout 3 add-on Operation: Anchorage.",
+    "The simulated soldier in charge of weapon stocks at headquarters, the quartermaster is logical and a stickler for correct procedure: Without the right requisition holotape, he won't hand out anything.",
+    "There's one exception: Those who went beyond the call of duty in service to their brothers in arms and knows how to speak to him can count on a little bit of extra gear, requisition limits or not. And if anyone asks, \"it fell off a truck\".",
+    "The Quartermaster appears only in a simulation in the Operation: Anchorage add-on for Fallout 3."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "U.S. Army",
+  "role": "Quartermaster",
+  "detailed_location": "Anchorage Reclamation simulationU.S. Army field headquarters",
+  "special": {
+    "Strength": 6,
+    "Perception": 7,
+    "Endurance": 5,
+    "Charisma": 3,
+    "Intelligence": 3,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "level": "1",
+  "tag_skills": [
+    {
+      "Explosives:": "34"
+    },
+    {
+      "Small Guns:": "34"
+    },
+    {
+      "Sneak:": "32"
+    }
+  ],
+  "misc_skills": [],
+  "voice_type": "DLC02MaleGeneric1",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "DLC02STTLAmmo",
+      "topic_text": "I need some more ammo.",
+      "emotion": "Neutral 50",
+      "response_text": "Help yourself. Anything you need should be in the ammo crates.",
+      "index": "1"
+    },
+    {
+      "topic": "DLC02STTLNewLoadout",
+      "topic_text": "Can I change my gear?",
+      "emotion": "Neutral 50",
+      "response_text": "Sorry, that's all we're allowed to distribute.",
+      "index": "2"
+    },
+    {
+      "topic": "DLC02STTLQuarterHaveCARH",
+      "topic_text": "I'm ready to change to Close Assault gear.",
+      "emotion": "Neutral 50",
+      "response_text": "I'll just take care of all your old gear for you and here are the new ones.",
+      "index": "6"
+    },
+    {
+      "topic": "DLC02STTLQuarterHaveFTRH",
+      "topic_text": "I'm ready to change to Fire Team gear.",
+      "emotion": "Neutral 50",
+      "response_text": "I'll just take care of all your old gear for you and here are the new ones.",
+      "index": "8"
+    },
+    {
+      "topic": "DLC02STTLQuarterHaveHWRH",
+      "topic_text": "I'm ready to change to Heavy Weapons gear.",
+      "emotion": "Neutral 50",
+      "response_text": "I'll just take care of all your old gear for you and here are the new ones.",
+      "index": "10"
+    },
+    {
+      "topic": "DLC02STTLQuarterHaveSNRH",
+      "topic_text": "I'm ready to change to Sniper gear.",
+      "emotion": "Neutral 50",
+      "response_text": "I'll just take care of all your old gear for you and here are the new ones.",
+      "index": "12"
+    },
+    {
+      "topic": "DLC02STTLQuarterWantGauss",
+      "topic_text": "The stuff you have is okay, but I need something with more... punch.",
+      "emotion": "Happy 100",
+      "response_text": "Hell, you earned a lot of respect with the soldiers for what you did to those Chinese artillery guns.",
+      "index": "14"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "I'm on my way out, sir.{a relieved soldier on his way back to HQ}",
+      "index": "16"
+    },
+    {
+      "topic": "SpeechChallengeFailure",
+      "topic_text": "SpeechChallengeFailure",
+      "emotion": "Disgust 100",
+      "response_text": "Sorry, this is the best I've got. You don't like it, go borrow from the Reds.",
+      "index": "25"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "As you were.",
+      "emotion": "Neutral 50",
+      "response_text": "Yes sir.",
+      "index": "26"
+    }
+  ],
+  "combat": []
+}

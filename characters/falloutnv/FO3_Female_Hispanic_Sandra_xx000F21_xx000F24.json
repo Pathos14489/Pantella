@@ -1,0 +1,268 @@
+{
+  "name": "Sandra",
+  "url": "/wiki/Sandra_Kundanika",
+  "dialogue_name": "DLC01Sandra.txt",
+  "dialogue_url": "/wiki/DLC01Sandra.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "xx000F21",
+  "ref_id": "xx000F24",
+  "editor_id": "DLC01Sandra",
+  "location": "Haven",
+  "location_url": "/wiki/Haven",
+  "descriptions": [
+    "Dr. Sandra Kundanika is a scientist working and living in the Pitt in 2277.",
+    "Sandra intentionally joined the city because she recognized it as a powerful and influential force. Ishmael Ashur realized she was a smart woman as she had a good education, and offered to support her research. She conducted research into the Trogs and named their disease the Troglodyte Degeneration Contagion (TDC).",
+    "Sandra eventually became Ashur's wife, the two sharing a genuine love for each other, and she agrees with his plan of building an army and uniting the wasteland. Although Sandra shares a lot of the ruthlessness with the other raiders, she prefers non-violence whenever possible.",
+    "Sandra and Ashur became the parents of baby Marie.",
+    "She spends her day in the back of the Haven's top floor researching a cure.",
+    "Dr. Sandra Kundanika appears only in the Fallout 3 add-on The Pitt.",
+    "PC Should the player character side with Wernher and choose to spare her, assuming that she is not killed by trogs, the player character can return after completing Free Labor and speak with her as long enough time has passed for her to turn friendly. She will address the player character as though they had kidnapped Marie, but gave her back and sided with the slavers. This will allow the player character to bring teddy bears to her for Marie even though the player character did not side with Ashur."
+  ],
+  "race": "Human",
+  "gender": "Female",
+  "affiliation": "Pitt raiders",
+  "role": "Scientist",
+  "detailed_location": "Haven",
+  "voice_actor": "Francie Glick",
+  "special": {
+    "Strength": 3,
+    "Perception": 6,
+    "Endurance": 3,
+    "Charisma": 4,
+    "Intelligence": 8,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "level": "3→13",
+  "tag_skills": [
+    {
+      "Explosives:": "44→100"
+    },
+    {
+      "Medicine:": "48→100"
+    },
+    {
+      "Science:": "48→100"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "30→80"
+    },
+    {
+      "Critical Chance:": "5%"
+    },
+    {
+      "Unarmed Dam.:": "1.05"
+    },
+    {
+      "Poison Resist.:": "10%"
+    },
+    {
+      "Rad. Resist.:": "4%"
+    },
+    {
+      "Carry Weight:": "180"
+    },
+    {
+      "Damage Res.:": "3%"
+    }
+  ],
+  "karma": "Neutral",
+  "voice_type": "DLC01UniqueSandra",
+  "geck_race": "Hispanic",
+  "topics": [
+    {
+      "topic": "DLC01AboutMarie1",
+      "topic_text": "How's Marie?",
+      "emotion": "Happy 50",
+      "response_text": "My little angel is just the healthiest baby in the world! She just couldn't be doing better.",
+      "index": "1"
+    },
+    {
+      "topic": "DLC01AboutPitt",
+      "topic_text": "Tell me about The Pitt.",
+      "emotion": "Neutral 50",
+      "response_text": "I'm not the one to ask, really. Between Marie and the research, I hardly have any free time anymore.",
+      "index": "7"
+    },
+    {
+      "topic": "DLC01BabyGift1",
+      "topic_text": "Would it help if I brought toys for Marie?",
+      "emotion": "Anger 10",
+      "response_text": "I know I shouldn't trust you, but if it'll make Marie happy, it means I can get some sleep. So, okay.{Not quite trusting}",
+      "index": "10"
+    },
+    {
+      "topic": "DLC01BabyReturnA",
+      "topic_text": "Here's your daughter, safe and sound. And Wernher's gone, too.",
+      "emotion": "Anger 50",
+      "response_text": "I still ought to slice you open. You're lucky my daughter's still safe.",
+      "index": "18"
+    },
+    {
+      "topic": "DLC01BabyReturnB",
+      "topic_text": "I guess, but it sure was fun while it lasted.",
+      "emotion": "Anger 50",
+      "response_text": "You're fucking insane. But at least my daughter's back safe and sound. That's all that I care about.",
+      "index": "21"
+    },
+    {
+      "topic": "DLC01SandraMeeting00A",
+      "topic_text": "Pardon me, but Lord Ashur said you could show me some sort of \"cure\"?",
+      "emotion": "Anger 25",
+      "response_text": "Oh, I hate it when he calls her that. I swear, it's a terrible thing to call his own daughter.",
+      "index": "25"
+    },
+    {
+      "topic": "DLC01SandraMeeting00B",
+      "topic_text": "I don't care about your spawn. Where's the cure?",
+      "emotion": "Anger 50",
+      "response_text": "Pull your head out of your ass, and you might realize they're one and the same, idiot.",
+      "index": "27"
+    },
+    {
+      "topic": "DLC01SandraMeeting00C",
+      "topic_text": "I've got a bad feeling this isn't just \"bring your daughter to work day\"...",
+      "emotion": "Happy 50",
+      "response_text": "Don't be silly! It's the best of both worlds!",
+      "index": "28"
+    },
+    {
+      "topic": "DLC01SandraMeeting01A",
+      "topic_text": "Wait, you mean she has a natural and transferable immunity of some sort?",
+      "emotion": "Happy 15",
+      "response_text": "Well, this is a nice surprise. Apparently, you and Ashur are the only other people who know anything about science in this place.{Relieved at not having to dumb down her explanations to the player}",
+      "index": "30"
+    },
+    {
+      "topic": "DLC01SandraMeeting01B",
+      "topic_text": "You're kidding me. A baby can't be the cure!",
+      "emotion": "Happy 50",
+      "response_text": "No really. It's nothing short of a miracle, but Ashur and I couldn't be happier. Our daughter was born with an immunity to The Pitt's mutations.",
+      "index": "35"
+    },
+    {
+      "topic": "DLC01SandraMeeting01C",
+      "topic_text": "Okay, so the baby's the cure? I'll be taking her, thanks.",
+      "emotion": "Anger 50",
+      "response_text": "Really? You think you're just going to waltz in here and take my daughter? The daughter of the Lord of The Pitt?{Cold fury at the player for even pretending to threaten her daughter}",
+      "index": "37"
+    },
+    {
+      "topic": "DLC01SandraMeeting02A",
+      "topic_text": "Aren't you worried about hurting Marie?",
+      "emotion": "Happy 50",
+      "response_text": "Oh, no, these tests are perfectly safe. In fact, between the crib and her uncanny health, she's probably the safest child in the world!",
+      "index": "40"
+    },
+    {
+      "topic": "DLC01SandraMeeting02B",
+      "topic_text": "You're using your own child as an experiment? You monster!",
+      "emotion": "Surprise 50",
+      "response_text": "No, no, nothing like that. Calm down, these are just observational tests, and perfectly safe for Marie.{Laughing at the over-reacting player}",
+      "index": "42"
+    },
+    {
+      "topic": "DLC01SandraMeeting03A",
+      "topic_text": "If there's anything I can do to help, just let me know.",
+      "emotion": "Happy 50",
+      "response_text": "You're a dear, but things are well in hand, here.{Sweet and friendly, as one parent to another}",
+      "index": "44"
+    },
+    {
+      "topic": "DLC01SandraMeeting03C",
+      "topic_text": "That means kidnapping this baby is the key to ruling this city. Yoink!",
+      "emotion": "Anger 50",
+      "response_text": "Yes, you'd think that, wouldn't you? But that's because you're an idiot who thinks he can get away with kidnapping Ashur's daughter.{Angry, and gearing up to unleash a verbal tirade}",
+      "index": "47"
+    },
+    {
+      "topic": "DLC01SandraPlotA",
+      "topic_text": "Wait, I meant, um, isn't she cute? Here you go.",
+      "emotion": "Anger 50",
+      "response_text": "Yeah, that's what I thought, asshole.",
+      "index": "54"
+    },
+    {
+      "topic": "DLC01SandraPlotB",
+      "topic_text": "I've got your kid. You wouldn't dare shoot at me.",
+      "emotion": "Anger 50",
+      "response_text": "No, I wouldn't. But our snipers could pop the eyes out of your head without even ruffling her hair.{Bluffing, but more angry than afraid}",
+      "index": "57"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Happy 20",
+      "response_text": "I can't really talk, now. Isn't my husband waiting to see you?{Pleasant, but busy}",
+      "index": "59"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "DLC01ConfrontPlayer",
+      "topic_text": "DLC01ConfrontPlayer",
+      "emotion": "Anger 50",
+      "response_text": "This is for Marie, you bastard!{Furious.}",
+      "index": "80"
+    },
+    {
+      "topic": "DLC01SandraToBaby1",
+      "topic_text": "DLC01SandraToBaby1",
+      "emotion": "Happy 50",
+      "response_text": "Now, stay still while mommy takes a few readings. Don't worry, dear, you're perfectly safe!{Speaking to her baby}",
+      "index": "81"
+    },
+    {
+      "topic": "DLC01SandraToGuards",
+      "topic_text": "DLC01SandraToGuards",
+      "emotion": "Anger 50",
+      "response_text": "He's got my baby! Take him down, but be careful!{Calling to the guards}",
+      "index": "82"
+    },
+    {
+      "topic": "DLC01SandraToKidnapper",
+      "topic_text": "DLC01SandraToKidnapper",
+      "emotion": "Anger 75",
+      "response_text": "You think you can get away with this? Every raider in this town will be after your head to bring her back.",
+      "index": "84"
+    },
+    {
+      "topic": "DLC01SandraToLeavingKidnapper",
+      "topic_text": "DLC01SandraToLeavingKidnapper",
+      "emotion": "Anger 50",
+      "response_text": "Bring her back, or you're dead, bastard!",
+      "index": "87"
+    },
+    {
+      "topic": "DLC01SpeechAnnouncement",
+      "topic_text": "DLC01SpeechAnnouncement",
+      "emotion": "Neutral 50",
+      "response_text": "All workers report to the Square. All workers report to the Square.",
+      "index": "88"
+    },
+    {
+      "topic": "GOODBYE",
+      "topic_text": "I have to go now.",
+      "emotion": "Happy 50",
+      "response_text": "Oh, you take care out there.",
+      "index": "89"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Neutral 50",
+      "response_text": "Hello?{Uncertain why the player is here in her lab}",
+      "index": "95"
+    }
+  ],
+  "combat": []
+}

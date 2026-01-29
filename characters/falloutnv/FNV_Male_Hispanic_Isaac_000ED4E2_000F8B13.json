@@ -1,0 +1,230 @@
+{
+  "name": "Isaac",
+  "url": "/wiki/Isaac_(Gun_Runners)",
+  "dialogue_name": "GunRunnerIsaac.txt",
+  "dialogue_url": "/wiki/GunRunnerIsaac.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": true,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000ED4E2",
+  "ref_id": "000F8B13",
+  "editor_id": "GunRunnerIsaac",
+  "location": "Gun Runners",
+  "location_url": "/wiki/Gun_Runners_(Fallout:_New_Vegas)",
+  "descriptions": [
+    "Isaac is a member of the Gun Runners at the Gun Runner headquarters in 2281.",
+    "Isaac has been working for the Gun Runners as a supply manager for around five years. One first encounters him when they reach the trading kiosk outside of the Gun Runner compound.",
+    "Dealing with Contreras",
+    "Dealing with Contreras: Isaac will need the Courier to bring back 100 pieces of metal in order to manufacture the wares Contreras asks for. This can also be completed by using Speech 80 or Barter 80.",
+    "PC Playstation 3 Xbox 360 After Isaac enters his home, he may not exit it again. "
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Gun Runners",
+  "role": "Supply manager",
+  "detailed_location": "Gun RunnersIsaac's house",
+  "voice_actor": "Liam O'Brien",
+  "special": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 4,
+    "Intelligence": 4,
+    "Agility": 6,
+    "Luck": 4
+  },
+  "level": "1",
+  "tag_skills": [
+    {
+      "Guns:": "31(33)"
+    },
+    {
+      "Melee Weap.:": "31(33)"
+    },
+    {
+      "Sneak:": "31"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Neutral",
+  "voice_type": "MaleAdult05",
+  "geck_race": "Hispanic",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "I don't handle buying and selling for the Gun Runners. Talk to the robot in the kiosk near our factory.",
+      "index": "1"
+    },
+    {
+      "topic": "VDialogueVegasEastNVIsaacTopic000",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Later.",
+      "index": "3"
+    },
+    {
+      "topic": "vDialogueGunRunnerNVIsaacTopic000",
+      "topic_text": "So you work for the Gun Runners?",
+      "emotion": "Neutral 50",
+      "response_text": "For around five years now. I handle the supply ends of things - raw materials and stuff.",
+      "index": "4"
+    },
+    {
+      "topic": "vDialogueGunRunnerNVIsaacTopic001",
+      "topic_text": "Who are the Gun Runners?",
+      "emotion": "Happy 20",
+      "response_text": "Makers of the finest high-grade weapons and ammunition in the wasteland.",
+      "index": "5"
+    },
+    {
+      "topic": "vDialogueGunRunnerNVIsaacTopic002",
+      "topic_text": "Contreras sent me. McCarran needs a lot more guns and ammo.",
+      "emotion": "Neutral 50",
+      "response_text": "Shit. Is he serious? The 25% increase in weapons is doable, but a 50% increase in ammunition is nuts.",
+      "index": "7"
+    },
+    {
+      "topic": "vDialogueGunRunnerNVIsaacTopic003< Barter 80 >",
+      "topic_text": "Arrange a temporary supply deal with other merchants. It'll still lead to a profit for you.",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] I guess we'll have to.  If Caesar's Legion drives the NCR from the area, there goes ninety percent of our business.",
+      "index": "9"
+    },
+    {
+      "topic": "vDialogueGunRunnerNVIsaacTopic004< Speech 80 >",
+      "topic_text": "Gun Runners are skilled enough to refurbish weapons like new, right? You're overthinking this.",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] You're right.  I suppose we could refurbish used and damaged weapons to fill the order.",
+      "index": "13"
+    },
+    {
+      "topic": "vDialogueGunRunnerNVIsaacTopic005",
+      "topic_text": "Never mind. Let's talk about something else.",
+      "emotion": "Neutral 50",
+      "response_text": "No problem.",
+      "index": "17"
+    },
+    {
+      "topic": "vDialogueGunRunnerNVIsaacTopic006",
+      "topic_text": "Maybe I could help you out with those supplies.",
+      "emotion": "Neutral 50",
+      "response_text": "Well, I guess so.  Look.  We just need metal, and lots of it.",
+      "index": "18"
+    },
+    {
+      "topic": "vDialogueGunRunnerNVIsaacTopic007",
+      "topic_text": "Any chance I could get a tour of the Gun Runner factory?",
+      "emotion": "Neutral 50",
+      "response_text": "None whatsoever. Everything inside the fence is off-limits, and the guards have strict orders to shoot to kill.",
+      "index": "22"
+    },
+    {
+      "topic": "vDialogueGunRunnerNVIsaacTopic008",
+      "topic_text": "I've got some scrap for you.",
+      "emotion": "Neutral 50",
+      "response_text": "Alright, whatcha got?",
+      "index": "24"
+    },
+    {
+      "topic": "vDialogueGunRunnerNVIsaacTopic009",
+      "topic_text": "Tin cans.",
+      "emotion": "Neutral 50",
+      "response_text": "Thanks, that'll help.",
+      "index": "25"
+    },
+    {
+      "topic": "vDialogueGunRunnerNVIsaacTopic010",
+      "topic_text": "Scrap metal.",
+      "emotion": "Neutral 50",
+      "response_text": "Thanks, that'll help.",
+      "index": "26"
+    },
+    {
+      "topic": "vDialogueGunRunnerNVIsaacTopic011",
+      "topic_text": "Irons.",
+      "emotion": "Neutral 50",
+      "response_text": "Thanks, that'll help.",
+      "index": "27"
+    },
+    {
+      "topic": "vDialogueGunRunnerNVIsaacTopic012",
+      "topic_text": "Pressure cookers.",
+      "emotion": "Neutral 50",
+      "response_text": "Thanks, that'll help.",
+      "index": "28"
+    },
+    {
+      "topic": "vDialogueGunRunnerNVIsaacTopic013",
+      "topic_text": "Metal cooking pans.",
+      "emotion": "Neutral 50",
+      "response_text": "Thanks, that'll help.",
+      "index": "29"
+    },
+    {
+      "topic": "vDialogueGunRunnerNVIsaacTopic014",
+      "topic_text": "Coffee pots.",
+      "emotion": "Neutral 50",
+      "response_text": "Thanks, that'll help.",
+      "index": "30"
+    },
+    {
+      "topic": "vDialogueGunRunnerNVIsaacTopic015",
+      "topic_text": "Hot plates.",
+      "emotion": "Neutral 50",
+      "response_text": "Thanks, that'll help.",
+      "index": "31"
+    },
+    {
+      "topic": "vDialogueGunRunnerNVIsaacTopic016",
+      "topic_text": "Metal cooking pots.",
+      "emotion": "Neutral 50",
+      "response_text": "Thanks, that'll help.",
+      "index": "32"
+    },
+    {
+      "topic": "vDialogueGunRunnerNVIsaacTopic017",
+      "topic_text": "Pots.",
+      "emotion": "Neutral 50",
+      "response_text": "Thanks, that'll help.",
+      "index": "33"
+    },
+    {
+      "topic": "vDialogueGunRunnerNVIsaacTopic018",
+      "topic_text": "Never mind.",
+      "emotion": "Neutral 50",
+      "response_text": "Well, keep at it.",
+      "index": "34"
+    },
+    {
+      "topic": "vDialogueGunRunnerNVIsaacTopic019",
+      "topic_text": "Do you have enough scrap metal yet?",
+      "emotion": "Neutral 50",
+      "response_text": "No, not yet.",
+      "index": "35"
+    },
+    {
+      "topic": "vDialogueGunRunnerNVIsaacTopic020",
+      "topic_text": "Who's in charge of the Gun Runners?",
+      "emotion": "Neutral 50",
+      "response_text": "Out here, we don't have bosses. Me, the gunsmiths, and the guards all know what we're supposed to be doing.",
+      "index": "38"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Later.",
+      "index": "40"
+    }
+  ],
+  "combat": []
+}

@@ -1,0 +1,85 @@
+{
+  "name": "Hoover",
+  "url": "/wiki/Hoover",
+  "dialogue_name": "DLC03MisterGutsyStiggs.txt",
+  "dialogue_url": "/wiki/DLC03MisterGutsyStiggs.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "xx009AE3",
+  "ref_id": "xx00D2B3",
+  "editor_id": "DLC03MisterGutsyStiggs",
+  "location": "Base Floor",
+  "location_url": null,
+  "descriptions": [
+    "Hoover is a Mister Gutsy located inside the mobile base crawler in 2277.",
+    "Hoover is a Personal Automated Lackey (P.A.L.) owned by Stiggs, an Enclave engineer who works at the mobile base crawler. Stiggs purchased the robot from a wandering trader named Tinker Joe. He can be identified from other Mister Gutsy robots by his distinctive silver and black paint job and dark red eye sensors. He is one of two robots owned by Stiggs, the other being Sparky.",
+    "Hoover appears only in the Fallout 3 add-on Broken Steel.",
+    "PC Sometimes, Hoover will not appear at all. This can also happen with Sparky."
+  ],
+  "race": "Mister Gutsy",
+  "affiliation": "Tinker Joe(formerly)Enclave",
+  "role": "Personal Automated Lackey",
+  "detailed_location": "Mobile base crawler",
+  "voice_actor": "Jeff Baker",
+  "special": {
+    "Strength": 5,
+    "Perception": 6,
+    "Endurance": 5,
+    "Charisma": 5,
+    "Intelligence": 5,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "level": "9",
+  "misc_skills": [
+    {
+      "Hit Points:": "350"
+    },
+    {
+      "Poison Resist.:": "20%"
+    },
+    {
+      "Rad. Resist.:": "8%"
+    }
+  ],
+  "karma": "Neutral",
+  "voice_type": "RobotMisterGutsyDC",
+  "topics": [
+    {
+      "topic": "MS14Suit",
+      "topic_text": "MS14SuitHead",
+      "emotion": "Anger 50",
+      "response_text": "Pansy! Take a shot of vitamin M and keep fighting!{Spoken like a marine drill sergeant}",
+      "index": "1"
+    },
+    {
+      "topic": "MS14SuitCombat",
+      "topic_text": "MS14SuitCombat",
+      "emotion": "Anger 50",
+      "response_text": "Gear up, soldier!",
+      "index": "4"
+    },
+    {
+      "topic": "MS14SuitEmpty",
+      "topic_text": "MS14SuitEmpty",
+      "emotion": "Anger 50",
+      "response_text": "Head wound! Too bad you're out of morhpine.{Spoken like a marine drill sergeant}",
+      "index": "7"
+    },
+    {
+      "topic": "MS14SuitStart",
+      "topic_text": "MS14SuitStart",
+      "emotion": "Anger 50",
+      "response_text": "Listen up you god-damn puke! You are now wearing prototype medic power armor. You take care of me, and I'll take care of you.{Shouted like a marine drill sergeant}",
+      "index": "12"
+    }
+  ],
+  "conversation": [],
+  "combat": []
+}

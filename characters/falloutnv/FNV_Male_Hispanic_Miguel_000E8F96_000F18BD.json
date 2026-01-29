@@ -1,0 +1,103 @@
+{
+  "name": "Miguel",
+  "url": "/wiki/Miguel_(Fallout:_New_Vegas)",
+  "dialogue_name": "WestsideMiguel.txt",
+  "dialogue_url": "/wiki/WestsideMiguel.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": true,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000E8F96",
+  "ref_id": "000F18BD",
+  "editor_id": "WestsideMiguel",
+  "location": "Miguel's Pawn Shop",
+  "location_url": "/wiki/Miguel%27s_Pawn_Shop",
+  "descriptions": [
+    "Miguel is a resident of Westside who runs a pawn shop in 2281.",
+    "An affable fellow, Miguel is the last resort for people down on their luck, buying what they offer at reasonable prices and selling them for a profit. His pawn shop has been in the family for at least three generations. In fact, Miguel took over the business when his grandfather lost his life to the Fiends. He has since built up an impressive collection of odds and ends.",
+    "The death of his grandfather has resulted in Miguel having a deep hatred for the Fiends, just as much as the other residents hold a grudge against the vicious raider gang, for the fear of the next potential attack.",
+    "Miguel's dialogue, which can be viewed in the G.E.C.K., suggests that Miguel's original name may have been Angelo, at an earlier point in development. This is further reinforced by the early version of The White Wash's quest objectives, some of which refer to his pawn shop as \"Angelo's Pawn Shop.\""
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Westside",
+  "role": "Shopkeeper",
+  "detailed_location": "Miguel's Pawn Shop",
+  "voice_actor": "Ari Rubin",
+  "special": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 4,
+    "Intelligence": 4,
+    "Agility": 6,
+    "Luck": 4
+  },
+  "level": "10",
+  "tag_skills": [
+    {
+      "Guns:": "67(69)"
+    },
+    {
+      "Melee Weap.:": "67(69)"
+    },
+    {
+      "Sneak:": "67"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Neutral",
+  "voice_type": "MaleAdult04",
+  "geck_race": "Hispanic",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Happy 5",
+      "response_text": "If you're down on your luck and need some caps, I buy just about anything. Of course, I've also got plenty of things for sale, too.",
+      "index": "1"
+    },
+    {
+      "topic": "VDialogueDoldrums1EAngeloTopic000",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Until next time.",
+      "index": "3"
+    },
+    {
+      "topic": "VDialogueDoldrums1EAngeloTopic001",
+      "topic_text": "Show me what you have for sale.",
+      "emotion": "Neutral 50",
+      "response_text": "Of course.",
+      "index": "4"
+    },
+    {
+      "topic": "vDialogueWestside1EAngeloTopic000",
+      "topic_text": "I'm looking for an antique rangefinder somebody might've sold to you?",
+      "emotion": "Neutral 50",
+      "response_text": "Antique rangefinder? I'm trying to think of something that'd be more worthless.",
+      "index": "5"
+    },
+    {
+      "topic": "vDialogueWestsideWestsideMiguelTopic000",
+      "topic_text": "Have you been in Westside long?",
+      "emotion": "Neutral 50",
+      "response_text": "My grandfather opened up this shop. Took over from him when the Fiends killed him.",
+      "index": "8"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Until next time.",
+      "index": "9"
+    }
+  ],
+  "combat": []
+}

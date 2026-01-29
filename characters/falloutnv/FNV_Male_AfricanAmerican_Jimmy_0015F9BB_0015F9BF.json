@@ -1,0 +1,144 @@
+{
+  "name": "Jimmy",
+  "url": "/wiki/Jimmy_(Vault_17)",
+  "dialogue_name": "LilyGrandkidJimmy.txt",
+  "dialogue_url": "/wiki/LilyGrandkidJimmy.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "0015F9BB",
+  "ref_id": "0015F9BF",
+  "editor_id": "Cell for Dead \"Void Creatures\"",
+  "location": "",
+  "location_url": null,
+  "descriptions": [
+    "Jimmy is a tribesman from east of the Colorado River, who liberated himself from Legion slavery and now works as a prostitute for Pretty Sarah, at the Casa Madrid Apartments in Westside in Fallout: New Vegas.",
+    "As an openly gay man, he provides insight into the experiences and challenges of LGBT people in the wasteland, especially under Legion rule and within the Free Economic Zone of New Vegas.",
+    "Jimmy originally lived in a village east of the Colorado River with his parents. At the age of 16, his village was attacked by Caesar's Legion, and his parents were killed as an \"example.\" Jimmy was enslaved and brought to a Legion camp, where he was chosen as a tent servant by a high ranking centurion. The centurion became infatuated with Jimmy and protected him, with Jimmy remarking that he was \"gentle, most of the time\" and would bring him \"little gifts\". However, the affair was kept secret, as homosexuality is punishable by death under Caesar's law.",
+    "Eventually, rumors began to circulate about the centurion's relationship with Jimmy, and the two were nearly discovered. Ultimately, the centurion chose his position over his feelings, and led Jimmy out into the desert to kill him and remove all evidence of the affair. Realizing he was about to be killed, Jimmy kicked the centurion in the genitals and ran, fleeing through the desert and across the Colorado River. Eventually, he arrived in Westside and began working as a prostitute for Pretty Sarah, specializing in male clients.",
+    "By the time the Courier meets him, Jimmy has been working for Sarah for six months. He considers the Casa a dump and Marco a swine, but Pretty Sarah keeps everyone in line and makes sure nobody hassles Jimmy. While he does not have as many clients as his peers, they always seem to come back.",
+    "Cost: 200 caps, requires male character",
+    "Although Jimmy can offer male characters a discount on his services if they choose a Confirmed Bachelor dialogue option, no discount is actually applied after selecting the dialogue, though the player does gain experience."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "WestsidePretty Sarah",
+  "role": "Prostitute",
+  "detailed_location": "Casa Madrid Apartments, Westside",
+  "voice_actor": "Jesse Burch",
+  "special": {
+    "Strength": 6,
+    "Perception": 4,
+    "Endurance": 5,
+    "Charisma": 7,
+    "Intelligence": 4,
+    "Agility": 5,
+    "Luck": 3
+  },
+  "level": "6",
+  "misc_skills": [],
+  "karma": "Neutral",
+  "voice_type": "MaleAdult03",
+  "geck_race": "AfricanAmerican",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "{Player in combat}Hey, don't drag me into this!",
+      "index": "1"
+    },
+    {
+      "topic": "VFreeformCasaMadrid1EJimmyTopic000",
+      "topic_text": "Been working here long?",
+      "emotion": "Neutral 50",
+      "response_text": "Half a year or so. The Casa's a dump and Marco's a pig, but Pretty Sarah makes sure I don't get hassled.",
+      "index": "7"
+    },
+    {
+      "topic": "VFreeformCasaMadrid1EJimmyTopic001",
+      "topic_text": "I hear you were a slave of Caesar's Legion.",
+      "emotion": "Neutral 50",
+      "response_text": "What Marco said is true. The Legion attacked my village when I was 16.",
+      "index": "9"
+    },
+    {
+      "topic": "VFreeformCasaMadrid1EJimmyTopic002",
+      "topic_text": "Sounds like life in the Legion is tough.",
+      "emotion": "Neutral 50",
+      "response_text": "It's tough on both sides of the fence, really. I think women have it worse. They're like money, given as rewards.{Shakes head}Breeding stock.",
+      "index": "16"
+    },
+    {
+      "topic": "VFreeformCasaMadrid1EJimmyTopic003",
+      "topic_text": "That's quite a story, Jimmy.",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah, I lived through it. I like it here better.",
+      "index": "18"
+    },
+    {
+      "topic": "VFreeformCasaMadrid1EJimmyTopic004",
+      "topic_text": "Tell me about Pretty Sarah.",
+      "emotion": "Neutral 50",
+      "response_text": "She's an honest woman. Splits the earnings fair, and keeps Sweetie and Maude in line.",
+      "index": "19"
+    },
+    {
+      "topic": "VFreeformCasaMadrid1EJimmyTopic005",
+      "topic_text": "How much for your services?",
+      "emotion": "Neutral 50",
+      "response_text": "{Male PC}A pittance, sugar - and I'll leave you without a care in the world.",
+      "index": "21"
+    },
+    {
+      "topic": "VFreeformCasaMadrid1EJimmyTopic006",
+      "topic_text": "<200 caps> Let's do it.",
+      "emotion": "Neutral 50",
+      "response_text": "Oh, we will, sugar. We will.",
+      "index": "25"
+    },
+    {
+      "topic": "VFreeformCasaMadrid1EJimmyTopic007",
+      "topic_text": "Not interested.",
+      "emotion": "Neutral 50",
+      "response_text": "{Male PC}You can play hard-to-get. I understand. I know the game.",
+      "index": "27"
+    },
+    {
+      "topic": "VFreeformCasaMadrid1EJimmyTopic008",
+      "topic_text": "<200 caps needed> I'm kind of short on caps right now.",
+      "emotion": "Neutral 50",
+      "response_text": "No freebies, Sugar. Not even for you.",
+      "index": "29"
+    },
+    {
+      "topic": "VFreeformCasaMadrid1EJimmyTopic009",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "See you.",
+      "index": "30"
+    },
+    {
+      "topic": "VFreeformCasaMadridWestsideJimmyTopic000",
+      "topic_text": "{Confirmed Bachelor}Back rubs are a specialty of mine. Maybe I'll show you sometime.",
+      "emotion": "Happy 30",
+      "response_text": "Oh, I think I'd like that. A lot. Maybe even give you a discount for my... company.",
+      "index": "31"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "See you.",
+      "index": "32"
+    }
+  ],
+  "combat": []
+}

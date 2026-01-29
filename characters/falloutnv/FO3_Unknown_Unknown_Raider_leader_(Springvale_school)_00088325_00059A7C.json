@@ -1,0 +1,77 @@
+{
+  "name": "Raider leader (Springvale school)",
+  "url": "/wiki/Raider_leader_(Springvale_school)",
+  "dialogue_name": "",
+  "dialogue_url": null,
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": true,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "00088325",
+  "ref_id": "00059A7C",
+  "editor_id": "SpringvaleElemBoss",
+  "location": "Springvale school",
+  "location_url": "/wiki/Springvale_school",
+  "descriptions": [
+    "The Springvale school raider leader is the head of a group of raiders camped in the Springvale Elementary in 2277.",
+    "After the death of the previous leader, Boppo, during his attack on Megaton, the Springvale raider leader became the new boss of the raiders living in the elementary school. This new leader worries that their group's failed attempts to raid Vault 101 will eventually result in rebellion, yet they continue their attempts under the blind hope of eventual success.",
+    "Besides this, the raider leader keeps the raiders' bloodlust satiated by picking off caravans heading to Megaton. The raider leader is also shown expressing their thoughts on their personal computer within the elementary school, mentioning that they believe Boppo deserved to be shot by Lucas Simms, the mayor of Megaton; believing the town to be useless, and that the raiders should focus on their goal of breaking into the nearby vault.",
+    "The raider leader patrols the interior of the Springvale Elementary school building near their terminal.",
+    "The username in their terminal is \"SUK ME hahaha.\""
+  ],
+  "race": "Human",
+  "affiliation": "Raiders",
+  "role": "Raider boss",
+  "detailed_location": "Springvale school",
+  "voice_actor": "James Lewis(male)Shari Elliker(female)",
+  "special": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 3,
+    "Intelligence": 3,
+    "Agility": 7,
+    "Luck": 5
+  },
+  "level": "1→4→9",
+  "tag_skills": [
+    {
+      "Melee Weap.:": "32→45→66"
+    },
+    {
+      "Small Guns:": "34→47→68"
+    },
+    {
+      "Unarmed:": "28→41→62"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "25→55→85"
+    },
+    {
+      "Critical Chance:": "5%"
+    },
+    {
+      "Unarmed Dam.:": "1.9→2.55→3.6"
+    },
+    {
+      "Poison Resist.:": "15%"
+    },
+    {
+      "Rad. Resist.:": "6%"
+    },
+    {
+      "Carry Weight:": "220 lbs"
+    }
+  ],
+  "karma": "Evil",
+  "voice_type": "MaleGroupRaiderFemaleGroupRaider",
+  "topics": [],
+  "conversation": [],
+  "combat": []
+}

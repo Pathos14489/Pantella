@@ -1,0 +1,65 @@
+{
+  "name": "Atomic Wrangler crier",
+  "url": "/wiki/Atomic_Wrangler_crier",
+  "dialogue_name": "VFSAtomicWranglerCrier.txt",
+  "dialogue_url": "/wiki/VFSAtomicWranglerCrier.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "0013EC2D",
+  "ref_id": "0013EF09",
+  "editor_id": "VFSAtomicWranglerCrier",
+  "location": "Freeside",
+  "location_url": "/wiki/Freeside",
+  "descriptions": [
+    "The Atomic Wrangler crier is a crier who shouts advertisements for the Atomic Wrangler Casino. She can be found on a street corner near the Atomic Wrangler in Freeside in Fallout: New Vegas.",
+    "The crier for the Atomic Wrangler is a young woman employed by the Garrets James and Francine, who pay her to boost public awareness of their establishment and help bring in customers. She does so by using blatant sex appeal.",
+    "Whenever the player character walks by, she will offer directions to the Atomic Wrangler and encourage them to take advantage of the casino's many services.",
+    "The Atomic Wrangler crier is voiced by child actor Ashley McGullam. According to Joshua Sawyer, it was likely an oversight, given the mature and sexual lines.",
+    "PC Playstation 3 Xbox 360 There may be instances where the Silver Rush crier and the Atomic Wrangler crier become hostile towards each other, which will leave one dead."
+  ],
+  "race": "Human",
+  "gender": "Female",
+  "affiliation": "Atomic Wrangler Casino",
+  "role": "Crier",
+  "detailed_location": "Freeside",
+  "voice_actor": "Ashley McGullam",
+  "special": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 10,
+    "Intelligence": 5,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "level": "1",
+  "misc_skills": [],
+  "karma": "Neutral",
+  "voice_type": "FemaleChild01",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "Hey baby, head down to the Atomic Wrangler if you want to have a good time.",
+      "index": "1"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "VFSAtomicWranglerCrierShout",
+      "topic_text": "VFSAtomicWranglerCrierShout",
+      "emotion": "Neutral 50",
+      "response_text": "Hungry? Thirsty? Horny? The Atomic Wrangler has you covered!",
+      "index": "3"
+    }
+  ],
+  "combat": []
+}

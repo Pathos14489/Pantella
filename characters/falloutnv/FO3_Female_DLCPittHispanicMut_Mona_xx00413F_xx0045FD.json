@@ -1,0 +1,114 @@
+{
+  "name": "Mona",
+  "url": "/wiki/Mona",
+  "dialogue_name": "DLC01Mona.txt",
+  "dialogue_url": "/wiki/DLC01Mona.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "xx00413F",
+  "ref_id": "xx0045FD",
+  "editor_id": "DLC01Mona",
+  "location": "The Pitt Uptown",
+  "location_url": "/wiki/The_Pitt_Uptown",
+  "descriptions": [
+    "Mona is a Pitt raider in the Pitt in the year 2277.",
+    "A skilled melee fighter, Mona suffers from a particularly degenerative skin condition brought about by swimming in the nearby irradiated rivers.",
+    "Mona appears only in the Fallout 3 add-on The Pitt."
+  ],
+  "race": "Human",
+  "gender": "Female",
+  "affiliation": "Pitt raiders",
+  "role": "Slaver",
+  "detailed_location": "The Pitt Uptown",
+  "voice_actor": "Vanessa Richardson",
+  "special": {
+    "Strength": 7,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 3,
+    "Intelligence": 3,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "level": "1→20→30 (Broken Steelonly)",
+  "tag_skills": [
+    {
+      "Melee Weap.:": "34→100"
+    },
+    {
+      "Small Guns:": "32→100"
+    },
+    {
+      "Unarmed:": "30→100"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "70→165→215"
+    },
+    {
+      "Critical Chance:": "5%"
+    },
+    {
+      "Unarmed Dam.:": "2.0→5.5"
+    },
+    {
+      "Poison Resist.:": "15%"
+    },
+    {
+      "Rad. Resist.:": "6%"
+    },
+    {
+      "Carry Weight:": "220"
+    }
+  ],
+  "karma": "Evil",
+  "voice_type": "DLC01RaiderFemaleGruffVoice",
+  "geck_race": "DLCPittHispanicMut",
+  "topics": [
+    {
+      "topic": "DLC01HavenResponse1A",
+      "topic_text": "Not at all. Some of my best friends are Ghouls.",
+      "emotion": "Anger 75",
+      "response_text": "Ghoul? Who're you calling a Ghoul? Get lost before I dump you in the river!",
+      "index": "1"
+    },
+    {
+      "topic": "DLC01HavenResponse1B",
+      "topic_text": "Whoa. What happened to you?",
+      "emotion": "Anger 50",
+      "response_text": "Go take a swim in the river. You'll find out for yourself, asshole.",
+      "index": "2"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "DLC01HavenGuardsNoSandra",
+      "topic_text": "DLC01HavenGuardsNoSandra",
+      "emotion": "Anger 50",
+      "response_text": "Hey, that's Ashur's kid! Sound the alarm!",
+      "index": "3"
+    },
+    {
+      "topic": "DLC01SpeechAnnouncement",
+      "topic_text": "DLC01SpeechAnnouncement",
+      "emotion": "Neutral 50",
+      "response_text": "All workers report to the Square. All workers report to the Square.",
+      "index": "4"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Happy 50",
+      "response_text": "Well, if it ain't the new scum. Congrats on the promotion!",
+      "index": "5"
+    }
+  ],
+  "combat": []
+}

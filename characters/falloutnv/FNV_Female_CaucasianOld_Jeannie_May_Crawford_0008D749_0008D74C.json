@@ -1,0 +1,245 @@
+{
+  "name": "Jeannie May Crawford",
+  "url": "/wiki/Jeannie_May_Crawford",
+  "dialogue_name": "JeannieMayCrawford.txt",
+  "dialogue_url": "/wiki/JeannieMayCrawford.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "0008D749",
+  "ref_id": "0008D74C",
+  "editor_id": "JeannieMayCrawford",
+  "location": "Dino Dee-lite front desk",
+  "location_url": "/wiki/Dino_Dee-lite_front_desk",
+  "descriptions": [
+    "Jeannie May Crawford is the owner-operator of Novac’s Dino Dee-lite Motel in 2281.",
+    "Jeannie is a proud resident and businesswoman in the frontier town.",
+    "Jeannie May also has no compunctions about betraying passing \"city folk\"",
+    "One for My Baby: It is revealed that Jeannie May sold Boone's wife Carla and her unborn child into slavery to Caesar's Legion. After the player character leads her to her death at the hands of Boone, it is possible to loot her body for a key and use it to unlock a safe in the room at the entrance. Unlocking said safe will make the player character able to get a note (bill of sale), incriminating Jeannie May of selling Carla into slavery."
+  ],
+  "race": "Human",
+  "gender": "Female",
+  "affiliation": "Dino Dee-lite MotelNovacCaesar's Legion",
+  "role": "Motel manager/owner",
+  "detailed_location": "Dino Dee-lite MotelJeannie May Crawford's house",
+  "voice_actor": "Marianne Muellerleile",
+  "special": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 6,
+    "Charisma": 3,
+    "Intelligence": 4,
+    "Agility": 6,
+    "Luck": 4
+  },
+  "mod_special_values": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 6,
+    "Charisma": 3,
+    "Intelligence": 4,
+    "Agility": 7,
+    "Luck": 4
+  },
+  "level": "4",
+  "tag_skills": [
+    {
+      "Guns:": "43(45)"
+    },
+    {
+      "Melee Weap.:": "41"
+    },
+    {
+      "Unarmed:": "43"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Evil",
+  "voice_type": "FemaleOld01",
+  "geck_race": "CaucasianOld",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Anger 35",
+      "response_text": "I don't think we got any more to discuss here.",
+      "index": "1"
+    },
+    {
+      "topic": "JeannieCrawfordGoingOn",
+      "topic_text": "What's been going on in town lately?",
+      "emotion": "Neutral 50",
+      "response_text": "Well, let's see. Dusty McBride's been losing some Brahmin, but that's probably the heat more than anything. Honestly, it's been real quiet.",
+      "index": "5"
+    },
+    {
+      "topic": "JeannieCrawfordMetYet",
+      "topic_text": "We haven't met yet.",
+      "emotion": "Surprise 25",
+      "response_text": "Oh, what am I doing? I got to thinking about making a good impression and plain forgot to tell you my name.",
+      "index": "8"
+    },
+    {
+      "topic": "JeannieCrawfordQuestTurnIn",
+      "topic_text": "I killed the  ghouls at REPCONN.",
+      "emotion": "Neutral 50",
+      "response_text": "Well, saints alive. That is a load off. Nothing to be done, though. Those ghouls just didn't know when they weren't wanted. Couldn't take a hint.",
+      "index": "10"
+    },
+    {
+      "topic": "JeannieCrawfordRepcon",
+      "topic_text": "Tell me more about REPCONN.",
+      "emotion": "Neutral 50",
+      "response_text": "I just know what I've heard. There's supposed to be some ghouls that went in a while back.",
+      "index": "14"
+    },
+    {
+      "topic": "JeannieCrawfordSorry",
+      "topic_text": "Sorry, I didn't mean what I said. This seems like a nice town.",
+      "emotion": "Anger 15",
+      "response_text": "Well it is. Not everybody appreciates it like they oughtta.",
+      "index": "16"
+    },
+    {
+      "topic": "JeannieCrawfordSupplies",
+      "topic_text": "Where can I get some supplies?",
+      "emotion": "Neutral 50",
+      "response_text": "Go see Cliff Briscoe at the Dino Bite Gift Shop, and tell him I sent you.",
+      "index": "17"
+    },
+    {
+      "topic": "JeannieCrawfordWayOut",
+      "topic_text": "What's the quickest way out of this dump?",
+      "emotion": "Anger 50",
+      "response_text": "You can jump out the window, for all I care, mister.",
+      "index": "19"
+    },
+    {
+      "topic": "JeannieCrawfordWhatToDo",
+      "topic_text": "What is there of interest around here?",
+      "emotion": "Surprise 20",
+      "response_text": "Well, there's Dinky, the town mascot. He's a sight. You probably already saw him when you came in, but you can go up inside, too.",
+      "index": "25"
+    },
+    {
+      "topic": "JeannieCrawfordWhereAmI",
+      "topic_text": "What is this place?",
+      "emotion": "Happy 35",
+      "response_text": "We're in a little desert oasis, name of Novac. This is the Dino Dee-lite Motel, and it's mine.",
+      "index": "29"
+    },
+    {
+      "topic": "SnipersRevengeBooneWife",
+      "topic_text": "What can you tell me about Boone's wife?",
+      "emotion": "Sad 40",
+      "response_text": "How should I put it? I guess you could say she was kinda like a cactus flower. Real pretty to look at, but there was just no getting close to her.",
+      "index": "30"
+    },
+    {
+      "topic": "SnipersRevengeComeOutside",
+      "topic_text": "Come with me. There's something you should see, in front of the dinosaur.",
+      "emotion": "Surprise 30",
+      "response_text": "Okay, if that's what you think.",
+      "index": "33"
+    },
+    {
+      "topic": "SnipersRevengeTooFar",
+      "topic_text": "SnipersRevengeTooFar",
+      "emotion": "Neutral 50",
+      "response_text": "If it's just the same to you, I think I'll stay in town. I feel safer that way.",
+      "index": "35"
+    },
+    {
+      "topic": "SnipersRevengeWrongWithBoone",
+      "topic_text": "What's wrong with Boone?",
+      "emotion": "Sad 35",
+      "response_text": "Nothing that wouldn't be wrong with any man who loses a wife, I suppose. Poor dear.",
+      "index": "36"
+    },
+    {
+      "topic": "VDialogueNovacJeannieMayCrawfordTopic000",
+      "topic_text": "Anything else?",
+      "emotion": "Neutral 50",
+      "response_text": "Well, up north a ways you'll see a big tower. That's HELIOS One. Used to be a power plant in its day.",
+      "index": "39"
+    },
+    {
+      "topic": "VDialogueNovacJeannieMayCrawfordTopic001",
+      "topic_text": "I'd like to rent a room.",
+      "emotion": "Neutral 50",
+      "response_text": "I can't see as how I'd charge you after the generous things you've done for the town. The room's on me.",
+      "index": "42"
+    },
+    {
+      "topic": "VDialogueNovacJeannieMayCrawfordTopic002",
+      "topic_text": "Here's 100 caps.",
+      "emotion": "Neutral 50",
+      "response_text": "I'm glad you can stay with us.",
+      "index": "44"
+    },
+    {
+      "topic": "VDialogueNovacJeannieMayCrawfordTopic003",
+      "topic_text": "I can't afford 100 caps right now.",
+      "emotion": "Neutral 50",
+      "response_text": "Well that's nothing to be ashamed of. We all have money troubles from time to time.",
+      "index": "45"
+    },
+    {
+      "topic": "VDialogueNovacJeannieMayCrawfordTopic004",
+      "topic_text": "Never mind.",
+      "emotion": "Neutral 50",
+      "response_text": "Oh. Well, all right.",
+      "index": "47"
+    },
+    {
+      "topic": "VDialogueNovacJeannieMayCrawfordTopic005",
+      "topic_text": "What are they doing?",
+      "emotion": "Neutral 50",
+      "response_text": "I don't know what they're up to and I don't want to know. I just hope no harm comes to Novac.",
+      "index": "50"
+    },
+    {
+      "topic": "VDialogueNovacJeannieMayCrawfordTopic006",
+      "topic_text": "Let's talk about something else.",
+      "emotion": "Neutral 50",
+      "response_text": "{neutral}Whatever suits you.",
+      "index": "54"
+    },
+    {
+      "topic": "VEndingNovac",
+      "topic_text": "VEndingNovac",
+      "emotion": "Neutral 50",
+      "response_text": "{narrating}Despite their vigilance against potential attacks by the Legion, the citizens of Novac were no match for the Courier.",
+      "index": "55"
+    },
+    {
+      "topic": "VMQ01LookingForManny",
+      "topic_text": "I'm looking for a man in a checkered coat. Have you seen anyone like that?",
+      "emotion": "Neutral 50",
+      "response_text": "Well he might've been wearing a fancy outfit, but he wasn't any kind of a gentleman to me.",
+      "index": "67"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Watch out for strangers.",
+      "index": "70"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "Hello",
+      "emotion": "Neutral 50",
+      "response_text": "Hey there.",
+      "index": "71"
+    }
+  ],
+  "combat": []
+}

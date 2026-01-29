@@ -1,0 +1,128 @@
+{
+  "name": "Biological Research Station",
+  "url": "/wiki/Biological_Research_Station",
+  "dialogue_name": "NVDLC03SinkBioResearchLabTalker.txt",
+  "dialogue_url": "/wiki/NVDLC03SinkBioResearchLabTalker.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": true,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "xx00F059",
+  "ref_id": "xx00F05B",
+  "editor_id": "NVDLC03SinkBioResearchLabTalker",
+  "location": "The Sink",
+  "location_url": "/wiki/The_Sink",
+  "descriptions": [
+    "The GS-2000 Biological Research Station is an artificial personality in the Big MT in 2281.",
+    "The Biological Research Station is part of a versatile automatic garden that allows for the growing and analysis of a variety of flora. With the ability to clone Its personality holotape somehow made its way to the X-22 botanical garden after Doctor Klein threw it off the Sink's balcony in anger.",
+    "At some point before or during the Courier's time in Big MT, Muggy was tricked by the Biological Research Station into looking for a coffee mug inside its chassis, for which the mini Securitron was then \"seeded.\"",
+    "The Biological Research Station will plant 11 types of seeds from the samples provided to it, which will sprout into plants, which can be harvested every 72 hours that pass in the Big MT. Conveniently, the plants are the same types that are able to be given to the Station in exchange for Salient Green on a 1 for 1 basis.",
+    "The following types of plants are grown by, and can be exchanged for, Salient Green at the Biological Research Station:",
+    "The Biological Research Station appears only in the Fallout: New Vegas add-on Old World Blues.",
+    "Travis Stout wrote the Biological Research Station, in addition to all the other artificial personalities in the Sink."
+  ],
+  "race": "ComputerArtificial personality",
+  "gender": "Male programming",
+  "affiliation": "Doctor Mobius(formerly)Courier(optional)",
+  "role": "Planter",
+  "detailed_location": "Big MTThe Sink",
+  "voice_actor": "Roger Cross",
+  "special": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 2,
+    "Intelligence": 5,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "level": "1",
+  "misc_skills": [],
+  "karma": "Neutral",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "Mmm... You took care of them brains pretty good, baby. Nice.",
+      "index": "1"
+    },
+    {
+      "topic": "NVDLC03DialogueHQBuddiesNVDLC03SinkBioResearchStationTopic000",
+      "topic_text": "What did you just say?",
+      "emotion": "Neutral 50",
+      "response_text": "Your seed, baby. I'm the original, certified, rarefied, testified GS-2000 Biological Research Station. Yes sir, I'm a seed-clonin' machine.",
+      "index": "6"
+    },
+    {
+      "topic": "NVDLC03DialogueHQBuddiesNVDLC03SinkBioResearchStationTopic001",
+      "topic_text": "My seed? I think you've got your biology mixed up.",
+      "emotion": "Neutral 50",
+      "response_text": "Naw, baby, I'm all about biology. I'm the original, certified, rarefied, testified GS-2000 Biological Research Station. I'm a seed-clonin' machine.",
+      "index": "8"
+    },
+    {
+      "topic": "NVDLC03DialogueHQBuddiesNVDLC03SinkBioResearchStationTopic002",
+      "topic_text": "I command you to open your port and receive my seed!",
+      "emotion": "Neutral 50",
+      "response_text": "Aw, yeah, baby, just slip it in there. All the way down in that dark, moist earth. Mmm... launching interface.",
+      "index": "10"
+    },
+    {
+      "topic": "NVDLC03DialogueHQBuddiesNVDLC03SinkBioResearchStationTopic003",
+      "topic_text": "What does that mean?",
+      "emotion": "Neutral 50",
+      "response_text": "It's the miracle of life, baby. You bring me some succulent genetic samples, and I'll work my mojo on them. Clone you up all kinds of plants. Aw yeah.",
+      "index": "11"
+    },
+    {
+      "topic": "NVDLC03DialogueHQBuddiesNVDLC03SinkBioResearchStationTopic004",
+      "topic_text": "I have to go now.",
+      "emotion": "Neutral 50",
+      "response_text": "Hurry back with that seed now, baby.",
+      "index": "17"
+    },
+    {
+      "topic": "NVDLC03DialogueHQBuddiesNVDLC03SinkBioResearchStationTopic005",
+      "topic_text": "I'd like to process some plants.",
+      "emotion": "Neutral 50",
+      "response_text": "I love it when you talk like that. Let me just get that interface up and running for you.",
+      "index": "18"
+    },
+    {
+      "topic": "NVDLC03DialogueHQBuddiesNVDLC03SinkBioResearchStationTopic008",
+      "topic_text": "So if I bring you samples of dried plant life, you can clone them and grow them in these planters?",
+      "emotion": "Neutral 50",
+      "response_text": "You know it baby. I just need some samples and I got you going. Take a few days, but trust me - it's all kinds of good.",
+      "index": "19"
+    },
+    {
+      "topic": "NVDLC03DialogueHQBuddiesNVDLC03SinkBioResearchStationTopic011",
+      "topic_text": "What's Salient Green?",
+      "emotion": "Neutral 50",
+      "response_text": "Just the miracle of life in sticky, gooey, liquid form, baby! Heat that gunk up over a campfire, and just watch it congeal into all kinds of plants.",
+      "index": "20"
+    },
+    {
+      "topic": "NVDLC03EndingSlideChipBioResearch",
+      "topic_text": "NVDLC03EndingSlideChipBioResearch",
+      "emotion": "Neutral 50",
+      "response_text": "{Narration}{X-22 not discovered}The Biological Research Station, obsessed with seeding everything in sight, ran out of fertile plots and blew a circuit trying to seed itself.",
+      "index": "21"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "NVDLC03SinkBioLabBarks",
+      "topic_text": "NVDLC03SinkBioLabBarks",
+      "emotion": "Neutral 50",
+      "response_text": "Couldn't stay away, could you? Yeah, I knew you'd be back.",
+      "index": "25"
+    }
+  ],
+  "combat": []
+}

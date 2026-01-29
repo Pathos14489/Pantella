@@ -1,0 +1,139 @@
+{
+  "name": "Driver Nephi",
+  "url": "/wiki/Driver_Nephi",
+  "dialogue_name": "1EDriverNephi.txt",
+  "dialogue_url": "/wiki/1EDriverNephi.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000F56FF",
+  "ref_id": "000F570A",
+  "editor_id": "1EDriverNephi",
+  "location": "South Vegas ruins EA",
+  "location_url": "/wiki/South_Vegas_ruins_east_entrance",
+  "descriptions": [
+    "Driver Nephi is a leading member of the Fiends, second only to Motor-Runner, in the Mojave Wasteland in 2281.",
+    "Nephi was originally a member of the Mormons from New Canaan in Utah.",
+    "Within the Fiends, Nephi gained the moniker of \"Driver Nephi.\" This comes from his signature weapon, a golf driver, with which he has taken the lives of over a dozen armed NCR troopers in melee combat. According to Major Dhatri, Nephi has had numerous run-ins with First Recon, who have yet to succeed in killing him even after multiple attempts, as Nephi tends to use his own men as meat shields and has proven tough enough to have survived multiple assassination attempts despite First Recon having more than one kill report.",
+    "Like many Fiends, Nephi has dabbled in the slave trade, doing business with Dermot and Saint James in Westside on at least one occasion. It was Nephi that purchased the little girl and her family that went missing from Aerotech Office Park leading to Captain Parker starting an investigation, in which he paid 400 caps for the little girl's sister and 150 for her brother. He only paid 50 for the little girl herself, however, despite Dermot's best efforts to convince him to pay more and to wait until the girl got older.",
+    "By 2281, Nephi and his band of Fiends have made their camp in a burned-out building north of the Samson rock crushing plant, and south of the South Vegas ruins' east entrance, where they harass the NCR garrison at Camp McCarran.",
+    "Xbox 360 Driver Nephi is not marked as a respawning non-player character in the GECK, but scripting issues may rarely cause him to respawn some time after killing him."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "FiendsNew Canaanites(formerly)[1][Non-game 1]",
+  "role": "Fiends leader",
+  "detailed_location": "South Vegas ruins east entrance",
+  "voice_actor": "Jesse Burch",
+  "special": {
+    "Strength": 10,
+    "Perception": 5,
+    "Endurance": 8,
+    "Charisma": 2,
+    "Intelligence": 4,
+    "Agility": 6,
+    "Luck": 3
+  },
+  "mod_special_values": {
+    "Strength": 10,
+    "Perception": 6,
+    "Endurance": 8,
+    "Charisma": 2,
+    "Intelligence": 4,
+    "Agility": 6,
+    "Luck": 3
+  },
+  "level": "14",
+  "tag_skills": [
+    {
+      "Guns:": "58"
+    },
+    {
+      "Melee Weap.:": "100"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "185"
+    },
+    {
+      "Dam. Threshold:": "5"
+    }
+  ],
+  "karma": "Evil",
+  "voice_type": "MaleAdult03",
+  "geck_race": "CaucasianRaider",
+  "topics": [
+    {
+      "topic": "1EExtraFiends1EDriverNephiTopic000",
+      "topic_text": "It is? Really?",
+      "emotion": "Neutral 50",
+      "response_text": "No, you fucking dolt! Why the hell would it be a pleasure?!",
+      "index": "1"
+    },
+    {
+      "topic": "1EExtraFiends1EDriverNephiTopic001",
+      "topic_text": "Okay, I'll tell him.",
+      "emotion": "Neutral 50",
+      "response_text": "And get the fuck away from me before I cave in your skull!",
+      "index": "2"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "Who the fuck are you and why are you bothering me?",
+      "index": "3"
+    },
+    {
+      "topic": "NephiClub",
+      "topic_text": "That's a nice club you've got there.",
+      "emotion": "Neutral 50",
+      "response_text": "Fuckin' A right it is. This baby's my life, my love, my strong right arm. Killed a lot of fuckers with this hunk of iron, yessir.",
+      "index": "5"
+    },
+    {
+      "topic": "NephiFiends",
+      "topic_text": "Can you tell me about Cook-Cook and Violet?",
+      "emotion": "Neutral 50",
+      "response_text": "[Male]I *could.* I'm not terribly inclined to, though. If you go talk to them, they might kill you and rob me of the fun.",
+      "index": "6"
+    },
+    {
+      "topic": "NephiIntro",
+      "topic_text": "Who are you?",
+      "emotion": "Neutral 50",
+      "response_text": "Name's Nephi, friend. Driver Nephi. Pleasure to meet you.",
+      "index": "8"
+    },
+    {
+      "topic": "NephiNCR",
+      "topic_text": "How many NCR citizens you figure you've killed with that club?",
+      "emotion": "Neutral 50",
+      "response_text": "Huh? Oh, lots. More than any other Fiend - hundreds, maybe. Wham, bam, \"oh god, my brains, you hit me in my brains.\" Easy as that.",
+      "index": "9"
+    },
+    {
+      "topic": "NephiUtah",
+      "topic_text": "I hear you came from Utah. A friend of yours asked me to check on you. Bert?",
+      "emotion": "Neutral 50",
+      "response_text": "Bert? That scaly, corpse-looking fuck, you tell him I'm never going back to his little cult!",
+      "index": "10"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Get fucked.",
+      "index": "11"
+    }
+  ],
+  "combat": []
+}

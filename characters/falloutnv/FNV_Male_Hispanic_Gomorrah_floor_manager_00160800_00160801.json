@@ -1,0 +1,57 @@
+{
+  "name": "Gomorrah floor manager",
+  "url": "/wiki/Gomorrah_floor_manager",
+  "dialogue_name": "VGOMFloorManager.txt",
+  "dialogue_url": "/wiki/VGOMFloorManager.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "00160800",
+  "ref_id": "00160801",
+  "editor_id": "vGOMFloorManager",
+  "location": "Gomorrahcasino floor",
+  "location_url": "/wiki/Gomorrah",
+  "descriptions": [
+    "The Gomorrah floor manager is a member of the Omertas holding the responsibility as the floor manager of the Gomorrah casino in 2281.",
+    "This member of the Omertas works as a floor manager to make the Gomorrah casino more approachable and guest friendly. The casino does this by having their floor manager give out special prizes like food and drink, which entices Strip visitors to make use of the establishment.",
+    "The floor manager will give the Courier food and drinks to encourage the player to gamble. The food and drinks will be given if the player wins some money. If you win too much and break the bank, the floor manager will ask the player to leave the casino and stop gambling at that establishment.",
+    "Big Winner, The Gomorrah: After winning 2,250, 4,500, and 6,750 chips from gambling, the floor manager will reward you with special prizes. However after winning 9,000 chips, he bans you from playing at Gomorrah.",
+    "The Gomorrah floor manager is noticeably shorter than other non-player characters, standing about a head shorter. His body set scale is 0.9 which makes him 5'5\" (1.65 m), the same height as Malefic Maud, while the average NPC/player is set to 1 which is 6' (1.83 m). The only human character shorter is Irate Ida who is 5'1\" (1.55 m) with a scale of 0.85, and children who are 4'10\" (1.46 m) with a scale of 0.8. The tallest human is Lanius at 6'11\" (2.10 m) tall with a height modifier of 1.15."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Omertas",
+  "role": "Floor manager",
+  "detailed_location": "Gomorrahmain level",
+  "voice_actor": "Alex Mendoza",
+  "special": {
+    "Strength": 6,
+    "Perception": 6,
+    "Endurance": 5,
+    "Charisma": 3,
+    "Intelligence": 3,
+    "Agility": 7,
+    "Luck": 4
+  },
+  "level": "16",
+  "tag_skills": [],
+  "karma": "Neutral",
+  "voice_type": "MaleAdult07",
+  "geck_race": "Hispanic",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "{Small Fry}Hey, hey! Look who has the hot hands?{Friendly}Here, have something special on the house.",
+      "index": "1"
+    }
+  ],
+  "conversation": [],
+  "combat": []
+}

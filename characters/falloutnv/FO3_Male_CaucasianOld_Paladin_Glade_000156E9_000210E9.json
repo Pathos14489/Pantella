@@ -1,0 +1,191 @@
+{
+  "name": "Paladin Glade",
+  "url": "/wiki/Glade",
+  "dialogue_name": "PaladinGlade.txt",
+  "dialogue_url": "/wiki/PaladinGlade.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000156E9",
+  "ref_id": "000210E9",
+  "editor_id": "PaladinGlade",
+  "location": "Citadel A ring",
+  "location_url": "/wiki/Citadel_A_ring",
+  "descriptions": [
+    "Paladin Glade is the heavy weapons expert of Lyons' Pride in 2277, and is located in the Citadel A ring.",
+    "Like the rest of the members of Lyons' Pride, Glade was handpicked by Sarah Lyons to be part of the elite unit.",
+    "Upon first meeting the Lone Wanderer, Glade is friendly and welcoming towards them, expressing relief that they and Madison Li were able to escape from the Jefferson Memorial after the arrival of the Enclave.",
+    "Glade is also something of a jokester, making a couple of humorous remarks in conversations and playing pranks such as repeatedly hacking into Sawbones' terminal and leaving him messages.",
+    "He will interact with Knight Captain Dusk during the latter's live fire exercises. Although Glade is impressed by Dusk's marksmanship, she insists that one of her shots dropped by a couple of inches, hitting the target's nose instead of the eye, something that Glade is surprised that she cares about, as the target would have been killed either way.",
+    "Paladin Glade appears in Fallout 3 and in Fallout Shelter Online."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Brotherhood of SteelLyons' Pride",
+  "role": "Heavy weapons specialist",
+  "detailed_location": "The Citadel'sA ring",
+  "voice_actor": "Gus Travers",
+  "special": {
+    "Strength": 7,
+    "Perception": 7,
+    "Endurance": 6,
+    "Charisma": 4,
+    "Intelligence": 3,
+    "Agility": 4,
+    "Luck": 4
+  },
+  "mod_special_values": {
+    "Strength": 9,
+    "Perception": 7,
+    "Endurance": 6,
+    "Charisma": 4,
+    "Intelligence": 3,
+    "Agility": 2,
+    "Luck": 4
+  },
+  "level": "4→7→11",
+  "tag_skills": [
+    {
+      "Big Guns:": "44→57→74"
+    },
+    {
+      "Energy Weap.:": "46→59→76"
+    },
+    {
+      "Small Guns:": "40→53→70"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "70→95→125"
+    },
+    {
+      "Damage Res.:": "48%"
+    }
+  ],
+  "karma": "Good",
+  "voice_type": "MaleAdult05DC",
+  "geck_race": "CaucasianOld",
+  "topics": [
+    {
+      "topic": "CitGladeGallows",
+      "topic_text": "I know Gallows' real name.",
+      "emotion": "Neutral 50",
+      "response_text": "Really? You're kidding me. What is it?",
+      "index": "1"
+    },
+    {
+      "topic": "CitGladeGallows1",
+      "topic_text": "What's the pool up to?",
+      "emotion": "Neutral 50",
+      "response_text": "It's gotta be, what? 2000 caps now? Boy's a mystery, no doubt about it.",
+      "index": "5"
+    },
+    {
+      "topic": "CitGladeGallows2",
+      "topic_text": "No one knows his name?",
+      "emotion": "Neutral 50",
+      "response_text": "Nope. No one knows his name, where he comes from  nothin'. He's a mean little bastard for sure.",
+      "index": "7"
+    },
+    {
+      "topic": "CitGladeGallowsName1",
+      "topic_text": "You never did tell me what I'd win.",
+      "emotion": "Happy 50",
+      "response_text": "Ha! Good point. The pool is up to about 1,000 caps these days.",
+      "index": "9"
+    },
+    {
+      "topic": "CitGladeGallowsName2",
+      "topic_text": "It's Irving.",
+      "emotion": "Neutral 50",
+      "response_text": "Hahahaha! Irving! Are you serious?",
+      "index": "11"
+    },
+    {
+      "topic": "CitGladeGallowsNameEND",
+      "topic_text": "On second thought... I think I'll keep it to myself.",
+      "emotion": "Neutral 50",
+      "response_text": "Ha! It's not like he'd tell you anyway.",
+      "index": "14"
+    },
+    {
+      "topic": "DLC03TLCitadelEnclave",
+      "topic_text": "So... Any thoughts on the Enclave?",
+      "emotion": "Neutral 50",
+      "response_text": "This plan sounds crazy, doesn't it?",
+      "index": "15"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "Glad to see you and that egghead Li made it here in one piece. I heard what happened at that purifier. Hell of thing.",
+      "index": "21"
+    },
+    {
+      "topic": "TLCitadelEnclave",
+      "topic_text": "So... Any thoughts on the Enclave?",
+      "emotion": "Fear 10",
+      "response_text": "Man, I don't know. Fighting Uglies is one thing, but we've never gone up against anyone that well trained or organized. Even their tech is better.",
+      "index": "25"
+    },
+    {
+      "topic": "TLCitadelSuperMutant",
+      "topic_text": "Care to share anything about the Super Mutants?",
+      "emotion": "Anger 10",
+      "response_text": "Man, nothing dies like an Ugly. I once saw Colvin snipe the leg off of one at 200 yards. Thing pirouetted like a figure skater!{laughing while he says this.}",
+      "index": "27"
+    },
+    {
+      "topic": "TLLyonsPride",
+      "topic_text": "What can you tell me about the Lyons' Pride?",
+      "emotion": "Happy 50",
+      "response_text": "You my friend, are talking about the most elite fighting force ever assembled within the Brotherhood of Steel.",
+      "index": "28"
+    },
+    {
+      "topic": "TLPrideJobWhat do you do here?",
+      "topic_text": "So what's your job in the Lyons' Pride?",
+      "emotion": "Neutral 50",
+      "response_text": "Me? Heavy weapons. Miniguns, Missile Launchers... If it's bigger than a human and goes boom, I'm all over it.",
+      "index": "30"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "CitTalkDuskGlade2",
+      "topic_text": "CitTalkDuskGlade2",
+      "emotion": "Neutral 50",
+      "response_text": "Are you kidding? A couple of inches? So you get the nose instead of the eye. Who cares?",
+      "index": "31"
+    },
+    {
+      "topic": "CitTalkDuskGlade4",
+      "topic_text": "CitTalkDuskGlade4",
+      "emotion": "Neutral 50",
+      "response_text": "You're really scary, Dusk. Has anyone ever told you that?",
+      "index": "33"
+    },
+    {
+      "topic": "GOODBYE",
+      "topic_text": "I have to go now.",
+      "emotion": "Neutral 50",
+      "response_text": "Back to it.{Grumbling under his breath at the incompetency of his students.}",
+      "index": "35"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Neutral 50",
+      "response_text": "Damn, Dusky. You're a beast with that rifle.",
+      "index": "36"
+    }
+  ],
+  "combat": []
+}

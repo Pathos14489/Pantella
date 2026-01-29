@@ -1,0 +1,101 @@
+{
+  "name": "Squill",
+  "url": "/wiki/Squill",
+  "dialogue_name": "DLC01Squill.txt",
+  "dialogue_url": "/wiki/DLC01Squill.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "xx00413A",
+  "ref_id": "xx004600",
+  "editor_id": "DLC01Squill",
+  "location": "The Pitt Uptown",
+  "location_url": "/wiki/The_Pitt_Uptown",
+  "descriptions": [
+    "Squill is a member of the Pitt raiders in 2277.",
+    "Unlike many of the other Pitt raiders, Squill is a good-natured and enthusiastic soldier.",
+    "Squill happily mentions that she often fires into the arena from the spectator area if the fight is not exciting enough. She also mentions that when this was done to her when she was a gladiator slave, she shot back, and hopes the Lone Wanderer would do the same as she did if she had shot down at them during their own fights.",
+    "Squill appears only in the Fallout 3 add-on The Pitt.",
+    "Squill's name comes from the local shortening of the Squirrel Hill neighborhood in Pittsburgh."
+  ],
+  "race": "Human",
+  "gender": "Female",
+  "affiliation": "Pitt raidersPitt slaves(formerly)",
+  "role": "Slaver",
+  "detailed_location": "The Pitt Uptown",
+  "voice_actor": "Vanessa Richardson",
+  "special": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 3,
+    "Intelligence": 3,
+    "Agility": 7,
+    "Luck": 5
+  },
+  "level": "1→20→30 (Broken Steelonly)",
+  "tag_skills": [
+    {
+      "Melee Weap.:": "32→100"
+    },
+    {
+      "Small Guns:": "34→100"
+    },
+    {
+      "Unarmed:": "28→100"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "65→160→210"
+    },
+    {
+      "Critical Chance:": "5%"
+    },
+    {
+      "Unarmed Dam.:": "1.9→5.5"
+    },
+    {
+      "Poison Resist.:": "15%"
+    },
+    {
+      "Rad. Resist.:": "6%"
+    },
+    {
+      "Carry Weight:": "210"
+    }
+  ],
+  "karma": "Evil",
+  "voice_type": "DLC01RaiderFemaleColdVoice",
+  "geck_race": "AfricanAmericanRaider",
+  "topics": [
+    {
+      "topic": "DLC01HavenResponse1A",
+      "topic_text": "Glad I kept you entertained, then!",
+      "emotion": "Happy 50",
+      "response_text": "That worked out well for all of us, didn't it?",
+      "index": "1"
+    },
+    {
+      "topic": "DLC01HavenResponse1B",
+      "topic_text": "Good thing you didn't. I would have shot back.",
+      "emotion": "Happy 50",
+      "response_text": "I should hope so! That's what I did when I was fighting down there.",
+      "index": "3"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Happy 50",
+      "response_text": "Hey, if it ain't the champion of the Hole! That was a hell of a show you put on down there!",
+      "index": "5"
+    }
+  ],
+  "conversation": [],
+  "combat": []
+}

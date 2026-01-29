@@ -1,0 +1,110 @@
+{
+  "name": "Officer Gomez",
+  "url": "/wiki/Herman_Gomez",
+  "dialogue_name": "Vault101Security04.txt",
+  "dialogue_url": "/wiki/Vault101Security04.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "00027057",
+  "ref_id": "0003A901",
+  "editor_id": "Vault101Security04",
+  "location": "",
+  "location_url": null,
+  "descriptions": [
+    "Officer Herman Gomez is a resident and security officer of Vault 101 in the year 2277.",
+    "Officer Gomez is a straight example of the \"good cop.\" The father of Freddie Gomez, he tries his best to keep his son away from the Tunnel Snakes' influence. However, he knows that this is difficult because there are few other children Freddie's age in the vault.",
+    "When returning to the vault during Trouble on the Homefront, he will have an entirely different voice type. This is due to him using the same dialogue as Officer Armstrong, who would appear in the quest fulfilling Gomez's role if he died during Escape! Since no dialogue was recorded separately by Jeff Baker, Gomez was simply given the same dialogue."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Vault 101 security",
+  "role": "Security Officer",
+  "detailed_location": "Vault 101",
+  "voice_actor": "Jeff BakerGregory Gorton",
+  "special": {
+    "Strength": 6,
+    "Perception": 6,
+    "Endurance": 5,
+    "Charisma": 3,
+    "Intelligence": 3,
+    "Agility": 7,
+    "Luck": 4
+  },
+  "karma": "Evil (inGrowing Up FastandEscape!)Neutral (inTrouble on the Homefront)",
+  "voice_type": "MaleAdult01DefaultMaleAdult01DefaultB",
+  "geck_race": "Hispanic",
+  "topics": [
+    {
+      "topic": "CG02ButchFightA1",
+      "topic_text": "It was nothing. Just boys being boys.",
+      "emotion": "Happy 50",
+      "response_text": "That's fine, son. I'm glad to see you're not letting Butch bully you.Play soundFO3 OfficerGomez GladToSee.ogghttps://fallout.fandom.com/wiki/File:FO3_OfficerGomez_GladToSee.oggnoicon",
+      "index": "1"
+    },
+    {
+      "topic": "CG02ButchFightA2",
+      "topic_text": "He tried to take my birthday present!",
+      "emotion": "Anger 50",
+      "response_text": "Why that little... I figured it was him that started it. He's been nothing but trouble since the day he was born.Play soundFO3 OfficerGomez FiguredItWas.ogghttps://fallout.fandom.com/wiki/File:FO3_OfficerGomez_FiguredItWas.oggnoicon",
+      "index": "7"
+    },
+    {
+      "topic": "CG02ButchFightA3",
+      "topic_text": "Really, I was the one who started it. It wasn't his fault.",
+      "emotion": "Surprise 65",
+      "response_text": "Really? Well, if you say so. I'll stay out of it if that's the way you want it.Play soundFO3 OfficerGomez IfYouSaySo.ogghttps://fallout.fandom.com/wiki/File:FO3_OfficerGomez_IfYouSaySo.oggnoicon",
+      "index": "9"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Sad 20",
+      "response_text": "I hope Butch didn't hurt you. Do you want to tell me what that was all about?Play soundFO3 OfficerGomez HopeButchDidnt.ogghttps://fallout.fandom.com/wiki/File:FO3_OfficerGomez_HopeButchDidnt.oggnoicon",
+      "index": "11"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "CG02GomezButchScene",
+      "topic_text": "CG02GomezButchScene",
+      "emotion": "Anger 25",
+      "response_text": "All right, Butch.Play soundFO3 OfficerGomez AllRightButch.ogghttps://fallout.fandom.com/wiki/File:FO3_OfficerGomez_AllRightButch.oggnoicon",
+      "index": "14"
+    },
+    {
+      "topic": "CG02IntroSurprise",
+      "topic_text": "CG02IntroSurprise",
+      "emotion": "Neutral 50",
+      "response_text": "Surprise!Play soundFO3 OfficerGomez Surprise.ogghttps://fallout.fandom.com/wiki/File:FO3_OfficerGomez_Surprise.oggnoicon",
+      "index": "18"
+    },
+    {
+      "topic": "CG02IntroYell",
+      "topic_text": "CG02IntroYell",
+      "emotion": "Neutral 50",
+      "response_text": "Happy birthday!Play soundFO3 OfficerGomez HappyBirthday.ogghttps://fallout.fandom.com/wiki/File:FO3_OfficerGomez_HappyBirthday.oggnoicon",
+      "index": "19"
+    },
+    {
+      "topic": "CG02OfficerGomezSpeech",
+      "topic_text": "CG02OfficerGomezSpeech",
+      "emotion": "Surprise 25",
+      "response_text": "Stanley, you turned the lights on too fast. You blinded the poor kid!Play soundFo3_Gomez_TurnedTheLightsOn.ogghttps://fallout.fandom.com/wiki/File:Fo3_Gomez_TurnedTheLightsOn.oggnoicon",
+      "index": "20"
+    },
+    {
+      "topic": "CG02PartyTalkAmataGreeting",
+      "topic_text": "CG02PartyTalkAmataGreeting",
+      "emotion": "Happy 50",
+      "response_text": "I'm glad to be here. I think it's important to keep in touch with the young people. You know, as part of my job. Plus, well, I like parties.Play soundFO3 OfficerGomez GladToBe.ogghttps://fallout.fandom.com/wiki/File:FO3_OfficerGomez_GladToBe.oggnoicon",
+      "index": "25"
+    }
+  ],
+  "combat": []
+}

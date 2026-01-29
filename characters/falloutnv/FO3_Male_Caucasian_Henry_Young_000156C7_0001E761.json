@@ -1,0 +1,126 @@
+{
+  "name": "Henry Young",
+  "url": "/wiki/Henry_Young",
+  "dialogue_name": "HenryYoung.txt",
+  "dialogue_url": "/wiki/HenryYoung.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": true,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000156C7",
+  "ref_id": "0001E761",
+  "editor_id": "HenryYoung",
+  "location": "Rivet City",
+  "location_url": "/wiki/Rivet_City",
+  "descriptions": [
+    "Henry Young is a handyman who lives in Rivet City with his wife, Christie, and daughter, C.J. in 2277.",
+    "Henry's responsibility is general handiwork in Rivet City. Because of the frequency of repairs and the size of the settlement, he rarely has time to see his daughter C.J. Henry frequently laments the lack of people in his line of work and is privately frustrated with how few residents seem to pull their weight.",
+    "Although his daughter's friendship with James Hargrave is generally looked at with concern by other Rivet City residents, his wife Christie instead hopes that C.J. will be able to have a calming effect on the rebellious James.",
+    "The Youngs are a family of devout believers. They go to church every Sunday, taking their place in the pews and thank God for blessing their family,",
+    "Should James Hargrave have been convinced to runaway in a feeble attempt at getting attention C.J. will follow him. If this does happen both Henry and Christie Young will go into a panic searching for them. Should the Lone Wanderer find and return them they will be relieved.",
+    "Husband to Christie and father to C.J. Henry loves and is proud of his family."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Rivet City",
+  "role": "Handyman",
+  "detailed_location": "Rivet City",
+  "voice_actor": "Jeff Baker",
+  "special": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 5,
+    "Intelligence": 4,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "level": "1",
+  "tag_skills": [
+    {
+      "Barter:": "30"
+    },
+    {
+      "Medicine:": "28"
+    },
+    {
+      "Melee Weap.:": "32"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Good",
+  "voice_type": "MaleAdult01DefaultDC",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Sad 50",
+      "response_text": "This isn't a good time. My daugher, C.J. is missing.",
+      "index": "1"
+    },
+    {
+      "topic": "MS03RCHistory1Could I ask you about Rivet City's history?",
+      "topic_text": "What do you know about Rivet City's history?",
+      "emotion": "Neutral 50",
+      "response_text": "Hmm... Despite all my time working here, I've got no clue. Seagrave Holmes is about the only person I know who's more familiar with the place.",
+      "index": "5"
+    },
+    {
+      "topic": "MS14TedFind",
+      "topic_text": "Where can I find Ted Strayer?",
+      "emotion": "Neutral 50",
+      "response_text": "Have you tried the common room?  That's where he sleeps.",
+      "index": "8"
+    },
+    {
+      "topic": "RCTopicCJYoungMissingHave you seen C.J. Young lately?",
+      "topic_text": "I found C.J. She was on the lower deck with James Hargrave.",
+      "emotion": "Surprise 50",
+      "response_text": "Thank you for finding C.J.",
+      "index": "11"
+    },
+    {
+      "topic": "RCTopicHangarDeckPeople",
+      "topic_text": "What is this I hear about the Hangar Deck and Upper Deck?",
+      "emotion": "Fear 50",
+      "response_text": "We do the best we can to take care of everyone on the Hangar Deck.",
+      "index": "13"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYEI have to go now.",
+      "topic_text": "Goodbye, Henry.",
+      "emotion": "Neutral 50",
+      "response_text": "Nice talking to you.",
+      "index": "15"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Surprise 50",
+      "response_text": "Shall we go for a walk on the flight deck tonight, dear?",
+      "index": "16"
+    },
+    {
+      "topic": "RCGoodbye",
+      "topic_text": "RCGoodbye",
+      "emotion": "Neutral 50",
+      "response_text": "Yes, Doctor Li. I've recalibrated with them.",
+      "index": "27"
+    },
+    {
+      "topic": "RCPackageEnd",
+      "topic_text": "RCPackageEnd",
+      "emotion": "Happy 50",
+      "response_text": "Time for breakfast. Let's go.",
+      "index": "43"
+    }
+  ],
+  "combat": []
+}

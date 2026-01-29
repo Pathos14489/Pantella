@@ -1,0 +1,137 @@
+{
+  "name": "Defender Rockfowl",
+  "url": "/wiki/Rococo_Rockfowl",
+  "dialogue_name": "DefenderRockfowl.txt",
+  "dialogue_url": "/wiki/DefenderRockfowl.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "00043DEC",
+  "ref_id": "00043DEF",
+  "editor_id": "DefenderRockfowl",
+  "location": "OutsideFort Independence",
+  "location_url": "/wiki/Fort_Independence",
+  "descriptions": [
+    "Defender Rococo Rockfowl is a soldier and heavy-weapons specialist of the Brotherhood of Steel Outcasts, stationed at Fort Independence in Fallout 3.",
+    "Rococo Rockfowl is the Outcasts' heavy-weapons specialist at Fort Independence, primarily tasked with guarding the bridge from the Fairfax ruins due to regular raider incursions.",
+    "Despite wishing to prioritize the Brotherhood's original mission, Rockfowl enjoyed serving with the Brotherhood of Steel and claims to have no quarrel with Elder Lyons or his branch, though this was not enough to dissuade him from following after Casdin, whose ideology he aligned with more.",
+    "Unlike his counterpart Defender Morgan, who is a \"no-nonsense soldier,\" Rockfowl operates in a laid-back manner belying his competence.",
+    "The son of an avid reader, Rockfowl's father chose to name him \"Rococo Rockfowl\" after being inspired by reading the Encyclopedia Atomica (Volume VIII Radiology-Saskatchewan) and picking his name out from here.",
+    "Defender Rockfowl patrols the highway overpass next to the entrance to Fort Independence.",
+    "Rockfowl will attack if the Lone Wanderer decides to start a fight with the Outcasts.",
+    "Defender Rockfowl's field report is recorded by a different voice actor than Rockfowl's in-game voice. Protector Casdin's field report, similarly, is also recorded by a different voice actor."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Brotherhood of Steel(formerly)Brotherhood Outcasts",
+  "role": "Heavy-weapons specialist",
+  "detailed_location": "Fort Independence",
+  "voice_actor": "Pete Papageorge",
+  "special": {
+    "Strength": 5,
+    "Perception": 7,
+    "Endurance": 6,
+    "Charisma": 4,
+    "Intelligence": 3,
+    "Agility": 6,
+    "Luck": 4
+  },
+  "mod_special_values": {
+    "Strength": 7,
+    "Perception": 7,
+    "Endurance": 6,
+    "Charisma": 4,
+    "Intelligence": 3,
+    "Agility": 4,
+    "Luck": 4
+  },
+  "level": "10→15 (player level x1.25)",
+  "tag_skills": [
+    {
+      "Big Guns:": "70→91"
+    },
+    {
+      "Energy Weap.:": "72→93"
+    },
+    {
+      "Small Guns:": "66→87(62→83)"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "80→105"
+    },
+    {
+      "Damage Res.:": "48%"
+    }
+  ],
+  "karma": "Good",
+  "voice_type": "MaleAdult02DC",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "AboutBrotherhood1Do you sell any specialty items?",
+      "topic_text": "How do you feel about the Brotherhood of Steel?",
+      "emotion": "Sad 25",
+      "response_text": "I used to like serving with them, I really did. But, you know, the technology has to come first.",
+      "index": "1"
+    },
+    {
+      "topic": "AboutOutcasts1MS07AboutOutcasts1",
+      "topic_text": "Who are you people?",
+      "emotion": "Anger 50",
+      "response_text": "We've got power armor and big guns and we're the ones doing the talking right now.{Playfully threatening}",
+      "index": "4"
+    },
+    {
+      "topic": "FFOutcastsGreeting1AMS07OutcastGreeting1A",
+      "topic_text": "Good to meet you, Rock. I hope you're on my side.",
+      "emotion": "Happy 25",
+      "response_text": "Don't shoot at me or my friends, I think we'll get along just fine!",
+      "index": "6"
+    },
+    {
+      "topic": "FFOutcastsGreeting1BMS07OutcastGreeting1B",
+      "topic_text": "Rococo Rockfowl? How did you end up with a name like that?",
+      "emotion": "Happy 10",
+      "response_text": "Pop had an encyclopedia. He was real proud of it.{Pleasant, but with mild undertones of resentment.}",
+      "index": "7"
+    },
+    {
+      "topic": "FFOutcastsGreeting1CMS07OutcastGreeting1C",
+      "topic_text": "How about I skip right to calling you \"Coco\"?",
+      "emotion": "Anger 25",
+      "response_text": "Then I think we'd have a problem. And you don't want to be a problem around here.",
+      "index": "10"
+    },
+    {
+      "topic": "FFOutcastsWork1MS07OutcastWork",
+      "topic_text": "Can I join your group?",
+      "emotion": "Sad 10",
+      "response_text": "Nope. Sorry. Protector Casdin says the locals around here are barely smarter than the Mole Rats.",
+      "index": "12"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Happy 40",
+      "response_text": "Defender Rococo Rockfowl, at your service.",
+      "index": "16"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Neutral 50",
+      "response_text": "Don't start anything and you'll be fine. Um, probably.",
+      "index": "21"
+    }
+  ],
+  "combat": []
+}

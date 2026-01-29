@@ -1,0 +1,231 @@
+{
+  "name": "Doctor Preston",
+  "url": "/wiki/Preston",
+  "dialogue_name": "DoctorPreston.txt",
+  "dialogue_url": "/wiki/DoctorPreston.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": true,
+  "is_merchant": true,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000156D0",
+  "ref_id": "0001E76A",
+  "editor_id": "DoctorPreston",
+  "location": "Rivet City clinic",
+  "location_url": null,
+  "descriptions": [
+    "Doctor Preston is the physician of Rivet City in 2277.",
+    "Born in 2227, Dr. Preston is a kind old man who is well-loved by Rivet City's denizens. Much of this has to do with the fact that he genuinely loves helping the injured and the sick. He takes his job in the Rivet City clinic seriously and treats his patients to the best of his ability.",
+    "The doctor is a creature of habit in his personal life. He eats (and drinks) solely at the Weatherly Hotel, where Mister Buckingham knows his usual order by (mechanical) heart.",
+    "Although Preston is in his fifties, he does not know much about Rivet City's history, as he hails from elsewhere.",
+    "Doctor Preston wakes up at 6 a.m. and eats at the Weatherly Hotel until 8 a.m. He will spend the next 13 hours in the Rivet City clinic, only coming out once at 4 p.m. to eat dinner at the Weatherly Hotel until 6 p.m. before returning. At 10 p.m., he will leave the clinic and go to sleep in his room. On Thursdays, Doctor Preston will additionally visit Doctor Li in the Rivet City science lab from 8 to 10 p.m. for her weekly checkup; this will stop happening after she leaves the city.",
+    "If the player asks the doctor to purchase chems, he will respond that he \"is a doctor, not a dealer!\" This is an allusion to the phrase \"I'm a doctor, not a ...\" spoken by the Star Trek character Leonard McCoy."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Rivet City",
+  "role": "Doctor",
+  "detailed_location": "Rivet City clinic",
+  "voice_actor": "Gregory Gorton",
+  "special": {
+    "Strength": 4,
+    "Perception": 6,
+    "Endurance": 4,
+    "Charisma": 6,
+    "Intelligence": 7,
+    "Agility": 5,
+    "Luck": 4
+  },
+  "level": "1",
+  "tag_skills": [
+    {
+      "Barter:": "31"
+    },
+    {
+      "Medicine:": "58"
+    },
+    {
+      "Science:": "33(38)"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Good",
+  "voice_type": "MaleAdult01DefaultBDC",
+  "geck_race": "AsianOld",
+  "topics": [
+    {
+      "topic": "DLC03WQSickDoctorTopicFull house today, Doc. What's wrong with everybody?",
+      "topic_text": "Doc, it's crowded in your clinic. Something going around I should worry about?",
+      "emotion": "Surprise 50",
+      "response_text": "Oh no... I'm fairly certain it's not contagious. Though, we are burning the bodies of the deceased, just in case...{puzzled}",
+      "index": "1"
+    },
+    {
+      "topic": "DoctorSupplies",
+      "topic_text": "I need medical supplies.",
+      "emotion": "Neutral 50",
+      "response_text": "Sure thing. Here's what I have.",
+      "index": "3"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Happy 50",
+      "response_text": "You're in the Rivet City Clinic. I'm Doctor Preston.",
+      "index": "4"
+    },
+    {
+      "topic": "MS03RCHistory1",
+      "topic_text": "Could I ask you about Rivet City's history?",
+      "emotion": "Happy 20",
+      "response_text": "Oh, I'd like to help, I really would. But I don't know the first thing about this place's history.",
+      "index": "8"
+    },
+    {
+      "topic": "MS08MedicalClue1",
+      "topic_text": "Do you know anything about some android who needed a surgeon?",
+      "emotion": "Neutral 50",
+      "response_text": "Well... ancient rumor had it that some hotshot from the Commonwealth was looking for special surgery, and some kind of computer tech.",
+      "index": "10"
+    },
+    {
+      "topic": "MS08MedicalClue2",
+      "topic_text": "What do you know about this android from the Commonwealth?",
+      "emotion": "Neutral 50",
+      "response_text": "That old story? Well, now.... I haven't heard talk of that in quite some time. It was all just a rumor. A hoax. Someone's idea of a practical joke.",
+      "index": "11"
+    },
+    {
+      "topic": "MS08MedicalClue3",
+      "topic_text": "Ever do any facial surgery? Maybe on someone from the Commonwealth?",
+      "emotion": "Neutral 50",
+      "response_text": "Facial surgery's way too dangerous to try. Need special equipment and expertise. Hmm. Reminds me of this old hoax. Here, listen to this holotape.",
+      "index": "15"
+    },
+    {
+      "topic": "MS08MedicalClue3Bribe",
+      "topic_text": "You ever do a face job on an android from the North? <Jingle purse of 100 caps.>",
+      "emotion": "Neutral 50",
+      "response_text": "Facial surgery's way too dangerous to try. Need special equipment and expertise. Hmm. Reminds me of this old hoax. Here, listen to this holotape.",
+      "index": "18"
+    },
+    {
+      "topic": "MS08MedicalClue3Stat",
+      "topic_text": "A patient of mine needs a facial epidermal augmentation. You ever perform one?",
+      "emotion": "Neutral 50",
+      "response_text": "Facial surgery's way too dangerous to try. Need special equipment and expertise. Hmm. Reminds me of this old hoax. Here, listen to this holotape.",
+      "index": "19"
+    },
+    {
+      "topic": "MS08MedicalClue4",
+      "topic_text": "You know who might have a Lipoplasticator or Micro Dermal Graftilizer?",
+      "emotion": "Neutral 50",
+      "response_text": "I heard a rumor that old Pinkerton at Rivet City somehow conjured up a Lipoplasticator and Micro Dermal Graftilizer.",
+      "index": "20"
+    },
+    {
+      "topic": "MS08MedicalClue4Bribe",
+      "topic_text": "Here's 100 caps for the locale of a Lipoplasticator or Micro Dermal Graftilizer.",
+      "emotion": "Neutral 50",
+      "response_text": "I heard a rumor that old Pinkerton at Rivet City somehow conjured up a Lipoplasticator and Micro Dermal Graftilizer.",
+      "index": "23"
+    },
+    {
+      "topic": "MS08MedicalClue4Stat",
+      "topic_text": "I need to find a Micro Dermal Graftilizer for epidermal augmentation surgery.",
+      "emotion": "Neutral 50",
+      "response_text": "I heard a rumor that old Pinkerton at Rivet City somehow conjured up a Lipoplasticator and Micro Dermal Graftilizer.",
+      "index": "24"
+    },
+    {
+      "topic": "MS08TopicPinkertonIs there anyone on this ship named Pinkerton?",
+      "topic_text": "You know of someone named Pinkerton?",
+      "emotion": "Surprise 50",
+      "response_text": "Pinkerton, eh? That name takes me way back. Claimed to have cured radiation poisoning. Or was it food poisoning? I don't recall.",
+      "index": "25"
+    },
+    {
+      "topic": "MS14TedFind",
+      "topic_text": "Where can I find Ted Strayer?",
+      "emotion": "Neutral 50",
+      "response_text": "Have you tried the common room?  That's where he sleeps.",
+      "index": "27"
+    },
+    {
+      "topic": "RCDocPrestonDrugs",
+      "topic_text": "Got any Chems? I could really use a fix.",
+      "emotion": "Disgust 50",
+      "response_text": "You can get that crap down at A Quick Fix. It's in the market.",
+      "index": "30"
+    },
+    {
+      "topic": "RCDocPrestonSteal",
+      "topic_text": "This place looks pretty easy to rob. You have any problems with thieves?",
+      "emotion": "Fear 50",
+      "response_text": "Don't get any cute ideas. Security is just a shout away.",
+      "index": "32"
+    },
+    {
+      "topic": "RCTopicGetDrinksWhere can I get a stiff drink?",
+      "topic_text": "Do you know where I can get something to drink?",
+      "emotion": "Happy 50",
+      "response_text": "The Weatherly Hotel is a good choice. It's on the upper deck.",
+      "index": "34"
+    },
+    {
+      "topic": "RCTopicHangarDeckPeople",
+      "topic_text": "What is this I hear about the Hangar Deck and Upper Deck?",
+      "emotion": "Sad 50",
+      "response_text": "The Upper Deck people have more money and influence than those that live on the Hangar Deck.",
+      "index": "35"
+    },
+    {
+      "topic": "RCTopicPaulieAddict",
+      "topic_text": "Did you know that Paulie Cantelli is an addict?",
+      "emotion": "Sad 50",
+      "response_text": "He's totally strung out. It's going to kill him one of these days.",
+      "index": "37"
+    },
+    {
+      "topic": "SpeechChallengeFailure",
+      "topic_text": "SpeechChallengeFailure",
+      "emotion": "Neutral 50",
+      "response_text": "Sorry. Doctors are trained in confidentiality.",
+      "index": "38"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYEI have to go now.",
+      "topic_text": "Bye, Doc.",
+      "emotion": "Neutral 50",
+      "response_text": "Take care of yourself.",
+      "index": "40"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Neutral 50",
+      "response_text": "Father Clifford, I'll let you pray with my patients, but only for a short time. They need their rest.",
+      "index": "41"
+    },
+    {
+      "topic": "RCGoodbye",
+      "topic_text": "RCGoodbye",
+      "emotion": "Anger 50",
+      "response_text": "And it's my job to make sure you stay that way, so just let me do my job.",
+      "index": "49"
+    },
+    {
+      "topic": "RCPackageEnd",
+      "topic_text": "RCPackageEnd",
+      "emotion": "Happy 50",
+      "response_text": "Think I'll go get some lunch.",
+      "index": "54"
+    }
+  ],
+  "combat": []
+}

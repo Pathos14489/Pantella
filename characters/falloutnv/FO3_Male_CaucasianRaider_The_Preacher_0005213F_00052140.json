@@ -1,0 +1,79 @@
+{
+  "name": "The Preacher",
+  "url": "/wiki/The_Preacher",
+  "dialogue_name": "FFDCAdamsMorganPreacher.txt",
+  "dialogue_url": "/wiki/FFDCAdamsMorganPreacher.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "0005213F",
+  "ref_id": "00052140",
+  "editor_id": "FFDCAdamsMorganPreacher",
+  "location": "Seward Square",
+  "location_url": "/wiki/Seward_Square",
+  "descriptions": [
+    "The Preacher (appearing as a simple wastelander in-game) is a crazed inhabitant of Seward Square in 2277.",
+    "The Preacher is standing on the second floor of a building in an alleyway west of the Ranger compound entrance in Seward Square. From there, he preaches madness to anyone that can hear him, with intermittent complaints about severe headaches. He suffers from frightening revelations.",
+    "The topics of his rants vary. He rants about the apocalypse, the sun and the sun in a jar, trees to the north and an evil worm that he plans to blow up with the explosives he gathered. The alley he overlooks has been rigged with five frag mines and five mini nukes that he detonates if anyone tries to get close to him.",
+    "There is a hostage (another wastelander) at the east end of the alley the Lone Wanderer can talk to about the booby-trapped alley and the Preacher."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "role": "Mad prophet",
+  "detailed_location": "Seward Square",
+  "voice_actor": "Jeff Baker",
+  "special": {
+    "Strength": 6,
+    "Perception": 6,
+    "Endurance": 4,
+    "Charisma": 4,
+    "Intelligence": 4,
+    "Agility": 6,
+    "Luck": 4
+  },
+  "mod_special_values": {
+    "Strength": 6,
+    "Perception": 6,
+    "Endurance": 5,
+    "Charisma": 4,
+    "Intelligence": 4,
+    "Agility": 7,
+    "Luck": 4
+  },
+  "level": "1",
+  "tag_skills": [
+    {
+      "Melee Weap.:": "35"
+    },
+    {
+      "Small Guns:": "35"
+    },
+    {
+      "Sneak:": "35"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "16(21)"
+    }
+  ],
+  "karma": "Good",
+  "voice_type": "MaleAdult01DefaultDC",
+  "geck_race": "CaucasianRaider",
+  "topics": [
+    {
+      "topic": "FFDCAdamsMorganSermon",
+      "topic_text": "FFDCAdamsMorganSermon",
+      "emotion": "Neutral 50",
+      "response_text": "And the sun will rise in the north! No! the northwest! For forty-four days and sixty-seven nights! And we'll never notice!{Insane ravings of a street preacher.}",
+      "index": "1"
+    }
+  ],
+  "conversation": [],
+  "combat": []
+}

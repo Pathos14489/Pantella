@@ -1,0 +1,94 @@
+{
+  "name": "Liza O'Malley",
+  "url": "/wiki/Liza_O%27Malley",
+  "dialogue_name": "VMS21Liza.txt",
+  "dialogue_url": "/wiki/VMS21Liza.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "0010C6FA",
+  "ref_id": "00117E7A",
+  "editor_id": "VMS21Liza",
+  "location": "NCR Embassy",
+  "location_url": "/wiki/NCR_Embassy",
+  "descriptions": [
+    "Liza O'Malley is the receptionist at the NCR Embassy in 2281.",
+    "Liza O'Malley keeps her personal history to herself, even when asked about it by the Courier. Her terminal entry states that she is tired of working at the embassy every day, and wants a vacation. She will direct the player character to Ambassador Crocker's office and the NCR barracks when asked.",
+    "Her level is set to 20 and she has 100 points in Guns, Melee Weapons and Explosives."
+  ],
+  "race": "Human",
+  "gender": "Female",
+  "affiliation": "New California Republic",
+  "role": "Receptionist",
+  "detailed_location": "NCR Embassy",
+  "voice_actor": "April Stewart",
+  "special": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 5,
+    "Intelligence": 5,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "level": "20",
+  "tag_skills": [
+    {
+      "Explosives:": "100"
+    },
+    {
+      "Guns:": "100"
+    },
+    {
+      "Melee Weap.:": "100"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Good",
+  "voice_type": "FemaleAdult03",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "Welcome to the NCR Embassy, how can I help you?",
+      "index": "1"
+    },
+    {
+      "topic": "vFreeformTheStreet02VMS21LizaTopic000",
+      "topic_text": "I'm looking for the Ambassador.",
+      "emotion": "Happy 5",
+      "response_text": "Ambassador Crocker can be found in his office through the door to my right at the end of the hall.",
+      "index": "6"
+    },
+    {
+      "topic": "vFreeformTheStreet02VMS21LizaTopic001",
+      "topic_text": "What can you tell me about the Embassy?",
+      "emotion": "Neutral 50",
+      "response_text": "The Embassy offices are to your left while the barracks and living quarters are to the right.",
+      "index": "7"
+    },
+    {
+      "topic": "vFreeformTheStreet02VMS21LizaTopic002",
+      "topic_text": "Tell me about yourself.",
+      "emotion": "Anger 5",
+      "response_text": "I don't have time to give my life story to everyone that passes through. Is there something I can actually help you with?",
+      "index": "9"
+    },
+    {
+      "topic": "vFreeformTheStreet02VMS21LizaTopic003",
+      "topic_text": "Moore sent me to talk to you about the Omertas.",
+      "emotion": "Happy 50",
+      "response_text": "Ah, excellent. I received word you may be coming. We helped the receptionist over at Gomorrah with some thugs that were taking advantage of her.",
+      "index": "10"
+    }
+  ],
+  "conversation": [],
+  "combat": []
+}

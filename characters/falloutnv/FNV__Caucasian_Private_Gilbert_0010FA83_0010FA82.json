@@ -1,0 +1,66 @@
+{
+  "name": "Private Gilbert",
+  "url": "/wiki/Gilbert",
+  "dialogue_name": "BCTrooperHostageCF.txt",
+  "dialogue_url": "/wiki/BCTrooperHostageCF.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "0010FA83",
+  "ref_id": "0010FA82",
+  "editor_id": "BCTrooperHostageCF",
+  "location": "Great Khan hideout",
+  "location_url": "/wiki/Great_Khan_hideout",
+  "descriptions": [
+    "Private Gilbert is an NCR trooper living in the Mojave Wasteland in 2281.",
+    "An NCR soldier under Lt. Monroe's command, she and fellow trooper Private Ackerman were on patrol with their squad and heading back from Novac when they came under fire from a group of Great Khans. The squad radioed for assistance but decided to chase after the Great Khans to Boulder City's ruins. There the squad got caught in the crossfire and ultimately Gilbert and Ackerman ended up getting taken hostage by the group of Great Khans while the rest of the squad escaped without harm.",
+    "Originally, if Gilbert and Ackerman were rescued they would wait at the entrance to the Boulder City ruins, unarmed, for the rest of the game. This was changed in a recent patch, causing them to simply disappear from the game world after a period of time once the player completes the Boulder City Showdown quest.",
+    "Playstation 3 If Private Gilbert is killed during the quest and her limbs were blown off, you can find her back where she was alive, but she will not have the limb that was shot off. There are no Karma penalties or actions against the NCR if you kill her while she's in this state. "
+  ],
+  "race": "Human",
+  "affiliation": "NCR Army",
+  "role": "Soldier",
+  "detailed_location": "Great Khan hideout,Boulder City",
+  "voice_actor": "Mela Lee",
+  "special": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 5,
+    "Intelligence": 5,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "level": "5",
+  "tag_skills": [
+    {
+      "Explosives:": "46"
+    },
+    {
+      "Guns:": "46"
+    },
+    {
+      "Melee Weap.:": "46"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Neutral",
+  "voice_type": "FemaleAdult09",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "Thanks for the rescue.",
+      "index": "1"
+    }
+  ],
+  "conversation": [],
+  "combat": []
+}

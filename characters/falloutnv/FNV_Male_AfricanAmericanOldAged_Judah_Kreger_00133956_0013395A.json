@@ -1,0 +1,283 @@
+{
+  "name": "Judah Kreger",
+  "url": "/wiki/Judah_Kreger",
+  "dialogue_name": "VRemJudahKreger.txt",
+  "dialogue_url": "/wiki/VRemJudahKreger.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "00133956",
+  "ref_id": "0013395A",
+  "editor_id": "VRemJudahKreger",
+  "location": "Westside",
+  "location_url": "/wiki/Westside",
+  "descriptions": [
+    "Judah Kreger is a former Enclave captain living in Westside in 2281.",
+    "An Enclave officer in command of a squad stationed at Navarro consisting of Cannibal Johnson, Orion Moreno, Daisy Whitman, Dr. Henry, and Arcade's father.",
+    "Sometime after the destruction of the Enclave Oil Rig and the NCR's sacking of Navarro, Judah fled alongside other Enclave survivors to avoid violence at the hands of the NCR and Brotherhood of Steel.",
+    "Kreger reminisces about a time when the Enclave gave him purpose.",
+    "Judah Kreger and the rest of the Enclave remnants were written by Jeff Husges, who was the designer on the quest For Auld Lang Syne, based on concepts by Joshua Sawyer. Sawyer gave the characters their names."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Enclave remnantsWestside",
+  "role": "Enclave officerTrader",
+  "detailed_location": "WestsideRemnants bunker(optional)Hoover Dam(optional)",
+  "voice_actor": "Peter Renaday",
+  "special": {
+    "Strength": 5,
+    "Perception": 6,
+    "Endurance": 6,
+    "Charisma": 5,
+    "Intelligence": 5,
+    "Agility": 8,
+    "Luck": 5
+  },
+  "level": "30",
+  "tag_skills": [],
+  "misc_skills": [],
+  "karma": "Neutral",
+  "voice_type": "MaleOld02",
+  "geck_race": "AfricanAmericanOldAged",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "Let's get going, we have a battle to win.",
+      "index": "1"
+    },
+    {
+      "topic": "VDialogueRemnantsVRemJudahKregerTopic000",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "{as a way of goodbye}Uh-huh.",
+      "index": "12"
+    },
+    {
+      "topic": "VDialogueRemnantsVRemJudahKregerTopic001",
+      "topic_text": "Arcade asked me to find you. I'm gathering the Remnants.",
+      "emotion": "Neutral 50",
+      "response_text": "{Arcade hired}{to another person}Hello, Arcade. Making some new friends, are you?",
+      "index": "13"
+    },
+    {
+      "topic": "VDialogueRemnantsVRemJudahKregerTopic002",
+      "topic_text": "What do you do in Westside?",
+      "emotion": "Neutral 50",
+      "response_text": "I help tend the crops, stand watch for Fiends, and generally help keep things civilized.",
+      "index": "16"
+    },
+    {
+      "topic": "VDialogueRemnantsVRemJudahKregerTopic003",
+      "topic_text": "You'll be the element of surprise.",
+      "emotion": "Neutral 50",
+      "response_text": "{Judah agrees to come}Swooping in on a vertibird, guns blazing? Haven't done that in years, but all right, I'm in.",
+      "index": "17"
+    },
+    {
+      "topic": "VDialogueRemnantsVRemJudahKregerTopic004",
+      "topic_text": "It was Arcade's suggestion, not mine.",
+      "emotion": "Neutral 50",
+      "response_text": "{bemused}It really must be bad out there if he's sending you to us. Is the idea that we swoop in by vertibird, guns blazing?",
+      "index": "20"
+    },
+    {
+      "topic": "VDialogueRemnantsVRemJudahKregerTopic005",
+      "topic_text": "You tell me.",
+      "emotion": "Neutral 50",
+      "response_text": "Well, assuming our equipment cache is intact, my squad would have the edge in armor and firepower.",
+      "index": "21"
+    },
+    {
+      "topic": "VDialogueRemnantsVRemJudahKregerTopic006",
+      "topic_text": "How are you going to deploy your squad?",
+      "emotion": "Neutral 50",
+      "response_text": "Moreno, Johnson, Henry, and I will be the boots on the ground. Whitman will stay with the vertibird.",
+      "index": "23"
+    },
+    {
+      "topic": "VDialogueRemnantsVRemJudahKregerTopic007",
+      "topic_text": "What is this place?",
+      "emotion": "Neutral 50",
+      "response_text": "This was a minor refueling station for vertibirds. It seemed an appropriate place to stash our equipment if we ever needed.",
+      "index": "24"
+    },
+    {
+      "topic": "VDialogueRemnantsVRemJudahKregerTopic008",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "{No decision}You still need time to think?",
+      "index": "26"
+    },
+    {
+      "topic": "VDialogueRemnantsVRemJudahKregerTopic009",
+      "topic_text": "We don't need him. If he wants to go, let him go.",
+      "emotion": "Neutral 50",
+      "response_text": "{disagreeing with player}I disagree. You're the one who wanted our help in the first place. You want us to succeed, you go talk to Moreno.",
+      "index": "28"
+    },
+    {
+      "topic": "VDialogueRemnantsVRemJudahKregerTopic010",
+      "topic_text": "I want you to help the NCR hold onto the Dam.",
+      "emotion": "Neutral 50",
+      "response_text": "Then that's the plan. We're going to have a problem with Moreno, though. He won't like that we're helping the NCR - you'll have to talk to him.",
+      "index": "29"
+    },
+    {
+      "topic": "VDialogueRemnantsVRemJudahKregerTopic011",
+      "topic_text": "Help the Legion take over the Dam.",
+      "emotion": "Neutral 50",
+      "response_text": "Well, now. An opportunity for payback after all these years. Johnson won't go along with it, though - he actually likes the NCR.",
+      "index": "30"
+    },
+    {
+      "topic": "VDialogueRemnantsVRemJudahKregerTopic012",
+      "topic_text": "You're the officer here. Can't you just order him to go along with the plan?",
+      "emotion": "Neutral 50",
+      "response_text": "I stopped being Moreno's officer a long time ago. Everyone here respects me, but they don't need to follow my orders. Not anymore.",
+      "index": "31"
+    },
+    {
+      "topic": "VDialogueRemnantsVRemJudahKregerTopic013",
+      "topic_text": "Will Moreno be a liability?",
+      "emotion": "Neutral 50",
+      "response_text": "He won't turn on us, but he's a good shot and I'd hate to do this without him.",
+      "index": "32"
+    },
+    {
+      "topic": "VDialogueRemnantsVRemJudahKregerTopic014",
+      "topic_text": "What's Moreno's problem with the NCR?",
+      "emotion": "Neutral 50",
+      "response_text": "They won, we didn't. It's as simple as that. The rest of us moved on while Moreno... didn't.",
+      "index": "33"
+    },
+    {
+      "topic": "VDialogueRemnantsVRemJudahKregerTopic015",
+      "topic_text": "Can't you just order Johnson to go along with the plan?",
+      "emotion": "Neutral 50",
+      "response_text": "I stopped being Johnson's officer a long time ago. Everyone here respects me, but they don't need to follow my orders. Not anymore.",
+      "index": "35"
+    },
+    {
+      "topic": "VDialogueRemnantsVRemJudahKregerTopic016",
+      "topic_text": "Will Johnson be a liability?",
+      "emotion": "Neutral 50",
+      "response_text": "He won't turn on us, but he's a good shot and I'd hate to do this without him.",
+      "index": "36"
+    },
+    {
+      "topic": "VDialogueRemnantsVRemJudahKregerTopic017",
+      "topic_text": "Any chance of talking Johnson into staying?",
+      "emotion": "Neutral 50",
+      "response_text": "No, I'm afraid. Johnson truly hates the Legion.",
+      "index": "37"
+    },
+    {
+      "topic": "VDialogueRemnantsVRemJudahKregerTopic018",
+      "topic_text": "I'll talk to Moreno.",
+      "emotion": "Neutral 50",
+      "response_text": "You've got only one chance at this. I know Moreno - once he's made up his mind about something, there's no changing it.",
+      "index": "38"
+    },
+    {
+      "topic": "VDialogueRemnantsVRemJudahKregerTopic019",
+      "topic_text": "Enough about Johnson. What's next?",
+      "emotion": "Neutral 50",
+      "response_text": "Since Johnson won't be needing his Power Armor, I've decided to let you have it. You'll need training in how to use it, so talk to Moreno about it.",
+      "index": "39"
+    },
+    {
+      "topic": "VDialogueRemnantsVRemJudahKregerTopic020",
+      "topic_text": "Sounds good to me. Does that mean you're in?",
+      "emotion": "Neutral 50",
+      "response_text": "{Judah agrees to come}I'll be there, but it won't mean squat if the rest of the group isn't there, too.",
+      "index": "40"
+    },
+    {
+      "topic": "VDialogueRemnantsVRemJudahKregerTopic021",
+      "topic_text": "That's way better than what I had in mind.",
+      "emotion": "Neutral 50",
+      "response_text": "{Judah agrees to come}I hope you weren't thinking we were going to take the lead. That's no job for a bunch of graybeards. Or grayheads, in Whitman's case.",
+      "index": "41"
+    },
+    {
+      "topic": "VDialogueRemnantsVRemJudahKregerTopic022",
+      "topic_text": "I think you'll be a very good distraction.",
+      "emotion": "Neutral 50",
+      "response_text": "{Judah agrees to come}Yeah, well, don't count on us sticking around if things get too hot. We're not a suicide squad. I'll go to this reunion.",
+      "index": "43"
+    },
+    {
+      "topic": "VDialogueRemnantsVRemJudahKregerTopic023",
+      "topic_text": "How long have you lived in Westside?",
+      "emotion": "Neutral 50",
+      "response_text": "Couple of years now. I was a trader for awhile, but got tired of all the walking. Westside was a good place to settle down as any.",
+      "index": "44"
+    },
+    {
+      "topic": "VDialogueRemnantsVRemJudahKregerTopic024",
+      "topic_text": "Tell me about the old days with the Enclave.",
+      "emotion": "Sad 5",
+      "response_text": "{wistful}I miss those days sometimes. We all had a purpose, you know? I admit that some of the folks in charge were pretty ruthless.",
+      "index": "45"
+    },
+    {
+      "topic": "VDialogueRemnantsVRemJudahKregerTopic025",
+      "topic_text": "What happened to the Enclave oil rig and Navarro?",
+      "emotion": "Neutral 50",
+      "response_text": "Internal sabotage took down the oil rig - never did get the full story. The NCR took out Navarro, saying we posed a threat to the region.",
+      "index": "48"
+    },
+    {
+      "topic": "VDialogueRemnantsVRemJudahKregerTopic026",
+      "topic_text": "I'd like to know more about your former squad.",
+      "emotion": "Neutral 50",
+      "response_text": "I was the officer in charge, and Johnson and Moreno were my heavy hitters. Henry handled tech things, and Whitman flew the chopper.",
+      "index": "49"
+    },
+    {
+      "topic": "VDialogueRemnantsVRemJudahKregerTopic027",
+      "topic_text": "{Player has Power Armor training}I already know how to wear Power Armor.",
+      "emotion": "Neutral 50",
+      "response_text": "Good. That'll save us some time.",
+      "index": "52"
+    },
+    {
+      "topic": "VDialogueRemnantsVRemJudahKregerTopic028",
+      "topic_text": "{Player doesn't have Power Armor training}I'll talk to her, then.",
+      "emotion": "Neutral 50",
+      "response_text": "The training might take several hours, so keep that in mind.",
+      "index": "53"
+    },
+    {
+      "topic": "VEndingRemnants",
+      "topic_text": "VEndingRemnants",
+      "emotion": "Neutral 50",
+      "response_text": "{narrating}Despite surviving the destruction of the oil rig and the loss of their comrades at Navarro, the venerable Remnants were no match for the Courier.",
+      "index": "54"
+    },
+    {
+      "topic": "vHDJudahKregerGreeting",
+      "topic_text": "{Judah Kreger Greeting}",
+      "emotion": "Neutral 50",
+      "response_text": "We are here as promised. Now let's kick some ass.",
+      "index": "62"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Uh-huh.",
+      "index": "63"
+    }
+  ],
+  "combat": []
+}

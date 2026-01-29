@@ -1,0 +1,116 @@
+{
+  "name": "Oliver Swanick",
+  "url": "/wiki/Oliver_Swanick",
+  "dialogue_name": "VNiptonSurvivor.txt",
+  "dialogue_url": "/wiki/VNiptonSurvivor.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "00134985",
+  "ref_id": "001349B6",
+  "editor_id": "vNiptonSurvivor",
+  "location": "Fleeing from the entrance ofNipton",
+  "location_url": "/wiki/Nipton",
+  "descriptions": [
+    "Oliver Swanick is a former member of the Powder Gangers and the only unscathed survivor of the massacre of Nipton carried out by Caesar's Legion in the Mojave Wasteland in 2281. He appears in Fallout: New Vegas.",
+    "Oliver Swanick was a former inmate of the NCR Correctional Facility when Samuel Cooke orchestrated a mass breakout, and he subsequently joined Eddie's newly-formed Powder Gangers in 2281. Swanick was among the Powder Gangers who were in Nipton on the day that Vulpes Inculta and the forces of the Legion captured the town's population, including the locals, the Powder Gangers, and members of the New California Republic Army. Vulpes then carried out a \"lottery\" where everyone received a ticket determining their fate, ranging from decapitation to immolation to enslavement. As the first place \"winner\" of the lottery, Swanick was the only person allowed to leave the town alive and unharmed,",
+    "When first entering Nipton, Swanick will run toward the Courier and initiate conversation. He will approach regardless of which direction one enters, then run off upon ending the dialogue.",
+    "When asked who came up with Oliver Swanick, Joshua Sawyer responded that he thought it was John Gonzalez."
+  ],
+  "race": "Human",
+  "affiliation": "Powder Gangers(formerly)",
+  "role": "SurvivorLottery \"winner\"",
+  "detailed_location": "Nipton",
+  "voice_actor": "Yuri Lowenthal",
+  "special": {
+    "Strength": 5,
+    "Perception": 6,
+    "Endurance": 5,
+    "Charisma": 3,
+    "Intelligence": 3,
+    "Agility": 5,
+    "Luck": 4
+  },
+  "level": "3",
+  "tag_skills": [
+    {
+      "Explosives:": "38"
+    },
+    {
+      "Guns:": "36"
+    },
+    {
+      "Melee Weap.:": "36"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "140"
+    },
+    {
+      "Dam. Threshold:": "0 (0/5)"
+    }
+  ],
+  "karma": "Evil",
+  "voice_type": "MaleAdult01Default",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Happy 50",
+      "response_text": "{exulting - you won lottery - you weren't killed}Yeah! Who won the lottery? I did!",
+      "index": "1"
+    },
+    {
+      "topic": "VNiptonvNiptonSurvivorTopic000",
+      "topic_text": "Are you feeling all right?",
+      "emotion": "Happy 50",
+      "response_text": "{exulting- you won lottery so you weren't killed}{are you fucking stupid?}Are you kidding me? Never felt better!",
+      "index": "5"
+    },
+    {
+      "topic": "VNiptonvNiptonSurvivorTopic001",
+      "topic_text": "What sort of lottery did you win?",
+      "emotion": "Fear 50",
+      "response_text": "{Exulting - you weren't killed}What lottery?{emphasis on \"The\"}The lottery, that's what lottery! Are you stupid?",
+      "index": "6"
+    },
+    {
+      "topic": "VNiptonvNiptonSurvivorTopic002",
+      "topic_text": "Are you a Powder Ganger?",
+      "emotion": "Neutral 50",
+      "response_text": "{exulting - so filled with joy you're not sure what player asked you}Powder Ganger? What? I mean, yeah, used to be, sure!",
+      "index": "8"
+    },
+    {
+      "topic": "VNiptonvNiptonSurvivorTopic003",
+      "topic_text": "You're the guy who won the lottery.",
+      "emotion": "Anger 50",
+      "response_text": "{suddenly angry}Lottery? You remember the lottery?",
+      "index": "10"
+    },
+    {
+      "topic": "VNiptonvNiptonSurvivorTopic004",
+      "topic_text": "Do you remember the message you were told to spread?",
+      "emotion": "Surprise 50",
+      "response_text": "{bewildered}The message? You know about that...?",
+      "index": "12"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "vNiptonSurvivorBarks",
+      "topic_text": "vNiptonSurvivorBarks",
+      "emotion": "Neutral 50",
+      "response_text": "{exulting}Hey, Nipton! Eat me!",
+      "index": "15"
+    }
+  ],
+  "combat": []
+}

@@ -1,0 +1,78 @@
+{
+  "name": "Officer Kendall",
+  "url": "/wiki/John_Kendall",
+  "dialogue_name": "CG02Vault101Security02.txt",
+  "dialogue_url": "/wiki/CG02Vault101Security02.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": true,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "0009B171",
+  "ref_id": "0009B177",
+  "editor_id": "CG02Vault101Security02",
+  "location": "Vault 101",
+  "location_url": null,
+  "descriptions": [
+    "Officer John Kendall is a security officer in Vault 101 in 2277.",
+    "John Kendall is the husband of Mary Kendall and the father of Christine and Monica. John is friendly, yet tough and no-nonsense. While he is not actively sinister, he will follow orders without putting much thought into it. Introspection is not a trait he commonly displays. He loves being a cop and whether what he is doing is right does not worry him; he is the law.",
+    "During the Lone Wanderer's tenth birthday party on July 13, 2268, Officer Kendall can be overheard talking with the overseer in the stairway to the upper level. Officer Kendall is assigned by the overseer to give the party just a few more minutes and then make sure everyone gets back to work. He may idley wish the Wanderer a happy birthday if near him, and gleefully remark the party sounds like fun.",
+    "During Escape!, he is the first member of Vault Security that the Lone Wanderer will encounter. Upon spotting them, Officer Kendall will order them to halt before being promptly attacked by radroaches, giving the Lone Wanderer the opportunity to sneak past him through the restrooms or help overwhelm him with the roaches.",
+    "* He will only drop a finger prior to Trouble on the Homefront",
+    "* Only during Trouble on the Homefront"
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Vault 101 security",
+  "role": "Security Officer",
+  "detailed_location": "Vault 101",
+  "voice_actor": "Jeff Baker",
+  "special": {
+    "Strength": 6,
+    "Perception": 3,
+    "Endurance": 6,
+    "Charisma": 3,
+    "Intelligence": 3,
+    "Agility": 7,
+    "Luck": 4
+  },
+  "karma": "Evil (Growing Up FastandEscape!)Neutral (Trouble on the Homefront)",
+  "voice_type": "MaleAdult01DefaultDC",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Happy 50",
+      "response_text": "Sounds like everybody's having a good time in there.{cheerfully}Play soundFO3 OfficerKendall EverybodysHav…https://fallout.fandom.com/wiki/File:FO3_OfficerKendall_EverybodysHaving.oggnoicon",
+      "index": "1"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "CG02OverseerGuardConv",
+      "topic_text": "CG02OverseerGuardConv",
+      "emotion": "Neutral 50",
+      "response_text": "Enjoy the party, sir?Play soundFO3 OfficerKendall EnjoyTheParty…https://fallout.fandom.com/wiki/File:FO3_OfficerKendall_EnjoyTheParty.oggnoicon",
+      "index": "2"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Happy 50",
+      "response_text": "Hey there, ten years old today, right? Happy birthday.{cheerfully}Play soundFO3 OfficerKendall TenYearsOld.ogghttps://fallout.fandom.com/wiki/File:FO3_OfficerKendall_TenYearsOld.oggnoicon",
+      "index": "4"
+    },
+    {
+      "topic": "IdleChatter",
+      "topic_text": "Idle Chatter",
+      "emotion": "Happy 50",
+      "response_text": "{whistling a jaunty tune}Play soundFO3 OfficerKendall Whistling.ogghttps://fallout.fandom.com/wiki/File:FO3_OfficerKendall_Whistling.oggnoicon",
+      "index": "6"
+    }
+  ],
+  "combat": []
+}

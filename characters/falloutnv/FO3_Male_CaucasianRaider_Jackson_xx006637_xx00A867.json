@@ -1,0 +1,109 @@
+{
+  "name": "Jackson",
+  "url": "/wiki/Jackson_(Point_Lookout)",
+  "dialogue_name": "DLC04Jackson.txt",
+  "dialogue_url": "/wiki/DLC04Jackson.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "xx006637",
+  "ref_id": "xx00A867",
+  "editor_id": "DLC04Jackson",
+  "location": "Ark & Dove Cathedral",
+  "location_url": "/wiki/Ark_%26_Dove_Cathedral",
+  "descriptions": [
+    "Jackson is a member of the Pitt raiders under the command of Ishmael Ashur in the Fallout 3 add-on The Pitt.",
+    "Jackson generally resides near the toilets by the Vertigo Bar and Grill on the downtown catwalks.",
+    "Jackson appears only in the Fallout 3 add-on The Pitt."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Pitt raiders",
+  "role": "Slaver",
+  "detailed_location": "The Pitt Downtown",
+  "voice_actor": "Craig Sechler",
+  "special": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 3,
+    "Intelligence": 3,
+    "Agility": 7,
+    "Luck": 5
+  },
+  "mod_special_values": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 3,
+    "Intelligence": 3,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "level": "1→4→9",
+  "tag_skills": [
+    {
+      "Melee Weap.:": "32→45→66"
+    },
+    {
+      "Small Guns:": "34→47→68"
+    },
+    {
+      "Unarmed:": "28→41→62"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "25→55→85"
+    },
+    {
+      "Critical Chance:": "5%"
+    },
+    {
+      "Unarmed Dam.:": "1.9→2.55→3.6"
+    },
+    {
+      "Poison Resist.:": "15%"
+    },
+    {
+      "Rad. Resist.:": "6%"
+    },
+    {
+      "Carry Weight:": "210"
+    }
+  ],
+  "karma": "Evil",
+  "voice_type": "DLC01RaiderMaleColdVoice",
+  "geck_race": "CaucasianRaider",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "...Bone ain't too bad, either. Heh... Bone.",
+      "index": "1"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "DLC01JacksonMidea2",
+      "topic_text": "DLC01JacksonMidea2",
+      "emotion": "Disgust 50",
+      "response_text": "Oh yeah? So he's the one that's going out to the Steelyard, huh?",
+      "index": "5"
+    },
+    {
+      "topic": "DLC01JacksonMidea4",
+      "topic_text": "DLC01JacksonMidea4",
+      "emotion": "Happy 50",
+      "response_text": "Well then, I hope you also said goodbye! HAHAHAHA! Alright, play time's over. Get to work, grinders.",
+      "index": "7"
+    }
+  ],
+  "combat": []
+}

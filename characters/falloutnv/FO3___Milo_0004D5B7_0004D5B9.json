@@ -1,0 +1,214 @@
+{
+  "name": "Milo",
+  "url": "/wiki/Milo,_shipping_foreman",
+  "dialogue_name": "MS05NukaColaFactoryForeman.txt",
+  "dialogue_url": "/wiki/MS05NukaColaFactoryForeman.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "0004D5B7",
+  "ref_id": "0004D5B9",
+  "editor_id": "MS05NukaColaFactoryForeman",
+  "location": "Nuka-Cola plant",
+  "location_url": "/wiki/Nuka-Cola_plant",
+  "descriptions": [
+    "Milo, also known as Milo, shipping foreman is a Mister Handy at the Nuka-Cola plant in 2277. He is located at the bottom level of the factory floor near the upper door to the offices.",
+    "Milo is a Mister Handy robot that was made before the Great War to keep an eye on production in the bottling area of the Nuka-Cola plant. As the latest in robotic bookkeeping and shipment launching, Milo continues to be a proud employee of the Nuka-Cola Corporation centuries after it went out of business. Currently, he is waiting for additional shipping instructions from a Nuka-Cola employee with proper ID.",
+    "At some point shortly before the Great War, Milo went rogue and became violent with employees found to be violating company policy. A locked closet with four bodies can be found in the plant, with a note revealing that Milo left them to starve to death for minor infractions, such as leaving the toilet seat up in the unisex bathrooms or having a slightly longer lunch break than they were permitted.",
+    "Failing the Speech checks to get the research department safe key results in demerits, and most of the remaining options will also produce the same effect. Upon receiving three demerits, Milo will become hostile, and the key can be looted from his body afterward.",
+    "PC Playstation 3 Xbox 360 An error can occur when the player character meets Milo and he will only say \"What is it now, sir/ma'am?\". The dialogue will automatically end and one cannot interact with him. He can still be destroyed and looted, however."
+  ],
+  "race": "Mister Handy",
+  "affiliation": "Nuka-Cola Corporation",
+  "role": "Shipping foreman",
+  "detailed_location": "Nuka-Cola plant",
+  "voice_actor": "Stephen Russell",
+  "special": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 5,
+    "Intelligence": 5,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "level": "3",
+  "misc_skills": [
+    {
+      "Hit Points:": "100"
+    },
+    {
+      "Poison Resist.:": "8%"
+    },
+    {
+      "Rad. Resist.:": "20%"
+    }
+  ],
+  "karma": "Neutral",
+  "voice_type": "RobotMisterHandyDC",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "Expulsion Protocol KL-001 in effect. Disengage voice parameters.",
+      "index": "1"
+    },
+    {
+      "topic": "MS05NCForemanCT01",
+      "topic_text": "I don't have that information.",
+      "emotion": "Neutral 50",
+      "response_text": "I'm sorry, as per Protocol NC-77, this information must be readily accessible at all times.",
+      "index": "9"
+    },
+    {
+      "topic": "MS05NCForemanCT02",
+      "topic_text": "My posting title is Ass Kicker and my number is 5.56 mm!",
+      "emotion": "Neutral 50",
+      "response_text": "Use of profanity and attempting to falsify an employee identification number is a violation of Protocols NC-68 and NC-90 respectively.",
+      "index": "14"
+    },
+    {
+      "topic": "MS05NCForemanCT03",
+      "topic_text": "My posting is Nuka-Cola R&D and my number is 987065. <Lie.>",
+      "emotion": "Neutral 50",
+      "response_text": "I have no record of that posting, nor does that employee identification number follow the proper format.",
+      "index": "18"
+    },
+    {
+      "topic": "MS05NCForemanCT04",
+      "topic_text": "My posting is Shipping Clerk and my number is NCSD-701G.",
+      "emotion": "Neutral 50",
+      "response_text": "Logged and verified. Thank you very much for your cooperation.",
+      "index": "23"
+    },
+    {
+      "topic": "MS05NCForemanCT05SC",
+      "topic_text": "I'm John-Caleb Bradberton. I don't need an ID number. I own this place!",
+      "emotion": "Neutral 50",
+      "response_text": "The name is verified in my system with no existing or issued employee number. Voice stress pattern within normal parameters.",
+      "index": "25"
+    },
+    {
+      "topic": "MS05NCForemanCT06",
+      "topic_text": "Forget it. I'm in the wrong place.",
+      "emotion": "Neutral 50",
+      "response_text": "I'm sorry, as per Protocol NC-62, all employees must be their designated areas at all times.",
+      "index": "27"
+    },
+    {
+      "topic": "MS05NCForemanCT07Robotics",
+      "topic_text": "Command protocol delta-five-three. Disengage security program.",
+      "emotion": "Neutral 50",
+      "response_text": "Command accepted. Security program disengaged.",
+      "index": "31"
+    },
+    {
+      "topic": "MS05TLMoreAboutPlant",
+      "topic_text": "What do you know about the Nuka-Cola Bottling Facility?",
+      "emotion": "Neutral 50",
+      "response_text": "This facility is a stunning accomplishment by the creative minds at the Nuka-Cola Corporation.",
+      "index": "33"
+    },
+    {
+      "topic": "MS05TLMoreAboutSoda",
+      "topic_text": "What do you know about Nuka-Cola Quantum?",
+      "emotion": "Neutral 50",
+      "response_text": "This product is the pinnacle of taste sensation.",
+      "index": "36"
+    },
+    {
+      "topic": "MS05TLNukaShippingComputer",
+      "topic_text": "I'm looking for the factory's shipping manifests.",
+      "emotion": "Neutral 50",
+      "response_text": "That information is in the Shipping Computer Terminal. The pass code for the terminal is NC-C1864.",
+      "index": "39"
+    },
+    {
+      "topic": "MS05TLRDSafeKey",
+      "topic_text": "May I have the key to the Research Safe?",
+      "emotion": "Happy 50",
+      "response_text": "Certainly, allow me to whip up a copy for you.",
+      "index": "40"
+    },
+    {
+      "topic": "SpeechChallengeFailure",
+      "topic_text": "SpeechChallengeFailure",
+      "emotion": "Neutral 50",
+      "response_text": "Your voice stress patterns indicate you are telling a falsehood. This is in violation of Protocol NC-01.",
+      "index": "42"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "I have to go now.",
+      "emotion": "Neutral 50",
+      "response_text": "Have a wonderful and productive day.",
+      "index": "47"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Neutral 50",
+      "response_text": "How may I serve you, master?{sarcastically obsequious}",
+      "index": "49"
+    }
+  ],
+  "combat": [
+    {
+      "topic": "AcceptYield",
+      "topic_text": "AcceptYield",
+      "emotion": "Neutral 50",
+      "response_text": "Cheerio. Water under the bridge.",
+      "index": "51"
+    },
+    {
+      "topic": "Assault",
+      "topic_text": "Assault",
+      "emotion": "Neutral 50",
+      "response_text": "Not very sporting of you.",
+      "index": "52"
+    },
+    {
+      "topic": "Attack",
+      "topic_text": "Attack",
+      "emotion": "Neutral 50",
+      "response_text": "*Sigh.* Why must you humans always resort to violence?",
+      "index": "55"
+    },
+    {
+      "topic": "Death",
+      "topic_text": "Death",
+      "emotion": "Neutral 50",
+      "response_text": "Oh, I say.",
+      "index": "63"
+    },
+    {
+      "topic": "Murder",
+      "topic_text": "Murder",
+      "emotion": "Neutral 50",
+      "response_text": "Dear me, how unsporting of you.",
+      "index": "66"
+    },
+    {
+      "topic": "Pickpocket",
+      "topic_text": "Pickpocket",
+      "emotion": "Disgust 50",
+      "response_text": "The class of people I'm forced to associate with these days just keeps falling.",
+      "index": "69"
+    },
+    {
+      "topic": "Steal",
+      "topic_text": "Steal",
+      "emotion": "Disgust 50",
+      "response_text": "The class of people I'm forced to associate with these days just keeps falling.",
+      "index": "70"
+    }
+  ]
+}

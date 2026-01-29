@@ -1,0 +1,161 @@
+{
+  "name": "Dale Barton",
+  "url": "/wiki/Dale_Barton",
+  "dialogue_name": "FortDaleBarton.txt",
+  "dialogue_url": "/wiki/FortDaleBarton.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": true,
+  "is_doctor": false,
+  "is_merchant": true,
+  "can_repair": true,
+  "can_be_companion": false,
+  "base_id": "0011FBC3",
+  "ref_id": "0011FBC4",
+  "editor_id": "FortDaleBarton",
+  "location": "The Fort, near the entrance",
+  "location_url": "/wiki/The_Fort",
+  "descriptions": [
+    "Dale Barton is a roving trader and a supplier for Caesar's Legion, found at the Fort in 2281.",
+    "Barton is an independent caravan merchant and a supplier for Caesar's Legion, originally from Arizona.",
+    "He says he has never had the pleasure of meeting Caesar.",
+    "PC Playstation 3 Xbox 360 Buying three or more caravan cards from Dale will cause the game to freeze. It may require a restart or may unfreeze after a few minutes. "
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Independent",
+  "role": "CaravanmerchantCaesar's Legionsupplier",
+  "detailed_location": "The Fort",
+  "voice_actor": "Ari Rubin",
+  "special": {
+    "Strength": 6,
+    "Perception": 4,
+    "Endurance": 4,
+    "Charisma": 10,
+    "Intelligence": 4,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "mod_special_values": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 10,
+    "Intelligence": 4,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "level": "10",
+  "tag_skills": [
+    {
+      "Barter:": "68"
+    },
+    {
+      "Guns:": "68"
+    },
+    {
+      "Melee Weap.:": "68"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Neutral",
+  "voice_type": "MaleAdult04",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "So you're the visitor I've heard some of the Legionaries talking about. If you're in the mood to trade, just say the word.",
+      "index": "1"
+    },
+    {
+      "topic": "VFreeformTheFortFortDaleBartonTopic000",
+      "topic_text": "Tell me about the Legate.",
+      "emotion": "Neutral 50",
+      "response_text": "He's the best the Legion has to offer, or so the Legionaries say. Brute of man, wears a fancy metal mask into battle.",
+      "index": "5"
+    },
+    {
+      "topic": "VFreeformTheFortFortDaleBartonTopic003",
+      "topic_text": "I'd like to know more about you.",
+      "emotion": "Neutral 50",
+      "response_text": "Shoot.",
+      "index": "7"
+    },
+    {
+      "topic": "VFreeformTheFortFortDaleBartonTopic004",
+      "topic_text": "Let's talk about something else.",
+      "emotion": "Neutral 50",
+      "response_text": "All right.",
+      "index": "8"
+    },
+    {
+      "topic": "VFreeformTheFortFortDaleBartonTopic005",
+      "topic_text": "Are you part of the Legion?",
+      "emotion": "Neutral 50",
+      "response_text": "No, sir. I'm an independent trader from Arizona.",
+      "index": "9"
+    },
+    {
+      "topic": "VFreeformTheFortFortDaleBartonTopic006",
+      "topic_text": "Is it dangerous to trade with the Legion?",
+      "emotion": "Happy 20",
+      "response_text": "Not at all - they're my best customers. As long as you don't try to sell 'em chems or alcohol, they treat you fair.",
+      "index": "11"
+    },
+    {
+      "topic": "VFreeformTheFortFortDaleBartonTopic008",
+      "topic_text": "Do you ever trade with the NCR?",
+      "emotion": "Disgust 50",
+      "response_text": "Between having to hire protection and getting slapped with taxes, it's more profitable to stick to Arizona and New Mexico.",
+      "index": "13"
+    },
+    {
+      "topic": "VFreeformTheFortFortDaleBartonTopic009",
+      "topic_text": "Have you ever met Caesar?",
+      "emotion": "Neutral 50",
+      "response_text": "I haven't had the pleasure. I have crossed paths with Legate Lanius, his second-in-command, however. It was... unpleasant.",
+      "index": "15"
+    },
+    {
+      "topic": "VFreeformTheFortFortDaleBartonTopic010",
+      "topic_text": "Show me what you have for sale.",
+      "emotion": "Neutral 50",
+      "response_text": "Have a look.",
+      "index": "16"
+    },
+    {
+      "topic": "VFreeformTheFortFortDaleBartonTopic011",
+      "topic_text": "I need something repaired.",
+      "emotion": "Neutral 50",
+      "response_text": "I'll grab my tools.",
+      "index": "17"
+    },
+    {
+      "topic": "VFreeformTheFortFortDaleBartonTopic012",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Be seeing you around.",
+      "index": "18"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Be seeing you around.",
+      "index": "19"
+    },
+    {
+      "topic": "",
+      "topic_text": "",
+      "emotion": "Neutral 50",
+      "response_text": "Here I was thinking you'd be a challenge, want a rematch?.",
+      "index": "20"
+    }
+  ],
+  "combat": []
+}

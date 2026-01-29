@@ -1,0 +1,267 @@
+{
+  "name": "Old Lady Gibson",
+  "url": "/wiki/Old_Lady_Gibson",
+  "dialogue_name": "OldLadyGibson.txt",
+  "dialogue_url": "/wiki/OldLadyGibson.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": true,
+  "can_repair": true,
+  "can_be_companion": false,
+  "base_id": "00084206",
+  "ref_id": "00084207",
+  "editor_id": "OldLadyGibson",
+  "location": "Gibson Scrap Yard",
+  "location_url": "/wiki/Gibson_Scrap_Yard",
+  "descriptions": [
+    "Old Lady Gibson is a trader and the owner of the eponymous Gibson scrap yard near the town of Novac in the Mojave Wasteland in 2281. She appears in Fallout: New Vegas.",
+    "Old Lady Gibson has been a lifelong scavenger, trader, and repairwoman.",
+    "After eventually meeting the man who became her husband, they settled down together and claimed an old scrapyard close to the roadside town of Novac in the Mojave Wasteland.",
+    "Following her husband's eventual death, the senior-citizen scavenger slowed her salvage activities while continuing to make a living with offering repair services and selling the collected scrap from her lifelong collection to interested travelers. She eventually picked up a new hobby in the form of raising and caring for dogs who lived with her.",
+    "Old Lady Gibson appears in Fallout: New Vegas."
+  ],
+  "race": "Human",
+  "gender": "Female",
+  "role": "ScavengerScrapyard ownerMerchant",
+  "detailed_location": "Gibson scrap yard",
+  "voice_actor": "Marianne Muellerleile",
+  "special": {
+    "Strength": 4,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 5,
+    "Intelligence": 5,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "mod_special_values": {
+    "Strength": 4,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 5,
+    "Intelligence": 5,
+    "Agility": 7,
+    "Luck": 5
+  },
+  "level": "8",
+  "tag_skills": [
+    {
+      "Guns:": "63(65)"
+    },
+    {
+      "Melee Weap.:": "63"
+    },
+    {
+      "Sneak:": "63(65)"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "80(85)"
+    },
+    {
+      "Critical Chance:": "5%"
+    },
+    {
+      "Unarmed Dam.:": "1"
+    },
+    {
+      "Poison Resist.:": "15%(20%)"
+    },
+    {
+      "Rad. Resist.:": "6%(8%)"
+    },
+    {
+      "Carry Weight:": "190"
+    },
+    {
+      "Dam. Threshold:": "2"
+    }
+  ],
+  "karma": "Good",
+  "voice_type": "FemaleOld01",
+  "geck_race": "CaucasianOld",
+  "topics": [
+    {
+      "topic": "DialogueOldLadyGibsonOldLadyGibsonTopic000",
+      "topic_text": "An attractive woman like yourself all alone? Maybe you and I could work out some kind of trade...",
+      "emotion": "Happy 50",
+      "response_text": "I know I'm not young and pretty any more, but I appreciate the thought all the same.{grinning}Here, take the parts, you flatterer.",
+      "index": "1"
+    },
+    {
+      "topic": "DialogueOldLadyGibsonOldLadyGibsonTopic001",
+      "topic_text": "What do you know about HELIOS One?",
+      "emotion": "Neutral 50",
+      "response_text": "The way I heard it, the Brotherhood of Steel ran the place before the NCR took it away from them. I'm not sure who started shooting first.",
+      "index": "2"
+    },
+    {
+      "topic": "DialogueOldLadyGibsonOldLadyGibsonTopic002",
+      "topic_text": "I don't have the caps.",
+      "emotion": "Neutral 50",
+      "response_text": "All right, then.",
+      "index": "4"
+    },
+    {
+      "topic": "DialogueOldLadyGibsonOldLadyGibsonTopic004",
+      "topic_text": "Goodbye.",
+      "emotion": "Happy 10",
+      "response_text": "Take care, now.",
+      "index": "5"
+    },
+    {
+      "topic": "DialogueOldLadyGibsonOldLadyGibsonTopic005",
+      "topic_text": "Show me what you have for sale.",
+      "emotion": "Neutral 50",
+      "response_text": "Happy to do it.",
+      "index": "6"
+    },
+    {
+      "topic": "DialogueOldLadyGibsonOldLadyGibsonTopic006",
+      "topic_text": "I need something repaired.",
+      "emotion": "Neutral 50",
+      "response_text": "Sure thing. Let me have a look.",
+      "index": "7"
+    },
+    {
+      "topic": "DialogueOldLadyGibsonOldLadyGibsonTopic007",
+      "topic_text": "Doctor Henry sent me. I need a new brain for my cyber-dog.",
+      "emotion": "Surprise 50",
+      "response_text": "Doctor Henry? Now there's a name I haven't heard in years. Hard to believe he's still alive.",
+      "index": "8"
+    },
+    {
+      "topic": "DialogueOldLadyGibsonOldLadyGibsonTopic008",
+      "topic_text": "Did you ever salvage containers of radioactive material from REPCONN?",
+      "emotion": "Neutral 50",
+      "response_text": "Certainly did. Hubby and me had an old rad meter to help us tell the difference between what you could salvage and what'd kill you.",
+      "index": "11"
+    },
+    {
+      "topic": "DialogueOldLadyGibsonOldLadyGibsonTopic009",
+      "topic_text": "Do you have any thrust control modules from REPCONN in stock?",
+      "emotion": "Neutral 50",
+      "response_text": "As it so happens, I do have some thrust modules, but they're expensive. 500 caps worth of expensive.",
+      "index": "16"
+    },
+    {
+      "topic": "DialogueOldLadyGibsonOldLadyGibsonTopic010",
+      "topic_text": "About those thrust control modules...",
+      "emotion": "Neutral 50",
+      "response_text": "Still got them. 250 caps and they're yours.",
+      "index": "17"
+    },
+    {
+      "topic": "DialogueOldLadyGibsonOldLadyGibsonTopic011",
+      "topic_text": "What can you tell me about REPCONN?",
+      "emotion": "Neutral 50",
+      "response_text": "Sometimes it seems like I spent the better portion of my youth in that old wreck of a building.",
+      "index": "19"
+    },
+    {
+      "topic": "DialogueOldLadyGibsonOldLadyGibsonTopic013< Barter - 50 >",
+      "topic_text": "250 caps. Unless you think you'll find another buyer soon for such specialized parts?",
+      "emotion": "Happy 5",
+      "response_text": "[SUCCEEDED] Eh, fair enough. It's not like anyone's ever wanted to buy them before. 250 caps it is.",
+      "index": "22"
+    },
+    {
+      "topic": "DialogueOldLadyGibsonOldLadyGibsonTopic014< Speech - 50 >",
+      "topic_text": "But you're going to cut the price to 250 because I'm just that charming, right?",
+      "emotion": "Happy 25",
+      "response_text": "[SUCCEEDED] Ha! Yes, you are quite the smoothtalker. What the hell - 250 it is.",
+      "index": "24"
+    },
+    {
+      "topic": "DialogueOldLadyGibsonOldLadyGibsonTopic015",
+      "topic_text": "500 caps it is. Here you go.",
+      "emotion": "Happy 5",
+      "response_text": "Pleasure doing business with you.",
+      "index": "26"
+    },
+    {
+      "topic": "DialogueOldLadyGibsonOldLadyGibsonTopic017",
+      "topic_text": "Never mind.",
+      "emotion": "Neutral 50",
+      "response_text": "Okay.",
+      "index": "27"
+    },
+    {
+      "topic": "DialogueOldLadyGibsonOldLadyGibsonTopic018",
+      "topic_text": "250 caps it is. Here you go.",
+      "emotion": "Happy 5",
+      "response_text": "A pleasure doing business with you.",
+      "index": "28"
+    },
+    {
+      "topic": "DialogueOldLadyGibsonOldLadyGibsonTopic019",
+      "topic_text": "Why do they call you Old Lady Gibson?",
+      "emotion": "Neutral 50",
+      "response_text": "Well, I'll give you a hint - they used to just call me Gibson. I hope you can figure out the rest.",
+      "index": "29"
+    },
+    {
+      "topic": "DialogueOldLadyGibsonOldLadyGibsonTopic020",
+      "topic_text": "I don't have the caps with me right now.",
+      "emotion": "Neutral 50",
+      "response_text": "No worries. I'll hold onto those parts for you.",
+      "index": "31"
+    },
+    {
+      "topic": "DialogueOldLadyGibsonOldLadyGibsonTopic023",
+      "topic_text": "Deal. Here's 700 caps.",
+      "emotion": "Neutral 50",
+      "response_text": "{to a dog}Here, Rey! Mama's got something for you.",
+      "index": "32"
+    },
+    {
+      "topic": "DialogueOldLadyGibsonOldLadyGibsonTopic024< Barter 70 >",
+      "topic_text": "I'm offering Rey immortality of a sort. Are you really going to put a price on that?",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] Fair enough.{to a dog}Here, Rey! Mama's got something for you.",
+      "index": "33"
+    },
+    {
+      "topic": "DialogueOldLadyGibsonOldLadyGibsonTopic025",
+      "topic_text": "Never mind.",
+      "emotion": "Neutral 50",
+      "response_text": "All right, then.",
+      "index": "35"
+    },
+    {
+      "topic": "DialogueOldLadyGibsonOldLadyGibsonTopic026",
+      "topic_text": "Let's talk about Rey's brain.",
+      "emotion": "Neutral 50",
+      "response_text": "Like I said before, give me 700 caps and Rey's brain is yours.",
+      "index": "36"
+    },
+    {
+      "topic": "DialogueOldLadyGibsonOldLadyGibsonTopic027",
+      "topic_text": "How did you meet Doctor Henry?",
+      "emotion": "Happy 25",
+      "response_text": "He and I had joined up with the same caravan. Add in a lot of whiskey, and, well, let's just say we got to know each other.",
+      "index": "37"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Happy 20",
+      "response_text": "Hi there. I'm Old Lady Gibson, or so they tell me. I've got odds and ends for sale, and I'm pretty good at fixing things, too.",
+      "index": "38"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Take care, now.",
+      "index": "41"
+    }
+  ],
+  "combat": []
+}

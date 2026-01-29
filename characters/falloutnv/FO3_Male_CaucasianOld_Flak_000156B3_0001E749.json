@@ -1,0 +1,181 @@
+{
+  "name": "Flak",
+  "url": "/wiki/Flak",
+  "dialogue_name": "Flak.txt",
+  "dialogue_url": "/wiki/Flak.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": true,
+  "is_doctor": false,
+  "is_merchant": true,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000156B3",
+  "ref_id": "0001E749",
+  "editor_id": "Flak",
+  "location": "Flak 'N Shrapnel's,Rivet City market",
+  "location_url": "/wiki/Flak_%27N_Shrapnel%27s",
+  "descriptions": [
+    "Flak is a former slaver from Paradise Falls, who chose to start a new life in Rivet City. He runs the Flak 'N Shrapnel's weapons store in the marketplace together with his partner, Shrapnel, and appears in Fallout 3.",
+    "His non-stereotypical portrayal is a major part of the game's LGBT representation.",
+    "Born around 2227, Flak was a slaver in his younger years, running with the Paradise Falls slavers. After years and years of trading in human lives, Flak chose to make a clean break and begin a new life at Rivet City.",
+    "He has been able to live in the City for years in peace,",
+    "He's been living at Rivet City and running guns for years, developing a rapport with its citizens and security force. He approaches marketing by encouraging potential customers to visit his shop and upgrade",
+    "Flak is a fan of mirelurk cakes, and typically orders two when dining at Gary's Galley.",
+    "Shrapnel is the closest relationship Flak has, with the two maintaining professional appearances while at work. Flak has a tendency to worry overly much in Shrapnel's opinion, especially when it comes to stock such as ammunition: What Shrapnel considers fine, Flak thinks low.",
+    "However, everyone outside Shrapnel is kept at arms' length. Flak will engage in small talk and politely thank for advice - especially if it's about bad food items at the galley",
+    "He does have a soft spot for Trinnie, however, buying her drinks when she asks, pretending it's \"just this once\".",
+    "Flak has two major conditions affecting his schedule: Whether Shrapnel is alive and whether Flack is enslaved. By default:",
+    "If Shrapnel dies (not possible in normal gameplay, as he's marked as essential), his schedule is altered:",
+    "If enslaved, Flak's packages are disabled and he's moved to the slave house at Paradise Falls, with a single sandbox package.",
+    "Flak is named after the English term for anti-aircraft fire, coined during World War II from the German abbreviation for anti-aircraft gun (FlaK, from Flugabwehrkanone)."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Rivet City",
+  "role": "Arms dealerSlaver(formerly)",
+  "detailed_location": "Flak 'N Shrapnel's",
+  "voice_actor": "Gus Travers",
+  "special": {
+    "Strength": 4,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 7,
+    "Intelligence": 5,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "level": "8",
+  "tag_skills": [
+    {
+      "Barter:": "69"
+    },
+    {
+      "Energy Weap.:": "65"
+    },
+    {
+      "Small Guns:": "67(69)"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Good",
+  "geck_race": "CaucasianOld",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "It's almost closing time. I'd get out of here if I was you.",
+      "index": "1"
+    },
+    {
+      "topic": "MS03RCHistory1Could I ask you about Rivet City's history?",
+      "topic_text": "Know anything about the history of Rivet City?",
+      "emotion": "Neutral 50",
+      "response_text": "'Fraid I can't help you, pal. Been here for years, but all I know about the history is that it's a safe place to settle down.",
+      "index": "9"
+    },
+    {
+      "topic": "MS08TopicPinkertonIs there anyone on this ship named Pinkerton?",
+      "topic_text": "You ever hear of a guy named Pinkerton?",
+      "emotion": "Surprise 50",
+      "response_text": "You mean genius boy?",
+      "index": "12"
+    },
+    {
+      "topic": "RCFlakAfraid",
+      "topic_text": "Aren't you afraid someone will use your own guns to rob you?",
+      "emotion": "Surprise 50",
+      "response_text": "Here? In Rivet City?",
+      "index": "15"
+    },
+    {
+      "topic": "RCFlakBigGuns",
+      "topic_text": "Do you have the big stuff? Flamers, Missile Launchers, stuff like that?",
+      "emotion": "Neutral 50",
+      "response_text": "We usually have a few. I'd have to check the inventory.",
+      "index": "17"
+    },
+    {
+      "topic": "RCFlakLousy",
+      "topic_text": "This is quite a selection, but they're all in lousy condition.",
+      "emotion": "Disgust 50",
+      "response_text": "I don't put the good stuff out on the table. If you're interested, I can show you the stuff in the locker.",
+      "index": "19"
+    },
+    {
+      "topic": "RCFlakName",
+      "topic_text": "Cute names. Did you make them up, or are you just trying to look tough?",
+      "emotion": "Disgust 50",
+      "response_text": "Like that's your real name?{sarcasm, emphasis \"your\"}",
+      "index": "20"
+    },
+    {
+      "topic": "RCFlakPeashooter",
+      "topic_text": "This peashooter has saved my ass more than once.",
+      "emotion": "Surprise 50",
+      "response_text": "I'm sure that was just luck. You should upgrade. Check out our shop in the market.",
+      "index": "22"
+    },
+    {
+      "topic": "RCTopicGetDrinksWhere can I get a stiff drink?",
+      "topic_text": "Is there anywhere I can get a drink on this tub?",
+      "emotion": "Happy 50",
+      "response_text": "Try the Muddy Rudder. They don't ask too many questions down on the lower deck.",
+      "index": "23"
+    },
+    {
+      "topic": "RCTopicPaulieAddict",
+      "topic_text": "Did you know that Paulie Cantelli is an addict?",
+      "emotion": "Sad 50",
+      "response_text": "He's totally strung out. It's going to kill him one of these days.",
+      "index": "24"
+    },
+    {
+      "topic": "RivetCityBarterI'm here to do business with you.",
+      "topic_text": "Can I see what kinds of guns you have for sale?",
+      "emotion": "Surprise 50",
+      "response_text": "Need to do some killin' eh?",
+      "index": "25"
+    },
+    {
+      "topic": "RivetCityRepair",
+      "topic_text": "I need you to repair my stuff.",
+      "emotion": "Neutral 50",
+      "response_text": "No problem at all.",
+      "index": "26"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYEI have to go now.",
+      "topic_text": "I've got to run.",
+      "emotion": "Happy 50",
+      "response_text": "If you need more ammo, this is where to get it.",
+      "index": "27"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Neutral 50",
+      "response_text": "How's our ammo inventory? It was getting low yesterday.",
+      "index": "28"
+    },
+    {
+      "topic": "RCGoodbye",
+      "topic_text": "RCGoodbye",
+      "emotion": "Happy 50",
+      "response_text": "Can't complain. I've got some new stuff in. You should come by and take a look.",
+      "index": "36"
+    },
+    {
+      "topic": "RCPackageEnd",
+      "topic_text": "RCPackageEnd",
+      "emotion": "Neutral 50",
+      "response_text": "I've heard enough for tonight.{slightly slurred, he's had too much to drink.}",
+      "index": "49"
+    }
+  ],
+  "combat": []
+}

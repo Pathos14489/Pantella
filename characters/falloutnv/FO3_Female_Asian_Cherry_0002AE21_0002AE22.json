@@ -1,0 +1,235 @@
+{
+  "name": "Cherry",
+  "url": "/wiki/Cherry",
+  "dialogue_name": "Cherry.txt",
+  "dialogue_url": "/wiki/Cherry.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": true,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "0002AE21",
+  "ref_id": "0002AE22",
+  "editor_id": "Cherry",
+  "location": "Dukov's Place",
+  "location_url": "/wiki/Dukov%27s_Place",
+  "descriptions": [
+    "Cherry is a woman living at Dukov's Place in the Capital Wasteland in the year 2277.",
+    "A live-in playmate alongside Fantasia, Cherry does not love Dukov, although she likes him to some degree, despite calling him a prick and a lecherous old man. \"Dukey\" is her nickname for him. She mainly stays with Dukov for the money and whatever protection he can provide. She offers what she can in exchange. Cherry and Fantasia wear their clothing because he prefers it.",
+    "Cherry has fantasies about traveling to Rivet City but knows that it is too dangerous to travel alone and that she may not survive the trip without help.",
+    "PC Playstation 3 Xbox 360 If Dukov is killed while she is following the player as a companion, once brought to Rivet City she will thank you for saving her and then turn hostile. "
+  ],
+  "race": "Human",
+  "gender": "Female",
+  "affiliation": "Dukov",
+  "role": "Playmate",
+  "detailed_location": "Dukov's PlaceRivet City(optional)",
+  "voice_actor": "Karen Carbone",
+  "special": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 4,
+    "Intelligence": 4,
+    "Agility": 6,
+    "Luck": 4
+  },
+  "mod_special_values": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 5,
+    "Intelligence": 4,
+    "Agility": 6,
+    "Luck": 4
+  },
+  "tag_skills": [
+    {
+      "Barter:": "27(29)"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "25(30)"
+    }
+  ],
+  "karma": "Good",
+  "voice_type": "FemaleAdult02DC",
+  "geck_race": "Asian",
+  "topics": [
+    {
+      "topic": "CherryFollowMe",
+      "topic_text": "Follow me.",
+      "emotion": "Happy 50",
+      "response_text": "The sooner we get there, the better.",
+      "index": "1"
+    },
+    {
+      "topic": "CherryWaitHere",
+      "topic_text": "Wait here.",
+      "emotion": "Fear 50",
+      "response_text": "Don't be gone too long.",
+      "index": "2"
+    },
+    {
+      "topic": "DukovClothes",
+      "topic_text": "Why aren't you dressed?",
+      "emotion": "Happy 50",
+      "response_text": "Dukov likes to keep it hot. Ain't no need for nothin' else.{emphasize \"hot\" to imply both physical heat and sex }",
+      "index": "3"
+    },
+    {
+      "topic": "DukovComeWithMe",
+      "topic_text": "You should come with me. You can't survive here by yourself.",
+      "emotion": "Neutral 50",
+      "response_text": "Only if you take me to Rivet City.",
+      "index": "5"
+    },
+    {
+      "topic": "DukovDukov",
+      "topic_text": "So what's the deal with Dukov?",
+      "emotion": "Anger 50",
+      "response_text": "He's a lecherous old man. The only reason I put up with him and his \"needs\" is because I'm safe here.",
+      "index": "11"
+    },
+    {
+      "topic": "DukovLucky",
+      "topic_text": "Damn! I wish I had a setup like this.",
+      "emotion": "Disgust 50",
+      "response_text": "You're a pig, you know that?",
+      "index": "14"
+    },
+    {
+      "topic": "DukovPay",
+      "topic_text": "Does he pay you for this?",
+      "emotion": "Surprise 50",
+      "response_text": "Of course. Why else would I stay with the old fart? You don't think I actually love that bastard, do you?",
+      "index": "17"
+    },
+    {
+      "topic": "DukovRivetCityNo",
+      "topic_text": "No. It's going to be a while before I go to Rivet City.",
+      "emotion": "Anger 50",
+      "response_text": "Screw it then. I'm not wandering the Wasteland with you.",
+      "index": "18"
+    },
+    {
+      "topic": "DukovRivetCityYes",
+      "topic_text": "Rivet City it is.",
+      "emotion": "Disgust 50",
+      "response_text": "Let me pack my bags. Oh, wait, I don't have any. Lets get out of here.{the \"Oh wait, I don't have any\" is sarcastic.}",
+      "index": "19"
+    },
+    {
+      "topic": "DukovThanksWarning",
+      "topic_text": "I'm sure you can find a way to survive here.",
+      "emotion": "Disgust 50",
+      "response_text": "Right. Because I've got all kinds of survival skills.{Sarcastic. Draw out the word \"right\"}",
+      "index": "20"
+    },
+    {
+      "topic": "DukovThisPlace",
+      "topic_text": "So... What exactly is this place?",
+      "emotion": "Neutral 50",
+      "response_text": "It's...well, it's Dukov's place. He lives here.",
+      "index": "24"
+    },
+    {
+      "topic": "DukovWhore",
+      "topic_text": "Admit it. You're just a whore.",
+      "emotion": "Anger 50",
+      "response_text": "Up yours! It's not like I've got a lot of other options.",
+      "index": "27"
+    },
+    {
+      "topic": "DukovYourChoice",
+      "topic_text": "I guess you'll just have to live with your choice.",
+      "emotion": "Anger 50",
+      "response_text": "Hey, its my life. Butt out.",
+      "index": "29"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Happy 50",
+      "response_text": "Here's the key. He never even noticed.",
+      "index": "30"
+    },
+    {
+      "topic": "MS14DukovStealKey",
+      "topic_text": "Dukov has a key I need. Steal it for me.",
+      "emotion": "Neutral 50",
+      "response_text": "You've got to do something for me first.",
+      "index": "38"
+    },
+    {
+      "topic": "SpeechChallengeFailure",
+      "topic_text": "SpeechChallengeFailure",
+      "emotion": "Disgust 50",
+      "response_text": "Why the hell should I trust you?",
+      "index": "40"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "CherryQuit",
+      "topic_text": "CherryQuit",
+      "emotion": "Anger 50",
+      "response_text": "You're a goddamn liar. You told me we were going to Rivet City but we've been out here for over five days! I've had it. I'm going back.",
+      "index": "41"
+    },
+    {
+      "topic": "CherryThanks",
+      "topic_text": "CherryThanks",
+      "emotion": "Happy 50",
+      "response_text": "Well, you kept your promise. I really didn't think you would. Thank you.",
+      "index": "42"
+    },
+    {
+      "topic": "DukovGirlSteal",
+      "topic_text": "DukovGirlSteal",
+      "emotion": "Happy 50",
+      "response_text": "Ooh! Dukey, is that a rocket in your pocket, or are you just glad to feel me?",
+      "index": "43"
+    },
+    {
+      "topic": "DukovResponse1",
+      "topic_text": "DukovResponse",
+      "emotion": "Fear 50",
+      "response_text": "We'd better not run out. I don't think I can do this sober.",
+      "index": "44"
+    },
+    {
+      "topic": "DukovResponse2",
+      "topic_text": "DukovResponse2",
+      "emotion": "Happy 50",
+      "response_text": "Don't worry, stud. I'll rock you all night long. First, I need another drink.",
+      "index": "46"
+    },
+    {
+      "topic": "DukovResponse3",
+      "topic_text": "DukovResponse3",
+      "emotion": "Disgust 50",
+      "response_text": "You tell that same fucking joke every time we're out here. You need a new line, Dukey.",
+      "index": "47"
+    },
+    {
+      "topic": "GOODBYEI have to go now.",
+      "topic_text": "So long, Cherry.",
+      "emotion": "Happy 50",
+      "response_text": "Take care, sugar.",
+      "index": "49"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Surprise 50",
+      "response_text": "Well, aren't you looking fine?",
+      "index": "50"
+    }
+  ],
+  "combat": []
+}

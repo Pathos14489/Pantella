@@ -1,0 +1,380 @@
+{
+  "name": "Bittercup",
+  "url": "/wiki/Bittercup",
+  "dialogue_name": "Bittercup.txt",
+  "dialogue_url": "/wiki/Bittercup.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "0002796A",
+  "ref_id": "00027F12",
+  "editor_id": "Buttercup",
+  "location": "Big Town",
+  "location_url": "/wiki/Big_Town",
+  "descriptions": [
+    "Bittercup is a citizen of Big Town in 2277 in Fallout 3.",
+    "Apathetic, self-involved, and rebellious, Bittercup is one of the troubled young characters that live in Big Town. She spends time worrying about what dark clothing to wear and applying homemade makeup often at the expense of better guarding the town against threats. Many of the other Big Town residents are tired of her, but they don't do much about it as the threat of super mutant and raider attacks takes higher priority.",
+    "Through dialogue, it is revealed that Bittercup has been romantically involved with most of the males in Big Town at one point or another, but it is remarkable that she does not seem to take any of their interests in a physical way. She had a romantic interest in Pappy, whom she left after arriving in Big Town, believing that he was a liar. She then got involved with Flash, who snapped a short time afterward because he couldn't stand her teasing.",
+    "Bittercup appears in Fallout 3 and Fallout Shelter."
+  ],
+  "race": "Human",
+  "gender": "Female",
+  "affiliation": "Big TownLittle Lamplight(formerly)",
+  "role": "Resident",
+  "detailed_location": "Big Town",
+  "voice_actor": "Jan Johns",
+  "special": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 5,
+    "Intelligence": 4,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "mod_special_values": {
+    "Strength": 7,
+    "Perception": 6,
+    "Endurance": 9,
+    "Charisma": 10,
+    "Intelligence": 5,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "level": "2→6(equal to player characters level)",
+  "tag_skills": [
+    {
+      "Barter:": "34→53"
+    },
+    {
+      "Medicine:": "32→51"
+    },
+    {
+      "Melee Weap.:": "36→55(38→57)"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "30→50"
+    },
+    {
+      "Critical Chance:": "5%"
+    },
+    {
+      "Unarmed Dam.:": "1.15"
+    },
+    {
+      "Poison Resist.:": "15%"
+    },
+    {
+      "Rad. Resist.:": "6%"
+    },
+    {
+      "Carry Weight:": "220"
+    },
+    {
+      "Damage Res.:": "8%(20%)"
+    }
+  ],
+  "karma": "Neutral",
+  "voice_type": "FemaleAdult04DC",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "BigtownBittercupGreeting1",
+      "topic_text": "Bittercup? That's the dumbest name I've ever heard!",
+      "emotion": "Neutral 50",
+      "response_text": "No one understands me. You're just like all the others around here.",
+      "index": "1"
+    },
+    {
+      "topic": "BigtownBittercupGreeting1a",
+      "topic_text": "I'm sorry... erm... Bittercup. What were you saying?",
+      "emotion": "Neutral 50",
+      "response_text": "Finally! Someone who doesn't judge me! You know, the people here are just so quick to assume that they know everything about you.",
+      "index": "2"
+    },
+    {
+      "topic": "BigtownBittercupGreeting1b",
+      "topic_text": "I don't know about that, but Bittercup is one dumbass name.",
+      "emotion": "Sad 75",
+      "response_text": "FINE! Be that way! You'll be sorry! You'll all be sorry!{Breaks into a pathetic sob at the end.}",
+      "index": "5"
+    },
+    {
+      "topic": "BigtownBittercupGreeting1b1",
+      "topic_text": "Whatever you say.",
+      "emotion": "Sad 50",
+      "response_text": "Oh! You... you... ... ...no one understands me... *sniff*",
+      "index": "6"
+    },
+    {
+      "topic": "BigtownBittercupGreeting2",
+      "topic_text": "Nice to meet you, Bittercup.",
+      "emotion": "Neutral 50",
+      "response_text": "Finally! Someone who doesn't judge me! You know, the people here are just so quick to assume that they know everything about you.",
+      "index": "7"
+    },
+    {
+      "topic": "BigtownBittercupGreeting2a",
+      "topic_text": "This seems like a strange thing to worry about right now.",
+      "emotion": "Neutral 50",
+      "response_text": "That's what they always say. \"Blah blah, Bittercup you need to pay attention when you're on patrol\". Like, what, I'm supposed to stop slavers?",
+      "index": "10"
+    },
+    {
+      "topic": "BigtownBittercupGreeting2b",
+      "topic_text": "I know! No one understands me either!",
+      "emotion": "Neutral 50",
+      "response_text": "God! It's so nice to have someone who understands! I mean, sure, when I left Little Lamplight, I was happy to be out of there.",
+      "index": "13"
+    },
+    {
+      "topic": "BigtownBittercupGreeting2c",
+      "topic_text": "Yeah... I have better things to do than talk fashion.",
+      "emotion": "Neutral 50",
+      "response_text": "Hey, whatever. And here I thought you were cute. Guess you're just the same as everyone else here.",
+      "index": "16"
+    },
+    {
+      "topic": "BigtownBittercupRel",
+      "topic_text": "I have something to say to you, Bittercup.",
+      "emotion": "Surprise 25",
+      "response_text": "Oh, yeah, what is it? Um, not that I care what you think.{Eager to talk, but suddenly realizing that she is trying to act apathetic.}",
+      "index": "18"
+    },
+    {
+      "topic": "BigtownBittercupRel1A",
+      "topic_text": "Why don't you seem to care about what's going on around here?",
+      "emotion": "Neutral 50",
+      "response_text": "I dunno. What does it matter anyway? We're all going to be mutant chow eventually.",
+      "index": "19"
+    },
+    {
+      "topic": "BigtownBittercupRel1B",
+      "topic_text": "If you don't mind me saying, you look different from everyone else.",
+      "emotion": "Sad 15",
+      "response_text": "Really? I mean... good. No one wants to look like the boring slobs in this town, anyway.{Hurt at first at being called different, then acts proud of her individuality.}",
+      "index": "22"
+    },
+    {
+      "topic": "BigtownBittercupRel1C",
+      "topic_text": "I like your makeup. The pale-white really reflects the lighting.",
+      "emotion": "Happy 50",
+      "response_text": "That's why I never go out during the day. The moon has such a better shine to it than the sun.",
+      "index": "24"
+    },
+    {
+      "topic": "BigtownBittercupRel2A",
+      "topic_text": "Wait, what? Did you just hit on me?",
+      "emotion": "Fear 50",
+      "response_text": "Oh, um, well. I need to get going, but come back and visit me sometime, okay?",
+      "index": "25"
+    },
+    {
+      "topic": "BigtownBittercupRel2B",
+      "topic_text": "I'm not even going to tell you what's wrong with that question...",
+      "emotion": "Fear 50",
+      "response_text": "Oh, um, well. I need to get going, but come back and visit me sometime, okay?",
+      "index": "26"
+    },
+    {
+      "topic": "BigtownBittercupRel2C",
+      "topic_text": "Why, no. I'm not in any sort of relationship. Are you?",
+      "emotion": "Fear 50",
+      "response_text": "Oh, um, well. I need to get going, but come back and visit me sometime, okay?",
+      "index": "27"
+    },
+    {
+      "topic": "BigtownBittercupRel3A",
+      "topic_text": "I like corpses. Especially if they're full of holes... that I put in them.",
+      "emotion": "Neutral 50",
+      "response_text": "You're not ... uh, seeing anyone right now. Are you?{Suddenly suggestive and flirtatious. }",
+      "index": "28"
+    },
+    {
+      "topic": "BigtownBittercupRel3B",
+      "topic_text": "You need to set yourself apart from the mold. Then people will respect you.",
+      "emotion": "Neutral 50",
+      "response_text": "You're not ... uh, seeing anyone right now. Are you?{Suddenly suggestive and flirtatious. }",
+      "index": "29"
+    },
+    {
+      "topic": "BigtownBittercupRel3C",
+      "topic_text": "That's the dumbest thing I've ever heard. Survival goes before style.",
+      "emotion": "Anger 50",
+      "response_text": "And what do you know?! You wastelanders and your dirty clothes and roughed up faces! YOU look like a serial killer!{Angry and judgmental.}",
+      "index": "30"
+    },
+    {
+      "topic": "BigtownBittercupRel4A",
+      "topic_text": "I'm a night person myself. The darkness conceals my... activities.",
+      "emotion": "Neutral 50",
+      "response_text": "You're not ... uh, seeing anyone right now. Are you?{Suddenly suggestive and flirtatious. }",
+      "index": "32"
+    },
+    {
+      "topic": "BigtownBittercupRel4B",
+      "topic_text": "Moons are nice. The calm nights of the Wastes are a great time to relax.",
+      "emotion": "Neutral 50",
+      "response_text": "You're not ... uh, seeing anyone right now. Are you?{Suddenly suggestive and flirtatious. }",
+      "index": "33"
+    },
+    {
+      "topic": "BigtownBittercupRel4C",
+      "topic_text": "I was being sarcastic. That white makeup is like painting a target on your head.",
+      "emotion": "Anger 50",
+      "response_text": "And what do you know?! You wastelanders and your dirty clothes and roughed up faces! YOU look like a serial killer!{Angry and judgmental.}",
+      "index": "34"
+    },
+    {
+      "topic": "BigtownBittercupRelEND",
+      "topic_text": "Actually, never mind. There's something else I need to know.",
+      "emotion": "Disgust 25",
+      "response_text": "Ugh, hurry up. I have poetry I need to write. Dark poetry.",
+      "index": "36"
+    },
+    {
+      "topic": "BigtownTownBittercupandFlash",
+      "topic_text": "Who in this town haven't you dated...",
+      "emotion": "Anger 50",
+      "response_text": "Don't you judge me! It's not my fault that the only guys in this town are liars and jerks!",
+      "index": "37"
+    },
+    {
+      "topic": "BigtownTownServicesDo you have any traders in town? Any doctors?",
+      "topic_text": "What's there to do around here, Bittercup?",
+      "emotion": "Neutral 50",
+      "response_text": "I wander around town to find chalk and makeup sometimes. Not like there's anyplace to buy stuff.{Bittercup is self-absorbed in her own, gothy world.}",
+      "index": "40"
+    },
+    {
+      "topic": "BigtownTownWhatsWrong",
+      "topic_text": "This place looks like a ghost town.",
+      "emotion": "Happy 25",
+      "response_text": "I wish it were. When I'm gone, I'll be sure to haunt this place ... <sigh>{Bittercup pleasantly sighs at the thought of ghosts and death.}",
+      "index": "42"
+    },
+    {
+      "topic": "BigtownTownWhosWhoWho lives here?",
+      "topic_text": "You and the other people here don't seem to get along.",
+      "emotion": "Anger 50",
+      "response_text": "Red and Kimba won't talk to me, just because I used to date Pappy and Flash! They're so jealous!",
+      "index": "43"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Disgust 50",
+      "response_text": "I'm getting bored. I thought you were going to teach us something.",
+      "index": "45"
+    },
+    {
+      "topic": "MS01AboutRed",
+      "topic_text": "I'm looking for a woman named Red. Sticky promised me some caps...",
+      "emotion": "Sad 50",
+      "response_text": "The Super Mutants took Red along with the others. She was the only person that really ever listened to me.{sad}",
+      "index": "53"
+    },
+    {
+      "topic": "MS01QuestHook",
+      "topic_text": "Do you know where the Super Mutants took your friends?",
+      "emotion": "Surprise 50",
+      "response_text": "There's a police station up there to the northeast or something. Bury our friends corpses if you find them. I've got enough ghosts haunting me.{grateful but trying to hide it}",
+      "index": "55"
+    },
+    {
+      "topic": "MS01QuestHookA1MS01QuestHook1",
+      "topic_text": "Wow, you need therapy. Look, do you know where your friends are?",
+      "emotion": "Surprise 50",
+      "response_text": "The mutants took them north. To some old police station or something. Let's talk about something else...{goth chick}",
+      "index": "61"
+    },
+    {
+      "topic": "MS01QuestHookA2MS01QuestHook2",
+      "topic_text": "Hey, Earth to gloom girl  Do you know where the Mutants took the villagers?",
+      "emotion": "Fear 50",
+      "response_text": "They took them to Germantown. Probably to that old police station. Why you got a death wish?{trying to sound calm but really depressed and scared}",
+      "index": "62"
+    },
+    {
+      "topic": "MS01QuestHookA3MS01QuestHook3",
+      "topic_text": "Your friends are dead. Maybe you can channel them from the afterlife? Freak.",
+      "emotion": "Anger 100",
+      "response_text": "Maybe. Or maybe I'll just cast a hex on you! Make your skin fall off and your hair turn into snakes... or something vile like that.{let down, depressed, and angry.}",
+      "index": "64"
+    },
+    {
+      "topic": "MS01QuestHookA4",
+      "topic_text": "I'll think about it, but I can't rescue your friends now.",
+      "emotion": "Anger 100",
+      "response_text": "Well if you change your mind let me know, in the meantime I'll be preparing a nasty hex spell. When your skin starts peeling, you'll know why.{let down, depressed, and angry.}",
+      "index": "65"
+    },
+    {
+      "topic": "MS01QuestHookB1",
+      "topic_text": "Quit moping around. I'll rescue your friends!",
+      "emotion": "Surprise 100",
+      "response_text": "Really? I mean... they aren't really my friends. I don't have any friends. I don't need any... but it would be nice to have them around again!{goth chick trying to seem cool but is really happy to have a hero}",
+      "index": "66"
+    },
+    {
+      "topic": "MS01QuestHookB2",
+      "topic_text": "I'll rescue your friends, but its going to cost you.",
+      "emotion": "Anger 50",
+      "response_text": "Rescue whoever the hell you like, but they aren't my friends. I don't NEED friends. Though I'm sure someone will pay you if you succeed.{hurt and resentful }",
+      "index": "67"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "BigTownGoodbye",
+      "topic_text": "BigTownGoodbye",
+      "emotion": "Disgust 50",
+      "response_text": "Only your complete and utter lack of importance.{Bittercup is trying to project an outward appearance of apathy.}",
+      "index": "68"
+    },
+    {
+      "topic": "BigTownResponse",
+      "topic_text": "BigTownResponse",
+      "emotion": "Anger 50",
+      "response_text": "Eh. You people and your demands. \"Pay attention on patrol. Set up the barricades. Stop sleeping during your patrol!\"{Bittercup is mad about being told what to do.}",
+      "index": "70"
+    },
+    {
+      "topic": "GOODBYE",
+      "topic_text": "I have to go now.",
+      "emotion": "Happy 100",
+      "response_text": "If the Mutants get you, come back and haunt me.{creep goth chick trying to sound cool}",
+      "index": "71"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Happy 100",
+      "response_text": "Have you come to talk to me?{hopeful}",
+      "index": "74"
+    },
+    {
+      "topic": "MS01CrowdSay",
+      "topic_text": "MS01CrowdSay",
+      "emotion": "Surprise 100",
+      "response_text": "You mean, we're still alive?{(cheering) in an excited cheering mob}",
+      "index": "77"
+    }
+  ],
+  "combat": [
+    {
+      "topic": "Attack",
+      "topic_text": "Attack",
+      "emotion": "Happy 75",
+      "response_text": "This is surprisingly satisfying.",
+      "index": "84"
+    }
+  ]
+}

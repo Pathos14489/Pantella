@@ -1,0 +1,107 @@
+{
+  "name": "Kate",
+  "url": "/wiki/Kate_(Fallout:_New_Vegas)",
+  "dialogue_name": "VMAKathleen.txt",
+  "dialogue_url": "/wiki/VMAKathleen.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "001228DB",
+  "ref_id": "001228EF",
+  "editor_id": "VMAKathleen",
+  "location": "Michael Angelo's workshop",
+  "location_url": "/wiki/Michael_Angelo%27s_workshop",
+  "descriptions": [
+    "Kathleen, also known as Kate, is Michael Angelo's assistant in 2281.",
+    "Kate is the assistant of Michael Angelo, and helps to create the neon signs that light up the Strip. She has been assisting him for over a year, but she shares with the Courier that she does not like to be tied to one place for long, and plans to head back out into the wasteland.",
+    "Should Michael Angelo get photographs of the landmarks he wants, she will be grateful and express further interest in seeing the world.",
+    "If Kate is killed, the Courier will earn NCR infamy, even though she is not affiliated with the NCR.",
+    "Her script filename refers to her as Kathleen."
+  ],
+  "race": "Human",
+  "gender": "Female",
+  "affiliation": "Michael Angelo",
+  "role": "Assistant",
+  "detailed_location": "Michael Angelo's workshop",
+  "voice_actor": "Debra Wilson",
+  "special": {
+    "Strength": 6,
+    "Perception": 6,
+    "Endurance": 6,
+    "Charisma": 10,
+    "Intelligence": 4,
+    "Agility": 5,
+    "Luck": 4
+  },
+  "level": "5",
+  "tag_skills": [
+    {
+      "Explosives:": "47"
+    },
+    {
+      "Guns:": "45"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Neutral",
+  "voice_type": "FemaleAdult10",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "Hi, what can I do for you?",
+      "index": "1"
+    },
+    {
+      "topic": "VMS22VMAKathleenTopic000",
+      "topic_text": "What's this place?",
+      "emotion": "Neutral 50",
+      "response_text": "You saw our front sign, didn't you? This is where all the beautiful signs of the Strip become a reality.",
+      "index": "6"
+    },
+    {
+      "topic": "VMS22VMAKathleenTopic001",
+      "topic_text": "I'm looking for Michael Angelo.",
+      "emotion": "Neutral 50",
+      "response_text": "Check out the back of the shop, he's usually working there.",
+      "index": "9"
+    },
+    {
+      "topic": "VMS22VMAKathleenTopic002",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Bye.",
+      "index": "10"
+    },
+    {
+      "topic": "VMS22VMAKathleenTopic003",
+      "topic_text": "Who is Michael Angelo?",
+      "emotion": "Happy 30",
+      "response_text": "He's the reason the Strip shines like a star at night. Mike's imagined and built every sign, billboard and light you'll see around here.",
+      "index": "11"
+    },
+    {
+      "topic": "VMS22VMAKathleenTopic005",
+      "topic_text": "How long have you worked here?",
+      "emotion": "Happy 50",
+      "response_text": "I've been here over a year now. Though I'm not one to get tied for long.",
+      "index": "12"
+    },
+    {
+      "topic": "VMS22VMAKathleenTopic007",
+      "topic_text": "Tell me again about Michael Angelo.",
+      "emotion": "Sad 30",
+      "response_text": "He's the reason the Strip shines like a star at night. Mike's imagined and built every sign, billboard and light you'll see around here.",
+      "index": "14"
+    }
+  ],
+  "conversation": [],
+  "combat": []
+}

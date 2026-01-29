@@ -1,0 +1,629 @@
+{
+  "name": "Walter Phebus",
+  "url": "/wiki/Walter_Phebus",
+  "dialogue_name": "WalterPhebus.txt",
+  "dialogue_url": "/wiki/WalterPhebus.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "0011E6B6",
+  "ref_id": "0011E6B9",
+  "editor_id": "WalterPhebus",
+  "location": "Outside theUltra-Luxe",
+  "location_url": "/wiki/Ultra-Luxe",
+  "descriptions": [
+    "Walter Phebus is a rancher from New California residing on the New Vegas Strip in Fallout: New Vegas.",
+    "A bighorner rancher and a seasoned brahmin baron,",
+    "Walter, deciding that Gunderson needs to be taken down by force, left his ranch to travel to New Vegas with Ethel in tow, seeking revenge against Heck however he can.",
+    "By the time they reached New Vegas and passed through the gate onto the Strip, Walter learned that Heck had come to reside in the Ultra-Luxe casino but did not know the reason why. He and Ethel took to sitting near the monorail station connecting New Vegas to Camp McCarran, hoping for any news on Heck's movements to act on."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "New California Republic",
+  "role": "Rancher (formerly)Rival toHeck Gunderson",
+  "detailed_location": "New Vegas Strip, outside theLas Vegas Boulevard Station",
+  "voice_actor": "Peter Renaday",
+  "special": {
+    "Strength": 5,
+    "Perception": 4,
+    "Endurance": 4,
+    "Charisma": 7,
+    "Intelligence": 8,
+    "Agility": 4,
+    "Luck": 5
+  },
+  "mod_special_values": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 7,
+    "Intelligence": 8,
+    "Agility": 4,
+    "Luck": 5
+  },
+  "level": "4",
+  "tag_skills": [
+    {
+      "Barter:": "70"
+    },
+    {
+      "Guns:": "42"
+    },
+    {
+      "Speech:": "50"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Good",
+  "voice_type": "MaleOld02",
+  "geck_race": "CaucasianOld",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Anger 60",
+      "response_text": "Howdy, son! How can I help you? But make it quick. Goddamn heat's worse in this town than in the middle of a Brahmin herd at noon.",
+      "index": "1"
+    },
+    {
+      "topic": "VMS25WalterPhebusTopic000",
+      "topic_text": "You look more than just too hot - what's the matter?",
+      "emotion": "Surprise 20",
+      "response_text": "[SUCCEEDED] Sharp eyes on you, all right. We've gone through a heap of trouble to get in town. Ethel says I just need to wet my throat.",
+      "index": "7"
+    },
+    {
+      "topic": "VMS25WalterPhebusTopic001",
+      "topic_text": "Then have, I don't know, some water or something.",
+      "emotion": "Neutral 50",
+      "response_text": "[FAILED] A drink? Nonsense. All I need right now is to settle a score. We didn't come a long ways just to stroll our best clothes around.",
+      "index": "9"
+    },
+    {
+      "topic": "VMS25WalterPhebusTopic002",
+      "topic_text": "I'd like to ask you some other questions.",
+      "emotion": "Neutral 50",
+      "response_text": "I got some time - what's eating you?",
+      "index": "10"
+    },
+    {
+      "topic": "VMS25WalterPhebusTopic003",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "All right, kid! Be good.",
+      "index": "11"
+    },
+    {
+      "topic": "VMS25WalterPhebusTopic004",
+      "topic_text": "I have questions about you.",
+      "emotion": "Neutral 50",
+      "response_text": "Okay. What'd you want know?",
+      "index": "12"
+    },
+    {
+      "topic": "VMS25WalterPhebusTopic005",
+      "topic_text": "I'd like to ask you about the Wasteland.",
+      "emotion": "Neutral 50",
+      "response_text": "I know it better than my wife's corset! What about it, kid?",
+      "index": "13"
+    },
+    {
+      "topic": "VMS25WalterPhebusTopic006",
+      "topic_text": "Let's talk about Heck Gunderson.",
+      "emotion": "Neutral 50",
+      "response_text": "I hear you. What's on your mind?",
+      "index": "14"
+    },
+    {
+      "topic": "VMS25WalterPhebusTopic007",
+      "topic_text": "What was that about settling a score?",
+      "emotion": "Anger 50",
+      "response_text": "There's a long list of grievances that Heck Gunderson's got to answer for, kid. I'm here to make sure that \"rancher\" stops stealing our lands.",
+      "index": "15"
+    },
+    {
+      "topic": "VMS25WalterPhebusTopic009",
+      "topic_text": "I have news about the Gundersons",
+      "emotion": "Surprise 50",
+      "response_text": "You have? What are you waiting for, kid? Spill the beans!",
+      "index": "19"
+    },
+    {
+      "topic": "VMS25WalterPhebusTopic012",
+      "topic_text": "How do Wastelanders cope with current times?",
+      "emotion": "Happy 50",
+      "response_text": "{Bragging Jokingly}Steeling our pure-breed resolve, that's how! We've faced the Wasteland right in the old mug and told her to shove it!",
+      "index": "20"
+    },
+    {
+      "topic": "VMS25WalterPhebusTopic013",
+      "topic_text": "Maybe Heck would listen to your pleas if his son's life was at stake.",
+      "emotion": "Sad 70",
+      "response_text": "A ransom? I doubt that snake's got enough soul to care that much for his own youngin. Besides, what's to stop him after his son's returned?",
+      "index": "23"
+    },
+    {
+      "topic": "VMS25WalterPhebusTopic014",
+      "topic_text": "Heck's life and a safe future have a steep price, Walter. 1000 caps' my fee.",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] I'll pay that much and die a happy man when my time comes. So, we got a deal?",
+      "index": "25"
+    },
+    {
+      "topic": "VMS25WalterPhebusTopic015",
+      "topic_text": "Heck's life? That's big game, a 1000 caps.",
+      "emotion": "Neutral 50",
+      "response_text": "[FAILED] Cut that in half and we got a clean deal, kid.",
+      "index": "26"
+    },
+    {
+      "topic": "VMS25WalterPhebusTopic016",
+      "topic_text": "I want to talk to you about our deal.",
+      "emotion": "Neutral 50",
+      "response_text": "I hear you. What's on your mind?",
+      "index": "27"
+    },
+    {
+      "topic": "VMS25WalterPhebusTopic017",
+      "topic_text": "You're not from around here, are you?",
+      "emotion": "Neutral 50",
+      "response_text": "Darn far it is, our ranch. Ethel would be happy to yap about that - I got more important things in mind, kid.",
+      "index": "28"
+    },
+    {
+      "topic": "VMS25WalterPhebusTopic018",
+      "topic_text": "Are you a Bighorn rancher?",
+      "emotion": "Neutral 50",
+      "response_text": "Bighorners' my trade since I was a youngin. I confess it's hard living these days, kid. The Wasteland ain't the same anymore.",
+      "index": "29"
+    },
+    {
+      "topic": "VMS25WalterPhebusTopic019",
+      "topic_text": "What else can you tell me about Heck Gunderson?",
+      "emotion": "Neutral 50",
+      "response_text": "What more you want? He's a slithering snake, what he is. One of the biggest landowners this side of the Colorado and it's all stolen, I tell you.",
+      "index": "30"
+    },
+    {
+      "topic": "VMS25WalterPhebusTopic020",
+      "topic_text": "Heck claims to be an honest rancher.",
+      "emotion": "Neutral 50",
+      "response_text": "Sure, kid, and I still hump like a buck in Spring. That Gunderson's a liar and born of a viper, I swear.",
+      "index": "32"
+    },
+    {
+      "topic": "VMS25WalterPhebusTopic021",
+      "topic_text": "What do you plan to do about him?",
+      "emotion": "Anger 50",
+      "response_text": "I have no illusions that he'll ever stop his plundering. So I'm just going to make him suffer, that's what I'm going to do.",
+      "index": "33"
+    },
+    {
+      "topic": "VMS25WalterPhebusTopic022",
+      "topic_text": "Heck's looking for his disappeared son. I've agreed to find him.",
+      "emotion": "Happy 50",
+      "response_text": "I'll be damned! You mean the young Gunderson? That's a shave tail if I ever saw one - he's got less sense than a Brahmin at a crossroads.",
+      "index": "36"
+    },
+    {
+      "topic": "VMS25WalterPhebusTopic023",
+      "topic_text": "I may be able to help you.",
+      "emotion": "Happy 50",
+      "response_text": "Where I come from, we appreciate good intentions. I reckon you could help me figure out what's he doing in town.",
+      "index": "38"
+    },
+    {
+      "topic": "VMS25WalterPhebusTopic024",
+      "topic_text": "I'll find out for you but not cheaply - 400 caps.",
+      "emotion": "Neutral 50",
+      "response_text": "[FAILED] Cut that in half and we got a clean deal, kid.",
+      "index": "40"
+    },
+    {
+      "topic": "VMS25WalterPhebusTopic025",
+      "topic_text": "Okay, I'll be back when I find out more about him.",
+      "emotion": "Neutral 50",
+      "response_text": "All right, kid! I appreciate it. I hope to see you soon.",
+      "index": "43"
+    },
+    {
+      "topic": "VMS25WalterPhebusTopic026",
+      "topic_text": "The best don't come cheap, Walter. 400 caps' my fee.",
+      "emotion": "Happy 50",
+      "response_text": "[SUCCEEDED] All right, kid! I'm taking a liking to you. It's a deal.",
+      "index": "44"
+    },
+    {
+      "topic": "VMS25WalterPhebusTopic027",
+      "topic_text": "Actually, let me consider it first.",
+      "emotion": "Neutral 50",
+      "response_text": "That's okay, kid. I understand - let me know if you change your mind, will you?",
+      "index": "47"
+    },
+    {
+      "topic": "VMS25WalterPhebusTopic028",
+      "topic_text": "Okay, I'll be back when I find out more about him.",
+      "emotion": "Neutral 50",
+      "response_text": "All right, kid! I appreciate it. I hope to see you soon.",
+      "index": "48"
+    },
+    {
+      "topic": "VMS25WalterPhebusTopic030",
+      "topic_text": "Okay, I'll be back when I find out more about him.",
+      "emotion": "Neutral 50",
+      "response_text": "All right, kid! I appreciate it. I hope to see you soon.",
+      "index": "49"
+    },
+    {
+      "topic": "VMS25WalterPhebusTopic032",
+      "topic_text": "How is Heck a threat to other ranchers in The Wasteland?",
+      "emotion": "Anger 50",
+      "response_text": "We are honest folk out there, damn hard to make a living in the desert, kid. Heck's a different breed, goddamn thief he is.",
+      "index": "50"
+    },
+    {
+      "topic": "VMS25WalterPhebusTopic033",
+      "topic_text": "I'll take care of them.",
+      "emotion": "Neutral 50",
+      "response_text": "Ethel's going to be madder than a wet hen but you reap what you sow, kid, and Heck's earned every ounce of misery he gets. So, we have a deal?",
+      "index": "52"
+    },
+    {
+      "topic": "VMS25WalterPhebusTopic034",
+      "topic_text": "Heck's a powerful man - I'd need extra for his son's life, 500 caps.",
+      "emotion": "Surprise 20",
+      "response_text": "[SUCCEEDED] You'll leave me drier than tumbleweed, kid, but I reckon anything I can do to get back at Heck is well worth the expense.",
+      "index": "53"
+    },
+    {
+      "topic": "VMS25WalterPhebusTopic035",
+      "topic_text": "500 and Ted's history.",
+      "emotion": "Neutral 50",
+      "response_text": "[FAILED] Cut that in half and we got a clean deal, kid.",
+      "index": "55"
+    },
+    {
+      "topic": "VMS25WalterPhebusTopic036",
+      "topic_text": "I'm not interested right now. Sorry, Walter.",
+      "emotion": "Neutral 50",
+      "response_text": "I won't hold it against you, kid. You got to do your clean thing, I respect that.",
+      "index": "57"
+    },
+    {
+      "topic": "VMS25WalterPhebusTopic038",
+      "topic_text": "Tell me again about your home.",
+      "emotion": "Neutral 50",
+      "response_text": "Darn far it is, our ranch. Ethel would be happy to yap about that - I got more important things in mind, kid.",
+      "index": "58"
+    },
+    {
+      "topic": "VMS25WalterPhebusTopic039",
+      "topic_text": "What's being a Bighorn rancher like?",
+      "emotion": "Neutral 50",
+      "response_text": "Bighorners' my trade since I was a youngin. I confess it's hard living these days, kid. The Wasteland ain't the same anymore.",
+      "index": "59"
+    },
+    {
+      "topic": "VMS25WalterPhebusTopic040",
+      "topic_text": "It turns out that Ted Gunderson's disappeared. Heck's looking for him.",
+      "emotion": "Happy 50",
+      "response_text": "I'll be damned! You mean the young Gunderson? That's a shave tail if I ever saw one - he's got less sense than a Brahmin at a crossroads.",
+      "index": "60"
+    },
+    {
+      "topic": "VMS25WalterPhebusTopic041",
+      "topic_text": "Placeholder for good path in quest.",
+      "emotion": "Pained 50",
+      "response_text": "Kid, look around you, there's poison and death everywhere, and people like Heck are responsible for the misery we suffer.",
+      "index": "62"
+    },
+    {
+      "topic": "VMS25WalterPhebusTopic042",
+      "topic_text": "Ted's a goner.",
+      "emotion": "Neutral 50",
+      "response_text": "Good work. I'm sorry that stupid mail-order cowboy ended like that but his father's misery makes it well worthy.",
+      "index": "64"
+    },
+    {
+      "topic": "VMS25WalterPhebusTopic043",
+      "topic_text": "You don't have to worry about Heck Gunderson, ever again.",
+      "emotion": "Happy 50",
+      "response_text": "Hahaha! Yeeeehaw! Now, that's something I thought I'd never hear.",
+      "index": "66"
+    },
+    {
+      "topic": "VMS25WalterPhebusTopic044",
+      "topic_text": "Consider it done.",
+      "emotion": "Neutral 50",
+      "response_text": "All right, kid! Be good.",
+      "index": "68"
+    },
+    {
+      "topic": "VMS25WalterPhebusTopic045",
+      "topic_text": "Consider it done.",
+      "emotion": "Neutral 50",
+      "response_text": "All right, kid! Be good.",
+      "index": "69"
+    },
+    {
+      "topic": "VMS25WalterPhebusTopic046",
+      "topic_text": "Consider it done.",
+      "emotion": "Neutral 50",
+      "response_text": "All right, kid! Be good.",
+      "index": "70"
+    },
+    {
+      "topic": "VMS25WalterPhebusTopic047",
+      "topic_text": "Consider it done.",
+      "emotion": "Neutral 50",
+      "response_text": "All right, kid! Be good.",
+      "index": "71"
+    },
+    {
+      "topic": "VMS25WalterPhebusTopic048",
+      "topic_text": "Consider it done.",
+      "emotion": "Neutral 50",
+      "response_text": "All right, kid! Be good.",
+      "index": "72"
+    },
+    {
+      "topic": "VMS25WalterPhebusTopic049",
+      "topic_text": "Let's talk prices.",
+      "emotion": "Neutral 50",
+      "response_text": "I hear you. What's on your mind?",
+      "index": "73"
+    },
+    {
+      "topic": "VMS25WalterPhebusTopic050",
+      "topic_text": "You might like to know that Heck's barely protected, right now.",
+      "emotion": "Surprise 50",
+      "response_text": "So, Ted's nowhere to be found and Heck's quite unprotected while looking for him, huh?",
+      "index": "74"
+    },
+    {
+      "topic": "VMS25WalterPhebusTopic051",
+      "topic_text": "We said 1000 for Heck, right?",
+      "emotion": "Neutral 50",
+      "response_text": "That's what we said. So, do we have a deal?",
+      "index": "76"
+    },
+    {
+      "topic": "VMS25WalterPhebusTopic052",
+      "topic_text": "Heck for 500, correct?",
+      "emotion": "Neutral 50",
+      "response_text": "That's what we said. So, do we have a deal?",
+      "index": "77"
+    },
+    {
+      "topic": "VMS25WalterPhebusTopic053",
+      "topic_text": "Ted's worth 500 to you, then?",
+      "emotion": "Neutral 50",
+      "response_text": "That's what we said. So, do we have a deal?",
+      "index": "78"
+    },
+    {
+      "topic": "VMS25WalterPhebusTopic054",
+      "topic_text": "So, 250 for Ted it is?",
+      "emotion": "Neutral 50",
+      "response_text": "That's what we said. So, do we have a deal?",
+      "index": "79"
+    },
+    {
+      "topic": "VMS25WalterPhebusTopic055",
+      "topic_text": "The Gundersons are history.",
+      "emotion": "Surprise 50",
+      "response_text": "Both Gundersons, gone? I'll be damned, you are one of a kind!",
+      "index": "80"
+    },
+    {
+      "topic": "VMS25WalterPhebusTopic057",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "All right, kid! Be good.",
+      "index": "82"
+    },
+    {
+      "topic": "VMS25WalterPhebusTopic059",
+      "topic_text": "None but...huh, what right do you have?",
+      "emotion": "Neutral 50",
+      "response_text": "[FAILED] Same, the right of might, kid. The Gundersons will pay for all their crimes and that's final.",
+      "index": "83"
+    },
+    {
+      "topic": "VMS25WalterPhebusTopic060",
+      "topic_text": "You are just giving them the excuse they need.",
+      "emotion": "Surprise 30",
+      "response_text": "[SUCCEEDED] Hell, a good thrashing is what I want to give them but I see your point, kid. Things will never change without us good folks.",
+      "index": "84"
+    },
+    {
+      "topic": "VMS25WalterPhebusTopic064",
+      "topic_text": "You should know that Heck's dead.",
+      "emotion": "Happy 70",
+      "response_text": "Hahaha! Yeeeehaw! Now, that's something I thought I'd never hear.",
+      "index": "87"
+    },
+    {
+      "topic": "VMS25WalterPhebusTopic066",
+      "topic_text": "Why was Heck such a threat to other ranchers?",
+      "emotion": "Neutral 50",
+      "response_text": "People like Heck are rotten, kid, plenty of them in the Wasteland. They'll shoot you, kidnap your family, or drive NCR troops through your lands.",
+      "index": "89"
+    },
+    {
+      "topic": "VMS25WalterPhebusTopic068",
+      "topic_text": "I've dealt with the Gundersons.",
+      "emotion": "Surprise 50",
+      "response_text": "You have? What are you waiting for, kid? Spill the beans!",
+      "index": "91"
+    },
+    {
+      "topic": "VMS25WalterPhebusTopic069",
+      "topic_text": "You don't have to worry about Heck, ever again.",
+      "emotion": "Happy 50",
+      "response_text": "Hahaha! Yeeeehaw! Now, that's something I thought I'd never hear.",
+      "index": "92"
+    },
+    {
+      "topic": "VMS25WalterPhebusTopic070",
+      "topic_text": "Ted's dead.",
+      "emotion": "Neutral 50",
+      "response_text": "Good work. I'm sorry that stupid mail-order cowboy ended like that but his father's misery makes it well worthy.",
+      "index": "94"
+    },
+    {
+      "topic": "VMS25WalterPhebusTopic071",
+      "topic_text": "Heck and Ted are dead.",
+      "emotion": "Surprise 50",
+      "response_text": "Both Gundersons, gone? I'll be damned, you are one of a kind!",
+      "index": "96"
+    },
+    {
+      "topic": "VMS25WalterPhebusTopic073",
+      "topic_text": "Two Gundersons, that's worth a 1000 caps at least.",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] You'll leave me drier than tumbleweed, kid, but I reckon anything I can do to get back at Heck is well worth the expense.",
+      "index": "98"
+    },
+    {
+      "topic": "VMS25WalterPhebusTopic074",
+      "topic_text": "I don't charge for good deeds.",
+      "emotion": "Surprise 50",
+      "response_text": "You don't want anything in return? That's rare in these times, got to say.",
+      "index": "102"
+    },
+    {
+      "topic": "VMS25WalterPhebusTopic075",
+      "topic_text": "Goodbye.",
+      "emotion": "Surprise 50",
+      "response_text": "You don't want anything in return? That's rare in these times, got to say.",
+      "index": "104"
+    },
+    {
+      "topic": "VMS25WalterPhebusTopic076",
+      "topic_text": "The big Gunderson's worth 750 caps, at least.",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] You'll leave me drier than tumbleweed, kid, but I reckon anything I can do to get back at Heck is well worth the expense.",
+      "index": "106"
+    },
+    {
+      "topic": "VMS25WalterPhebusTopic077",
+      "topic_text": "The young Gunderson's worth 500 caps, at least.",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] You'll leave me drier than tumbleweed, kid, but I reckon anything I can do to get back at Heck is well worth the expense.",
+      "index": "110"
+    },
+    {
+      "topic": "VMS25WalterPhebusTopic079",
+      "topic_text": "I don't charge for good deeds.",
+      "emotion": "Neutral 50",
+      "response_text": "You don't want anything in return? That's rare in these times, got to say.",
+      "index": "114"
+    },
+    {
+      "topic": "VMS25WalterPhebusTopic080",
+      "topic_text": "Sounds good.",
+      "emotion": "Neutral 50",
+      "response_text": "I'm a man of my word. Here's your money. You've earned it.",
+      "index": "115"
+    },
+    {
+      "topic": "VMS25WalterPhebusTopic081",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "You don't want anything in return? That's rare in these times, got to say.",
+      "index": "116"
+    },
+    {
+      "topic": "VMS25WalterPhebusTopic082",
+      "topic_text": "Sounds good.",
+      "emotion": "Neutral 50",
+      "response_text": "I'm a man of my word. Here's your money. You've earned it.",
+      "index": "117"
+    },
+    {
+      "topic": "VMS25WalterPhebusTopic083",
+      "topic_text": "I don't charge for good deeds.",
+      "emotion": "Neutral 50",
+      "response_text": "You don't want anything in return? That's rare in these times, got to say.",
+      "index": "118"
+    },
+    {
+      "topic": "VMS25WalterPhebusTopic084",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "You don't want anything in return? That's rare in these times, got to say.",
+      "index": "119"
+    },
+    {
+      "topic": "VMS25WalterPhebusTopic085",
+      "topic_text": "Sounds good.",
+      "emotion": "Neutral 50",
+      "response_text": "I'm a man of my word. Here's your money. You've earned it.",
+      "index": "120"
+    },
+    {
+      "topic": "VMS25WalterPhebusTopic086",
+      "topic_text": "I don't charge for good deeds.",
+      "emotion": "Neutral 50",
+      "response_text": "You don't want anything in return? That's rare in these times, got to say.",
+      "index": "121"
+    },
+    {
+      "topic": "VMS25WalterPhebusTopic087",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "You don't want anything in return? That's rare in these times, got to say.",
+      "index": "122"
+    },
+    {
+      "topic": "VMS25WalterPhebusTopic088",
+      "topic_text": "We said 400 for information about Heck, right?",
+      "emotion": "Neutral 50",
+      "response_text": "That's what we said. So, do we have a deal?",
+      "index": "123"
+    },
+    {
+      "topic": "VMS25WalterPhebusTopic089",
+      "topic_text": "We do.",
+      "emotion": "Neutral 50",
+      "response_text": "All right, kid! I appreciate it. I hope to see you soon.",
+      "index": "124"
+    },
+    {
+      "topic": "VMS25WalterPhebusTopic091",
+      "topic_text": "Okay, 200 for information about Heck, right?",
+      "emotion": "Neutral 50",
+      "response_text": "That's what we said. So, do we have a deal?",
+      "index": "125"
+    },
+    {
+      "topic": "VMS25WalterPhebusTopic092",
+      "topic_text": "We do.",
+      "emotion": "Neutral 50",
+      "response_text": "All right, kid! I appreciate it. I hope to see you soon.",
+      "index": "126"
+    },
+    {
+      "topic": "VMS25WalterPhebusTopic094",
+      "topic_text": "What are the most dangerous places in the Wasteland?",
+      "emotion": "Surprise 30",
+      "response_text": "{Hint of Irony}Hell, it's all dangerous. Know why? Because you can't trust anything that stands on two legs.",
+      "index": "127"
+    },
+    {
+      "topic": "VMS25WalterPheebusTopicEthelDead",
+      "topic_text": "VMS25WalterPheebusTopicEthelDead",
+      "emotion": "Anger 50",
+      "response_text": "Ethel, darling!{Pause, as anger boils inside - wife just got killed}I'll... I'll join you soon again! Someone's gonna pay first, though.",
+      "index": "130"
+    }
+  ],
+  "conversation": [],
+  "combat": []
+}

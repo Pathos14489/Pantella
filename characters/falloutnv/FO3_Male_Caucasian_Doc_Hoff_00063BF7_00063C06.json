@@ -1,0 +1,102 @@
+{
+  "name": "Doc Hoff",
+  "url": "/wiki/Hoff",
+  "dialogue_name": "DocHoff.txt",
+  "dialogue_url": "/wiki/DocHoff.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": true,
+  "can_repair": true,
+  "can_be_companion": false,
+  "base_id": "00063BF7",
+  "ref_id": "00063C06",
+  "editor_id": "DofHoff",
+  "location": "AlongCaravan trade route",
+  "location_url": "/wiki/Caravan_trade_route",
+  "descriptions": [
+    "Doc Hoff is a caravan merchant and chem dealer in the Capital Wasteland in Fallout 3.",
+    "Doc Hoff likes to call himself \"the good doctor,\"",
+    "Like all caravan merchants in the Capital Wasteland, Doc Hoff's route takes him to Canterbury Commons, the Temple of the Union, Agatha's house, Paradise Falls, Arefu, Evergreen Mills, Megaton and Rivet City."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Ernest Roe",
+  "role": "Travelingcaravan merchant",
+  "detailed_location": "Loops throughCanterbury Commons,Temple of the Union,Agatha's house,Paradise Falls,Arefu,Evergreen Mills,Megaton, andRivet City",
+  "voice_actor": "Jeff Baker",
+  "special": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 7,
+    "Intelligence": 5,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "level": "5→15 (1.5x player level)",
+  "tag_skills": [
+    {
+      "Barter:": "54→100"
+    },
+    {
+      "Melee Weap.:": "50→100"
+    },
+    {
+      "Speech:": "54→100"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Neutral",
+  "voice_type": "MaleAdult01DefaultDC",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "CCAboutCaravans",
+      "topic_text": "Tell me about your trade caravan.",
+      "emotion": "Happy 10",
+      "response_text": "I provide food, drinks, and discreet chemicals to discerning customers around the Wasteland. I help ease the suffering of my fellow man. For a price.{Slightly sinister, like a drug dealer.}",
+      "index": "1"
+    },
+    {
+      "topic": "CCTrade",
+      "topic_text": "I'm here to buy.",
+      "emotion": "Neutral 25",
+      "response_text": "Tell me what you need, and maybe I've got your fix.{Slightly sinister, like a drug dealer.}",
+      "index": "3"
+    },
+    {
+      "topic": "CCTradeRepair",
+      "topic_text": "Can you repair something for me?",
+      "emotion": "Neutral 50",
+      "response_text": "For a price, sure.",
+      "index": "5"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Happy 25",
+      "response_text": "Ah, welcome weary traveler! You look like a traveler in need of relaxation and the finest of chemical assistance.",
+      "index": "7"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "I have to go now.",
+      "emotion": "Neutral 50",
+      "response_text": "See you next time you need that special little something.",
+      "index": "13"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Happy 50",
+      "response_text": "Here for a pick-me-up?",
+      "index": "15"
+    }
+  ],
+  "combat": []
+}

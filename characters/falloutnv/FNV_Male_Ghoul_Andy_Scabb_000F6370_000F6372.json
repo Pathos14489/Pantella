@@ -1,0 +1,178 @@
+{
+  "name": "Andy Scabb",
+  "url": "/wiki/Andy_Scabb",
+  "dialogue_name": "NorthVegasAndyScabb.txt",
+  "dialogue_url": "/wiki/NorthVegasAndyScabb.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000F6370",
+  "ref_id": "000F6372",
+  "editor_id": "NorthVegasAndyScabb",
+  "location": "The Gray",
+  "location_url": "/wiki/The_Gray",
+  "descriptions": [
+    "Andy Scabb is a gang leader living in the Gray in 2281.",
+    "Andy Scabb and his thugs are a gang of robbers operating out of the Gray in North Vegas Square. They are plotting to rob the Crimson Caravan Company and the Hostetler household before skipping town, having recruited Alice Hostetler, the daughter of Don Hostetler, an employee of the caravan business, to easily gain access to the caps.",
+    "His room in the Gray contains a large number of human flesh, strange meat, and strange meat pies.",
+    "Andy was written by area designer Jorge Salgado, who also worked on the quest Someone to Watch Over Me."
+  ],
+  "race": "Ghoul",
+  "gender": "Male",
+  "affiliation": "Alice HostetlerFred",
+  "role": "Gang leader",
+  "detailed_location": "The Gray,North Vegas Square",
+  "voice_actor": "Sam Riegel",
+  "special": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 7,
+    "Charisma": 2,
+    "Intelligence": 6,
+    "Agility": 6,
+    "Luck": 3
+  },
+  "mod_special_values": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 8,
+    "Charisma": 2,
+    "Intelligence": 6,
+    "Agility": 7,
+    "Luck": 3
+  },
+  "level": "6",
+  "tag_skills": [
+    {
+      "Barter:": "47"
+    },
+    {
+      "Guns:": "51(53)"
+    },
+    {
+      "Unarmed:": "47(49)"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "135(140)"
+    }
+  ],
+  "karma": "Neutral",
+  "voice_type": "MaleGhoul02",
+  "geck_race": "Ghoul",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Anger 50",
+      "response_text": "What are you looking at, huh? Answer me, or I'll get trigger-happy real quick.",
+      "index": "1"
+    },
+    {
+      "topic": "VDialogueVegasNorthNorthVegasAndyScabbTopic000",
+      "topic_text": "Relax, I was just leaving.",
+      "emotion": "Neutral 50",
+      "response_text": "Wait right there. You told my men that Alice's mother was waiting for me outside, didn't you?",
+      "index": "4"
+    },
+    {
+      "topic": "VDialogueVegasNorthNorthVegasAndyScabbTopic002",
+      "topic_text": "<Attack> I'm here to kill you.",
+      "emotion": "Anger 50",
+      "response_text": "Nobody threatens me and walks away alive!",
+      "index": "6"
+    },
+    {
+      "topic": "VDialogueVegasNorthNorthVegasAndyScabbTopic004",
+      "topic_text": "<Lie> I've no idea what you're talking about.",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] Hmmm... I've got my eye on you. Get the fuck off my turf.",
+      "index": "7"
+    },
+    {
+      "topic": "VDialogueVegasNorthNorthVegasAndyScabbTopic006",
+      "topic_text": "Yes, I did. I know about your plans for Alice.",
+      "emotion": "Happy 50",
+      "response_text": "You think I give a shit? Has it crossed your mind that Alice is all the way in this with me?",
+      "index": "9"
+    },
+    {
+      "topic": "VDialogueVegasNorthNorthVegasAndyScabbTopic009",
+      "topic_text": "Why would she be?",
+      "emotion": "Anger 50",
+      "response_text": "Maybe because I'm so good-looking.",
+      "index": "10"
+    },
+    {
+      "topic": "VDialogueVegasNorthNorthVegasAndyScabbTopic014",
+      "topic_text": "<Attack> And it's the last you'll ever see.",
+      "emotion": "Anger 50",
+      "response_text": "Oh boy, you've just made your last mistake.",
+      "index": "13"
+    },
+    {
+      "topic": "VDialogueVegasNorthNorthVegasAndyScabbTopic015",
+      "topic_text": "Nothing, goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Leaving so soon? And I thought we'd have time for a little chat.",
+      "index": "14"
+    },
+    {
+      "topic": "VDialogueVegasNorthNorthVegasAndyScabbTopic016",
+      "topic_text": "She deserves to know the truth.",
+      "emotion": "Neutral 50",
+      "response_text": "And... you think that's worth her happiness? Go on and tell her, then. Watch what happens when you crush her dreams.",
+      "index": "15"
+    },
+    {
+      "topic": "VDialogueVegasNorthNorthVegasAndyScabbTopic017",
+      "topic_text": "You're manipulating her into betraying her family.",
+      "emotion": "Neutral 50",
+      "response_text": "Family's just what the world throws on our shoulders without our say or opinion.",
+      "index": "16"
+    },
+    {
+      "topic": "VDialogueVegasNorthNorthVegasAndyScabbTopic019",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "It's not polite to leave in the middle of a conversation, but I won't try to teach you manners. This time.",
+      "index": "18"
+    },
+    {
+      "topic": "VDialogueVegasNorthNorthVegasAndyScabbTopic020",
+      "topic_text": "Aren't you afraid I'll blow your plans?",
+      "emotion": "Neutral 50",
+      "response_text": "And how exactly would you do that?",
+      "index": "19"
+    },
+    {
+      "topic": "VDialogueVegasNorthNorthVegasAndyScabbTopic022",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah, sure.",
+      "index": "20"
+    },
+    {
+      "topic": "VDialogueVegasNorthNorthVegasAndyScabbTopic023",
+      "topic_text": "A cut from the Hostetlers' money, and I might help you.",
+      "emotion": "Neutral 50",
+      "response_text": "I'm glad we understand each other. Alice's at her home, getting our means out of this shit-hole. Make sure things go smoothly.",
+      "index": "21"
+    },
+    {
+      "topic": "VDialogueVegasNorthNorthVegasAndyScabbTopic041",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "That's right, and good riddance.",
+      "index": "22"
+    }
+  ],
+  "conversation": [],
+  "combat": []
+}

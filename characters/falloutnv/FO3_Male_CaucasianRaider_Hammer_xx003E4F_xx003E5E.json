@@ -1,0 +1,101 @@
+{
+  "name": "Hammer",
+  "url": "/wiki/Hammer_(The_Pitt)",
+  "dialogue_name": "DLC01Hammer.txt",
+  "dialogue_url": "/wiki/DLC01Hammer.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "xx003E4F",
+  "ref_id": "xx003E5E",
+  "editor_id": "DLC01Hammer",
+  "location": "The Mill",
+  "location_url": "/wiki/The_Mill",
+  "descriptions": [
+    "Hammer is a Pitt raider found in the Mill in the year 2277.",
+    "Hammer is in charge of guarding the gate that leads to the Pitt Uptown. He was once a slave but gained his freedom by fighting in the arena, where his impressive skill with a blunt instrument also gained him his current nickname.",
+    "He will tell the Lone Wanderer to stay away from the gate until they have been granted access by way of winning in the Hole.",
+    "Hammer appears only in the Fallout 3 add-on The Pitt."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Pitt raiders",
+  "role": "Guard",
+  "detailed_location": "The Mill",
+  "voice_actor": "James Lewis",
+  "special": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 3,
+    "Intelligence": 3,
+    "Agility": 7,
+    "Luck": 5
+  },
+  "level": "1→4→9",
+  "tag_skills": [
+    {
+      "Melee Weap.:": "32→45→66"
+    },
+    {
+      "Small Guns:": "34→47→68"
+    },
+    {
+      "Unarmed:": "28→41→62"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "25→55→85"
+    },
+    {
+      "Critical Chance:": "5%"
+    },
+    {
+      "Unarmed Dam.:": "1.9→2.55→3.6"
+    },
+    {
+      "Poison Resist.:": "15%"
+    },
+    {
+      "Rad. Resist.:": "6%"
+    },
+    {
+      "Carry Weight:": "210"
+    }
+  ],
+  "karma": "Evil",
+  "voice_type": "DLC01RaiderMaleGruffVoice",
+  "geck_race": "CaucasianRaider",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Anger 50",
+      "response_text": "No scabs near the gate. Back off.{Stern.}",
+      "index": "1"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "I have to go now.",
+      "emotion": "Neutral 50",
+      "response_text": "Hammer.",
+      "index": "8"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Neutral 50",
+      "response_text": "{Silence.}",
+      "index": "9"
+    }
+  ],
+  "combat": []
+}

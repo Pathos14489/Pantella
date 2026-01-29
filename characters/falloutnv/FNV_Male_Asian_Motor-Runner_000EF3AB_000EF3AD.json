@@ -1,0 +1,258 @@
+{
+  "name": "Motor-Runner",
+  "url": "/wiki/Motor-Runner",
+  "dialogue_name": "V03MotorRunner.txt",
+  "dialogue_url": "/wiki/V03MotorRunner.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000EF3AB",
+  "ref_id": "000EF3AD",
+  "editor_id": "V03MotorRunner",
+  "location": "Vault 3 maintenance wing",
+  "location_url": "/wiki/Vault_3#Maintenance_wing",
+  "descriptions": [
+    "Motor-Runner is the leader of the Fiends, located in Vault 3 in 2281.",
+    "Described as being the sanest of the Fiends, Motor-Runner was mentally stable enough to control the band of drugged psychotics and organize them into a credible fighting force, even managing to establish a base of operations through a violent takeover of Vault 3. Ranger Bryce Anders remarks that Motor-Runner has survived several previous NCR assassination attempts, which prompted Colonel Hsu to give Anders the mission of killing the Fiend leader personally. According to Hsu, Motor-Runner has a habit of decapitating dead NCR troopers. Motor-Runner regularly purchases slaves, and did business with Dermot and Saint James on at least two occasions. The first time he purchased a teen girl for 500 caps, but gave nothing for the girl's father since the man attacked him. At another point he purchased a woman from the pair for 250 caps, but gave only 25 caps each for her elderly parents, and nothing for the woman's infant son. He is found in his throne room in the Vault 3 maintenance wing flanked by his two guard dogs, BoneGnash and GhashBone.",
+    "The Courier can sell him various drugs (Jet, Psycho, Buffout) for 20 caps (or 22 caps, if the player passes the Barter check) if passing a Speech check at the entrance of Vault 3 when speaking to the Fiend at the door. 22 caps are more than the player character will ever be able to receive from selling drugs valued at 20, with the exception of one instance involving Ricky.",
+    "Motor Runner is the Four of Spades in the deck of Vault playing cards included with the Collector's Edition of Fallout: New Vegas."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Fiends",
+  "role": "Fiend leader",
+  "detailed_location": "Vault 3",
+  "voice_actor": "Jesse Burch",
+  "special": {
+    "Strength": 7,
+    "Perception": 6,
+    "Endurance": 5,
+    "Charisma": 3,
+    "Intelligence": 3,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "mod_special_values": {
+    "Strength": 7,
+    "Perception": 7,
+    "Endurance": 5,
+    "Charisma": 3,
+    "Intelligence": 3,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "level": "14→37→63(DLCs only) (player level x 1.25)",
+  "tag_skills": [
+    {
+      "Guns:": "79→100"
+    },
+    {
+      "Melee Weap.:": "81→100"
+    },
+    {
+      "Unarmed:": "77→100"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Evil",
+  "voice_type": "MaleAdult03",
+  "geck_race": "Asian",
+  "topics": [
+    {
+      "topic": "MotorRunnerDrugDelivery",
+      "topic_text": "I've got a package here from your friends Jack and Diane.",
+      "emotion": "Anger 50",
+      "response_text": "About goddamn time. Tell the Khans if they can't keep a steady supply, we'll find someone who can.",
+      "index": "1"
+    },
+    {
+      "topic": "VEndingFiends",
+      "topic_text": "VEndingFiends",
+      "emotion": "Neutral 50",
+      "response_text": "{Narrating}Their leaders destroyed by the Courier, the Fiends scattered throughout the wasteland.",
+      "index": "2"
+    },
+    {
+      "topic": "VMS07Greeting",
+      "topic_text": "VMS07Greeting",
+      "emotion": "Neutral 50",
+      "response_text": "I wasn't expecting a resupply so soon, so you have anything from Red Rock Canyon to sell me?",
+      "index": "18"
+    },
+    {
+      "topic": "VMS07V03MotorRunnerTopic000",
+      "topic_text": "I have some chems that I can sell.",
+      "emotion": "Neutral 50",
+      "response_text": "I'm paying 20 caps each for Jet, Psycho, or Buffout.",
+      "index": "21"
+    },
+    {
+      "topic": "VMS07V03MotorRunnerTopic001",
+      "topic_text": "Ok, 200 is a deal.",
+      "emotion": "Neutral 50",
+      "response_text": "Alright then, take my helmet and bring it to the NCR. That should be proof enough. This doesn't make us friends though.",
+      "index": "24"
+    },
+    {
+      "topic": "VMS07V03MotorRunnerTopic002",
+      "topic_text": "I'm just here looking around.",
+      "emotion": "Neutral 50",
+      "response_text": "[FAILED] Then I think you'd better find your way out before you get yourself hurt.",
+      "index": "26"
+    },
+    {
+      "topic": "VMS07V03MotorRunnerTopic003",
+      "topic_text": "I'll be leaving now.",
+      "emotion": "Neutral 50",
+      "response_text": "Nice doing business with you.",
+      "index": "29"
+    },
+    {
+      "topic": "VMS07V03MotorRunnerTopic004",
+      "topic_text": "The NCR sent me here to take care of you.",
+      "emotion": "Neutral 50",
+      "response_text": "You? Take care of me? Ha! You don't look half-tough enough.",
+      "index": "30"
+    },
+    {
+      "topic": "VMS07V03MotorRunnerTopic005",
+      "topic_text": "I was actually just leaving.",
+      "emotion": "Neutral 50",
+      "response_text": "Then get the fuck out. I'm a busy man.",
+      "index": "31"
+    },
+    {
+      "topic": "VMS07V03MotorRunnerTopic006",
+      "topic_text": "Appearances can be deceiving. Shall we?",
+      "emotion": "Neutral 50",
+      "response_text": "Cool. I haven't had a good fight in a while, and it's been ages since Donnie and Marie had something they could sink their teeth into!{I haven't had a good fight in a while. Donnie, Marie, attack!}",
+      "index": "32"
+    },
+    {
+      "topic": "VMS07V03MotorRunnerTopic007",
+      "topic_text": "I'll sell you a can of Jet for 22 caps.",
+      "emotion": "Neutral 50",
+      "response_text": "Okay, got anything else?",
+      "index": "34"
+    },
+    {
+      "topic": "VMS07V03MotorRunnerTopic008",
+      "topic_text": "I'll sell you a pack of Buffout for 22 caps.",
+      "emotion": "Neutral 50",
+      "response_text": "Okay, got anything else?",
+      "index": "36"
+    },
+    {
+      "topic": "VMS07V03MotorRunnerTopic009",
+      "topic_text": "I'll sell you a vial of Psycho for 22 caps.",
+      "emotion": "Neutral 50",
+      "response_text": "Okay, got anything else?",
+      "index": "38"
+    },
+    {
+      "topic": "VMS07V03MotorRunnerTopic010",
+      "topic_text": "I'll sell you all of my Jet for 22 caps each.",
+      "emotion": "Neutral 50",
+      "response_text": "Okay, got anything else?",
+      "index": "40"
+    },
+    {
+      "topic": "VMS07V03MotorRunnerTopic011",
+      "topic_text": "I'll give you exclusive rights to my personal stash, for a slight markup.",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] Alright, 22 caps each, but that's it.",
+      "index": "42"
+    },
+    {
+      "topic": "VMS07V03MotorRunnerTopic012",
+      "topic_text": "Let's talk about something else.",
+      "emotion": "Neutral 50",
+      "response_text": "I'm not here to talk. I'm here for business. Either do some or get the fuck out.",
+      "index": "44"
+    },
+    {
+      "topic": "VMS07V03MotorRunnerTopic013",
+      "topic_text": "I was thinking we could make an arrangement.",
+      "emotion": "Neutral 50",
+      "response_text": "What kind of arrangement did you have in mind?",
+      "index": "45"
+    },
+    {
+      "topic": "VMS07V03MotorRunnerTopic014",
+      "topic_text": "I could just tell them you are dead. For a price.",
+      "emotion": "Neutral 50",
+      "response_text": "Well now, I guess that depends on who's paying.",
+      "index": "46"
+    },
+    {
+      "topic": "VMS07V03MotorRunnerTopic015",
+      "topic_text": "I'll sell you all of my Psycho for 22 caps each.",
+      "emotion": "Neutral 50",
+      "response_text": "Okay, got anything else?",
+      "index": "47"
+    },
+    {
+      "topic": "VMS07V03MotorRunnerTopic017",
+      "topic_text": "Why did you move the Fiends into this Vault?",
+      "emotion": "Neutral 50",
+      "response_text": "We needed some place to put down some roots. I was having trouble keeping my people out of{outta}Westside.",
+      "index": "49"
+    },
+    {
+      "topic": "VMS07V03MotorRunnerTopic018",
+      "topic_text": "I'll sell you all of my Buffout for 22 caps each.",
+      "emotion": "Neutral 50",
+      "response_text": "Okay, got anything else?",
+      "index": "50"
+    },
+    {
+      "topic": "VMS07V03MotorRunnerTopic019",
+      "topic_text": "What's going on in Westside?",
+      "emotion": "Neutral 50",
+      "response_text": "I try to keep my people out of Westside. Apart from trying to stay on good terms with the Khans, who do business there. There's Mean Son of A Bitch.",
+      "index": "52"
+    },
+    {
+      "topic": "VMS07V03MotorRunnerTopic021",
+      "topic_text": "That is all I can spare.",
+      "emotion": "Neutral 50",
+      "response_text": "Okay then. What's your business now?",
+      "index": "54"
+    },
+    {
+      "topic": "VMS07V03MotorRunnerTopic022",
+      "topic_text": "Nothing left to sell, time for me to leave.",
+      "emotion": "Neutral 50",
+      "response_text": "Thanks for doing business.",
+      "index": "55"
+    },
+    {
+      "topic": "VMS07V03MotorRunnerTopic024",
+      "topic_text": "I'll pay you, I'm sure I can make up the difference from NCR.",
+      "emotion": "Neutral 50",
+      "response_text": "Okay, we got a deal. Now let's talk a price, it'll cost you 200 caps for proof of my death.",
+      "index": "56"
+    },
+    {
+      "topic": "VMS07V03MotorRunnerTopic025",
+      "topic_text": "You should pay me, I'm providing you the service.",
+      "emotion": "Neutral 50",
+      "response_text": "I'm not going to pay you squat. Now get outta my face.",
+      "index": "57"
+    },
+    {
+      "topic": "VMS07V03MotorRunnerTopic027",
+      "topic_text": "I was thinking closer to 150.",
+      "emotion": "Neutral 50",
+      "response_text": "Sorry, no deal.",
+      "index": "60"
+    }
+  ],
+  "conversation": [],
+  "combat": []
+}

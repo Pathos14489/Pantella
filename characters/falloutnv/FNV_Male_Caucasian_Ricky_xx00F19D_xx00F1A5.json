@@ -1,0 +1,442 @@
+{
+  "name": "Ricky",
+  "url": "/wiki/Ricky_(Honest_Hearts)",
+  "dialogue_name": "NVDLC02Ricky.txt",
+  "dialogue_url": "/wiki/NVDLC02Ricky.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "xx00F19D",
+  "ref_id": "xx00F1A5",
+  "editor_id": "NVDLC02Ricky",
+  "location": "Inside thenorthern passage",
+  "location_url": "/wiki/Northern_passage",
+  "descriptions": [
+    "Ricky is a Psycho addict and a compulsive liar who can accompany the Happy Trails Trading Company to Zion Canyon in 2281.",
+    "Ricky is a compulsive liar with a tendency to create incredible stories about himself, as he talks himself up to be a significantly greater adventurer and scavenger than he actually is.",
+    "He has in his possession a Vault \"two-two\" jumpsuit",
+    "Ricky appears only in the Fallout: New Vegas add-on Honest Hearts."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Happy Trails Caravan Company",
+  "role": "Psycho addictPathological liar",
+  "detailed_location": "Northern passageSouthern passage",
+  "voice_actor": "Scott McNeil",
+  "special": {
+    "Strength": 7,
+    "Perception": 4,
+    "Endurance": 6,
+    "Charisma": 3,
+    "Intelligence": 6,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "level": "8",
+  "tag_skills": [
+    {
+      "Melee Weap.:": "60(62)"
+    },
+    {
+      "Speech:": "64(66)"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Neutral",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Anger 50",
+      "response_text": "{Male PC}You looking for trouble, bud? I got plenty to spare, so watch your ass around me.",
+      "index": "1"
+    },
+    {
+      "topic": "NVDLC02DialogueRickyNVDLC02RickyTopic000",
+      "topic_text": "You're saying that you killed a Brotherhood of Steel Paladin?",
+      "emotion": "Neutral 50",
+      "response_text": "{you don't know what a \"Paladin\" is}What's it sound like I'm saying? If I was saying what you said I was saying, then yeah, I said it!",
+      "index": "8"
+    },
+    {
+      "topic": "NVDLC02DialogueRickyNVDLC02RickyTopic001",
+      "topic_text": "Please go on. This promises to be entertaining.",
+      "emotion": "Anger 50",
+      "response_text": "I was walking along, minding my own, and up pops one of them Brotherhoods. He yells{imitate authoritarian voice}\"Hand over that laser rifle, asshole!\"",
+      "index": "9"
+    },
+    {
+      "topic": "NVDLC02DialogueRickyNVDLC02RickyTopic002",
+      "topic_text": "You do anything around here, besides talk too much?",
+      "emotion": "Neutral 50",
+      "response_text": "You want to know what I do, Bud? Anything I fucking want!",
+      "index": "12"
+    },
+    {
+      "topic": "NVDLC02DialogueRickyNVDLC02RickyTopic003Guns Check",
+      "topic_text": "Too bad there's no such thing as an 11mm submachinegun.",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] There so is! Or it was a 9mm{millimeter}or a 10, I don't know! Don't care!",
+      "index": "18"
+    },
+    {
+      "topic": "NVDLC02DialogueRickyNVDLC02RickyTopic004",
+      "topic_text": "Deadeye, huh? How did you get that nickname?",
+      "emotion": "Anger 50",
+      "response_text": "{you stupid?}Uh, how you think? I shoot things in the eye, that's how good I am! Yeah, I'm that good!",
+      "index": "21"
+    },
+    {
+      "topic": "NVDLC02DialogueRickyNVDLC02RickyTopic005",
+      "topic_text": "That's quite a story.",
+      "emotion": "Neutral 50",
+      "response_text": "Hell yeah it's quite a story! But I'm quite a man, so stories like that follow me everywhere!",
+      "index": "24"
+    },
+    {
+      "topic": "NVDLC02DialogueRickyNVDLC02RickyTopic006Survival check re: \"Deathjaws\"",
+      "topic_text": "\"Deathjaws,\" huh? Did you mean to say \"Deathclaws?\"",
+      "emotion": "Anger 50",
+      "response_text": "[SUCCEEDED]{making it up as you go}No, no, you heard me right. \"Deathjaws!\" They're like Deathclaws - but bigger teeth!",
+      "index": "26"
+    },
+    {
+      "topic": "NVDLC02DialogueRickyNVDLC02RickyTopic007",
+      "topic_text": "What a load of crap. The eyeslits of T-series power armor are bullet-proof!",
+      "emotion": "Fear 50",
+      "response_text": "{startled, no idea what you're talking about}Then I guess this dumb fucker's armor musta been... D-series or something!",
+      "index": "28"
+    },
+    {
+      "topic": "NVDLC02DialogueRickyNVDLC02RickyTopic008",
+      "topic_text": "Do you have any other special skills or abilities?",
+      "emotion": "Anger 50",
+      "response_text": "{hostile}Well, I grew up near Dayglow out west, so yeah, I grew a third nut that glows in the dark!{chuckle}",
+      "index": "30"
+    },
+    {
+      "topic": "NVDLC02DialogueRickyNVDLC02RickyTopic009Black Widow",
+      "topic_text": "I'll bring my tweezers and a microscope.",
+      "emotion": "Anger 50",
+      "response_text": "Hey! That's - man, what a bitch! I was just being friendly!",
+      "index": "32"
+    },
+    {
+      "topic": "NVDLC02DialogueRickyNVDLC02RickyTopic010Guns",
+      "topic_text": "Great, I'll see what I'm shooting at.",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] Hey! That's - man, what a bitch! I was just being friendly!",
+      "index": "33"
+    },
+    {
+      "topic": "NVDLC02DialogueRickyNVDLC02RickyTopic011",
+      "topic_text": "Ewww. I think I'll pass.",
+      "emotion": "Neutral 50",
+      "response_text": "I don't think so, honey! You won't be able to resist!",
+      "index": "34"
+    },
+    {
+      "topic": "NVDLC02DialogueRickyNVDLC02RickyTopic012",
+      "topic_text": "I see you're wearing a Pip-boy and Vault suit.",
+      "emotion": "Anger 50",
+      "response_text": "{pissed off}Nice job, Eagle Eye! Of course I got a Pit-Boy and a Vault suit! So what?",
+      "index": "35"
+    },
+    {
+      "topic": "NVDLC02DialogueRickyNVDLC02RickyTopic013Medicine check.",
+      "topic_text": "Unwarranted hostility and general agitation. How long have you been a Psycho addict?",
+      "emotion": "Anger 50",
+      "response_text": "[SUCCEEDED]{defensive}Hey hey hey! Fuck you! I didn't say nothing about using Psycho!",
+      "index": "36"
+    },
+    {
+      "topic": "NVDLC02DialogueRickyNVDLC02RickyTopic014{Barter Check} for extra gear.",
+      "topic_text": "Looks like you're traveling light. What would you say to carrying some of my stuff?",
+      "emotion": "Neutral 50",
+      "response_text": "[FAILED] Ricky travels light on purpose, asshole! If you're looking for a slave, ask someone else!",
+      "index": "38"
+    },
+    {
+      "topic": "NVDLC02DialogueRickyNVDLC02RickyTopic015",
+      "topic_text": "How much Psycho you got stashed away? If you run out on the trail... the withdrawal's not pleasant.",
+      "emotion": "Anger 50",
+      "response_text": "Goddammit, I didn't say nothing about using Psycho!",
+      "index": "40"
+    },
+    {
+      "topic": "NVDLC02DialogueRickyNVDLC02RickyTopic016",
+      "topic_text": "I've got Psycho to sell, but it won't come cheap.",
+      "emotion": "Neutral 50",
+      "response_text": "{greedy, keeping voice down}All right, all right - I am a little light. How many hits you holding?",
+      "index": "42"
+    },
+    {
+      "topic": "NVDLC02DialogueRickyNVDLC02RickyTopic017",
+      "topic_text": "I can sell you a dose of Fixer, but it won't be cheap.",
+      "emotion": "Anger 50",
+      "response_text": "Fixer? Never said I wanted to kick the habit!",
+      "index": "43"
+    },
+    {
+      "topic": "NVDLC02DialogueRickyNVDLC02RickyTopic018",
+      "topic_text": "Yeah, leave now. Before the withdrawal hits you out on the trail, no Psycho for miles.",
+      "emotion": "Neutral 50",
+      "response_text": "{pissed off}Fine! You win, asshole! Enjoy leading the expedition into a fucking ambush! Hope you all die!",
+      "index": "45"
+    },
+    {
+      "topic": "NVDLC02DialogueRickyNVDLC02RickyTopic019",
+      "topic_text": "One hit for 30 caps.",
+      "emotion": "Anger 50",
+      "response_text": "One lousy hit? That'll cover me for an hour! Hand it over.",
+      "index": "46"
+    },
+    {
+      "topic": "NVDLC02DialogueRickyNVDLC02RickyTopic020",
+      "topic_text": "Two hits for 60 caps.",
+      "emotion": "Neutral 50",
+      "response_text": "Two hits? Ain't gonna last long. Fine, hand it over.",
+      "index": "47"
+    },
+    {
+      "topic": "NVDLC02DialogueRickyNVDLC02RickyTopic021",
+      "topic_text": "Three hits for 90 caps.",
+      "emotion": "Neutral 50",
+      "response_text": "Three hits? Like that's gonna hold me? Fine, I'll take them.",
+      "index": "48"
+    },
+    {
+      "topic": "NVDLC02DialogueRickyNVDLC02RickyTopic022",
+      "topic_text": "Five hits for 150 caps.",
+      "emotion": "Neutral 50",
+      "response_text": "That'll last me a while! Nice. Now take your caps and fuck off.",
+      "index": "49"
+    },
+    {
+      "topic": "NVDLC02DialogueRickyNVDLC02RickyTopic023",
+      "topic_text": "Ten hits for 300 caps.",
+      "emotion": "Anger 50",
+      "response_text": "Ten hits'll last me a good while. Worth every cap. Now fuck off.",
+      "index": "50"
+    },
+    {
+      "topic": "NVDLC02DialogueRickyNVDLC02RickyTopic024",
+      "topic_text": "80 caps.",
+      "emotion": "Anger 50",
+      "response_text": "That much for a dose? Fucking robbery!",
+      "index": "51"
+    },
+    {
+      "topic": "NVDLC02DialogueRickyNVDLC02RickyTopic025",
+      "topic_text": "Never mind. It's your problem, not mine.",
+      "emotion": "Anger 50",
+      "response_text": "Why'd you bring it up, then? When the withdrawal hits and I feel like killing something, I'll know where to start!",
+      "index": "53"
+    },
+    {
+      "topic": "NVDLC02DialogueRickyNVDLC02RickyTopic026",
+      "topic_text": "Never mind. Keep living the dream.",
+      "emotion": "Neutral 50",
+      "response_text": "That's right. Stick your nose where it don't belong and it's gonna get stung.",
+      "index": "54"
+    },
+    {
+      "topic": "NVDLC02DialogueRickyNVDLC02RickyTopic027",
+      "topic_text": "I'll give you 100 caps to make sure Jed lets me carry extra gear.",
+      "emotion": "Neutral 50",
+      "response_text": "You got a deal. You're lucky he trusts me.",
+      "index": "55"
+    },
+    {
+      "topic": "NVDLC02DialogueRickyNVDLC02RickyTopic028",
+      "topic_text": "I'll give you 75 caps to make sure Jed lets me carry extra gear.",
+      "emotion": "Neutral 50",
+      "response_text": "You got a deal. You're lucky he trusts me.",
+      "index": "56"
+    },
+    {
+      "topic": "NVDLC02DialogueRickyNVDLC02RickyTopic029",
+      "topic_text": "I'll give you 50 caps to make sure Jed lets me carry extra gear.",
+      "emotion": "Neutral 50",
+      "response_text": "You got a deal. You're lucky he trusts me.",
+      "index": "57"
+    },
+    {
+      "topic": "NVDLC02DialogueRickyNVDLC02RickyTopic030",
+      "topic_text": "Never mind, I don't want to spend caps on that right now.",
+      "emotion": "Neutral 50",
+      "response_text": "{angry}No sweat off my tits, asshole. Guess you better start deciding what gear you're going to leave behind.",
+      "index": "58"
+    },
+    {
+      "topic": "NVDLC02DialogueRickyNVDLC02RickyTopic031",
+      "topic_text": "Where'd you get the Vault suit?",
+      "emotion": "Anger 50",
+      "response_text": "Where the fuck you think? Vault two-two! That's where I grew up!",
+      "index": "59"
+    },
+    {
+      "topic": "NVDLC02DialogueRickyNVDLC02RickyTopic032",
+      "topic_text": "What do you use your Pip-Boy for?",
+      "emotion": "Anger 50",
+      "response_text": "Sorry, the shit I do with it is so far over your head, be wasting my time to put it in words you could understand!",
+      "index": "60"
+    },
+    {
+      "topic": "NVDLC02DialogueRickyNVDLC02RickyTopic033",
+      "topic_text": "Where is Vault 22 located?",
+      "emotion": "Anger 50",
+      "response_text": "I can't tell you that! I have a sworn vow of secrecy, or something like that, to all the people I left behind.",
+      "index": "63"
+    },
+    {
+      "topic": "NVDLC02DialogueRickyNVDLC02RickyTopic034",
+      "topic_text": "I've heard of some strange goings-on at Vault 22. Know any details?",
+      "emotion": "Neutral 50",
+      "response_text": "I know everything! I know all about it! But I ain't about to tell the likes of you!",
+      "index": "64"
+    },
+    {
+      "topic": "NVDLC02DialogueRickyNVDLC02RickyTopic035",
+      "topic_text": "You're lying. I've been to Vault 22. No one's lived there in 150 years.",
+      "emotion": "Surprise 50",
+      "response_text": "{laughs uncomfortably}You been to Vault two-two, huh?",
+      "index": "66"
+    },
+    {
+      "topic": "NVDLC02DialogueRickyNVDLC02RickyTopic036",
+      "topic_text": "Did you notice I'm wearing a Pip-Boy, too?",
+      "emotion": "Surprise 50",
+      "response_text": "{you totally didn't notice, but pretend you did}Huh?{beat}...Of course I noticed! First thing I noticed about you!",
+      "index": "67"
+    },
+    {
+      "topic": "NVDLC02DialogueRickyNVDLC02RickyTopic037Speech",
+      "topic_text": "I don't think your Pip-Boy works. I'd better go tell Jed.",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] Go ahead! Your word against mine, fucko! See what happens!",
+      "index": "69"
+    },
+    {
+      "topic": "NVDLC02DialogueRickyNVDLC02RickyTopic038",
+      "topic_text": "Your Pip-Boy isn't working. The screen's locked up, and the reboot button is missing.",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] Bullshit! Ain't nothing wrong with my Pit-Boy!{correcting yourself}I mean Pip-Boy!",
+      "index": "71"
+    },
+    {
+      "topic": "NVDLC02DialogueRickyNVDLC02RickyTopic039",
+      "topic_text": "I'm convincing, you're not. He'll believe me.",
+      "emotion": "Fear 50",
+      "response_text": "Hey hey hey, why you got to go and be like that! Fuck!",
+      "index": "74"
+    },
+    {
+      "topic": "NVDLC02DialogueRickyNVDLC02RickyTopic041",
+      "topic_text": "Carry some of my gear, and I'll keep my mouth shut.",
+      "emotion": "Neutral 50",
+      "response_text": "{pissed off}I travel light on purpose, okay? But fine, I'll tell Jed I'm carrying less so you can carry more. What an asshole.",
+      "index": "75"
+    },
+    {
+      "topic": "NVDLC02DialogueRickyNVDLC02RickyTopic042",
+      "topic_text": "Vow of secrecy? Fine, forget about it.",
+      "emotion": "Neutral 50",
+      "response_text": "Forget it? Uh uh. Ricky remembers everything! But he keeps his secrets, too!",
+      "index": "76"
+    },
+    {
+      "topic": "NVDLC02DialogueRickyNVDLC02RickyTopic043PER check.",
+      "topic_text": "You're lying. You have no idea where Vault 22 is.",
+      "emotion": "Neutral 50",
+      "response_text": "{laughs uncomfortably}Well, yeah, okay. You caught me.",
+      "index": "77"
+    },
+    {
+      "topic": "NVDLC02DialogueRickyNVDLC02RickyTopic044PER check.",
+      "topic_text": "You're lying. You've never been to Vault 22.",
+      "emotion": "Neutral 50",
+      "response_text": "{laughs uncomfortably}Well, yeah, okay. You caught me.",
+      "index": "79"
+    },
+    {
+      "topic": "NVDLC02DialogueRickyNVDLC02RickyTopic045",
+      "topic_text": "I've got your number, that's all. Just wanted you to know.",
+      "emotion": "Neutral 50",
+      "response_text": "{unnerved, keeping voice down}Fine, just keep it to yourself, all right? Don't be such a fucking jerk about it.",
+      "index": "81"
+    },
+    {
+      "topic": "NVDLC02DialogueRickyNVDLC02RickyTopic046",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "{sneering}Yeah, whatever.",
+      "index": "82"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "NVDLC02AmbushRickyBark01",
+      "topic_text": "NVDLC02AmbushRickyBark01",
+      "emotion": "Neutral 50",
+      "response_text": "{High, recklessly shooting in all directions.}You want some, assholes? You just pissed off the wrong guy! And that means Ricky!",
+      "index": "83"
+    },
+    {
+      "topic": "NVDLC02AmbushRickyBark02",
+      "topic_text": "NVDLC02AmbushRickyBark02",
+      "emotion": "Neutral 50",
+      "response_text": "{Whimpering, cowardly trying to hide from incoming fire.}I don't deserve this! My Pip-Boy don't even work! Why the fuck you hire me?",
+      "index": "84"
+    },
+    {
+      "topic": "NVDLC02OpeningConversationA01",
+      "topic_text": "NVDLC02OpeningRickyHigh",
+      "emotion": "Anger 50",
+      "response_text": "{high on Psycho}Oh man, yeah! Trigger finger is feeling{emphasis}itch-ay!{yelling out to the canyon}Come on, assholes! Show yourselves and Deadeye Ricky'll blow your fucking heads off!",
+      "index": "85"
+    },
+    {
+      "topic": "NVDLC02OpeningConversationA06",
+      "topic_text": "NVDLC02OpeningConversationA06",
+      "emotion": "Anger 50",
+      "response_text": "Don't worry,{mocking}Stella! This was my last hit, but thanks to ol' Johnny-come-lately over there, Ricky got some Fixer to take the edge off.",
+      "index": "86"
+    },
+    {
+      "topic": "NVDLC02OpeningConversationA09",
+      "topic_text": "NVDLC02OpeningConversationA09",
+      "emotion": "Pained 100",
+      "response_text": "Dream on,{mocking}Stella. Ricky ain't about to die for nobody. Ricky's fucking in-vin-cible, yessir!{chuckle}",
+      "index": "89"
+    },
+    {
+      "topic": "NVDLC02OpeningConversationB01",
+      "topic_text": "NVDLC02OpeningRickyWithdrawal",
+      "emotion": "Pained 100",
+      "response_text": "{going through withdrawal}I ain't feeling good, man. I feel like shit! I got the shakes, got the sweats. This fucking sucks!",
+      "index": "90"
+    },
+    {
+      "topic": "NVDLC02OpeningConversationB03",
+      "topic_text": "NVDLC02OpeningConversationB03",
+      "emotion": "Pained 100",
+      "response_text": "{going through withdrawal}{sob of self-pity}You don't know how this feels, Stella! I'm sick! Never been so sick my whole life!",
+      "index": "91"
+    },
+    {
+      "topic": "NVDLC02OpeningConversationB09",
+      "topic_text": "NVDLC02OpeningConversationB09",
+      "emotion": "Neutral 50",
+      "response_text": "{self-pitying}You ain't got no heart, Stella! I swear, you're a monster, and you're gonna regret treating me like this!",
+      "index": "92"
+    }
+  ],
+  "combat": []
+}

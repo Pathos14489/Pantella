@@ -1,0 +1,161 @@
+{
+  "name": "Bill Seward",
+  "url": "/wiki/Bill_Seward",
+  "dialogue_name": "BillSeward.txt",
+  "dialogue_url": "/wiki/BillSeward.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": true,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000239D2",
+  "ref_id": "000239DC",
+  "editor_id": "BillSeward",
+  "location": "Temple of the Union,Lincoln Memorial",
+  "location_url": "/wiki/Temple_of_the_Union",
+  "descriptions": [
+    "Bill Seward is a runaway slave in the Temple of the Union in 2277.",
+    "Bill had been a slave his entire life before running away from his master after having accidentally killed their daughter. Had the accident not occurred, he would never have attempted an escape. In the hours after the incident, Bill was found by Hannibal Hamlin, saving him from a fate of recapture or succumbing to a wasteland danger.",
+    "Despite no longer being subservient, Bill can still be found cooking and cleaning, or caring for and feeding the brahmin and the dog, Four Score.",
+    "Seward's name is a reference to William H. Seward, who served as Secretary of State from 1861 to 1869 under Presidents Abraham Lincoln and Andrew Johnson."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Abolitionists[Non-game 2]",
+  "role": "Slave (formerly)Brahmin herder",
+  "detailed_location": "Lincoln MemorialTemple of the Union",
+  "voice_actor": "Paul Eiding",
+  "special": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 4,
+    "Intelligence": 4,
+    "Agility": 6,
+    "Luck": 4
+  },
+  "mod_special_values": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 4,
+    "Intelligence": 4,
+    "Agility": 7,
+    "Luck": 4
+  },
+  "level": "6",
+  "tag_skills": [
+    {
+      "Barter:": "50"
+    },
+    {
+      "Small Guns:": "54(56)"
+    },
+    {
+      "Unarmed:": "50(52)"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "50(55)"
+    },
+    {
+      "Critical Chance:": "4%"
+    },
+    {
+      "Unarmed Dam.:": "3"
+    },
+    {
+      "Poison Resist.:": "15%(20%)"
+    },
+    {
+      "Rad. Resist.:": "6%(8%)"
+    },
+    {
+      "Carry Weight:": "210"
+    },
+    {
+      "Damage Res.:": "0%(3%)"
+    }
+  ],
+  "karma": "Good",
+  "geck_race": "CaucasianOldAged",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Fear 50",
+      "response_text": "Excuse me, sir. I can't talk now. Slavers could any moment.",
+      "index": "1"
+    },
+    {
+      "topic": "MS06HamlinInfo",
+      "topic_text": "Hannibal wants me to promise to keep this place safe. Why should I do that?",
+      "emotion": "Fear 50",
+      "response_text": "You've got to make up your own mind, sir.",
+      "index": "13"
+    },
+    {
+      "topic": "MS06LincolnsHead",
+      "topic_text": "What is that stone head?",
+      "emotion": "Fear 50",
+      "response_text": "That's Lincoln, sir. Hannibal found it. He wants to put it back, sir. I don't really understand why.",
+      "index": "17"
+    },
+    {
+      "topic": "MS06SlaveStory",
+      "topic_text": "So, you used to be a slave?",
+      "emotion": "Surprise 50",
+      "response_text": "Oh, yes. All my life.",
+      "index": "18"
+    },
+    {
+      "topic": "MS06TempleUnionWhat are a bunch of escaped slaves doing holed up here?",
+      "topic_text": "This place is a dump. Why don't you just leave before the Slavers find you?",
+      "emotion": "Happy 50",
+      "response_text": "Oh, sir, this place is heaven. Just a little bit of heaven here in the wasteland. Any slave makes it here, he's free. Just like that.",
+      "index": "22"
+    },
+    {
+      "topic": "MS06WhatDoYouDo",
+      "topic_text": "What do you do here?",
+      "emotion": "Neutral 50",
+      "response_text": "A bit of this and a bit of that. Whatever Mister Hannibal needs.",
+      "index": "26"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "Well, I've heard enough.",
+      "emotion": "Happy 50",
+      "response_text": "Yes, ma'am.",
+      "index": "28"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Happy 50",
+      "response_text": "You are truly a good person. So many others refused to help us.",
+      "index": "36"
+    },
+    {
+      "topic": "MS06PackageEnd",
+      "topic_text": "MS06PackageEnd",
+      "emotion": "Disgust 50",
+      "response_text": "Here you go you stupid cow. Don't eat it all at once.",
+      "index": "46"
+    },
+    {
+      "topic": "MS06PackageStart",
+      "topic_text": "MS06PackageStart",
+      "emotion": "Neutral 50",
+      "response_text": "Time to feed the heifer.",
+      "index": "47"
+    }
+  ],
+  "combat": []
+}

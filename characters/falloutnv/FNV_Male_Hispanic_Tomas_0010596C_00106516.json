@@ -1,0 +1,125 @@
+{
+  "name": "Tomas",
+  "url": "/wiki/Tomas",
+  "dialogue_name": "SSHQTomas.txt",
+  "dialogue_url": "/wiki/SSHQTomas.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "0010596C",
+  "ref_id": "00106516",
+  "editor_id": "SSHQTomas",
+  "location": "On the road betweenNiptonandNipton Road pit stop",
+  "location_url": "/wiki/Nipton",
+  "descriptions": [
+    "Tomas is a prospector wandering the Mojave Wasteland in 2281.",
+    "Tomas approaches the Courier after getting into a gunfight with Jacklyn who had been his traveling companion. It is implied that Jacklyn attacks him for his \"Lucky Necklace\" which turns out to be made of seven Sunset Sarsaparilla star bottle caps.",
+    "Alternatively, Jacklyn may actually win the fight and run over to you, saying how Tomas tried to kill her. She will have all nine Sunset Sarsaparilla star bottle caps on her (the two she had initially and the seven from Tomas's necklace). Whichever one dies can be found dead on the left side of the end of the road."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Jacklyn",
+  "role": "Prospector",
+  "detailed_location": "BetweenNiptonandNipton Road pit stop",
+  "voice_actor": "Liam O'Brien",
+  "special": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 2,
+    "Intelligence": 5,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "level": "1",
+  "misc_skills": [],
+  "karma": "Very Good",
+  "voice_type": "MaleAdult05",
+  "geck_race": "Hispanic",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "Thanks for the help. That crazy bitch just attacked me out of nowhere.",
+      "index": "1"
+    },
+    {
+      "topic": "VFreeformSSHQSSHQTomasTopic000",
+      "topic_text": "Any idea why?",
+      "emotion": "Neutral 50",
+      "response_text": "No, none at all. We've been traveling together since I picked her up a few days ago, and she's been friendly this whole time.",
+      "index": "5"
+    },
+    {
+      "topic": "VFreeformSSHQSSHQTomasTopic004",
+      "topic_text": "I have to go.",
+      "emotion": "Neutral 50",
+      "response_text": "No time for strangers, huh? I should probably follow your example. That's the last time I pick up a straggler on the road, believe me.",
+      "index": "8"
+    },
+    {
+      "topic": "VFreeformSSHQSSHQTomasTopic005",
+      "topic_text": "Did you know her?",
+      "emotion": "Neutral 50",
+      "response_text": "Not for long. I met her on the road a few days ago, and we've been traveling together since.",
+      "index": "9"
+    },
+    {
+      "topic": "VFreeformSSHQSSHQTomasTopic006",
+      "topic_text": "Lucky charm necklace?",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah, every once in a while you can find a cap with a blue star on it. They're pretty rare, so I started collecting them.",
+      "index": "10"
+    },
+    {
+      "topic": "VFreeformSSHQSSHQTomasTopic008{ Speech >= 50 }",
+      "topic_text": "All sorts of nasty people are looking for caps like those. You'd be safer if you got rid of them.",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] Really? I had no idea. And here I've been carrying them all this time, never knowing how dangerous they were.",
+      "index": "15"
+    },
+    {
+      "topic": "VFreeformSSHQSSHQTomasTopic009",
+      "topic_text": "Lucky for me, you mean. Hand them over.",
+      "emotion": "Neutral 50",
+      "response_text": "What? The hell I will!",
+      "index": "19"
+    },
+    {
+      "topic": "VFreeformSSHQSSHQTomasTopic010",
+      "topic_text": "Lucky for me, you mean. Hand them over or I gut you like a fish.",
+      "emotion": "Neutral 50",
+      "response_text": "Uh, yeah, sure. H-here you go. Just don't hurt me.",
+      "index": "20"
+    },
+    {
+      "topic": "VFreeformSSHQSSHQTomasTopic011",
+      "topic_text": "I can hold onto them for you. I'm not worried about the people that are looking for them.",
+      "emotion": "Neutral 50",
+      "response_text": "They're all yours. I sincerely hope they work better for you than they did for me.",
+      "index": "21"
+    },
+    {
+      "topic": "VFreeformSSHQSSHQTomasTopic012",
+      "topic_text": "Just get rid of them. It doesn't matter how you do it.",
+      "emotion": "Neutral 50",
+      "response_text": "You got it. I'm glad I ran into you. Thanks for the advice.",
+      "index": "22"
+    },
+    {
+      "topic": "VFreeformSSHQSSHQTomasTopic014",
+      "topic_text": "Just be more careful in the future, okay?",
+      "emotion": "Neutral 50",
+      "response_text": "I will. That's the last time I pick up a straggler on the road, believe me.",
+      "index": "23"
+    }
+  ],
+  "conversation": [],
+  "combat": []
+}

@@ -1,0 +1,560 @@
+{
+  "name": "Legate Lanius",
+  "url": "/wiki/Lanius",
+  "dialogue_name": "VHDLegionLegateLanius.txt",
+  "dialogue_url": "/wiki/VHDLegionLegateLanius.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "001300AA",
+  "ref_id": "00137A9D",
+  "editor_id": "VHDLegionLegateLanius",
+  "location": "Legate's camp",
+  "location_url": "/wiki/Legate%27s_camp",
+  "descriptions": [
+    "Legate Lanius is the military leader and second-in-command of Caesar's Legion, and the current commander of the Legion's campaign for Hoover Dam in 2281. He has earned dual epithets as the Monster and the Terror of the East through his bloody conquests of 19 tribes in Caesar's name. He is one of the principal characters of Fallout: New Vegas, mentioned throughout the game but only appearing in the very end during the Second Battle of Hoover Dam.",
+    "Little is known of who Lanius was before he became legate, and what is known is inconsistent and often contradictory. Caesar presents him as the greatest warrior of the Hidebarks, a tribe of Arizona, whose terrifying battlefield prowess allowed him to wipe out Legion patrols single handed, while his leadership delayed the annexation of the Hidebarks by several months past schedule. When the Legion surrounded the Hidebarks' main camp, their chief decided to surrender rather than be exterminated. The Lanius-to-be went insane with rage and attacked his own tribe in fury, finally subdued after killing fifteen of his own warriors. Caesar had him rescued and tended to, saving the maimed warlord with most of his face torn off. When the warrior finally regained consciousness, Caesar offered him a helmet forged out of iron, a new face to replace the one he lost, if he agreed to fight for Caesar. Lanius accepted the deal on condition that he could slaughter all the surviving males of his tribe. Caesar permitted him to kill all the adult men, retaining the malleable boys for training and indoctrination.",
+    "However, other legionaries offer differing accounts. Lucius claims that Lanius was a \"full Legionary by the time he was 12\" and had never lost a battle since, which would seem to suggest Lanius had always been part of the Legion, possibly born into slavery.",
+    "It may not be a stretch to surmise that Lanius is not so much a specific person, but a myth. This makes him a weapon in his own right, capable of bolstering the morale of his own men through his ruthlessness, and ruining that of his opponents.",
+    "Most of Lanius' known military exploits have been campaigns in territories east of the Colorado River to boost (or replenish) the Legion's numbers. Lanius led the conquest of Colorado, with its tribal populations put to the sword or enslaved. In Denver, he broke the Hangdogs by throwing their revered hounds onto burning pyres so that they might burn in the afterlife.",
+    "After the Legion's failure in the First Battle of Hoover Dam in 2277, Lanius continued to campaign outside the Mojave Wasteland. In 2281, Lanius was ordered by Caesar to become the new commander of the campaign for Hoover Dam, replacing Joshua Graham, who had been stripped of his title as legate and sent to his death for his failure. When Lanius received the news, he was nearing the conclusion of his most recent campaign in the Utah wilderness. By this point in his service to Caesar, Lanius had conquered a total of 19 tribes: 14 surrendered and assimilated, and five put to the sword.",
+    "As a symbol, Lanius was the perfect legionary. His very name, Latin for \"butcher,\" was granted to him after victory in several battles.",
+    "This carefully cultivated myth made out Lanius to be a brutally effective commander, \"legendary for his devotion to Caesar and his ability to sense weakness in any army.\"",
+    "Though not the only legate, he is the foremost of his rank, serving as both the highest marshal of Caesar's forces and his heir apparent. Most feared what would happen to the Legion should Caesar die, leaving Lanius to seize his mantle and claim control over the vast army.",
+    "But Lanius was no beast. He was worse: A man, with a strong ideological foundation driving his beliefs. To Lanius, war was the crucible of civilization, where the weak were consumed as fuel, allowing the strong to be forged and rise to greatness.",
+    "In the NCR, Lanius saw \"passable foes.\" Their soldiers were excellent ranged combatants, with leaders that exhibited occasional brilliance and with respectable fighters in the form of the NCR Rangers. However, politics resulted in Lanius being faced by the less capable General Lee Oliver instead of the cunning Chief Hanlon, a fact that Lanius considered regrettable.",
+    "However, although Lanius revered Caesar and the Legion, his master's contrarian words notwithstanding, Lanius had his reservations about the entire campaign.",
+    "* Lanius will not drop his armor, however, one can briefly obtain the helmet for the rest of the quest. The Blade of the East that he carries is a different version from the one he drops.",
+    "Lanius appears in Fallout: New Vegas and Fallout: Wasteland Warfare. He is mentioned by Joshua Graham in Honest Hearts and Ulysses in Lonesome Road.",
+    "Frumentarii: Alerio · Cato Hostilius · Gabban · Karl · Picus · Disguised frumentarius · Ulysses (formerly)\nConsul: M. Licinius Crassus · M. Scribonius Libo Drusus (of the consul)"
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Caesar's Legion",
+  "role": "Ace of ClubsCaesar's Legion commanderCaesar (optional)",
+  "detailed_location": "Legate's campHoover Dam(optional)",
+  "voice_actor": "Mitch Lewis",
+  "special": {
+    "Strength": 9,
+    "Perception": 8,
+    "Endurance": 8,
+    "Charisma": 7,
+    "Intelligence": 6,
+    "Agility": 7,
+    "Luck": 7
+  },
+  "level": "15→30 (Player Level x 1.30)",
+  "tag_skills": [
+    {
+      "Guns:": "95→100"
+    },
+    {
+      "Melee Weap.:": "99→100"
+    },
+    {
+      "Unarmed:": "97→100"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "845→920"
+    },
+    {
+      "Fatigue:": "760→910"
+    },
+    {
+      "Poison Resist.:": "100%"
+    },
+    {
+      "Rad. Resist.:": "100%"
+    },
+    {
+      "Fire Resist.:": "85%"
+    },
+    {
+      "Dam. Threshold:": "19"
+    }
+  ],
+  "karma": "Neutral",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "{Player sent to Lanius by Caesar or Lucius}You are the courier Lord Caesar has spoken of. The slaughter begins, then.",
+      "index": "1"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDLegionLegateLaniusTopic000",
+      "topic_text": "If you think you've got any chance of taking Hoover Dam, you're wrong.",
+      "emotion": "Disgust 10",
+      "response_text": "{Disdain}Many graves in the East are filled with those who said as much, with braver words, not backed by strength.",
+      "index": "9"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDLegionLegateLaniusTopic001",
+      "topic_text": "Maybe you're willing to listen to reason.",
+      "emotion": "Disgust 10",
+      "response_text": "{Disgust}I see you fight with words, like all beneath the flag of the bear. Let us hope your skill with weapons proves greater.",
+      "index": "11"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDLegionLegateLaniusTopic002",
+      "topic_text": "You mean your army is about to attack?",
+      "emotion": "Anger 10",
+      "response_text": "My army has been ready for some time now. My orders were to await the coming of a messenger.",
+      "index": "12"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDLegionLegateLaniusTopic003",
+      "topic_text": "{Caesar alive}What, Caesar wasn't brave enough to come take the Dam himself?",
+      "emotion": "Anger 10",
+      "response_text": "Caesar's will is made truth through me. I am a hammer against all that defy his rule.",
+      "index": "14"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDLegionLegateLaniusTopic004",
+      "topic_text": "{Caesar dead}What, Caesar giving you orders beyond the grave?",
+      "emotion": "Anger 10",
+      "response_text": "Caesar's will is the will of the Legion. And the West... all beneath the flag of the Great Bear exist to test the strength of the Legion.",
+      "index": "16"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDLegionLegateLaniusTopic005",
+      "topic_text": "I'm here to kill you. The Legion's advance ends here.",
+      "emotion": "Happy 10",
+      "response_text": "{Respectful, eager}Enough words, then. Let our strength settle this.",
+      "index": "18"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDLegionLegateLaniusTopic006",
+      "topic_text": "Nice mask, can't wait to take it as a trophy.",
+      "emotion": "Anger 20",
+      "response_text": "We shall see how brave you are when nailed to the walls of Hoover Dam, your body facing West so you may watch your world die.{Slow, angry, evil - the player's comments got under his skin.}",
+      "index": "19"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDLegionLegateLaniusTopic008",
+      "topic_text": "<Bluff> Persist and learn what Graham learned at the Dam - and Boulder City.",
+      "emotion": "Anger 30",
+      "response_text": "[SUCCEEDED]{Insulted}You dare speak that name? Comparing him to any man of Caesar will only earn you a slow death.",
+      "index": "20"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDLegionLegateLaniusTopic009",
+      "topic_text": "<Bluff> NCR has studied you as they did Graham, and the trap is ready for you.",
+      "emotion": "Surprise 10",
+      "response_text": "[SUCCEEDED]{Thinking}Hnh.{Beat}You believe your own words, even if I do not.",
+      "index": "24"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDLegionLegateLaniusTopic012",
+      "topic_text": "<Bluff> The position of your veterans, using the Dam's intake towers - all as expected.",
+      "emotion": "Surprise 10",
+      "response_text": "[SUCCEEDED]{Slightly to himself}We did take the towers easier than expected. I cannot believe even the Republic would overlook such an opening in their defenses.",
+      "index": "29"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDLegionLegateLaniusTopic013",
+      "topic_text": "You're the Legate, I'm guessing?",
+      "emotion": "Neutral 50",
+      "response_text": "I am the commander of this army. The Son of Mars has granted me the name Lanius. And the time to serve him has come once more.",
+      "index": "33"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDLegionLegateLaniusTopic014",
+      "topic_text": "And what do you want me to do?",
+      "emotion": "Neutral 50",
+      "response_text": "Our forces are better equipped to take objectives than hold them. I do not wish to defend this place if another option exists.",
+      "index": "34"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDLegionLegateLaniusTopic016",
+      "topic_text": "What does Lanius mean?",
+      "emotion": "Happy 10",
+      "response_text": "The word means \"butcher\" in Latin. I was granted the name after proving myself in several battles.",
+      "index": "37"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDLegionLegateLaniusTopic018",
+      "topic_text": "Are you looking forward to the battle?",
+      "emotion": "Neutral 50",
+      "response_text": "I live to serve Caesar's will - and the will of the Legion. If my victory serves them both, then I am pleased.",
+      "index": "39"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDLegionLegateLaniusTopic019",
+      "topic_text": "What do you think of the NCR?",
+      "emotion": "Disgust 10",
+      "response_text": "They are passable foes.{Slight disdain}Like their citizens, they prefer their war from a distance, and at that, they excel.",
+      "index": "40"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDLegionLegateLaniusTopic020",
+      "topic_text": "Any idea what our chances are?",
+      "emotion": "Disgust 10",
+      "response_text": "Their men take comfort in - and rely on - killing at a distance. They will not have the luxury of such comforts this time.",
+      "index": "43"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDLegionLegateLaniusTopic021",
+      "topic_text": "I'm ready. What is the plan?",
+      "emotion": "Neutral 50",
+      "response_text": "In the past, the NCR has relied upon attrition, withering our numbers with ranged fire and falling back as necessary.",
+      "index": "46"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDLegionLegateLaniusTopic022",
+      "topic_text": "What can you tell me about the layout of the dam?",
+      "emotion": "Neutral 50",
+      "response_text": "It was not intended for war - its top sides are bound to two intake towers by a series of bridges. No doubt snipers nest there.",
+      "index": "49"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDLegionLegateLaniusTopic023",
+      "topic_text": "I have questions.",
+      "emotion": "Neutral 50",
+      "response_text": "Then ask them. But don't waste my time. The battle draws near.",
+      "index": "51"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDLegionLegateLaniusTopic025",
+      "topic_text": "Time to go pay General Oliver a visit.",
+      "emotion": "Anger 10",
+      "response_text": "Mars's eyes are upon you. Do not fail him - or us.",
+      "index": "52"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDLegionLegateLaniusTopic028",
+      "topic_text": "<Bluff> Your success was too easy, though, wasn't it? You think I reached you by chance?",
+      "emotion": "Surprise 10",
+      "response_text": "[SUCCEEDED]{Suspicious}You play on my instincts. Yet your intention in this... you have nothing to gain by telling me of this... \"trap.\"",
+      "index": "53"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDLegionLegateLaniusTopic037",
+      "topic_text": "Perhaps the treachery of your own ranks disgusts you as it disgusts me.",
+      "emotion": "Anger 10",
+      "response_text": "Of course. And I guard myself from such acts of cowardice and jealousy.",
+      "index": "55"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDLegionLegateLaniusTopic040",
+      "topic_text": "If you return East and exact vengeance, it buys the West time - and thins the Legion ranks.",
+      "emotion": "Disgust 10",
+      "response_text": "If what you say is true, then they shall answer for it.",
+      "index": "58"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDLegionLegateLaniusTopic042",
+      "topic_text": "When your own must ally with the West in order to remove you? Such treachery must be answered.",
+      "emotion": "Neutral 50",
+      "response_text": "You speak with conviction, and more importantly, with honor.{Beat}And we secured a foothold on the Dam... easily, as you have said.",
+      "index": "61"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDLegionLegateLaniusTopic043",
+      "topic_text": "I have questions first.",
+      "emotion": "Anger 10",
+      "response_text": "Then ask them. The battle draws near.",
+      "index": "64"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDLegionLegateLaniusTopic046",
+      "topic_text": "I will await that day, Legate Lanius.",
+      "emotion": "Surprise 10",
+      "response_text": "{Final word, slight suspicion}Perhaps it is unfortunate Vulpes was not here to hear your words... something tells me you would prove more than his match.",
+      "index": "65"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDLegionLegateLaniusTopic049",
+      "topic_text": "[Karma] Any man can claim bravery when he outnumbers his opponent.",
+      "emotion": "Happy 10",
+      "response_text": "[SUCCEEDED]{Frowns}Hnh. I have seen little of true battle this day. And you were brave to come here to face me when all of NCR would not.",
+      "index": "70"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDLegionLegateLaniusTopic050",
+      "topic_text": "<Bluff> If you're such a \"Terror\" of the East, call off your dogs and face me one on one.",
+      "emotion": "Anger 30",
+      "response_text": "[SUCCEEDED]{Takes a ragged, angry breath}The West's treatment of bitches such as you is their weakness.{Beat, second thought}But... by my honor, I shall face you alone, as you request.{Had to dupe these lines because of the different skill/Karma checks being done tied to the conditional.}",
+      "index": "72"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDLegionLegateLaniusTopic051",
+      "topic_text": "[Karma] Why don't you fight me yourself if you've got the spine for it, shithead.",
+      "emotion": "Anger 30",
+      "response_text": "[SUCCEEDED]{Takes a ragged, angry breath}The West's treatment of bitches such as you is their weakness.{Beat, second thought}But... by my honor, I shall face you alone, as you request.{Had to dupe these lines because of the different skill/Karma checks being done tied to the conditional.}",
+      "index": "76"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDLegionLegateLaniusTopic052",
+      "topic_text": "Maybe you'd want something more fair? Like a fair fight?",
+      "emotion": "Anger 10",
+      "response_text": "[FAILED] No, I shall make it a contest - whether I can kill you *before* my hounds tear you apart.",
+      "index": "80"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDLegionLegateLaniusTopic059",
+      "topic_text": "You could take the West. *Holding* it is another matter.",
+      "emotion": "Disgust 20",
+      "response_text": "[SUCCEEDED]{Contempt}I have no *need* to hold it - anything the West sends against me shall break against the wall that is the Legion.",
+      "index": "81"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDLegionLegateLaniusTopic060",
+      "topic_text": "And they don't *need* to send an army, your supply lines will kill you first.",
+      "emotion": "Anger 20",
+      "response_text": "[SUCCEEDED]{Derisive}You think we would march without a means of resupply? We have the Fort, we will have the Dam - other communities will fall.",
+      "index": "83"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDLegionLegateLaniusTopic063",
+      "topic_text": "There's no communities to support you in the West - you've seen to that.",
+      "emotion": "Anger 20",
+      "response_text": "[SUCCEEDED]{Growing anger}There are many towns, many slaves... ripe for the taking as the tribes from the East were.",
+      "index": "86"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDLegionLegateLaniusTopic064",
+      "topic_text": "The settlements West are *not* self-sufficient tribes - they need NCR, and the caravans.",
+      "emotion": "Anger 10",
+      "response_text": "[SUCCEEDED]{Confused}You rely too much on the trappings of... civilization. The people of the West were once tribes - they will relearn their ways, or...",
+      "index": "88"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDLegionLegateLaniusTopic065But the Legion... it's destroyed a bunch of... well, towns you need.",
+      "topic_text": "Towns? The Legion destroyed Nipton, poisoned Searchlight, butchered Nelson.",
+      "emotion": "Sad 10",
+      "response_text": "[SUCCEEDED]{Pauses}Vulpes... brought the touch of Caesar to such places.",
+      "index": "90"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDLegionLegateLaniusTopic071",
+      "topic_text": "As Legate, do you really believe that, or are you taking a chance?",
+      "emotion": "Sad 10",
+      "response_text": "Hnh.{Beat}Long ago... when taking Denver, I had to face such a challenge. Many died, over many years to claim the city as ours.",
+      "index": "93"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDLegionLegateLaniusTopic073",
+      "topic_text": "Where you see death, I see change - and I see it as a strength.",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] Hnh. My coming would have saved you, set your people free in ways they cannot see.",
+      "index": "96"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDLegionLegateLaniusTopic074",
+      "topic_text": "I have faith. Trade helped us survive the Great War, it will do so again.",
+      "emotion": "Happy 10",
+      "response_text": "[SUCCEEDED] Hnh. Then when I return, woman of the West... we shall see if your belief will withstand the blades of the Legion.",
+      "index": "99"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDLegionLegateLaniusTopic075",
+      "topic_text": "So... you'll retreat?",
+      "emotion": "Surprise 10",
+      "response_text": "Retreat?{Beat, as if the word is new to him.}Retreat.",
+      "index": "102"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDLegionLegateLaniusTopic078",
+      "topic_text": "This battle is decided, that's why I am here.",
+      "emotion": "Disgust 10",
+      "response_text": "[SUCCEEDED]{Mocking}So you seek quarter? Terms of surrender?",
+      "index": "104"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDLegionLegateLaniusTopic079",
+      "topic_text": "Move forward? The Legion spent years trying to take Hoover Dam.",
+      "emotion": "Disgust 10",
+      "response_text": "[SUCCEEDED] Hoover Dam has never seen the massed strength of the East. Only Legates such as Graham... who deserved the fire Caesar blessed him with.",
+      "index": "108"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDLegionLegateLaniusTopic081",
+      "topic_text": "And then what of the East?",
+      "emotion": "Anger 20",
+      "response_text": "[SUCCEEDED]{Angered, confused}You speak in circles - what of the East?{beat}I am the East, and I will prove it this day.",
+      "index": "111"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDLegionLegateLaniusTopic083",
+      "topic_text": "If you need all the East to crush the West...",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] The victory here shall be swift. Our forces shall take the Dam, secure it, then build a road west on the bodies of the NCR.",
+      "index": "113"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDLegionLegateLaniusTopic085",
+      "topic_text": "Well... except Vegas.",
+      "emotion": "Neutral 50",
+      "response_text": "Vegas will fall.",
+      "index": "116"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDLegionLegateLaniusTopic088",
+      "topic_text": "It is not the strength of the West that will slow you, it is their weakness.",
+      "emotion": "Surprise 20",
+      "response_text": "[SUCCEEDED]{Curious}Your weakness? You seek to thwart me by claiming the Legion is too strong for you?",
+      "index": "117"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDLegionLegateLaniusTopic089",
+      "topic_text": "Really? I hope you're not counting on the Omertas to help you.",
+      "emotion": "Surprise 10",
+      "response_text": "{Pauses}I count on no one.",
+      "index": "119"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDLegionLegateLaniusTopic090",
+      "topic_text": "About time. I was starting to get bored with all this waiting around.",
+      "emotion": "Anger 30",
+      "response_text": "{Angry}As was I... yet I was ordered to await you. Now that you are here, we may act.",
+      "index": "120"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDLegionLegateLaniusTopic092",
+      "topic_text": "Good, because the Omertas' plan was stopped, Vegas is as strong as ever.",
+      "emotion": "Anger 20",
+      "response_text": "{Angered}A plan by Vulpes... treachery is a weapon that one should never rely on.",
+      "index": "121"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDLegionLegateLaniusTopic093",
+      "topic_text": "NCR's weakness is its size - it'll take your entire army to hold the West.",
+      "emotion": "Anger 10",
+      "response_text": "[SUCCEEDED]{Frown}That does not mean we would not succeed.",
+      "index": "124"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDLegionLegateLaniusTopic097",
+      "topic_text": "Eventually - but moving your whole army West means losing the East. You can't hold both.",
+      "emotion": "Disgust 10",
+      "response_text": "[SUCCEEDED] The East was a hard-fought campaign. Even now, Caesar drew too much of the Legion's blood needed there for... this.",
+      "index": "125"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDLegionLegateLaniusTopic102",
+      "topic_text": "There is victory in wisdom, Legate.",
+      "emotion": "Happy 10",
+      "response_text": "As for wisdom... there is wisdom in your words, woman of the West.",
+      "index": "127"
+    },
+    {
+      "topic": "VFreeformHooverDamVHDLegionLegateLaniusTopic104",
+      "topic_text": "I will await that day, Legate.",
+      "emotion": "Happy 10",
+      "response_text": "Then until our return...{To himself, walking away}True to Caesar.",
+      "index": "131"
+    },
+    {
+      "topic": "VHDLegateCongratulatesYou",
+      "topic_text": "VHDLegateCongratulatesYou",
+      "emotion": "Neutral 50",
+      "response_text": "This slaughter pleases me. No act is more sacred than consecrating a site in the blood of one's enemies.",
+      "index": "132"
+    },
+    {
+      "topic": "VHDLegateGreetsPlayer",
+      "topic_text": "VHDLegateGreetsPlayer",
+      "emotion": "Neutral 50",
+      "response_text": "Finally, Mars has accepted my sacrifices and unleashes me.",
+      "index": "142"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYEGoodbye.",
+      "topic_text": "I'll go pay General Oliver a visit.",
+      "emotion": "Neutral 50",
+      "response_text": "Mars's eyes are upon you. Do not fail him, or me.",
+      "index": "143"
+    },
+    {
+      "topic": "VHDLegateGivesThanks",
+      "topic_text": "VHDLegateGivesThanks",
+      "emotion": "Neutral 50",
+      "response_text": "Blah.",
+      "index": "144"
+    }
+  ],
+  "combat": [
+    {
+      "topic": "AcceptYield",
+      "topic_text": "AcceptYield",
+      "emotion": "Neutral 50",
+      "response_text": "{contempt}The ultimate insult is to be spared.",
+      "index": "145"
+    },
+    {
+      "topic": "Assault",
+      "topic_text": "Assault",
+      "emotion": "Neutral 50",
+      "response_text": "Degenerate!",
+      "index": "146"
+    },
+    {
+      "topic": "AvoidThreat",
+      "topic_text": "AvoidThreat",
+      "emotion": "Neutral 50",
+      "response_text": "Displace!",
+      "index": "149"
+    },
+    {
+      "topic": "DeathResponse",
+      "topic_text": "DeathResponse",
+      "emotion": "Neutral 50",
+      "response_text": "Press on!",
+      "index": "151"
+    },
+    {
+      "topic": "FireExplosive",
+      "topic_text": "FireExplosive",
+      "emotion": "Neutral 50",
+      "response_text": "{throwing grenade}<Grunting as you throw.>Look out, brothers!",
+      "index": "153"
+    },
+    {
+      "topic": "Flee",
+      "topic_text": "Flee",
+      "emotion": "Neutral 50",
+      "response_text": "{scared}Run!",
+      "index": "155"
+    },
+    {
+      "topic": "GuardTrespass",
+      "topic_text": "GuardTrespass",
+      "emotion": "Neutral 50",
+      "response_text": "{warning}You don't belong here.",
+      "index": "158"
+    },
+    {
+      "topic": "Murder",
+      "topic_text": "Murder",
+      "emotion": "Neutral 50",
+      "response_text": "Reprisal!",
+      "index": "161"
+    },
+    {
+      "topic": "MurderNoCrime",
+      "topic_text": "MurderNoCrime",
+      "emotion": "Neutral 50",
+      "response_text": "{unaffected}The weak must die.",
+      "index": "164"
+    },
+    {
+      "topic": "Steal",
+      "topic_text": "Steal",
+      "emotion": "Neutral 50",
+      "response_text": "{contempt}Honorless thief!",
+      "index": "167"
+    }
+  ]
+}

@@ -1,0 +1,143 @@
+{
+  "name": "Caleb McCaffery",
+  "url": "/wiki/Caleb_McCaffery",
+  "dialogue_name": "VFSCalebMcCaffery.txt",
+  "dialogue_url": "/wiki/VFSCalebMcCaffery.txt",
+  "spawned_dead": false,
+  "spawned": true,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "00116E22",
+  "ref_id": "0010D8EA",
+  "editor_id": "VFSCalebMcCaffery",
+  "location": "New Vegas Strip",
+  "location_url": "/wiki/New_Vegas_Strip",
+  "descriptions": [
+    "Caleb McCaffery is a bounty hunter living near New Vegas in 2281.",
+    "McCaffery formerly worked at the Atomic Wrangler Casino for the Garrets, but quit recently. Before quitting, Caleb stole a large sum of caps, leading the Garrets to send the Courier to deal with him.",
+    "Caleb is incredibly arrogant and condescending, deriding the Courier as beneath his notice."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "JamesandFrancine Garret",
+  "role": "Bounty hunter",
+  "detailed_location": "The StripAtomic Wrangler Casino",
+  "voice_actor": "Alex Mendoza",
+  "special": {
+    "Strength": 5,
+    "Perception": 6,
+    "Endurance": 6,
+    "Charisma": 5,
+    "Intelligence": 5,
+    "Agility": 7,
+    "Luck": 5
+  },
+  "mod_special_values": {
+    "Strength": 5,
+    "Perception": 6,
+    "Endurance": 6,
+    "Charisma": 6,
+    "Intelligence": 5,
+    "Agility": 7,
+    "Luck": 5
+  },
+  "level": "16",
+  "tag_skills": [],
+  "misc_skills": [],
+  "karma": "Neutral",
+  "voice_type": "MaleAdult07",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "Something you need, kid?",
+      "index": "1"
+    },
+    {
+      "topic": "VFreeformFreesideFSCalebMcCafferyTopic000",
+      "topic_text": "Any bounty hunting tips for me?",
+      "emotion": "Neutral 50",
+      "response_text": "{Cold}Be quick and quiet, and don't get dead.",
+      "index": "3"
+    },
+    {
+      "topic": "VFreeformFreesideFSCalebMcCafferyTopic001",
+      "topic_text": "I'm not a kid, old man.",
+      "emotion": "Neutral 50",
+      "response_text": "{Irritated}You've got a mouth on you, kid. If I weren't busy working for the Garrets, I might give you a few lessons in common courtesy. Get lost.",
+      "index": "5"
+    },
+    {
+      "topic": "VFreeformFreesideVFSCalebMcCaffery2Topic000",
+      "topic_text": "I'm here to collect, McCaffery. No one crosses the Garret Twins.",
+      "emotion": "Neutral 50",
+      "response_text": "{Tired and unamused}I'd rather not waste the ammo, kid. But, if you insist, draw.",
+      "index": "6"
+    },
+    {
+      "topic": "VFreeformFreesideVFSCalebMcCaffery2Topic001",
+      "topic_text": "Give me a share of the caps and your hat and you can go free.",
+      "emotion": "Neutral 50",
+      "response_text": "{Annoyed}Now why the hell should I do that? You're below me, kid.",
+      "index": "7"
+    },
+    {
+      "topic": "VFreeformFreesideVFSCalebMcCaffery2Topic002",
+      "topic_text": "Nah, just thought I'd say hi.",
+      "emotion": "Neutral 50",
+      "response_text": "{Annoyed}Piss off.",
+      "index": "9"
+    },
+    {
+      "topic": "VFreeformFreesideVFSCalebMcCaffery2Topic003",
+      "topic_text": "I guess I haven't got a choice but to put you away.",
+      "emotion": "Neutral 50",
+      "response_text": "{Cold, snickering}If you think you've got the guts, I'd like to see you try.",
+      "index": "10"
+    },
+    {
+      "topic": "VFreeformFreesideVFSCalebMcCaffery2Topic004<Speech>",
+      "topic_text": "All I need is your hat, and you're a free man. I'll tell Francine you're dead.",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED]{Amused}Well, that sounds like a bit of a bargain. I get to walk free with the Garrets thinking I'm dead.",
+      "index": "11"
+    },
+    {
+      "topic": "VFreeformFreesideVFSCalebMcCaffery2Topic005",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "{Annoyed}Piss off, errand boy.",
+      "index": "15"
+    },
+    {
+      "topic": "VFreeformFreesideVFSCalebMcCafferyTopic000",
+      "topic_text": "What do you do around here?",
+      "emotion": "Neutral 50",
+      "response_text": "{Cold}Hunting and killing, plain and simple.",
+      "index": "17"
+    },
+    {
+      "topic": "VFreeformFreesideVFSCalebMcCafferyTopic003",
+      "topic_text": "So you're a bounty hunter?",
+      "emotion": "Neutral 50",
+      "response_text": "{Irritated}Bingo. Now if you're done asking stupid questions, I have more important things to do.",
+      "index": "18"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "VFSCalebMcCafferyEnd",
+      "topic_text": "VFSCalebMcCafferyEnd",
+      "emotion": "Neutral 50",
+      "response_text": "Piss off, kid. We've got no more business to conduct.",
+      "index": "19"
+    }
+  ],
+  "combat": []
+}

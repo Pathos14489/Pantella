@@ -1,0 +1,287 @@
+{
+  "name": "Corporal Betsy¹",
+  "url": "/wiki/Betsy_(Fallout:_New_Vegas)",
+  "dialogue_name": "1ECorporalBetsy.txt",
+  "dialogue_url": "/wiki/1ECorporalBetsy.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000F56FB",
+  "ref_id": "000F570F",
+  "editor_id": "1ECorporalBetsy",
+  "location": "Camp McCarran",
+  "location_url": "/wiki/Camp_McCarran",
+  "descriptions": [
+    "Corporal Betsy is a First Recon sniper, stationed with the rest of Alpha Team at the NCR Army's headquarters at Camp McCarran in Fallout: New Vegas. She is a lesbian, and part of the game's diverse representation of LGBT people.",
+    "Initially appearing to be a cantankerous person, Betsy is actually a kindhearted professional.",
+    "Sometime after, she volunteered to partner with 10 of Spades, the pair was ambushed by Cook-Cook's group of Fiends on one of their first assignments. After sneaking up on them, Cook-Cook kicked 10 of Spades in the head until he was unconscious, undoubtedly trying to kill him.",
+    "Spurred by her pride, she tried to shrug off the trauma,",
+    "Looking for an excuse to save face,",
+    "For the past six months, Alpha Team has been stationed at Camp McCarran, mostly on perimeter duty, manning the guard towers. Once the threat from the Fiends are neutralized in the western Vegas Conurbation, she – like the rest of Alpha Team – will be transferred to the front lines at Camp Forlorn Hope.",
+    "As a lesbian,",
+    "She has complete respect for her team,",
+    "As for her love life, she is an openly promiscuous woman and prefers beautiful tall blondes,",
+    "As an experienced soldier, she knows that the Fiends are not a real threat, Caesar's Legion are. She also has a sense of justice, although she admits that all she does is \"shoot the bad guys.\"",
+    "Betsy was designed by additional writer George Ziets, who also wrote for the other members of First Recon."
+  ],
+  "race": "Human",
+  "gender": "Female",
+  "affiliation": "NCR ArmyFirst Recon",
+  "role": "Sniper",
+  "detailed_location": "Camp McCarranCamp Forlorn Hope(optional)",
+  "voice_actor": "Cindy Robinson",
+  "special": {
+    "Strength": 7,
+    "Perception": 7,
+    "Endurance": 6,
+    "Charisma": 4,
+    "Intelligence": 5,
+    "Agility": 8,
+    "Luck": 5
+  },
+  "mod_special_values": {
+    "Strength": 7,
+    "Perception": 8,
+    "Endurance": 6,
+    "Charisma": 4,
+    "Intelligence": 5,
+    "Agility": 8,
+    "Luck": 5
+  },
+  "level": "9",
+  "tag_skills": [
+    {
+      "Guns:": "79"
+    },
+    {
+      "Melee Weap.:": "81"
+    },
+    {
+      "Unarmed:": "77"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Neutral",
+  "voice_type": "FemaleAdult12",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "{PC is female, CHA 7+}Girl... you are some grade-A poon, anybody ever tell you that?{brazen come-on}",
+      "index": "1"
+    },
+    {
+      "topic": "VFreeformMcCarran31ECorporalBetsyTopic000",
+      "topic_text": "I heard you were raped by Cook-cook.",
+      "emotion": "Neutral 50",
+      "response_text": "Can't stop talking about that, can they? The Lieutenant actually sat me down and asked if I wanted to talk to a doctor.{talking about her rape - trying to shrug it off}",
+      "index": "15"
+    },
+    {
+      "topic": "VFreeformMcCarran31ECorporalBetsyTopic001",
+      "topic_text": "Don't you want some payback?",
+      "emotion": "Neutral 50",
+      "response_text": "What kind of dumbass question is that? Of course I want payback.",
+      "index": "17"
+    },
+    {
+      "topic": "VFreeformMcCarran31ECorporalBetsyTopic002",
+      "topic_text": "10 of Spades blames himself.",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah. Typical. Thing is, that fat pile of shit sneaked up on us from behind and kicked little 10 in the back of the head.{Typical references her male partner, who blames himself for her rape - spoken as \"typical guy\"}",
+      "index": "21"
+    },
+    {
+      "topic": "VFreeformMcCarran31ECorporalBetsyTopic003",
+      "topic_text": "You were raped. That's not something you can just shrug off.",
+      "emotion": "Neutral 50",
+      "response_text": "Never said it was. But I don't need to talk to any doctors. Especially not the pricks around here.",
+      "index": "24"
+    },
+    {
+      "topic": "VFreeformMcCarran31ECorporalBetsyTopic004",
+      "topic_text": "I thought you should know. Cook-cook is dead.",
+      "emotion": "Neutral 50",
+      "response_text": "You killed him? Well, shit. Here I'd dreamed up this whole elaborate revenge fantasy.{only half joking}",
+      "index": "27"
+    },
+    {
+      "topic": "VFreeformMcCarran31ECorporalBetsyTopic005",
+      "topic_text": "You're a sniper?",
+      "emotion": "Neutral 50",
+      "response_text": "What gave me away? The big gun, the shades, or the attitude?{deadpan sarcastic}",
+      "index": "30"
+    },
+    {
+      "topic": "VFreeformMcCarran31ECorporalBetsyTopic006",
+      "topic_text": "The big gun.",
+      "emotion": "Neutral 50",
+      "response_text": "Don't take this the wrong way, but girl, it's a damn good thing you're hot. That sarcasm blew right over your head, didn't it?",
+      "index": "31"
+    },
+    {
+      "topic": "VFreeformMcCarran31ECorporalBetsyTopic007",
+      "topic_text": "I didn't know that all snipers wear shades.",
+      "emotion": "Neutral 50",
+      "response_text": "They don't. Only the good ones do.",
+      "index": "33"
+    },
+    {
+      "topic": "VFreeformMcCarran31ECorporalBetsyTopic008",
+      "topic_text": "Who's your partner?",
+      "emotion": "Neutral 50",
+      "response_text": "The little guy. 10 of Spades. I like him because he listens. Doesn't shut up the rest of the time, but when I talk, he listens.",
+      "index": "36"
+    },
+    {
+      "topic": "VFreeformMcCarran31ECorporalBetsyTopic009",
+      "topic_text": "So snipers work in pairs?",
+      "emotion": "Neutral 50",
+      "response_text": "{Female PC, CHA 7+}Yeah. We spot for each other, watch each other's backs. Usually works pretty well, unless you get paired up with an asshole.",
+      "index": "38"
+    },
+    {
+      "topic": "VFreeformMcCarran31ECorporalBetsyTopic010",
+      "topic_text": "Actually, I didn't notice the attitude until just now.",
+      "emotion": "Neutral 50",
+      "response_text": "Hah! See, we've even got the same sense of humor. I like a girl who doesn't piss me off after sex.{another brash come-on to female player}",
+      "index": "44"
+    },
+    {
+      "topic": "VFreeformMcCarran31ECorporalBetsyTopic011",
+      "topic_text": "How about a date? I like tough women.",
+      "emotion": "Anger 10",
+      "response_text": "{lesbian, hostile}Yeah, right. You're sniffing up the wrong skirt. Try me again when you're tall, blonde, and female.{player just made a pass at her}",
+      "index": "47"
+    },
+    {
+      "topic": "VFreeformMcCarran31ECorporalBetsyTopic012",
+      "topic_text": "Have you seen any serious combat here?",
+      "emotion": "Neutral 50",
+      "response_text": "Not unless you count the Fiends as serious. Gorobets keeps us inside the fence, most of the time. Doesn't matter to me, I just shoot bad guys.",
+      "index": "49"
+    },
+    {
+      "topic": "VFreeformMcCarran31ECorporalBetsyTopic013",
+      "topic_text": "What do you mean?",
+      "emotion": "Neutral 50",
+      "response_text": "Legion fights to win. And they're smart... hell of a lot smarter than these crazy Fiends. But I don't feel bad about shooting Legion boys.",
+      "index": "51"
+    },
+    {
+      "topic": "VFreeformMcCarran31ECorporalBetsyTopic014",
+      "topic_text": "First I've heard about conscience in a while.",
+      "emotion": "Neutral 50",
+      "response_text": "Some cute little junkie bitch, so fucked-up she doesn't even know that she's the bad guy. And I've got to headshot her. Makes me think.",
+      "index": "53"
+    },
+    {
+      "topic": "VFreeformMcCarran31ECorporalBetsyTopic015",
+      "topic_text": "I've killed so many people, I don't even think about it.",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah, well, we can't all be heartless shitheads, right?",
+      "index": "56"
+    },
+    {
+      "topic": "VFreeformMcCarran31ECorporalBetsyTopic016",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah... I always scare off the hot ones...{hot ones = hot women that she likes}",
+      "index": "57"
+    },
+    {
+      "topic": "VFreeformMcCarran31ECorporalBetsyTopic017",
+      "topic_text": "That's a little forward, don't you think?",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah. So what? I could take a bullet in the skull tomorrow. I haven't got time to take it slow and subtle.{player just said she was being too forward}",
+      "index": "60"
+    },
+    {
+      "topic": "VFreeformMcCarran31ECorporalBetsyTopic018",
+      "topic_text": "Sorry, not interested.",
+      "emotion": "Neutral 50",
+      "response_text": "Damn shame. I've got some leave time coming to me, and I booked a suite at the Gomorrah. The two of us, rolled up in those silk sheets...",
+      "index": "62"
+    },
+    {
+      "topic": "VFreeformMcCarran31ECorporalBetsyTopic019",
+      "topic_text": "{Cherchez-la-Femme}Only all the time.",
+      "emotion": "Neutral 50",
+      "response_text": "You and me at Gomorrah, rolled up in those silk sheets. I got leave coming up in a bit, so let me know if you'll be around.",
+      "index": "63"
+    },
+    {
+      "topic": "VFreeformMcCarran31ECorporalBetsyTopic022",
+      "topic_text": "You should get medical help for your trauma.",
+      "emotion": "Neutral 50",
+      "response_text": "The Lieutenant's been talking to you, hasn't he? Look, I don't need a head doctor - I'm First Recon, damn it.",
+      "index": "64"
+    },
+    {
+      "topic": "VFreeformMcCarran31ECorporalBetsyTopic023< Medicine 40 >",
+      "topic_text": "Mental trauma can slow you down or distract you, but it's treatable - just like any bullet wound.",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] Just another injury to take care of, huh? Well, when you put it that way... all right. You can tell the Lieutenant I finally caved.",
+      "index": "66"
+    },
+    {
+      "topic": "VFreeformMcCarran31ECorporalBetsyTopic025",
+      "topic_text": "The rest of First Recon all agree that you should go see Doctor Usanagi.",
+      "emotion": "Anger 20",
+      "response_text": "This was none of their business - or yours. You've got no right to talk to people behind my back about this.",
+      "index": "69"
+    },
+    {
+      "topic": "VFreeformMcCarran31ECorporalBetsyTopic026",
+      "topic_text": "10 of Spades says his stuttering got better because of Usanagi.",
+      "emotion": "Neutral 50",
+      "response_text": "{snorting, sarcastic}He got better? If he says so. Anyway, 10 of Spades is a good kid - maybe I ought to listen to him for once.",
+      "index": "70"
+    },
+    {
+      "topic": "VFreeformMcCarran31ECorporalBetsyTopic027",
+      "topic_text": "Bitter-Root admitted that Usanagi was able to help him with his problems.",
+      "emotion": "Surprise 10",
+      "response_text": "Bitter-Root actually said that? I can't see him talking about his problems to anybody, much less admitting that someone else actually helped him.",
+      "index": "73"
+    },
+    {
+      "topic": "VFreeformMcCarran31ECorporalBetsyTopic028",
+      "topic_text": "Sterling said that if he'd let his pride get in the way, he wouldn't be in First Recon.",
+      "emotion": "Neutral 50",
+      "response_text": "I always wondered about that. First Recon is elite, but the rangers... I can't imagine what it'd be like to lose that kind of status.",
+      "index": "74"
+    },
+    {
+      "topic": "VFreeformMcCarran31ECorporalBetsyTopic029< Speech 60 >",
+      "topic_text": "You're a weak link. I know it, you know it, and First Recon knows it. Do something about it.",
+      "emotion": "Surprise 10",
+      "response_text": "[SUCCEEDED]{impressed by player's harsh attitude}Damn. Never had you pegged for the drill instructor type, but you got my attention.",
+      "index": "75"
+    },
+    {
+      "topic": "VFreeformMcCarran3Topic000",
+      "topic_text": "Yes. But never a woman.",
+      "emotion": "Neutral 50",
+      "response_text": "Trust me, the alpha males are overrated. Plenty of them in the army. All they're good for is killing each other and taking smelly shits.",
+      "index": "78"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "Goodbye.",
+      "emotion": "Sad 5",
+      "response_text": "Yeah... I always scare off the hot ones...",
+      "index": "80"
+    }
+  ],
+  "combat": []
+}

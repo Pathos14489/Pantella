@@ -1,0 +1,278 @@
+{
+  "name": "Lucy West",
+  "url": "/wiki/Lucy_West",
+  "dialogue_name": "LucyWest.txt",
+  "dialogue_url": "/wiki/LucyWest.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "00000A69",
+  "ref_id": "00003B5B",
+  "editor_id": "LucyWest",
+  "location": "Moriarty's Saloon,Lucy West's house",
+  "location_url": "/wiki/Moriarty%27s_Saloon",
+  "descriptions": [
+    "Lucy West is a resident of Megaton in 2277.",
+    "She wanted to become independent and left for Megaton, leaving Arefu. She still misses her folks and her younger brother, Ian. She often sends letters but they have not replied lately, concerning her.",
+    "Lucy's name is a reference to the character Lucy Westenra from Bram Stoker's Dracula. They both have connections to vampires, and they were the first victims of a chain of unfortunate events that affect their loved ones."
+  ],
+  "race": "Human",
+  "gender": "Female",
+  "affiliation": "Megaton",
+  "role": "Resident",
+  "detailed_location": "Megaton",
+  "voice_actor": "Jan Johns",
+  "special": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 4,
+    "Intelligence": 4,
+    "Agility": 6,
+    "Luck": 4
+  },
+  "level": "3",
+  "tag_skills": [],
+  "misc_skills": [
+    {
+      "Hit Points:": "75"
+    },
+    {
+      "Poison Resist.:": "15%"
+    },
+    {
+      "Rad. Resist.:": "6%"
+    }
+  ],
+  "karma": "Neutral",
+  "voice_type": "FemaleAdult04DC",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Sad 50",
+      "response_text": "Please tell me you have some good news... I could use it.",
+      "index": "1"
+    },
+    {
+      "topic": "MS09Bailout",
+      "topic_text": "Let me ask you something else.",
+      "emotion": "Happy 50",
+      "response_text": "Okay.",
+      "index": "11"
+    },
+    {
+      "topic": "MS09FinTLLetter",
+      "topic_text": "I delivered the letter to Ian.",
+      "emotion": "Happy 50",
+      "response_text": "Oh, thank you for remembering! With everything that's going on, I almost forgot about it.",
+      "index": "12"
+    },
+    {
+      "topic": "MS09GoodbyeDialog",
+      "topic_text": "I have to go now.",
+      "emotion": "Fear 50",
+      "response_text": "Please, do what you can to find my brother.",
+      "index": "14"
+    },
+    {
+      "topic": "MS09LucyWestFindIan01",
+      "topic_text": "There's no sign of him, but I'm sure he's alive.",
+      "emotion": "Sad 50",
+      "response_text": "You must find him! Please! He's all I have left in this world now.",
+      "index": "18"
+    },
+    {
+      "topic": "MS09LucyWestFindIan02",
+      "topic_text": "I didn't find his body.",
+      "emotion": "Happy 50",
+      "response_text": "Then maybe he's still alive!",
+      "index": "20"
+    },
+    {
+      "topic": "MS09LucyWestFindIan03",
+      "topic_text": "He's probably dead too.",
+      "emotion": "Anger 50",
+      "response_text": "No! I refuse to believe that!",
+      "index": "23"
+    },
+    {
+      "topic": "MS09LucyWestFindIan04",
+      "topic_text": "All right, Lucy. Calm down. I'll find Ian.",
+      "emotion": "Sad 50",
+      "response_text": "I'm sorry. You don't even know me, and you've already helped this much.",
+      "index": "26"
+    },
+    {
+      "topic": "MS09LucyWestFindIan05",
+      "topic_text": "Sorry. I agreed to go to Arefu. That's it.",
+      "emotion": "Disgust 50",
+      "response_text": "Fine. Be an asshole. I don't care.",
+      "index": "28"
+    },
+    {
+      "topic": "MS09LucyWestFindIan06Scoundrel",
+      "topic_text": "If you want me to find Ian, I'll need to equip myself. That costs money.",
+      "emotion": "Anger 50",
+      "response_text": "Fine. Fine. Here, this is all I have left to feed myself, you selfish asshole!",
+      "index": "30"
+    },
+    {
+      "topic": "MS09LucyWestIanIsAlive01",
+      "topic_text": "I found him. He's safe.",
+      "emotion": "Surprise 50",
+      "response_text": "Thank goodness! You have no idea how worried I was... I haven't even slept well since you left.",
+      "index": "33"
+    },
+    {
+      "topic": "MS09LucyWestIanIsAlive02",
+      "topic_text": "I haven't found him. <Lie.>",
+      "emotion": "Sad 90",
+      "response_text": "I... I don't know what to say. I... can't believe this is happening to me. My entire family... gone. I...",
+      "index": "35"
+    },
+    {
+      "topic": "MS09LucyWestIanIsAlive03",
+      "topic_text": "I found him. He's with the Family.",
+      "emotion": "Anger 60",
+      "response_text": "What? Those gangers? I knew if he got mixed up with the wrong crowd this could happen! Why didn't I do anything to stop him?",
+      "index": "37"
+    },
+    {
+      "topic": "MS09LucyWestIntroCT01",
+      "topic_text": "Sure am. Stopped in to find something to do.",
+      "emotion": "Neutral 50",
+      "response_text": "I hope by \"something to do\" you mean a job, otherwise you want to talk with Nova.",
+      "index": "40"
+    },
+    {
+      "topic": "MS09LucyWestIntroCT02",
+      "topic_text": "None of your business.",
+      "emotion": "Disgust 50",
+      "response_text": "Hmph. Well, that's the attitude I've come to know from most of the people around this town. Folks like to keep to themselves.",
+      "index": "42"
+    },
+    {
+      "topic": "MS09LucyWestIntroCT03",
+      "topic_text": "Maybe. Who wants to know?",
+      "emotion": "Neutral 50",
+      "response_text": "I do. I'm looking for someone to make a delivery. Interested?",
+      "index": "44"
+    },
+    {
+      "topic": "MS09LucyWestIntroCT04",
+      "topic_text": "Sure, why not.",
+      "emotion": "Happy 50",
+      "response_text": "Great! I'd like you to deliver this message to my family in the Arefu Settlement. I haven't heard from them in months and I'm worried.",
+      "index": "45"
+    },
+    {
+      "topic": "MS09LucyWestIntroCT05",
+      "topic_text": "Nope, sorry.",
+      "emotion": "Sad 50",
+      "response_text": "Alright. Let me know if you change your mind.",
+      "index": "47"
+    },
+    {
+      "topic": "MS09LucyWestIntroCT06",
+      "topic_text": "A job usually means I get paid.",
+      "emotion": "Sad 50",
+      "response_text": "Actually, I don't have any caps with me. I used everything I had buying a shack in this town.",
+      "index": "48"
+    },
+    {
+      "topic": "MS09LucyWestIntroCT07",
+      "topic_text": "I'll need some details before I can decide.",
+      "emotion": "Happy 50",
+      "response_text": "Hey, you're pretty smart for a Wastelander!",
+      "index": "50"
+    },
+    {
+      "topic": "MS09TLArefuTopic",
+      "topic_text": "Can you give me some information about Arefu?",
+      "emotion": "Happy 50",
+      "response_text": "Sure, be glad to since you're doing me a big favor and all.",
+      "index": "53"
+    },
+    {
+      "topic": "MS09TLArefuTopic01",
+      "topic_text": "Where is Arefu?",
+      "emotion": "Neutral 50",
+      "response_text": "Arefu is northwest of Megaton on an old overpass over the Potomac. If you follow what's left of the river, you can't miss it.",
+      "index": "54"
+    },
+    {
+      "topic": "MS09TLArefuTopic02",
+      "topic_text": "Do you suspect your family is in danger?",
+      "emotion": "Neutral 50",
+      "response_text": "No... not really. Maybe my letters just aren't arriving. Whatever you can do to get it there would sure be appreciated.",
+      "index": "55"
+    },
+    {
+      "topic": "MS09TLArefuTopic03",
+      "topic_text": "Who else lives in Arefu?",
+      "emotion": "Neutral 50",
+      "response_text": "Well, let's see. There's Evan King... he's like the sheriff of the town or whatever.",
+      "index": "56"
+    },
+    {
+      "topic": "MS09TLArefuTopic04",
+      "topic_text": "Is there anything dangerous around there I should know about?",
+      "emotion": "Disgust 60",
+      "response_text": "What, apart from the Wasteland critters, Slaver raiding parties, Raider hit squads and occasional landmine? No, it's completely safe.{sarcastic}",
+      "index": "58"
+    },
+    {
+      "topic": "MS09TLLetterDelivery",
+      "topic_text": "I delivered that letter to your brother Ian.",
+      "emotion": "Surprise 80",
+      "response_text": "Oh, thank you for remembering!",
+      "index": "60"
+    },
+    {
+      "topic": "MS09TLLucyWestParentsDead",
+      "topic_text": "I have some new information about Ian.",
+      "emotion": "Sad 50",
+      "response_text": "Oh my goodness? What is it?",
+      "index": "62"
+    },
+    {
+      "topic": "MegTownEnd",
+      "topic_text": "That's all I needed to know.",
+      "emotion": "Neutral 50",
+      "response_text": "Right.",
+      "index": "67"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "I have to go now.",
+      "emotion": "Fear 50",
+      "response_text": "Please, do what you can to find my brother.",
+      "index": "68"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Surprise 50",
+      "response_text": "You're back! Oh my gosh!",
+      "index": "76"
+    }
+  ],
+  "combat": [
+    {
+      "topic": "Attack",
+      "topic_text": "Attack",
+      "emotion": "Neutral 50",
+      "response_text": "Help! Someone help me!",
+      "index": "85"
+    }
+  ]
+}

@@ -1,0 +1,222 @@
+{
+  "name": "Doctor Mobius",
+  "url": "/wiki/Mobius",
+  "dialogue_name": "NVDLC03DoctorMobius.txt",
+  "dialogue_url": "/wiki/NVDLC03DoctorMobius.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "xx00C1CF",
+  "ref_id": "xx004034",
+  "editor_id": "NVDLC03DoctorMobiusLVL",
+  "location": "Forbidden Zone dome entrance",
+  "location_url": "/wiki/Forbidden_Zone_dome_entrance",
+  "descriptions": [
+    "Doctor Mobius is a think tank operating in the Big MT in 2281. He is the leader of the robo-scorpion army and nemesis of Dr. Klein and the team to which he belonged.",
+    "Doctor Mobius was one of the Big MT \"Think Tank\" executives before the Great War. Sometime after the War, he became a think tank in order to continue his work at Big MT. Like the others, he forgot a part of his personality and his real name, due to the recursion loop in their new perception programming.",
+    "After the escape of the cazadores and night stalkers, Mobius became disillusioned with the methods of the other think tanks. He grew tired of the endless and horrible experimentation and was deeply afraid of the damage the amoral and psychosis-ridden think tanks would wreak upon the fragile, post-apocalyptic world in the name of science.",
+    "After a severe dispute with Klein, Mobius removed all the chips of all personalities of The Sink; his room and personal laboratory,",
+    "Afterward, Mobius moved to the X-42 robo-warfare facility (which he renamed the \"Forbidden Zone\") and began to \"recreate\" the robo-scorpion, inspired by radscorpions that had wandered into Big MT. These new versions included all features of the pre-War model, such as an energy bolt blaster in the tail, highly sensitive robotic eyes, and communication systems connected directly to his stronghold.\nWith the remaining think tanks trapped in the central dome by their exaggerated fear of Mobius, the Big MT fell mostly silent.",
+    "Although not originally aggressive in his intentions, Mobius' own behavior seems to have degraded over the years, likely in part due to an increasingly serious addiction to Mentats and Psycho.",
+    "The arrival of the Courier, and the subsequent survival of their lobotomy proved to be the last straw. Eventually, the Courier defeats the X-42 giant robo-scorpion, enters the Forbidden Zone and confronts Mobius.",
+    "Mobius appears only in the Fallout: New Vegas add-on Old World Blues."
+  ],
+  "race": "Think tank",
+  "gender": "Male",
+  "affiliation": "Think Tank(formerly)",
+  "role": "ScientistOld World Bluesantagonist",
+  "detailed_location": "Forbidden Zone Dome",
+  "voice_actor": "Cam Clarke",
+  "special": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 10,
+    "Charisma": 5,
+    "Intelligence": 10,
+    "Agility": 5,
+    "Luck": 10
+  },
+  "level": "15→20→30→40→50",
+  "tag_skills": [],
+  "misc_skills": [],
+  "karma": "Neutral",
+  "topics": [
+    {
+      "topic": "GOODBYEGoodbye.",
+      "topic_text": "Time for me to go. Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Indeed, the uh... goodbye part of our little chat, then. Uh... Goodbye. Please mind the equations on the floor.",
+      "index": "225"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "Hello",
+      "emotion": "Neutral 50",
+      "response_text": "I come in peace, visitor. Take me to... Oh. That's your line isn't it?",
+      "index": "226"
+    },
+    {
+      "topic": "NVDLC03MobiusSatelliteBark",
+      "topic_text": "NVDLC03SatelliteBark",
+      "emotion": "Neutral 50",
+      "response_text": "Ah, trying to steal the X-2 Transmitter Array Antenna, are you? You won't succeed, not if my lethal Robo-Scorpions have any say in the matter.",
+      "index": "229"
+    },
+    {
+      "topic": "NVDLC03X13MobiusBark",
+      "topic_text": "NVDLC03X13MobiusBark",
+      "emotion": "Neutral 50",
+      "response_text": "X-13 breached? No... even that stealth suit won't hide you from my Robo-Scorpion army. Sting the intruder, my pets! Sting them until they are stupid.",
+      "index": "230"
+    },
+    {
+      "topic": "NVDLC03X8MobiusBark",
+      "topic_text": "NVDLC03X8MobiusBark",
+      "emotion": "Neutral 50",
+      "response_text": "{Disdain, confusion, then rage}So... you recovered the Sonic Emitter schematics -{to himself}or was it the frequency? No matter. It'll broadcast your screams as my Robo-Scorpions destroy you!{2D}",
+      "index": "231"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "AcceptYield",
+      "topic_text": "AcceptYield",
+      "emotion": "Neutral 50",
+      "response_text": "Oh, you didn't mean to do that? Not to worry, all is forgiven, forgotten, and forbidden.",
+      "index": "232"
+    },
+    {
+      "topic": "Assault",
+      "topic_text": "Assault",
+      "emotion": "Neutral 50",
+      "response_text": "{Mildly curious, player just punched him}My, is it vivisection time already?",
+      "index": "233"
+    },
+    {
+      "topic": "Attack",
+      "topic_text": "Attack",
+      "emotion": "Neutral 50",
+      "response_text": "AttackinG. With a capital G.",
+      "index": "234"
+    },
+    {
+      "topic": "AvoidThreat",
+      "topic_text": "AvoidThreat",
+      "emotion": "Neutral 50",
+      "response_text": "Stored energy combined with light, heat, sound, and pressure.",
+      "index": "248"
+    },
+    {
+      "topic": "Death",
+      "topic_text": "Death",
+      "emotion": "Neutral 50",
+      "response_text": "{Thinking, slightly introspective}So that's what being killed feels like.",
+      "index": "254"
+    },
+    {
+      "topic": "Flee",
+      "topic_text": "Flee",
+      "emotion": "Neutral 50",
+      "response_text": "{To himself}Well, I've experimented with a frontal assault long enough.",
+      "index": "262"
+    },
+    {
+      "topic": "Hit",
+      "topic_text": "Hit",
+      "emotion": "Neutral 50",
+      "response_text": "{Confused}Is that pain I feel?",
+      "index": "264"
+    },
+    {
+      "topic": "PowerAttack",
+      "topic_text": "PowerAttack",
+      "emotion": "Neutral 50",
+      "response_text": "This next attack is just what the doctor ordered.",
+      "index": "279"
+    }
+  ],
+  "combat": [
+    {
+      "topic": "AlertIdle",
+      "topic_text": "AlertIdle",
+      "emotion": "Neutral 50",
+      "response_text": "{Introspective}Did I imagine all this?{Beat}Just like the tortoises.",
+      "index": "289"
+    },
+    {
+      "topic": "AlertToCombat",
+      "topic_text": "AlertToCombat",
+      "emotion": "Neutral 50",
+      "response_text": "Think you could hide from me? Uh, again?",
+      "index": "294"
+    },
+    {
+      "topic": "AlertToNormal",
+      "topic_text": "AlertToNormal",
+      "emotion": "Neutral 50",
+      "response_text": "{DUPE, different filter}:: Whistles, as if trying to get someone to come out of hiding. ::",
+      "index": "299"
+    },
+    {
+      "topic": "CombatToLost",
+      "topic_text": "CombatToLost",
+      "emotion": "Neutral 50",
+      "response_text": "By Jove's lugnuts, I need to get this monitor fixed.",
+      "index": "301"
+    },
+    {
+      "topic": "CombatToNormal",
+      "topic_text": "CombatToNormal",
+      "emotion": "Neutral 50",
+      "response_text": "Hmph. Not very sporting.",
+      "index": "306"
+    },
+    {
+      "topic": "LostIdle",
+      "topic_text": "LostIdle",
+      "emotion": "Neutral 50",
+      "response_text": "Oh, well. Now I have this adrenaline rush that's going to make me loopy all day.",
+      "index": "311"
+    },
+    {
+      "topic": "LostToCombat",
+      "topic_text": "LostToCombat",
+      "emotion": "Neutral 50",
+      "response_text": "Found you!",
+      "index": "316"
+    },
+    {
+      "topic": "LostToNormal",
+      "topic_text": "LostToNormal",
+      "emotion": "Neutral 50",
+      "response_text": "Cancel the search routine already.",
+      "index": "323"
+    },
+    {
+      "topic": "NormalToAlert",
+      "topic_text": "NormalToAlert",
+      "emotion": "Neutral 50",
+      "response_text": "Radar-scan successful. Target... acquired.",
+      "index": "326"
+    },
+    {
+      "topic": "NormalToCombat",
+      "topic_text": "StartCombat",
+      "emotion": "Neutral 50",
+      "response_text": "Tail locking on!",
+      "index": "332"
+    },
+    {
+      "topic": "StartCombatResponse",
+      "topic_text": "StartCombatResponse",
+      "emotion": "Neutral 50",
+      "response_text": "A challenge!",
+      "index": "334"
+    }
+  ]
+}

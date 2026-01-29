@@ -1,0 +1,170 @@
+{
+  "name": "Fisto¹",
+  "url": "/wiki/Fisto",
+  "dialogue_name": "VFSFisto.txt",
+  "dialogue_url": "/wiki/VFSFisto.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "0011E4C2",
+  "ref_id": "0011ED50",
+  "editor_id": "VFSFisto",
+  "location": "Cerulean Robotics",
+  "location_url": "/wiki/Cerulean_Robotics",
+  "descriptions": [
+    "Fisto (Fully Integrated Security Technetronic Officer) is a reprogrammable Protectron in Cerulean Robotics in Freeside in Fallout: New Vegas.",
+    "The Fully Integrated Security Technetronic Officer, It was created by Cerulean Robotics prior to the Great War, and is the only intact, albeit incomplete, robot within its facility as of late 2281.",
+    "Cost: 10 caps",
+    "After the snake oil salesman's arrival at New Vegas, he is seen sitting with Fisto at an abandoned taco stand for a dinner date. The salesman makes overtures towards the robot, implying that he has previously had romantic encounters with the robot, and apologizes for \"filling the void\" (via bestiality) while he was away. Fisto's only response is to report for duty. Any further advances towards Fisto by the salesman are halted by Hank MacLean, who knocks out the salesman and takes him away for use as a human test subject.",
+    "Fisto in the Fallout Fake Talkshow",
+    "Fisto appears in Fallout: New Vegas and in the Fallout TV series, as well as the Fallout Fake Talkshow, a promotional series for the TV show."
+  ],
+  "race": "Protectron",
+  "gender": "Male programming",
+  "affiliation": ":Atomic Wrangler(optional):Snake oil salesman",
+  "role": "Security robot (initially)Robotprostitute(optional)",
+  "detailed_location": ":Cerulean RoboticsAtomic Wrangler(afterWang Dang Atomic Tango):Mojave Wasteland",
+  "voice_actor": "Dante Reid",
+  "special": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 5,
+    "Intelligence": 5,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "level": "8",
+  "tag_skills": [],
+  "misc_skills": [
+    {
+      "Hit Points:": "200"
+    },
+    {
+      "Dam. Threshold:": "8"
+    }
+  ],
+  "karma": "Neutral",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "Fully Integrated Security Technetronic Officer active and reporting for duty.",
+      "index": "1"
+    },
+    {
+      "topic": "VFreeformFreesideVFSFistoTopic000",
+      "topic_text": "That is a mouthful. Let's shorten that to Fisto.",
+      "emotion": "Neutral 50",
+      "response_text": "Yes, sir. Fisto reporting for duty.",
+      "index": "5"
+    },
+    {
+      "topic": "VFreeformFreesideVFSFistoTopic001",
+      "topic_text": "What?! No!",
+      "emotion": "Neutral 50",
+      "response_text": "I am programmed for your pleasure. Please assume the position.",
+      "index": "9"
+    },
+    {
+      "topic": "VFreeformFreesideVFSFistoTopic002",
+      "topic_text": "My pleasure is for you to work at the Atomic Wrangler.",
+      "emotion": "Neutral 50",
+      "response_text": "Fisto will report to the Atomic Wrangler for further orders.",
+      "index": "10"
+    },
+    {
+      "topic": "VFreeformFreesideVFSFistoTopic003",
+      "topic_text": "I suppose I should test you out before I hand you to the Garrets...",
+      "emotion": "Neutral 50",
+      "response_text": "Servos active!",
+      "index": "11"
+    },
+    {
+      "topic": "VFreeformFreesideVFSFistoTopic004",
+      "topic_text": "Report to the Atomic Wrangler. James Garret is your new owner.",
+      "emotion": "Neutral 50",
+      "response_text": "Yes, sir!",
+      "index": "12"
+    },
+    {
+      "topic": "VFreeformFreesideVFSFistoTopic005",
+      "topic_text": "Well, that was... different.",
+      "emotion": "Neutral 50",
+      "response_text": "Are you uncomfortable? My servos may require adjustment.",
+      "index": "14"
+    },
+    {
+      "topic": "VFreeformFreesideVFSFistoTopic006",
+      "topic_text": "That all you've got, robot?",
+      "emotion": "Neutral 50",
+      "response_text": "I will require a hardware and software upgrade to offer enhanced services.",
+      "index": "15"
+    },
+    {
+      "topic": "VFreeformFreesideVFSFistoTopic008",
+      "topic_text": "No, you performed as intended.",
+      "emotion": "Neutral 50",
+      "response_text": "Excellent. Awaiting further orders.",
+      "index": "16"
+    },
+    {
+      "topic": "VFreeformFreesideVFSFistoTopic010",
+      "topic_text": "I can't feel my legs!",
+      "emotion": "Neutral 50",
+      "response_text": "Numbness will subside in several minutes. Awaiting further orders.",
+      "index": "17"
+    },
+    {
+      "topic": "VFreeformFreesideVFSFistoTopic011",
+      "topic_text": "I would like to purchase your services.",
+      "emotion": "Neutral 50",
+      "response_text": "That will be 10 caps, please.",
+      "index": "18"
+    },
+    {
+      "topic": "VFreeformFreesideVFSFistoTopic012",
+      "topic_text": "<Pay 10 caps>",
+      "emotion": "Neutral 50",
+      "response_text": "Thank you. I will meet you in your room.",
+      "index": "20"
+    },
+    {
+      "topic": "VFreeformFreesideVFSFistoTopic014",
+      "topic_text": "Woohoo! <assume the position>",
+      "emotion": "Neutral 50",
+      "response_text": "Servos active!",
+      "index": "21"
+    },
+    {
+      "topic": "VFreeformFreesideVFSFistoTopic015",
+      "topic_text": "Never mind, I would like a refund.",
+      "emotion": "Neutral 50",
+      "response_text": "Very well. Please return if you require further service.",
+      "index": "22"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "VFSFistoBusy",
+      "topic_text": "VFSFistoBusy",
+      "emotion": "Neutral 50",
+      "response_text": "Routine active. Please return later.",
+      "index": "23"
+    },
+    {
+      "topic": "VFSFistoKiller",
+      "topic_text": "VFSFistoKiller",
+      "emotion": "Neutral 50",
+      "response_text": "Exterminate!",
+      "index": "24"
+    }
+  ],
+  "combat": []
+}

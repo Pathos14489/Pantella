@@ -1,0 +1,198 @@
+{
+  "name": "Toshiro Kago",
+  "url": "/wiki/Toshiro_Kago",
+  "dialogue_name": "DLC05Samurai.txt",
+  "dialogue_url": "/wiki/DLC05Samurai.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "xx0032FC",
+  "ref_id": "xx003307",
+  "editor_id": "DLC05Samurai",
+  "location": "Engineering core",
+  "location_url": "/wiki/Engineering_core",
+  "descriptions": [
+    "Toshiro Kago is a samurai from feudal-era Japan, abducted by the alien crew of Mothership Zeta and a temporary companion of the Lone Wanderer in the Fallout 3 add-on Mothership Zeta.",
+    "Toshiro was abducted from Japan by the Zetans sometime during the Azuchi-Momoyama period, between the late 1560s to early 1600s, and was then cryogenically frozen by them aboard Mothership Zeta. He remained preserved until centuries later, when the Lone Wanderer and Somah thaw him out. He joins them in their counterattack against the Zetans, seeking to reclaim his lost weapon in the process.",
+    "Among the StarsThis Galaxy Ain't Big Enough...",
+    "After the events of Mothership Zeta, he stays aboard Zeta and cannot be interacted with. He will disappear if one revisits the steamworks but will remain on the bridge if the player character travels to or from the Capital Wasteland. He can be found later in the living quarters.",
+    "Despite being unable to understand English, Toshiro still responds with different dialogue depending on whether the player character speaks to him with polite, neutral, or smarmy dialogue options.",
+    "Toshiro Kago appears only in the Fallout 3 add-on Mothership Zeta.",
+    "Xbox 360 After completing the main quest of Mothership Zeta, with Toshiro still alive, it is possible to pickpocket him. In his inventory, his samurai sword will appear but trying to steal it may result in the game crashing."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Japan(Azuchi-Momoyama period)",
+  "role": "Samurai (formerly)Abductee",
+  "detailed_location": "Engineering core,MothershipZeta",
+  "special": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 2,
+    "Intelligence": 5,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "level": "1",
+  "tag_skills": [
+    {
+      "Melee Weap.:": "34(44)"
+    },
+    {
+      "Small Guns:": "32"
+    },
+    {
+      "Unarmed:": "30"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "520"
+    },
+    {
+      "Critical Chance:": "5%"
+    },
+    {
+      "Unarmed Dam.:": "0.75"
+    },
+    {
+      "Poison Resist.:": "20%"
+    },
+    {
+      "Rad. Resist.:": "8%"
+    },
+    {
+      "Carry Weight:": "200"
+    },
+    {
+      "Damage Res.:": "35%"
+    }
+  ],
+  "karma": "Neutral",
+  "voice_type": "DLC05NPCUniqueSamurai",
+  "geck_race": "Asian",
+  "topics": [
+    {
+      "topic": "DLC05MZ2SamuraiGreet01",
+      "topic_text": "Hey, are you okay?",
+      "emotion": "Neutral 50",
+      "response_text": "Sappari wakaran. Koko ga doko nanoka mouse. Sessha no ken wa do shita?(I don't understand [you] at all. Tell me where this place is! What has become of my sword?)Play soundDlc05mz2_dlc05mz2samuraigr_00007…https://fallout.fandom.com/wiki/File:Dlc05mz2_dlc05mz2samuraigr_00007980_1.oggnoicon",
+      "index": "1"
+    },
+    {
+      "topic": "DLC05MZ2SamuraiGreet02",
+      "topic_text": "What? What are you saying?",
+      "emotion": "Neutral 50",
+      "response_text": "Sessha no ken wa dokoda? Ima sugu kaesanu ka!Play soundDlc05mz2_dlc05mz2samuraigr_00007…https://fallout.fandom.com/wiki/File:Dlc05mz2_dlc05mz2samuraigr_0000797c_1.oggnoicon",
+      "index": "2"
+    },
+    {
+      "topic": "DLC05MZ2SamuraiGreet03",
+      "topic_text": "Calm down. We're trying to escape. Can you help us?",
+      "emotion": "Neutral 50",
+      "response_text": "Nani wo itte orunoda. Kono chi ni mioboe wa nai. Ittai sessha ni nani wo shita?(What are you saying? This place does not look familiar to me. What the hell has been done to me?)Play soundDlc05mz2_dlc05mz2samuraigr_00007…https://fallout.fandom.com/wiki/File:Dlc05mz2_dlc05mz2samuraigr_0000797d_1.oggnoicon",
+      "index": "3"
+    },
+    {
+      "topic": "DLC05MZ2SamuraiGreet04",
+      "topic_text": "Oh, great. You don't speak English? This is going to be a waste of time.",
+      "emotion": "Neutral 50",
+      "response_text": "Onushi, ittai nanimono? Sessha wa naze koko ni iru?Play soundDlc05mz2_dlc05mz2samuraigr_00007…https://fallout.fandom.com/wiki/File:Dlc05mz2_dlc05mz2samuraigr_0000797f_1.oggnoicon",
+      "index": "5"
+    },
+    {
+      "topic": "DLC05MZ2SamuraiGreet05",
+      "topic_text": "I'm sorry, but I can't understand you.",
+      "emotion": "Neutral 50",
+      "response_text": "Nani wo itteorunoda. Sappari wakaran. Nantoka shite kure.(What are you saying? I can't understand. Please do something!)Play soundDlc05mz2_dlc05mz2samuraigr_00007…https://fallout.fandom.com/wiki/File:Dlc05mz2_dlc05mz2samuraigr_00007987_1.oggnoicon",
+      "index": "7"
+    },
+    {
+      "topic": "DLC05MZ2SamuraiGreet06",
+      "topic_text": "Yeah, I'm not getting a single word here.",
+      "emotion": "Neutral 50",
+      "response_text": "Nantoka senuka! Sessha no ken wa ittai doko ni arunoda!Play soundDlc05mz2_dlc05mz2samuraigr_00007…https://fallout.fandom.com/wiki/File:Dlc05mz2_dlc05mz2samuraigr_0000797e_1.oggnoicon",
+      "index": "8"
+    },
+    {
+      "topic": "DLC05MZ2SamuraiGreet07",
+      "topic_text": "I found this sword... does it belong to you?",
+      "emotion": "Neutral 50",
+      "response_text": "Oh, sessha no ken! Katajike nai.Play soundDlc05mz2_dlc05mz2samuraigr_0000a…https://fallout.fandom.com/wiki/File:Dlc05mz2_dlc05mz2samuraigr_0000a94a_1.oggnoicon",
+      "index": "9"
+    },
+    {
+      "topic": "DLC05MZ2SamuraiSwordFound01",
+      "topic_text": "I found this sword... Is it yours?",
+      "emotion": "Neutral 50",
+      "response_text": "Oh, sessha no ken! Kaeshite moraerutowa, katajike nai.(Oh, my sword! I am most grateful for its return!)Play soundDlc05mz2_dlc05mz2samuraisw_0000a…https://fallout.fandom.com/wiki/File:Dlc05mz2_dlc05mz2samuraisw_0000ab96_1.oggnoicon",
+      "index": "11"
+    },
+    {
+      "topic": "DLC05MZ2SamuraiSwordFound02",
+      "topic_text": "I know you can't understand me, but I thought you might want this sword.",
+      "emotion": "Neutral 50",
+      "response_text": "Oh, korekoso sessha no ken. Katajike nai.Play soundDlc05mz2_dlc05mz2samuraisw_0000a…https://fallout.fandom.com/wiki/File:Dlc05mz2_dlc05mz2samuraisw_0000ab9d_1.oggnoicon",
+      "index": "13"
+    },
+    {
+      "topic": "DLC05MZ2SamuraiSwordFound03",
+      "topic_text": "Whoops, sorry. Never mind.",
+      "emotion": "Neutral 50",
+      "response_text": "Onushi, naniyue sonoyo ni hanasu? Nanika shomo no mono demo arunoka?(You, why are you talking like that? Is there something you want?)Play soundDlc05mz2_dlc05mz2samuraisw_0000a…https://fallout.fandom.com/wiki/File:Dlc05mz2_dlc05mz2samuraisw_0000ab92_1.oggnoicon",
+      "index": "15"
+    },
+    {
+      "topic": "DLC05SamuraiHolo1",
+      "topic_text": "DLC05SamuraiHolo1",
+      "emotion": "Neutral 50",
+      "response_text": "Nanda kono arisama ha? Youkaihenge ka?Play soundDlc05gener_dlc05samuraihol_0000a…https://fallout.fandom.com/wiki/File:Dlc05gener_dlc05samuraihol_0000a880_2.oggnoicon",
+      "index": "17"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "Tatakai no kachimake ha, seme to seme no hazama ni aru.{annoyed his meditation is being interrupted}Play soundDlc05samur_greeting_00007e15_1.ogghttps://fallout.fandom.com/wiki/File:Dlc05samur_greeting_00007e15_1.oggnoicon",
+      "index": "21"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "DLC05SamuraiScenesBridgeTopic",
+      "topic_text": "DLC05SamuraiScenesBridgeTopic",
+      "emotion": "Anger 50",
+      "response_text": "Iretekure! Sessha wa eirian deha gozaran. Sessha wa samurai nari. Otanomi mosu!{[sound muffled from being the door]}Play soundDlc05samur_dlc05samuraisce_00008…https://fallout.fandom.com/wiki/File:Dlc05samur_dlc05samuraisce_00008297_1.oggnoicon",
+      "index": "39"
+    }
+  ],
+  "combat": [
+    {
+      "topic": "Attack",
+      "topic_text": "Attack",
+      "emotion": "Neutral 50",
+      "response_text": "Youkai me oujo sei!Play soundDlc05conversations_attack_000079…https://fallout.fandom.com/wiki/File:Dlc05conversations_attack_00007986_1.oggnoicon",
+      "index": "41"
+    },
+    {
+      "topic": "Death",
+      "topic_text": "Death",
+      "emotion": "Neutral 50",
+      "response_text": "Uwaaaa, shikaeshi saretaka...Play soundDlc05conversations_death_0000798…https://fallout.fandom.com/wiki/File:Dlc05conversations_death_0000798a_1.oggnoicon",
+      "index": "44"
+    },
+    {
+      "topic": "Hit",
+      "topic_text": "Hit",
+      "emotion": "Neutral 50",
+      "response_text": "Aaa, atama ga!Play soundDlc05conversations_hit_000036f0_…https://fallout.fandom.com/wiki/File:Dlc05conversations_hit_000036f0_1.oggnoicon",
+      "index": "47"
+    }
+  ]
+}

@@ -1,0 +1,125 @@
+{
+  "name": "Wasteland adventurer",
+  "url": "/wiki/Wasteland_adventurer",
+  "dialogue_name": "VES03WastelandAdventurer.txt",
+  "dialogue_url": "/wiki/VES03WastelandAdventurer.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": true,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "0015AD15",
+  "ref_id": "",
+  "editor_id": "",
+  "location": "",
+  "location_url": null,
+  "descriptions": [
+    "The wasteland adventurer is a cut character in Fallout: New Vegas.",
+    "The unnamed adventurer would have been knowledgeable about important locations around the deserts of the Mojave Wasteland. He would have made a living by hunting around the nearby area and selling the spoils to traders.",
+    "He would have initially been found standing in front of the road sign at the intersection near Jean Sky Diving, southeast of Goodsprings. After exhausting all dialogue options, he would then have proceeded to patrol the nearby area around the pre-War recreation area until 8PM when he would have returned to the small trailer south of the Goodsprings source and slept until 7AM.",
+    "The wasteland adventurer was originally intended to appear in Fallout: New Vegas but was cut from the final game."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "role": "MerchantInformation giver",
+  "voice_actor": "Gregory Alan Williams",
+  "special": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 4,
+    "Intelligence": 4,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "level": "8",
+  "tag_skills": [
+    {
+      "Barter:": "56"
+    },
+    {
+      "Guns:": "60(62)"
+    },
+    {
+      "Survival:": "58"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "105"
+    },
+    {
+      "Critical Chance:": "5%"
+    },
+    {
+      "Unarmed Dam.:": "1.25"
+    },
+    {
+      "Poison Resist.:": "20%"
+    },
+    {
+      "Rad. Resist.:": "8%"
+    },
+    {
+      "Carry Weight:": "210 lbs"
+    }
+  ],
+  "karma": "Neutral",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "Peace, traveler.",
+      "index": "1"
+    },
+    {
+      "topic": "VES03DialogueWastelandHunterGSVES03WastelandAdventurerTopic000",
+      "topic_text": "Which way to Primm?",
+      "emotion": "Neutral 50",
+      "response_text": "Sign says you go south... just look for the rollercoaster. Oh and don't go north, a caravan just got sacked up the road.",
+      "index": "3"
+    },
+    {
+      "topic": "VES03DialogueWastelandHunterGSVES03WastelandAdventurerTopic001",
+      "topic_text": "Who are you?",
+      "emotion": "Neutral 50",
+      "response_text": "Just a hunter, out here killing things and hoping their hides fetch more than the bullets cost to kill 'em.",
+      "index": "4"
+    },
+    {
+      "topic": "VES03DialogueWastelandHunterGSVES03WastelandAdventurerTopic002",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Watch your back out there.",
+      "index": "5"
+    },
+    {
+      "topic": "VES03DialogueWastelandHunterGSVES03WastelandAdventurerTopic003",
+      "topic_text": "Let's trade.",
+      "emotion": "Neutral 50",
+      "response_text": "I could use some Stimpaks... how 'bout some nice Bloatfly Steaks in trade?",
+      "index": "8"
+    },
+    {
+      "topic": "VES03DialogueWastelandHunterGSVES03WastelandAdventurerTopic004",
+      "topic_text": "Do you have anything to trade?",
+      "emotion": "Neutral 50",
+      "response_text": "That's a dangerous question... asked the way a bandit might ask... but since we're close to town I'll trust your good intentions.",
+      "index": "9"
+    },
+    {
+      "topic": "VES03DialogueWastelandHunterGSVES03WastelandAdventurerTopic009",
+      "topic_text": "What if I go around the caravan?",
+      "emotion": "Neutral 50",
+      "response_text": "It just gets worse the further north you go... Deathclaws... death in general. But it's your ass, I suppose.",
+      "index": "10"
+    }
+  ],
+  "conversation": [],
+  "combat": []
+}

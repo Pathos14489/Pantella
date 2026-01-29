@@ -1,0 +1,109 @@
+{
+  "name": "Chavez",
+  "url": "/wiki/Chavez",
+  "dialogue_name": "NCRCFChavez.txt",
+  "dialogue_url": "/wiki/NCRCFChavez.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000E32A2",
+  "ref_id": "000E32A3",
+  "editor_id": "NCRCFChavez",
+  "location": "Powder Ganger camp south",
+  "location_url": "/wiki/Powder_Ganger_camp_south",
+  "descriptions": [
+    "Chavez is a Powder Ganger living at Powder Ganger camp south in 2281.",
+    "Chavez formed a splinter gang with a small crew of fellow escaped convicts that have moved south of the NCR Correctional Facility to plunder passing-by traders and other Mojave inhabitants. Chavez and his crew decided that instead of turning in their \"acquisitions\" to Eddie, they would keep it all for themselves.",
+    "There was originally an option that Chavez could have been imprisoned during I Fought the Law, but this was cut from the game."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Powder Gangers",
+  "role": "Escaped convict",
+  "detailed_location": "Powder Ganger camp south",
+  "voice_actor": "Alex Mendoza",
+  "special": {
+    "Strength": 5,
+    "Perception": 6,
+    "Endurance": 5,
+    "Charisma": 3,
+    "Intelligence": 3,
+    "Agility": 5,
+    "Luck": 4
+  },
+  "level": "3",
+  "tag_skills": [
+    {
+      "Explosives:": "38"
+    },
+    {
+      "Guns:": "36"
+    },
+    {
+      "Melee Weap.:": "36"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Evil",
+  "voice_type": "MaleAdult07",
+  "geck_race": "Hispanic",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "You just walked into the wrong camp, my friend. Hand over everything you've got and we might let you live.",
+      "index": "1"
+    },
+    {
+      "topic": "VFreeformNCRCFNCRCFChavezTopic000",
+      "topic_text": "Eddie sent me to deal with you.",
+      "emotion": "Neutral 50",
+      "response_text": "That's nothing new. Am I supposed to be impressed?",
+      "index": "3"
+    },
+    {
+      "topic": "VFreeformNCRCFNCRCFChavezTopic001",
+      "topic_text": "{Terrifying Presence}< Cock your head and grin. >",
+      "emotion": "Fear 50",
+      "response_text": "Run!",
+      "index": "4"
+    },
+    {
+      "topic": "VFreeformNCRCFNCRCFChavezTopic002",
+      "topic_text": "I'm not going to let you live.",
+      "emotion": "Neutral 50",
+      "response_text": "{Male PC}Get him!",
+      "index": "5"
+    },
+    {
+      "topic": "VFreeformNCRCFNCRCFChavezTopic003< Speech 30 >",
+      "topic_text": "Eddie's just going to keep chasing you. Quit while you're ahead... and alive.",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] All right. Pickings were getting slim around here anyway.",
+      "index": "7"
+    },
+    {
+      "topic": "VFreeformNCRCFNCRCFChavezTopic004",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Letting you just walk away isn't how it works, I'm afraid.",
+      "index": "9"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Aw, come on! Don't leave me here!",
+      "index": "10"
+    }
+  ],
+  "combat": []
+}

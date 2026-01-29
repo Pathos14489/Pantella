@@ -1,0 +1,152 @@
+{
+  "name": "Sergeant McCredie",
+  "url": "/wiki/McCredie",
+  "dialogue_name": "2CMcCredie.txt",
+  "dialogue_url": "/wiki/2CMcCredie.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "00104313",
+  "ref_id": "0010B908",
+  "editor_id": "2CMcCredie",
+  "location": "Camp Golf tent",
+  "location_url": "/wiki/Camp_Golf_tent",
+  "descriptions": [
+    "Sergeant McCredie is the non-commissioned officer responsible for Army troops stationed at Camp Golf in 2281. He can be found at the command center in Fallout: New Vegas.",
+    "McCredie is a career soldier, who joined the NCR Army at 16.",
+    "By 2281, he has been stationed at Camp Golf for some time, drilling troops to keep discipline up and combat readiness high.",
+    "McCredie can be found inside the large tent between the two rows of tents behind the southwest of the House Resort on Camp Golf."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "NCR Army",
+  "role": "Soldier",
+  "detailed_location": "Camp Golf",
+  "voice_actor": "Emerson Brooks",
+  "special": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 5,
+    "Intelligence": 5,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "level": "5",
+  "tag_skills": [
+    {
+      "Explosives:": "46"
+    },
+    {
+      "Guns:": "46"
+    },
+    {
+      "Melee Weap.:": "46"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Neutral",
+  "voice_type": "MaleAdult01DefaultB",
+  "geck_race": "AfricanAmerican",
+  "topics": [
+    {
+      "topic": "BitterSpringsTroopers",
+      "topic_text": "Captain Gilles at Bitter Springs needs reinforcements. Can you spare any?",
+      "emotion": "Anger 45",
+      "response_text": "{Angry drill sergeant}Who the hell are you, coming in here and asking me if I can \"spare any?\" I don't hand out NCR troopers to anybody who wanders out of the Wasteland!",
+      "index": "1"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Surprise 50",
+      "response_text": "Hell of a thing about Chief Hanlon. I never would have guessed he was capable of it.",
+      "index": "4"
+    },
+    {
+      "topic": "McCredieArmy",
+      "topic_text": "How do you like serving in the Army?",
+      "emotion": "Happy 15",
+      "response_text": "Man, it's my life. I joined up when I was 16 - I don't know how to do anything else.",
+      "index": "26"
+    },
+    {
+      "topic": "McCredieCampGolf",
+      "topic_text": "How'd you end up at Camp Golf?",
+      "emotion": "Happy 20",
+      "response_text": "I've been here since the first push into Vegas. Back in the day, this camp was the hotspot for conflicts with the Legion, raider tribes, you name it.",
+      "index": "27"
+    },
+    {
+      "topic": "McCredieMisfits",
+      "topic_text": "Sounds like you're a little disappointed in your troops.",
+      "emotion": "Disgust 30",
+      "response_text": "Disappointed? We call 'em the Misfits for a reason. They're undisciplined, lazy, and they have absolutely no espirit de corps.",
+      "index": "29"
+    },
+    {
+      "topic": "VFreeformCampGolf2CMagsTopic003",
+      "topic_text": "You joined at 16 and you're still a sergeant?",
+      "emotion": "Anger 15",
+      "response_text": "Yeah, well... I didn't want to get promoted out of the field. I didn't join up to drive a desk.",
+      "index": "32"
+    },
+    {
+      "topic": "VFreeformCampGolf2CMagsTopic004",
+      "topic_text": "That's some dedication.",
+      "emotion": "Happy 20",
+      "response_text": "Thanks. I only wish some of the soldiers under my command would share some of it.",
+      "index": "33"
+    },
+    {
+      "topic": "VFreeformCampGolf2CMcCredieTopic000",
+      "topic_text": "Funny, I thought this was where they sent washouts and losers.",
+      "emotion": "Anger 40",
+      "response_text": "Yeah, well, somebody has to wrangle those washouts and losers. Somebody's got to turn them into a real fighting force.",
+      "index": "34"
+    },
+    {
+      "topic": "VFreeformCampGolf2CMcCredieTopic001",
+      "topic_text": "So what do you do now that the fighting's died down?",
+      "emotion": "Happy 10",
+      "response_text": "Mostly drill the troops, try to keep the discipline up and combat readiness high.",
+      "index": "35"
+    },
+    {
+      "topic": "VFreeformCampGolf2CMcCredieTopic002",
+      "topic_text": "Maybe I can help you whip them into shape.",
+      "emotion": "Surprise 25",
+      "response_text": "You're welcome to try - hell, maybe they'll listen to somebody they don't see as an authority figure.",
+      "index": "38"
+    },
+    {
+      "topic": "VFreeformCampGolf2CMcCredieTopic003",
+      "topic_text": "Tough luck. If the Legion attacks, they're dead meat.",
+      "emotion": "Surprise 20",
+      "response_text": "I'd be skeptical of the odds, myself. I just hope they figure it out before it comes to that.",
+      "index": "39"
+    },
+    {
+      "topic": "VFreeformCampGolf2CMcCredieTopic008",
+      "topic_text": "If they don't, it's their loss.",
+      "emotion": "Sad 20",
+      "response_text": "I suppose so. Sorry, this isn't your problem, I shouldn't be going on to you about this.",
+      "index": "40"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "{Irritated, busy}Yeah, whatever.",
+      "index": "41"
+    }
+  ],
+  "combat": []
+}

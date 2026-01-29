@@ -1,0 +1,101 @@
+{
+  "name": "Vikia",
+  "url": "/wiki/Vikia",
+  "dialogue_name": "DLC01Vikia.txt",
+  "dialogue_url": "/wiki/DLC01Vikia.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "xx004139",
+  "ref_id": "xx004601",
+  "editor_id": "DLC01Vikia",
+  "location": "The Pitt Uptown",
+  "location_url": "/wiki/The_Pitt_Uptown",
+  "descriptions": [
+    "Vikia is a Pitt raider in Uptown in 2277.",
+    "A skilled sniper, Vikia is extremely condescending towards all others, especially current or former Pitt slaves. Unlike many of the other Pitt raiders, Vikia is strictly unimpressed with the Lone Wanderer’s accomplishments fighting in the arena.",
+    "Vikia can generally be found on the roof of the raider barracks, engaging in target practice with her sniper rifle on several rows of bottles in the building window across from her location.",
+    "Vikia appears only in the Fallout 3 add-on The Pitt.",
+    "Vikia's name is in reference to a Carnegie Mellon University project of the same name VIKIA or Very Intense Know It All. Since she is named after an AI, Vikia is also the only raider to carry a fission battery, sensor module, and scrap metal."
+  ],
+  "race": "Human",
+  "gender": "Female",
+  "affiliation": "Pitt raiders",
+  "role": "Sniper",
+  "detailed_location": "The Pitt Uptown",
+  "voice_actor": "Vanessa Richardson",
+  "special": {
+    "Strength": 6,
+    "Perception": 7,
+    "Endurance": 4,
+    "Charisma": 3,
+    "Intelligence": 3,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "level": "1→20→30 (Broken Steelonly)",
+  "tag_skills": [
+    {
+      "Melee Weap.:": "32→100"
+    },
+    {
+      "Small Guns:": "32→100"
+    },
+    {
+      "Sneak:": "32→100"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "65→160→210"
+    },
+    {
+      "Critical Chance:": "5%"
+    },
+    {
+      "Unarmed Dam.:": "1.15"
+    },
+    {
+      "Poison Resist.:": "15%"
+    },
+    {
+      "Rad. Resist.:": "6%"
+    },
+    {
+      "Carry Weight:": "210"
+    }
+  ],
+  "karma": "Evil",
+  "voice_type": "DLC01RaiderFemaleColdVoice",
+  "geck_race": "CaucasianRaider",
+  "topics": [
+    {
+      "topic": "DLC01HavenResponse1A",
+      "topic_text": "Don't be so cold, Vikia. Don't you want a piece of this?",
+      "emotion": "Disgust 25",
+      "response_text": "Perhaps your \"assets\" appeal to the degenerate women you're used to, but I'm quite immune.",
+      "index": "1"
+    },
+    {
+      "topic": "DLC01HavenResponse1B",
+      "topic_text": "Why are you such a bitch?",
+      "emotion": "Disgust 25",
+      "response_text": "It's the price I pay for perfection.",
+      "index": "4"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Disgust 50",
+      "response_text": "Oh, look. Another worker who thinks they can address their betters.{Icy cold and dismissive}",
+      "index": "6"
+    }
+  ],
+  "conversation": [],
+  "combat": []
+}

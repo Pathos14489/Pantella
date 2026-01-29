@@ -1,0 +1,86 @@
+{
+  "name": "Tom Holden",
+  "url": "/wiki/Tom_Holden",
+  "dialogue_name": "CG04TomHolden.txt",
+  "dialogue_url": "/wiki/CG04TomHolden.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "00057508",
+  "ref_id": "0005750C",
+  "editor_id": "CG04TomHolden",
+  "location": "Vault 101",
+  "location_url": null,
+  "descriptions": [
+    "Tom Holden is a resident of Vault 101 in Fallout 3.",
+    "In the chaos of the Lone Wanderer's escape from Vault 101, Tom Holden wishes to flee the Vault alongside his wife Mary, although she would prefer that they simply return to their quarters.",
+    "However, if the Lone Wanderer manages to reach the guards before Tom does, neither Tom nor Mary will be killed, and instead will flee together into a separate hallway. Even if they do survive, they disappear from the game, and do not appear in Trouble on the Homefront.",
+    "Escape!"
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Vault 101",
+  "role": "Vault 101 resident",
+  "detailed_location": "Vault 101",
+  "voice_actor": "Craig Sechler",
+  "special": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 2,
+    "Intelligence": 5,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "level": "1",
+  "misc_skills": [
+    {
+      "Hit Points:": "30"
+    },
+    {
+      "Critical Chance:": "5%"
+    },
+    {
+      "Unarmed Dam.:": "0.75"
+    },
+    {
+      "Poison Resist.:": "20%"
+    },
+    {
+      "Rad. Resist.:": "8%"
+    },
+    {
+      "Carry Weight:": "200"
+    },
+    {
+      "Damage Res.:": "1%"
+    }
+  ],
+  "karma": "Neutral",
+  "voice_type": "MaleAdult04DC",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Fear 25",
+      "response_text": "We're getting out of here. Now's our chance!Play soundFO3 TomHolden WereGettingOut.ogghttps://fallout.fandom.com/wiki/File:FO3_TomHolden_WereGettingOut.oggnoicon",
+      "index": "1"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "CG04AtriumConv1",
+      "topic_text": "CG04AtriumConv1",
+      "emotion": "Anger 25",
+      "response_text": "It's our only chance, don't you see? We're getting out of here, just like the doctor. I'm not going to let anyone stop us.{determined  talking himself into it}Play soundFO3 WallyMack OurOnlyChance.ogghttps://fallout.fandom.com/wiki/File:FO3_WallyMack_OurOnlyChance.oggnoicon",
+      "index": "2"
+    }
+  ],
+  "combat": []
+}

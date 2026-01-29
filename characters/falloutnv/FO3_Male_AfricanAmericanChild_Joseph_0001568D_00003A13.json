@@ -1,0 +1,333 @@
+{
+  "name": "Joseph",
+  "url": "/wiki/Joseph_(Fallout_3)",
+  "dialogue_name": "Joseph.txt",
+  "dialogue_url": "/wiki/Joseph.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": true,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "0001568D",
+  "ref_id": "00003A13",
+  "editor_id": "Joseph",
+  "location": "Little Lamplightschoolhouse,Great Chamber",
+  "location_url": "/wiki/Little_Lamplight",
+  "descriptions": [
+    "Joseph is the eldest resident of Little Lamplight in 2277.",
+    "He is fifteen and is close to having to leave Little Lamplight soon as a result. He has a younger sister named Penny who looks up to him as a role model because of his wisdom.",
+    "For now, he has taken a teacher-like role to the younger residents and teaches them what he feels they should know about the wasteland, as well as other things that pique their curiosity. He also does computer work and reads old textbooks scavenged from Vault 87.",
+    "In the mornings he teaches kids in the classroom, and afterward, he can be found down by the water in the Great Chamber."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Little Lamplight",
+  "role": "Teacher",
+  "detailed_location": "Little Lamplight",
+  "voice_actor": "Sean McCoy",
+  "special": {
+    "Strength": 3,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 6,
+    "Intelligence": 7,
+    "Agility": 4,
+    "Luck": 6
+  },
+  "level": "1",
+  "tag_skills": [
+    {
+      "Medicine:": "34"
+    },
+    {
+      "Science:": "32"
+    },
+    {
+      "Speech:": "32"
+    }
+  ],
+  "karma": "Neutral",
+  "voice_type": "MaleChild01DC",
+  "geck_race": "AfricanAmericanChild",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "Okay, there you go. The computer is on again. Dunno what good it'll do you.",
+      "index": "1"
+    },
+    {
+      "topic": "LLAboutLamplight",
+      "topic_text": "What sort of education do the kids get in here?",
+      "emotion": "Neutral 50",
+      "response_text": "Well, back at the start, all the children had were the notes from the grown-ups that hadn't left yet, and a few books on caves from the store.",
+      "index": "10"
+    },
+    {
+      "topic": "LLAboutLamplight2A",
+      "topic_text": "What do you teach the kids?",
+      "emotion": "Happy 10",
+      "response_text": "Mostly, whatever they want to learn. We don't have strict classes or anything down here. But it does mean they're interested in what I'm teaching.",
+      "index": "13"
+    },
+    {
+      "topic": "LLAboutLamplight2B",
+      "topic_text": "How thorough are your teaching materials?",
+      "emotion": "Neutral 50",
+      "response_text": "We entered all of the books and holotapes into the computer, but frankly, there are a lot of important subjects the vault's materials didn't cover.",
+      "index": "15"
+    },
+    {
+      "topic": "LLAboutLamplight2C",
+      "topic_text": "That's all I need to know for now.",
+      "emotion": "Happy 25",
+      "response_text": "Glad I could help.",
+      "index": "17"
+    },
+    {
+      "topic": "LLClasses",
+      "topic_text": "Could you tell me about this class?",
+      "emotion": "Neutral 50",
+      "response_text": "I hold open classes every morning for anyone who's got an interest in learning about a subject. Obviously, voluntary attendance is usually low.",
+      "index": "18"
+    },
+    {
+      "topic": "LLDirections",
+      "topic_text": "Can you give me directions?",
+      "emotion": "Neutral 50",
+      "response_text": "I should be able to do that.",
+      "index": "24"
+    },
+    {
+      "topic": "LLFirstMeetingResponseAFriendly First Response",
+      "topic_text": "Mayor MacCready let me in for rescuing those kids.",
+      "emotion": "Surprise 50",
+      "response_text": "That was you? Well, my most sincere thanks, then. You brought my sister Penny back to me, and I couldn't ask more than that.{Very sincere}",
+      "index": "25"
+    },
+    {
+      "topic": "LLFirstMeetingResponseBRude First Response",
+      "topic_text": "I'm the big hero who saved those kidnapped kids.",
+      "emotion": "Surprise 50",
+      "response_text": "That was you? Well, you brought my sister Penny back, so sure, I'll call you a big hero. Thank you very much.{Very sincere}",
+      "index": "32"
+    },
+    {
+      "topic": "LLJosephClasses2A",
+      "topic_text": "Can I hear how Little Lamplight got started?",
+      "emotion": "Happy 10",
+      "response_text": "Okay. Sit back, and I'll retell the history of our fine town to the entire class.",
+      "index": "38"
+    },
+    {
+      "topic": "LLJosephClasses2B",
+      "topic_text": "No, I don't need to hear anything right now.",
+      "emotion": "Anger 10",
+      "response_text": "Then, if you'll excuse me, I should get back to the rest of class.",
+      "index": "39"
+    },
+    {
+      "topic": "LLLMQ06ComputerNotWorking",
+      "topic_text": "I hear there's a door that doesn't work.",
+      "emotion": "Neutral 50",
+      "response_text": "Nuh-uh. Door works fine. Computer's broke.{indifferent}",
+      "index": "40"
+    },
+    {
+      "topic": "LLLMQ06JoeNevermind",
+      "topic_text": "Never mind.",
+      "emotion": "Neutral 50",
+      "response_text": "Okay.",
+      "index": "42"
+    },
+    {
+      "topic": "LLLMQ06JoeNoPassword",
+      "topic_text": "Don't you have the password?",
+      "emotion": "Neutral 50",
+      "response_text": "Nope. Nobody ever wrote it down, and then one day somebody forgot. You know how it goes.{indifferent}",
+      "index": "43"
+    },
+    {
+      "topic": "LLLMQ06JoeSmartOne",
+      "topic_text": "And you're supposed to be the smart one?",
+      "emotion": "Anger 50",
+      "response_text": "Hey, I am smart. Jerk.{annoyed}",
+      "index": "44"
+    },
+    {
+      "topic": "LLLMQ06TurnComputerOn",
+      "topic_text": "Can you turn the computer back on?",
+      "emotion": "Neutral 50",
+      "response_text": "Sure, if you want.",
+      "index": "45"
+    },
+    {
+      "topic": "LLMungo",
+      "topic_text": "Why do people call me mungo? What does that even mean?",
+      "emotion": "Surprise 10",
+      "response_text": "I'm pretty sure it comes from \"humongous.\" Because, to everyone here, you're pretty big, you know?",
+      "index": "47"
+    },
+    {
+      "topic": "LLServices",
+      "topic_text": "Can you give me a haircut?",
+      "emotion": "Happy 50",
+      "response_text": "All right. Now, hold still.",
+      "index": "50"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "I'll stop interrupting your class, now.",
+      "emotion": "Happy 50",
+      "response_text": "Come back anytime you'd like to sit in.",
+      "index": "52"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Anger 50",
+      "response_text": "I know MacCready let you back in, but you stay out of my classroom, understand?",
+      "index": "54"
+    },
+    {
+      "topic": "LLClassConv2",
+      "topic_text": "LLClassConv2",
+      "emotion": "Anger 10",
+      "response_text": "Penny, please. Now, as I was saying. Outside of this cave, the world is a lot bigger and more dangerous than it is in here.{Trying to quiet someone who's interrupting at the start.}",
+      "index": "60"
+    },
+    {
+      "topic": "LLClassConv3",
+      "topic_text": "LLClassConv3",
+      "emotion": "Anger 10",
+      "response_text": "People don't have the same sort of safety and freedom to run around and play like you can here. They have to work hard for food and safety.",
+      "index": "67"
+    },
+    {
+      "topic": "LLClassConv4",
+      "topic_text": "LLClassConv4",
+      "emotion": "Sad 25",
+      "response_text": "Well... Because having them stay means they start trying to make rules all the time, and no one's liked that. It's tradition. Understand, Penny?{Joseph has doubts about the system, but he knows he can't change it.}",
+      "index": "71"
+    },
+    {
+      "topic": "LLFoodConv1",
+      "topic_text": "LLFoodConv1",
+      "emotion": "Happy 25",
+      "response_text": "Ill have your finest mycelium, cubed and served in a savory sauce, Eclair.",
+      "index": "75"
+    },
+    {
+      "topic": "LLJosephHistory1",
+      "topic_text": "LLJosephHistoryExplanation1",
+      "emotion": "Neutral 50",
+      "response_text": "Long ago, children and grown-ups tried to live in peace.{As if reciting a litany or oral history}",
+      "index": "77"
+    },
+    {
+      "topic": "LLLucyMedical2",
+      "topic_text": "LLLucyMedical2",
+      "emotion": "Happy 10",
+      "response_text": "Sure thing, Lucy. What do you need?",
+      "index": "88"
+    },
+    {
+      "topic": "LLLucyMedical4",
+      "topic_text": "LLLucyMedical4",
+      "emotion": "Neutral 50",
+      "response_text": "There's an old vault record that sounds similar. Apparently, if you don't eat enough, you get weakened by things called \"rickets.\"",
+      "index": "90"
+    },
+    {
+      "topic": "LLLucyMedical6",
+      "topic_text": "LLLucyMedical6",
+      "emotion": "Sad 25",
+      "response_text": "We'll think of something. We always have. And they probably won't even realize how bad things were getting.",
+      "index": "92"
+    },
+    {
+      "topic": "LLLunchConv2",
+      "topic_text": "LLLunchConv2",
+      "emotion": "Happy 25",
+      "response_text": "Any time, dear. What's wrong?",
+      "index": "94"
+    },
+    {
+      "topic": "LLLunchConv4",
+      "topic_text": "LLLunchConv4",
+      "emotion": "Happy 50",
+      "response_text": "I remember asking Flash the same thing when I was your age. He said he was going to Big Town, and I'd see him again when I grew up and left, myself.",
+      "index": "96"
+    },
+    {
+      "topic": "LLLunchConv5",
+      "topic_text": "LLLunchConv5",
+      "emotion": "Happy 25",
+      "response_text": "And when the time comes, you'll grow up and leave Lamplight and meet me in Big Town, too. It won't be that long, I promise.",
+      "index": "98"
+    },
+    {
+      "topic": "LLLunchConv7",
+      "topic_text": "LLLunchConv7",
+      "emotion": "Happy 50",
+      "response_text": "Absolutely, little sister.",
+      "index": "99"
+    },
+    {
+      "topic": "LLMayorDailyCheck1",
+      "topic_text": "LLMayorDailyCheck1",
+      "emotion": "Happy 50",
+      "response_text": "Going well, when there's anyone attending them. Basic survival and shooting lessons are good as always. Haven't lost any of them yet!",
+      "index": "101"
+    },
+    {
+      "topic": "LLRandomConv1",
+      "topic_text": "LLConversation1",
+      "emotion": "Happy 50",
+      "response_text": "Hello, there. Are you okay?{Friendly and genial}",
+      "index": "102"
+    },
+    {
+      "topic": "LLRandomConv2",
+      "topic_text": "LLConversation2",
+      "emotion": "Happy 50",
+      "response_text": "I'm fine. It's another fine day, underground.{Not ironic.}",
+      "index": "103"
+    },
+    {
+      "topic": "LLRandomConvEnding",
+      "topic_text": "LLRandomConvEnding",
+      "emotion": "Happy 50",
+      "response_text": "I understand. Well, take care.{Not ironic.}",
+      "index": "104"
+    },
+    {
+      "topic": "LLTeachingTalk",
+      "topic_text": "LLTeachingTalk",
+      "emotion": "Neutral 50",
+      "response_text": "A is for Ammo, B is for Blade, and C is for Cauterize...",
+      "index": "105"
+    },
+    {
+      "topic": "LLWhatsUp1",
+      "topic_text": "LLWhatsUp1",
+      "emotion": "Happy 50",
+      "response_text": "Hello. What's happening today?{Friendly and genial}",
+      "index": "111"
+    },
+    {
+      "topic": "LLWhatsUp2",
+      "topic_text": "LLWhatsUp2",
+      "emotion": "Happy 50",
+      "response_text": "Watching after the younger kids and seeing if they can't accidentally learn a thing or two. You know how it goes.",
+      "index": "112"
+    }
+  ],
+  "combat": []
+}

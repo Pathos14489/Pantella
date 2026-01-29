@@ -1,0 +1,55 @@
+{
+  "name": "Stacey",
+  "url": "/wiki/Stacey",
+  "dialogue_name": "VMS49Stacey.txt",
+  "dialogue_url": "/wiki/VMS49Stacey.txt",
+  "spawned_dead": false,
+  "spawned": true,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "0014EB39",
+  "ref_id": "0014EB3B",
+  "editor_id": "VMS49Stacey",
+  "location": "Freeside",
+  "location_url": "/wiki/Freeside",
+  "descriptions": [
+    "Stacey is an orphan living on the streets of Freeside with her friend Max in 2281. Typically, she can be found fleeing from Max near Freeside's east gate. She does not interact with the Courier during the day but can be talked to if woken at night.",
+    "Freeside is home to many of New Vegas's poorer residents and NCR refugees. Stacey and Max are orphaned street urchins who live in the ruins of the destroyed building immediately inside Freeside's east gate next to Mick & Ralph's. If not found roaming the streets, they may be asleep on two worn mattresses on the second floor of their home. The ghoul Rotface is found sitting outside their ruined home offering gossip for caps."
+  ],
+  "race": "Human",
+  "gender": "Female",
+  "affiliation": "Max",
+  "role": "OrphanPlaying child",
+  "detailed_location": "Freeside, in front ofMick & Ralph's",
+  "voice_actor": "Ashley McGullam",
+  "special": {
+    "Strength": 3,
+    "Perception": 4,
+    "Endurance": 3,
+    "Charisma": 3,
+    "Intelligence": 3,
+    "Agility": 7,
+    "Luck": 7
+  },
+  "level": "1→8 (equal to player's level)",
+  "tag_skills": [],
+  "misc_skills": [],
+  "karma": "Neutral",
+  "voice_type": "FemaleChild01",
+  "geck_race": "CaucasianChild",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "Max can't even hit me. He's so dumb.",
+      "index": "1"
+    }
+  ],
+  "conversation": [],
+  "combat": []
+}

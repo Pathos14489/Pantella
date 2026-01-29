@@ -1,0 +1,357 @@
+{
+  "name": "Dukov",
+  "url": "/wiki/Dukov",
+  "dialogue_name": "Dukov.txt",
+  "dialogue_url": "/wiki/Dukov.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "0002AE1E",
+  "ref_id": "0002AE1F",
+  "editor_id": "Dukov",
+  "location": "Dukov's Place",
+  "location_url": "/wiki/Dukov%27s_Place",
+  "descriptions": [
+    "Dukov is a drunken womanizer and retired mercenary in the Capital Wasteland in 2277.",
+    "Dukov's life mainly consists of partying and having sex with women, a reflection of his carefree yet sleazy nature. Although he is profane, boisterous, and has an obnoxiously loud and distinctive laugh, Dukov is nevertheless charismatic. He is concerned only with his material possessions, his lavish home (or \"pad\" as he calls it), and women.",
+    "He is one of the three surviving mercenaries hired by Allistair Tenpenny for an expedition into Fort Constantine. He is now retired, and lives in his estate (Dukov's Place) along the east bank of the Potomac River in the D.C ruins.",
+    "He spends his time drinking lots of alcohol and taking Jet with Cherry and Fantasia. Though one will never see it, he talks often about his \"parties\" with the two girls."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Allistair Tenpenny(formerly)",
+  "role": "Mercenary (formerly)",
+  "detailed_location": "Dukov's Place",
+  "voice_actor": "Duncan Hood",
+  "special": {
+    "Strength": 4,
+    "Perception": 4,
+    "Endurance": 6,
+    "Charisma": 7,
+    "Intelligence": 4,
+    "Agility": 6,
+    "Luck": 10
+  },
+  "mod_special_values": {
+    "Strength": 4,
+    "Perception": 4,
+    "Endurance": 6,
+    "Charisma": 8,
+    "Intelligence": 4,
+    "Agility": 6,
+    "Luck": 10
+  },
+  "level": "5",
+  "tag_skills": [
+    {
+      "Small Guns:": "52"
+    },
+    {
+      "Sneak:": "52"
+    },
+    {
+      "Unarmed:": "52"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Neutral",
+  "voice_type": "MaleUniqueDukov",
+  "topics": [
+    {
+      "topic": "DukovBitches",
+      "topic_text": "Who are those girls? And where are their clothes?",
+      "emotion": "Happy 50",
+      "response_text": "Ha ha! They're my party girls.{Over loud laugh, like a bad used car salesman.}",
+      "index": "1"
+    },
+    {
+      "topic": "DukovDrink",
+      "topic_text": "Hey, can I have some of that hooch?",
+      "emotion": "Happy 50",
+      "response_text": "Help yourself, clown shoes. Grab one from the liquor cabinet. I never trust anyone without a drink in their hand.",
+      "index": "14"
+    },
+    {
+      "topic": "DukovGoodbye",
+      "topic_text": "I'd better go before I get a headache.",
+      "emotion": "Surprise 50",
+      "response_text": "You need to drink more. Ha, ha!",
+      "index": "17"
+    },
+    {
+      "topic": "DukovThisPlace",
+      "topic_text": "So... What exactly is this place?",
+      "emotion": "Happy 50",
+      "response_text": "It's my hidey hole. Nobody can fuck with me here.",
+      "index": "18"
+    },
+    {
+      "topic": "DukovWhyHere",
+      "topic_text": "What are you doing way out here by yourself?",
+      "emotion": "Happy 50",
+      "response_text": "Eating, drinking, farting and screwing! Ha, ha!",
+      "index": "22"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Disgust 50",
+      "response_text": "You've got your god damn key. Isn't that enough?",
+      "index": "24"
+    },
+    {
+      "topic": "MS14CrowleyWhat can you tell me about Mister Crowley?",
+      "topic_text": "Someone said you might know a Mister Crowley. Care to comment?",
+      "emotion": "Surprise 50",
+      "response_text": "He's fucking dead, that's what I can tell you.{Loud and boisterous}",
+      "index": "39"
+    },
+    {
+      "topic": "MS14DukovAboutKey",
+      "topic_text": "What's the key for?",
+      "emotion": "Neutral 50",
+      "response_text": "You need all the keys to get through that fucking fort.",
+      "index": "41"
+    },
+    {
+      "topic": "MS14DukovBigot",
+      "topic_text": "Crowley is alive, and he paid me to kill you because you hate Ghouls.",
+      "emotion": "Anger 50",
+      "response_text": "What? Fuck me sideways! No, better yet, fuck him. I swear, I'll jam a grenade so far up his ass...",
+      "index": "44"
+    },
+    {
+      "topic": "MS14DukovBuyKey",
+      "topic_text": "Can your table handle 200 caps?",
+      "emotion": "Happy 50",
+      "response_text": "Now that's what I'm talking about!",
+      "index": "47"
+    },
+    {
+      "topic": "MS14DukovConstantine",
+      "topic_text": "Where is this Fort Constantine?",
+      "emotion": "Neutral 50",
+      "response_text": "It's northwest of here, numb nuts. A long fucking walk, too.",
+      "index": "53"
+    },
+    {
+      "topic": "MS14DukovEndNoThreat",
+      "topic_text": "I don't think I need to hear any more.",
+      "emotion": "Disgust 50",
+      "response_text": "Good. I'm getting tired of flapping jaw with you, clown shoes.",
+      "index": "55"
+    },
+    {
+      "topic": "MS14DukovEndThreat",
+      "topic_text": "I've heard enough for now.",
+      "emotion": "Disgust 50",
+      "response_text": "Motherfucking right you have! He should have known better than to send some clown shoes of an assassin to take me out.",
+      "index": "57"
+    },
+    {
+      "topic": "MS14DukovGiveKey",
+      "topic_text": "You can give me the key, or I can take it. Your choice.",
+      "emotion": "Surprise 50",
+      "response_text": "You got some big brass ones, you know that. And fuck me if I don't think you could do it.",
+      "index": "58"
+    },
+    {
+      "topic": "MS14DukovIntimidateAre you sure I can't just have that key, handsome? You know, as a present?",
+      "topic_text": "How about I let you live, and you give me something so I can lie to Crowley?",
+      "emotion": "Surprise 50",
+      "response_text": "For you, sweet cheeks? Sure thing!",
+      "index": "62"
+    },
+    {
+      "topic": "MS14DukovNotEnoughCaps",
+      "topic_text": "I have some caps. How about I buy \"proof\" that I killed you.",
+      "emotion": "Surprise 50",
+      "response_text": "What the fuck is this? You call that money?",
+      "index": "64"
+    },
+    {
+      "topic": "MS14DukovTenpenny",
+      "topic_text": "How did all of you meet?",
+      "emotion": "Neutral 50",
+      "response_text": "Tenpenny hired us as mercs. He wanted some fancy fucking gun.",
+      "index": "67"
+    },
+    {
+      "topic": "MS14DukovWantsKey",
+      "topic_text": "Actually, Crowley is alive. He wants some sort of security key you have.",
+      "emotion": "Happy 50",
+      "response_text": "So the meatbag is alive, huh? Fine with me. Just show me the money. Put your fucking caps on the table and you can have it.",
+      "index": "69"
+    },
+    {
+      "topic": "MS14DukovWhereDied",
+      "topic_text": "Where did he die?",
+      "emotion": "Happy 50",
+      "response_text": "A little shithole called Fort Constantine. It fucked us up but good.",
+      "index": "73"
+    },
+    {
+      "topic": "MS14DukovWhoWith",
+      "topic_text": "So it was just you and Mister Crowley?",
+      "emotion": "Disgust 50",
+      "response_text": "Ha, ha! No, clown shoes. Tenpenny hired a whole fucking team.",
+      "index": "74"
+    },
+    {
+      "topic": "MS14HereToKillYouI'm here to kill you, and there's nothing you can do about it.",
+      "topic_text": "I'm going to put a bullet right between your eyes.",
+      "emotion": "Anger 50",
+      "response_text": "Oh, yeah? Give it your best shot, clown shoes!",
+      "index": "77"
+    },
+    {
+      "topic": "SpeechChallengeFailure",
+      "topic_text": "SpeechChallengeFailure",
+      "emotion": "Disgust 50",
+      "response_text": "That dog ain't gonna hunt. You're going to have to do better than that.",
+      "index": "78"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "DukovReplySteal",
+      "topic_text": "DukovReplySteal",
+      "emotion": "Surprise 50",
+      "response_text": "Huh? What? Oh yeah, baby! That's what I like.",
+      "index": "79"
+    },
+    {
+      "topic": "DukovResponse1",
+      "topic_text": "DukovResponse",
+      "emotion": "Neutral 50",
+      "response_text": "Maybe next week, babe. We've got enough liquor to last for a while. That's the only thing that's important! Hah ha!{Loud and obnoxious, thinks everything he says is hilarious.}",
+      "index": "80"
+    },
+    {
+      "topic": "DukovResponse2",
+      "topic_text": "DukovResponse2",
+      "emotion": "Happy 50",
+      "response_text": "Nonsense. You haven't had enough to drink. Hah ha!. Have another shot. That will settle your stomach.{Over emphasize \"enough\"Loud and obnoxious, thinks everything he says is hilarious.}",
+      "index": "82"
+    },
+    {
+      "topic": "DukovResponse3",
+      "topic_text": "DukovResponse3",
+      "emotion": "Neutral 50",
+      "response_text": "That's just the river. Have some booze.{Loud and obnoxious.}",
+      "index": "84"
+    },
+    {
+      "topic": "DukovStartShoot",
+      "topic_text": "DukovStartShoot",
+      "emotion": "Neutral 50",
+      "response_text": "Think I'll get in some target practice.",
+      "index": "86"
+    },
+    {
+      "topic": "DukovStopShoot",
+      "topic_text": "DukovStopShoot",
+      "emotion": "Neutral 50",
+      "response_text": "I need a drink.",
+      "index": "88"
+    },
+    {
+      "topic": "GOODBYEI have to go now.",
+      "topic_text": "I'd better leave.",
+      "emotion": "Happy 50",
+      "response_text": "Don't let the door hit you on the ass, clown shoes. Hah ha!",
+      "index": "89"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Happy 50",
+      "response_text": "Hey, clown shoes. I hope that key was worth it.",
+      "index": "91"
+    },
+    {
+      "topic": "MS14DukovRecordedNote",
+      "topic_text": "MS14DukovRecordedNote",
+      "emotion": "Anger 50",
+      "response_text": "Tara's dead. Crowley fucked up and got her killed. Fucking ghoul. When I'm done, he'll sniff butts with the ferals for the rest of his life.",
+      "index": "110"
+    },
+    {
+      "topic": "MS14DukovYell",
+      "topic_text": "MS14DukovYell",
+      "emotion": "Surprise 50",
+      "response_text": "You're drawing on me, clown shoes? I don't think so!",
+      "index": "111"
+    }
+  ],
+  "combat": [
+    {
+      "topic": "AcceptYield",
+      "topic_text": "AcceptYield",
+      "emotion": "Disgust 50",
+      "response_text": "Smart choice, clown shoes.",
+      "index": "113"
+    },
+    {
+      "topic": "Assault",
+      "topic_text": "Assault",
+      "emotion": "Anger 50",
+      "response_text": "It's on now, clown shoes!",
+      "index": "114"
+    },
+    {
+      "topic": "Attack",
+      "topic_text": "Attack",
+      "emotion": "Anger 50",
+      "response_text": "I'm gonna rip you up, clown shoes!",
+      "index": "115"
+    },
+    {
+      "topic": "Flee",
+      "topic_text": "Flee",
+      "emotion": "Fear 100",
+      "response_text": "Son of a bitch! I'm outta here!",
+      "index": "117"
+    },
+    {
+      "topic": "GuardTrespass",
+      "topic_text": "GuardTrespass",
+      "emotion": "Anger 50",
+      "response_text": "Hey! You! Get the hell out of here!",
+      "index": "118"
+    },
+    {
+      "topic": "Hit",
+      "topic_text": "Hit",
+      "emotion": "Pained 100",
+      "response_text": "Ahh!",
+      "index": "119"
+    },
+    {
+      "topic": "Murder",
+      "topic_text": "Murder",
+      "emotion": "Disgust 50",
+      "response_text": "Ah! What did you have to go and do that for? Such a fucking waste.",
+      "index": "122"
+    },
+    {
+      "topic": "Pickpocket",
+      "topic_text": "Pickpocket",
+      "emotion": "Surprise 50",
+      "response_text": "Hey! Only my bitches are allowed in my pants!",
+      "index": "123"
+    },
+    {
+      "topic": "Steal",
+      "topic_text": "Steal",
+      "emotion": "Surprise 50",
+      "response_text": "Hey! That's mine.",
+      "index": "126"
+    }
+  ]
+}

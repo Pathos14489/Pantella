@@ -1,0 +1,135 @@
+{
+  "name": "Alexander",
+  "url": "/wiki/Alexander_(Fallout:_New_Vegas)",
+  "dialogue_name": "188Alexander.txt",
+  "dialogue_url": "/wiki/188Alexander.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": true,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000E604F",
+  "ref_id": "000E686E",
+  "editor_id": "188Alexander",
+  "location": "188 Trading Post",
+  "location_url": "/wiki/188_Trading_Post",
+  "descriptions": [
+    "Alexander is an arms dealer at the 188 Trading Post in Fallout: New Vegas.",
+    "Alexander is a salesman for the Gun Runners and appears beneath the 188 Trading Post overpass in the Mojave Wasteland. He also makes trips to Camp McCarran and the Hoover Dam once or twice a week, to make sales and to take gun and ammunition orders.",
+    "He is usually located at the trading post, profiting from the recent increase in caravan traffic due to the closure of Interstate 15, checking stock and directing shipment deliveries."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Gun Runners",
+  "role": "Merchant",
+  "voice_actor": "Liam O'Brien",
+  "special": {
+    "Strength": 4,
+    "Perception": 6,
+    "Endurance": 3,
+    "Charisma": 6,
+    "Intelligence": 7,
+    "Agility": 4,
+    "Luck": 5
+  },
+  "level": "1",
+  "tag_skills": [
+    {
+      "Barter:": "32"
+    },
+    {
+      "Guns:": "28(30)"
+    },
+    {
+      "Speech:": "32"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Neutral",
+  "voice_type": "MaleAdult05",
+  "geck_race": "Hispanic",
+  "topics": [
+    {
+      "topic": "188AlexanderAboutCaravans",
+      "topic_text": "Tell me about Gun Runner caravans.",
+      "emotion": "Neutral 50",
+      "response_text": "Not much to tell. A brahmin or two loaded up with weapons, and a whole mess of well-armed guards to make sure it ends up where it's supposed to.",
+      "index": "1"
+    },
+    {
+      "topic": "188AlexanderAboutGunRunners",
+      "topic_text": "Tell me about the Gun Runners.",
+      "emotion": "Happy 50",
+      "response_text": "The Gun Runners have been putting rapid-fire death-dealing in the hands of anyone who needed to defend himself for over a century.",
+      "index": "4"
+    },
+    {
+      "topic": "188AlexanderAboutYourRole",
+      "topic_text": "What do you do?",
+      "emotion": "Anger 50",
+      "response_text": "I'm a salesman. I swing through McCarran and the dam once a week or so to take orders. But lately I spend most of my time in this piss heap.",
+      "index": "6"
+    },
+    {
+      "topic": "188AlexanderAreYouSelling",
+      "topic_text": "I'd like to see what you have for sale.",
+      "emotion": "Anger 50",
+      "response_text": "Am I selling? Yeah. Am I selling to you? No. Sorry to hurt your feelings, but you're small time. Move along.",
+      "index": "9"
+    },
+    {
+      "topic": "188AlexanderBuySell",
+      "topic_text": "So where can I buy some weapons?",
+      "emotion": "Neutral 50",
+      "response_text": "There's usually a gun merchant hanging around topside. I'm sure she'll take care of you.",
+      "index": "10"
+    },
+    {
+      "topic": "188AlexanderGunRunner",
+      "topic_text": "So you're a Gun Runner?",
+      "emotion": "Anger 50",
+      "response_text": "Like you have a clue what that even means.{scoffing}",
+      "index": "11"
+    },
+    {
+      "topic": "188AlexanderNoEnergyWeapons",
+      "topic_text": "Why don't you deal in energy weapons?",
+      "emotion": "Neutral 50",
+      "response_text": "We used to. But every caravan carrying them was getting ambushed and wiped out. By someone sophisticated enough to know which was which.",
+      "index": "12"
+    },
+    {
+      "topic": "188AlexanderPcAchievements",
+      "topic_text": "I made sure those prisoners won't bother Primm anymore.",
+      "emotion": "Anger 50",
+      "response_text": "Still plenty of other problems keeping the 15 shut down, though. Thanks for playing.",
+      "index": "14"
+    },
+    {
+      "topic": "188AlexanderSeeInventory",
+      "topic_text": "I figure a guy like you gets his pick of killing gear. (>40)",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] You might be on to something. I like to hang on to any weapons mods I run across...",
+      "index": "20"
+    },
+    {
+      "topic": "188AlexanderThreaten",
+      "topic_text": "I don't like your attitude.",
+      "emotion": "Anger 50",
+      "response_text": "You like it any better if I tell you to fuck off?",
+      "index": "26"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Anger 50",
+      "response_text": "Is there some reason I should be talking to you?{disdaining}",
+      "index": "27"
+    }
+  ],
+  "conversation": [],
+  "combat": []
+}

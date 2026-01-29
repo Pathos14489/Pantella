@@ -1,0 +1,184 @@
+{
+  "name": "Bessie Lynn*",
+  "url": "/wiki/Bessie_Lynn",
+  "dialogue_name": "BessieLynn.txt",
+  "dialogue_url": "/wiki/BessieLynn.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": true,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "0001DC18",
+  "ref_id": "0001F980",
+  "editor_id": "BessieLynn",
+  "location": "Warrington station,Tenpenny Tower",
+  "location_url": "/wiki/Warrington_station",
+  "descriptions": [
+    "Bessie Lynn is a ghoul residing in Warrington station in 2277.",
+    "Bessie is a timid and nervous woman who consistently defers to her boyfriend Roy Phillips in all matters, stemming from her self-consciousness at having become a ghoul. Although she has accepted her new physical state, she mentions how she once was pretty and adored by many, and how her ghoulification has put an end to such things. If the Lone Wanderer has not yet completed the Tenpenny Tower quest, Bessie can be found in the living quarters of Warrington station.",
+    "Bessie Lynn is in a relationship with Roy Phillips and lives together with him and Michael Masters deep inside of Warrington station.",
+    "* Only if the Tenpenny Tower quest is completed by allowing the ghouls to live in the tower.",
+    "Tenpenny Tower: If it is chosen to kill all of the ghouls, Bessie Lynn is one of the targets that needs to be eliminated.",
+    "If the Lone Wanderer has completed the Tenpenny Tower quest by letting the ghouls in, she will take over the New Urban Apparel store, and can be found there from then on out."
+  ],
+  "race": "Ghoul",
+  "gender": "Female",
+  "affiliation": "Roy Phillips",
+  "role": "Follower of Roy Phillips",
+  "detailed_location": "Warrington stationTenpenny Tower",
+  "voice_actor": "Audrey Wasilewski",
+  "special": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 4,
+    "Intelligence": 4,
+    "Agility": 6,
+    "Luck": 4
+  },
+  "mod_special_values": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 4,
+    "Intelligence": 4,
+    "Agility": 7,
+    "Luck": 4
+  },
+  "level": "1 → 6 (equal to player's level)",
+  "tag_skills": [
+    {
+      "Barter:": "27→50"
+    },
+    {
+      "Small Guns:": "31→54(33→56)"
+    },
+    {
+      "Unarmed:": "27→54"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "25→50"
+    },
+    {
+      "Critical Chance:": "4%"
+    },
+    {
+      "Unarmed Dam.:": "1.85→3"
+    },
+    {
+      "Poison Resist.:": "15%"
+    },
+    {
+      "Rad. Resist.:": "6%"
+    },
+    {
+      "Carry Weight:": "210"
+    },
+    {
+      "Damage Res.:": "3%"
+    }
+  ],
+  "karma": "Good",
+  "voice_type": "FemaleGenericGhoulDC",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Surprise 50",
+      "response_text": "Well, it'll take a little elbow grease but then this place will be a true home!{looking on the bright side}",
+      "index": "1"
+    },
+    {
+      "topic": "MS12FinBarter",
+      "topic_text": "Let's trade.",
+      "emotion": "Fear 10",
+      "response_text": "Okay. Here's what I have. What do you have?{shy and not accustomed to her role as merchant}",
+      "index": "8"
+    },
+    {
+      "topic": "MS12FinMurderedTopic",
+      "topic_text": "Where are the other Tenpenny Tower residents?",
+      "emotion": "Surprise 50",
+      "response_text": "I don't know where they are... but everything is fine. Roy said not to worry about the other residents.{trying to hide her nervousness under cheerful demeanor}",
+      "index": "11"
+    },
+    {
+      "topic": "MS12FinResidents",
+      "topic_text": "What's it like living at Tenpenny Tower?",
+      "emotion": "Happy 100",
+      "response_text": "It's wonderful. Roy was right. This is the way to live!{(shyly) happy not to be homeless}",
+      "index": "13"
+    },
+    {
+      "topic": "MS12GhoulBranch",
+      "topic_text": "So what are you doing in the Metro tunnels?",
+      "emotion": "Sad 100",
+      "response_text": "Roy is coming up with a plan to get us into that tower. Tenpenny's. Says it's only a matter of time.{admiringly talking about her man}",
+      "index": "14"
+    },
+    {
+      "topic": "MS12GhoulKill",
+      "topic_text": "Gustavo hired me to kill you.",
+      "emotion": "Fear 100",
+      "response_text": "Please don't hurt me!{scared out her mind}",
+      "index": "17"
+    },
+    {
+      "topic": "MS12GhoulKill1",
+      "topic_text": "Relax. It's just a warning, not a threat. I'm not going to kill you.",
+      "emotion": "Happy 75",
+      "response_text": "Oh. Hahaha. Sorry. I just assumed...{relieved she's not going to die, and embarrassed she drew the wrong conclusion}",
+      "index": "18"
+    },
+    {
+      "topic": "MS12GhoulKill3",
+      "topic_text": "I don't have to kill you. If you were to give me a handful of caps...",
+      "emotion": "Fear 75",
+      "response_text": "Oh... well... we don't really have much... um...{nervous and afraid for her life, and stalling for time to think of something}",
+      "index": "20"
+    },
+    {
+      "topic": "WarringtonGhoul",
+      "topic_text": "So tell me, what's it like being a Ghoul?",
+      "emotion": "Sad 50",
+      "response_text": "Oh... well... it's not so bad, I guess. Once you get used to it... but, it's not like before.{feeling sorry for herself}",
+      "index": "22"
+    },
+    {
+      "topic": "WarringtonGreetingChoiceBad",
+      "topic_text": "I'm trouble. That's all you need to know.",
+      "emotion": "Fear 50",
+      "response_text": "Oh...  my... I guess... I was just trying to be nice. Am I babbling again? I tend to do that when I'm nervous.{nervously babbling after she got cussed at}",
+      "index": "25"
+    },
+    {
+      "topic": "WarringtonGreetingChoiceGood",
+      "topic_text": "Nice to meet you, Bessie. Don't worry about me, I'll be fine.",
+      "emotion": "Surprise 50",
+      "response_text": "I wouldn't want to see anyone get hurt. You must be pretty tough to get past all the ferals. They tend to leave us alone, but someone like you...{nervously babbling}",
+      "index": "28"
+    },
+    {
+      "topic": "WarringtonGreetingChoiceNeutral",
+      "topic_text": "<Say nothing.>",
+      "emotion": "Happy 100",
+      "response_text": "Oh, all right then. Kinda shy aren't you? I don't mind that. It's nice to have someone to talk to who listens, you know...{babbling, she is shy herself and likes meeting another shy person}",
+      "index": "30"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "I have to go now.",
+      "emotion": "Fear 10",
+      "response_text": "Oh. Okay then. Have a nice one.{(nervous) trying hard not to sound nervous}",
+      "index": "32"
+    }
+  ],
+  "combat": []
+}

@@ -1,0 +1,368 @@
+{
+  "name": "Kenny",
+  "url": "/wiki/Kenny_(Point_Lookout)",
+  "dialogue_name": "DLC04Kenny.txt",
+  "dialogue_url": "/wiki/DLC04Kenny.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": true,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "xx00815A",
+  "ref_id": "xx00818C",
+  "editor_id": "DLC04Kenny",
+  "location": "Kenny's cave",
+  "location_url": "/wiki/Kenny%27s_cave",
+  "descriptions": [
+    "Kenny (also known as Latchkey Kenny) is one of the inhabitants of Point Lookout in the Fallout 3 add-on Point Lookout.",
+    "Fleeing the other swampfolk because he was not born with the right \"look,\" Kenny is a lonely child looking for a friend to play with. He lives in the Herzog Mine. Kenny is exceptional at rigging traps.",
+    "Kenny was born to swampfolk and spent his early childhood hidden in his parent's basement because he \"don't got the marks\" which caused the other swampfolk to shoot at him like they would shoot at the others without the marks. During his time in the cellar, he learned how to make traps by taking apart and rebuilding anything he could find. He later ran away from home and took up residence in the old mine, where he is found in 2277. Kenny might have chosen the mine because rumors of it being haunted would keep locals away.",
+    "Kenny stays in his makeshift house and, on occasion, shoots junk off of a shelf with his BB gun for target practice.",
+    "With a Speech check, using Child at Heart or by retrieving his Kenny-bear from the bottom of the mine's shaft, the Lone Wanderer can convince Kenny to let them stay with him in the mine, and use his containers. One can also play either tag or hide-and-seek with him when asked.",
+    "Kenny appears only in the Fallout 3 add-on Point Lookout.",
+    "Kenny's nickname, \"Latchkey Kenny,\" is a reference to the phenomenon of latchkey kids, children who return to an empty home because their parents are at work or otherwise absent, or who spend large amounts of time without parental supervision."
+  ],
+  "race": "Human(Marshfolk)",
+  "gender": "Male",
+  "affiliation": "Swampfolk(formerly)",
+  "role": "Swampfolk outcast",
+  "detailed_location": "Kenny's cave(Herzog Mine)",
+  "voice_actor": "Cullen Pagliarulo",
+  "special": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 2,
+    "Intelligence": 5,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "level": "1",
+  "misc_skills": [],
+  "karma": "Neutral",
+  "voice_type": "DLC04MaleChild",
+  "geck_race": "HispanicChild",
+  "topics": [
+    {
+      "topic": "DLC04FF04About",
+      "topic_text": "Tell me about yourself, Kenny.",
+      "emotion": "Neutral 50",
+      "response_text": "Did you know I once bagged a Mirelurk ten feet tall?{He's exaggerating! - -emphasis on \"ten feet tall,\" like it's \"TEN FEET TALL\"}",
+      "index": "1"
+    },
+    {
+      "topic": "DLC04FF04AboutGrowup",
+      "topic_text": "So Kenny, what do you want to be when you grow up?",
+      "emotion": "Surprise 50",
+      "response_text": "I'm grown up enough already. And I'm the only thing I can be - me.{defiant}",
+      "index": "5"
+    },
+    {
+      "topic": "DLC04FF04AboutNotBornRight",
+      "topic_text": "What do you mean, you weren't \"born right\"?",
+      "emotion": "Neutral 50",
+      "response_text": "Look at me. I don't got the marks. I go around the wets and folk will shoot at me! Thinking I was one of your type.",
+      "index": "6"
+    },
+    {
+      "topic": "DLC04FF04AboutParents",
+      "topic_text": "Where are your parents?",
+      "emotion": "Sad 50",
+      "response_text": "I dunno. I ran away a long time ago. I live here all by myself.{sad}",
+      "index": "7"
+    },
+    {
+      "topic": "DLC04FF04AboutPtLookout",
+      "topic_text": "What's it like living in Point Lookout?",
+      "emotion": "Neutral 50",
+      "response_text": "The grownups like my mama and pop just live in the wet. They're okay, they just don't trust outsiders like you.",
+      "index": "9"
+    },
+    {
+      "topic": "DLC04FF04AboutRunAway",
+      "topic_text": "Why did you run away from home, Kenny?",
+      "emotion": "Neutral 50",
+      "response_text": "I wasn't born right.  Mama hid me in the basement and pappy kinda just forgot about me, but I knew I had to go before I grew up.",
+      "index": "12"
+    },
+    {
+      "topic": "DLC04FF04AboutTraps",
+      "topic_text": "Where'd you learn how to make traps like that?",
+      "emotion": "Happy 50",
+      "response_text": "I got bored locked up in the basement all the time. So, I started taking things apart and putting them back together again.{proud}",
+      "index": "13"
+    },
+    {
+      "topic": "DLC04FF04BackToTop",
+      "topic_text": "Let's talk about other stuff.",
+      "emotion": "Neutral 50",
+      "response_text": "Anybody ever say you talk too much?",
+      "index": "15"
+    },
+    {
+      "topic": "DLC04FF04Greeting1a",
+      "topic_text": "Cut the crap, kid. That light show isn't scaring anybody.",
+      "emotion": "Surprise 50",
+      "response_text": "No, I mean it, mister. The ghost will melt your brain to mush! You need to get out here. And fast!{trying to scare off an intruder}",
+      "index": "17"
+    },
+    {
+      "topic": "DLC04FF04Greeting1b",
+      "topic_text": "Ghost? Where? We'd better get out of here!",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah, you'd better scram - if he looks you in the eyes, your brain will melt!{exaggerating}",
+      "index": "19"
+    },
+    {
+      "topic": "DLC04FF04Greeting2a",
+      "topic_text": "So the traps and noises, that was all you?",
+      "emotion": "Anger 50",
+      "response_text": "So what if it was? I've bagged meaner than you, and I'll do it again!",
+      "index": "20"
+    },
+    {
+      "topic": "DLC04FF04Greeting2b",
+      "topic_text": "Your toys might work on the locals, kid. But not me.",
+      "emotion": "Anger 50",
+      "response_text": "Yeah well, bullets work on everybody. Try me, mister. I dare you.{bluffing}",
+      "index": "21"
+    },
+    {
+      "topic": "DLC04FF04Greeting3a",
+      "topic_text": "Settle down. I'm not going to hurt you.",
+      "emotion": "Disgust 50",
+      "response_text": "Well... all right. But any funny business and I'll pop you one. My name's Kenny. And I'm the boss of this mine.{bluffing}",
+      "index": "23"
+    },
+    {
+      "topic": "DLC04FF04Greeting3b",
+      "topic_text": "You're starting to annoy me, kid.",
+      "emotion": "Disgust 50",
+      "response_text": "Listen up, mister. My name's Kenny. And I'm the boss of this mine. And if you're going to be mean, then you aren't welcome.{annoyed and a little scared}",
+      "index": "24"
+    },
+    {
+      "topic": "DLC04FF04Hideout",
+      "topic_text": "This seems like a good hideout. I could use a place to crash and stash my gear.",
+      "emotion": "Fear 50",
+      "response_text": "Hmm. I dunno, mister. You didn't try to kill me, and you seem pretty nice for a grownup. But still... How do I know I can trust you?{suspicious}",
+      "index": "26"
+    },
+    {
+      "topic": "DLC04FF04HideoutCantTrust",
+      "topic_text": "Good instincts. You can't trust me.",
+      "emotion": "Fear 50",
+      "response_text": "Just get out of here, okay, mister? Don't make me hurt you!{scared}",
+      "index": "28"
+    },
+    {
+      "topic": "DLC04FF04HideoutChildAtHeart",
+      "topic_text": "Oh come on! Don't be a dork face. It'll be fun!",
+      "emotion": "Neutral 50",
+      "response_text": "Okay. Fine. I guess you can hang out here. You can keep your stuff here too, I won't mess with it.{reluctant}",
+      "index": "30"
+    },
+    {
+      "topic": "DLC04FF04HideoutSpeech",
+      "topic_text": "I'm not going to hurt you. I just need a hideout from time to time.",
+      "emotion": "Neutral 50",
+      "response_text": "Well... I guess you can stay here when you need to. And you can leave your stuff, I won't mess with it.{reluctant}",
+      "index": "32"
+    },
+    {
+      "topic": "DLC04FF04HideoutTeddy",
+      "topic_text": "There must be some way to prove I'm on your side. Besides, aren't you lonely?",
+      "emotion": "Neutral 50",
+      "response_text": "I used to have Kenny-Bear around, but he fell down the big shaft back there. It's too scary for me to go get him. Maybe you can, though?",
+      "index": "34"
+    },
+    {
+      "topic": "DLC04FF04HideoutTeddyAgree",
+      "topic_text": "Okay. I'll go get it for you.",
+      "emotion": "Neutral 50",
+      "response_text": "Gee, thanks!  I dropped him near the shaft, so he's probably at the bottom.",
+      "index": "35"
+    },
+    {
+      "topic": "DLC04FF04HideoutTeddyNo",
+      "topic_text": "Sorry kid, I'm not in the teddy bear retrieval business.",
+      "emotion": "Sad 50",
+      "response_text": "Whatever. You're a dumb head. I didn't want your help anyway.{disappointed}",
+      "index": "36"
+    },
+    {
+      "topic": "DLC04FF04HideoutTeddyWhyScary",
+      "topic_text": "Scary? What do you mean?",
+      "emotion": "Neutral 50",
+      "response_text": "I don't go back there much - it's real dark and there's lots of critters. You should be fine, though!",
+      "index": "37"
+    },
+    {
+      "topic": "DLC04FF04Mine",
+      "topic_text": "Tell me about this mine, Kenny.",
+      "emotion": "Neutral 50",
+      "response_text": "Old Man Herzog's Mine-hole?  Isn't much, but it's home!",
+      "index": "38"
+    },
+    {
+      "topic": "DLC04FF04MineHerzogLegend",
+      "topic_text": "Tell me about Old Man Herzog.",
+      "emotion": "Disgust 50",
+      "response_text": "He was a mean old man, owned this mine a million years ago. Made the miners work real hard and didn't give them any money or food for their kin.{telling a story}",
+      "index": "40"
+    },
+    {
+      "topic": "DLC04FF04MineSurvival",
+      "topic_text": "How do you survive in here all alone?",
+      "emotion": "Neutral 50",
+      "response_text": "I go out to play some days and might bag me a shellman to eat. Most days I just sit here with my stories and toys, though.",
+      "index": "45"
+    },
+    {
+      "topic": "DLC04FF04MineWhyLiveHere",
+      "topic_text": "Why are you hiding down here?",
+      "emotion": "Neutral 50",
+      "response_text": "Swamp Folk know Ol' Herzog's Mine-hole. Say it's haunted. So I knew most folk wouldn't wander this way, except outsiders like you.",
+      "index": "46"
+    },
+    {
+      "topic": "DLC04FF04Play",
+      "topic_text": "Let's play a game.",
+      "emotion": "Surprise 50",
+      "response_text": "What do you wanna play? Hide and seek? Or tag?{excited to have a new friend}",
+      "index": "48"
+    },
+    {
+      "topic": "DLC04FF04PlayHideAndSeek",
+      "topic_text": "Let's play hide and seek.",
+      "emotion": "Happy 50",
+      "response_text": "Wait here and count to 10. Slowly! Then see if you can find me. Okay? No cheating! Close your eyes and count to ten. Go!{happy playing hide and seek}",
+      "index": "49"
+    },
+    {
+      "topic": "DLC04FF04PlayNo",
+      "topic_text": "Let's play another time, okay?",
+      "emotion": "Sad 50",
+      "response_text": "Fine. I didn't want to play with you anyway.{disappointed}",
+      "index": "50"
+    },
+    {
+      "topic": "DLC04FF04PlayTag",
+      "topic_text": "Let's play tag.",
+      "emotion": "Happy 50",
+      "response_text": "Okay... Tag! You're it!{laughing, playing tag}",
+      "index": "51"
+    },
+    {
+      "topic": "DLC04FF04TagKennyTagsPlayer",
+      "topic_text": "DLC04FF04TagKennyTagsPlayer",
+      "emotion": "Happy 100",
+      "response_text": "Tag! You're it!{laughing}",
+      "index": "52"
+    },
+    {
+      "topic": "DLC04FF04TagReadyOrNot",
+      "topic_text": "DLC04FF04TagReadyOrNot",
+      "emotion": "Happy 100",
+      "response_text": "Ready or not, here I come!{calling out to a friend, playing tag}",
+      "index": "55"
+    },
+    {
+      "topic": "DLC04FF04TagStop",
+      "topic_text": "Okay, that's enough tag for now.",
+      "emotion": "Sad 50",
+      "response_text": "Ah come on... what's a matter? You tired?{sad his friend doesn't want to play tag any more}",
+      "index": "57"
+    },
+    {
+      "topic": "DLC04FF04TagYoureIt",
+      "topic_text": "Tag! You're It!",
+      "emotion": "Happy 50",
+      "response_text": "Okay, I'll give you a head start. Go!{playing tag}",
+      "index": "60"
+    },
+    {
+      "topic": "DLC04FF04Teddy",
+      "topic_text": "I'm still looking for your teddy bear.",
+      "emotion": "Neutral 50",
+      "response_text": "Bring him back as fast as you can!",
+      "index": "64"
+    },
+    {
+      "topic": "DLC04FF04TeddyMoveIn1",
+      "topic_text": "Thanks!",
+      "emotion": "Surprise 50",
+      "response_text": "You're welcome. So, um, what do you want to do now? You wanna play a game? Like hide or seek, or tag or something?{hoping he's found a new friend}",
+      "index": "68"
+    },
+    {
+      "topic": "DLC04FF04TeddyMoveIn2",
+      "topic_text": "Nah, I don't want to hang out with a little kid. Thanks anyway.",
+      "emotion": "Sad 50",
+      "response_text": "We'll, okay. But if you change your mind, you can always hang out here. I won't mind.{disappointed}",
+      "index": "69"
+    },
+    {
+      "topic": "DLC04FF04TeddyWrongBear",
+      "topic_text": "I found your teddy bear. <Lie.>",
+      "emotion": "Neutral 50",
+      "response_text": "I... guess that's Kenny-Bear. Thanks for bringing him back.{uncertain (it really isn't his teddy bear)}",
+      "index": "70"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "",
+      "emotion": "Happy 100",
+      "response_text": "Found you!{laughing, playing hide and seek}",
+      "index": "71"
+    },
+    {
+      "topic": "SpeechChallengeFailure",
+      "topic_text": "SpeechChallengeFailure",
+      "emotion": "Anger 50",
+      "response_text": "Nope. I'm doing just fine on my own. Gonna keep it that way. Find someplace else.",
+      "index": "88"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "DLC04FF004GhostSounds",
+      "topic_text": "DLC04FF004GhostSounds",
+      "emotion": "Neutral 50",
+      "response_text": "Ooooohhhoooohhhh!!!{making the sound of a ghost}",
+      "index": "90"
+    },
+    {
+      "topic": "DLC04FF04HeadStart",
+      "topic_text": "DLC04FF04HeadStart",
+      "emotion": "Neutral 50",
+      "response_text": "One-Mississippi, two-Mississippi, three-Mississippi, four-Mississippi, five-Mississippi, six-Mississippi, seven-Mississippi, 8-9-10.{calling out, counting off before playing hide and seek}",
+      "index": "94"
+    },
+    {
+      "topic": "DLC04FF04PlaySayTos",
+      "topic_text": "DLC04FF04PlaySayTos",
+      "emotion": "Neutral 50",
+      "response_text": "You'll never find me.{talking to himself (playing hide and seek)}",
+      "index": "96"
+    },
+    {
+      "topic": "GOODBYE",
+      "topic_text": "I have to go now.",
+      "emotion": "Neutral 50",
+      "response_text": "Seeya, mister.",
+      "index": "104"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Happy 100",
+      "response_text": "<Giggling.>{laughing playing tag}",
+      "index": "107"
+    }
+  ],
+  "combat": []
+}

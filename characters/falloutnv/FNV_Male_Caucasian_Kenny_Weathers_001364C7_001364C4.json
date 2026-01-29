@@ -1,0 +1,162 @@
+{
+  "name": "Kenny Weathers",
+  "url": "/wiki/Kenny_Weathers",
+  "dialogue_name": "NVCCKennyWeathers.txt",
+  "dialogue_url": "/wiki/NVCCKennyWeathers.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "001364C7",
+  "ref_id": "001364C4",
+  "editor_id": "NVCCKennyWeathers",
+  "location": "Cottonwood Cove, in the slave pen",
+  "location_url": "/wiki/Cottonwood_Cove",
+  "descriptions": [
+    "Kenny Weathers is capture held in Cottonwood Cove in 2281.",
+    "Along with his mother and sister, Kenny was captured by Caesar's Legion when attempting to relocate in the Mojave Wasteland. His father, Frank Weathers, fled during their capture."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "role": "Capture",
+  "detailed_location": "Cottonwood CoveOld Mormon Fort(optional)",
+  "voice_actor": "Alex Mendoza",
+  "special": {
+    "Strength": 4,
+    "Perception": 7,
+    "Endurance": 3,
+    "Charisma": 4,
+    "Intelligence": 4,
+    "Agility": 5,
+    "Luck": 2
+  },
+  "mod_special_values": {
+    "Strength": 4,
+    "Perception": 7,
+    "Endurance": 4,
+    "Charisma": 4,
+    "Intelligence": 4,
+    "Agility": 6,
+    "Luck": 2
+  },
+  "level": "1",
+  "tag_skills": [
+    {
+      "Sneak:": "28(30)"
+    },
+    {
+      "Speech:": "26"
+    },
+    {
+      "Unarmed:": "24(26)"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "20(25)"
+    }
+  ],
+  "karma": "Neutral",
+  "voice_type": "MaleAdult07",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "You're a killer. Go away.",
+      "index": "1"
+    },
+    {
+      "topic": "VFreeformCottonwoodCoveNVCCKennyWeathersTopic000",
+      "topic_text": "Relax, this'll be over quickly. <Set off the explosive in his collar>",
+      "emotion": "Neutral 50",
+      "response_text": "{panicking}What have you done?",
+      "index": "6"
+    },
+    {
+      "topic": "VFreeformCottonwoodCoveNVCCKennyWeathersTopic001",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "{Quiet pathetic moan}Bye.",
+      "index": "8"
+    },
+    {
+      "topic": "VFreeformCottonwoodCoveNVCCKennyWeathersTopic002",
+      "topic_text": "I've paid for your freedom. You're free to go.",
+      "emotion": "Sad 100",
+      "response_text": "{Doesn't make sense}Why free me now? After what you done? I ain't saying thank you.",
+      "index": "9"
+    },
+    {
+      "topic": "VFreeformCottonwoodCoveNVCCKennyWeathersTopic003",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "{Angry}Bye.",
+      "index": "10"
+    },
+    {
+      "topic": "VFreeformCottonwoodCoveNVCCKennyWeathersTopic004",
+      "topic_text": "Let me deactivate your collar.",
+      "emotion": "Neutral 50",
+      "response_text": "No way! I seen what happens when you mess with these collars!",
+      "index": "11"
+    },
+    {
+      "topic": "VFreeformCottonwoodCoveNVCCKennyWeathersTopic005Hold still. <Deactivate the charge and remove his collar>",
+      "topic_text": "RF detonator? Give me a second.<Deactivate the charge and remove his collar>",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] Hey, you did it! Nice work!",
+      "index": "13"
+    },
+    {
+      "topic": "VFreeformCottonwoodCoveNVCCKennyWeathersTopic006",
+      "topic_text": "Never mind. I'll see if there is another way to free you.",
+      "emotion": "Neutral 50",
+      "response_text": "Good idea. I'd like to keep my head intact.",
+      "index": "15"
+    },
+    {
+      "topic": "VFreeformCottonwoodCoveNVCCKennyWeathersTopic007",
+      "topic_text": "I'm working on it.",
+      "emotion": "Neutral 50",
+      "response_text": "Sorry, I'm just glad someone is doing something. The last thing I need is to be made some legionaire's bitch and sent off to God knows where.",
+      "index": "16"
+    },
+    {
+      "topic": "VFreeformCottonwoodCoveNVCCKennyWeathersTopic008",
+      "topic_text": "<Give Kenny the key from Canyon Runner>",
+      "emotion": "Neutral 50",
+      "response_text": "{Shocked disbelief}Freedom? Thank God Frank thinks we're enslaved.",
+      "index": "17"
+    },
+    {
+      "topic": "VFreeformCottonwoodCoveNVCCKennyWeathersTopic009",
+      "topic_text": "I've paid for your freedom. You're free to go.",
+      "emotion": "Neutral 50",
+      "response_text": "{Shocked disbelief}Freedom? Thank God Frank thinks we're enslaved.",
+      "index": "19"
+    },
+    {
+      "topic": "VFreeformCottonwoodCoveNVCCKennyWeathersTopic010",
+      "topic_text": "<Give Kenny the key from Canyon Runner>",
+      "emotion": "Sad 100",
+      "response_text": "{Doesn't make sense}Why free me now? After what you done? I ain't saying thank you.",
+      "index": "21"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "{Quiet pathetic moan}Bye.",
+      "index": "22"
+    }
+  ],
+  "combat": []
+}

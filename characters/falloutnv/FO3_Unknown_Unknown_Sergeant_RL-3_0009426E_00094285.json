@@ -1,0 +1,292 @@
+{
+  "name": "Sergeant RL-3",
+  "url": "/wiki/Sergeant_RL-3",
+  "dialogue_name": "RL3Follower.txt",
+  "dialogue_url": "/wiki/RL3Follower.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": true,
+  "base_id": "0009426E",
+  "ref_id": "00094285",
+  "editor_id": "RL3Follower",
+  "location": "Outside",
+  "location_url": null,
+  "descriptions": [
+    "Sergeant RL-3, also truncated to simply Sarge, is a robot residing in the Capital Wasteland in Fallout 3. He is a possible companion of the Lone Wanderer.",
+    "A Mister Gutsy, a combat-ready spin-off model from the domestic Mister Handy model, that was created by General Atomics in the pre-War era",
+    "Unfortunately for Joe, he found the pool of potential buyers extremely low due to the Mister Gutsy's simulated personality unit being rife with programming issues, namely that RL-3 is incredibly \"picky\" about who he will designate as worth following.",
+    "Sergeant RL-3 can be recruited as a companion by talking to Tinker Joe, located between the RobCo facility and Tenpenny Tower, for a sum of 1,000 caps and only while the player character has Neutral Karma. With 70 Barter, the price can be halved to just 500 caps.",
+    "* Robots are considered creatures rather than non-player characters and thus have an additional list of stats present for creatures."
+  ],
+  "race": "Mister Gutsy",
+  "affiliation": "United States Armed Forces(formerly)Tinker JoeLone Wanderer(optionally)",
+  "role": "BodyguardCompanion",
+  "detailed_location": "Just outside of theRobCo facilityCanterbury Commonswhen dismissed",
+  "voice_actor": "Jeff Baker",
+  "special": {
+    "Strength": 5,
+    "Perception": 6,
+    "Endurance": 5,
+    "Charisma": 5,
+    "Intelligence": 5,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "level": "99→30 (Broken Steel)",
+  "misc_skills": [
+    {
+      "Hit Points:": "350"
+    }
+  ],
+  "karma": "Neutral",
+  "voice_type": "RobotMisterGutsyDC",
+  "topics": [
+    {
+      "topic": "DLC03MQ11FollowerNotGoingGoodbye, Fawkes.",
+      "topic_text": "Never mind.",
+      "emotion": "Neutral 50",
+      "response_text": "Standing by for further orders.Play soundmq11_dlc03mq11followernotg_00000…https://fallout.fandom.com/wiki/File:Mq11_dlc03mq11followernotg_00000b0c_1.oggnoicon",
+      "index": "1"
+    },
+    {
+      "topic": "DLC03MQ11SendFollowerInFawkes, I need you to start the purifier. The code is 2-1-6.",
+      "topic_text": "Fine. You do it then. The code is 2-1-6.",
+      "emotion": "Neutral 50",
+      "response_text": "Now that's more like it!Play soundmq11_dlc03mq11sendfollower_00000…https://fallout.fandom.com/wiki/File:Mq11_dlc03mq11sendfollower_00000b07_1.oggnoicon",
+      "index": "4"
+    },
+    {
+      "topic": "FollowersFired",
+      "topic_text": "You're fired, RL-3. Leave immediately.",
+      "emotion": "Surprise 50",
+      "response_text": "I think I may have misheard that order.",
+      "index": "13"
+    },
+    {
+      "topic": "FollowersFiredNo",
+      "topic_text": "On second thought, stay with me.",
+      "emotion": "Neutral 50",
+      "response_text": "Excellent. Will do.",
+      "index": "14"
+    },
+    {
+      "topic": "FollowersFiredYes",
+      "topic_text": "You didn't mishear me. Leave.",
+      "emotion": "Surprise 50",
+      "response_text": "Leaving a soldier behind? Very bad form. Making base in Canterbury Commons for when you come to your senses, sir!",
+      "index": "15"
+    },
+    {
+      "topic": "FollowersHired",
+      "topic_text": "Time to head back into the fight, RL-3.",
+      "emotion": "Happy 50",
+      "response_text": "Sir, I regret to inform you that this unit cannot accept orders from an irresponsible officer!",
+      "index": "16"
+    },
+    {
+      "topic": "FollowersLetsGo",
+      "topic_text": "Let's get going.",
+      "emotion": "Happy 50",
+      "response_text": "Yes, sir!",
+      "index": "21"
+    },
+    {
+      "topic": "FollowersLetsGoNotYet1",
+      "topic_text": "Not just yet. I wanted to talk to you about something.",
+      "emotion": "Neutral 10",
+      "response_text": "No time to dilly-dally, sir! What is it?",
+      "index": "22"
+    },
+    {
+      "topic": "FollowersLetsGoNotYet2",
+      "topic_text": "I just wanted to make sure you were still here. Goodbye.",
+      "emotion": "Sad 50",
+      "response_text": "Old war-bots never die! We just rust away.",
+      "index": "23"
+    },
+    {
+      "topic": "FollowersPPurity",
+      "topic_text": "Emergency directive, sergeant. Go into that chamber and turn on the purifier.",
+      "emotion": "Anger 50",
+      "response_text": "Soldier, you ought to be ashamed of yourself. This is your fight! You gotta finish what your daddy started! Stand strong and get your ass in there!Play soundfollowers_followersppurity_00070…https://fallout.fandom.com/wiki/File:Followers_followersppurity_00070fa6_1.oggnoicon",
+      "index": "24"
+    },
+    {
+      "topic": "FollowersTacticsDistanceDefault",
+      "topic_text": "You're good where you are.",
+      "emotion": "Happy 50",
+      "response_text": "Understood, sir. Proceeding as normal!",
+      "index": "25"
+    },
+    {
+      "topic": "FollowersTacticsDistanceEND",
+      "topic_text": "Your distance is good. Let's talk about something else.",
+      "emotion": "Neutral 50",
+      "response_text": "Yes, sir? What, sir?",
+      "index": "27"
+    },
+    {
+      "topic": "FollowersTacticsDistanceGOODBYE",
+      "topic_text": "All right, you're good. Let's get out of here.",
+      "emotion": "Happy 50",
+      "response_text": "Affirmative!",
+      "index": "28"
+    },
+    {
+      "topic": "FollowersTacticsDistanceLong",
+      "topic_text": "Keep hanging back.",
+      "emotion": "Anger 20",
+      "response_text": "If you insist, sir, but RL-3 functions best when closer to the fight!",
+      "index": "29"
+    },
+    {
+      "topic": "FollowersTacticsEnd",
+      "topic_text": "Enough about tactics.",
+      "emotion": "Happy 50",
+      "response_text": "Agreed! Now it is time to apply those tactics!{Said as a threat}",
+      "index": "31"
+    },
+    {
+      "topic": "FollowersTacticsRL3Distance",
+      "topic_text": "I want you to change how close you follow me.",
+      "emotion": "Neutral 50",
+      "response_text": "Give me my marching orders, sir.",
+      "index": "32"
+    },
+    {
+      "topic": "FollowersTradeLet's trade equipment.",
+      "topic_text": "I want to access your storage module.",
+      "emotion": "Happy 50",
+      "response_text": "RL-3 comes equipped with everything a good soldier needs! But your RL-3 can assist in carrying equipment, if needed.",
+      "index": "33"
+    },
+    {
+      "topic": "FollowersWait",
+      "topic_text": "Wait here.",
+      "emotion": "Happy 50",
+      "response_text": "I will keep this location secure!",
+      "index": "34"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "Get that airlock cycled, soldier, before we're all blown to kingdom come!Play soundmq11_greeting_00001018_1.ogghttps://fallout.fandom.com/wiki/File:Mq11_greeting_00001018_1.oggnoicon",
+      "index": "35"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYEI have to go now.",
+      "topic_text": "Let's go.",
+      "emotion": "Happy 50",
+      "response_text": "Lead on!",
+      "index": "46"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Happy 50",
+      "response_text": "RL-3 stands at attention, sir!",
+      "index": "47"
+    },
+    {
+      "topic": "IdleChatter",
+      "topic_text": "Idle Chatter",
+      "emotion": "Neutral 50",
+      "response_text": "Sir, searching for targets.",
+      "index": "49"
+    },
+    {
+      "topic": "MS14Suit",
+      "topic_text": "MS14SuitHead",
+      "emotion": "Anger 50",
+      "response_text": "Pansy! Take a shot of vitamin M and keep fighting!{Spoken like a marine drill sergeant}",
+      "index": "52"
+    },
+    {
+      "topic": "MS14SuitCombat",
+      "topic_text": "MS14SuitCombat",
+      "emotion": "Anger 50",
+      "response_text": "Gear up, soldier!",
+      "index": "55"
+    },
+    {
+      "topic": "MS14SuitEmpty",
+      "topic_text": "MS14SuitEmpty",
+      "emotion": "Anger 50",
+      "response_text": "Head wound! Too bad you're out of morhpine.{Spoken like a marine drill sergeant}",
+      "index": "58"
+    },
+    {
+      "topic": "MS14SuitStart",
+      "topic_text": "MS14SuitStart",
+      "emotion": "Anger 50",
+      "response_text": "Listen up you god-damn puke! You are now wearing prototype medic power armor. You take care of me, and I'll take care of you.{Shouted like a marine drill sergeant.}",
+      "index": "63"
+    }
+  ],
+  "combat": [
+    {
+      "topic": "AcceptYield",
+      "topic_text": "AcceptYield",
+      "emotion": "Anger 50",
+      "response_text": "Do that again and I'll put my foot so far up your ass you'll cough up boot polish!",
+      "index": "66"
+    },
+    {
+      "topic": "Assault",
+      "topic_text": "Assault",
+      "emotion": "Anger 50",
+      "response_text": "What is your major malfunction, maggot?",
+      "index": "67"
+    },
+    {
+      "topic": "Attack",
+      "topic_text": "Attack",
+      "emotion": "Anger 50",
+      "response_text": "Eat hot lead, you commie bastard!",
+      "index": "69"
+    },
+    {
+      "topic": "Death",
+      "topic_text": "Death",
+      "emotion": "Anger 50",
+      "response_text": "Tell my mama I've done my best.",
+      "index": "87"
+    },
+    {
+      "topic": "GuardTrespass",
+      "topic_text": "GuardTrespass",
+      "emotion": "Neutral 50",
+      "response_text": "You had better remove yourself from this area before I am forced to declare you an enemy of the U.S. of A.",
+      "index": "90"
+    },
+    {
+      "topic": "Murder",
+      "topic_text": "Murder",
+      "emotion": "Anger 50",
+      "response_text": "You are the lowest form of commie scumbag I've ever had the misfortune to lay eyes on!",
+      "index": "96"
+    },
+    {
+      "topic": "Pickpocket",
+      "topic_text": "Pickpocket",
+      "emotion": "Anger 50",
+      "response_text": "Please tell me that you did not just do what I think you did!",
+      "index": "99"
+    },
+    {
+      "topic": "Steal",
+      "topic_text": "Steal",
+      "emotion": "Anger 50",
+      "response_text": "I thought I had seen every species of moronic petty bullshit, but you've just topped the list. Congratulations.",
+      "index": "100"
+    }
+  ]
+}

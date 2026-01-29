@@ -1,0 +1,277 @@
+{
+  "name": "Pinkerton",
+  "url": "/wiki/Horace_Pinkerton",
+  "dialogue_name": "Pinkerton.txt",
+  "dialogue_url": "/wiki/Pinkerton.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000156CA",
+  "ref_id": "0006A178",
+  "editor_id": "Pinkerton",
+  "location": "Rivet City bow",
+  "location_url": "/wiki/Rivet_City_bow",
+  "descriptions": [
+    "Dr. Horace Pinkerton, a self-described talented electrician, scientist, and surgeon, is a reclusive inhabitant of Rivet City's broken bow in 2277. He was at one time a former council member of Rivet City who was replaced by Madison Li after a disagreement between them that resulted in Pinkerton storming out.",
+    "In his early twenties, he helped lead the remnants of the Naval Research Institute in a search for new lab space until they came across an abandoned aircraft carrier around 2237. After clearing out the mirelurk infestation, he and his team moved into the carrier and set up their science lab.",
+    "After Doctor Li arrived in Rivet City, Pinkerton's science team became enamored with Project Purity, and left Pinkerton to conduct his research on his own. Angered by this turn of events, Pinkerton expounded his views on the futility of Project Purity. Eventually, he was forced out of the Rivet City council and replaced by Doctor Li.",
+    "Pinkerton is the doctor who performed facial reconstruction surgery and a mind wipe on the android Harkness in order to help the Railroad hide him from the Institute. A brash and talented scientist, Pinkerton is the only known person in the Capital Wasteland who has the skills to perform such complicated surgery."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Rivet City Council(formerly)",
+  "role": "ScientistSurgeonRivet City Council founder",
+  "detailed_location": "Rivet City bow",
+  "voice_actor": "Gregory Gorton",
+  "special": {
+    "Strength": 4,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 6,
+    "Intelligence": 7,
+    "Agility": 4,
+    "Luck": 5
+  },
+  "mod_special_values": {
+    "Strength": 4,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 6,
+    "Intelligence": 7,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "tag_skills": [
+    {
+      "Barter:": "32"
+    },
+    {
+      "Lockpick:": "30"
+    },
+    {
+      "Science:": "34"
+    }
+  ],
+  "karma": "Good",
+  "voice_type": "MaleAdult01DefaultBDC",
+  "geck_race": "CaucasianOldAged",
+  "topics": [
+    {
+      "topic": "MS03RCHistory1",
+      "topic_text": "Tell me about this city's history.",
+      "emotion": "Anger 50",
+      "response_text": "What? I have better things to do than yak about those back-stabbers up topside. Now get going!",
+      "index": "1"
+    },
+    {
+      "topic": "MS03RCHistory2A",
+      "topic_text": "Please, it's very important. It's for a book about the Wasteland.",
+      "emotion": "Neutral 50",
+      "response_text": "Like I care what you savages read? Shove off and leave an old man to rest in peace.",
+      "index": "2"
+    },
+    {
+      "topic": "MS03RCHistory2B",
+      "topic_text": "But you've been here for so long. You must know something...",
+      "emotion": "Anger 50",
+      "response_text": "Feh. I know lots of things, but you've got no idea about most of them. Now get going, before I stop talking and start shooting!",
+      "index": "3"
+    },
+    {
+      "topic": "MS03RCHistory2Special",
+      "topic_text": "I hear you're the only one who knows the truth about Rivet City's founding.",
+      "emotion": "Disgust 20",
+      "response_text": "Hah! Sounds like you've been poking around, all right. I'm surprised any of those reprobates even remember me.",
+      "index": "4"
+    },
+    {
+      "topic": "MS03RCHistory3A",
+      "topic_text": "Setting the record straight is exactly my goal.",
+      "emotion": "Happy 50",
+      "response_text": "For that, you have to go all the way back to when remnants of the Naval Research Institute cleared the Mirelurks off this wreck about 40 years ago.{Pinkerton is proud of his moment of glory.}",
+      "index": "6"
+    },
+    {
+      "topic": "MS03RCHistory3B",
+      "topic_text": "You were on the City Council? That's hard to believe.",
+      "emotion": "Happy 50",
+      "response_text": "Well, start believing or start walking! Remnants of the Naval Research Institute cleared the Mirelurks off this wreck about 40 years ago.",
+      "index": "9"
+    },
+    {
+      "topic": "MS03RCHistory4A",
+      "topic_text": "So, you used to be in charge? How did you end up here?",
+      "emotion": "Anger 5",
+      "response_text": "That lasted until 'bout 18 years ago, when those ambitious backbiters like Li and her little team showed up.",
+      "index": "12"
+    },
+    {
+      "topic": "MS03RCHistory4B",
+      "topic_text": "If that's so, why are you stuck down here?",
+      "emotion": "Anger 5",
+      "response_text": "About 18 years ago, Li and her ambitious little team of backbiters showed up. Ruined everything around here, they did!",
+      "index": "15"
+    },
+    {
+      "topic": "MS03RCHistory5A",
+      "topic_text": "Do you have any hard evidence of all this?",
+      "emotion": "Anger 25",
+      "response_text": "Of course I do! A good scientist always keeps track of their data!",
+      "index": "18"
+    },
+    {
+      "topic": "MS03RCHistory5B",
+      "topic_text": "I can't imagine why she'd be more popular. Even assuming this is all true.",
+      "emotion": "Anger 25",
+      "response_text": "What're you suggesting, you little brat? I may not be on the science team anymore, but I still know how to keep records!",
+      "index": "20"
+    },
+    {
+      "topic": "MS03RCHistory5Purity",
+      "topic_text": "What do you know about Project Purity?",
+      "emotion": "Disgust 50",
+      "response_text": "Who cares? It's some hydroponics pipe dream that Li's been working on forever. Waste of time and effort, I say.",
+      "index": "22"
+    },
+    {
+      "topic": "MS08AskForProof",
+      "topic_text": "I'm trying to convince Harkness he's an android, but he wants proof.",
+      "emotion": "Surprise 25",
+      "response_text": "There's an audio log he himself recorded before the mind wipe. I've already told you, it's on my computer. There's also before and after pictures.",
+      "index": "25"
+    },
+    {
+      "topic": "MS08Pinkerton",
+      "topic_text": "Let's discuss the facial reconstruction and mind wipe you did for the Android.",
+      "emotion": "Anger 75",
+      "response_text": "What're you talking about, boy? I don't know anything about any of that, and a what-did-you-call-it? An android? What's that?{feigning anger to cover his hiding a secret}",
+      "index": "28"
+    },
+    {
+      "topic": "MS08PinkertonA1",
+      "topic_text": "Let's just say it's in your best interest to tell me what I want to know.",
+      "emotion": "Happy 10",
+      "response_text": "Fine, whatever. This android, calls himself Harkness now, comes in and wants a memory job. I took new memories, and replaced his old ones.{superficially begrudgingly (deep down glad to tell someone about his exploits)}",
+      "index": "30"
+    },
+    {
+      "topic": "MS08PinkertonA2",
+      "topic_text": "Maybe 100 caps will jog your memory?",
+      "emotion": "Disgust 50",
+      "response_text": "It's things like bottlecaps, and property, and ownership and all that nonsense that makes a person think he's better than another. Bah!{bah humbug}",
+      "index": "34"
+    },
+    {
+      "topic": "MS08PinkertonA3",
+      "topic_text": "Sorry, I must have you confused with somebody else. Forget I mentioned it.",
+      "emotion": "Surprise 25",
+      "response_text": "Hmph. No one else could do it, that's for damn sure.{grumbling under his breath (he wants to talk about how great he is, but doesn't want to blow his cover)}",
+      "index": "39"
+    },
+    {
+      "topic": "MS08PinkertonAboutAndroid1",
+      "topic_text": "So why'd you help the android?",
+      "emotion": "Happy 50",
+      "response_text": "Ha! Why do you think? I wanted to crack open that Commonwealth can opener to see what was inside.",
+      "index": "42"
+    },
+    {
+      "topic": "MS08PinkertonAboutAndroid2",
+      "topic_text": "What do you know about this android Railroad?",
+      "emotion": "Neutral 50",
+      "response_text": "Bunch of bleeding heart morons if you ask me. They're going to get themselves killed one of these days. And for what? Machine liberation?",
+      "index": "44"
+    },
+    {
+      "topic": "MS08PinkertonAboutAndroid3",
+      "topic_text": "What do you know about the Commonwealth?",
+      "emotion": "Neutral 50",
+      "response_text": "Most of it's a blasted nothing, just like here. But there's talk. Rumors, mostly. About a place called the Institute.",
+      "index": "46"
+    },
+    {
+      "topic": "MS08PinkertonAHacked",
+      "topic_text": "I took a little peek at the files in your computer. Tell me about the android.",
+      "emotion": "Neutral 50",
+      "response_text": "You hacked my computer? You've got some skills. It's been a while since I've met someone smart enough to best me. So I'll let that slide.{shocked}",
+      "index": "48"
+    },
+    {
+      "topic": "MS08PinkertonB1",
+      "topic_text": "I'm sorry you don't get along with Dr. Li. But we were discussing the android.",
+      "emotion": "Disgust 50",
+      "response_text": "That witch ruined my life, but you're right. Who gives a crap about any of that. You want your precious proof.{annoyed}",
+      "index": "50"
+    },
+    {
+      "topic": "MS08PinkertonB2",
+      "topic_text": "What's she got to do with this? Show me this \"proof\" about the android.",
+      "emotion": "Disgust 50",
+      "response_text": "Well, she's got nothing to do with anything, except ruining my whole goddamn life. But I can see you don't give a crap about any of that. Fine.{annoyed}",
+      "index": "53"
+    },
+    {
+      "topic": "MS08PinkertonB3",
+      "topic_text": "Yeah, she's a bitch... Can we talk about the android now?",
+      "emotion": "Disgust 50",
+      "response_text": "You're damn right she's a bitch. Ruined  my whole goddamn life. But I can see you don't give a crap about any of that. Fine.{annoyed}",
+      "index": "56"
+    },
+    {
+      "topic": "MS08PinkertonC1",
+      "topic_text": "Harkness should be told. You'd want to know if you were an android.",
+      "emotion": "Anger 90",
+      "response_text": "Maybe I am! Maybe I'm going to have my android army rise up against you and your human ilk!",
+      "index": "59"
+    },
+    {
+      "topic": "MS08PinkertonC2",
+      "topic_text": "What if this evidence doesn't work? What if Harkness doesn't believe me?",
+      "emotion": "Neutral 50",
+      "response_text": "Well, there is something else you could use. Look, I didn't really wipe his memories. Okay? I just sort of filed them away. But you can get 'em back.",
+      "index": "63"
+    },
+    {
+      "topic": "MS08PinkertonC3",
+      "topic_text": "There's something you aren't telling me. Isn't there?",
+      "emotion": "Neutral 50",
+      "response_text": "Oh, all right. So maybe I didn't wipe his mind, like he asked. But I buried it! Deep! Almost as good, really. But it's still there. Still accessible.",
+      "index": "65"
+    },
+    {
+      "topic": "RCPinkerton",
+      "topic_text": "What are you doing here in this wrecked part of the ship?",
+      "emotion": "Disgust 50",
+      "response_text": "I live here. It's where I do my work. And it's FAR away from Dr. Li and all those other monkeys dressed up like scientists.{annoyed}",
+      "index": "67"
+    },
+    {
+      "topic": "RCPinkertonFacialReconstruction",
+      "topic_text": "You think you could perform a Facial Reconstruction on me?",
+      "emotion": "Surprise 50",
+      "response_text": "And how! I AM the only one in all of the Wasteland with the skill and the guts to perform facial reconstruction, you know.{ cocky}",
+      "index": "70"
+    },
+    {
+      "topic": "RCPinkertonWork",
+      "topic_text": "What kind of work do you do in here?",
+      "emotion": "Anger 50",
+      "response_text": "The secret kind...{annoyed}",
+      "index": "75"
+    },
+    {
+      "topic": "SpeechChallengeFailure",
+      "topic_text": "SpeechChallengeFailure",
+      "emotion": "Neutral 50",
+      "response_text": "Sorry. You ain't all that good at sweet talking. Maybe if you came back with some caps.",
+      "index": "79"
+    }
+  ],
+  "conversation": [],
+  "combat": []
+}

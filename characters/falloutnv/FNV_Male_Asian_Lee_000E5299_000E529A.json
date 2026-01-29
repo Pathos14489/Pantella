@@ -1,0 +1,66 @@
+{
+  "name": "Lee",
+  "url": "/wiki/Lee_(Fallout:_New_Vegas)",
+  "dialogue_name": "PrimmSergeantLee.txt",
+  "dialogue_url": "/wiki/PrimmSergeantLee.txt",
+  "spawned_dead": false,
+  "spawned": true,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000E5299",
+  "ref_id": "000E529A",
+  "editor_id": "PrimmSergeantLee",
+  "location": "Outside theNCR Correctional Facility",
+  "location_url": "/wiki/NCR_Correctional_Facility",
+  "descriptions": [
+    "Sergeant Lee is a soldier in the New California Republic Army in Fallout: New Vegas.",
+    "If the Courier decides to betray Eddie during their dealings with the convict leader, Sergeant Lee serves as the commander of the strike force sent to retake the NCRCF from Eddie and the other Powder Gangers.",
+    "PC If the player character sides with the Powder Gangers, but has a Neutral or positive reputation with the NCR, Sergeant Lee will not be hostile towards the player character or the Powder Gangers unless he sees the NCR troopers getting attacked. Lee will rush to Eddie's room and stand there for the rest of the game, saying \"Shut up and fight!\" if the player character tries to talk with him. Once the NCR troopers die, I Fought the Law will be completed, even if Lee is still alive."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "NCR Army",
+  "role": "Commander",
+  "detailed_location": "NCR Correctional Facility",
+  "voice_actor": "Liam O'Brien",
+  "special": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 4,
+    "Intelligence": 3,
+    "Agility": 6,
+    "Luck": 4
+  },
+  "level": "5",
+  "tag_skills": [
+    {
+      "Explosives:": "43"
+    },
+    {
+      "Guns:": "45"
+    },
+    {
+      "Melee Weap.:": "45"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Neutral",
+  "voice_type": "MaleAdult05",
+  "geck_race": "Asian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "{Combat in progress}Shut up and fight!",
+      "index": "1"
+    }
+  ],
+  "conversation": [],
+  "combat": []
+}

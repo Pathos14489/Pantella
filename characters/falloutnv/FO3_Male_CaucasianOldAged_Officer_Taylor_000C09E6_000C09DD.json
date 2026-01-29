@@ -1,0 +1,103 @@
+{
+  "name": "Officer Taylor",
+  "url": "/wiki/Taylor_(Vault_101)",
+  "dialogue_name": "Vault101Security08.txt",
+  "dialogue_url": "/wiki/Vault101Security08.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000C09E6",
+  "ref_id": "000C09DD",
+  "editor_id": "Vault101Security08",
+  "location": "",
+  "location_url": null,
+  "descriptions": [
+    "Officer Taylor is a member of Vault 101 security in 2277.",
+    "Officer Taylor is a senior member of the Vault 101 security team. After his beloved wife's death, he blames the reckless escapees for the stress it caused her.",
+    "Officer Taylor was married to Agnes Taylor.",
+    "Trouble on the Homefront: Taylor is the second security guard the Lone Wander encounters when reentering the vault. Although he blames the Lone Wanderer and James for the problems in Vault 101, he is not hostile.",
+    "Non-gane"
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Vault 101 security",
+  "role": "Security guard",
+  "detailed_location": "Vault 101",
+  "voice_actor": "Paul Eiding",
+  "special": {
+    "Strength": 6,
+    "Perception": 6,
+    "Endurance": 4,
+    "Charisma": 3,
+    "Intelligence": 3,
+    "Agility": 7,
+    "Luck": 4
+  },
+  "level": "1→10 (player level x0.5)",
+  "tag_skills": [
+    {
+      "Energy Weap.:": "31→70"
+    },
+    {
+      "Melee Weap.:": "31→70"
+    },
+    {
+      "Small Guns:": "33→72"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Neutral",
+  "geck_race": "CaucasianOldAged",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Fear 75",
+      "response_text": "Stay back!{Terrified and jumpy}Play soundFO3 Taylor StayBack.ogghttps://fallout.fandom.com/wiki/File:FO3_Taylor_StayBack.oggnoicon",
+      "index": "1"
+    },
+    {
+      "topic": "MS16AtriumResponse",
+      "topic_text": "You almost shot Freddie!",
+      "emotion": "Fear 75",
+      "response_text": "I didn't mean to fire, I really didn't. I just wanted to scare him off! But he had a knife! I can't be too careful with those rebels!{Obviously terrified, but trying to justify his actions}Play soundFo3 Taylor DidntMeanToFire.ogghttps://fallout.fandom.com/wiki/File:Fo3_Taylor_DidntMeanToFire.oggnoicon",
+      "index": "3"
+    },
+    {
+      "topic": "MS16GeneralAboutRebels",
+      "topic_text": "Tell me about the rebels.",
+      "emotion": "Fear 50",
+      "response_text": "I tell you, I'm scared of them. I never know when they're going to try something dangerous!Play soundFO3 Taylor ImScaredOfThem.ogghttps://fallout.fandom.com/wiki/File:FO3_Taylor_ImScaredOfThem.oggnoicon",
+      "index": "4"
+    },
+    {
+      "topic": "MS16GeneralNightQuestion",
+      "topic_text": "What happened down here?",
+      "emotion": "Sad 75",
+      "response_text": "I lost my poor wife Agnes, is what happened. In all the chaos and fighting, her old ticker just couldn't take it anymore.Play soundOfficer Taylor I lost my poor wi…https://fallout.fandom.com/wiki/File:Officer_Taylor_I_lost_my_poor_wife_Agnes.oggnoicon",
+      "index": "5"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Neutral 50",
+      "response_text": "Nothing new, sir.Play soundFO3 Taylor NothingNewSir.ogghttps://fallout.fandom.com/wiki/File:FO3_Taylor_NothingNewSir.oggnoicon",
+      "index": "6"
+    },
+    {
+      "topic": "MS16AtriumScene1",
+      "topic_text": "MS16AtriumScene1",
+      "emotion": "Fear 50",
+      "response_text": "You know I can't do that, Freddie. Now get back down below, before I have to do something we'll both regret.{Afraid, but holding his ground}Play soundFO3 Taylor KnowICantDoThat.ogghttps://fallout.fandom.com/wiki/File:FO3_Taylor_KnowICantDoThat.oggnoicon",
+      "index": "9"
+    }
+  ],
+  "combat": []
+}

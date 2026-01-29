@@ -1,0 +1,228 @@
+{
+  "name": "Ranger Dobson",
+  "url": "/wiki/Dobson",
+  "dialogue_name": "HVRanger.txt",
+  "dialogue_url": "/wiki/HVRanger.txt",
+  "spawned_dead": false,
+  "spawned": true,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000ACD6B",
+  "ref_id": "000ACD6B",
+  "editor_id": "HVRanger",
+  "location": "Hidden Valleyoutside",
+  "location_url": "/wiki/Hidden_Valley",
+  "descriptions": [
+    "Dobson is a member of the New California Republic's Rangers camping out around Hidden Valley in the Mojave Wasteland in Fallout: New Vegas.",
+    "A Redding native,",
+    "By 2281, he was deployed to the Mojave and stationed at Camp McCarran, but sometime around October of that year, he went off on his own to assess and scout out the NCR Correctional Facility for reconnaissance on the Powder Gangers occupying the facility. He made his camp in one of the pre-War military bunkers scattered around Hidden Valley, intending to use it as a safehouse.",
+    "Ever since coming to Hidden Valley, however, his one-man operation has been fairly problematic, mostly to do with bringing his radio to broadcast properly. Despite the difficulties, the area's \"natural phenomena\" sandstorms and the bunker's remote location still make it worth the hassle, as it keeps him relatively safe from any predators or troublemakers topside.",
+    "Unbeknownst to Dobson, his off-the-books scouting operation put him in the crosshairs of the Mojave chapter of the Brotherhood of Steel, due to his bunker safehouse being only a short walk away from the one they have occupied in secret since their loss to the NCR at HELIOS One during Operation: Sunburst years prior. While the Brotherhood is still strong enough to take out a single Ranger, they have held off on attacking Dobson due to the paranoid belief that his absence will be noticed and draw more attention from their long-time enemy to Hidden Valley, unaware of the maverick nature of Dobson's arrival in the first place.",
+    "Dobson is a confident individual and takes pride in his work protecting the innocent of the Mojave Wasteland, but like any good Ranger; he is not headstrong and knows his limits."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "New California Republic Rangers",
+  "role": "Scout",
+  "detailed_location": "Hidden Valley bunker(south)",
+  "voice_actor": "Avery K. Waddell",
+  "special": {
+    "Strength": 5,
+    "Perception": 6,
+    "Endurance": 6,
+    "Charisma": 5,
+    "Intelligence": 5,
+    "Agility": 7,
+    "Luck": 5
+  },
+  "level": "10→20 (Player level x 1.0)",
+  "tag_skills": [
+    {
+      "Guns:": "70→100"
+    },
+    {
+      "Speech:": "66→100"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Neutral",
+  "voice_type": "MaleAdult02",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "No time to talk now. I have to get ready to return to base with this information. I'll get a fat raise for this, if anyone actually believes me.",
+      "index": "1"
+    },
+    {
+      "topic": "HVRangerIntroIllBeGoing",
+      "topic_text": "I'll just be going...",
+      "emotion": "Neutral 50",
+      "response_text": "Ha! Just having some fun with you, waster. No harm done, right? What can I do for you?",
+      "index": "11"
+    },
+    {
+      "topic": "HVRangerIntroPowGangNot",
+      "topic_text": "I'm not a powder ganger.",
+      "emotion": "Neutral 50",
+      "response_text": "Exactly what powder ganger scum would say! Any last words before I pull this trigger?",
+      "index": "12"
+    },
+    {
+      "topic": "HVRangerIntroPowGangNot2",
+      "topic_text": "I'm not a powder ganger!",
+      "emotion": "Neutral 50",
+      "response_text": "Relax, son. Just pulling your leg. What can I do for you?",
+      "index": "13"
+    },
+    {
+      "topic": "HVRangerIntroSpeech",
+      "topic_text": "Keep pointing that gun at me and I'll stick it up your ass.",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] Ha! Got some stones on you, son. I like that. What can I do for you?",
+      "index": "15"
+    },
+    {
+      "topic": "HVRangerMessWithRadio",
+      "topic_text": "HVRangerMessWithRadio",
+      "emotion": "Neutral 50",
+      "response_text": "Hey, what are you doing to my radio?",
+      "index": "18"
+    },
+    {
+      "topic": "VDialogueHiddenValleyHVRangerTopic000",
+      "topic_text": "So no one knows you're here?",
+      "emotion": "Neutral 50",
+      "response_text": "Standard practice. Rangers operate on our own most of the time. And that's how we like it.",
+      "index": "20"
+    },
+    {
+      "topic": "VDialogueHiddenValleyHVRangerTopic002",
+      "topic_text": "Never mind. Let's talk about something else.",
+      "emotion": "Neutral 50",
+      "response_text": "You're a strange one, aren'tcha? Fine, what did you want to talk about?",
+      "index": "23"
+    },
+    {
+      "topic": "VDialogueHiddenValleyHVRangerTopic004",
+      "topic_text": "What are Powder Gangers?",
+      "emotion": "Neutral 50",
+      "response_text": "Criminal scum that've infested this region, attacking caravans and regular folk just passing through.",
+      "index": "24"
+    },
+    {
+      "topic": "VDialogueHiddenValleyHVRangerTopic007",
+      "topic_text": "The Brotherhood of Steel has a base inside one of the bunkers here. They sent me after you.",
+      "emotion": "Neutral 50",
+      "response_text": "{Disbelief, thinks player's crazy}A Brotherhood base? Here? Are you shitting me? No one's seen them for years.",
+      "index": "33"
+    },
+    {
+      "topic": "VDialogueHiddenValleyHVRangerTopic008",
+      "topic_text": "How about this explosive collar around my neck?",
+      "emotion": "Neutral 50",
+      "response_text": "I'll be. Let me take a look at that.",
+      "index": "35"
+    },
+    {
+      "topic": "VDialogueHiddenValleyHVRangerTopic009HVRangerFixedIt",
+      "topic_text": "I was just trying to fix it.",
+      "emotion": "Neutral 50",
+      "response_text": "I've been trying to get that damn thing working for days, and you decided to just start tinkering with it? Let me see that.",
+      "index": "43"
+    },
+    {
+      "topic": "VDialogueHiddenValleyHVRangerTopic010",
+      "topic_text": "Nothing, I swear.",
+      "emotion": "Neutral 50",
+      "response_text": "Okay, but if I find you messing with it again, there'll be hell to pay, you hear me?",
+      "index": "47"
+    },
+    {
+      "topic": "VDialogueHiddenValleyHVRangerTopic011",
+      "topic_text": "Actually, I rigged your radio with a bomb.",
+      "emotion": "Neutral 50",
+      "response_text": "Well, at least you're man enough to admit it. Now get the hell out of here. If I see you again, it'll be through my rifle's sight.",
+      "index": "51"
+    },
+    {
+      "topic": "VDialogueHiddenValleyHVRangerTopic012",
+      "topic_text": "This seems like a bad location for a safehouse.",
+      "emotion": "Neutral 50",
+      "response_text": "Oh? And in your expert opinion, why would that be?",
+      "index": "52"
+    },
+    {
+      "topic": "VDialogueHiddenValleyHVRangerTopic013{Speech >= 50}",
+      "topic_text": "<Lie> Powder gangers use these bunkers as hideouts once or twice a month.",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] You've seen that with your own two eyes?",
+      "index": "53"
+    },
+    {
+      "topic": "VDialogueHiddenValleyHVRangerTopic014",
+      "topic_text": "Not sure. Just feels bad.",
+      "emotion": "Neutral 50",
+      "response_text": "I see. Well, I'll take that under advisement.",
+      "index": "59"
+    },
+    {
+      "topic": "VDialogueHiddenValleyHVRangerTopic015",
+      "topic_text": "You have to get out of here.",
+      "emotion": "Neutral 50",
+      "response_text": "Now why would I do that? You see some powder gangers on the approach or something?",
+      "index": "60"
+    },
+    {
+      "topic": "VDialogueHiddenValleyHVRangerTopic016",
+      "topic_text": "What are you doing here?",
+      "emotion": "Neutral 50",
+      "response_text": "Well, I was thinking I might set this bunker up as a safehouse. Between the remote location and the dust storms, I figured it was ideal.",
+      "index": "61"
+    },
+    {
+      "topic": "VDialogueHiddenValleyHVRangerTopic017",
+      "topic_text": "Who are you?",
+      "emotion": "Neutral 50",
+      "response_text": "Dobson's my name. I'm an NCR Ranger, operating out of Camp McCarran north of here. Redding man by birth, though.",
+      "index": "67"
+    },
+    {
+      "topic": "VDialogueHiddenValleyHVRangerTopic018",
+      "topic_text": "No, not really.",
+      "emotion": "Neutral 50",
+      "response_text": "The desert can play tricks on a man's mind. Don't let it bother you overmuch.",
+      "index": "68"
+    },
+    {
+      "topic": "VDialogueHiddenValleyHVRangerTopic019",
+      "topic_text": "Hey, I fixed your radio.",
+      "emotion": "Neutral 50",
+      "response_text": "What? Let me see that.",
+      "index": "69"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "HVRangerRadioDestroyed",
+      "topic_text": "HVRangerRadioDestroyed",
+      "emotion": "Neutral 50",
+      "response_text": "You did{stressed}not just destroy my radio.",
+      "index": "71"
+    },
+    {
+      "topic": "HVRangerRadioDisturbed",
+      "topic_text": "HVRangerRadioDisturbed",
+      "emotion": "Neutral 50",
+      "response_text": "You mess with a man's radio, and he might take it personal like, you hear?",
+      "index": "72"
+    }
+  ],
+  "combat": []
+}

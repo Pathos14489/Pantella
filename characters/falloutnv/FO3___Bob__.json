@@ -1,0 +1,209 @@
+{
+  "name": "Bob",
+  "url": "/wiki/Bob_(tree)",
+  "dialogue_name": "",
+  "dialogue_url": null,
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "",
+  "ref_id": "",
+  "editor_id": "",
+  "location": "Oasis",
+  "location_url": "/wiki/Oasis",
+  "descriptions": [
+    "Bob is a parasitic tree who infested the FEV mutant Harold, a recurring character across the Fallout series. The tree first manifested over a century after Harold became mutated. Within another century, Bob overtook Harold's body entirely, and rooted him to the ground.",
+    "Harold and Bob's living body became a small forest called Oasis, where they are worshipped by the Treeminders.",
+    "Bob sprouted from Harold's head sometime between 2162 and 2241, after Harold was exposed to the Forced Evolutionary Virus at the Mariposa Military Base. In the beginning, Bob was a small sprig in 2241 in New California but its growth accelerated, turning into a full-sized tree, overtaking Harold, and rooting itself to the ground in the Capital Wasteland region.",
+    "At some point, Harold and Bob became the deities of the Church of Harold. Members of this society referred to Harold as a \"Numen,\" and regarded him as a host that represents a symbiosis between mutant and plant lives. They practiced trepanning, boring holes in their skulls, in which they planted seeds, in an attempt to mimic the form of their prophet.",
+    "Bob and Harold were later discovered by several people who began to worship the discovery, founding a group known as the Treeminders. They started worshipping the mutant tree collectively as a deity, of which Harold reports Bob's disdain for.",
+    "Harold considers Bob his friend and speaks to him as if he was thinking aloud. Harold will sometimes jokingly refer to Bob as Herbert, which he says drives Bob crazy.",
+    "Harold details his past with Bob, explaining how after the two of them were rooted in place, Bob subsequently began to blossom, extending its reach outward, resulting in a lush green habitat named Oasis. Seeds that have taken root in the region are a result of seed pods carried by the wind, affectionately called \"Herbert's seeds\" by Harold.",
+    "When the Lone Wanderer approaches Bob and Harold for the first time, Harold will share that he was able to see their approach through the leaves of other trees, and although impressive, it makes Bob jealous.",
+    "Bob appears in Fallout 2, Fallout: Brotherhood of Steel, and Fallout 3. He was intended to appear in Van Buren and Project V13.",
+    "The tree is referred to in passing as \"Fred\" in the Van Buren design documents.",
+    "Non-canon"
+  ],
+  "race": "FEV tree",
+  "affiliation": "HaroldTreeminders",
+  "role": "Harold's friend",
+  "detailed_location": "GeckoOasis",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "President Rosie? What's happening around here anyway?",
+      "index": "1"
+    },
+    {
+      "topic": "RDBacktoTopics",
+      "topic_text": "I think I get the idea. Let me ask you something else.",
+      "emotion": "Neutral 50",
+      "response_text": "Is that it then?",
+      "index": "13"
+    },
+    {
+      "topic": "RDBobInsipid",
+      "topic_text": "I don't think you should be in charge of anything.",
+      "emotion": "Anger 50",
+      "response_text": "Yeah? Well... well... so's your face!",
+      "index": "14"
+    },
+    {
+      "topic": "RDBobInspire",
+      "topic_text": "I think you should go for it.",
+      "emotion": "Anger 50",
+      "response_text": "Yeah? Well it just so happens that I like being number two around here. So I think I'll just stay right where I am.",
+      "index": "15"
+    },
+    {
+      "topic": "RDBobInsult",
+      "topic_text": "You're too young to take Dave's place, anyway.",
+      "emotion": "Anger 50",
+      "response_text": "Too young? Too young? I am so sick of everyone around here pulling that \"You're too young\" crap with me.",
+      "index": "16"
+    },
+    {
+      "topic": "RDBobPersuade",
+      "topic_text": "Dave is corrupt! The Republic needs a new champion of freedom!",
+      "emotion": "Happy 50",
+      "response_text": "Yeah! I'll show him! And when I'm in charge, everyone will have to say I'm as good as Dave. Better, even.",
+      "index": "18"
+    },
+    {
+      "topic": "RDGottaGo",
+      "topic_text": "I've got to go.",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah, and I have to get back to work.",
+      "index": "19"
+    },
+    {
+      "topic": "RDNeverMind",
+      "topic_text": "Actually, I think I have all the info I need.",
+      "emotion": "Neutral 50",
+      "response_text": "Glad to hear it.",
+      "index": "20"
+    },
+    {
+      "topic": "RDSubElectionOpponentsWho's running in the election?",
+      "topic_text": "You know, Rosie is running for president now.",
+      "emotion": "Neutral 50",
+      "response_text": "So I've heard. She couldn't possibly think that she'd be better than Dave.",
+      "index": "21"
+    },
+    {
+      "topic": "RDSubElectionSuggestion",
+      "topic_text": "Have you considered running for the presidency?",
+      "emotion": "Neutral 50",
+      "response_text": "Keep your voice down! I'm not really comfortable talking about it out here.",
+      "index": "22"
+    },
+    {
+      "topic": "RDTopicElection",
+      "topic_text": "I'd like to discuss the election with you.",
+      "emotion": "Neutral 50",
+      "response_text": "Oh yeah? What about it?",
+      "index": "27"
+    },
+    {
+      "topic": "RDTopicElectionResults",
+      "topic_text": "Have you heard the election results?",
+      "emotion": "Happy 20",
+      "response_text": "Dave won it I'm sure.",
+      "index": "28"
+    },
+    {
+      "topic": "RDTopicGoVote",
+      "topic_text": "You should go vote, if you haven't already.",
+      "emotion": "Neutral 50",
+      "response_text": "Who the hell made you the boss?",
+      "index": "33"
+    },
+    {
+      "topic": "RDTopicRoD",
+      "topic_text": "What's new in the Republic?",
+      "emotion": "Sad 50",
+      "response_text": "Now that the old fool is finally dead, we can have some real leadership around here: me.",
+      "index": "36"
+    },
+    {
+      "topic": "RDTopicRoDEND",
+      "topic_text": "That's all I need to know.",
+      "emotion": "Neutral 50",
+      "response_text": "Oh, great.{Sarcasm}",
+      "index": "40"
+    },
+    {
+      "topic": "RDTopicThisPlace",
+      "topic_text": "What's your take on the Republic?",
+      "emotion": "Neutral 50",
+      "response_text": "Dave is in charge. When he's not around, I'm in charge. If you want anything else, go to the Museum of Dave on the left side of the compound.",
+      "index": "41"
+    },
+    {
+      "topic": "RDTopicWhosInCharge",
+      "topic_text": "Tell me more about this Dave guy.",
+      "emotion": "Anger 50",
+      "response_text": "Dave made me Second-Commander of the Army of Dave, and that means I get a gun. Don't make me have to use it.",
+      "index": "42"
+    },
+    {
+      "topic": "RDTopicWives",
+      "topic_text": "Dave has two wives?",
+      "emotion": "Neutral 50",
+      "response_text": "Yes he does, and they're both pains in my ass. Always got to keep them in line or else they get all teary.",
+      "index": "43"
+    },
+    {
+      "topic": "RDTopicYourselfWhat can you tell me about yourself?",
+      "topic_text": "So, um, Bob... I'd like to know more about you.",
+      "emotion": "Neutral 50",
+      "response_text": "All you need to know is that I'm second-in-command next to Dave, so don't bother me.",
+      "index": "44"
+    },
+    {
+      "topic": "SpeechChallengeFailure",
+      "topic_text": "SpeechChallengeFailure",
+      "emotion": "Anger 50",
+      "response_text": "I'm not stupid! You're just pushing me around.",
+      "index": "46"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYEI have to go now.",
+      "topic_text": "Later, Bob.",
+      "emotion": "Neutral 50",
+      "response_text": "Just don't bother me. I've got stuff to do for Dave.",
+      "index": "47"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Neutral 50",
+      "response_text": "Hey, go clean up after the Brahmin.  It's your turn.",
+      "index": "48"
+    },
+    {
+      "topic": "RDElectionTalk",
+      "topic_text": "DaveElectionTalk",
+      "emotion": "Neutral 50",
+      "response_text": "That's none of your business.",
+      "index": "50"
+    },
+    {
+      "topic": "RDPackageDone",
+      "topic_text": "RDPackageDone",
+      "emotion": "Neutral 50",
+      "response_text": "I'm going to win this.",
+      "index": "51"
+    }
+  ],
+  "combat": []
+}

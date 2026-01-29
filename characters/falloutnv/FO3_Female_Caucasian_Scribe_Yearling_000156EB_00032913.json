@@ -1,0 +1,288 @@
+{
+  "name": "Scribe Yearling",
+  "url": "/wiki/Yearling",
+  "dialogue_name": "ScribeYearling.txt",
+  "dialogue_url": "/wiki/ScribeYearling.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000156EB",
+  "ref_id": "00032913",
+  "editor_id": "ScribeYearling",
+  "location": "Arlington Library",
+  "location_url": "/wiki/Arlington_Library",
+  "descriptions": [
+    "Senior Scribe Yearling is a member of the East Coast Brotherhood of Steel, assigned to the Order of the Quill. She is in charge of the Brotherhood garrison and forward operations center at Arlington Library in Fallout 3.",
+    "Yearling is the Order of the Quill's field operative tasked with collecting pre-War books from the Capital Wasteland.",
+    "However, Yearling and her team have reached an impasse in their search for written works in the library, with a majority of the books destroyed or hidden underneath the rubble of the ruins.",
+    "Yearling prides herself on propriety, correcting the Lone Wanderer if they refer to her as \"lady,\" and stating that her title is instead \"scribe.\"",
+    "Despite Yearling's fondness and dedication to cultivating written knowledge, this courtesy does not extend to writing equipment such as ink, which she regards as \"old stuff.\"",
+    "She can be found in the front desk area of the Arlington Library, collecting valuable pre-War books for the Brotherhood of Steel."
+  ],
+  "race": "Human",
+  "gender": "Female",
+  "affiliation": "Brotherhood of Steel",
+  "role": "Scholar",
+  "detailed_location": "Arlington Library",
+  "voice_actor": "Karen Carbone",
+  "special": {
+    "Strength": 3,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 6,
+    "Intelligence": 7,
+    "Agility": 4,
+    "Luck": 6
+  },
+  "level": "7",
+  "tag_skills": [
+    {
+      "Medicine:": "68"
+    },
+    {
+      "Science:": "68"
+    },
+    {
+      "Speech:": "66"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "55"
+    },
+    {
+      "Critical Chance:": "6%"
+    },
+    {
+      "Unarmed Dam.:": "1.15"
+    },
+    {
+      "Poison Resist.:": "15%"
+    },
+    {
+      "Rad. Resist.:": "6%"
+    },
+    {
+      "Carry Weight:": "180"
+    },
+    {
+      "Damage Res.:": "2%"
+    }
+  ],
+  "karma": "Good",
+  "voice_type": "FemaleAdult02DC",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "FFDCArlingtonScribeYearlingGreeting1",
+      "topic_text": "Whoa, calm down. I was just exploring this area.",
+      "emotion": "Neutral 50",
+      "response_text": "You're awfully brave to be walking around down here by yourself. Are you scavenging the ruins?",
+      "index": "1"
+    },
+    {
+      "topic": "FFDCArlingtonScribeYearlingGreeting1a",
+      "topic_text": "I use what I can find, the same as anyone.",
+      "emotion": "Neutral 50",
+      "response_text": "So it goes with all of us. Perhaps we can be of use to one another.",
+      "index": "2"
+    },
+    {
+      "topic": "FFDCArlingtonScribeYearlingGreeting1a1",
+      "topic_text": "Does it involve money? I really like money. Like, a lot.",
+      "emotion": "Neutral 50",
+      "response_text": "I find that to be so with many Wastelanders. It may involve money, if you choose. Or there may be other forms of compensation.",
+      "index": "4"
+    },
+    {
+      "topic": "FFDCArlingtonScribeYearlingGreeting1a1a",
+      "topic_text": "As long as there's money involved, I'm in. Mmmm.... money.",
+      "emotion": "Neutral 50",
+      "response_text": "If nothing else, I admire your commitment to your chosen focus.",
+      "index": "6"
+    },
+    {
+      "topic": "FFDCArlingtonScribeYearlingGreeting1a1b",
+      "topic_text": "Money and the promise of mysterious compensation? I'm in.",
+      "emotion": "Neutral 50",
+      "response_text": "If nothing else, I admire your commitment to your chosen focus.",
+      "index": "10"
+    },
+    {
+      "topic": "FFDCArlingtonScribeYearlingGreeting1a2",
+      "topic_text": "I'm interested in this. Tell me more.",
+      "emotion": "Neutral 50",
+      "response_text": "Good. My task here is to collect the written works of those who came before in order to supplement the Brotherhood Archives at the Citadel.",
+      "index": "14"
+    },
+    {
+      "topic": "FFDCArlingtonScribeYearlingGreeting1a2a",
+      "topic_text": "And you want me to help you gather books, right?",
+      "emotion": "Neutral 50",
+      "response_text": "Precisely. The collected knowledge of a lost age is worth far more than any weapon. So, return here with any books that you find in good condition.",
+      "index": "17"
+    },
+    {
+      "topic": "FFDCArlingtonScribeYearlingGreeting1a2b",
+      "topic_text": "The mighty Brotherhood is gathering books? Seriously?",
+      "emotion": "Neutral 50",
+      "response_text": "The collected knowledge of a lost age is worth far more than any weapon. Do not underestimate the power of the written word.",
+      "index": "19"
+    },
+    {
+      "topic": "FFDCArlingtonScribeYearlingGreeting1a3",
+      "topic_text": "Sorry, I'm too busy right now.",
+      "emotion": "Neutral 50",
+      "response_text": "Very well. But, hear me out before you go. My task is to recover undamaged books in order to supplement the knowledge of the Citadel archives.",
+      "index": "22"
+    },
+    {
+      "topic": "FFDCArlingtonScribeYearlingGreeting1b",
+      "topic_text": "Why should I tell you anything, lady?",
+      "emotion": "Neutral 50",
+      "response_text": "Actually, it's \"Scribe\", not lady. Senior Scribe Yearling, Order of the Word.",
+      "index": "25"
+    },
+    {
+      "topic": "FFDCArlingtonScribeYearlingGreeting2",
+      "topic_text": "I can't go anywhere without bumping into you assholes.",
+      "emotion": "Neutral 50",
+      "response_text": "I would be cautious about insulting the Brotherhood. We have very long memories. Very long.",
+      "index": "27"
+    },
+    {
+      "topic": "FFDCArlingtonYearlingBooks",
+      "topic_text": "I have Pre-War Books for you.",
+      "emotion": "Neutral 50",
+      "response_text": "Excellent. How many are you willing to trade?",
+      "index": "29"
+    },
+    {
+      "topic": "FFDCArlingtonYearlingBooks1",
+      "topic_text": "I'll trade one.",
+      "emotion": "Neutral 50",
+      "response_text": "Very well. Here is your reward. Use it well and return with more books when you can.",
+      "index": "31"
+    },
+    {
+      "topic": "FFDCArlingtonYearlingBooks2",
+      "topic_text": "I'll trade two.",
+      "emotion": "Neutral 50",
+      "response_text": "Very well. Here is your reward. Use it well and return with more books when you can.",
+      "index": "32"
+    },
+    {
+      "topic": "FFDCArlingtonYearlingBooks3",
+      "topic_text": "I'll trade three.",
+      "emotion": "Neutral 50",
+      "response_text": "Very well. Here is your reward. Use it well and return with more books when you can.",
+      "index": "33"
+    },
+    {
+      "topic": "FFDCArlingtonYearlingBooks4",
+      "topic_text": "I'll trade four.",
+      "emotion": "Neutral 50",
+      "response_text": "Very well. Here is your reward. Use it well and return with more books when you can.",
+      "index": "34"
+    },
+    {
+      "topic": "FFDCArlingtonYearlingBooks5",
+      "topic_text": "I'll trade five.",
+      "emotion": "Neutral 50",
+      "response_text": "Very well. Here is your reward. Use it well and return with more books when you can.",
+      "index": "35"
+    },
+    {
+      "topic": "FFDCArlingtonYearlingBooksAll",
+      "topic_text": "Take all the books I have.",
+      "emotion": "Neutral 50",
+      "response_text": "Very well. Here is your reward. Use it well and return with more books when you can.",
+      "index": "36"
+    },
+    {
+      "topic": "FFDCArlingtonYearlingBooksEND",
+      "topic_text": "Actually, never mind.",
+      "emotion": "Neutral 50",
+      "response_text": "Very well.",
+      "index": "37"
+    },
+    {
+      "topic": "FFDCArlingtonYearlingBooksNone",
+      "topic_text": "Actually, I don't have any books to trade.",
+      "emotion": "Neutral 50",
+      "response_text": "Then why are you wasting my time? Honestly. Do you think that's funny?",
+      "index": "38"
+    },
+    {
+      "topic": "FFDCArlingtonYearlingLibrary",
+      "topic_text": "What do you do in this library?",
+      "emotion": "Neutral 50",
+      "response_text": "We have set up this area as a forward operations center for our project. The books we collect can be recorded with the computer systems here.",
+      "index": "39"
+    },
+    {
+      "topic": "FFDCArlingtonYearlingPurpose",
+      "topic_text": "Why are you collecting books?",
+      "emotion": "Neutral 50",
+      "response_text": "Books represent the collected knowledge of the world before. Everything from a child's story book to a detailed technical guide has value.",
+      "index": "41"
+    },
+    {
+      "topic": "FFDCArlingtonYearlingPurpose1",
+      "topic_text": "Wait... Is there a problem with your Elder?",
+      "emotion": "Neutral 50",
+      "response_text": "It is not my place to criticize Elder Lyons. All I will say to an outsider is that he is not a traditionalist. That is all.",
+      "index": "44"
+    },
+    {
+      "topic": "FFDCArlingtonYearlingPurpose2",
+      "topic_text": "I see. Thanks.",
+      "emotion": "Neutral 50",
+      "response_text": "Certainly.",
+      "index": "45"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "Hold it! This area is under the authority of the Brotherhood of Steel. Leave immediately.",
+      "index": "46"
+    },
+    {
+      "topic": "MS03Librarian1",
+      "topic_text": "Can you help me access the library's archives?",
+      "emotion": "Neutral 25",
+      "response_text": "The front desk computer has access to the card catalogs, but it appears that it's lost the connection to the main archives. Here's the password.",
+      "index": "51"
+    },
+    {
+      "topic": "MS03YearlingGreeting",
+      "topic_text": "I'm searching for records from the library.",
+      "emotion": "Happy 25",
+      "response_text": "It seems that we have similar goals in mind. It's rare to meet someone who has proper priorities.",
+      "index": "53"
+    },
+    {
+      "topic": "MS15TLInk",
+      "topic_text": "I'm looking for some ink. I was told it might be here in the library.",
+      "emotion": "Neutral 50",
+      "response_text": "Hmmm, surprised anyone would care about that old stuff.",
+      "index": "55"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Neutral 50",
+      "response_text": "Remember my offer, Outsider: cash for pre-war books.",
+      "index": "58"
+    }
+  ],
+  "combat": []
+}

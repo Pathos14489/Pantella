@@ -1,0 +1,111 @@
+{
+  "name": "Crow",
+  "url": "/wiki/Crow_(Fallout_3)",
+  "dialogue_name": "Crow.txt",
+  "dialogue_url": "/wiki/Crow.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": true,
+  "can_repair": true,
+  "can_be_companion": false,
+  "base_id": "00063BF8",
+  "ref_id": "00063C05",
+  "editor_id": "Crow",
+  "location": "AlongCaravan trade route",
+  "location_url": "/wiki/Caravan_trade_route",
+  "descriptions": [
+    "Crow is a spiritual caravan merchant, who sells clothing and armor around the Capital Wasteland in Fallout 3.",
+    "Crow is a tribal shaman turned caravan merchant, making a living as he travels the wastes offering armor and clothing to its people.",
+    "Despite his mystical aura, he can resort to more realistic commentary; while he believes the \"spirits\" have showered him with many gifts, he sees the Lone Wanderer's investment in him as the more \"marketable\" gift, and is self-aware that his caravan is the most profitable of all the traders as people are willing to spend more on armor.",
+    "Agatha mentions that she and Crow are friends. Crow can be found wandering the wastes with his caravan guard and brahmin.",
+    "Like all caravan merchants in the Capital Wasteland, Crow's route takes him to Canterbury Commons, the Temple of the Union, Agatha's house, Paradise Falls, Arefu, Evergreen Mills, Megaton and Rivet City."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Ernest Roe",
+  "role": "Tribalshaman (formerly)Travelingcaravan merchant",
+  "detailed_location": "Loops throughCanterbury Commons,Temple of the Union,Agatha's house,Paradise Falls,Arefu,Evergreen Mills,Megaton, andRivet City",
+  "voice_actor": "Gregory Gorton",
+  "special": {
+    "Strength": 4,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 7,
+    "Intelligence": 5,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "level": "5→15 (1.5x current player level)",
+  "tag_skills": [
+    {
+      "Barter:": "54→100"
+    },
+    {
+      "Small Guns:": "52→100"
+    },
+    {
+      "Speech:": "54→100"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "135→185"
+    },
+    {
+      "Damage Res.:": "0%(25%)"
+    }
+  ],
+  "karma": "Good",
+  "voice_type": "MaleAdult01DefaultBDC",
+  "geck_race": "Hispanic",
+  "topics": [
+    {
+      "topic": "CCAboutCaravans",
+      "topic_text": "Tell me about your trade caravan.",
+      "emotion": "Neutral 25",
+      "response_text": "My caravan sells clothing and armor, to decorate and protect the body while it endures the ravages of the physical world.{With a slightly airy and mystical tone.}",
+      "index": "1"
+    },
+    {
+      "topic": "CCTrade",
+      "topic_text": "I'm here to buy.",
+      "emotion": "Neutral 25",
+      "response_text": "Have a look, see if anything calls out to you.{With a slightly airy and mystical tone.}",
+      "index": "3"
+    },
+    {
+      "topic": "CCTradeRepair",
+      "topic_text": "Can you repair something for me?",
+      "emotion": "Happy 10",
+      "response_text": "Yes, but only if it wants to be repaired.",
+      "index": "5"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Happy 25",
+      "response_text": "Welcome, welcome! My name is Crow, and I travel the land, offering vestments of protection. And you are fortunate I found you in time!",
+      "index": "7"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "I have to go now.",
+      "emotion": "Neutral 50",
+      "response_text": "Stay safe on the path you travel.{Almost spiritual in tone}",
+      "index": "13"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Happy 50",
+      "response_text": "Welcome, friend. Looking for more appropriate attire?",
+      "index": "15"
+    }
+  ],
+  "combat": []
+}

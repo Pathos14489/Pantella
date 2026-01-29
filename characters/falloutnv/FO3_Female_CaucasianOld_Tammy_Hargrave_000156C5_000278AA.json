@@ -1,0 +1,213 @@
+{
+  "name": "Tammy Hargrave",
+  "url": "/wiki/Tammy_Hargrave",
+  "dialogue_name": "TammyHargrave.txt",
+  "dialogue_url": "/wiki/TammyHargrave.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": true,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000156C5",
+  "ref_id": "000278AA",
+  "editor_id": "TammyHargrave",
+  "location": "The Muddy Rudder",
+  "location_url": "/wiki/The_Muddy_Rudder",
+  "descriptions": [
+    "Tammy Hargrave is an alcoholic resident of Rivet City in Fallout 3.",
+    "Tammy is a sour, middle-aged alcoholic,",
+    "Tammy considers herself better than most of Rivet City's citizens, Her emotional abuse and general neglect has caused James to act out his problems with light thievery and abuse of his own to his only friend C.J. Young.",
+    "Should James have been convinced to runaway in a forlorn attempt at attention from loved ones he'll take C.J. with him.",
+    "Tammy is the mother of James Hargrave, and an emotionally abusive alcoholic who wouldn't mind selling him into slavery. Her husband, who she married because she was desperate, died in the wasteland. She uses this as an excuse to treat her son horribly, often emotionally abusing him. Due to her actions she has a poor reputation among the citizenry of Rivet City.",
+    "She can be found in the common bedroom area on the midship deck, in The Muddy Rudder, or occasionally the marketplace."
+  ],
+  "race": "Human",
+  "gender": "Female",
+  "affiliation": "Rivet City",
+  "role": "Abusive parent, drunk",
+  "detailed_location": "The Muddy Rudder",
+  "voice_actor": "Shari Elliker",
+  "special": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 4,
+    "Intelligence": 4,
+    "Agility": 6,
+    "Luck": 4
+  },
+  "mod_special_values": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 6,
+    "Charisma": 4,
+    "Intelligence": 4,
+    "Agility": 7,
+    "Luck": 4
+  },
+  "level": "4",
+  "tag_skills": [
+    {
+      "Barter:": "41"
+    },
+    {
+      "Small Guns:": "45(47)"
+    },
+    {
+      "Unarmed:": "41(43)"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "80(85)"
+    },
+    {
+      "Critical Chance:": "4%"
+    },
+    {
+      "Unarmed Dam.:": "2.55"
+    },
+    {
+      "Poison Resist.:": "15%(20%)"
+    },
+    {
+      "Rad. Resist.:": "6%(8%)"
+    },
+    {
+      "Carry Weight:": "210"
+    },
+    {
+      "Damage Res.:": "0%(2%)"
+    }
+  ],
+  "karma": "Neutral",
+  "voice_type": "FemaleAdult01DefaultDC",
+  "geck_race": "CaucasianOld",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Disgust 50",
+      "response_text": "I'm Tammy. Have you seen my good for nothing son lately?",
+      "index": "1"
+    },
+    {
+      "topic": "MS03RCHistory1",
+      "topic_text": "Could I ask you about Rivet City's history?",
+      "emotion": "Disgust 25",
+      "response_text": "Get away. I've got enough to deal with without you wasting my time.",
+      "index": "5"
+    },
+    {
+      "topic": "MS14TedFind",
+      "topic_text": "Where can I find Ted Strayer?",
+      "emotion": "Neutral 50",
+      "response_text": "Have you tried the common room?  That's where he sleeps.",
+      "index": "6"
+    },
+    {
+      "topic": "RCTammyHargraveBadKid",
+      "topic_text": "Some kids are just born bad.",
+      "emotion": "Disgust 50",
+      "response_text": "You got that right. My James sure is.",
+      "index": "9"
+    },
+    {
+      "topic": "RCTammyHargraveBitch",
+      "topic_text": "You don't have to be such a bitch...",
+      "emotion": "Disgust 50",
+      "response_text": "Oh really? My husband ran off and got himself killed, and left me to raise his little brat. So don't you tell me how I should or shouldn't be.",
+      "index": "13"
+    },
+    {
+      "topic": "RCTammyHargraveGoodKid",
+      "topic_text": "There are no bad children. Only bad parents.",
+      "emotion": "Disgust 50",
+      "response_text": "What a load of crap. Obviously you've never had to take care of some squealing little brat.",
+      "index": "14"
+    },
+    {
+      "topic": "RCTammyHargraveNoSee",
+      "topic_text": "No, I haven't seen him.",
+      "emotion": "Disgust 50",
+      "response_text": "Figures.",
+      "index": "15"
+    },
+    {
+      "topic": "RCTammyHargraveWhoCares",
+      "topic_text": "I don't think so. I've got questions.",
+      "emotion": "Disgust 50",
+      "response_text": "Just make it quick. There's a bottle with my name on it.",
+      "index": "19"
+    },
+    {
+      "topic": "RCTammyHargraveYourSon",
+      "topic_text": "Is that your son running around here?",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah. That's James. My own little trouble making brat.",
+      "index": "20"
+    },
+    {
+      "topic": "RCTopicCJYoungMissing",
+      "topic_text": "Have you seen C.J. Young lately?",
+      "emotion": "Surprise 50",
+      "response_text": "You mean that brat my James hangs around with?",
+      "index": "23"
+    },
+    {
+      "topic": "RCTopicGetDrinks",
+      "topic_text": "Where can I get a stiff drink?",
+      "emotion": "Neutral 50",
+      "response_text": "The Muddy Rudder. Belle waters down the liquor, but it's cheap. It's on the lower deck.",
+      "index": "25"
+    },
+    {
+      "topic": "RCTopicWedding",
+      "topic_text": "When are Angela and Diego getting married?",
+      "emotion": "Disgust 50",
+      "response_text": "Those brats are going to tie the knot tomorrow. I think it's at three.",
+      "index": "26"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYEI have to go now.",
+      "topic_text": "Take care, Tammy.",
+      "emotion": "Disgust 50",
+      "response_text": "Like I care.",
+      "index": "28"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Anger 50",
+      "response_text": "Don't slouch. Chew your food. And don't give me that look or I'll slap it right off your face!",
+      "index": "29"
+    },
+    {
+      "topic": "RCGoodbye",
+      "topic_text": "RCGoodbye",
+      "emotion": "Anger 50",
+      "response_text": "To hell with that brat. And to hell with you, Harkness. I'll drink as much as I want.",
+      "index": "38"
+    },
+    {
+      "topic": "RCPackageEnd",
+      "topic_text": "RCPackageEnd",
+      "emotion": "Disgust 50",
+      "response_text": "I need a drink.",
+      "index": "47"
+    },
+    {
+      "topic": "RCResponse01",
+      "topic_text": "RCResponse01",
+      "emotion": "Anger 50",
+      "response_text": "No. I don't want you hanging around that little bitch. She and her parents think they are so much better than me.",
+      "index": "51"
+    }
+  ],
+  "combat": []
+}

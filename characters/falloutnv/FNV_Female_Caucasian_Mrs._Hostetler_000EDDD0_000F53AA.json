@@ -1,0 +1,234 @@
+{
+  "name": "Mrs. Hostetler",
+  "url": "/wiki/Becky_Hostetler",
+  "dialogue_name": "NorthVegasMrsHostetler.txt",
+  "dialogue_url": "/wiki/NorthVegasMrsHostetler.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000EDDD0",
+  "ref_id": "000F53AA",
+  "editor_id": "NorthVegasMrsHostetler",
+  "location": "Hostetler home",
+  "location_url": "/wiki/Hostetler_home",
+  "descriptions": [
+    "Becky Hostetler and Don Hostetler's wife, living in the Mojave Wasteland in 2281.",
+    "The Hostetlers are an honest, hard-working family that sought the safety of New Vegas to get away from the Fiends, Jackals and other raider gangs that terrorize the city, although they are forced to deal with the hefty property taxes imposed by the NCR. The family has worked hard to secure their home, and are there to stay. While Becky struggles as a farmer day and night to ensure that there will always be food on the table, her husband, Don Hostetler, took a job as an accounts manager at the Crimson Caravan Company to provide a source of income for his family.",
+    "Alice Hostetler, the sole daughter of the family never wanted to become part of those dreams. Thus, she drifted into North Vegas Square where she met Andy Scabb, a criminal claiming to help her escape the dump. In reality, he intends to use her father's association to the Crimson Caravan to rob the company and the Hostetler household, then skip town. This has made Alice's parents concerned about her wellbeing, confiding in Crandon and seeking help in keeping their daughter safe from her new acquaintances.",
+    "Mrs. Hostetler was written by area designer Jorge Salgado, who also worked on the quest Someone to Watch Over Me.",
+    "PC Playstation 3 Xbox 360 Mrs. Hostetler may sit and type on a non-existent terminal, complete with sounds."
+  ],
+  "race": "Human",
+  "gender": "Female",
+  "affiliation": "Hostetler home",
+  "role": "WifeMotherFarmer",
+  "detailed_location": "Hostetler home",
+  "voice_actor": "Courtenay Taylor",
+  "special": {
+    "Strength": 5,
+    "Perception": 6,
+    "Endurance": 6,
+    "Charisma": 3,
+    "Intelligence": 6,
+    "Agility": 6,
+    "Luck": 3
+  },
+  "mod_special_values": {
+    "Strength": 5,
+    "Perception": 6,
+    "Endurance": 7,
+    "Charisma": 3,
+    "Intelligence": 6,
+    "Agility": 7,
+    "Luck": 3
+  },
+  "level": "6",
+  "misc_skills": [],
+  "karma": "Good",
+  "voice_type": "FemaleAdult04",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Anger 40",
+      "response_text": "What are you doing here? Get out before I blow your head off!",
+      "index": "1"
+    },
+    {
+      "topic": "MrsHostetlerFamily",
+      "topic_text": "You mentioned your husband works for the caravans?",
+      "emotion": "Neutral 50",
+      "response_text": "Yes, he's an account manager for the Crimson Caravan Company. He works such long oursto provide for our daughter and me.",
+      "index": "8"
+    },
+    {
+      "topic": "VDialogueVegasNorthNorthVegasMrsHostetlerTopic000",
+      "topic_text": "What do you need done about your daughter?",
+      "emotion": "Neutral 50",
+      "response_text": "I know she's been frequenting the square in North Vegas, probably hanging out with street scum. I want to know more about her new \"friends.\"",
+      "index": "10"
+    },
+    {
+      "topic": "VDialogueVegasNorthNorthVegasMrsHostetlerTopic004",
+      "topic_text": "Tell me about this area of New Vegas.",
+      "emotion": "Neutral 50",
+      "response_text": "Folks call this East Vegas, but I don't care much for names.",
+      "index": "12"
+    },
+    {
+      "topic": "VDialogueVegasNorthNorthVegasMrsHostetlerTopic005",
+      "topic_text": "What's your take on the Legion and the NCR?",
+      "emotion": "Anger 30",
+      "response_text": "Don't get me started, stranger. We don't take kindly to either of them. We've fought hard for our home, and we're here to stay.",
+      "index": "15"
+    },
+    {
+      "topic": "VDialogueVegasNorthNorthVegasMrsHostetlerTopic016",
+      "topic_text": "I don't need it. Keep your money.",
+      "emotion": "Neutral 50",
+      "response_text": "{Grateful, the player just refused a reward she really couldn't afford to pay}We do need it. Still, I wish there was something we could give you in return.",
+      "index": "20"
+    },
+    {
+      "topic": "VDialogueVegasNorthNorthVegasMrsHostetlerTopic020",
+      "topic_text": "Settle down. Crandon sent me.",
+      "emotion": "Neutral 50",
+      "response_text": "He did, huh? All right, what do you want?",
+      "index": "22"
+    },
+    {
+      "topic": "VDialogueVegasNorthNorthVegasMrsHostetlerTopic021",
+      "topic_text": "Crandon said you had a problem. I take care of problems.",
+      "emotion": "Neutral 50",
+      "response_text": "He should really mind his own business. Crandon's good to keep scum in check, but he ain't exactly subtle.",
+      "index": "23"
+    },
+    {
+      "topic": "VDialogueVegasNorthNorthVegasMrsHostetlerTopic022",
+      "topic_text": "<Questions about Quest>",
+      "emotion": "Neutral 50",
+      "response_text": "If you're good at snooping around, then I could use you. I need to find out what my daughter's up to.",
+      "index": "24"
+    },
+    {
+      "topic": "VDialogueVegasNorthNorthVegasMrsHostetlerTopic023",
+      "topic_text": "I mean you no harm.",
+      "emotion": "Neutral 50",
+      "response_text": "Whatever you say, stranger. Go snoop somewhere else and get the fuck out of my house, right now!",
+      "index": "26"
+    },
+    {
+      "topic": "VDialogueVegasNorthNorthVegasMrsHostetlerTopic024",
+      "topic_text": "I just want to ask you some questions.",
+      "emotion": "Neutral 50",
+      "response_text": "Are you deaf? I don't give a damn about what you want. Just get out of here.",
+      "index": "27"
+    },
+    {
+      "topic": "VDialogueVegasNorthNorthVegasMrsHostetlerTopic025",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Get lost!",
+      "index": "28"
+    },
+    {
+      "topic": "VDialogueVegasNorthNorthVegasMrsHostetlerTopic027",
+      "topic_text": "<Attack> Okay, bitch. You asked for it.",
+      "emotion": "Neutral 50",
+      "response_text": "You think I'm going to be easy, huh? Come get some, asshole!",
+      "index": "30"
+    },
+    {
+      "topic": "VDialogueVegasNorthNorthVegasMrsHostetlerTopic033",
+      "topic_text": "<Questions General>",
+      "emotion": "Neutral 50",
+      "response_text": "Okay, what's on your mind?",
+      "index": "31"
+    },
+    {
+      "topic": "VDialogueVegasNorthNorthVegasMrsHostetlerTopic037",
+      "topic_text": "I'll check them out for you.",
+      "emotion": "Neutral 50",
+      "response_text": "All right, we've got a deal then. I'll make sure to compensate you for your time,{emphasis}if you find anything useful.",
+      "index": "32"
+    },
+    {
+      "topic": "VDialogueVegasNorthNorthVegasMrsHostetlerTopic038",
+      "topic_text": "Babysitting isn't my thing.",
+      "emotion": "Neutral 50",
+      "response_text": "This ain't \"babysitting,\" stranger. I'm telling you, these people are nasty and Alice is in danger.",
+      "index": "33"
+    },
+    {
+      "topic": "VDialogueVegasNorthNorthVegasMrsHostetlerTopic045",
+      "topic_text": "Having your daughter back should be worth more than 200 caps.",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] Yes, I suppose you're right. Please, take this: it's half of our savings. We'll manage, somehow, as we've always done.",
+      "index": "34"
+    },
+    {
+      "topic": "VDialogueVegasNorthNorthVegasMrsHostetlerTopic046",
+      "topic_text": "<Attack> I'll take the money from Crimson Caravan as well.",
+      "emotion": "Pained 40",
+      "response_text": "I shouldn't have trusted you.",
+      "index": "38"
+    },
+    {
+      "topic": "VDialogueVegasNorthNorthVegasMrsHostetlerTopic047",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Goodbye, stranger.",
+      "index": "40"
+    },
+    {
+      "topic": "VDialogueVegasNorthNorthVegasMrsHostetlerTopic048",
+      "topic_text": "Sooner or later she'd have left anyway.",
+      "emotion": "Neutral 50",
+      "response_text": "Yes, I suppose you're right. Please, accept half of our reserve. We'll manage, somehow, as we've always done.",
+      "index": "42"
+    },
+    {
+      "topic": "VDialogueVegasNorthNorthVegasMrsHostetlerTopic050",
+      "topic_text": "You're alive thanks to me. I expect my reward.",
+      "emotion": "Neutral 50",
+      "response_text": "... I... I was blind to what was happening in my own family. We don't have much, but please take this.",
+      "index": "43"
+    },
+    {
+      "topic": "VDialogueVegasNorthNorthVegasMrsHostetlerTopic051",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "That's right, get out of here! If I see you ever again, I'll pump you full of lead, you hear?",
+      "index": "44"
+    },
+    {
+      "topic": "VDialogueVegasNorthNorthVegasMrsHostetlerTopic052",
+      "topic_text": "Actually, just keep it.",
+      "emotion": "Neutral 50",
+      "response_text": "We do need it, stranger. Still, I wish there was something we could give you in return.",
+      "index": "45"
+    },
+    {
+      "topic": "VDialogueVegasNorthNorthVegasMrsHostetlerTopic053",
+      "topic_text": "For a job well done... 200 caps.",
+      "emotion": "Neutral 50",
+      "response_text": "We've worked day and night, for months, to make that much. Sorry, stranger, it'll have to do.",
+      "index": "47"
+    },
+    {
+      "topic": "VDialogueVegasNorthNorthVegasMrsHostetlerTopic056",
+      "topic_text": "500 caps sounds right.",
+      "emotion": "Neutral 50",
+      "response_text": "If you see Alice again, please, tell her we won't hold it against her. Tell Alice that we love her.",
+      "index": "49"
+    }
+  ],
+  "conversation": [],
+  "combat": []
+}

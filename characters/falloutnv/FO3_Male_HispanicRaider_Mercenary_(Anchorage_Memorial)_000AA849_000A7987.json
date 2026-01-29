@@ -1,0 +1,78 @@
+{
+  "name": "Mercenary (Anchorage Memorial)",
+  "url": "/wiki/Mercenary_(Anchorage_Memorial)",
+  "dialogue_name": "",
+  "dialogue_url": null,
+  "spawned_dead": true,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000AA849",
+  "ref_id": "000A7987",
+  "editor_id": "AWMLoot1ArmorMale",
+  "location": "Anchorage Memorialinterior",
+  "location_url": "/wiki/Anchorage_Memorial",
+  "descriptions": [
+    "The Anchorage Memorial mercenary is a deceased mercenary found inside the Anchorage Memorial in 2277. He is located on the fourth floor of the facility section.",
+    "The mercenary was hired by an unknown employer to eliminate their competition from the area. Specifically, they wanted to get rid of a group of wastelanders working in the depths of the memorial, raising and butchering mirelurks, and selling their meat. The mercenary was promised better job opportunities, should he be successful in sabotaging the wastelanders."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Unknown employer",
+  "role": "Mercenary",
+  "detailed_location": "Anchorage Memorial, facility bay",
+  "voice_actor": "Jeff Baker",
+  "special": {
+    "Strength": 3,
+    "Perception": 4,
+    "Endurance": 4,
+    "Charisma": 5,
+    "Intelligence": 3,
+    "Agility": 7,
+    "Luck": 5
+  },
+  "level": "1",
+  "tag_skills": [
+    {
+      "Melee Weap.:": "30"
+    },
+    {
+      "Small Guns:": "27"
+    },
+    {
+      "Sneak:": "21"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "0"
+    },
+    {
+      "Critical Chance:": "5%"
+    },
+    {
+      "Unarmed Dam.:": "1"
+    },
+    {
+      "Poison Resist.:": "15%"
+    },
+    {
+      "Rad. Resist.:": "6%"
+    },
+    {
+      "Carry Weight:": "180"
+    },
+    {
+      "Damage Res.:": "2%"
+    }
+  ],
+  "karma": "Evil",
+  "geck_race": "HispanicRaider",
+  "topics": [],
+  "conversation": [],
+  "combat": []
+}

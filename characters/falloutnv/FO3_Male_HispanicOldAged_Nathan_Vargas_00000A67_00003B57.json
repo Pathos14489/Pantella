@@ -1,0 +1,214 @@
+{
+  "name": "Nathan Vargas",
+  "url": "/wiki/Nathaniel_Vargas",
+  "dialogue_name": "Nathan.txt",
+  "dialogue_url": "/wiki/Nathan.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "00000A67",
+  "ref_id": "00003B57",
+  "editor_id": "Nathan",
+  "location": "Megaton,Nathan and Manya's house",
+  "location_url": "/wiki/Megaton",
+  "descriptions": [
+    "Nathaniel \"Nathan\" Vargas is a citizen of Megaton in 2277. He appears in Fallout 3.",
+    "Nathan ran a caravan route for over 30 years with his wife, Manya. It was during this period that he became obsessed with the Enclave. He has become a bit of a fanatic, believing that the Enclave will bring salvation to the wasteland, and is trying to convince everyone else in Megaton of this fact. Most of the residents write Nathan off as the local busybody, but all are quick to note that after 30 years on the back of a wagon, he is still a skilled marksman.",
+    "He believes all of the Enclave propaganda he hears over Enclave Radio to the letter, and openly praises them as saviors of the wastes. Nathan promises the Lone Wanderer that, \"Things will be different when the Enclave gets here.\" Nathan has an open tab at Moriarty's Saloon, which currently stands at 8 caps.",
+    "Manya Vargas is his wife.",
+    "He will ask the Lone Wanderer about their opinion of the Enclave. He will praise them if they say the Enclave is good; saying that the U.S. is a great country and that \"even if you were born in some underground Vault, you were born under the United States, which makes you an American.\"",
+    "If Nathan dies at any point, the player character will no longer be able to open dialogue with Manya. Instead, she will simply acknowledge that Nathan is dead, and will sometimes drift off thinking of him before he died. Other characters in Megaton will also mention Nathan's death and Manya's depression in their random conversations."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Megaton",
+  "role": "Enclave supporter",
+  "detailed_location": "Nathan and Manya's house(Megaton)Raven Rock",
+  "voice_actor": "Paul Eiding",
+  "special": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 4,
+    "Intelligence": 4,
+    "Agility": 6,
+    "Luck": 4
+  },
+  "level": "6",
+  "tag_skills": [
+    {
+      "Barter:": "50"
+    },
+    {
+      "Small Guns:": "54(56)"
+    },
+    {
+      "Unarmed:": "50"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "50"
+    },
+    {
+      "Poison Resist.:": "15%"
+    },
+    {
+      "Rad. Resist.:": "6%"
+    }
+  ],
+  "karma": "Good",
+  "voice_type": "MaleOld01DC",
+  "geck_race": "HispanicOldAged",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Fear 100",
+      "response_text": "They're not who they say they are... Get out while you can, before they get you too!",
+      "index": "1"
+    },
+    {
+      "topic": "MegNathanEnclave1",
+      "topic_text": "Why do you support the Enclave?",
+      "emotion": "Neutral 50",
+      "response_text": "Why? Why? Look around you. This is the good ol' USA. Sure, she looks a little bit different these days, but you're still on American soil.",
+      "index": "13"
+    },
+    {
+      "topic": "MegNathanEnclave1a",
+      "topic_text": "You're right. My country deserves my unthinking and unquestioning support.",
+      "emotion": "Happy 50",
+      "response_text": "Now there's a proud patriot. After all, if they could do us wrong, we wouldn't have elected them in the first place, right?",
+      "index": "17"
+    },
+    {
+      "topic": "MegNathanEnclave1b",
+      "topic_text": "Are you kidding? It's the duty of a citizen to question his government.",
+      "emotion": "Neutral 50",
+      "response_text": "Why... that's unthinkable! Where in the constitution does it say that we're supposed to run around questioning the government? Huh?",
+      "index": "19"
+    },
+    {
+      "topic": "MegNathanEnclave1b1",
+      "topic_text": "Do you think people who fought a war with tyrants wanted unquestioning support?",
+      "emotion": "Neutral 50",
+      "response_text": "Well.. when you put it that way... wait, you're just trying to confuse me with your fancy vault education and your textbooks!",
+      "index": "20"
+    },
+    {
+      "topic": "MegNathanEnclave1b2",
+      "topic_text": "Well, they did give us guns and say, \"If we fuck up, feel free to take us out.\"",
+      "emotion": "Neutral 50",
+      "response_text": "Well, when you put it that way... wait, you're just trying to confuse me with your fancy vault education and your textbooks!",
+      "index": "22"
+    },
+    {
+      "topic": "MegNathanEnclave1b3",
+      "topic_text": "I really don't know. I skipped American government class back in the Vault.",
+      "emotion": "Neutral 50",
+      "response_text": "I don't mean to embarrass you, but maybe you should learn your history before you argue with a patriot.",
+      "index": "24"
+    },
+    {
+      "topic": "MegNathanEnclave1c",
+      "topic_text": "I couldn't possibly care less about governments or presidents.",
+      "emotion": "Neutral 50",
+      "response_text": "Well, we can't all care. Besides, why should we have to? That's what the government is here for, to take care of that stuff.",
+      "index": "27"
+    },
+    {
+      "topic": "MegNathanEnclave2",
+      "topic_text": "If you've never seen the Enclave, how can you know anything about them?",
+      "emotion": "Neutral 50",
+      "response_text": "They're on the radio! They have been for years. President Eden talks about everything they're doing.",
+      "index": "28"
+    },
+    {
+      "topic": "MegNathanEnclave3",
+      "topic_text": "Who are the Enclave, anyway?",
+      "emotion": "Neutral 50",
+      "response_text": "They're the American government! The eagle! People comma we the! The more perfect union!",
+      "index": "31"
+    },
+    {
+      "topic": "MegNathanEnclaveEND",
+      "topic_text": "That's all I needed to hear.",
+      "emotion": "Neutral 50",
+      "response_text": "Any time you want another lesson, come on by.",
+      "index": "32"
+    },
+    {
+      "topic": "MegTownEnd",
+      "topic_text": "That's all I needed to know.",
+      "emotion": "Neutral 50",
+      "response_text": "Gotcha.",
+      "index": "33"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "I have to go now.",
+      "emotion": "Neutral 50",
+      "response_text": "Get out of here!",
+      "index": "34"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Neutral 50",
+      "response_text": "Run while you can!",
+      "index": "41"
+    },
+    {
+      "topic": "MegatonTalk1",
+      "topic_text": "MegatonTalk",
+      "emotion": "Fear 50",
+      "response_text": "Oh, for the... What?{Annoyed. Begins to talk, and stops. Takes a breath. Then asks \"What?\" in an even but obviously annoyed tone.}",
+      "index": "47"
+    },
+    {
+      "topic": "MegatonTalk2",
+      "topic_text": "MegatonTalk2",
+      "emotion": "Neutral 50",
+      "response_text": "What did you do with my ratchet? I've looked everywhere! Where did you put it?",
+      "index": "48"
+    },
+    {
+      "topic": "MegatonTalk3",
+      "topic_text": "MegatonTalk3",
+      "emotion": "Neutral 50",
+      "response_text": "Always with the nagging.... I'll do what I do when I do it, woman.",
+      "index": "52"
+    },
+    {
+      "topic": "MegatonTalk4",
+      "topic_text": "MegatonTalk4",
+      "emotion": "Neutral 50",
+      "response_text": "Aggh! Damnit! But I've looked everywhere! *Sigh* All right. Thanks, I guess.{ }",
+      "index": "54"
+    }
+  ],
+  "combat": [
+    {
+      "topic": "Attack",
+      "topic_text": "Attack",
+      "emotion": "Neutral 50",
+      "response_text": "...from my cold dead hands.{Said with great satisfaction. It's about time that he got to shoot someone.}",
+      "index": "56"
+    },
+    {
+      "topic": "Death",
+      "topic_text": "Death",
+      "emotion": "Pained 100",
+      "response_text": "Manya...{dying gasp}",
+      "index": "57"
+    }
+  ]
+}

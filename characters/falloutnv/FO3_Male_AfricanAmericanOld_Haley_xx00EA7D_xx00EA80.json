@@ -1,0 +1,169 @@
+{
+  "name": "Haley",
+  "url": "/wiki/Haley",
+  "dialogue_name": "DLC04Haley.txt",
+  "dialogue_url": "/wiki/DLC04Haley.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": true,
+  "can_repair": true,
+  "can_be_companion": false,
+  "base_id": "xx00EA7D",
+  "ref_id": "xx00EA80",
+  "editor_id": "DLC04Haley",
+  "location": "Haley's Hardware",
+  "location_url": "/wiki/Haley%27s_Hardware",
+  "descriptions": [
+    "Haley is a local inhabitant of Point Lookout and the owner and proprietor of Haley's Hardware. He appears in the Fallout 3 add-on Point Lookout.",
+    "Little is known about Haley's past, even by himself. Apparently suffering from amnesia, his earliest clear memory is from around 2275, waking up in the run-down shop he presently owns, but over time he learned not to be bothered by it. Instead, Haley saw fit to continue living in the store since most of it was already stocked; even his own name was borrowed from the pre-War signage. Once other Point Lookout locals started flocking to his shop, he settled into life as a trader, providing goods and offering services with his repair skills.",
+    "Haley eventually developed a mutual understanding with the resident swampfolk, who leave him in peace whenever they visit despite typically being hostile to everyone else; Haley believes this has to do with him being a native of the area, though it probably also helps that he is willing to exchange food with them.",
+    "Haley sits in his shop all day selling goods to anyone that comes by.",
+    "* A bug allows this to reach the maximum 100; see below",
+    "Haley appears only in the Fallout 3 add-on Point Lookout."
+  ],
+  "race": "Human(Marshfolk)",
+  "gender": "Male",
+  "affiliation": "Swampfolk(customers)",
+  "role": "Merchant",
+  "detailed_location": "Point LookoutHaley's Hardware",
+  "voice_actor": "James Lewis",
+  "special": {
+    "Strength": 7,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 3,
+    "Intelligence": 3,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "level": "15",
+  "tag_skills": [
+    {
+      "Melee Weap.:": "94"
+    },
+    {
+      "Small Guns:": "92"
+    },
+    {
+      "Unarmed:": "90"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "120"
+    },
+    {
+      "Critical Chance:": "5%"
+    },
+    {
+      "Unarmed Dam.:": "5"
+    },
+    {
+      "Poison Resist.:": "20%"
+    },
+    {
+      "Rad. Resist.:": "8%"
+    },
+    {
+      "Carry Weight:": "220"
+    },
+    {
+      "Damage Res.:": "3%"
+    }
+  ],
+  "karma": "Neutral",
+  "voice_type": "DLC04MaleNormal",
+  "geck_race": "AfricanAmericanOld",
+  "topics": [
+    {
+      "topic": "DLC04HaleyAboutYou",
+      "topic_text": "I wanted to talk about you, Haley.",
+      "emotion": "Neutral 50",
+      "response_text": "There's not much to tell. What do you want to know?",
+      "index": "1"
+    },
+    {
+      "topic": "DLC04HaleyGreeting1",
+      "topic_text": "Is something wrong?",
+      "emotion": "Neutral 50",
+      "response_text": "No, no. Not at all! I'm just not used to people all the way out here.",
+      "index": "2"
+    },
+    {
+      "topic": "DLC04HaleyGreeting1a",
+      "topic_text": "Who are your usual customers?",
+      "emotion": "Neutral 50",
+      "response_text": "The swamp folk, mostly. I guess they don't bother me none because I was born here.",
+      "index": "4"
+    },
+    {
+      "topic": "DLC04HaleyGreeting1b",
+      "topic_text": "So, how long have you had this store?",
+      "emotion": "Neutral 50",
+      "response_text": "Oh, you're thinking... no, no. It's not a family thing. I took the name of the store when I found this place a couple years ago.",
+      "index": "7"
+    },
+    {
+      "topic": "DLC04HaleyGreeting1c",
+      "topic_text": "Where do you get your stock from?",
+      "emotion": "Neutral 50",
+      "response_text": "I found some of it. Some was here when I got here. I get some from them smugglers.",
+      "index": "10"
+    },
+    {
+      "topic": "DLC04HaleyGreeting1d",
+      "topic_text": "Let's talk about something else.",
+      "emotion": "Neutral 50",
+      "response_text": "Sure thing. Are you here to buy something?",
+      "index": "12"
+    },
+    {
+      "topic": "DLC04HaleyGreeting2",
+      "topic_text": "Do I make you nervous?",
+      "emotion": "Neutral 50",
+      "response_text": "No, no. Not at all! I'm just not used to people all the way out here.",
+      "index": "13"
+    },
+    {
+      "topic": "DLC04Repair",
+      "topic_text": "Can you repair some things for me?",
+      "emotion": "Neutral 50",
+      "response_text": "Sure as a swamp folk's head is squishy.",
+      "index": "15"
+    },
+    {
+      "topic": "DLC04Services",
+      "topic_text": "Show me what you have for sale.",
+      "emotion": "Neutral 50",
+      "response_text": "Look around. It's all here.",
+      "index": "17"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "",
+      "emotion": "Happy 50",
+      "response_text": "Well, hello there! Welcome to... uh... welcome to Haley's Hardware! Where we have... hard... ware...",
+      "index": "20"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "I have to go now.",
+      "emotion": "Happy 25",
+      "response_text": "Be careful out there. Them swamp folk is nasty.",
+      "index": "24"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Neutral 50",
+      "response_text": "I also can do repairs, if'n you need it.",
+      "index": "27"
+    }
+  ],
+  "combat": []
+}

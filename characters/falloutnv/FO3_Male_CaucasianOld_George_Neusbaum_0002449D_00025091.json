@@ -1,0 +1,178 @@
+{
+  "name": "George Neusbaum",
+  "url": "/wiki/George_Neusbaum",
+  "dialogue_name": "GeorgeNeusbaum.txt",
+  "dialogue_url": "/wiki/GeorgeNeusbaum.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "0002449D",
+  "ref_id": "00025091",
+  "editor_id": "GeorgeNeusbaum",
+  "location": "Neusbaum residence",
+  "location_url": "/wiki/Neusbaum_residence",
+  "descriptions": [
+    "George Neusbaum is one of the inhabitants of Vault 112 and part of the Tranquility Lane virtual reality simulation, still alive in Fallout 3.",
+    "Resident ID 374 in lounger 37,",
+    "Here, George was brainwashed to be the head of the Neusbaum household, proud husband of Pat and father of Timmy, with an honorable discharge from the American military. Braun ensured some friction within the family: Timmy was set to be a weakling, easily tormented by Betty (Braun's form within the simulation), which led Neusbaum to consider sending his son to a military academy, where he'd be toughened up - enough to face the real world that would never come.",
+    "George is generally on good terms with other victims within Tranquility Lane, even with the seemingly senile Old Lady Dithers.",
+    "When it comes to women, he's faithful to Pat, but likes to stay on top of the local gossip, the main source of which is Mabel Henderson. His wife isn't too keen on her or her gossiping, and George loves to tease Pat over it.",
+    "His vital signs after 200 years of imprisonment are 75 bpm pulse, blood pressure is 118/82 mmHG, temperature  37.056°C or 98.7°C, with a respiratory rate of 17 breaths per minute and nominal levels of stress: Perfectly normal for an adult male."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "U.S. Armed Forces(pre-War)[Non-game 1]Tranquility LaneVault 112",
+  "role": "Braun's prisoner",
+  "detailed_location": "Vault 112Neusbaum residence, Tranquility Lane",
+  "voice_actor": "Gregory Gorton",
+  "special": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 5,
+    "Intelligence": 4,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "mod_special_values": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 5,
+    "Intelligence": 4,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "karma": "Good",
+  "voice_type": "MaleAdult01DefaultBDC",
+  "geck_race": "CaucasianOld",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Happy 50",
+      "response_text": "Hey there, sport! Beautiful day, isn't it?{cheery, care-free}",
+      "index": "1"
+    },
+    {
+      "topic": "MQ04ResidentChitChat1",
+      "topic_text": "Nice day, isn't it?",
+      "emotion": "Neutral 50",
+      "response_text": "Another perfect Saturday afternoon. Make sure you enjoy it, sport!",
+      "index": "4"
+    },
+    {
+      "topic": "MQ04ResidentChitChat2",
+      "topic_text": "What can you tell me about the neighborhood?",
+      "emotion": "Neutral 50",
+      "response_text": "You mean besides how wonderful it is to live here?",
+      "index": "6"
+    },
+    {
+      "topic": "MQ04ResidentDad",
+      "topic_text": "Have you seen my dad?",
+      "emotion": "Neutral 50",
+      "response_text": "Nope, 'fraid not. Don't you worry about it, though. You'll find him.",
+      "index": "8"
+    },
+    {
+      "topic": "MQ04ResidentMabel",
+      "topic_text": "What can you tell me about Mabel Henderson?",
+      "emotion": "Neutral 50",
+      "response_text": "She sure loves baking her pies. Always bringing them around, bragging about her fancy oven.",
+      "index": "9"
+    },
+    {
+      "topic": "MQ04ResidentRockwells",
+      "topic_text": "Can you tell me anything about the Rockwells' marriage?",
+      "emotion": "Neutral 50",
+      "response_text": "Their marriage? Why that's an odd sort of question. They're like anyone else, I suppose. Got their problems, but they work through them.",
+      "index": "11"
+    },
+    {
+      "topic": "MQ04ResidentSimulationThis is a pretty convincing simulation...",
+      "topic_text": "This is what, some kind of computer simulation?",
+      "emotion": "Happy 20",
+      "response_text": "Sounds like you've been spending too much time with your nose in those darned comic books, sport.{amused, dismissive}",
+      "index": "13"
+    },
+    {
+      "topic": "MQ04ResidentTimmy",
+      "topic_text": "What can you tell me about Timmy Neusbaum?",
+      "emotion": "Neutral 50",
+      "response_text": "My boy Timmy? Good kid. Straight-laced, good head on his shoulders. Never been in so much as a fist-fight.",
+      "index": "14"
+    },
+    {
+      "topic": "MQ04WhereAmI",
+      "topic_text": "Where am I?",
+      "emotion": "Happy 50",
+      "response_text": "Ha ha, such a kidder. You're on Tranquility Lane, of course! Where else would you be?{as if responding to a joke}",
+      "index": "16"
+    },
+    {
+      "topic": "MQ04WhoAreYou",
+      "topic_text": "And you are...?",
+      "emotion": "Neutral 50",
+      "response_text": "George Neusbaum. Proud resident of Tranquility Lane. Good to meet you, sport.",
+      "index": "17"
+    },
+    {
+      "topic": "MQ04WhoIsBetty",
+      "topic_text": "Who is Betty?",
+      "emotion": "Happy 50",
+      "response_text": "Betty? Well... She's Betty. You know.{shaken, but trying to appear happy and carefree}",
+      "index": "18"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Neutral 50",
+      "response_text": "What's the latest gossip from Mabel?",
+      "index": "20"
+    },
+    {
+      "topic": "TranqLaneTalk1",
+      "topic_text": "TranqLaneTalk1",
+      "emotion": "Neutral 50",
+      "response_text": "Hey, aren't you the one who said we shouldn't call her that? That we should show a little respect to the elderly?",
+      "index": "22"
+    },
+    {
+      "topic": "TranqLaneTalk2",
+      "topic_text": "TranqLaneTalk2",
+      "emotion": "Neutral 50",
+      "response_text": "Pat, you know as well as I do that she's where most of our news comes from, one way or another.{good-natured teasing}",
+      "index": "26"
+    },
+    {
+      "topic": "TranqLaneTalk3",
+      "topic_text": "TranqLaneTalk3",
+      "emotion": "Neutral 50",
+      "response_text": "Yes, dear. Sorry. Is there a problem?",
+      "index": "28"
+    },
+    {
+      "topic": "TranqLaneTalk4",
+      "topic_text": "TranqLaneTalk4",
+      "emotion": "Neutral 50",
+      "response_text": "Ha ha. All right, dear.",
+      "index": "32"
+    },
+    {
+      "topic": "TranqLaneTalk5",
+      "topic_text": "TranqLaneTalk5",
+      "emotion": "Neutral 50",
+      "response_text": "Okay, I'll have another chat with him about it. I'm sure he was only being polite.",
+      "index": "34"
+    }
+  ],
+  "combat": []
+}

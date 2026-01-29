@@ -1,0 +1,87 @@
+{
+  "name": "Carter",
+  "url": "/wiki/Carter_(Fallout_3)",
+  "dialogue_name": "Carter.txt",
+  "dialogue_url": "/wiki/Carter.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "00030D82",
+  "ref_id": "00031860",
+  "editor_id": "Carter",
+  "location": "Slave house",
+  "location_url": "/wiki/Slave_house",
+  "descriptions": [
+    "Carter is a slave held captive at Paradise Falls in Fallout 3.",
+    "Desperate to reclaim his freedom and with his mental state deteriorating, Carter is in the middle of an unlikely escape attempt from Paradise Falls just as the Lone Wanderer arrives there.",
+    "Despite his certainty that Forty lacks the means to detonate his slave collar, Carter is nonetheless killed instantly when the collar detonates during his escape.",
+    "When the Lone Wanderer is first allowed entry into Paradise Falls and approaches the entrance, Carter will come running towards them. Moments later, his collar explodes, killing him."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Slavers",
+  "role": "Slave",
+  "detailed_location": "Paradise Falls",
+  "voice_actor": "Gregory Gorton",
+  "special": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 5,
+    "Intelligence": 5,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "mod_special_values": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 6,
+    "Charisma": 5,
+    "Intelligence": 5,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "level": "1",
+  "misc_skills": [
+    {
+      "Hit Points:": "30(35)"
+    },
+    {
+      "Critical Chance:": "5%"
+    },
+    {
+      "Unarmed Dam.:": "0.75"
+    },
+    {
+      "Poison Resist.:": "20%(25%)"
+    },
+    {
+      "Rad. Resist.:": "8%(10%)"
+    },
+    {
+      "Carry Weight:": "200"
+    },
+    {
+      "Damage Res.:": "5%"
+    }
+  ],
+  "karma": "Good",
+  "voice_type": "MaleAdult01DefaultBDC",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "MQ07BreakoutSceneConv",
+      "topic_text": "MQ07BreakoutSceneConv",
+      "emotion": "Neutral 50",
+      "response_text": "Run Sammy, run! We can make it!",
+      "index": "1"
+    }
+  ],
+  "conversation": [],
+  "combat": []
+}

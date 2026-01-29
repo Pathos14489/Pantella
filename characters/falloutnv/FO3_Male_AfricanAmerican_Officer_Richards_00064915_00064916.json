@@ -1,0 +1,66 @@
+{
+  "name": "Officer Richards",
+  "url": "/wiki/Richards_(Vault_101)",
+  "dialogue_name": "CG04Vault101Security05.txt",
+  "dialogue_url": "/wiki/CG04Vault101Security05.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "00064915",
+  "ref_id": "00064916",
+  "editor_id": "CG04Vault101Security05",
+  "location": "Vault 101",
+  "location_url": null,
+  "descriptions": [
+    "Officer Richards is a member of Vault 101 security in Fallout 3. He guards the locked atrium door to the Vault 101 entrance together with Officer O'Brian.",
+    "A little more stable than his sadistic partner, Richards is nonetheless perfectly willing to open fire on hapless dwellers, as per his standing orders. The posting at the atrium door, separating the entrance from the rest of the Vault, is a perfect spot for this."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Vault 101 security",
+  "role": "Security officer",
+  "detailed_location": "Vault 101",
+  "voice_actor": "Jeff Baker",
+  "special": {
+    "Strength": 1,
+    "Perception": 5,
+    "Endurance": 6,
+    "Charisma": 3,
+    "Intelligence": 3,
+    "Agility": 5,
+    "Luck": 4
+  },
+  "karma": "EvilNeutral",
+  "voice_type": "MaleAdult01DefaultDC",
+  "geck_race": "AfricanAmerican",
+  "topics": [
+    {
+      "topic": "CG04AtriumConv1",
+      "topic_text": "CG04AtriumConv1",
+      "emotion": "Anger 50",
+      "response_text": "What are you doing? Are you crazy? We'll shoot! Dammit, Tom.{shouted just before opening fire on an unarmed civilian. (Tom is the person about to be shot  someone that you know well)}Play soundFO3 OfficerRichards WhatAreYouDo…https://fallout.fandom.com/wiki/File:FO3_OfficerRichards_WhatAreYouDoing.oggnoicon",
+      "index": "1"
+    },
+    {
+      "topic": "CG04SecurityBarks",
+      "topic_text": "CG04SecurityBarks",
+      "emotion": "Surprise 100",
+      "response_text": "He's turning the power back on! To the control room!Play soundFO3 Vault101Security HesTurningT…https://fallout.fandom.com/wiki/File:FO3_Vault101Security_HesTurningThePower.oggnoicon",
+      "index": "2"
+    },
+    {
+      "topic": "CG04SecurityRichardsKendall",
+      "topic_text": "CG04SecurityRichardsKendall",
+      "emotion": "Neutral 50",
+      "response_text": "Hey, John. What did you find?Play soundFO3 OfficerRichards WhatDidYouFi…https://fallout.fandom.com/wiki/File:FO3_OfficerRichards_WhatDidYouFind.oggnoicon",
+      "index": "4"
+    }
+  ],
+  "conversation": [],
+  "combat": []
+}

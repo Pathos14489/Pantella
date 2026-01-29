@@ -1,0 +1,286 @@
+{
+  "name": "Private Stone",
+  "url": "/wiki/Stone_(Fallout:_New_Vegas)",
+  "dialogue_name": "VCFHPrivateStone.txt",
+  "dialogue_url": "/wiki/VCFHPrivateStone.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "00123CC6",
+  "ref_id": "00123CC7",
+  "editor_id": "VCFHPrivateStone",
+  "location": "Camp Forlorn Hope",
+  "location_url": "/wiki/Camp_Forlorn_Hope",
+  "descriptions": [
+    "Private Stone is a soldier serving the New California Republic at Camp Forlorn Hope in 2281.",
+    "The New California Republic's war with Caesar's Legion has taken a massive physical toll on its citizens and the emotional and mental toll on its soldiers. Stone is one of the troopers who is heavily laden with the burden of war, especially due to being located at the crucible of the worst of the fighting, in Camp Forlorn Hope.",
+    "The constant terror created by the threat of Legion raids or even a full on assault has taken a heavy toll on Private Stone, and no longer being able to handle it, he begins using the hallucinogen known as hydra, which he steals from the Camp Forlorn Hope medical center at night. It gives him a temporary relief from the fear and anxiety which is constant in a place in such a dire situation like Forlorn Hope.",
+    "The  Courier can speak with him to hear his side of the story and ask more questions about the camp and the situation with the Legion. Afterward, they can think about the sitution and decide how to handle his transgressions. If he is turned in, he can be found in the camp jail cell.",
+    "Killing him while in prison will not lose NCR reputation, but one will be attacked if choosing to do so."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "NCR Army",
+  "role": "Thief",
+  "detailed_location": "Camp Forlorn Hope",
+  "voice_actor": "Liam O'Brien",
+  "special": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 5,
+    "Intelligence": 5,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "level": "12",
+  "tag_skills": [
+    {
+      "Explosives:": "74"
+    },
+    {
+      "Guns:": "74"
+    },
+    {
+      "Melee Weap.:": "74"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Neutral",
+  "voice_type": "MaleAdult05",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "Thanks for setting me straight.",
+      "index": "1"
+    },
+    {
+      "topic": "VMS31VCFHPrivateStoneTopic000",
+      "topic_text": "Do you know anything about Dr. Richards' missing medical supplies?",
+      "emotion": "Surprise 50",
+      "response_text": "Missing medical supplies? No, uhh... I don't know anything about that.",
+      "index": "23"
+    },
+    {
+      "topic": "VMS31VCFHPrivateStoneTopic001",
+      "topic_text": "What's your problem?",
+      "emotion": "Anger 50",
+      "response_text": "My problem? My problem is we're all going to die.",
+      "index": "24"
+    },
+    {
+      "topic": "VMS31VCFHPrivateStoneTopic002",
+      "topic_text": "How are things around camp?",
+      "emotion": "Anger 50",
+      "response_text": "You kidding me, man? How are things? They're all fucked up, that's how things are!",
+      "index": "32"
+    },
+    {
+      "topic": "VMS31VCFHPrivateStoneTopic003",
+      "topic_text": "Alright, hand it over.",
+      "emotion": "Happy 25",
+      "response_text": "Here you go. Thanks, I owe you big time.",
+      "index": "35"
+    },
+    {
+      "topic": "VMS31VCFHPrivateStoneTopic004",
+      "topic_text": "Not interested.",
+      "emotion": "Anger 10",
+      "response_text": "Fine. Be like that.",
+      "index": "36"
+    },
+    {
+      "topic": "VMS31VCFHPrivateStoneTopic005",
+      "topic_text": "Dilated eyes, increased heart rate... I think you took the drugs.",
+      "emotion": "Surprise 50",
+      "response_text": "[SUCCEEDED] What?! Oh shit... how the fuck?! Oh man, I'm in some deep shit now.",
+      "index": "37"
+    },
+    {
+      "topic": "VMS31VCFHPrivateStoneTopic006",
+      "topic_text": "You look a little sick. Maybe you should see Dr. Richards.",
+      "emotion": "Happy 5",
+      "response_text": "[FAILED] No, no that's not necessary. I'm fine. Just a little stressed out, that's all.",
+      "index": "39"
+    },
+    {
+      "topic": "VMS31VCFHPrivateStoneTopic007",
+      "topic_text": "Then why did I find this empty syringe in your pocket?",
+      "emotion": "Surprise 50",
+      "response_text": "Holy shit! How the hell did you find that?",
+      "index": "40"
+    },
+    {
+      "topic": "VMS31VCFHPrivateStoneTopic009",
+      "topic_text": "Private Sexton mentioned you wander around the camp at night.",
+      "emotion": "Surprise 50",
+      "response_text": "I do what now? Uhh... I mean, yeah, I sometimes need to... stretch my legs. Helps me... uh... think.",
+      "index": "42"
+    },
+    {
+      "topic": "VMS31VCFHPrivateStoneTopic010",
+      "topic_text": "I know what's really going on. You can trust me.",
+      "emotion": "Happy 5",
+      "response_text": "[SUCCEEDED] Well... sometimes I sneak into the medical tent at night and \"borrow\" some of the medical supplies.",
+      "index": "43"
+    },
+    {
+      "topic": "VMS31VCFHPrivateStoneTopic011",
+      "topic_text": "I saw you stealing the supplies.",
+      "emotion": "Fear 50",
+      "response_text": "Uh... look, it's not what you think. I can explain everything, if you'll just hear me out.",
+      "index": "45"
+    },
+    {
+      "topic": "VMS31VCFHPrivateStoneTopic012",
+      "topic_text": "Okay. Thanks anyway.",
+      "emotion": "Happy 50",
+      "response_text": "Uh... yeah, sure, no problem.",
+      "index": "46"
+    },
+    {
+      "topic": "VMS31VCFHPrivateStoneTopic013",
+      "topic_text": "This better be good.",
+      "emotion": "Anger 50",
+      "response_text": "Have you looked around? Have you seen what's going on here? What we're going through?",
+      "index": "47"
+    },
+    {
+      "topic": "VMS31VCFHPrivateStoneTopic014",
+      "topic_text": "I don't care about your explanations.",
+      "emotion": "Anger 50",
+      "response_text": "Hey look, I just wanted to forget about all this stuff happening around here for a little while, that's all!",
+      "index": "50"
+    },
+    {
+      "topic": "VMS31VCFHPrivateStoneTopic015",
+      "topic_text": "Doing drugs isn't going to change anything.",
+      "emotion": "Anger 50",
+      "response_text": "But it sure as hell is going to make me feel better for a little while, and that's all I wanted.",
+      "index": "52"
+    },
+    {
+      "topic": "VMS31VCFHPrivateStoneTopic016",
+      "topic_text": "What about the injured men that need this medicine?",
+      "emotion": "Sad 50",
+      "response_text": "I... uh... I never... I never thought about that.",
+      "index": "54"
+    },
+    {
+      "topic": "VMS31VCFHPrivateStoneTopic017",
+      "topic_text": "Hum... I think I understand.",
+      "emotion": "Happy 25",
+      "response_text": "Yeah, see... I just needed to escape for a little while. To not think about all this stuff going on here.",
+      "index": "57"
+    },
+    {
+      "topic": "VMS31VCFHPrivateStoneTopic018",
+      "topic_text": "That's a poor excuse.",
+      "emotion": "Anger 50",
+      "response_text": "I knew you wouldn't understand! You haven't been here! You haven't been through all the horrors that we go through every day!",
+      "index": "59"
+    },
+    {
+      "topic": "VMS31VCFHPrivateStoneTopic019",
+      "topic_text": "I'm going to turn you in.",
+      "emotion": "Anger 50",
+      "response_text": "Haven't you heard anything I've said?! Don't you understand?!",
+      "index": "61"
+    },
+    {
+      "topic": "VMS31VCFHPrivateStoneTopic020",
+      "topic_text": "I want you to turn yourself in.",
+      "emotion": "Surprise 50",
+      "response_text": "What? You want me to turn myself in?",
+      "index": "63"
+    },
+    {
+      "topic": "VMS31VCFHPrivateStoneTopic021",
+      "topic_text": "I won't turn you in... if you make it worth my while.",
+      "emotion": "Anger 5",
+      "response_text": "Alright. Here, I'll give you some of what I stole, just don't mention this to anyone.",
+      "index": "65"
+    },
+    {
+      "topic": "VMS31VCFHPrivateStoneTopic022",
+      "topic_text": "If you promise to stop, I won't turn you in.",
+      "emotion": "Happy 50",
+      "response_text": "What? Hey sure! You got a deal. Thanks, I owe you big time.",
+      "index": "66"
+    },
+    {
+      "topic": "VMS31VCFHPrivateStoneTopic023",
+      "topic_text": "Because it's the right thing to do.",
+      "emotion": "Neutral 50",
+      "response_text": "[FAILED] No. That's not going to happen.",
+      "index": "67"
+    },
+    {
+      "topic": "VMS31VCFHPrivateStoneTopic024",
+      "topic_text": "Yeah, right. Why don't you tell me what's really going on?",
+      "emotion": "Anger 50",
+      "response_text": "[FAILED] Nothing's going on, so just mind your own business.",
+      "index": "68"
+    },
+    {
+      "topic": "VMS31VCFHPrivateStoneTopic025",
+      "topic_text": "I sometimes do the same thing.",
+      "emotion": "Happy 5",
+      "response_text": "Yeah, nothing strange about a late night stroll. Everybody does it.",
+      "index": "69"
+    },
+    {
+      "topic": "VMS31VCFHPrivateStoneTopic026",
+      "topic_text": "For some reason I don't believe you.",
+      "emotion": "Anger 25",
+      "response_text": "I don't care what you believe. Now unless there's something else, why don't you just buzz off.",
+      "index": "70"
+    },
+    {
+      "topic": "VMS31VCFHPrivateStoneTopic027",
+      "topic_text": "It's better if you turn yourself in rather than me turning you in.",
+      "emotion": "Sad 25",
+      "response_text": "[SUCCEEDED] I... I guess you're right. I'll do the right thing and turn myself in.",
+      "index": "71"
+    },
+    {
+      "topic": "VMS31VCFHPrivateStoneTopic029",
+      "topic_text": "I could ask you the same thing.",
+      "emotion": "Neutral 50",
+      "response_text": "{Nervous}Uh... I was just... uh... getting some fresh air and stretching my legs. It's getting pretty late though, I should get going. Goodnight.",
+      "index": "72"
+    },
+    {
+      "topic": "VMS31VCFHPrivateStoneTopic030",
+      "topic_text": "I'm just enjoying a late night stroll.",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah, yeah... me too. It's getting a bit late though, I should get going. Goodnight.",
+      "index": "73"
+    },
+    {
+      "topic": "VMS31VCFHPrivateStoneTopic031",
+      "topic_text": "Sneaking around at night is a little suspicious.",
+      "emotion": "Neutral 50",
+      "response_text": "{Nervous}I'm not sneaking! I'm uh... just stretching my legs. I should be getting back though, it's late. Goodnight.",
+      "index": "74"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah, whatever.",
+      "index": "75"
+    }
+  ],
+  "combat": []
+}

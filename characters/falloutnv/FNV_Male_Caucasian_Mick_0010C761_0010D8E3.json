@@ -1,0 +1,229 @@
+{
+  "name": "Mick",
+  "url": "/wiki/Mick_(Fallout:_New_Vegas)",
+  "dialogue_name": "VFSMick.txt",
+  "dialogue_url": "/wiki/VFSMick.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": true,
+  "is_merchant": true,
+  "can_repair": true,
+  "can_be_companion": false,
+  "base_id": "0010C761",
+  "ref_id": "0010D8E3",
+  "editor_id": "VFSMick",
+  "location": "Mick & Ralph's",
+  "location_url": "/wiki/Mick_%26_Ralph%27s",
+  "descriptions": [
+    "Mick is a merchant and the co-proprietor of the Mick & Ralph's general/weapons store within Freeside in the Mojave Wasteland in Fallout: New Vegas.",
+    "Sometime before 2281, Mick partnered with Ralph to run the general goods/weapons shop in Freeside, simply called \"Mick & Ralph's\" with himself managing the weapons dealing and equipment repair services. The Omertas previously served as some of Mick's best customers until Troike was brought on for gunrunning to supply the Omertas' plan to attack the Strip and did a better job of it, leading to the gangsters cutting ties with Mick to his confusion.",
+    "How Little We Know",
+    "Mick is a known source of a number of hard-to-find weapons in the Mojave Wasteland, particularly in the case of explosives. However, most of these items are only accessible after passing the 30 Speech skill check to access his \"special inventory.\" His standard merchant inventory consists of the following:",
+    "Passing the Speech check to unlock his \"secret inventory\" will result in Mick's inventory being complimented by the following items:"
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Ralph",
+  "role": "Merchant",
+  "detailed_location": "FreesideMick & Ralph's",
+  "voice_actor": "Shane Johnson",
+  "special": {
+    "Strength": 4,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 7,
+    "Intelligence": 5,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "mod_special_values": {
+    "Strength": 4,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 7,
+    "Intelligence": 5,
+    "Agility": 7,
+    "Luck": 5
+  },
+  "level": "16",
+  "tag_skills": [
+    {
+      "Barter:": "94"
+    },
+    {
+      "Energy Weap.:": "90"
+    },
+    {
+      "Guns:": "90(92)"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "140"
+    }
+  ],
+  "karma": "Neutral",
+  "voice_type": "MaleAdult09",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "Welcome to Mick & Ralph's. If you need guns, I'm your man.",
+      "index": "1"
+    },
+    {
+      "topic": "VFreeformFreesideVFSMickTopic000",
+      "topic_text": "What guns do you have for sale?",
+      "emotion": "Neutral 50",
+      "response_text": "Have a look.",
+      "index": "21"
+    },
+    {
+      "topic": "VFreeformFreesideVFSMickTopic001",
+      "topic_text": "I'd like to switch to my Pip-Boy.",
+      "emotion": "Neutral 50",
+      "response_text": "Done.",
+      "index": "22"
+    },
+    {
+      "topic": "VFreeformFreesideVFSMickTopic002",
+      "topic_text": "How's business?",
+      "emotion": "Neutral 50",
+      "response_text": "Things were better when the Omertas were buying, but we get by. Good selection from traders and the Van Graffs keep things running.",
+      "index": "23"
+    },
+    {
+      "topic": "VFreeformFreesideVFSMickTopic003",
+      "topic_text": "Do you have any special items for sale?",
+      "emotion": "Neutral 50",
+      "response_text": "Why, do you work for one of the casinos?",
+      "index": "25"
+    },
+    {
+      "topic": "VFreeformFreesideVFSMickTopic004",
+      "topic_text": "No.",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] In that case, yes I do.",
+      "index": "26"
+    },
+    {
+      "topic": "VFreeformFreesideVFSMickTopic005",
+      "topic_text": "Yes.",
+      "emotion": "Neutral 50",
+      "response_text": "No Vegas-banned items here, buddy. Just high quality standard stock.",
+      "index": "29"
+    },
+    {
+      "topic": "VFreeformFreesideVFSMickTopic006",
+      "topic_text": "I'd like to switch to my Pimpboy.",
+      "emotion": "Neutral 50",
+      "response_text": "Done.",
+      "index": "30"
+    },
+    {
+      "topic": "VFreeformFreesideVFSMickTopic007",
+      "topic_text": "Will do.",
+      "emotion": "Neutral 50",
+      "response_text": "Anything else I can help you with?",
+      "index": "31"
+    },
+    {
+      "topic": "VFreeformFreesideVFSMickTopic008",
+      "topic_text": "Could you repair some things for me?",
+      "emotion": "Neutral 50",
+      "response_text": "Sure, let's see what you've got.",
+      "index": "32"
+    },
+    {
+      "topic": "VFreeformFreesideVFSMickTopic009",
+      "topic_text": "The Followers are looking to work out a supply deal.",
+      "emotion": "Neutral 50",
+      "response_text": "Are they looking to buy guns?",
+      "index": "33"
+    },
+    {
+      "topic": "VFreeformFreesideVFSMickTopic010",
+      "topic_text": "What's the deal with the Omertas?",
+      "emotion": "Neutral 50",
+      "response_text": "That's the thing, I have no idea. They just stopped buying guns all of a sudden.",
+      "index": "34"
+    },
+    {
+      "topic": "VFreeformFreesideVFSMickTopic011",
+      "topic_text": "Let's talk about something else.",
+      "emotion": "Neutral 50",
+      "response_text": "Anything else I can help you with?",
+      "index": "36"
+    },
+    {
+      "topic": "VFreeformFreesideVFSMickTopic014",
+      "topic_text": "I think I figured out why the Omertas stopped buying.",
+      "emotion": "Neutral 50",
+      "response_text": "Really? What did you learn?",
+      "index": "37"
+    },
+    {
+      "topic": "VFreeformFreesideVFSMickTopic015",
+      "topic_text": "They found a way to smuggle guns in at a lower price.",
+      "emotion": "Neutral 50",
+      "response_text": "Well, that would explain why they stopped buying. Them not telling me why leads me to think I'd rather not know the particulars.",
+      "index": "38"
+    },
+    {
+      "topic": "VFreeformFreesideVFSMickTopic016",
+      "topic_text": "Good news. The Omertas say they'll buy arms from you again.",
+      "emotion": "Happy 35",
+      "response_text": "Outstanding! You have no idea how much this means to me, but I think this little beauty will give you an idea.",
+      "index": "41"
+    },
+    {
+      "topic": "VFreeformFreesideVFSMickTopic017",
+      "topic_text": "Santiago says the password is extravaganza for a discount.",
+      "emotion": "Neutral 50",
+      "response_text": "You aren't the first poor sucker who's come in here saying that. We don't do discounts here.",
+      "index": "42"
+    },
+    {
+      "topic": "VFreeformFreesideVFSMickTopic018",
+      "topic_text": "No.",
+      "emotion": "Neutral 50",
+      "response_text": "Then talk to my partner Ralph.",
+      "index": "44"
+    },
+    {
+      "topic": "VFreeformFreesideVFSMickTopic019",
+      "topic_text": "I'd like to browse your special inventory.",
+      "emotion": "Neutral 50",
+      "response_text": "Follow me.",
+      "index": "45"
+    },
+    {
+      "topic": "VFreeformFreesideVFSMickTopic020",
+      "topic_text": "I'd like to browse your special inventory.",
+      "emotion": "Neutral 50",
+      "response_text": "Like I always say, a polite society is an armed society.",
+      "index": "46"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Come back and see us soon.",
+      "index": "47"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "Hello",
+      "emotion": "Neutral 50",
+      "response_text": "Feel free to look around.",
+      "index": "49"
+    }
+  ],
+  "combat": []
+}

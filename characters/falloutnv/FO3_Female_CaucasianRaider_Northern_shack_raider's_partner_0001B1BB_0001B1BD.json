@@ -1,0 +1,85 @@
+{
+  "name": "Northern shack raider's partner",
+  "url": "/wiki/Northern_shack_raider%27s_partner",
+  "dialogue_name": "",
+  "dialogue_url": null,
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": true,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "0001B1BB",
+  "ref_id": "0001B1BD",
+  "editor_id": "EvergreenMillsRaiderBoss02Partner",
+  "location": "Northern shack",
+  "location_url": "/wiki/Northern_shack",
+  "descriptions": [
+    "The northern shack raider's partner is a unique raider living in Evergreen Mills in 2277.",
+    "She spends her life inside of the northern shack in Evergreen Mills and never leaves, wandering around inside all day. She lives alongside another raider. The two will sleep in the same bed every night.",
+    "She will attack the Lone Wanderer on sight."
+  ],
+  "race": "Human",
+  "gender": "Female",
+  "affiliation": "Raiders",
+  "role": "Raider boss",
+  "detailed_location": "Northern shack,Evergreen Mills",
+  "voice_actor": "Shari Elliker",
+  "special": {
+    "Strength": 7,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 3,
+    "Intelligence": 3,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "mod_special_values": {
+    "Strength": 7,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 4,
+    "Intelligence": 3,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "level": "1→4→9",
+  "tag_skills": [
+    {
+      "Melee Weap.:": "34→47→68"
+    },
+    {
+      "Small Guns:": "32→45→66"
+    },
+    {
+      "Unarmed:": "30→43→64"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "30→60→90"
+    },
+    {
+      "Critical Chance:": "5%"
+    },
+    {
+      "Unarmed Dam.:": "2→2.65"
+    },
+    {
+      "Poison Resist.:": "20%"
+    },
+    {
+      "Rad. Resist.:": "8%"
+    },
+    {
+      "Carry Weight:": "220"
+    }
+  ],
+  "karma": "Evil",
+  "geck_race": "CaucasianRaider",
+  "topics": [],
+  "conversation": [],
+  "combat": []
+}

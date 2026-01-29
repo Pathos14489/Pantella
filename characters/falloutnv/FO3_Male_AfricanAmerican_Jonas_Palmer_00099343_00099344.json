@@ -1,0 +1,131 @@
+{
+  "name": "Jonas Palmer",
+  "url": "/wiki/Jonas_Palmer",
+  "dialogue_name": "CG04Jonas.txt",
+  "dialogue_url": "/wiki/CG04Jonas.txt",
+  "spawned_dead": true,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "00099343",
+  "ref_id": "00099344",
+  "editor_id": "CG04Jonas",
+  "location": "Vault 101",
+  "location_url": null,
+  "descriptions": [
+    "Jonas Palmer is a resident and medical technician of Vault 101 in 2277.",
+    "Wholesome, good-humored, jokey, smart and kind, Jonas has been James' assistant as well as his and the Lone Wanderer's friend for as long as the Lone Wanderer, who got along with Jonas famously, can remember. He can appear stern and strict if he wants to, but even there, his sense of humor asserts itself.",
+    "In the late 2260s, Jonas was appointed to be James' assistant by the overseer,",
+    "After James escapes from Vault 101, Jonas is killed by Officer Mack for helping James open the vault and trying to escape with him."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Vault 101",
+  "role": "Vaultmedical technician",
+  "detailed_location": "Vault 101",
+  "voice_actor": "Gregory Gorton",
+  "special": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 5,
+    "Intelligence": 5,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "tag_skills": [
+    {
+      "Science:": "30(35)"
+    },
+    {
+      "Small Guns:": "30"
+    },
+    {
+      "Unarmed:": "28"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Good",
+  "voice_type": "MaleAdult01DefaultBDC",
+  "geck_race": "AfricanAmerican",
+  "topics": [
+    {
+      "topic": "CG02JonasA1",
+      "topic_text": "I'm not a kid! I'm ten years old!",
+      "emotion": "Happy 100",
+      "response_text": "Ha ha ha. You sure are! Pip-Boy and everything, look at that!Play soundFO3 Jonas YouSureAre.ogghttps://fallout.fandom.com/wiki/File:FO3_Jonas_YouSureAre.oggnoicon",
+      "index": "1"
+    },
+    {
+      "topic": "CG02JonasA2",
+      "topic_text": "Can it, Jonas. Where's my surprise present already?",
+      "emotion": "Happy 50",
+      "response_text": "Oh, I see, now that you're ten you're all business. Well then, missy, we'd better get to it.{a bit miffed, but still warm and friendly}Play soundFO3 Jonas WellThenMissy.ogghttps://fallout.fandom.com/wiki/File:FO3_Jonas_WellThenMissy.oggnoicon",
+      "index": "3"
+    },
+    {
+      "topic": "CG02JonasA3",
+      "topic_text": "Oh... But Dad told me it was okay to come down here.",
+      "emotion": "Happy 50",
+      "response_text": "Hey, relax! I was just teasing.Play soundFO3 Jonas JustTeasing.ogghttps://fallout.fandom.com/wiki/File:FO3_Jonas_JustTeasing.oggnoicon",
+      "index": "7"
+    },
+    {
+      "topic": "CG02JonasB1",
+      "topic_text": "Thanks a lot, Jonas. This is really cool.",
+      "emotion": "Happy 100",
+      "response_text": "Hey, you don't turn 10 every day! Now go on and let me see you shoot something.Play soundFO3 Jonas DontTurn10.ogghttps://fallout.fandom.com/wiki/File:FO3_Jonas_DontTurn10.oggnoicon",
+      "index": "10"
+    },
+    {
+      "topic": "CG02JonasB2",
+      "topic_text": "Couldn't you get me a real gun? A BB Gun is kind of lame.",
+      "emotion": "Sad 30",
+      "response_text": "Maybe so, but you still better not let the Overseer see you carrying that around. That's a real gun as far as he's concerned.{he's a bit hurt at your ingratitude}Play soundFO3 Jonas BetterNotLet.ogghttps://fallout.fandom.com/wiki/File:FO3_Jonas_BetterNotLet.oggnoicon",
+      "index": "11"
+    },
+    {
+      "topic": "CG02JonasB3",
+      "topic_text": "I guess so. I'm just not that into shooting things.",
+      "emotion": "Happy 30",
+      "response_text": "Oh, hey, don't worry about it. You might be surprised how much fun you can have if you give it a chance, though.Play soundFO3 Jonas DontWorryAbout.ogghttps://fallout.fandom.com/wiki/File:FO3_Jonas_DontWorryAbout.oggnoicon",
+      "index": "12"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Happy 75",
+      "response_text": "Oh, hey, it's Jonas. Happy birthday! Sorry I couldn't be at your party. Listen, would you put your dad on?Play soundFO3 Jonas HeyItsJonas.ogghttps://fallout.fandom.com/wiki/File:FO3_Jonas_HeyItsJonas.oggnoicon",
+      "index": "13"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "CG02IntercomConv",
+      "topic_text": "CG02IntercomConv",
+      "emotion": "Happy 75",
+      "response_text": "Hey doc. We're all set down here.Play soundFO3 Jonas AllSet.ogghttps://fallout.fandom.com/wiki/File:FO3_Jonas_AllSet.oggnoicon",
+      "index": "22"
+    },
+    {
+      "topic": "CG02JonasSpeech",
+      "topic_text": "CG02JonasSpeech",
+      "emotion": "Happy 100",
+      "response_text": "Smile!Play soundFO3 Jonas Smile.ogghttps://fallout.fandom.com/wiki/File:FO3_Jonas_Smile.oggnoicon",
+      "index": "23"
+    }
+  ],
+  "combat": [
+    {
+      "topic": "Hit",
+      "topic_text": "Hit",
+      "emotion": "Surprise 50",
+      "response_text": "Hey, shoot at the targets, okay? That's not a toy!{friendly fire}Play soundFO3 Jonas NotAToy.ogghttps://fallout.fandom.com/wiki/File:FO3_Jonas_NotAToy.oggnoicon",
+      "index": "24"
+    }
+  ]
+}

@@ -1,0 +1,298 @@
+{
+  "name": "Emily Ortal",
+  "url": "/wiki/Emily_Ortal",
+  "dialogue_name": "Lucky38FollowerEmily.txt",
+  "dialogue_url": "/wiki/Lucky38FollowerEmily.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": true,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "0011904E",
+  "ref_id": "0011904F",
+  "editor_id": "Lucky38FollowerEmily",
+  "location": "Outside theLucky 38",
+  "location_url": "/wiki/Lucky_38",
+  "descriptions": [
+    "Doctor Emily Ortal is a physician who is found outside the Lucky 38 casino on the Strip in 2281.",
+    "Hailing from Arroyo, Emily Ortal has been a member of the Followers of the Apocalypse for five years,",
+    "She is responsible for reprogramming Yes Man for Benny, making it connect to the network, but as an invisible peer, so that Mr. House would not fry it remotely.",
+    "The Moon Comes Over the Tower: Emily Ortal will approach the Courier outside of the Lucky 38 casino, and will ask for them to bug one of Mr. House's computers in order to obtain medical data. At this point, her request may be accepted without an extra reward, or when passing a 40 Barter check, the Courier may acquire several medical supplies from her as payment.",
+    "A dialogue option exists where the player can pass an (Intelligence 6) check to ask how Emily made it onto the Strip. She will explain that the matter of Mr. House's technology was important enough that the Followers managed to scrape together enough caps for the credit check."
+  ],
+  "race": "Human",
+  "gender": "Female",
+  "affiliation": "Followers of the Apocalypse",
+  "role": "Doctor",
+  "detailed_location": "The Strip",
+  "voice_actor": "Lora Cain",
+  "special": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 10,
+    "Intelligence": 5,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "level": "1",
+  "misc_skills": [
+    {
+      "Hit Points:": "70"
+    },
+    {
+      "Poison Resist.:": "20%"
+    },
+    {
+      "Rad. Resist.:": "8%"
+    }
+  ],
+  "karma": "Neutral",
+  "voice_type": "FemaleAdult02",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "Excuse me, but... are you the courier who caused all of that trouble in The Tops?",
+      "index": "1"
+    },
+    {
+      "topic": "vfreeformlucky38Lucky38FollowerEmilyTopic000",
+      "topic_text": "Why do you want to know?",
+      "emotion": "Fear 10",
+      "response_text": "Oh! Well, I heard... I mean, we heard... we meaning the Followers of the Apocalypse... that you had been in there. The Lucky 38, I mean.",
+      "index": "9"
+    },
+    {
+      "topic": "vfreeformlucky38Lucky38FollowerEmilyTopic001",
+      "topic_text": "Yes.",
+      "emotion": "Happy 15",
+      "response_text": "Oh. Great! The Followers of the Apocalypse, well some of us, anyway, have been interested in Mr. House's technology, how he stays alive.",
+      "index": "11"
+    },
+    {
+      "topic": "vfreeformlucky38Lucky38FollowerEmilyTopic002",
+      "topic_text": "If you're about to ask me for help, stop.",
+      "emotion": "Pained 5",
+      "response_text": "No, wait... please. Mr. House has access to technology that could help save a lot of lives, lives of people who suffer a great deal.",
+      "index": "13"
+    },
+    {
+      "topic": "vfreeformlucky38Lucky38FollowerEmilyTopic003",
+      "topic_text": "And this is where I come in.",
+      "emotion": "Pained 5",
+      "response_text": "Right. We just want to find out what sort of technology Mr. House has used to stay alive for all these years.",
+      "index": "16"
+    },
+    {
+      "topic": "vfreeformlucky38Lucky38FollowerEmilyTopic005",
+      "topic_text": "Why wasn't the data useful?",
+      "emotion": "Neutral 50",
+      "response_text": "We were connected for half a minute and received enough data to fill five holodiscs. It looked like nonsense at first, but we decoded it.",
+      "index": "18"
+    },
+    {
+      "topic": "vfreeformlucky38Lucky38FollowerEmilyTopic006",
+      "topic_text": "All right. I'm on it.",
+      "emotion": "Happy 15",
+      "response_text": "Really? Oh, I wasn't expecting you to agree so easily. That's great!",
+      "index": "21"
+    },
+    {
+      "topic": "vfreeformlucky38Lucky38FollowerEmilyTopic007",
+      "topic_text": "Not quite yet.",
+      "emotion": "Neutral 50",
+      "response_text": "Okay. No rush, but the sooner the Followers can learn about Mr. House's technology, the better.",
+      "index": "24"
+    },
+    {
+      "topic": "vfreeformlucky38Lucky38FollowerEmilyTopic008",
+      "topic_text": "I've bugged the tower for you.",
+      "emotion": "Neutral 50",
+      "response_text": "Good to hear, but it looks like the bug was deactivated a few minutes after it went online.",
+      "index": "25"
+    },
+    {
+      "topic": "vfreeformlucky38Lucky38FollowerEmilyTopic009",
+      "topic_text": "How did you get enough money to enter The Strip?",
+      "emotion": "Neutral 50",
+      "response_text": "This is important enough to the Followers that we scraped together the caps required for the credit check.",
+      "index": "32"
+    },
+    {
+      "topic": "vfreeformlucky38Lucky38FollowerEmilyTopic011",
+      "topic_text": "I'm not interested.",
+      "emotion": "Neutral 50",
+      "response_text": "Do you mind if I ask why?",
+      "index": "34"
+    },
+    {
+      "topic": "vfreeformlucky38Lucky38FollowerEmilyTopic012",
+      "topic_text": "How long have you been with the Followers?",
+      "emotion": "Neutral 50",
+      "response_text": "About five years now. I have family back in Arroyo, but this is where all of the good work is being done, so to speak.",
+      "index": "35"
+    },
+    {
+      "topic": "vfreeformlucky38Lucky38FollowerEmilyTopic013",
+      "topic_text": "I don't want to abuse Mr. House's trust.",
+      "emotion": "Sad 15",
+      "response_text": "Well... I guess that makes some sense. After all, you're the first person who's set foot in there in over two hundred years.",
+      "index": "38"
+    },
+    {
+      "topic": "vfreeformlucky38Lucky38FollowerEmilyTopic014",
+      "topic_text": "Because I don't give a shit about the Followers or anyone else in this dump.",
+      "emotion": "Anger 30",
+      "response_text": "Great. You and every other asshole around here. If you grow a heart anytime soon, I'll be around.",
+      "index": "40"
+    },
+    {
+      "topic": "vfreeformlucky38Lucky38FollowerEmilyTopic015",
+      "topic_text": "I have to go.",
+      "emotion": "Sad 25",
+      "response_text": "{a bit shocked}Oh... okay.{regaining composure}I'll be around if you change your mind.",
+      "index": "41"
+    },
+    {
+      "topic": "vfreeformlucky38Lucky38FollowerEmilyTopic016",
+      "topic_text": "What do you do around here?",
+      "emotion": "Neutral 50",
+      "response_text": "I'm interested in medicine, but it's not my strong suit. I try to help out with any computer issues the Followers have.",
+      "index": "42"
+    },
+    {
+      "topic": "vfreeformlucky38Lucky38FollowerEmilyTopic017",
+      "topic_text": "Dr. &PCName; diagnoses a terminally low discussion of caps in this conversation.",
+      "emotion": "Happy 10",
+      "response_text": "[SUCCEEDED] Ah. I see. I suppose I can give you some medical supplies for your efforts. I assure you they will be worth plenty of caps.",
+      "index": "44"
+    },
+    {
+      "topic": "vfreeformlucky38Lucky38FollowerEmilyTopic018",
+      "topic_text": "So, are you... paying me for this?",
+      "emotion": "Sad 10",
+      "response_text": "[FAILED] Oh. No that wasn't really what we had in mind. We were hoping you would just, you know, help us. To be helpful.",
+      "index": "45"
+    },
+    {
+      "topic": "vfreeformlucky38Lucky38FollowerEmilyTopic020",
+      "topic_text": "All right. I'll do it.",
+      "emotion": "Neutral 50",
+      "response_text": "Great. I'll have the medical supplies for you by the time you come back.",
+      "index": "46"
+    },
+    {
+      "topic": "vfreeformlucky38Lucky38FollowerEmilyTopic021",
+      "topic_text": "Not good enough.",
+      "emotion": "Neutral 50",
+      "response_text": "I'm afraid that's all I can offer. Well, I won't keep you any longer.",
+      "index": "49"
+    },
+    {
+      "topic": "vfreeformlucky38Lucky38FollowerEmilyTopic022",
+      "topic_text": "Is there another way to get Mr. House's data?",
+      "emotion": "Neutral 50",
+      "response_text": "{wary}After two tries, I think I've learned enough. I'm sure there's something more promising I could be helping the other Followers with.",
+      "index": "51"
+    },
+    {
+      "topic": "vfreeformlucky38Lucky38FollowerEmilyTopic024",
+      "topic_text": "Hey, I risked a lot to get you that data feed.",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] True.{sighs}All right. The first try was a little less \"professional\". Someone important on the Strip had access to some of House's technology.",
+      "index": "54"
+    },
+    {
+      "topic": "vfreeformlucky38Lucky38FollowerEmilyTopic025",
+      "topic_text": "What's the big deal?",
+      "emotion": "Anger 20",
+      "response_text": "[FAILED] Just drop it, okay?",
+      "index": "57"
+    },
+    {
+      "topic": "vfreeformlucky38Lucky38FollowerEmilyTopic026",
+      "topic_text": "Let's talk about something else.",
+      "emotion": "Neutral 50",
+      "response_text": "What do you want to know?",
+      "index": "58"
+    },
+    {
+      "topic": "vfreeformlucky38Lucky38FollowerEmilyTopic027",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "See you when I see you.",
+      "index": "59"
+    },
+    {
+      "topic": "vfreeformlucky38Lucky38FollowerEmilyTopic028",
+      "topic_text": "Did Benny say why he had the Securitron?",
+      "emotion": "Neutral 50",
+      "response_text": "He sure didn't. Benny was pretty tight-lipped and cryptic about the thing, but he did let me poke around in it for a while.",
+      "index": "60"
+    },
+    {
+      "topic": "vfreeformlucky38Lucky38FollowerEmilyTopic029",
+      "topic_text": "What did he have you do?",
+      "emotion": "Neutral 50",
+      "response_text": "The Securitron was disabled somehow. Might have been an EMP, given some of the damage I saw.",
+      "index": "63"
+    },
+    {
+      "topic": "vfreeformlucky38Lucky38FollowerEmilyTopic030",
+      "topic_text": "Did something... happen between you two?",
+      "emotion": "Disgust 20",
+      "response_text": "Ugh. So gross. It was bad enough that I didn't get any data out of the Securitron. This is why I didn't want to talk about it.",
+      "index": "66"
+    },
+    {
+      "topic": "vfreeformlucky38Lucky38FollowerEmilyTopic031",
+      "topic_text": "You didn't think to tell anyone about this?",
+      "emotion": "Anger 10",
+      "response_text": "Yes, strange as it sounds, I figured that bad mouthing one of the Strip's most powerful people wasn't a good idea.",
+      "index": "68"
+    },
+    {
+      "topic": "vfreeformlucky38Lucky38FollowerEmilyTopic033",
+      "topic_text": "Tell me again about Benny's Securitron.",
+      "emotion": "Neutral 50",
+      "response_text": "Not much to tell. Benny had one of Mr. House's Securitrons, deactivated, and wanted it switched back on.",
+      "index": "70"
+    },
+    {
+      "topic": "vfreeformlucky38Lucky38FollowerEmilyTopic034",
+      "topic_text": "Don't be so hard on yourself. Life would be dull if it weren't for all the little mistakes.",
+      "emotion": "Happy 10",
+      "response_text": "{teasing a bit}I take it you're speaking from experience.",
+      "index": "72"
+    },
+    {
+      "topic": "vfreeformlucky38Lucky38FollowerEmilyTopic035",
+      "topic_text": "Alcohol is the only way Benny could ever get any action from a smart girl like you.",
+      "emotion": "Happy 15",
+      "response_text": "{flattered}That's sweet of you to say, even if it isn't true.",
+      "index": "74"
+    },
+    {
+      "topic": "vfreeformlucky38Lucky38FollowerEmilyTopic036",
+      "topic_text": "Getting sucker punched by Benny happens to the best of us.",
+      "emotion": "Neutral 50",
+      "response_text": "Good point.",
+      "index": "75"
+    },
+    {
+      "topic": "vfreeformlucky38Lucky38FollowerEmilyTopic037",
+      "topic_text": "Maybe you should chalk it up to being irresponsible and naive.",
+      "emotion": "Anger 40",
+      "response_text": "And maybe you should go jump off Hoover Dam, jackass.",
+      "index": "76"
+    }
+  ],
+  "conversation": [],
+  "combat": []
+}

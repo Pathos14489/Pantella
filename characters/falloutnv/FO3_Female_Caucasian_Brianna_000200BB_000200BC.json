@@ -1,0 +1,173 @@
+{
+  "name": "Brianna",
+  "url": "/wiki/Brianna",
+  "dialogue_name": "TheFamilyBrianna.txt",
+  "dialogue_url": "/wiki/TheFamilyBrianna.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000200BB",
+  "ref_id": "000200BC",
+  "editor_id": "TheFamilyBrianna",
+  "location": "Meresti Metro station",
+  "location_url": "/wiki/Meresti_Metro_station",
+  "descriptions": [
+    "Brianna is a member of the Family and a former cannibal in 2277.",
+    "At 19 years of age, she is the youngest member of the Family. Originally a prostitute, her cannibalism caused her much torment in Washington, D.C. She set out into the wasteland and crossed paths with \"vampires\" in Meresti Metro station. Sensing her traits, Vance quickly took her in and as a result, Brianna's cannibalism was turned into hematophagy. Since then, she has been living in Meresti.",
+    "She gives the male members of the Family a little company at night. She can be heard flirting suggestively with Karl and Justin, much to Vance's embarrassment. He will often ask her to tone down her \"morale\" boosting and keep it to \"one at a time.\""
+  ],
+  "race": "Human",
+  "gender": "Female",
+  "affiliation": "The Family",
+  "role": "Prostitute",
+  "detailed_location": "Meresti Metro station",
+  "voice_actor": "Karen Carbone",
+  "special": {
+    "Strength": 6,
+    "Perception": 7,
+    "Endurance": 5,
+    "Charisma": 3,
+    "Intelligence": 3,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "level": "6→14",
+  "tag_skills": [
+    {
+      "Explosives:": "55→90"
+    },
+    {
+      "Small Guns:": "53→88(55→90)"
+    },
+    {
+      "Sneak:": "53→88"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "95→135"
+    },
+    {
+      "Critical Chance:": "5%"
+    },
+    {
+      "Unarmed Dam.:": "1.25"
+    },
+    {
+      "Poison Resist.:": "20%"
+    },
+    {
+      "Rad. Resist.:": "8%"
+    },
+    {
+      "Carry Weight:": "210"
+    },
+    {
+      "Damage Res.:": "8%"
+    }
+  ],
+  "karma": "Neutral",
+  "voice_type": "FemaleAdult02DC",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "Well, well. I'm surprised you don't know me. I'm Brianna. I... take care of the men around here. Well, unmarried ones anyway.",
+      "index": "1"
+    },
+    {
+      "topic": "MS09FamBriannaCT01",
+      "topic_text": "I could be his friend.",
+      "emotion": "Sad 50",
+      "response_text": "Well, that is sweet, but Vance would kick my rather gorgeous ass right out of here if I told you how to find Ian. Sorry.",
+      "index": "4"
+    },
+    {
+      "topic": "MS09FamBriannaCT01Ladykiller",
+      "topic_text": "Tell me how to see Ian and maybe we can talk... in private.",
+      "emotion": "Happy 70",
+      "response_text": "My oh my, that would tempting. If you were that good, maybe I'd pay you! Ha ha ha.{laugh at the end}",
+      "index": "5"
+    },
+    {
+      "topic": "MS09FamBriannaCT02",
+      "topic_text": "He really shouldn't be here.",
+      "emotion": "Neutral 50",
+      "response_text": "I think this is the best place for him. Out there, he'd be hunted like all of us were. Sorry.",
+      "index": "7"
+    },
+    {
+      "topic": "MS09TLLaws",
+      "topic_text": "Please, help me understand your Laws.",
+      "emotion": "Happy 50",
+      "response_text": "When we all gather in the common area, Vance gives his speeches and then we each have like a Law to say.",
+      "index": "8"
+    },
+    {
+      "topic": "MS09TLLookingforIanWest",
+      "topic_text": "I'm looking for Ian West. Have you seen him?",
+      "emotion": "Neutral 50",
+      "response_text": "Vance has him in meditation right now. No one's supposed to be in there.",
+      "index": "10"
+    },
+    {
+      "topic": "MS09TLWhatisMeresti",
+      "topic_text": "What is this place?",
+      "emotion": "Disgust 70",
+      "response_text": "It's the last place I ever expected to end up.",
+      "index": "13"
+    },
+    {
+      "topic": "MS09TLWhoAreFamily",
+      "topic_text": "Tell me about the Family.",
+      "emotion": "Happy 60",
+      "response_text": "How about just the coolest gang this side of the U.S.?",
+      "index": "16"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "I have to go now.",
+      "emotion": "Happy 50",
+      "response_text": "Bye, sweetie!",
+      "index": "18"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Happy 50",
+      "response_text": "You got the cash, I got the time.",
+      "index": "23"
+    },
+    {
+      "topic": "MS09MerestiRandom01",
+      "topic_text": "MS09MerestiRandom01",
+      "emotion": "Happy 50",
+      "response_text": "Of course.",
+      "index": "29"
+    },
+    {
+      "topic": "MS09MerestiResponsestoFamily",
+      "topic_text": "MS09MerestiResponsestoFamily",
+      "emotion": "Happy 60",
+      "response_text": "Ha! I told you! In bed you were mumbling about how you think Vance is all disappointed with your progress. I knew he wasn't.",
+      "index": "31"
+    },
+    {
+      "topic": "MS09MerestiResponsestoVance",
+      "topic_text": "MS09MerestiRandom02",
+      "emotion": "Happy 50",
+      "response_text": "Awww... then how am I supposed to keep morale up around this dingy place?",
+      "index": "35"
+    }
+  ],
+  "combat": []
+}

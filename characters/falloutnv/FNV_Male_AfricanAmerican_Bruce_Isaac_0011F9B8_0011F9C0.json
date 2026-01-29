@@ -1,0 +1,174 @@
+{
+  "name": "Bruce Isaac",
+  "url": "/wiki/Bruce_Isaac",
+  "dialogue_name": "VMSTopsBruceIsaac.txt",
+  "dialogue_url": "/wiki/VMSTopsBruceIsaac.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "0011F9B8",
+  "ref_id": "0011F9C0",
+  "editor_id": "VMSTopsBruceIsaac",
+  "location": "Dino Dee-lite Motel",
+  "location_url": "/wiki/Dino_Dee-lite_Motel",
+  "descriptions": [
+    "Bruce Isaac is a singer hiding out in Novac in 2281.",
+    "Bruce previously was a singer at the Shark Club in New Reno, who the Courier saw singing there.",
+    "Talent Pool",
+    "Talent Pool: Tommy Torini is looking for a new singer. The player character can inform Bruce about a job opportunity for him at the Aces, the theater in the Tops."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Bishops(formerly)NovacChairmen(optional)",
+  "role": "Runaway singer",
+  "detailed_location": "Bruce Isaac's room, NovacThe Aces(optional)",
+  "voice_actor": "Gregory Alan WilliamsJoshua Sawyer(song)",
+  "special": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 6,
+    "Charisma": 3,
+    "Intelligence": 4,
+    "Agility": 6,
+    "Luck": 4
+  },
+  "level": "5",
+  "tag_skills": [
+    {
+      "Guns:": "47"
+    },
+    {
+      "Melee Weap.:": "45"
+    },
+    {
+      "Unarmed:": "47"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Neutral",
+  "voice_type": "MaleAdult06",
+  "geck_race": "AfricanAmerican",
+  "topics": [
+    {
+      "topic": "BruceIsaacBishops",
+      "topic_text": "Why would this Mr. Bishop be after you?",
+      "emotion": "Fear 50",
+      "response_text": "Oh, well, that's all just a big misunderstanding, see.",
+      "index": "1"
+    },
+    {
+      "topic": "BruceIsaacNewReno",
+      "topic_text": "Why did you come all the way out here from New Reno?",
+      "emotion": "Fear 35",
+      "response_text": "You don't know Mr. Bishop. He's not like the other bosses up there. He knows the Wasteland like the back of his hand, and he likes to wander it.",
+      "index": "3"
+    },
+    {
+      "topic": "BruceIsaacTops",
+      "topic_text": "If you're looking for work, Tommy Torini is hiring singers at the Tops.",
+      "emotion": "Happy 50",
+      "response_text": "Really? The Tops, huh? Well, it's no Shark Club, but I hear security on the Strip is real tight. Even Mr. Bishop wouldn't hit a joint like that.",
+      "index": "5"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Fear 100",
+      "response_text": "Ahhh! Please don't kill me, I swear I'll have - wait. You... you don't work for Mr. Bishop, do you?",
+      "index": "7"
+    },
+    {
+      "topic": "VMSTopsTalentPoolVMSTopsBruceIsaacTopic000",
+      "topic_text": "No, I don't. What makes you think that?",
+      "emotion": "Surprise 50",
+      "response_text": "Sorry, it's just... you look like his type, y'know? You got that hard-ass wasteland explorer thing going on.",
+      "index": "10"
+    },
+    {
+      "topic": "VMSTopsTalentPoolVMSTopsBruceIsaacTopic001",
+      "topic_text": "<Lie> Yeah, I do, and it's time for you to suffer!",
+      "emotion": "Fear 100",
+      "response_text": "Please, no!",
+      "index": "11"
+    },
+    {
+      "topic": "VMSTopsTalentPoolVMSTopsBruceIsaacTopic005",
+      "topic_text": "Aren't you that singer from New Reno? I think I saw you play the clubs there.",
+      "emotion": "Happy 30",
+      "response_text": "Oh, so you have heard of me. Yeah, that's right. I was the big draw at the Shark Club, people used to pay hundreds of caps to see me.",
+      "index": "12"
+    },
+    {
+      "topic": "VMSTopsTalentPoolVMSTopsBruceIsaacTopic006",
+      "topic_text": "You robbed a casino boss?",
+      "emotion": "Pained 50",
+      "response_text": "\"Robbed\" is such an ugly word. It's more like I took care of a payroll problem for him.",
+      "index": "13"
+    },
+    {
+      "topic": "VMSTopsTalentPoolVMSTopsBruceIsaacTopic007",
+      "topic_text": "And so because of that you ran all the way to Novac?",
+      "emotion": "Happy 20",
+      "response_text": "I figured it might take him a while to understand his accounting error and cool down a little.",
+      "index": "15"
+    },
+    {
+      "topic": "VMSTopsTalentPoolVMSTopsBruceIsaacTopic008",
+      "topic_text": "Let's talk about something else.",
+      "emotion": "Neutral 50",
+      "response_text": "Sure.",
+      "index": "17"
+    },
+    {
+      "topic": "VMSTopsTalentPoolVMSTopsBruceIsaacTopic009",
+      "topic_text": "Wow. My hat is off to you, that takes some balls.",
+      "emotion": "Fear 50",
+      "response_text": "Thanks, but if Bishop finds me and I don't have his money,{emphasis}my balls are going to be on his trophy wall.",
+      "index": "18"
+    },
+    {
+      "topic": "VMSTopsTalentPoolVMSTopsBruceIsaacTopic010",
+      "topic_text": "You really don't know when to quit, do you?",
+      "emotion": "Neutral 50",
+      "response_text": "I guess I don't. That's why I'm here.",
+      "index": "19"
+    },
+    {
+      "topic": "VMSTopsTalentPoolVMSTopsBruceIsaacTopic011",
+      "topic_text": "That's a tough break. Good luck with that.",
+      "emotion": "Neutral 50",
+      "response_text": "Thanks.",
+      "index": "20"
+    },
+    {
+      "topic": "VMSTopsTalentPoolVMSTopsBruceIsaacTopic012",
+      "topic_text": "I'll let you know if I find any work for a singer.",
+      "emotion": "Happy 50",
+      "response_text": "You'd do that? Great! I really appreciate that!",
+      "index": "21"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYEGoodbye.",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah yeah, see you later.",
+      "index": "22"
+    }
+  ],
+  "combat": [
+    {
+      "topic": "RadioHello",
+      "topic_text": "RadioHello",
+      "emotion": "Neutral 50",
+      "response_text": "<Singing>",
+      "index": "23"
+    }
+  ]
+}

@@ -1,0 +1,86 @@
+{
+  "name": "Beth",
+  "url": "/wiki/Beth_(The_Pitt)",
+  "dialogue_name": "DLC01Beth.txt",
+  "dialogue_url": "/wiki/DLC01Beth.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "xx0039C3",
+  "ref_id": "",
+  "editor_id": "DLC01Beth",
+  "location": "",
+  "location_url": null,
+  "descriptions": [
+    "Beth is a cut resident of the Pitt.",
+    "During the quest Free Labor, Beth would have run to the player character sometime after they take Marie, should they choose to do so. Beth would then explain that she knew a better place for the baby. However, Beth was ultimately cut.",
+    "Beth was cut from the Fallout 3 add-on The Pitt."
+  ],
+  "race": "Human",
+  "gender": "Female",
+  "role": "Slave",
+  "voice_actor": "Francie Glick",
+  "special": {
+    "Strength": 4,
+    "Perception": 7,
+    "Endurance": 3,
+    "Charisma": 4,
+    "Intelligence": 4,
+    "Agility": 5,
+    "Luck": 2
+  },
+  "level": "3→10",
+  "tag_skills": [
+    {
+      "Sneak:": "37→70(39→72)"
+    },
+    {
+      "Speech:": "35→68"
+    },
+    {
+      "Unarmed:": "33→66(35→68)"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "30→65(35→70)"
+    },
+    {
+      "Critical Chance:": "2%"
+    },
+    {
+      "Unarmed Dam.:": "2.15"
+    },
+    {
+      "Poison Resist.:": "10%(15%)"
+    },
+    {
+      "Rad. Resist.:": "4%(6%)"
+    },
+    {
+      "Carry Weight:": "190"
+    },
+    {
+      "Damage Res.:": "3%"
+    }
+  ],
+  "karma": "Good",
+  "voice_type": "DLC01SlaveFemale01VoiceType",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Sad 50",
+      "response_text": "Oh, what a dear little orphaned child that is. I know a place where she can have a safe home.",
+      "index": "1"
+    }
+  ],
+  "conversation": [],
+  "combat": []
+}

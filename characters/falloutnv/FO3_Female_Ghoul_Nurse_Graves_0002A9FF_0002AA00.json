@@ -1,0 +1,172 @@
+{
+  "name": "Nurse Graves",
+  "url": "/wiki/Graves",
+  "dialogue_name": "NurseGraves.txt",
+  "dialogue_url": "/wiki/NurseGraves.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "0002A9FF",
+  "ref_id": "0002AA00",
+  "editor_id": "NurseGraves",
+  "location": "The Chop Shop",
+  "location_url": "/wiki/The_Chop_Shop_(Fallout_3)",
+  "descriptions": [
+    "Nurse Graves is a ghoul who helps Doctor Barrows in Underworld in Fallout 3.",
+    "Young by ghoul standards, Doctor Barrows' assistant Nurse Graves is knowledgeable and keen. She helps in Barrows' experiments to diagnose and treat the various brand-new ailments that ghouls are always complaining about. Happy with her lot in life, she spends her time cutting up corpses, inspecting brain tissue samples, and poking feral ghouls with a variety of (mainly sharp) implements.",
+    "Unlike other ghouls in the Fallout universe, she sympathizes with humans as much as ghouls (stating they were all the same once) while most other ghouls and humans are on non-friendly terms. She will mention that Doctor Barrows performed experiments on Reilly while she was in her coma",
+    "Her name \"Graves\" refers to burial graves, a reference to the Underworld's theme of death."
+  ],
+  "race": "Ghoul",
+  "gender": "Female",
+  "affiliation": "Doctor Barrows",
+  "role": "Nurse",
+  "detailed_location": "The Chop Shop,Underworld",
+  "voice_actor": "Audrey Wasilewski",
+  "special": {
+    "Strength": 4,
+    "Perception": 6,
+    "Endurance": 4,
+    "Charisma": 6,
+    "Intelligence": 7,
+    "Agility": 5,
+    "Luck": 4
+  },
+  "level": "1",
+  "tag_skills": [
+    {
+      "Barter:": "31"
+    },
+    {
+      "Medicine:": "33(38)"
+    },
+    {
+      "Science:": "33"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Good",
+  "voice_type": "FemaleGenericGhoulDC",
+  "geck_race": "Ghoul",
+  "topics": [
+    {
+      "topic": "DLC03WQSickDoctorTopicFull house today, Doc. What's wrong with everybody?",
+      "topic_text": "What's wrong with everybody? I didn't think Ghouls got sick.",
+      "emotion": "Fear 100",
+      "response_text": "Neither did I. Doctor Barrows is working on it, but it doesn't look good. They're getting worse by the day.",
+      "index": "1"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "Welcome to the Chop Shop. I'm Nurse Graves, Doctor Barrows' assistant.",
+      "index": "2"
+    },
+    {
+      "topic": "MS14CrowleyWhat can you tell me about Mister Crowley?",
+      "topic_text": "Do you talk to Crowley much? Can you tell me anything about him?",
+      "emotion": "Neutral 50",
+      "response_text": "He's not my type. Doc Barrows is friendly with him though. Why don't you ask him.",
+      "index": "6"
+    },
+    {
+      "topic": "MS18DocBarrowsMedicalGateway",
+      "topic_text": "I'm injured. Anything you can do for me?",
+      "emotion": "Happy 50",
+      "response_text": "Certainly, we can help you. Please speak to Doctor Barrows.",
+      "index": "7"
+    },
+    {
+      "topic": "MS18NurseGravesExit01",
+      "topic_text": "Amazing! Do you think it will really work?",
+      "emotion": "Neutral 50",
+      "response_text": "Well, we're trying not to get too excited. Not only because we want to keep it quiet, but also because the experiments look so promising.",
+      "index": "9"
+    },
+    {
+      "topic": "MS18NurseGravesExit02",
+      "topic_text": "Interesting.",
+      "emotion": "Neutral 50",
+      "response_text": "Not impressed, huh? Oh well. I didn't expect a human to understand the gravity of this experiment anyway.",
+      "index": "11"
+    },
+    {
+      "topic": "MS18NurseGravesExit03",
+      "topic_text": "A Ghoul that wants to be human? That's a good one!",
+      "emotion": "Anger 50",
+      "response_text": "Well, I've never been so insulted! I expected a little more from you, but I see you humans are almost all alike!",
+      "index": "13"
+    },
+    {
+      "topic": "MS18NurseGravesReilly",
+      "topic_text": "What can you tell me about Reilly?",
+      "emotion": "Sad 50",
+      "response_text": "Poor girl. I didn't think she'd make it through the first night she was brought in here.",
+      "index": "15"
+    },
+    {
+      "topic": "MS18NurseGravesReilly01",
+      "topic_text": "Why does Doctor Barrows care so much about humans, anyway?",
+      "emotion": "Neutral 50",
+      "response_text": "The doctor is convinced that the key to curing our... appearance is locked within the human body.",
+      "index": "17"
+    },
+    {
+      "topic": "MS18NurseGravesReilly02",
+      "topic_text": "You seem to be taking very good care of her.",
+      "emotion": "Neutral 50",
+      "response_text": "Well, she's very important to Doctor Barrows and she's my patient.",
+      "index": "19"
+    },
+    {
+      "topic": "MS18NurseGravesReilly03",
+      "topic_text": "He's experimenting on her? That's twisted!",
+      "emotion": "Neutral 50",
+      "response_text": "First and foremost on Doctor Barrow's mind is her health and well-being. I can assure you of that.",
+      "index": "21"
+    },
+    {
+      "topic": "MS18NurseGravesReilly04",
+      "topic_text": "Has he met with any success?",
+      "emotion": "Happy 50",
+      "response_text": "So far, none of his conclusions are finalized, but the tests he's running are coming up quite positive!",
+      "index": "24"
+    },
+    {
+      "topic": "MS18NurseGravesReilly05",
+      "topic_text": "It's nice that you care so much.",
+      "emotion": "Neutral 50",
+      "response_text": "I don't share the philosophy that Ghouls and humans are different. We were all the same once.",
+      "index": "26"
+    },
+    {
+      "topic": "MS18NurseGravesReilly06",
+      "topic_text": "Hmph. I thought Ghouls hated humans.",
+      "emotion": "Neutral 50",
+      "response_text": "Humans have too many misconceptions. Some of us don't get along with humans, but the majority of us are learning to live with our differences.",
+      "index": "29"
+    },
+    {
+      "topic": "MS18NurseGravesReilly07",
+      "topic_text": "Why not?",
+      "emotion": "Neutral 50",
+      "response_text": "Well, some of the Ghouls in Underworld object to what the Doctor is doing.",
+      "index": "32"
+    },
+    {
+      "topic": "MS18NurseGravesReilly08",
+      "topic_text": "What exactly is the doctor trying to do? You can tell me.",
+      "emotion": "Neutral 50",
+      "response_text": "He's trying to come up with a cure. A way to stop the human to Ghoul transition. Perhaps even one day to reverse it!",
+      "index": "35"
+    }
+  ],
+  "conversation": [],
+  "combat": []
+}

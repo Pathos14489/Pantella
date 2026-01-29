@@ -1,0 +1,248 @@
+{
+  "name": "Argyll",
+  "url": "/wiki/Argyll",
+  "dialogue_name": "NellisArgyll.txt",
+  "dialogue_url": "/wiki/NellisArgyll.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": true,
+  "is_merchant": true,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000FF265",
+  "ref_id": "000FF267",
+  "editor_id": "NellisArgyll",
+  "location": "Nellis medical station",
+  "location_url": "/wiki/Nellis_medical_station",
+  "descriptions": [
+    "Argyll is the doctor for the Boomers living at the Nellis Air Force Base in 2281.",
+    "He is a doctor for the Boomers at Nellis Air Force Base and can usually be found inside the Nellis medical station. He treats small ailments such as bug bites but also treats more life-threatening conditions.",
+    "He will not heal or sell medical supplies to the player character before they have helped the Boomers enough or healed at least two of his patients.",
+    "Area designer Robert Lee implemented Argyll and the objective to heal the injured Boomers in the medical station.",
+    "PC Xbox 360 Argyll can spontaneously start a fight with Lily, Rex or ED-E for no apparent reason. This occurred after finishing patient treatment dialogue. This is most likely a result of the non-human companions having consumables bug."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Boomers",
+  "role": "Doctor",
+  "detailed_location": "Nellis medical station,Nellis Air Force Base",
+  "voice_actor": "Ari Rubin",
+  "special": {
+    "Strength": 6,
+    "Perception": 6,
+    "Endurance": 5,
+    "Charisma": 4,
+    "Intelligence": 4,
+    "Agility": 5,
+    "Luck": 6
+  },
+  "level": "20",
+  "tag_skills": [
+    {
+      "Explosives:": "100"
+    },
+    {
+      "Guns:": "100"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Neutral",
+  "voice_type": "MaleAdult04",
+  "geck_race": "AfricanAmericanOld",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "I know Mother Pearl is letting you wander Nellis as you please, Outsider, but I have patients to tend to.",
+      "index": "1"
+    },
+    {
+      "topic": "NellisArgyllPatientHarmed",
+      "topic_text": "NellisArgyllPatientHarmed",
+      "emotion": "Neutral 50",
+      "response_text": "Are you sure you know what you're doing? You nearly killed that man!",
+      "index": "5"
+    },
+    {
+      "topic": "NellisArgyllPatientHealed",
+      "topic_text": "NellisArgyllPatientHealed",
+      "emotion": "Neutral 50",
+      "response_text": "Excellent treatment. I hadn't thought of that!",
+      "index": "8"
+    },
+    {
+      "topic": "NellisArgyllPatientHealed2",
+      "topic_text": "",
+      "emotion": "Neutral 50",
+      "response_text": "Excellent treatment. I hadn't thought of that!",
+      "index": "11"
+    },
+    {
+      "topic": "NellisArgyllPatientHealedDumb",
+      "topic_text": "NellisArgyllPatientHealedDumb",
+      "emotion": "Neutral 50",
+      "response_text": "Now I know what they mean by \"dumb luck\"!",
+      "index": "14"
+    },
+    {
+      "topic": "NellisArgyllPatientKilled",
+      "topic_text": "NellisArgyllPatientKilled",
+      "emotion": "Anger 50",
+      "response_text": "Hold it right there! You had no business treating that man. You may've spared him a lingering death, but that's straight-out malpractice.",
+      "index": "15"
+    },
+    {
+      "topic": "VFreeformNellisNellisArgyllTopic000",
+      "topic_text": "Can you spare any medical supplies?",
+      "emotion": "Neutral 50",
+      "response_text": "You've done right by us, so I suppose I could spare some supplies.",
+      "index": "16"
+    },
+    {
+      "topic": "VFreeformNellisNellisArgyllTopic000DUPLICATE000",
+      "topic_text": "I'm sorry, I don't know enough to help. I wish I did.",
+      "emotion": "Sad 70",
+      "response_text": "Don't apologize. Their care is my responsibility, but everything I know came from an old first aid field manual.",
+      "index": "20"
+    },
+    {
+      "topic": "VFreeformNellisNellisArgyllTopic001Player has medical knowledge.",
+      "topic_text": "I have extensive medical knowledge. Let's see what I can do.",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] If what you say is true, you can do us a world of good.",
+      "index": "22"
+    },
+    {
+      "topic": "VFreeformNellisNellisArgyllTopic002",
+      "topic_text": "<Lie> I'm a medical expert and my specialty is giant insect bites!",
+      "emotion": "Anger 80",
+      "response_text": "[FAILED] These patients were gravely injured. It's not a joking matter!",
+      "index": "25"
+    },
+    {
+      "topic": "VFreeformNellisNellisArgyllTopic003",
+      "topic_text": "<Lie> I assume the ants' tibular nastis pierced the patients' anterior traxes?",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] Well... I don't know, actually... I suppose it's possible. You should take a look!",
+      "index": "26"
+    },
+    {
+      "topic": "VFreeformNellisNellisArgyllTopic004",
+      "topic_text": "I have wounds that need mending.",
+      "emotion": "Neutral 50",
+      "response_text": "I can patch you up in exchange for doses of Fixer.",
+      "index": "27"
+    },
+    {
+      "topic": "VFreeformNellisNellisArgyllTopic005",
+      "topic_text": "I need help with an addiction.",
+      "emotion": "Neutral 50",
+      "response_text": "I can unburden you of that in exchange for doses of Rad-Away.",
+      "index": "29"
+    },
+    {
+      "topic": "VFreeformNellisNellisArgyllTopic006",
+      "topic_text": "I'm suffering from radiation sickness.",
+      "emotion": "Neutral 50",
+      "response_text": "I can help you in exchange for Stimpaks.",
+      "index": "31"
+    },
+    {
+      "topic": "VFreeformNellisNellisArgyllTopic008",
+      "topic_text": "All right. Here's three doses of Fixer.",
+      "emotion": "Neutral 50",
+      "response_text": "You're going to feel a little pinch.{[DUPLICATE LINE?]}",
+      "index": "33"
+    },
+    {
+      "topic": "VFreeformNellisNellisArgyllTopic009",
+      "topic_text": "No, thanks.",
+      "emotion": "Neutral 50",
+      "response_text": "Fair enough.",
+      "index": "34"
+    },
+    {
+      "topic": "VFreeformNellisNellisArgyllTopic010",
+      "topic_text": "Here's two doses of Rad-Away.",
+      "emotion": "Neutral 50",
+      "response_text": "Hold still. This'll burn for a moment.",
+      "index": "35"
+    },
+    {
+      "topic": "VFreeformNellisNellisArgyllTopic011",
+      "topic_text": "No, thanks.",
+      "emotion": "Neutral 50",
+      "response_text": "The symptoms of withdrawal will pass with time.",
+      "index": "36"
+    },
+    {
+      "topic": "VFreeformNellisNellisArgyllTopic012",
+      "topic_text": "Here are two Stimpaks.",
+      "emotion": "Neutral 50",
+      "response_text": "This'll make you feel better.",
+      "index": "37"
+    },
+    {
+      "topic": "VFreeformNellisNellisArgyllTopic013",
+      "topic_text": "No, thanks.",
+      "emotion": "Neutral 50",
+      "response_text": "Well, try to avoid further exposure.",
+      "index": "38"
+    },
+    {
+      "topic": "VFreeformNellisNellisArgyllTopic015",
+      "topic_text": "All right. Here's two doses of Fixer.",
+      "emotion": "Neutral 50",
+      "response_text": "You're going to feel a little pinch.",
+      "index": "39"
+    },
+    {
+      "topic": "VFreeformNellisNellisArgyllTopic016",
+      "topic_text": "Here's three doses of Rad-Away.",
+      "emotion": "Neutral 50",
+      "response_text": "Hold still. This'll burn for a moment.",
+      "index": "40"
+    },
+    {
+      "topic": "VFreeformNellisNellisArgyllTopic019",
+      "topic_text": "Here are three Stimpaks.",
+      "emotion": "Neutral 50",
+      "response_text": "This'll make you feel better.{[DUPLICATE LINE?]}",
+      "index": "41"
+    },
+    {
+      "topic": "VFreeformNellisTopic000",
+      "topic_text": "I'm still looking for ways to make myself useful.",
+      "emotion": "Neutral 50",
+      "response_text": "Well, look elsewhere. I can't let you near a patient after what happened.",
+      "index": "42"
+    },
+    {
+      "topic": "VFreeformNellisTopic001",
+      "topic_text": "I need medical treatment.",
+      "emotion": "Neutral 50",
+      "response_text": "Seeing as you're a friend of ours, I suppose we could trade for what you need.",
+      "index": "50"
+    },
+    {
+      "topic": "VFreeformNellisTopic002",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Goodbye.",
+      "index": "52"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "NellisArgyllMedicalChatter",
+      "topic_text": "NellisArgyllMedicalChatter",
+      "emotion": "Neutral 50",
+      "response_text": "Got yourself cut up pretty good, eh?",
+      "index": "53"
+    }
+  ],
+  "combat": []
+}

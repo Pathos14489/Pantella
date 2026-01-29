@@ -1,0 +1,753 @@
+{
+  "name": "Doctor Barrows",
+  "url": "/wiki/Barrows",
+  "dialogue_name": "DoctorBarrows.txt",
+  "dialogue_url": "/wiki/DoctorBarrows.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": true,
+  "is_merchant": true,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000156F0",
+  "ref_id": "0002524E",
+  "editor_id": "DoctorBarrows",
+  "location": "The Chop Shop",
+  "location_url": "/wiki/The_Chop_Shop_(Fallout_3)",
+  "descriptions": [
+    "Doctor Barrows is a ghoul and the resident doctor in the Chop Shop in Underworld in 2277.",
+    "Doctor Barrows is the informal mayor of the Underworld and proprietor of the Chop Shop, as well as one of the few doctors in the wasteland trying to gain a scientific understanding of ghoulification. He claims to be the foremost authority on the ghoul condition and has managed to contain a pair of live glowing ones named Meat and Ethyl in an observation cell. He and his assistant, Nurse Graves, are busily (but discreetly) studying a way to slow the advancement of the ghoul condition and maybe someday, reverse it.",
+    "Recently, some ghouls scavengers brought a badly injured Reilly to his shop, after finding her bleeding to death near the entrance to the city. She was wounded in a prolonged battle with supermutants (multiple lacerations, contusions, broken leg, some internal bleeding and blunt force trauma) and has remained in a coma since her arrival. Barrows is unwilling to wake her up because he wants to allow her body to heal and because of the potential for damage to her brain if she is woken up early. However, he can be convinced otherwise.",
+    "Barrows was one of several medical specialists contacted by The Railroad to conduct facial surgery on an escaped android. He dismissed it as a hoax, owing to his experience with appearances and gullibility.",
+    "While he tends to crack jokes,",
+    "At night, he leaves to eat dinner at Carol's Place for a few hours, and then returns to the clinic. He sleeps for a couple of hours on site.",
+    "Barrows remains in the game files of Fallout: New Vegas, and he can still cure addictions and heal the player character if spawned with console commands. However, the quest option to wake Reilly is not present since the quest and Reilly are not in the game files. He also reuses voice lines from other male ghouls, instead of retaining his original voice.",
+    "The word \"Barrow\" means burial mound, keeping in line with the morbid theme of Underworld.",
+    "PC Sometimes, he may become extremely buggy, resulting in him stating \"I don't see anything wrong with you\" when requesting medical attention, despite having every body part crippled. This may also be his only voiced line. Furthermore, he will not walk but rather slide around the room, even when performing idle actions such as holding his clipboard. "
+  ],
+  "race": "Ghoul",
+  "gender": "Male",
+  "affiliation": "The Chop Shop",
+  "role": "DoctorMayor",
+  "detailed_location": "The Chop Shop,Underworld",
+  "voice_actor": "Mike RossonChris Andrew Ciulla(FNV legacy content)",
+  "special": {
+    "Strength": 4,
+    "Perception": 6,
+    "Endurance": 4,
+    "Charisma": 6,
+    "Intelligence": 7,
+    "Agility": 5,
+    "Luck": 4
+  },
+  "level": "1",
+  "tag_skills": [
+    {
+      "Barter:": "31"
+    },
+    {
+      "Medicine:": "33(38)"
+    },
+    {
+      "Science:": "33"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Good",
+  "voice_type": "MaleGenericGhoulDC",
+  "geck_race": "Ghoul",
+  "topics": [
+    {
+      "topic": "2",
+      "topic_text": "GenericHelloResponse",
+      "emotion": "Dear, I live in Tenpenny Tower. I'm at the top of the world. He he he he.",
+      "response_text": "",
+      "index": "Happy 50"
+    },
+    {
+      "topic": "3",
+      "topic_text": "GenericHelloResponse",
+      "emotion": "I'm quite well, thank you.",
+      "response_text": "",
+      "index": "Happy 50"
+    },
+    {
+      "topic": "4",
+      "topic_text": "GenericHelloResponse",
+      "emotion": "Splendid. Simply splendid. Thanks so much for asking.",
+      "response_text": "",
+      "index": "Happy 50"
+    },
+    {
+      "topic": "5",
+      "topic_text": "GenericHelloResponse",
+      "emotion": "I'd be better if I could get my hands on somecaviar, but what can you do? Ha ha ha ha ha.",
+      "response_text": "",
+      "index": "Happy 50"
+    },
+    {
+      "topic": "7",
+      "topic_text": "I have to go now.",
+      "emotion": "You be careful now.",
+      "response_text": "",
+      "index": "Neutral 50"
+    },
+    {
+      "topic": "8",
+      "topic_text": "I have to go now.",
+      "emotion": "Bye.",
+      "response_text": "",
+      "index": "Neutral 50"
+    },
+    {
+      "topic": "9",
+      "topic_text": "I have to go now.",
+      "emotion": "Yeah. See you.",
+      "response_text": "",
+      "index": "Neutral 50"
+    },
+    {
+      "topic": "10",
+      "topic_text": "I have to go now.",
+      "emotion": "Whatever.",
+      "response_text": "",
+      "index": "Neutral 50"
+    },
+    {
+      "topic": "11",
+      "topic_text": "I have to go now.",
+      "emotion": "Bye.",
+      "response_text": "",
+      "index": "Neutral 50"
+    },
+    {
+      "topic": "12",
+      "topic_text": "I have to go now.",
+      "emotion": "Later.",
+      "response_text": "",
+      "index": "Neutral 50"
+    },
+    {
+      "topic": "14",
+      "topic_text": "HELLO",
+      "emotion": "Do you need my help?",
+      "response_text": "",
+      "index": "Neutral 50"
+    },
+    {
+      "topic": "15",
+      "topic_text": "HELLO",
+      "emotion": "Do you need something?",
+      "response_text": "",
+      "index": "Neutral 50"
+    },
+    {
+      "topic": "16",
+      "topic_text": "HELLO",
+      "emotion": "Too bad about Crowley. I heard Tenpenny put out a contract on him.",
+      "response_text": "",
+      "index": "Sad 50"
+    },
+    {
+      "topic": "18",
+      "topic_text": "UnderworldTalk3",
+      "emotion": "Shhh, say no more. See me later, I'll make sure that you want for nothing.",
+      "response_text": "",
+      "index": "Neutral 50"
+    },
+    {
+      "topic": "19",
+      "topic_text": "UnderworldTalk3",
+      "emotion": "No need to be shy, my friend. I'll make sure that you have everything that you ever need, so long as you have the caps to pay for it, that is.",
+      "response_text": "",
+      "index": "Neutral 50"
+    },
+    {
+      "topic": "21",
+      "topic_text": "UnderworldTalkCharonCutOff2",
+      "emotion": "I just wanted to know...",
+      "response_text": "",
+      "index": "Neutral 50"
+    },
+    {
+      "topic": "22",
+      "topic_text": "UnderworldTalkCharonCutOff2",
+      "emotion": "It's just that...",
+      "response_text": "",
+      "index": "Neutral 50"
+    },
+    {
+      "topic": "23",
+      "topic_text": "UnderworldTalkCharonCutOff2",
+      "emotion": "But...",
+      "response_text": "",
+      "index": "Neutral 50"
+    },
+    {
+      "topic": "25",
+      "topic_text": "UnderworldTalkCharonCutOff4",
+      "emotion": "It was just a question...",
+      "response_text": "",
+      "index": "Neutral 50"
+    },
+    {
+      "topic": "26",
+      "topic_text": "UnderworldTalkCharonCutOff4",
+      "emotion": "Well, sorry...",
+      "response_text": "",
+      "index": "Neutral 50"
+    },
+    {
+      "topic": "27",
+      "topic_text": "UnderworldTalkCharonCutOff4",
+      "emotion": "Yeah, whatever.",
+      "response_text": "",
+      "index": "Neutral 50"
+    },
+    {
+      "topic": "28",
+      "topic_text": "UnderworldTalkCharonCutOff4",
+      "emotion": "All right, all right, I'll just ask Ahzrukhal...",
+      "response_text": "",
+      "index": "Neutral 50"
+    },
+    {
+      "topic": "30",
+      "topic_text": "UnderworldTalkHelloResponseShort",
+      "emotion": "Stop by the clinic, Patchwork. Greta found one of your fingers over in Carol's Place.",
+      "response_text": "",
+      "index": "Neutral 50"
+    },
+    {
+      "topic": "31",
+      "topic_text": "UnderworldTalkHelloResponseShort",
+      "emotion": "Hello, hello.",
+      "response_text": "",
+      "index": "Neutral 50"
+    },
+    {
+      "topic": "32",
+      "topic_text": "UnderworldTalkHelloResponseShort",
+      "emotion": "No time to talk now, stop by the clinic.",
+      "response_text": "",
+      "index": "Neutral 50"
+    },
+    {
+      "topic": "33",
+      "topic_text": "UnderworldTalkHelloResponseShort",
+      "emotion": "Come by the clinic some time, you're overdue for a sewing.",
+      "response_text": "",
+      "index": "Neutral 50"
+    },
+    {
+      "topic": "34",
+      "topic_text": "UnderworldTalkHelloResponseShort",
+      "emotion": "Hey, you.",
+      "response_text": "",
+      "index": "Neutral 50"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "36",
+      "topic_text": "BarterExit",
+      "emotion": "Another satisfied customer.",
+      "response_text": "",
+      "index": "Happy 25"
+    },
+    {
+      "topic": "37",
+      "topic_text": "BarterExit",
+      "emotion": "Give me a shout if you need anything else.",
+      "response_text": "",
+      "index": "Happy 25"
+    },
+    {
+      "topic": "38",
+      "topic_text": "BarterExit",
+      "emotion": "Thanks.",
+      "response_text": "",
+      "index": "Happy 25"
+    }
+  ],
+  "combat": [
+    {
+      "topic": "40",
+      "topic_text": "Full house today, Doc. What's wrong with everybody?",
+      "emotion": "It's strange, because Ghouls are immune to almost any known disease.",
+      "response_text": "",
+      "index": "Fear 50"
+    },
+    {
+      "topic": "44",
+      "topic_text": "Yes, cure me.",
+      "emotion": "Okay. Hold still. I don't want to make this any more painful than it already is.",
+      "response_text": "",
+      "index": "Happy 50"
+    },
+    {
+      "topic": "46",
+      "topic_text": "I'm hurt. I need help, Doc.",
+      "emotion": "Is this a trick question? I don't even see a scratch on you.",
+      "response_text": "",
+      "index": "Neutral 50"
+    },
+    {
+      "topic": "47",
+      "topic_text": "I'm hurt. I need help, Doc.",
+      "emotion": "Injured... ha! This is just a nick. If you can't tough it out and you want to be fixed up it'll cost you 50 caps.",
+      "response_text": "",
+      "index": "Neutral 50"
+    },
+    {
+      "topic": "48",
+      "topic_text": "I'm hurt. I need help, Doc.",
+      "emotion": "I'd hesitate to even call this a wound, but if you insist. 50 caps should cover my expenses.",
+      "response_text": "",
+      "index": "Neutral 50"
+    },
+    {
+      "topic": "49",
+      "topic_text": "I'm hurt. I need help, Doc.",
+      "emotion": "Yeah, you could do with some work. It'll set you back 75 caps, but well worth it.",
+      "response_text": "",
+      "index": "Neutral 50"
+    },
+    {
+      "topic": "50",
+      "topic_text": "I'm hurt. I need help, Doc.",
+      "emotion": "This is pretty bad, but I've seen worse. Still, it's going to cost 75 caps to get you back on your feet.",
+      "response_text": "",
+      "index": "Neutral 50"
+    },
+    {
+      "topic": "51",
+      "topic_text": "I'm hurt. I need help, Doc.",
+      "emotion": "Yeah, you look almost as bad as I do. Of course, I'm supposed to look this way and you aren't. 100 caps will do it for my expenses.",
+      "response_text": "",
+      "index": "Neutral 50"
+    },
+    {
+      "topic": "52",
+      "topic_text": "I'm hurt. I need help, Doc.",
+      "emotion": "Did you get the number of that Brahmin that trampled you? Sheesh! If you want me to stitch you back together, it'll be 100 caps.",
+      "response_text": "",
+      "index": "Neutral 50"
+    },
+    {
+      "topic": "53",
+      "topic_text": "I'm hurt. I need help, Doc.",
+      "emotion": "I don't see anything wrong with you.",
+      "response_text": "",
+      "index": "Disgust 50"
+    },
+    {
+      "topic": "54",
+      "topic_text": "I'm hurt. I need help, Doc.",
+      "emotion": "Sure, I could patch you up. Nothing too serious. I don't work for free though. Let's say 75 caps.",
+      "response_text": "",
+      "index": "Neutral 50"
+    },
+    {
+      "topic": "55",
+      "topic_text": "I'm hurt. I need help, Doc.",
+      "emotion": "Sure, I could patch you up. Nothing too serious. I don't work for free though. Let's say 75 caps.",
+      "response_text": "",
+      "index": "Neutral 50"
+    },
+    {
+      "topic": "56",
+      "topic_text": "I'm hurt. I need help, Doc.",
+      "emotion": "You're right. You do need a doctor. Lucky I happened along. But first let's discuss my fee... 100 caps ought to cover it.",
+      "response_text": "",
+      "index": "Happy 50"
+    },
+    {
+      "topic": "57",
+      "topic_text": "I'm hurt. I need help, Doc.",
+      "emotion": "You're not kidding. You're in bad shape, friend. I'd be happy to fix you up... for 150 caps.",
+      "response_text": "",
+      "index": "Surprise 50"
+    },
+    {
+      "topic": "59",
+      "topic_text": "All right, here's your money.",
+      "emotion": "This won't hurt a bit. Nah, just kidding. It will probably hurt a lot. Hold still.",
+      "response_text": "",
+      "index": "Happy 25"
+    },
+    {
+      "topic": "60",
+      "topic_text": "All right, here's your money.",
+      "emotion": "For crying out loud. Get out of my face then.",
+      "response_text": "",
+      "index": "Disgust 75"
+    },
+    {
+      "topic": "62",
+      "topic_text": "All right, here's your money.",
+      "emotion": "This won't hurt a bit. Nah, just kidding. It will probably hurt a lot. Hold still.",
+      "response_text": "",
+      "index": "Happy 25"
+    },
+    {
+      "topic": "63",
+      "topic_text": "All right, here's your money.",
+      "emotion": "For crying out loud. Get out of my face then.",
+      "response_text": "",
+      "index": "Disgust 75"
+    },
+    {
+      "topic": "65",
+      "topic_text": "All right, here's your money.",
+      "emotion": "This won't hurt a bit. Nah, just kidding. It will probably hurt a lot. Hold still.",
+      "response_text": "",
+      "index": "Happy 25"
+    },
+    {
+      "topic": "66",
+      "topic_text": "All right, here's your money.",
+      "emotion": "For crying out loud. Get out of my face then.",
+      "response_text": "",
+      "index": "Disgust 75"
+    },
+    {
+      "topic": "73",
+      "topic_text": "Here's your 100 caps. Do it.",
+      "emotion": "And a quick shot... all done.",
+      "response_text": "",
+      "index": "Happy 50"
+    },
+    {
+      "topic": "75",
+      "topic_text": "GREETING",
+      "emotion": "And we're all done. That wasn't so bad, was it? Did you need anything else?",
+      "response_text": "",
+      "index": "Anger 50"
+    },
+    {
+      "topic": "76",
+      "topic_text": "GREETING",
+      "emotion": "Feel better? You should, that was the good stuff. Need anything else?",
+      "response_text": "",
+      "index": "Happy 50"
+    },
+    {
+      "topic": "77",
+      "topic_text": "GREETING",
+      "emotion": "See, that wasn't so bad. Anything else I can do for you?",
+      "response_text": "",
+      "index": "Happy 50"
+    },
+    {
+      "topic": "78",
+      "topic_text": "GREETING",
+      "emotion": "You're all set. Are we done here?",
+      "response_text": "",
+      "index": "Happy 50"
+    },
+    {
+      "topic": "79",
+      "topic_text": "GREETING",
+      "emotion": "I'm afraid she's going to be out for a while. She's not well at all.",
+      "response_text": "",
+      "index": "Neutral 50"
+    },
+    {
+      "topic": "80",
+      "topic_text": "GREETING",
+      "emotion": "Don't worry though, I'm sure the rest of Reilly's Rangers will show up soon and take her home.",
+      "response_text": "",
+      "index": "Neutral 50"
+    },
+    {
+      "topic": "81",
+      "topic_text": "GREETING",
+      "emotion": "Doctor Barrows at your service. What brings you to the Chop Shop?",
+      "response_text": "",
+      "index": "Neutral 50"
+    },
+    {
+      "topic": "82",
+      "topic_text": "GREETING",
+      "emotion": "Come to lend me a hand I hope. I can always use fresh human samples.",
+      "response_text": "",
+      "index": "Happy 80"
+    },
+    {
+      "topic": "83",
+      "topic_text": "GREETING",
+      "emotion": "Yes, what is it now? Please, be brief. I'm quite busy.",
+      "response_text": "",
+      "index": "Disgust 70"
+    },
+    {
+      "topic": "86",
+      "topic_text": "What do you know about this android from the Commonwealth?",
+      "emotion": "It was clearly faked. You can ask practically any doctor in the Wasteland. We all got a tape like this.",
+      "response_text": "",
+      "index": "Neutral 50"
+    },
+    {
+      "topic": "88",
+      "topic_text": "Ever do any facial surgery? Maybe on someone from the Commonwealth?",
+      "emotion": "Medicine is an important art and science. Shouldn't be wasted on vanity.",
+      "response_text": "",
+      "index": "Neutral 50"
+    },
+    {
+      "topic": "89",
+      "topic_text": "Ever do any facial surgery? Maybe on someone from the Commonwealth?",
+      "emotion": "That was all just an elaborate hoax. Besides, medicine is an important art and science. Shouldn't be wasted on vanity.",
+      "response_text": "",
+      "index": "Neutral 50"
+    },
+    {
+      "topic": "93",
+      "topic_text": "You know who might have a Lipoplasticator or Micro Dermal Graftilizer?",
+      "emotion": "They say old Pinkerton at Rivet City somehow got his hands on a Lipoplasticator and Micro Dermal Graftilizer. Amazing really.",
+      "response_text": "",
+      "index": "Neutral 50"
+    },
+    {
+      "topic": "94",
+      "topic_text": "You know who might have a Lipoplasticator or Micro Dermal Graftilizer?",
+      "emotion": "Pinkerton's the only surgeon crazy enough to try it. Too risky. Go to Rivet City if you want. But don't expect to come out looking better than me.",
+      "response_text": "",
+      "index": "Neutral 50"
+    },
+    {
+      "topic": "100",
+      "topic_text": "Come on. You can tell me. Ahzrukhal said so. <Lie.>",
+      "emotion": "Someone believed that pack of lies he's been spreading. Well I just hope they talk to those poor folk before knocking them off.",
+      "response_text": "",
+      "index": "Sad 50"
+    },
+    {
+      "topic": "102",
+      "topic_text": "Reilly's Rangers?",
+      "emotion": "They're a mercenary company that bases itself out of the D.C. Ruins. I'm assuming she's their leader, Reilly.",
+      "response_text": "",
+      "index": "Neutral 50"
+    },
+    {
+      "topic": "103",
+      "topic_text": "Reilly's Rangers?",
+      "emotion": "What was left of her armor had her name stenciled on it. She was in a pretty bad way when they found her outside Underworld.",
+      "response_text": "",
+      "index": "Neutral 50"
+    },
+    {
+      "topic": "105",
+      "topic_text": "What's wrong with her?",
+      "emotion": "She's hasn't been conscious since they brought her in a few days ago.",
+      "response_text": "",
+      "index": "Neutral 50"
+    },
+    {
+      "topic": "106",
+      "topic_text": "What's wrong with her?",
+      "emotion": "I'd say she tangled with some Super Mutants and lost. It's a miracle she isn't dead.",
+      "response_text": "",
+      "index": "Neutral 50"
+    },
+    {
+      "topic": "108",
+      "topic_text": "She your new toy, zombie?",
+      "emotion": "I don't care if she was a Super Mutant. I'd still help her.",
+      "response_text": "",
+      "index": "Neutral 50"
+    },
+    {
+      "topic": "109",
+      "topic_text": "She your new toy, zombie?",
+      "emotion": "If they hauled your sorry, shot-up body into my clinic, I'd try and save you too.",
+      "response_text": "",
+      "index": "Neutral 50"
+    },
+    {
+      "topic": "112",
+      "topic_text": "How did she end up in the Chop Shop?",
+      "emotion": "If she'd been out in the tunnels any longer, she'd have been someone's meal by now.",
+      "response_text": "",
+      "index": "Neutral 50"
+    },
+    {
+      "topic": "114",
+      "topic_text": "Do you think there's any way to revive her?",
+      "emotion": "There's no telling when she'll come out of it I'm afraid.",
+      "response_text": "",
+      "index": "Neutral 50"
+    },
+    {
+      "topic": "116",
+      "topic_text": "Do you mind if I try and revive her?",
+      "emotion": "However, I'm all for helping my patients, so if you think you have the ability, be my guest.",
+      "response_text": "",
+      "index": "Neutral 50"
+    },
+    {
+      "topic": "118",
+      "topic_text": "I'd really like to speak to this woman. Please, wake her now.",
+      "emotion": "I just hope her body can withstand the strain. Humans are so fragile.",
+      "response_text": "",
+      "index": "Neutral 50"
+    },
+    {
+      "topic": "120",
+      "topic_text": "What do you mean \"fresh human samples\"?",
+      "emotion": "Something doomed us to this rotting form, and I aim to discover what it is.",
+      "response_text": "",
+      "index": "Anger 50"
+    },
+    {
+      "topic": "121",
+      "topic_text": "What do you mean \"fresh human samples\"?",
+      "emotion": "So, I need samples of human skin, organs and other parts to make the experiments valid.",
+      "response_text": "",
+      "index": "Neutral 50"
+    },
+    {
+      "topic": "123",
+      "topic_text": "Stay away from me, you freak!",
+      "emotion": "It's sadly what sets us apart. I'm not going to dissect you alive or tear out your entrails like in some lurid horror movie.",
+      "response_text": "",
+      "index": "Disgust 50"
+    },
+    {
+      "topic": "124",
+      "topic_text": "Stay away from me, you freak!",
+      "emotion": "All of my experiments are done by the book and scientifically.",
+      "response_text": "",
+      "index": "Neutral 50"
+    },
+    {
+      "topic": "128",
+      "topic_text": "Touch me and I yell zombie.",
+      "emotion": "Obviously, you take no appreciation in what I am trying to achieve. Please, leave me be. I have much to do.",
+      "response_text": "",
+      "index": "Disgust 50"
+    },
+    {
+      "topic": "130",
+      "topic_text": "Okay, here are the caps. <Give 300 Caps.>",
+      "emotion": "Bite down, this is going to smart.",
+      "response_text": "",
+      "index": "Neutral 50"
+    },
+    {
+      "topic": "131",
+      "topic_text": "Okay, here are the caps. <Give 300 Caps.>",
+      "emotion": "Sigh. Come back when you do!",
+      "response_text": "",
+      "index": "Disgust 50"
+    },
+    {
+      "topic": "133",
+      "topic_text": "Here you go. <Give 200 Caps.>",
+      "emotion": "Good, good. Now let's see if we can fix you up quickly.",
+      "response_text": "",
+      "index": "Neutral 50"
+    },
+    {
+      "topic": "134",
+      "topic_text": "Here you go. <Give 200 Caps.>",
+      "emotion": "I'm not a charity worker. Come back when you have the caps, and we'll do business.",
+      "response_text": "",
+      "index": "Neutral 50"
+    },
+    {
+      "topic": "136",
+      "topic_text": "It's all here. <Give 100 Caps.>",
+      "emotion": "Shouldn't take but a moment. Hold still please.",
+      "response_text": "",
+      "index": "Neutral 50"
+    },
+    {
+      "topic": "137",
+      "topic_text": "It's all here. <Give 100 Caps.>",
+      "emotion": "Sigh. Come back when you do.",
+      "response_text": "",
+      "index": "Disgust 50"
+    },
+    {
+      "topic": "140",
+      "topic_text": "Do you think Reilly will be okay?",
+      "emotion": "She'll be just fine as long as she takes it easy.",
+      "response_text": "",
+      "index": "Neutral 50"
+    },
+    {
+      "topic": "143",
+      "topic_text": "Forget it!",
+      "emotion": "I'm just doing my job which is making sure this young lady suffers no more permanent damage.",
+      "response_text": "",
+      "index": "Neutral 50"
+    },
+    {
+      "topic": "144",
+      "topic_text": "Forget it!",
+      "emotion": "Now, if you'll excuse me, I have my work to attend to.",
+      "response_text": "",
+      "index": "Neutral 50"
+    },
+    {
+      "topic": "146",
+      "topic_text": "If you revive her, I can find out what happened. Maybe even help her!",
+      "emotion": "I just hope she has the strength to cope with the system shock.",
+      "response_text": "",
+      "index": "Neutral 50"
+    },
+    {
+      "topic": "148",
+      "topic_text": "What can you tell me about Vernon Square?",
+      "emotion": "Every patrol Underworld has sent even near that zone has come back in bad shape, or hasn't returned at all.",
+      "response_text": "",
+      "index": "Neutral 50"
+    },
+    {
+      "topic": "150",
+      "topic_text": "I'd really like to speak to Reilly and find out what happened to her.",
+      "emotion": "The sudden shock to her system could provoke any number of complications.",
+      "response_text": "",
+      "index": "Neutral 50"
+    },
+    {
+      "topic": "152",
+      "topic_text": "Tell me more about Reilly's Rangers.",
+      "emotion": "I'm not sure what their mission entails, but I suspect that it involves violence.",
+      "response_text": "",
+      "index": "Disgust 70"
+    },
+    {
+      "topic": "153",
+      "topic_text": "Tell me more about Reilly's Rangers.",
+      "emotion": "The Rangers have a small headquarters not far from here. Let me program the location into your Pip-Boy.",
+      "response_text": "",
+      "index": "Neutral 50"
+    },
+    {
+      "topic": "155",
+      "topic_text": "I need medical supplies.",
+      "emotion": "Be careful with these. They're not toys, you know.",
+      "response_text": "",
+      "index": "Neutral 50"
+    },
+    {
+      "topic": "156",
+      "topic_text": "I need medical supplies.",
+      "emotion": "Yes, what do you need?",
+      "response_text": "",
+      "index": "Neutral 50"
+    },
+    {
+      "topic": "157",
+      "topic_text": "I need medical supplies.",
+      "emotion": "Very well. What do you require?",
+      "response_text": "",
+      "index": "Neutral 50"
+    }
+  ]
+}

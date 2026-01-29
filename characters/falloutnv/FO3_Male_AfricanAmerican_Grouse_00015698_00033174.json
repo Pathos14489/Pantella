@@ -1,0 +1,574 @@
+{
+  "name": "Grouse",
+  "url": "/wiki/Grouse",
+  "dialogue_name": "Grouse.txt",
+  "dialogue_url": "/wiki/Grouse.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "00015698",
+  "ref_id": "00033174",
+  "editor_id": "Grouse",
+  "location": "Paradise Fallsentrance",
+  "location_url": "/wiki/Paradise_Falls",
+  "descriptions": [
+    "Grouse is a slaver at Paradise Falls in 2277.",
+    "Grouse was born in 2247 and has been with the slavers since he was a teenager. His father was the former leader of the slavers before Eulogy Jones usurped him and rose to power. Because of this, Grouse believes that he has a legacy to live up to.",
+    "Gruff and ready for a fight, especially from the more morally objectionable,",
+    "Should the Lone Wanderer be understanding of his line of work,",
+    "Should the Lone Wanderer agree to work for him he will give them the weapon and its manual. He will task them to acquire four high profile targets.",
+    "Should the Lone Wanderer offer to bribe him successfully Grouse will throw out the high number of 500 caps for entry, doubting that he would get it. However, he will gladly accept it if it is actually offered to him."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Slavers",
+  "detailed_location": "Paradise Falls",
+  "voice_actor": "Johnny Contino",
+  "special": {
+    "Strength": 6,
+    "Perception": 4,
+    "Endurance": 4,
+    "Charisma": 6,
+    "Intelligence": 4,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "level": "3→10",
+  "tag_skills": [
+    {
+      "Barter:": "41→74"
+    },
+    {
+      "Melee Weap.:": "41→74(43→76)"
+    },
+    {
+      "Small Guns:": "41→74(43→76)"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Evil",
+  "voice_type": "MaleAdult06DC",
+  "geck_race": "AfricanAmerican",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Happy 50",
+      "response_text": "You enjoy being a \"recruiter\" for Paradise Falls, eh? Here's another collar and some caps.{chummy}",
+      "index": "1"
+    },
+    {
+      "topic": "MS08SlaverClue1",
+      "topic_text": "I found this info about an android from the Commonwealth. Care to elaborate?",
+      "emotion": "Neutral 50",
+      "response_text": "Nothing really. Just some runaway slave from the Commonwealth. Eulogy had us running around like morons looking for him. I'm done with that.{arrogant}",
+      "index": "32"
+    },
+    {
+      "topic": "MS08SlaverClue2",
+      "topic_text": "What do you know about an android from the Commonwealth?",
+      "emotion": "Neutral 50",
+      "response_text": "Here's a copy of the so-called \"android recording.\" I'm done wasting my time on that old job.",
+      "index": "33"
+    },
+    {
+      "topic": "MS08SlaverClue3",
+      "topic_text": "You know anything about an android who needed some surgery?",
+      "emotion": "Neutral 50",
+      "response_text": "Despite all his grumbling, I think Eulogy still wants us finding that guy. Zimmer is asking around hiring other people. Makes us look bad.",
+      "index": "35"
+    },
+    {
+      "topic": "MS08SlaverClue3Bribe",
+      "topic_text": "I'll give you 100 caps for what you've got on this android.",
+      "emotion": "Neutral 50",
+      "response_text": "Despite all his grumbling, I think Eulogy still wants us finding that guy. Zimmer is asking around hiring other people. Makes us look bad.",
+      "index": "41"
+    },
+    {
+      "topic": "MS08SlaverClue3Stat",
+      "topic_text": "I'm losing my patience! Tell me about the android with the face job!",
+      "emotion": "Neutral 50",
+      "response_text": "Despite all his grumbling, I think Eulogy still wants us finding that guy. Zimmer is asking around hiring other people. Makes us look bad.",
+      "index": "43"
+    },
+    {
+      "topic": "MS08SlaverClue4",
+      "topic_text": "You have any info on where this Commonwealth android is hiding?",
+      "emotion": "Disgust 50",
+      "response_text": "Trail led to Rivet City. Sister's our inside man. I think he's long given up looking for that android, and is just living it up on that boat.{annoyed}",
+      "index": "45"
+    },
+    {
+      "topic": "MS08SlaverClue4Bribe",
+      "topic_text": "Here's a 100 cap \"donation.\" Now, where's that escaped android?",
+      "emotion": "Neutral 50",
+      "response_text": "Trail led to Rivet City. Sister's our inside man. I think he's long given up looking for that android, and is just living it up on that boat.",
+      "index": "48"
+    },
+    {
+      "topic": "MS09TLWhereFamily",
+      "topic_text": "Ever heard of the Family?",
+      "emotion": "Disgust 70",
+      "response_text": "Yeah, supposed to be some kinda gang or something. Big deal. They wouldn't dare come around Paradise Falls.",
+      "index": "49"
+    },
+    {
+      "topic": "MS13AllowedIn",
+      "topic_text": "I got you the slave you wanted. I can get into Paradise Falls now, right?",
+      "emotion": "Surprise 50",
+      "response_text": "Yeah. Yeah. Go on up, hotshot. Just don't screw around, or things will get ugly. No second chances. Got it?{razzing a new recruit}",
+      "index": "50"
+    },
+    {
+      "topic": "MS13BadKarmaQuestHook",
+      "topic_text": "What's this mutually beneficial offer you mentioned?",
+      "emotion": "Surprise 50",
+      "response_text": "I got this Mesmetron thing. It's some kind of stun gun. I'd like you to test it out for me. Should make getting slaves easier.",
+      "index": "51"
+    },
+    {
+      "topic": "MS13BribeAvailableChoice",
+      "topic_text": "Here's your 500 caps. I can go in now, right?",
+      "emotion": "Happy 50",
+      "response_text": "Thank you. Pleasure doing business with you. Enjoy your visit to Paradise Falls.{gladly accepting a bribe}",
+      "index": "55"
+    },
+    {
+      "topic": "MS13BribeNotAccepting",
+      "topic_text": "Yeah, I'm not going to pay you that much.",
+      "emotion": "Anger 25",
+      "response_text": "Fine. I didn't think you would anyway. You done bothering me yet? Piss off!{annoyed}",
+      "index": "58"
+    },
+    {
+      "topic": "MS13BuyNo",
+      "topic_text": "Nah, maybe another time.",
+      "emotion": "Surprise 25",
+      "response_text": "Alright. Whatever you say, boss; it's your loss. But you can make a pile of caps. Let me know when you change your mind.{dismissive and passively aggressive, trying to get the player to join their organization}",
+      "index": "59"
+    },
+    {
+      "topic": "MS13BuySpeech",
+      "topic_text": "Come on, don't charge me. It was an... accident. Won't happen again.",
+      "emotion": "Happy 75",
+      "response_text": "Okay, fine. But just this once. Here's another collar. Be more careful this time.{amused and feeling camaraderie}",
+      "index": "60"
+    },
+    {
+      "topic": "MS13BuyYes",
+      "topic_text": "Sure, I'll buy another one. Here's 100 caps.",
+      "emotion": "Disgust 50",
+      "response_text": "Try to be more careful next time.{talking down as if to a moron}",
+      "index": "61"
+    },
+    {
+      "topic": "MS13CollarQuestion",
+      "topic_text": "I'd like to know more about the slave collar.",
+      "emotion": "Disgust 25",
+      "response_text": "Jeesuz, do you ever shut the hell up? What do you want to know?{getting annoyed}",
+      "index": "63"
+    },
+    {
+      "topic": "MS13CollarQuestion1",
+      "topic_text": "How does the collar work?",
+      "emotion": "Neutral 50",
+      "response_text": "It's got a radio signal we monitor here at Paradise Falls. If a slave's going the wrong direction, we push a button, and boom. His head pops.",
+      "index": "64"
+    },
+    {
+      "topic": "MS13CollarQuestion2",
+      "topic_text": "How do I get it on a slave?",
+      "emotion": "Happy 10",
+      "response_text": "Look. I gave you that Mesmetron thing. Should be a piece of cake.{getting annoyed he has to repeat himself}",
+      "index": "66"
+    },
+    {
+      "topic": "MS13CollarQuestion3",
+      "topic_text": "Who can I put it on?",
+      "emotion": "Neutral 50",
+      "response_text": "I don't care who the hell you put it on. I'll split the commission with you for any slave you send to us.",
+      "index": "68"
+    },
+    {
+      "topic": "MS13CollarQuestionBack",
+      "topic_text": "Let's talk about something else.",
+      "emotion": "Anger 25",
+      "response_text": "Damn. I thought you were finally going to shut up. What do you want now?{getting annoyed}",
+      "index": "70"
+    },
+    {
+      "topic": "MS13Hook00a",
+      "topic_text": "I don't have time to chit chat with the help. Let me in already.",
+      "emotion": "Disgust 15",
+      "response_text": "Yeah, okay. Be a smart ass. See where that gets ya...{cocky and dismissive (challenging a new recruit)}",
+      "index": "71"
+    },
+    {
+      "topic": "MS13Hook00bMS13Hook0b",
+      "topic_text": "Why can't I go up there?",
+      "emotion": "Neutral 50",
+      "response_text": "There's two kinds of people who get into Paradise Falls. Slaves and Slavers.{cocky and dismissive (challenging a new recruit)}",
+      "index": "73"
+    },
+    {
+      "topic": "MS13Hook00cMS13Hook0c",
+      "topic_text": "I won't cause any trouble. I just want to look around.",
+      "emotion": "Surprise 50",
+      "response_text": "You \"want to look around?\" Where the hell do you think you are? Stop wasting my time, asshole.{mocking and surprised that someone is so stupid}",
+      "index": "77"
+    },
+    {
+      "topic": "MS13Hook01SpeechBribeMS13Hook00b",
+      "topic_text": "Everyone has a price. What's yours?",
+      "emotion": "Surprise 50",
+      "response_text": "We might be able to work something out. But it won't be cheap. If I vouch for you and you go mess up our groove, it's my ass on the line.{intrigued by an offer for a bribe}",
+      "index": "79"
+    },
+    {
+      "topic": "MS13Hook01aMS13Hook00a",
+      "topic_text": "What the hell is your problem? Let me in!",
+      "emotion": "Anger 50",
+      "response_text": "My \"problem\" is I got a goddamn job to do. And that's keeping assholes and morons from bothering Eulogy Jones and his enterprise.{tough guy and about to get violent}",
+      "index": "81"
+    },
+    {
+      "topic": "MS13Hook01cMS13Hook00c",
+      "topic_text": "Maybe there's something you need, huh? I help you, you let me in. Deal?",
+      "emotion": "Anger 50",
+      "response_text": "What I \"need\" is for you to piss off.  Eulogy Jones doesn't have time for putting up with morons and assholes like you. That's my job.{tough guy and about to get violent}",
+      "index": "84"
+    },
+    {
+      "topic": "MS13Hook02a",
+      "topic_text": "You looking for a fight, asshole? Just say the word.",
+      "emotion": "Surprise 50",
+      "response_text": "Hmm.  Maybe I could use someone like you. Think you can round up some assets for Eulogy Jones? Might get you into Paradise.{taking a liking to a smack talking violent thug like himself}",
+      "index": "86"
+    },
+    {
+      "topic": "MS13Hook02b",
+      "topic_text": "What if I were to get you some slaves? Then would you let me in?",
+      "emotion": "Surprise 50",
+      "response_text": "Think you got what it takes, do you? Hmm...{considering the merit of the person talking to him}",
+      "index": "87"
+    },
+    {
+      "topic": "MS13Hook02c",
+      "topic_text": "Come on. Let me in already!",
+      "emotion": "Surprise 25",
+      "response_text": "You don't give up, do you? Hmm... Maybe I have something you can do for me, and if you don't screw it up, maybe I'll help you into Paradise.{doubtful}",
+      "index": "89"
+    },
+    {
+      "topic": "MS13Hook02d",
+      "topic_text": "Who's Eulogy Jones?",
+      "emotion": "Surprise 50",
+      "response_text": "Are you for real? You come up to a man's place of business, and you don't even know who he is?{shocked that he's talking to a moron}",
+      "index": "91"
+    },
+    {
+      "topic": "MS13Hook11RefuseMS13Hook11c",
+      "topic_text": "I'm not going to do it.",
+      "emotion": "Anger 50",
+      "response_text": "What?! After all that yapping about wanting to get in, and you're just going to walk away? Why didn't you do that in the first place?!{frustrated and getting violent}",
+      "index": "94"
+    },
+    {
+      "topic": "MS13Hook11a",
+      "topic_text": "I'll round up some slaves for you. But what's the catch?",
+      "emotion": "Surprise 50",
+      "response_text": "I'm glad you asked! I got this Mesmetron thing. It's some kind of stun gun. I want you to test it out for me. A little research project.",
+      "index": "98"
+    },
+    {
+      "topic": "MS13Hook11b",
+      "topic_text": "I'll get your slaves.",
+      "emotion": "Surprise 50",
+      "response_text": "One more thing. I got this Mesmetron thing. It's some kind of stun gun. I want you to test it out for me. A little research project.",
+      "index": "103"
+    },
+    {
+      "topic": "MS13Hook1Refuse",
+      "topic_text": "I'm not going to do your dirty work.",
+      "emotion": "Sad 50",
+      "response_text": "Oh no? I'm crushed. Heart broken. Here I thought we could be best friends for life.{mocking and sarcastic, fake sadness}",
+      "index": "108"
+    },
+    {
+      "topic": "MS13Hook1a",
+      "topic_text": "You want a fucking resume? Just tell me what to do, asshole.",
+      "emotion": "Happy 50",
+      "response_text": "Maybe you would fit in around here.{amused by the players crude humor}",
+      "index": "112"
+    },
+    {
+      "topic": "MS13Hook1b",
+      "topic_text": "It can't be that hard, can it? I mean, you're a Slaver after all...",
+      "emotion": "Surprise 100",
+      "response_text": "Okay, hotshot. We'll see how you do. Eulogy's got a few special contracts he wants filled. I'm too busy or I'd grab them myself.{cocky and dismissive}",
+      "index": "117"
+    },
+    {
+      "topic": "MS13Hook1c",
+      "topic_text": "I can enslave criminals and the like, right? I don't have to enslave innocents?",
+      "emotion": "Disgust 50",
+      "response_text": "I promise, nobody I'm sending you after is \"innocent\". Whatever that means.{condescending to a someone with exaggerated \"morals\"}",
+      "index": "122"
+    },
+    {
+      "topic": "MS13HookAfterBribe",
+      "topic_text": "I've been thinking about getting into the trade. You need a dog catcher?",
+      "emotion": "Disgust 10",
+      "response_text": "Hmm... Eulogy's pretty picky about who gets on the Paradise Falls crew, and the interview process is pretty damn painful.{condescendingly considering the possibility}",
+      "index": "127"
+    },
+    {
+      "topic": "MS13HookThreaten",
+      "topic_text": "Do you know who you're dealing with? Let me in. Now!",
+      "emotion": "Fear 50",
+      "response_text": "There's no need to flex. I was just playing with you. We know who you are. You can come in.{trying to hide his fear with bluser}",
+      "index": "129"
+    },
+    {
+      "topic": "MS13MesmetronBuyAmmo",
+      "topic_text": "You've got yourself a deal. Here's your 200 caps.",
+      "emotion": "Disgust 25",
+      "response_text": "10 more batteries. Don't waste them, these things don't grow on trees you know.{annoyed}",
+      "index": "135"
+    },
+    {
+      "topic": "MS13MesmetronBuyAmmoNo",
+      "topic_text": "Never mind.",
+      "emotion": "Disgust 75",
+      "response_text": "Will you stop wasting my time?{annoyed}",
+      "index": "137"
+    },
+    {
+      "topic": "MS13MesmetronQuestion",
+      "topic_text": "Tell me more about this Mesmetron.",
+      "emotion": "Disgust 50",
+      "response_text": "Great. I'd LOVE to talk to you some more. What the hell do you want to know now?{(sarcastic) annoyed that he's still talking to this idiot}",
+      "index": "138"
+    },
+    {
+      "topic": "MS13MesmetronQuestion1",
+      "topic_text": "How's the Mesmetron work?",
+      "emotion": "Anger 50",
+      "response_text": "How the hell should I know? I found it in some old military base. It's a gun, ain't it? Point it at someone and pull the trigger.{annoyed he's being asked stupid questions}",
+      "index": "139"
+    },
+    {
+      "topic": "MS13MesmetronQuestion3",
+      "topic_text": "Where did you find it?",
+      "emotion": "Neutral 50",
+      "response_text": "Found it in a box locked up in some old military base. I've been meaning to test it out, but Eulogy keeps me so busy, I don't got time.",
+      "index": "141"
+    },
+    {
+      "topic": "MS13MesmetronQuestionBack",
+      "topic_text": "That's enough about the Mesmetron for now.",
+      "emotion": "Neutral 50",
+      "response_text": "If you got more questions, read the shit I gave you. If you can't read, go find a group of Raiders to hang with. I don't waste time with idiots.{talking down to someone who's stupider than he is}",
+      "index": "143"
+    },
+    {
+      "topic": "MS13MesmetronQuestionBuyAmmo",
+      "topic_text": "I need to buy some more ammo for the Mesmetron.",
+      "emotion": "Disgust 50",
+      "response_text": "You wasted everything I gave you already? Jesus. Whatever. I'll sell you 10 more for 200 caps. Take it or leave it.{mildly annoyed}",
+      "index": "144"
+    },
+    {
+      "topic": "MS13QuestionGoodbye",
+      "topic_text": "All right. It's time for me to go.",
+      "emotion": "Happy 50",
+      "response_text": "Great! I was wondering when you'd finally shut-up.{not joking, is glad to stop talking}",
+      "index": "146"
+    },
+    {
+      "topic": "MS13SlavesNewCollar",
+      "topic_text": "I need another collar so I can get more slaves.",
+      "emotion": "Anger 50",
+      "response_text": "Those collars ain't easy to come by. So, you got to pay for the ones you waste.{grumpily}",
+      "index": "148"
+    },
+    {
+      "topic": "MS13SlavesQuestion",
+      "topic_text": "You want just these VIPs, or do you want other slaves too?",
+      "emotion": "Neutral 50",
+      "response_text": "Bring me one of those VIPs and I'll let you up into Paradise Falls.{talking down to someone who's stupider than he is}",
+      "index": "149"
+    },
+    {
+      "topic": "MS13TargetsQuestion",
+      "topic_text": "Tell me more about these preferred targets you want me to enslave.",
+      "emotion": "Disgust 75",
+      "response_text": "There's four that Eulogy wants especially. Arkansas, Susan Lancaster, Red, and Flak. Which of those assholes do you want to know about?",
+      "index": "154"
+    },
+    {
+      "topic": "MS13TargetsQuestion1",
+      "topic_text": "Arkansas.",
+      "emotion": "Anger 50",
+      "response_text": "Arkansas is that asshole holed up in that minefield. Killed a whole Paradise Falls crew. Eulogy wants him to suffer.{explaining why he wants to enslave this person}",
+      "index": "156"
+    },
+    {
+      "topic": "MS13TargetsQuestion2",
+      "topic_text": "Susan Lancaster.",
+      "emotion": "Disgust 50",
+      "response_text": "Susan Lancaster lives at Tenpenny Tower. She was one of us. Let's just say she never paid the exit price.{explaining why he wants to enslave this person}",
+      "index": "158"
+    },
+    {
+      "topic": "MS13TargetsQuestion3",
+      "topic_text": "Red.",
+      "emotion": "Happy 50",
+      "response_text": "Red is that hot doctor chick from Big Town. She made us some promises that she never paid up. Now it's time to collect.{explaining why he wants to enslave this person}",
+      "index": "159"
+    },
+    {
+      "topic": "MS13TargetsQuestion4",
+      "topic_text": "Flak.",
+      "emotion": "Anger 50",
+      "response_text": "Flak used to be one of us. Thinks he can make a new life in Rivet City. He's sold us out on more than one occasion. It's time for retribution.{explaining why he wants to enslave this person}",
+      "index": "160"
+    },
+    {
+      "topic": "MS13TargetsQuestionBack",
+      "topic_text": "Enough about these guys.",
+      "emotion": "Anger 50",
+      "response_text": "Great. Wasn't my idea to spend all day talking about these assholes.",
+      "index": "161"
+    },
+    {
+      "topic": "PFGrouseGreetingInitial1",
+      "topic_text": "Paradise Falls? What's that?",
+      "emotion": "Neutral 50",
+      "response_text": "Are you kidding me? You've never heard of Paradise Falls? Oh, right. The suit. You're right out of the vault, aren't you? Great.",
+      "index": "162"
+    },
+    {
+      "topic": "PFGrouseGreetingInitial1a",
+      "topic_text": "Slaves? Like people? That's appalling!",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah, well, you don't like it? Keep walking. It's that simple.",
+      "index": "167"
+    },
+    {
+      "topic": "PFGrouseGreetingInitial1a1",
+      "topic_text": "Yeah, whatever. Let's talk about something else.",
+      "emotion": "Neutral 50",
+      "response_text": "Like what? Don't be wasting my time out here, or I'll throw you in the pens with the rest of the meat.",
+      "index": "169"
+    },
+    {
+      "topic": "PFGrouseGreetingInitial1a2",
+      "topic_text": "I'm out of here. You people are sick.",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah, don't let any bullets hit you in the ass on your way out.{dismissive}",
+      "index": "170"
+    },
+    {
+      "topic": "PFGrouseGreetingInitial1a3",
+      "topic_text": "I'll let my gun do the preaching.",
+      "emotion": "Happy 100",
+      "response_text": "Then bring it on, reverend!{happy to be able to finally shut you up with his gun}",
+      "index": "171"
+    },
+    {
+      "topic": "PFGrouseGreetingInitial1b",
+      "topic_text": "Slaves, huh? Well, everyone's got to make a living.",
+      "emotion": "Neutral 50",
+      "response_text": "Yep. And if you're not tough enough to survive, at least you can be useful to those of us who are.",
+      "index": "172"
+    },
+    {
+      "topic": "PFGrouseGreetingInitial2",
+      "topic_text": "So, can I head on up?",
+      "emotion": "Neutral 50",
+      "response_text": "You? I don't think so. You're not really... let's just say that you wouldn't fit in up there.",
+      "index": "173"
+    },
+    {
+      "topic": "PFGrouseGreetingInitial3",
+      "topic_text": "Never mind. It's not a place I want to be.",
+      "emotion": "Neutral 50",
+      "response_text": "Good choice. Now piss off and stop wasting my time.",
+      "index": "176"
+    },
+    {
+      "topic": "SpeechChallengeFailure",
+      "topic_text": "SpeechChallengeFailure",
+      "emotion": "Disgust 50",
+      "response_text": "Nice try asshole. Pay up or find someone else's time to waste.",
+      "index": "177"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "I have to go now.",
+      "emotion": "Neutral 50",
+      "response_text": "Sure thing.{friendly}",
+      "index": "181"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Anger 50",
+      "response_text": "Slaver business only, remember? Now get out of here before I decide to use you for target practice.",
+      "index": "186"
+    },
+    {
+      "topic": "MS13GrouseWarning",
+      "topic_text": "MS13GrouseWarning",
+      "emotion": "Anger 50",
+      "response_text": "You ain't allowed up there, you hear me? Go any farther and you're a dead man. I ain't warning you twice.{shouted warning from a distance}",
+      "index": "196"
+    },
+    {
+      "topic": "PFTalkGrouseRicher1",
+      "topic_text": "PFTalkGrouseRicher1",
+      "emotion": "Neutral 50",
+      "response_text": "Pfft. I wish. I ain't seen a damn thing all day.",
+      "index": "198"
+    },
+    {
+      "topic": "PFTalkGrouseRicher3",
+      "topic_text": "PFTalkGrouseRicher3",
+      "emotion": "Neutral 50",
+      "response_text": "What are you talking about, you shot someone this morning! That guy who showed up and tried to run when he figured out where he was!",
+      "index": "200"
+    },
+    {
+      "topic": "PFTalkRichterGrouse2",
+      "topic_text": "PFTalkRichterGrouse2",
+      "emotion": "Neutral 50",
+      "response_text": "I don't see where that's a problem.",
+      "index": "202"
+    },
+    {
+      "topic": "PFTalkRichterGrouse4",
+      "topic_text": "PFTalkRichterGrouse4",
+      "emotion": "Neutral 50",
+      "response_text": "You're kidding, right? You have to be.",
+      "index": "204"
+    }
+  ],
+  "combat": [
+    {
+      "topic": "GuardTrespass",
+      "topic_text": "GuardTrespass",
+      "emotion": "Anger 50",
+      "response_text": "Where do you think you're going, asshole?",
+      "index": "206"
+    }
+  ]
+}

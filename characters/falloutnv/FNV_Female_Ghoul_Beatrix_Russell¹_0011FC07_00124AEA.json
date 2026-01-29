@@ -1,0 +1,286 @@
+{
+  "name": "Beatrix Russell¹",
+  "url": "/wiki/Beatrix_Russell",
+  "dialogue_name": "VFSBeatrixRussell.txt",
+  "dialogue_url": "/wiki/VFSBeatrixRussell.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "0011FC07",
+  "ref_id": "00124AEA",
+  "editor_id": "VFSBeatrixRussell",
+  "location": "Old Mormon Fort",
+  "location_url": "/wiki/Old_Mormon_Fort",
+  "descriptions": [
+    "Beatrix Russell is a ghoul mercenary working as security for the Followers of the Apocalypse in the Old Mormon Fort in Freeside in Fallout: New Vegas.",
+    "Beatrix, like most ghouls, is long-lived and world-wise, though in her case, also world-weary.",
+    "Having been around since before the Great War,",
+    "Cost: 25 caps",
+    "Killing her after completing the quest Wang Dang Atomic Tango will still result in Followers of the Apocalypse Infamy."
+  ],
+  "race": "Ghoul",
+  "gender": "Female",
+  "affiliation": "Followers of the ApocalypseAtomic Wrangler Casino(optional)",
+  "role": "GuardDominatrixProstitute(optional)",
+  "detailed_location": "Old Mormon FortAtomic Wrangler Casino(optional)",
+  "voice_actor": "Karen Strassman",
+  "special": {
+    "Strength": 6,
+    "Perception": 7,
+    "Endurance": 5,
+    "Charisma": 3,
+    "Intelligence": 3,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "mod_special_values": {
+    "Strength": 6,
+    "Perception": 8,
+    "Endurance": 5,
+    "Charisma": 4,
+    "Intelligence": 3,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "tag_skills": [
+    {
+      "Explosives:": "89(91)"
+    },
+    {
+      "Guns:": "92(97)"
+    },
+    {
+      "Sneak:": "87"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Neutral",
+  "voice_type": "FemaleGenericGhoul",
+  "geck_race": "Ghoul",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "Howdy.",
+      "index": "1"
+    },
+    {
+      "topic": "VFreeformFreesideVFSBeatriceRussellTopic000",
+      "topic_text": "Interested in working for the Garrets?",
+      "emotion": "Neutral 50",
+      "response_text": "They already have that pig McCaffery working for them. Do they need another guard?",
+      "index": "2"
+    },
+    {
+      "topic": "VFreeformFreesideVFSBeatrixRussellTopic000",
+      "topic_text": "Got any advice to share?",
+      "emotion": "Neutral 50",
+      "response_text": "Feed a man for free, and he'll be back asking for more.",
+      "index": "4"
+    },
+    {
+      "topic": "VFreeformFreesideVFSBeatrixRussellTopic001",
+      "topic_text": "Let's talk about something else.",
+      "emotion": "Neutral 50",
+      "response_text": "What do you have in mind?",
+      "index": "10"
+    },
+    {
+      "topic": "VFreeformFreesideVFSBeatrixRussellTopic003<Barter>",
+      "topic_text": "One of the employee perks is a discount...",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] Now you're talking. I suppose I could sleaze it up a bit for their customers if it means I have a non-stop supply of drink.",
+      "index": "11"
+    },
+    {
+      "topic": "VFreeformFreesideVFSBeatrixRussellTopic004",
+      "topic_text": "That's a bit cryptic, Beatrix.",
+      "emotion": "Happy 50",
+      "response_text": "Hey, who doesn't enjoy a little pinch and squeal every once in a while?",
+      "index": "14"
+    },
+    {
+      "topic": "VFreeformFreesideVFSBeatrixRussellTopic005",
+      "topic_text": "You could be the next big thing at the Wrangler.",
+      "emotion": "Neutral 50",
+      "response_text": "I've never been much of a showboat, or cared about being a public figure. I'm plenty content with caps for an honest hard day's work.",
+      "index": "15"
+    },
+    {
+      "topic": "VFreeformFreesideVFSBeatrixRussellTopic006",
+      "topic_text": "Let's talk about something else.",
+      "emotion": "Neutral 50",
+      "response_text": "What do you have in mind?",
+      "index": "16"
+    },
+    {
+      "topic": "VFreeformFreesideVFSBeatrixRussellTopic007",
+      "topic_text": "So, who are you?",
+      "emotion": "Neutral 50",
+      "response_text": "I've been around a while. Currently working for the Followers as a gun for hire, but it's getting rather dull.",
+      "index": "17"
+    },
+    {
+      "topic": "VFreeformFreesideVFSBeatrixRussellTopic008",
+      "topic_text": "I have some questions.",
+      "emotion": "Neutral 50",
+      "response_text": "And I may have answers.",
+      "index": "20"
+    },
+    {
+      "topic": "VFreeformFreesideVFSBeatrixRussellTopic010",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Goodbye.",
+      "index": "21"
+    },
+    {
+      "topic": "VFreeformFreesideVFSBeatrixRussellTopic015",
+      "topic_text": "Tell me about Freeside.",
+      "emotion": "Neutral 50",
+      "response_text": "What starts in misery tends to stay there. Freeside wasn't Freeside until six or seven years ago.",
+      "index": "22"
+    },
+    {
+      "topic": "VFreeformFreesideVFSBeatrixRussellTopic016",
+      "topic_text": "What are you doing with the Followers?",
+      "emotion": "Neutral 50",
+      "response_text": "I joined up looking for a decent-paying job. Granted, the pay is all right, but they won't let me kick back and slog a brew at the end of the day.",
+      "index": "25"
+    },
+    {
+      "topic": "VFreeformFreesideVFSBeatrixRussellTopic017",
+      "topic_text": "I bet you've seen a lot over the years.",
+      "emotion": "Happy 50",
+      "response_text": "I've been around long enough to observe patterns of human behavior. Physical and mental anguish are especially exciting to explore.",
+      "index": "27"
+    },
+    {
+      "topic": "VFreeformFreesideVFSBeatrixRussellTopic018",
+      "topic_text": "I'm in the market for something a little unusual.",
+      "emotion": "Neutral 50",
+      "response_text": "I'm available, sweetie - but you'll have to do as I say.",
+      "index": "28"
+    },
+    {
+      "topic": "VFreeformFreesideVFSBeatrixRussellTopic019",
+      "topic_text": "Sounds good to me. <Pay 25 caps.>",
+      "emotion": "Neutral 50",
+      "response_text": "Meet me upstairs. I'll try to leave you in one piece.",
+      "index": "30"
+    },
+    {
+      "topic": "VFreeformFreesideVFSBeatrixRussellTopic020",
+      "topic_text": "Maybe another time.",
+      "emotion": "Neutral 50",
+      "response_text": "Suit yourself. Anything else on your mind?",
+      "index": "31"
+    },
+    {
+      "topic": "VFreeformFreesideVFSBeatrixRussellTopic021",
+      "topic_text": "What about The Kings?",
+      "emotion": "Neutral 50",
+      "response_text": "What about them? Pretty much the sort of gang you'd find anywhere else, just with better clothes.",
+      "index": "32"
+    },
+    {
+      "topic": "VFreeformFreesideVFSBeatrixRussellTopic022",
+      "topic_text": "Let's talk about something else.",
+      "emotion": "Neutral 50",
+      "response_text": "What did you want to know?",
+      "index": "34"
+    },
+    {
+      "topic": "VFreeformFreesideVFSBeatrixRussellTopic023",
+      "topic_text": "What do you think of the NCR?",
+      "emotion": "Neutral 50",
+      "response_text": "I reckon they care about getting water and electricity from the dam, and that's where it ends.",
+      "index": "35"
+    },
+    {
+      "topic": "VFreeformFreesideVFSBeatrixRussellTopic024",
+      "topic_text": "What's your opinion of Mr. House?",
+      "emotion": "Neutral 50",
+      "response_text": "Before or after the human race shot itself in the foot? I been around long enough to have both opinions, see.",
+      "index": "37"
+    },
+    {
+      "topic": "VFreeformFreesideVFSBeatrixRussellTopic025",
+      "topic_text": "What do you think of the Followers of the Apocalypse?",
+      "emotion": "Neutral 50",
+      "response_text": "I don't know how they do it. They're like saints, those Followers.",
+      "index": "40"
+    },
+    {
+      "topic": "VFreeformFreesideVFSBeatrixRussellTopic026",
+      "topic_text": "What do you know about the Van Graffs?",
+      "emotion": "Neutral 50",
+      "response_text": "A couple of Radscorpions, those two. Gloria is the stable one, but she'd slit your throat if there's a profit in it.",
+      "index": "42"
+    },
+    {
+      "topic": "VFreeformFreesideVFSBeatrixRussellTopic027",
+      "topic_text": "This would be as an \"escort.\"",
+      "emotion": "Neutral 50",
+      "response_text": "I've escorted my share of idiot tourists around Freeside. Too much trouble for what it pays.",
+      "index": "44"
+    },
+    {
+      "topic": "VFreeformFreesideVFSBeatrixRussellTopic028",
+      "topic_text": "When I say \"escort,\" I mean \"prostitute.\"",
+      "emotion": "Neutral 50",
+      "response_text": "I'm all boot knives and leather, friend - and a ghoul, besides. What kind of weirdo wants what I've got?",
+      "index": "45"
+    },
+    {
+      "topic": "VFreeformFreesideVFSBeatrixRussellTopic029",
+      "topic_text": "Turns out there are customers looking for someone just like you.",
+      "emotion": "Neutral 50",
+      "response_text": "Weirdos into bullwhips and necrosis, eh? Doesn't sound half-bad...",
+      "index": "46"
+    },
+    {
+      "topic": "VFreeformFreesideVFSBeatrixRussellTopic030<Speech>",
+      "topic_text": "You'd be an independent - with a deep discount on the booze, maybe?",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] Hmm. They do have a damn good selection of hooch over at the Wrangler.",
+      "index": "48"
+    },
+    {
+      "topic": "VFreeformFreesideVFSBeatrixRussellTopic032",
+      "topic_text": "Never mind.",
+      "emotion": "Neutral 50",
+      "response_text": "Then, what do you want?",
+      "index": "52"
+    },
+    {
+      "topic": "VFreeformFreesideVFSBeatrixRussellTopic033",
+      "topic_text": "It's not like you'd be a slave. You'd get to choose your clients.",
+      "emotion": "Neutral 50",
+      "response_text": "What's the difference?! Once you start working for the man, you gotta buy nice things to wear.",
+      "index": "53"
+    },
+    {
+      "topic": "VFreeformFreesideVFSBeatrixRussellTopic036",
+      "topic_text": "You'll be paid well, and room and board is on the house.",
+      "emotion": "Neutral 50",
+      "response_text": "Not saying there wouldn't be advantages, especially if it'd let me start saving up my caps...",
+      "index": "55"
+    },
+    {
+      "topic": "VFreeformFreesideVFSBeatrixRussellTopic037",
+      "topic_text": "Perhaps a bottle of Jacob's Absinthe might convince you?",
+      "emotion": "Neutral 50",
+      "response_text": "Absinthe?! I haven't had a taste of that in decades!",
+      "index": "56"
+    }
+  ],
+  "conversation": [],
+  "combat": []
+}

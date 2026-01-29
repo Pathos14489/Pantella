@@ -1,0 +1,272 @@
+{
+  "name": "Paladin Ramos",
+  "url": "/wiki/Ramos",
+  "dialogue_name": "Ramos.txt",
+  "dialogue_url": "/wiki/Ramos.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "00164604",
+  "ref_id": "000E2807",
+  "editor_id": "Ramos",
+  "location": "Hidden Valley bunker",
+  "location_url": "/wiki/Hidden_Valley_bunker",
+  "descriptions": [
+    "Senior Paladin Ramos is the head of security for the Hidden Valley bunker in 2281.",
+    "Ramos is the head of security in the Mojave Chapter of the Brotherhood of Steel and guards the entrance to the Hidden Valley bunker where the Brotherhood has secluded itself since its defeat at HELIOS One. As head of security, Ramos is responsible for protecting the chapter from outside threats. Under McNamara's command, this includes ensuring the integrity of the lockdown, preventing personnel from within leaving and those without from returning to the bunker. He only makes exceptions for supply runners, high-security patrols and the occasional pair of initiates trying to get a feel for the surface. He pays attention to details, but he is not heartless.",
+    "Ramos is a veteran of Operation Sunburst who survived both the NCR siege and McNamara's desperate counter-offensive west. As a result of his experiences, he despises Elder Elijah and his lapse in command and will be the first to execute anyone not of the Brotherhood to ensure its ideals are upheld and the chapter safe. His diligence ensured that there were no incidents for over a year. His room is just at the bottom of the bunker's entry stairway and will confront the Courier as soon as they enter the bunker, taking them into custody unless they are accompanied by Scribe Veronica."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Mojave Brotherhood of Steel",
+  "role": "Head of security",
+  "detailed_location": "Hidden Valley bunkerHELIOS One(formerly)",
+  "voice_actor": "Ron Yuan",
+  "special": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 4,
+    "Intelligence": 4,
+    "Agility": 6,
+    "Luck": 4
+  },
+  "mod_special_values": {
+    "Strength": 7,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 4,
+    "Intelligence": 4,
+    "Agility": 6,
+    "Luck": 4
+  },
+  "level": "4",
+  "tag_skills": [
+    {
+      "Barter:": "39"
+    },
+    {
+      "Guns:": "46"
+    },
+    {
+      "Unarmed:": "39"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Good",
+  "voice_type": "MaleAdult08",
+  "geck_race": "Hispanic",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "You'll find your equipment in the chest to your right. Don't bother coming back until you've dealt with the ranger.",
+      "index": "1"
+    },
+    {
+      "topic": "HVRamosAskForWorkHVAskForWork",
+      "topic_text": "Got anything you need help with?",
+      "emotion": "Neutral 50",
+      "response_text": "Bored already? You should try living down here. Sorry, but I don't really have- oh, for Pete's sake, not again.",
+      "index": "16"
+    },
+    {
+      "topic": "HVRamosBosJoinHVRamosFanboy",
+      "topic_text": "How do I join the Brotherhood of Steel?",
+      "emotion": "Neutral 50",
+      "response_text": "You don't. Ever. You don't even think about it.",
+      "index": "17"
+    },
+    {
+      "topic": "HVRamosExplainSneakedIn",
+      "topic_text": "I'll speak to your Elder. Lead the way.",
+      "emotion": "Neutral 50",
+      "response_text": "Okay. I'll take you to him. Follow me. Closely. Or you'll be shot.",
+      "index": "19"
+    },
+    {
+      "topic": "HVRamosIntercomHelloHVIntercomHello",
+      "topic_text": "Hello?",
+      "emotion": "Neutral 50",
+      "response_text": "[You hear nothing.]",
+      "index": "20"
+    },
+    {
+      "topic": "HVRamosIntercomPassword",
+      "topic_text": "The password is \"Lives to fight another day.\"",
+      "emotion": "Neutral 50",
+      "response_text": "{Thinks you're from one of the lost patrols}[You hear static.]",
+      "index": "24"
+    },
+    {
+      "topic": "HVRamosLost",
+      "topic_text": "Sorry, I just wandered in here. I'm lost.",
+      "emotion": "Neutral 50",
+      "response_text": "Yes. Permanently, I'm afraid.",
+      "index": "29"
+    },
+    {
+      "topic": "VDialogueHiddenValleyRamosHELIOSStory",
+      "topic_text": "Tell me about what happened at HELIOS.",
+      "emotion": "Neutral 50",
+      "response_text": "I'm sure someone's told you all this before. Several years back, we were running our chapter out the HELIOS One solar power station.",
+      "index": "30"
+    },
+    {
+      "topic": "VDialogueHiddenValleyRamosTopic000",
+      "topic_text": "I found some of your people dead out in the waste. They had it on them.",
+      "emotion": "Neutral 50",
+      "response_text": "An interesting story. It may even be true.",
+      "index": "37"
+    },
+    {
+      "topic": "VDialogueHiddenValleyRamosTopic001",
+      "topic_text": "Why do you look so spooked?",
+      "emotion": "Neutral 50",
+      "response_text": "The password you gave is valid, but old. The only way you could have gotten it is from one of our lost patrols.",
+      "index": "40"
+    },
+    {
+      "topic": "VDialogueHiddenValleyRamosTopic002",
+      "topic_text": "Who are you?",
+      "emotion": "Neutral 50",
+      "response_text": "I'm the one asking the questions right now, and you still haven't answered me. I suggest you start doing so.",
+      "index": "41"
+    },
+    {
+      "topic": "VDialogueHiddenValleyRamosTopic003",
+      "topic_text": "Could you just let me go? I really don't care what's down here anymore.",
+      "emotion": "Neutral 50",
+      "response_text": "That's no longer an option, on account of you having one of our passwords. Now if you'd stop stalling, I'd really like to know where you learned it.",
+      "index": "42"
+    },
+    {
+      "topic": "VDialogueHiddenValleyRamosTopic004",
+      "topic_text": "The password is \"And to dare to do it.\"",
+      "emotion": "Neutral 50",
+      "response_text": "{Thinks you're from one of the lost patrols}[You hear static.]",
+      "index": "43"
+    },
+    {
+      "topic": "VDialogueHiddenValleyRamosTopic005",
+      "topic_text": "I appear to be lost. I'll just head back the way I came in.",
+      "emotion": "Anger 50",
+      "response_text": "Not on my watch you won't. You either go with me to the Elder or I put you in the ground right here. Choose.",
+      "index": "48"
+    },
+    {
+      "topic": "VDialogueHiddenValleyRamosTopic006",
+      "topic_text": "I'm not going anywhere with you.",
+      "emotion": "Disgust 50",
+      "response_text": "{Sighs}Your call.",
+      "index": "49"
+    },
+    {
+      "topic": "VDialogueHiddenValleyRamosTopic007",
+      "topic_text": "So you're head of security?",
+      "emotion": "Neutral 50",
+      "response_text": "That's right. Nothing gets in or out of here without me knowing it.",
+      "index": "50"
+    },
+    {
+      "topic": "VDialogueHiddenValleyRamosTopic008",
+      "topic_text": "So why did I have to deal with that Ranger topside?",
+      "emotion": "Neutral 50",
+      "response_text": "Normally, that would have fallen under my jurisdiction, but the Elder thought it'd provide a good test for you, so I backed off.",
+      "index": "51"
+    },
+    {
+      "topic": "VDialogueHiddenValleyRamosTopic009",
+      "topic_text": "Did you know Watkins and Stanton snuck out of here a few weeks ago?",
+      "emotion": "Happy 50",
+      "response_text": "{Laughs}Yeah, I knew about it. They're still young, and they weren't going to go very far.",
+      "index": "52"
+    },
+    {
+      "topic": "VDialogueHiddenValleyRamosTopic010",
+      "topic_text": "What exactly are the rules regarding entering and leaving?",
+      "emotion": "Neutral 50",
+      "response_text": "Under the lockdown, only essential personnel are permitted to enter or leave. That includes supply runners and high security patrols.",
+      "index": "54"
+    },
+    {
+      "topic": "VDialogueHiddenValleyRamosTopic011",
+      "topic_text": "I had other questions.",
+      "emotion": "Neutral 50",
+      "response_text": "Fine by me.",
+      "index": "56"
+    },
+    {
+      "topic": "VDialogueHiddenValleyRamosTopic012",
+      "topic_text": "What would an Elder have to do to get kicked out?",
+      "emotion": "Neutral 50",
+      "response_text": "So you've been talking to Hardin, eh? He's been looking for a way to usurp McNamara ever since the lockdown started.",
+      "index": "57"
+    },
+    {
+      "topic": "VDialogueHiddenValleyRamosTopic013",
+      "topic_text": "The password is \"The better part of valor.\"",
+      "emotion": "Neutral 50",
+      "response_text": "{Thinks you're from one of the lost patrols}[You hear static.]",
+      "index": "62"
+    },
+    {
+      "topic": "VDialogueHiddenValleyRamosTopic021",
+      "topic_text": "One of the datastore entries mentioned the Chain That Binds. What is that, exactly?",
+      "emotion": "Neutral 50",
+      "response_text": "That's an old, old principle that's been around since the Brotherhood was founded. It basically means that you have to obey a superior officer.",
+      "index": "67"
+    },
+    {
+      "topic": "VDialogueHiddenValleyRamosWhoIsElijah",
+      "topic_text": "Who is Elijah?",
+      "emotion": "Neutral 50",
+      "response_text": "Who{emph}was Elijah, more like. He was our Elder before McNamara. Bright guy, but just between you and me he was a little off.",
+      "index": "70"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "HVRamosComment",
+      "topic_text": "HVRamosComment",
+      "emotion": "Neutral 50",
+      "response_text": "Great, looks like they're going at it again.",
+      "index": "74"
+    },
+    {
+      "topic": "HVRamosComment2",
+      "topic_text": "HVRamosComment2",
+      "emotion": "Neutral 50",
+      "response_text": "Give it a few moments. This won't take long, trust me.",
+      "index": "75"
+    },
+    {
+      "topic": "HVRamosIntercomGetRanger",
+      "topic_text": "HVRamosIntercomGetRanger",
+      "emotion": "Neutral 50",
+      "response_text": "You'll find your belongings in the chest to your right. Don't come back until you've dealt with the ranger.",
+      "index": "76"
+    },
+    {
+      "topic": "HVRamosVeronica01",
+      "topic_text": "HVRamosVeronica01",
+      "emotion": "Neutral 50",
+      "response_text": "Behave yourself this time, Veronica.",
+      "index": "77"
+    },
+    {
+      "topic": "HVVeronicaEnter",
+      "topic_text": "HVVeronicaEnter",
+      "emotion": "Neutral 50",
+      "response_text": "We gave you a password, Veronica. It's for your safety.",
+      "index": "79"
+    }
+  ],
+  "combat": []
+}

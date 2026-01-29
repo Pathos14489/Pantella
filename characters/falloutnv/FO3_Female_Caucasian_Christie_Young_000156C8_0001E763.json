@@ -1,0 +1,164 @@
+{
+  "name": "Christie Young",
+  "url": "/wiki/Christie_Young",
+  "dialogue_name": "ChristieYoung.txt",
+  "dialogue_url": "/wiki/ChristieYoung.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": true,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000156C8",
+  "ref_id": "0001E763",
+  "editor_id": "ChristieYoung",
+  "location": "Rivet City",
+  "location_url": "/wiki/Rivet_City",
+  "descriptions": [
+    "Christie Young is the sole cleaning staffer aboard Rivet City in Fallout 3.",
+    "Christie and her family (husband Henry and daughter C.J.) live what could be considered \"normal,\" middle-class lives in Rivet City. While her husband works as a handyman and mechanic for devices around the ship, she cleans the halls and keeps the ship's public areas tidy -- both thankless but necessary jobs.",
+    "Like her husband Henry, Christie looks down on residents of the hangar deck, viewing them as ungrateful and unqualified and even saying they should \"know their place.\"",
+    "Christie loves and is proud of her family.",
+    "Christie and Henry's character flaw is that of pompousness,",
+    "The Youngs also look down on Tammy Hargrave, calling her \"dreadful\" and a \"very troubled woman\" for her rudeness and alcoholic lifestyle. Tammy is emotionally abusive towards her son, James,",
+    "In the morning and early evening she can be found in the Rivet City market, usually to get something to eat at Gary's Galley. In the late mornings and afternoon, she can be found on the upper deck, sweeping the floors. At night she sleeps in her family's quarters on the upper deck."
+  ],
+  "race": "Human",
+  "gender": "Female",
+  "affiliation": "Henry Young",
+  "role": "Cleaner",
+  "detailed_location": "Rivet City",
+  "voice_actor": "Shari Elliker",
+  "special": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 5,
+    "Intelligence": 4,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "mod_special_values": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 5,
+    "Intelligence": 4,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "level": "4",
+  "tag_skills": [
+    {
+      "Barter:": "44"
+    },
+    {
+      "Medicine:": "42"
+    },
+    {
+      "Melee Weap.:": "46"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Good",
+  "voice_type": "FemaleAdult01DefaultDC",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Disgust 50",
+      "response_text": "This place won't clean itself. That's my job.",
+      "index": "1"
+    },
+    {
+      "topic": "MS03RCHistory1Could I ask you about Rivet City's history?",
+      "topic_text": "I'm researching Rivet City's history. Can you tell me about it?",
+      "emotion": "Happy 5",
+      "response_text": "Oh, I don't know about that. For all I know, it's had survivors on it since the war. I'm just thankful it's here!",
+      "index": "3"
+    },
+    {
+      "topic": "MS14TedFind",
+      "topic_text": "Where can I find Ted Strayer?",
+      "emotion": "Neutral 50",
+      "response_text": "Have you tried the common room?  That's where he sleeps.",
+      "index": "6"
+    },
+    {
+      "topic": "RCChristieYoungRelated",
+      "topic_text": "Are you related to Henry Young?",
+      "emotion": "Surprise 50",
+      "response_text": "Henry's my husband.",
+      "index": "9"
+    },
+    {
+      "topic": "RCTopicCJYoungMissingHave you seen C.J. Young lately?",
+      "topic_text": "I found C.J. She was on the lower deck with James Hargrave.",
+      "emotion": "Surprise 50",
+      "response_text": "You brought her back to me!",
+      "index": "12"
+    },
+    {
+      "topic": "RCTopicHangarDeckPeople",
+      "topic_text": "What is this I hear about the Hangar Deck and Upper Deck?",
+      "emotion": "Fear 50",
+      "response_text": "The Hangar Deck people should know their place.",
+      "index": "14"
+    },
+    {
+      "topic": "RCTopicJameHargraveProblemI've met your mother. No wonder you're such a brat.",
+      "topic_text": "Why do you let that James Hargrave kid play with your daughter?",
+      "emotion": "Sad 50",
+      "response_text": "That poor child. His mother, Tammy Hargrave, is a very troubled woman.",
+      "index": "16"
+    },
+    {
+      "topic": "RCTopicWedding",
+      "topic_text": "When are Angela and Diego getting married?",
+      "emotion": "Surprise 50",
+      "response_text": "We haven't had a wedding in Rivet City in I don't know how long.",
+      "index": "19"
+    },
+    {
+      "topic": "RCWhatDoYouDo",
+      "topic_text": "What do you people do here all day?",
+      "emotion": "Sad 50",
+      "response_text": "We're the lucky ones. We don't have to fight just to survive.",
+      "index": "21"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYEI have to go now.",
+      "topic_text": "Thank you for your help, Christie.",
+      "emotion": "Neutral 50",
+      "response_text": "Goodbye.",
+      "index": "23"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Neutral 50",
+      "response_text": "Don't forget to pick up your room, C.J.",
+      "index": "24"
+    },
+    {
+      "topic": "RCGoodbye",
+      "topic_text": "RCGoodbye",
+      "emotion": "Happy 50",
+      "response_text": "Better than last time. I hate the taste of Mirelurk.",
+      "index": "36"
+    },
+    {
+      "topic": "RCPackageEnd",
+      "topic_text": "RCPackageEnd",
+      "emotion": "Neutral 50",
+      "response_text": "Enough chit-chat. I need to get to work. Those halls won't clean themselves.",
+      "index": "48"
+    }
+  ],
+  "combat": []
+}

@@ -1,0 +1,346 @@
+{
+  "name": "Obadiah Blackhall",
+  "url": "/wiki/Obadiah_Blackhall",
+  "dialogue_name": "DLC04FF02ObadiahBlackhall.txt",
+  "dialogue_url": "/wiki/DLC04FF02ObadiahBlackhall.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "xx002F3E",
+  "ref_id": "xx002F3F",
+  "editor_id": "DLC04FF02ObadiahBlackhall",
+  "location": "Blackhall Manor",
+  "location_url": "/wiki/Blackhall_Manor",
+  "descriptions": [
+    "Obadiah Blackhall is one of the inhabitants of Point Lookout in the year 2277.",
+    "Obadiah is the last descendant of the Blackhalls, a both famous and infamous family of wealth inextricably tied to the history of Point Lookout. Obadiah is a stubborn curmudgeon and still entranced by an old tome his family once lost decades ago, the Krivbeknih. The Blackhall family was deeply involved in the commercialization of Point Lookout in the early twenty-first century. Constance Blackhall, head of the estate after the New Plague made her an unexpected widow in 2058, cooperated with entrepreneurs from the Isla Negra Realty Company, who had been trying to acquire family real estate unsuccessfully for years. Despite overwhelming local cultural resistance, Isla Negra persistently attempted to bring tourism and modernization to Point Lookout and St. Mary's County.",
+    "When Obadiah first meets the Lone Wanderer, he is polite, and asks the player to sit down and chat. Obadiah sits in a wheelchair, next to a pair of oxygen canisters and crutches, signaling that he is disabled. His family was one of the first to settle in Point Lookout, starting with Constance Blackhall, his great, great, great grandmother. He currently resides in Blackhall Manor to keep his family's legacy safe.",
+    "He despises other inhabitants of Point Lookout to varying degrees, either because he considers them uncivilized or simply unintelligent and possibly because of the theft of the Krivbeknih. However, it seems he is aware of their belief of the powers of the book as well, and wants the power all to himself.",
+    "The Dark Heart of Blackhall: Blackhall wants the Lone Wanderer to bring back an old family heirloom that was stolen from him by the swampfolk.",
+    "* After completing The Dark Heart of Blackhall if the player returned the book to Obadiah.",
+    "Obadiah Blackhall appears only in the Fallout 3 add-on Point Lookout."
+  ],
+  "race": "Human(Marshfolk)",
+  "gender": "Male",
+  "affiliation": "Ug-Qualtoth",
+  "role": "Owner ofBlackhall Manor",
+  "detailed_location": "Blackhall Manor",
+  "voice_actor": "James Lewis",
+  "special": {
+    "Strength": 1,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 2,
+    "Intelligence": 5,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "mod_special_values": {
+    "Strength": 1,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 2,
+    "Intelligence": 5,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "level": "1",
+  "misc_skills": [
+    {
+      "Hit Points:": "21"
+    }
+  ],
+  "karma": "Neutral",
+  "voice_type": "DLC04MaleNormal",
+  "geck_race": "CaucasianOldAged",
+  "topics": [
+    {
+      "topic": "DLC04ObaBlackHall00TopLvl",
+      "topic_text": "Tell me about Blackhall Manor.",
+      "emotion": "Neutral 50",
+      "response_text": "I don't suppose there's any harm indulging you. What interests you?{Elderly - Player has appealed to his vanity}",
+      "index": "1"
+    },
+    {
+      "topic": "DLC04ObaBlackHallArchitecture",
+      "topic_text": "How old is this place?",
+      "emotion": "Neutral 50",
+      "response_text": "Hundreds of years, and still standing strong. You're within a fine example of Victorian architecture, my friend.",
+      "index": "2"
+    },
+    {
+      "topic": "DLC04ObaBlackHallFamily",
+      "topic_text": "Your family is named after this place?",
+      "emotion": "Neutral 50",
+      "response_text": "Just as much as it's named after us, I suppose. We took the Blackhall name when we arrived on these shores, generations before the Great War.{elderly, preachy.}",
+      "index": "3"
+    },
+    {
+      "topic": "DLC04ObaCellarQuery01",
+      "topic_text": "I usually hide my bodies in the river, but this is nice, too.",
+      "emotion": "Neutral 50",
+      "response_text": "We are nothing alike.  More so than you could ever comprehend. Go now, and never return.",
+      "index": "5"
+    },
+    {
+      "topic": "DLC04ObaCellarQuery02",
+      "topic_text": "I thought this occult nonsense was below you.",
+      "emotion": "Neutral 50",
+      "response_text": "Don't play at what you misunderstand, troglodyte. Get out.",
+      "index": "6"
+    },
+    {
+      "topic": "DLC04ObaCellarQuery03",
+      "topic_text": "Shouldn't be here. Roger that, I'm out of here.",
+      "emotion": "Anger 50",
+      "response_text": "So leave, then.{elderly, dismissive}",
+      "index": "7"
+    },
+    {
+      "topic": "DLC04ObadiahBookReply01",
+      "topic_text": "The Krvibi had it, I took it, and now she's dead.",
+      "emotion": "Fear 50",
+      "response_text": "You have it?  God help us; you do. That damned book is back, and this time it'll be the death of me.",
+      "index": "8"
+    },
+    {
+      "topic": "DLC04ObadiahBookReply02",
+      "topic_text": "<Show him the Book.>",
+      "emotion": "Fear 50",
+      "response_text": "I'll be bloody well damned. She was right.  It's back.",
+      "index": "9"
+    },
+    {
+      "topic": "DLC04ObadiahBookReply03",
+      "topic_text": "I'm sorry, Obadiah, but it's true. The book is here, with me.",
+      "emotion": "Pained 50",
+      "response_text": "I... I see. Friend, this book is the bane of my Family. Now it seems it will be the death of us, too.",
+      "index": "10"
+    },
+    {
+      "topic": "DLC04ObadiahDestroyBook01",
+      "topic_text": "There must be something we can do.  We have the book.",
+      "emotion": "Pained 50",
+      "response_text": "I fear the Blackhalls are lost. The only thing left to do is to destroy this evil book, and spare the world further harm.",
+      "index": "11"
+    },
+    {
+      "topic": "DLC04ObadiahDestroyBook01a",
+      "topic_text": "Wait, what? You're going to kill yourself?",
+      "emotion": "Neutral 50",
+      "response_text": "I... I can't explain it, but I know what I must do. I'm the last Blackhall.",
+      "index": "13"
+    },
+    {
+      "topic": "DLC04ObadiahDestroyBook02",
+      "topic_text": "That can't be the only way to destroy it.",
+      "emotion": "Neutral 50",
+      "response_text": "There is... another option. I could never make the journey myself, though. North, far to the north.{almost speaking to himself.  Thinking out loud.}",
+      "index": "14"
+    },
+    {
+      "topic": "DLC04ObadiahEvilBookMarcellaDead",
+      "topic_text": "They killed her, Obadiah.  I'm sorry.",
+      "emotion": "Surprise 50",
+      "response_text": "Marcella?  Why?  She's done nothing to them!",
+      "index": "18"
+    },
+    {
+      "topic": "DLC04ObadiahEvilBookn01",
+      "topic_text": "She asked me to steal the Krivbeknih. When I returned, she was dead.",
+      "emotion": "Surprise 50",
+      "response_text": "Impossible! That book's been lost to us for generations. You two must have been mistaken.",
+      "index": "21"
+    },
+    {
+      "topic": "DLC04ObadiahEvilBookn02",
+      "topic_text": "They may have killed her twice. It was pretty messy.",
+      "emotion": "Neutral 50",
+      "response_text": "Spare me the details, you goon.",
+      "index": "22"
+    },
+    {
+      "topic": "DLC04ObadiahExplainSacrifice",
+      "topic_text": "What are you talking about?",
+      "emotion": "Neutral 50",
+      "response_text": "This isn't some ordinary book we can toss in a fire and be done with.  I can destroy it here and now, but the ritual requires a sacrifice.",
+      "index": "23"
+    },
+    {
+      "topic": "DLC04ObadiahRitualAccept",
+      "topic_text": "I'll do it, Obadiah.  There's no reason for you to die.",
+      "emotion": "Surprise 50",
+      "response_text": "My friend! This is a truly noble thing you do. You mustn't fail, that book brings nothing but misery and madness to the world.",
+      "index": "25"
+    },
+    {
+      "topic": "DLC04ObadiahRitualRefuse",
+      "topic_text": "I'm sorry, I think you have to do this on your own.",
+      "emotion": "Pained 50",
+      "response_text": "Yes, yes. You're right, of course. I... I guess I should begin right away.",
+      "index": "26"
+    },
+    {
+      "topic": "DLC04ObaFolk00Toplvl",
+      "topic_text": "You really seem to hate the swampfolk.",
+      "emotion": "Neutral 50",
+      "response_text": "I suppose larceny isn't enough reason to hate?",
+      "index": "27"
+    },
+    {
+      "topic": "DLC04ObaFolk01",
+      "topic_text": "Are they dangerous?",
+      "emotion": "Neutral 50",
+      "response_text": "You must be new here if you don't know the answer to that by now.{elderly.  Sarcastic}",
+      "index": "28"
+    },
+    {
+      "topic": "DLC04ObaFolk02",
+      "topic_text": "Do you mean those people living in the old Cathedral?",
+      "emotion": "Disgust 50",
+      "response_text": "No, not them. That lot wants for brains, but they're at least somewhat civilized. The swampfolk have no creed, no morals.",
+      "index": "31"
+    },
+    {
+      "topic": "DLC04ObaFolk03",
+      "topic_text": "Why did they take your book?",
+      "emotion": "Neutral 50",
+      "response_text": "They think the book has a kind of occult power. Superstition and nonsense, of course.",
+      "index": "32"
+    },
+    {
+      "topic": "DLC04ObaIntroA01",
+      "topic_text": "The house looked abandoned, I just wandered in.",
+      "emotion": "Neutral 50",
+      "response_text": "Well, Blackhall Manor isn't abandoned; not yet. At least have the grace to come speak with her owner properly.",
+      "index": "33"
+    },
+    {
+      "topic": "DLC04ObaIntroA02",
+      "topic_text": "I was just admiring the architecture. I didn't mean any offense.",
+      "emotion": "Surprise 50",
+      "response_text": "You're in Blackhall Manor.  This isn't a tourist attraction, but I appreciate your good taste. Come, let's talk.",
+      "index": "34"
+    },
+    {
+      "topic": "DLC04ObaIntroA03",
+      "topic_text": "Nice curtains. Could you try not to bleed on them when I kill you?",
+      "emotion": "Neutral 50",
+      "response_text": "Tough, are you? Good, I might have use for that. Come, let's talk.",
+      "index": "35"
+    },
+    {
+      "topic": "DLC04ObaIntroB01",
+      "topic_text": "I couldn't agree more.",
+      "emotion": "Neutral 50",
+      "response_text": "I'm glad you think so. Conversation is but one of the virtues that separates us from cretins like those swampfolk.",
+      "index": "36"
+    },
+    {
+      "topic": "DLC04ObaIntroB02",
+      "topic_text": "Not really, I usually bludgeon first and ask questions never.",
+      "emotion": "Neutral 50",
+      "response_text": "Ha! Spoken like a true roughneck. That's good. I could use a person of mettle like yourself. You see, a family heirloom of mine has been stolen.",
+      "index": "38"
+    },
+    {
+      "topic": "DLC04ObaKrivGiveBook",
+      "topic_text": "You have the caps, you get the book.",
+      "emotion": "Neutral 50",
+      "response_text": "Yes, yes, of course. Here's your errand fee. Now, give it to me!",
+      "index": "40"
+    },
+    {
+      "topic": "DLC04ObaKrivKeepBook",
+      "topic_text": "I haven't decided what I'm going to do with it yet.",
+      "emotion": "Neutral 50",
+      "response_text": "Surely you're not considering giving it to Marcella? Come now, the woman can't rub two caps together. Give it to me and be paid.",
+      "index": "41"
+    },
+    {
+      "topic": "DLC04ObaMarcellaDied01",
+      "topic_text": "Marcella's dead, actually. I figured you had something to do with that.",
+      "emotion": "Surprise 50",
+      "response_text": "Can't say that I did, but that's all the more reason you should give the book to me.{elderly. surprised but not remorseful}",
+      "index": "43"
+    },
+    {
+      "topic": "DLC04ObaMarcellaDied02",
+      "topic_text": "Marcella's dead, you callous prick.",
+      "emotion": "Neutral 50",
+      "response_text": "Forgive my indiscretion. Still, with her death I see no reason for you to keep hold of that book. For all you know, the same fate may befall you.",
+      "index": "44"
+    },
+    {
+      "topic": "DLC04ObaMarcellaTopic",
+      "topic_text": "A woman named Marcella told me to bring her the book.",
+      "emotion": "Neutral 50",
+      "response_text": "Ah, Marcella. A religious fanatic in her own right. Don't believe anything the woman says; her mind is as addled as those inbred swampfolk.",
+      "index": "45"
+    },
+    {
+      "topic": "DLC04ObaQuest00TopLvl",
+      "topic_text": "So, you wanted help getting your book back?",
+      "emotion": "Neutral 50",
+      "response_text": "Yes, a task for which I think you'll be superlatively qualified. Do you accept?",
+      "index": "46"
+    },
+    {
+      "topic": "DLC04ObaQuestAccept",
+      "topic_text": "Okay. I'll get your book.",
+      "emotion": "Neutral 50",
+      "response_text": "Good. The fools who stole it believe it has powers, so the thing is probably well-guarded.",
+      "index": "49"
+    },
+    {
+      "topic": "DLC04ObaQuestReject",
+      "topic_text": "Not interested.",
+      "emotion": "Neutral 50",
+      "response_text": "The offer stands for now, though I won't abstain from soliciting other help.",
+      "index": "51"
+    },
+    {
+      "topic": "DLC04ObaQuestWhatPayment",
+      "topic_text": "What do I get in the bargain?",
+      "emotion": "Neutral 50",
+      "response_text": "Cash, plain and simple. Return with the book and I'll pay you a thousand caps. No questions asked.",
+      "index": "52"
+    },
+    {
+      "topic": "DLC04TalkSomethingElse",
+      "topic_text": "Let's talk about something else.",
+      "emotion": "Neutral 50",
+      "response_text": "What else do you want to discuss?",
+      "index": "53"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "",
+      "emotion": "Anger 50",
+      "response_text": "You shouldn't be here. Get out of my home.{elderly.  Seriously angry.}",
+      "index": "54"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "I have to go now.",
+      "emotion": "Neutral 50",
+      "response_text": "Don't get yourself killed.",
+      "index": "64"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Neutral 50",
+      "response_text": "Ug-Qualtoth is returned. Be afraid, worms.{elderly, to himself.}",
+      "index": "65"
+    }
+  ],
+  "combat": []
+}

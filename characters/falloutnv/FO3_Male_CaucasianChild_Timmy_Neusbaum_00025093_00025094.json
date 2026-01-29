@@ -1,0 +1,222 @@
+{
+  "name": "Timmy Neusbaum",
+  "url": "/wiki/Timmy_Neusbaum",
+  "dialogue_name": "TimmyNeusbaum.txt",
+  "dialogue_url": "/wiki/TimmyNeusbaum.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": true,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "00025093",
+  "ref_id": "00025094",
+  "editor_id": "TimmyNeusbaum",
+  "location": "Neusbaum residence",
+  "location_url": "/wiki/Neusbaum_residence",
+  "descriptions": [
+    "Timmy Neusbaum is one of the residents of Vault 112, trapped within the Tranquility Lane simulation in Fallout 3.",
+    "Timmy is the son of George and Pat Neusbaum, well-behaved and quiet, though somewhat of a \"momma's boy\" according to Bill Foster.",
+    "He has set up a lemonade stand in Tranquility Lane per his mother's advice of \"if life gives you lemons, make lemonade,\" in an effort to save up money to purchase a Red Racer tricycle like the one Betty owns.",
+    "In reality, Timmy is not a boy but an adult man, which Old Lady Dithers points out as having had an impact on his mental state and tries to talk him down, before he does something drastic.",
+    "In the vault, the adult Timothy is identified as resident 377, and his torment manifests as an elevated heart rate of 112 beats per minute, high blood pressure of 130/90 mmHg, marginally elevated temperature of 37.167°C/98.9°F, and a breathing rate of 22 breaths per minute. Stress levels are nominal, suggesting this is his permanent status under Braun's \"care.\""
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Vault 112",
+  "role": "Simulation captive",
+  "detailed_location": "Neusbaum residence,Tranquility Lane",
+  "voice_actor": "Cullen Pagliarulo",
+  "special": {
+    "Strength": 3,
+    "Perception": 4,
+    "Endurance": 3,
+    "Charisma": 3,
+    "Intelligence": 3,
+    "Agility": 5,
+    "Luck": 4
+  },
+  "level": "1",
+  "tag_skills": [
+    {
+      "Lockpick:": "27"
+    },
+    {
+      "Sneak:": "29"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "60"
+    },
+    {
+      "Critical Chance:": "4%"
+    },
+    {
+      "Unarmed Dam.:": "1.00"
+    },
+    {
+      "Poison Resist.:": "10%"
+    },
+    {
+      "Rad. Resist.:": "4%"
+    },
+    {
+      "Carry Weight:": "180"
+    },
+    {
+      "Damage Res.:": "1%"
+    }
+  ],
+  "karma": "Good",
+  "voice_type": "MaleUniqueTimmy",
+  "geck_race": "CaucasianChild",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Sad 100",
+      "response_text": "Daddy..... why.... [crying]",
+      "index": "1"
+    },
+    {
+      "topic": "MQ04ResidentChitChat2",
+      "topic_text": "What can you tell me about the neighborhood?",
+      "emotion": "Neutral 50",
+      "response_text": "It's okay, I guess. I don't really have nobody to play with. Except for Betty... and she's kind of... well, she's mean.",
+      "index": "7"
+    },
+    {
+      "topic": "MQ04ResidentDad",
+      "topic_text": "Have you seen my dad?",
+      "emotion": "Neutral 50",
+      "response_text": "Your dad? Nope, I haven't. Did he get lost?",
+      "index": "8"
+    },
+    {
+      "topic": "MQ04ResidentSimulationThis is a pretty convincing simulation...",
+      "topic_text": "None of this is real. It's all some crazy experiment.",
+      "emotion": "Neutral 20",
+      "response_text": "What? You're weird.{confused, annoyed}",
+      "index": "9"
+    },
+    {
+      "topic": "MQ04ResidentTimmyWhat can you tell me about Timmy Neusbaum?",
+      "topic_text": "Betty says I should make you cry.",
+      "emotion": "Neutral 50",
+      "response_text": "What? No she didn't... did she?",
+      "index": "10"
+    },
+    {
+      "topic": "MQ04TimmyBrochure",
+      "topic_text": "Hey, look what I found. You're getting sent to military school. <Lie.>",
+      "emotion": "Neutral 50",
+      "response_text": "What? No I'm not!",
+      "index": "12"
+    },
+    {
+      "topic": "MQ04TimmyBrochureKidding",
+      "topic_text": "Nah, I'm just kidding.",
+      "emotion": "Disgust 20",
+      "response_text": "That's a dumb joke. You're not funny at all.",
+      "index": "13"
+    },
+    {
+      "topic": "MQ04TimmyBrochureShow",
+      "topic_text": "Look, I've got the brochure right here. You're going, pal.",
+      "emotion": "Fear 50",
+      "response_text": "But, but... I don't want to go away! I don't want to leave my mommy!",
+      "index": "14"
+    },
+    {
+      "topic": "MQ04TimmyGameRude",
+      "topic_text": "I've got a game you can play. It's called \"Hide and Go Fuck Yourself.\"",
+      "emotion": "Surprise 50",
+      "response_text": "Potty mouth!",
+      "index": "16"
+    },
+    {
+      "topic": "MQ04TimmySPEECHCHALLENGE",
+      "topic_text": "Hey, I heard your parents are getting a divorce because of you.",
+      "emotion": "Neutral 50",
+      "response_text": "What? Did I do something bad?",
+      "index": "18"
+    },
+    {
+      "topic": "MQ04TimmySPEECHFlavor1",
+      "topic_text": "Sorry, Timmy. I just thought you should know.",
+      "emotion": "Fear 100",
+      "response_text": "No, no! Not my mommy and daddy! Nooo!",
+      "index": "19"
+    },
+    {
+      "topic": "MQ04TimmySPEECHFlavor2",
+      "topic_text": "They know what you did, and they're leaving you here all alone.",
+      "emotion": "Fear 100",
+      "response_text": "I won't wet the bed again, I promise! I promise!",
+      "index": "21"
+    },
+    {
+      "topic": "MQ04TimmySPEECHFlavor3",
+      "topic_text": "They've never loved you. In fact, they both hate you and wish you were dead.",
+      "emotion": "Fear 100",
+      "response_text": "No, no! Not my mommy and daddy! Nooo!",
+      "index": "23"
+    },
+    {
+      "topic": "SpeechChallengeFailure",
+      "topic_text": "SpeechChallengeFailure",
+      "emotion": "Anger 50",
+      "response_text": "You're a big dumb liar.",
+      "index": "25"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYEI have to go now.",
+      "topic_text": "Bye, Timmy.",
+      "emotion": "Neutral 50",
+      "response_text": "See you later.",
+      "index": "26"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Neutral 50",
+      "response_text": "Hi, Mommy.",
+      "index": "27"
+    },
+    {
+      "topic": "MQ04TimmyCry",
+      "topic_text": "MQ04TimmyCry",
+      "emotion": "Neutral 50",
+      "response_text": "[crying]",
+      "index": "31"
+    },
+    {
+      "topic": "MQ04TimmyMourn",
+      "topic_text": "MQ04TimmyMourn",
+      "emotion": "Fear 50",
+      "response_text": "Mommy? Mommy?! No! [crying]",
+      "index": "34"
+    }
+  ],
+  "combat": [
+    {
+      "topic": "Attack",
+      "topic_text": "Attack",
+      "emotion": "Neutral 50",
+      "response_text": "I'm gonna beat you up!",
+      "index": "36"
+    },
+    {
+      "topic": "Hit",
+      "topic_text": "Hit",
+      "emotion": "Anger 50",
+      "response_text": "Quit it!",
+      "index": "38"
+    }
+  ]
+}

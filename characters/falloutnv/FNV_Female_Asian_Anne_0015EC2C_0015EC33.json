@@ -1,0 +1,76 @@
+{
+  "name": "Anne",
+  "url": "/wiki/Anne_(Fallout:_New_Vegas)",
+  "dialogue_name": "VVault34SharecropperAFAnne.txt",
+  "dialogue_url": "/wiki/VVault34SharecropperAFAnne.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "0015EC2C",
+  "ref_id": "0015EC33",
+  "editor_id": "VVault34SharecropperAFAnne",
+  "location": "NCR sharecropper farms",
+  "location_url": "/wiki/NCR_sharecropper_farms",
+  "descriptions": [
+    "Anne is a farmer at the NCR sharecropper farms, in 2281.",
+    "Anne is a farmer that signed on to become part of the Thaler Act, which required her to move from her rural fields to the sharecropper farms. However, she is fed up with the alarmingly diminishing amounts of water available to grow crops with and is planning to leave as a result.",
+    "Hard Luck Blues",
+    "Hard Luck Blues: A few days after the completion of the quest in favor of helping Horowitz and the Vault 34 dwellers, Anne and three other sharecroppers appear at Boulder City, in front of the Big Horn Saloon, and then stay in the ruins."
+  ],
+  "race": "Human",
+  "gender": "Female",
+  "affiliation": "New California Republic",
+  "role": "Farmer",
+  "detailed_location": "NCR sharecropper farmsBoulder City(optional)",
+  "voice_actor": "Courtenay Taylor",
+  "special": {
+    "Strength": 7,
+    "Perception": 6,
+    "Endurance": 7,
+    "Charisma": 3,
+    "Intelligence": 4,
+    "Agility": 5,
+    "Luck": 4
+  },
+  "mod_special_values": {
+    "Strength": 7,
+    "Perception": 7,
+    "Endurance": 7,
+    "Charisma": 3,
+    "Intelligence": 4,
+    "Agility": 5,
+    "Luck": 4
+  },
+  "level": "1",
+  "tag_skills": [
+    {
+      "Melee Weap.:": "33"
+    },
+    {
+      "Repair:": "27"
+    },
+    {
+      "Survival:": "33"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Neutral",
+  "voice_type": "FemaleAdult04",
+  "geck_race": "Asian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Anger 50",
+      "response_text": "{Angry Disappointment}We're heading back home. I hope our troops do the same. This land can't be saved.",
+      "index": "1"
+    }
+  ],
+  "conversation": [],
+  "combat": []
+}

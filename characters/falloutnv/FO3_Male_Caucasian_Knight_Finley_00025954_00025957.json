@@ -1,0 +1,121 @@
+{
+  "name": "Knight Finley",
+  "url": "/wiki/Finley",
+  "dialogue_name": "GNRKnightFinley.txt",
+  "dialogue_url": "/wiki/GNRKnightFinley.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "00025954",
+  "ref_id": "00025957",
+  "editor_id": "GNRKnightFinley",
+  "location": "GNR building plaza",
+  "location_url": "/wiki/GNR_building_plaza_(Fallout_3)",
+  "descriptions": [
+    "Knight Finley is a member of the Brotherhood of Steel in 2277.",
+    "Finley is one of the three knights charged with defending the GNR building plaza interior, alongside Knight Dillon and Knight Sergeant Wilks. Like his fellows, he is haughty, but passionately hates the super mutants and will aid anyone who is in need.",
+    "Finley is found on the first floor inside the GNR building plaza, keeping guard. When relieved, he sleeps in a side room of the building."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Brotherhood of Steel",
+  "role": "Guard",
+  "detailed_location": "GNR building plaza",
+  "voice_actor": "Pete Papageorge",
+  "special": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 6,
+    "Charisma": 4,
+    "Intelligence": 3,
+    "Agility": 6,
+    "Luck": 4
+  },
+  "mod_special_values": {
+    "Strength": 8,
+    "Perception": 5,
+    "Endurance": 6,
+    "Charisma": 4,
+    "Intelligence": 3,
+    "Agility": 4,
+    "Luck": 4
+  },
+  "level": "1",
+  "misc_skills": [],
+  "karma": "Neutral",
+  "voice_type": "MaleAdult02DC",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "GNRGalaxyNewsRadio",
+      "topic_text": "What's this building for?",
+      "emotion": "Neutral 50",
+      "response_text": "This is Galaxy News Radio, the last free voice of the people of the Wasteland. The Brotherhood of Steel makes sure of that.",
+      "index": "1"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "Knight Finley at your service. What can I do for you?",
+      "index": "2"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GNRGoodbyes",
+      "topic_text": "GNRGoodbyes",
+      "emotion": "Happy 50",
+      "response_text": "Hehe. You'll get your chance, brother. Be patient.",
+      "index": "4"
+    },
+    {
+      "topic": "GNRResponses01",
+      "topic_text": "GNRResponses",
+      "emotion": "Neutral 50",
+      "response_text": "If you'd rather run around out there with all those Super Mutants, be my guest.",
+      "index": "8"
+    },
+    {
+      "topic": "GNRResponses02",
+      "topic_text": "GNRResponses02",
+      "emotion": "Neutral 50",
+      "response_text": "Don't worry brother, we'll see plenty of action here, I can promise you that.",
+      "index": "9"
+    },
+    {
+      "topic": "GNRResponses05",
+      "topic_text": "GNRResponses05",
+      "emotion": "Neutral 50",
+      "response_text": "Yes, sir. I am locked and loaded.",
+      "index": "10"
+    },
+    {
+      "topic": "GNRResponses06",
+      "topic_text": "GNRResponses06",
+      "emotion": "Neutral 50",
+      "response_text": "I always do, sir. Is there something we should be expecting?",
+      "index": "11"
+    },
+    {
+      "topic": "GOODBYE",
+      "topic_text": "I have to go now.",
+      "emotion": "Neutral 50",
+      "response_text": "Drop back in anytime, pal. We could use the company!",
+      "index": "12"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Happy 50",
+      "response_text": "Status report?",
+      "index": "14"
+    }
+  ],
+  "combat": []
+}

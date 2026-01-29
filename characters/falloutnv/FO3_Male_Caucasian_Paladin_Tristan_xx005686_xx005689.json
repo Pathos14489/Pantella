@@ -1,0 +1,478 @@
+{
+  "name": "Paladin Tristan",
+  "url": "/wiki/Tristan",
+  "dialogue_name": "DLC03Tristan.txt",
+  "dialogue_url": "/wiki/DLC03Tristan.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "xx005686",
+  "ref_id": "xx005689",
+  "editor_id": "DLC03Tristan",
+  "location": "Rockland car tunnel",
+  "location_url": "/wiki/Rockland_car_tunnel",
+  "descriptions": [
+    "Paladin Tristan is a member of Lyons' Brotherhood of Steel in 2277.",
+    "Tristan was involved with the original expedition that found the Pentagon ruins with Elder Lyons. He has trained Sarah Lyons since she was young and he has a professional relationship with her. Tristan is loyal to Lyons and follows his direction and ideals of the Brotherhood's future closely. Tristan is wise and has a serious nature.",
+    "Tristan has climbed through the ranks of the Brotherhood of Steel and attained the status of a paladin. He acts as an operation specialist, planning many of the offensives in defeating the Enclave in the Capital Wasteland. Tristan is responsible for the daily operations of the Citadel and he helps assist Paladin Gunny with training new members. He is often found wandering the Citadel's main control room area, which is the old bay for Liberty Prime.",
+    "He approved the loadout of Squad 7 for the assault on Adams Air Force Base.",
+    "He is the acting field commander of the Brotherhood forces in light of Sarah Lyons being unable to fight after the events at the purifier, and is in charge of all Brotherhood operations involving the Lone Wanderer and Liberty Prime, the first mission in the main Broken Steel questline.",
+    "Paladin Tristan appears only in the Fallout 3 add-on Broken Steel."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Brotherhood of Steel",
+  "role": "Field commander",
+  "detailed_location": "Rockland car tunnelThe Citadel",
+  "voice_actor": "Jeff Baker",
+  "special": {
+    "Strength": 5,
+    "Perception": 7,
+    "Endurance": 6,
+    "Charisma": 4,
+    "Intelligence": 3,
+    "Agility": 6,
+    "Luck": 4
+  },
+  "mod_special_values": {
+    "Strength": 7,
+    "Perception": 7,
+    "Endurance": 6,
+    "Charisma": 4,
+    "Intelligence": 3,
+    "Agility": 4,
+    "Luck": 4
+  },
+  "tag_skills": [
+    {
+      "Big Guns:": "70"
+    },
+    {
+      "Energy Weap.:": "72"
+    },
+    {
+      "Small Guns:": "70(66)"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Neutral",
+  "voice_type": "DLC03MaleUniqueTristan",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "CitTownCitadelEND",
+      "topic_text": "That's all I needed.",
+      "emotion": "Neutral 50",
+      "response_text": "If you say so.",
+      "index": "1"
+    },
+    {
+      "topic": "DLC03AudioBoSOrders",
+      "topic_text": "DLC03AudioBoSOrders",
+      "emotion": "Neutral 50",
+      "response_text": "This is Paladin Tristan.",
+      "index": "2"
+    },
+    {
+      "topic": "DLC03BS1Tristan1QDone",
+      "topic_text": "That's it.",
+      "emotion": "Neutral 50",
+      "response_text": "Okay. It's about time to move out.",
+      "index": "8"
+    },
+    {
+      "topic": "DLC03BS1Tristan1QEnclavePutUpFight",
+      "topic_text": "Has the Enclave been putting up much of a fight?",
+      "emotion": "Neutral 50",
+      "response_text": "Not like they did at the purifier, no.",
+      "index": "9"
+    },
+    {
+      "topic": "DLC03BS1Tristan1Questions",
+      "topic_text": "I've got a few questions for you.",
+      "emotion": "Neutral 50",
+      "response_text": "Well, we've got a bit of time. What's on your mind?",
+      "index": "18"
+    },
+    {
+      "topic": "DLC03BS1Tristan1QWhatHappenedPurifer",
+      "topic_text": "What happened back at the purifier?",
+      "emotion": "Neutral 50",
+      "response_text": "Well, you saw most of the fighting outside. The robot paved the way for us, we just mopped up the opposition while you and Sarah headed inside.",
+      "index": "19"
+    },
+    {
+      "topic": "DLC03BS1Tristan1QWhatsNext",
+      "topic_text": "So what's next after this?",
+      "emotion": "Neutral 50",
+      "response_text": "We'll strip the place for any usable tech, like always.",
+      "index": "22"
+    },
+    {
+      "topic": "DLC03BS1Tristan1ReadyToGo",
+      "topic_text": "Okay, I'm ready to go.",
+      "emotion": "Neutral 50",
+      "response_text": "All right. You stay back with me and keep safe. Once we've reached the facility, we'll talk about who does what.",
+      "index": "26"
+    },
+    {
+      "topic": "DLC03BS1Tristan1WhatDoIDo",
+      "topic_text": "What do you need me to do?",
+      "emotion": "Neutral 50",
+      "response_text": "I need you to keep your head on straight. No heroics, okay?",
+      "index": "29"
+    },
+    {
+      "topic": "DLC03BS1TristanGreet1",
+      "topic_text": "Good to see you, too. I'm here to help.",
+      "emotion": "Neutral 50",
+      "response_text": "Is that so? Well, it'll be good to have another soldier we can count on.",
+      "index": "32"
+    },
+    {
+      "topic": "DLC03BS1TristanGreet2",
+      "topic_text": "How about we skip the pleasantries and get to work.",
+      "emotion": "Neutral 50",
+      "response_text": "Well... All business now, are we?",
+      "index": "34"
+    },
+    {
+      "topic": "DLC03BS1TristanGreet3",
+      "topic_text": "Elder Lyons said you needed help, so here I am.",
+      "emotion": "Neutral 50",
+      "response_text": "Fair enough.",
+      "index": "38"
+    },
+    {
+      "topic": "DLC03BS1TristanGreet4",
+      "topic_text": "So you're in charge now, huh?",
+      "emotion": "Neutral 50",
+      "response_text": "Until Sarah gets back on her feet, I'm running the Pride. It's just temporary.",
+      "index": "41"
+    },
+    {
+      "topic": "DLC03BS1TristanStage30Bye",
+      "topic_text": "Okay, I'm going.",
+      "emotion": "Neutral 50",
+      "response_text": "Be careful in there. Who knows what else they're going to throw at us.",
+      "index": "45"
+    },
+    {
+      "topic": "DLC03BS1TristanStage30Q1",
+      "topic_text": "What am I looking for?",
+      "emotion": "Neutral 50",
+      "response_text": "I don't know, I don't know! Terminals, data, anything that can help us figure out what just happened, and where it came from.",
+      "index": "46"
+    },
+    {
+      "topic": "DLC03BS1TristanStage30Q2",
+      "topic_text": "Hey, wait! You said you didn't need my help!",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah, well that was before they blew up our one advantage. Consider it a field promotion. Now get going!",
+      "index": "47"
+    },
+    {
+      "topic": "DLC03BS1TristanStage30Q3",
+      "topic_text": "This isn't what I signed up for.",
+      "emotion": "Neutral 50",
+      "response_text": "At this point, this isn't what ANY of us signed up for. We can't let them get the advantage now. Get moving!",
+      "index": "48"
+    },
+    {
+      "topic": "DLC03BS1TristanStage40A",
+      "topic_text": "I found some encrypted data on one of their terminals.",
+      "emotion": "Neutral 50",
+      "response_text": "Let's hope the Scribes can make sense of it. Get it back to the Citadel and get it to Rothchild as fast as you can.",
+      "index": "49"
+    },
+    {
+      "topic": "DLC03BS1TristanStage40B",
+      "topic_text": "I found something, but I'm not sure what.",
+      "emotion": "Neutral 50",
+      "response_text": "Don't worry about that. The Scribes can figure it out; it's their damn job.",
+      "index": "51"
+    },
+    {
+      "topic": "DLC03BS1TristanStage40C",
+      "topic_text": "I'm on my way back to the Citadel now.",
+      "emotion": "Neutral 50",
+      "response_text": "Good. Let's hope the Scribes can do something useful with it before the Enclave pulls another fast one on us.",
+      "index": "53"
+    },
+    {
+      "topic": "DLC03BS2TLTristanExtraHelp",
+      "topic_text": "Old Olney is a dangerous place. Is there anything I could have to help me?",
+      "emotion": "Neutral 50",
+      "response_text": "Check with Scribe Vallincourt. She's been researching some of the Enclave technology we've recovered.",
+      "index": "55"
+    },
+    {
+      "topic": "DLC03BS2TristanGreetA",
+      "topic_text": "I'm ready for more. What do you need?",
+      "emotion": "Neutral 50",
+      "response_text": "With the setbacks the Brotherhood has suffered, we find ourselves in a difficult position.",
+      "index": "57"
+    },
+    {
+      "topic": "DLC03BS2TristanGreetB",
+      "topic_text": "Any job you've got, I can do.",
+      "emotion": "Neutral 50",
+      "response_text": "I hope that's true. With all of the Brotherhood's resources committed to protecting against an Enclave attack, we're spread thin.",
+      "index": "62"
+    },
+    {
+      "topic": "DLC03BS2TristanGreetC",
+      "topic_text": "Do I get paid for it?",
+      "emotion": "Neutral 50",
+      "response_text": "Paid? No. Perhaps there's been some misunderstanding about how this all works.",
+      "index": "65"
+    },
+    {
+      "topic": "DLC03BS2TristanOlneyA",
+      "topic_text": "Olney Powerworks? What's there?",
+      "emotion": "Neutral 50",
+      "response_text": "Hopefully you'll be able to find a Tesla Coil, an experimental device from before the war.",
+      "index": "68"
+    },
+    {
+      "topic": "DLC03BS2TristanOlneyB",
+      "topic_text": "You want me to go all the way to Olney?",
+      "emotion": "Neutral 50",
+      "response_text": "I need you to go there, and quickly.",
+      "index": "71"
+    },
+    {
+      "topic": "DLC03BS2TristanOlneyC",
+      "topic_text": "Olney? No, I don't think so.",
+      "emotion": "Neutral 50",
+      "response_text": "I'm sorry, perhaps there was a misunderstanding.",
+      "index": "75"
+    },
+    {
+      "topic": "DLC03BS2TristanPaidA",
+      "topic_text": "Sorry, it was just a joke.",
+      "emotion": "Neutral 50",
+      "response_text": "I see. You'll forgive my lack of humor, given that we face annihilation on a daily basis.",
+      "index": "79"
+    },
+    {
+      "topic": "DLC03BS2TristanPaidB",
+      "topic_text": "You don't have much of a sense of humor, do you?",
+      "emotion": "Neutral 50",
+      "response_text": "I have yet to find a sense of humor to be essential to my survival.",
+      "index": "80"
+    },
+    {
+      "topic": "DLC03BS2TristanPaidC",
+      "topic_text": "I don't get paid? At all? This gig sucks.",
+      "emotion": "Neutral 50",
+      "response_text": "I cannot imagine how you've come this far being under such a delusion.",
+      "index": "84"
+    },
+    {
+      "topic": "DLC03BS2TristanStage40A",
+      "topic_text": "I'm good to go. What's next?",
+      "emotion": "Neutral 50",
+      "response_text": "Based on the data you brought us from the relay station, we've identified where the Enclave is basing their operation.",
+      "index": "87"
+    },
+    {
+      "topic": "DLC03BS2TristanStage40B",
+      "topic_text": "I need a break. Olney was tougher than I thought.",
+      "emotion": "Neutral 50",
+      "response_text": "Time is running out. If we don't take the fight to the Enclave soon, they're going to bring it to us, and that won't end well.",
+      "index": "93"
+    },
+    {
+      "topic": "DLC03BS3TLTristanAlone",
+      "topic_text": "I've got to ask... why am I going through the Presidential Metro alone?",
+      "emotion": "Neutral 50",
+      "response_text": "We need to send you in one way, and the bulk of our guys in another.",
+      "index": "96"
+    },
+    {
+      "topic": "DLC03BS3TLTristanDirections",
+      "topic_text": "Directions to the Presidential Metro would be helpful, Tristan.",
+      "emotion": "Happy 80",
+      "response_text": "Yeah, it's a bit tricky to find, but you'll manage.",
+      "index": "99"
+    },
+    {
+      "topic": "DLC03BS3TLTristanPlans",
+      "topic_text": "Sounds like I'm walking into the airbase blind.",
+      "emotion": "Neutral 50",
+      "response_text": "Don't worry about it. I wouldn't send you on some sort of suicide mission without some intelligence to back it up.",
+      "index": "102"
+    },
+    {
+      "topic": "DLC03BS3TLTristanPMetro",
+      "topic_text": "What can I expect to find in the Presidential Metro?",
+      "emotion": "Neutral 50",
+      "response_text": "The best information we have is that the place still has an active automated security contingent. You should watch yourself.",
+      "index": "105"
+    },
+    {
+      "topic": "DLC03PQTLBlood",
+      "topic_text": "I've got blood samples to turn in.",
+      "emotion": "Neutral 50",
+      "response_text": "Good job. I'll inform Lyons of your progress.",
+      "index": "107"
+    },
+    {
+      "topic": "DLC03PQTLBoSJob",
+      "topic_text": "Is there anything else I can do to help the Brotherhood?",
+      "emotion": "Neutral 50",
+      "response_text": "Well, yes actually. If you're still up for it, I could always use a hand with my next assignment.",
+      "index": "111"
+    },
+    {
+      "topic": "DLC03PQTLBrotherhood",
+      "topic_text": "So, what happens to the Brotherhood now?",
+      "emotion": "Neutral 50",
+      "response_text": "Well, the Enclave might not be a threat anymore, but we're not done by a long shot.",
+      "index": "117"
+    },
+    {
+      "topic": "DLC03PQTLEnclave",
+      "topic_text": "So, have we totally wiped out the Enclave?",
+      "emotion": "Neutral 50",
+      "response_text": "Nah. There'll be stragglers and patrols still wandering the Wasteland. They won't know what happened at Adams probably for months.",
+      "index": "120"
+    },
+    {
+      "topic": "DLC03TransitionTopic",
+      "topic_text": "DLC03TransitionTopic",
+      "emotion": "Neutral 50",
+      "response_text": "What the hell happened in here... Oh, man... We've got people down in here! You, check that equipment! The two of you, over here - help me get them..",
+      "index": "122"
+    },
+    {
+      "topic": "FFDCDogtagsFound1",
+      "topic_text": "Where can I find Scribe Jameson?",
+      "emotion": "Neutral 50",
+      "response_text": "She spends most of her time in the Archives. You'll find them in A Ring, near the great hall.",
+      "index": "123"
+    },
+    {
+      "topic": "FFDCDogtagsFound2",
+      "topic_text": "All right then.",
+      "emotion": "Neutral 50",
+      "response_text": "Glad to be of help.",
+      "index": "124"
+    },
+    {
+      "topic": "FFPAWho",
+      "topic_text": "Can someone in the Citadel train me to wear Power Armor?",
+      "emotion": "Neutral 50",
+      "response_text": "I’m sure Gunny could train you, but he won’t. Not without permission from Elder Lyons. You should ask him... he’s usually near the Lab.",
+      "index": "125"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "Any last minute questions?",
+      "index": "127"
+    },
+    {
+      "topic": "RCTopicPaulieAddict",
+      "topic_text": "Did you know that Paulie Cantelli is an addict?",
+      "emotion": "Sad 50",
+      "response_text": "He's totally strung out. It's going to kill him one of these days.",
+      "index": "177"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "CitTalkHail",
+      "topic_text": "CitTalkHail.",
+      "emotion": "Neutral 50",
+      "response_text": "As you were.",
+      "index": "178"
+    },
+    {
+      "topic": "CitTalkKnightDuskResponse1",
+      "topic_text": "CitTalkKnightCaptainDuskResponse1",
+      "emotion": "Neutral 50",
+      "response_text": "Hail.",
+      "index": "180"
+    },
+    {
+      "topic": "CitTalkShortGeneric",
+      "topic_text": "CitTalkShortGeneric",
+      "emotion": "Neutral 50",
+      "response_text": "Enclave strength is at 100%. They're getting reinforcements from somewhere, but we still haven't determined the location of their headquarters.",
+      "index": "181"
+    },
+    {
+      "topic": "CitTalkShortGeneric2",
+      "topic_text": "CitTalkShortGeneric2",
+      "emotion": "Neutral 50",
+      "response_text": "Hmm... All right, thanks for the information.",
+      "index": "186"
+    },
+    {
+      "topic": "DLC03BS1PrimeDestroyedLines",
+      "topic_text": "DLC03BS1PrimeDestroyedLines",
+      "emotion": "Neutral 50",
+      "response_text": "What is that??",
+      "index": "190"
+    },
+    {
+      "topic": "DLC03BS1TristanLines",
+      "topic_text": "DLC03BS1VargasLines",
+      "emotion": "Neutral 50",
+      "response_text": "There's more of them than I expected. They're really entrenched here. Something must be up...",
+      "index": "192"
+    },
+    {
+      "topic": "GOODBYE",
+      "topic_text": "I have to go now.",
+      "emotion": "Neutral 50",
+      "response_text": "This is it... let's make this one count.",
+      "index": "197"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Neutral 50",
+      "response_text": "Let's do this just like the last time. Nobody needs to try and prove anything out there.",
+      "index": "207"
+    }
+  ],
+  "combat": [
+    {
+      "topic": "Assault",
+      "topic_text": "Assault",
+      "emotion": "Neutral 50",
+      "response_text": "Do you have any idea who you're dealing with?",
+      "index": "225"
+    },
+    {
+      "topic": "Attack",
+      "topic_text": "Attack",
+      "emotion": "Neutral 50",
+      "response_text": "For the Citadel!",
+      "index": "227"
+    },
+    {
+      "topic": "Death",
+      "topic_text": "Death",
+      "emotion": "Pained 100",
+      "response_text": "Nooo...{dying gasp}",
+      "index": "232"
+    },
+    {
+      "topic": "DeathResponse",
+      "topic_text": "DeathResponse",
+      "emotion": "Neutral 50",
+      "response_text": "A Brother has fallen!",
+      "index": "234"
+    }
+  ]
+}

@@ -1,0 +1,174 @@
+{
+  "name": "Hannigan",
+  "url": "/wiki/Hannigan",
+  "dialogue_name": "NCRCFHannigan.txt",
+  "dialogue_url": "/wiki/NCRCFHannigan.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": true,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000D71B6",
+  "ref_id": "000D71B7",
+  "editor_id": "NCRCFHannigan",
+  "location": "NCR CF administration",
+  "location_url": "/wiki/NCR_CF_administration",
+  "descriptions": [
+    "Hannigan is a member of the Powder Gangers and the acting medical practitioner of the NCR Correctional Facility in 2281.",
+    "A former combat medic of the New California Republic Army, Hannigan is the acting medical specialist of the Powder Gangers. Before he enlisted and started medical training, he tried his hand in being a farmhand, bouncer, a bandit, and a regular NCR trooper.",
+    "However, Hannigan ended up in prison after selling Army medical supplies on the black market. He assumed that the quartermaster would not notice any missing medical supplies, but he soon realized that this assumption was wrong.",
+    "I Fought the Law",
+    "Hannigan is capable of detecting the Courier when in faction armor."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Powder GangersNew California Republic(Formerly)",
+  "role": "\"Doctor\"",
+  "detailed_location": "NCR Correctional Facility",
+  "voice_actor": "Avery K. Waddell",
+  "special": {
+    "Strength": 5,
+    "Perception": 6,
+    "Endurance": 5,
+    "Charisma": 3,
+    "Intelligence": 3,
+    "Agility": 5,
+    "Luck": 4
+  },
+  "level": "4",
+  "tag_skills": [
+    {
+      "Explosives:": "42"
+    },
+    {
+      "Guns:": "40"
+    },
+    {
+      "Melee Weap.:": "40"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Neutral",
+  "voice_type": "MaleAdult02",
+  "geck_race": "AfricanAmerican",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "{Prison under attack}I knew I should've gone with Cooke!",
+      "index": "1"
+    },
+    {
+      "topic": "VFreeformNCRCFNCRCFHanniganTopic000",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Later.",
+      "index": "5"
+    },
+    {
+      "topic": "VFreeformNCRCFNCRCFHanniganTopic001",
+      "topic_text": "I need a doctor.",
+      "emotion": "Surprise 20",
+      "response_text": "The fact that you're still on your feet is... surprising.",
+      "index": "6"
+    },
+    {
+      "topic": "VFreeformNCRCFNCRCFHanniganTopic002",
+      "topic_text": "Why are you \"sort of\" the doctor?",
+      "emotion": "Neutral 50",
+      "response_text": "I was an NCR medic for six months, so I'm not exactly a \"doctor.\" Still, it's more medical training that any of the other guys here.",
+      "index": "9"
+    },
+    {
+      "topic": "VFreeformNCRCFNCRCFHanniganTopic003",
+      "topic_text": "What did you do to end up in here?",
+      "emotion": "Neutral 50",
+      "response_text": "Medical supplies go for a decent amount of caps in the right markets. I figured the quartermaster wouldn't notice any missing. I was wrong.",
+      "index": "11"
+    },
+    {
+      "topic": "VFreeformNCRCFNCRCFHanniganTopic004",
+      "topic_text": "What did you do before?",
+      "emotion": "Neutral 50",
+      "response_text": "Let's see... I've been a farmhand, a bouncer, a bandit, and an NCR trooper. I don't recommend any of them.",
+      "index": "12"
+    },
+    {
+      "topic": "VFreeformNCRCFNCRCFHanniganTopic005",
+      "topic_text": "What's your reason for staying?",
+      "emotion": "Neutral 50",
+      "response_text": "The location to the highway makes it a good spot to shake down any travelers passing through. That's why Eddie and the rest are still around.",
+      "index": "13"
+    },
+    {
+      "topic": "VFreeformNCRCFNCRCFHanniganTopic006",
+      "topic_text": "How did you all manage to escape?",
+      "emotion": "Neutral 50",
+      "response_text": "One night, there was a big explosion from the other cell block. I had no idea what was going on, so I took cover in my bunk.",
+      "index": "15"
+    },
+    {
+      "topic": "VFreeformNCRCFNCRCFHanniganTopic007",
+      "topic_text": "<100 caps> Fix me up.",
+      "emotion": "Neutral 50",
+      "response_text": "I can give you something to bite down on if you want. This'll hurt.",
+      "index": "17"
+    },
+    {
+      "topic": "VFreeformNCRCFNCRCFHanniganTopic008",
+      "topic_text": "<100 caps needed> I don't have the caps.",
+      "emotion": "Neutral 50",
+      "response_text": "Can't help you, then. Medical supplies aren't cheap, you know.",
+      "index": "18"
+    },
+    {
+      "topic": "VFreeformNCRCFNCRCFHanniganTopic009",
+      "topic_text": "Never mind.",
+      "emotion": "Neutral 50",
+      "response_text": "{shrugging}If you say so.",
+      "index": "19"
+    },
+    {
+      "topic": "VFreeformNCRCFNCRCFHanniganTopic010",
+      "topic_text": "<75 caps> Fix me up.",
+      "emotion": "Neutral 50",
+      "response_text": "This shouldn't be too much work. Try to sit still.",
+      "index": "20"
+    },
+    {
+      "topic": "VFreeformNCRCFNCRCFHanniganTopic011",
+      "topic_text": "<75 caps needed>",
+      "emotion": "Neutral 50",
+      "response_text": "Can't help you, then. Medical supplies aren't cheap, you know.",
+      "index": "21"
+    },
+    {
+      "topic": "VFreeformNCRCFNCRCFHanniganTopic012",
+      "topic_text": "<50 caps> Fix me up.",
+      "emotion": "Neutral 50",
+      "response_text": "Not a problem. Just some scrapes here and there.",
+      "index": "22"
+    },
+    {
+      "topic": "VFreeformNCRCFNCRCFHanniganTopic013",
+      "topic_text": "<50 caps needed>I don't have the caps.",
+      "emotion": "Neutral 50",
+      "response_text": "Can't help you, then. Medical supplies aren't cheap, you know.",
+      "index": "23"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Later.",
+      "index": "24"
+    }
+  ],
+  "combat": []
+}

@@ -1,0 +1,96 @@
+{
+  "name": "Genaro",
+  "url": "/wiki/Genaro",
+  "dialogue_name": "VFSGenaro.txt",
+  "dialogue_url": "/wiki/VFSGenaro.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": true,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "0013EC2C",
+  "ref_id": "0013EF05",
+  "editor_id": "VFSGenaro",
+  "location": "Outside theOld Mormon Fort",
+  "location_url": "/wiki/Old_Mormon_Fort",
+  "descriptions": [
+    "Genaro is a food merchant living in Freeside in 2281.",
+    "Genaro can be found in Freeside by the north gate selling different types of food.  When asked where he gets his food from, he is reluctant to give much information besides the fact that he has helpers around bringing him different types of food to cook, and that he doesn't want to give too much information because the customer may not want to eat it afterward.  Judging by his inventory, he has helpers bring animals and insects off the street for him to cook and sell.",
+    "Genaro's available items are almost exclusively food items of relatively low quality, the only exceptions being gecko kebabs, gecko steak, and mole rat stew.  His inventory consists of the following:",
+    "Additionally, Genaro's stock is supplemented by the items displayed on his table. These items do not reappear once they are sold."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "None",
+  "role": "Food merchant",
+  "detailed_location": "Freeside",
+  "voice_actor": "Alex Mendoza",
+  "special": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 2,
+    "Intelligence": 5,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "mod_special_values": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 6,
+    "Charisma": 2,
+    "Intelligence": 5,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "misc_skills": [
+    {
+      "Hit Points:": "70(75)"
+    }
+  ],
+  "karma": "Neutral",
+  "voice_type": "MaleAdult07",
+  "geck_race": "CaucasianRaider",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "Need some grub? I got you covered. Cheap and filling.",
+      "index": "1"
+    },
+    {
+      "topic": "VFreeformFreesideVFSGenaroTopic000",
+      "topic_text": "Sure. Serve me up something.",
+      "emotion": "Neutral 50",
+      "response_text": "You won't regret it. At least until an hour or so from now.",
+      "index": "2"
+    },
+    {
+      "topic": "VFreeformFreesideVFSGenaroTopic001",
+      "topic_text": "Ah, not right now. Thanks.",
+      "emotion": "Neutral 50",
+      "response_text": "You'll be back.",
+      "index": "3"
+    },
+    {
+      "topic": "VFreeformFreesideVFSGenaroTopic002",
+      "topic_text": "What are you serving?",
+      "emotion": "Neutral 50",
+      "response_text": "Typically, I find it goes down better if I leave people guessing. So what do you say, want some?",
+      "index": "4"
+    },
+    {
+      "topic": "VFreeformFreesideVFSGenaroTopic003",
+      "topic_text": "Not until you tell me where you get the food from.",
+      "emotion": "Neutral 50",
+      "response_text": "I have my little helpers out and about, always looking for fresh things to add to the stewpot.",
+      "index": "5"
+    }
+  ],
+  "conversation": [],
+  "combat": []
+}

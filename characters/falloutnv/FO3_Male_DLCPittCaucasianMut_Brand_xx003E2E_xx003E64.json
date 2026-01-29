@@ -1,0 +1,180 @@
+{
+  "name": "Brand",
+  "url": "/wiki/Brand",
+  "dialogue_name": "DLC01Brand.txt",
+  "dialogue_url": "/wiki/DLC01Brand.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "xx003E2E",
+  "ref_id": "xx003E64",
+  "editor_id": "DLC01Brand",
+  "location": "The Mill",
+  "location_url": "/wiki/The_Mill",
+  "descriptions": [
+    "Brand is an enslaved person found in the Pitt's Mill in the Fallout 3 add-on The Pitt.",
+    "Brand has taken the opportunity to supply the Pitt raiders with information about the other slaves, up to and including information about any secret plans the slaves are making. In exchange, he receives extra benefits and bonuses, and is allowed to rest more during the work detail.",
+    "In interaction with Brand, the Lone Wanderer can choose to reveal the secrets of those involved in the uprising, including Wernher,",
+    "Brand appears only in the Fallout 3 add-on The Pitt."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Pitt slaves",
+  "role": "SlaveSnitch",
+  "detailed_location": "The Pitt",
+  "voice_actor": "Craig Sechler",
+  "special": {
+    "Strength": 4,
+    "Perception": 7,
+    "Endurance": 3,
+    "Charisma": 4,
+    "Intelligence": 4,
+    "Agility": 5,
+    "Luck": 2
+  },
+  "mod_special_values": {
+    "Strength": 4,
+    "Perception": 7,
+    "Endurance": 4,
+    "Charisma": 4,
+    "Intelligence": 4,
+    "Agility": 6,
+    "Luck": 2
+  },
+  "level": "1",
+  "tag_skills": [
+    {
+      "Sneak:": "28(30)"
+    },
+    {
+      "Speech:": "26"
+    },
+    {
+      "Unarmed:": "24(26)"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "20"
+    },
+    {
+      "Critical Chance:": "2%"
+    },
+    {
+      "Unarmed Dam.:": "1.7"
+    },
+    {
+      "Poison Resist.:": "10%"
+    },
+    {
+      "Rad. Resist.:": "4%"
+    },
+    {
+      "Carry Weight:": "190"
+    }
+  ],
+  "karma": "Neutral",
+  "voice_type": "DLC01SlaveMale01VoiceType",
+  "geck_race": "DLCPittCaucasianMut",
+  "topics": [
+    {
+      "topic": "DLC01BrandGreeting01",
+      "topic_text": "What's with all the questions?",
+      "emotion": "Neutral 50",
+      "response_text": "Oh, no reason. Just asking. I haven't seen you before, that's all.",
+      "index": "1"
+    },
+    {
+      "topic": "DLC01BrandGreeting02",
+      "topic_text": "Why should I tell you anything?",
+      "emotion": "Neutral 50",
+      "response_text": "Hey now, why so angry? I'm just asking some questions, no reason to jump down my throat. Never mind, then.",
+      "index": "3"
+    },
+    {
+      "topic": "DLC01BrandGreetingChallenge",
+      "topic_text": "Why do you want to know?",
+      "emotion": "Neutral 50",
+      "response_text": "Well, since you might be able to help me, I'll let you in on a little secret: the slaves are always planning all sorts of things.{Speech Challenge (1930454888)}",
+      "index": "4"
+    },
+    {
+      "topic": "DLC01BrandTopicCure",
+      "topic_text": "I'm here to find a cure for the mutations.",
+      "emotion": "Neutral 50",
+      "response_text": "Oh. Oh? A cure? That is very interesting. I'll be sure to note that.",
+      "index": "7"
+    },
+    {
+      "topic": "DLC01BrandTopicEND",
+      "topic_text": "No, I haven't heard anything.",
+      "emotion": "Neutral 50",
+      "response_text": "Hrm. Well, let me know if you do.",
+      "index": "9"
+    },
+    {
+      "topic": "DLC01BrandTopicMe",
+      "topic_text": "I'm from outside The Pitt. I'm here to help free the slaves.",
+      "emotion": "Neutral 50",
+      "response_text": "From outside The Pitt? That's new. I heard there might be someone from far away showing up.",
+      "index": "11"
+    },
+    {
+      "topic": "DLC01BrandTopicMidea",
+      "topic_text": "Midea is helping Wernher.",
+      "emotion": "Neutral 50",
+      "response_text": "I guess that shouldn't surprise anyone. The bosses all thought they were up to something.",
+      "index": "13"
+    },
+    {
+      "topic": "DLC01BrandTopicRevolt",
+      "topic_text": "Wernher is trying to free the slaves.",
+      "emotion": "Neutral 50",
+      "response_text": "That figures. Must be why the bosses hate him so much.",
+      "index": "15"
+    },
+    {
+      "topic": "DLC01BrandTopicWeapons",
+      "topic_text": "Marco is making weapons.",
+      "emotion": "Surprise 50",
+      "response_text": "I knew that bastard was up to something. Finally! After all he's done to me, I can get him!",
+      "index": "17"
+    },
+    {
+      "topic": "DLC01Marco1",
+      "topic_text": "I need a weapon. Where can I find Marco?",
+      "emotion": "Neutral 50",
+      "response_text": "You're looking for Marco, hrm? What's he up to?",
+      "index": "19"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "You're new, aren't you? Are you here from the Erie Stretch? The Capital Wasteland? Ronto? Where's home?",
+      "index": "21"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "I have to go now.",
+      "emotion": "Neutral 50",
+      "response_text": "Brand.",
+      "index": "27"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Neutral 50",
+      "response_text": "{Silence.}",
+      "index": "28"
+    }
+  ],
+  "combat": []
+}

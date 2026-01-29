@@ -1,0 +1,334 @@
+{
+  "name": "Easy Pete",
+  "url": "/wiki/Easy_Pete",
+  "dialogue_name": "GSEasyPete.txt",
+  "dialogue_url": "/wiki/GSEasyPete.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "00104C7F",
+  "ref_id": "00104C80",
+  "editor_id": "GSEasyPete",
+  "location": "Outside theProspector Saloon",
+  "location_url": "/wiki/Prospector_Saloon",
+  "descriptions": [
+    "Easy Pete is a former prospector living in the town of Goodsprings in 2281.",
+    "Easy Pete used to be a prospector, looking for working tech, unexpired chems and guns to sell.",
+    "While Easy Pete doesn't care for the NCR's expansionist politics, he admits that the NCR has a lot of good, decent people. He also doesn't mind that the NCR keeps Caesar's Legion out of the Mojave,",
+    "In his prospecting heyday, Easy Pete was well versed in the use of explosives and considers himself an expert, and even has a deaf ear from using it too much.",
+    "Easy Pete's general attitude is just that, taking it easy. Although he is quick to give advice when it's needed.",
+    "Easy Pete can be found outside the Prospector Saloon, taking it easy in a chair. Easy Pete owns the eastern house in the town. The items in his house can be taken without gaining bad Karma. Additionally, the Courier can sleep on his bed freely. He may also be found having a meal in a booth in the Prospector Saloon.",
+    "Easy Pete is one of the only non-player characters outside Caesar's Legion, besides Marcus, Follows-Chalk, and Salt-Upon-Wounds that pronounces Caesar with the traditional Latin pronunciation /ˈkaisar/, rather than /ˈsiːzər/.",
+    "Easy Pete has, at times, ostensibly been identified in media articles as corresponding to a real-life Goodsprings resident named Gordi, a regular of the Pioneer Saloon that the Prospector Saloon is based on."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Goodsprings",
+  "role": "Prospector(formerly)Occasional farmhand",
+  "detailed_location": "Goodsprings",
+  "voice_actor": "Peter Renaday",
+  "special": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 4,
+    "Intelligence": 4,
+    "Agility": 6,
+    "Luck": 4
+  },
+  "mod_special_values": {
+    "Strength": 6,
+    "Perception": 6,
+    "Endurance": 4,
+    "Charisma": 4,
+    "Intelligence": 4,
+    "Agility": 6,
+    "Luck": 4
+  },
+  "level": "1",
+  "tag_skills": [
+    {
+      "Explosives:": "50(52)"
+    },
+    {
+      "Guns:": "31"
+    },
+    {
+      "Sneak:": "31"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Neutral",
+  "voice_type": "MaleOld02",
+  "geck_race": "AfricanAmericanOldAged",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "That ought to keep things settled for awhile. Hope it stays that way.",
+      "index": "1"
+    },
+    {
+      "topic": "PLAYERFIREWEAPON",
+      "topic_text": "PLAYER FIRE WEAPON",
+      "emotion": "Neutral 50",
+      "response_text": "What in tarnation?",
+      "index": "4"
+    },
+    {
+      "topic": "PLAYERINIRONSITES",
+      "topic_text": "PLAYER IN IRON SITES",
+      "emotion": "Neutral 50",
+      "response_text": "For pete's sake...",
+      "index": "6"
+    },
+    {
+      "topic": "PLAYERLAYMINE",
+      "topic_text": "PLAYER LAY MINE",
+      "emotion": "Neutral 50",
+      "response_text": "That'll show 'em!",
+      "index": "8"
+    },
+    {
+      "topic": "PLAYERTHROWGRENADE",
+      "topic_text": "PLAYER THROW GRENADE",
+      "emotion": "Neutral 50",
+      "response_text": "Here it comes!",
+      "index": "10"
+    },
+    {
+      "topic": "VFreeformGoodspringsGSEasyPeteTopic000",
+      "topic_text": "Why are you called Easy Pete?",
+      "emotion": "Neutral 50",
+      "response_text": "Was a prospector until I decided to settle here to get away from the NCR. Now I just take it easy and help out with the Brahmin and Bighorners.",
+      "index": "12"
+    },
+    {
+      "topic": "VFreeformGoodspringsGSEasyPeteTopic001",
+      "topic_text": "Do you know anything about the people who attacked me?",
+      "emotion": "Neutral 50",
+      "response_text": "The one in the fancy suit seemed to be calling the shots, that's as much as I know. Other folks in town might know more.{TEXT IS CORRECT, NOT SOUND FILE.}",
+      "index": "13"
+    },
+    {
+      "topic": "VFreeformGoodspringsGSEasyPeteTopic002",
+      "topic_text": "What do you use the Bighorners for?",
+      "emotion": "Neutral 50",
+      "response_text": "Meat and hide, mostly. Can't put a pack on 'em - they just lay down until you take it off.",
+      "index": "15"
+    },
+    {
+      "topic": "VFreeformGoodspringsGSEasyPeteTopic003",
+      "topic_text": "Did you ever find anything good while prospecting?",
+      "emotion": "Neutral 50",
+      "response_text": "Nope. Had a pretty good claim once, way out east by the river, but got run off by Raiders. Eventually, got too old to keep going out.",
+      "index": "17"
+    },
+    {
+      "topic": "VFreeformGoodspringsGSEasyPeteTopic004",
+      "topic_text": "Do you know anything about Victor?",
+      "emotion": "Neutral 50",
+      "response_text": "The machine? Harmless, no matter what Trudy says. She thinks it's hiding something, but I think it's just a broken down relic with no place to be.",
+      "index": "18"
+    },
+    {
+      "topic": "VFreeformGoodspringsGSEasyPeteTopic005",
+      "topic_text": "Never mind.",
+      "emotion": "Neutral 50",
+      "response_text": "Yup.",
+      "index": "19"
+    },
+    {
+      "topic": "VFreeformGoodspringsGSEasyPeteTopic006",
+      "topic_text": "You were a prospector - like digging for gold and silver?",
+      "emotion": "Neutral 50",
+      "response_text": "Nah, nah - means I poked through old buildings looking for working tech and such. Some folks just call it \"salvaging,\" but never liked the term.",
+      "index": "20"
+    },
+    {
+      "topic": "VFreeformGoodspringsGSEasyPeteTopic007",
+      "topic_text": "What's wrong with the NCR?",
+      "emotion": "Neutral 50",
+      "response_text": "Don't get me wrong - the NCR's got a lot of decent folk in it. It's just that they make you part of them whether you like it or not.",
+      "index": "22"
+    },
+    {
+      "topic": "VFreeformGoodspringsGSEasyPeteTopic008",
+      "topic_text": "Tell me about the Legion.",
+      "emotion": "Neutral 50",
+      "response_text": "They're slavers, led by a guy named{SEE-zer}Caesar. Or{less certainly, KAI-zar}Caesar. Not sure how you're supposed to say it.",
+      "index": "24"
+    },
+    {
+      "topic": "VFreeformGoodspringsGSEasyPeteTopic009",
+      "topic_text": "What's so important about Hoover Dam?",
+      "emotion": "Neutral 50",
+      "response_text": "The Dam powers a lot of New Vegas. And then there's all that clean water lying in Lake Mead, too. Anybody who owns the Dam owns the territory.",
+      "index": "28"
+    },
+    {
+      "topic": "VFreeformGoodspringsGoodspringsEasyPeteTopic000",
+      "topic_text": "I hear you've got dynamite. It would help us beat the powder gangers.",
+      "emotion": "Neutral 50",
+      "response_text": "Too dangerous. Gonna kill all yourselves if I let you touch it. Better to leave it buried - safer that way.",
+      "index": "29"
+    },
+    {
+      "topic": "VFreeformGoodspringsGoodspringsEasyPeteTopic001",
+      "topic_text": "I'm familiar with the care and handling of explosives, dynamite included.",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] Uh huh. Guess you know what you're doing. I'll go dig it up and get it ready. You'll have it by the time the fighting starts.",
+      "index": "31"
+    },
+    {
+      "topic": "VFreeformGoodspringsGoodspringsEasyPeteTopic002",
+      "topic_text": "How hard can it be? Just light them and throw.",
+      "emotion": "Neutral 50",
+      "response_text": "[FAILED] Too dangerous, sorry. Blow yourself up, blow your neighbor up, blow the whole town up.",
+      "index": "32"
+    },
+    {
+      "topic": "VFreeformGoodspringsGoodspringsEasyPeteTopic003",
+      "topic_text": "What do you know about Joe Cobb?",
+      "emotion": "Neutral 50",
+      "response_text": "Bad trouble.",
+      "index": "33"
+    },
+    {
+      "topic": "VFreeformGoodspringsGoodspringsEasyPeteTopic004",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Keep your gun handy if you go poking around some of the abandoned places around here, like the schoolhouse.",
+      "index": "34"
+    },
+    {
+      "topic": "VFreeformGoodspringsGoodspringsEasyPeteTopic005",
+      "topic_text": "That's... helpful.",
+      "emotion": "Neutral 50",
+      "response_text": "Welcome.",
+      "index": "37"
+    },
+    {
+      "topic": "VFreeformGoodspringsGoodspringsEasyPeteTopic006",
+      "topic_text": "Never mind.",
+      "emotion": "Neutral 50",
+      "response_text": "Uh huh.",
+      "index": "38"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Keep your gun handy if you go poking around some of the abandoned places around here, like the schoolhouse. Critters move in there sometimes.",
+      "index": "39"
+    }
+  ],
+  "combat": [
+    {
+      "topic": "AcceptYield",
+      "topic_text": "AcceptYield",
+      "emotion": "Neutral 50",
+      "response_text": "Git.",
+      "index": "41"
+    },
+    {
+      "topic": "Assault",
+      "topic_text": "Assault",
+      "emotion": "Neutral 50",
+      "response_text": "Bastard!",
+      "index": "42"
+    },
+    {
+      "topic": "Attack",
+      "topic_text": "Attack",
+      "emotion": "Neutral 50",
+      "response_text": "Ergh!",
+      "index": "45"
+    },
+    {
+      "topic": "AvoidThreat",
+      "topic_text": "AvoidThreat",
+      "emotion": "Neutral 50",
+      "response_text": "Run!",
+      "index": "48"
+    },
+    {
+      "topic": "Death",
+      "topic_text": "Death",
+      "emotion": "Neutral 50",
+      "response_text": "Ahhhhh!",
+      "index": "50"
+    },
+    {
+      "topic": "DeathResponse",
+      "topic_text": "DeathResponse",
+      "emotion": "Neutral 50",
+      "response_text": "Damn...",
+      "index": "53"
+    },
+    {
+      "topic": "FireExplosive",
+      "topic_text": "FireExplosive",
+      "emotion": "Neutral 50",
+      "response_text": "Heh heh!",
+      "index": "55"
+    },
+    {
+      "topic": "Flee",
+      "topic_text": "Flee",
+      "emotion": "Neutral 50",
+      "response_text": "Run!",
+      "index": "57"
+    },
+    {
+      "topic": "GuardTrespass",
+      "topic_text": "GuardTrespass",
+      "emotion": "Neutral 50",
+      "response_text": "Stop!",
+      "index": "60"
+    },
+    {
+      "topic": "Hit",
+      "topic_text": "Hit",
+      "emotion": "Neutral 50",
+      "response_text": "Eragh!",
+      "index": "63"
+    },
+    {
+      "topic": "Murder",
+      "topic_text": "Murder",
+      "emotion": "Neutral 50",
+      "response_text": "Stop!",
+      "index": "69"
+    },
+    {
+      "topic": "MurderNoCrime",
+      "topic_text": "MurderNoCrime",
+      "emotion": "Neutral 50",
+      "response_text": "Yup.",
+      "index": "72"
+    },
+    {
+      "topic": "PowerAttack",
+      "topic_text": "PowerAttack",
+      "emotion": "Neutral 50",
+      "response_text": "Hm eragh!",
+      "index": "75"
+    },
+    {
+      "topic": "Steal",
+      "topic_text": "Steal",
+      "emotion": "Neutral 50",
+      "response_text": "Thief!",
+      "index": "79"
+    }
+  ]
+}

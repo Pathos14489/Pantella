@@ -1,0 +1,129 @@
+{
+  "name": "Silas",
+  "url": "/wiki/Silas_(Fallout_3)",
+  "dialogue_name": "MS06Slaver01.txt",
+  "dialogue_url": "/wiki/MS06Slaver01.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "00027FAF",
+  "ref_id": "00027FBB",
+  "editor_id": "MS06Slaver01TEMPLATE",
+  "location": "Lincoln Memorial",
+  "location_url": "/wiki/Lincoln_Memorial",
+  "descriptions": [
+    "Silas is a slaver stationed at the Lincoln Memorial in 2277.",
+    "Leroy's right-hand man and trusted second-in-command, Silas guards the slavers' current defensive stronghold against the almost constant super mutant attacks. Curt, sly, and sardonic, Silas isn't a particularly pleasant man, even for a slaver.",
+    "Leroy Walker and his slaver comrades, including Silas, were sent to the Lincoln Memorial by Eulogy Jones just in case any escaped slaves would want to pay homage to \"the great emancipator.\"",
+    "Silas remains in the game files of Fallout: New Vegas as legacy content. He has the distinction of being the only named human non-player character to have been left in the files."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Slavers",
+  "role": "Slaver",
+  "detailed_location": "Lincoln Memorial",
+  "voice_actor": "Jeff Baker",
+  "special": {
+    "Strength": 5,
+    "Perception": 7,
+    "Endurance": 4,
+    "Charisma": 4,
+    "Intelligence": 4,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "level": "8→15 (equal to player's level)",
+  "tag_skills": [
+    {
+      "Barter:": "60→93"
+    },
+    {
+      "Melee Weap.:": "62→95(64→97)"
+    },
+    {
+      "Small Guns:": "64→97(66→99)"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "75→110"
+    },
+    {
+      "Critical Chance:": "5%"
+    },
+    {
+      "Unarmed Dam.:": "1.15"
+    },
+    {
+      "Poison Resist.:": "15%"
+    },
+    {
+      "Rad. Resist.:": "6%"
+    },
+    {
+      "Carry Weight:": "200"
+    }
+  ],
+  "karma": "Evil",
+  "voice_type": "MaleAdult01DefaultDC",
+  "geck_race": "Asian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "That's close enough. What the hell are you doing wandering around here?{Suspicious}",
+      "index": "1"
+    },
+    {
+      "topic": "MS06DeadSupermutants",
+      "topic_text": "What happened to those Super Mutants?",
+      "emotion": "Disgust 50",
+      "response_text": "When they get too close, we have to kill them.",
+      "index": "7"
+    },
+    {
+      "topic": "MS06Memorial",
+      "topic_text": "So this is the Lincoln Memorial?",
+      "emotion": "Disgust 50",
+      "response_text": "Not for long.",
+      "index": "9"
+    },
+    {
+      "topic": "MS06MyMistake",
+      "topic_text": "My mistake. I'll just be going.",
+      "emotion": "Disgust 50",
+      "response_text": "Smart move. We shoot anyone that tries to get into the Memorial.",
+      "index": "11"
+    },
+    {
+      "topic": "MS06Peaceful",
+      "topic_text": "Easy now. I'm just curious about this place. I'm not looking for trouble.",
+      "emotion": "Surprise 50",
+      "response_text": "Curiosity can get a wastelander killed. I'm going to let you through, but you'll have to talk to Mr. Walker first. Follow me.",
+      "index": "12"
+    },
+    {
+      "topic": "MS06ToughGuy",
+      "topic_text": "I want something to drink, kill and steal. Not necessarily in that order.",
+      "emotion": "Happy 50",
+      "response_text": "Ha, ha! Don't we all.",
+      "index": "14"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "MS06GateWarning",
+      "topic_text": "MS06GateWarning",
+      "emotion": "Anger 50",
+      "response_text": "Stay away from the steps. They have orders to shoot first and loot the body afterward.",
+      "index": "17"
+    }
+  ],
+  "combat": []
+}

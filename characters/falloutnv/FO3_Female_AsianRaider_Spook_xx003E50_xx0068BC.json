@@ -1,0 +1,86 @@
+{
+  "name": "Spook",
+  "url": "/wiki/Spook",
+  "dialogue_name": "DLC01Spook.txt",
+  "dialogue_url": "/wiki/DLC01Spook.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "xx003E50",
+  "ref_id": "xx0068BC",
+  "editor_id": "DLC01Spook",
+  "location": "The Mill",
+  "location_url": "/wiki/The_Mill",
+  "descriptions": [
+    "Spook is a Pitt raider who guards the entrance to The Hole in 2277.",
+    "She is friends with Faydra and enjoys her job, which involves drinking a lot of alcohol and shouting at nearby slaves. She has a teddy bear, who she has put on a nearby locker with a view of the arena so that it can also watch the fights.",
+    "She will laugh at the Lone Wanderer and make statements discouraging their attempt to fight in the arena.",
+    "Spook appears only in the Fallout 3 add-on The Pitt."
+  ],
+  "race": "Human",
+  "gender": "Female",
+  "affiliation": "Pitt raiders",
+  "role": "Guard",
+  "detailed_location": "The Mill",
+  "voice_actor": "Vanessa Richardson",
+  "special": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 3,
+    "Intelligence": 3,
+    "Agility": 7,
+    "Luck": 5
+  },
+  "level": "1→4→9",
+  "tag_skills": [
+    {
+      "Melee Weap.:": "32→45→66"
+    },
+    {
+      "Small Guns:": "34→47→68"
+    },
+    {
+      "Unarmed:": "28→41→62"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "25→55→85"
+    },
+    {
+      "Critical Chance:": "5%"
+    },
+    {
+      "Unarmed Dam.:": "1.9→2.55→3.6"
+    },
+    {
+      "Poison Resist.:": "15%"
+    },
+    {
+      "Rad. Resist.:": "6%"
+    },
+    {
+      "Carry Weight:": "210"
+    }
+  ],
+  "karma": "Evil",
+  "voice_type": "DLC01RaiderFemaleColdVoice",
+  "geck_race": "AsianRaider",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "Haha! So you're the dumbass scab that signed up to fight in the Hole, huh?",
+      "index": "1"
+    }
+  ],
+  "conversation": [],
+  "combat": []
+}

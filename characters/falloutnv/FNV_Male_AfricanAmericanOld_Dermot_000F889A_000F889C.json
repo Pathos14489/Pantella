@@ -1,0 +1,107 @@
+{
+  "name": "Dermot",
+  "url": "/wiki/Dermot",
+  "dialogue_name": "WestsideDermot.txt",
+  "dialogue_url": "/wiki/WestsideDermot.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000F889A",
+  "ref_id": "000F889C",
+  "editor_id": "WestsideDermot",
+  "location": "Casa Madrid Apartments",
+  "location_url": "/wiki/Casa_Madrid_Apartments",
+  "descriptions": [
+    "Dermot is a slaver living in Westside in 2281. Together with his partner Saint James, they have been kidnapping, murdering, and selling women and children into sexual slavery to the Fiends.",
+    "A particularly rough and nasty person, Dermot puts on the persona of a hardworking and honorable prospector working salvage around New Vegas that likes to just relax on his off days. and selling them to the Fiends for a profit.",
+    "Dermot has a particular mind for keeping his business profits straight and always updates a ledger on the businesses he's done before with prospecting and now (unwisely) for slaves. Along with documenting profits, Dermot also writes notes to himself about how to improve his craft, how to keep Saint James from getting to the children, and any other situations of note.",
+    "On one particular case, Dermot and James had stolen a teddy bear from a little girl they kidnapped. Dermot bribed James with the bear as a means to keep his hands off the kids, as the Fiends \"don't want used goods\" and lets him sell for a higher price.",
+    "Dermot has two unique items, having the only police hat and RobCo jumpsuit in Fallout: New Vegas."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Saint JamesFiendsWestside",
+  "role": "Prospector(formerly)Slaver",
+  "detailed_location": "Casa Madrid Apartments, Westside",
+  "voice_actor": "Emerson Brooks",
+  "special": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 6,
+    "Charisma": 10,
+    "Intelligence": 6,
+    "Agility": 4,
+    "Luck": 7
+  },
+  "level": "7",
+  "misc_skills": [
+    {
+      "Hit Points:": "135"
+    },
+    {
+      "Damage Res.:": "0%(2%)"
+    }
+  ],
+  "karma": "Evil",
+  "voice_type": "MaleAdult01DefaultB",
+  "geck_race": "AfricanAmericanOld",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Anger 20",
+      "response_text": "{Player in combat}Fuck off! I ain't helping you!",
+      "index": "1"
+    },
+    {
+      "topic": "VFreeformCasaMadridWestsideDermotTopic000",
+      "topic_text": "What do you do around here?",
+      "emotion": "Neutral 50",
+      "response_text": "Me and my partner Saint James work salvage around Westside, that's all.",
+      "index": "4"
+    },
+    {
+      "topic": "VFreeformCasaMadridWestsideDermotTopic001",
+      "topic_text": "Why is your partner called Saint James?",
+      "emotion": "Neutral 50",
+      "response_text": "{'Cause}Because it's his name. He may be high-strung, but he's all right. Hauls his half of scrap, which is all I need.",
+      "index": "5"
+    },
+    {
+      "topic": "VFreeformCasaMadridWestsideDermotTopic002",
+      "topic_text": "I hear you and your partner are coyotes.",
+      "emotion": "Neutral 50",
+      "response_text": "Don't believe everything you hear. Me and Saint James earn our caps working salvage.",
+      "index": "6"
+    },
+    {
+      "topic": "VFreeformCasaMadridWestsideDermotTopic003",
+      "topic_text": "I know what you and your partner have been up to - I got the evidence from your rooms.",
+      "emotion": "Anger 50",
+      "response_text": "You're right about that.{shouting for your partner, starting combat}Saint James! Got a thief here!",
+      "index": "9"
+    },
+    {
+      "topic": "VFreeformCasaMadridWestsideDermotTopic005",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah, beat it.",
+      "index": "10"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah, beat it.",
+      "index": "11"
+    }
+  ],
+  "combat": []
+}

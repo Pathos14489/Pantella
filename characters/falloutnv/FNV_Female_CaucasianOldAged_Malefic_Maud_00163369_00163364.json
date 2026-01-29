@@ -1,0 +1,74 @@
+{
+  "name": "Malefic Maud",
+  "url": "/wiki/Malefic_Maud",
+  "dialogue_name": "VFSGrannyGanger1.txt",
+  "dialogue_url": "/wiki/VFSGrannyGanger1.txt",
+  "spawned_dead": false,
+  "spawned": true,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "00163369",
+  "ref_id": "00163364",
+  "editor_id": "VFSGrannyGanger1",
+  "location": "OutsideCerulean Robotics",
+  "location_url": "/wiki/Cerulean_Robotics",
+  "descriptions": [
+    "Malefic Maud is the leader of Maud's Muggers living in Freeside in 2281.",
+    "Maud is an elderly lady who will attack the Courier once they exit Cerulean Robotics in Freeside. She is the leader of Maud's Muggers, a group of elderly thieves."
+  ],
+  "race": "Human",
+  "gender": "Female",
+  "affiliation": "Maud's Muggers",
+  "role": "Mugger",
+  "detailed_location": "Freeside(outsideCerulean Robotics)",
+  "voice_actor": "Marianne Muellerleile",
+  "special": {
+    "Strength": 7,
+    "Perception": 4,
+    "Endurance": 6,
+    "Charisma": 3,
+    "Intelligence": 4,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "mod_special_values": {
+    "Strength": 7,
+    "Perception": 4,
+    "Endurance": 6,
+    "Charisma": 3,
+    "Intelligence": 4,
+    "Agility": 7,
+    "Luck": 5
+  },
+  "level": "5",
+  "tag_skills": [
+    {
+      "Melee Weap.:": "50"
+    },
+    {
+      "Repair:": "44"
+    },
+    {
+      "Unarmed:": "48"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Neutral",
+  "voice_type": "FemaleOld01",
+  "geck_race": "CaucasianOldAged",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "Looky what we have here, ladies, another unsuspecting ponce!",
+      "index": "1"
+    }
+  ],
+  "conversation": [],
+  "combat": []
+}

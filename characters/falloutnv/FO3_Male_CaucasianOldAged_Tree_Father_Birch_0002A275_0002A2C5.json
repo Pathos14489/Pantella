@@ -1,0 +1,668 @@
+{
+  "name": "Tree Father Birch",
+  "url": "/wiki/Birch",
+  "dialogue_name": "OasisTreeFatherBirch.txt",
+  "dialogue_url": "/wiki/OasisTreeFatherBirch.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "0002A275",
+  "ref_id": "0002A2C5",
+  "editor_id": "OasisTreeFatherBirch",
+  "location": "Oasis",
+  "location_url": "/wiki/Oasis",
+  "descriptions": [
+    "Tree Father Birch is the leader of the Treeminders in Oasis in Fallout 3.",
+    "Birch founded the Treeminders. While the village is ostensibly a democratic commune, Birch acts as the group's spiritual and temporal leader. He is the Tree Father, a role similar to a high priest, and guides the cult in their communion with the \"god-spirit\" Harold.",
+    "Birch spends most of his time in the Pavilion, sitting on his throne, occasionally eating, and sleeping for a few hours at night. He also walks around Oasis, overseeing the village more directly.",
+    "Birch is the common name for genus Betula, a type of tree. All of the human residents in Oasis have horticultural names."
+  ],
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Treeminders",
+  "role": "Leader (Tree Father)",
+  "detailed_location": "Oasis",
+  "voice_actor": "Paul Eiding",
+  "special": {
+    "Strength": 5,
+    "Perception": 6,
+    "Endurance": 6,
+    "Charisma": 5,
+    "Intelligence": 5,
+    "Agility": 7,
+    "Luck": 5
+  },
+  "level": "4 → 12 (player's level x1.5)",
+  "tag_skills": [
+    {
+      "Big Guns:": "47→87"
+    },
+    {
+      "Small Guns:": "49→89"
+    },
+    {
+      "Speech:": "45→85"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "75→115"
+    },
+    {
+      "Critical Chance:": "5%"
+    },
+    {
+      "Unarmed Dam.:": "1.35"
+    },
+    {
+      "Poison Resist.:": "25%"
+    },
+    {
+      "Rad. Resist.:": "10%"
+    },
+    {
+      "Carry Weight:": "200"
+    }
+  ],
+  "karma": "Good",
+  "voice_type": "MaleOld01DC",
+  "geck_race": "CaucasianOldAged",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Anger 80",
+      "response_text": "I thought I was quite clear. Leave or we will be forced to take action!",
+      "index": "1"
+    },
+    {
+      "topic": "MS10BirchCT01",
+      "topic_text": "I've never seen anyplace like this.",
+      "emotion": "Happy 60",
+      "response_text": "No, I suppose you haven't. In fact, few who live outside of Oasis have.",
+      "index": "22"
+    },
+    {
+      "topic": "MS10BirchCT01aAnimalF",
+      "topic_text": "Amazing, this place seems so abundant with animal life.",
+      "emotion": "Happy 80",
+      "response_text": "The innocent creatures are drawn here by His gifts. They come from across the Wasteland to live in this sanctuary.",
+      "index": "24"
+    },
+    {
+      "topic": "MS10BirchCT01bLifegiver",
+      "topic_text": "I can't explain it, but I can feel this place just teeming with life.",
+      "emotion": "Happy 80",
+      "response_text": "That's His power you feel, Outsider. With His outstretched limbs He shelters us and keep us safe.",
+      "index": "26"
+    },
+    {
+      "topic": "MS10BirchCT02",
+      "topic_text": "This place is weird. Where do you plug stuff in?",
+      "emotion": "Happy 90",
+      "response_text": "Ha ha ha! We no longer use devices like that. We cast our technology away many years ago.",
+      "index": "27"
+    },
+    {
+      "topic": "MS10BirchCT03",
+      "topic_text": "This place scares me. It's so... different.",
+      "emotion": "Happy 60",
+      "response_text": "What you call scared, I call humbled. This place is a blessing to all of us.",
+      "index": "29"
+    },
+    {
+      "topic": "MS10BirchCT04",
+      "topic_text": "Who is it you keep referring to as \"Him\"?",
+      "emotion": "Happy 70",
+      "response_text": "He is the One Who Grows, He is the One Who Gives and He is the One Who Guides.",
+      "index": "31"
+    },
+    {
+      "topic": "MS10BirchCT04aInt",
+      "topic_text": "The way you're saying \"Him,\" I could swear you're referring to a god...",
+      "emotion": "Happy 70",
+      "response_text": "He's no mere god, my friend.",
+      "index": "34"
+    },
+    {
+      "topic": "MS10BirchCT05",
+      "topic_text": "I wish you could just tell me who \"He\" is, already...",
+      "emotion": "Happy 70",
+      "response_text": "He is the One Who Grows, He is the One Who Gives and He is the One Who Guides.",
+      "index": "37"
+    },
+    {
+      "topic": "MS10BirchCT06",
+      "topic_text": "Can you cut the \"Him\" crap already and just tell me who he is?",
+      "emotion": "Happy 70",
+      "response_text": "He is the One Who Grows, He is the One Who Gives and He is the One Who Guides.",
+      "index": "40"
+    },
+    {
+      "topic": "MS10BirchCT07",
+      "topic_text": "Why do you call yourselves Treeminders?",
+      "emotion": "Anger 60",
+      "response_text": "We care for this place and keep it safe from those who would seek to exploit it.",
+      "index": "43"
+    },
+    {
+      "topic": "MS10BirchCT07SC",
+      "topic_text": "I may be willing to help, but I need straight answers about who \"He\" is.",
+      "emotion": "Neutral 50",
+      "response_text": "I would have preferred that He made the introduction, but I understand your hesitation.",
+      "index": "46"
+    },
+    {
+      "topic": "MS10BirchCT08",
+      "topic_text": "Treeminders, huh? That's a strange name.",
+      "emotion": "Anger 60",
+      "response_text": "Is it so strange to care for one's home and keep it safe from those who would seek to exploit it?",
+      "index": "49"
+    },
+    {
+      "topic": "MS10BirchCT09",
+      "topic_text": "I think you're all a bunch of lunatics.",
+      "emotion": "Neutral 50",
+      "response_text": "Ha ha ha. I don't expect you to understand everything you see here. After all, you carry the taint of technology upon you.",
+      "index": "52"
+    },
+    {
+      "topic": "MS10BirchCT10",
+      "topic_text": "If you hate technology, why carry weapons?",
+      "emotion": "Neutral 50",
+      "response_text": "Sadly, the Wasteland is a hostile place and sometimes we're forced to defend ourselves against it.",
+      "index": "54"
+    },
+    {
+      "topic": "MS10BirchCT11",
+      "topic_text": "Shun technology? How do you defend yourselves?",
+      "emotion": "Neutral 50",
+      "response_text": "The Wasteland is a hostile place and sometimes we're forced to defend ourselves against it.",
+      "index": "57"
+    },
+    {
+      "topic": "MS10BirchCT12",
+      "topic_text": "Yeah, sure. I guess that's why Maple stuck a rifle in my face...",
+      "emotion": "Disgust 80",
+      "response_text": "Listen my friend, I will forgive your insolent tone because He has asked to see you.",
+      "index": "60"
+    },
+    {
+      "topic": "MS10BirchCTCeremony01",
+      "topic_text": "Okay, let's begin the ceremony.",
+      "emotion": "Happy 70",
+      "response_text": "Very good! Take your place in front of the basin and let's begin.",
+      "index": "62"
+    },
+    {
+      "topic": "MS10BirchCTCeremony02",
+      "topic_text": "Could we wait just a bit? I'm not quite ready.",
+      "emotion": "Happy 70",
+      "response_text": "I understand, my friend. Preparing to meet Him takes much preparation and soul searching.",
+      "index": "63"
+    },
+    {
+      "topic": "MS10BirchCTCeremony03",
+      "topic_text": "Forget this whole thing. This is insane!",
+      "emotion": "Anger 60",
+      "response_text": "Then you are free to go. He had requested to see you, but He said not to take you against your will.",
+      "index": "66"
+    },
+    {
+      "topic": "MS10BirchCTDirect01",
+      "topic_text": "Which brings us to why I'm here, I suppose.",
+      "emotion": "Happy 70",
+      "response_text": "Yes. Indeed it does. Sorry I don't speak to Outsiders very often and I tend to get lost in conversation.",
+      "index": "69"
+    },
+    {
+      "topic": "MS10BirchCTDirect02",
+      "topic_text": "So what was all this about meeting someone?",
+      "emotion": "Happy 70",
+      "response_text": "Yes, my apologies. I don't speak to Outsiders very often and I tend to get lost in conversation.",
+      "index": "72"
+    },
+    {
+      "topic": "MS10BirchCTDirect03",
+      "topic_text": "Fine, fine. Get to the point already.",
+      "emotion": "Happy 70",
+      "response_text": "You have much to learn about patience, my friend. However, you are correct, I will get to the point.",
+      "index": "75"
+    },
+    {
+      "topic": "MS10BirchCTQuest01",
+      "topic_text": "I would be honored to meet this person.",
+      "emotion": "Happy 50",
+      "response_text": "Yes... person.{Almost to yourself as if musing.}",
+      "index": "78"
+    },
+    {
+      "topic": "MS10BirchCTQuest02",
+      "topic_text": "And where can I find this person?",
+      "emotion": "Happy 50",
+      "response_text": "Yes... person.{Almost to yourself as if musing.}",
+      "index": "81"
+    },
+    {
+      "topic": "MS10BirchCTQuest03",
+      "topic_text": "Okay already. Let's get this going.",
+      "emotion": "Neutral 50",
+      "response_text": "To meet Him, you must undergo the Ceremony of Purification. Once that's complete, you'll be able to speak to Him.",
+      "index": "84"
+    },
+    {
+      "topic": "MS10BirchCTQuest04",
+      "topic_text": "Just a minute... What does this ceremony involve?",
+      "emotion": "Neutral 50",
+      "response_text": "It's simple really. You drink the Sap from the basin here in the Pavilion.",
+      "index": "86"
+    },
+    {
+      "topic": "MS10BirchCTQuest05",
+      "topic_text": "Hang on, you never said anything about a ceremony!",
+      "emotion": "Surprise 60",
+      "response_text": "There's no reason to be alarmed.",
+      "index": "89"
+    },
+    {
+      "topic": "MS10BirchCTQuest06",
+      "topic_text": "Can't we skip all this nonsense?",
+      "emotion": "Disgust 50",
+      "response_text": "I'm afraid not. No one gets to see Him without first drinking the Sap from the basin here in the Pavilion.",
+      "index": "92"
+    },
+    {
+      "topic": "MS10BirchCeremonyInter01",
+      "topic_text": "I'm sorry, I'm ready now.",
+      "emotion": "Happy 80",
+      "response_text": "Then please, return to the basin and we will begin.",
+      "index": "95"
+    },
+    {
+      "topic": "MS10BirchCeremonyInter02",
+      "topic_text": "I've changed my mind. I'm not quite ready.",
+      "emotion": "Happy 70",
+      "response_text": "There's nothing to fear here. This is our tradition and our custom, as well as a measure of protection for Him.",
+      "index": "96"
+    },
+    {
+      "topic": "MS10BirchCeremonyInter03",
+      "topic_text": "I'm leaving. This is just crazy.",
+      "emotion": "Anger 60",
+      "response_text": "Then you are free to go. He had requested to see you, but He said not to take you against your will.",
+      "index": "99"
+    },
+    {
+      "topic": "MS10BirchEndgame01",
+      "topic_text": "I was glad to do it. Oasis needs to be protected.",
+      "emotion": "Happy 50",
+      "response_text": "In your short visit here I can see you've learned much. That's a rare gift in these turbulent times.",
+      "index": "102"
+    },
+    {
+      "topic": "MS10BirchEndgame02",
+      "topic_text": "Sure, I guess.",
+      "emotion": "Happy 50",
+      "response_text": "Perhaps you haven't learned quite as much as I hoped from your visit here, but I'm glad to see you made the right choice in the end.",
+      "index": "105"
+    },
+    {
+      "topic": "MS10BirchEndgame03",
+      "topic_text": "I could have used a pile of caps instead, but whatever.",
+      "emotion": "Sad 50",
+      "response_text": "I'm saddened that worldly possessions and wealth still drive you, but I'm glad to see you made the right choice in the end.",
+      "index": "108"
+    },
+    {
+      "topic": "MS10BirchHDeadEndgame01",
+      "topic_text": "I have to say I'm surprised you aren't angrier with me.",
+      "emotion": "Sad 90",
+      "response_text": "Before you reached His heart, He imparted his last words to me. He told me about his will to die and how I mistook this for some mystical sign.",
+      "index": "111"
+    },
+    {
+      "topic": "MS10BirchHDeadEndgame02",
+      "topic_text": "And here I thought you'd be ready to kill me.",
+      "emotion": "Neutral 50",
+      "response_text": "No, Outsider, my anger lay not with you, but with myself.",
+      "index": "114"
+    },
+    {
+      "topic": "MS10BirchHDeadEndgame03",
+      "topic_text": "Welcome back to the Wasteland, asshole.",
+      "emotion": "Disgust 50",
+      "response_text": "You're words sting, Outsider. Normally I'd have you cast from this place for such a statement, but my eyes have been opened.",
+      "index": "118"
+    },
+    {
+      "topic": "MS10BirchHDeadEndgame04",
+      "topic_text": "What will become of Oasis?",
+      "emotion": "Neutral 50",
+      "response_text": "Even though the Great One has left us, our memories of Him will never die.",
+      "index": "122"
+    },
+    {
+      "topic": "MS10BirchHDeadEndgame05",
+      "topic_text": "You'll make due.",
+      "emotion": "Neutral 50",
+      "response_text": "Even though the Great One has left us, our memories of Him will never die.",
+      "index": "125"
+    },
+    {
+      "topic": "MS10BirchHDeadEndgame06",
+      "topic_text": "I could care less about your problems. I'm out of here.",
+      "emotion": "Sad 70",
+      "response_text": "Your words carry no remorse, no caring.",
+      "index": "128"
+    },
+    {
+      "topic": "MS10BirchPostCT01",
+      "topic_text": "I'm afraid Harold isn't a god. He's just a human that had some bad luck.",
+      "emotion": "Surprise 80",
+      "response_text": "Oh, He's testing you now, just like He tested us!",
+      "index": "131"
+    },
+    {
+      "topic": "MS10BirchPostCT02",
+      "topic_text": "He's not a god, Birch. His name's Harold.",
+      "emotion": "Surprise 80",
+      "response_text": "Oh, He's testing you now, just like He tested us!",
+      "index": "134"
+    },
+    {
+      "topic": "MS10BirchPostCT03",
+      "topic_text": "Can we just dispense with all of the religious crap? His name's Harold!",
+      "emotion": "Surprise 80",
+      "response_text": "Oh, He's testing you now, just like He tested us!",
+      "index": "137"
+    },
+    {
+      "topic": "MS10BirchPostCT04",
+      "topic_text": "Did you know your god wants me to kill him?",
+      "emotion": "Happy 70",
+      "response_text": "Yes, I've been pondering that riddle myself for some time now and I think I know what He's trying to tell us.",
+      "index": "140"
+    },
+    {
+      "topic": "MS10BirchPostCT04a",
+      "topic_text": "Harold makes unusual requests.",
+      "emotion": "Happy 80",
+      "response_text": "The Great One does tend to speak in riddles, but if that is His way, then so be it.",
+      "index": "143"
+    },
+    {
+      "topic": "MS10BirchPostCT05",
+      "topic_text": "Are you aware that Harold wants to die?",
+      "emotion": "Happy 70",
+      "response_text": "Yes, I've been pondering that riddle myself for some time now and I think I know what He's trying to tell us.",
+      "index": "147"
+    },
+    {
+      "topic": "MS10BirchPostCT06",
+      "topic_text": "You don't scare me Birch, and neither does that overgrown weed you call a god.",
+      "emotion": "Anger 100",
+      "response_text": "That's it! You are no longer welcome in Oasis! Get out IMMEDIATELY!",
+      "index": "150"
+    },
+    {
+      "topic": "MS10BirchPostCT07",
+      "topic_text": "So what can I do to help?",
+      "emotion": "Happy 50",
+      "response_text": "If the same sap that you drank to purify yourself could be applied to His heart, it should stop the spread.",
+      "index": "154"
+    },
+    {
+      "topic": "MS10BirchPostCT08",
+      "topic_text": "Killing him should stop his influence from spreading.",
+      "emotion": "Neutral 50",
+      "response_text": "You misinterpret His words, my friend. He wants you to extinguish that which seeks to make Him vulnerable.",
+      "index": "156"
+    },
+    {
+      "topic": "MS10BirchPostCT09",
+      "topic_text": "You don't scare me Birch, and neither does that overgrown weed you call a god.",
+      "emotion": "Anger 100",
+      "response_text": "That's it! You are no longer welcome in Oasis! Get out IMMEDIATELY!",
+      "index": "159"
+    },
+    {
+      "topic": "MS10BirchStartCT01",
+      "topic_text": "Just a minute. Who are you and what is this place?",
+      "emotion": "Sad 50",
+      "response_text": "I'm sorry, in my excitement, I got ahead of myself.",
+      "index": "163"
+    },
+    {
+      "topic": "MS10BirchStartCT02",
+      "topic_text": "I'm not following anyone until I know what's going on here.",
+      "emotion": "Sad 50",
+      "response_text": "I'm sorry, in my excitement, I got ahead of myself.",
+      "index": "166"
+    },
+    {
+      "topic": "MS10BirchStartCT03",
+      "topic_text": "Ha ha ha! What the hell are you wearing?",
+      "emotion": "Neutral 50",
+      "response_text": "I am wearing the clothes of a Treeminder. We shed our Wasteland garments like the ones you're wearing long ago.",
+      "index": "169"
+    },
+    {
+      "topic": "MS10BirchStartCT04",
+      "topic_text": "Whoa, whoa. Slow down, old man. What the hell are you babbling about?",
+      "emotion": "Sad 50",
+      "response_text": "I'm sorry, in my excitement, I got ahead of myself.",
+      "index": "170"
+    },
+    {
+      "topic": "MS10BirchStartCT05",
+      "topic_text": "Sure, lead on.",
+      "emotion": "Happy 90",
+      "response_text": "Excellent! Please, follow me. All will be explained soon.",
+      "index": "173"
+    },
+    {
+      "topic": "MS10BirchStartCT06",
+      "topic_text": "Who's waiting for me inside?",
+      "emotion": "Surprise 80",
+      "response_text": "Why, He is of course.",
+      "index": "174"
+    },
+    {
+      "topic": "MS10BirchStartCT07",
+      "topic_text": "The Treeminders?",
+      "emotion": "Happy 80",
+      "response_text": "Yes, we're the Treeminders. We're His people.",
+      "index": "176"
+    },
+    {
+      "topic": "MS10BirchStartCT08",
+      "topic_text": "I'm not following anyone. I need to be on my way.",
+      "emotion": "Neutral 50",
+      "response_text": "I can promise you that if you leave, you'll be missing out on a great honor. Not many have even seen Him before, and yet he wants to speak to you.",
+      "index": "178"
+    },
+    {
+      "topic": "MS10BirchStartCT09",
+      "topic_text": "Okay, I'll follow you. Lead on.",
+      "emotion": "Happy 90",
+      "response_text": "Excellent! Please, follow me. All will be explained soon.",
+      "index": "180"
+    },
+    {
+      "topic": "MS10BirchStartCT10",
+      "topic_text": "No way! You're obviously out of your mind!",
+      "emotion": "Sad 80",
+      "response_text": "I'm very saddened to hear that, a great opportunity like this may come only once in a lifetime.",
+      "index": "181"
+    },
+    {
+      "topic": "MS10BirchStartCT10a",
+      "topic_text": "Perhaps some other time. I have more urgent matters to attend to.",
+      "emotion": "Sad 80",
+      "response_text": "I'm very saddened to hear that, a great opportunity like this may come only once in a lifetime.",
+      "index": "184"
+    },
+    {
+      "topic": "MS10FinTLRewardTree Father Birch said you may have a gift for me?",
+      "topic_text": "You said someone had gifts for me?",
+      "emotion": "Happy 50",
+      "response_text": "Yes, I believe Branchtender Maple, Branchtender Cypress and my little Yew mentioned they had some things for you as gifts.",
+      "index": "187"
+    },
+    {
+      "topic": "MS10TLCaves",
+      "topic_text": "Any information you could give me on the caves below Oasis would be helpful.",
+      "emotion": "Disgust 60",
+      "response_text": "Just like a cancer would infest our bodies, the caves below us are infested with vermin.",
+      "index": "191"
+    },
+    {
+      "topic": "MS10TLCeremony",
+      "topic_text": "I'm ready to undertake the ceremony.",
+      "emotion": "Happy 80",
+      "response_text": "Very good! Take your place in front of the basin and let's begin.",
+      "index": "193"
+    },
+    {
+      "topic": "MS10TLDoNow",
+      "topic_text": "What will you do now?",
+      "emotion": "Neutral 50",
+      "response_text": "I will do my best to honor the Great One's memory by tending this place until my dying day.",
+      "index": "195"
+    },
+    {
+      "topic": "MS10TLTaskTalk",
+      "topic_text": "I have some questions about the task you gave me.",
+      "emotion": "Happy 70",
+      "response_text": "By all means, ask away.",
+      "index": "200"
+    },
+    {
+      "topic": "MS10TLTaskTalk01",
+      "topic_text": "Why don't you just travel to Harold's heart on your own?",
+      "emotion": "Happy 60",
+      "response_text": "I would if I was able, but He will not allow us entry. His roots bar the door, and we have yet to earn the right to pass.",
+      "index": "201"
+    },
+    {
+      "topic": "MS10TLTaskTalk02",
+      "topic_text": "Were you aware that Laurel gave me this Liniment?",
+      "emotion": "Neutral 50",
+      "response_text": "Of course I am. I know everything that goes on in Oasis. Laurel is free to pursue whatever path she chooses.",
+      "index": "202"
+    },
+    {
+      "topic": "MS10TLTaskTalk03",
+      "topic_text": "Where did the sap come from?",
+      "emotion": "Happy 50",
+      "response_text": "Bloomseer Poplar has a unique understanding of the innate power that lay dormant in the plants you see around you.",
+      "index": "205"
+    },
+    {
+      "topic": "MS10TLTaskTalk04",
+      "topic_text": "Where is the entrance to the caves?",
+      "emotion": "Neutral 50",
+      "response_text": "You'll find the entrance in the southwestern part of Oasis.",
+      "index": "207"
+    },
+    {
+      "topic": "MS10TLTreeminderWhat did you have to do to become a Treeminder?",
+      "topic_text": "May I ask you about the Treeminders?",
+      "emotion": "Happy 80",
+      "response_text": "Of course. We're quite open about everything here.",
+      "index": "208"
+    },
+    {
+      "topic": "MS10TLTreeminder01",
+      "topic_text": "How did the Treeminders begin?",
+      "emotion": "Happy 50",
+      "response_text": "When I first beheld the glory of the Great One, I knew there'd be others who would seek to do Him harm.",
+      "index": "209"
+    },
+    {
+      "topic": "MS10TLTreeminder02",
+      "topic_text": "How do the Treeminders normally handle other Outsiders?",
+      "emotion": "Neutral 50",
+      "response_text": "If the Outsider doesn't have His blessing, we simply deny him entry to our home.",
+      "index": "212"
+    },
+    {
+      "topic": "MS10TLTreeminder03",
+      "topic_text": "Could I become a Treeminder?",
+      "emotion": "Happy 50",
+      "response_text": "Becoming a disciple of the Great One takes many years of dedication and the will to cast aside your reliance on technological conveniences.",
+      "index": "215"
+    },
+    {
+      "topic": "MS10TLTreeminder04",
+      "topic_text": "Your names are quite strange. What do they mean?",
+      "emotion": "Happy 50",
+      "response_text": "The first part of our name represents our role in the Treeminders. The youngest are the Saplings, still learning what it means to live in Oasis.",
+      "index": "217"
+    },
+    {
+      "topic": "MS10TLWater",
+      "topic_text": "If this place has living plants, does that mean the water is safe to drink?",
+      "emotion": "Sad 80",
+      "response_text": "I'm afraid the water still bears the mark of man's greed. It's His reminder of what we once were.",
+      "index": "220"
+    },
+    {
+      "topic": "MS10TopicBailout",
+      "topic_text": "I'd like to ask about something else.",
+      "emotion": "Happy 70",
+      "response_text": "Go on.",
+      "index": "222"
+    },
+    {
+      "topic": "SpeechChallengeFailure",
+      "topic_text": "SpeechChallengeFailure",
+      "emotion": "Neutral 50",
+      "response_text": "I understand your hesitation, but I can assure you that no harm will befall you.",
+      "index": "223"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "I have to go now.",
+      "emotion": "Happy 80",
+      "response_text": "Goodbye Outsider, and good luck.",
+      "index": "224"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Happy 70",
+      "response_text": "How can I help you, Outsider?",
+      "index": "228"
+    },
+    {
+      "topic": "MS10Argue",
+      "topic_text": "MS10Argue",
+      "emotion": "Anger 50",
+      "response_text": "Agreed. Why else would the Outsider have been allowed into the Grove? Perhaps it's a test. Yes... that must be it!{calming down from argument but still a bit annoyed}",
+      "index": "235"
+    },
+    {
+      "topic": "MS10BirchCeremonyDrinkSay",
+      "topic_text": "MS10BirchCeremonyDrinkSay",
+      "emotion": "Happy 80",
+      "response_text": "You must drink from the basin if you wish to meet Him.",
+      "index": "238"
+    },
+    {
+      "topic": "MS10TreemindersCeremonySay",
+      "topic_text": "MS10TreemindersCeremonySay",
+      "emotion": "Neutral 50",
+      "response_text": "We will now recite the blessing to ward off any harm the Outsider may be carrying before he proceeds to the Grove.",
+      "index": "242"
+    }
+  ],
+  "combat": []
+}
