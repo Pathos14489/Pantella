@@ -4,11 +4,11 @@ from pydantic import BaseModel, Field
 from typing import List, Literal, Optional
 logging.info("Imported required libraries in simple_generator.py")
 
-generator_name = "skyrim_pantella"
-valid_games = ["skyrim","skyrimvr"]
+generator_name = "fnv_pantella"
+valid_games = ["falloutnv"]
 
 class Character(BaseModel):
-    """Skyrim Character Schema - Uses Skyrim Stats, Stats are all 0-100"""
+    """Fallout: New Vegas Character Schema - Uses Fallout: New Vegas Stats, Stats are all 0-100"""
     name: str = Field(...,min_length=1)
     personality_description: str = Field(...,min_length=1)
     backstory: str = Field(...,description="A description of the character's backstory. Should be at least a paragraph long.")
@@ -21,8 +21,8 @@ class Character(BaseModel):
     
     def get_prompt(character_name, character_ref_id, character_base_id, character_in_game_race, character_in_game_gender, character_is_guard, character_is_ghost, location=None):
         if location is None:
-            location = "Skyrim"
-        return f"Create a Skyrim character named {character_name} with the following information: Character is a {character_in_game_gender} {character_in_game_race}.\nThey are currently located at: {location}" # {'The character is a guard. ' if character_is_guard else ''}{'The character is a ghost. ' if character_is_ghost else ''}
+            location = "Fallout: New Vegas"
+        return f"Create a Fallout: New Vegas character named {character_name} with the following information: Character is a {character_in_game_gender} {character_in_game_race}.\nThey are currently located at: {location}" # {'The character is a guard. ' if character_is_guard else ''}{'The character is a ghost. ' if character_is_ghost else ''}
 
     def get_chracter_info(self, ref_id, base_id, voice_model=None):
         return {

@@ -43,7 +43,8 @@ def create_character_manager(config):
         manager = module.Character
         return manager
     else: # if no specific character_manager is specified
-        logging.config(f"Creating Character Manager[{config.interface_configs[config.game_id]['character_manager']}] (auto) object")
-        module = Manager_Types[config.interface_configs[config.game_id]['character_manager']]
+        interface_config = config.interface_configs[config.game_id]
+        logging.config(f"Creating Character Manager[{interface_config['character_manager']}] (auto) object")
+        module = Manager_Types[interface_config['character_manager']]
         manager = module.Character
         return manager
