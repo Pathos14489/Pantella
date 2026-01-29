@@ -11,27 +11,130 @@ import traceback
 import json
 logging.info("Imported required libraries in llama_cpp_python.py")
 
+imported = False
 try:
     from llama_cpp import Llama
     from llama_cpp.llava_cpp import llava_eval_image_embed, llava_image_embed_make_with_bytes, clip_model_load, llava_image_embed_free
     import llama_cpp
-    loaded = True
+    import torch
+    imported = True
     logging.info("Imported llama-cpp-python in llama_cpp_python.py")
 except Exception as e:
-    loaded = False
-    logging.warning("Failed to load llama-cpp-python. Please check that you have installed it correctly if you intend to use it. If you don't intend to use it, you can ignore this message.")
-
-inference_engine_name = "llama_cpp_python"
+    logging.warning("Failed to load llama-cpp-python. Please check that you have installed it correctly if you intend to use it. If you don't intend to use it, you can ignore this message.", e)
 
 llama_model = None # Used to store the llama-cpp-python model so it can be reused for the tokenizer
 
+inference_engine_name = "llama_cpp_python"
+tokenizer_slug = "llama_cpp_python" # This slug is effectively unused but it is here for consistency with other inference engines
+default_settings = {
+    "model_path": ".\\model.gguf",
+    "llava_clip_model_path": ".\\clip_model.gguf",
+    "n_gpu_layers": 0,
+    "n_threads": 4,
+    "n_batch": 512,
+    "tensor_split": [], # [0.5,0.5] for 2 gpus split evenly, [0.3,0.7] for 2 gpus split unevenly
+    "main_gpu": 0,
+    "split_mode": 0, # 0 = single gpu, 1 = split layers and kv across gpus, 2 = split rows across gpus
+    "use_mmap": True,
+    "use_mlock": False,
+    "n_threads_batch": 1,
+    "offload_kqv": True,
+}
+settings_description = {
+    "model_path": "The path to the model file. This is required for the model to work. If you are using a local model, this should be the path to the model file. If you are using a remote model, this should be the URL to the model file.",
+    "llava_clip_model_path": "The path to the clip model file. This is required for the model to work with vision. If you are using a local model, this should be the path to the model file. If you are using a remote model, this should be the URL to the model file.",
+    "n_gpu_layers": "The number of layers to run on the GPU. This is used to split the model across multiple GPUs. If you are using a single GPU, this should be 0.",
+    "n_threads": "The number of threads to use for the model. This is used to speed up the model inference. If you are using a single GPU, this should be the number of CPU threads you want to use.",
+    "n_batch": "The number of tokens to process in a batch. This is used to speed up the model inference. If you are using a single GPU, this should be the number of tokens you want to process in a batch.",
+    "tensor_split": "The tensor split to use for the model. This is used to split the model across multiple GPUs. If you are using a single GPU, this should be an empty list.",
+    "main_gpu": "The main GPU to use for the model. This is used to split the model across multiple GPUs. If you are using a single GPU, this should be 0.",
+    "split_mode": "The split mode to use for the model. This is used to split the model across multiple GPUs. If you are using a single GPU, this should be 0.",
+    "use_mmap": "Whether to use memory-mapped files for the model. This is used to speed up the model inference. If you are using a single GPU, this should be True.",
+    "use_mlock": "Whether to use mlock to lock the model in memory. This is used to speed up the model inference. If you are using a single GPU, this should be False.",
+    "n_threads_batch": "The number of threads to use for the batch processing. This is used to speed up the model inference. If you are using a single GPU, this should be 1.",
+    "offload_kqv": "Whether to offload the key-value pairs to the CPU. This is used to speed up the model inference. If you are using a single GPU, this should be True.",
+}
+options = {
+    "main_gpu": [], # The main GPU to use for the model, if using multiple GPUs
+    "split_mode": [
+        {
+            "name": "Single GPU",
+            "value": 0,
+            "description": "Use a single GPU for the model. This is the default mode and is recommended for most users.",
+            "default": True,
+            "disabled": False
+        },
+        {
+            "name": "Split Layers and KV across GPUs",
+            "value": 1,
+            "description": "Split the model layers and key-value pairs across multiple GPUs. This is recommended for users with multiple GPUs and large models.",
+            "default": False,
+            "disabled": False
+        }, 
+        {
+            "name": "Split Rows across GPUs",
+            "value": 2,
+            "description": "Split the model rows across multiple GPUs. This is recommended for users with multiple GPUs and large models.",
+            "default": False,
+            "disabled": False
+        }
+    ],
+}
+settings = {}
+loaded = False
+description = "This inference engine uses llama-cpp-python to run the LLM. It is a high-performance inference engine that supports various models and features. This, and using a compatible model over OpenAI API, is the recommended way to run Pantella. It supports vision and COT (Chain of Thought) reasoning, and can generate characters based on the prompt provided. It also supports multimodal prompts with text and image embeds for NPCs that can see what you see."
+
+if imported:
+    if torch.cuda.is_available():
+        # add the available GPUs to the main_gpu option
+        for i in range(torch.cuda.device_count()):
+            gpu_name = torch.cuda.get_device_name(i)
+            if gpu_name is None or gpu_name == "":
+                gpu_name = f"GPU {i}"
+            if i not in [option["value"] for option in options["main_gpu"]]: # Avoid duplicates
+                # Add the GPU to the main_gpu option
+                if i == 0:
+                    description = "Use the first GPU for the model. This is the default GPU and is recommended for most users."
+                else:
+                    description = f"Use GPU {i} for the model. This is recommended if you have a multi-GPU setup and want to use a specific GPU for the model."
+                options["main_gpu"].append({
+                    "name": gpu_name,
+                    "value": i,
+                    "description": description,
+                    "default": True if i == 0 else False, # Default to the first GPU
+                    "disabled": False
+                })
+    # If no GPUs are available, disable the main_gpu option
+    if len(options["main_gpu"]) == 0:
+        options["main_gpu"].append({
+            "name": "No GPU",
+            "value": -1,
+            "description": "No GPU available. The model will run on the CPU.",
+            "default": True,
+            "disabled": True
+        })
+        default_settings["main_gpu"] = -1 # Set the main GPU to -1 if no GPUs are available
+    # If no GPUs are available, disable the split_mode option
+    if len(options["main_gpu"]) == 1 and options["main_gpu"][0]["value"] == -1:
+        options["split_mode"] = [
+            {
+                "name": "No GPU Available",
+                "value": 0,
+                "description": "No GPU available. The model will run on the CPU. If you do have a compatible GPU, please check that you have installed llama-cpp-python and torch correctly.",
+                "default": True,
+                "disabled": True
+            }
+        ]
+else:
+    logging.warning("llama-cpp-python not imported, skipping GPU detection.")
+    
 class LLM(base_LLM): # Uses llama-cpp-python as the LLM inference engine
     def __init__(self, conversation_manager, vision_enabled=False):
-        global llama_model
-        global inference_engine_name
+        global llama_model, inference_engine_name, loaded, default_settings
         super().__init__(conversation_manager, vision_enabled=vision_enabled)
+        default_settings = self.default_inference_engine_settings
         self.inference_engine_name = inference_engine_name
-        if loaded:
+        if imported:
             if llama_model is None:
                 tensor_split = self.config.tensor_split
                 if len(tensor_split) == 0:
@@ -64,7 +167,7 @@ class LLM(base_LLM): # Uses llama-cpp-python as the LLM inference engine
         logging.output(f"Test Completion: {test_completion}")
         if self.vision_enabled:
             logging.info("Vision is enabled for llama-cpp-python")
-            if loaded:
+            if imported:
                 try:
                     self.clip_model = clip_model_load(self.config.llava_clip_model_path.encode(), 1)
                     logging.success(f"Loaded vision model for llama-cpp-python")
@@ -100,7 +203,24 @@ class LLM(base_LLM): # Uses llama-cpp-python as the LLM inference engine
                     self.cot_supported = False
                     logging.error(f"llama-cpp-python encountered an error while testing CoT. GBNF grammars are not supported by your model or your version of llama-cpp-python.")
                     # input("Press Enter to exit.")
+        loaded = True
             
+    @property
+    def default_inference_engine_settings(self):
+        """Returns the default settings for the llama-cpp-python inference engine"""
+        return {
+            "model_path": self.config.model_path,
+            "n_gpu_layers": self.config.n_gpu_layers,
+            "n_threads": self.config.n_threads,
+            "n_batch": self.config.n_batch,
+            "tensor_split": self.config.tensor_split, # [0.5,0.5] for 2 gpus split evenly, [0.3,0.7] for 2 gpus split unevenly
+            "main_gpu": self.config.main_gpu,
+            "split_mode": self.config.split_mode, # 0 = single gpu, 1 = split layers and kv across gpus, 2 = split rows across gpus
+            "use_mmap": self.config.use_mmap,
+            "use_mlock": self.config.use_mlock,
+            "n_threads_batch": self.config.n_threads_batch,
+            "offload_kqv": self.config.offload_kqv,
+        }
 
     def generate_character(self, character_name, character_ref_id, character_base_id, character_in_game_race, character_in_game_gender, character_is_guard=False, character_is_ghost=False, in_game_voice_model=None, location=None):
         """Generate a character based on the prompt provided"""

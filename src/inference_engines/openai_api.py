@@ -8,22 +8,63 @@ import os
 import json
 logging.info("Imported required libraries in openai_api.py")
 
+imported = False
 try:
     from openai import OpenAI
-    loaded = True
+    imported = True
     logging.info("Imported openai in openai_api.py")
 except Exception as e:
-    loaded = False
     logging.warn(f"Failed to load openai, so openai_api cannot be used! Please check that you have installed it correctly. Unless you're not using openai, in which case you can ignore this warning.")
 
 inference_engine_name = "openai"
-
+tokenizer_slug = "tiktoken"
+default_settings = {
+    "openai_model": "undi95/toppy-m-7b:free",
+    "openai_character_generator_model": "", # Blank for use the same model as the main model. Otherwise, specify a different model here.
+    "openai_completions_type": "text", # text or chat
+    "alternative_openai_api_base": "https://openrouter.ai/api/v1/",
+    "openai_api_key_path": ".\\GPT_SECRET_KEY.txt",
+    "banned_samplers": [], # Examples: "min_p", "typical_p", "top_p", "top_k", "temperature", "frequency_penalty", "presence_penalty", "repeat_penalty", "tfs_z", "mirostat_mode", "mirostat_eta", "mirostat_tau", "max_tokens"
+    "api_log_dir": ".\\api_logs",
+}
+settings_description = {
+    "openai_model": "The model to use for completions. This can be changed in config.json.",
+    "openai_character_generator_model": "The model to use for character generation. This can be changed in config.json. If blank, the main model will be used.",
+    "openai_completions_type": "The type of completions to use. This can be changed in config.json. Options are 'text' or 'chat'. If 'text', the model must support text completions. If 'chat', the model must support chat completions.",
+    "alternative_openai_api_base": "The base URL for the OpenAI API. This can be changed in config.json. If 'none', the default OpenAI API will be used.",
+    "openai_api_key_path": "The path to the file containing the OpenAI API key. This can be changed in config.json.",
+    "banned_samplers": "A list of samplers to ban from being used by the LLM. This can be changed in config.json.",
+    "api_log_dir": "The directory to save API logs to. This can be changed in config.json."
+}
+options = {
+    "openai_completions_type": [
+        {
+            "name": "Text Completions",
+            "value": "text",
+            "description": "Use text completions for the OpenAI API. This is the default and recommended option for most models.",
+            "default": True,
+            "disabled": False
+        },
+        {
+            "name": "Chat Completions",
+            "value": "chat",
+            "description": "Use chat completions for the OpenAI API. This is recommended for models that support chat completions, such as GPT-3.5 Turbo and GPT-4.",
+            "default": False,
+            "disabled": False
+        }
+    ],
+    # "openai_model": [], # The model to use for completions. This can be changed in config.json.
+}
+settings = {}
+loaded = False
+description = "This inference engine uses the OpenAI API to generate text completions. It supports both chat and text completions, as well as vision-enabled models. It is designed to be used with the OpenAI API provided by OpenRouter using an RP trained model. It supports character generation and CoT (Chain of Thought) reasoning. Pantella was designed with this inference engine in mind alongside the llama-cpp-python inference engine, so it is the most feature-complete and well-tested inference engine available for Pantella. It is recommended to use this inference engine if you have access to the OpenAI API or a compatible API that supports the OpenAI API format."
 class LLM(base_LLM):
     def __init__(self, conversation_manager, vision_enabled=False):
-        global inference_engine_name
+        global inference_engine_name, default_settings, loaded, tokenizer_slug
         super().__init__(conversation_manager, vision_enabled=vision_enabled)
         self.inference_engine_name = inference_engine_name
-        self.tokenizer_slug = "tiktoken" # Fastest tokenizer for OpenAI models, change if you want to use a different tokenizer (use 'embedding' for compatibility with any model using the openai API)
+        default_settings = self.default_inference_engine_settings
+        self.tokenizer_slug = tokenizer_slug # Fastest tokenizer for OpenAI models, change if you want to use a different tokenizer (use 'embedding' for compatibility with any model using the openai API)
         
         llm = self.config.openai_model
         # Is LLM Local?
@@ -80,7 +121,7 @@ class LLM(base_LLM):
             api_key = f.readline().strip()
         self.api_key = api_key
 
-        if loaded:
+        if imported:
             self.client = OpenAI(api_key=api_key, base_url=self.config.alternative_openai_api_base)
         else:
             logging.error(f"Error loading openai. Please check that you have installed it correctly.")
@@ -252,6 +293,20 @@ class LLM(base_LLM):
                 logging.error(f"Current API does not support CoT for the dedicated character generation model '{generation_model}'! Are you using OpenAI's API? They will not work with all features of Pantella, please use OpenRouter or another API that supports CoT.")
                 logging.error(e)
                 # input("Press Enter to exit.")
+        loaded = True
+
+    @property
+    def default_inference_engine_settings(self):
+        """Returns the default settings for this inference engine"""
+        return {
+            "openai_model": self.config.openai_model, # The model to use for completions. This can be changed in config.json.
+            "openai_character_generator_model": self.config.openai_character_generator_model, # The model to use for character generation. This can be changed in config.json. If blank, the main model will be used.
+            "openai_completions_type": self.config.openai_completions_type, # The type of completions to use. This can be changed in config.json. Options are "text" or "chat". If "text", the model must support text completions. If "chat", the model must support chat completions.
+            "alternative_openai_api_base": self.config.alternative_openai_api_base, # The base URL for the OpenAI API. This can be changed in config.json. If 'none', the default OpenAI API will be used.
+            "openai_api_key_path": self.config.openai_api_key_path, # The path to the file containing the OpenAI API key. This can be changed in config.json.
+            "banned_samplers": self.config.banned_samplers, # Examples: "min_p", "typical_p", "top_p", "top_k", "temperature", "frequency_penalty", "presence_penalty", "repeat_penalty", "tfs_z", "mirostat_mode", "mirostat_eta", "mirostat_tau", "max_tokens"
+            "api_log_dir": self.config.api_log_dir, # The directory to save API logs to. This can be changed in config.json.
+        }
 
     def generate_character(self, character_name, character_ref_id, character_base_id, character_in_game_race, character_in_game_gender, character_is_guard, character_is_ghost, in_game_voice_model=None, location=None):
         """Generate a character based on the prompt provided"""

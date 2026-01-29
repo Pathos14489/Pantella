@@ -8,23 +8,41 @@ import os
 import json
 logging.info("Imported required libraries in anthropic.py")
 
+imported = False
 try:
     import anthropic
-    loaded = True
+    imported = True
     logging.info("Imported anthropic in anthropic.py")
+    raise DeprecationWarning("Anthropic API is deprecated and will be removed in a future version of Pantella. Please use a different inference engine.")
 except Exception as e:
-    loaded = False
     logging.warn(f"Failed to load anthropic, so anthropic cannot be used! Please check that you have installed it correctly. Unless you're not using anthropic, in which case you can ignore this warning.")
 
 inference_engine_name = "anthropic_api"
-
+tokenizer_slug = "tiktoken" # TODO: Replace with the anthropic tokenizer for better token accuracy. Not important because this inference engine is effectively useless for Pantella, but I'm a completionist.
+default_settings = {
+    "anthropic_model": "claude-opus-4-20250514",
+    "alternative_anthropic_api_base": "none",
+    "anthropic_api_key_path": ".\\ANTHROPIC_SECRET_KEY.txt",
+}
+settings_description = {
+    "anthropic_model": "The model to use for the Anthropic API. This can be any model that is supported by the Anthropic API, such as claude-2, claude-3, or claude-opus-4.",
+    "alternative_anthropic_api_base": "The base URL for the Anthropic API. If you are using a reverse proxy, you can set this to the URL of your reverse proxy. If you are not using a reverse proxy, leave this as 'none'.",
+    "anthropic_api_key_path": "The path to the file containing your Anthropic API key. This file should contain only the API key, with no extra whitespace or newlines.",
+}
+options = {}
+settings = {}
+loaded = False
+description = "Anthropic API Inference Engine for Pantella. This inference engine uses the Anthropic API to generate text completions. It is not recommended to use this inference engine, as it does not support text completions and multiple system messages cannot be sent interspersed in the context. It is only included for compatibility with existing code that uses the Anthropic API."
 class LLM(base_LLM.base_LLM):
+    """Anthropic API Inference Engine for Pantella. This inference engine uses the Anthropic API to generate text completions.
+It is not recommended to use this inference engine, as it does not support text completions and multiple system messages cannot be sent interspersed in the context.
+It is only included as a proof of concept for adding new inference engines to Pantella and for the few people who might want to use it."""
     def __init__(self, conversation_manager, vision_enabled=False):
-        global inference_engine_name
+        global inference_engine_name, tokenizer_slug, loaded, default_settings
         super().__init__(conversation_manager, vision_enabled=vision_enabled)
         self.inference_engine_name = inference_engine_name
-        self.tokenizer_slug = "tiktoken" # Fastest tokenizer available. If we're guessing the token counts, might as well be fast while we're dumb!
-        
+        self.tokenizer_slug = tokenizer_slug # Fastest tokenizer available. If we're guessing the token counts, might as well be fast while we're dumb!
+        default_settings = self.default_inference_engine_settings
         self.llm = self.config.anthropic_model
         # Is LLM Local?
         self.is_local = False
@@ -33,7 +51,7 @@ class LLM(base_LLM.base_LLM):
         with open(self.config.anthropic_api_key_path, 'r') as f:
             self.api_key = f.readline().strip()
 
-        if loaded:
+        if imported:
             if self.config.alternative_anthropic_api_base.lower() != 'none' and self.config.alternative_anthropic_api_base != '':
                 self.client = anthropic.Anthropic(
                     api_key=self.api_key,
@@ -66,6 +84,15 @@ class LLM(base_LLM.base_LLM):
 
         logging.info(f"Running Pantella with '{self.config.anthropic_model}'. The language model chosen can be changed via config.json")
         logging.error(f"Current API does not support text completions! Anthropic API is not recommended, don't use it, use literally anything else PLEASE!")
+        loaded = True
+
+    @property
+    def default_inference_engine_settings(self):
+        return {
+            "anthropic_model": self.config.anthropic_model,
+            "alternative_anthropic_api_base": self.config.alternative_anthropic_api_base,
+            "anthropic_api_key_path": self.config.anthropic_api_key_path,
+        }
     
     @utils.time_it
     def create(self, messages):
