@@ -41,6 +41,10 @@ class BaseGameInterface:
         """Return the current location"""
         return 'Skyrim'
     
+    def pantella_restarted(self):
+        """Called when Pantella is restarted"""
+        logging.info(f"Pantella restarted. Reinitializing game interface...")
+    
     def new_time(self, in_game_time=None):
         """Check if the in-game time has changed since the last check"""
         if in_game_time == None:

@@ -12,14 +12,19 @@ valid_games = ["fallout4","skyrim","fallout4vr","skyrimvr"]
 interface_slug = "creation_engine_file_buffers"
 
 class GameInterface(BaseGameInterface):
-    def __init__(self,conversation_manager):
+    def __init__(self,conversation_manager, _valid_games, _interface_slug):
+        if _valid_games is not None:
+            valid_games = _valid_games
+        if _interface_slug is not None:
+            interface_slug = _interface_slug
         super().__init__(conversation_manager, valid_games, interface_slug)
-        if not os.path.exists(f"{self.config.game_path}"):
-            self.ready = False
-            logging.error(f"Game path does not exist: {self.config.game_path}")
-        else:
-            if not os.path.exists(self.config.game_path+'\\_pantella_skyrim_folder.txt'):
-                logging.warn(f'''Warning: Could not find _pantella_skyrim_folder.txt in {self.config.game_path}.\nIf you have not yet casted the Pantella spell in-game you can safely ignore this message.\nIf you have casted the Pantella spell please check that your\nPantellaSoftware\\config.json "skyrim_folder" has been set correctly\n(instructions on how to set this up are in the config file itself).\nIf you are still having issues, a list of solutions can be found here: \nhttps://github.com/Pathos14489/Pantella\n''')
+        if _valid_games is not None:
+            if not os.path.exists(f"{self.config.game_path}"):
+                self.ready = False
+                logging.error(f"Game path does not exist: {self.config.game_path}")
+            else:
+                if not os.path.exists(self.config.game_path+'\\_pantella_skyrim_folder.txt'):
+                    logging.warn(f'''Warning: Could not find _pantella_skyrim_folder.txt in {self.config.game_path}.\nIf you have not yet casted the Pantella spell in-game you can safely ignore this message.\nIf you have casted the Pantella spell please check that your\nPantellaSoftware\\config.json "skyrim_folder" has been set correctly\n(instructions on how to set this up are in the config file itself).\nIf you are still having issues, a list of solutions can be found here: \nhttps://github.com/Pathos14489/Pantella\n''')
         if not os.path.exists(self.mod_voice_dir):
             raise FileNotFoundError(f"Mod voice directory not found at {self.mod_voice_dir}")
         
@@ -55,6 +60,11 @@ class GameInterface(BaseGameInterface):
             return f"{self.mod_path}/Sound/Voice/Pantella.esp"
         else:
             return f"{self.mod_path}\\Sound\\Voice\\Pantella.esp"
+        
+    def pantella_restarted(self):
+        """Write to the game info file that Pantella has been restarted"""
+        super().pantella_restarted() # call the base class method to reset the game info
+        self.write_game_info('_pantella_status', 'Restarted Pantella')
 
     def display_status(self, status):
         logging.info(f"Displaying status in-game: {status}")
@@ -132,16 +142,15 @@ class GameInterface(BaseGameInterface):
                 subtitle += " Pantella2"
                 self.f4_use_wav_file1 = True
         if self.config.linux_mode:
-            wav_file_path = f"{self.mod_voice_dir}/{self.active_character.in_game_voice_model}/{self.wav_file}"
-            lip_file_path = f"{self.mod_voice_dir}/{self.active_character.in_game_voice_model}/{self.lip_file}"
+            wav_file_path = f"{self.mod_voice_dir}/{self.active_character.info['in_game_voice_model']}/{self.wav_file}"
+            lip_file_path = f"{self.mod_voice_dir}/{self.active_character.info['in_game_voice_model']}/{self.lip_file}"
             if self.game_id == "fallout4":
                 wav_file_path = f"{self.mod_voice_dir}/{wav_file_to_use}" # TODO: Find out why this is a single file??
         else:
-            wav_file_path = f"{self.mod_voice_dir}\\{self.active_character.in_game_voice_model}\\{self.wav_file}"
-            lip_file_path = f"{self.mod_voice_dir}\\{self.active_character.in_game_voice_model}\\{self.lip_file}"
+            wav_file_path = f"{self.mod_voice_dir}\\{self.active_character.info['in_game_voice_model']}\\{self.wav_file}"
+            lip_file_path = f"{self.mod_voice_dir}\\{self.active_character.info['in_game_voice_model']}\\{self.lip_file}"
             if self.game_id == "fallout4":
                 wav_file_path = f"{self.mod_voice_dir}\\{wav_file_to_use}" # TODO: Find out why this is a single file??
-
         if self.add_voicelines_to_all_voice_folders:
             logging.info(f"Adding voicelines to all voice folders")
             for sub_folder in os.scandir(self.mod_voice_dir):
@@ -155,7 +164,9 @@ class GameInterface(BaseGameInterface):
                         shutil.copyfile(audio_file, f"{sub_folder.path}\\{self.wav_file}")
                     if self.config.linux_mode:
                         shutil.copyfile(audio_file.replace(".wav", ".lip"), f"{sub_folder.path}/{self.lip_file}")
+                        shutil.copyfile(audio_file.replace(".wav", ".lip"), f"{sub_folder.path}/{self.f4_lip_file}")
                     else:
+                        shutil.copyfile(audio_file.replace(".wav", ".lip"), f"{sub_folder.path}\\{self.lip_file}")
                         shutil.copyfile(audio_file.replace(".wav", ".lip"), f"{sub_folder.path}\\{self.f4_lip_file}")
         else:
             logging.info(f"Copying voiceline to {wav_file_path}")
@@ -190,12 +201,14 @@ class GameInterface(BaseGameInterface):
                 break # stop getting audio files from the queue if the queue is empty
 
             await self.send_audio_to_external_software(queue_output) # send the audio file to the external software and start playing it.
-            event.set() # set the event to let the process_response() function know that it can generate the next sentence while the last sentence's audio is playing
             
             #if Fallout4 is running the audio will be sync by checking if say line is set to false because the game can internally check if an audio file has finished playing
             # wait for the audio playback to complete before getting the next file
             if self.game_id == "fallout4":
-                with open(f'{self.root_mod_folter}\\_pantella_actor_count.txt', 'r', encoding='utf-8') as f:
+                actor_count_path = f'{self.root_mod_folter}\\_pantella_actor_count.txt'
+                if self.config.linux_mode:
+                    actor_count_path = f'{self.root_mod_folter}/_pantella_actor_count.txt'
+                with open(actor_count_path, 'r', encoding='utf-8') as f:
                     pantellaactorcount = f.read().strip() 
                 # Outer loop to continuously check the files
                 while True:
@@ -204,6 +217,8 @@ class GameInterface(BaseGameInterface):
                     # Iterate through the number of files indicated by pantellaactorcount
                     for i in range(1, int(pantellaactorcount) + 1):
                         file_name = f'{self.root_mod_folter}\\_pantella_say_line_{i}.txt'
+                        if self.config.linux_mode:
+                            file_name = f'{self.root_mod_folter}/_pantella_say_line_{i}.txt'
                         with open(file_name, 'r', encoding='utf-8') as f:
                             content = f.read().strip()
                             if content.lower() != 'false':
@@ -217,6 +232,7 @@ class GameInterface(BaseGameInterface):
                 # wait for the audio playback to complete before getting the next file
                 logging.info(f"Waiting {int(round(audio_duration,4))} seconds for audio to finish playing...")
                 await asyncio.sleep(audio_duration)
+            event.set() # set the event to let the process_response() function know that it can generate the next sentence while the last sentence's audio is playing
 
     def write_game_info(self, text_file_name, text, append = False):
         """Write text to a text file in the game directory"""
@@ -409,9 +425,15 @@ class GameInterface(BaseGameInterface):
         player_gender = self.load_data_when_available('_pantella_player_gender', '')
         return player_gender
     
+    def load_actor_voice_model(self):
+        """Wait for actor voice model to populate"""
+        actor_voice_model = self.load_data_when_available('_pantella_actor_voice', '')
+        actor_voice_model_id = actor_voice_model.split('(')[1].split(')')[0]
+        actor_voice_model_name = actor_voice_model.split('<')[1].split(' ')[0].split('>')[0]
+        return actor_voice_model_id, actor_voice_model_name
+    
     def get_current_context_string(self):
         """Wait for context string to populate"""
-        
         with open(f'{self.game_path}\\_pantella_context_string.txt', 'r', encoding='utf-8') as f:
             context_string = f.readline().strip()
         return context_string
@@ -466,7 +488,10 @@ class GameInterface(BaseGameInterface):
         return conversation_ended == 'true'
     
     def load_ingame_actor_count(self):
-        with open(f'{self.game_path}\\_pantella_actor_count.txt', 'r', encoding='utf-8') as f: # check how many characters are in the conversation
+        actor_count_path = f'{self.game_path}\\_pantella_actor_count.txt'
+        if self.config.linux_mode:
+            actor_count_path = f'{self.game_path}/_pantella_actor_count.txt'
+        with open(actor_count_path, 'r', encoding='utf-8') as f: # check how many characters are in the conversation
             try:
                 num_characters_selected = int(f.readline().strip())
             except:
@@ -481,9 +506,10 @@ class GameInterface(BaseGameInterface):
         female_voice_models = self.conversation_manager.character_database.female_voice_models
         voice_model_ids = self.conversation_manager.character_database.voice_model_ids
 
-        actor_voice_model = self.load_data_when_available('_pantella_actor_voice', '')
-        actor_voice_model_id = actor_voice_model.split('(')[1].split(')')[0]
-        actor_voice_model_name = actor_voice_model.split('<')[1].split(' ')[0]
+        # actor_voice_model = self.load_data_when_available('_pantella_actor_voice', '')
+        # actor_voice_model_id = actor_voice_model.split('(')[1].split(')')[0]
+        # actor_voice_model_name = actor_voice_model.split('<')[1].split(' ')[0]
+        actor_voice_model_id, actor_voice_model_name = self.load_actor_voice_model()
 
         actor_race = self.load_data_when_available('_pantella_actor_race', '')
         actor_race = actor_race.split('<')[1].split(' ')[0]
@@ -516,7 +542,7 @@ class GameInterface(BaseGameInterface):
                 except:
                     voice_model = 'Male '+actor_race # Default to Same Sex Racial Equivalent
 
-        skyrim_voice_folder = self.conversation_manager.character_database.get_voice_folder_by_voice_model(voice_model)
+        voice_folder = self.conversation_manager.character_database.get_voice_folder_by_voice_model(voice_model)
         
         character_info = {
             'name': character_name, # TODO: Generate random names for generic NPCs and figure out how to apply them in-game
@@ -524,7 +550,7 @@ class GameInterface(BaseGameInterface):
             "gender":{"Female" if actor_sex=="1" else "Male"},
             "race":actor_race,
             'voice_model': voice_model,
-            'skyrim_voice_folder': skyrim_voice_folder[0], # Default to the first for now, maybe change later?
+            'voice_folder': voice_folder[0], # Default to the first for now, maybe change later?
         }
 
         # TODO: Enable this after adding random name generation to generic NPCs, otherwise all generic NPCs will share the same info I think
@@ -624,10 +650,11 @@ class GameInterface(BaseGameInterface):
         # tell Skyrim papyrus script to start waiting for voiceline input
         self.write_game_info('_pantella_end_conversation', 'False')
 
-        logging.info()
         
-        actor_voice_model = self.load_data_when_available('_pantella_actor_voice', '')
-        actor_voice_model_name = actor_voice_model.split('<')[1].split(' ')[0]
+        actor_voice_model_id, actor_voice_model_name = self.load_actor_voice_model()
+            # actor_voice_model = self.load_data_when_available('_pantella_actor_voice', '')
+            # actor_voice_model_name = actor_voice_model.split('<')[1].split(' ')[0]
+        logging.info()(f"Actor voice model: {actor_voice_model_name}, Actor voice model ID: {actor_voice_model_id}")
 
         location = self.get_current_location(location) # Check if location has changed since last check
 
@@ -656,6 +683,7 @@ class GameInterface(BaseGameInterface):
         in_game_time = self.get_current_game_time() # Check if in-game time has changed since last check
 
         character_info['in_game_voice_model'] = actor_voice_model_name
+        character_info['in_game_voice_model_id'] = actor_voice_model_id
         character_info['refid_int'] = character_ref_id
         if (character_ref_id is not None and character_ref_id != "0" and character_ref_id != "") and ("ref_id" not in character_info or character_info["ref_id"].strip() == ""):
             character_info["ref_id"] = str(hex(int(character_ref_id)))[2:]
@@ -668,7 +696,6 @@ class GameInterface(BaseGameInterface):
         character_info["is_ghost"] = character_is_ghost
         character_info["actor_number"] = _pantella_actor_count
         character_info['character_name'] = character_name
-        character_info['in_game_voice_model_id'] = actor_voice_model.split('(')[1].split(')')[0]
         if "name" not in character_info or character_info["name"].strip() == "":
             character_info["name"] = character_name
         if "race" not in character_info or character_info["race"].strip() == "":
@@ -698,30 +725,34 @@ class GameInterface(BaseGameInterface):
             return False
     
     @utils.time_it
-    def update_game_events(self):
+    def update_game_events(self, run=True):
         """Add in-game events to player's response"""
 
-        # append in-game events to player's response
-        with open(f'{self.game_path}\\_pantella_in_game_events.txt', 'r', encoding='utf-8') as f:
-            if self.config.game_update_pruning:
-                in_game_events_lines = f.readlines()[-self.config.game_update_prune_count:] # read latest 5 events
-            else:
-                in_game_events_lines = f.readlines()
-        
-        in_game_events_lines = [line.strip() for line in in_game_events_lines]
-        new_in_game_events = []
-        for in_game_events_line in in_game_events_lines:
-            new_line = in_game_events_line.replace("*","")
-            while "*" in new_line:
-                new_line = new_line.replace("*","")
-            new_in_game_events.append(new_line)
-        in_game_events_lines = [line for line in new_in_game_events if line.strip() != '']
-        
-        # Is Player in combat with NPC
-        in_combat = self.load_data_when_available('_pantella_actor_is_enemy', '').lower() == 'true' 
-        if in_combat:
-            in_game_events_lines.append(self.conversation_manager.character_manager.language["game_events"]["player_started_combat"].format(name=self.active_character.name))
-        self.new_game_events.extend(in_game_events_lines)
+        if run:
+            # append in-game events to player's response
+            game_events_path = f'{self.game_path}\\_pantella_in_game_events.txt'
+            if self.config.linux_mode:
+                game_events_path = game_events_path.replace("\\", "/")
+            with open(game_events_path, 'r', encoding='utf-8') as f:
+                if self.config.game_update_pruning:
+                    in_game_events_lines = f.readlines()[-self.config.game_update_prune_count:] # read latest 5 events
+                else:
+                    in_game_events_lines = f.readlines()
+            
+            in_game_events_lines = [line.strip() for line in in_game_events_lines]
+            new_in_game_events = []
+            for in_game_events_line in in_game_events_lines:
+                new_line = in_game_events_line.replace("*","")
+                while "*" in new_line:
+                    new_line = new_line.replace("*","")
+                new_in_game_events.append(new_line)
+            in_game_events_lines = [line for line in new_in_game_events if line.strip() != '']
+            
+            # Is Player in combat with NPC
+            in_combat = self.load_data_when_available('_pantella_actor_is_enemy', '').lower() == 'true' 
+            if in_combat:
+                in_game_events_lines.append(self.conversation_manager.character_manager.language["game_events"]["player_started_combat"].format(name=self.active_character.name))
+            self.new_game_events.extend(in_game_events_lines)
         
         super().update_game_events()
         

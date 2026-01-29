@@ -28,7 +28,8 @@ class BaseConversationManager:
             self.pre_initialization()
         if self.config.ready:
             self.synthesizer = tts.create_Synthesizer(self, self.config.tts_engine) # Create Synthesizer object based on config - required by scripts for checking voice models, so is left out of self.pre_initialization() and self.post_initialization() intentionally
-            self.character_database = character_db.CharacterDB(self) # Create Character Database Manager based on config - required by scripts for merging, patching and converting character databases, so is left out of self.pre_initialization() and self.post_initialization() intentionally
+            # self.character_database = character_db.CharacterDB(self) # Create Character Database Manager based on config - required by scripts for merging, patching and converting character databases, so is left out of self.pre_initialization() and self.post_initialization() intentionally
+            self.character_database = character_db.create_DB(self) # Create Character Database Manager based on config - required by scripts for merging, patching and converting character databases, so is left out of self.pre_initialization() and self.post_initialization() intentionally
             self.character_manager: characters_manager.Characters = characters_manager.Characters(self) # Reset character manager
         if self.config.linux_mode:
             with open("./version", "r") as f:
@@ -75,7 +76,6 @@ class BaseConversationManager:
     def setup_character(self, character_info):
         """Setup the character that the player has selected and add them to the conversation"""
         character = self.character_manager.add_character(character_info) # setup the character that the player has selected
-        # self.synthesizer.change_voice(character)
         self.game_interface.setup_character(character) # setup the character in the game
         return character
     

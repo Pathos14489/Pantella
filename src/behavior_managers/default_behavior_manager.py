@@ -6,7 +6,7 @@ logging.info("Imported required libraries in base_behavior_manager.py")
 
 default_behaviors_dir =  os.path.join(os.path.dirname(os.path.abspath(__file__)),"../behaviors/")
 
-valid_games = ["fallout4","skyrim","fallout4vr","skyrimvr"]
+valid_games = ["fallout4","skyrim","fallout4vr","skyrimvr", "falloutnv"]
 manager_slug = "default_behavior_manager"
 
 class BehaviorManager():
