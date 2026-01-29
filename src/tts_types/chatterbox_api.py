@@ -95,9 +95,9 @@ class Synthesizer(base_tts.base_Synthesizer):
         data = {
             'prompt': (None, voiceline),
             'voice_wav': (os.path.basename(speaker_wav_path), speaker_wav_data),
-            "temperature": settings.get("temperature", self.default_voice_model_settings["temperature"]),
-            "cfgw": settings.get("cfgw", self.default_voice_model_settings["cfgw"]),
-            "exaggeration": settings.get("exaggeration", self.default_voice_model_settings["exaggeration"]),
+            # "temperature": settings.get("temperature", self.default_voice_model_settings["temperature"]),
+            # "cfgw": settings.get("cfgw", self.default_voice_model_settings["cfgw"]),
+            # "exaggeration": settings.get("exaggeration", self.default_voice_model_settings["exaggeration"]),
         }
 
         # print(data)
