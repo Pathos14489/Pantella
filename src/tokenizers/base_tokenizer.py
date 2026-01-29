@@ -2,10 +2,12 @@ from src.logging import logging
 from src.message_formatter import MessageFormatter, PromptStyle
 tokenizer_slug = "base_tokenizer"
 class base_Tokenizer(): # Tokenizes(only availble for counting the tokens in a string presently for local_models), and parses and formats messages for use with the language model
-    def __init__(self, conversation_manager):
+    def __init__(self, conversation_manager, tokenizer_slug_override=None):
         self.conversation_manager = conversation_manager
         self.config = self.conversation_manager.config
         self.tokenizer_slug = tokenizer_slug # Fastest tokenizer for OpenAI models, change if you want to use a different tokenizer (use 'embedding' for compatibility with any model using the openai API)
+        if tokenizer_slug_override is not None:
+            self.tokenizer_slug = tokenizer_slug_override
         
     def set_prompt_style(self, prompt_style: dict):
         """Sets the prompt style for the tokenizer"""

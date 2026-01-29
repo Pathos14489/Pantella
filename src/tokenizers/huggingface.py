@@ -10,13 +10,14 @@ except Exception as e:
     loaded = False
 tokenizer_slug = "huggingface"
 class Tokenizer(tokenizer.base_Tokenizer): # Tokenizes(only availble for counting the tokens in a string presently for local_models), and parses and formats messages for use with the language model
-    def __init__(self,conversation_manager):
+    def __init__(self, conversation_manager, tokenizer_slug_override=None):
+        if tokenizer_slug_override is not None:
+            tokenizer_slug = tokenizer_slug_override
         if not loaded:
             logging.error(f"Failed to load transformers, so huggingface tokenizer cannot be used! Please check that you have installed it correctly.")
             input("Press enter to continue...")
             raise ValueError(f"Failed to load transformers, so huggingface tokenizer cannot be used! Please check that you have installed it correctly.")
-        super().__init__(conversation_manager)
-        self.tokenizer_slug = tokenizer_slug
+        super().__init__(conversation_manager, tokenizer_slug)
         self.tokenizer = AutoTokenizer.from_pretrained(self.config.transformers_model_slug)
 
     @utils.time_it

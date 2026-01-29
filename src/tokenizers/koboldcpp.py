@@ -27,7 +27,7 @@ class Tokenizer(tokenizer.base_Tokenizer): # Gets token count from OpenAI's embe
             r = r.json()
         except:
             try:
-                url = self.config.openai_api_base.replace("/v1","") + "/extra/tokencount"
+                url = self.config.alternative_openai_api_base.replace("/v1","") + "/extra/tokencount"
                 r = requests.post(url, json=data)
                 r.raise_for_status()
                 r = r.json()
