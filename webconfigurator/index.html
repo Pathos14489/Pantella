@@ -5,50 +5,1274 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Pantella Web Configuration GUI - proof of concept very early I'm sorry it's uggo I will do better don't hate me pls <3</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <script src="/jquery-3.7.1.min.js"></script>
+    <script src="/static/jquery-3.7.1.min.js"></script>
+    <link href="/static/fontawesome-free-6.7.2-web/css/fontawesome.css" rel="stylesheet" />
+    <link href="/static/fontawesome-free-6.7.2-web/css/solid.css" rel="stylesheet" />
+    <link href="/static/fontawesome-free-6.7.2-web/css/brands.css" rel="stylesheet" />
 </head>
 <body>
     <img id="logo" src="/logo.png" alt="Pantella Logo">
     <hr>
     <h1 id="header">Web Configuration GUI</h1>
-    <div id="log">
-    </div>
+    <nav>
+        <ul>
+            <li><button id="simple_configuration_button" class="active">Simple Configuration</button></li>
+            <li><button id="voice_sample_editor_button">Voice Sample & TTS Editor</button></li>
+            <li><button id="character_manager_button">Character Manager</button></li>
+            <li><button id="llm_settings_button">Inference Engine Settings</button></li>
+            <!-- <li><button id="test_tts_button">Test TTS</button></li> -->
+            <li><button id="test_stt_button">Test STT</button></li>
+            <li><button id="advanced_configuration_button">Advanced Configuration</button></li>
+            <li><button id="banned_modules_button">Disabled Modules</button></li>
+            <li id="debug_li"><button id="debug_button">Debug UI</button></li>
+            <li><button id="memory_editor_button">Memory Editor Gradio</button></li>
+            <li><button id="restart_button">Apply Settings & Restart</button></li>
+        </ul>
+    </nav>
     <style>
-        #logo {
-            display: block;
-            margin: 0 auto;
-            width: 200px;
-            height: auto;
-        }
-        #header {
+        nav {
             text-align: center;
-            color: #fff;
-            font-size: 2em;
-            margin-top: 20px;
+            margin: 20px 0;
         }
-        hr {
-            border: 0;
-            height: 1px;
-            background-color: #ccc;
-            margin: 20px auto;
-            width: 80%;
-        }
-        #log {
-            width: 95%;
-            min-height: 200px;
-            height: 200px;
-            margin-bottom: 20px;
-            resize: vertical;
-            overflow-y: auto;
-            background-color: #000;
-            color: #fff;
-            padding: 10px;
-            font-family: monospace;
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            flex-direction: row;
+            gap: 10px; /* Space between buttons */
+            margin: 0;
+            width: 70%;
             margin-left: auto;
             margin-right: auto;
         }
+        nav li {
+            display: inline;
+            margin: 0 10px;
+        }
+        nav button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 1em;
+        }
+        nav button:hover {
+            background-color: #45a049;
+        }
+        nav button:focus {
+            outline: none;
+            box-shadow: 0 0 5px #4CAF50;
+        }
+        nav button:active {
+            background-color: #3e8e41;
+            box-shadow: 0 0 10px #ffffff; /* Glow effect */
+        }
+        nav button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+        nav button:disabled:hover {
+            background-color: #ccc;
+        }
+        nav button:disabled:focus {
+            box-shadow: none;
+        }
+        nav button.active { /* glow effect for active button */
+            background-color: #ffffff; /* Active button color */
+            box-shadow: 0 0 10px #ffffff; /* Glow effect */
+            color: white; /* Ensure text is readable */
+        }
+
+        #advanced_configuration_button {
+            background-color: #4c66af; /* Default active button color */
+        }
+        #advanced_configuration_button:hover {
+            background-color: #3e5a8f; /* Darker shade on hover */
+        }
+        #advanced_configuration_button:focus {
+            box-shadow: 0 0 10px #ffffff; /* Glow effect */
+        }
+        #advanced_configuration_button:active {
+            background-color: #3e5a8f; /* Darker shade on active */
+        }
+        #advanced_configuration_button.active {
+            background-color : #2546a1; /* Keep active button color */
+        }
+        #simple_configuration_button {
+            background-color: #6f88ce; /* Default active button color */
+        }
+        #simple_configuration_button:hover {
+            background-color: #5a6f9b; /* Darker shade on hover */
+        }
+        #simple_configuration_button:focus {
+            box-shadow: 0 0 10px #ffffff; /* Glow effect */
+        }
+        #simple_configuration_button:active {
+            background-color: #5a6f9b; /* Darker shade on active */
+        }
+        #simple_configuration_button.active {
+            background-color : #4c66af; /* Keep active button color */
+        }
+        #memory_editor_button {
+            background-color: #9b4caf; /* Default active button color */
+        }
+        #memory_editor_button:hover {
+            background-color: #7a3e8f; /* Darker shade on hover */
+        }
+        #memory_editor_button:focus {
+            box-shadow: 0 0 10px #ffffff; /* Glow effect */
+        }
+        #memory_editor_button:active {
+            background-color: #7a3e8f; /* Darker shade on active */
+        }
+        #memory_editor_button.active {
+            background-color : #71288b; /* Keep active button color */
+        }
+        #voice_sample_editor_button {
+            background-color: #ce4c4c; /* Default active button color */
+        }
+        #voice_sample_editor_button:hover {
+            background-color: #a34c4c; /* Darker shade on hover */
+        }
+        #voice_sample_editor_button:focus {
+            box-shadow: 0 0 10px #ffffff; /* Glow effect */
+        }
+        #voice_sample_editor_button:active {
+            background-color: #a34c4c; /* Darker shade on active */
+        }
+        #voice_sample_editor_button.active {
+            background-color : #b33a3a; /* Keep active button color */
+        }
+        #test_tts_button {
+            background-color: #d67676; /* Default active button color */
+        }
+        #test_tts_button:hover {
+            background-color: #b35a5a; /* Darker shade on hover */
+        }
+        #test_tts_button:focus {
+            box-shadow: 0 0 10px #ffffff; /* Glow effect */
+        }
+        #test_tts_button:active {
+            background-color: #b35a5a; /* Darker shade on active */
+        }
+        #test_tts_button.active {
+            background-color : #a34c4c; /* Keep active button color */
+        }
+        #character_manager_button {
+            background-color: #4ccece; /* Default active button color */
+        }
+        #character_manager_button:hover {
+            background-color: #3ea3a3; /* Darker shade on hover */
+        }
+        #character_manager_button:focus {
+            box-shadow: 0 0 10px #ffffff; /* Glow effect */
+        }
+        #character_manager_button:active {
+            background-color: #3ea3a3; /* Darker shade on active */
+        }
+        #character_manager_button.active {
+            background-color : #2f8f8f; /* Keep active button color */
+        }
+        #llm_settings_button {
+            background-color: #4c66af; /* Default active button color */
+        }
+        #llm_settings_button:hover {
+            background-color: #3e5a8f; /* Darker shade on hover */
+        }
+        #llm_settings_button:focus {
+            box-shadow: 0 0 10px #ffffff; /* Glow effect */
+        }
+        #llm_settings_button:active {
+            background-color: #3e5a8f; /* Darker shade on active */
+        }
+        #llm_settings_button.active {
+            background-color : #2546a1; /* Keep active button color */
+        }
+        #test_stt_button {
+            background-color: #d676a6; /* Default active button color */
+        }
+        #test_stt_button:hover {
+            background-color: #b35a8f; /* Darker shade on hover */
+        }
+        #test_stt_button:focus {
+            box-shadow: 0 0 10px #ffffff; /* Glow effect */
+        }
+        #test_stt_button:active {
+            background-color: #b35a8f; /* Darker shade on active */
+        }
+        #test_stt_button.active {
+            background-color : #a34c8f; /* Keep active button color */
+        }
+        #banned_modules_button {
+            background-color: #ce884c; /* Default active button color */
+        }
+        #banned_modules_button:hover {
+            background-color: #a36f3e; /* Darker shade on hover */
+        }
+        #banned_modules_button:focus {
+            box-shadow: 0 0 10px #ffffff; /* Glow effect */
+        }
+        #banned_modules_button:active {
+            background-color: #a36f3e; /* Darker shade on active */
+        }
+        #banned_modules_button.active {
+            background-color : #b36f3e; /* Keep active button color */
+        }
+        #debug_button {
+            background-color: #4cce4c; /* Default active button color */
+        }
     </style>
-    <div id="settings"></div>
+    <div id="log">
+    </div>
+    <div id="page_container">
+        <div id="advanced_configuration">
+            <div id="settings"></div>
+        </div>
+        <div id="simple_configuration">
+            <div id="first_time_setup">
+                <p>
+                    <strong>Welcome to the Pantella Web Configuration GUI!</strong> This is a proof of concept for a web-based configuration interface for Pantella. It is still in early development, and we appreciate your feedback and suggestions. Please note that this interface is not yet fully functional and may have some bugs. Thank you for your understanding!
+                </p>
+                <p>
+                    <span style="color: red;">First Time Setup:</span> If this is your first time setting up Pantella, please follow the steps below to configure the system. You will need to select a game, configure the interface, and set up the LLM settings. Once you have completed these steps, you can start using Pantella.
+                </p>
+            </div>
+            <h2>
+                Step 1: Select Game and Configure Interface
+            </h2>
+            <br>
+            <p>
+                In this step, you can select the game you want to configure and set up the interface for Pantella. The interface allows you to specify the game path, mod path, and various configuration options for the conversation manager, interface type, behavior manager, memory manager, and character manager. Please fill in the required fields and select the appropriate options for your game.
+            </p>
+            <label for="game-selector">
+                <h3>Select Game:</h3>
+            </label>
+            <select id="game-selector">
+                <option value="" disabled selected>Select a game</option>
+                <option value="game1">Game 1</option>
+                <option value="game2">Game 2</option>
+                <option value="game3">Game 3</option>
+                <option value="game4">Game 4</option>
+            </select>
+            <div id="game-interface-editor">
+                <div class="container">
+                    <div class="interface-part">
+                        <label for="game_path">
+                            <h4>Game Path:</h4>
+                        </label>
+                        <input type="text" id="game_path" placeholder="Enter game path here" value="/path/to/game">
+                    </div>
+                    <div class="interface-part">
+                        <label for="mod_path">
+                            <h4>Mod Path:</h4>
+                        </label>
+                        <input type="text" id="mod_path" placeholder="Enter mod path here" value="/path/to/mod">
+                    </div>
+                    <div class="interface-part">
+                        <label for="interface_config_conversation_manager_type">
+                            <h4>Conversation Manager Type:</h4>
+                        </label>
+                        <select id="interface_config_conversation_manager_type">
+                            <option value="default">Default</option>
+                            <option value="custom">Custom</option>
+                            <option value="advanced">Advanced</option>
+                        </select>
+                    </div>
+                    <div class="interface-part">
+                        <label for="interface_config_interface_type">
+                            <h4>Interface Type:</h4>
+                        </label>
+                        <select id="interface_config_interface_type">
+                            <option value="default">Default</option>
+                            <option value="custom">Custom</option>
+                            <option value="advanced">Advanced</option>
+                        </select>
+                    </div>
+                    <div class="interface-part">
+                        <label for="interface_config_behavior_manager_type">
+                            <h4>Behavior Manager Type:</h4>
+                        </label>
+                        <select id="interface_config_behavior_manager_type">
+                            <option value="default">Default</option>
+                            <option value="custom">Custom</option>
+                            <option value="advanced">Advanced</option>
+                        </select>
+                    </div>
+                    <div class="interface-part">
+                        <label for="interface_config_memory_manager">
+                            <h4>Memory Manager:</h4>
+                        </label>
+                        <select id="interface_config_memory_manager">
+                            <option value="default">Default</option>
+                            <option value="custom">Custom</option>
+                            <option value="advanced">Advanced</option>
+                        </select>
+                    </div>
+                    <div class="interface-part">
+                        <label for="interface_config_character_type">
+                            <h4>Character Type:</h4>
+                        </label>
+                        <select id="interface_config_character_type">
+                            <option value="default">Default</option>
+                            <option value="custom">Custom</option>
+                            <option value="advanced">Advanced</option>
+                        </select>
+                    </div>
+                    <div class="interface-part">
+                        <label for="interface_config_character_manager">
+                            <h4>Character Manager:</h4>
+                        </label>
+                        <select id="interface_config_character_manager">
+                            <option value="default">Default</option>
+                            <option value="custom">Custom</option>
+                            <option value="advanced">Advanced</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <style>
+                input[type="text"],
+                input[type="number"],
+                textarea,
+                select {
+                    width: 100%;
+                    padding: 10px;
+                    margin-bottom: 15px;
+                    border: 1px solid #ccc;
+                    border-radius: 5px;
+                    background-color: #444;
+                    color: #fff;
+                    box-sizing: border-box;
+                }
+                #game-interface-editor {
+                    background-color: #5f5f5f;
+                    padding: 20px;
+                    border-radius: 5px;
+                    margin-top: 20px;
+                    margin-left: auto;
+                    margin-right: auto;
+                    max-width: 80%;
+                    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                }
+                #game-interface-editor .container {
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+                    align-items: flex-start;
+                }
+                #game-interface-editor .interface-part {
+                    background-color: #6f6f6f;
+                    padding: 15px;
+                    margin-bottom: 20px;
+                    width: 30%;
+                }
+                #game-interface-editor h3 {
+                    color: #333;
+                }
+                #game-interface-editor label {
+                    display: block;
+                    margin-bottom: 10px;
+                }
+                #game-interface-editor input[type="text"]:focus,
+                #game-interface-editor select:focus {
+                    border-color: #4c66af;
+                    outline: none;
+                    background-color: #555;
+                    color: #fff;
+                }
+                #game-interface-editor h4 {
+                    margin-top: 0;
+                    color: #ddd;
+                }
+                #simple_configuration p {
+                    color: #ccc;
+                    font-size: 1.2em;
+                    max-width: 100%;
+                    margin-bottom: 20px;
+                }
+            </style>
+            <h2>
+                Step 2: Configure LLM Settings
+            </h2>
+            <p>
+                Select an inference engine and configure the LLM settings below. You can choose from various engines like OpenAI, llama-cpp-python, transformers, etc. Each engine may have different parameters and capabilities, so please refer to the documentation for each engine to understand the available options.
+            </p>
+            <label for="llm_engine">
+                <h3>Inference Engine:</h3>
+            </label>
+            <select id="llm_engine">
+                <option value="openai">OpenAI Compatible API</option>
+                <option value="llama_cpp_python">Llama CPP Python</option>
+                <option value="transformers">Transformers</option>
+                <option value="custom">Custom</option>
+                <option value="advanced">Advanced</option>
+            </select>
+            <div id="open-ai-api-editor">
+                <h2>OpenAI API Configuration</h2>
+                <div class="container">
+                    <div class="interface-part">
+                        <label for="openai_api_base_url">
+                            <h4>OpenAI API Base URL:</h4>
+                        </label>
+                        <input type="text" id="openai_api_base_url" placeholder="Enter OpenAI API base URL here" value="https://api.openai.com/v1/">
+                    </div>
+                    <div class="interface-part">
+                        <label for="openai_api_key">
+                            <h4>OpenAI API Key:</h4>
+                        </label>
+                        <input type="text" id="openai_api_key" placeholder="Enter OpenAI API key here" value="">
+                    </div>
+                    <div class="interface-part">
+                        <label for="openai_model">
+                            <h4>OpenAI Model:</h4>
+                        </label>
+                        <select id="openai_model">
+                            <option value="" disabled selected>Select a model</option>
+                            <option value="gpt-3.5-turbo">GPT-3.5 Turbo</option>
+                        </select>
+                    </div>
+                    <div class="interface-part">
+                        <label for="openai_chat_type">
+                            <h4>OpenAI Chat Type:</h4>
+                        </label>
+                        <select id="openai_chat_type">
+                            <option value="chat">Chat Completion</option>
+                            <option value="text">Text Completion</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div id="llama-cpp-python-editor">
+                <h2>Llama CPP Python Configuration</h2>
+                <div class="container">
+                    <div class="interface-part">
+                        <label for="llama_cpp_model_path">
+                            <h4>Llama CPP Model Path:</h4>
+                        </label>
+                        <input type="text" id="llama_cpp_model_path" placeholder="Enter Llama CPP model path here" value="/path/to/llama/model">
+                    </div>
+                    <div class="interface-part">
+                        <label for="llama_cpp_context_size">
+                            <h4>Context Size:</h4>
+                        </label>
+                        <input type="number" id="llama_cpp_context_size" placeholder="Enter context size here" value="2048">
+                    </div>
+                </div>
+            </div>
+            <div id="transformers-editor">
+                <h2>Transformers Configuration</h2>
+                <div class="container">
+                    <div class="interface-part">
+                        <label for="transformers_model_name">
+                            <h4>Transformers Model Name:</h4>
+                        </label>
+                        <input type="text" id="transformers_model_name" placeholder="Enter Transformers model name here" value="gpt2">
+                    </div>
+                    <div class="interface-part">
+                        <label for="transformers_tokenizer_name">
+                            <h4>Transformers Tokenizer Name:</h4>
+                        </label>
+                        <input type="text" id="transformers_tokenizer_name" placeholder="Enter Transformers tokenizer name here" value="gpt2">
+                    </div>
+                </div>
+            </div>
+            <div id="custom-llm-editor">
+                <h2>Custom LLM Configuration</h2>
+                <p>This is a placeholder for custom LLM configuration. It will be implemented later.</p>
+            </div>
+            <div id="advanced-llm-editor">
+                <h2>Advanced LLM Configuration</h2>
+                <p>This is a placeholder for advanced LLM configuration. It will be implemented later.</p>
+            </div>
+            <div id="thought-process-editor">
+                <h2>Thought Process Configuration</h2>
+                <p>This is a placeholder for thought process configuration. It will be implemented later.</p>
+            </div>
+            <div id="prompt_style_editor">
+                <h2>Prompt Style Configuration</h2>
+                <p>This is a placeholder for prompt style configuration. It will be implemented later.</p>
+            </div>
+        </div>
+        <div id="memory_editor">
+            <iframe id="memory_editor_iframe" style="width: 100%; height: 100dvh;"></iframe>
+        </div>
+        <div id="voice_sample_editor">
+            <div class="flex_row">
+                <div id="voice_samples_container">
+                    <h3>Voice samples</h3>
+                    <ul id="voice_samples_list">
+                        <!-- <li>
+                            <h4>Voice Sample 1</h4>
+                            <p id="voice_sample_1_transcription">
+                                This is the transcription of the first voice sample.
+                            </p>
+                            <audio controls>
+                                <source src="/path/to/voice_sample_1.mp3" type="audio/mpeg">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </li>
+                        <li>
+                            <h4>Voice Sample 2</h4>
+                            <p id="voice_sample_2_transcription">
+                                This is the transcription of the second voice sample.
+                            </p>
+                            <audio controls>
+                                <source src="/path/to/voice_sample_2.mp3" type="audio/mpeg">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </li> -->
+                        <!-- Add more voice samples as needed -->
+                    </ul>
+                    <script>
+                        function addVoiceSample(name, transcription, base64Audio) {
+                            const voiceSamplesList = document.getElementById("voice_samples_list");
+                            const listItem = document.createElement("li");
+                            listItem.innerHTML = `
+                                <h4>${name}</h4>
+                                <button class="btn tooltip right-tooltip right-float" onclick="navigator.clipboard.writeText('${transcription}')">
+                                    Edit Voice Sample
+                                    <span class="tooltiptext">Click to start editing this voice sample.</span>
+                                </button>
+                                <p>${transcription}</p>
+                                <audio controls>
+                                    <source src="data:audio/wav;base64,${base64Audio}" type="audio/wav">
+                                    Your browser does not support the audio element.
+                                </audio>
+                            `;
+                            voiceSamplesList.appendChild(listItem);
+                        }
+                    </script>
+                </div>
+                <div id="voice_sample_editor_container">
+                    <h4><span id="voices_available">99</span>/<span id="voices_total">99</span> Voices Available for Generation</h4>
+                    <button id="new_voice_sample_button">+ New Voice Sample</button>
+                    <br>
+                    <label for="voice_sample_name">
+                        <h4>Voice Model Name:</h4>
+                    </label>
+                    <select id="voice_sample_name">
+                        <option value="" disabled selected>Select a voice model</option>
+                    </select>
+                    <div id="voice_sample_opened">
+                        <audio id="voice_sample_editor_audio" controls style="width: 100%; margin-top: 10px;margin-bottom: 15px;">
+                            <source src="" type="audio/wav">
+                            Your browser does not support the audio element.
+                        </audio>
+                        <label for="voice_sample_transcription">
+                            <h4>Voice Sample Transcription:</h4>
+                        </label>
+                        <textarea id="voice_sample_transcription" rows="4" cols="50" placeholder="Enter voice sample transcription here"></textarea>
+                        <button id="transcribe_voice_sample_button" class="left-tooltip tooltip">
+                            Auto-Transcribe Voice Sample
+                            <span class="tooltiptext">This will use the configured STT engine to transcribe the voice sample.</span>
+                        </button>
+                        <label for="voice_sample_file">
+                            <h4>Voice Sample File for <span class="voice_model_slug">VoiceModel</span>:</h4>
+                        </label>
+                        <input type="file" id="voice_sample_file" accept="audio/*">
+                        <button id="use_voice_sample_file_button" class="btn right-tooltip tooltip">
+                            Upload Voice Sample File for <span class="voice_model_slug">VoiceModel</span>
+                            <span class="tooltiptext">This will upload the selected voice sample file.</span>
+                        </button>
+                        <div class="tab_container">
+                            <h3>Setup your TTSes for <span class="voice_model_slug">VoiceModel</span></h3>
+                            <br>
+                            <nav id="sample_editor_tab_buttons">
+                                <!-- <button id="voice_sample_editor_tts_1_settings_button" class="active">
+                                    TTS 1 Settings
+                                    <i class="fa-solid fa-check" style="color: #4CAF50; margin-left: 5px;"></i>
+                                </button>
+                                <button id="voice_sample_editor_tts_2_settings_button" class="active">
+                                    TTS 2 Settings
+                                    <i class="fa-solid fa-ban" style="color: #f44336; margin-left: 5px;"></i>
+                                </button>
+                                <button id="voice_sample_editor_tts_3_settings_button" class="active">
+                                    TTS 3 Settings
+                                    <i class="fa-solid fa-ban" style="color: #f44336; margin-left: 5px;"></i>
+                                </button> -->
+                            </nav>
+                            <div id="sample_editor_tabs">
+                                <!-- <div id="voice_sample_editor_tts_1_settings" class="tab_content active">
+                                    <h4>TTS 1 Settings</h4>
+                                    <label for="tts_1_model">
+                                        <h4>Model:</h4>
+                                    </label>
+                                    <select id="tts_1_model">
+                                        <option value="model_1">Model 1</option>
+                                        <option value="model_2">Model 2</option>
+                                        <option value="model_3">Model 3</option>
+                                    </select>
+                                    <label for="tts_1_voice">
+                                        <h4>Voice:</h4>
+                                    </label>
+                                    <input type="text" id="tts_1_voice" placeholder="Enter voice name here" value="Default Voice">
+                                </div> -->
+                            </div>
+                        </div>
+                        <br>
+                        <button id="save_character_override">Save Voice Model Settings</button>
+                        <br>
+                        <h3>Optional: You can also set up per character overrides for any of these settings.</h3>
+                        <br>
+                        <label for="voice_sample_editor_character_name">
+                            <h4>Character Name:</h4>
+                        </label>
+                        <select id="voice_sample_editor_character_name">
+                            <option value="" disabled selected>Select a character</option>
+                        </select>
+                        <div id="voice_sample_editor_character_settings">
+                            <div class="tab_container">
+                                <h3>Setup your TTSes for <span class="character_name">CharacterName</span></h3>
+                                <br>
+                                <label for="voice_sample_file">
+                                    <h4>Voice Sample File for <span class="character_name">CharacterName</span>:</h4>
+                                </label>
+                                <input type="file" id="voice_sample_file" accept="audio/*">
+                                <button id="use_voice_sample_file_button" class="btn right-tooltip tooltip">
+                                    Upload Voice Sample File for <span class="character_name">CharacterName</span>
+                                    <span class="tooltiptext">This will upload the selected voice sample file.</span>
+                                </button>
+                                <nav id="sample_editor_tab_buttons_2">
+                                    <!-- <button id="voice_sample_editor_tts_1_settings_button" class="active">
+                                        TTS 1 Settings
+                                        <i class="fa-solid fa-check" style="color: #4CAF50; margin-left: 5px;"></i>
+                                    </button>
+                                    <button id="voice_sample_editor_tts_2_settings_button" class="active">
+                                        TTS 2 Settings
+                                        <i class="fa-solid fa-ban" style="color: #f44336; margin-left: 5px;"></i>
+                                    </button>
+                                    <button id="voice_sample_editor_tts_3_settings_button" class="active">
+                                        TTS 3 Settings
+                                        <i class="fa-solid fa-ban" style="color: #f44336; margin-left: 5px;"></i>
+                                    </button> -->
+                                </nav>
+                                <div id="sample_editor_tabs_2">
+                                    <!-- <div id="voice_sample_editor_tts_1_settings" class="tab_content active">
+                                        <h4>TTS 1 Settings</h4>
+                                        <label for="tts_1_model">
+                                            <h4>Model:</h4>
+                                        </label>
+                                        <select id="tts_1_model">
+                                            <option value="model_1">Model 1</option>
+                                            <option value="model_2">Model 2</option>
+                                            <option value="model_3">Model 3</option>
+                                        </select>
+                                        <label for="tts_1_voice">
+                                            <h4>Voice:</h4>
+                                        </label>
+                                        <input type="text" id="tts_1_voice" placeholder="Enter voice name here" value="Default Voice">
+                                    </div> -->
+                                </div>
+                            </div>
+                            <br>
+                            <button id="save_character_override">Save Character Override</button>
+                        </div>
+                        <hr>
+                        <div class="flex_row">
+                            <div>
+                                <label for="tts_text_input">
+                                    <h4>Text to Speak:</h4>
+                                </label>
+                                <textarea id="tts_text_input" rows="4" cols="50" placeholder="Enter text to speak here"></textarea>
+                                <button id="use_test_tts_button">Test TTS</button>
+                            </div>
+                            <div>
+                                <h4>TTS Output:</h4>
+                                <audio id="tts_output_audio" controls style="width: 100%; margin-top: 10px;">
+                                    <source src="" type="audio/mpeg">
+                                    Your browser does not support the audio element.
+                                </audio>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <style>
+                #voice_sample_editor_character_settings {
+                    display: none; /* Hide character settings by default */
+                }
+                #voice_sample_editor_character_settings.active {
+                    display: block; /* Show character settings when active */
+                }
+                .tab_container {
+                    margin-top: 20px;
+                    background-color: #444;
+                    padding: 15px;
+                    border-radius: 5px;
+                }
+                .tab_container nav {
+                    display: flex;
+                    justify-content: start;
+                }
+                .tab_container nav button {
+                    background-color: #6f6f6f;
+                    color: white;
+                    border: none;
+                    padding: 10px 20px;
+                    cursor: pointer;
+                    font-size: 1em;
+                }
+                .tab_container nav button:disabled {
+                    background-color: #ccc;
+                    cursor: not-allowed;
+                }
+                .tab_container nav button:nth-child(odd) {
+                    background-color: #5f5f5f; /* Darker shade for odd buttons */
+                    border-left:0;
+                    border-right:0;
+                }
+                .tab_container nav button:disabled:nth-child(odd) {
+                    background-color: #ccc; /* Keep disabled button color for odd buttons */
+                }
+                .tab_container nav button:hover {
+                    background-color: #494949; /* Darker shade on hover */
+                }
+                .tab_container nav button:disabled:hover {
+                    background-color: #ccc; /* Keep disabled button color on hover */
+                }
+                .tab_containernav button.active {
+                    background-color: #4c66af; /* Active tab color */
+                }
+                .tab_container nav button.hidden {
+                    display: none; /* Hide buttons that are not applicable */
+                }
+                .tab_content {
+                    display: none; /* Hide all tabs by default */
+                    background-color: #5f5f5f;
+                    padding: 15px;
+                    border-radius: 5px;
+                    margin-top: 10px;
+                }
+                .tab_content.active {
+                    display: block; /* Show active tab */
+                }
+                #voice_sample_opened {
+                    display: none; /* Hide voice sample editor by default */
+                }
+                #voice_sample_opened.active {
+                    display: block; /* Show voice sample editor when active */
+                }
+                .tooltip {
+                    position: relative;
+                    display: inline-block;
+                    border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+                }
+
+                    /* Tooltip text */
+                .tooltip .tooltiptext {
+                    visibility: hidden;
+                    width: 120px;
+                    background-color: black;
+                    color: #fff;
+                    text-align: center;
+                    padding: 5px 0;
+                    border-radius: 6px;
+                    
+                    /* Position the tooltip text - see examples below! */
+                    position: absolute;
+                    z-index: 1;
+                }
+                .right-tooltip .tooltiptext {
+                    top: -5px;
+                    left: 105%;
+                }
+                .left-tooltip .tooltiptext {
+                    top: -5px;
+                    right: 105%;
+                }
+                .right-float {
+                    float: right;
+                }
+                /* Show the tooltip text when you mouse over the tooltip container */
+                .tooltip:hover .tooltiptext {
+                    visibility: visible;
+                }
+                .flex_row {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    align-items: flex-start;
+                }
+                #new_voice_sample_button,
+                #transcribe_voice_sample_button,
+                #save_character_override,
+                .btn {
+                    background-color: #4CAF50;
+                    color: white;
+                    border: none;
+                    padding: 10px 20px;
+                    cursor: pointer;
+                    font-size: 1em;
+                    margin-bottom: 15px;
+                }
+                #transcribe_voice_sample_button {
+                    float: right;
+                }
+                input[type="file"]{
+                    display: block;
+                    margin-bottom: 15px;
+                    background-color: #444;
+                    color: #fff;
+                }
+                input[type="file"]:focus {
+                    border-color: #4c66af;
+                    outline: none;
+                    background-color: #555;
+                    color: #fff;
+                }
+                input[type="file"]::file-selector-button {
+                    background-color: #383838;
+                    color: white;
+                    border: none;
+                    padding: 10px 20px;
+                    cursor: pointer;
+                    font-size: 1em;
+                }
+                input[type="file"]::file-selector-button:hover {
+                    background-color: #494949; /* Darker shade on hover */
+                }
+                input[type="file"]::file-selector-button:focus {
+                    background-color: #494949; /* Darker shade on focus */
+                }
+                input[type="file"]::file-selector-button:active {
+                    background-color: #494949; /* Darker shade on active */
+                }
+                input[type="file"]::file-selector-button:disabled {
+                    background-color: #ccc;
+                    cursor: not-allowed;
+                }
+                #new_voice_sample_button {
+                    float: right;
+                }
+                #voice_samples_container {
+                    margin: 20px;
+                    padding: 20px;
+                    background-color: #5f5f5f;
+                    border-radius: 5px;
+                    width: 30%;
+                }
+                #voice_samples_list {
+                    list-style-type: none;
+                    padding: 0;
+                }
+                #voice_samples_list li {
+                    margin-bottom: 15px;
+                    background-color: #6f6f6f;
+                    padding: 10px;
+                    border-radius: 5px;
+                }
+                #voice_samples_list li audio {
+                    width: 100%;
+                    margin-top: 10px;
+                }
+                #voice_sample_editor_container {
+                    margin: 20px;
+                    background-color: #444;
+                    padding: 20px;
+                    border-radius: 5px;
+                    width: 60%;
+                }
+                #voice_sample_editor_container h4 {
+                    color: #ddd;
+                }
+            </style>
+        </div>
+        <div id="character_manager">
+            <div style="display: flex; gap: 32px;"></div>
+                <div id="character_list" style="width: 250px; background: #444; border-radius: 5px; padding: 16px; min-height: 400px;">
+                    <button id="add_character_btn" style="margin-top: 16px; width: 100%;">+ Add Character</button>
+                    <br>
+                    <h3>Characters - <span id="character_count">0</span>
+                    <ul id="character_list_ul" style="list-style: none; padding: 0; margin: 0;">
+                        <!-- Character items will be populated here -->
+                    </ul>
+                </div>
+                <div id="character_editor" style="flex: 1; background: #555; border-radius: 5px; padding: 24px; min-height: 400px;">
+                    <h3 id="character_editor_title" style="margin-top: 0;">Select a character to edit</h3>
+                    <form id="character_editor_form" style="display: none;">
+                        <label>
+                            <h4>Base ID:</h4>
+                            <input type="text" id="character_base_id_input" readonly>
+                        </label>
+                        <label>
+                            <h4>Reference ID:</h4>
+                            <input type="text" id="character_reference_id_input" readonly>
+                        </label>
+                        <label>
+                            <h4>Name:</h4>
+                            <input type="text" id="character_name_input" required>
+                        </label>
+                        <label>
+                            <h4>Voice Model:</h4>
+                            <select id="character_voice_model_input"></select>
+                        </label>
+                        <label>
+                            <h4>Description:</h4>
+                            <textarea id="character_description_input" rows="4"></textarea>
+                        </label>
+                        <label>
+                            <h4>Race:</h4>
+                            <input type="text" id="character_race_input" placeholder="e.g., Human, Elf, Dwarf">
+                        </label>
+                        <label>
+                            <h4>Species:</h4>
+                            <input type="text" id="character_species_input" placeholder="e.g., Human, Elf, Dwarf">
+                        </label>
+                        <label>
+                            <h4>Notes:</h4>
+                            <textarea id="character_notes_input" rows="4" placeholder="Enter any additional notes about the character"></textarea>
+                        </label>
+                        <label>
+                            <h4>Gender:</h4>
+                            <select id="character_gender_input">
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+                            </select>
+                        </label>
+                        <hr>
+                        <div class="flex_row">
+                            <button type="button" id="character_memory_editor_btn" class="btn">Edit Memory</button>
+                            <button type="button" id="character_voice_model_editor_btn" class="btn">Edit Voice Model Settings</button>
+                            <button type="button" id="character_voice_settings_editor_btn" class="btn">Edit Voice Settings</button>
+                        </div>
+                        <div style="margin-top: 16px;">
+                            <button type="submit" id="save_character_btn" class="btn">Save</button>
+                            <button type="button" id="delete_character_btn" style="background: #ce4c4c; margin-left: 8px;" class="btn right-float">Delete</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <style>
+                #character_manager {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    align-items: flex-start;
+                    margin-top: 20px;
+                }
+                #character_description_input {
+                    resize: vertical;
+                }
+                #character_list {
+                    width: 250px;
+                    background-color: #444;
+                    border-radius: 5px;
+                    padding: 16px;
+                    min-height: 400px;
+                    max-height: 800px;
+                    overflow-y: auto;
+                }
+                #character_list h3 {
+                    color: #ddd;
+                }
+                #character_list ul {
+                    list-style-type: none;
+                    padding: 0;
+                    margin: 0;
+                }
+                #character_list li {
+                    padding: 8px;
+                    cursor: pointer;
+                    border-radius: 4px;
+                    margin-bottom: 4px;
+                    color: #ccc;
+                }
+                #character_list li:hover {
+                    background-color: #555;
+                }
+                #add_character_btn {
+                    width: 100%;
+                    padding: 10px;
+                    background-color: #4CAF50;
+                    color: white;
+                    border: none;
+                    cursor: pointer;
+                }
+                #add_character_btn:hover {
+                    background-color: #45a049; /* Darker shade on hover */
+                }
+                #character_editor {
+                    flex-grow: 1;
+                    background-color: #555;
+                    border-radius: 5px;
+                    padding: 24px;
+                    min-height: 400px;
+                }
+                #character_editor h3 {
+                    margin-top: 0;
+                    color: #ddd;
+                }
+                #character_editor form {
+                    display: none; /* Hidden by default, shown when a character is selected */
+                }
+                label {
+                    display: block;
+                    margin-bottom: 15px;
+                }
+                label h4 {
+                    margin-bottom: 5px;
+                    color: #ddd;
+                }
+            </style>
+        </div>
+        <div id="llm_settings">
+            <div class="container">
+                <div class="interface-part">
+                    <div class="tab_container" style="border-radius: 0;">
+                        <h2>Inference Engine Editor</h2>
+                        <p>
+                            Here you can configure the inference engines used by the NPCs to generate their responses.
+                        </p>
+                        <nav id="inference_engine_editor_tab_buttons">
+                            <!-- <button id="voice_sample_editor_tts_1_settings_button" class="active">
+                                TTS 1 Settings
+                                <i class="fa-solid fa-check" style="color: #4CAF50; margin-left: 5px;"></i>
+                            </button>
+                            <button id="voice_sample_editor_tts_2_settings_button" class="active">
+                                TTS 2 Settings
+                                <i class="fa-solid fa-ban" style="color: #f44336; margin-left: 5px;"></i>
+                            </button>
+                            <button id="voice_sample_editor_tts_3_settings_button" class="active">
+                                TTS 3 Settings
+                                <i class="fa-solid fa-ban" style="color: #f44336; margin-left: 5px;"></i>
+                            </button> -->
+                        </nav>
+                        <div id="inference_engine_editor_tabs">
+                            <!-- <div id="voice_sample_editor_tts_1_settings" class="tab_content active">
+                                <h4>TTS 1 Settings</h4>
+                                <label for="tts_1_model">
+                                    <h4>Model:</h4>
+                                </label>
+                                <select id="tts_1_model">
+                                    <option value="model_1">Model 1</option>
+                                    <option value="model_2">Model 2</option>
+                                    <option value="model_3">Model 3</option>
+                                </select>
+                                <label for="tts_1_voice">
+                                    <h4>Voice:</h4>
+                                </label>
+                                <input type="text" id="tts_1_voice" placeholder="Enter voice name here" value="Default Voice">
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- <div id="test_tts">
+            <div class="flex_row">
+                <div id="test_tts_container">
+                    <h3>Test TTS</h3>
+                    <br>
+                    <label for="voice_model_selector">
+                        <h4>Voice Model:</h4>
+                    </label>
+                    <select id="voice_model_selector">
+                        <option value="1">Voice Model 1</option>
+                        <option value="2">Voice Model 2</option>
+                        <option value="3">Voice Model 3</option>
+                    </select>
+                    <label for="tts_text_input">
+                        <h4>Text to Speak:</h4>
+                    </label>
+                    <textarea id="tts_text_input" rows="4" cols="50" placeholder="Enter text to speak here"></textarea>
+                    <button id="use_test_tts_button">Test TTS</button>
+                </div>
+                <div id="tts_output_container">
+                    <h3>TTS Output</h3>
+                    <audio id="tts_output_audio" controls>
+                        <source src="" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                </div>
+            </div>
+            <style>
+                #test_tts_container {
+                    margin: 20px;
+                    padding: 20px;
+                    background-color: #5f5f5f;
+                    border-radius: 5px;
+                    width: 40%;
+                }
+                #tts_output_container {
+                    margin: 20px;
+                    padding: 20px;
+                    background-color: #6f6f6f;
+                    border-radius: 5px;
+                    width: 40%;
+                }
+                #tts_output_audio {
+                    width: 100%;
+                    margin-top: 10px;
+                }
+                #tts_text_input {
+                    width: 100%;
+                    padding: 10px;
+                    margin-bottom: 15px;
+                    border: 1px solid #ccc;
+                    border-radius: 5px;
+                    background-color: #444;
+                    color: #fff;
+                }
+                #tts_text_input:focus {
+                    border-color: #4c66af;
+                    outline: none;
+                    background-color: #555;
+                    color: #fff;
+                }
+                #use_test_tts_button {
+                    background-color: #4CAF50;
+                    color: white;
+                    border: none;
+                    padding: 10px 20px;
+                    cursor: pointer;
+                    font-size: 1em;
+                }
+                #use_test_tts_button:hover {
+                    background-color: #45a049;
+                }
+                #use_test_tts_button:focus {
+                    outline: none;
+                    box-shadow: 0 0 5px #4CAF50;
+                }
+                #use_test_tts_button:active {
+                    background-color: #3e8e41;
+                    box-shadow: 0 0 10px #ffffff; /* Glow effect */
+                }
+                #use_test_tts_button:disabled {
+                    background-color: #ccc;
+                    cursor: not-allowed;
+                }
+                #use_test_tts_button:disabled:hover {
+                    background-color: #ccc;
+                }
+                #use_test_tts_button:disabled:focus {
+                    box-shadow: none;
+                }
+            </style>
+        </div> -->
+        <div id="test_stt">
+            <div class="flex_row">
+                <div id="test_stt_container">
+                    <h3>Test STT</h3>
+                    <label for="stt_audio_input">
+                        <h4>Audio Input:</h4>
+                    </label>
+                    <input type="file" id="stt_audio_input" accept="audio/*">
+                    <button id="use_test_stt_button">Test STT</button>
+                </div>
+                <div id="stt_output_container">
+                    <h3>STT Output</h3>
+                    <p id="stt_output_text">Transcription will appear here...</p>
+                </div>
+            </div>
+            <style>
+                #test_stt_container {
+                    margin: 20px;
+                    padding: 20px;
+                    background-color: #5f5f5f;
+                    border-radius: 5px;
+                    width: 40%;
+                }
+                #stt_output_container {
+                    margin: 20px;
+                    padding: 20px;
+                    background-color: #6f6f6f;
+                    border-radius: 5px;
+                    width: 40%;
+                }
+                #stt_audio_input {
+                    padding: 10px;
+                    margin-bottom: 15px;
+                    border: 1px solid #ccc;
+                    border-radius: 5px;
+                    background-color: #444;
+                    color: #fff;
+                }
+                #stt_audio_input:focus {
+                    border-color: #4c66af;
+                    outline: none;
+                    background-color: #555;
+                    color: #fff;
+                }
+                #use_test_stt_button {
+                    background-color: #4CAF50;
+                    color: white;
+                    border: none;
+                    padding: 10px 20px;
+                    cursor: pointer;
+                    font-size: 1em;
+                }
+                #use_test_stt_button:hover {
+                    background-color: #45a049;
+                }
+                #use_test_stt_button:focus {
+                    outline: none;
+                    box-shadow: 0 0 5px #4CAF50;
+                }
+                #use_test_stt_button:active {
+                    background-color: #3e8e41;
+                    box-shadow: 0 0 10px #ffffff; /* Glow effect */
+                }
+                #use_test_stt_button:disabled {
+                    background-color: #ccc;
+                    cursor: not-allowed;
+                }
+                #use_test_stt_button:disabled:hover {
+                    background-color: #ccc;
+                }
+                #use_test_stt_button:disabled:focus {
+                    box-shadow: none;
+                }
+                #stt_output_text {
+                    color: #ddd;
+                    font-size: 1.2em;
+                    margin-top: 10px;
+                }
+            </style>
+        </div>
+        <div id="banned_modules">
+            <h2>Banned Modules</h2>
+            <p>This is a placeholder for the banned modules list. It will be implemented later.</p>
+        </div>
+    </div>
+    <style>
+        #page_container {
+            width: 100%;
+        }
+        #advanced_configuration {
+            display: none; /* Hide by default, can be shown later */
+            margin-top: 20px;
+        }
+        #simple_configuration {
+            margin-top: 20px;
+            padding: 20px;
+        }
+        #first_time_setup p {
+            background-color: #f9f9f9;
+            color: #333 !important;
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        #memory_editor {
+            display: none; /* Hide by default, can be shown later */
+            margin-top: 20px;
+        }
+        #voice_sample_editor {
+            display: none; /* Hide by default, can be shown later */
+            margin-top: 20px;
+        }
+        #banned_modules {
+            display: none; /* Hide by default, can be shown later */
+            margin-top: 20px;
+        }
+    </style>
     <script>
         // Get json from server
         var default_settings = $.ajax({
@@ -66,9 +1290,632 @@
             type: "GET",
             async: false
         }).responseText;
+        var voiceSamples = $.ajax({
+            url: "/voice-samples",
+            type: "GET",
+            async: false
+        }).responseText;
+        var voiceModels = $.ajax({
+            url: "/voice-models",
+            type: "GET",
+            async: false
+        }).responseText;
+        var ttsEngines = $.ajax({
+            url: "/tts-engines",
+            type: "GET",
+            async: false
+        }).responseText;
+        var characters = $.ajax({
+            url: "/characters",
+            type: "GET",
+            async: false
+        }).responseText;
+        var inferenceEngines = $.ajax({
+            url: "/inference-engines",
+            type: "GET",
+            async: false
+        }).responseText;
         default_settings = JSON.parse(default_settings);
         settings = JSON.parse(settings);
         multipleChoice = JSON.parse(multipleChoice);
+        voiceSamples = JSON.parse(voiceSamples);
+        voiceModels = JSON.parse(voiceModels);
+        ttsEngines = JSON.parse(ttsEngines);
+        characters = JSON.parse(characters);
+        inferenceEngines = JSON.parse(inferenceEngines);
+        
+        document.getElementById("character_count").textContent = characters.length;
+        // Populate character list
+        function renderCharacterList() {
+            const ul = document.getElementById("character_list_ul");
+            ul.innerHTML = "";
+            characters.forEach((c, idx) => {
+                const li = document.createElement("li");
+                li.style.padding = "8px";
+                li.style.cursor = "pointer";
+                li.style.borderRadius = "4px";
+                li.style.marginBottom = "4px";
+                li.style.background = idx === selectedCharacterIdx ? "#4c66af" : "transparent";
+                li.style.color = idx === selectedCharacterIdx ? "#fff" : "#ccc";
+                li.textContent = c.name;
+                li.onclick = () => selectCharacter(idx);
+                ul.appendChild(li);
+            });
+        }
+
+        // Populate voice model select
+        function renderVoiceModelOptions(selected) {
+            const select = document.getElementById("character_voice_model_input");
+            select.innerHTML = "";
+            voiceModels.forEach(vm => {
+                const opt = document.createElement("option");
+                opt.value = vm.voice_model;
+                opt.textContent = vm.voice_model;
+                if (vm.voice_model === selected) opt.selected = true;
+                select.appendChild(opt);
+            });
+        }
+
+        let selectedCharacterIdx = null;
+
+        function selectCharacter(idx) {
+            selectedCharacterIdx = idx;
+            const c = characters[idx];
+            document.getElementById("character_editor_title").textContent = "Edit Character";
+            document.getElementById("character_editor_form").style.display = "block";
+            document.getElementById("character_base_id_input").value = c.base_id || "";
+            document.getElementById("character_reference_id_input").value = c.ref_id || "";
+            document.getElementById("character_name_input").value = c.name;
+            renderVoiceModelOptions(c.voice_model);
+            document.getElementById("character_description_input").value = c.bio || "";
+            document.getElementById("character_race_input").value = c.race || "";
+            document.getElementById("character_species_input").value = c.species || "";
+            document.getElementById("character_notes_input").value = c.notes || "";
+            document.getElementById("character_gender_input").value = c.gender || "";
+            renderCharacterList();
+        }
+
+        document.getElementById("add_character_btn").onclick = function() {
+            selectedCharacterIdx = null;
+            document.getElementById("character_editor_title").textContent = "Add New Character";
+            document.getElementById("character_editor_form").style.display = "block";
+            document.getElementById("character_name_input").value = "";
+            renderVoiceModelOptions();
+            document.getElementById("character_description_input").value = "";
+            renderCharacterList();
+        };
+
+        document.getElementById("character_editor_form").onsubmit = function(e) {
+            e.preventDefault();
+            const name = document.getElementById("character_name_input").value.trim();
+            const voice_model = document.getElementById("character_voice_model_input").value;
+            const description = document.getElementById("character_description_input").value;
+            if (!name) return;
+            if (selectedCharacterIdx === null) {
+                // Add new
+                $.ajax({
+                    url: "/characters",
+                    type: "POST",
+                    data: JSON.stringify({ name, voice_model, description }),
+                    contentType: "application/json",
+                    success: function(newChar) {
+                        characters.push(newChar);
+                        selectedCharacterIdx = characters.length - 1;
+                        renderCharacterList();
+                        selectCharacter(selectedCharacterIdx);
+                    }
+                });
+            } else {
+                // Edit existing
+                const char = characters[selectedCharacterIdx];
+                $.ajax({
+                    url: "/characters/" + encodeURIComponent(char.name),
+                    type: "PUT",
+                    data: JSON.stringify({ name, voice_model, description }),
+                    contentType: "application/json",
+                    success: function(updatedChar) {
+                        characters[selectedCharacterIdx] = updatedChar;
+                        renderCharacterList();
+                        selectCharacter(selectedCharacterIdx);
+                    }
+                });
+            }
+        };
+
+        document.getElementById("delete_character_btn").onclick = function() {
+            if (selectedCharacterIdx === null) return;
+            const char = characters[selectedCharacterIdx];
+            if (!confirm("Delete character '" + char.name + "'?")) return;
+            $.ajax({
+                url: "/characters/" + encodeURIComponent(char.name),
+                type: "DELETE",
+                success: function() {
+                    characters.splice(selectedCharacterIdx, 1);
+                    selectedCharacterIdx = null;
+                    document.getElementById("character_editor_form").style.display = "none";
+                    document.getElementById("character_editor_title").textContent = "Select a character to edit";
+                    renderCharacterList();
+                }
+            });
+        };
+
+        // Initial render
+        renderCharacterList();
+
+        const voiceSamplesUl = document.getElementById("voice_samples_list");
+        voiceSamplesUl.innerHTML = ""; // Clear existing voice samples
+        voiceSamples.forEach(sample => {
+            addVoiceSample(sample.voice_model, sample.tts_settings.default.transcription, sample.data);
+        });
+
+        const _sampleEditorTabButtons = document.getElementById("sample_editor_tab_buttons");
+        const _sampleEditorTabButtons2 = document.getElementById("sample_editor_tab_buttons_2");
+        const _sampleEditorTabs = document.getElementById("sample_editor_tabs");
+        const _sampleEditorTabs2 = document.getElementById("sample_editor_tabs_2");
+        const sampleEditorTabButtonsList = [
+            _sampleEditorTabButtons,
+            _sampleEditorTabButtons2
+        ]
+        const sampleEditorTabsList = [
+            _sampleEditorTabs,
+            _sampleEditorTabs2
+        ];
+        var firstTTSes = [
+            true, // For the first tab
+            true  // For the second tab
+        ]
+        for (tts_slug in ttsEngines){
+            for (let i = 0; i < sampleEditorTabButtonsList.length; i++) {
+                let sampleEditorTabButtons = sampleEditorTabButtonsList[i];
+                let sampleEditorTabs = sampleEditorTabsList[i];
+                let firstTTS = firstTTSes[i]; // Track if it's the first TTS for this tab
+                let ttsSettings = ttsEngines[tts_slug];
+                let tabContent = document.createElement("div");
+                tabContent.id = "voice_sample_editor_"+(i+1)+"_" + tts_slug + "_settings";
+                tabContent.className = "tab_content";
+                let header = document.createElement("h3");
+                header.textContent = `${tts_slug} - Settings`;
+                tabContent.appendChild(header);
+                tabContent.appendChild(document.createElement("br"));
+                let description = document.createElement("p");
+                description.textContent = ttsSettings.description || "No description available for this TTS engine.";
+                tabContent.appendChild(description);
+                tabContent.appendChild(document.createElement("br"));
+                for (property in ttsSettings.default_settings) {
+                    console.log("Processing property:", property, "with value:", ttsSettings.default_settings[property]);
+                    const label = document.createElement("label");
+                    label.innerHTML = `<h4>${property}:</h4>`;
+                    const input = document.createElement("input");
+                    input.id = `voice_sample_editor_${i+1}_${tts_slug}_${property}`;
+                    switch (typeof ttsSettings.default_settings[property]) {
+                        case "boolean":
+                            console.log("Property is boolean:", property, ttsSettings.default_settings[property]);
+                            input.type = "checkbox";
+                            input.checked = ttsSettings.default_settings[property];
+                            break;
+                        case "number":
+                            console.log("Property is number:", property, ttsSettings.default_settings[property]);
+                            input.type = "number";
+                            input.value = ttsSettings.default_settings[property];
+                            break;
+                        case "string":
+                            console.log("Property is string:", property, ttsSettings.default_settings[property]);
+                            input.type = "text";
+                            input.value = ttsSettings.default_settings[property];
+                            break;
+                        default:
+                            console.log("Property is of unknown type:", property, ttsSettings.default_settings[property]);
+                            input.type = "text";
+                            input.value = JSON.stringify(ttsSettings.default_settings[property]);
+                    }
+                    input.placeholder = `Enter ${property} here`;
+                    tabContent.appendChild(label);
+                    tabContent.appendChild(input);
+                    if (typeof ttsSettings.default_settings[property] == "boolean") {
+                        tabContent.appendChild(document.createElement("br"));
+                    }
+                }
+                sampleEditorTabs.appendChild(tabContent);
+                let button = document.createElement("button");
+                button.id = `voice_sample_editor_${i+1}_${tts_slug}_settings_button`;
+                button.textContent = `${tts_slug}`;
+                // if (!ttsSettings.loaded){
+                //     button.className = "hidden"; // Initially hidden, will be shown if TTS is available
+                // }
+                // button.disabled = !ttsSettings.loaded; // Disable button if TTS is not available
+                button.onclick = function() {
+                    let allTabs = sampleEditorTabs.querySelectorAll(".tab_content");
+                    allTabs.forEach(tab => tab.classList.remove("active"));
+                    let allButtons = sampleEditorTabButtons.querySelectorAll("button");
+                    allButtons.forEach(btn => btn.classList.remove("active"));
+                    tabContent.classList.add("active");
+                    this.classList.add("active");
+                };
+                sampleEditorTabButtons.appendChild(button);
+                if (firstTTS && ttsSettings.loaded) {
+                    tabContent.classList.add("active");
+                    button.classList.add("active");
+                    firstTTS = false;
+                }
+            }
+        }
+        
+        
+        const inferenceEditorTabButtons = document.getElementById("inference_engine_editor_tab_buttons");
+        const inferenceEditorTabs = document.getElementById("inference_engine_editor_tabs");
+        for (inference_engine in inferenceEngines.inference_engines){
+            let inferenceSettings = inferenceEngines.inference_engines[inference_engine];
+            let tabContent = document.createElement("div");
+            tabContent.id = "inference_" + inference_engine + "_settings";
+            tabContent.className = "tab_content";
+            let header = document.createElement("h3");
+            header.textContent = `${inference_engine} - Settings`;
+            tabContent.appendChild(header);
+            tabContent.appendChild(document.createElement("br"));
+            let description = document.createElement("p");
+            description.textContent = inferenceSettings.description || "No description available for this inference engine.";
+            tabContent.appendChild(description);
+            tabContent.appendChild(document.createElement("br"));
+            for (property in inferenceSettings.default_settings) {
+                let defaultSetting = inferenceSettings.default_settings[property];
+                let settingsDescription = inferenceSettings.settings_description[property]
+                let settingOptions = inferenceSettings.options[property];
+                console.log("Processing property:", property, "with value:", defaultSetting);
+                const label = document.createElement("label");
+                label.innerHTML = `<h4>${property}:</h4>`;
+                let exampleOptions = {
+                    "openai_completions_type": [
+                        {
+                            "name": "Text Completions",
+                            "value": "text",
+                            "description": "Use text completions for the OpenAI API. This is the default and recommended option for most models.",
+                            "default": true,
+                            "disabled": false
+                        },
+                        {
+                            "name": "Chat Completions",
+                            "value": "chat",
+                            "description": "Use chat completions for the OpenAI API. This is recommended for models that support chat completions, such as GPT-3.5 Turbo and GPT-4.",
+                            "default": false,
+                            "disabled": false
+                        }
+                    ]
+                }
+                let input;
+                if (settingOptions && settingOptions.length > 0){
+                    console.log("Property has options:", property, settingOptions);
+                    input = document.createElement("select");
+                    input.id = `inference_${inference_engine}_${property}`;
+                    settingOptions.forEach(option => {
+                        const opt = document.createElement("option");
+                        opt.value = option.value;
+                        opt.textContent = option.name;
+                        if (option.default) {
+                            opt.selected = true;
+                        }
+                        if (option.disabled) {
+                            opt.disabled = true;
+                        }
+                        if (option.description) {
+                            opt.title = option.description; // Add description as tooltip
+                        }
+                        input.appendChild(opt);
+                    });
+                }else{
+                    input = document.createElement("input");
+                    input.id = `inference_${inference_engine}_${property}`;
+                    switch (typeof defaultSetting) {
+                        case "boolean":
+                            console.log("Property is boolean:", property, defaultSetting);
+                            input.type = "checkbox";
+                            input.checked = defaultSetting;
+                            break;
+                        case "number":
+                            console.log("Property is number:", property, defaultSetting);
+                            input.type = "number";
+                            input.value = defaultSetting;
+                            break;
+                        case "string":
+                            console.log("Property is string:", property, defaultSetting);
+                            input.type = "text";
+                            input.value = defaultSetting;
+                            break;
+                        default:
+                            console.log("Property is of unknown type:", property, defaultSetting);
+                            input.type = "text";
+                            input.value = JSON.stringify(defaultSetting);
+                    }
+                    input.placeholder = `Enter ${property} here`;
+                }
+                tabContent.appendChild(label);
+                if (settingsDescription.length > 0) {
+                    let descriptionText = document.createElement("p");
+                    descriptionText.textContent = settingsDescription;
+                    tabContent.appendChild(descriptionText);
+                }
+                tabContent.appendChild(input);
+                if (typeof defaultSetting == "boolean") {
+                    tabContent.appendChild(document.createElement("br"));
+                }
+            }
+            inferenceEditorTabs.appendChild(tabContent);
+            let button = document.createElement("button");
+            button.id = `inference_${inference_engine}_settings_button`;
+            button.textContent = `${inference_engine}`;
+            // if (!inferenceSettings.loaded){
+            //     button.className = "hidden"; // Initially hidden, will be shown if inference engine is available
+            // }
+            // button.disabled = !inferenceSettings.loaded; // Disable button if inference engine is not available
+            button.onclick = function() {
+                let allTabs = inferenceEditorTabs.querySelectorAll(".tab_content");
+                allTabs.forEach(tab => tab.classList.remove("active"));
+                let allButtons = inferenceEditorTabButtons.querySelectorAll("button");
+                allButtons.forEach(btn => btn.classList.remove("active"));
+                tabContent.classList.add("active");
+                this.classList.add("active");
+            };
+            inferenceEditorTabButtons.appendChild(button);
+            if (inferenceSettings.loaded) {
+                tabContent.classList.add("active");
+                button.classList.add("active");
+            }
+        }
+        
+        
+        const voiceSampleName = document.getElementById("voice_sample_name");
+        voiceModels.forEach(sample => {
+            const option = document.createElement("option");
+            option.value = sample.voice_model;
+            option.textContent = sample.voice_model;
+            if (sample.available) {
+                option.style.color = "#4CAF50"; // Available voice models
+            } else {
+                option.style.color = "#f44336"; // Unavailable voice models
+            }
+            voiceSampleName.appendChild(option);
+        });
+        
+        const voiceSampleEditorCharacterName = document.getElementById("voice_sample_editor_character_name");
+        const voiceSampleEditorCharacterSettings = document.getElementById("voice_sample_editor_character_settings");
+        voiceSampleName.onchange = function() {
+            const selectedVoiceModel = voiceModels.find(model => model.voice_model === this.value);
+            console.log("Selected voice model:", selectedVoiceModel);
+            const voiceSampleOpened = document.getElementById("voice_sample_opened");
+            if (selectedVoiceModel) {
+                voiceSampleOpened.classList.add("active");
+            }else {
+                voiceSampleOpened.classList.remove("active");
+            }
+            voiceSampleEditorCharacterName.innerHTML = "<option value=\"\" disabled=\"\" selected=\"\">Select a character</option>"; // Clear existing options
+            voiceSampleEditorCharacterName.value = ""; // Reset the character selection
+            voiceSampleEditorCharacterSettings.classList.remove("active");
+            characters.forEach(character => {
+                if (character.voice_model !== selectedVoiceModel.voice_model) {
+                    return; // Skip characters that don't use this voice model
+                }
+                const option = document.createElement("option");
+                option.value = character.name;
+                option.textContent = character.name;
+                voiceSampleEditorCharacterName.appendChild(option);
+            });
+        };
+
+        voiceSampleEditorCharacterName.onchange = function() {
+            const selectedCharacter = characters.find(character => character.name === this.value);
+            console.log("Selected character:", selectedCharacter);
+            if (selectedCharacter) {
+                voiceSampleEditorCharacterSettings.classList.add("active");
+                // Update the character name in the settings
+                document.querySelectorAll(".character_name").forEach(el => el.textContent = selectedCharacter.name);
+            } else {
+                voiceSampleEditorCharacterSettings.classList.remove("active");
+            }
+        };
+
+        const voicesAvailableSpan = document.getElementById("voices_available");
+        const voicesTotalSpan = document.getElementById("voices_total");
+        voicesAvailableSpan.textContent = voiceModels.filter(model => model.available).length;
+        voicesTotalSpan.textContent = voiceModels.length;
+        const voiceSampleEditorAudio = document.getElementById("inference_audio");
+        const voiceSampleFileInput = document.getElementById("voice_sample_file");
+
+        const advancedConfigurationButton = document.getElementById("advanced_configuration_button");
+        const simpleConfigurationButton = document.getElementById("simple_configuration_button");
+        const memoryEditorButton = document.getElementById("memory_editor_button");
+        const restartButton = document.getElementById("restart_button");
+        const debugButton = document.getElementById("debug_button");
+        const voiceSampleEditorButton = document.getElementById("voice_sample_editor_button");
+        // const testTTSButton = document.getElementById("test_tts_button");
+        const characterManagerButton = document.getElementById("character_manager_button");
+        const llmSettingsButton = document.getElementById("llm_settings_button");
+        const testSTTButton = document.getElementById("test_stt_button");
+        const bannedModulesButton = document.getElementById("banned_modules_button");
+        
+        const useTestTTSButton = document.getElementById("use_test_tts_button");
+        const useTestSTTButton = document.getElementById("use_test_stt_button");
+
+        const memoryEditorIframe = document.getElementById("memory_editor_iframe");
+        memoryEditorIframe.src = "http://localhost:"+settings.Config.memory_editor_port + "/";
+
+        function removeActiveClass() {
+            advancedConfigurationButton.classList.remove("active");
+            simpleConfigurationButton.classList.remove("active");
+            memoryEditorButton.classList.remove("active");
+            voiceSampleEditorButton.classList.remove("active");
+            bannedModulesButton.classList.remove("active");
+            testSTTButton.classList.remove("active");
+            // testTTSButton.classList.remove("active");
+        }
+
+        var pages = [
+            document.getElementById("advanced_configuration"),
+            document.getElementById("simple_configuration"),
+            document.getElementById("memory_editor"),
+            document.getElementById("voice_sample_editor"),
+            document.getElementById("banned_modules"),
+            document.getElementById("test_stt"),
+            document.getElementById("character_manager"),
+            document.getElementById("llm_settings"),
+        ]
+        function blockTransition(nextPage){
+            pages.forEach(function(page) {
+                page.style.display = "none";
+            });
+            nextPage.style.display = "block";
+        }
+        function flexTransition(nextPage){
+            pages.forEach(function(page) {
+                page.style.display = "none";
+            });
+            nextPage.style.display = "flex";
+        }
+
+        advancedConfigurationButton.onclick = function() {
+            blockTransition(document.getElementById("advanced_configuration"));
+            removeActiveClass();
+            this.classList.add("active");
+            simpleConfigurationButton.style.backgroundColor = ""; // Reset other button
+        };
+        simpleConfigurationButton.onclick = function() {
+            blockTransition(document.getElementById("simple_configuration"));
+            removeActiveClass();
+            this.classList.add("active");
+            advancedConfigurationButton.style.backgroundColor = ""; // Reset other button
+        };
+        memoryEditorButton.onclick = function() {
+            blockTransition(document.getElementById("memory_editor"));
+            removeActiveClass();
+            this.classList.add("active");
+            advancedConfigurationButton.style.backgroundColor = ""; // Reset other button
+            simpleConfigurationButton.style.backgroundColor = ""; // Reset other button
+        };
+        restartButton.onclick = function() {
+            if (confirm("Are you sure you want to restart Pantella and apply settings? All ongoing conversations will be ended and the system will restart with the current settings.")) {
+                $.ajax({
+                    url: "/restart",
+                    type: "POST",
+                    success: function() {
+                        alert("Pantella was restarted successfully. You can now resume conversations.");
+                    },
+                    error: function(err) {
+                        alert("Failed to restart Pantella or apply settings. Please check the logs for more details.");
+                        console.error("Error restarting Pantella:", err);
+                        document.getElementById("log").innerHTML += "<br><span style='color: red;'>Error restarting Pantella: " + JSON.stringify(err) + "</span>";
+                        document.getElementById("log").scrollTop = document.getElementById("log").scrollHeight; // Scroll to the bottom
+                    }
+                });
+            }
+        };
+        if (settings.Debugging.debug_mode) {
+            document.getElementById("debug_li").style.display = "block";
+        } else {
+            document.getElementById("debug_li").style.display = "none";
+        }
+        debugButton.onclick = function() {
+            window.location.href = "http://localhost:"+settings.Config.debug_ui_port + "/";
+        };
+        voiceSampleEditorButton.onclick = function() {
+            blockTransition(document.getElementById("voice_sample_editor"));
+            removeActiveClass();
+            this.classList.add("active");
+            advancedConfigurationButton.style.backgroundColor = ""; // Reset other button
+            simpleConfigurationButton.style.backgroundColor = ""; // Reset other button
+        };
+        testSTTButton.onclick = function() {
+            blockTransition(document.getElementById("test_stt"));
+            removeActiveClass();
+            this.classList.add("active");
+            advancedConfigurationButton.style.backgroundColor = ""; // Reset other button
+            simpleConfigurationButton.style.backgroundColor = ""; // Reset other button
+        };
+        // testTTSButton.onclick = function() {
+        //     blockTransition(document.getElementById("test_tts"));
+        //     removeActiveClass();
+        //     this.classList.add("active");
+        //     advancedConfigurationButton.style.backgroundColor = ""; // Reset other button
+        //     simpleConfigurationButton.style.backgroundColor = ""; // Reset other button
+        // };
+        characterManagerButton.onclick = function() {
+            flexTransition(document.getElementById("character_manager"));
+            removeActiveClass();
+            this.classList.add("active");
+            advancedConfigurationButton.style.backgroundColor = ""; // Reset other button
+            simpleConfigurationButton.style.backgroundColor = ""; // Reset other button
+        };
+        llmSettingsButton.onclick = function() {
+            blockTransition(document.getElementById("llm_settings"));
+            removeActiveClass();
+            this.classList.add("active");
+            advancedConfigurationButton.style.backgroundColor = ""; // Reset other button
+            simpleConfigurationButton.style.backgroundColor = ""; // Reset other button
+        };
+        bannedModulesButton.onclick = function() {
+            document.getElementById("advanced_configuration").style.display = "none";
+            document.getElementById("simple_configuration").style.display = "none";
+            document.getElementById("memory_editor").style.display = "none";
+            document.getElementById("voice_sample_editor").style.display = "none";
+            document.getElementById("banned_modules").style.display = "block";
+            document.getElementById("test_stt").style.display = "none";
+            document.getElementById("test_tts").style.display = "none";
+            removeActiveClass();
+            this.classList.add("active");
+            advancedConfigurationButton.style.backgroundColor = ""; // Reset other button
+            simpleConfigurationButton.style.backgroundColor = ""; // Reset other button
+        };
+        
+        useTestSTTButton.onclick = function() {
+            var audioInput = document.getElementById("stt_audio_input").files[0];
+            if (!audioInput) {
+                alert("Please select an audio file to test STT.");
+                return;
+            }
+            var formData = new FormData();
+            formData.append("audio", audioInput);
+            $.ajax({
+                url: "/test_stt",
+                type: "POST",
+                data: formData,
+                processData: false,
+                contentType: false,
+                success: function(data) {
+                    document.getElementById("stt_output_text").innerText = data.transcription;
+                    console.log("STT Output:", data.transcription);
+                },
+                error: function(err) {
+                    alert("Failed to test STT. Please check the logs for more details.");
+                    console.error("Error testing STT:", err);
+                    document.getElementById("log").innerHTML += "<br><span style='color: red;'>Error testing STT: " + JSON.stringify(err) + "</span>";
+                    document.getElementById("log").scrollTop = document.getElementById("log").scrollHeight; // Scroll to the bottom
+                }
+            });
+        };
+        useTestTTSButton.onclick = function() {
+            var ttsText = document.getElementById("tts_text_input").value;
+            if (!ttsText) {
+                alert("Please enter text to test TTS.");
+                return;
+            }
+            $.ajax({
+                url: "/test_tts",
+                type: "POST",
+                data: JSON.stringify({ text: ttsText }),
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: function(data) {
+                    var audioElement = document.getElementById("tts_output_audio");
+                    audioElement.src = data.audio_url; // Assuming the server returns the URL of the generated audio
+                    audioElement.play();
+                    console.log("TTS Output:", data.audio_url);
+                },
+                error: function(err) {
+                    alert("Failed to test TTS. Please check the logs for more details.");
+                    console.error("Error testing TTS:", err);
+                    document.getElementById("log").innerHTML += "<br><span style='color: red;'>Error testing TTS: " + JSON.stringify(err) + "</span>";
+                    document.getElementById("log").scrollTop = document.getElementById("log").scrollHeight; // Scroll to the bottom
+                }
+            });
+        };
+
         // {
         //     "defaultConfig": ...,
         //     "types": ..., // object with properties that represent settings sections, and a list of setting names with their value types as strings
@@ -235,9 +2082,10 @@
                 url: "/log",
                 type: "GET",
                 success: function(data) {
-                    if (lastLog == data) return; // No change, skip update
-                    let scrollDown = document.getElementById("log").scrollTop >= document.getElementById("log").scrollHeight-25; // Check if we are scrolled down
+                    if (lastLog == data && lastLog != "") return; // No change, skip update
                     document.getElementById("log").innerHTML = data.replace("\n\n","\n").replace(/\n/g, "<br>"); // Replace newlines with <br> for HTML display
+                    // Wait for the log to be updated
+                    let scrollDown = document.getElementById("log").scrollTop >= document.getElementById("log").scrollHeight-25; // Check if we are scrolled down
                     if (scrollDown) {
                         document.getElementById("log").scrollTop = document.getElementById("log").scrollHeight; // Scroll to the bottom
                     }
@@ -251,6 +2099,39 @@
 
     </script>
     <style>
+        #logo {
+            display: block;
+            margin: 0 auto;
+            width: 200px;
+            height: auto;
+        }
+        #header {
+            text-align: center;
+            color: #fff;
+            font-size: 2em;
+            margin-top: 20px;
+        }
+        hr {
+            border: 0;
+            height: 1px;
+            background-color: #ccc;
+            margin: 20px auto;
+            width: 80%;
+        }
+        #log {
+            width: 95%;
+            min-height: 200px;
+            height: 200px;
+            margin-bottom: 20px;
+            resize: vertical;
+            overflow-y: auto;
+            background-color: #000;
+            color: #fff;
+            padding: 10px;
+            font-family: monospace;
+            margin-left: auto;
+            margin-right: auto;
+        }
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -278,7 +2159,6 @@
         p {
             color: #ccc;
             font-size: 0.9em;
-            max-width: 600px;
             margin-bottom: 0;
         }
         details {
