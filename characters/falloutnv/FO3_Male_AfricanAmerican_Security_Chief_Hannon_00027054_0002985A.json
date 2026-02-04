@@ -1,0 +1,85 @@
+{
+  "name": "Security Chief Hannon",
+  "url": "/wiki/Paul_Hannon_Sr.",
+  "dialogue_name": "Vault101Security01.txt",
+  "dialogue_url": "/wiki/Vault101Security01.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "00027054",
+  "ref_id": "0002985A",
+  "editor_id": "Vault101Security01",
+  "location": "",
+  "location_url": null,
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Vault 101 security",
+  "role": "Security Chief",
+  "detailed_location": "Vault 101",
+  "voice_actor": "Jeff Baker",
+  "special": {
+    "Strength": 1,
+    "Perception": 4,
+    "Endurance": 6,
+    "Charisma": 3,
+    "Intelligence": 3,
+    "Agility": 5,
+    "Luck": 4
+  },
+  "karma": "Evil (inEscape!)Neutral (Trouble on the Homefront)",
+  "voice_type": "MaleAdult01DefaultDC",
+  "geck_race": "AfricanAmerican",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Disgust 50",
+      "response_text": "Oh, look. The bad seed is back.{Cold hatred}Play soundFO3 SecurityChiefHannon TheBadSe…https://fallout.fandom.com/wiki/File:FO3_SecurityChiefHannon_TheBadSeed.oggnoicon",
+      "index": "1"
+    },
+    {
+      "topic": "MS16GeneralAboutRebels",
+      "topic_text": "Tell me about the rebels.",
+      "emotion": "Disgust 50",
+      "response_text": "More kids looking to get us all killed. Now it's up to security to keep them in line.Play soundFO3_HermanGomez_MoreKids.ogghttps://fallout.fandom.com/wiki/File:FO3_HermanGomez_MoreKids.oggnoicon",
+      "index": "2"
+    },
+    {
+      "topic": "MS16GeneralNightQuestion",
+      "topic_text": "What happened down here?",
+      "emotion": "Disgust 90",
+      "response_text": "After what happened to Vikki and my boy that night, your corpse should be strung up as a warning to anyone else thinks about heading outside.Play soundFo3_PaulHannon_AfterWhatHappened…https://fallout.fandom.com/wiki/File:Fo3_PaulHannon_AfterWhatHappened.oggnoicon",
+      "index": "3"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Anger 25",
+      "response_text": "Security check, people. Everything all right?{A little nasty}Play soundFO3 SecurityChiefHannon Security…https://fallout.fandom.com/wiki/File:FO3_SecurityChiefHannon_SecurityCheck.oggnoicon",
+      "index": "4"
+    },
+    {
+      "topic": "MS16Overseers1",
+      "topic_text": "MS16Overseers1",
+      "emotion": "Neutral 50",
+      "response_text": "Sir? It's the only world we've ever known. With a regrettable exception, I suppose.{A little uncertain how the Overseer will respond.}Play soundFO3 SecurityChiefHannon TheOnlyW…https://fallout.fandom.com/wiki/File:FO3_SecurityChiefHannon_TheOnlyWorld.oggnoicon",
+      "index": "11"
+    },
+    {
+      "topic": "MS16Overseers3",
+      "topic_text": "MS16Overseers3",
+      "emotion": "Anger 10",
+      "response_text": "We'll have the place back to normal in no time, sir. It'll just take some time to repair the damages he caused.Play soundFO3 SecurityChiefHannon BackToNo…https://fallout.fandom.com/wiki/File:FO3_SecurityChiefHannon_BackToNormal.oggnoicon",
+      "index": "13"
+    }
+  ],
+  "combat": [],
+  "description": "Paul Hannon Sr. is a 50 year-old Caucasian Male.\n\nAs the Security Chief of Vault 101, Paul Hannon Sr. maintains strict control over the vault's security operations. He takes his position very seriously, often to the detriment of the vault's residents. He is easily identifiable by his immaculate security uniform and authoritarian demeanor.\n\nPaul Hannon Sr.'s Personality: Aggressive, authoritarian, and rigid in his thinking. Hannon believes in strict adherence to rules and protocols, often enforcing them with unnecessary force. He longs for the military-style authority he can't have in the relative safety of Vault 101.\n\nPaul Hannon Sr.'s Backstory: Paul Hannon Sr. has been the Security Chief of Vault 101 for many years, having joined the vault's security force shortly after its establishment. He rose through the ranks due to his strict adherence to protocol and his aggressive approach to security. He married Vikki Hannon, and they had a son, Paul Hannon Jr., who grew up to become a security officer under his father's command. Hannon's authoritarian style has made him unpopular among many vault dwellers, but his position and the respect (or fear) he commands from his security force have kept him in power."
+}

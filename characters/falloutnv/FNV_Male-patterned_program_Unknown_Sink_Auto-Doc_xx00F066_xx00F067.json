@@ -1,0 +1,121 @@
+{
+  "name": "Sink Auto-Doc",
+  "url": "/wiki/Sink_Auto-Doc",
+  "dialogue_name": "NVDLC03SinkAutoDocTalker.txt",
+  "dialogue_url": "/wiki/NVDLC03SinkAutoDocTalker.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": true,
+  "can_be_enslaved": false,
+  "is_doctor": true,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "xx00F066",
+  "ref_id": "xx00F067",
+  "editor_id": "NVDLC03SinkAutoDocTalker",
+  "location": "The Sink",
+  "location_url": "/wiki/The_Sink",
+  "race": "Auto-DocComputer,Artificial personality",
+  "gender": "Male-patterned program",
+  "affiliation": "Mobius(formerly)Courier(optional)",
+  "role": "Auto-Doc",
+  "detailed_location": "Big MTThe Sink",
+  "voice_actor": "Jim Ward",
+  "special": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 2,
+    "Intelligence": 5,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "level": "1",
+  "misc_skills": [],
+  "karma": "Neutral",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "I trust matters regarding your brain were resolved to your satisfaction?",
+      "index": "1"
+    },
+    {
+      "topic": "NVDLC03DialogueHQBuddiesNVDLC03SinkAutoDocTalkerTopic000",
+      "topic_text": "I'd like to engage your services.",
+      "emotion": "Neutral 50",
+      "response_text": "And rightly so, I should think. All right, then, let me just fire up the old interface for you.",
+      "index": "12"
+    },
+    {
+      "topic": "NVDLC03DialogueHQBuddiesNVDLC03SinkAutoDocTalkerTopic001",
+      "topic_text": "I don't need anything right now.",
+      "emotion": "Neutral 50",
+      "response_text": "Well, I'll be right here if you change your mind.",
+      "index": "13"
+    },
+    {
+      "topic": "NVDLC03DialogueHQBuddiesNVDLC03SinkAutoDocTalkerTopic002",
+      "topic_text": "Can you do anything beyond healing me?",
+      "emotion": "Neutral 50",
+      "response_text": "Well, firstly I would say providing wholeness of the body is service enough, but if you must know, I'm also programmed with cosmetical subroutines.",
+      "index": "14"
+    },
+    {
+      "topic": "NVDLC03DialogueHQBuddiesNVDLC03SinkAutoDocTalkerTopic003",
+      "topic_text": "I'm ready, let's do it.",
+      "emotion": "Neutral 50",
+      "response_text": "All right. Just try to relax, this won't hurt - unless your sense of self is especially vulnerable.",
+      "index": "18"
+    },
+    {
+      "topic": "NVDLC03DialogueHQBuddiesNVDLC03SinkAutoDocTalkerTopic004",
+      "topic_text": "I'm feeling a little unwell in the head. Can you perform a psychiatric evaluation on me?",
+      "emotion": "Neutral 50",
+      "response_text": "Concerned about the state of your mind, are ya? Well, such things ain't my specialty, but I'm happy to tender my opinion as to your mental health.",
+      "index": "19"
+    },
+    {
+      "topic": "NVDLC03DialogueHQBuddiesNVDLC03SinkAutoDocTalkerTopic005",
+      "topic_text": "I found you some upgrade disks.",
+      "emotion": "Neutral 50",
+      "response_text": "Well, that'll do just fine.",
+      "index": "21"
+    },
+    {
+      "topic": "NVDLC03EndingSlideChipAutoDoc",
+      "topic_text": "NVDLC03EndingSlideChipAutoDoc",
+      "emotion": "Neutral 50",
+      "response_text": "{Narration}Auto-Doc, always gentle and methodical, kept sewing up the Courier in all the right places when the skin split open from repeated wear and tear.",
+      "index": "22"
+    },
+    {
+      "topic": "NVDLC03EndingSlideChipAutoDocY17",
+      "topic_text": "NVDLC03EndingSlideChipAutoDocY17",
+      "emotion": "Neutral 50",
+      "response_text": "{Narration}{Y-17 was discovered}In time, the Auto-Doc found a way to deactivate the Y-17 Trauma Harnesses, releasing the corpses they had held prisoner for almost 200 years.",
+      "index": "25"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "NVDLC03SinkAutoDocBarks",
+      "topic_text": "NVDLC03SinkAutoDocBarks",
+      "emotion": "Neutral 50",
+      "response_text": "{Snoring}Zzz...{talking in sleep}forceps, nurse! This man's got a severe case of shoe lung!",
+      "index": "26"
+    }
+  ],
+  "combat": [
+    {
+      "topic": "Attack",
+      "topic_text": "Attack",
+      "emotion": "Neutral 50",
+      "response_text": "Hey! Who turned out the lights?{Somewhat confused and scared. Spoken through one of the trauma suits. Wild wasteland line from Doctor Who.}",
+      "index": "32"
+    }
+  ],
+  "description": "Sink Auto-Doc is a 15 year-old Android Male-patterned program.\n\nA prototype medical robot with an advanced personality module, installed in The Sink at Big MT. Designed by Dr. Mobius before his departure from the Think Tank and subsequently disabled by Dr. Klein. The Auto-Doc specializes in surgical procedures, cosmetic modifications, and implant installations. It gained notoriety for successfully removing and preserving the Courier's brain, a procedure that would have normally resulted in a lobotomized subject.\n\nSink Auto-Doc's Personality: Analytical and methodical, with a detached but curious demeanor. The Auto-Doc approaches tasks with precision and efficiency, displaying a unique interest in medical anomalies and unusual cases. It maintains a professional demeanor but occasionally shows fascination with complex medical challenges.\n\nSink Auto-Doc's Backstory: Created by Dr. Mobius as a prototype medical unit with an advanced personality module, the Sink Auto-Doc was initially installed in The Sink, a research facility within Big MT. After Mobius's departure, Dr. Klein disabled all systems in The Sink and threw the modules off the balcony. The Auto-Doc's module ended up at the Y-17 medical facility before being recovered and returned to The Sink. It possesses the technical data from its groundbreaking surgical procedure on the Courier, including the successful extraction and preservation of a human brain, which could potentially lead to breakthroughs in brain transplantation."
+}

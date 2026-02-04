@@ -1,0 +1,188 @@
+{
+  "name": "Tabitha",
+  "url": "/wiki/Tabitha_(Fallout:_New_Vegas)",
+  "dialogue_name": "Tabitha.txt",
+  "dialogue_url": "/wiki/Tabitha.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000E60F1",
+  "ref_id": "000E61A2",
+  "editor_id": "Tabitha",
+  "location": "Broadcast building",
+  "location_url": "/wiki/Broadcast_building",
+  "race": "Super mutant(nightkin)",
+  "gender": "Female[Non-game 1]",
+  "affiliation": "Unity(formerly)State of Utobitha",
+  "role": "State of Utobitha leaderHost ofBlack Mountain Radio",
+  "detailed_location": "Broadcast building,Black Mountain",
+  "voice_actor": "Fred Tatasciore",
+  "special": {
+    "Strength": 9,
+    "Perception": 5,
+    "Endurance": 8,
+    "Charisma": 6,
+    "Intelligence": 3,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "level": "20",
+  "tag_skills": [],
+  "misc_skills": [
+    {
+      "Hit Points:": "550"
+    },
+    {
+      "Rad. Resist.:": "100%"
+    },
+    {
+      "Dam. Threshold:": "0"
+    }
+  ],
+  "karma": "Evil",
+  "topics": [
+    {
+      "topic": "BMTabithaCornersPlayer",
+      "topic_text": "BMTabithaCornersPlayer",
+      "emotion": "Neutral 50",
+      "response_text": "{Tabitha}R-Rhonda? Is that you?",
+      "index": "1"
+    },
+    {
+      "topic": "BMTabithaDishHutGetHim",
+      "topic_text": "BMTabithaDishHutGetHim",
+      "emotion": "Neutral 50",
+      "response_text": "There's an intruder in the dish hut! Get over there and kill whoever it is, you fools!",
+      "index": "2"
+    },
+    {
+      "topic": "BMTabithaDishHutRadioDumb",
+      "topic_text": "[Dumb] Uh... what?",
+      "emotion": "Neutral 50",
+      "response_text": "Why do I even bother? Go play with something shiny, dumb dumb.",
+      "index": "3"
+    },
+    {
+      "topic": "BMTabithaDishHutRadioFan",
+      "topic_text": "Aren't you the super mutant from the radio? I'm a huge fan.",
+      "emotion": "Neutral 50",
+      "response_text": "Why thank you! It's always gratifying to talk to one's fans. Hold on, I have something I need to do for a second.",
+      "index": "4"
+    },
+    {
+      "topic": "BMTabithaDishHutRadioSayNothing",
+      "topic_text": "<Say nothing.>",
+      "emotion": "Neutral 50",
+      "response_text": "Gah, stupid dumb dumbs have the attention span of a gnat.",
+      "index": "5"
+    },
+    {
+      "topic": "BMTabithaDishHutRadioSpeech",
+      "topic_text": "We no follow you no more! We follow Neil! He no call us dumb-dumbs!",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] I am supreme commander Best Friend Tabitha! Neil is nothing! You are all traitors! I sentence all dumb-dumbs to death!",
+      "index": "6"
+    },
+    {
+      "topic": "BMTabithaDishHutRadioStart",
+      "topic_text": "BMTabithaDishHutRadioStart",
+      "emotion": "Neutral 50",
+      "response_text": "You've interrupted my broadcast, dumb-dumb - so there had better be a good reason! What is it?",
+      "index": "12"
+    },
+    {
+      "topic": "BMTabithaRages",
+      "topic_text": "BMTabithaRages",
+      "emotion": "Neutral 50",
+      "response_text": "Intruder! I have foreseen your death!",
+      "index": "13"
+    },
+    {
+      "topic": "BMTabithaWhatNow",
+      "topic_text": "What will you do now?",
+      "emotion": "Neutral 50",
+      "response_text": "I don't know... it's been so long since I lost Rhonda, that I'm not sure...",
+      "index": "16"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "I... don't know how to thank you for bringing Rhonda back to me, stranger.",
+      "index": "17"
+    },
+    {
+      "topic": "VFreeformBlackMountainTabithaTopic000",
+      "topic_text": "Does this mean you're not going to kill me?",
+      "emotion": "Neutral 50",
+      "response_text": "{Laughs}No, of course not. I... don't know what I'm going to do now with Rhonda back...",
+      "index": "22"
+    },
+    {
+      "topic": "VFreeformBlackMountainTabithaTopic001",
+      "topic_text": "You're welcome.",
+      "emotion": "Neutral 50",
+      "response_text": "It's just... such a shock to see Rhonda up and about again. I'm not sure what to do now.",
+      "index": "23"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "BMTabithaRhondaReunion",
+      "topic_text": "BMTabithaRhondaReunion",
+      "emotion": "Neutral 50",
+      "response_text": "R- Rhonda? Is that you?",
+      "index": "24"
+    },
+    {
+      "topic": "BMTabithaYesRhonda",
+      "topic_text": "BMTabithaYesRhonda",
+      "emotion": "Neutral 50",
+      "response_text": "Yes, Rhonda.",
+      "index": "25"
+    }
+  ],
+  "combat": [
+    {
+      "topic": "Attack",
+      "topic_text": "Attack",
+      "emotion": "Neutral 50",
+      "response_text": "{Rhonda}Stay still while Best Friend Tabitha pounds you!",
+      "index": "26"
+    },
+    {
+      "topic": "Death",
+      "topic_text": "Death",
+      "emotion": "Neutral 50",
+      "response_text": "{Tabitha voice}I... am... supreme...",
+      "index": "30"
+    },
+    {
+      "topic": "FireExplosive",
+      "topic_text": "FireExplosive",
+      "emotion": "Neutral 50",
+      "response_text": "{Rhonda voice}This one's for all my listeners!",
+      "index": "31"
+    },
+    {
+      "topic": "Hit",
+      "topic_text": "Hit",
+      "emotion": "Neutral 50",
+      "response_text": "{Tabitha voice}Aah!",
+      "index": "32"
+    },
+    {
+      "topic": "PowerAttack",
+      "topic_text": "PowerAttack",
+      "emotion": "Neutral 50",
+      "response_text": "{Rhonda voice, playful}Here it comes!",
+      "index": "38"
+    }
+  ],
+  "description": "Tabitha is a 140 year-old Human (transformed) Female.\n\nTabitha is the nightkin leader of the State of Utobitha and the dedicated radio host of Black Mountain Radio in 2281. Once a member of the Master's Unity, she now leads a community of nightkin and super mutants from her broadcast tower at Black Mountain.\n\nTabitha's Personality: Paranoid, delusional, and fiercely anti-human. Tabitha is passionate about her radio broadcasts despite their poor reception among wastelanders. She is deeply attached to her deceased companion Mister Handy Rhonda and often speaks to it as if it were still functional. Her Stealth Boy-induced schizophrenia manifests as extreme paranoia and occasional violent outbursts.\n\nTabitha's Backstory: Originally a human before being transformed by the Forced Evolutionary Virus, Tabitha became a member of the Master's army during the Unity. After the Master's defeat, she found a damaged Mister Handy unit named Rhonda who became her constant companion. Together, they led other super mutants to Black Mountain, where they established a community. When conflicts arose between first-generation mutants led by Marcus and the nightkin, Marcus left with his followers to found Jacobstown in 2279, not before attempting to disable the radio equipment. With Rhonda damaged and in hibernation, Tabitha's broadcasts resumed after ghoul mechanic Raul Tejada repaired the transmitter, though not before being held captive and threatened with execution by Tabitha."
+}

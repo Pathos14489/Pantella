@@ -1,0 +1,203 @@
+{
+  "name": "Mr. Brotch",
+  "url": "/wiki/Edwin_Brotch",
+  "dialogue_name": "MrBrotch.txt",
+  "dialogue_url": "/wiki/MrBrotch.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "0001CFB7",
+  "ref_id": "00029077",
+  "editor_id": "MrBrotch",
+  "location": "",
+  "location_url": null,
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Vault 101",
+  "role": "School teacher",
+  "detailed_location": "Vault 101",
+  "voice_actor": "James Lewis",
+  "special": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 5,
+    "Intelligence": 5,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "level": "1",
+  "tag_skills": [
+    {
+      "Science:": "30"
+    },
+    {
+      "Small Guns:": "30"
+    },
+    {
+      "Unarmed:": "28"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Good",
+  "voice_type": "MaleUniqueBrotch",
+  "geck_race": "(",
+  "topics": [
+    {
+      "topic": "CG03BrotchA1",
+      "topic_text": "Wow! That's what I've always wanted to be. My dreams are finally coming true!",
+      "emotion": "Neutral 30",
+      "response_text": "Yes, um, it's refreshing to see such, ah, youthful enthusiasm.{he's very confused that you'd be so happy about the GOAT results}Play soundFO3 MisterBrotch RefreshingToSee…https://fallout.fandom.com/wiki/File:FO3_MisterBrotch_RefreshingToSee.oggnoicon",
+      "index": "1"
+    },
+    {
+      "topic": "CG03BrotchA2",
+      "topic_text": "Whatever. I just answered randomly. Is that how you got stuck with your job?",
+      "emotion": "Disgust 50",
+      "response_text": "Ha. Closer to reality than you might think.Play soundFO3 MisterBrotch CloserToReality…https://fallout.fandom.com/wiki/File:FO3_MisterBrotch_CloserToReality.oggnoicon",
+      "index": "4"
+    },
+    {
+      "topic": "CG03BrotchA3",
+      "topic_text": "That can't be right! The stupid test got it all wrong!",
+      "emotion": "Neutral 50",
+      "response_text": "Listen, I was just as obnoxious at your age. I didn't take the G.O.A.T. seriously and look where I ended up.Play soundFO3 MisterBrotch JustAsObnoxious…https://fallout.fandom.com/wiki/File:FO3_MisterBrotch_JustAsObnoxious.oggnoicon",
+      "index": "8"
+    },
+    {
+      "topic": "CG03BrotchStartA1",
+      "topic_text": "Ohh... I'm feeling kind of sick, Mister B. Guess I'll have to reschedule...",
+      "emotion": "Happy 15",
+      "response_text": "Didn't work on your dad either, did it?{dryly}Play soundFO3 MisterBrotch DidntWorkOnYour…https://fallout.fandom.com/wiki/File:FO3_MisterBrotch_DidntWorkOnYourDad.oggnoicon",
+      "index": "11"
+    },
+    {
+      "topic": "CG03BrotchStartA2",
+      "topic_text": "Come on. I don't really have to take this stupid test, do I?",
+      "emotion": "Happy 15",
+      "response_text": "Listen. I like your dad. I might even like you if I wasn't your teacher.{in a low voice}Play soundFO3 MisterBrotch ILikeYourDad.ogghttps://fallout.fandom.com/wiki/File:FO3_MisterBrotch_ILikeYourDad.oggnoicon",
+      "index": "13"
+    },
+    {
+      "topic": "CG03BrotchStartA3",
+      "topic_text": "Sure, I'm ready. I bet I'll ace it!",
+      "emotion": "Happy 25",
+      "response_text": "I'm sure you will. Especially since it's multiple choice with no wrong answers...{dryly}Play soundFO3 MisterBrotch ImSureYouWill.ogghttps://fallout.fandom.com/wiki/File:FO3_MisterBrotch_ImSureYouWill.oggnoicon",
+      "index": "15"
+    },
+    {
+      "topic": "CG03BrotchStartB1",
+      "topic_text": "Cool. Let me see the results and I'll fill it out myself.",
+      "emotion": "Neutral 15",
+      "response_text": "Well... all right. Here, take a look.{in a low voice}Play soundFO3 MisterBrotch TakeALook.ogghttps://fallout.fandom.com/wiki/File:FO3_MisterBrotch_TakeALook.oggnoicon",
+      "index": "17"
+    },
+    {
+      "topic": "CG03BrotchStartB2",
+      "topic_text": "The Overseer's bullshit makes my head spin. Can't you do it for me?",
+      "emotion": "Anger 20",
+      "response_text": "Watch your language.Play soundFO3 MisterBrotch WatchYourLangua…https://fallout.fandom.com/wiki/File:FO3_MisterBrotch_WatchYourLanguage.oggnoicon",
+      "index": "18"
+    },
+    {
+      "topic": "CG03BrotchStartB3",
+      "topic_text": "I think I'd rather just take the G.O.A.T. myself and take my chances.",
+      "emotion": "Surprise 50",
+      "response_text": "Good for you. Don't worry, you'll do fine. As soon as everyone's found a seat, we'll get started.{surprised}Play soundFO3 MisterBrotch GoodForYou.ogghttps://fallout.fandom.com/wiki/File:FO3_MisterBrotch_GoodForYou.oggnoicon",
+      "index": "21"
+    },
+    {
+      "topic": "CG03BrotchStartC1",
+      "topic_text": "I love using the computers and talking to my father's patients in the clinic.",
+      "emotion": "Neutral 15",
+      "response_text": "A budding science boy, eh? Done and... done. There. You're all set. If anyone asks, you took the G.O.A.T. during detention yesterday, okay?{in a low voice}Play soundFO3 MisterBrotch BuddingScienceB…https://fallout.fandom.com/wiki/File:FO3_MisterBrotch_BuddingScienceBoy.oggnoicon",
+      "index": "22"
+    },
+    {
+      "topic": "CG03BrotchStartC2",
+      "topic_text": "Well, I shoot my BB Gun any chance I get. I can fix that thing blindfolded, too.",
+      "emotion": "Surprise 15",
+      "response_text": "I'm sure I didn't just hear you admit to owning an unauthorized weapon. Let's just get this filled out... there. All set.{in a low voice}Play soundFO3 MisterBrotch DidntJustHear.ogghttps://fallout.fandom.com/wiki/File:FO3_MisterBrotch_DidntJustHear.oggnoicon",
+      "index": "23"
+    },
+    {
+      "topic": "CG03BrotchStartC3",
+      "topic_text": "Look. I like blowing stuff up. I just love that... \"kaboom\"! Ya know?",
+      "emotion": "Surprise 15",
+      "response_text": "Oooo-kay... I'm going to pretend I didn't hear that... Anyway, done and done. There. You're all set.{in a low voice}Play soundFO3 MisterBrotch GoingToPretend.ogghttps://fallout.fandom.com/wiki/File:FO3_MisterBrotch_GoingToPretend.oggnoicon",
+      "index": "25"
+    },
+    {
+      "topic": "CG03BrotchStartC4",
+      "topic_text": "Mr. B, if I told you what my \"interests\" are, you’d have me locked up.",
+      "emotion": "Happy 15",
+      "response_text": "I may know more about your extracurricular activities than you think. But not officially, of course. Officially, I'm completely oblivious.{in a low voice}Play soundFO3 MisterBrotch MayKnowMore.ogghttps://fallout.fandom.com/wiki/File:FO3_MisterBrotch_MayKnowMore.oggnoicon",
+      "index": "27"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Surprise 30",
+      "response_text": "Surely you have someplace better to be than hanging around my classroom?Play soundFO3 MisterBrotch SomeplaceBetter…https://fallout.fandom.com/wiki/File:FO3_MisterBrotch_SomeplaceBetterToBe.oggnoicon",
+      "index": "29"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "CG03BrotchSpeech",
+      "topic_text": "CG03BrotchSpeech",
+      "emotion": "Neutral 50",
+      "response_text": "Well, now that everyone has managed to find the classroom, we can finally get started.Play soundFindtheclassroom.ogghttps://fallout.fandom.com/wiki/File:Findtheclassroom.oggnoicon",
+      "index": "53"
+    },
+    {
+      "topic": "CG03DemoBrotchHello",
+      "topic_text": "CG03DemoBrotchHello",
+      "emotion": "Neutral 50",
+      "response_text": "You too, missy. Time for the G.O.A.T. Find a seat and wait for instructions.Play soundFO3 MisterBrotch YouTooMissy.ogghttps://fallout.fandom.com/wiki/File:FO3_MisterBrotch_YouTooMissy.oggnoicon",
+      "index": "79"
+    },
+    {
+      "topic": "CG03FreddieBrotchConv",
+      "topic_text": "CG03FreddieBrotchConv",
+      "emotion": "Anger 50",
+      "response_text": "And if your friends decided to jump into the reactor, would you join them? Get your posterior in a chair immediately.Play soundFO3 MisterBrotch IfYourFriendsDe…https://fallout.fandom.com/wiki/File:FO3_MisterBrotch_IfYourFriendsDecided.oggnoicon",
+      "index": "81"
+    },
+    {
+      "topic": "CG03TurnInTestTopic",
+      "topic_text": "CG03TurnInTestTopic",
+      "emotion": "Happy 50",
+      "response_text": "Nothing for you to worry about, Miss Almodovar. Let's see... Very well done. Looks like it's the supervisory track for you.Play soundFO3 MisterBrotch NothingToWorryA…https://fallout.fandom.com/wiki/File:FO3_MisterBrotch_NothingToWorryAbout.oggnoicon",
+      "index": "82"
+    },
+    {
+      "topic": "GOODBYE",
+      "topic_text": "I have to go now.",
+      "emotion": "Anger 75",
+      "response_text": "I'll expect to see you in class, Freddie. No excuses. Run along now, son.Play soundFO3 MisterBrotch ExpectToSeeYou.ogghttps://fallout.fandom.com/wiki/File:FO3_MisterBrotch_ExpectToSeeYou.oggnoicon",
+      "index": "93"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Neutral 100",
+      "response_text": "Go ahead and take a seat so we can start.Play soundFO3 MisterBrotch TakeASeat.ogghttps://fallout.fandom.com/wiki/File:FO3_MisterBrotch_TakeASeat.oggnoicon",
+      "index": "94"
+    },
+    {
+      "topic": "IdleChatter",
+      "topic_text": "Idle Chatter",
+      "emotion": "Neutral 50",
+      "response_text": "Let's go people. The Overseer's patience is... limited.Play soundFO3 MisterBrotch LetsGoPeople.ogghttps://fallout.fandom.com/wiki/File:FO3_MisterBrotch_LetsGoPeople.oggnoicon",
+      "index": "98"
+    }
+  ],
+  "combat": [],
+  "description": "Edwin Brotch is a 50 year-old Caucasian Male.\n\nEdwin Brotch is a lifelong resident of Vault 101 and the current schoolteacher, having inherited the position from his father and grandfather. He is dedicated to educating the vault's children and upholding the family tradition that dates back to the vault's initial sealing.\n\nEdwin Brotch's Personality: Dedicated, responsible, and traditional. Mr. Brotch takes his role as a teacher seriously and feels a deep obligation to maintain his family's legacy. He is concerned about the future of the teaching position given his lack of children to carry on the tradition.\n\nEdwin Brotch's Backstory: Edwin Brotch was born and raised in Vault 101, following in the footsteps of his father and grandfather before him who served as the vault's schoolteachers. The Brotch family has held this position since Vault 101's residents first entered the vault over a century ago. Edwin has devoted his life to educating the children of Vault 101, instilling in them knowledge of the pre-War world and essential skills for survival. Despite his dedication to his work, he has no children of his own, leading to growing concern about who might continue the family tradition after him."
+}

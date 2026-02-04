@@ -1,0 +1,85 @@
+{
+  "name": "Susie Mack",
+  "url": "/wiki/Susie_Mack",
+  "dialogue_name": "SusieMack.txt",
+  "dialogue_url": "/wiki/SusieMack.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "0004E895",
+  "ref_id": "00042E76",
+  "editor_id": "SusieMack",
+  "location": "",
+  "location_url": null,
+  "race": "Human",
+  "gender": "Female",
+  "affiliation": "Vault 101",
+  "role": "Vault resident",
+  "detailed_location": "Vault 101",
+  "voice_actor": "Jan Johns(Future Imperfect)Karen Carbone(Trouble on the Homefront)",
+  "special": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 5,
+    "Intelligence": 5,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "level": "1",
+  "misc_skills": [
+    {
+      "Hit Points:": "30"
+    },
+    {
+      "Critical Chance:": "5%"
+    },
+    {
+      "Unarmed Dam.:": "0.75"
+    },
+    {
+      "Poison Resist.:": "20%"
+    },
+    {
+      "Rad. Resist.:": "8%"
+    },
+    {
+      "Carry Weight:": "200"
+    }
+  ],
+  "karma": "Good",
+  "voice_type": "FemaleAdult02FemaleAdult04",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 100",
+      "response_text": "Shh!{she's taking the test}Play soundFO3 SusieMack Shh.ogghttps://fallout.fandom.com/wiki/File:FO3_SusieMack_Shh.oggnoicon",
+      "index": "1"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "CG03FreddieSusieConv",
+      "topic_text": "CG03FreddieSusieConv",
+      "emotion": "Neutral 50",
+      "response_text": "Great. Good luck on the G.O.A.T.Play soundFO3 SusieMack GoodLuckOnTheGOAT.ogghttps://fallout.fandom.com/wiki/File:FO3_SusieMack_GoodLuckOnTheGOAT.oggnoicon",
+      "index": "5"
+    },
+    {
+      "topic": "CG03TurnInTestTopic",
+      "topic_text": "CG03TurnInTestTopic",
+      "emotion": "Disgust 25",
+      "response_text": "Here. What's the stupid test say I'm going to be doing for the rest of my life?{Susie is a bit of a ball-breaker}Play soundFO3 SusieMack StupidTestSay.ogghttps://fallout.fandom.com/wiki/File:FO3_SusieMack_StupidTestSay.oggnoicon",
+      "index": "9"
+    }
+  ],
+  "combat": [],
+  "description": "Susie Mack is a 11 year-old Caucasian Female.\n\nA young resident of Vault 101, known for her fiery personality and secret crush on Butch DeLoria. She's the youngest child of the Mack family and has a reputation for not tolerating teasing, especially from the Tunnel Snakes.\n\nSusie Mack's Personality: Fiery and strong-willed for her age, with a hidden soft spot for Butch. She can be arrogant and competitive, particularly when it comes to academic performance like the G.O.A.T. test. Despite her tough exterior, she has a good heart and shows signs of maturity as she grows older.\n\nSusie Mack's Backstory: Born and raised in Vault 101, Susie is the youngest child of Allen and Gloria Mack, with older brothers Stevie and Wally. Growing up in the isolated vault community, she developed a strong dislike for the Tunnel Snakes gang, particularly their leader Butch DeLoria, despite harboring a secret crush on him. She's known for standing up for herself and not backing down from confrontations, which has earned her a reputation among her peers."
+}

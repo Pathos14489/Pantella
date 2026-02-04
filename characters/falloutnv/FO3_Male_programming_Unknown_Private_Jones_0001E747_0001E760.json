@@ -1,0 +1,178 @@
+{
+  "name": "Private Jones",
+  "url": "/wiki/Jones_(Fallout_3)",
+  "dialogue_name": "RCPrivateJones.txt",
+  "dialogue_url": "/wiki/RCPrivateJones.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "0001E747",
+  "ref_id": "0001E760",
+  "editor_id": "RCPrivateJones",
+  "location": "Bridge tower",
+  "location_url": "/wiki/Bridge_tower",
+  "race": "Mister Gutsy",
+  "gender": "Male programming",
+  "affiliation": "Rivet City security force",
+  "role": "Armory guard",
+  "detailed_location": "Bridge tower,Rivet City",
+  "voice_actor": "Jeff Baker",
+  "special": {
+    "Strength": 5,
+    "Perception": 6,
+    "Endurance": 5,
+    "Charisma": 5,
+    "Intelligence": 5,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "level": "9",
+  "misc_skills": [],
+  "karma": "Neutral",
+  "voice_type": "RobotMisterGutsyDC",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "Sir, yes sir! Private Jones reporting!{Shouted like a marine.}",
+      "index": "1"
+    },
+    {
+      "topic": "RCPrivateJoneEmergency",
+      "topic_text": "Private, there's a security emergency on the flight deck! <Lie>",
+      "emotion": "Neutral 50",
+      "response_text": "Sir! This slag heap appreciates the intel. Moving to secure the flight deck, Sir!{Shouted like a marine.}",
+      "index": "3"
+    },
+    {
+      "topic": "RCPrivateJonesStayOut",
+      "topic_text": "At ease, private. I'm here to inspect the armory.",
+      "emotion": "Neutral 50",
+      "response_text": "Sir, you are not authorized to enter the armory. Sir!{Shouted like a marine.}",
+      "index": "4"
+    },
+    {
+      "topic": "RCPrivateJonesWhoAreYou",
+      "topic_text": "So what's your story, slag heap?",
+      "emotion": "Neutral 50",
+      "response_text": "Sir, this slag heap is guarding the armory. Sir!{Shouted like a marine.}",
+      "index": "6"
+    },
+    {
+      "topic": "SpeechChallengeFailure",
+      "topic_text": "SpeechChallengeFailure",
+      "emotion": "Neutral 50",
+      "response_text": "Sir! That's a really stupid idea, sir!{shouted like a marine.}",
+      "index": "7"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Neutral 100",
+      "response_text": "This area is off limits to civilians.",
+      "index": "8"
+    },
+    {
+      "topic": "MS14Suit",
+      "topic_text": "MS14SuitHead",
+      "emotion": "Anger 50",
+      "response_text": "Pansy! Take a shot of vitamin M and keep fighting!{Spoken like a marine drill sergeant}",
+      "index": "12"
+    },
+    {
+      "topic": "MS14SuitCombat",
+      "topic_text": "MS14SuitCombat",
+      "emotion": "Anger 50",
+      "response_text": "Gear up, soldier!",
+      "index": "15"
+    },
+    {
+      "topic": "MS14SuitEmpty",
+      "topic_text": "MS14SuitEmpty",
+      "emotion": "Anger 50",
+      "response_text": "Head wound! Too bad you're out of morhpine.{Spoken like a marine drill sergeant}",
+      "index": "18"
+    },
+    {
+      "topic": "MS14SuitStart",
+      "topic_text": "MS14SuitStart",
+      "emotion": "Anger 50",
+      "response_text": "Listen up you god-damn puke! You are now wearing prototype medic power armor. You take care of me, and I'll take care of you.{Shouted like a marine drill sergeant.}",
+      "index": "23"
+    },
+    {
+      "topic": "RCGoodbye",
+      "topic_text": "RCGoodbye",
+      "emotion": "Neutral 50",
+      "response_text": "Sir! Yes, Sir!{Shouted like a marine.}",
+      "index": "26"
+    }
+  ],
+  "combat": [
+    {
+      "topic": "AcceptYield",
+      "topic_text": "AcceptYield",
+      "emotion": "Anger 50",
+      "response_text": "Do that again and I'll put my foot so far up your ass you'll cough up boot polish!",
+      "index": "27"
+    },
+    {
+      "topic": "Assault",
+      "topic_text": "Assault",
+      "emotion": "Anger 50",
+      "response_text": "What is your major malfunction, maggot?",
+      "index": "28"
+    },
+    {
+      "topic": "Attack",
+      "topic_text": "Attack",
+      "emotion": "Anger 50",
+      "response_text": "Eat hot lead, you commie bastard!",
+      "index": "30"
+    },
+    {
+      "topic": "Death",
+      "topic_text": "Death",
+      "emotion": "Anger 50",
+      "response_text": "Tell my mama I've done my best.",
+      "index": "48"
+    },
+    {
+      "topic": "GuardTrespass",
+      "topic_text": "GuardTrespass",
+      "emotion": "Neutral 50",
+      "response_text": "You had better remove yourself from this area before I am forced to declare you an enemy of the U.S. of A.",
+      "index": "51"
+    },
+    {
+      "topic": "Murder",
+      "topic_text": "Murder",
+      "emotion": "Anger 50",
+      "response_text": "You are the lowest form of commie scumbag I've ever had the misfortune to lay eyes on!",
+      "index": "57"
+    },
+    {
+      "topic": "Pickpocket",
+      "topic_text": "Pickpocket",
+      "emotion": "Anger 50",
+      "response_text": "Please tell me that you did not just do what I think you did!",
+      "index": "60"
+    },
+    {
+      "topic": "Steal",
+      "topic_text": "Steal",
+      "emotion": "Anger 50",
+      "response_text": "I thought I had seen every species of moronic petty bullshit, but you've just topped the list. Congratulations.",
+      "index": "61"
+    }
+  ],
+  "description": "Private Jones is a 100 year-old Robotic Male.\n\nA pre-War Mister Gutsy robot currently serving as a guard in Rivet City's Bridge tower. Jones has a somewhat battered appearance with visible scratches and dents on his metallic chassis. His optical sensors flicker occasionally, and he moves with a slight mechanical stutter. Despite being restored to functionality by Seagrave Holmes, Jones shows clear signs of his age and previous damage.\n\nPrivate Jones's Personality: Confused but dutiful. Private Jones tries to follow his programming as a sentry but often gets distracted by his surroundings. He occasionally references pre-War military protocols that no longer apply. While loyal to Rivet City and Harkness, his reliability is questionable due to his damaged memory banks.\n\nPrivate Jones's Backstory: Private Jones was manufactured before the Great War and served as a military robot. When the bombs fell in 2077, he was disabled and left in the ruins. Decades later, he was discovered by Seagrave Holmes of Rivet City, who salvaged and repaired him. Holmes managed to restore most of his original programming, though some damage remained. Harkness, the security chief of Rivet City, assigned Jones to guard duty in the Bridge tower, though his effectiveness as a sentry is limited."
+}

@@ -1,0 +1,215 @@
+{
+  "name": "Deputy Steel",
+  "url": "/wiki/Deputy_Steel",
+  "dialogue_name": "DeputySteel.txt",
+  "dialogue_url": "/wiki/DeputySteel.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "0001D76F",
+  "ref_id": "00044CCC",
+  "editor_id": "DeputySteel",
+  "location": "Megaton armory",
+  "location_url": "/wiki/Megaton_armory",
+  "race": "Mister Gutsy",
+  "gender": "Male programming",
+  "affiliation": "Tinker Joe(formerly)Lucas Simms",
+  "role": "Armory guard",
+  "detailed_location": "Megaton armory",
+  "voice_actor": "Jeff Baker",
+  "special": {
+    "Strength": 5,
+    "Perception": 6,
+    "Endurance": 5,
+    "Charisma": 5,
+    "Intelligence": 5,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "misc_skills": [
+    {
+      "Hit Points:": "350"
+    },
+    {
+      "Poison Resist.:": "20%"
+    },
+    {
+      "Rad. Resist.:": "8%"
+    }
+  ],
+  "karma": "Neutral",
+  "voice_type": "RobotMisterGutsyDC",
+  "topics": [
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Happy 50",
+      "response_text": "Another glorious day in this man's army!",
+      "index": "1"
+    },
+    {
+      "topic": "MS14Suit",
+      "topic_text": "MS14SuitHead",
+      "emotion": "Anger 50",
+      "response_text": "Pansy! Take a shot of vitamin M and keep fighting!{Spoken like a marine drill sergeant}",
+      "index": "2"
+    },
+    {
+      "topic": "MS14SuitCombat",
+      "topic_text": "MS14SuitCombat",
+      "emotion": "Anger 50",
+      "response_text": "Gear up, soldier!",
+      "index": "5"
+    },
+    {
+      "topic": "MS14SuitEmpty",
+      "topic_text": "MS14SuitEmpty",
+      "emotion": "Anger 50",
+      "response_text": "Head wound! Too bad you're out of morhpine.{Spoken like a marine drill sergeant}",
+      "index": "8"
+    },
+    {
+      "topic": "MS14SuitStart",
+      "topic_text": "MS14SuitStart",
+      "emotion": "Anger 50",
+      "response_text": "Listen up you god-damn puke! You are now wearing prototype medic power armor. You take care of me, and I'll take care of you.{Shouted like a marine drill sergeant.}",
+      "index": "13"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "AcceptYield",
+      "topic_text": "AcceptYield",
+      "emotion": "Anger 50",
+      "response_text": "Do that again and I'll put my foot so far up your ass you'll cough up boot polish!",
+      "index": "16"
+    },
+    {
+      "topic": "Assault",
+      "topic_text": "Assault",
+      "emotion": "Anger 50",
+      "response_text": "What is your major malfunction, maggot?",
+      "index": "17"
+    },
+    {
+      "topic": "Attack",
+      "topic_text": "Attack",
+      "emotion": "Anger 50",
+      "response_text": "Eat hot lead, you commie bastard!",
+      "index": "19"
+    },
+    {
+      "topic": "Death",
+      "topic_text": "Death",
+      "emotion": "Anger 50",
+      "response_text": "Tell my mama I've done my best.",
+      "index": "37"
+    },
+    {
+      "topic": "GuardTrespass",
+      "topic_text": "GuardTrespass",
+      "emotion": "Neutral 50",
+      "response_text": "You had better remove yourself from this area before I am forced to declare you an enemy of the U.S. of A.",
+      "index": "40"
+    },
+    {
+      "topic": "Murder",
+      "topic_text": "Murder",
+      "emotion": "Anger 50",
+      "response_text": "You are the lowest form of commie scumbag I've ever had the misfortune to lay eyes on!",
+      "index": "46"
+    },
+    {
+      "topic": "Pickpocket",
+      "topic_text": "Pickpocket",
+      "emotion": "Anger 50",
+      "response_text": "Please tell me that you did not just do what I think you did!",
+      "index": "49"
+    },
+    {
+      "topic": "Steal",
+      "topic_text": "Steal",
+      "emotion": "Anger 50",
+      "response_text": "I thought I had seen every species of moronic petty bullshit, but you've just topped the list. Congratulations.",
+      "index": "50"
+    }
+  ],
+  "combat": [
+    {
+      "topic": "AlertIdle",
+      "topic_text": "AlertIdle",
+      "emotion": "Disgust 50",
+      "response_text": "Are you afraid of me? You should be because I'm going to kick your ass when I find you!",
+      "index": "53"
+    },
+    {
+      "topic": "AlertToCombat",
+      "topic_text": "AlertToCombat",
+      "emotion": "Disgust 50",
+      "response_text": "You're gonna learn how Uncle Sam deals with commie maggots!",
+      "index": "59"
+    },
+    {
+      "topic": "AlertToNormal",
+      "topic_text": "AlertToNormal",
+      "emotion": "Anger 50",
+      "response_text": "Another glorious day in the U.S. army.",
+      "index": "65"
+    },
+    {
+      "topic": "CombatToLost",
+      "topic_text": "CombatToLost",
+      "emotion": "Anger 50",
+      "response_text": "Somebody find me something to shoot at!",
+      "index": "68"
+    },
+    {
+      "topic": "CombatToNormal",
+      "topic_text": "CombatToNormal",
+      "emotion": "Anger 50",
+      "response_text": "That's how we do things in the U.S. army! Hoo-ah!",
+      "index": "71"
+    },
+    {
+      "topic": "LostIdle",
+      "topic_text": "LostIdle",
+      "emotion": "Anger 50",
+      "response_text": "You better run, you commie-loving bastard!",
+      "index": "74"
+    },
+    {
+      "topic": "LostToCombat",
+      "topic_text": "LostToCombat",
+      "emotion": "Happy 50",
+      "response_text": "You cannot hide from me, you commie maggot!",
+      "index": "77"
+    },
+    {
+      "topic": "LostToNormal",
+      "topic_text": "LostToNormal",
+      "emotion": "Happy 50",
+      "response_text": "Typical chickenshit commie maneuver.",
+      "index": "80"
+    },
+    {
+      "topic": "NormalToAlert",
+      "topic_text": "NormalToAlert",
+      "emotion": "Happy 50",
+      "response_text": "Is that someone who needs me to kick their ass?",
+      "index": "83"
+    },
+    {
+      "topic": "NormalToCombat",
+      "topic_text": "StartCombat",
+      "emotion": "Happy 50",
+      "response_text": "Ready to die for your country, you commie son of a bitch?",
+      "index": "86"
+    }
+  ],
+  "description": "Deputy Steel is a 12 year-old Robot Male.\n\nDeputy Steel is a Mister Gutsy unit assigned to guard the armory in Megaton. Though originally purchased from Tinker Joe, it now operates under the authority of Sheriff Lucas Simms.\n\nDeputy Steel's Personality: Deputy Steel is programmed to be dutiful and vigilant, adhering strictly to its programming as a security robot. It is formal and authoritative in its speech, often quoting military phrases. It has a strong sense of duty and will not hesitate to use force if it perceives a threat.\n\nDeputy Steel's Backstory: Deputy Steel was originally purchased from the robotic merchant Tinker Joe by the residents of Megaton to serve as additional security for the town's armory. Over time, it has become integrated into the town's security apparatus, operating under the direct supervision of Sheriff Lucas Simms. Despite being a machine, Deputy Steel has developed a reputation for its unwavering dedication to its duties."
+}

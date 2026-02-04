@@ -1,0 +1,219 @@
+{
+  "name": "Lieutenant Gorobets¹",
+  "url": "/wiki/Gorobets",
+  "dialogue_name": "1ELieutenantGorobets.txt",
+  "dialogue_url": "/wiki/1ELieutenantGorobets.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000F56FE",
+  "ref_id": "000F5711",
+  "editor_id": "1ELieutenantGorobets",
+  "location": "Camp McCarran",
+  "location_url": "/wiki/Camp_McCarran",
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "NCR ArmyFirst Recon, Alpha Team",
+  "role": "Officer",
+  "detailed_location": "Camp McCarranCamp Forlorn Hope(optional)",
+  "voice_actor": "Liam O'Brien",
+  "special": {
+    "Strength": 6,
+    "Perception": 8,
+    "Endurance": 6,
+    "Charisma": 6,
+    "Intelligence": 8,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "mod_special_values": {
+    "Strength": 6,
+    "Perception": 9,
+    "Endurance": 6,
+    "Charisma": 6,
+    "Intelligence": 8,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "level": "12",
+  "tag_skills": [
+    {
+      "Guns:": "79"
+    },
+    {
+      "Melee Weap.:": "81"
+    },
+    {
+      "Unarmed:": "77"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Neutral",
+  "voice_type": "MaleAdult05",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "I hear you killed Driver Nephi. My team would've liked to get a shot at him... but we're still glad he's dead.",
+      "index": "1"
+    },
+    {
+      "topic": "VFreeformMcCarran31ELieutenantGorobetsTopic000",
+      "topic_text": "What can you tell me about Driver Nephi?",
+      "emotion": "Neutral 50",
+      "response_text": "Not enough. We've been trying to put a bullet in him for a few weeks. He's strong as a brahmin bull, and he's fast.{player asked how much he knows about a bad guy}",
+      "index": "9"
+    },
+    {
+      "topic": "VFreeformMcCarran31ELieutenantGorobetsTopic001",
+      "topic_text": "I'm going to need your help.",
+      "emotion": "Neutral 50",
+      "response_text": "You've got it.{player asked for his help}",
+      "index": "12"
+    },
+    {
+      "topic": "VFreeformMcCarran31ELieutenantGorobetsTopic002",
+      "topic_text": "How good is your squad?",
+      "emotion": "Neutral 50",
+      "response_text": "I've been sniping since I was old enough to walk. Lot of us sharpshooters get recruited off the farms and ranches out west. Comes natural to us.",
+      "index": "13"
+    },
+    {
+      "topic": "VFreeformMcCarran31ELieutenantGorobetsTopic003",
+      "topic_text": "What's wrong with Betsy?",
+      "emotion": "Neutral 50",
+      "response_text": "Cook-Cook, one of the fiends, ambushed her and Ten of Spades. They both managed to escape, but not before Cook-Cook raped her.",
+      "index": "16"
+    },
+    {
+      "topic": "VFreeformMcCarran31ELieutenantGorobetsTopic004",
+      "topic_text": "I need your help to kill him.",
+      "emotion": "Neutral 50",
+      "response_text": "What did you have in mind? You thinking of luring him into range of my snipers?",
+      "index": "19"
+    },
+    {
+      "topic": "VFreeformMcCarran31ELieutenantGorobetsTopic005",
+      "topic_text": "Exactly. I'll be the bait.",
+      "emotion": "Neutral 50",
+      "response_text": "It's one hell of a risk you'd be taking. But if you're willing... we'll do everything we can to keep you alive.",
+      "index": "20"
+    },
+    {
+      "topic": "VFreeformMcCarran31ELieutenantGorobetsTopic006",
+      "topic_text": "Do you think that will work?",
+      "emotion": "Neutral 50",
+      "response_text": "Can we hit him? Damn straight, we can. Question is whether he kills you before we get a clear shot.",
+      "index": "21"
+    },
+    {
+      "topic": "VFreeformMcCarran31ELieutenantGorobetsTopic007",
+      "topic_text": "I'd rather just bring your people with me.",
+      "emotion": "Neutral 50",
+      "response_text": "No, I won't risk my team in the open. They're deadly at range, but they've got no advantage hand-to-hand.",
+      "index": "22"
+    },
+    {
+      "topic": "VFreeformMcCarran31ELieutenantGorobetsTopic008",
+      "topic_text": "All right. I'll do it.",
+      "emotion": "Neutral 50",
+      "response_text": "Listen. My team has a debt to settle with Nephi. We've seen too many of our boys get brained by that golf club of his.",
+      "index": "25"
+    },
+    {
+      "topic": "VFreeformMcCarran31ELieutenantGorobetsTopic010",
+      "topic_text": "Forget it. I don't like the odds.",
+      "emotion": "Neutral 50",
+      "response_text": "Your call. Even if you were one of my troopers, I wouldn't force you to take a risk like that.",
+      "index": "29"
+    },
+    {
+      "topic": "VFreeformMcCarran31ELieutenantGorobetsTopic011",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "{military dismissal, said out of habit}Carry on.",
+      "index": "31"
+    },
+    {
+      "topic": "VFreeformMcCarran31ELieutenantGorobetsTopic012",
+      "topic_text": "Major Dhatri said I should talk to you about taking down Driver Nephi.",
+      "emotion": "Neutral 50",
+      "response_text": "Whatever you need, we'll make sure it gets done.",
+      "index": "32"
+    },
+    {
+      "topic": "VFreeformMcCarran31ELieutenantGorobetsTopic013",
+      "topic_text": "Never mind.",
+      "emotion": "Neutral 50",
+      "response_text": "We're at your service, if you need us. Until Driver Nephi is dead. Major's orders.",
+      "index": "34"
+    },
+    {
+      "topic": "VFreeformMcCarran31ELieutenantGorobetsTopic014",
+      "topic_text": "What happened to Sterling?",
+      "emotion": "Neutral 50",
+      "response_text": "Corporal Sterling was an NCR ranger until he was captured by the Legion. They tortured him pretty badly.",
+      "index": "35"
+    },
+    {
+      "topic": "VFreeformMcCarran31ELieutenantGorobetsTopic015",
+      "topic_text": "I can talk to Betsy about getting medical help for her trauma, if you want.",
+      "emotion": "Neutral 50",
+      "response_text": "I'd appreciate it. As her{see-OH, commanding officer}CO, I could order her to get help, but I'd have her agree with the idea.",
+      "index": "37"
+    },
+    {
+      "topic": "VFreeformMcCarran31ELieutenantGorobetsTopic016",
+      "topic_text": "Tell me about First Recon.",
+      "emotion": "Neutral 50",
+      "response_text": "We're the finest sniper outfit in the whole NCR. If you need a bullet put into a target's eye from 800 yards away, you call us.",
+      "index": "39"
+    },
+    {
+      "topic": "VFreeformMcCarran31ELieutenantGorobetsTopic017",
+      "topic_text": "Does the NCR usually offer bounties on people?",
+      "emotion": "Neutral 50",
+      "response_text": "If they've proven hard to kill, yes. Whatever it takes to get the job done, even if means hiring help from outside the military.",
+      "index": "42"
+    },
+    {
+      "topic": "VFreeformMcCarran31ELieutenantGorobetsTopic018",
+      "topic_text": "I convinced Corporal Betsy to get help from Doctor Usanagi.",
+      "emotion": "Neutral 50",
+      "response_text": "Yes, the others in the squad said you'd come to them about her. It's a start, but let's hope she sticks with her treatment as long as it's necessary.",
+      "index": "43"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "{out of habit - military dismissal}Carry on.",
+      "index": "50"
+    },
+    {
+      "topic": "GorobetsGetIntoPosition",
+      "topic_text": "GorobetsGetIntoPosition",
+      "emotion": "Neutral 50",
+      "response_text": "We're here. First Recon, get into your positions and wait for the target.",
+      "index": "51"
+    },
+    {
+      "topic": "GorobetsMoveOut",
+      "topic_text": "GorobetsMoveOut",
+      "emotion": "Neutral 50",
+      "response_text": "Get your rifles and move out, First Recon. We've got a Fiend to kill.",
+      "index": "52"
+    }
+  ],
+  "combat": [],
+  "description": "Lieutenant Gorobets is a 29 year-old Caucasian Male.\n\nA disciplined NCR officer of Ukrainian descent, coordinating sniper operations at Camp McCarran to contain Fiend activity. He carries himself with military precision, showing visible frustration at the lack of volunteers for high-risk missions targeting Fiend leaders.\n\nLieutenant Gorobets's Personality: Disciplined, strategic, and duty-bound. Gorobets is a no-nonsense military professional who values results and is increasingly frustrated by what he perceives as cowardice among potential recruits. He maintains a professional demeanor but can be sharp-tongued when discussing those who avoid dangerous assignments.\n\nLieutenant Gorobets's Backstory: Born to descendants of Ukrainian immigrants who settled in California before the Great War, Gorobets grew up with stories of his family's homeland and the value of hard work. He joined the NCR military as a young man, quickly distinguishing himself in marksmanship and tactical planning. After serving with distinction in various postings, he was assigned to First Recon Alpha Team and eventually promoted to lieutenant. Now stationed at Camp McCarran, he's responsible for coordinating the defense against Fiend incursions, a task that has grown increasingly difficult as volunteers for dangerous operations become scarce."
+}

@@ -38,7 +38,7 @@ class CharacterDB(BaseCharacterDB):
         else: # TODO: Add a proper check for Pantella Format, and setup a BaseModel for character objects
             formatted_character = {
                 "bio_url": character["url"] if "url" in character else "",
-                "bio": "\n".join(character["descriptions"]) if "descriptions" in character else "",
+                "bio": "\n".join(character["descriptions"]) if "descriptions" in character else character["bio"] if "bio" in character else character["description"] if "description" in character else "",
                 "name": character["name"] if "name" in character and character["name"] != "" and str(character["name"]).lower() != "nan" else "",
                 "voice_model": character["voice_type"] if "voice_type" in character else "",
                 "voice_folder": character["voice_type"] if "voice_type" in character else "",

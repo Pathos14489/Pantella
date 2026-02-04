@@ -1,0 +1,230 @@
+{
+  "name": "Neil",
+  "url": "/wiki/Neil_(Fallout:_New_Vegas)",
+  "dialogue_name": "BMNeil.txt",
+  "dialogue_url": "/wiki/BMNeil.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000E60F0",
+  "ref_id": "000E61A3",
+  "editor_id": "BMNeil",
+  "location": "Neil's shack",
+  "location_url": "/wiki/Neil%27s_shack",
+  "race": "Super mutant(1st gen)",
+  "affiliation": "Unity(formerly)Jacobstown",
+  "role": "SpyTemporary follower",
+  "detailed_location": "Neil's shack",
+  "voice_actor": "John Eric Bentley",
+  "special": {
+    "Strength": 9,
+    "Perception": 3,
+    "Endurance": 8,
+    "Charisma": 5,
+    "Intelligence": 3,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "level": "10→30",
+  "tag_skills": [],
+  "misc_skills": [
+    {
+      "Hit Points:": "300→900"
+    }
+  ],
+  "karma": "Evil",
+  "voice_type": "CreatureSmartSM",
+  "topics": [
+    {
+      "topic": "BMNeilAskDanger",
+      "topic_text": "What makes this a \"dangerous place?\"",
+      "emotion": "Neutral 50",
+      "response_text": "You must've heard her radio broadcasts? Though why a human would follow her invitation here is beyond me... unless you didn't listen very closely.",
+      "index": "1"
+    },
+    {
+      "topic": "BMNeilAskDetails",
+      "topic_text": "What sort of trouble should I expect if I head up?",
+      "emotion": "Neutral 50",
+      "response_text": "The road is a series of switchbacks up to the peak. There are three blockades, plus patrols. Sneaking past them would be... difficult.",
+      "index": "4"
+    },
+    {
+      "topic": "BMNeilAskForHelpSpeech{Speech >= 50}",
+      "topic_text": "Sounds like you've had enough of Tabitha. What if you had some help?",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] Help would improve the odds. Help might just make the difference...",
+      "index": "8"
+    },
+    {
+      "topic": "BMNeilAskHistory",
+      "topic_text": "How did Tabitha end up in control?",
+      "emotion": "Neutral 50",
+      "response_text": "For years, Black Mountain was a peaceful community. Its leader, Marcus, broadcast an invitation to Mutants throughout the wasteland.",
+      "index": "12"
+    },
+    {
+      "topic": "BMNeilAskJacobstown",
+      "topic_text": "What is Jacobstown?",
+      "emotion": "Neutral 50",
+      "response_text": "The opposite of Black Mountain! A stable community of Mutants, mostly, led by a mentally stable leader.",
+      "index": "17"
+    },
+    {
+      "topic": "BMNeilAskMutantsWereMade",
+      "topic_text": "You say that super mutants were *made*?",
+      "emotion": "Neutral 50",
+      "response_text": "Yes... And it's not something I care to discuss with one of your kind.",
+      "index": "19"
+    },
+    {
+      "topic": "BMNeilAskNightkin",
+      "topic_text": "Tell me about the Nightkin.",
+      "emotion": "Neutral 50",
+      "response_text": "The Nightkin are vicious in combat, and that's if you see them coming. Most don't.",
+      "index": "21"
+    },
+    {
+      "topic": "BMNeilAskRadio",
+      "topic_text": "You say Marcus smashed the radio. Not very well, apparently?",
+      "emotion": "Neutral 50",
+      "response_text": "Heh. There's a sad story behind that. Marcus smashed it just fine, but while we were gone some Ghoul named Raul came along.",
+      "index": "24"
+    },
+    {
+      "topic": "BMNeilAskSelf",
+      "topic_text": "Why are you here, instead of Jacobstown?",
+      "emotion": "Neutral 50",
+      "response_text": "Marcus sent me here a couple of months ago to check on Black Mountain. I suppose you could say I came here as a spy.",
+      "index": "26"
+    },
+    {
+      "topic": "BMNeilFriendly",
+      "topic_text": "You seem friendly, for a mutant.",
+      "emotion": "Neutral 50",
+      "response_text": "Keep saying things like that, and I won't be so friendly. Not every Super Mutant is a brain-damaged brute.{irritated}",
+      "index": "30"
+    },
+    {
+      "topic": "BMNeilFriendlyMovingOn",
+      "topic_text": "Moving on...",
+      "emotion": "Neutral 50",
+      "response_text": "Yes, that's exactly what I'm telling you to do. Move on.{telling him to scram}",
+      "index": "32"
+    },
+    {
+      "topic": "BMNeilFriendlySorry",
+      "topic_text": "Sorry about that. No offense intended.",
+      "emotion": "Neutral 50",
+      "response_text": "And none taken... since you apologized.",
+      "index": "33"
+    },
+    {
+      "topic": "BMNeilFriendlyToughShit",
+      "topic_text": "Spare me the \"poor mutants\" rap, all right?",
+      "emotion": "Neutral 50",
+      "response_text": "Of course. Sorry I bothered you. Enjoy your travels.",
+      "index": "34"
+    },
+    {
+      "topic": "BMNeilHeadUpMountain",
+      "topic_text": "Thanks for the warning, but I can take care of myself.",
+      "emotion": "Neutral 50",
+      "response_text": "Yes, I hear that sometimes. And then I never see the people who said it again.",
+      "index": "35"
+    },
+    {
+      "topic": "BMNeilOffToJacobstown",
+      "topic_text": "What will you do now?",
+      "emotion": "Neutral 50",
+      "response_text": "I still have a job to do here. Some Mutants may have heard Tabitha's broadcasts and are headed here even as we speak.",
+      "index": "38"
+    },
+    {
+      "topic": "BMNeilSupMutantGens",
+      "topic_text": "Why are some Super Mutants smarter than others?",
+      "emotion": "Neutral 50",
+      "response_text": "Not all Super Mutants were created equal. Or at the same time, or for the same purpose.",
+      "index": "40"
+    },
+    {
+      "topic": "BMNeilVillageAgree",
+      "topic_text": "Okay, I can make that work.",
+      "emotion": "Neutral 50",
+      "response_text": "Good luck. We're going to need it.",
+      "index": "42"
+    },
+    {
+      "topic": "BMNeilVillageDisagree",
+      "topic_text": "That's your plan? I *am* an intruder in the village!",
+      "emotion": "Neutral 50",
+      "response_text": "Yes, so try to stay out of sight, because they'll be coming this way.",
+      "index": "43"
+    },
+    {
+      "topic": "BMNeilVillageNotReady",
+      "topic_text": "Not yet. Wait here.",
+      "emotion": "Neutral 50",
+      "response_text": "Whatever you need to do, be quick about it.",
+      "index": "44"
+    },
+    {
+      "topic": "BMNeilVillageReadyForMob",
+      "topic_text": "Let's do it.",
+      "emotion": "Neutral 50",
+      "response_text": "Here's the plan. The gate to Tabitha's compound is guarded by several Nightkin, all of them using devices that make them invisible.",
+      "index": "45"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "Good work, human. Maybe now this place can rest in peace.",
+      "index": "47"
+    },
+    {
+      "topic": "VEndingBlackMountain",
+      "topic_text": "VEndingBlackMountain",
+      "emotion": "Neutral 50",
+      "response_text": "{Narrating}Though some Super Mutants and Nightkin continued to journey to the legendary Utobitha, they found little trace of its existence.",
+      "index": "54"
+    },
+    {
+      "topic": "VFreeformBlackMountainBMNeilTopic000",
+      "topic_text": "With Tabitha gone, what will happen to this place?",
+      "emotion": "Neutral 50",
+      "response_text": "Who knows? It might stay abandoned, get used as a base for raiders, or even become another colony for mutants.",
+      "index": "62"
+    },
+    {
+      "topic": "VFreeformBlackMountainBMNeilTopic001",
+      "topic_text": "I'll leave things here to you, then.",
+      "emotion": "Neutral 50",
+      "response_text": "Be safe, human. And thanks again for everything.",
+      "index": "64"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "BMNeilDistractsNightkin",
+      "topic_text": "BMNeilDistractsNightkin",
+      "emotion": "Neutral 50",
+      "response_text": "There's a human down the path. Tabitha's orders are to kill all human intruders. Go!",
+      "index": "65"
+    },
+    {
+      "topic": "GOODBYEGoodbye.",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Goodbye.",
+      "index": "66"
+    }
+  ],
+  "combat": [],
+  "description": "Neil is a 48 year-old N/A Male.\n\nNeil is a first-generation super mutant with a weathered, greenish-gray skin tone and a muscular build. His eyes are a dull, milky white, and he wears tattered, scavenged clothing to protect his large frame from the harsh Mojave elements. He has a cautious demeanor and is often seen observing his surroundings from his roadside shack.\n\nNeil's Personality: Neil is pragmatic, cynical, and distrustful of authority figures, especially those who use charisma and rhetoric to control others. He values independence and self-determination, having witnessed the dangers of blind obedience during his time with the Master's Unity. Despite his generally grim outlook, he possesses a sense of duty to his fellow mutants and genuinely believes that Jacobstown offers a safer alternative to Tabitha's rule at Black Mountain.\n\nNeil's Backstory: Neil was originally a human living in the pre-War United States before being captured by the Master and transformed into a super mutant during the formation of the Unity. He served as a soldier and later as a spy within the Unity's ranks, developing a deep understanding of mutant psychology and the dangers of authoritarian leadership. After the Unity's defeat, Neil found himself at Black Mountain under Marcus's leadership, where he eventually grew disillusioned with Tabitha's rise to power. Recognizing her as a dangerous fanatic, Neil attempted to incite rebellion among the other mutants but failed due to their loyalty to Tabitha. Now, he operates from a roadside shack, warning travelers and mutants away from Black Mountain and directing them toward Jacobstown."
+}

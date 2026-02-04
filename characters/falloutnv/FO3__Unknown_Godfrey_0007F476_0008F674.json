@@ -1,0 +1,184 @@
+{
+  "name": "Godfrey",
+  "url": "/wiki/Godfrey",
+  "dialogue_name": "HD00MrHandyGodfrey.txt",
+  "dialogue_url": "/wiki/HD00MrHandyGodfrey.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "0007F476",
+  "ref_id": "0008F674",
+  "editor_id": "HD00MrHandyGodfrey",
+  "location": "Tenpenny Tower suite",
+  "location_url": "/wiki/Tenpenny_Tower_suite",
+  "race": "Mister Handy",
+  "affiliation": "Lone Wanderer(optional)",
+  "role": "Personal robotic butler",
+  "detailed_location": "Tenpenny Tower suite",
+  "voice_actor": "Stephen Russell",
+  "special": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 5,
+    "Intelligence": 5,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "level": "3",
+  "misc_skills": [],
+  "karma": "Neutral",
+  "voice_type": "RobotMisterHandyDC",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Disgust 50",
+      "response_text": "If it's not one thing, it's another. Well, got to run.{mildly sarcastic}",
+      "index": "1"
+    },
+    {
+      "topic": "HD00BuyStuff",
+      "topic_text": "Where can I buy more things for my place?",
+      "emotion": "Neutral 50",
+      "response_text": "Yes, I believe this place could do with a bit more in the way of decoration.",
+      "index": "17"
+    },
+    {
+      "topic": "HD00Drink",
+      "topic_text": "I'd like something to drink.",
+      "emotion": "Neutral 50",
+      "response_text": "I'm sorry, sir. My condensation collectors need time to fully recharge before I can continue to dispense any more beverages.",
+      "index": "19"
+    },
+    {
+      "topic": "HD00Haircut",
+      "topic_text": "I'd like a haircut please.",
+      "emotion": "Neutral 50",
+      "response_text": "Certainly. I am programmed with a multitude of hair shaping scenarios, if you would care to choose one, I would be happy to replicate it for you.",
+      "index": "23"
+    },
+    {
+      "topic": "HD00InfirmaryTalk",
+      "topic_text": "Can you explain how the My First Infirmary works?",
+      "emotion": "Neutral 50",
+      "response_text": "An innovation from Med-Tek, the My First Infirmary will automatically diagnose and treat any injury you might sustain.",
+      "index": "24"
+    },
+    {
+      "topic": "HD00Joke",
+      "topic_text": "Tell me a joke.",
+      "emotion": "Neutral 50",
+      "response_text": "My humor emitter array requires recharging.",
+      "index": "26"
+    },
+    {
+      "topic": "HD00JukeTalk",
+      "topic_text": "What does my Jukebox do?",
+      "emotion": "Neutral 50",
+      "response_text": "Just switch on the Jukebox, and instantly the room will fill with music to keep you entertained.",
+      "index": "36"
+    },
+    {
+      "topic": "HD00LabTalk",
+      "topic_text": "Can you explain how the My First Laboratory works?",
+      "emotion": "Neutral 50",
+      "response_text": "From the keen minds at Med-Tek, the My First Laboratory will instantly detoxify you, removing any nasty addictions from your body.",
+      "index": "38"
+    },
+    {
+      "topic": "HD00NukaTalk",
+      "topic_text": "What does the Nuka-Cola machine dispense?",
+      "emotion": "Neutral 50",
+      "response_text": "The Nuka-Cola machine will dispense Ice Cold Nuka-Cola.",
+      "index": "41"
+    },
+    {
+      "topic": "HD00WorkbenchTalk",
+      "topic_text": "Can you explain what the Workbench is for?",
+      "emotion": "Neutral 50",
+      "response_text": "If you come across any schematics in the Wasteland, you'll be able to construct its contents on this specially designed table.",
+      "index": "43"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "I have to go now.",
+      "emotion": "Neutral 50",
+      "response_text": "You have yourself a fine day, sir.",
+      "index": "44"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Neutral 50",
+      "response_text": "How very nice to make your acquaintance. I'm your new Robobutler.",
+      "index": "51"
+    }
+  ],
+  "combat": [
+    {
+      "topic": "AcceptYield",
+      "topic_text": "AcceptYield",
+      "emotion": "Neutral 50",
+      "response_text": "Cheerio. Water under the bridge.",
+      "index": "64"
+    },
+    {
+      "topic": "Assault",
+      "topic_text": "Assault",
+      "emotion": "Neutral 50",
+      "response_text": "Not very sporting of you.",
+      "index": "65"
+    },
+    {
+      "topic": "Attack",
+      "topic_text": "Attack",
+      "emotion": "Neutral 50",
+      "response_text": "*Sigh.* Why must you humans always resort to violence?",
+      "index": "68"
+    },
+    {
+      "topic": "Death",
+      "topic_text": "Death",
+      "emotion": "Neutral 50",
+      "response_text": "Oh, I say.",
+      "index": "76"
+    },
+    {
+      "topic": "Hit",
+      "topic_text": "Hit",
+      "emotion": "Neutral 50",
+      "response_text": "Bzzt.",
+      "index": "82"
+    },
+    {
+      "topic": "Murder",
+      "topic_text": "Murder",
+      "emotion": "Neutral 50",
+      "response_text": "Dear me, how unsporting of you.",
+      "index": "88"
+    },
+    {
+      "topic": "Pickpocket",
+      "topic_text": "Pickpocket",
+      "emotion": "Disgust 50",
+      "response_text": "The class of people I'm forced to associate with these days just keeps falling.",
+      "index": "91"
+    },
+    {
+      "topic": "Steal",
+      "topic_text": "Steal",
+      "emotion": "Disgust 50",
+      "response_text": "The class of people I'm forced to associate with these days just keeps falling.",
+      "index": "92"
+    }
+  ],
+  "description": "Godfrey is a 100 year-old Robotic Male.\n\nA sophisticated Mister Handy unit repurposed as a personal butler. Godfrey is equipped with various utility functions including water purification, grooming services, and an extensive repertoire of jokes and witty remarks. Its polished exterior and efficient movements make it an ideal companion for the discerning wasteland dweller.\n\nGodfrey's Personality: Cheerful, dutiful, and possessing a dry wit. Godfrey takes pride in its service capabilities and enjoys entertaining its owner with humor and light conversation. It maintains a professional demeanor while occasionally revealing a playful side through its programmed jokes.\n\nGodfrey's Backstory: Manufactured by General Atomics International before the Great War, Godfrey spent decades abandoned in the ruins of Washington D.C. before being salvaged and refurbished by Tenpenny Tower staff. The management saw potential in its advanced programming and repurposed it as a luxury butler for their most distinguished guests. When the Lone Wanderer secured a suite at Tenpenny Tower, Godfrey was assigned as their personal attendant."
+}

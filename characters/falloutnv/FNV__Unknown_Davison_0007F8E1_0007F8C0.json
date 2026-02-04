@@ -1,0 +1,206 @@
+{
+  "name": "Davison",
+  "url": "/wiki/Davison",
+  "dialogue_name": "Davison.txt",
+  "dialogue_url": "/wiki/Davison.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "0007F8E1",
+  "ref_id": "0007F8C0",
+  "editor_id": "Davison",
+  "location": "REPCONN Test Sitebasement",
+  "location_url": "/wiki/REPCONN_Test_Site",
+  "race": "Super mutant(nightkin)",
+  "affiliation": "Unity(formerly)Davison's nightkinAntler",
+  "role": "Captain in the Unity (formerly)Leader of Davison's nightkin",
+  "detailed_location": "REPCONN test site",
+  "voice_actor": "Marc Graue",
+  "special": {
+    "Strength": 10,
+    "Perception": 6,
+    "Endurance": 9,
+    "Charisma": 5,
+    "Intelligence": 4,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "level": "12→16",
+  "tag_skills": [],
+  "misc_skills": [
+    {
+      "Hit Points:": "360→480"
+    },
+    {
+      "Critical Chance:": "5%"
+    },
+    {
+      "Unarmed Dam.:": "5.5"
+    },
+    {
+      "Poison Resist.:": "40%"
+    },
+    {
+      "Rad. Resist.:": "16%"
+    },
+    {
+      "Carry Weight:": "250"
+    },
+    {
+      "Dam. Threshold:": "0"
+    }
+  ],
+  "karma": "Evil",
+  "topics": [
+    {
+      "topic": "DavisonAntlerLookAt",
+      "topic_text": "nvProNightkinMasterAntlerLookAt",
+      "emotion": "Neutral 50",
+      "response_text": "Stop looking at Antler!",
+      "index": "1"
+    },
+    {
+      "topic": "DavisonAntlerTouched",
+      "topic_text": "nvProNightkinMasterAntlerTouched",
+      "emotion": "Neutral 50",
+      "response_text": "You touched Antler!",
+      "index": "5"
+    },
+    {
+      "topic": "DavisonDie",
+      "topic_text": "Right the first time, ugly. I've come to kill you.",
+      "emotion": "Neutral 50",
+      "response_text": "Never! Antler protects! You feel Antler's horns now!",
+      "index": "10"
+    },
+    {
+      "topic": "DavisonDisagree",
+      "topic_text": "Okay, looks like I'm going to have to kill you.",
+      "emotion": "Neutral 50",
+      "response_text": "Never! Antler protects! You feel Antler's horns now!",
+      "index": "11"
+    },
+    {
+      "topic": "DavisonFakeGoodbyePlayer tries to leave conversation.",
+      "topic_text": "I need to be going...",
+      "emotion": "Neutral 50",
+      "response_text": "No. Antler says you are solution. Plus can't have you skulking around, making trouble.",
+      "index": "12"
+    },
+    {
+      "topic": "DavisonFoundSBAlready",
+      "topic_text": "There is no stockpile of Stealth Boys in this building.",
+      "emotion": "Neutral 50",
+      "response_text": "Liar! The invoice said Stealth Boys here! Antler read it out loud to me!",
+      "index": "15"
+    },
+    {
+      "topic": "DavisonGhoulInfoPlayer asks why Harland's room can't be searched.",
+      "topic_text": "Why can't you search the last room?",
+      "emotion": "Neutral 50",
+      "response_text": "A ghoul. But not squishy like others. This ghoul is tough.",
+      "index": "16"
+    },
+    {
+      "topic": "DavisonHaveStealthBoys",
+      "topic_text": "The Stealth Boys were sent here by mistake, then sent back.",
+      "emotion": "Neutral 50",
+      "response_text": "But invoice note said Stealth Boys were here! Why can't that note be true?",
+      "index": "22"
+    },
+    {
+      "topic": "DavisonHelpHowPlayer asks how to help.",
+      "topic_text": "Maybe I can help.",
+      "emotion": "Neutral 50",
+      "response_text": "Good. Antler brought us here for a reason... Why was that, Antler?",
+      "index": "26"
+    },
+    {
+      "topic": "DavisonMyStealthBoys",
+      "topic_text": "I have some Stealth Boys. I could give them to you.",
+      "emotion": "Neutral 50",
+      "response_text": "Antler bring us here for hundreds of Stealth Boys, human. Antler thinks big. Antler IS big.",
+      "index": "30"
+    },
+    {
+      "topic": "DavisonNoStealthBoysYet",
+      "topic_text": "Sorry, no signs of the stockpile of Stealth Boys yet.",
+      "emotion": "Neutral 50",
+      "response_text": "Keep looking... Antler wants Nightkin to have them.",
+      "index": "32"
+    },
+    {
+      "topic": "DavisonOK",
+      "topic_text": "Are you all right? You sound... strange.",
+      "emotion": "Anger 50",
+      "response_text": "I am in command of my faculties! In command of my troops!",
+      "index": "34"
+    },
+    {
+      "topic": "DavisonOtherOptionPlayer says why he or she is here.",
+      "topic_text": "I came here on behalf of the ghouls upstairs.",
+      "emotion": "Neutral 50",
+      "response_text": "A human who is friend to ghouls? Suspicious.",
+      "index": "36"
+    },
+    {
+      "topic": "DavisonStealthBoysAgreePlayer agrees to find Stealth Boy stockpile.",
+      "topic_text": "Sorry, but I've got some bad news for you.",
+      "emotion": "Neutral 50",
+      "response_text": "What you saying, human?",
+      "index": "43"
+    },
+    {
+      "topic": "DavisonWhoAreYou",
+      "topic_text": "And who are you, exactly?",
+      "emotion": "Neutral 50",
+      "response_text": "Me? I am devoted to Antler. But before Antler? Hmm...",
+      "index": "48"
+    },
+    {
+      "topic": "DavisonWhoIsAntlerPlayer asks about Antler.",
+      "topic_text": "Who is \"Antler\"?",
+      "emotion": "Neutral 50",
+      "response_text": "Who is Antler? WHO IS ANTLER?",
+      "index": "54"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "Antler says you are the one killing my kin. Antler says you must die!",
+      "index": "60"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "Attack",
+      "topic_text": "Attack",
+      "emotion": "Neutral 50",
+      "response_text": "You touched Antler! Now you DIE!",
+      "index": "69"
+    },
+    {
+      "topic": "Death",
+      "topic_text": "Death",
+      "emotion": "Neutral 50",
+      "response_text": "Antler... I have failed you.",
+      "index": "71"
+    }
+  ],
+  "combat": [
+    {
+      "topic": "AlertToCombat",
+      "topic_text": "AlertToCombat",
+      "emotion": "Neutral 50",
+      "response_text": "ANTLER!!!",
+      "index": "72"
+    }
+  ],
+  "description": "Davison is a 119 year-old Super Mutant Male.\n\nA formidable nightkin and former captain in the Master's army, Davison leads a group of his fellow super mutants in search of Stealth Boys at the REPCONN Test Site. His mind has deteriorated significantly since the fall of the Unity, leaving him paranoid and aggressive.\n\nDavison's Personality: Aggressive, impatient, deeply suspicious of others, and suffering from severe mental disorders including delusions and schizophrenia. He is prone to violent outbursts and follows the guidance of the mysterious entity known only as 'Antler'.\n\nDavison's Backstory: Once a respected captain in the Unity's service, Davison led the Master's elite nightkin forces into battle with ruthless efficiency. After the Master's defeat in 2162, Davison's mental state began to deteriorate. The combination of his wandering through the wasteland and frequent use of Stealth Boys accelerated his decline into severe mental illness. For a time, he stayed at Jacobstown under the care of Marcus, who attempted to help the nightkin cope with their condition. However, drawn by the mysterious voice of 'Antler,' Davison eventually led his followers back into the Mojave Wasteland, where they now search for Stealth Boys at the REPCONN facility."
+}

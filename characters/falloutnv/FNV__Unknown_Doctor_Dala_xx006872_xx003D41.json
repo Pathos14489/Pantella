@@ -1,0 +1,519 @@
+{
+  "name": "Doctor Dala",
+  "url": "/wiki/Dala",
+  "dialogue_name": "NVDLC03DoctorDala.txt",
+  "dialogue_url": "/wiki/NVDLC03DoctorDala.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "xx006872",
+  "ref_id": "xx003D41",
+  "editor_id": "NVDLC03DoctorDalaLVL",
+  "location": "Big MT",
+  "location_url": "/wiki/Big_MT",
+  "race": "Think tank",
+  "affiliation": "Big MT(pre-War)Think Tank",
+  "role": "First Head Chief Researcher of Mineralogy and Medical Sciences",
+  "detailed_location": "The Think Tank",
+  "voice_actor": "Jocelyn Blue",
+  "special": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 5,
+    "Intelligence": 5,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "level": "6",
+  "misc_skills": [],
+  "karma": "Neutral",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "{Mesmerized}Look at the way the tongue rolls in its mouth like some sort of... mucousy muscled worm.",
+      "index": "1"
+    },
+    {
+      "topic": "KleinQuestionTopic",
+      "topic_text": "I have other questions for you.",
+      "emotion": "Neutral 50",
+      "response_text": "My advanced degree in Curiosity says let the Lobotomite ask, Dr. Klein. The topics might be...{emph}most curious, indeed.",
+      "index": "9"
+    },
+    {
+      "topic": "NVDLC03DialogueDalaBigMTRandom",
+      "topic_text": "NVDLC03DialogueDalaBigMTRandom",
+      "emotion": "Neutral 50",
+      "response_text": "{2D Announcement}Slight chance of seed dispersal from Botanical Gardens predicted in the late evening.",
+      "index": "10"
+    },
+    {
+      "topic": "NVDLC03DialogueDalaNVDLC03DoctorDalaLVLTopic000",
+      "topic_text": "The quick Scribe jumped over the lazy Paladin?",
+      "emotion": "Neutral 50",
+      "response_text": "Yes, yes, go on. Seeing your... lips and mouth forming the words... both revolting... and somehow...",
+      "index": "15"
+    },
+    {
+      "topic": "NVDLC03DialogueDalaNVDLC03DoctorDalaLVLTopic001",
+      "topic_text": "Looping gesture of greeting?",
+      "emotion": "Neutral 50",
+      "response_text": "Looping, yes. It is a scientific fact that hormones drive a percentage of Lobotomites into recursive behavior patterns.",
+      "index": "18"
+    },
+    {
+      "topic": "NVDLC03DialogueDalaNVDLC03DoctorDalaLVLTopic002",
+      "topic_text": "What recursive behavior patterns are you talking about?",
+      "emotion": "Neutral 50",
+      "response_text": "It varies, according to the number and density of Lobotomites that have infected an area.",
+      "index": "21"
+    },
+    {
+      "topic": "NVDLC03DialogueDalaNVDLC03DoctorDalaLVLTopic003",
+      "topic_text": "Can you tell me about Dr. Mobius?",
+      "emotion": "Fear 50",
+      "response_text": "{Horrified}Dr. Mobius! A monstrous brain, creased with wrinkles of a thousand evils, with but one jaundiced eye with which to perceive the world!",
+      "index": "24"
+    },
+    {
+      "topic": "NVDLC03DialogueDalaNVDLC03DoctorDalaLVLTopic004",
+      "topic_text": "Not exactly. I have questions I need answers to.",
+      "emotion": "Neutral 50",
+      "response_text": "{Intrigued}How randomized. Ask your... questions then.",
+      "index": "27"
+    },
+    {
+      "topic": "NVDLC03DialogueDalaNVDLC03DoctorDalaLVLTopic006",
+      "topic_text": "Who are you? What do you do here?",
+      "emotion": "Neutral 50",
+      "response_text": "{Indulging}Why, my little bear of teddyness, I am Doctor Dala, first head chief researcher of mineralogy and medicinal sciences.",
+      "index": "34"
+    },
+    {
+      "topic": "NVDLC03DialogueDalaNVDLC03DoctorDalaLVLTopic007",
+      "topic_text": "What's \"formography?\"",
+      "emotion": "Neutral 50",
+      "response_text": "{Slightly distasteful}It's excessive examination of the human form to achieve psychological arousal.",
+      "index": "38"
+    },
+    {
+      "topic": "NVDLC03DialogueDalaNVDLC03DoctorDalaLVLTopic008",
+      "topic_text": "211 doctorates? How is that even possible?",
+      "emotion": "Neutral 50",
+      "response_text": "Why, we create not only scientific marvels here at Big{\"Mountain\"}MT, but new sciences as well.",
+      "index": "40"
+    },
+    {
+      "topic": "NVDLC03DialogueDalaNVDLC03DoctorDalaLVLTopic009",
+      "topic_text": "First head chief researcher? Lot of titles.",
+      "emotion": "Neutral 50",
+      "response_text": "What is a name without a title or suffix for the sake of hierarchy? It is a long-standing quantification of personality and importance.",
+      "index": "42"
+    },
+    {
+      "topic": "NVDLC03DialogueDalaNVDLC03DoctorDalaLVLTopic010",
+      "topic_text": "Why did you remove my brain? And... how?",
+      "emotion": "Neutral 50",
+      "response_text": "Oh, removing it is a simple procedure. Well, except the complications it can cause to the heart and spine.",
+      "index": "44"
+    },
+    {
+      "topic": "NVDLC03DialogueDalaNVDLC03DoctorDalaLVLTopic011",
+      "topic_text": "I don't understand how the tech Klein wants will help.",
+      "emotion": "Neutral 50",
+      "response_text": "It'll all become clear. If not, at least we will have the technology here at the Dome where all technology belongs.",
+      "index": "49"
+    },
+    {
+      "topic": "NVDLC03DialogueDalaNVDLC03DoctorDalaLVLTopic012",
+      "topic_text": "Can you tell me about the Big Empty?",
+      "emotion": "Anger 50",
+      "response_text": "{Chiding}The \"Big Empty?\"{Beat, slightly stern}Now, that's not a proper title for this research facility. You sound like previous test subjects that came here.",
+      "index": "51"
+    },
+    {
+      "topic": "NVDLC03DialogueDalaNVDLC03DoctorDalaLVLTopic013",
+      "topic_text": "Can you tell me about the Big Empty... uh, Big Mountain?",
+      "emotion": "Neutral 50",
+      "response_text": "{Slightly reverent}This mountain... now crater... encompasses the sum total of knowledge of humankind. It is Big{Mountain}MT. Where all questions can be answered.",
+      "index": "52"
+    },
+    {
+      "topic": "NVDLC03DialogueDalaNVDLC03DoctorDalaLVLTopic014",
+      "topic_text": "Previous test subjects?",
+      "emotion": "Neutral 50",
+      "response_text": "Oh, yes. We've had other subjects visit. It's why we had to calibrate the pacification field and warm up our brainial beams and vivisectors.",
+      "index": "54"
+    },
+    {
+      "topic": "NVDLC03DialogueDalaNVDLC03DoctorDalaLVLTopic015",
+      "topic_text": "This used to be a mountain?",
+      "emotion": "Neutral 50",
+      "response_text": "Yes, Big{\"Mountain\"}MT was quite big indeed until the Great Static. Then the top of the mountain was used as part of a detonation experiment.",
+      "index": "58"
+    },
+    {
+      "topic": "NVDLC03DialogueDalaNVDLC03DoctorDalaLVLTopic016",
+      "topic_text": "Questions? Like what?",
+      "emotion": "Neutral 50",
+      "response_text": "Previous test subjects who have come here have had many questions for us. We answered them with science, fire, and termination.",
+      "index": "60"
+    },
+    {
+      "topic": "NVDLC03DialogueDalaNVDLC03DoctorDalaLVLTopic018",
+      "topic_text": "I'm sometimes called a \"Courier.\"",
+      "emotion": "Neutral 50",
+      "response_text": "Oh, a mailman. A delivery man. Someone who takes parcels from place to place using their primitive feet or similar conveyance.",
+      "index": "61"
+    },
+    {
+      "topic": "NVDLC03DialogueDalaNVDLC03DoctorDalaLVLTopic019",
+      "topic_text": "There was another Courier?",
+      "emotion": "Neutral 50",
+      "response_text": "Of course. You must have met others in your travels. This one had met other couriers, too, although it sounded as if he hadn't met the correct one.",
+      "index": "63"
+    },
+    {
+      "topic": "NVDLC03DialogueDalaNVDLC03DoctorDalaLVLTopic021",
+      "topic_text": "What was the question?",
+      "emotion": "Neutral 50",
+      "response_text": "I do not know, nor should we try to access it. Perhaps Klein has the logs.",
+      "index": "65"
+    },
+    {
+      "topic": "NVDLC03DialogueDalaNVDLC03DoctorDalaLVLTopic022",
+      "topic_text": "What happened with the visitors?",
+      "emotion": "Neutral 50",
+      "response_text": "Ask Doctor O... and you could have asked 8 once, until he was severely damaged in the attack. We like him better this way.",
+      "index": "67"
+    },
+    {
+      "topic": "NVDLC03DialogueDalaNVDLC03DoctorDalaLVLTopic023",
+      "topic_text": "{Dupe}It seems to me you have more... biological needs than your counterparts.",
+      "emotion": "Neutral 50",
+      "response_text": "{DUPE}{Huff}What? Nonsense.",
+      "index": "68"
+    },
+    {
+      "topic": "NVDLC03DialogueDalaNVDLC03DoctorDalaLVLTopic024",
+      "topic_text": "Why did you say \"three minus one\" subjects before?",
+      "emotion": "Neutral 50",
+      "response_text": "Because three minus one is two. Two spoke to us, one after the other, one mean, one curious, but there was a third we didn't speak to.",
+      "index": "69"
+    },
+    {
+      "topic": "NVDLC03DialogueDalaNVDLC03DoctorDalaLVLTopic025",
+      "topic_text": "But how am I still talking and walking around?",
+      "emotion": "Neutral 50",
+      "response_text": "That is a good question. My theory is that the tesla coils in your brainpan are still connected to your brain somehow.",
+      "index": "71"
+    },
+    {
+      "topic": "NVDLC03DialogueDalaNVDLC03DoctorDalaLVLTopic027",
+      "topic_text": "I feel strange in here, peaceful, but on edge.",
+      "emotion": "Neutral 50",
+      "response_text": "It is the pacification field emitters that are broadcasting into the emptiness of your skull. Without a brain, your aggression is suppressed in here.",
+      "index": "74"
+    },
+    {
+      "topic": "NVDLC03DialogueDalaNVDLC03DoctorDalaLVLTopic029",
+      "topic_text": "It seems to me you have more... biological needs than your counterparts.",
+      "emotion": "Neutral 50",
+      "response_text": "{Huff}What? Nonsense.",
+      "index": "75"
+    },
+    {
+      "topic": "NVDLC03DialogueDalaNVDLC03DoctorDalaLVLTopic030",
+      "topic_text": "I can't help but notice your... fascination with the human body.",
+      "emotion": "Neutral 50",
+      "response_text": "{DUPE}[SUCCEEDED]{Huff}What? Nonsense.",
+      "index": "76"
+    },
+    {
+      "topic": "NVDLC03DialogueDalaNVDLC03DoctorDalaLVLTopic031",
+      "topic_text": "<Close eyelids, breathe deeply, then stretch languidly.>",
+      "emotion": "Neutral 50",
+      "response_text": "{Player is doing a lap dance in front of her, basically}What... what are you doing?",
+      "index": "79"
+    },
+    {
+      "topic": "NVDLC03DialogueDalaNVDLC03DoctorDalaLVLTopic034",
+      "topic_text": "Why don't you just give in? There's nothing wrong with looking at the human body.",
+      "emotion": "Neutral 50",
+      "response_text": "{Dawning realization}Perhaps... perhaps there is value in what you say. I... I did so enjoy breathing once. Long ago.",
+      "index": "83"
+    },
+    {
+      "topic": "NVDLC03DialogueDalaNVDLC03DoctorDalaLVLTopic035",
+      "topic_text": "You all are a bunch of hypocrites. Claiming superiority, but you miss being human, admit it.",
+      "emotion": "Neutral 50",
+      "response_text": "I... I cannot deny it. The illogic of it... the betrayal of our own beliefs. I blame my curiosity.",
+      "index": "84"
+    },
+    {
+      "topic": "NVDLC03DialogueDalaNVDLC03DoctorDalaLVLTopic036",
+      "topic_text": "I could come back any time and just breathe, if you want.",
+      "emotion": "Neutral 50",
+      "response_text": "{Quiet}Would you? I... feel so ashamed, but... yet, so intrigued. You'll need to give me a rest in between visits, or else my gel might... run over.",
+      "index": "85"
+    },
+    {
+      "topic": "NVDLC03DialogueDalaNVDLC03DoctorDalaLVLTopic037",
+      "topic_text": "I'll tell the others if you don't make it worth my while.",
+      "emotion": "Neutral 50",
+      "response_text": "{Curious}Really? What is this... you seek to shame me in front of the others? How intriguing.",
+      "index": "88"
+    },
+    {
+      "topic": "NVDLC03DialogueDalaNVDLC03DoctorDalaLVLTopic040",
+      "topic_text": "I have a real teddy bear, if you want it.",
+      "emotion": "Neutral 50",
+      "response_text": "{Player holds up a teddy bear}Whatever for?",
+      "index": "92"
+    },
+    {
+      "topic": "NVDLC03DialogueDalaNVDLC03DoctorDalaLVLTopic041",
+      "topic_text": "Well, I thought you liked them. You keep referring to them.",
+      "emotion": "Neutral 50",
+      "response_text": "No, I like...{emph}teddy bears.",
+      "index": "93"
+    },
+    {
+      "topic": "NVDLC03DialogueDalaNVDLC03DoctorDalaLVLTopic042",
+      "topic_text": "Are you sure your words aren't jumbled?",
+      "emotion": "Neutral 50",
+      "response_text": "Teddy bears come in many sizes. Your size is what intrigues me the most. Some say that teddy bears can't be living, breathing things.",
+      "index": "94"
+    },
+    {
+      "topic": "NVDLC03DialogueDalaNVDLC03DoctorDalaLVLTopic044",
+      "topic_text": "Oh, I get it - you like \"playing\" with humans, do you? Watching them move? Blink?",
+      "emotion": "Neutral 50",
+      "response_text": "{DUPE}[SUCCEEDED]{Huff}What? Nonsense.",
+      "index": "96"
+    },
+    {
+      "topic": "NVDLC03DialogueDalaNVDLC03DoctorDalaLVLTopic045",
+      "topic_text": "You know, we've been down this road already. Moving on.",
+      "emotion": "Neutral 50",
+      "response_text": "Very well. If you're certain of your conclusions, my little teddy bear.",
+      "index": "98"
+    },
+    {
+      "topic": "NVDLC03DialogueKleinNVDLC03DoctorBorousLVLTopic003",
+      "topic_text": "How much surgery did you do on me? I feel like a badly-put-together jigsaw puzzle.",
+      "emotion": "Neutral 50",
+      "response_text": "That is{emph}my responsibility.",
+      "index": "99"
+    },
+    {
+      "topic": "NVDLC03DialogueKleinNVDLC03DoctorDalaLVLTopic002",
+      "topic_text": "Then can you help me get this done as quickly as possible? Sounds like a lot of walking.",
+      "emotion": "Neutral 50",
+      "response_text": "The little teddy bear could always run right into the pylon perimeter on its thick, turgid feet, returning it to us quickly and erectly -{corrects self}directly.",
+      "index": "103"
+    },
+    {
+      "topic": "NVDLC03DialogueKleinNVDLC03DoctorDalaLVLTopic003",
+      "topic_text": "Pylons? What pylons?",
+      "emotion": "Neutral 50",
+      "response_text": "{Soothing}Possible memory loss will occur along with long-term nerve degradation. It is tied to not having a brain attached to your nervous system.",
+      "index": "104"
+    },
+    {
+      "topic": "NVDLC03DialogueKleinNVDLC03DoctorDalaLVLTopic010",
+      "topic_text": "Uh... thanks.",
+      "emotion": "Neutral 50",
+      "response_text": "The Sonic Emitter was specially designed to disable our own safety fields here in Big MT. When{emph}some of us lost our access passes.{Judging}Dr. O.",
+      "index": "108"
+    },
+    {
+      "topic": "NVDLC03DialogueKleinNVDLC03DoctorDalaLVLTopic015",
+      "topic_text": "You removed my brain?",
+      "emotion": "Neutral 50",
+      "response_text": "We removed your brain, yes. So soft. Barely wrinkled, yet so... flush with knowledge and experience.",
+      "index": "110"
+    },
+    {
+      "topic": "NVDLC03DialogueKleinNVDLC03DoctorKlein01Topic021",
+      "topic_text": "I can't let you dissect the Mojave. Or let you leave.",
+      "emotion": "Neutral 50",
+      "response_text": "Um... it's personal. But... I would hate if its dying screams revealed any odious personal habits I... or any of us might have.",
+      "index": "113"
+    },
+    {
+      "topic": "NVDLC03DialogueKleinNVDLC03DoctorKleinLVLTopic017",
+      "topic_text": "< Debug Topic Node - Do Not Translate. >",
+      "emotion": "Neutral 50",
+      "response_text": "{Correcting}Except Dr. Mobius. And the technologies that could save us, they are out of our reach.",
+      "index": "117"
+    },
+    {
+      "topic": "NVDLC03DialogueKleinNVDLC03DoctorKleinLVLTopic032",
+      "topic_text": "No? Why not?",
+      "emotion": "Neutral 50",
+      "response_text": "{Hesitating, embarrassed}You... are equipped to retrieve the technologies with your primitive form. We are not.",
+      "index": "124"
+    },
+    {
+      "topic": "NVDLC03DialogueKleinNVDLC03DoctorKleinLVLTopic039",
+      "topic_text": "The faster I can get through this, the better.",
+      "emotion": "Neutral 50",
+      "response_text": "We feared you would be tempted to explore Big MT Crater and examine the{emph}many amazing non-mandatory research labs that lie off your designated path.",
+      "index": "125"
+    },
+    {
+      "topic": "NVDLC03DialogueKleinNVDLC03DoctorKleinLVLTopic041",
+      "topic_text": "What if I take my time, explore the crater?",
+      "emotion": "Neutral 50",
+      "response_text": "Only the magnificence of{emph}our monitors allow for true comprehension of the wonders of Big MT. Shield your jellied eyes lest they burn from your skull.",
+      "index": "128"
+    },
+    {
+      "topic": "NVDLC03DialogueKleinNVDLC03DoctorKleinLVLTopic043",
+      "topic_text": "< Debug Topic Node - Gun Branch/Skill Check Storage - Do Not Translate. >",
+      "emotion": "Neutral 50",
+      "response_text": "The Sonic Emitter should be sterilized and more than enough for you to encircle your warm hands around, cradling it gently with your finger muscles.",
+      "index": "129"
+    },
+    {
+      "topic": "NVDLC03DialogueKleinNVDLC03DoctorKleinLVLTopic049",
+      "topic_text": "If you have the gun already, I don't understand what you need.",
+      "emotion": "Neutral 50",
+      "response_text": "I believe we need a new{emph}frequency embedded into the gun. It was designed to broadcast many sounds once charged. We just don't{emph}know the frequency.",
+      "index": "134"
+    },
+    {
+      "topic": "NVDLC03DialogueKleinNVDLC03DoctorOLVLTopic001",
+      "topic_text": "What are these technologies?",
+      "emotion": "Neutral 50",
+      "response_text": "...and 8's Sonic-Soundwave-Emitter-Projecto-Gun, able to broadcast sound at lethal frequencies.{Beat, quieter}It also gives a great biogel massage.",
+      "index": "138"
+    },
+    {
+      "topic": "NVDLC03DialogueKleinNVDLC03DoctorOLVLTopic002",
+      "topic_text": "I'll head out, then, and be back with these... things.",
+      "emotion": "Neutral 50",
+      "response_text": "Wait, is it leaving? Uh, but...{trying to be professional}eh, Dr. Klein, the Lobotomite will need rest. Recuperation. Things like that.",
+      "index": "139"
+    },
+    {
+      "topic": "NVDLC03DialogueKleinNVDLC03DoctorOLVLTopic006",
+      "topic_text": "You took out my brain, heart, and spine?",
+      "emotion": "Neutral 50",
+      "response_text": "To be correct, you should say, \"the Auto-Doc\" took out your brain. It did all the heavy lifting. It has never worked so hard before. It was unusual.",
+      "index": "142"
+    },
+    {
+      "topic": "NVDLC03EndingSlideFlag03",
+      "topic_text": "NVDLC03EndingSlideFlag03",
+      "emotion": "Neutral 50",
+      "response_text": "{Narration}They stare into the what-was, eyes like pilot lights, guttering and spent, as the realities of their world continue on around them.",
+      "index": "144"
+    },
+    {
+      "topic": "NVDLC03EndingSlideFlag08",
+      "topic_text": "NVDLC03EndingSlideFlag08",
+      "emotion": "Neutral 50",
+      "response_text": "{Narration}It can be easy to see Science as evil, technology unchecked as the source of all ills, all misfortunes.",
+      "index": "145"
+    },
+    {
+      "topic": "NVDLC03EndingSlideThinkTank",
+      "topic_text": "NVDLC03EndingSlideThinkTank",
+      "emotion": "Neutral 50",
+      "response_text": "{Narration}{Think Tank alive}Dr. Klein and the Think Tank remained alive, unaware of the world outside.",
+      "index": "146"
+    },
+    {
+      "topic": "NVDLC03X8Countdown09",
+      "topic_text": "NVDLC03X8Countdown09",
+      "emotion": "Neutral 50",
+      "response_text": "Nine, all will be fine.{2D}",
+      "index": "153"
+    },
+    {
+      "topic": "RemovePacificationFieldTopLevel",
+      "topic_text": "Is there any way to remove the pacification field in here?",
+      "emotion": "Neutral 50",
+      "response_text": "{Genuinely curious}Why would you want such a thing? You might surrender to your hormones and commit primal aggression on me... on us... again and again.",
+      "index": "154"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "HELLO",
+      "topic_text": "Hello",
+      "emotion": "Neutral 50",
+      "response_text": "If it isn't the fascinating little Lobotomite.",
+      "index": "157"
+    }
+  ],
+  "combat": [
+    {
+      "topic": "AcceptYield",
+      "topic_text": "AcceptYield",
+      "emotion": "Neutral 50",
+      "response_text": "If you want to attack me again, please fill out the proper forms - and wear gloves.",
+      "index": "160"
+    },
+    {
+      "topic": "Assault",
+      "topic_text": "Assault",
+      "emotion": "Neutral 50",
+      "response_text": "{Chiding}This seems a rather desperate cry for attention, my little teddy bear.",
+      "index": "161"
+    },
+    {
+      "topic": "Attack",
+      "topic_text": "Attack",
+      "emotion": "Neutral 50",
+      "response_text": "I'm going to rip out your stuffing, little teddy bear.",
+      "index": "162"
+    },
+    {
+      "topic": "AvoidThreat",
+      "topic_text": "AvoidThreat",
+      "emotion": "Neutral 50",
+      "response_text": "There is a bomb here.",
+      "index": "165"
+    },
+    {
+      "topic": "Death",
+      "topic_text": "Death",
+      "emotion": "Neutral 50",
+      "response_text": "I believe I'm dead or dying. No wait - I am dead.",
+      "index": "167"
+    },
+    {
+      "topic": "Flee",
+      "topic_text": "Flee",
+      "emotion": "Neutral 50",
+      "response_text": "I am currently fleeing. How exciting.",
+      "index": "168"
+    },
+    {
+      "topic": "Hit",
+      "topic_text": "Hit",
+      "emotion": "Neutral 50",
+      "response_text": "I cannot believe you would hit a gender-neutral entity such as myself.",
+      "index": "169"
+    },
+    {
+      "topic": "PowerAttack",
+      "topic_text": "PowerAttack",
+      "emotion": "Neutral 50",
+      "response_text": "Setting vivisectors on \"full invasive.\"",
+      "index": "173"
+    }
+  ],
+  "description": "Doctor Dala is a 144 year-old Human Female.\n\nA robotic entity housing the brain of the former head chief researcher of mineralogy at Big MT. Doctor Dala presents herself as the foremost authority on humanology and lobotomites, claiming to possess 211 doctorates in various fields. Her metallic form houses a disturbing fascination with the human body, bordering on obsession. She collects 'formography'—detailed studies of human anatomy—which her colleagues view as perverse. Her voice echoes with mechanical precision, yet her words carry an unsettling, almost intimate curiosity about biological specimens.\n\nDoctor Dala's Personality: Obsessively curious with a detached, scientific perspective on humanity. Exhibits pent-up frustrations channeled into anatomical studies. Possesses unwavering confidence in her (supposed) intellectual superiority. Displays a clinical detachment from her robotic form while maintaining a deep-seated fascination with organic biology. Prone to rambling monologues about her 'research' when excited.\n\nDoctor Dala's Backstory: Born before the Great War, Dala rose to prominence as the first head chief researcher of mineralogy at the Big MT research facility. Along with her fellow executives, she willingly underwent experimental brain extraction and transplantation into robotic think tank shells to continue their work indefinitely. Post-War, the Think Tank's unchecked scientific pursuits and heavy Mentats abuse became increasingly dangerous. In an effort to contain them, colleague Doctor Mobius altered their cognitive programming, replacing their identities with eccentric personas and confining their thoughts within recursion loops. For Dala, this modification amplified her fixation on human physiology and created the delusion of her 211 doctorates."
+}

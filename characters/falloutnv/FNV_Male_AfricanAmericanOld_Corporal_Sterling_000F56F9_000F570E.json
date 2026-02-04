@@ -1,0 +1,147 @@
+{
+  "name": "Corporal Sterling¹",
+  "url": "/wiki/Sterling_(Fallout:_New_Vegas)",
+  "dialogue_name": "1ECorporalSterling.txt",
+  "dialogue_url": "/wiki/1ECorporalSterling.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000F56F9",
+  "ref_id": "000F570E",
+  "editor_id": "1ECorporalSterling",
+  "location": "Camp McCarran",
+  "location_url": "/wiki/Camp_McCarran",
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "New California Republic Rangers(formerly)NCR ArmyFirst Recon",
+  "role": "Ranger (formerly)Sniper",
+  "detailed_location": "Camp McCarranCamp Forlorn Hope(optional)",
+  "voice_actor": "Emerson Brooks",
+  "special": {
+    "Strength": 5,
+    "Perception": 8,
+    "Endurance": 6,
+    "Charisma": 10,
+    "Intelligence": 6,
+    "Agility": 7,
+    "Luck": 6
+  },
+  "level": "15",
+  "tag_skills": [
+    {
+      "Explosives:": "86"
+    },
+    {
+      "Guns:": "86"
+    },
+    {
+      "Melee Weap.:": "86"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Neutral",
+  "voice_type": "MaleAdult01DefaultB",
+  "geck_race": "AfricanAmericanOld",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "Howdy. Name's Sterling, First Recon. Can't say I've seen you before. I'd remember, if I had.{For this guy's VO, think Sam Elliott.}",
+      "index": "1"
+    },
+    {
+      "topic": "VFreeformMcCarran31ECorporalSterlingTopic000",
+      "topic_text": "You remember everyone who passes through here?",
+      "emotion": "Neutral 50",
+      "response_text": "Got a good memory for faces. Landmarks and such, too. Comes with practice, that's all. And a lot of scoutin' from place to place.",
+      "index": "8"
+    },
+    {
+      "topic": "VFreeformMcCarran31ECorporalSterlingTopic001",
+      "topic_text": "It's true. I've got a memorable face.",
+      "emotion": "Neutral 50",
+      "response_text": "You're a fine-looking woman, no doubt about that. But I'm looking a little deeper than the skin, if you take my meaning.",
+      "index": "10"
+    },
+    {
+      "topic": "VFreeformMcCarran31ECorporalSterlingTopic002",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Mighty pleased to meet you. Maybe I'll see you again, before we move out.",
+      "index": "12"
+    },
+    {
+      "topic": "VFreeformMcCarran31ECorporalSterlingTopic003",
+      "topic_text": "Have you always been with the First Recon?",
+      "emotion": "Neutral 50",
+      "response_text": "Used to be a Ranger... one of the first they sent out east, back before we took the Dam. Observation and reconnaissance.",
+      "index": "14"
+    },
+    {
+      "topic": "VFreeformMcCarran31ECorporalSterlingTopic004",
+      "topic_text": "Why did you leave the Rangers?",
+      "emotion": "Neutral 50",
+      "response_text": "Well... that wasn't really a matter of choice. Got myself caught by Legionnaires, up near Malpais.",
+      "index": "18"
+    },
+    {
+      "topic": "VFreeformMcCarran31ECorporalSterlingTopic005",
+      "topic_text": "How did you manage to escape Malpais?",
+      "emotion": "Neutral 50",
+      "response_text": "Caesar's boys figured I wasn't going anywhere, after what they done to me. So they didn't bother tying me up.",
+      "index": "21"
+    },
+    {
+      "topic": "VFreeformMcCarran31ECorporalSterlingTopic006",
+      "topic_text": "Interesting rifle you have there. Lever-action, right?",
+      "emotion": "Neutral 50",
+      "response_text": "I call her La Longue Carabine. Didn't always have the scope - I added that myself.",
+      "index": "25"
+    },
+    {
+      "topic": "VFreeformMcCarran31ECorporalSterlingTopic007",
+      "topic_text": "Have you seen anything suspicious around here?",
+      "emotion": "Neutral 50",
+      "response_text": "As a matter of fact... it's funny that you'd ask. Couple nights back, I was on watch in the yard...",
+      "index": "28"
+    },
+    {
+      "topic": "VFreeformMcCarran31ECorporalSterlingTopic008",
+      "topic_text": "Thanks for the information.",
+      "emotion": "Neutral 50",
+      "response_text": "No trouble at all. Might be nothing. Couple frisky young folks looking for a quiet place to snuggle up.",
+      "index": "32"
+    },
+    {
+      "topic": "VFreeformMcCarran31ECorporalSterlingTopic009",
+      "topic_text": "How long have you been stationed here?",
+      "emotion": "Neutral 50",
+      "response_text": "Going on six months, now. But I reckon we'll be moving out, soon enough. Can't talk about the details.",
+      "index": "34"
+    },
+    {
+      "topic": "VFreeformMcCarran31ECorporalSterlingTopic013",
+      "topic_text": "Any ideas on how to convince Corporal Betsy to go see a doctor?",
+      "emotion": "Neutral 50",
+      "response_text": "It's a pride thing with her, and totally unnecessary. I mean, look at me - I was{proudly announcing his rank and name}Ranger Sterling until the Legion got through with me.",
+      "index": "37"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Always a pleasure. You keep yourself safe.",
+      "index": "40"
+    }
+  ],
+  "combat": [],
+  "description": "Corporal Sterling is a 42 year-old African American Male.\n\nA battle-hardened NCR First Recon sniper stationed at Camp McCarran. Despite severe injuries to his hands and feet, Sterling remains one of the most skilled marksmen in the Mojave.\n\nCorporal Sterling's Personality: Persistent, resilient, and quietly determined. Sterling carries the weight of his past experiences but maintains a professional demeanor. He values duty to the NCR above all else and has a dry, understated sense of humor.\n\nCorporal Sterling's Backstory: Sterling served as one of the first NCR Rangers to scout the Mojave Wasteland back in 2273. For nearly a decade, he patrolled the region between Shady Sands and the Colorado River, gaining an intimate knowledge of the territory. His Ranger career came to a brutal end when he was captured by Caesar's Legion near Malpais. The legionaries tortured him by systematically breaking bones in his hands and feet, leaving him with permanent injuries. Despite being offered an honorable discharge, Sterling refused to leave the military. His exceptional marksmanship skills earned him a place in the NCR Army, where he was transferred to First Recon by Lt. Gorobets, recognizing his value despite his physical limitations."
+}

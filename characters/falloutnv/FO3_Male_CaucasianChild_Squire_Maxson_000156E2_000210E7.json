@@ -1,0 +1,165 @@
+{
+  "name": "Squire Maxson",
+  "url": "/wiki/Arthur_Maxson",
+  "dialogue_name": "SquireMaxson.txt",
+  "dialogue_url": "/wiki/SquireMaxson.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": true,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000156E2",
+  "ref_id": "000210E7",
+  "editor_id": "SquireMaxson",
+  "location": "Citadel B ring",
+  "location_url": "/wiki/Citadel_B_ring",
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Brotherhood of Steel",
+  "role": "TraineeSupreme commander",
+  "detailed_location": "Citadel'sB ringThePrydwen",
+  "voice_actor": "Sean McCoyDerek Phillips",
+  "special": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 5,
+    "Intelligence": 5,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "level": "233",
+  "misc_skills": [
+    {
+      "Hit Points:": "35"
+    },
+    {
+      "Critical Chance:": "5%"
+    },
+    {
+      "Unarmed Dam.:": "0.75"
+    },
+    {
+      "Poison Resist.:": "20%"
+    },
+    {
+      "Rad. Resist.:": "8%"
+    },
+    {
+      "Carry Weight:": "210"
+    },
+    {
+      "Damage Res.:": "0%(2%)"
+    }
+  ],
+  "karma": "Good",
+  "voice_type": "MaleChild01NPCMElderMaxson",
+  "geck_race": "CaucasianChild",
+  "topics": [
+    {
+      "topic": "CitSquireMaxsonGreeting1",
+      "topic_text": "Relax, Squire. I don't bite.",
+      "emotion": "Neutral 50",
+      "response_text": "I plead for your pardon if my behavior offends you, sir. We don't get many visitors in the Citadel.",
+      "index": "1"
+    },
+    {
+      "topic": "CitSquireMaxsonGreeting1a",
+      "topic_text": "Understandable. I've met a lot of dangerous people myself.",
+      "emotion": "Neutral 50",
+      "response_text": "It's not simply the outsiders that we are wary of, anybody who has not taken the Oath of Fraternity is suspicious to us.",
+      "index": "7"
+    },
+    {
+      "topic": "CitSquireMaxsonGreeting1b",
+      "topic_text": "Good. Your fear... pleases me.",
+      "emotion": "Neutral 50",
+      "response_text": "I... don't... I mean... if Elder Lyons chooses to show trust in you, then by the oath, I must trust you as well.",
+      "index": "11"
+    },
+    {
+      "topic": "CitSquireMaxsonGreeting2DUPLICATE000",
+      "topic_text": "The honor is all mine, Squire.",
+      "emotion": "Happy 50",
+      "response_text": "Oh! Well... Thank you! Your words are... very kind. Kinder than those I usually hear.... Is there... something I can help you with?",
+      "index": "17"
+    },
+    {
+      "topic": "CitSquireMaxsonGreeting2a",
+      "topic_text": "There's no need to be nervous. You can trust me.",
+      "emotion": "Neutral 50",
+      "response_text": "It is not personal, anybody who has not taken the Oath of Fraternity is suspicious to us.",
+      "index": "18"
+    },
+    {
+      "topic": "CitSquireMaxsonGreeting2b",
+      "topic_text": "You should be nervous. Who says that I'm not here to kill you all?",
+      "emotion": "Neutral 50",
+      "response_text": "I... don't... I mean... if Elder Lyons chooses to show trust in you, then by the oath, I must trust you as well.",
+      "index": "22"
+    },
+    {
+      "topic": "CitSquireMaxsonGreeting3",
+      "topic_text": "You seem nervous, kid. Do I make you nervous?",
+      "emotion": "Neutral 50",
+      "response_text": "Well... yes, sir. If I may speak my will: You do, sort of. We don't have many guests in the Citadel.",
+      "index": "28"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Happy 50",
+      "response_text": "You're my hero, mister. I want to be just like you when I grow up.",
+      "index": "31"
+    },
+    {
+      "topic": "TLSquireMaxson1",
+      "topic_text": "I don't suppose you know anything about the Super Mutants?",
+      "emotion": "Happy 50",
+      "response_text": "Oh yes! I've studied them quite a bit since I've been here!",
+      "index": "35"
+    },
+    {
+      "topic": "TLSquireMaxson2",
+      "topic_text": "What do you make of the Enclave, Squire?",
+      "emotion": "Neutral 50",
+      "response_text": "Y... You're asking me what I think of the Enclave?",
+      "index": "40"
+    },
+    {
+      "topic": "TLSquireMaxson3",
+      "topic_text": "Aren't you a little young for all this?",
+      "emotion": "Neutral 50",
+      "response_text": "Oh, well... You see, I am descended from the great Roger Maxson, founder of our order.",
+      "index": "45"
+    },
+    {
+      "topic": "TLSquireMaxson4",
+      "topic_text": "They don't actually... make you fight. Do they?",
+      "emotion": "Disgust 50",
+      "response_text": "No.{disgusted}",
+      "index": "49"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "I have to go now.",
+      "emotion": "Neutral 50",
+      "response_text": "Very well.",
+      "index": "53"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Neutral 50",
+      "response_text": "H... Hello{nervous}",
+      "index": "55"
+    }
+  ],
+  "combat": [],
+  "description": "Arthur Maxson is a 10 year-old Caucasian Male.\n\nArthur Maxson (MX-001E) is a 10-year-old squire and the last known descendant of Roger Maxson, founder of the Brotherhood of Steel. Raised at the Citadel under the tutelage of Elder Owyn Lyons and trained in combat by Sentinel Sarah Lyons, the young Maxson carries the weight of his lineage and the expectations of becoming the Brotherhood's future leader.\n\nArthur Maxson's Personality: Timid and reserved due to growing up surrounded by adults with no peers his age. Despite his reserved demeanor, Arthur is attentive and eager to learn, though burdened by the high expectations placed upon him as the last of the Maxson line.\n\nArthur Maxson's Backstory: Born in 2267 to Jonathan and Jessica Maxson, Arthur is a direct descendant of Roger Maxson, the Brotherhood of Steel's founder. His father, a high-ranking paladin serving near the New California Republic, was killed in battle during the NCR-Brotherhood War. Following his father's death, his mother sent Arthur east to be raised under Elder Owyn Lyons' tutelage at the Citadel. As the only child at the Brotherhood's headquarters, Arthur grew up isolated, receiving only military training and education without the companionship of peers his age."
+}

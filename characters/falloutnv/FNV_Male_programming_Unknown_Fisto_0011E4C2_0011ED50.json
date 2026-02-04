@@ -1,0 +1,163 @@
+{
+  "name": "Fisto¹",
+  "url": "/wiki/Fisto",
+  "dialogue_name": "VFSFisto.txt",
+  "dialogue_url": "/wiki/VFSFisto.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "0011E4C2",
+  "ref_id": "0011ED50",
+  "editor_id": "VFSFisto",
+  "location": "Cerulean Robotics",
+  "location_url": "/wiki/Cerulean_Robotics",
+  "race": "Protectron",
+  "gender": "Male programming",
+  "affiliation": ":Atomic Wrangler(optional):Snake oil salesman",
+  "role": "Security robot (initially)Robotprostitute(optional)",
+  "detailed_location": ":Cerulean RoboticsAtomic Wrangler(afterWang Dang Atomic Tango):Mojave Wasteland",
+  "voice_actor": "Dante Reid",
+  "special": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 5,
+    "Intelligence": 5,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "level": "8",
+  "tag_skills": [],
+  "misc_skills": [
+    {
+      "Hit Points:": "200"
+    },
+    {
+      "Dam. Threshold:": "8"
+    }
+  ],
+  "karma": "Neutral",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "Fully Integrated Security Technetronic Officer active and reporting for duty.",
+      "index": "1"
+    },
+    {
+      "topic": "VFreeformFreesideVFSFistoTopic000",
+      "topic_text": "That is a mouthful. Let's shorten that to Fisto.",
+      "emotion": "Neutral 50",
+      "response_text": "Yes, sir. Fisto reporting for duty.",
+      "index": "5"
+    },
+    {
+      "topic": "VFreeformFreesideVFSFistoTopic001",
+      "topic_text": "What?! No!",
+      "emotion": "Neutral 50",
+      "response_text": "I am programmed for your pleasure. Please assume the position.",
+      "index": "9"
+    },
+    {
+      "topic": "VFreeformFreesideVFSFistoTopic002",
+      "topic_text": "My pleasure is for you to work at the Atomic Wrangler.",
+      "emotion": "Neutral 50",
+      "response_text": "Fisto will report to the Atomic Wrangler for further orders.",
+      "index": "10"
+    },
+    {
+      "topic": "VFreeformFreesideVFSFistoTopic003",
+      "topic_text": "I suppose I should test you out before I hand you to the Garrets...",
+      "emotion": "Neutral 50",
+      "response_text": "Servos active!",
+      "index": "11"
+    },
+    {
+      "topic": "VFreeformFreesideVFSFistoTopic004",
+      "topic_text": "Report to the Atomic Wrangler. James Garret is your new owner.",
+      "emotion": "Neutral 50",
+      "response_text": "Yes, sir!",
+      "index": "12"
+    },
+    {
+      "topic": "VFreeformFreesideVFSFistoTopic005",
+      "topic_text": "Well, that was... different.",
+      "emotion": "Neutral 50",
+      "response_text": "Are you uncomfortable? My servos may require adjustment.",
+      "index": "14"
+    },
+    {
+      "topic": "VFreeformFreesideVFSFistoTopic006",
+      "topic_text": "That all you've got, robot?",
+      "emotion": "Neutral 50",
+      "response_text": "I will require a hardware and software upgrade to offer enhanced services.",
+      "index": "15"
+    },
+    {
+      "topic": "VFreeformFreesideVFSFistoTopic008",
+      "topic_text": "No, you performed as intended.",
+      "emotion": "Neutral 50",
+      "response_text": "Excellent. Awaiting further orders.",
+      "index": "16"
+    },
+    {
+      "topic": "VFreeformFreesideVFSFistoTopic010",
+      "topic_text": "I can't feel my legs!",
+      "emotion": "Neutral 50",
+      "response_text": "Numbness will subside in several minutes. Awaiting further orders.",
+      "index": "17"
+    },
+    {
+      "topic": "VFreeformFreesideVFSFistoTopic011",
+      "topic_text": "I would like to purchase your services.",
+      "emotion": "Neutral 50",
+      "response_text": "That will be 10 caps, please.",
+      "index": "18"
+    },
+    {
+      "topic": "VFreeformFreesideVFSFistoTopic012",
+      "topic_text": "<Pay 10 caps>",
+      "emotion": "Neutral 50",
+      "response_text": "Thank you. I will meet you in your room.",
+      "index": "20"
+    },
+    {
+      "topic": "VFreeformFreesideVFSFistoTopic014",
+      "topic_text": "Woohoo! <assume the position>",
+      "emotion": "Neutral 50",
+      "response_text": "Servos active!",
+      "index": "21"
+    },
+    {
+      "topic": "VFreeformFreesideVFSFistoTopic015",
+      "topic_text": "Never mind, I would like a refund.",
+      "emotion": "Neutral 50",
+      "response_text": "Very well. Please return if you require further service.",
+      "index": "22"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "VFSFistoBusy",
+      "topic_text": "VFSFistoBusy",
+      "emotion": "Neutral 50",
+      "response_text": "Routine active. Please return later.",
+      "index": "23"
+    },
+    {
+      "topic": "VFSFistoKiller",
+      "topic_text": "VFSFistoKiller",
+      "emotion": "Neutral 50",
+      "response_text": "Exterminate!",
+      "index": "24"
+    }
+  ],
+  "combat": [],
+  "description": "Fisto is a 104 year-old Machine Male.\n\nFisto is a Fully Integrated Security Technetronic Officer, a specialized Protectron model created by Cerulean Robotics prior to the Great War. Standing approximately 7 feet tall with a blue and white chassis, Fisto is equipped with advanced security protocols and a unique voice modulation system. Despite being incomplete, Fisto remains fully functional and maintains its primary directive of security. It is the only intact robot remaining at the Cerulean Robotics facility in 2281.\n\nFisto's Personality: Fisto is dutiful, loyal, and strictly adheres to its programming. It lacks emotional understanding and responds to situations based on security protocols. Fisto is straightforward and literal in its communications, often missing nuances in human behavior, particularly romantic advances. It maintains a formal, robotic demeanor at all times.\n\nFisto's Backstory: Fisto was manufactured by Cerulean Robotics in the early 2070s as a specialized security officer for high-tech facilities. Its advanced neural network made it more capable than standard Protectrons, allowing it to handle complex security protocols and make independent decisions within its parameters. When the Great War came in 2077, Fisto was stationed at the Cerulean Robotics facility, where it remained in standby mode for over a century. By 2281, Fisto has become the last intact robot at the facility, having survived years of neglect and minor damage to its systems."
+}

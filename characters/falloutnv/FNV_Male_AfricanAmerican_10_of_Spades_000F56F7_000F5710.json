@@ -1,0 +1,219 @@
+{
+  "name": "10 of Spades¹",
+  "url": "/wiki/10_of_Spades",
+  "dialogue_name": "1E10ofSpades.txt",
+  "dialogue_url": "/wiki/1E10ofSpades.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000F56F7",
+  "ref_id": "000F5710",
+  "editor_id": "1E10OfSpades",
+  "location": "Camp McCarran",
+  "location_url": "/wiki/Camp_McCarran",
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "NCR ArmyFirst Recon",
+  "role": "First Recon",
+  "detailed_location": "Camp McCarranCamp Forlorn Hope(optional)",
+  "voice_actor": "Emerson Brooks",
+  "special": {
+    "Strength": 5,
+    "Perception": 9,
+    "Endurance": 4,
+    "Charisma": 10,
+    "Intelligence": 6,
+    "Agility": 7,
+    "Luck": 8
+  },
+  "mod_special_values": {
+    "Strength": 5,
+    "Perception": 10,
+    "Endurance": 4,
+    "Charisma": 10,
+    "Intelligence": 6,
+    "Agility": 7,
+    "Luck": 8
+  },
+  "level": "8",
+  "tag_skills": [
+    {
+      "Guns:": "79"
+    },
+    {
+      "Melee Weap.:": "81"
+    },
+    {
+      "Unarmed:": "77"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "165"
+    },
+    {
+      "Dam. Threshold:": "10"
+    }
+  ],
+  "karma": "Neutral",
+  "voice_type": "MaleAdult01DefaultB",
+  "geck_race": "AfricanAmerican",
+  "topics": [
+    {
+      "topic": "Topic000",
+      "topic_text": "Are you all right?",
+      "emotion": "Neutral 50",
+      "response_text": "Oh, yeah. F-fine. Just a little st-st-stutter. Had it since I was a kid. Doesn't stop me from k-kickin' ass.{nonchalant - player just asked if he's okay}",
+      "index": "25"
+    },
+    {
+      "topic": "Topic001",
+      "topic_text": "Are you s-s-sure?",
+      "emotion": "Neutral 50",
+      "response_text": "Hey. No cause for th-that.{player is making fun of him}",
+      "index": "24"
+    },
+    {
+      "topic": "Topic002",
+      "topic_text": "No cause for w-w-w-what?",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah, r-right. That's Brahmin shit. Lucky for you we're on b-b-base, and I can't start trouble with civvies. How 'bout you get l-l-lost?",
+      "index": "26"
+    },
+    {
+      "topic": "Topic003",
+      "topic_text": "You're right. I'm sorry.",
+      "emotion": "Neutral 50",
+      "response_text": "Nah... it's no p-problem. Everybody likes to have a little fun with me. Just shows they l-l-like me. You don't rib somebody you don't like.",
+      "index": "19"
+    },
+    {
+      "topic": "Topic004",
+      "topic_text": "Ten of Spades. Where did you get that name?",
+      "emotion": "Neutral 50",
+      "response_text": "The LT, Gorobets, gave it to me. See, I w-w-wanted to be Ace of Spades. But the LT says, sorry kid, you're t-t-too green. So he calls me Ten instead.{LT = \"ell-tee\"}",
+      "index": "20"
+    },
+    {
+      "topic": "Topic005",
+      "topic_text": "How long have you been a sharpshooter?",
+      "emotion": "Neutral 50",
+      "response_text": "Shit. Long as I can r-r-remember. Had a rifle in my hand since I was three, that's what my dad always says.",
+      "index": "1"
+    },
+    {
+      "topic": "Topic006",
+      "topic_text": "When did you enlist in the military?",
+      "emotion": "Neutral 50",
+      "response_text": "Oh. They recruited me... what, a year ago? Taught me to kick even more ass than before. These guys... they really know how to kick some ass.{Misunderstood the player's initial question - now he gets it}",
+      "index": "8"
+    },
+    {
+      "topic": "Topic007",
+      "topic_text": "What do you do around here?",
+      "emotion": "Neutral 50",
+      "response_text": "Kickin' ass. Mostly kickin' ass. See, we're watching the perimeter right now. Looking for those F-f-fiends to come back.{trying to be cool - player just asked him what he does around here}",
+      "index": "15"
+    },
+    {
+      "topic": "Topic009",
+      "topic_text": "Whatever. Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah. You just walk away. No fool can trump the T-t-ten of Spades!",
+      "index": "7"
+    },
+    {
+      "topic": "Topic010",
+      "topic_text": "If you were unconscious, how could you have done anything?",
+      "emotion": "Neutral 50",
+      "response_text": "Shit. You sound like the LT. I should've w-woken up. I shouldn't have gotten knocked out in the f-first place.{LT = \"ell-tee\", disgusted with himself}",
+      "index": "13"
+    },
+    {
+      "topic": "Topic011",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah, I'll s-s-see you around.",
+      "index": "6"
+    },
+    {
+      "topic": "Topic012",
+      "topic_text": "I heard about what happened to Corporal Betsy.",
+      "emotion": "Surprise 10",
+      "response_text": "The{ELL-TEE}LT t-t-told you about that? Shit. Man, that's sh-sh-shit.{surprised, upset}",
+      "index": "17"
+    },
+    {
+      "topic": "Topic013",
+      "topic_text": "Tell me what happened.",
+      "emotion": "Sad 10",
+      "response_text": "It was m-my fault. See... I was kn-knocked out when it happened. That b-big guy sneaked up on us. I let B-Betsy down.",
+      "index": "5"
+    },
+    {
+      "topic": "Topic015",
+      "topic_text": "Never mind.",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah. The{ELL-TEE}LT shouldn't have b-brought that shit up. Not with civvies, anyway. Ain't right.",
+      "index": "3"
+    },
+    {
+      "topic": "Topic022",
+      "topic_text": "I'm sure it doesn't.",
+      "emotion": "Neutral 50",
+      "response_text": "D-d-damn right.",
+      "index": "29"
+    },
+    {
+      "topic": "Topic023",
+      "topic_text": "I'm trying to convince Corporal Betsy to go see a doctor. Any ideas?",
+      "emotion": "Neutral 50",
+      "response_text": "Oh, b-b-because of what that fuck Cook-Cook did? W-well, it's n-not the same thing, but D-Doc{OOS-uh-NAH-gee}Usanagi helped me with my s-s-stuttering.",
+      "index": "27"
+    },
+    {
+      "topic": "Topic024",
+      "topic_text": "Why do you think you let Betsy down?",
+      "emotion": "Neutral 50",
+      "response_text": "She's my g-g-goddamn partner. See, we work in pairs. We spot for each other. W-watch each other's backs.",
+      "index": "10"
+    },
+    {
+      "topic": "Topic025",
+      "topic_text": "Thanks for the tip.",
+      "emotion": "Neutral 50",
+      "response_text": "N-no problem.",
+      "index": "9"
+    },
+    {
+      "topic": "Topic026",
+      "topic_text": "She... helped? You sure about that?",
+      "emotion": "Neutral 50",
+      "response_text": "Oh, y-yeah. My s-stuttering was w-w-way worse before.",
+      "index": "23"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "Hey, my man! T-t-ten of spades. First Recon sharpshooter. At your s-s-service.{cocky - introducing himself}",
+      "index": "30"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah, I'll{stutter}s-s-see you around.",
+      "index": "41"
+    }
+  ],
+  "combat": [],
+  "description": "10 of Spades is a 19 year-old African American Male.\n\nA young but skilled NCR soldier and the newest member of First Recon Alpha Team, stationed at Camp McCarran. Despite his small stature, he moves with the precision of a seasoned sharpshooter, his rifle an extension of his own body. His African American features are accentuated by a determined gaze that belies his youth.\n\n10 of Spades's Personality: Determined and disciplined beyond his years, with a quiet confidence that occasionally wavers when his stutter surfaces. Deeply respects veterans like Corporal Betsy who took a chance on him. Carries himself with military bearing despite his young age, but can become defensive when his speech impediment is mocked.\n\n10 of Spades's Backstory: Born on a remote farm west of the Mojave Wasteland, 10 of Spades was introduced to firearms at an unusually young age—three years old—by his father, a former NCR ranger. This early training gave him an unnatural proficiency with rifles that led to his recruitment into the NCR Army at age 17. His aptitude for marksmanship earned him a spot in the elite First Recon unit, making him the youngest member of Alpha Team. Growing up in isolation, he developed a stutter that has followed him into his military career, though he's made progress with the help of Doctor Usanagi at Camp McCarran."
+}

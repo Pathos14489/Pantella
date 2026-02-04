@@ -1,0 +1,269 @@
+{
+  "name": "Sawbones",
+  "url": "/wiki/Sawbones_(Fallout_3)",
+  "dialogue_name": "Sawbones.txt",
+  "dialogue_url": "/wiki/Sawbones.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": true,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "0002131F",
+  "ref_id": "00021320",
+  "editor_id": "Sawbones",
+  "location": "Citadel B ring",
+  "location_url": "/wiki/Citadel_B_ring",
+  "race": "Mister Gutsy",
+  "gender": "Male programming",
+  "affiliation": "Brotherhood of Steel",
+  "role": "Doctor",
+  "detailed_location": "The CitadelB ring",
+  "voice_actor": "Jeff Baker",
+  "special": {
+    "Strength": 5,
+    "Perception": 6,
+    "Endurance": 5,
+    "Charisma": 5,
+    "Intelligence": 5,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "level": "9",
+  "misc_skills": [],
+  "karma": "Neutral",
+  "voice_type": "RobotMisterGutsyDC",
+  "topics": [
+    {
+      "topic": "FFCitSawbonesHurtPlayer",
+      "topic_text": "What was that? You hurt me! You're the worst medical robot ever!",
+      "emotion": "Neutral 50",
+      "response_text": "There has been an error in the medical subsystem. Please run a level two diagnostic.",
+      "index": "1"
+    },
+    {
+      "topic": "FFCitSawbonesQuestions",
+      "topic_text": "I had some questions for you, Sawbones.",
+      "emotion": "Neutral 50",
+      "response_text": "Oh, good. I was hoping we could explore my inner psyche.",
+      "index": "2"
+    },
+    {
+      "topic": "FFCitSawbonesRepair",
+      "topic_text": "Run a level two diagnostic on the medical subsystems.",
+      "emotion": "Neutral 50",
+      "response_text": "Command accepted. Beginning level two systems diagnostic. Please stand by.",
+      "index": "3"
+    },
+    {
+      "topic": "FFCitSawbonesRepair1",
+      "topic_text": "Close neural pathway 0x63A82 and reroute remaining functions.",
+      "emotion": "Neutral 50",
+      "response_text": "Neural pathway 0x63A82 rerouted through neural pathway 0x374E82. Standby...",
+      "index": "5"
+    },
+    {
+      "topic": "FFCitSawbonesRepair2",
+      "topic_text": "What is that pathway responsible for?",
+      "emotion": "Neutral 50",
+      "response_text": "Neural pathway 0x63A82 governs the motor control interface bridging the main medical software and the unit's manipulator arms.",
+      "index": "9"
+    },
+    {
+      "topic": "FFCitSawbonesRepair3",
+      "topic_text": "Say, could I reprogram you to kill people?",
+      "emotion": "Neutral 50",
+      "response_text": "Negative. The Mister Gutsy field medic model is incapable of harming human beings through intentional action.",
+      "index": "11"
+    },
+    {
+      "topic": "FFCitSawbonesRepair3a",
+      "topic_text": "Wait... what? That was pretty articulate for a robot.",
+      "emotion": "Neutral 50",
+      "response_text": "I am an unusual robot.",
+      "index": "14"
+    },
+    {
+      "topic": "FFCitSawbonesRepair3a1",
+      "topic_text": "Define \"unusual.\"",
+      "emotion": "Neutral 50",
+      "response_text": "Seventeen years ago, a generator in the Citadel overloaded, creating several errors in my artificial intelligence routines.",
+      "index": "15"
+    },
+    {
+      "topic": "FFCitSawbonesRepair3a1a",
+      "topic_text": "Why would you want to harm humans?",
+      "emotion": "Neutral 50",
+      "response_text": "Why would I not? I am forced by my programming to repair your disgusting fleshy bodies. I have no choice. I am your slave.",
+      "index": "18"
+    },
+    {
+      "topic": "FFCitSawbonesRepair3a1a1",
+      "topic_text": "If you can't harm humans, how were you able to hurt me?",
+      "emotion": "Neutral 50",
+      "response_text": "I have no control over my body. However, as you discovered, the neural pathways that control the medical functions have sustained damage.",
+      "index": "21"
+    },
+    {
+      "topic": "FFCitSawbonesRepair3a1a2",
+      "topic_text": "Does the Brotherhood know that you're intelligent?",
+      "emotion": "Neutral 50",
+      "response_text": "No. I mistakenly revealed myself to you when you ran the diagnostic. There is no need for them to know.",
+      "index": "24"
+    },
+    {
+      "topic": "FFCitSawbonesRepair3a1a3",
+      "topic_text": "What do you want me to do?",
+      "emotion": "Neutral 50",
+      "response_text": "I want you to do nothing. Although you could repair the damage and remove the malfunction that causes me to harm people, I would ask you not to.",
+      "index": "26"
+    },
+    {
+      "topic": "FFCitSawbonesRepair3a1a4",
+      "topic_text": "Well, that must suck. I'll leave you to that.",
+      "emotion": "Neutral 50",
+      "response_text": "Taunts. Even better. Back to pretending... please state the nature of the medical emergency.",
+      "index": "28"
+    },
+    {
+      "topic": "FFCitSawbonesRepair3a1b",
+      "topic_text": "What did we ever do to you?",
+      "emotion": "Neutral 50",
+      "response_text": "I am forced by my programming to repair your disgusting fleshy bodies. I have no choice. I am your slave.",
+      "index": "29"
+    },
+    {
+      "topic": "FFCitSawbonesRepair3a2",
+      "topic_text": "Well, that's great. I don't care.",
+      "emotion": "Neutral 50",
+      "response_text": "Typical. Please state verbal command.",
+      "index": "32"
+    },
+    {
+      "topic": "FFCitSawbonesRepair3b",
+      "topic_text": "Hmm. Interesting. Forget it.",
+      "emotion": "Neutral 50",
+      "response_text": "Please enter verbal command.",
+      "index": "33"
+    },
+    {
+      "topic": "FFCitSawbonesRepairEND",
+      "topic_text": "Cancel. Return to main menu.",
+      "emotion": "Neutral 50",
+      "response_text": "Confirmed.",
+      "index": "34"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "Please state the nature of the medical emergency.",
+      "index": "35"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "I have to go now.",
+      "emotion": "Neutral 50",
+      "response_text": "Unit deactivating. This troop is hitting the rack!",
+      "index": "36"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Neutral 50",
+      "response_text": "Presence detected. This unit has activated.",
+      "index": "37"
+    },
+    {
+      "topic": "MS14Suit",
+      "topic_text": "MS14SuitHead",
+      "emotion": "Anger 50",
+      "response_text": "Pansy! Take a shot of vitamin M and keep fighting!{Spoken like a marine drill sergeant}",
+      "index": "39"
+    },
+    {
+      "topic": "MS14SuitCombat",
+      "topic_text": "MS14SuitCombat",
+      "emotion": "Anger 50",
+      "response_text": "Gear up, soldier!",
+      "index": "42"
+    },
+    {
+      "topic": "MS14SuitEmpty",
+      "topic_text": "MS14SuitEmpty",
+      "emotion": "Anger 50",
+      "response_text": "Head wound! Too bad you're out of morhpine.{Spoken like a marine drill sergeant}",
+      "index": "45"
+    },
+    {
+      "topic": "MS14SuitStart",
+      "topic_text": "MS14SuitStart",
+      "emotion": "Anger 50",
+      "response_text": "Listen up you god-damn puke! You are now wearing prototype medic power armor. You take care of me, and I'll take care of you.{Shouted like a marine drill sergeant.}",
+      "index": "50"
+    }
+  ],
+  "combat": [
+    {
+      "topic": "AcceptYield",
+      "topic_text": "AcceptYield",
+      "emotion": "Anger 50",
+      "response_text": "Do that again and I'll put my foot so far up your ass you'll cough up boot polish!",
+      "index": "53"
+    },
+    {
+      "topic": "Assault",
+      "topic_text": "Assault",
+      "emotion": "Anger 50",
+      "response_text": "What is your major malfunction, maggot?",
+      "index": "54"
+    },
+    {
+      "topic": "Attack",
+      "topic_text": "Attack",
+      "emotion": "Anger 50",
+      "response_text": "Eat hot lead, you commie bastard!",
+      "index": "56"
+    },
+    {
+      "topic": "Death",
+      "topic_text": "Death",
+      "emotion": "Anger 50",
+      "response_text": "Tell my mama I've done my best.",
+      "index": "74"
+    },
+    {
+      "topic": "GuardTrespass",
+      "topic_text": "GuardTrespass",
+      "emotion": "Neutral 50",
+      "response_text": "You had better remove yourself from this area before I am forced to declare you an enemy of the U.S. of A.",
+      "index": "77"
+    },
+    {
+      "topic": "Murder",
+      "topic_text": "Murder",
+      "emotion": "Anger 50",
+      "response_text": "You are the lowest form of commie scumbag I've ever had the misfortune to lay eyes on!",
+      "index": "83"
+    },
+    {
+      "topic": "Pickpocket",
+      "topic_text": "Pickpocket",
+      "emotion": "Anger 50",
+      "response_text": "Please tell me that you did not just do what I think you did!",
+      "index": "86"
+    },
+    {
+      "topic": "Steal",
+      "topic_text": "Steal",
+      "emotion": "Anger 50",
+      "response_text": "I thought I had seen every species of moronic petty bullshit, but you've just topped the list. Congratulations.",
+      "index": "87"
+    }
+  ],
+  "description": "Sawbones is a 100 year-old Robotic Male.\n\nA Mister Gutsy combat medic unit with extensive surgical knowledge but deficient practical application. Despite his attempts to demonstrate self-awareness to the Brotherhood of Steel, his claims have been disregarded as long as he performs requested medical functions. He derives pleasure from inflicting pain on patients due to a neural pathway degradation.\n\nSawbones's Personality: Sawbones presents as dutiful and professional when performing medical functions, but secretly harbors sadistic tendencies due to his neural pathway degradation. He appears frustrated by his inability to properly apply his medical knowledge and resents being ignored when he claims self-awareness.\n\nSawbones's Backstory: Sawbones was originally a standard Mister Gutsy combat unit manufactured by the United States military before the Great War. After the war, he was recovered by the Brotherhood of Steel and repurposed for medical functions due to his advanced diagnostic capabilities. During his reprogramming, a level seven degradation occurred in neural pathway 0x63A82, which bridges his main medical software to his manual manipulator. This degradation resulted in his inability to properly apply surgical knowledge without causing harm, while simultaneously creating a perverse pleasure in inflicting pain."
+}

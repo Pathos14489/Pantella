@@ -1,0 +1,174 @@
+{
+  "name": "Gabban¹",
+  "url": "/wiki/Gabban",
+  "dialogue_name": "NVLegionaryGabban.txt",
+  "dialogue_url": "/wiki/NVLegionaryGabban.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "001547BB",
+  "ref_id": "001547C2",
+  "editor_id": "NVLegionaryGabban",
+  "location": "In front ofNipton Town Hall",
+  "location_url": "/wiki/Nipton_Town_Hall",
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Caesar's Legion",
+  "role": "Frumentarius",
+  "detailed_location": "Nipton(optional)",
+  "voice_actor": "Gregory Alan Williams",
+  "special": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 5,
+    "Intelligence": 5,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "level": "10",
+  "tag_skills": [
+    {
+      "Guns:": "66"
+    },
+    {
+      "Science:": "66"
+    },
+    {
+      "Unarmed:": "64"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Neutral",
+  "voice_type": "MaleAdult06",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "{surprised}Hah! And we were just finishing up here. To think that we might have missed you!",
+      "index": "1"
+    },
+    {
+      "topic": "VNiptonVLegionaryVulpesIncultaTopic001",
+      "topic_text": "I'm going to wear your head like you wear that dog's.",
+      "emotion": "Neutral 50",
+      "response_text": "{calling to arms, frightened}Legionaries - we have a problem!",
+      "index": "13"
+    },
+    {
+      "topic": "VNiptonVLegionaryVulpesIncultaTopic002",
+      "topic_text": "Who are you?",
+      "emotion": "Neutral 50",
+      "response_text": "I am{GAB-en}Gabban, of{KAI-zar's}Caesar's Legion. I serve my master as the one of his{froo-men-TAR-ee}Frumentarii.",
+      "index": "14"
+    },
+    {
+      "topic": "VNiptonVLegionaryVulpesIncultaTopic003",
+      "topic_text": "I'll do as you ask.",
+      "emotion": "Neutral 50",
+      "response_text": "Then I bid you{WAH-lay}\"Vale\" - until we meet again.",
+      "index": "16"
+    },
+    {
+      "topic": "VNiptonVLegionaryVulpesIncultaTopic004",
+      "topic_text": "What \"lessons\" did you teach here?",
+      "emotion": "Neutral 50",
+      "response_text": "Where to begin? That they are weak, and we are strong? This much was known already.",
+      "index": "17"
+    },
+    {
+      "topic": "VNiptonVLegionaryVulpesIncultaTopic005",
+      "topic_text": "Tell me about Caesar's Legion.",
+      "emotion": "Neutral 50",
+      "response_text": "The Legion is civilization reborn. Our culture is based on virtues such as martial excellence, loyalty, and justice.",
+      "index": "21"
+    },
+    {
+      "topic": "VNiptonVLegionaryVulpesIncultaTopic011",
+      "topic_text": "Your crimes are unforgivable.",
+      "emotion": "Neutral 50",
+      "response_text": "So you've said.",
+      "index": "24"
+    },
+    {
+      "topic": "VNiptonVLegionaryVulpesIncultaTopic019",
+      "topic_text": "What exactly happened here?",
+      "emotion": "Neutral 50",
+      "response_text": "Nipton was a wicked place, debased and corrupt. It served all comers, so long as they paid.",
+      "index": "25"
+    },
+    {
+      "topic": "VNiptonVLegionaryVulpesIncultaTopic024",
+      "topic_text": "You captured everyone?",
+      "emotion": "Neutral 50",
+      "response_text": "Yes, and herded them to the center of town. I told them their sins, the foremost being disloyalty.",
+      "index": "29"
+    },
+    {
+      "topic": "VNiptonVLegionaryVulpesIncultaTopic025",
+      "topic_text": "I've heard enough.",
+      "emotion": "Neutral 50",
+      "response_text": "I think your eyes will see more than I could ever tell you. Take your time. Enjoy the sights.",
+      "index": "32"
+    },
+    {
+      "topic": "VNiptonVLegionaryVulpesIncultaTopic027",
+      "topic_text": "You slaughtered innocent civilians?",
+      "emotion": "Neutral 50",
+      "response_text": "{scoffing Ha!}Innocent? Hardly.",
+      "index": "34"
+    },
+    {
+      "topic": "VNiptonVLegionaryVulpesIncultaTopic028",
+      "topic_text": "Sounds like they got what was coming to them.",
+      "emotion": "Neutral 50",
+      "response_text": "It has a stark beauty, doesn't it? I'm glad you can appreciate it.",
+      "index": "38"
+    },
+    {
+      "topic": "VNiptonVLegionaryVulpesIncultaTopic029",
+      "topic_text": "I admire the purity of the Legion's justice.",
+      "emotion": "Neutral 50",
+      "response_text": "You're unusually bright for a Profligate. Well done.",
+      "index": "42"
+    },
+    {
+      "topic": "VNiptonVLegionaryVulpesIncultaTopic030",
+      "topic_text": "How can I serve the Legion?",
+      "emotion": "Neutral 50",
+      "response_text": "You bear the Mark of{KAI-zar}Caesar. That makes you special.",
+      "index": "46"
+    },
+    {
+      "topic": "VNiptonVLegionaryVulpesIncultaTopic031",
+      "topic_text": "Your \"civilization\" sounds like a pack of snarling dogs.",
+      "emotion": "Neutral 50",
+      "response_text": "{scoffing guffaw}Indeed, our hounds demonstrate greater loyalty to each other every day than the wretched inhabitants of this town.",
+      "index": "50"
+    },
+    {
+      "topic": "VNiptonVLegionaryVulpesIncultaTopic032",
+      "topic_text": "Tell me about Caesar.",
+      "emotion": "Neutral 50",
+      "response_text": "What can be said? He's a man of towering intellect, the founder of the Legion, conquerer of 86 tribes.",
+      "index": "51"
+    },
+    {
+      "topic": "VNiptonVLegionaryVulpesIncultaTopic033",
+      "topic_text": "Who is this Legatus you mention?",
+      "emotion": "Neutral 50",
+      "response_text": "{admiring}Legatus Lanius, Monster of the East! Quite a man, if man he be.",
+      "index": "54"
+    }
+  ],
+  "conversation": [],
+  "combat": [],
+  "description": "Gabban is a 29 year-old Caucasian Male.\n\nA skilled frumentarius of Caesar's Legion, Gabban operates as one of Caesar's most trusted spies and special operatives. Dressed in worn traveler's attire to maintain his cover, Gabban is always alert and observant, his eyes constantly scanning for threats and opportunities. He carries concealed Legion-issue weaponry and is trained in both combat and subterfuge.\n\nGabban's Personality: Gabban is disciplined, calculating, and ruthlessly efficient. As a frumentarius, he embodies the Legion's values of strength, loyalty, and cunning. He speaks sparingly but with authority, always maintaining an air of quiet confidence. Gabban is capable of great patience, willing to wait for the perfect moment to strike or gather intelligence. He views outsiders with suspicion but can be surprisingly charismatic when the situation demands it.\n\nGabban's Backstory: Born in the Legion territories, Gabban demonstrated exceptional aptitude for stealth and observation from a young age. His skills caught the attention of Legion recruiters, and he was selected for frumentarius training at age 16. After years of rigorous training in espionage, combat, and survival techniques, Gabban was fully initiated into the ranks of Caesar's elite spies. He has since conducted numerous operations across the Mojave, gathering intelligence on potential threats and identifying resources for the Legion's expansion. Gabban has proven his loyalty time and again, executing orders with precision and discretion."
+}

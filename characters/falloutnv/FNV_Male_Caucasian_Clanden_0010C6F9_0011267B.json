@@ -16,27 +16,6 @@
   "editor_id": "VMS21Clanden",
   "location": "Gomorrah suites",
   "location_url": "/wiki/Gomorrah#Suites_level",
-  "descriptions": [
-    "Clanden is a mercenary; a proficient bomb maker and snuff pornographer contracted by the Omertas for their plan to take over the New Vegas Strip. He lives in a suite at Gomorrah in 2281.",
-    "To outsiders, Clanden is friendly and welcoming, offering help to anyone who approaches him and wishing them success in their gambling.",
-    "In truth, Clanden is anything but innocuous. A special guest of the leaders of the Omertas, Nero and Big Sal, Clanden's expertise is needed to carry out an attack on the Strip for the Legion when they attack Hoover Dam, so that they can distract the NCR Army. Clanden's expertise with explosives allows the Omertas to potentially engineer a big enough attack to force the NCR to respond and weaken their positions at Camp McCarran. Since he has to engineer a way to kill many people in a large area relatively quickly, he settled on a gas attack, using chlorine obtained from the Ultra-Luxe.",
-    "In return for his services, Clanden is provided with caps, a luxury suite,",
-    "There are several cut alternatives for how to deal with Clanden when helping Cachino during How Little We Know.",
-    "This was a pair of additional options for dealing with Clanden if the snuff tapes were obtained. They would only become available if the tapes were brought to Cachino first before being shown to Clanden, and they correspond to Cachino's suggestion to use the tapes to lure Clanden somewhere he can be easily disposed of (options which do not exist outside of this cut content).",
-    "Clanden could then be asked about his \"exotic tastes\" in women, after which there would be two skill/perk checks. If passed, he would take the player character to his \"playroom\" (the locked room in the Suites level with the dead Gomorrah prostitute) before turning hostile, at which point he could then be killed without any of the Omertas turning hostile (and in fact, they could even assist the player in killing him).",
-    "It was intended that Clanden would use a combat knife to attack here instead of his revolver, and that he would also immediately hit the player once when combat started, but this is commented out in his scripting.",
-    "In-game, this path is still fully implemented and is only blocked by a condition checking for quest objective 33 (investigate Clanden) being disabled. As such, it can be made available by using the console command setobjectivedisplayed VMS21 33 0 after showing Cachino the snuff tapes. To avoid issues, after talking to Clanden and passing either check, use the console command setobjectivedisplayed VMS21 33 1 to re-enable the investigation objective.",
-    "The two checks in question are a Speech 45 check or a Black Widow check,  with the context differing depending on the check:",
-    "In this path, the player character lies that they've been sent by the Omertas deliver a new prostitute to Clanden's \"playroom.\" Clanden excitedly follows until discovering the truth, at which point he attacks the player character out of anger.",
-    "In this path, the player character \"volunteers\" to be Clanden's new \"playtoy.\" Once entering the \"playroom,\" he would then attack the player character as part of his sadistic \"exotic tastes.\"",
-    "Like mentioned above, having the snuff tapes and also examining the dead Gomorrah prostitute in Clanden's \"playroom\" with Medicine 35+ would make it possible for the Courier to tell Captain Marie Pappas in the NCR Military Police HQ about a murder at Gomorrah. However, in-game, Pappas cannot be told that Clanden is the killer; even when shown the snuff tapes, the only option is to say the person in the tapes is unknown. The option to say the person is Clanden exists, but is cut due to the relevant quest objective, index 71, being unused:",
-    "Objective 71 was supposed to become active after showing the snuff tapes to Cachino. Afterwards, when talking to Captain Pappas (and also having evidence of the murder through the Medicine check above), the full conversation would be available:",
-    "After doing this, walking through the Gomorrah lobby would trigger a scripted event in which four NCR MPs enter Gomorrah, head to Clanden's room in the suites, and arrest him:",
-    "After this, Clanden would be taken away from Gomorrah by the MPs. For the rest of the game, he would then be found in an inaccessible prison cell in the NCR Military Police HQ. Clanden has no further dialogue with the player about this scenario (if spoken to, he would still say his generic lines). He will not attempt to escape even if his cell door is opened. The NCR will not turn hostile if he is killed in his jail cell.",
-    "On the other hand, Cachino still has a unique line for the player reporting back to him:",
-    "Afer this, the quest would continue as usual. This option is fully implemented apart from the initial condition blocking it; to access it, simply use the console command setobjectivedisplayed VMS21 71 1.",
-    "PC Playstation 3 Xbox 360 The Gomorrah prostitute may be found alive, standing inside the locked room. This appears to be the case especially if the player character has picked the lock to the room instead of opening it with Clanden's looted key. She will greet the Courier, utter random phrases, and even wander out into the hallway. Attempting to speak with the \"corpse\" will still prompt for the Medical skill check. She will still respawn even after being completely dismembered. "
-  ],
   "race": "Human",
   "gender": "Male",
   "affiliation": "Omertas",
@@ -317,5 +296,6 @@
       "response_text": "{Cachino:}Said he'd always wanted to sleep with the Lakelurks.",
       "index": "73"
     }
-  ]
+  ],
+  "description": "Clanden is a 48 year-old Caucasian Male.\n\nClanden is a mercenary specializing in explosives and snuff film production, currently contracted by the Omertas to assist in their plan to take over the New Vegas Strip. He resides in a luxury suite at Gomorrah, where he maintains a facade of friendliness to outsiders while carrying out his sinister activities.\n\nClanden's Personality: Outwardly friendly and welcoming, Clanden presents himself as helpful to newcomers and wishes them success in their endeavors. In reality, he is a sadistic individual who takes pleasure in both creating explosive devices and producing violent films. He maintains a charming demeanor to mask his true nature and criminal activities.\n\nClanden's Backstory: Clanden has spent years honing his skills as an explosives expert and filmmaker, eventually becoming involved with the criminal underworld of the Mojave Wasteland. His expertise caught the attention of the Omerta leadership, who contracted him for their grand scheme to destabilize the NCR's presence at Hoover Dam. In exchange for his services, Clanden receives caps and maintains a luxurious suite at Gomorrah, which also serves as his base for producing his disturbing films."
 }

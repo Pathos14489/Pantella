@@ -1,0 +1,177 @@
+{
+  "name": "Primm Slim",
+  "url": "/wiki/Primm_Slim",
+  "dialogue_name": "PrimmSlim.txt",
+  "dialogue_url": "/wiki/PrimmSlim.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000E2886",
+  "ref_id": "000E288C",
+  "editor_id": "PrimmSlim",
+  "location": "Vicki & Vance Casino",
+  "location_url": "/wiki/Vicki_%26_Vance_Casino",
+  "race": "Protectron",
+  "affiliation": "Vikki and Vance Casino",
+  "role": "Casino guideSheriff (optional)",
+  "detailed_location": "Primm",
+  "voice_actor": "Avery Kidd Waddell",
+  "special": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 5,
+    "Intelligence": 5,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "level": "1 → 45 → 75 (DLCs only) (Player Level x 1.5)",
+  "tag_skills": [],
+  "misc_skills": [],
+  "karma": "Good",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "Howdy pardner! Welcome to the Vikki and Vance Casino and Museum.",
+      "index": "1"
+    },
+    {
+      "topic": "PrimmSlimAboutBisonSteveTell me about the Bison Steve.",
+      "topic_text": "What about the Bison Steve hotel, across the street?",
+      "emotion": "Neutral 50",
+      "response_text": "{clears throat}The Bison Steve is one of Primm's less-impressive casino hotels. I'd steer clear of that place, pardner, if I were you.",
+      "index": "4"
+    },
+    {
+      "topic": "PrimmSlimAboutCasinoMuseum",
+      "topic_text": "What is this place?",
+      "emotion": "Neutral 50",
+      "response_text": "Why, this is the Vikki and Vance Casino and Museum - Primm's Primm-eer tourist attraction and resort destination! Yeehaw!",
+      "index": "6"
+    },
+    {
+      "topic": "PrimmSlimAboutHimself",
+      "topic_text": "Who are you?",
+      "emotion": "Neutral 50",
+      "response_text": "Primm Slim at your service! Authentic cowpoke and official spokesbot of the Vikki and Vance Casino and Museum! Yeehaw!",
+      "index": "7"
+    },
+    {
+      "topic": "PrimmSlimAboutPrimmTell me about Primm",
+      "topic_text": "Tell me about Primm.",
+      "emotion": "Neutral 50",
+      "response_text": "Primm is a thriving resort community located in Clark County, Nevada, right along Interstate 15.",
+      "index": "8"
+    },
+    {
+      "topic": "PrimmSlimGunDid you know that Vance's gun is missing?",
+      "topic_text": "Did you know that Vance's gun is missing?",
+      "emotion": "Neutral 50",
+      "response_text": "Just mosey on over to the display case and you'll see it plain as day. Quite a piece, that gun. Mint condition. Never fired.",
+      "index": "11"
+    },
+    {
+      "topic": "PrimmSlimGunMissingNo, the gun is missing.",
+      "topic_text": "The display case is empty. The gun's missing.",
+      "emotion": "Neutral 50",
+      "response_text": "Have you gone loco, pardner? I can see the gun with my own three photo sensors from where I'm standing right now.",
+      "index": "12"
+    },
+    {
+      "topic": "PrimmSlimGunNo",
+      "topic_text": "I haven't found the gun.",
+      "emotion": "Neutral 50",
+      "response_text": "Dang it. I hope you'll keep looking.",
+      "index": "15"
+    },
+    {
+      "topic": "PrimmSlimGunScienceWhat happened to Vance's Gun?",
+      "topic_text": "Scan your data registry. You've been hacked.",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] <Primm Slim buzzes and whirs while he reformats.>",
+      "index": "16"
+    },
+    {
+      "topic": "PrimmSlimGunYes",
+      "topic_text": "I found the gun. Here it is.",
+      "emotion": "Neutral 50",
+      "response_text": "Those thieves had some gall, stealing from a museum dedicated to romanticizing a couple of criminals!",
+      "index": "19"
+    },
+    {
+      "topic": "PrimmSlimSheriffReprogram Primm Slim to serve as Primm's Sheriff.",
+      "topic_text": "<Reprogram Primm Slim to serve as Primm's Sheriff.>",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] Bzzzt... Law Enforcement Protocols reinstated, pardner. Initializing use of force authorization... authorization found. Yee-haw!",
+      "index": "21"
+    },
+    {
+      "topic": "PrimmSlimSheriff2Reprogram Primm Slim to serve as Primm's Sheriff using parts.",
+      "topic_text": "<Reprogram Primm Slim to serve as Primm's Sheriff using 3 fission batteries and 4 conductors.>",
+      "emotion": "Neutral 50",
+      "response_text": "Bzzzt... Law Enforcement Protocols reinstated, pardner. Initializing use of force authorization... authorization found. Yee-haw!",
+      "index": "23"
+    },
+    {
+      "topic": "PrimmSlimSomethingElseOk then, let's talk about something else.",
+      "topic_text": "Let's talk about something else.",
+      "emotion": "Neutral 50",
+      "response_text": "Yessir, you just tell ol' Primm Slim what you'd like to know.",
+      "index": "25"
+    },
+    {
+      "topic": "PrimmSlimVVHistoryNo",
+      "topic_text": "Another time, maybe.",
+      "emotion": "Neutral 50",
+      "response_text": "Have it your way, pardner. Maybe work up your curiosity by having a look at thrilling exhibits like the genuine Death Car and Vance's machine gun!",
+      "index": "27"
+    },
+    {
+      "topic": "PrimmSlimVVHistoryYes",
+      "topic_text": "Tell me the whole story of Vikki and Vance.",
+      "emotion": "Neutral 50",
+      "response_text": "Yahoo! I ain't had a chance to tell their tale in a mess of years.",
+      "index": "28"
+    },
+    {
+      "topic": "PrimmSlimWhoIsVikiAndVanceTell me about the Vikki and Vance",
+      "topic_text": "Who were Vikki and Vance?",
+      "emotion": "Neutral 50",
+      "response_text": "Where have you been, pardner? Hiding under a rock?",
+      "index": "48"
+    },
+    {
+      "topic": "VMS02AnyNPCAboutNCRAny idea what the NCR's up to in Primm?",
+      "topic_text": "Do you know if the NCR has any plans to attack the prison north of here?",
+      "emotion": "Neutral 50",
+      "response_text": "There's a prison north of here? Well, don't go picking up any hitchhikers and you should be all right.",
+      "index": "51"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Happy trails partner.",
+      "index": "52"
+    }
+  ],
+  "combat": [
+    {
+      "topic": "RNVNewsStory2",
+      "topic_text": "RNVNewsStoryLine2",
+      "emotion": "Neutral 50",
+      "response_text": "{Primm Slim:}Loading Public Appeasement Oration... complete. Howdy... citizens. How about a yee-haw for law and order in the fine town of ERROR: TOKEN NOT FOUND?",
+      "index": "53"
+    }
+  ],
+  "description": "Primm Slim is a 104 year-old Standard Protectron (Cowpoke Custom) Male.\n\nA pre-War Protectron robot retrofitted to serve as an authentic 'cowpoke' for the Vikki and Vance Casino in Primm. Purchased sometime before the Great War in 2077, Slim was customized by the casino's owner to act as its official spokesbot. Despite the nuclear apocalypse and decades of inactivity, Slim remarkably maintained his functionality. New residents of Primm eventually restored him to working order, allowing him to resume his post in the casino.\n\nPrimm Slim's Personality: Friendly and enthusiastic about his role as a casino guide. Slim maintains his programmed 'cowpoke' persona with robotic precision, always eager to share information about the Vikki and Vance Casino and its history. He takes pride in his perfect pre-War programming and considers himself an authentic piece of the Old West experience.\n\nPrimm Slim's Backstory: Primm Slim was originally a standard Protectron unit purchased by the owner of the Vikki and Vance Casino sometime prior to October 23rd, 2077. He was extensively modified to embody the 'authentic cowpoke' aesthetic and programmed to serve as the casino's official spokesbot. When the Great War came, Slim remained inactive in the casino for decades, remarkably avoiding significant degradation. In the years following the war, new settlers in Primm discovered and restored the robot to working condition. He has since resumed his duties at the casino, becoming a beloved fixture of the town's landscape."
+}

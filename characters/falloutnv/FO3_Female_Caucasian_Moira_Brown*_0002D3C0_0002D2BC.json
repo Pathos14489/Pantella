@@ -1,0 +1,1083 @@
+{
+  "name": "Moira Brown*",
+  "url": "/wiki/Moira_Brown",
+  "dialogue_name": "MoiraBrown.txt",
+  "dialogue_url": "/wiki/MoiraBrown.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": true,
+  "can_repair": true,
+  "can_be_companion": false,
+  "base_id": "0002D3C0",
+  "ref_id": "0002D2BC",
+  "editor_id": "MoiraBrown",
+  "location": "Underworld",
+  "location_url": "/wiki/Underworld",
+  "race": "HumanGhoul(optional)",
+  "gender": "Female",
+  "affiliation": "Megaton",
+  "role": "Store ownerScientistAuthor",
+  "detailed_location": "Craterside SupplyinMegatonUnderworld(optional)",
+  "voice_actor": "Karen Carbone",
+  "special": {
+    "Strength": 4,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 6,
+    "Intelligence": 7,
+    "Agility": 4,
+    "Luck": 5
+  },
+  "mod_special_values": {
+    "Strength": 4,
+    "Perception": 8,
+    "Endurance": 3,
+    "Charisma": 8,
+    "Intelligence": 7,
+    "Agility": 12,
+    "Luck": 5
+  },
+  "misc_skills": [],
+  "karma": "Good",
+  "voice_type": "FemaleUniqueMoira",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "Could you come back in an hour or two? Even geniuses need their sleep.{very sleepy}",
+      "index": "1"
+    },
+    {
+      "topic": "HD01HouseStuff",
+      "topic_text": "I hear you're the person to see about buying stuff for my house.",
+      "emotion": "Neutral 50",
+      "response_text": "Good to see that old house finally found an owner.",
+      "index": "48"
+    },
+    {
+      "topic": "HD01HouseStuff01",
+      "topic_text": "Can you tell me what the items do?",
+      "emotion": "Neutral 50",
+      "response_text": "Of course I can!",
+      "index": "51"
+    },
+    {
+      "topic": "HD01HouseStuff02",
+      "topic_text": "Tell me about your Themes.",
+      "emotion": "Happy 60",
+      "response_text": "Some people don't like living in a boring old house.",
+      "index": "53"
+    },
+    {
+      "topic": "HD01HouseStuff02Clear",
+      "topic_text": "I'd like to change my house's Theme.",
+      "emotion": "Neutral 50",
+      "response_text": "Okay, consider it done. Anything else?",
+      "index": "56"
+    },
+    {
+      "topic": "HD01HouseStuff03",
+      "topic_text": "Okay, let me take a look at your stuff.",
+      "emotion": "Happy 80",
+      "response_text": "Sure thing!",
+      "index": "57"
+    },
+    {
+      "topic": "HD01HouseStuff04",
+      "topic_text": "Enough about the house. Let's talk about something else.",
+      "emotion": "Neutral 50",
+      "response_text": "Okay.",
+      "index": "58"
+    },
+    {
+      "topic": "HD01HouseStuffSub01",
+      "topic_text": "Tell me about the My First Infirmary.",
+      "emotion": "Neutral 50",
+      "response_text": "If you're wounded or you've hurt one of your limbs badly, this setup will allow you to heal it up as good as any other Wasteland Doctor.",
+      "index": "59"
+    },
+    {
+      "topic": "HD01HouseStuffSub02",
+      "topic_text": "Tell me about the Jukebox.",
+      "emotion": "Neutral 50",
+      "response_text": "If you feel like filling your place with a whole bunch of music, switch this beautiful pre-war antique on.",
+      "index": "60"
+    },
+    {
+      "topic": "HD01HouseStuffSub03",
+      "topic_text": "Tell me about the My First Laboratory.",
+      "emotion": "Neutral 50",
+      "response_text": "This setup is great for experimenting and coming up with all sorts of useful concoctions.",
+      "index": "61"
+    },
+    {
+      "topic": "HD01HouseStuffSub04",
+      "topic_text": "Tell me about the Nuka-Cola Machine.",
+      "emotion": "Neutral 50",
+      "response_text": "One push of a button and you can get your hands on an Ice Cold Nuka-Cola!",
+      "index": "63"
+    },
+    {
+      "topic": "HD01HouseStuffSub05",
+      "topic_text": "Tell me about the Workbench.",
+      "emotion": "Neutral 50",
+      "response_text": "If you feel like tinkering and want to build some custom gizmos, this setup will help you do it.",
+      "index": "64"
+    },
+    {
+      "topic": "HD01HouseStuffSub08",
+      "topic_text": "That's enough about the items.",
+      "emotion": "Neutral 50",
+      "response_text": "Sounds good.",
+      "index": "65"
+    },
+    {
+      "topic": "HD01HouseTheme01",
+      "topic_text": "I'm interested in the Vault Theme.",
+      "emotion": "Neutral 50",
+      "response_text": "Feeling a bit homesick are we?",
+      "index": "66"
+    },
+    {
+      "topic": "HD01HouseTheme02",
+      "topic_text": "I'm interested in the Raider Theme.",
+      "emotion": "Neutral 50",
+      "response_text": "Into the blood and guts look, eh?",
+      "index": "68"
+    },
+    {
+      "topic": "HD01HouseTheme03",
+      "topic_text": "I'm interested in the Wasteland Explorer Theme.",
+      "emotion": "Neutral 50",
+      "response_text": "Longing for the great outdoors are we?",
+      "index": "70"
+    },
+    {
+      "topic": "HD01HouseTheme04",
+      "topic_text": "I'm interested in the Science Theme.",
+      "emotion": "Neutral 50",
+      "response_text": "You're the intellectual type, eh?",
+      "index": "72"
+    },
+    {
+      "topic": "HD01HouseTheme05",
+      "topic_text": "I'm interested in the Pre-War Theme.",
+      "emotion": "Neutral 50",
+      "response_text": "Feeling a bit nostalgic are we?",
+      "index": "74"
+    },
+    {
+      "topic": "HD01HouseTheme05a",
+      "topic_text": "I'm interested in the Love Machine Theme.",
+      "emotion": "Happy 70",
+      "response_text": "Feeling a bit anxious are we?",
+      "index": "76"
+    },
+    {
+      "topic": "HD01HouseTheme06",
+      "topic_text": "Let me ask about something else.",
+      "emotion": "Neutral 50",
+      "response_text": "Sure.",
+      "index": "78"
+    },
+    {
+      "topic": "HD01HouseThemeNo",
+      "topic_text": "Actually, let me pick another Theme.",
+      "emotion": "Happy 50",
+      "response_text": "Go right ahead!",
+      "index": "79"
+    },
+    {
+      "topic": "HD01HouseThemeYes",
+      "topic_text": "Sounds good to me.",
+      "emotion": "Neutral 50",
+      "response_text": "Well then, let's make a deal!",
+      "index": "80"
+    },
+    {
+      "topic": "LamplightHolotape1",
+      "topic_text": "LamplightHolotape1",
+      "emotion": "Neutral 50",
+      "response_text": "My name is Carrie Delaney. I teach fourth grade at the Early Dawn Elementary School, in Washington, D.C.{doing an audio journal, and really shaken up/afraid}",
+      "index": "81"
+    },
+    {
+      "topic": "LamplightHolotape2",
+      "topic_text": "LamplightHolotape2",
+      "emotion": "Neutral 50",
+      "response_text": "We're all okay. If you can call being stuck in a cave with 82 terrified kids okay. Alive, anyway. But I don't know what the hell we're going to do.{doing an audio journal, and really shaken up/afraid}",
+      "index": "85"
+    },
+    {
+      "topic": "MS03AboutMinefield",
+      "topic_text": "What do you know about Minefield?",
+      "emotion": "Fear 40",
+      "response_text": "They say it was a town called Ridgefield, until slavers cleared it out. Now, it's supposedly cursed, and just a deathtrap to visitors.{Spooky, like telling a campfire story}",
+      "index": "89"
+    },
+    {
+      "topic": "MS03AlreadyDid1MS03AlreadyDid",
+      "topic_text": "No need to test that theory. I've already found food and medicine there.",
+      "emotion": "Surprise 50",
+      "response_text": "I guess you've been around a bit! So, tell me about what you found!",
+      "index": "91"
+    },
+    {
+      "topic": "MS03AlreadyDid2",
+      "topic_text": "I'm already incredibly irradiated. Can't you tell?",
+      "emotion": "Surprise 50",
+      "response_text": "Really? Oh, how convenient!",
+      "index": "93"
+    },
+    {
+      "topic": "MS03AlreadyDid3",
+      "topic_text": "No need to bother testing this. I've already been to Minefield.",
+      "emotion": "Surprise 50",
+      "response_text": "Really? Wow, tell me all about it? Did you get blown up?",
+      "index": "97"
+    },
+    {
+      "topic": "MS03DamageMedicine1",
+      "topic_text": "Why get myself hurt? I'm a good enough doctor to explain this part for you.",
+      "emotion": "Sad 25",
+      "response_text": "That'll save a lot of time and effort. Oh, and blood, on your part. A real-world example might help more, but I won't turn down the help!",
+      "index": "98"
+    },
+    {
+      "topic": "MS03GuideExplanationA",
+      "topic_text": "Hold on. I need to know more before I agree to anything.",
+      "emotion": "Neutral 50",
+      "response_text": "Well, it's a dangerous place out there in the Wastes, right? People could really use a compilation of good advice. Like a Wasteland survival guide!",
+      "index": "100"
+    },
+    {
+      "topic": "MS03GuideExplanationB",
+      "topic_text": "Wait. How? I mean, how many people even read anymore?",
+      "emotion": "Happy 75",
+      "response_text": "Anyone who wants to learn from my Wasteland survival guide, that's who! And for that, I need a research assistant who can test my ideas for the book.",
+      "index": "103"
+    },
+    {
+      "topic": "MS03GuideGreed",
+      "topic_text": "Pay? What sort of pay? And what sort of work?",
+      "emotion": "Neutral 10",
+      "response_text": "Let's see, dealing with radiation, testing an experimental device, and I won't lie, it may include some reading. That sort of stuff, you know?",
+      "index": "106"
+    },
+    {
+      "topic": "MS03GuideGreed2",
+      "topic_text": "It's tempting, but I'll have to pass.",
+      "emotion": "Sad 25",
+      "response_text": "Well, you do what you have to, I suppose. But the offer'll still be open, if you change your mind.",
+      "index": "110"
+    },
+    {
+      "topic": "MS03GuideGreedAccept",
+      "topic_text": "Sounds good. Tell me more.",
+      "emotion": "Happy 50",
+      "response_text": "Well, it's a dangerous place out there in the Wastes, right? People could really use a compilation of good advice. Like a Wasteland Survival Guide!",
+      "index": "113"
+    },
+    {
+      "topic": "MS03GuideRefusal",
+      "topic_text": "Not interested. I'm just here to do some shopping.",
+      "emotion": "Sad 25",
+      "response_text": "Well, okay, I guess. But I promise, you'll love it when you hear about the guide. Maybe later, huh?",
+      "index": "116"
+    },
+    {
+      "topic": "MS03MoiraBookIntro",
+      "topic_text": "What's this book you're working on?",
+      "emotion": "Happy 50",
+      "response_text": "Well, it's a dangerous place out there in the Wastes, right? People could really use a compilation of good advice. Like a Wasteland Survival Guide!",
+      "index": "117"
+    },
+    {
+      "topic": "MS03MoiraCurrentWork",
+      "topic_text": "How's the book coming?",
+      "emotion": "Happy 25",
+      "response_text": "I'm still working out the kinks in the first chapter. I'm calling it, \"Survive.\"",
+      "index": "124"
+    },
+    {
+      "topic": "MS03MoiraGhoul1AThe bomb in town just blew up! You're lucky to be alive!",
+      "topic_text": "The bomb in town just blew up. You're lucky to be alive!",
+      "emotion": "Surprise 75",
+      "response_text": "Wow! Who would have thought a town built around a bomb could be so dangerous?{Honestly surprised, and naive as hell.}",
+      "index": "141"
+    },
+    {
+      "topic": "MS03MoiraGhoul1B",
+      "topic_text": "I have no idea. I wasn't even here. <Lie.>",
+      "emotion": "Surprise 50",
+      "response_text": "Same here! I had just gone down to Springvale to do some tests  turns out you can't teach a giant ant new tricks  and before I knew it, boom!{turns out the ants can't be taught tricks is an aside, as if she expects the player is really interested in her experiments}",
+      "index": "143"
+    },
+    {
+      "topic": "MS03MoiraGhoul1C",
+      "topic_text": "I blew up your town. Maybe you shouldn't have built it around a bomb.",
+      "emotion": "Surprise 50",
+      "response_text": "Don't be silly, why would you blow up our town? You're talking crazy-talk.{Dismissive \"pfft!\" noise at the start}",
+      "index": "146"
+    },
+    {
+      "topic": "MS03MoiraGhoul2A",
+      "topic_text": "How odd. It appears that the burst of radiation has turned you into a Ghoul.",
+      "emotion": "Surprise 50",
+      "response_text": "Oh my goodness! Do you really think so? I'm becoming a Ghoul?! This is... This is...{Incredulous, uncertain between horror or excitement}",
+      "index": "147"
+    },
+    {
+      "topic": "MS03MoiraGhoul2B",
+      "topic_text": "Moira, don't take this the wrong way, but you got ugly real fast.",
+      "emotion": "Fear 50",
+      "response_text": "Don't be silly, I just got some gunk on my face after the explosion... but that doesn't explain why it peels away in strips. And oozes.{Dismissive, but slowly dawning fear}",
+      "index": "153"
+    },
+    {
+      "topic": "MS03MoiraGhoul3A",
+      "topic_text": "There's an entire Ghoul community in Underworld, downtown.",
+      "emotion": "Happy 50",
+      "response_text": "Really? Then I guess I'll be heading there, to join my newfound family and their warm, smiling, and hideously pockmarked faces.",
+      "index": "156"
+    },
+    {
+      "topic": "MS03MoiraGhoul3B",
+      "topic_text": "Seems to me like that isn't my problem, stickyface.",
+      "emotion": "Happy 15",
+      "response_text": "Huh. I guess you're right. Well, this seems like the perfect excuse to do some of that downtown exploring I've kept putting off.",
+      "index": "159"
+    },
+    {
+      "topic": "MS03MoiraGhoulExplosion1",
+      "topic_text": "It was a job. Sorry, nothing personal.",
+      "emotion": "Anger 10",
+      "response_text": "Well, okay, as long as you're sorry. But I expect you to apologize to everyone else in town, okay? And don't do it again!{like a scolding school-teacher}",
+      "index": "161"
+    },
+    {
+      "topic": "MS03MoiraGhoulExplosion2",
+      "topic_text": "Who needs a reason? Explosions are pretty.",
+      "emotion": "Happy 25",
+      "response_text": "Yeah, they really are, aren't they?{Kind of lost in thought at the mention of pretty explosions. End with a dreamy sigh.}",
+      "index": "163"
+    },
+    {
+      "topic": "MS03MoiraGhoulExplosion3",
+      "topic_text": "I was trying to shut you up for good. Now I'll have to finish the job.",
+      "emotion": "Surprise 50",
+      "response_text": "Wait, what?",
+      "index": "166"
+    },
+    {
+      "topic": "MS03MoiraGhoulWho",
+      "topic_text": "Moira? Is that you? You don't look so good.",
+      "emotion": "Anger 25",
+      "response_text": "Oh, that's a real nice thing to say. Of course it's me!{A little insulted about being told she doesn't look very good.}",
+      "index": "167"
+    },
+    {
+      "topic": "MS03MoiraIntroduction",
+      "topic_text": "What do you do here?",
+      "emotion": "Happy 25",
+      "response_text": "Why, I'm an inventor, a tinkerer, and a general genius of junk. One person's junk is another's treasure, you know.",
+      "index": "169"
+    },
+    {
+      "topic": "MS03PersonalData",
+      "topic_text": "I've been thinking about your experiments. Can I ask you something personal?",
+      "emotion": "Happy 25",
+      "response_text": "Why, I'm flattered! What would you like to know?",
+      "index": "174"
+    },
+    {
+      "topic": "MS03PersonalExitMS03MoiraPersonalExit",
+      "topic_text": "That'll do.",
+      "emotion": "Happy 25",
+      "response_text": "Fine by me. I'm always glad to talk!",
+      "index": "181"
+    },
+    {
+      "topic": "MS03PrintingRequestB",
+      "topic_text": "Let me guess. You need me to go print and distribute it, right?",
+      "emotion": "Happy 25",
+      "response_text": "So cynical! No, no, I can take care of all that with a few traders I know. What makes you think I'd force you to handle something so dangerous?{Playfully scolding.}",
+      "index": "182"
+    },
+    {
+      "topic": "MS03QuestBeginAcceptA",
+      "topic_text": "Sounds like a great idea! I can't wait to help!",
+      "emotion": "Happy 25",
+      "response_text": "Good enthusiasm! Now, I think the first chapter will have to be about surviving day-to-day dangers.",
+      "index": "184"
+    },
+    {
+      "topic": "MS03QuestBeginAcceptB",
+      "topic_text": "Okay, I guess I'll help with this \"Survival Guide.\"",
+      "emotion": "Happy 25",
+      "response_text": "All right, then! Now, I think the first chapter will have to be about surviving day-to-day dangers.",
+      "index": "187"
+    },
+    {
+      "topic": "MS03QuestBeginRejectA",
+      "topic_text": "I'm afraid I'm going to have to pass. Sorry.",
+      "emotion": "Fear 50",
+      "response_text": "But, don't you like the idea? I mean, it's a good idea, right?",
+      "index": "190"
+    },
+    {
+      "topic": "MS03QuestBeginRejectB",
+      "topic_text": "Hell no, crazy girl. I won't be your lab rat.",
+      "emotion": "Fear 50",
+      "response_text": "What? Really? But... Please?",
+      "index": "192"
+    },
+    {
+      "topic": "MS03QuestCompletedA",
+      "topic_text": "It was hardly any work at all. How's it look?",
+      "emotion": "Happy 30",
+      "response_text": "Looks good! I mean, it could be better, but nothing's perfect. And it's not like bad advice ever hurt anyone, right?",
+      "index": "194"
+    },
+    {
+      "topic": "MS03QuestCompletedB",
+      "topic_text": "I'm just glad I can stop getting stabbed, irradiated, and shot for your science.",
+      "emotion": "Sad 25",
+      "response_text": "I know it was a lot to ask, but we made a great piece! And it's bound to help humanity, you know.",
+      "index": "203"
+    },
+    {
+      "topic": "MS03QuestRewards",
+      "topic_text": "Tell me more about the pay.",
+      "emotion": "Neutral 50",
+      "response_text": "Oh, caps, chems, meds, and maybe even a few unique inventions, if you do a good job. I'm sure I've got something that'll catch your eye.",
+      "index": "212"
+    },
+    {
+      "topic": "MS03RadiationScience1MS03RadiationScienceOption1",
+      "topic_text": "Fear not! With my vast scientific knowledge, I explain this one myself.",
+      "emotion": "Sad 25",
+      "response_text": "Oh, but nothing beats a real-world example. And I have a new rad treatment I was just itching to try out on a live subject!",
+      "index": "214"
+    },
+    {
+      "topic": "MS03ReasonExit",
+      "topic_text": "Okay, I can tell how much it means to you. Let's get this book finished.",
+      "emotion": "Sad 10",
+      "response_text": "Really? You really mean that? You think my book really could help humanity?{As if very sad but just offered a glimpse of hope.}",
+      "index": "216"
+    },
+    {
+      "topic": "MS03ReasonExit2A",
+      "topic_text": "Yes, I really do.",
+      "emotion": "Happy 25",
+      "response_text": "Well... Thanks. That really means a lot to me, you know?{Comforted}",
+      "index": "217"
+    },
+    {
+      "topic": "MS03ReasonExit2B",
+      "topic_text": "No. It's a terrible idea. Don't even try.",
+      "emotion": "Surprise 50",
+      "response_text": "But! But! But!{As if stunned by the player's betrayal.}",
+      "index": "219"
+    },
+    {
+      "topic": "MS03ReasonForGuide",
+      "topic_text": "Why do you really want to write this guide?",
+      "emotion": "Neutral 50",
+      "response_text": "Well, it'll help humanity rebuild, right? I mean, who doesn't want to help humanity?",
+      "index": "222"
+    },
+    {
+      "topic": "MS03ReasonForGuide2A",
+      "topic_text": "Well, it's a big undertaking, and we've got to make sure we do it right.",
+      "emotion": "Happy 40",
+      "response_text": "Oh, believe me, I know! I've been a bit careless with other projects, but this... This is important! This means something!{This is important! This means something! part should be spoken in the manner of Close Encounters of the Third Kind.}",
+      "index": "224"
+    },
+    {
+      "topic": "MS03ReasonForGuide2B",
+      "topic_text": "What do you mean about your other projects? Have there been problems?",
+      "emotion": "Sad 40",
+      "response_text": "Well, a little before you first arrived, one of my experiments had a little accident.{Hesitant pause before \"accident\".}",
+      "index": "225"
+    },
+    {
+      "topic": "MS03ReasonForGuide3A",
+      "topic_text": "I think you're right. Now, let's get back to work on this book!",
+      "emotion": "Happy 50",
+      "response_text": "You got it, super research assistant! Hey, I should get you a costume or something!",
+      "index": "228"
+    },
+    {
+      "topic": "MS03ReasonForGuide3B",
+      "topic_text": "Okay, but it could be bad if the book's misleading. People could get hurt.",
+      "emotion": "Fear 40",
+      "response_text": "Oh, I hadn't really thought about it like that. I don't want anyone to get hurt. That's the last thing the guide should do!",
+      "index": "229"
+    },
+    {
+      "topic": "MS03ReasonForGuide3CMoira, please don't write the book. It will just turn out badly.",
+      "topic_text": "This really isn't a good idea. Please don't write it. It'll just turn out badly.",
+      "emotion": "Sad 60",
+      "response_text": "You... You really think so? But I thought I was so brilliant...",
+      "index": "231"
+    },
+    {
+      "topic": "MS03ReasonForHelp",
+      "topic_text": "Why can't you do this research yourself?",
+      "emotion": "Surprise 10",
+      "response_text": "Oh, I haven't got nearly the experience in the Wastes that you do. If I tried half of these things, I'd get my head blown off!",
+      "index": "234"
+    },
+    {
+      "topic": "MS03ReasonForHelp2A",
+      "topic_text": "It's really good of you to try to help people like this.",
+      "emotion": "Happy 25",
+      "response_text": "I know, right? I figured, instead of just helping out the caravans with odd junk, why not put my brilliant mind to work for everyone?",
+      "index": "236"
+    },
+    {
+      "topic": "MS03ReasonForHelp2B",
+      "topic_text": "It sounds like you don't know what you're doing.",
+      "emotion": "Anger 50",
+      "response_text": "I know exactly what I'm doing. I'm trying to help mankind survive and rebuild! It's important, and I need your help.",
+      "index": "238"
+    },
+    {
+      "topic": "MS03ReasonForHelp3A",
+      "topic_text": "Well, I'm proud to be a part of it. You can count on me!",
+      "emotion": "Happy 50",
+      "response_text": "That's the spirit, trusty research assistant!",
+      "index": "240"
+    },
+    {
+      "topic": "MS03ReasonForHelp3B",
+      "topic_text": "I don't know. Those caravans help a lot of people.",
+      "emotion": "Neutral 50",
+      "response_text": "Well, I guess they do bring important supplies here and there. But still, I can help out so much more than the boring old stuff they do.",
+      "index": "241"
+    },
+    {
+      "topic": "MS03ReasonForHelp3C",
+      "topic_text": "Seriously, don't waste time with this book. Stick to helping the caravans.",
+      "emotion": "Sad 50",
+      "response_text": "I... Well... Okay.",
+      "index": "243"
+    },
+    {
+      "topic": "MS03ReasonForWorking",
+      "topic_text": "Why are you always working on such weird ideas?",
+      "emotion": "Disgust 40",
+      "response_text": "Well, look around at the world we live in. It may be okay to you, but I've read about what it used to be like, and this wasn't it.",
+      "index": "246"
+    },
+    {
+      "topic": "MS03ReasonForWorking2A",
+      "topic_text": "I don't understand. Crazy experiments are what keep you going?",
+      "emotion": "Sad 10",
+      "response_text": "No. It's like... Did you ever try to put a broken piece of glass back together? Even if the pieces fit, you can't make it whole again the way it was.{Hesitatingly, having trouble putting her feelings into words.}",
+      "index": "248"
+    },
+    {
+      "topic": "MS03ReasonForWorking2B",
+      "topic_text": "But why do you waste your talents on this garbage?",
+      "emotion": "Anger 10",
+      "response_text": "It's not garbage! But don't be fooled - it is junk. It's just that junk's pretty important stuff, you know?{Emphasis on the \"IS\" on \"it is junk.\"}",
+      "index": "251"
+    },
+    {
+      "topic": "MS03ReasonForWorking3A",
+      "topic_text": "So you're trying to make the world better than it was?",
+      "emotion": "Happy 10",
+      "response_text": "Hey, it sounds crazy when you say it that way, but that's what I'm aiming for, yeah.",
+      "index": "254"
+    },
+    {
+      "topic": "MS03ReasonForWorking3B",
+      "topic_text": "I don't know. Human nature doesn't change like that.",
+      "emotion": "Sad 25",
+      "response_text": "Maybe. I've certainly heard people say that. But isn't it also human nature to try to do better than we always have?",
+      "index": "257"
+    },
+    {
+      "topic": "MS03ReasonForWorking3C",
+      "topic_text": "But why try with this book, when you could be helping out in real ways here?",
+      "emotion": "Disgust 40",
+      "response_text": "What, helping the trade caravans with idiotic chores? Repairing carts and fixing up sick Brahmin?",
+      "index": "259"
+    },
+    {
+      "topic": "MS03ReasonForWorking4",
+      "topic_text": "You don't have the experience for a book like this. You'll be a laughingstock.",
+      "emotion": "Surprise 20",
+      "response_text": "But that's why I'm getting your help! I know my flaws, and with your help, we can make something great for the world!",
+      "index": "261"
+    },
+    {
+      "topic": "MS03ReasonForWorking5",
+      "topic_text": "It will just get us hurt. You don't want to hurt anyone, do you?",
+      "emotion": "Sad 50",
+      "response_text": "No... No, you're right, I don't. I mean, I've already gotten you hurt a couple times, haven't I?",
+      "index": "263"
+    },
+    {
+      "topic": "MS03RivetCityQuestion",
+      "topic_text": "What's Rivet City?",
+      "emotion": "Neutral 50",
+      "response_text": "Oh, it's this huge city on a ship where the river meets downtown! It's been around for as long as I can remember. You should really check it out.",
+      "index": "266"
+    },
+    {
+      "topic": "MS03RoboticsExpertMS03TechnicalGenius",
+      "topic_text": "I could just write that section for you. Trust me  I'm an expert.",
+      "emotion": "Happy 25",
+      "response_text": "Practically speak robot, do you? As long as you don't write it all in ones and zeroes, then I guess it'll be fine. Thanks!",
+      "index": "267"
+    },
+    {
+      "topic": "MS03TaskAccept1MS03TaskAccept",
+      "topic_text": "I guess I can check the Super-Duper Mart again.",
+      "emotion": "Happy 10",
+      "response_text": "Oh, great! Food is most important, but see if you can get medicine, too. And if there's nothing to find, then just come back in one piece, okay?",
+      "index": "269"
+    },
+    {
+      "topic": "MS03TaskAccept2MS07TaskAccept2",
+      "topic_text": "I suppose nothing beats a real-world example. I'll get myself irradiated.",
+      "emotion": "Happy 50",
+      "response_text": "Now, that's the adventurous scientific spirit! Go on out there and get good and fried!",
+      "index": "274"
+    },
+    {
+      "topic": "MS03TaskAccept3MS07TaskAccept3",
+      "topic_text": "Nothing beats a real-world example, they say. I'll get myself injured.",
+      "emotion": "Happy 75",
+      "response_text": "There's my brave research assistant! Go out and get bashed up. For the good of mankind!",
+      "index": "285"
+    },
+    {
+      "topic": "MS03TaskBackToChoose",
+      "topic_text": "I don't think I want to do that one.",
+      "emotion": "Happy 5",
+      "response_text": "Okay, so where'd you like to start?",
+      "index": "296"
+    },
+    {
+      "topic": "MS03TaskBegin",
+      "topic_text": "I'm ready to begin researching the book, now.",
+      "emotion": "Happy 10",
+      "response_text": "Well, I think the first chapter will have to be about surviving day-to-day dangers.",
+      "index": "298"
+    },
+    {
+      "topic": "MS03TaskBreak",
+      "topic_text": "I'm taking a break from the research.",
+      "emotion": "Anger 10",
+      "response_text": "Don't take to long. The sooner the book's done, the more people we can save with it!",
+      "index": "363"
+    },
+    {
+      "topic": "MS03TaskCompleteBasic",
+      "topic_text": "Well, I've got the food. But no luck with the medicine.",
+      "emotion": "Surprise 25",
+      "response_text": "Really? No medicine at all? None? Seriously? Well, I guess I should have expected that. It's been a long time, after all.",
+      "index": "367"
+    },
+    {
+      "topic": "MS03TaskCompleteBasicExABasic Normal Response",
+      "topic_text": "It's got a lot more food than most places, but I wasn't the only one there.",
+      "emotion": "Neutral 50",
+      "response_text": "It makes sense that there'd be a few Raiders there. But if that's the only concern, that hardly makes it worse than anywhere else out there.",
+      "index": "387"
+    },
+    {
+      "topic": "MS03TaskCompleteBasicExBBasic Smart Response",
+      "topic_text": "I encountered some Raiders, but they were easily outsmarted.",
+      "emotion": "Happy 10",
+      "response_text": "Guess I wasn't the first to think of checking out a food store for storing food. Huh?",
+      "index": "408"
+    },
+    {
+      "topic": "MS03TaskCompleteBasicExCBasic Tough Response",
+      "topic_text": "I got the food and dealt with those pansy Raiders. They couldn't stop me.",
+      "emotion": "Disgust 25",
+      "response_text": "That's a mighty callous attitude towards killing. But I guess they'd do the same for the food. Shame there wasn't any medicine.",
+      "index": "429"
+    },
+    {
+      "topic": "MS03TaskCompleteBasicExDBasic Sly Response",
+      "topic_text": "Those big, shadowy stores can be great for hiding out.",
+      "emotion": "Surprise 25",
+      "response_text": "Oh my, Raiders had set up camp there? I'm guessing you didn't just negotiate with them, did you?",
+      "index": "452"
+    },
+    {
+      "topic": "MS03TaskCompleteBasicExEBasic Snide Response",
+      "topic_text": "That place was a death trap. It was crawling with Raiders.",
+      "emotion": "Sad 25",
+      "response_text": "Oh, poor research assistant! I'm sorry, I didn't know it'd be so dangerous in there!{Sincere, not mocking.}",
+      "index": "473"
+    },
+    {
+      "topic": "MS03TaskCompleteBonus",
+      "topic_text": "It wasn't easy, but I got the food and the medicine.",
+      "emotion": "Surprise 25",
+      "response_text": "Really? You did? You did! Well, all right! Tell me all about it!",
+      "index": "498"
+    },
+    {
+      "topic": "MS03TaskCompleteBonusExABonus Normal Response",
+      "topic_text": "I found Raiders and a robot. It was hardly a safe place to scavenge.",
+      "emotion": "Surprise 50",
+      "response_text": "Whoa! Really? Raiders and robots! I guess I wasn't the only one to think about checking those stores. Looks like you gotta be careful looting them.",
+      "index": "515"
+    },
+    {
+      "topic": "MS03TaskCompleteBonusExBBonus Smart Response",
+      "topic_text": "The Raiders were using the pharmacy as a place to store their best gear.",
+      "emotion": "Surprise 25",
+      "response_text": "So, you're saying that they acquired a well-protected stash? I wonder how many other places are hiding treasures behind monsters, hrm?",
+      "index": "544"
+    },
+    {
+      "topic": "MS03TaskCompleteBonusExCBonus Tough Response",
+      "topic_text": "Those Raiders must've shot me twenty times. But who's counting?",
+      "emotion": "Sad 35",
+      "response_text": "You do what you need to do to get food and medicine, I guess. It's not pretty, but I guess that's the way it's got to be, right?",
+      "index": "570"
+    },
+    {
+      "topic": "MS03TaskCompleteBonusExDBonus Sly Response",
+      "topic_text": "It's very hard to talk my way past that many people shooting at me...",
+      "emotion": "Surprise 35",
+      "response_text": "Oh, dear. Well, I guess the dangers around those old supplies keeps it from being smooth sailing. Otherwise, they'd already have been looted, huh?",
+      "index": "596"
+    },
+    {
+      "topic": "MS03TaskCompleteBonusExEBonus Snide Response",
+      "topic_text": "I had a fun party with some Raiders. Then a guard robot jumped out of a cake.",
+      "emotion": "Happy 40",
+      "response_text": "Well as long as it was no problem for you, then! I mean, who doesn't enjoy cake? Other than robots, of course. I bet they prefer pie. Or maybe pi?{Lea doesn't get the sarcasm in the player's statement.}",
+      "index": "622"
+    },
+    {
+      "topic": "MS03TaskDescription1",
+      "topic_text": "Getting food doesn't sound so bad. What are you looking for?",
+      "emotion": "Happy 50",
+      "response_text": "Well, food and medicine. Everyone needs them once in a while, right? So they need a good place to find them!",
+      "index": "651"
+    },
+    {
+      "topic": "MS03TaskDescription2",
+      "topic_text": "What's this about radiation?",
+      "emotion": "Happy 5",
+      "response_text": "Well, I know lots about radiation from books... and personal experience, obviously.{A little sheepish}",
+      "index": "658"
+    },
+    {
+      "topic": "MS03TaskDescription3",
+      "topic_text": "Let's hear more about the landmines.",
+      "emotion": "Happy 25",
+      "response_text": "Landmines are one of the few dangers out there that you can profit from. Disarm one before it blows, and you can sell it for plenty of caps.",
+      "index": "672"
+    },
+    {
+      "topic": "MS03TaskLie",
+      "topic_text": "I went into Minefield and came back, no problem. <Lie.>",
+      "emotion": "Anger 50",
+      "response_text": "There's no way you could have gone there and gotten back already.",
+      "index": "688"
+    },
+    {
+      "topic": "MS03TaskNotComplete1MS03TaskNotComplete",
+      "topic_text": "I haven't gotten around to it, yet.",
+      "emotion": "Disgust 10",
+      "response_text": "Oh. Well, could you get on that? Thanks!",
+      "index": "708"
+    },
+    {
+      "topic": "MS03TaskNotComplete2",
+      "topic_text": "I'll do it when I get around to it, all right?",
+      "emotion": "Anger 15",
+      "response_text": "No, not all right. Every day you don't help with this research is another day people might die!{Whining}",
+      "index": "720"
+    },
+    {
+      "topic": "MS03TaskRejection",
+      "topic_text": "Actually, I'll have to wait a bit.",
+      "emotion": "Sad 35",
+      "response_text": "Well, I guess I can wait a little. I've got plenty of other projects to work on, after all.",
+      "index": "738"
+    },
+    {
+      "topic": "MS03TaskReturnMS03QuestReturn",
+      "topic_text": "Let's talk about collecting the stuff from Super-Duper Mart...",
+      "emotion": "Surprise 10",
+      "response_text": "So, how's the scavving been? Got the food and medicine from that Super-Duper Mart?{Scavving is pronounced with a short \"a\" - it's an abbreviation of \"scavenging\"}",
+      "index": "740"
+    },
+    {
+      "topic": "MS03TaskReward1MS03TaskReward",
+      "topic_text": "What's the pay?",
+      "emotion": "Anger 10",
+      "response_text": "Hopefully, you'll be finding food and medicine, but I could sweeten the deal by paying more food when you get back, regardless of the results.",
+      "index": "752"
+    },
+    {
+      "topic": "MS03TaskReward2",
+      "topic_text": "You want me to get irradiated? How could that possibly be worth it for me?",
+      "emotion": "Happy 25",
+      "response_text": "Oh, don't worry so much about it. I'll be waiting here with a nice, tall glass of rad-cleansing brahmin milk for you when you get back.",
+      "index": "758"
+    },
+    {
+      "topic": "MS03TaskReward3",
+      "topic_text": "That seems kind of... unhealthy. How will you make it worth my while?",
+      "emotion": "Happy 25",
+      "response_text": "What better reward for avoiding explosives than to pay you with explosives? Frag grenades, in this case. I got a pretty good haul of them recently.",
+      "index": "763"
+    },
+    {
+      "topic": "MS03TaskSetDone",
+      "topic_text": "That completes the first chapter's tasks, correct?",
+      "emotion": "Happy 40",
+      "response_text": "Yup, you've done a great job! I just need to add in the section on how to cook rat, and this chapter's done.",
+      "index": "769"
+    },
+    {
+      "topic": "MS03VaultQuestions1A",
+      "topic_text": "Sure, I've got plenty to say about life in the Vault.",
+      "emotion": "Neutral 50",
+      "response_text": "Great! Just tell me what it's like to live underground all your life, or to come outside for the first time, or whatever strikes your fancy!",
+      "index": "809"
+    },
+    {
+      "topic": "MS03VaultQuestions1B",
+      "topic_text": "Where'd you get the Vault Suit back there?",
+      "emotion": "Surprise 15",
+      "response_text": "I'm pretty sure I remember a girl coming into town with that about ten, twelve years ago.",
+      "index": "811"
+    },
+    {
+      "topic": "MS03VaultQuestions2AMS03VaultQuestions1A",
+      "topic_text": "It was paradise down there. No fear, no worries, no fighting... Until Dad left.",
+      "emotion": "Anger 25",
+      "response_text": "A runaway dad, huh? I've seen plenty of them before. But none with a big \"101\" on their back.",
+      "index": "814"
+    },
+    {
+      "topic": "MS03VaultQuestions2BMS03VaultQuestions1B",
+      "topic_text": "This \"Outside\" place is amazing. In the main room, I can't even see the ceiling!",
+      "emotion": "Happy 75",
+      "response_text": "Hah! Yeah, you wouldn't imagine how hard it is to replace that big light bulb up there, too!{Joking along}",
+      "index": "819"
+    },
+    {
+      "topic": "MS03VaultQuestions2CMS03VaultQuestions1C",
+      "topic_text": "I was sent as an ambassador from the utopia of Vault 101. Bow before my glory!",
+      "emotion": "Happy 25",
+      "response_text": "Oh, certainly, your majesty! Allow me to humbly welcome you to the, um, Duchy of Megaton.{Not entirely sure she believes him, but playing along, half for fun, and half just in case.}",
+      "index": "824"
+    },
+    {
+      "topic": "MS03VaultQuestions2DMS03VaultQuestions1D",
+      "topic_text": "How do you people live out here? I haven't found a food dispenser anywhere!",
+      "emotion": "Neutral 50",
+      "response_text": "Well, it takes a little more work than that to get food. And good water's even harder. But you'll figure that out soon enough.",
+      "index": "830"
+    },
+    {
+      "topic": "MS03VaultQuestions2EMS03VaultQuestions1E",
+      "topic_text": "It was cramped, dark, and the food sucked. Good riddance.",
+      "emotion": "Fear 50",
+      "response_text": "That's terrible!",
+      "index": "835"
+    },
+    {
+      "topic": "MS03VaultRefusal",
+      "topic_text": "No, I don't want anything to do with them anymore.",
+      "emotion": "Sad 25",
+      "response_text": "If you say so. But if you really mean that, you might want to stop wearing a suit with their number writ large across the back.",
+      "index": "843"
+    },
+    {
+      "topic": "MS08TechnicalClue1",
+      "topic_text": "Do you know anything about an android from the Commonwealth?",
+      "emotion": "Neutral 50",
+      "response_text": "Something about facial surgery and reprogramming its memory. But that seems to have been a hoax. Haven't heard anything about it in a long time.",
+      "index": "846"
+    },
+    {
+      "topic": "MS08TechnicalClue2",
+      "topic_text": "What do you know about the android from the Commonwealth?",
+      "emotion": "Neutral 50",
+      "response_text": "Have you heard the so called \"android recording?\" It sounds like an ordinary man! Here's a spare copy of that old holotape. It's a hoax for sure.{doubting the rumors}",
+      "index": "847"
+    },
+    {
+      "topic": "MS08TechnicalClue3",
+      "topic_text": "You know anything about the mind wipe on that escaped android?",
+      "emotion": "Happy 50",
+      "response_text": "Some say it was all a hoax. But it's real. Here. Check out this holotape I found. That Commonwealth robot was real!{bragging that he's in the know}",
+      "index": "849"
+    },
+    {
+      "topic": "MS08TechnicalClue3Bribe",
+      "topic_text": "Got any info on an android mind wipe? Here's a 100 cap \"research fee.\"",
+      "emotion": "Happy 50",
+      "response_text": "Some say it was all a hoax. But it's real. Here. Check out this holotape I found. That Commonwealth robot was real!{bragging that he's in the know}",
+      "index": "852"
+    },
+    {
+      "topic": "MS08TechnicalClue3Stat",
+      "topic_text": "You know how they rewrote engrams in a cluster of Android memory subroutines?",
+      "emotion": "Happy 50",
+      "response_text": "Some say it was all a hoax. But it's real. Here. Check out this holotape I found. That Commonwealth robot was real!{bragging that he's in the know}",
+      "index": "853"
+    },
+    {
+      "topic": "MS08TechnicalClue4",
+      "topic_text": "Do you know who did the memory transfer on the escaped android?",
+      "emotion": "Surprise 50",
+      "response_text": "Heard a rumor a while back that it was some guy named Pinkerton at Rivet City. Apparently he's got some sweet tech stashed on that boat.{bragging that he is in the know}",
+      "index": "854"
+    },
+    {
+      "topic": "MS08TechnicalClue4Bribe",
+      "topic_text": "I'll give you 100 caps if you know who did the mind wipe on that android.",
+      "emotion": "Surprise 50",
+      "response_text": "Heard a rumor a while back that it was some guy named Pinkerton at Rivet City. Apparently he's got some sweet tech stashed on that boat.{bragging that he is in the know}",
+      "index": "857"
+    },
+    {
+      "topic": "MS08TechnicalClue4Stat",
+      "topic_text": "Do you know anything about the AI swap on that Commonwealth android?",
+      "emotion": "Surprise 50",
+      "response_text": "Heard a rumor a while back that it was some guy named Pinkerton at Rivet City. Apparently he's got some sweet tech stashed on that boat.{bragging that he is in the know}",
+      "index": "858"
+    },
+    {
+      "topic": "MS11MoiraBomb",
+      "topic_text": "Have you thought about disarming the bomb?",
+      "emotion": "Surprise 50",
+      "response_text": "Oh, I couldnÆt do that! ItÆd be a real blow to those nice folks in the Church.{talking nonchalantly about an undetonated bomb}",
+      "index": "859"
+    },
+    {
+      "topic": "MegMoiraBrownBarter",
+      "topic_text": "Let me see what you have for sale.",
+      "emotion": "Neutral 50",
+      "response_text": "Sorry, I'm closed. Come back tomorrow and we'll talk.",
+      "index": "861"
+    },
+    {
+      "topic": "MegMoiraBrownRepair",
+      "topic_text": "Can you repair my equipment?",
+      "emotion": "Neutral 50",
+      "response_text": "Sorry, I'm closed. Come back tomorrow and we'll talk.",
+      "index": "869"
+    },
+    {
+      "topic": "MegMoiraCustomWeapTopic",
+      "topic_text": "Do you sell any specialty items?",
+      "emotion": "Neutral 50",
+      "response_text": "Do I ever! I've got the schematics for something called a Rock-It Launcher. I sell all the components, too, so you can make the weapon yourself.",
+      "index": "877"
+    },
+    {
+      "topic": "MegTownEnd",
+      "topic_text": "That's all I needed to know.",
+      "emotion": "Neutral 50",
+      "response_text": "No problem!",
+      "index": "880"
+    },
+    {
+      "topic": "SpeechChallengeFailure",
+      "topic_text": "SpeechChallengeFailure",
+      "emotion": "Anger 50",
+      "response_text": "Well, I'll just have to prove you wrong, then! Now let's get back to work!",
+      "index": "881"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "I have to go now.",
+      "emotion": "Neutral 50",
+      "response_text": "Have fun out there, okay?",
+      "index": "895"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Surprise 50",
+      "response_text": "Hey! Over here!{Calling out}",
+      "index": "904"
+    },
+    {
+      "topic": "MS03MoiraBrownMedicalChatter",
+      "topic_text": "MS03LeaMarshMedicalChatter",
+      "emotion": "Neutral 50",
+      "response_text": "Okay, a little Brahmin milk... A couple magnets... And maybe a few happy thoughts...",
+      "index": "912"
+    },
+    {
+      "topic": "MegMoiraLocker",
+      "topic_text": "MegMoiraLocker",
+      "emotion": "Neutral 50",
+      "response_text": "Hey, now. That's my stuff. If you want something, you gotta buy it.",
+      "index": "914"
+    },
+    {
+      "topic": "MegatonTalk1",
+      "topic_text": "MegatonTalk",
+      "emotion": "Fear 50",
+      "response_text": "Oh, heya Nathan. Sorry, I got lost in my work. What do you need?{ }",
+      "index": "916"
+    },
+    {
+      "topic": "MegatonTalk3",
+      "topic_text": "MegatonTalk3",
+      "emotion": "Neutral 50",
+      "response_text": "Hrm. Let me think... you know, I don't think so. But I'll let you know if anyone sells me one.",
+      "index": "918"
+    }
+  ],
+  "combat": [
+    {
+      "topic": "GuardTrespass",
+      "topic_text": "GuardTrespass",
+      "emotion": "Anger 10",
+      "response_text": "You should probably leave, you know.{A little surprised and annoyed}",
+      "index": "920"
+    },
+    {
+      "topic": "Murder",
+      "topic_text": "Murder",
+      "emotion": "Fear 50",
+      "response_text": "I can't believe you'd do that!",
+      "index": "921"
+    },
+    {
+      "topic": "Pickpocket",
+      "topic_text": "Pickpocket",
+      "emotion": "Anger 50",
+      "response_text": "Give that back!",
+      "index": "922"
+    },
+    {
+      "topic": "Steal",
+      "topic_text": "Steal",
+      "emotion": "Anger 50",
+      "response_text": "Hey, that's valuable junk!",
+      "index": "923"
+    }
+  ],
+  "description": "Moira Brown is a 24 year-old Caucasian Female.\n\nA self-styled inventor and store owner who runs Craterside Supply in Megaton. Moira is known for her insatiable curiosity and love of reading, having taught herself much of what she knows from books that come through town via traders. Despite her intelligence and creativity, she remains naive about the dangers of the wasteland outside Megaton.\n\nMoira Brown's Personality: Chipper, optimistic, and relentlessly curious. Moira maintains a bright outlook on life despite the post-apocalyptic setting, often choosing to see the beauty in broken things. She can be oblivious to real dangers but possesses genuine enthusiasm for knowledge and helping others. Through persuasion, she can be convinced to adopt a more realistic worldview.\n\nMoira Brown's Backstory: Born and raised in the trading community of Canterbury Commons, Moira developed an uncommon curiosity about the world. Sometime before 2263, she left Canterbury Commons and moved to the settlement of Megaton, where she established Craterside Supply. Having spent most of her life in the relative safety of Megaton, she has limited understanding of how the wasteland functions beyond her immediate surroundings. Despite this, her love of reading has made her quite knowledgeable in theory, though she struggles to apply this knowledge practically."
+}

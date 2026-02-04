@@ -1,0 +1,216 @@
+{
+  "name": "Old Ben²",
+  "url": "/wiki/Ben_(Freeside)",
+  "dialogue_name": "VFSOldBen.txt",
+  "dialogue_url": "/wiki/VFSOldBen.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "0015968A",
+  "ref_id": "0015968B",
+  "editor_id": "VFSOldBen",
+  "location": "Freeside",
+  "location_url": "/wiki/Freeside",
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "The Tops(formerly)FreesidelocalsAtomic Wrangler Casino(optional)",
+  "role": "RetireeSmooth talkerProstitute(optional)",
+  "detailed_location": "The Strip North Gate",
+  "voice_actor": "Shane Johnson",
+  "special": {
+    "Strength": 4,
+    "Perception": 6,
+    "Endurance": 4,
+    "Charisma": 6,
+    "Intelligence": 7,
+    "Agility": 5,
+    "Luck": 4
+  },
+  "level": "16",
+  "tag_skills": [
+    {
+      "Barter:": "96"
+    },
+    {
+      "Medicine:": "98"
+    },
+    {
+      "Science:": "98"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Very Good",
+  "voice_type": "MaleAdult09",
+  "geck_race": "AfricanAmericanOld",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "You look new to Freeside, so here's a little advice, friend. Don't go past the south gate greeter without talking to it first.",
+      "index": "1"
+    },
+    {
+      "topic": "VFreeformFreesideTopic003",
+      "topic_text": "Thanks for the free advice. Who are you?",
+      "emotion": "Neutral 50",
+      "response_text": "The name's Old Ben. I've been living in Freeside since the day I was born.",
+      "index": "3"
+    },
+    {
+      "topic": "VFreeformFreesideTopic004",
+      "topic_text": "Why wouldn't I want to go past the greeter?",
+      "emotion": "Neutral 50",
+      "response_text": "Those bots are programmed to vaporize anyone who enters the fenced-in area without authorization from the greeter.",
+      "index": "4"
+    },
+    {
+      "topic": "VFreeformFreesideVFSOldBenTopic000",
+      "topic_text": "What's your story?",
+      "emotion": "Neutral 50",
+      "response_text": "I've done a bit of everything around here - courier, butcher, crier, escort, gun for hire...",
+      "index": "5"
+    },
+    {
+      "topic": "VFreeformFreesideVFSOldBenTopic002",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Goodbye.",
+      "index": "7"
+    },
+    {
+      "topic": "VFreeformFreesideVFSOldBenTopic003",
+      "topic_text": "How would you like to work for the Garrets?",
+      "emotion": "Neutral 50",
+      "response_text": "I'm retired, but life has been a bit dull without some kind of action. What's the job?",
+      "index": "8"
+    },
+    {
+      "topic": "VFreeformFreesideVFSOldBenTopic004",
+      "topic_text": "Courier? I used to be a courier before I got shot in the head.",
+      "emotion": "Neutral 50",
+      "response_text": "Exactly one of the reasons I got out of that job. Too many shifty characters looking to have someone else move their hot items.",
+      "index": "9"
+    },
+    {
+      "topic": "VFreeformFreesideVFSOldBenTopic005",
+      "topic_text": "Butcher? How did you get into that?",
+      "emotion": "Neutral 50",
+      "response_text": "My father ran a butcher shop here in town, but business went downhill when another vendor started selling this strange meat at half of our prices.",
+      "index": "10"
+    },
+    {
+      "topic": "VFreeformFreesideVFSOldBenTopic006",
+      "topic_text": "That sounds odd.",
+      "emotion": "Neutral 50",
+      "response_text": "You're telling me. Not long after my father's shop went under and he passed away from the loss, people around town started experiencing shakes.",
+      "index": "11"
+    },
+    {
+      "topic": "VFreeformFreesideVFSOldBenTopic008",
+      "topic_text": "Crier? What was that job?",
+      "emotion": "Neutral 50",
+      "response_text": "After a while I made enough money to get a passport into Vegas. Back then you could get approved for entry for a fraction of what it costs now.",
+      "index": "14"
+    },
+    {
+      "topic": "VFreeformFreesideVFSOldBenTopic009",
+      "topic_text": "What happened?",
+      "emotion": "Neutral 50",
+      "response_text": "Well, being a suave young guy, I chatted up the ladies from time to time, and one of the managers' girls started to take a liking to me.",
+      "index": "16"
+    },
+    {
+      "topic": "VFreeformFreesideVFSOldBenTopic010",
+      "topic_text": "That's horrible!",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah, but what can you do? I was stripped of my casino apartment and all of my belongings and booted back into Freeside.",
+      "index": "19"
+    },
+    {
+      "topic": "VFreeformFreesideVFSOldBenTopic011",
+      "topic_text": "Wrong place at the wrong time, if you ask me.",
+      "emotion": "Neutral 50",
+      "response_text": "Yeah, shit indeed happens. I was stripped of my casino apartment and all of my belongings and booted back into Freeside.",
+      "index": "21"
+    },
+    {
+      "topic": "VFreeformFreesideVFSOldBenTopic012",
+      "topic_text": "You said escort? Like armed guard?",
+      "emotion": "Neutral 50",
+      "response_text": "Well, I supposed you could look at it that way, but I was packing a whole different kind of heat. No, escort just sounds better than man-whore.",
+      "index": "23"
+    },
+    {
+      "topic": "VFreeformFreesideVFSOldBenTopic013",
+      "topic_text": "So you got paid for sex?",
+      "emotion": "Neutral 50",
+      "response_text": "Yep. I was damn good at my job, too. But after a while I just felt like a piece of meat and had to quit.",
+      "index": "24"
+    },
+    {
+      "topic": "VFreeformFreesideVFSOldBenTopic014",
+      "topic_text": "Oh, I could never do that.",
+      "emotion": "Neutral 50",
+      "response_text": "Well, I didn't have any other career opportunities open to me at the time and had to make ends meet.",
+      "index": "25"
+    },
+    {
+      "topic": "VFreeformFreesideVFSOldBenTopic015",
+      "topic_text": "Gun for hire?",
+      "emotion": "Neutral 50",
+      "response_text": "When I quit the escort job, I had enough money to buy a pistol belt and some other gear.",
+      "index": "27"
+    },
+    {
+      "topic": "VFreeformFreesideVFSOldBenTopic016",
+      "topic_text": "Let's talk about something else.",
+      "emotion": "Neutral 50",
+      "response_text": "All right.",
+      "index": "30"
+    },
+    {
+      "topic": "VFreeformFreesideVFSOldBenTopic017",
+      "topic_text": "James Garret needs a real 'boyfriend experience' for more discerning patrons.",
+      "emotion": "Neutral 50",
+      "response_text": "Ah, I{getcha}get you. So you think because of my past escort work, I'd be interested in that kind of thing?",
+      "index": "31"
+    },
+    {
+      "topic": "VFreeformFreesideVFSOldBenTopic018<Speech>",
+      "topic_text": "You're a beacon of light in some people's depressing existence! Your work is art!",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED] You know what? You're right. I looked at the whole thing from the wrong angle.",
+      "index": "33"
+    },
+    {
+      "topic": "VFreeformFreesideVFSOldBenTopic019<Black Widow>",
+      "topic_text": "Ben, you give your clients a precious respite from the ills of the world.",
+      "emotion": "Neutral 50",
+      "response_text": "I never put much thought into the well-being my clients got out of my services. I suppose they only get as much as I put into it.",
+      "index": "37"
+    },
+    {
+      "topic": "VFreeformFreesideVFSOldBenTopic021<Confirmed Bachelor>",
+      "topic_text": "Ben, you give your clients a precious respite from the ills of the world.",
+      "emotion": "Neutral 50",
+      "response_text": "I never put much thought into the well-being my clients got out of my services. I suppose they only get as much as I put into it.",
+      "index": "39"
+    },
+    {
+      "topic": "VFreeformFreesideVFSOldBenTopic024",
+      "topic_text": "The pay is good, and you can make your own hours.",
+      "emotion": "Neutral 50",
+      "response_text": "Sorry, friend, but I just can't do it.",
+      "index": "41"
+    }
+  ],
+  "conversation": [],
+  "combat": [],
+  "description": "Old Ben is a 62 year-old African American Male.\n\nA weathered but charismatic man who has lived through numerous careers in the Mojave Wasteland. Now retired, he spends his days near the entrance to the Strip, offering advice to travelers about the dangers of unauthorized entry and occasionally sharing stories from his colorful past.\n\nOld Ben's Personality: Charismatic, observant, and wise with a hint of cynicism earned from life's hardships. Despite his past, Ben maintains a good heart and genuinely wants to help others avoid the mistakes he made. He's street-smart and has an eye for detail, making him an excellent judge of character.\n\nOld Ben's Backstory: Born and raised in Freeside, Ben's family once ran a butcher shop that went out of business after a mysterious vendor began selling cheaper, strange meat. When customers started showing symptoms of cannibalism, Ben suspected the truth but was ignored. After the vendor's death and discovery of human remains, Ben worked as a courier, eventually earning enough for a Strip passport. He found work as a crier at the Tops, where his charisma caught the attention of casino performers. When a manager framed him for theft, Ben was banished from the Strip and returned to Freeside. With limited options, he briefly worked as an escort before transitioning to bodyguard work. For a decade, he protected tourists in Freeside, rebuilding his reputation before retiring to live near the Strip entrance."
+}

@@ -1,0 +1,119 @@
+{
+  "name": "Wally Mack",
+  "url": "/wiki/Wally_Mack",
+  "dialogue_name": "WallyMack.txt",
+  "dialogue_url": "/wiki/WallyMack.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "0004E894",
+  "ref_id": "0002907A",
+  "editor_id": "WallyMack",
+  "location": "",
+  "location_url": null,
+  "race": "HumanGlowing one",
+  "gender": "Male",
+  "affiliation": "Tunnel Snakes",
+  "role": "Gang member",
+  "detailed_location": "Vault 101Fens Way station",
+  "voice_actor": "Sean McCoy(age 9)Jeff Baker(age 16)Craig Sechler(age 19)",
+  "special": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 5,
+    "Intelligence": 5,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "misc_skills": [
+    {
+      "Hit Points:": "30"
+    },
+    {
+      "Critical Chance:": "5%"
+    },
+    {
+      "Unarmed Dam.:": "0.75"
+    },
+    {
+      "Poison Resist.:": "20%"
+    },
+    {
+      "Rad. Resist.:": "8%"
+    },
+    {
+      "Carry Weight:": "200"
+    }
+  ],
+  "karma": "Good(duringGrowing Up FastandFuture Imperfect)Neutral(duringTrouble on the Homefront)",
+  "voice_type": "MaleChild01MaleAdult04",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Surprise 50",
+      "response_text": "This party's pretty good, I guess. For a little kid. Balloons. Party hats...{he gets more obviously sarcastic as he goes along}Play soundFO3 WallyMack PartyPrettyGood.ogghttps://fallout.fandom.com/wiki/File:FO3_WallyMack_PartyPrettyGood.oggnoicon",
+      "index": "1"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "CG02TunnelSnakeTalk2",
+      "topic_text": "CG02TunnelSnakeTalk2",
+      "emotion": "Happy 50",
+      "response_text": "Here's one: \"Wally and the Big Cheese.\" That's you, Butch  the Big Cheese.Play soundFO3 WallyMack TheBigCheese.ogghttps://fallout.fandom.com/wiki/File:FO3_WallyMack_TheBigCheese.oggnoicon",
+      "index": "6"
+    },
+    {
+      "topic": "CG02TunnelSnakeTalk4",
+      "topic_text": "CG02TunnelSnakeTalk4",
+      "emotion": "Happy 50",
+      "response_text": "How about \"Hell's Overseers\"? Yeah, I like that.Play soundFO3 WallyMack HellsOverseers.ogghttps://fallout.fandom.com/wiki/File:FO3_WallyMack_HellsOverseers.oggnoicon",
+      "index": "8"
+    },
+    {
+      "topic": "CG02TunnelSnakeTalkGeneral",
+      "topic_text": "CG02TunnelSnakeTalkGeneral",
+      "emotion": "Happy 50",
+      "response_text": "Yeah. I got one. \"The Mackers.\" Super cool, right?Play soundFO3 WallyMack IGotOne.ogghttps://fallout.fandom.com/wiki/File:FO3_WallyMack_IGotOne.oggnoicon",
+      "index": "10"
+    },
+    {
+      "topic": "CG02TunnelSnakeTalkReply",
+      "topic_text": "CG02TunnelSnakeTalkReply",
+      "emotion": "Neutral 75",
+      "response_text": "I don't know. Maybe.{the guy who knows he's smarter than the leader}Play soundFO3 WallyMack IDontKnow.ogghttps://fallout.fandom.com/wiki/File:FO3_WallyMack_IDontKnow.oggnoicon",
+      "index": "12"
+    },
+    {
+      "topic": "CG02WallyMackSpeech",
+      "topic_text": "CG02WallyMackSpeech",
+      "emotion": "Happy 50",
+      "response_text": "Yeah, Paul, why don't you introduce us to your new best friend?{Butch and Wally turning on Paul}Play soundFO3 WallyMack IntroduceYourFrien…https://fallout.fandom.com/wiki/File:FO3_WallyMack_IntroduceYourFriend.oggnoicon",
+      "index": "14"
+    },
+    {
+      "topic": "GOODBYE",
+      "topic_text": "I have to go now.",
+      "emotion": "Disgust 15",
+      "response_text": "You guys crack me up.{mildly annoyed}Play soundFO3 WallyMack CrackMeUp.ogghttps://fallout.fandom.com/wiki/File:FO3_WallyMack_CrackMeUp.oggnoicon",
+      "index": "17"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Happy 25",
+      "response_text": "Nice Pip-Boy. What is that, one of the 3000A models? What a piece of junk. I think you have to wind it up every morning.{nastily}Play soundFO3 WallyMack NicePipboy.ogghttps://fallout.fandom.com/wiki/File:FO3_WallyMack_NicePipboy.oggnoicon",
+      "index": "20"
+    }
+  ],
+  "combat": [],
+  "description": "Wally Mack is a 19 year-old Caucasian Male.\n\nWally Mack is a resident of Vault 101 in 2277 and is a member of the greaser gang known as the Tunnel Snakes. As the brains of the group, he is quieter than his fellow gang members but commands their respect when he speaks. He is a peer of the Lone Wanderer and is frequently encountered during their youth in Vault 101.\n\nWally Mack's Personality: Intelligent and calculating, Wally is the strategic mind behind the Tunnel Snakes' activities. While not as boisterous as Butch DeLoria, he is equally committed to the gang's identity and reputation. He speaks sparingly but his opinions carry weight among his peers.\n\nWally Mack's Backstory: Born to Allen and Gloria Mack in Vault 101, Wally grew up with his siblings Stevie and Susie. From a young age, he demonstrated intellectual capabilities that set him apart from his peers. He formed the Tunnel Snakes gang with Butch DeLoria and Paul Hannon Jr., establishing himself as the group's strategist despite Butch's attempts to claim leadership. The gang has a history of harassing other vault dwellers, even daring to taunt Overseer Almodovar's daughter, Amata."
+}

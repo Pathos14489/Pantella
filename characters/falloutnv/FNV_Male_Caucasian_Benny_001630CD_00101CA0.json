@@ -1,0 +1,958 @@
+{
+  "name": "Benny¹",
+  "url": "/wiki/Benny",
+  "dialogue_name": "Benny.txt",
+  "dialogue_url": "/wiki/Benny.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "001630CD",
+  "ref_id": "00101CA0",
+  "editor_id": "VFortBenny, VFortBennyCrucified",
+  "location": "The Fort",
+  "location_url": "/wiki/The_Fort",
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Mojave Boot-Riders(Formerly)Chairmen",
+  "role": "AntagonistHead Chairman",
+  "detailed_location": "The Tops",
+  "voice_actor": "Matthew Perry",
+  "special": {
+    "Strength": 7,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 3,
+    "Intelligence": 3,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "level": "8→30→50* (*Add-ons only)",
+  "tag_skills": [
+    {
+      "Guns:": "57→100"
+    },
+    {
+      "Melee Weap.:": "59→100"
+    },
+    {
+      "Unarmed:": "55→100"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "205→315→415*"
+    },
+    {
+      "Dam. Threshold:": "0(1)"
+    }
+  ],
+  "karma": "Evil",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "{INTERCOM}The cleaners will knock twice. Make sure they're thorough.Play soundVdialoguebenny_greeting_00147866…https://fallout.fandom.com/wiki/File:Vdialoguebenny_greeting_00147866_1.oggnoicon",
+      "index": "1"
+    },
+    {
+      "topic": "VDialogueBennyBennySexScene",
+      "topic_text": "VDialogueBennyBennySexScene",
+      "emotion": "Neutral 50",
+      "response_text": "You're platinum, pussycat! You know how to swing!Play soundVdialogueb_vdialoguebennyb_00119…https://fallout.fandom.com/wiki/File:Vdialogueb_vdialoguebennyb_0011984d_3.oggnoicon",
+      "index": "58"
+    },
+    {
+      "topic": "VDialogueBennyBennyTopic000",
+      "topic_text": "Let's see what you've been hiding under that checked suit. <Have sex with Benny.>",
+      "emotion": "Happy 50",
+      "response_text": "More than you ever dreamed, baby.Play soundVdialogueb_vdialoguebennyb_00167…https://fallout.fandom.com/wiki/File:Vdialogueb_vdialoguebennyb_001671f1_1.oggnoicon",
+      "index": "62"
+    },
+    {
+      "topic": "VDialogueBennyBennyTopic003",
+      "topic_text": "Seems you need to work on your marksmanship.",
+      "emotion": "Anger 40",
+      "response_text": "{amused, keeping voice down}I hit what I was aiming for. Guess you had brains to spare. Or are you just thick-skulled?Play soundVdialogueb vdialoguebennyb 00119…https://fallout.fandom.com/wiki/File:Vdialogueb_vdialoguebennyb_001194a9_1.oggnoicon",
+      "index": "63"
+    },
+    {
+      "topic": "VDialogueBennyBennyTopic004",
+      "topic_text": "Keep your pants on. I've got questions that need answers.",
+      "emotion": "Anger 50",
+      "response_text": "The time for talk has passed, honey baby. These mouths of ours have appointments to be elsewhere.Play soundVdialogueb_vdialoguebennyb_00119…https://fallout.fandom.com/wiki/File:Vdialogueb_vdialoguebennyb_00119d35_1.oggnoicon",
+      "index": "65"
+    },
+    {
+      "topic": "VDialogueBennyBennyTopic005",
+      "topic_text": "I dug myself out of that grave to plant you in yours, Benny. <Attack.>",
+      "emotion": "Fear 100",
+      "response_text": "{fleeing in terror; \"cash me out\" is slang for leaving}Cash me outta this mess!Play soundVdialogueb_vdialoguebennyb_00119…https://fallout.fandom.com/wiki/File:Vdialogueb_vdialoguebennyb_00119844_1.oggnoicon",
+      "index": "66"
+    },
+    {
+      "topic": "VDialogueBennyBennyTopic006",
+      "topic_text": "I want the Platinum Chip and I want it now.",
+      "emotion": "Anger 50",
+      "response_text": "{keeping voice down}I can't do that, baby, and you know it. There's a lot of angles to this caper - complexities aplenty.Play soundVdialogueb_vdialoguebennyb_00119…https://fallout.fandom.com/wiki/File:Vdialogueb_vdialoguebennyb_001194a7_1.oggnoicon",
+      "index": "67"
+    },
+    {
+      "topic": "VDialogueBennyBennyTopic007[Black Widow] and options.",
+      "topic_text": "When you shot me, you ran off so fast I never got your name.",
+      "emotion": "Happy 50",
+      "response_text": "{amused}You making a pass at me, sister?{Cuz}Because I'm out of your league.Play soundVdialogueb_vdialoguebennyb_00119…https://fallout.fandom.com/wiki/File:Vdialogueb_vdialoguebennyb_001194a6_1.oggnoicon",
+      "index": "69"
+    },
+    {
+      "topic": "VDialogueBennyBennyTopic009",
+      "topic_text": "Give me one good reason not to kill you.",
+      "emotion": "Anger 50",
+      "response_text": "{keeping voice down}You want a reason, how about four?Play soundVdialogueb_vdialoguebennyb_00119…https://fallout.fandom.com/wiki/File:Vdialogueb_vdialoguebennyb_001194ab_1.oggnoicon",
+      "index": "75"
+    },
+    {
+      "topic": "VDialogueBennyBennyTopic011",
+      "topic_text": "You fell for this trap hook, line, and sinker. <Attack Benny.>",
+      "emotion": "Anger 60",
+      "response_text": "{entering combat}You tramp! Like I needed another social disease anyhow!Play soundVdialogueb_vdialoguebennyb_00119…https://fallout.fandom.com/wiki/File:Vdialogueb_vdialoguebennyb_0011983f_1.oggnoicon",
+      "index": "79"
+    },
+    {
+      "topic": "VDialogueBennyBennyTopic012",
+      "topic_text": "So where does this put the two of us?",
+      "emotion": "Neutral 50",
+      "response_text": "Nowheresville, that's where. Sorry about the double-cross -{hard to keep track}or are we up to quadruple? - but if someone's gonna die, it's you.Play soundVdialogueb_vdialoguebennyb_00147…https://fallout.fandom.com/wiki/File:Vdialogueb_vdialoguebennyb_0014785b_1.oggnoicon",
+      "index": "80"
+    },
+    {
+      "topic": "VDialogueBennyBennyTopic013",
+      "topic_text": "You cheating bastard.",
+      "emotion": "Neutral 50",
+      "response_text": "{don't be a sore loser}Baby, getting outplayed and getting cheated ain't the same thing.Play soundVdialogueb vdialoguebennyb 00147…https://fallout.fandom.com/wiki/File:Vdialogueb_vdialoguebennyb_0014781f_1.oggnoicon",
+      "index": "81"
+    },
+    {
+      "topic": "VDialogueBennyBennyTopic014",
+      "topic_text": "You're a dead man.",
+      "emotion": "Neutral 50",
+      "response_text": "That temper of yours? Kinda why this conversation's taking place over an intercom.Play soundVdialogueb_vdialoguebennyb_00147…https://fallout.fandom.com/wiki/File:Vdialogueb_vdialoguebennyb_00147808_1.oggnoicon",
+      "index": "83"
+    },
+    {
+      "topic": "VDialogueBennyBennyTopic016",
+      "topic_text": "I'm wondering why I shouldn't just kill you.",
+      "emotion": "Neutral 50",
+      "response_text": "You've got a crazy drop on me here, baby, that's for sure. If killing's what you came for, this would be the time.Play soundVdialogueb_vdialoguebennyb_00119…https://fallout.fandom.com/wiki/File:Vdialogueb_vdialoguebennyb_001194a4_1.oggnoicon",
+      "index": "85"
+    },
+    {
+      "topic": "VDialogueBennyBennyTopic017",
+      "topic_text": "Mr. House wants the Platinum Chip. Hand it over.",
+      "emotion": "Anger 50",
+      "response_text": "{keeping voice down}You don't wanna do that, baby - not without hearing what I got to say first.Play soundVdialogueb_vdialoguebennyb_00147…https://fallout.fandom.com/wiki/File:Vdialogueb_vdialoguebennyb_0014784f_1.oggnoicon",
+      "index": "87"
+    },
+    {
+      "topic": "VDialogueBennyBennyTopic020",
+      "topic_text": "<Kill Benny in his sleep.>",
+      "emotion": "Neutral 50",
+      "response_text": "{Bleary, waking up from sleep only to be murdered}Huh...?{Beingg killed}Hnngk!Play soundVdialogueb_vdialoguebennyb_00147…https://fallout.fandom.com/wiki/File:Vdialogueb_vdialoguebennyb_0014785a_1.oggnoicon",
+      "index": "88"
+    },
+    {
+      "topic": "VDialogueBennyBennyTopic022<Speech check to get Benny to back off.>",
+      "topic_text": "All I am is a courier trying to fulfill my contract.",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED]{still not quite buying it}All this is just work ethic run wild, that's your line? I don't know...Play soundVdialogueb_vdialoguebennyb_00147…https://fallout.fandom.com/wiki/File:Vdialogueb_vdialoguebennyb_0014782f_1.oggnoicon",
+      "index": "89"
+    },
+    {
+      "topic": "VDialogueBennyBennyTopic023",
+      "topic_text": "The least you could do is answer some questions first.",
+      "emotion": "Neutral 50",
+      "response_text": "A lifelong-learner is you, hey?{beat}Then make your questions count, because your lifelong is running lifeshort.Play soundVdialogueb vdialoguebennyb 00147…https://fallout.fandom.com/wiki/File:Vdialogueb_vdialoguebennyb_00147817_1.oggnoicon",
+      "index": "92"
+    },
+    {
+      "topic": "VDialogueBennyBennyTopic024<Speech check to really convince him.>",
+      "topic_text": "I \"dig your line.\" Let me live, you'll never see me again.",
+      "emotion": "Neutral 50",
+      "response_text": "[SUCCEEDED]{chuckling, wondering if you're making a mistake}Goddammit, I'm actually gonna to let you live. What's come over me?Play soundVdialogueb_vdialoguebennyb_00147…https://fallout.fandom.com/wiki/File:Vdialogueb_vdialoguebennyb_00147851_1.oggnoicon",
+      "index": "93"
+    },
+    {
+      "topic": "VDialogueBennyBennyTopic027",
+      "topic_text": "<Go to sleep.>",
+      "emotion": "Neutral 50",
+      "response_text": "{Gentle snoring}Zzzz....Play soundVdialogueb_vdialoguebennyb_00147…https://fallout.fandom.com/wiki/File:Vdialogueb_vdialoguebennyb_0014782e_1.oggnoicon",
+      "index": "96"
+    },
+    {
+      "topic": "VDialogueBennyBennyTopic028",
+      "topic_text": "Call it luck and leave it at that.",
+      "emotion": "Anger 50",
+      "response_text": "Luck is for losers, baby. Someone pulled strings.Play soundVdialogueb_vdialoguebennyb_00147…https://fallout.fandom.com/wiki/File:Vdialogueb_vdialoguebennyb_00147825_1.oggnoicon",
+      "index": "97"
+    },
+    {
+      "topic": "VDialogueBennyBennyTopic029",
+      "topic_text": "What is the Platinum Chip?",
+      "emotion": "Neutral 50",
+      "response_text": "It's the House edge, baby. The key to stacking the odds in his favor - or was,{'til}until I swiped it.Play soundVdialogueb_vdialoguebennyb_00147…https://fallout.fandom.com/wiki/File:Vdialogueb_vdialoguebennyb_00147856_1.oggnoicon",
+      "index": "98"
+    },
+    {
+      "topic": "VDialogueBennyBennyTopic030",
+      "topic_text": "What angle are you playing?",
+      "emotion": "Neutral 50",
+      "response_text": "Angle? I'm head-on, baby, flat-out, all stops pulled, full steam ahead.Play soundVdialogueb_vdialoguebennyb_00147…https://fallout.fandom.com/wiki/File:Vdialogueb_vdialoguebennyb_0014785f_3.oggnoicon",
+      "index": "100"
+    },
+    {
+      "topic": "VDialogueBennyBennyTopic031",
+      "topic_text": "What'd you have in mind?",
+      "emotion": "Happy 50",
+      "response_text": "{keeping voice down}To start, I'll comp you the Presidential - best suite in the house. You deserve a taste of the VIP lifestyle.Play soundVdialogueb_vdialoguebennyb_00119…https://fallout.fandom.com/wiki/File:Vdialogueb_vdialoguebennyb_00119842_1.oggnoicon",
+      "index": "102"
+    },
+    {
+      "topic": "VDialogueBennyBennyTopic032",
+      "topic_text": "Fine, but don't keep me waiting.",
+      "emotion": "Happy 50",
+      "response_text": "Why would I do that, baby? I want to talk to you as much as you want to talk to me.Play soundVdialogueb_vdialoguebennyb_00119…https://fallout.fandom.com/wiki/File:Vdialogueb_vdialoguebennyb_00119841_1.oggnoicon",
+      "index": "104"
+    },
+    {
+      "topic": "VDialogueBennyBennyTopic033",
+      "topic_text": "The suite's a nice touch, but someone's got to pay off my contract.",
+      "emotion": "Happy 50",
+      "response_text": "[SUCCEEDED] Where's my manners? Here's some cash up front. There'll be more where that came from.Play soundVdialogueb_vdialoguebennyb_00119…https://fallout.fandom.com/wiki/File:Vdialogueb_vdialoguebennyb_0011985f_1.oggnoicon",
+      "index": "107"
+    },
+    {
+      "topic": "VDialogueBennyBennyTopic035",
+      "topic_text": "Tell Benny you're going to kill him.",
+      "emotion": "Neutral 50",
+      "response_text": "Starts combat.Play soundVdialogueb_vdialoguebennyb_00119…https://fallout.fandom.com/wiki/File:Vdialogueb_vdialoguebennyb_00119847_1.oggnoicon",
+      "index": "112"
+    },
+    {
+      "topic": "VDialogueBennyBennyTopic037Player uses SPEECH to convince Benny to accompany him immediately.",
+      "topic_text": "Two conditions - lose the bodyguards, and we both go to the suite now.",
+      "emotion": "Fear 50",
+      "response_text": "[SUCCEEDED] If that's what it takes to win your trust, that's what it takes. Follow me.Play soundVdialogueb_vdialoguebennyb_00119…https://fallout.fandom.com/wiki/File:Vdialogueb_vdialoguebennyb_0011984b_1.oggnoicon",
+      "index": "113"
+    },
+    {
+      "topic": "VDialogueBennyBennyTopic039",
+      "topic_text": "Hand over the Platinum Chip, maybe you live.",
+      "emotion": "Anger 50",
+      "response_text": "{FIRST TALK, ASSASSINATION}Can't do that, baby. The Chip, it's...{emphasis}special. But savor this, baby...Play soundVdialogueb_vdialoguebennyb_00147…https://fallout.fandom.com/wiki/File:Vdialogueb_vdialoguebennyb_00147883_1.oggnoicon",
+      "index": "115"
+    },
+    {
+      "topic": "VDialogueBennyBennyTopic040",
+      "topic_text": "Your little ambush didn't go according to plan.",
+      "emotion": "Neutral 50",
+      "response_text": "{Dumbfounded, nearly choking}What the fuck...?Play soundVdialogueb_vdialoguebennyb_00147…https://fallout.fandom.com/wiki/File:Vdialogueb_vdialoguebennyb_00147826_1.oggnoicon",
+      "index": "121"
+    },
+    {
+      "topic": "VDialogueBennyBennyTopic043",
+      "topic_text": "All I want is to see you dead. <Attack Benny.>",
+      "emotion": "Anger 50",
+      "response_text": "Then this is endsville, baby - may the best{slight emphasis}man win.Play soundVdialogueb_vdialoguebennyb_0011c…https://fallout.fandom.com/wiki/File:Vdialogueb_vdialoguebennyb_0011c8e6_1.oggnoicon",
+      "index": "122"
+    },
+    {
+      "topic": "VDialogueBennyBennyTopic044",
+      "topic_text": "You're stinking up my suite, Benny. Scram. We'll talk later.",
+      "emotion": "Happy 100",
+      "response_text": "{relieved to be getting out of here}Baby, you're the boss. All you gotta do is whistle.Play soundVdialogueb_vdialoguebennyb_00119…https://fallout.fandom.com/wiki/File:Vdialogueb_vdialoguebennyb_00119d33_1.oggnoicon",
+      "index": "123"
+    },
+    {
+      "topic": "VDialogueBennyBennyTopic047",
+      "topic_text": "We talk here and now, or I tell everyone my story.",
+      "emotion": "Neutral 50",
+      "response_text": "Do what you got to do, baby, and let the chips fall as they may. You know where to find me.Play soundVdialogueb_vdialoguebennyb_0011a…https://fallout.fandom.com/wiki/File:Vdialogueb_vdialoguebennyb_0011a965_1.oggnoicon",
+      "index": "129"
+    },
+    {
+      "topic": "VDialogueBennyBennyTopic049",
+      "topic_text": "How's the Chip work?",
+      "emotion": "Surprise 50",
+      "response_text": "It's some kind of data storage device, dig? So it's the data on the Chip that's platinum, not the Chip itself.Play soundVdialogueb_vdialoguebennyb_0011c…https://fallout.fandom.com/wiki/File:Vdialogueb_vdialoguebennyb_0011c8e5_2.oggnoicon",
+      "index": "130"
+    },
+    {
+      "topic": "VDialogueBennyBennyTopic050",
+      "topic_text": "What does the Chip do?",
+      "emotion": "Anger 20",
+      "response_text": "It has something to do with the Securitrons, I know that much. Upgrades their hitting power, gives{'em}them heft.Play soundVdialogueb_vdialoguebennyb_0011c…https://fallout.fandom.com/wiki/File:Vdialogueb_vdialoguebennyb_0011c8f1_1.oggnoicon",
+      "index": "132"
+    },
+    {
+      "topic": "VDialogueBennyBennyTopic051",
+      "topic_text": "You'll answer my questions now, not later.",
+      "emotion": "Anger 50",
+      "response_text": "{keeping voice down}It can't work like that, baby - not out in public like this. You really need me to spell that out?Play soundVdialogueb_vdialoguebennyb_00147…https://fallout.fandom.com/wiki/File:Vdialogueb_vdialoguebennyb_00147843_1.oggnoicon",
+      "index": "134"
+    },
+    {
+      "topic": "VDialogueBennyBennyTopic052",
+      "topic_text": "What are you offering?",
+      "emotion": "Happy 50",
+      "response_text": "You help me, and before long the Chairmen will rule all of Vegas, dig? With enough robot muscle to back it up.Play soundVdialogueb_vdialoguebennyb_0011c…https://fallout.fandom.com/wiki/File:Vdialogueb_vdialoguebennyb_0011c8ef_1.oggnoicon",
+      "index": "135"
+    },
+    {
+      "topic": "VDialogueBennyBennyTopic053",
+      "topic_text": "The hows don't matter.",
+      "emotion": "Anger 50",
+      "response_text": "A magician don't explain his tricks. I get it.Play soundVdialogueb_vdialoguebennyb_0011c…https://fallout.fandom.com/wiki/File:Vdialogueb_vdialoguebennyb_0011c8f4_1.oggnoicon",
+      "index": "138"
+    },
+    {
+      "topic": "VDialogueBennyBennyTopic054{Player shows Benny evidence he left behind.}",
+      "topic_text": "You left quite a trail. <Show Benny his cigarette butt and lighter.>",
+      "emotion": "Pained 50",
+      "response_text": "{appalled}Look at me, a big-leaguer or so I claim, making all the mistakes of an original loser...Play soundVdialogueb_vdialoguebennyb_0011c…https://fallout.fandom.com/wiki/File:Vdialogueb_vdialoguebennyb_0011c8eb_1.oggnoicon",
+      "index": "139"
+    },
+    {
+      "topic": "VDialogueBennyBennyTopic056",
+      "topic_text": "What's the deal with your secret workshop and \"Yes Man\" friend?",
+      "emotion": "Pained 100",
+      "response_text": "{pained that the player talked to Yes Man}You really weren't supposed to talk to him...Play soundVdialogueb_vdialoguebennyb_0011c…https://fallout.fandom.com/wiki/File:Vdialogueb_vdialoguebennyb_0011c8f0_5.oggnoicon",
+      "index": "142"
+    },
+    {
+      "topic": "VDialogueBennyBennyTopic058",
+      "topic_text": "No deal. Time to die.",
+      "emotion": "Sad 50",
+      "response_text": "{rueful}Guess I shoulda seen that coming.Play soundVdialogueb_vdialoguebennyb_0011c…https://fallout.fandom.com/wiki/File:Vdialogueb_vdialoguebennyb_0011c8f2_1.oggnoicon",
+      "index": "147"
+    },
+    {
+      "topic": "VDialogueBennyBennyTopic061",
+      "topic_text": "The Chip belongs to me. Hand it over.",
+      "emotion": "Anger 50",
+      "response_text": "Baby, ease off the gas. The Chip belongs in the hands of someone who can use it. As in me, not you.Play soundVdialogueb vdialoguebennyb 00147…https://fallout.fandom.com/wiki/File:Vdialogueb_vdialoguebennyb_0014781f_1.oggnoicon",
+      "index": "148"
+    },
+    {
+      "topic": "VDialogueBennyBennyTopic062",
+      "topic_text": "It's a deal.",
+      "emotion": "Happy 100",
+      "response_text": "Jackpot, baby! I knew we'd see eye to eye!Play soundVdialogueb_vdialoguebennyb_0011c…https://fallout.fandom.com/wiki/File:Vdialogueb_vdialoguebennyb_0011c8df_1.oggnoicon",
+      "index": "150"
+    },
+    {
+      "topic": "VDialogueBennyBennyTopic065",
+      "topic_text": "And you're willing to commit murder to make this happen?",
+      "emotion": "Anger 50",
+      "response_text": "{condescending}Baby, do you not understand the level of game here?Play soundVdialogueb_vdialoguebennyb_0011c…https://fallout.fandom.com/wiki/File:Vdialogueb_vdialoguebennyb_0011c8d9_1.oggnoicon",
+      "index": "158"
+    },
+    {
+      "topic": "VDialogueBennyBennyTopic066",
+      "topic_text": "You're right, murder is the answer. Yours. <Attack Benny.>",
+      "emotion": "Anger 50",
+      "response_text": "Not the point I was aiming for but, well, let's see this through.Play soundVdialogueb_vdialoguebennyb_0011c…https://fallout.fandom.com/wiki/File:Vdialogueb_vdialoguebennyb_0011c900_1.oggnoicon",
+      "index": "160"
+    },
+    {
+      "topic": "VDialogueBennyBennyTopic067",
+      "topic_text": "I see your point.",
+      "emotion": "Anger 20",
+      "response_text": "It's a game, and games have winners and losers. I prefer the former, how about you?Play soundVdialogueb vdialoguebennyb 0011c…https://fallout.fandom.com/wiki/File:Vdialogueb_vdialoguebennyb_0011c8dc_1.oggnoicon",
+      "index": "161"
+    },
+    {
+      "topic": "VDialogueBennyBennyTopic068",
+      "topic_text": "The ruthlessness of others is no excuse.",
+      "emotion": "Fear 50",
+      "response_text": "Was a time I would've agreed with you. But this... it's too big, it affects too many people. I can't get hung up on those details.Play soundVdialogueb_vdialoguebennyb_0011c…https://fallout.fandom.com/wiki/File:Vdialogueb_vdialoguebennyb_0011c8e2_1.oggnoicon",
+      "index": "162"
+    },
+    {
+      "topic": "VDialogueBennyBennyTopic069",
+      "topic_text": "The jig's up, Benny. Me and Yes Man had a talk.",
+      "emotion": "Fear 50",
+      "response_text": "{horrified - keeping your voice down}Baby, this is{emphasis}not the place to go talking about that!Play soundVdialogueb_vdialoguebennyb_00147…https://fallout.fandom.com/wiki/File:Vdialogueb_vdialoguebennyb_0014781c_1.oggnoicon",
+      "index": "163"
+    },
+    {
+      "topic": "VDialogueBennyBennyTopic076",
+      "topic_text": "It takes more than a couple bullets in the head to stop me.",
+      "emotion": "Disgust 50",
+      "response_text": "{drawing it out, scoffing at player's bravado}Yeah, hello... Well, serves me right for using a 9mm.Play soundVdialogueb_vdialoguebennyb_00147…https://fallout.fandom.com/wiki/File:Vdialogueb_vdialoguebennyb_0014781b_1.oggnoicon",
+      "index": "164"
+    },
+    {
+      "topic": "VDialogueBennyBennyTopic077",
+      "topic_text": "A Securitron dug me up and a doc in Goodsprings did the rest.",
+      "emotion": "Surprise 50",
+      "response_text": "{dismayed}House was on to me from word Go? I thought I was being so clever...Play soundVdialogueb vdialoguebennyb 00147…https://fallout.fandom.com/wiki/File:Vdialogueb_vdialoguebennyb_00147814_1.oggnoicon",
+      "index": "165"
+    },
+    {
+      "topic": "VDialogueBennyBennyTopic079",
+      "topic_text": "Tell me about Mr. House.",
+      "emotion": "Surprise 50",
+      "response_text": "A good cat to swing with. Or was -{'til}until he stopped mewing.Play soundVdialogueb_vdialoguebennyb_0011c…https://fallout.fandom.com/wiki/File:Vdialogueb_vdialoguebennyb_0011c8de_2.oggnoicon",
+      "index": "166"
+    },
+    {
+      "topic": "VDialogueBennyBennyTopic080",
+      "topic_text": "What makes the Chairmen so special?",
+      "emotion": "Happy 50",
+      "response_text": "We're the definition of cool, baby. We know how to swing. Folks come to us to learn how to enjoy themselves.Play soundVdialogueb_vdialoguebennyb_0011c…https://fallout.fandom.com/wiki/File:Vdialogueb_vdialoguebennyb_0011c8e4_1.oggnoicon",
+      "index": "170"
+    },
+    {
+      "topic": "VDialogueBennyBennyTopic081",
+      "topic_text": "Fill me in about the NCR.",
+      "emotion": "Anger 50",
+      "response_text": "A nation of meddlers, trying to muscle in on our action. Well, we got muscles too, and smarts besides.Play soundVdialogueb_vdialoguebennyb_0011c…https://fallout.fandom.com/wiki/File:Vdialogueb_vdialoguebennyb_0011c8ee_1.oggnoicon",
+      "index": "172"
+    },
+    {
+      "topic": "VDialogueBennyBennyTopic082",
+      "topic_text": "Tell me about Caesar's Legion.",
+      "emotion": "Anger 50",
+      "response_text": "Worst of the worst! A tribe of degenerate losers led by a creep. They crucify people for kicks! Slaughter whole towns!Play soundVdialogueb_vdialoguebennyb_0011c…https://fallout.fandom.com/wiki/File:Vdialogueb_vdialoguebennyb_0011c8f3_1.oggnoicon",
+      "index": "176"
+    },
+    {
+      "topic": "VDialogueBennyBennyTopic084",
+      "topic_text": "Like I'd trust you? No thanks.",
+      "emotion": "Pained 50",
+      "response_text": "I know, you figure me for a creep. It's your prerogative.Play soundVdialogueb_vdialoguebennyb_0011c…https://fallout.fandom.com/wiki/File:Vdialogueb_vdialoguebennyb_0011c8e7_1.oggnoicon",
+      "index": "179"
+    },
+    {
+      "topic": "VDialogueBennyBennyTopic087",
+      "topic_text": "Forget it, I forgive you.",
+      "emotion": "Sad 50",
+      "response_text": "{marveling}You forgive me? After what I done? Baby, are you trying to make me cry?Play soundVdialogueb_vdialoguebennyb_0011c…https://fallout.fandom.com/wiki/File:Vdialogueb_vdialoguebennyb_0011c8e9_1.oggnoicon",
+      "index": "184"
+    },
+    {
+      "topic": "VDialogueBennyBennyTopic088",
+      "topic_text": "No deal. Time for you to die. <Attack Benny>",
+      "emotion": "Fear 50",
+      "response_text": "We gotta problem, boys!Play soundVdialogueb_vdialoguebennyb_0011c…https://fallout.fandom.com/wiki/File:Vdialogueb_vdialoguebennyb_0011c8e3_1.oggnoicon",
+      "index": "190"
+    },
+    {
+      "topic": "VDialogueBennyBennyTopic089",
+      "topic_text": "What makes you think you can succeed?",
+      "emotion": "Happy 50",
+      "response_text": "Baby, the odds may look long, but that's just because we ain't done rigging them. I won't toss the dice until we are.{because = 'cause}Play soundVdialogueb_vdialoguebennyb_0011c…https://fallout.fandom.com/wiki/File:Vdialogueb_vdialoguebennyb_0011c8f5_1.oggnoicon",
+      "index": "191"
+    },
+    {
+      "topic": "VDialogueBennyBennyTopic090",
+      "topic_text": "I dug myself out of that grave to put you in yours, Benny.",
+      "emotion": "Fear 100",
+      "response_text": "Uh oh.Play soundVdialogueb_vdialoguebennyb_0011c…https://fallout.fandom.com/wiki/File:Vdialogueb_vdialoguebennyb_0011c8da_1.oggnoicon",
+      "index": "193"
+    },
+    {
+      "topic": "VDialogueBennyBennyTopic091",
+      "topic_text": "What do you think of the Omertas?",
+      "emotion": "Disgust 100",
+      "response_text": "A tribe of finks. Every single one of them is a degenerate.Play soundVdialogueb_vdialoguebennyb_0011c…https://fallout.fandom.com/wiki/File:Vdialogueb_vdialoguebennyb_0011c8dd_1.oggnoicon",
+      "index": "194"
+    },
+    {
+      "topic": "VDialogueBennyBennyTopic092",
+      "topic_text": "What do you know about the White Glove Society?",
+      "emotion": "Fear 50",
+      "response_text": "Personally? They give me the heebie-jeebies. There's such a thing as being too polite, \"if I may\" this and \"my pleasure\" that.Play soundVdialogueb_vdialoguebennyb_0011c…https://fallout.fandom.com/wiki/File:Vdialogueb_vdialoguebennyb_0011c8e1_1.oggnoicon",
+      "index": "196"
+    },
+    {
+      "topic": "VDialogueBennyBennyTopic093",
+      "topic_text": "I'm persistent, that's all.",
+      "emotion": "Disgust 50",
+      "response_text": "Yeah, that's one word for it.Play soundVdialogueb_vdialoguebennyb_00147…https://fallout.fandom.com/wiki/File:Vdialogueb_vdialoguebennyb_0014783a_1.oggnoicon",
+      "index": "198"
+    },
+    {
+      "topic": "VDialogueBennyBennyTopic094",
+      "topic_text": "{BROKE INTO WEAPONS LOCKER}Give me one good reason not to kill you.",
+      "emotion": "Anger 50",
+      "response_text": "{keeping voice down}You want a reason, how about four?Play soundVdialogueb_vdialoguebennyb_0014b…https://fallout.fandom.com/wiki/File:Vdialogueb_vdialoguebennyb_0014b0c4_1.oggnoicon",
+      "index": "199"
+    },
+    {
+      "topic": "VDialogueBennyBennyTopic095",
+      "topic_text": "Maybe that's why I broke into the weapons locker.",
+      "emotion": "Fear 50",
+      "response_text": "You're bluffing, baby...{seeing it in player's eyes}Except maybe you're not.Play soundVdialogueb_vdialoguebennyb_0014b…https://fallout.fandom.com/wiki/File:Vdialogueb_vdialoguebennyb_0014b0c3_1.oggnoicon",
+      "index": "203"
+    },
+    {
+      "topic": "VDialogueBennyBennyTopic097",
+      "topic_text": "There's no need for violence.",
+      "emotion": "Neutral 50",
+      "response_text": "Baby, if ever there was a need for violence, you is it. Just do me a favor and stay dead this time, hey? Ta-ta.Play soundVdialogueb_vdialoguebennyb_00147…https://fallout.fandom.com/wiki/File:Vdialogueb_vdialoguebennyb_00147816_1.oggnoicon",
+      "index": "205"
+    },
+    {
+      "topic": "VDialogueBennyBennyTopic098",
+      "topic_text": "You cheating bastard.",
+      "emotion": "Neutral 50",
+      "response_text": "Baby, getting outplayed and getting cheated ain't the same thing.Play soundVdialogueb_vdialoguebennyb_00147…https://fallout.fandom.com/wiki/File:Vdialogueb_vdialoguebennyb_00147839_1.oggnoicon",
+      "index": "206"
+    },
+    {
+      "topic": "VDialogueBennyBennyTopic102",
+      "topic_text": "No deal. Time to die.",
+      "emotion": "Disgust 50",
+      "response_text": "{shrugging at failure of negotiations, starting combat}It was worth a try.Play soundVdialogueb_vdialoguebennyb_00147…https://fallout.fandom.com/wiki/File:Vdialogueb_vdialoguebennyb_00147813_1.oggnoicon",
+      "index": "208"
+    },
+    {
+      "topic": "VDialogueBennyBennyTopic103",
+      "topic_text": "Why would I trust you?",
+      "emotion": "Pained 50",
+      "response_text": "{conceding}I know, I made a bad first impression. You got every reason to think I'm a creep. But baby, this is an 18 karat opportunity.Play soundVdialogueb_vdialoguebennyb_00147…https://fallout.fandom.com/wiki/File:Vdialogueb_vdialoguebennyb_00147829_1.oggnoicon",
+      "index": "209"
+    },
+    {
+      "topic": "VDialogueBennyBennyTopic104",
+      "topic_text": "All right, I'll meet you in the Presidential Suite.",
+      "emotion": "Happy 100",
+      "response_text": "{a surge of relief - how did you pull this off?}Baby, wow-ee wow wow! You and me are gonna swing!Play soundVdialogueb_vdialoguebennyb_00147…https://fallout.fandom.com/wiki/File:Vdialogueb_vdialoguebennyb_00147834_1.oggnoicon",
+      "index": "212"
+    },
+    {
+      "topic": "VDialogueBennyBennyTopic105",
+      "topic_text": "Hand over the Chip or else.",
+      "emotion": "Anger 50",
+      "response_text": "{pulling your weapon}Or else{emphasis}what, punk? Or else{emphasis}this?Play soundVdialogueb_vdialoguebennyb_00147…https://fallout.fandom.com/wiki/File:Vdialogueb_vdialoguebennyb_0014782c_1.oggnoicon",
+      "index": "214"
+    },
+    {
+      "topic": "VDialogueBennyVFortBennyTopic002",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Ta-ta.Play soundVdialogueb_vdialoguebennyv_00136…https://fallout.fandom.com/wiki/File:Vdialogueb_vdialoguebennyv_00136fc5_1.oggnoicon",
+      "index": "215"
+    },
+    {
+      "topic": "VDialogueBennyVFortBennyTopic003",
+      "topic_text": "Hundreds of Securitrons. All of them upgraded now, thanks to the Chip.",
+      "emotion": "Surprise 50",
+      "response_text": "So all this time the old man had an entire army on lay-away? Clever player.Play soundVdialogueb_vdialoguebennyv_0014b…https://fallout.fandom.com/wiki/File:Vdialogueb_vdialoguebennyv_0014b640_2.oggnoicon",
+      "index": "216"
+    },
+    {
+      "topic": "VDialogueBennyVFortBennyTopic004",
+      "topic_text": "Let's take our chances. <Untie Benny.>",
+      "emotion": "Fear 50",
+      "response_text": "Blow on the dice, baby. We're gonna need luck to get outta here alive.Play soundVdialogueb_vdialoguebennyv_00156…https://fallout.fandom.com/wiki/File:Vdialogueb_vdialoguebennyv_001564f9_1.oggnoicon",
+      "index": "220"
+    },
+    {
+      "topic": "VDialogueBennyVFortBennyTopic006",
+      "topic_text": "What if I helped you escape?",
+      "emotion": "Happy 50",
+      "response_text": "Sweet to offer, baby, but if you cut these ropes every Legionary in this camp's gonna come running. With machetes.Play soundVdialogueb_vdialoguebennyv_00153…https://fallout.fandom.com/wiki/File:Vdialogueb_vdialoguebennyv_00153aea_1.oggnoicon",
+      "index": "221"
+    },
+    {
+      "topic": "VDialogueBennyVFortBennyTopic007",
+      "topic_text": "Here's the Stealth Boy and Bobby Pin you need to escape.",
+      "emotion": "Happy 100",
+      "response_text": "Baby... your generosity and spirit of forgiveness? Off the charts.Play soundVdialogueb_vdialoguebennyv_00153…https://fallout.fandom.com/wiki/File:Vdialogueb_vdialoguebennyv_00153afe_1.oggnoicon",
+      "index": "225"
+    },
+    {
+      "topic": "VDialogueBennyVFortBennyTopic008",
+      "topic_text": "If I help you escape, what will you do next?",
+      "emotion": "Neutral 50",
+      "response_text": "Baby, if you show me the door to scramsville, that's where I'll go - out of your hair, never to return.Play soundVdialogueb_vdialoguebennyv_00153…https://fallout.fandom.com/wiki/File:Vdialogueb_vdialoguebennyv_00153ae7_1.oggnoicon",
+      "index": "227"
+    },
+    {
+      "topic": "VDialogueBennyVFortBennyTopic010",
+      "topic_text": "Keep dreaming.",
+      "emotion": "Anger 50",
+      "response_text": "No one likes a tease, baby.Play soundVdialogueb_vdialoguebennyv_00153…https://fallout.fandom.com/wiki/File:Vdialogueb_vdialoguebennyv_00153b05_1.oggnoicon",
+      "index": "229"
+    },
+    {
+      "topic": "VDialogueBennyVFortBennyTopic011",
+      "topic_text": "I'll see what I can do.",
+      "emotion": "Anger 50",
+      "response_text": "Check's in the mail, hey? Don't get my hopes up.Play soundVdialogueb_vdialoguebennyv_00153…https://fallout.fandom.com/wiki/File:Vdialogueb_vdialoguebennyv_00153af2_1.oggnoicon",
+      "index": "231"
+    },
+    {
+      "topic": "VDialogueBennyVFortBennyTopic013",
+      "topic_text": "About helping you escape...",
+      "emotion": "Happy 50",
+      "response_text": "Yeah? What about it?Play soundVdialogueb_vdialoguebennyv_00153…https://fallout.fandom.com/wiki/File:Vdialogueb_vdialoguebennyv_00153afc_1.oggnoicon",
+      "index": "232"
+    },
+    {
+      "topic": "VDialogueBennyVFortBennyTopic017",
+      "topic_text": "Do you have a preference?",
+      "emotion": "Surprise 50",
+      "response_text": "Yeah, to die in my sleep at a ripe old age after a marathon session of hey-hey with thirty sex-starved broads. You'll set that up?Play soundVdialogueb_vdialoguebennyv_00147…https://fallout.fandom.com/wiki/File:Vdialogueb_vdialoguebennyv_00147811_1.oggnoicon",
+      "index": "233"
+    },
+    {
+      "topic": "VDialogueBennyVFortBennyTopic018",
+      "topic_text": "I haven't made up my mind.",
+      "emotion": "Anger 50",
+      "response_text": "I know, so many options! How do you choose just one?Play soundVdialogueb_vdialoguebennyv_00147…https://fallout.fandom.com/wiki/File:Vdialogueb_vdialoguebennyv_0014782a_1.oggnoicon",
+      "index": "236"
+    },
+    {
+      "topic": "VDialogueBennyVFortBennyTopic019",
+      "topic_text": "I was thinking I might hack you to death while you're still tied up.",
+      "emotion": "Fear 50",
+      "response_text": "{trying to hide horror}Yeah... getting butchered like livestock. Something to aspire to.Play soundVdialogueb_vdialoguebennyv_00147…https://fallout.fandom.com/wiki/File:Vdialogueb_vdialoguebennyv_00147850_1.oggnoicon",
+      "index": "237"
+    },
+    {
+      "topic": "VDialogueBennyVFortBennyTopic020",
+      "topic_text": "Crucifixion is an option.",
+      "emotion": "Anger 50",
+      "response_text": "Yeah, real popular{'round}around here. It's a crowd pleaser.Play soundVdialogueb_vdialoguebennyv_00147…https://fallout.fandom.com/wiki/File:Vdialogueb_vdialoguebennyv_00147823_1.oggnoicon",
+      "index": "238"
+    },
+    {
+      "topic": "VDialogueBennyVFortBennyTopic021",
+      "topic_text": "Maybe we should fight it out in the arena, fair and square.",
+      "emotion": "Happy 50",
+      "response_text": "{daring to hope}You'd do that for me, baby? Don't tease if you don't mean it.Play soundVdialogueb_vdialoguebennyv_00147…https://fallout.fandom.com/wiki/File:Vdialogueb_vdialoguebennyv_00147815_1.oggnoicon",
+      "index": "239"
+    },
+    {
+      "topic": "VDialogueBennyVFortBennyTopic022",
+      "topic_text": "What if my choice is \"none of the above?\"",
+      "emotion": "Happy 50",
+      "response_text": "Now you're talking! That is the ring-a-ding move, baby.Play soundVdialogueb_vdialoguebennyv_00147…https://fallout.fandom.com/wiki/File:Vdialogueb_vdialoguebennyv_00147857_1.oggnoicon",
+      "index": "240"
+    },
+    {
+      "topic": "VDialogueBennyVFortBennyTopic023",
+      "topic_text": "Mr. House is already out of the picture.",
+      "emotion": "Surprise 50",
+      "response_text": "{Player already killed or unplugged Mr. House}You cashed out the old man?{grunt of amazement}So how's it feel to end an era?Play soundVdialogueb_vdialoguebennyv_00147…https://fallout.fandom.com/wiki/File:Vdialogueb_vdialoguebennyv_0014780c_1.oggnoicon",
+      "index": "247"
+    },
+    {
+      "topic": "VDialogueBennyVFortBennyTopic024",
+      "topic_text": "What's so bad about the NCR?",
+      "emotion": "Anger 50",
+      "response_text": "Ain't we covered this? The only thing not bad about them is they ain't Legion.Play soundVdialogueb_vdialoguebennyv_00147…https://fallout.fandom.com/wiki/File:Vdialogueb_vdialoguebennyv_00147853_1.oggnoicon",
+      "index": "252"
+    },
+    {
+      "topic": "VDialogueBennyVFortBennyTopic025",
+      "topic_text": "You think Caesar would destroy the Strip?",
+      "emotion": "Anger 50",
+      "response_text": "Nah, just spruce it up with a crucifixion here and there.{Are you stupid?}Come closer so I can step on you.Play soundVdialogueb_vdialoguebennyv_00147…https://fallout.fandom.com/wiki/File:Vdialogueb_vdialoguebennyv_0014780e_1.oggnoicon",
+      "index": "254"
+    },
+    {
+      "topic": "VDialogueBennyVFortBennyTopic026",
+      "topic_text": "Tell me about the Three Families.",
+      "emotion": "Happy 50",
+      "response_text": "More like two, after what you did to the Omertas.Play soundVdialogueb_vdialoguebennyv_00147…https://fallout.fandom.com/wiki/File:Vdialogueb_vdialoguebennyv_00147861_1.oggnoicon",
+      "index": "257"
+    },
+    {
+      "topic": "VDialogueBennyVFortBennyTopic027",
+      "topic_text": "How long were you the head of the family?",
+      "emotion": "Neutral 50",
+      "response_text": "Seven years. Took over three days after Mr. House introduced himself.Play soundVdialogueb_vdialoguebennyv_00147…https://fallout.fandom.com/wiki/File:Vdialogueb_vdialoguebennyv_00147833_1.oggnoicon",
+      "index": "260"
+    },
+    {
+      "topic": "VDialogueBennyVFortBennyTopic028",
+      "topic_text": "Was your tribe always called the Chairmen?",
+      "emotion": "Surprise 50",
+      "response_text": "Nah, in the way-back we called ourselves the Boot Riders. Silly name, but that's how we rode the Mojave, dig? - on our feet.Play soundVdialogueb_vdialoguebennyv_00147…https://fallout.fandom.com/wiki/File:Vdialogueb_vdialoguebennyv_00147832_1.oggnoicon",
+      "index": "264"
+    },
+    {
+      "topic": "VDialogueBennyVFortBennyTopic029",
+      "topic_text": "How did Mr. House introduce himself?",
+      "emotion": "Neutral 50",
+      "response_text": "We were east of Vegas when the first Securitron we ever saw rolled up on us. We junked it in a minute flat.Play soundVdialogueb_vdialoguebennyv_00147…https://fallout.fandom.com/wiki/File:Vdialogueb_vdialoguebennyv_00147818_1.oggnoicon",
+      "index": "268"
+    },
+    {
+      "topic": "VDialogueBennyVFortBennyTopic033",
+      "topic_text": "I'm going to hack you to death while you're tied up, helpless.",
+      "emotion": "Fear 100",
+      "response_text": "No, come on, don't slaughter me like I'm some kind of animal!Play soundVdialogueb_vdialoguebennyv_00147…https://fallout.fandom.com/wiki/File:Vdialogueb_vdialoguebennyv_00147822_1.oggnoicon",
+      "index": "272"
+    },
+    {
+      "topic": "VDialogueBennyVFortBennyTopic034",
+      "topic_text": "You'll be crucified for my amusement.",
+      "emotion": "Fear 100",
+      "response_text": "Don't do that, baby, not crucifixion. I could be up there for days with those twisted creeps laughing and pointing.Play soundVdialogueb_vdialoguebennyv_00147…https://fallout.fandom.com/wiki/File:Vdialogueb_vdialoguebennyv_0014785e_1.oggnoicon",
+      "index": "273"
+    },
+    {
+      "topic": "VDialogueBennyVFortBennyTopic035",
+      "topic_text": "We'll fight in the arena, fair and square.",
+      "emotion": "Happy 50",
+      "response_text": "{warming to the idea}Machetes at twenty paces, hey? I accept your challenge.Play soundVdialogueb_vdialoguebennyv_00147…https://fallout.fandom.com/wiki/File:Vdialogueb_vdialoguebennyv_00147828_1.oggnoicon",
+      "index": "274"
+    },
+    {
+      "topic": "VDialogueBennyVFortBennyTopic036",
+      "topic_text": "I've decided to kill you here and now.",
+      "emotion": "Pained 50",
+      "response_text": "I see.{beat}Keep it simple, hey? Around here, it's one of the better options...Play soundVdialogueb_vdialoguebennyv_00147…https://fallout.fandom.com/wiki/File:Vdialogueb_vdialoguebennyv_00147821_1.oggnoicon",
+      "index": "275"
+    },
+    {
+      "topic": "VDialogueBennyVFortBennyTopic037",
+      "topic_text": "It's going to hurt. A lot. <Final decision.>",
+      "emotion": "Anger 100",
+      "response_text": "{losing composure}You sick, twisted fuck!Play soundVdialogueb_vdialoguebennyv_00147…https://fallout.fandom.com/wiki/File:Vdialogueb_vdialoguebennyv_0014780b_1.oggnoicon",
+      "index": "276"
+    },
+    {
+      "topic": "VDialogueBennyVFortBennyTopic039",
+      "topic_text": "Pass the time thinking over your mistakes. <Final decision.>",
+      "emotion": "Anger 100",
+      "response_text": "{losing composure}You sick, vindictive fuck!Play soundVdialogueb_vdialoguebennyv_00147…https://fallout.fandom.com/wiki/File:Vdialogueb_vdialoguebennyv_0014780f_1.oggnoicon",
+      "index": "277"
+    },
+    {
+      "topic": "VDialogueBennyVFortBennyTopic041",
+      "topic_text": "Let's do it. <Final decision.>",
+      "emotion": "Happy 50",
+      "response_text": "{sincere}You're a class act, baby. Not to say I'm gonna make it easy for you...Play soundVdialogueb_vdialoguebennyv_00147…https://fallout.fandom.com/wiki/File:Vdialogueb_vdialoguebennyv_0014782b_1.oggnoicon",
+      "index": "278"
+    },
+    {
+      "topic": "VDialogueBennyVFortBennyTopic043",
+      "topic_text": "Sure, here it comes.",
+      "emotion": "Anger 50",
+      "response_text": "{frustrated the player hasn't killed you yet}I'll believe it when it happens!Play soundVdialogueb_vdialoguebennyv_00147…https://fallout.fandom.com/wiki/File:Vdialogueb_vdialoguebennyv_0014780a_1.oggnoicon",
+      "index": "279"
+    },
+    {
+      "topic": "VDialogueBennyVFortBennyTopic044",
+      "topic_text": "We talked about how you might sneak out of here...",
+      "emotion": "Anger 50",
+      "response_text": "{I can't believe you're bringing this up}Yeah, we talked about it, but that went a big fat nowhere.Play soundVdialogueb_vdialoguebennyv_00153…https://fallout.fandom.com/wiki/File:Vdialogueb_vdialoguebennyv_00153af5_1.oggnoicon",
+      "index": "280"
+    },
+    {
+      "topic": "VDialogueBennyVFortBennyTopic045",
+      "topic_text": "Something bad could happen to you right here...",
+      "emotion": "Anger 50",
+      "response_text": "The direct approach, hey? Fair enough.Play soundVdialogueb_vdialoguebennyv_00147…https://fallout.fandom.com/wiki/File:Vdialogueb_vdialoguebennyv_00147812_1.oggnoicon",
+      "index": "282"
+    },
+    {
+      "topic": "VDialogueBennyVFortBennyTopic046",
+      "topic_text": "How about I untie you?",
+      "emotion": "Anger 50",
+      "response_text": "What am I gonna say?{sarcastic}\"No thanks?\"Play soundVdialogueb_vdialoguebennyv_00153…https://fallout.fandom.com/wiki/File:Vdialogueb_vdialoguebennyv_00153aed_1.oggnoicon",
+      "index": "284"
+    },
+    {
+      "topic": "VDialogueBennyVFortBennyTopic047",
+      "topic_text": "Okay, let's do it.",
+      "emotion": "Fear 50",
+      "response_text": "Ring-a-ding-ding, baby. I've got your back.Play soundVdialogueb_vdialoguebennyv_00153…https://fallout.fandom.com/wiki/File:Vdialogueb_vdialoguebennyv_00153afb_1.oggnoicon",
+      "index": "286"
+    },
+    {
+      "topic": "VDialogueBennyVFortBennyTopic048",
+      "topic_text": "Actually... I'd rather kill you now.",
+      "emotion": "Anger 100",
+      "response_text": "{outraged}You fink! Murdering me like this, down on my knees?Play soundVdialogueb_vdialoguebennyv_00153…https://fallout.fandom.com/wiki/File:Vdialogueb_vdialoguebennyv_00153aee_1.oggnoicon",
+      "index": "287"
+    },
+    {
+      "topic": "VDialogueBennyVFortBennyTopic049",
+      "topic_text": "Close your eyes, if you want.",
+      "emotion": "Pained 50",
+      "response_text": "Nah, I'd rather see it coming.Play soundVdialogueb_vdialoguebennyv_00147…https://fallout.fandom.com/wiki/File:Vdialogueb_vdialoguebennyv_0014781d_1.oggnoicon",
+      "index": "288"
+    },
+    {
+      "topic": "VDialogueBennyVFortBennyTopic050",
+      "topic_text": "Here, I'll set you free. <Untie Benny.>",
+      "emotion": "Happy 50",
+      "response_text": "That's it, baby! Time to vacate these premises!Play soundVdialogueb_vdialoguebennyv_00153…https://fallout.fandom.com/wiki/File:Vdialogueb_vdialoguebennyv_00153af0_1.oggnoicon",
+      "index": "290"
+    },
+    {
+      "topic": "VDialogueBennyVFortBennyTopic051",
+      "topic_text": "I'm leaving you here.",
+      "emotion": "Fear 50",
+      "response_text": "Baby, you can't just leave me tied up! Those Legion boys'll hoist me up on a cross for the mess you made - if I'm lucky!Play soundVdialogueb_vdialoguebennyv_00153…https://fallout.fandom.com/wiki/File:Vdialogueb_vdialoguebennyv_00153aef_1.oggnoicon",
+      "index": "291"
+    },
+    {
+      "topic": "VDialogueBennyVFortBennyTopic053",
+      "topic_text": "What happens if I let you go?",
+      "emotion": "Happy 50",
+      "response_text": "Baby, that can go any direction you want. We can take Vegas together, or I can head for the nearest sunset. Your call.Play soundVdialogueb_vdialoguebennyv_00153…https://fallout.fandom.com/wiki/File:Vdialogueb_vdialoguebennyv_00153afd_1.oggnoicon",
+      "index": "292"
+    },
+    {
+      "topic": "VDialogueBennyVFortBennyTopic054",
+      "topic_text": "You were amazing.",
+      "emotion": "Happy 50",
+      "response_text": "Don't I know it! Too bad a conjugal visit here isn't practical...Play soundVdialogueb_vdialoguebennyv_00147…https://fallout.fandom.com/wiki/File:Vdialogueb_vdialoguebennyv_00147860_1.oggnoicon",
+      "index": "293"
+    },
+    {
+      "topic": "VDialogueBennyVFortBennyTopic055",
+      "topic_text": "I didn't come here to reminisce.",
+      "emotion": "Anger 50",
+      "response_text": "{disappointed}Well ain't you a sentimental broad? Gimme a sec to jump off Cloud 9, I'll meet you on the ground...Play soundVdialogueb_vdialoguebennyv_00147…https://fallout.fandom.com/wiki/File:Vdialogueb_vdialoguebennyv_00147824_1.oggnoicon",
+      "index": "294"
+    },
+    {
+      "topic": "VDialogueBennyVFortBennyTopic056",
+      "topic_text": "Sorry, Benny, didn't make much of an impression.",
+      "emotion": "Anger 50",
+      "response_text": "{defending virility}Oh I made an impression all right! The dent in that mattress was permanent!Play soundVdialogueb_vdialoguebennyv_00147…https://fallout.fandom.com/wiki/File:Vdialogueb_vdialoguebennyv_00147820_1.oggnoicon",
+      "index": "295"
+    },
+    {
+      "topic": "VDialogueBennyVFortBennyTopic057",
+      "topic_text": "It is pretty funny.",
+      "emotion": "Anger 50",
+      "response_text": "Yeah, well, laugh it up on your own time.Play soundVdialogueb_vdialoguebennyv_00147…https://fallout.fandom.com/wiki/File:Vdialogueb_vdialoguebennyv_0014781e_1.oggnoicon",
+      "index": "296"
+    },
+    {
+      "topic": "VDialogueBennyVFortBennyTopic058",
+      "topic_text": "I'll laugh later. We have business to discuss.",
+      "emotion": "Neutral 50",
+      "response_text": "That we do, baby, that we do...Play soundVdialogueb_vdialoguebennyv_00147…https://fallout.fandom.com/wiki/File:Vdialogueb_vdialoguebennyv_00147859_1.oggnoicon",
+      "index": "297"
+    },
+    {
+      "topic": "VDialogueBennyVFortBennyTopic059",
+      "topic_text": "You have no one to blame but yourself.",
+      "emotion": "Anger 50",
+      "response_text": "Did I say I blamed society? I know why I'm here, baby.{pointed}Do you?Play soundVdialogueb_vdialoguebennyv_00147…https://fallout.fandom.com/wiki/File:Vdialogueb_vdialoguebennyv_00147809_1.oggnoicon",
+      "index": "298"
+    },
+    {
+      "topic": "VDialogueBennyVFortBennyTopic060",
+      "topic_text": "Looks like you played past your abilities.",
+      "emotion": "Neutral 50",
+      "response_text": "Didn't leave much choice when you showed up. Like I said, you forced my hand.Play soundVdialogueb_vdialoguebennyv_00147…https://fallout.fandom.com/wiki/File:Vdialogueb_vdialoguebennyv_00147854_1.oggnoicon",
+      "index": "299"
+    },
+    {
+      "topic": "VDialogueBennyVFortBennyTopic061",
+      "topic_text": "He gave me the Platinum Chip.",
+      "emotion": "Neutral 50",
+      "response_text": "Sure, Baldie wants you to go down in the bunker and destroy whatever Mr. House stashed there.Play soundVdialogueb_vdialoguebennyv_00147…https://fallout.fandom.com/wiki/File:Vdialogueb_vdialoguebennyv_0014785c_3.oggnoicon",
+      "index": "300"
+    },
+    {
+      "topic": "VDialogueBennyVFortBennyTopic063",
+      "topic_text": "What happened after you fled the Tops?",
+      "emotion": "Anger 50",
+      "response_text": "I prefer the term \"relocated.\"Play soundVdialogueb_vdialoguebennyv_00147…https://fallout.fandom.com/wiki/File:Vdialogueb_vdialoguebennyv_00147827_1.oggnoicon",
+      "index": "304"
+    },
+    {
+      "topic": "VDialogueBennyVFortBennyTopic074",
+      "topic_text": "There were hundreds of Securitrons down there - until I blew them up.",
+      "emotion": "Surprise 100",
+      "response_text": "What? How could you do that?Play soundVdialogueb_vdialoguebennyv_00147…https://fallout.fandom.com/wiki/File:Vdialogueb_vdialoguebennyv_00147855_3.oggnoicon",
+      "index": "308"
+    },
+    {
+      "topic": "VDialogueBennyVFortBennyTopic076",
+      "topic_text": "Hundreds of Securitrons. All of them upgraded now, just like Mr. House wants.",
+      "emotion": "Surprise 50",
+      "response_text": "So all this time the old man had an entire army on lay-away? Clever player.Play soundVdialogueb_vdialoguebennyv_00147…https://fallout.fandom.com/wiki/File:Vdialogueb_vdialoguebennyv_0014782d_2.oggnoicon",
+      "index": "310"
+    },
+    {
+      "topic": "VDialogueBennyVFortBennyTopic084",
+      "topic_text": "Goodbye, Benny.",
+      "emotion": "Anger 100",
+      "response_text": "{enraged}Thanks for nothing, you fink!Play soundVdialogueb_vdialoguebennyv_00153…https://fallout.fandom.com/wiki/File:Vdialogueb_vdialoguebennyv_00153af1_1.oggnoicon",
+      "index": "314"
+    },
+    {
+      "topic": "VDialogueBennyVFortBennyTopic087",
+      "topic_text": "All right, get ready.",
+      "emotion": "Anger 50",
+      "response_text": "{frustrated the player's taking so long}What ya talking about? I been ready!Play soundVdialogueb_vdialoguebennyv_00153…https://fallout.fandom.com/wiki/File:Vdialogueb_vdialoguebennyv_00153af3_1.oggnoicon",
+      "index": "315"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Adios.Play soundVdialoguebenny_goodbye_001480d7_…https://fallout.fandom.com/wiki/File:Vdialoguebenny_goodbye_001480d7_1.oggnoicon",
+      "index": "316"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "Hello",
+      "emotion": "Neutral 50",
+      "response_text": "Have a seat, baby - let's get this kicking.Play soundVdialoguebenny_hello_0015ec3b_1.ogghttps://fallout.fandom.com/wiki/File:Vdialoguebenny_hello_0015ec3b_1.oggnoicon",
+      "index": "319"
+    },
+    {
+      "topic": "VCG00OpeningSequence",
+      "topic_text": "VCG00OpeningSequence",
+      "emotion": "Neutral 50",
+      "response_text": "You're not getting paid to run your mouth.Play soundvcg00_vcg00openingsequence_00107…https://fallout.fandom.com/wiki/File:Vcg00_vcg00openingsequence_00107225_1.oggnoicon",
+      "index": "327"
+    },
+    {
+      "topic": "VDialogueBennyCrucified",
+      "topic_text": "VDialogueBennyCrucified",
+      "emotion": "Pained 100",
+      "response_text": "{crucified, in pain but defiant}Happy now, you twisted bitch?{resolving not to talk again}Well, I ain't gonna give you the satisfaction.Play soundVdialogueb_vdialoguebennyc_00147…https://fallout.fandom.com/wiki/File:Vdialogueb_vdialoguebennyc_00147844_1.oggnoicon",
+      "index": "343"
+    },
+    {
+      "topic": "VDialogueBennyElevator",
+      "topic_text": "VDialogueBennyElevator",
+      "emotion": "Neutral 50",
+      "response_text": "{Player has tried to use elevator to leave}That elevator is nowhere, baby. Step over to the mic.Play soundVdialogueb_vdialoguebennye_00147…https://fallout.fandom.com/wiki/File:Vdialogueb_vdialoguebennye_00147838_1.oggnoicon",
+      "index": "347"
+    },
+    {
+      "topic": "VDialogueBennyIntercom",
+      "topic_text": "VDialogueBennyIntercom",
+      "emotion": "Neutral 50",
+      "response_text": "{Calling player over to intercom}Hey, baby! Over here!Play soundVdialogueb_vdialoguebennyi_00147…https://fallout.fandom.com/wiki/File:Vdialogueb_vdialoguebennyi_00147835_1.oggnoicon",
+      "index": "348"
+    }
+  ],
+  "combat": [],
+  "description": "Benny is a 45 year-old Caucasian Male.\n\nA charismatic but ruthless leader, Benny serves as the Head Chairman at The Tops casino on the New Vegas Strip. Outwardly loyal to Mr. House, he is secretly plotting to betray him and seize control of New Vegas for himself. Benny is known for his charm and sophistication, but he is willing to do whatever it takes to achieve his goals, including betraying allies such as the Great Khans.\n\nBenny's Personality: Benny is charming, ambitious, and manipulative. He presents himself as a sophisticated and charismatic figure but is willing to betray anyone and everyone to achieve his goals. He is confident in his abilities and believes that he can outsmart even Mr. House himself.\n\nBenny's Backstory: Benny was born into the Mojave Boot-Riders, a nomadic tribe that roamed the Mojave Wasteland. When Mr. House took over New Vegas, he offered the tribe a deal: they could become his enforcers in exchange for suits, ties, and a new identity as The Chairmen. Benny rose through the ranks to become the Head Chairman, using his charm and ruthlessness to maintain his position. However, he grew tired of serving Mr. House and began plotting to take control of New Vegas for himself."
+}

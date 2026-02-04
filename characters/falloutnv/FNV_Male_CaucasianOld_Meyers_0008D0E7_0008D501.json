@@ -1,0 +1,196 @@
+{
+  "name": "Meyers¹",
+  "url": "/wiki/Meyers",
+  "dialogue_name": "NCRCFMeyers.txt",
+  "dialogue_url": "/wiki/NCRCFMeyers.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "0008D0E7",
+  "ref_id": "0008D501",
+  "editor_id": "NCRCFMeyers",
+  "location": "Visitors center",
+  "location_url": "/wiki/Visitors_center",
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "New California RepublicPrimm(optional)",
+  "role": "ConvictSheriff (optional)",
+  "detailed_location": "NCR Correctional FacilityPrimm (optional)",
+  "voice_actor": "Ari Rubin",
+  "special": {
+    "Strength": 6,
+    "Perception": 5,
+    "Endurance": 4,
+    "Charisma": 4,
+    "Intelligence": 4,
+    "Agility": 6,
+    "Luck": 4
+  },
+  "mod_special_values": {
+    "Strength": 6,
+    "Perception": 6,
+    "Endurance": 4,
+    "Charisma": 4,
+    "Intelligence": 4,
+    "Agility": 6,
+    "Luck": 4
+  },
+  "level": "5",
+  "tag_skills": [
+    {
+      "Guns:": "46"
+    },
+    {
+      "Melee Weap.:": "48"
+    },
+    {
+      "Sneak:": "46"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "85"
+    }
+  ],
+  "karma": "Neutral",
+  "voice_type": "MaleAdult04",
+  "geck_race": "CaucasianOld",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "{Waiting in Primm for Pardon}Have you gotten my pardon from the NCR yet?",
+      "index": "1"
+    },
+    {
+      "topic": "VFreeformNCRCFNCRCFMeyersTopic000",
+      "topic_text": "What did you do before you ended up incarcerated?",
+      "emotion": "Neutral 50",
+      "response_text": "I was a sheriff, believe it or not, for a small town far to the west of here.",
+      "index": "8"
+    },
+    {
+      "topic": "VFreeformNCRCFNCRCFMeyersTopic001",
+      "topic_text": "Tell me more about what happened in the prison.",
+      "emotion": "Neutral 50",
+      "response_text": "I understand that Cooke was behind it all. I kept my head down the whole time. Didn't want any part of it.",
+      "index": "11"
+    },
+    {
+      "topic": "VFreeformNCRCFNCRCFMeyersTopic002",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Watch yourself out there.",
+      "index": "13"
+    },
+    {
+      "topic": "VFreeformNCRCFNCRCFMeyersTopic003",
+      "topic_text": "Who's Cooke?",
+      "emotion": "Neutral 50",
+      "response_text": "Some kind of anti-NCR rebel. Some people just don't like being pushed around and told what to do.",
+      "index": "14"
+    },
+    {
+      "topic": "VFreeformNCRCFNCRCFMeyersTopic004",
+      "topic_text": "Where can I find Cooke?",
+      "emotion": "Neutral 50",
+      "response_text": "He went north with some of the other guys. Didn't say where, didn't say why. All I know is he's got some kind of score to settle with the NCR.",
+      "index": "15"
+    },
+    {
+      "topic": "VFreeformNCRCFNCRCFMeyersTopic005",
+      "topic_text": "Why are you still here?",
+      "emotion": "Neutral 50",
+      "response_text": "I'm not quite sure the kind of greeting NCR troopers will give an escaped con like myself. Figure it's better to stay put for now.",
+      "index": "16"
+    },
+    {
+      "topic": "VFreeformNCRCFNCRCFMeyersTopic006",
+      "topic_text": "Who's in charge of the Powder Gangers?",
+      "emotion": "Neutral 50",
+      "response_text": "Right now, Eddie and his boys run the place. They've got the guns and the dynamite, so they call the shots.",
+      "index": "17"
+    },
+    {
+      "topic": "VFreeformNCRCFNCRCFMeyersTopic007",
+      "topic_text": "How would you feel about becoming Primm's new sheriff?",
+      "emotion": "Neutral 50",
+      "response_text": "Assuming an NCR pardon comes with the job - and it had better - I'll also need to be able to do things my own way.",
+      "index": "18"
+    },
+    {
+      "topic": "VFreeformNCRCFNCRCFMeyersTopic008",
+      "topic_text": "You have a deal.",
+      "emotion": "Neutral 50",
+      "response_text": "All right, then. Guess I'll just make a quiet exit - no need for a goodbye party or anything.",
+      "index": "21"
+    },
+    {
+      "topic": "VFreeformNCRCFNCRCFMeyersTopic009",
+      "topic_text": "I'll need to think about it.",
+      "emotion": "Neutral 50",
+      "response_text": "Understood.",
+      "index": "22"
+    },
+    {
+      "topic": "VFreeformNCRCFNCRCFMeyersTopic010",
+      "topic_text": "Does that mean you'll take the law into your own hands?",
+      "emotion": "Neutral 50",
+      "response_text": "When I need to, yes.",
+      "index": "23"
+    },
+    {
+      "topic": "VFreeformNCRCFNCRCFMeyersTopic015",
+      "topic_text": "Where should I go to get you a pardon?",
+      "emotion": "Neutral 50",
+      "response_text": "There is a NCR camp down on the southern border of Nevada. Camp Mojave I think, try to find someone of authority there.",
+      "index": "24"
+    },
+    {
+      "topic": "VFreeformNCRCFNCRCFMeyersTopic016",
+      "topic_text": "I'll let you know when I do.",
+      "emotion": "Neutral 50",
+      "response_text": "Okay, hurry back. I don't want anyone to start shooting at me.",
+      "index": "25"
+    },
+    {
+      "topic": "VFreeformNCRCFNCRCFMeyersTopic017",
+      "topic_text": "Not yet, but let me ask you about something else first.",
+      "emotion": "Neutral 50",
+      "response_text": "Alright, ask away.",
+      "index": "26"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Watch yourself out there.",
+      "index": "27"
+    },
+    {
+      "topic": "NCRCFMeyersDeputySpeech",
+      "topic_text": "NCRCFMeyersDeputySpeech",
+      "emotion": "Neutral 50",
+      "response_text": "Okay, folks. I called you out here because I've grown to trust you. Primm, the town to the south, is looking for some new law.",
+      "index": "28"
+    }
+  ],
+  "combat": [
+    {
+      "topic": "RNVNewsStory2",
+      "topic_text": "RNVNewsStoryLine2",
+      "emotion": "Neutral 50",
+      "response_text": "{Meyers:}Howdy do, folks. I'm Sheriff Meyers. Be good, or I'll shoot you dead.",
+      "index": "32"
+    }
+  ],
+  "description": "Meyers is a 55 year-old Caucasian Male.\n\nA former lawman who served a small town west of the Mojave Desert in New California. Meyers is a firm believer in justice, but only on his own terms. He often bypassed due process in favor of ruthless frontier justice, which eventually led to his arrest, conviction for abuse of power, and imprisonment. Now on a work-release program at the NCRCF, Meyers remains unrepentant about his methods but recognizes the changing times.\n\nMeyers's Personality: Authoritarian, pragmatic, and morally ambiguous. Meyers believes in order and discipline but is willing to bend the rules to achieve what he considers justice. He's cynical about bureaucracy but surprisingly charismatic when trying to rally others to his cause. He respects strength and authority but only when it's earned through action rather than position.\n\nMeyers's Backstory: Meyers served as a lawman in a small settlement west of the Mojave for over two decades. He developed a reputation for dealing with criminals swiftly and without mercy, often bypassing proper legal procedures. His methods were effective in maintaining order in his community but controversial among more civilized populations. When his practices became too extreme, the NCR intervened, arresting him on charges of abuse of power. After a highly publicized trial, Meyers was stripped of his badge and sentenced to prison time. He was later transferred to the NCR Correctional Facility (NCRCF) where he continues to serve his sentence on a work-release program."
+}

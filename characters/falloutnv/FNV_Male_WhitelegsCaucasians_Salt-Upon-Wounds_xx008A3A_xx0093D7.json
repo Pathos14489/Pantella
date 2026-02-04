@@ -1,0 +1,148 @@
+{
+  "name": "Salt-Upon-Wounds²",
+  "url": "/wiki/Salt-Upon-Wounds",
+  "dialogue_name": "NVDLC02SaltUponWounds.txt",
+  "dialogue_url": "/wiki/NVDLC02SaltUponWounds.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "xx008A3A",
+  "ref_id": "xx0093D7",
+  "editor_id": "NVDLC02SaltUponWounds",
+  "location": "Three MarysorPine Creek Tunnel",
+  "location_url": "/wiki/Three_Marys",
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "White LegsCaesar's Legion",
+  "role": "War ChiefHonest Heartsantagonist",
+  "detailed_location": "Three Marys(Crush the White Legs)Pine Creek Tunnel(Flight from Zion)",
+  "voice_actor": "Adam Gifford",
+  "special": {
+    "Strength": 8,
+    "Perception": 5,
+    "Endurance": 7,
+    "Charisma": 2,
+    "Intelligence": 3,
+    "Agility": 6,
+    "Luck": 5
+  },
+  "level": "6-50 (Player level x1.2)",
+  "tag_skills": [
+    {
+      "Melee Weap.:": "54→100"
+    },
+    {
+      "Survival:": "52→100"
+    },
+    {
+      "Unarmed:": "52→100"
+    }
+  ],
+  "misc_skills": [
+    {
+      "Hit Points:": "555→775"
+    },
+    {
+      "Critical Chance:": "5%"
+    },
+    {
+      "Dam. Threshold:": "6(17)"
+    }
+  ],
+  "karma": "Neutral",
+  "geck_race": "WhitelegsCaucasians",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Fear 100",
+      "response_text": "Outman!{Burned Man}{COO-nah man}Kuna-man mad! He kill all White Legs! You talk! You stop!",
+      "index": "1"
+    },
+    {
+      "topic": "NVDLC02DialogueSaltUponWoundsNVDLC02SaltUponWoundsTopic000",
+      "topic_text": "Wait! There's no reason this has to end in bloodshed!",
+      "emotion": "Surprise 50",
+      "response_text": "[SUCCEEDED] You speak. I listen. Kill you, maybe I not. Maybe.",
+      "index": "4"
+    },
+    {
+      "topic": "NVDLC02DialogueSaltUponWoundsNVDLC02SaltUponWoundsTopic001",
+      "topic_text": "Time to die, General Gobbledegook!",
+      "emotion": "Disgust 50",
+      "response_text": "You mock White Legs! You die now!",
+      "index": "6"
+    },
+    {
+      "topic": "NVDLC02DialogueSaltUponWoundsNVDLC02SaltUponWoundsTopic002",
+      "topic_text": "Your power is broken. You cannot hope to prevail here. Leave this valley in peace.",
+      "emotion": "Happy 50",
+      "response_text": "We leave, but always fight, White Legs! We strong warriors for Caesar!",
+      "index": "7"
+    },
+    {
+      "topic": "NVDLC02DialogueSaltUponWoundsNVDLC02SaltUponWoundsTopic003",
+      "topic_text": "You're right. We're going to kill you, but not like this. Defend yourself!",
+      "emotion": "Anger 100",
+      "response_text": "{You can't fight me!}{YOO-can no ni-KUM-pah mee}Yoocan no nikumpa me!{Die, you!}{deh-YAI, you!}Deyai-yoo!",
+      "index": "8"
+    },
+    {
+      "topic": "NVDLC02DialogueSaltUponWoundsNVDLC02SaltUponWoundsTopic004",
+      "topic_text": "I've already crushed your warriors. Retreat now and rebuild your tribe, or die in obscurity.",
+      "emotion": "Disgust 50",
+      "response_text": "...I go. But rebuild my tribe, and come we back stronger than before!",
+      "index": "9"
+    },
+    {
+      "topic": "NVDLC02DialogueSaltUponWoundsNVDLC02SaltUponWoundsTopic005",
+      "topic_text": "Daniel and the Sorrows are weak prey, not fit for such mighty warriors.",
+      "emotion": "Disgust 50",
+      "response_text": "Sorrows{emphasis for agreement}are weak. We go, find true warriors to test us!",
+      "index": "10"
+    },
+    {
+      "topic": "NVDLC02DialogueSaltUponWoundsNVDLC02SaltUponWoundsTopic006",
+      "topic_text": "Then see how strong my spears are, warrior.",
+      "emotion": "Happy 50",
+      "response_text": "This good fight will be!",
+      "index": "11"
+    },
+    {
+      "topic": "NVDLC02DialogueSaltUponWoundsNVDLC02SaltUponWoundsTopic007",
+      "topic_text": "Let's end this, then.",
+      "emotion": "Surprise 50",
+      "response_text": "Ha! Yes, end!",
+      "index": "12"
+    },
+    {
+      "topic": "NVDLC02DialogueSaltUponWoundsNVDLC02SaltUponWoundsTopic008",
+      "topic_text": "Whatever. Joshua, put a cap in General Gobbledigook here.",
+      "emotion": "Pained 100",
+      "response_text": "{Killer!}{Bye-KAH kur}Baika-ker! You devil!",
+      "index": "13"
+    },
+    {
+      "topic": "NVDLC02DialogueSaltUponWoundsTopic000",
+      "topic_text": "Whoa. This isn't what I signed up for. Let me talk to Joshua about this.",
+      "emotion": "Surprise 75",
+      "response_text": "Him hear you. You talk!",
+      "index": "14"
+    },
+    {
+      "topic": "NVDLC02EndingWhiteLegs",
+      "topic_text": "NVDLC02EndingWhiteLegs",
+      "emotion": "Neutral 50",
+      "response_text": "{Narration - Daniel dead}With Daniel dead, the White Legs soon overran Zion and drove the Sorrows and Dead Horses from the Valley.",
+      "index": "15"
+    }
+  ],
+  "conversation": [],
+  "combat": [],
+  "description": "Salt-Upon-Wounds is a 55 year-old Caucasian Male.\n\nThe formidable war chief of the White Legs tribe, Salt-Upon-Wounds is a brutal and merciless leader responsible for the destruction of New Canaan and the tribe's initiation into Caesar's Legion. Renowned for his prowess in hand-to-hand combat and his signature power fist, he has personally killed hundreds of enemies. His leadership is defined by a 'salt-the-earth' policy of conquest, seeking to transform the pristine lands of Zion Canyon into another polluted wasteland.\n\nSalt-Upon-Wounds's Personality: Cruel, merciless, domineering, and fiercely proud. Salt-Upon-Wounds values strength above all else and rules through fear and intimidation. He is a hands-on leader who leads his warriors into battle personally and shows no hesitation in eliminating anyone who stands in his way.\n\nSalt-Upon-Wounds's Backstory: Born into the White Legs tribe, Salt-Upon-Woods rose to prominence through displays of exceptional combat prowess and ruthless leadership. Recognizing the tribe's vulnerability in the harsh Zion Canyon, he sought an alliance with Caesar's Legion, offering their services in exchange for weapons, training, and recognition. Under his leadership, the White Legs became a formidable fighting force, eventually turning their attention to the peaceful New Canaanites. After a brutal campaign that culminated in the destruction of their settlement, Salt-Upon-Wounds led his warriors back to Zion to complete their conquest of the valley."
+}

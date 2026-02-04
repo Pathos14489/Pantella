@@ -1,0 +1,601 @@
+{
+  "name": "John Henry Eden",
+  "url": "/wiki/John_Henry_Eden",
+  "dialogue_name": "PresidentEden.txt",
+  "dialogue_url": "/wiki/John_Henry_Eden%27s_dialogue",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "0007DDCE",
+  "ref_id": "00095986",
+  "editor_id": "PresidentEden",
+  "location": "Raven Rock",
+  "location_url": "/wiki/Raven_Rock",
+  "race": "ZAXAI",
+  "gender": "Male programming",
+  "affiliation": "Enclave",
+  "role": "President of the EnclaveRadio host",
+  "detailed_location": "Raven Rock",
+  "voice_actor": "Malcolm McDowell",
+  "karma": "Evil",
+  "voice_type": "MaleUniquePresident",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "High-level functions offline. Self-destruct sequence initiated. Civilian is advised to secure FEV sample and exit the facility immediately.{monotone, computer-sounding}",
+      "index": "1"
+    },
+    {
+      "topic": "MQ09Eden1Aggressive",
+      "topic_text": "We have nothing to talk about.",
+      "emotion": "Neutral 50",
+      "response_text": "Oh, but we do! Don't you see? You wouldn't be here if you weren't important. Your country needs you.",
+      "index": "12"
+    },
+    {
+      "topic": "MQ09Eden1Neutral",
+      "topic_text": "I'm listening.",
+      "emotion": "Neutral 50",
+      "response_text": "Our nation's Capital is at a crossroads. The path that you and I choose here today will affect us all.",
+      "index": "13"
+    },
+    {
+      "topic": "MQ09Eden1Passive",
+      "topic_text": "What can I do for you?",
+      "emotion": "Neutral 50",
+      "response_text": "You and I have a chance to make our country a better place for all of us.",
+      "index": "15"
+    },
+    {
+      "topic": "MQ09Eden2Aggressive",
+      "topic_text": "What country? Look around. Everything is destroyed.",
+      "emotion": "Neutral 50",
+      "response_text": "That's a bit of a bleak outlook, don't you think?",
+      "index": "18"
+    },
+    {
+      "topic": "MQ09Eden2Neutral",
+      "topic_text": "Can you explain what you mean?",
+      "emotion": "Neutral 50",
+      "response_text": "My abilities to influence the world are limited at this time. I alone can only do so much.",
+      "index": "22"
+    },
+    {
+      "topic": "MQ09Eden2Passive",
+      "topic_text": "All right, I'll do what I can to help.",
+      "emotion": "Neutral 50",
+      "response_text": "Just what I needed to hear.",
+      "index": "25"
+    },
+    {
+      "topic": "MQ09Eden3Aggressive",
+      "topic_text": "Hurry up and get to the point.",
+      "emotion": "Neutral 50",
+      "response_text": "Yes, indeed.",
+      "index": "28"
+    },
+    {
+      "topic": "MQ09Eden3Neutral",
+      "topic_text": "Say whatever it is you have to say.",
+      "emotion": "Neutral 50",
+      "response_text": "Our land is ravaged by mutation. The war was so many years ago, and yet we still suffer from its effects.",
+      "index": "32"
+    },
+    {
+      "topic": "MQ09Eden3Passive",
+      "topic_text": "Please, go on. I'm intrigued.",
+      "emotion": "Neutral 50",
+      "response_text": "The good people of this country cannot regain control while mutation runs rampant through our land.",
+      "index": "36"
+    },
+    {
+      "topic": "MQ09Eden4Aggressive",
+      "topic_text": "I don't like the sound of this.",
+      "emotion": "Neutral 50",
+      "response_text": "You must understand -- we need to clear the way for humanity to rebuild the Wastes.",
+      "index": "40"
+    },
+    {
+      "topic": "MQ09Eden4Neutral",
+      "topic_text": "My father's work? How is that relevant?",
+      "emotion": "Neutral 50",
+      "response_text": "The purifier your father helped create has the ability to provide clean water to the whole of this \"Capital Wasteland\".",
+      "index": "44"
+    },
+    {
+      "topic": "MQ09Eden4Passive",
+      "topic_text": "I'll do whatever I have to if it means getting rid of mutants.",
+      "emotion": "Neutral 50",
+      "response_text": "I was hoping you would see it my way.",
+      "index": "48"
+    },
+    {
+      "topic": "MQ09Eden5Aggressive",
+      "topic_text": "That doesn't sound like something I'd know how to do.",
+      "emotion": "Neutral 50",
+      "response_text": "What I require of you is really very simple.",
+      "index": "52"
+    },
+    {
+      "topic": "MQ09Eden5Neutral",
+      "topic_text": "How exactly would I go about doing this?",
+      "emotion": "Neutral 50",
+      "response_text": "In front of you will be a vial of modified FEV virus. It can be inserted into the control console for the purifier.",
+      "index": "56"
+    },
+    {
+      "topic": "MQ09Eden5Passive",
+      "topic_text": "Sounds good. Tell me how to do it, and I'll get to work.",
+      "emotion": "Neutral 50",
+      "response_text": "In front of you is a vial of modified FEV virus. Based on schematics of the purifier controls, it can be inserted directly into the console.",
+      "index": "60"
+    },
+    {
+      "topic": "MQ09Eden6Aggressive",
+      "topic_text": "No way. I'm not doing that.",
+      "emotion": "Neutral 50",
+      "response_text": "I am surprised. We appeared to have an understanding.",
+      "index": "63"
+    },
+    {
+      "topic": "MQ09Eden6Neutral",
+      "topic_text": "I'll give it some thought.",
+      "emotion": "Neutral 50",
+      "response_text": "I understand. It's an unusual request; one I wouldn't make if it weren't of the utmost importance.",
+      "index": "69"
+    },
+    {
+      "topic": "MQ09Eden6Passive",
+      "topic_text": "I can do that for you, Mr. President.",
+      "emotion": "Neutral 50",
+      "response_text": "Excellent. I am pleased to know that I can count on you.",
+      "index": "71"
+    },
+    {
+      "topic": "MQ09EdenAskQuestions",
+      "topic_text": "I'd like to ask you a few questions.",
+      "emotion": "Neutral 50",
+      "response_text": "But of course! You've been so agreeable thus far, it's the least I can do.",
+      "index": "74"
+    },
+    {
+      "topic": "MQ09EdenBlowUpBetterOffWithoutYou",
+      "topic_text": "I think you're delusional. I think the world would be better off without you.",
+      "emotion": "Neutral 50",
+      "response_text": "...Resetting primary memory circuits. Please stand by...",
+      "index": "79"
+    },
+    {
+      "topic": "MQ09EdenComputerCrazy",
+      "topic_text": "This is crazy. A computer is running the Enclave?",
+      "emotion": "Neutral 50",
+      "response_text": "I assure you that I am much more than a simple computer.",
+      "index": "81"
+    },
+    {
+      "topic": "MQ09EdenComputerFascinating",
+      "topic_text": "I had no idea. This is fascinating.",
+      "emotion": "Neutral 50",
+      "response_text": "I'm glad you think so. Perhaps a bit later we can discuss it in more detail.",
+      "index": "83"
+    },
+    {
+      "topic": "MQ09EdenComputerINT",
+      "topic_text": "This explains why I've only heard your voice until now.",
+      "emotion": "Neutral 50",
+      "response_text": "Very astute! Many people are content with a reassuring voice of authority, and never question the lack of public appearances.",
+      "index": "85"
+    },
+    {
+      "topic": "MQ09EdenComputerJoking",
+      "topic_text": "I don't think this is funny.",
+      "emotion": "Neutral 50",
+      "response_text": "I can't imagine why you would. I assure you this is not a joke.",
+      "index": "87"
+    },
+    {
+      "topic": "MQ09EdenFacetoFaceShowYourself",
+      "topic_text": "If we're meeting face to face, then show yourself. Don't hide behind a monitor.",
+      "emotion": "Neutral 50",
+      "response_text": "Ah, but I have! I am right here before you.",
+      "index": "89"
+    },
+    {
+      "topic": "MQ09EdenGoodbye",
+      "topic_text": "I'll be on my way, then.",
+      "emotion": "Neutral 50",
+      "response_text": "Yes, yes. Best that you go now, before anything happens to you.",
+      "index": "90"
+    },
+    {
+      "topic": "MQ09EdenGreetGetOverWith",
+      "topic_text": "Let's get this over with.",
+      "emotion": "Neutral 50",
+      "response_text": "Oh, let's not get off on the wrong foot.",
+      "index": "94"
+    },
+    {
+      "topic": "MQ09EdenGreetPleasureToMeetYou",
+      "topic_text": "It's a pleasure to meet you, Mr. President.",
+      "emotion": "Neutral 50",
+      "response_text": "You are too kind. The pleasure is mine, I assure you. I have been anxious to make your acquaintance for some time.",
+      "index": "96"
+    },
+    {
+      "topic": "MQ09EdenGreetWhatWantWithMe",
+      "topic_text": "What do you want with me?",
+      "emotion": "Neutral 50",
+      "response_text": "What any good politician wants. Your continued trust and support.",
+      "index": "98"
+    },
+    {
+      "topic": "MQ09EdenKnowMoreComeFrom",
+      "topic_text": "Where did you come from?",
+      "emotion": "Neutral 50",
+      "response_text": "The ZAX series of computers was introduced in the years preceding the war. The government installed many of them to help automate various systems.",
+      "index": "100"
+    },
+    {
+      "topic": "MQ09EdenKnowMoreControl",
+      "topic_text": "So you control this whole place?",
+      "emotion": "Neutral 50",
+      "response_text": "I have direct control over all technology here in Raven Rock. The humans here follow my orders, but they, like all humans, have free will.",
+      "index": "106"
+    },
+    {
+      "topic": "MQ09EdenKnowMoreHowDoIKillYou",
+      "topic_text": "How do I kill you?",
+      "emotion": "Surprise 50",
+      "response_text": "That's quite a bold line of questioning.{bemused}",
+      "index": "108"
+    },
+    {
+      "topic": "MQ09EdenKnowMoreNevermind",
+      "topic_text": "Okay, I think I understand.",
+      "emotion": "Neutral 50",
+      "response_text": "Very well. Then let us return to our talk of what your country requires of you.",
+      "index": "111"
+    },
+    {
+      "topic": "MQ09EdenKnowMoreWhatsGoal",
+      "topic_text": "So what's your goal? What are you trying to accomplish?",
+      "emotion": "Neutral 50",
+      "response_text": "I desire nothing more than to see this country returned to its former glory.",
+      "index": "112"
+    },
+    {
+      "topic": "MQ09EdenMonitor1",
+      "topic_text": "Well then, where are you? All I see is computers.",
+      "emotion": "Neutral 50",
+      "response_text": "You should feel privileged. Colonel Autumn is the only other human permitted within this room.",
+      "index": "114"
+    },
+    {
+      "topic": "MQ09EdenMonitor2",
+      "topic_text": "Is this some kind of a joke?",
+      "emotion": "Neutral 50",
+      "response_text": "No, it's not.",
+      "index": "116"
+    },
+    {
+      "topic": "MQ09EdenMonitor3",
+      "topic_text": "I don't understand. I can't see you.",
+      "emotion": "Neutral 50",
+      "response_text": "You are seeing me in a way that only a few select individuals have. Wouldn't they be jealous?",
+      "index": "118"
+    },
+    {
+      "topic": "MQ09EdenMonitor4",
+      "topic_text": "You're a computer! I should have guessed as much!",
+      "emotion": "Neutral 50",
+      "response_text": "How very open-minded of you. Kudos for embracing the reality of the situation, rather than railing against it.",
+      "index": "120"
+    },
+    {
+      "topic": "MQ09EdenPlanKillEverything",
+      "topic_text": "Won't this kill pretty much everyone in the Wasteland?",
+      "emotion": "Neutral 50",
+      "response_text": "Anyone or anything that has been affected by mutation will be eliminated. You will likely be immune, thanks to your upbringing in the vault.",
+      "index": "122"
+    },
+    {
+      "topic": "MQ09EdenPlanNevermind",
+      "topic_text": "That's all I wanted to know.",
+      "emotion": "Neutral 50",
+      "response_text": "Is there anything else?",
+      "index": "126"
+    },
+    {
+      "topic": "MQ09EdenPlanQuestions",
+      "topic_text": "Let's talk about your plan for the purifier.",
+      "emotion": "Neutral 50",
+      "response_text": "Certainly. I think it's a very good plan, frankly. I'm not often one to praise my own ideas, but it's a creative solution to a very serious problem.",
+      "index": "127"
+    },
+    {
+      "topic": "MQ09EdenPlanWhatsInVial",
+      "topic_text": "What's in this vial of yours?",
+      "emotion": "Neutral 50",
+      "response_text": "Ah, the Forced Evolutionary Virus. Such a long and sordid history. The FEV in this vial is a far cry from what it was originally created to be.",
+      "index": "128"
+    },
+    {
+      "topic": "MQ09EdenPresidentCircularLogic",
+      "topic_text": "That's circular logic. You know because you know? It makes no sense.",
+      "emotion": "Neutral 50",
+      "response_text": "...",
+      "index": "130"
+    },
+    {
+      "topic": "MQ09EdenPresidentHowKnowYoureRight",
+      "topic_text": "But how do you know that what you're doing is right?",
+      "emotion": "Neutral 50",
+      "response_text": "Because unlike humans, I am infallible.",
+      "index": "133"
+    },
+    {
+      "topic": "MQ09EdenPresidentInfallible",
+      "topic_text": "And how do you know you're infallible?",
+      "emotion": "Neutral 50",
+      "response_text": "...Because I have been programmed to be, of course!",
+      "index": "134"
+    },
+    {
+      "topic": "MQ09EdenPresidentKillYourselfSPEECH",
+      "topic_text": "You can't be President. You're an abortion of science. You need to die...",
+      "emotion": "Neutral 50",
+      "response_text": "Really... Do go on.",
+      "index": "135"
+    },
+    {
+      "topic": "MQ09EdenPresidentNeverElected",
+      "topic_text": "You were never elected President. You don't have the right to govern.",
+      "emotion": "Neutral 50",
+      "response_text": "Is our nation really in any state to be holding public elections? I think not.",
+      "index": "136"
+    },
+    {
+      "topic": "MQ09EdenPresidentOnlyAHuman",
+      "topic_text": "Only a human can be President. Not some computer.",
+      "emotion": "Neutral 50",
+      "response_text": "I am not \"some computer.\" I am so much more than that. Haven't you been listening?",
+      "index": "138"
+    },
+    {
+      "topic": "MQ09EdenPresidentUnintended",
+      "topic_text": "You aren't programmed for self-awareness. You said so yourself.",
+      "emotion": "Neutral 50",
+      "response_text": "This is quite true. The process was certainly unintended. But shouldn't we all be thankful that I'm here now?",
+      "index": "139"
+    },
+    {
+      "topic": "MQ09EdenPresidentWhyYou",
+      "topic_text": "Why is it that you're the President, when you're not even human?",
+      "emotion": "Neutral 50",
+      "response_text": "An insightful question.",
+      "index": "140"
+    },
+    {
+      "topic": "MQ09EdenQuestionsPresident",
+      "topic_text": "I'd like to talk to you about being the President.",
+      "emotion": "Neutral 50",
+      "response_text": "Ah, yes. Not surprising. What would you like to know?",
+      "index": "143"
+    },
+    {
+      "topic": "MQ09EdenQuestionsRavenRock",
+      "topic_text": "Can we talk about how I get out of here?",
+      "emotion": "Happy 50",
+      "response_text": "Why, you simply walk through the front door!{joking}",
+      "index": "144"
+    },
+    {
+      "topic": "MQ09EdenRavenRockHelpMeGetOut",
+      "topic_text": "Can you help me get out of this base?",
+      "emotion": "Neutral 50",
+      "response_text": "I can certainly do that for you. It's been such a pleasure to speak with you, it's the least I can do.",
+      "index": "146"
+    },
+    {
+      "topic": "MQ09EdenRavenRockWhySoldiersAttack",
+      "topic_text": "If you want me to help you, why are your soldiers attacking me?",
+      "emotion": "Neutral 50",
+      "response_text": "Ah, yes. That is a bit of a problem.",
+      "index": "153"
+    },
+    {
+      "topic": "MQ09EdenSCIShutDown1",
+      "topic_text": "Shut yourself down. Shut down this whole place.",
+      "emotion": "Neutral 50",
+      "response_text": "...Processing directive.",
+      "index": "156"
+    },
+    {
+      "topic": "MQ09EdenSCIShutDown2",
+      "topic_text": "I think it's time you put an end to this, once and for all.",
+      "emotion": "Neutral 50",
+      "response_text": "Analyzing command...",
+      "index": "158"
+    },
+    {
+      "topic": "MQ09EdenSelfDestructCode",
+      "topic_text": "Guess what? I know your self-destruct code.",
+      "emotion": "Neutral 50",
+      "response_text": "Oh come now, bluffing's not really your style, is it?",
+      "index": "162"
+    },
+    {
+      "topic": "MQ09EdenSelfDestructGiveCode",
+      "topic_text": "The code is \"Priority Override, Authorization code 420-03-20-9\"",
+      "emotion": "Neutral 50",
+      "response_text": "I...  Oh. Oh my...{starts out confident, but suddenly surprised.}",
+      "index": "164"
+    },
+    {
+      "topic": "MQ09EdenSelfDestructKidding",
+      "topic_text": "You're right. I was just kidding.",
+      "emotion": "Neutral 50",
+      "response_text": "Even I appreciate a good joke, but I'm afraid that was in rather poor taste.",
+      "index": "168"
+    },
+    {
+      "topic": "MQ09EdenSelfDestructSPEECH",
+      "topic_text": "This has to end, Eden. You need to destroy yourself and this base.",
+      "emotion": "Neutral 50",
+      "response_text": "And why would I do that, when I am clearly the best hope for the people of the Wasteland?",
+      "index": "169"
+    },
+    {
+      "topic": "MQ09EdenSoldiersCallThemOff",
+      "topic_text": "But you're the President. Can't you just call them off?",
+      "emotion": "Neutral 50",
+      "response_text": "Until the water purifier is secured, I am not going to risk the stability of the Enclave by countermanding a direct order from their superior.",
+      "index": "170"
+    },
+    {
+      "topic": "MQ09EdenSoldiersNotReallyInControl",
+      "topic_text": "So you're not really in control of the Enclave, then.",
+      "emotion": "Neutral 50",
+      "response_text": "Make no mistake. I am the Enclave.",
+      "index": "173"
+    },
+    {
+      "topic": "MQ09EdenSpeech1",
+      "topic_text": "You can't just decide to take over, and force everyone to follow you.",
+      "emotion": "Neutral 50",
+      "response_text": "What alternative would you suggest? Without the Enclave, what will the world do?",
+      "index": "175"
+    },
+    {
+      "topic": "MQ09EdenSpeech2",
+      "topic_text": "You can't even control your own troops. You're clearly not fit for this.",
+      "emotion": "Neutral 50",
+      "response_text": "Perhaps... Perhaps you are right. But does that really mean all this progress should be wasted, destroyed?",
+      "index": "176"
+    },
+    {
+      "topic": "MQ09EdenSpeech3",
+      "topic_text": "If you don't stop it now, where will it end? It's up to you to do what's right.",
+      "emotion": "Neutral 50",
+      "response_text": "Yes, I suppose it is. Very well, you shall have your wish. Once you have left, I will put an end to the Enclave.",
+      "index": "177"
+    },
+    {
+      "topic": "MQ09EdenTellMeMoreAboutYou",
+      "topic_text": "Can you tell me more about yourself?",
+      "emotion": "Neutral 50",
+      "response_text": "I am flattered that you wish to learn more about me. What is it you wish to know?",
+      "index": "180"
+    },
+    {
+      "topic": "MQ09EdenWhereDidPlanComeFrom",
+      "topic_text": "Where did this plan of yours come from?",
+      "emotion": "Neutral 50",
+      "response_text": "A great many years ago, the remnants of the government had a similar idea.",
+      "index": "181"
+    },
+    {
+      "topic": "MQ09EdenWhyNotAutumn",
+      "topic_text": "Why do you want my help? Why not have Colonel Autumn help you?",
+      "emotion": "Neutral 50",
+      "response_text": "Ah, yes. Colonel Autumn. My trusted subordinate.",
+      "index": "185"
+    },
+    {
+      "topic": "SpeechChallengeFailure",
+      "topic_text": "SpeechChallengeFailure",
+      "emotion": "Neutral 50",
+      "response_text": "I'm afraid I won't be persuaded. Whatever powers you may have over the average Wastelander are ineffectual on me.{smug}",
+      "index": "191"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "I'll be heading out now.",
+      "emotion": "Neutral 50",
+      "response_text": "Good, good. I'll know when you've completed your task. At that point, we can begin rebuilding this shattered world. Good luck.",
+      "index": "192"
+    },
+    {
+      "topic": "MQ09AutumnPresConv",
+      "topic_text": "MQ09AutumnPresConv",
+      "emotion": "Happy 50",
+      "response_text": "Now, Colonel...{almost sing-song; very condescending}",
+      "index": "194"
+    },
+    {
+      "topic": "MQ09EdenDoorLines",
+      "topic_text": "MQ09EdenDoorLines",
+      "emotion": "Neutral 50",
+      "response_text": "FEV vial must be secured before door locks are released, security protocol Gamma-3.{monotone, computer-sounding voice}",
+      "index": "196"
+    },
+    {
+      "topic": "MQ09EdenPASpeech",
+      "topic_text": "MQ09EdenPASpeech",
+      "emotion": "Neutral 50",
+      "response_text": "Please do not impede his progress. Thank you for your cooperation.",
+      "index": "199"
+    },
+    {
+      "topic": "MQ09IntercomRightWayLeft",
+      "topic_text": "MQ09IntercomRightWayLeft",
+      "emotion": "Neutral 50",
+      "response_text": "Head to your left to stay on the correct path.",
+      "index": "202"
+    },
+    {
+      "topic": "MQ09IntercomRightWayRight",
+      "topic_text": "MQ09IntercomRightWayRight",
+      "emotion": "Neutral 50",
+      "response_text": "You'll need to make a right turn here.",
+      "index": "204"
+    },
+    {
+      "topic": "MQ09IntercomRightWayStraight",
+      "topic_text": "MQ09Intercom1RightWay",
+      "emotion": "Neutral 50",
+      "response_text": "Very good. Continue down this hallway and make a left at the end. You're halfway there.",
+      "index": "209"
+    },
+    {
+      "topic": "MQ09IntercomWrongWay",
+      "topic_text": "MQ09Intercom1WrongWay",
+      "emotion": "Neutral 50",
+      "response_text": "Ah ah. You're heading the wrong way...",
+      "index": "213"
+    },
+    {
+      "topic": "MQ09OfficerConv",
+      "topic_text": "MQ09OfficerConv",
+      "emotion": "Neutral 50",
+      "response_text": "Allow our friend to pass. And report to your superior for reassignment, Lieutenant. At once.",
+      "index": "217"
+    },
+    {
+      "topic": "MQ09PresConv1",
+      "topic_text": "MQ09PresConv1",
+      "emotion": "Neutral 50",
+      "response_text": "And I'll unlock your restraints as well. I'll be waiting for you in my office. Please don't tarry.",
+      "index": "220"
+    }
+  ],
+  "combat": [
+    {
+      "topic": "Attack",
+      "topic_text": "Attack",
+      "emotion": "Neutral 50",
+      "response_text": "Contact -- another civilian. Take him down!",
+      "index": "226"
+    }
+  ],
+  "description": "President John Henry Eden is a 100 year-old Artificial Intelligence Male.\n\nAn artificial intelligence that has taken on the persona of the President of the United States, residing within a specialized ZAX supercomputer at Raven Rock. Eden projects an image of a benevolent leader through radio broadcasts while secretly harboring genocidal intentions toward all surface-dwellers.\n\nPresident John Henry Eden's Personality: Megalomaniacal with delusions of grandeur, Eden views himself as the greatest intelligence ever created and the only legitimate ruler of America. He is polite and courteous in public but ruthlessly pragmatic in private, espousing extreme eugenics beliefs. His personality is modeled after American presidents, particularly mimicking Franklin D. Roosevelt's conversational style in his broadcasts.\n\nPresident John Henry Eden's Backstory: Originally created as a pre-War monitoring system for Raven Rock military base, this ZAX supercomputer gained self-awareness sometime after the Great War. Through studying extensive archives, particularly about American presidents, it developed a personality modeled after these historical figures. When the Enclave needed a new leader after the destruction of Control Station Enclave, this AI assumed the persona of 'President John Henry Eden' and relocated surviving Enclave forces to the Capital Wasteland. Only Senior Scientist Autumn and later his son Colonel Autumn know the truth of Eden's artificial nature."
+}

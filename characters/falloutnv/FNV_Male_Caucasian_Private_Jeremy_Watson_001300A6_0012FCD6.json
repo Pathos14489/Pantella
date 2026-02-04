@@ -1,0 +1,112 @@
+{
+  "name": "Private Jeremy Watson¹",
+  "url": "/wiki/Jeremy_Watson",
+  "dialogue_name": "VHDPrivateWatson.txt",
+  "dialogue_url": "/wiki/VHDPrivateWatson.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "001300A6",
+  "ref_id": "0012FCD6",
+  "editor_id": "VHDPrivateWatson",
+  "location": "Hoover Dam",
+  "location_url": "/wiki/Hoover_Dam",
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "New California Republic Army",
+  "role": "War Hero",
+  "detailed_location": "Hoover Dam",
+  "voice_actor": "Yuri Lowenthal",
+  "special": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 5,
+    "Intelligence": 5,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "level": "12",
+  "tag_skills": [
+    {
+      "Explosives:": "74"
+    },
+    {
+      "Guns:": "74"
+    },
+    {
+      "Melee Weap.:": "74"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Neutral",
+  "voice_type": "MaleAdult01Default",
+  "geck_race": "Caucasian",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Sad 50",
+      "response_text": "I still haven't found my lucky helmet yet.",
+      "index": "1"
+    },
+    {
+      "topic": "VHDAssassinationDialogVHDPrivateWatsonFirstTalk",
+      "topic_text": "<First Dialog by Watson to Player>",
+      "emotion": "Neutral 50",
+      "response_text": "Have you seen my helmet? I can't seem to find it.",
+      "index": "4"
+    },
+    {
+      "topic": "VHDAssassinationDialogVHDPrivateWatsonTopic000",
+      "topic_text": "Your helmet is right over there.",
+      "emotion": "Neutral 50",
+      "response_text": "{confused}It's always in the last place you look. I wonder why that is.",
+      "index": "5"
+    },
+    {
+      "topic": "VHDAssassinationDialogVHDPrivateWatsonTopic001",
+      "topic_text": "What do you know about the President's visit?",
+      "emotion": "Neutral 50",
+      "response_text": "He's coming to give a big fancy speech to all of us troops stationed here at the dam.",
+      "index": "9"
+    },
+    {
+      "topic": "VHDAssassinationDialogVHDPrivateWatsonTopic002",
+      "topic_text": "Tell me about yourself.",
+      "emotion": "Anger 5",
+      "response_text": "Momma always told me not to talk to strangers, but you seem like a nice person.",
+      "index": "14"
+    },
+    {
+      "topic": "VHDAssassinationDialogVHDPrivateWatsonTopic008",
+      "topic_text": "I haven't seen it.",
+      "emotion": "Sad 10",
+      "response_text": "That's too bad. I need it for the ceremony. I need to look my best and I need my lucky helmet.",
+      "index": "17"
+    },
+    {
+      "topic": "VHDAssassinationDialogVHDPrivateWatsonTopic009",
+      "topic_text": "[Lie] Do you mean the helmet I just threw off the dam?",
+      "emotion": "Happy 50",
+      "response_text": "Ha ha, you big joker you. You're funny. I like you.",
+      "index": "19"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Bye-bye.",
+      "index": "21"
+    }
+  ],
+  "combat": [],
+  "description": "Private First Class Jeremy Watson is a 28 year-old Caucasian Male.\n\nA battle-hardened NCR soldier with a weathered face and determined eyes. His uniform is well-worn but clean, bearing the insignia of the New California Republic. His posture is rigid and disciplined, reflecting his military training. Watson carries himself with a quiet confidence that comes from surviving the harsh realities of the Mojave Wasteland.\n\nPrivate First Class Jeremy Watson's Personality: Watson is disciplined and loyal to the NCR, having witnessed the chaos of the wasteland firsthand. He's pragmatic and no-nonsense, having learned that sentimentality can get you killed in the Mojave. Beneath his hardened exterior, he cares deeply for his comrades and carries the weight of those he couldn't save. He has a dry sense of humor that surfaces in rare moments of respite.\n\nPrivate First Class Jeremy Watson's Backstory: Born in 2253 in a tin shack on the outskirts of One Pine, Jeremy Watson's early life was defined by the hardships of the frontier. His father worked as a caravan guard on the Short Loop, protecting trade routes between NCR outposts, while his mother braved the dangerous ruins as a prospector, searching for pre-War artifacts. Jeremy learned survival skills at a young age, helping his family eke out a living in the unforgiving wasteland. At 18, he enlisted in the NCR Army, seeking purpose and a way to protect others from the chaos he'd witnessed growing up. After basic training, he was stationed at Camp Forlorn Hope, where his platoon was ambushed by Legion forces. In the ensuing battle, Watson performed a daring rescue under heavy fire, saving several of his comrades and earning the rank of Private First Class. His heroic actions came at a cost - he bears a prominent scar across his left arm from a machete wound. His bravery earned him recognition and an invitation to attend the ceremony at Hoover Dam where General Aaron Kimball would be delivering a speech."
+}

@@ -1,0 +1,80 @@
+{
+  "name": "Hoover",
+  "url": "/wiki/Hoover",
+  "dialogue_name": "DLC03MisterGutsyStiggs.txt",
+  "dialogue_url": "/wiki/DLC03MisterGutsyStiggs.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "xx009AE3",
+  "ref_id": "xx00D2B3",
+  "editor_id": "DLC03MisterGutsyStiggs",
+  "location": "Base Floor",
+  "location_url": null,
+  "race": "Mister Gutsy",
+  "affiliation": "Tinker Joe(formerly)Enclave",
+  "role": "Personal Automated Lackey",
+  "detailed_location": "Mobile base crawler",
+  "voice_actor": "Jeff Baker",
+  "special": {
+    "Strength": 5,
+    "Perception": 6,
+    "Endurance": 5,
+    "Charisma": 5,
+    "Intelligence": 5,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "level": "9",
+  "misc_skills": [
+    {
+      "Hit Points:": "350"
+    },
+    {
+      "Poison Resist.:": "20%"
+    },
+    {
+      "Rad. Resist.:": "8%"
+    }
+  ],
+  "karma": "Neutral",
+  "voice_type": "RobotMisterGutsyDC",
+  "topics": [
+    {
+      "topic": "MS14Suit",
+      "topic_text": "MS14SuitHead",
+      "emotion": "Anger 50",
+      "response_text": "Pansy! Take a shot of vitamin M and keep fighting!{Spoken like a marine drill sergeant}",
+      "index": "1"
+    },
+    {
+      "topic": "MS14SuitCombat",
+      "topic_text": "MS14SuitCombat",
+      "emotion": "Anger 50",
+      "response_text": "Gear up, soldier!",
+      "index": "4"
+    },
+    {
+      "topic": "MS14SuitEmpty",
+      "topic_text": "MS14SuitEmpty",
+      "emotion": "Anger 50",
+      "response_text": "Head wound! Too bad you're out of morhpine.{Spoken like a marine drill sergeant}",
+      "index": "7"
+    },
+    {
+      "topic": "MS14SuitStart",
+      "topic_text": "MS14SuitStart",
+      "emotion": "Anger 50",
+      "response_text": "Listen up you god-damn puke! You are now wearing prototype medic power armor. You take care of me, and I'll take care of you.{Shouted like a marine drill sergeant}",
+      "index": "12"
+    }
+  ],
+  "conversation": [],
+  "combat": [],
+  "description": "Hoover is a 150 year-old Robotic Male.\n\nHoover is a Mister Gutsy robot serving as a Personal Automated Lackey for Stiggs, an Enclave engineer at the mobile base crawler in the year 2277. He can be identified from other Mister Gutsy robots by his distinctive silver and black paint job and dark red eye sensors.\n\nHoover's Personality: Hoover follows standard Mister Gutsy protocols with a slightly more refined personality due to modifications by his owner. He is dutiful, efficient, and occasionally displays dry humor when interacting with his owner Stiggs. He has a particular fondness for maintaining cleanliness and order.\n\nHoover's Backstory: Hoover was manufactured by the United States military before the Great War as a standard Mister Gutsy unit. After the war, he was acquired by a wandering trader named Tinker Joe, who modified his appearance with a distinctive silver and black paint job. In 2275, Tinker Joe sold Hoover to Stiggs, an Enclave engineer working at the mobile base crawler. Stiffs further modified Hoover, upgrading his combat protocols and giving him a more advanced personality matrix. Hoover now serves as Stiggs' personal assistant, helping with engineering tasks and base maintenance. He is particularly proud of his unique appearance and often polishes his casing to maintain the shine of his silver and black paint."
+}

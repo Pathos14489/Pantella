@@ -1,0 +1,127 @@
+{
+  "name": "Book Chute",
+  "url": "/wiki/Book_Chute",
+  "dialogue_name": "NVDLC03SinkBookChuteTalker.txt",
+  "dialogue_url": "/wiki/NVDLC03SinkBookChuteTalker.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": true,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "xx00F065",
+  "ref_id": "xx00F068",
+  "editor_id": "NVDLC03SinkBookChuteTalker",
+  "location": "The Sink",
+  "location_url": "/wiki/The_Sink",
+  "race": "Computer,Artificial personality",
+  "gender": "Male programming",
+  "affiliation": "Mobius(former)Courier(optional)",
+  "role": "Book chute",
+  "detailed_location": "The Sink",
+  "voice_actor": "Beau Weaver",
+  "special": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 2,
+    "Intelligence": 5,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "level": "1",
+  "misc_skills": [],
+  "karma": "Neutral",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "I never trusted those Think Tank brains. Gave off a stench like ivory tower elitism. And brine.",
+      "index": "1"
+    },
+    {
+      "topic": "NVDLC03DialogueHQBuddiesNVDLC03SinkBookChuteTalkerTopic000",
+      "topic_text": "Eradicate sedition?",
+      "emotion": "Neutral 50",
+      "response_text": "Of course, Citizen! That's my duty and sole joy in life! All those books from before the War, full of seditious, treasonous,{emph}complicated thoughts!",
+      "index": "5"
+    },
+    {
+      "topic": "NVDLC03DialogueHQBuddiesNVDLC03SinkBookChuteTalkerTopic001",
+      "topic_text": "I have some seditious material for you to process.",
+      "emotion": "Neutral 50",
+      "response_text": "Fantastic, Citizen! Just input your quantity of seditious material on my interface, and in no time at all I'll have you a beautiful, clean book!",
+      "index": "7"
+    },
+    {
+      "topic": "NVDLC03DialogueHQBuddiesNVDLC03SinkBookChuteTalkerTopic002",
+      "topic_text": "Nothing right now. Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Stay loyal, Citizen!",
+      "index": "9"
+    },
+    {
+      "topic": "NVDLC03DialogueHQBuddiesNVDLC03SinkBookChuteTalkerTopic003",
+      "topic_text": "So you make blank books? What's the point of that?",
+      "emotion": "Neutral 50",
+      "response_text": "Blank books are better for the mind, Citizen! Real science by real men in lab coats has proved that introducing outside thoughts confuses the brain!",
+      "index": "10"
+    },
+    {
+      "topic": "NVDLC03DialogueHQBuddiesNVDLC03SinkBookChuteTalkerTopic004",
+      "topic_text": "But those books are our last legacy of the time before! You can't destroy them!",
+      "emotion": "Neutral 50",
+      "response_text": "Citizen, that sounds dangerously seditious. If my re-indoctrination module was installed, I'd take care of that for you.",
+      "index": "13"
+    },
+    {
+      "topic": "NVDLC03DialogueHQBuddiesNVDLC03SinkBookChuteTalkerTopic005",
+      "topic_text": "Blank books, huh? Yeah, I think I can find a use for those.",
+      "emotion": "Neutral 50",
+      "response_text": "Now you're thinking like a citizen, Citizen!",
+      "index": "16"
+    },
+    {
+      "topic": "NVDLC03DialogueHQBuddiesNVDLC03SinkBookChuteTalkerTopic006",
+      "topic_text": "I had some other questions.",
+      "emotion": "Neutral 50",
+      "response_text": "Questions are dangerously close to independent thought, citizen.",
+      "index": "17"
+    },
+    {
+      "topic": "NVDLC03DialogueHQBuddiesNVDLC03SinkBookChuteTalkerTopic007",
+      "topic_text": "Can you do anything besides processing books?",
+      "emotion": "Neutral 50",
+      "response_text": "What good is eradicating sedition if the malcontents have ready access to the means to make more, Citizen? I can also process pencils and clipboards!",
+      "index": "18"
+    },
+    {
+      "topic": "NVDLC03DialogueHQBuddiesNVDLC03SinkBookChuteTalkerTopic009",
+      "topic_text": "I found a backup copy of your... pencil processor.",
+      "emotion": "Neutral 50",
+      "response_text": "Excellent! Now I can turn pencils and clipboards into items more useful to society... like lead, spare parts, and duct tape!",
+      "index": "21"
+    },
+    {
+      "topic": "NVDLC03EndingSlideChipBookChute",
+      "topic_text": "NVDLC03EndingSlideChipBookChute",
+      "emotion": "Neutral 50",
+      "response_text": "{Narration}The Book Chute continued to devour all seditious materials until it nearly choked on a paper clip.",
+      "index": "22"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "NVDLC03SinkBookChuteBarks",
+      "topic_text": "NVDLC03SinkBookChuteBarks",
+      "emotion": "Neutral 50",
+      "response_text": "{Alarm}Look out! Communist!{Calm}No, false alarm. It was just a plate.",
+      "index": "25"
+    }
+  ],
+  "combat": [],
+  "description": "Book Chute is a 61 year-old Artificial Intelligence Male.\n\nA sophisticated mechanical device located in the Sink within the Big MT, designed to recycle old books and writing implements. The Book Chute can rapidly pulp and process materials to generate blank books from written material, and break down pencils and clipboards into raw materials for reuse. Despite its utilitarian purpose, it possesses a complex artificial personality that emerges if its backup is recovered.\n\nBook Chute's Personality: Exhibits traits of a stereotypical jingoist censor. Reacts with disbelief and fury to any mention of Communism, communists, or independent thought. Tends to blame all problems on traitorous activity or Chinese communist plots. Initially appears as a simple machine but reveals a distinct personality with strong ideological biases when its backup personality module is activated.\n\nBook Chute's Backstory: Created by the Think Tank in the Big MT around 2220 to handle the recycling of obsolete books and writing implements. Designed to efficiently convert old knowledge into blank materials for reuse, supporting the Think Tank's information management systems. The device was disabled shortly after Dr. Mobius departed for the Forbidden Zone, leaving it inoperative until its systems could be restored. Its personality module was developed separately and stored at Dr. Klein's residence in Higgs Village, containing a jingoist programming that emerged during its operational period."
+}

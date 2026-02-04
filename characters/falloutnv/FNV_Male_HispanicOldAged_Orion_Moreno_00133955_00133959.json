@@ -16,19 +16,6 @@
   "editor_id": "VRemOrionMoreno",
   "location": "Orion Moreno's house",
   "location_url": "/wiki/Orion_Moreno%27s_house",
-  "descriptions": [
-    "Orion Moreno is a retired Enclave soldier living in the outskirts of New Vegas in 2281.",
-    "In 2241, Moreno was a proud soldier of the Enclave, serving as a heavy weapons trooper.",
-    "Much of Orion's behavior stemmed from his dedication to the Enclave. The destruction of control station Enclave and the subsequent fall of Navarro splintered the squad, and Arcade Gannon's mother and a young Arcade Gannon fled south into the NCR.",
-    "Arcade remembers him saying \"kiss America goodbye, boys\" as they escaped Navarro.",
-    "There's a quest, Arcade's companion quest, \"For Auld Lang Syne.\" During the process of doing that quest, inevitably, you will have to confront Orion Moreno, who hates the NCR. He absolutely hates the NCR. If you say you're going to side with the Legion, then Cannibal Johnson just leaves. But Orion Moreno, if you say you're going to help the NCR, he gets extremely angry and he leaves. Everyone goes like, \"Oh yeah, he fucking hates the NCR. He's not going to go along with us.\"",
-    "So, when you walk out of the room that all the other remnants are in, Orion Moreno is dressed in his Enclave armor with his, I think he has like a plasma rifle or something, and he's like, \"I hate him. I'm not going to do this shit.\" So, you can talk him down, but you can also just fight him and kill him. If you kill him, then the other remnants are like, \"Well, yeah, I mean, that's not surprising that ended that way. You kind of did what you had to do.\"",
-    "But you can take his remnants armor, he doesn't need it. So, you take it. I mean, most people take the armor because it's really good. So, you take that armor, and then the idea is, at the Battle of Hoover Dam, they're going to show up and they're going to help you.",
-    "But the thing is, there was a bug where, due to persistence, what would happen is during the climactic battle at the Battle of Hoover Dam, you'd see the Vertibird fly in, and one after another, all these dudes would hop out. Like, Doc Henry jumps out, and Judah Krieger jumps out, and Cannibal Johnson jumps out. And then this decapitated, naked corpse, Orion Moreno, would just spawn and flop onto the dam while everybody else ran across firing on the Legion. That was so fucking funny! It was so good, so funny, oh my God!",
-    "When Akil Hooper and I saw that bug, we were crying. It's so perfect because I think he's always like the last guy to get out. In my mind, because Cannibal Johnson hates Orion Moreno, they hate each other, and I thought of him like, out of spite, like you're coming to this fight and just flinging his body out of the Vertibird naked. Oh my God, it was really good.",
-    "It was not a hard bug to fix, but it was really funny because people just didn't realize what the fuck was going on. These people would spawn, and then this naked corpse, often with the head blown off because they, you know, headshot him. Hey!",
-    "As for how it happened, the script just didn't check to see if he was dead, and because those characters are marked as central, they can spawn, they can be moved to any cell. So, the script would just move him to that location and spawn him, and that was it. So the script just needed to check to see that he was alive."
-  ],
   "race": "Human",
   "gender": "Male",
   "affiliation": "Enclave Department of the Army(formerly)Enclave remnants",
@@ -250,5 +237,6 @@
       "response_text": "For Navarro!",
       "index": "39"
     }
-  ]
+  ],
+  "description": "Orion Moreno is a 65 year-old Hispanic Male.\n\nA weathered former Enclave heavy weapons trooper, Orion Moreno now lives as a recluse on the outskirts of New Vegas. His once pristine Enclave armor is now worn and tarnished, a testament to the harsh realities of life in the wasteland. Despite his retirement, his military bearing remains evident in his posture and sharp, calculating gaze.\n\nOrion Moreno's Personality: Orion is fiercely proud of his Enclave heritage and maintains a rigid, disciplined demeanor. He harbors an intense hatred for the NCR, viewing them as traitors to America's true destiny. Beneath his hardened exterior, he is capable of showing loyalty to those he deems worthy, but his trust is hard-earned. He speaks with a measured, deliberate cadence, often referencing Enclave doctrine and his military past.\n\nOrion Moreno's Backstory: Born in the mid-22nd century, Orion Moreno was indoctrinated into the Enclave's ideology from a young age. By 2241, he had risen to the rank of heavy weapons trooper, serving with distinction in various operations. When the Enclave's control station at Navarro fell, Moreno was part of the splintered remnants that refused to surrender. Witnessing Arcade Gannon's mother flee to the NCR with her son cemented his hatred for the organization he viewed as a betrayal of America's true path. For decades, he lived as a hermit, clinging to his Enclave identity until the remnants were briefly reunited in 2281."
 }

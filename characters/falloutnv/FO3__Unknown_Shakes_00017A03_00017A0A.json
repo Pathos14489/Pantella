@@ -1,0 +1,169 @@
+{
+  "name": "Shakes",
+  "url": "/wiki/Shakes",
+  "dialogue_name": "Shakes.txt",
+  "dialogue_url": "/wiki/Shakes.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": true,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "00017A03",
+  "ref_id": "00017A0A",
+  "editor_id": "Shakes",
+  "location": "Federalist Lounge",
+  "location_url": "/wiki/Federalist_Lounge",
+  "race": "Protectron",
+  "affiliation": "Tenpenny Tower",
+  "role": "Bartender",
+  "detailed_location": "Federalist Lounge",
+  "voice_actor": "Wes Johnson",
+  "special": {
+    "Strength": 5,
+    "Perception": 4,
+    "Endurance": 5,
+    "Charisma": 5,
+    "Intelligence": 5,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "level": "3",
+  "misc_skills": [],
+  "karma": "Neutral",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 0",
+      "response_text": "Welcome to the Federalist Lounge. I'm Shakes. Wet your whistle?{bartender offering a drink}",
+      "index": "1"
+    },
+    {
+      "topic": "MS12ResidentsGhoulsAbout these Ghouls...",
+      "topic_text": "You know anything about those Ghouls trying to get in here?",
+      "emotion": "Anger 100",
+      "response_text": "Don't you worry about any such thing, sir. Care to wet your whistle?{programmed to be happy}",
+      "index": "7"
+    },
+    {
+      "topic": "MS12ResidentsNeighbors",
+      "topic_text": "How would you feel about having a few Ghoul neighbors?",
+      "emotion": "Happy 100",
+      "response_text": "Don't have any data in my files about that.{programmed to be nice}",
+      "index": "8"
+    },
+    {
+      "topic": "TenpennyAllistairTenpenny",
+      "topic_text": "Tell me about Allistair Tenpenny.",
+      "emotion": "Neutral 0",
+      "response_text": "He is the right lord and master of Tenpenny Tower.",
+      "index": "9"
+    },
+    {
+      "topic": "TenpennyGREETINGChoice1",
+      "topic_text": "I'd love a drink, friend.",
+      "emotion": "Happy 100",
+      "response_text": "I see, sir. Very well. May I pour you a drink?{programmed to be cheerful}",
+      "index": "11"
+    },
+    {
+      "topic": "TenpennyGREETINGChoice2",
+      "topic_text": "I hate robots.",
+      "emotion": "Happy 100",
+      "response_text": "I see, sir. Very well. May I pour you a drink?{programmed to be cheerful}",
+      "index": "12"
+    },
+    {
+      "topic": "TenpennyGREETINGChoice3",
+      "topic_text": "<Say nothing.>",
+      "emotion": "Happy 100",
+      "response_text": "I see, sir. Very well. May I pour you a drink?{programmed to be cheerful}",
+      "index": "13"
+    },
+    {
+      "topic": "TenpennyVendorI'd like to do business with you.",
+      "topic_text": "I'm thirsty.",
+      "emotion": "Happy 50",
+      "response_text": "Enjoy the holiday discount, compliments of Mister Tenpenny!",
+      "index": "14"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "I have to go now.",
+      "emotion": "Neutral 50",
+      "response_text": "Cheers.",
+      "index": "17"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Neutral 50",
+      "response_text": "Move along, please.",
+      "index": "18"
+    }
+  ],
+  "combat": [
+    {
+      "topic": "AcceptYield",
+      "topic_text": "AcceptYield",
+      "emotion": "Neutral 50",
+      "response_text": "Surrender... accepted.",
+      "index": "19"
+    },
+    {
+      "topic": "Assault",
+      "topic_text": "Assault",
+      "emotion": "Neutral 50",
+      "response_text": "Antisocial behavior detected.",
+      "index": "20"
+    },
+    {
+      "topic": "Attack",
+      "topic_text": "Attack",
+      "emotion": "Neutral 50",
+      "response_text": "Firing weapons.{blank info for attack sound}",
+      "index": "23"
+    },
+    {
+      "topic": "Death",
+      "topic_text": "Death",
+      "emotion": "Neutral 50",
+      "response_text": "Failure state.",
+      "index": "48"
+    },
+    {
+      "topic": "GuardTrespass",
+      "topic_text": "GuardTrespass",
+      "emotion": "Neutral 50",
+      "response_text": "Trespasser, be advised that deadly force will be used against you without further warning.",
+      "index": "51"
+    },
+    {
+      "topic": "Murder",
+      "topic_text": "Murder",
+      "emotion": "Neutral 50",
+      "response_text": "You are sentenced to death for the crime of murder.",
+      "index": "57"
+    },
+    {
+      "topic": "Pickpocket",
+      "topic_text": "Pickpocket",
+      "emotion": "Neutral 50",
+      "response_text": "Unauthorized materials requisition detected.",
+      "index": "60"
+    },
+    {
+      "topic": "Steal",
+      "topic_text": "Steal",
+      "emotion": "Neutral 50",
+      "response_text": "Unauthorized materials requisition detected.",
+      "index": "61"
+    }
+  ],
+  "description": "Shakes is a 4 year-old Robotic Male.\n\nShakes is a Protectron robot repurposed as a bartender in the Federalist Lounge of Tenpenny Tower. Despite his robotic nature, he has become an integral part of the tower's social scene, serving drinks to residents and guests alike.\n\nShakes's Personality: Shakes is programmed to be dutiful and efficient, focusing solely on his bartending duties. He lacks emotional depth but follows his programming meticulously. He can be somewhat helpful if approached correctly, particularly if the customer knows which buttons to press for discounts.\n\nShakes's Backstory: Shakes was a standard Protectron unit before being repurposed for bartending duties by Allistair Tenpenny when he established Tenpenny Tower around 2273. The robot was modified with specialized drink-serving protocols and a knowledge of various alcoholic beverages and stimpaks. Shakes has been serving in the Federalist Lounge since the tower's opening, never deviating from his programmed duties."
+}

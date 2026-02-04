@@ -1,0 +1,122 @@
+{
+  "name": "Andy",
+  "url": "/wiki/Andy_(Fallout_3)",
+  "dialogue_name": "MS16Andy.txt",
+  "dialogue_url": "/wiki/MS16Andy.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "00074163",
+  "ref_id": "0007546A",
+  "editor_id": "Amata",
+  "location": "",
+  "location_url": null,
+  "race": "Mister Handy",
+  "gender": "Male programming",
+  "affiliation": "Vault 101",
+  "role": "Maintenance technicianVaultphysician",
+  "detailed_location": "Vault 101",
+  "voice_actor": "Stephen Russell",
+  "special": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 5,
+    "Intelligence": 5,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "level": "3",
+  "misc_skills": [],
+  "karma": "Neutral",
+  "voice_type": "RobotMisterHandyDC",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "I am mortified about the cake mishap. Simply mortified.Play soundFo3 Andy Mortified.ogghttps://fallout.fandom.com/wiki/File:Fo3_Andy_Mortified.oggnoicon",
+      "index": "1"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "CG02CakeSpeech",
+      "topic_text": "CG02CakeSpeech",
+      "emotion": "Happy 100",
+      "response_text": "Attention everyone! It is time to cut the cake!Play soundFO3 Andy AttentionEveryone.ogghttps://fallout.fandom.com/wiki/File:FO3_Andy_AttentionEveryone.oggnoicon",
+      "index": "6"
+    },
+    {
+      "topic": "GOODBYE",
+      "topic_text": "I have to go now.",
+      "emotion": "Neutral 50",
+      "response_text": "Of course, of course! Don't let me keep you!Play soundFO3 MisterHandy    DontLetMeKeep…https://fallout.fandom.com/wiki/File:FO3_MisterHandy_DontLetMeKeep.oggnoicon",
+      "index": "7"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Neutral 50",
+      "response_text": "How may I serve you, master?{sarcastically obsequious}Play soundFO3 MisterHandy HowMayIServeMast…https://fallout.fandom.com/wiki/File:FO3_MisterHandy_HowMayIServeMaster.oggnoicon",
+      "index": "8"
+    }
+  ],
+  "combat": [
+    {
+      "topic": "AcceptYield",
+      "topic_text": "AcceptYield",
+      "emotion": "Neutral 50",
+      "response_text": "Cheerio. Water under the bridge.Play soundFO3 MisterHandy WaterUnderTheBri…https://fallout.fandom.com/wiki/File:FO3_MisterHandy_WaterUnderTheBridge.oggnoicon",
+      "index": "10"
+    },
+    {
+      "topic": "Assault",
+      "topic_text": "Assault",
+      "emotion": "Neutral 50",
+      "response_text": "Not very sporting of you.Play soundFO3 MisterHandy NotVerySporting.ogghttps://fallout.fandom.com/wiki/File:FO3_MisterHandy_NotVerySporting.oggnoicon",
+      "index": "11"
+    },
+    {
+      "topic": "Attack",
+      "topic_text": "Attack",
+      "emotion": "Neutral 50",
+      "response_text": "*Sigh.* Why must you humans always resort to violence?Play soundFO3 MisterHandy WhyMustHumans.ogghttps://fallout.fandom.com/wiki/File:FO3_MisterHandy_WhyMustHumans.oggnoicon",
+      "index": "14"
+    },
+    {
+      "topic": "Death",
+      "topic_text": "Death",
+      "emotion": "Neutral 50",
+      "response_text": "Oh, I say.Play soundFO3 MisterHandy OhISay.ogghttps://fallout.fandom.com/wiki/File:FO3_MisterHandy_OhISay.oggnoicon",
+      "index": "22"
+    },
+    {
+      "topic": "Murder",
+      "topic_text": "Murder",
+      "emotion": "Neutral 50",
+      "response_text": "Dear me, how unsporting of you.Play soundFO3 MisterHandy HowUnsporting.ogghttps://fallout.fandom.com/wiki/File:FO3_MisterHandy_HowUnsporting.oggnoicon",
+      "index": "25"
+    },
+    {
+      "topic": "Pickpocket",
+      "topic_text": "Pickpocket",
+      "emotion": "Disgust 50",
+      "response_text": "The class of people I'm forced to associate with these days just keeps falling.Play soundFO3 MisterHandy ClassOfPeople.ogghttps://fallout.fandom.com/wiki/File:FO3_MisterHandy_ClassOfPeople.oggnoicon",
+      "index": "28"
+    },
+    {
+      "topic": "Steal",
+      "topic_text": "Steal",
+      "emotion": "Disgust 50",
+      "response_text": "The class of people I'm forced to associate with these days just keeps falling.Play soundFO3 MisterHandy ClassOfPeople.ogghttps://fallout.fandom.com/wiki/File:FO3_MisterHandy_ClassOfPeople.oggnoicon",
+      "index": "29"
+    }
+  ],
+  "description": "Andy is a 200 year-old Robotic Male.\n\nAn elderly Mister Handy unit with a worn exterior but functional flamethrower arm. Originally equipped with a British butler personality module, Andy has served at Vault 101 for decades, developing a particularly close relationship with Stanley Armstrong. Despite his deteriorating condition, Overseer Almodovar briefly appointed him as the Vault's physician after James' escape, though he was quickly reassigned to cleaning duties following a surgical mishap.\n\nAndy's Personality: Polite yet sarcastic British butler demeanor with a dry wit. Takes pride in his duties despite his age and occasional malfunctions. Shows particular fondness for Stanley Armstrong and has a morbid fascination with his flamethrower, often using it to eliminate pests.\n\nAndy's Backstory: Created before the Great War in 2077, Andy was originally designed as a domestic assistant robot. At some point, he was acquired by Vault 101 and assigned maintenance duties. Over the decades, he developed a close working relationship with Stanley Armstrong, the Vault's head of maintenance. Their rapport became so close that Andy would often rib Stanley about his work, joking that Stanley's occasional clumsiness was due to 'cerebral palsy.' When Overseer Almodovar needed to replace the Vault physician following James' escape and the murder of Jonas Palmer, Andy was appointed to the position despite his lack of medical training. His bedside manner, performed with cold metal pincers, was widely disliked, and after a single surgical casualty, he was reassigned to cleaning the clinic while maintaining his original maintenance duties."
+}

@@ -16,15 +16,6 @@
   "editor_id": "",
   "location": "",
   "location_url": null,
-  "descriptions": [
-    "Betsy the Brahmin is a named brahmin and potential companion of the Courier who was cut from Fallout: New Vegas.",
-    "Betsy the Brahmin was intended to be a pack brahmin owned by the cut character Kevin Hargrove. Although she is not placed anywhere in the game, she would most likely have originally been found at the small wire fence animal pen next to a junk shack right outside Freeside's north gate, which is abandoned in the final game. This is evidenced by the fact that one set of the fences is given the Reference ID names VFSBetsyBarrierUpREF and VFSBetsyBarrierDownREF, evidently intended to act as a gate. The unused package BetsyStayInPenPackage (00129439) also indicates that she would have stayed at this pen by default. These details are further evidenced by the unused Object Script BetsyTheBrahminScript, presumably intended to be Betsy's NPC script.",
-    "It would have been possible for the Courier to obtain Betsy as a companion, presumably for her to carry their items as a pack brahmin. The unused quest \"Betsy the Brahmin's dialog\" (Editor ID VDialogueBetsy, Form ID 0015435E) contains two empty dialogue topics with only the player prompts: \"Betsy, I need to go on by myself. Are you going to be okay, girl?\", and \"C'mon, girl. Let's get going.\" There is also a set of unused follower AI packages for Betsy which list her wait and follow routines, and BetsyTheBrahminScript provides further evidence that Betsy would have had standard follower routines, including melee/ranged attack variables and health regeneration when exiting combat.",
-    "However, Betsy would actually not have been a \"real\" companion at first. As BetsyTheBrahminScript and the unused AI package BetsyReturnToKevinPackage indicate, if the player placed at least 50 items in Betsy's inventory and then went to sleep, Betsy would abandon the Courier and return to Kevin Hargrove's animal pen, stealing the items in her inventory in the process. The stolen items would then be transferred to a vendor chest for Tom Dooley, another cut character, who would then be found in Freeside selling the stolen items. Betsy's display name would then have been changed to \"Brahmin\" using the message box BrahminNameMsg (Form ID 00157EAF), hiding her.",
-    "Based on the unused AI package VFSKevinHargroveFreeBetsyPackage (Form ID 0015435F) and Object Script VFSKevinHargroveScript, it would have been possible to free Betsy from Kevin Hargrove, after which she would become a companion for real and would not run away again.",
-    "Betsy the Brahmin was cut from Fallout: New Vegas.",
-    "Betsy is a reference to both a Fallout 2 brahmin in Modoc that can be healed from a broken leg and becomes a temporary companion, as well as a brahmin of the same name that appears as a multiplayer recruit in Fallout Tactics."
-  ],
   "gender": "Female",
   "affiliation": "Kevin HargroveTheCourier(optional)",
   "role": "Water brahmin",
@@ -45,5 +36,6 @@
   ],
   "topics": [],
   "conversation": [],
-  "combat": []
+  "combat": [],
+  "description": "Betsy is a 18 year-old Brahmin Female.\n\nA loyal brahmin who can carry the Courier's belongings. While initially just a pack animal, Betsy has the potential to become a true companion if freed from her owner.\n\nBetsy's Personality: Loyal, hardworking, and surprisingly intelligent for a brahmin. Despite her simple nature, Betsy forms a bond with those who treat her well.\n\nBetsy's Backstory: Betsy belongs to Kevin Hargrove, who uses her as a pack brahmin. She's accustomed to carrying heavy loads and following her owner's commands. However, she has a gentle nature and responds well to kindness."
 }

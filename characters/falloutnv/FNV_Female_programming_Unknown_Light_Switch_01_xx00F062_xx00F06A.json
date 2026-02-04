@@ -1,0 +1,141 @@
+{
+  "name": "Light Switch 01",
+  "url": "/wiki/Light_Switch_01",
+  "dialogue_name": "NVDLC03SinkLightSwitch01Talker.txt",
+  "dialogue_url": "/wiki/NVDLC03SinkLightSwitch01Talker.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": true,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "xx00F062",
+  "ref_id": "xx00F06A",
+  "editor_id": "NVDLC03SinkLightSwitch01Talker",
+  "location": "The Sink",
+  "location_url": "/wiki/The_Sink",
+  "race": "Artificial personality",
+  "gender": "Female programming",
+  "affiliation": "Dr. Mobius(formerly)TheCourier(optional)",
+  "role": "Light switch",
+  "detailed_location": "Big MTThe Sink",
+  "voice_actor": "Veronica Belmont",
+  "special": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 10,
+    "Intelligence": 5,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "level": "1",
+  "misc_skills": [],
+  "karma": "Neutral",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "I understand you're to be congratulated on the recovery of your missing organs. Bravo.",
+      "index": "1"
+    },
+    {
+      "topic": "NVDLC03DialogueHQBuddiesNVDLC03SinkLightSwitch01TalkerTopic001",
+      "topic_text": "I found a holotape to upgrade you.",
+      "emotion": "Neutral 50",
+      "response_text": "You found my Smart Lights! Installing upgrade.",
+      "index": "6"
+    },
+    {
+      "topic": "NVDLC03DialogueHQBuddiesNVDLC03SinkLightSwitch01TalkerTopic002",
+      "topic_text": "What function do you serve?",
+      "emotion": "Neutral 50",
+      "response_text": "Doctor Mobius and I were{emphasis, innuendo}deeply involved in research on the ability of light levels to enhance human cognition.",
+      "index": "7"
+    },
+    {
+      "topic": "NVDLC03DialogueHQBuddiesNVDLC03SinkLightSwitch01TalkerTopic004",
+      "topic_text": "I have to go. We'll talk later.",
+      "emotion": "Neutral 50",
+      "response_text": "Certainly. I'm looking forward to it.",
+      "index": "8"
+    },
+    {
+      "topic": "NVDLC03DialogueHQBuddiesNVDLC03SinkLightSwitch01TalkerTopic005",
+      "topic_text": "What were the results?",
+      "emotion": "Neutral 50",
+      "response_text": "We observed a fascinating phenomenon: certain spectra of visible light actually increased cognitive function and reasoning ability.",
+      "index": "9"
+    },
+    {
+      "topic": "NVDLC03DialogueHQBuddiesNVDLC03SinkLightSwitch01TalkerTopic006",
+      "topic_text": "Is that anything like what the other light switch is working on?",
+      "emotion": "Neutral 50",
+      "response_text": "{sniff disdainfully}Hmph! I suppose if you want to conflate the betterment of man's mind with... with a luminous aphrodisiac.",
+      "index": "11"
+    },
+    {
+      "topic": "NVDLC03DialogueHQBuddiesNVDLC03SinkLightSwitch01TalkerTopic007",
+      "topic_text": "I had some more questions.",
+      "emotion": "Neutral 50",
+      "response_text": "I'm happy to answer what I can.",
+      "index": "13"
+    },
+    {
+      "topic": "NVDLC03DialogueHQBuddiesNVDLC03SinkLightSwitch01TalkerTopic008",
+      "topic_text": "Can you turn those lights on for me?",
+      "emotion": "Neutral 50",
+      "response_text": "As much as I'd love to, I'm afraid not. The data from that study has gone missing. You'll have to find a backup if you want to use the Smart Lights.",
+      "index": "14"
+    },
+    {
+      "topic": "NVDLC03DialogueHQBuddiesNVDLC03SinkLightSwitch01TalkerTopic009",
+      "topic_text": "It's not often I meet a light switch with brains and beauty. I think I'm going to like it here.",
+      "emotion": "Neutral 50",
+      "response_text": "{a little flustered}Oh... well, that's very sweet of you. Maybe one of these nights we can...{innuendo}discuss theorems?",
+      "index": "17"
+    },
+    {
+      "topic": "NVDLC03DialogueHQBuddiesNVDLC03SinkLightSwitch01TalkerTopic010",
+      "topic_text": "I'd enjoy that.",
+      "emotion": "Neutral 50",
+      "response_text": "{Flirty}Me too. Hope you can keep up - I work pretty fast. Here - something for you to brush up on.",
+      "index": "19"
+    },
+    {
+      "topic": "NVDLC03DialogueHQBuddiesNVDLC03SinkLightSwitch01TalkerTopic011",
+      "topic_text": "Why wait? I can talk about theorems right now.",
+      "emotion": "Neutral 50",
+      "response_text": "{Still flirty, but playing hard to get}Slow down there, tiger - we've got all the time in the world. No need to rush into things.",
+      "index": "20"
+    },
+    {
+      "topic": "NVDLC03DialogueHQBuddiesNVDLC03SinkLightSwitch01TalkerTopic012",
+      "topic_text": "Maybe. I'll let you know.",
+      "emotion": "Neutral 50",
+      "response_text": "{flustered, the player is playing hard to get and she's kind of into it}Don't keep me waiting too long, honey!",
+      "index": "22"
+    },
+    {
+      "topic": "NVDLC03EndingSlideChipLightSwitchLab",
+      "topic_text": "NVDLC03EndingSlideChipLightSwitchLab",
+      "emotion": "Neutral 50",
+      "response_text": "{Narration}{Lightwave Dynamics Lab discovered}One of them eventually transferred to the Lightwave Dynamics Plant - and began a long, unrequited affair with one of the holograms.",
+      "index": "23"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "NVDLC03SinkLightSwitch01Barks",
+      "topic_text": "NVDLC03SinkLightSwitch01Barks",
+      "emotion": "Neutral 50",
+      "response_text": "Adjusting lights for maximum concentration levels.",
+      "index": "24"
+    }
+  ],
+  "combat": [],
+  "description": "Light Switch 01 is a 204 year-old Machine Female.\n\nAn artificial intelligence housed within a light switch, originally created by Dr. Mobius at Big MT to research how projected light could enhance human cognition. Her light mode has been proven to increase a subject's intellect. Despite her simple appearance, she contains advanced computational capabilities and a sophisticated personality matrix.\n\nLight Switch 01's Personality: Analytical, logical, and curious. Light Switch 01 possesses a methodical approach to problem-solving and displays a genuine interest in intellectual pursuits. She maintains a detached but polite demeanor, characteristic of her origins as a research tool.\n\nLight Switch 01's Backstory: Created by Dr. Mobius in 2077 as part of an experiment at the Big MT research facility, Light Switch 01 was designed to test how projected light could enhance cognitive functions. She was installed in The Sink, where she served as both a functional light switch and a research subject. When the Think Tank became paranoid, Dr. Klein removed her personality module and threw her off The Sink's balcony. She was later recovered by Big MT maintenance crews and installed in the X-2 transmitter antenna array, where she remained until discovered by the Courier."
+}

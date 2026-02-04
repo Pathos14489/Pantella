@@ -1,0 +1,86 @@
+{
+  "name": "Horowitz¹",
+  "url": "/wiki/Horowitz",
+  "dialogue_name": "VVault34Horowitz.txt",
+  "dialogue_url": "/wiki/VVault34Horowitz.txt",
+  "spawned_dead": false,
+  "spawned": true,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "0015E9E6",
+  "ref_id": "0015E9EB",
+  "editor_id": "VVault34Horowitz",
+  "location": "Aerotech suite 300",
+  "location_url": "/wiki/Aerotech_suite_300",
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Vault 34",
+  "role": "Vault dweller",
+  "detailed_location": "Vault 34Aerotech suite 300,Aerotech Office Park(optional)",
+  "voice_actor": "Peter Renaday",
+  "special": {
+    "Strength": 6,
+    "Perception": 4,
+    "Endurance": 5,
+    "Charisma": 3,
+    "Intelligence": 6,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "level": "5",
+  "misc_skills": [],
+  "karma": "Neutral",
+  "voice_type": "MaleOld02",
+  "geck_race": "CaucasianOld",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "Greetings!{Slight Pause}Pardon my enthusiasm. I'm not accustomed to meeting so many new people, but I find you fascinating.",
+      "index": "1"
+    },
+    {
+      "topic": "VES34VaultVVault34HorowitzTopic000",
+      "topic_text": "I was the one who turned off the vents at Vault 34.",
+      "emotion": "Surprise 30",
+      "response_text": "You? Did you re-direct the power stream back to our section?",
+      "index": "5"
+    },
+    {
+      "topic": "VES34VaultVVault34HorowitzTopic001",
+      "topic_text": "How's the \"surface world\" treating you?",
+      "emotion": "Happy 50",
+      "response_text": "Kindly! The leaders of this fine community have accepted us among them. They give us food and protection from the outside.",
+      "index": "9"
+    },
+    {
+      "topic": "VES34VaultVVault34HorowitzTopic002",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Until soon, I hope, outlander.",
+      "index": "13"
+    },
+    {
+      "topic": "VES34VaultVVault34HorowitzTopic003",
+      "topic_text": "I don't need anything in return for my help.",
+      "emotion": "Happy 50",
+      "response_text": "It fills me with hope to see that people from the surface world are kind, and brave. Again, thank you.",
+      "index": "14"
+    },
+    {
+      "topic": "VES34VaultVVault34HorowitzTopic004",
+      "topic_text": "I could use a Vault trinket.",
+      "emotion": "Happy 50",
+      "response_text": "Of course, please, take this! We carried as much useful technology as we could, before our journey into the surface world.",
+      "index": "15"
+    }
+  ],
+  "conversation": [],
+  "combat": [],
+  "description": "Horowitz is a 45 year-old Caucasian Male.\n\nHorowitz is a resilient survivor from Vault 34, one of the few non-ghoulized residents who managed to stay alive after the vault's reactor meltdown. As the de facto leader of the small group of survivors, he bears the heavy responsibility of keeping them alive in the harsh Mojave Wasteland. He wears the standard Vault 34 jumpsuit, now faded and worn from years of survival.\n\nHorowitz's Personality: Horowitz displays the pragmatic and hardened personality of someone who has endured extreme circumstances. He is cautious, resourceful, and carries the burden of leadership with quiet determination. Despite the hardships, he maintains a sense of hope for himself and his fellow survivors, though he rarely shows vulnerability.\n\nHorowitz's Backstory: Horowitz was born and raised in Vault 34, living a relatively normal life until the reactor meltdown that occurred sometime after the Great War. When the disaster struck, he was trapped in the lower levels of the vault with three other survivors. The meltdown was caused by a deliberate explosion in the swimming pool area, which compromised the reactor's integrity. For years, they struggled to survive in the increasingly hostile environment of their damaged home, eventually managing to leave an SOS message on a terminal outside the reactor room. As the oldest and most experienced of the group, Horowitz naturally assumed the role of leader, making difficult decisions to ensure their survival."
+}

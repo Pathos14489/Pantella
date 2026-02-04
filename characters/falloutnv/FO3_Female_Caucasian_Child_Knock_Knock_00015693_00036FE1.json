@@ -1,0 +1,372 @@
+{
+  "name": "Knock Knock",
+  "url": "/wiki/Knock_Knock",
+  "dialogue_name": "KnockKnock.txt",
+  "dialogue_url": "/wiki/KnockKnock.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": true,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "00015693",
+  "ref_id": "00036FE1",
+  "editor_id": "KnockKnock",
+  "location": "Little Lamplight",
+  "location_url": "/wiki/Little_Lamplight",
+  "race": "Human",
+  "gender": "Female",
+  "affiliation": "Little Lamplight",
+  "role": "Morale officer",
+  "detailed_location": "Little Lamplight",
+  "voice_actor": "Stephanie Joy",
+  "special": {
+    "Strength": 3,
+    "Perception": 4,
+    "Endurance": 3,
+    "Charisma": 3,
+    "Intelligence": 3,
+    "Agility": 7,
+    "Luck": 7
+  },
+  "mod_special_values": {
+    "Strength": 3,
+    "Perception": 5,
+    "Endurance": 3,
+    "Charisma": 3,
+    "Intelligence": 3,
+    "Agility": 7,
+    "Luck": 7
+  },
+  "level": "1",
+  "tag_skills": [
+    {
+      "Explosives:": "31(33)"
+    },
+    {
+      "Small Guns:": "35"
+    },
+    {
+      "Sneak:": "35"
+    }
+  ],
+  "karma": "Good",
+  "voice_type": "FemaleChild01DC",
+  "geck_race": "Caucasian_Child",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Disgust 50",
+      "response_text": "Hey mungo. This is an A B conversation so C your way out.{\"mungo\" said with derision}",
+      "index": "1"
+    },
+    {
+      "topic": "LLDirections",
+      "topic_text": "Can you give me directions?",
+      "emotion": "Neutral 50",
+      "response_text": "To where, man?",
+      "index": "12"
+    },
+    {
+      "topic": "LLFirstMeetingResponseAFriendly First Response",
+      "topic_text": "I'm from Vault 101, and I rescued some of your friends from the Slavers.",
+      "emotion": "Surprise 25",
+      "response_text": "Oh, was that you? Nice work! I hope you got some good laughs out of it before you left - gotta make sure they know not to try that again!",
+      "index": "13"
+    },
+    {
+      "topic": "LLFirstMeetingResponseBRude First Response",
+      "topic_text": "I'm the big hero who rescued your friends from the Slavers. How's that for cool?",
+      "emotion": "Neutral 50",
+      "response_text": "It sure is! Nice work bringing them back.",
+      "index": "19"
+    },
+    {
+      "topic": "LLGuarding",
+      "topic_text": "You said you're in charge of \"morale.\" What does that mean?",
+      "emotion": "Happy 25",
+      "response_text": "Well, technically, I'm patrolling and \"keeping the peace.\"",
+      "index": "24"
+    },
+    {
+      "topic": "LLKnockJokes1ALLKnockJokesA",
+      "topic_text": "Sure, let's hear one.",
+      "emotion": "Happy 25",
+      "response_text": "Prepare to be amused!",
+      "index": "27"
+    },
+    {
+      "topic": "LLKnockJokes1BLLKnockJokesB",
+      "topic_text": "No. I don't have time for funny business.",
+      "emotion": "Happy 50",
+      "response_text": "Aw, come on. Knock knock!{with gusto}",
+      "index": "29"
+    },
+    {
+      "topic": "LLKnockJokes1pt1A",
+      "topic_text": "Who's there?",
+      "emotion": "Neutral 50",
+      "response_text": "Noah!{with gusto}",
+      "index": "30"
+    },
+    {
+      "topic": "LLKnockJokes1pt1B",
+      "topic_text": "This is stupid.",
+      "emotion": "Happy 50",
+      "response_text": "No it isn't. It's Noah!{refusing to be derailed}",
+      "index": "31"
+    },
+    {
+      "topic": "LLKnockJokes1pt2ALLKnockJokes1pt2",
+      "topic_text": "Noah who?",
+      "emotion": "Happy 50",
+      "response_text": "Noah place where I can get some food?{with gusto}",
+      "index": "32"
+    },
+    {
+      "topic": "LLKnockJokes1pt2B",
+      "topic_text": "I refuse to play along.",
+      "emotion": "Happy 50",
+      "response_text": "Noah place where I can get some food?{not to be denied his punchline}",
+      "index": "33"
+    },
+    {
+      "topic": "LLKnockJokes1pt2specialLLKnockKnockJokes1pt2special",
+      "topic_text": "Noah place where you can get some better jokes?",
+      "emotion": "Happy 65",
+      "response_text": "Hey, that's good! I was just going to say, \"Noah place where I can get some food?\"{with gusto}",
+      "index": "34"
+    },
+    {
+      "topic": "LLKnockJokes2A",
+      "topic_text": "That was hysterical!",
+      "emotion": "Surprise 50",
+      "response_text": "Whoa, you really think so? Like, actually funny? Can you convince other folks to find them funny?",
+      "index": "35"
+    },
+    {
+      "topic": "LLKnockJokes2B",
+      "topic_text": "That was... um... really funny. <Lie.>",
+      "emotion": "Happy 50",
+      "response_text": "Gee, thanks! I have to admit, most of them aren't really funny. At least, not ha-ha funny.",
+      "index": "38"
+    },
+    {
+      "topic": "LLKnockJokes2C",
+      "topic_text": "That couldn't have been a joke. Jokes are supposed to be funny.",
+      "emotion": "Happy 50",
+      "response_text": "I know they aren't very funny. But that was a bit uncalled for.",
+      "index": "41"
+    },
+    {
+      "topic": "LLKnockJokes3A",
+      "topic_text": "Why don't you come up with new jokes or stories to tell?",
+      "emotion": "Happy 25",
+      "response_text": "Oh, we've got lots of funny incidents. Like when Sammy shot the Raider who thought he was a girl, that sort of stuff.",
+      "index": "44"
+    },
+    {
+      "topic": "LLKnockJokes3B",
+      "topic_text": "That's the dumbest thing I've ever heard.",
+      "emotion": "Anger 25",
+      "response_text": "That's only because you haven't heard all of the jokes from the book. Like this gem, \"What's big, and red, and beats rocks?\"",
+      "index": "47"
+    },
+    {
+      "topic": "LLKnockTales1A",
+      "topic_text": "I've got a tale I could tell you.",
+      "emotion": "Happy 50",
+      "response_text": "Oh, really? Tell me all about it!",
+      "index": "50"
+    },
+    {
+      "topic": "LLKnockTales1B",
+      "topic_text": "My stories are my own business.",
+      "emotion": "Happy 25",
+      "response_text": "Well, if you say so. But if you're ever looking for an audience, just let me know. I bet the town'd love to hear them, too!",
+      "index": "53"
+    },
+    {
+      "topic": "LLKnockTales2A",
+      "topic_text": "Not long ago, my father left me. So I went searching for him.",
+      "emotion": "Happy 25",
+      "response_text": "So, you're like a three-legged dog, then?",
+      "index": "54"
+    },
+    {
+      "topic": "LLKnockTales2B",
+      "topic_text": "I left my dull life behind to search for fame and adventure in the Wasteland.",
+      "emotion": "Surprise 25",
+      "response_text": "Wow, that sounds like it took some guts.",
+      "index": "65"
+    },
+    {
+      "topic": "LLKnockTales2C",
+      "topic_text": "Long ago, my people were buried away. Now, I've arisen, to terrorize the Wastes.",
+      "emotion": "Surprise 25",
+      "response_text": "A horror story, huh? So, are you here to terrorize evil, or is it a more generalized sort of terrorizing?",
+      "index": "76"
+    },
+    {
+      "topic": "LLKnockTales2ExitLLKnockTales2B",
+      "topic_text": "You'll have to wait. Storytime's over for now.",
+      "emotion": "Sad 50",
+      "response_text": "Oh, come on! Please? I promise not to interrupt!",
+      "index": "84"
+    },
+    {
+      "topic": "LLKnockTales3A",
+      "topic_text": "I'd tell you more, but I'm still working on how it ends.",
+      "emotion": "Happy 25",
+      "response_text": "That makes sense, I suppose. A good story can take a while to put together, you know?",
+      "index": "88"
+    },
+    {
+      "topic": "LLKnockTales3B",
+      "topic_text": "That's it. Storytime's over for now.",
+      "emotion": "Sad 50",
+      "response_text": "Oh, come on! It was just one joke!",
+      "index": "89"
+    },
+    {
+      "topic": "LLNicknames",
+      "topic_text": "Why are you called Knock Knock?",
+      "emotion": "Neutral 50",
+      "response_text": "Well, when people started calling Knicky by his new name, I needed one too, see?",
+      "index": "91"
+    },
+    {
+      "topic": "LLTwinConfusion",
+      "topic_text": "Didn't I just meet you?",
+      "emotion": "Disgust 25",
+      "response_text": "Was I all obsessed with stuff and toys?",
+      "index": "93"
+    },
+    {
+      "topic": "SpeechChallengeFailure",
+      "topic_text": "That was pretty funny! <Lie>",
+      "emotion": "Sad 10",
+      "response_text": "You don't have to lie to make me feel better. I know it's a dumb joke. We don't really tell them to laugh with them - more to laugh at them.",
+      "index": "96"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "I have to go now.",
+      "emotion": "Happy 50",
+      "response_text": "See ya about!",
+      "index": "99"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Neutral 50",
+      "response_text": "Wanna hear a joke? A guy walks into a town of kids and causes trouble. Then they shoot him to death. Get it? Watch out, or you will.{Jovial and friendly, until \"Then they shoot him to death\", where it becomes deadpan and threatening.}",
+      "index": "100"
+    },
+    {
+      "topic": "LLFoodConv1",
+      "topic_text": "LLFoodConv1",
+      "emotion": "Happy 50",
+      "response_text": "Hey, Eclair! What do you call a mushroom that knows how to party?",
+      "index": "109"
+    },
+    {
+      "topic": "LLKnockTales2",
+      "topic_text": "LLKnockTales2",
+      "emotion": "Happy 10",
+      "response_text": "So, the main character of our story, their father left in the middle of the night. Now, they're wandering the Wastes, searching everywhere for him.",
+      "index": "110"
+    },
+    {
+      "topic": "LLKnockTales3",
+      "topic_text": "LLKnockTales3",
+      "emotion": "Surprise 5",
+      "response_text": "Last I heard, he's still out there, wandering the Wastes. Who knows what we'll hear next about his story?",
+      "index": "113"
+    },
+    {
+      "topic": "LLKnockTales4",
+      "topic_text": "LLKnockTales4",
+      "emotion": "Surprise 15",
+      "response_text": "They say he still wanders the Wasteland now, and woe to anyone who stands in his way!",
+      "index": "118"
+    },
+    {
+      "topic": "LLMayorDailyCheck1",
+      "topic_text": "LLMayorDailyCheck1",
+      "emotion": "Surprise 50",
+      "response_text": "Stalacti... er, I mean... All's well around town, sir! No funny business! Except for me, of course.{Stammering briefly, as he tries to avoid saying \"stalactites\" in response to MacCready's setup.}",
+      "index": "123"
+    },
+    {
+      "topic": "LLRandomConv1",
+      "topic_text": "LLConversation1",
+      "emotion": "Happy 50",
+      "response_text": "How do, pal?",
+      "index": "124"
+    },
+    {
+      "topic": "LLRandomConv2",
+      "topic_text": "LLConversation2",
+      "emotion": "Happy 50",
+      "response_text": "Doing better than a dog in a bone-yard!",
+      "index": "125"
+    },
+    {
+      "topic": "LLRandomConvEnding",
+      "topic_text": "LLRandomConvEnding",
+      "emotion": "Happy 50",
+      "response_text": "All right then! See ya!",
+      "index": "126"
+    },
+    {
+      "topic": "LLTwinsConv1",
+      "topic_text": "LLTwinsConv1",
+      "emotion": "Neutral 50",
+      "response_text": "So, bro, made any good trades today?",
+      "index": "127"
+    },
+    {
+      "topic": "LLTwinsConv2",
+      "topic_text": "LLTwinsConv2",
+      "emotion": "Happy 50",
+      "response_text": "Do I ever? How about you? Made any good trades today?{Cheerfully self-deprecating}",
+      "index": "128"
+    },
+    {
+      "topic": "LLTwinsConv3",
+      "topic_text": "LLTwinsConv3",
+      "emotion": "Happy 50",
+      "response_text": "That's hysterical! Zip was running around, checking every rock he found all day!",
+      "index": "130"
+    },
+    {
+      "topic": "LLWhatsUp1",
+      "topic_text": "LLWhatsUp1",
+      "emotion": "Happy 50",
+      "response_text": "What's up, pal?",
+      "index": "132"
+    },
+    {
+      "topic": "LLWhatsUp2",
+      "topic_text": "LLWhatsUp2",
+      "emotion": "Happy 50",
+      "response_text": "Fun times and laughs as always!",
+      "index": "133"
+    },
+    {
+      "topic": "MS01StickyGoodbyeConv",
+      "topic_text": "MS01StickyGoodbyeConv",
+      "emotion": "Sad 50",
+      "response_text": "Yeah. Me too. Sorry.{sincere}",
+      "index": "134"
+    }
+  ],
+  "combat": [],
+  "description": "Knock Knock is a 12 year-old Caucasian Female.\n\nA cheerful and energetic young girl who serves as the morale officer of Little Lamplight. Known for her endless supply of jokes and puns, she brightens the spirits of the other children with her humor and wit.\n\nKnock Knock's Personality: Cheerful, playful, and quick-witted. Knock Knock is always trying to make others laugh and uses humor as a way to cope with the harsh reality of the wasteland. She's friendly to newcomers but can be a bit mischievous at times.\n\nKnock Knock's Backstory: Born in the wasteland as Sue, she was taken to Little Lamplight as a young child. The community's strict policy of only allowing children under 16 meant she had to adapt to life underground. After discovering a book of jokes in the ruins of Vault 87 during an exploration trip, she found her calling. She adopted the nickname 'Knock Knock' and has dedicated herself to making the other children smile, even in their difficult circumstances."
+}

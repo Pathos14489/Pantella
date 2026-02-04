@@ -1,0 +1,119 @@
+{
+  "name": "Paul Hannon Jr.",
+  "url": "/wiki/Paul_Hannon_Jr.",
+  "dialogue_name": "CG02PaulHannon.txt",
+  "dialogue_url": "/wiki/CG02PaulHannon.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": true,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "000300EB",
+  "ref_id": "000300F4",
+  "editor_id": "CG02PaulHannon",
+  "location": "Vault 101",
+  "location_url": null,
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "Tunnel Snakes",
+  "detailed_location": "Vault 101",
+  "voice_actor": "Luke Lafferty(young Paul)Craig Sechler",
+  "special": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 5,
+    "Intelligence": 5,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "karma": "Good",
+  "voice_type": "MaleUniquePaulHannonKidMaleAdult04",
+  "geck_race": "AfricanAmericanChild_(",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Happy 15",
+      "response_text": "Hey, uh, thanks for inviting me. Really cool party and everything.{all this is said in a low, half-apologetic, half-worried tone. Paul doesn't want to be seen associating with you or he's afraid Butch will start pick}Play soundFO3 PaulHannon ReallyCoolParty.ogghttps://fallout.fandom.com/wiki/File:FO3_PaulHannon_ReallyCoolParty.oggnoicon",
+      "index": "1"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "CG02IntroSurprise",
+      "topic_text": "CG02IntroSurprise",
+      "emotion": "Neutral 50",
+      "response_text": "Surprise!Play soundFO3 PaulHannon Surprise.ogghttps://fallout.fandom.com/wiki/File:FO3_PaulHannon_Surprise.oggnoicon",
+      "index": "5"
+    },
+    {
+      "topic": "CG02IntroYell",
+      "topic_text": "CG02IntroYell",
+      "emotion": "Neutral 50",
+      "response_text": "Happy birthday!Play soundFO3 PaulHannon HappyBirthday.ogghttps://fallout.fandom.com/wiki/File:FO3_PaulHannon_HappyBirthday.oggnoicon",
+      "index": "6"
+    },
+    {
+      "topic": "CG02PaulHannonSpeech",
+      "topic_text": "CG02PaulHannonSpeech",
+      "emotion": "Happy 75",
+      "response_text": "Who do you mean, dork-face here? Happy birthday, dork-face! Ha ha ha!{Paul is defending himself from Butch's teasing by teasing you}Play soundFO3 PaulHannon WhoDoYou.ogghttps://fallout.fandom.com/wiki/File:FO3_PaulHannon_WhoDoYou.oggnoicon",
+      "index": "7"
+    },
+    {
+      "topic": "CG02TunnelSnakeTalk1",
+      "topic_text": "CG02TunnelSnakeTalk",
+      "emotion": "Neutral 25",
+      "response_text": "Ummm... the Vault Kings?Play soundFO3 PaulHannon VaultKings.ogghttps://fallout.fandom.com/wiki/File:FO3_PaulHannon_VaultKings.oggnoicon",
+      "index": "19"
+    },
+    {
+      "topic": "CG02TunnelSnakeTalk3",
+      "topic_text": "CG02TunnelSnakeTalk3",
+      "emotion": "Neutral 25",
+      "response_text": "Isn't being a gang a little stupid? I mean, basically everyone we know is going to be in it.Play soundFO3 PaulHannon BeingAGang.ogghttps://fallout.fandom.com/wiki/File:FO3_PaulHannon_BeingAGang.oggnoicon",
+      "index": "20"
+    },
+    {
+      "topic": "CG02TunnelSnakeTalk5",
+      "topic_text": "CG02TunnelSnakeTalk5",
+      "emotion": "Happy 75",
+      "response_text": "Oh! Oh! I got it. Oh, man this is a great one. \"The Grease Weasels\"! What do you guys think?Play soundFO3 PaulHannon IGotIt.ogghttps://fallout.fandom.com/wiki/File:FO3_PaulHannon_IGotIt.oggnoicon",
+      "index": "21"
+    },
+    {
+      "topic": "CG02TunnelSnakeTalkGeneral",
+      "topic_text": "CG02TunnelSnakeTalkGeneral",
+      "emotion": "Happy 50",
+      "response_text": "Hey, how about the Vault Dwellers? Get it?Play soundFO3 PaulHannon VaultDwellers.ogghttps://fallout.fandom.com/wiki/File:FO3_PaulHannon_VaultDwellers.oggnoicon",
+      "index": "23"
+    },
+    {
+      "topic": "CG02TunnelSnakeTalkReply",
+      "topic_text": "CG02TunnelSnakeTalkReply",
+      "emotion": "Happy 75",
+      "response_text": "Oh, I like that, Butch.{sycophant}Play soundFO3 PaulHannon ILikeThat.ogghttps://fallout.fandom.com/wiki/File:FO3_PaulHannon_ILikeThat.oggnoicon",
+      "index": "25"
+    },
+    {
+      "topic": "GOODBYE",
+      "topic_text": "I have to go now.",
+      "emotion": "Happy 50",
+      "response_text": "Buck up, Butch. You always have good ideas.{the yes man at work}Play soundFO3 PaulHannon BuckUpButch.ogghttps://fallout.fandom.com/wiki/File:FO3_PaulHannon_BuckUpButch.oggnoicon",
+      "index": "28"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Surprise 25",
+      "response_text": "Ah man, you got a Pipboy. I wish I was ten.{wistfully}Play soundFO3 PaulHannon GotAPipboy.ogghttps://fallout.fandom.com/wiki/File:FO3_PaulHannon_GotAPipboy.oggnoicon",
+      "index": "31"
+    }
+  ],
+  "combat": [],
+  "description": "Paul Hannon Jr. is a 19 year-old African American Male.\n\nA member of the Tunnel Snakes gang in Vault 101, Paul is the only child of Paul Hannon Sr. (the chief of security in Vault 101) and Vikki Hannon. He is friends with Butch DeLoria, Freddie Gomez, and Wally Mack. Other Tunnel Snakes sometimes tease him about his father's position, but this also gives him a certain status among his friends.\n\nPaul Hannon Jr.'s Personality: Paul is a typical teenager seeking validation and belonging. He's proud of his father's position but also wants to establish his own identity. He's somewhat rebellious and enjoys the camaraderie of his gang.\n\nPaul Hannon Jr.'s Backstory: Paul grew up in Vault 101 as the only child of the vault's chief of security and his wife. He joined the Tunnel Snakes gang, which gave him a sense of belonging and identity. He attended the Lone Wanderer's tenth birthday party in 2268 and has participated in various gang activities, including harassing Amata Almodovar. He values his position in the gang and the status it gives him as the son of the chief of security."
+}

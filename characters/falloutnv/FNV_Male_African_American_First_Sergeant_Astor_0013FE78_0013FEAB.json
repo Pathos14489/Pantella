@@ -1,0 +1,440 @@
+{
+  "name": "First Sergeant Astor",
+  "url": "/wiki/Astor",
+  "dialogue_name": "CampSearchlightAstor.txt",
+  "dialogue_url": "/wiki/CampSearchlightAstor.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": false,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "0013FE78",
+  "ref_id": "0013FEAB",
+  "editor_id": "CampSearchlightAstor",
+  "location": "Patrolling outside ofCamp Searchlight",
+  "location_url": "/wiki/Camp_Searchlight",
+  "race": "Human",
+  "gender": "Male",
+  "affiliation": "New California Republic Army",
+  "role": "Soldier",
+  "detailed_location": "Camp Searchlight",
+  "voice_actor": "Jesse Burch",
+  "special": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 5,
+    "Intelligence": 5,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "level": "10",
+  "tag_skills": [
+    {
+      "Explosives:": "66"
+    },
+    {
+      "Guns:": "66"
+    },
+    {
+      "Melee Weap.:": "66"
+    }
+  ],
+  "misc_skills": [],
+  "karma": "Neutral",
+  "voice_type": "MaleAdult03",
+  "geck_race": "African_American",
+  "topics": [
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Fear 25",
+      "response_text": "Hang on there, traveler. You'll want to steer clear of this place - the whole town is irradiated to high hell.",
+      "index": "1"
+    },
+    {
+      "topic": "VMS43CampSearchlightAstorTopic000",
+      "topic_text": "Are there any other survivors?",
+      "emotion": "Sad 15",
+      "response_text": "None that aren't feral ghouls. Those poor bastards - I can't imagine how they must be suffering.",
+      "index": "4"
+    },
+    {
+      "topic": "VMS43CampSearchlightAstorTopic005",
+      "topic_text": "I'm still working on it.",
+      "emotion": "Sad 15",
+      "response_text": "Better get back to it then, I don't want those poor soldiers suffering for longer than they have to.",
+      "index": "6"
+    },
+    {
+      "topic": "VMS43CampSearchlightAstorTopic006",
+      "topic_text": "<Placeholder>",
+      "emotion": "Anger 5",
+      "response_text": "The rangers at Echo have been keeping an eye on that place. It's relatively new, but those bastards have already dug in.",
+      "index": "7"
+    },
+    {
+      "topic": "VMS43CampSearchlightAstorTopic007",
+      "topic_text": "What happened?",
+      "emotion": "Anger 50",
+      "response_text": "Some Legionaries snuck into the camp and set off some kind of radiation bomb.",
+      "index": "11"
+    },
+    {
+      "topic": "VMS43CampSearchlightAstorTopic008",
+      "topic_text": "Can I ask you something else?",
+      "emotion": "Neutral 50",
+      "response_text": "Sure, what's on your mind?",
+      "index": "13"
+    },
+    {
+      "topic": "VMS43CampSearchlightAstorTopic013",
+      "topic_text": "I have a dog tag for you.",
+      "emotion": "Happy 50",
+      "response_text": "Thank you, every tag you bring me is one more soldier at peace.",
+      "index": "14"
+    },
+    {
+      "topic": "VMS43CampSearchlightAstorTopic018",
+      "topic_text": "Can I ask you something else?",
+      "emotion": "Neutral 50",
+      "response_text": "Sure.",
+      "index": "15"
+    },
+    {
+      "topic": "VMS43CampSearchlightAstorTopic023",
+      "topic_text": "Goodbye.",
+      "emotion": "Neutral 50",
+      "response_text": "Stay safe.",
+      "index": "16"
+    },
+    {
+      "topic": "VMS43CampSearchlightAstorTopic027",
+      "topic_text": "Can I ask you something else?",
+      "emotion": "Neutral 50",
+      "response_text": "Okay.",
+      "index": "17"
+    },
+    {
+      "topic": "VMS43CampSearchlightAstorTopic054",
+      "topic_text": "How did you survive?",
+      "emotion": "Neutral 50",
+      "response_text": "I was out on patrol at the time so I wasn't in the camp when it happened.",
+      "index": "18"
+    },
+    {
+      "topic": "VMS43CampSearchlightAstorTopic055",
+      "topic_text": "How did they get into the camp?",
+      "emotion": "Fear 20",
+      "response_text": "I don't know, unfortunately. There may be clues somewhere inside the camp, but I'm not about to run in there to find out.",
+      "index": "21"
+    },
+    {
+      "topic": "VMS43CampSearchlightAstorTopic057",
+      "topic_text": "<Questions>",
+      "emotion": "Neutral 50",
+      "response_text": "Head north toward Novac. Look for a big dinosaur, can't miss it.",
+      "index": "22"
+    },
+    {
+      "topic": "VMS43CampSearchlightAstorTopic058",
+      "topic_text": "<Questions>",
+      "emotion": "Surprise 25",
+      "response_text": "Who is Private Edwards?",
+      "index": "23"
+    },
+    {
+      "topic": "VMS43CampSearchlightAstorTopic059",
+      "topic_text": "If the area is filled with radiation, why are you still here?",
+      "emotion": "Neutral 50",
+      "response_text": "I was stationed at Camp Searchlight before the incident.",
+      "index": "24"
+    },
+    {
+      "topic": "VMS43CampSearchlightAstorTopic075",
+      "topic_text": "What kind of favor?",
+      "emotion": "Happy 5",
+      "response_text": "I want you to put down the troopers that... changed. Turned into ghouls.",
+      "index": "26"
+    },
+    {
+      "topic": "VMS43CampSearchlightAstorTopic076",
+      "topic_text": "What's in it for me?",
+      "emotion": "Sad 5",
+      "response_text": "We don't get many supplies out here, but I can offer you some caps and maybe some old gear.",
+      "index": "27"
+    },
+    {
+      "topic": "VMS43CampSearchlightAstorTopic077",
+      "topic_text": "Sorry, I can't help you right now.",
+      "emotion": "Sad 10",
+      "response_text": "I understand.",
+      "index": "28"
+    },
+    {
+      "topic": "VMS43CampSearchlightAstorTopic079",
+      "topic_text": "What's so dangerous about this place?",
+      "emotion": "Fear 20",
+      "response_text": "The whole area is irradiated and filled with mutated creatures.",
+      "index": "29"
+    },
+    {
+      "topic": "VMS43CampSearchlightAstorTopic082",
+      "topic_text": "I'm gonna need more than that if you want my help.",
+      "emotion": "Fear 10",
+      "response_text": "[FAILED] Sorry I don't have anything else to offer.",
+      "index": "30"
+    },
+    {
+      "topic": "VMS43CampSearchlightAstorTopic087",
+      "topic_text": "Sure I'll do it.",
+      "emotion": "Happy 5",
+      "response_text": "Thank you. Could you bring me their dog tags? Some of the troopers should still be wearing them.",
+      "index": "32"
+    },
+    {
+      "topic": "VMS43CampSearchlightAstorTopic088",
+      "topic_text": "Why do you want to kill them?",
+      "emotion": "Disgust 20",
+      "response_text": "Those boys aren't themselves anymore. They're in pain, and you don't let good men suffer like that.",
+      "index": "35"
+    },
+    {
+      "topic": "VMS43CampSearchlightAstorTopic092",
+      "topic_text": "Why Novac?",
+      "emotion": "Fear 20",
+      "response_text": "Because it's a far safer place to be than here.",
+      "index": "37"
+    },
+    {
+      "topic": "VMS43CampSearchlightAstorTopic094",
+      "topic_text": "What kind of creatures?",
+      "emotion": "Fear 15",
+      "response_text": "Mostly ghouls, and a handful of radscorps. I think some geckos moved in not too long ago.",
+      "index": "38"
+    },
+    {
+      "topic": "VMS43CampSearchlightAstorTopic104",
+      "topic_text": "He is a ghoul in Camp Searchlight.",
+      "emotion": "Disgust 25",
+      "response_text": "If he's a ghoul he should be put down. I can't let a rabid dog suffer.",
+      "index": "40"
+    },
+    {
+      "topic": "VMS43CampSearchlightAstorTopic106",
+      "topic_text": "Nevermind, can I ask you something else?",
+      "emotion": "Neutral 50",
+      "response_text": "Sure.",
+      "index": "41"
+    },
+    {
+      "topic": "VMS43CampSearchlightAstorTopic109",
+      "topic_text": "But he isn't feral.",
+      "emotion": "Disgust 15",
+      "response_text": "Doesn't mean he isn't suffering, or that he won't go feral eventually.",
+      "index": "42"
+    },
+    {
+      "topic": "VMS43CampSearchlightAstorTopic110",
+      "topic_text": "Can I ask you something else?",
+      "emotion": "Neutral 50",
+      "response_text": "Sure.",
+      "index": "43"
+    },
+    {
+      "topic": "VMS43CampSearchlightAstorTopic112",
+      "topic_text": "Maybe Edwards can help you?",
+      "emotion": "Fear 15",
+      "response_text": "[FAILED] I'd rather not take the chance.",
+      "index": "44"
+    },
+    {
+      "topic": "VMS43CampSearchlightAstorTopic113",
+      "topic_text": "He isn't showing any signs of going feral.",
+      "emotion": "Fear 20",
+      "response_text": "[FAILED] Sorry, I can't take that risk.",
+      "index": "46"
+    },
+    {
+      "topic": "VMS43CampSearchlightAstorTopic114",
+      "topic_text": "Is there somewhere else he can go?",
+      "emotion": "Happy 10",
+      "response_text": "There's a ranger station north of here that has a few ghouls running it. Maybe they'll take him in.",
+      "index": "48"
+    },
+    {
+      "topic": "VMS43CampSearchlightAstorTopic119",
+      "topic_text": "I'll go ask him about it.",
+      "emotion": "Happy 5",
+      "response_text": "Good luck with that.",
+      "index": "49"
+    },
+    {
+      "topic": "VMS43CampSearchlightAstorTopic120",
+      "topic_text": "Can I ask you something else?",
+      "emotion": "Neutral 50",
+      "response_text": "Sure.",
+      "index": "50"
+    },
+    {
+      "topic": "VMS43CampSearchlightAstorTopic121",
+      "topic_text": "This is the last of the dog tags.",
+      "emotion": "Happy 50",
+      "response_text": "Thank you for the help. I can rest easier knowing those poor soldiers no longer have to suffer.",
+      "index": "51"
+    },
+    {
+      "topic": "VMS43CampSearchlightAstorTopic139",
+      "topic_text": "Can I ask you something else?",
+      "emotion": "Neutral 50",
+      "response_text": "Sure.",
+      "index": "52"
+    },
+    {
+      "topic": "VMS43CampSearchlightAstorTopic143",
+      "topic_text": "Is there anything you need done?",
+      "emotion": "Happy 5",
+      "response_text": "If you can scout out the camp, bring back any intel on troop movement or plans for future raids. The rangers could put that information to good use.",
+      "index": "53"
+    },
+    {
+      "topic": "VMS43CampSearchlightAstorTopic144",
+      "topic_text": "I already took care of the camp.",
+      "emotion": "Surprise 25",
+      "response_text": "What?! How did you pull it off?",
+      "index": "55"
+    },
+    {
+      "topic": "VMS43CampSearchlightAstorTopic145",
+      "topic_text": "I think I can handle that for you.",
+      "emotion": "Happy 15",
+      "response_text": "Good to hear. This is the bug you'll need for the radio.",
+      "index": "56"
+    },
+    {
+      "topic": "VMS43CampSearchlightAstorTopic146",
+      "topic_text": "Maybe later.",
+      "emotion": "Anger 10",
+      "response_text": "Just let me know if you're available for the op. After what they did to Searchlight, they have a shitstorm coming.",
+      "index": "58"
+    },
+    {
+      "topic": "VMS43CampSearchlightAstorTopic147",
+      "topic_text": "I released some barrels of radioactive waste.",
+      "emotion": "Happy 25",
+      "response_text": "That's exactly what we needed to put a cork in that camp. The Legion won't be moving through there anytime soon.",
+      "index": "59"
+    },
+    {
+      "topic": "VMS43CampSearchlightAstorTopic152",
+      "topic_text": "[Give intel] I planted the bug in Cottonwood Cove's radio and found some intel.",
+      "emotion": "Happy 15",
+      "response_text": "This is more than I could have hoped for! It almost seems too good to be true, but the details are all here.",
+      "index": "61"
+    },
+    {
+      "topic": "VMS43CampSearchlightAstorTopic153",
+      "topic_text": "Is there anything else you need done?",
+      "emotion": "Happy 15",
+      "response_text": "Well, unless you want to go in there and clean out that camp for me, I guess this should be more than enough for now.",
+      "index": "64"
+    },
+    {
+      "topic": "VMS43CampSearchlightAstorTopic155",
+      "topic_text": "Consider it done.",
+      "emotion": "Happy 50",
+      "response_text": "{Genuine Surprise}What?.. Really?! You're mad, but I like it!",
+      "index": "65"
+    },
+    {
+      "topic": "VMS43CampSearchlightAstorTopic156",
+      "topic_text": "I'll see what I can do.",
+      "emotion": "Happy 5",
+      "response_text": "Report back when the camp is clear. I'll try and shuffle some men in that direction once the Legion is gone.",
+      "index": "68"
+    },
+    {
+      "topic": "VMS43CampSearchlightAstorTopic157",
+      "topic_text": "Maybe later.",
+      "emotion": "Fear 5",
+      "response_text": "Yeah, I know I wouldn't sign up for that solo op if asked.",
+      "index": "69"
+    },
+    {
+      "topic": "VMS43CampSearchlightAstorTopic158",
+      "topic_text": "[Give Aurelius' old intel] I planted the bug and found some paperwork.",
+      "emotion": "Happy 15",
+      "response_text": "This is more than I could have hoped for! It almost seems too good to be true, but the details are all here.",
+      "index": "70"
+    },
+    {
+      "topic": "VMS43CampSearchlightAstorTopic159",
+      "topic_text": "Nothing new to report.",
+      "emotion": "Neutral 50",
+      "response_text": "Anything else?",
+      "index": "73"
+    },
+    {
+      "topic": "VMS43CampSearchlightAstorTopic160",
+      "topic_text": "I killed everyone in the camp.",
+      "emotion": "Surprise 25",
+      "response_text": "What?! How did you pull it off?",
+      "index": "74"
+    },
+    {
+      "topic": "VMS43CampSearchlightAstorTopic161",
+      "topic_text": "I released some barrels of radioactive waste.",
+      "emotion": "Happy 25",
+      "response_text": "That's exactly what we needed to put a cork in that camp. The Legion won't be moving through there anytime soon.",
+      "index": "75"
+    },
+    {
+      "topic": "VMS43CampSearchlightAstorTopic162",
+      "topic_text": "I just killed everyone the old-fashioned way.",
+      "emotion": "Surprise 25",
+      "response_text": "A single man slaughters an entire camp of legionaries?! I'm amazed.{test text}",
+      "index": "77"
+    },
+    {
+      "topic": "VMS43CampSearchlightAstorTopic165",
+      "topic_text": "Can I ask you something else?",
+      "emotion": "Neutral 50",
+      "response_text": "Sure.",
+      "index": "83"
+    },
+    {
+      "topic": "VMS43CampSearchlightAstorTopic167",
+      "topic_text": "Can I ask you something else?",
+      "emotion": "Neutral 50",
+      "response_text": "Sure.",
+      "index": "84"
+    },
+    {
+      "topic": "VMS43CampSearchlightAstorTopic168",
+      "topic_text": "I have to think about this first.",
+      "emotion": "Neutral 50",
+      "response_text": "Understandable. Let me know when you've decided.",
+      "index": "85"
+    },
+    {
+      "topic": "VMS43CampSearchlightAstorTopic169",
+      "topic_text": "Can I ask you something else first?",
+      "emotion": "Neutral 50",
+      "response_text": "Okay.",
+      "index": "86"
+    },
+    {
+      "topic": "VMS43CampSearchlightAstorTopic172",
+      "topic_text": "Can I ask you something else?",
+      "emotion": "Neutral 50",
+      "response_text": "Okay.",
+      "index": "87"
+    }
+  ],
+  "conversation": [],
+  "combat": [],
+  "description": "First Sergeant Astor is a 45 year-old African American Male.\n\nFirst Sergeant Astor is a battle-hardened soldier in the New California Republic Army, currently stationed at Camp Searchlight in the irradiated Mojave Wasteland. As a first sergeant, he bears the weight of command and responsibility for his troops' welfare and safety.\n\nFirst Sergeant Astor's Personality: Astor is a disciplined and responsible soldier who takes his duties seriously. He carries a heavy burden of guilt and self-blame for the fate of his comrades at Searchlight, leading to a somber and melancholic demeanor. Despite his low morale, he maintains a sense of duty and continues to serve the NCR with quiet determination.\n\nFirst Sergeant Astor's Backstory: First Sergeant Astor has spent over two decades serving in the New California Republic Army. He joined the NCR shortly after coming of age and has seen action in numerous campaigns across the Southwest. As a seasoned veteran, he was assigned to lead a company in the Mojave Campaign, eventually finding himself stationed at Camp Searchlight. Astor was fortunate to be conducting a patrol outside of Searchlight when the Fiends, under the direction of Vulpes Inculta of Caesar's Legion, unleashed the nuclear waste stored in the town's firestation. The resulting irradiation destroyed the camp and claimed the lives of nearly everyone he knew. Astor survived only because he was away from the camp at the time, a fact that haunts him daily."
+}

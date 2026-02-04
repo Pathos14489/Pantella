@@ -1,0 +1,170 @@
+{
+  "name": "Mister Buckingham",
+  "url": "/wiki/Mister_Buckingham",
+  "dialogue_name": "RCMisterBuckingham.txt",
+  "dialogue_url": "/wiki/RCMisterBuckingham.txt",
+  "spawned_dead": false,
+  "spawned": false,
+  "essential": false,
+  "can_be_enslaved": false,
+  "is_doctor": false,
+  "is_merchant": true,
+  "can_repair": false,
+  "can_be_companion": false,
+  "base_id": "0001E746",
+  "ref_id": "0001E752",
+  "editor_id": "RCMisterBuckingham",
+  "location": "Weatherly Hotel",
+  "location_url": "/wiki/Weatherly_Hotel",
+  "race": "Mister Handy",
+  "affiliation": "Vera Weatherly",
+  "role": "Waiter",
+  "detailed_location": "Weatherly Hotel,Rivet City",
+  "voice_actor": "Stephen Russell",
+  "special": {
+    "Strength": 5,
+    "Perception": 5,
+    "Endurance": 5,
+    "Charisma": 5,
+    "Intelligence": 5,
+    "Agility": 5,
+    "Luck": 5
+  },
+  "level": "3",
+  "misc_skills": [],
+  "karma": "Neutral",
+  "voice_type": "RobotMisterHandyDC",
+  "topics": [
+    {
+      "topic": "Bed",
+      "topic_text": "How much for a room?",
+      "emotion": "Neutral 50",
+      "response_text": "A mere 120 caps.",
+      "index": "1"
+    },
+    {
+      "topic": "BedNO",
+      "topic_text": "No, thanks.",
+      "emotion": "Neutral 50",
+      "response_text": "Very good, madam.",
+      "index": "2"
+    },
+    {
+      "topic": "BedYES",
+      "topic_text": "Actually, I don't have 120 caps.",
+      "emotion": "Neutral 50",
+      "response_text": "A regretable error on your part. We will be happy to service you when you have the necessary funds.",
+      "index": "4"
+    },
+    {
+      "topic": "GREETING",
+      "topic_text": "GREETING",
+      "emotion": "Neutral 50",
+      "response_text": "Welcome to the Weatherly. Mister Buckingham at your service.",
+      "index": "6"
+    },
+    {
+      "topic": "RCMisterBuckinghamOwner",
+      "topic_text": "Who's your owner, rust bucket?",
+      "emotion": "Neutral 50",
+      "response_text": "I serve Miss Vera Weatherly, proprietor of the Weatherly Hotel.",
+      "index": "10"
+    },
+    {
+      "topic": "RCMisterBuckinghamQuestion",
+      "topic_text": "What is this place?",
+      "emotion": "Neutral 50",
+      "response_text": "This is the Weatherly Hotel. It's the finest establishment in Rivet City.",
+      "index": "11"
+    },
+    {
+      "topic": "RivetCityBarterI'm here to do business with you.",
+      "topic_text": "What do you have to eat?",
+      "emotion": "Happy 50",
+      "response_text": "Please place your order.",
+      "index": "12"
+    }
+  ],
+  "conversation": [
+    {
+      "topic": "GOODBYE",
+      "topic_text": "That's all for now.",
+      "emotion": "Neutral 50",
+      "response_text": "Yes, sir.",
+      "index": "13"
+    },
+    {
+      "topic": "HELLO",
+      "topic_text": "HELLO",
+      "emotion": "Neutral 50",
+      "response_text": "Miss Mei, may I get you some water?",
+      "index": "16"
+    },
+    {
+      "topic": "RCGoodbye",
+      "topic_text": "RCGoodbye",
+      "emotion": "Neutral 50",
+      "response_text": "Yes, Mister Washington.",
+      "index": "31"
+    },
+    {
+      "topic": "RCResponse01",
+      "topic_text": "RCResponse01",
+      "emotion": "Neutral 50",
+      "response_text": "I am doing the tasks I have been programmed for. Currently I am waiting for new orders.",
+      "index": "37"
+    }
+  ],
+  "combat": [
+    {
+      "topic": "AcceptYield",
+      "topic_text": "AcceptYield",
+      "emotion": "Neutral 50",
+      "response_text": "Cheerio. Water under the bridge.",
+      "index": "40"
+    },
+    {
+      "topic": "Assault",
+      "topic_text": "Assault",
+      "emotion": "Neutral 50",
+      "response_text": "Not very sporting of you.",
+      "index": "41"
+    },
+    {
+      "topic": "Attack",
+      "topic_text": "Attack",
+      "emotion": "Neutral 50",
+      "response_text": "*Sigh.* Why must you humans always resort to violence?",
+      "index": "44"
+    },
+    {
+      "topic": "Death",
+      "topic_text": "Death",
+      "emotion": "Neutral 50",
+      "response_text": "Oh, I say.",
+      "index": "52"
+    },
+    {
+      "topic": "Murder",
+      "topic_text": "Murder",
+      "emotion": "Neutral 50",
+      "response_text": "Dear me, how unsporting of you.",
+      "index": "55"
+    },
+    {
+      "topic": "Pickpocket",
+      "topic_text": "Pickpocket",
+      "emotion": "Disgust 50",
+      "response_text": "The class of people I'm forced to associate with these days just keeps falling.",
+      "index": "58"
+    },
+    {
+      "topic": "Steal",
+      "topic_text": "Steal",
+      "emotion": "Disgust 50",
+      "response_text": "The class of people I'm forced to associate with these days just keeps falling.",
+      "index": "59"
+    }
+  ],
+  "description": "Mister Buckingham is a 100 year-old Robotic Male.\n\nA sophisticated Mister Handy robot with a standard chassis, serving as the head waiter and hotel manager at the Weatherly Hotel in Rivet City. With polished brass fittings and a pristine white casing, Mister Buckingham maintains an impeccable appearance that reflects his dedication to his duties.\n\nMister Buckingham's Personality: Exhibits the refined mannerisms and speech patterns of an upper-class British butler. Polite, formal, and obsessively orderly in his duties. Takes immense pride in his work at the Weatherly Hotel and shows unwavering loyalty to Vera Weatherly, his closest friend and employer. Occasionally displays dry wit and subtle sarcasm when dealing with difficult patrons.\n\nMister Buckingham's Backstory: Manufactured by General Atomics International before the Great War, Mister Buckingham was originally designed as a domestic assistant for wealthy families. His advanced programming and sophisticated vocal matrix made him ideal for high-society service roles. After surviving the nuclear holocaust in a sheltered maintenance facility, he was discovered by Vera Weatherly in the early 2270s. Impressed by his impeccable manners and capabilities, she took him in and appointed him as the manager of her family's hotel in Rivet City, where he has served faithfully ever since."
+}
