@@ -46,8 +46,35 @@ class ConfigLoader:
         self._raw_behavior_styles = {}
         self.get_behavior_styles()
         self.load()
+        if self.game_id == "":
+            logging.error(f"Game id not set in config file. Please set the game id in the config file to a valid game id (e.g. {list(interface_configs.keys())}).")
+            self.game_id = input(f"Please enter the game id for your game (e.g. {list(interface_configs.keys())}): ")
+            self.save()
         self.interface_configs = interface_configs
         self.current_interface_config = interface_configs[self.game_id]
+        # if either "game_path" or "mod_path" are empty or not set, open a prompt to ask the user to set the path for them, and then save the config file with the new paths
+        save_interface = False
+        if "game_path" in self.current_interface_config and (self.current_interface_config["game_path"] == "" or self.current_interface_config["game_path"] is None):
+            logging.error(f"Game path not set for game id {self.game_id} in interface config file. Please set the game path for {self.game_id} to the directory where your game is installed.")
+            if self.linux_mode:
+                game_path = input(f"Please enter the path to your game directory for {self.game_id} (e.g. /home/user/.steam/steam/steamapps/common/Skyrim Special Edition/): ")
+            else:
+                game_path = input(f"Please enter the path to your game directory for {self.game_id} (e.g. C:\\Steam\\steamapps\\common\\Skyrim Special Edition\\): ")
+            save_interface = True
+
+        if "mod_path" in self.current_interface_config and (self.current_interface_config["mod_path"] == "" or self.current_interface_config["mod_path"] is None):
+            logging.error(f"Mod path not set for game id {self.game_id} in interface config file. Please set the mod path for {self.game_id} to the directory where your game mods are located.")
+            if self.linux_mode:
+                mod_path = input(f"Please enter the path to your game mods folder for {self.game_id} (e.g. /home/user/MO2/mods/PantellaMod/): ")
+            else:
+                mod_path = input(f"Please enter the path to your game mods folder for {self.game_id} (e.g. C:\\MO2\\mods\\PantellaMod\\): ")
+            save_interface = True
+        
+        if save_interface:
+            self.current_interface_config["game_path"] = game_path.replace("\\", "/").replace("/","\\")
+            self.current_interface_config["mod_path"] = mod_path.replace("\\", "/").replace("/","\\")
+            with open(os.path.join(os.path.dirname(__file__), "../interface_configs", f"{self.game_id}.json"), "w", encoding='utf-8') as f:
+                json.dump(self.current_interface_config, f, indent=4)
         logging.config(f"ConfigLoader initialized with config path {config_path}")
         logging.config(f"Current interface config: '{self.current_interface_config}' from game id '{self.game_id}'")
         self.conversation_manager_type = self.current_interface_config["conversation_manager_type"]
@@ -360,7 +387,7 @@ class ConfigLoader:
     def default(self):
         return {
             "Game": {
-                "game_id": "skyrim", # skyrim, skyrimvr, fallout4 or fallout4vr
+                "game_id": "", # skyrim, skyrimvr, fallout4 or fallout4vr
                 "conversation_manager_type": "auto",
                 "interface_type": "auto",
                 "behavior_manager": "auto",
@@ -1182,7 +1209,7 @@ class ConfigLoader:
     def mulitple_choice(self):
         return {
             "Game": {
-                "game_id": ["skyrim", "skyrimvr", "fallout4", "fallout4vr"],
+                "game_id": ["skyrim", "skyrimvr", "falloutnv", "fallout4", "fallout4vr"],
                 "conversation_manager_type": ["auto"]+[conversation_manager_type for conversation_manager_type in self.manager_types["conversation_manager"]],
                 "interface_type": ["auto"]+[interface_type for interface_type in self.manager_types["game_interface"]],
                 "behavior_manager": ["auto"]+[behavior_manager for behavior_manager in self.manager_types["behavior_manager"]],

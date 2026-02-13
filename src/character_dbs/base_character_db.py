@@ -83,16 +83,20 @@ class CharacterDB():
         logging.info(f"Loading character database from JSON files {path}...")
         for file in os.listdir(path):
             if file.endswith(".json"):
-                character = json.load(open(os.path.join(path, file)))
-                character = self.format_character(character)
-                self._characters.append(character)
-                self.unique_ref_index[f"{character['name']}({character['ref_id']})[{character['base_id']}]"] = character
-                if character['name'] != None and character['name'] != "" and character['name'] != "nan":
-                    self.named_index[character['name']] = character
-                if character['base_id'] != None and str(character['base_id']) != "" and str(character['base_id']) != "nan":
-                    self.base_id_index[character['base_id']] = character
-                if character['ref_id'] != None and str(character['ref_id']) != "" and str(character['ref_id']) != "nan":
-                    self.ref_id_index[character['ref_id']] = character
+                try:
+                    character = json.load(open(os.path.join(path, file)))
+                    character = self.format_character(character)
+                    self._characters.append(character)
+                    self.unique_ref_index[f"{character['name']}({character['ref_id']})[{character['base_id']}]"] = character
+                    if character['name'] != None and character['name'] != "" and character['name'] != "nan":
+                        self.named_index[character['name']] = character
+                    if character['base_id'] != None and str(character['base_id']) != "" and str(character['base_id']) != "nan":
+                        self.base_id_index[character['base_id']] = character
+                    if character['ref_id'] != None and str(character['ref_id']) != "" and str(character['ref_id']) != "nan":
+                        self.ref_id_index[character['ref_id']] = character
+                except Exception as e:
+                    logging.error(f"Could not load character from file {file}. Please check that the file is a valid json file and try again.")
+                    logging.error(e)
         if self.db_type != None and self.db_type != 'json':
             self.db_type = 'mixed'
         else:

@@ -40,10 +40,10 @@ def create_game_interface(conversation_manager):
             logging.error(f"Game '{config.game_id}' not supported by interface '{module.interface_slug}'.")
             input("Press enter to continue...")
             raise ValueError(f"Game '{config.game_id}' not supported by interface '{module.interface_slug}'.")
-        manager = module.GameInterface(conversation_manager)
+        manager = module.GameInterface(conversation_manager, module.valid_games, module.interface_slug)
         return manager
     else: # if no specific game interface is specified
         interface_config = config.interface_configs[config.game_id]
         module = Interface_Types[interface_config['interface_type']]
-        manager = module.GameInterface(conversation_manager)
+        manager = module.GameInterface(conversation_manager, module.valid_games, module.interface_slug)
         return manager
