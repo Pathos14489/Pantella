@@ -26,11 +26,13 @@ for file in os.listdir(os.path.join(os.path.dirname(__file__), "../interface_con
     if file.endswith(".json") and not file.startswith("__"):
         logging.config(f"Importing interface config {file}")
         game_id = file[:-5]
+        interface_config_string = open(os.path.join(os.path.dirname(__file__), "../interface_configs/", file), encoding='utf-8').read()
         try:
-            interface_configs[game_id] = json.load(open(os.path.join(os.path.dirname(__file__), "../interface_configs", file)))
+            interface_configs[game_id] = json.loads(interface_config_string)
         except Exception as e:
             logging.error(f"Could not import interface config {game_id}. If you're on Windows, check that any paths you have in the config file are using double backslashes instead of single backslashes.")
             tb = traceback.format_exc()
+            logging.error(f"Error loading interface config {game_id}: {interface_config_string}")
             logging.error(tb)
             raise e
         logging.config(f"Imported interface config {game_id}")
@@ -46,10 +48,6 @@ class ConfigLoader:
         self._raw_behavior_styles = {}
         self.get_behavior_styles()
         self.load()
-        if self.game_id == "":
-            logging.error(f"Game id not set in config file. Please set the game id in the config file to a valid game id (e.g. {list(interface_configs.keys())}).")
-            self.game_id = input(f"Please enter the game id for your game (e.g. {list(interface_configs.keys())}): ")
-            self.save()
         self.interface_configs = interface_configs
         self.current_interface_config = interface_configs[self.game_id]
         # if either "game_path" or "mod_path" are empty or not set, open a prompt to ask the user to set the path for them, and then save the config file with the new paths
@@ -181,10 +179,16 @@ class ConfigLoader:
                     setattr(self, sub_key, config[key][sub_key])
 
         if self.game_id not in interface_configs:
-            logging.error(f"Game id {self.game_id} not found in interface_configs directory. Please add a interface config file for {self.game_id} or change the game_id in config.json to a valid game id.")
-            logging.config(f"Valid game ids: {list(interface_configs.keys())}")
-            input("Press enter to continue...")
-            raise ValueError(f"Game id {self.game_id} not found in interface_configs directory. Please add a interface config file for {self.game_id} or change the game_id in config.json to a valid game id.")
+            if self.game_id == "":
+                logging.error(f"Game id not set in config file. Please set the game id in the config file to a valid game id (e.g. {list(interface_configs.keys())}).")
+                self.game_id = input(f"Please enter the game id for your game (e.g. {list(interface_configs.keys())}): ")
+                self.save()
+                return self.load() # Reload the config after setting the game id
+            else:
+                logging.error(f"Game id {self.game_id} not found in interface_configs directory. Please add a interface config file for {self.game_id} or change the game_id in config.json to a valid game id.")
+                logging.config(f"Valid game ids: {list(interface_configs.keys())}")
+                input("Press enter to continue...")
+                raise ValueError(f"Game id {self.game_id} not found in interface_configs directory. Please add a interface config file for {self.game_id} or change the game_id in config.json to a valid game id.")
 
         if save:
             self.save()
