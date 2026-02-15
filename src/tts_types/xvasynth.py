@@ -15,6 +15,44 @@ import traceback
 import random
 logging.info("Imported required libraries in xVASynth TTS")
 
+
+ttw_voice_mapping = { # For converting between xVASynth Character Names and in game voice models for FNV/TTW
+    # F3 voices
+    "Amata": "FemaleUniqueAmata",
+    "Butch": "MaleUniqueButch",
+    "Colonel Autumn": "MaleUniqueAutumn",
+    "Dad": "MaleUniqueDad",
+    "President Eden": "MaleUniquePresident",
+    "Elder Lyons": "MaleUniqueElderLyons",
+    "Harkness": "MaleUniqueHarkness",
+    "Moira": "FemaleUniqueMoira",
+    "Robot MrHandy": "RobotMisterHandyDC",
+    "Tenpenny": "MaleUniqueTenpenny",
+    "Three Dog (Radio)": "MaleUniqueThreeDog",
+    # FNV voices
+    "Arcade": "MaleUniqueArcade",
+    "Cass": "FemaleUniqueCass",
+    "Doc Mitchell": "MaleUniqueDocMitchell",
+    "Lanius": "MaleUniqueLanius",
+    "MaleAdult01Defaultb": "MaleAdult01DefaultB",
+    "Mr. House": "MaleUniqueMrHouse",
+    "Mr New Vegas": "MaleUniqueMrNewVegas",
+    "Narrator": "MaleUniqueNarrator",
+    "The King": "MaleUniqueTheKing",
+    "Ulysses": "NVDLC04MaleUniqueUlysses",
+    "Veronica": "FemaleUniqueVeronica",
+    "Yes Man":"RobotYesMan",
+    "Femaleadult09": "FemaleAdult09",
+    "FemaleAdult07, FemaleAdult12": "FemaleAdult07",
+    "FemaleAdult07, FemaleAdult12": "FemaleAdult12"
+}
+reverse_ttw_voice_mapping = {v: k for k, v in ttw_voice_mapping.items()} # For converting between xVASynth Character Names and in game voice models for FNV/TTW
+model_filename_mapping = {
+    "falloutnv": {
+        "MaleUniqueTheKing": "theking",
+    }
+}
+
 tts_slug = "xvasynth"
 default_settings = {
     "pace": 1.0,
@@ -334,10 +372,19 @@ class Synthesizer(base_tts.base_Synthesizer):
     def model_path(self):
         if self.game == "fallout4" or self.game == "fallout4vr": # get the correct voice model for Fallout 4
             model_path = f"{self.xvasynth_path}/resources/app/models/fallout4/"
-        else:
+        elif self.game == "falloutnv": # get the correct voice model for Fallout New Vegas
+            model_path = f"{self.xvasynth_path}/resources/app/models/falloutnv/"
+        elif self.game == "skyrim" or self.game == "skyrimvr": # get the correct voice model for Skyrim
             model_path = f"{self.xvasynth_path}/resources/app/models/skyrim/"
+        else:
+            logging.error(f'Game {self.game} not supported for xVASynth! Please ensure that the correct game is set in config.json (game) and that it is one of the following: "fallout4", "fallout4vr", "falloutnv", "skyrim", or "skyrimvr".')
+            raise Exception(f'Game {self.game} not supported for xVASynth! Please ensure that the correct game is set in config.json (game) and that it is one of the following: "fallout4", "fallout4vr", "falloutnv", "skyrim", or "skyrimvr".')
+        if self.config.linux_mode:
+            model_path = model_path.replace("\\", "/")
+        else:
+            model_path = model_path.replace("/", "\\")
         return model_path
-                
+
     def is_running(self):
         """Check if xVASynth is running and start it if it isn't"""
         try:
@@ -380,19 +427,43 @@ class Synthesizer(base_tts.base_Synthesizer):
             self._voices = []
             logging.config(f"Getting available voices from {self.get_available_voices_url}...")
             requests.post(self.set_available_voices_url, json={'modelsPaths': json.dumps({self.game: self.model_path})}) # Set the available voices to the ones in the models folder
-            r = requests.post(self.get_available_voices_url) # Get the available voices
-            if r.status_code == 200:
+            available_voices_request = requests.post(self.get_available_voices_url) # Get the available voices
+            if available_voices_request.status_code == 200:
                 logging.config(f"Got available voices from {self.get_available_voices_url}...")
                 # logging.info(f"Response code: {r.status_code}")
                 # logging.info(f"Response text: {r.text}")
-                data = r.json()
+                data = available_voices_request.json()
                 for character in data[self.game]:
-                    self._voices.append(character['voiceName'])
+                    if self.game == "falloutnv" and character['voiceName'] not in ttw_voice_mapping:
+                        self._voices.append(character['voiceName'])
+                    else:
+                        self._voices.append(ttw_voice_mapping[character['voiceName']])
             else:
                 logging.info(f"Could not get available voices from {self.get_available_voices_url}...")
                 # logging.info(f"Response code: {r.status_code}")
                 # logging.info(f"Response text: {r.text}")
                 data = None
+
+            if self.game == "falloutnv":
+                logging.config(f"Getting more available voices from {self.get_available_voices_url}...")
+                requests.post(self.set_available_voices_url, json={'modelsPaths': json.dumps({"fallout3": f"{self.xvasynth_path}/resources/app/models/fallout3/"})}) # Set the available voices to the ones in the models folder
+                available_voices_request = requests.post(self.get_available_voices_url) # Get the available voices
+                if available_voices_request.status_code == 200:
+                    logging.config(f"Got available voices from {self.get_available_voices_url}...")
+                    # logging.info(f"Response code: {r.status_code}")
+                    # logging.info(f"Response text: {r.text}")
+                    data = available_voices_request.json()
+                    for character in data[self.game]:
+                        if self.game == "falloutnv" and character['voiceName'] not in ttw_voice_mapping:
+                            self._voices.append(character['voiceName'])
+                        else:
+                            self._voices.append(ttw_voice_mapping[character['voiceName']])
+                else:
+                    logging.info(f"Could not get available voices from {self.get_available_voices_url}...")
+                    # logging.info(f"Response code: {r.status_code}")
+                    # logging.info(f"Response text: {r.text}")
+                    data = None
+
             self._voices = [voice for voice in self._voices if voice not in self.config.xvasynth_banned_voice_models] 
         for banned_voice in self.config.xvasynth_banned_voice_models:
             if banned_voice in self._voices:
@@ -580,6 +651,10 @@ class Synthesizer(base_tts.base_Synthesizer):
             voice = character_or_voice_model
         else:
             voice = self.get_valid_voice_model(character_or_voice_model) # character.voice_model
+        
+        if self.game == "falloutnv" and voice in reverse_ttw_voice_mapping:
+            logging.info(f'Converting voice model {voice} to {reverse_ttw_voice_mapping[voice]} for Fallout New Vegas...')
+            voice = reverse_ttw_voice_mapping[voice]
 
         if voice is None:
             logging.error(f'Voice model {voice} not available! Please add it to xVASynth voices list.')
@@ -594,12 +669,34 @@ class Synthesizer(base_tts.base_Synthesizer):
             logging.config("Checking for Fallout 4 voice model...")
             XVASynthAcronym="f4_"
             XVASynthModNexusLink="https://www.nexusmods.com/fallout4/mods/49340?tab=files"
-        else: # get the correct voice model for Skyrim
+        elif self.game == "falloutnv": # get the correct voice model for Fallout New Vegas
+            logging.config("Checking for Fallout New Vegas voice model...")
+            XVASynthAcronym="nv_"
+            XVASynthModNexusLink = "https://www.nexusmods.com/newvegas/mods/70815?tab=files"
+        elif self.game == "skyrim" or self.game == "skyrimvr": # get the correct voice model for Skyrim
             logging.config("Checking for Skyrim voice model...")
             XVASynthAcronym="sk_"
             XVASynthModNexusLink = "https://www.nexusmods.com/skyrimspecialedition/mods/44184?tab=files"
-        voice_path = f"{self.model_path}{XVASynthAcronym}{voice.lower().replace(' ', '')}"
+        else:
+            logging.error(f'Game {self.game} not supported for xVASynth! Please ensure that the correct game is set in config.json (game) and that it is one of the following: "fallout4", "fallout4vr", "falloutnv", "skyrim", or "skyrimvr".')
+            raise Exception(f'Game {self.game} not supported for xVASynth! Please ensure that the correct game is set in config.json (game) and that it is one of the following: "fallout4", "fallout4vr", "falloutnv", "skyrim", or "skyrimvr".')
+        voice_filename = model_filename_mapping.get(self.game, {}).get(voice, voice.lower().replace(' ', '').replace('.', ''))        
+        voice_path = f"{self.model_path}{XVASynthAcronym}{voice_filename}"
+        if self.config.linux_mode:
+            voice_path = voice_path.replace("\\", "/")
+        else:
+            voice_path = voice_path.replace("/", "\\")
         
+        if not os.path.exists(os.path.abspath(voice_path+'.json')) and self.game == "falloutnv":
+            logging.config("Checking for Fallout 3 voice model...")
+            XVASynthAcronym="f3_"
+            XVASynthModNexusLink = "https://www.nexusmods.com/fallout3/mods/24502?tab=files"
+            voice_path = f"{self.model_path}{XVASynthAcronym}{voice.lower().replace(' ', '')}"
+            if self.config.linux_mode:
+                voice_path = voice_path.replace("\\", "/")
+            else:
+                voice_path = voice_path.replace("/", "\\")
+            
         if not os.path.exists(os.path.abspath(voice_path+'.json')):
             logging.error(f"Voice model does not exist in location '{os.path.abspath(voice_path+'.json')}'. Please ensure that the correct path has been set in config.json (xvasynth_folder) and that the model has been downloaded from {XVASynthModNexusLink} (Ctrl+F for '{XVASynthAcronym}{voice.lower().replace(' ', '')}').")
             raise base_tts.VoiceModelNotFound()
@@ -615,15 +712,25 @@ class Synthesizer(base_tts.base_Synthesizer):
 
         self.base_speaker_emb = base_speaker_emb
         self.model_type = voice_model_json.get('modelType')
-        
+        # print(f"Model type: {self.model_type}")
+        voice_path = voice_path.replace('\\', "/")
         model_change = {
             'outputs': None,
-            'version': '3.0',
-            'model': voice_path, 
+            'version': str(voice_model_json.get('version')) if self.model_type == 'FastPitch' else "3.0",
+            'model': voice_path,
             'modelType': self.model_type,
             'base_lang': character_or_voice_model.tts_language_code if type(character_or_voice_model) != str else 'en',
             'pluginsContext': '{}',
         }
+        if "emb_size" in voice_model_json:
+            model_change['speakers'] = voice_model_json['emb_size']
+            model_change['model_speakers'] = voice_model_json['emb_size']
+            # if str(voice_model_json.get('version', "3.0")) == "1.4":
+            # elif str(voice_model_json.get('version', "3.0")) == "1.3":
+            # else:
+            #     raise Exception(f"Unknown xVASynth model version {voice_model_json.get('version')}. Cannot determine how to set number of speakers for this model. Please ensure that your voice models are up to date with the latest version of xVASynth and that they include a version number in their json file.")
+            
+        logging.info(f'Loading voice model with data: {json.dumps(model_change, indent=4)}')
         requests.post(self.loadmodel_url, json=model_change)
 
         self.last_voice = voice
