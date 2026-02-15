@@ -533,7 +533,7 @@ class CharacterDB():
 
     def has_character(self, character):
         if str(character['name']) == "nan":
-            print("character:",character)
+            logging.info(f"character: {character}")
         character, matching_parts = self.get_character(character['name'], character['ref_id'], character['base_id'])
         if character is not None:
             return character, matching_parts

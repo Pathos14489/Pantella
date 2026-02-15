@@ -34,10 +34,10 @@ class BehaviorManager():
                 behavior_name = filename.split(".py")[0]
                 if addon_slug is None:
                     behavior = __import__("src.behaviors." + behavior_name, fromlist=["Behavior"])
-                    print(behavior)
+                    # print(behavior)
                 else:
                     behavior = __import__("addons." + addon_slug + ".behaviors." + behavior_name, fromlist=["Behavior"])
-                    print(behavior)
+                    # print(behavior)
                 behavior = getattr(behavior, "Behavior")(self)
                 # logging.info(behavior)
                 if self.conversation_manager.config.game_id in behavior.valid_games:

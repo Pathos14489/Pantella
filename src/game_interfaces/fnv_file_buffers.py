@@ -24,17 +24,21 @@ def convert_wav_to_ogg(input_file, output_file):
         # Export as OGG format (pydub automatically uses ffmpeg for the conversion)
         audio.export(output_file, format="ogg")
         
-        print(f"Successfully converted '{input_file}' to '{output_file}'")
+        logging.info(f"Successfully converted '{input_file}' to '{output_file}'")
     except Exception as e:
-        print(f"An error occurred: {e}")
-        print("Please ensure FFmpeg is installed and accessible in your system's PATH.")
+        logging.error(f"An error occurred: {e}")
+        logging.error("Please ensure FFmpeg is installed and accessible in your system's PATH.")
 logging.info("Imported required libraries in game_interfaces/fnv_file_buffers.py")
 
 valid_games = ["falloutnv"]
 interface_slug = "fnv_file_buffers"
 
 class GameInterface(CreationEngineFileBuffersInterface):
-    def __init__(self,conversation_manager):
+    def __init__(self, conversation_manager, _valid_games, _interface_slug):
+        if _valid_games is not None:
+            valid_games = _valid_games
+        if _interface_slug is not None:
+            interface_slug = _interface_slug
         super().__init__(conversation_manager, valid_games, interface_slug)
         logging.info("Loading Fallout: New Vegas file buffers game interface")
         # if not os.path.exists(f"{self.config.game_path}"):
@@ -90,7 +94,7 @@ class GameInterface(CreationEngineFileBuffersInterface):
             try:
                 shutil.copyfile(audio_file.replace(".wav", ".lip"), f"{lip_file_path}")
             except:
-                print("Error copying lip file -- falling back to default lip file")
+                logging.error("Error copying lip file -- falling back to default lip file")
                 default_lip_file = utils.resolve_path()+'/data/default.lip'
                 shutil.copyfile(default_lip_file, f"{lip_file_path}")
 

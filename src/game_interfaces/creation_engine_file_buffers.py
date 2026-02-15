@@ -175,7 +175,7 @@ class GameInterface(BaseGameInterface):
             try:
                 shutil.copyfile(audio_file.replace(".wav", ".lip"), f"{lip_file_path}")
             except:
-                print("Error copying lip file -- falling back to default")
+                logging.error("Error copying lip file -- falling back to default")
                 default_lip_file = utils.resolve_path()+'/data/default.lip'
                 shutil.copyfile(default_lip_file, f"{lip_file_path}")
 
