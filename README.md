@@ -145,6 +145,16 @@ Pantella optionally requires git to be installed to perform all updates correctl
 ##### Install Git for Linux
 Hah! You're probably already done with this part! Git is installed by default on most Linux distributions. If you don't have it, you can install it with `sudo apt install git` or `sudo yum install git` or `sudo pacman -S git` depending on your distribution.
 
+#### Install FFmpeg for Windows (Required for FNV players)
+The easiest way to install FFmpeg on Windows is to install it via Chocolatey. You can certainly download the compiled build from ffmpegs site and add it to the system path, but I feel like that's not exactly approachable to everyone.
+
+1. To install Chocolatey, follow their Individual Use installation guide over here: [Install Chocolatey](https://chocolatey.org/install) You should just have to run the command they recommend.
+2. Then to install ffmpeg with chocolatey, run `choco install ffmpeg` in the same terminal you just used to install Chocolatey.
+3. Restart your computer to ensure the changes take effect and are usable by Pantella.
+
+#### Install FFmpeg for Linux(debian) (Required for FNV players)
+This is super simple. It might already come installed on your distro of choice, but if it doesn't, simply run `sudo apt install ffmpeg`.
+
 #### Install Microsoft C++ Build Tools
 Pantella requires the Microsoft C++ Build Tools to be installed to build some of the required Python packages to install/reinstall them. If you don't have this installed, you can install it by following the instructions below.
 
