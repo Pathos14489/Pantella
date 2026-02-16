@@ -1,9 +1,9 @@
 {
     "Game": {
         "game_id": "The game id of the game you are playing. Currently only 'skyrim', 'skyrimvr, 'fallout4' and 'fallout4vr' are supported.",
-        "conversation_manager_type": "The conversation manager to use for the game. Defaults to 'auto' to let game_config decide.",
-        "interface_type": "The interface type to use for the game. Defaults to 'auto' to let game_config decide.",
-        "behavior_manager": "The behavior manager to use for the game. Defaults to 'auto' to let game_config decide.",
+        "conversation_manager_type": "The conversation manager to use for the game. Defaults to 'auto' to let interface_config decide.",
+        "interface_type": "The interface type to use for the game. Defaults to 'auto' to let interface_config decide.",
+        "behavior_manager": "The behavior manager to use for the game. Defaults to 'auto' to let interface_config decide."
     },
     "Language": {
         "language": "The language all NPCs are told to speak in. Doesn't translate prompts or player responses.",
@@ -96,7 +96,7 @@
         "offload_kqv": "Whether to offload kqv. Defaults to True. Warning: Uses more VRAM."
     },
     "llava_cpp_python": {
-        "llava_clip_model_path": "The path to the clip model file. e.g. 'mmproj-model-f16.gguf', 'llava-clip.f16.gguf'.",
+        "llava_clip_model_path": "The path to the clip model file. e.g. 'mmproj-model-f16.gguf', 'llava-clip.f16.gguf'."
     },
     "transformers": {
         "transformers_model_slug": "The HF indentifier for the model. e.g. 'mistralai/Mistral-7B-Instruct-v0.1'.", 
@@ -127,11 +127,8 @@
         "remove_mei_folders": "Whether to remove mei folders on startup."
     },
     "Debugging": {
-        "debug_mode": "Whether to enable debug mode. - Doesn't currently do anything.",
+        "debug_mode": "Whether to enable debug mode.",
         "play_audio_from_script": "Whether to play audio from script.",
-        "debug_character_name": "The debug character name.",
-        "debug_use_mic": "Whether to use the mic for debugging.",
-        "default_player_response": "The default player response.",
         "debug_exit_on_first_exchange": "Whether to exit on the first exchange.",
         "add_voicelines_to_all_voice_folders": "Whether to add voicelines to all voice folders."
     },
