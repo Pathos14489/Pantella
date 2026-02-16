@@ -49,7 +49,7 @@ ttw_voice_mapping = { # For converting between xVASynth Character Names and in g
 reverse_ttw_voice_mapping = {v: k for k, v in ttw_voice_mapping.items()} # For converting between xVASynth Character Names and in game voice models for FNV/TTW
 model_filename_mapping = {
     "falloutnv": {
-        "MaleUniqueTheKing": "theking",
+        "MaleUniqueTheKing": "the_king",
     }
 }
 
@@ -453,8 +453,8 @@ class Synthesizer(base_tts.base_Synthesizer):
                     # logging.info(f"Response code: {r.status_code}")
                     # logging.info(f"Response text: {r.text}")
                     data = available_voices_request.json()
-                    for character in data[self.game]:
-                        if self.game == "falloutnv" and character['voiceName'] not in ttw_voice_mapping:
+                    for character in data["fallout3"]:
+                        if character['voiceName'] not in ttw_voice_mapping:
                             self._voices.append(character['voiceName'])
                         else:
                             self._voices.append(ttw_voice_mapping[character['voiceName']])
@@ -682,16 +682,18 @@ class Synthesizer(base_tts.base_Synthesizer):
             raise Exception(f'Game {self.game} not supported for xVASynth! Please ensure that the correct game is set in config.json (game) and that it is one of the following: "fallout4", "fallout4vr", "falloutnv", "skyrim", or "skyrimvr".')
         voice_filename = model_filename_mapping.get(self.game, {}).get(voice, voice.lower().replace(' ', '').replace('.', ''))        
         voice_path = f"{self.model_path}{XVASynthAcronym}{voice_filename}"
+
         if self.config.linux_mode:
             voice_path = voice_path.replace("\\", "/")
         else:
             voice_path = voice_path.replace("/", "\\")
         
         if not os.path.exists(os.path.abspath(voice_path+'.json')) and self.game == "falloutnv":
+            logging.error(f"Voice model does not exist in location '{os.path.abspath(voice_path+'.json')}'. Please ensure that the correct path has been set in config.json (xvasynth_folder) and that the model has been downloaded from {XVASynthModNexusLink} (Ctrl+F for '{XVASynthAcronym}{voice.lower().replace(' ', '')}').")
             logging.config("Checking for Fallout 3 voice model...")
             XVASynthAcronym="f3_"
             XVASynthModNexusLink = "https://www.nexusmods.com/fallout3/mods/24502?tab=files"
-            voice_path = f"{self.model_path}{XVASynthAcronym}{voice.lower().replace(' ', '')}"
+            voice_path = f"{self.xvasynth_path}/resources/app/models/fallout3/{XVASynthAcronym}{voice.lower().replace(' ', '')}"
             if self.config.linux_mode:
                 voice_path = voice_path.replace("\\", "/")
             else:
