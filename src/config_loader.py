@@ -598,7 +598,7 @@ class ConfigLoader:
             "PromptStyle":{
                 "prompt_style_override": "",
                 "behavior_style": "normal",
-                "conversation_start_type": "force_npc_greeting_for_first_meeting_then_llm_choice",
+                "conversation_start_type": "always_force_npc_greeting",
                 "strip_smalls": True, # Skip small voicelines
                 "small_size": 3, # Character length that defines a small voiceline
                 "assure_grammar": True,
@@ -678,6 +678,7 @@ class ConfigLoader:
                 "openai_character_generator_model": "", # Blank for use the same model as the main model. Otherwise, specify a different model here.
                 "openai_completions_type": "chat", # text or chat
                 "alternative_openai_api_base": "https://openrouter.ai/api/v1/",
+                "supports_prefill_override": "default", # "default", True, False
                 "openai_api_key_path": ".\\GPT_SECRET_KEY.txt",
                 "banned_samplers": [], # Examples: "min_p", "typical_p", "top_p", "top_k", "temperature", "frequency_penalty", "presence_penalty", "repeat_penalty", "tfs_z", "mirostat_mode", "mirostat_eta", "mirostat_tau", "max_tokens"
                 "api_log_dir": ".\\api_logs",
@@ -1028,6 +1029,7 @@ class ConfigLoader:
                 "openai_character_generator_model": self.openai_character_generator_model,
                 "openai_completions_type": self.openai_completions_type,
                 "alternative_openai_api_base": self.alternative_openai_api_base,
+                "supports_prefill_override": self.supports_prefill_override,
                 "openai_api_key_path": self.openai_api_key_path,
                 "banned_samplers": self.banned_samplers,
                 "api_log_dir": self.api_log_dir,
