@@ -387,6 +387,7 @@ class LLM(base_LLM):
                     )
                     completion = completion.choices[0].text
                 else:
+                    messages = self.convert_to_standard_messages(messages)
                     completion = self.client.chat.completions.create(messages=messages,
                         model=generation_model, 
                         max_tokens=self.config.max_tokens,
@@ -426,6 +427,33 @@ class LLM(base_LLM):
             character.voice_model = voice_model
 
         return character.get_chracter_info(character_ref_id, character_base_id, voice_model)
+
+    def convert_to_standard_messages(self, messages):
+        """Convert messages to the standard format for the OpenAI API"""
+        standard_messages = []
+        for message in messages:
+            if "name" in message and message["name"] is not None:
+                content = f"{message['name']}: {message['content']}"
+            else:
+                content = message["content"]
+            if message["role"] == "system":
+                standard_messages.append({
+                    "role": "system",
+                    "content": content
+                })
+            elif message["role"] == "user":
+                standard_messages.append({
+                    "role": "user",
+                    "content": content
+                })
+            elif message["role"] == "assistant":
+                standard_messages.append({
+                    "role": "assistant",
+                    "content": content
+                })
+            else:
+                logging.warning(f"Unknown message role: {message['role']}. Skipping message.")
+        return standard_messages
 
     @utils.time_it
     def create(self, messages):
@@ -482,6 +510,7 @@ class LLM(base_LLM):
                         logit_bias=self.logit_bias,
                     )
                 else:
+                    messages = self.convert_to_standard_messages(messages)
                     completion = self.client.chat.completions.create(messages=messages,
                         model=self.config.openai_model, 
                         max_tokens=self.config.max_tokens,
@@ -583,6 +612,17 @@ class LLM(base_LLM):
                 for kwarg in self.config.banned_samplers:
                     if kwarg in extra_body_kwargs:
                         del extra_body_kwargs[kwarg]
+                if self.config.log_all_api_requests:
+                    # make sure the dir exists
+                    os.makedirs(self.config.api_log_dir, exist_ok=True)
+                    taken_log_ids = set()
+                    for filename in os.listdir(self.config.api_log_dir):
+                        if filename.endswith(".log") or filename.endswith(".json"):
+                            taken_log_ids.add(filename.split(".")[0])
+                    sorted_taken_log_ids = sorted(taken_log_ids)
+                    log_id = str(int(sorted_taken_log_ids[-1])+1) if len(sorted_taken_log_ids) > 0 else "1"
+
+
                 if self.config.openai_completions_type == "text" and self.completions_supported:
                     prompt, images = self.tokenizer.get_string_from_messages(messages)
                     prompt += self.tokenizer.start_message("assistant")
@@ -594,11 +634,6 @@ class LLM(base_LLM):
                     if symbol_insert != "":
                         logging.info(f"Symbol Inserted: {symbol_insert}")
                     if self.config.log_all_api_requests:
-                        log_id = None
-                        while log_id is None or os.path.exists(self.config.api_log_dir+"/"+log_id+".log"):
-                            log_id = str(random.randint(100000,999999))
-                        # make sure the dir exists
-                        os.makedirs(self.config.api_log_dir, exist_ok=True)
                         with open(self.config.api_log_dir+"/"+log_id+".log", "w") as f:
                             f.write(prompt)
                     
@@ -613,11 +648,13 @@ class LLM(base_LLM):
                 else:
                     if self.config.openai_completions_type == "text":
                         logging.warning("Using chat completions because raw completions are not supported by the current API/settings.")
+                    if force_speaker is not None and self._prompt_style["force_speaker"]: 
+                        if self.config.alternative_openai_api_base.startswith('https://openrouter.ai/api/v1'): # OpenRouter has a way of prefilling the speaker name by appending a half complete assistant message to the end of the messages with the speaker name and message signifier.
+                            messages.append({"role": "assistant", "content": force_speaker.name + self.config.message_signifier + message_prefix})
+                        else:
+                            logging.warning("force_speaker is enabled, but the current API base does not support prefilling the speaker name. The speaker name will not be prefixed to the message. This will likely cause issues and is not recommended as it will result in messages that don't have a speaker being possible to generate, causing regenerations to be required until an appropriate speaker is generated and may result in generation loops if the model never generates a speaker. It is recommended to use OpenRouter as the API base if you want to use the force_speaker feature with chat completions.")
+                    messages = self.convert_to_standard_messages(messages)
                     if self.config.log_all_api_requests:
-                        log_id = None
-                        while log_id is None or os.path.exists(self.config.api_log_dir+"/"+log_id+".log"):
-                            log_id = str(random.randint(100000,999999))
-                        os.makedirs(self.config.api_log_dir, exist_ok=True)
                         with open(self.config.api_log_dir+"/"+log_id+".json", "w") as f:
                             request_json = {
                                 "messages": messages,
@@ -630,7 +667,7 @@ class LLM(base_LLM):
                             }
                             json_string = json.dumps(request_json)
                             f.write(json_string)
-                    return self.client.chat.completions.create(messages=messages,
+                    generator = self.client.chat.completions.create(messages=messages,
                         model=self.config.openai_model, 
                         max_tokens=self.config.max_tokens,
                         **sampler_kwargs,
@@ -638,6 +675,22 @@ class LLM(base_LLM):
                         stream=True,
                         logit_bias=self.logit_bias,
                     )
+                    logging.info(f"Streaming response...")
+                    reasoning = ""
+                    first_chunk = True
+                    for chunk in generator:
+                        if len(chunk.choices) == 0:
+                            continue
+                        if hasattr(chunk.choices[0].delta, "reasoning") and chunk.choices[0].delta.reasoning is not None:
+                            if first_chunk:
+                                logging.info(f"Please wait, this is a reasoning model and it may take a moment for the reasoning to finish...")
+                                first_chunk = False
+                            reasoning += chunk.choices[0].delta.reasoning
+                        else:
+                            if reasoning != "":
+                                logging.info(f"Reasoning: {reasoning}")
+                                reasoning = ""
+                            yield chunk
             except Exception as e:
                 logging.warning('Could not connect to LLM API, retrying in 5 seconds...')
                 logging.warning(e)

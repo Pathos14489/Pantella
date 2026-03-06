@@ -123,9 +123,14 @@ It is only included as a proof of concept for adding new inference engines to Pa
                 logging.warning("Using chat completions because true text completions are not supported by Anthropic. Expect performance to be degraded compared to using any provider that supports true text completions.")
                 logging.info(f"Messages: {messages}")
                 if self.config.log_all_api_requests:
-                    log_id = None
-                    while log_id is None or os.path.exists(self.config.api_log_dir+"/"+log_id+".log"):
-                        log_id = str(random.randint(100000,999999))
+                    # make sure the dir exists
+                    os.makedirs(self.config.api_log_dir, exist_ok=True)
+                    taken_log_ids = set()
+                    for filename in os.listdir(self.config.api_log_dir):
+                        if filename.endswith(".log") or filename.endswith(".json"):
+                            taken_log_ids.add(filename.split(".")[0])
+                    sorted_taken_log_ids = sorted(taken_log_ids)
+                    log_id = str(int(sorted_taken_log_ids[-1])+1) if len(sorted_taken_log_ids) > 0 else "1"
                     os.makedirs(self.config.api_log_dir, exist_ok=True)
                     with open(self.config.api_log_dir+"/"+log_id+".json", "w") as f:
                         request_json = {
@@ -242,9 +247,14 @@ It is only included as a proof of concept for adding new inference engines to Pa
                         })
                 logging.info(f"Messages: {messages}")
                 if self.config.log_all_api_requests:
-                    log_id = None
-                    while log_id is None or os.path.exists(self.config.api_log_dir+"/"+log_id+".log"):
-                        log_id = str(random.randint(100000,999999))
+                    # make sure the dir exists
+                    os.makedirs(self.config.api_log_dir, exist_ok=True)
+                    taken_log_ids = set()
+                    for filename in os.listdir(self.config.api_log_dir):
+                        if filename.endswith(".log") or filename.endswith(".json"):
+                            taken_log_ids.add(filename.split(".")[0])
+                    sorted_taken_log_ids = sorted(taken_log_ids)
+                    log_id = str(int(sorted_taken_log_ids[-1])+1) if len(sorted_taken_log_ids) > 0 else "1"
                     os.makedirs(self.config.api_log_dir, exist_ok=True)
                     with open(self.config.api_log_dir+"/"+log_id+".json", "w") as f:
                         request_json = {
