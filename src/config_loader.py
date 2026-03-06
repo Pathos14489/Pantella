@@ -10,9 +10,28 @@ import src.language_model as language_models
 import src.tokenizer as tokenizers
 from main import restart_manager
 
+import logging as py_logging
+
+def register_log_filter() -> None:
+    """
+    Removes logs from healthiness/readiness endpoints so they don't spam
+    and pollute application log flow
+    """
+
+    class EndpointFilter(py_logging.Filter):
+        def filter(self, record: py_logging.LogRecord) -> bool:
+            return (
+                record.args  # type: ignore
+                and len(record.args) >= 3
+                and record.args[2] not in ["/log"]  # type: ignore
+            )
+
+    py_logging.getLogger("uvicorn.access").addFilter(EndpointFilter())
+
 class LoglessFlask(flask.Flask):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
+        register_log_filter()
     
     @property
     def logger(self):
@@ -337,17 +356,34 @@ class ConfigLoader:
     
     def set_prompt_style(self, llm, tokenizer):
         """Set the prompt style - if llm has a recommended prompt style and config.prompt_style is not set to a specific style, set it to the recommended style"""
-        if self.prompt_style is not None:
-            if llm.prompt_style in self.prompt_styles and self.prompt_style == "default":
-                self._prompt_style = self.prompt_styles[llm.prompt_style]
-            elif self.prompt_style in self.prompt_styles:
-                self._prompt_style = self.prompt_styles[self.prompt_style]
-            else:
-                logging.error(f"Prompt style {self.prompt_style} not found in prompt_styles directory. Using default prompt style.")
-                self._prompt_style = self.prompt_styles["normal_en"]
+        # if self.prompt_style is not None:
+        #     if llm.prompt_style in self.prompt_styles and self.prompt_style == "default":
+        #         self._prompt_style = self.prompt_styles[llm.prompt_style]
+        #     elif self.prompt_style in self.prompt_styles:
+        #         self._prompt_style = self.prompt_styles[self.prompt_style]
+        #     else:
+        #         logging.error(f"Prompt style {self.prompt_style} not found in prompt_styles directory. Using default prompt style.")
+        #         self._prompt_style = self.prompt_styles["normal_en"]
+        # else:
+        #     logging.error(f"Prompt style not set in config file. Using default prompt style.")
+        #     self._prompt_style = self.prompt_styles["normal_en"]
+
+        prompt_style = self.prompt_style_override
+        if prompt_style == "" or prompt_style is None:
+            if llm.prompt_style in self.prompt_styles:
+                prompt_style = llm.prompt_style
+                logging.config(f"Setting prompt style to recommended prompt style for {llm.slug}: {prompt_style}")
+            elif self.current_interface_config["default_prompt_style"] in self.prompt_styles:
+                prompt_style = self.current_interface_config["default_prompt_style"]
+                logging.config(f"Setting prompt style to default prompt style for {self.game_id} from interface config: {prompt_style}")
+        if prompt_style in self.prompt_styles:
+            logging.config(f"Setting prompt style to {prompt_style} from config file")
         else:
-            logging.error(f"Prompt style not set in config file. Using default prompt style.")
-            self._prompt_style = self.prompt_styles["normal_en"]
+            logging.error(f"Prompt style {prompt_style} not found in prompt_styles directory.")
+            raise ValueError(f"Prompt style {prompt_style} not found in prompt_styles directory. Please set a valid prompt style in the config file or use a compatible LLM with a recommended prompt style.")
+
+        self._prompt_style = self.prompt_styles[prompt_style]
+
         tokenizer.set_prompt_style(self._prompt_style) # Set the prompt style for the tokenizer
         # self.get_tokenizer_settings_from_prompt_style()
         logging.info("Getting tokenizer settings from prompt style")
@@ -560,7 +596,7 @@ class ConfigLoader:
                 # "reload_wait_time": 1,
             },
             "PromptStyle":{
-                "prompt_style": "default",
+                "prompt_style_override": "",
                 "behavior_style": "normal",
                 "conversation_start_type": "force_npc_greeting_for_first_meeting_then_llm_choice",
                 "strip_smalls": True, # Skip small voicelines
@@ -640,7 +676,7 @@ class ConfigLoader:
             "openai_api": {
                 "openai_model": "undi95/toppy-m-7b:free",
                 "openai_character_generator_model": "", # Blank for use the same model as the main model. Otherwise, specify a different model here.
-                "openai_completions_type": "text", # text or chat
+                "openai_completions_type": "chat", # text or chat
                 "alternative_openai_api_base": "https://openrouter.ai/api/v1/",
                 "openai_api_key_path": ".\\GPT_SECRET_KEY.txt",
                 "banned_samplers": [], # Examples: "min_p", "typical_p", "top_p", "top_k", "temperature", "frequency_penalty", "presence_penalty", "repeat_penalty", "tfs_z", "mirostat_mode", "mirostat_eta", "mirostat_tau", "max_tokens"
@@ -928,7 +964,7 @@ class ConfigLoader:
                 # "reload_wait_time": self.reload_wait_time,
             },
             "PromptStyle":{
-                "prompt_style": self.prompt_style,
+                "prompt_style_override": self.prompt_style_override,
                 "behavior_style": self.behavior_style,
                 "conversation_start_type": self.conversation_start_type,
                 "strip_smalls": self.strip_smalls,
@@ -1243,7 +1279,7 @@ class ConfigLoader:
                 "tokenizer_type": [tokenizer_type for tokenizer_type in self.manager_types["tokenizer"]],
             },
             "PromptStyle": {
-                "prompt_style": [behavior_style.split(".")[0] for behavior_style in os.listdir(os.path.join(os.path.dirname(__file__), "../prompt_styles"))],
+                "prompt_style_override": [behavior_style.split(".")[0] for behavior_style in os.listdir(os.path.join(os.path.dirname(__file__), "../prompt_styles"))],
                 "behavior_style": [behavior_style.split(".")[0] for behavior_style in os.listdir(os.path.join(os.path.dirname(__file__), "../behavior_styles"))],
                 "conversation_start_type": [
                     "always_llm_choice",
