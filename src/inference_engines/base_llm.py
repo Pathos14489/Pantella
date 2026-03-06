@@ -147,6 +147,7 @@ settings_description = {}
 options = {}
 settings = {}
 loaded = False
+
 description = "Base class for all LLM inference engines. This class should be inherited by all LLM inference engines and should not be used directly. It provides the basic functionality for generating responses from the LLM, managing conversations, and handling vision support if enabled. It also provides a set of properties that can be used to configure the LLM and its behavior."
 class base_LLM():
     def __init__(self, conversation_manager, vision_enabled=False):
@@ -1278,6 +1279,7 @@ class base_LLM():
                         content = chunk # example: ".* Hello"
                     else:
                         content = self.format_content(chunk) # example: ".* Hello"
+                    content = content.replace("“", "\"").replace("”", "\"").replace("‘", "'").replace("’", "'") # replace smart quotes with regular quotes
                     if reasoning: # if reasoning is enabled, then the LLM will generate a reason for the response before the response, so just funnel the reason into the reason variable until a thinking_transition is detected
                         logging.info(f"Reasoning: {reasoning}")
                         reason += content
