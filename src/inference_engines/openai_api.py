@@ -293,6 +293,14 @@ class LLM(base_LLM):
                 logging.error(f"Current API does not support CoT for the dedicated character generation model '{generation_model}'! Are you using OpenAI's API? They will not work with all features of Pantella, please use OpenRouter or another API that supports CoT.")
                 logging.error(e)
                 # input("Press Enter to exit.")
+
+        if self.config.openai_completions_type == "chat" or not self.completions_supported:
+            self.prefill_supported = False
+        if self.config.alternative_openai_api_base.startswith("https://openrouter.ai/api/v1"):
+            logging.info("OpenRouter supports prefill, so enabling it for all models used with the OpenRouter API base.")
+            self.prefill_supported = True
+        if self.config.supports_prefill_override != "default":
+            self.prefill_supported = self.config.supports_prefill_override
         loaded = True
 
     @property
@@ -573,6 +581,15 @@ class LLM(base_LLM):
     @utils.time_it
     def acreate(self, messages, message_prefix="", force_speaker=None): # Creates a completion stream for the messages provided to generate a speaker and their response
         # logging.info(f"aMessages: {messages}")
+        completion_type = "text" if self.config.openai_completions_type == "text" and self.completions_supported else "chat"
+        if completion_type == "chat":
+            if self.config.openai_completions_type == "text":
+                logging.warning("Using chat completions because raw completions are not supported by the current API/settings.")
+            if force_speaker is not None and self._prompt_style["force_speaker"]: 
+                if self.config.alternative_openai_api_base.startswith('https://openrouter.ai/api/v1'): # OpenRouter has a way of prefilling the speaker name by appending a half complete assistant message to the end of the messages with the speaker name and message signifier.
+                    messages.append({"role": "assistant", "content": force_speaker.name + self.config.message_signifier + message_prefix})
+                else:
+                    logging.warning("force_speaker is enabled, but the current API base does not support prefilling the speaker name. The speaker name will not be prefixed to the message. This will likely cause issues and is not recommended as it will result in messages that don't have a speaker being possible to generate, causing regenerations to be required until an appropriate speaker is generated and may result in generation loops if the model never generates a speaker. It is recommended to use OpenRouter as the API base if you want to use the force_speaker feature with chat completions.")
         retries = 5
         while retries > 0:
             try:
@@ -646,13 +663,6 @@ class LLM(base_LLM):
                         logit_bias=self.logit_bias,
                     )
                 else:
-                    if self.config.openai_completions_type == "text":
-                        logging.warning("Using chat completions because raw completions are not supported by the current API/settings.")
-                    if force_speaker is not None and self._prompt_style["force_speaker"]: 
-                        if self.config.alternative_openai_api_base.startswith('https://openrouter.ai/api/v1'): # OpenRouter has a way of prefilling the speaker name by appending a half complete assistant message to the end of the messages with the speaker name and message signifier.
-                            messages.append({"role": "assistant", "content": force_speaker.name + self.config.message_signifier + message_prefix})
-                        else:
-                            logging.warning("force_speaker is enabled, but the current API base does not support prefilling the speaker name. The speaker name will not be prefixed to the message. This will likely cause issues and is not recommended as it will result in messages that don't have a speaker being possible to generate, causing regenerations to be required until an appropriate speaker is generated and may result in generation loops if the model never generates a speaker. It is recommended to use OpenRouter as the API base if you want to use the force_speaker feature with chat completions.")
                     messages = self.convert_to_standard_messages(messages)
                     if self.config.log_all_api_requests:
                         with open(self.config.api_log_dir+"/"+log_id+".json", "w") as f:
@@ -691,6 +701,7 @@ class LLM(base_LLM):
                                 logging.info(f"Reasoning: {reasoning}")
                                 reasoning = ""
                             yield chunk
+                    retries = 0
             except Exception as e:
                 logging.warning('Could not connect to LLM API, retrying in 5 seconds...')
                 logging.warning(e)

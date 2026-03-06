@@ -165,6 +165,7 @@ class base_LLM():
         self.is_local = True
         self.vision_enabled = vision_enabled
         self.completions_supported = True
+        self.prefill_supported = True
         self.cot_supported = False
         self.character_generation_supported = False
         if self.vision_enabled:
@@ -872,6 +873,7 @@ class base_LLM():
     
     def generate_response(self, message_prefix="", force_speaker=None):
         """Generate response from LLM one text chunk at a time"""
+        logging.info(f"Generating response from LLM with message prefix '{message_prefix}' and force speaker '{force_speaker}'")
         if self.cot_supported and self.cot_enabled and self.conversation_manager.thought_process is not None:
             print("Generating CoT response...")
             raw_response = ""
@@ -1206,7 +1208,7 @@ class base_LLM():
             try:
                 # Reset variables every retry
                 proposed_next_author = '' # used to store the proposed next author
-                if not self.completions_supported:
+                if not self.prefill_supported:
                     logging.warning(f"Completions are not supported by the current LLM. There might be more regenerations and errors because of this as we don't have full control over the exact prompt that is sent to the LLM.")
                     force_speaker = None
                     next_author = None
@@ -1279,7 +1281,7 @@ class base_LLM():
                         content = chunk # example: ".* Hello"
                     else:
                         content = self.format_content(chunk) # example: ".* Hello"
-                    content = content.replace("“", "\"").replace("”", "\"").replace("‘", "'").replace("’", "'") # replace smart quotes with regular quotes
+                    content = content.replace("“", "\"").replace("”", "\"").replace("‘", "'").replace("’", "'").replace("—", "-").replace("…", "...")
                     if reasoning: # if reasoning is enabled, then the LLM will generate a reason for the response before the response, so just funnel the reason into the reason variable until a thinking_transition is detected
                         logging.info(f"Reasoning: {reasoning}")
                         reason += content
