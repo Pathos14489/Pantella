@@ -119,6 +119,7 @@ class base_Character:
                 return self.characters_manager.conversation_manager.config.prompt_styles[self.prompt_style_override]
         # logging.info(f"No prompt style override found for {self.name}, using default prompt style settings for {self.config.prompt_style}")
         return self.characters_manager.conversation_manager.config._prompt_style
+    
     @property
     def prompt_style(self):
         return self._prompt_style["style"]

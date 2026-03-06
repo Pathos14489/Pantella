@@ -31,6 +31,7 @@ class BaseBehavior():
     @property
     def prompt_style(self):
         return self.character_manager.prompt_style
+    
     @property
     def behavior_style(self):
         return self.conversation_manager.config._behavior_style
