@@ -103,7 +103,7 @@ class ConversationManager(BaseConversationManager):
                 logging.config(f"Conversation Start Type: {self.config.conversation_start_type}")
                 if self.config.conversation_start_type == "always_llm_choice":
                     await self.get_response()
-                elif self.config.conversation_start_type == "always_force_npc_greeting":
+                elif self.config.conversation_start_type == "always_force_npc_greeting" or self.get_conversation_type() == "single_player_with_npc":
                     await self.get_response(character)
                 elif self.config.conversation_start_type == "always_player_greeting":
                     self.in_conversation = True
