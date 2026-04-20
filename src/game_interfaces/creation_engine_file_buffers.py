@@ -654,7 +654,7 @@ class GameInterface(BaseGameInterface):
         actor_voice_model_id, actor_voice_model_name = self.load_actor_voice_model()
             # actor_voice_model = self.load_data_when_available('_pantella_actor_voice', '')
             # actor_voice_model_name = actor_voice_model.split('<')[1].split(' ')[0]
-        logging.info()(f"Actor voice model: {actor_voice_model_name}, Actor voice model ID: {actor_voice_model_id}")
+        logging.info(f"Actor voice model: {actor_voice_model_name}, Actor voice model ID: {actor_voice_model_id}")
 
         location = self.get_current_location(location) # Check if location has changed since last check
 
