@@ -25,6 +25,7 @@ except Exception as e:
 llama_model = None # Used to store the llama-cpp-python model so it can be reused for the tokenizer
 
 inference_engine_name = "llama_cpp_python"
+inference_engine_title = "llama-cpp-python"
 tokenizer_slug = "llama_cpp_python" # This slug is effectively unused but it is here for consistency with other inference engines
 default_settings = {
     "model_path": ".\\model.gguf",

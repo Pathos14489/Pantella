@@ -17,8 +17,12 @@ except Exception as e:
     raise e
 
 tts_slug = "mira_tts"
-default_settings = {}
-settings_description = {}
+default_settings = {
+    "mira_tts_tts_banned_voice_models": [],
+}
+settings_description = {
+    "mira_tts_tts_banned_voice_models": "A list of voice models to ban from being used by MiraTTS. This can be changed in config.json. This is useful if you have a voice model that causes issues with MiraTTS, such as extremely long synthesis times or crashes."
+}
 options = {}
 settings = {}
 loaded = False

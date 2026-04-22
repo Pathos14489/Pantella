@@ -16,16 +16,20 @@ logging.info("Imported required libraries in style_tts_2.py")
 
 tts_slug = "style_tts_2"
 default_settings = {
-    "alpha": 0.3,
-    "beta": 0.7,
-    "diffusion_steps": 5,
-    "embedding_scale": 1.0,
+    "style_tts_2_default_alpha": 0.3,
+    "style_tts_2_default_beta": 0.7,
+    "style_tts_2_default_diffusion_steps": 5,
+    "style_tts_2_default_embedding_scale": 1.0,
+    "style_tts_2_default_t": 0.7,
+    "style_tts_2_banned_voice_models": [],
 }
 settings_description = {
-    "alpha": "alpha and beta is the factor to determine much we use the style sampled based on the text instead of the reference. The higher the value of alpha and beta, the more suitable the style it is to the text but less similar to the reference. Alpha determines the timbre of the speaker. If alpha = 1 and beta = 1, the synthesized speech sounds the most dissimilar to the reference speaker, but it is also the most diverse (each time you synthesize a speech it will be totally different). If alpha = 0 and beta = 0, the synthesized speech sounds the most siimlar to the reference speaker, but it is deterministic (i.e., the sampled style is not used for speech synthesis).",
-    "beta": "alpha and beta is the factor to determine much we use the style sampled based on the text instead of the reference. Using higher beta makes the synthesized speech more emotional, at the cost of lower similarity to the reference. Beta determines the prosody of the speaker.",
-    "diffusion_steps": "The number of diffusion steps for the StyleTTS2 model. Higher values can clean up the audio, but also increase the time it takes to synthesize the audio. There is also a point of diminishing returns, where increasing the diffusion steps doesn't really improve the audio quality much.",
-    "embedding_scale": "At value 1, this is the classifier-free guidance scale. The higher the scale, the more conditional the style is to the input text and hence more emotional."
+    "style_tts_2_default_alpha": "Alpha and beta is the factor to determine much we use the style sampled based on the text instead of the reference. The higher the value of alpha and beta, the more suitable the style it is to the text but less similar to the reference. Alpha determines the timbre of the speaker. If alpha = 1 and beta = 1, the synthesized speech sounds the most dissimilar to the reference speaker, but it is also the most diverse (each time you synthesize a speech it will be totally different). If alpha = 0 and beta = 0, the synthesized speech sounds the most siimlar to the reference speaker, but it is deterministic (i.e., the sampled style is not used for speech synthesis).",
+    "style_tts_2_default_beta": "Alpha and beta is the factor to determine much we use the style sampled based on the text instead of the reference. Using higher beta makes the synthesized speech more emotional, at the cost of lower similarity to the reference. Beta determines the prosody of the speaker.",
+    "style_tts_2_default_diffusion_steps": "The number of diffusion steps for the StyleTTS2 model. Higher values can clean up the audio, but also increase the time it takes to synthesize the audio. There is also a point of diminishing returns, where increasing the diffusion steps doesn't really improve the audio quality much.",
+    "style_tts_2_default_embedding_scale": "At value 1, this is the classifier-free guidance scale. The higher the scale, the more conditional the style is to the input text and hence more emotional.",
+    "style_tts_2_default_t": "The default value for the temperature parameter in StyleTTS2. This controls the randomness of the generated speech. Higher values result in more diverse outputs, while lower values result in more deterministic outputs.",
+    "style_tts_2_banned_voice_models": "A list of voice models to ban from being used by StyleTTS2. This can be changed in config.json. This is useful if you have a voice model that causes issues with StyleTTS2, such as extremely long synthesis times or crashes."
 }
 options = {}
 settings = {}

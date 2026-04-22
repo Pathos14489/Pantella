@@ -16,14 +16,16 @@ try:
 except Exception as e:
     logging.warn(f"Failed to load openai, so openai_api cannot be used! Please check that you have installed it correctly. Unless you're not using openai, in which case you can ignore this warning.")
 
-inference_engine_name = "openai"
+inference_engine_name = "openai_api"
+inference_engine_title = "OpenAI Compatible API"
 tokenizer_slug = "tiktoken"
 default_settings = {
     "openai_model": "undi95/toppy-m-7b:free",
     "openai_character_generator_model": "", # Blank for use the same model as the main model. Otherwise, specify a different model here.
     "openai_completions_type": "text", # text or chat
     "alternative_openai_api_base": "https://openrouter.ai/api/v1/",
-    "openai_api_key_path": ".\\GPT_SECRET_KEY.txt",
+    "supports_prefill_override": "default", # Override whether this model supports prefill or not. This is for compatibility with API emulation methods that may not perfectly emulate the OpenAI API. Set to True to enable prefill support, False to disable it, or "default" to use the default behavior which is to disable prefill support for all models when using the OpenAI API and enable it when using the OpenRouter API base.
+    "openai_api_key_path": ".\\addons\\openai_api_addon\\OPENAI_API_SECRET_KEY.txt",
     "banned_samplers": [], # Examples: "min_p", "typical_p", "top_p", "top_k", "temperature", "frequency_penalty", "presence_penalty", "repeat_penalty", "tfs_z", "mirostat_mode", "mirostat_eta", "mirostat_tau", "max_tokens"
     "api_log_dir": ".\\api_logs",
 }
@@ -32,6 +34,7 @@ settings_description = {
     "openai_character_generator_model": "The model to use for character generation. This can be changed in config.json. If blank, the main model will be used.",
     "openai_completions_type": "The type of completions to use. This can be changed in config.json. Options are 'text' or 'chat'. If 'text', the model must support text completions. If 'chat', the model must support chat completions.",
     "alternative_openai_api_base": "The base URL for the OpenAI API. This can be changed in config.json. If 'none', the default OpenAI API will be used.",
+    "supports_prefill_override": "Override whether this model supports prefill or not. This is for compatibility with API emulation methods that may not perfectly emulate the OpenAI API. Set to True to enable prefill support, False to disable it, or 'default' to use the default behavior which is to disable prefill support for all models when using the OpenAI API and enable it when using the OpenRouter API base.",
     "openai_api_key_path": "The path to the file containing the OpenAI API key. This can be changed in config.json.",
     "banned_samplers": "A list of samplers to ban from being used by the LLM. This can be changed in config.json.",
     "api_log_dir": "The directory to save API logs to. This can be changed in config.json."
@@ -117,6 +120,9 @@ class LLM(base_LLM):
                 token_limit = 4096
             self.config.maximum_local_tokens = token_limit # Set the maximum number of tokens for local models to the number of tokens available for the model chosen    
 
+        if not os.path.exists(self.config.openai_api_key_path):
+            with open(self.config.openai_api_key_path, 'w') as f:
+                f.write("abc123")
         with open(self.config.openai_api_key_path, 'r') as f:
             api_key = f.readline().strip()
         self.api_key = api_key

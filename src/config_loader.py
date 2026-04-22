@@ -2,40 +2,21 @@ print("Importing config_loader.py")
 from src.logging import logging
 import json
 import os
-import flask
 import traceback
 import base64
 import src.tts as tts
 import src.language_model as language_models
 import src.tokenizer as tokenizers
+import importlib
 from main import restart_manager
 
-import logging as py_logging
+from fastapi import FastAPI, Request
+import uvicorn
+from fastapi.responses import HTMLResponse, FileResponse, StreamingResponse, Response, JSONResponse
+from fastapi.templating import Jinja2Templates
+from fastapi.staticfiles import StaticFiles
 
-def register_log_filter() -> None:
-    """
-    Removes logs from healthiness/readiness endpoints so they don't spam
-    and pollute application log flow
-    """
-
-    class EndpointFilter(py_logging.Filter):
-        def filter(self, record: py_logging.LogRecord) -> bool:
-            return (
-                record.args  # type: ignore
-                and len(record.args) >= 3
-                and record.args[2] not in ["/log"]  # type: ignore
-            )
-
-    py_logging.getLogger("uvicorn.access").addFilter(EndpointFilter())
-
-class LoglessFlask(flask.Flask):
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
-        register_log_filter()
-    
-    @property
-    def logger(self):
-        return None
+from jinja_try_catch import TryCatchExtension
 
 logging.info("Imported required libraries in config_loader.py")
 
@@ -425,7 +406,7 @@ class ConfigLoader:
             return json.load(f)
 
     def default(self):
-        return {
+        default_settings = {
             "Game": {
                 "game_id": "", # skyrim, skyrimvr, fallout4 or fallout4vr
                 "conversation_manager_type": "auto",
@@ -668,41 +649,6 @@ class ConfigLoader:
                 "log_all_api_requests": False,
                 "reverse_proxy": False,
             },
-            "anthropic_api": {
-                "anthropic_model": "claude-opus-4-20250514",
-                "alternative_anthropic_api_base": "none",
-                "anthropic_api_key_path": ".\\ANTHROPIC_SECRET_KEY.txt",
-            },
-            "openai_api": {
-                "openai_model": "undi95/toppy-m-7b:free",
-                "openai_character_generator_model": "", # Blank for use the same model as the main model. Otherwise, specify a different model here.
-                "openai_completions_type": "chat", # text or chat
-                "alternative_openai_api_base": "https://openrouter.ai/api/v1/",
-                "supports_prefill_override": "default", # "default", True, False
-                "openai_api_key_path": ".\\GPT_SECRET_KEY.txt",
-                "banned_samplers": [], # Examples: "min_p", "typical_p", "top_p", "top_k", "temperature", "frequency_penalty", "presence_penalty", "repeat_penalty", "tfs_z", "mirostat_mode", "mirostat_eta", "mirostat_tau", "max_tokens"
-                "api_log_dir": ".\\api_logs",
-            },
-            "llama_cpp_python": {
-                "model_path": ".\\model.gguf",
-                "llava_clip_model_path": ".\\clip_model.gguf",
-                "n_gpu_layers": 0,
-                "n_threads": 4,
-                "n_batch": 512,
-                "tensor_split": [], # [0.5,0.5] for 2 gpus split evenly, [0.3,0.7] for 2 gpus split unevenly
-                "main_gpu": 0,
-                "split_mode": 0, # 0 = single gpu, 1 = split layers and kv across gpus, 2 = split rows across gpus
-                "use_mmap": True,
-                "use_mlock": False,
-                "n_threads_batch": 1,
-                "offload_kqv": True,
-            },
-            "transformers": {
-                "transformers_model_slug": "mistralai/Mistral-7B-Instruct-v0.1",
-                "trust_remote_code": False,
-                "device_map": "cuda:0", # "cuda", "cuda:0", "cuda:1", "auto"
-                "load_in_8bit": False
-            },
             "Speech": {
                 "tts_engine": [
                     "piper_binary"
@@ -713,138 +659,6 @@ class ConfigLoader:
                 "narrator_volume": 0.5, # 50% volume
                 "narrator_delay": 0.2, # 200ms delay
                 "bypass_facefxwrapper": False,
-            },
-            "xTTS": {
-                "xtts_device": "cuda",
-                "xtts_preload_latents": True,
-                "xtts_use_cached_latents": True,
-                "xtts_temperature": 0.75,
-                "xtts_top_k": 50,
-                "xtts_top_p": 0.85,
-                "xtts_length_penalty": 1.0,
-                "xtts_repetition_penalty": 10.0,
-                "xtts_speed": 1.0,
-                "xtts_num_beams": 1,
-            },
-            "piperTTS": {
-                "piper_binary_dir": ".\\piper\\",
-                "piper_models_dir": ".\\data\\models\\piper\\",
-                "piper_tts_banned_voice_models": [],
-            },
-            "xVASynth": {
-                "xvasynth_path": "C:\\Games\\Steam\\steamapps\\common\\xVASynth",
-                "xvasynth_process_device": "cpu",
-                "xvasynth_default_pace": 1.0,
-                "xvasynth_default_use_cleanup": False,
-                "xvasynth_default_use_sr": False,
-                "xvasynth_banned_voice_models": [],
-                "xvasynth_base_url": "http://127.0.0.1:8008",
-                "xvasynth_banned_voice_models": [],
-            },
-            "xTTS_api": {
-                "xtts_api_dir": ".\\xtts-api-server-pantella\\",
-                "xtts_api_base_url": "http://127.0.0.1:8020",
-                "xtts_api_default_temperature": 0.75,
-                "xtts_api_default_length_penalty": 1.0,
-                "xtts_api_default_repetition_penalty": 3.0,
-                "xtts_api_default_top_k": 40,
-                "xtts_api_default_top_p": 0.80,
-                "xtts_api_default_speed": 1.25,
-                "xtts_api_enable_text_splitting": True,
-                "xtts_api_stream_chunk_size": 200,
-                "xtts_api_banned_voice_models": [],
-                "default_xtts_api_model": "v2.0.2",
-            },
-            "ChatTTS": {
-                "ensure_all_voice_samples_have_inference_settings": True,
-                "chat_tts_default_infer_code_prompt": "[speed_3]",
-                "chat_tts_default_infer_code_temperature": 0.3,
-                "chat_tts_default_infer_code_repetition_penalty": 1.05,
-                "chat_tts_default_refine_text_prompt": "",
-                "chat_tts_default_refine_text_temperature": 0.7,
-                "chat_tts_default_refine_text_top_p": 0.7,
-                "chat_tts_default_refine_text_top_k": 20,
-                "chat_tts_default_refine_text_repetition_penalty": 1.0,
-                "chat_tts_banned_voice_models": [],
-            },
-            "ParlerTTS": {
-                "parler_tts_model": "parler-tts/parler-tts-mini-v1",
-                "parler_tts_device": "cpu",
-                "parler_tts_compile": False,
-                "parler_tts_compile_mode": "reduce-overhead", # reduce-overhead, default
-                "parler_tts_max_length": 50,
-                "parler_tts_default_temperature": 1.0,
-                "parler_tts_banned_voice_models": [],
-            },
-            "StyleTTS2": {
-                "style_tts_2_default_alpha": 0.3,
-                "style_tts_2_default_beta": 0.7,
-                "style_tts_2_default_diffusion_steps": 5,
-                "style_tts_2_default_embedding_scale": 1.0,
-                "style_tts_2_default_t": 0.7,
-                "style_tts_2_banned_voice_models": [],
-            },
-            "F5_TTS": {
-                "f5_tts_default_speed": 1.0,
-                "f5_tts_default_cfg_strength": 2.0,
-                "f5_tts_volume": 1.5,
-                "f5_tts_device": "cuda",
-                "f5_tts_banned_voice_models": [],
-            },
-            "E2_TTS": {
-                "e2_tts_default_speed": 1.0,
-                "e2_tts_default_cfg_strength": 2.0,
-                "e2_tts_volume": 1.5,
-                "e2_tts_device": "cuda",
-                "e2_tts_banned_voice_models": [],
-            },
-            "Oute_TTS": {
-                "oute_tts_default_temperature": 0.1,
-                "oute_tts_default_repetition_penalty": 1.1,
-                "oute_tts_max_length": 4096,
-                "oute_tts_volume": 1.5,
-                "oute_tts_banned_voice_models": [],
-            },
-            "GPT-SoVITS": {
-                "gpt_sovits_is_half": True,
-                "gpt_sovits_device": "cuda",
-                "gpt_sovits_version": "v2",
-                "gpt_sovits_cut_type": "none",
-                "gpt_sovits_default_prompt_language": "en",
-                "gpt_sovits_default_text_language": "en",
-                "gpt_sovits_default_temperature": 1.0,
-                "gpt_sovits_default_top_k": 20,
-                "gpt_sovits_default_top_p": 1.0,
-                "gpt_sovits_error_on_too_short_or_too_long_audio": True,
-                "is_bigvgan_half": True,
-                "gpt_sovits_banned_voice_models": [],
-            },
-            "chatterbox": {
-                "chatterbox_device": "cuda",
-                "chatterbox_default_temperature": 0.5,
-                "chatterbox_default_exaggeration": 0.5,
-                "chatterbox_default_cfgw": 0.8,
-                "chatterbox_max_tokens": 1024,
-                "chatterbox_watermark": False,
-                "chatterbox_batch_size": 300,
-                "chatterbox_batch_type": "paragraph", # paragraph, sentence, word
-                "chatterbox_volume": 1.0,
-                "chatterbox_banned_voice_models": [],
-            },
-            "chatterbox_api": {
-                "chatterbox_api_base_url": "http://127.0.0.1:8024",
-                "chatterbox_api_default_temperature": 0.5,
-                "chatterbox_api_default_exaggeration": 0.5,
-                "chatterbox_api_default_cfgw": 0.8,
-                "chatterbox_api_max_tokens": 1024,
-                "chatterbox_api_watermark": False,
-                "chatterbox_api_batch_size": 300,
-                "chatterbox_api_batch_type": "paragraph", # paragraph, sentence, word
-                "chatterbox_api_volume": 1.0,
-                "chatterbox_api_banned_voice_models": [],
-            },
-            "mira_tts": {
-                "mira_tts_tts_banned_voice_models": [],
             },
             "Debugging": {
                 "debug_mode": False,
@@ -885,9 +699,18 @@ class ConfigLoader:
                 "debug_ui_port": 8023,
             }
         }
+        for inference_engine_slug in language_models.LLM_Types:
+            if inference_engine_slug != "base_LLM" and inference_engine_slug != "default":
+                if len(language_models.LLM_Types[inference_engine_slug].default_settings) > 0:
+                    default_settings[inference_engine_slug] = language_models.LLM_Types[inference_engine_slug].default_settings
+        for tts_engine_slug in tts.tts_Types:
+            if tts_engine_slug != "base_TTS" and tts_engine_slug != "default":
+                if len(tts.tts_Types[tts_engine_slug].default_settings) > 0:
+                    default_settings[tts_engine_slug] = tts.tts_Types[tts_engine_slug].default_settings
+        return default_settings
     
     def export(self):
-        return {
+        export_values = {
             "Game": {
                 "game_id": self.game_id,
                 "conversation_manager_type": self.conversation_manager_type,
@@ -1019,41 +842,6 @@ class ConfigLoader:
                 "log_all_api_requests": self.log_all_api_requests,
                 "reverse_proxy": self.reverse_proxy,
             },
-            "anthropic_api": {
-                "anthropic_model": self.anthropic_model,
-                "alternative_anthropic_api_base": self.alternative_anthropic_api_base,
-                "anthropic_api_key_path": self.anthropic_api_key_path,
-            },
-            "openai_api": {
-                "openai_model": self.openai_model,
-                "openai_character_generator_model": self.openai_character_generator_model,
-                "openai_completions_type": self.openai_completions_type,
-                "alternative_openai_api_base": self.alternative_openai_api_base,
-                "supports_prefill_override": self.supports_prefill_override,
-                "openai_api_key_path": self.openai_api_key_path,
-                "banned_samplers": self.banned_samplers,
-                "api_log_dir": self.api_log_dir,
-            },
-            "llama_cpp_python": {
-                "model_path": self.model_path,
-                "llava_clip_model_path": self.llava_clip_model_path,
-                "n_gpu_layers": self.n_gpu_layers,
-                "n_threads": self.n_threads,
-                "n_batch": self.n_batch,
-                "tensor_split": self.tensor_split,
-                "main_gpu": self.main_gpu,
-                "split_mode": self.split_mode,
-                "use_mmap": self.use_mmap,
-                "use_mlock": self.use_mlock,
-                "n_threads_batch": self.n_threads_batch,
-                "offload_kqv": self.offload_kqv,
-            },
-            "transformers": {
-                "transformers_model_slug": self.transformers_model_slug,
-                "trust_remote_code": self.trust_remote_code,
-                "device_map": self.device_map,
-                "load_in_8bit": self.load_in_8bit,
-            },
             "Speech": {
                 "tts_engine": self.tts_engine,
                 "end_conversation_wait_time": self.end_conversation_wait_time,
@@ -1062,138 +850,6 @@ class ConfigLoader:
                 "narrator_volume": self.narrator_volume,
                 "narrator_delay": self.narrator_delay,
                 "bypass_facefxwrapper": self.bypass_facefxwrapper,
-            },
-            "xTTS": {
-                "xtts_device": self.xtts_device,
-                "xtts_preload_latents": self.xtts_preload_latents,
-                "xtts_use_cached_latents": self.xtts_use_cached_latents,
-                "xtts_temperature": self.xtts_temperature,
-                "xtts_top_k": self.xtts_top_k,
-                "xtts_top_p": self.xtts_top_p,
-                "xtts_length_penalty": self.xtts_length_penalty,
-                "xtts_repetition_penalty": self.xtts_repetition_penalty,
-                "xtts_speed": self.xtts_speed,
-                "xtts_num_beams": self.xtts_num_beams,
-            },
-            "piperTTS": {
-                "piper_binary_dir": self.piper_binary_dir,
-                "piper_models_dir": self.piper_models_dir,
-                "piper_tts_banned_voice_models": self.piper_tts_banned_voice_models,
-            },
-            "xVASynth": {
-                "xvasynth_path": self.xvasynth_path,
-                "xvasynth_process_device": self.xvasynth_process_device,
-                "xvasynth_default_pace": self.xvasynth_default_pace,
-                "xvasynth_default_use_cleanup": self.xvasynth_default_use_cleanup,
-                "xvasynth_default_use_sr": self.xvasynth_default_use_sr,
-                "xvasynth_banned_voice_models": self.xvasynth_banned_voice_models,
-                "xvasynth_base_url": self.xvasynth_base_url,
-                "xvasynth_banned_voice_models": self.xvasynth_banned_voice_models,
-            },
-            "xTTS_api": {
-                "xtts_api_dir": self.xtts_api_dir,
-                "xtts_api_base_url": self.xtts_api_base_url,
-                "xtts_api_default_temperature": self.xtts_api_default_temperature,
-                "xtts_api_default_length_penalty": self.xtts_api_default_length_penalty,
-                "xtts_api_default_repetition_penalty": self.xtts_api_default_repetition_penalty,
-                "xtts_api_default_top_k": self.xtts_api_default_top_k,
-                "xtts_api_default_top_p": self.xtts_api_default_top_p,
-                "xtts_api_default_speed": self.xtts_api_default_speed,
-                "xtts_api_enable_text_splitting": self.xtts_api_enable_text_splitting,
-                "xtts_api_stream_chunk_size": self.xtts_api_stream_chunk_size,
-                "xtts_api_banned_voice_models": self.xtts_api_banned_voice_models,
-                "default_xtts_api_model": self.default_xtts_api_model,
-            },
-            "ChatTTS": {
-                "ensure_all_voice_samples_have_inference_settings": self.ensure_all_voice_samples_have_inference_settings,
-                "chat_tts_default_infer_code_prompt": self.chat_tts_default_infer_code_prompt,
-                "chat_tts_default_infer_code_temperature": self.chat_tts_default_infer_code_temperature,
-                "chat_tts_default_infer_code_repetition_penalty": self.chat_tts_default_infer_code_repetition_penalty,
-                "chat_tts_default_refine_text_prompt": self.chat_tts_default_refine_text_prompt,
-                "chat_tts_default_refine_text_temperature": self.chat_tts_default_refine_text_temperature,
-                "chat_tts_default_refine_text_top_p": self.chat_tts_default_refine_text_top_p,
-                "chat_tts_default_refine_text_top_k": self.chat_tts_default_refine_text_top_k,
-                "chat_tts_default_refine_text_repetition_penalty": self.chat_tts_default_refine_text_repetition_penalty,
-                "chat_tts_banned_voice_models": self.chat_tts_banned_voice_models,
-            },
-            "ParlerTTS": {
-                "parler_tts_model": self.parler_tts_model,
-                "parler_tts_device": self.parler_tts_device,
-                "parler_tts_compile": self.parler_tts_compile,
-                "parler_tts_compile_mode": self.parler_tts_compile_mode,
-                "parler_tts_max_length": self.parler_tts_max_length,
-                "parler_tts_default_temperature": self.parler_tts_default_temperature,
-                "parler_tts_banned_voice_models": self.parler_tts_banned_voice_models,
-            },
-            "StyleTTS2": {
-                "style_tts_2_default_alpha": self.style_tts_2_default_alpha,
-                "style_tts_2_default_beta": self.style_tts_2_default_beta,
-                "style_tts_2_default_diffusion_steps": self.style_tts_2_default_diffusion_steps,
-                "style_tts_2_default_embedding_scale": self.style_tts_2_default_embedding_scale,
-                "style_tts_2_default_t": self.style_tts_2_default_t,
-                "style_tts_2_banned_voice_models": self.style_tts_2_banned_voice_models,
-            },
-            "F5_TTS": {
-                "f5_tts_default_speed": self.f5_tts_default_speed,
-                "f5_tts_default_cfg_strength": self.f5_tts_default_cfg_strength,
-                "f5_tts_volume": self.f5_tts_volume,
-                "f5_tts_device": self.f5_tts_device,
-                "f5_tts_banned_voice_models": self.f5_tts_banned_voice_models,
-            },
-            "E2_TTS": {
-                "e2_tts_default_speed": self.e2_tts_default_speed,
-                "e2_tts_default_cfg_strength": self.e2_tts_default_cfg_strength,
-                "e2_tts_volume": self.e2_tts_volume,
-                "e2_tts_device": self.e2_tts_device,
-                "e2_tts_banned_voice_models": self.e2_tts_banned_voice_models,
-            },
-            "Oute_TTS": {
-                "oute_tts_default_temperature": self.oute_tts_default_temperature,
-                "oute_tts_default_repetition_penalty": self.oute_tts_default_repetition_penalty,
-                "oute_tts_max_length": self.oute_tts_max_length,
-                "oute_tts_volume": self.oute_tts_volume,
-                "oute_tts_banned_voice_models": self.oute_tts_banned_voice_models,
-            },
-            "GPT-SoVITS": {
-                "gpt_sovits_is_half": self.gpt_sovits_is_half,
-                "gpt_sovits_device": self.gpt_sovits_device,
-                "gpt_sovits_version": self.gpt_sovits_version,
-                "gpt_sovits_cut_type": self.gpt_sovits_cut_type,
-                "gpt_sovits_default_prompt_language": self.gpt_sovits_default_prompt_language,
-                "gpt_sovits_default_text_language": self.gpt_sovits_default_text_language,
-                "gpt_sovits_default_temperature": self.gpt_sovits_default_temperature,
-                "gpt_sovits_default_top_k": self.gpt_sovits_default_top_k,
-                "gpt_sovits_default_top_p": self.gpt_sovits_default_top_p,
-                "gpt_sovits_error_on_too_short_or_too_long_audio": self.gpt_sovits_error_on_too_short_or_too_long_audio,
-                "is_bigvgan_half": self.is_bigvgan_half,
-                "gpt_sovits_banned_voice_models": self.gpt_sovits_banned_voice_models,
-            },
-            "chatterbox": {
-                "chatterbox_device": self.chatterbox_device,
-                "chatterbox_default_temperature": self.chatterbox_default_temperature,
-                "chatterbox_default_exaggeration": self.chatterbox_default_exaggeration,
-                "chatterbox_default_cfgw": self.chatterbox_default_cfgw,
-                "chatterbox_max_tokens": self.chatterbox_max_tokens,
-                "chatterbox_watermark": self.chatterbox_watermark,
-                "chatterbox_batch_size": self.chatterbox_batch_size,
-                "chatterbox_batch_type": self.chatterbox_batch_type,
-                "chatterbox_volume": self.chatterbox_volume,
-                "chatterbox_banned_voice_models": self.chatterbox_banned_voice_models,
-            },
-            "chatterbox_api": {
-                "chatterbox_api_base_url": self.chatterbox_api_base_url,
-                "chatterbox_api_default_temperature": self.chatterbox_api_default_temperature,
-                "chatterbox_api_default_exaggeration": self.chatterbox_api_default_exaggeration,
-                "chatterbox_api_default_cfgw": self.chatterbox_api_default_cfgw,
-                "chatterbox_api_max_tokens": self.chatterbox_api_max_tokens,
-                "chatterbox_api_watermark": self.chatterbox_api_watermark,
-                "chatterbox_api_batch_size": self.chatterbox_api_batch_size,
-                "chatterbox_api_batch_type": self.chatterbox_api_batch_type,
-                "chatterbox_api_volume": self.chatterbox_api_volume,
-                "chatterbox_api_banned_voice_models": self.chatterbox_api_banned_voice_models,
-            },
-            "mira_tts": {
-                "mira_tts_tts_banned_voice_models": self.mira_tts_tts_banned_voice_models,
             },
             "Debugging": {
                 "debug_mode": self.debug_mode,
@@ -1234,6 +890,19 @@ class ConfigLoader:
                 "debug_ui_port": self.debug_ui_port,
             }
         }
+        for inference_engine_slug in language_models.LLM_Types:
+            if inference_engine_slug != "base_LLM" and inference_engine_slug != "default":
+                if len(language_models.LLM_Types[inference_engine_slug].default_settings) > 0:
+                    export_values[inference_engine_slug] = {}
+                    for setting_key in language_models.LLM_Types[inference_engine_slug].default_settings:
+                        export_values[inference_engine_slug][setting_key] = getattr(self, setting_key)
+        for tts_slug in tts.tts_Types:
+            if tts_slug != "base_TTS" and tts_slug != "default":
+                if len(tts.tts_Types[tts_slug].default_settings) > 0:
+                    export_values[tts_slug] = {}
+                    for setting_key in tts.tts_Types[tts_slug].default_settings:
+                        export_values[tts_slug][setting_key] = getattr(self, setting_key)
+        return export_values
     
     def default_types(self):
         typesobj = {}
@@ -1312,19 +981,20 @@ class ConfigLoader:
 
     def host_config_server(self, conversation_manager):
         self.conversation_manager = conversation_manager
-        self.config_server_app = LoglessFlask(__name__)
+        self.config_server_app = FastAPI()
 
-        @self.config_server_app.route('/config', methods=['GET'])
-        def get_config():
-            # export = self.export()
-            # print(export)
-            config = json.load(open(self.config_path))
-            return flask.jsonify(config)
+        current_dir = os.path.dirname(__file__)
+        self.config_server_app.mount("/static", StaticFiles(directory=os.path.join(current_dir, "static")), name="static")
         
-        @self.config_server_app.route('/config', methods=['POST'])
-        def post_config():
+        @self.config_server_app.get('/config')
+        def get_config(request: Request):
+            config = json.load(open(self.config_path))
+            return config
+        
+        @self.config_server_app.post('/config')
+        def post_config(request: Request):
             default_types = self.default_types()
-            data = flask.request.json
+            data = request.json()
             for key in data:
                 for sub_key in data[key]:
                     if type(getattr(self,sub_key)) is not type(data[key][sub_key]):
@@ -1358,21 +1028,18 @@ class ConfigLoader:
                 logging.info("Config updated and conversation manager not in a conversation. Restart the conversation manager to apply the new settings. - WILL BE FIXED IN FUTURE RELEASE")
             # return flask.jsonify(self.export())
             config = json.load(open(self.config_path))
-            return flask.jsonify(config)
+            return config
         
-        @self.config_server_app.route('/defaults', methods=['GET'])
-        def get_default():
-            print(self.default())
-            print(self.default_types())
-            print(self.descriptions())
-            return flask.jsonify({
+        @self.config_server_app.get('/defaults')
+        def get_default(request: Request):
+            return {
                 "defaultConfig": self.default(),
                 "types": self.default_types(),
                 "descriptions": self.descriptions()
-            })
+            }
         
-        @self.config_server_app.route('/voice-samples', methods=['GET'])
-        def get_voice_samples():
+        @self.config_server_app.get('/voice-samples')
+        def get_voice_samples(request: Request):
             if self.linux_mode:
                 voice_samples_relative_path = "../data/voice_samples"
             else:
@@ -1406,10 +1073,10 @@ class ConfigLoader:
                                         tts_settings = json.load(tts_f)
                                         voice_sample_obj["tts_settings"][tts_engine_dir] = tts_settings
                             voice_samples.append(voice_sample_obj)
-            return flask.jsonify(voice_samples)
+            return voice_samples
         
-        @self.config_server_app.route('/voice-models', methods=['GET'])
-        def get_voice_models():
+        @self.config_server_app.get('/voice-models')
+        def get_voice_models(request: Request):
             required_voice_models = self.conversation_manager.character_database.all_voice_formatted_models
             available_voice_models = self.conversation_manager.synthesizer.voices()
             voice_models = []
@@ -1419,10 +1086,10 @@ class ConfigLoader:
                     "available": voice_model in available_voice_models
                 }
                 voice_models.append(voice_model_obj)
-            return flask.jsonify(voice_models)
+            return voice_models
         
-        @self.config_server_app.route('/tts-engines', methods=['GET'])
-        def get_tts_engines():
+        @self.config_server_app.get('/tts-engines')
+        def get_tts_engines(request: Request):
             tts_engines = {}
             # engine_slugs = self.tts_engine
             for tts_engine_slug in tts.tts_Types:
@@ -1453,10 +1120,9 @@ class ConfigLoader:
                             "description": tts.tts_Types[tts_engine_slug].description,
                             "class_metadata": class_metadata,
                         }
-            return flask.jsonify(tts_engines)
+            return tts_engines
 
-        @self.config_server_app.route('/inference-engines', methods=['GET'])
-        def get_inference_engines():
+        def get_inference_engines_json():
             inference_engines = {}
             for inference_engine_slug in language_models.LLM_Types:
                 if inference_engine_slug != "base_LLM" and inference_engine_slug != "default":
@@ -1480,6 +1146,7 @@ class ConfigLoader:
                         logging.info("Class metadata for", inference_engine_slug, ":", class_metadata)
                         inference_engines[inference_engine_slug] = {
                             "inference_engine_name": inference_engine_slug,
+                            "inference_engine_title": language_models.LLM_Types[inference_engine_slug].inference_engine_title,
                             "tokenizer_slug": language_models.LLM_Types[inference_engine_slug].tokenizer_slug,
                             "default_settings": language_models.LLM_Types[inference_engine_slug].default_settings,
                             "settings_description": language_models.LLM_Types[inference_engine_slug].settings_description,
@@ -1489,108 +1156,116 @@ class ConfigLoader:
                             "description": language_models.LLM_Types[inference_engine_slug].description,
                             "class_metadata": class_metadata,
                         }
-            # tokenizers_list = []
-            # for tokenizer_type in tokenizers.Tokenizer_Types:
-            #     if tokenizer_type != "default":
-            #         tokenizers_list.append(tokenizer_type)
-            return flask.jsonify({
+            inference_engines = {
                 "default": language_models.default,
                 "loaded_tokenizer_slug": language_models.loaded_tokenizer_slug,
-                # "available_tokenizers": tokenizers_list,
                 "inference_engines": inference_engines,
-            })
-        
-        @self.config_server_app.route('/characters', methods=['GET'])
-        def get_characters():
-            return flask.jsonify(self.conversation_manager.character_database.characters)
+            }
+            return inference_engines
 
-        @self.config_server_app.route('/multiple-choice', methods=['GET'])
-        def get_multiple_choice():
-            return flask.jsonify(self.mulitple_choice())
-        @self.config_server_app.route('/banned-modules', methods=['GET'])
-        def get_banned_modules():
+        @self.config_server_app.get('/inference-engines')
+        def get_inference_engines(request: Request):
+            return get_inference_engines_json()
+        
+        @self.config_server_app.get('/characters')
+        def get_characters(request: Request):
+            return self.conversation_manager.character_database.characters
+
+        @self.config_server_app.get('/multiple-choice')
+        def get_multiple_choice(request: Request):
+            return self.mulitple_choice()
+        
+        @self.config_server_app.get('/banned-modules')
+        def get_banned_modules(request: Request):
             with open(os.path.join(os.path.dirname(__file__), "../src/banned_modules"), 'r') as f:
                 return f.read()
-        @self.config_server_app.route('/banned-modules', methods=['POST'])
-        def post_banned_modules():
-            data = flask.request.json
+            
+        @self.config_server_app.post('/banned-modules')
+        def post_banned_modules(request: Request):
+            data = request.json()
             banned_modules_string = "\n".join(data["banned_modules"])
             with open(os.path.join(os.path.dirname(__file__), "../src/banned_modules"), 'w') as f:
                 f.write(banned_modules_string)
-            return flask.jsonify({"status": "success", "message": "Banned modules updated."})
-        @self.config_server_app.route('/prompt-style', methods=['GET'])
-        def get_prompt_style(prompt_style_slug):
-            prompt_style_slug = flask.request.args.get('prompt_style_slug', default=None, type=str)
+            return {"status": "success", "message": "Banned modules updated."}
+        
+
+        @self.config_server_app.get('/prompt-style')
+        def get_prompt_style(request: Request):
+            prompt_style_slug = request.query_params.get('prompt_style_slug', default=None)
             if prompt_style_slug is None:
-                return flask.jsonify({"error": "No prompt style slug provided."}), 400
+                return JSONResponse(content={"error": "No prompt style slug provided."}, status_code=400)
             prompt_style_path = os.path.join(os.path.dirname(__file__), "../prompt_styles", f"{prompt_style_slug}.json")
             if not os.path.exists(prompt_style_path):
-                return flask.jsonify({"error": "Prompt style not found."}), 404
+                return JSONResponse(content={"error": "Prompt style not found."}, status_code=404)
             with open(prompt_style_path, 'r') as f:
                 return f.read()
-        @self.config_server_app.route('/prompt-style', methods=['POST'])
-        def post_prompt_style():
-            data = flask.request.json
+            
+        @self.config_server_app.post('/prompt-style')
+        def post_prompt_style(request: Request):
+            data = request.json()
             prompt_style_slug = data.get("prompt_style_slug")
             if not prompt_style_slug:
-                return flask.jsonify({"error": "No prompt style slug provided."}), 400
+                return JSONResponse(content={"error": "No prompt style slug provided."}, status_code=400)
             prompt_style_path = os.path.join(os.path.dirname(__file__), "../prompt_styles", f"{prompt_style_slug}.json")
             if not os.path.exists(prompt_style_path):
-                return flask.jsonify({"error": "Prompt style not found."}), 404
+                return JSONResponse(content={"error": "Prompt style not found."}, status_code=404)
             with open(prompt_style_path, 'w') as f:
                 json.dump(data, f, indent=4)
-            return flask.jsonify({"status": "success", "message": "Prompt style updated."})
-        @self.config_server_app.route('/behavior-style', methods=['GET'])
-        def get_behavior_style(behavior_style_slug):
-            behavior_style_slug = flask.request.args.get('behavior_style_slug', default=None, type=str)
+            return JSONResponse(content={"status": "success", "message": "Prompt style updated."}, status_code=200)
+        
+        
+        @self.config_server_app.get('/behavior-style')
+        def get_behavior_style(request: Request):
+            behavior_style_slug = request.query_params.get('behavior_style_slug', default=None)
             if behavior_style_slug is None:
-                return flask.jsonify({"error": "No behavior style slug provided."}), 400
+                return JSONResponse(content={"error": "No behavior style slug provided."}, status_code=400)
             behavior_style_path = os.path.join(os.path.dirname(__file__), "../behavior_styles", f"{behavior_style_slug}.json")
             if not os.path.exists(behavior_style_path):
-                return flask.jsonify({"error": "Behavior style not found."}), 404
+                return JSONResponse(content={"error": "Behavior style not found."}, status_code=404)
             with open(behavior_style_path, 'r') as f:
                 return f.read()
-        @self.config_server_app.route('/behavior-style', methods=['POST'])
-        def post_behavior_style():
-            data = flask.request.json
+
+        @self.config_server_app.post('/behavior-style')
+        def post_behavior_style(request: Request):
+            data = request.json()
             behavior_style_slug = data.get("behavior_style_slug")
             if not behavior_style_slug:
-                return flask.jsonify({"error": "No behavior style slug provided."}), 400
+                return JSONResponse(content={"error": "No behavior style slug provided."}, status_code=400)
             behavior_style_path = os.path.join(os.path.dirname(__file__), "../behavior_styles", f"{behavior_style_slug}.json")
             if not os.path.exists(behavior_style_path):
-                return flask.jsonify({"error": "Behavior style not found."}), 404
+                return JSONResponse(content={"error": "Behavior style not found."}, status_code=404)
             with open(behavior_style_path, 'w') as f:
                 json.dump(data, f, indent=4)
-            return flask.jsonify({"status": "success", "message": "Behavior style updated."})
-        @self.config_server_app.route('/add-voice-samples', methods=['POST'])
-        def add_voice_samples():
-            data = flask.request.json
+            return JSONResponse(content={"status": "success", "message": "Behavior style updated."}, status_code=200)
+        
+        @self.config_server_app.post('/add-voice-samples')
+        def add_voice_samples(request: Request):
+            data = request.json()
             voice_sample_base64 = data.get("voice_sample_base64")
             voice_sample_name = data.get("voice_sample_name")
             voice_sample_path = os.path.join(os.path.dirname(__file__), "../voice_samples", f"{voice_sample_name}.wav")
             if not voice_sample_base64 or not voice_sample_name:
-                return flask.jsonify({"error": "No voice sample base64 or name provided."}), 400
+                return JSONResponse(content={"error": "No voice sample base64 or name provided."}, status_code=400)
             try:
                 with open(voice_sample_path, 'wb') as f:
                     f.write(base64.b64decode(voice_sample_base64))
-                return flask.jsonify({"status": "success", "message": "Voice sample added."})
+                return JSONResponse(content={"status": "success", "message": "Voice sample added."}, status_code=200)
             except Exception as e:
                 logging.error(f"Error adding voice sample: {e}")
-                return flask.jsonify({"error": "Failed to add voice sample."}), 500
-        @self.config_server_app.route('/restart', methods=['POST'])
-        def restart():
+                return JSONResponse(content={"error": "Failed to add voice sample.", "details": str(e)}, status_code=500)
+
+        @self.config_server_app.post('/restart')
+        def restart(request: Request):
             logging.info("Restarting the config server...")
             try:
                 self.conversation_manager = restart_manager(self, self.conversation_manager)
-                return flask.jsonify({"status": "success", "message": "Config server is restarting."})
+                return JSONResponse(content={"status": "success", "message": "Config server is restarting."}, status_code=200)
             except Exception as e:
                 logging.error(f"Error restarting the config server: {e}")
-                return flask.jsonify({"error": "Failed to restart the config server.", "details": str(e)}), 500
-        @self.config_server_app.route('/', methods=['GET'])
-        def index(): # Return the index.html file
-            return flask.send_file(os.path.join(os.path.dirname(__file__), '../webconfigurator/index.html'))
-        @self.config_server_app.route('/log', methods=['GET'])
-        def log(): # Return the index.html file
+                return JSONResponse(content={"error": "Failed to restart the config server.", "details": str(e)}, status_code=500)
+        
+        @self.config_server_app.get('/log')
+        def log(request: Request):
             try:
                 last_500_lines = []
                 with open(os.path.join(os.path.dirname(__file__), "../logging.log"), 'r') as f:
@@ -1602,13 +1277,64 @@ class ConfigLoader:
                 return last_500_lines
             except Exception as e:
                 logging.error(f"Error reading log file: {e}")
-                return flask.jsonify({"error": "Failed to read log file.", "details": str(e)}), 500
-        @self.config_server_app.route('/jquery-3.7.1.min.js', methods=['GET'])
-        def jquery():
-            return flask.send_file(os.path.join(os.path.dirname(__file__), '../webconfigurator/jquery-3.7.1.min.js'))
-        @self.config_server_app.route('/logo.png', methods=['GET'])
-        def get_logo():
-            return flask.send_file(os.path.join(os.path.dirname(__file__), '../img/pantella_logo_github.png'))
-        logging.info(f"Running config server on port http://localhost:{self.config_port}/")
-        self.config_server_app.run(port=self.config_port, threaded=True)
+                return JSONResponse(content={"error": "Failed to read log file.", "details": str(e)}, status_code=500)
+            
+        @self.config_server_app.get('/logo.png')
+        def get_logo(request: Request):
+            return FileResponse(os.path.join(os.path.dirname(__file__), '../img/pantella_logo_github.png'))
+        
+        templates_dirs = [os.path.join(os.path.dirname(__file__), "templates")]
+        addons_path = os.path.join(os.path.dirname(__file__), "../", "addons/")
+        for addon_dir in os.listdir(addons_path):
+            addon_path = os.path.join(addons_path, addon_dir)
+            metadata_path = os.path.join(addon_path, "metadata.json")
+            if os.path.isdir(addon_path) and os.path.exists(metadata_path):
+                with open(metadata_path, 'r') as f:
+                    metadata = json.load(f)
+                    if metadata.get("enabled", False) == False:
+                        continue
+            else:
+                continue
+            statics_path = os.path.join(addon_path, "statics")
+            if os.path.isdir(addon_path) and os.path.exists(statics_path):
+                self.config_server_app.mount(f"/{addon_dir}/static", StaticFiles(directory=statics_path), name=f"{addon_dir}_static")
+            
+            templates_path = os.path.join(addon_path, "templates")
+            if os.path.isdir(addon_path) and os.path.exists(templates_path):
+                templates_dirs.append(templates_path)
+            current_templates = Jinja2Templates(directory=templates_dirs)
+            current_templates.env.add_extension(TryCatchExtension)
+            routes_path = os.path.join(addon_path, "routes.py")
+            if os.path.isdir(addon_path) and os.path.exists(routes_path):
+                module = importlib.import_module(f"addons.{addon_dir}.routes")
+                module.main(self.config_server_app, current_templates, self)
+                
+        templates = Jinja2Templates(directory=templates_dirs)
+        templates.env.add_extension(TryCatchExtension)
+        @self.config_server_app.get(f"/")
+        def root(request: Request):
+            inference_engines = get_inference_engines_json()
+            addons_loaded = []
+            addons_path = os.path.join(os.path.dirname(__file__), "../", "addons/")
+            for addon_dir in os.listdir(addons_path):
+                addon_path = os.path.join(addons_path, addon_dir)
+                metadata_path = os.path.join(addon_path, "metadata.json")
+                if os.path.isdir(addon_path) and os.path.exists(metadata_path):
+                    with open(metadata_path, 'r') as f:
+                        metadata = json.load(f)
+                        if metadata.get("enabled", False) == False:
+                            continue
+                        addons_loaded.append({
+                            "addon_slug": addon_dir,
+                            "name": metadata.get("name", addon_dir),
+                            "description": metadata.get("description", ""),
+                            "version": metadata.get("version", ""),
+                            "author": metadata.get("author", ""),
+                        })
+            return templates.TemplateResponse(f"./index.html", {"request": request, "inference_engines": inference_engines, "addons_loaded": addons_loaded})
+                
+
+        
+        # self.config_server_app.run(port=self.config_port, threaded=True)
+        uvicorn.run(self.config_server_app, host="0.0.0.0", port=self.config_port, log_level="info", access_log=False)
         logging.info(f"Config server running on port http://localhost:{self.config_port}/")

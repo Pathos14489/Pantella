@@ -42,10 +42,22 @@ logging.info("Imported required libraries in parler_tts.py")
 
 tts_slug = "parler_tts"
 default_settings = {
-    "temperature": 1.0,
+    "parler_tts_model": "parler-tts/parler-tts-mini-v1",
+    "parler_tts_device": "cpu",
+    "parler_tts_compile": False,
+    "parler_tts_compile_mode": "reduce-overhead", # reduce-overhead, default
+    "parler_tts_max_length": 50,
+    "parler_tts_default_temperature": 1.0,
+    "parler_tts_banned_voice_models": [],
 }
 settings_description = {
-    "temperature": "The temperature of the generated audio. Lower values result in more stable and consistent speech, while higher values introduce more variation and expressiveness but may lead to less coherent speech.",
+    "parler_tts_model": "The ParlerTTS model to use. This can be changed in config.json. The default is 'parler-tts/parler-tts-mini-v1', which is a small and fast model that can run on CPU. There are other models available on Huggingface that you can use, such as 'parler-tts/parler-tts-large-v1', which is a larger and higher quality model that requires a GPU to run.",
+    "parler_tts_device": "The device to run the ParlerTTS model on. This can be changed in config.json. The default is 'cpu', but if you have a compatible NVIDIA GPU, you can set this to 'cuda' to significantly speed up synthesis times.",
+    "parler_tts_compile": "Whether to compile the ParlerTTS model using torch.compile. This can be changed in config.json. The default is False, but setting this to True can significantly speed up synthesis times, especially on CPU. However, it can also cause issues with some models and configurations, so use with caution.",
+    "parler_tts_compile_mode": "The mode to use when compiling the ParlerTTS model. This can be changed in config.json. The default is 'reduce-overhead', which is a good starting point for most models and configurations. If you experience issues with the compiled model, you can try setting this to 'default', which uses the default compilation mode.",
+    "parler_tts_max_length": "The maximum length of the input text for the ParlerTTS model. This can be changed in config.json. The default is 50, which should be sufficient for most use cases. However, if you want to synthesize longer sentences, you may need to increase this value. Keep in mind that increasing this value can also increase synthesis times and memory usage.",
+    "parler_tts_default_temperature": "The temperature of the generated audio. Lower values result in more stable and consistent speech, while higher values introduce more variation and expressiveness but may lead to less coherent speech.",
+    "parler_tts_banned_voice_models": "A list of voice models to ban from being used by ParlerTTS. This can be changed in config.json. This is useful if you have a voice model that causes issues with ParlerTTS, like bad quality."
 }
 options = {}
 settings = {}

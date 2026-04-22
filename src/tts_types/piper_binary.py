@@ -7,8 +7,16 @@ import random
 logging.info("Imported required libraries in piper_binary.py")
 
 tts_slug = "piper_binary"
-default_settings = {}
-settings_description = {}
+default_settings = {
+    "piper_binary_dir": ".\\piper\\",
+    "piper_models_dir": ".\\data\\models\\piper\\",
+    "piper_tts_banned_voice_models": [],
+}
+settings_description = {
+    "piper_binary_dir": "The directory where the Piper binary is located. This can be changed in config.json. The default is '.\\piper\\', which means that the Piper binary should be located in a folder called 'piper' in the same directory as Pantella.",
+    "piper_models_dir": "The directory where the Piper models are located. This can be changed in config.json. The default is '.\\data\\models\\piper\\', which means that the Piper models should be located in a folder called 'piper' inside the 'models' folder in the 'data' directory.",
+    "piper_tts_banned_voice_models": "A list of voice models to ban from being used by PiperTTS. This can be changed in config.json. This is useful if you have a voice model that causes issues with PiperTTS, such as extremely long synthesis times or crashes."
+}
 options = {}
 settings = {}
 loaded = False

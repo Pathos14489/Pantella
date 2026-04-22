@@ -18,6 +18,7 @@ except Exception as e:
     logging.warn(f"Failed to load anthropic, so anthropic cannot be used! Please check that you have installed it correctly. Unless you're not using anthropic, in which case you can ignore this warning.")
 
 inference_engine_name = "anthropic_api"
+inference_engine_title = "Anthropic API"
 tokenizer_slug = "tiktoken" # TODO: Replace with the anthropic tokenizer for better token accuracy. Not important because this inference engine is effectively useless for Pantella, but I'm a completionist.
 default_settings = {
     "anthropic_model": "claude-opus-4-20250514",

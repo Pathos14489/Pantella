@@ -14,16 +14,8 @@ import random
 logging.info("Imported required libraries in chatterbox_api.py")
 
 tts_slug = "chatterbox_api"
-default_settings = {
-    "exaggeration": 0.5,
-    "temperature": 0.5,
-    "cfgw": 0.8,
-}
-settings_description = {
-    "exaggeration": "The default settings (0.5) work well for most prompts. Higher exaggeration tends to speed up speech, reducing cfg_weight helps compensate with slower, more deliberate pacing.",
-    "temperature": "Temperature of the voice, higher values make the voice sound more random and less predictable. Can make voices less robotic and more human-like, but can also make them sound more unnatural and have glitches/artifacts.",
-    "cfgw": "If the reference speaker has a fast speaking style, lowering cfg_weight to around 0.3 can improve pacing.",
-}
+default_settings = {}
+settings_description = {}
 options = {}
 settings = {}
 loaded = False
@@ -88,7 +80,7 @@ class Synthesizer(base_tts.base_Synthesizer):
     @utils.time_it
     def _synthesize(self, voiceline, voice_model, voiceline_location, settings, aggro=0):
         """Synthesize a line using the Chatterbox API"""
-        global tts_slug, default_settings
+        global tts_slug
         speaker_wav_path = self.get_speaker_wav_path(voice_model)
         speaker_wav_data = open(speaker_wav_path, 'rb').read()
         logging.output(f'{self.tts_slug} - synthesizing {voiceline} with voice model "{voice_model}"...')

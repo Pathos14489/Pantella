@@ -404,89 +404,19 @@
                 <h3>Inference Engine:</h3>
             </label>
             <select id="llm_engine">
-                <option value="openai">OpenAI Compatible API</option>
-                <option value="llama_cpp_python">Llama CPP Python</option>
-                <option value="transformers">Transformers</option>
-                <option value="custom">Custom</option>
-                <option value="advanced">Advanced</option>
+                {% for inference_engine in inference_engines.inference_engines %}
+                    <option value="{{ inference_engine }}" {% if inference_engines.inference_engines[inference_engine].loaded %}selected{% endif %}>
+                        {{ inference_engines.inference_engines[inference_engine].inference_engine_title }}
+                    </option>
+                {% endfor %}
             </select>
-            <div id="open-ai-api-editor">
-                <h2>OpenAI API Configuration</h2>
-                <div class="container">
-                    <div class="interface-part">
-                        <label for="openai_api_base_url">
-                            <h4>OpenAI API Base URL:</h4>
-                        </label>
-                        <input type="text" id="openai_api_base_url" placeholder="Enter OpenAI API base URL here" value="https://api.openai.com/v1/">
-                    </div>
-                    <div class="interface-part">
-                        <label for="openai_api_key">
-                            <h4>OpenAI API Key:</h4>
-                        </label>
-                        <input type="text" id="openai_api_key" placeholder="Enter OpenAI API key here" value="">
-                    </div>
-                    <div class="interface-part">
-                        <label for="openai_model">
-                            <h4>OpenAI Model:</h4>
-                        </label>
-                        <select id="openai_model">
-                            <option value="" disabled selected>Select a model</option>
-                            <option value="gpt-3.5-turbo">GPT-3.5 Turbo</option>
-                        </select>
-                    </div>
-                    <div class="interface-part">
-                        <label for="openai_chat_type">
-                            <h4>OpenAI Chat Type:</h4>
-                        </label>
-                        <select id="openai_chat_type">
-                            <option value="chat">Chat Completion</option>
-                            <option value="text">Text Completion</option>
-                        </select>
-                    </div>
-                </div>
-            </div>
-            <div id="llama-cpp-python-editor">
-                <h2>Llama CPP Python Configuration</h2>
-                <div class="container">
-                    <div class="interface-part">
-                        <label for="llama_cpp_model_path">
-                            <h4>Llama CPP Model Path:</h4>
-                        </label>
-                        <input type="text" id="llama_cpp_model_path" placeholder="Enter Llama CPP model path here" value="/path/to/llama/model">
-                    </div>
-                    <div class="interface-part">
-                        <label for="llama_cpp_context_size">
-                            <h4>Context Size:</h4>
-                        </label>
-                        <input type="number" id="llama_cpp_context_size" placeholder="Enter context size here" value="2048">
-                    </div>
-                </div>
-            </div>
-            <div id="transformers-editor">
-                <h2>Transformers Configuration</h2>
-                <div class="container">
-                    <div class="interface-part">
-                        <label for="transformers_model_name">
-                            <h4>Transformers Model Name:</h4>
-                        </label>
-                        <input type="text" id="transformers_model_name" placeholder="Enter Transformers model name here" value="gpt2">
-                    </div>
-                    <div class="interface-part">
-                        <label for="transformers_tokenizer_name">
-                            <h4>Transformers Tokenizer Name:</h4>
-                        </label>
-                        <input type="text" id="transformers_tokenizer_name" placeholder="Enter Transformers tokenizer name here" value="gpt2">
-                    </div>
-                </div>
-            </div>
-            <div id="custom-llm-editor">
-                <h2>Custom LLM Configuration</h2>
-                <p>This is a placeholder for custom LLM configuration. It will be implemented later.</p>
-            </div>
-            <div id="advanced-llm-editor">
-                <h2>Advanced LLM Configuration</h2>
-                <p>This is a placeholder for advanced LLM configuration. It will be implemented later.</p>
-            </div>
+            {% for inference_engine in inference_engines.inference_engines %}
+            {% try %}
+            {% include './inference_engines/' + inference_engine + '/editor.html' %}
+            {% endtry %}
+            {% endfor %}
+            
+
             <div id="thought-process-editor">
                 <h2>Thought Process Configuration</h2>
                 <p>This is a placeholder for thought process configuration. It will be implemented later.</p>
@@ -1310,11 +1240,11 @@
             type: "GET",
             async: false
         }).responseText;
-        var inferenceEngines = $.ajax({
-            url: "/inference-engines",
-            type: "GET",
-            async: false
-        }).responseText;
+        // var inferenceEngines = $.ajax({
+        //     url: "/inference-engines",
+        //     type: "GET",
+        //     async: false
+        // }).responseText;
         default_settings = JSON.parse(default_settings);
         settings = JSON.parse(settings);
         multipleChoice = JSON.parse(multipleChoice);
@@ -1322,7 +1252,7 @@
         voiceModels = JSON.parse(voiceModels);
         ttsEngines = JSON.parse(ttsEngines);
         characters = JSON.parse(characters);
-        inferenceEngines = JSON.parse(inferenceEngines);
+        // inferenceEngines = JSON.parse(inferenceEngines);
         
         document.getElementById("character_count").textContent = characters.length;
         // Populate character list
@@ -1543,123 +1473,123 @@
         
         const inferenceEditorTabButtons = document.getElementById("inference_engine_editor_tab_buttons");
         const inferenceEditorTabs = document.getElementById("inference_engine_editor_tabs");
-        for (inference_engine in inferenceEngines.inference_engines){
-            let inferenceSettings = inferenceEngines.inference_engines[inference_engine];
-            let tabContent = document.createElement("div");
-            tabContent.id = "inference_" + inference_engine + "_settings";
-            tabContent.className = "tab_content";
-            let header = document.createElement("h3");
-            header.textContent = `${inference_engine} - Settings`;
-            tabContent.appendChild(header);
-            tabContent.appendChild(document.createElement("br"));
-            let description = document.createElement("p");
-            description.textContent = inferenceSettings.description || "No description available for this inference engine.";
-            tabContent.appendChild(description);
-            tabContent.appendChild(document.createElement("br"));
-            for (property in inferenceSettings.default_settings) {
-                let defaultSetting = inferenceSettings.default_settings[property];
-                let settingsDescription = inferenceSettings.settings_description[property]
-                let settingOptions = inferenceSettings.options[property];
-                console.log("Processing property:", property, "with value:", defaultSetting);
-                const label = document.createElement("label");
-                label.innerHTML = `<h4>${property}:</h4>`;
-                let exampleOptions = {
-                    "openai_completions_type": [
-                        {
-                            "name": "Text Completions",
-                            "value": "text",
-                            "description": "Use text completions for the OpenAI API. This is the default and recommended option for most models.",
-                            "default": true,
-                            "disabled": false
-                        },
-                        {
-                            "name": "Chat Completions",
-                            "value": "chat",
-                            "description": "Use chat completions for the OpenAI API. This is recommended for models that support chat completions, such as GPT-3.5 Turbo and GPT-4.",
-                            "default": false,
-                            "disabled": false
-                        }
-                    ]
-                }
-                let input;
-                if (settingOptions && settingOptions.length > 0){
-                    console.log("Property has options:", property, settingOptions);
-                    input = document.createElement("select");
-                    input.id = `inference_${inference_engine}_${property}`;
-                    settingOptions.forEach(option => {
-                        const opt = document.createElement("option");
-                        opt.value = option.value;
-                        opt.textContent = option.name;
-                        if (option.default) {
-                            opt.selected = true;
-                        }
-                        if (option.disabled) {
-                            opt.disabled = true;
-                        }
-                        if (option.description) {
-                            opt.title = option.description; // Add description as tooltip
-                        }
-                        input.appendChild(opt);
-                    });
-                }else{
-                    input = document.createElement("input");
-                    input.id = `inference_${inference_engine}_${property}`;
-                    switch (typeof defaultSetting) {
-                        case "boolean":
-                            console.log("Property is boolean:", property, defaultSetting);
-                            input.type = "checkbox";
-                            input.checked = defaultSetting;
-                            break;
-                        case "number":
-                            console.log("Property is number:", property, defaultSetting);
-                            input.type = "number";
-                            input.value = defaultSetting;
-                            break;
-                        case "string":
-                            console.log("Property is string:", property, defaultSetting);
-                            input.type = "text";
-                            input.value = defaultSetting;
-                            break;
-                        default:
-                            console.log("Property is of unknown type:", property, defaultSetting);
-                            input.type = "text";
-                            input.value = JSON.stringify(defaultSetting);
+        {% for inference_engine in inference_engines.inference_engines %}
+        {% try %}
+        {% include './inference_engines/' + inference_engine + '/settings.js' %}
+        {% catch %}
+        let {{inference_engine}}_inferenceSettings = {{inference_engines.inference_engines[inference_engine]|tojson}};
+        let {{inference_engine}}_tabContent = document.createElement("div");
+        {{inference_engine}}_tabContent.id = "inference_{{inference_engine}}_settings";
+        {{inference_engine}}_tabContent.className = "tab_content";
+        let {{inference_engine}}_header = document.createElement("h3");
+        {{inference_engine}}_header.textContent = `{{inference_engine}} - Settings`;
+        {{inference_engine}}_tabContent.appendChild({{inference_engine}}_header);
+        {{inference_engine}}_tabContent.appendChild(document.createElement("br"));
+        let {{inference_engine}}_description = document.createElement("p");
+        {{inference_engine}}_description.textContent = {{inference_engine}}_inferenceSettings.description || "No description available for this inference engine.";
+        {{inference_engine}}_tabContent.appendChild({{inference_engine}}_description);
+        {{inference_engine}}_tabContent.appendChild(document.createElement("br"));
+        for (property in {{inference_engine}}_inferenceSettings.default_settings) {
+            let defaultSetting = {{inference_engine}}_inferenceSettings.default_settings[property];
+            let settingsDescription = {{inference_engine}}_inferenceSettings.settings_description[property]
+            let settingOptions = {{inference_engine}}_inferenceSettings.options[property];
+            console.log("Processing property:", property, "with value:", defaultSetting);
+            const label = document.createElement("label");
+            label.innerHTML = `<h4>${property}:</h4>`;
+            let exampleOptions = {
+                "openai_completions_type": [
+                    {
+                        "name": "Text Completions",
+                        "value": "text",
+                        "description": "Use text completions for the OpenAI API. This is the default and recommended option for most models.",
+                        "default": true,
+                        "disabled": false
+                    },
+                    {
+                        "name": "Chat Completions",
+                        "value": "chat",
+                        "description": "Use chat completions for the OpenAI API. This is recommended for models that support chat completions, such as GPT-3.5 Turbo and GPT-4.",
+                        "default": false,
+                        "disabled": false
                     }
-                    input.placeholder = `Enter ${property} here`;
-                }
-                tabContent.appendChild(label);
-                if (settingsDescription.length > 0) {
-                    let descriptionText = document.createElement("p");
-                    descriptionText.textContent = settingsDescription;
-                    tabContent.appendChild(descriptionText);
-                }
-                tabContent.appendChild(input);
-                if (typeof defaultSetting == "boolean") {
-                    tabContent.appendChild(document.createElement("br"));
-                }
+                ]
             }
-            inferenceEditorTabs.appendChild(tabContent);
-            let button = document.createElement("button");
-            button.id = `inference_${inference_engine}_settings_button`;
-            button.textContent = `${inference_engine}`;
-            // if (!inferenceSettings.loaded){
-            //     button.className = "hidden"; // Initially hidden, will be shown if inference engine is available
-            // }
-            // button.disabled = !inferenceSettings.loaded; // Disable button if inference engine is not available
-            button.onclick = function() {
-                let allTabs = inferenceEditorTabs.querySelectorAll(".tab_content");
-                allTabs.forEach(tab => tab.classList.remove("active"));
-                let allButtons = inferenceEditorTabButtons.querySelectorAll("button");
-                allButtons.forEach(btn => btn.classList.remove("active"));
-                tabContent.classList.add("active");
-                this.classList.add("active");
-            };
-            inferenceEditorTabButtons.appendChild(button);
-            if (inferenceSettings.loaded) {
-                tabContent.classList.add("active");
-                button.classList.add("active");
+            let input;
+            if (settingOptions && settingOptions.length > 0){
+                console.log("Property has options:", property, settingOptions);
+                input = document.createElement("select");
+                input.id = `inference_{{inference_engine}}__${property}`;
+                settingOptions.forEach(option => {
+                    const opt = document.createElement("option");
+                    opt.value = option.value;
+                    opt.textContent = option.name;
+                    if (option.default) {
+                        opt.selected = true;
+                    }
+                    if (option.disabled) {
+                        opt.disabled = true;
+                    }
+                    if (option.description) {
+                        opt.title = option.description; // Add description as tooltip
+                    }
+                    input.appendChild(opt);
+                });
+            }else{
+                input = document.createElement("input");
+                input.id = `inference_{{inference_engine}}__${property}`;
+                switch (typeof defaultSetting) {
+                    case "boolean":
+                        console.log("Property is boolean:", property, defaultSetting);
+                        input.type = "checkbox";
+                        input.checked = defaultSetting;
+                        break;
+                    case "number":
+                        console.log("Property is number:", property, defaultSetting);
+                        input.type = "number";
+                        input.value = defaultSetting;
+                        break;
+                    case "string":
+                        console.log("Property is string:", property, defaultSetting);
+                        input.type = "text";
+                        input.value = defaultSetting;
+                        break;
+                    default:
+                        console.log("Property is of unknown type:", property, defaultSetting);
+                        input.type = "text";
+                        input.value = JSON.stringify(defaultSetting);
+                }
+                input.placeholder = `Enter ${property} here`;
+            }
+            {{inference_engine}}_tabContent.appendChild(label);
+            if (settingsDescription.length > 0) {
+                let descriptionText = document.createElement("p");
+                descriptionText.textContent = settingsDescription;
+                {{inference_engine}}_tabContent.appendChild(descriptionText);
+            }
+            {{inference_engine}}_tabContent.appendChild(input);
+            if (typeof defaultSetting == "boolean") {
+                {{inference_engine}}_tabContent.appendChild(document.createElement("br"));
             }
         }
+        inferenceEditorTabs.appendChild({{inference_engine}}_tabContent);
+        let {{inference_engine}}_button = document.createElement("button");
+        {{inference_engine}}_button.id = `inference_{{inference_engine}}__settings_button`;
+        {{inference_engine}}_button.textContent = `{{inference_engine}}`;
+        {{inference_engine}}_button.onclick = function() {
+            let allTabs = inferenceEditorTabs.querySelectorAll(".tab_content");
+            allTabs.forEach(tab => tab.classList.remove("active"));
+            let allButtons = inferenceEditorTabButtons.querySelectorAll("button");
+            allButtons.forEach(btn => btn.classList.remove("active"));
+            {{inference_engine}}_tabContent.classList.add("active");
+            this.classList.add("active");
+        };
+        inferenceEditorTabButtons.appendChild({{inference_engine}}_button);
+        if ({{inference_engine}}_inferenceSettings.loaded) {
+            {{inference_engine}}_tabContent.classList.add("active");
+            {{inference_engine}}_button.classList.add("active");
+        }
+        {% endtry %}
+        {% endfor %}
         
         
         const voiceSampleName = document.getElementById("voice_sample_name");
@@ -2097,6 +2027,13 @@
             });
         }, 1000);
 
+        {% for addon in addons_loaded %}
+        {% try %}
+        {% include './' + addon["addon_slug"] + '/script.js' %}
+        {% catch %}
+        // No script for addon {{addon["addon_slug"]}}
+        {% endtry %}
+        {% endfor %}
     </script>
     <style>
         #logo {

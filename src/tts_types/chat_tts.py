@@ -59,24 +59,28 @@ def format_text(text: str) -> str:
 
 tts_slug = "chat_tts"
 default_settings = {
-    "infer_code_prompt": "[speed_3]",
-    "infer_code_temperature": 0.3,
-    "infer_code_repetition_penalty": 1.05,
-    "refine_text_prompt": "",
-    "refine_text_temperature": 0.7,
-    "refine_text_top_P": 0.7,
-    "refine_text_top_K": 20,
-    "refine_text_repetition_penalty": 1.0
+    "ensure_all_voice_samples_have_inference_settings": True,
+    "chat_tts_default_infer_code_prompt": "[speed_3]",
+    "chat_tts_default_infer_code_temperature": 0.3,
+    "chat_tts_default_infer_code_repetition_penalty": 1.05,
+    "chat_tts_default_refine_text_prompt": "",
+    "chat_tts_default_refine_text_temperature": 0.7,
+    "chat_tts_default_refine_text_top_p": 0.7,
+    "chat_tts_default_refine_text_top_k": 20,
+    "chat_tts_default_refine_text_repetition_penalty": 1.0,
+    "chat_tts_banned_voice_models": [],
 }
 settings_description = {
-    "infer_code_prompt": "The prompt to use for the infer code. Made by combining the following options together: [uv_break],[v_break],[lbreak],[llbreak],[undefine],[laugh],[spk_emb],[empty_spk],[music],[pure],[break_0],[break_1],[break_2],[break_3],[break_4],[break_5],[break_6],[break_7],[laugh_0],[laugh_1],[laugh_2],[oral_0],[oral_1],[oral_2],[oral_3],[oral_4],[oral_5],[oral_6],[oral_7],[oral_8],[oral_9],[speed_0],[speed_1],[speed_2],[speed_3],[speed_4],[speed_5],[speed_6],[speed_7],[speed_8],[speed_9]",
-    "infer_code_temperature": "The temperature to use for the infer code. Lower values make the output more deterministic, higher values make it more random.",
-    "infer_code_repetition_penalty": "The repetition penalty to use for the infer code. Higher values make the output less repetitive.",
-    "refine_text_prompt": "The prompt to use for the refine text. Made by combining the following options together: [uv_break],[v_break],[lbreak],[llbreak],[undefine],[laugh],[spk_emb],[empty_spk],[music],[pure],[break_0],[break_1],[break_2],[break_3],[break_4],[break_5],[break_6],[break_7],[laugh_0],[laugh_1],[laugh_2],[oral_0],[oral_1],[oral_2],[oral_3],[oral_4],[oral_5],[oral_6],[oral_7],[oral_8],[oral_9]",
-    "refine_text_temperature": "The temperature to use for the refine text. Lower values make the output more deterministic, higher values make it more random.",
-    "refine_text_top_P": "The top P to use for the refine text. Lower values make the output more deterministic, higher values make it more random.",
-    "refine_text_top_K": "The top K to use for the refine text. Lower values make the output more deterministic, higher values make it more random.",
-    "refine_text_repetition_penalty": "The repetition penalty to use for the refine text. Higher values make the output less repetitive."
+    "ensure_all_voice_samples_have_inference_settings": "Whether to ensure that all voice samples have inference settings. If True, the synthesizer will check if each voice sample has inference settings and if not, it will generate them using the default infer code prompt and temperature. This can help improve the quality of the synthesized speech, but it can also increase the time it takes to initialize the synthesizer.",
+    "chat_tts_default_infer_code_prompt": "The prompt to use for the infer code. Made by combining the following options together: [uv_break],[v_break],[lbreak],[llbreak],[undefine],[laugh],[spk_emb],[empty_spk],[music],[pure],[break_0],[break_1],[break_2],[break_3],[break_4],[break_5],[break_6],[break_7],[laugh_0],[laugh_1],[laugh_2],[oral_0],[oral_1],[oral_2],[oral_3],[oral_4],[oral_5],[oral_6],[oral_7],[oral_8],[oral_9],[speed_0],[speed_1],[speed_2],[speed_3],[speed_4],[speed_5],[speed_6],[speed_7],[speed_8],[speed_9]",
+    "chat_tts_default_infer_code_temperature": "The temperature to use for the infer code. Lower values make the output more deterministic, higher values make it more random.",
+    "chat_tts_default_infer_code_repetition_penalty": "The repetition penalty to use for the infer code. Higher values make the output less repetitive.",
+    "chat_tts_default_refine_text_prompt": "The prompt to use for the refine text. Made by combining the following options together: [uv_break],[v_break],[lbreak],[llbreak],[undefine],[laugh],[spk_emb],[empty_spk],[music],[pure],[break_0],[break_1],[break_2],[break_3],[break_4],[break_5],[break_6],[break_7],[laugh_0],[laugh_1],[laugh_2],[oral_0],[oral_1],[oral_2],[oral_3],[oral_4],[oral_5],[oral_6],[oral_7],[oral_8],[oral_9]",
+    "chat_tts_default_refine_text_temperature": "The temperature to use for the refine text. Lower values make the output more deterministic, higher values make it more random.",
+    "chat_tts_default_refine_text_top_p": "The top P to use for the refine text. Lower values make the output more deterministic, higher values make it more random.",
+    "chat_tts_default_refine_text_top_k": "The top K to use for the refine text. Lower values make the output more deterministic, higher values make it more random.",
+    "chat_tts_default_refine_text_repetition_penalty": "The repetition penalty to use for the refine text. Higher values make the output less repetitive.",
+    "chat_tts_banned_voice_models": "A list of voice models to ban from being used by ChatTTS. This can be changed in config.json. This is useful if you have a voice model that causes issues with ChatTTS, such as extremely long synthesis times or crashes."
 }
 options = {}
 settings = {}

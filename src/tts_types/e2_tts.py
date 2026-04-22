@@ -34,12 +34,18 @@ logging.info("Imported required libraries in e2_tts.py")
 
 tts_slug = "e2_tts"
 default_settings = {
-    "speed": 1.0,
-    "cfg_strength": 2.0,
+    "e2_tts_default_speed": 1.0,
+    "e2_tts_default_cfg_strength": 2.0,
+    "e2_tts_volume": 1.5,
+    "e2_tts_device": "cuda",
+    "e2_tts_banned_voice_models": [],
 }
 settings_description = {
-    "speed": "The speed of the generated audio. 1.0 is normal speed, 0.5 is half speed, 2.0 is double speed.",
-    "cfg_strength": "The CFG strength of the generated audio. 2.0 is normal CFG strength, 1.0 is low CFG strength, 3.0 is high CFG strength.",
+    "e2_tts_default_speed": "The speed of the generated audio. 1.0 is normal speed, 0.5 is half speed, 2.0 is double speed.",
+    "e2_tts_default_cfg_strength": "The CFG strength of the generated audio. 2.0 is normal CFG strength, 1.0 is low CFG strength, 3.0 is high CFG strength.",
+    "e2_tts_volume": "The volume of the generated audio. 1.0 is normal volume, 0.5 is half volume, 2.0 is double volume.",
+    "e2_tts_device": "The device to use for inference. 'cuda' for GPU, 'cpu' for CPU.",
+    "e2_tts_banned_voice_models": "A list of voice models to ban from being used by E2-TTS. This can be changed in config.json. This is useful if you have a voice model that causes issues with E2-TTS, such as extremely long synthesis times or crashes.",
 }
 options = {}
 settings = {}

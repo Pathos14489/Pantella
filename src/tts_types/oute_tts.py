@@ -17,12 +17,18 @@ logging.info("Imported required libraries in outetts.py")
 
 tts_slug = "oute_tts"
 default_settings = {
-    "temperature": 0.1,
-    "repetition_penalty": 1.1,
+    "oute_tts_default_temperature": 0.1,
+    "oute_tts_default_repetition_penalty": 1.1,
+    "oute_tts_max_length": 4096,
+    "oute_tts_volume": 1.5,
+    "oute_tts_banned_voice_models": [],
 }
 settings_description = {
-    "temperature": "The temperature of the generated audio. Lower values result in more stable and consistent speech, while higher values introduce more variation and expressiveness but may lead to less coherent speech.",
-    "repetition_penalty": "The repetition penalty of the generated audio.",
+    "oute_tts_default_temperature": "The temperature of the generated audio. Lower values result in more stable and consistent speech, while higher values introduce more variation and expressiveness but may lead to less coherent speech.",
+    "oute_tts_default_repetition_penalty": "The repetition penalty of the generated audio.",
+    "oute_tts_max_length": "The maximum length of the generated audio.",
+    "oute_tts_volume": "The volume of the generated audio.",
+    "oute_tts_banned_voice_models": "A list of voice models to ban from being used by OuteTTS. This can be changed in config.json. This is useful if you have a voice model that causes issues with OuteTTS, such as extremely long synthesis times or crashes."
 }
 options = {}
 settings = {}

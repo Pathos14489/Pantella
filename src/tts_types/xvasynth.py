@@ -13,6 +13,7 @@ import requests
 import threading
 import traceback
 import random
+import sys
 logging.info("Imported required libraries in xVASynth TTS")
 
 
@@ -300,6 +301,10 @@ class Synthesizer(base_tts.base_Synthesizer):
         self.xvasynth_path = self.config.xvasynth_path
         self.process_device = self.config.xvasynth_process_device
         self.times_checked_xvasynth = 0
+
+        if self.config.linux_mode:
+            import sklearn.neighbors._base
+            sys.modules['sklearn.neighbors.base'] = sklearn.neighbors._base
         
         if self.is_running():
             # check if voices are available
@@ -406,11 +411,11 @@ class Synthesizer(base_tts.base_Synthesizer):
             else:
                 # subprocess.run(command, shell=False, cwd=self.xvasynth_path)
                 if self.process_device == "cpu":
-                    command = f'CUDA_VISIBLE_DEVICES= python3 {self.xvasynth_path}resources/app/server.py'
+                    command = f'cd {self.xvasynth_path} && CUDA_VISIBLE_DEVICES= python3 {self.xvasynth_path}resources/app/server.py'
                     logging.info(f'Running xVASynth server with command: {command}')
                     threading.Thread(target=subprocess.run, args=(command,), kwargs={'shell': True, 'cwd': self.xvasynth_path}).start()
                 else:
-                    command = f'python3 {self.xvasynth_path}resources/app/server.py'
+                    command = f'cd {self.xvasynth_path} && python3 {self.xvasynth_path}resources/app/server.py'
                     logging.info(f'Running xVASynth server with command: {command}')
                     threading.Thread(target=subprocess.run, args=(command,), kwargs={'shell': True, 'cwd': self.xvasynth_path}).start()
         except Exception as e:

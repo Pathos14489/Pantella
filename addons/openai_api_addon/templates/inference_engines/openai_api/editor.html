@@ -1,0 +1,35 @@
+<div id="open-ai-api-editor">
+    <h2>OpenAI API Configuration</h2>
+    <div class="container">
+        <div class="interface-part">
+            <label for="openai_api_base_url">
+                <h4>OpenAI API Base URL:</h4>
+            </label>
+            <input type="text" id="openai_api_base_url" placeholder="Enter OpenAI API base URL here" value="https://api.openai.com/v1/">
+        </div>
+        <div class="interface-part">
+            <label for="openai_api_key">
+                <h4>OpenAI API Key:</h4>
+            </label>
+            <input type="text" id="openai_api_key" placeholder="Enter OpenAI API key here" value="">
+        </div>
+        <div class="interface-part">
+            <label for="openai_model">
+                <h4>OpenAI Model:</h4>
+            </label>
+            <select id="openai_model">
+                <option value="" disabled selected>Select a model</option>
+                <option value="gpt-3.5-turbo">GPT-3.5 Turbo</option>
+            </select>
+        </div>
+        <div class="interface-part">
+            <label for="openai_chat_type">
+                <h4>OpenAI Chat Type:</h4>
+            </label>
+            <select id="openai_chat_type">
+                <option value="chat">Chat Completion</option>
+                <option value="text">Text Completion</option>
+            </select>
+        </div>
+    </div>
+</div>

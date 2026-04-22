@@ -10,7 +10,6 @@ try:
         AutoModelForMaskedLM,
         AutoTokenizer
     )
-    import LangSegment.LangSegment
     import librosa
     from huggingface_hub import hf_hub_download
     from libraries.gpt_sovits.module.models import SynthesizerTrn
@@ -22,7 +21,6 @@ try:
     from libraries.gpt_sovits.feature_extractor.cnhubert import CNHubert
     import random
     import os
-    import json
     import time
     import traceback
     import re
@@ -227,18 +225,32 @@ logging.info("Imported required libraries in GPT-SoVITS.py")
 
 tts_slug = "GPT-SoVITS"
 default_settings = {
-    "prompt_language": "en",
-    "text_language": "en",
-    "temperature": 1.0,
-    "top_k": 20,
-    "top_p": 1.0,
+    "gpt_sovits_is_half": True,
+    "gpt_sovits_device": "cuda",
+    "gpt_sovits_version": "v2",
+    "gpt_sovits_cut_type": "none",
+    "gpt_sovits_default_prompt_language": "en",
+    "gpt_sovits_default_text_language": "en",
+    "gpt_sovits_default_temperature": 1.0,
+    "gpt_sovits_default_top_k": 20,
+    "gpt_sovits_default_top_p": 1.0,
+    "gpt_sovits_error_on_too_short_or_too_long_audio": True,
+    "is_bigvgan_half": True,
+    "gpt_sovits_banned_voice_models": [],
 }
 settings_description = {
-    "prompt_language": "The language code of the prompt. Supported languages: en, zh, ja, ko, yue, all_zh, all_ja, all_ko, all_yue, auto, auto_yue.",
-    "text_language": "The language code of the text. Supported languages: en, zh, ja, ko, yue, all_zh, all_ja, all_ko, all_yue, auto, auto_yue.",
-    "temperature": "The temperature of the model. Higher values will make the model more creative, lower values will make the model more conservative.",
-    "top_k": "The top-k value of the model. Higher values will make the model more creative, lower values will make the model more conservative.",
-    "top_p": "The top-p value of the model. Higher values will make the model more creative, lower values will make the model more conservative.",
+    "gpt_sovits_is_half": "Whether to use half precision for the GPT-SoVITS model. This can reduce VRAM usage and speed up inference, but may also reduce audio quality. If you have at least 6GB of VRAM, you can set this to True. If you have less than 6GB of VRAM, you should set this to True.",
+    "gpt_sovits_device": "The device to run the GPT-SoVITS model on. This can be changed in config.json. The default is 'cuda', but if you have a compatible NVIDIA GPU, you can set this to 'cuda' to significantly speed up synthesis times. If you don't have a compatible GPU, you can set this to 'cpu', but keep in mind that synthesis times will be significantly longer.",
+    "gpt_sovits_version": "The version of the GPT-SoVITS model to use. This can be changed in config.json. The default is 'v2', which is the latest version of the GPT-SoVITS model. The 'v1' version is the original version of the GPT-SoVITS model, which may have slightly lower audio quality but can be faster on older hardware.",
+    "gpt_sovits_cut_type": "The method to use for cutting long texts. This can be changed in config.json. The default is 'none', which means that no cutting will be done and the entire text will be synthesized at once. The 'cut1' method cuts the text into segments of 4 sentences, the 'cut2' method cuts the text into segments of approximately 50 characters, the 'cut3' method cuts the text by Chinese periods, the 'cut4' method cuts the text by English periods, and the 'cut5' method cuts the text by a variety of punctuation marks.",
+    "gpt_sovits_default_prompt_language": "The language code of the prompt. Supported languages: en, zh, ja, ko, yue, all_zh, all_ja, all_ko, all_yue, auto, auto_yue.",
+    "gpt_sovits_default_text_language": "The language code of the text. Supported languages: en, zh, ja, ko, yue, all_zh, all_ja, all_ko, all_yue, auto, auto_yue.",
+    "gpt_sovits_default_temperature": "The temperature of the model. Higher values will make the model more creative, lower values will make the model more conservative.",
+    "gpt_sovits_default_top_k": "The top-k value of the model. Higher values will make the model more creative, lower values will make the model more conservative.",
+    "gpt_sovits_default_top_p": "The top-p value of the model. Higher values will make the model more creative, lower values will make the model more conservative.",
+    "gpt_sovits_error_on_too_short_or_too_long_audio": "Whether to raise an error if the generated audio is too short or too long. This can be useful to prevent generating audio that is too short or too long, which can be a common issue with TTS models. The default is True, which means that an error will be raised if the generated audio is shorter than 0.5 seconds or longer than 30 seconds.",
+    "is_bigvgan_half": "Whether to use half precision for the BigVGAN vocoder. This can reduce VRAM usage and speed up inference, but may also reduce audio quality. If you have at least 6GB of VRAM, you can set this to True. If you have less than 6GB of VRAM, you should set this to True.",
+    "gpt_sovits_banned_voice_models": "A list of voice models to ban from being used by GPT-SoVITS. This can be changed in config.json. This is useful if you have a voice model that causes issues with GPT-SoVITS, such as extremely long synthesis times or crashes."
 }
 options = {
     "prompt_language": [

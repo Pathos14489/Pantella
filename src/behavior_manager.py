@@ -2,6 +2,7 @@ print("src/behavior_manager.py")
 from src.logging import logging
 import os
 import importlib
+import json
 logging.info("Imported required libraries in behavior_manager.py")
 
 with open(os.path.join(os.path.dirname(__file__), "module_banlist"), "r") as f:
@@ -17,7 +18,29 @@ for file in os.listdir(os.path.join(os.path.dirname(__file__), "behavior_manager
             continue
         logging.info(f"Importing {module_name} from src.behavior_managers")
         module = importlib.import_module(f"src.behavior_managers.{module_name}")
-        Manager_Types[module.manager_slug] = module    
+        Manager_Types[module.manager_slug] = module
+        
+addons_path = os.path.join(os.path.dirname(__file__), "../", "addons/")
+for addon_dir in os.listdir(addons_path):
+    addon_path = os.path.join(addons_path, addon_dir)
+    metadata_path = os.path.join(addon_path, "metadata.json")
+    if os.path.isdir(addon_path) and os.path.exists(metadata_path):
+        with open(metadata_path, 'r') as f:
+            metadata = json.load(f)
+            if metadata.get("enabled", False) == False:
+                continue
+    else:
+        continue
+    if os.path.isdir(addon_path) and os.path.exists(os.path.join(addon_path, "behavior_managers/")):
+        for file in os.listdir(os.path.join(addon_path, "behavior_managers/")):
+            if file.endswith(".py") and not file.startswith("__"):
+                module_name = file[:-3]
+                if module_name in banned_modules:
+                    logging.warning(f"Skipping banned behavior manager: {module_name}")
+                    continue
+                logging.info(f"Importing {module_name} from addons.{addon_dir}.behavior_managers")
+                module = importlib.import_module(f"addons.{addon_dir}.behavior_managers.{module_name}")
+                Manager_Types[module.manager_slug] = module
 logging.info("Imported all behavior managers to Manager_Types, ready to create a behavior manager object!")
 # print available behavior managers
 logging.config(f"Available behavior managers: {Manager_Types.keys()}")

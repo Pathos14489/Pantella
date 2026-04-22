@@ -46,12 +46,18 @@ logging.info("Imported required libraries in f5_tts.py")
 
 tts_slug = "f5_tts"
 default_settings = {
-    "speed": 1.0,
-    "cfg_strength": 2.0,
+    "f5_tts_default_speed": 1.0,
+    "f5_tts_default_cfg_strength": 2.0,
+    "f5_tts_volume": 1.5,
+    "f5_tts_device": "cuda",
+    "f5_tts_banned_voice_models": [],
 }
 settings_description = {
-    "speed": "The speed of the generated audio. 1.0 is normal speed, 0.5 is half speed, 2.0 is double speed.",
-    "cfg_strength": "The CFG strength of the generated audio. 2.0 is normal CFG strength, 1.0 is low CFG strength, 3.0 is high CFG strength.",
+    "f5_tts_default_speed": "The speed of the generated audio. 1.0 is normal speed, 0.5 is half speed, 2.0 is double speed.",
+    "f5_tts_default_cfg_strength": "The CFG strength of the generated audio. 2.0 is normal CFG strength, 1.0 is low CFG strength, 3.0 is high CFG strength.",
+    "f5_tts_volume": "The volume of the generated audio. 1.0 is normal volume, 0.5 is half volume, 2.0 is double volume.",
+    "f5_tts_device": "The device to use for inference. 'cuda' for GPU, 'cpu' for CPU.",
+    "f5_tts_banned_voice_models": "A list of voice models to ban from being used by F5-TTS. This can be changed in config.json. This is useful if you have a voice model that causes issues with F5-TTS, such as extremely long synthesis times or crashes.",
 }
 options = {}
 settings = {}

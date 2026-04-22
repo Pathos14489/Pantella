@@ -2,6 +2,7 @@ print("Importing memory_manager.py")
 from src.logging import logging
 import os
 import importlib
+import json
 logging.info("Imported required libraries in memory_manager.py")
 
 with open(os.path.join(os.path.dirname(__file__), "module_banlist"), "r") as f:
@@ -19,6 +20,28 @@ for file in os.listdir(os.path.join(os.path.dirname(__file__), "memory_managers/
         if module_name != "base_memory_manager":
             module = importlib.import_module(f"src.memory_managers.{module_name}")
             Manager_Types[module.manager_slug] = module
+
+addons_path = os.path.join(os.path.dirname(__file__), "../", "addons/")
+for addon_dir in os.listdir(addons_path):
+    addon_path = os.path.join(addons_path, addon_dir)
+    metadata_path = os.path.join(addon_path, "metadata.json")
+    if os.path.isdir(addon_path) and os.path.exists(metadata_path):
+        with open(metadata_path, 'r') as f:
+            metadata = json.load(f)
+            if metadata.get("enabled", False) == False:
+                continue
+    else:
+        continue
+    if os.path.isdir(addon_path) and os.path.exists(os.path.join(addon_path, "memory_managers/")):
+        for file in os.listdir(os.path.join(addon_path, "memory_managers/")):
+            if file.endswith(".py") and not file.startswith("__"):
+                module_name = file[:-3]
+                if module_name in banned_modules:
+                    logging.warning(f"Skipping banned memory manager: {module_name}")
+                    continue
+                logging.info(f"Importing {module_name} from addons.{addon_dir}.memory_managers")
+                module = importlib.import_module(f"addons.{addon_dir}.memory_managers.{module_name}")
+                Manager_Types[module.manager_slug] = module
 logging.info("Imported all memory managers to Manager_Types, ready to create a memory manager object!")
 # print available memory managers
 logging.config(f"Available memory managers: {Manager_Types.keys()}")

@@ -2,6 +2,7 @@ print("Imported tts.py")
 from src.logging import logging
 import os
 import importlib
+import json
 logging.info("Imported required libraries in tts.py")
 
 with open(os.path.join(os.path.dirname(__file__), "module_banlist"), "r") as f:
@@ -24,6 +25,29 @@ for file in os.listdir(os.path.join(os.path.dirname(__file__), "tts_types/")):
                 tts_Types[module.tts_slug] = module
             except Exception as e:
                 logging.error(f"Failed to import {module_name}: {e}")
+
+addons_path = os.path.join(os.path.dirname(__file__), "../", "addons/")
+for addon_dir in os.listdir(addons_path):
+    addon_path = os.path.join(addons_path, addon_dir)
+    metadata_path = os.path.join(addon_path, "metadata.json")
+    if os.path.isdir(addon_path) and os.path.exists(metadata_path):
+        with open(metadata_path, 'r') as f:
+            metadata = json.load(f)
+            if metadata.get("enabled", False) == False:
+                continue
+    else:
+        continue
+    if os.path.isdir(addon_path) and os.path.exists(os.path.join(addon_path, "tts_types/")):
+        for file in os.listdir(os.path.join(addon_path, "tts_types/")):
+            if file.endswith(".py") and not file.startswith("__"):
+                module_name = file[:-3]
+                if module_name in banned_modules:
+                    logging.warning(f"Skipping banned TTS: {module_name}")
+                    continue
+                logging.info(f"Importing {module_name} from addons.{addon_dir}.tts_types")
+                module = importlib.import_module(f"addons.{addon_dir}.tts_types.{module_name}")
+                tts_Types[module.tts_slug] = module
+                
 tts_Types["default"] = tts_Types[default]
 logging.info("Imported TTS types in tts.py")
 # print available TTS types
