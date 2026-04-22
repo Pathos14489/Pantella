@@ -36,6 +36,35 @@ for file in os.listdir(os.path.join(os.path.dirname(__file__), "../interface_con
             logging.error(tb)
             raise e
         logging.config(f"Imported interface config {game_id}")
+        
+addons_path = os.path.join(os.path.dirname(__file__), "../", "addons/")
+for addon_dir in os.listdir(addons_path):
+    addon_path = os.path.join(addons_path, addon_dir)
+    metadata_path = os.path.join(addon_path, "metadata.json")
+    if os.path.isdir(addon_path) and os.path.exists(metadata_path):
+        with open(metadata_path, 'r') as f:
+            metadata = json.load(f)
+            if metadata.get("enabled", False) == False:
+                continue
+    else:
+        continue
+    if os.path.isdir(addon_path) and os.path.exists(os.path.join(addon_path, "interface_configs/")):
+        for file in os.listdir(os.path.join(addon_path, "interface_configs/")):
+            if file.endswith(".json") and not file.startswith("__"):
+                logging.config(f"Importing interface config {file} from addon {addon_dir}")
+                game_id = file[:-5]
+                interface_config_string = open(os.path.join(addon_path, "interface_configs/", file), encoding='utf-8').read()
+                try:
+                    if game_id in interface_configs:
+                        logging.warn(f"Game id {game_id} from addon {addon_dir} already exists in interface_configs. Overriding existing interface config with interface config from addon!")
+                    interface_configs[game_id] = json.loads(interface_config_string)
+                except Exception as e:
+                    logging.error(f"Could not import interface config {game_id} from addon {addon_dir}.")
+                    tb = traceback.format_exc()
+                    logging.error(f"Error loading interface config {game_id} from addon {addon_dir}: {interface_config_string}")
+                    logging.error(tb)
+                    raise e
+                logging.config(f"Imported interface config {game_id} from addon {addon_dir}")
 logging.info("Imported all interface configs, ready to use them!")
 
 class ConfigLoader:
@@ -225,6 +254,22 @@ class ConfigLoader:
                     slug = file.split('.')[0]
                     self._raw_prompt_styles[slug] = json.load(f)
                     self.prompt_styles[slug] = self._raw_prompt_styles[slug]
+        addons_path = os.path.join(os.path.dirname(__file__), "../", "addons/")
+        for addon_dir in os.listdir(addons_path):
+            addon_path = os.path.join(addons_path, addon_dir)
+            metadata_path = os.path.join(addon_path, "metadata.json")
+            if os.path.isdir(addon_path) and os.path.exists(metadata_path):
+                with open(metadata_path, 'r') as f:
+                    metadata = json.load(f)
+                    if metadata.get("enabled", False) == False:
+                        continue
+            else:
+                continue
+            if os.path.isdir(addon_path) and os.path.exists(os.path.join(addon_path, "prompt_style.json")):
+                with open(os.path.join(addon_path, "prompt_style.json"), encoding='utf-8') as f:
+                    slug = addon_dir
+                    self._raw_prompt_styles[slug] = json.load(f)
+                    self.prompt_styles[slug] = self._raw_prompt_styles[slug]
         style_names = [f"{slug} ({self._raw_prompt_styles[slug]['name']})" for slug in self.prompt_styles]
         # self._prompt_style = self.prompt_styles["normal_en"]
         logging.config(f"Prompt styles loaded: "+str(style_names))
@@ -234,9 +279,24 @@ class ConfigLoader:
         logging.info("Loading addons...")
         self.addons = {}
         valid_addon_parts = [
+            "behavior_managers",
             "behaviors",
+            "behavior_styles",
+            "character_managers",
             "characters",
+            "conversation_managers",
+            "game_interfaces",
+            "inference_engines",
+            "memory_managers",
+            "speech_input_processors",
+            "stt_types",
+            "thought_processors",
+            "tokenizers",
+            "tts_types",
+            "templates",
             "voice_samples",
+            "behavior_styles",
+            "interface_configs",
             "metadata.json",
             "prompt_style.json",
             "game_event_renderers",
@@ -294,6 +354,24 @@ class ConfigLoader:
                     slug = file.split('.')[0]
                     self._raw_behavior_styles[slug] = json.load(f)
                     self.behavior_styles[slug] = self._raw_behavior_styles[slug]["behavior_style"]
+        addons_path = os.path.join(os.path.dirname(__file__), "../", "addons/")
+        for addon_dir in os.listdir(addons_path):
+            addon_path = os.path.join(addons_path, addon_dir)
+            metadata_path = os.path.join(addon_path, "metadata.json")
+            if os.path.isdir(addon_path) and os.path.exists(metadata_path):
+                with open(metadata_path, 'r') as f:
+                    metadata = json.load(f)
+                    if metadata.get("enabled", False) == False:
+                        continue
+            else:
+                continue
+            if os.path.isdir(addon_path) and os.path.exists(os.path.join(addon_path, "behavior_styles/")):
+                for file in os.listdir(os.path.join(addon_path, "behavior_styles/")):
+                    if file.endswith('.json'):
+                        with open(os.path.join(addon_path, "behavior_styles/", file)) as f:
+                            slug = file.split('.')[0]
+                            self._raw_behavior_styles[slug] = json.load(f)
+                            self.behavior_styles[slug] = self._raw_behavior_styles[slug]["behavior_style"]
         style_names = [f"{slug} ({self._raw_behavior_styles[slug]['name']})" for slug in self.behavior_styles]
         logging.config(f"Behavior styles loaded: "+str(style_names))
 
