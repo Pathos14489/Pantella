@@ -27,6 +27,7 @@ class BaseConversationManager:
         if initialize and self.config.ready:
             self.pre_initialization()
         if self.config.ready:
+            self.game_interface: GameInterface = game_interface.create_game_interface(self) # Create Game Interface based on config
             self.synthesizer = tts.create_Synthesizer(self, self.config.tts_engine) # Create Synthesizer object based on config - required by scripts for checking voice models, so is left out of self.pre_initialization() and self.post_initialization() intentionally
             # self.character_database = character_db.CharacterDB(self) # Create Character Database Manager based on config - required by scripts for merging, patching and converting character databases, so is left out of self.pre_initialization() and self.post_initialization() intentionally
             self.character_database = character_db.create_DB(self) # Create Character Database Manager based on config - required by scripts for merging, patching and converting character databases, so is left out of self.pre_initialization() and self.post_initialization() intentionally
@@ -153,7 +154,6 @@ class BaseConversationManager:
         self.thought_process = thought_process.create_thought_process(self) # Create Thought Process Manager based on config
         self.character_generator_schema = character_generator.create_generator_schema(self) # Create Character Manager based on config
         self.config.set_prompt_style(self.inference_engine, self.tokenizer) # Set prompt based on LLM and config settings
-        self.game_interface: GameInterface = game_interface.create_game_interface(self) # Create Game Interface based on config
         self.behavior_manager = behavior_manager.create_manager(self) # Create Behavior Manager based on config
         
     def get_context(self): # Returns the current context(in the form of a list of messages) for the given active characters in the ongoing conversation

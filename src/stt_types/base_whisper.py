@@ -22,6 +22,9 @@ class base_Transcriber(BASE_TRANSCRIBER):
     def whisper_transcribe(self, audio, prompt):
         logging.error('Whisper transcribe method not implemented in base_Transcriber. Please use a subclass of base_Transcriber.')
         raise NotImplementedError
+    
+    def transcribe_audio_file(self, audio_file_path):
+        return self.whisper_transcribe(audio_file_path, "")
 
     def recognize_input(self, possible_names_list):
         """

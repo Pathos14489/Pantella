@@ -47,6 +47,9 @@ class Transcriber(base_Transcriber):
         if self.config.stt_translate:
             # translate to English
             task = "translate"
+        was_initialized = self.initialized
+        if self.initialized == False:
+            self.initialize()
         segments, info = self.transcribe_model.transcribe(audio,
             task=task,
             language=self.language,
@@ -55,5 +58,7 @@ class Transcriber(base_Transcriber):
             initial_prompt=prompt,
         )
         result_text = ' '.join(segment.text for segment in segments)
+        if not was_initialized:
+            self.unload()
 
         return result_text

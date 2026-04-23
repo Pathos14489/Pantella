@@ -311,3 +311,22 @@ class Transcriber(base_Transcriber):
         print(timed_text)
         decoded = " ".join([str(t.text) for t in timed_text])
         return decoded
+    
+    def transcribe_audio_file(self, audio_file_path):
+        """Transcribes an audio file and returns the transcript"""
+        audio, input_sample_rate = julius.load_audio(audio_file_path)
+        audio = torch.from_numpy(audio).to(self.args["device"])
+        audio = julius.resample_frac(audio, input_sample_rate, self.mimi.sample_rate)
+        if audio.shape[-1] % self.mimi.frame_size != 0:
+            to_pad = self.mimi.frame_size - audio.shape[-1] % self.mimi.frame_size
+            audio = torch.nn.functional.pad(audio, (0, to_pad))
+        
+        audio = audio.view(1, 1, -1)
+
+        text_tokens = self.lm_gen.generate(
+            lambda: self.mimi.encode(audio),
+            max_new_tokens=1024,
+            eos_token_id=self.tokenizer.eos_id(),
+        )
+        transcript = self.tokenizer.decode(text_tokens[0].cpu().numpy().tolist())
+        return transcript

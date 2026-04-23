@@ -263,14 +263,10 @@ class base_Synthesizer:
             voice_model_settings_path = os.path.abspath(f".\\data\\tts_settings\\default\\{self.language['tts_language_code']}\\{voice_model}.json")
         return voice_model_settings_path
 
-    def voice_model_settings(self, character_or_voice_model):
-        """Return the settings for the specified voice model"""
+    def get_default_voice_model_settings(self, voice_model):
+        """Get the default settings for the voice model"""
         settings = self.default_voice_model_settings.copy()
-        if type(character_or_voice_model) == str:
-            voice_model = character_or_voice_model
-        else:
-            voice_model = self.get_valid_voice_model(character_or_voice_model)
-
+        save_changes = False
         default_settings_path = self.default_settings_path(voice_model) # Get the default settings path for the voice model (universal for all TTS types)
         os.makedirs(os.path.dirname(default_settings_path), exist_ok=True) # make sure the directory exists
         if os.path.exists(default_settings_path):
@@ -281,6 +277,37 @@ class base_Synthesizer:
         else:
             with open(default_settings_path, "w") as f:
                 json.dump(settings, f, indent=4)
+        
+        needs_transcription = "transcription" in settings and settings["transcription"] == ""
+        if needs_transcription and self.conversation_manager.game_interface is not None and self.conversation_manager.game_interface.transcriber is not None:
+            logging.info(f'No transcription found for voice model: {voice_model}. Attempting to generate transcription using STT.')
+            speaker_wav_path = self.get_speaker_wav_path(voice_model)
+            if speaker_wav_path is not None:
+                transcription = self.conversation_manager.game_interface.transcriber.transcribe_audio_file(speaker_wav_path)
+                logging.info(f'Generated transcription for voice model: {voice_model} using STT: {transcription}')
+                settings["transcription"] = transcription.strip()
+                save_changes = True
+                logging.info(f'Generated transcription for voice model: {voice_model} using STT: {transcription}')
+            else:
+                logging.warning(f'No speaker wav found for voice model: {voice_model}. Cannot generate transcription using STT.')
+        else:
+            if needs_transcription:
+                logging.warning(f'No transcription found for voice model: {voice_model}, and unable to generate transcription using STT. This may cause issues with synthesis if your TTS type requires transcriptions for the voice models.')
+
+        if save_changes:
+            with open(default_settings_path, "w") as f:
+                json.dump(settings, f, indent=4)
+
+        return settings
+
+    def voice_model_settings(self, character_or_voice_model):
+        """Return the settings for the specified voice model"""
+        if type(character_or_voice_model) == str:
+            voice_model = character_or_voice_model
+        else:
+            voice_model = self.get_valid_voice_model(character_or_voice_model)
+        
+        settings = self.get_default_voice_model_settings(voice_model) # Get the default settings for the voice model
 
         voice_model_settings_path = self.voice_model_settings_path(voice_model) # Get the voice model settings path for the specific TTS type
         os.makedirs(os.path.dirname(voice_model_settings_path), exist_ok=True) # make sure the directory exists
