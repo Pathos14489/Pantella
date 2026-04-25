@@ -144,7 +144,7 @@ async def conversation_loop():
             conversation_manager = restart_manager(config, conversation_manager)
             
 if __name__ == "__main__":
-    # Start config flask server and conversation loop in parallel
+    # Start config FastAPI server and conversation loop in parallel
     if config.ready:
         if imported_gradio:
             if config.chromadb_memory_editor_enabled:
