@@ -2,7 +2,7 @@ from dataclasses import dataclass
 from pathlib import Path
 import librosa
 import torch
-import perth
+# import perth
 import torch.nn.functional as F
 from huggingface_hub import hf_hub_download
 from .models.t3 import T3
@@ -119,7 +119,7 @@ class ChatterboxTTS:
         self.tokenizer = tokenizer
         self.device = device
         self.conds = conds
-        self.watermarker = perth.PerthImplicitWatermarker()
+        # self.watermarker = perth.PerthImplicitWatermarker()
 
     @classmethod
     def from_local(cls, ckpt_dir, device) -> 'ChatterboxTTS':
@@ -314,10 +314,10 @@ class ChatterboxTTS:
                 )
                 wav = wav.squeeze(0).detach().cpu().numpy()
                 final_wav = wav if final_wav is None else np.hstack([final_wav, wav])
-        # return torch.from_numpy(wav).unsqueeze(0)
-        if watermark:
-            print("Applying watermark to the audio...")
-            watermarked_wav = self.watermarker.apply_watermark(final_wav, sample_rate=self.sr)
-            return torch.from_numpy(watermarked_wav).unsqueeze(0)
-        else:
-            return torch.from_numpy(final_wav).unsqueeze(0)
+        return torch.from_numpy(wav).unsqueeze(0)
+        # if watermark:
+        #     print("Applying watermark to the audio...")
+        #     # watermarked_wav = self.watermarker.apply_watermark(final_wav, sample_rate=self.sr)
+        #     return torch.from_numpy(watermarked_wav).unsqueeze(0)
+        # else:
+        #     return torch.from_numpy(final_wav).unsqueeze(0)
