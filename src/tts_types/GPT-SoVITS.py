@@ -26,6 +26,7 @@ try:
     import re
     import chinese
     import soundfile as sf
+    import LangSegment
     imported = True
     logging.info("Imported GPT-SoVITS libraries")
 except Exception as e:
@@ -534,7 +535,7 @@ class Synthesizer(base_tts.base_Synthesizer):
         for speaker_wavs_folder in self.speaker_wavs_folders:
             if os.path.exists(os.path.join(speaker_wavs_folder, f"{voice_model}.wav")):
                 speaker_wav_path = os.path.join(speaker_wavs_folder, f"{voice_model}.wav")
-                return speaker_wav_path, list_of_files
+                return speaker_wav_path # , list_of_files
         return None
     
     def get_spepc(self, filename):
@@ -850,9 +851,7 @@ class Synthesizer(base_tts.base_Synthesizer):
     def _synthesize(self, voiceline, voice_model, voiceline_location, settings, aggro=0):
         """Synthesize the audio for the character specified using ParlerTTS"""
         logging.output(f'{self.tts_slug} - synthesizing {voiceline} with voice model "{voice_model}"...')
-        speaker_wav_path, inp_refs = self.get_speaker_wav_path(voice_model)
-        logging.output(speaker_wav_path, inp_refs)
-        # settings = self.voice_model_settings(voice_model)
+        speaker_wav_path = self.get_speaker_wav_path(voice_model)
         logging.output(f'{self.tts_slug} - using voice model settings: {settings}')
         if not voiceline.endswith(".") and not voiceline.endswith("!") and not voiceline.endswith("?"): # Add a period to the end of the voiceline if it doesn't have one.
             voiceline += "."
@@ -862,7 +861,7 @@ class Synthesizer(base_tts.base_Synthesizer):
             prompt_text=settings.get("transcription", self.default_voice_model_settings["transcription"]),
             ref_wav_path=speaker_wav_path, 
             text=voiceline,
-            inp_refs=inp_refs,
+            # inp_refs=inp_refs,
             top_k=settings.get("top_k", self.default_voice_model_settings["top_k"]),
             top_p=settings.get("top_p", self.default_voice_model_settings["top_p"]),
             temperature=settings.get("temperature", self.default_voice_model_settings["temperature"]),

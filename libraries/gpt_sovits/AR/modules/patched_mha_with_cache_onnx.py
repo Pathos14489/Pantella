@@ -5,6 +5,7 @@ from torch.nn.functional import (
     _none_or_dtype,
     _in_projection_packed,
 )
+from typing import Optional, Tuple
 
 def multi_head_attention_forward_patched(
     query,
