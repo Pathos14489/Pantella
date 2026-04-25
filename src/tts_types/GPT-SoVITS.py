@@ -438,6 +438,8 @@ class Synthesizer(base_tts.base_Synthesizer):
         
         sovits_base_dir_path = ".\\data\\models\\gpt_sovits\\"
         sovits_base_dir_path = os.path.abspath(sovits_base_dir_path) + "\\"
+        if self.config.linux_mode:
+            sovits_base_dir_path = sovits_base_dir_path.replace("\\", "/")
         os.makedirs(sovits_base_dir_path, exist_ok=True)
         if not os.path.exists(sovits_base_dir_path+"s2G488k.pth"):
             logging.info("Downloading s2G488k.pth")
@@ -453,6 +455,8 @@ class Synthesizer(base_tts.base_Synthesizer):
             downloaded = True
 
         cnhubert_base_dir_path = sovits_base_dir_path+"chinese-hubert-base\\"
+        if self.config.linux_mode:
+            cnhubert_base_dir_path = cnhubert_base_dir_path.replace("\\", "/")
         os.makedirs(cnhubert_base_dir_path, exist_ok=True)
         if not os.path.exists(cnhubert_base_dir_path+"pytorch_model.bin"):
             logging.info("Downloading chinese-hubert-base/pytorch_model.bin")
@@ -516,8 +520,8 @@ class Synthesizer(base_tts.base_Synthesizer):
             "temperature": self.config.gpt_sovits_default_temperature,
             "top_k": self.config.gpt_sovits_default_top_k,
             "top_p": self.config.gpt_sovits_default_top_p,
-            "prompt_language": self.config.gpt_sovits_prompt_language,
-            "text_language": self.config.gpt_sovits_text_language,
+            "prompt_language": self.config.gpt_sovits_default_prompt_language,
+            "text_language": self.config.gpt_sovits_default_text_language,
         }
 
     def get_speaker_wav_path(self, voice_model):
@@ -566,7 +570,7 @@ class Synthesizer(base_tts.base_Synthesizer):
         return phone_level_feature.T
 
     def get_phones_and_bert(self, text, final=False):
-        language = self.config.gpt_sovits_prompt_language
+        language = self.config.gpt_sovits_default_prompt_language
         version = self.config.gpt_sovits_version
         if language in {"en", "all_zh", "all_ja", "all_ko", "all_yue"}:
             language = language.replace("all_","")
@@ -644,7 +648,7 @@ class Synthesizer(base_tts.base_Synthesizer):
         return dict_language_v1 if self.config.gpt_sovits_version =='v1' else dict_language_v2
 
     def change_sovits_weights(self):
-        dict_s2 = torch.load(self.gpt_sovits_sovits_path, map_location="cpu")
+        dict_s2 = torch.load(self.gpt_sovits_sovits_path, map_location="cpu", weights_only=False)
         self.hps = dict_s2["config"]
         self.hps = DictToAttrRecursive(self.hps)
         self.hps.model.semantic_frame_rate = "25hz"
@@ -674,14 +678,14 @@ class Synthesizer(base_tts.base_Synthesizer):
         #     data["SoVITS"][version]=self.gpt_sovits_sovits_path
         # with open("./weight.json","w")as f:
         #     f.write(json.dumps(data))
-        if self.config.gpt_sovits_prompt_language is not None and self.config.gpt_sovits_text_language is not None:
-            if self.config.gpt_sovits_prompt_language in list(self.dict_language.keys()):
-                prompt_text_update, prompt_language_update = {'__type__':'update'},  {'__type__':'update', 'value':self.config.gpt_sovits_prompt_language}
+        if self.config.gpt_sovits_default_prompt_language is not None and self.config.gpt_sovits_default_text_language is not None:
+            if self.config.gpt_sovits_default_prompt_language in list(self.dict_language.keys()):
+                prompt_text_update, prompt_language_update = {'__type__':'update'},  {'__type__':'update', 'value':self.config.gpt_sovits_default_prompt_language}
             else:
                 prompt_text_update = {'__type__':'update', 'value':''}
                 prompt_language_update = {'__type__':'update', 'value':"Chinese"}
-            if self.config.gpt_sovits_text_language in list(self.dict_language.keys()):
-                text_update, text_language_update = {'__type__':'update'}, {'__type__':'update', 'value':self.config.gpt_sovits_text_language}
+            if self.config.gpt_sovits_default_text_language in list(self.dict_language.keys()):
+                text_update, text_language_update = {'__type__':'update'}, {'__type__':'update', 'value':self.config.gpt_sovits_default_text_language}
             else:
                 text_update = {'__type__':'update', 'value':''}
                 text_language_update = {'__type__':'update', 'value':"Chinese"}
@@ -722,7 +726,7 @@ class Synthesizer(base_tts.base_Synthesizer):
 
         if not ref_free:
             prompt_text = prompt_text.strip("\n")
-            if (prompt_text[-1] not in splits): prompt_text += "。" if self.config.gpt_sovits_prompt_language != "en" else "."
+            if (prompt_text[-1] not in splits): prompt_text += "。" if self.config.gpt_sovits_default_prompt_language != "en" else "."
             print("Actual Input Reference Text:", prompt_text)
         text = text.strip("\n")
         # if (text[0] not in splits and len(get_first(text)) < 4): text = "。" + text if text_language != "en" else "." + text
@@ -786,7 +790,7 @@ class Synthesizer(base_tts.base_Synthesizer):
             # 解决输入目标文本的空行导致报错的问题
             if (len(text.strip()) == 0):
                 continue
-            if (text[-1] not in splits): text += "。" if self.config.gpt_sovits_text_language != "en" else "."
+            if (text[-1] not in splits): text += "。" if self.config.gpt_sovits_default_text_language != "en" else "."
             print("Actual Input Target Text (per sentence):", text)
             phones2, bert2, norm_text2 = self.get_phones_and_bert(text)
             print("Processed text from the frontend (per sentence):", norm_text2)
