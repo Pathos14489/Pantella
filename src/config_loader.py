@@ -1104,7 +1104,6 @@ class ConfigLoader:
             self.conversation_manager.restart = True
             if not self.conversation_manager.in_conversation:
                 logging.info("Config updated and conversation manager not in a conversation. Restart the conversation manager to apply the new settings. - WILL BE FIXED IN FUTURE RELEASE")
-            # return flask.jsonify(self.export())
             config = json.load(open(self.config_path))
             return config
         
