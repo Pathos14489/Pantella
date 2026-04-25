@@ -3,6 +3,7 @@ from src.logging import logging
 import os
 import importlib
 import json
+import traceback
 logging.info("Imported required libraries in tts.py")
 
 with open(os.path.join(os.path.dirname(__file__), "module_banlist"), "r") as f:
@@ -17,14 +18,15 @@ for file in os.listdir(os.path.join(os.path.dirname(__file__), "tts_types/")):
         if module_name in banned_modules:
             logging.warning(f"Skipping banned TTS: {module_name}")
             continue
-        logging.info(f"Importing {module_name} from src.tts_types")
         if module_name != "base_tts":
+            logging.info(f"Importing {module_name} from src.tts_types")
             try:
                 module = importlib.import_module(f"src.tts_types.{module_name}")
                 logging.info(f"Imported {module_name} from src.tts_types")
                 tts_Types[module.tts_slug] = module
             except Exception as e:
                 logging.error(f"Failed to import {module_name}: {e}")
+                logging.error(traceback.format_exc())
 
 addons_path = os.path.join(os.path.dirname(__file__), "../", "addons/")
 for addon_dir in os.listdir(addons_path):
@@ -45,8 +47,13 @@ for addon_dir in os.listdir(addons_path):
                     logging.warning(f"Skipping banned TTS: {module_name}")
                     continue
                 logging.info(f"Importing {module_name} from addons.{addon_dir}.tts_types")
-                module = importlib.import_module(f"addons.{addon_dir}.tts_types.{module_name}")
-                tts_Types[module.tts_slug] = module
+                try:
+                    module = importlib.import_module(f"addons.{addon_dir}.tts_types.{module_name}")
+                    tts_Types[module.tts_slug] = module
+                    logging.info(f"Imported {module_name} from addons.{addon_dir}.tts_types")
+                except Exception as e:
+                    logging.error(f"Failed to import {module_name} from addons.{addon_dir}.tts_types: {e}")
+                    logging.error(traceback.format_exc())
                 
 tts_Types["default"] = tts_Types[default]
 logging.info("Imported TTS types in tts.py")

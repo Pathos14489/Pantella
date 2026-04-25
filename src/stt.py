@@ -2,6 +2,7 @@ print("Imported stt.py")
 from src.logging import logging
 import os
 import importlib
+import traceback
 import json
 logging.info("Imported required libraries in stt.py")
 
@@ -17,13 +18,14 @@ for file in os.listdir(os.path.join(os.path.dirname(__file__), "stt_types/")):
         if module_name in banned_modules:
             logging.warning(f"Skipping banned STT: {module_name}")
             continue
-        logging.info(f"Importing {module_name} from src.stt_types")
         if module_name != "base_stt" and module_name != "base_whisper":
+            logging.info(f"Importing {module_name} from src.stt_types")
             try:
                 module = importlib.import_module(f"src.stt_types.{module_name}")
                 transcriber_Types[module.stt_slug] = module
             except Exception as e:
                 logging.error(f"Failed to import {module_name}: {e}")
+                logging.error(traceback.format_exc())
 addons_path = os.path.join(os.path.dirname(__file__), "../", "addons/")
 for addon_dir in os.listdir(addons_path):
     addon_path = os.path.join(addons_path, addon_dir)
@@ -43,8 +45,13 @@ for addon_dir in os.listdir(addons_path):
                     logging.warning(f"Skipping banned STT: {module_name}")
                     continue
                 logging.info(f"Importing {module_name} from addons.{addon_dir}.stt_types")
-                module = importlib.import_module(f"addons.{addon_dir}.stt_types.{module_name}")
-                transcriber_Types[module.stt_slug] = module
+                try:
+                    module = importlib.import_module(f"addons.{addon_dir}.stt_types.{module_name}")
+                    transcriber_Types[module.stt_slug] = module
+                    logging.info(f"Imported {module_name} from addons.{addon_dir}.stt_types")
+                except Exception as e:
+                    logging.error(f"Failed to import {module_name} from addons.{addon_dir}.stt_types: {e}")
+                    logging.error(traceback.format_exc())
 if default in transcriber_Types:
     transcriber_Types["default"] = transcriber_Types[default]
 logging.info("Imported Transcriber types in stt.py")

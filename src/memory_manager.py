@@ -3,6 +3,7 @@ from src.logging import logging
 import os
 import importlib
 import json
+import traceback
 logging.info("Imported required libraries in memory_manager.py")
 
 with open(os.path.join(os.path.dirname(__file__), "module_banlist"), "r") as f:
@@ -16,10 +17,15 @@ for file in os.listdir(os.path.join(os.path.dirname(__file__), "memory_managers/
         if module_name in banned_modules:
             logging.warning(f"Skipping banned memory manager: {module_name}")
             continue
-        logging.info(f"Importing {module_name} from src.memory_managers")
         if module_name != "base_memory_manager":
-            module = importlib.import_module(f"src.memory_managers.{module_name}")
-            Manager_Types[module.manager_slug] = module
+            logging.info(f"Importing {module_name} from src.memory_managers")
+            try:
+                module = importlib.import_module(f"src.memory_managers.{module_name}")
+                Manager_Types[module.manager_slug] = module
+                logging.info(f"Imported {module_name} from src.memory_managers")
+            except Exception as e:
+                logging.error(f"Failed to import {module_name} from src.memory_managers: {e}")
+                logging.error(traceback.format_exc())
 
 addons_path = os.path.join(os.path.dirname(__file__), "../", "addons/")
 for addon_dir in os.listdir(addons_path):
@@ -40,8 +46,13 @@ for addon_dir in os.listdir(addons_path):
                     logging.warning(f"Skipping banned memory manager: {module_name}")
                     continue
                 logging.info(f"Importing {module_name} from addons.{addon_dir}.memory_managers")
-                module = importlib.import_module(f"addons.{addon_dir}.memory_managers.{module_name}")
-                Manager_Types[module.manager_slug] = module
+                try:
+                    module = importlib.import_module(f"addons.{addon_dir}.memory_managers.{module_name}")
+                    Manager_Types[module.manager_slug] = module
+                    logging.info(f"Imported {module_name} from addons.{addon_dir}.memory_managers")
+                except Exception as e:
+                    logging.error(f"Failed to import {module_name} from addons.{addon_dir}.memory_managers: {e}")
+                    logging.error(traceback.format_exc())
 logging.info("Imported all memory managers to Manager_Types, ready to create a memory manager object!")
 # print available memory managers
 logging.config(f"Available memory managers: {Manager_Types.keys()}")

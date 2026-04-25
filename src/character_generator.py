@@ -4,6 +4,7 @@ import src.tokenizer as tokenizers
 import os
 import importlib
 import json
+import traceback
 logging.info("Imported required libraries in character_generator.py")
 
 with open(os.path.join(os.path.dirname(__file__), "module_banlist"), "r") as f:
@@ -18,8 +19,13 @@ for file in os.listdir(os.path.join(os.path.dirname(__file__), "character_genera
             logging.warning(f"Skipping banned character_type: {module_name}")
             continue
         logging.info(f"Importing {module_name} from src.character_generators")
-        module = importlib.import_module(f"src.character_generators.{module_name}")
-        Generator_Types[module.generator_name] = module
+        try:
+            module = importlib.import_module(f"src.character_generators.{module_name}")
+            Generator_Types[module.generator_name] = module
+            logging.info(f"Imported {module_name} from src.character_generators")
+        except Exception as e:
+            logging.error(f"Failed to import {module_name} from src.character_generators: {e}")
+            logging.error(traceback.format_exc())
 
 addons_path = os.path.join(os.path.dirname(__file__), "../", "addons/")
 for addon_dir in os.listdir(addons_path):
@@ -40,8 +46,14 @@ for addon_dir in os.listdir(addons_path):
                     logging.warning(f"Skipping banned character generator: {module_name}")
                     continue
                 logging.info(f"Importing {module_name} from addons.{addon_dir}.character_generators")
-                module = importlib.import_module(f"addons.{addon_dir}.character_generators.{module_name}")
-                Generator_Types[module.generator_name] = module
+                try:
+                    module = importlib.import_module(f"addons.{addon_dir}.character_generators.{module_name}")
+                    Generator_Types[module.generator_name] = module
+                    logging.info(f"Imported {module_name} from addons.{addon_dir}.character_generators")
+                except Exception as e:
+                    logging.error(f"Failed to import {module_name} from addons.{addon_dir}.character_generators: {e}")
+                    logging.error(traceback.format_exc())
+
 logging.info("Imported all Generators to Generator_Types!")
 
 def create_generator_schema(conversation_manager):

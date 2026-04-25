@@ -3,6 +3,7 @@ from src.logging import logging
 import os
 import importlib
 import json
+import traceback
 logging.info("Imported required libraries in character_db.py")
 
 with open(os.path.join(os.path.dirname(__file__), "module_banlist"), "r") as f:
@@ -18,8 +19,13 @@ for file in os.listdir(os.path.join(os.path.dirname(__file__), "character_dbs/")
             logging.warning(f"Skipping banned memory db: {module_name}")
             continue
         logging.info(f"Importing {module_name} from src.character_dbs")
-        module = importlib.import_module(f"src.character_dbs.{module_name}")
-        DB_Types[module.db_slug] = module    
+        try:
+            module = importlib.import_module(f"src.character_dbs.{module_name}")
+            DB_Types[module.db_slug] = module    
+            logging.info(f"Imported {module_name} from src.character_dbs")
+        except Exception as e:
+            logging.error(f"Failed to import {module_name} from src.character_dbs: {e}")
+            logging.error(traceback.format_exc())
 
 addons_path = os.path.join(os.path.dirname(__file__), "../", "addons/")
 for addon_dir in os.listdir(addons_path):
@@ -40,8 +46,13 @@ for addon_dir in os.listdir(addons_path):
                     logging.warning(f"Skipping banned character db: {module_name}")
                     continue
                 logging.info(f"Importing {module_name} from addons.{addon_dir}.character_dbs")
-                module = importlib.import_module(f"addons.{addon_dir}.character_dbs.{module_name}")
-                DB_Types[module.db_slug] = module
+                try:
+                    module = importlib.import_module(f"addons.{addon_dir}.character_dbs.{module_name}")
+                    DB_Types[module.db_slug] = module
+                    logging.info(f"Imported {module_name} from addons.{addon_dir}.character_dbs")
+                except Exception as e:
+                    logging.error(f"Failed to import {module_name} from addons.{addon_dir}.character_dbs: {e}")
+                    logging.error(traceback.format_exc())
 logging.info("Imported all character_dbs to DB_Types, ready to create a character_db object!")
 # print available character_dbs
 logging.config(f"Available character_dbs: {DB_Types.keys()}")

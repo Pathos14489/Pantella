@@ -3,6 +3,7 @@ from src.logging import logging
 import os
 import importlib
 import json
+import traceback
 logging.info("Imported required libraries in thought_process.py")
 
 with open(os.path.join(os.path.dirname(__file__), "module_banlist"), "r") as f:
@@ -17,8 +18,14 @@ for file in os.listdir(os.path.join(os.path.dirname(__file__), "thought_processe
             logging.warning(f"Skipping banned thought process: {module_name}")
             continue
         logging.info(f"Importing {module_name} from src.thought_processes")
-        module = importlib.import_module(f"src.thought_processes.{module_name}")
-        Thought_Types[module.thought_process_name] = module
+        try:
+            module = importlib.import_module(f"src.thought_processes.{module_name}")
+            Thought_Types[module.thought_process_name] = module
+            logging.info(f"Imported {module_name} from src.thought_processes")
+        except Exception as e:
+            logging.error(f"Failed to import {module_name} from src.thought_processes: {e}")
+            logging.error(traceback.format_exc())
+
 addons_path = os.path.join(os.path.dirname(__file__), "../", "addons/")
 for addon_dir in os.listdir(addons_path):
     addon_path = os.path.join(addons_path, addon_dir)
@@ -38,8 +45,13 @@ for addon_dir in os.listdir(addons_path):
                     logging.warning(f"Skipping banned thought process: {module_name}")
                     continue
                 logging.info(f"Importing {module_name} from addons.{addon_dir}.thought_processes")
-                module = importlib.import_module(f"addons.{addon_dir}.thought_processes.{module_name}")
-                Thought_Types[module.thought_process_name] = module
+                try:
+                    module = importlib.import_module(f"addons.{addon_dir}.thought_processes.{module_name}")
+                    Thought_Types[module.thought_process_name] = module
+                    logging.info(f"Imported {module_name} from addons.{addon_dir}.thought_processes")
+                except Exception as e:
+                    logging.error(f"Failed to import {module_name} from addons.{addon_dir}.thought_processes: {e}")
+                    logging.error(traceback.format_exc())
 logging.info("Imported all Thought models to Thought_Types!")
 
 def create_thought_process(conversation_manager):

@@ -4,6 +4,7 @@ import src.tokenizer as tokenizers
 import os
 import importlib
 import json
+import traceback
 logging.info("Imported required libraries in language_model.py")
 
 with open(os.path.join(os.path.dirname(__file__), "module_banlist"), "r") as f:
@@ -18,10 +19,15 @@ for file in os.listdir(os.path.join(os.path.dirname(__file__), "inference_engine
         if module_name in banned_modules:
             logging.warning(f"Skipping banned language model: {module_name}")
             continue
-        logging.info(f"Importing {module_name} from src.inference_engines")
         if module_name != "base_llm":
-            module = importlib.import_module(f"src.inference_engines.{module_name}")
-            LLM_Types[module.inference_engine_name] = module
+            logging.info(f"Importing {module_name} from src.inference_engines")
+            try:
+                module = importlib.import_module(f"src.inference_engines.{module_name}")
+                LLM_Types[module.inference_engine_name] = module
+                logging.info(f"Imported {module_name} from src.inference_engines")
+            except Exception as e:
+                logging.error(f"Failed to import {module_name} from src.inference_engines: {e}")
+                logging.error(traceback.format_exc())
 
 addons_path = os.path.join(os.path.dirname(__file__), "../", "addons/")
 for addon_dir in os.listdir(addons_path):
@@ -42,8 +48,13 @@ for addon_dir in os.listdir(addons_path):
                     logging.warning(f"Skipping banned language model: {module_name}")
                     continue
                 logging.info(f"Importing {module_name} from addons.{addon_dir}.inference_engines")
-                module = importlib.import_module(f"addons.{addon_dir}.inference_engines.{module_name}")
-                LLM_Types[module.inference_engine_name] = module
+                try:
+                    module = importlib.import_module(f"addons.{addon_dir}.inference_engines.{module_name}")
+                    LLM_Types[module.inference_engine_name] = module
+                    logging.info(f"Imported {module_name} from addons.{addon_dir}.inference_engines")
+                except Exception as e:
+                    logging.error(f"Failed to import {module_name} from addons.{addon_dir}.inference_engines: {e}")
+                    logging.error(traceback.format_exc())
 
 LLM_Types["default"] = LLM_Types[default]
 logging.info("Imported all LLMs to LLM_Types, ready to create a LLM object!")

@@ -3,6 +3,7 @@ from src.logging import logging
 import os
 import importlib
 import json
+import traceback
 logging.info("Imported required libraries in stt.py")
 
 with open(os.path.join(os.path.dirname(__file__), "module_banlist"), "r") as f:
@@ -17,10 +18,14 @@ for file in os.listdir(os.path.join(os.path.dirname(__file__), "speech_input_pro
         if module_name in banned_modules:
             logging.warning(f"Skipping banned STT: {module_name}")
             continue
-        logging.info(f"Importing {module_name} from src.speech_input_processor_types")
         if module_name != "base_stt" and module_name != "base_whisper":
-            module = importlib.import_module(f"src.speech_input_processor_types.{module_name}")
-            speech_input_processor_Types[module.speech_input_processor_slug] = module
+            logging.info(f"Importing {module_name} from src.speech_input_processor_types")
+            try:
+                module = importlib.import_module(f"src.speech_input_processor_types.{module_name}")
+                speech_input_processor_Types[module.speech_input_processor_slug] = module
+            except Exception as e:
+                logging.error(f"Failed to import {module_name} from src.speech_input_processor_types: {e}")
+                logging.error(traceback.format_exc())
 
 addons_path = os.path.join(os.path.dirname(__file__), "../", "addons/")
 for addon_dir in os.listdir(addons_path):
@@ -41,8 +46,13 @@ for addon_dir in os.listdir(addons_path):
                     logging.warning(f"Skipping banned speech input processor: {module_name}")
                     continue
                 logging.info(f"Importing {module_name} from addons.{addon_dir}.speech_input_processor_types")
-                module = importlib.import_module(f"addons.{addon_dir}.speech_input_processor_types.{module_name}")
-                speech_input_processor_Types[module.speech_input_processor_slug] = module
+                try:
+                    module = importlib.import_module(f"addons.{addon_dir}.speech_input_processor_types.{module_name}")
+                    speech_input_processor_Types[module.speech_input_processor_slug] = module
+                    logging.info(f"Imported {module_name} from addons.{addon_dir}.speech_input_processor_types")
+                except Exception as e:
+                    logging.error(f"Failed to import {module_name} from addons.{addon_dir}.speech_input_processor_types: {e}")
+                    logging.error(traceback.format_exc())
 if default in speech_input_processor_Types:
     speech_input_processor_Types["default"] = speech_input_processor_Types[default]
 logging.info("Imported SpeechInputProcessor types in stt.py")
