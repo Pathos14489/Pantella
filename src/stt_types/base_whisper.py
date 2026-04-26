@@ -24,6 +24,7 @@ class base_Transcriber(BASE_TRANSCRIBER):
         raise NotImplementedError
     
     def transcribe_audio_file(self, audio_file_path):
+        logging.info('Transcribing audio file at path: ' + audio_file_path)
         return self.whisper_transcribe(audio_file_path, "")
 
     def recognize_input(self, possible_names_list):

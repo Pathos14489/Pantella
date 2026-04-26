@@ -16,7 +16,7 @@ try:
     logging.info("Loaded winsound")
 except:
     loaded_winsound = False
-    logging.error("Could not load winsound")
+    logging.warn("Could not load winsound")
 try:
     logging.info("Trying to import pygame")
     import pygame
@@ -25,7 +25,10 @@ try:
     logging.info("Loaded pygame")
 except:
     loaded_pygame = False
-    logging.error("Could not load pygame")
+    logging.warn("Could not load pygame")
+
+if not loaded_winsound and not loaded_pygame:
+    logging.error("Could not load any audio playback library, debug mode and direct audio playback will not work! Please ensure you have winsound (windows) or pygame (all platforms) installed and try again.")
 logging.info("Imported required libraries in base_tts.py")
 
 class VoiceModelNotFound(Exception):
@@ -483,7 +486,7 @@ class base_Synthesizer:
 
     def debug(self, final_voiceline_file):
         """Play the voiceline from the script if debug_mode is enabled."""
-        if self.debug_mode and self.play_audio_from_script and loaded_winsound:
+        if self.debug_mode and self.play_audio_from_script and (loaded_winsound or loaded_pygame):
             self.play_voiceline(final_voiceline_file)
 
     def play_voiceline(self, final_voiceline_file, volume=0.5):
