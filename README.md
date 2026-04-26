@@ -155,10 +155,11 @@ The easiest way to install FFmpeg on Windows is to install it via Chocolatey. Yo
 This is super simple. It might already come installed on your distro of choice, but if it doesn't, simply run `sudo apt install ffmpeg`.
 
 #### Install Microsoft C++ Build Tools
-Pantella requires the Microsoft C++ Build Tools to be installed to build some of the required Python packages to install/reinstall them. If you don't have this installed, you can install it by following the instructions below.
+Pantella requires the Microsoft C++ Build Tools to be installed to build some of the required Python packages to install/reinstall them. If you don't have this installed, you can install it by following the instructions below. However if the requirements change over time, and you continue to receive updates for Pantella, you may need to install the Build Tools to keep up with the changes. It will try to automatically update your requirements whenever new requirements are added, but if it fails to do so, you may see error messages and no longer be able to run Pantella until you install the Build Tools. If you try to run the `./install_pantella_requirements.bat` script without the Build Tools installed, it will fail immediately with an error message about the Build Tools not being installed.
 
 ##### Install Microsoft C++ Build Tools for Windows
 1. Download the latest version of the Microsoft C++ Build Tools from [here](https://visualstudio.microsoft.com/visual-cpp-build-tools/).
+2. Follow the instructions to install the Build Tools from the top answer over here: [Install Build Tools](https://stackoverflow.com/questions/64261546/how-to-solve-error-microsoft-visual-c-14-0-or-greater-is-required-when-inst)
 2. Run the installer and follow the instructions. The default settings should be fine.
 
 ##### Install Microsoft C++ Build Tools for Linux
@@ -169,10 +170,10 @@ You're probably already done with this part too. Microsoft C++ Build Tools are n
 If you want to use F5-TTS, E2 TTS, StyleTTS2, OuteTTS, ParlerTTS, ChatTTS, or xTTS 2 with GPU acceleration, you will need to have CUDA installed on your system. If you don't have CUDA installed, you can skip this step and use PiperTTS or xVASynth instead.
 
 ##### Install CUDA
-1. Download CUDA 12.8 from [here](https://developer.nvidia.com/cuda-downloads).
+1. Download CUDA 12.8 from [here](https://developer.nvidia.com/cuda-12-8-2-download-archive). 
 2. Run the installer and follow the instructions. The default settings should be fine.
 
-If you do this step, you should also run the `./windows_torch_cuda_12-4.bat` script to install the correct version of PyTorch for your system to the launcher's embedded Python environment.
+Newer versions of CUDA may work, but you'll have to test them yourself and install torch for your CUDA version. Newer versions of torch may not work with Pantella, so it's recommended to stick with CUDA 12.8 for now as it's the most tested version of CUDA with Pantella at this time. Long term I'd love to support newer versions of CUDA, but for now, if you want to use CUDA acceleration with Pantella, it's recommended to use CUDA 12.8. Make sure to select the correct version for your operating system and architecture. If you are trying to use a newer version of CUDA, you can try it out and see if it works with Pantella, and if you have any issues, feel free to reach out to me on Discord or GitHub and I can try to help you troubleshoot any issues you may have with using a newer version of CUDA with Pantella.
 
 ### Compatibility
 - Pantella works on Windows 10, Windows 11 and Debian Linux (it is yet unconfirmed whether it works on Windows 7)
