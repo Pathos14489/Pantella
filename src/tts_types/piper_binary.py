@@ -30,9 +30,15 @@ class Synthesizer(base_tts.base_Synthesizer):
         self._default_settings = default_settings
         self._voice_model_jsons = []
         logging.config(f"Loading piper_binary voices for game_id '{self.config.game_id}' from {self.piper_models_dir}{self.config.game_id}\\")
-        for file in os.listdir(self.piper_models_dir+self.config.game_id+"\\"):
+        models_path = self.piper_models_dir+self.config.game_id+"\\"
+        if self.config.linux_mode:
+            models_path = models_path.replace("\\", "/")
+        if not os.path.exists(models_path):
+            logging.warning(f"Piper models directory for game_id '{self.config.game_id}' not found at {models_path}. No Piper voices will be loaded.")
+            return
+        for file in os.listdir(models_path):
             if file.endswith(".json"):
-                with open(self.piper_models_dir+self.config.game_id+"\\"+file, 'r', encoding="utf8") as f:
+                with open(os.path.join(models_path, file), 'r', encoding="utf8") as f:
                     json_data = json.load(f)
                     json_data['model_name'] = file.replace(".onnx.json", "")
                     self._voice_model_jsons.append(json_data)
