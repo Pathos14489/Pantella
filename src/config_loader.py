@@ -18,6 +18,8 @@ from fastapi.staticfiles import StaticFiles
 
 from jinja_try_catch import TryCatchExtension
 
+from src.ui import root, OptionDialog, FolderSelectionDialog, MessageBox
+
 logging.info("Imported required libraries in config_loader.py")
 
 interface_configs = {}
@@ -68,8 +70,9 @@ for addon_dir in os.listdir(addons_path):
 logging.info("Imported all interface configs, ready to use them!")
 
 class ConfigLoader:
-    def __init__(self, config_path='config.json'):
+    def __init__(self, config_path='config.json', selected_interface=None):
         self.conversation_manager = None
+        self.selected_interface = selected_interface
         self.config_path = config_path
         self.prompt_styles = {}
         self._raw_prompt_styles = {}
@@ -84,17 +87,39 @@ class ConfigLoader:
         if "game_path" in self.current_interface_config and (self.current_interface_config["game_path"] == "" or self.current_interface_config["game_path"] is None):
             logging.error(f"Game path not set for game id {self.game_id} in interface config file. Please set the game path for {self.game_id} to the directory where your game is installed.")
             if self.linux_mode:
-                game_path = input(f"Please enter the path to your game directory for {self.game_id} (e.g. /home/user/.steam/steam/steamapps/common/Skyrim Special Edition/): ")
+                # game_path = input(f"Please enter the path to your game directory for {self.game_id} (e.g. /home/user/.steam/steam/steamapps/common/Skyrim Special Edition/): ")
+                def select_game_directory():
+                    root.deiconify() # show the root window so the dialog shows up, we'll hide it again after the dialog is closed
+                    dlg = FolderSelectionDialog(root, f"Select Game Directory for {self.game_id}", f"Please select the game directory for {self.game_id} (e.g. /home/user/.steam/steam/steamapps/common/Skyrim Special Edition/): ")
+                    root.withdraw() # hide the root window again after the dialog is closed
+                    return dlg.result
             else:
-                game_path = input(f"Please enter the path to your game directory for {self.game_id} (e.g. C:\\Steam\\steamapps\\common\\Skyrim Special Edition\\): ")
+                # game_path = input(f"Please enter the path to your game directory for {self.game_id} (e.g. C:\\Steam\\steamapps\\common\\Skyrim Special Edition\\): ")
+                def select_game_directory():
+                    root.deiconify() # show the root window so the dialog shows up, we'll hide it again after the dialog is closed
+                    dlg = FolderSelectionDialog(root, f"Select Game Directory for {self.game_id}", f"Please select the game directory for {self.game_id} (e.g. C:\\Steam\\steamapps\\common\\Skyrim Special Edition\\): ")
+                    root.withdraw() # hide the root window again after the dialog is closed
+                    return dlg.result
+            game_path = select_game_directory()
             save_interface = True
 
         if "mod_path" in self.current_interface_config and (self.current_interface_config["mod_path"] == "" or self.current_interface_config["mod_path"] is None):
             logging.error(f"Mod path not set for game id {self.game_id} in interface config file. Please set the mod path for {self.game_id} to the directory where your game mods are located.")
             if self.linux_mode:
-                mod_path = input(f"Please enter the path to your game mods folder for {self.game_id} (e.g. /home/user/MO2/mods/PantellaMod/): ")
+                # mod_path = input(f"Please enter the path to your game mods folder for {self.game_id} (e.g. /home/user/MO2/mods/PantellaMod/): ")
+                def select_mod_directory():
+                    root.deiconify() # show the root window so the dialog shows up, we'll hide it again after the dialog is closed
+                    dlg = FolderSelectionDialog(root, f"Select Mod Directory for {self.game_id}", f"Please select the mod directory for {self.game_id} (e.g. /home/user/MO2/mods/PantellaMod/): ")
+                    root.withdraw() # hide the root window again after the dialog is closed
+                    return dlg.result
             else:
-                mod_path = input(f"Please enter the path to your game mods folder for {self.game_id} (e.g. C:\\MO2\\mods\\PantellaMod\\): ")
+                # mod_path = input(f"Please enter the path to your game mods folder for {self.game_id} (e.g. C:\\MO2\\mods\\PantellaMod\\): ")
+                def select_mod_directory():
+                    root.deiconify() # show the root window so the dialog shows up, we'll hide it again after the dialog is closed
+                    dlg = FolderSelectionDialog(root, f"Select Mod Directory for {self.game_id}", f"Please select the mod directory for {self.game_id} (e.g. C:\\MO2\\mods\\PantellaMod\\): ")
+                    root.withdraw() # hide the root window again after the dialog is closed
+                    return dlg.result
+            mod_path = select_mod_directory()
             save_interface = True
         
         if save_interface:
@@ -166,6 +191,7 @@ class ConfigLoader:
         """Load the config from the config file and set the settings to the loader. If the config file does not exist, create it with the default settings. If a setting is missing from the config file, set it to the default setting."""
         logging.info(f"Loading config from {self.config_path}")
         save = False
+        new = True
         default = self.default()
         if os.path.exists(self.config_path):
             # If the config file does not exist, create it
@@ -181,7 +207,7 @@ class ConfigLoader:
                     logging.error(f"Could not load config file from {self.config_path}.")
                     input("Press enter to continue...")
                     raise ValueError(f"Could not load config file from {self.config_path}. Exiting...")
-
+            new = False
         else:
             logging.error(f"\"{self.config_path}\" does not exist! Creating default config file...")
             config = self.default()
@@ -207,10 +233,21 @@ class ConfigLoader:
                 else:
                     setattr(self, sub_key, config[key][sub_key])
 
+        if new:
+            def show_message():
+                root.deiconify() # show the root window so the dialog shows up, we'll hide it again after the dialog is closed
+                dlg = MessageBox(root, "Welcome to Pantella!", "Welcome to Pantella! It looks like this is your first time running Pantella on this interface, or there was an error loading your config file. We're creating a new config file for you with default settings and we're going to walk you through a few first time setup steps. Please go through the config file and change any settings you'd like to customize. If you need help with any of the settings, join the Discord server for support: https://discord.gg/pantella")
+                root.withdraw() # hide the root window again after the dialog is closed
+            show_message()
+
         if self.game_id not in interface_configs:
             if self.game_id == "":
-                logging.error(f"Game id not set in config file. Please set the game id in the config file to a valid game id (e.g. {list(interface_configs.keys())}).")
-                self.game_id = input(f"Please enter the game id for your game (e.g. {list(interface_configs.keys())}): ")
+                if self.selected_interface is not None:
+                    self.game_id = self.selected_interface
+                    logging.info(f"Setting game id to selected interface: {self.game_id}")
+                else:
+                    logging.error(f"Game id not set in config file. Please set the game id in the config file to a valid game id (e.g. {list(interface_configs.keys())}).")
+                    self.game_id = input(f"Please enter the game id for your game (e.g. {list(interface_configs.keys())}): ")
                 self.save()
                 return self.load() # Reload the config after setting the game id
             else:
@@ -218,6 +255,37 @@ class ConfigLoader:
                 logging.config(f"Valid game ids: {list(interface_configs.keys())}")
                 input("Press enter to continue...")
                 raise ValueError(f"Game id {self.game_id} not found in interface_configs directory. Please add a interface config file for {self.game_id} or change the game_id in config.json to a valid game id.")
+            
+        if self.linux_mode is None: # If linux mode is not set, attempt to auto-detect if linux mode should be enabled based on the operating system
+            if os.name == "windows":
+                self.linux_mode = False
+            else:
+                self.linux_mode = True
+            save = True # Save the linux_mode setting to the config file
+
+        if new:
+            save = True # If the config file is new, save it to the config file after setting the default settings
+            # First time setup - select a TTS
+            def select_tts():
+                root.deiconify() # show the root window so the dialog shows up, we'll hide it again after the dialog is closed
+                available_tts = tts.TTS_Types.keys()
+                dlg = OptionDialog(root, "Select Default TTS", "Select the default TTS to use with Pantella. This will be the default TTS used on startup if 'Always Open TTS Selection' is set to false. You can change this later in your interface's config.json file.", available_tts)
+                root.withdraw() # hide the root window again after the dialog is closed
+                return dlg.result
+            selected_tts = select_tts()
+            logging.info(f"Selected TTS: {selected_tts}")
+            self.tts_engine = [selected_tts]
+            
+            # # First time setup - select a language model
+            # def select_lm():
+            #     root.deiconify() # show the root window so the dialog shows up, we'll hide it again after the dialog is closed
+            #     available_lms = language_models.Language_Model_Types.keys()
+            #     dlg = OptionDialog(root, "Select Default Language Model", "Select the default language model to use with Pantella. This will be the default language model used on startup if 'Always Open Language Model Selection' is set to false. You can change this later in your interface's config.json file.", available_lms)
+            #     root.withdraw() # hide the root window again after the dialog is closed
+            #     return dlg.result
+            # selected_lm = select_lm()
+            # logging.info(f"Selected language model: {selected_lm}")
+            # self.inference_engine = [selected_lm]
 
         if save:
             self.save()
@@ -763,7 +831,7 @@ class ConfigLoader:
                 "system_loop": 3,
             },
             "Config": {
-                "linux_mode": False,
+                "linux_mode": None, # If true, will fix paths for linux (e.g. change backslashes to forward slashes). If None, will attempt to auto-detect if linux mode should be enabled based on the operating system.
                 "seed": -1,
                 "python_binary": "../../python-3.10.11-embed/python.exe", # Default is for use with the launcher. Change to "python" or "python3" for use with a system python installation
                 "character_database_file": ".\\characters\\", # can be a csv file path, a directory file path, or a list of csv file paths and directory file paths

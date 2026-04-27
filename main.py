@@ -1,6 +1,6 @@
 from src.logging import logging
+logging.info("Importing main.py")
 import os
-print(os.path.dirname(__file__))
 import src.conversation_manager as cm
 import src.config_loader as config_loader
 import src.utils as utils
@@ -10,6 +10,32 @@ import traceback
 import asyncio
 import webbrowser
 import time
+import json
+
+logging.info("Imported required libraries in main.py")
+
+from tkinter import Tk, Label
+from src.ui import root, OptionDialog
+
+
+def get_interface():
+    root.deiconify() # show the root window so the dialog shows up, we'll hide it again after the dialog is closed
+    available_interfaces = config_loader.interface_configs.keys()
+    dlg = OptionDialog(root, "Select Interface", "Select the game interface to use with Pantella. You can change this later in the config.json file or by using the web configurator.", available_interfaces)
+    root.withdraw() # hide the root window again after the dialog is closed
+    return dlg.result
+def ask_always_open_interface_selection():
+    root.deiconify() # show the root window so the dialog shows up, we'll hide it again after the dialog is closed
+    dlg = OptionDialog(root, "Always Open Interface Selection?", "Do you want to always open the interface selection dialog on startup? You can change this later in the startup.json file.", ["Yes", "No"])
+    root.withdraw() # hide the root window again after the dialog is closed
+    return dlg.result == "Yes"
+def get_default_interface():
+    root.deiconify() # show the root window so the dialog shows up, we'll hide it again after the dialog is closed
+    available_interfaces = config_loader.interface_configs.keys()
+    dlg = OptionDialog(root, "Select Default Interface", "Select the default game interface to use with Pantella. This will be the default interface used on startup if 'Always Open Interface Selection' is set to false. You can change this later in the startup.json file.", available_interfaces)
+    root.withdraw() # hide the root window again after the dialog is closed
+    return dlg.result
+
 
 if __name__ == "__main__":
     try:
@@ -20,9 +46,58 @@ if __name__ == "__main__":
         logging.error(e)
         imported_gradio = False
 
+    startup_config = {
+        "default_interface": "",
+        "always_open_interface_selection": True,
+        "first_time_setup": True
+    }
+    if os.path.exists(os.path.join(os.path.dirname(__file__), "startup.json")):
+        try:
+            with open(os.path.join(os.path.dirname(__file__), "startup.json"), "r") as f:
+                startup_config = json.load(f)
+        except Exception as e:
+            logging.error(f"Error loading startup config, deleting startup config and starting fresh:")
+            logging.error(e)
+            os.remove(os.path.join(os.path.dirname(__file__), "startup.json"))
+
+
+    if startup_config.get("first_time_setup", True):
+        startup_config["first_time_setup"] = False
+        with open(os.path.join(os.path.dirname(__file__), "startup.json"), "w") as f:
+            json.dump(startup_config, f)
+        always_open = ask_always_open_interface_selection()
+        startup_config["always_open_interface_selection"] = always_open
+        if not always_open:
+            default_interface = get_default_interface()
+            if default_interface is None or default_interface == "":
+                logging.error("No default interface selected, exiting.")
+                input("Press Enter to exit.")
+                exit()
+            startup_config["default_interface"] = default_interface
+        with open(os.path.join(os.path.dirname(__file__), "startup.json"), "w") as f:
+            json.dump(startup_config, f)
+            
+    if startup_config.get("always_open_interface_selection", False) or startup_config.get("default_interface", "") == "":
+        selected_interface = get_interface()
+        if selected_interface is None or selected_interface == "":
+            logging.error("No default interface selected, exiting.")
+            input("Press Enter to exit.")
+            exit()
+    else:
+        selected_interface = startup_config.get("default_interface", "")
+        logging.info(f"Default interface selected from startup config: {selected_interface}")
+
+    os.makedirs(os.path.join(os.path.dirname(__file__), "configs"), exist_ok=True) # make configs directory if it doesn't exist
+
+    config_path = os.path.join(os.path.dirname(__file__), "configs", f"{selected_interface}_config.json")
+    if not os.path.exists(config_path):
+        logging.error(f"No config found for default interface '{selected_interface}' at path: {config_path}, exiting.")
+        
+
+
     logging.info("Starting Pantella...")
     try:
-        config = config_loader.ConfigLoader() # Load config from config.json
+        config = config_loader.ConfigLoader(config_path, selected_interface) # Load config from config.json
     except Exception as e:
         logging.error(f"Error loading config:")
         logging.error(e)
@@ -131,8 +206,12 @@ async def conversation_loop():
         url = f"http://localhost:{config.config_port}/"
         webbrowser.open(url, new=0, autoraise=True)
     if config.play_startup_announcement:
-        random_voice = random.choice(conversation_manager.synthesizer.voices())
-        conversation_manager.synthesizer._say("Pantella is ready to go.", random_voice)
+        voices = conversation_manager.synthesizer.voices()
+        if len(voices) == 0:
+            logging.warning("No voices found for selected TTS, cannot play startup announcement.")
+        else:
+            random_voice = random.choice(voices)
+            conversation_manager.synthesizer._say("Pantella is ready to go.", random_voice)
     while True: # Main Conversation Loop - restarts when conversation ends
         await conversation_manager.await_and_setup_conversation() # wait for player to select an NPC and setup the conversation when outside of conversation
         while conversation_manager.in_conversation and not conversation_manager.conversation_ended:
