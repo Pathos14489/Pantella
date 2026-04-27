@@ -2,6 +2,7 @@ print("Importing openai_api.py")
 from src.logging import logging, time
 import src.utils as utils
 from src.inference_engines.base_llm import base_LLM, TestCoT, get_schema_description
+from src.ui import root, StringInputPopup
 import random
 import traceback
 import os
@@ -121,10 +122,19 @@ class LLM(base_LLM):
             self.config.maximum_local_tokens = token_limit # Set the maximum number of tokens for local models to the number of tokens available for the model chosen    
 
         if not os.path.exists(self.config.openai_api_key_path):
+            logging.error(f"OpenAI API key file not found at {self.config.openai_api_key_path}! Creating file now...")
+            def get_key_from_user():
+                root.deiconify()
+                popup = StringInputPopup(root, "Enter OpenRouter API Key", "Please enter your OpenRouter API key. If you don't have one, you can get one for free at https://openrouter.ai/. This key is required to use the OpenAI API inference engine in Pantella.", hide_input=True)
+                root.withdraw()
+                return popup.result
+            api_key = get_key_from_user()
             with open(self.config.openai_api_key_path, 'w') as f:
-                f.write("abc123")
-        with open(self.config.openai_api_key_path, 'r') as f:
-            api_key = f.readline().strip()
+                f.write(api_key)
+            logging.info(f"Saved OpenRouter API key to {self.config.openai_api_key_path}")
+        else:
+            with open(self.config.openai_api_key_path, 'r') as f:
+                api_key = f.readline().strip()
         self.api_key = api_key
 
         if imported:
