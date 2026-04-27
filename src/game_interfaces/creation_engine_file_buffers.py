@@ -19,12 +19,15 @@ class GameInterface(BaseGameInterface):
             interface_slug = _interface_slug
         super().__init__(conversation_manager, valid_games, interface_slug)
         if _valid_games is not None:
-            if not os.path.exists(f"{self.config.game_path}"):
+            if not os.path.exists(f"{self.game_path}"):
                 self.ready = False
-                logging.error(f"Game path does not exist: {self.config.game_path}")
+                logging.error(f"Game path does not exist: {self.game_path}")
             else:
-                if not os.path.exists(self.config.game_path+'\\_pantella_skyrim_folder.txt'):
-                    logging.warn(f'''Warning: Could not find _pantella_skyrim_folder.txt in {self.config.game_path}.\nIf you have not yet casted the Pantella spell in-game you can safely ignore this message.\nIf you have casted the Pantella spell please check that your\nPantellaSoftware\\config.json "skyrim_folder" has been set correctly\n(instructions on how to set this up are in the config file itself).\nIf you are still having issues, a list of solutions can be found here: \nhttps://github.com/Pathos14489/Pantella\n''')
+                pantella_folder_file_path = self.game_path+f'\\_pantella_{self.config.game_id}_folder.txt'
+                if self.config.linux_mode:
+                    pantella_folder_file_path = self.game_path+f'/_pantella_{self.config.game_id}_folder.txt'
+                if not os.path.exists(pantella_folder_file_path):
+                    logging.warn(f'''Warning: Could not find _pantella_{self.config.game_id}_folder.txt in {self.game_path}.\nIf you have not yet casted the Pantella spell in-game you can safely ignore this message.\nIf you have casted the Pantella spell please check that your\nPantellaSoftware\\config.json "skyrim_folder" has been set correctly\n(instructions on how to set this up are in the config file itself).\nIf you are still having issues, a list of solutions can be found here: \nhttps://github.com/Pathos14489/Pantella\n''')
         if not os.path.exists(self.mod_voice_dir):
             raise FileNotFoundError(f"Mod voice directory not found at {self.mod_voice_dir}")
         
@@ -48,18 +51,30 @@ class GameInterface(BaseGameInterface):
 
     @property
     def game_path(self):
-        return self.config.game_path
+        game_path = self.config.game_path
+        if self.config.linux_mode:
+            game_path = game_path.replace("\\", "/")
+        else:
+            game_path = game_path.replace("/", "\\")
+        return game_path
     
     @property
     def mod_path(self):
-        return self.config.mod_path
+        mod_path = self.config.mod_path
+        if self.config.linux_mode:
+            mod_path = mod_path.replace("\\", "/")
+        else:
+            mod_path = mod_path.replace("/", "\\")
+        return mod_path
     
     @property
     def mod_voice_dir(self):
+        mod_voice_dir = f"{self.mod_path}/Sound/Voice/Pantella.esp"
         if self.config.linux_mode:
-            return f"{self.mod_path}/Sound/Voice/Pantella.esp"
+            mod_voice_dir = mod_voice_dir.replace("\\", "/")
         else:
-            return f"{self.mod_path}\\Sound\\Voice\\Pantella.esp"
+            mod_voice_dir = mod_voice_dir.replace("/", "\\")
+        return mod_voice_dir
         
     def pantella_restarted(self):
         """Write to the game info file that Pantella has been restarted"""
