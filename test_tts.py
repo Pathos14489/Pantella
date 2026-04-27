@@ -42,7 +42,12 @@ if __name__ == '__main__':
     voice_model = "MaleNord"
     while True:
         user_input = input("Enter text to convert to speech: ")
-        command, command_input = user_input.split(" ", 1)
+        user_input_parts = user_input.split(" ", 1)
+        if len(user_input_parts) == 2:
+            command, command_input = user_input.split(" ", 1)
+        else:
+            command = user_input
+            command_input = ""
         if command == "exit":
             break
         elif command == "change_tts":
@@ -53,6 +58,9 @@ if __name__ == '__main__':
         elif command == "change_voice":
             voice_model = command_input
         else:
+            if command_input.strip() == "":
+                logging.warning("No text provided to synthesize!")
+                continue
             try:
                 conversation_manager.synthesizer._say(user_input, voice_model)
             except Exception as e:

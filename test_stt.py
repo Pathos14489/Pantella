@@ -11,7 +11,7 @@ class FakeConfig:
     def __init__(self):
         # STT settings
         self.stt_enabled = True
-        self.stt_engine = "faster_whisper" # Change this to test different STT engines
+        self.stt_engine = "kyutai_stt" # Change this to test different STT engines
         self.stt_language = "default"
         self.speech_processor = "silero_vad" # Change this to test different Speech Input Processors
         self.audio_threshold = "auto"
@@ -47,7 +47,7 @@ class FakeGameInterface:
 
 transcriber = create_Transcriber(FakeGameInterface(FakeConfig()))
 
-print("Starting STT Test Loop. Say 'exit' to quit.")
+print("Starting STT Test Loop. Say 'exit' to quit. - "+transcriber.stt_slug)
 while True:
     try:
         transcription = transcriber.recognize_input([])
