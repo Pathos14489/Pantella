@@ -257,7 +257,7 @@ class ConfigLoader:
                 raise ValueError(f"Game id {self.game_id} not found in interface_configs directory. Please add a interface config file for {self.game_id} or change the game_id in config.json to a valid game id.")
             
         if self.linux_mode is None: # If linux mode is not set, attempt to auto-detect if linux mode should be enabled based on the operating system
-            if os.name == "windows":
+            if os.name == "nt": # If the operating system is Windows, disable linux mode
                 self.linux_mode = False
             else:
                 self.linux_mode = True

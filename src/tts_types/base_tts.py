@@ -524,14 +524,9 @@ class base_Synthesizer:
         logging.config(f'{self.tts_slug} - Voiceline location: {voiceline_location}')
         if not os.path.exists(voiceline_location):
             os.makedirs(os.path.dirname(voiceline_location), exist_ok=True)
-        
-        if self.config.linux_mode:
-            final_voiceline_file = final_voiceline_file.replace("\\", "/")
-        else:
-            final_voiceline_file = final_voiceline_file.replace("/", "\\")
         self._synthesize(voiceline, voice_model, voiceline_location, settings)
-        if not os.path.exists(final_voiceline_file):
-            logging.error(f'{self.tts_slug} failed to generate voiceline at: {Path(final_voiceline_file)}')
+        if not os.path.exists(voiceline_location):
+            logging.error(f'{self.tts_slug} failed to generate voiceline at: {Path(voiceline_location)}')
             raise FileNotFoundError()
         self.play_voiceline(voiceline_location, volume)
         return voiceline_location
