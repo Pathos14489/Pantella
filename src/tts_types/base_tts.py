@@ -8,7 +8,6 @@ import soundfile as sf
 import time
 import numpy as np
 import json
-from src.config_loader import ConfigLoader
 try:
     logging.info("Trying to import winsound")
     import winsound
@@ -51,7 +50,7 @@ class base_Synthesizer:
         self.tts_slug = tts_slug
         self._default_settings = default_settings
         self.conversation_manager = conversation_manager
-        self.config: ConfigLoader = self.conversation_manager.config
+        self.config = self.conversation_manager.config
         # determines whether the voiceline should play internally
         self.debug_mode = self.config.debug_mode
         self.play_audio_from_script = self.config.play_audio_from_script
