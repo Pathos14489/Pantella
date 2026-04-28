@@ -234,11 +234,15 @@ class ConfigLoader:
                     setattr(self, sub_key, config[key][sub_key])
 
         if new:
-            def show_message():
+            def select_tts():
                 root.deiconify() # show the root window so the dialog shows up, we'll hide it again after the dialog is closed
-                dlg = MessageBox(root, "Welcome to Pantella!", "Welcome to Pantella! It looks like this is your first time running Pantella on this interface, or there was an error loading your config file. We're creating a new config file for you with default settings and we're going to walk you through a few first time setup steps. Please go through the config file and change any settings you'd like to customize. If you need help with any of the settings, join the Discord server for support: https://discord.gg/pantella")
+                available_tts = tts.tts_Types.keys()
+                dlg = OptionDialog(root, "Select Default TTS", "Select the default TTS to use with Pantella. This will be the default TTS used on startup if 'Always Open TTS Selection' is set to false. You can change this later in your interface's config.json file.", available_tts)
                 root.withdraw() # hide the root window again after the dialog is closed
-            show_message()
+                return dlg.result
+            selected_tts = select_tts()
+            logging.info(f"Selected TTS: {selected_tts}")
+            self.tts_engine = [selected_tts]
 
         if self.game_id not in interface_configs:
             if self.game_id == "":
@@ -265,19 +269,6 @@ class ConfigLoader:
                 self.linux_mode = False
                 logging.info("Linux mode disabled based on operating system")
             save = True # Save the linux_mode setting to the config file
-
-        if new:
-            save = True # If the config file is new, save it to the config file after setting the default settings
-            # First time setup - select a TTS
-            def select_tts():
-                root.deiconify() # show the root window so the dialog shows up, we'll hide it again after the dialog is closed
-                available_tts = tts.TTS_Types.keys()
-                dlg = OptionDialog(root, "Select Default TTS", "Select the default TTS to use with Pantella. This will be the default TTS used on startup if 'Always Open TTS Selection' is set to false. You can change this later in your interface's config.json file.", available_tts)
-                root.withdraw() # hide the root window again after the dialog is closed
-                return dlg.result
-            selected_tts = select_tts()
-            logging.info(f"Selected TTS: {selected_tts}")
-            self.tts_engine = [selected_tts]
             
             # # First time setup - select a language model
             # def select_lm():

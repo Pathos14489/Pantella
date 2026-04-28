@@ -35,6 +35,10 @@ def get_default_interface():
     dlg = OptionDialog(root, "Select Default Interface", "Select the default game interface to use with Pantella. This will be the default interface used on startup if 'Always Open Interface Selection' is set to false. You can change this later in the startup.json file.", available_interfaces)
     root.withdraw() # hide the root window again after the dialog is closed
     return dlg.result
+def show_message():
+    root.deiconify() # show the root window so the dialog shows up, we'll hide it again after the dialog is closed
+    dlg = MessageBox(root, "Welcome to Pantella!", "Welcome to Pantella! It looks like this is your first time running Pantella. We're going to walk you through a few first time setup steps. You may notice a small extra window open with this popup, that is nothing to be concerned about, just a quirk of how we're handling these popups that will hopefully be addressed and fixed later, but it's a relatively minor cosmetic issue so it isn't high on the agenda currently.\nAfter this initial setup, it's highly recommended that you please go through your generated config file for the selected interface and change any settings you'd like to customize.\nPlease remember that Pantella is developed by a small team and may have unexpected bugs. If you need help with configuring your settings, or you encounter a bug or error, please join the Discord server for support: https://discord.gg/pantella")
+    root.withdraw() # hide the root window again after the dialog is closed
 
 
 if __name__ == "__main__":
@@ -65,6 +69,7 @@ if __name__ == "__main__":
         startup_config["first_time_setup"] = False
         with open(os.path.join(os.path.dirname(__file__), "startup.json"), "w") as f:
             json.dump(startup_config, f)
+        show_message()
         always_open = ask_always_open_interface_selection()
         startup_config["always_open_interface_selection"] = always_open
         if not always_open:
@@ -91,9 +96,7 @@ if __name__ == "__main__":
 
     config_path = os.path.join(os.path.dirname(__file__), "configs", f"{selected_interface}_config.json")
     if not os.path.exists(config_path):
-        logging.error(f"No config found for default interface '{selected_interface}' at path: {config_path}, exiting.")
-        
-
+        logging.error(f"No config found for default interface '{selected_interface}' at path: {config_path}, exiting.")(med)
 
     logging.info("Starting Pantella...")
     try:
