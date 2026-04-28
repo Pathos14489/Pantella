@@ -8,6 +8,7 @@ import soundfile as sf
 import time
 import numpy as np
 import json
+from src.ui import root, OptionDialog, StringInputPopup
 try:
     logging.info("Trying to import winsound")
     import winsound
@@ -49,6 +50,7 @@ class base_Synthesizer:
         global tts_slug, default_settings, loaded
         self.tts_slug = tts_slug
         self._default_settings = default_settings
+        self.needs_transcription = True
         self.conversation_manager = conversation_manager
         self.config = self.conversation_manager.config
         # determines whether the voiceline should play internally
@@ -293,8 +295,31 @@ class base_Synthesizer:
             else:
                 logging.warning(f'No speaker wav found for voice model: {voice_model}. Cannot generate transcription using STT.')
         else:
-            if needs_transcription:
-                logging.warning(f'No transcription found for voice model: {voice_model}, and unable to generate transcription using STT. This may cause issues with synthesis if your TTS type requires transcriptions for the voice models.')
+            if needs_transcription and self.needs_transcription:
+                def show_transcription_warning():
+                    root.deiconify()
+                    option_dialog = OptionDialog(root, "Transcription Needed", f"The TTS engine '{self.tts_slug}' has no transcription set for the voice model '{voice_model}', but it is required for synthesis. Would you like to input a transcription manually? If you choose 'No', the TTS engine will attempt to generate the voiceline without a transcription, which may result in lower quality synthesis or failure to synthesize at all. If you wish to automatically generate a transcription using the STT engine set in the interface, please enable an STT engine in the interfac's config.json and make sure it is working properly. Please prepare to listen, the voice sample will be played after you click 'Yes'.", ["Yes", "No"])
+                    root.withdraw()
+                    return option_dialog.result == "Yes"
+                if show_transcription_warning():
+                    speaker_wav_path = self.get_speaker_wav_path(voice_model)
+                    self.play_voiceline(speaker_wav_path)
+                    def get_transcription():
+                        root.deiconify()
+                        string_input_popup = StringInputPopup(root, "Input Transcription", f"Please input the transcription for the voice model '{voice_model}':")
+                        root.withdraw()
+                        if string_input_popup.result is None or string_input_popup.result.strip() == "":
+                            logging.warning(f'No transcription entered for voice model: {voice_model}. Cannot generate transcription using STT.')
+                            return ""
+                        return string_input_popup.result
+                    transcription = get_transcription()
+                    if transcription.strip() != "":
+                        settings["transcription"] = transcription.strip()
+                        save_changes = True
+                    else:
+                        logging.warning(f'No transcription entered for voice model: {voice_model}. Cannot generate transcription using STT.')
+                else:
+                    logging.warning(f'No transcription found for voice model: {voice_model}, and unable to generate transcription using STT. This may cause issues with synthesis because your TTS type requires transcriptions for the voice models.')
 
         if save_changes:
             with open(default_settings_path, "w") as f:

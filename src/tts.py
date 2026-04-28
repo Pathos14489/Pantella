@@ -72,6 +72,7 @@ def create_Synthesizer(conversation_manager, slugs): # Get the TTS slug from con
     else:
         logging.info(f"Using multi_tts with TTS engines: {slugs}")
     ttses = []
+    synth = None
     if type(slugs) == list: # If there are multiple TTS engines specified in config.json
         for slug in slugs:
             logging.info(f"Creating TTS engine: {slug}")
@@ -86,7 +87,7 @@ def create_Synthesizer(conversation_manager, slugs): # Get the TTS slug from con
             synth = tts_Types[slug].Synthesizer(conversation_manager)
             synth.crashable = False # If we have multiple tts engines, we don't want to crash if one of them doesn't have a voice model
             ttses.append(synth)
-        return tts_Types["multi_tts"].Synthesizer(conversation_manager, ttses)
+        synth = tts_Types["multi_tts"].Synthesizer(conversation_manager, ttses)
     elif type(slugs) == str: # If there is only one TTS engine specified in config.json
         if slugs not in tts_Types:
             slugs = slugs.lower()
@@ -94,8 +95,14 @@ def create_Synthesizer(conversation_manager, slugs): # Get the TTS slug from con
             logging.error(f"Could not find inference engine '{slugs}'! Please check your config.json file and try again!")
             input("Press enter to continue...")
             raise ValueError(f"Could not find inference engine '{slugs}'! Please check your config.json file and try again!")
-        return tts_Types[slugs].Synthesizer(conversation_manager)
+        synth = tts_Types[slugs].Synthesizer(conversation_manager)
     else:
         logging.error(f"Wrong type for tts_engine in config.json! Expected string or list of strings, got '{type(slugs)}'! Please check your config.json file and try again!")
         input("Press enter to continue...")
         raise ValueError(f"Wrong type for tts_engine in config.json! Expected string or list of strings, got '{type(slugs)}'! Please check your config.json file and try again!")
+    if synth.needs_transcription == True:
+        voices_that_need_transcription = [voice_model for voice_model in synth.voices() if self.voice_model_settings(voice_model).get("transcription", "").strip() == ""]
+        needs_transcription = len(voices_that_need_transcription) > 0
+        if needs_transcription and self.conversation_manager.interface.transcriber == None:
+            logging.warning(f"The TTS engine '{synth.tts_slug}' has {str(len(voices_that_need_transcription))}/{str(len(synth.voices()))} voices that require transcription, but no transcriber is set in the interface! These voices will not work until a transcriber is set.")
+    return synth

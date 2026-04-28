@@ -57,6 +57,7 @@ class Synthesizer(base_tts.base_Synthesizer):
         super().__init__(conversation_manager)
         self.tts_slug = tts_slug
         self._default_settings = default_settings
+        self.needs_transcription = True
         logging.info(f"Initializing {self.tts_slug}...")
         self.model = load_e2tts(self.config.e2_tts_device)
 

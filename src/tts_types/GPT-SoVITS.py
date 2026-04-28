@@ -422,6 +422,7 @@ class Synthesizer(base_tts.base_Synthesizer):
         global tts_slug, default_settings, loaded
         self.tts_slug = tts_slug
         self._default_settings = default_settings
+        self.needs_transcription = True
         logging.info(f"Initializing {self.tts_slug}...")
         self.torch_dtype=torch.float16 if self.config.gpt_sovits_is_half == True else torch.float32
         self.np_dtype=np.float16 if self.config.gpt_sovits_is_half == True else np.float32
