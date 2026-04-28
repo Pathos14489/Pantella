@@ -96,7 +96,7 @@ if __name__ == "__main__":
 
     config_path = os.path.join(os.path.dirname(__file__), "configs", f"{selected_interface}_config.json")
     if not os.path.exists(config_path):
-        logging.error(f"No config found for default interface '{selected_interface}' at path: {config_path}, exiting.")(med)
+        logging.error(f"No config found for default interface '{selected_interface}' at path: {config_path}, exiting.")
 
     logging.info("Starting Pantella...")
     try:

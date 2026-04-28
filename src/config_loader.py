@@ -243,6 +243,13 @@ class ConfigLoader:
             selected_tts = select_tts()
             logging.info(f"Selected TTS: {selected_tts}")
             self.tts_engine = [selected_tts]
+            def select_python_binary():
+                root.deiconify() # show the root window so the dialog shows up, we'll hide it again after the dialog is closed
+                available_binaries = ["python", "python3", "../../python-3.10.11-embed/python.exe"]
+                dlg = OptionDialog(root, "Select Python Binary", "Select the python binary to use with Pantella. If you have python added to your system path and want to use it, you can select 'python' or 'python3'. If you want to use the embedded python installation that comes with the launcher, select '../../python-3.10.11-embed/python.exe'. You can change this later in your config.json file. If you are running Windows 10/11 using the Pantella Launcher, you should choose '../../python-3.10.11-embed/python.exe'", available_binaries)
+                root.withdraw() # hide the root window again after the dialog is closed
+                return dlg.result
+            self.python_binary = select_python_binary()
 
         if self.game_id not in interface_configs:
             if self.game_id == "":
@@ -828,7 +835,7 @@ class ConfigLoader:
             "Config": {
                 "linux_mode": None, # If true, will fix paths for linux (e.g. change backslashes to forward slashes). If None, will attempt to auto-detect if linux mode should be enabled based on the operating system.
                 "seed": -1,
-                "python_binary": "../../python-3.10.11-embed/python.exe", # Default is for use with the launcher. Change to "python" or "python3" for use with a system python installation
+                "python_binary": None, # "../../python-3.10.11-embed/python.exe", # Default is for use with the launcher. Change to "python" or "python3" for use with a system python installation
                 "character_database_file": ".\\characters\\", # can be a csv file path, a directory file path, or a list of csv file paths and directory file paths
                 "conversation_data_directory": ".\\data\\conversations",
                 "voice_model_ref_ids_file": ".\\skyrim_voice_model_ids.json",
