@@ -14,6 +14,7 @@ import threading
 import traceback
 import random
 import sys
+from src.ui import root, FolderSelectionDialog
 logging.info("Imported required libraries in xVASynth TTS")
 
 
@@ -51,21 +52,29 @@ reverse_ttw_voice_mapping = {v: k for k, v in ttw_voice_mapping.items()} # For c
 model_filename_mapping = {
     "falloutnv": {
         "MaleUniqueTheKing": "the_king",
+        "FemaleAdult07, FemaleAdult12":"nv_femaleadult07_12",
+        "MaleUniqueThreeDog": "threedog",
     }
 }
 
 tts_slug = "xvasynth"
 default_settings = {
-    "pace": 1.0,
-    "use_sr": True,
-    "use_cleanup": True,
-    "tts_language_code": "en",
+    "xvasynth_path": "",
+    "xvasynth_process_device": "cpu",
+    "xvasynth_default_pace": 1.0,
+    "xvasynth_default_use_cleanup": False,
+    "xvasynth_default_use_sr": False,
+    "xvasynth_banned_voice_models": [],
+    "xvasynth_base_url": "http://127.0.0.1:8008",
 }
 settings_description = {
-    "pace": "The pace of the generated audio. 1.0 is normal pace, 0.5 is half pace, 2.0 is double pace.",
-    "use_sr": "Whether to use super resolution on the generated audio. This can improve the quality of the audio, but may take longer to generate.",
-    "use_cleanup": "Whether to use cleanup on the generated audio. This can improve the quality of the audio, but may take longer to generate.",
-    "tts_language_code": "The language code of the generated audio. This is used to determine the language of the audio, and can be used to improve the quality of the audio.",
+    "xvasynth_path": "The path to the xVASynth installation folder. This is required for Pantella to work with xVASynth. Please ensure that this path is correct and that xVASynth is installed in this location.",
+    "xvasynth_process_device": "The device to use for processing the TTS. Options are 'cpu' and 'gpu'. Using 'gpu' will require a compatible NVIDIA GPU and the appropriate CUDA drivers installed. Using 'cpu' will work on any machine, but may be slower.",
+    "xvasynth_default_pace": "The pace of the generated audio. 1.0 is normal pace, 0.5 is half pace, 2.0 is double pace.",
+    "xvasynth_default_use_cleanup": "Whether to use cleanup on the generated audio. This can improve the quality of the audio, but may take longer to generate.",
+    "xvasynth_default_use_sr": "Whether to use super resolution on the generated audio. This can improve the quality of the audio, but may take longer to generate.",
+    "xvasynth_banned_voice_models": "A list of voice models that are banned from being used. This can be used to prevent certain voice models from being used.",
+    "xvasynth_base_url": "The base URL for the xVASynth API. This is used to communicate with the xVASynth server.",
 }
 options = {
     "tts_language_code": [
@@ -299,12 +308,34 @@ class Synthesizer(base_tts.base_Synthesizer):
         self.tts_slug = tts_slug
         self._default_settings = default_settings
         self.xvasynth_path = self.config.xvasynth_path
+        if self.xvasynth_path == "":
+            def select_xvasynth_directory():
+                root.deiconify() # show the root window so the dialog shows up, we'll hide it again after the dialog is closed
+                dlg = FolderSelectionDialog(root, f"Select xVASynth Installation Directory", f"Please select the installation directory for xVASynth (e.g. C:\\Games\\Steam\\steamapps\\common\\xVASynth): ")
+                root.withdraw() # hide the root window again after the dialog is closed
+                return dlg.result + "/" if dlg.result is not None else ""
+            self.xvasynth_path = select_xvasynth_directory()
+            self.config.xvasynth_path = self.xvasynth_path
+            self.config.save()
         self.process_device = self.config.xvasynth_process_device
         self.times_checked_xvasynth = 0
 
         if self.config.linux_mode:
+            logging.warn(f"Linux mode enabled: Warning - xVASynth is not officially supported on Linux and may not work properly or at all. I've been unable to make it work consistently on Linux but if you manage to get it working, please let me know and I can add support for it!")
             import sklearn.neighbors._base
             sys.modules['sklearn.neighbors.base'] = sklearn.neighbors._base
+            if not os.path.exists(self.xvasynth_path+"h2p_parser/"): # h2p_parser is required and is not there, but it should be in the cpython_gpu or cpython_cpu folder, so we'll copy it from there
+                import shutil
+                if os.path.exists(self.xvasynth_path+"resources/app/cpython_gpu/h2p_parser/"):
+                    logging.info(f"Copying h2p_parser from cpython_gpu folder to xVASynth root directory...")
+                    shutil.copytree(self.xvasynth_path+"resources/app/cpython_gpu/h2p_parser/", self.xvasynth_path+"h2p_parser/")
+                elif os.path.exists(self.xvasynth_path+"resources/app/cpython_cpu/h2p_parser/"):
+                    logging.info(f"Copying h2p_parser from cpython_cpu folder to xVASynth root directory...")
+                    shutil.copytree(self.xvasynth_path+"resources/app/cpython_cpu/h2p_parser/", self.xvasynth_path+"h2p_parser/")
+                else:
+                    logging.error(f"h2p_parser folder is missing from xVASynth installation. Please ensure that you have the latest version of xVASynth installed and that the h2p_parser folder is present in either the cpython_gpu or cpython_cpu folder.")
+                    input('\nPress any key to stop Pantella...')
+                    raise FileNotFoundError(f"h2p_parser folder is missing from xVASynth installation. Please ensure that you have the latest version of xVASynth installed and that the h2p_parser folder is present in either the cpython_gpu or cpython_cpu folder.")
         
         if self.is_running():
             # check if voices are available
@@ -355,6 +386,7 @@ class Synthesizer(base_tts.base_Synthesizer):
         self._voices = None
 
         self.synthesize_url = f'{self.config.xvasynth_base_url}/synthesize'
+        self.synthesize_simple_url = f'{self.config.xvasynth_base_url}/synthesizeSimple'
         self.synthesize_batch_url = f'{self.config.xvasynth_base_url}/synthesize_batch'
         self.loadmodel_url = f'{self.config.xvasynth_base_url}/loadModel'
         self.setvocoder_url = f'{self.config.xvasynth_base_url}/setVocoder'
@@ -411,11 +443,11 @@ class Synthesizer(base_tts.base_Synthesizer):
             else:
                 # subprocess.run(command, shell=False, cwd=self.xvasynth_path)
                 if self.process_device == "cpu":
-                    command = f'cd {self.xvasynth_path} && CUDA_VISIBLE_DEVICES= python3 {self.xvasynth_path}resources/app/server.py'
+                    command = f'cd {self.xvasynth_path} && CUDA_VISIBLE_DEVICES= {self.config.python_binary} {self.xvasynth_path}resources/app/server.py'
                     logging.info(f'Running xVASynth server with command: {command}')
                     threading.Thread(target=subprocess.run, args=(command,), kwargs={'shell': True, 'cwd': self.xvasynth_path}).start()
                 else:
-                    command = f'cd {self.xvasynth_path} && python3 {self.xvasynth_path}resources/app/server.py'
+                    command = f'cd {self.xvasynth_path} && {self.config.python_binary} {self.xvasynth_path}resources/app/server.py'
                     logging.info(f'Running xVASynth server with command: {command}')
                     threading.Thread(target=subprocess.run, args=(command,), kwargs={'shell': True, 'cwd': self.xvasynth_path}).start()
         except Exception as e:
@@ -439,10 +471,10 @@ class Synthesizer(base_tts.base_Synthesizer):
                 # logging.info(f"Response text: {r.text}")
                 data = available_voices_request.json()
                 for character in data[self.game]:
-                    if self.game == "falloutnv" and character['voiceName'] not in ttw_voice_mapping:
-                        self._voices.append(character['voiceName'])
-                    else:
+                    if self.game == "falloutnv" and character['voiceName'] in ttw_voice_mapping:
                         self._voices.append(ttw_voice_mapping[character['voiceName']])
+                    else:
+                        self._voices.append(character['voiceName'])
             else:
                 logging.info(f"Could not get available voices from {self.get_available_voices_url}...")
                 # logging.info(f"Response code: {r.status_code}")
@@ -515,7 +547,10 @@ class Synthesizer(base_tts.base_Synthesizer):
         logging.config(f'Pace: {self.pace}')
         logging.config(f'Use SR: {self.use_sr}')
         logging.config(f'Use Cleanup: {self.use_cleanup}')
-        requests.post(self.synthesize_url, json=data)
+        if self.model_type == 'xVAPitch':
+            requests.post(self.synthesize_url, json=data)
+        else:
+            requests.post(self.synthesize_simple_url, json=data)
 
     @utils.time_it
     def _batch_synthesize(self, grouped_sentences, voiceline_files, settings):
@@ -710,6 +745,7 @@ class Synthesizer(base_tts.base_Synthesizer):
 
         with open(voice_path+'.json', 'r', encoding='utf-8') as f:
             voice_model_json = json.load(f)
+        logging.info(f"Loaded voice model json from {voice_path+'.json'}: {json.dumps(voice_model_json, indent=4)}")
 
         try:
             base_speaker_emb = voice_model_json['games'][0]['base_speaker_emb']
