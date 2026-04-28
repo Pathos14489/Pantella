@@ -267,7 +267,7 @@ class base_Synthesizer:
             voice_model_settings_path = os.path.abspath(f".\\data\\tts_settings\\default\\{self.language['tts_language_code']}\\{voice_model}.json")
         return voice_model_settings_path
 
-    def get_default_voice_model_settings(self, voice_model):
+    def get_default_voice_model_settings(self, voice_model, generate_transcription_if_necessary=True):
         """Get the default settings for the voice model"""
         settings = self.default_voice_model_settings.copy()
         save_changes = False
@@ -283,7 +283,7 @@ class base_Synthesizer:
                 json.dump(settings, f, indent=4)
         
         needs_transcription = "transcription" in settings and settings["transcription"] == ""
-        if needs_transcription and self.conversation_manager.game_interface is not None and self.conversation_manager.game_interface.transcriber is not None:
+        if needs_transcription and self.conversation_manager.game_interface is not None and self.conversation_manager.game_interface.transcriber is not None and generate_transcription_if_necessary:
             logging.info(f'No transcription found for voice model: {voice_model}. Attempting to generate transcription using STT.')
             speaker_wav_path = self.get_speaker_wav_path(voice_model)
             if speaker_wav_path is not None:
@@ -327,14 +327,14 @@ class base_Synthesizer:
 
         return settings
 
-    def voice_model_settings(self, character_or_voice_model):
+    def voice_model_settings(self, character_or_voice_model, generate_transcription_if_necessary=True):
         """Return the settings for the specified voice model"""
         if type(character_or_voice_model) == str:
             voice_model = character_or_voice_model
         else:
             voice_model = self.get_valid_voice_model(character_or_voice_model)
         
-        settings = self.get_default_voice_model_settings(voice_model) # Get the default settings for the voice model
+        settings = self.get_default_voice_model_settings(voice_model, generate_transcription_if_necessary) # Get the default settings for the voice model
 
         voice_model_settings_path = self.voice_model_settings_path(voice_model) # Get the voice model settings path for the specific TTS type
         os.makedirs(os.path.dirname(voice_model_settings_path), exist_ok=True) # make sure the directory exists

@@ -101,8 +101,13 @@ def create_Synthesizer(conversation_manager, slugs): # Get the TTS slug from con
         input("Press enter to continue...")
         raise ValueError(f"Wrong type for tts_engine in config.json! Expected string or list of strings, got '{type(slugs)}'! Please check your config.json file and try again!")
     if synth.needs_transcription == True:
-        voices_that_need_transcription = [voice_model for voice_model in synth.voices() if synth.voice_model_settings(voice_model).get("transcription", "").strip() == ""]
+        if conversation_manager.config.pregen_transcriptions_if_necessary == True:
+            logging.warning(f"The TTS engine '{synth.tts_slug}' requires transcription for some of its voices. Attempting to generate transcriptions for these voices now since 'pregen_transcriptions_if_necessary' is set to true in config.json. This may take a while if there are a lot of voices that need transcription, but it will save time in the long run since the transcriptions will be saved and won't need to be generated again.")
+            voices_that_need_transcription = [voice_model for voice_model in synth.voices() if synth.voice_model_settings(voice_model).get("transcription", "").strip() == ""]
+        else:
+            voices_that_need_transcription = [voice_model for voice_model in synth.voices() if synth.voice_model_settings(voice_model, False).get("transcription", "").strip() == ""]
         needs_transcription = len(voices_that_need_transcription) > 0
-        if needs_transcription and conversation_manager.interface.transcriber == None:
-            logging.warning(f"The TTS engine '{synth.tts_slug}' has {str(len(voices_that_need_transcription))}/{str(len(synth.voices()))} voices that require transcription, but no transcriber is set in the interface! These voices will not work until a transcriber is set.")
+        if needs_transcription and conversation_manager.game_interface.transcriber == None:
+            if conversation_manager.config.pregen_transcriptions_if_necessary == True:
+                logging.warning(f"The TTS engine '{synth.tts_slug}' has {str(len(voices_that_need_transcription))}/{str(len(synth.voices()))} voices that require transcription, but no transcriber is set in the interface! These voices will not work until a transcriber is set.")
     return synth

@@ -799,6 +799,7 @@ class ConfigLoader:
                 "narrator_volume": 0.5, # 50% volume
                 "narrator_delay": 0.2, # 200ms delay
                 "bypass_facefxwrapper": False,
+                "pregen_transcriptions_if_necessary": True,
             },
             "Debugging": {
                 "debug_mode": False,
@@ -990,6 +991,7 @@ class ConfigLoader:
                 "narrator_volume": self.narrator_volume,
                 "narrator_delay": self.narrator_delay,
                 "bypass_facefxwrapper": self.bypass_facefxwrapper,
+                "pregen_transcriptions_if_necessary": self.pregen_transcriptions_if_necessary,
             },
             "Debugging": {
                 "debug_mode": self.debug_mode,
