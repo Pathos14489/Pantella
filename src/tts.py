@@ -101,8 +101,8 @@ def create_Synthesizer(conversation_manager, slugs): # Get the TTS slug from con
         input("Press enter to continue...")
         raise ValueError(f"Wrong type for tts_engine in config.json! Expected string or list of strings, got '{type(slugs)}'! Please check your config.json file and try again!")
     if synth.needs_transcription == True:
-        voices_that_need_transcription = [voice_model for voice_model in synth.voices() if self.voice_model_settings(voice_model).get("transcription", "").strip() == ""]
+        voices_that_need_transcription = [voice_model for voice_model in synth.voices() if synth.voice_model_settings(voice_model).get("transcription", "").strip() == ""]
         needs_transcription = len(voices_that_need_transcription) > 0
-        if needs_transcription and self.conversation_manager.interface.transcriber == None:
+        if needs_transcription and conversation_manager.interface.transcriber == None:
             logging.warning(f"The TTS engine '{synth.tts_slug}' has {str(len(voices_that_need_transcription))}/{str(len(synth.voices()))} voices that require transcription, but no transcriber is set in the interface! These voices will not work until a transcriber is set.")
     return synth
