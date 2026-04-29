@@ -52,7 +52,7 @@ reverse_ttw_voice_mapping = {v: k for k, v in ttw_voice_mapping.items()} # For c
 model_filename_mapping = {
     "falloutnv": {
         "MaleUniqueTheKing": "the_king",
-        "FemaleAdult07, FemaleAdult12":"nv_femaleadult07_12",
+        "FemaleAdult07, FemaleAdult12":"femaleadult07_12",
         "MaleUniqueThreeDog": "threedog",
     }
 }
@@ -321,21 +321,8 @@ class Synthesizer(base_tts.base_Synthesizer):
         self.times_checked_xvasynth = 0
 
         if self.config.linux_mode:
-            logging.warn(f"Linux mode enabled: Warning - xVASynth is not officially supported on Linux and may not work properly or at all. I've been unable to make it work consistently on Linux but if you manage to get it working, please let me know and I can add support for it!")
             import sklearn.neighbors._base
             sys.modules['sklearn.neighbors.base'] = sklearn.neighbors._base
-            if not os.path.exists(self.xvasynth_path+"h2p_parser/"): # h2p_parser is required and is not there, but it should be in the cpython_gpu or cpython_cpu folder, so we'll copy it from there
-                import shutil
-                if os.path.exists(self.xvasynth_path+"resources/app/cpython_gpu/h2p_parser/"):
-                    logging.info(f"Copying h2p_parser from cpython_gpu folder to xVASynth root directory...")
-                    shutil.copytree(self.xvasynth_path+"resources/app/cpython_gpu/h2p_parser/", self.xvasynth_path+"h2p_parser/")
-                elif os.path.exists(self.xvasynth_path+"resources/app/cpython_cpu/h2p_parser/"):
-                    logging.info(f"Copying h2p_parser from cpython_cpu folder to xVASynth root directory...")
-                    shutil.copytree(self.xvasynth_path+"resources/app/cpython_cpu/h2p_parser/", self.xvasynth_path+"h2p_parser/")
-                else:
-                    logging.error(f"h2p_parser folder is missing from xVASynth installation. Please ensure that you have the latest version of xVASynth installed and that the h2p_parser folder is present in either the cpython_gpu or cpython_cpu folder.")
-                    input('\nPress any key to stop Pantella...')
-                    raise FileNotFoundError(f"h2p_parser folder is missing from xVASynth installation. Please ensure that you have the latest version of xVASynth installed and that the h2p_parser folder is present in either the cpython_gpu or cpython_cpu folder.")
         
         if self.is_running():
             # check if voices are available
@@ -441,15 +428,9 @@ class Synthesizer(base_tts.base_Synthesizer):
             if not self.config.linux_mode:
                 subprocess.Popen(f'{self.xvasynth_path}/resources/app/cpython_{self.process_device}/server.exe', cwd=self.xvasynth_path)
             else:
-                # subprocess.run(command, shell=False, cwd=self.xvasynth_path)
-                if self.process_device == "cpu":
-                    command = f'cd {self.xvasynth_path} && CUDA_VISIBLE_DEVICES= {self.config.python_binary} {self.xvasynth_path}resources/app/server.py'
-                    logging.info(f'Running xVASynth server with command: {command}')
-                    threading.Thread(target=subprocess.run, args=(command,), kwargs={'shell': True, 'cwd': self.xvasynth_path}).start()
-                else:
-                    command = f'cd {self.xvasynth_path} && {self.config.python_binary} {self.xvasynth_path}resources/app/server.py'
-                    logging.info(f'Running xVASynth server with command: {command}')
-                    threading.Thread(target=subprocess.run, args=(command,), kwargs={'shell': True, 'cwd': self.xvasynth_path}).start()
+                command = f'cd {self.xvasynth_path} && wine {self.xvasynth_path}resources/app/cpython_{self.process_device}/server.exe'
+                logging.info(f'Running xVASynth server with command: {command}')
+                threading.Thread(target=subprocess.run, args=(command,), kwargs={'shell': True, 'cwd': self.xvasynth_path}).start()
         except Exception as e:
             logging.error(f'Could not run xVASynth. Ensure that the path "{self.xvasynth_path}" is correct.')
             logging.error(e)
@@ -547,10 +528,7 @@ class Synthesizer(base_tts.base_Synthesizer):
         logging.config(f'Pace: {self.pace}')
         logging.config(f'Use SR: {self.use_sr}')
         logging.config(f'Use Cleanup: {self.use_cleanup}')
-        if self.model_type == 'xVAPitch':
-            requests.post(self.synthesize_url, json=data)
-        else:
-            requests.post(self.synthesize_simple_url, json=data)
+        requests.post(self.synthesize_url, json=data)
 
     @utils.time_it
     def _batch_synthesize(self, grouped_sentences, voiceline_files, settings):
