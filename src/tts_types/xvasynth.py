@@ -51,9 +51,15 @@ ttw_voice_mapping = { # For converting between xVASynth Character Names and in g
 reverse_ttw_voice_mapping = {v: k for k, v in ttw_voice_mapping.items()} # For converting between xVASynth Character Names and in game voice models for FNV/TTW
 model_filename_mapping = {
     "falloutnv": {
-        "MaleUniqueTheKing": "the_king",
+        "The King": "the_king",
         "FemaleAdult07, FemaleAdult12":"femaleadult07_12",
         "MaleUniqueThreeDog": "threedog",
+        "Colonel Autumn": "colonel_autumn",
+        "President Eden": "eden",
+        "MaleGroupEnclave": "maleenclave",
+        "Robot MrGutsy": "robot_mrgutsy",
+        "Robot MrHandy": "robot_mrhandy",
+        "Three Dog (Radio)": "threedog_radio",
     }
 }
 
@@ -669,8 +675,8 @@ class Synthesizer(base_tts.base_Synthesizer):
             voice = character_or_voice_model
         else:
             voice = self.get_valid_voice_model(character_or_voice_model) # character.voice_model
-        
-        if self.game == "falloutnv" and voice in reverse_ttw_voice_mapping:
+
+        if self.game == "falloutnv" and voice in reverse_ttw_voice_mapping: # Convert between in game voice models and xVASynth character names for FNV/TTW
             logging.info(f'Converting voice model {voice} to {reverse_ttw_voice_mapping[voice]} for Fallout New Vegas...')
             voice = reverse_ttw_voice_mapping[voice]
 
@@ -711,7 +717,7 @@ class Synthesizer(base_tts.base_Synthesizer):
             logging.config("Checking for Fallout 3 voice model...")
             XVASynthAcronym="f3_"
             XVASynthModNexusLink = "https://www.nexusmods.com/fallout3/mods/24502?tab=files"
-            voice_path = f"{self.xvasynth_path}/resources/app/models/fallout3/{XVASynthAcronym}{voice.lower().replace(' ', '')}"
+            voice_path = f"{self.xvasynth_path}/resources/app/models/fallout3/{XVASynthAcronym}{voice_filename}"
             if self.config.linux_mode:
                 voice_path = voice_path.replace("\\", "/")
             else:
@@ -723,7 +729,7 @@ class Synthesizer(base_tts.base_Synthesizer):
 
         with open(voice_path+'.json', 'r', encoding='utf-8') as f:
             voice_model_json = json.load(f)
-        logging.info(f"Loaded voice model json from {voice_path+'.json'}: {json.dumps(voice_model_json, indent=4)}")
+        # logging.info(f"Loaded voice model json from {voice_path+'.json'}: {json.dumps(voice_model_json, indent=4)}")
 
         try:
             base_speaker_emb = voice_model_json['games'][0]['base_speaker_emb']
