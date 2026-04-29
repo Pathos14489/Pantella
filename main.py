@@ -14,7 +14,6 @@ import json
 
 logging.info("Imported required libraries in main.py")
 
-from tkinter import Tk, Label
 from src.ui import root, OptionDialog
 
 
