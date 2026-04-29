@@ -135,6 +135,7 @@ class ConfigLoader:
         logging.log_file = self.logging_file_path # Set the logging file path
         self.manager_types = {}
         self.get_prompt_styles()
+        self._prompt_style = None
         self.addons = {}
         self.load_addons()
         self.ready = True

@@ -76,6 +76,7 @@ class base_Synthesizer:
 
     @property
     def speaker_wavs_folders(self):
+        speaker_wavs_folders = []
         if "language" in self.config.__dict__: # If the language is specified in the config, only use the speaker wavs folder for that language
             if self.config.linux_mode:
                 speaker_wavs_folders = [
@@ -90,22 +91,24 @@ class base_Synthesizer:
         else: # Otherwise, use all the speaker wavs folders
             speaker_wavs_folders = []
             if self.config.linux_mode:
-                for language_code in os.listdir(f"./data/voice_samples/{self.config.game_id}/"):
-                    if not os.path.isdir(f"./data/voice_samples/{self.config.game_id}/{language_code}/"):
-                        continue
-                    speaker_wavs_folders.append(os.path.abspath(f"./data/voice_samples/{self.config.game_id}/{language_code}/"))
+                if os.path.exists(f"./data/voice_samples/{self.config.game_id}/"):
+                    for language_code in os.listdir(f"./data/voice_samples/{self.config.game_id}/"):
+                        if not os.path.isdir(f"./data/voice_samples/{self.config.game_id}/{language_code}/"):
+                            continue
+                        speaker_wavs_folders.append(os.path.abspath(f"./data/voice_samples/{self.config.game_id}/{language_code}/"))
             else:
-                for language_code in os.listdir(f".\\data\\voice_samples\\{self.config.game_id}\\"):
-                    if not os.path.isdir(f".\\data\\voice_samples\\{self.config.game_id}\\{language_code}\\"):
-                        continue
-                    speaker_wavs_folders.append(os.path.abspath(f".\\data\\voice_samples\\{self.config.game_id}\\{language_code}\\"))
+                if os.path.exists(f".\\data\\voice_samples\\{self.config.game_id}\\"):
+                    for language_code in os.listdir(f".\\data\\voice_samples\\{self.config.game_id}\\"):
+                        if not os.path.isdir(f".\\data\\voice_samples\\{self.config.game_id}\\{language_code}\\"):
+                            continue
+                        speaker_wavs_folders.append(os.path.abspath(f".\\data\\voice_samples\\{self.config.game_id}\\{language_code}\\"))
         for addon_slug in self.config.addons: # Add the speakers folder from each addon to the list of speaker wavs folders
             addon = self.config.addons[addon_slug]
-            if "speakers" in addon["addon_parts"]: 
+            if "voice_samples" in addon["addon_parts"]: 
                 if self.config.linux_mode:
-                    addon_speaker_wavs_folder = os.path.abspath(f"./addons/{addon_slug}/speakers/")
+                    addon_speaker_wavs_folder = os.path.abspath(self.config.addons_dir + "/" + addon_slug + f"/voice_samples/{self.config.game_id}/{self.config.language['tts_language_code']}/")
                 else:
-                    addon_speaker_wavs_folder = self.config.addons_dir + addon_slug + "\\speakers\\"
+                    addon_speaker_wavs_folder = self.config.addons_dir + "\\" + addon_slug + "\\voice_samples\\" + self.config.game_id + "\\" + self.config.language['tts_language_code'] + "\\"
                 if os.path.exists(addon_speaker_wavs_folder):
                     speaker_wavs_folders.append(addon_speaker_wavs_folder)
                 else:

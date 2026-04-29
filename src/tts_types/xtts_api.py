@@ -100,21 +100,24 @@ class Synthesizer(base_tts.base_Synthesizer):
 
     @property
     def speaker_wavs_folders(self):
+        speaker_wavs_folders = []
         if self.config.linux_mode:
-            speaker_wavs_folders = [
-                os.path.abspath(f"./data/voice_samples/{self.config.game_id}/"),
-            ]
+            if os.path.exists(os.path.abspath(f"./data/voice_samples/{self.config.game_id}/")):
+                speaker_wavs_folders = [
+                    os.path.abspath(f"./data/voice_samples/{self.config.game_id}/"),
+                ]
         else:
-            speaker_wavs_folders = [
-                os.path.abspath(f".\\data\\voice_samples\\{self.config.game_id}\\"),
-            ]
+            if os.path.exists(os.path.abspath(f".\\data\\voice_samples\\{self.config.game_id}\\")):
+                speaker_wavs_folders = [
+                    os.path.abspath(f".\\data\\voice_samples\\{self.config.game_id}\\"),
+                ]
         for addon_slug in self.config.addons: # Add the speakers folder from each addon to the list of speaker wavs folders
             addon = self.config.addons[addon_slug]
-            if "speakers" in addon["addon_parts"]: 
+            if "voice_samples" in addon["addon_parts"]: 
                 if self.config.linux_mode:
-                    addon_speaker_wavs_folder = os.path.abspath(f"./addons/{addon_slug}/speakers/")
+                    addon_speaker_wavs_folder = os.path.abspath(f"./addons/{addon_slug}/voice_samples/{self.config.game_id}/")
                 else:
-                    addon_speaker_wavs_folder = self.config.addons_dir + addon_slug + "\\speakers\\"
+                    addon_speaker_wavs_folder = self.config.addons_dir + addon_slug + "\\voice_samples\\" + self.config.game_id + "\\"
                 if os.path.exists(addon_speaker_wavs_folder):
                     speaker_wavs_folders.append(addon_speaker_wavs_folder)
                 else:
