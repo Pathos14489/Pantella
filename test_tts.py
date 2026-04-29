@@ -10,6 +10,7 @@ import src.character_db as character_db
 import json
 import traceback
 import src.tts as tts
+from src.ui import root, OptionDialog
 
 print("Starting Pantella TTS Test Script")
     
@@ -17,8 +18,23 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Test TTS')
     parser.add_argument('--initialize', action='store_true', help='Initialize the conversation manager')
     args = parser.parse_args()
+
+
+    def get_interface():
+        root.deiconify() # show the root window so the dialog shows up, we'll hide it again after the dialog is closed
+        available_interfaces = config_loader.interface_configs.keys()
+        dlg = OptionDialog(root, "Select Interface", "Select the game interface to use with Pantella. You can change this later in the config.json file or by using the web configurator.", available_interfaces)
+        root.withdraw() # hide the root window again after the dialog is closed
+        return dlg.result   
+    
+    selected_interface = get_interface()
+    os.makedirs(os.path.join(os.path.dirname(__file__), "configs"), exist_ok=True) # make configs directory if it doesn't exist
+    config_path = os.path.join(os.path.dirname(__file__), "configs", f"{selected_interface}_config.json")
+    if not os.path.exists(config_path):
+        logging.error(f"No config found for default interface '{selected_interface}' at path: {config_path}, exiting.")
+
     try:
-        config = config_loader.ConfigLoader() # Load config from config.json
+        config = config_loader.ConfigLoader(config_path, selected_interface) # Load config from config.json
     except Exception as e:
         logging.error(f"Error loading config:")
         logging.error(e)
@@ -57,6 +73,16 @@ if __name__ == '__main__':
             conversation_manager.synthesizer = tts.create_Synthesizer(conversation_manager, ttses)
         elif command == "change_voice":
             voice_model = command_input
+        elif command == "test_all_voices":
+            for voice in conversation_manager.synthesizer.voices():
+                logging.info(f"Testing voice: {voice}")
+                try:
+                    conversation_manager.synthesizer._say("This is a test of the " + voice + " voice.", voice)
+                except Exception as e:
+                    logging.error(f"Error saying text with voice model '{voice}'")
+                    logging.error(e)
+                    tb = traceback.format_exc()
+                    logging.error(tb)
         else:
             if command_input.strip() == "":
                 logging.warning("No text provided to synthesize!")
