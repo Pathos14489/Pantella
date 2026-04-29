@@ -170,7 +170,7 @@ class base_Synthesizer:
             if os.path.exists(os.path.join(speaker_wavs_folder, f"{voice_model}.wav")):
                 speaker_wav_path = os.path.join(speaker_wavs_folder, f"{voice_model}.wav")
                 return speaker_wav_path
-        return None
+        raise FileNotFoundError(f"No speaker wav found for voice model: {voice_model} in any of the following folders: {self.speaker_wavs_folders}")
     
     def get_valid_voice_model(self, character_or_voice_model, crashable=None, multi_tts=True, log=True):
         """Get the valid voice model for the character from the available voices - Order of preference: voice_model, voice_model without spaces, lowercase voice_model, uppercase voice_model, lowercase voice_model without spaces, uppercase voice_model without spaces"""
