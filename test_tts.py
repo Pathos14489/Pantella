@@ -83,6 +83,18 @@ if __name__ == '__main__':
                     logging.error(e)
                     tb = traceback.format_exc()
                     logging.error(tb)
+                    input("Press Enter to continue testing the next voice.")
+        elif command == "quiet_test_all_voices":
+            for voice in conversation_manager.synthesizer.voices():
+                logging.info(f"Testing voice: {voice}")
+                try:
+                    conversation_manager.synthesizer._say("This is a test of the " + voice + " voice.", voice, play_voiceline=False)
+                except Exception as e:
+                    logging.error(f"Error saying text with voice model '{voice}'")
+                    logging.error(e)
+                    tb = traceback.format_exc()
+                    logging.error(tb)
+                    input("Press Enter to continue testing the next voice.")
         else:
             if command_input.strip() == "":
                 logging.warning("No text provided to synthesize!")

@@ -541,7 +541,7 @@ class base_Synthesizer:
         else:
             logging.error("Could not play voiceline, no audio library loaded.")
 
-    def _say(self, voiceline, voice_model="Female Sultry", volume=0.5):
+    def _say(self, voiceline, voice_model="Female Sultry", volume=0.5, play_voiceline=True):
         logging.info(f'{self.tts_slug} - _Saying voiceline: {voiceline} with voice model: {voice_model}')
         settings = self.voice_model_settings(voice_model)
         logging.config(f'{self.tts_slug} - Using settings: {settings}')
@@ -556,5 +556,6 @@ class base_Synthesizer:
         if not os.path.exists(voiceline_location):
             logging.error(f'{self.tts_slug} failed to generate voiceline at: {Path(voiceline_location)}')
             raise FileNotFoundError()
-        self.play_voiceline(voiceline_location, volume)
+        if play_voiceline:
+            self.play_voiceline(voiceline_location, volume)
         return voiceline_location
