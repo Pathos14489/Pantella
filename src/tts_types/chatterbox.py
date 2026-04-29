@@ -20,6 +20,7 @@ except Exception as e:
 logging.info("Imported required libraries in chatterbox.py")
 
 tts_slug = "chatterbox"
+tts_name = "Chatterbox"
 default_settings = {
     "chatterbox_device": "cuda",
     "chatterbox_default_temperature": 0.5,

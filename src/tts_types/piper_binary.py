@@ -7,6 +7,7 @@ import random
 logging.info("Imported required libraries in piper_binary.py")
 
 tts_slug = "piper_binary"
+tts_name = "Piper TTS"
 default_settings = {
     "piper_binary_dir": ".\\piper\\",
     "piper_models_dir": ".\\data\\models\\piper\\",

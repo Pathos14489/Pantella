@@ -14,6 +14,7 @@ import random
 logging.info("Imported required libraries in chatterbox_api.py")
 
 tts_slug = "chatterbox_api"
+tts_name = "Chatterbox API"
 default_settings = {}
 settings_description = {}
 options = {}

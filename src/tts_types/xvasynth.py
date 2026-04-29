@@ -64,6 +64,7 @@ model_filename_mapping = {
 }
 
 tts_slug = "xvasynth"
+tts_name = "xVASynth"
 default_settings = {
     "xvasynth_path": "",
     "xvasynth_process_device": "cpu",

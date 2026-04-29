@@ -5,6 +5,7 @@ import src.tts_types.base_tts as base_tts
 logging.info("Imported required libraries in multi_tts.py")
 
 tts_slug = "multi_tts"
+tts_name = "Multi TTS"
 default_settings = {}
 settings_description = {}
 options = {}

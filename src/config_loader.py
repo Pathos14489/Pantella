@@ -142,6 +142,14 @@ class ConfigLoader:
         os.makedirs(os.path.join(os.path.dirname(__file__), "../configs/"), exist_ok=True)  # Ensure the configs directory exists
 
     @property
+    def tts_Types(self):
+        return tts.tts_Types
+    
+    @property
+    def LLM_Types(self):
+        return language_models.LLM_Types
+
+    @property
     def game_path(self):
         return self.current_interface_config["game_path"]
     

@@ -33,6 +33,7 @@ except Exception as e:
 logging.info("Imported required libraries in e2_tts.py")
 
 tts_slug = "e2_tts"
+tts_name = "E2 TTS"
 default_settings = {
     "e2_tts_default_speed": 1.0,
     "e2_tts_default_cfg_strength": 2.0,

@@ -45,6 +45,7 @@ except Exception as e:
 logging.info("Imported required libraries in f5_tts.py")
 
 tts_slug = "f5_tts"
+tts_name = "F5 TTS"
 default_settings = {
     "f5_tts_default_speed": 1.0,
     "f5_tts_default_cfg_strength": 2.0,

@@ -15,6 +15,7 @@ except Exception as e:
 logging.info("Imported required libraries in style_tts_2.py")
 
 tts_slug = "style_tts_2"
+tts_name = "StyleTTS 2"
 default_settings = {
     "style_tts_2_default_alpha": 0.3,
     "style_tts_2_default_beta": 0.7,

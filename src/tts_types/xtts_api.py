@@ -14,6 +14,7 @@ import random
 logging.info("Imported required libraries in xtts_api.py")
 
 tts_slug = "xtts_api"
+tts_name = "XTTS2 API"
 default_settings = {
     "xtts_api_dir": ".\\xtts-api-server-pantella\\",
     "xtts_api_base_url": "http://127.0.0.1:8020",

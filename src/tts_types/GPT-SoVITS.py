@@ -225,6 +225,7 @@ def cut5(inp):
 logging.info("Imported required libraries in GPT-SoVITS.py")
 
 tts_slug = "GPT-SoVITS"
+tts_name = "GPT-SoVITS"
 default_settings = {
     "gpt_sovits_is_half": True,
     "gpt_sovits_device": "cuda",
