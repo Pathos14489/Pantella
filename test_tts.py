@@ -11,6 +11,7 @@ import json
 import traceback
 import src.tts as tts
 from src.ui import root, OptionDialog
+import random
 
 print("Starting Pantella TTS Test Script")
     
@@ -42,6 +43,10 @@ if __name__ == '__main__':
         logging.error(tb)
         input("Press Enter to exit.")
         raise e
+    
+    logging.info("Config loaded successfully - Available TTS engines:")
+    for tts_engine in config.tts_Types:
+        logging.info(f"- {config.tts_Types[tts_engine].tts_name} (slug: {config.tts_Types[tts_engine].tts_slug})")  
 
     utils.cleanup_mei(config.remove_mei_folders) # clean up old instances of exe runtime files
     
@@ -55,7 +60,7 @@ if __name__ == '__main__':
         logging.error(tb)
         input("Press Enter to exit.")
         raise e
-    voice_model = "MaleNord"
+    voice_model = random.choice(conversation_manager.synthesizer.voices())
     while True:
         user_input = input("Enter text to convert to speech: ")
         user_input_parts = user_input.split(" ", 1)
@@ -95,6 +100,23 @@ if __name__ == '__main__':
                     tb = traceback.format_exc()
                     logging.error(tb)
                     input("Press Enter to continue testing the next voice.")
+        elif command == "quiet_test_all_ttses":
+            for tts_key in conversation_manager.config.tts_Types:
+                if tts_key == "default" or tts_key == "multi_tts" or tts_key == "chatterbox_api":
+                    logging.info(f"Skipping TTS: {tts_key} since it's not a real TTS engine and/or can't be directly initialized like the other TTS engines.")
+                    continue
+                tts_engine = conversation_manager.config.tts_Types[tts_key]
+                logging.info(f"Testing TTS: {tts_key}")
+                try:
+                    conversation_manager.synthesizer = tts.create_Synthesizer(conversation_manager, [tts_engine.tts_slug])
+                    voice_model = random.choice(conversation_manager.synthesizer.voices())
+                    conversation_manager.synthesizer._say("This is a test of the " + tts_engine.tts_name + " TTS engine.", voice_model, play_voiceline=False)
+                except Exception as e:
+                    logging.error(f"Error saying text with TTS engine '{tts_key}'")
+                    logging.error(e)
+                    tb = traceback.format_exc()
+                    logging.error(tb)
+                    input("Press Enter to continue testing the next TTS engine.")
         else:
             if command_input.strip() == "":
                 logging.warning("No text provided to synthesize!")
