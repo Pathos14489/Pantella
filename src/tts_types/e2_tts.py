@@ -23,7 +23,7 @@ try:
 
     def load_e2tts(device):
         E2TTS_model_cfg = dict(dim=1024, depth=24, heads=16, ff_mult=4)
-        return load_model(UNetT, E2TTS_model_cfg, (cached_path("hf://SWivid/E2-TTS/E2TTS_Base/model_1200000.safetensors")), device=device)
+        return load_model(UNetT, E2TTS_model_cfg, str(cached_path("hf://SWivid/E2-TTS/E2TTS_Base/model_1200000.safetensors")), device=device)
     imported = True
     logging.info("Imported e2_tts")
 except Exception as e:
