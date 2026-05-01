@@ -95,18 +95,19 @@ def upgrade_stream2sentence_package():
         logger.info("pip install --upgrade stream2sentence")
 
 def check_tts_version():
-    try:
-        tts_version = metadata.version("tts")
-        # print(f"[XTTS] TTS version: {tts_version}")
+    pass
+    # try:
+    #     tts_version = metadata.version("tts")
+    #     # print(f"[XTTS] TTS version: {tts_version}")
 
-        if version.parse(tts_version) != version.parse("0.21.3"):
-            upgrade_tts_package()
-            # print("[XTTS] TTS version is too old. Please upgrade to version 0.21.2 or later.")
-            # print("[XTTS] pip install --upgrade tts")
-        # else:
-            # logger.info("TTS version is up to date.")
-    except metadata.PackageNotFoundError:
-        print("TTS is not installed.")
+    #     if version.parse(tts_version) != version.parse("0.21.3"):
+    #         upgrade_tts_package()
+    #         # print("[XTTS] TTS version is too old. Please upgrade to version 0.21.2 or later.")
+    #         # print("[XTTS] pip install --upgrade tts")
+    #     # else:
+    #         # logger.info("TTS version is up to date.")
+    # except metadata.PackageNotFoundError:
+    #     print("TTS is not installed.")
 
 
 def check_stream2sentence_version():

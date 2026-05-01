@@ -20,6 +20,8 @@ from xtts_api_server.tts_funcs import TTSWrapper,supported_languages,InvalidSett
 from xtts_api_server.RealtimeTTS import TextToAudioStream, CoquiEngine
 from xtts_api_server.modeldownloader import check_stream2sentence_version,install_deepspeed_based_on_python_version
 
+import traceback
+
 # Default Folders , you can change them via API
 DEVICE = os.getenv('DEVICE',"cuda")
 OUTPUT_FOLDER = os.getenv('OUTPUT', 'output')
@@ -327,6 +329,8 @@ async def tts_to_audio(request: SynthesisRequest, background_tasks: BackgroundTa
 
         except Exception as e:
             logger.error(e)
+            tb = traceback.format_exc()
+            logger.error(tb)
             raise HTTPException(status_code=500, detail=f"Error: {str(e)}")
 
 @app.post("/tts_to_file")

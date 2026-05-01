@@ -22,7 +22,7 @@ setup(
         'uvicorn',
         'cutlet',
         'fugashi[unidic-lite]',
-        'tts==0.21.3',
+        'git+https://github.com/idiap/coqui-ai-TTS.git',
         'transformers==4.36.2',
         'uuid',
     ],
