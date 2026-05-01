@@ -64,6 +64,9 @@ moshi==0.2.13
 unidecode==1.4.0
 pykakasi==2.3.0
 epitran==1.35.1
+-e ./xtts-api-server-pantella
+anyascii==0.3.
+git+https://github.com/Pathos14489/TTS.git
 --find-links https://download.pytorch.org/whl/cu128
 torch==2.7.1
 torchvision==0.22.1
