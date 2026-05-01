@@ -69,6 +69,11 @@ class base_Synthesizer:
         self.last_voice = ''
         loaded = True
 
+
+    def unload(self):
+        """Unload the TTS engine and free up any resources it's using. This is called when the TTS engine is changed or when Pantella is closed."""
+        pass
+
     @property
     def tts_engines(self):
         """Return the list of TTS engines available for this TTS type"""

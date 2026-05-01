@@ -67,6 +67,14 @@ class Synthesizer(base_tts.base_Synthesizer):
             random_voice = random.choice(self.voices())
             self._say("Chatterbox is ready to go.", random_voice)
         loaded = True
+        
+    def unload(self):
+        """Unload the TTS engine and free up any resources it's using. This is called when the TTS engine is changed or when Pantella is closed."""
+        if self.model is not None:
+            logging.info(f'Unloading {self.tts_slug} model to free up resources...')
+            del self.model
+            self.model = None
+            logging.info(f'{self.tts_slug} model unloaded.')
 
     def get_or_load_tts_model(self):
         """Loads the ChatterboxTTS model if it hasn't been loaded already,

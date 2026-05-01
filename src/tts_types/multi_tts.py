@@ -28,9 +28,14 @@ class Synthesizer(base_tts.base_Synthesizer):
             random_voice = random.choice(self.voices())
             self._say("Multi T T S is ready to go.",str(random_voice))
         loaded = True
+
+    def unload(self):
+        """Unload the TTS engine and free up any resources it's using. This is called when the TTS engine is changed or when Pantella is closed."""
+        for tts in self.tts_engines:
+            tts.unload()
             
     @property
-    def tts_engines(self):
+    def tts_engines(self) -> list[base_tts.base_Synthesizer]:
         """Return the list of TTS engines available for this TTS type"""
         return self.ttses
 

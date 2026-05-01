@@ -236,7 +236,8 @@ default_settings = {
     "gpt_sovits_default_temperature": 1.0,
     "gpt_sovits_default_top_k": 20,
     "gpt_sovits_default_top_p": 1.0,
-    "gpt_sovits_error_on_too_short_or_too_long_audio": True,
+    "gpt_sovits_error_on_too_short_or_too_long_audio": False,
+    "gpt_sovits_trim_long_short_reference_audio": True,
     "is_bigvgan_half": True,
     "gpt_sovits_banned_voice_models": [],
 }
@@ -508,6 +509,32 @@ class Synthesizer(base_tts.base_Synthesizer):
             self._say("GPT So Vits is ready to go.", random_voice)
         loaded = True
 
+    def unload(self):
+        """Unload the TTS engine and free up any resources it's using. This is called when the TTS engine is changed or when Pantella is closed."""
+        global loaded
+        if not loaded:
+            return
+        logging.info(f"Unloading {self.tts_slug}...")
+        if self.ssl_model is not None:
+            self.ssl_model.cpu()
+        if self.vq_model is not None:
+            self.vq_model.cpu()
+        if self.t2s_model is not None:
+            self.t2s_model.cpu()
+        if self.bert_model is not None:
+            self.bert_model.cpu()
+        del self.ssl_model
+        del self.vq_model
+        del self.t2s_model
+        del self.bert_model
+        self.ssl_model = None
+        self.vq_model = None
+        self.t2s_model = None
+        self.bert_model = None
+        torch.cuda.empty_cache()
+        loaded = False
+        logging.info(f"Unloaded {self.tts_slug}")
+
     def voices(self):
         """Return a list of available voices"""
         voices = super().voices()
@@ -747,7 +774,11 @@ class Synthesizer(base_tts.base_Synthesizer):
                         # gr.Warning("Reference audio is outside the 3-10 second range, please choose another one!"))
                         raise OSError("Reference audio is outside the 3-10 second range, please choose another one! - You can disable this error in the settings, but I'm not sure how well it will work? Haven't really tested it besides turning it off on one voice that was causing me issues and it seemed fine?")
                     else:
-                        logging.warning("Reference audio is outside the 3-10 second range, please choose another one! - You can toggle this to error out in the settings if too long/too short voices are causing any issues for you.")
+                        logging.warning("Reference audio is outside the 3-10 second range, but continuing anyway since the error is disabled in settings. This may result in worse audio quality, especially if the audio is shorter than 3 seconds.")
+                    if self.config.gpt_sovits_trim_long_short_reference_audio:
+                        if wav16k.shape[0] > 160000:
+                            wav16k = wav16k[:160000]
+                        logging.info("Trimmed reference audio to 10 seconds.")
                 wav16k = torch.from_numpy(wav16k)
                 zero_wav_torch = torch.from_numpy(zero_wav)
                 if self.config.gpt_sovits_is_half == True:

@@ -70,6 +70,8 @@ class Synthesizer(base_tts.base_Synthesizer):
         logging.info(f'xTTS API voice latent folders: {self.voice_latent_folders}')
         self.speaker_wavs_folders.append(os.path.abspath(self.xtts_api_dir + "speakers\\" if self.xtts_api_dir.endswith("\\") else self.xtts_api_dir + "\\speakers\\"))
         logging.info(f'xTTS API speaker wavs folders: {self.speaker_wavs_folders}')
+        self.active_PID = None
+        self.active_thread = None
         if self.is_running():
             logging.warning(f'xTTS_API is already running. Voice latents added by addons will not be available until the server is closed and restarted by Pantella.')
         else:
@@ -98,6 +100,10 @@ class Synthesizer(base_tts.base_Synthesizer):
             random_voice = random.choice(self.voices())
             self._say("Ecks T T S is ready to go.",str(random_voice))
         loaded = True
+        
+    def unload(self):
+        """Unload the TTS engine and free up any resources it's using. This is called when the TTS engine is changed or when Pantella is closed."""
+        
 
     @property
     def speaker_wavs_folders(self):
@@ -187,17 +193,25 @@ class Synthesizer(base_tts.base_Synthesizer):
         return self.config.xtts_api_dir
     @property
     def voice_latent_folders(self):
-        voice_latent_folders = [
-            self.xtts_api_dir + "latent_speaker_folder\\" if self.xtts_api_dir.endswith("\\") else self.xtts_api_dir + "\\latent_speaker_folder\\",
-        ]
+        if self.config.linux_mode:
+            voice_latent_folders = [
+                self.xtts_api_dir + "latent_speaker_folder/" if self.xtts_api_dir.endswith("/") else self.xtts_api_dir + "/latent_speaker_folder/",
+            ]
+        else:
+            voice_latent_folders = [
+                self.xtts_api_dir + "latent_speaker_folder\\" if self.xtts_api_dir.endswith("\\") else self.xtts_api_dir + "\\latent_speaker_folder\\",
+            ]
         for addon_slug in self.config.addons:
             addon = self.config.addons[addon_slug]
-            if "voice_samples" in addon["addon_parts"]:
-                addon_latents_folder = self.config.addons_dir + addon_slug + "\\voice_samples\\"
+            if "latent_speaker_folder" in addon["addon_parts"]:
+                if self.config.linux_mode:
+                    addon_latents_folder = self.config.addons_dir + "/" + addon_slug + "/latent_speaker_folder/"
+                else:
+                    addon_latents_folder = self.config.addons_dir + "\\" + addon_slug + "\\latent_speaker_folder\\"
                 if os.path.exists(addon_latents_folder):
                     voice_latent_folders.append(addon_latents_folder)
                 else:
-                    logging.error(f'voice_samples folder not found at: {addon_latents_folder}')
+                    logging.error(f'latent_speaker_folder folder not found at: {addon_latents_folder}')
         # make all the paths absolute
         return [os.path.abspath(folder) for folder in voice_latent_folders]
 
@@ -276,10 +290,11 @@ class Synthesizer(base_tts.base_Synthesizer):
             # start the process without waiting for a response
             if self.config.linux_mode:
                 logging.info(f'Running xTTS API server for Linux with command: {command}')
-                threading.Thread(target=subprocess.run, args=(command), kwargs={'shell': True, 'cwd': self.config.xtts_api_dir}).start()
+                threading.Thread(target=subprocess.run, args=(command,), kwargs={'shell': True, 'cwd': self.config.xtts_api_dir})
             else:
                 logging.info(f'Running xTTS API server for Windows with command: {command}')
-                subprocess.Popen(command, cwd=self.config.xtts_api_dir)
+                sub = subprocess.Popen(command, cwd=self.config.xtts_api_dir)
+                self.active_PID = sub.pid
         except Exception as e:
             logging.error(f'Could not run xTTS API. Ensure that the paths "{self.config.xtts_api_dir}" and "{self.config.python_binary}" are correct.')
             logging.error(e)
@@ -287,6 +302,24 @@ class Synthesizer(base_tts.base_Synthesizer):
             logging.error(tb)
             input('\nPress any key to stop Pantella...')
             raise e
+        
+    def unload(self):
+        """Unload the TTS engine and free up any resources it's using. This is called when the TTS engine is changed or when Pantella is closed."""
+        if self.active_PID is not None:
+            logging.info(f'Terminating xTTS API server with PID: {self.active_PID}')
+            try:
+                if self.config.linux_mode:
+                    subprocess.run(f'kill {self.active_PID}', shell=True)
+                else:
+                    subprocess.run(f'taskkill /PID {self.active_PID} /F', shell=True)
+                logging.info(f'xTTS API server terminated successfully.')
+            except Exception as e:
+                logging.error(f'Failed to terminate xTTS API server with PID: {self.active_PID}')
+                logging.error(e)
+                tb = traceback.format_exc()
+                logging.error(tb)
+        else:
+            logging.warning(f'No active xTTS API server process found to terminate -- This does not work on Linux, so it is expected behavior on that OS. If you are on Windows and see this message, something went wrong with starting the xTTS API server, and you should check the logs for any errors.')
 
     @utils.time_it
     def change_voice(self, character_or_voice_model, settings=None):
