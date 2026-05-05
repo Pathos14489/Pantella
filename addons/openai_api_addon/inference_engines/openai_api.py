@@ -2,7 +2,7 @@ print("Importing openai_api.py")
 from src.logging import logging, time
 import src.utils as utils
 from src.inference_engines.base_llm import base_LLM, TestCoT, get_schema_description
-from src.ui import root, StringInputPopup
+from src.ui import root_context_manager, StringInputPopup, OptionDialog
 import random
 import traceback
 import os
@@ -21,10 +21,10 @@ inference_engine_name = "openai_api"
 inference_engine_title = "OpenAI Compatible API"
 tokenizer_slug = "tiktoken"
 default_settings = {
-    "openai_model": "undi95/toppy-m-7b:free",
+    "openai_model": None, # "undi95/toppy-m-7b:free",
     "openai_character_generator_model": "", # Blank for use the same model as the main model. Otherwise, specify a different model here.
-    "openai_completions_type": "text", # text or chat
-    "alternative_openai_api_base": "https://openrouter.ai/api/v1/",
+    "openai_completions_type": None, # "text", # text or chat
+    "alternative_openai_api_base": None, # "https://openrouter.ai/api/v1/",
     "supports_prefill_override": "default", # Override whether this model supports prefill or not. This is for compatibility with API emulation methods that may not perfectly emulate the OpenAI API. Set to True to enable prefill support, False to disable it, or "default" to use the default behavior which is to disable prefill support for all models when using the OpenAI API and enable it when using the OpenRouter API base.
     "openai_api_key_path": ".\\addons\\openai_api_addon\\OPENAI_API_SECRET_KEY.txt",
     "banned_samplers": [], # Examples: "min_p", "typical_p", "top_p", "top_k", "temperature", "frequency_penalty", "presence_penalty", "repeat_penalty", "tfs_z", "mirostat_mode", "mirostat_eta", "mirostat_tau", "max_tokens"
@@ -70,6 +70,41 @@ class LLM(base_LLM):
         default_settings = self.default_inference_engine_settings
         self.tokenizer_slug = tokenizer_slug # Fastest tokenizer for OpenAI models, change if you want to use a different tokenizer (use 'embedding' for compatibility with any model using the openai API)
         
+        def get_completions_type_options():
+            options_list = ["Text", "Chat"]
+            with root_context_manager as root:
+                popup = OptionDialog(root, "Select Completions Type", "Please select the type of completions to use for the OpenAI API. If your model supports chat completions, it is recommended to use chat completions. If your model only supports text completions, you must select text completions. If you're not sure, check the documentation for your model or try both options to see which one works.", options_list)
+            return popup.result.lower()
+        def get_api_base():
+            options_list = ["OpenRouter API", "Custom API Base"]
+            with root_context_manager as root:
+                popup = OptionDialog(root, "Select API Base", "Please select the API base to use for the OpenAI API. If you want to use the OpenRouter API, select 'OpenRouter API'. If you want to use a custom API base, select 'Custom API Base' and enter the URL for the API base in the next prompt. If you're not sure, select 'OpenRouter API'.", options_list)
+            if popup.result == "OpenRouter API":
+                return "https://openrouter.ai/api/v1"
+            elif popup.result == "Custom API Base":
+                with root_context_manager as root:
+                    popup = StringInputPopup(root, "Enter API Base URL", "Please enter the base URL for the OpenAI API you want to use. This should be the URL for the API base that is compatible with the OpenAI API format. If you're not sure, check the documentation for your API or select 'OpenRouter API' in the previous prompt to use the OpenRouter API base.", hide_input=False)
+                return popup.result
+            
+        save_config = False
+        if self.config.alternative_openai_api_base is None:
+            self.config.alternative_openai_api_base = get_api_base()
+            save_config = True
+
+        if self.config.openai_completions_type is None:
+            self.config.openai_completions_type = get_completions_type_options()
+            save_config = True
+
+        if self.config.openai_model is None:
+            with root_context_manager as root:
+                popup = StringInputPopup(root, "Enter OpenAI Model Name", "Please enter the name of the OpenAI model you want to use for completions. This should be the name of a model that is compatible with the OpenAI API format. If you're not sure, check the documentation for your API or use a common model name like 'meta-llama/llama-3.3-70b-instruct:free'. If you're using the OpenRouter API base, you can use any model that is can do multiple system messages scattered throughout the context and that is available on OpenRouter. If you input nothing, the default will be 'meta-llama/llama-3.3-70b-instruct:free' for the OpenRouter API base.", hide_input=False)
+            self.config.openai_model = popup.result.strip()
+            save_config = True
+        if save_config:
+            self.config.save()
+
+
+
         llm = self.config.openai_model
         # Is LLM Local?
         self.is_local = True
@@ -124,9 +159,8 @@ class LLM(base_LLM):
         if not os.path.exists(self.config.openai_api_key_path):
             logging.error(f"OpenAI API key file not found at {self.config.openai_api_key_path}! Creating file now...")
             def get_key_from_user():
-                root.deiconify()
-                popup = StringInputPopup(root, "Enter OpenRouter API Key", "Please enter your OpenRouter API key. If you don't have one, you can get one for free at https://openrouter.ai/. This key is required to use the OpenAI API inference engine in Pantella.", hide_input=True)
-                root.withdraw()
+                with root_context_manager as root:
+                    popup = StringInputPopup(root, "Enter OpenRouter API Key", "Please enter your OpenRouter API key. If you don't have one, you can get one for free at https://openrouter.ai/. This key is required to use the OpenAI API inference engine in Pantella.", hide_input=True)
                 return popup.result
             api_key = get_key_from_user()
             with open(self.config.openai_api_key_path, 'w') as f:
