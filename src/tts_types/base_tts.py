@@ -429,8 +429,8 @@ class base_Synthesizer:
         else:
             final_voiceline_file = final_voiceline_file.replace("/", "\\")
 
-        if not os.path.exists(voiceline_location):
-            os.makedirs(os.path.dirname(voiceline_location), exist_ok=True)
+        if not os.path.exists(final_voiceline_file):
+            os.makedirs(os.path.dirname(final_voiceline_file), exist_ok=True)
         # Synthesize voicelines using chat_tts to create the new voiceline
         self._synthesize(voiceline, voice_model, final_voiceline_file, settings, aggro)
         if not os.path.exists(final_voiceline_file):
