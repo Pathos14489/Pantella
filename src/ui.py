@@ -5,6 +5,14 @@ root.title("Pantella Root - Ignore this window, it's just used for dialogs and w
 root.geometry("1x1")
 root.withdraw() # hide the root window, we only use it for dialogs
 
+class RootContextManager:
+    def __enter__(self):
+        root.deiconify() # show the root window when entering the context
+        return root
+    def __exit__(self, exc_type, exc_value, traceback):
+        root.withdraw() # hide the root window when exiting the context
+
+root_context_manager = RootContextManager()
 
 class OptionDialog(Toplevel):
     """
