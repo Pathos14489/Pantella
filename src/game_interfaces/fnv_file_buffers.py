@@ -115,10 +115,16 @@ class GameInterface(CreationEngineFileBuffersInterface):
         
     @property
     def mod_voice_dir(self):
-        if self.config.linux_mode:
-            return f"{self.mod_path}/Sound/Voice/PantellaNV.esm"
+        if self.config.current_interface_config["ttw_enabled"]:
+            if self.config.linux_mode:
+                return f"{self.mod_path}/Sound/Voice/PantellaTTW.esm"
+            else:
+                return f"{self.mod_path}\\Sound\\Voice\\PantellaTTW.esm"
         else:
-            return f"{self.mod_path}\\Sound\\Voice\\PantellaNV.esm"
+            if self.config.linux_mode:
+                return f"{self.mod_path}/Sound/Voice/PantellaNV.esm"
+            else:
+                return f"{self.mod_path}\\Sound\\Voice\\PantellaNV.esm"
 
     # Needs work  
     @utils.time_it
