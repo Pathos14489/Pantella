@@ -290,7 +290,7 @@ class Synthesizer(base_tts.base_Synthesizer):
             # start the process without waiting for a response
             if self.config.linux_mode:
                 logging.info(f'Running xTTS API server for Linux with command: {command}')
-                threading.Thread(target=subprocess.run, args=(command,), kwargs={'shell': True, 'cwd': self.config.xtts_api_dir})
+                threading.Thread(target=subprocess.run, args=(command,), kwargs={'shell': True, 'cwd': self.config.xtts_api_dir}).start()
             else:
                 logging.info(f'Running xTTS API server for Windows with command: {command}')
                 sub = subprocess.Popen(command, cwd=self.config.xtts_api_dir)
