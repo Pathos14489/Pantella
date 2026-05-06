@@ -125,8 +125,7 @@ class ConfigLoader:
         if save_interface:
             self.current_interface_config["game_path"] = game_path.replace("\\", "/").replace("/","\\")
             self.current_interface_config["mod_path"] = mod_path.replace("\\", "/").replace("/","\\")
-            with open(os.path.join(os.path.dirname(__file__), "../interface_configs", f"{self.game_id}.json"), "w", encoding='utf-8') as f:
-                json.dump(self.current_interface_config, f, indent=4)
+            self.save_interface_config()
         logging.config(f"ConfigLoader initialized with config path {config_path}")
         logging.config(f"Current interface config: '{self.current_interface_config}' from game id '{self.game_id}'")
         self.conversation_manager_type = self.current_interface_config["conversation_manager_type"]
@@ -175,6 +174,10 @@ class ConfigLoader:
             tb = traceback.format_exc()
             logging.error(tb)
             raise e
+        
+    def save_interface_config(self):
+        with open(os.path.join(os.path.dirname(__file__), "../interface_configs", f"{self.game_id}.json"), "w", encoding='utf-8') as f:
+            json.dump(self.current_interface_config, f, indent=4)
         
     def save_json(self, json_data):
         """Save the config to the config file"""

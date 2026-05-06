@@ -1,13 +1,12 @@
 print("Importing game_interfaces/fnv_file_buffers.py")
-from src.logging import logging, time
+from src.logging import logging
 from src.game_interfaces.creation_engine_file_buffers import GameInterface as CreationEngineFileBuffersInterface
 import src.utils as utils
 import os
 import shutil
-import sys
-import asyncio
 import json
 from pydub import AudioSegment
+from src.ui import root_context_manager, OptionDialog
 
 def convert_wav_to_ogg(input_file, output_file):
     """
@@ -48,8 +47,18 @@ class GameInterface(CreationEngineFileBuffersInterface):
         #     if not os.path.exists(self.config.game_path+'\\_pantella_fnv_folder.txt'):
         #         logging.warn(f'''Warning: Could not find _pantella_fnv_folder.txt in {self.config.game_path}.''')
         self.voice_id_map = self.load_voice_id_map()
-        self.ogg_file = f'PantellaQu_PantellaDialogu_000010A1_1.ogg'
-        self.lip_file = f'PantellaQu_PantellaDialogu_000010A1_1.lip'
+        if self.config.current_interface_config.get("ttw_enabled", None) is None:
+            with root_context_manager as root:
+                self.config.current_interface_config["ttw_enabled"] = OptionDialog(root, "Enable TTW?", "Do you want to enable support for TTW (Tale of Two Wastelands)? If you have TTW installed, select Yes. If not, select No. You can change this later in the config.", ["Yes", "No"]).result == "Yes"
+                self.config.save_interface_config()
+        if self.config.current_interface_config["ttw_enabled"]:
+            logging.info("TTW support enabled")
+            self.ogg_file = f'PantellaQu_PantellaDialogu_000010A1_1.ogg'
+            self.lip_file = f'PantellaQu_PantellaDialogu_000010A1_1.lip'
+        else:
+            logging.info("TTW support not enabled")
+            self.ogg_file = f'PantellaQu_PantellaDialogu_00000E03_1.ogg'
+            self.lip_file = f'PantellaQu_PantellaDialogu_00000E03_1.lip'
 
     def load_voice_id_map(self):
         print(os.path.dirname(__file__))
