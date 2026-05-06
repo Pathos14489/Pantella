@@ -22,7 +22,7 @@ setup(
         'uvicorn',
         'cutlet',
         'fugashi[unidic-lite]',
-        'coqui-ai',
+        'coqui-tts',
         'transformers==4.36.2',
         'uuid',
     ],
