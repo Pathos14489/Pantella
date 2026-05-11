@@ -13,6 +13,7 @@ class Transcriber:
         super().__init__(game_interface)
         self.stt_slug = stt_slug
         self.whisper_url = self.config.whisper_url
+        logging.info('Readied openai_whisper Transcriber')
     
     @utils.time_it
     def whisper_transcribe(self, audio, prompt=None):

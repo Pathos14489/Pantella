@@ -22,6 +22,7 @@ class Transcriber(base_Transcriber):
         if not faster_whisper_imported:
             logging.error("faster-whisper not imported. Please make sure you have it installed by running 'pip install faster-whisper'. Check your log file for more information.")
             raise ImportError("faster-whisper not imported. Please make sure you have it installed by running 'pip install faster-whisper'. Check your log file for more information.")
+        logging.info('Readied faster-whisper Transcriber')
 
     def initialize(self):
         super().initialize()
@@ -31,6 +32,7 @@ class Transcriber(base_Transcriber):
             compute_type=self.config.whisper_compute_type,
             cpu_threads=self.config.whisper_cpu_threads
         )
+        logging.info('Initialized faster-whisper transcribe_model')
 
     def unload(self):
         super().unload()

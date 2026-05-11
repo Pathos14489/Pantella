@@ -160,6 +160,7 @@ class Transcriber(base_Transcriber):
         self.CHANNELS = 1
         self.SAMPLE_RATE = 16000
         self.CHUNK = int(self.SAMPLE_RATE / 10)
+        logging.info('Initialized kyutai_stt Transcriber')
 
     def initialize(self):
         # self.speech_processor = create_Speech_Input_Processor(self)

@@ -72,6 +72,7 @@ def create_Transcriber(game_interface):
             logging.error(f"Could not find SpeechToText: {game_interface.config.stt_engine}! Please check your config.json file and try again!")
             input("Press enter to continue...")
             raise ValueError(f"Could not find SpeechToText: {game_interface.config.stt_engine}! Please check your config.json file and try again!")
+        logging.info(f"Creating Transcriber of type: {slug}")
         return transcriber_Types[slug].Transcriber(game_interface)
     else:
         if slug in banned_modules:
