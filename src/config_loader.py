@@ -73,6 +73,10 @@ class ConfigLoader:
     def __init__(self, config_path='config.json', selected_interface=None):
         self.conversation_manager = None
         self.selected_interface = selected_interface
+        self.game_id = ""
+        if selected_interface is not None:
+            self.game_id = selected_interface
+            logging.info(f"Selected interface: {self.selected_interface}, setting game id to selected interface")
         self.config_path = config_path
         self.prompt_styles = {}
         self._raw_prompt_styles = {}
@@ -270,7 +274,15 @@ class ConfigLoader:
                     logging.info(f"Setting game id to selected interface: {self.game_id}")
                 else:
                     logging.error(f"Game id not set in config file. Please set the game id in the config file to a valid game id (e.g. {list(interface_configs.keys())}).")
-                    self.game_id = input(f"Please enter the game id for your game (e.g. {list(interface_configs.keys())}): ")
+                    # self.game_id = input(f"Please enter the game id for your game (e.g. {list(interface_configs.keys())}): ")
+                    def select_game_id():
+                        root.deiconify() # show the root window so the dialog shows up, we'll hide it again after the dialog is closed
+                        available_game_ids = list(interface_configs.keys())
+                        dlg = OptionDialog(root, "Select Game ID", f"Please select the game id for your game. This should correspond to a config file in the interface_configs directory (e.g. {available_game_ids}).", available_game_ids)
+                        root.withdraw() # hide the root window again after the dialog is closed
+                        return dlg.result
+                    self.game_id = select_game_id()
+                    logging.info(f"Selected game id: {self.game_id}")
                 self.save()
                 return self.load() # Reload the config after setting the game id
             else:
