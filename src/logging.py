@@ -1,5 +1,7 @@
 import time
 import inspect
+import faulthandler
+faulthandler.enable() # Enable faulthandler to get better stack traces on crashes with the inspect module in windows
 import os
 
 bcolors = {
@@ -48,9 +50,13 @@ class Logger:
 
     def info(self, *args):
         # get the caller's stack frame and extract its file path
-        frame_info = inspect.stack()[1]
-        filepath = frame_info[1]  # in python 3.5+, you can use frame_info.filename
-        del frame_info  # drop the reference to the stack frame to avoid reference cycles
+        try:
+            frame_info = inspect.stack()[1]
+            filepath = frame_info[1]  # in python 3.5+, you can use frame_info.filename
+            del frame_info  # drop the reference to the stack frame to avoid reference cycles
+        except Exception as e:
+            print(f'Error getting caller information: {e}')
+            filepath = 'unknown'
 
         # make the path absolute (optional)
         filepath = os.path.relpath(filepath)
