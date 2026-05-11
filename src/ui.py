@@ -29,7 +29,13 @@ class OptionDialog(Toplevel):
         self.options = options
         self.result = '_'
         self.createWidgets()
-        self.grab_set()
+        has_grab = False
+        while not has_grab:
+            try:
+                self.grab_set()
+                has_grab = True
+            except:
+                has_grab = False
         ## wait.window ensures that calling function waits for the window to
         ## close before the result is returned.
         self.wait_window()
