@@ -9,7 +9,7 @@ setup(
     packages=find_packages(),
     install_requires=[
         'PyAudio==0.2.14',
-        'requests==2.32.0',
+        'requests==2.33.1',
         'pyttsx3==2.90',
         'stream2sentence==0.2.2',
         'fastapi>=0.104.1',
