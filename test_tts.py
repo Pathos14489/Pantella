@@ -75,6 +75,7 @@ if __name__ == '__main__':
             ttses = command_input.split(",")
             if type(ttses) == str:
                 ttses = [ttses]
+            conversation_manager.synthesizer.unload() # Unload the current TTS engine to free up resources before initializing the new TTS engine
             conversation_manager.synthesizer = tts.create_Synthesizer(conversation_manager, ttses)
         elif command == "change_voice":
             voice_model = command_input
@@ -108,6 +109,7 @@ if __name__ == '__main__':
                 tts_engine = conversation_manager.config.tts_Types[tts_key]
                 logging.info(f"Testing TTS: {tts_key}")
                 try:
+                    conversation_manager.synthesizer.unload() # Unload the current TTS engine to free up resources before initializing the new TTS engine
                     conversation_manager.synthesizer = tts.create_Synthesizer(conversation_manager, [tts_engine.tts_slug])
                     voice_model = random.choice(conversation_manager.synthesizer.voices())
                     conversation_manager.synthesizer._say("This is a test of the " + tts_engine.tts_name + " TTS engine.", voice_model, play_voiceline=False)
