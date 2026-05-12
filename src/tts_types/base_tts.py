@@ -254,25 +254,25 @@ class base_Synthesizer:
     def voice_model_settings_path(self, voice_model):
         """Change the voice model settings path to the voice model's voice model settings path"""
         if self.config.linux_mode:
-            voice_model_settings_path = os.path.abspath(f"./data/tts_settings/{self.tts_slug}/{self.language['tts_language_code']}/{voice_model}.json")
+            voice_model_settings_path = os.path.abspath(f"./data/tts_settings/{self.tts_slug}/{self.config.game_id}/{self.language['tts_language_code']}/{voice_model}.json")
         else:
-            voice_model_settings_path = os.path.abspath(f".\\data\\tts_settings\\{self.tts_slug}\\{self.language['tts_language_code']}\\{voice_model}.json")
+            voice_model_settings_path = os.path.abspath(f".\\data\\tts_settings\\{self.tts_slug}\\{self.config.game_id}\\{self.language['tts_language_code']}\\{voice_model}.json")
         return voice_model_settings_path
 
     def character_settings_path(self, character):
         """Change the voice model settings path to the character's voice model settings path"""
         if self.config.linux_mode:
-            voice_model_settings_path = os.path.abspath(f"./data/tts_settings/voices/{character.name}/{self.language['tts_language_code']}/{self.tts_slug}.json")
+            voice_model_settings_path = os.path.abspath(f"./data/tts_settings/voices/{self.config.game_id}/{character.name}/{self.language['tts_language_code']}/{self.tts_slug}.json")
         else:
-            voice_model_settings_path = os.path.abspath(f".\\data\\tts_settings\\voices\\{character.name}\\{self.language['tts_language_code']}\\{self.tts_slug}.json")
+            voice_model_settings_path = os.path.abspath(f".\\data\\tts_settings\\voices\\{self.config.game_id}\\{character.name}\\{self.language['tts_language_code']}\\{self.tts_slug}.json")
         os.makedirs(os.path.dirname(voice_model_settings_path), exist_ok=True) # make sure the directory exists
         return voice_model_settings_path
 
     def default_settings_path(self, voice_model):
         if self.config.linux_mode:
-            voice_model_settings_path = os.path.abspath(f"./data/tts_settings/default/{self.language['tts_language_code']}/{voice_model}.json")
+            voice_model_settings_path = os.path.abspath(f"./data/tts_settings/default/{self.config.game_id}/{self.language['tts_language_code']}/{voice_model}.json")
         else:
-            voice_model_settings_path = os.path.abspath(f".\\data\\tts_settings\\default\\{self.language['tts_language_code']}\\{voice_model}.json")
+            voice_model_settings_path = os.path.abspath(f".\\data\\tts_settings\\default\\{self.config.game_id}\\{self.language['tts_language_code']}\\{voice_model}.json")
         return voice_model_settings_path
 
     def get_default_voice_model_settings(self, voice_model, generate_transcription_if_necessary=True):
@@ -287,10 +287,11 @@ class base_Synthesizer:
                 default_Settings = json.load(f)
                 settings.update(default_Settings) # update with specific TTS default settings
         else:
+            logging.info(f'No default settings found for voice model: {voice_model} at {default_settings_path}, creating default settings file with default settings: {settings}')
             with open(default_settings_path, "w") as f:
                 json.dump(settings, f, indent=4)
         
-        needs_transcription = "transcription" in settings and settings["transcription"] == ""
+        needs_transcription = "transcription" in settings and settings["transcription"].strip() == ""
         if needs_transcription and generate_transcription_if_necessary:
             cannot_transcribe = False
             if self.conversation_manager.game_interface is None:
@@ -300,43 +301,50 @@ class base_Synthesizer:
                 if self.conversation_manager.game_interface.transcriber is None:
                     cannot_transcribe = True
                     logging.warning(f'No transcriber found in game interface, cannot generate transcription using STT.')
-                if not cannot_transcribe:
-                    logging.info(f'No transcription found for voice model: {voice_model}. Attempting to generate transcription using STT.')
-                    speaker_wav_path = self.get_speaker_wav_path(voice_model)
-                    if speaker_wav_path is not None:
-                        transcription = self.conversation_manager.game_interface.transcriber.transcribe_audio_file(speaker_wav_path)
-                        logging.info(f'Generated transcription for voice model: {voice_model} using STT: {transcription}')
-                        settings["transcription"] = transcription.strip()
-                        save_changes = True
-                        logging.info(f'Generated transcription for voice model: {voice_model} using STT: {transcription}')
-                    else:
-                        logging.warning(f'No speaker wav found for voice model: {voice_model}. Cannot generate transcription using STT.')
-        else:
-            if needs_transcription and self.needs_transcription:
-                def show_transcription_warning():
-                    root.deiconify()
-                    option_dialog = OptionDialog(root, "Transcription Needed", f"The TTS engine '{self.tts_slug}' has no transcription set for the voice model '{voice_model}', but it is required for synthesis. Would you like to input a transcription manually? If you choose 'No', the TTS engine will attempt to generate the voiceline without a transcription, which may result in lower quality synthesis or failure to synthesize at all. If you wish to automatically generate a transcription using the STT engine set in the interface, please enable an STT engine in the interfac's config.json and make sure it is working properly. Please prepare to listen, the voice sample will be played after you click 'Yes'.", ["Yes", "No"])
-                    root.withdraw()
-                    return option_dialog.result == "Yes"
-                if show_transcription_warning():
-                    speaker_wav_path = self.get_speaker_wav_path(voice_model)
-                    self.play_voiceline(speaker_wav_path)
-                    def get_transcription():
-                        root.deiconify()
-                        string_input_popup = StringInputPopup(root, "Input Transcription", f"Please input the transcription for the voice model '{voice_model}':")
-                        root.withdraw()
-                        if string_input_popup.result is None or string_input_popup.result.strip() == "":
-                            logging.warning(f'No transcription entered for voice model: {voice_model}. Cannot generate transcription using STT.')
-                            return ""
-                        return string_input_popup.result
-                    transcription = get_transcription()
-                    if transcription.strip() != "":
-                        settings["transcription"] = transcription.strip()
-                        save_changes = True
-                    else:
-                        logging.warning(f'No transcription entered for voice model: {voice_model}. Cannot generate transcription using STT.')
+            if not cannot_transcribe:
+                logging.info(f'No transcription found for voice model: {voice_model}. Attempting to generate transcription using STT.')
+                speaker_wav_path = self.get_speaker_wav_path(voice_model)
+                if speaker_wav_path is not None:
+                    transcription = self.conversation_manager.game_interface.transcriber.transcribe_audio_file(speaker_wav_path)
+                    logging.info(f'Generated transcription for voice model: {voice_model} using STT: {transcription}')
+                    settings["transcription"] = transcription.strip()
+                    save_changes = True
+                    logging.info(f'Generated transcription for voice model: {voice_model} using STT: {transcription}')
                 else:
-                    logging.warning(f'No transcription found for voice model: {voice_model}, and unable to generate transcription using STT. This may cause issues with synthesis because your TTS type requires transcriptions for the voice models.')
+                    logging.warning(f'No speaker wav found for voice model: {voice_model}. Cannot generate transcription using STT.')
+            else:
+                logging.warning(f'Cannot generate transcription for voice model: {voice_model} using STT because no game interface or transcriber was found in the conversation manager. Please ensure you have a game interface with a working transcriber set up if you want to use the transcription generation feature for TTS engines that require transcriptions for their voice models. If you want to disable the requirement for transcriptions for your TTS engine, you can set "needs_transcription" to False in your TTS engine\'s Synthesizer class.')
+        else:
+            if needs_transcription:
+                if self.needs_transcription:
+                    def show_transcription_warning():
+                        root.deiconify()
+                        option_dialog = OptionDialog(root, "Transcription Needed", f"The TTS engine '{self.tts_slug}' has no transcription set for the voice model '{voice_model}', but it is required for synthesis. Would you like to input a transcription manually? If you choose 'No', the TTS engine will attempt to generate the voiceline without a transcription, which may result in lower quality synthesis or failure to synthesize at all. If you wish to automatically generate a transcription using the STT engine set in the interface, please enable an STT engine in the interfac's config.json and make sure it is working properly. Please prepare to listen, the voice sample will be played after you click 'Yes'.", ["Yes", "No"])
+                        root.withdraw()
+                        return option_dialog.result == "Yes"
+                    if show_transcription_warning():
+                        speaker_wav_path = self.get_speaker_wav_path(voice_model)
+                        self.play_voiceline(speaker_wav_path)
+                        def get_transcription():
+                            root.deiconify()
+                            string_input_popup = StringInputPopup(root, "Input Transcription", f"Please input the transcription for the voice model '{voice_model}':")
+                            root.withdraw()
+                            if string_input_popup.result is None or string_input_popup.result.strip() == "":
+                                logging.warning(f'No transcription entered for voice model: {voice_model}. Cannot generate transcription using STT.')
+                                return ""
+                            return string_input_popup.result
+                        transcription = get_transcription()
+                        if transcription.strip() != "":
+                            settings["transcription"] = transcription.strip()
+                            save_changes = True
+                        else:
+                            logging.warning(f'No transcription entered for voice model: {voice_model}. Cannot generate transcription using STT.')
+                    else:
+                        logging.warning(f'No transcription found for voice model: {voice_model}, and unable to generate transcription using STT. This may cause issues with synthesis because your TTS type requires transcriptions for the voice models.')
+                else:
+                    logging.info(f'TTS engine {self.tts_slug} does not require transcriptions for its voice models, so no transcription is needed for voice model: {voice_model}.')
+            else:
+                logging.info(f'Transcription found for voice model: {voice_model}, no need to generate transcription using STT.')
 
         if save_changes:
             with open(default_settings_path, "w") as f:
