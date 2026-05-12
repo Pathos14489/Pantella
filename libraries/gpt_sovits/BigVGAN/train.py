@@ -37,7 +37,7 @@ from loss import (
     MultiScaleMelSpectrogramLoss,
 )
 
-from utils import (
+from libraries.gpt_sovits.utils import (
     plot_spectrogram,
     plot_spectrogram_clipped,
     scan_checkpoint,

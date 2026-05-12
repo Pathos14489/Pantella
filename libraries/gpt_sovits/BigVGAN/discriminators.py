@@ -13,7 +13,7 @@ from torch.nn.utils import weight_norm, spectral_norm
 from torchaudio.transforms import Spectrogram, Resample
 
 from env import AttrDict
-from utils import get_padding
+from libraries.gpt_sovits.utils import get_padding
 import typing
 from typing import List, Tuple
 

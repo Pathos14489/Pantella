@@ -35,7 +35,7 @@ import sys
 now_dir = os.getcwd()
 sys.path.append(now_dir)
 import logging
-import utils
+import libraries.gpt_sovits.utils as utils
 
 if version != "v3":
     from module.models import SynthesizerTrn

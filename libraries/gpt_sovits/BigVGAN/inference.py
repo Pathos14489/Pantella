@@ -8,7 +8,7 @@ import argparse
 import json
 import torch
 import librosa
-from utils import load_checkpoint
+from libraries.gpt_sovits.utils import load_checkpoint
 from meldataset import get_mel_spectrogram
 from scipy.io.wavfile import write
 from env import AttrDict
