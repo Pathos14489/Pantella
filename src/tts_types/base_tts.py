@@ -291,17 +291,26 @@ class base_Synthesizer:
                 json.dump(settings, f, indent=4)
         
         needs_transcription = "transcription" in settings and settings["transcription"] == ""
-        if needs_transcription and self.conversation_manager.game_interface is not None and self.conversation_manager.game_interface.transcriber is not None and generate_transcription_if_necessary:
-            logging.info(f'No transcription found for voice model: {voice_model}. Attempting to generate transcription using STT.')
-            speaker_wav_path = self.get_speaker_wav_path(voice_model)
-            if speaker_wav_path is not None:
-                transcription = self.conversation_manager.game_interface.transcriber.transcribe_audio_file(speaker_wav_path)
-                logging.info(f'Generated transcription for voice model: {voice_model} using STT: {transcription}')
-                settings["transcription"] = transcription.strip()
-                save_changes = True
-                logging.info(f'Generated transcription for voice model: {voice_model} using STT: {transcription}')
+        if needs_transcription and generate_transcription_if_necessary:
+            cannot_transcribe = False
+            if self.conversation_manager.game_interface is None:
+                cannot_transcribe = True
+                logging.warning(f'No game interface found in conversation manager, cannot generate transcription using STT.') 
             else:
-                logging.warning(f'No speaker wav found for voice model: {voice_model}. Cannot generate transcription using STT.')
+                if self.conversation_manager.game_interface.transcriber is None:
+                    cannot_transcribe = True
+                    logging.warning(f'No transcriber found in game interface, cannot generate transcription using STT.')
+                if not cannot_transcribe:
+                    logging.info(f'No transcription found for voice model: {voice_model}. Attempting to generate transcription using STT.')
+                    speaker_wav_path = self.get_speaker_wav_path(voice_model)
+                    if speaker_wav_path is not None:
+                        transcription = self.conversation_manager.game_interface.transcriber.transcribe_audio_file(speaker_wav_path)
+                        logging.info(f'Generated transcription for voice model: {voice_model} using STT: {transcription}')
+                        settings["transcription"] = transcription.strip()
+                        save_changes = True
+                        logging.info(f'Generated transcription for voice model: {voice_model} using STT: {transcription}')
+                    else:
+                        logging.warning(f'No speaker wav found for voice model: {voice_model}. Cannot generate transcription using STT.')
         else:
             if needs_transcription and self.needs_transcription:
                 def show_transcription_warning():
