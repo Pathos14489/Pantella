@@ -14,7 +14,7 @@ class Tokenizer(tokenizer.base_Tokenizer): # Tokenizes(only availble for countin
         try:
             self.encoding = tiktoken.encoding_for_model(self.config.openai_model)
         except Exception as e:
-            logging.error(f"Failed to load tiktoken encoding for model {self.config.openai_model}! Please check your config.json file and try again! If you're using a local model, try using the embedding tokenizer instead. It's slower, but more compatible.")
+            logging.error(f"Failed to load tiktoken encoding for model {self.config.openai_model}! Please check your {self.config.config_path} file and try again! If you're using a local model, try using the embedding tokenizer instead. It's slower, but more compatible.")
             logging.info("Loading default tokenizer instead...")
             self.encoding = tiktoken.encoding_for_model('gpt-3.5-turbo')
 

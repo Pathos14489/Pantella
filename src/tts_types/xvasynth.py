@@ -366,13 +366,13 @@ class Synthesizer(base_tts.base_Synthesizer):
         if not self.config.linux_mode:
             if not os.path.exists(f"{self.xvasynth_path}\\resources\\"):
                 logging.error(f"xVASynth path invalid: {self.xvasynth_path}")
-                logging.error(f"Please ensure that the path to xVASynth is correct in config.json (xvasynth_path)")
+                logging.error(f"Please ensure that the path to xVASynth is correct in {self.config.config_path} (xvasynth_path)")
                 input('\nPress any key to stop Pantella...')
                 raise FileNotFoundError(f"xVASynth path invalid: {self.xvasynth_path}")
         else:
             if not os.path.exists(f"{self.xvasynth_path}/resources/"):
                 logging.error(f"xVASynth path invalid: {self.xvasynth_path}")
-                logging.error(f"Please ensure that the path to xVASynth is correct in config.json (xvasynth_path)")
+                logging.error(f"Please ensure that the path to xVASynth is correct in {self.config.config_path} (xvasynth_path)")
                 input('\nPress any key to stop Pantella...')
                 raise FileNotFoundError(f"xVASynth path invalid: {self.xvasynth_path}")
             
@@ -408,8 +408,8 @@ class Synthesizer(base_tts.base_Synthesizer):
         elif self.game == "skyrim" or self.game == "skyrimvr": # get the correct voice model for Skyrim
             model_path = f"{self.xvasynth_path}/resources/app/models/skyrim/"
         else:
-            logging.error(f'Game {self.game} not supported for xVASynth! Please ensure that the correct game is set in config.json (game) and that it is one of the following: "fallout4", "fallout4vr", "falloutnv", "skyrim", or "skyrimvr".')
-            raise Exception(f'Game {self.game} not supported for xVASynth! Please ensure that the correct game is set in config.json (game) and that it is one of the following: "fallout4", "fallout4vr", "falloutnv", "skyrim", or "skyrimvr".')
+            logging.error(f'Game {self.game} not supported for xVASynth! Please ensure that the correct game is set in {self.config.config_path} (game) and that it is one of the following: "falloutnv", "skyrim", or "skyrimvr".') # "fallout4" and "fallout4vr" are not currently supported
+            raise Exception(f'Game {self.game} not supported for xVASynth! Please ensure that the correct game is set in {self.config.config_path} (game) and that it is one of the following: "falloutnv", "skyrim", or "skyrimvr".')
         if self.config.linux_mode:
             model_path = model_path.replace("\\", "/")
         else:
@@ -703,8 +703,8 @@ class Synthesizer(base_tts.base_Synthesizer):
             XVASynthAcronym="sk_"
             XVASynthModNexusLink = "https://www.nexusmods.com/skyrimspecialedition/mods/44184?tab=files"
         else:
-            logging.error(f'Game {self.game} not supported for xVASynth! Please ensure that the correct game is set in config.json (game) and that it is one of the following: "fallout4", "fallout4vr", "falloutnv", "skyrim", or "skyrimvr".')
-            raise Exception(f'Game {self.game} not supported for xVASynth! Please ensure that the correct game is set in config.json (game) and that it is one of the following: "fallout4", "fallout4vr", "falloutnv", "skyrim", or "skyrimvr".')
+            logging.error(f'Game {self.game} not supported for xVASynth! Please ensure that the correct game is set in {self.config.config_path} (game) and that it is one of the following: "fallout4", "fallout4vr", "falloutnv", "skyrim", or "skyrimvr".')
+            raise Exception(f'Game {self.game} not supported for xVASynth! Please ensure that the correct game is set in {self.config.config_path} (game) and that it is one of the following: "fallout4", "fallout4vr", "falloutnv", "skyrim", or "skyrimvr".')
         voice_filename = model_filename_mapping.get(self.game, {}).get(voice, voice.lower().replace(' ', '').replace('.', ''))        
         voice_path = f"{self.model_path}{XVASynthAcronym}{voice_filename}"
 
@@ -714,7 +714,7 @@ class Synthesizer(base_tts.base_Synthesizer):
             voice_path = voice_path.replace("/", "\\")
         
         if not os.path.exists(os.path.abspath(voice_path+'.json')) and self.game == "falloutnv":
-            logging.error(f"Voice model does not exist in location '{os.path.abspath(voice_path+'.json')}'. Please ensure that the correct path has been set in config.json (xvasynth_folder) and that the model has been downloaded from {XVASynthModNexusLink} (Ctrl+F for '{XVASynthAcronym}{voice.lower().replace(' ', '')}').")
+            logging.error(f"Voice model does not exist in location '{os.path.abspath(voice_path+'.json')}'. Please ensure that the correct path has been set in {self.config.config_path} (xvasynth_folder) and that the model has been downloaded from {XVASynthModNexusLink} (Ctrl+F for '{XVASynthAcronym}{voice.lower().replace(' ', '')}').")
             logging.config("Checking for Fallout 3 voice model...")
             XVASynthAcronym="f3_"
             XVASynthModNexusLink = "https://www.nexusmods.com/fallout3/mods/24502?tab=files"
@@ -725,7 +725,7 @@ class Synthesizer(base_tts.base_Synthesizer):
                 voice_path = voice_path.replace("/", "\\")
             
         if not os.path.exists(os.path.abspath(voice_path+'.json')):
-            logging.error(f"Voice model does not exist in location '{os.path.abspath(voice_path+'.json')}'. Please ensure that the correct path has been set in config.json (xvasynth_folder) and that the model has been downloaded from {XVASynthModNexusLink} (Ctrl+F for '{XVASynthAcronym}{voice.lower().replace(' ', '')}').")
+            logging.error(f"Voice model does not exist in location '{os.path.abspath(voice_path+'.json')}'. Please ensure that the correct path has been set in {self.config.config_path} (xvasynth_folder) and that the model has been downloaded from {XVASynthModNexusLink} (Ctrl+F for '{XVASynthAcronym}{voice.lower().replace(' ', '')}').")
             raise base_tts.VoiceModelNotFound()
 
         with open(voice_path+'.json', 'r', encoding='utf-8') as f:

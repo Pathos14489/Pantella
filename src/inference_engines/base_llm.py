@@ -171,7 +171,7 @@ class base_LLM():
         if self.vision_enabled:
             if self.config.paddle_ocr and not ocr_loaded: # Load paddleocr if it's installed
                 logging.error(f"Error loading paddleocr for vision enabled inference engine. Please check that you have installed paddleocr correctly. OCR will not be used but basic image embedding will still work.")
-                raise Exception("PaddleOCR not installed, disable paddle_ocr in config.json or install PaddleOCR to use paddle_ocr.")
+                raise Exception(f"PaddleOCR not installed, disable paddle_ocr in {self.config.config_path} or install PaddleOCR to use paddle_ocr.")
             elif self.config.paddle_ocr and ocr_loaded:
                 self.ocr = PaddleOCR(use_angle_cls=self.config.ocr_use_angle_cls, lang=self.config.ocr_lang)
             self.append_system_image_near_end = self.config.append_system_image_near_end
@@ -865,7 +865,7 @@ class base_LLM():
                         "type": "image"
                     }
                 else:
-                    logging.error(f"Invalid image message format in config.json. Please check the image_message field and try again. There should be exactly one instance of '{image}' in the image_message field.")
+                    logging.error(f"Invalid image message format in {self.config.config_path}. Please check the image_message field and try again. There should be exactly one instance of '{image}' in the image_message field.")
                     input("Press Enter to exit.")
                 depth = self.config.image_message_depth
                 formatted_messages = formatted_messages[:depth] + [image_message] + formatted_messages[depth:] # Add the image message to the context

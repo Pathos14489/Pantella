@@ -27,7 +27,7 @@ class GameInterface(BaseGameInterface):
                 if self.config.linux_mode:
                     pantella_folder_file_path = self.game_path+f'/_pantella_{self.config.game_id}_folder.txt'
                 if not os.path.exists(pantella_folder_file_path):
-                    logging.warn(f'''Warning: Could not find _pantella_{self.config.game_id}_folder.txt in {self.game_path}.\nIf you have not yet casted the Pantella spell in-game you can safely ignore this message.\nIf you have casted the Pantella spell please check that your\nPantellaSoftware\\config.json "skyrim_folder" has been set correctly\n(instructions on how to set this up are in the config file itself).\nIf you are still having issues, a list of solutions can be found here: \nhttps://github.com/Pathos14489/Pantella\n''')
+                    logging.warn(f'''Warning: Could not find _pantella_{self.config.game_id}_folder.txt in {self.game_path}.\nIf you have not yet activated Pantella in-game you can safely ignore this message.\nIf you have activated Pantella in-game please check that your {self.config.game_id} folder has been set correctly in the associated game interface config.\nIf you are still having issues, a list of solutions can be found here: \nhttps://github.com/Pathos14489/Pantella\n''')
         if not os.path.exists(self.mod_voice_dir):
             raise FileNotFoundError(f"Mod voice directory not found at {self.mod_voice_dir}")
         

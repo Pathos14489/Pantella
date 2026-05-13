@@ -30,13 +30,13 @@ class Speech_Input_Processor(base_Speech_Input_Processor):
 
         if self.audio_threshold == 'auto':
             logging.info(f"Audio threshold set to 'auto'. Adjusting microphone for ambient noise...")
-            logging.info("If the mic is not picking up your voice, try setting this audio_threshold value manually in config.json.\n")
+            logging.info(f"If the mic is not picking up your voice, try setting this audio_threshold value manually in {self.config.config_path}.\n")
             with self.microphone as source:
                 self.recognizer.adjust_for_ambient_noise(source, duration=5)
         else:
             self.recognizer.dynamic_energy_threshold = False
             self.recognizer.energy_threshold = int(self.audio_threshold)
-            logging.info(f"Audio threshold set to {self.audio_threshold}. If the mic is not picking up your voice, try lowering this value in config.json. If the mic is picking up too much background noise, try increasing this value.\n")
+            logging.info(f"Audio threshold set to {self.audio_threshold}. If the mic is not picking up your voice, try lowering this value in {self.config.config_path}. If the mic is picking up too much background noise, try increasing this value.\n")
         logging.info('Speech recognizer initialized')
 
     def get_audio_from_mic(self) -> bytes:

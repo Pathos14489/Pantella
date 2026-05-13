@@ -80,9 +80,9 @@ def create_Synthesizer(conversation_manager, slugs): # Get the TTS slug from con
                 slug = slug.lower()
                 logging.warning(f"Could not find inference engine: {slug}! Trying lowercase...?")
             if slug not in tts_Types:
-                logging.error(f"Could not find inference engine: {slug}! Please check your config.json file and try again!")
+                logging.error(f"Could not find inference engine: {slug}! Please check your {conversation_manager.config.config_path} file and try again!")
                 input("Press enter to continue...")
-                raise ValueError(f"Could not find inference engine: {slug}! Please check your config.json file and try again!")
+                raise ValueError(f"Could not find inference engine: {slug}! Please check your {conversation_manager.config.config_path} file and try again!")
             logging.info(f"Found TTS engine '{slug}', loading...")
             synth = tts_Types[slug].Synthesizer(conversation_manager)
             synth.crashable = False # If we have multiple tts engines, we don't want to crash if one of them doesn't have a voice model
@@ -92,17 +92,17 @@ def create_Synthesizer(conversation_manager, slugs): # Get the TTS slug from con
         if slugs not in tts_Types:
             slugs = slugs.lower()
         if slugs not in tts_Types:
-            logging.error(f"Could not find inference engine '{slugs}'! Please check your config.json file and try again!")
+            logging.error(f"Could not find inference engine '{slugs}'! Please check your {conversation_manager.config.config_path} file and try again!")
             input("Press enter to continue...")
-            raise ValueError(f"Could not find inference engine '{slugs}'! Please check your config.json file and try again!")
+            raise ValueError(f"Could not find inference engine '{slugs}'! Please check your {conversation_manager.config.config_path} file and try again!")
         synth = tts_Types[slugs].Synthesizer(conversation_manager)
     else:
-        logging.error(f"Wrong type for tts_engine in config.json! Expected string or list of strings, got '{type(slugs)}'! Please check your config.json file and try again!")
+        logging.error(f"Wrong type for tts_engine in {conversation_manager.config.config_path}! Expected string or list of strings, got '{type(slugs)}'! Please check your {conversation_manager.config.config_path} file and try again!")
         input("Press enter to continue...")
-        raise ValueError(f"Wrong type for tts_engine in config.json! Expected string or list of strings, got '{type(slugs)}'! Please check your config.json file and try again!")
+        raise ValueError(f"Wrong type for tts_engine in {conversation_manager.config.config_path}! Expected string or list of strings, got '{type(slugs)}'! Please check your {conversation_manager.config.config_path} file and try again!")
     if synth.needs_transcription == True:
         if conversation_manager.config.pregen_transcriptions_if_necessary == True:
-            logging.warning(f"The TTS engine '{synth.tts_slug}' requires transcription for some of its voices. Attempting to generate transcriptions for these voices now since 'pregen_transcriptions_if_necessary' is set to true in config.json. This may take a while if there are a lot of voices that need transcription, but it will save time in the long run since the transcriptions will be saved and won't need to be generated again.")
+            logging.warning(f"The TTS engine '{synth.tts_slug}' requires transcription for some of its voices. Attempting to generate transcriptions for these voices now since 'pregen_transcriptions_if_necessary' is set to true in {conversation_manager.config.config_path}. This may take a while if there are a lot of voices that need transcription, but it will save time in the long run since the transcriptions will be saved and won't need to be generated again.")
             voices_that_need_transcription = [voice_model for voice_model in synth.voices() if synth.voice_model_settings(voice_model).get("transcription", "").strip() == ""]
         else:
             voices_that_need_transcription = [voice_model for voice_model in synth.voices() if synth.voice_model_settings(voice_model, False).get("transcription", "").strip() == ""]

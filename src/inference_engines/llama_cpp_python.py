@@ -161,7 +161,7 @@ class LLM(base_LLM): # Uses llama-cpp-python as the LLM inference engine
             input("Press Enter to exit.")
             raise ValueError(f"Error loading llama-cpp-python. Please check that you have installed it correctly.")
         llama_model = self.llm
-        logging.info(f"Running Pantella with llama-cpp-python. The language model chosen can be changed via config.json")
+        logging.info(f"Running Pantella with llama-cpp-python. The language model chosen can be changed via {self.config.config_path}")
         logging.info(f"Testing llama-cpp-python...")
         test_prompt = "Hello, I am a llama-cpp-python test prompt. I am used to test llama-cpp-python's functi"
         test_completion = self.llm.create_completion(test_prompt, max_tokens=10)
@@ -173,7 +173,7 @@ class LLM(base_LLM): # Uses llama-cpp-python as the LLM inference engine
                     self.clip_model = clip_model_load(self.config.llava_clip_model_path.encode(), 1)
                     logging.success(f"Loaded vision model for llama-cpp-python")
                 except Exception as e:
-                    logging.error(f"Error loading clip model for 'llava-cpp-python'(not a typo) inference engine. Please check that the model path is correct in config.json.")
+                    logging.error(f"Error loading clip model for 'llava-cpp-python'(not a typo) inference engine. Please check that the model path is correct in {self.config.config_path}.")
                     tb = traceback.format_exc()
                     logging.error(tb)
                     input("Press Enter to exit.")
@@ -226,7 +226,7 @@ class LLM(base_LLM): # Uses llama-cpp-python as the LLM inference engine
     def generate_character(self, character_name, character_ref_id, character_base_id, character_in_game_race, character_in_game_gender, character_is_guard=False, character_is_ghost=False, in_game_voice_model=None, location=None):
         """Generate a character based on the prompt provided"""
         if not self.character_generation_supported:
-            logging.error(f"Character generation is not supported by llama-cpp-python. Please check that your model supports it and that it is enabled in config.json.")
+            logging.error(f"Character generation is not supported by llama-cpp-python. Please check that your model supports it and that it is enabled in {self.config.config_path}.")
             return None
         character_prompt = self.conversation_manager.character_generator_schema.get_prompt(character_name, character_ref_id, character_base_id, character_in_game_race, character_in_game_gender, character_is_guard, character_is_ghost, location)
 

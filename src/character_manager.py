@@ -68,9 +68,9 @@ def create_character_manager(config):
         logging.info(f"Creating Character Manager[{config.character_manager_type}]")
         logging.config(f"Creating Character Manager[{config.character_manager_type}] object")
         if config.character_manager_type not in Manager_Types:
-            logging.error(f"Could not find manager: {config.character_manager_type}! Please check your config.json file and try again!")
+            logging.error(f"Could not find manager: {config.character_manager_type}! Please check your {config.config_path} file and try again!")
             input("Press enter to continue...")
-            raise ValueError(f"Could not find manager: {config.character_manager_type}! Please check your config.json file and try again!")
+            raise ValueError(f"Could not find manager: {config.character_manager_type}! Please check your {config.config_path} file and try again!")
         module = Manager_Types[config.character_manager_type]
         if config.game_id not in module.valid_games:
             logging.error(f"Game '{config.game_id}' not supported by manager '{module.manager_slug}'.")

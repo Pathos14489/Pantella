@@ -229,22 +229,22 @@ There are a number of different LLMs to choose from, ranging from small local mo
 
 ### OpenAI Compatible APIs
 #### OpenAI (First $5 Free, but terrible quality)
-Copy your OpenAI secret API key (see [here](https://help.openai.com/en/articles/4936850-where-do-i-find-my-secret-api-key) if you need help finding it (you will need to set up an account if you haven't already) and paste into `PantellaSoftware/GPT_SECRET_KEY.txt`. Do not share this key with anyone. While there is a free trial, you will need to set up your payment details for the API to work. OpenAI is NOT recommended, their API is very limited, and their content policy is utterly draconian. Please use any other option, literally any other option.
+Copy your OpenAI secret API key (see [here](https://help.openai.com/en/articles/4936850-where-do-i-find-my-secret-api-key) if you need help finding it (you will need to set up an account if you haven't already) and paste into `PantellaSoftware/addons/openai_api/OPENAI_API_SECRET_KEY.txt`. Do not share this key with anyone. While there is a free trial, you will need to set up your payment details for the API to work. OpenAI is NOT recommended, their API is very limited, and their content policy is utterly draconian. Please use any other option, literally any other option.
 
 #### OpenRouter (First $1 Free, Free Models Often Available)
-Create an account with OpenRouter. Go to the "Keys" tab and generate a new key, saving its value to PantellaSoftware/GPT_SECRET_KEY.txt. Do not share this secret key with anyone. In `config.json`, set `model` to a model from the list [here](https://openrouter.ai/docs#models) (eg `undi95/toppy-m-7b`). Set `alternative_openai_api_base` to "https://openrouter.ai/api/v1" (without quotes).
+Create an account with OpenRouter. Go to the "Keys" tab and generate a new key, saving its value to `PantellaSoftware/addons/openai_api/OPENAI_API_SECRET_KEY.txt`. Do not share this secret key with anyone. In your associated `[game_id]_config.json`, set `model` to a model from the list [here](https://openrouter.ai/docs#models) (eg `undi95/toppy-m-7b`). Set `alternative_openai_api_base` to "https://openrouter.ai/api/v1" (without quotes).
 
 #### text-generation-webui (Free Local Models)
-Install text-generation-webui from [here](https://github.com/oobabooga/text-generation-webui). Place a local model into the `text-generation-webui\models folder` (to get started, you can download `toppy-m-7b.Q4_K_S.gguf` from [here](https://huggingface.co/TheBloke/Toppy-M-7B-GGUF/tree/main?not-for-all-audiences=true)). Paste the text "--extensions openai --auto-launch" (as well as "--cpu" for CPU users) into the installed folder's CMD_FLAGS.txt file. Start text-generation-webui and wait for the UI to open in your web browser. Navigate to the "Model" tab, select your model from the drop-down list, and click "Load". In your `config.json` file, set `alternative_openai_api_base` to "http://127.0.0.1:5000/v1" (without quotes). Just to note, you need to make sure text-generation-webui is running when running Pantella!
+Install text-generation-webui from [here](https://github.com/oobabooga/text-generation-webui). Place a local model into the `text-generation-webui\models folder` (to get started, you can download `toppy-m-7b.Q4_K_S.gguf` from [here](https://huggingface.co/TheBloke/Toppy-M-7B-GGUF/tree/main?not-for-all-audiences=true)). Paste the text "--extensions openai --auto-launch" (as well as "--cpu" for CPU users) into the installed folder's CMD_FLAGS.txt file. Start text-generation-webui and wait for the UI to open in your web browser. Navigate to the "Model" tab, select your model from the drop-down list, and click "Load". In your `[game_id]_config.json` file, set `alternative_openai_api_base` to "http://127.0.0.1:5000/v1" (without quotes). Just to note, you need to make sure text-generation-webui is running when running Pantella!
 
 #### koboldcpp (Free Local Models)
-Install koboldcpp's latest release from here: https://github.com/LostRuins/koboldcpp/releases.  If you have a nvidia gpu with cuda support, download the koboldcpp.exe file.  If you do not or do not want to use cuda support, download the koboldcpp_nocuda.exe.  Download it outside of your Skyrim, Fallout New Vegas, xVASynth or pantella folders.  Download a local large language model, such as `toppy-m-7b.Q4_K_S.gguf` from [here](https://huggingface.co/TheBloke/Toppy-M-7B-GGUF/tree/main?not-for-all-audiences=true)).  Save that somewhere you can easily find it, again outside of Skyrim, Fallout New Vegas, xVASynth or pantella.  Run the koboldcpp.exe.  When presented with the launch window, drag the "Context Size" slider to 4096.  Click the "Browse" button next to the "Model:" field and select the model you downloaded.  Under the presets drop down at the top, choose either Use CLBlas, or Use CuBlas (if using Cuda).  You will then see a field for GPU Layers. If you want to use CPU only leave it at 0.  If you want to use your GPU, you can experiement with how many "layers" to offload to your GPU based on your system.  Then click "Launch" in the bottom right corner.  In your `config.json` file, set `alternative_openai_api_base` to "http://localhost:5001/v1" (without quotes).  Just to note, you need to make sure koboldcpp is running when running Pantella!
+Install koboldcpp's latest release from here: https://github.com/LostRuins/koboldcpp/releases.  If you have a nvidia gpu with cuda support, download the koboldcpp.exe file.  If you do not or do not want to use cuda support, download the koboldcpp_nocuda.exe.  Download it outside of your Skyrim, Fallout New Vegas, xVASynth or pantella folders.  Download a local large language model, such as `toppy-m-7b.Q4_K_S.gguf` from [here](https://huggingface.co/TheBloke/Toppy-M-7B-GGUF/tree/main?not-for-all-audiences=true)).  Save that somewhere you can easily find it, again outside of Skyrim, Fallout New Vegas, xVASynth or pantella.  Run the koboldcpp.exe.  When presented with the launch window, drag the "Context Size" slider to 4096.  Click the "Browse" button next to the "Model:" field and select the model you downloaded.  Under the presets drop down at the top, choose either Use CLBlas, or Use CuBlas (if using Cuda).  You will then see a field for GPU Layers. If you want to use CPU only leave it at 0.  If you want to use your GPU, you can experiement with how many "layers" to offload to your GPU based on your system.  Then click "Launch" in the bottom right corner.  In your `[game_id]_config.json` file, set `alternative_openai_api_base` to "http://localhost:5001/v1" (without quotes).  Just to note, you need to make sure koboldcpp is running when running Pantella!
 
 #### koboldcpp Google Colab Notebook (Free Cloud Service, Potentially Spotty Access / Availablity)
-This option does not require a powerful computer to run a large language model, because it runs in the google cloud.  It is free and easy to use, and can handle most .gguf models that are up to 13B parameters with Q4_K_M quantization all on the free T4 GPU you get with google colab.  The downside is Google controls dynamically when the GPUs are available and could throttle your access at any time, so it may not always work / be available.  To use this method, go to this web page: https://colab.research.google.com/github/LostRuins/koboldcpp/blob/concedo/colab.ipynb.  Click the play button that appears below the text "Enter your model below and then click this to start Koboldcpp."  Wait until text stops generating (probably will take a minute or two).  You should see a URL link near the end of the text after a statement like "Connect to the link below," with a silly name, in a format like https://its-taking-time-indeed.trycloudflare.com.  You may want to click on the link just to ensure koboldcpp pops up to ensure its ready before proceeding.  Select that link and copy it with CTRL+C.  In your `config.json` file, set `alternative_openai_api_base` to that URL by pasting it, and then add /v1 at the end. So it will look something like alternative_openai_api_base = https://its-taking-time-indeed.trycloudflare.com/v1.  Make sure to keep your browser open to the koboldcpp colab notebook while using Pantella so it does not turn off.  If you want to choose a different llm model to use with this method, make sure it is a .gguf model and follow the instructions on the colab to do so.  Be sure to close your browser tab once you've finished your Pantella session, to free up the GPU and help avoid hitting Google's usage limits.
+This option does not require a powerful computer to run a large language model, because it runs in the google cloud.  It is free and easy to use, and can handle most .gguf models that are up to 13B parameters with Q4_K_M quantization all on the free T4 GPU you get with google colab.  The downside is Google controls dynamically when the GPUs are available and could throttle your access at any time, so it may not always work / be available.  To use this method, go to this web page: https://colab.research.google.com/github/LostRuins/koboldcpp/blob/concedo/colab.ipynb.  Click the play button that appears below the text "Enter your model below and then click this to start Koboldcpp."  Wait until text stops generating (probably will take a minute or two).  You should see a URL link near the end of the text after a statement like "Connect to the link below," with a silly name, in a format like https://its-taking-time-indeed.trycloudflare.com.  You may want to click on the link just to ensure koboldcpp pops up to ensure its ready before proceeding.  Select that link and copy it with CTRL+C.  In your `[game_id]_config.json` file, set `alternative_openai_api_base` to that URL by pasting it, and then add /v1 at the end. So it will look something like alternative_openai_api_base = https://its-taking-time-indeed.trycloudflare.com/v1.  Make sure to keep your browser open to the koboldcpp colab notebook while using Pantella so it does not turn off.  If you want to choose a different llm model to use with this method, make sure it is a .gguf model and follow the instructions on the colab to do so.  Be sure to close your browser tab once you've finished your Pantella session, to free up the GPU and help avoid hitting Google's usage limits.
 
 ### Local LLMs (llama-cpp-python, transformers...)
-If you have a powerful computer, you can run a local LLM. This is the most powerful and flexible option, but it requires a lot of resources. For example, you can run a local LLM using the llama-cpp-python backend. To do this, you will need to install the llama-cpp-python backend by running the script included with the launcher for your specific setup/hardware. You will also need to download a local model, such as `toppy-m-7b.Q4_K_S.gguf` from [here](https://huggingface.co/TheBloke/Toppy-M-7B-GGUF/tree/main?not-for-all-audiences=true). Once you have the model, set `model_path` to the path to the model in your `config.json` file, and it should be good to go.
+If you have a powerful computer, you can run a local LLM. This is the most powerful and flexible option, but it requires a lot of resources. For example, you can run a local LLM using the llama-cpp-python backend. To do this, you will need to install the llama-cpp-python backend by running the script included with the launcher for your specific setup/hardware. You will also need to download a local model, such as `toppy-m-7b.Q4_K_S.gguf` from [here](https://huggingface.co/TheBloke/Toppy-M-7B-GGUF/tree/main?not-for-all-audiences=true). Once you have the model, set `model_path` to the path to the model in your `[game_id]_config.json` file, and it should be good to go.
 
 # Installation
 ## 1 - Getting Started - Installing the Launcher
@@ -318,19 +318,18 @@ Make a note of the game IDs you see here, you'll need these in just a moment. My
     "chat_manager": "creation_engine"
 }
 ```
-After that, you'll want to open your `config.json` and set the game_id under "Game" to the ID of the game you want to play Pantella with.
+After that, you'll want to open your `[game_id]_config.json` and set the game_id under "Game" to the ID of the game you want to play Pantella with.
 
 <img src="./img/step_3_image_1.png" align="left" alt="Pantella logo" style="float: left; margin-left:0%; margin-right:100%"/>
 <br clear="both"/>
 
 ## 4 - Run Pantella...? :/
 
-Now just click start for Pantella and let it perform first time start up. It should error out at first, this is expected. It has to generate some config files for you so please let it error out once. After that, you'll have a brand new `config.json` file in your Pantella directory. This is where you'll be configuring most of Pantella's core settings from now on.
+Now just click start for Pantella and let it perform first time start up. It should error out at first, this is expected. It has to generate some config files for you so please let it error out once. After that, you'll have a brand new `[game_id]_config.json` file in your Pantella directory. This is where you'll be configuring most of Pantella's core settings from now on.
 
 ## 5 - Configure LLM Settings
 
-After you decide on type of LLM you want to use, we're going to assume you left it on the default, OpenRouter with Toppy-M 7B. If you want to use a different LLM, you can change the `model` and `alternative_openai_api_base` settings in your `config.json` file. If you want to change the inference engine, you can set `inference_engine` in your `config.json` file to either `koboldcpp` or `text-generation-webui`. If you're using a local model, you'll need to set the path to the model in your `config.json` file. If you're using OpenRouter, you'll need to set the `model` to a model from the list [here](https://openrouter.ai/docs#models) (eg `undi95/toppy-m-7b`). Set `alternative_openai_api_base` to "https://openrouter.ai/api/v1/" (it's already set by default, so if you haven't changed it, you shouldn't have to do anything here.)
-
+After you decide on type of LLM you want to use, we're going to assume you left it on the default, OpenRouter with Toppy-M 7B. If you want to use a different LLM, you can change the `model` and `alternative_openai_api_base` settings in your `[game_id]_config.json` file. If you want to change the inference engine, you can set `inference_engine` in your `[game_id]_config.json` file to either `koboldcpp` or `text-generation-webui`. If you're using a local model, you'll need to set the path to the model in your `[game_id]_config.json` file. If you're using OpenRouter, you'll need to set the `model` to a model from the list [here](https://openrouter.ai/docs#models) (eg `undi95/toppy-m-7b`). Set `alternative_openai_api_base` to "https://openrouter.ai/api/v1/" (it's already set by default, so if you haven't changed it, you shouldn't have to do anything here.)
 If you're using OpenRouter, you'll need to create an account with OpenRouter. Go to the "Keys" tab when you hover over your user icon at the top right while logged in and generate a new key, saving its value to `./GPT_SECRET_KEY.txt`. Do not share this secret key with anyone as it's effectively your login information for OpenRouter.
 
 ## 6 - Configure Speech Recognition Settings
@@ -339,11 +338,11 @@ Do you intend to use Speech-To-Text? If so, you'll need to set up your speech re
 
 ## 7 - Configure TTS Settings (Optional)
 
-By default PiperTTS is set to be used, and it can cover 90% of the voices in Skyrim. If you want to use a different TTS, you can change the `tts_engine` setting in your `config.json` file to either `xtts_api`, `style_tts_2`, `xvasynth`, etc. Check the available TTS options. If you're using xVASynth, you'll need to set the path to the xVASynth executable in your `config.json` file. If you're using PiperTTS, you don't need to do anything here. Read about the pros and cons of the various TTS options [here](#new-ttses).
+By default PiperTTS is set to be used, and it can cover 90% of the voices in Skyrim. If you want to use a different TTS, you can change the `tts_engine` setting in your `[game_id]_config.json` file to either `xtts_api`, `style_tts_2`, `xvasynth`, etc. Check the available TTS options. If you're using xVASynth, you'll need to set the path to the xVASynth executable in your `[game_id]_config.json` file. If you're using PiperTTS, you don't need to do anything here. Read about the pros and cons of the various TTS options [here](#new-ttses).
 
 ## 8 - Configure Vision Settings (Optional)
 
-Normally you won't be using this. Most cloud based models are not very good at vision. OpenAI compatible chat completion with vision is supported, but the LLaVA support via `llama-cpp-python` is far better and I recommend using it instead if you want to use vision. If you're trying to use it, set `vision_enabled` to `true` in your `config.json` file. If you're using LLaVA, you'll need to set the inference engine to `llama-cpp-python`
+Normally you won't be using this. Most cloud based models are not very good at vision. OpenAI compatible chat completion with vision is supported, but the LLaVA support via `llama-cpp-python` is far better and I recommend using it instead if you want to use vision. If you're trying to use it, set `vision_enabled` to `true` in your `[game_id]_config.json` file. If you're using LLaVA, you'll need to set the inference engine to `llama-cpp-python`
 
 ## 9 - Run Pantella! :D
 
@@ -376,7 +375,7 @@ Something you might have noticed coming from `summarizing_memory` like Mantella'
 <summary>Click to expand</summary>
 
 ### Conversation ends as soon as spell is cast / [Errno 2] No such file or directory: 'path\to\Skyrim Special Edition/some_text_file.txt' 
-This is either an issue with the path set for `skyrim_folder` in `config.json`, an issue with your Skyrim folder being in Program Files, an issue with the installation of PapyrusUtil, or you are not running Skyrim via SKSE (please see the included readme.txt file in SKSE's downloaded folder for instructions on how to use it). 
+This is either an issue with the path set for `skyrim_folder` in `[game_id]_config.json`, an issue with your Skyrim folder being in Program Files, an issue with the installation of PapyrusUtil, or you are not running Skyrim via SKSE (please see the included readme.txt file in SKSE's downloaded folder for instructions on how to use it). 
 
 Some VR users miss that there is a separate VR version of PapyrusUtil, double check that you have downloaded this version of the mod if you are a VR user (it should be under the Miscallaneous Files section of the Nexus download page). To put it another way, if you have `PapyrusUtil AE SE - Scripting Utility Function` in your modlist, you have the wrong version. 
 
@@ -408,7 +407,7 @@ If you'e playnig Fallout New Vegas, check that the requirements are installed. I
 This means there's an error with the language model. Please check your `logging.log` file for more information on what the error is. If you are still unsure, please share your `logging.log` file to the Discord and ask for help!
 
 ### Microphone is not picking up sound/stuck on "Listening..."
-Make sure that your mic is picking up correctly on other software and that it is set as your default. For example, you can go to User Settings -> Voice & Video on Discord to test your mic. Otherwise, try adjusting the `audio_threshold` setting in `config.json`. If all else fails, make sure that no other microphones are plugged in except the one you want to use. There may be a rogue microphone such as a webcam picking up as your default!
+Make sure that your mic is picking up correctly on other software and that it is set as your default. For example, you can go to User Settings -> Voice & Video on Discord to test your mic. Otherwise, try adjusting the `audio_threshold` setting in `[game_id]_config.json`. If all else fails, make sure that no other microphones are plugged in except the one you want to use. There may be a rogue microphone such as a webcam picking up as your default!
 
 ### 'NoneType' object has no attribute 'close' when using Speech-To-Text
 This error means that Whisper is unable to find a connected microphone. Please ensure that you have a working microphone plugged in and enabled.
@@ -417,7 +416,7 @@ This error means that Whisper is unable to find a connected microphone. Please e
 xVASynth related warning when started by Pantella. Thus far has not impacted Pantella so it can be safely ignored.
 </details>
 
-## xVASynth Issues Q&A
+## xVASynth Issues
 <details>
 <summary>Click to expand</summary>
 
@@ -427,7 +426,7 @@ If an xVASynth voice model is corrupted, this error will display in `logging.log
 A way to check for other corrupted voice models, is to compare the file sizes within /models/skyrim/ folder of xVASynth. If they diverge from the norms, redownload **just** those. The norms for voice model sizes are **~54 MB** and/or **~90 MB** (v2 voice models) & **~220 MB** or **~260 MB** (v3 voice models)
 
 ### Loading voice model... xVASynth Error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-If this xVASynth Error occurs after the "Loading voice model..." message (as can be seen in your `logging.log` file), this is likely an issue with a corrupted voice model. Please try redownloading the model from [here](https://www.nexusmods.com/skyrimspecialedition/mods/44184). If you have `use_cleanup` enabled, try setting this value to 0 in `config.json`.
+If this xVASynth Error occurs after the "Loading voice model..." message (as can be seen in your `logging.log` file), this is likely an issue with a corrupted voice model. Please try redownloading the model from [here](https://www.nexusmods.com/skyrimspecialedition/mods/44184). If you have `use_cleanup` enabled, try setting this value to 0 in `[game_id]_config.json`.
 
 If this does not resolve your issue, please share the text found in your xVASynth/server.log file on the [Discord's #i-need-help forum channel](https://discord.gg/M7Zw8mBY6r) for further support.
 </details>
@@ -449,23 +448,26 @@ For further support and examples of how other users have added modded NPCs, ask 
 2. Create a virtual environment via `py -3.11 -m venv PantellaEnv` in your console (Pantella requires Python 3.10.11, I've not had a chance to test it with 3.11 yet)
 3. Start the environment in your console (`.\PantellaEnv\Scripts\Activate`)
 4. Install the required packages via `pip install -r requirements.txt`
-5. Set up your paths / any other required settings in the `config.json` and your chosen `interface_configs` file
+5. Set up your paths / any other required settings in the `[game_id]_config.json` and your chosen `interface_configs` file
 6. Run Pantella via `main.py` in the parent directory
 
 ## Running without venv
 1. Clone the repo to your machine
 2. Install the required packages via `pip install -r requirements.txt`
-3. Set up your paths / any other required settings in the `config.json` and your chosen `interface_configs` file
+3. Set up your paths / any other required settings in the `[game_id]_config.json` and your chosen `interface_configs` file
 4. Run Pantella via `main.py` in the parent directory
 
 ## Running with the Launcher (For developers)
 1. Clone the repo to your launcher's repositories folder under the name `Pathos14489_Pantella`
-2. Set up your paths / any other required settings in the `config.json` and your chosen `interface_configs` file
+2. Set up your paths / any other required settings in the `[game_id]_config.json` and your chosen `interface_configs` file
 3. That should be it! You can now run the source code via the launcher using the same start button as the main Pantella repe. I do not advise using the built in update feature though, use `git pull` instead.
 
 If you have any trouble in getting the repo set up, please reach out on [Discord](https://discord.gg/M7Zw8mBY6r)!
 
 The source code/latest version for the Pantella Spell plugin can be found [here](https://github.com/Pathos14489/Pantella-Spell). Updates made on one repo can be intertwined with the other, so it is best to ensure you have the latest versions of each. Typically the launcher will handle this, but if you're running the source code directly, you'll need to do this manually.
+
+## Why does the requirements.txt file include your own forks of existing modules?
+The requirements.txt file includes my own forks of existing modules because I have had to make a few compatibility changes to these modules to get them to work with all of the various parts of Pantella. I guarantee if you go look through the commits on the forks, almost all of the changes are just loosening up their setup.py, pyproject.toml and requirements.txt files to allow for more flexible versions of a bunch of other modules to be installed, and in a few rare cases some code changes to support newer versions of some of the packages.
 
 # Attributions
 Pantella uses material from the "[Skyrim: Characters](https://elderscrolls.fandom.com/wiki/Category:Skyrim:_Characters)" articles on the [Elder Scrolls wiki](https://elderscrolls.fandom.com/wiki/The_Elder_Scrolls_Wiki), [Fallout New Vegas: Characters](https://fallout.fandom.com/wiki/Fallout:_New_Vegas_characters) and [Fallout 3: Characters](https://fallout.fandom.com/wiki/Fallout_3_characters) articles on the [Fallout wiki](https://fallout.fandom.com/wiki/Fallout_Wiki) at [Fandom](https://www.fandom.com/) and is licensed under the [Creative Commons Attribution-Share Alike License](https://creativecommons.org/licenses/by-sa/3.0/).

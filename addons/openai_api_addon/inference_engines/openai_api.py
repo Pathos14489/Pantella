@@ -31,14 +31,14 @@ default_settings = {
     "api_log_dir": ".\\api_logs",
 }
 settings_description = {
-    "openai_model": "The model to use for completions. This can be changed in config.json.",
-    "openai_character_generator_model": "The model to use for character generation. This can be changed in config.json. If blank, the main model will be used.",
-    "openai_completions_type": "The type of completions to use. This can be changed in config.json. Options are 'text' or 'chat'. If 'text', the model must support text completions. If 'chat', the model must support chat completions.",
-    "alternative_openai_api_base": "The base URL for the OpenAI API. This can be changed in config.json. If 'none', the default OpenAI API will be used.",
+    "openai_model": "The model to use for completions. This can be changed in your [game_id]_config.json.",
+    "openai_character_generator_model": "The model to use for character generation. This can be changed in your [game_id]_config.json. If blank, the main model will be used.",
+    "openai_completions_type": "The type of completions to use. This can be changed in your [game_id]_config.json. Options are 'text' or 'chat'. If 'text', the model must support text completions. If 'chat', the model must support chat completions.",
+    "alternative_openai_api_base": "The base URL for the OpenAI API. This can be changed in your [game_id]_config.json. If 'none', the default OpenAI API will be used.",
     "supports_prefill_override": "Override whether this model supports prefill or not. This is for compatibility with API emulation methods that may not perfectly emulate the OpenAI API. Set to True to enable prefill support, False to disable it, or 'default' to use the default behavior which is to disable prefill support for all models when using the OpenAI API and enable it when using the OpenRouter API base.",
-    "openai_api_key_path": "The path to the file containing the OpenAI API key. This can be changed in config.json.",
-    "banned_samplers": "A list of samplers to ban from being used by the LLM. This can be changed in config.json.",
-    "api_log_dir": "The directory to save API logs to. This can be changed in config.json."
+    "openai_api_key_path": "The path to the file containing the OpenAI API key. This can be changed in your [game_id]_config.json.",
+    "banned_samplers": "A list of samplers to ban from being used by the LLM. This can be changed in your [game_id]_config.json.",
+    "api_log_dir": "The directory to save API logs to. This can be changed in your [game_id]_config.json."
 }
 options = {
     "openai_completions_type": [
@@ -111,7 +111,7 @@ class LLM(base_LLM):
         if self.config.alternative_openai_api_base == 'none' or self.config.alternative_openai_api_base == "https://openrouter.ai/api/v1" or self.config.alternative_openai_api_base == "http://openrouter.ai/api/v1" or self.config.alternative_openai_api_base == "https://api.openai.com" or self.config.alternative_openai_api_base == "https://api.totalgpt.ai/v1":
             self.is_local = False
         if self.is_local:
-            logging.info(f"Could not find number of available tokens for {llm} for tiktoken. Defaulting to token count of {str(self.config.maximum_local_tokens)} (this number can be changed via the `maximum_local_tokens` setting in config.json).")
+            logging.info(f"Could not find number of available tokens for {llm} for tiktoken. Defaulting to token count of {str(self.config.maximum_local_tokens)} (this number can be changed via the `maximum_local_tokens` setting in {self.config.config_path}).")
             logging.info("WARNING: Tiktoken is being run using the default tokenizer, which is not always correct. If you're using a local model, try using the embedding tokenizer instead if it's supported by your API emulation method. It's slower and might be incompatible with some configurations, but more accurate.")
             token_limit = self.config.maximum_local_tokens # Default to 4096 tokens for local models
         else:
@@ -185,7 +185,7 @@ class LLM(base_LLM):
         if self.is_local:
             logging.info(f"Running Pantella with local language model via openai python package")
         else:
-            logging.info(f"Running Pantella with '{self.config.openai_model}'. The language model chosen can be changed via config.json")
+            logging.info(f"Running Pantella with '{self.config.openai_model}'. The language model chosen can be changed via {self.config.config_path}")
 
 
         generation_model = self.config.openai_model
@@ -369,7 +369,7 @@ class LLM(base_LLM):
     def generate_character(self, character_name, character_ref_id, character_base_id, character_in_game_race, character_in_game_gender, character_is_guard, character_is_ghost, in_game_voice_model=None, location=None):
         """Generate a character based on the prompt provided"""
         if not self.character_generation_supported:
-            logging.error(f"Character generation is not supported by llama-cpp-python. Please check that your model supports it and that it is enabled in config.json.")
+            logging.error(f"Character generation is not supported by llama-cpp-python. Please check that your model supports it and that it is enabled in {self.config.config_path}.")
             return None
         json_schema = self.conversation_manager.character_generator_schema.model_json_schema()
         openai_stop = list(self.stop)

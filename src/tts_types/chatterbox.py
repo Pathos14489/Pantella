@@ -34,7 +34,7 @@ default_settings = {
     "chatterbox_banned_voice_models": [],
 }
 settings_description = {
-    "chatterbox_device": "The device to run the Chatterbox model on. This can be changed in config.json. The default is 'cuda', but if you have a compatible NVIDIA GPU, you can set this to 'cuda' to significantly speed up synthesis times. If you don't have a compatible GPU, you can set this to 'cpu', but keep in mind that synthesis times will be significantly longer.",
+    "chatterbox_device": "The device to run the Chatterbox model on. This can be changed in your [game_id]_config.json. The default is 'cuda', but if you have a compatible NVIDIA GPU, you can set this to 'cuda' to significantly speed up synthesis times. If you don't have a compatible GPU, you can set this to 'cpu', but keep in mind that synthesis times will be significantly longer.",
     "chatterbox_default_temperature": "Temperature of the voice, higher values make the voice sound more random and less predictable. Can make voices less robotic and more human-like, but can also make them sound more unnatural and have glitches/artifacts.",
     "chatterbox_default_exaggeration": "The default settings (0.5) work well for most prompts. Higher exaggeration tends to speed up speech, reducing cfg_weight helps compensate with slower, more deliberate pacing.",
     "chatterbox_default_cfgw": "If the reference speaker has a fast speaking style, lowering cfg_weight to around 0.3 can improve pacing.",
@@ -43,7 +43,7 @@ settings_description = {
     "chatterbox_batch_size": "The batch size to use for synthesis. Higher values can speed up synthesis times, but can also increase memory usage. The optimal batch size can vary depending on the length of the input text and the available hardware.",
     "chatterbox_batch_type": "The type of batching to use for synthesis. 'paragraph' batches by paragraph, 'sentence' batches by sentence, and 'word' batches by word. Batching by paragraph can be faster for longer inputs, but can also lead to less coherent speech. Batching by sentence can be a good middle ground, while batching by word can produce the most coherent speech but can also be the slowest.",
     "chatterbox_volume": "The volume of the generated audio. This can be used to increase or decrease the volume of the generated audio. The default is 1.0, which means no change in volume. Values greater than 1.0 will increase the volume, while values less than 1.0 will decrease the volume.",
-    "chatterbox_banned_voice_models": "A list of voice models to ban from being used by Chatterbox. This can be changed in config.json. This is useful if you have a voice model that causes issues with Chatterbox, such as extremely long synthesis times or crashes."
+    "chatterbox_banned_voice_models": "A list of voice models to ban from being used by Chatterbox. This can be changed in your [game_id]_config.json. This is useful if you have a voice model that causes issues with Chatterbox, such as extremely long synthesis times or crashes."
 }
 options = {}
 settings = {}
@@ -92,23 +92,7 @@ class Synthesizer(base_tts.base_Synthesizer):
             except Exception as e:
                 # print(f"Error loading model: {e}")
                 logging.error(f'{self.tts_slug} - Error loading model: {e}')
-                raise
-            
-    # def get_or_load_vc_model(self):
-    #     if self.model is None or self.model_type != "vc":
-    #         self.model_type = "vc"
-    #         # print("VC Model not loaded, initializing...")
-    #         logging.info(f'{self.tts_slug} - VC Model not loaded, initializing...')
-    #         try:
-    #             self.model = ChatterboxVC.from_pretrained(self.config.chatterbox_device)
-    #             if hasattr(self.model, 'to') and str(self.model.device) != self.config.chatterbox_device:
-    #                 self.model.to(self.config.chatterbox_device)
-    #             # print(f"Model loaded successfully. Internal device: {getattr(self.model, 'device', 'N/A')}")
-    #             logging.info(f'{self.tts_slug} - Model loaded successfully. Internal device: {getattr(self.model, "device", "N/A")}')
-    #         except Exception as e:
-    #             # print(f"Error loading model: {e}")
-    #             logging.error(f'{self.tts_slug} - Error loading model: {e}')
-    #             raise
+                raise e
 
     def voices(self):
         """Return a list of available voices"""

@@ -77,15 +77,15 @@ class Synthesizer(base_tts.base_Synthesizer):
         if tts is None:
             if log:
                 if type(character) != str:
-                    logging.error(f"Could not find tts engine for voice model: {character.voice_model}! Please check your config.json file and try again!")
+                    logging.error(f"Could not find tts engine for voice model: {character.voice_model}! Please check your {self.config.config_path} file and try again!")
                 else:
-                    logging.error(f"Could not find tts engine for voice model: {character}! Please check your config.json file and try again!")
+                    logging.error(f"Could not find tts engine for voice model: {character}! Please check your {self.config.config_path} file and try again!")
             if self.crashable:
                 input("Press enter to continue...")
                 if type(character) != str:
-                    raise ValueError(f"Could not find tts engine for voice model: {character.voice_model}! Please check your config.json file and try again!")
+                    raise ValueError(f"Could not find tts engine for voice model: {character.voice_model}! Please check your {self.config.config_path} file and try again!")
                 else:
-                    raise ValueError(f"Could not find tts engine for voice model: {character}! Please check your config.json file and try again!")
+                    raise ValueError(f"Could not find tts engine for voice model: {character}! Please check your {self.config.config_path} file and try again!")
         else:
             return tts.get_valid_voice_model(character, crashable=self.crashable, multi_tts=True, log=log)
     
@@ -108,10 +108,10 @@ class Synthesizer(base_tts.base_Synthesizer):
                     tts = tts_engine
                     break
         if tts is None:
-            logging.error(f"Could not find tts engine for voice model: {character.voice_model}! Please check your config.json file and try again!")
+            logging.error(f"Could not find tts engine for voice model: {character.voice_model}! Please check your {self.config.config_path} file and try again!")
             if self.crashable:
                 input("Press enter to continue...")
-                raise ValueError(f"Could not find tts engine for voice model: {character.voice_model}! Please check your config.json file and try again!")
+                raise ValueError(f"Could not find tts engine for voice model: {character.voice_model}! Please check your {self.config.config_path} file and try again!")
         else:
             return tts.synthesize(voiceline, character, **kwargs)
         
@@ -122,9 +122,9 @@ class Synthesizer(base_tts.base_Synthesizer):
                 tts = tts_engine
                 break
         if tts is None:
-            logging.error(f"Could not find tts engine for voice model: {voice_model}! Please check your config.json file and try again!")
+            logging.error(f"Could not find tts engine for voice model: {voice_model}! Please check your {self.config.config_path} file and try again!")
             if self.crashable:
                 input("Press enter to continue...")
-                raise ValueError(f"Could not find tts engine for voice model: {voice_model}! Please check your config.json file and try again!")
+                raise ValueError(f"Could not find tts engine for voice model: {voice_model}! Please check your {self.config.config_path} file and try again!")
         else:
             return tts._say(voiceline, voice_model=voice_model, volume=volume)

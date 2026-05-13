@@ -73,9 +73,9 @@ def create_LLM(conversation_manager):
     config.manager_types["tokenizer"] = tokenizers.Tokenizer_Types.keys() # Add conversation manager types to config
     logging.info(f"Creating LLM[{conversation_manager.config.inference_engine}] object")
     if conversation_manager.config.inference_engine not in LLM_Types:
-        logging.error(f"Could not find inference engine: {conversation_manager.config.inference_engine}! Please check your config.json file and try again!")
+        logging.error(f"Could not find inference engine: {conversation_manager.config.inference_engine}! Please check your {config.config_path} file and try again!")
         input("Press enter to continue...")
-        raise ValueError(f"Could not find inference engine: {conversation_manager.config.inference_engine}! Please check your config.json file and try again!")
+        raise ValueError(f"Could not find inference engine: {conversation_manager.config.inference_engine}! Please check your {config.config_path} file and try again!")
     model = LLM_Types[conversation_manager.config.inference_engine]
     llm = model.LLM(conversation_manager, vision_enabled=conversation_manager.config.vision_enabled)
     if conversation_manager.config.tokenizer_type == "default": # if using the default tokenizer for the LLM
@@ -92,9 +92,9 @@ def create_LLM(conversation_manager):
                 tokenizer = tokenizers.Tokenizer_Types[llm.tokenizer_slug].Tokenizer(conversation_manager)
             loaded_tokenizer_slug = llm.tokenizer_slug
         else: # or if the LLM has no tokenizer specified
-            logging.error(f"Could not find default tokenizer for inference engine: {llm.inference_engine_name}! Please check your config.json file and try again!")
+            logging.error(f"Could not find default tokenizer for inference engine: {llm.inference_engine_name}! Please check your {config.config_path} file and try again!")
             input("Press enter to continue...")
-            raise ValueError(f"Could not find default tokenizer for inference engine: {llm.inference_engine_name}! Please check your config.json file and try again!")
+            raise ValueError(f"Could not find default tokenizer for inference engine: {llm.inference_engine_name}! Please check your {config.config_path} file and try again!")
     elif conversation_manager.config.tokenizer_type in tokenizers.Tokenizer_Types: # if using a custom tokenizer
         logging.config(f"Using custom tokenizer: {conversation_manager.config.tokenizer_type}")
         if "client" in llm.__dict__: # if the LLM has a client specified (only really needed for openai at this point)

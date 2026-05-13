@@ -65,9 +65,9 @@ def create_DB(conversation_manager):
         logging.info(f"Creating Character Database[{config.character_db_type}]")
         logging.config(f"Creating Character Database[{config.character_db_type}] object")
         if config.character_db_type not in DB_Types:
-            logging.error(f"Could not find db: {config.character_db_type}! Please check your config.json file and try again!")
+            logging.error(f"Could not find db: {config.character_db_type}! Please check your {config.config_path} file and try again!")
             input("Press enter to continue...")
-            raise ValueError(f"Could not find db: {config.character_db_type}! Please check your config.json file and try again!")
+            raise ValueError(f"Could not find db: {config.character_db_type}! Please check your {config.config_path} file and try again!")
         module = DB_Types[config.character_db_type]
         if config.game_id not in module.valid_games:
             logging.error(f"Game '{config.game_id}' not supported by db '{module.db_slug}'.")

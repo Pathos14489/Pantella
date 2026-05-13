@@ -69,17 +69,17 @@ def create_Transcriber(game_interface):
         if slug not in transcriber_Types:
             slug = slug.lower()
         if slug not in transcriber_Types:
-            logging.error(f"Could not find SpeechToText: {game_interface.config.stt_engine}! Please check your config.json file and try again!")
+            logging.error(f"Could not find SpeechToText: {game_interface.config.stt_engine}! Please check your {game_interface.config.config_path} file and try again!")
             input("Press enter to continue...")
-            raise ValueError(f"Could not find SpeechToText: {game_interface.config.stt_engine}! Please check your config.json file and try again!")
+            raise ValueError(f"Could not find SpeechToText: {game_interface.config.stt_engine}! Please check your {game_interface.config.config_path} file and try again!")
         logging.info(f"Creating Transcriber of type: {slug}")
         return transcriber_Types[slug].Transcriber(game_interface)
     else:
         if slug in banned_modules:
-            logging.error(f"Banned type for stt_engine in config.json! Please check your config.json file and try again! Banned type: {slug}")
+            logging.error(f"Banned type for stt_engine in {game_interface.config.config_path}! Please check your {game_interface.config.config_path} file and try again! Banned type: {slug}")
             input("Press enter to continue...")
-            raise ValueError(f"Banned type for stt_engine in config.json! Please check your config.json file and try again! Banned type: {slug}")
+            raise ValueError(f"Banned type for stt_engine in {game_interface.config.config_path}! Please check your {game_interface.config.config_path} file and try again! Banned type: {slug}")
         else:
-            logging.error(f"Wrong type for stt_engine in config.json! Expected string or list of strings, got '{type(slug)}'! Please check your config.json file and try again!")
+            logging.error(f"Wrong type for stt_engine in {game_interface.config.config_path}! Expected string or list of strings, got '{type(slug)}'! Please check your {game_interface.config.config_path} file and try again!")
             input("Press enter to continue...")
-            raise ValueError(f"Wrong type for stt_engine in config.json! Expected string or list of strings, got '{type(slug)}'! Please check your config.json file and try again!")
+            raise ValueError(f"Wrong type for stt_engine in {game_interface.config.config_path}! Expected string or list of strings, got '{type(slug)}'! Please check your {game_interface.config.config_path} file and try again!")

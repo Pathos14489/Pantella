@@ -24,7 +24,7 @@ if __name__ == '__main__':
     def get_interface():
         root.deiconify() # show the root window so the dialog shows up, we'll hide it again after the dialog is closed
         available_interfaces = config_loader.interface_configs.keys()
-        dlg = OptionDialog(root, "Select Interface", "Select the game interface to use with Pantella. You can change this later in the config.json file or by using the web configurator.", available_interfaces)
+        dlg = OptionDialog(root, "Select Interface", "Select the game interface to use with Pantella. You can change this later in the associated [game_id]_config.json file or by using the web configurator.", available_interfaces)
         root.withdraw() # hide the root window again after the dialog is closed
         return dlg.result   
     

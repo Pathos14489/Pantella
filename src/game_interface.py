@@ -66,9 +66,9 @@ def create_game_interface(conversation_manager):
     config.manager_types["game_interface"] = Interface_Types.keys() # Add conversation manager types to config
     if config.interface_type != "auto": # if a specific interface is specified
         if config.interface_type not in Interface_Types:
-            logging.error(f"Could not find interface: {config.interface_type}! Please check your config.json file and try again!")
+            logging.error(f"Could not find interface: {config.interface_type}! Please check your {config.config_path} file and try again!")
             input("Press enter to continue...")
-            raise ValueError(f"Could not find interface: {config.interface_type}! Please check your config.json file and try again!")
+            raise ValueError(f"Could not find interface: {config.interface_type}! Please check your {config.config_path} file and try again!")
         module = Interface_Types[config.interface_type]
         if config.game_id not in module.valid_games:
             logging.error(f"Game '{config.game_id}' not supported by interface '{module.interface_slug}'.")

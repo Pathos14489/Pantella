@@ -3,11 +3,12 @@ from src.logging import logging
 import src.utils as utils
 import requests
 import json
+from src.stt_types.base_whisper import base_Transcriber
 logging.info('Imported required libraries in stt.py')
 
 stt_slug = "openai_whisper"
 
-class Transcriber:
+class Transcriber(base_Transcriber):
     def __init__(self, game_interface):
         global stt_slug
         super().__init__(game_interface)
@@ -24,7 +25,7 @@ class Transcriber:
         if 'openai' in url:
             headers = {"Authorization": f"Bearer {api_key}",}
         else:
-            logging.warn('Whisper URL not set to OpenAI API. If you are using a custom whisper server, please ensure the server is running and the URL is correct in config.json.')
+            logging.warn(f'Whisper URL not set to OpenAI API. If you are using a custom whisper server, please ensure the server is running and the URL is correct in {self.config.config_path}.')
             headers = {"Authorization": f"Bearer {api_key}",}
         data = {'model': self.config.whisper_model}
         files = {'file': open(audio, 'rb')}

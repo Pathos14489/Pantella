@@ -64,9 +64,9 @@ def create_manager(conversation_manager):
     config.manager_types["behavior_manager"] = Manager_Types.keys() # Add conversation manager types to config
     if config.behavior_manager != "auto": # if a specific behavior manager is specified
         if config.behavior_manager not in Manager_Types:
-            logging.error(f"Could not find behavior manager: {config.behavior_manager}! Please check your config.json file and try again!")
+            logging.error(f"Could not find behavior manager: {config.behavior_manager}! Please check your {config.config_path} file and try again!")
             input("Press enter to continue...")
-            raise ValueError(f"Could not find behavior manager: {config.behavior_manager}! Please check your config.json file and try again!")
+            raise ValueError(f"Could not find behavior manager: {config.behavior_manager}! Please check your {config.config_path} file and try again!")
         module = Manager_Types[config.behavior_manager]
         if config.game_id not in module.valid_games:
             logging.error(f"Game '{config.game_id}' not supported by behavior manager {module.manager_slug}")

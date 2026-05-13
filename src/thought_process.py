@@ -61,7 +61,7 @@ def create_thought_process(conversation_manager):
     logging.info(f"Creating Thought[{conversation_manager.config.thought_type}] object")
     thought_process = "default"
     if conversation_manager.config.thought_type not in Thought_Types and conversation_manager.config.thought_type != "default":
-        logging.error(f"Could not find thought process: {conversation_manager.config.thought_type}! Please check your config.json file and try again!")
+        logging.error(f"Could not find thought process: {conversation_manager.config.thought_type}! Please check your {conversation_manager.config.config_path} file and try again!")
         thought_process = "none"
     thought_process = conversation_manager.config.thought_type
     if thought_process == "default":

@@ -31,17 +31,6 @@ except Exception as e:
 
 # load models
 
-
-# def load_custom(ckpt_path: str, vocab_path="", model_cfg=None):
-#     ckpt_path, vocab_path = ckpt_path.strip(), vocab_path.strip()
-#     if ckpt_path.startswith("hf://"):
-#         ckpt_path = str(cached_path(ckpt_path))
-#     if vocab_path.startswith("hf://"):
-#         vocab_path = str(cached_path(vocab_path))
-#     if model_cfg is None:
-#         model_cfg = dict(dim=1024, depth=22, heads=16, ff_mult=2, text_dim=512, conv_layers=4)
-#     return load_model(DiT, model_cfg, ckpt_path, vocab_file=vocab_path)
-
 logging.info("Imported required libraries in f5_tts.py")
 
 tts_slug = "f5_tts"
@@ -58,7 +47,7 @@ settings_description = {
     "f5_tts_default_cfg_strength": "The CFG strength of the generated audio. 2.0 is normal CFG strength, 1.0 is low CFG strength, 3.0 is high CFG strength.",
     "f5_tts_volume": "The volume of the generated audio. 1.0 is normal volume, 0.5 is half volume, 2.0 is double volume.",
     "f5_tts_device": "The device to use for inference. 'cuda' for GPU, 'cpu' for CPU.",
-    "f5_tts_banned_voice_models": "A list of voice models to ban from being used by F5-TTS. This can be changed in config.json. This is useful if you have a voice model that causes issues with F5-TTS, such as extremely long synthesis times or crashes.",
+    "f5_tts_banned_voice_models": "A list of voice models to ban from being used by F5-TTS. This can be changed in your [game_id]_config.json. This is useful if you have a voice model that causes issues with F5-TTS, such as extremely long synthesis times or crashes.",
 }
 options = {}
 settings = {}

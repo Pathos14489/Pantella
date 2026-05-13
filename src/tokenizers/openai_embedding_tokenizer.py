@@ -9,9 +9,9 @@ class Tokenizer(tokenizer.base_Tokenizer): # Gets token count from OpenAI's embe
     def __init__(self, conversation_manager, client):
         super().__init__(conversation_manager)
         if not (self.config.inference_engine == "openai_api" or self.config.inference_engine == "default"):
-            logging.error(f"Embedding tokenizer only works with OpenAI's API! Please check your config.json file and try again!")
+            logging.error(f"Embedding tokenizer only works with OpenAI's API! Please check your {self.config.config_path} file and try again!")
             input("Press enter to continue...")
-            raise ValueError(f"Embedding tokenizer only works with OpenAI's API! Please check your config.json file and try again!")
+            raise ValueError(f"Embedding tokenizer only works with OpenAI's API! Please check your {self.config.config_path} file and try again!")
         self.tokenizer_slug = tokenizer_slug
         self.client = client
         

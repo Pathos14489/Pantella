@@ -30,18 +30,18 @@ default_settings = {
     "default_xtts_api_model": "v2.0.2",
 }
 settings_description = {
-    "xtts_api_dir": "The directory where the xTTS API server is located. This can be changed in config.json. If blank, it will look for the server in the current directory.",
-    "xtts_api_base_url": "The base URL for the xTTS API server. This can be changed in config.json. If blank, it will default to http://127.0.0.1:8020",
-    "xtts_api_default_temperature": "The default temperature setting for the xTTS API. This can be changed in config.json. 0.75 is normal temperature, 0.5 is low temperature, 1.0 is high temperature.",
-    "xtts_api_default_length_penalty": "The default length penalty setting for the xTTS API. This can be changed in config.json. 1.0 is normal length penalty, 0.5 is low length penalty, 1.5 is high length penalty.",
-    "xtts_api_default_repetition_penalty": "The default repetition penalty setting for the xTTS API. This can be changed in config.json. 3.0 is normal repetition penalty, 2.0 is low repetition penalty, 4.0 is high repetition penalty.",
-    "xtts_api_default_top_k": "The default top-k sampling setting for the xTTS API. This can be changed in config.json. 40 is normal top-k, 20 is low top-k, 60 is high top-k.",
-    "xtts_api_default_top_p": "The default top-p sampling setting for the xTTS API. This can be changed in config.json. 0.80 is normal top-p, 0.50 is low top-p, 0.90 is high top-p.",
-    "xtts_api_default_speed": "The default speed setting for the xTTS API. This can be changed in config.json. 1.25 is normal speed, 0.75 is slow speed, 1.75 is fast speed.",
-    "xtts_api_enable_text_splitting": "Whether to enable text splitting for the xTTS API. This can be changed in config.json. If true, long texts will be split into smaller chunks before being sent to the API. This can help prevent issues with long texts, but may cause some issues with context and coherence in the generated audio.",
-    "xtts_api_stream_chunk_size": "The chunk size to use when streaming audio from the xTTS API. This can be changed in config.json. If the API is having issues with streaming, try lowering this value. If the audio is cutting out or not playing smoothly, try increasing this value.",
-    "xtts_api_banned_voice_models": "A list of voice models to ban from being used by the xTTS API. This can be changed in config.json. If a voice model is in this list, it will not be used by the API even if it is available. This can be useful for banning low quality or problematic voice models.",
-    "default_xtts_api_model": "The default xTTS API voice model to use. This can be changed in config.json. If the specified model is not available, it will default to the first available model. If no models are available, it will raise an error."
+    "xtts_api_dir": "The directory where the xTTS API server is located. This can be changed in your [game_id]_config.json. If blank, it will look for the server in the current directory.",
+    "xtts_api_base_url": "The base URL for the xTTS API server. This can be changed in your [game_id]_config.json. If blank, it will default to http://127.0.0.1:8020",
+    "xtts_api_default_temperature": "The default temperature setting for the xTTS API. This can be changed in your [game_id]_config.json. 0.75 is normal temperature, 0.5 is low temperature, 1.0 is high temperature.",
+    "xtts_api_default_length_penalty": "The default length penalty setting for the xTTS API. This can be changed in your [game_id]_config.json. 1.0 is normal length penalty, 0.5 is low length penalty, 1.5 is high length penalty.",
+    "xtts_api_default_repetition_penalty": "The default repetition penalty setting for the xTTS API. This can be changed in your [game_id]_config.json. 3.0 is normal repetition penalty, 2.0 is low repetition penalty, 4.0 is high repetition penalty.",
+    "xtts_api_default_top_k": "The default top-k sampling setting for the xTTS API. This can be changed in your [game_id]_config.json. 40 is normal top-k, 20 is low top-k, 60 is high top-k.",
+    "xtts_api_default_top_p": "The default top-p sampling setting for the xTTS API. This can be changed in your [game_id]_config.json. 0.80 is normal top-p, 0.50 is low top-p, 0.90 is high top-p.",
+    "xtts_api_default_speed": "The default speed setting for the xTTS API. This can be changed in your [game_id]_config.json. 1.25 is normal speed, 0.75 is slow speed, 1.75 is fast speed.",
+    "xtts_api_enable_text_splitting": "Whether to enable text splitting for the xTTS API. This can be changed in your [game_id]_config.json. If true, long texts will be split into smaller chunks before being sent to the API. This can help prevent issues with long texts, but may cause some issues with context and coherence in the generated audio.",
+    "xtts_api_stream_chunk_size": "The chunk size to use when streaming audio from the xTTS API. This can be changed in your [game_id]_config.json. If the API is having issues with streaming, try lowering this value. If the audio is cutting out or not playing smoothly, try increasing this value.",
+    "xtts_api_banned_voice_models": "A list of voice models to ban from being used by the xTTS API. This can be changed in your [game_id]_config.json. If a voice model is in this list, it will not be used by the API even if it is available. This can be useful for banning low quality or problematic voice models.",
+    "default_xtts_api_model": "The default xTTS API voice model to use. This can be changed in your [game_id]_config.json. If the specified model is not available, it will default to the first available model. If no models are available, it will raise an error."
 }
 options = {}
 settings = {}

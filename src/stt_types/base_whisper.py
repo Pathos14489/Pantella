@@ -38,11 +38,6 @@ class base_Transcriber(BASE_TRANSCRIBER):
             transcript = self._recognize_speech_from_mic(prompt)
             transcript_cleaned = utils.clean_text(transcript)
 
-            # conversation_ended = self.game_interface.load_data_when_available('_pantella_end_conversation', '')
-            # conversation_ended = self.conversation_manager.conversation_ended
-            # if conversation_ended.lower() == 'true':
-            #     return 'goodbye'
-
             # common phrases hallucinated by Whisper
             if transcript_cleaned in ['', 'thank you', 'thank you for watching', 'thanks for watching', 'the transcript is from the', 'the', 'thank you very much']:
                 continue
@@ -56,40 +51,6 @@ class base_Transcriber(BASE_TRANSCRIBER):
         Capture the words from the recorded audio (audio stream --> free text).
         Transcribe speech from recorded from `microphone`.
         """
-        # @utils.time_it
-        # def whisper_transcribe(audio, prompt):
-            # if using faster_whisper (default) return based on faster_whisper's code, if not assume player wants to use server mode and send query to whisper_url set by player.
-            # if self.whisper_type == 'faster_whisper':
-            #     segments, info = self.transcribe_model.transcribe(audio,
-            #         task=self.task,
-            #         language=self.language,
-            #         beam_size=self.config.beam_size,
-            #         vad_filter=self.config.vad_filter,
-            #         initial_prompt=prompt,
-            #     )
-            #     result_text = ' '.join(segment.text for segment in segments)
-
-            #     return result_text
-            # # this code queries the whispercpp server set by the user to obtain the response, this format also allows use of official openai whisper API
-            # else:
-            #     url = self.whisper_url
-            #     if 'openai' in url:
-            #         headers = {"Authorization": f"Bearer {openai.api_key}",}
-            #     else:
-            #         logging.warn('Whisper URL not set to OpenAI API. If you are using a custom whisper server, please ensure the server is running and the URL is correct in config.json.')
-            #         headers = {"Authorization": "Bearer apikey",}
-            #     data = {'model': self.model}
-            #     files = {'file': open(audio, 'rb')}
-            #     response = requests.post(url, headers=headers, files=files, data=data)
-            #     response_data = json.loads(response.text)
-            #     if 'text' in response_data:
-            #         return response_data['text'].strip()
-
-        # with self.microphone as source:
-        #     try:
-        #         audio = self.recognizer.listen(source, timeout=self.listen_timeout)
-        #     except sr.WaitTimeoutError:
-        #         return ''
         audio = None
         while audio is None:
             logging.info('Getting audio from mic...')

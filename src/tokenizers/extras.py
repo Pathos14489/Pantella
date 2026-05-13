@@ -10,9 +10,9 @@ class Tokenizer(tokenizer.base_Tokenizer): # Gets token count from OpenAI's embe
     def __init__(self, conversation_manager, client):
         super().__init__(conversation_manager, tokenizer_slug)
         if not (self.config.inference_engine == "openai_api" or self.config.inference_engine == "default"):
-            logging.error(f"extras tokenizer only works using a OpenAI API! Please check your config.json file and try again!")
+            logging.error(f"extras tokenizer only works using a OpenAI API! Please check your {self.config.config_path} file and try again!")
             input("Press enter to continue...")
-            raise ValueError(f"extras tokenizer only works using a OpenAI API! Please check your config.json file and try again!")
+            raise ValueError(f"extras tokenizer only works using a OpenAI API! Please check your {self.config.config_path} file and try again!")
         self.client = client # Unnecessary for this tokenizer, but it's here for compatibility with other openai tokenizers
         
     @utils.time_it

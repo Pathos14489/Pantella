@@ -253,7 +253,7 @@ class ConfigLoader:
             def select_tts():
                 root.deiconify() # show the root window so the dialog shows up, we'll hide it again after the dialog is closed
                 available_tts = tts.tts_Types.keys()
-                dlg = OptionDialog(root, "Select Default TTS", "Select the default TTS to use with Pantella. This will be the default TTS used on startup if 'Always Open TTS Selection' is set to false. You can change this later in your interface's config.json file.", available_tts)
+                dlg = OptionDialog(root, f"Select Default TTS", f"Select the default TTS to use with Pantella. This will be the default TTS used on startup if 'Always Open TTS Selection' is set to false. You can change this later in your interface's {self.config_path} file.", available_tts)
                 root.withdraw() # hide the root window again after the dialog is closed
                 return dlg.result
             selected_tts = select_tts()
@@ -262,7 +262,7 @@ class ConfigLoader:
             def select_python_binary():
                 root.deiconify() # show the root window so the dialog shows up, we'll hide it again after the dialog is closed
                 available_binaries = ["python", "python3", "../../python-3.10.11-embed/python.exe"]
-                dlg = OptionDialog(root, "Select Python Binary", "Select the python binary to use with Pantella. If you have python added to your system path and want to use it, you can select 'python' or 'python3'. If you want to use the embedded python installation that comes with the launcher, select '../../python-3.10.11-embed/python.exe'. You can change this later in your config.json file. If you are running Windows 10/11 using the Pantella Launcher, you should choose '../../python-3.10.11-embed/python.exe'", available_binaries)
+                dlg = OptionDialog(root, "Select Python Binary", f"Select the python binary to use with Pantella. If you have python added to your system path and want to use it, you can select 'python' or 'python3'. If you want to use the embedded python installation that comes with the launcher, select '../../python-3.10.11-embed/python.exe'. You can change this later in your {self.config_path} file. If you are running Windows 10/11 using the Pantella Launcher, you should choose '../../python-3.10.11-embed/python.exe'", available_binaries)
                 root.withdraw() # hide the root window again after the dialog is closed
                 return dlg.result
             self.python_binary = select_python_binary()
@@ -286,10 +286,10 @@ class ConfigLoader:
                 self.save()
                 return self.load() # Reload the config after setting the game id
             else:
-                logging.error(f"Game id {self.game_id} not found in interface_configs directory. Please add a interface config file for {self.game_id} or change the game_id in config.json to a valid game id.")
+                logging.error(f"Game id {self.game_id} not found in interface_configs directory. Please add a interface config file for {self.game_id} or change the game_id in {self.config_path} to a valid game id.")
                 logging.config(f"Valid game ids: {list(interface_configs.keys())}")
                 input("Press enter to continue...")
-                raise ValueError(f"Game id {self.game_id} not found in interface_configs directory. Please add a interface config file for {self.game_id} or change the game_id in config.json to a valid game id.")
+                raise ValueError(f"Game id {self.game_id} not found in interface_configs directory. Please add a interface config file for {self.game_id} or change the game_id in {self.config_path} to a valid game id.")
             
         if self.linux_mode is None: # If linux mode is not set, attempt to auto-detect if linux mode should be enabled based on the operating system
             logging.info("Linux mode not set in config file, attempting to auto-detect linux mode based on operating system:", os.name)

@@ -67,9 +67,9 @@ def create_manager(character_manager):
     logging.config(f"Creating memory manager for '{config.game_id}' using '{config.memory_manager}'...")
     if config.memory_manager != "auto": # if a specific memory manager is specified
         if config.memory_manager not in Manager_Types:
-            logging.error(f"Could not find memory manager: {config.memory_manager}! Please check your config.json file and try again!")
+            logging.error(f"Could not find memory manager: {config.memory_manager}! Please check your {config.config_path} file and try again!")
             input("Press enter to continue...")
-            raise ValueError(f"Could not find memory manager: {config.memory_manager}! Please check your config.json file and try again!")
+            raise ValueError(f"Could not find memory manager: {config.memory_manager}! Please check your {config.config_path} file and try again!")
         logging.config(f"Using memory manager {config.memory_manager}...")
         module = Manager_Types[config.memory_manager]
         manager = module.MemoryManager(character_manager)

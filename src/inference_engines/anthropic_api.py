@@ -83,7 +83,7 @@ It is only included as a proof of concept for adding new inference engines to Pa
         )
         logging.info(f"Anthropic Test Response: {test.content}")
 
-        logging.info(f"Running Pantella with '{self.config.anthropic_model}'. The language model chosen can be changed via config.json")
+        logging.info(f"Running Pantella with '{self.config.anthropic_model}'. The language model chosen can be changed via {self.config.config_path}")
         logging.error(f"Current API does not support text completions! Anthropic API is not recommended, don't use it, use literally anything else PLEASE!")
         loaded = True
 

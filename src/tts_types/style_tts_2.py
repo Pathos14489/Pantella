@@ -30,7 +30,7 @@ settings_description = {
     "style_tts_2_default_diffusion_steps": "The number of diffusion steps for the StyleTTS2 model. Higher values can clean up the audio, but also increase the time it takes to synthesize the audio. There is also a point of diminishing returns, where increasing the diffusion steps doesn't really improve the audio quality much.",
     "style_tts_2_default_embedding_scale": "At value 1, this is the classifier-free guidance scale. The higher the scale, the more conditional the style is to the input text and hence more emotional.",
     "style_tts_2_default_t": "The default value for the temperature parameter in StyleTTS2. This controls the randomness of the generated speech. Higher values result in more diverse outputs, while lower values result in more deterministic outputs.",
-    "style_tts_2_banned_voice_models": "A list of voice models to ban from being used by StyleTTS2. This can be changed in config.json. This is useful if you have a voice model that causes issues with StyleTTS2, such as extremely long synthesis times or crashes."
+    "style_tts_2_banned_voice_models": "A list of voice models to ban from being used by StyleTTS2. This can be changed in your [game_id]_config.json. This is useful if you have a voice model that causes issues with StyleTTS2, such as extremely long synthesis times or crashes."
 }
 options = {}
 settings = {}

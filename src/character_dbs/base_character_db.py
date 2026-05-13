@@ -23,7 +23,7 @@ class CharacterDB():
         self.db_type = None
         # make sure voice_model_ref_ids_file exists
         if not os.path.exists(self.config.voice_model_ref_ids_file):
-            logging.error(f"Could not find voice_model_ref_ids_file at {self.config.voice_model_ref_ids_file}. Please download the correct file for your game, or correct the filepath in your config.json and try again.")
+            logging.error(f"Could not find voice_model_ref_ids_file at {self.config.voice_model_ref_ids_file}. Please download the correct file for your game, or correct the filepath in your {self.config.config_path} and try again.")
             raise FileNotFoundError
         if self.config.voice_model_ref_ids_file != "" and os.path.exists(self.config.voice_model_ref_ids_file):
             with open(self.config.voice_model_ref_ids_file, 'r') as f:

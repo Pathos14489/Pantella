@@ -71,16 +71,16 @@ def create_Speech_Input_Processor(stt_manager):
         if slug not in speech_input_processor_Types:
             slug = slug.lower()
         if slug not in speech_input_processor_Types:
-            logging.error(f"Could not find SpeechInputProcessor: {conversation_manager.config.speech_processor}! Please check your config.json file and try again!")
+            logging.error(f"Could not find SpeechInputProcessor: {conversation_manager.config.speech_processor}! Please check your {config.config_path} file and try again!")
             input("Press enter to continue...")
-            raise ValueError(f"Could not find SpeechInputProcessor: {conversation_manager.config.speech_processor}! Please check your config.json file and try again!")
+            raise ValueError(f"Could not find SpeechInputProcessor: {conversation_manager.config.speech_processor}! Please check your {config.config_path} file and try again!")
         return speech_input_processor_Types[slug].Speech_Input_Processor(stt_manager)
     else:
         if slug in banned_modules:
-            logging.error(f"Banned type for speech_processor in config.json! Please check your config.json file and try again! Banned type: {slug}")
+            logging.error(f"Banned type for speech_processor in {config.config_path}! Please check your {config.config_path} file and try again! Banned type: {slug}")
             input("Press enter to continue...")
-            raise ValueError(f"Banned type for speech_processor in config.json! Please check your config.json file and try again! Banned type: {slug}")
+            raise ValueError(f"Banned type for speech_processor in {config.config_path}! Please check your {config.config_path} file and try again! Banned type: {slug}")
         else:
-            logging.error(f"Wrong type for speech_processor in config.json! Expected string or list of strings, got '{type(slug)}'! Please check your config.json file and try again!")
+            logging.error(f"Wrong type for speech_processor in {config.config_path}! Expected string or list of strings, got '{type(slug)}'! Please check your {config.config_path} file and try again!")
             input("Press enter to continue...")
-            raise ValueError(f"Wrong type for speech_processor in config.json! Expected string or list of strings, got '{type(slug)}'! Please check your config.json file and try again!")
+            raise ValueError(f"Wrong type for speech_processor in {config.config_path}! Expected string or list of strings, got '{type(slug)}'! Please check your {config.config_path} file and try again!")

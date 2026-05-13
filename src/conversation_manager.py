@@ -64,9 +64,9 @@ def create_manager(config, initialize=True):
     config.manager_types["conversation_manager"] = Manager_Types.keys() # Add conversation manager types to config
     if config.conversation_manager_type != "auto": # if a specific conversation manager is specified
         if config.conversation_manager_type not in Manager_Types:
-            logging.error(f"Could not find conversation manager: {config.conversation_manager_type}! Please check your config.json file and try again!")
+            logging.error(f"Could not find conversation manager: {config.conversation_manager_type}! Please check your {config.config_path} file and try again!")
             input("Press enter to continue...")
-            raise ValueError(f"Could not find conversation manager: {config.conversation_manager_type}! Please check your config.json file and try again!")
+            raise ValueError(f"Could not find conversation manager: {config.conversation_manager_type}! Please check your {config.config_path} file and try again!")
         module = Manager_Types[config.conversation_manager_type]
         if config.game_id not in module.valid_games:
             logging.error(f"Game '{config.game_id}' not supported by conversation manager {module.manager_slug}")

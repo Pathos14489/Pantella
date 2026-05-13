@@ -84,7 +84,7 @@ def cleanup_mei(remove_mei_folders):
                         pass
                 logging.info(f'{file_removed} previous runtime folder(s) cleaned up from PantellaSoftware/data/tmp')
             else:
-                logging.warn(f"Warning: {len(mei_files)} previous Pantella.exe runtime folder(s) found in PantellaSoftware/data/tmp. See PantellaSoftware/config.json's remove_mei_folders setting for more information.")
+                logging.warn(f"Warning: {len(mei_files)} previous Pantella runtime folder(s) found in PantellaSoftware/data/tmp. See [game_id]_config.json's remove_mei_folders setting for more information.")
         
 def get_time_group(in_game_time):
     """Get the time group based on the in-game time"""
