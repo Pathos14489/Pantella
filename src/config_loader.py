@@ -311,6 +311,26 @@ class ConfigLoader:
             # selected_lm = select_lm()
             # logging.info(f"Selected language model: {selected_lm}")
             # self.inference_engine = [selected_lm]
+        
+                # "web_configurator": None, # True, # Enable the web configurator
+                # "open_config_on_startup": None,  # True,
+        if self.web_configurator is None:
+            def enable_web_configurator():
+                root.deiconify() # show the root window so the dialog shows up, we'll hide it again after the dialog is closed
+                dlg = OptionDialog(root, "Enable Web Configurator?", "The web configurator is a web interface that allows you to change your config settings in real time without having to edit the config file manually. It can be accessed by going to http://localhost:8000 in your web browser while Pantella is running. Do you want to enable the web configurator? Warning: It is not feature complete and you may have to still manually edit your current config file manually for all settings changes.", ["Yes", "No"])
+                root.withdraw() # hide the root window again after the dialog is closed
+                return dlg.result
+            self.web_configurator = enable_web_configurator() == "Yes"
+            save = True # Save the web_configurator setting to the config file
+
+        if self.open_config_on_startup is None:
+            def enable_open_config_on_startup():
+                root.deiconify() # show the root window so the dialog shows up, we'll hide it again after the dialog is closed
+                dlg = OptionDialog(root, "Open Config on Startup?", "Do you want to auto-open the web configurator on startup? If enabled, the web configurator will automatically open in your default web browser when you start Pantella. You can change this later in your config file.", ["Yes", "No"])
+                root.withdraw() # hide the root window again after the dialog is closed
+                return dlg.result
+            self.open_config_on_startup = enable_open_config_on_startup() == "Yes"
+            save = True # Save the open_config_on_startup setting to the config file
 
         if save:
             self.save()
@@ -864,8 +884,8 @@ class ConfigLoader:
                 "conversation_data_directory": ".\\data\\conversations",
                 "voice_model_ref_ids_file": ".\\skyrim_voice_model_ids.json",
                 "logging_file_path": ".\\logging.log",
-                "web_configurator": True, # Enable the web configurator
-                "open_config_on_startup": True,
+                "web_configurator": None, # True, # Enable the web configurator
+                "open_config_on_startup": None,  # True,
                 "config_port": 8021,
                 "memory_editor_port": 8022,
                 "debug_ui_port": 8023,
