@@ -160,7 +160,7 @@ class LLM(base_LLM):
             logging.error(f"OpenAI API key file not found at {self.config.openai_api_key_path}! Creating file now...")
             def get_key_from_user():
                 with root_context_manager as root:
-                    popup = StringInputPopup(root, "Enter OpenRouter API Key", "Please enter your OpenRouter API key. If you don't have one, you can get one for free at https://openrouter.ai/. This key is required to use the OpenAI API inference engine in Pantella.", hide_input=True)
+                    popup = StringInputPopup(root, "Enter OpenAPI API Key", "Please enter your OpenAI API provider key. If you don't have one, you can get one for free at https://openrouter.ai/. Note: This is not an OpenAI key, those will not work, it must be an OpenRouter key by default without changing the base URL. This is needlessly confusing because OpenAI named their API standard the OpenAI API standard, and because everyone uses it and calls it that, it's very confusing if you don't know that it's the name of the standard and not the name of the service. This key is required to use the OpenAI API inference engine in Pantella when using an inference provider. If you're using a local API, you can probably put whatever you want here and it'll work fine.", hide_input=True)
                 return popup.result
             api_key = get_key_from_user()
             with open(self.config.openai_api_key_path, 'w') as f:
